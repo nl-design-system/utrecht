@@ -1,0 +1,21 @@
+# Ignore 3rd party files
+node_modules/
+.npm/
+
+# Ignore generated files
+dist/
+tmp/
+*.tgz
+
+# Ignore log files
+*.err
+*.log
+*.tmp
+
+# Ignore code editor files
+.vscode/
+*.sublime-workspace
+.vs/
+
+# Ignore OS files
+.DS_Store

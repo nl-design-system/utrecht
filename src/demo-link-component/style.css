@@ -1,0 +1,12 @@
+.demo-link {
+  color: var(--demo-link-color, blue);
+  text-decoration: none;
+}
+
+.demo-link__text {
+  margin-inline-start: 1ch;
+}
+
+.demo-link:hover .demo-link__text {
+  border-bottom: 1px solid currentColor;
+}

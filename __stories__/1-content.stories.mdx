@@ -1,0 +1,7 @@
+import { getParams, getTitle } from "./utils.js";
+import { Description, Meta } from "@storybook/addon-docs/blocks";
+import document from "../__docs__/content-richtlijnen.md";
+
+<Meta title={getTitle("Content Richtlijnen")} parameters={getParams()} />
+
+<Description>{document}</Description>
