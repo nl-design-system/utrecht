@@ -25,10 +25,8 @@ jobs:
           yarn lint
           yarn test
 
-      # - name: "TODO: Deploy to Github Pages and remove azure deploy below"
-      #   uses: azure/webapps-deploy@v2
-      #   with:
-      #     app-name: ${{ secrets.AZURE_WEBAPP_NAME }}
-      #     slot-name: "production"
-      #     publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-      #     package: .
+      - name: deploy storybook
+        uses: actions/setup-node@v1
+        run: |
+          yarn
+          yarn deploy
