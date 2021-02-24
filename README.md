@@ -12,12 +12,13 @@ Feel free to add or modify those documentation pages and use the example compone
 ## Storybook
 
 ### Run Storybook on your computer
-1. Clone the repository 
+
+1. Clone the repository
 2. Use an editor like VS Code
 3. In a terminal run `npm install`
 4. Run storybook
-  a. In VS Code in the `terminal` tab click on `run Storybook`
-  b. In the Terminal run `npm run storybook`
+   a. In VS Code in the `terminal` tab click on `run Storybook`
+   b. In the Terminal run `npm run storybook`
 5. Your main browser opens automatically with your local storybook
 
 ### Change the theme of your storybook to match your brand
