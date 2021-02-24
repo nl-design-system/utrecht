@@ -26,7 +26,6 @@ jobs:
           yarn test
 
       - name: deploy storybook
-        uses: actions/setup-node@v1
         run: |
           yarn
           yarn deploy
