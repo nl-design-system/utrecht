@@ -5,6 +5,10 @@
   "license": "EUPL-1.2",
   "name": "@nl-design-system/template",
   "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@etchteam/storybook-addon-status": "^2.1.0",
