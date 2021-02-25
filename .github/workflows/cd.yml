@@ -27,5 +27,4 @@ jobs:
 
       - name: Continuous Deployment
         run: |
-          yarn
           yarn deploy:storybook --ci
