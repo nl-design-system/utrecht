@@ -17,7 +17,7 @@ jobs:
         with:
           node-version: "14.x"
 
-      - name: install, build, lint and test
+      - name: Continuous Integration
         run: |
           yarn
           yarn bootstrap
@@ -25,7 +25,7 @@ jobs:
           yarn lint
           yarn test
 
-      - name: deploy storybook
+      - name: Continuous Deployment
         run: |
           yarn
           yarn deploy:storybook --ci
