@@ -17,14 +17,9 @@ jobs:
         with:
           node-version: "14.x"
 
-      - name: Continuous Integration
+      - name: Continuous Deployment
+        env:
+          GH_TOKEN: MyCompany:${{ secrets.GH_TOKEN }}
         run: |
           yarn
-          yarn bootstrap
-          yarn build
-          yarn lint
-          yarn test
-
-      - name: Continuous Deployment
-        run: |
           yarn deploy:storybook -- --ci
