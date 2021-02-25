@@ -28,4 +28,4 @@ jobs:
       - name: deploy storybook
         run: |
           yarn
-          yarn deploy
+          yarn deploy:storybook --ci
