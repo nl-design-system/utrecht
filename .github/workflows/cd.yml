@@ -6,6 +6,24 @@ on:
       - main
 
 jobs:
+  continuous-integration:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.x"
+
+      - name: install, lint, and test
+        run: |
+          yarn
+          yarn bootstrap
+          yarn lint
+          yarn test
+
   continuous-delivery:
     runs-on: ubuntu-latest
 
