@@ -1,6 +1,6 @@
 .demo-link {
-  color: var(--demo-link-color, blue);
-  text-decoration: none;
+  color: var(--demo-link-color, green);
+  text-decoration: underline;
 }
 
 .demo-link__text {
