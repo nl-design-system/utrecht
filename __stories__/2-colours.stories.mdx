@@ -1,0 +1,13 @@
+import { getParams, getTitle } from "./utils.js";
+import { Description, Meta } from "@storybook/addon-docs/blocks";
+import document from "../__docs__/colours.md";
+
+<Meta title={getTitle("Kleur")} parameters={getParams()} />
+
+<Description>{document}</Description>
+
+TEST
+
+<MDXEmbedProvider>
+  <Figma title="Kleuren" url="file/nzYXOAHAcFEsYScHvl848e/GU-elementen?node-id=1%3A2" />
+</MDXEmbedProvider>
