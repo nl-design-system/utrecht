@@ -3,9 +3,58 @@
  * @presenter Color
  */
 :root {
-  --utrecht-paragraph-color: var(--utrecht-zwart);
-  --utrecht-link-color: var(--utrecht-blauw);
   --utrecht-heading-color: var(--utrecht-zwart);
+  --utrecht-header-font-family: var(--utrecht-font-family-sans);
+  --utrecht-header-font-weight: 700;
+  --utrecht-heading-1-font-size: 1em; /* 16px */
+  --utrecht-heading-1-font-size-min-width-35em: 1.75em; /* 28px on tablet min-width-35e */
+  --utrecht-heading-1-font-size-min-width-60em: 2em; /* 32px on desktop min-width-60em */
+  --utrecht-heading-1-line-height: 1.4;  /* 33,6px */
+  --utrecht-heading-1-margin: 0.67em 0;
+
+  --utrecht-heading-2-font-size: 1.25em; /* 20px */
+  --utrecht-heading-2-line-height: 1.2; /* 24px */
+  --utrecht-heading-2-margin: 1.5em 0 0.3em;
+
+  --utrecht-heading-3-font-size: 1.25em; /* 20px */
+  --utrecht-heading-3-font-weight: 300;
+  --utrecht-heading-3-line-height: 1.2; /* 24px */
+  --utrecht-heading-3-margin: 1em 0 0.2em;
+
+  --utrecht-heading-4-font-size: 1.125em; /* 18px */
+  --utrecht-heading-4-font-weight: 300;
+  --utrecht-heading-4-line-height: 1.25; /* 22,5px */
+  --utrecht-heading-4-margin: 1.2em 0 0.3em;
+
+  --utrecht-heading-5-font-size: 0.9em; /* 14.4px */
+  --utrecht-heading-5-font-weight: 300;
+  --utrecht-heading-5-line-height: 1.333; /* 22.4px */
+  --utrecht-heading-5-margin: 1em 0 0.2em;
+  --utrecht-heading-5-text-transform: uppercase;
+  --utrecht-heading-5-letter-spacing: 0.05em; /* 0.72px */
+
+  --utrecht-heading-6-font-size: 0.9em; /* 14.4px */
+  --utrecht-heading-6-font-weight: 300;
+  --utrecht-heading-6-line-height: 1.333; /* 22.4px */
+  --utrecht-heading-6-margin: 1em 0 0.2em;
+  --utrecht-heading-6-text-transform: uppercase;
+  --utrecht-heading-6-letter-spacing: 0.05em; /* 0.72px */
+
+  --utrecht-paragraph-color: var(--utrecht-zwart);
+  --utrecht-paragraph-font-family: var(--utrecht-font-family-sans);
+  --utrecht-paragraph-font-size: 1em; /* 16px */
+  --utrecht-paragraph-font-weight: 300;
+  --utrecht-paragraph-line-height: 1.4; /* 22.4px */
+
+  --utrecht-paragraph-intro-font-size: 1.2em;
+  --utrecht-paragraph-intro-font-size-min-width-35em: 1.25em; /* 20px on tablet min-width-35e */
+  --utrecht-paragraph-intro-font-size-min-width-60em: 1.25em; /* 20px on desktop min-width-60em */
+
+  --utrecht-link-color: var(--utrecht-blauw3);
+  --utrecht-link-color-active: var(--utrecht-blauw-3);
+  --utrecht-link-color-hover:  var(--utrecht-blauw-4);
+  --utrecht-link-color-visited: var(--utrecht-blauw-4);
+
 
   /*Oh oh Den Haag*/
   --utrecht-button-padding-inline: 1.25rem;
@@ -62,28 +111,7 @@
   --utrecht-form-label-font-size: 0.75rem;
   --utrecht-form-label-font-weight: bold;
   --utrecht-form-option-label-font-weight: normal;
-  --utrecht-header-font-family: var(--utrecht-font-family-sans);
-  --utrecht-header-font-weight: 700;
-  --utrecht-heading-1-font-size: 38px;
-  --utrecht-heading-1-font-weight: 500;
-  --utrecht-heading-1-line-height: 38px;
-  --utrecht-heading-2-font-size: 24px;
-  --utrecht-heading-2-font-weight: 700;
-  --utrecht-heading-2-line-height: 30px;
-  --utrecht-heading-3-color: darkgray;
-  --utrecht-heading-3-font-size: 20px;
-  --utrecht-heading-3-line-height: 28px;
-  --utrecht-heading-4-font-size: 18px;
-  --utrecht-heading-4-line-height: 25px;
-  --utrecht-heading-color: black;
-  --utrecht-heading-font-family: var(--utrecht-font-family-serif);
-  --utrecht-intro-paragraph-font-size: 18px;
-  --utrecht-intro-paragraph-font-weight: 700;
-  --utrecht-intro-paragraph-line-height: 25px;
-  --utrecht-link-color-active: var(--utrecht-link-color-hover);
-  --utrecht-link-color-hover: #6288a5;
-  --utrecht-link-color-visited: var(--utrecht-link-color);
-  --utrecht-link-color: var(--utrecht-blauw);
+;
   --utrecht-non-essential-font-size: 14px;
   --utrecht-non-essential-line-height: 18px;
   --utrecht-table-caption-font-family: var(--utrecht-font-family-serif);
