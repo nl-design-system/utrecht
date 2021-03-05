@@ -2,13 +2,13 @@
  * @tokens Design Tokens
  * @presenter Color
  */
+
+
 :root {
   --utrecht-heading-color: var(--utrecht-zwart);
   --utrecht-header-font-family: var(--utrecht-font-family-sans);
   --utrecht-header-font-weight: 700;
   --utrecht-heading-1-font-size: 1em; /* 16px */
-  --utrecht-heading-1-font-size-min-width-35em: 1.75em; /* 28px on tablet min-width-35e */
-  --utrecht-heading-1-font-size-min-width-60em: 2em; /* 32px on desktop min-width-60em */
   --utrecht-heading-1-line-height: 1.4;  /* 33,6px */
   --utrecht-heading-1-margin: 0.67em 0;
 
@@ -47,8 +47,6 @@
   --utrecht-paragraph-line-height: 1.4; /* 22.4px */
 
   --utrecht-paragraph-intro-font-size: 1.2em;
-  --utrecht-paragraph-intro-font-size-min-width-35em: 1.25em; /* 20px on tablet min-width-35e */
-  --utrecht-paragraph-intro-font-size-min-width-60em: 1.25em; /* 20px on desktop min-width-60em */
 
   --utrecht-link-color: var(--utrecht-blauw3);
   --utrecht-link-color-active: var(--utrecht-blauw-3);
@@ -69,6 +67,7 @@
   --utrecht-button-primary-action-hover-color: #ffffff;
   --utrecht-button-primary-action-disabled-background-color: #d2d2d2;
   --utrecht-button-primary-action-disabled-color: #ffffff;
+
   --utrecht-button-secondary-action-background-color: #ffffff;
   --utrecht-button-secondary-action-color: #248641;
   --utrecht-button-secondary-action-border-color: #248641;
@@ -96,6 +95,7 @@
   --utrecht-document-background-color: white;
   --utrecht-document-color: black;
   --utrecht-figure-caption-color: black;
+
   --utrecht-font-family-sans-serif: Arial, sans-serif;
   --utrecht-font-family-serif: "Times New Roman", serif;
   --utrecht-form-input-background-color: white;
@@ -111,7 +111,6 @@
   --utrecht-form-label-font-size: 0.75rem;
   --utrecht-form-label-font-weight: bold;
   --utrecht-form-option-label-font-weight: normal;
-;
   --utrecht-non-essential-font-size: 14px;
   --utrecht-non-essential-line-height: 18px;
   --utrecht-table-caption-font-family: var(--utrecht-font-family-serif);
@@ -122,3 +121,25 @@
   --utrecht-table-header-text-transform: uppercase;
   --utrecht-text-max-width: 600px;
 }
+
+
+@media (min-width: 35em) {
+  :root {
+
+    --utrecht-heading-1-font-size-min-width-35em: 1.75em; /* 28px on tablet min-width-35e */
+    --utrecht-paragraph-intro-font-size-min-width-35em: 1.25em; /* 20px on tablet min-width-35e */
+
+
+  }
+}
+
+@media (min-width: 60em) {
+  :root {
+
+    --utrecht-heading-1-font-size-min-width-60em: 2em; /* 32px on desktop min-width-60em */
+    --utrecht-paragraph-intro-font-size-min-width-60em: 1.25em; /* 20px on desktop min-width-60em */
+
+
+  }
+}
+
