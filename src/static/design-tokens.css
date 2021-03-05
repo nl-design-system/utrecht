@@ -1,9 +1,34 @@
 /**
- * @tokens Colors
+ * @tokens Design Tokens
  * @presenter Color
  */
 :root {
-  --utrecht-paragraph-color: var(--utrecht-donkergrijs);
+  --utrecht-paragraph-color: var(--utrecht-zwart);
   --utrecht-link-color: var(--utrecht-blauw);
   --utrecht-heading-color: var(--utrecht-zwart);
+
+  /*Oh oh Den Haag*/
+  --utrecht-button-padding-inline: 1.25rem;
+  --utrecht-button-padding-block: 0.6875rem;
+  --utrecht-button-border-radius: 0.1875rem;
+  --utrecht-button-focus-border-color: #CCA000;
+  --utrecht-button-focus-border-width: 0.125rem;
+  --utrecht-button-font-family: "TheMix", sans-serif;
+  --utrecht-button-primary-action-background-color: #248641;
+  --utrecht-button-primary-action-color: var(--utrecht-blauw-3);
+  --utrecht-button-primary-action-hover-background-color: #1D6B34;
+  --utrecht-button-primary-action-hover-color: #FFFFFF;
+  --utrecht-button-primary-action-disabled-background-color: #D2D2D2;
+  --utrecht-button-primary-action-disabled-color: #FFFFFF;
+  --utrecht-button-secondary-action-background-color: #FFFFFF;
+  --utrecht-button-secondary-action-color: #248641;
+  --utrecht-button-secondary-action-border-color: #248641;
+  --utrecht-button-secondary-action-border-width: 0.0625rem;
+  --utrecht-button-secondary-action-hover-background-color: #FFFFFF;
+  --utrecht-button-secondary-action-hover-color: #1D6B34;
+  --utrecht-button-secondary-action-hover-border-color: #1D6B34;
+  --utrecht-button-secondary-action-disabled-background-color: #FFFFFF;
+  --utrecht-button-secondary-action-disabled-color: #D2D2D2;
+  --utrecht-button-secondary-action-disabled-border-color: #D2D2D2;
+
 }
