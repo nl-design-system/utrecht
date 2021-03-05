@@ -1,17 +1,20 @@
 /**
- * @tokens Colors
+ * @tokens Utrecht
  * @presenter Color
  */
 :root {
-  --utrecht-rood: #cc0000;
-  --utrecht-geel: black;
-  --utrecht-blauw: black;
-  --utrecht-wit: black;
-  --utrecht-zwart: black;
-  --utrecht-paars: black;
-  --utrecht-magenta: black;
-  --utrecht-oranje: black;
-  --utrecht-lime: black;
-  --utrecht-groen: black;
-  --utrecht-cyaan: black;
+  --utrecht-rood-3: #cc0000; /*basis rood*/
+  --utrecht-rood-4: #d94e51; /*rood variant*/
+  --utrecht-geel-3: #ffcc00; /*basis geel*/
+  --utrecht-geel-4: #ffe44d; /*geel variant*/
+  --utrecht-geel-5: #ffeebb; /*geel variant*/
+  --utrecht-blauw-2: #2a5587; /*basis blauw*/
+  --utrecht-blauw-3: #3669a5; /*blauw variant*/
+  --utrecht-blauw-4: #99caef; /*blauw variant*/
+  --utrecht-blauw-5: #dbeaf6; /*geel variant*/
+  --utrecht-grijs-3: #727272; /*basis grijs*/
+  --utrecht-grijs-4: #e5e5e5; /*geel variant*/
+  --utrecht-grijs-5: #f2f2f2; /*geel variant*/
+  --utrecht-zwart: #000000; /*basis zwart*/
+  --utrecht-wit: #ffffff; /*basis wit*/
 }
