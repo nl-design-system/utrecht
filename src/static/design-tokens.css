@@ -3,7 +3,6 @@
  * @presenter Color
  */
 
-
 :root {
   --utrecht-heading-color: var(--utrecht-zwart);
   --utrecht-header-font-family: var(--utrecht-font-family-sans);
@@ -48,10 +47,39 @@
 
   --utrecht-paragraph-intro-font-size: 1.2em;
 
-  --utrecht-link-color: var(--utrecht-blauw3);
-  --utrecht-link-color-active: var(--utrecht-blauw-3);
-  --utrecht-link-color-hover:  var(--utrecht-blauw-4);
-  --utrecht-link-color-visited: var(--utrecht-blauw-4);
+  --utrecht-link-color: var(--utrecht-blauw-2);
+  --utrecht-link-color-active: var(--utrecht-blauw-2);
+  --utrecht-link-color-hover: var(--utrecht-blauw-3);
+  --utrecht-link-color-visited: var(--utrecht-blauw-3);
+
+  --utrecht-button-font-family: var(--utrecht-font-family-sans);
+  --utrecht-button-padding-inline: 1.25rem;
+  --utrecht-button-padding-block: 0.6875rem;
+  --utrecht-button-border-radius: 0.1875rem;
+  --utrecht-button-focus-border-color: #cca000;
+  --utrecht-button-focus-border-width: 0.125rem;
+  --utrecht-button-margin: 0 .5em 0.5em 0;
+  --utrecht-button-padding: .75em 2.5em 0.75em 1em;
+
+  --utrecht-button-primary-action-background-color: var(--utrecht-blauw-2);
+  --utrecht-button-primary-action-color: var(--utrecht-blauw-2);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-blauw-3);
+  --utrecht-button-primary-action-hover-color: var(--utrecht-wit);
+  --utrecht-button-primary-action-disabled-background-color: var(--utrecht-grijs-3);
+  --utrecht-button-primary-action-disabled-color: var(--utrecht-wit);
+  --utrecht-button-primary-action-disabled-color: var(--utrecht-wit);
+
+  --utrecht-button-secondary-action-background-color: var(--utrecht-wit);
+  --utrecht-button-secondary-action-color:  var(--utrecht-blauw-2);
+  --utrecht-button-secondary-action-border-color: var(--utrecht-blauw-2);
+  --utrecht-button-secondary-action-border-width: 0.125em; /* 2px */
+  --utrecht-button-secondary-action-hover-background-color: var(--utrecht-wit);
+  --utrecht-button-secondary-action-hover-color: var(--utrecht-blauw-3);
+  --utrecht-button-secondary-action-hover-border-color: var(--utrecht-blauw-3);
+  --utrecht-button-secondary-action-disabled-background-color: var(--utrecht-wit);
+  --utrecht-button-secondary-action-disabled-color: var(--utrecht-grijs-3);
+  --utrecht-button-secondary-action-disabled-border-color: var(--utrecht-grijs-3);
+
 
 
   /*Oh oh Den Haag*/
@@ -61,12 +89,6 @@
   --utrecht-button-focus-border-color: #cca000;
   --utrecht-button-focus-border-width: 0.125rem;
   --utrecht-button-font-family: "TheMix", sans-serif;
-  --utrecht-button-primary-action-background-color: #248641;
-  --utrecht-button-primary-action-color: var(--utrecht-blauw-3);
-  --utrecht-button-primary-action-hover-background-color: #1d6b34;
-  --utrecht-button-primary-action-hover-color: #ffffff;
-  --utrecht-button-primary-action-disabled-background-color: #d2d2d2;
-  --utrecht-button-primary-action-disabled-color: #ffffff;
 
   --utrecht-button-secondary-action-background-color: #ffffff;
   --utrecht-button-secondary-action-color: #248641;
@@ -129,7 +151,6 @@
     --utrecht-heading-1-font-size-min-width-35em: 1.75em; /* 28px on tablet min-width-35e */
     --utrecht-paragraph-intro-font-size-min-width-35em: 1.25em; /* 20px on tablet min-width-35e */
 
-
   }
 }
 
@@ -138,7 +159,6 @@
 
     --utrecht-heading-1-font-size-min-width-60em: 2em; /* 32px on desktop min-width-60em */
     --utrecht-paragraph-intro-font-size-min-width-60em: 1.25em; /* 20px on desktop min-width-60em */
-
 
   }
 }
