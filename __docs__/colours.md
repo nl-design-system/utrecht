@@ -1,17 +1,21 @@
 # Kleur
 
-## Primaire huisstijlkleuren
+De website gebruikt op hoofdlijnen de kleuren rood, geel, blauw, zwart, wit en grijs.
 
-De primaire huisstijlkleuren zijn een specifiek rood, geel en blauw. De kleuren zijn beschreven voor alle mogelijke soorten toepassingen.
+## Rood
 
-## Secundaire kleuren
+Rood wordt gebruikt als basiskleur in het ontwerp. Het is de dominante huisstijlkleur van de website.
 
-De secundaire kleuren zijn kleuren die gecombineerd kunnen worden met de primaire kleuren; ze zijn bedoeld voor ondersteunend gebruik. Het secundaire kleurenpalet wordt gebruikt voor kleurbanen, grafieken, illustraties en infographics. Gebruik geen andere kleuren. Zwart wordt voor alle lopende tekst gebruikt.
+| Hex code | Gebruik                                                       | Content                                                          |
+|----------|---------------------------------------------------------------|------------------------------------------------------------------|
+| #CC0000  | Footer, Menu, Zoek,  Footer. Toptaak buttons op projectsites. | Gebruikt wit (#fff) als tekstkleur op rood. Ook voor tekstlinks. |
 
-## De kleuren die we gebruiken
+### Inzichten uit onderzoek
 
-Hieronder staan de kleuren die we gebruiken met de bijbehorende code voor drukwerk, beeldscherm of verf.
+Uit onderzoek blijkt dat laaggeletterden afschrikken van de kleur rood. Deze dus niet gebruiken bij iets waar op geklikt kan worden. De tekst wordt niet gelezen, de laaggeletterde acteert op kleur.
 
-- Beeldscherm: RGB, Hex
-- Verf: RAL
-- Drukwerk: CMYK, PANTONE®
+## Blauw
+
+Donkerblauw wordt gebruikt als basiskleur voor links en knoppen. Licht en ijsblauw wordt gebruikt voor blokken.
+
+## Grijs
