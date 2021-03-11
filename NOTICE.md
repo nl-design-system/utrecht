@@ -14,4 +14,4 @@ Lettertypes die worden gebruikt voor de huisstijl zijn niet allemaal gratis en o
 
 ## Toestemming
 
-Wanneer je het logo of de huisstijl wilt gebruiken, kun je voor toestemming contact opnemen met huisstijl@utrecht.nl.
+Wanneer je het logo of de huisstijl wilt gebruiken kun je voor toestemming contact opnemen met [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl).
