@@ -1,0 +1,29 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./index";
+
+.utrecht-html h1 {
+  @extend .utrecht-heading-1;
+}
+
+.utrecht-html h2 {
+  @extend .utrecht-heading-2;
+}
+
+.utrecht-html h3 {
+  @extend .utrecht-heading-3;
+}
+.utrecht-html h4 {
+  @extend .utrecht-heading-4;
+}
+
+.utrecht-html h5 {
+  @extend .utrecht-heading-5;
+}
+
+.utrecht-html h6 {
+  @extend .utrecht-heading-6;
+}
