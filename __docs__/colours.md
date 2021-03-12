@@ -15,7 +15,6 @@ Rood wordt gebruikt als basiskleur in het ontwerp. Het is de dominante huisstijl
 
 Uit onderzoek blijkt dat laaggeletterden afschrikken van de kleur rood. Deze dus niet gebruiken bij iets waar op geklikt kan worden. De tekst wordt niet gelezen, de laaggeletterde acteert op kleur.
 
-
 ## Blauw
 
 Donkerblauw wordt gebruikt als basiskleur voor links en knoppen. Licht en ijsblauw wordt gebruikt voor blokken.
