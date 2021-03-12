@@ -1,0 +1,111 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ level, content }) =>
+  `<section class="utrecht-html">
+  <h${level}>${content}</h${level}>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Heading"
+  argTypes={{
+    level: {
+      description: "Heading level",
+      type: "number",
+      defaultValue: "1",
+    },
+    content: {
+      description: "Set the content of the heading",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Heading components
+
+## Heading 1
+
+Styling via the `<h1>` element:
+
+<Canvas>
+  <Story name="Heading 1" args={{ level: 1 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 2
+
+Styling via the `<h2>` element:
+
+<Canvas>
+  <Story name="Heading 2" args={{ level: 2 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 3
+
+Styling via the `<h3>` element:
+
+<Canvas>
+  <Story name="Heading 3" args={{ level: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 4
+
+Styling via the `<h4>` element:
+
+<Canvas>
+  <Story name="Heading 4" args={{ level: 4 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 5
+
+Styling via the `<h5>` element:
+
+<Canvas>
+  <Story name="Heading 5" args={{ level: 5 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 6
+
+Styling via the `<h6>` element:
+
+<Canvas>
+  <Story name="Heading 6" args={{ level: 6 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading" />
