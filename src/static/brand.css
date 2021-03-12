@@ -3,24 +3,48 @@
  * @presenter Color
  */
 :root {
+  --utrecht-rood-donker: hsl(0 100% 20%); /*donker rood*/
+  --utrecht-rood-basis: hsl(0 100% 40%); /*basis rood #cc0000*/
+  --utrecht-rood-licht: hsl(0 100% 30%); /*hover rood*/
+
+  --utrecht-blauw-donker: hsl(211 60% 20%); /*basis donkerblauw */
+  --utrecht-blauw-basis: hsl(211 60% 30%); /*basis link en knoppen CTA donkerblauw*/
+  --utrecht-blauw-licht: hsl(211 60% 40%); /*blauw variant bij hover/focus #3669a5 */
+  --utrecht-blauw-super-licht: hsl(211 60% 80%); /*licht blauw voor achtergrond*/
+  --utrecht-blauw-ultra-licht: hsl(211 60% 90%); /*ijsblauw variant achtergrond, spotlight en uitgelicht */
+
+  --utrecht-zwart: hsl(0 0 0); /*basis zwart*/
+
+  --utrecht-grijs-donker: hsl(0 0 30%); /*Border grijs #888*/
+  --utrecht-grijs-basis: hsl(0 0 40%); /*basis grijs #727272*/
+  --utrecht-grijs-licht: hsl(0 0 80%); /*grijs variant voor achtergrond content #e5e5e5*/
+  --utrecht-grijs-super-licht: hsl(0 0 90%); /*grijs variant voor achtergrond templates #f2f2f2*/
+
+  --utrecht-geel-donker: hsl(48 100% 40%); /*donker geel :( */
+  --utrecht-geel-basis: hsl(48 100% 50%); /*basis geel #ffcc00*/
+  --utrecht-geel-licht: hsl(48 100% 60%); /*seleceteer geel*/
+  --utrecht-geel-super-licht: hsl(48 100% 80%); /* spotlight en uitgelicht*/
+
+  --utrecht-wit: hsl(0 0 100%); /*basis wit*/
+
+  /**
+ * @tokens Utrecht
+ * @presenter FontFamily
+ */
 
   --utrecht-font-family-sans-serif: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
-  --utrecht-font: 400 1em/1.4 var(--utrecht-font-family-sans-serif);
-  --utrecht-font-family-serif: "Times New Roman", serif;
 
-  --utrecht-rood-3: #cc0000; /*basis rood*/
-  --utrecht-rood-4: #d94e51; /*rood variant*/
-  --utrecht-geel-3: #ffcc00; /*basis geel*/
-  --utrecht-geel-4: #ffe44d; /*geel variant*/
-  --utrecht-geel-5: #ffeebb; /*geel variant*/
-  --utrecht-blauw-2: #2a5587; /*basis link en knoppen donkerblauw*/
-  --utrecht-blauw-3: #3669a5; /*blauw variant bij hover/focus  */
-  --utrecht-blauw-4: #99caef; /*blauw variant achtergrond kleur voor contact blokkent*/
-  --utrecht-blauw-5: #dbeaf6; /*blauw variant achtergrond kleur voor spotlight*/
-  --utrecht-grijs-2: #888888; /*Border grijs*/
-  --utrecht-grijs-3: #727272; /*basis grijs*/
-  --utrecht-grijs-4: #e5e5e5; /*grijs variant voor achtergrond content*/
-  --utrecht-grijs-5: #f2f2f2; /*grijs variant voor achtergrond templates*/
-  --utrecht-zwart: #000000; /*basis zwart*/
-  --utrecht-wit: #ffffff; /*basis wit*/
+  /**
+ * @tokens Utrecht
+ * @presenter FontSize
+ */
+
+  --utrecht-font-size: 1.4em;
+
+  /**
+ * @tokens Utrecht
+ * @presenter FontWeight
+ */
+
+  --utrecht-font-weight: 400;
 }
