@@ -4,8 +4,9 @@
  */
 
 :root {
+
   --utrecht-heading-color: var(--utrecht-zwart);
-  --utrecht-header-font-family: var(--utrecht-font-family-sans);
+  --utrecht-header-font-family: var(--utrecht-font-family-sans-serif);
   --utrecht-header-font-weight: 700;
   --utrecht-heading-1-font-size: 1em; /* 16px */
   --utrecht-heading-1-line-height: 1.4;  /* 33,6px */
@@ -40,7 +41,7 @@
   --utrecht-heading-6-letter-spacing: 0.05em; /* 0.72px */
 
   --utrecht-paragraph-color: var(--utrecht-zwart);
-  --utrecht-paragraph-font-family: var(--utrecht-font-family-sans);
+  --utrecht-paragraph-font-family: var(--utrecht-font-family-sans-serif);
   --utrecht-paragraph-font-size: 1em; /* 16px */
   --utrecht-paragraph-font-weight: 300;
   --utrecht-paragraph-line-height: 1.4; /* 22.4px */
@@ -52,7 +53,7 @@
   --utrecht-link-color-hover: var(--utrecht-blauw-3);
   --utrecht-link-color-visited: var(--utrecht-blauw-3);
 
-  --utrecht-button-font-family: var(--utrecht-font-family-sans);
+  --utrecht-button-font-family: var(--utrecht-font-family-sans-serif);
   --utrecht-button-padding-inline: 1.25rem;
   --utrecht-button-padding-block: 0.6875rem;
   --utrecht-button-border-radius: 0.1875rem;
@@ -79,6 +80,33 @@
   --utrecht-button-secondary-action-disabled-background-color: var(--utrecht-wit);
   --utrecht-button-secondary-action-disabled-color: var(--utrecht-grijs-3);
   --utrecht-button-secondary-action-disabled-border-color: var(--utrecht-grijs-3);
+
+
+/* Formulieren */
+
+  --utrecht-form-input-font-family: var(--utrecht-font-family-sans-serif);
+  --utrecht-form-input-font-size: 1em;
+  --utrecht-form-input-background-color: var(--utrecht-wit);
+
+  --utrecht-form-input-border-width: 1px;
+  --utrecht-form-input-border-width-bottom: 3px;
+  --utrecht-form-input-border-color: var(--utrecht-grijs-2);
+  --utrecht-form-input-border-radius: 0;
+  --utrecht-form-input-focus-border-color: var(--utrecht-blauw-3);
+
+  --utrecht-form-input-padding: 0.5em 0.75em;
+
+  --utrecht-form-input-height: 42px;
+
+  --utrecht-form-input-placeholder-color: var(--utrecht-grijs-3);
+
+  --utrecht-form-label-font-family: var(--utrecht-font-family-sans-serif);
+  --utrecht-form-label-font-size: 1em;
+  --utrecht-form-label-font-weight: 700;
+  --utrecht-form-option-label-font-weight: 700;
+
+  --utrecht-form-textarea: normal;
+--utrecht-form-select: normal;
 
 
 
