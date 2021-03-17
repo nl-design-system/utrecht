@@ -41,7 +41,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build:storybook": "build-storybook --output-dir dist/storybook -s src/brand.css",
+    "build:storybook": "build-storybook --output-dir dist/storybook -s src/static/,src/proprietary/static/",
     "build": "npm-run-all 'build:*'",
     "deploy": "npm-run-all 'deploy:*'",
     "deploy:storybook": "storybook-to-ghpages",
