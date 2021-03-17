@@ -56,7 +56,7 @@
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "prettier": "prettier --write .",
-    "storybook": "start-storybook -p 6006 -s src/static/",
+    "storybook": "start-storybook -p 6006 -s src/static/,src/proprietary/static/",
     "start": "node_modules/http-server/bin/http-server dist/storybook/",
     "test": "exit 0"
   },
