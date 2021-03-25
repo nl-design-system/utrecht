@@ -2,7 +2,7 @@
 
 ## Eenvoudig herkenbare en kwalitatieve presentatielagen maken
 
-Met het Utrecht Design system hebben we één open bron met design keuzes en code die een community onderhoudt./Dit ontzorgt door de presentatielaag van alle gekoppelde systemen toegankelijk en robuust te houden.
+Met het Utrecht Design system hebben we één open bron met design keuzes en code die een community onderhoudt.\Dit ontzorgt door de presentatielaag van alle gekoppelde systemen toegankelijk en robuust te houden.
 
 De dienstverlening van de Gemeente Utrecht moet toegankelijk en begrijpelijk zijn voor iedereen. Hiervoor zijn consistent ontworpen diensten, websites en (web)apps nodig.
 Daarom gaan we tussen organisatieonderdelen en afdelingen principes, interactiepatronen en code delen via een gezamenlijk design system.
