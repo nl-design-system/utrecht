@@ -2,17 +2,19 @@
 
 ## Eenvoudig herkenbare en kwalitatieve presentatielagen maken
 
-Met het Utrecht Design system hebben we één open bron met design keuzes en code die een community onderhoudt. Dit ontzorgt door de presentatielaag van alle gekoppelde systemen toegankelijk en robuust te houden.
+Met het Utrecht Design system hebben we één open bron met design keuzes en code die een community onderhoudt./Dit ontzorgt door de presentatielaag van alle gekoppelde systemen toegankelijk en robuust te houden.
 
 De dienstverlening van de Gemeente Utrecht moet toegankelijk en begrijpelijk zijn voor iedereen. Hiervoor zijn consistent ontworpen diensten, websites en (web)apps nodig.
-Daarom gaan we tussen organisatieonderdelen en afdelingen principes, interactiepatronen en code delen via een gezamenlijk design system. Dit Design System draagt niet alleen bij aan gebruiksvriendelijkere diensten van een betere kwaliteit en toegankelijkheid. Het helpt ook dubbel werk te voorkomen.
+Daarom gaan we tussen organisatieonderdelen en afdelingen principes, interactiepatronen en code delen via een gezamenlijk design system.
+
+Dit Design System draagt bij aan gebruiksvriendelijkere diensten van een betere kwaliteit en toegankelijkheid en het helpt ook dubbel werk te voorkomen.
 
 > ⚠️ **LET OP**
 >
-> Het Utrecht Design System bevindt zich momenteel nog in de pilotfase.  
+> Het Utrecht Design System bevindt zich momenteel nog in de pilotfase.
 > Hierdoor kunnen er zaken veranderen.
-> Houdt hier dus rekening mee voor je aan de slag gaat.  
-> We zouden het op prijs stellen als je wilt bijdragen om het Design System tot een succes te maken.  
+> Houdt hier dus rekening mee voor je aan de slag gaat.
+> We zouden het op prijs stellen als je wilt bijdragen om het Design System tot een succes te maken.
 > Dit kan in onze gitlab of met een mailtje aan: <mailto:r.olling@utrecht.nl> of <mailto:j.du.chatinier@utrecht.nl>
 
 ## Wat is een Design System
