@@ -1,0 +1,8 @@
+import { getParams, getTitle } from "./utils.js";
+import { Description, Meta } from "@storybook/addon-docs/blocks";
+import document from "../__docs__/colours.md";
+import { MDXEmbedProvider } from "mdx-embed";
+
+<Meta title={getTitle("Kleuren huisstijl")} parameters={getParams()} />
+
+<Description>{document}</Description>

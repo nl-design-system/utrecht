@@ -16,16 +16,15 @@ Feel free to add or modify those documentation pages and use the example compone
 1. Open Terminal.
 2. Install homebrew by copy-pasting the following: `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`. You will be prompted for your password for sudo access.
 3. Install GIT by copy-pasting the following into your terminal: `$ brew install git`.
-4. Install VS Code [Visual Studio](https://code.visualstudio.com/).
-5. Clone the repository in VS Code [GitHub](https://github.com/nl-design-system/utrecht).
+4. Install VS Code [Visual Studio](https://code.visualstudio.com/) or your own favourite code editor.
+5. Clone the repository in VS Code [GitHub](https://github.com/nl-design-system/utrecht) or your own favourite code editor.
 6. In a terminal go to the repository folder and run `npm install` there.
 7. Check versions.
-   a. In the terminal, run `node -v`. The version should be at least 14.X
-   b. In the terminal, run `npm -v`. The version should be at least 6.X
-   c. If the versions are not up to date, run 'npm install' again.
+   - In the terminal, run `node -v`. The version should be at least 14.X
+   - In the terminal, run `npm -v`. The version should be at least 6.X
+   - If the versions are not up to date, run 'npm install' again.
 8. Run storybook.
-   a. In VS Code in the `terminal` tab click on `run Storybook`
-   b. In the Terminal run `npm run storybook`
+   - In the Terminal run `npm run storybook`
 9. Your main browser opens automatically with your local storybook.
 
 ### Change the theme of your storybook to match your brand
@@ -76,3 +75,5 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 ## License
 
 This project is free and open-source software licensed under the [European Union Public License (EUPL) v1.2](LICENSE.md).
+
+For information about proprietary assets in this repository, please carefully read the [NOTICE file](NOTICE.md).
