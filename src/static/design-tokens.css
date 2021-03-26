@@ -7,13 +7,34 @@
   --utrecht-font-bold: 700;
   --utrecht-font-normal: 400;
 
-  --utrecht-fontsize-l: 1rem;
-  --utrecht-fontsize-xl: 2rem;
+  --utrecht-space-inline-micro-2: 0.125rem;
+  --utrecht-space-inline-micro-4: 0.25rem;
+  --utrecht-space-inline-micro-8: 0.5rem;
+  --utrecht-space-inline-micro-12: 0.75rem;
+  --utrecht-space-inline-micro-16: 1rem;
+  --utrecht-space-inline-micro-20: 1.25rem;
+  --utrecht-space-inline-micro-24: 1.5rem;
+  --utrecht-space-inline-macro-32: 2rem;
+  --utrecht-space-inline-macro-40: 2.5rem;
+  --utrecht-space-inline-macro-56: 3,5rem;
+  --utrecht-space-inline-macro-64: 4rem;
+  --utrecht-space-inline-macro-96: 6rem;
+  --utrecht-space-inline-macro-160: 10rem;
 
-  --utrecht-space-inline-1: 0.25rem;
-  --utrecht-space-block-1: 0.25rem;
+  --utrecht-space-block-micro-2: 0.125rem;
+  --utrecht-space-block-micro-4: 0.25rem;
+  --utrecht-space-block-micro-8: 0.5rem;
+  --utrecht-space-block-micro-12: 0.75rem;
+  --utrecht-space-block-micro-16: 1rem;
+  --utrecht-space-block-micro-20: 1.25rem;
+  --utrecht-space-block-micro-24: 1.5rem;
+  --utrecht-space-block-macro-32: 2rem;
+  --utrecht-space-block-macro-40: 2.5rem;
+  --utrecht-space-block-macro-56: 3,5rem;
+  --utrecht-space-block-macro-64: 4rem;
+  --utrecht-space-block-macro-96: 6rem;
+  --utrecht-space-block-macro-160: 10rem;
 
-  --utrecht-layout-1: 1rem;
 
   --utrecht-heading-color: var(--utrecht-black);
   --utrecht-header-font-family: var(--utrecht-font-family-sans-serif);
@@ -164,14 +185,14 @@
 
 @media (min-width: 35em) {
   :root {
-    --utrecht-heading-1-font-size-min-width-35em: 1.75em; /* 28px on tablet min-width-35e */
-    --utrecht-paragraph-intro-font-size-min-width-35em: 1.25em; /* 20px on tablet min-width-35e */
+    --utrecht-heading-1-font-size: 1.75em; /* 28px on tablet min-width-35e */
+    --utrecht-paragraph-intro-font-size: 1.25em; /* 20px on tablet min-width-35e */
   }
 }
 
 @media (min-width: 60em) {
   :root {
-    --utrecht-heading-1-font-size-min-width-60em: 2em; /* 32px on desktop min-width-60em */
-    --utrecht-paragraph-intro-font-size-min-width-60em: 1.25em; /* 20px on desktop min-width-60em */
+    --utrecht-heading-1-font-size: 2em; /* 32px on desktop min-width-60em */
+    --utrecht-paragraph-intro-font-size: 1.25em; /* 20px on desktop min-width-60em */
   }
 }
