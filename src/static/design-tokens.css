@@ -66,7 +66,7 @@
   --utrecht-button-padding-inline: 1.25rem;
   --utrecht-button-padding-block: 0.6875rem;
   --utrecht-button-border-radius: 0.1875rem;
-  --utrecht-button-focus-border-color: #cca000;
+  --utrecht-button-focus-border-color: var(--utrecht-blue-40);
   --utrecht-button-focus-border-width: 0.125rem;
   --utrecht-button-margin: 0 0.5rem 0.5rem 0;
   --utrecht-button-padding: 0.75rem 2.5rem 0.75rem 1rem;
@@ -117,7 +117,6 @@
   --utrecht-button-padding-inline: 1.25rem;
   --utrecht-button-padding-block: 0.6875rem;
   --utrecht-button-border-radius: 0.1875rem;
-  --utrecht-button-focus-border-color: #cca000;
   --utrecht-button-focus-border-width: 0.125rem;
   --utrecht-button-font-family: "TheMix", sans-serif;
 
