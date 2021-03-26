@@ -44,7 +44,7 @@
     "build:storybook": "build-storybook --output-dir dist/storybook -s src/static/,src/proprietary/static/",
     "build": "npm-run-all 'build:*'",
     "deploy": "npm-run-all 'deploy:*'",
-    "deploy:storybook": "storybook-to-ghpages",
+    "deploy:storybook": "storybook-to-ghpages --existing-output-dir dist/storybook",
     "lint": "npm-run-all --continue-on-error 'lint:*' && lerna run lint",
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint '**/*.{js,jsx,ts,tsx}'",
