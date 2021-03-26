@@ -41,4 +41,4 @@ jobs:
           GH_TOKEN: MyCompany:${{ secrets.GH_TOKEN }}
         run: |
           yarn
-          yarn deploy:storybook -- --ci
+          yarn deploy:storybook --ci
