@@ -1,67 +1,50 @@
 /**
- * @license SEE LICENSE.md
- * Copyright (c) 2021 Gemeente Utrecht
- * All rights reserved
- */
-
-/* stylelint-disable no-duplicate-selectors */
-
-/*
- * Comments in this file are automatically processed by a Storybook plugin.
- * Documentation for the Storybook Design Token plugin:
- * https://storybook.js.org/addons/storybook-design-token
- */
-
-/**
- * @tokens Utrecht / Color
+ * @tokens Utrecht
  * @presenter Color
  */
 :root {
-  --utrecht-rood-donker: hsl(0 100% 20%); /* donker rood */
-  --utrecht-rood-basis: hsl(0 100% 40%); /* basis rood #cc0000 */
-  --utrecht-rood-licht: hsl(0 100% 30%); /* hover rood */
+  --utrecht-red-20: hsl(0 100% 20%); /*donker rood*/
+  --utrecht-red-30: hsl(0 100% 30%); /*hover rood*/
+  --utrecht-red-40: hsl(0 100% 40%); /*basis rood #cc0000*/
 
-  --utrecht-blauw-donker: hsl(211 60% 20%); /* basis donkerblauw  */
-  --utrecht-blauw-basis: hsl(211 60% 30%); /* basis link en knoppen CTA donkerblauw */
-  --utrecht-blauw-licht: hsl(211 60% 40%); /* blauw variant bij hover/focus #3669a5  */
-  --utrecht-blauw-super-licht: hsl(211 60% 80%); /* licht blauw voor achtergrond */
-  --utrecht-blauw-ultra-licht: hsl(211 60% 90%); /* ijsblauw variant achtergrond, spotlight en uitgelicht */
+  --utrecht-blue-20: hsl(211 60% 20%); /*basis donkerblauw (OS focus)*/
+  --utrecht-blue-30: hsl(211 60% 30%); /*basis link en knoppen CTA donkerblauw*/
+  --utrecht-blue-40: hsl(211 60% 40%); /*blauw variant bij hover/focus #3669a5 */
+  --utrecht-blue-80: hsl(211 60% 80%); /*licht blauw voor achtergrond*/
+  --utrecht-blue-90: hsl(211 60% 90%); /*ijsblauw variant achtergrond, spotlight en uitgelicht */
 
-  --utrecht-zwart: hsl(0 0% 0%); /* basis zwart */
+  --utrecht-black: hsl(0 0% 0%); /*basis zwart*/
 
-  --utrecht-grijs-donker: hsl(0 0% 30%); /* Border grijs #888 */
-  --utrecht-grijs-basis: hsl(0 0% 40%); /* basis grijs #727272 */
-  --utrecht-grijs-licht: hsl(0 0% 80%); /* grijs variant voor achtergrond content #e5e5e5 */
-  --utrecht-grijs-super-licht: hsl(0 0% 90%); /* grijs variant voor achtergrond templates #f2f2f2 */
+  --utrecht-grey-30: hsl(0 0% 30%); /*Border grijs #888*/
+  --utrecht-grey-40: hsl(0 0% 40%); /*basis grijs #727272*/
+  --utrecht-grey-80: hsl(0 0% 80%); /*grijs variant voor achtergrond content #e5e5e5*/
+  --utrecht-grey-90: hsl(0 0% 90%); /*grijs variant voor achtergrond templates #f2f2f2*/
 
-  --utrecht-geel-donker: hsl(48 100% 40%); /* donker geel :(  */
-  --utrecht-geel-basis: hsl(48 100% 50%); /* basis geel #ffcc00 */
-  --utrecht-geel-licht: hsl(48 100% 60%); /* seleceteer geel */
-  --utrecht-geel-super-licht: hsl(48 100% 80%); /* spotlight en uitgelicht */
+  --utrecht-yellow-40: hsl(48 100% 40%); /*donker geel */
+  --utrecht-yellow-50: hsl(48 100% 50%); /*basis geel #ffcc00*/
+  --utrecht-yellow-60: hsl(48 100% 60%); /*selecteer geel*/
+  --utrecht-yellow-80: hsl(48 100% 80%); /*spotlight en uitgelicht*/
 
-  --utrecht-wit: hsl(0 0% 100%); /* basis wit */
-}
+  --utrecht-white: hsl(0 0% 100%); /*basis wit*/
 
-/**
- * @tokens Utrecht / Font
+  /**
+ * @tokens Utrecht
  * @presenter FontFamily
  */
-:root {
-  --utrecht-font-family-sans-serif: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
-}
 
-/**
- * @tokens Utrecht / Font size
+  --utrecht-font-family-sans-serif: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif;
+
+  /**
+ * @tokens Utrecht
  * @presenter FontSize
  */
-:root {
-  --utrecht-font-size: 1.4em;
-}
 
-/**
- * @tokens Utrecht / Font weight
+  --utrecht-font-size: 1.4em;
+
+  /**
+ * @tokens Utrecht
  * @presenter FontWeight
  */
-:root {
+
   --utrecht-font-weight: 400;
 }
