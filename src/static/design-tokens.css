@@ -7,6 +7,7 @@
   --utrecht-font-bold: 700;
   --utrecht-font-normal: 400;
 
+
   --utrecht-space-inline-micro-2: 0.125rem;
   --utrecht-space-inline-micro-4: 0.25rem;
   --utrecht-space-inline-micro-8: 0.5rem;
@@ -34,6 +35,7 @@
   --utrecht-space-block-macro-64: 4rem;
   --utrecht-space-block-macro-96: 6rem;
   --utrecht-space-block-macro-160: 10rem;
+
 
   --utrecht-heading-color: var(--utrecht-black);
   --utrecht-header-font-family: var(--utrecht-font-family-sans-serif);
@@ -184,14 +186,18 @@
 
 @media (min-width: 35em) {
   :root {
+
     --utrecht-heading-1-font-size: 1.75em; /* 28px on tablet min-width-35e */
     --utrecht-paragraph-intro-font-size: 1.25em; /* 20px on tablet min-width-35e */
+
   }
 }
 
 @media (min-width: 60em) {
   :root {
+
     --utrecht-heading-1-font-size: 2em; /* 32px on desktop min-width-60em */
     --utrecht-paragraph-intro-font-size: 1.25em; /* 20px on desktop min-width-60em */
+
   }
 }
