@@ -16,7 +16,7 @@
 
   --utrecht-heading-color: var(--utrecht-black);
   --utrecht-header-font-family: var(--utrecht-font-family-sans-serif);
-  --utrecht-header-font-weight: 700;
+  --utrecht-header-font-weight: var(--utrecht-font-bold);
   --utrecht-heading-1-font-size: 1rem; /* 16px */
   --utrecht-heading-1-line-height: 1.4; /* 33,6px */
   --utrecht-heading-1-margin: 0.67rem 0;
@@ -26,24 +26,24 @@
   --utrecht-heading-2-margin: 1.5rem 0 0.3rem;
 
   --utrecht-heading-3-font-size: 1.25rem; /* 20px */
-  --utrecht-heading-3-font-weight: 400;
+  --utrecht-heading-3-font-weight: var(--utrecht-font-normal);
   --utrecht-heading-3-line-height: 1.2; /* 24px */
   --utrecht-heading-3-margin: 1rem 0 0.2rem;
 
   --utrecht-heading-4-font-size: 1.125rem; /* 18px */
-  --utrecht-heading-4-font-weight: 300;
+  --utrecht-heading-4-font-weight: var(--utrecht-font-normal);
   --utrecht-heading-4-line-height: 1.25; /* 22,5px */
   --utrecht-heading-4-margin: 1.2rem 0 0.3rem;
 
   --utrecht-heading-5-font-size: 0.9rem; /* 14.4px */
-  --utrecht-heading-5-font-weight: 400;
+  --utrecht-heading-5-font-weight: var(--utrecht-font-normal);
   --utrecht-heading-5-line-height: 1.333; /* 22.4px */
   --utrecht-heading-5-margin: 1rem 0 0.2rem;
   --utrecht-heading-5-text-transform: uppercase;
   --utrecht-heading-5-letter-spacing: 0.05rem; /* 0.72px */
 
   --utrecht-heading-6-font-size: 0.9rem; /* 14.4px */
-  --utrecht-heading-6-font-weight: 400;
+  --utrecht-heading-6-font-weight: var(--utrecht-font-normal);
   --utrecht-heading-6-line-height: 1.333; /* 22.4px */
   --utrecht-heading-6-margin: 1rem 0 0.2rem;
   --utrecht-heading-6-text-transform: uppercase;
@@ -52,7 +52,7 @@
   --utrecht-paragraph-color: var(--utrecht-black);
   --utrecht-paragraph-font-family: var(--utrecht-font-family-sans-serif);
   --utrecht-paragraph-font-size: 1rem; /* 16px */
-  --utrecht-paragraph-font-weight: 400;
+  --utrecht-paragraph-font-weight: var(--utrecht-font-normal);
   --utrecht-paragraph-line-height: 1.4; /* 22.4px */
 
   --utrecht-paragraph-intro-font-size: 1.2rem;
@@ -65,8 +65,8 @@
   --utrecht-button-font-family: var(--utrecht-font-family-sans-serif);
   --utrecht-button-padding-inline: 1.25rem;
   --utrecht-button-padding-block: 0.6875rem;
-  --utrecht-button-border-radius: 0.1875rem;
-  --utrecht-button-focus-border-color: #cca000;
+  --utrecht-button-border-radius: 0;
+  --utrecht-button-focus-border-color: var(--utrecht-blue-40);
   --utrecht-button-focus-border-width: 0.125rem;
   --utrecht-button-margin: 0 0.5rem 0.5rem 0;
   --utrecht-button-padding: 0.75rem 2.5rem 0.75rem 1rem;
@@ -116,10 +116,7 @@
   /*Oh oh Den Haag*/
   --utrecht-button-padding-inline: 1.25rem;
   --utrecht-button-padding-block: 0.6875rem;
-  --utrecht-button-border-radius: 0.1875rem;
-  --utrecht-button-focus-border-color: #cca000;
   --utrecht-button-focus-border-width: 0.125rem;
-  --utrecht-button-font-family: "TheMix", sans-serif;
 
   /* example design tokens to consider */
   --utrecht-article-line-height: 30px;
