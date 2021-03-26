@@ -22,13 +22,15 @@ export const Template = ({ href, content }) =>
     href: {
       description: "Set the href attribute of the demolink",
       control: "text",
-    },
-    content: {
-      description: "Set the content of the badge, normally a string",
-      control: "text",
-    },
-  }}
-  parameters={{
+},
+content: {
+description: "Set the content of the badge, normally a string",
+control: "text",
+},
+
+
+}}
+parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
     },
