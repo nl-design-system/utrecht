@@ -1,0 +1,64 @@
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./style.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+import contentGuidelines from "./docs/content-guidelines.md";
+import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
+
+export const Template = ({ href, content }) =>
+  `<div class="utrecht-html">
+    <ul class="utrecht-linklijst">
+        <li class="utrecht-linklijst__item utrecht-linklijst__item--active">
+          <a href="#">menu item label #1</a>
+        </li>
+        <li class="utrecht-linklijst__item">
+          <a href="#">menu item label #2</a>
+        </li>
+         <li class="utrecht-linklijst__item">
+          <a href="#">menu item label #3</a>
+        </li>
+    </ul>
+</div>
+`;
+
+<Meta
+  title="Components/Menulijst"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+      //Content: contentGuidelines,
+      // Accessibility: accessibilityGuidelines
+    },
+  }}
+/>
+
+# Demo Implemented menulijst Component
+
+To use the component as a web component, make sure the component is defined by including the components `element.js` file
+
+<Canvas>
+  <Story name="menulijst" args={{ href: "#", content: "menulijst" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="menulijst" />
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="menulijst" url="file/x" />
+</MDXEmbedProvider>
