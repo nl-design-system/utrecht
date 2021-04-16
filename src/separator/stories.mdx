@@ -1,0 +1,49 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { MDXEmbedProvider } from "mdx-embed";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ level, content }) =>
+  `<div role="separator" aria-orientation="horizontal" class="utrecht-separator"></div>`;
+
+<Meta
+  title="Components/Separator"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+      //Content: contentGuidelines,
+      // Accessibility: accessibilityGuidelines
+    },
+  }}
+/>
+
+# Separator
+
+Styling via `utrecht-separator` class name:
+
+<Canvas>
+  <Story name="Separator">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Separator" />
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="Separator" url="file/x" />
+</MDXEmbedProvider>
