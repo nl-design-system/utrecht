@@ -1,24 +1,53 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+Copyright (c) 2021 Robbert Broersma
+-->
+
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
 import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
 import { MDXEmbedProvider } from "mdx-embed";
 import dedent from "ts-dedent";
 
-<!-- Import component and component styles -->
-
 import "./style.css";
 
-<!-- Import Docs -->
-
 import README from "./README.md";
-import contentGuidelines from "./docs/content-guidelines.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ href, content }) =>
-  `<a class="link" href="${href}"><span class="link__text">${sanitize(content)}</span></a>`;
+export const Template = ({ content, active, focus, hover, visited }) =>
+  `<a href="#" class="utrecht-link ${hover ? " utrecht-link--hover" : ""}${focus ? " utrecht-link--focus" : ""}${
+    active ? " utrecht-link--active" : ""
+  }${visited ? " utrecht-link--visited" : ""}">${content}</a>`;
 
 <Meta
   title="Components/Link"
-  argTypes={{}}
+  argTypes={{
+    content: {
+      description: "Link text",
+      control: "text",
+      defaultValue: "Read more...",
+    },
+    visited: {
+      description: "Visited",
+      control: "text",
+      defaultValue: false,
+    },
+    active: {
+      description: "Visited",
+      control: "text",
+      defaultValue: false,
+    },
+    focus: {
+      description: "Visited",
+      control: "text",
+      defaultValue: false,
+    },
+    hover: {
+      description: "Visited",
+      control: "text",
+      defaultValue: false,
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -26,18 +55,47 @@ export const Template = ({ href, content }) =>
     status: "IN DEVELOPMENT",
     notes: {
       UX: README,
-      Content: contentGuidelines,
-      Accessibility: accessibilityGuidelines
+      Accessibility: accessibilityGuidelines,
     },
   }}
 />
 
-# Demo Implemented Link Component
+# Link
 
-To use the component as a web component, make sure the component is defined by including the components `element.js` file
+Styling via the `.utrecht-link` class name:
 
 <Canvas>
-  <Story name="Link" args={{ href: "#", content: "Link" }}>
+  <Story name="Link">{Template.bind({})}</Story>
+</Canvas>
+
+Styling via the `.utrecht-link--hover` class name:
+
+<Canvas>
+  <Story name="Link hover" args={{ hover: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-link--focus` class name:
+
+<Canvas>
+  <Story name="Link focus" args={{ focus: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-link--active` class name:
+
+<Canvas>
+  <Story name="Link active" args={{ active: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-link--visited` class name:
+
+<Canvas>
+  <Story name="Link visited" args={{ visited: true }}>
     {Template.bind({})}
   </Story>
 </Canvas>

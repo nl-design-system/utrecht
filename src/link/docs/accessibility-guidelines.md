@@ -1,11 +1,17 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+-->
+
 <!-- markdownlint-disable MD033 -->
+
 # Toegangkelijkheidseisen
 
 ## Focus
 
 ### WCAG 2.4.11
 
-Bij het Link component hebben we te maken met [WCAG eis 2.4.1](https://www.w3.org/TR/WCAG22/#focus-appearance-minimum). Deze eis beschrijft dat als een link de focus door het te selecteren met het toetsenbord het uiterlijk van de link moet veranderen.  De [bedoeling van dit punt](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance-minimum.html#intent) is dat de keyboard focus indicator altijd duidelijk zichtbaar is.
+Bij het Link component hebben we te maken met [WCAG eis 2.4.1](https://www.w3.org/TR/WCAG22/#focus-appearance-minimum). Deze eis beschrijft dat als een link de focus door het te selecteren met het toetsenbord het uiterlijk van de link moet veranderen. De [bedoeling van dit punt](https://www.w3.org/WAI/WCAG22/Understanding/focus-appearance-minimum.html#intent) is dat de keyboard focus indicator altijd duidelijk zichtbaar is.
 
 ### Design keuzes
 

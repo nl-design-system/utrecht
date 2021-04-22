@@ -1,59 +1,27 @@
-<!-- \*Status: **In development\*** -->
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+-->
 
 # Link
 
-## UX guidelines
+## Tekstlinks
 
-### Introduction
+Tekstlinks zijn standaard donkerblauw (#2A5587) en onderstreept. In sommige gevallen zijn tekstlinks zwart of wit. Dit geldt bij teksten op een gekleurde achtergrond, waar blauw niet voldoende contrast biedt. Kijk voor meer informatie over de contrastrichtlijnen bij kleuren (link naar kleuren).
 
-Some information on the Demo component. Where can it be used, what types of information can it contain?
+### Voorbeeld
 
-### Variations
+U kunt tegelijk een paspoort en een ID-kaart hebben. Met een paspoort kunt u naar alle landen reizen. Een ID-kaart is goedkoper, maar u kunt hiermee niet naar alle landen reizen.
 
-List of Variations
+## Links met pijl
 
-- Variation 1
-- Variation 2
+Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst. Ze verwijzen naar gerelateerde informatie over het onderwerp wat er in de voorafgaande tekst is besproken. De links zijn donkerblauw (#2A5587), bold en hebben een pijl (>) als voorloopteken. Dit type link wordt ook gebruikt in de linklijst en de subnavigatie.
 
-### Alternatives and related components
+### Variant
 
-- Example component can be used instead of the demo component
+Een variant van de link met pijl is zwart (#000) in plaats van donkerblauw. Deze link wordt gebruikt in de linklijsten ‘related’ die verwijzen naar gerelateerde content onderaan een contentpagina.
 
-### Anatomy
+## Ankerlinks
 
-Describe the atanomy of a component, for example:
-
-- A container
-- With a content block
-- And a header
-
-### Design tokens
-
-#### Global/default
-
-Describe which global brand tokens should be used by this component. Semantic colors, Borders, Border-radius, typography, etc
-
--
-
--
-
-#### Interactive states
-
-Describe which interactive states this component can have and which design tokens should then be used
-
-### Best practices
-
-#### Do
-
--
--
-
-#### Don't
-
--
--
-
-### References
-
--
--
+Ankerlinks worden gebruikt om te navigeren naar specifieke content op de pagina. Ankerlinks staan boven de content waar ze naar verwijzen, komen alleen voor op contentpagina’s en worden gebruikt als opsomming. Ankerlinks zijn worden veel gebruikt als een soort inhoudsopgave van de pagina.
+Ankerlinks zijn blauw, onderstreept en hebben een rood bolletje als voorloopteken.
