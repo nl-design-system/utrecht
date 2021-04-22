@@ -1,0 +1,86 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content }) =>
+  `<section class="utrecht-html">
+  <p>${content}</p>
+</section>`;
+
+export const TemplateMulti = ({ content }) =>
+  `<section class="utrecht-html">
+  <p class="intro">${content}</p>
+  <p>${content}</p>
+  <p>${content}</p>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Paragraph"
+  argTypes={{
+    content: {
+      description: "Paragraph text",
+      control: "text",
+      defaultValue:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    intro: {
+      description: "Intro paragraph",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Paragraph
+
+Styling via the `<p>` element:
+
+<Canvas>
+  <Story name="Paragraph">{Template.bind({})}</Story>
+</Canvas>
+
+## Intro paragraph
+
+Styling via the `<p>` element with the `intro` class name:
+
+<Canvas>
+  <Story name="Intro paragraph" args={{ intro: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Multiple paragraphs with whitespace
+
+<Canvas>
+  <Story name="Multiple paragraphs">{TemplateMulti.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Paragraph" />
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="Paragraph" url="file/x" />
+</MDXEmbedProvider>
