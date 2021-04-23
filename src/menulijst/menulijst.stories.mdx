@@ -14,45 +14,51 @@ import contentGuidelines from "./docs/content-guidelines.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
 export const Template = ({ href, content }) =>
-  `<a class="demo-link" href="${href}"><span class="demo-link__text">${sanitize(content)}</span></a>`;
+  `<div class="utrecht-html">
+    <ul class="utrecht-menulijst">
+        <li class="utrecht-menulijst__item utrecht-menulijst__item--active">
+          <a href="#">menu item label #1</a>
+        </li>
+        <li class="utrecht-menulijst__item">
+          <a href="#">menu item label #2</a>
+        </li>
+         <li class="utrecht-menulijst__item">
+          <a href="#">menu item label #3</a>
+        </li>
+    </ul>
+</div>
+`;
 
 <Meta
-  title="Components/Link"
-  argTypes={{
-    href: {
-      description: "Set the href attribute of the demolink",
-      control: "text",
-},
-content: {
-description: "Set the content of the badge, normally a string",
-control: "text",
-},
-
-
-}}
-parameters={{
+  title="Components/Menulijst"
+  argTypes={{}}
+  parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
     },
     status: "IN DEVELOPMENT",
-    notes: { UX: README, Content: contentGuidelines, Accessibility: accessibilityGuidelines },
+    notes: {
+      UX: README,
+      //Content: contentGuidelines,
+      // Accessibility: accessibilityGuidelines
+    },
   }}
 />
 
-# Demo Implemented Link Component
+# Demo Implemented menulijst Component
 
 To use the component as a web component, make sure the component is defined by including the components `element.js` file
 
 <Canvas>
-  <Story name="Link" args={{ href: "#", content: "Demo Link" }}>
+  <Story name="menulijst" args={{ href: "#", content: "menulijst" }}>
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Link" />
+<ArgsTable story="menulijst" />
 
 ## Design Kit
 
 <MDXEmbedProvider>
-  <Figma title="Link" url="file/x" />
+  <Figma title="menulijst" url="file/x" />
 </MDXEmbedProvider>

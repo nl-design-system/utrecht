@@ -1,0 +1,29 @@
+.utrecht-html {
+  font-family: var(--utrecht-font-family-sans-serif);
+}
+
+.utrecht-menulijst {
+  border-top: 2px solid #eeeeee;
+  border-bottom: 2px solid var(--utrecht-grey-30);
+  padding-block-start: 0.75em;
+  padding-block-end: 0;
+}
+
+.utrecht-menulijst__item {
+  margin-block-start: 0.75em;
+  margin-block-end: 0.75em;
+  list-style: none;
+}
+
+.utrecht-menulijst__item a {
+  display: block;
+  color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue));
+  font-weight: var(--utrecht-font-weight-bold);
+  background: url("https://huisstijl.utrecht.nl/typo3conf/ext/alternet_sitepackage/Resources/Public/Images/svg/pijltje-blauw.svg")
+    0 0.25em no-repeat;
+  padding-inline-start: 1em;
+}
+
+.utrecht-menulijst__item a:hover {
+  color: var(--utrecht-menulijst-item-color-hover, var(--utrecht-link-color-hover, red));
+}

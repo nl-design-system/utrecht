@@ -1,6 +1,6 @@
 <!-- \*Status: **In development\*** -->
 
-# Demo
+# Menulijst
 
 ## UX guidelines
 
