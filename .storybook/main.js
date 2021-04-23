@@ -1,5 +1,5 @@
 module.exports = {
-  stories: ['../src/**/*.stories.@(js|mdx)'],
+  stories: ['../__stories__/**/*.stories.@(js|mdx)', '../src/**/*.stories.@(js|mdx)'],
   addons: [
     '@storybook/addon-notes/register',
     '@etchteam/storybook-addon-status/register',
