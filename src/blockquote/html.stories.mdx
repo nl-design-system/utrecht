@@ -1,0 +1,52 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+Copyright (c) 2021 Gemeente Utrecht
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content }) =>
+  `<section class="utrecht-html">
+  <blockquote>
+    <p>${content}</p>
+  </blockquote>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Blockquote"
+  argTypes={{
+    content: {
+      description: "Content of the quote",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Blockquote
+
+Styling via the `<blockquote>` element:
+
+<Canvas>
+  <Story name="Blockquote in HTML">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Blockquote in HTML" />

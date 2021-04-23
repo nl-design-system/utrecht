@@ -1,0 +1,71 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, attribution }) =>
+  `<blockquote class="utrecht-blockquote">
+    <div class="utrecht-blockquote__content">
+      <p>${content}</p>${
+    attribution
+      ? `
+    </div>
+    <div class="utrecht-blockquote__attribution"><cite>${attribution}</cite></div>`
+      : ""
+  }
+</blockquote>`;
+
+<Meta
+  title="Components/Blockquote"
+  argTypes={{
+    content: {
+      description: "Content of the quote",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    attribution: {
+      description: "Attribution of the quote",
+      control: "text",
+      defaultValue: "",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Blockquote
+
+Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class names:
+
+<Canvas>
+  <Story name="Blockquote">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Blockquote" />
+
+## Blockquote with attribution
+
+Styling with an additional `.utrecht-blockquote__attribution` class name:
+
+<Canvas>
+  <Story name="Blockquote with attribution" args={{ attribution: "L. Ipsum" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

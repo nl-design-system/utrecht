@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./index";
+
+.utrecht-html blockquote {
+  @extend .utrecht-blockquote;
+  @extend .utrecht-blockquote__content;
+  @extend .utrecht-blockquote--distanced;
+}
