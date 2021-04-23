@@ -1,0 +1,51 @@
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./style.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+import contentGuidelines from "./docs/content-guidelines.md";
+import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
+
+export const Template = ({ href, content }) =>
+  `<a class="link" href="${href}"><span class="link__text">${sanitize(content)}</span></a>`;
+
+<Meta
+  title="Components/Link"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+      Content: contentGuidelines,
+      Accessibility: accessibilityGuidelines
+    },
+  }}
+/>
+
+# Demo Implemented Link Component
+
+To use the component as a web component, make sure the component is defined by including the components `element.js` file
+
+<Canvas>
+  <Story name="Link" args={{ href: "#", content: "Link" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Link" />
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="Link" url="file/x" />
+</MDXEmbedProvider>
