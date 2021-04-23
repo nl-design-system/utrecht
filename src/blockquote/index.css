@@ -1,0 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-blockquote {
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-blockquote-font-size);
+}
+
+.utrecht-blockquote__content {
+  color: var(--utrecht-blockquote-content-color, inherit);
+}
+
+.utrecht-blockquote--distanced {
+  margin-inline-start: var(--utrecht-blockquote-margin-inline-start);
+  margin-inline-end: var(--utrecht-blockquote-margin-inline-end);
+  margin-block-start: var(--utrecht-blockquote-margin-block);
+  margin-block-end: var(--utrecht-blockquote-margin-block);
+}
