@@ -11,8 +11,8 @@ Bij het Link component hebben we te maken met [WCAG eis 2.4.1](https://www.w3.or
 
 We maken daarom de volgende design keuzes bij een hover state:
 
-- Een link in hoverstate krijgt een gele achtergrondkleur (`var(--utrecht-yellow-60)`).
-- Een link in hoverstate krijgt een donkerblauwe outline (`var(--utrecht-blue-35)`).
+- Een link in focus state krijgt een gele achtergrondkleur (`var(--utrecht-yellow-60)`).
+- Een link in focus state krijgt een donkerblauwe outline (`var(--utrecht-blue-35)`).
 - We kiezen voor outline in plaats van border omdat dit beter opgepakt wordt door de verschillende browsers.
 
 Als een link de focus krijgt is deze een stuk zichtbaarder dan zonder deze achtergrond. Het verschil tussen de normale achtergrond (zonder focus) en de nieuwe achtergrond (met focus) moet voldoen aan een contrast ration van 3:1. Met de bovenstaande keuzes hebben we een contrastwaarde van ??:??
