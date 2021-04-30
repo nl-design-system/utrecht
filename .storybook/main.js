@@ -2,6 +2,7 @@ module.exports = {
   stories: ['../__stories__/**/*.stories.@(js|mdx)', '../src/**/*.stories.@(js|mdx)'],
   addons: [
     '@storybook/addon-notes/register',
+    '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
     {
       name: '@storybook/addon-essentials',
