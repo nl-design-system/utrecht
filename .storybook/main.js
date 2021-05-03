@@ -1,5 +1,8 @@
 module.exports = {
   stories: ['../__stories__/**/*stories.@(js|mdx)', '../src/**/*stories.@(js|mdx)'],
+  features: {
+    postcss: false,
+  },
   addons: [
     '@storybook/addon-notes/register',
     '@storybook/preset-scss',
