@@ -4,6 +4,10 @@ module.exports = {
     postcss: false,
   },
   addons: [
+    {
+      name: '@storybook/addon-docs',
+      options: { configureJSX: true },
+    },
     '@storybook/addon-notes/register',
     '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
