@@ -1,0 +1,36 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-textarea {
+  border-width: var(--utrecht-form-input-border-width);
+  border-bottom-width: var(--utrecht-form-input-border-bottom-width, var(--utrecht-form-input-border-width));
+  border-color: var(--utrecht-form-input-border-color);
+  border-radius: var(--utrecht-form-input-border-radius, 0);
+  border-style: solid;
+  color: var(--utrecht-form-input-color);
+  font-family: var(--utrecht-form-input-font-family);
+  font-size: var(--utrecht-form-input-font-size, 1em);
+  max-width: var(--utrecht-form-input-max-width);
+  padding-block-end: var(--utrecht-form-padding-block-end);
+  padding-block-start: var(--utrecht-form-padding-block-start);
+  padding-inline-end: var(--utrecht-form-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-padding-inline-start);
+  width: 100%;
+}
+
+.utrecht-textarea--invalid {
+  border-color: var(--utrecht-form-input-invalid-border-color);
+  border-width: var(--utrecht-form-input-invalid-border-width);
+}
+
+.utrecht-textarea--disabled {
+  border-color: var(--utrecht-form-input-disabled-border-color);
+  color: var(--utrecht-form-input-disabled-color);
+}
+
+.utrecht-textarea--read-only {
+  border-color: var(--utrecht-form-input-read-only-border-color);
+  color: var(--utrecht-form-input-read-only-color);
+}

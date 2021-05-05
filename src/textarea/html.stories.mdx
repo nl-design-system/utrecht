@@ -1,0 +1,106 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, invalid, readOnly, disabled, required }) =>
+  `<section class="utrecht-html">
+  <textarea${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${required ? " required" : ""}${
+    readOnly ? "readOnly" : ""
+  }>${content}</textarea>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Textarea"
+  argTypes={{
+    content: {
+      description: "Set the content of the textarea",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+      defaultValue: false,
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+      defaultValue: false,
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+      defaultValue: false,
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Textarea component
+
+Styling via the `<textarea>` element:
+
+<Canvas>
+  <Story name="Textarea">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Textarea" />
+
+## Invalid
+
+<Canvas>
+  <Story name="Invalid textarea" args={{ invalid: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled textarea" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story name="Read-only textarea" args={{ readOnly: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story name="Required textarea" args={{ required: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
