@@ -1,0 +1,53 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+import "../checkbox/index.css";
+import "../form-label/index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ label }) =>
+  `<div class="utrecht-form-field-checkbox">
+    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e2">
+  <label class="utrecht-form-field-checkbox__label" for="id-ce0239e2">${label}</label>
+</div>`;
+
+<Meta
+  title="Molecules/Form field"
+  argTypes={{
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+      defaultValue: "I agree",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Form field with checkbox
+
+<Canvas>
+  <Story name="Form field with checkbox">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Form field with checkbox" />
