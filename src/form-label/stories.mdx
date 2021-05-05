@@ -1,0 +1,49 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content }) => `<span class="utrecht-form-label">${content}</span>`;
+
+<Meta
+  title="Components/Form label"
+  argTypes={{
+    content: {
+      description: "Set the content of the label",
+      control: "text",
+      defaultValue: "Username",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Label component
+
+Styling via the `.utrecht-form-label` class name:
+
+<Canvas>
+  <Story name="Label">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Label" />
