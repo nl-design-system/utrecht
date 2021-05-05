@@ -1,0 +1,112 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ type, value, invalid, readOnly, disabled, required }) =>
+  `<div class="utrecht-html">
+  <input type="${type}" ${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
+    required ? " required" : ""
+  }${readOnly ? "readonly" : ""} value="${value}">
+</div>`;
+
+<Meta
+  title="Semantic HTML/Text Box"
+  argTypes={{
+    value: {
+      description: "Set the value of the text box",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+      defaultValue: false,
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+      defaultValue: false,
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+      defaultValue: false,
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+      defaultValue: false,
+    },
+    type: {
+      description: "Type",
+      control: "select",
+      defaultValue: "text",
+      options: ["email", "search", "tel", "text", "url"],
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Text box component
+
+Styling via the `<input>` element:
+
+<Canvas>
+  <Story name="Text box">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Text box" />
+
+## Invalid
+
+<Canvas>
+  <Story name="Invalid text box" args={{ invalid: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled text box" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story name="Read-only text box" args={{ readOnly: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story name="Required text box" args={{ required: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
