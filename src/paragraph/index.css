@@ -10,8 +10,8 @@
   line-height: var(--utrecht-paragraph-line-height, inherit);
 }
 
-.utrecht-paragraph--intro {
-  font-size: var(--utrecht-paragraph-intro-font-size, inherit);
-  font-weight: var(--utrecht-paragraph-intro-font-weight, inherit);
-  line-height: var(--utrecht-paragraph-intro-line-height, inherit);
+.utrecht-paragraph--lead {
+  font-size: var(--utrecht-paragraph-lead-font-size, inherit);
+  font-weight: var(--utrecht-paragraph-lead-font-weight, inherit);
+  line-height: var(--utrecht-paragraph-lead-line-height, inherit);
 }
