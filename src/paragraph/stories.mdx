@@ -15,11 +15,11 @@ import "./index.css";
 
 import README from "./README.md";
 
-export const Template = ({ content, intro }) =>
-  `<p class="utrecht-paragraph${intro ? " utrecht-paragraph--intro" : ""}">${content}</p>`;
+export const Template = ({ content, lead }) =>
+  `<p class="utrecht-paragraph${lead ? " utrecht-paragraph--lead" : ""}">${content}</p>`;
 
 export const TemplateMulti = ({ content }) =>
-  `<p class="utrecht-paragraph utrecht-paragraph--intro">${content}</p>
+  `<p class="utrecht-paragraph utrecht-paragraph--lead">${content}</p>
 <p class="utrecht-paragraph">${content}</p>
 <p class="utrecht-paragraph">${content}</p>`;
 
@@ -32,8 +32,8 @@ export const TemplateMulti = ({ content }) =>
       defaultValue:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
-    intro: {
-      description: "Intro paragraph",
+    lead: {
+      description: "Lead paragraph",
       control: "boolean",
       defaultValue: false,
     },
@@ -57,12 +57,12 @@ Styling via the `.utrecht-paragraph` class name:
   <Story name="Paragraph">{Template.bind({})}</Story>
 </Canvas>
 
-## Intro paragraph
+## Lead paragraph
 
-Styling via the `.utrecht-paragraph--intro` class name:
+Styling via the `.utrecht-paragraph--lead` class name:
 
 <Canvas>
-  <Story name="Intro paragraph" args={{ intro: true }}>
+  <Story name="Lead paragraph" args={{ lead: true }}>
     {Template.bind({})}
   </Story>
 </Canvas>

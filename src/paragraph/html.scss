@@ -9,8 +9,8 @@
   @extend .utrecht-paragraph;
 }
 
-.utrecht-html p.intro {
-  @extend .utrecht-paragraph--intro;
+.utrecht-html p.lead {
+  @extend .utrecht-paragraph--lead;
 }
 
 .utrecht-html * ~ p {
