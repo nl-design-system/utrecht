@@ -1,0 +1,23 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./index";
+
+.utrecht-html textarea {
+  @extend .utrecht-textarea;
+}
+
+.utrecht-html textarea:disabled {
+  @extend .utrecht-textarea--disabled;
+}
+
+.utrecht-html textarea:invalid,
+.utrecht-html textarea[aria-invalid="true"] {
+  @extend .utrecht-textarea--invalid;
+}
+
+.utrecht-html textarea:read-only {
+  @extend .utrecht-textarea--read-only;
+}

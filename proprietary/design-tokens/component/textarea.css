@@ -1,0 +1,27 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+/**
+ * @tokens Component / Textarea
+ */
+:root {
+  /* @presenter Sizing */
+  --utrecht-textarea-max-width: var(--utrecht-textbox-max-width);
+  --utrecht-textarea-border-width: var(--utrecht-textbox-border-width);
+  --utrecht-textarea-border-bottom-width: var(--utrecht-textbox-border-bottom-width);
+  --utrecht-textarea-border-radius: var(--utrecht-textbox-border-radius);
+  --utrecht-textarea-padding-inline-start: var(--utrecht-textbox-padding-inline-start);
+  --utrecht-textarea-padding-inline-end: var(--utrecht-textbox-padding-inline-end);
+  --utrecht-textarea-padding-block-start: var(--utrecht-textbox-padding-block-start);
+  --utrecht-textarea-padding-block-end: var(--utrecht-textbox-padding-block-end);
+
+  /* @presenter Color */
+  --utrecht-textarea-border-color: var(--utrecht-textbox-border-color);
+  --utrecht-textarea-invalid-border-color: var(--utrecht-textbox-invalid-border-color);
+
+  /* @presenter FontFamily */
+  --utrecht-textarea-font-family: var(--utrecht-textbox-font-family);
+}
