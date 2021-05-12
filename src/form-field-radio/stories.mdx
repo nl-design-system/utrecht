@@ -1,0 +1,53 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+import "../radio-button/index.css";
+import "../form-label/index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ label }) =>
+  `<div class="utrecht-form-field-radio utrecht-form-field-radio--distanced">
+    <input type="radio" class="utrecht-form-field-radio__input utrecht-radio-button" id="id-ce0239e2">
+  <label class="utrecht-form-field-radio__label" for="id-ce0239e2">${label}</label>
+</div>`;
+
+<Meta
+  title="Molecules/Form field"
+  argTypes={{
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+      defaultValue: "I agree",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Form field with radio
+
+<Canvas>
+  <Story name="Form field with radio">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Form field with radio" />

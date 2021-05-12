@@ -28,3 +28,34 @@
   --utrecht-form-textarea: normal;
   --utrecht-form-select: normal;
 }
+
+/**
+ * @tokens Component / Form input
+ */
+:root {
+  /* @presenter Sizing */
+  --utrecht-form-input-max-width: 28em;
+  --utrecht-form-input-border-width: 1px;
+  --utrecht-form-input-border-bottom-width: 3px;
+  --utrecht-form-input-border-radius: 0;
+  --utrecht-form-padding-inline-start: 12px;
+  --utrecht-form-padding-inline-end: 12px;
+  --utrecht-form-padding-block-start: 8px;
+  --utrecht-form-padding-block-end: 8px;
+
+  /* @presenter Color */
+  --utrecht-form-input-border-color: var(--utrecht-grey-50);
+  --utrecht-form-input-invalid-border-color: var(--utrecht-feedback-invalid-color);
+
+  /* @presenter FontFamily */
+  --utrecht-form-input-font-family: var(--utrecht-font-family-sans-serif);
+}
+
+/**
+ * @tokens Component / Form field
+ */
+:root {
+  /* @presenter Sizing */
+  --utrecht-form-field-margin-block-start: var(--utrecht-space-block-xs);
+  --utrecht-form-field-margin-block-end: var(--utrecht-space-block-xs);
+}
