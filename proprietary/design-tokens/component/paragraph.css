@@ -1,0 +1,15 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+:root {
+  --utrecht-paragraph-color: var(--utrecht-black);
+  --utrecht-paragraph-font-family: var(--utrecht-font-family-sans-serif);
+  --utrecht-paragraph-font-size: var(--utrecht-font-size-md); /* 16px */
+  --utrecht-paragraph-font-weight: var(--utrecht-font-weight-regular);
+  --utrecht-paragraph-line-height: 1.4; /* 22.4px */
+
+  --utrecht-paragraph-intro-font-size: var(--utrecht-font-size-lg);
+}

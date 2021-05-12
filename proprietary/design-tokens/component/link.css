@@ -1,0 +1,15 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+:root {
+  --utrecht-link-color: var(--utrecht-blue-35);
+  --utrecht-link-color-active: var(--utrecht-blue-35);
+  --utrecht-link-color-hover: var(--utrecht-blue-40);
+  --utrecht-link-color-visited: var(--utrecht-blue-40);
+
+  --utrecht-link-color-focus-outline: 2px solid var(--utrecht-yellow-60);
+  --utrecht-link-color-focus-background: var(--utrecht-yellow-60);
+}
