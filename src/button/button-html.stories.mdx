@@ -1,0 +1,60 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
+
+export const Template = ({ content }) =>
+  `<section class="utrecht-html">
+  <button type="button">${content}</button>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Button"
+  argTypes={{
+    content: {
+      description: "Content of the button",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+      Accessibility: accessibilityGuidelines,
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `<button>` element:
+
+<Canvas>
+  <Story name="Button">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Button" />
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="Button" url="file/x" />
+</MDXEmbedProvider>

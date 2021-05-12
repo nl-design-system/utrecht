@@ -1,0 +1,83 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+import "./style.css";
+
+import README from "./README.md";
+import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
+
+export const Template = ({ content, focus, hover }) =>
+  `<button class="utrecht-button ${hover ? " utrecht-button--hover" : ""}${
+    focus ? " utrecht-button--focus" : ""
+  }">${content}</button>`;
+
+<Meta
+  title="Components/Button"
+  argTypes={{
+    content: {
+      description: "Button text",
+      control: "text",
+      defaultValue: "Read more...",
+    },
+    focus: {
+      description: "Visited",
+      control: "text",
+      defaultValue: false,
+    },
+    hover: {
+      description: "Visited",
+      control: "text",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+      Accessibility: accessibilityGuidelines,
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `.utrecht-button` class name:
+
+<Canvas>
+  <Story name="Button">{Template.bind({})}</Story>
+</Canvas>
+
+Styling via the `.utrecht-button--hover` class name:
+
+<Canvas>
+  <Story name="Button hover" args={{ hover: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-button--focus` class name:
+
+<Canvas>
+  <Story name="Button focus" args={{ focus: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Button" />
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="Button" url="file/x" />
+</MDXEmbedProvider>
