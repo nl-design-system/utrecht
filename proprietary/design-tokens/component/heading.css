@@ -4,39 +4,85 @@
  * All rights reserved
  */
 
+/**
+ * @tokens Components / Font size
+ * @presenter FontSize
+ */
 :root {
-  --utrecht-heading-color: var(--utrecht-black);
-  --utrecht-heading-font-family: var(--utrecht-font-family-sans-serif);
-  --utrecht-heading-font-weight: var(--utrecht-font-weight-bold);
-  --utrecht-heading-1-font-size: var(--utrecht-font-size-md);
-  --utrecht-heading-1-line-height: 1.4; /* 33,6px */
-  --utrecht-heading-1-margin: 0.67rem 0;
+  --utrecht-heading-1-font-size: 1rem; /* 16px */
+  --utrecht-heading-2-font-size: 1.25rem; /* 20px */
+  --utrecht-heading-3-font-size: 1.25rem; /* 20px */
+  --utrecht-heading-4-font-size: 1.125rem; /* 18px */
+  --utrecht-heading-5-font-size: 0.9rem; /* 14.4px */
+  --utrecht-heading-6-font-size: 0.9rem; /* 14.4px */
+}
 
-  --utrecht-heading-2-font-size: var(--utrecht-font-size-lg); /* 20px */
-  --utrecht-heading-2-line-height: 1.2; /* 24px */
-  --utrecht-heading-2-margin: 1.5rem 0 0.3rem;
+/**
+ * @tokens Components / Font weight
+ * @presenter FontWeight
+ */
+:root {
+  --utrecht-heading-font-weight: var(--utrecht-font-bold);
+  --utrecht-heading-3-font-weight: var(--utrecht-font-normal);
+  --utrecht-heading-4-font-weight: var(--utrecht-font-normal);
+  --utrecht-heading-5-font-weight: var(--utrecht-font-normal);
+  --utrecht-heading-6-font-weight: var(--utrecht-font-normal);
+}
 
-  --utrecht-heading-3-font-size: var(--utrecht-font-size-lg); /* 20px */
-  --utrecht-heading-3-font-weight: var(--utrecht-font-weight-regular);
-  --utrecht-heading-3-line-height: 1.2; /* 24px */
-  --utrecht-heading-3-margin: 1rem 0 0.2rem;
+/**
+ * @tokens Components / Font family
+ * @presenter FontFamily
+ */
+:root {
+  --utrecht-heading-font-family: var(--utrecht-font-family-sans-serif); /* defatul font for every heading level */
+}
 
-  --utrecht-heading-4-font-size: var(--utrecht-font-size-sm); /* 18px */
-  --utrecht-heading-4-font-weight: var(--utrecht-font-weight-regular);
-  --utrecht-heading-4-line-height: 1.25; /* 22,5px */
-  --utrecht-heading-4-margin: 1.2rem 0 0.3rem;
+/**
+ * @tokens Components / Space
+ * @presenter Spacing
+ */
+:root {
+  --utrecht-heading-1-margin-block-start: 0.67rem;
+  --utrecht-heading-1-margin-block-end: 0.67rem;
+  --utrecht-heading-2-margin-block-start: 1.5rem;
+  --utrecht-heading-2-margin-block-end: 0.3rem;
+  --utrecht-heading-3-margin-block-start: 1rem;
+  --utrecht-heading-3-margin-block-end: 0.2rem;
+  --utrecht-heading-4-margin-block-start: 1.2rem;
+  --utrecht-heading-4-margin-block-end: 0.3rem;
+  --utrecht-heading-5-margin-block-start: 1rem;
+  --utrecht-heading-5-margin-block-end: 0.2rem;
+  --utrecht-heading-6-margin-block-start: 1rem;
+  --utrecht-heading-6-margin-block-end: 0.2rem;
+}
 
-  --utrecht-heading-5-font-size: var(--utrecht-font-size-sm); /* 14.4px */
-  --utrecht-heading-5-font-weight: var(--utrecht-font-weight-regular);
-  --utrecht-heading-5-line-height: 1.333; /* 22.4px */
-  --utrecht-heading-5-margin: 1rem 0 0.2rem;
-  --utrecht-heading-5-text-transform: uppercase;
+/**
+ * @tokens Components / Various
+ */
+:root {
   --utrecht-heading-5-letter-spacing: 0.05rem; /* 0.72px */
-
-  --utrecht-heading-6-font-size: var(--utrecht-font-size-sm); /* 14.4px */
-  --utrecht-heading-6-font-weight: var(--utrecht-font-weight-regular);
-  --utrecht-heading-6-line-height: 1.333; /* 22.4px */
-  --utrecht-heading-6-margin: 1rem 0 0.2rem;
-  --utrecht-heading-6-text-transform: uppercase;
   --utrecht-heading-6-letter-spacing: 0.05rem; /* 0.72px */
+  --utrecht-heading-5-text-transform: uppercase;
+  --utrecht-heading-6-text-transform: uppercase;
+}
+
+/**
+ * @tokens Components / Line height
+ * @presenter LineHeight
+ */
+:root {
+  --utrecht-heading-1-line-height: 1.4; /* 33,6px */
+  --utrecht-heading-2-line-height: 1.2; /* 24px */
+  --utrecht-heading-3-line-height: 1.2; /* 24px */
+  --utrecht-heading-4-line-height: 1.25; /* 22,5px */
+  --utrecht-heading-5-line-height: 1.333; /* 22.4px */
+  --utrecht-heading-6-line-height: 1.333; /* 22.4px */
+}
+
+/**
+ * @tokens Components / Colors
+ * @presenter Color
+ */
+:root {
+  --utrecht-heading-color: var(--utrecht-black); /* default color for every heading level */
 }
