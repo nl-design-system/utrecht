@@ -1,0 +1,30 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+:root {
+  /* Formulieren */
+
+  --utrecht-form-input-font-family: var(--utrecht-font-family-sans-serif);
+  --utrecht-form-input-font-size: var(--utrecht-font-weight-regular);
+  --utrecht-form-input-background-color: var(--utrecht-white);
+
+  --utrecht-form-input-border-width: 1px;
+  --utrecht-form-input-border-width-bottom: 1px;
+  --utrecht-form-input-border-color: var(--utrecht-grey-30);
+  --utrecht-form-input-border-radius: 0;
+  --utrecht-form-input-focus-border-color: var(--utrecht-grey-80);
+
+  --utrecht-form-input-padding: 0.5em 0.75em;
+  --utrecht-form-input-height: 42px;
+  --utrecht-form-input-placeholder-color: var(--utrecht-grey-40);
+  --utrecht-form-label-font-family: var(--utrecht-font-family-sans-serif);
+  --utrecht-form-label-font-size: 1em;
+  --utrecht-form-label-font-weight: var(--utrecht-font-weight-bold);
+  --utrecht-form-option-label-font-weight: var(--utrecht-font-weight-bold);
+
+  --utrecht-form-textarea: normal;
+  --utrecht-form-select: normal;
+}
