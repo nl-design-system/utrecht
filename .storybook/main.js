@@ -1,5 +1,9 @@
 module.exports = {
-  stories: ['../__stories__/**/*stories.@(js|mdx)', '../src/**/*stories.@(js|mdx)'],
+  stories: [
+    '../__stories__/**/*stories.@(js|mdx)',
+    '../src/**/*stories.@(js|mdx)',
+    '../proprietary/**/*stories.@(js|mdx)',
+  ],
   features: {
     postcss: false,
   },

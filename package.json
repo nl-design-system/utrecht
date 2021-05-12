@@ -48,7 +48,7 @@
   },
   "scripts": {
     "bootstrap": "lerna bootstrap",
-    "build:storybook": "build-storybook --output-dir dist/storybook -s src/static/,src/proprietary/static/",
+    "build:storybook": "build-storybook --output-dir dist/storybook -s src/static/,proprietary/static/",
     "build": "npm-run-all 'build:*'",
     "clean": "rimraf dist/",
     "deploy": "npm-run-all 'deploy:*'",
@@ -64,7 +64,7 @@
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "prettier": "prettier --write .",
-    "storybook": "start-storybook -p 6006 -s src/static/,src/proprietary/static/",
+    "storybook": "start-storybook -p 6006 -s src/static/,proprietary/static/",
     "start": "node_modules/http-server/bin/http-server dist/storybook/",
     "test": "exit 0"
   },
