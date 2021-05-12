@@ -1,0 +1,10 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+@import "./index";
+
+.utrecht-html input[type="radio"] {
+  @extend .utrecht-radio;
+}
