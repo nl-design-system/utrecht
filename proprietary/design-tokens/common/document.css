@@ -4,5 +4,6 @@
  * All rights reserved
  */
 
-@import url("./space.css");
-@import url("./document.css");
+:root {
+  --utrecht-document-font-family: var(--utrecht-font-family-sans-serif);
+}
