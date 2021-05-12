@@ -4,12 +4,23 @@
  * All rights reserved
  */
 
+/**
+ * @tokens Component / Link
+ * @presenter Color
+ */
 :root {
-  --utrecht-link-color: var(--utrecht-blue-35);
-  --utrecht-link-color-active: var(--utrecht-blue-35);
-  --utrecht-link-color-hover: var(--utrecht-blue-40);
-  --utrecht-link-color-visited: var(--utrecht-blue-40);
+  --utrecht-link-color: var(--utrecht-blue-30);
+  --utrecht-link-active-color: var(--utrecht-blue-30);
+  --utrecht-link-hover-color: var(--utrecht-blue-40);
+  --utrecht-link-focus-color: var(--utrecht-blue-40);
+  --utrecht-link-visited-color: var(--utrecht-blue-40);
+}
 
-  --utrecht-link-color-focus-outline: 2px solid var(--utrecht-yellow-60);
-  --utrecht-link-color-focus-background: var(--utrecht-yellow-60);
+/**
+ * @tokens Component / Link
+ */
+:root {
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-focus-text-decoration: underline;
+  --utrecht-link-hover-text-decoration: underline;
 }
