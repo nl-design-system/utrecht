@@ -3,4 +3,7 @@ import customTheme from './customTheme';
 
 addons.setConfig({
   theme: customTheme,
+  sidebar: {
+    collapsedRoots: ['semantic-html'],
+  },
 });
