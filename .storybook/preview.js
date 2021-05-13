@@ -1,3 +1,5 @@
+import '../proprietary/design-tokens/utrecht-design-tokens.css';
+
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
 
 const tokenFiles = tokenContext
