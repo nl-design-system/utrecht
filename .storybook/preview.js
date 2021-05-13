@@ -27,6 +27,6 @@ export const parameters = {
     files: tokenFiles,
   },
   options: {
-    panelPosition: 'right',
+    panelPosition: 'bottom',
   },
 };
