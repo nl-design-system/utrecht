@@ -7,10 +7,10 @@ const tokenFiles = tokenContext
   .map((filename) => ({ filename: filename, content: tokenContext(filename).default }));
 
 const statuses = {
-  BETA: '#9F5E0F',
-  STABLE: '#339900',
-  DEPRECATED: '#f02c2c',
-  'IN DEVELOPMENT': '#174050',
+  STABLE: '#006400',
+  UNSTABLE: '#cca300',
+  EXPERIMENTAL: '#cc0000',
+  'IN DEVELOPMENT': '#cc0000',
 };
 
 const previewTabs = {
