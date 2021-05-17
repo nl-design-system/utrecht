@@ -1,0 +1,66 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = () =>
+  `<ul class="utrecht-unordered-list">
+  <li class="utrecht-unordered-list__item">Lorem</li>
+  <li class="utrecht-unordered-list__item">Ipsum</li>
+  <li class="utrecht-unordered-list__item">Dolor</li>
+</ul>`;
+
+export const TemplateNested = () =>
+  `<ul class="utrecht-unordered-list">
+  <li class="utrecht-unordered-list__item">Lorem</li>
+  <li class="utrecht-unordered-list__item">Ipsum
+    <ul class="utrecht-unordered-list utrecht-unordered-list--nested">
+      <li class="utrecht-unordered-list__item">Lorem</li>
+      <li class="utrecht-unordered-list__item">Ipsum</li>
+    </ul>
+  </li>
+  <li class="utrecht-unordered-list__item">Dolor</li>
+</ul>`;
+
+<Meta
+  title="Components/Unordered List"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+<Canvas>
+  <Story name="Bulleted list">{Template.bind({})}</Story>
+</Canvas>
+
+## Nested list
+
+<Canvas>
+  <Story name="Nested Ordered list">{TemplateNested.bind({})}</Story>
+</Canvas>
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="List" url="file/x" />
+</MDXEmbedProvider>
