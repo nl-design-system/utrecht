@@ -14,10 +14,10 @@ import "./style.css";
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ content, focus, hover }) =>
-  `<button class="utrecht-button ${hover ? " utrecht-button--hover" : ""}${
-    focus ? " utrecht-button--focus" : ""
-  }">${content}</button>`;
+export const Template = ({ content, focus, hover, disabled }) =>
+  `<button class="utrecht-button${hover ? " utrecht-button--hover" : ""}${focus ? " utrecht-button--focus" : ""}${
+    disabled ? " utrecht-button--disabled" : ""
+  }"${disabled ? ' aria-disabled="true"' : ""}>${content}</button>`;
 
 <Meta
   title="Components/Button"
@@ -70,6 +70,14 @@ Styling via the `.utrecht-button--focus` class name:
 
 <Canvas>
   <Story name="Button focus" args={{ focus: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-button--disabled` class name:
+
+<Canvas>
+  <Story name="Button disabled" args={{ disabled: true }}>
     {Template.bind({})}
   </Story>
 </Canvas>
