@@ -17,9 +17,9 @@ import "./html.scss";
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ content }) =>
+export const Template = ({ content, disabled }) =>
   `<section class="utrecht-html">
-  <button type="button">${content}</button>
+  <button type="button"${disabled ? " disabled" : ""}>${content}</button>
 </section>`;
 
 <Meta
@@ -52,6 +52,14 @@ Styling via the `<button>` element:
 </Canvas>
 
 <ArgsTable story="Button" />
+
+Button with `disabled` state:
+
+<Canvas>
+  <Story name="Disabled button" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
 
 ## Design Kit
 

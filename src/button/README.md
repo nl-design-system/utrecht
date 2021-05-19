@@ -26,12 +26,14 @@ Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst
 
 - `hover`
 - `focus`
+- `disabled`
 
 ## Class names
 
 - `.utrecht-button`
 - `.utrecht-button--focus`
 - `.utrecht-button--hover`
+- `.utrecht-button--disabled`
 
 ## Design tokens
 
@@ -47,3 +49,6 @@ Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst
     - `--utrecht-button-primary-action-background-color`
     - `--utrecht-button-primary-action-color`
     - `--utrecht-button-primary-action-hover-background-color`
+  - Modifier: disabled
+    - `--utrecht-button-disabled-background-color`
+    - `--utrecht-button-disabled-color`

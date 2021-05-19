@@ -22,16 +22,22 @@
   margin-block-end: var(--utrecht-button-margin-block);
 }
 
-.utrecht-button:hover,
-.utrecht-button--hover {
-  color: var(--utrecht-button-primary-action-color);
-  background-color: var(--utrecht-button-primary-action-hover-background-color);
-  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+.utrecht-button:disabled,
+.utrecht-button--disabled {
+  color: var(--utrecht-button-disabled-color);
+  background-color: var(--utrecht-button-disabled-background-color);
 }
 
-.utrecht-button:focus,
-.utrecht-button--focus {
+.utrecht-button--focus,
+.utrecht-button:not(.utrecht-button--disabled):focus {
   color: var(--utrecht-button-primary-action-color);
   background-color: var(--utrecht-button-primary-action-background-color);
   border-width: var(--utrecht-button-border-width);
+}
+
+.utrecht-button--hover:not(:disabled),
+.utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
+  color: var(--utrecht-button-primary-action-color);
+  background-color: var(--utrecht-button-primary-action-hover-background-color);
+  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }

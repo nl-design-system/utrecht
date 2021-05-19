@@ -17,3 +17,7 @@
 .utrecht-html button:focus {
   @extend .utrecht-button--focus;
 }
+
+.utrecht-html button:disabled {
+  @extend .utrecht-button--disabled;
+}
