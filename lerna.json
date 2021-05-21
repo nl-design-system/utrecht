@@ -3,6 +3,9 @@
   "npmClient": "npm",
   "version": "independent",
   "command": {
+    "publish": {
+      "conventionalCommits": true
+    },
     "version": {
       "allowBranch": ["main", "ci/npm-publish"],
       "message": "docs(release): monorepository packages"
