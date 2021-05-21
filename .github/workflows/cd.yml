@@ -50,5 +50,7 @@ jobs:
           npm ci
           npm run build
           npm run release -- --yes
+          git status
+          git diff
           npm run publish -- --yes
           npm run deploy:storybook -- --ci
