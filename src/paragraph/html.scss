@@ -14,5 +14,5 @@
 }
 
 .utrecht-html * ~ p {
-  margin-block-start: var(--utrecht-paragraph-margin-block);
+  @extend .utrecht-paragraph--distanced;
 }
