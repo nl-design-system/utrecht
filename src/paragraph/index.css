@@ -4,10 +4,10 @@
  */
 
 .utrecht-paragraph {
-  font-family: var(--utrecht-document-font-family, inherit);
-  font-size: var(--utrecht-paragraph-font-size, inherit);
+  font-family: var(--utrecht-paragraph-font-family, var(--utrecht-document-font-family, inherit));
+  font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
   font-weight: var(--utrecht-paragraph-font-weight, inherit);
-  line-height: var(--utrecht-paragraph-line-height, inherit);
+  line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
 }
 
 .utrecht-paragraph--lead {
