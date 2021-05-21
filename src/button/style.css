@@ -6,7 +6,8 @@
 
 .utrecht-button {
   color: var(--utrecht-button-primary-action-color);
-  font-size: var(--utrecht-button-font-size);
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   background-color: var(--utrecht-button-primary-action-background-color);
   border-width: var(--utrecht-button-border-width);
   padding-inline-start: var(--utrecht-button-padding-inline);
