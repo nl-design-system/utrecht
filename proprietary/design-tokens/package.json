@@ -1,0 +1,20 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Design Tokens for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "SEE LICENSE IN ../LICENSE.md",
+  "name": "@utrecht/design-tokens",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.12"
+  },
+  "scripts": {
+    "build": "sass src/:dist/",
+    "clean": "rimraf dist/"
+  }
+}

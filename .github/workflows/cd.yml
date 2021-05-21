@@ -22,6 +22,7 @@ jobs:
           npm ci
           npm run bootstrap
           npm run lint
+          npm run build
           npm run test
 
   continuous-delivery:
@@ -41,5 +42,5 @@ jobs:
           GH_TOKEN: MyCompany:${{ secrets.GH_TOKEN }}
         run: |
           npm ci
-          npm run build:storybook
+          npm run build
           npm run deploy:storybook -- --ci
