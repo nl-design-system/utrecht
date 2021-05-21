@@ -50,6 +50,7 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "build:storybook": "build-storybook --output-dir dist/storybook -s src/static/,proprietary/assets/,proprietary/design-tokens/",
+    "build:lerna": "lerna run build",
     "build": "npm-run-all 'build:*'",
     "clean": "rimraf dist/",
     "deploy": "npm-run-all 'deploy:*'",
