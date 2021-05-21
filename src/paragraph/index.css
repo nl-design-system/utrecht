@@ -15,3 +15,6 @@
   font-weight: var(--utrecht-paragraph-lead-font-weight, inherit);
   line-height: var(--utrecht-paragraph-lead-line-height, inherit);
 }
+.utrecht-paragraph--distanced {
+  margin-block-start: var(--utrecht-paragraph-margin-block);
+}
