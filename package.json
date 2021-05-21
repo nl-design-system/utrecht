@@ -66,6 +66,7 @@
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "prettier": "prettier --write .",
+    "release": "lerna version --exact --no-git-tag-version --no-changelog --no-private --no-push --yes",
     "storybook": "start-storybook -p 6006 -s src/static/,proprietary/assets/,proprietary/design-tokens/",
     "start": "node_modules/http-server/bin/http-server dist/storybook/",
     "test": "exit 0"

@@ -1,5 +1,11 @@
 {
-  "packages": ["packages/nl-design-system/*", "packages/nl-design-system-unstable/*"],
-  "npmClient": "yarn",
-  "version": "independent"
+  "packages": ["proprietary/*", "src/*"],
+  "npmClient": "npm",
+  "version": "independent",
+  "command": {
+    "version": {
+      "allowBranch": ["main", "ci/npm-publish"],
+      "message": "docs(release): monorepository packages"
+    }
+  }
 }
