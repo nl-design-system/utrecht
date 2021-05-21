@@ -1,5 +1,5 @@
 {
-  "packages": ["packages/nl-design-system/*", "packages/nl-design-system-unstable/*"],
-  "npmClient": "yarn",
+  "packages": ["packages/*", "proprietary/*", "src/*"],
+  "npmClient": "npm",
   "version": "independent"
 }

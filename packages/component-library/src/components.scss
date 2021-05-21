@@ -1,0 +1,29 @@
+/*
+ * TODO: Once every component is a separate npm package, these imports should
+ * be updated to use a package reference instead of a relative path.
+ *
+ * For example:
+ *     @import "../../blockquote/index";
+ *
+ * Will become:
+ *     @import "@utrecht/blockquote/index";
+ */
+
+@import "../../../src/blockquote/index";
+@import "../../../src/button/style";
+@import "../../../src/checkbox/index";
+@import "../../../src/form-field-checkbox/index";
+@import "../../../src/form-field-radio/index";
+@import "../../../src/form-field-radio-group/index";
+@import "../../../src/form-label/index";
+@import "../../../src/heading/index";
+@import "../../../src/link/style";
+@import "../../../src/menulijst/style";
+@import "../../../src/paragraph/index";
+@import "../../../src/link/style";
+@import "../../../src/radio-button/index";
+@import "../../../src/separator/index";
+@import "../../../src/textarea/index";
+@import "../../../src/textbox/index";
+@import "../../../src/textarea/index";
+@import "../../../src/unordered-list/index";
