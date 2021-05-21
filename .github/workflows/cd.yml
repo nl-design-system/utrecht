@@ -44,4 +44,5 @@ jobs:
         run: |
           npm ci
           npm run build
+          npm run release
           npm run deploy:storybook -- --ci
