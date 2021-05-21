@@ -40,9 +40,15 @@ jobs:
 
       - name: Continuous Deployment
         env:
-          GH_TOKEN: MyCompany:${{ secrets.GH_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GIT_AUTHOR_NAME: "NL Design System"
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          GIT_COMMITTER_NAME: "NL Design System"
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm ci
           npm run build
-          npm run release
+          npm run release -- --yes
+          npm run publish -- --yes
           npm run deploy:storybook -- --ci
