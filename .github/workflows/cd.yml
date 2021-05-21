@@ -9,7 +9,6 @@ on:
 jobs:
   continuous-delivery:
     runs-on: ubuntu-latest
-    needs: continuous-integration
 
     steps:
       - uses: actions/checkout@master
