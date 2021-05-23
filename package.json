@@ -5,7 +5,13 @@
   "license": "EUPL-1.2",
   "name": "@utrecht/design-system",
   "private": true,
-  "workspaces": ["proprietary", "src"],
+  "workspaces": [
+    "documentation",
+    "components/*",
+    "packages/*",
+    "proprietary/*",
+    "src/*"
+  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git"

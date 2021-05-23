@@ -19,5 +19,5 @@ jobs:
           npm ci
           npm run bootstrap
           npm run lint
-          npm run build
-          npm run test
+          npm run build --workspaces
+          npm run test --workspaces
