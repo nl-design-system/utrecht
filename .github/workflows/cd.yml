@@ -38,6 +38,6 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm run release -- --yes
+          npm run version -- --yes
           npm run publish -- --yes
           npm run deploy:storybook -- --ci
