@@ -1,0 +1,49 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Storybook website for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/storybook",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@etchteam/storybook-addon-status": "^2.1.0",
+    "@storybook/addon-a11y": "^6.2.9",
+    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-notes": "^5.3.21",
+    "@storybook/addon-viewport": "^6.2.9",
+    "@storybook/html": "^6.2.9",
+    "@storybook/preset-scss": "^1.0.3",
+    "@storybook/storybook-deployer": "^2.8.7",
+    "@storybook/theming": "^6.2.9",
+    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "babel-loader": "^8.2.1",
+    "css-loader": "^5.2.4",
+    "dompurify": "^2.2.8",
+    "mdx-embed": "0.0.17",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0",
+    "rimraf": "^3.0.2",
+    "sass": "^1.32.12",
+    "sass-loader": "^10.1.1",
+    "storybook-addon-mdx-embed": "0.0.17",
+    "storybook-design-token": "^1.0.2",
+    "style-loader": "^2.0.0",
+    "ts-dedent": "^2.1.1",
+    "webpack": "^4.44.2"
+  },
+  "dependencies": {
+    "http-server": "^0.12.3"
+  },
+  "scripts": {
+    "build": "build-storybook --output-dir dist/storybook -s src/style/,../../proprietary/assets/,../../proprietary/design-tokens/",
+    "clean": "rimraf dist/",
+    "deploy:storybook": "storybook-to-ghpages --existing-output-dir dist/storybook",
+    "start": "node_modules/http-server/bin/http-server dist/storybook/",
+    "storybook": "start-storybook -p 6006 -s src/style/,../../proprietary/assets/,../../proprietary/design-tokens/"
+  }
+}
