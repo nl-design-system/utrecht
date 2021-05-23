@@ -5,9 +5,14 @@
   "license": "EUPL-1.2",
   "name": "@utrecht/design-system",
   "private": true,
+  "workspaces": ["packages", "proprietary", "src"],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=7"
   },
   "devDependencies": {
     "@babel/core": "^7.14.0",
