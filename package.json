@@ -56,6 +56,6 @@
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package",
-    "version": "lerna version --prerelease --no-changelog --no-private"
+    "version": "lerna version prerelease --no-changelog --no-private"
   }
 }
