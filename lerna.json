@@ -1,13 +1,14 @@
 {
-  "packages": ["proprietary/*", "src/*"],
+  "version": "4.0.0",
   "npmClient": "npm",
   "version": "independent",
+  "useWorkspaces": true,
   "command": {
-    "publish": {
-      "conventionalCommits": true
-    },
+    "publish": {},
     "version": {
       "allowBranch": ["main", "ci/npm-publish"],
+      "conventionalCommits": true,
+      "exact": true,
       "message": "docs(release): monorepository packages"
     }
   }
