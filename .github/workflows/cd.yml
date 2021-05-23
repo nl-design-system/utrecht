@@ -7,7 +7,7 @@ on:
       - ci/npm-publish
 
 jobs:
-  continuous-integration:
+  continuous-delivery:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,22 +29,26 @@ jobs:
           npm run build --if-present --workspaces
           npm run test --if-present --workspaces
 
-      - name: Continuous Deployment
+      - name: Continuous Deployment to GitHub
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
           GIT_AUTHOR_NAME: "NL Design System"
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
           GIT_COMMITTER_NAME: "NL Design System"
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm run version -- --yes
-          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          npm run publish -- --no-verify-access --yes
-          npm config delete "//registry.npmjs.org/:_authToken"
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
           branch: gh-pages
           folder: packages/storybook/dist
+
+      - name: Continuous Deployment to npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          npm run publish -- --no-verify-access --yes
+          npm config delete "//registry.npmjs.org/:_authToken"
