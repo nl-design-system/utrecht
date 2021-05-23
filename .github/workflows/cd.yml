@@ -41,7 +41,7 @@ jobs:
           npm run version -- --yes
           npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           npm whoami
-          npm run publish -- --yes
+          npm run publish -- --no-verify-access --yes
           npm config delete "//registry.npmjs.org/:_authToken"
 
       - name: Continuous Deployment to GitHub Pages
