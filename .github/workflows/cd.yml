@@ -29,11 +29,6 @@ jobs:
           npm run build --if-present --workspaces
           npm run test --if-present --workspaces
 
-  continuous-delivery:
-    needs: continuous-integration
-    runs-on: ubuntu-latest
-
-    steps:
       - name: Continuous Deployment
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
@@ -45,7 +40,6 @@ jobs:
         run: |
           npm run version -- --yes
           npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          npm whoami
           npm run publish -- --no-verify-access --yes
           npm config delete "//registry.npmjs.org/:_authToken"
 
