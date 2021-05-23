@@ -36,10 +36,12 @@ jobs:
           GIT_AUTHOR_NAME: "NL Design System"
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
           GIT_COMMITTER_NAME: "NL Design System"
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           npm run version -- --yes
+          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           npm run publish -- --yes
+          npm config delete "//registry.npmjs.org/:_authToken"
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
