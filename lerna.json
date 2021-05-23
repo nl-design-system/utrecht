@@ -4,7 +4,9 @@
   "version": "independent",
   "useWorkspaces": true,
   "command": {
-    "publish": {},
+    "publish": {
+      "access": "public"
+    },
     "version": {
       "allowBranch": ["main", "ci/npm-publish"],
       "conventionalCommits": true,
