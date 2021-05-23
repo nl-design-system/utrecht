@@ -5,6 +5,9 @@
   "license": "EUPL-1.2",
   "name": "@utrecht/component-library",
   "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git"
