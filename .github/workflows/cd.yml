@@ -7,7 +7,7 @@ on:
       - ci/npm-publish
 
 jobs:
-  continuous-delivery:
+  continuous-integration:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +29,11 @@ jobs:
           npm run build --if-present --workspaces
           npm run test --if-present --workspaces
 
+  continuous-delivery:
+    needs: continuous-integration
+    runs-on: ubuntu-latest
+
+    steps:
       - name: Continuous Deployment
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
