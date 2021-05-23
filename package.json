@@ -72,7 +72,7 @@
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "prettier": "prettier --write .",
     "publish": "lerna publish from-package",
-    "release": "lerna version --exact --no-changelog --no-private",
+    "version": "lerna version --prerelease --no-changelog --no-private",
     "storybook": "start-storybook -p 6006 -s src/static/,proprietary/assets/,proprietary/design-tokens/",
     "start": "node_modules/http-server/bin/http-server dist/storybook/",
     "test": "exit 0"
