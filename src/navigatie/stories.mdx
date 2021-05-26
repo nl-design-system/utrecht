@@ -1,0 +1,81 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 A Herring
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
+import { MDXEmbedProvider } from "mdx-embed";
+import dedent from "ts-dedent";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = () =>
+  `<div class="utrecht-html">
+      <nav class="sidenav">
+        <ul>
+          <li class="utrecht-sidenav__item"><a href="#">Crumb item #1</a></li>
+          <li class="utrecht-sidenav__item"><a href="#">Crumb item</a></li>
+          <li class="utrecht-sidenav__item"><a href="#">Crumb item</a></li>
+          <li class="utrecht-sidenav__item sidenav__item--active">
+              <a href="#">Crumb item Active</a>
+              <ul>
+                  <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item Active</a></li>
+                  <li class="utrecht-sidenav__childitem sidenav__Childitem--active"><a href="#">Childmenu Item #1</a></li>
+                  <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item #2</a></li>
+                  <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item #3</a></li>
+              </ul>
+          </li>
+          <li class="utrecht-sidenav__item"><a href="#">Sibilings Item #1</a></li>
+          <li class="utrecht-sidenav__item"><a href="#">Sibilings Item #2</a></li>
+        </ul>
+      </nav>
+  </div>`;
+
+export const TemplateNested = () =>
+  `<div class="utrecht-html">
+      <nav class="topnav">
+        <ul>
+          <li class="utrecht-topnav__item"><a href="#">Menu item #1</a></li>
+          <li class="utrecht-topnav__item--active"><a href="#">Menu item #2</a></li>
+          <li class="utrecht-topnav__item"><a href="#">Menu item #3</a></li>
+          <li class="utrecht-topnav__item"><a href="#">Menu item #4</a></li>
+        </ul>
+      </nav>
+  </div>`;
+
+<Meta
+  title="Components/Navigatie"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+<Canvas>
+  <Story name="Side Nav">{Template.bind({})}</Story>
+</Canvas>
+
+## Nested list
+
+<Canvas>
+  <Story name="Top Nav">{TemplateNested.bind({})}</Story>
+</Canvas>
+
+## Design Kit
+
+<MDXEmbedProvider>
+  <Figma title="Navigatie" url="file/x" />
+</MDXEmbedProvider>

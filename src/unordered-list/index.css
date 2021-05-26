@@ -8,7 +8,7 @@
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-document-font-size, inherit);
   line-height: var(--utrecht-document-line-height, inherit);
-  padding-inline-start: 2ch;
+  padding-inline-start: 1ch;
 }
 
 .utrecht-unordered-list--distanced {
@@ -17,12 +17,12 @@
 }
 
 .utrecht-unordered-list--nested {
-  margin-inline-start: 2ch;
+  margin-inline-start: 1ch;
   margin-block-end: 0;
 }
 
 .utrecht-unordered-list__item {
-  padding-inline-start: 1ch;
+  padding-inline-start: 0.25ch; /*make it t-shirt size*/
   margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
   margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
 }
