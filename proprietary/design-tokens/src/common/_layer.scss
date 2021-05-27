@@ -1,0 +1,16 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Robbert Broersma
+ * All rights reserved
+ */
+
+:root {
+  --utrecht-layer-sticky-z-index: 1000;
+  --utrecht-layer-fixed-z-index: 2000;
+  --utrecht-layer-drawer-background-z-index: 3000;
+  --utrecht-layer-drawer-z-index: 3100;
+  --utrecht-layer-notification-z-index: 4000;
+  --utrecht-layer-modal-background-z-index: 5000;
+  --utrecht-layer-modal-dialog-z-index: 5100;
+  --utrecht-layer-tooltip-z-index: 6000;
+}
