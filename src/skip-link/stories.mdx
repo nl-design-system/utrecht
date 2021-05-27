@@ -1,0 +1,56 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+
+<!-- Import component and component styles -->
+
+import "./index.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, hidden, href }) =>
+  `<a class="utrecht-skip-link${
+    hidden ? " utrecht-skip-link--hidden" : " utrecht-skip-link--visible"
+  }" href="${href}">${content}</a>`;
+
+<Meta
+  title="Components/Skip Link"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+  }}
+  argTypes={{
+    content: {
+      description: "Link text",
+      control: "text",
+      defaultValue: "Direct naar: Inhoud",
+    },
+    href: {
+      description: "Fragment identifier link",
+      control: "text",
+      defaultValue: "#main",
+    },
+    hidden: {
+      description: "Hidden",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+/>
+
+# Skip Link
+
+Styling via `utrecht-skip-link` class name:
+
+<Canvas>
+  <Story name="Skip Link">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Skip Link" />
