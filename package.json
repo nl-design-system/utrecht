@@ -43,6 +43,7 @@
     "lint:html": "find . -type d \\( -name node_modules \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
+    "lint:prettier": "prettier --check .",
     "lint-fix": "npm-run-all --continue-on-error 'lint-fix:*' 'prettier'",
     "lint-fix:css": "stylelint --fix '**/*.css'",
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
