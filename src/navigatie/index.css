@@ -4,8 +4,54 @@
  * Copyright (c) 2021 A Herring
  */
 
-.utrecht-html {
+.utrecht-navhtml {
   font-family: var(--utrecht-font-family-sans-serif);
+}
+
+.utrecht-topnav__list {
+  list-style: none;
+  list-style-image: none;
+  overflow: visible;
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--utrecht-topnav-list-background);
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+}
+
+.utrecht-topnav__item {
+  height: 3.5rem;
+  flex: 1 0 auto;
+  border-right: 1px solid var(--utrecht-topnav-list-border-color);
+  text-align: center;
+  padding-inline-start: 0;
+  margin-inline-start: 0;
+}
+
+.utrecht-topnav__item li:first-child {
+  border-left: 1px solid var(--utrecht-topnav-list-border-color);
+  padding-inline-start: 0;
+}
+
+.utrecht-topnav__link {
+  color: var(--utrecht-topnav-link-color);
+  text-decoration: none;
+  display: block;
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+
+.utrecht-topnav__link:hover {
+  text-decoration: underline;
+  background-color: var(--utrecht-topnav-list-background-hover);
+}
+
+.utrecht-topnav__link-active {
+  text-decoration: underline;
+}
+
+.utrecht-topnav__link-focus {
+  background-color: var(utrecht-sidenav);
 }
 
 .utrecht-sidenav {
