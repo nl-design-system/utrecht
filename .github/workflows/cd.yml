@@ -22,10 +22,19 @@ jobs:
           npm ci
           npm run bootstrap
 
-      - name: Continuous Integration
+      - name: "Continuous Integration: lint"
         run: |
-          npm run lint
+          npm run lint --if-present
+          npm run lint --if-present --workspaces
+
+      - name: "Continuous Integration: build"
+        run: |
+          npm run build --if-present
           npm run build --if-present --workspaces
+
+      - name: "Continuous Integration: test"
+        run: |
+          npm run test --if-present
           npm run test --if-present --workspaces
 
       - name: Continuous Deployment to GitHub Pages
