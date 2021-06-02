@@ -1,4 +1,4 @@
-import '../proprietary/design-tokens/src/index.scss';
+import '@utrecht/design-tokens/src/index.scss';
 
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
 
