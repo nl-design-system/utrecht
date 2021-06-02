@@ -1,5 +1,8 @@
 {
-  "packages": ["packages/*", "proprietary/*", "src/*"],
+  "version": "4.0.0",
   "npmClient": "npm",
-  "version": "independent"
+  "version": "independent",
+  "useWorkspaces": true,
+  "command": {
+  }
 }
