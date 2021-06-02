@@ -19,7 +19,16 @@
   --utrecht-sidenav-item-color-hover: var(--utrecht-blue-40);
 
   --utrecht-topnav-list-background: var(--utrecht-grey-10);
-  --utrecht-topnav-list-background-hover: var(--utrecht-grey-30);
+  --utrecht-topnav-list-background--hover: var(--utrecht-grey-30);
   --utrecht-topnav-list-border-color: var(--utrecht-grey-40);
   --utrecht-topnav-link-color: var(--utrecht-white);
+
+  --utrecht-topnav-link-focus-bordertype: dotted;
+  --utrecht-topnav-link-focus-outline-color: var(--utrecht-black);
+  --utrecht-topnav-link-focus-color: var(--utrecht-black);
+
+  --utrecht-topnav-link-focus-box-shadow-color: var(--utrecht-yellow-80);
+  --utrecht-topnav-link-focus-text-decoration: none;
+
+  --utrecht-topnav-link-focus-background-color: var(--utrecht-yellow-80);
 }

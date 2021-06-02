@@ -48,12 +48,21 @@
   background-color: var(--utrecht-topnav-list-background-hover);
 }
 
-.utrecht-topnav__link-active {
+.utrecht-topnav__link--active {
   text-decoration: underline;
 }
 
-.utrecht-topnav__link-focus {
-  background-color: var(utrecht-sidenav);
+.utrecht-topnav__link--focus {
+  outline: 2px var(--utrecht-topnav-link-focus-bordertype) var(--utrecht-topnav-link-focus-outline-color);
+  color: var(--utrecht-topnav-link-focus-color, var(--utrecht-topnav-link-color));
+  /*-webkit-box-shadow: 0 0 0 2px var(--utrecht-link-focus-box-shadow-color);*/
+  box-shadow: 0 0 0 2px var(--utrecht-topnav-link-focus-box-shadow-color);
+  outline-offset: 0;
+  text-decoration: var(
+    --utrecht-topnav-link-focus-text-decoration,
+    var(--utrecht-topnav-link-text-decoration, underline)
+  );
+  background-color: var(--utrecht-topnav-link-focus-background-color); /*#ffd633*/
 }
 
 .utrecht-sidenav {
