@@ -2,6 +2,13 @@
 
 # Navigatie
 
+## Structuur
+
+- `utrecht-topnav`
+  - `__list`
+    - `__item`
+      - `__link`
+
 ## UX guidelines
 
 ### Introduction

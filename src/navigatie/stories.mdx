@@ -17,34 +17,38 @@ import "./index.css";
 import README from "./README.md";
 
 export const Template = () =>
-  ` <nav class="sidenav">
-        <ul>
-          <li class="utrecht-sidenav__item"><a href="#">Crumb item #1</a></li>
-          <li class="utrecht-sidenav__item"><a href="#">Crumb item</a></li>
-          <li class="utrecht-sidenav__item"><a href="#">Crumb item</a></li>
-          <li class="utrecht-sidenav__item sidenav__item--active">
-              <a href="#">Crumb item Active</a>
-              <ul>
-                  <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item Active</a></li>
-                  <li class="utrecht-sidenav__childitem sidenav__childitem--active"><a href="#">Childmenu Item #1</a></li>
-                  <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item #2</a></li>
-                  <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item #3</a></li>
+  `<div class="utrecht-navhtml">
+   <nav class="sidenav >
+        <ul class="utrecht-sidenav__list>
+          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#">Crumb item #1</a></li>
+          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#">Crumb item</a></li>
+          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#">Crumb item</a></li>
+          <li class="utrecht-sidenav__item sidenav__item"><a class="utrecht-sidenav__link-active" href="#">Crumb item Active</a>
+              <ul class="utrecht-sidenav__childlist>
+                  <li class="utrecht-sidenav__childitem"><a class="utrecht-sidenav-childlink" href="#">Childmenu Item Active</a></li>
+                  <li class="utrecht-sidenav__childitem"><a class="utrecht-sidenav-childlink" href="#">Childmenu Item #1</a></li>
+                  <li class="utrecht-sidenav__childitem"><a class="utrecht-sidenav-childlink" href="#">Childmenu Item #2</a></li>
+                  <li class="utrecht-sidenav__childitem"><a class="utrecht-sidenav-childlink" href="#">Childmenu Item #3</a></li>
               </ul>
           </li>
-          <li class="utrecht-sidenav__siblingitem"><a href="#">Siblings Item #1</a></li>
-          <li class="utrecht-sidenav__siblingitem"><a href="#">Siblings Item #2</a></li>
-        </ul>
-      </nav>`;
-
-export const TemplateNested = () =>
-  `<nav class="topnav">
-        <ul>
-          <li class="utrecht-topnav__item"><a href="#">Menu item #1</a></li>
-          <li class="utrecht-topnav__item--active"><a href="#">Menu item #2</a></li>
-          <li class="utrecht-topnav__item"><a href="#">Menu item #3</a></li>
-          <li class="utrecht-topnav__item"><a href="#">Menu item #4</a></li>
+          <li class="utrecht-sidenav__siblingitem"><a class="utrecht-sidenav-sibilinglink" href="#">Siblings Item #1</a></li>
+          <li class="utrecht-sidenav__siblingitem"><a class="utrecht-sidenav-sibilinglink" href="#">Siblings Item #2</a></li>
         </ul>
       </nav>
+    </div>`;
+
+export const TemplateNested = () =>
+  `<div class="utrecht-navhtml">
+    <nav class="topnav">
+        <ul class="utrecht-topnav__list">
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link-active" href="#">Zorg en onderwijs</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link-focus" href="#">Werk en inkomen</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
+        </ul>
+      </nav>
+    </div>
 `;
 
 <Meta
