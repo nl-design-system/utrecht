@@ -17,14 +17,16 @@
   background-color: var(--utrecht-topnav-list-background);
   padding-inline-start: 0;
   padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .utrecht-topnav__item {
-  height: 3.5rem;
   flex: 1 0 auto;
   border-right: 1px solid var(--utrecht-topnav-list-border-color);
   text-align: center;
-  padding-inline-start: 0;
   margin-inline-start: 0;
 }
 
