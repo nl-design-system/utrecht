@@ -17,8 +17,7 @@ import "./index.css";
 import README from "./README.md";
 
 export const Template = () =>
-  `<div class="utrecht-html">
-      <nav class="sidenav">
+  ` <nav class="sidenav">
         <ul>
           <li class="utrecht-sidenav__item"><a href="#">Crumb item #1</a></li>
           <li class="utrecht-sidenav__item"><a href="#">Crumb item</a></li>
@@ -27,20 +26,18 @@ export const Template = () =>
               <a href="#">Crumb item Active</a>
               <ul>
                   <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item Active</a></li>
-                  <li class="utrecht-sidenav__childitem sidenav__Childitem--active"><a href="#">Childmenu Item #1</a></li>
+                  <li class="utrecht-sidenav__childitem sidenav__childitem--active"><a href="#">Childmenu Item #1</a></li>
                   <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item #2</a></li>
                   <li class="utrecht-sidenav__childitem"><a href="#">Childmenu Item #3</a></li>
               </ul>
           </li>
           <li class="utrecht-sidenav__siblingitem"><a href="#">Siblings Item #1</a></li>
-          <li class="utrecht-sidenav__siblingsitem"><a href="#">Siblings Item #2</a></li>
+          <li class="utrecht-sidenav__siblingitem"><a href="#">Siblings Item #2</a></li>
         </ul>
-      </nav>
-  </div>`;
+      </nav>`;
 
 export const TemplateNested = () =>
-  `<div class="utrecht-html">
-      <nav class="topnav">
+  `<nav class="topnav">
         <ul>
           <li class="utrecht-topnav__item"><a href="#">Menu item #1</a></li>
           <li class="utrecht-topnav__item--active"><a href="#">Menu item #2</a></li>
@@ -48,7 +45,7 @@ export const TemplateNested = () =>
           <li class="utrecht-topnav__item"><a href="#">Menu item #4</a></li>
         </ul>
       </nav>
-  </div>`;
+`;
 
 <Meta
   title="Components/Navigatie"
