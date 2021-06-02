@@ -45,11 +45,13 @@
 
 .utrecht-topnav__link:hover {
   text-decoration: underline;
-  background-color: var(--utrecht-topnav-list-background-hover);
+  background-color: var(--utrecht-topna-link-background--hover);
+  color: var(--utrecht-topnav-link-color);
 }
 
 .utrecht-topnav__link--active {
   text-decoration: underline;
+  background-color: var(--utrecht-topnav-list-background-active);
 }
 
 .utrecht-topnav__link--focus {

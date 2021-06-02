@@ -39,11 +39,32 @@ export const Template = () =>
 
 export const TemplateNested = () =>
   `<div class="utrecht-navhtml">
+      <h2>Top navigatie</h2>
+    <nav class="topnav">
+        <ul class="utrecht-topnav__list">
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Zorg en onderwijs</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Werk en inkomen</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
+        </ul>
+      </nav>
+      <h2>Top navigatie met Active Item</h2>
     <nav class="topnav">
         <ul class="utrecht-topnav__list">
           <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
           <li class="utrecht-topnav__item"><a class="utrecht-topnav__link utrecht-topnav__link--active" href="#">Zorg en onderwijs</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link utrecht-topnav__link--focus" href="#">Werk en inkomen *F</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Werk en inkomen</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
+        </ul>
+      </nav>
+      <h2>Top navigatie met Focus Item</h2>
+    <nav class="topnav">
+        <ul class="utrecht-topnav__list">
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link utrecht-topnav__link--focus" href="#">Zorg en onderwijs</a></li>
+          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Werk en inkomen</a></li>
           <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
           <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
         </ul>
