@@ -28,5 +28,8 @@ export const parameters = {
   },
   options: {
     panelPosition: 'bottom',
+    storySort: {
+      order: ['Utrecht', 'Onderzoek', ['Introductie'], 'Components', 'Molecules', 'Semantic HTML'],
+    },
   },
 };
