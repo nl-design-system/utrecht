@@ -45,6 +45,8 @@ Het is voor de blinden niet duidelijk dat er een verplicht invulveld zit in de k
 
 Bij de overige respondenten is er geen verwarring in het doorlopen van de testomgeving. De volgorde van stappen worden begrepen en zonder moeite doorlopen.
 
+Dit inzicht heeft geleid tot specifieke inzichten in het Button component. Deze zijn daar te vinden onder het Documentatie > Onderzoek.
+
 ### 002 - Notificaties geven vertrouwen
 
 De notificatie e-mails worden als fijn ervaren. Het is belangrijk om de bevestiging te krijgen dat jouw melding serieus genomen wordt en opgepakt wordt. Ook is het belangrijk dat ze te weten krijgen wanneer het opgelost is. Daarnaast worden de smileys in de 3e mail aangeklikt. De e-mails worden wel als veel ervaren (3 is misschien 1 te veel), maar dit kan ook komen omdat er nu geen tijd tussen zit.
