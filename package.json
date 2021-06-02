@@ -48,7 +48,7 @@
     "webpack": "^4.44.2"
   },
   "scripts": {
-    "bootstrap": "lerna bootstrap",
+    "bootstrap": "lerna exec npm ci",
     "build:storybook": "build-storybook --output-dir dist/storybook -s src/static/,proprietary/assets/,proprietary/design-tokens/",
     "build:lerna": "lerna run build",
     "build": "npm-run-all 'build:*'",
