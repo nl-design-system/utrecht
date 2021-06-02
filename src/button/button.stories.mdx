@@ -13,6 +13,7 @@ import "./style.css";
 
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
+import onderzoek from "./docs/onderzoek.md";
 
 export const Template = ({ content, focus, hover, disabled }) =>
   `<button class="utrecht-button${hover ? " utrecht-button--hover" : ""}${focus ? " utrecht-button--focus" : ""}${
@@ -46,6 +47,7 @@ export const Template = ({ content, focus, hover, disabled }) =>
     notes: {
       UX: README,
       Accessibility: accessibilityGuidelines,
+      Onderzoek: onderzoek,
     },
   }}
 />

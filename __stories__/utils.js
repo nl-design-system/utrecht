@@ -1,5 +1,3 @@
-export const getTitle = (pageTitle) => `General/${pageTitle}`;
-
 export const getParams = ({ previewTabs = {}, ...extraParams } = {}) => ({
   previewTabs: {
     'storybookjs/notes/panel': { hidden: true },
