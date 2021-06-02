@@ -1,0 +1,15 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Documentation for the Design System of the Municipality of Utrecht",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/documentation",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^6.2.9"
+  }
+}
