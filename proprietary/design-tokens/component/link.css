@@ -13,6 +13,9 @@
   --utrecht-link-active-color: var(--utrecht-blue-30);
   --utrecht-link-hover-color: var(--utrecht-blue-40);
   --utrecht-link-focus-color: var(--utrecht-blue-40);
+  --utrecht-link-focus-background-color: var(--utrecht-yellow-80);
+  --utrecht-link-focus-outline-color: var(--utrecht-blue-35);
+  --utrecht-link-focus-box-shadow-color: var(--utrecht-yellow-80);
   --utrecht-link-visited-color: var(--utrecht-blue-40);
 }
 
@@ -20,7 +23,8 @@
  * @tokens Component / Link
  */
 :root {
-  --utrecht-link-text-decoration: none;
+  --utrecht-link-text-decoration: underline;
   --utrecht-link-focus-text-decoration: underline;
-  --utrecht-link-hover-text-decoration: underline;
+  --utrecht-link-hover-text-decoration: none;
+  --utrecht-link-focus-bordertype: dotted;
 }

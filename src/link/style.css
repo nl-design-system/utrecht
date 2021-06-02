@@ -27,6 +27,11 @@
 
 .utrecht-link:focus,
 .utrecht-link--focus {
+  outline: 2px var(--utrecht-link-focus-bordertype) var(--utrecht-link-focus-outline-color);
   color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
+  -webkit-box-shadow: 0 0 0 2px var(--utrecht-link-focus-box-shadow-color);
+  box-shadow: 0 0 0 2px var(--utrecht-link-focus-box-shadow-color);
+  outline-offset: 0;
   text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+  background-color: var(--utrecht-link-focus-background-color); /*#ffd633*/
 }
