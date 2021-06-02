@@ -4,7 +4,7 @@ Gebruiksvriendelijk en toegankelijke producten en diensten voor alle inwoners va
 
 ## Overzicht
 
-Hieronder staat een overzicht van de gebruikersonderzoeken die we gedaan hebben. Mis je iets? Neem dan contact met ons op.
+Hieronder staat een overzicht van de gebruikersonderzoeken die we gedaan hebben. Mis je iets? Neem dan [contact met ons op](mailto:ux@utrecht.nl).
 
 * Onderzoek online meldingen (inclusief Blinden en Slechtziende respondenten)
 
