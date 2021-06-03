@@ -1,5 +1,3 @@
-<!-- \*Status: **In development\*** -->
-
 # Logo
 
 ## References

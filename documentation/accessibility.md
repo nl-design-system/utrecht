@@ -1,6 +1,6 @@
 # Accessibility
 
-_Status: **In development**_
+_Status: **WORK IN PROGRESS**_
 
 **_The following are general accessibility guidelines and pointers, please refer to each individual pattern or component for their specific guidelines._**
 
