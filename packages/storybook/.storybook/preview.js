@@ -7,10 +7,24 @@ const tokenFiles = tokenContext
   .map((filename) => ({ filename: filename, content: tokenContext(filename).default }));
 
 const statuses = {
-  STABLE: '#006400',
-  UNSTABLE: '#cca300',
-  EXPERIMENTAL: '#cc0000',
-  'IN DEVELOPMENT': '#cc0000',
+  STABLE: {
+    color: '#006400',
+    description:
+      'Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases.',
+  },
+  UNSTABLE: {
+    color: '#cca300',
+    description: 'Used in production in a specific situation, evolving APIs based on feedback, many major releases.',
+  },
+  EXPERIMENTAL: {
+    color: '#cc0000',
+    description:
+      'Used in prototypes and in projects that are still in development, breaking changes occur frequently and are not communicated.',
+  },
+  'WORK IN PROGRESS': {
+    color: '#cc0000',
+    description: 'Do not use in production. Not versioned and published yet.',
+  },
 };
 
 const previewTabs = {
