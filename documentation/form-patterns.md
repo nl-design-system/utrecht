@@ -2,7 +2,7 @@
 
 For individual form component guidelines please consult the documentation for that specific component.
 
-_Status: **In development**_
+_Status: **WORK IN PROGRESS**_
 
 ## Introduction
 
