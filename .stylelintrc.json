@@ -30,7 +30,12 @@
     "alpha-value-notation": ["percentage"],
     "hue-degree-notation": ["number"],
     "color-function-notation": ["modern"],
-    "length-zero-no-unit": [true, "custom-properties"],
+    "length-zero-no-unit": [
+      true,
+      {
+        "ignore": ["custom-properties"]
+      }
+    ],
     "font-weight-notation": [
       "numeric",
       {
