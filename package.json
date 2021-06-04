@@ -47,6 +47,7 @@
     "lint-fix:css": "stylelint --fix '**/*.css'",
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
-    "prettier": "prettier --write ."
+    "prettier": "prettier --write .",
+    "storybook": "lerna run --stream storybook"
   }
 }
