@@ -1,6 +1,6 @@
 <!--
 @license EUPL-1.2
-Copyright (c) 2021 Robbert Broersma
+Copyright (c) 2021 Gemeente Utrecht
 -->
 
 # Paragraph
@@ -8,7 +8,7 @@ Copyright (c) 2021 Robbert Broersma
 ## Terminologie
 
 - **paragraph** omdat het de onafgekorte versie van het `<p>` element in HTML
-- **lead** paragraph omdat het een [eigen lemma heeft op Wikipedia](https://en.wikipedia.org/wiki/Lead_paragraph). In andere code zie ik vaak `<p class="intro">`, maar "intro" blijkt niet de echte term te zijn.
+- **lead** paragraph omdat het een [eigen lemma heeft op Wikipedia](https://en.wikipedia.org/wiki/Lead_paragraph). Eerst had ik "Intro paragraph" gekozen, omdat ik in code vaak `<p class="intro">` ben tegengekomen, maar het blijkt niet de gebruikelijke term te zijn.
 
 ## Class names
 
@@ -27,6 +27,7 @@ Document (abstract component)
 
 Paragraph:
 
+- `utrecht-paragraph-font-size`
 - `utrecht-paragraph-font-family`
 - `utrecht-paragraph-font-size`
 - `utrecht-paragraph-font-weight`
@@ -38,7 +39,3 @@ Lead paragraph:
 - `utrecht-paragraph-lead-font-size`
 - `utrecht-paragraph-lead-font-weight`
 - `utrecht-paragraph-lead-line-height`
-
-## States
-
-Niet van toepassing.
