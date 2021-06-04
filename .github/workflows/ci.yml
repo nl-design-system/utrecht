@@ -33,3 +33,9 @@ jobs:
         run: |
           npm run test --if-present
           npm run test --if-present --workspaces
+
+      - name: "Continuous Integration: visual regression test"
+        env:
+          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+        run: |
+          npx lerna run percy-snapshot
