@@ -12,6 +12,7 @@
   "devDependencies": {
     "@babel/core": "^7.14.0",
     "@etchteam/storybook-addon-status": "^3.0.2",
+    "@percy/storybook": "^3.3.1",
     "@storybook/addon-a11y": "^6.2.9",
     "@storybook/addon-docs": "^6.2.9",
     "@storybook/addon-notes": "^5.3.21",
@@ -41,6 +42,7 @@
   "scripts": {
     "build": "build-storybook --output-dir dist/ -s src/style/,../../proprietary/assets/,../../proprietary/design-tokens/",
     "clean": "rimraf dist/",
+    "percy-snapshot": "percy-storybook --build_dir dist/ --widths=1280",
     "start": "node_modules/http-server/bin/http-server dist/",
     "storybook": "start-storybook -p 6006 -s src/style/,../../proprietary/assets/,../../proprietary/design-tokens/"
   }
