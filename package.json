@@ -6,11 +6,10 @@
   "name": "@utrecht/design-system",
   "private": true,
   "workspaces": [
-    "documentation",
-    "components/*",
-    "packages/*",
-    "proprietary/*",
-    "src/*"
+    "./documentation/",
+    "./components/*",
+    "./packages/*",
+    "./proprietary/*"
   ],
   "repository": {
     "type": "git+ssh",
