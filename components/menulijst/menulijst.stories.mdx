@@ -1,6 +1,5 @@
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
 import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
-import { MDXEmbedProvider } from "mdx-embed";
 import dedent from "ts-dedent";
 
 <!-- Import component and component styles -->
@@ -56,9 +55,3 @@ To use the component as a web component, make sure the component is defined by i
 </Canvas>
 
 <ArgsTable story="menulijst" />
-
-## Design Kit
-
-<MDXEmbedProvider>
-  <Figma title="menulijst" url="file/x" />
-</MDXEmbedProvider>

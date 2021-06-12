@@ -5,7 +5,6 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
 import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
-import { MDXEmbedProvider } from "mdx-embed";
 
 <!-- Import component and component styles -->
 
@@ -78,9 +77,3 @@ Styling via the `<p>` element with the `lead` class name:
 </Canvas>
 
 <ArgsTable story="Paragraph" />
-
-## Design Kit
-
-<MDXEmbedProvider>
-  <Figma title="Paragraph" url="file/x" />
-</MDXEmbedProvider>
