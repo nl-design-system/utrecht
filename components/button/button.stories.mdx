@@ -29,13 +29,18 @@ export const Template = ({ content, focus, hover, disabled }) =>
       defaultValue: "Read more...",
     },
     focus: {
-      description: "Visited",
-      control: "text",
+      description: "Focus",
+      control: "boolean",
       defaultValue: false,
     },
     hover: {
-      description: "Visited",
-      control: "text",
+      description: "Hover",
+      control: "boolean",
+      defaultValue: false,
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
       defaultValue: false,
     },
   }}
