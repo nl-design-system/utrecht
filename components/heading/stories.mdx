@@ -6,6 +6,7 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
 import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
 import { MDXEmbedProvider } from "mdx-embed";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -15,8 +16,11 @@ import "./index.css";
 
 import README from "./README.md";
 
-export const Template = ({ level, content }) =>
-  `<div role="heading" aria-level="${level}" class="utrecht-heading-${level}">${content}</div>`;
+export const Template = ({ level, content, distanced }) =>
+  `<div role="heading" aria-level="${level}" class="${clsx(
+    `utrecht-heading-${level}`,
+    distanced && `utrecht-heading-${level}--distanced`
+  )}">${content}</div>`;
 
 <Meta
   title="Components/Heading"
@@ -30,6 +34,11 @@ export const Template = ({ level, content }) =>
       description: "Set the content of the heading",
       control: "text",
       defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+      defaultValue: true,
     },
   }}
   parameters={{
