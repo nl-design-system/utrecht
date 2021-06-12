@@ -15,10 +15,9 @@ import "./index.css";
 import README from "./README.md";
 
 export const Template = ({ level, content, distanced }) =>
-  `<div role="heading" aria-level="${level}" class="${clsx(
-    `utrecht-heading-${level}`,
-    distanced && `utrecht-heading-${level}--distanced`
-  )}">${content}</div>`;
+  `<div role="heading" aria-level="${level}" class="${clsx(`utrecht-heading-${level}`, {
+    [`utrecht-heading-${level}--distanced`]: distanced,
+  })}">${content}</div>`;
 
 <Meta
   title="Components/Heading"
