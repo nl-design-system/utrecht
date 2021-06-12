@@ -5,6 +5,7 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
 
 import "./style.css";
 
@@ -12,9 +13,12 @@ import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
 export const Template = ({ content, active, focus, hover, visited }) =>
-  `<a href="#" class="utrecht-link ${hover ? " utrecht-link--hover" : ""}${focus ? " utrecht-link--focus" : ""}${
-    active ? " utrecht-link--active" : ""
-  }${visited ? " utrecht-link--visited" : ""}">${content}</a>`;
+  `<a href="#" class="${clsx("utrecht-link", {
+    "utrecht-link--active": active,
+    "utrecht-link--focus": focus,
+    "utrecht-link--hover": hover,
+    "utrecht-link--visited": visited,
+  })}">${content}</a>`;
 
 <Meta
   title="Components/Link"

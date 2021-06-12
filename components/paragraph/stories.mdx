@@ -4,6 +4,7 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -14,7 +15,7 @@ import "./index.css";
 import README from "./README.md";
 
 export const Template = ({ content, lead }) =>
-  `<p class="utrecht-paragraph${lead ? " utrecht-paragraph--lead" : ""}">${content}</p>`;
+  `<p class="${clsx("utrecht-paragraph", { "utrecht-paragraph--lead": lead })}">${content}</p>`;
 
 export const TemplateMulti = ({ content }) =>
   `<p class="utrecht-paragraph utrecht-paragraph--lead">${content}</p>
