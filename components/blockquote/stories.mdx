@@ -4,6 +4,7 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -13,8 +14,8 @@ import "./index.css";
 
 import README from "./README.md";
 
-export const Template = ({ content, attribution }) =>
-  `<blockquote class="utrecht-blockquote">
+export const Template = ({ content, attribution, distanced }) =>
+  `<blockquote class="${clsx("utrecht-blockquote", { "utrecht-blockquote--distanced": distanced })}">
     <div class="utrecht-blockquote__content">
       <p>${content}</p>${
     attribution
@@ -37,6 +38,11 @@ export const Template = ({ content, attribution }) =>
       description: "Attribution of the quote",
       control: "text",
       defaultValue: "",
+    },
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+      defaultValue: true,
     },
   }}
   parameters={{
