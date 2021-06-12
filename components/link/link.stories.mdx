@@ -6,7 +6,6 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
 import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
-import { MDXEmbedProvider } from "mdx-embed";
 import dedent from "ts-dedent";
 
 import "./style.css";
@@ -101,9 +100,3 @@ Styling via the `.utrecht-link--visited` class name:
 </Canvas>
 
 <ArgsTable story="Link" />
-
-## Design Kit
-
-<MDXEmbedProvider>
-  <Figma title="Link" url="file/x" />
-</MDXEmbedProvider>

@@ -5,7 +5,6 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
 import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
-import { MDXEmbedProvider } from "mdx-embed";
 import clsx from "clsx";
 
 <!-- Import component and component styles -->
@@ -117,9 +116,3 @@ Styling via `utrecht-heading-6` class name:
 </Canvas>
 
 <ArgsTable story="Heading" />
-
-## Design Kit
-
-<MDXEmbedProvider>
-  <Figma title="Heading" url="file/x" />
-</MDXEmbedProvider>
