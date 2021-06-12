@@ -1,4 +1,4 @@
-import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
 
 <!-- Import component and component styles -->
 
@@ -7,10 +7,8 @@ import "./style.css";
 <!-- Import Docs -->
 
 import README from "./README.md";
-import contentGuidelines from "./docs/content-guidelines.md";
-import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ href, content }) =>
+export const Template = () =>
   `<div class="utrecht-html">
     <ul class="utrecht-menulijst">
         <li class="utrecht-menulijst__item utrecht-menulijst__item--active">
