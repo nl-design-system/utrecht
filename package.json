@@ -20,6 +20,7 @@
     "npm": ">=7"
   },
   "devDependencies": {
+    "@storybook/html": "6.2.9",
     "clsx": "^1.1.1",
     "eslint": "7.13.0",
     "eslint-config-prettier": "8.3.0",
@@ -39,6 +40,8 @@
   },
   "scripts": {
     "bootstrap": "lerna exec npm ci",
+    "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "clean": "rimraf packages/storybook/dist/",
     "lint": "npm-run-all --continue-on-error 'lint:*'",
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint '**/*.{js,jsx,mdx,ts,tsx}'",
@@ -51,6 +54,6 @@
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,mdx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "prettier": "prettier --write .",
-    "storybook": "lerna run --stream storybook"
+    "storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/"
   }
 }
