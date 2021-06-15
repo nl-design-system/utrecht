@@ -9,5 +9,6 @@ updates:
       interval: "weekly"
     target-branch: "main"
     versioning-strategy: "increase-if-necessary"
+    open-pull-requests-limit: 20
     reviewers:
       - "nl-design-system/sysadmin"
