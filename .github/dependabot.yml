@@ -9,3 +9,5 @@ updates:
       interval: "weekly"
     target-branch: "main"
     versioning-strategy: "increase-if-necessary"
+    reviewers:
+      - "nl-design-system/sysadmin"
