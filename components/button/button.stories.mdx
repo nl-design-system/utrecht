@@ -4,6 +4,7 @@ Copyright (c) 2021 Gemeente Utrecht
 Copyright (c) 2021 Robbert Broersma
 -->
 
+import { DesignTokenDocBlock } from "storybook-design-token/dist/doc-blocks";
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
 import clsx from "clsx";
 
@@ -65,6 +66,12 @@ Styling via the `.utrecht-button` class name:
   <Story name="Button">{Template.bind({})}</Story>
 </Canvas>
 
+<ArgsTable story="Button" />
+
+<DesignTokenDocBlock categoryName="Components/Button" viewType="table" />;
+
+## Hover
+
 Styling via the `.utrecht-button--hover` class name:
 
 <Canvas>
@@ -72,6 +79,8 @@ Styling via the `.utrecht-button--hover` class name:
     {Template.bind({})}
   </Story>
 </Canvas>
+
+## Focus
 
 Styling via the `.utrecht-button--focus` class name:
 
@@ -81,6 +90,8 @@ Styling via the `.utrecht-button--focus` class name:
   </Story>
 </Canvas>
 
+## Disabled
+
 Styling via the `.utrecht-button--disabled` class name:
 
 <Canvas>
@@ -88,5 +99,3 @@ Styling via the `.utrecht-button--disabled` class name:
     {Template.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable story="Button" />

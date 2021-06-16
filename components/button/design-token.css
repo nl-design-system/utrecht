@@ -1,0 +1,80 @@
+/* Do not use this class name, the variables are only an example */
+.utrecht-button--storybook-design-token-example {
+  /**
+   * @tokens Components/Button
+   * @presenter Spacing
+   */
+  --utrecht-button-border-width: 2px;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Color
+   */
+  --utrecht-button-disabled-background-color: silver;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Color
+   */
+  --utrecht-button-disabled-color: darkgrey;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Spacing
+   */
+  --utrecht-button-focus-transform-scale: 1;
+
+  /**
+   * @tokens Components/Button
+   * @presenter FontFamily
+   */
+  --utrecht-button-font-family: "Arial", sans-serif;
+
+  /**
+   * @tokens Components/Button
+   * @presenter FontSize
+   */
+  --utrecht-button-font-size: 16px;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Spacing
+   */
+  --utrecht-button-margin-block: 0;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Spacing
+   */
+  --utrecht-button-margin-inline: 0;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Spacing
+   */
+  --utrecht-button-padding-block: 0.5ex;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Spacing
+   */
+  --utrecht-button-padding-inline: 2ch;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Color
+   */
+  --utrecht-button-primary-action-background-color: white;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Color
+   */
+  --utrecht-button-primary-action-color: black;
+
+  /**
+   * @tokens Components/Button
+   * @presenter Color
+   */
+  --utrecht-button-primary-action-hover-background-color: #eee;
+}
