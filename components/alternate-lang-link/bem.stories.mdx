@@ -1,0 +1,89 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
+
+import "../link/bem.scss";
+
+import README from "./README.md";
+
+export const AlternateLangLink = ({ textContent, title, current, lang, hreflang }) =>
+  `<a href="https://example.com/${lang}/" class="${clsx("utrecht-link", "utrecht-link--alternate-lang", {
+    "utrecht-link--current-lang": current,
+  })}"${current ? 'aria-current="page"' : ""} title="${title}" hreflang="${hreflang}" lang="${lang}"${
+    !current ? 'rel="alternate"' : ""
+  }>${textContent}</a>`;
+
+<Meta
+  title="Components/Alternate Language Link"
+  argTypes={{
+    current: {
+      description: "This language is the current page",
+      control: "boolean",
+    },
+    hreflang: {
+      description: "Language of alternate page",
+      control: "text",
+    },
+    lang: {
+      description: "Language code for the content of the alternate page",
+      control: "text",
+    },
+    textContent: {
+      description: "Link text",
+      control: "text",
+    },
+    title: {
+      description: "Language the description for the alternate page",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => AlternateLangLink(args),
+    },
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+<Description>{README}</Description>
+
+Styling via the `.utrecht-link` class name with `.utrecht-link--alternate-lang` modifier class name:
+
+<Canvas>
+  <Story
+    name="Alternate Language Link"
+    args={{
+      hreflang: "en",
+      lang: "en",
+      textContent: "EN",
+      title: "This page in English",
+    }}
+  >
+    {AlternateLangLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Alternate Language Link" />
+
+## Current language
+
+Styling via the `.utrecht-link` class name with `.utrecht-link--current-lang` modifier class name:
+
+<Canvas>
+  <Story
+    name="Current Language Link"
+    args={{
+      current: true,
+      hreflang: "en",
+      lang: "en",
+      textContent: "EN",
+      title: "This page in English",
+    }}
+  >
+    {AlternateLangLink.bind({})}
+  </Story>
+</Canvas>
