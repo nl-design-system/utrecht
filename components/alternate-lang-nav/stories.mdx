@@ -1,0 +1,51 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable, Description } from "@storybook/addon-docs/blocks";
+import { AlternateLangLink } from "../alternate-lang-link/bem.stories.mdx";
+
+import "../link/bem.scss";
+
+import README from "./README.md";
+
+export const AlternateLangNav = ({ languages }) =>
+  `<div class="utrecht-alternate-lang-nav">${languages
+    .map(AlternateLangLink)
+    .join('<span aria-hidden="true"> | </span>')}</div>`;
+
+<Meta
+  title="Components/Alternate Language Navigation"
+  argTypes={{
+    languages: {
+      description: "Languages",
+      control: "array",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => AlternateLangLink(args),
+    },
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+<Description>{README}</Description>
+
+<Canvas>
+  <Story
+    name="Alternative Languages Navigation"
+    args={{
+      languages: [
+        { textContent: "EN", title: "This page in English", lang: "en", current: true, hreflang: "en" },
+        { textContent: "NL", title: "Deze pagina in Nederlands", lang: "nl", current: false, hreflang: "nl" },
+      ],
+    }}
+  >
+    {AlternateLangNav.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Alternative Languages Navigation" />
