@@ -4,11 +4,21 @@ import '../../../components/document/bem.css';
 
 import React from 'react';
 
-const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
+const tokenContext1 = require.context('!!raw-loader!../../../components/', true, /.\.(css|less|scss|svg)$/);
+const tokenContext2 = require.context(
+  '!!raw-loader!../../../proprietary/design-tokens/src/',
+  true,
+  /.\.(css|less|scss|svg)$/,
+);
 
-const tokenFiles = tokenContext
-  .keys()
-  .map((filename) => ({ filename: filename, content: tokenContext(filename).default }));
+const tokenFiles = [tokenContext2]
+  .map((tokenContext) =>
+    tokenContext.keys().map((filename) => ({
+      filename: filename,
+      content: tokenContext(filename).default,
+    })),
+  )
+  .reduce((a, b) => [...a, ...b], []);
 
 const statuses = {
   STABLE: {
