@@ -17,7 +17,7 @@
 
   --utrecht-button-border-radius: 0.1875rem;
   --utrecht-button-focus-border-color: var(--utrecht-blue-40);
-  --utrecht-button-focus-border-width: 0.125rem;
+  --utrecht-button-focus-border-width: var(--utrecht-border-width-md);
   --utrecht-button-focus-transform-scale: 1.02;
 
   --utrecht-button-primary-action-background-color: var(--utrecht-blue-35);
@@ -31,7 +31,7 @@
   --utrecht-button-secondary-action-background-color: var(--utrecht-white);
   --utrecht-button-secondary-action-color: var(--utrecht-blue-35);
   --utrecht-button-secondary-action-border-color: var(--utrecht-blue-35);
-  --utrecht-button-secondary-action-border-width: 0.125rem; /* 2px */
+  --utrecht-button-secondary-action-border-width: var(--utrecht-border-width-md);
   --utrecht-button-secondary-action-hover-background-color: var(--utrecht-white);
   --utrecht-button-secondary-action-hover-color: var(--utrecht-blue-35);
   --utrecht-button-secondary-action-hover-border-color: var(--utrecht-blue-40);
