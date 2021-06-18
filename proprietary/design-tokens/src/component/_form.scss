@@ -11,9 +11,9 @@
   --utrecht-form-input-font-size: var(--utrecht-font-weight-regular);
   --utrecht-form-input-background-color: var(--utrecht-white);
 
-  --utrecht-form-input-border-width: 1px;
-  --utrecht-form-input-border-width-bottom: 1px;
-  --utrecht-form-input-border-color: var(--utrecht-grey-30);
+  --utrecht-form-input-border-width: var(--utrecht-border-width-sm);
+  --utrecht-form-input-border-width-bottom: var(--utrecht-border-width-sm);
+  --utrecht-form-input-border-color: var(--utrecht-form-input-border-color-grey);
   --utrecht-form-input-border-radius: 0;
   --utrecht-form-input-focus-border-color: var(--utrecht-grey-80);
 
@@ -35,7 +35,7 @@
 :root {
   /* @presenter Sizing */
   --utrecht-form-input-max-width: 28em;
-  --utrecht-form-input-border-width: 1px;
+  --utrecht-form-input-border-width: var(--utrecht-border-width-sm);
   --utrecht-form-input-border-bottom-width: 3px;
   --utrecht-form-input-border-radius: 0;
   --utrecht-form-padding-inline-start: 12px;
@@ -44,7 +44,7 @@
   --utrecht-form-padding-block-end: 8px;
 
   /* @presenter Color */
-  --utrecht-form-input-border-color: var(--utrecht-grey-50);
+  --utrecht-form-input-border-color: var(--utrecht-form-input-border-color-grey);
   --utrecht-form-input-invalid-border-color: var(--utrecht-feedback-invalid-color);
 
   /* @presenter FontFamily */

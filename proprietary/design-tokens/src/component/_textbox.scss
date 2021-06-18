@@ -10,7 +10,7 @@
 :root {
   /* @presenter Sizing */
   --utrecht-textbox-max-width: 28em;
-  --utrecht-textbox-border-width: 1px;
+  --utrecht-textbox-border-width: var(--utrecht-border-width-sm);
   --utrecht-textbox-border-bottom-width: 3px;
   --utrecht-textbox-border-radius: 0;
   --utrecht-textbox-padding-inline-start: 12px;
@@ -19,7 +19,7 @@
   --utrecht-textbox-padding-block-end: 8px;
 
   /* @presenter Color */
-  --utrecht-textbox-border-color: var(--utrecht-grey-50);
+  --utrecht-textbox-border-color: var(--utrecht-form-input-border-color-grey);
   --utrecht-textbox-invalid-border-color: var(--utrecht-feedback-invalid-color);
 
   /* @presenter FontFamily */
