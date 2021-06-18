@@ -5,7 +5,7 @@
  */
 
 :root {
-  --utrecht-border-width-none:0;
+  --utrecht-border-width-none: 0;
   --utrecht-border-width-sm: 0.0625rem; /* 1px */
   --utrecht-border-width-md: 0.125rem; /* 2px */
 
@@ -16,4 +16,3 @@
   --utrecht-form-input-border-color-red: var(--utrecht-red-40); /*Border kleur voor errors*/
   --utrecht-form-input-border-color-black: var(--utrecht-black); /*Border kleur voor focus state*/
 }
-
