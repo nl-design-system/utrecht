@@ -112,3 +112,13 @@
   margin-block-start: var(--utrecht-heading-6-margin-block-start);
   margin-block-end: var(--utrecht-heading-6-margin-block-end);
 }
+
+.utrecht-heading-1--reset-h1,
+.utrecht-heading-2--reset-h2,
+.utrecht-heading-3--reset-h3,
+.utrecht-heading-4--reset-h4,
+.utrecht-heading-5--reset-h5,
+.utrecht-heading-6--reset-h6 {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
