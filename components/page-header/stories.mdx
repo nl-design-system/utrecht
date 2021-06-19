@@ -1,0 +1,42 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
+
+import "./style.css";
+
+import README from "./README.md";
+
+export const Template = ({ innerHTML }) => `<header class="utrecht-page-header">
+<div class="utrecht-page-header__logo">logo</div>
+<div class="utrecht-page-header__search">search</div>
+<div class="utrecht-page-header__navigation">navigation</div>
+${innerHTML}</header>`;
+
+<Meta
+  title="Components/Page Header"
+  argTypes={{
+    innerHTML: {
+      description: "HTML content",
+      control: "text",
+      defaultValue: "",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+<Description>{README}</Description>
+
+<Canvas>
+  <Story name="Page Header">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Page Header" />
