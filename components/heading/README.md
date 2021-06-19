@@ -40,6 +40,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-1-line-height`
   - `utrecht-heading-1-margin-block-end`
   - `utrecht-heading-1-margin-block-start`
+  - `utrecht-heading-1-text-transform`
 - Heading 2
   - `utrecht-heading-2-color`
   - `utrecht-heading-2-font-family`
@@ -48,6 +49,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-2-line-height`
   - `utrecht-heading-2-margin-block-end`
   - `utrecht-heading-2-margin-block-start`
+  - `utrecht-heading-2-text-transform`
 - Heading 3
   - `utrecht-heading-3-color`
   - `utrecht-heading-3-font-family`
@@ -56,6 +58,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-3-line-height`
   - `utrecht-heading-3-margin-block-end`
   - `utrecht-heading-3-margin-block-start`
+  - `utrecht-heading-3-text-transform`
 - Heading 4
   - `utrecht-heading-4-color`
   - `utrecht-heading-4-font-family`
@@ -64,6 +67,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-4-line-height`
   - `utrecht-heading-4-margin-block-end`
   - `utrecht-heading-4-margin-block-start`
+  - `utrecht-heading-4-text-transform`
 - Heading 5
   - `utrecht-heading-5-color`
   - `utrecht-heading-5-font-family`
@@ -72,6 +76,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-5-line-height`
   - `utrecht-heading-5-margin-block-end`
   - `utrecht-heading-5-margin-block-start`
+  - `utrecht-heading-5-text-transform`
 - Heading 6
   - `utrecht-heading-6-color`
   - `utrecht-heading-6-font-family`
@@ -80,6 +85,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-6-line-height`
   - `utrecht-heading-6-margin-block-end`
   - `utrecht-heading-6-margin-block-start`
+  - `utrecht-heading-6-text-transform`
 
 Of de `*-margin-block-start` en `*-margin-block-end` design tokens effect moeten hebben op de Heading components in elke context is nog de vraag: mogelijk willen we alleen marges toepassen in een bepaalde context, zoals binnen de Rich text component.
 
