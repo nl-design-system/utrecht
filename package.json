@@ -7,6 +7,7 @@
   "private": true,
   "workspaces": [
     "./documentation/",
+    "./components/",
     "./components/*",
     "./packages/*",
     "./proprietary/*"
@@ -82,7 +83,9 @@
     "storybook": "npm-run-all --parallel watch:**",
     "test": "npm run test-workspaces",
     "test-workspaces": "lerna run --no-bail test",
-    "watch:storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "watch:stencil": "lerna run watch:stencil",
+    "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
+    "watch:storybook": "start-storybook --port 6006 --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   }
 }
