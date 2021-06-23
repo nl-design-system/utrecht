@@ -9,6 +9,7 @@
  * @presenter Sizing
  */
 :root {
+  --utrecht-space-inline-3xs: 0.1ch;
   --utrecht-space-inline-2xs: 0.25ch;
   --utrecht-space-inline-xs: 0.5ch;
   --utrecht-space-inline-sm: 0.75ch;
@@ -27,5 +28,6 @@
   --utrecht-space-block-xl: 1.25rem; /* 20px */
   --utrecht-space-block-2xl: 1.5rem; /* 24px */
   --utrecht-space-block-3xl: 2rem; /* 32px */
-  --utrecht-space-block-4xl: 4rem; /* 64px */
+  --utrecht-space-block-4xl: 3rem; /* 48px */
+  --utrecht-space-block-5xl: 4rem; /* 64px */
 }
