@@ -53,6 +53,7 @@
     "lint-fix:css": "stylelint --fix '**/*.css'",
     "lint-fix:js": "eslint --fix '**/*.{js,jsx,mdx,ts,tsx}'",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
+    "prepare": "husky install",
     "prettier": "prettier --write .",
     "storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/"
   }
