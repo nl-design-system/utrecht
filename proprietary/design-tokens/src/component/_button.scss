@@ -9,11 +9,15 @@
 
   --utrecht-button-font-family: var(--utrecht-font-family-sans-serif);
   --utrecht-button-font-size: var(--utrecht-font-size-md);
-  --utrecht-button-padding-inline: var(--utrecht-space-inline-lg);
-  --utrecht-button-padding-block: var(--utrecht-space-block-md);
+  --utrecht-button-padding-inline-start: var(--utrecht-space-inline-lg);
+  --utrecht-button-padding-inline-end: var(--utrecht-space-inline-lg);
+  --utrecht-button-padding-block-start: var(--utrecht-space-block-md);
+  --utrecht-button-padding-block-end: var(--utrecht-space-block-md);
 
-  --utrecht-button-margin-inline: 0;
-  --utrecht-button-margin-block: var(--utrecht-space-block-sm);
+  --utrecht-button-margin-inline-start: 0;
+  --utrecht-button-margin-inline-end: 0;
+  --utrecht-button-margin-block-start: var(--utrecht-space-block-sm);
+  --utrecht-button-margin-block-end: var(--utrecht-space-block-sm);
 
   --utrecht-button-border-radius: 0.1875rem;
   --utrecht-button-focus-border-color: var(--utrecht-blue-40);

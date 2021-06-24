@@ -16,5 +16,6 @@
   line-height: var(--utrecht-paragraph-lead-line-height, inherit);
 }
 .utrecht-paragraph--distanced {
-  margin-block-start: var(--utrecht-paragraph-margin-block);
+  margin-block-start: var(--utrecht-paragraph-margin-block-start);
+  margin-block-end: var(--utrecht-paragraph-margin-block-end);
 }
