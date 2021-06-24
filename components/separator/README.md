@@ -27,7 +27,8 @@ We hebben de volgende CSS variabelen:
 
 - `utrecht-separator-color`
 - `utrecht-separator-width` - "width" is misschien verwarrend, voor de horizontale variant is "height" logischer. Wat zou een schrijf-richting-agnostische term hiervoor kunnen zijn?
-- `utrecht-separator-margin-block`
+- `utrecht-separator-margin-block-start`
+- `utrecht-separator-margin-block-end`
 
 ## Visueel design Utrecht
 

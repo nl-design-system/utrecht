@@ -27,8 +27,8 @@ Quotes worden gebruikt om uitspraken te accentueren. De quote bestaat uit een ui
 - Blockquote:
   - `--utrecht-blockquote-margin-inline-start`
   - `--utrecht-blockquote-margin-inline-end`
-  - `--utrecht-blockquote-margin-block`
-  - `--utrecht-blockquote-margin-block`
+  - `--utrecht-blockquote-margin-block-start`
+  - `--utrecht-blockquote-margin-block-end`
   - `--utrecht-blockquote-font-size`
   - `--utrecht-blockquote-font-family`
   - Blockquote content:

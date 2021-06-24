@@ -41,10 +41,14 @@ Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst
   - `--utrecht-button-border-width`
   - `--utrecht-button-focus-transform-scale`
   - `--utrecht-button-font-size`
-  - `--utrecht-button-margin-block`
-  - `--utrecht-button-margin-inline`
-  - `--utrecht-button-padding-block`
-  - `--utrecht-button-padding-inline`
+  - `--utrecht-button-margin-block-start`
+  - `--utrecht-button-margin-block-end`
+  - `--utrecht-button-margin-inline-start`
+  - `--utrecht-button-margin-inline-end`
+  - `--utrecht-button-padding-block-start`
+  - `--utrecht-button-padding-block-end`
+  - `--utrecht-button-padding-inline-start`
+  - `--utrecht-button-padding-inline-end`
   - Modifier: primary action
     - `--utrecht-button-primary-action-background-color`
     - `--utrecht-button-primary-action-color`

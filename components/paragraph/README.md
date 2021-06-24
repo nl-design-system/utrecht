@@ -31,7 +31,8 @@ Paragraph:
 - `utrecht-paragraph-font-size`
 - `utrecht-paragraph-font-weight`
 - `utrecht-paragraph-line-height`
-- `utrecht-paragraph-margin-block`
+- `utrecht-paragraph-margin-block-start`
+- `utrecht-paragraph-margin-block-end`
 
 Lead paragraph:
 
