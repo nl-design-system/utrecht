@@ -83,6 +83,7 @@
 
 .utrecht-sidenav__item {
   list-style: none;
+  position: relative;
   margin-block-start: var(--utrecht-space-inline-2xs);
   margin-block-end: 0.75em;
 
@@ -115,10 +116,10 @@
   top: 21px;
   transform: translateY(-50%) translateX(-19.5px);
   content: "";
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 100%;
-  background-color: #ccc;
+  background-color: var(--utrecht-sidenav-item-marker-color);
   z-index: 10;
   box-shadow: 0 0 2px 2px #fff;
 }
