@@ -82,6 +82,7 @@
 }
 
 .utrecht-sidenav__item {
+  list-style: none;
   margin-block-start: var(--utrecht-space-inline-2xs);
   margin-block-end: 0.75em;
 
@@ -91,7 +92,6 @@
   padding-block-start: var(--utrecht-space-inline-xs);
   padding-block-end: var(--utrecht-space-inline-md);
   border-block-end: 1px solid var(--utrecht-grey-80);
-  border: 1px solid red;
 }
 
 .utrecht-sidenav__subitem {
@@ -99,12 +99,28 @@
   margin-block-end: 0.75em;
 }
 
-.utrecht-sidenav__item a,
 .utrecht-sidenav__link {
   display: block;
   color: var(--utrecht-sidenav-item-color, var(--utrecht-link-color, blue));
-  padding-inline-start: var(--utrecht-space-inline-2xs);
-  border: 1px solid green;
+  padding-inline-start: var(--utrecht-space-inline-md);
+  padding-block-start: var(--utrecht-space-inline-md);
+  padding-block-end: var(--utrecht-space-inline-md);
+  border: 1px solid red;
+  text-decoration: none;
+}
+
+.utrecht-sidenav__link::before {
+  overflow: hidden;
+  position: absolute;
+  top: 21px;
+  transform: translateY(-50%) translateX(-19.5px);
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  background-color: #ccc;
+  z-index: 10;
+  box-shadow: 0 0 2px 2px #fff;
 }
 
 .utrecht-sidenav__item a:hover {
@@ -113,4 +129,22 @@
 
 .utrecht-sidenav__item a:active {
   color: var(--utrecht-sidenav-item-hover-color, var(--utrecht-link-hover-color, red));
+}
+
+.utrecht-sidenav__link:after {
+  display: block;
+  content: "";
+  overflow: hidden;
+  width: 3px;
+  background: #ccc;
+  position: absolute;
+  left: -16px;
+  top: -16px;
+  min-height: 100%;
+  height: calc(100% + 2px);
+  bottom: 0;
+  z-index: 5;
+}
+
+.utrecht-current {
 }
