@@ -1,0 +1,37 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+/**
+ * @tokens Components / Navigatie
+ */
+:root {
+  /** @presenter Sizing */
+  --utrecht-sidenav-item-margin-block-start: var(--utrecht-space-inline-xs) /*0.5ch*/;
+  --utrecht-sidenav-item-margin-block-end: var(--utrecht-space-inline-md) /*1rem*/;
+  --utrecht-sidenav-item-margin-block-start: var(--utrecht-space-inline-xs) /*0.5ch*/;
+  --utrecht-sidenav-item-margin-block-end: var(--utrecht-space-inline-xs) /*0.5ch*/;
+
+  /** @presenter Color */
+  --utrecht-sidenav-item-marker-color: var(--utrecht-grey-40);
+  --utrecht-sidenav-item-color-hover: var(--utrecht-blue-40);
+
+  --utrecht-sidenav-item-color: var(--utrecht-blue-40);
+  --utrecht-sidenav-item-hover-color: var(--utrecht-blue-40);
+
+  --utrecht-topnav-list-background: var(--utrecht-grey-15);
+  --utrecht-topnav-link-background--hover: var(--utrecht-black);
+  --utrecht-topnav-list-border-color: var(--utrecht-grey-40);
+  --utrecht-topnav-link-color: var(--utrecht-white);
+
+  --utrecht-topnav-link-focus-bordertype: dotted;
+  --utrecht-topnav-link-focus-outline-color: var(--utrecht-black);
+  --utrecht-topnav-link-focus-color: var(--utrecht-black);
+
+  --utrecht-topnav-link-focus-box-shadow-color: var(--utrecht-yellow-80);
+  --utrecht-topnav-link-focus-text-decoration: none;
+
+  --utrecht-topnav-link-focus-background-color: var(--utrecht-yellow-80);
+}
