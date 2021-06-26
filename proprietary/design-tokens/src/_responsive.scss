@@ -8,14 +8,14 @@
 
 @media (min-width: 35em) {
   :root {
-    --utrecht-heading-1-font-size: var(--utrecht-font-size-3xl); /* 28px on tablet min-width-35e */
+    --utrecht-heading-1-font-size: 28px; /* 28px on tablet min-width-35e */
     --utrecht-paragraph-lead-font-size: 1.25em; /* 20px on tablet min-width-35e */
   }
 }
 
 @media (min-width: 60em) {
   :root {
-    --utrecht-heading-1-font-size: var(--utrecht-font-size-3xl); /* 32px on desktop min-width-60em */
+    --utrecht-heading-1-font-size: 32px; /* 32px on desktop min-width-60em */
     --utrecht-paragraph-lead-font-size: 1.25em; /* 20px on desktop min-width-60em */
   }
 }
