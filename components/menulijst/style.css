@@ -1,10 +1,7 @@
-.utrecht-html {
-  font-family: var(--utrecht-font-family-sans-serif);
-}
-
 .utrecht-menulijst {
   border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid var(--utrecht-grey-30);
+  border-bottom: 2px solid var(--utrecht-color-grey-30);
+  font-family: var(--document-font-family);
   padding-block-start: 0.75em;
   padding-block-end: 0;
 }
@@ -18,12 +15,12 @@
 .utrecht-menulijst__item a {
   display: block;
   color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue));
-  font-weight: var(--utrecht-font-weight-bold);
+  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
   background: url("https://huisstijl.utrecht.nl/typo3conf/ext/alternet_sitepackage/Resources/Public/Images/svg/pijltje-blauw.svg")
     0 0.25em no-repeat;
   padding-inline-start: 1em;
 }
 
 .utrecht-menulijst__item a:hover {
-  color: var(--utrecht-menulijst-item-color-hover, var(--utrecht-link-color-hover, red));
+  color: var(--utrecht-menulijst-item-hover-color, var(--utrecht-link-hover-color, red));
 }
