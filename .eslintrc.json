@@ -1,5 +1,10 @@
 {
-  "extends": ["plugin:mdx/recommended", "plugin:react/recommended", "eslint-config-prettier"],
+  "extends": [
+    "plugin:mdx/recommended",
+    "plugin:react/recommended",
+    "eslint-config-prettier",
+    "plugin:json/recommended"
+  ],
   "env": {
     "browser": true,
     "es6": true,
