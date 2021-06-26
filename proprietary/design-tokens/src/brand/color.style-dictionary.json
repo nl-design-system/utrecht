@@ -1,0 +1,39 @@
+{
+  "utrecht": {
+    "color": {
+      "red": {
+        "20": { "value": "hsl(0 100% 20%)", "comment": "donker rood" },
+        "30": { "value": "hsl(0 100% 30%)", "comment": "hover rood" },
+        "40": { "value": "hsl(0 100% 40%)", "comment": "basis rood #cc0000" }
+      },
+      "blue": {
+        "20": { "value": "hsl(211 60% 20%)", "comment": "basis donkerblauw (OS focus)" },
+        "30": { "value": "hsl(211 60% 30%)", "comment": "basis link en knoppen CTA donkerblauw" },
+        "35": { "value": "hsl(211 60% 35%)", "comment": "basis link en knoppen CTA donkerblauw" },
+        "40": { "value": "hsl(211 60% 40%)", "comment": "blauw variant bij hover/focus #3669a5" },
+        "80": { "value": "hsl(211 60% 80%)", "comment": "licht blauw voor achtergrond" },
+        "90": { "value": "hsl(211 60% 90%)", "comment": "ijsblauw variant achtergrond, spotlight en uitgelicht" }
+      },
+      "grey": {
+        "30": { "value": "hsl(0 0% 30%)", "comment": "border grijs #888" },
+        "40": { "value": "hsl(0 0% 40%)", "comment": "basis grijs #727272" },
+        "80": { "value": "hsl(0 0% 80%)", "comment": "grijs variant voor achtergrond content #e5e5e5" },
+        "90": { "value": "hsl(0 0% 90%)", "comment": "grijs variant voor achtergrond templates #f2f2f2" }
+      },
+      "yellow": {
+        "40": { "value": "hsl(48 100% 40%)", "comment": "donker geel" },
+        "50": { "value": "hsl(48 100% 50%)", "comment": "basis geel #ffcc00" },
+        "60": { "value": "hsl(48 100% 60%)", "comment": "selecteer geel" },
+        "80": { "value": "hsl(48 100% 80%)", "comment": "spotlight en uitgelicht" }
+      },
+      "green": {
+        "40": { "value": "hsl(90 30% 40%)", "comment": "donker groen" },
+        "50": { "value": "hsl(90 30% 50%)", "comment": "Standaard groen #80a659 " },
+        "80": { "value": "hsl(90 30% 80%)", "comment": "Licht groen" },
+        "90": { "value": "hsl(90 30% 90%)", "comment": "Achtergrond licht groen" }
+      },
+      "white": { "value": "hsl(0 0% 100%)" },
+      "black": { "value": "hsl(0 0% 0%)" }
+    }
+  }
+}
