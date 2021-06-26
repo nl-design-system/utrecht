@@ -38,6 +38,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-1-font-family`
   - `utrecht-heading-1-font-size`
   - `utrecht-heading-1-font-weight`
+  - `utrecht-heading-1-letter-spacing`
   - `utrecht-heading-1-line-height`
   - `utrecht-heading-1-margin-block-end`
   - `utrecht-heading-1-margin-block-start`
@@ -47,6 +48,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-2-font-family`
   - `utrecht-heading-2-font-size`
   - `utrecht-heading-2-font-weight`
+  - `utrecht-heading-2-letter-spacing`
   - `utrecht-heading-2-line-height`
   - `utrecht-heading-2-margin-block-end`
   - `utrecht-heading-2-margin-block-start`
@@ -56,6 +58,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-3-font-family`
   - `utrecht-heading-3-font-size`
   - `utrecht-heading-3-font-weight`
+  - `utrecht-heading-3-letter-spacing`
   - `utrecht-heading-3-line-height`
   - `utrecht-heading-3-margin-block-end`
   - `utrecht-heading-3-margin-block-start`
@@ -65,6 +68,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-4-font-family`
   - `utrecht-heading-4-font-size`
   - `utrecht-heading-4-font-weight`
+  - `utrecht-heading-4-letter-spacing`
   - `utrecht-heading-4-line-height`
   - `utrecht-heading-4-margin-block-end`
   - `utrecht-heading-4-margin-block-start`
@@ -74,6 +78,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-5-font-family`
   - `utrecht-heading-5-font-size`
   - `utrecht-heading-5-font-weight`
+  - `utrecht-heading-5-letter-spacing`
   - `utrecht-heading-5-line-height`
   - `utrecht-heading-5-margin-block-end`
   - `utrecht-heading-5-margin-block-start`
@@ -83,6 +88,7 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-6-font-family`
   - `utrecht-heading-6-font-size`
   - `utrecht-heading-6-font-weight`
+  - `utrecht-heading-6-letter-spacing`
   - `utrecht-heading-6-line-height`
   - `utrecht-heading-6-margin-block-end`
   - `utrecht-heading-6-margin-block-start`
