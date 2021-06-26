@@ -27,6 +27,7 @@ In HTML wordt de term "heading" gebruikt, niet "header" (dat is ook iets anders)
 Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een soort "abstracte" heading component zonder niveau-aanduiding: `utrecht-heading`. Die component kun je niet in de praktijk gebruiken, maar de design tokens voor `utrecht-heading` worden overgenomen door de `utrecht-heading-[n]` components.
 
 - Document (abstract component)
+  - `utrecht-document-color`
   - `utrecht-document-font-family`
 - Heading (abstract component)
   - `utrecht-heading-color`

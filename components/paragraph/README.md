@@ -21,6 +21,7 @@ We gebruiken de volgende CSS variabelen:
 
 Document (abstract component)
 
+- `utrecht-document-color`
 - `utrecht-document-font-family`
 - `utrecht-document-font-size`
 - `utrecht-document-line-height`
