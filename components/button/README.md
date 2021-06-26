@@ -38,6 +38,7 @@ Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst
 ## Design tokens
 
 - Button
+  - `--utrecht-button-border-radius`
   - `--utrecht-button-border-width`
   - `--utrecht-button-focus-transform-scale`
   - `--utrecht-button-font-size`
