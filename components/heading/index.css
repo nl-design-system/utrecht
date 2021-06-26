@@ -12,6 +12,7 @@
   );
   font-size: var(--utrecht-heading-1-font-size);
   font-weight: var(--utrecht-heading-1-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-1-letter-spacing);
   line-height: var(--utrecht-heading-1-line-height);
   text-transform: var(--utrecht-heading-1-text-transform, inherit);
   color: var(--utrecht-heading-1-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
@@ -29,6 +30,7 @@
   );
   font-size: var(--utrecht-heading-2-font-size);
   font-weight: var(--utrecht-heading-2-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-2-letter-spacing);
   line-height: var(--utrecht-heading-2-line-height);
   text-transform: var(--utrecht-heading-2-text-transform, inherit);
   color: var(--utrecht-heading-2-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
@@ -46,6 +48,7 @@
   );
   font-size: var(--utrecht-heading-3-font-size);
   font-weight: var(--utrecht-heading-3-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-3-letter-spacing);
   line-height: var(--utrecht-heading-3-line-height);
   text-transform: var(--utrecht-heading-3-text-transform, inherit);
   color: var(--utrecht-heading-3-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
@@ -63,6 +66,7 @@
   );
   font-size: var(--utrecht-heading-4-font-size);
   font-weight: var(--utrecht-heading-4-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-4-letter-spacing);
   line-height: var(--utrecht-heading-4-line-height);
   text-transform: var(--utrecht-heading-4-text-transform, inherit);
   color: var(--utrecht-heading-4-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
@@ -80,6 +84,7 @@
   );
   font-size: var(--utrecht-heading-5-font-size);
   font-weight: var(--utrecht-heading-5-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-5-letter-spacing);
   line-height: var(--utrecht-heading-5-line-height);
   text-transform: var(--utrecht-heading-5-text-transform, inherit);
   color: var(--utrecht-heading-5-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
@@ -97,6 +102,7 @@
   );
   font-size: var(--utrecht-heading-6-font-size);
   font-weight: var(--utrecht-heading-6-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-6-letter-spacing);
   line-height: var(--utrecht-heading-6-line-height);
   text-transform: var(--utrecht-heading-6-text-transform, inherit);
   color: var(--utrecht-heading-6-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
