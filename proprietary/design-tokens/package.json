@@ -10,11 +10,17 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "devDependencies": {
+    "npm-run-all": "4.1.5",
     "rimraf": "^3.0.2",
-    "sass": "^1.32.12"
+    "sass": "^1.32.12",
+    "style-dictionary": "3.0.1"
   },
   "scripts": {
-    "build": "sass src/:dist/",
-    "clean": "rimraf dist/"
+    "build": "npm-run-all build:**",
+    "build:scss": "sass src/:dist/",
+    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "clean": "rimraf dist/",
+    "prebuild": "npm run clean",
+    "watch": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.style-dictionary.json'"
   }
 }
