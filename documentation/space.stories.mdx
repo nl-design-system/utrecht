@@ -1,0 +1,53 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+import designTokens from "@utrecht/design-tokens/dist/index.json";
+import { SpaceTokensTable } from "./components/SpaceTokensTable";
+
+<Meta title="Utrecht/Space" />
+
+# Space
+
+Use the design tokens for space only for space within (inline/block) or between components (column/row), not to define the size of elements.
+
+## Inline spacing
+
+Inside components, use inline spacing before and after text. In CSS you can use the following properties:
+
+- `margin-inline-start`
+- `margin-inline-end`
+- `padding-inline-start`
+- `padding-inline-end`
+
+<SpaceTokensTable tokens={Object.values(designTokens["utrecht"]["space"]["inline"])} />
+
+## Block spacing
+
+Inside components, use block spacing above and below text. In CSS you can use the following properties:
+
+- `margin-block-start`
+- `margin-block-end`
+- `padding-block-start`
+- `padding-block-end`
+
+<SpaceTokensTable tokens={Object.values(designTokens["utrecht"]["space"]["block"])} />
+
+## Distance between components: columns
+
+To create distance vertically between components, you can use the following tokens for the following properties:
+
+- `margin-inline-start`
+- `margin-inline-end`
+- `padding-inline-start`
+- `padding-inline-end`
+
+<SpaceTokensTable tokens={Object.values(designTokens["utrecht"]["space"]["column"])} />
+
+## Distance between components: rows
+
+To create distance horizontally between components, you can use the following tokens for the following properties:
+
+- `margin-block-start`
+- `margin-block-end`
+- `padding-block-start`
+- `padding-block-end`
+
+<SpaceTokensTable tokens={Object.values(designTokens["utrecht"]["space"]["row"])} />
