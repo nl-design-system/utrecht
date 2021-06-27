@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-document {
+  background-color: var(--utrecht-document-background-color, inherit);
+  color: var(--utrecht-document-color, inherit);
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-document-font-size, inherit);
+  line-height: var(--utrecht-document-line-height, inherit);
+}

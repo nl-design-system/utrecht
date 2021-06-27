@@ -1,5 +1,8 @@
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/custom.css';
+import '../../../components/document/bem.css';
+
+import React from 'react';
 
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
 
@@ -48,3 +51,5 @@ export const parameters = {
     },
   },
 };
+
+export const decorators = [(story) => `<div class="utrecht-document">${story()}</div>`];
