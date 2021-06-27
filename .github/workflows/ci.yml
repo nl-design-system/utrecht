@@ -22,7 +22,6 @@ jobs:
       - name: "Continuous Integration: lint"
         run: |
           npm run lint --if-present
-          npm run lint --if-present --workspaces
 
       - name: "Continuous Integration: build"
         run: |
@@ -32,7 +31,6 @@ jobs:
       - name: "Continuous Integration: test"
         run: |
           npm run test --if-present
-          npm run test --if-present --workspaces
 
       - name: "Continuous Integration: visual regression test"
         if: github.event.pull_request.user.login != 'dependabot[bot]'

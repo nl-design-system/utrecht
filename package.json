@@ -41,21 +41,26 @@
   },
   "scripts": {
     "bootstrap": "lerna exec npm ci",
+    "prebuild": "npm run clean && npm run build-workspaces",
     "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
-    "clean": "rimraf packages/storybook/dist/",
-    "lint": "npm-run-all --continue-on-error 'lint:*'",
+    "build-workspaces": "lerna run build",
+    "clean": "rimraf packages/storybook/dist/ && lerna run clean",
+    "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.css'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' .",
     "lint:html": "find . -type d \\( -name node_modules \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint:prettier": "prettier --check .",
-    "lint-fix": "npm-run-all --continue-on-error 'lint-fix:*' 'prettier'",
+    "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
     "lint-fix:css": "stylelint --fix '**/*.css'",
     "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
+    "lint-workspaces": "lerna run --no-bail lint",
     "prepare": "husky install",
     "prettier": "prettier --write .",
-    "storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/"
+    "storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "test": "npm run test-workspaces",
+    "test-workspaces": "lerna run --no-bail test"
   }
 }
