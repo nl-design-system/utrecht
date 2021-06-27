@@ -1,0 +1,73 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+:root {
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-3xs: calc(1 / 8 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-2xs: calc(1 / 4 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-xs: calc(1 / 2 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-sm: calc(3 / 4 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-md: 16px;
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-lg: calc(1.5 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-xl: calc(1.75 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-2xl: calc(2 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-3xl: calc(3 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-4xl: calc(4 * var(--utrecht-space-block-md));
+
+  /**
+   * @tokens Common/Space/Block
+   * @presenter Spacing
+   */
+  --utrecht-space-block-5xl: calc(5 * var(--utrecht-space-block-md));
+}
