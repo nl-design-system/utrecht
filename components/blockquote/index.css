@@ -8,8 +8,17 @@
   font-size: var(--utrecht-blockquote-font-size);
 }
 
+.utrecht-blockquote__attribution {
+  color: var(--utrecht-blockquote-attribution-color, inherit);
+  font-size: var(--utrecht-blockquote-attribution-font-size, inherit);
+}
+
 .utrecht-blockquote__content {
+  --utrecht-document-color: var(--utrecht-blockquote-content-color, inherit);
+  --utrecht-paragraph-font-size: var(--utrecht-blockquote-content-font-size, inherit);
+
   color: var(--utrecht-blockquote-content-color, inherit);
+  font-size: var(--utrecht-blockquote-content-font-size, inherit);
 }
 
 .utrecht-blockquote--distanced {
