@@ -61,7 +61,7 @@
     "webpack": "^4.46.0"
   },
   "scripts": {
-    "bootstrap": "lerna exec npm ci",
+    "bootstrap": "exit 0",
     "prebuild": "npm run clean && npm run build-workspaces",
     "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
     "build-workspaces": "lerna run build",
