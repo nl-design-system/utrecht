@@ -21,7 +21,9 @@ export const Template = ({ href }) => `<link rel="icon" href="${href}">`;
     docs: {
       transformSource: (_src, { args }) => Template(args),
     },
-    status: "WORK IN PROGRESS",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
     notes: {
       UX: README,
     },

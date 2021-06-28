@@ -49,7 +49,9 @@ export const Template = ({ content, attribution, distanced }) =>
     docs: {
       transformSource: (_src, { args }) => Template(args),
     },
-    status: "WORK IN PROGRESS",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
     notes: {
       UX: README,
     },
