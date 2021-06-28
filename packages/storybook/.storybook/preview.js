@@ -1,5 +1,5 @@
 import '@utrecht/design-tokens/dist/index.css';
-import '@utrecht/design-tokens/dist/custom.css';
+import '@utrecht/design-tokens/src/custom.scss';
 import '../../../components/document/bem.css';
 
 import React from 'react';
