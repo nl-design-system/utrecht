@@ -82,8 +82,10 @@
     "lint-workspaces": "lerna run --no-bail lint",
     "prepare": "husky install",
     "prettier": "prettier --write .",
-    "storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "storybook": "npm-run-all --parallel watch:**",
     "test": "npm run test-workspaces",
-    "test-workspaces": "lerna run --no-bail test"
+    "test-workspaces": "lerna run --no-bail test",
+    "watch:storybook": "start-storybook --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "watch:style-dictionary": "lerna run watch:style-dictionary"
   }
 }
