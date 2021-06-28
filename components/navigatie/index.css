@@ -112,8 +112,8 @@
   text-decoration: none;
 }
 
-.utrecht-sidenav__link:before,
-.utrecht-sidenav-sibling__link:before {
+.utrecht-sidenav__link::before,
+.utrecht-sidenav-sibling__link::before {
   overflow: hidden;
   position: absolute;
   top: 18px;
@@ -143,19 +143,19 @@
 }
 
 /* remove first metro line in listing*/
-.utrecht-sidenav__item:first-child .utrecht-sidenav__link:after {
+.utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
   content: "";
   display: none;
 }
 
-.utrecht-sidenav__link--active:before {
+.utrecht-sidenav__link--active::before {
   background-color: var(--utrecht-sidenav-item-hover-color);
 }
 
 /* Draw metro connection lines on sidenav link items */
-.utrecht-sidenav__link:after,
+.utrecht-sidenav__link::after,
 /*.utrecht-sidenav-sibling__link:after,*/
-.utrecht-sidenav__link--active:after {
+.utrecht-sidenav__link--active::after {
   display: block;
   content: "";
   overflow: hidden;
@@ -176,7 +176,7 @@
 }
 
 /* Draw metro lines on sidenav link items */
-.utrecht-sidenav__link--active:after {
+.utrecht-sidenav__link--active::after {
   display: block;
   content: "";
   overflow: hidden;
@@ -233,7 +233,7 @@
 }
 
 /* remove first metro line in child items */
-.utrecht-sidenav-child__link:after {
+.utrecht-sidenav-child__link::after {
   content: "";
   display: none;
 }
