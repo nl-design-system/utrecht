@@ -21,7 +21,9 @@ export const Template = () => `<div role="separator" aria-orientation="horizonta
     docs: {
       transformSource: (_src, { args }) => Template(args),
     },
-    status: "WORK IN PROGRESS",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
     notes: {
       UX: README,
       //Content: contentGuidelines,
