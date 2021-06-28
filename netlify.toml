@@ -1,0 +1,3 @@
+[build]
+  publish = "packages/storybook/dist"
+  command = "npm run build-netlify"
