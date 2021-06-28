@@ -15,4 +15,4 @@ updates:
     ignore:
       # Stay at webpack 4 until webpack 5 is fully supported by Storybook
       - dependency-name: "webpack"
-        update-types: ["version-update:major"]
+        update-types: ["version-update:semver-major"]
