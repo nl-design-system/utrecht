@@ -4,23 +4,39 @@
 
 Een hierarchische, verticaal weergegeven manier om te navigeren die geplaatst is aan de zijkant van een pagina.
 
-## 1.1 Structuur
+## 1.1 Structuur <!-- wat is het doel van 1.1?-->
 
 - `utrecht-sidenav`
   - `__list`
     - `__item`
       - `__link`
 
-## 1.2 UX richtlijnen
+## 1.2 Gedrag
 
-### 1.2.1 Wanneer gebruik je dit component?
+### 1.2.1 Current page
+
+De current page krijgt nadruk om te laten zien waar de bezoeker zich op het moment begeeft in de hierarchie.
+
+### 1.2.2 Pagina's zonder kinderen
+
+Als de sidenav staat op een pagina zonder kinderen wordt er een andere weergave van de sidenav getoond. De huidige pagina en de broertjes en zusjes worden in een geneste lijst getoond.
+
+![Screenshot van sidenav in een pagina zonder kinderen](././static/screenshot_sidenav_003.png "Screenshot sidenav 3")
+
+### 1.2.3 Links als block
+
+Links worden als block gedefinieerd om het zo makkelijk mogelijk te maken voor de gebruiker om te navigeren. Hierdoor hoeven ze niet precies op de link te staan met de muis en kunnen ze dus sneller naar de pagina waar ze naar toe willen.
+
+## 1.3 UX richtlijnen
+
+### 1.3.1 Wanneer gebruik je dit component?
 
 Je gebruikt dit component om...
 
 - ...de gebruiker overzicht te geven en te helpen navigeren door *een site* met een diepte van één tot drie lagen.
 - ...de gebruiker overzicht te geven en te helpen navigeren door *een gedeelte van een site* met een diepte van één tot drie lagen.
 
-### 1.2.2 Alternatieven en gerelateerde componenten
+### 1.3.2 Alternatieven en gerelateerde componenten
 
 Je kan beter kijken naar een alternatief als...
 
@@ -28,11 +44,15 @@ Je kan beter kijken naar een alternatief als...
 - ...het toevoegen van een sidenav meer verwarring geeft dan overzicht. Bijvoorbeeld als er veel manieren om te navigeren zijn.
 - ...de componenten die weergegeven worden in de sidenav geen logisch verband met elkaar hebben en de gebruiker niet helpen met het geven van overzicht.
 
-### 1.2.3 Variaties
+### 1.3.3 Variaties
 
-Er is één variatie op de sidenav beschikbaar. In deze variatie worden de kinderen van de actieve pagina niet getoond.
+Er is één variatie op de sidenav beschikbaar. In deze variatie worden de broertjes en zusjes van de actieve pagina niet getoond.
 
-### 1.2.4 Anatomie
+![Screenshot van sidenav met broertjes en zusjes](././static/screenshot_sidenav_001.png "Screenshot sidenav 1")
+
+![Screenshot van sidenav zonder broertjes en zusjes](././static/screenshot_sidenav_002.png "Screenshot sidenav 2")
+
+### 1.3.4 Anatomie <!-- wat is het doel van 1.3.4?-->
 
 Describe the atanomy of a component, for example:
 
@@ -42,9 +62,9 @@ Describe the atanomy of a component, for example:
 - active li
 - sibling
 
-## 1.3 Design tokens
+## 1.4 Design tokens
 
-### 1.3.1 Global design tokens
+### 1.4.1 Global design tokens <!-- wat is het doel van 1.4.1?-->
 
 Deze global design tokens worden gebruikt in dit component:
 
@@ -56,24 +76,18 @@ Deze global design tokens worden gebruikt in dit component:
 - --utrecht-link-color
 - --utrecht-link-hover-color
 
-### 1.3.2 Interactive states
+### 1.4.2 Interactive states <!-- wat is het doel van 1.4.2?-->
 
 - Hover
 - Focus
+- Active
 
-## 1.4  Best practices
-
-### 1.4.1 Do
+## 1.5  Best practices
 
 - Hou de tekst van de links in de sidebar kort. Verkort desnoods de naam naar een gedeelte van de pagina titel.
 - Test altijd de sidenav. Zeker bij een langere hierarchie is het soms nodig om het eindproduct te zien. Mogelijk valt een gedeelte van de navigatie weg van de onderkant van het scherm.
 
-### 1.4.2 Don't
-
--
--
-
-## 1.5 Referenties
+## 1.6 Referenties
 
 1. [U.S. Web Design System (USWDS) - Side Navigation](https://designsystem.digital.gov/components/side-navigation/)
 

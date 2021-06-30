@@ -20,4 +20,4 @@ Zo kunnen mensen die het scherm niet kunnen zien, snel te weten komen dat ze nie
 
 De foutmelding staat helemaal boven in het scherm en is niet meer zichtbaar na het drukken op de button.
 
-![alt text](screenshot_buttons_001.png "Titel")
+![Screenshot van scherm waarin een pijl wijst naar een foutmelding die niet meer te zien is omdat hij buiten het scherm valt](././static/screenshot_buttons_001.png "Screenshot foutmelding")
