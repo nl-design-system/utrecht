@@ -17,6 +17,7 @@ jobs:
       - name: Install
         run: |
           npm ci
+          npm ls
           npm run bootstrap
 
       - name: "Continuous Integration: lint"
