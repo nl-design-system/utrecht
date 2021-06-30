@@ -7,23 +7,16 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 <!-- Import component and component styles -->
 
-import "./html.scss";
+import "./bem.css";
 
 <!-- Import Docs -->
 
 import README from "./README.md";
 
-export const Template = ({ content }) => `<span class="utrecht-form-label">${content}</span>`;
+export const Template = () => `<div role="separator" aria-orientation="horizontal" class="utrecht-separator"></div>`;
 
 <Meta
-  title="Components/Form label"
-  argTypes={{
-    content: {
-      description: "Set the content of the label",
-      control: "text",
-      defaultValue: "Username",
-    },
-  }}
+  title="Components/Separator"
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -33,16 +26,18 @@ export const Template = ({ content }) => `<span class="utrecht-form-label">${con
     },
     notes: {
       UX: README,
+      //Content: contentGuidelines,
+      // Accessibility: accessibilityGuidelines
     },
   }}
 />
 
-# Label component
+# Separator
 
-Styling via the `.utrecht-form-label` class name:
+Styling via `utrecht-separator` class name:
 
 <Canvas>
-  <Story name="Label">{Template.bind({})}</Story>
+  <Story name="Separator">{Template.bind({})}</Story>
 </Canvas>
 
-<ArgsTable story="Label" />
+<ArgsTable story="Separator" />
