@@ -6,5 +6,5 @@
 @import "./index";
 
 .utrecht-html input[type="radio"] {
-  @extend .utrecht-radio;
+  @extend .utrecht-radio-button;
 }
