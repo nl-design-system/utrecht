@@ -38,6 +38,7 @@
     "build": "npm-run-all build:**",
     "build:sass": "sass src/:dist/ --load-path=../../node_modules/ --no-source-map",
     "build:stencil": "stencil build",
+    "build:typescript": "tsc",
     "clean": "rimraf dist/",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",

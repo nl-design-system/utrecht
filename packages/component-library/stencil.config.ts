@@ -3,7 +3,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'utrecht',
-  srcDir: 'src/',
+  srcDir: '../../components/',
   outputTargets: [
     {
       type: 'dist',
