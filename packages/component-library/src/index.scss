@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+/* Collection of:
+ * - all BEM class names in the component library
+ * - all semantic HTML styles in the component library
+ * - CSS variables for Utrecht theme applied to `:root`
+ */
+
+@import "./bem";
+@import "./html";
+@import "./root-theme";
