@@ -1,3 +1,10 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+/* Collection of all BEM class names in the component library */
+
 /*
  * TODO: Once every component is a separate npm package, these imports should
  * be updated to use a package reference instead of a relative path.
@@ -12,18 +19,17 @@
 @import "../../../components/blockquote/index";
 @import "../../../components/button/style";
 @import "../../../components/checkbox/index";
+@import "../../../components/document/bem";
 @import "../../../components/form-field-checkbox/index";
-@import "../../../components/form-field-radio/index";
 @import "../../../components/form-field-radio-group/index";
+@import "../../../components/form-field-radio/index";
 @import "../../../components/form-label/index";
 @import "../../../components/heading/index";
 @import "../../../components/link/style";
 @import "../../../components/menulijst/style";
 @import "../../../components/paragraph/index";
-@import "../../../components/link/style";
 @import "../../../components/radio-button/index";
 @import "../../../components/separator/index";
 @import "../../../components/textarea/index";
 @import "../../../components/textbox/index";
-@import "../../../components/textarea/index";
 @import "../../../components/unordered-list/index";
