@@ -70,18 +70,26 @@
 /****  Styling for to utrecht-sidenav  ****/
 
 .utrecht-sidenav {
-  padding-block-start: 0.75em;
+  padding-block-start: 0;
   padding-block-end: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
   width: 16rem;
+  border-block-start: 1px solid var(--utrecht-grey-80);
+  border-block-end: 1px solid var(--utrecht-grey-80);
 }
 
-.utrecht-html .utrecht-sidenav ul > li {
-  padding-inline-start: 10ch;
+/*remove last border*/
+.utrecht-sidenav__item:last-child {
+  border-block-end: none;
 }
 
 .utrecht-sidenav__list {
-  padding-block-start: 0.75em;
+  padding-block-start: 0;
   padding-block-end: 0;
+  margin-block-start: 0.2rem;
+  margin-block-end: 0;
+  padding-inline-start: 1.5rem;
 }
 
 .utrecht-sidenav__item,
