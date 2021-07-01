@@ -1,0 +1,45 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+.utrecht-mapcontrolbutton {
+  color: var(--utrecht-mapcontrolbutton-color);
+  font-size: var(--utrecht-mapcontrolbutton-font-size, var(--utrecht-document-font-family));
+  font-family: var(--utrecht-mapcontrolbutton-font-family, var(--utrecht-document-font-family));
+  background-color: var(--utrecht-mapcontrolbutton-background-color);
+  border-radius: var(--utrecht-mapcontrolbutton-border-radius);
+  border-width: var(--utrecht-mapcontrolbutton-border-width);
+  padding-inline-start: var(--utrecht-mapcontrolbutton-padding-inline-start);
+  padding-inline-end: var(--utrecht-mapcontrolbutton-padding-inline-end);
+  padding-block-start: var(--utrecht-mapcontrolbutton-padding-block-start);
+  padding-block-end: var(--utrecht-mapcontrolbutton-padding-block-end);
+}
+
+.utrecht-mapcontrolbutton--distanced {
+  margin-inline-start: var(--utrecht-mapcontrolbutton-margin-inline-start);
+  margin-inline-end: var(--utrecht-mapcontrolbutton-margin-inline-end);
+  margin-block-start: var(--utrecht-mapcontrolbutton-margin-block-start);
+  margin-block-end: var(--utrecht-mapcontrolbutton-margin-block-end);
+}
+
+.utrecht-mapcontrolbutton:disabled,
+.utrecht-mapcontrolbutton--disabled {
+  color: var(--utrecht-mapcontrolbutton-disabled-color);
+  background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
+}
+
+.utrecht-mapcontrolbutton--focus,
+.utrecht-mapcontrolbutton:not(.utrecht-mapcontrolbutton--disabled):focus {
+  color: var(--utrecht-mapcontrolbutton-color);
+  background-color: var(--utrecht-mapcontrolbutton-color);
+  border-width: var(--utrecht-mapcontrolbutton-border-width);
+}
+
+.utrecht-mapcontrolbutton--hover:not(:disabled),
+.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
+  color: var(--utrecht-mapcontrolbutton-color);
+  background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
+  transform: scale(var(--utrecht-mapcontrolbutton-focus-transform-scale, 1));
+}
