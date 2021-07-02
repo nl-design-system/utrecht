@@ -75,25 +75,26 @@
   margin-block-start: 0;
   margin-block-end: 0;
   width: 16rem;
-  border-block-start: 1px solid var(--utrecht-grey-80);
-  border-block-end: 1px solid var(--utrecht-grey-80);
+  border-block-start: 1px solid var(--utrecht-color-grey-80);
+  border-block-end: 1px solid var(--utrecht-color-grey-80);
 }
 
 /*remove last border*/
 
-.utrecht-sidenav__list {
+.utrecht-sidenav__list /*ul*/ {
   padding-block-start: 0;
   padding-block-end: 0;
   margin-block-start: 0.2rem;
   margin-block-end: 0;
   padding-inline-start: 1.5rem;
+  border: 1px solid red;
 }
 
 .utrecht-sidenav__item,
 .utrecht-sidenav__sibling__item {
   list-style: none;
   position: relative;
-  border-block-end: 1px solid var(--utrecht-grey-80);
+  border-block-end: 1px solid var(--utrecht-color-grey-80);
 }
 .utrecht-sidenav__item:last-child {
   border-block-end: none;
@@ -152,18 +153,40 @@
 
 /* Draw metro connection lines on sidenav link items */
 .utrecht-sidenav__link::after {
+  border: 0px solid green;
   display: block;
   content: "";
   overflow: hidden;
   width: 3px;
-  background: #ccc;
+  background: var(--utrecht-sidenav-item-marker-color);
   position: absolute;
   left: -2.2ch;
-  top: -16px;
-  /* min-height: 100%;
+  top: -20px;
+  /*  min-height: 100%;
   height: calc(100% + 2px);*/
   bottom: 0;
   z-index: 5;
+}
+
+.utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
+  /*  border: 1px solid red;*/
+  display: block;
+  content: "";
+  overflow: hidden;
+  width: 3px;
+  background: var(--utrecht-sidenav-item-marker-color);
+  position: absolute;
+  /*left: -2.2ch;*/
+  top: -16px;
+  min-height: 30px;
+  height: calc(30px + 2px);
+  bottom: 0;
+  z-index: 5;
+}
+
+.utrecht-sidenav__link--current::after {
+  min-height: 30px;
+  height: calc(30px + 2px);
 }
 
 /* remove first metro line in listing*/
@@ -178,35 +201,13 @@
   font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
 }
 
-.utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
-  display: block;
-  content: "";
-  overflow: hidden;
-  width: 3px;
-  background: #ccc;
-  position: absolute;
-  left: -2.2ch;
-  top: -16px;
-  min-height: 30px;
-  height: calc(30px + 2px);
-  bottom: 0;
-  z-index: 5;
-}
-
-/* Draw metro lines on sidenav link items */
-.utrecht-sidenav__link--current::after {
-  display: block;
-  content: "";
-  overflow: hidden;
-  width: 3px;
-  background: #ccc;
-  position: absolute;
-  left: -2.2ch;
-  top: -16px;
-  min-height: 30px;
-  height: calc(30px + 2px);
-  bottom: 0;
-  z-index: 5;
+.utrecht-sidenav__link--child,
+.utrecht-sidenav__link--child--current {
+  padding-block-start: 0.25rem;
+  padding-block-end: 0.5rem;
+  padding-inline-end: 0.5rem;
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .utrecht-sidenav__list--child {
@@ -221,6 +222,7 @@
 .utrecht-sidenav__item--child {
   list-style: none;
   position: relative;
+  border: none;
 }
 
 /*No last border on child item*/
