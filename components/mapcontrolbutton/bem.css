@@ -1,22 +1,25 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 The Knights Who Say NIH! B.V.
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
 .utrecht-mapcontrolbutton {
   color: var(--utrecht-mapcontrolbutton-color);
   border-color: var(--utrecht-mapcontrolbutton-border-color);
-  font-size: var(--utrecht-mapcontrolbutton-font-size, var(--utrecht-document-font-family));
-  font-family: var(--utrecht-mapcontrolbutton-font-family, var(--utrecht-document-font-family));
   background-color: var(--utrecht-mapcontrolbutton-background-color);
   border-radius: var(--utrecht-mapcontrolbutton-border-radius);
   border-width: var(--utrecht-mapcontrolbutton-border-width);
-  padding-inline-start: var(--utrecht-mapcontrolbutton-padding-inline-start);
-  padding-inline-end: var(--utrecht-mapcontrolbutton-padding-inline-end);
-  padding-block-start: var(--utrecht-mapcontrolbutton-padding-block-start);
-  padding-block-end: var(--utrecht-mapcontrolbutton-padding-block-end);
   border-style: var(--utrecht-mapcontrolbutton-border-style);
+  width: var(--utrecht-mapcontrolbutton-width);
+  height: var(--utrecht-mapcontrolbutton-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.utrecht-mapcontrolbutton .utrecht-mapcontrolbutton-polygon{
+  fill:var(--utrecht-mapcontrolbutton-color);
 }
 
 .utrecht-mapcontrolbutton--distanced {
@@ -33,11 +36,21 @@
   border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
 }
 
+.utrecht-mapcontrolbutton--disabled .utrecht-mapcontrolbutton-polygon{
+  fill: var(--utrecht-mapcontrolbutton-disabled-color);
+}
+
 .utrecht-mapcontrolbutton--focus,
 .utrecht-mapcontrolbutton:not(.utrecht-mapcontrolbutton--disabled):focus {
-  color: var(--utrecht-mapcontrolbutton-color);
-  background-color: var(--utrecht-mapcontrolbutton-color);
-  border-width: var(--utrecht-mapcontrolbutton-border-width);
+  outline: 2px var(--utrecht-mapcontrolbutton-focus-border-type) var(--utrecht-mapcontrolbutton-focus-outline-color);
+  color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+  box-shadow: 0 0 0 2px var(--utrecht-mapcontrolbutton-focus-box-shadow-color);
+  outline-offset: 0;
+  background-color: var(--utrecht-mapcontrolbutton-focus-background-color);
+}
+
+.utrecht-mapcontrolbutton--focus .utrecht-mapcontrolbutton-polygon{
+  fill:var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
 }
 
 .utrecht-mapcontrolbutton--hover:not(:disabled),
@@ -45,4 +58,8 @@
   color: var(--utrecht-mapcontrolbutton-color);
   background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
   transform: scale(var(--utrecht-mapcontrolbutton-focus-transform-scale, 1));
+}
+
+.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon{
+  fill:var(--utrecht-mapcontrolbutton-color);
 }
