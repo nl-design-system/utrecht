@@ -4,13 +4,10 @@ Copyright (c) 2021 A Herring
 -->
 
 import { Meta, Story, Canvas, ArgsTable, Description, Source } from "@storybook/addon-docs/blocks";
-import { sanitize } from "dompurify"; // Helps with preventing injections via argstable
-import { MDXEmbedProvider } from "mdx-embed";
-import dedent from "ts-dedent";
 
 <!-- Import component and component styles -->
 
-import "./index.css";
+import "./bem.css";
 
 <!-- Import Docs -->
 
@@ -115,9 +112,3 @@ export const TemplateNested = () =>
 <Canvas>
   <Story name="Top Nav">{TemplateNested.bind({})}</Story>
 </Canvas>
-
-## Design Kit
-
-<MDXEmbedProvider>
-  <Figma title="Navigatie" url="file/x" />
-</MDXEmbedProvider>
