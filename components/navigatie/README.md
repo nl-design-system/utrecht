@@ -33,8 +33,8 @@ Links worden als block gedefinieerd om het zo makkelijk mogelijk te maken voor d
 
 Je gebruikt dit component om...
 
-- ...de gebruiker overzicht te geven en te helpen navigeren door *een site* met een diepte van één tot drie lagen.
-- ...de gebruiker overzicht te geven en te helpen navigeren door *een gedeelte van een site* met een diepte van één tot drie lagen.
+- ...de gebruiker overzicht te geven en te helpen navigeren door _een site_ met een diepte van één tot drie lagen.
+- ...de gebruiker overzicht te geven en te helpen navigeren door _een gedeelte van een site_ met een diepte van één tot drie lagen.
 
 ### 1.3.2 Alternatieven en gerelateerde componenten
 
@@ -82,7 +82,7 @@ Deze global design tokens worden gebruikt in dit component:
 - Focus
 - Active
 
-## 1.5  Best practices
+## 1.5 Best practices
 
 - Hou de tekst van de links in de sidebar kort. Verkort desnoods de naam naar een gedeelte van de pagina titel.
 - Test altijd de sidenav. Zeker bij een langere hierarchie is het soms nodig om het eindproduct te zien. Mogelijk valt een gedeelte van de navigatie weg van de onderkant van het scherm.
@@ -138,7 +138,7 @@ Describe which global brand tokens should be used by this component. Semantic co
 
 Describe which interactive states this component can have and which design tokens should then be used
 
-## 2.4  Best practices
+## 2.4 Best practices
 
 ### 2.4.1 Do
 

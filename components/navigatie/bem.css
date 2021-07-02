@@ -14,7 +14,7 @@
   overflow: visible;
   display: flex;
   justify-content: space-between;
-  background-color: var(--utrecht-topnav-list-background);
+  background-color: var(--utrecht-topnav-list-background-color);
   padding-inline-start: 0;
   padding-inline-end: 0;
   padding-block-start: 0;
@@ -55,7 +55,7 @@
 }
 
 .utrecht-topnav__link--focus {
-  outline: 2px var(--utrecht-topnav-link-focus-bordertype) var(--utrecht-topnav-link-focus-outline-color);
+  outline: 2px var(--utrecht-topnav-link-focus-border-type) var(--utrecht-topnav-link-focus-outline-color);
   color: var(--utrecht-topnav-link-focus-color, var(--utrecht-topnav-link-color));
   /*-webkit-box-shadow: 0 0 0 2px var(--utrecht-link-focus-box-shadow-color);*/
   box-shadow: 0 0 0 2px var(--utrecht-topnav-link-focus-box-shadow-color);
@@ -80,9 +80,6 @@
 }
 
 /*remove last border*/
-.utrecht-sidenav__item:last-child {
-  border-block-end: none;
-}
 
 .utrecht-sidenav__list {
   padding-block-start: 0;
@@ -97,6 +94,9 @@
   list-style: none;
   position: relative;
   border-block-end: 1px solid var(--utrecht-grey-80);
+}
+.utrecht-sidenav__item:last-child {
+  border-block-end: none;
 }
 
 .utrecht-sidenav__child__item {
@@ -150,12 +150,6 @@
   color: var(--utrecht-sidenav-item-hover-color, var(--utrecht-link-hover-color, red));
 }
 
-/* remove first metro line in listing*/
-.utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
-  content: "";
-  display: none;
-}
-
 /* Draw metro connection lines on sidenav link items */
 .utrecht-sidenav__link::after {
   display: block;
@@ -172,10 +166,16 @@
   z-index: 5;
 }
 
+/* remove first metro line in listing*/
+.utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
+  content: "";
+  display: none;
+}
+
 /* Make current link bold */
 .utrecht-sidenav__link--current,
 .utrecht-sidenav__link--child--current {
-  font-weight: bold;
+  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
 }
 
 .utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
@@ -224,7 +224,7 @@
 }
 
 /*No last border on child item*/
-.utrecht-sidenav__item--child {
+.utrecht-sidenav__item--child:last-child {
   border: none;
 }
 
@@ -253,8 +253,8 @@
 
 /* remove :after lines in child and sibling links */
 .utrecht-sidenav__item--child:first-child .utrecht-sidenav__link--child--current::after,
-.utrecht-sidenav__item .utrecht-sidenav__item--child .utrecht-sidenav__link--child::after,
 .utrecht-sidenav__link--child::after,
+.utrecht-sidenav__item .utrecht-sidenav__item--child .utrecht-sidenav__link--child::after,
 .utrecht-sidenav__item .utrecht-sidenav__link--sibling::after,
 .utrecht-sidenav__item--sibling:last-child .utrecht-sidenav__link--sibling::after {
   display: none;
