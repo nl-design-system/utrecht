@@ -18,8 +18,8 @@
   justify-content: center;
 }
 
-.utrecht-mapcontrolbutton .utrecht-mapcontrolbutton-polygon{
-  fill:var(--utrecht-mapcontrolbutton-color);
+.utrecht-mapcontrolbutton .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-color);
 }
 
 .utrecht-mapcontrolbutton--distanced {
@@ -36,7 +36,7 @@
   border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
 }
 
-.utrecht-mapcontrolbutton--disabled .utrecht-mapcontrolbutton-polygon{
+.utrecht-mapcontrolbutton--disabled .utrecht-mapcontrolbutton-polygon {
   fill: var(--utrecht-mapcontrolbutton-disabled-color);
 }
 
@@ -49,8 +49,8 @@
   background-color: var(--utrecht-mapcontrolbutton-focus-background-color);
 }
 
-.utrecht-mapcontrolbutton--focus .utrecht-mapcontrolbutton-polygon{
-  fill:var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+.utrecht-mapcontrolbutton--focus .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
 }
 
 .utrecht-mapcontrolbutton--hover:not(:disabled),
@@ -60,6 +60,6 @@
   transform: scale(var(--utrecht-mapcontrolbutton-focus-transform-scale, 1));
 }
 
-.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon{
-  fill:var(--utrecht-mapcontrolbutton-color);
+.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-color);
 }
