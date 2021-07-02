@@ -6,6 +6,7 @@
 
 .utrecht-mapcontrolbutton {
   color: var(--utrecht-mapcontrolbutton-color);
+  border-color: var(--utrecht-mapcontrolbutton-border-color);
   font-size: var(--utrecht-mapcontrolbutton-font-size, var(--utrecht-document-font-family));
   font-family: var(--utrecht-mapcontrolbutton-font-family, var(--utrecht-document-font-family));
   background-color: var(--utrecht-mapcontrolbutton-background-color);
@@ -15,6 +16,7 @@
   padding-inline-end: var(--utrecht-mapcontrolbutton-padding-inline-end);
   padding-block-start: var(--utrecht-mapcontrolbutton-padding-block-start);
   padding-block-end: var(--utrecht-mapcontrolbutton-padding-block-end);
+  box-shadow:0;
 }
 
 .utrecht-mapcontrolbutton--distanced {
@@ -28,6 +30,7 @@
 .utrecht-mapcontrolbutton--disabled {
   color: var(--utrecht-mapcontrolbutton-disabled-color);
   background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
+  border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
 }
 
 .utrecht-mapcontrolbutton--focus,
