@@ -16,7 +16,7 @@
   padding-inline-end: var(--utrecht-mapcontrolbutton-padding-inline-end);
   padding-block-start: var(--utrecht-mapcontrolbutton-padding-block-start);
   padding-block-end: var(--utrecht-mapcontrolbutton-padding-block-end);
-  box-shadow:0;
+  border-style: var(--utrecht-mapcontrolbutton-border-style);
 }
 
 .utrecht-mapcontrolbutton--distanced {
