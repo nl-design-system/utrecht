@@ -1,10 +1,5 @@
 {
-  "extends": [
-    "plugin:mdx/recommended",
-    "plugin:react/recommended",
-    "eslint-config-prettier",
-    "plugin:json/recommended"
-  ],
+  "extends": ["plugin:react/recommended", "eslint-config-prettier"],
   "env": {
     "browser": true,
     "es6": true,
@@ -22,6 +17,16 @@
       "version": "detect"
     }
   },
+  "overrides": [
+    {
+      "files": ["*.json"],
+      "extends": ["plugin:json/recommended"]
+    },
+    {
+      "files": ["*.mdx"],
+      "extends": ["plugin:mdx/overrides"]
+    }
+  ],
   "rules": {
     "array-callback-return": ["error", { "checkForEach": false }],
     "block-scoped-var": "error",
