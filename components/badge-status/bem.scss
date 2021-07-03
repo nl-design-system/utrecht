@@ -1,0 +1,75 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../badge/bem";
+
+.utrecht-badge-status {
+  @extend .utrecht-badge;
+  letter-spacing: var(--utrecht-badge-status-letter-spacing, inherit);
+  text-transform: var(--utrecht-badge-status-text-transform, inherit);
+}
+
+.utrecht-badge-status--danger {
+  background-color: var(--utrecht-feedback-danger-fill-background-color, hsl(0 100% 50%));
+  color: var(--utrecht-feedback-danger-fill-color, white);
+}
+
+.utrecht-badge-status--warning {
+  background-color: var(--utrecht-feedback-warning-fill-background-color, hsl(39 100% 50%));
+  color: var(--utrecht-feedback-warning-fill-color, white);
+}
+
+.utrecht-badge-status--safe {
+  background-color: var(--utrecht-feedback-safe-fill-background-color, hsl(120 100% 25%));
+  color: var(--utrecht-feedback-safe-fill-color, white);
+}
+
+.utrecht-badge-status--valid {
+  background-color: var(
+    --utrecht-feedback-valid-fill-background-color,
+    var(--utrecht-feedback-safe-fill-background-color, hsl(0 100% 50%))
+  );
+  color: var(--utrecht-feedback-valid-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--invalid {
+  background-color: var(
+    --utrecht-feedback-invalid-fill-background-color,
+    var(--utrecht-feedback-danger-fill-background-color, hsl(39 100% 50%))
+  );
+  color: var(--utrecht-feedback-invalid-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+.utrecht-badge-status--error {
+  background-color: var(
+    --utrecht-feedback-error-fill-background-color,
+    var(--utrecht-feedback-danger-fill-background-color, hsl(39 100% 50%))
+  );
+  color: var(--utrecht-feedback-error-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+.utrecht-badge-status--success {
+  background-color: var(
+    --utrecht-feedback-success-fill-background-color,
+    var(--utrecht-feedback-safe-fill-background-color, hsl(39 100% 50%))
+  );
+  color: var(--utrecht-feedback-success-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--active {
+  background-color: var(
+    --utrecht-feedback-active-fill-background-color,
+    var(--utrecht-feedback-safe-fill-background-color, hsl(39 100% 50%))
+  );
+  color: var(--utrecht-feedback-active-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--inactive {
+  background-color: var(
+    --utrecht-feedback-inactive-fill-background-color,
+    var(--utrecht-feedback-danger-fill-background-color, hsl(39 100% 50%))
+  );
+  color: var(--utrecht-feedback-inactive-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
