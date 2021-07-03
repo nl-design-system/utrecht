@@ -1,0 +1,34 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = () => `<utrecht-separator></utrecht-separator>`;
+
+<Meta
+  title="Web Component/Separator"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Separator
+
+<Canvas>
+  <Story name="Separator">{Template.bind({})}</Story>
+</Canvas>
