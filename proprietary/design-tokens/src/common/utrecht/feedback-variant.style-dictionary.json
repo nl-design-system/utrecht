@@ -1,0 +1,60 @@
+{
+  "utrecht": {
+    "feedback": {
+      "danger": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.danger.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "warning": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.warning.background-color.value}" },
+          "color": { "value": "{utrecht.color.black.value}" }
+        }
+      },
+      "safe": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.safe.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "invalid": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.invalid.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "valid": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.valid.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "error": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.error.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "success": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.success.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "inactive": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.inactive.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "active": {
+        "fill": {
+          "background-color": { "value": "{utrecht.feedback.active.background-color.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      }
+    }
+  }
+}
