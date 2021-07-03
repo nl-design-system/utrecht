@@ -1,0 +1,182 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+import "./bem.scss";
+
+import README from "./README.md";
+
+export const Template = ({ status, textContent }) =>
+  `<utrecht-badge-status status="${status}">${textContent}</utrecht-badge-status>`;
+
+<Meta
+  title="Web Component/Badge/Status Badge"
+  argTypes={{
+    textContent: {
+      description: "Text content",
+      control: "text",
+      defaultValue: "42",
+    },
+    type: {
+      control: { type: "select" },
+      description: "Status",
+      options: ["error", "success", "valid", "invalid", "active", "inactive", "neutral", "danger", "warning", "safe"],
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+## Neutral badge
+
+<Canvas>
+  <Story
+    name="Neutral badge"
+    args={{
+      status: "neutral",
+      textContent: "neutral",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Neutral badge" />
+
+## Danger badge
+
+<Canvas>
+  <Story
+    name="Danger badge"
+    args={{
+      status: "danger",
+      textContent: "danger",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Warning badge
+
+<Canvas>
+  <Story
+    name="Warning badge"
+    args={{
+      status: "warning",
+      textContent: "warning",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Safe badge
+
+<Canvas>
+  <Story
+    name="Safe badge"
+    args={{
+      status: "safe",
+      textContent: "safe",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid badge
+
+<Canvas>
+  <Story
+    name="Invalid badge"
+    args={{
+      status: "invalid",
+      textContent: "invalid",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Valid badge
+
+<Canvas>
+  <Story
+    name="Valid badge"
+    args={{
+      status: "valid",
+      textContent: "valid",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Error badge
+
+<Canvas>
+  <Story
+    name="Error badge"
+    args={{
+      status: "error",
+      textContent: "error",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Success badge
+
+<Canvas>
+  <Story
+    name="Success badge"
+    args={{
+      status: "success",
+      textContent: "success",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Inactive badge
+
+<Canvas>
+  <Story
+    name="Inactive badge"
+    args={{
+      status: "inactive",
+      textContent: "inactive",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Active badge
+
+<Canvas>
+  <Story
+    name="Active badge"
+    args={{
+      status: "active",
+      textContent: "active",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
