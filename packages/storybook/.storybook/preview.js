@@ -3,6 +3,9 @@ import '@utrecht/design-tokens/dist/custom.css';
 import '../../../components/document/bem.css';
 
 import React from 'react';
+import { defineCustomElements } from '@utrecht/component-library';
+
+defineCustomElements();
 
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
 
