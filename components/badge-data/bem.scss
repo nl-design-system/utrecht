@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../badge/bem";
+
+.utrecht-badge-data {
+  @extend .utrecht-badge;
+  letter-spacing: var(--utrecht-badge-data-letter-spacing, inherit);
+  text-transform: var(--utrecht-badge-data-text-transform, inherit);
+}
