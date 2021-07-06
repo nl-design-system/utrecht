@@ -64,6 +64,7 @@
     "prebuild": "npm run clean && npm run build-workspaces",
     "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
     "build-workspaces": "lerna run build",
+    "build:design-token-template": "rm -r dist/design-token-template/ && mkdir -p dist/design-token-template/components/utrecht/ && cd components && rsync -zardvm --include='*/' --include='*.style-dictionary.json' --exclude='*' . ../dist/design-token-template/components/utrecht/",
     "clean": "rimraf packages/storybook/dist/ && lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.css'",
