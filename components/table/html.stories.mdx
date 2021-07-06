@@ -1,0 +1,63 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+<!--
+Source of table:
+https://www.utrecht.nl/wonen-en-leven/parkeren/ervaart-u-parkeeroverlast/spinozaplantsoen-invoeren-betaald-parkeren/
+-->
+
+export const ExampleTable = () =>
+  `<div class="utrecht-html">
+<table lang="nl" summary="Overzicht van de stemmen voor en tegen het betaald parkeren.">
+  <caption>Uitslag internetpeiling 8 juni tot en met 28 juni</caption>
+  <thead>
+    <tr>
+      <th scope="col">Gebied</th>
+      <th scope="col" class="numeric">Voor</th>
+      <th scope="col" class="numeric">Tegen</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Spinozaplantsoen</td>
+      <td class="numeric">53</td>
+      <td class="numeric">113</td>
+    </tr>
+  </tbody>
+</table>
+  </div>`;
+
+<Meta
+  title="Semantic HTML/Table"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => ExampleTable(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Table
+
+<Canvas>
+  <Story name="Table">{ExampleTable.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Table" />
