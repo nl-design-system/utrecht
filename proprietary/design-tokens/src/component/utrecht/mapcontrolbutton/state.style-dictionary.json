@@ -2,12 +2,13 @@
   "utrecht": {
     "mapcontrolbutton": {
       "focus": {
-        "color": { "value": "{utrecht.color.black.value}" },
-        "box-shadow-color": { "value": "{utrecht.color.yellow.80.value}" },
-        "border-type": { "value": "dotted" },
+        "color": { "value": "{utrecht.focus.color.value}" },
+        "box-shadow-color": { "value": "{utrecht.focus.box-shadow-color.value}" },
+        "border-type": { "value": "{utrecht.focus.border-type.value}" },
         "text-decoration": { "value": "none" },
-        "background-color": { "value": "{utrecht.color.yellow.80.value}" },
-        "outline-color": { "value": "{utrecht.color.black.value}" }
+        "background-color": { "value": "{utrecht.focus.background-color.value}" },
+        "outline-color": { "value": "{utrecht.focus.outline-color.value}" },
+        "border-color": { "value": "{utrecht.focus.border-color.value}" }
       },
       "disabled": {
         "background-color": { "value": "{utrecht.color.grey.90.value}" },
