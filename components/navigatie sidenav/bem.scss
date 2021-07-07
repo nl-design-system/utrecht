@@ -3,6 +3,13 @@
  * Copyright (c) 2021 Gemeente Utrecht
  * Copyright (c) 2021 A Herring
  */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+/*@import "../focus/bem";*/
 
 .utrecht-navhtml {
   font-family: var(--utrecht-font-family-sans-serif);
@@ -65,6 +72,7 @@
     var(--utrecht-topnav-link-text-decoration, underline)
   );
   background-color: var(--utrecht-topnav-link-focus-background-color); /*#ffd633*/
+  /*@include utrecht-focus();*/
 }
 
 /****  Styling for to utrecht-sidenav  ****/
