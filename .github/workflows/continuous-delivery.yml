@@ -18,14 +18,17 @@ jobs:
         with:
           node-version: "16.x"
 
-      - name: Install
+      - name: Log environment
         run: |
-          npm ci
-          npm ls
           git --version
           git remote --verbose
           git tag --list
           git branch --list
+
+      - name: Install
+        run: |
+          npm ci
+          npm ls
 
       # - name: "Continuous Integration: lint"
       #   run: |
@@ -61,7 +64,7 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
         run: |
           npm run release -- --no-push --yes
-          git push --follow-tags
+          git push --follow-tags --set-upstream origin HEAD
 
       - name: Continuous Deployment to npm
         env:
