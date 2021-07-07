@@ -4,6 +4,7 @@ Copyright (c) 2021 A Herring
 -->
 
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -12,43 +13,32 @@ import "./bem.css";
 <!-- Import Docs -->
 
 import README from "./README.md";
-export const Template = () =>
-  `<div class="utrecht-navhtml">
-      <h2>Top navigatie</h2>
-    <nav class="topnav">
-        <ul class="utrecht-topnav__list">
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Zorg en onderwijs</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Werk en inkomen</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
-        </ul>
-      </nav>
-      <h2>Top navigatie met :active Item</h2>
-    <nav class="topnav">
-        <ul class="utrecht-topnav__list">
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link utrecht-topnav__link--active" href="#">Zorg en onderwijs</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Werk en inkomen</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
-        </ul>
-      </nav>
-      <h2>Top navigatie met :focus Item</h2>
-    <nav class="topnav">
-        <ul class="utrecht-topnav__list">
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Wonen en leven</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link utrecht-topnav__link--focus" href="#">Zorg en onderwijs</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Werk en inkomen</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Ondernemen</a></li>
-          <li class="utrecht-topnav__item"><a class="utrecht-topnav__link" href="#">Bestuur en organisatie</a></li>
-        </ul>
-      </nav>
-    </div>`;
+
+export const Template = ({ items }) => `<div class="utrecht-navhtml">
+  <nav class="topnav">
+    <ul class="utrecht-topnav__list">${items.map(
+      ({ href, title, current, focus }) => `
+      <li class="utrecht-topnav__item">
+        <a class="${clsx(
+          "utrecht-topnav__link",
+          current && "utrecht-topnav__link--current",
+          focus && "utrecht-topnav__link--focus"
+        )}" href="${href}">${title}</a>
+        </li>`
+    )}
+    </ul>
+  </nav>
+</div>
+`;
 
 <Meta
   title="Components/Navigatie TopNav"
-  argTypes={{}}
+  argTypes={{
+    items: {
+      description: "Menu items",
+      control: "array",
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -60,6 +50,52 @@ export const Template = () =>
   }}
 />
 
+# Navigatie TopNav
+
 <Canvas>
-  <Story name="Side Nav">{Template.bind({})}</Story>
+  <Story
+    name="Top Nav"
+    args={{
+      items: [
+        { href: "https://example.com/", title: "Wonen en leven" },
+        { href: "https://example.com/", title: "Werk en inkomen" },
+        { href: "https://example.com/", title: "Ondernemen" },
+        { href: "https://example.com/", title: "Bestuur en organisatie" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Top Nav :focus"
+    args={{
+      items: [
+        { href: "https://example.com/", title: "Wonen en leven" },
+        { href: "https://example.com/", title: "Werk en inkomen", focus: true },
+        { href: "https://example.com/", title: "Ondernemen" },
+        { href: "https://example.com/", title: "Bestuur en organisatie" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Top Nav :current"
+    args={{
+      items: [
+        { href: "https://example.com/", title: "Wonen en leven", current: true },
+        { href: "https://example.com/", title: "Werk en inkomen" },
+        { href: "https://example.com/", title: "Ondernemen" },
+        { href: "https://example.com/", title: "Bestuur en organisatie" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
