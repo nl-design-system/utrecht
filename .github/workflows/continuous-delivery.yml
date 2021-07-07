@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - ci/publish
 
 jobs:
   continuous-delivery:
@@ -46,3 +47,21 @@ jobs:
         with:
           branch: gh-pages
           folder: packages/storybook/dist
+
+      - name: Continuous Deployment to GitHub repository
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GIT_AUTHOR_NAME: "NL Design System"
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          GIT_COMMITTER_NAME: "NL Design System"
+        run: |
+          npm run version -- --yes
+
+      - name: Continuous Deployment to npm
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          npm run publish -- --no-verify-access --yes
+          npm config delete "//registry.npmjs.org/:_authToken"
