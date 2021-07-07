@@ -56,7 +56,8 @@ jobs:
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
           GIT_COMMITTER_NAME: "NL Design System"
         run: |
-          npm run release -- --yes
+          npm run release -- --no-push --yes
+          git push --follow-tags
 
       - name: Continuous Deployment to npm
         env:
