@@ -32,9 +32,11 @@
 
 .utrecht-button--focus,
 .utrecht-button:not(.utrecht-button--disabled):focus {
-  color: var(--utrecht-button-primary-action-color);
-  background-color: var(--utrecht-button-primary-action-background-color);
-  border-width: var(--utrecht-button-border-width);
+  outline: 2px var(--utrecht-mapcontrolbutton-focus-border-type) var(--utrecht-mapcontrolbutton-focus-outline-color);
+  color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+  box-shadow: 0 0 0 2px var(--utrecht-mapcontrolbutton-focus-box-shadow-color);
+  outline-offset: 0;
+  background-color: var(--utrecht-mapcontrolbutton-focus-background-color);
 }
 
 .utrecht-button--hover:not(:disabled),
