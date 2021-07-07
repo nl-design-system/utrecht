@@ -16,8 +16,9 @@ import README from "./README.md";
 
 export const Template = ({ items }) => `<div class="utrecht-navhtml">
   <nav class="topnav">
-    <ul class="utrecht-topnav__list">${items.map(
-      ({ href, title, current, focus }) => `
+    <ul class="utrecht-topnav__list">${items
+      .map(
+        ({ href, title, current, focus }) => `
       <li class="utrecht-topnav__item">
         <a class="${clsx(
           "utrecht-topnav__link",
@@ -25,7 +26,8 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
           focus && "utrecht-topnav__link--focus"
         )}" href="${href}">${title}</a>
         </li>`
-    )}
+      )
+      .join("")}
     </ul>
   </nav>
 </div>

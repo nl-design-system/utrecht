@@ -4,6 +4,7 @@ Copyright (c) 2021 A Herring
 -->
 
 import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -12,33 +13,42 @@ import "./bem.css";
 <!-- Import Docs -->
 
 import README from "./README.md";
-export const Template = () =>
-  `<div class="utrecht-navhtml">
-   <nav class="utrecht-sidenav">
-        <ul class="utrecht-sidenav__list">
-          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#">Crumb item #1</a></li>
-          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#">Crumb item #2</a></li>
-          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#">Crumb item #3</a></li>
-          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link" href="#"> Crumb item #4</a></li>
-          <li class="utrecht-sidenav__item"><a class="utrecht-sidenav__link utrecht-sidenav__link--current" href="#">Crumb item Current</a>
-             <ul class="utrecht-sidenav__list utrecht-sidenav__list--child">
-                  <li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="utrecht-sidenav__link utrecht-sidenav__link--child" href="#">Childmenu Item </a></li>
-                  <li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="utrecht-sidenav__link utrecht-sidenav__link--child" href="#">Childmenu Item #1</a></li>
-                  <li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="utrecht-sidenav__link utrecht-sidenav__link--child" href="#">Childmenu Item #2</a></li>
-                  <li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="utrecht-sidenav__link utrecht-sidenav__link--child" href="#">Childmenu Item #3</a></li>
-              </ul>
-          </li>
-          <li class="utrecht-sidenav__item utrecht-sidenav__item--sibling"><a class="utrecht-sidenav__link utrecht-sidenav__link--sibling" href="#">Siblings Item #1</a></li>
-          <li class="utrecht-sidenav__item utrecht-sidenav__item--sibling"><a class="utrecht-sidenav__link utrecht-sidenav__link--sibling" href="#">Siblings Item #2</a></li>
-          <li class="utrecht-sidenav__item utrecht-sidenav__item--sibling"><a class="utrecht-sidenav__link utrecht-sidenav__link--sibling" href="#">Siblings Item #3</a></li>
-            <li class="utrecht-sidenav__item utrecht-sidenav__item--sibling"><a class="utrecht-sidenav__link utrecht-sidenav__link--sibling" href="#">Siblings Item #4</a></li>
-        </ul>
-      </nav>
-    </div>`;
+
+export const Template = ({ items }) => `<div class="utrecht-navhtml">
+   <nav class="sidenav">
+    <ul class="utrecht-sidenav__list">${items
+      .map(
+        ({ href, title, current, focus, children }) => `<li class="utrecht-sidenav__item">
+          <a class="${clsx(
+            "utrecht-sidenav__link",
+            current && "utrecht-sidenav__link--current",
+            focus && "utrecht-sidenav__link--focus"
+          )}" href="${href}">${title}</a>
+          <ul>${children.map(
+            ({ href, title, current, focus }) =>
+              `<li><a class="${clsx(
+                "utrecht-sidenav__link",
+                current && "utrecht-sidenav__link--current",
+                focus && "utrecht-sidenav__link--focus"
+              )}" href="${href}">${title}</a></li>`
+          )}</ul>
+        </li>
+      `
+      )
+      .join("")}
+    </ul>
+  </nav>
+</div>
+`;
 
 <Meta
   title="Components/Navigatie SideNav"
-  argTypes={{}}
+  argTypes={{
+    items: {
+      description: "Menu items",
+      control: "array",
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -50,6 +60,26 @@ export const Template = () =>
   }}
 />
 
+# Navigatie TopNav
+
 <Canvas>
-  <Story name="Side Nav">{Template.bind({})}</Story>
+  <Story
+    name="Side Nav"
+    args={{
+      items: [
+        { href: "#", title: "Crumb #1" },
+        { href: "#", title: "Crumb #2" },
+        { href: "#", title: "Crumb #3" },
+        { href: "#", title: "Crumb #4", children: [
+            { href: "#", title: "Child 1" },
+            { href: "#", title: "Child 2" },
+            { href: "#", title: "Child 3" }
+           ], },
+      ],
+    }}
+>
+
+    {Template.bind({})}
+
+  </Story>
 </Canvas>
