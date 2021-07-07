@@ -51,11 +51,17 @@
 }
 
 .utrecht-html table.alternate-row-color {
-  tr:nth-child(odd) {
+  & > tr:nth-child(odd) > td,
+  & > tr:nth-child(odd) > th,
+  & > tbody > tr:nth-child(odd) > td,
+  & > tbody > tr:nth-child(odd) > th {
     @extend .utrecht-table__row--alternate-odd;
   }
 
-  tr:nth-child(even) {
+  & > tr:nth-child(even) > td,
+  & > tr:nth-child(even) > th,
+  & > tbody > tr:nth-child(even) > td,
+  & > tbody > tr:nth-child(even) > th {
     @extend .utrecht-table__row--alternate-even;
   }
 }

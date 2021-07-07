@@ -31,7 +31,7 @@
 
 .utrecht-table__cell--last-header-row {
   border-block-end-style: solid;
-  border-block-end-color: var(--utrecht-table-header-border-block-end-color);
+  border-block-end-color: var(--utrecht-table-header-border-block-end-color, transparent);
   border-block-end-width: var(--utrecht-table-header-border-block-end-width, 0);
 }
 
@@ -46,6 +46,9 @@
 }
 
 .utrecht-table__cell {
+  border-block-end-style: solid;
+  border-block-end-color: var(--utrecht-table-row-border-block-end-color, transparent);
+  border-block-end-width: var(--utrecht-table-row-border-block-end-width, 0);
   line-height: var(--utrecht-table-cell-line-height, inherit);
   padding-inline-start: var(--utrecht-table-cell-padding-inline-start, 0);
   padding-inline-end: var(--utrecht-table-cell-padding-inline-end, 0);
