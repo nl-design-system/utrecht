@@ -5,8 +5,13 @@
         "color": { "value": "{utrecht.link.color.value}" }
       },
       "focus": {
-        "color": { "value": "{utrecht.color.blue.40.value}" },
-        "text-decoration": { "value": "underline" }
+        "color": { "value": "{utrecht.focus.color.value}" },
+        "box-shadow-color": { "value": "{utrecht.focus.box-shadow-color.value}" },
+        "border-type": { "value": "{utrecht.focus.border-type.value}" },
+        "text-decoration": { "value": "underline" },
+        "background-color": { "value": "{utrecht.focus.background-color.value}" },
+        "outline-color": { "value": "{utrecht.focus.outline-color.value}" },
+        "border-color": { "value": "{utrecht.focus.border-color.value}" }
       },
       "hover": {
         "color": { "value": "{utrecht.link.focus.color.value}" },
