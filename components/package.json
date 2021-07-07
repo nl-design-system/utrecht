@@ -6,7 +6,8 @@
   "name": "@utrecht/components",
   "private": true,
   "devDependencies": {
-  },
-  "dependencies": {
+    "@stencil/core": "2.6.0",
+    "@types/jest": "26.0.21",
+    "@types/puppeteer": "5.4.3"
   }
 }

@@ -6,3 +6,8 @@ dist
 CHANGELOG.md
 package.json
 package-lock.json
+
+# Ignore generated files from Stencil
+packages/component-library/loader
+packages/component-library-react/src/react-component-lib/
+packages/component-library-react/src/components.ts

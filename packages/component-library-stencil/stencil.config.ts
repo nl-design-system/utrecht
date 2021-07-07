@@ -13,7 +13,7 @@ export const config: Config = {
       type: 'dist-custom-elements-bundle',
     },
     reactOutputTarget({
-      componentCorePackage: '@utrecht/component-library',
+      componentCorePackage: '@utrecht/component-library-stencil',
       proxiesFile: '../component-library-react/src/components.ts',
     }),
   ],
