@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
+import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'utrecht',
@@ -17,4 +18,5 @@ export const config: Config = {
       proxiesFile: '../component-library-react/src/components.ts',
     }),
   ],
+  plugins: [sass()],
 };
