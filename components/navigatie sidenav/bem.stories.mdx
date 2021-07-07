@@ -15,10 +15,10 @@ import "./bem.css";
 import README from "./README.md";
 
 export const Template = ({ items }) => `<div class="utrecht-navhtml">
-   <nav class="sidenav">
+   <nav class="utrecht-sidenav">
     <ul class="utrecht-sidenav__list">${items
       .map(
-        ({ href, title, current, focus, children }) => `<li class="utrecht-sidenav__item">
+        ({ href, title, current, focus, children, shiblings }) => `<li class="utrecht-sidenav__item">
           <a class="${clsx(
             "utrecht-sidenav__link",
             current && "utrecht-sidenav__link--current",
@@ -29,16 +29,29 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
               ? children
                   .map(
                     ({ href, title, current, focus }) =>
-                      `<li><a class="${clsx(
-                        "utrecht-sidenav__link",
-                        current && "utrecht-sidenav__link--current",
+                      `<li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="${clsx(
+                        "utrecht-sidenav__link utrecht-sidenav__link--child",
+                        current && "utrecht-sidenav__link--current utrecht-sidenav__link--child--current",
                         focus && "utrecht-sidenav__link--focus"
                       )}" href="${href}">${title}</a></li>`
                   )
                   .join("")
               : ""
           }</ul>
-        </li>
+        </li>${
+          siblings
+            ? siblings
+                .map(
+                  ({ href, title, current, focus }) =>
+                    `<li class="utrecht-sidenav__item utrecht-sidenav__item--sibling"><a class="${clsx(
+                      "utrecht-sidenav__link utrecht-sidenav__link--sibling",
+                      current && "utrecht-sidenav__link--current utrecht-sidenav__link--sibling--current",
+                      focus && "utrecht-sidenav__link--focus"
+                    )}" href="${href}">${title}</a></li>`
+                )
+                .join("")
+            : ""
+        }
       `
       )
       .join("")}
@@ -72,6 +85,10 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
   <Story
     name="Side Nav"
     args={{
+      siblings: [
+        { href: "#", title: "sibling 1" },
+        { href: "#", title: "sibling 2" },
+      ],
       items: [
         { href: "#", title: "Crumb #1" },
         { href: "#", title: "Crumb #2" },
@@ -80,7 +97,7 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
           href: "#",
           title: "Crumb #4",
           children: [
-            { href: "#", title: "Child 1" },
+            { href: "#", title: "Child 1", current: true },
             { href: "#", title: "Child 2" },
             { href: "#", title: "Child 3" },
           ],

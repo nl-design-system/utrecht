@@ -121,11 +121,6 @@
   text-decoration: none;
 }
 
-.utrecht-sidenav__link,
-.utrecht-sidenav__link:before {
-  border: 1px solid red;
-}
-
 .utrecht-sidenav__link::before,
 .utrecht-sidenav__link--sibling::before {
   overflow: hidden;
