@@ -24,14 +24,20 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
             current && "utrecht-sidenav__link--current",
             focus && "utrecht-sidenav__link--focus"
           )}" href="${href}">${title}</a>
-          <ul>${children.map(
-            ({ href, title, current, focus }) =>
-              `<li><a class="${clsx(
-                "utrecht-sidenav__link",
-                current && "utrecht-sidenav__link--current",
-                focus && "utrecht-sidenav__link--focus"
-              )}" href="${href}">${title}</a></li>`
-          )}</ul>
+          <ul>${
+            children
+              ? children
+                  .map(
+                    ({ href, title, current, focus }) =>
+                      `<li><a class="${clsx(
+                        "utrecht-sidenav__link",
+                        current && "utrecht-sidenav__link--current",
+                        focus && "utrecht-sidenav__link--focus"
+                      )}" href="${href}">${title}</a></li>`
+                  )
+                  .join("")
+              : ""
+          }</ul>
         </li>
       `
       )
@@ -70,16 +76,18 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
         { href: "#", title: "Crumb #1" },
         { href: "#", title: "Crumb #2" },
         { href: "#", title: "Crumb #3" },
-        { href: "#", title: "Crumb #4", children: [
+        {
+          href: "#",
+          title: "Crumb #4",
+          children: [
             { href: "#", title: "Child 1" },
             { href: "#", title: "Child 2" },
-            { href: "#", title: "Child 3" }
-           ], },
+            { href: "#", title: "Child 3" },
+          ],
+        },
       ],
     }}
->
-
+  >
     {Template.bind({})}
-
   </Story>
 </Canvas>
