@@ -50,7 +50,6 @@
 .utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
   color: var(--utrecht-mapcontrolbutton-color);
   background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
-  /*transform: scale(var(--utrecht-mapcontrolbutton-focus-transform-scale, 1));*/
 }
 
 .utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
