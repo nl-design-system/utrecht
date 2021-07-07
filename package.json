@@ -88,7 +88,7 @@
     "watch:stencil": "lerna run watch:stencil",
     "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
     "publish": "lerna publish from-package",
-    "version": "lerna version prerelease --no-changelog --no-private",
+    "release": "lerna version prerelease --no-changelog --no-private",
     "watch:storybook": "start-storybook --port 6006 --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   }
