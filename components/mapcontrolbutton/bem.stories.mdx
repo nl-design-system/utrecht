@@ -1,0 +1,95 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
+
+import "./bem.css";
+
+import README from "./README.md";
+
+export const Template = ({ focus, hover, disabled }) =>
+  `<button class="${clsx("utrecht-mapcontrolbutton", {
+    "utrecht-mapcontrolbutton--hover": hover,
+    "utrecht-mapcontrolbutton--focus": focus,
+    "utrecht-mapcontrolbutton--disabled": disabled,
+  })}"${disabled ? ' aria-disabled="true"' : ""}>
+      <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <title>Zoom button</title>
+        <g id="Symbols" stroke="none" stroke-width="1" fill="none"fill-rule="evenodd">
+          <polygon class="utrecht-mapcontrolbutton-polygon" id="Path" points="4 10 6 10 6 6 10 6 10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6">
+          </polygon>
+        </g>
+      </svg></button>`;
+
+<!--<a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a>
+<a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a>-->
+
+<Meta
+  title="Components/Map Control Button"
+  argTypes={{
+    focus: {
+      description: "Focus",
+      control: "boolean",
+      defaultValue: false,
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+      defaultValue: false,
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `.utrecht-mapcontrolbutton` class name:
+
+<Canvas>
+  <Story name="Map Control Button">{Template.bind({})}</Story>
+</Canvas>
+
+Styling via the `.utrecht-mapcontrolbutton--hover` class name:
+
+<Canvas>
+  <Story name="Map Control Button hover" args={{ hover: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-mapcontrolbutton--focus` class name:
+
+<Canvas>
+  <Story name="Map Control Button focus" args={{ focus: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
+
+<Canvas>
+  <Story name="Map Control Button disabled" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Map Control Button" />

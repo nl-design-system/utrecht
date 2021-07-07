@@ -3,7 +3,10 @@
     "focus": {
       "background-color": { "value": "{utrecht.color.yellow.60.value}" },
       "border-color": { "value": "{utrecht.color.black.value}" },
-      "color": { "value": "{utrecht.color.black.value}" }
+      "color": { "value": "{utrecht.color.black.value}" },
+      "border-type": { "value": "{utrecht.border-style.dotted.value}" },
+      "outline-color": { "value": "{utrecht.color.black.value}" },
+      "box-shadow-color": { "value": "{utrecht.color.yellow.80.value}" }
     }
   }
 }

@@ -1,0 +1,64 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, disabled }) =>
+  `<section class="utrecht-html">
+  <button type="button"${disabled ? " disabled" : ""}>${content}</button>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Map Control Button"
+  argTypes={{
+    content: {
+      description: "Content of the button",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `<button>` element:
+
+<Canvas>
+  <Story name="Button">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Button" />
+
+Button with `disabled` state:
+
+<Canvas>
+  <Story name="Disabled button" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
