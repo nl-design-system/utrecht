@@ -18,11 +18,15 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
    <nav class="utrecht-sidenav">
     <ul class="utrecht-sidenav__list">${items
       .map(
-        ({ href, title, current, focus, children, siblings }) => `<li class="utrecht-sidenav__item">
+        ({ href, title, current, focus, children, siblings }) => `<li class="${clsx(
+          "utrecht-sidenav__item",
+          siblings && "utrecht-sidenav__item--sibling"
+        )}">
           <a class="${clsx(
             "utrecht-sidenav__link",
             current && "utrecht-sidenav__link--current",
-            focus && "utrecht-sidenav__link--focus"
+            focus && "utrecht-sidenav__link--focus",
+            siblings && "utrecht-sidenav__link--sibling"
           )}" href="${href}">${title}</a>
           <ul>${
             children
@@ -38,21 +42,7 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
                   .join("")
               : ""
           }</ul>
-        </li>${
-          siblings
-            ? siblings
-                .map(
-                  ({ href, title, current, focus }) =>
-                    `<li class="utrecht-sidenav__item utrecht-sidenav__item--sibling"><a class="${clsx(
-                      "utrecht-sidenav__link utrecht-sidenav__link--sibling",
-                      current && "utrecht-sidenav__link--current utrecht-sidenav__link--sibling--current",
-                      focus && "utrecht-sidenav__link--focus"
-                    )}" href="${href}">${title}</a></li>`
-                )
-                .join("")
-            : ""
-        }
-      `
+        </li>`
       )
       .join("")}
     </ul>
@@ -85,10 +75,31 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
   <Story
     name="Side Nav"
     args={{
-      siblings: [
-        { href: "#", title: "sibling 1" },
-        { href: "#", title: "sibling 2" },
+      items: [
+        { href: "#", title: "Crumb #1" },
+        { href: "#", title: "Crumb #2" },
+        { href: "#", title: "Crumb #3" },
+        {
+          href: "#",
+          title: "Crumb #4",
+          current: true,
+          children: [
+            { href: "#", title: "Child 1" },
+            { href: "#", title: "Child 2" },
+            { href: "#", title: "Child 3" },
+          ],
+        },
       ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Side Nav met Siblings"
+    args={{
       items: [
         { href: "#", title: "Crumb #1" },
         { href: "#", title: "Crumb #2" },
@@ -102,6 +113,9 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
             { href: "#", title: "Child 3" },
           ],
         },
+        { href: "#", title: "Sibling #1", siblings: true },
+        { href: "#", title: "Sibling #2", siblings: true },
+        { href: "#", title: "Sibling #3", siblings: true },
       ],
     }}
   >
