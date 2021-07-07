@@ -18,15 +18,15 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
    <nav class="utrecht-sidenav">
     <ul class="utrecht-sidenav__list">${items
       .map(
-        ({ href, title, current, focus, children, siblings }) => `<li class="${clsx(
+        ({ href, title, current, focus, children, sibling }) => `<li class="${clsx(
           "utrecht-sidenav__item",
-          siblings && "utrecht-sidenav__item--sibling"
+          sibling && "utrecht-sidenav__item--sibling"
         )}">
           <a class="${clsx(
             "utrecht-sidenav__link",
             current && "utrecht-sidenav__link--current",
             focus && "utrecht-sidenav__link--focus",
-            siblings && "utrecht-sidenav__link--sibling"
+            sibling && "utrecht-sidenav__link--sibling"
           )}" href="${href}">${title}</a>
           <ul>${
             children
@@ -113,9 +113,9 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
             { href: "#", title: "Child 3" },
           ],
         },
-        { href: "#", title: "Sibling #1", siblings: true },
-        { href: "#", title: "Sibling #2", siblings: true },
-        { href: "#", title: "Sibling #3", siblings: true },
+        { href: "#", title: "Sibling #1", sibling: true },
+        { href: "#", title: "Sibling #2", sibling: true },
+        { href: "#", title: "Sibling #3", sibling: true },
       ],
     }}
   >
