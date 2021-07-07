@@ -15,7 +15,7 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: '@utrecht/web-component-library-stencil',
-      proxiesFile: '../component-library-react/src/components.ts',
+      proxiesFile: '../web-component-library-react/src/components.ts',
     }),
   ],
   plugins: [sass()],
