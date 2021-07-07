@@ -3,7 +3,7 @@ import '@utrecht/design-tokens/dist/custom.css';
 import '../../../components/document/bem.css';
 
 import React from 'react';
-import { defineCustomElements } from '@utrecht/component-library-stencil';
+import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 
 defineCustomElements();
 
