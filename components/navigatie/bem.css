@@ -121,11 +121,16 @@
   text-decoration: none;
 }
 
+.utrecht-sidenav__link,
+.utrecht-sidenav__link:before {
+  border: 1px solid red;
+}
+
 .utrecht-sidenav__link::before,
 .utrecht-sidenav__link--sibling::before {
   overflow: hidden;
   position: absolute;
-  top: 18px; /*Hard value?*/
+  top: 21px; /*Hard value?*/
   transform: translateY(-50%) translateX(-2.5ch);
   content: "";
   width: 8px;
@@ -138,6 +143,7 @@
 }
 
 .utrecht-sidenav__link--current:before {
+  left: 2px;
 }
 
 /* Hover layout for mousover on sidenav__link */
@@ -179,7 +185,7 @@
   background: var(--utrecht-sidenav-item-marker-color);
   position: absolute;
   left: -22px;
-  top: -16px;
+  top: -18px;
   min-height: 30px;
   height: calc(30px + 2px);
   bottom: 0;
@@ -187,8 +193,8 @@
 }
 
 .utrecht-sidenav__link--current::after {
-  min-height: 30px;
-  height: calc(30px + 2px);
+  min-height: 35px;
+  height: calc(35px + 2px);
 }
 
 /* remove first metro line in listing*/
