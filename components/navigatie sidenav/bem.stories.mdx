@@ -85,7 +85,7 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
           current: true,
           children: [
             { href: "#", title: "Child 1" },
-            { href: "#", title: "Child 2" },
+            { href: "#", title: "Child 2 :focus", focus: true },
             { href: "#", title: "Child 3" },
           ],
         },
@@ -102,13 +102,14 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
     args={{
       items: [
         { href: "#", title: "Crumb #1" },
-        { href: "#", title: "Crumb #2" },
+        { href: "#", title: "Crumb #2 " },
         { href: "#", title: "Crumb #3" },
         {
           href: "#",
           title: "Crumb #4",
+          current: true,
           children: [
-            { href: "#", title: "Child 1", current: true },
+            { href: "#", title: "Child 1" },
             { href: "#", title: "Child 2" },
             { href: "#", title: "Child 3" },
           ],
