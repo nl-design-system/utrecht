@@ -17,13 +17,6 @@
   padding-block-end: var(--utrecht-button-padding-block-end);
 }
 
-.utrecht-button--distanced {
-  margin-inline-start: var(--utrecht-button-margin-inline-start);
-  margin-inline-end: var(--utrecht-button-margin-inline-end);
-  margin-block-start: var(--utrecht-button-margin-block-start);
-  margin-block-end: var(--utrecht-button-margin-block-end);
-}
-
 .utrecht-button:disabled,
 .utrecht-button--disabled {
   color: var(--utrecht-button-disabled-color);
