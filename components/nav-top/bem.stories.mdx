@@ -1,0 +1,69 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 A Herring
+-->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
+
+<!-- Import component and component styles -->
+
+import "./bem.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ items }) => `<div class="utrecht-navhtml">
+  <nav class="topnav">
+    <ul class="utrecht-topnav__list">${items.map(
+      ({ href, title, current, focus }) => `
+      <li class="utrecht-topnav__item">
+        <a class="${clsx(
+          "utrecht-topnav__link",
+          current && "utrecht-topnav__link--current",
+          focus && "utrecht-topnav__link--focus"
+        )}" href="${href}">${title}</a>
+        </li>`
+    )}
+    </ul>
+  </nav>
+</div>
+`;
+
+<Meta
+  title="Components/Top Nav"
+  argTypes={{
+    items: {
+      description: "Menu items",
+      control: "array",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Top nav
+
+<Canvas>
+  <Story
+    name="Top Nav"
+    args={{
+      items: [
+        { href: "https://example.com/", title: "Wonen en leven", current: true },
+        { href: "https://example.com/", title: "Werk en inkomen", focus: true },
+        { href: "https://example.com/", title: "Ondernemen" },
+        { href: "https://example.com/", title: "Bestuur en organisatie" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
