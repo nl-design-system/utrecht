@@ -18,7 +18,7 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
    <nav class="utrecht-sidenav">
     <ul class="utrecht-sidenav__list">${items
       .map(
-        ({ href, title, current, focus, children, shiblings }) => `<li class="utrecht-sidenav__item">
+        ({ href, title, current, focus, children, siblings }) => `<li class="utrecht-sidenav__item">
           <a class="${clsx(
             "utrecht-sidenav__link",
             current && "utrecht-sidenav__link--current",
