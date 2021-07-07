@@ -4,6 +4,7 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -18,9 +19,11 @@ Source of table:
 https://www.utrecht.nl/wonen-en-leven/parkeren/ervaart-u-parkeeroverlast/spinozaplantsoen-invoeren-betaald-parkeren/
 -->
 
-export const ExampleTable = () =>
+export const ExampleTable = ({ alternateRowColor }) =>
   `<div class="utrecht-html">
-<table lang="nl" summary="Overzicht van de stemmen voor en tegen het betaald parkeren.">
+<table lang="nl" summary="Overzicht van de stemmen voor en tegen het betaald parkeren." class="${clsx(
+    alternateRowColor && "alternate-row-color"
+  )}">
   <caption>Uitslag internetpeiling 8 juni tot en met 28 juni</caption>
   <thead>
     <tr>
@@ -31,19 +34,19 @@ export const ExampleTable = () =>
   </thead>
   <tbody>
     <tr>
-      <td>Spinozaplantsoen</td>
+      <td>Locatie A</td>
       <td class="numeric">53</td>
       <td class="numeric">113</td>
     </tr>
-      <tr>
-      <td>Spinozaplantsoen</td>
-      <td>53</td>
-      <td>113</td>
+    <tr>
+      <td>Locatie B</td>
+      <td class="numeric">58</td>
+      <td class="numeric">42</td>
     </tr>
-      <tr>
-      <td>Spinozaplantsoen</td>
-      <td>53</td>
-      <td>113</td>
+    <tr>
+      <td>Locatie C</td>
+      <td class="numeric">87</td>
+      <td class="numeric">16</td>
     </tr>
   </tbody>
 </table>
@@ -51,6 +54,13 @@ export const ExampleTable = () =>
 
 <Meta
   title="Semantic HTML/Table"
+  argTypes={{
+    alternateRowColor: {
+      description: "Alternate row color",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => ExampleTable(args),

@@ -15,7 +15,7 @@
         "color": {},
         "text-transform": {},
         "border-block-end-color": { "value": "{utrecht.color.red.40.value}" },
-        "border-block-end-width": { "value": "2px" }
+        "border-block-end-width": { "value": "{utrecht.border-width.md.value}" }
       },
       "heading": {
         "font-weight": {},
@@ -32,7 +32,8 @@
       "row": {
         "padding-inline-end": {},
         "padding-inline-start": {},
-        "border-block-end-color": { "value": "{utrecht.color.grey.80.value}" }
+        "border-block-end-width": { "value": "{utrecht.border-width.sm.value}" },
+        "border-block-end-color": { "value": "{utrecht.color.grey.90.value}" }
       }
     }
   }
