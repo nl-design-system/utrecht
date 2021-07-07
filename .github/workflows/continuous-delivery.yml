@@ -23,24 +23,24 @@ jobs:
           npm ci
           npm ls
 
-      - name: "Continuous Integration: lint"
-        run: |
-          npm run lint --if-present
+      # - name: "Continuous Integration: lint"
+      #   run: |
+      #     npm run lint --if-present
 
       - name: "Continuous Integration: build"
         run: |
           npm run build --if-present
           npm run build --if-present --workspaces
 
-      - name: "Continuous Integration: test"
-        run: |
-          npm run test --if-present
+      # - name: "Continuous Integration: test"
+      #   run: |
+      #     npm run test --if-present
 
-      - name: "Continuous Integration: create baseline for visual regression test"
-        env:
-          PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
-        run: |
-          npx lerna run percy-snapshot
+      # - name: "Continuous Integration: create baseline for visual regression test"
+      #   env:
+      #     PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
+      #   run: |
+      #     npx lerna run percy-snapshot
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.3
