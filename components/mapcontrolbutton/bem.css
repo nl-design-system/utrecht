@@ -22,13 +22,6 @@
   fill: var(--utrecht-mapcontrolbutton-color);
 }
 
-.utrecht-mapcontrolbutton--distanced {
-  margin-inline-start: var(--utrecht-mapcontrolbutton-margin-inline-start);
-  margin-inline-end: var(--utrecht-mapcontrolbutton-margin-inline-end);
-  margin-block-start: var(--utrecht-mapcontrolbutton-margin-block-start);
-  margin-block-end: var(--utrecht-mapcontrolbutton-margin-block-end);
-}
-
 .utrecht-mapcontrolbutton:disabled,
 .utrecht-mapcontrolbutton--disabled {
   color: var(--utrecht-mapcontrolbutton-disabled-color);
@@ -38,6 +31,17 @@
 
 .utrecht-mapcontrolbutton--disabled .utrecht-mapcontrolbutton-polygon {
   fill: var(--utrecht-mapcontrolbutton-disabled-color);
+}
+
+.utrecht-mapcontrolbutton--hover:not(:disabled),
+.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
+  color: var(--utrecht-mapcontrolbutton-color);
+  background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
+  /*transform: scale(var(--utrecht-mapcontrolbutton-focus-transform-scale, 1));*/
+}
+
+.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-color);
 }
 
 .utrecht-mapcontrolbutton--focus,
@@ -51,15 +55,4 @@
 
 .utrecht-mapcontrolbutton--focus .utrecht-mapcontrolbutton-polygon {
   fill: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
-}
-
-.utrecht-mapcontrolbutton--hover:not(:disabled),
-.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
-  color: var(--utrecht-mapcontrolbutton-color);
-  background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
-  transform: scale(var(--utrecht-mapcontrolbutton-focus-transform-scale, 1));
-}
-
-.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
-  fill: var(--utrecht-mapcontrolbutton-color);
 }
