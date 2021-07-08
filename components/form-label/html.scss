@@ -8,3 +8,11 @@
 .utrecht-html label {
   @extend .utrecht-form-label;
 }
+
+.utrecht-html input[type="checkbox"] ~ label {
+  @extend .utrecht-form-label--checkbox;
+}
+
+.utrecht-html input[type="radio"] ~ label {
+  @extend .utrecht-form-label--radio;
+}
