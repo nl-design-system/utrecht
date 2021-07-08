@@ -1,0 +1,63 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./bem.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, legend }) =>
+  `<div class="utrecht-form-fieldset">
+  ${legend ? `<div class="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">${legend}</div>` : ""}
+  ${content}
+</div>`;
+
+<Meta
+  title="Components/Form fieldset"
+  argTypes={{
+    content: {
+      description: "Set the content of the fieldset",
+      control: "text",
+    },
+    legende: {
+      description: "Set the content of the legend",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Fieldset
+
+Styling via the `.utrecht-form-fieldset` and `.utrecht-form-fieldset__legend` class names:
+
+<Canvas>
+  <Story
+    name="Fieldset"
+    args={{
+      content: "<p>Fieldset body</p>",
+      legend: "Fieldset legend",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Fieldset" />
