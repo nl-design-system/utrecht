@@ -123,3 +123,38 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<Canvas>
+  <Story
+    name="Side Nav voorbeeld"
+    args={{
+      items: [
+        { href: "#", title: "Home" },
+        { href: "#", title: "Wonen en leven" },
+        { href: "#", title: "Parken en groen" },
+        {
+          href: "#",
+          title: "Bomen",
+          current: true,
+          children: [
+            { href: "#", title: "Bomennieuws" },
+            { href: "#", title: "Bomen planten en kappen" },
+            { href: "#", title: "Bomenzorg en bomenbeleid" },
+            { href: "#", title: "Ziekten en plagen" },
+            { href: "#", title: "Overlast bomen" },
+            { href: "#", title: "Zorgvuldig met bomen omgaan" },
+          ],
+        },
+        { href: "#", title: "Parken en plantsoenen", sibling: true },
+        { href: "#", title: "Landgoederen Amelisweerd en Rhijnauwen", sibling: true },
+        { href: "#", title: "Begraafplaatsen", sibling: true },
+        { href: "#", title: "Volkstuinen en stadslandbouw", sibling: true },
+        { href: "#", title: "Dieren", sibling: true },
+        { href: "#", title: "Groenonderhoud", sibling: true },
+        { href: "#", title: "Zelfbeheer", sibling: true },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
