@@ -4,6 +4,7 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
 
 <!-- Import component and component styles -->
 
@@ -13,7 +14,12 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ content }) => `<span class="utrecht-form-label">${content}</span>`;
+export const Template = ({ content, type }) =>
+  `<span class="${clsx(
+    "utrecht-form-label",
+    type === "checkbox" && "utrecht-form-label--checkbox",
+    type === "radio" && "utrecht-form-label--radio"
+  )}">${content}</span>`;
 
 <Meta
   title="Components/Form label"
@@ -22,6 +28,11 @@ export const Template = ({ content }) => `<span class="utrecht-form-label">${con
       description: "Set the content of the label",
       control: "text",
       defaultValue: "Username",
+    },
+    type: {
+      description: "Set the type of the form control",
+      options: ["default", "checkbox", "radio"],
+      control: { type: "radio" },
     },
   }}
   parameters={{
@@ -46,3 +57,23 @@ Styling via the `.utrecht-form-label` class name:
 </Canvas>
 
 <ArgsTable story="Label" />
+
+# Label for checkbox
+
+Styling via the `.utrecht-form-label--checkbox` class name:
+
+<Canvas>
+  <Story name="Label for checkbox" args={{ type: "checkbox" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Label for radio button
+
+Styling via the `.utrecht-form-label--radio` class name:
+
+<Canvas>
+  <Story name="Label for radio button" args={{ type: "radio" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
