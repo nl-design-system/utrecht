@@ -1,0 +1,96 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, invalid, readOnly, disabled, required }) =>
+  `<section class="utrecht-html">
+  <select${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${required ? " required" : ""}${
+    readOnly ? " readonly" : ""
+  } class="utrecht-select">
+<option>Optie #1</option>
+<option>Optie #2</option>
+<option>Optie, laatste #3</option>
+</select>
+</section>`;
+
+<Meta
+  title="Components/Select"
+  argTypes={{
+    content: {
+      description: "Set the content of the select",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+      defaultValue: false,
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+      defaultValue: false,
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# select component
+
+Styling via the `<select>` element:
+
+<Canvas>
+  <Story name="select">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="select" />
+
+## Invalid
+
+<Canvas>
+  <Story name="Invalid select" args={{ invalid: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story name="Disabled select" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story name="Required select" args={{ required: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

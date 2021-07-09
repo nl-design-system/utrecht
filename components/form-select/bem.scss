@@ -1,0 +1,49 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../focus/bem";
+
+.utrecht-select {
+  border-width: var(--utrecht-select-border-width);
+  border-bottom-width: var(--utrecht-select-border-bottom-width, var(--utrecht-select-border-width));
+  border-color: var(--utrecht-select-border-color);
+  border-radius: var(--utrecht-select-border-radius, 0);
+  border-style: solid;
+  color: var(--utrecht-select-color);
+  font-family: var(--utrecht-select-font-family);
+  font-size: var(--utrecht-select-font-size, 1em);
+  max-width: var(--utrecht-select-max-width);
+  padding-block-end: var(--utrecht-select-padding-block-end);
+  padding-block-start: var(--utrecht-select-padding-block-start);
+  padding-inline-end: var(--utrecht-select-padding-inline-end);
+  padding-inline-start: var(--utrecht-select-padding-inline-start);
+  width: 100%;
+  -webkit-appearance: none; /*Safari fix to use this styling*/
+  -webkit-appearance: none; /*FF fix to use this styling*/
+  appearance: none;
+  background: #fff
+    url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii03MDcgMTQ4OSAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNLTcwNyAxNDg5aDI0djI0aC0yNHoiIGZpbGw9Im5vbmUiLz48cGF0aCBkPSJNLTY4OS45IDE0OTguM2MuMS4xLjIuMy4yLjVzLS4xLjMtLjIuNWwtNC41IDQuNWMtLjEuMS0uMy4yLS41LjJzLS4zLS4xLS41LS4ybC00LjUtNC41Yy0uMS0uMS0uMi0uMy0uMi0uNXMuMS0uMy4yLS41Yy4xLS4xLjMtLjIuNS0uMmg5Yy4yIDAgLjMuMS41LjJ6IiBmaWxsPSIjMmIyYjJiIi8+PC9zdmc+")
+    no-repeat 100%;
+  //  url("data:image/svg+xml;utf8,<svg width="17" height="12.68" viewBox="001712.68"><polygon points="8.5.670.712.316.312.38.50.67" style="fill:#000;" /></svg>")
+
+  background-size: 1.4rem auto;
+  padding-right: 3.5rem;
+}
+
+.utrecht-select:focus,
+.utrecht-select--focus {
+  @include utrecht-focus();
+}
+
+.utrecht-select--invalid,
+select[aria-invalid="true"] {
+  border-color: var(--utrecht-select-invalid-border-color);
+  border-width: var(--utrecht-select-invalid-border-width);
+}
+
+.utrecht-select--disabled {
+  border-color: var(--utrecht-select-disabled-border-color);
+  color: var(--utrecht-select-disabled-color);
+}
