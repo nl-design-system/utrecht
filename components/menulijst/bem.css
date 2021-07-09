@@ -1,9 +1,10 @@
 .utrecht-menulijst {
-  border-top: 2px solid #eeeeee;
-  border-bottom: 2px solid var(--utrecht-color-grey-30);
+  border-top: 2px solid var(--utrecht-color-grey-90);
+  border-bottom: 2px solid var(--utrecht-color-grey-90);
   font-family: var(--document-font-family);
-  padding-block-start: 0.75em;
-  padding-block-end: 0;
+  padding-block-start: var(--utrecht-space-block-sm);
+  padding-block-end: var(--utrecht-space-block-sm);
+  padding-inline-start: 0;  
 }
 
 .utrecht-menulijst__item {
