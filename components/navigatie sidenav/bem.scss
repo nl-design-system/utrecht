@@ -25,20 +25,26 @@
   border-block-end: 1px solid var(--utrecht-color-grey-80);
 }
 
-/*remove last border*/
-
 .utrecht-sidenav__list /*ul*/ {
   padding-block-start: 0;
   padding-block-end: 0;
   margin-block-start: 0.2rem;
   margin-block-end: 0;
-  padding-inline-start: 1.5rem;
+  padding-inline-start: 0.8rem;
+}
+
+.utrecht-sidenav__list ul {
+  padding-block-start: 0;
+  padding-block-end: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0.8rem;
 }
 
 .utrecht-sidenav__item  /*li*/,
 .utrecht-sidenav__sibling__item  /*bottom li*/ {
   list-style: none;
   position: relative;
+  margin-inline-start: var(--utrecht-space-inline-sm);
   border-block-end: 1px solid var(--utrecht-color-grey-80);
 }
 
@@ -54,26 +60,33 @@
 .utrecht-sidenav__link--sibling {
   display: block;
   color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
-  padding-block-start: var(--utrecht-space-inline-md);
-  padding-block-end: var(--utrecht-space-inline-md);
-  padding-inline-start: var(--utrecht-space-inline-2xl);
+  padding-block-start: var(--utrecht-space-block-xs);
+  padding-block-end: var(--utrecht-space-block-xs);
+  padding-inline-start: 0;
+  padding-inline-end: var(--utrecht-space-inline-xs);
+  margin-inline-start: 0;
   text-decoration: none;
-  border: 1px solid red;
 }
 
-.utrecht-sidenav-child__link {
+.utrecht-sidenav__link--child,
+.utrecht-sidenav__link--child--current {
   display: block;
   color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
-  padding-block-start: var(--utrecht-space-block-sm);
-  padding-block-end: var(--utrecht-space-block-sm);
   text-decoration: none;
+  padding-block-start: var(--utrecht-space-block-2xs);
+  padding-block-end: var(--utrecht-space-block-2xs);
+  padding-inline-start: 0;
+  padding-inline-end: var(--utrecht-space-inline-xs);
+  margin-block-start: 0;
+  margin-block-end: 0;
 }
 
 .utrecht-sidenav__link::before,
-.utrecht-sidenav__link--sibling::before {
+.utrecht-sidenav__link--sibling::before,
+.utrecht-sidenav__item:last-child .utrecht-sidenav__link--current::before {
   overflow: hidden;
   position: absolute;
-  top: 21px; /*Hard value?*/
+  top: 20px; /*Hard value?*/
   transform: translateY(-50%) translateX(-2.5ch);
   content: "";
   width: 8px;
@@ -82,11 +95,16 @@
   background-color: var(--utrecht-sidenav-item-marker-color);
   z-index: 10;
   box-shadow: 0 0 2px 2px #fff; /*Make var*/
-  left: 1px;
 }
 
-.utrecht-sidenav__link--current:before {
-  left: 2px;
+.utrecht-sidenav__link::before,
+.utrecht-sidenav__link--sibling::before {
+  left: 5px;
+}
+
+/*Little fix to move the dot to the right*/
+.utrecht-sidenav__link--current::before {
+  left: 6px;
 }
 
 /* Hover layout for mousover on sidenav__link */
@@ -105,22 +123,7 @@
 }
 
 /* Draw metro connection lines on sidenav link items */
-.utrecht-sidenav__link::after {
-  display: block;
-  content: "";
-  overflow: hidden;
-  width: 3px;
-  background: var(--utrecht-sidenav-item-marker-color);
-  position: absolute;
-  left: -22px;
-  top: -20px;
-  /*  min-height: 100%;
-  height: calc(100% + 2px);*/
-  bottom: 0;
-  z-index: 5;
-  border: 1px solid black;
-}
-
+.utrecht-sidenav__link::after,
 .utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
   display: block;
   content: "";
@@ -128,17 +131,18 @@
   width: 3px;
   background: var(--utrecht-sidenav-item-marker-color);
   position: absolute;
-  left: -22px;
-  top: -18px;
-  min-height: 38px;
-  height: calc(30px + 2px);
+  left: -18px;
+  top: -22px;
+  /*  min-height: 100%;
+  height: calc(100% + 2px);*/
   bottom: 0;
   z-index: 5;
 }
 
+.utrecht-sidenav__item:last-child .utrecht-sidenav__link::after,
 .utrecht-sidenav__link--current::after {
-  min-height: 35px;
-  height: calc(35px + 2px);
+  min-height: 38px;
+  height: calc(38px + 2px);
 }
 
 /* remove first metro line in listing*/
@@ -151,15 +155,6 @@
 .utrecht-sidenav__link--current,
 .utrecht-sidenav__link--child--current {
   font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
-}
-
-.utrecht-sidenav__link--child,
-.utrecht-sidenav__link--child--current {
-  padding-block-start: 0.25rem;
-  padding-block-end: 0.5rem;
-  padding-inline-end: 0.5rem;
-  margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 .utrecht-sidenav__list--child {
@@ -187,7 +182,8 @@
 .utrecht-sidenav__link--child--current::before {
   overflow: hidden;
   position: absolute;
-  top: 17px;
+  top: 16px;
+  left: 0;
   transform: translateY(-50%) translateX(-19.5px);
   content: "";
   width: 4px;
@@ -196,7 +192,6 @@
   border: 2px solid var(--utrecht-sidenav-link-color);
   background-color: transparent;
   z-index: 10;
-  box-shadow: 0 0 2px 2px #fff;
 }
 
 /* Hover layout for mousover on child__link */
