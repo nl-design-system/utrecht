@@ -68,6 +68,11 @@
   text-decoration: none;
 }
 
+/*How to select the parent of the nestsed UL to remove the bottom padding of te link item*/
+ul.utrecht-sidenav__list:last-of-type {
+  // border: 1px solid red;
+}
+
 .utrecht-sidenav__link--child,
 .utrecht-sidenav__link--child--current {
   display: block;
