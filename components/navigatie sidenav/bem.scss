@@ -56,7 +56,9 @@
   color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
   padding-block-start: var(--utrecht-space-inline-md);
   padding-block-end: var(--utrecht-space-inline-md);
+  padding-inline-start: var(--utrecht-space-inline-2xl);
   text-decoration: none;
+  border: 1px solid red;
 }
 
 .utrecht-sidenav-child__link {
@@ -116,6 +118,7 @@
   height: calc(100% + 2px);*/
   bottom: 0;
   z-index: 5;
+  border: 1px solid black;
 }
 
 .utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
