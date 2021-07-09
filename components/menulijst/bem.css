@@ -15,7 +15,8 @@
 
 .utrecht-menulijst__item a {
   display: block;
-  color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue));
+  color: red;
+  /* color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue)); */
   font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
   background: url("https://huisstijl.utrecht.nl/typo3conf/ext/alternet_sitepackage/Resources/Public/Images/svg/pijltje-blauw.svg")
     0 0.25em no-repeat;
@@ -24,4 +25,8 @@
 
 .utrecht-menulijst__item a:hover {
   color: var(--utrecht-menulijst-item-hover-color, var(--utrecht-link-hover-color, red));
+}
+
+.utrecht-menulijst__link {
+  text-decoration: none;
 }
