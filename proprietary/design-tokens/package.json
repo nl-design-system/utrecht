@@ -1,10 +1,13 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.0",
   "author": "Community for NL Design System",
   "description": "Design Tokens for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "SEE LICENSE IN ../LICENSE.md",
   "name": "@utrecht/design-tokens",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git"
