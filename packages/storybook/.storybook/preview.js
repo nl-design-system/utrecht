@@ -1,10 +1,14 @@
-import '@utrecht/design-tokens/dist/index.css';
+import '@utrecht/design-tokens/dist/theme/index.css';
 import '@utrecht/design-tokens/src/custom.scss';
 import '../../../components/document/bem.css';
 
 import React from 'react';
+import { addDecorator } from '@storybook/html';
+import { withThemes } from 'storybook-addon-themes/html';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 
+addDecorator((story) => `<div class="utrecht-document">${story()}</div>`);
+addDecorator(withThemes);
 defineCustomElements();
 
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
@@ -59,6 +63,8 @@ export const parameters = {
       order: ['Utrecht', ['Introductie'], 'Onderzoek', 'Components', 'Molecules', 'Semantic HTML'],
     },
   },
+  themes: {
+    default: 'Gemeente Utrecht',
+    list: [{ name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' }],
+  },
 };
-
-export const decorators = [(story) => `<div class="utrecht-document">${story()}</div>`];
