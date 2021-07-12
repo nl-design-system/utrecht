@@ -1,5 +1,8 @@
 import '@utrecht/design-tokens/dist/theme/index.css';
 import '@utrecht/design-tokens/src/custom.scss';
+import '@nl-design-system-unstable/amsterdam-design-tokens/dist/theme/index.css';
+import '@nl-design-system-unstable/duo-design-tokens/dist/theme/index.css';
+import '@nl-design-system-unstable/rijkshuisstijl-design-tokens/dist/theme/index.css';
 import '../../../components/document/bem.css';
 
 import React from 'react';
@@ -65,6 +68,11 @@ export const parameters = {
   },
   themes: {
     default: 'Gemeente Utrecht',
-    list: [{ name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' }],
+    list: [
+      { name: 'DUO', class: 'duo-theme', color: '#007bc7' },
+      { name: 'Gemeente Amsterdam', class: 'amsterdam-theme', color: '#ec0000' },
+      { name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' },
+      { name: 'Rijkshuisstijl', class: 'rijkshuisstijl-theme', color: '#007bc7' },
+    ],
   },
 };
