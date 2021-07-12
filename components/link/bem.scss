@@ -33,3 +33,7 @@
   text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
   @include utrecht-focus();
 }
+
+.utrecht-link--telephone {
+  white-space: nowrap;
+}
