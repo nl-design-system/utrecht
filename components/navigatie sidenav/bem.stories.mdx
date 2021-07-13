@@ -14,8 +14,7 @@ import "./bem.scss";
 
 import README from "./README.md";
 
-export const Template = ({ items }) => `<div class="utrecht-navhtml">
-   <nav class="utrecht-sidenav">
+export const Template = ({ items }) => `<nav class="utrecht-sidenav">
     <ul class="utrecht-sidenav__list">${items
       .map(
         ({ href, title, current, focus, children, sibling }) => `<li class="${clsx(
@@ -48,7 +47,6 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
       .join("")}
     </ul>
   </nav>
-</div>
 `;
 
 <Meta
