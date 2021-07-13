@@ -28,9 +28,9 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
             focus && "utrecht-sidenav__link--focus",
             sibling && "utrecht-sidenav__link--sibling"
           )}" href="${href}">${title}</a>
-          <ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${
+          ${
             children
-              ? children
+              ? `<ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${children
                   .map(
                     ({ href, title, current, focus }) =>
                       `<li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="${clsx(
@@ -39,9 +39,10 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
                         focus && "utrecht-sidenav__link--focus"
                       )}" href="${href}">${title}</a></li>`
                   )
-                  .join("")
+                  .join("")}
+          </ul>`
               : ""
-          }</ul>
+          }
         </li>`
       )
       .join("")}
