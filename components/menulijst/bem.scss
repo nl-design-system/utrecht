@@ -1,7 +1,7 @@
 @import "../focus/bem";
 
-.utrecht-navhtml{
- width: 20rem;  
+.utrecht-navhtml {
+  width: 20rem;
 }
 
 .utrecht-menulijst {
@@ -10,7 +10,7 @@
   font-family: var(--document-font-family);
   padding-block-start: var(--utrecht-space-block-sm);
   padding-block-end: var(--utrecht-space-block-sm);
-  padding-inline-start: 0;  
+  padding-inline-start: 0;
 }
 
 .utrecht-menulijst__item {
