@@ -4,11 +4,9 @@ import '../../../components/document/bem.css';
 
 import React from 'react';
 import { addDecorator } from '@storybook/html';
-import { withThemes } from 'storybook-addon-themes/html';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 
-addDecorator((story) => `<div class="utrecht-document">${story()}</div>`);
-addDecorator(withThemes);
+addDecorator((story) => `<div class="utrecht-document utrecht-theme">${story()}</div>`);
 defineCustomElements();
 
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
