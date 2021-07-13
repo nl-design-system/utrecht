@@ -1,3 +1,5 @@
+@import "../focus/bem";
+
 .utrecht-menulijst {
   border-top: 2px solid var(--utrecht-color-grey-90);
   border-bottom: 2px solid var(--utrecht-color-grey-90);
@@ -13,20 +15,21 @@
   list-style: none;
 }
 
-.utrecht-menulijst__item a {
+.utrecht-menulijst__item a:link {
   display: block;
-  color: red;
-  /* color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue)); */
+  color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue));
   font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
   background: url("https://huisstijl.utrecht.nl/typo3conf/ext/alternet_sitepackage/Resources/Public/Images/svg/pijltje-blauw.svg")
     0 0.25em no-repeat;
   padding-inline-start: 1em;
+  text-decoration: none;
 }
 
 .utrecht-menulijst__item a:hover {
   color: var(--utrecht-menulijst-item-hover-color, var(--utrecht-link-hover-color, red));
 }
 
-.utrecht-menulijst__link {
-  text-decoration: none;
+.utrecht-menulijst__link--focus,
+.utrecht-menulijst__link:not(.utrecht-menulijst__link--disabled):focus {
+  @include utrecht-focus;
 }
