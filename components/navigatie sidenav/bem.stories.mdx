@@ -17,16 +17,18 @@ import README from "./README.md";
 export const Template = ({ items }) => `<nav class="utrecht-sidenav">
     <ul class="utrecht-sidenav__list">${items
       .map(
-        ({ href, title, current, focus, children, sibling }) => `<li class="${clsx(
+        ({ href, title, current, focus, children, sibling, haschildren }) => `<li class="${clsx(
           "utrecht-sidenav__item",
-          sibling && "utrecht-sidenav__item--sibling"
+          sibling && "utrecht-sidenav__item--sibling",
+          haschildren && "utrecht-sidenav__item--has-children"
         )}">
           <a class="${clsx(
             "utrecht-sidenav__link",
             current && "utrecht-sidenav__link--current",
             focus && "utrecht-sidenav__link--focus",
-            sibling && "utrecht-sidenav__link--sibling"
-          )}" href="${href}">${title}</a>
+            sibling && "utrecht-sidenav__link--sibling",
+            haschildren && "utrecht-sidenav__link--has-children"
+          )}" href="${href}">${title}</a><span></span>
           ${
             children
               ? `<ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${children
@@ -82,6 +84,7 @@ export const Template = ({ items }) => `<nav class="utrecht-sidenav">
           href: "#",
           title: "Crumb #4",
           current: true,
+          haschildren: true,
           children: [
             { href: "#", title: "Child 1" },
             { href: "#", title: "Child 2 :focus", focus: true },
@@ -107,6 +110,7 @@ export const Template = ({ items }) => `<nav class="utrecht-sidenav">
           href: "#",
           title: "Crumb #4",
           current: true,
+          haschildren: true,
           children: [
             { href: "#", title: "Child 1" },
             { href: "#", title: "Child 2" },
@@ -134,10 +138,10 @@ export const Template = ({ items }) => `<nav class="utrecht-sidenav">
         {
           href: "#",
           title: "Bomen",
-          current: true,
+          haschildren: true,
           children: [
             { href: "#", title: "Bomennieuws" },
-            { href: "#", title: "Bomen planten en kappen" },
+            { href: "#", title: "Bomen planten en kappen", current: true },
             { href: "#", title: "Bomenzorg en bomenbeleid" },
             { href: "#", title: "Ziekten en plagen" },
             { href: "#", title: "Overlast bomen" },
