@@ -13,6 +13,7 @@
   font-family: var(--utrecht-document-font-family, sans-serif);
   font-style: normal; /* no inheritance */
   font-weight: var(--utrecht-badge-counter-font-weight, var(--utrecht-badge-font-weight, bold)); /* no inheritance */
+  font-size: var(--utrecht-badge-counter-font-size, var(--utrecht-badge-font-size));
   padding-block-end: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-block-start: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-inline-end: var(--utrecht-badge-counter-padding-inline, var(--utrecht-badge-padding-inline, 0.5ch));
