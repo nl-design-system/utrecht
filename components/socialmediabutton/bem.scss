@@ -5,34 +5,40 @@
 
 @import "../focus/bem";
 
+.utrecht-link-social a {
+  position: relative;
+  display: inline-block;
+  width: 3.8em;
+  height: 3.8em;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  margin-right: .6em;
+}
+
 .utrecht-link-social .facebook {
   background: #c00 url(link-social-facebook.svg) no-repeat center center;
   background-size: 30px 30px;
 }
 
-.utrecht-link-social a {
-  position: relative;
-  display: inline-block;
-  width: 2.4em;
-  height: 2.4em;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  margin-right: .6em;
-  background-size: 2em!important;
+.utrecht-link-social .instagram {
+  background: #c00 url(link-social-instagram.svg) no-repeat center center;
+  background-size: 30px 30px;
 }
 
+.utrecht-link-social .linkedin {
+  background: #c00 url(link-sociallinkedin.svg) no-repeat center center;
+  background-size: 30px 30px;
+}
 
+.utrecht-link-social .twitter {
+  background: #c00 url(link-social-twitter.svg) no-repeat center center;
+  background-size: 30px 30px;
+}
 
-// .utrecht-link-social a span {
-//   display: inline-block!important;
-//   width: 1px;
-//   height: 1px;
-//   position: absolute!important;
-//   overflow: hidden;
-//   margin: -1px;
-//   padding: 0;
-//   border: 0;
-// }
+.utrecht-link-social .whatsapp {
+  background: #c00 url(link-social-whatsapp.svg) no-repeat center center;
+  background-size: 30px 30px;
+}
 
 .utrecht-link-social--focus {
   @include utrecht-focus;
