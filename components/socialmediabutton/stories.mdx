@@ -9,9 +9,9 @@ import README from "./README.md";
 //import contentGuidelines from "./docs/content-guidelines.md";
 //import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ url, class }) => `
+export const Template = ({ url, className }) => `
 <div class="utrecht-link-social">
-<a href=${url} class=${class}></a>
+<a href=${url} class=${className}></a>
 </div>
 `;
 
@@ -42,23 +42,23 @@ export const Template = () => `
 />
 
 <Canvas>
-  <Story name="Facebook Link" args={{ url:"https://www.facebook.com/GemeenteUtrecht", class: "facebook"}} >{Template.bind({})}</Story>
+  <Story name="Facebook Link" args={{ url:"https://www.facebook.com/GemeenteUtrecht", className: "facebook"}} >{Template.bind({})}</Story>
 </Canvas>
 
 <Canvas>
-  <Story name="Instagram Link" args={{ url:"https://www.instagram.com/GemeenteUtrecht/", class: "instagram"}} >{Template.bind({})}</Story>
+  <Story name="Instagram Link" args={{ url:"https://www.instagram.com/GemeenteUtrecht/", className: "instagram"}} >{Template.bind({})}</Story>
 </Canvas>
 
 <Canvas>
-  <Story name="LinkedIn Link" args={{ url:"https://nl.linkedin.com/company/gemeente-utrecht", class: "linkedin"}} >{Template.bind({})}</Story>
+  <Story name="LinkedIn Link" args={{ url:"https://nl.linkedin.com/company/gemeente-utrecht", className: "linkedin"}} >{Template.bind({})}</Story>
 </Canvas>
 
 <Canvas>
-  <Story name="Twitter Link" args={{ url:"https://twitter.com/gemeenteutrecht", class: "twitter"}} >{Template.bind({})}</Story>
+  <Story name="Twitter Link" args={{ url:"https://twitter.com/gemeenteutrecht", className: "twitter"}} >{Template.bind({})}</Story>
 </Canvas>
 
 <Canvas>
-  <Story name="WhatsApp Link" args={{ url:"https://api.whatsapp.com/send?phone=31624927665", class: "whatsapp"}} >{Template.bind({})}</Story>
+  <Story name="WhatsApp Link" args={{ url:"https://api.whatsapp.com/send?phone=31624927665", className: "whatsapp"}} >{Template.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Social Media Links" />
