@@ -1,32 +1,25 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import dedent from "ts-dedent";
 
-<!-- Import component and component styles -->
-
-import "./bem.css";
-
-<!-- Import Docs -->
-
+import "./bem.scss";
 import README from "./README.md";
 
-export const Template = () =>
-  `<div class="utrecht-html">
-    <ul class="utrecht-menulijst">
+export const Template = ({ href = "https://example.com/" }) =>
+  dedent`<ul class="utrecht-menulijst">
         <li class="utrecht-menulijst__item utrecht-menulijst__item--active">
-          <a href="#">menu item label #1</a>
+          <a class="utrecht-menulijst__link" href="${href}">Menu item label #1</a>
         </li>
         <li class="utrecht-menulijst__item">
-          <a href="#">menu item label #2</a>
+          <a class="utrecht-menulijst__link" href="${href}">Menu item label #2</a>
         </li>
          <li class="utrecht-menulijst__item">
-          <a href="#">menu item label #3</a>
+          <a class="utrecht-menulijst__link" href="${href}">Menu item label #3</a>
         </li>
     </ul>
-</div>
 `;
 
 <Meta
   title="Components/Menulijst"
-  argTypes={{}}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -36,20 +29,17 @@ export const Template = () =>
     },
     notes: {
       UX: README,
-      //Content: contentGuidelines,
-      // Accessibility: accessibilityGuidelines
     },
   }}
+  decorators={[
+    (story) => `<div style="max-inline-size: var(--utrecht-sidebar-max-inline-size, 20rem)">${story()}</div>`,
+  ]}
 />
 
-# Demo Implemented menulijst Component
-
-To use the component as a web component, make sure the component is defined by including the components `element.js` file
+# Menulijst
 
 <Canvas>
-  <Story name="menulijst" args={{ href: "#", content: "menulijst" }}>
-    {Template.bind({})}
-  </Story>
+  <Story name="menulijst">{Template.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="menulijst" />
