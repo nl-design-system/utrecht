@@ -29,7 +29,6 @@
   color: var(--utrecht-menulijst-item-hover-color, var(--utrecht-link-hover-color, red));
 }
 
-.utrecht-menulijst__link--focus,
-.utrecht-menulijst__link:not(.utrecht-menulijst__link--disabled):focus {
+.utrecht-menulijst__link--focus {
   @include utrecht-focus;
 }
