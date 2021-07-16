@@ -3,7 +3,7 @@ import '@utrecht/design-tokens/src/custom.scss';
 import '../../../components/document/bem.css';
 
 import React from 'react';
-import { addDecorator } from '@storybook/html';
+import { addDecorator } from '@storybook/react';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 
 addDecorator((story) => `<div class="utrecht-document utrecht-theme">${story()}</div>`);
