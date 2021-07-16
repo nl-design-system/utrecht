@@ -1,0 +1,55 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+@import "../focus/bem";
+
+.utrecht-mapcontrolbutton {
+  color: var(--utrecht-mapcontrolbutton-color);
+  border-color: var(--utrecht-mapcontrolbutton-border-color);
+  background-color: var(--utrecht-mapcontrolbutton-background-color);
+  border-radius: var(--utrecht-mapcontrolbutton-border-radius);
+  border-width: var(--utrecht-mapcontrolbutton-border-width);
+  border-style: var(--utrecht-mapcontrolbutton-border-style);
+  width: var(--utrecht-mapcontrolbutton-width);
+  height: var(--utrecht-mapcontrolbutton-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.utrecht-mapcontrolbutton .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-color);
+}
+
+.utrecht-mapcontrolbutton:disabled,
+.utrecht-mapcontrolbutton--disabled {
+  color: var(--utrecht-mapcontrolbutton-disabled-color);
+  background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
+  border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
+}
+
+.utrecht-mapcontrolbutton--disabled .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-disabled-color);
+}
+
+.utrecht-mapcontrolbutton--focus,
+.utrecht-mapcontrolbutton:not(.utrecht-mapcontrolbutton--disabled):focus {
+  @include utrecht-focus;
+}
+
+.utrecht-mapcontrolbutton--focus .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+}
+
+.utrecht-mapcontrolbutton--hover:not(:disabled),
+.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
+  color: var(--utrecht-mapcontrolbutton-color);
+  background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
+}
+
+.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
+  fill: var(--utrecht-mapcontrolbutton-color);
+}

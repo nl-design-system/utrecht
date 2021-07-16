@@ -7,17 +7,18 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 
-import "./bem.css";
+import "./bem.scss";
 
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ content, active, focus, hover, visited }) =>
-  `<a href="#" class="${clsx("utrecht-link", {
+export const Template = ({ content, active, focus, hover, visited, telephone, href }) =>
+  `<a href="${href || "#"}" class="${clsx("utrecht-link", {
     "utrecht-link--active": active,
     "utrecht-link--focus": focus,
     "utrecht-link--hover": hover,
     "utrecht-link--visited": visited,
+    "utrecht-link--telephone": telephone,
   })}">${content}</a>`;
 
 <Meta
@@ -45,6 +46,11 @@ export const Template = ({ content, active, focus, hover, visited }) =>
     },
     visited: {
       description: "Visited",
+      control: "boolean",
+      defaultValue: false,
+    },
+    telephone: {
+      description: "Link to telephone number",
       control: "boolean",
       defaultValue: false,
     },
@@ -99,6 +105,21 @@ Styling via the `.utrecht-link--visited` class name:
 
 <Canvas>
   <Story name="Link visited" args={{ visited: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-link--telephone` class name. Avoid line wrap within the telephone number, it is much clearer to see it on one line.
+
+<Canvas>
+  <Story
+    name="Telephone link"
+    args={{
+      href: "tel:+31555385385",
+      content: "+31 555 385 385",
+      telephone: true,
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

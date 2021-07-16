@@ -1,0 +1,79 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const StressedTemplate = ({ content }) => `<em>${content}</em>`;
+
+export const StrongTemplate = ({ content }) => `<strong>${content}</strong>`;
+
+export const Template = ({ content, stressed, strong }) => {
+  let formatted = content;
+  if (stressed) {
+    formatted = StressedTemplate({ content: formatted });
+  }
+  if (strong) {
+    formatted = StrongTemplate({ content: formatted });
+  }
+  return `<div class="utrecht-html">${formatted}</div>`;
+};
+
+<Meta
+  title="Semantic HTML/Emphasis"
+  argTypes={{
+    content: {
+      description: "Set the text content",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+    stressed: {
+      description: "Stressed emphasis",
+      control: "boolean",
+      defaultValue: false,
+    },
+    strong: {
+      description: "Strong emphasis: very important or urgent content",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Emphasis
+
+<Canvas>
+  <Story name="Emphasis" args={{ stressed: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Emphasis" />
+
+## Strong emphasis
+
+<Canvas>
+  <Story name="Strong Emphasis" args={{ strong: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

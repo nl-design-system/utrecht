@@ -3,3 +3,9 @@ node_modules
 
 # Ignore generated files
 dist
+
+# Ignore generated files from Stencil
+components/components.d.ts
+packages/web-component-library-stencil/loader
+packages/web-component-library-react/src/react-component-lib/
+packages/web-component-library-react/src/components.ts

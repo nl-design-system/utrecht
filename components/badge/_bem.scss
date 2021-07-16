@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-badge {
+  background-color: var(--utrecht-badge-background-color, hsl(0 0% 0%));
+  border-radius: var(--utrecht-badge-border-radius, 0.5ch);
+  color: var(--utrecht-badge-color, hsl(0 0% 100%));
+  display: inline-block;
+  font-family: var(--utrecht-document-font-family, sans-serif);
+  font-style: normal; /* no inheritance */
+  font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
+  padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);
+  padding-inline-start: var(--utrecht-badge-padding-inline, 0.5ch);
+  text-decoration: none; /* no inheritance */
+}

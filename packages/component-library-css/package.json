@@ -1,10 +1,13 @@
 {
-  "version": "0.0.1",
+  "version": "1.0.0-alpha.10",
   "author": "Community for NL Design System",
   "description": "Component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@utrecht/component-library",
-  "private": true,
+  "name": "@utrecht/component-library-css",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git"
@@ -13,7 +16,7 @@
     "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
     "node-sass-package-importer": "5.3.2",
     "rimraf": "3.0.2",
-    "sass": "1.32.12"
+    "sass": "1.35.2"
   },
   "scripts": {
     "prebuild": "npm run clean",

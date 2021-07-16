@@ -1,0 +1,61 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, lead }) => `<utrecht-paragraph ${lead ? 'lead="true"' : ""}">${content}</p>`;
+
+export const TemplateMulti = ({ content }) =>
+  `<utrecht-paragraph lead="true">${content}</utrecht-paragraph>
+<utrecht-paragraph">${content}</utrecht-paragraph>
+<utrecht-paragraph">${content}</utrecht-paragraph>`;
+
+<Meta
+  title="Web Component/Paragraph"
+  argTypes={{
+    content: {
+      description: "Paragraph text",
+      control: "text",
+      defaultValue:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    },
+    lead: {
+      description: "Lead paragraph",
+      control: "boolean",
+      defaultValue: false,
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Paragraph
+
+<Canvas>
+  <Story name="Paragraph">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Paragraph" />
+
+## Lead paragraph
+
+<Canvas>
+  <Story name="Lead paragraph" args={{ lead: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

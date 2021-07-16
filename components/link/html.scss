@@ -24,3 +24,7 @@
 .utrecht-html a:focus {
   @extend .utrecht-link--focus;
 }
+
+.utrecht-html a[href^="tel:" i] {
+  @extend .utrecht-link--telephone;
+}

@@ -2,5 +2,13 @@
   "npmClient": "npm",
   "version": "independent",
   "useWorkspaces": true,
-  "command": {}
+  "command": {
+    "publish": {},
+    "version": {
+      "allowBranch": ["main", "ci/publish"],
+      "conventionalCommits": true,
+      "exact": true,
+      "message": "docs(release): design system packages"
+    }
+  }
 }

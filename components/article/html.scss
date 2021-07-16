@@ -1,0 +1,10 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./bem";
+
+.utrecht-html article {
+  @extend .utrecht-article;
+}

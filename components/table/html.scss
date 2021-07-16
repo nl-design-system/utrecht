@@ -1,0 +1,67 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./bem";
+
+.utrecht-html table {
+  @extend .utrecht-table;
+  @extend .utrecht-table--distanced;
+}
+
+.utrecht-html caption {
+  @extend .utrecht-table__caption;
+}
+
+.utrecht-html thead {
+  @extend .utrecht-table__header;
+}
+
+.utrecht-html tbody {
+  @extend .utrecht-table__body;
+}
+
+.utrecht-html th {
+  @extend .utrecht-table__heading;
+}
+
+.utrecht-html th,
+.utrecht-html td {
+  @extend .utrecht-table__cell;
+}
+
+.utrecht-html td:first-child,
+.utrecht-html th:first-child {
+  @extend .utrecht-table__cell--first;
+}
+
+.utrecht-html td:last-child,
+.utrecht-html th:last-child {
+  @extend .utrecht-table__cell--last;
+}
+
+.utrecht-html thead tr:last-child th {
+  @extend .utrecht-table__cell--last-header-row;
+}
+
+.utrecht-html th.numeric,
+.utrecht-html td.numeric {
+  @extend .utrecht-table__cell--numeric;
+}
+
+.utrecht-html table.alternate-row-color {
+  & > tr:nth-child(odd) > td,
+  & > tr:nth-child(odd) > th,
+  & > tbody > tr:nth-child(odd) > td,
+  & > tbody > tr:nth-child(odd) > th {
+    @extend .utrecht-table__row--alternate-odd;
+  }
+
+  & > tr:nth-child(even) > td,
+  & > tr:nth-child(even) > th,
+  & > tbody > tr:nth-child(even) > td,
+  & > tbody > tr:nth-child(even) > th {
+    @extend .utrecht-table__row--alternate-even;
+  }
+}

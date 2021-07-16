@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0-alpha.9",
+  "author": "Community for NL Design System",
+  "description": "Component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/web-component-library-react",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc -p .",
+    "clean": "rimraf dist/",
+    "rollup": "rollup -c"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "devDependencies": {
+    "@types/jest": "23.3.9",
+    "@types/node": "15.12.5",
+    "@types/react": "16.7.6",
+    "@types/react-dom": "16.0.9",
+    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil/",
+    "jest": "23.6.0",
+    "jest-dom": "3.5.0",
+    "np": "3.1.0",
+    "react": "16.7.0",
+    "react-dom": "16.7.0",
+    "rimraf": "3.0.2",
+    "typescript": "3.9.10"
+  },
+  "peerDependencies": {
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "setupTestFrameworkScriptFile": "<rootDir>/jest.setup.js",
+    "testPathIgnorePatterns": [
+      "node_modules",
+      "dist"
+    ]
+  }
+}

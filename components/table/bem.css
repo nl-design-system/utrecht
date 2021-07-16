@@ -1,0 +1,84 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.utrecht-table--distanced {
+  margin-block-end: var(--utrecht-table-margin-block-end);
+  margin-block-start: var(--utrecht-table-margin-block-start);
+}
+
+.utrecht-table__caption {
+  font-weight: var(--utrecht-table-caption-font-weight);
+  font-family: var(--utrecht-table-caption-font-family);
+  font-size: var(--utrecht-table-caption-font-size);
+  color: var(--utrecht-table-caption-color);
+  line-height: var(--utrecht-table-caption-line-height);
+  margin-block-end: var(--utrecht-table-caption-margin-block-end);
+  text-align: var(--utrecht-table-caption-text-align, center);
+}
+
+.utrecht-table__header {
+  font-weight: var(--utrecht-table-header-font-weight);
+  color: var(--utrecht-table-header-color);
+  text-transform: var(--utrecht-table-header-text-transform);
+  vertical-align: bottom;
+}
+
+.utrecht-table__cell--last-header-row {
+  border-block-end-style: solid;
+  border-block-end-color: var(--utrecht-table-header-border-block-end-color, transparent);
+  border-block-end-width: var(--utrecht-table-header-border-block-end-width, 0);
+}
+
+.utrecht-table__body {
+  vertical-align: baseline;
+}
+
+.utrecht-table__heading {
+  font-weight: var(--utrecht-table-heading-font-weight);
+  color: var(--utrecht-table-heading-color);
+  text-transform: var(--utrecht-table-heading-text-transform);
+}
+
+.utrecht-table__cell {
+  border-block-end-style: solid;
+  border-block-end-color: var(--utrecht-table-row-border-block-end-color, transparent);
+  border-block-end-width: var(--utrecht-table-row-border-block-end-width, 0);
+  line-height: var(--utrecht-table-cell-line-height, inherit);
+  padding-inline-start: var(--utrecht-table-cell-padding-inline-start, 0);
+  padding-inline-end: var(--utrecht-table-cell-padding-inline-end, 0);
+  padding-block-start: var(--utrecht-table-cell-padding-block-start, 0);
+  padding-block-end: var(--utrecht-table-cell-padding-block-end, 0);
+  text-align: start;
+}
+
+.utrecht-table__cell--first {
+  padding-inline-start: var(
+    --utrecht-table-row-padding-inline-start,
+    var(--utrecht-table-cell-padding-inline-start, 0)
+  );
+}
+
+.utrecht-table__cell--last {
+  padding-inline-end: var(--utrecht-table-row-padding-inline-end, var(--utrecht-table-cell-padding-inline-end, 0));
+}
+
+.utrecht-table__cell--numeric {
+  /* stylelint-disable-next-line declaration-property-value-disallowed-list */
+  text-align: right;
+}
+
+.utrecht-table__row--alternate-odd {
+  background-color: var(--utrecht-table-row-alternate-odd-background-color);
+  color: var(--utrecht-table-row-alternate-odd-color);
+}
+
+.utrecht-table__row--alternate-even {
+  background-color: var(--utrecht-table-row-alternate-even-background-color);
+  color: var(--utrecht-table-row-alternate-even-color);
+}

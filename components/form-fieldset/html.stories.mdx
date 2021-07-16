@@ -1,0 +1,65 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./html.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ content, legend }) =>
+  `<div class="utrecht-html">
+  <fieldset>
+    ${legend ? `<legend>${legend}</legend>` : ""}
+    ${content}
+  </fieldset>
+</div>`;
+
+<Meta
+  title="Semantic HTML/Form fieldset"
+  argTypes={{
+    content: {
+      description: "Set the content of the fieldset",
+      control: "text",
+    },
+    legende: {
+      description: "Set the content of the legend",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Fieldset
+
+Styling via the `<fieldset>` and `<legend>` elements:
+
+<Canvas>
+  <Story
+    name="Fieldset"
+    args={{
+      content: "<p>Fieldset body</p>",
+      legend: "Fieldset legend",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Fieldset" />

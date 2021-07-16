@@ -1,0 +1,98 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ level, content }) =>
+  `<section>
+  <utrecht-heading level="${level}">${content}</utrecht-heading>
+</section>`;
+
+<Meta
+  title="Web Component/Heading"
+  argTypes={{
+    level: {
+      description: "Heading level",
+      type: "number",
+      defaultValue: "1",
+    },
+    content: {
+      description: "Set the content of the heading",
+      control: "text",
+      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Heading components
+
+<Canvas>
+  <Story name="Heading">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Heading" />
+
+## Heading 1
+
+<Canvas>
+  <Story name="Heading 1" args={{ level: 1 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 2
+
+<Canvas>
+  <Story name="Heading 2" args={{ level: 2 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 3
+
+<Canvas>
+  <Story name="Heading 3" args={{ level: 3 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 4
+
+<Canvas>
+  <Story name="Heading 4" args={{ level: 4 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 5
+
+<Canvas>
+  <Story name="Heading 5" args={{ level: 5 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Heading 6
+
+<Canvas>
+  <Story name="Heading 6" args={{ level: 6 }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

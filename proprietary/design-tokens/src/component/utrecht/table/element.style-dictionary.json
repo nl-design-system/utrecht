@@ -1,0 +1,40 @@
+{
+  "utrecht": {
+    "table": {
+      "caption": {
+        "font-size": { "value": "1.125em" },
+        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" },
+        "font-family": {},
+        "color": {},
+        "line-height": {},
+        "text-align": { "value": "start" },
+        "margin-block-end": { "value": "1em" }
+      },
+      "header": {
+        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" },
+        "color": {},
+        "text-transform": {},
+        "border-block-end-color": { "value": "{utrecht.color.red.40.value}" },
+        "border-block-end-width": { "value": "{utrecht.border-width.md.value}" }
+      },
+      "heading": {
+        "font-weight": {},
+        "color": {},
+        "text-transform": {}
+      },
+      "cell": {
+        "line-height": {},
+        "padding-block-end": { "value": "0.5em" },
+        "padding-block-start": { "value": "0.5em" },
+        "padding-inline-end": { "value": "0" },
+        "padding-inline-start": { "value": "0.4em" }
+      },
+      "row": {
+        "padding-inline-end": {},
+        "padding-inline-start": {},
+        "border-block-end-width": { "value": "{utrecht.border-width.sm.value}" },
+        "border-block-end-color": { "value": "{utrecht.color.grey.90.value}" }
+      }
+    }
+  }
+}
