@@ -1,30 +1,25 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-
-<!-- Import component and component styles -->
+import dedent from "ts-dedent";
 
 import "./bem.scss";
-
-<!-- Import Docs -->
-
 import README from "./README.md";
 
-export const Template = () =>
-  `<ul class="utrecht-menulijst">
+export const Template = ({ href = "https://example.com/" }) =>
+  dedent`<ul class="utrecht-menulijst">
         <li class="utrecht-menulijst__item utrecht-menulijst__item--active">
-          <a class="utrecht-menulijst__link" href="#">Menu item label #1</a>
+          <a class="utrecht-menulijst__link" href="${href}">Menu item label #1</a>
         </li>
         <li class="utrecht-menulijst__item">
-          <a class="utrecht-menulijst__link" href="#">Menu item label #2</a>
+          <a class="utrecht-menulijst__link" href="${href}">Menu item label #2</a>
         </li>
          <li class="utrecht-menulijst__item">
-          <a class="utrecht-menulijst__link" href="#">Menu item label #3</a>
+          <a class="utrecht-menulijst__link" href="${href}">Menu item label #3</a>
         </li>
     </ul>
 `;
 
 <Meta
   title="Components/Menulijst"
-  argTypes={{}}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -34,8 +29,6 @@ export const Template = () =>
     },
     notes: {
       UX: README,
-      //Content: contentGuidelines,
-      // Accessibility: accessibilityGuidelines
     },
   }}
   decorators={[
@@ -43,14 +36,10 @@ export const Template = () =>
   ]}
 />
 
-# Demo Implemented menulijst Component
-
-To use the component as a web component, make sure the component is defined by including the components `element.js` file
+# Menulijst
 
 <Canvas>
-  <Story name="menulijst" args={{ href: "#", content: "menulijst" }}>
-    {Template.bind({})}
-  </Story>
+  <Story name="menulijst">{Template.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="menulijst" />
