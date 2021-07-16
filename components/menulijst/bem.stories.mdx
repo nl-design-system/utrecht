@@ -9,8 +9,7 @@ import "./bem.scss";
 import README from "./README.md";
 
 export const Template = () =>
-  `<div class="utrecht-navhtml">
-    <ul class="utrecht-menulijst">
+  `<ul class="utrecht-menulijst">
         <li class="utrecht-menulijst__item utrecht-menulijst__item--active">
           <a class="utrecht-menulijst__link" href="#">Menu item label #1</a>
         </li>
@@ -21,7 +20,6 @@ export const Template = () =>
           <a class="utrecht-menulijst__link" href="#">Menu item label #3</a>
         </li>
     </ul>
-</div>
 `;
 
 <Meta
@@ -40,6 +38,9 @@ export const Template = () =>
       // Accessibility: accessibilityGuidelines
     },
   }}
+  decorators={[
+    (story) => `<div style="max-inline-size: var(--utrecht-sidebar-max-inline-size, 20rem)">${story()}</div>`,
+  ]}
 />
 
 # Demo Implemented menulijst Component
