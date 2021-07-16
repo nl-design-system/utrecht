@@ -25,6 +25,10 @@
   @extend .utrecht-link--focus;
 }
 
+.utrecht-html a[rel~="external" i] {
+  @extend .utrecht-link--external;
+}
+
 .utrecht-html a[href^="tel:" i] {
   @extend .utrecht-link--telephone;
 }
