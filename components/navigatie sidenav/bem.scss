@@ -242,6 +242,7 @@ ul.utrecht-sidenav__list:has {
   display: none;
 }
 
+.utrecht-sidenav__link:focus,
 .utrecht-sidenav__link--focus {
   @include utrecht-focus();
 }

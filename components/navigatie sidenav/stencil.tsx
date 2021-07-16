@@ -1,4 +1,4 @@
-import { Component, Prop, State, Watch, h } from "@stencil/core";
+import { Component, Prop, h } from "@stencil/core";
 import clsx from "clsx";
 
 @Component({
@@ -9,16 +9,6 @@ import clsx from "clsx";
 export class Sidenav {
   @Prop() json: string;
 
-  @Watch("json") handleJSON(json) {
-    try {
-      this.items = JSON.parse(json);
-      console.log(1, json);
-      console.log(2, this.items);
-    } catch (e) {}
-  }
-
-  @State() items = [];
-
   render() {
     const items = JSON.parse(this.json);
 
@@ -27,6 +17,7 @@ export class Sidenav {
         <ul class="utrecht-sidenav__list">
           {items.map(({ href, title, current, focus, children, sibling, haschildren }) => (
             <li
+              key={href}
               class={clsx(
                 "utrecht-sidenav__item",
                 sibling && "utrecht-sidenav__item--sibling",
@@ -49,7 +40,7 @@ export class Sidenav {
               {children ? (
                 <ul class="utrecht-sidenav__list utrecht-sidenav__list--child">
                   {children.map(({ href, title, current, focus }) => (
-                    <li class="utrecht-sidenav__item utrecht-sidenav__item--child">
+                    <li key={href} class="utrecht-sidenav__item utrecht-sidenav__item--child">
                       <a
                         class={clsx(
                           "utrecht-sidenav__link utrecht-sidenav__link--child",
