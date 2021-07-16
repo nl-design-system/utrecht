@@ -57,7 +57,7 @@
 /* .utrecht-sidenav__item--has-children span */ {
   display: block;
   border-block-end: 1px solid var(--utrecht-color-grey-80);
-  margin-inline-start: var(--utrecht-space-inline-xl);
+  margin-inline-start: var(--utrecht-space-inline-sm);
 }
 
 /*Remove bottom padding form first item in list with children*/
@@ -75,8 +75,8 @@
   color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
   padding-block-start: var(--utrecht-space-block-xs);
   padding-block-end: var(--utrecht-space-block-xs);
-  padding-inline-start: var(--utrecht-space-inline-2xl);
-  padding-inline-end: var(--utrecht-space-inline-xs);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+  padding-inline-end: var(--utrecht-space-inline-3xs);
   margin-inline-start: 0;
   text-decoration: none;
 }
@@ -92,8 +92,8 @@ ul.utrecht-sidenav__list:has {
   text-decoration: none;
   padding-block-start: var(--utrecht-space-block-2xs);
   padding-block-end: var(--utrecht-space-block-2xs);
-  padding-inline-start: var(--utrecht-space-inline-2xl);
-  padding-inline-end: var(--utrecht-space-inline-xs);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+  padding-inline-end: var(--utrecht-space-inline-3xs);
   margin-block-start: 0;
   margin-block-end: 0;
 }
