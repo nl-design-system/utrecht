@@ -53,7 +53,8 @@
 
 /*draw the li item box bottom line*/
 
-.utrecht-sidenav__item span:not(.utrecht-sidenav__item:last-child span, .utrecht-sidenav__item--has-children span) {
+.utrecht-sidenav__item span:not(.utrecht-sidenav__item:last-child span, .utrecht-sidenav__item--has-children span:first-of-type ),
+/* .utrecht-sidenav__item--has-children span */ {
   display: block;
   border-block-end: 1px solid var(--utrecht-color-grey-80);
   margin-inline-start: var(--utrecht-space-inline-xl);
@@ -109,9 +110,13 @@ ul.utrecht-sidenav__list:has {
   width: 8px;
   height: 8px;
   border-radius: 100%;
-  background-color: var(--utrecht-sidenav-item-marker-color);
   z-index: 10;
   box-shadow: 0 0 2px 2px #fff; /*Make var*/
+}
+
+.utrecht-sidenav__link::before,
+.utrecht-sidenav__link--sibling::before {
+  background-color: var(--utrecht-sidenav-item-marker-color);
 }
 
 .utrecht-sidenav__link::before,
@@ -209,8 +214,17 @@ ul.utrecht-sidenav__list:has {
   height: 4px;
   border-radius: 100%;
   border: 2px solid var(--utrecht-sidenav-link-color);
-  background-color: transparent;
   z-index: 10;
+}
+
+.utrecht-sidenav__link--child::before {
+  background-color: transparent;
+}
+
+/* Make current marker dots bold */
+.utrecht-sidenav__link--current::before,
+.utrecht-sidenav__link--child--current::before {
+  background-color: var(--utrecht-sidenav-link-hover-color);
 }
 
 /* Hover layout for mousover on child__link */
