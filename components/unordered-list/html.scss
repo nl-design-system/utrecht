@@ -5,15 +5,15 @@
 
 @import "./bem";
 
-.utrecht-html ul.utrecht-unordered-list {
+.utrecht-html ul {
   @extend .utrecht-unordered-list;
   @extend .utrecht-unordered-list--distanced;
 }
 
-.utrecht-html ul.utrecht-unordered-list > li {
+.utrecht-html ul > li {
   @extend .utrecht-unordered-list__item;
 }
 
-.utrecht-html ul.utrecht-unordered-list > li::marker {
+.utrecht-html ul > li::marker {
   @extend .utrecht-unordered-list__marker;
 }
