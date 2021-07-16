@@ -1,0 +1,163 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 A Herring
+-->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs/blocks";
+import clsx from "clsx";
+
+<!-- Import component and component styles -->
+
+import "./bem.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ items }) => `<nav class="utrecht-sidenav">
+    <ul class="utrecht-sidenav__list">${items
+      .map(
+        ({ href, title, current, focus, children, sibling, haschildren }) => `<li class="${clsx(
+          "utrecht-sidenav__item",
+          sibling && "utrecht-sidenav__item--sibling",
+          haschildren && "utrecht-sidenav__item--has-children"
+        )}">
+          <a class="${clsx(
+            "utrecht-sidenav__link",
+            current && "utrecht-sidenav__link--current",
+            focus && "utrecht-sidenav__link--focus",
+            sibling && "utrecht-sidenav__link--sibling",
+            haschildren && "utrecht-sidenav__link--has-children"
+          )}" href="${href}">${title}</a><span></span>
+          ${
+            children
+              ? `<ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${children
+                  .map(
+                    ({ href, title, current, focus }) =>
+                      `<li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="${clsx(
+                        "utrecht-sidenav__link utrecht-sidenav__link--child",
+                        current && "utrecht-sidenav__link--current utrecht-sidenav__link--child--current",
+                        focus && "utrecht-sidenav__link--focus"
+                      )}" href="${href}">${title}</a></li>`
+                  )
+                  .join("")}
+          </ul><span></span>`
+              : ""
+          }
+        </li>`
+      )
+      .join("")}
+    </ul>
+  </nav>
+`;
+
+<Meta
+  title="Components/Navigatie SideNav"
+  argTypes={{
+    items: {
+      description: "Menu items",
+      control: "array",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Navigatie TopNav
+
+<Canvas>
+  <Story
+    name="Side Nav"
+    args={{
+      items: [
+        { href: "#", title: "Crumb #1" },
+        { href: "#", title: "Crumb #2" },
+        { href: "#", title: "Crumb #3" },
+        {
+          href: "#",
+          title: "Crumb #4",
+          current: true,
+          haschildren: true,
+          children: [
+            { href: "#", title: "Child 1" },
+            { href: "#", title: "Child 2 :focus", focus: true },
+            { href: "#", title: "Child 3" },
+          ],
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Side Nav met Siblings"
+    args={{
+      items: [
+        { href: "#", title: "Crumb #1" },
+        { href: "#", title: "Crumb #2 " },
+        { href: "#", title: "Crumb #3" },
+        {
+          href: "#",
+          title: "Crumb #4",
+          current: true,
+          haschildren: true,
+          children: [
+            { href: "#", title: "Child 1" },
+            { href: "#", title: "Child 2" },
+            { href: "#", title: "Child 3" },
+          ],
+        },
+        { href: "#", title: "Sibling #1", sibling: true },
+        { href: "#", title: "Sibling #2", sibling: true },
+        { href: "#", title: "Sibling #3", sibling: true },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Side Nav voorbeeld"
+    args={{
+      items: [
+        { href: "#", title: "Home" },
+        { href: "#", title: "Wonen en leven" },
+        { href: "#", title: "Parken en groen" },
+        {
+          href: "#",
+          title: "Bomen",
+          haschildren: true,
+          children: [
+            { href: "#", title: "Bomennieuws" },
+            { href: "#", title: "Bomen planten en kappen", current: true },
+            { href: "#", title: "Bomenzorg en bomenbeleid" },
+            { href: "#", title: "Ziekten en plagen" },
+            { href: "#", title: "Overlast bomen" },
+            { href: "#", title: "Zorgvuldig met bomen omgaan" },
+          ],
+        },
+        { href: "#", title: "Parken en plantsoenen", sibling: true },
+        { href: "#", title: "Landgoederen Amelisweerd en Rhijnauwen", sibling: true },
+        { href: "#", title: "Begraafplaatsen", sibling: true },
+        { href: "#", title: "Volkstuinen en stadslandbouw", sibling: true },
+        { href: "#", title: "Dieren", sibling: true },
+        { href: "#", title: "Groenonderhoud", sibling: true },
+        { href: "#", title: "Zelfbeheer", sibling: true },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
