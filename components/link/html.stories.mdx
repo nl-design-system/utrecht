@@ -14,9 +14,9 @@ import "./html.scss";
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ content, href }) =>
+export const Template = ({ content, external, href }) =>
   `<section class="utrecht-html">
-  <a href="${href || "#"}">${content}</a>
+  <a href="${href || "#"}"${external ? ' rel="external noopener noreferrer"' : ""}>${content}</a>
 </section>`;
 
 <Meta
@@ -60,6 +60,20 @@ Styling via the `<a>` element:
     args={{
       href: "tel:+31555385385",
       content: "+31 555 385 385",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## External link
+
+<Canvas>
+  <Story
+    name="External link"
+    args={{
+      external: true,
+      href: "https://example.com/",
     }}
   >
     {Template.bind({})}

@@ -34,6 +34,10 @@
   @include utrecht-focus();
 }
 
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link--external {
+}
+
 .utrecht-link--telephone {
   white-space: nowrap;
 }
