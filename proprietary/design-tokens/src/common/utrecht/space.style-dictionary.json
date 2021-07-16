@@ -15,6 +15,17 @@
         "5xl": { "value": "80px", "comment": "500% / Extra Large 5" }
       },
       "inline": {
+        "3xs": { "value": "2px", "comment": "12.5% / Extra Small 3" },
+        "2xs": { "value": "4px", "comment": "25% / Extra Small 2" },
+        "xs": { "value": "8px", "comment": "50% / Extra Small" },
+        "sm": { "value": "12px", "comment": "75% / Small" },
+        "md": { "value": "16px", "comment": "100% / Medium" },
+        "lg": { "value": "24px", "comment": "150% / Large" },
+        "xl": { "value": "28px", "comment": "175% / Extra Large" },
+        "2xl": { "value": "32px", "comment": "200% / Extra Large 2" },
+        "3xl": { "value": "48px", "comment": "300% / Extra Large 3" }
+      },
+      "text": {
         "3xs": { "value": "0.125ch", "comment": "12.5% / Extra Small 3" },
         "2xs": { "value": "0.25ch", "comment": "25% / Extra Small 2" },
         "xs": { "value": "0.5ch", "comment": "50% / Extra Small" },
