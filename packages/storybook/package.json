@@ -10,29 +10,8 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "devDependencies": {
-    "@babel/core": "7.14.6",
-    "@etchteam/storybook-addon-status": "4.0.0",
     "@percy/storybook": "3.3.1",
-    "@storybook/addon-a11y": "6.3.3",
-    "@storybook/addon-docs": "6.3.3",
-    "@storybook/addon-notes": "5.3.21",
-    "@storybook/addon-viewport": "6.3.3",
-    "@storybook/html": "6.3.3",
-    "@storybook/preset-scss": "1.0.3",
-    "@storybook/theming": "6.3.3",
-    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
-    "babel-loader": "8.2.2",
-    "css-loader": "5.2.4",
-    "dompurify": "2.3.0",
-    "react": "17.0.2",
-    "react-dom": "17.0.2",
-    "rimraf": "3.0.2",
-    "sass": "1.35.2",
-    "sass-loader": "10.1.1",
-    "storybook-design-token": "1.1.1",
-    "style-loader": "2.0.0",
-    "ts-dedent": "2.1.1",
-    "webpack": "4.44.2"
+    "rimraf": "3.0.2"
   },
   "dependencies": {
     "http-server": "0.12.3"
