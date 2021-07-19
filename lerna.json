@@ -5,7 +5,7 @@
   "command": {
     "publish": {},
     "version": {
-      "allowBranch": ["main", "ci/publish"],
+      "allowBranch": ["main"],
       "conventionalCommits": true,
       "exact": true,
       "message": "docs(release): design system packages"
