@@ -13,7 +13,10 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "sideEffects": false,
-  "scripts": {},
+  "scripts": {
+    "build": "ng build",
+    "clean": "rimraf dist/"
+  },
   "peerDependencies": {
     "rxjs": "^6.6.0"
   },
@@ -21,10 +24,12 @@
     "tslib": "2.3.0"
   },
   "devDependencies": {
+    "@angular-devkit/build-angular": "0.1102.14",
     "@angular/cli": "11.2.14",
     "@angular/compiler": "11.2.14",
     "@angular/compiler-cli": "11.2.14",
     "@angular/core": "11.2.14",
+    "@utrecht/web-component-library-stencil": "1.0.0-alpha.15",
     "ng-packagr": "11.2.4",
     "rimraf": "3.0.2"
   }
