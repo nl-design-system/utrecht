@@ -1,0 +1,31 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Angular web components for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/web-component-library-angular",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "sideEffects": false,
+  "scripts": {},
+  "peerDependencies": {
+    "rxjs": "^6.6.0"
+  },
+  "dependencies": {
+    "tslib": "2.3.0"
+  },
+  "devDependencies": {
+    "@angular/cli": "11.2.14",
+    "@angular/compiler": "11.2.14",
+    "@angular/compiler-cli": "11.2.14",
+    "@angular/core": "11.2.14",
+    "ng-packagr": "11.2.4",
+    "rimraf": "3.0.2"
+  }
+}
