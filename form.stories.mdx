@@ -1,0 +1,115 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { UtrechtHtmlContent } from "@utrecht/web-component-library-react";
+
+export const Template = ({ content }) => <UtrechtHtmlContent>{content}</UtrechtHtmlContent>;
+
+<Meta
+  title="Showcase/Form"
+  argTypes={{
+    content: {
+      description: "HTML content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form
+
+<Canvas>
+  <Story
+    name="Form"
+    args={{
+      content: (
+        <form action="https://example.com/" method="post">
+          <p>
+            <label htmlFor="username">Username</label>
+            <input type="text" autocomplete="username" id="username" name="username" />
+          </p>
+          <p>
+            <label for="notes">Notes</label>
+            <textarea id="notes" name="notes"></textarea>
+          </p>
+          <fieldset>
+            <legend>Disabled inputs</legend>
+            <p>
+              <label for="disabled-username">Username</label>
+              <input type="text" autocomplete="username" id="disabled-username" name="username" disabled />
+            </p>
+            <p>
+              <label for="disabled-notes">Notes</label>
+              <textarea id="disabled-notes" name="notes" disabled></textarea>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Read-only inputs</legend>
+            <p>
+              <label for="readonly-username">Username</label>
+              <input
+                type="text"
+                autocomplete="username"
+                id="readonly-username"
+                name="username"
+                value="example"
+                readonly
+              />
+            </p>
+            <p>
+              <label for="readonly-notes">Notes</label>
+              <textarea id="readonly-notes" name="notes" value="example" readonly></textarea>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Inputs with placeholder</legend>
+            <p>
+              <label for="placeholder-username">Username</label>
+              <input
+                type="text"
+                autocomplete="username"
+                id="placeholder-username"
+                name="username"
+                placeholder="Username"
+              />
+            </p>
+            <p>
+              <label for="placeholder-notes">Notes</label>
+              <textarea id="placeholder-notes" name="notes" placeholder="Write some notes"></textarea>
+            </p>
+          </fieldset>
+          <fieldset>
+            <legend>Options</legend>
+            <p>
+              <input type="radio" id="option-a" name="option" value="A" />
+              <label for="option-a">Option A</label>
+            </p>
+            <p>
+              <input type="radio" id="option-b" name="option" value="B" />
+              <label for="option-b">Option B</label>
+            </p>
+          </fieldset>
+          <p>
+            <input type="checkbox" id="eula" name="eula" />
+            <label for="eula">I agree to the terms and conditions</label>
+          </p>
+          <p>
+            <button type="submit">Login</button>
+          </p>
+        </form>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

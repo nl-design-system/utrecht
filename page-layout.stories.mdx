@@ -1,0 +1,61 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import {
+  UtrechtArticle,
+  UtrechtDocument,
+  UtrechtParagraph,
+  UtrechtHtmlContent,
+  UtrechtSeparator,
+} from "@utrecht/web-component-library-react";
+
+export const Template = ({ content }) => <UtrechtHtmlContent>{content}</UtrechtHtmlContent>;
+
+<Meta
+  title="Showcase/Page Layout"
+  argTypes={{
+    content: {
+      description: "HTML content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Page Layout
+
+<Canvas>
+  <Story
+    name="Page Layout"
+    args={{
+      content: (
+        <>
+          <UtrechtDocument>
+            <main>
+              <UtrechtArticle>
+                <UtrechtHtmlContent>
+                  <h1>Heading</h1>
+                  <UtrechtParagraph lead="true">paragraph</UtrechtParagraph>
+                  <UtrechtSeparator></UtrechtSeparator>
+                </UtrechtHtmlContent>
+              </UtrechtArticle>
+            </main>
+            <UtrechtPageFooter></UtrechtPageFooter>
+          </UtrechtDocument>
+        </>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
