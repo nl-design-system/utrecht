@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Angular web components for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/web-component-library-angular",
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "ng build",
+    "clean": "rimraf dist/"
+  },
+  "peerDependencies": {
+    "rxjs": "^6.6.0"
+  },
+  "dependencies": {
+    "tslib": "2.3.0"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "0.1102.14",
+    "@angular/cli": "11.2.14",
+    "@angular/compiler": "11.2.14",
+    "@angular/compiler-cli": "11.2.14",
+    "@angular/core": "11.2.14",
+    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil",
+    "ng-packagr": "11.2.4",
+    "rimraf": "3.0.2"
+  },
+  "main": "dist/bundles/utrecht-web-component-library-angular.umd.js",
+  "module": "dist/fesm2015/utrecht-web-component-library-angular.js",
+  "es2015": "dist/fesm2015/utrecht-web-component-library-angular.js",
+  "esm2015": "dist/esm2015/utrecht-web-component-library-angular.js",
+  "fesm2015": "dist/fesm2015/utrecht-web-component-library-angular.js",
+  "typings": "dist/utrecht-web-component-library-angular.d.ts",
+  "metadata": "dist/utrecht-web-component-library-angular.metadata.json"
+}
