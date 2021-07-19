@@ -37,4 +37,4 @@ const components = [
   imports: [],
   providers: [],
 })
-export class UtrechtWebComponents {}
+export class UtrechtWebComponentsModule {}
