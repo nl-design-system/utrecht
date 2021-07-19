@@ -16,3 +16,12 @@ updates:
       # Stay at webpack 4 until webpack 5 is fully supported by Storybook
       - dependency-name: "webpack"
         update-types: ["version-update:semver-major"]
+      # Stay at React 16 until React 17 is fully supported by Storybook
+      - dependency-name: "@types/react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@types/react-dom"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "react-dom"
+        update-types: ["version-update:semver-major"]
