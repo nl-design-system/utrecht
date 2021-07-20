@@ -59,4 +59,5 @@
 .utrecht-topnav__link:focus,
 .utrecht-topnav__link--focus {
   @include utrecht-focus();
+  color: var(--utrecht-topnav-link-color);
 }
