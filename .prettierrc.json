@@ -19,6 +19,14 @@
       }
     },
     {
+      "files": ["package.json"],
+      "options": {
+        "parser": "json-stringify",
+        "tabWidth": 2,
+        "useTabs": false
+      }
+    },
+    {
       "files": ["*.ts"],
       "options": {
         "parser": "typescript",
