@@ -4,6 +4,8 @@
  * Copyright (c) 2021 A Herring
  */
 
+@import "../focus/bem";
+
 .utrecht-navhtml {
   font-family: var(--utrecht-font-family-sans-serif);
 }
@@ -54,15 +56,7 @@
   background-color: var(--utrecht-topnav-list-background-active);
 }
 
+.utrecht-topnav__link:focus,
 .utrecht-topnav__link--focus {
-  outline: 2px var(--utrecht-topnav-link-focus-border-type) var(--utrecht-topnav-link-focus-outline-color);
-  color: var(--utrecht-topnav-link-focus-color, var(--utrecht-topnav-link-color));
-  /*-webkit-box-shadow: 0 0 0 2px var(--utrecht-link-focus-box-shadow-color);*/
-  box-shadow: 0 0 0 2px var(--utrecht-topnav-link-focus-box-shadow-color);
-  outline-offset: 0;
-  text-decoration: var(
-    --utrecht-topnav-link-focus-text-decoration,
-    var(--utrecht-topnav-link-text-decoration, underline)
-  );
-  background-color: var(--utrecht-topnav-link-focus-background-color); /*#ffd633*/
+  @include utrecht-focus();
 }
