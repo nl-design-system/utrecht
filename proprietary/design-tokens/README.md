@@ -63,7 +63,7 @@ import { utrechtButtonFontSize } from "@utrecht/design-tokens/dist/index.js";
 ### `dist/_variables.scss`
 
 ```scss
-@import "~@nl-design-system-unstable/utrecht-design-tokens/dist/variables";
+@import "~@utrecht/design-tokens/dist/variables";
 
 button {
   font-size: $utrecht-button-font-size;
@@ -75,7 +75,7 @@ SCSS variables are not the preferred way to style components, it is better to us
 However, SCSS variables could be very useful to re-use values where CSS variables cannot be used, like inside CSS media queries:
 
 ```scss
-@import "~@nl-design-system-unstable/utrecht-design-tokens/dist/variables";
+@import "~@utrecht/design-tokens/dist/variables";
 
 @media (min-width: $utrecht-viewport-scale-xl-width) {
   --utrecht-heading-1-font-size: 3rem;
@@ -96,7 +96,7 @@ $body-color: $utrecht-document-color;
 To use the design tokens in your site via CSS variables, first include the design token definitions in the `<head>` section of your HTML page:
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@nl-design-system-unstable/utrecht-design-tokens/dist/index.css" />
+<link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
 ```
 
 Now the CSS variables will be available and you can use of all the design tokens:

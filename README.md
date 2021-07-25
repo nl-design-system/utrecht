@@ -11,11 +11,7 @@ This project is part of a community iniative to use NL Design System components 
 Include the Design Token CSS variables:
 
 ```html
-<link
-  rel="stylesheet"
-  type="text/css"
-  href="https://unpkg.com/@nl-design-system-unstable/utrecht-design-tokens/dist/index.css"
-/>
+<link rel="stylesheet" type="text/css" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
 ```
 
 Combine it with the latest Web Components from the NL Design System community, for example:
@@ -42,19 +38,19 @@ For all dependencies, see what the version is you use while developing and updat
 For _alpha_, _beta_ and _rc_ versions:
 
 ```text
-https://unpkg.com/@nl-design-system-unstable/utrecht-design-tokens/dist/index.css
+https://unpkg.com/@utrecht/design-tokens/dist/index.css
 ```
 
 Above should become:
 
 ```text
-https://unpkg.com/@nl-design-system-unstable/utrecht-design-tokens@1.0.0-alpha.37/dist/index.css
+https://unpkg.com/@utrecht/design-tokens@1.0.0-alpha.10/dist/index.css
 ```
 
 For stable versions it would become:
 
 ```text
-https://unpkg.com/@nl-design-system-unstable/utrecht-design-tokens@^1.0.0/dist/index.css
+https://unpkg.com/@utrecht/design-tokens@^1.0.0/dist/index.css
 ```
 
 ## Contributing
