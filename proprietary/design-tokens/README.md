@@ -52,6 +52,16 @@ Automatically applies all the CSS variables to HTML elements to the `:root` elem
 
 This method should only be used in case there is no control over the HTML template and the `utrecht-theme` class name cannot be included.
 
+### `dist/properties.css`
+
+Experimental CSS `@property` definitions for the design tokens that are configurable via CSS custom properties. Including these definitions is not necessarily side-effect free: with `syntax` _invalid values for custom properties will be ignored_, and `inherits` and `initial-value` declarations can influence behavior. Because [not all browsers support the `@property` declaration](https://caniuse.com/mdn-css_at-rules_property), including this file can result in rendering differences between browsers.
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/properties.css" />
+```
+
+This file should only be included when you have visual regression test for both browsers that do and don't support `@property`.
+
 ### `dist/index.js`
 
 Use files from this package in JavaScript projects, for example in React Native or Storybook:
@@ -162,6 +172,30 @@ Organize the design tokens in multiple files instead:
   }
 }
 ```
+
+### CSS property definitions
+
+Design tokens in Style Dictionary JSON files can include [CSS custom property definitions](https://drafts.css-houdini.org/css-properties-values-api/#the-registerproperty-function). Using a custom formatter we output a CSS file with corresponding `@property` declarations.
+
+```json
+{
+  "example-color": {
+    "css": { "syntax": "<color>", "inherits": true }
+  },
+  "example-font-family": {
+    "css": { "syntax": "*", "inherits": true }
+  },
+  "example-text-align": {
+    "css": { "syntax": "start | end", "inherits": true }
+  }
+}
+```
+
+`syntax`: [any supported name](https://drafts.css-houdini.org/css-properties-values-api/#supported-names), a list of tokens and `*` are allowed. Required.
+
+`inherits`: typically set to `true`. While `"inherits": false` is supported, it is discouraged because not all target browsers support this yet. Required.
+
+`initialValue`: also supported, but currently discouraged because not all browsers support `@property` yet and it would result in significant rendering differences between supporting and non-supporting target browsers.
 
 ## License
 
