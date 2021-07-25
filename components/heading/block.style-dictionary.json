@@ -1,63 +1,288 @@
 {
   "utrecht": {
     "heading": {
-      "color": {},
-      "font-family": {},
-      "font-weight": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      }
     },
     "heading-1": {
-      "color": {},
-      "font-family": {},
-      "font-size": {},
-      "font-weight": {},
-      "line-height": {},
-      "margin-block-end": {},
-      "margin-block-start": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     },
     "heading-2": {
-      "color": {},
-      "font-family": {},
-      "font-size": {},
-      "font-weight": {},
-      "line-height": {},
-      "margin-block-end": {},
-      "margin-block-start": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     },
     "heading-3": {
-      "color": {},
-      "font-family": {},
-      "font-size": {},
-      "font-weight": {},
-      "line-height": {},
-      "margin-block-end": {},
-      "margin-block-start": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     },
     "heading-4": {
-      "color": {},
-      "font-family": {},
-      "font-size": {},
-      "font-weight": {},
-      "line-height": {},
-      "margin-block-end": {},
-      "margin-block-start": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     },
     "heading-5": {
-      "color": {},
-      "font-family": {},
-      "font-size": {},
-      "font-weight": {},
-      "line-height": {},
-      "margin-block-end": {},
-      "margin-block-start": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     },
     "heading-6": {
-      "color": {},
-      "font-family": {},
-      "font-size": {},
-      "font-weight": {},
-      "line-height": {},
-      "margin-block-end": {},
-      "margin-block-start": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "font-family": {
+        "css": {
+          "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "line-height": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     }
   }
 }

@@ -2,10 +2,20 @@
   "utrecht": {
     "form-label": {
       "checkbox": {
-        "font-weight": {}
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        }
       },
       "radio": {
-        "font-weight": {}
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        }
       }
     }
   }

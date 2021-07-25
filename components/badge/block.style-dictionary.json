@@ -2,22 +2,52 @@
   "utrecht": {
     "badge": {
       "background-color": {
-        "comment": "Default background color for badge components"
+        "comment": "Default background color for badge components",
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
       },
       "border-radius": {
-        "comment": "Default corner radius for badge components"
+        "comment": "Default corner radius for badge components",
+        "css": {
+          "syntax": "<length-percentage>",
+          "inherits": true
+        }
       },
       "color": {
-        "comment": "Default text color for badge components"
+        "comment": "Default text color for badge components",
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
       },
-      "font-weight": {},
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
       "padding-block": {
-        "comment": "Default block padding for badge components"
+        "comment": "Default block padding for badge components",
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
       },
       "padding-inline": {
-        "comment": "Default inline padding color for badge components"
+        "comment": "Default inline padding color for badge components",
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
       },
-      "text-transform": {}
+      "text-transform": {
+        "css": {
+          "syntax": "inherit | uppercase",
+          "inherits": true
+        }
+      }
     }
   }
 }

@@ -2,10 +2,20 @@
   "utrecht": {
     "emphasis": {
       "stressed": {
-        "font-style": {}
+        "font-style": {
+          "css": {
+            "syntax": "inherit | italic | normal",
+            "inherits": true
+          }
+        }
       },
       "strong": {
-        "font-weight": {}
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        }
       }
     }
   }

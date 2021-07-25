@@ -3,12 +3,32 @@
     "table": {
       "row": {
         "alternate-odd": {
-          "background-color": {},
-          "color": {}
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
         },
         "alternate-even": {
-          "background-color": {},
-          "color": {}
+          "background-color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          },
+          "color": {
+            "css": {
+              "syntax": "<color>",
+              "inherits": true
+            }
+          }
         }
       }
     }

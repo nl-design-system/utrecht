@@ -1,22 +1,16 @@
 {
   "utrecht": {
-    "table": {
-      "caption": {
-        "font-weight": {
+    "feedback": {
+      "danger": {
+        "background-color": {
           "css": {
-            "syntax": "<number>",
+            "syntax": "<color>",
             "inherits": true
           }
         },
-        "font-family": {
+        "border-color": {
           "css": {
-            "syntax": "*",
-            "inherits": true
-          }
-        },
-        "font-size": {
-          "css": {
-            "syntax": "<length>",
+            "syntax": "<color>",
             "inherits": true
           }
         },
@@ -25,30 +19,18 @@
             "syntax": "<color>",
             "inherits": true
           }
-        },
-        "line-height": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "text-align": {
-          "css": {
-            "syntax": "left | right | start | end",
-            "inherits": true
-          }
-        },
-        "margin-block-end": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
         }
       },
-      "header": {
-        "font-weight": {
+      "warning": {
+        "background-color": {
           "css": {
-            "syntax": "<number>",
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
             "inherits": true
           }
         },
@@ -57,30 +39,18 @@
             "syntax": "<color>",
             "inherits": true
           }
-        },
-        "text-transform": {
-          "css": {
-            "syntax": "inherit | uppercase",
-            "inherits": true
-          }
-        },
-        "border-block-end-color": {
+        }
+      },
+      "safe": {
+        "background-color": {
           "css": {
             "syntax": "<color>",
             "inherits": true
           }
         },
-        "border-block-end-width": {
+        "border-color": {
           "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        }
-      },
-      "heading": {
-        "font-weight": {
-          "css": {
-            "syntax": "<number>",
+            "syntax": "<color>",
             "inherits": true
           }
         },
@@ -89,68 +59,124 @@
             "syntax": "<color>",
             "inherits": true
           }
-        },
-        "text-transform": {
-          "css": {
-            "syntax": "inherit | uppercase",
-            "inherits": true
-          }
         }
       },
-      "cell": {
-        "line-height": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "padding-block-end": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "padding-block-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "padding-inline-end": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        },
-        "padding-inline-start": {
-          "css": {
-            "syntax": "<length>",
-            "inherits": true
-          }
-        }
-      },
-      "row": {
-        "border-block-end-color": {
+      "invalid": {
+        "background-color": {
           "css": {
             "syntax": "<color>",
             "inherits": true
           }
         },
-        "border-block-end-width": {
+        "border-color": {
           "css": {
-            "syntax": "<length>",
+            "syntax": "<color>",
             "inherits": true
           }
         },
-        "padding-inline-end": {
+        "color": {
           "css": {
-            "syntax": "<length>",
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "valid": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
             "inherits": true
           }
         },
-        "padding-inline-start": {
+        "border-color": {
           "css": {
-            "syntax": "<length>",
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "error": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "success": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "inactive": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "active": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
             "inherits": true
           }
         }
