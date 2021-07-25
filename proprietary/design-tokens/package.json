@@ -22,7 +22,7 @@
   "scripts": {
     "build": "npm-run-all build:**",
     "build:scss": "sass src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config ./style-dictionary.config.json",
+    "build:style-dictionary": "style-dictionary build --config src/style-dictionary-config.js",
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",
     "watch": "npm-run-all --parallel watch:**",
