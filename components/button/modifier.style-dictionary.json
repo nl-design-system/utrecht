@@ -2,13 +2,38 @@
   "utrecht": {
     "button": {
       "disabled": {
-        "color": {},
-        "hover-background-color": {}
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "hover-background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
       },
       "primary-action": {
-        "background-color": {},
-        "color": {},
-        "hover-background-color": {}
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "hover-background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
       }
     }
   }

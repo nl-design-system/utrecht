@@ -2,12 +2,32 @@
   "utrecht": {
     "blockquote": {
       "attribution": {
-        "color": {},
-        "font-size": {}
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "font-size": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
       },
       "content": {
-        "color": {},
-        "font-size": {}
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "font-size": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
       }
     }
   }

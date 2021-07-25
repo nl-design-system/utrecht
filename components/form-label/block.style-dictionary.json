@@ -1,8 +1,18 @@
 {
   "utrecht": {
     "label": {
-      "font-weight": {},
-      "font-size": {}
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     }
   }
 }

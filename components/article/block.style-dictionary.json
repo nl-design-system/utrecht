@@ -1,7 +1,12 @@
 {
   "utrecht": {
     "article": {
-      "max-inline-size": {}
+      "max-inline-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     }
   }
 }

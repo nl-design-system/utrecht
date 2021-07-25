@@ -1,8 +1,18 @@
 {
   "utrecht": {
     "link": {
-      "color": {},
-      "text-decoration": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "text-decoration": {
+        "css": {
+          "syntax": "none | underline",
+          "inherits": true
+        }
+      }
     }
   }
 }

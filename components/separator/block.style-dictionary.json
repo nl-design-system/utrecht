@@ -1,9 +1,24 @@
 {
   "utrecht": {
     "separator": {
-      "color": {},
-      "width": {},
-      "margin-block": {}
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     }
   }
 }

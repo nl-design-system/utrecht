@@ -1,16 +1,66 @@
 {
   "utrecht": {
     "focus": {
-      "background-color": {},
-      "border-color": {},
-      "border-style": {},
-      "box-shadow-color": {},
-      "box-shadow-spread-radius": {},
-      "color": {},
-      "outline-color": {},
-      "outline-offset": {},
-      "outline-style": {},
-      "outline-width": {}
+      "background-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "border-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "border-style": {
+        "css": {
+          "syntax": "dotted | none | solid",
+          "inherits": true
+        }
+      },
+      "box-shadow-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "box-shadow-spread-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "outline-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "outline-offset": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "outline-style": {
+        "css": {
+          "syntax": "dotted | none | solid",
+          "inherits": true
+        }
+      },
+      "outline-width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
     }
   }
 }

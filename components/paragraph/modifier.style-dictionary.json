@@ -2,9 +2,24 @@
   "utrecht": {
     "paragraph": {
       "lead": {
-        "font-size": {},
-        "font-weight": {},
-        "line-height": {}
+        "font-size": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        },
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        },
+        "line-height": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
       }
     }
   }

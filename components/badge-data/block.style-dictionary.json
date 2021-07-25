@@ -1,8 +1,18 @@
 {
   "utrecht": {
     "badge-data": {
-      "letter-spacing": {},
-      "text-transform": {}
+      "letter-spacing": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "text-transform": {
+        "css": {
+          "syntax": "inherit | uppercase",
+          "inherits": true
+        }
+      }
     }
   }
 }
