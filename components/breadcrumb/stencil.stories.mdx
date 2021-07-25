@@ -1,0 +1,60 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ items, variant }) => {
+  const jsonAttribute = (arg) => JSON.stringify(arg).replace(/"/g, "&quot;");
+  return `<utrecht-breadcrumb json="${jsonAttribute(items)}" variant="${variant}"></utrecht-breadcrumb>`;
+};
+
+<Meta
+  title="Web Component/Breadcrumb navigation"
+  argTypes={{
+    items: {
+      description: "Menu items",
+      control: "array",
+    },
+    variant: {
+      description: "Variant",
+      control: { type: "select" },
+      options: ["", "arrows"],
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Breadcrumb navigation
+
+<Canvas>
+  <Story
+    name="Breadcrumb navigation"
+    args={{
+      items: [
+        { href: "https://example.com/", title: "Home" },
+        { href: "https://example.com/a/", title: "Wonen en leven" },
+        { href: "https://example.com/a/b/", title: "Afval" },
+        { href: "https://example.com/a/b/c/", title: "Kliko's", current: true },
+      ],
+      variant: "arrows",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Breadcrumb navigation" />
