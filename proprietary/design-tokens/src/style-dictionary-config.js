@@ -28,6 +28,9 @@ module.exports = {
         {
           destination: 'storybook-design-token.css',
           format: 'css/storybook-design-token',
+          options: {
+            selector: '.utrecht-theme',
+          },
         },
       ],
     },

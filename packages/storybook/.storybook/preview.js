@@ -1,4 +1,5 @@
-import '@utrecht/design-tokens/dist/theme/index.css';
+// import '@utrecht/design-tokens/dist/theme/index.css';
+import '@utrecht/design-tokens/dist/storybook-design-token.css';
 import '@utrecht/design-tokens/dist/properties.css';
 import '@utrecht/design-tokens/src/custom.scss';
 import '../../../components/document/bem.css';
@@ -10,7 +11,7 @@ import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 addDecorator((story) => `<div class="utrecht-document utrecht-theme">${story()}</div>`);
 defineCustomElements();
 
-const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
+const tokenContext = require.context('!!raw-loader!@utrecht/design-tokens/dist/', true, /storybook-design-token\.css$/);
 
 const tokenFiles = tokenContext
   .keys()

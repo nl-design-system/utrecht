@@ -64,9 +64,9 @@ module.exports = {
           !!tokenNameToPresenter(token.name),
       )
       .map((token) => {
-        return `${indentation}--${token.name}: ${token.value}; /** @presenter ${
-          token.css && token.css.syntax ? syntaxToPresenter[token.css.syntax] : tokenNameToPresenter(token.name)
-        } @category Various */`;
+        return `${indentation}--${token.name}: ${token.value}; /** @tokens Various @presenter ${tokenNameToPresenter(
+          token.name,
+        )} */`;
       })
       .join(LF);
 
