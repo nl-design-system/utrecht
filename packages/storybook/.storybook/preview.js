@@ -1,4 +1,5 @@
 import '@utrecht/design-tokens/dist/theme/index.css';
+import '@utrecht/design-tokens/dist/properties.css';
 import '@utrecht/design-tokens/src/custom.scss';
 import '../../../components/document/bem.css';
 
