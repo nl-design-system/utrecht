@@ -116,7 +116,7 @@ jobs:
           path: packages/storybook/dist/
 
       - name: "Continuous Integration: visual regression test"
-        if: contains( github.event.pull_request.labels.*.name, 'visual regression test')
+        # if: contains( github.event.pull_request.labels.*.name, 'visual regression test')
         env:
           PERCY_TOKEN: ${{ secrets.PERCY_TOKEN }}
         run: |
