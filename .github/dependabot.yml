@@ -25,3 +25,21 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "react-dom"
         update-types: ["version-update:semver-major"]
+      # Stay at Angular 11 until manual upgrade to Angular 12
+      - dependency-name: "@angular/cli"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@angular/compiler-cli"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "@angular/core"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "ng-packagr"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "rxjs"
+        update-types: ["version-update:semver-major"]
+      # `angular-devkit` follows unusual versioning rules.
+      # The important thing is to stay on a version matching Angular 11:
+      #
+      #     npm install --save-dev @angular-devkit/build-angular@v11-lts
+      - dependency-name: "@angular-devkit/build-angular"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
