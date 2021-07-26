@@ -12,7 +12,9 @@ module.exports = {
     // https://drafts.css-houdini.org/css-properties-values-api/#the-css-property-rule-interface
     return allTokens
       .sort((tokenA, tokenB) => stringSort(tokenA.name, tokenB.name))
-      .filter((token) => token.css && token.css.syntax && typeof token.css.inherits === 'boolean')
+      .filter(
+        (token) => token.css && token.css.syntax && token.css.syntax !== '*' && typeof token.css.inherits === 'boolean',
+      )
       .map((token) => {
         let str = `@property --${token.name} { `;
 
