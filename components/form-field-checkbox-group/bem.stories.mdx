@@ -1,0 +1,78 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import component and component styles -->
+
+import "./bem.css";
+import "../checkbox/bem.css";
+import "../form-label/bem.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ label , name1, name2, name3}) =>
+`<div class="utrecht-form-field-checkbox-group utrecht-form-field-checkbox-group--distanced" role="checkboxgroup" aria-labelledby="id-9e42cd3e">
+  <div class="utrecht-form-field-checkbox-group__label" id="id-9e42cd3e">${label}</div>
+  <div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
+    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e2">
+    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e2">${name1}</label>
+  </div>
+  <div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
+    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e3">
+    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e3">${name2}</label>
+  </div>
+    <div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
+    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e4">
+    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e4">${name3}</label>
+  </div>
+  </div>`;
+
+<Meta
+  title="Molecules/Form field with checkbox group"
+  argTypes={{
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+      defaultValue: "Ik verklaar dat de volgende beweringen kloppen:",
+    },
+    name1: {
+      description: "Set the content of the checkbox",
+      control: "text",
+      defaultValue: "Ik sta niet onder curatele",
+    },
+    name2: {
+      description: "Set the content of the checkbox",
+      control: "text",
+      defaultValue: "Ik ben woonachtig in Nederland",
+    },
+    name3: {
+      description: "Set the content of the checkbox",
+      control: "text",
+      defaultValue: "Ik trouw niet onder dwang",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Form field with checkbox
+
+<Canvas>
+  <Story name="Form field with checkbox">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Form field with checkbox" />
