@@ -1,0 +1,53 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+ @import "../focus/bem";
+
+.utrecht-searchbar {
+  display: flex;
+}
+.utrecht-textbox {
+  display: inline-block;
+  --utrecht-textbox-padding-block-start: .55em;
+  --utrecht-textbox-padding-block-end: .58em;
+  --utrecht-textbox-padding-inline-start: 2em;
+  --utrecht-textbox-padding-inline-end: 1em;
+  --utrecht-textbox-border-bottom-width: 1px;
+  background: #fff url(./icoon-zoek-rood.svg) .5em 50% no-repeat;
+  --utrecht-textbox-border-color: #c00;
+  background-size: 1em;
+  --utrecht-textbox-color: #1d1d1c;
+  line-height: 1.2em;
+  flex: 1;
+}
+
+.utrecht-textbox--focus,
+.utrecht-textbox:not(.utrecht-textbox--disabled):focus {
+  @include utrecht-focus;
+}
+
+.utrecht-button {
+  width: 6.6em;
+  margin: 0;
+  border: 1px solid #c00;
+  background: #c00;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 700;
+  font-size: .9em;
+}
+
+.utrecht-button--focus,
+.utrecht-button:not(.utrecht-button--disabled):focus {
+  @include utrecht-focus;
+}
+
+.utrecht-button--hover:not(:disabled),
+.utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
+  background-color: #d94e51;
+  transform: scale(1);
+}
