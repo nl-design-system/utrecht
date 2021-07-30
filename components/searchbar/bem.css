@@ -3,6 +3,32 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-.utrecht-article {
-  max-inline-size: var(--utrecht-article-max-inline-size);
+.utrecht-textbox {
+  display: inline-block;
+  padding: .55em 1em .58em 2em;
+  width: 100%;
+  border-width: 1px;
+  border-color: #c00;
+  background: #fff url(./icoon-zoek-rood.svg) .5em 50% no-repeat;
+  background-size: 1em;
+  color: #1d1d1c;
+  line-height: 1.2em;
+  max-width: none;
+  flex: 1;
+}
+
+.utrecht-button {
+  /*display: block;*/
+  width: 6.6em;
+  margin: 0;
+  /* padding: .7em 0; */
+  border: 1px solid #c00;
+  background: #c00;
+  color: #fff;
+  text-align: center;
+  /* line-height: 1.2em; */
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  font-weight: 700;
+  font-size: .9em;
 }
