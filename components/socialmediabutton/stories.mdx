@@ -1,12 +1,13 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 <!-- Import component and component styles -->
+
 import "./bem.scss";
 
 <!-- Import Docs -->
 
 import README from "./README.md";
-  
+
 export const Template = ({ url, className }) => `
 <div class="utrecht-link-social">
 <a href=${url} class=${className}></a>
@@ -30,23 +31,33 @@ export const Template = ({ url, className }) => `
 />
 
 <Canvas>
-  <Story name="Facebook Link" args={{ url:"https://www.facebook.com/GemeenteUtrecht", className: "facebook"}} >{Template.bind({})}</Story>
+  <Story name="Facebook Link" args={{ url: "https://www.facebook.com/GemeenteUtrecht", className: "facebook" }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="Instagram Link" args={{ url:"https://www.instagram.com/GemeenteUtrecht/", className: "instagram"}} >{Template.bind({})}</Story>
+  <Story name="Instagram Link" args={{ url: "https://www.instagram.com/GemeenteUtrecht/", className: "instagram" }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="LinkedIn Link" args={{ url:"https://nl.linkedin.com/company/gemeente-utrecht", className: "linkedin"}} >{Template.bind({})}</Story>
+  <Story name="LinkedIn Link" args={{ url: "https://nl.linkedin.com/company/gemeente-utrecht", className: "linkedin" }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="Twitter Link" args={{ url:"https://twitter.com/gemeenteutrecht", className: "twitter"}} >{Template.bind({})}</Story>
+  <Story name="Twitter Link" args={{ url: "https://twitter.com/gemeenteutrecht", className: "twitter" }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <Canvas>
-  <Story name="WhatsApp Link" args={{ url:"https://api.whatsapp.com/send?phone=31624927665", className: "whatsapp"}} >{Template.bind({})}</Story>
+  <Story name="WhatsApp Link" args={{ url: "https://api.whatsapp.com/send?phone=31624927665", className: "whatsapp" }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Social Media Links" />
