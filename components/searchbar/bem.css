@@ -8,10 +8,10 @@
   padding: .55em 1em .58em 2em;
   width: 100%;
   border-width: 1px;
-  border-color: #c00;
   background: #fff url(./icoon-zoek-rood.svg) .5em 50% no-repeat;
+  --utrecht-textbox-border-color: #c00;
   background-size: 1em;
-  color: #1d1d1c;
+  --utrecht-textbox-color: #1d1d1c;
   line-height: 1.2em;
   max-width: none;
   flex: 1;
