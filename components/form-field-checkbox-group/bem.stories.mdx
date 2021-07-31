@@ -16,21 +16,32 @@ import "../form-label/bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ label, name1, name2, name3 }) =>
-  `<div class="utrecht-form-field-checkbox-group utrecht-form-field-checkbox-group--distanced" role="checkboxgroup" aria-labelledby="id-9e42cd3e">
-  <div class="utrecht-form-field-checkbox-group__label" id="id-9e42cd3e">${label}</div>
-  <div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
-    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e2">
-    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e2">${name1}</label>
-  </div>
-  <div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
-    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e3">
-    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e3">${name2}</label>
-  </div>
-    <div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
-    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e4">
-    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e4">${name3}</label>
-  </div>
+export const Template = ({
+  label,
+  options,
+  groupLabelId = "group-label",
+}) => `<div class="utrecht-form-field-checkbox-group utrecht-form-field-checkbox-group--distanced" role="group" aria-labelledby="${groupLabelId}">
+  <div class="utrecht-form-field-checkbox-group__label" id="${groupLabelId}">${label}</div>
+  ${options
+    .map((option, index) => ({
+      ...option,
+      id: options.id || `option-${index}`,
+    }))
+    .map(
+      ({
+        id,
+        label,
+        name,
+        value,
+        checked,
+      }) => `<div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
+    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="${id}" value="${value}"${
+        checked ? " checked" : ""
+      } name="${name}">
+    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="${id}">${label}</label>
+  </div>`
+    )
+    .join("\n")}
   </div>`;
 
 <Meta
@@ -39,22 +50,10 @@ export const Template = ({ label, name1, name2, name3 }) =>
     label: {
       description: "Set the content of the label",
       control: "text",
-      defaultValue: "Ik verklaar dat de volgende beweringen kloppen:",
     },
-    name1: {
-      description: "Set the content of the checkbox",
-      control: "text",
-      defaultValue: "Ik sta niet onder curatele",
-    },
-    name2: {
-      description: "Set the content of the checkbox",
-      control: "text",
-      defaultValue: "Ik ben woonachtig in Nederland",
-    },
-    name3: {
-      description: "Set the content of the checkbox",
-      control: "text",
-      defaultValue: "Ik trouw niet onder dwang",
+    options: {
+      description: "Options for which there must be a the checkbox",
+      control: "array",
     },
   }}
   parameters={{
@@ -73,7 +72,32 @@ export const Template = ({ label, name1, name2, name3 }) =>
 # Form field with checkbox
 
 <Canvas>
-  <Story name="Form field with checkbox">{Template.bind({})}</Story>
+  <Story
+    name="Form field with checkbox group"
+    args={{
+      label: "Ik verklaar dat de volgende beweringen kloppen:",
+      options: [
+        {
+          name: "requirement1",
+          value: "true",
+          label: "Ik sta niet onder curatele",
+          checked: true,
+        },
+        {
+          name: "requirement2",
+          value: "true",
+          label: "Ik ben woonachtig in Nederland",
+        },
+        {
+          name: "requirement3",
+          value: "true",
+          label: "Ik trouw niet onder dwang",
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
-<ArgsTable story="Form field with checkbox" />
+<ArgsTable story="Form field with checkbox group" />
