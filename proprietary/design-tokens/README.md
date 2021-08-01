@@ -52,12 +52,12 @@ Automatically applies all the CSS variables to HTML elements to the `:root` elem
 
 This method should only be used in case there is no control over the HTML template and the `utrecht-theme` class name cannot be included.
 
-### `dist/properties.css`
+### `dist/property.css`
 
 Experimental CSS `@property` definitions for the design tokens that are configurable via CSS custom properties. Including these definitions is not necessarily side-effect free: with `syntax` _invalid values for custom properties will be ignored_, and `inherits` and `initial-value` declarations can influence behavior. Because [not all browsers support the `@property` declaration](https://caniuse.com/mdn-css_at-rules_property), including this file can result in rendering differences between browsers.
 
 ```html
-<link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/properties.css" />
+<link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/property.css" />
 ```
 
 This file should only be included when you have visual regression test for both browsers that do and don't support `@property`.
