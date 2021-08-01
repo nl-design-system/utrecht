@@ -19,7 +19,7 @@ module.exports = {
       files: [
         ...config.platforms.css.files,
         {
-          destination: 'properties.css',
+          destination: 'property.css',
           format: 'css/property',
         },
       ].sort(destinationSort),
