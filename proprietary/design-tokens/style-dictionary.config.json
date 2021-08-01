@@ -8,6 +8,10 @@
         {
           "destination": "index.js",
           "format": "javascript/es6"
+        },
+        {
+          "format": "javascript/module",
+          "destination": "tree.js"
         }
       ]
     },
@@ -58,6 +62,20 @@
           "options": {
             "outputReferences": true
           }
+        }
+      ]
+    },
+    "typescript": {
+      "transformGroup": "js",
+      "buildPath": "dist/",
+      "files": [
+        {
+          "format": "typescript/es6-declarations",
+          "destination": "index.d.ts"
+        },
+        {
+          "format": "typescript/module-declarations",
+          "destination": "tree.d.ts"
         }
       ]
     },
