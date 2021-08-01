@@ -1,0 +1,25 @@
+import { getParams } from "./utils.js";
+import { Meta, Description } from "@storybook/addon-docs";
+import designTokens from "@utrecht/design-tokens/dist/index.json";
+import document from "./design-tokens.md";
+import { DesignTokensTable } from "./components/DesignTokensTable";
+
+<Meta title="Utrecht/Design Tokens" parameters={getParams()} />
+
+<Description>{document}</Description>
+
+<p>There currently are {designTokens.length} design tokens in total.</p>
+
+## Brand tokens
+
+<DesignTokensTable tokens={designTokens.filter(({ filePath }) => filePath.includes("src/brand/"))}></DesignTokensTable>
+
+## Common tokens
+
+<DesignTokensTable tokens={designTokens.filter(({ filePath }) => filePath.includes("src/common/"))}></DesignTokensTable>
+
+## Component tokens
+
+<DesignTokensTable
+  tokens={designTokens.filter(({ filePath }) => filePath.includes("src/component/"))}
+></DesignTokensTable>
