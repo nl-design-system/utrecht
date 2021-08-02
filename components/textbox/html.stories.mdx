@@ -13,11 +13,11 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ type, value, invalid, readOnly, disabled, required }) =>
+export const Template = ({ type, value, invalid, readOnly, disabled, required, placeholder }) =>
   `<div class="utrecht-html">
   <input type="${type}" ${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
     required ? " required" : ""
-  }${readOnly ? "readonly" : ""} value="${value}">
+  }${readOnly ? "readonly" : ""}${placeholder ? `placeholder="${placeholder}"` : ""} value="${value}">
 </div>`;
 
 <Meta
@@ -42,6 +42,10 @@ export const Template = ({ type, value, invalid, readOnly, disabled, required })
       description: "Disabled",
       control: "boolean",
       defaultValue: false,
+    },
+    placeholder: {
+      description: "Placeholder",
+      control: "string",
     },
     required: {
       description: "Required",
@@ -108,6 +112,14 @@ Styling via the `<input>` element:
 
 <Canvas>
   <Story name="Required text box" args={{ required: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder
+
+<Canvas>
+  <Story name="Text box with placeholder" args={{ placeholder: "Useful tip" }}>
     {Template.bind({})}
   </Story>
 </Canvas>
