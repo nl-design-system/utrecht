@@ -1,0 +1,109 @@
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
+
+<!-- Import component and component styles -->
+
+import "./bem.scss";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ href, icon, distanced }) => `<a href="${href}" class="${clsx(
+  "utrecht-link-social",
+  distanced && "utrecht-link-social--distanced"
+)}">
+  <${icon} class="utrecht-link-social__icon"></${icon}>
+</a>`;
+
+export const ListTemplate = ({ links }) =>
+  links
+    .map((link) => ({ ...link, distanced: true }))
+    .map(Template)
+    .join("");
+
+<Meta
+  title="Components/Link to Social Media"
+  argTypes={{
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+    },
+    href: {
+      description: "Target URL",
+      control: "text",
+    },
+    icon: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+      options: [
+        "utrecht-icon-facebook",
+        "utrecht-icon-instagram",
+        "utrecht-icon-linkedin",
+        "utrecht-icon-twitter",
+        "utrecht-icon-whatsapp",
+      ],
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Social Media Link
+
+<Canvas>
+  <Story
+    name="Link to Social Media"
+    args={{
+      href: "https://www.facebook.com/GemeenteUtrecht",
+      icon: "utrecht-icon-facebook",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Social Media Link" />
+
+## List
+
+<Canvas>
+  <Story
+    name="List of links to Social Media"
+    args={{
+      links: [
+        {
+          href: "https://www.facebook.com/GemeenteUtrecht",
+          icon: "utrecht-icon-facebook",
+        },
+        {
+          href: "https://www.instagram.com/GemeenteUtrecht/",
+          icon: "utrecht-icon-instagram",
+        },
+        {
+          href: "https://nl.linkedin.com/company/gemeente-utrecht",
+          icon: "utrecht-icon-linkedin",
+        },
+        {
+          href: "https://twitter.com/gemeenteutrecht",
+          icon: "utrecht-icon-twitter",
+        },
+        {
+          href: "https://api.whatsapp.com/send?phone=31624927665",
+          icon: "utrecht-icon-whatsapp",
+        },
+      ],
+    }}
+  >
+    {ListTemplate.bind({})}
+  </Story>
+</Canvas>
