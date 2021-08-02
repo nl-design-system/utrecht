@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+.utrecht-link-social {
+  display: inline-block;
+  width: 2.4em;
+  height: 2.4em;
+  border: 2px solid var(--utrecht-color-white);
+  border-radius: 50%;
+  color: var(--utrecht-color-white);
+  background-color: var(--utrecht-color-red-40);
+  --utrecht-icon-color: var(--utrecht-color-white);
+}
+
+.utrecht-link-social--distanced {
+  margin-right: 0.6em;
+}
