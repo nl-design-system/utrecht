@@ -1,0 +1,48 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import clsx from "clsx";
+import "./bem.css";
+import README from "./README.md";
+
+export const Template = ({ distanced }) =>
+  `<ol class="${clsx("utrecht-ordered-list", distanced && "utrecht-ordered-list--distanced")}">
+  <li class="utrecht-ordered-list__item">Lorem</li>
+  <li class="utrecht-ordered-list__item">Ipsum</li>
+  <li class="utrecht-ordered-list__item">Dolor</li>
+</ol>`;
+
+<Meta
+  title="Components/Ordered List"
+  argTypes={{
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Ordered list
+
+<Canvas>
+  <Story
+    name="Ordered list"
+    args={{
+      distanced: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
