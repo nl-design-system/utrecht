@@ -6,10 +6,20 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.css";
-export const Template = ({ textContent = "", type = null }) =>
+
+export const defaultArgs = {
+  checked: false,
+  disabled: false,
+  textContent: "",
+  type: null,
+};
+
+export const Template = ({ checked = false, disabled = false, textContent = "", type = null }) =>
   `<span class="${clsx(
     "utrecht-form-label",
     type === "checkbox" && "utrecht-form-label--checkbox",
+    checked && "utrecht-form-label--checked",
+    disabled && "utrecht-form-label--disabled",
     type === "radio" && "utrecht-form-label--radio"
   )}">${textContent}</span>`;
 
@@ -44,6 +54,7 @@ Styling via the `.utrecht-form-label` class name:
   <Story
     name="Label"
     args={{
+      ...defaultArgs,
       textContent: "Username",
     }}
   >
@@ -52,6 +63,22 @@ Styling via the `.utrecht-form-label` class name:
 </Canvas>
 
 <ArgsTable story="Label" />
+
+# Label for disabled input
+
+Styling via the `.utrecht-form-label--disabled` class name:
+
+<Canvas>
+  <Story
+    name="Label for disabled input"
+    args={{
+      disabled: true,
+      textContent: "Username",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
 
 # Label for checkbox
 
@@ -69,6 +96,23 @@ Styling via the `.utrecht-form-label--checkbox` class name:
   </Story>
 </Canvas>
 
+# Label for checked checkbox
+
+Styling via the `.utrecht-form-label--checked` class name:
+
+<Canvas>
+  <Story
+    name="Label for checked checkbox"
+    args={{
+      checked: true,
+      textContent: "Username",
+      type: "checkbox",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
 # Label for radio button
 
 Styling via the `.utrecht-form-label--radio` class name:
@@ -77,7 +121,24 @@ Styling via the `.utrecht-form-label--radio` class name:
   <Story
     name="Label for radio button"
     args={{
-      textContent: "Username",
+      textContent: "Option 1",
+      type: "radio",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+# Label for checked radio button
+
+Styling via the `.utrecht-form-label--radio` and `.utrecht-form-label--checked` class names:
+
+<Canvas>
+  <Story
+    name="Label for checked radio button"
+    args={{
+      checked: true,
+      textContent: "Option 1",
       type: "radio",
     }}
   >

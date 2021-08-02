@@ -2,6 +2,12 @@
   "utrecht": {
     "form-label": {
       "checkbox": {
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "font-weight": {
           "css": {
             "syntax": "<number>",
@@ -9,7 +15,29 @@
           }
         }
       },
+      "checked": {
+        "font-weight": {
+          "css": {
+            "syntax": "<number>",
+            "inherits": true
+          }
+        }
+      },
+      "disabled": {
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
       "radio": {
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
         "font-weight": {
           "css": {
             "syntax": "<number>",
