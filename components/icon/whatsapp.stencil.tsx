@@ -4,7 +4,7 @@ import { Component, h } from "@stencil/core";
   tag: "utrecht-icon-whatsapp",
   shadow: true,
 })
-export class IconWhatsApp {
+export class IconWhatsapp {
   render() {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
