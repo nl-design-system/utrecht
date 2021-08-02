@@ -4,22 +4,22 @@ import '@utrecht/design-tokens/src/custom.scss';
 import '../../../components/document/bem.css';
 
 import React from 'react';
-import { addDecorator, addParameters } from '@storybook/html';
-import { DocsPage, DocsContainer } from '@storybook/addon-docs';
+import { addDecorator } from '@storybook/html';
+// import { DocsPage, DocsContainer } from '@storybook/addon-docs';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 
 addDecorator((story) => `<div class="utrecht-document utrecht-theme">${story()}</div>`);
 defineCustomElements();
 
-addParameters({
-  docs: {
-    container: ({ children }) => (
-      <DocsContainer>
-        <div className="utrecht-theme">{children}</div>
-      </DocsContainer>
-    ),
-  },
-});
+// addParameters({
+//   docs: {
+//     container: ({ children }) => (
+//       <DocsContainer>
+//         <div className="utrecht-theme">{children}</div>
+//       </DocsContainer>
+//     ),
+//   },
+// });
 
 const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
 
