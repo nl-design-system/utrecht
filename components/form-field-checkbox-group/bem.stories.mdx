@@ -13,7 +13,7 @@ export const Template = ({
   options,
   groupLabelId = "group-label",
 }) => `<div class="utrecht-form-field-checkbox-group utrecht-form-field-checkbox-group--distanced" role="group" aria-labelledby="${groupLabelId}">
-  <div class="utrecht-form-field-checkbox-group__label" id="${groupLabelId}">${label}</div>
+  <div class="utrecht-form-field-checkbox-group__label utrecht-form-label" id="${groupLabelId}">${label}</div>
   ${options
     .map((option, index) => ({
       ...option,

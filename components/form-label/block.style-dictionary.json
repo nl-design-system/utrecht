@@ -1,6 +1,12 @@
 {
   "utrecht": {
     "label": {
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
       "font-weight": {
         "css": {
           "syntax": "<number>",
