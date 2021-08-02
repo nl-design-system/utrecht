@@ -5,16 +5,21 @@
 
 /* Collection of all semantic HTML styles in the component library */
 
+@import "../../../components/alternate-lang-link/html";
 @import "../../../components/article/html";
 @import "../../../components/blockquote/html";
-@import "../../../components/form-label/html";
-@import "../../../components/paragraph/html";
-@import "../../../components/textarea/html";
 @import "../../../components/button/html";
-@import "../../../components/heading/html";
-@import "../../../components/radio-button/html";
-@import "../../../components/textbox/html";
 @import "../../../components/checkbox/html";
+@import "../../../components/emphasis/html";
+@import "../../../components/form-fieldset/html";
+@import "../../../components/form-label/html";
+@import "../../../components/heading/html";
+@import "../../../components/html-content/html";
 @import "../../../components/link/html";
+@import "../../../components/paragraph/html";
+@import "../../../components/radio-button/html";
 @import "../../../components/separator/html";
+@import "../../../components/table/html";
+@import "../../../components/textarea/html";
+@import "../../../components/textbox/html";
 @import "../../../components/unordered-list/html";
