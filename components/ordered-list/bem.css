@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+.utrecht-ordered-list {
+  font-family: var(--utrecht-document-font-family, inherit);
+}
+
+.utrecht-ordered-list--distanced {
+  margin-block-end: var(--utrecht-ordered-list-margin-block-end);
+  margin-block-start: var(--utrecht-ordered-list-margin-block-start);
+}
+
+.utrecht-ordered-list__item {
+  margin-block-end: var(--utrecht-ordered-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-ordered-list-item-margin-block-start);
+}

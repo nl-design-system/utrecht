@@ -1,0 +1,39 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+import "./html.scss";
+
+import README from "./README.md";
+
+export const Template = () =>
+  `<section class="utrecht-html">
+  <ol>
+    <li>Lorem</li>
+    <li>Ipsum</li>
+    <li>Dolor</li>
+  </ol>
+</section>`;
+
+<Meta
+  title="Semantic HTML/Ordered List"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: "IN DEVELOPMENT",
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+## Ordered list
+
+<Canvas>
+  <Story name="Ordered list">{Template.bind({})}</Story>
+</Canvas>
