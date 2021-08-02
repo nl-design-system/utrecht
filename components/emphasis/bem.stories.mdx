@@ -14,30 +14,27 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ content, stressed, strong }) =>
+export const Template = ({ textContent = "", stressed = false, strong = false }) =>
   `<span class="${clsx(
     "utrecht-emphasis",
     stressed && "utrecht-emphasis--stressed",
     strong && "utrecht-emphasis--strong"
-  )}">${content}</span>`;
+  )}">${textContent}</span>`;
 
 <Meta
   title="Components/Emphasis"
   argTypes={{
-    content: {
+    textContent: {
       description: "Set the text content",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
     stressed: {
       description: "Stressed emphasis",
       control: "boolean",
-      defaultValue: false,
     },
     strong: {
       description: "Strong emphasis: very important or urgent content",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -56,7 +53,13 @@ export const Template = ({ content, stressed, strong }) =>
 # Emphasis
 
 <Canvas>
-  <Story name="Emphasis" args={{ stressed: true }}>
+  <Story
+    name="Emphasis"
+    args={{
+      stressed: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -66,7 +69,13 @@ export const Template = ({ content, stressed, strong }) =>
 ## Strong emphasis
 
 <Canvas>
-  <Story name="Strong Emphasis" args={{ strong: true }}>
+  <Story
+    name="Strong Emphasis"
+    args={{
+      strong: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

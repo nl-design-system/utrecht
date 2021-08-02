@@ -14,10 +14,10 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ level, content, distanced }) =>
+export const Template = ({ level = 1, textContent = "", distanced = false }) =>
   `<div role="heading" aria-level="${level}" class="${clsx(`utrecht-heading-${level}`, {
     [`utrecht-heading-${level}--distanced`]: distanced,
-  })}">${content}</div>`;
+  })}">${textContent}</div>`;
 
 <Meta
   title="Components/Heading"
@@ -25,17 +25,14 @@ export const Template = ({ level, content, distanced }) =>
     level: {
       description: "Heading level",
       type: "number",
-      defaultValue: "1",
     },
-    content: {
+    textContent: {
       description: "Set the content of the heading",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
     distanced: {
       description: "Distance the element from adjacent content",
       control: "boolean",
-      defaultValue: true,
     },
   }}
   parameters={{
@@ -60,7 +57,14 @@ To use the component as a web component, make sure the component is defined by i
 Styling via `utrecht-heading-1` class name:
 
 <Canvas>
-  <Story name="Heading 1" args={{ level: 1 }}>
+  <Story
+    name="Heading 1"
+    args={{
+      distanced: true,
+      level: 1,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -70,7 +74,14 @@ Styling via `utrecht-heading-1` class name:
 Styling via `utrecht-heading-2` class name:
 
 <Canvas>
-  <Story name="Heading 2" args={{ level: 2 }}>
+  <Story
+    name="Heading 2"
+    args={{
+      distanced: true,
+      level: 2,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -80,7 +91,14 @@ Styling via `utrecht-heading-2` class name:
 Styling via `utrecht-heading-3` class name:
 
 <Canvas>
-  <Story name="Heading 3" args={{ level: 3 }}>
+  <Story
+    name="Heading 3"
+    args={{
+      distanced: true,
+      level: 3,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -90,7 +108,14 @@ Styling via `utrecht-heading-3` class name:
 Styling via `utrecht-heading-4` class name:
 
 <Canvas>
-  <Story name="Heading 4" args={{ level: 4 }}>
+  <Story
+    name="Heading 4"
+    args={{
+      distanced: true,
+      level: 4,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -100,7 +125,14 @@ Styling via `utrecht-heading-4` class name:
 Styling via `utrecht-heading-5` class name:
 
 <Canvas>
-  <Story name="Heading 5" args={{ level: 5 }}>
+  <Story
+    name="Heading 5"
+    args={{
+      distanced: true,
+      level: 5,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -110,7 +142,14 @@ Styling via `utrecht-heading-5` class name:
 Styling via `utrecht-heading-6` class name:
 
 <Canvas>
-  <Story name="Heading 6" args={{ level: 6 }}>
+  <Story
+    name="Heading 6"
+    args={{
+      distanced: true,
+      level: 6,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

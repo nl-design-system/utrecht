@@ -13,7 +13,14 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ type, value, invalid, readOnly, disabled, required }) =>
+export const Template = ({
+  type = "text",
+  value = "",
+  invalid = false,
+  readOnly = false,
+  disabled = false,
+  required = false,
+}) =>
   `<div class="utrecht-html">
   <input type="${type}" ${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
     required ? " required" : ""
@@ -23,36 +30,30 @@ export const Template = ({ type, value, invalid, readOnly, disabled, required })
 <Meta
   title="Semantic HTML/Text Box"
   argTypes={{
-    value: {
-      description: "Set the value of the text box",
-      control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    },
     invalid: {
       description: "Invalid",
       control: "boolean",
-      defaultValue: false,
     },
     readOnly: {
       description: "Read-only",
       control: "boolean",
-      defaultValue: false,
     },
     disabled: {
       description: "Disabled",
       control: "boolean",
-      defaultValue: false,
     },
     required: {
       description: "Required",
       control: "boolean",
-      defaultValue: false,
     },
     type: {
       description: "Type",
       control: "select",
-      defaultValue: "text",
       options: ["email", "search", "tel", "text", "url"],
+    },
+    value: {
+      description: "Set the value of the text box",
+      control: "text",
     },
   }}
   parameters={{
@@ -73,7 +74,14 @@ export const Template = ({ type, value, invalid, readOnly, disabled, required })
 Styling via the `<input>` element:
 
 <Canvas>
-  <Story name="Text box">{Template.bind({})}</Story>
+  <Story
+    name="Text box"
+    args={{
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Text box" />
@@ -81,7 +89,13 @@ Styling via the `<input>` element:
 ## Invalid
 
 <Canvas>
-  <Story name="Invalid text box" args={{ invalid: true }}>
+  <Story
+    name="Invalid text box"
+    args={{
+      invalid: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -89,7 +103,13 @@ Styling via the `<input>` element:
 ## Disabled
 
 <Canvas>
-  <Story name="Disabled text box" args={{ disabled: true }}>
+  <Story
+    name="Disabled text box"
+    args={{
+      disabled: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -97,7 +117,13 @@ Styling via the `<input>` element:
 ## Read-only
 
 <Canvas>
-  <Story name="Read-only text box" args={{ readOnly: true }}>
+  <Story
+    name="Read-only text box"
+    args={{
+      readOnly: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -105,7 +131,13 @@ Styling via the `<input>` element:
 ## Required
 
 <Canvas>
-  <Story name="Required text box" args={{ required: true }}>
+  <Story
+    name="Required text box"
+    args={{
+      required: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

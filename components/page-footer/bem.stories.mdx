@@ -9,7 +9,7 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ innerHTML }) => `<footer class="utrecht-page-footer">
+export const Template = ({ innerHTML = "" }) => `<footer class="utrecht-page-footer">
 ${innerHTML}</header>`;
 
 <Meta
@@ -18,7 +18,6 @@ ${innerHTML}</header>`;
     innerHTML: {
       description: "HTML content",
       control: "text",
-      defaultValue: "",
     },
   }}
   parameters={{

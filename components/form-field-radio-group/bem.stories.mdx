@@ -15,7 +15,7 @@ import "../form-label/bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ label, name }) =>
+export const Template = ({ label = "", name = "" }) =>
   `<div class="utrecht-form-field-radio-group utrecht-form-field-radio-group--distanced" role="radiogroup" aria-labelledby="id-9e42cd3e">
   <div class="utrecht-form-field-radio-group__label" id="id-9e42cd3e">${label}</div>
   <div class="utrecht-form-field-radio class="utrecht-form-field-radio--distanced">
@@ -38,12 +38,10 @@ export const Template = ({ label, name }) =>
     label: {
       description: "Set the content of the label",
       control: "text",
-      defaultValue: "Which option do you like best?",
     },
     name: {
       description: "Set the name of the radio button",
       control: "text",
-      defaultValue: "radiobutton",
     },
   }}
   parameters={{
@@ -62,7 +60,15 @@ export const Template = ({ label, name }) =>
 # Form field with radio
 
 <Canvas>
-  <Story name="Form field with radio group">{Template.bind({})}</Story>
+  <Story
+    name="Form field with radio group"
+    args={{
+      label: "Which option do you like best?",
+      name: "radiobutton",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Form field with radio group" />

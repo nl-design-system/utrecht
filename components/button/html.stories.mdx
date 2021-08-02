@@ -15,23 +15,21 @@ import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 import onderzoek from "./docs/onderzoek.md";
 
-export const Template = ({ content, disabled }) =>
+export const Template = ({ textContent = "", disabled = false }) =>
   `<section class="utrecht-html">
-  <button type="button"${disabled ? " disabled" : ""}>${content}</button>
+  <button type="button"${disabled ? " disabled" : ""}>${textContent}</button>
 </section>`;
 
 <Meta
   title="Semantic HTML/Button"
   argTypes={{
-    content: {
+    textContent: {
       description: "Content of the button",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
     disabled: {
       description: "Disabled",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -54,7 +52,14 @@ export const Template = ({ content, disabled }) =>
 Styling via the `<button>` element:
 
 <Canvas>
-  <Story name="Button">{Template.bind({})}</Story>
+  <Story
+    name="Button"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Button" />
@@ -62,7 +67,13 @@ Styling via the `<button>` element:
 Button with `disabled` state:
 
 <Canvas>
-  <Story name="Disabled button" args={{ disabled: true }}>
+  <Story
+    name="Disabled button"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      disabled: true,
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

@@ -13,35 +13,31 @@ import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 import onderzoek from "./docs/onderzoek.md";
 
-export const Template = ({ content, focus, hover, disabled }) =>
+export const Template = ({ textContent = "", focus = false, hover = false, disabled = false }) =>
   `<button class="${clsx("utrecht-button", {
     "utrecht-button--hover": hover,
     "utrecht-button--focus": focus,
     "utrecht-button--disabled": disabled,
-  })}"${disabled ? ' aria-disabled="true"' : ""}>${content}</button>`;
+  })}"${disabled ? ' aria-disabled="true"' : ""}>${textContent}</button>`;
 
 <Meta
   title="Components/Button"
   argTypes={{
-    content: {
+    textContent: {
       description: "Button text",
       control: "text",
-      defaultValue: "Read more...",
     },
     focus: {
       description: "Focus",
       control: "boolean",
-      defaultValue: false,
     },
     hover: {
       description: "Hover",
       control: "boolean",
-      defaultValue: false,
     },
     disabled: {
       description: "Disabled",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -64,31 +60,64 @@ export const Template = ({ content, focus, hover, disabled }) =>
 Styling via the `.utrecht-button` class name:
 
 <Canvas>
-  <Story name="Button">{Template.bind({})}</Story>
-</Canvas>
-
-Styling via the `.utrecht-button--hover` class name:
-
-<Canvas>
-  <Story name="Button hover" args={{ hover: true }}>
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-Styling via the `.utrecht-button--focus` class name:
-
-<Canvas>
-  <Story name="Button focus" args={{ focus: true }}>
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-Styling via the `.utrecht-button--disabled` class name:
-
-<Canvas>
-  <Story name="Button disabled" args={{ disabled: true }}>
+  <Story
+    name="Button"
+    args={{
+      textContent: "Read more...",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
 
 <ArgsTable story="Button" />
+
+## States
+
+### Hover
+
+Styling via the `.utrecht-button--hover` class name:
+
+<Canvas>
+  <Story
+    name="Button hover"
+    args={{
+      textContent: "Read more...",
+      hover: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Focus
+
+Styling via the `.utrecht-button--focus` class name:
+
+<Canvas>
+  <Story
+    name="Button focus"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+Styling via the `.utrecht-button--disabled` class name:
+
+<Canvas>
+  <Story
+    name="Button disabled"
+    args={{
+      textContent: "Read more...",
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

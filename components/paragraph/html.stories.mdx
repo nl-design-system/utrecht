@@ -13,16 +13,16 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ content }) =>
+export const Template = ({ textContent = "", lead = false }) =>
   `<section class="utrecht-html">
-  <p>${content}</p>
+  <p${lead ? ' class="lead"' : ""}>${textContent}</p>
 </section>`;
 
-export const TemplateMulti = ({ content }) =>
+export const TemplateMulti = ({ textContent = "" }) =>
   `<section class="utrecht-html">
-  <p class="lead">${content}</p>
-  <p>${content}</p>
-  <p>${content}</p>
+  <p class="lead">${textContent}</p>
+  <p>${textContent}</p>
+  <p>${textContent}</p>
 </section>`;
 
 <Meta
@@ -31,13 +31,10 @@ export const TemplateMulti = ({ content }) =>
     content: {
       description: "Paragraph text",
       control: "text",
-      defaultValue:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     lead: {
       description: "Lead paragraph",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -58,7 +55,15 @@ export const TemplateMulti = ({ content }) =>
 Styling via the `<p>` element:
 
 <Canvas>
-  <Story name="Paragraph">{Template.bind({})}</Story>
+  <Story
+    name="Paragraph"
+    args={{
+      textContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 ## Lead paragraph
@@ -66,7 +71,14 @@ Styling via the `<p>` element:
 Styling via the `<p>` element with the `lead` class name:
 
 <Canvas>
-  <Story name="Lead paragraph" args={{ lead: true }}>
+  <Story
+    name="Lead paragraph"
+    args={{
+      lead: true,
+      textContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -74,7 +86,15 @@ Styling via the `<p>` element with the `lead` class name:
 ## Multiple paragraphs with whitespace
 
 <Canvas>
-  <Story name="Multiple paragraphs">{TemplateMulti.bind({})}</Story>
+  <Story
+    name="Multiple paragraphs"
+    args={{
+      textContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    }}
+  >
+    {TemplateMulti.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Paragraph" />

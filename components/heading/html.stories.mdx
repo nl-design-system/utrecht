@@ -13,9 +13,9 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ level, content }) =>
+export const Template = ({ level = 1, textContent = "" }) =>
   `<section class="utrecht-html">
-  <h${level}>${content}</h${level}>
+  <h${level}>${textContent}</h${level}>
 </section>`;
 
 <Meta
@@ -24,12 +24,10 @@ export const Template = ({ level, content }) =>
     level: {
       description: "Heading level",
       type: "number",
-      defaultValue: "1",
     },
-    content: {
+    textContent: {
       description: "Set the content of the heading",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
   }}
   parameters={{
@@ -52,7 +50,13 @@ export const Template = ({ level, content }) =>
 Styling via the `<h1>` element:
 
 <Canvas>
-  <Story name="Heading 1" args={{ level: 1 }}>
+  <Story
+    name="Heading 1"
+    args={{
+      level: 1,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -62,7 +66,13 @@ Styling via the `<h1>` element:
 Styling via the `<h2>` element:
 
 <Canvas>
-  <Story name="Heading 2" args={{ level: 2 }}>
+  <Story
+    name="Heading 2"
+    args={{
+      level: 2,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -72,7 +82,13 @@ Styling via the `<h2>` element:
 Styling via the `<h3>` element:
 
 <Canvas>
-  <Story name="Heading 3" args={{ level: 3 }}>
+  <Story
+    name="Heading 3"
+    args={{
+      level: 3,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -82,7 +98,13 @@ Styling via the `<h3>` element:
 Styling via the `<h4>` element:
 
 <Canvas>
-  <Story name="Heading 4" args={{ level: 4 }}>
+  <Story
+    name="Heading 4"
+    args={{
+      level: 4,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -92,7 +114,13 @@ Styling via the `<h4>` element:
 Styling via the `<h5>` element:
 
 <Canvas>
-  <Story name="Heading 5" args={{ level: 5 }}>
+  <Story
+    name="Heading 5"
+    args={{
+      level: 5,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -102,7 +130,13 @@ Styling via the `<h5>` element:
 Styling via the `<h6>` element:
 
 <Canvas>
-  <Story name="Heading 6" args={{ level: 6 }}>
+  <Story
+    name="Heading 6"
+    args={{
+      level: 6,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

@@ -9,7 +9,7 @@ import "./bem.scss";
 
 import README from "./README.md";
 
-export const Template = ({ status, textContent }) =>
+export const Template = ({ status = "", textContent = "" }) =>
   `<utrecht-badge-status status="${status}">${textContent}</utrecht-badge-status>`;
 
 <Meta
@@ -18,7 +18,6 @@ export const Template = ({ status, textContent }) =>
     textContent: {
       description: "Text content",
       control: "text",
-      defaultValue: "42",
     },
     type: {
       control: { type: "select" },

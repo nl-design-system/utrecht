@@ -13,17 +13,17 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const StressedTemplate = ({ content }) => `<em>${content}</em>`;
+export const StressedTemplate = ({ textContent = "" }) => `<em>${textContent}</em>`;
 
-export const StrongTemplate = ({ content }) => `<strong>${content}</strong>`;
+export const StrongTemplate = ({ textContent = "" }) => `<strong>${textContent}</strong>`;
 
-export const Template = ({ content, stressed, strong }) => {
-  let formatted = content;
+export const Template = ({ textContent = "", stressed = false, strong = false }) => {
+  let formatted = textContent;
   if (stressed) {
-    formatted = StressedTemplate({ content: formatted });
+    formatted = StressedTemplate({ textContent: formatted });
   }
   if (strong) {
-    formatted = StrongTemplate({ content: formatted });
+    formatted = StrongTemplate({ textContent: formatted });
   }
   return `<div class="utrecht-html">${formatted}</div>`;
 };
@@ -31,20 +31,17 @@ export const Template = ({ content, stressed, strong }) => {
 <Meta
   title="Semantic HTML/Emphasis"
   argTypes={{
-    content: {
+    textContent: {
       description: "Set the text content",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
     stressed: {
       description: "Stressed emphasis",
       control: "boolean",
-      defaultValue: false,
     },
     strong: {
       description: "Strong emphasis: very important or urgent content",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -63,7 +60,13 @@ export const Template = ({ content, stressed, strong }) => {
 # Emphasis
 
 <Canvas>
-  <Story name="Emphasis" args={{ stressed: true }}>
+  <Story
+    name="Emphasis"
+    args={{
+      stressed: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -73,7 +76,13 @@ export const Template = ({ content, stressed, strong }) => {
 ## Strong emphasis
 
 <Canvas>
-  <Story name="Strong Emphasis" args={{ strong: true }}>
+  <Story
+    name="Strong Emphasis"
+    args={{
+      strong: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

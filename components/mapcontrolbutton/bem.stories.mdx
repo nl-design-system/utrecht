@@ -11,7 +11,7 @@ import "./bem.scss";
 
 import README from "./README.md";
 
-export const Template = ({ focus, hover, disabled }) =>
+export const Template = ({ disabled = false, focus = false, hover = false }) =>
   `<button class="${clsx("utrecht-mapcontrolbutton", {
     "utrecht-mapcontrolbutton--hover": hover,
     "utrecht-mapcontrolbutton--focus": focus,
@@ -34,17 +34,14 @@ export const Template = ({ focus, hover, disabled }) =>
     focus: {
       description: "Focus",
       control: "boolean",
-      defaultValue: false,
     },
     hover: {
       description: "Hover",
       control: "boolean",
-      defaultValue: false,
     },
     disabled: {
       description: "Disabled",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{

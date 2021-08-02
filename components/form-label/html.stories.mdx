@@ -13,25 +13,23 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ content, type }) =>
+export const Template = ({ textContent = "", type = null }) =>
   `<div class="utrecht-html">
   <input type="${type}" id="${type}">
-  <label for="${type}">${content}</label>
+  <label for="${type}">${textContent}</label>
 </div>`;
 
 <Meta
   title="Semantic HTML/Form label"
   argTypes={{
-    content: {
+    textContent: {
       description: "Set the content of the label",
       control: "text",
-      defaultValue: "Username",
     },
     type: {
       description: "Set the type of the form control",
       options: ["hidden", "checkbox", "radio"],
       control: { type: "radio" },
-      defaultValue: "hidden",
     },
   }}
   parameters={{
@@ -52,7 +50,15 @@ export const Template = ({ content, type }) =>
 Styling via the `<label>` element:
 
 <Canvas>
-  <Story name="Label">{Template.bind({})}</Story>
+  <Story
+    name="Label"
+    args={{
+      textContent: "Username",
+      type: "hidden",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Label" />
@@ -60,7 +66,13 @@ Styling via the `<label>` element:
 # Label for checkbox
 
 <Canvas>
-  <Story name="Label for checkbox" args={{ type: "checkbox" }}>
+  <Story
+    name="Label for checkbox"
+    args={{
+      textContent: "Username",
+      type: "checkbox",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -68,7 +80,13 @@ Styling via the `<label>` element:
 # Label for radio button
 
 <Canvas>
-  <Story name="Label for radio button" args={{ type: "radio" }}>
+  <Story
+    name="Label for radio button"
+    args={{
+      textContent: "Username",
+      type: "radio",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

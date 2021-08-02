@@ -14,27 +14,24 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ content, lead }) =>
-  `<p class="${clsx("utrecht-paragraph", { "utrecht-paragraph--lead": lead })}">${content}</p>`;
+export const Template = ({ textContent = "", lead = false }) =>
+  `<p class="${clsx("utrecht-paragraph", { "utrecht-paragraph--lead": lead })}">${textContent}</p>`;
 
-export const TemplateMulti = ({ content }) =>
-  `<p class="utrecht-paragraph utrecht-paragraph--lead">${content}</p>
-<p class="utrecht-paragraph">${content}</p>
-<p class="utrecht-paragraph">${content}</p>`;
+export const TemplateMulti = ({ textContent = "" }) =>
+  `<p class="utrecht-paragraph utrecht-paragraph--lead">${textContent}</p>
+<p class="utrecht-paragraph">${textContent}</p>
+<p class="utrecht-paragraph">${textContent}</p>`;
 
 <Meta
   title="Components/Paragraph"
   argTypes={{
-    content: {
+    textContent: {
       description: "Paragraph text",
       control: "text",
-      defaultValue:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     },
     lead: {
       description: "Lead paragraph",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -55,7 +52,15 @@ export const TemplateMulti = ({ content }) =>
 Styling via the `.utrecht-paragraph` class name:
 
 <Canvas>
-  <Story name="Paragraph">{Template.bind({})}</Story>
+  <Story
+    name="Paragraph"
+    args={{
+      textContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Paragraph" />
@@ -65,7 +70,14 @@ Styling via the `.utrecht-paragraph` class name:
 Styling via the `.utrecht-paragraph--lead` class name:
 
 <Canvas>
-  <Story name="Lead paragraph" args={{ lead: true }}>
+  <Story
+    name="Lead paragraph"
+    args={{
+      lead: true,
+      textContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -73,7 +85,15 @@ Styling via the `.utrecht-paragraph--lead` class name:
 ## Multiple paragraphs with whitespace
 
 <Canvas>
-  <Story name="Multiple paragraphs">{TemplateMulti.bind({})}</Story>
+  <Story
+    name="Multiple paragraphs"
+    args={{
+      textContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    }}
+  >
+    {TemplateMulti.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Paragraph" />
