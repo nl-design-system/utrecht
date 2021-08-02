@@ -4,6 +4,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "../reset/index";
+
 .utrecht-page-footer {
   font-family: var(--utrecht-document-font-family);
   font-size: var(--utrecht-document-font-size);
@@ -14,6 +16,7 @@
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-block-end: var(--utrecht-page-footer-padding-block-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+  max-inline-size: var(--utrecht-page-footer-max-inline-size);
 
   --utrecht-document-color: currentColor;
   --utrecht-heading-color: currentColor;
@@ -25,8 +28,5 @@
 }
 
 .utrecht-page-footer__address--reset-address {
-  /* reset <address> */
-  font-style: inherit;
-  margin-block-start: 0;
-  margin-block-end: 0;
+  @include reset-address;
 }
