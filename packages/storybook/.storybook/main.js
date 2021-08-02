@@ -14,7 +14,6 @@ module.exports = {
     },
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
-    '@storybook/addon-notes/register',
     '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
     'storybook-design-token',
