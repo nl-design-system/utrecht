@@ -35,3 +35,26 @@
   border-color: var(--utrecht-textbox-read-only-border-color);
   color: var(--utrecht-textbox-read-only-color);
 }
+
+.utrecht-textbox__placeholder {
+  color: var(--utrecht-textbox-placeholder-color);
+}
+
+.utrecht-textbox--html-input {
+  &:disabled {
+    @extend .utrecht-textbox--disabled;
+  }
+
+  &:invalid,
+  &[aria-invalid="true"] {
+    @extend .utrecht-textbox--invalid;
+  }
+
+  &:read-only {
+    @extend .utrecht-textbox--read-only;
+  }
+
+  &::placeholder {
+    @extend .utrecht-textbox__placeholder;
+  }
+}

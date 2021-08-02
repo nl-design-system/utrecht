@@ -13,19 +13,7 @@
   input[type="url"] {
     & {
       @extend .utrecht-textbox;
-    }
-
-    &:disabled {
-      @extend .utrecht-textbox--disabled;
-    }
-
-    &:invalid,
-    &[aria-invalid="true"] {
-      @extend .utrecht-textbox--invalid;
-    }
-
-    &:read-only {
-      @extend .utrecht-textbox--read-only;
+      @extend .utrecht-textbox--html-input;
     }
   }
 }
