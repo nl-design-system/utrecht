@@ -2,6 +2,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "utrecht-icon-facebook",
+  styleUrl: "stencil.css",
   shadow: true,
 })
 export class IconFacebook {
