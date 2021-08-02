@@ -4,12 +4,21 @@
  */
 
 .utrecht-form-label {
+  color: var(--utrecht-form-label-color);
   font-weight: var(--utrecht-form-label-font-weight);
   font-size: var(--utrecht-form-label-font-size);
 }
 
 .utrecht-form-label--checkbox {
   font-weight: var(--utrecht-form-label-checkbox-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+.utrecht-form-label--checked {
+  font-weight: var(--utrecht-form-label-checked-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+.utrecht-form-label--disabled {
+  font-weight: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
 }
 
 .utrecht-form-label--radio {
