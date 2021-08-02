@@ -35,7 +35,7 @@ export const ListTemplate = ({ links }) =>
     },
     icon: {
       description: "Distance the element from adjacent content",
-      control: "boolean",
+      control: { type: "select" },
       options: [
         "utrecht-icon-facebook",
         "utrecht-icon-instagram",
@@ -58,12 +58,13 @@ export const ListTemplate = ({ links }) =>
   }}
 />
 
-# Social Media Link
+# Link to Social Media
 
 <Canvas>
   <Story
     name="Link to Social Media"
     args={{
+      distanced: false,
       href: "https://www.facebook.com/GemeenteUtrecht",
       icon: "utrecht-icon-facebook",
     }}
@@ -72,7 +73,7 @@ export const ListTemplate = ({ links }) =>
   </Story>
 </Canvas>
 
-<ArgsTable story="Social Media Link" />
+<ArgsTable story="Link to Social Media" />
 
 ## List
 
