@@ -14,10 +14,10 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ content, attribution, distanced }) =>
+export const Template = ({ textContent = "", attribution = null, distanced = false }) =>
   `<blockquote class="${clsx("utrecht-blockquote", { "utrecht-blockquote--distanced": distanced })}">
     <div class="utrecht-blockquote__content">
-      <p>${content}</p>${
+      <p>${textContent}</p>${
     attribution
       ? `
     </div>
@@ -29,20 +29,17 @@ export const Template = ({ content, attribution, distanced }) =>
 <Meta
   title="Components/Blockquote"
   argTypes={{
-    content: {
+    textContent: {
       description: "Content of the quote",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
     attribution: {
       description: "Attribution of the quote",
       control: "text",
-      defaultValue: "",
     },
     distanced: {
       description: "Distance the element from adjacent content",
       control: "boolean",
-      defaultValue: true,
     },
   }}
   parameters={{
@@ -63,7 +60,14 @@ export const Template = ({ content, attribution, distanced }) =>
 Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class names:
 
 <Canvas>
-  <Story name="Blockquote">{Template.bind({})}</Story>
+  <Story
+    name="Blockquote"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Blockquote" />
@@ -73,7 +77,14 @@ Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class n
 Styling with an additional `.utrecht-blockquote__attribution` class name:
 
 <Canvas>
-  <Story name="Blockquote with attribution" args={{ attribution: "L. Ipsum" }}>
+  <Story
+    name="Blockquote with attribution"
+    args={{
+      attribution: "L. Ipsum",
+      distanced: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

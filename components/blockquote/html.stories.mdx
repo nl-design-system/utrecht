@@ -14,20 +14,19 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ content }) =>
+export const Template = ({ textContent = "" }) =>
   `<section class="utrecht-html">
   <blockquote>
-    <p>${content}</p>
+    <p>${textContent}</p>
   </blockquote>
 </section>`;
 
 <Meta
   title="Semantic HTML/Blockquote"
   argTypes={{
-    content: {
+    textContent: {
       description: "Content of the quote",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
   }}
   parameters={{
@@ -48,7 +47,14 @@ export const Template = ({ content }) =>
 Styling via the `<blockquote>` element:
 
 <Canvas>
-  <Story name="Blockquote in HTML">{Template.bind({})}</Story>
+  <Story
+    name="Blockquote in HTML"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Blockquote in HTML" />

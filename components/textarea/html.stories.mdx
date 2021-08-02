@@ -13,40 +13,35 @@ import "./html.scss";
 
 import README from "./README.md";
 
-export const Template = ({ content, invalid, readOnly, disabled, required }) =>
+export const Template = ({ invalid = false, readOnly = false, disabled = false, required = false, textContent = "" }) =>
   `<section class="utrecht-html">
   <textarea${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${required ? " required" : ""}${
     readOnly ? " readonly" : ""
-  }>${content}</textarea>
+  }>${textContent}</textarea>
 </section>`;
 
 <Meta
   title="Semantic HTML/Textarea"
   argTypes={{
-    content: {
-      description: "Set the content of the textarea",
-      control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    },
     invalid: {
       description: "Invalid",
       control: "boolean",
-      defaultValue: false,
     },
     readOnly: {
       description: "Read-only",
       control: "boolean",
-      defaultValue: false,
     },
     disabled: {
       description: "Disabled",
       control: "boolean",
-      defaultValue: false,
     },
     required: {
       description: "Required",
       control: "boolean",
-      defaultValue: false,
+    },
+    textContent: {
+      description: "Set the content of the textarea",
+      control: "text",
     },
   }}
   parameters={{
@@ -67,7 +62,14 @@ export const Template = ({ content, invalid, readOnly, disabled, required }) =>
 Styling via the `<textarea>` element:
 
 <Canvas>
-  <Story name="Textarea">{Template.bind({})}</Story>
+  <Story
+    name="Textarea"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Textarea" />
@@ -75,7 +77,13 @@ Styling via the `<textarea>` element:
 ## Invalid
 
 <Canvas>
-  <Story name="Invalid textarea" args={{ invalid: true }}>
+  <Story
+    name="Invalid textarea"
+    args={{
+      invalid: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -83,7 +91,13 @@ Styling via the `<textarea>` element:
 ## Disabled
 
 <Canvas>
-  <Story name="Disabled textarea" args={{ disabled: true }}>
+  <Story
+    name="Disabled textarea"
+    args={{
+      disabled: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -91,7 +105,13 @@ Styling via the `<textarea>` element:
 ## Read-only
 
 <Canvas>
-  <Story name="Read-only textarea" args={{ readOnly: true }}>
+  <Story
+    name="Read-only textarea"
+    args={{
+      readOnly: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -99,7 +119,13 @@ Styling via the `<textarea>` element:
 ## Required
 
 <Canvas>
-  <Story name="Required textarea" args={{ required: true }}>
+  <Story
+    name="Required textarea"
+    args={{
+      required: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

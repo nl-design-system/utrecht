@@ -9,7 +9,7 @@ import "./bem.scss";
 
 import README from "./README.md";
 
-export const Template = ({ textContent }) => `<div class="utrecht-badge-data">${textContent}</div>`;
+export const Template = ({ textContent = "" }) => `<div class="utrecht-badge-data">${textContent}</div>`;
 
 <Meta
   title="Components/Badge/Data Badge"
@@ -17,7 +17,6 @@ export const Template = ({ textContent }) => `<div class="utrecht-badge-data">${
     textContent: {
       description: "Text content",
       control: "text",
-      defaultValue: "Festivals",
     },
   }}
   parameters={{
@@ -38,7 +37,14 @@ export const Template = ({ textContent }) => `<div class="utrecht-badge-data">${
 Styling via the `.utrecht-badge-data` class name:
 
 <Canvas>
-  <Story name="Data badge">{Template.bind({})}</Story>
+  <Story
+    name="Data badge"
+    args={{
+      textContent: "Festivals",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Data badge" />

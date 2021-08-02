@@ -12,21 +12,19 @@ import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 import onderzoek from "./docs/onderzoek.md";
 
-export const Template = ({ content, disabled }) =>
-  `<utrecht-button${disabled ? " disabled" : ""}>${content}</utrecht-button>`;
+export const Template = ({ textContent = "", disabled = false }) =>
+  `<utrecht-button${disabled ? " disabled" : ""}>${textContent}</utrecht-button>`;
 
 <Meta
   title="Web Component/Button"
   argTypes={{
-    content: {
+    textContent: {
       description: "Button text",
       control: "text",
-      defaultValue: "Read more...",
     },
     disabled: {
       description: "Disabled",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -47,7 +45,14 @@ export const Template = ({ content, disabled }) =>
 # Button
 
 <Canvas>
-  <Story name="Button">{Template.bind({})}</Story>
+  <Story
+    name="Button"
+    args={{
+      textContent: "Read more...",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Button" />

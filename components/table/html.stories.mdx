@@ -19,7 +19,7 @@ Source of table:
 https://www.utrecht.nl/wonen-en-leven/parkeren/ervaart-u-parkeeroverlast/spinozaplantsoen-invoeren-betaald-parkeren/
 -->
 
-export const ExampleTable = ({ alternateRowColor }) =>
+export const ExampleTable = ({ alternateRowColor = false }) =>
   `<div class="utrecht-html">
 <table lang="nl" summary="Overzicht van de stemmen voor en tegen het betaald parkeren." class="${clsx(
     alternateRowColor && "alternate-row-color"
@@ -58,7 +58,6 @@ export const ExampleTable = ({ alternateRowColor }) =>
     alternateRowColor: {
       description: "Alternate row color",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{

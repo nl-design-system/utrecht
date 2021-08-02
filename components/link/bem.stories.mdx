@@ -12,15 +12,24 @@ import "./bem.scss";
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ active, content, external, focus, hover, href, telephone, visited }) =>
-  `<a href="${href || "https://example.com/"}" class="${clsx("utrecht-link", {
+export const Template = ({
+  active = false,
+  external = false,
+  focus = false,
+  hover = false,
+  href = null,
+  telephone = false,
+  textContent = "",
+  visited = false,
+}) =>
+  `<a href="${href === null ? "https://example.com/" : href}" class="${clsx("utrecht-link", {
     "utrecht-link--active": active,
     "utrecht-link--external": external,
     "utrecht-link--focus": focus,
     "utrecht-link--hover": hover,
     "utrecht-link--telephone": telephone,
     "utrecht-link--visited": visited,
-  })}"${external ? ' rel="external noopener noreferrer"' : ""}>${content}</a>`;
+  })}"${external ? ' rel="external noopener noreferrer"' : ""}>${textContent}</a>`;
 
 <Meta
   title="Components/Link"
@@ -28,42 +37,34 @@ export const Template = ({ active, content, external, focus, hover, href, teleph
     active: {
       description: "Active",
       control: "boolean",
-      defaultValue: false,
-    },
-    content: {
-      description: "Link text",
-      control: "text",
-      defaultValue: "Read more...",
     },
     external: {
       description: "External",
       control: "boolean",
-      defaultValue: false,
     },
     hover: {
       description: "Hover",
       control: "boolean",
-      defaultValue: false,
     },
     focus: {
       description: "Focus",
       control: "boolean",
-      defaultValue: false,
     },
     href: {
       description: "Target URL",
       control: "text",
-      defaultValue: "",
     },
     telephone: {
       description: "Link to telephone number",
       control: "boolean",
-      defaultValue: false,
+    },
+    textContent: {
+      description: "Link text",
+      control: "text",
     },
     visited: {
       description: "Visited",
       control: "boolean",
-      defaultValue: false,
     },
   }}
   parameters={{
@@ -85,7 +86,14 @@ export const Template = ({ active, content, external, focus, hover, href, teleph
 Styling via the `.utrecht-link` class name:
 
 <Canvas>
-  <Story name="Link">{Template.bind({})}</Story>
+  <Story
+    name="Link"
+    args={{
+      textContent: "Read more...",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 - Use the `<a>` element to create links.
@@ -101,7 +109,13 @@ Styling via the `.utrecht-link--hover` class name:
 ### Hover state
 
 <Canvas>
-  <Story name="Link hover" args={{ hover: true }}>
+  <Story
+    name="Link hover"
+    args={{
+      hover: true,
+      textContent: "Read more...",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -111,7 +125,13 @@ Styling via the `.utrecht-link--hover` class name:
 Styling via the `.utrecht-link--focus` class name:
 
 <Canvas>
-  <Story name="Link focus" args={{ focus: true }}>
+  <Story
+    name="Link focus"
+    args={{
+      focus: true,
+      textContent: "Read more...",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -121,7 +141,13 @@ Styling via the `.utrecht-link--focus` class name:
 Styling via the `.utrecht-link--active` class name:
 
 <Canvas>
-  <Story name="Link active" args={{ active: true }}>
+  <Story
+    name="Link active"
+    args={{
+      active: true,
+      textContent: "Read more...",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -131,7 +157,13 @@ Styling via the `.utrecht-link--active` class name:
 Styling via the `.utrecht-link--visited` class name:
 
 <Canvas>
-  <Story name="Link visited" args={{ visited: true }}>
+  <Story
+    name="Link visited"
+    args={{
+      textContent: "Read more...",
+      visited: true,
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -145,7 +177,7 @@ Styling via the `.utrecht-link--telephone` class name. Avoid line wrap within th
     name="Telephone link"
     args={{
       href: "tel:+31555385385",
-      content: "+31 555 385 385",
+      textContent: "+31 555 385 385",
       telephone: true,
     }}
   >
@@ -163,6 +195,7 @@ Styling via the `.utrecht-link--external` class name.
     args={{
       external: true,
       href: "https://www.whatismyreferer.com",
+      textContent: "Read more...",
     }}
   >
     {Template.bind({})}

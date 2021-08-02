@@ -7,10 +7,10 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import README from "./README.md";
 
-export const Template = ({ locale, textContent, value, max }) =>
-  `<utrecht-badge-counter${typeof max !== "undefined" ? ` max="${max}"` : ""}${
-    typeof value !== "undefined" ? ` value="${value}"` : ""
-  }${typeof locale !== "undefined" ? ` locale="${locale}"` : ""}>${textContent}</utrecht-badge-counter>`;
+export const Template = ({ locale = null, textContent = "", value = null, max = null }) =>
+  `<utrecht-badge-counter${typeof max !== "undefined" && max !== null ? ` max="${max}"` : ""}${
+    typeof value !== "undefined" && value !== null ? ` value="${value}"` : ""
+  }${locale ? ` locale="${locale}"` : ""}>${textContent}</utrecht-badge-counter>`;
 
 <Meta
   title="Web Component/Badge/Counter Badge"
@@ -18,7 +18,6 @@ export const Template = ({ locale, textContent, value, max }) =>
     textContent: {
       description: "Text content",
       control: "text",
-      defaultValue: "",
     },
     value: {
       description: "Value",

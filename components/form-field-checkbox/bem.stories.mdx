@@ -15,7 +15,7 @@ import "../form-label/bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ label }) =>
+export const Template = ({ label = "" }) =>
   `<div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
     <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e2">
   <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e2">${label}</label>
@@ -27,7 +27,6 @@ export const Template = ({ label }) =>
     label: {
       description: "Set the content of the label",
       control: "text",
-      defaultValue: "I agree",
     },
   }}
   parameters={{
@@ -46,7 +45,14 @@ export const Template = ({ label }) =>
 # Form field with checkbox
 
 <Canvas>
-  <Story name="Form field with checkbox">{Template.bind({})}</Story>
+  <Story
+    name="Form field with checkbox"
+    args={{
+      label: "I agree",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Form field with checkbox" />

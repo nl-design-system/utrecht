@@ -6,7 +6,7 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import README from "./README.md";
 
-export const Template = ({ href }) => `<link rel="icon" href="${href}">`;
+export const Template = ({ href = "" }) => `<link rel="icon" href="${href}">`;
 
 <Meta
   title="Components/Favicon"
@@ -14,7 +14,6 @@ export const Template = ({ href }) => `<link rel="icon" href="${href}">`;
     href: {
       description: "Location of the favicon image",
       control: "text",
-      defaultValue: "/favicon.ico",
     },
   }}
   parameters={{
@@ -37,7 +36,14 @@ Place the `<link>` element reference to the favicon image in the `<head>` sectio
 Ideally, the favicon image is available under the `/favicon.ico` URL in the root of your host, to make it work even on pages without the `<link>` element reference to the image.
 
 <Canvas>
-  <Story name="Favicon">{Template.bind({})}</Story>
+  <Story
+    name="Favicon"
+    args={{
+      href: "/favicon.ico",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Favicon" />

@@ -9,9 +9,9 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import README from "./README.md";
 
-export const Template = ({ level, content }) =>
+export const Template = ({ level = 1, textContent = "" }) =>
   `<section>
-  <utrecht-heading level="${level}">${content}</utrecht-heading>
+  <utrecht-heading level="${level}">${textContent}</utrecht-heading>
 </section>`;
 
 <Meta
@@ -20,12 +20,10 @@ export const Template = ({ level, content }) =>
     level: {
       description: "Heading level",
       type: "number",
-      defaultValue: "1",
     },
-    content: {
+    textContent: {
       description: "Set the content of the heading",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
   }}
   parameters={{
@@ -44,7 +42,14 @@ export const Template = ({ level, content }) =>
 # Heading components
 
 <Canvas>
-  <Story name="Heading">{Template.bind({})}</Story>
+  <Story
+    name="Heading"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Heading" />
@@ -52,7 +57,13 @@ export const Template = ({ level, content }) =>
 ## Heading 1
 
 <Canvas>
-  <Story name="Heading 1" args={{ level: 1 }}>
+  <Story
+    name="Heading 1"
+    args={{
+      level: 1,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -60,7 +71,13 @@ export const Template = ({ level, content }) =>
 ## Heading 2
 
 <Canvas>
-  <Story name="Heading 2" args={{ level: 2 }}>
+  <Story
+    name="Heading 2"
+    args={{
+      level: 2,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -68,7 +85,13 @@ export const Template = ({ level, content }) =>
 ## Heading 3
 
 <Canvas>
-  <Story name="Heading 3" args={{ level: 3 }}>
+  <Story
+    name="Heading 3"
+    args={{
+      level: 3,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -76,7 +99,13 @@ export const Template = ({ level, content }) =>
 ## Heading 4
 
 <Canvas>
-  <Story name="Heading 4" args={{ level: 4 }}>
+  <Story
+    name="Heading 4"
+    args={{
+      level: 4,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -84,7 +113,13 @@ export const Template = ({ level, content }) =>
 ## Heading 5
 
 <Canvas>
-  <Story name="Heading 5" args={{ level: 5 }}>
+  <Story
+    name="Heading 5"
+    args={{
+      level: 5,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -92,7 +127,13 @@ export const Template = ({ level, content }) =>
 ## Heading 6
 
 <Canvas>
-  <Story name="Heading 6" args={{ level: 6 }}>
+  <Story
+    name="Heading 6"
+    args={{
+      level: 6,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

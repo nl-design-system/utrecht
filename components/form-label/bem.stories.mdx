@@ -14,20 +14,19 @@ import "./bem.css";
 
 import README from "./README.md";
 
-export const Template = ({ content, type }) =>
+export const Template = ({ textContent = "", type = null }) =>
   `<span class="${clsx(
     "utrecht-form-label",
     type === "checkbox" && "utrecht-form-label--checkbox",
     type === "radio" && "utrecht-form-label--radio"
-  )}">${content}</span>`;
+  )}">${textContent}</span>`;
 
 <Meta
   title="Components/Form label"
   argTypes={{
-    content: {
+    textContent: {
       description: "Set the content of the label",
       control: "text",
-      defaultValue: "Username",
     },
     type: {
       description: "Set the type of the form control",
@@ -53,7 +52,14 @@ export const Template = ({ content, type }) =>
 Styling via the `.utrecht-form-label` class name:
 
 <Canvas>
-  <Story name="Label">{Template.bind({})}</Story>
+  <Story
+    name="Label"
+    args={{
+      textContent: "Username",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Label" />
@@ -63,7 +69,13 @@ Styling via the `.utrecht-form-label` class name:
 Styling via the `.utrecht-form-label--checkbox` class name:
 
 <Canvas>
-  <Story name="Label for checkbox" args={{ type: "checkbox" }}>
+  <Story
+    name="Label for checkbox"
+    args={{
+      textContent: "Username",
+      type: "checkbox",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -73,7 +85,13 @@ Styling via the `.utrecht-form-label--checkbox` class name:
 Styling via the `.utrecht-form-label--radio` class name:
 
 <Canvas>
-  <Story name="Label for radio button" args={{ type: "radio" }}>
+  <Story
+    name="Label for radio button"
+    args={{
+      textContent: "Username",
+      type: "radio",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>

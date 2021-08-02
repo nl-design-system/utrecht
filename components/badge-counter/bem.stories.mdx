@@ -9,7 +9,7 @@ import "./bem.scss";
 
 import README from "./README.md";
 
-export const Template = ({ textContent }) =>
+export const Template = ({ textContent = "" }) =>
   `<span class="utrecht-badge-counter"><span class="utrecht-badge-counter__text">${textContent}</span></span>`;
 
 <Meta
@@ -18,17 +18,14 @@ export const Template = ({ textContent }) =>
     textContent: {
       description: "Text content",
       control: "text",
-      defaultValue: "",
     },
     value: {
       description: "Value",
       control: "number",
-      defaultValue: "0",
     },
     max: {
       description: "Maximum",
       control: "number",
-      defaultValue: "999",
     },
   }}
   parameters={{

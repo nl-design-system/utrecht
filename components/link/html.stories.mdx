@@ -14,18 +14,17 @@ import "./html.scss";
 import README from "./README.md";
 import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
 
-export const Template = ({ content, external, href }) =>
+export const Template = ({ external = false, href = null, textContent = "" }) =>
   `<section class="utrecht-html">
-  <a href="${href || "#"}"${external ? ' rel="external noopener noreferrer"' : ""}>${content}</a>
+  <a href="${href === null ? "#" : href}"${external ? ' rel="external noopener noreferrer"' : ""}>${textContent}</a>
 </section>`;
 
 <Meta
   title="Semantic HTML/Link"
   argTypes={{
-    content: {
+    textContent: {
       description: "Content of the link",
       control: "text",
-      defaultValue: "The Quick Brown Fox Jumps Over The Lazy Dog",
     },
   }}
   parameters={{
@@ -47,7 +46,14 @@ export const Template = ({ content, external, href }) =>
 Styling via the `<a>` element:
 
 <Canvas>
-  <Story name="Link">{Template.bind({})}</Story>
+  <Story
+    name="Link"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Link" />
@@ -59,7 +65,7 @@ Styling via the `<a>` element:
     name="Telephone link"
     args={{
       href: "tel:+31555385385",
-      content: "+31 555 385 385",
+      textContent: "+31 555 385 385",
     }}
   >
     {Template.bind({})}
@@ -74,6 +80,7 @@ Styling via the `<a>` element:
     args={{
       external: true,
       href: "https://example.com/",
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
