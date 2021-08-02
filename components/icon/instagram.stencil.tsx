@@ -7,7 +7,7 @@ import { Component, h } from "@stencil/core";
 export class IconInstagram {
   render() {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-7 -7 42 42">
         <title>Instagram</title>
         <g>
           <path

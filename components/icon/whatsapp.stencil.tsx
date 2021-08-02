@@ -7,7 +7,7 @@ import { Component, h } from "@stencil/core";
 export class IconWhatsapp {
   render() {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 20 20">
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 -1 22 22">
         <title>WhatsApp</title>
         <g>
           <path
