@@ -15,7 +15,7 @@ export const Template = ({ level = 1, textContent = "" }) =>
 </section>`;
 
 <Meta
-  title="Web Component/Heading"
+  title="Web Component/Variable Heading"
   argTypes={{
     level: {
       description: "Heading level",
@@ -41,20 +41,7 @@ export const Template = ({ level = 1, textContent = "" }) =>
 
 # Heading components
 
-<Canvas>
-  <Story
-    name="Heading"
-    args={{
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-<ArgsTable story="Heading" />
-
-## Heading 1
+## Variable Heading
 
 <Canvas>
   <Story
@@ -67,6 +54,8 @@ export const Template = ({ level = 1, textContent = "" }) =>
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Heading 1" />
 
 ## Heading 2
 

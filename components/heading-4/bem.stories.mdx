@@ -1,0 +1,63 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
+
+<!-- Import component and component styles -->
+
+import "./bem.css";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ textContent = "", distanced = false }) =>
+  `<h4 class="${clsx("utrecht-heading-4", {
+    "utrecht-heading-4--distanced": distanced,
+  })}">${textContent}</h4>`;
+
+<Meta
+  title="Components/Heading/Heading 4"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the heading",
+      control: "text",
+    },
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "ALPHA",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Heading 4
+
+Styling via `utrecht-heading-4` class name:
+
+<Canvas>
+  <Story
+    name="Heading 4"
+    args={{
+      distanced: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading 4" />
