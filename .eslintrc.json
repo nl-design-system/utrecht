@@ -40,6 +40,7 @@
       "files": ["components/**/stencil.tsx", "components/**/*.stencil.tsx"],
       "rules": {
         "react/no-unknown-property": "off",
+        "react/prop-types": "off",
         "react/react-in-jsx-scope": "off"
       }
     }
