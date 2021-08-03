@@ -1,7 +1,5 @@
 # Accessibility
 
-_Status: **WORK IN PROGRESS**_
-
 **_The following are general accessibility guidelines and pointers, please refer to each individual pattern or component for their specific guidelines._**
 
 A digital product should be available to the widest audience possible. Anyone with access to the internet, regardless of the choice of platform, browser or (long-term or temporary) disability should be able to use the products we create.

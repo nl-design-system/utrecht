@@ -2,8 +2,6 @@
 
 For individual form component guidelines please consult the documentation for that specific component.
 
-_Status: **WORK IN PROGRESS**_
-
 ## Introduction
 
 A form is the moment the user enters into a dialogue with our products and organisation. It should therefore be as clear and convenient as possible.
