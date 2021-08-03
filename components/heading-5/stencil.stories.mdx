@@ -1,0 +1,51 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ textContent = "" }) =>
+  `<section>
+  <utrecht-heading-5>${textContent}</utrecht-heading-5>
+</section>`;
+
+<Meta
+  title="Web Component/Heading/Heading 5"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the heading",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Heading components
+
+<Canvas>
+  <Story
+    name="Heading 5"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading 5" />
