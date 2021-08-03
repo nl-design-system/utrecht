@@ -28,18 +28,19 @@ const tokenFiles = tokenContext
   .map((filename) => ({ filename: filename, content: tokenContext(filename).default }));
 
 const statuses = {
-  STABLE: {
+  PRODUCTION: {
     background: '#006400',
     color: '#ffffff',
     description:
       'Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases.',
   },
-  UNSTABLE: {
+  BETA: {
     background: '#cca300',
     color: '#ffffff',
-    description: 'Used in production in a specific situation, evolving APIs based on feedback, many major releases.',
+    description:
+      'Used in production in a specific situation, evolving APIs based on feedback, breaking changes are still likely.',
   },
-  EXPERIMENTAL: {
+  ALPHA: {
     background: '#cc0000',
     color: '#ffffff',
     description:
@@ -48,7 +49,8 @@ const statuses = {
   'WORK IN PROGRESS': {
     background: '#cc0000',
     color: '#ffffff',
-    description: 'Do not use in production. Not versioned and published yet.',
+    description:
+      'Do not use in production. Does not follow semantic versioning and any published packages are for internal use only.',
   },
 };
 
