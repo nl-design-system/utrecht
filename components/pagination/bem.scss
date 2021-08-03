@@ -1,0 +1,112 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../focus/bem";
+
+.utrecht-pagination {
+  font-size: var(--utrecht-pagination-font-size, var(--utrecht-document-font-family));
+  font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
+}
+
+.utrecht-pagination--distanced {
+  margin-block-start: var(--utrecht-pagination-margin-block-start);
+  margin-block-end: var(--utrecht-pagination-margin-block-end);
+}
+
+.utrecht-pagination__relative-link {
+  background-color: var(--utrecht-pagination-relative-link-background-color);
+  border-color: var(--utrecht-pagination-relative-link-border-color);
+  border-radius: var(--utrecht-pagination-relative-link-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-pagination-relative-link-border-width, 0);
+  color: var(--utrecht-pagination-relative-link-color);
+  display: inline-block;
+  font-weight: var(--utrecht-pagination-relative-link-font-weight);
+  padding-block-end: var(--utrecht-pagination-relative-link-padding-block-end);
+  padding-block-start: var(--utrecht-pagination-relative-link-padding-block-start);
+  padding-inline-end: var(--utrecht-pagination-relative-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-pagination-relative-link-padding-inline-start);
+  text-decoration: var(--utrecht-pagination-relative-link-text-decoration);
+  text-transform: var(--utrecht-pagination-relative-link-text-transform);
+}
+
+.utrecht-pagination__relative-link--next {
+  margin-inline-start: var(--utrecht-pagination-relative-link-distanced-margin-inline-start);
+}
+
+.utrecht-pagination__relative-link--prev {
+  margin-inline-end: var(--utrecht-pagination-relative-link-distanced-margin-inline-end);
+}
+
+.utrecht-pagination__relative-link--disabled {
+  color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
+  background-color: var(
+    --utrecht-pagination-relative-link-disabled-background-color,
+    var(--utrecht-pagination-relative-link-background-color)
+  );
+}
+
+.utrecht-pagination__relative-link--focus,
+.utrecht-pagination__relative-link:focus {
+  @include utrecht-focus;
+}
+
+.utrecht-pagination__relative-link--hover,
+.utrecht-pagination__relative-link:hover {
+  color: var(--utrecht-pagination-relative-link-hover-color, var(--utrecht-pagination-relative-link-color));
+  background-color: var(
+    --utrecht-pagination-relative-link-hover-background-color,
+    var(--utrecht-pagination-relative-link-background-color)
+  );
+  border-color: var(
+    --utrecht-pagination-relative-link-hover-border-color,
+    var(--utrecht-pagination-relative-link-border-color)
+  );
+}
+
+.utrecht-pagination__page-link {
+  display: inline-block;
+  color: var(--utrecht-pagination-page-link-color);
+  background-color: var(--utrecht-pagination-page-link-background-color);
+  border-style: solid;
+  border-radius: var(--utrecht-pagination-page-link-border-radius);
+  border-width: var(--utrecht-pagination-page-link-border-width);
+  border-color: var(--utrecht-pagination-page-link-border-color, 0);
+  padding-inline-start: var(--utrecht-pagination-page-link-padding-inline-start);
+  padding-inline-end: var(--utrecht-pagination-page-link-padding-inline-end);
+  padding-block-start: var(--utrecht-pagination-page-link-padding-block-start);
+  padding-block-end: var(--utrecht-pagination-page-link-padding-block-end);
+  font-weight: var(--utrecht-pagination-page-link-font-weight);
+  text-decoration: var(--utrecht-pagination-page-link-text-decoration);
+}
+
+.utrecht-pagination__page-link--current {
+  color: var(--utrecht-pagination-page-link-current-color);
+  background-color: var(--utrecht-pagination-page-link-current-background-color);
+  border-color: var(--utrecht-pagination-page-link-current-border-color);
+}
+
+.utrecht-pagination__page-link--distanced,
+.utrecht-pagination__page-link ~ .utrecht-pagination__page-link {
+  margin-inline-start: var(--utrecht-pagination-page-link-distanced-margin-inline-start);
+}
+
+.utrecht-pagination__page-link--hover,
+.utrecht-pagination__page-link:hover {
+  color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
+  background-color: var(
+    --utrecht-pagination-page-link-hover-background-color,
+    var(--utrecht-pagination-page-link-background-color)
+  );
+  border-color: var(
+    --utrecht-pagination-page-link-hover-border-color,
+    var(--utrecht-pagination-page-link-border-color)
+  );
+}
+
+.utrecht-pagination__page-link--focus,
+.utrecht-pagination__page-link:focus {
+  @include utrecht-focus;
+}
