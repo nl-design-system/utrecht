@@ -72,7 +72,14 @@ export const parameters = {
   options: {
     panelPosition: 'bottom',
     storySort: {
-      order: ['Utrecht', ['Introductie'], 'Onderzoek', 'Components', 'Molecules', 'Semantic HTML'],
+      order: [
+        'Utrecht',
+        ['README', 'Wat is het Utrecht Design System?', 'Toestemming voor gebruik'],
+        'Onderzoek',
+        'Components',
+        'Molecules',
+        'Semantic HTML',
+      ],
     },
   },
   themes: {
