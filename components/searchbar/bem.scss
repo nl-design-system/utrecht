@@ -1,6 +1,6 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
  */
 
  @import "../focus/bem";
@@ -20,17 +20,17 @@
 
 .utrecht-textbox {
   display: inline-block;
-  --utrecht-textbox-padding-block-start: .55em;
-  --utrecht-textbox-padding-block-end: .58em;
-  --utrecht-textbox-padding-inline-start: 2em;
-  --utrecht-textbox-padding-inline-end: 1em;
-  --utrecht-textbox-border-bottom-width: 1px;
-  background: #fff url(./icoon-zoek-rood.svg) .5em 50% no-repeat;
-  --utrecht-textbox-border-color: #c00;
-  background-size: 1em;
-  --utrecht-textbox-color: #1d1d1c;
-  line-height: 1.2em;
-  flex: 1;
+  --utrecht-textbox-padding-block-start: var(--utrecht-searchbar-textbox-padding-block-start);
+  --utrecht-textbox-padding-block-end: var(--utrecht-searchbar-textbox-padding-block-end);
+  --utrecht-textbox-padding-inline-start: var(--utrecht-searchbar-textbox-padding-inline-start);
+  --utrecht-textbox-padding-inline-end: var(--utrecht-searchbar-textbox-padding-inline-end);
+  --utrecht-textbox-border-bottom-width: var(--utrecht-searchbar-textbox-border-width);
+  background-image: url(./icoon-zoek-rood.svg);
+  background-position: var(--utrecht-searchbar-textbox-background-position);
+  background-repeat: var(--utrecht-searchbar-textbox-background-repeat);
+  background-size: var(--utrecht-searchbar-texbox-background-size);
+  --utrecht-textbox-border-color: var(--utrecht-searchbar-textbox-border-color);
+  line-height: var(--utrecht-searchbar-textbox-line-height);
 }
 
 .utrecht-textbox--focus,
@@ -39,17 +39,18 @@
 }
 
 .utrecht-button {
-  width: 6.6em;
-  margin: 0;
-  border: 1px solid #c00;
-  background: #c00;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: .05em;
-  // font-weight: var(--utrecht-weight-scale-bold-font-weight); Deze lukt niet? Huh?
-  font-weight: 900;
-  font-size: var(--utrecht-scale-sm-font-size);
+  width: var(--utrecht-searchbar-button-width);
+  margin: var(--utrecht-searchbar-button-margin);
+  border-width: var(--utrecht-searchbar-button-border-width);
+  border-style: var(--utrecht-searchbar-button-border-style);
+  border-color: var(--utrecht-searchbar-button-border-color);
+  background: var(--utrecht-searchbar-button-background);
+  color: var(--utrecht-searchbar-button-color);
+  text-align: var(--utrecht-searchbar-button-text-align);
+  text-transform: var(--utrecht-searchbar-button-text-transform);
+  letter-spacing: var(--utrecht-searchbar-button-letter-spacing);
+  font-weight: var(--utrecht-searchbar-button-font-weight);
+  font-size: var(--utrecht-searchbar-button-font-size);
 }
 
 .utrecht-button--focus,
@@ -59,6 +60,6 @@
 
 .utrecht-button--hover:not(:disabled),
 .utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
-  background-color: var(--utrecht-textbox-hover-background-color);
-  transform: var(--utrecht-textbox-hover-transform);
+  background-color: var(--utrecht-searchbar-hover-background-color);
+  transform: var(--utrecht-searchbar-hover-transform);
 }
