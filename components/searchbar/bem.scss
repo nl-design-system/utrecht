@@ -18,7 +18,7 @@
   border: 0;
 }
 
-.utrecht-textbox {
+.utrecht-searchbar .utrecht-textbox {
   display: inline-block;
   --utrecht-textbox-padding-block-start: var(--utrecht-searchbar-textbox-padding-block-start);
   --utrecht-textbox-padding-block-end: var(--utrecht-searchbar-textbox-padding-block-end);
@@ -38,19 +38,17 @@
   @include utrecht-focus;
 }
 
-.utrecht-button {
-  --utrecht-button-width: var(--utrecht-searchbar-button-width);
-  --utrecht-button-margin: var(--utrecht-searchbar-button-margin);
-  border-width: var(--utrecht-searchbar-button-border-width);
-  border-style: var(--utrecht-searchbar-button-border-style);
+.utrecht-searchbar .utrecht-button {
+  width: var(--utrecht-searchbar-button-width);
+  margin: var(--utrecht-searchbar-button-margin);
   --utrecht-button-border-color: var(--utrecht-searchbar-button-border-color);
-  --utrecht-button-background: var(--utrecht-searchbar-button-background);
-  --utrecht-button-color: var(--utrecht-searchbar-button-color);
+  --utrecht-button-primary-action-background-color: var(--utrecht-searchbar-button-background);
+  --utrecht-button-primary-action-color: var(--utrecht-searchbar-button-color);
   text-align: var(--utrecht-searchbar-button-text-align);
-  --utrecht-button-text-transform: var(--utrecht-searchbar-button-text-transform);
-  --utrecht-button-letter-spacing: var(--utrecht-searchbar-button-letter-spacing);
-  --utrecht-button-font-weight: var(--utrecht-searchbar-button-font-weight);
-  font-size: var(--utrecht-searchbar-button-font-size);
+  text-transform: var(--utrecht-searchbar-button-text-transform);
+  letter-spacing: var(--utrecht-searchbar-button-letter-spacing);
+  font-weight: var(--utrecht-searchbar-button-font-weight);
+  --utrecht-button-font-size: var(--utrecht-searchbar-button-font-size);
 }
 
 .utrecht-button--focus,
@@ -60,6 +58,6 @@
 
 .utrecht-button--hover:not(:disabled),
 .utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
-  --utrecht-button-background-color: var(--utrecht-searchbar-hover-background-color);
-  --utrecht-button-transform: var(--utrecht-searchbar-hover-transform);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-searchbar-hover-background-color);
+  --utrecht-button-focus-transform-scale: var(--utrecht-searchbar-hover-transform);
 }
