@@ -3,6 +3,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "../focus/bem";
+
 .utrecht-textbox {
   border-width: var(--utrecht-textbox-border-width);
   border-bottom-width: var(--utrecht-textbox-border-bottom-width, var(--utrecht-textbox-border-width));
@@ -31,7 +33,30 @@
   color: var(--utrecht-textbox-disabled-color);
 }
 
+.utrecht-textbox--focus {
+  @include utrecht-focus;
+}
+
 .utrecht-textbox--read-only {
   border-color: var(--utrecht-textbox-read-only-border-color);
   color: var(--utrecht-textbox-read-only-color);
+}
+
+.utrecht-textbox--html-input {
+  &:disabled {
+    @extend .utrecht-textbox--disabled;
+  }
+
+  &:focus {
+    @extend .utrecht-textbox--focus;
+  }
+
+  &:invalid,
+  &[aria-invalid="true"] {
+    @extend .utrecht-textbox--invalid;
+  }
+
+  &:read-only {
+    @extend .utrecht-textbox--read-only;
+  }
 }
