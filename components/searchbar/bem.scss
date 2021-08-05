@@ -5,61 +5,25 @@
 
 @import "../focus/bem";
 
-.utrecht-searchbar {
+.utrecht-search-bar {
+  --utrecht-button-border-color: var(--utrecht-search-bar-button-border-color);
+  --utrecht-button-focus-transform-scale: var(--utrecht-search-bar-hover-transform);
+  --utrecht-button-font-size: var(--utrecht-search-bar-button-font-size);
+  --utrecht-button-font-weight: var(--utrecht-search-bar-button-font-weight);
+  --utrecht-button-letter-spacing: var(--utrecht-search-bar-button-letter-spacing);
+  --utrecht-button-primary-action-background-color: var(--utrecht-search-bar-button-background-color);
+  --utrecht-button-primary-action-color: var(--utrecht-search-bar-button-color);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-search-bar-hover-background-color);
+  --utrecht-button-text-transform: var(--utrecht-search-bar-button-text-transform);
+  --utrecht-textbox-border-color: var(--utrecht-search-bar-textbox-border-color);
+  --utrecht-textbox-padding-inline-start: var(--utrecht-search-bar-textbox-padding-inline-start);
   display: flex;
 }
 
-.utrecht-searchlabel {
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-}
-
-.utrecht-searchbar .utrecht-textbox {
-  display: inline-block;
-  --utrecht-textbox-padding-block-start: var(--utrecht-searchbar-textbox-padding-block-start);
-  --utrecht-textbox-padding-block-end: var(--utrecht-searchbar-textbox-padding-block-end);
-  --utrecht-textbox-padding-inline-start: var(--utrecht-searchbar-textbox-padding-inline-start);
-  --utrecht-textbox-padding-inline-end: var(--utrecht-searchbar-textbox-padding-inline-end);
-  --utrecht-textbox-border-bottom-width: var(--utrecht-searchbar-textbox-border-width);
-  background-image: url(./icoon-zoek-rood.svg);
-  background-position-x: var(--utrecht-searchbar-textbox-background-position-x);
-  background-position-y: var(--utrecht-searchbar-textbox-background-position-y);
-  background-repeat: var(--utrecht-searchbar-textbox-background-repeat);
-  background-size: var(--utrecht-searchbar-textbox-background-size);
-
-  --utrecht-textbox-border-color: var(--utrecht-searchbar-textbox-border-color);
-  line-height: var(--utrecht-searchbar-textbox-line-height);
-}
-
-.utrecht-textbox--focus,
-.utrecht-textbox:not(.utrecht-textbox--disabled):focus {
-  @include utrecht-focus;
-}
-
-.utrecht-searchbar .utrecht-button {
-  width: var(--utrecht-searchbar-button-width);
-  margin: var(--utrecht-searchbar-button-margin);
-  --utrecht-button-border-color: var(--utrecht-searchbar-button-border-color);
-  --utrecht-button-primary-action-background-color: var(--utrecht-searchbar-button-background);
-  --utrecht-button-primary-action-color: var(--utrecht-searchbar-button-color);
-  text-align: var(--utrecht-searchbar-button-text-align);
-  text-transform: var(--utrecht-searchbar-button-text-transform);
-  letter-spacing: var(--utrecht-searchbar-button-letter-spacing);
-  font-weight: var(--utrecht-searchbar-button-font-weight);
-  --utrecht-button-font-size: var(--utrecht-searchbar-button-font-size);
-}
-
-.utrecht-button--focus,
-.utrecht-button:not(.utrecht-button--disabled):focus {
-  @include utrecht-focus;
-}
-
-.utrecht-button--hover:not(:disabled),
-.utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
-  --utrecht-button-primary-action-hover-background-color: var(--utrecht-searchbar-hover-background-color);
-  --utrecht-button-focus-transform-scale: var(--utrecht-searchbar-hover-transform);
+.utrecht-search-bar__input {
+  background-image: url("./icoon-zoek-rood.svg");
+  background-position-x: var(--utrecht-search-bar-textbox-background-position-x);
+  background-position-y: var(--utrecht-search-bar-textbox-background-position-y);
+  background-repeat: no-repeat;
+  background-size: var(--utrecht-search-bar-textbox-background-size);
 }
