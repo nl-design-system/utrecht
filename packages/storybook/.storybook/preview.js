@@ -74,7 +74,15 @@ export const parameters = {
     storySort: {
       order: [
         'Utrecht',
-        ['README', 'Wat is het Utrecht Design System?', 'Toestemming voor gebruik'],
+        [
+          'README',
+          'Wat is het Utrecht Design System?',
+          'Toestemming voor gebruik',
+          'Design Tokens',
+          ['Design Tokens'],
+          'Gebruikersonderzoek',
+          ['Gebruikersonderzoek'],
+        ],
         'Onderzoek',
         'CSS Component',
         ['README'],
