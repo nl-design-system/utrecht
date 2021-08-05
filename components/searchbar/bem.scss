@@ -26,9 +26,11 @@
   --utrecht-textbox-padding-inline-end: var(--utrecht-searchbar-textbox-padding-inline-end);
   --utrecht-textbox-border-bottom-width: var(--utrecht-searchbar-textbox-border-width);
   background-image: url(./icoon-zoek-rood.svg);
-  background-position: var(--utrecht-searchbar-textbox-background-position);
+  background-position-x: var(--utrecht-searchbar-textbox-background-position-x);
+  background-position-y: var(--utrecht-searchbar-textbox-background-position-y);
   background-repeat: var(--utrecht-searchbar-textbox-background-repeat);
-  background-size: var(--utrecht-searchbar-texbox-background-size);
+  background-size: var(--utrecht-searchbar-textbox-background-size);
+
   --utrecht-textbox-border-color: var(--utrecht-searchbar-textbox-border-color);
   line-height: var(--utrecht-searchbar-textbox-line-height);
 }
