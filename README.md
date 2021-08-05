@@ -53,6 +53,14 @@ For stable versions it would become:
 https://unpkg.com/@utrecht/design-tokens@^1.0.0/dist/index.css
 ```
 
+## npm packages
+
+- [@utrecht/component-library-css](https://www.npmjs.com/package/@utrecht/component-library-css)
+- [@utrecht/design-tokens](https://www.npmjs.com/package/@utrecht/design-tokens)
+- [@utrecht/web-component-library-angular](https://www.npmjs.com/package/@utrecht/web-component-library-angular)
+- [@utrecht/web-component-library-react](https://www.npmjs.com/package/@utrecht/web-component-library-react)
+- [@utrecht/web-component-library-stencil](https://www.npmjs.com/package/@utrecht/web-component-library-stencil)
+
 ## Contributing
 
 ### Install prerequisites
