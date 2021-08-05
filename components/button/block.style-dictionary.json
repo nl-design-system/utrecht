@@ -19,6 +19,18 @@
           "inherits": true
         }
       },
+      "font-weight": {
+        "css": {
+          "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "letter-spacing": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
       "margin-block-start": {
         "css": {
           "syntax": "<length>",
@@ -64,6 +76,12 @@
       "padding-inline-end": {
         "css": {
           "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "text-transform": {
+        "css": {
+          "syntax": "inherit | uppercase",
           "inherits": true
         }
       }
