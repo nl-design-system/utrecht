@@ -11,11 +11,15 @@ import "../button/bem.scss";
 
 import README from "./README.md";
 
-export const Template = () => `<div class="utrecht-searchbar">
-<label for="searchHomepage" class="utrecht-searchlabel">zoeken in Utrecht.nl</label>
-<input type="text" id="searchHomepage" class="utrecht-textbox" name="q" autocomplete="off" spellcheck="false" value="" aria-autocomplete="list" aria-haspopup="true" placeholder="">
-<input type="submit" value="Zoeken" id="inputButton" class="utrecht-button" title="Start zoekopdracht">
-</div>`;
+export const Template = ({
+  buttonLabel,
+  formLabel,
+  inputLabel,
+  value,
+}) => `<form class="utrecht-search-bar" role="search" aria-label="${formLabel}">
+  <input type="search" class="utrecht-search-bar__input utrecht-textbox utrecht-textbox utrecht-textbox--html-input" name="q" autocomplete="off" spellcheck="false" value="${value}" aria-label="${inputLabel}">
+  <button type="submit" value="Zoeken" class="utrecht-search-bar__button utrecht-button">${buttonLabel}</button>
+</form>`;
 
 <Meta
   title="Components/Search Bar"
@@ -34,7 +38,15 @@ export const Template = () => `<div class="utrecht-searchbar">
 />
 
 <Canvas>
-  <Story name="Search Bar" args={{}}>
+  <Story
+    name="Search Bar"
+    args={{
+      buttonLabel: "Zoeken",
+      formLabel: "zoeken in Utrecht.nl",
+      inputLabel: "zoektermen",
+      value: "The answer to life, the universe, and everything",
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
