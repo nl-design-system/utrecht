@@ -4,7 +4,10 @@
   "description": "Components for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
   "name": "@utrecht/components",
-  "private": true,
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
   "devDependencies": {
     "@stencil/core": "2.6.0"
   }
