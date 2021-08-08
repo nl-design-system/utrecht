@@ -1,4 +1,4 @@
-# Logo
+# Logo Gemeente Utrecht
 
 ## References
 
