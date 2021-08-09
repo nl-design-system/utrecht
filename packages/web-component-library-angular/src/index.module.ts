@@ -31,6 +31,10 @@ import {
   UtrechtSidenav,
   UtrechtTextbox,
 } from './directives/proxies';
+import { BooleanValueAccessor } from './directives/boolean-value-accessor';
+import { NumericValueAccessor } from './directives/number-value-accessor';
+import { SelectValueAccessor } from './directives/select-value-accessor';
+import { TextValueAccessor } from './directives/text-value-accessor';
 
 // This array is maintained manually, so it might miss the latest components.
 
@@ -67,9 +71,11 @@ const components = [
   UtrechtTextbox,
 ];
 
+const valueAcessors = [BooleanValueAccessor, NumericValueAccessor, SelectValueAccessor, TextValueAccessor];
+
 @NgModule({
-  declarations: components,
-  exports: components,
+  declarations: [...components, ...valueAcessors],
+  exports: [...components, ...valueAcessors],
   imports: [],
   providers: [],
 })
