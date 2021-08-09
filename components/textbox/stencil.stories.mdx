@@ -1,0 +1,121 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas } from "@storybook/addon-docs";
+
+<!-- Import Docs -->
+
+import README from "./README.md";
+
+export const Template = ({ disabled = false, invalid = false, placeholder = "", readOnly = false, value = "" }) =>
+  `<utrecht-textbox disabled="${disabled}" invalid="${invalid}" placeholder="${placeholder}" readonly="${readOnly}" value="${value}"></utrecht-textbox>`;
+
+<Meta
+  title="Web Component/Textbox"
+  argTypes={{
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    placeholder: {
+      description: "Placeholder",
+      control: "string",
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+    },
+    value: {
+      description: "Value",
+      control: "string",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    notes: {
+      UX: README,
+    },
+  }}
+/>
+
+# Textbox
+
+<Canvas>
+  <Story
+    name="Textbox"
+    args={{
+      value: "Example value",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## States
+
+### Invalid
+
+<Canvas>
+  <Story
+    name="Invalid text box"
+    args={{
+      invalid: true,
+      value: "Example value",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story
+    name="Disabled text box"
+    args={{
+      disabled: true,
+      value: "Example value",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Read-only
+
+<Canvas>
+  <Story
+    name="Read-only text box"
+    args={{
+      readOnly: true,
+      value: "Example value",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="Text box with placeholder"
+    args={{
+      placeholder: "Example placeholder",
+      value: "",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
