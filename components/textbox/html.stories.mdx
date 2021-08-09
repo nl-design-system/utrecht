@@ -49,7 +49,7 @@ export const Template = ({
     type: {
       description: "Type",
       control: "select",
-      options: ["email", "search", "tel", "text", "url"],
+      options: ["email", "search", "password", "tel", "text", "url"],
     },
     value: {
       description: "Set the value of the text box",
@@ -136,6 +136,22 @@ Styling via the `<input>` element:
     args={{
       required: true,
       value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Password input
+
+<Canvas>
+  <Story
+    name="Password input"
+    args={{
+      autoComplete: "current-password",
+      required: true,
+      value: "very$ecret2021",
+      type: "password",
     }}
   >
     {Template.bind({})}
