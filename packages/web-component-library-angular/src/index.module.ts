@@ -6,7 +6,10 @@ import {
   UtrechtBadgeStatus,
   UtrechtBreadcrumb,
   UtrechtButton,
+  UtrechtCheckbox,
   UtrechtDocument,
+  UtrechtFormFieldCheckbox,
+  UtrechtFormFieldTextbox,
   UtrechtHeading,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -26,6 +29,7 @@ import {
   UtrechtParagraph,
   UtrechtSeparator,
   UtrechtSidenav,
+  UtrechtTextbox,
 } from './directives/proxies';
 
 // This array is maintained manually, so it might miss the latest components.
@@ -37,7 +41,10 @@ const components = [
   UtrechtBadgeStatus,
   UtrechtBreadcrumb,
   UtrechtButton,
+  UtrechtCheckbox,
   UtrechtDocument,
+  UtrechtFormFieldCheckbox,
+  UtrechtFormFieldTextbox,
   UtrechtHeading,
   UtrechtHeading1,
   UtrechtHeading2,
@@ -57,6 +64,7 @@ const components = [
   UtrechtParagraph,
   UtrechtSeparator,
   UtrechtSidenav,
+  UtrechtTextbox,
 ];
 
 @NgModule({
