@@ -14,6 +14,7 @@ import "./html.scss";
 import README from "./README.md";
 
 export const Template = ({
+  autoComplete = null,
   type = "text",
   value = "",
   invalid = false,
@@ -24,12 +25,16 @@ export const Template = ({
   `<div class="utrecht-html">
   <input type="${type}" ${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
     required ? " required" : ""
-  }${readOnly ? "readonly" : ""} value="${value}">
+  }${readOnly ? "readonly" : ""} value="${value}"${autoComplete ? ` autocomplete="${autoComplete}"` : ""}>
 </div>`;
 
 <Meta
   title="HTML Component/Text Box"
   argTypes={{
+    autoComplete: {
+      description: "Autocomplete type",
+      control: "text",
+    },
     invalid: {
       description: "Invalid",
       control: "boolean",
