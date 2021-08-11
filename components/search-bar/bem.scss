@@ -24,7 +24,7 @@
 }
 
 .utrecht-search-bar__input {
-  background-image: url("./icoon-zoek-rood.svg");
+  background-image: var(--utrecht-search-bar-input-background-image, none);
   background-position-x: var(--utrecht-search-bar-textbox-background-position-x);
   background-position-y: var(--utrecht-search-bar-textbox-background-position-y);
   background-repeat: no-repeat;
