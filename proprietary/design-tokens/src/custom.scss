@@ -1,2 +1,7 @@
 @import "./component/utrecht/page-footer/custom";
 @import "./responsive";
+
+:root {
+  --utrecht-menulijst-item-background-image: url("./pijltje.svg");
+  --utrecht-search-bar-input-background-image: url("./icoon-zoek-rood.svg");
+}
