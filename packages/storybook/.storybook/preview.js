@@ -21,12 +21,6 @@ defineCustomElements();
 //   },
 // });
 
-const tokenContext = require.context('!!raw-loader!../src', true, /.\.(css|less|scss|svg)$/);
-
-const tokenFiles = tokenContext
-  .keys()
-  .map((filename) => ({ filename: filename, content: tokenContext(filename).default }));
-
 const statuses = {
   PRODUCTION: {
     background: '#006400',
@@ -65,9 +59,6 @@ export const parameters = {
   previewTabs,
   status: {
     statuses,
-  },
-  designToken: {
-    files: tokenFiles,
   },
   options: {
     panelPosition: 'bottom',
