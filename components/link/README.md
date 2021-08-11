@@ -5,6 +5,46 @@ Copyright (c) 2021 Gemeente Utrecht
 
 # Link
 
+## UX Guidelines
+
+### Tekst
+
+Links moeten duidelijk en voorspelbaar zijn. Een gebruiker moet een duidelijke verwachting hebben wat er gebeurt als hij op een link klikt.
+
+Links moeten nooit 'klik hier' of 'hier' als link tekst hebben.
+
+### Links in een zin
+
+Links moeten nooit een hele zin in beslag nemen, maar alleen de tekst die beschrijft waar de gebruikers naar toe gaan als ze op de link klikken.
+
+### Best Practice
+
+#### Buttons versus links
+
+Links worden vooral gebruikt om te navigeren en verschijnen dan ook in of direct na een zin.
+
+Buttons worden gebruikt voor acties, zoals 'toevoegen', 'sluiten' of 'opslaan'.
+
+#### Do's
+
+- Plaats links aan het einde van een zin als dat mogelijk is.
+- Maak duidelijk waar de link je naar toe brengt.
+- Gebruik het meest relevante woord van de link aan het begin van de link tekst. Bezoekers lezen niet verder dan de eerste twee woorden van een link.
+- Zorg dat de link ook begrijpelijk is zonder dat je de zinnen er omheen gelezen hebt.
+
+#### Don'ts
+
+- Gebruik geen buttons waar je een link kan gebruiken.
+- Gebruik geen vage of te algemene termen voor de link tekst. Help de gebruiker met voorspellen waar hij naar toe gaat.
+- Open interne links niet in een nieuwe tab. Hiermee schakel je één navigatiemanier uit om terug te gaan naar eerdere pagina's, de Nack button.
+
+### UX Referenties
+
+- Waarom [https://www.interaction-design.org/literature/article/tips-for-better-hyperlink-ux]('klik hier' niet werkt). Artikel van de Interaction Design Foundation.
+- [https://blog.prototypr.io/a-guide-to-designing-perfect-links-in-ux-414558f35730](Best practices) rondom links. Artikel op Prototypr.
+- Interessante Do's en don'ts over Web Design, onder andere over [https://uxplanet.org/dos-and-don-ts-of-web-design-8c9d6a5de7c6](links). Artikel van UX Planet.
+- Hoe schrijf je [https://www.nngroup.com/articles/writing-links/](goede links)? Uitgebreid artikel van de NN Group.
+
 ## Terminologie
 
 De termen de we gebruiken komen uit HTML en CSS.
