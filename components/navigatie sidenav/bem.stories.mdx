@@ -6,21 +6,29 @@ Copyright (c) 2021 A Herring
 import { Meta, Story, Canvas } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.scss";
-export const Template = ({ items }) => `<nav class="utrecht-sidenav">
+export const Template = ({
+  items,
+}) => `<nav class="utrecht-sidenav utrecht-sidenav--pseudo-elements"><style>.utrecht-sidenav__connection, .utrecht-sidenav__marker { display: none; }</style>
     <ul class="utrecht-sidenav__list">${items
       .map(
-        ({ href, title, current, focus, children, sibling, haschildren }) => `<li class="${clsx(
+        ({ href, title, current, focus, children, sibling, haschildren }, index, array) => `<li class="${clsx(
           "utrecht-sidenav__item",
+          index + 1 === array.length && "utrecht-sidenav__item--last",
           sibling && "utrecht-sidenav__item--sibling",
           haschildren && "utrecht-sidenav__item--has-children"
         )}">
           <a class="${clsx(
             "utrecht-sidenav__link",
+            "utrecht-sidenav__link--parent",
             current && "utrecht-sidenav__link--current",
             focus && "utrecht-sidenav__link--focus",
             sibling && "utrecht-sidenav__link--sibling",
             haschildren && "utrecht-sidenav__link--has-children"
-          )}" href="${href}">${title}</a><span></span>
+          )}" href="${href}"><div class="utrecht-sidenav__marker"></div><div class="${clsx(
+          "utrecht-sidenav__connection",
+          index === 0 && "utrecht-sidenav__connection--first",
+          index + 1 === array.length && "utrecht-sidenav__connection--last"
+        )}"></div>${title}</a><div class="utrecht-sidenav__item-separator"></div>
           ${
             children
               ? `<ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${children
@@ -28,14 +36,15 @@ export const Template = ({ items }) => `<nav class="utrecht-sidenav">
                     ({ href, title, current, focus }) =>
                       `<li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="${clsx(
                         "utrecht-sidenav__link utrecht-sidenav__link--child",
-                        current && "utrecht-sidenav__link--current utrecht-sidenav__link--child--current",
+                        current && "utrecht-sidenav__link--current utrecht-sidenav__link--current-child",
                         focus && "utrecht-sidenav__link--focus"
-                      )}" href="${href}">${title}</a></li>`
+                      )}" href="${href}"><div class="utrecht-sidenav__marker utrecht-sidenav__marker--child"></div>${title}</a></li>`
                   )
                   .join("")}
-          </ul><span></span>`
+          </ul>`
               : ""
           }
+          ${children ? '<div class="utrecht-sidenav__item-separator"></div>' : ""}
         </li>`
       )
       .join("")}

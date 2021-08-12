@@ -15,18 +15,19 @@ export class Sidenav {
     return (
       <nav class="utrecht-sidenav">
         <ul class="utrecht-sidenav__list">
-          {items.map(({ href, title, current, focus, children, sibling, haschildren }) => (
+          {items.map(({ href, title, current, focus, children, sibling, haschildren }, index, array) => (
             <li
               key={href}
               class={clsx(
                 "utrecht-sidenav__item",
+                index + 1 === array.length && "utrecht-sidenav__item--last",
                 sibling && "utrecht-sidenav__item--sibling",
                 haschildren && "utrecht-sidenav__item--has-children"
               )}
             >
               <a
                 class={clsx(
-                  "utrecht-sidenav__link",
+                  "utrecht-sidenav__link utrecht-sidenav__link--parent",
                   current && "utrecht-sidenav__link--current",
                   focus && "utrecht-sidenav__link--focus",
                   sibling && "utrecht-sidenav__link--sibling",
@@ -36,7 +37,7 @@ export class Sidenav {
               >
                 {title}
               </a>
-              <span></span>
+              <div class="utrecht-sidenav__item-separator"></div>
               {children ? (
                 <ul class="utrecht-sidenav__list utrecht-sidenav__list--child">
                   {children.map(({ href, title, current, focus }) => (
@@ -44,7 +45,7 @@ export class Sidenav {
                       <a
                         class={clsx(
                           "utrecht-sidenav__link utrecht-sidenav__link--child",
-                          current && "utrecht-sidenav__link--current utrecht-sidenav__link--child--current",
+                          current && "utrecht-sidenav__link--current utrecht-sidenav__link--current-child",
                           focus && "utrecht-sidenav__link--focus"
                         )}
                         href={href}
@@ -57,6 +58,7 @@ export class Sidenav {
               ) : (
                 ""
               )}
+              {children && <div class="utrecht-sidenav__item-separator"></div>}
             </li>
           ))}
         </ul>
