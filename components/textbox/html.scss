@@ -6,15 +6,13 @@
 @import "./bem";
 
 .utrecht-html {
-  input[type="text"],
   input[type="email"],
   input[type="password"],
   input[type="search"],
   input[type="tel"],
+  input[type="text"],
   input[type="url"] {
-    & {
-      @extend .utrecht-textbox;
-      @extend .utrecht-textbox--html-input;
-    }
+    @extend .utrecht-textbox;
+    @extend .utrecht-textbox--html-input;
   }
 }

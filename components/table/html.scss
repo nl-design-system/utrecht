@@ -5,6 +5,8 @@
 
 @import "./bem";
 
+/* stylelint-disable selector-class-pattern */
+
 .utrecht-html table {
   @extend .utrecht-table;
   @extend .utrecht-table--distanced;
@@ -51,17 +53,23 @@
 }
 
 .utrecht-html table.alternate-row-color {
+  & > tr:nth-child(even) > td,
+  & > tr:nth-child(even) > th {
+    @extend .utrecht-table__row--alternate-even;
+  }
+
   & > tr:nth-child(odd) > td,
-  & > tr:nth-child(odd) > th,
-  & > tbody > tr:nth-child(odd) > td,
-  & > tbody > tr:nth-child(odd) > th {
+  & > tr:nth-child(odd) > th {
     @extend .utrecht-table__row--alternate-odd;
   }
 
-  & > tr:nth-child(even) > td,
-  & > tr:nth-child(even) > th,
   & > tbody > tr:nth-child(even) > td,
   & > tbody > tr:nth-child(even) > th {
     @extend .utrecht-table__row--alternate-even;
+  }
+
+  & > tbody > tr:nth-child(odd) > td,
+  & > tbody > tr:nth-child(odd) > th {
+    @extend .utrecht-table__row--alternate-odd;
   }
 }

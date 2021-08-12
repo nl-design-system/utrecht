@@ -39,10 +39,6 @@ ol.utrecht-breadcrumb__list {
   block-size: 100%;
 }
 
-.utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item {
-  margin-inline-start: var(--utrecht-breadcrumb-item-divider-inline-size);
-}
-
 .utrecht-breadcrumb__link {
   background-color: var(--utrecht-breadcrumb-link-background-color);
   padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
@@ -61,11 +57,6 @@ ol.utrecht-breadcrumb__list {
   --utrecht-breadcrumb-arrow-size: 24px;
   overflow: hidden;
 
-  .utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item .utrecht-breadcrumb__link {
-    padding-inline-start: calc(
-      var(--utrecht-breadcrumb-item-padding-inline-start) + var(--utrecht-breadcrumb-arrow-size)
-    );
-  }
   .utrecht-breadcrumb__link {
     position: relative;
     padding-inline-end: 0;
@@ -105,4 +96,14 @@ ol.utrecht-breadcrumb__list {
   .utrecht-breadcrumb__link:focus::after {
     border-inline-start-color: var(--utrecht-breadcrumb-link-focus-background-color);
   }
+
+  .utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item .utrecht-breadcrumb__link {
+    padding-inline-start: calc(
+      var(--utrecht-breadcrumb-item-padding-inline-start) + var(--utrecht-breadcrumb-arrow-size)
+    );
+  }
+}
+
+.utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item {
+  margin-inline-start: var(--utrecht-breadcrumb-item-divider-inline-size);
 }

@@ -5,6 +5,8 @@
 
 @import "bem";
 
+/* stylelint-disable selector-class-pattern */
+
 .utrecht-html p {
   @extend .utrecht-paragraph;
 }
