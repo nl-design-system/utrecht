@@ -2,5 +2,5 @@
   "package.json": "npmPkgJsonLint --allowEmptyTargets",
   "*.md": "markdownlint",
   "*.{js,json,jsx,mdx,ts,tsx}": "eslint --no-error-on-unmatched-pattern",
-  "*.css": "stylelint --allow-empty-input"
+  "*.{css,scss}": "stylelint --allow-empty-input"
 }
