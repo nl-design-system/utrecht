@@ -81,6 +81,13 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
         { href: "https://example.com/", title: "Bestuur en organisatie" },
       ],
     }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
   >
     {Template.bind({})}
   </Story>
@@ -96,6 +103,13 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
         { href: "https://example.com/", title: "Ondernemen" },
         { href: "https://example.com/", title: "Bestuur en organisatie" },
       ],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
     }}
   >
     {Template.bind({})}
