@@ -1,0 +1,118 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const Template = ({ checked = false, disabled = false, invalid = false, label = "", required = false }) =>
+  `<utrecht-form-field-checkbox${checked ? ' checked="true"' : ""}${disabled ? ' disabled="true"' : ""}${
+    invalid ? ' invalid="true"' : ""
+  }${required ? ' required="true"' : ""}>${label}</utrecht-form-field-checkbox>`;
+
+<Meta
+  title="Web Component/Form field with checkbox"
+  argTypes={{
+    checked: {
+      description: "Checked",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with checkbox
+
+<Canvas>
+  <Story
+    name="Form field with checkbox"
+    args={{
+      label: "I agree",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Form field with checkbox" />
+
+## States
+
+### Checked
+
+<Canvas>
+  <Story
+    name="Checked"
+    args={{
+      checked: true,
+      label: "I agree",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+      label: "I agree",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Invalid
+
+<Canvas>
+  <Story
+    name="Invalid"
+    args={{
+      invalid: true,
+      label: "I agree",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story
+    name="Required"
+    args={{
+      required: true,
+      label: "I agree",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

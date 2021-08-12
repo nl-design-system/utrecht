@@ -13,9 +13,10 @@ import clsx from "clsx";
 })
 export class FormFieldCheckbox {
   @Prop() label: boolean = false;
-  @Prop({ reflect: true }) disabled: boolean = false;
-  @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
-  @State() checked: boolean = false;
+  @Prop({ attribute: "disabled", reflect: true }) disabled: boolean = false;
+  @Prop({ attribute: "checked", reflect: true }) checked: boolean = false;
+  @Prop({ attribute: "invalid", reflect: true }) invalid: boolean = false;
+  @Prop({ attribute: "required", reflect: true }) required: boolean = false;
   @State() value: string = "";
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
@@ -23,7 +24,7 @@ export class FormFieldCheckbox {
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { checked, disabled, value } = this;
+    const { checked, disabled, invalid, required, value } = this;
 
     return (
       <div class="utrecht-form-field-checkbox">
@@ -33,6 +34,8 @@ export class FormFieldCheckbox {
           type="checkbox"
           checked={checked}
           disabled={disabled}
+          aria-invalid={invalid}
+          required={required}
           value={value}
           onBlur={(evt) => this.utrechtBlur.emit(evt)}
           onChange={(evt) => this.utrechtChange.emit(evt)}
