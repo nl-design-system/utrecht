@@ -122,6 +122,13 @@ export const Template = ({ items }) => `<nav class="utrecht-sidenav">
         { href: "#", title: "Sibling #3", sibling: true },
       ],
     }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
   >
     {Template.bind({})}
   </Story>
@@ -156,6 +163,13 @@ export const Template = ({ items }) => `<nav class="utrecht-sidenav">
         { href: "#", title: "Groenonderhoud", sibling: true },
         { href: "#", title: "Zelfbeheer", sibling: true },
       ],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
     }}
   >
     {Template.bind({})}

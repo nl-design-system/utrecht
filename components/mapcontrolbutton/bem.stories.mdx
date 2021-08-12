@@ -68,7 +68,17 @@ Styling via the `.utrecht-mapcontrolbutton` class name:
 Styling via the `.utrecht-mapcontrolbutton--hover` class name:
 
 <Canvas>
-  <Story name="Map Control Button hover" args={{ hover: true }}>
+  <Story
+    name="Map Control Button hover"
+    args={{ hover: true }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -76,7 +86,17 @@ Styling via the `.utrecht-mapcontrolbutton--hover` class name:
 Styling via the `.utrecht-mapcontrolbutton--focus` class name:
 
 <Canvas>
-  <Story name="Map Control Button focus" args={{ focus: true }}>
+  <Story
+    name="Map Control Button focus"
+    args={{ focus: true }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
@@ -84,7 +104,17 @@ Styling via the `.utrecht-mapcontrolbutton--focus` class name:
 Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
 
 <Canvas>
-  <Story name="Map Control Button disabled" args={{ disabled: true }}>
+  <Story
+    name="Map Control Button disabled"
+    args={{ disabled: true }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
     {Template.bind({})}
   </Story>
 </Canvas>
