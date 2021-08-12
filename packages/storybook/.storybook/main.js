@@ -16,6 +16,5 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
-    'storybook-design-token',
   ],
 };
