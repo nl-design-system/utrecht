@@ -53,7 +53,7 @@
 
 /*draw the li item box bottom line*/
 
-.utrecht-sidenav__item span:not(.utrecht-sidenav__item:last-child span, .utrecht-sidenav__item--has-children span:first-of-type ),
+.utrecht-sidenav__item span:not(.utrecht-sidenav__item:last-child span, .utrecht-sidenav__item--has-children span:first-of-type),
 /* .utrecht-sidenav__item--has-children span */ {
   display: block;
   border-block-end: 1px solid var(--utrecht-color-grey-80);
@@ -81,10 +81,6 @@
   text-decoration: none;
 }
 
-/*How to select the parent of the nestsed UL to remove the bottom padding of te link item*/
-ul.utrecht-sidenav__list:has {
-}
-
 .utrecht-sidenav__link--child,
 .utrecht-sidenav__link--child--current {
   display: block;
@@ -96,6 +92,18 @@ ul.utrecht-sidenav__list:has {
   padding-inline-end: var(--utrecht-space-inline-3xs);
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+.utrecht-sidenav__link::before,
+.utrecht-sidenav__link--sibling::before {
+  background-color: var(--utrecht-sidenav-item-marker-color);
+  left: 26px;
+}
+
+/*Little fix to move the dot to the right*/
+.utrecht-sidenav__link--current::before {
+  background-color: var(--utrecht-sidenav-link-hover-color);
+  left: 27px;
 }
 
 /*Dot for link with siblings */
@@ -112,21 +120,6 @@ ul.utrecht-sidenav__list:has {
   border-radius: 100%;
   z-index: 10;
   box-shadow: 0 0 2px 2px #fff; /*Make var*/
-}
-
-.utrecht-sidenav__link::before,
-.utrecht-sidenav__link--sibling::before {
-  background-color: var(--utrecht-sidenav-item-marker-color);
-}
-
-.utrecht-sidenav__link::before,
-.utrecht-sidenav__link--sibling::before {
-  left: 26px;
-}
-
-/*Little fix to move the dot to the right*/
-.utrecht-sidenav__link--current::before {
-  left: 27px;
 }
 
 /* Hover layout for mousover on sidenav__link */
@@ -208,6 +201,7 @@ ul.utrecht-sidenav__list:has {
   position: absolute;
   top: 16px;
   left: 1.2rem;
+  background-color: transparent;
   transform: translateY(-50%) translateX(-19.5px);
   content: "";
   width: 4px;
@@ -217,12 +211,7 @@ ul.utrecht-sidenav__list:has {
   z-index: 10;
 }
 
-.utrecht-sidenav__link--child::before {
-  background-color: transparent;
-}
-
 /* Make current marker dots bold */
-.utrecht-sidenav__link--current::before,
 .utrecht-sidenav__link--child--current::before {
   background-color: var(--utrecht-sidenav-link-hover-color);
 }
