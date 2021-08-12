@@ -1,0 +1,80 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../focus/bem";
+
+.utrecht-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--utrecht-select-background-color);
+  background-image: var(--utrecht-select-background-image);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 1.4em;
+  border-block-end-width: var(--utrecht-select-border-block-end-width, var(--utrecht-select-border-width));
+  border-block-start-width: var(--utrecht-select-border-width);
+  border-color: var(--utrecht-select-border-color);
+  border-inline-end-width: var(--utrecht-select-border-width);
+  border-inline-start-width: var(--utrecht-select-border-width);
+  border-radius: var(--utrecht-select-border-radius, 0);
+  border-style: solid;
+  color: var(--utrecht-select-color);
+  font-family: var(--utrecht-select-font-family);
+  font-size: var(--utrecht-select-font-size);
+  max-inline-size: var(--utrecht-select-max-inline-size);
+  padding-block-end: var(--utrecht-select-padding-block-end);
+  padding-block-start: var(--utrecht-select-padding-block-start);
+  padding-inline-end: var(--utrecht-select-padding-inline-end);
+  padding-inline-start: var(--utrecht-select-padding-inline-start);
+  width: 100%;
+}
+
+.utrecht-select--disabled {
+  border-color: var(--utrecht-select-disabled-border-color);
+  color: var(--utrecht-select-disabled-color);
+}
+
+.utrecht-select--focus {
+  @include utrecht-focus();
+}
+
+.utrecht-select--invalid {
+  border-color: var(--utrecht-select-invalid-border-color);
+  border-width: var(--utrecht-select-invalid-border-width);
+}
+
+.utrecht-select--read-only {
+  border-color: var(--utrecht-select-read-only-border-color);
+  color: var(--utrecht-select-read-only-color);
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-select--required {
+}
+
+.utrecht-select--html-select {
+  &:disabled {
+    @extend .utrecht-select--disabled;
+  }
+
+  &:focus {
+    @extend .utrecht-select--focus;
+  }
+
+  &:invalid,
+  &[aria-invalid="true"] {
+    @extend .utrecht-select--invalid;
+  }
+
+  &:required,
+  &[aria-required="true"] {
+    @extend .utrecht-select--required;
+  }
+
+  &:read-only {
+    @extend .utrecht-select--read-only;
+  }
+}

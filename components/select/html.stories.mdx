@@ -1,0 +1,165 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Description, Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import "./html.scss";
+import README from "./README.md";
+
+export const Template = ({ disabled = false, invalid = false, options = [], readOnly = false, required = false }) =>
+  `<section class="utrecht-html">
+  <select${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${readOnly ? " readonly" : ""}${
+    required ? " required" : ""
+  } class="utrecht-select">
+    ${options
+      .map(
+        ({ label, selected, value }) =>
+          `<option${selected ? " selected" : ""}${value ? ` value="${value}"` : ""}>${label}</option>`
+      )
+      .join("\n    ")}
+  </select>
+</section>`;
+
+export const exampleOptions = [
+  { value: "1", label: "Option #1" },
+  { value: "2", label: "Option #2", selected: true },
+  { value: "3", label: "Option #3" },
+];
+
+<Meta
+  title="HTML Component/Form Select"
+  argTypes={{
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    options: {
+      description: "Options",
+      control: "array",
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+<Description>{README}</Description>
+
+Styling via the `<select>` element:
+
+<Canvas>
+  <Story
+    name="Select"
+    args={{
+      options: exampleOptions,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Select" />
+
+## States
+
+### Disabled
+
+<Canvas>
+  <Story
+    name="Disabled select"
+    args={{
+      disabled: true,
+      options: exampleOptions,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Invalid
+
+<Canvas>
+  <Story
+    name="Invalid select"
+    args={{
+      invalid: true,
+      options: exampleOptions,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Read-only
+
+<Canvas>
+  <Story
+    name="Read-only select"
+    args={{
+      options: exampleOptions,
+      readOnly: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story
+    name="Required select"
+    args={{
+      options: exampleOptions,
+      required: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
