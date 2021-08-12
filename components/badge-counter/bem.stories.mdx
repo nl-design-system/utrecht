@@ -7,8 +7,6 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import "./bem.scss";
 
-import README from "./README.md";
-
 export const Template = ({ textContent = "" }) =>
   `<span class="utrecht-badge-counter"><span class="utrecht-badge-counter__text">${textContent}</span></span>`;
 
@@ -34,9 +32,6 @@ export const Template = ({ textContent = "" }) =>
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

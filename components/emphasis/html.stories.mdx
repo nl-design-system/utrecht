@@ -5,8 +5,6 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
-import README from "./README.md";
-
 export const StressedTemplate = ({ textContent = "" }) => `<em>${textContent}</em>`;
 
 export const StrongTemplate = ({ textContent = "" }) => `<strong>${textContent}</strong>`;
@@ -44,9 +42,6 @@ export const Template = ({ textContent = "", stressed = false, strong = false })
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

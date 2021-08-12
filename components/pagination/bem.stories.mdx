@@ -6,8 +6,6 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.scss";
-import README from "./README.md";
-
 export const LinkTemplate = ({ disabled = false, href = "", rel = null, textContent = "", title = "" }) =>
   `<${disabled ? "span" : "a"} href="${href}" class="${clsx(
     "utrecht-pagination__relative-link",
@@ -82,9 +80,6 @@ export const Template = ({ currentIndex = -1, distanced = false, links = [], nex
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

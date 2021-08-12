@@ -1,8 +1,6 @@
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.scss";
-import README from "./README.md";
-
 export const Template = ({ href, icon, distanced }) => `<a href="${href}" class="${clsx(
   "utrecht-link-social",
   distanced && "utrecht-link-social--distanced"
@@ -45,9 +43,6 @@ export const ListTemplate = ({ links }) =>
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

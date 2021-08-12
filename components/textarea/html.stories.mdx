@@ -5,8 +5,6 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
-import README from "./README.md";
-
 export const Template = ({ invalid = false, readOnly = false, disabled = false, required = false, textContent = "" }) =>
   `<section class="utrecht-html">
   <textarea${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${required ? " required" : ""}${
@@ -44,9 +42,6 @@ export const Template = ({ invalid = false, readOnly = false, disabled = false, 
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

@@ -7,8 +7,6 @@ import { Meta, Story, Canvas } from "@storybook/addon-docs";
 
 import "./html.scss";
 
-import README from "./README.md";
-
 export const Template = () =>
   `<section class="utrecht-html">
   <ol>
@@ -26,9 +24,6 @@ export const Template = () =>
       transformSource: (_src, { args }) => Template(args),
     },
     status: "IN DEVELOPMENT",
-    notes: {
-      UX: README,
-    },
   }}
 />
 

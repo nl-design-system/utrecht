@@ -9,8 +9,6 @@ import clsx from "clsx";
 
 import "./bem.scss";
 
-import README from "./README.md";
-
 export const Template = ({ textContent = "", focus = false, hover = false, disabled = false }) =>
   `<button class="${clsx("utrecht-button", {
     "utrecht-button--hover": hover,
@@ -44,9 +42,6 @@ export const Template = ({ textContent = "", focus = false, hover = false, disab
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

@@ -6,8 +6,6 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.css";
-import README from "./README.md";
-
 export const Template = ({ distanced }) =>
   `<ol class="${clsx("utrecht-ordered-list", distanced && "utrecht-ordered-list--distanced")}">
   <li class="utrecht-ordered-list__item">Lorem</li>
@@ -28,9 +26,6 @@ export const Template = ({ distanced }) =>
       transformSource: (_src, { args }) => Template(args),
     },
     status: "IN DEVELOPMENT",
-    notes: {
-      UX: README,
-    },
   }}
 />
 

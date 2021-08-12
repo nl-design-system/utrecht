@@ -4,8 +4,6 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import README from "./README.md";
-
 export const attr = (name, value) => `${name}="${String(value).replace(/"/g, "&quot;")}"`;
 
 export const Template = ({ currentIndex = -1, links = [], next = null, prev = null }) =>
@@ -40,9 +38,6 @@ export const Template = ({ currentIndex = -1, links = [], next = null, prev = nu
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

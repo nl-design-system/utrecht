@@ -6,8 +6,6 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.css";
-import README from "./README.md";
-
 export const Template = ({ textContent = "", lead = false }) =>
   `<p class="${clsx("utrecht-paragraph", { "utrecht-paragraph--lead": lead })}">${textContent}</p>`;
 
@@ -34,9 +32,6 @@ export const TemplateMulti = ({ textContent = "" }) =>
     },
     status: {
       type: "BETA",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

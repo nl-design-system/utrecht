@@ -2,8 +2,6 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import dedent from "ts-dedent";
 
 import "./bem.scss";
-import README from "./README.md";
-
 export const Template = ({ href = "https://example.com/" }) =>
   dedent`<ul class="utrecht-menulijst">
         <li class="utrecht-menulijst__item utrecht-menulijst__item--active">
@@ -26,9 +24,6 @@ export const Template = ({ href = "https://example.com/" }) =>
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
   decorators={[

@@ -8,8 +8,6 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import "./bem.scss";
 
-import README from "./README.md";
-
 export const Template = ({ json }) => `<utrecht-sidenav json="${json.replace(/"/g, "&quot;")}"></utrecht-sidenav>`;
 
 <Meta
@@ -26,9 +24,6 @@ export const Template = ({ json }) => `<utrecht-sidenav json="${json.replace(/"/
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

@@ -5,8 +5,6 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
-import README from "./README.md";
-
 export const Template = ({ textContent = "", type = null }) =>
   `<div class="utrecht-html">
   <input type="${type}" id="${type}">
@@ -32,9 +30,6 @@ export const Template = ({ textContent = "", type = null }) =>
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />
