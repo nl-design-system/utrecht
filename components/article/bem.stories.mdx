@@ -7,8 +7,6 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import "./bem.css";
 
-import README from "./README.md";
-
 export const Template = ({ content }) => `<div class="utrecht-article">${content}</div>`;
 
 <Meta
@@ -25,9 +23,6 @@ export const Template = ({ content }) => `<div class="utrecht-article">${content
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

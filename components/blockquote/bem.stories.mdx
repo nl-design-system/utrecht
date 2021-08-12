@@ -6,8 +6,6 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.css";
-import README from "./README.md";
-
 export const Template = ({ textContent = "", attribution = null, distanced = false }) =>
   `<blockquote class="${clsx("utrecht-blockquote", { "utrecht-blockquote--distanced": distanced })}">
     <div class="utrecht-blockquote__content">
@@ -42,9 +40,6 @@ export const Template = ({ textContent = "", attribution = null, distanced = fal
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />

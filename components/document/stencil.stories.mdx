@@ -4,8 +4,6 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import README from "./README.md";
-
 export const Template = ({ innerHTML }) => `<utrecht-document>${innerHTML}</utrecht-document>`;
 
 <Meta
@@ -22,9 +20,6 @@ export const Template = ({ innerHTML }) => `<utrecht-document>${innerHTML}</utre
     },
     status: {
       type: "WORK IN PROGRESS",
-    },
-    notes: {
-      UX: README,
     },
   }}
 />
