@@ -55,11 +55,14 @@ https://unpkg.com/@utrecht/design-tokens@^1.0.0/dist/index.css
 
 ## npm packages
 
-- [@utrecht/component-library-css](https://www.npmjs.com/package/@utrecht/component-library-css)
-- [@utrecht/design-tokens](https://www.npmjs.com/package/@utrecht/design-tokens)
-- [@utrecht/web-component-library-angular](https://www.npmjs.com/package/@utrecht/web-component-library-angular)
-- [@utrecht/web-component-library-react](https://www.npmjs.com/package/@utrecht/web-component-library-react)
-- [@utrecht/web-component-library-stencil](https://www.npmjs.com/package/@utrecht/web-component-library-stencil)
+| name                                                                                                           | version                                                                                 |
+| -------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------- |
+| [@utrecht/component-library-css](https://www.npmjs.com/package/@utrecht/component-library-css)                 | ![NPM version](https://img.shields.io/npm/v/@utrecht/component-library-css.svg)         |
+| [@utrecht/components](https://www.npmjs.com/package/@utrecht/components)                                       | ![NPM version](https://img.shields.io/npm/v/@utrecht/components.svg)                    |
+| [@utrecht/design-tokens](https://www.npmjs.com/package/@utrecht/design-tokens)                                 | ![NPM version](https://img.shields.io/npm/v/@utrecht/design-tokens.svg)                 |
+| [@utrecht/web-component-library-angular](https://www.npmjs.com/package/@utrecht/web-component-library-angular) | ![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-angular.svg) |
+| [@utrecht/web-component-library-react](https://www.npmjs.com/package/@utrecht/web-component-library-react)     | ![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-react.svg)   |
+| [@utrecht/web-component-library-stencil](https://www.npmjs.com/package/@utrecht/web-component-library-stencil) | ![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-stencil.svg) |
 
 ## Contributing
 
