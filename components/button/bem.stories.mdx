@@ -10,8 +10,6 @@ import clsx from "clsx";
 import "./bem.scss";
 
 import README from "./README.md";
-import accessibilityGuidelines from "./docs/accessibility-guidelines.md";
-import onderzoek from "./docs/onderzoek.md";
 
 export const Template = ({ textContent = "", focus = false, hover = false, disabled = false }) =>
   `<button class="${clsx("utrecht-button", {
@@ -49,8 +47,6 @@ export const Template = ({ textContent = "", focus = false, hover = false, disab
     },
     notes: {
       UX: README,
-      Accessibility: accessibilityGuidelines,
-      Onderzoek: onderzoek,
     },
   }}
 />
