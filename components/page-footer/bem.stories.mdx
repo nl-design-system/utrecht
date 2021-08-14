@@ -3,8 +3,7 @@
 Copyright (c) 2021 Robbert Broersma
 -->
 
-import { Description, Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import README from "./README.md";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.css";
 
 export const Template = ({ innerHTML = "" }) => `<footer class="utrecht-page-footer">
@@ -26,7 +25,7 @@ ${innerHTML}</header>`;
   }}
 />
 
-<Description>{README}</Description>
+# Page Footer
 
 <Canvas>
   <Story

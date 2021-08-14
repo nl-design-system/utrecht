@@ -3,8 +3,7 @@
 Copyright (c) 2021 Robbert Broersma
 -->
 
-import { Meta, Story, Canvas, ArgsTable, Description } from "@storybook/addon-docs";
-import README from "./README.md";
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
 
 export const AlternateLangLink = ({ textContent, title, current, lang, hreflang }) =>
@@ -45,7 +44,7 @@ export const AlternateLangLink = ({ textContent, title, current, lang, hreflang 
   decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}
 />
 
-<Description>{README}</Description>
+# Alternate Language Link
 
 <Canvas>
   <Story
