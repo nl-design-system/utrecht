@@ -9,9 +9,9 @@ import { AlternateLangLink } from "../alternate-lang-link/bem.stories.mdx";
 import "../link/bem.scss";
 
 export const AlternateLangNav = ({ languages }) =>
-  `<div class="utrecht-alternate-lang-nav">${languages
-    .map(AlternateLangLink)
-    .join('<span aria-hidden="true"> | </span>')}</div>`;
+  `<div class="utrecht-alternate-lang-nav">
+${languages.map(AlternateLangLink).join('\n<span aria-hidden="true"> | </span>\n')}
+</div>`;
 
 <Meta
   title="CSS Component/Alternate Language Navigation"
@@ -23,7 +23,7 @@ export const AlternateLangNav = ({ languages }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => AlternateLangLink(args),
+      transformSource: (_src, { args }) => AlternateLangNav(args),
     },
     status: "WORK IN PROGRESS",
   }}

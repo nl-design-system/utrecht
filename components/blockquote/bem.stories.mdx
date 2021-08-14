@@ -8,14 +8,14 @@ import clsx from "clsx";
 import "./bem.css";
 export const Template = ({ textContent = "", attribution = null, distanced = false }) =>
   `<blockquote class="${clsx("utrecht-blockquote", { "utrecht-blockquote--distanced": distanced })}">
-    <div class="utrecht-blockquote__content">
-      <p>${textContent}</p>${
+  <div class="utrecht-blockquote__content">
+    <p>${textContent}</p>${
     attribution
       ? `
-    </div>
     <div class="utrecht-blockquote__attribution">${attribution}</div>`
       : ""
   }
+  </div>
 </blockquote>`;
 
 <Meta
