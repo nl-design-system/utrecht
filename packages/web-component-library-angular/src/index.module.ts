@@ -9,6 +9,7 @@ import {
   UtrechtCheckbox,
   UtrechtDocument,
   UtrechtFormFieldCheckbox,
+  UtrechtFormFieldDescription,
   UtrechtFormFieldTextbox,
   UtrechtHeading,
   UtrechtHeading1,
@@ -36,7 +37,7 @@ import { NumericValueAccessor } from './directives/number-value-accessor';
 import { SelectValueAccessor } from './directives/select-value-accessor';
 import { TextValueAccessor } from './directives/text-value-accessor';
 
-// This array is maintained manually, so it might miss the latest components.
+// This array is maintained manually, unfortunately
 
 const components = [
   UtrechtArticle,
@@ -48,6 +49,7 @@ const components = [
   UtrechtCheckbox,
   UtrechtDocument,
   UtrechtFormFieldCheckbox,
+  UtrechtFormFieldDescription,
   UtrechtFormFieldTextbox,
   UtrechtHeading,
   UtrechtHeading1,
