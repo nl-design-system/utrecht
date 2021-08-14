@@ -6,8 +6,8 @@
 .utrecht-blockquote {
   font-family: var(--utrecht-document-font-family);
   font-size: var(--utrecht-blockquote-font-size);
-  margin-inline-start: var(--utrecht-blockquote-margin-inline-start);
   margin-inline-end: var(--utrecht-blockquote-margin-inline-end);
+  margin-inline-start: var(--utrecht-blockquote-margin-inline-start);
 }
 
 .utrecht-blockquote__attribution {
@@ -24,6 +24,6 @@
 }
 
 .utrecht-blockquote--distanced {
-  margin-block-start: var(--utrecht-blockquote-margin-block-start);
   margin-block-end: var(--utrecht-blockquote-margin-block-end);
+  margin-block-start: var(--utrecht-blockquote-margin-block-start);
 }

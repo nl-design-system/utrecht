@@ -6,6 +6,7 @@
  */
 
 .utrecht-heading-1 {
+  color: var(--utrecht-heading-1-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
   font-family: var(
     --utrecht-heading-1-font-family,
     var(--utrecht-heading-font-family, var(--utrecht-document-font-family))
@@ -15,10 +16,9 @@
   letter-spacing: var(--utrecht-heading-1-letter-spacing);
   line-height: var(--utrecht-heading-1-line-height);
   text-transform: var(--utrecht-heading-1-text-transform, inherit);
-  color: var(--utrecht-heading-1-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
 }
 
 .utrecht-heading-1--distanced {
-  margin-block-start: var(--utrecht-heading-1-margin-block-start);
   margin-block-end: var(--utrecht-heading-1-margin-block-end);
+  margin-block-start: var(--utrecht-heading-1-margin-block-start);
 }

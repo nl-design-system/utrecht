@@ -4,13 +4,13 @@
  */
 
 .utrecht-form-field-radio {
-  font-size: var(--utrecht-paragraph-font-size);
   font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-paragraph-font-size);
 }
 
 .utrecht-form-field-radio--distanced {
-  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
   margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
 }
 
 .utrecht-form-field-radio__label {

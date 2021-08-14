@@ -8,8 +8,8 @@
 }
 
 .utrecht-form-field-checkbox--distanced {
-  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
   margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
 }
 
 .utrecht-form-field-checkbox__label {

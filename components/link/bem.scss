@@ -7,8 +7,8 @@
 @import "../focus/bem";
 
 .utrecht-link {
-  text-decoration: var(--utrecht-link-text-decoration, underline);
   color: var(--utrecht-link-color, blue);
+  text-decoration: var(--utrecht-link-text-decoration, underline);
 }
 
 .utrecht-link:visited,

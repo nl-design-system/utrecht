@@ -5,8 +5,8 @@
 
 @mixin reset-ol {
   list-style: none;
-  margin-block-start: 0;
   margin-block-end: 0;
+  margin-block-start: 0;
   padding-inline-start: 0;
 }
 
@@ -20,15 +20,15 @@
   --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
   --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
   --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
+  font-family: var(--utrecht-document-font-family, inherit);
 
   font-size: var(--utrecht-breadcrumb-font-size);
-  font-family: var(--utrecht-document-font-family, inherit);
   text-transform: var(--utrecht-document-text-transform, inherit);
 }
 
 .utrecht-breadcrumb__list {
-  display: flex;
   block-size: var(--utrecht-breadcrumb-block-size);
+  display: flex;
 }
 
 ol.utrecht-breadcrumb__list {
@@ -41,11 +41,11 @@ ol.utrecht-breadcrumb__list {
 
 .utrecht-breadcrumb__link {
   background-color: var(--utrecht-breadcrumb-link-background-color);
-  padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
-  padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
-  padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
-  padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
   display: block;
+  padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
+  padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
+  padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
+  padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -58,8 +58,8 @@ ol.utrecht-breadcrumb__list {
   overflow: hidden;
 
   .utrecht-breadcrumb__link {
-    position: relative;
     padding-inline-end: 0;
+    position: relative;
   }
 
   .utrecht-breadcrumb__link::after,

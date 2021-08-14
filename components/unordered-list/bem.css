@@ -12,19 +12,19 @@
 }
 
 .utrecht-unordered-list--distanced {
-  margin-block-start: var(--utrecht-unordered-list-margin-block-start, var(--utrecht-paragraph-margin-block-start));
   margin-block-end: var(--utrecht-unordered-list-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-unordered-list-margin-block-start, var(--utrecht-paragraph-margin-block-start));
 }
 
 .utrecht-unordered-list--nested {
-  margin-inline-start: 2ch;
   margin-block-end: 0;
+  margin-inline-start: 2ch;
 }
 
 .utrecht-unordered-list__item {
-  padding-inline-start: 1ch;
-  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
   margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
+  padding-inline-start: 1ch;
 }
 
 .utrecht-unordered-list__item::marker,
