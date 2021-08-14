@@ -1,5 +1,5 @@
 svg {
-  width: var(--utrecht-icon-size, 100%);
-  height: var(--utrecht-icon-size, 100%);
   color: var(--utrecht-icon-color, var(--utrecht-document-color, currentColor));
+  height: var(--utrecht-icon-size, 100%);
+  width: var(--utrecht-icon-size, 100%);
 }

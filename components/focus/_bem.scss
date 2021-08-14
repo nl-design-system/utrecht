@@ -1,9 +1,9 @@
 @mixin utrecht-focus {
-  outline-width: var(--utrecht-focus-outline-width, 0);
-  outline-style: var(--utrecht-focus-outline-style, solid);
-  outline-color: var(--utrecht-focus-outline-color, transparent);
-  color: var(--utrecht-focus-color, inherit);
-  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
-  outline-offset: 0;
   background-color: var(--utrecht-focus-background-color);
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  color: var(--utrecht-focus-color, inherit);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: 0;
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
 }

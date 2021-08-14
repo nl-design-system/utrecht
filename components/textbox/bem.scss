@@ -11,6 +11,7 @@
   border-color: var(--utrecht-textbox-border-color);
   border-radius: var(--utrecht-textbox-border-radius, 0);
   border-style: solid;
+  box-sizing: border-box;
   color: var(--utrecht-textbox-color);
   font-family: var(--utrecht-textbox-font-family);
   font-size: var(--utrecht-textbox-font-size, 1em);
@@ -19,7 +20,6 @@
   padding-block-start: var(--utrecht-textbox-padding-block-start);
   padding-inline-end: var(--utrecht-textbox-padding-inline-end);
   padding-inline-start: var(--utrecht-textbox-padding-inline-start);
-  box-sizing: border-box;
   width: 100%;
 }
 
