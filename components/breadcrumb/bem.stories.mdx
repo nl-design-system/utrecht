@@ -24,7 +24,7 @@ export const Template = ({ items, microdata, variant }) => `<nav class="${clsx(
         "utrecht-link",
         current && "utrecht-link--current",
         focus && "utrecht-link--focus"
-      )}" href="${href}"${current ? 'aria-current="location"' : ""}${microdata ? 'itemprop="item"' : ""}>
+      )}" href="${href}"${current ? ' aria-current="location"' : ""}${microdata ? ' itemprop="item"' : ""}>
       <span class="utrecht-breadcrumb__text"${microdata ? ' itemprop="name"' : ""}>${title}</span>
       ${microdata ? `<meta itemprop="position" content="${index + 1}" />` : ""}
     </a>

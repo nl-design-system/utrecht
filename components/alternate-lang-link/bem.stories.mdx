@@ -7,12 +7,12 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "../link/bem.scss";
 
-export const AlternateLangLink = ({ textContent, title, current, lang, hreflang }) =>
+export const AlternateLangLink = ({ textContent = "", title = "", current = false, lang = "", hreflang = "" }) =>
   `<a href="https://example.com/${lang}/" class="${clsx("utrecht-link", "utrecht-link--alternate-lang", {
     "utrecht-link--current-lang": current,
-  })}"${current ? 'aria-current="page"' : ""} title="${title}" hreflang="${hreflang}" lang="${lang}"${
-    !current ? 'rel="alternate"' : ""
-  }>${textContent}</a>`;
+  })}"${current ? ' aria-current="page"' : ""}${title ? ` title="${title}"` : ""}${
+    hreflang ? ` hreflang="${hreflang}"` : ""
+  }${lang ? ` lang="${lang}"` : ""}${!current ? ' rel="alternate"' : ""}>${textContent}</a>`;
 
 <Meta
   title="CSS Component/Alternate Language Link"
