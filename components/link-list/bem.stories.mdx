@@ -1,0 +1,55 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
+import "./bem.scss";
+import { Template as Link } from "../link/bem.stories.mdx";
+
+export const Template = ({ links = [] }) => `<ul class="utrecht-link-list utrecht-link-list--html-ul">
+  ${links.map((link) => `<li class="utrecht-link-list__item">${Link(link)}</li>`).join("\n  ")}
+</ul>`;
+
+<Meta
+  title="CSS Component/Link List"
+  argTypes={{
+    links: {
+      description: "Links",
+      type: {
+        name: "array",
+        required: true,
+      },
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Link List
+
+The CSS code is currently very specific to Utrecht, and has no white label design tokens yet.
+
+<Canvas>
+  <Story
+    name="Link List"
+    args={{
+      links: [
+        { href: "#", textContent: "Link 1" },
+        { href: "#", textContent: "Link 2" },
+        { href: "#", textContent: "Link 3" },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Link List" />
