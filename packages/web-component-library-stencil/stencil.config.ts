@@ -4,6 +4,7 @@ import { patchAngularOutputTarget } from './patch-angular';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { sequentialOutputTargets } from './sequential-output-targets';
 import { sass } from '@stencil/sass';
+import { vueOutputTarget } from '@stencil/vue-output-target';
 
 const valueAccessorConfigs: ValueAccessorConfig = [
   {
@@ -32,6 +33,12 @@ const valueAccessorConfigs: ValueAccessorConfig = [
   },
 ];
 
+const vueComponentModels = valueAccessorConfigs.map(({ elementSelectors, event, targetAttr }) => ({
+  elements: elementSelectors,
+  event,
+  targetAttr,
+}));
+
 export const config: Config = {
   namespace: 'utrecht',
   srcDir: '../../components/',
@@ -57,6 +64,11 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: '@utrecht/web-component-library-stencil',
       proxiesFile: '../web-component-library-react/src/components.ts',
+    }),
+    vueOutputTarget({
+      componentCorePackage: '@utrecht/web-component-library-stencil',
+      proxiesFile: '../web-component-library-vue/src/components.ts',
+      componentModels: vueComponentModels,
     }),
   ],
   plugins: [sass()],
