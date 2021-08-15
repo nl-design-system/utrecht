@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core';
 import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 import { patchAngularOutputTarget } from './patch-angular';
+import { patchVueOutputTarget } from './patch-vue';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { sequentialOutputTargets } from './sequential-output-targets';
 import { sass } from '@stencil/sass';
@@ -65,11 +66,16 @@ export const config: Config = {
       componentCorePackage: '@utrecht/web-component-library-stencil',
       proxiesFile: '../web-component-library-react/src/components.ts',
     }),
-    vueOutputTarget({
-      componentCorePackage: '@utrecht/web-component-library-stencil',
-      proxiesFile: '../web-component-library-vue/src/components.ts',
-      componentModels: vueComponentModels,
-    }),
+    sequentialOutputTargets(
+      vueOutputTarget({
+        componentCorePackage: '@utrecht/web-component-library-stencil',
+        proxiesFile: '../web-component-library-vue/src/components.ts',
+        componentModels: vueComponentModels,
+      }),
+      patchVueOutputTarget({
+        proxiesFile: '../web-component-library-vue/src/components.ts',
+      }),
+    ),
   ],
   plugins: [sass()],
 };
