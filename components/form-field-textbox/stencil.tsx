@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, Prop, State, h } from "@stencil/core";
+import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
 import clsx from "clsx";
 
 @Component({
@@ -16,7 +16,7 @@ export class FormFieldTextbox {
   @Prop({ reflect: true }) invalid: boolean = false;
   @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
   @Prop() placeholder: string = "";
-  @State() value: string = "";
+  @Prop() value: string = "";
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;

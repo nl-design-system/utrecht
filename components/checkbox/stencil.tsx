@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, Prop, State, h } from "@stencil/core";
+import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
 import clsx from "clsx";
 
 @Component({
@@ -14,8 +14,8 @@ import clsx from "clsx";
 export class Checkbox {
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
-  @State() checked: boolean = false;
-  @State() value: string = "";
+  @Prop() checked: boolean = false;
+  @Prop() value: string = "";
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;
