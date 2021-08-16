@@ -91,6 +91,7 @@
     "test-workspaces": "lerna run --no-bail test",
     "watch:stencil": "lerna run watch:stencil",
     "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
+    "percy": "percy storybook dist/",
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
     "watch:storybook": "start-storybook --port 6006 --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",

@@ -17,7 +17,6 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "percy-snapshot": "percy-storybook --build_dir dist/ --widths=1280",
     "start": "node_modules/http-server/bin/http-server dist/"
   }
 }
