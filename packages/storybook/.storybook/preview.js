@@ -122,16 +122,6 @@ const addonThemes = {
   },
 };
 
-// Configure global settings for Percy.io
-// https://github.com/percy/percy-storybook
-const percy = {
-  percy: {
-    snapshot: {
-      widths: [1280],
-    },
-  },
-};
-
 export const parameters = defaultsDeep(
   {},
   // Deep merge the following configurations:
@@ -141,5 +131,4 @@ export const parameters = defaultsDeep(
   defaultTab,
   sidebarOrder,
   tabOrder,
-  percy,
 );
