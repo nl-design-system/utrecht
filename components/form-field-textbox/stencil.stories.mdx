@@ -1,0 +1,249 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const Template = ({
+  autoComplete = "",
+  disabled = false,
+  invalid = false,
+  label = "",
+  placeholder = "",
+  readOnly = false,
+  required = false,
+  type = "",
+  value = "",
+}) =>
+  `<utrecht-form-field-textbox${autoComplete ? ` autocomplete="${autoComplete}"` : ""}${
+    disabled ? ' disabled="true"' : ""
+  }${invalid ? ' invalid="true"' : ""}${placeholder ? ` placeholder="${placeholder}"` : ""}${
+    readOnly ? ' readonly="true"' : ""
+  }${required ? ' required="true"' : ""}${value ? ` value="${value}"` : ""}${
+    type ? ` type="${type}"` : ""
+  }>${label}</utrecht-form-field-textbox>`;
+
+<Meta
+  title="Web Component/Form field with textbox"
+  argTypes={{
+    autoComplete: {
+      description: "Autocomplete",
+      control: { type: "select" },
+      options: [
+        "",
+        "additional-name",
+        "address-level1",
+        "address-level2",
+        "address-level3",
+        "address-level4",
+        "address-line1",
+        "address-line2",
+        "address-line3",
+        "bday",
+        "bday-day",
+        "bday-month",
+        "bday-year",
+        "cc-additional-name",
+        "cc-csc",
+        "cc-exp",
+        "cc-exp-month",
+        "cc-exp-year",
+        "cc-family-name",
+        "cc-given-name",
+        "cc-name",
+        "cc-number",
+        "cc-type",
+        "country",
+        "country-name",
+        "current-password",
+        "email",
+        "family-name",
+        "fax",
+        "given-name",
+        "home",
+        "honorific-prefix",
+        "honorific-suffix",
+        "impp",
+        "language",
+        "mobile",
+        "name",
+        "new-password",
+        "nickname",
+        "one-time-code",
+        "organization",
+        "organization-title",
+        "pager",
+        "photo",
+        "postal-code",
+        "sex",
+        "street-address",
+        "tel",
+        "tel-area-code",
+        "tel-country-code",
+        "tel-extension",
+        "tel-local",
+        "tel-local-prefix",
+        "tel-local-suffix",
+        "tel-national",
+        "transaction-amount",
+        "transaction-currency",
+        "url",
+        "username",
+        "work",
+      ],
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+    placeholder: {
+      description: "Placeholder",
+      control: "text",
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+    value: {
+      description: "Value",
+      control: "text",
+    },
+    type: {
+      description: "Type",
+      control: { type: "select" },
+      options: ["email", "password", "search", "tel", "text", "url"],
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with textbox
+
+<Canvas>
+  <Story
+    name="Form field with textbox"
+    args={{
+      autoComplete: "",
+      disabled: false,
+      invalid: false,
+      label: "Message",
+      placeholder: "",
+      readOnly: false,
+      required: false,
+      value: "",
+      type: "",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Form field with textbox" />
+
+## States
+
+### Checked
+
+<Canvas>
+  <Story
+    name="Checked"
+    args={{
+      checked: true,
+      label: "Message",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+      label: "Message",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Invalid
+
+<Canvas>
+  <Story
+    name="Invalid"
+    args={{
+      invalid: true,
+      label: "Message",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story
+    name="Required"
+    args={{
+      required: true,
+      label: "Message",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Password
+
+<Canvas>
+  <Story
+    name="Password"
+    args={{
+      autoComplete: "new-password",
+      label: "New password",
+      type: "password",
+      value: "secret",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="Placeholder"
+    args={{
+      label: "Message",
+      placeholder: "Hello, ...",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
