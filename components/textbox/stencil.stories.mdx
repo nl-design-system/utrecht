@@ -3,13 +3,99 @@
 Copyright (c) 2021 Robbert Broersma
 -->
 
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
-export const Template = ({ disabled = false, invalid = false, placeholder = "", readOnly = false, value = "" }) =>
-  `<utrecht-textbox disabled="${disabled}" invalid="${invalid}" placeholder="${placeholder}" readonly="${readOnly}" value="${value}"></utrecht-textbox>`;
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
+
+export const Template = ({
+  autoComplete = "",
+  disabled = false,
+  invalid = false,
+  label = "",
+  min = "",
+  max = "",
+  pattern = "",
+  placeholder = "",
+  readOnly = false,
+  required = false,
+  type = "",
+  value = "",
+}) =>
+  `<utrecht-textbox${autoComplete ? ` autocomplete="${autoComplete}"` : ""}${disabled ? ' disabled="true"' : ""}${
+    invalid ? ' invalid="true"' : ""
+  }${min !== "" ? ` min="${min}"` : ""}${max !== "" ? ` max="${max}"` : ""}${pattern ? ` pattern="${pattern}"` : ""}${
+    placeholder ? ` placeholder="${placeholder}"` : ""
+  }${readOnly ? ' readonly="true"' : ""}${required ? ' required="true"' : ""}${value ? ` value="${value}"` : ""}${
+    type ? ` type="${type}"` : ""
+  }></utrecht-textbox>`;
 
 <Meta
-  title="Web Component/Textbox"
+  title="Web Component/Text Box"
   argTypes={{
+    autoComplete: {
+      description: "Autocomplete",
+      control: { type: "select" },
+      options: [
+        "",
+        "additional-name",
+        "address-level1",
+        "address-level2",
+        "address-level3",
+        "address-level4",
+        "address-line1",
+        "address-line2",
+        "address-line3",
+        "bday",
+        "bday-day",
+        "bday-month",
+        "bday-year",
+        "cc-additional-name",
+        "cc-csc",
+        "cc-exp",
+        "cc-exp-month",
+        "cc-exp-year",
+        "cc-family-name",
+        "cc-given-name",
+        "cc-name",
+        "cc-number",
+        "cc-type",
+        "country",
+        "country-name",
+        "current-password",
+        "email",
+        "family-name",
+        "fax",
+        "given-name",
+        "home",
+        "honorific-prefix",
+        "honorific-suffix",
+        "impp",
+        "language",
+        "mobile",
+        "name",
+        "new-password",
+        "nickname",
+        "one-time-code",
+        "organization",
+        "organization-title",
+        "pager",
+        "photo",
+        "postal-code",
+        "sex",
+        "street-address",
+        "tel",
+        "tel-area-code",
+        "tel-country-code",
+        "tel-extension",
+        "tel-local",
+        "tel-local-prefix",
+        "tel-local-suffix",
+        "tel-national",
+        "transaction-amount",
+        "transaction-currency",
+        "url",
+        "username",
+        "work",
+      ],
+    },
     disabled: {
       description: "Disabled",
       control: "boolean",
@@ -18,17 +104,42 @@ export const Template = ({ disabled = false, invalid = false, placeholder = "", 
       description: "Invalid",
       control: "boolean",
     },
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+    min: {
+      description: "Minimum",
+      control: "number",
+    },
+    max: {
+      description: "Maximum",
+      control: "number",
+    },
+    pattern: {
+      description: "Pattern",
+      control: "text",
+    },
     placeholder: {
       description: "Placeholder",
-      control: "string",
+      control: "text",
     },
     readOnly: {
       description: "Read-only",
       control: "boolean",
     },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
     value: {
       description: "Value",
-      control: "string",
+      control: "text",
+    },
+    type: {
+      description: "Type",
+      control: { type: "select" },
+      options: ["", "email", "password", "search", "tel", "text", "url"],
     },
   }}
   parameters={{
@@ -41,18 +152,30 @@ export const Template = ({ disabled = false, invalid = false, placeholder = "", 
   }}
 />
 
-# Textbox
+# Text box
 
 <Canvas>
   <Story
-    name="Textbox"
+    name="Text box"
     args={{
-      value: "Example value",
+      autoComplete: "",
+      disabled: false,
+      invalid: false,
+      label: "Message",
+      min: "",
+      max: "",
+      pattern: "",
+      placeholder: "",
+      readOnly: false,
+      required: false,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Text box" />
 
 ## States
 
@@ -63,7 +186,7 @@ export const Template = ({ disabled = false, invalid = false, placeholder = "", 
     name="Invalid text box"
     args={{
       invalid: true,
-      value: "Example value",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
@@ -77,7 +200,7 @@ export const Template = ({ disabled = false, invalid = false, placeholder = "", 
     name="Disabled text box"
     args={{
       disabled: true,
-      value: "Example value",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
@@ -91,7 +214,24 @@ export const Template = ({ disabled = false, invalid = false, placeholder = "", 
     name="Read-only text box"
     args={{
       readOnly: true,
-      value: "Example value",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Number input
+
+<Canvas>
+  <Story
+    name="Number input"
+    args={{
+      min: 0,
+      max: 100,
+      label: "Lucky number",
+      type: "number",
+      value: "42",
     }}
   >
     {Template.bind({})}
@@ -104,7 +244,7 @@ export const Template = ({ disabled = false, invalid = false, placeholder = "", 
   <Story
     name="Text box with placeholder"
     args={{
-      placeholder: "Example placeholder",
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
       value: "",
     }}
   >

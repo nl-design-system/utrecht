@@ -10,6 +10,9 @@ export const Template = ({
   disabled = false,
   invalid = false,
   label = "",
+  min = "",
+  max = "",
+  pattern = "",
   placeholder = "",
   readOnly = false,
   required = false,
@@ -18,11 +21,11 @@ export const Template = ({
 }) =>
   `<utrecht-form-field-textbox${autoComplete ? ` autocomplete="${autoComplete}"` : ""}${
     disabled ? ' disabled="true"' : ""
-  }${invalid ? ' invalid="true"' : ""}${placeholder ? ` placeholder="${placeholder}"` : ""}${
-    readOnly ? ' readonly="true"' : ""
-  }${required ? ' required="true"' : ""}${value ? ` value="${value}"` : ""}${
-    type ? ` type="${type}"` : ""
-  }>${label}</utrecht-form-field-textbox>`;
+  }${invalid ? ' invalid="true"' : ""}${min !== "" ? ` min="${min}"` : ""}${max !== "" ? ` max="${max}"` : ""}${
+    pattern ? ` pattern="${pattern}"` : ""
+  }${placeholder ? ` placeholder="${placeholder}"` : ""}${readOnly ? ' readonly="true"' : ""}${
+    required ? ' required="true"' : ""
+  }${value ? ` value="${value}"` : ""}${type ? ` type="${type}"` : ""}>${label}</utrecht-form-field-textbox>`;
 
 <Meta
   title="Web Component/Form field with textbox"
@@ -105,6 +108,18 @@ export const Template = ({
       description: "Set the content of the label",
       control: "text",
     },
+    min: {
+      description: "Minimum",
+      control: "number",
+    },
+    max: {
+      description: "Maximum",
+      control: "number",
+    },
+    pattern: {
+      description: "Pattern",
+      control: "text",
+    },
     placeholder: {
       description: "Placeholder",
       control: "text",
@@ -124,7 +139,7 @@ export const Template = ({
     type: {
       description: "Type",
       control: { type: "select" },
-      options: ["email", "password", "search", "tel", "text", "url"],
+      options: ["", "email", "password", "search", "tel", "text", "url"],
     },
   }}
   parameters={{
@@ -147,10 +162,13 @@ export const Template = ({
       disabled: false,
       invalid: false,
       label: "Message",
+      min: "",
+      max: "",
+      pattern: "",
       placeholder: "",
       readOnly: false,
       required: false,
-      value: "Lorem ipsum dolor sit amet",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
       type: "",
     }}
   >
@@ -170,7 +188,7 @@ export const Template = ({
     args={{
       disabled: true,
       label: "Message",
-      value: "Lorem ipsum dolor sit amet",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
@@ -185,7 +203,7 @@ export const Template = ({
     args={{
       invalid: true,
       label: "Message",
-      value: "Lorem ipsum dolor sit amet",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
@@ -200,7 +218,7 @@ export const Template = ({
     args={{
       required: true,
       label: "Message",
-      value: "Lorem ipsum dolor sit amet",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
@@ -216,7 +234,24 @@ export const Template = ({
       autoComplete: "new-password",
       label: "New password",
       type: "password",
-      value: "Lorem ipsum dolor sit amet",
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Number input
+
+<Canvas>
+  <Story
+    name="Number input"
+    args={{
+      min: 0,
+      max: 100,
+      label: "Lucky number",
+      type: "number",
+      value: "42",
     }}
   >
     {Template.bind({})}
@@ -230,7 +265,7 @@ export const Template = ({
     name="Placeholder"
     args={{
       label: "Message",
-      placeholder: "Lorem ipsum dolor sit amet",
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}

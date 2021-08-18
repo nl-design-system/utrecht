@@ -6,7 +6,9 @@
 @import "./bem";
 
 .utrecht-html {
+  input:not([type]),
   input[type="email"],
+  input[type="number"],
   input[type="password"],
   input[type="search"],
   input[type="tel"],
