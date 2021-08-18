@@ -9,7 +9,7 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.scss";
 
 export const Template = ({ disabled = false, textContent = "", type = "" }) =>
-  `<utrecht-button${disabled ? " disabled" : ""}${type ? ` type="${type}"` : ""}>${content}</utrecht-button>`;
+  `<utrecht-button${disabled ? " disabled" : ""}${type ? ` type="${type}"` : ""}>${textContent}</utrecht-button>`;
 
 <Meta
   title="Web Component/Button"
@@ -59,6 +59,7 @@ export const Template = ({ disabled = false, textContent = "", type = "" }) =>
   <Story
     name="Submit button"
     args={{
+      textContent: "Send",
       type: "submit",
     }}
   >
