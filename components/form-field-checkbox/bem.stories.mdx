@@ -4,13 +4,15 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import "./bem.css";
+
+import "./bem.scss";
 import "../checkbox/bem.css";
 import "../form-label/bem.css";
+
 export const Template = ({ label = "" }) =>
-  `<div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
-    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="id-ce0239e2">
-  <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e2">${label}</label>
+  `<div class="utrecht-form-field utrecht-form-field--checkbox utrecht-form-field--distanced">
+    <input type="checkbox" class="utrecht-form-field__input utrecht-checkbox" id="id-ce0239e2">
+  <label class="utrecht-form-field__label utrecht-form-field__label--checkbox utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e2">${label}</label>
 </div>`;
 
 <Meta
