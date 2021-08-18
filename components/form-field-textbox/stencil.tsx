@@ -12,10 +12,13 @@ import clsx from "clsx";
   shadow: true,
 })
 export class FormFieldTextbox {
+  @Prop({ attribute: "autocomplete", reflect: true }) autoComplete: string = "";
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
   @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
   @Prop() placeholder: string = "";
+  @Prop({ reflect: true }) required: boolean = false;
+  @Prop({ reflect: true }) type: string = "";
   @Prop() value: string = "";
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
@@ -23,7 +26,7 @@ export class FormFieldTextbox {
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { disabled, invalid, placeholder, readOnly, value } = this;
+    const { autoComplete, disabled, invalid, placeholder, readOnly, required, type, value } = this;
 
     return (
       <div class="utrecht-form-field-textbox">
@@ -35,10 +38,12 @@ export class FormFieldTextbox {
             invalid && "utrecht-textbox--invalid",
             readOnly && "utrecht-textbox--readonly"
           )}
-          type="text"
+          type={type || "text"}
+          autoComplete={autoComplete}
           disabled={disabled}
           placeholder={placeholder || null}
           readonly={readOnly}
+          required={required}
           value={value}
           onBlur={(evt) => this.utrechtBlur.emit(evt)}
           onChange={(evt) => this.utrechtChange.emit(evt)}
