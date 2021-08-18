@@ -27,7 +27,7 @@ export class FormFieldCheckbox {
     const { checked, disabled, invalid, required, value } = this;
 
     return (
-      <div class="utrecht-form-field-checkbox">
+      <div class="utrecht-form-field utrecht-form-field--checkbox">
         <input
           id="input"
           class={clsx("utrecht-checkbox")}
@@ -46,7 +46,12 @@ export class FormFieldCheckbox {
           }}
         />
         <label
-          class={clsx("utrecht-form-field-checkbox__label", "utrecht-form-label", "utrecht-form-label--checkbox")}
+          class={clsx(
+            "utrecht-form-field__label",
+            "utrecht-form-field__label--checkbox",
+            "utrecht-form-label",
+            "utrecht-form-label--checkbox"
+          )}
           htmlFor="input"
         >
           <slot></slot>

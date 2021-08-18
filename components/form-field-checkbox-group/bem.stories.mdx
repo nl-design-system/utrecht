@@ -26,11 +26,11 @@ export const Template = ({
         name,
         value,
         checked,
-      }) => `<div class="utrecht-form-field-checkbox utrecht-form-field-checkbox--distanced">
-    <input type="checkbox" class="utrecht-form-field-checkbox__input utrecht-checkbox" id="${id}" value="${value}"${
+      }) => `<div class="utrecht-form-field utrecht-form-field--checkbox utrecht-form-field--distanced">
+    <input type="checkbox" class="utrecht-form-field__input utrecht-checkbox" id="${id}" value="${value}"${
         checked ? " checked" : ""
       } name="${name}">
-    <label class="utrecht-form-field-checkbox__label utrecht-form-label utrecht-form-label--checkbox" for="${id}">${label}</label>
+    <label class="utrecht-form-field__label utrecht-form-field__label--checkbox utrecht-form-label utrecht-form-label--checkbox" for="${id}">${label}</label>
   </div>`
     )
     .join("\n")}
