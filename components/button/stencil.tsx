@@ -8,10 +8,15 @@ import clsx from "clsx";
 })
 export class Button {
   @Prop() disabled: boolean;
+  @Prop() type: string;
 
   render() {
     return (
-      <button class={clsx("utrecht-button", this.disabled && "utrecht-button--disabled")} disabled={this.disabled}>
+      <button
+        class={clsx("utrecht-button", this.disabled && "utrecht-button--disabled")}
+        disabled={this.disabled}
+        type={this.type || "button"}
+      >
         <slot></slot>
       </button>
     );
