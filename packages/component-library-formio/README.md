@@ -11,7 +11,7 @@ npm install --save-dev \
   @utrecht/web-component-library-stencil
 ```
 
-Additionally, having the core form.io packages installed is a prerequisite:
+Additionally, having the core Form.io packages installed is a prerequisite:
 
 ```shell
 npm install --save-dev formiojs react-formio

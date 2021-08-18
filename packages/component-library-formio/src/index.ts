@@ -43,7 +43,7 @@ export const templates = {
   radio: { form: FormioRadioButtonTemplate },
 };
 
-export const sanitizeconfig = {
+export const sanitizeConfig = {
   addTags: [
     'utrecht-article',
     'utrecht-badge-counter',
