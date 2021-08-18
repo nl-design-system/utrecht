@@ -15,8 +15,11 @@ export class FormFieldTextbox {
   @Prop({ attribute: "autocomplete", reflect: true }) autoComplete: string = "";
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
-  @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
+  @Prop() min: string = "";
+  @Prop() max: string = "";
+  @Prop() pattern: string = "";
   @Prop() placeholder: string = "";
+  @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
   @Prop({ reflect: true }) required: boolean = false;
   @Prop({ reflect: true }) type: string = "";
   @Prop() value: string = "";
@@ -26,7 +29,7 @@ export class FormFieldTextbox {
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { autoComplete, disabled, invalid, placeholder, readOnly, required, type, value } = this;
+    const { autoComplete, disabled, invalid, min, max, pattern, placeholder, readOnly, required, type, value } = this;
 
     return (
       <div class="utrecht-form-field-textbox">
@@ -41,6 +44,9 @@ export class FormFieldTextbox {
           type={type || "text"}
           autoComplete={autoComplete}
           disabled={disabled}
+          min={min}
+          max={max}
+          pattern={pattern}
           placeholder={placeholder || null}
           readonly={readOnly}
           required={required}

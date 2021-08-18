@@ -4,53 +4,40 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import "./html.scss";
+import "./bem.scss";
+import clsx from "clsx";
+
 export const Template = ({
-  autoComplete = null,
   disabled = false,
+  focus = false,
   invalid = false,
-  min = "",
-  max = "",
-  pattern = "",
   readOnly = false,
   required = false,
-  type = "text",
   value = "",
 }) =>
-  `<div class="utrecht-html">
-  <input${type ? ` type="${type}"` : ""}${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
-    min !== "" ? ` min="${min}"` : ""
-  }${max !== "" ? ` max="${max}"` : ""}${pattern ? ` pattern="${pattern}"` : ""}${required ? " required" : ""}${
-    readOnly ? " readonly" : ""
-  } value="${value}"${autoComplete ? ` autocomplete="${autoComplete}"` : ""}>
-</div>`;
+  `<input class="${clsx(
+    "utrecht-textbox",
+    disabled && "utrecht-textbox--disabled",
+    focus && "utrecht-textbox--focus",
+    invalid && "utrecht-textbox--invalid",
+    readOnly && "utrecht-textbox--readonly",
+    required && "utrecht-textbox--required"
+  )}" value="${value}">`;
 
 <Meta
-  title="HTML Component/Text Box"
+  title="CSS Component/Text Box"
   argTypes={{
-    autoComplete: {
-      description: "Autocomplete type",
-      control: "text",
-    },
     disabled: {
       description: "Disabled",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
       control: "boolean",
     },
     invalid: {
       description: "Invalid",
       control: "boolean",
-    },
-    min: {
-      description: "Minimum",
-      control: "number",
-    },
-    max: {
-      description: "Maximum",
-      control: "number",
-    },
-    pattern: {
-      description: "Pattern",
-      control: "text",
     },
     readOnly: {
       description: "Read-only",
@@ -59,11 +46,6 @@ export const Template = ({
     required: {
       description: "Required",
       control: "boolean",
-    },
-    type: {
-      description: "Type",
-      control: "select",
-      options: ["", "email", "number", "password", "search", "tel", "text", "url"],
     },
     value: {
       description: "Set the value of the text box",
@@ -88,15 +70,11 @@ Styling via the `<input>` element:
   <Story
     name="Text box"
     args={{
-      autoComplete: "",
       disabled: false,
+      focus: false,
       invalid: false,
-      min: "",
-      max: "",
-      pattern: "",
       readOnly: false,
       required: false,
-      type: "text",
       value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
@@ -108,20 +86,6 @@ Styling via the `<input>` element:
 
 ## States
 
-### Invalid
-
-<Canvas>
-  <Story
-    name="Invalid text box"
-    args={{
-      invalid: true,
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
 ### Disabled
 
 <Canvas>
@@ -129,6 +93,20 @@ Styling via the `<input>` element:
     name="Disabled text box"
     args={{
       disabled: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Invalid
+
+<Canvas>
+  <Story
+    name="Invalid text box"
+    args={{
+      invalid: true,
       value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
@@ -164,32 +142,16 @@ Styling via the `<input>` element:
   </Story>
 </Canvas>
 
-## Number input
+## Interactive States
+
+### Focus
 
 <Canvas>
   <Story
-    name="Number input"
+    name="Text box with focus"
     args={{
-      min: 0,
-      value: "42",
-      max: 100,
-      type: "number",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-## Password input
-
-<Canvas>
-  <Story
-    name="Password input"
-    args={{
-      autoComplete: "current-password",
-      required: true,
-      value: "very$ecret2021",
-      type: "password",
+      focus: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}
