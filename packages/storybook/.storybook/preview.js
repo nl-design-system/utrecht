@@ -58,6 +58,8 @@ const sidebarOrder = {
         ['README'],
         'Vue.js Component',
         ['README'],
+        'Form.io Component',
+        ['README'],
       ],
     },
   },
