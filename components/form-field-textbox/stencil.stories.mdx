@@ -150,7 +150,7 @@ export const Template = ({
       placeholder: "",
       readOnly: false,
       required: false,
-      value: "",
+      value: "Lorem ipsum dolor sit amet",
       type: "",
     }}
   >
@@ -162,20 +162,6 @@ export const Template = ({
 
 ## States
 
-### Checked
-
-<Canvas>
-  <Story
-    name="Checked"
-    args={{
-      checked: true,
-      label: "Message",
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
 ### Disabled
 
 <Canvas>
@@ -184,6 +170,7 @@ export const Template = ({
     args={{
       disabled: true,
       label: "Message",
+      value: "Lorem ipsum dolor sit amet",
     }}
   >
     {Template.bind({})}
@@ -198,6 +185,7 @@ export const Template = ({
     args={{
       invalid: true,
       label: "Message",
+      value: "Lorem ipsum dolor sit amet",
     }}
   >
     {Template.bind({})}
@@ -212,6 +200,7 @@ export const Template = ({
     args={{
       required: true,
       label: "Message",
+      value: "Lorem ipsum dolor sit amet",
     }}
   >
     {Template.bind({})}
@@ -227,7 +216,7 @@ export const Template = ({
       autoComplete: "new-password",
       label: "New password",
       type: "password",
-      value: "secret",
+      value: "Lorem ipsum dolor sit amet",
     }}
   >
     {Template.bind({})}
@@ -241,7 +230,7 @@ export const Template = ({
     name="Placeholder"
     args={{
       label: "Message",
-      placeholder: "Hello, ...",
+      placeholder: "Lorem ipsum dolor sit amet",
     }}
   >
     {Template.bind({})}

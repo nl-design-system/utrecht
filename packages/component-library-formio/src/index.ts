@@ -54,6 +54,7 @@ export const sanitizeConfig = {
     'utrecht-checkbox',
     'utrecht-document',
     'utrecht-form-field-checkbox',
+    'utrecht-form-field-textarea',
     'utrecht-form-field-textbox',
     'utrecht-heading',
     'utrecht-heading-1',

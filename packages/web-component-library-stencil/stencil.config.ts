@@ -9,7 +9,12 @@ import { vueOutputTarget } from '@stencil/vue-output-target';
 
 const valueAccessorConfigs: ValueAccessorConfig = [
   {
-    elementSelectors: ['utrecht-textarea', 'utrecht-textbox', 'utrecht-form-field-textbox'],
+    elementSelectors: [
+      'utrecht-textarea',
+      'utrecht-textbox',
+      'utrecht-form-field-textarea',
+      'utrecht-form-field-textbox',
+    ],
     event: 'utrechtInput',
     targetAttr: 'value',
     type: 'text',
