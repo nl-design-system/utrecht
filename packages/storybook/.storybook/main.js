@@ -1,4 +1,7 @@
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: [
     '../../../components/**/*stories.@(js|mdx)',
     '../../../documentation/**/*stories.@(js|mdx)',
@@ -10,7 +13,6 @@ module.exports = {
   addons: [
     {
       name: '@storybook/addon-docs',
-      options: { configureJSX: true },
     },
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
