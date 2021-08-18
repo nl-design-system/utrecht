@@ -1,0 +1,160 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const Template = ({
+  disabled = false,
+  invalid = false,
+  label = "",
+  placeholder = "",
+  readOnly = false,
+  required = false,
+  value = "",
+}) =>
+  `<utrecht-form-field-textarea${disabled ? ' disabled="true"' : ""}${invalid ? ' invalid="true"' : ""}${
+    placeholder ? ` placeholder="${placeholder}"` : ""
+  }${readOnly ? ' readonly="true"' : ""}${required ? ' required="true"' : ""}${
+    value ? ` value="${value}"` : ""
+  }>${label}</utrecht-form-field-textarea>`;
+
+<Meta
+  title="Web Component/Form field with textarea"
+  argTypes={{
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+    placeholder: {
+      description: "Placeholder",
+      control: "text",
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+    value: {
+      description: "Value",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with textarea
+
+<Canvas>
+  <Story
+    name="Form field with textarea"
+    args={{
+      disabled: false,
+      invalid: false,
+      label: "Message",
+      placeholder: "",
+      readOnly: false,
+      required: false,
+      value: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Form field with textarea" />
+
+## States
+
+### Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+      label: "Message",
+      value: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Invalid
+
+<Canvas>
+  <Story
+    name="Invalid"
+    args={{
+      invalid: true,
+      label: "Message",
+      value: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Read-only
+
+<Canvas>
+  <Story
+    name="Read-only"
+    args={{
+      required: true,
+      label: "Message",
+      value: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Required
+
+<Canvas>
+  <Story
+    name="Required"
+    args={{
+      required: true,
+      label: "Message",
+      value: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="Placeholder"
+    args={{
+      label: "Message",
+      placeholder: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
