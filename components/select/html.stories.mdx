@@ -40,7 +40,10 @@ export const exampleOptions = [
     },
     options: {
       description: "Options",
-      control: "array",
+      type: {
+        name: "array",
+        required: true,
+      },
     },
     readOnly: {
       description: "Read-only",

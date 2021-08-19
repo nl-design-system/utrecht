@@ -14,11 +14,16 @@ export const Template = ({ items, variant }) => {
   argTypes={{
     items: {
       description: "Menu items",
-      control: "array",
+      type: {
+        name: "array",
+        required: true,
+      },
     },
     variant: {
       description: "Variant",
-      control: { type: "select" },
+      type: {
+        name: "enum",
+      },
       options: ["", "arrows"],
     },
   }}

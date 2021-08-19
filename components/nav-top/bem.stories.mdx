@@ -3,7 +3,7 @@
 Copyright (c) 2021 A Herring
 -->
 
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.css";
 export const Template = ({ items }) => `<div class="utrecht-navhtml">
@@ -28,7 +28,10 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
   argTypes={{
     items: {
       description: "Menu items",
-      control: "array",
+      type: {
+        name: "array",
+        required: true,
+      },
     },
   }}
   parameters={{
@@ -56,3 +59,5 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Top Nav" />

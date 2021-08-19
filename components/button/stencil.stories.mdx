@@ -24,7 +24,9 @@ export const Template = ({ disabled = false, textContent = "", type = "" }) =>
     },
     type: {
       description: "Type",
-      control: "array",
+      type: {
+        name: "enum",
+      },
       options: ["", "button", "submit"],
     },
   }}
