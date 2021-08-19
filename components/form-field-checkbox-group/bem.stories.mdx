@@ -45,7 +45,10 @@ export const Template = ({
     },
     options: {
       description: "Options for which there must be a the checkbox",
-      control: "array",
+      type: {
+        name: "array",
+        required: true,
+      },
     },
   }}
   parameters={{

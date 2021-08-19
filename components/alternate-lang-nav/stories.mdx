@@ -18,7 +18,10 @@ ${languages.map(AlternateLangLink).join('\n<span aria-hidden="true"> | </span>\n
   argTypes={{
     languages: {
       description: "Languages",
-      control: "array",
+      type: {
+        name: "array",
+        required: true,
+      },
     },
   }}
   parameters={{

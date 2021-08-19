@@ -39,7 +39,10 @@ export const Template = ({ items, microdata, variant }) => `<nav class="${clsx(
   argTypes={{
     items: {
       description: "Menu items",
-      control: "array",
+      type: {
+        name: "array",
+        required: true,
+      },
     },
     microdata: {
       description: "Microdata",
