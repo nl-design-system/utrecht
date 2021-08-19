@@ -16,6 +16,10 @@
       "type": "borderRadius",
       "value": "0"
     },
+    "utrecht-select-border-radius": {
+      "type": "borderRadius",
+      "value": "0"
+    },
     "utrecht-textarea-border-radius": {
       "type": "borderRadius",
       "value": "0"
@@ -39,6 +43,22 @@
       "value": "2px"
     },
     "utrecht-mapcontrolbutton-border-width": {
+      "type": "borderWidth",
+      "value": "1px"
+    },
+    "utrecht-pagination-page-link-border-width": {
+      "type": "borderWidth",
+      "value": "2px"
+    },
+    "utrecht-pagination-relative-link-border-width": {
+      "type": "borderWidth",
+      "value": "2px"
+    },
+    "utrecht-select-border-block-end-width": {
+      "type": "borderWidth",
+      "value": "3px"
+    },
+    "utrecht-select-border-width": {
       "type": "borderWidth",
       "value": "1px"
     },
@@ -344,6 +364,62 @@
       "type": "color",
       "value": "hsl(0 0% 100%)"
     },
+    "utrecht-pagination-page-link-background-color": {
+      "type": "color",
+      "value": "transparent"
+    },
+    "utrecht-pagination-page-link-color": {
+      "type": "color",
+      "value": "hsl(211 60% 35%)"
+    },
+    "utrecht-pagination-page-link-current-background-color": {
+      "type": "color",
+      "value": "hsl(211 60% 35%)"
+    },
+    "utrecht-pagination-page-link-current-border-color": {
+      "type": "color",
+      "value": "hsl(211 60% 35%)"
+    },
+    "utrecht-pagination-page-link-current-color": {
+      "type": "color",
+      "value": "hsl(0 0% 100%)"
+    },
+    "utrecht-pagination-page-link-hover-background-color": {
+      "type": "color",
+      "value": "hsl(211 60% 35%)"
+    },
+    "utrecht-pagination-page-link-hover-border-color": {
+      "type": "color",
+      "value": "hsl(211 60% 35%)"
+    },
+    "utrecht-pagination-page-link-hover-color": {
+      "type": "color",
+      "value": "hsl(0 0% 100%)"
+    },
+    "utrecht-pagination-relative-link-background-color": {
+      "type": "color",
+      "value": "hsl(0 0% 100%)"
+    },
+    "utrecht-pagination-relative-link-color": {
+      "type": "color",
+      "value": "hsl(211 60% 35%)"
+    },
+    "utrecht-select-background-color": {
+      "type": "color",
+      "value": "hsl(0 0% 100%)"
+    },
+    "utrecht-select-border-color": {
+      "type": "color",
+      "value": "hsl(0 0% 30%)"
+    },
+    "utrecht-select-color": {
+      "type": "color",
+      "value": "hsl(0 0% 0%)"
+    },
+    "utrecht-select-invalid-border-color": {
+      "type": "color",
+      "value": "hsl(0 100% 40%)"
+    },
     "utrecht-separator-color": {
       "type": "color",
       "value": "hsl(0 0% 90%)"
@@ -395,6 +471,10 @@
       "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
     },
     "utrecht-form-input-font-family": {
+      "type": "fontFamilies",
+      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
+    },
+    "utrecht-select-font-family": {
       "type": "fontFamilies",
       "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
     },
@@ -460,6 +540,10 @@
       "type": "fontSizes",
       "value": "0.9rem"
     },
+    "utrecht-pagination-font-size": {
+      "type": "fontSizes",
+      "value": "14px"
+    },
     "utrecht-paragraph-font-size": {
       "type": "fontSizes",
       "value": "1rem"
@@ -467,6 +551,14 @@
     "utrecht-paragraph-lead-font-size": {
       "type": "fontSizes",
       "value": "1.25rem"
+    },
+    "utrecht-search-bar-button-font-size": {
+      "type": "fontSizes",
+      "value": "0.9rem"
+    },
+    "utrecht-select-font-size": {
+      "type": "fontSizes",
+      "value": "1rem"
     },
     "utrecht-table-caption-font-size": {
       "type": "fontSizes",
@@ -550,9 +642,21 @@
       "type": "fontWeights",
       "value": "bold"
     },
+    "utrecht-pagination-page-link-font-weight": {
+      "type": "fontWeights",
+      "value": "bold"
+    },
+    "utrecht-pagination-relative-link-font-weight": {
+      "type": "fontWeights",
+      "value": "bold"
+    },
     "utrecht-paragraph-font-weight": {
       "type": "fontWeights",
       "value": "normal"
+    },
+    "utrecht-search-bar-button-font-weight": {
+      "type": "fontWeights",
+      "value": "bold"
     },
     "utrecht-table-caption-font-weight": {
       "type": "fontWeights",
@@ -587,6 +691,10 @@
     "utrecht-heading-6-letter-spacing": {
       "type": "letterSpacing",
       "value": "0.72px"
+    },
+    "utrecht-search-bar-button-letter-spacing": {
+      "type": "letterSpacing",
+      "value": ".05em"
     }
   },
   "lineHeights": {
@@ -803,9 +911,81 @@
       "type": "spacing",
       "value": "1em"
     },
+    "utrecht-pagination-margin-block-end": {
+      "type": "spacing",
+      "value": "1em"
+    },
+    "utrecht-pagination-margin-block-start": {
+      "type": "spacing",
+      "value": "0"
+    },
+    "utrecht-pagination-page-link-distanced-margin-inline-start": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-page-link-padding-block-end": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-page-link-padding-block-start": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-page-link-padding-inline-end": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-page-link-padding-inline-start": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-relative-link-distanced-margin-inline-end": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-relative-link-distanced-margin-inline-start": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-relative-link-padding-block-end": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-relative-link-padding-block-start": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-relative-link-padding-inline-end": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
+    "utrecht-pagination-relative-link-padding-inline-start": {
+      "type": "spacing",
+      "value": "0.5em"
+    },
     "utrecht-paragraph-margin-block-start": {
       "type": "spacing",
       "value": "16px"
+    },
+    "utrecht-search-bar-textbox-padding-inline-start": {
+      "type": "spacing",
+      "value": "32px"
+    },
+    "utrecht-select-padding-block-end": {
+      "type": "spacing",
+      "value": "8px"
+    },
+    "utrecht-select-padding-block-start": {
+      "type": "spacing",
+      "value": "8px"
+    },
+    "utrecht-select-padding-inline-end": {
+      "type": "spacing",
+      "value": "12px"
+    },
+    "utrecht-select-padding-inline-start": {
+      "type": "spacing",
+      "value": "12px"
     },
     "utrecht-sidenav-item-margin-block-end": {
       "type": "spacing",
@@ -909,6 +1089,10 @@
     "utrecht-form-input-block-size": {
       "type": "sizing",
       "value": "42px"
+    },
+    "utrecht-select-max-inline-size": {
+      "type": "sizing",
+      "value": "28em"
     }
   }
 }
