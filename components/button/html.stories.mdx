@@ -5,6 +5,12 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
+
+export const defaultArgs = {
+  disabled: false,
+  textContent: "",
+};
+
 export const Template = ({ textContent = "", disabled = false }) =>
   `<section class="utrecht-html">
   <button type="button"${disabled ? " disabled" : ""}>${textContent}</button>
@@ -40,6 +46,7 @@ Styling via the `<button>` element:
   <Story
     name="Button"
     args={{
+      ...defaultArgs,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >

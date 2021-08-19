@@ -5,6 +5,14 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
+export const defaultArgs = {
+  checked: false,
+  disabled: false,
+  invalid: false,
+  label: "",
+  required: false,
+};
+
 export const Template = ({ checked = false, disabled = false, invalid = false, label = "", required = false }) =>
   `<utrecht-form-field-checkbox${checked ? ' checked="true"' : ""}${disabled ? ' disabled="true"' : ""}${
     invalid ? ' invalid="true"' : ""
@@ -50,6 +58,7 @@ export const Template = ({ checked = false, disabled = false, invalid = false, l
   <Story
     name="Form field with checkbox"
     args={{
+      ...defaultArgs,
       label: "I agree",
     }}
   >

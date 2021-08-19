@@ -5,22 +5,31 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
-export const Template = ({ content, legend }) =>
+
+export const defaultArgs = {
+  innerHTML: "",
+  legend: "",
+};
+
+export const Template = ({ innerHTML = "", legend = "" }) =>
   `<div class="utrecht-html">
   <fieldset>
     ${legend ? `<legend>${legend}</legend>` : ""}
-    ${content}
+    ${innerHTML}
   </fieldset>
 </div>`;
 
 <Meta
   title="HTML Component/Form fieldset"
   argTypes={{
-    content: {
+    innerHTML: {
       description: "Set the content of the fieldset",
-      control: "text",
+      type: {
+        name: "string",
+        required: true,
+      },
     },
-    legende: {
+    legend: {
       description: "Set the content of the legend",
       control: "text",
     },
@@ -43,7 +52,8 @@ Styling via the `<fieldset>` and `<legend>` elements:
   <Story
     name="Fieldset"
     args={{
-      content: "<p>Fieldset body</p>",
+      ...defaultArgs,
+      innerHTML: "<p>Fieldset body</p>",
       legend: "Fieldset legend",
     }}
   >

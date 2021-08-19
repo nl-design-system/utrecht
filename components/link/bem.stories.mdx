@@ -9,6 +9,18 @@ import clsx from "clsx";
 
 import "./bem.scss";
 
+export const defaultArgs = {
+  active: false,
+  external: false,
+  hover: false,
+  focus: false,
+  href: null,
+  focus: false,
+  telephone: false,
+  textContent: "...",
+  visited: false,
+};
+
 export const Template = ({
   active = false,
   external = false,
@@ -49,7 +61,10 @@ export const Template = ({
     },
     href: {
       description: "Target URL",
-      control: "text",
+      type: {
+        name: "string",
+        required: true,
+      },
     },
     telephone: {
       description: "Link to telephone number",
@@ -57,7 +72,10 @@ export const Template = ({
     },
     textContent: {
       description: "Link text",
-      control: "text",
+      type: {
+        name: "string",
+        required: true,
+      },
     },
     visited: {
       description: "Visited",
@@ -82,6 +100,8 @@ Styling via the `.utrecht-link` class name:
   <Story
     name="Link"
     args={{
+      ...defaultArgs,
+      href: "",
       textContent: "Read more...",
     }}
   >

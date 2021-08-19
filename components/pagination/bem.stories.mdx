@@ -6,6 +6,11 @@ Copyright (c) 2021 Robbert Broersma
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.scss";
+
+export const defaultArgs = {
+  distanced: false,
+};
+
 export const LinkTemplate = ({ disabled = false, href = "", rel = null, textContent = "", title = "" }) =>
   `<${disabled ? "span" : "a"} href="${href}" class="${clsx(
     "utrecht-pagination__relative-link",
@@ -90,6 +95,7 @@ export const Template = ({ currentIndex = -1, distanced = false, links = [], nex
   <Story
     name="Pagination navigation"
     args={{
+      ...defaultArgs,
       currentIndex: 3,
       distanced: true,
       links: [

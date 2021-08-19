@@ -9,6 +9,12 @@ import clsx from "clsx";
 
 import "./bem.scss";
 
+export const defaultArgs = {
+  disabled: false,
+  focus: false,
+  hover: false,
+};
+
 export const Template = ({ disabled = false, focus = false, hover = false }) =>
   `<button class="${clsx("utrecht-mapcontrolbutton", {
     "utrecht-mapcontrolbutton--hover": hover,
@@ -57,8 +63,17 @@ export const Template = ({ disabled = false, focus = false, hover = false }) =>
 Styling via the `.utrecht-mapcontrolbutton` class name:
 
 <Canvas>
-  <Story name="Map Control Button">{Template.bind({})}</Story>
+  <Story
+    name="Map Control Button"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
+
+<ArgsTable story="Map Control Button" />
 
 Styling via the `.utrecht-mapcontrolbutton--hover` class name:
 
@@ -113,5 +128,3 @@ Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
     {Template.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable story="Map Control Button" />

@@ -7,6 +7,15 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.scss";
 import clsx from "clsx";
 
+export const defaultArgs = {
+  disabled: false,
+  focus: false,
+  invalid: false,
+  readOnly: false,
+  required: false,
+  value: "",
+};
+
 export const Template = ({
   disabled = false,
   focus = false,
@@ -70,11 +79,7 @@ Styling via the `<input>` element:
   <Story
     name="Text box"
     args={{
-      disabled: false,
-      focus: false,
-      invalid: false,
-      readOnly: false,
-      required: false,
+      ...defaultArgs,
       value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
