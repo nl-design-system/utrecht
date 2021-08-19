@@ -9,6 +9,13 @@ import clsx from "clsx";
 
 import "./bem.scss";
 
+export const defaultArgs = {
+  disabled: false,
+  focus: false,
+  hover: false,
+  textContent: "",
+};
+
 export const Template = ({ textContent = "", focus = false, hover = false, disabled = false }) =>
   `<button class="${clsx("utrecht-button", {
     "utrecht-button--hover": hover,
@@ -54,6 +61,7 @@ Styling via the `.utrecht-button` class name:
   <Story
     name="Button"
     args={{
+      ...defaultArgs,
       textContent: "Read more...",
     }}
   >

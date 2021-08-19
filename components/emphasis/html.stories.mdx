@@ -5,6 +5,13 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
+
+export const defaultArgs = {
+  stressed: false,
+  strong: false,
+  textContent: "",
+};
+
 export const StressedTemplate = ({ textContent = "" }) => `<em>${textContent}</em>`;
 
 export const StrongTemplate = ({ textContent = "" }) => `<strong>${textContent}</strong>`;
@@ -52,6 +59,7 @@ export const Template = ({ textContent = "", stressed = false, strong = false })
   <Story
     name="Emphasis"
     args={{
+      ...defaultArgs,
       stressed: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
