@@ -9,7 +9,6 @@ export const Template = ({
   autoComplete = "",
   disabled = false,
   invalid = false,
-  label = "",
   min = "",
   max = "",
   pattern = "",
@@ -104,10 +103,6 @@ export const Template = ({
       description: "Invalid",
       control: "boolean",
     },
-    label: {
-      description: "Set the content of the label",
-      control: "text",
-    },
     min: {
       description: "Minimum",
       control: "number",
@@ -161,7 +156,6 @@ export const Template = ({
       autoComplete: "",
       disabled: false,
       invalid: false,
-      label: "Message",
       min: "",
       max: "",
       pattern: "",
@@ -229,7 +223,6 @@ export const Template = ({
     args={{
       min: 0,
       max: 100,
-      label: "Lucky number",
       type: "number",
       value: "42",
     }}
