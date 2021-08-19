@@ -40,7 +40,7 @@ useEffect(() => {
 Because the components use Web components internally, it is important to include the web components in the allow list of [DOMPurify](https://github.com/cure53/DOMPurify), which would otherwise remove these essential custom elements as part of the cross-site scripting mitigations:
 
 ```jsx
-import { Formio } from 'react-formio';
+import { Form } from 'react-formio';
 import { sanitizeConfig } from "@utrecht/component-library-formio";
 
 export const Page () => (<Form options={{ sanitizeConfig }}/>)
