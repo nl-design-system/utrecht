@@ -17,9 +17,15 @@
 }
 
 .utrecht-form-field-description--invalid {
-  color: var(--utrecht-form-field-description-invalid-color, var(--utrecht-feedback-invalid-color));
+  color: var(
+    --utrecht-form-field-description-invalid-color,
+    var(--utrecht-feedback-invalid-color, var(--utrecht-feedback-danger-color))
+  );
 }
 
 .utrecht-form-field-description--valid {
-  color: var(--utrecht-form-field-description-valid-color, var(--utrecht-feedback-valid-color));
+  color: var(
+    --utrecht-form-field-description-valid-color,
+    var(--utrecht-feedback-valid-color, var(--utrecht-feedback-safe-color))
+  );
 }
