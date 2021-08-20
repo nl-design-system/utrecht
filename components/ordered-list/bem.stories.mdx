@@ -3,10 +3,11 @@
 Copyright (c) 2021 Robbert Broersma
 -->
 
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./bem.css";
-export const Template = ({ distanced }) =>
+
+export const Template = ({ distanced = false }) =>
   `<ol class="${clsx("utrecht-ordered-list", distanced && "utrecht-ordered-list--distanced")}">
   <li class="utrecht-ordered-list__item">Lorem</li>
   <li class="utrecht-ordered-list__item">Ipsum</li>
@@ -41,3 +42,5 @@ export const Template = ({ distanced }) =>
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Ordered list" />
