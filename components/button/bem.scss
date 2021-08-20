@@ -37,6 +37,8 @@
 .utrecht-button--focus,
 .utrecht-button:not(.utrecht-button--disabled):focus {
   @include utrecht-focus;
+  background-color: var(--utrecht-button-focus-background-color, var(--utrecht-button-background-color));
+  color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
 }
 
 .utrecht-button--hover:not(:disabled),
