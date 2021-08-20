@@ -1,0 +1,49 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-contact-card {
+  --utrecht-document-color: currentColor;
+  --utrecht-heading-color: currentColor;
+  --utrecht-link-color: currentColor;
+  --utrecht-link-focus-color: currentColor;
+  --utrecht-link-hover-color: currentColor;
+  --utrecht-link-active-color: currentColor;
+  --utrecht-link-visited-color: currentColor;
+  --utrecht-heading-2-text-transform: uppercase;
+  --utrecht-heading-2-font-size: var(--utrecht-typography-scale-md-font-size);
+
+  --utrecht-contact-card-background-color: hsl(207 60% 91%);
+  --utrecht-contact-card-background-color-2: hsl(207 60% 96%);
+
+  background-color: hsl(207 60% 91%);
+  background-image: linear-gradient(
+    45deg,
+    var(--utrecht-contact-card-background-color),
+    var(--utrecht-contact-card-background-color) 50%,
+    var(--utrecht-contact-card-background-color-2) 50%,
+    var(--utrecht-contact-card-background-color-2)
+  );
+  background-position-x: 66%;
+  background-size: 200%;
+  color: var(--utrecht-color-black);
+  padding-block-end: var(--utrecht-space-block-lg);
+  padding-block-start: var(--utrecht-space-block-lg);
+  padding-inline-end: var(--utrecht-space-inline-lg);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+}
+
+.utrecht-contact-card__content {
+  display: flex;
+  flex-direction: row;
+}
+
+.utrecht-contact-card__section {
+  margin-block-start: var(--utrecht-space-row-lg);
+  width: 100%;
+}
+
+.utrecht-contact-card__telephone {
+  --utrecht-paragraph-font-size: var(--utrecht-typography-scale-2xl-font-size);
+}
