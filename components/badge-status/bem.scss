@@ -26,6 +26,11 @@
   color: var(--utrecht-feedback-safe-fill-color, white);
 }
 
+.utrecht-badge-status--neutral {
+  background-color: var(--utrecht-feedback-neutral-fill-background-color, black);
+  color: var(--utrecht-feedback-neutral-fill-color, white);
+}
+
 .utrecht-badge-status--valid {
   background-color: var(
     --utrecht-feedback-valid-fill-background-color,
