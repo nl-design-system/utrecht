@@ -7,4 +7,5 @@
 
 .utrecht-html hr {
   @extend .utrecht-separator;
+  @extend .utrecht-separator--distanced;
 }
