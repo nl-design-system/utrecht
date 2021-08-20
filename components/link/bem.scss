@@ -29,9 +29,9 @@
 
 .utrecht-link:focus,
 .utrecht-link--focus {
+  @include utrecht-focus();
   color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
   text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
-  @include utrecht-focus();
 }
 
 /* stylelint-disable-next-line block-no-empty */
