@@ -3,17 +3,19 @@
 Copyright (c) 2021 Robbert Broersma
 -->
 
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
+import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
 import "./bem.css";
-export const Template = () =>
-  `<ul class="utrecht-unordered-list">
+import clsx from "clsx";
+
+export const Template = ({ distanced = false }) =>
+  `<ul class="${clsx("utrecht-unordered-list", distanced && "utrecht-unordered-list--distanced")}">
   <li class="utrecht-unordered-list__item">Lorem</li>
   <li class="utrecht-unordered-list__item">Ipsum</li>
   <li class="utrecht-unordered-list__item">Dolor</li>
 </ul>`;
 
-export const TemplateNested = () =>
-  `<ul class="utrecht-unordered-list">
+export const TemplateNested = ({ distanced = false }) =>
+  `<ul class="${clsx("utrecht-unordered-list", distanced && "utrecht-unordered-list--distanced")}">
   <li class="utrecht-unordered-list__item">Lorem</li>
   <li class="utrecht-unordered-list__item">Ipsum
     <ul class="utrecht-unordered-list utrecht-unordered-list--nested">
@@ -26,7 +28,12 @@ export const TemplateNested = () =>
 
 <Meta
   title="CSS Component/Unordered List"
-  argTypes={{}}
+  argTypes={{
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -38,8 +45,17 @@ export const TemplateNested = () =>
 />
 
 <Canvas>
-  <Story name="Bulleted list">{Template.bind({})}</Story>
+  <Story
+    name="Bulleted list"
+    args={{
+      distanced: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
+
+<ArgsTable story="Bulleted list" />
 
 ## Nested list
 
