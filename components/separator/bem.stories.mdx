@@ -5,10 +5,26 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.css";
-export const Template = () => `<div role="separator" aria-orientation="horizontal" class="utrecht-separator"></div>`;
+import clsx from "clsx";
+
+export const defaultArgs = {
+  distanced: false,
+};
+
+export const Template = ({ distanced = false }) =>
+  `<div role="separator" aria-orientation="horizontal" class="${clsx(
+    "utrecht-separator",
+    distanced && "utrecht-separator--distanced"
+  )}"></div>`;
 
 <Meta
   title="CSS Component/Separator"
+  argTypes={{
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -24,7 +40,14 @@ export const Template = () => `<div role="separator" aria-orientation="horizonta
 Styling via `utrecht-separator` class name:
 
 <Canvas>
-  <Story name="Separator">{Template.bind({})}</Story>
+  <Story
+    name="Separator"
+    args={{
+      distanced: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Separator" />

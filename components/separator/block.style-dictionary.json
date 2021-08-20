@@ -13,7 +13,13 @@
           "inherits": true
         }
       },
-      "margin-block": {
+      "margin-block-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "margin-block-start": {
         "css": {
           "syntax": "<length>",
           "inherits": true
