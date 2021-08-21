@@ -5,6 +5,7 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
+
 export const Template = ({
   autoComplete = null,
   disabled = false,
@@ -12,6 +13,7 @@ export const Template = ({
   min = "",
   max = "",
   pattern = "",
+  placeholder = "",
   readOnly = false,
   required = false,
   type = "text",
@@ -20,9 +22,11 @@ export const Template = ({
   `<div class="utrecht-html">
   <input${type ? ` type="${type}"` : ""}${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
     min !== "" ? ` min="${min}"` : ""
-  }${max !== "" ? ` max="${max}"` : ""}${pattern ? ` pattern="${pattern}"` : ""}${required ? " required" : ""}${
-    readOnly ? " readonly" : ""
-  } value="${value}"${autoComplete ? ` autocomplete="${autoComplete}"` : ""}>
+  }${max !== "" ? ` max="${max}"` : ""}${pattern ? ` pattern="${pattern}"` : ""}${
+    placeholder ? ` placeholder="${placeholder}"` : ""
+  }${required ? " required" : ""}${readOnly ? " readonly" : ""} value="${value}"${
+    autoComplete ? ` autocomplete="${autoComplete}"` : ""
+  }>
 </div>`;
 
 <Meta
@@ -50,6 +54,10 @@ export const Template = ({
     },
     pattern: {
       description: "Pattern",
+      control: "text",
+    },
+    placeholder: {
+      description: "Placeholder",
       control: "text",
     },
     readOnly: {
@@ -190,6 +198,19 @@ Styling via the `<input>` element:
       required: true,
       value: "very$ecret2021",
       type: "password",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="Textbox with placeholder"
+    args={{
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}

@@ -89,6 +89,14 @@
   );
 }
 
+.utrecht-textarea__placeholder {
+  color: var(
+    --utrecht-textarea-placeholder-color,
+    var(--utrecht-form-input-placeholder-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
+  );
+  opacity: 100%;
+}
+
 .utrecht-textarea--html-textarea {
   &:disabled {
     @extend .utrecht-textarea--disabled;
@@ -105,5 +113,9 @@
 
   &:read-only {
     @extend .utrecht-textarea--read-only;
+  }
+
+  &::placeholder {
+    @extend .utrecht-textarea__placeholder;
   }
 }
