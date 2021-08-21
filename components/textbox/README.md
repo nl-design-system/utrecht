@@ -29,7 +29,7 @@ Copyright (c) 2021 Robbert Broersma
   - `--utrecht-textbox-color`
   - `--utrecht-textbox-font-family`
   - `--utrecht-textbox-font-size`
-  - `--utrecht-textbox-max-width`
+  - `--utrecht-textbox-max-inline-size`
   - `--utrecht-textbox-padding-block-end`
   - `--utrecht-textbox-padding-block-start`
   - `--utrecht-textbox-padding-inline-end`
