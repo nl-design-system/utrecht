@@ -7,9 +7,15 @@ import { Description, Meta, Story, Canvas, ArgsTable } from "@storybook/addon-do
 import "./html.scss";
 import README from "./README.md";
 
-export const Template = ({ disabled = false, invalid = false, options = [], readOnly = false, required = false }) =>
+export const defaultArgs = {
+  disabled: false,
+  invalid: false,
+  required: false,
+};
+
+export const Template = ({ disabled = false, invalid = false, options = [], required = false }) =>
   `<section class="utrecht-html">
-  <select${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${readOnly ? " readonly" : ""}${
+  <select${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
     required ? " required" : ""
   } class="utrecht-select">
     ${options
@@ -45,10 +51,6 @@ export const exampleOptions = [
         required: true,
       },
     },
-    readOnly: {
-      description: "Read-only",
-      control: "boolean",
-    },
     required: {
       description: "Required",
       control: "boolean",
@@ -72,6 +74,7 @@ Styling via the `<select>` element:
   <Story
     name="Select"
     args={{
+      ...defaultArgs,
       options: exampleOptions,
     }}
   >
@@ -112,27 +115,6 @@ Styling via the `<select>` element:
     args={{
       invalid: true,
       options: exampleOptions,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-### Read-only
-
-<Canvas>
-  <Story
-    name="Read-only select"
-    args={{
-      options: exampleOptions,
-      readOnly: true,
     }}
     parameters={{
       docs: {

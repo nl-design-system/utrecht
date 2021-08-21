@@ -12,26 +12,17 @@ export const defaultArgs = {
   focus: false,
   invalid: false,
   options: [],
-  readOnly: false,
   required: false,
 };
 
-export const Template = ({
-  disabled = false,
-  focus = false,
-  invalid = false,
-  options = [],
-  readOnly = false,
-  required = false,
-}) =>
-  `<select${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${readOnly ? " readonly" : ""}${
+export const Template = ({ disabled = false, focus = false, invalid = false, options = [], required = false }) =>
+  `<select${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
     required ? " required" : ""
   } class="${clsx("utrecht-select", {
     "utrecht-select--disabled": disabled,
     "utrecht-select--focus": focus,
     "utrecht-select--invalid": invalid,
     "utrecht-select--required": required,
-    "utrecht-select--read-only": readOnly,
   })}">
   ${options
     .map(
@@ -68,10 +59,6 @@ export const exampleOptions = [
         name: "array",
         required: true,
       },
-    },
-    readOnly: {
-      description: "Read-only",
-      control: "boolean",
     },
     required: {
       description: "Required",
@@ -137,27 +124,6 @@ Styling via the `<select>` element:
     args={{
       invalid: true,
       options: exampleOptions,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
-    }}
-  >
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-### Read-only
-
-<Canvas>
-  <Story
-    name="Read-only select"
-    args={{
-      options: exampleOptions,
-      readOnly: true,
     }}
     parameters={{
       docs: {

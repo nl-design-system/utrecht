@@ -74,7 +74,5 @@
     @extend .utrecht-select--required;
   }
 
-  &:read-only {
-    @extend .utrecht-select--read-only;
-  }
+  /* <select> does not support :read-only */
 }
