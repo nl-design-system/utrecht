@@ -1,19 +1,7 @@
 {
   "utrecht": {
     "select": {
-      "background-color": { "value": "{utrecht.textbox.background-color.value}" },
-      "border-block-end-width": { "value": "{utrecht.textbox.border-bottom-width.value}" },
-      "border-color": { "value": "{utrecht.textbox.border-color.value}" },
-      "border-radius": { "value": "{utrecht.textbox.border-radius.value}" },
-      "border-width": { "value": "{utrecht.textbox.border-width.value}" },
-      "color": { "value": "{utrecht.textbox.color.value}" },
-      "font-family": { "value": "{utrecht.textbox.font-family.value}" },
-      "font-size": { "value": "{utrecht.textbox.font-size.value}" },
-      "max-inline-size": { "value": "{utrecht.textbox.max-width.value}" },
-      "padding-block-end": { "value": "{utrecht.textbox.padding-block-end.value}" },
-      "padding-block-start": { "value": "{utrecht.textbox.padding-block-start.value}" },
-      "padding-inline-end": { "value": "{utrecht.textbox.padding-inline-end.value}" },
-      "padding-inline-start": { "value": "{utrecht.textbox.padding-inline-start.value}" }
+      "border-block-end-width": { "value": "3px" }
     }
   }
 }

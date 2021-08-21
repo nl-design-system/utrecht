@@ -1,6 +1,12 @@
 {
   "utrecht": {
     "textbox": {
+      "background-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
       "border-bottom-width": {
         "css": {
           "syntax": "<length>",
