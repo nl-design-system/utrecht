@@ -7,6 +7,10 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
 import "./html.scss";
 
+export const defaultArgs = {
+  alternateRowColor: false,
+};
+
 <!--
 Source of table:
 https://www.utrecht.nl/wonen-en-leven/parkeren/ervaart-u-parkeeroverlast/spinozaplantsoen-invoeren-betaald-parkeren/
@@ -66,7 +70,14 @@ export const ExampleTable = ({ alternateRowColor = false }) =>
 # Table
 
 <Canvas>
-  <Story name="Table">{ExampleTable.bind({})}</Story>
+  <Story
+    name="Table"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {ExampleTable.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Table" />
