@@ -10,15 +10,23 @@ export const defaultArgs = {
   invalid: false,
   readOnly: false,
   disabled: false,
+  placeholder: "",
   required: false,
   textContent: "",
 };
 
-export const Template = ({ invalid = false, readOnly = false, disabled = false, required = false, textContent = "" }) =>
+export const Template = ({
+  invalid = false,
+  readOnly = false,
+  disabled = false,
+  placeholder = "",
+  required = false,
+  textContent = "",
+}) =>
   `<section class="utrecht-html">
-  <textarea${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${required ? " required" : ""}${
-    readOnly ? " readonly" : ""
-  }>${textContent}</textarea>
+  <textarea${invalid ? ' aria-invalid="true"' : ""}${disabled ? " disabled" : ""}${
+    placeholder ? ` placeholder="${placeholder}"` : ""
+  }${required ? " required" : ""}${readOnly ? " readonly" : ""}>${textContent}</textarea>
 </section>`;
 
 <Meta
@@ -35,6 +43,10 @@ export const Template = ({ invalid = false, readOnly = false, disabled = false, 
     disabled: {
       description: "Disabled",
       control: "boolean",
+    },
+    placeholder: {
+      description: "Placeholder",
+      control: "text",
     },
     required: {
       description: "Required",
@@ -73,7 +85,9 @@ Styling via the `<textarea>` element:
 
 <ArgsTable story="Textarea" />
 
-## Invalid
+## States
+
+### Invalid
 
 <Canvas>
   <Story
@@ -87,7 +101,7 @@ Styling via the `<textarea>` element:
   </Story>
 </Canvas>
 
-## Disabled
+### Disabled
 
 <Canvas>
   <Story
@@ -101,7 +115,7 @@ Styling via the `<textarea>` element:
   </Story>
 </Canvas>
 
-## Read-only
+### Read-only
 
 <Canvas>
   <Story
@@ -115,7 +129,7 @@ Styling via the `<textarea>` element:
   </Story>
 </Canvas>
 
-## Required
+### Required
 
 <Canvas>
   <Story
@@ -123,6 +137,19 @@ Styling via the `<textarea>` element:
     args={{
       required: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="Textarea with placeholder"
+    args={{
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Template.bind({})}

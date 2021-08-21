@@ -90,6 +90,14 @@
   );
 }
 
+.utrecht-textbox__placeholder {
+  color: var(
+    --utrecht-textbox-placeholder-color,
+    var(--utrecht-form-input-placeholder-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color)))
+  );
+  opacity: 100%;
+}
+
 .utrecht-textbox--html-input {
   &:disabled {
     @extend .utrecht-textbox--disabled;
@@ -106,5 +114,9 @@
 
   &:read-only {
     @extend .utrecht-textbox--read-only;
+  }
+
+  &::placeholder {
+    @extend .utrecht-textbox__placeholder;
   }
 }
