@@ -26,7 +26,7 @@ Copyright (c) 2021 Robbert Broersma
   - `--utrecht-textarea-color`
   - `--utrecht-textarea-font-family`
   - `--utrecht-textarea-font-size`
-  - `--utrecht-textarea-max-width`
+  - `--utrecht-textarea-max-inline-size`
   - `--utrecht-textarea-padding-block-end`
   - `--utrecht-textarea-padding-block-start`
   - `--utrecht-textarea-padding-inline-end`
