@@ -5,7 +5,15 @@
       "block-size": { "value": "42px" },
       "color": { "value": "{utrecht.color.black.value}" },
       "border-color": { "value": "{utrecht.color.grey.30.value}" },
-      "font-family": { "value": "{utrecht.typography.sans-serif.font-family.value}" }
+      "border-radius": { "value": "0" },
+      "border-width": { "value": "{utrecht.border-width.sm.value}" },
+      "font-family": { "value": "{utrecht.document.font-family.value}" },
+      "font-size": { "value": "{utrecht.typography.scale.md.font-size.value}" },
+      "max-width": { "value": "28em" },
+      "padding-block-end": { "value": "8px" },
+      "padding-block-start": { "value": "8px" },
+      "padding-inline-end": { "value": "12px" },
+      "padding-inline-start": { "value": "12px" }
     }
   }
 }

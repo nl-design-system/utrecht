@@ -1,6 +1,6 @@
 {
   "utrecht": {
-    "select": {
+    "form-input": {
       "disabled": {
         "background-color": {
           "css": {
@@ -37,6 +37,20 @@
         "border-width": {
           "css": {
             "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      },
+      "read-only": {
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
             "inherits": true
           }
         }

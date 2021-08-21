@@ -3,6 +3,14 @@
     "form-input": {
       "focus": {
         "border-color": { "value": "{utrecht.color.grey.80.value}" }
+      },
+      "invalid": {
+        "border-color": { "value": "{utrecht.feedback.invalid.border-color.value}" },
+        "border-width": {}
+      },
+      "disabled": {
+        "border-color": {},
+        "color": {}
       }
     }
   }
