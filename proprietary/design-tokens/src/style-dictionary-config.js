@@ -12,7 +12,6 @@ module.exports = {
     ...figmaTokensFormat,
     ...jsonListFormat,
   },
-  source: ['../../components/**/*.style-dictionary.json', './src/**/*.style-dictionary.json'],
   ...config,
   platforms: {
     ...config.platforms,
@@ -37,12 +36,18 @@ module.exports = {
       ].sort(destinationSort),
     },
     figma: {
-      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hex'],
       buildPath: 'dist/',
       files: [
         {
           destination: 'figma-tokens.json',
           format: 'json/figma-tokens',
+          options: {
+            pixelRatio: {
+              ch: 8,
+              rem: 16,
+            },
+          },
         },
       ],
     },

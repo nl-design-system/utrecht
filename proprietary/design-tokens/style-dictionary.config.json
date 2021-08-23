@@ -1,5 +1,8 @@
 {
-  "source": ["../../components/**/*.style-dictionary.json", "./src/**/*.style-dictionary.json"],
+  "source2": ["../../components/**/*.style-dictionary.json", "./src/**/*.style-dictionary.json"],
+  "source3": ["../../components/button/*.style-dictionary.json"],
+  "source4": ["./src/common/utrecht/space.style-dictionary.json"],
+  "source": ["./src/brand/utrecht/color.style-dictionary.json"],
   "platforms": {
     "js": {
       "transforms": ["attribute/cti", "name/cti/camel", "color/hsl-4"],

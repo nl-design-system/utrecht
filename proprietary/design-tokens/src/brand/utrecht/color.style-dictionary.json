@@ -2,40 +2,213 @@
   "utrecht": {
     "color": {
       "red": {
-        "20": { "value": "hsl(0 100% 20%)", "comment": "donker rood" },
-        "30": { "value": "hsl(0 100% 30%)", "comment": "hover rood" },
-        "40": { "value": "hsl(0 100% 40%)", "comment": "basis rood #cc0000" }
+        "20": {
+          "value": "hsl(0 100% 20%)",
+          "comment": "donker rood",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "30": {
+          "value": "hsl(0 100% 30%)",
+          "comment": "hover rood",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "40": {
+          "value": "hsl(0 100% 40%)",
+          "comment": "basis rood #cc0000",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        }
       },
       "blue": {
-        "20": { "value": "hsl(211 60% 20%)", "comment": "basis donkerblauw (OS focus)" },
-        "30": { "value": "hsl(211 60% 30%)", "comment": "basis link en knoppen CTA donkerblauw" },
-        "35": { "value": "hsl(211 60% 35%)", "comment": "basis link en knoppen CTA donkerblauw" },
-        "40": { "value": "hsl(211 60% 40%)", "comment": "blauw variant bij hover/focus #3669a5" },
-        "50": { "value": "hsl(211 60% 50%)", "comment": "experimenteel / beperkt gebruiken" },
-        "80": { "value": "hsl(211 60% 80%)", "comment": "licht blauw voor achtergrond" },
-        "90": { "value": "hsl(211 60% 90%)", "comment": "ijsblauw variant achtergrond, spotlight en uitgelicht" }
+        "20": {
+          "value": "hsl(211 60% 20%)",
+          "comment": "basis donkerblauw (OS focus)",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "30": {
+          "value": "hsl(211 60% 30%)",
+          "comment": "basis link en knoppen CTA donkerblauw",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "35": {
+          "value": "hsl(211 60% 35%)",
+          "comment": "basis link en knoppen CTA donkerblauw",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "40": {
+          "value": "hsl(211 60% 40%)",
+          "comment": "blauw variant bij hover/focus #3669a5",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "50": {
+          "value": "hsl(211 60% 50%)",
+          "comment": "experimenteel / beperkt gebruiken",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "80": {
+          "value": "hsl(211 60% 80%)",
+          "comment": "licht blauw voor achtergrond",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "90": {
+          "value": "hsl(211 60% 90%)",
+          "comment": "ijsblauw variant achtergrond, spotlight en uitgelicht",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        }
       },
       "grey": {
-        "15": { "value": "hsl(0 0% 15%)", "comment": "experimenteel / beperkt gebruiken" },
-        "30": { "value": "hsl(0 0% 30%)", "comment": "border grijs #888" },
-        "40": { "value": "hsl(0 0% 40%)", "comment": "basis grijs #727272" },
-        "80": { "value": "hsl(0 0% 80%)", "comment": "grijs variant voor achtergrond content #e5e5e5" },
-        "90": { "value": "hsl(0 0% 90%)", "comment": "grijs variant voor achtergrond templates #f2f2f2" }
+        "15": {
+          "value": "hsl(0 0% 15%)",
+          "comment": "experimenteel / beperkt gebruiken",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "30": {
+          "value": "hsl(0 0% 30%)",
+          "comment": "border grijs #888",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "40": {
+          "value": "hsl(0 0% 40%)",
+          "comment": "basis grijs #727272",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "80": {
+          "value": "hsl(0 0% 80%)",
+          "comment": "grijs variant voor achtergrond content #e5e5e5",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "90": {
+          "value": "hsl(0 0% 90%)",
+          "comment": "grijs variant voor achtergrond templates #f2f2f2",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        }
       },
       "yellow": {
-        "40": { "value": "hsl(48 100% 40%)", "comment": "donker geel" },
-        "50": { "value": "hsl(48 100% 50%)", "comment": "basis geel #ffcc00" },
-        "60": { "value": "hsl(48 100% 60%)", "comment": "selecteer geel" },
-        "80": { "value": "hsl(48 100% 80%)", "comment": "spotlight en uitgelicht" }
+        "40": {
+          "value": "hsl(48 100% 40%)",
+          "comment": "donker geel",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "50": {
+          "value": "hsl(48 100% 50%)",
+          "comment": "basis geel #ffcc00",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "60": {
+          "value": "hsl(48 100% 60%)",
+          "comment": "selecteer geel",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "80": {
+          "value": "hsl(48 100% 80%)",
+          "comment": "spotlight en uitgelicht",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        }
       },
       "green": {
-        "40": { "value": "hsl(90 30% 40%)", "comment": "donker groen" },
-        "50": { "value": "hsl(90 30% 50%)", "comment": "Standaard groen #80a659 " },
-        "80": { "value": "hsl(90 30% 80%)", "comment": "Licht groen" },
-        "90": { "value": "hsl(90 30% 90%)", "comment": "Achtergrond licht groen" }
+        "40": {
+          "value": "hsl(90 30% 40%)",
+          "comment": "donker groen",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "50": {
+          "value": "hsl(90 30% 50%)",
+          "comment": "Standaard groen #80a659 ",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "80": {
+          "value": "hsl(90 30% 80%)",
+          "comment": "Licht groen",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        },
+        "90": {
+          "value": "hsl(90 30% 90%)",
+          "comment": "Achtergrond licht groen",
+          "css": {
+            "syntax": "<color>",
+            "inherit": true
+          }
+        }
       },
-      "white": { "value": "hsl(0 0% 100%)" },
-      "black": { "value": "hsl(0 0% 0%)" }
+      "white": {
+        "value": "hsl(0 0% 100%)",
+        "css": {
+          "syntax": "<color>",
+          "inherit": true
+        }
+      },
+      "black": {
+        "value": "hsl(0 0% 0%)",
+        "css": {
+          "syntax": "<color>",
+          "inherit": true
+        }
+      }
     }
   }
 }

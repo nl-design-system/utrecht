@@ -1,3 +1,4 @@
+const { parse } = require('postcss-values-parser');
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
@@ -38,8 +39,32 @@ const template = {
   typography: {},
 };
 
+const convertSpace = (value, pixelRatio) => {
+  const parsed = parse(value).first;
+  if (parsed.type === 'numeric') {
+    if (parsed.unit === 'px') {
+      return String(parsed.value);
+    } else if (Object.prototype.hasOwnProperty.call(pixelRatio, parsed.unit)) {
+      return String(parsed.value * pixelRatio[parsed.unit]);
+    } else {
+      console.warn(`Unit "${parsed.unit} is not configured for conversion to pixels: ${value}`);
+    }
+    return '';
+  } else {
+    return '';
+  }
+};
+
 module.exports = {
-  'json/figma-tokens': function ({ dictionary }) {
+  'json/figma-tokens': function ({ dictionary }, _, { options }) {
+    const pixelRatio = { ...options.pixelRatio };
+    console.log(arguments);
+    console.log(
+      dictionary.allTokens
+        .filter((token) => token.figmaCategory === 'space')
+        .slice(0, 3)
+        .map(convertSpace),
+    );
     let figmaTokens = {
       ...template,
       borderRadius: dictionary.allTokens
@@ -109,6 +134,11 @@ module.exports = {
       fontSizes: dictionary.allTokens
         .filter((token) => token.path[token.path.length - 1] === 'font-size')
         .sort((a, b) => stringSort(a.name, b.name))
+        .map((token) => {
+          const value = parse(token.value);
+          console.log(token.value);
+          return token;
+        })
         .reduce(
           (map, token) => ({
             ...map,
@@ -194,33 +224,39 @@ module.exports = {
           {},
         ),
       spacing: dictionary.allTokens
-        .filter((token) =>
-          [
-            'margin-block-end',
-            'margin-block-start',
-            'margin-bottom',
-            'margin-inline-end',
-            'margin-inline-start',
-            'margin-left',
-            'margin-right',
-            'margin-top',
-            'padding-block-end',
-            'padding-block-start',
-            'padding-bottom',
-            'padding-inline-end',
-            'padding-inline-start',
-            'padding-left',
-            'padding-right',
-            'padding-top',
-          ].includes(token.path[token.path.length - 1]),
+        .filter(
+          (token) =>
+            [
+              'margin-block-end',
+              'margin-block-start',
+              'margin-bottom',
+              'margin-inline-end',
+              'margin-inline-start',
+              'margin-left',
+              'margin-right',
+              'margin-top',
+              'padding-block-end',
+              'padding-block-start',
+              'padding-bottom',
+              'padding-inline-end',
+              'padding-inline-start',
+              'padding-left',
+              'padding-right',
+              'padding-top',
+            ].includes(token.path[token.path.length - 1]) || token.figmaCategory === 'space',
         )
         .sort((a, b) => stringSort(a.name, b.name))
+        .map((token) => ({
+          ...token,
+          value: convertSpace(token.value, pixelRatio),
+        }))
         .reduce(
           (map, token) => ({
             ...map,
             [token.name]: {
               type: SPACING,
               value: token.value,
+              description: token.comment,
             },
           }),
           {},
@@ -228,7 +264,7 @@ module.exports = {
     };
 
     // dictionary.allTokens.sort(sortByName)
-    console.log(figmaTokens);
+    // console.log(figmaTokens);
     return JSON.stringify(figmaTokens, null, '  ');
   },
 };

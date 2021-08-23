@@ -1,1098 +1,117 @@
 {
-  "borderRadius": {
-    "utrecht-badge-border-radius": {
-      "type": "borderRadius",
-      "value": "0"
-    },
-    "utrecht-badge-counter-border-radius": {
-      "type": "borderRadius",
-      "value": "3ex"
-    },
-    "utrecht-button-border-radius": {
-      "type": "borderRadius",
-      "value": "0"
-    },
-    "utrecht-mapcontrolbutton-border-radius": {
-      "type": "borderRadius",
-      "value": "0"
-    },
-    "utrecht-select-border-radius": {
-      "type": "borderRadius",
-      "value": "0"
-    },
-    "utrecht-textarea-border-radius": {
-      "type": "borderRadius",
-      "value": "0"
-    },
-    "utrecht-textbox-border-radius": {
-      "type": "borderRadius",
-      "value": "0"
-    }
-  },
-  "borderWidth": {
-    "utrecht-button-border-width": {
-      "type": "borderWidth",
-      "value": "0"
-    },
-    "utrecht-button-focus-border-width": {
-      "type": "borderWidth",
-      "value": "2px"
-    },
-    "utrecht-button-secondary-action-border-width": {
-      "type": "borderWidth",
-      "value": "2px"
-    },
-    "utrecht-mapcontrolbutton-border-width": {
-      "type": "borderWidth",
-      "value": "1px"
-    },
-    "utrecht-pagination-page-link-border-width": {
-      "type": "borderWidth",
-      "value": "2px"
-    },
-    "utrecht-pagination-relative-link-border-width": {
-      "type": "borderWidth",
-      "value": "2px"
-    },
-    "utrecht-select-border-block-end-width": {
-      "type": "borderWidth",
-      "value": "3px"
-    },
-    "utrecht-select-border-width": {
-      "type": "borderWidth",
-      "value": "1px"
-    },
-    "utrecht-table-header-border-block-end-width": {
-      "type": "borderWidth",
-      "value": "2px"
-    },
-    "utrecht-table-row-border-block-end-width": {
-      "type": "borderWidth",
-      "value": "1px"
-    },
-    "utrecht-textarea-border-bottom-width": {
-      "type": "borderWidth",
-      "value": "3px"
-    },
-    "utrecht-textarea-border-width": {
-      "type": "borderWidth",
-      "value": "1px"
-    },
-    "utrecht-textbox-border-bottom-width": {
-      "type": "borderWidth",
-      "value": "3px"
-    },
-    "utrecht-textbox-border-width": {
-      "type": "borderWidth",
-      "value": "1px"
-    }
-  },
+  "borderRadius": {},
+  "borderWidth": {},
   "colors": {
-    "utrecht-badge-background-color": {
-      "type": "color",
-      "value": "hsl(0 0% 30%)"
-    },
-    "utrecht-badge-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-blockquote-content-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-breadcrumb-link-background-color": {
-      "type": "color",
-      "value": "hsl(0 0% 90%)"
-    },
-    "utrecht-breadcrumb-link-color": {
+    "utrecht-color-black": {
       "type": "color",
       "value": "hsl(0 0% 0%)"
     },
-    "utrecht-breadcrumb-link-focus-background-color": {
+    "utrecht-color-blue-20": {
       "type": "color",
-      "value": "hsl(48 100% 60%)"
+      "value": "hsl(211 60% 20%)"
     },
-    "utrecht-breadcrumb-link-focus-color": {
+    "utrecht-color-blue-30": {
       "type": "color",
-      "value": "hsl(0 0% 0%)"
+      "value": "hsl(211 60% 30%)"
     },
-    "utrecht-button-disabled-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-button-primary-action-background-color": {
+    "utrecht-color-blue-35": {
       "type": "color",
       "value": "hsl(211 60% 35%)"
     },
-    "utrecht-button-primary-action-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-document-background-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-document-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-feedback-active-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-active-border-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-active-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-active-fill-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-active-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-danger-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-danger-border-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-danger-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-danger-fill-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-danger-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-error-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-error-border-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-error-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-error-fill-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-error-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-inactive-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-inactive-border-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-inactive-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-inactive-fill-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-inactive-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-invalid-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-invalid-border-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-invalid-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-invalid-fill-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-feedback-invalid-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-safe-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-safe-border-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-safe-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-safe-fill-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-safe-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-success-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-success-border-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-success-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-success-fill-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-success-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-valid-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-valid-border-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-valid-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-valid-fill-background-color": {
-      "type": "color",
-      "value": "hsl(90 30% 50%)"
-    },
-    "utrecht-feedback-valid-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-feedback-warning-background-color": {
-      "type": "color",
-      "value": "hsl(48 100% 50%)"
-    },
-    "utrecht-feedback-warning-border-color": {
-      "type": "color",
-      "value": "hsl(48 100% 50%)"
-    },
-    "utrecht-feedback-warning-color": {
-      "type": "color",
-      "value": "hsl(48 100% 50%)"
-    },
-    "utrecht-feedback-warning-fill-background-color": {
-      "type": "color",
-      "value": "hsl(48 100% 50%)"
-    },
-    "utrecht-feedback-warning-fill-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-focus-border-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-focus-box-shadow-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-focus-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-focus-outline-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-link-active-color": {
-      "type": "color",
-      "value": "hsl(211 60% 30%)"
-    },
-    "utrecht-link-color": {
-      "type": "color",
-      "value": "hsl(211 60% 30%)"
-    },
-    "utrecht-link-focus-color": {
+    "utrecht-color-blue-40": {
       "type": "color",
       "value": "hsl(211 60% 40%)"
     },
-    "utrecht-link-hover-color": {
+    "utrecht-color-blue-50": {
       "type": "color",
-      "value": "hsl(211 60% 40%)"
+      "value": "hsl(211 60% 50%)"
     },
-    "utrecht-link-visited-color": {
+    "utrecht-color-blue-80": {
       "type": "color",
-      "value": "hsl(211 60% 30%)"
+      "value": "hsl(211 60% 80%)"
     },
-    "utrecht-mapcontrolbutton-disabled-color": {
+    "utrecht-color-blue-90": {
+      "type": "color",
+      "value": "hsl(211 60% 90%)"
+    },
+    "utrecht-color-green-40": {
+      "type": "color",
+      "value": "hsl(90 30% 40%)"
+    },
+    "utrecht-color-green-50": {
+      "type": "color",
+      "value": "hsl(90 30% 50%)"
+    },
+    "utrecht-color-green-80": {
+      "type": "color",
+      "value": "hsl(90 30% 80%)"
+    },
+    "utrecht-color-green-90": {
+      "type": "color",
+      "value": "hsl(90 30% 90%)"
+    },
+    "utrecht-color-grey-15": {
+      "type": "color",
+      "value": "hsl(0 0% 15%)"
+    },
+    "utrecht-color-grey-30": {
+      "type": "color",
+      "value": "hsl(0 0% 30%)"
+    },
+    "utrecht-color-grey-40": {
+      "type": "color",
+      "value": "hsl(0 0% 40%)"
+    },
+    "utrecht-color-grey-80": {
       "type": "color",
       "value": "hsl(0 0% 80%)"
     },
-    "utrecht-page-footer-background-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-page-footer-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-pagination-page-link-background-color": {
-      "type": "color",
-      "value": "transparent"
-    },
-    "utrecht-pagination-page-link-color": {
-      "type": "color",
-      "value": "hsl(211 60% 35%)"
-    },
-    "utrecht-pagination-page-link-current-background-color": {
-      "type": "color",
-      "value": "hsl(211 60% 35%)"
-    },
-    "utrecht-pagination-page-link-current-border-color": {
-      "type": "color",
-      "value": "hsl(211 60% 35%)"
-    },
-    "utrecht-pagination-page-link-current-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-pagination-page-link-hover-background-color": {
-      "type": "color",
-      "value": "hsl(211 60% 35%)"
-    },
-    "utrecht-pagination-page-link-hover-border-color": {
-      "type": "color",
-      "value": "hsl(211 60% 35%)"
-    },
-    "utrecht-pagination-page-link-hover-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-pagination-relative-link-background-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-pagination-relative-link-color": {
-      "type": "color",
-      "value": "hsl(211 60% 35%)"
-    },
-    "utrecht-select-background-color": {
-      "type": "color",
-      "value": "hsl(0 0% 100%)"
-    },
-    "utrecht-select-border-color": {
-      "type": "color",
-      "value": "hsl(0 0% 30%)"
-    },
-    "utrecht-select-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-select-invalid-border-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-separator-color": {
+    "utrecht-color-grey-90": {
       "type": "color",
       "value": "hsl(0 0% 90%)"
     },
-    "utrecht-table-header-border-block-end-color": {
+    "utrecht-color-red-20": {
+      "type": "color",
+      "value": "hsl(0 100% 20%)"
+    },
+    "utrecht-color-red-30": {
+      "type": "color",
+      "value": "hsl(0 100% 30%)"
+    },
+    "utrecht-color-red-40": {
       "type": "color",
       "value": "hsl(0 100% 40%)"
     },
-    "utrecht-table-row-border-block-end-color": {
+    "utrecht-color-white": {
       "type": "color",
-      "value": "hsl(0 0% 90%)"
+      "value": "hsl(0 0% 100%)"
     },
-    "utrecht-textarea-border-color": {
+    "utrecht-color-yellow-40": {
       "type": "color",
-      "value": "hsl(0 0% 30%)"
+      "value": "hsl(48 100% 40%)"
     },
-    "utrecht-textarea-color": {
+    "utrecht-color-yellow-50": {
       "type": "color",
-      "value": "hsl(0 0% 0%)"
+      "value": "hsl(48 100% 50%)"
     },
-    "utrecht-textarea-invalid-border-color": {
+    "utrecht-color-yellow-60": {
       "type": "color",
-      "value": "hsl(0 100% 40%)"
+      "value": "hsl(48 100% 60%)"
     },
-    "utrecht-textbox-border-color": {
+    "utrecht-color-yellow-80": {
       "type": "color",
-      "value": "hsl(0 0% 30%)"
-    },
-    "utrecht-textbox-color": {
-      "type": "color",
-      "value": "hsl(0 0% 0%)"
-    },
-    "utrecht-textbox-invalid-border-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
-    },
-    "utrecht-unordered-list-marker-color": {
-      "type": "color",
-      "value": "hsl(0 100% 40%)"
+      "value": "hsl(48 100% 80%)"
     }
   },
-  "fontFamilies": {
-    "utrecht-button-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    },
-    "utrecht-document-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    },
-    "utrecht-form-input-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    },
-    "utrecht-select-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    },
-    "utrecht-textarea-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    },
-    "utrecht-textbox-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    },
-    "utrecht-typography-sans-serif-font-family": {
-      "type": "fontFamilies",
-      "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif"
-    }
-  },
-  "fontSizes": {
-    "utrecht-blockquote-attribution-font-size": {
-      "type": "fontSizes",
-      "value": "0.75rem"
-    },
-    "utrecht-blockquote-content-font-size": {
-      "type": "fontSizes",
-      "value": "1.125rem"
-    },
-    "utrecht-breadcrumb-font-size": {
-      "type": "fontSizes",
-      "value": "0.9rem"
-    },
-    "utrecht-button-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-document-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-form-label-font-size": {
-      "type": "fontSizes",
-      "value": "1em"
-    },
-    "utrecht-heading-1-font-size": {
-      "type": "fontSizes",
-      "value": "1.5rem"
-    },
-    "utrecht-heading-2-font-size": {
-      "type": "fontSizes",
-      "value": "1.25rem"
-    },
-    "utrecht-heading-3-font-size": {
-      "type": "fontSizes",
-      "value": "1.25rem"
-    },
-    "utrecht-heading-4-font-size": {
-      "type": "fontSizes",
-      "value": "1.125rem"
-    },
-    "utrecht-heading-5-font-size": {
-      "type": "fontSizes",
-      "value": "0.9rem"
-    },
-    "utrecht-heading-6-font-size": {
-      "type": "fontSizes",
-      "value": "0.9rem"
-    },
-    "utrecht-pagination-font-size": {
-      "type": "fontSizes",
-      "value": "14px"
-    },
-    "utrecht-paragraph-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-paragraph-lead-font-size": {
-      "type": "fontSizes",
-      "value": "1.25rem"
-    },
-    "utrecht-search-bar-button-font-size": {
-      "type": "fontSizes",
-      "value": "0.9rem"
-    },
-    "utrecht-select-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-table-caption-font-size": {
-      "type": "fontSizes",
-      "value": "1.125em"
-    },
-    "utrecht-textarea-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-textbox-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-typography-scale-2xl-font-size": {
-      "type": "fontSizes",
-      "value": "1.5rem"
-    },
-    "utrecht-typography-scale-2xs-font-size": {
-      "type": "fontSizes",
-      "value": "0.5rem"
-    },
-    "utrecht-typography-scale-3xl-font-size": {
-      "type": "fontSizes",
-      "value": "2rem"
-    },
-    "utrecht-typography-scale-lg-font-size": {
-      "type": "fontSizes",
-      "value": "1.25rem"
-    },
-    "utrecht-typography-scale-md-font-size": {
-      "type": "fontSizes",
-      "value": "1rem"
-    },
-    "utrecht-typography-scale-sm-font-size": {
-      "type": "fontSizes",
-      "value": "0.9rem"
-    },
-    "utrecht-typography-scale-xl-font-size": {
-      "type": "fontSizes",
-      "value": "1.4rem"
-    },
-    "utrecht-typography-scale-xs-font-size": {
-      "type": "fontSizes",
-      "value": "0.7rem"
-    }
-  },
-  "fontWeights": {
-    "utrecht-emphasis-strong-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-form-label-checkbox-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-form-label-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-form-label-radio-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-heading-3-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-heading-4-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-heading-5-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-heading-6-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-heading-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-pagination-page-link-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-pagination-relative-link-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-paragraph-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    },
-    "utrecht-search-bar-button-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-table-caption-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-table-header-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-typography-weight-scale-bold-font-weight": {
-      "type": "fontWeights",
-      "value": "bold"
-    },
-    "utrecht-typography-weight-scale-normal-font-weight": {
-      "type": "fontWeights",
-      "value": "normal"
-    }
-  },
-  "letterSpacing": {
-    "utrecht-badge-data-letter-spacing": {
-      "type": "letterSpacing",
-      "value": "0.15ch"
-    },
-    "utrecht-badge-status-letter-spacing": {
-      "type": "letterSpacing",
-      "value": "0.15ch"
-    },
-    "utrecht-heading-5-letter-spacing": {
-      "type": "letterSpacing",
-      "value": "0.72px"
-    },
-    "utrecht-heading-6-letter-spacing": {
-      "type": "letterSpacing",
-      "value": "0.72px"
-    },
-    "utrecht-search-bar-button-letter-spacing": {
-      "type": "letterSpacing",
-      "value": ".05em"
-    }
-  },
-  "lineHeights": {
-    "utrecht-document-line-height": {
-      "type": "lineHeights",
-      "value": "1.4"
-    },
-    "utrecht-heading-1-line-height": {
-      "type": "lineHeights",
-      "value": "1.4"
-    },
-    "utrecht-heading-2-line-height": {
-      "type": "lineHeights",
-      "value": "1.2"
-    },
-    "utrecht-heading-3-line-height": {
-      "type": "lineHeights",
-      "value": "1.2"
-    },
-    "utrecht-heading-4-line-height": {
-      "type": "lineHeights",
-      "value": "1.25"
-    },
-    "utrecht-heading-5-line-height": {
-      "type": "lineHeights",
-      "value": "1.333"
-    },
-    "utrecht-heading-6-line-height": {
-      "type": "lineHeights",
-      "value": "1.333"
-    },
-    "utrecht-paragraph-line-height": {
-      "type": "lineHeights",
-      "value": "1.4"
-    }
-  },
+  "fontFamilies": {},
+  "fontSizes": {},
+  "fontWeights": {},
+  "letterSpacing": {},
+  "lineHeights": {},
   "opacity": {},
   "paragraphSpacing": {},
   "sizing": {},
-  "spacing": {
-    "utrecht-blockquote-margin-inline-end": {
-      "type": "spacing",
-      "value": "1.6em"
-    },
-    "utrecht-blockquote-margin-inline-start": {
-      "type": "spacing",
-      "value": "1.6em"
-    },
-    "utrecht-breadcrumb-item-padding-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-breadcrumb-item-padding-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-breadcrumb-item-padding-inline-end": {
-      "type": "spacing",
-      "value": "16px"
-    },
-    "utrecht-breadcrumb-item-padding-inline-start": {
-      "type": "spacing",
-      "value": "16px"
-    },
-    "utrecht-button-margin-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-button-margin-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-button-margin-inline-end": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-button-margin-inline-start": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-button-padding-block-end": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-button-padding-block-start": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-button-padding-inline-end": {
-      "type": "spacing",
-      "value": "16px"
-    },
-    "utrecht-button-padding-inline-start": {
-      "type": "spacing",
-      "value": "16px"
-    },
-    "utrecht-form-field-margin-block-end": {
-      "type": "spacing",
-      "value": "4px"
-    },
-    "utrecht-form-field-margin-block-start": {
-      "type": "spacing",
-      "value": "4px"
-    },
-    "utrecht-heading-1-margin-block-end": {
-      "type": "spacing",
-      "value": "0.67rem"
-    },
-    "utrecht-heading-1-margin-block-start": {
-      "type": "spacing",
-      "value": "0.67rem"
-    },
-    "utrecht-heading-2-margin-block-end": {
-      "type": "spacing",
-      "value": "0.3rem"
-    },
-    "utrecht-heading-2-margin-block-start": {
-      "type": "spacing",
-      "value": "1.5rem"
-    },
-    "utrecht-heading-3-margin-block-end": {
-      "type": "spacing",
-      "value": "0.2rem"
-    },
-    "utrecht-heading-3-margin-block-start": {
-      "type": "spacing",
-      "value": "1rem"
-    },
-    "utrecht-heading-4-margin-block-end": {
-      "type": "spacing",
-      "value": "0.3rem"
-    },
-    "utrecht-heading-4-margin-block-start": {
-      "type": "spacing",
-      "value": "1.2rem"
-    },
-    "utrecht-heading-5-margin-block-end": {
-      "type": "spacing",
-      "value": "0.2rem"
-    },
-    "utrecht-heading-5-margin-block-start": {
-      "type": "spacing",
-      "value": "1rem"
-    },
-    "utrecht-heading-6-margin-block-end": {
-      "type": "spacing",
-      "value": "0.2rem"
-    },
-    "utrecht-heading-6-margin-block-start": {
-      "type": "spacing",
-      "value": "1rem"
-    },
-    "utrecht-mapcontrolbutton-margin-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-mapcontrolbutton-margin-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-mapcontrolbutton-margin-inline-end": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-mapcontrolbutton-margin-inline-start": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-mapcontrolbutton-padding-block-end": {
-      "type": "spacing",
-      "value": "4px"
-    },
-    "utrecht-mapcontrolbutton-padding-block-start": {
-      "type": "spacing",
-      "value": "4px"
-    },
-    "utrecht-mapcontrolbutton-padding-inline-end": {
-      "type": "spacing",
-      "value": "4px"
-    },
-    "utrecht-mapcontrolbutton-padding-inline-start": {
-      "type": "spacing",
-      "value": "4px"
-    },
-    "utrecht-ordered-list-item-margin-block-end": {
-      "type": "spacing",
-      "value": "0.25em"
-    },
-    "utrecht-ordered-list-item-margin-block-start": {
-      "type": "spacing",
-      "value": "0.25em"
-    },
-    "utrecht-ordered-list-margin-block-end": {
-      "type": "spacing",
-      "value": "1em"
-    },
-    "utrecht-ordered-list-margin-block-start": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-page-footer-padding-block-end": {
-      "type": "spacing",
-      "value": "1.8em"
-    },
-    "utrecht-page-footer-padding-block-start": {
-      "type": "spacing",
-      "value": "1.8em"
-    },
-    "utrecht-page-footer-padding-inline-end": {
-      "type": "spacing",
-      "value": "1em"
-    },
-    "utrecht-page-footer-padding-inline-start": {
-      "type": "spacing",
-      "value": "1em"
-    },
-    "utrecht-pagination-margin-block-end": {
-      "type": "spacing",
-      "value": "1em"
-    },
-    "utrecht-pagination-margin-block-start": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-pagination-page-link-distanced-margin-inline-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-page-link-padding-block-end": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-page-link-padding-block-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-page-link-padding-inline-end": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-page-link-padding-inline-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-relative-link-distanced-margin-inline-end": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-relative-link-distanced-margin-inline-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-relative-link-padding-block-end": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-relative-link-padding-block-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-relative-link-padding-inline-end": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-pagination-relative-link-padding-inline-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-paragraph-margin-block-start": {
-      "type": "spacing",
-      "value": "16px"
-    },
-    "utrecht-search-bar-textbox-padding-inline-start": {
-      "type": "spacing",
-      "value": "32px"
-    },
-    "utrecht-select-padding-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-select-padding-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-select-padding-inline-end": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-select-padding-inline-start": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-sidenav-item-margin-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-sidenav-item-margin-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-sidenav-item-margin-inline-end": {
-      "type": "spacing",
-      "value": "2px"
-    },
-    "utrecht-sidenav-item-margin-inline-start": {
-      "type": "spacing",
-      "value": "2px"
-    },
-    "utrecht-table-caption-margin-block-end": {
-      "type": "spacing",
-      "value": "1em"
-    },
-    "utrecht-table-cell-padding-block-end": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-table-cell-padding-block-start": {
-      "type": "spacing",
-      "value": "0.5em"
-    },
-    "utrecht-table-cell-padding-inline-end": {
-      "type": "spacing",
-      "value": "0"
-    },
-    "utrecht-table-cell-padding-inline-start": {
-      "type": "spacing",
-      "value": "0.4em"
-    },
-    "utrecht-textarea-padding-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-textarea-padding-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-textarea-padding-inline-end": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-textarea-padding-inline-start": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-textbox-padding-block-end": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-textbox-padding-block-start": {
-      "type": "spacing",
-      "value": "8px"
-    },
-    "utrecht-textbox-padding-inline-end": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-textbox-padding-inline-start": {
-      "type": "spacing",
-      "value": "12px"
-    },
-    "utrecht-unordered-list-item-margin-block-end": {
-      "type": "spacing",
-      "value": "0.5rem"
-    },
-    "utrecht-unordered-list-item-margin-block-start": {
-      "type": "spacing",
-      "value": "0.5rem"
-    },
-    "utrecht-unordered-list-margin-block-end": {
-      "type": "spacing",
-      "value": "1rem"
-    },
-    "utrecht-unordered-list-margin-block-start": {
-      "type": "spacing",
-      "value": "0"
-    }
-  },
+  "spacing": {},
   "typography": {},
-  "sizes": {
-    "utrecht-article-max-inline-size": {
-      "type": "sizing",
-      "value": "780px"
-    },
-    "utrecht-breadcrumb-block-size": {
-      "type": "sizing",
-      "value": "34px"
-    },
-    "utrecht-breadcrumb-divider-inline-size": {
-      "type": "sizing",
-      "value": "1px"
-    },
-    "utrecht-form-input-block-size": {
-      "type": "sizing",
-      "value": "42px"
-    },
-    "utrecht-select-max-inline-size": {
-      "type": "sizing",
-      "value": "28em"
-    }
-  }
+  "sizes": {}
 }
