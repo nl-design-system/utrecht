@@ -7,7 +7,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "utrecht-page-footer",
-  styleUrl: "bem.css",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class PageFooter {

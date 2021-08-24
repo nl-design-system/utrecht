@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 @Component({
   tag: "utrecht-form-field-description",
-  styleUrl: "bem.scss",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class FormFieldDescription {

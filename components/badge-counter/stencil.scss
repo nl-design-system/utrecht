@@ -4,8 +4,7 @@
  */
 
 @import "./bem";
-@import "../link/bem";
 
 :host {
-  display: block;
+  display: inline-block;
 }

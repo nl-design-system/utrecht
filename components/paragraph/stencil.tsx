@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 @Component({
   tag: "utrecht-paragraph",
-  styleUrl: "bem.css",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class Paragraph {

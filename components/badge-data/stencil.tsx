@@ -6,7 +6,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "utrecht-badge-data",
-  styleUrl: "bem.scss",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class BadgeData {

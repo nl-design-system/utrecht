@@ -2,7 +2,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "utrecht-heading-1",
-  styleUrl: "bem.css",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class Heading1 {

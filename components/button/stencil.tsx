@@ -3,7 +3,7 @@ import clsx from "clsx";
 
 @Component({
   tag: "utrecht-button",
-  styleUrl: "bem.scss",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class Button {
