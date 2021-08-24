@@ -6,3 +6,7 @@
 @import "./bem";
 @import "../form-label/bem";
 @import "../textbox/bem";
+
+:host {
+  display: block;
+}

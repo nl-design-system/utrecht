@@ -9,3 +9,7 @@
 @import "../heading-4/bem";
 @import "../heading-5/bem";
 @import "../heading-6/bem";
+
+:host {
+  display: block;
+}

@@ -2,7 +2,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "utrecht-icon-instagram",
-  styleUrl: "stencil.css",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class IconInstagram {

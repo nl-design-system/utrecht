@@ -6,7 +6,7 @@ import { Component, h } from "@stencil/core";
 
 @Component({
   tag: "utrecht-html-content",
-  styleUrl: "html.scss",
+  styleUrl: "stencil.scss",
   shadow: false,
 })
 export class HTMLContent {
