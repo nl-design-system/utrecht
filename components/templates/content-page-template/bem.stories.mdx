@@ -1,0 +1,111 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import "./bem.scss";
+
+import { Template as Breadcrumb } from "../../breadcrumb/bem.stories.mdx";
+import { Template as TopNav } from "../../navigatie topnav/bem.stories.mdx";
+
+export const Template = ({ aside = "", content = "", breadcrumb = [], nav = [] }) => `<div class="utrecht-page">
+        <header class="utrecht-page-header">
+          <div class="utrecht-page-header__content">
+            <div class="utrecht-page-header__logo">
+              <utrecht-logo></utrecht-logo>
+            </div>
+            <div class="utrecht-page-header__lang">
+              <div class="utrecht-alternate-lang-nav">
+                <a href="https://www.utrecht.nl/city-of-utrecht/" class="utrecht-link utrecht-link--alternate-lang utrecht-link--current-lang" aria-current="page" title="This page in English" hreflang="en" lang="en">English</a>
+              </div>
+            </div>
+            <div class="utrecht-page-header__search">
+              <form class="utrecht-search-bar" role="search" aria-label="zoeken in Utrecht.nl">
+                <input type="search" class="utrecht-search-bar__input utrecht-textbox utrecht-textbox utrecht-textbox--html-input" name="q" autocomplete="off" spellcheck="false" value="The answer to life, the universe, and everything" aria-label="zoektermen">
+                <button type="submit" value="Zoeken" class="utrecht-search-bar__button utrecht-button">Zoeken</button>
+              </form>
+            </div>
+            ${
+              Array.isArray(nav) && nav.length > 0
+                ? `<div class="utrecht-page-header__nav">${TopNav({ items: nav })}</div>`
+                : ""
+            }
+          </div>
+        </header>
+        <div class="utrecht-page-content">
+          <nav class="utrecht-page-content__nav">
+            ${
+              Array.isArray(breadcrumb) && breadcrumb.length > 0
+                ? Breadcrumb({ items: breadcrumb, variant: "arrows" })
+                : ""
+            }
+          </nav>
+          <main class="utrecht-page-content__main">
+            ${content}
+          </main>
+        </div>
+        ${aside ? `<aside class="utrecht-page-content__aside utrecht-aside">${aside}</aside>` : ""}
+        <utrecht-page-footer-template></utrecht-page-footer-template>
+      </div>`;
+
+<Meta
+  title="CSS Template/Content Page"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Content Page
+
+<Canvas>
+  <Story
+    name="Content Page"
+    args={{
+      content: `<article class="utrecht-article">
+      <h1>Hello world.</h1>
+    </article>
+    <form>
+      <h2>Example form</h2>
+    </form>
+    <utrecht-contact-card-template></utrecht-contact-card-template>
+ `,
+      aside: `[aside content]`,
+      nav: [
+        { href: "/wonen-en-leven/", title: "Wonen en leven" },
+        { href: "/zorg-en-onderwijs/", title: "Zorg en onderwijs" },
+        { href: "/werk-en-inkomen/", title: "Werk en inkomen" },
+        { href: "/ondernemen/", title: "Ondernemen" },
+        { href: "/bestuur-en-organisatie/", title: "Bestuur en organisatie" },
+      ],
+      breadcrumb: [
+        { href: "/", title: "Home" },
+        { href: "/bestuur-en-organisatie/", title: "Bestuur en organisatie" },
+      ],
+      layout: "fullscreen",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## content sidebar
+
+<Canvas>
+  <Story
+    name="Content Aside"
+    args={{
+      contentBAK: `<aside class="utrecht-article">
+      <h2>Hello world.</h2>
+    </aside>`,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>

@@ -28,15 +28,27 @@
   background-position-x: 66%;
   background-size: 200%;
   color: var(--utrecht-color-black);
+  display: grid;
+  grid-template-columns: startcol 50% endcol 50%;
+  grid-template-rows: heading 30% content 70%;
   padding-block-end: var(--utrecht-space-block-lg);
   padding-block-start: var(--utrecht-space-block-lg);
   padding-inline-end: var(--utrecht-space-inline-lg);
   padding-inline-start: var(--utrecht-space-inline-lg);
 }
 
-.utrecht-contact-card__content {
-  display: flex;
-  flex-direction: row;
+.utrecht-contact-card__heading {
+  grid-row-start: heading;
+  grid-column-start: startcol 2;
+}
+
+.utrecht-contact-card__section--telephone {
+  grid-row-start: content;
+  grid-column-start: startcol;
+}
+.utrecht-contact-card__section--card {
+  grid-row-start: content;
+  grid-column-start: endcol;
 }
 
 .utrecht-contact-card__section {

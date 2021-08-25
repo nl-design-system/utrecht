@@ -1,0 +1,26 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const Template = () => `<utrecht-content-page-template></utrecht-content-page-template>`;
+
+<Meta
+  title="Web Component Template/Content page"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Contact Card
+
+<Canvas>
+  <Story name="Content page">{Template.bind({})}</Story>
+</Canvas>
