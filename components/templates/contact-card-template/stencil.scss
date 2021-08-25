@@ -5,3 +5,7 @@
 
 @import "../../link/bem";
 @import "./bem";
+
+:host {
+  display: block;
+}
