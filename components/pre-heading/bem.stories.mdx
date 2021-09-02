@@ -1,0 +1,57 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
+import "./bem.scss";
+
+export const defaultArgs = {
+  distanced: false,
+};
+
+export const Template = ({ textContent = "", distanced = false }) =>
+  `<div class="${clsx("utrecht-pre-heading", {
+    "utrecht-pre-heading--distanced": distanced,
+  })}">${textContent}</div>`;
+
+<Meta
+  title="CSS Component/Pre-heading"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the heading",
+      control: "text",
+    },
+    distanced: {
+      description: "Distance the element from adjacent content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Pre-heading
+
+Styling via `utrecht-pre-heading` class name:
+
+<Canvas>
+  <Story
+    name="Pre-heading"
+    args={{
+      ...defaultArgs,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Pre-heading" />

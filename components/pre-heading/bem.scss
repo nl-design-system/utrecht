@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-pre-heading {
+  color: var(--utrecht-pre-heading-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(
+    --utrecht-pre-heading-font-family,
+    var(--utrecht-heading-font-family, var(--utrecht-document-font-family))
+  );
+  font-size: var(--utrecht-pre-heading-font-size);
+  font-weight: var(--utrecht-pre-heading-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-pre-heading-letter-spacing);
+  line-height: var(--utrecht-pre-heading-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-pre-heading-text-transform, inherit);
+}
+
+.utrecht-pre-heading--distanced {
+  margin-block-end: var(--utrecht-pre-heading-margin-block-end);
+  margin-block-start: var(--utrecht-pre-heading-margin-block-start);
+}
