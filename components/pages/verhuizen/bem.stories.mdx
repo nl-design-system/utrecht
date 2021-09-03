@@ -15,8 +15,8 @@ export const Template = () => `<form class="utrecht-form">
   <h2>Uw gegevens</h2>
   <p>Hieronder ...</p>
   <hr class="utrecht-separator"/>
-  <fieldset>
-    <caption>Persoonsgegevens</caption>
+  <fieldset class="utrecht-form-fieldset">
+    <legend class="utrecht-form-fieldset__legend">Persoonsgegevens</legend>
     <!-- TODO: Replace with Form data summary component -->
     <utrecht-form-field-textbox value="1234" readonly>Burgerservicenummer</utrecht-form-field-textbox>
     <utrecht-form-field-textbox value="De heer" readonly>Aanhef</utrecht-form-field-textbox>
@@ -25,7 +25,7 @@ export const Template = () => `<form class="utrecht-form">
     <utrecht-form-field-textbox value="Janssen" readonly>Achternaam</utrecht-form-field-textbox>
   </fieldset>
   <fieldset>
-    <caption>Adresgegevens</caption>
+    <legend>Adresgegevens</legend>
     <!-- TODO: Replace with Form data summary component -->
     <utrecht-form-field-textbox value="Domplein" readonly>Straatnaam</utrecht-form-field-textbox>
     <utrecht-form-field-textbox value="42" readonly>Huisnummer</utrecht-form-field-textbox>
@@ -35,7 +35,7 @@ export const Template = () => `<form class="utrecht-form">
     <utrecht-form-field-textbox value="Utrecht" readonly>Woonplaats</utrecht-form-field-textbox>
   </fieldset>
   <fieldset>
-    <caption>Contactgegevens</caption>
+    <legend>Contactgegevens</legend>
     <utrecht-form-field-textbox value="">Telefoonnummer</utrecht-form-field-textbox>
     <utrecht-form-field-textbox value="example@utrecht.nl" required>E-mailadres *</utrecht-form-field-textbox>
     <p>Vragen met een * zijn verplicht</p>
@@ -47,7 +47,7 @@ export const Template = () => `<form class="utrecht-form">
   <utrecht-form-field-description status="invalid">U moet een verhuisdatum invullen</utrecht-form-field-description>
   <utrecht-separator></utrecht-separator>
   <fieldset>
-    <caption>Nieuwe adres</caption>
+    <legend>Nieuwe adres</legend>
     ${FormFieldRadioGroup({
       label: "Hoe wilt u zoeken",
       options: [{ label: "Postcode" }, { label: "Woonplaats en Straat" }],
