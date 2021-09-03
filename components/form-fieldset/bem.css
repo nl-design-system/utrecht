@@ -7,6 +7,10 @@
   border-width: 0;
 }
 
+.utrecht-form-field-textbox {
+  margin-block-end: 0.6rem;
+}
+
 .utrecht-form-fieldset--distanced {
   margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
   margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
