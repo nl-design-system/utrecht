@@ -7,18 +7,12 @@
     "form-fieldset__legend": {
       "color": {},
       "font-family": {},
-      "font-size": { "value": "{utrecht.typography.scale.2xs.value}" },
-      "font-weight": { "value": "{utrecht.typography.weight-scale.bold.value}" },
+      "font-size": { "value": "1rem" },
+      "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" },
       "line-height": { "value": "1.4" },
       "margin-block-start": { "value": "{utrecht.space.block.2xs.value}" },
       "margin-block-end": { "value": "{utrecht.space.block.2xs.value}" },
       "text-transform": {}
-    },
-    "text-transform": {
-      "css": {
-        "syntax": "inherit | uppercase",
-        "inherits": true
-      }
     }
   }
 }
