@@ -15,7 +15,7 @@ export const Template = () => `<form class="utrecht-form">
   <h2>Uw gegevens</h2>
   <p>Hieronder ...</p>
   <hr class="utrecht-separator"/>
-  <fieldset class="utrecht-form-fieldset">
+  <fieldset class="utrecht-form-fieldset utrecht-form-fieldset--distanced">
     <legend class="utrecht-form-fieldset__legend">Persoonsgegevens</legend>
     <!-- TODO: Replace with Form data summary component -->
     <utrecht-form-field-textbox value="1234" readonly>Burgerservicenummer</utrecht-form-field-textbox>
@@ -24,7 +24,7 @@ export const Template = () => `<form class="utrecht-form">
     <utrecht-form-field-textbox value="" readonly>Tussenvoegsels(s)</utrecht-form-field-textbox>
     <utrecht-form-field-textbox value="Janssen" readonly>Achternaam</utrecht-form-field-textbox>
   </fieldset>
-  <fieldset>
+    <fieldset class="utrecht-form-fieldset utrecht-form-fieldset--distanced">
     <legend>Adresgegevens</legend>
     <!-- TODO: Replace with Form data summary component -->
     <utrecht-form-field-textbox value="Domplein" readonly>Straatnaam</utrecht-form-field-textbox>
@@ -34,7 +34,7 @@ export const Template = () => `<form class="utrecht-form">
     <utrecht-form-field-textbox value="1234AB" readonly>Postcode</utrecht-form-field-textbox>
     <utrecht-form-field-textbox value="Utrecht" readonly>Woonplaats</utrecht-form-field-textbox>
   </fieldset>
-  <fieldset>
+    <fieldset class="utrecht-form-fieldset utrecht-form-fieldset--distanced">
     <legend>Contactgegevens</legend>
     <utrecht-form-field-textbox value="">Telefoonnummer</utrecht-form-field-textbox>
     <utrecht-form-field-textbox value="example@utrecht.nl" required>E-mailadres *</utrecht-form-field-textbox>
@@ -46,7 +46,7 @@ export const Template = () => `<form class="utrecht-form">
   <utrecht-form-field-textbox type="date" value="" invalid="true">Verhuisdatum *</utrecht-form-field-textbox>
   <utrecht-form-field-description status="invalid">U moet een verhuisdatum invullen</utrecht-form-field-description>
   <utrecht-separator></utrecht-separator>
-  <fieldset>
+    <fieldset class="utrecht-form-fieldset utrecht-form-fieldset--distanced">
     <legend>Nieuwe adres</legend>
     ${FormFieldRadioGroup({
       label: "Hoe wilt u zoeken",
