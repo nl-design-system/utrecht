@@ -1,0 +1,117 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import "./bem.scss";
+import { Template as FormFieldRadioGroup } from "../../form-field-radio-group/bem.stories.mdx";
+import { Template as FormFieldCheckboxGroup } from "../../form-field-checkbox-group/bem.stories.mdx";
+
+export const Template = () => `<form class="utrecht-form">
+  <div class="utrecht-pre-heading">Online loket</div>
+  <h1>Een verhuizing doorgeven</h1>
+  <div>Stap 1 - Stap 5</div>
+  <h2>Uw gegevens</h2>
+  <p>Hieronder ...</p>
+  <hr class="utrecht-separator"/>
+  <fieldset>
+    <caption>Persoonsgegevens</caption>
+    <!-- TODO: Replace with Form data summary component -->
+    <utrecht-form-field-textbox value="1234" readonly>Burgerservicenummer</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="De heer" readonly>Aanhef</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="R." readonly>Voorletter(s)</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="" readonly>Tussenvoegsels(s)</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="Janssen" readonly>Achternaam</utrecht-form-field-textbox>
+  </fieldset>
+  <fieldset>
+    <caption>Adresgegevens</caption>
+    <!-- TODO: Replace with Form data summary component -->
+    <utrecht-form-field-textbox value="Domplein" readonly>Straatnaam</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="42" readonly>Huisnummer</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="" readonly>Huisletter</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="" readonly>Huisnummertoevoeging</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="1234AB" readonly>Postcode</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="Utrecht" readonly>Woonplaats</utrecht-form-field-textbox>
+  </fieldset>
+  <fieldset>
+    <caption>Contactgegevens</caption>
+    <utrecht-form-field-textbox value="">Telefoonnummer</utrecht-form-field-textbox>
+    <utrecht-form-field-textbox value="example@utrecht.nl" required>E-mailadres *</utrecht-form-field-textbox>
+    <p>Vragen met een * zijn verplicht</p>
+    <utrecht-button>Volgende</utrecht-button>
+    <!-- <utrecht-button type="reset">Stoppen</utrecht-button> -->
+  </fieldset>
+  <h2>De verhuizing</h2>
+  <utrecht-form-field-textbox type="date" value="" invalid="true">Verhuisdatum *</utrecht-form-field-textbox>
+  <utrecht-form-field-description status="invalid">U moet een verhuisdatum invullen</utrecht-form-field-description>
+  <utrecht-separator></utrecht-separator>
+  <fieldset>
+    <caption>Nieuwe adres</caption>
+    ${FormFieldRadioGroup({
+      label: "Hoe wilt u zoeken",
+      options: [{ label: "Postcode" }, { label: "Woonplaats en Straat" }],
+    })}
+    <utrecht-form-field-textbox required>Postcode</utrecht-form-field-textbox>
+    <utrecht-form-field-description status="invalid">U moet een postcode van het nieuwe adres invullen</utrecht-form-field-description>
+    <utrecht-form-field-textbox required>Huisnummer</utrecht-form-field-textbox>
+    <utrecht-form-field-description status="invalid">U moet het huisnummer van het nieuwe adres invullen</utrecht-form-field-description>
+    <p>
+      <label class="utrecht-form-label">Selecteer uw nieuwe adres *</label>
+    </p>
+    <p>Er zijn geen opties beschikbaar</p>
+    <p>Vragen met een * zijn verplicht</p>
+  </fieldset>
+  <utrecht-button>Vorige</utrecht-button>
+  <utrecht-button type="submit">Volgende</utrecht-button>
+  <utrecht-button type="reset">Stoppen</utrecht-button>
+  <h2>Woonsituatie</h2>
+  ${FormFieldCheckboxGroup({ label: "Medeverhuizers", options: [{ label: "Vlugge Japie", checked: true }] })}
+  <p><strong>Let op!</strong></p>
+  <p>Verhuist ....</p>
+  <utrecht-separator></utrecht-separator>
+  <utrecht-form-field-textbox type="number" required>Hoeveel personen - inclusief uzelf - wonen er na uw verhuizing op het nieuwe adres? *</utrecht-form-field-textbox>
+  ${FormFieldRadioGroup({
+    label: "Wat is uw nieuwe woonsituatie?",
+    options: [
+      { label: "Ik ben (mede-)eigenaar van de woning/appartement/studio" },
+      { label: "Ik ben (mede-)huurder van de woning/appartement/studio en heb een huurcontract" },
+      { label: "Ik huur een deel van de woning (kamer/verdieping) en heb een huurcontract" },
+      { label: "Ik ga bij iemand in huis wonen en heb geen huurcontract" },
+    ],
+  })}
+  <div>
+  <utrecht-button>Vorige</utrecht-button>
+  <utrecht-button type="submit">Volgende</utrecht-button>
+  <h2>Controleren en versturen</h2>
+  <p>Bijna klaar! ...</p>
+  <h2>Uw gegevens</h2>
+  <utrecht-separator></utrecht-separator>
+  <h3>Persoonsgegevens</h3>
+  <p>...</p>
+  <h3>Adresgegevens</h3>
+  <p>...</p>
+  <h3>Akkoord en versturen</h3>
+  <utrecht-form-field-checkbox>Ja, ik heb alles juist ingevuld.</utrecht-form-field-checkbox>
+  <utrecht-button>Vorige</utrecht-button>
+  <utrecht-button type="submit" disabled>Versturen</utrecht-button>
+  </div>
+</form>`;
+
+<Meta
+  title="Page/Formulier verhuizen"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Formulier verhuizen
+
+<Canvas>
+  <Story name="Formulier verhuizen">{Template.bind({})}</Story>
+</Canvas>
