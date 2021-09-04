@@ -25,7 +25,7 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "devDependencies": {
-    "@stencil/react-output-target": "0.0.9",
+    "@stencil/react-output-target": "0.0.12",
     "@stencil/sass": "1.4.1",
     "@stencil/vue-output-target": "0.5.1",
     "chokidar-cli": "3.0.0",
@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@stencil/angular-output-target": "0.0.7",
-    "@stencil/core": "2.7.0"
+    "@stencil/core": "2.7.1"
   },
   "scripts": {
     "prebuild": "npm run clean",
