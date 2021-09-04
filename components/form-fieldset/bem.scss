@@ -3,12 +3,32 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-.utrecht-form-fieldset {
-  border-width: 0;
+@mixin reset-fieldset {
+  border: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  min-width: 0;
+  padding-block-end: 0;
+  padding-block-start: 0.01em;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
 
-.utrecht-form-field-textbox {
-  margin-block-end: 0.6rem;
+@mixin reset-legend {
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-form-fieldset {
+}
+
+.utrecht-form-fieldset--reset-fieldset {
+  @include reset-fieldset;
+}
+
+.utrecht-form-fieldset__legend--reset-legend {
+  @include reset-legend;
 }
 
 .utrecht-form-fieldset--distanced {
@@ -22,6 +42,7 @@
   font-size: var(--utrecht-form-fieldset-legend-font-size);
   font-weight: var(--utrecht-form-fieldset-legend-font-weight);
   line-height: var(--utrecht-form-fieldset-legend-line-height);
+  text-transform: var(--utrecht-form-fieldset-legend-text-transform);
 }
 
 .utrecht-form-fieldset__legend--distanced {
