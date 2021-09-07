@@ -1,0 +1,34 @@
+{
+  "utrecht": {
+    "form-toggle": {
+      "checked": {
+        "accent-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
+      "focus": {
+        "border-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "border-style": {
+          "css": {
+            "syntax": "*",
+            "inherits": true
+          }
+        },
+        "border-width": {
+          "css": {
+            "syntax": "<length>",
+            "inherits": true
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import clsx from "clsx";
+import "./bem.scss";
+
+export const defaultArgs = {
+  checked: false,
+  disabled: false,
+  focus: false,
+  hover: false,
+};
+
+export const Template = ({ checked = false, disabled = false, hover = false, focus = false }) =>
+  `<div class="${clsx(
+    "utrecht-form-toggle",
+    checked && "utrecht-form-toggle--checked",
+    !checked && "utrecht-form-toggle--not-checked",
+    disabled && "utrecht-form-toggle--disabled",
+    focus && "utrecht-form-toggle--focus",
+    hover && "utrecht-form-toggle--hover"
+  )}" role="checkbox" tabindex="0"${checked ? ' aria-checked="true"' : ""}${disabled ? ' aria-disabled="true"' : ""}>
+  <div class="${clsx(
+    "utrecht-form-toggle__track",
+    checked && "utrecht-form-toggle__track--checked",
+    !checked && "utrecht-form-toggle__track--not-checked",
+    disabled && "utrecht-form-toggle__track--disabled"
+  )}">
+    <div class="${clsx(
+      "utrecht-form-toggle__thumb",
+      checked && "utrecht-form-toggle__thumb--checked",
+      !checked && "utrecht-form-toggle__thumb--not-checked",
+      disabled && "utrecht-form-toggle__thumb--disabled"
+    )}"></div>
+  </div>
+  <div class="utrecht-form-toggle__label utrecht-form-toggle__label--checked"></div>
+  <div class="utrecht-form-toggle__label utrecht-form-toggle__label--not-checked"></div>
+</div>`;
+
+<Meta
+  title="CSS Component/Form toggle"
+  argTypes={{
+    checked: {
+      description: "Checked",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form toggle component
+
+Styling via the `.utrecht-form-toggle` class name:
+
+<Canvas>
+  <Story
+    name="Form toggle"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Form toggle" />
+
+## Checked form toggle
+
+<Canvas>
+  <Story
+    name="Checked form toggle"
+    args={{
+      ...defaultArgs,
+      checked: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled form toggle
+
+<Canvas>
+  <Story
+    name="Disabled form toggle"
+    args={{
+      ...defaultArgs,
+      checked: true,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled checked form toggle
+
+<Canvas>
+  <Story
+    name="Disabled checked form toggle"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
