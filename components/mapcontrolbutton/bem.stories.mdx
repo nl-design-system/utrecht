@@ -6,6 +6,7 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import clsx from "clsx";
+import iconSet from "../icon/icon-set.json";
 
 import "./bem.scss";
 
@@ -13,17 +14,17 @@ export const defaultArgs = {
   disabled: false,
   focus: false,
   hover: false,
+  label: "",
 };
 
-export const Template = ({ disabled = false, focus = false, hover = false }) =>
+export const Template = ({ disabled = false, focus = false, hover = false, label = "", icon = "" }) =>
   `<button class="${clsx("utrecht-mapcontrolbutton", {
     "utrecht-mapcontrolbutton--hover": hover,
     "utrecht-mapcontrolbutton--focus": focus,
     "utrecht-mapcontrolbutton--disabled": disabled,
   })}"${disabled ? ' aria-disabled="true"' : ""}>
-       <IconItem name="ZoomIn">
-    <utrecht-icon-zoomin></utrecht-icon-zoomin>
-  </IconItem>
+    ${icon ? `<${icon}></${icon}>` : ""}
+    ${label ? `<span class="utrecht-mapcontrolbutton__label">${label}</span>` : ""}
   </button>`;
 
 <Meta
@@ -40,6 +41,15 @@ export const Template = ({ disabled = false, focus = false, hover = false }) =>
     disabled: {
       description: "Disabled",
       control: "boolean",
+    },
+    icon: {
+      description: "Distance the element from adjacent content",
+      control: { type: "select" },
+      options: ["", ...iconSet],
+    },
+    label: {
+      description: "Label",
+      control: "text",
     },
   }}
   parameters={{
@@ -61,6 +71,7 @@ Styling via the `.utrecht-mapcontrolbutton` class name:
     name="Map Control Button"
     args={{
       ...defaultArgs,
+      icon: "utrecht-icon-zoomin",
     }}
   >
     {Template.bind({})}
@@ -74,7 +85,10 @@ Styling via the `.utrecht-mapcontrolbutton--hover` class name:
 <Canvas>
   <Story
     name="Map Control Button hover"
-    args={{ hover: true }}
+    args={{
+      hover: true,
+      icon: "utrecht-icon-zoomin",
+    }}
     parameters={{
       docs: {
         source: {
@@ -92,7 +106,10 @@ Styling via the `.utrecht-mapcontrolbutton--focus` class name:
 <Canvas>
   <Story
     name="Map Control Button focus"
-    args={{ focus: true }}
+    args={{
+      focus: true,
+      icon: "utrecht-icon-zoomin",
+    }}
     parameters={{
       docs: {
         source: {
@@ -110,7 +127,31 @@ Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
 <Canvas>
   <Story
     name="Map Control Button disabled"
-    args={{ disabled: true }}
+    args={{
+      disabled: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button with label
+
+<Canvas>
+  <Story
+    name="Button with label"
+    args={{
+      icon: "utrecht-icon-filter",
+      label: "Filter",
+    }}
     parameters={{
       docs: {
         source: {

@@ -5,6 +5,8 @@
 
 :host {
   display: inline-block;
+  height: var(--utrecht-icon-size);
+  width: var(--utrecht-icon-size);
 }
 
 svg {

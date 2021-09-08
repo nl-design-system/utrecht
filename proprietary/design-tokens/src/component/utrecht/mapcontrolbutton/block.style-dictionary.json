@@ -2,21 +2,21 @@
   "utrecht": {
     "mapcontrolbutton": {
       "background-color": { "value": "{utrecht.color.white.value}" },
-      "color": { "value": "{utrecht.color.grey.40.value}" },
-      "width": { "value": "{utrecht.space.block.2xl.value}" },
-      "height": { "value": "{utrecht.space.block.2xl.value}" },
       "border-color": { "value": "{utrecht.color.grey.40.value}" },
-      "border-width": { "value": "{utrecht.border-width.sm.value}" },
       "border-radius": { "value": "0" },
       "border-style": { "value": "{utrecht.border-style.solid.value}" },
-      "padding-inline-start": { "value": "{utrecht.space.inline.2xs.value}" },
-      "padding-inline-end": { "value": "{utrecht.space.inline.2xs.value}" },
-      "padding-block-start": { "value": "{utrecht.space.block.2xs.value}" },
-      "padding-block-end": { "value": "{utrecht.space.block.2xs.value}" },
-      "margin-inline-start": { "value": "0" },
-      "margin-inline-end": { "value": "0" },
+      "border-width": { "value": "{utrecht.border-width.sm.value}" },
+      "color": { "value": "{utrecht.color.grey.40.value}" },
+      "margin-block-end": { "value": "{utrecht.space.row.xs.value}" },
       "margin-block-start": { "value": "{utrecht.space.row.xs.value}" },
-      "margin-block-end": { "value": "{utrecht.space.row.xs.value}" }
+      "margin-inline-end": { "value": "0" },
+      "margin-inline-start": { "value": "0" },
+      "min-block-size": { "value": "{utrecht.space.block.2xl.value}" },
+      "min-inline-size": { "value": "{utrecht.space.block.2xl.value}" },
+      "padding-block-end": { "value": "{utrecht.space.block.2xs.value}" },
+      "padding-block-start": { "value": "{utrecht.space.block.2xs.value}" },
+      "padding-inline-end": { "value": "{utrecht.space.inline.2xs.value}" },
+      "padding-inline-start": { "value": "{utrecht.space.inline.2xs.value}" }
     }
   }
 }

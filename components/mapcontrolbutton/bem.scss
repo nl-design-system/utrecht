@@ -6,6 +6,7 @@
 @import "../focus/bem";
 
 .utrecht-mapcontrolbutton {
+  --utrecht-icon-size: var(--utrecht-mapcontrolbutton-min-block-size);
   align-items: center;
   background-color: var(--utrecht-mapcontrolbutton-background-color);
   border-color: var(--utrecht-mapcontrolbutton-border-color);
@@ -14,10 +15,11 @@
   border-width: var(--utrecht-mapcontrolbutton-border-width);
   color: var(--utrecht-mapcontrolbutton-color);
   display: flex;
-  flex-direction: column;
-  height: var(--utrecht-mapcontrolbutton-height);
+  flex-direction: row;
   justify-content: center;
-  width: var(--utrecht-mapcontrolbutton-width);
+  min-block-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  min-inline-size: var(--utrecht-mapcontrolbutton-min-inline-size);
+  padding: 0;
 }
 
 .utrecht-mapcontrolbutton .utrecht-mapcontrolbutton-polygon {
@@ -52,4 +54,10 @@
 
 .utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
   fill: var(--utrecht-mapcontrolbutton-color);
+}
+
+.utrecht-mapcontrolbutton__label {
+  display: block;
+  margin-inline-end: var(--utrecht-mapcontrolbutton-margin-inline-end);
+  margin-inline-start: var(--utrecht-mapcontrolbutton-margin-inline-start);
 }
