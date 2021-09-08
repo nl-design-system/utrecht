@@ -43,11 +43,11 @@ export class FormFieldTextbox {
             readOnly && "utrecht-textbox--readonly"
           )}
           type={type || "text"}
-          autoComplete={autoComplete}
+          autoComplete={autoComplete ? autoComplete : null}
           disabled={disabled}
-          min={min}
-          max={max}
-          pattern={pattern}
+          min={min ? min : null}
+          max={max ? max : null}
+          pattern={pattern ? pattern : null}
           placeholder={placeholder || null}
           readonly={readOnly}
           required={required}
