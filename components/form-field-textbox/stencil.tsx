@@ -39,7 +39,8 @@ export class FormFieldTextbox {
             "utrecht-textbox",
             disabled && "utrecht-textbox--disabled",
             invalid && "utrecht-textbox--invalid",
-            readOnly && "utrecht-textbox--readonly"
+            readOnly && "utrecht-textbox--readonly",
+            "utrecht-form-field-textbox__input"
           )}
           type={type || "text"}
           autoComplete={autoComplete}

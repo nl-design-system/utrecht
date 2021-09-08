@@ -3,5 +3,11 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "../../form-field/bem";
+
+utrecht-form-field-textbox {
+  @extend .utrecht-form-field--distanced;
+}
+
 .utrecht-verhuizen {
 }

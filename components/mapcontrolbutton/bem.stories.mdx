@@ -21,16 +21,10 @@ export const Template = ({ disabled = false, focus = false, hover = false }) =>
     "utrecht-mapcontrolbutton--focus": focus,
     "utrecht-mapcontrolbutton--disabled": disabled,
   })}"${disabled ? ' aria-disabled="true"' : ""}>
-      <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Zoom in</title>
-        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <polygon class="utrecht-mapcontrolbutton-polygon" id="Path" points="4 10 6 10 6 6 10 6 10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6">
-          </polygon>
-        </g>
-      </svg></button>`;
-
-<!--<a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a>
-<a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a>-->
+       <IconItem name="ZoomIn">
+    <utrecht-icon-zoomin></utrecht-icon-zoomin>
+  </IconItem>
+  </button>`;
 
 <Meta
   title="CSS Component/Map Control Button"

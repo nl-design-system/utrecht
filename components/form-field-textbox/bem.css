@@ -6,3 +6,17 @@
 .utrecht-form-field-textbox {
   font-family: var(--utrecht-document-font-family, inherit);
 }
+
+.utrecht-form-field-textbox {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: auto auto;
+}
+
+.utrecht-form-field-textbox input {
+  grid-column: 2 / 3;
+}
+
+.utrecht-form-field-textbox label {
+  grid-column: 1 / 2;
+}
