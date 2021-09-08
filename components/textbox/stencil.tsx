@@ -35,6 +35,7 @@ export class Textbox {
       <input
         class={clsx(
           "utrecht-textbox",
+          "utrecht-textbox--html-input",
           disabled && "utrecht-textbox--disabled",
           invalid && "utrecht-textbox--invalid",
           readOnly && "utrecht-textbox--readonly"
