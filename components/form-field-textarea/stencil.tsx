@@ -32,6 +32,7 @@ export class FormFieldTextarea {
           id="input"
           class={clsx(
             "utrecht-textarea",
+            "utrecht-textarea--html-textarea",
             disabled && "utrecht-textarea--disabled",
             invalid && "utrecht-textarea--invalid",
             readOnly && "utrecht-textarea--readonly"

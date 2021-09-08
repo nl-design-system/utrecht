@@ -37,6 +37,7 @@ export class FormFieldTextbox {
           id="input"
           class={clsx(
             "utrecht-textbox",
+            "utrecht-textbox--html-input",
             disabled && "utrecht-textbox--disabled",
             invalid && "utrecht-textbox--invalid",
             readOnly && "utrecht-textbox--readonly"
