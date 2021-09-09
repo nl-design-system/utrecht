@@ -3,6 +3,23 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@mixin invisible-but-focusable {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+
 .utrecht-form-toggle {
   align-items: center;
   border-color: var(--utrecht-form-toggle-border-color, currentColor);
@@ -17,6 +34,7 @@
   padding-inline-end: var(--utrecht-form-toggle-padding-inline-end);
   padding-inline-start: var(--utrecht-form-toggle-padding-inline-start);
   position: relative;
+  user-select: none;
   width: var(--utrecht-form-toggle-width, 6em);
 }
 
@@ -78,4 +96,39 @@
 .utrecht-form-toggle__track--disabled {
   background-color: var(--utrecht-form-toggle-background-disabled-background-color, #ddd);
   color: var(--utrecht-form-toggle-disabled-color, black);
+}
+
+.utrecht-form-toggle--html-checkbox {
+  .utrecht-form-toggle__checkbox {
+    @include invisible-but-focusable;
+
+    &:focus ~ .utrecht-form-toggle__track {
+      outline-color: var(
+        --utrecht-form-toggle-focus-border-color,
+        var(--utrecht-form-toggle-border-color, currentColor)
+      );
+      outline-style: var(--utrecht-form-toggle-focus-border-style, var(--utrecht-form-toggle-border-style, solid));
+      outline-width: var(--utrecht-form-toggle-focus-border-width, var(--utrecht-form-toggle-border-width, 1px));
+    }
+
+    &:checked ~ .utrecht-form-toggle__track {
+      @extend .utrecht-form-toggle__track--checked;
+    }
+
+    &:checked ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+      @extend .utrecht-form-toggle__thumb--checked;
+    }
+
+    &:not(:checked) ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+      @extend .utrecht-form-toggle__thumb--not-checked;
+    }
+
+    &:disabled ~ .utrecht-form-toggle__track {
+      @extend .utrecht-form-toggle__track--disabled;
+    }
+
+    &:disabled ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+      @extend .utrecht-form-toggle__thumb--disabled;
+    }
+  }
 }
