@@ -26,6 +26,6 @@
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",
     "watch": "npm-run-all --parallel watch:**",
-    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.style-dictionary.json' '../../components/**/*.style-dictionary.json'"
+    "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'npm run build' 'src/**/*.tokens.json' '../../components/**/*.tokens.json'"
   }
 }

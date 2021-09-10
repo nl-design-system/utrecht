@@ -8,7 +8,7 @@ The design tokens in this package serve as single source of truth for the look a
 
 ## List of all design tokens
 
-To find out what design tokens are available, browser through the `.style-dictionary.json` files in the `src/` directory.
+To find out what design tokens are available, browser through the `.tokens.json` files in the `src/` directory.
 
 We currently don't have any additional documentation for every specific design token.
 
@@ -122,7 +122,7 @@ Now the CSS variables will be available and you can use of all the design tokens
 
 ## Contributing
 
-The design tokens are stored in JSON files so we can use the design token translation tool [Style Dictionary](https://amzn.github.io/style-dictionary/) to make them available in many code languages. We use `.style-dictionary.json` as file extension for our design token definitions, to tell them apart from regular and unrelated `.json` files.
+The design tokens are stored in JSON files so we can use the design token translation tool [Style Dictionary](https://amzn.github.io/style-dictionary/) to make them available in many code languages. We use `.tokens.json` as file extension for our design token definitions, to tell them apart from regular and unrelated `.json` files.
 
 Style Dictionary [only recognizes one nesting level per file](https://github.com/amzn/style-dictionary/issues/366), so be careful to not to mix nesting levels in one file and separate them into multiple files.
 
@@ -143,7 +143,7 @@ The following example doesn't work, because the CSS output would only be `--utre
 
 Organize the design tokens in multiple files instead:
 
-`block.style-dictionary.json`:
+`block.tokens.json`:
 
 ```json
 {
@@ -158,7 +158,7 @@ Organize the design tokens in multiple files instead:
 }
 ```
 
-`modifier.style-dictionary.json`:
+`modifier.tokens.json`:
 
 ```json
 {

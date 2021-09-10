@@ -10,7 +10,7 @@ module.exports = {
     ...cssPropertyFormat,
     ...jsonListFormat,
   },
-  source: ['../../components/**/*.style-dictionary.json', './src/**/*.style-dictionary.json'],
+  source: ['../../components/**/*.tokens.json', './src/**/*.tokens.json'],
   ...config,
   platforms: {
     ...config.platforms,
