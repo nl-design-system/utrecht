@@ -13,24 +13,19 @@ export const defaultArgs = {
   disabled: false,
   focus: false,
   hover: false,
+  icon: null,
+  label: "",
 };
 
-export const Template = ({ disabled = false, focus = false, hover = false }) =>
-  `<button class="${clsx("utrecht-mapcontrolbutton", {
+export const Template = ({ disabled = false, focus = false, hover = false, label = "", icon = null }) =>
+  `<button type="button" class="${clsx("utrecht-mapcontrolbutton", {
     "utrecht-mapcontrolbutton--hover": hover,
     "utrecht-mapcontrolbutton--focus": focus,
     "utrecht-mapcontrolbutton--disabled": disabled,
   })}"${disabled ? ' aria-disabled="true"' : ""}>
-      <svg width="10px" height="10px" viewBox="0 0 10 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <title>Zoom in</title>
-        <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <polygon class="utrecht-mapcontrolbutton-polygon" id="Path" points="4 10 6 10 6 6 10 6 10 4 6 4 6 0 4 0 4 4 0 4 0 6 4 6">
-          </polygon>
-        </g>
-      </svg></button>`;
-
-<!--<a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in">+</a>
-<a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out">−</a>-->
+    ${icon ? `<${icon} class="utrecht-mapcontrolbutton__icon"></${icon}>` : ""}
+    ${label ? `<span class="utrecht-mapcontrolbutton__label">${label}</span>` : ""}
+  </button>`;
 
 <Meta
   title="CSS Component/Map Control Button"
@@ -46,6 +41,15 @@ export const Template = ({ disabled = false, focus = false, hover = false }) =>
     disabled: {
       description: "Disabled",
       control: "boolean",
+    },
+    icon: {
+      description: "Distance the element from adjacent content",
+      control: { type: "select" },
+      options: ["", "utrecht-icon-zoomin", "utrecht-icon-zoomout"],
+    },
+    label: {
+      description: "Label",
+      control: "text",
     },
   }}
   parameters={{
@@ -67,6 +71,7 @@ Styling via the `.utrecht-mapcontrolbutton` class name:
     name="Map Control Button"
     args={{
       ...defaultArgs,
+      icon: "utrecht-icon-zoomin",
     }}
   >
     {Template.bind({})}
@@ -80,7 +85,10 @@ Styling via the `.utrecht-mapcontrolbutton--hover` class name:
 <Canvas>
   <Story
     name="Map Control Button hover"
-    args={{ hover: true }}
+    args={{
+      hover: true,
+      icon: "utrecht-icon-zoomin",
+    }}
     parameters={{
       docs: {
         source: {
@@ -98,7 +106,10 @@ Styling via the `.utrecht-mapcontrolbutton--focus` class name:
 <Canvas>
   <Story
     name="Map Control Button focus"
-    args={{ focus: true }}
+    args={{
+      focus: true,
+      icon: "utrecht-icon-zoomin",
+    }}
     parameters={{
       docs: {
         source: {
@@ -116,7 +127,31 @@ Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
 <Canvas>
   <Story
     name="Map Control Button disabled"
-    args={{ disabled: true }}
+    args={{
+      disabled: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button with label
+
+<Canvas>
+  <Story
+    name="Button with label"
+    args={{
+      icon: "utrecht-icon-filter",
+      label: "Filter",
+    }}
     parameters={{
       docs: {
         source: {

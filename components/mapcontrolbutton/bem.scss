@@ -6,6 +6,8 @@
 @import "../focus/bem";
 
 .utrecht-mapcontrolbutton {
+  --utrecht-icon-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-color);
   align-items: center;
   background-color: var(--utrecht-mapcontrolbutton-background-color);
   border-color: var(--utrecht-mapcontrolbutton-border-color);
@@ -14,34 +16,28 @@
   border-width: var(--utrecht-mapcontrolbutton-border-width);
   color: var(--utrecht-mapcontrolbutton-color);
   display: flex;
-  flex-direction: column;
-  height: var(--utrecht-mapcontrolbutton-height);
+  flex-direction: row;
   justify-content: center;
-  width: var(--utrecht-mapcontrolbutton-width);
-}
-
-.utrecht-mapcontrolbutton .utrecht-mapcontrolbutton-polygon {
-  fill: var(--utrecht-mapcontrolbutton-color);
+  min-block-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  min-inline-size: var(--utrecht-mapcontrolbutton-min-inline-size);
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }
 
 .utrecht-mapcontrolbutton:disabled,
 .utrecht-mapcontrolbutton--disabled {
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-disabled-color, var(--utrecht-mapcontrolbutton-color));
   background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
   border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
   color: var(--utrecht-mapcontrolbutton-disabled-color);
 }
 
-.utrecht-mapcontrolbutton--disabled .utrecht-mapcontrolbutton-polygon {
-  fill: var(--utrecht-mapcontrolbutton-disabled-color);
-}
-
 .utrecht-mapcontrolbutton--focus,
 .utrecht-mapcontrolbutton:not(.utrecht-mapcontrolbutton--disabled):focus {
   @include utrecht-focus;
-}
-
-.utrecht-mapcontrolbutton--focus .utrecht-mapcontrolbutton-polygon {
-  fill: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
 }
 
 .utrecht-mapcontrolbutton--hover:not(:disabled),
@@ -50,6 +46,8 @@
   color: var(--utrecht-mapcontrolbutton-color);
 }
 
-.utrecht-mapcontrolbutton--hover .utrecht-mapcontrolbutton-polygon {
-  fill: var(--utrecht-mapcontrolbutton-color);
+.utrecht-mapcontrolbutton__label {
+  display: block;
+  padding-inline-end: var(--utrecht-mapcontrolbutton-label-margin-inline-end);
+  padding-inline-start: var(--utrecht-mapcontrolbutton-label-margin-inline-start);
 }
