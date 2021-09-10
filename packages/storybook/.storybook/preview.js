@@ -1,7 +1,7 @@
 import '@utrecht/design-tokens/dist/theme/index.css';
 import '@utrecht/design-tokens/dist/property.css';
 import '@utrecht/design-tokens/src/custom.scss';
-import '../../../components/document/bem.css';
+import '../../../components/document/bem.scss';
 
 import React from 'react';
 import { addDecorator, addParameters, storiesOf } from '@storybook/html';
