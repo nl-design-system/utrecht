@@ -8,3 +8,7 @@
 :host {
   display: inline;
 }
+
+:host([hidden]) {
+  display: none !important;
+}

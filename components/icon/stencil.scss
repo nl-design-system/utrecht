@@ -7,6 +7,10 @@
   display: inline-block;
 }
 
+:host([hidden]) {
+  display: none !important;
+}
+
 svg {
   color: var(--utrecht-icon-color, var(--utrecht-document-color, currentColor));
   height: var(--utrecht-icon-size, 100%);
