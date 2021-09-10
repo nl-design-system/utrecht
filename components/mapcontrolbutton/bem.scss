@@ -57,7 +57,8 @@
 }
 
 .utrecht-mapcontrolbutton__label {
+  color: var(--utrecht-mapcontrolbutton-color);
   display: block;
-  margin-inline-end: var(--utrecht-space-inline-xs) /*var(--utrecht-mapcontrolbutton-margin-inline-end)*/;
-  margin-inline-start: var(--utrecht-space-inline-xs) /*var(--utrecht-mapcontrolbutton-margin-inline-start)*/;
+  margin-inline-end: var(--utrecht-mapcontrolbutton-margin-inline-end);
+  margin-inline-start: var(--utrecht-mapcontrolbutton-margin-inline-start);
 }
