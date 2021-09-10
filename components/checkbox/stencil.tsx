@@ -8,7 +8,7 @@ import clsx from "clsx";
 
 @Component({
   tag: "utrecht-checkbox",
-  styleUrl: "bem.css",
+  styleUrl: "stencil.scss",
   shadow: true,
 })
 export class Checkbox {
