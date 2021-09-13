@@ -4,16 +4,10 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-
+import { FormFieldCheckbox } from "./bem";
 import "./bem.scss";
 import "../checkbox/bem.scss";
 import "../form-label/bem.scss";
-
-export const Template = ({ label = "" }) =>
-  `<div class="utrecht-form-field utrecht-form-field--checkbox utrecht-form-field--distanced">
-    <input type="checkbox" class="utrecht-form-field__input utrecht-checkbox" id="id-ce0239e2">
-  <label class="utrecht-form-field__label utrecht-form-field__label--checkbox utrecht-form-label utrecht-form-label--checkbox" for="id-ce0239e2">${label}</label>
-</div>`;
 
 <Meta
   title="CSS Component/Form field with checkbox"
@@ -25,7 +19,7 @@ export const Template = ({ label = "" }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => FormFieldCheckbox(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -42,7 +36,7 @@ export const Template = ({ label = "" }) =>
       label: "I agree",
     }}
   >
-    {Template.bind({})}
+    {FormFieldCheckbox.bind({})}
   </Story>
 </Canvas>
 

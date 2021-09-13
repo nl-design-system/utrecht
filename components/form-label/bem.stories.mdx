@@ -4,24 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-
-export const defaultArgs = {
-  checked: false,
-  disabled: false,
-  textContent: "",
-  type: null,
-};
-
-export const Template = ({ checked = false, disabled = false, textContent = "", type = null }) =>
-  `<span class="${clsx(
-    "utrecht-form-label",
-    type === "checkbox" && "utrecht-form-label--checkbox",
-    checked && "utrecht-form-label--checked",
-    disabled && "utrecht-form-label--disabled",
-    type === "radio" && "utrecht-form-label--radio"
-  )}">${textContent}</span>`;
+import { FormLabel } from "./bem";
 
 <Meta
   title="CSS Component/Form label"
@@ -38,7 +22,7 @@ export const Template = ({ checked = false, disabled = false, textContent = "", 
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => FormLabel(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -58,7 +42,7 @@ Styling via the `.utrecht-form-label` class name:
       textContent: "Username",
     }}
   >
-    {Template.bind({})}
+    {FormLabel.bind({})}
   </Story>
 </Canvas>
 
@@ -76,7 +60,7 @@ Styling via the `.utrecht-form-label--disabled` class name:
       textContent: "Username",
     }}
   >
-    {Template.bind({})}
+    {FormLabel.bind({})}
   </Story>
 </Canvas>
 
@@ -92,7 +76,7 @@ Styling via the `.utrecht-form-label--checkbox` class name:
       type: "checkbox",
     }}
   >
-    {Template.bind({})}
+    {FormLabel.bind({})}
   </Story>
 </Canvas>
 
@@ -109,7 +93,7 @@ Styling via the `.utrecht-form-label--checked` class name:
       type: "checkbox",
     }}
   >
-    {Template.bind({})}
+    {FormLabel.bind({})}
   </Story>
 </Canvas>
 
@@ -125,7 +109,7 @@ Styling via the `.utrecht-form-label--radio` class name:
       type: "radio",
     }}
   >
-    {Template.bind({})}
+    {FormLabel.bind({})}
   </Story>
 </Canvas>
 
@@ -142,6 +126,6 @@ Styling via the `.utrecht-form-label--radio` and `.utrecht-form-label--checked` 
       type: "radio",
     }}
   >
-    {Template.bind({})}
+    {FormLabel.bind({})}
   </Story>
 </Canvas>

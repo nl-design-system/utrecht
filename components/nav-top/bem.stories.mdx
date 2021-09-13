@@ -1,27 +1,11 @@
 <!--
 @license EUPL-1.2
-Copyright (c) 2021 A Herring
+Copyright (c) 2021 Gemeente Utrecht
 -->
 
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-export const Template = ({ items }) => `<div class="utrecht-navhtml">
-  <nav class="topnav">
-    <ul class="utrecht-topnav__list">${items.map(
-      ({ href, title, current, focus }) => `
-      <li class="utrecht-topnav__item">
-        <a class="${clsx(
-          "utrecht-topnav__link",
-          current && "utrecht-topnav__link--current",
-          focus && "utrecht-topnav__link--focus"
-        )}" href="${href}">${title}</a>
-        </li>`
-    )}
-    </ul>
-  </nav>
-</div>
-`;
+import { TopNav } from "./bem";
 
 <Meta
   title="CSS Component/Top Nav"
@@ -36,7 +20,7 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => TopNav(args),
     },
     status: "IN DEVELOPMENT",
   }}
@@ -56,7 +40,7 @@ export const Template = ({ items }) => `<div class="utrecht-navhtml">
       ],
     }}
   >
-    {Template.bind({})}
+    {TopNav.bind({})}
   </Story>
 </Canvas>
 

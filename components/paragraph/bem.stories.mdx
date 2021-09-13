@@ -4,16 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-
-export const defaultArgs = {
-  lead: false,
-  textContent: "",
-};
-
-export const Template = ({ textContent = "", lead = false }) =>
-  `<p class="${clsx("utrecht-paragraph", { "utrecht-paragraph--lead": lead })}">${textContent}</p>`;
+import { defaultArgs, Paragraph } from "./bem";
 
 export const TemplateMulti = ({ textContent = "" }) =>
   `<p class="utrecht-paragraph utrecht-paragraph--lead">${textContent}</p>
@@ -34,7 +26,7 @@ export const TemplateMulti = ({ textContent = "" }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Paragraph(args),
     },
     status: {
       type: "BETA",
@@ -55,7 +47,7 @@ Styling via the `.utrecht-paragraph` class name:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     }}
   >
-    {Template.bind({})}
+    {Paragraph.bind({})}
   </Story>
 </Canvas>
 
@@ -74,7 +66,7 @@ Styling via the `.utrecht-paragraph--lead` class name:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     }}
   >
-    {Template.bind({})}
+    {Paragraph.bind({})}
   </Story>
 </Canvas>
 

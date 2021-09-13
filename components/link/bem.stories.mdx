@@ -5,40 +5,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
-
+import { defaultArgs, Link } from "./bem";
 import "./bem.scss";
-
-export const defaultArgs = {
-  active: false,
-  external: false,
-  hover: false,
-  focus: false,
-  href: null,
-  focus: false,
-  telephone: false,
-  textContent: "...",
-  visited: false,
-};
-
-export const Template = ({
-  active = false,
-  external = false,
-  focus = false,
-  hover = false,
-  href = null,
-  telephone = false,
-  textContent = "",
-  visited = false,
-}) =>
-  `<a href="${href === null ? "https://example.com/" : href}" class="${clsx("utrecht-link", {
-    "utrecht-link--active": active,
-    "utrecht-link--external": external,
-    "utrecht-link--focus": focus,
-    "utrecht-link--hover": hover,
-    "utrecht-link--telephone": telephone,
-    "utrecht-link--visited": visited,
-  })}"${external ? ' rel="external noopener noreferrer"' : ""}>${textContent}</a>`;
 
 <Meta
   title="CSS Component/Link"
@@ -84,7 +52,7 @@ export const Template = ({
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Link(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -105,7 +73,7 @@ Styling via the `.utrecht-link` class name:
       textContent: "Read more...",
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 
@@ -129,7 +97,7 @@ Styling via the `.utrecht-link--hover` class name:
       textContent: "Read more...",
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 
@@ -145,7 +113,7 @@ Styling via the `.utrecht-link--focus` class name:
       textContent: "Read more...",
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 
@@ -161,7 +129,7 @@ Styling via the `.utrecht-link--active` class name:
       textContent: "Read more...",
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 
@@ -177,7 +145,7 @@ Styling via the `.utrecht-link--visited` class name:
       visited: true,
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 
@@ -194,7 +162,7 @@ Styling via the `.utrecht-link--telephone` class name. Avoid line wrap within th
       telephone: true,
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 
@@ -211,7 +179,7 @@ Styling via the `.utrecht-link--external` class name.
       textContent: "Read more...",
     }}
   >
-    {Template.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 

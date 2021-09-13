@@ -5,26 +5,7 @@ Copyright (c) 2021 Robbert Broersma
 
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
 import "./bem.scss";
-import clsx from "clsx";
-
-export const Template = ({ distanced = false }) =>
-  `<ul class="${clsx("utrecht-unordered-list", distanced && "utrecht-unordered-list--distanced")}">
-  <li class="utrecht-unordered-list__item">Lorem</li>
-  <li class="utrecht-unordered-list__item">Ipsum</li>
-  <li class="utrecht-unordered-list__item">Dolor</li>
-</ul>`;
-
-export const TemplateNested = ({ distanced = false }) =>
-  `<ul class="${clsx("utrecht-unordered-list", distanced && "utrecht-unordered-list--distanced")}">
-  <li class="utrecht-unordered-list__item">Lorem</li>
-  <li class="utrecht-unordered-list__item">Ipsum
-    <ul class="utrecht-unordered-list utrecht-unordered-list--nested">
-      <li class="utrecht-unordered-list__item">Lorem</li>
-      <li class="utrecht-unordered-list__item">Ipsum</li>
-    </ul>
-  </li>
-  <li class="utrecht-unordered-list__item">Dolor</li>
-</ul>`;
+import { UnorderedList, UnorderedListNested } from "./bem";
 
 <Meta
   title="CSS Component/Unordered List"
@@ -36,7 +17,7 @@ export const TemplateNested = ({ distanced = false }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => UnorderedList(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -51,7 +32,7 @@ export const TemplateNested = ({ distanced = false }) =>
       distanced: true,
     }}
   >
-    {Template.bind({})}
+    {UnorderedList.bind({})}
   </Story>
 </Canvas>
 
@@ -60,5 +41,14 @@ export const TemplateNested = ({ distanced = false }) =>
 ## Nested list
 
 <Canvas>
-  <Story name="Nested Ordered list">{TemplateNested.bind({})}</Story>
+  <Story
+    name="Nested Ordered list"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => UnorderedListNested(args),
+      },
+    }}
+  >
+    {UnorderedListNested.bind({})}
+  </Story>
 </Canvas>

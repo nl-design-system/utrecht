@@ -5,12 +5,7 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.scss";
-
-export const Template = ({ content = "", legend = "" }) =>
-  `<div class="utrecht-form-fieldset">
-  ${legend ? `<div class="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">${legend}</div>` : ""}
-  ${content}
-</div>`;
+import { FormFieldset } from "./bem";
 
 <Meta
   title="CSS Component/Form fieldset"
@@ -26,7 +21,7 @@ export const Template = ({ content = "", legend = "" }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => FormFieldset(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -46,7 +41,7 @@ Styling via the `.utrecht-form-fieldset` and `.utrecht-form-fieldset__legend` cl
       legend: "Fieldset legend",
     }}
   >
-    {Template.bind({})}
+    {FormFieldset.bind({})}
   </Story>
 </Canvas>
 

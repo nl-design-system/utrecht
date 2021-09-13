@@ -4,13 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-import { Template as Link } from "../link/bem.stories.mdx";
-
-export const Template = ({ links = [] }) => `<ul class="utrecht-link-list utrecht-link-list--html-ul">
-  ${links.map((link) => `<li class="utrecht-link-list__item">${Link(link)}</li>`).join("\n  ")}
-</ul>`;
+import { LinkList } from "./bem";
 
 <Meta
   title="CSS Component/Link List"
@@ -25,7 +20,7 @@ export const Template = ({ links = [] }) => `<ul class="utrecht-link-list utrech
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => LinkList(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -48,7 +43,7 @@ The CSS code is currently very specific to Utrecht, and has no white label desig
       ],
     }}
   >
-    {Template.bind({})}
+    {LinkList.bind({})}
   </Story>
 </Canvas>
 
