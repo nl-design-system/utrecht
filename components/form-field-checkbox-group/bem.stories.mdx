@@ -8,33 +8,7 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.scss";
 import "../checkbox/bem.scss";
 import "../form-label/bem.scss";
-export const Template = ({
-  label,
-  options,
-  groupLabelId = "group-label",
-}) => `<div class="utrecht-form-field-checkbox-group utrecht-form-field-checkbox-group--distanced" role="group" aria-labelledby="${groupLabelId}">
-  <div class="utrecht-form-field-checkbox-group__label utrecht-form-label" id="${groupLabelId}">${label}</div>
-  ${options
-    .map((option, index) => ({
-      ...option,
-      id: options.id || `option-${index}`,
-    }))
-    .map(
-      ({
-        id,
-        label,
-        name,
-        value,
-        checked,
-      }) => `<div class="utrecht-form-field utrecht-form-field--checkbox utrecht-form-field--distanced">
-    <input type="checkbox" class="utrecht-form-field__input utrecht-checkbox" id="${id}" value="${value}"${
-        checked ? " checked" : ""
-      } name="${name}">
-    <label class="utrecht-form-field__label utrecht-form-field__label--checkbox utrecht-form-label utrecht-form-label--checkbox" for="${id}">${label}</label>
-  </div>`
-    )
-    .join("\n")}
-  </div>`;
+import { FormFieldCheckboxGroup } from "./bem";
 
 <Meta
   title="CSS Component/Form field with checkbox group"
@@ -53,7 +27,7 @@ export const Template = ({
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => FormFieldCheckboxGroup(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -88,7 +62,7 @@ export const Template = ({
       ],
     }}
   >
-    {Template.bind({})}
+    {FormFieldCheckboxGroup.bind({})}
   </Story>
 </Canvas>
 

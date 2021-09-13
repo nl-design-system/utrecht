@@ -4,11 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-
+import { BadgeCounter } from "./bem";
 import "./bem.scss";
-
-export const Template = ({ textContent = "" }) =>
-  `<span class="utrecht-badge-counter"><span class="utrecht-badge-counter__text">${textContent}</span></span>`;
 
 <Meta
   title="CSS Component/Badge/Counter Badge"
@@ -28,7 +25,7 @@ export const Template = ({ textContent = "" }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => BadgeCounter(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -47,7 +44,7 @@ Styling via the `.utrecht-badge-counter` class name:
       textContent: "42",
     }}
   >
-    {Template.bind({})}
+    {BadgeCounter.bind({})}
   </Story>
 </Canvas>
 

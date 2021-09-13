@@ -4,10 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-
+import { BadgeData } from "./bem.js";
 import "./bem.scss";
-
-export const Template = ({ textContent = "" }) => `<div class="utrecht-badge-data">${textContent}</div>`;
 
 <Meta
   title="CSS Component/Badge/Data Badge"
@@ -19,7 +17,7 @@ export const Template = ({ textContent = "" }) => `<div class="utrecht-badge-dat
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => BadgeData(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -38,7 +36,7 @@ Styling via the `.utrecht-badge-data` class name:
       textContent: "Festivals",
     }}
   >
-    {Template.bind({})}
+    {BadgeData.bind({})}
   </Story>
 </Canvas>
 

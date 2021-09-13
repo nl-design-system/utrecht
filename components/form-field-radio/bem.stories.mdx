@@ -7,11 +7,7 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./bem.scss";
 import "../radio-button/bem.scss";
 import "../form-label/bem.scss";
-export const Template = ({ label = "" }) =>
-  `<div class="utrecht-form-field-radio utrecht-form-field-radio--distanced">
-    <input type="radio" class="utrecht-form-field-radio__input utrecht-radio-button" id="id-ce0239e2">
-  <label class="utrecht-form-field-radio__label utrecht-form-label utrecht-form-label--radio" for="id-ce0239e2">${label}</label>
-</div>`;
+import { FormFieldRadio } from "./bem";
 
 <Meta
   title="CSS Component/Form field with radio button"
@@ -23,7 +19,7 @@ export const Template = ({ label = "" }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => FormFieldRadio(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -40,7 +36,7 @@ export const Template = ({ label = "" }) =>
       label: "I agree",
     }}
   >
-    {Template.bind({})}
+    {FormFieldRadio.bind({})}
   </Story>
 </Canvas>
 

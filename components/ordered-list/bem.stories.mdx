@@ -4,15 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-
-export const Template = ({ distanced = false }) =>
-  `<ol class="${clsx("utrecht-ordered-list", distanced && "utrecht-ordered-list--distanced")}">
-  <li class="utrecht-ordered-list__item">Lorem</li>
-  <li class="utrecht-ordered-list__item">Ipsum</li>
-  <li class="utrecht-ordered-list__item">Dolor</li>
-</ol>`;
+import { OrderedList } from "./bem";
 
 <Meta
   title="CSS Component/Ordered List"
@@ -24,7 +17,7 @@ export const Template = ({ distanced = false }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => OrderedList(args),
     },
     status: "IN DEVELOPMENT",
   }}
@@ -39,7 +32,7 @@ export const Template = ({ distanced = false }) =>
       distanced: true,
     }}
   >
-    {Template.bind({})}
+    {OrderedList.bind({})}
   </Story>
 </Canvas>
 

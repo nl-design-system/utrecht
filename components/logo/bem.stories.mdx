@@ -1,0 +1,29 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Logo } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Logo"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Logo(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Logo Gemeente Utrecht
+
+<Canvas>
+  <Story name="Logo">{Logo.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Logo" />

@@ -4,12 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-export const Template = ({ textContent = "", distanced = false }) =>
-  `<h3 class="${clsx("utrecht-heading-3", {
-    "utrecht-heading-3--distanced": distanced,
-  })}">${textContent}</h3>`;
+import { Heading3 } from "./bem";
 
 <Meta
   title="CSS Component/Heading/Heading 3"
@@ -25,7 +21,7 @@ export const Template = ({ textContent = "", distanced = false }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Heading3(args),
     },
     status: {
       type: "BETA",
@@ -45,7 +41,7 @@ Styling via `utrecht-heading-3` class name:
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
-    {Template.bind({})}
+    {Heading3.bind({})}
   </Story>
 </Canvas>
 

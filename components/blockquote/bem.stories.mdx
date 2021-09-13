@@ -4,26 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
 import "./bem.scss";
-
-export const defaultArgs = {
-  textContent: "",
-  attribution: null,
-  distanced: false,
-};
-
-export const Template = ({ textContent = "", attribution = null, distanced = false }) =>
-  `<blockquote class="${clsx("utrecht-blockquote", { "utrecht-blockquote--distanced": distanced })}">
-  <div class="utrecht-blockquote__content">
-    <p>${textContent}</p>${
-    attribution
-      ? `
-    <div class="utrecht-blockquote__attribution">${attribution}</div>`
-      : ""
-  }
-  </div>
-</blockquote>`;
+import { defaultArgs, Blockquote } from "./bem.js";
 
 <Meta
   title="CSS Component/Blockquote"
@@ -43,7 +25,7 @@ export const Template = ({ textContent = "", attribution = null, distanced = fal
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Blockquote(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -64,7 +46,7 @@ Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class n
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
-    {Template.bind({})}
+    {Blockquote.bind({})}
   </Story>
 </Canvas>
 
@@ -83,6 +65,6 @@ Styling with an additional `.utrecht-blockquote__attribution` class name:
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
-    {Template.bind({})}
+    {Blockquote.bind({})}
   </Story>
 </Canvas>

@@ -4,11 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-
+import { BadgeStatus } from "./bem.js";
 import "./bem.scss";
-
-export const Template = ({ status = "", textContent = "" }) =>
-  `<div class="utrecht-badge-status utrecht-badge-status--${status ? status : "neutral"}">${textContent}</div>`;
 
 <Meta
   title="CSS Component/Badge/Status Badge"
@@ -25,7 +22,7 @@ export const Template = ({ status = "", textContent = "" }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => BadgeStatus(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -45,7 +42,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "neutral",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -61,7 +58,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "danger",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -75,7 +72,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "warning",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -89,7 +86,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "safe",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -103,7 +100,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "invalid",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -117,7 +114,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "valid",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -131,7 +128,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "error",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -145,7 +142,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "success",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -159,7 +156,7 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "inactive",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>
 
@@ -173,6 +170,6 @@ export const Template = ({ status = "", textContent = "" }) =>
       textContent: "active",
     }}
   >
-    {Template.bind({})}
+    {BadgeStatus.bind({})}
   </Story>
 </Canvas>

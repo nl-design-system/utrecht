@@ -1,8 +1,9 @@
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
 
-import "./bem.scss";
-
-export const Template = () => `
+export const Logo = () => `
 <svg version="1.1" class="utrecht-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 110.57 58.97">
   <g>
     <path
@@ -30,24 +31,3 @@ export const Template = () => `
   </g>
 </svg>
 `;
-
-<Meta
-  title="CSS Component/Logo"
-  argTypes={{}}
-  parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Template(args),
-    },
-    status: {
-      type: "WORK IN PROGRESS",
-    },
-  }}
-/>
-
-# Logo Gemeente Utrecht
-
-<Canvas>
-  <Story name="Logo">{Template.bind({})}</Story>
-</Canvas>
-
-<ArgsTable story="Logo" />

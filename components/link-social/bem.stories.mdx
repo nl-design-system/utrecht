@@ -1,18 +1,12 @@
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import clsx from "clsx";
-import "./bem.scss";
-export const Template = ({ href, icon, distanced }) => `<a href="${href}" class="${clsx(
-  "utrecht-link-social",
-  distanced && "utrecht-link-social--distanced"
-)}">
-  <${icon} class="utrecht-link-social__icon"></${icon}>
-</a>`;
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Gemeente Utrecht
+Copyright (c) 2021 Robbert Broersma
+-->
 
-export const ListTemplate = ({ links }) =>
-  links
-    .map((link) => ({ ...link, distanced: true }))
-    .map(Template)
-    .join("");
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import "./bem.scss";
+import { SocialMediaLink, SocialMediaLinkList } from "./bem";
 
 <Meta
   title="CSS Component/Link to Social Media"
@@ -39,7 +33,7 @@ export const ListTemplate = ({ links }) =>
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => SocialMediaLink(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -58,7 +52,7 @@ export const ListTemplate = ({ links }) =>
       icon: "utrecht-icon-facebook",
     }}
   >
-    {Template.bind({})}
+    {SocialMediaLink.bind({})}
   </Story>
 </Canvas>
 
@@ -93,7 +87,12 @@ export const ListTemplate = ({ links }) =>
         },
       ],
     }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => SocialMediaLinkList(args),
+      },
+    }}
   >
-    {ListTemplate.bind({})}
+    {SocialMediaLinkList.bind({})}
   </Story>
 </Canvas>
