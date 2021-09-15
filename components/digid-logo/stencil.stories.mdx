@@ -1,0 +1,26 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const DigidLogo = () => `<utrecht-digid-logo></utrecht-digid-logo>`;
+
+<Meta
+  title="Web Component/DigiD Logo"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => DigidLogo(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# DigiD Logo
+
+<Canvas>
+  <Story name="DigiD Logo">{DigidLogo.bind({})}</Story>
+</Canvas>
