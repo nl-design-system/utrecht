@@ -37,7 +37,7 @@ import { defaultArgs, exampleOptions, Select } from "./bem";
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Select(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -57,7 +57,7 @@ Styling via the `<select>` element:
       options: exampleOptions,
     }}
   >
-    {Template.bind({})}
+    {Select.bind({})}
   </Story>
 </Canvas>
 
@@ -82,7 +82,7 @@ Styling via the `<select>` element:
       },
     }}
   >
-    {Template.bind({})}
+    {Select.bind({})}
   </Story>
 </Canvas>
 
@@ -103,7 +103,7 @@ Styling via the `<select>` element:
       },
     }}
   >
-    {Template.bind({})}
+    {Select.bind({})}
   </Story>
 </Canvas>
 
@@ -124,7 +124,7 @@ Styling via the `<select>` element:
       },
     }}
   >
-    {Template.bind({})}
+    {Select.bind({})}
   </Story>
 </Canvas>
 
@@ -147,6 +147,6 @@ Styling via the `<select>` element:
       },
     }}
   >
-    {Template.bind({})}
+    {Select.bind({})}
   </Story>
 </Canvas>
