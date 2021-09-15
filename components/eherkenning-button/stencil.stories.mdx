@@ -1,0 +1,26 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const EherkenningButton = () => `<utrecht-eherkenning-button>Inloggen</utrecht-eherkenning-button>`;
+
+<Meta
+  title="Web Component/Eherkenning Button"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => EherkenningButton(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Eherkenning Button
+
+<Canvas>
+  <Story name="Eherkenning Button">{EherkenningButton.bind({})}</Story>
+</Canvas>

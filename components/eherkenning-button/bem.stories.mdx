@@ -9,7 +9,7 @@ import { defaultArgs, DigidButton } from "./bem";
 import "./bem.scss";
 
 <Meta
-  title="CSS Component/DigiD Button"
+  title="CSS Component/Eherkenning Button"
   argTypes={{
     label: {
       description: "Button label",
@@ -22,7 +22,7 @@ import "./bem.scss";
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => DigidButton(args),
+      transformSource: (_src, { args }) => EherkenningButton(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -30,37 +30,37 @@ import "./bem.scss";
   }}
 />
 
-# DigiD button
+# Eherkenning button
 
-Styling via the `.utrecht-digid-button` class name:
+Styling via the `.utrecht-eherkenning-button` class name:
 
 <Canvas>
   <Story
-    name="DigiD Button"
+    name="Eherkenning Button"
     args={{
       ...defaultArgs,
-      label: "Inloggen met DigiD",
-      textContent: "Inloggen DigD",
+      label: "Inloggen Eherkenning",
+      textContent: "Inloggen Eherkenning",
     }}
   >
-    {DigidButton.bind({})}
+    {EherkenningButton.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="DigiD Button" />
+<ArgsTable story="Eherkenning Button" />
 
 ## Right-to-left
 
 <Canvas>
   <Story
-    name="DigiD Button in right-to-left text direction"
+    name="Eherkenning Button in right-to-left text direction"
     decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
     args={{
       ...defaultArgs,
-      label: "تسجيل الدخول باستخدام DigiD",
-      textContent: "سجّل الدخول إلى DigiD",
+      label: "سجّل الدخول إلى Eherkenning",
+      textContent: "سجّل الدخول إلى Eherkenning",
     }}
   >
-    {DigidButton.bind({})}
+    {EherkenningButton.bind({})}
   </Story>
 </Canvas>

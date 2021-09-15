@@ -62,6 +62,8 @@ const components = [
   UtrechtContactCardTemplate,
   UtrechtDigidButton,
   UtrechtDigidLogo,
+  UtrechtEherkenningButton,
+  UtrechtEherkenningLogo,
   UtrechtDocument,
   UtrechtFormFieldCheckbox,
   UtrechtFormFieldDescription,

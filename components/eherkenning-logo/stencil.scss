@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+:host {
+  display: inline;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+svg {
+  height: 100%;
+  max-height: var(--utrecht-eherkenning-logo-max-height, var(--utrecht-logo-max-height, 50px));
+  max-width: var(--utrecht-eherkenning-logo-max-width, var(--utrecht-logo-max-width, 50px));
+  width: 100%;
+}
