@@ -13,10 +13,10 @@
   grid-template-rows: auto auto;
 }
 
-.utrecht-form-field-textbox input {
+.utrecht-form-field-textbox__input {
   grid-column: 2 / 3;
 }
 
-.utrecht-form-field-textbox label {
+.utrecht-form-field-textbox__label {
   grid-column: 1 / 2;
 }
