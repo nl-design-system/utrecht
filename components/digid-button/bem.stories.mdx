@@ -1,0 +1,66 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { defaultArgs, DigidButton } from "./bem";
+
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/DigiD Button"
+  argTypes={{
+    label: {
+      description: "Button label",
+      control: "text",
+    },
+    textContent: {
+      description: "Button text",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => DigidButton(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# DigiD button
+
+Styling via the `.utrecht-digid-button` class name:
+
+<Canvas>
+  <Story
+    name="DigiD Button"
+    args={{
+      ...defaultArgs,
+      label: "Log in using DigiD",
+      textContent: "Log in",
+    }}
+  >
+    {DigidButton.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="DigiD Button" />
+
+## Right-to-left
+
+<Canvas>
+  <Story
+    name="DigiD Button in right-to-left text direction"
+    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
+    args={{
+      ...defaultArgs,
+      label: "تسجيل الدخول باستخدام DigiD",
+      textContent: "تسجيل الدخول",
+    }}
+  >
+    {DigidButton.bind({})}
+  </Story>
+</Canvas>

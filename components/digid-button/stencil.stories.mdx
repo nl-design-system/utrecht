@@ -1,0 +1,26 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const DigidButton = () => `<utrecht-digid-button>Inloggen</utrecht-digid-button>`;
+
+<Meta
+  title="Web Component/DigiD Button"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => DigidButton(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# DigiD Button
+
+<Canvas>
+  <Story name="DigiD Button">{DigidButton.bind({})}</Story>
+</Canvas>
