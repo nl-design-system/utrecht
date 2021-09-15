@@ -7,6 +7,12 @@
           "inherits": true
         }
       },
+      "block-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
       "focus-transform-scale": {
         "css": {
           "syntax": "<number>",
@@ -22,6 +28,12 @@
       "font-weight": {
         "css": {
           "syntax": "<number>",
+          "inherits": true
+        }
+      },
+      "inline-size": {
+        "css": {
+          "syntax": "<length>",
           "inherits": true
         }
       },
