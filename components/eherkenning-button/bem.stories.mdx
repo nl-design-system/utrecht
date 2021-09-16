@@ -9,7 +9,7 @@ import { defaultArgs, EherkenningButton } from "./bem";
 import "./bem.scss";
 
 <Meta
-  title="CSS Component/Eherkenning Button"
+  title="CSS Component/eHerkenning Button"
   argTypes={{
     label: {
       description: "Button label",
@@ -36,29 +36,29 @@ Styling via the `.utrecht-eherkenning-button` class name:
 
 <Canvas>
   <Story
-    name="Eherkenning Button"
+    name="eHerkenning Button"
     args={{
       ...defaultArgs,
-      label: "Inloggen Eherkenning",
-      textContent: "Inloggen Eherkenning",
+      label: "Inloggen eHerkenning",
+      textContent: "Inloggen eHerkenning",
     }}
   >
     {EherkenningButton.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Eherkenning Button" />
+<ArgsTable story="eHerkenning Button" />
 
 ## Right-to-left
 
 <Canvas>
   <Story
-    name="Eherkenning Button in right-to-left text direction"
+    name="eHerkenning Button in right-to-left text direction"
     decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
     args={{
       ...defaultArgs,
-      label: "سجّل الدخول إلى Eherkenning",
-      textContent: "سجّل الدخول إلى Eherkenning",
+      label: "سجّل الدخول إلى eHerkenning",
+      textContent: "سجّل الدخول إلى eHerkenning",
     }}
   >
     {EherkenningButton.bind({})}
