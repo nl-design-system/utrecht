@@ -1,6 +1,12 @@
 {
   "utrecht": {
     "button": {
+      "background-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
       "border-width": {
         "css": {
           "syntax": "<length>",
@@ -10,6 +16,12 @@
       "block-size": {
         "css": {
           "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "color": {
+        "css": {
+          "syntax": "<color>",
           "inherits": true
         }
       },
