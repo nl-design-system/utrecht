@@ -46,6 +46,12 @@
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
+.utrecht-button:active,
+.utrecht-button--active {
+  background-color: var(--utrecht-button-active-background-color, var(--utrecht-button-background-color));
+  color: var(--utrecht-button-active-color, var(--utrecht-button-color));
+}
+
 .utrecht-button--focus,
 .utrecht-button:not(.utrecht-button--disabled):focus {
   @include utrecht-focus;

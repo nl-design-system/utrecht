@@ -7,6 +7,7 @@
 import clsx from 'clsx';
 
 export const defaultArgs = {
+  active: false,
   busy: false,
   disabled: false,
   focus: false,
@@ -16,14 +17,16 @@ export const defaultArgs = {
 };
 
 export const Button = ({
-  textContent = '',
+  active = false,
   busy = false,
+  disabled = false,
   focus = false,
   hover = false,
-  disabled = false,
+  textContent = '',
   type = 'button',
 }) =>
   `<button class="${clsx('utrecht-button', {
+    'utrecht-button--active': active,
     'utrecht-button--busy': busy,
     'utrecht-button--hover': hover,
     'utrecht-button--focus': focus,

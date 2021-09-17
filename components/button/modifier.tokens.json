@@ -1,6 +1,20 @@
 {
   "utrecht": {
     "button": {
+      "active": {
+        "background-color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        },
+        "color": {
+          "css": {
+            "syntax": "<color>",
+            "inherits": true
+          }
+        }
+      },
       "disabled": {
         "color": {
           "css": {
