@@ -35,6 +35,10 @@
   cursor: var(--utrecht-action-submit-cursor);
 }
 
+.utrecht-button--busy {
+  cursor: var(--utrecht-action-busy-cursor);
+}
+
 .utrecht-button:disabled,
 .utrecht-button--disabled {
   background-color: var(--utrecht-button-disabled-background-color);

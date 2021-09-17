@@ -8,8 +8,17 @@ import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 
 import "./bem.scss";
 
-export const Template = ({ disabled = false, textContent = "", type = "" }) =>
-  `<utrecht-button${disabled ? " disabled" : ""}${type ? ` type="${type}"` : ""}>${textContent}</utrecht-button>`;
+export const defaultArgs = {
+  busy: false,
+  disabled: false,
+  textContent: "",
+  type: "",
+};
+
+export const Template = ({ busy = false, disabled = false, textContent = "", type = "" }) =>
+  `<utrecht-button${busy ? ' busy="true"' : ""}${disabled ? " disabled" : ""}${
+    type ? ` type="${type}"` : ""
+  }>${textContent}</utrecht-button>`;
 
 <Meta
   title="Web Component/Button"
@@ -17,6 +26,10 @@ export const Template = ({ disabled = false, textContent = "", type = "" }) =>
     textContent: {
       description: "Button text",
       control: "text",
+    },
+    busy: {
+      description: "Busy",
+      control: "boolean",
     },
     disabled: {
       description: "Disabled",
@@ -46,7 +59,7 @@ export const Template = ({ disabled = false, textContent = "", type = "" }) =>
   <Story
     name="Button"
     args={{
-      disabled: false,
+      ...defaultArgs,
       textContent: "Read more...",
       type: "",
     }}
@@ -61,8 +74,30 @@ export const Template = ({ disabled = false, textContent = "", type = "" }) =>
   <Story
     name="Submit button"
     args={{
+      ...defaultArgs,
       textContent: "Send",
       type: "submit",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## State
+
+### Busy
+
+<Canvas>
+  <Story
+    name="Busy button"
+    args={{
+      ...defaultArgs,
+      busy: true,
+      textContent: "Send",
+      type: "submit",
+    }}
+    parameters={{
+      percy: { skip: true },
     }}
   >
     {Template.bind({})}

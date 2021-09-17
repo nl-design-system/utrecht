@@ -14,6 +14,10 @@
   @extend .utrecht-button--submit;
 }
 
+.utrecht-html button[aria-busy="true"] {
+  @extend .utrecht-button--busy;
+}
+
 .utrecht-html button:hover {
   @extend .utrecht-button--hover;
 }
