@@ -4,12 +4,20 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import "./html.scss";
-import { defaultArgs, TextArea } from "./html";
+import "./bem.scss";
+import { defaultArgs, TextArea } from "./bem";
 
 <Meta
-  title="HTML Component/Textarea"
+  title="CSS Component/Text area"
   argTypes={{
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
     invalid: {
       description: "Invalid",
       control: "boolean",
@@ -18,20 +26,12 @@ import { defaultArgs, TextArea } from "./html";
       description: "Read-only",
       control: "boolean",
     },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    placeholder: {
-      description: "Placeholder",
-      control: "text",
-    },
     required: {
       description: "Required",
       control: "boolean",
     },
     textContent: {
-      description: "Set the content of the textarea",
+      description: "Set the value of the Text area",
       control: "text",
     },
   }}
@@ -45,13 +45,13 @@ import { defaultArgs, TextArea } from "./html";
   }}
 />
 
-# Textarea component
+# Text area component
 
-Styling via the `<textarea>` element:
+Styling via the `.utrecht-textarea` class name.
 
 <Canvas>
   <Story
-    name="Textarea"
+    name="Text area"
     args={{
       ...defaultArgs,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
@@ -61,17 +61,17 @@ Styling via the `<textarea>` element:
   </Story>
 </Canvas>
 
-<ArgsTable story="Textarea" />
+<ArgsTable story="Text area" />
 
 ## States
 
-### Invalid
+### Disabled
 
 <Canvas>
   <Story
-    name="Invalid textarea"
+    name="Disabled Text area"
     args={{
-      invalid: true,
+      disabled: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
@@ -79,13 +79,13 @@ Styling via the `<textarea>` element:
   </Story>
 </Canvas>
 
-### Disabled
+### Invalid
 
 <Canvas>
   <Story
-    name="Disabled textarea"
+    name="Invalid Text area"
     args={{
-      disabled: true,
+      invalid: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
@@ -97,7 +97,7 @@ Styling via the `<textarea>` element:
 
 <Canvas>
   <Story
-    name="Read-only textarea"
+    name="Read-only Text area"
     args={{
       readOnly: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
@@ -111,7 +111,7 @@ Styling via the `<textarea>` element:
 
 <Canvas>
   <Story
-    name="Required textarea"
+    name="Required Text area"
     args={{
       required: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
@@ -121,13 +121,30 @@ Styling via the `<textarea>` element:
   </Story>
 </Canvas>
 
-## Placeholder
+## Interactive States
+
+### Focus
 
 <Canvas>
   <Story
-    name="Textarea with placeholder"
+    name="Text area with focus"
     args={{
-      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      focus: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {TextArea.bind({})}
+  </Story>
+</Canvas>
+
+### Hover
+
+<Canvas>
+  <Story
+    name="Text area with hover state"
+    args={{
+      hover: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {TextArea.bind({})}
