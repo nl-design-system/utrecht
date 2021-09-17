@@ -1,0 +1,59 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { defaultArgs, Checkbox } from "./bem";
+
+<Meta
+  title="CSS Component/Checkbox"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Checkbox(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox Component
+
+<Canvas>
+  <Story
+    name="Checkbox"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Checkbox" />
+
+<Canvas>
+  <Story
+    name="Disabled checkbox"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Checked checkbox"
+    args={{
+      ...defaultArgs,
+      checked: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
