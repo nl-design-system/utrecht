@@ -11,6 +11,10 @@
   margin-inline-start: 0;
 }
 
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-radio-button--checked {
+}
+
 .utrecht-radio-button--disabled {
   cursor: var(--utrecht-action-disabled-cursor);
 }
