@@ -5,16 +5,7 @@ Copyright (c) 2021 Robbert Broersma
 
 import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
 import "./html.scss";
-
-export const defaultArgs = {
-  disabled: false,
-  textContent: "",
-};
-
-export const Template = ({ textContent = "", disabled = false }) =>
-  `<section class="utrecht-html">
-  <button type="button"${disabled ? " disabled" : ""}>${textContent}</button>
-</section>`;
+import { defaultArgs, Button } from "./html";
 
 <Meta
   title="HTML Component/Button"
@@ -27,10 +18,16 @@ export const Template = ({ textContent = "", disabled = false }) =>
       description: "Disabled",
       control: "boolean",
     },
+    type: {
+      description: "Type",
+      control: { type: "select" },
+      options: ["", "button", "reset", "submit"],
+    },
   }}
+  decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Button(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -50,7 +47,7 @@ Styling via the `<button>` element:
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
-    {Template.bind({})}
+    {Button.bind({})}
   </Story>
 </Canvas>
 
@@ -66,6 +63,6 @@ Button with `disabled` state:
       disabled: true,
     }}
   >
-    {Template.bind({})}
+    {Button.bind({})}
   </Story>
 </Canvas>

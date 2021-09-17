@@ -30,6 +30,11 @@
   margin-inline-start: var(--utrecht-button-margin-inline-start);
 }
 
+.utrecht-button--submit {
+  /* lower priority specificty than busy and disabled cursor */
+  cursor: var(--utrecht-action-submit-cursor);
+}
+
 .utrecht-button:disabled,
 .utrecht-button--disabled {
   background-color: var(--utrecht-button-disabled-background-color);

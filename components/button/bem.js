@@ -11,11 +11,12 @@ export const defaultArgs = {
   focus: false,
   hover: false,
   textContent: '',
+  type: 'button',
 };
 
-export const Button = ({ textContent = '', focus = false, hover = false, disabled = false }) =>
+export const Button = ({ textContent = '', focus = false, hover = false, disabled = false, type = 'button' }) =>
   `<button class="${clsx('utrecht-button', {
     'utrecht-button--hover': hover,
     'utrecht-button--focus': focus,
     'utrecht-button--disabled': disabled,
-  })}"${disabled ? ' aria-disabled="true"' : ''}>${textContent}</button>`;
+  })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${textContent}</button>`;
