@@ -7,6 +7,7 @@ import clsx from "clsx";
   shadow: true,
 })
 export class Button {
+  @Prop() busy: boolean;
   @Prop() disabled: boolean;
   @Event({ cancelable: true }) utrechtRequestReset: EventEmitter;
   @Event({ cancelable: true }) utrechtRequestSubmit: EventEmitter;
@@ -40,9 +41,11 @@ export class Button {
       <button
         class={clsx(
           "utrecht-button",
+          this.busy && "utrecht-button--busy",
           this.disabled && "utrecht-button--disabled",
           this.type === "submit" && "utrecht-button--submit"
         )}
+        aria-busy={this.busy ? "true" : null}
         disabled={this.disabled}
         type={this.type || "button"}
         onClick={handleClick}

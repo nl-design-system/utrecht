@@ -16,6 +16,10 @@ import "./bem.scss";
       description: "Button text",
       control: "text",
     },
+    busy: {
+      description: "Busy",
+      control: "boolean",
+    },
     focus: {
       description: "Focus",
       control: "boolean",
@@ -101,6 +105,25 @@ Styling via the `.utrecht-button--disabled` class name:
     args={{
       textContent: "Read more...",
       disabled: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Busy
+
+Styling via the `.utrecht-button--busy` class name:
+
+<Canvas>
+  <Story
+    name="Button busy"
+    args={{
+      busy: true,
+      textContent: "Read more...",
+    }}
+    parameters={{
+      percy: { skip: true },
     }}
   >
     {Button.bind({})}

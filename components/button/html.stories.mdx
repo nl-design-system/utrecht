@@ -15,6 +15,10 @@ import { defaultArgs, Button } from "./html";
       control: "text",
     },
     disabled: {
+      description: "Busy",
+      control: "boolean",
+    },
+    disabled: {
       description: "Disabled",
       control: "boolean",
     },
@@ -53,6 +57,10 @@ Styling via the `<button>` element:
 
 <ArgsTable story="Button" />
 
+## States
+
+### Disabled
+
 Button with `disabled` state:
 
 <Canvas>
@@ -61,6 +69,46 @@ Button with `disabled` state:
     args={{
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
       disabled: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Busy
+
+Button with `aria-busy` state:
+
+<Canvas>
+  <Story
+    name="Busy button"
+    args={{
+      busy: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      percy: { skip: true },
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Types
+
+### Submit
+
+Button with `submit` type:
+
+<Canvas>
+  <Story
+    name="Submit button"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      type: "submit",
+    }}
+    parameters={{
+      percy: { skip: true },
     }}
   >
     {Button.bind({})}
