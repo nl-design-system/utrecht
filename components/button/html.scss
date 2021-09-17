@@ -10,6 +10,10 @@
   @extend .utrecht-button--distanced;
 }
 
+.utrecht-html button[type="submit"] {
+  @extend .utrecht-button--submit;
+}
+
 .utrecht-html button:hover {
   @extend .utrecht-button--hover;
 }

@@ -38,7 +38,11 @@ export class Button {
 
     return (
       <button
-        class={clsx("utrecht-button", this.disabled && "utrecht-button--disabled")}
+        class={clsx(
+          "utrecht-button",
+          this.disabled && "utrecht-button--disabled",
+          this.type === "submit" && "utrecht-button--submit"
+        )}
         disabled={this.disabled}
         type={this.type || "button"}
         onClick={handleClick}
