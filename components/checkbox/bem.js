@@ -11,7 +11,7 @@ export const defaultArgs = {
 };
 
 export const Checkbox = ({ checked = false, disabled = false }) =>
-  `<input type="checkbox"${checked ? ' checked' : ''} class="${clsx(
+  `<input type="checkbox"${checked ? ' checked' : ''}${disabled ? ' disabled' : ''} class="${clsx(
     'utrecht-checkbox',
     checked && 'utrecht-checkbox--checked',
     disabled && 'utrecht-checkbox--disabled',

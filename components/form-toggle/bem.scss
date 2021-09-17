@@ -53,6 +53,7 @@
   border-color: var(--utrecht-form-toggle-disabled-border-color, var(--utrecht-form-toggle-border-color, currentColor));
   border-style: var(--utrecht-form-toggle-disabled-border-style, var(--utrecht-form-toggle-border-style, solid));
   border-width: var(--utrecht-form-toggle-disabled-border-width, var(--utrecht-form-toggle-border-width, 1px));
+  cursor: var(--utrecht-action-disabled-cursor);
 }
 
 .utrecht-form-toggle__thumb {

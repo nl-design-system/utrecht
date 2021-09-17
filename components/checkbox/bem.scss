@@ -9,3 +9,7 @@
   margin-inline-end: 0;
   margin-inline-start: 0;
 }
+
+.utrecht-checkbox--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
