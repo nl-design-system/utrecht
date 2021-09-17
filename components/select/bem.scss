@@ -54,6 +54,7 @@
     --utrecht-select-disabled-color,
     var(--utrecht-form-input-disabled-color, var(--utrecht-select-color, var(--utrecht-form-input-color)))
   );
+  cursor: var(--utrecht-action-disabled-cursor);
 }
 
 .utrecht-select--focus {

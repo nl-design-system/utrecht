@@ -69,6 +69,7 @@
     --utrecht-textarea-disabled-color,
     var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
   );
+  cursor: var(--utrecht-action-disabled-cursor);
 }
 
 .utrecht-textarea--focus {

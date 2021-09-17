@@ -10,3 +10,7 @@
   margin-inline-end: 0;
   margin-inline-start: 0;
 }
+
+.utrecht-radio-button--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
