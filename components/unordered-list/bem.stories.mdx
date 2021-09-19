@@ -5,7 +5,7 @@ Copyright (c) 2021 Robbert Broersma
 
 import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
 import "./bem.scss";
-import { UnorderedList, UnorderedListNested } from "./bem";
+import { defaultArgs, UnorderedList } from "./bem";
 
 <Meta
   title="CSS Component/Unordered List"
@@ -13,6 +13,10 @@ import { UnorderedList, UnorderedListNested } from "./bem";
     distanced: {
       description: "Distance the element from adjacent content",
       control: "boolean",
+    },
+    items: {
+      description: "List items",
+      control: "array",
     },
   }}
   parameters={{
@@ -29,7 +33,19 @@ import { UnorderedList, UnorderedListNested } from "./bem";
   <Story
     name="Bulleted list"
     args={{
+      ...defaultArgs,
       distanced: true,
+      items: [
+        {
+          textContent: "Lorem",
+        },
+        {
+          textContent: "Ipsum",
+        },
+        {
+          textContent: "Dolor",
+        },
+      ],
     }}
   >
     {UnorderedList.bind({})}
@@ -42,13 +58,35 @@ import { UnorderedList, UnorderedListNested } from "./bem";
 
 <Canvas>
   <Story
+    args={{
+      ...defaultArgs,
+      items: [
+        {
+          textContent: "Lorem",
+        },
+        {
+          textContent: "Ipsum",
+          items: [
+            {
+              textContent: "Lorem",
+            },
+            {
+              textContent: "Ipsum",
+            },
+          ],
+        },
+        {
+          textContent: "Dolor",
+        },
+      ],
+    }}
     name="Nested Ordered list"
     parameters={{
       docs: {
-        transformSource: (_src, { args }) => UnorderedListNested(args),
+        transformSource: (_src, { args }) => UnorderedList(args),
       },
     }}
   >
-    {UnorderedListNested.bind({})}
+    {UnorderedList.bind({})}
   </Story>
 </Canvas>

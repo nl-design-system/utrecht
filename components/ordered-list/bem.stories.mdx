@@ -14,6 +14,10 @@ import { OrderedList } from "./bem";
       description: "Distance the element from adjacent content",
       control: "boolean",
     },
+    items: {
+      description: "List items",
+      control: "array",
+    },
   }}
   parameters={{
     docs: {
@@ -30,6 +34,17 @@ import { OrderedList } from "./bem";
     name="Ordered list"
     args={{
       distanced: true,
+      items: [
+        {
+          textContent: "Lorem",
+        },
+        {
+          textContent: "Ipsum",
+        },
+        {
+          textContent: "Dolor",
+        },
+      ],
     }}
   >
     {OrderedList.bind({})}
