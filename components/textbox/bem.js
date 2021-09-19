@@ -11,6 +11,7 @@ export const defaultArgs = {
   invalid: false,
   readOnly: false,
   required: false,
+  placeholder: '',
   value: '',
 };
 
@@ -18,6 +19,7 @@ export const TextBox = ({
   disabled = false,
   focus = false,
   invalid = false,
+  placeholder = '',
   readOnly = false,
   required = false,
   value = '',
@@ -29,4 +31,4 @@ export const TextBox = ({
     invalid && 'utrecht-textbox--invalid',
     readOnly && 'utrecht-textbox--readonly',
     required && 'utrecht-textbox--required',
-  )}" value="${value}">`;
+  )}"${placeholder ? ` placeholder="${placeholder}"` : ''} value="${value}">`;
