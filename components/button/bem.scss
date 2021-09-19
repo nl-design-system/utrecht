@@ -41,8 +41,8 @@
 
 .utrecht-button:disabled,
 .utrecht-button--disabled {
-  background-color: var(--utrecht-button-disabled-background-color);
-  color: var(--utrecht-button-disabled-color);
+  background-color: var(--utrecht-button-disabled-background-color, var(--utrecht-button-background-color));
+  color: var(--utrecht-button-disabled-color, var(--utrecht-button-color));
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
@@ -61,7 +61,7 @@
 
 .utrecht-button--hover:not(:disabled),
 .utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
-  background-color: var(--utrecht-button-primary-action-hover-background-color);
-  color: var(--utrecht-button-primary-action-color);
+  background-color: var(--utrecht-button-hover-background-color, var(--utrecht-button-background-color));
+  color: var(--utrecht-button-hover-color, var(--utrecht-button-color));
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }
