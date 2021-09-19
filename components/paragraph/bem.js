@@ -10,5 +10,8 @@ export const defaultArgs = {
   textContent: '',
 };
 
-export const Paragraph = ({ textContent = '', lead = false }) =>
-  `<p class="${clsx('utrecht-paragraph', { 'utrecht-paragraph--lead': lead })}">${textContent}</p>`;
+export const Paragraph = ({ distanced = false, textContent = '', lead = false }) =>
+  `<p class="${clsx('utrecht-paragraph', {
+    'utrecht-paragraph--distanced': distanced,
+    'utrecht-paragraph--lead': lead,
+  })}">${textContent}</p>`;
