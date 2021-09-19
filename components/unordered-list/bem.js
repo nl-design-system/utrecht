@@ -5,21 +5,24 @@
 
 import clsx from 'clsx';
 
-export const UnorderedList = ({ distanced = false }) =>
-  `<ul class="${clsx('utrecht-unordered-list', distanced && 'utrecht-unordered-list--distanced')}">
-  <li class="utrecht-unordered-list__item">Lorem</li>
-  <li class="utrecht-unordered-list__item">Ipsum</li>
-  <li class="utrecht-unordered-list__item">Dolor</li>
-</ul>`;
+const defaultArgs = {
+  distanced: false,
+  items: [],
+  nested: false,
+};
 
-export const UnorderedListNested = ({ distanced = false }) =>
-  `<ul class="${clsx('utrecht-unordered-list', distanced && 'utrecht-unordered-list--distanced')}">
-  <li class="utrecht-unordered-list__item">Lorem</li>
-  <li class="utrecht-unordered-list__item">Ipsum
-    <ul class="utrecht-unordered-list utrecht-unordered-list--nested">
-      <li class="utrecht-unordered-list__item">Lorem</li>
-      <li class="utrecht-unordered-list__item">Ipsum</li>
-    </ul>
-  </li>
-  <li class="utrecht-unordered-list__item">Dolor</li>
+export const UnorderedList = ({ distanced = false, items = [], nested = false }) =>
+  `<ul class="${clsx(
+    'utrecht-unordered-list',
+    distanced && 'utrecht-unordered-list--distanced',
+    nested && 'utrecht-unordered-list--nested',
+  )}">
+${items
+  .map(
+    ({ items: subItems, textContent }) =>
+      `  <li class="utrecht-unordered-list__item">${textContent || ''}${
+        subItems ? UnorderedList({ nested: true, items: subItems }) : ''
+      }</li>`,
+  )
+  .join('\n')}
 </ul>`;

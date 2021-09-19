@@ -5,9 +5,7 @@
 
 import clsx from 'clsx';
 
-export const OrderedList = ({ distanced = false }) =>
+export const OrderedList = ({ distanced = false, items = [] }) =>
   `<ol class="${clsx('utrecht-ordered-list', distanced && 'utrecht-ordered-list--distanced')}">
-  <li class="utrecht-ordered-list__item">Lorem</li>
-  <li class="utrecht-ordered-list__item">Ipsum</li>
-  <li class="utrecht-ordered-list__item">Dolor</li>
+${items.map(({ textContent }) => `  <li class="utrecht-ordered-list__item">${textContent}</li>`).join('\n')}
 </ol>`;
