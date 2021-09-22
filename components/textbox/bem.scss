@@ -75,6 +75,25 @@
 
 .utrecht-textbox--focus {
   @include utrecht-focus;
+
+  background-color: var(
+    --utrecht-textbox-focus-background-color,
+    var(
+      --utrecht-form-input-focus-background-color,
+      var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))
+    )
+  );
+  border-color: var(
+    --utrecht-textbox-focus-border-color,
+    var(
+      --utrecht-form-input-focus-border-color,
+      var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))
+    )
+  );
+  color: var(
+    --utrecht-textbox-focus-color,
+    var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
+  );
 }
 
 .utrecht-textbox--read-only {

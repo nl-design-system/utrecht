@@ -59,6 +59,27 @@
 
 .utrecht-select--focus {
   @include utrecht-focus();
+  background-color: var(
+    --utrecht-select-focus-background-color,
+    var(
+      --utrecht-form-input-focus-background-color,
+      var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))
+    )
+  );
+  border-color: var(
+    --utrecht-select-focus-border-color,
+    var(
+      --utrecht-form-input-focus-border-color,
+      var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))
+    )
+  );
+  border-width: var(
+    --utrecht-select-focus-border-width,
+    var(
+      --utrecht-form-input-focus-border-width,
+      var(--utrecht-select-border-width, var(--utrecht-form-input-border-width))
+    )
+  );
 }
 
 .utrecht-select--invalid {
