@@ -1,0 +1,42 @@
+{
+  "utrecht": {
+    "custom-checkbox": {
+      "background-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "border-color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "border-radius": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "border-width": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
+      "size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      }
+    }
+  }
+}
