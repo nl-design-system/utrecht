@@ -1,0 +1,134 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../checkbox/bem";
+@import "../focus/bem";
+
+.utrecht-custom-checkbox {
+  --utrecht-icon-size: var(--utrecht-custom-checkbox-icon-size, calc(0.75 * var(--utrecht-custom-checkbox-size)));
+  display: inline-block;
+  height: var(--utrecht-custom-checkbox-size);
+  position: relative;
+  width: var(--utrecht-custom-checkbox-size);
+}
+
+.utrecht-custom-checkbox__input,
+.utrecht-custom-checkbox__box {
+  left: 0;
+  position: absolute;
+  top: 0;
+}
+
+.utrecht-custom-checkbox__input {
+  @include reset-input-checkbox;
+  height: var(--utrecht-custom-checkbox-size);
+  opacity: 0%;
+  width: var(--utrecht-custom-checkbox-size);
+  z-index: 10;
+}
+
+.utrecht-custom-checkbox__box {
+  align-items: center;
+  background-color: var(--utrecht-custom-checkbox-background-color);
+  border-color: var(--utrecht-custom-checkbox-border-color, var(--utrecht-form-input-border-color));
+  border-radius: var(--utrecht-custom-checkbox-border-radius, var(--utrecht-form-input-border-radius));
+  border-style: solid;
+  border-width: var(--utrecht-custom-checkbox-border-width, var(--utrecht-form-input-border-width));
+  box-sizing: border-box;
+  color: var(--utrecht-custom-checkbox-color);
+  display: flex;
+  height: var(--utrecht-custom-checkbox-size);
+  justify-content: center;
+  pointer-events: none;
+  width: var(--utrecht-custom-checkbox-size);
+  z-index: 1000;
+}
+
+.utrecht-custom-checkbox__box--checked {
+  background-color: var(
+    --utrecht-custom-checkbox-checked-background-color,
+    var(--utrecht-custom-checkbox-background-color)
+  );
+  border-color: var(--utrecht-custom-checkbox-checked-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-checked-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-checked-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--disabled {
+  background-color: var(
+    --utrecht-custom-checkbox-disabled-background-color,
+    var(--utrecht-custom-checkbox-background-color)
+  );
+  border-color: var(--utrecht-custom-checkbox-disabled-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-disabled-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-disabled-color, var(--utrecht-custom-checkbox-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-custom-checkbox__box--indeterminate {
+  color: var(--utrecht-custom-checkbox-indeterminate-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--invalid {
+  background-color: var(
+    --utrecht-custom-checkbox-invalid-background-color,
+    var(--utrecht-custom-checkbox-background-color)
+  );
+  border-color: var(--utrecht-custom-checkbox-invalid-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-invalid-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-invalid-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--active {
+  background-color: var(
+    --utrecht-custom-checkbox-active-background-color,
+    var(--utrecht-custom-checkbox-background-color)
+  );
+  border-color: var(--utrecht-custom-checkbox-active-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-active-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-active-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--focus {
+  background-color: var(
+    --utrecht-custom-checkbox-focus-background-color,
+    var(--utrecht-custom-checkbox-background-color)
+  );
+  border-color: var(--utrecht-custom-checkbox-focus-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-focus-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-focus-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--focus-visible {
+  @include utrecht-focus();
+}
+
+.utrecht-custom-checkbox__input:focus ~ .utrecht-custom-checkbox__box {
+  @extend .utrecht-custom-checkbox__box--focus;
+}
+
+.utrecht-custom-checkbox__input:focus-visible ~ .utrecht-custom-checkbox__box {
+  @extend .utrecht-custom-checkbox__box--focus-visible;
+}
+
+.utrecht-custom-checkbox__input:indeterminate ~ .utrecht-custom-checkbox__box {
+  @extend .utrecht-custom-checkbox__box--indeterminate;
+}
+
+.utrecht-custom-checkbox__icon {
+  display: none;
+}
+
+.utrecht-custom-checkbox__icon--checked {
+  .utrecht-custom-checkbox__box--checked & {
+    display: block;
+  }
+}
+
+.utrecht-custom-checkbox__icon--indeterminate {
+  .utrecht-custom-checkbox__box--indeterminate & {
+    display: block;
+  }
+}
