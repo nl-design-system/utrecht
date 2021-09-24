@@ -37,6 +37,6 @@ Gebruik buttons voor acties. Bijvoorbeeld "Toevoegen", "Sluiten", "Annuleren" of
 
 ## UX Referenties
 
-- [https://uxmovement.com/buttons/5-rules-for-choosing-the-right-words-on-button-labels/][5 rules for choosing the right words on button labels].
-- [https://uxplanet.org/7-basic-rules-for-button-design-63dcdf5676b4](7 basic rules for button design)
-- [https://www.invisionapp.com/inside-design/comprehensive-guide-designing-ux-buttons/](Comprehensive guide to button design)
+- [5 rules for choosing the right words on button labels](https://uxmovement.com/buttons/5-rules-for-choosing-the-right-words-on-button-labels/).
+- [7 basic rules for button design](https://uxplanet.org/7-basic-rules-for-button-design-63dcdf5676b4).
+- [Comprehensive guide to button design](https://www.invisionapp.com/inside-design/comprehensive-guide-designing-ux-buttons/).
