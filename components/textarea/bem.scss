@@ -24,6 +24,7 @@
   padding-block-start: var(--utrecht-textarea-padding-block-start, var(--utrecht-form-input-padding-block-start));
   padding-inline-end: var(--utrecht-textarea-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
   padding-inline-start: var(--utrecht-textarea-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  resize: vertical;
   width: 100%;
 }
 
