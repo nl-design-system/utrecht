@@ -1,0 +1,26 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+
+export const EherkenningLogo = () => `<utrecht-eherkenning-logo></utrecht-eherkenning-logo>`;
+
+<Meta
+  title="Web Component/eHerkenning Logo"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => EherkenningLogo(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# eIDAS Logo
+
+<Canvas>
+  <Story name="Eherkenning Logo">{Eherkenning.bind({})}</Story>
+</Canvas>
