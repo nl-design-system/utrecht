@@ -16,11 +16,13 @@
   font-weight: var(--utrecht-button-font-weight);
   inline-size: var(--utrecht-button-inline-size, auto);
   letter-spacing: var(--utrecht-button-letter-spacing);
+  min-inline-size: var(--utrecht-button-min-inline-size, 0);
   padding-block-end: var(--utrecht-button-padding-block-end);
   padding-block-start: var(--utrecht-button-padding-block-start);
   padding-inline-end: var(--utrecht-button-padding-inline-end);
   padding-inline-start: var(--utrecht-button-padding-inline-start);
   text-transform: var(--utrecht-button-text-transform);
+  user-select: none;
 }
 
 .utrecht-button--distanced {
