@@ -22,6 +22,6 @@ Copyright (c) 2021 Gemeente Utrecht
 
 ## Referenties
 
-- https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/
-- https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc
-- https://uxdworld.com/2018/05/06/7-rules-of-using-radio-buttons-vs-drop-down-menus/
+- [Checkboxes versus radio buttons - NN Group](https://www.nngroup.com/articles/checkboxes-vs-radio-buttons/).
+- [Radio buttons design - UX Planet](https://uxplanet.org/radio-buttons-ux-design-588e5c0a50dc).
+- [Drop downs versus radio buttons - UX World](https://uxdworld.com/2018/05/06/7-rules-of-using-radio-buttons-vs-drop-down-menus/).
