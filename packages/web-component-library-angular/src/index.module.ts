@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { BooleanValueAccessor } from './directives/boolean-value-accessor';
 import { NumericValueAccessor } from './directives/number-value-accessor';
 import {
+  UtrechtAccordion,
+  UtrechtAccordionHeading,
+  UtrechtAccordionPanel,
+  UtrechtAccordionSection,
   UtrechtArticle,
   UtrechtBadgeCounter,
   UtrechtBadgeData,
@@ -32,6 +36,8 @@ import {
   UtrechtIconAfval,
   UtrechtIconArrow,
   UtrechtIconCheckmark,
+  UtrechtIconBlockClose,
+  UtrechtIconBlockOpen,
   UtrechtIconCross,
   UtrechtIconError,
   UtrechtIconFacebook,
@@ -70,6 +76,10 @@ import { TextValueAccessor } from './directives/text-value-accessor';
 // This array is maintained manually, unfortunately
 
 const components = [
+  UtrechtAccordion,
+  UtrechtAccordionHeading,
+  UtrechtAccordionPanel,
+  UtrechtAccordionSection,
   UtrechtArticle,
   UtrechtBadgeCounter,
   UtrechtBadgeData,
@@ -100,6 +110,8 @@ const components = [
   UtrechtIconAfval,
   UtrechtIconArrow,
   UtrechtIconCheckmark,
+  UtrechtIconBlockClose,
+  UtrechtIconBlockOpen,
   UtrechtIconCross,
   UtrechtIconError,
   UtrechtIconFacebook,

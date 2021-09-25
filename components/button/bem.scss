@@ -24,6 +24,9 @@
   padding-inline-start: var(--utrecht-button-padding-inline-start);
   text-transform: var(--utrecht-button-text-transform);
   user-select: none;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .utrecht-button--distanced {
