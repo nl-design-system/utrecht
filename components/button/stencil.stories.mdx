@@ -10,15 +10,17 @@ import "./bem.scss";
 
 export const defaultArgs = {
   busy: false,
+  icon: "",
+  iconPosition: "",
   disabled: false,
   textContent: "",
   type: "",
 };
 
-export const Template = ({ busy = false, disabled = false, textContent = "", type = "" }) =>
+export const Template = ({ busy = false, disabled = false, icon = "", textContent = "", type = "" }) =>
   `<utrecht-button${busy ? ' busy="true"' : ""}${disabled ? " disabled" : ""}${
     type ? ` type="${type}"` : ""
-  }>${textContent}</utrecht-button>`;
+  }>${textContent}${icon ? `<${icon}></${icon}>` : ""}</utrecht-button>`;
 
 <Meta
   title="Web Component/Button"
@@ -34,6 +36,13 @@ export const Template = ({ busy = false, disabled = false, textContent = "", typ
     disabled: {
       description: "Disabled",
       control: "boolean",
+    },
+    icon: {
+      description: "Icon",
+      type: {
+        name: "enum",
+      },
+      options: ["", "utrecht-icon-arrow-left", "utrecht-icon-arrow-right"],
     },
     type: {
       description: "Type",
@@ -98,6 +107,87 @@ export const Template = ({ busy = false, disabled = false, textContent = "", typ
     }}
     parameters={{
       percy: { skip: true },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Actions
+
+### Primary
+
+<Canvas>
+  <Story
+    name="Primary action"
+    args={{
+      ...defaultArgs,
+      textContent: "Primary action",
+      action: "primary",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Secondary
+
+<Canvas>
+  <Story
+    name="Secondary action"
+    args={{
+      ...defaultArgs,
+      textContent: "Secondary action",
+      action: "secondary",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Danger
+
+<Canvas>
+  <Story
+    name="Dangerous action"
+    args={{
+      ...defaultArgs,
+      textContent: "Dangerous action",
+      action: "danger",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Next step
+
+<Canvas>
+  <Story
+    name="Next step"
+    args={{
+      ...defaultArgs,
+      textContent: "Previous",
+      action: "primary",
+      icon: "utrecht-icon-arrow-left",
+      iconLocation: "start",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+### Previous step
+
+<Canvas>
+  <Story
+    name="Previous step"
+    args={{
+      ...defaultArgs,
+      textContent: "Next",
+      action: "secondary",
+      icon: "utrecht-icon-arrow-right",
+      iconLocation: "end",
     }}
   >
     {Template.bind({})}

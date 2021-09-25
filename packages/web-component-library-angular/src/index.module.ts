@@ -1,13 +1,17 @@
 import { NgModule } from '@angular/core';
 import {
+  UtrechtAccordion,
+  UtrechtAccordionHeading,
+  UtrechtAccordionPanel,
+  UtrechtAccordionSection,
   UtrechtArticle,
   UtrechtBadgeCounter,
   UtrechtBadgeData,
   UtrechtBadgeStatus,
   UtrechtBreadcrumb,
   UtrechtButton,
-  UtrechtContactCardTemplate,
   UtrechtCheckbox,
+  UtrechtContactCardTemplate,
   UtrechtDigidButton,
   UtrechtDigidLogo,
   UtrechtDocument,
@@ -25,6 +29,8 @@ import {
   UtrechtHeading6,
   UtrechtHtmlContent,
   UtrechtIconArrow,
+  UtrechtIconBlockClose,
+  UtrechtIconBlockOpen,
   UtrechtIconCross,
   UtrechtIconFacebook,
   UtrechtIconFilter,
@@ -52,6 +58,10 @@ import { TextValueAccessor } from './directives/text-value-accessor';
 // This array is maintained manually, unfortunately
 
 const components = [
+  UtrechtAccordion,
+  UtrechtAccordionHeading,
+  UtrechtAccordionPanel,
+  UtrechtAccordionSection,
   UtrechtArticle,
   UtrechtBadgeCounter,
   UtrechtBadgeData,
@@ -77,6 +87,8 @@ const components = [
   UtrechtHeading6,
   UtrechtHtmlContent,
   UtrechtIconArrow,
+  UtrechtIconBlockClose,
+  UtrechtIconBlockOpen,
   UtrechtIconCross,
   UtrechtIconFacebook,
   UtrechtIconFilter,

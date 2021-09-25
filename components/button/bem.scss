@@ -21,6 +21,9 @@
   padding-inline-end: var(--utrecht-button-padding-inline-end);
   padding-inline-start: var(--utrecht-button-padding-inline-start);
   text-transform: var(--utrecht-button-text-transform);
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 
 .utrecht-button--distanced {
@@ -46,8 +49,8 @@
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
-.utrecht-button:active,
-.utrecht-button--active {
+.utrecht-button--active,
+.utrecht-button:not(.utrecht-button--disabled):active {
   background-color: var(--utrecht-button-active-background-color, var(--utrecht-button-background-color));
   color: var(--utrecht-button-active-color, var(--utrecht-button-color));
 }

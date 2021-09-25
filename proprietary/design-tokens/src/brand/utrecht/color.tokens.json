@@ -16,11 +16,13 @@
         "90": { "value": "hsl(211 60% 90%)", "comment": "ijsblauw variant achtergrond, spotlight en uitgelicht" }
       },
       "grey": {
+        "0": { "value": "hsl(0 0% 0%)" },
         "15": { "value": "hsl(0 0% 15%)", "comment": "experimenteel / beperkt gebruiken" },
         "30": { "value": "hsl(0 0% 30%)", "comment": "border grijs #888" },
         "40": { "value": "hsl(0 0% 40%)", "comment": "basis grijs #727272" },
         "80": { "value": "hsl(0 0% 80%)", "comment": "grijs variant voor achtergrond content #e5e5e5" },
-        "90": { "value": "hsl(0 0% 90%)", "comment": "grijs variant voor achtergrond templates #f2f2f2" }
+        "90": { "value": "hsl(0 0% 90%)", "comment": "grijs variant voor achtergrond templates #f2f2f2" },
+        "100": { "value": "hsl(0 0% 100%)" }
       },
       "yellow": {
         "40": { "value": "hsl(48 100% 40%)", "comment": "donker geel" },

@@ -1,0 +1,60 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { Accordion } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Accordion"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Accordion(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Accordion
+
+Styling via the `.utrecht-accordion` class name:
+
+<Canvas>
+  <Story
+    name="Accordion"
+    args={{
+      items: [
+        {
+          heading: "Most Frequently Asked Question",
+          panel: "TODO",
+        },
+        {
+          heading: "Second Most Frequently Asked Question",
+          panel: "TODO",
+        },
+        {
+          heading: "Question We Expect To Be Asked Frequently",
+          panel: "TODO",
+        },
+        {
+          heading: "Would You Like The Answer To A Rethorical Question?",
+          expanded: true,
+          panel: "No.",
+        },
+        {
+          heading: "This Isn't Even A Question But You Should Read It Anyway",
+          panel: "The CMS didn't allow me to add more content after the accordion, so I just put it here.",
+        },
+      ],
+    }}
+  >
+    {Accordion.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Accordion" />
