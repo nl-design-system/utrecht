@@ -15,7 +15,7 @@
 }
 
 svg {
-  color: var(--utrecht-icon-color, var(--utrecht-document-color, currentColor));
+  color: var(--utrecht-icon-color, currentColor);
   height: var(--utrecht-icon-size, 100%);
   width: var(--utrecht-icon-size, 100%);
 }
