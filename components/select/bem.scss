@@ -73,12 +73,9 @@
       var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))
     )
   );
-  border-width: var(
-    --utrecht-select-focus-border-width,
-    var(
-      --utrecht-form-input-focus-border-width,
-      var(--utrecht-select-border-width, var(--utrecht-form-input-border-width))
-    )
+  color: var(
+    --utrecht-select-focus-color,
+    var(--utrecht-form-input-focus-color, var(--utrecht-select-color, var(--utrecht-form-input-color)))
   );
 }
 
