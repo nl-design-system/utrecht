@@ -83,9 +83,9 @@
 }
 
 .utrecht-pagination__page-link--current {
-  background-color: var(--utrecht-pagination-page-link-current-background-color);
-  border-color: var(--utrecht-pagination-page-link-current-border-color);
-  color: var(--utrecht-pagination-page-link-current-color);
+  --utrecht-pagination-page-link-background-color: var(--utrecht-pagination-page-link-current-background-color);
+  --utrecht-pagination-page-link-border-color: var(--utrecht-pagination-page-link-current-border-color);
+  --utrecht-pagination-page-link-color: var(--utrecht-pagination-page-link-current-color);
 }
 
 .utrecht-pagination__page-link--distanced,
