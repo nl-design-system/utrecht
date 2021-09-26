@@ -1,9 +1,27 @@
 {
   "utrecht": {
     "form-field-description": {
+      "color": {
+        "css": {
+          "syntax": "<color>",
+          "inherits": true
+        }
+      },
       "font-family": {
         "css": {
           "syntax": "*",
+          "inherits": true
+        }
+      },
+      "font-size": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "font-style": {
+        "css": {
+          "syntax": "italic",
           "inherits": true
         }
       },
