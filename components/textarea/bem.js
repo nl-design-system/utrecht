@@ -29,4 +29,6 @@ export const TextArea = ({
     invalid && 'utrecht-textarea--invalid',
     readOnly && 'utrecht-textarea--readonly',
     required && 'utrecht-textarea--required',
-  )}"${placeholder ? ` placeholder="${placeholder}"` : ''}>${textContent}</textarea>`;
+  )}"${disabled ? ' disabled' : ''}${invalid ? ' aria-invalid="true"' : ''}${
+    placeholder ? ` placeholder="${placeholder}"` : ''
+  }${readOnly ? ' readonly' : ''}${required ? ' required' : ''}>${textContent}</textarea>`;
