@@ -19,6 +19,7 @@
 }
 
 .utrecht-form-label--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
   font-weight: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
 }
 
