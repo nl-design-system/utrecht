@@ -31,4 +31,6 @@ export const TextBox = ({
     invalid && 'utrecht-textbox--invalid',
     readOnly && 'utrecht-textbox--readonly',
     required && 'utrecht-textbox--required',
-  )}"${placeholder ? ` placeholder="${placeholder}"` : ''} value="${value}">`;
+  )}"${disabled ? ' disabled' : ''}${invalid ? ' aria-invalid="true"' : ''}${
+    placeholder ? ` placeholder="${placeholder}"` : ''
+  }${readOnly ? ' readonly' : ''}${required ? ' required' : ''} value="${value}">`;
