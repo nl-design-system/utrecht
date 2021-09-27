@@ -145,3 +145,91 @@ Styling via the `.utrecht-button--busy` class name:
     {Button.bind({})}
   </Story>
 </Canvas>
+
+## Actions
+
+### Primary action
+
+Styling via the `.utrecht-button--primary-action` class name:
+
+<Canvas>
+  <Story
+    name="Primary action"
+    args={{
+      action: "primary",
+      textContent: "Submit",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+  <Story
+    name="Primary action - disabled"
+    args={{
+      action: "primary",
+      disabled: true,
+      textContent: "Submit",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Secondary action
+
+Styling via the `.utrecht-button--secondary-action` class name:
+
+<Canvas>
+  <Story
+    name="Secondary action"
+    args={{
+      action: "secondary",
+      textContent: "Previous",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+  <Story
+    name="Secondary action - disabled"
+    args={{
+      action: "secondary",
+      disabled: true,
+      textContent: "Previous",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Tertiary action
+
+Styling via the `.utrecht-button--tertiary-action` class name:
+
+<Canvas>
+  <Story
+    name="Tertiary action"
+    args={{
+      action: "tertiary",
+      textContent: "Continue later",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+## Feedback
+
+### Danger
+
+Styling via the `.utrecht-button--danger` class name:
+
+<Canvas>
+  <Story
+    name="Danger action"
+    args={{
+      feedback: "danger",
+      textContent: "Delete",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
