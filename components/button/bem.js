@@ -7,6 +7,7 @@
 import clsx from 'clsx';
 
 export const defaultArgs = {
+  action: '',
   active: false,
   busy: false,
   disabled: false,
@@ -17,6 +18,7 @@ export const defaultArgs = {
 };
 
 export const Button = ({
+  action = '',
   active = false,
   busy = false,
   disabled = false,
@@ -31,4 +33,7 @@ export const Button = ({
     'utrecht-button--hover': hover,
     'utrecht-button--focus': focus,
     'utrecht-button--disabled': disabled,
+    'utrecht-button--primary-action': action === 'primary',
+    'utrecht-button--secondary-action': action === 'secondary',
+    'utrecht-button--tertiary-action': action === 'tertiary',
   })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${textContent}</button>`;
