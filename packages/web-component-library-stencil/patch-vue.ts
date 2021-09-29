@@ -1,5 +1,5 @@
-import { dirname, join } from 'path';
 import type { CompilerCtx, Config, OutputTargetCustom } from '@stencil/core/internal';
+import { dirname, join } from 'path';
 
 export interface OutputTargetPatchVue {
   proxiesFile: string;

@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { BooleanValueAccessor } from './directives/boolean-value-accessor';
+import { NumericValueAccessor } from './directives/number-value-accessor';
 import {
   UtrechtArticle,
   UtrechtBadgeCounter,
@@ -51,8 +53,6 @@ import {
   UtrechtSidenav,
   UtrechtTextbox,
 } from './directives/proxies';
-import { BooleanValueAccessor } from './directives/boolean-value-accessor';
-import { NumericValueAccessor } from './directives/number-value-accessor';
 import { SelectValueAccessor } from './directives/select-value-accessor';
 import { TextValueAccessor } from './directives/text-value-accessor';
 
