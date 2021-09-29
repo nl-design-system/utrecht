@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, Prop, State, h } from "@stencil/core";
+import { Component, Event, EventEmitter, h, Prop, State } from "@stencil/core";
 import clsx from "clsx";
 
 @Component({

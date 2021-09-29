@@ -1,11 +1,11 @@
-import { Config } from '@stencil/core';
 import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
-import { patchAngularOutputTarget } from './patch-angular';
-import { patchVueOutputTarget } from './patch-vue';
+import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
-import { sequentialOutputTargets } from './sequential-output-targets';
 import { sass } from '@stencil/sass';
 import { vueOutputTarget } from '@stencil/vue-output-target';
+import { patchAngularOutputTarget } from './patch-angular';
+import { patchVueOutputTarget } from './patch-vue';
+import { sequentialOutputTargets } from './sequential-output-targets';
 
 const valueAccessorConfigs: ValueAccessorConfig = [
   {

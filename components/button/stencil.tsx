@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, Prop, h } from "@stencil/core";
+import { Component, Element, Event, EventEmitter, h, Prop } from "@stencil/core";
 import clsx from "clsx";
 
 @Component({

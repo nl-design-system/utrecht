@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
  */
-import { Component, Prop, h } from "@stencil/core";
+import { Component, h, Prop } from "@stencil/core";
 import clsx from "clsx";
 
 @Component({
