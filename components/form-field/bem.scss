@@ -5,6 +5,7 @@
 
 .utrecht-form-field {
   font-family: var(--utrecht-document-font-family, inherit);
+  max-inline-size: var(--utrecht-form-field-max-inline-size);
 }
 
 .utrecht-form-field--distanced {
