@@ -34,7 +34,7 @@ export class FormFieldCheckbox {
           type="checkbox"
           checked={checked}
           disabled={disabled}
-          aria-invalid={invalid}
+          aria-invalid={invalid ? "true" : null}
           required={required}
           value={value}
           onBlur={(evt) => this.utrechtBlur.emit(evt)}

@@ -57,7 +57,7 @@ export class FormToggle {
         )}
         tabIndex={disabled ? null : 0}
         role="switch"
-        aria-disabled={disabled}
+        aria-disabled={disabled ? "true" : null}
         onClick={handleClick}
         onKeyPress={handleKeyPress}
         onKeyUp={handleKeyUp}
