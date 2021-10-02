@@ -11,6 +11,7 @@
   font-size: var(--utrecht-document-font-size, inherit);
   font-weight: var(--utrecht-document-font-weight, inherit);
   line-height: var(--utrecht-document-line-height, inherit);
+  text-rendering: optimizeLegibility;
 
   :lang(ar) {
     /* `letter-spacing` design tokens break Arabic text rendering, avoid that */
