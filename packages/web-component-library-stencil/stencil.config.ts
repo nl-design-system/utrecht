@@ -26,7 +26,12 @@ const valueAccessorConfigs: ValueAccessorConfig = [
     type: 'number',
   },
   {
-    elementSelectors: ['utrecht-checkbox', 'utrecht-form-field-checkbox', 'utrecht-form-toggle'],
+    elementSelectors: [
+      'utrecht-checkbox',
+      'utrecht-custom-checkbox',
+      'utrecht-form-field-checkbox',
+      'utrecht-form-toggle',
+    ],
     event: 'utrechtInput',
     targetAttr: 'checked',
     type: 'boolean',
