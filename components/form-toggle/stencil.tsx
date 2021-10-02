@@ -31,7 +31,6 @@ export class FormToggle {
     };
 
     const handleClick = () => {
-      console.log("click");
       toggleInteraction();
     };
 
