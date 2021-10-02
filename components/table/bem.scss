@@ -28,6 +28,7 @@
 }
 
 .utrecht-table__header {
+  background-color: var(--utrecht-table-header-background-color);
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
   text-transform: var(--utrecht-table-header-text-transform);
