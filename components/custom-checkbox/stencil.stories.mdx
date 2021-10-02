@@ -99,6 +99,21 @@ export const CustomCheckbox = ({
   </Story>
 </Canvas>
 
+### Disabled and checked
+
+<Canvas>
+  <Story
+    name="Disabled and checked checkbox"
+    args={{
+      ...defaultArgs,
+      checked: true,
+      disabled: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
 ### Checked
 
 <Canvas>
@@ -127,9 +142,24 @@ export const CustomCheckbox = ({
   </Story>
 </Canvas>
 
-### Required and invalid
+### Invalid and checked
 
 The native checkbox should have the same position and size as the custom checkbox, so the native error message tooltip aligns with the custom checkbox.
+
+<Canvas>
+  <Story
+    name="Invalid and checked checkbox"
+    args={{
+      ...defaultArgs,
+      checked: true,
+      invalid: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+### Required and invalid
 
 <Canvas>
   <Story

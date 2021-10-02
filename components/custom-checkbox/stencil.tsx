@@ -16,13 +16,14 @@ export class CustomCheckbox {
   @Prop({ reflect: true }) checked: boolean = false;
   @Prop({ reflect: true }) indeterminate: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
+  @Prop({ reflect: true }) required: boolean = false;
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { checked, disabled, indeterminate, invalid } = this;
+    const { checked, disabled, indeterminate, invalid, required } = this;
     const active = false;
 
     const toggleInteraction = () => {
@@ -55,9 +56,10 @@ export class CustomCheckbox {
         class="utrecht-custom-checkbox"
         role="checkbox"
         tabIndex={disabled ? null : 0}
-        aria-checked={indeterminate ? "mixed" : checked}
-        aria-disabled={disabled}
-        aria-invalid={invalid}
+        aria-checked={indeterminate ? "mixed" : checked ? "true" : "false"}
+        aria-disabled={disabled ? "true" : null}
+        aria-invalid={invalid ? "true" : null}
+        aria-required={required ? "true" : null}
         onClick={handleClick}
         onKeyPress={handleKeyPress}
         onKeyUp={handleKeyUp}
@@ -69,17 +71,14 @@ export class CustomCheckbox {
             checked && "utrecht-custom-checkbox__box--checked",
             !checked && "utrecht-custom-checkbox__box--not-checked",
             disabled && "utrecht-custom-checkbox__box--disabled",
-            focus && "utrecht-custom-checkbox__box--focus",
             invalid && "utrecht-custom-checkbox__box--invalid",
             indeterminate && "utrecht-custom-checkbox__box--indeterminate"
           )}
         >
-          <utrecht-icon-checkmark class="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--checked">
-            ✔
-          </utrecht-icon-checkmark>
-          <utrecht-icon-indeterminate class="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--indeterminate">
-            ■
-          </utrecht-icon-indeterminate>
+          {checked && <utrecht-icon-checkmark class="utrecht-custom-checkbox__icon">✔</utrecht-icon-checkmark>}
+          {indeterminate && (
+            <utrecht-icon-indeterminate class="utrecht-custom-checkbox__icon">■</utrecht-icon-indeterminate>
+          )}
         </div>
       </div>
     );
