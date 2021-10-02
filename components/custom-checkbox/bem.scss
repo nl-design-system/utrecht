@@ -117,7 +117,8 @@
   @extend .utrecht-custom-checkbox__box--indeterminate;
 }
 
-.utrecht-custom-checkbox__icon {
+.utrecht-custom-checkbox__icon--checked,
+.utrecht-custom-checkbox__icon--indeterminate {
   display: none;
 }
 

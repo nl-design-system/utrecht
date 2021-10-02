@@ -17,9 +17,9 @@
         "color": { "value": "{utrecht.color.green.50.value}" }
       },
       "invalid": {
-        "background-color": { "value": "{utrecht.feedback.danger.background-color.value}" },
-        "border-color": { "value": "{utrecht.feedback.danger.border-color.value}" },
-        "color": { "value": "{utrecht.feedback.danger.color.value}" }
+        "background-color": { "value": "{utrecht.color.invalid.value}" },
+        "border-color": { "value": "{utrecht.color.invalid.value}" },
+        "color": { "value": "{utrecht.color.invalid.value}" }
       },
       "valid": {
         "background-color": { "value": "{utrecht.feedback.safe.background-color.value}" },
