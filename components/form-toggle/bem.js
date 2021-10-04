@@ -20,7 +20,7 @@ export const FormToggle = ({ checked = false, disabled = false, hover = false, f
     disabled && 'utrecht-form-toggle--disabled',
     focus && 'utrecht-form-toggle--focus',
     hover && 'utrecht-form-toggle--hover',
-  )}" role="checkbox" tabindex="0"${checked ? ' aria-checked="true"' : ''}${disabled ? ' aria-disabled="true"' : ''}>
+  )}" role="switch" tabindex="0"${checked ? ' aria-checked="true"' : ''}${disabled ? ' aria-disabled="true"' : ''}>
   <div class="${clsx(
     'utrecht-form-toggle__track',
     checked && 'utrecht-form-toggle__track--checked',
