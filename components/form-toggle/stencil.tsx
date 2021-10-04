@@ -57,6 +57,7 @@ export class FormToggle {
           disabled && "utrecht-form-toggle--disabled"
         )}
         tabIndex={disabled ? null : 0}
+        role="switch"
         aria-disabled={disabled}
         onClick={handleClick}
         onKeyPress={handleKeyPress}
