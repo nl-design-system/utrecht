@@ -15,6 +15,15 @@ export const Template = () =>
   </ol>
 </section>`;
 
+export const TemplateArabic = () =>
+  `<section class="utrecht-html" lang="ar" dir="rtl">
+  <ol>
+    <li>واحد</li>
+    <li>إثنان</li>
+    <li>ثلاثة</li>
+  </ol>
+</section>`;
+
 <Meta
   title="HTML Component/Ordered List"
   argTypes={{}}
@@ -30,4 +39,19 @@ export const Template = () =>
 
 <Canvas>
   <Story name="Ordered list">{Template.bind({})}</Story>
+</Canvas>
+
+## Ordered list in Arabic
+
+<Canvas>
+  <Story
+    name="Ordered list in Arabic"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => TemplateArabic(args),
+      },
+    }}
+  >
+    {TemplateArabic.bind({})}
+  </Story>
 </Canvas>
