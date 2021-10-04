@@ -9,7 +9,6 @@
   color: var(--utrecht-document-color, inherit);
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-document-font-size, inherit);
-  -moz-osx-font-smoothing: auto;
-  -webkit-font-smoothing: auto;
+  font-weight: var(--utrecht-document-font-weight, inherit);
   line-height: var(--utrecht-document-line-height, inherit);
 }
