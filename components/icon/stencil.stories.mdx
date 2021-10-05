@@ -1,4 +1,6 @@
 import { IconGallery, IconItem, Meta } from "@storybook/addon-docs";
+import { ComponentTokensTable } from "../../documentation/components/ComponentTokensTable";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
 
 <Meta title="Utrecht/Icons" />
 
@@ -71,3 +73,7 @@ import { IconGallery, IconItem, Meta } from "@storybook/addon-docs";
     <utrecht-icon-zoomout></utrecht-icon-zoomout>
   </IconItem>
 </IconGallery>
+
+## Design Tokens
+
+<ComponentTokensTable tokens={tokens} component="utrecht-icon"></ComponentTokensTable>

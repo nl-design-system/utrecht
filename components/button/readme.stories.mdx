@@ -1,6 +1,16 @@
 import { Description, Meta } from "@storybook/addon-docs";
+import { ComponentTokensTable } from "../../documentation/components/ComponentTokensTable";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
 import document from "./README.md";
 
 <Meta title="CSS Component/Button/README" />
 
 <Description>{document}</Description>
+
+## Design Tokens
+
+<ComponentTokensTable
+  tokens={tokens}
+  component="utrecht-button"
+  modifiers={["hover", "focus", "disabled", "primary-action", "secondary-action"]}
+></ComponentTokensTable>

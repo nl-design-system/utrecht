@@ -13,7 +13,3 @@ Copyright (c) 2021 Robbert Broersma
 ## Class names
 
 - `utrecht-checkbox`
-
-## Design tokens
-
-Nog geen.

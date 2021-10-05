@@ -1,6 +1,12 @@
 import { Description, Meta } from "@storybook/addon-docs";
+import { ComponentTokensTable } from "../../documentation/components/ComponentTokensTable";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
 import document from "./README.md";
 
 <Meta title="CSS Component/Heading/Heading 3/README" />
 
 <Description>{document}</Description>
+
+## Design Tokens
+
+<ComponentTokensTable tokens={tokens} component="utrecht-heading-3"></ComponentTokensTable>
