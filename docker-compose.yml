@@ -1,0 +1,15 @@
+---
+version: "3"
+services:
+  storybook:
+    volumes:
+      - ./:/var/www
+      - /var/www/node_modules
+    build:
+      args:
+        - "NODE_ENV=development"
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - "6006"
+    command: "storybook"

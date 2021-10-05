@@ -1,0 +1,8 @@
+---
+version: "3"
+services:
+  storybook:
+    entrypoint: /bin/bash
+    command: ""
+    stdin_open: true
+    tty: true

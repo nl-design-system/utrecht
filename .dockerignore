@@ -1,0 +1,39 @@
+# Ignore 3rd party files
+node_modules/
+.npm/
+
+# Ignore generated files
+dist/
+tmp/
+*.tgz
+
+# Ignore log files
+*.err
+*.log
+*.tmp
+
+# Ignore code editor files
+.vscode/
+*.sublime-workspace
+.vs/
+
+# Ignore OS files
+.DS_Store
+
+# Ignore version control files
+.git
+
+# Ignore Docker files
+.dockerignore
+docker-compose.yml
+docker-compose.*.yml
+Dockerfile
+
+# Ignore secrets
+*.pem
+.env
+*.env
+*.env.*
+
+## The token in `.npmrc` should never end up in the Docker image
+*/.npmrc
