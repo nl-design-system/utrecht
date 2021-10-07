@@ -4,21 +4,6 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-.utrecht-page-footer {
-  grid-area: footer;
-  display: grid;
-  grid-template-areas: ". footer-left footer-right . .";
-  grid-template-rows: auto;
-  grid-template-columns: auto 18.5rem 18.5rem 37rem auto;
-}
-
-.utrecht-page-footer__content {
-  display: grid;
-  grid-template-areas: ". header header nav ." ". footer-left footer-right . .";
-  grid-template-rows: auto;
-  grid-template-columns: auto 18.5rem 18.5rem 37rem auto;
-}
-
 .utrecht-heading-2 {
   grid-area: header;
 }
