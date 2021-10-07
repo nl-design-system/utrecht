@@ -7,16 +7,17 @@
 .utrecht-page-footer {
   --utrecht-document-color: currentColor;
   --utrecht-heading-color: currentColor;
+  --utrecht-link-active-color: currentColor;
   --utrecht-link-color: currentColor;
   --utrecht-link-focus-color: currentColor;
   --utrecht-link-hover-color: currentColor;
-  --utrecht-link-active-color: currentColor;
   --utrecht-link-visited-color: currentColor;
   background-color: var(--utrecht-page-footer-background-color);
   background-image: var(--utrecht-page-footer-background-image);
   color: var(--utrecht-page-footer-color);
   font-family: var(--utrecht-document-font-family);
   font-size: var(--utrecht-document-font-size);
+  margin-block-start: -2rem;
   padding-block-end: var(--utrecht-page-footer-padding-block-end);
   padding-block-start: var(--utrecht-page-footer-padding-block-start);
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
