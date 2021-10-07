@@ -1,6 +1,8 @@
 .utrecht-logo {
   max-height: var(--utrecht-logo-max-height);
   max-width: var(--utrecht-logo-max-width);
+  min-height: var(--utrecht-logo-min-height);
+  min-width: var(--utrecht-logo-min-width);
 }
 
 .utrecht-logo__decoration-1 {
