@@ -1,0 +1,35 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+export const Template = ({ content }) => `<utrecht-page-content>${content}</utrecht-page-content>`;
+
+<Meta
+  title="Web Component/Page Content"
+  argTypes={{}}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Page Content
+
+<Canvas>
+  <Story
+    name="Page Content"
+    args={{
+      content: "",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Page Content" />
