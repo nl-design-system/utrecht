@@ -20,8 +20,8 @@
   margin-block-start: -2rem;
   padding-block-end: var(--utrecht-page-footer-padding-block-end);
   padding-block-start: var(--utrecht-page-footer-padding-block-start);
-  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
-  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+  padding-inline-end: var(--utrecht-page-footer-padding-inline-end, var(--utrecht-page-padding-inline-end));
+  padding-inline-start: var(--utrecht-page-footer-padding-inline-start, var(--utrecht-page-padding-inline-start));
 }
 
 .utrecht-page-footer__address--reset-address {

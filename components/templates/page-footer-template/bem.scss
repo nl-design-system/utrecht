@@ -1,0 +1,37 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+.utrecht-page-footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-areas: ". footer-left footer-right . .";
+  grid-template-rows: auto;
+  grid-template-columns: auto 18.5rem 18.5rem 37rem auto;
+}
+
+.utrecht-page-footer__content {
+  display: grid;
+  grid-template-areas: ". header header nav ." ". footer-left footer-right . .";
+  grid-template-rows: auto;
+  grid-template-columns: auto 18.5rem 18.5rem 37rem auto;
+}
+
+.utrecht-heading-2 {
+  grid-area: header;
+}
+
+.utrecht-page-footer__social {
+  grid-area: nav;
+  text-align: right;
+}
+
+.utrecht-page-footer__address {
+  grid-area: footer-left;
+}
+
+.utrecht-page-footer__navigation {
+  grid-area: footer-right;
+}
