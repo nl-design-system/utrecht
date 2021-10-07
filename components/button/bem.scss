@@ -7,7 +7,6 @@
 
 .utrecht-button {
   background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
-  block-size: var(--utrecht-button-block-size, auto);
   border-radius: var(--utrecht-button-border-radius);
   border-style: solid;
   border-width: var(--utrecht-button-border-width, 0);
@@ -17,6 +16,7 @@
   font-weight: var(--utrecht-button-font-weight);
   inline-size: var(--utrecht-button-inline-size, auto);
   letter-spacing: var(--utrecht-button-letter-spacing);
+  min-block-size: var(--utrecht-button-min-block-size, auto);
   min-inline-size: var(--utrecht-button-min-inline-size, 0);
   padding-block-end: var(--utrecht-button-padding-block-end);
   padding-block-start: var(--utrecht-button-padding-block-start);

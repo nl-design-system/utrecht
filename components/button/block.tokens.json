@@ -13,12 +13,6 @@
           "inherits": true
         }
       },
-      "block-size": {
-        "css": {
-          "syntax": "<length>",
-          "inherits": true
-        }
-      },
       "color": {
         "css": {
           "syntax": "<color>",
@@ -74,6 +68,12 @@
         }
       },
       "margin-inline-end": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
+      },
+      "min-block-size": {
         "css": {
           "syntax": "<length>",
           "inherits": true
