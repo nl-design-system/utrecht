@@ -29,8 +29,10 @@
   background-size: 200%;
   color: var(--utrecht-color-black);
   display: grid;
-  grid-template-columns: startcol 50% endcol 50%;
-  grid-template-rows: heading 30% content 70%;
+  grid-template-areas: "heading heading" "colleft colright";
+  grid-template-columns: startcol 1fr endcol 1fr;
+  grid-template-rows: heading minmax(6rem, auto) content minmax(6rem, auto);
+  grid-gap: none;
   padding-block-end: var(--utrecht-space-block-lg);
   padding-block-start: var(--utrecht-space-block-lg);
   padding-inline-end: var(--utrecht-space-inline-lg);
@@ -38,17 +40,15 @@
 }
 
 .utrecht-contact-card__heading {
-  grid-row-start: heading;
-  grid-column-start: startcol 2;
+  // grid-area: heading;
+  grid-column: span 2;
 }
 
 .utrecht-contact-card__section--telephone {
-  grid-row-start: content;
-  grid-column-start: startcol;
+  grid-area: colleft;
 }
 .utrecht-contact-card__section--card {
-  grid-row-start: content;
-  grid-column-start: endcol;
+  grid-area: colright;
 }
 
 .utrecht-contact-card__section {
