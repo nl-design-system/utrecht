@@ -5,6 +5,6 @@
 
 @import "./bem";
 
-.utrecht-html input[type="radio"] {
+.utrecht-html input[type="radio" i] {
   @extend .utrecht-radio-button;
 }
