@@ -10,7 +10,7 @@
   @extend .utrecht-button--distanced;
 }
 
-.utrecht-html button[type="submit"] {
+.utrecht-html button[type="submit" i] {
   @extend .utrecht-button--submit;
 }
 

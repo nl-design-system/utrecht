@@ -5,6 +5,6 @@
 
 @import "./bem";
 
-.utrecht-html input[type="checkbox"] {
+.utrecht-html input[type="checkbox" i] {
   @extend .utrecht-checkbox;
 }

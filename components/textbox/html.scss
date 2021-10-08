@@ -7,13 +7,13 @@
 
 .utrecht-html {
   input:not([type]),
-  input[type="email"],
-  input[type="number"],
-  input[type="password"],
-  input[type="search"],
-  input[type="tel"],
-  input[type="text"],
-  input[type="url"] {
+  input[type="email" i],
+  input[type="number" i],
+  input[type="password" i],
+  input[type="search" i],
+  input[type="tel" i],
+  input[type="text" i],
+  input[type="url" i] {
     @extend .utrecht-textbox;
     @extend .utrecht-textbox--html-input;
   }
