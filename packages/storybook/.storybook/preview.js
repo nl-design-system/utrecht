@@ -14,7 +14,7 @@ defineCustomElements();
 export const decorators = [
   // Enable `utrecht-document` component as backdrop
   // Enable `utrecht-theme` to configure the design tokens
-  (story) => `<div class="utrecht-document utrecht-theme">${story()}</div>`,
+  (story) => `<div class="utrecht-document utrecht-document--surface utrecht-theme">${story()}</div>`,
 ];
 
 const defaultTab = {
