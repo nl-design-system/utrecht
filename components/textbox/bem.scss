@@ -119,6 +119,10 @@
   opacity: 100%;
 }
 
+.utrecht-textbox--password {
+  font-variant-numeric: slashed-zero;
+}
+
 .utrecht-textbox--html-input {
   &:disabled {
     @extend .utrecht-textbox--disabled;
