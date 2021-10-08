@@ -17,4 +17,9 @@
     @extend .utrecht-textbox;
     @extend .utrecht-textbox--html-input;
   }
+
+  input[autocomplete="current-password" i],
+  input[autocomplete="new-password" i] {
+    @extend .utrecht-textbox--password;
+  }
 }
