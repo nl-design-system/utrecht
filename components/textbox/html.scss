@@ -18,8 +18,32 @@
     @extend .utrecht-textbox--html-input;
   }
 
-  input[autocomplete="current-password" i],
-  input[autocomplete="new-password" i] {
+  input[autocomplete~="current-password" i],
+  input[autocomplete~="new-password" i] {
     @extend .utrecht-textbox--password;
+  }
+
+  input[autocomplete~="bday" i],
+  input[autocomplete~="bday-day" i],
+  input[autocomplete~="bday-month" i],
+  input[autocomplete~="bday-year" i],
+  input[autocomplete~="cc-csc" i],
+  input[autocomplete~="cc-exp" i],
+  input[autocomplete~="cc-exp-month" i],
+  input[autocomplete~="cc-exp-year" i],
+  input[autocomplete~="cc-number" i],
+  input[autocomplete~="one-time-code" i],
+  input[autocomplete~="postal-code" i],
+  input[autocomplete~="tel" i],
+  input[autocomplete~="tel-area-code" i],
+  input[autocomplete~="tel-country-code" i],
+  input[autocomplete~="tel-extension" i],
+  input[autocomplete~="tel-local" i],
+  input[autocomplete~="tel-national" i],
+  input[autocomplete~="transaction-amount" i],
+  input[inputmode="decimal" i],
+  input[inputmode="numeric" i],
+  input[type="number" i] {
+    @extend .utrecht-textbox--numeric;
   }
 }
