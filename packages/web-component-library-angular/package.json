@@ -17,7 +17,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "ng build",
+    "build": "npm run build:web-components",
+    "build:web-components": "ng build",
     "clean": "rimraf dist/"
   },
   "peerDependencies": {
