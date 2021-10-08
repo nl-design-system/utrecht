@@ -4,7 +4,7 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Breadcrumb } from "./bem.js";
+import { Breadcrumb, exampleItems } from "./bem.js";
 import "./bem.scss";
 
 <Meta
@@ -41,12 +41,7 @@ import "./bem.scss";
   <Story
     name="Breadcrumb navigation"
     args={{
-      items: [
-        { href: "https://example.com/", title: "Home", focus: true },
-        { href: "https://example.com/a/", title: "Wonen en leven" },
-        { href: "https://example.com/a/b/", title: "Afval" },
-        { href: "https://example.com/a/b/c/", title: "Kliko's", current: true },
-      ],
+      items: exampleItems,
       microdata: true,
       variant: "arrows",
     }}

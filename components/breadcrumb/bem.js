@@ -5,6 +5,13 @@
 
 import clsx from 'clsx';
 
+export const exampleItems = [
+  { href: 'https://example.com/', title: 'Home', focus: true },
+  { href: 'https://example.com/a/', title: 'Wonen en leven' },
+  { href: 'https://example.com/a/b/', title: 'Afval' },
+  { href: 'https://example.com/a/b/c/', title: "Kliko's", current: true },
+];
+
 export const Breadcrumb = ({ items, microdata, variant }) => `<nav class="${clsx(
   'utrecht-breadcrumb',
   variant === 'arrows' && 'utrecht-breadcrumb--arrows',
