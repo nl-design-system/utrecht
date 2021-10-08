@@ -1,0 +1,34 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Description, Meta, Source } from "@storybook/addon-docs";
+import { ComponentTokensTable } from "../../documentation/components/ComponentTokensTable";
+import { utrechtSurfaceBackgroundColor } from "../../proprietary/design-tokens/dist/index.js";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
+import document from "./README.md";
+
+<Meta title="CSS Component/Surface/README" />
+
+<Description>{document}</Description>
+
+## Theme color
+
+To make the browser user interface match your websites surface background color, you can include the following code in the `<head>` element of your pages:
+
+<Source language="html" code={`<meta name="theme-color" content="${utrechtSurfaceBackgroundColor}">`} />
+
+For projects that use JSX and React, the following code sample shows how to refer to the design token package to automatically use the most recent choice of color.
+
+```jsx
+import { utrechtSurfaceBackgroundColor } from "@utrecht/design-tokens/dist/index";
+
+export const ThemeColor = () => <meta name="theme-color" content={utrechtSurfaceBackgroundColor} />;
+```
+
+See for more information: [`theme-color` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color)
+
+## Design Tokens
+
+<ComponentTokensTable tokens={tokens} component="utrecht-surface"></ComponentTokensTable>
