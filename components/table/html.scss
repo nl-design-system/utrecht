@@ -47,9 +47,15 @@
   @extend .utrecht-table__cell--last-header-row;
 }
 
-.utrecht-html th.numeric,
+.utrecht-html thead > tr > th.numeric,
+.utrecht-html tfoot > tr > th.numeric,
+.utrecht-html th[scope="column"].numeric {
+  @extend .utrecht-table__cell--numeric-column;
+}
+
 .utrecht-html td.numeric {
-  @extend .utrecht-table__cell--numeric;
+  @extend .utrecht-table__cell--numeric-column;
+  @extend .utrecht-table__cell--numeric-data;
 }
 
 .utrecht-html table.alternate-row-color {

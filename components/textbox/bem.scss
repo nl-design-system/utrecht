@@ -119,6 +119,10 @@
   opacity: 100%;
 }
 
+.utrecht-textbox--numeric {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
 .utrecht-textbox--password {
   font-variant-numeric: slashed-zero;
 }
