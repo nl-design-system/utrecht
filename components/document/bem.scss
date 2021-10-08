@@ -5,7 +5,6 @@
 
 .utrecht-document {
   /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
-  background-color: var(--utrecht-document-background-color, inherit);
   color: var(--utrecht-document-color, inherit);
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-document-font-size, inherit);
@@ -17,4 +16,8 @@
     /* `letter-spacing` design tokens break Arabic text rendering, avoid that */
     letter-spacing: 0 !important;
   }
+}
+
+.utrecht-document--surface {
+  background-color: var(--utrecht-document-background-color, inherit);
 }
