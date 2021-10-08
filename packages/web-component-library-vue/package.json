@@ -17,7 +17,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npm run build:web-components",
+    "build:web-components": "tsc -p .",
     "clean": "rimraf dist/"
   },
   "main": "./dist/components.js",

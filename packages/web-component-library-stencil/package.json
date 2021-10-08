@@ -43,7 +43,7 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
-    "build:stencil": "stencil build",
+    "build:web-components": "stencil build",
     "build:typescript": "tsc",
     "clean": "npm-run-all clean:**",
     "clean:stencil": "rimraf dist/",
