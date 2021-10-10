@@ -4,7 +4,8 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ content }) => `<utrecht-page-header>${content}</utrecht-page-header>`;
+export const Template = ({ content }) => `<utrecht-page-header>
+<div slot="logo">logo</div><div slot="nav">nav</div><div slot="lang">lang</div>${content}</utrecht-page-header>`;
 
 <Meta
   title="Web Component/Page Header"

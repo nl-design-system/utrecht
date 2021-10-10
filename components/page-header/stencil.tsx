@@ -14,7 +14,18 @@ export class PageHeader {
   render() {
     return (
       <header class="utrecht-page-header">
-        <slot></slot>
+        <div class="utrecht-page-header__content">
+          <div class="utrecht-page-header__logo">
+            <slot name="logo"></slot>
+          </div>
+          <div class="utrecht-page-header__lang">
+            <slot name="lang"></slot>
+          </div>
+          <nav class="utrecht-page-header__nav">
+            <slot name="nav"></slot>
+          </nav>
+          <slot></slot>
+        </div>
       </header>
     );
   }

@@ -12,3 +12,9 @@
 :host([hidden]) {
   display: none !important;
 }
+
+.utrecht-page-header__logo:empty {
+  min-width: 2em;
+  min-height: 2em;
+  background-color: red;
+}
