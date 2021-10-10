@@ -11,9 +11,10 @@
 }
 
 .utrecht-surface {
-  @include reset-body;
-
   background-color: var(--utrecht-surface-background-color, inherit);
   color: var(--utrecht-surface-color, inherit);
-  min-height: 100%;
+}
+
+.utrecht-surface--reset-body {
+  @include reset-body;
 }
