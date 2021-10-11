@@ -4,11 +4,16 @@ Copyright (c) 2021 Robbert Broersma
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ content }) => `<utrecht-page-footer>${content}</utrecht-page-footer>`;
+export const Template = ({ innerHTML = "" }) => `<utrecht-page-footer>${innerHTML}</utrecht-page-footer>`;
 
 <Meta
   title="Web Component/Page Footer"
-  argTypes={{}}
+  argTypes={{
+    innerHTML: {
+      description: "HTML content",
+      control: "text",
+    },
+  }}
   parameters={{
     docs: {
       transformSource: (_src, { args }) => Template(args),
@@ -25,7 +30,7 @@ export const Template = ({ content }) => `<utrecht-page-footer>${content}</utrec
   <Story
     name="Page Footer"
     args={{
-      content: "",
+      innerHTML: "Footer content",
     }}
   >
     {Template.bind({})}
