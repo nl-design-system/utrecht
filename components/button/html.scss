@@ -5,12 +5,16 @@
 
 @import "./bem";
 
+.utrecht-html input[type="button" i],
+.utrecht-html input[type="reset" i],
+.utrecht-html input[type="submit" i],
 .utrecht-html button {
   @extend .utrecht-button;
   @extend .utrecht-button--distanced;
 }
 
-.utrecht-html button[type="submit" i] {
+.utrecht-html button[type="submit" i],
+.utrecht-html input[type="submit" i] {
   @extend .utrecht-button--submit;
 }
 
