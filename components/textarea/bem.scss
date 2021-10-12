@@ -15,6 +15,7 @@
   border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color));
   border-radius: var(--utrecht-textarea-border-radius, var(--utrecht-form-input-border-radius, 0));
   border-style: solid;
+  box-sizing: border-box;
   color: var(--utrecht-textarea-color, var(--utrecht-form-input-color));
   font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-input-font-family));
   font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-input-font-size, 1em));
