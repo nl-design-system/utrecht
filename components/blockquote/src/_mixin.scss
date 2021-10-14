@@ -5,6 +5,10 @@
 
 @mixin utrecht-blockquote {
   background-color: var(--utrecht-blockquote-background-color);
+  border-color: var(--utrecht-blockquote-border-color);
+  border-inline-start-width: var(--utrecht-blockquote-border-inline-start-width, 0);
+  border-style: solid;
+  border-width: 0;
   color: var(--utrecht-blockquote-color);
   font-family: var(--utrecht-document-font-family);
   font-size: var(--utrecht-blockquote-font-size);
