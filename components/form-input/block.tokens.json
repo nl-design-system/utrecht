@@ -43,6 +43,12 @@
           "inherits": true
         }
       },
+      "font-style": {
+        "css": {
+          "syntax": "inherit | italic | normal",
+          "inherits": true
+        }
+      },
       "max-inline-size": {
         "css": {
           "syntax": "<length>",
