@@ -29,6 +29,10 @@
   @extend .utrecht-link--external;
 }
 
+.utrecht-html a[href^="mailto:" i] {
+  @extend .utrecht-link--email;
+}
+
 .utrecht-html a[href^="tel:" i] {
   @extend .utrecht-link--telephone;
 }
