@@ -9,7 +9,8 @@
   background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
   block-size: var(--utrecht-button-block-size, auto);
   border-radius: var(--utrecht-button-border-radius);
-  border-width: var(--utrecht-button-border-width);
+  border-style: solid;
+  border-width: var(--utrecht-button-border-width, 0);
   color: var(--utrecht-button-primary-action-color, var(--utrecht-button-color));
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
