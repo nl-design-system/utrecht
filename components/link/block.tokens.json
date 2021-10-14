@@ -12,6 +12,12 @@
           "syntax": "none | underline",
           "inherits": true
         }
+      },
+      "text-underline-offset": {
+        "css": {
+          "syntax": "<length>",
+          "inherits": true
+        }
       }
     }
   }

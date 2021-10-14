@@ -9,6 +9,8 @@
 .utrecht-link {
   color: var(--utrecht-link-color, blue);
   text-decoration: var(--utrecht-link-text-decoration, underline);
+  text-decoration-skip-ink: all;
+  text-underline-offset: var(--utrecht-link-text-underline-offset);
 }
 
 .utrecht-link:visited,
