@@ -98,7 +98,7 @@
     "test": "npm run test-workspaces",
     "test-workspaces": "lerna run --no-bail test",
     "watch:stencil": "lerna run watch:stencil",
-    "prewatch:storybook": "lerna run build:stencil && lerna run build:style-dictionary",
+    "prewatch:storybook": "lerna run build:style-dictionary && lerna run build:web-components",
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.json --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
