@@ -115,6 +115,7 @@
     --utrecht-textarea-placeholder-color,
     var(--utrecht-form-input-placeholder-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
   );
+  font-style: var(--utrecht-form-input-placeholder-font-style);
   opacity: 100%;
 }
 
