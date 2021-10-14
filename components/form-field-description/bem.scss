@@ -31,3 +31,7 @@
     var(--utrecht-feedback-valid-color, var(--utrecht-feedback-safe-color))
   );
 }
+
+.utrecht-form-field-description--warning {
+  color: var(--utrecht-form-field-description-warning-color, var(--utrecht-feedback-warning-color));
+}
