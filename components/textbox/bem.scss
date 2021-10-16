@@ -127,6 +127,10 @@
   font-variant-numeric: slashed-zero;
 }
 
+.utrecht-textbox--url {
+  font-variant-ligatures: none;
+}
+
 .utrecht-textbox--html-input {
   &:disabled {
     @extend .utrecht-textbox--disabled;

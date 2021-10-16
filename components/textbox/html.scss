@@ -28,6 +28,10 @@
     @extend .utrecht-textbox--password;
   }
 
+  input[type="url" i] {
+    @extend .utrecht-textbox--url;
+  }
+
   input[autocomplete~="bday" i],
   input[autocomplete~="bday-day" i],
   input[autocomplete~="bday-month" i],
