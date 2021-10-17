@@ -4,7 +4,7 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-link {
   color: var(--utrecht-link-color, blue);
@@ -34,6 +34,11 @@
   @include utrecht-focus();
   color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
   text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+}
+
+.utrecht-link:focus-visible,
+.utrecht-link--focus-visible {
+  @include utrecht-focus-visible();
 }
 
 /* stylelint-disable-next-line block-no-empty */

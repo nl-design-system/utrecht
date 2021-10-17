@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-mapcontrolbutton {
   --utrecht-icon-size: var(--utrecht-mapcontrolbutton-min-block-size);
@@ -32,6 +32,11 @@
   background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
   border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
   color: var(--utrecht-mapcontrolbutton-disabled-color);
+}
+
+.utrecht-mapcontrolbutton--focus-visible,
+.utrecht-mapcontrolbutton:focus-visible {
+  @include utrecht-focus-visible;
 }
 
 .utrecht-mapcontrolbutton--focus,

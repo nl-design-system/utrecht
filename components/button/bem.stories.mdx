@@ -23,6 +23,10 @@ import "./bem.scss";
       description: "Focus",
       control: "boolean",
     },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
     hover: {
       description: "Hover",
       control: "boolean",
@@ -104,6 +108,23 @@ Styling via the `.utrecht-button--focus` class name:
     args={{
       textContent: "Read more...",
       focus: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Focus visible
+
+Styling via the `.utrecht-button--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Button focus visible"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+      focusVisible: true,
     }}
   >
     {Button.bind({})}

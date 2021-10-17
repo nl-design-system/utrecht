@@ -9,15 +9,24 @@ import clsx from 'clsx';
 export const defaultArgs = {
   disabled: false,
   focus: false,
+  focusVisible: false,
   hover: false,
   icon: null,
   label: '',
 };
 
-export const MapControlButton = ({ disabled = false, focus = false, hover = false, label = '', icon = null }) =>
+export const MapControlButton = ({
+  disabled = false,
+  focus = false,
+  focusVisible = false,
+  hover = false,
+  label = '',
+  icon = null,
+}) =>
   `<button type="button" class="${clsx('utrecht-mapcontrolbutton', {
     'utrecht-mapcontrolbutton--hover': hover,
     'utrecht-mapcontrolbutton--focus': focus,
+    'utrecht-mapcontrolbutton--focus-visible': focusVisible,
     'utrecht-mapcontrolbutton--disabled': disabled,
   })}"${disabled ? ' aria-disabled="true"' : ''}>
     ${icon ? `<${icon} class="utrecht-mapcontrolbutton__icon"></${icon}>` : ''}

@@ -25,6 +25,10 @@
   @extend .utrecht-link--focus;
 }
 
+.utrecht-html a:focus-visible {
+  @extend .utrecht-link--focus-visible;
+}
+
 .utrecht-html a[rel~="external" i] {
   @extend .utrecht-link--external;
 }

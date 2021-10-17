@@ -27,7 +27,7 @@ export const TextBox = ({
   `<input class="${clsx(
     'utrecht-textbox',
     disabled && 'utrecht-textbox--disabled',
-    focus && 'utrecht-textbox--focus',
+    focus && 'utrecht-textbox--focus utrecht-textbox--focus-visible',
     invalid && 'utrecht-textbox--invalid',
     readOnly && 'utrecht-textbox--readonly',
     required && 'utrecht-textbox--required',

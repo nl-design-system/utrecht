@@ -27,6 +27,10 @@ import "./bem.scss";
       description: "Focus",
       control: "boolean",
     },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
     href: {
       description: "Target URL",
       type: {
@@ -110,6 +114,23 @@ Styling via the `.utrecht-link--focus` class name:
     name="Link focus"
     args={{
       focus: true,
+      textContent: "Read more...",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+### Focus-visible state
+
+Styling via the `.utrecht-link--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Link focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
       textContent: "Read more...",
     }}
   >

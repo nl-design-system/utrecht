@@ -11,6 +11,7 @@ export const defaultArgs = {
   busy: false,
   disabled: false,
   focus: false,
+  focusVisible: false,
   hover: false,
   textContent: '',
   type: 'button',
@@ -21,6 +22,7 @@ export const Button = ({
   busy = false,
   disabled = false,
   focus = false,
+  focusVisible = false,
   hover = false,
   textContent = '',
   type = 'button',
@@ -30,5 +32,6 @@ export const Button = ({
     'utrecht-button--busy': busy,
     'utrecht-button--hover': hover,
     'utrecht-button--focus': focus,
+    'utrecht-button--focus-visible': focusVisible,
     'utrecht-button--disabled': disabled,
   })}"${disabled ? ' aria-disabled="true"' : ''} type="${type}">${textContent}</button>`;

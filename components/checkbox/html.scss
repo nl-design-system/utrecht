@@ -7,4 +7,12 @@
 
 .utrecht-html input[type="checkbox" i] {
   @extend .utrecht-checkbox;
+
+  &:focus {
+    @extend .utrecht-checkbox--focus;
+  }
+
+  &:focus-visible {
+    @extend .utrecht-checkbox--focus-visible;
+  }
 }

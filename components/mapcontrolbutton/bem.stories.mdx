@@ -16,6 +16,10 @@ import "./bem.scss";
       description: "Focus",
       control: "boolean",
     },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
     hover: {
       description: "Hover",
       control: "boolean",
@@ -90,6 +94,28 @@ Styling via the `.utrecht-mapcontrolbutton--focus` class name:
     name="Map Control Button focus"
     args={{
       focus: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-mapcontrolbutton--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Map Control Button focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
       icon: "utrecht-icon-zoomin",
     }}
     parameters={{
