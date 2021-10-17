@@ -16,15 +16,36 @@
   @include reset-input-checkbox;
 }
 
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox--checked {
+}
+
 .utrecht-checkbox--disabled {
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
-.utrecht-checkbox--focus,
-.utrecht-checkbox:focus {
+.utrecht-checkbox--focus {
   @include utrecht-focus;
 }
 
 .utrecht-checkbox--focus-visible {
   @include utrecht-focus-visible;
+}
+
+.utrecht-checkbox--html-input {
+  &:checked {
+    @extend .utrecht-checkbox--checked;
+  }
+
+  &:disabled {
+    @extend .utrecht-checkbox--disabled;
+  }
+
+  &:focus {
+    @extend .utrecht-checkbox--focus;
+  }
+
+  &:focus-visible {
+    @extend .utrecht-checkbox--focus-visible;
+  }
 }
