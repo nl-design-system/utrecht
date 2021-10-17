@@ -1,5 +1,4 @@
 {
-  "extends": ["plugin:react/recommended", "eslint-config-prettier"],
   "env": {
     "browser": true,
     "es6": true,
@@ -23,17 +22,28 @@
       "files": ["*.json"]
     },
     {
-      "extends": ["./.eslintrc.js.json", "./.eslintrc.react.json", "plugin:mdx/overrides"],
-      "files": ["*.mdx"]
+      "extends": ["plugin:react/recommended", "eslint-config-prettier", "plugin:mdx/overrides"],
+      "files": ["*.mdx"],
+      "plugins": []
     },
     {
-      "extends": ["./.eslintrc.js.json", "./.eslintrc.react.json"],
+      "extends": [
+        "plugin:react/recommended",
+        "eslint-config-prettier",
+        "./.eslintrc.js.json",
+        "./.eslintrc.react.json"
+      ],
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "plugins": ["@typescript-eslint", "import"]
     },
     {
-      "extends": ["./.eslintrc.js.json", "./.eslintrc.react.json"],
+      "extends": [
+        "plugin:react/recommended",
+        "eslint-config-prettier",
+        "./.eslintrc.js.json",
+        "./.eslintrc.react.json"
+      ],
       "files": ["components/**/stencil.tsx", "components/**/*.stencil.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
@@ -43,7 +53,7 @@
     },
     {
       "excludedFiles": ["components/**/stencil.tsx", "components/**/*.stencil.tsx"],
-      "extends": ["./.eslintrc.js.json"],
+      "extends": ["plugin:react/recommended", "eslint-config-prettier", "./.eslintrc.js.json"],
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
