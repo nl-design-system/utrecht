@@ -21,12 +21,28 @@
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
-.utrecht-radio-button--focus,
-.utrecht-radio-button:focus {
+.utrecht-radio-button--focus {
   @include utrecht-focus;
 }
 
-.utrecht-radio-button--focus-visible,
-.utrecht-radio-button:focus-visible {
+.utrecht-radio-button--focus-visible {
   @include utrecht-focus-visible;
+}
+
+.utrecht-radio-button--html-input {
+  &:checked {
+    @extend .utrecht-radio-button--checked;
+  }
+
+  &:disabled {
+    @extend .utrecht-radio-button--disabled;
+  }
+
+  &:focus {
+    @extend .utrecht-radio-button--focus;
+  }
+
+  &:focus-visible {
+    @extend .utrecht-radio-button--focus-visible;
+  }
 }
