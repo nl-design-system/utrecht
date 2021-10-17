@@ -7,4 +7,12 @@
 
 .utrecht-html input[type="radio" i] {
   @extend .utrecht-radio-button;
+
+  &:focus {
+    @extend .utrecht-radio-button--focus;
+  }
+
+  &:focus-visible {
+    @extend .utrecht-radio-button--focus-visible;
+  }
 }

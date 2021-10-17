@@ -1,4 +1,4 @@
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-menulijst {
   border-bottom: var(--utrecht-border-width-md) solid var(--utrecht-color-grey-90);
@@ -32,4 +32,8 @@
 
 .utrecht-menulijst__link--focus {
   @include utrecht-focus;
+}
+
+.utrecht-menulijst__link--focus-visible {
+  @include utrecht-focus-visible;
 }

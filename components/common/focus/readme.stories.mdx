@@ -1,0 +1,151 @@
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import clsx from "clsx";
+import { ComponentTokensTable } from "../../../documentation/components/ComponentTokensTable";
+import tokens from "../../../proprietary/design-tokens/dist/index.json";
+import readme from "./README.md";
+
+export const bem = (block, modifiers, classNames) =>
+  clsx(
+    block,
+    classNames,
+    modifiers &&
+      Object.fromEntries(
+        Object.entries(modifiers)
+          .filter(([key]) => key)
+          .map(([key, value]) => [`${block}--${key}`, value])
+      )
+  );
+
+export const FocusHTMLExample = () => `
+<div class="utrecht-html">
+  <div><a href="https://example.com" target="_new">example.com</a></div>
+  <div><input type="text"></div>
+  <div><input type="checkbox"></div>
+  <div><input type="radio"></div>
+  <div><select><option>Example</option></select></div>
+  <div><textarea></textarea></div>
+  <div><button type="button">Click me</button></div>
+</div>
+`;
+
+export const FocusBEMExample = ({ modifiers = {} }) => `
+<div>
+  <div><a href="https://example.com" target="_new" class="${bem("utrecht-link", modifiers)}">example.com</a></div>
+  <div><input type="text" class="${bem("utrecht-textbox", modifiers, "utrecht-textbox--html-input")}"></div>
+  <div><input type="checkbox" class="${bem("utrecht-checkbox", modifiers, "utrecht-textbox--html-input")}"></div>
+  <div><input type="radio" class="${bem("utrecht-radio-button", modifiers, "utrecht-textbox--html-input")}"></div>
+  <div><select class="${bem(
+    "utrecht-select",
+    modifiers,
+    "utrecht-select--html-select"
+  )}"><option>Example</option></select></div>
+  <div><textarea class="${bem("utrecht-textarea", modifiers, "utrecht-textarea--html-textarea")}"></textarea></div>
+  <div><button type="button" class="${bem("utrecht-button", modifiers)}">Click me</button></div>
+</div>
+`;
+
+<Meta title="Common Patterns/Focus" />
+
+<Description>{readme}</Description>
+
+## Example
+
+### Focusable
+
+<Canvas>
+  <Story
+    name="Focus with BEM"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => FocusBEMExample(args),
+      },
+      percy: { skip: true },
+    }}
+  >
+    {FocusBEMExample.bind({})}
+  </Story>
+</Canvas>
+
+### Focused
+
+<Canvas>
+  <Story
+    name="Focus with BEM and :focus"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => FocusBEMExample(args),
+      },
+      percy: { skip: true },
+    }}
+    args={{
+      modifiers: {
+        focus: true,
+      },
+    }}
+  >
+    {FocusBEMExample.bind({})}
+  </Story>
+</Canvas>
+
+### Focus visible
+
+<Canvas>
+  <Story
+    name="Focus with BEM and :focus-visible"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => FocusBEMExample(args),
+      },
+      percy: { skip: true },
+    }}
+    args={{
+      modifiers: {
+        "focus-visible": true,
+      },
+    }}
+  >
+    {FocusBEMExample.bind({})}
+  </Story>
+</Canvas>
+
+### Focus and focus visible
+
+<Canvas>
+  <Story
+    name="Focus with BEM and both :focus and :focus-visible"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => FocusBEMExample(args),
+      },
+      percy: { skip: true },
+    }}
+    args={{
+      modifiers: {
+        focus: true,
+        "focus-visible": true,
+      },
+    }}
+  >
+    {FocusBEMExample.bind({})}
+  </Story>
+</Canvas>
+
+### Focusable HTML
+
+<Canvas>
+  <Story
+    name="Focus with HTML"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => FocusHTMLExample(args),
+      },
+      percy: { skip: true },
+    }}
+  >
+    {FocusHTMLExample.bind({})}
+  </Story>
+</Canvas>
+
+## Design Tokens
+
+<ComponentTokensTable tokens={tokens} component="utrecht-focus"></ComponentTokensTable>

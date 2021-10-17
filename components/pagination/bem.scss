@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-pagination {
   font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
@@ -51,6 +51,11 @@
 .utrecht-pagination__relative-link--focus,
 .utrecht-pagination__relative-link:focus {
   @include utrecht-focus;
+}
+
+.utrecht-pagination__relative-link--focus-visible,
+.utrecht-pagination__relative-link:focus-visible {
+  @include utrecht-focus-visible;
 }
 
 .utrecht-pagination__relative-link--hover,

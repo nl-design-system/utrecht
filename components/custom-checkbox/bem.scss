@@ -4,7 +4,7 @@
  */
 
 @import "../checkbox/bem";
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-custom-checkbox {
   --utrecht-icon-size: var(--utrecht-custom-checkbox-icon-size, calc(0.75 * var(--utrecht-custom-checkbox-size)));
@@ -92,6 +92,8 @@
 }
 
 .utrecht-custom-checkbox__box--focus {
+  @include utrecht-focus();
+
   background-color: var(
     --utrecht-custom-checkbox-focus-background-color,
     var(--utrecht-custom-checkbox-background-color)
@@ -102,7 +104,7 @@
 }
 
 .utrecht-custom-checkbox__box--focus-visible {
-  @include utrecht-focus();
+  @include utrecht-focus-visible();
 }
 
 .utrecht-custom-checkbox__input:focus ~ .utrecht-custom-checkbox__box {

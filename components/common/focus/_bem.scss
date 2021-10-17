@@ -1,0 +1,30 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin utrecht-focus-ring {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: 0;
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-focus {
+}
+
+@mixin utrecht-focus-visible {
+  @include utrecht-focus-ring();
+}
+
+@mixin utrecht-focus-pseudo-classes {
+  :focus {
+    @include utrecht-focus;
+  }
+  :focus-visible {
+    @include utrecht-focus-visible;
+  }
+}

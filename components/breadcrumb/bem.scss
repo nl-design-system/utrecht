@@ -92,6 +92,11 @@ ol.utrecht-breadcrumb__list {
     z-index: 1;
   }
 
+  .utrecht-breadcrumb__link--focus,
+  .utrecht-breadcrumb__link:focus {
+    background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+  }
+
   .utrecht-breadcrumb__link--focus::after,
   .utrecht-breadcrumb__link:focus::after {
     border-inline-start-color: var(--utrecht-breadcrumb-link-focus-background-color);
