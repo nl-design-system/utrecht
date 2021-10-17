@@ -45,6 +45,7 @@ const sidebarOrder = {
           'Gebruikersonderzoek',
           ['Gebruikersonderzoek'],
         ],
+        'NL Design System',
         'Onderzoek',
         'CSS Component',
         ['README'],
