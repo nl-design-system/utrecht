@@ -13,11 +13,11 @@ Browser support for [`:focus-visible`](https://developer.mozilla.org/en-US/docs/
 
 `:focus`:
 
-- not visible on disabled interactive elements
-- only in this state for a very short time when a mouse click or touch interaction triggers activation, for components such as Button or Link
-- in this state for longer for elements that cannot be activated, such as a textbox
-- remains in this state after activiation for some components, such as checkbox
-- visual effect can vary a bit per component:
+- Not visible on disabled interactive elements.
+- Only in this state for a very short time when a mouse click or touch interaction triggers activation, for components such as a button or link.
+- In this state for longer for elements that cannot be activated, such as a textbox.
+- Remains in this state after activation for some components, such as a checkbox.
+- Visual effect can vary per component:
   - different background color
   - different border width
   - different border color
@@ -25,13 +25,13 @@ Browser support for [`:focus-visible`](https://developer.mozilla.org/en-US/docs/
 
 `:focus-visible`:
 
-- visible even on disabled interactive elements
-- looks very similar accross components, because user needs to keep track of focused element
-- should draw attention
+- Visible even on disabled interactive elements.
+- Looks very similar across components, because user needs to keep track of focused element.
+- Should draw attention.
 
 ## Design for `:focus`
 
-- The design for `:focus` should be distinguishable from the `:hover` design. When a user did not configure their system to always make focus visible using for example a focus ring, the user should be able to know which component will be activated when pressing `Enter`. When focus and hover state look the same, it might not possible to know which element would be activated.
+- The design for `:focus` should be distinguishable from the `:hover` design. When a user did not configure their system to always make focus visible using for example a focus ring, the user should be able to know which component will be activated when pressing the `Enter` key. When focus and hover state look similar, it might not possible to know which element would be activated.
 - When using color, use a consistent color to convey focus. Choose a color that can be combined with other states, such as combining the red color for invalid state with your color for focus state.
 - When changing the `font-weight` of a component as focus state, it might cause unintended layout shifts, so it might not be the ideal option.
 
