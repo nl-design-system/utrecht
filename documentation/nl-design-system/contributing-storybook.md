@@ -39,7 +39,7 @@ To enpower a wide variety of experts to contribute and publish our documentation
 `readme.stories.mdx`:
 
 ```mdx
-import { Description, Meta } from "@storybook/addon-docs/blocks";
+import { Description, Meta } from "@storybook/addon-docs";
 
 import markdown from "./readme.md";
 
