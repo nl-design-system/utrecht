@@ -9,7 +9,7 @@ export class IconZoomOut {
   render() {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-6 -11 24 24">
-        <title>zoomin</title>
+        <title>zoom out</title>
         <g>
           <path
             fill="currentColor"
