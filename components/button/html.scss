@@ -25,11 +25,11 @@
   @extend .utrecht-button--busy;
 }
 
-.utrecht-html button:hover {
+.utrecht-html button:hover:not([aria-disabled="true"]):not(:disabled) {
   @extend .utrecht-button--hover;
 }
 
-.utrecht-html button:focus {
+.utrecht-html button:focus:not([aria-disabled="true"]):not(:disabled) {
   @extend .utrecht-button--focus;
 }
 

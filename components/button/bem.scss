@@ -49,7 +49,7 @@
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
-.utrecht-button:active,
+.utrecht-button:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
 .utrecht-button--active {
   background-color: var(--utrecht-button-active-background-color, var(--utrecht-button-background-color));
   color: var(--utrecht-button-active-color, var(--utrecht-button-color));
@@ -61,14 +61,13 @@
 }
 
 .utrecht-button--focus,
-.utrecht-button:not(.utrecht-button--disabled):focus {
-  @include utrecht-focus;
+.utrecht-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):focus {
   background-color: var(--utrecht-button-focus-background-color, var(--utrecht-button-background-color));
   color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
 }
 
 .utrecht-button--hover:not(:disabled),
-.utrecht-button:hover:not(:disabled):not(.utrecht-button--disabled) {
+.utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   background-color: var(--utrecht-button-hover-background-color, var(--utrecht-button-background-color));
   color: var(--utrecht-button-hover-color, var(--utrecht-button-color));
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
