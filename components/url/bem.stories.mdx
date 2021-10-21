@@ -23,6 +23,7 @@ import "./bem.scss";
     docs: {
       transformSource: (_src, { args }) => URLTemplate(args),
     },
+    // This story is rendered as regular text, no testing required
     percy: { skip: true },
     status: {
       type: "WORK IN PROGRESS",
@@ -76,6 +77,7 @@ When displaying an URL in HTML, explicitly mark the text directionality as left-
     }}
     name="URL with right-to-left top-level domain"
     parameters={{
+      // This story is rendered as regular text, no testing required
       percy: { skip: true },
     }}
   >
@@ -94,6 +96,7 @@ It can be helpful to avoid rendering characters together as a ligatures, such as
       url: "https://example.fi/",
     }}
     parameters={{
+      // This story uses different text rendering for ligatures, include in visual regression test
       percy: { skip: false },
     }}
     name="URL with common ligatures in top-level-domain"
