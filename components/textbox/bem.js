@@ -26,6 +26,7 @@ export const TextBox = ({
 }) =>
   `<input class="${clsx(
     'utrecht-textbox',
+    'utrecht-textbox--html-input',
     disabled && 'utrecht-textbox--disabled',
     focus && 'utrecht-textbox--focus utrecht-textbox--focus-visible',
     invalid && 'utrecht-textbox--invalid',
