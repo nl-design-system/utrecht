@@ -18,7 +18,10 @@
   @extend .utrecht-button--submit;
 }
 
-.utrecht-html button[aria-busy="true"] {
+.utrecht-html button[aria-busy="true"],
+.utrecht-html button[aria-disabled="true"][aria-busy="true"],
+.utrecht-html button:disabled[aria-busy="true"] {
+  // Busy cursor has precedence over the disabled cursor.
   @extend .utrecht-button--busy;
 }
 
