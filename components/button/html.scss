@@ -18,6 +18,11 @@
   @extend .utrecht-button--submit;
 }
 
+.utrecht-html button:disabled,
+.utrecht-html button[aria-disabled="true"] {
+  @extend .utrecht-button--disabled;
+}
+
 .utrecht-html button[aria-busy="true"],
 .utrecht-html button[aria-disabled="true"][aria-busy="true"],
 .utrecht-html button:disabled[aria-busy="true"] {
@@ -37,7 +42,8 @@
   @extend .utrecht-button--focus;
 }
 
-.utrecht-html button:disabled,
-.utrecht-html button[aria-disabled="true"] {
-  @extend .utrecht-button--disabled;
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+.utrecht-html button:focus-visible {
+  @extend .utrecht-button--focus-visible;
 }

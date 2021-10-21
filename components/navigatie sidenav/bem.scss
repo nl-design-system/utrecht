@@ -231,12 +231,32 @@
   display: none;
 }
 
-.utrecht-sidenav__link:focus,
 .utrecht-sidenav__link--focus {
   @include utrecht-focus();
 }
 
-.utrecht-sidenav__link:focus-visible,
 .utrecht-sidenav__link--focus-visible {
   @include utrecht-focus-visible();
+}
+
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if ($utrecht-focus-visible-fallback) {
+  .utrecht-sidenav__link:focus {
+    @extend .utrecht-sidenav__link--focus;
+    @extend .utrecht-sidenav__link--focus-visible;
+  }
+
+  .utrecht-sidenav__link:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset();
+  }
+} @else {
+  .utrecht-sidenav__link:focus {
+    @extend .utrecht-sidenav__link--focus;
+  }
+
+  .utrecht-sidenav__link:focus-visible {
+    @extend .utrecht-sidenav__link--focus-visible;
+  }
 }

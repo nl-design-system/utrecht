@@ -48,16 +48,6 @@
   color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
 }
 
-.utrecht-pagination__relative-link--focus,
-.utrecht-pagination__relative-link:focus {
-  @include utrecht-focus;
-}
-
-.utrecht-pagination__relative-link--focus-visible,
-.utrecht-pagination__relative-link:focus-visible {
-  @include utrecht-focus-visible;
-}
-
 .utrecht-pagination__relative-link--hover,
 .utrecht-pagination__relative-link:hover {
   background-color: var(
@@ -111,7 +101,28 @@
   color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
 }
 
-.utrecht-pagination__page-link--focus,
-.utrecht-pagination__page-link:focus {
-  @include utrecht-focus;
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if ($utrecht-focus-visible-fallback) {
+  .utrecht-pagination__page-link:focus,
+  .utrecht-pagination__relative-link:focus {
+    @include utrecht-focus();
+    @include utrecht-focus-ring();
+  }
+
+  .utrecht-pagination__page-link:focus:not(:focus-visible),
+  .utrecht-pagination__relative-link:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset();
+  }
+} @else {
+  .utrecht-pagination__page-link:focus,
+  .utrecht-pagination__relative-link:focus {
+    @include utrecht-focus();
+  }
+
+  .utrecht-pagination__page-link:focus-visible,
+  .utrecht-pagination__relative-link:focus-visible {
+    @include utrecht-focus-visible();
+  }
 }

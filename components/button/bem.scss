@@ -55,15 +55,38 @@
   color: var(--utrecht-button-active-color, var(--utrecht-button-color));
 }
 
-.utrecht-button--focus-visible,
-.utrecht-button:focus-visible {
+.utrecht-button--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
   @include utrecht-focus-visible;
 }
 
-.utrecht-button--focus,
-.utrecht-button:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled):focus {
+.utrecht-button--focus {
   background-color: var(--utrecht-button-focus-background-color, var(--utrecht-button-background-color));
   color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
+}
+
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if ($utrecht-focus-visible-fallback) {
+  .utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+    @extend .utrecht-button--focus;
+    @extend .utrecht-button--focus-visible;
+  }
+
+  /* override the `:focus` selector above */
+  /* stylelint-disable-next-line no-descending-specificity */
+  .utrecht-button:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset();
+  }
+} @else {
+  .utrecht-button:focus-visible {
+    @extend .utrecht-button--focus-visible;
+  }
+
+  .utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+    @extend .utrecht-button--focus;
+  }
 }
 
 .utrecht-button--hover:not(:disabled),

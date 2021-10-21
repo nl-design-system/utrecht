@@ -116,12 +116,26 @@
     @extend .utrecht-select--disabled;
   }
 
-  &:focus {
-    @extend .utrecht-select--focus;
-  }
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
 
-  &:focus-visible {
-    @extend .utrecht-select--focus-visible;
+  @if ($utrecht-focus-visible-fallback) {
+    &:focus {
+      @extend .utrecht-select--focus;
+      @extend .utrecht-select--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset();
+    }
+  } @else {
+    &:focus {
+      @extend .utrecht-select--focus;
+    }
+
+    &:focus-visible {
+      @extend .utrecht-select--focus-visible;
+    }
   }
 
   &:invalid,
