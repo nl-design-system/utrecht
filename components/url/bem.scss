@@ -4,6 +4,11 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
+// Using the recommended `<bdo dir="ltr">` element would already apply the correct
+// `direction` and `unicode-bidi`, but including these explicitly ensures
+// this class name is effective on `<span>` elements too.
 .utrecht-url {
+  direction: ltr;
   font-variant-ligatures: none;
+  unicode-bidi: bidi-override;
 }

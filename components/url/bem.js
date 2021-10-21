@@ -8,7 +8,4 @@ export const defaultArgs = {
   url: '',
 };
 
-export const URLTemplate = ({ url = '', link = false }) =>
-  link
-    ? `<a class="utrecht-link utrecht-url" href="${url}" dir="ltr">${url}</a>`
-    : `<span class="utrecht-url" dir="ltr">${url}</span>`;
+export const URLTemplate = ({ url = '' }) => `<bdo class="utrecht-url" dir="ltr">${url}</bdo>`;

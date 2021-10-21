@@ -7,6 +7,11 @@ import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs, URLTemplate } from "./bem";
 import "./bem.scss";
 
+export const URLTemplateExample = ({ url = "", link = false }) => {
+  let html = URLTemplate({ url });
+  return link ? `<a class="utrecht-link" href="${url}">${html}</a>` : html;
+};
+
 <Meta
   title="CSS Component/URL"
   argTypes={{
@@ -40,8 +45,13 @@ import "./bem.scss";
       url: "https://example.com/",
     }}
     name="URL"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => URLTemplateExample(args),
+      },
+    }}
   >
-    {URLTemplate.bind({})}
+    {URLTemplateExample.bind({})}
   </Story>
 </Canvas>
 
@@ -57,10 +67,8 @@ When displaying an URL in HTML, explicitly mark the text directionality as left-
       ...defaultArgs,
       url: "https://example.com/الأمثلة/",
     }}
+    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
     name="URL with right-to-left path"
-    parameters={{
-      percy: { skip: true },
-    }}
   >
     {URLTemplate.bind({})}
   </Story>
