@@ -23,6 +23,7 @@ export const TextArea = ({
 }) =>
   `<textarea class="${clsx(
     'utrecht-textarea',
+    'utrecht-textarea--html-textarea',
     disabled && 'utrecht-textarea--disabled',
     focus && 'utrecht-textarea--focus utrecht-textarea--focus-visible',
     hover && 'utrecht-textarea--hover',
