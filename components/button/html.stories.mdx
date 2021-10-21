@@ -94,6 +94,27 @@ Button with `aria-busy` state:
   </Story>
 </Canvas>
 
+### Busy and disabled
+
+Button that is both busy and disabled. The busy cursor should have precedence over the disabled cursor.
+
+<Canvas>
+  <Story
+    name="Busy and disabled button"
+    args={{
+      busy: true,
+      disabled: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      // `cursor` cannot be tested using visual regression testing, ignore this story
+      percy: { skip: true },
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
 ## Types
 
 ### Submit
