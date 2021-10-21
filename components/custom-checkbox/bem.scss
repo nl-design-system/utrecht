@@ -107,16 +107,17 @@
   @include utrecht-focus-visible();
 }
 
-.utrecht-custom-checkbox__input:focus ~ .utrecht-custom-checkbox__box {
-  @extend .utrecht-custom-checkbox__box--focus;
-}
-
-.utrecht-custom-checkbox__input:focus-visible ~ .utrecht-custom-checkbox__box {
-  @extend .utrecht-custom-checkbox__box--focus-visible;
-}
-
 .utrecht-custom-checkbox__input:indeterminate ~ .utrecht-custom-checkbox__box {
   @extend .utrecht-custom-checkbox__box--indeterminate;
+}
+
+.utrecht-custom-checkbox__input:focus ~ .utrecht-custom-checkbox__box {
+  @extend .utrecht-custom-checkbox__box--focus;
+  @include utrecht-focus-ring();
+}
+
+.utrecht-custom-checkbox__input:focus:not(:focus-visible) ~ .utrecht-custom-checkbox__box {
+  @include utrecht-focus-ring-reset();
 }
 
 .utrecht-custom-checkbox__icon--checked,

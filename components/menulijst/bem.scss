@@ -37,3 +37,25 @@
 .utrecht-menulijst__link--focus-visible {
   @include utrecht-focus-visible;
 }
+
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if ($utrecht-focus-visible-fallback) {
+  .utrecht-menulijst__link:focus {
+    @extend .utrecht-menulijst__link--focus;
+    @extend .utrecht-menulijst__link--focus-visible;
+  }
+
+  .utrecht-menulijst__link:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset();
+  }
+} @else {
+  .utrecht-menulijst__link:focus {
+    @extend .utrecht-menulijst__link--focus;
+  }
+
+  .utrecht-menulijst__link:focus-visible {
+    @extend .utrecht-menulijst__link--focus-visible;
+  }
+}

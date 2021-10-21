@@ -141,12 +141,26 @@
     @extend .utrecht-textbox--disabled;
   }
 
-  &:focus {
-    @extend .utrecht-textbox--focus;
-  }
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
 
-  &:focus-visible {
-    @extend .utrecht-textbox--focus-visible;
+  @if ($utrecht-focus-visible-fallback) {
+    &:focus {
+      @extend .utrecht-textbox--focus;
+      @extend .utrecht-textbox--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset();
+    }
+  } @else {
+    &:focus {
+      @extend .utrecht-textbox--focus;
+    }
+
+    &:focus-visible {
+      @extend .utrecht-textbox--focus-visible;
+    }
   }
 
   &:invalid,

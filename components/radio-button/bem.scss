@@ -38,11 +38,25 @@
     @extend .utrecht-radio-button--disabled;
   }
 
-  &:focus {
-    @extend .utrecht-radio-button--focus;
-  }
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
 
-  &:focus-visible {
-    @extend .utrecht-radio-button--focus-visible;
+  @if ($utrecht-focus-visible-fallback) {
+    &:focus {
+      @extend .utrecht-radio-button--focus;
+      @extend .utrecht-radio-button--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset();
+    }
+  } @else {
+    &:focus {
+      @extend .utrecht-radio-button--focus;
+    }
+
+    &:focus-visible {
+      @extend .utrecht-radio-button--focus-visible;
+    }
   }
 }

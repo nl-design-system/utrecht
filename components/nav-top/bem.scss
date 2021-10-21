@@ -69,3 +69,25 @@
 .utrecht-topnav__link--focus-visible {
   @include utrecht-focus-visible;
 }
+
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if ($utrecht-focus-visible-fallback) {
+  .utrecht-topnav__link:focus {
+    @extend .utrecht-topnav__link--focus;
+    @extend .utrecht-topnav__link--focus-visible;
+  }
+
+  .utrecht-topnav__link:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset();
+  }
+} @else {
+  .utrecht-topnav__link:focus {
+    @extend .utrecht-topnav__link--focus;
+  }
+
+  .utrecht-topnav__link:focus-visible {
+    @extend .utrecht-topnav__link--focus-visible;
+  }
+}

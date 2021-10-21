@@ -41,11 +41,5 @@
     @extend .utrecht-checkbox--disabled;
   }
 
-  &:focus {
-    @extend .utrecht-checkbox--focus;
-  }
-
-  &:focus-visible {
-    @extend .utrecht-checkbox--focus-visible;
-  }
+  @include utrecht-focus-pseudo-classes-backwards-compatible();
 }

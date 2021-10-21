@@ -129,12 +129,26 @@
     @extend .utrecht-textarea--disabled;
   }
 
-  &:focus {
-    @extend .utrecht-textarea--focus;
-  }
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
 
-  &:focus-visible {
-    @extend .utrecht-textarea--focus-visible;
+  @if ($utrecht-focus-visible-fallback) {
+    &:focus {
+      @extend .utrecht-textarea--focus;
+      @extend .utrecht-textarea--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset();
+    }
+  } @else {
+    &:focus {
+      @extend .utrecht-textarea--focus;
+    }
+
+    &:focus-visible {
+      @extend .utrecht-textarea--focus-visible;
+    }
   }
 
   &:invalid,

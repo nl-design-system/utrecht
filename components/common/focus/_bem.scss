@@ -4,12 +4,20 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+$utrecht-focus-visible-fallback: true !default;
+
 @mixin utrecht-focus-ring {
   box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
   outline-color: var(--utrecht-focus-outline-color, transparent);
   outline-offset: 0;
   outline-style: var(--utrecht-focus-outline-style, solid);
   outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+@mixin utrecht-focus-ring-reset {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -26,5 +34,16 @@
   }
   :focus-visible {
     @include utrecht-focus-visible;
+  }
+}
+
+// When support is needed for Safari versions that do not support :focus-visible,
+// use this mixin instead of the `utrecht-focus-pseudo-classes` mixin.
+@mixin utrecht-focus-pseudo-classes-backwards-compatible {
+  &:focus {
+    @include utrecht-focus-ring();
+  }
+  &:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset();
   }
 }
