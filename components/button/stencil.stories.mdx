@@ -96,6 +96,7 @@ export const Template = ({ busy = false, disabled = false, textContent = "", typ
       type: "submit",
     }}
     parameters={{
+      // `cursor` cannot be tested using visual regression testing, ignore this story
       percy: { skip: true },
     }}
   >
