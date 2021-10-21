@@ -37,6 +37,7 @@
   @extend .utrecht-button--focus;
 }
 
-.utrecht-html button:disabled {
+.utrecht-html button:disabled,
+.utrecht-html button[aria-disabled="true"] {
   @extend .utrecht-button--disabled;
 }
