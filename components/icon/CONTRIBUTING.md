@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Contributing
 
 Updating an icon SVG needs to happen in two files: the `icon.stencil.tsx` and in the `icon.svg` file.

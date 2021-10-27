@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Tekst en taalgebruik
 
 ## Introductie

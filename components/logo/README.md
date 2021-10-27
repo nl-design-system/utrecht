@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Logo Gemeente Utrecht
 
 ## Text content

@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Accessibility
 
 **_The following are general accessibility guidelines and pointers, please refer to each individual pattern or component for their specific guidelines._**
