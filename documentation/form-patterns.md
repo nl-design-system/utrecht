@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Forms
 
 For individual form component guidelines please consult the documentation for that specific component.

@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Design Tokens for the Utrecht Design System
 
 **This project is very much WORK IN PROGRESS and most parts are released as _alpha_ version. Always define the exact version you want to use, and test for breaking changes before upgrading to a newer alpha release.**

@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Contribution Guidelines for Design Tokens
 
 ## Naming order

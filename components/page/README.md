@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Page component
 
 Component that centers the page. The page maximizes the width of the content for large viewports, to keep the line length of texts readable and avoid large horizontal distances between related components.
