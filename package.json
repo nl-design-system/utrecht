@@ -75,10 +75,8 @@
     "webpack": "4.46.0"
   },
   "scripts": {
-    "prebuild": "npm run clean && npm run build-workspaces",
-    "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/config --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
-    "build-workspaces": "lerna run build",
-    "clean": "rimraf packages/storybook/dist/ && lerna run clean",
+    "build": "lerna run build",
+    "clean": "lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.{css,scss}'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
@@ -98,14 +96,14 @@
     "test": "npm run test-workspaces",
     "test-workspaces": "lerna run --no-bail test",
     "watch:stencil": "lerna run watch:stencil",
-    "prewatch:storybook": "lerna run build:style-dictionary && lerna run build:web-components",
+    "prewatch:storybook": "lerna run build:style-dictionary && lerna run build:stencil",
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.json --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.json --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps && npm install --workspace packages/web-component-library-angular --save-dev @angular-devkit/build-angular@v11-lts",
     "update-major": "npm-check-updates --configFileName .ncurc.major.json --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
     "test-update": "npm-run-all --sequential lint build test",
-    "watch:storybook": "start-storybook --port 6006 --config-dir packages/storybook/config --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "watch:storybook": "npm run --workspace packages/storybook storybook",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   }
 }
