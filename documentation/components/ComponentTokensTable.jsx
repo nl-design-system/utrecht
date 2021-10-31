@@ -1,9 +1,9 @@
-import PropTypes from "prop-types";
-import React from "react";
-import { DesignTokensTable } from "./DesignTokensTable";
+import PropTypes from 'prop-types';
+import React from 'react';
+import { DesignTokensTable } from './DesignTokensTable';
 
 export const ComponentTokensTable = ({ component, modifiers, tokens }) => {
-  const componentPath = ["utrecht", component.replace(/^utrecht-/, "")];
+  const componentPath = ['utrecht', component.replace(/^utrecht-/, '')];
 
   const subset = tokens.filter((token) => componentPath.every((name, index) => token.path[index] === name));
 
@@ -29,6 +29,6 @@ ComponentTokensTable.propTypes = {
       name: PropTypes.string,
       path: PropTypes.arrayOf(PropTypes.string),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    })
+    }),
   ),
 };

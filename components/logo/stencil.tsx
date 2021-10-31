@@ -3,11 +3,11 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-logo",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-logo',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Logo {

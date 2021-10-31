@@ -1,9 +1,9 @@
-import { Component, h, Prop } from "@stencil/core";
-import clsx from "clsx";
+import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-paragraph",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-paragraph',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Paragraph {
@@ -14,7 +14,7 @@ export class Paragraph {
 
   render() {
     return (
-      <div class={clsx("utrecht-paragraph", this.lead && "utrecht-paragraph--lead")}>
+      <div class={clsx('utrecht-paragraph', this.lead && 'utrecht-paragraph--lead')}>
         <slot></slot>
       </div>
     );

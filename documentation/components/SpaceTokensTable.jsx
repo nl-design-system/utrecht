@@ -1,12 +1,12 @@
-import PropTypes from "prop-types";
-import React from "react";
-export const path2css = (path) => `var(--${path.join("-")})`;
+import PropTypes from 'prop-types';
+import React from 'react';
+export const path2css = (path) => `var(--${path.join('-')})`;
 
 const HorizontalSpaceExample = ({ size }) => (
   <div
     style={{
-      backgroundColor: "black",
-      height: "1em",
+      backgroundColor: 'black',
+      height: '1em',
       width: size,
     }}
   ></div>
@@ -19,8 +19,8 @@ HorizontalSpaceExample.propTypes = {
 const VerticalSpaceExample = ({ size }) => (
   <div
     style={{
-      backgroundColor: "black",
-      width: "1em",
+      backgroundColor: 'black',
+      width: '1em',
       height: size,
     }}
   ></div>
@@ -33,8 +33,8 @@ VerticalSpaceExample.propTypes = {
 const BlockSpaceExample = ({ size }) => (
   <div
     style={{
-      backgroundColor: "black",
-      inlineSize: "1em",
+      backgroundColor: 'black',
+      inlineSize: '1em',
       blockSize: size,
     }}
   ></div>
@@ -47,8 +47,8 @@ BlockSpaceExample.propTypes = {
 const InlineSpaceExample = ({ size }) => (
   <div
     style={{
-      backgroundColor: "black",
-      blockSize: "1em",
+      backgroundColor: 'black',
+      blockSize: '1em',
       inlineSize: size,
     }}
   ></div>
@@ -77,13 +77,13 @@ export const SpaceTokensTable = ({ tokens, orientation }) => (
           </td>
           <td>{value}</td>
           <td>
-            {orientation === "horizontal" ? (
+            {orientation === 'horizontal' ? (
               <HorizontalSpaceExample size={value} />
-            ) : orientation === "vertical" ? (
+            ) : orientation === 'vertical' ? (
               <VerticalSpaceExample size={value} />
-            ) : orientation === "block" ? (
+            ) : orientation === 'block' ? (
               <BlockSpaceExample size={value} />
-            ) : orientation === "inline" ? (
+            ) : orientation === 'inline' ? (
               <InlineSpaceExample size={value} />
             ) : (
               <HorizontalSpaceExample size={value} />
@@ -103,6 +103,6 @@ SpaceTokensTable.propTypes = {
       name: PropTypes.string,
       path: PropTypes.string,
       value: PropTypes.string,
-    })
+    }),
   ),
 };

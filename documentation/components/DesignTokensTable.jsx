@@ -1,13 +1,13 @@
-import PropTypes from "prop-types";
-import React from "react";
-export const path2css = (path) => `var(--${path.join("-")})`;
-import { ColorExample } from "./ColorExample";
+import PropTypes from 'prop-types';
+import React from 'react';
+export const path2css = (path) => `var(--${path.join('-')})`;
+import { ColorExample } from './ColorExample';
 
 const visualizeToken = (token) => {
-  if (token.css && token.css.syntax === "<color>") {
+  if (token.css && token.css.syntax === '<color>') {
     return <ColorExample color={token.value}></ColorExample>;
   } else {
-    return "";
+    return '';
   }
 };
 
@@ -43,6 +43,6 @@ DesignTokensTable.propTypes = {
       name: PropTypes.string,
       path: PropTypes.arrayOf(PropTypes.string),
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    })
+    }),
   ),
 };

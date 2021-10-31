@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-contact-card-template",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-contact-card-template',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class ContactCardTemplate {

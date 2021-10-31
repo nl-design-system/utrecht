@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-icon-error",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-icon-error',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class IconError {

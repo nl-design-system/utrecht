@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-heading-4",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-heading-4',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Heading4 {

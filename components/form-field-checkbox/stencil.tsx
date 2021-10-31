@@ -3,21 +3,21 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, h, Prop, State } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Event, EventEmitter, h, Prop, State } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-form-field-checkbox",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-form-field-checkbox',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class FormFieldCheckbox {
   @Prop() label: boolean = false;
-  @Prop({ attribute: "disabled", reflect: true }) disabled: boolean = false;
-  @Prop({ attribute: "checked", reflect: true }) checked: boolean = false;
-  @Prop({ attribute: "invalid", reflect: true }) invalid: boolean = false;
-  @Prop({ attribute: "required", reflect: true }) required: boolean = false;
-  @State() value: string = "";
+  @Prop({ attribute: 'disabled', reflect: true }) disabled: boolean = false;
+  @Prop({ attribute: 'checked', reflect: true }) checked: boolean = false;
+  @Prop({ attribute: 'invalid', reflect: true }) invalid: boolean = false;
+  @Prop({ attribute: 'required', reflect: true }) required: boolean = false;
+  @State() value: string = '';
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;
@@ -30,11 +30,11 @@ export class FormFieldCheckbox {
       <div class="utrecht-form-field utrecht-form-field--checkbox">
         <input
           id="input"
-          class={clsx("utrecht-checkbox")}
+          class={clsx('utrecht-checkbox')}
           type="checkbox"
           checked={checked}
           disabled={disabled}
-          aria-invalid={invalid ? "true" : null}
+          aria-invalid={invalid ? 'true' : null}
           required={required}
           value={value}
           onBlur={(evt) => this.utrechtBlur.emit(evt)}
@@ -47,10 +47,10 @@ export class FormFieldCheckbox {
         />
         <label
           class={clsx(
-            "utrecht-form-field__label",
-            "utrecht-form-field__label--checkbox",
-            "utrecht-form-label",
-            "utrecht-form-label--checkbox"
+            'utrecht-form-field__label',
+            'utrecht-form-field__label--checkbox',
+            'utrecht-form-label',
+            'utrecht-form-label--checkbox',
           )}
           htmlFor="input"
         >

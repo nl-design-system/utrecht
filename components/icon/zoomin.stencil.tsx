@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-icon-zoomin",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-icon-zoomin',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class IconZoomin {

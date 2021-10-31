@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, h, Prop } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-custom-checkbox",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-custom-checkbox',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class CustomCheckbox {
@@ -39,14 +39,14 @@ export class CustomCheckbox {
     };
 
     const handleKeyPress = (evt) => {
-      if (evt.code === "Space" || evt.key === " ") {
+      if (evt.code === 'Space' || evt.key === ' ') {
         // Do not scroll the page using Space when the toggle is focussed
         evt.preventDefault();
       }
     };
 
     const handleKeyUp = (evt) => {
-      if (evt.code === "Space" || evt.key === " ") {
+      if (evt.code === 'Space' || evt.key === ' ') {
         toggleInteraction();
       }
     };
@@ -56,23 +56,23 @@ export class CustomCheckbox {
         class="utrecht-custom-checkbox"
         role="checkbox"
         tabIndex={disabled ? null : 0}
-        aria-checked={indeterminate ? "mixed" : checked ? "true" : "false"}
-        aria-disabled={disabled ? "true" : null}
-        aria-invalid={invalid ? "true" : null}
-        aria-required={required ? "true" : null}
+        aria-checked={indeterminate ? 'mixed' : checked ? 'true' : 'false'}
+        aria-disabled={disabled ? 'true' : null}
+        aria-invalid={invalid ? 'true' : null}
+        aria-required={required ? 'true' : null}
         onClick={handleClick}
         onKeyPress={handleKeyPress}
         onKeyUp={handleKeyUp}
       >
         <div
           class={clsx(
-            "utrecht-custom-checkbox__box",
-            active && "utrecht-custom-checkbox__box--active",
-            checked && "utrecht-custom-checkbox__box--checked",
-            !checked && "utrecht-custom-checkbox__box--not-checked",
-            disabled && "utrecht-custom-checkbox__box--disabled",
-            invalid && "utrecht-custom-checkbox__box--invalid",
-            indeterminate && "utrecht-custom-checkbox__box--indeterminate"
+            'utrecht-custom-checkbox__box',
+            active && 'utrecht-custom-checkbox__box--active',
+            checked && 'utrecht-custom-checkbox__box--checked',
+            !checked && 'utrecht-custom-checkbox__box--not-checked',
+            disabled && 'utrecht-custom-checkbox__box--disabled',
+            invalid && 'utrecht-custom-checkbox__box--invalid',
+            indeterminate && 'utrecht-custom-checkbox__box--indeterminate',
           )}
         >
           {checked && <utrecht-icon-checkmark class="utrecht-custom-checkbox__icon">✔</utrecht-icon-checkmark>}
