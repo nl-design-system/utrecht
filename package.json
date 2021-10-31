@@ -76,7 +76,7 @@
   },
   "scripts": {
     "prebuild": "npm run clean && npm run build-workspaces",
-    "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "build": "build-storybook --output-dir packages/storybook/dist/ --config-dir packages/storybook/config --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
     "build-workspaces": "lerna run build",
     "clean": "rimraf packages/storybook/dist/ && lerna run clean",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
@@ -105,7 +105,7 @@
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.json --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps && npm install --workspace packages/web-component-library-angular --save-dev @angular-devkit/build-angular@v11-lts",
     "update-major": "npm-check-updates --configFileName .ncurc.major.json --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
     "test-update": "npm-run-all --sequential lint build test",
-    "watch:storybook": "start-storybook --port 6006 --config-dir packages/storybook/.storybook --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
+    "watch:storybook": "start-storybook --port 6006 --config-dir packages/storybook/config --static-dir packages/storybook/src/style/,proprietary/assets/,proprietary/design-tokens/",
     "watch:style-dictionary": "lerna run watch:style-dictionary"
   }
 }
