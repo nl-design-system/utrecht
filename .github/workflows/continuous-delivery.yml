@@ -16,7 +16,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: "16.13.x"
 
       - name: Install
         run: |
@@ -73,7 +73,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v2
         with:
-          node-version: "16.x"
+          node-version: "16.13.x"
 
       - name: "Continuous Deployment: install"
         run: |
