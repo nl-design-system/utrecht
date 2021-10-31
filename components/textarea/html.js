@@ -1,7 +1,6 @@
 export const defaultArgs = {
   disabled: false,
   invalid: false,
-  label: '',
   placeholder: '',
   readOnly: false,
   required: false,
@@ -11,7 +10,6 @@ export const defaultArgs = {
 export const TextArea = ({
   disabled = false,
   invalid = false,
-  label = '',
   placeholder = '',
   readOnly = false,
   required = false,

@@ -13,7 +13,6 @@ export const defaultArgs = {
   focus: false,
   focusVisible: false,
   href: null,
-  focus: false,
   telephone: false,
   textContent: '...',
   visited: false,
