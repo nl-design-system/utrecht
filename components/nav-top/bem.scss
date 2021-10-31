@@ -57,7 +57,8 @@
 
 .utrecht-topnav__link--focus {
   @include utrecht-focus;
-  background-color: var(--utrecht-topnav-link-focus-background-color); /*#ffd633*/
+
+  background-color: var(--utrecht-topnav-link-focus-background-color); /* #ffd633 */
   color: var(--utrecht-topnav-link-focus-color, var(--utrecht-topnav-link-color));
   text-decoration: var(
     --utrecht-topnav-link-focus-text-decoration,
@@ -72,14 +73,14 @@
 // The workaround for missing `:focus-visible` support makes the code quite complex,
 // keep the ideal version around to restore it easily when browser support improves.
 
-@if ($utrecht-focus-visible-fallback) {
+@if $utrecht-focus-visible-fallback {
   .utrecht-topnav__link:focus {
     @extend .utrecht-topnav__link--focus;
     @extend .utrecht-topnav__link--focus-visible;
   }
 
   .utrecht-topnav__link:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset();
+    @include utrecht-focus-ring-reset;
   }
 } @else {
   .utrecht-topnav__link:focus {

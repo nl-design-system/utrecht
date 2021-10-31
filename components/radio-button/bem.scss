@@ -7,6 +7,7 @@
 
 .utrecht-radio-button {
   margin-block-end: 0;
+
   /* reset native margin for input[type="radio" i] */
   margin-block-start: 0;
   margin-inline-end: 0;
@@ -41,14 +42,14 @@
   // The workaround for missing `:focus-visible` support makes the code quite complex,
   // keep the ideal version around to restore it easily when browser support improves.
 
-  @if ($utrecht-focus-visible-fallback) {
+  @if $utrecht-focus-visible-fallback {
     &:focus {
       @extend .utrecht-radio-button--focus;
       @extend .utrecht-radio-button--focus-visible;
     }
 
     &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset();
+      @include utrecht-focus-ring-reset;
     }
   } @else {
     &:focus {

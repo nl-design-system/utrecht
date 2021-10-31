@@ -77,6 +77,7 @@
 
 .utrecht-textarea--focus {
   @include utrecht-focus;
+
   background-color: var(
     --utrecht-textarea-focus-background-color,
     var(
@@ -132,14 +133,14 @@
   // The workaround for missing `:focus-visible` support makes the code quite complex,
   // keep the ideal version around to restore it easily when browser support improves.
 
-  @if ($utrecht-focus-visible-fallback) {
+  @if $utrecht-focus-visible-fallback {
     &:focus {
       @extend .utrecht-textarea--focus;
       @extend .utrecht-textarea--focus-visible;
     }
 
     &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset();
+      @include utrecht-focus-ring-reset;
     }
   } @else {
     &:focus {

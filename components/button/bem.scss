@@ -68,7 +68,7 @@
 // The workaround for missing `:focus-visible` support makes the code quite complex,
 // keep the ideal version around to restore it easily when browser support improves.
 
-@if ($utrecht-focus-visible-fallback) {
+@if $utrecht-focus-visible-fallback {
   .utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
     @extend .utrecht-button--focus;
     @extend .utrecht-button--focus-visible;
@@ -77,7 +77,7 @@
   /* override the `:focus` selector above */
   /* stylelint-disable-next-line no-descending-specificity */
   .utrecht-button:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset();
+    @include utrecht-focus-ring-reset;
   }
 } @else {
   .utrecht-button:focus-visible {

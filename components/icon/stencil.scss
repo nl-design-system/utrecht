@@ -5,6 +5,7 @@
 
 :host {
   display: inline-block;
+
   /* prevent custom element dimensions to be larger than icon size because of line-height */
   height: var(--utrecht-icon-size);
   width: var(--utrecht-icon-size);

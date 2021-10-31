@@ -58,7 +58,8 @@
 }
 
 .utrecht-select--focus {
-  @include utrecht-focus();
+  @include utrecht-focus;
+
   background-color: var(
     --utrecht-select-focus-background-color,
     var(
@@ -80,7 +81,7 @@
 }
 
 .utrecht-select--focus-visible {
-  @include utrecht-focus-visible();
+  @include utrecht-focus-visible;
 }
 
 .utrecht-select--invalid {
@@ -119,14 +120,14 @@
   // The workaround for missing `:focus-visible` support makes the code quite complex,
   // keep the ideal version around to restore it easily when browser support improves.
 
-  @if ($utrecht-focus-visible-fallback) {
+  @if $utrecht-focus-visible-fallback {
     &:focus {
       @extend .utrecht-select--focus;
       @extend .utrecht-select--focus-visible;
     }
 
     &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset();
+      @include utrecht-focus-ring-reset;
     }
   } @else {
     &:focus {
