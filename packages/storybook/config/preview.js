@@ -1,13 +1,10 @@
+import { defineCustomElements } from '@utrecht/web-component-library-stencil';
+import defaultsDeep from 'lodash.defaultsdeep';
+
+import '@utrecht/components/document/bem.scss';
 import '@utrecht/design-tokens/dist/theme/index.css';
 import '@utrecht/design-tokens/dist/property.css';
 import '@utrecht/design-tokens/src/custom.scss';
-import '../../../components/document/bem.scss';
-
-import React from 'react';
-import { addDecorator, addParameters, storiesOf } from '@storybook/html';
-// import { DocsPage, DocsContainer } from '@storybook/addon-docs';
-import { defineCustomElements } from '@utrecht/web-component-library-stencil';
-import defaultsDeep from 'lodash.defaultsdeep';
 
 defineCustomElements();
 

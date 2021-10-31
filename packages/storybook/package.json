@@ -14,14 +14,19 @@
   },
   "devDependencies": {
     "@percy/storybook": "3.3.1",
+    "@utrecht/components": "file:../../components",
+    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil",
     "rimraf": "3.0.2"
   },
   "dependencies": {
     "http-server": "14.0.0"
   },
   "scripts": {
+    "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/style/,../../proprietary/assets/",
     "clean": "rimraf dist/",
     "percy-snapshot": "percy-storybook --build_dir dist/ --widths=1280",
-    "start": "node_modules/http-server/bin/http-server dist/"
+    "start": "../../node_modules/http-server/bin/http-server dist/",
+    "storybook": "start-storybook --config-dir config/ --port 6006 --static-dir src/style/,../../proprietary/assets/"
   }
 }
