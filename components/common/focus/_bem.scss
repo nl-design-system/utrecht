@@ -25,7 +25,7 @@ $utrecht-focus-visible-fallback: true !default;
 }
 
 @mixin utrecht-focus-visible {
-  @include utrecht-focus-ring();
+  @include utrecht-focus-ring;
 }
 
 @mixin utrecht-focus-pseudo-classes {
@@ -41,9 +41,9 @@ $utrecht-focus-visible-fallback: true !default;
 // use this mixin instead of the `utrecht-focus-pseudo-classes` mixin.
 @mixin utrecht-focus-pseudo-classes-backwards-compatible {
   &:focus {
-    @include utrecht-focus-ring();
+    @include utrecht-focus-ring;
   }
   &:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset();
+    @include utrecht-focus-ring-reset;
   }
 }

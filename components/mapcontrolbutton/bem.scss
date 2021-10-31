@@ -8,6 +8,7 @@
 .utrecht-mapcontrolbutton {
   --utrecht-icon-size: var(--utrecht-mapcontrolbutton-min-block-size);
   --utrecht-icon-color: var(--utrecht-mapcontrolbutton-color);
+
   align-items: center;
   background-color: var(--utrecht-mapcontrolbutton-background-color);
   border-color: var(--utrecht-mapcontrolbutton-border-color);
@@ -29,6 +30,7 @@
 .utrecht-mapcontrolbutton:disabled,
 .utrecht-mapcontrolbutton--disabled {
   --utrecht-icon-color: var(--utrecht-mapcontrolbutton-disabled-color, var(--utrecht-mapcontrolbutton-color));
+
   background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
   border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
   color: var(--utrecht-mapcontrolbutton-disabled-color);
@@ -40,13 +42,14 @@
 
 .utrecht-mapcontrolbutton--focus {
   @include utrecht-focus;
+
   --utrecht-icon-color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
 }
 
 // The workaround for missing `:focus-visible` support makes the code quite complex,
 // keep the ideal version around to restore it easily when browser support improves.
 
-@if ($utrecht-focus-visible-fallback) {
+@if $utrecht-focus-visible-fallback {
   .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-mapcontrolbutton--disabled) {
     @extend .utrecht-mapcontrolbutton--focus;
     @extend .utrecht-mapcontrolbutton--focus-visible;
@@ -55,7 +58,7 @@
   /* override the `:focus` selector above */
   /* stylelint-disable-next-line no-descending-specificity */
   .utrecht-mapcontrolbutton:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset();
+    @include utrecht-focus-ring-reset;
   }
 } @else {
   .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-mapcontrolbutton--disabled) {

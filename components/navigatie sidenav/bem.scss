@@ -46,7 +46,7 @@
   border-block-end: none;
 }
 
-/*draw the li item box bottom line*/
+/* draw the li item box bottom line */
 
 .utrecht-sidenav__item span:not(.utrecht-sidenav__item:last-child span, .utrecht-sidenav__item--has-children span:first-of-type),
 /* .utrecht-sidenav__item--has-children span */ {
@@ -55,7 +55,7 @@
   margin-inline-start: var(--utrecht-space-inline-sm);
 }
 
-/*Remove bottom padding form first item in list with children*/
+/* Remove bottom padding form first item in list with children */
 .utrecht-sidenav__item .utrecht-sidenav__link--has-children {
   padding-block-end: 0;
 }
@@ -95,23 +95,23 @@
   left: 26px;
 }
 
-/*Little fix to move the dot to the right*/
+/* Little fix to move the dot to the right */
 .utrecht-sidenav__link--current::before {
   background-color: var(--utrecht-sidenav-link-hover-color);
   left: 27px;
 }
 
-/*Dot for link with siblings */
+/* Dot for link with siblings */
 .utrecht-sidenav__link::before,
 .utrecht-sidenav__link--sibling::before,
 .utrecht-sidenav__item:last-child .utrecht-sidenav__link--current::before {
   border-radius: 100%;
-  box-shadow: 0 0 2px 2px #fff; /*Make var*/
+  box-shadow: 0 0 2px 2px #fff; /* Make var */
   content: "";
   height: 8px;
   overflow: hidden;
   position: absolute;
-  top: 20px; /*Hard value?*/
+  top: 20px; /* Hard value? */
   transform: translateY(-50%) translateX(-2.5ch);
   width: 8px;
   z-index: 10;
@@ -136,8 +136,9 @@
 .utrecht-sidenav__link::after,
 .utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
   background: var(--utrecht-sidenav-item-marker-color);
+
   /*  min-height: 100%;
-  height: calc(100% + 2px);*/
+  height: calc(100% + 2px); */
   bottom: 0;
   content: "";
   display: block;
@@ -157,7 +158,7 @@
   min-height: 38px;
 }
 
-/* Remove first metro line in listing*/
+/* Remove first metro line in listing */
 .utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
   content: "";
   display: none;
@@ -184,7 +185,7 @@
   position: relative;
 }
 
-/*No last border on child item*/
+/* No last border on child item */
 .utrecht-sidenav__item--child:last-child {
   border: none;
 }
@@ -227,24 +228,24 @@
 }
 
 .utrecht-sidenav__link--focus {
-  @include utrecht-focus();
+  @include utrecht-focus;
 }
 
 .utrecht-sidenav__link--focus-visible {
-  @include utrecht-focus-visible();
+  @include utrecht-focus-visible;
 }
 
 // The workaround for missing `:focus-visible` support makes the code quite complex,
 // keep the ideal version around to restore it easily when browser support improves.
 
-@if ($utrecht-focus-visible-fallback) {
+@if $utrecht-focus-visible-fallback {
   .utrecht-sidenav__link:focus {
     @extend .utrecht-sidenav__link--focus;
     @extend .utrecht-sidenav__link--focus-visible;
   }
 
   .utrecht-sidenav__link:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset();
+    @include utrecht-focus-ring-reset;
   }
 } @else {
   .utrecht-sidenav__link:focus {

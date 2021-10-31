@@ -104,25 +104,25 @@
 // The workaround for missing `:focus-visible` support makes the code quite complex,
 // keep the ideal version around to restore it easily when browser support improves.
 
-@if ($utrecht-focus-visible-fallback) {
+@if $utrecht-focus-visible-fallback {
   .utrecht-pagination__page-link:focus,
   .utrecht-pagination__relative-link:focus {
-    @include utrecht-focus();
-    @include utrecht-focus-ring();
+    @include utrecht-focus;
+    @include utrecht-focus-ring;
   }
 
   .utrecht-pagination__page-link:focus:not(:focus-visible),
   .utrecht-pagination__relative-link:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset();
+    @include utrecht-focus-ring-reset;
   }
 } @else {
   .utrecht-pagination__page-link:focus,
   .utrecht-pagination__relative-link:focus {
-    @include utrecht-focus();
+    @include utrecht-focus;
   }
 
   .utrecht-pagination__page-link:focus-visible,
   .utrecht-pagination__relative-link:focus-visible {
-    @include utrecht-focus-visible();
+    @include utrecht-focus-visible;
   }
 }

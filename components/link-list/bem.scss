@@ -19,10 +19,10 @@
 /* reset before other stylesheets */
 .utrecht-link-list,
 .utrecht-link-list--html-ul {
-  @include reset-ul();
+  @include reset-ul;
 
   & > li {
-    @include reset-li();
+    @include reset-li;
   }
 }
 

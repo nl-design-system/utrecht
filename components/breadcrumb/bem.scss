@@ -20,8 +20,8 @@
   --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
   --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
   --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
-  font-family: var(--utrecht-document-font-family, inherit);
 
+  font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-breadcrumb-font-size);
   text-transform: var(--utrecht-document-text-transform, inherit);
 }
@@ -55,6 +55,7 @@ ol.utrecht-breadcrumb__list {
 .utrecht-breadcrumb--arrows {
   /* https://css-tricks.com/triangle-breadcrumbs/ */
   --utrecht-breadcrumb-arrow-size: 24px;
+
   overflow: hidden;
 
   .utrecht-breadcrumb__link {
