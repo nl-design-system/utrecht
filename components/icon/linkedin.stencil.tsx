@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-icon-linkedin",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-icon-linkedin',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class IconLinkedin {

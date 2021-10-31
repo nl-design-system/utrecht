@@ -1,9 +1,9 @@
-import { Component, Element, Event, EventEmitter, h, Prop } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Element, Event, EventEmitter, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-button",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-button',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Button {
@@ -18,21 +18,21 @@ export class Button {
     const handleReset = () => {
       const event = this.utrechtRequestReset.emit();
       if (!event.defaultPrevented) {
-        this.host?.closest("form")?.reset();
+        this.host?.closest('form')?.reset();
       }
     };
 
     const handleSubmit = () => {
       const event = this.utrechtRequestSubmit.emit();
       if (!event.defaultPrevented) {
-        this.host?.closest("form")?.requestSubmit();
+        this.host?.closest('form')?.requestSubmit();
       }
     };
 
     const handleClick = () => {
-      if (this.type === "reset") {
+      if (this.type === 'reset') {
         handleReset();
-      } else if (this.type === "submit") {
+      } else if (this.type === 'submit') {
         handleSubmit();
       }
     };
@@ -40,14 +40,14 @@ export class Button {
     return (
       <button
         class={clsx(
-          "utrecht-button",
-          this.busy && "utrecht-button--busy",
-          this.disabled && "utrecht-button--disabled",
-          this.type === "submit" && "utrecht-button--submit"
+          'utrecht-button',
+          this.busy && 'utrecht-button--busy',
+          this.disabled && 'utrecht-button--disabled',
+          this.type === 'submit' && 'utrecht-button--submit',
         )}
-        aria-busy={this.busy ? "true" : null}
+        aria-busy={this.busy ? 'true' : null}
         disabled={this.disabled}
-        type={this.type || "button"}
+        type={this.type || 'button'}
         onClick={handleClick}
       >
         <slot></slot>

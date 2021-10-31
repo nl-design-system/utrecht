@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-icon-filter",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-icon-filter',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class IconFilter {

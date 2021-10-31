@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, h, Prop } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-form-toggle",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-form-toggle',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class FormToggle {
@@ -35,14 +35,14 @@ export class FormToggle {
     };
 
     const handleKeyPress = (evt) => {
-      if (evt.code === "Space" || evt.key === " ") {
+      if (evt.code === 'Space' || evt.key === ' ') {
         // Do not scroll the page using Space when the toggle is focussed
         evt.preventDefault();
       }
     };
 
     const handleKeyUp = (evt) => {
-      if (evt.code === "Space" || evt.key === " ") {
+      if (evt.code === 'Space' || evt.key === ' ') {
         toggleInteraction();
       }
     };
@@ -50,14 +50,14 @@ export class FormToggle {
     return (
       <div
         class={clsx(
-          "utrecht-form-toggle",
-          checked && "utrecht-form-toggle--checked",
-          !checked && "utrecht-form-toggle--not-checked",
-          disabled && "utrecht-form-toggle--disabled"
+          'utrecht-form-toggle',
+          checked && 'utrecht-form-toggle--checked',
+          !checked && 'utrecht-form-toggle--not-checked',
+          disabled && 'utrecht-form-toggle--disabled',
         )}
         tabIndex={disabled ? null : 0}
         role="switch"
-        aria-disabled={disabled ? "true" : null}
+        aria-disabled={disabled ? 'true' : null}
         onClick={handleClick}
         onKeyPress={handleKeyPress}
         onKeyUp={handleKeyUp}
@@ -66,18 +66,18 @@ export class FormToggle {
         <div class="utrecht-form-toggle__label utrecht-form-toggle__label--on"></div>
         <div
           class={clsx(
-            "utrecht-form-toggle__track",
-            checked && "utrecht-form-toggle__track--checked",
-            !checked && "utrecht-form-toggle__track--not-checked",
-            disabled && "utrecht-form-toggle__track--disabled"
+            'utrecht-form-toggle__track',
+            checked && 'utrecht-form-toggle__track--checked',
+            !checked && 'utrecht-form-toggle__track--not-checked',
+            disabled && 'utrecht-form-toggle__track--disabled',
           )}
         >
           <div
             class={clsx(
-              "utrecht-form-toggle__thumb",
-              checked && "utrecht-form-toggle__thumb--checked",
-              !checked && "utrecht-form-toggle__thumb--not-checked",
-              disabled && "utrecht-form-toggle__thumb--disabled"
+              'utrecht-form-toggle__thumb',
+              checked && 'utrecht-form-toggle__thumb--checked',
+              !checked && 'utrecht-form-toggle__thumb--not-checked',
+              disabled && 'utrecht-form-toggle__thumb--disabled',
             )}
           ></div>
         </div>

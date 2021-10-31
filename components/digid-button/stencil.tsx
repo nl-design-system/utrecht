@@ -4,11 +4,11 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, h, Prop } from "@stencil/core";
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-digid-button",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-digid-button',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class DigidButton {

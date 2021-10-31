@@ -4,11 +4,11 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-eidas-logo",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-eidas-logo',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class EidasLogo {

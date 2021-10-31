@@ -1,4 +1,4 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 /**
  * @license EUPL-1.2
@@ -6,8 +6,8 @@ import { Component, h } from "@stencil/core";
  */
 
 @Component({
-  tag: "utrecht-page",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-page',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Page {

@@ -1,8 +1,8 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-icon-loupe",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-icon-loupe',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class IconLoupe {
