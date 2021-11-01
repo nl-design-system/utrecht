@@ -1,0 +1,47 @@
+{
+  "utrecht": {
+    "breadcrumb": {
+      "block-size": { "value": "34px" },
+      "font-family": {},
+      "font-size": {
+        "value": "{utrecht.typography.scale.sm.font-size.value}"
+      },
+      "text-transform": {},
+      "divider": {
+        "inline-size": {
+          "value": "1px"
+        }
+      },
+      "item": {
+        "padding-block-start": {
+          "value": "{utrecht.space.block.xs.value}"
+        },
+        "padding-block-end": {
+          "value": "{utrecht.space.block.xs.value}"
+        },
+        "padding-inline-end": {
+          "value": "{utrecht.space.inline.md.value}"
+        },
+        "padding-inline-start": {
+          "value": "{utrecht.space.inline.md.value}"
+        }
+      },
+      "link": {
+        "background-color": {
+          "value": "{utrecht.color.grey.90.value}"
+        },
+        "color": {
+          "value": "{utrecht.color.black.value}"
+        },
+        "focus": {
+          "background-color": {
+            "value": "{utrecht.color.yellow.60.value}"
+          },
+          "color": {
+            "value": "{utrecht.color.black.value}"
+          }
+        }
+      }
+    }
+  }
+}

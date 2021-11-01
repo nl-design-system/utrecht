@@ -1,0 +1,59 @@
+{
+  "utrecht": {
+    "pagination": {
+      "font-size": { "value": "14px" },
+      "font-family": {},
+      "margin-block-start": { "value": "0" },
+      "margin-block-end": { "value": "1em" },
+      "page-link": {
+        "background-color": { "value": "transparent" },
+        "border-color": { "value": "transparent" },
+        "border-radius": {},
+        "border-width": { "value": "2px" },
+        "color": { "value": "{utrecht.color.blue.35.value}" },
+        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" },
+        "padding-inline-start": { "value": "0.5em" },
+        "padding-inline-end": { "value": "0.5em" },
+        "padding-block-start": { "value": "0.5em" },
+        "padding-block-end": { "value": "0.5em" },
+        "text-decoration": { "value": "none" },
+        "current": {
+          "background-color": { "value": "{utrecht.color.blue.35.value}" },
+          "border-color": { "value": "{utrecht.color.blue.35.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        },
+        "distanced": {
+          "margin-inline-start": { "value": "0.5em" }
+        },
+        "hover": {
+          "background-color": { "value": "{utrecht.color.blue.35.value}" },
+          "border-color": { "value": "{utrecht.color.blue.35.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      },
+      "relative-link": {
+        "background-color": { "value": "{utrecht.color.white.value}" },
+        "border-color": { "value": "{utrecht.color.blue.35.value}" },
+        "border-radius": {},
+        "border-width": { "value": "2px" },
+        "color": { "value": "{utrecht.color.blue.35.value}" },
+        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" },
+        "padding-inline-start": { "value": "0.5em" },
+        "padding-inline-end": { "value": "0.5em" },
+        "padding-block-start": { "value": "0.5em" },
+        "padding-block-end": { "value": "0.5em" },
+        "text-decoration": { "value": "none" },
+        "text-transform": { "value": "uppercase" },
+        "distanced": {
+          "margin-inline-end": { "value": "0.5em" },
+          "margin-inline-start": { "value": "0.5em" }
+        },
+        "hover": {
+          "background-color": { "value": "{utrecht.color.blue.35.value}" },
+          "border-color": { "value": "{utrecht.color.blue.35.value}" },
+          "color": { "value": "{utrecht.color.white.value}" }
+        }
+      }
+    }
+  }
+}
