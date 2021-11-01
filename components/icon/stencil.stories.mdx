@@ -1,10 +1,11 @@
 import { ArgsTable, Canvas, Description, IconGallery, IconItem, Meta, Story } from "@storybook/addon-docs";
-import { ComponentTokensTable } from "../../documentation/components/ComponentTokensTable";
+import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
 import tokens from "../../proprietary/design-tokens/dist/index.json";
 import contributing from "./CONTRIBUTING.md";
 import readme from "./README.md";
 import design from "./design.md";
 import iconSet from "./icon-set.json";
+import tokensDefinition from "./tokens.json";
 
 export const IconExample = ({ color, icon, size }) => `<button type="button" style="
   --utrecht-icon-color: ${color};
@@ -156,6 +157,6 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
 
 ## Design Tokens
 
-<ComponentTokensTable tokens={tokens} component="utrecht-icon"></ComponentTokensTable>
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-icon"></ComponentTokensSection>
 
 <Description>{adjustHeadingLevel(contributing, 1)}</Description>
