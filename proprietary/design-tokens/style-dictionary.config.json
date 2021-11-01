@@ -1,5 +1,10 @@
 {
-  "source": ["../../components/**/*.tokens.json", "./src/**/*.tokens.json"],
+  "source": [
+    "../../components/**/tokens.json",
+    "../../components/**/*.tokens.json",
+    "./src/**/tokens.json",
+    "./src/**/*.tokens.json"
+  ],
   "platforms": {
     "js": {
       "transforms": ["attribute/cti", "name/cti/camel", "color/hsl-4"],
