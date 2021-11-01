@@ -1,8 +1,9 @@
 import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import clsx from "clsx";
-import { ComponentTokensTable } from "../../../documentation/components/ComponentTokensTable";
+import { ComponentTokensSection } from "../../../documentation/components/ComponentTokensSection";
 import tokens from "../../../proprietary/design-tokens/dist/index.json";
 import readme from "./README.md";
+import tokensDefinition from "./tokens.json";
 
 export const bem = (block, modifiers, classNames) =>
   clsx(
@@ -153,4 +154,8 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
 
 ## Design Tokens
 
-<ComponentTokensTable tokens={tokens} component="utrecht-focus"></ComponentTokensTable>
+<ComponentTokensSection
+  tokens={tokens}
+  definition={tokensDefinition}
+  component="utrecht-focus"
+></ComponentTokensSection>

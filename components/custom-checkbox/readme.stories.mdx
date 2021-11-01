@@ -1,8 +1,9 @@
 import { Description, Meta } from "@storybook/addon-docs";
-import { ComponentTokensTable } from "../../documentation/components/ComponentTokensTable";
+import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
 import tokens from "../../proprietary/design-tokens/dist/index.json";
 import readme from "./README.md";
 import design from "./design.md";
+import tokensDefinition from "./tokens.json";
 
 <Meta title="CSS Component/Custom Checkbox/README" />
 
@@ -12,4 +13,8 @@ import design from "./design.md";
 
 ## Design Tokens
 
-<ComponentTokensTable tokens={tokens} component="utrecht-custom-checkbox"></ComponentTokensTable>
+<ComponentTokensSection
+  tokens={tokens}
+  definition={tokensDefinition}
+  component="utrecht-custom-checkbox"
+></ComponentTokensSection>
