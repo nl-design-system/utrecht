@@ -1,0 +1,36 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+-->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import "./bem.scss";
+
+export const Template = () => `<a
+          href="#"
+          class="utrecht-link"
+          title="Title"
+        >
+<div class="utrecht-toptask-card">
+  <img src="..." alt="...">
+<h2>Card</h2>
+</div>
+</a>`;
+
+<Meta
+  title="CSS Template/Toptask Card"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Toptask Card
+
+<Canvas>
+  <Story name="toptask Card">{Template.bind({})}</Story>
+</Canvas>

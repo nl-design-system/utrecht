@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-toptask-card {
+  --utrecht-document-color: currentColor;
+  --utrecht-heading-color: currentColor;
+  --utrecht-link-color: currentColor;
+  --utrecht-link-focus-color: currentColor;
+  --utrecht-link-hover-color: currentColor;
+  --utrecht-link-active-color: currentColor;
+  --utrecht-link-visited-color: currentColor;
+  --utrecht-heading-2-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-toptask-card-background-color: hsl(207 60% 91%);
+  --utrecht-toptask-card-background-color-2: hsl(207 60% 96%);
+
+  background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
+  background-position-x: 66%;
+  color: var(--utrecht-color-white);
+  padding-block-end: var(--utrecht-space-block-lg);
+  padding-block-start: var(--utrecht-space-block-lg);
+  padding-inline-end: var(--utrecht-space-inline-lg);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+}
