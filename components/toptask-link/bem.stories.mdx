@@ -1,0 +1,125 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+Copyright (c) 2021 Gemeente Utrecht
+-->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import iconSet from "../icon/icon-set.json";
+import { defaultArgs, ToptaskCard } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component / Toptask Link"
+  argTypes={{
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    icon: {
+      description: "Icon",
+      control: { type: "select" },
+      options: ["", ...iconSet],
+    },
+    textContent: {
+      description: "Link text",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => ToptaskCard(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Toptask Card
+
+Styling via the `.utrecht-toptask-link` class name:
+
+<Canvas>
+  <Story
+    name="Toptask Card"
+    args={{
+      ...defaultArgs,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Toptask Card" />
+
+## States
+
+### Hover
+
+Styling via the `.utrecht-toptask-link--hover` class name:
+
+<Canvas>
+  <Story
+    name="Toptask Card hover"
+    args={{
+      ...defaultArgs,
+      hover: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+### Focus
+
+Styling via the `.utrecht-toptask-link--focus` class name:
+
+<Canvas>
+  <Story
+    name="Toptask Card focus"
+    args={{
+      ...defaultArgs,
+      focus: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+### Focus visible
+
+Styling via the `.utrecht-toptask-link--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Toptask Card focus visible"
+    args={{
+      ...defaultArgs,
+      focus: true,
+      focusVisible: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
