@@ -38,4 +38,6 @@ Omdat het Utrecht Design System gekoppeld is aan het NL Design System, blijven w
 
 Het is belangrijk dat iedereen de online dienstverlening van de overheid kan gebruiken, ongeacht wie je bent en wat je situatie is. Dit heet inclusie: iedereen moet kunnen meedoen. Daarom testen we de afspraken in het Design System met een heel diverse gebruikersgroep, waaronder mensen met beperkingen. Zo nemen de kwaliteit, bruikbaarheid en toegankelijkheid toe en kunnen we iedereen in Nederland met onze digitale producten steeds beter van dienst zijn.
 
-De POC is te vinden op: <http://github.com/nl-design-system/utrecht>
+## Doe je voordeel met de documentatie
+
+Het lijkt ons nuttig als andere overheidsorganisaties gebruik kunnen maken van de documentatie en daarmee hun design systems beter maken voor de inwoners van Nederland. Daarom is alle documentatie (richtlijnen, inzichten van onderzoek, design beslissingen, etc.) die wij schrijven in ons Design System beschikbaar onder de [CC0 1.0 Universeel licentie](https://creativecommons.org/publicdomain/zero/1.0/deed.nl), en geven daarmee iedereen toestemming deze documentatie te delen en te hergebruiken.
