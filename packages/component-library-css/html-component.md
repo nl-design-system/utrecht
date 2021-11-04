@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # HTML Components
 
 HTML components contain a small subset of the CSS components, for components that occur in regular HTML pages with semantic HTML. You can apply the `utrecht-html-content` class name to your page, and any semantic HTML will be styled automatically. This can be helpful to style HTML content from a CMS, for example.

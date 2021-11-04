@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 <!-- markdownlint-disable MD033 -->
 
 # Kleuren huisstijl
