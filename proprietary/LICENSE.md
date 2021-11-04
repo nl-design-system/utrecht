@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # License
 
 Copyright (c) 2021 Gemeente Utrecht. All rights reserved.

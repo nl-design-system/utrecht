@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Web Components
 
 If you want to use the components library, you can use custom elements in your HTML page to render the components. The npm package `@utrecht/web-component-library-stencil` contains the implementation of every web component, but each component will be loaded separately and on-demand, so including the entire component library will not slow down your application.

@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 <!-- \*Status: **In development\*** -->
 
 # 1. Navigatie - Side Nav

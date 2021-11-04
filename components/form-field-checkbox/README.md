@@ -1,10 +1,4 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Robbert Broersma
-Copyright (c) 2021 Gemeente Utrecht
-Copyright (c) 2021 Gemeente Den Haag
-Copyright (c) 2021 Rogier Barendregt
--->
+<!-- @license CC0-1.0 -->
 
 # Form field with checkbox
 
