@@ -13,9 +13,7 @@ export class Toptask {
           <div class="utrecht-toptask-card__icon">
             <utrecht-icon-loupe></utrecht-icon-loupe>
           </div>
-          <div class="utrecht-toptask-card__body">
-            <span class="utrecht-toptask-card__title">Wat te doen met een NL DS</span>
-          </div>
+          <div class="utrecht-toptask-card__body">Wat te doen met een NL DS</div>
         </div>
       </a>
     );
