@@ -1,10 +1,19 @@
 /**
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
  */
 
-.utrecht-toptask-card-container {
-  background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
+@import "../common/focus/bem";
+
+.utrecht-toptask-card--hover:not(:disabled),
+.utrecht-toptask-card:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-toptask-card-container--disabled) {
+  background-color: var(--utrecht-color-blue-40);
+  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+}
+
+.utrecht-toptask-card {
+  background-color: var(--utrecht-button-background-color);
   text-decoration: none;
   width: 9rem;
   max-width: 15rem;
@@ -16,10 +25,44 @@
   padding-inline-start: var(--utrecht-space-inline-lg);
 }
 
-.utrecht-toptask-card {
-  --utrecht-toptask-card-background-color: hsl(207 60% 91%);
-  color: var(--utrecht-color-white);
-  overflow: visible;
+.utrecht-toptask-card--focus {
+}
+
+.utrecht-toptask-card--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include utrecht-focus-visible;
+}
+
+.utrecht-toptask-card--focus {
+  background-color: var(--utrecht-button-focus-background-color, var(--utrecht-button-background-color));
+  color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
+}
+
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if $utrecht-focus-visible-fallback {
+  .utrecht-toptask-card:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+    @extend .utrecht-toptask-card--focus;
+    @extend .utrecht-toptask-card--focus-visible;
+  }
+
+  /* override the `:focus` selector above */
+  /* stylelint-disable-next-line no-descending-specificity */
+  .utrecht-toptask-card:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset;
+  }
+} @else {
+  .utrecht-toptask-card:focus-visible {
+    @extend .utrecht-toptask-card-containern--focus-visible;
+  }
+
+  .utrecht-toptask-card:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+    @extend .utrecht-toptask-card--focus;
+  }
+}
+
+.utrecht-toptask-card-container {
 }
 
 .utrecht-toptask-card__icon {

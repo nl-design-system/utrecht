@@ -3,23 +3,37 @@
 Copyright (c) 2021 Robbert Broersma
 -->
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ToptaskCard, defaultArgs } from "./bem";
 import "./bem.scss";
 
-export const Template = () => `<a href="#" title="link to..." class="utrecht-toptask-card-container">
-  <div class="utrecht-toptask-card">
-    <div class="utrecht-toptask-card__icon">
-      <utrecht-icon-loupe></utrecht-icon-loupe>
-    </div>
- <div class="utrecht-toptask-card__body">
-     Wat te doen met een NL DS
-  </div></div></a>`;
-
 <Meta
-  title="CSS Template/Toptask Card"
+  title="CSS / Toptask Card"
+  argTypes={{
+    textContent: {
+      description: "Card text",
+      control: "text",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+  }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => ToptaskCard(args),
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -29,6 +43,101 @@ export const Template = () => `<a href="#" title="link to..." class="utrecht-top
 
 # Toptask Card
 
+Styling via the `.utrecht-toptask-card` class name:
+
 <Canvas>
-  <Story name="toptask Card">{Template.bind({})}</Story>
+  <Story
+    name="ToptaskCard"
+    args={{
+      ...defaultArgs,
+      textContent: "Het voordeel van structuur",
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="ToptaskCard" />
+
+## States
+
+### Active
+
+Styling via the `.utrecht-toptask-card--active` class name:
+
+<Canvas>
+  <Story
+    name="ToptaskCard active"
+    args={{
+      active: true,
+      textContent: "Meer teskt op Card",
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+### Hover
+
+Styling via the `.utrecht-toptask-card--hover` class name:
+
+<Canvas>
+  <Story
+    name="ToptaskCard hover"
+    args={{
+      textContent: "Read more...",
+      hover: true,
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+### Focus
+
+Styling via the `.utrecht-toptask-card--focus` class name:
+
+<Canvas>
+  <Story
+    name="ToptaskCard focus"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+### Focus visible
+
+Styling via the `.utrecht-toptask-card--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="ToptaskCard focus visible"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+      focusVisible: true,
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled
+
+Styling via the `.utrecht-toptaks-card--disabled` class name:
+
+<Canvas>
+  <Story
+    name="ToptaskCard disabled"
+    args={{
+      textContent: "Read more...",
+      disabled: true,
+    }}
+  >
+    {ToptaskCard.bind({})}
+  </Story>
 </Canvas>
