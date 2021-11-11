@@ -19,6 +19,9 @@
   padding-inline-end: var(--utrecht-accordion-heading-padding-inline-end);
   padding-block-start: var(--utrecht-accordion-heading-padding-block-start);
   padding-block-end: var(--utrecht-accordion-heading-padding-block-end);
+  font-size: var(--utrecht-accordion-heading-font-size);
+  color: var(--utrecht-accordion-heading-color);
+  font-weight: var(--utrecht-accordion-heading-font-weight);
 }
 
 .utrecht-accordion__button {

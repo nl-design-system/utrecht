@@ -2,12 +2,14 @@
   "utrecht": {
     "accordion": {
       "heading": {
-        "background-color": { "value": "{utrecht.color.grey.90.value}" },
-        "color": { "value": "{utrecht.color.grey.15.value}" },
+        "background-color": { "value": "{utrecht.color.blue.90.value}" },
+        "color": { "value": "{utrecht.color.blue.35.value}" },
         "padding-inline-start": { "value": "14px" },
         "padding-inline-end": { "value": "14px" },
         "padding-block-start": { "value": "14px" },
-        "padding-block-end": { "value": "14px" }
+        "padding-block-end": { "value": "14px" },
+        "font-size": { "value": "{utrecht.typography.scale.lg.font-size.value}" },
+        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" }
       },
       "panel": {
         "padding-inline-start": { "value": "16px" },
