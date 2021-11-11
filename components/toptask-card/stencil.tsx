@@ -1,16 +1,21 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'utrecht-toptask-card-template',
+  tag: 'utrecht-toptask-card',
   styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Toptask {
   render() {
     return (
-      <a href="#" class="utrecht-link" title="Top task ">
+      <a href="#" title="link to..." class="utrecht-toptask-card-container">
         <div class="utrecht-toptask-card">
-          <utrecht-heading-2>Top task card</utrecht-heading-2>
+          <div class="utrecht-toptask-card__icon">
+            <utrecht-icon-loupe></utrecht-icon-loupe>
+          </div>
+          <div class="utrecht-toptask-card__body">
+            <span class="utrecht-toptask-card__title">Wat te doen met een NL DS</span>
+          </div>
         </div>
       </a>
     );

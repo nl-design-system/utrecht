@@ -3,23 +3,38 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-.utrecht-toptask-card {
-  --utrecht-document-color: currentColor;
-  --utrecht-heading-color: currentColor;
-  --utrecht-link-color: currentColor;
-  --utrecht-link-focus-color: currentColor;
-  --utrecht-link-hover-color: currentColor;
-  --utrecht-link-active-color: currentColor;
-  --utrecht-link-visited-color: currentColor;
-  --utrecht-heading-2-font-size: var(--utrecht-typography-scale-md-font-size);
-  --utrecht-toptask-card-background-color: hsl(207 60% 91%);
-  --utrecht-toptask-card-background-color-2: hsl(207 60% 96%);
+.utrecht-toptask-card-container {
+  text-decoration: none;
+}
 
-  background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
-  background-position-x: 66%;
+.utrecht-toptask-card {
+  --utrecht-toptask-card-background-color: hsl(207 60% 91%);
   color: var(--utrecht-color-white);
-  padding-block-end: var(--utrecht-space-block-lg);
-  padding-block-start: var(--utrecht-space-block-lg);
-  padding-inline-end: var(--utrecht-space-inline-lg);
-  padding-inline-start: var(--utrecht-space-inline-lg);
+  background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
+  padding-block-end: var(--utrecht-space-block-md);
+  padding-block-start: var(--utrecht-space-block-md);
+  padding-inline-end: var(--utrecht-space-inline-md);
+  padding-inline-start: var(--utrecht-space-inline-md);
+  width: 5em;
+  max-width: 10em;
+  height: 5em;
+  overflow: visible;
+}
+
+.utrecht-toptask-card__icon {
+  --utrecht-icon-color: var(--utrecht-color-white);
+  --utrecht-icon-size: 1.5rem;
+  align-items: left;
+  display: flex;
+  padding-block-end: var(--utrecht-space-block-xs);
+  padding-inline-end: var(--utrecht-space-inline-md);
+}
+
+.utrecht-toptask-card__body {
+}
+
+.utrecht-toptask-card__title {
+  color: var(--utrecht-color-white);
+  font-size: 1rem;
+  line-height: 0.6;
 }
