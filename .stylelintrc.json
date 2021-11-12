@@ -1,16 +1,19 @@
 {
-  "plugins": ["stylelint-order", "stylelint-scss"],
+  "extends": ["stylelint-config-standard-scss"],
+  "plugins": ["stylelint-order"],
   "rules": {
     "order/order": ["custom-properties", "declarations"],
     "order/properties-alphabetical-order": true,
     "scss/at-rule-no-unknown": true,
     "scss/dollar-variable-default": true,
-    "scss/dollar-variable-first-in-block": true,
-    "scss/dollar-variable-pattern": "/(example|utrecht)-[a-z0-9-]+/",
-    "scss/percent-placeholder-pattern": "/(example|utrecht)-[a-z0-9-]+/",
-    "custom-property-pattern": "(example|utrecht)-[a-z0-9-]+",
-    "selector-class-pattern": "(example|utrecht)-[a-z0-9-]+",
-    "keyframes-name-pattern": "(example|utrecht)-[a-z0-9-]+",
+    "scss/dollar-variable-first-in-block": [true, { "ignore": ["comments", "imports"] }],
+    "scss/dollar-variable-pattern": "^(example|utrecht)-[a-z0-9-]+$",
+    "scss/percent-placeholder-pattern": "^(example|utrecht)-[a-z0-9-]+$",
+    "scss/operator-no-newline-after": null,
+    "scss/at-extend-no-missing-placeholder": null,
+    "custom-property-pattern": "^(example|utrecht)-[a-z0-9-]+$",
+    "selector-class-pattern": "^(example|utrecht)-[a-z0-9_-]+$",
+    "keyframes-name-pattern": "^(example|utrecht)-[a-z0-9-]+$",
     "at-rule-no-unknown": null,
     "block-no-empty": [true],
     "color-no-invalid-hex": [true],
@@ -19,7 +22,6 @@
     "declaration-block-no-shorthand-property-overrides": [true],
     "font-family-no-duplicate-names": [true],
     "font-family-no-missing-generic-family-keyword": [true],
-    "function-calc-no-invalid": [true],
     "function-calc-no-unspaced-operator": [true],
     "function-linear-gradient-no-nonstandard-direction": [true],
     "keyframe-declaration-no-important": [true],
@@ -146,6 +148,8 @@
     "selector-max-empty-lines": null,
     "media-feature-name-case": null,
     "at-rule-name-case": null,
-    "string-quotes": null
+    "string-quotes": null,
+    "property-no-vendor-prefix": null,
+    "declaration-block-no-redundant-longhand-properties": null
   }
 }

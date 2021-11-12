@@ -1,15 +1,15 @@
-import { Component, h } from "@stencil/core";
+import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: "utrecht-icon-zoomout",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-icon-zoomout',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class IconZoomOut {
   render() {
     return (
       <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-6 -11 24 24">
-        <title>zoomin</title>
+        <title>zoom out</title>
         <g>
           <path
             fill="currentColor"

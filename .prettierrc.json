@@ -1,7 +1,7 @@
 {
   "overrides": [
     {
-      "files": ["*.js"],
+      "files": ["*.js", "*.jsx"],
       "options": {
         "parser": "flow",
         "printWidth": 120,
@@ -27,7 +27,7 @@
       }
     },
     {
-      "files": ["*.ts"],
+      "files": ["*.ts", "*.tsx"],
       "options": {
         "parser": "typescript",
         "printWidth": 120,

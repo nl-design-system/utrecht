@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Form.io Components
 
 The `@utrecht/component-library-formio` package contains implementations of various form related components. It currently is a mix of CSS components and Web components. This means you need to install the following three packages:

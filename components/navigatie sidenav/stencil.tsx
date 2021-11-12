@@ -1,9 +1,9 @@
-import { Component, Prop, h } from "@stencil/core";
-import clsx from "clsx";
+import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-sidenav",
-  styleUrl: "bem.scss",
+  tag: 'utrecht-sidenav',
+  styleUrl: 'bem.scss',
   shadow: true,
 })
 export class Sidenav {
@@ -19,18 +19,18 @@ export class Sidenav {
             <li
               key={href}
               class={clsx(
-                "utrecht-sidenav__item",
-                sibling && "utrecht-sidenav__item--sibling",
-                haschildren && "utrecht-sidenav__item--has-children"
+                'utrecht-sidenav__item',
+                sibling && 'utrecht-sidenav__item--sibling',
+                haschildren && 'utrecht-sidenav__item--has-children',
               )}
             >
               <a
                 class={clsx(
-                  "utrecht-sidenav__link",
-                  current && "utrecht-sidenav__link--current",
-                  focus && "utrecht-sidenav__link--focus",
-                  sibling && "utrecht-sidenav__link--sibling",
-                  haschildren && "utrecht-sidenav__link--has-children"
+                  'utrecht-sidenav__link',
+                  current && 'utrecht-sidenav__link--current',
+                  focus && 'utrecht-sidenav__link--focus',
+                  sibling && 'utrecht-sidenav__link--sibling',
+                  haschildren && 'utrecht-sidenav__link--has-children',
                 )}
                 href={href}
               >
@@ -43,9 +43,9 @@ export class Sidenav {
                     <li key={href} class="utrecht-sidenav__item utrecht-sidenav__item--child">
                       <a
                         class={clsx(
-                          "utrecht-sidenav__link utrecht-sidenav__link--child",
-                          current && "utrecht-sidenav__link--current utrecht-sidenav__link--child--current",
-                          focus && "utrecht-sidenav__link--focus"
+                          'utrecht-sidenav__link utrecht-sidenav__link--child',
+                          current && 'utrecht-sidenav__link--current utrecht-sidenav__link--child--current',
+                          focus && 'utrecht-sidenav__link--focus',
                         )}
                         href={href}
                       >
@@ -55,7 +55,7 @@ export class Sidenav {
                   ))}
                 </ul>
               ) : (
-                ""
+                ''
               )}
             </li>
           ))}

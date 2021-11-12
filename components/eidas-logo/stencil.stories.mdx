@@ -1,0 +1,23 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+export const EidasLogo = () => `<utrecht-eidas-logo></utrecht-eidas-logo>`;
+
+<Meta
+  title="Web Component/eIDAS Logo"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => EidasLogo(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# eIDAS Logo
+
+<Canvas>
+  <Story name="Eidas Logo">{EidasLogo.bind({})}</Story>
+</Canvas>

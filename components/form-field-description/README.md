@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Form Field Description
 
 Use this component in forms to describe why a form input is invalid.

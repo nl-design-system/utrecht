@@ -1,6 +1,14 @@
-import { Meta, Description } from "@storybook/addon-docs";
+<!-- @license CC0-1.0 -->
+
+import { Description, Meta } from "@storybook/addon-docs";
+import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
 import document from "./README.md";
 
 <Meta title="CSS Component/Menulijst/README" />
 
 <Description>{document}</Description>
+
+## Design Tokens
+
+<ComponentTokensSection tokens={tokens} component="utrecht-menulijst"></ComponentTokensSection>

@@ -24,11 +24,12 @@ export const SideNav = ({ items }) => `<nav class="utrecht-sidenav">
             children
               ? `<ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${children
                   .map(
-                    ({ href, title, current, focus }) =>
+                    ({ href, title, current, focus, focusVisible }) =>
                       `<li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="${clsx(
                         'utrecht-sidenav__link utrecht-sidenav__link--child',
                         current && 'utrecht-sidenav__link--current utrecht-sidenav__link--child--current',
                         focus && 'utrecht-sidenav__link--focus',
+                        focusVisible && 'utrecht-sidenav__link--focus-visible',
                       )}" href="${href}">${title}</a></li>`,
                   )
                   .join('')}

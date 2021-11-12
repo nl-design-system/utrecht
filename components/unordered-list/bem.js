@@ -5,7 +5,7 @@
 
 import clsx from 'clsx';
 
-const defaultArgs = {
+export const defaultArgs = {
   distanced: false,
   items: [],
   nested: false,

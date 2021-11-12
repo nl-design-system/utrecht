@@ -13,15 +13,43 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "devDependencies": {
+    "@babel/core": "7.16.0",
+    "@babel/plugin-transform-react-jsx-development": "7.16.0",
+    "@babel/preset-react": "7.16.0",
+    "@etchteam/storybook-addon-status": "4.0.0",
     "@percy/storybook": "3.3.1",
-    "rimraf": "3.0.2"
+    "@storybook/addon-a11y": "6.3.12",
+    "@storybook/addon-docs": "6.3.12",
+    "@storybook/addon-viewport": "6.3.12",
+    "@storybook/builder-webpack5": "6.3.12",
+    "@storybook/cli": "6.3.12",
+    "@storybook/html": "6.3.12",
+    "@storybook/manager-webpack5": "6.3.12",
+    "@storybook/preset-scss": "1.0.3",
+    "@storybook/theming": "6.3.12",
+    "@utrecht/components": "file:../../components",
+    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil",
+    "babel-loader": "8.2.3",
+    "css-loader": "5.2.7",
+    "lodash.defaultsdeep": "4.6.1",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rimraf": "3.0.2",
+    "sass": "1.43.4",
+    "sass-loader": "10.2.0",
+    "storybook-addon-themes": "6.1.0",
+    "style-loader": "2.0.0",
+    "webpack": "4.46.0"
   },
   "dependencies": {
-    "http-server": "13.0.2"
+    "http-server": "14.0.0"
   },
   "scripts": {
+    "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/style/,../../proprietary/assets/",
     "clean": "rimraf dist/",
     "percy-snapshot": "percy-storybook --build_dir dist/ --widths=1280",
-    "start": "node_modules/http-server/bin/http-server dist/"
+    "start": "../../node_modules/http-server/bin/http-server dist/",
+    "storybook": "start-storybook --config-dir config/ --port 6006 --static-dir src/style/,../../proprietary/assets/"
   }
 }

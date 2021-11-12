@@ -3,19 +3,19 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-checkbox",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-checkbox',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Checkbox {
   @Prop({ reflect: true }) disabled: boolean = false;
-  @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
+  @Prop({ attribute: 'readonly', reflect: true }) readOnly: boolean = false;
   @Prop() checked: boolean = false;
-  @Prop() value: string = "";
+  @Prop() value: string = '';
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;
@@ -26,7 +26,7 @@ export class Checkbox {
 
     return (
       <input
-        class={clsx("utrecht-checkbox")}
+        class={clsx('utrecht-checkbox')}
         type="checkbox"
         checked={checked}
         disabled={disabled}

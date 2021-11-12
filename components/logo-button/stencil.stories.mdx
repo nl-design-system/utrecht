@@ -1,0 +1,23 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+export const DigidButton = () => `<utrecht-digid-button>Inloggen</utrecht-digid-button>`;
+
+<Meta
+  title="Web Component/Logo Button"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => DigidButton(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Logo Button
+
+<Canvas>
+  <Story name="Logo Button">{DigidButton.bind({})}</Story>
+</Canvas>

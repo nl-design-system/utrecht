@@ -1,6 +1,15 @@
-import PropTypes from "prop-types";
-import React from "react";
-export const path2css = (path) => `var(--${path.join("-")})`;
+import PropTypes from 'prop-types';
+import React from 'react';
+export const path2css = (path) => `var(--${path.join('-')})`;
+import { ColorExample } from './ColorExample';
+
+const visualizeToken = (token) => {
+  if (token.css && token.css.syntax === '<color>') {
+    return <ColorExample color={token.value}></ColorExample>;
+  } else {
+    return '';
+  }
+};
 
 export const DesignTokensTable = ({ tokens }) => (
   <table>
@@ -11,14 +20,18 @@ export const DesignTokensTable = ({ tokens }) => (
       </tr>
     </thead>
     <tbody>
-      {tokens.map(({ name, path, value }) => (
-        <tr key={name}>
-          <td>
-            <code>{path2css(path)}</code>
-          </td>
-          <td>{value}</td>
-        </tr>
-      ))}
+      {tokens.map((token) => {
+        const { name, path, value } = token;
+        return (
+          <tr key={name}>
+            <td>
+              <code>{path2css(path)}</code>
+            </td>
+            <td>{value}</td>
+            <td>{visualizeToken(token)}</td>
+          </tr>
+        );
+      })}
     </tbody>
   </table>
 );
@@ -28,8 +41,8 @@ DesignTokensTable.propTypes = {
     PropTypes.shape({
       comment: PropTypes.string,
       name: PropTypes.string,
-      path: PropTypes.string,
-      value: PropTypes.string,
-    })
+      path: PropTypes.arrayOf(PropTypes.string),
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    }),
   ),
 };

@@ -1,0 +1,92 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import "./html.scss";
+
+export const defaultArgs = {
+  checked: false,
+  disabled: false,
+  invalid: false,
+  required: false,
+  value: "",
+};
+
+export const Checkbox = ({ checked = false, disabled = false, invalid = false, required = false, value = "" }) =>
+  `<div class="utrecht-html">
+  <input type="checkbox"${checked ? " checked" : ""}${invalid ? ' aria-invalid="true"' : ""}${
+    disabled ? " disabled" : ""
+  }${required ? " required" : ""}${value ? ` value="${value}"` : ""}>
+</div>`;
+
+<Meta
+  title="HTML Component/Checkbox"
+  argTypes={{
+    checked: {
+      description: "Checked",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+    value: {
+      description: "Set the value of the text box",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Checkbox(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox Component
+
+<Canvas>
+  <Story
+    name="Checkbox"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Checkbox" />
+
+<Canvas>
+  <Story
+    name="Disabled checkbox"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+<Canvas>
+  <Story
+    name="Checked checkbox"
+    args={{
+      ...defaultArgs,
+      checked: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>

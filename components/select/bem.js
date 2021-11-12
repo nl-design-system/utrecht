@@ -17,9 +17,10 @@ export const defaultArgs = {
 export const Select = ({ disabled = false, focus = false, invalid = false, options = [], required = false }) =>
   `<select${invalid ? ' aria-invalid="true"' : ''}${disabled ? ' disabled' : ''}${
     required ? ' required' : ''
-  } class="${clsx('utrecht-select', {
+  } class="${clsx('utrecht-select', 'utrecht-select--html-select', {
     'utrecht-select--disabled': disabled,
     'utrecht-select--focus': focus,
+    'utrecht-select--focus-visible': focus,
     'utrecht-select--invalid': invalid,
     'utrecht-select--required': required,
   })}">

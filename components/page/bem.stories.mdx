@@ -1,0 +1,38 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { PageContent } from "../page-content/bem";
+import { PageFooter } from "../page-footer/bem";
+import { PageHeader } from "../page-header/bem";
+import { Page } from "./bem.js";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Page"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Page(args),
+    },
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Page component
+
+<Canvas>
+  <Story
+    name="Page"
+    args={{
+      innerHTML: [
+        PageHeader({ innerHTML: "Header area" }),
+        PageContent({ innerHTML: "Content area" }),
+        PageFooter({ innerHTML: "Footer area" }),
+      ].join("\n"),
+    }}
+  >
+    {Page.bind({})}
+  </Story>
+</Canvas>

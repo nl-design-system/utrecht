@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 <!-- markdownlint-disable MD033 -->
 
 # Kleuren huisstijl
@@ -63,3 +65,7 @@ Donkerblauw wordt gebruikt als basiskleur voor links en knoppen. Licht en ijsbla
 | Demo                                                                                        | Design Token naam | Hex code | CSS variable                 | Gebruik                                          |
 | ------------------------------------------------------------------------------------------- | ----------------- | -------- | ---------------------------- | ------------------------------------------------ |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-white)"></div> | Wit               | #FFFFFF  | `var(--utrecht-color-white)` | Gebruik wit als tekstkleur op de donkere kleuren |
+
+## Design
+
+[Figma - Utrecht Design System - Kleuren](https://www.figma.com/file/msb3CfQBefPoruqNQ968Zh/Utrecht-Design-System?node-id=1%3A866)

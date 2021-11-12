@@ -1,11 +1,8 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
--->
+<!-- @license CC0-1.0 -->
 
-import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
-import "./bem.scss";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { TopNav } from "./bem";
+import "./bem.scss";
 
 <Meta
   title="CSS Component/Navigatie TopNav"
@@ -52,7 +49,7 @@ import { TopNav } from "./bem";
     args={{
       items: [
         { href: "https://example.com/", title: "Wonen en leven" },
-        { href: "https://example.com/", title: "Werk en inkomen", focus: true },
+        { href: "https://example.com/", title: "Werk en inkomen", focus: true, focusVisible: true },
         { href: "https://example.com/", title: "Ondernemen" },
         { href: "https://example.com/", title: "Bestuur en organisatie" },
       ],

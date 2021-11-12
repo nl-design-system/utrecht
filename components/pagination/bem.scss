@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-pagination {
   font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
@@ -48,11 +48,6 @@
   color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
 }
 
-.utrecht-pagination__relative-link--focus,
-.utrecht-pagination__relative-link:focus {
-  @include utrecht-focus;
-}
-
 .utrecht-pagination__relative-link--hover,
 .utrecht-pagination__relative-link:hover {
   background-color: var(
@@ -83,9 +78,9 @@
 }
 
 .utrecht-pagination__page-link--current {
-  background-color: var(--utrecht-pagination-page-link-current-background-color);
-  border-color: var(--utrecht-pagination-page-link-current-border-color);
-  color: var(--utrecht-pagination-page-link-current-color);
+  --utrecht-pagination-page-link-background-color: var(--utrecht-pagination-page-link-current-background-color);
+  --utrecht-pagination-page-link-border-color: var(--utrecht-pagination-page-link-current-border-color);
+  --utrecht-pagination-page-link-color: var(--utrecht-pagination-page-link-current-color);
 }
 
 .utrecht-pagination__page-link--distanced,
@@ -106,7 +101,28 @@
   color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
 }
 
-.utrecht-pagination__page-link--focus,
-.utrecht-pagination__page-link:focus {
-  @include utrecht-focus;
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if $utrecht-focus-visible-fallback {
+  .utrecht-pagination__page-link:focus,
+  .utrecht-pagination__relative-link:focus {
+    @include utrecht-focus;
+    @include utrecht-focus-ring;
+  }
+
+  .utrecht-pagination__page-link:focus:not(:focus-visible),
+  .utrecht-pagination__relative-link:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset;
+  }
+} @else {
+  .utrecht-pagination__page-link:focus,
+  .utrecht-pagination__relative-link:focus {
+    @include utrecht-focus;
+  }
+
+  .utrecht-pagination__page-link:focus-visible,
+  .utrecht-pagination__relative-link:focus-visible {
+    @include utrecht-focus-visible;
+  }
 }

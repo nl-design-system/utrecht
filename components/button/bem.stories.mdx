@@ -1,12 +1,7 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
-Copyright (c) 2021 Robbert Broersma
--->
+<!-- @license CC0-1.0 -->
 
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
-import { defaultArgs, Button } from "./bem";
-
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button, defaultArgs } from "./bem";
 import "./bem.scss";
 
 <Meta
@@ -22,6 +17,10 @@ import "./bem.scss";
     },
     focus: {
       description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
       control: "boolean",
     },
     hover: {
@@ -111,6 +110,23 @@ Styling via the `.utrecht-button--focus` class name:
   </Story>
 </Canvas>
 
+### Focus visible
+
+Styling via the `.utrecht-button--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Button focus visible"
+    args={{
+      textContent: "Read more...",
+      focus: true,
+      focusVisible: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
 ### Disabled
 
 Styling via the `.utrecht-button--disabled` class name:
@@ -139,6 +155,7 @@ Styling via the `.utrecht-button--busy` class name:
       textContent: "Read more...",
     }}
     parameters={{
+      // `cursor` cannot be tested using visual regression testing, ignore this story
       percy: { skip: true },
     }}
   >

@@ -6,11 +6,12 @@
 export const defaultArgs = {
   busy: false,
   disabled: false,
+  focusable: false,
   textContent: '',
   type: 'button',
 };
 
-export const Button = ({ busy = false, disabled = false, textContent = '', type = 'button' }) =>
+export const Button = ({ busy = false, disabled = false, focusable = false, textContent = '', type = 'button' }) =>
   `<button type="${type || 'button'}"${busy ? ' aria-busy="true"' : ''}${
-    disabled ? ' disabled' : ''
+    disabled ? (focusable ? ' aria-disabled="true"' : ' disabled') : ''
   }>${textContent}</button>`;

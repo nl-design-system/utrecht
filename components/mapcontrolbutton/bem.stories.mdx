@@ -1,10 +1,7 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
-Copyright (c) 2021 Robbert Broersma
--->
+<!-- @license CC0-1.0 -->
 
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import iconSet from "../icon/icon-set.json";
 import { defaultArgs, MapControlButton } from "./bem";
 import "./bem.scss";
 
@@ -13,6 +10,10 @@ import "./bem.scss";
   argTypes={{
     focus: {
       description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
       control: "boolean",
     },
     hover: {
@@ -26,7 +27,7 @@ import "./bem.scss";
     icon: {
       description: "Distance the element from adjacent content",
       control: { type: "select" },
-      options: ["", "utrecht-icon-zoomin", "utrecht-icon-zoomout"],
+      options: ["", ...iconSet],
     },
     label: {
       description: "Label",
@@ -89,6 +90,28 @@ Styling via the `.utrecht-mapcontrolbutton--focus` class name:
     name="Map Control Button focus"
     args={{
       focus: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
+
+Styling via the `.utrecht-mapcontrolbutton--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Map Control Button focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
       icon: "utrecht-icon-zoomin",
     }}
     parameters={{

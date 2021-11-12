@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.36",
+  "version": "1.0.0-alpha.68",
   "author": "Community for NL Design System",
   "description": "Vue.js web components for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -17,7 +17,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npm run build:web-components",
+    "build:web-components": "tsc -p .",
     "clean": "rimraf dist/"
   },
   "main": "./dist/components.js",
@@ -30,6 +31,6 @@
     "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil",
     "rimraf": "3.0.2",
     "typescript": "4.1.6 <4.2",
-    "vue": "3.2.12"
+    "vue": "3.2.20"
   }
 }

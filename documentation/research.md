@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Gebruikersonderzoek
 
 Gebruiksvriendelijk en toegankelijke producten en diensten voor alle inwoners van de Gemeente Utrecht.

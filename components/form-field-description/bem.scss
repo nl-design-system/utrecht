@@ -4,8 +4,10 @@
  */
 
 .utrecht-form-field-description {
+  color: var(--utrecht-form-field-description-color);
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-form-field-description-font-size, inherit);
+  font-style: var(--utrecht-form-field-description-font-style);
 }
 
 .utrecht-form-field-description--distanced {
@@ -28,4 +30,8 @@
     --utrecht-form-field-description-valid-color,
     var(--utrecht-feedback-valid-color, var(--utrecht-feedback-safe-color))
   );
+}
+
+.utrecht-form-field-description--warning {
+  color: var(--utrecht-form-field-description-warning-color, var(--utrecht-feedback-warning-color));
 }

@@ -1,10 +1,6 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
-Copyright (c) 2021 Robbert Broersma
--->
+<!-- @license CC0-1.0 -->
 
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { defaultArgs, Link } from "./bem";
 import "./bem.scss";
 
@@ -25,6 +21,10 @@ import "./bem.scss";
     },
     focus: {
       description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
       control: "boolean",
     },
     href: {
@@ -117,6 +117,23 @@ Styling via the `.utrecht-link--focus` class name:
   </Story>
 </Canvas>
 
+### Focus-visible state
+
+Styling via the `.utrecht-link--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="Link focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+      textContent: "Read more...",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
 ### Active state
 
 Styling via the `.utrecht-link--active` class name:
@@ -166,6 +183,23 @@ Styling via the `.utrecht-link--telephone` class name. Avoid line wrap within th
   </Story>
 </Canvas>
 
+## E-mail link
+
+Styling via the `.utrecht-link--email` class name.
+
+<Canvas>
+  <Story
+    name="E-mail link"
+    args={{
+      href: "mailto:info@example.com",
+      textContent: "info@example.com",
+      mail: true,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
 ## External link
 
 Styling via the `.utrecht-link--external` class name.
@@ -189,3 +223,21 @@ Styling via the `.utrecht-link--external` class name.
 - `rel="noopener"` helps security: disable JavaScript contact via `window.opener` between the current page and the page you link to.
 - `rel="noreferer"` helps privacy: normal links leak privacy sensitive data. The 3rd-party website you link to will find out what page you were on via the HTTP `Referer` header. Including `noreferer` disables the `Referer` header.
 - Avoid using `target="_blank"` for external just because you don't want the visitor to leave your website, they can decide themselves to open a link in a new tab or window.
+
+## Link in Arabic script
+
+The underline of the link should not negatively impact the readability of the text, by crossing through any [Arabic diacritics](https://en.wikipedia.org/wiki/Arabic_diacritics). Configuring `text-decoration-skip-ink` in CSS can improve the default rendering of the underline by skipping over the diacritics.
+
+<Canvas>
+  <Story
+    name="Arabic link"
+    args={{
+      href: "mailto:info@example.com",
+      textContent: "تواصل معنا من خلال البريد الإلكتروني",
+      mail: true,
+    }}
+    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

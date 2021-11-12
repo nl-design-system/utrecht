@@ -1,10 +1,6 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Robbert Broersma
--->
+<!-- @license CC0-1.0 -->
 
-import { Meta, Story, Canvas } from "@storybook/addon-docs";
-
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import "./html.scss";
 
 export const Template = () =>
@@ -13,6 +9,15 @@ export const Template = () =>
     <li>Lorem</li>
     <li>Ipsum</li>
     <li>Dolor</li>
+  </ol>
+</section>`;
+
+export const TemplateArabic = () =>
+  `<section class="utrecht-html" lang="ar" dir="rtl">
+  <ol>
+    <li>واحد</li>
+    <li>إثنان</li>
+    <li>ثلاثة</li>
   </ol>
 </section>`;
 
@@ -31,4 +36,19 @@ export const Template = () =>
 
 <Canvas>
   <Story name="Ordered list">{Template.bind({})}</Story>
+</Canvas>
+
+## Ordered list in Arabic
+
+<Canvas>
+  <Story
+    name="Ordered list in Arabic"
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => TemplateArabic(args),
+      },
+    }}
+  >
+    {TemplateArabic.bind({})}
+  </Story>
 </Canvas>

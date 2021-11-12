@@ -1,9 +1,6 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Robbert Broersma
--->
+<!-- @license CC0-1.0 -->
 
-import { Meta, Story, Canvas, ArgsTable } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import "./html.scss";
 
 export const Template = ({
@@ -198,6 +195,20 @@ Styling via the `<input>` element:
       required: true,
       value: "very$ecret2021",
       type: "password",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## URL input
+
+<Canvas>
+  <Story
+    name="URL input"
+    args={{
+      type: "url",
+      value: "https://example.fi/",
     }}
   >
     {Template.bind({})}

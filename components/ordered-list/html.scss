@@ -13,3 +13,7 @@
 .utrecht-html ol > li {
   @extend .utrecht-ordered-list__item;
 }
+
+.utrecht-html ol:lang(ar) {
+  @extend .utrecht-ordered-list--arabic;
+}

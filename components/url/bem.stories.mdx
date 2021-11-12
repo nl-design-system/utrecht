@@ -1,0 +1,103 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, URLTemplate } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/URL"
+  argTypes={{
+    url: {
+      description: "URL",
+      control: "text",
+    },
+    link: {
+      description: "Link",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => URLTemplate(args),
+    },
+    // This story is rendered as regular text, no testing required
+    percy: { skip: true },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# URL
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      link: true,
+      url: "https://example.com/",
+    }}
+    name="URL"
+  >
+    {URLTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="URL" />
+
+## URL with mixed left-to-right path
+
+When displaying an URL in HTML, explicitly mark the text directionality as left-to-right using `dir="ltr"`, to prevent trailing non-word characters such as `/` to be misplaced in a right-to-left document. A trailing slash might end up before `http:` when the URL is in right-to-left text such as Arabic. To maintain the correct rendering even in automated translations of a document, specifically mark URLs as `dir="ltr"` even when the document as a whole is already configured as such using `<html dir="ltr">`.
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      url: "https://example.com/الأمثلة/",
+    }}
+    name="URL with right-to-left path"
+    parameters={{
+      percy: { skip: true },
+    }}
+  >
+    {URLTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## URL with mixed left-to-right top-level domain
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      url: "https://example.شبكة/",
+    }}
+    name="URL with right-to-left top-level domain"
+    parameters={{
+      // This story is rendered as regular text, no testing required
+      percy: { skip: true },
+    }}
+  >
+    {URLTemplate.bind({})}
+  </Story>
+</Canvas>
+
+## URL with common ligatures in top-level-domain
+
+It can be helpful to avoid rendering characters together as a ligatures, such as displaying `fi` as `ﬁ`. The CSS property [`font-variant-ligatures`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-ligatures) can be used to disable ligatures.
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      url: "https://example.fi/",
+    }}
+    parameters={{
+      // This story uses different text rendering for ligatures, include in visual regression test
+      percy: { skip: false },
+    }}
+    name="URL with common ligatures in top-level-domain"
+  >
+    {URLTemplate.bind({})}
+  </Story>
+</Canvas>

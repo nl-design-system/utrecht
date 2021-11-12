@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.90",
+  "version": "1.0.0-alpha.122",
   "author": "Community for NL Design System",
   "description": "Component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -17,7 +17,8 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc -p .",
+    "build": "npm run build:web-components",
+    "build:web-components": "tsc -p .",
     "clean": "rimraf dist/",
     "rollup": "rollup -c"
   },
@@ -28,8 +29,8 @@
     "dist/"
   ],
   "devDependencies": {
-    "@types/node": "16.9.2",
-    "@types/react": "16.14.15",
+    "@types/node": "16.11.6",
+    "@types/react": "16.14.20",
     "@types/react-dom": "16.9.14",
     "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil/",
     "react": "16.14.0",

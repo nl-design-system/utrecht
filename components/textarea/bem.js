@@ -23,10 +23,13 @@ export const TextArea = ({
 }) =>
   `<textarea class="${clsx(
     'utrecht-textarea',
+    'utrecht-textarea--html-textarea',
     disabled && 'utrecht-textarea--disabled',
-    focus && 'utrecht-textarea--focus',
+    focus && 'utrecht-textarea--focus utrecht-textarea--focus-visible',
     hover && 'utrecht-textarea--hover',
     invalid && 'utrecht-textarea--invalid',
     readOnly && 'utrecht-textarea--readonly',
     required && 'utrecht-textarea--required',
-  )}"${placeholder ? ` placeholder="${placeholder}"` : ''}>${textContent}</textarea>`;
+  )}"${disabled ? ' disabled' : ''}${invalid ? ' aria-invalid="true"' : ''}${
+    placeholder ? ` placeholder="${placeholder}"` : ''
+  }${readOnly ? ' readonly' : ''}${required ? ' required' : ''}>${textContent}</textarea>`;

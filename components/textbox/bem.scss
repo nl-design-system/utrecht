@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-textbox {
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));
@@ -75,6 +75,29 @@
 
 .utrecht-textbox--focus {
   @include utrecht-focus;
+
+  background-color: var(
+    --utrecht-textbox-focus-background-color,
+    var(
+      --utrecht-form-input-focus-background-color,
+      var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))
+    )
+  );
+  border-color: var(
+    --utrecht-textbox-focus-border-color,
+    var(
+      --utrecht-form-input-focus-border-color,
+      var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))
+    )
+  );
+  color: var(
+    --utrecht-textbox-focus-color,
+    var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
+  );
+}
+
+.utrecht-textbox--focus-visible {
+  @include utrecht-focus-visible;
 }
 
 .utrecht-textbox--read-only {
@@ -96,7 +119,21 @@
     --utrecht-textbox-placeholder-color,
     var(--utrecht-form-input-placeholder-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color)))
   );
+  font-style: var(--utrecht-form-input-placeholder-font-style);
   opacity: 100%;
+}
+
+.utrecht-textbox--numeric {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.utrecht-textbox--password {
+  font-variant-ligatures: none;
+  font-variant-numeric: slashed-zero;
+}
+
+.utrecht-textbox--url {
+  font-variant-ligatures: none;
 }
 
 .utrecht-textbox--html-input {
@@ -104,8 +141,26 @@
     @extend .utrecht-textbox--disabled;
   }
 
-  &:focus {
-    @extend .utrecht-textbox--focus;
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
+
+  @if $utrecht-focus-visible-fallback {
+    &:focus {
+      @extend .utrecht-textbox--focus;
+      @extend .utrecht-textbox--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset;
+    }
+  } @else {
+    &:focus {
+      @extend .utrecht-textbox--focus;
+    }
+
+    &:focus-visible {
+      @extend .utrecht-textbox--focus-visible;
+    }
   }
 
   &:invalid,

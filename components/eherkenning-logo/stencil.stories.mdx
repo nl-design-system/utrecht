@@ -1,0 +1,23 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+
+export const EherkenningLogo = () => `<utrecht-eherkenning-logo></utrecht-eherkenning-logo>`;
+
+<Meta
+  title="Web Component/eHerkenning Logo"
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => EherkenningLogo(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# eIDAS Logo
+
+<Canvas>
+  <Story name="Eherkenning Logo">{EherkenningLogo.bind({})}</Story>
+</Canvas>

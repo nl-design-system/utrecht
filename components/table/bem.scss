@@ -28,6 +28,7 @@
 }
 
 .utrecht-table__header {
+  background-color: var(--utrecht-table-header-background-color);
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
   text-transform: var(--utrecht-table-header-text-transform);
@@ -74,9 +75,13 @@
   padding-inline-end: var(--utrecht-table-row-padding-inline-end, var(--utrecht-table-cell-padding-inline-end, 0));
 }
 
-.utrecht-table__cell--numeric {
+.utrecht-table__cell--numeric-column {
   /* stylelint-disable-next-line declaration-property-value-disallowed-list */
   text-align: right;
+}
+
+.utrecht-table__cell--numeric-data {
+  font-variant-numeric: lining-nums tabular-nums;
 }
 
 .utrecht-table__row--alternate-odd {

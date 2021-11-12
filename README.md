@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Utrecht Design System
 
 **This project is very much WORK IN PROGRESS and all components are released as _alpha_ version. Always define the exact version you want to use, and test for breaking changes before upgrading to a newer alpha release.**
@@ -61,6 +63,7 @@ https://unpkg.com/@utrecht/design-tokens@^1.0.0/dist/index.css
 | [@utrecht/component-library-formio](https://www.npmjs.com/package/@utrecht/component-library-formio)           | [![NPM version](https://img.shields.io/npm/v/@utrecht/component-library-formio.svg)](https://www.npmjs.com/package/@utrecht/component-library-formio)           |
 | [@utrecht/components](https://www.npmjs.com/package/@utrecht/components)                                       | [![NPM version](https://img.shields.io/npm/v/@utrecht/components.svg)](https://www.npmjs.com/package/@utrecht/components)                                       |
 | [@utrecht/design-tokens](https://www.npmjs.com/package/@utrecht/design-tokens)                                 | [![NPM version](https://img.shields.io/npm/v/@utrecht/design-tokens.svg)](https://www.npmjs.com/package/@utrecht/design-tokens)                                 |
+| [@utrecht/icon](https://www.npmjs.com/package/@utrecht/icon)                                                   | [![NPM version](https://img.shields.io/npm/v/@utrecht/icon.svg)](https://www.npmjs.com/package/@utrecht/icon)                                                   |
 | [@utrecht/web-component-library-angular](https://www.npmjs.com/package/@utrecht/web-component-library-angular) | [![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-angular.svg)](https://www.npmjs.com/package/@utrecht/web-component-library-angular) |
 | [@utrecht/web-component-library-react](https://www.npmjs.com/package/@utrecht/web-component-library-react)     | [![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-react.svg)](https://www.npmjs.com/package/@utrecht/web-component-library-react)     |
 | [@utrecht/web-component-library-stencil](https://www.npmjs.com/package/@utrecht/web-component-library-stencil) | [![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-stencil.svg)](https://www.npmjs.com/package/@utrecht/web-component-library-stencil) |
@@ -123,6 +126,6 @@ We pledge to act and interact in ways that contribute to an open, welcoming, div
 
 ## License
 
-This project is free and open-source software licensed under the [European Union Public License (EUPL) v1.2](LICENSE.md).
+This project is free and open-source software licensed under the [European Union Public License (EUPL) v1.2](LICENSE.md). The documentation is licensed as [Creative Commons Zero 1.0 Universal (`CC0-1.0`)](https://creativecommons.org/publicdomain/zero/1.0/legalcode).
 
 For information about proprietary assets in this repository, please carefully read the [NOTICE file](NOTICE.md).

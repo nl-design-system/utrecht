@@ -1,11 +1,8 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
--->
+<!-- @license CC0-1.0 -->
 
-import { ArgsTable, Meta, Story, Canvas } from "@storybook/addon-docs";
-import "./bem.scss";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { SideNav } from "./bem";
+import "./bem.scss";
 
 <Meta
   title="CSS Component/Navigatie SideNav"
@@ -43,7 +40,7 @@ import { SideNav } from "./bem";
           haschildren: true,
           children: [
             { href: "#", title: "Child 1" },
-            { href: "#", title: "Child 2 :focus", focus: true },
+            { href: "#", title: "Child 2 :focus", focus: true, focusVisible: true },
             { href: "#", title: "Child 3" },
           ],
         },

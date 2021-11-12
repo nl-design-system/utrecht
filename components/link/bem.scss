@@ -4,11 +4,13 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-@import "../focus/bem";
+@import "../common/focus/bem";
 
 .utrecht-link {
   color: var(--utrecht-link-color, blue);
   text-decoration: var(--utrecht-link-text-decoration, underline);
+  text-decoration-skip-ink: all;
+  text-underline-offset: var(--utrecht-link-text-underline-offset);
 }
 
 .utrecht-link:visited,
@@ -27,11 +29,41 @@
   color: var(--utrecht-link-active-color, var(--utrecht-link-color));
 }
 
-.utrecht-link:focus,
 .utrecht-link--focus {
-  @include utrecht-focus();
+  @include utrecht-focus;
+
   color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
   text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+}
+
+.utrecht-link--focus-visible {
+  @include utrecht-focus-visible;
+}
+
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if $utrecht-focus-visible-fallback {
+  .utrecht-link:focus {
+    @extend .utrecht-link--focus;
+    @extend .utrecht-link--focus-visible;
+  }
+
+  .utrecht-link:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset;
+  }
+} @else {
+  .utrecht-link:focus {
+    @extend .utrecht-link--focus;
+  }
+
+  .utrecht-link:focus-visible {
+    @extend .utrecht-link--focus-visible;
+  }
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link--email {
 }
 
 /* stylelint-disable-next-line block-no-empty */

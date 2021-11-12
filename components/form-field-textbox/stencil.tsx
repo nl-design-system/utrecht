@@ -3,26 +3,26 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-form-field-textbox",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-form-field-textbox',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class FormFieldTextbox {
-  @Prop({ attribute: "autocomplete", reflect: true }) autoComplete: string = "";
+  @Prop({ attribute: 'autocomplete', reflect: true }) autoComplete: string = '';
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
-  @Prop() min: string = "";
-  @Prop() max: string = "";
-  @Prop() pattern: string = "";
-  @Prop() placeholder: string = "";
-  @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
+  @Prop() min: string = '';
+  @Prop() max: string = '';
+  @Prop() pattern: string = '';
+  @Prop() placeholder: string = '';
+  @Prop({ attribute: 'readonly', reflect: true }) readOnly: boolean = false;
   @Prop({ reflect: true }) required: boolean = false;
-  @Prop({ reflect: true }) type: string = "";
-  @Prop() value: string = "";
+  @Prop({ reflect: true }) type: string = '';
+  @Prop() value: string = '';
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;
@@ -36,13 +36,13 @@ export class FormFieldTextbox {
         <input
           id="input"
           class={clsx(
-            "utrecht-textbox",
-            "utrecht-textbox--html-input",
-            disabled && "utrecht-textbox--disabled",
-            invalid && "utrecht-textbox--invalid",
-            readOnly && "utrecht-textbox--readonly"
+            'utrecht-textbox',
+            'utrecht-textbox--html-input',
+            disabled && 'utrecht-textbox--disabled',
+            invalid && 'utrecht-textbox--invalid',
+            readOnly && 'utrecht-textbox--readonly',
           )}
-          type={type || "text"}
+          type={type || 'text'}
           autoComplete={autoComplete ? autoComplete : null}
           disabled={disabled}
           min={min ? min : null}

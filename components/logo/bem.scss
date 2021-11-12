@@ -1,6 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
 .utrecht-logo {
-  max-height: var(--utrecht-logo-max-height);
-  max-width: var(--utrecht-logo-max-width);
+  max-height: var(--utrecht-logo-max-height, 192px);
+  max-width: var(--utrecht-logo-max-width, 96px);
 }
 
 .utrecht-logo__decoration-1 {

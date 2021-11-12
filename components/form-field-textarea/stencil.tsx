@@ -3,21 +3,21 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, Prop, h } from "@stencil/core";
-import clsx from "clsx";
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-form-field-textarea",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-form-field-textarea',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class FormFieldTextarea {
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
-  @Prop({ attribute: "readonly", reflect: true }) readOnly: boolean = false;
-  @Prop() placeholder: string = "";
+  @Prop({ attribute: 'readonly', reflect: true }) readOnly: boolean = false;
+  @Prop() placeholder: string = '';
   @Prop({ reflect: true }) required: boolean = false;
-  @Prop() value: string = "";
+  @Prop() value: string = '';
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
   @Event() utrechtFocus: EventEmitter;
@@ -31,11 +31,11 @@ export class FormFieldTextarea {
         <textarea
           id="input"
           class={clsx(
-            "utrecht-textarea",
-            "utrecht-textarea--html-textarea",
-            disabled && "utrecht-textarea--disabled",
-            invalid && "utrecht-textarea--invalid",
-            readOnly && "utrecht-textarea--readonly"
+            'utrecht-textarea',
+            'utrecht-textarea--html-textarea',
+            disabled && 'utrecht-textarea--disabled',
+            invalid && 'utrecht-textarea--invalid',
+            readOnly && 'utrecht-textarea--readonly',
           )}
           disabled={disabled}
           placeholder={placeholder || null}

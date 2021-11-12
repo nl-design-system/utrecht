@@ -4,4 +4,4 @@
  */
 
 export const PageFooter = ({ innerHTML = '' }) => `<footer class="utrecht-page-footer">
-${innerHTML}</header>`;
+${innerHTML}</footer>`;

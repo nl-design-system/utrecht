@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { PageHeader } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Page Header"
+  argTypes={{
+    innerHTML: {
+      description: "HTML content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => PageHeader(args),
+    },
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+# Page Header
+
+<Canvas>
+  <Story
+    name="Page Header"
+    args={{
+      innerHTML: "Header content",
+    }}
+  >
+    {PageHeader.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Page Header" />

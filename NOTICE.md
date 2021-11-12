@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Auteursrecht Gemeente Utrecht
 
 Copyright (c) 2021 Gemeente Utrecht

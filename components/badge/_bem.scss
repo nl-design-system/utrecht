@@ -12,6 +12,7 @@
   font-size: var(--utrecht-badge-font-size, inherit);
   font-style: normal; /* no inheritance */
   font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
+  line-height: var(--utrecht-badge-line-height);
   padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
   padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
   padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);

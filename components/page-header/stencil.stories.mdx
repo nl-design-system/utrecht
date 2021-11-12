@@ -1,0 +1,37 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+export const Template = ({ innerHTML = "" }) => `<utrecht-page-header>${innerHTML}</utrecht-page-header>`;
+
+<Meta
+  title="Web Component/Page Header"
+  argTypes={{
+    innerHTML: {
+      description: "HTML content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Page Header
+
+<Canvas>
+  <Story
+    name="Page Header"
+    args={{
+      innerHTML: "Header content",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Page Header" />

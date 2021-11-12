@@ -9,10 +9,10 @@
   @extend .utrecht-form-label;
 }
 
-.utrecht-html input[type="checkbox"] ~ label {
+.utrecht-html input[type="checkbox" i] ~ label {
   @extend .utrecht-form-label--checkbox;
 }
 
-.utrecht-html input[type="radio"] ~ label {
+.utrecht-html input[type="radio" i] ~ label {
   @extend .utrecht-form-label--radio;
 }

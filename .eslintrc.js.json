@@ -7,6 +7,19 @@
     "eqeqeq": "error",
     "for-direction": "error",
     "getter-return": "error",
+    "import/order": [
+      "error",
+      {
+        "alphabetize": { "order": "asc", "caseInsensitive": false },
+        "groups": [
+          ["builtin", "external"],
+          ["internal", "unknown"],
+          ["parent", "sibling", "index"]
+        ],
+        "newlines-between": "never",
+        "warnOnUnassignedImports": false
+      }
+    ],
     "no-alert": "error",
     "no-async-promise-executor": "error",
     "no-caller": "error",
@@ -85,6 +98,15 @@
     "prefer-regex-literals": "error",
     "radix": "error",
     "require-yield": "error",
+    "sort-imports": [
+      "error",
+      {
+        "ignoreCase": true,
+        "ignoreDeclarationSort": true,
+        "ignoreMemberSort": false,
+        "allowSeparatedGroups": false
+      }
+    ],
     "use-isnan": "error",
     "valid-typeof": "error",
     "vars-on-top": "off",

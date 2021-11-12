@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.90",
+  "version": "1.0.0-alpha.122",
   "author": "Community for NL Design System",
   "description": "Stencil component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@stencil/react-output-target": "0.1.0",
-    "@stencil/sass": "1.4.1",
+    "@stencil/sass": "1.5.2",
     "@stencil/vue-output-target": "0.5.1",
     "chokidar-cli": "3.0.0",
     "node-sass-package-importer": "5.3.2",
@@ -37,14 +37,15 @@
     "rimraf": "3.0.2"
   },
   "dependencies": {
-    "@stencil/angular-output-target": "0.0.7",
-    "@stencil/core": "2.8.1"
+    "@stencil/angular-output-target": "0.2.0",
+    "@stencil/core": "2.9.0"
   },
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
     "build:typescript": "tsc",
+    "build:web-components": "npm run build:stencil",
     "clean": "npm-run-all clean:**",
     "clean:stencil": "rimraf dist/",
     "clean:angular-output-target": "rimraf ../web-component-library-angular/src/directives/*",

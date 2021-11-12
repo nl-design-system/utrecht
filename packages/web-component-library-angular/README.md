@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Angular Components
 
 The `@utrecht/web-component-library-stencil` package contains the actual implementation of every web component, while the `@utrecht/web-component-library-angular` only contains wrapper Angular components to help validate all the templates, and some supporting code to support Angular form bindings. The implementation of each component will be loaded separately and on-demand, so including the entire component library will not slow down your application.

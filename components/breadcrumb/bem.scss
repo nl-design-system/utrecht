@@ -20,8 +20,8 @@
   --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
   --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
   --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
-  font-family: var(--utrecht-document-font-family, inherit);
 
+  font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-breadcrumb-font-size);
   text-transform: var(--utrecht-document-text-transform, inherit);
 }
@@ -55,6 +55,7 @@ ol.utrecht-breadcrumb__list {
 .utrecht-breadcrumb--arrows {
   /* https://css-tricks.com/triangle-breadcrumbs/ */
   --utrecht-breadcrumb-arrow-size: 24px;
+
   overflow: hidden;
 
   .utrecht-breadcrumb__link {
@@ -90,6 +91,11 @@ ol.utrecht-breadcrumb__list {
     margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
     margin-inline-start: 1px;
     z-index: 1;
+  }
+
+  .utrecht-breadcrumb__link--focus,
+  .utrecht-breadcrumb__link:focus {
+    background-color: var(--utrecht-breadcrumb-link-focus-background-color);
   }
 
   .utrecht-breadcrumb__link--focus::after,

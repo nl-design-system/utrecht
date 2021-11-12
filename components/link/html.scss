@@ -21,12 +21,34 @@
   @extend .utrecht-link--active;
 }
 
-.utrecht-html a:focus {
-  @extend .utrecht-link--focus;
+// The workaround for missing `:focus-visible` support makes the code quite complex,
+// keep the ideal version around to restore it easily when browser support improves.
+
+@if $utrecht-focus-visible-fallback {
+  .utrecht-html a:focus {
+    @extend .utrecht-link--focus;
+    @extend .utrecht-link--focus-visible;
+  }
+
+  .utrecht-html a:focus:not(:focus-visible) {
+    @include utrecht-focus-ring-reset;
+  }
+} @else {
+  .utrecht-html a:focus {
+    @extend .utrecht-link--focus;
+  }
+
+  .utrecht-html a:focus-visible {
+    @extend .utrecht-link--focus-visible;
+  }
 }
 
 .utrecht-html a[rel~="external" i] {
   @extend .utrecht-link--external;
+}
+
+.utrecht-html a[href^="mailto:" i] {
+  @extend .utrecht-link--email;
 }
 
 .utrecht-html a[href^="tel:" i] {

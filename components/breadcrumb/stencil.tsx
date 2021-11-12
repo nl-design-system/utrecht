@@ -2,12 +2,12 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
  */
-import { Component, Prop, h } from "@stencil/core";
-import clsx from "clsx";
+import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
-  tag: "utrecht-breadcrumb",
-  styleUrl: "stencil.scss",
+  tag: 'utrecht-breadcrumb',
+  styleUrl: 'stencil.scss',
   shadow: true,
 })
 export class Breadcrumb {
@@ -21,7 +21,7 @@ export class Breadcrumb {
     const items = json ? JSON.parse(json) : [];
 
     return (
-      <nav class={clsx("utrecht-breadcrumb", variant === "arrows" && "utrecht-breadcrumb--arrows")}>
+      <nav class={clsx('utrecht-breadcrumb', variant === 'arrows' && 'utrecht-breadcrumb--arrows')}>
         <ol class="utrecht-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
           {items.map(({ href, title, current }, index) => (
             <li
@@ -32,9 +32,9 @@ export class Breadcrumb {
               itemprop="itemListElement"
             >
               <a
-                class={clsx("utrecht-breadcrumb__link", "utrecht-link", current && "utrecht-link--current")}
+                class={clsx('utrecht-breadcrumb__link', 'utrecht-link', current && 'utrecht-link--current')}
                 href={href}
-                aria-current={current ? "location" : null}
+                aria-current={current ? 'location' : null}
                 itemprop="item"
               >
                 <span class="utrecht-breadcrumb__text" itemprop="name">

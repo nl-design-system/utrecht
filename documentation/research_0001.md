@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Onderzoek online meldingen
 
 **tl;dr: Online meldingen doen met Signalen werkt goed voor iedereen behalve blinden en slechtzienden.**

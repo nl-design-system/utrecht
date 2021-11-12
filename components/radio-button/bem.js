@@ -13,6 +13,7 @@ export const defaultArgs = {
 export const RadioButton = ({ checked = false, disabled = false }) =>
   `<input type="radio"${checked ? ' checked' : ''}${disabled ? ' disabled' : ''} class="${clsx(
     'utrecht-radio-button',
+    'utrecht-radio-button--html-input',
     checked && 'utrecht-radio-button--checked',
     disabled && 'utrecht-radio-button--disabled',
   )}">`;

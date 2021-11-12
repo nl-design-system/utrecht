@@ -1,8 +1,4 @@
-<!--
-@license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
-Copyright (c) 2021 Robbert Broersma
--->
+<!-- @license CC0-1.0 -->
 
 # Button
 
@@ -34,26 +30,3 @@ Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst
 - `.utrecht-button--focus`
 - `.utrecht-button--hover`
 - `.utrecht-button--disabled`
-
-## Design tokens
-
-- Button
-  - `--utrecht-button-border-radius`
-  - `--utrecht-button-border-width`
-  - `--utrecht-button-focus-transform-scale`
-  - `--utrecht-button-font-size`
-  - `--utrecht-button-margin-block-start`
-  - `--utrecht-button-margin-block-end`
-  - `--utrecht-button-margin-inline-start`
-  - `--utrecht-button-margin-inline-end`
-  - `--utrecht-button-padding-block-start`
-  - `--utrecht-button-padding-block-end`
-  - `--utrecht-button-padding-inline-start`
-  - `--utrecht-button-padding-inline-end`
-  - Modifier: primary action
-    - `--utrecht-button-primary-action-background-color`
-    - `--utrecht-button-primary-action-color`
-    - `--utrecht-button-primary-action-hover-background-color`
-  - Modifier: disabled
-    - `--utrecht-button-disabled-background-color`
-    - `--utrecht-button-disabled-color`
