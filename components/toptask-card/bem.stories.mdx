@@ -6,6 +6,7 @@ Copyright (c) 2021 Gemeente Utrecht
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { ToptaskCard, defaultArgs } from "./bem";
+import iconSet from "../icon/icon-set.json";
 import "./bem.scss";
 
 <Meta
@@ -26,6 +27,11 @@ import "./bem.scss";
     hover: {
       description: "Hover",
       control: "boolean",
+    },
+    icon: {
+      description: "Icon",
+      control: { type: "select" },
+      options: ["", ...iconSet],
     },
     disabled: {
       description: "Disabled",
@@ -51,6 +57,7 @@ Styling via the `.utrecht-toptask-card` class name:
     name="ToptaskCard"
     args={{
       ...defaultArgs,
+      icon: "utrecht-icon-afval",
       textContent: "Het voordeel van structuur",
     }}
   >
@@ -71,6 +78,7 @@ Styling via the `.utrecht-toptask-card--active` class name:
     name="ToptaskCard active"
     args={{
       active: true,
+      icon: "utrecht-icon-afval",
       textContent: "Meer teskt op Card",
     }}
   >
@@ -86,6 +94,7 @@ Styling via the `.utrecht-toptask-card--hover` class name:
   <Story
     name="ToptaskCard hover"
     args={{
+      icon: "utrecht-icon-afval",
       textContent: "Read more...",
       hover: true,
     }}
@@ -102,6 +111,7 @@ Styling via the `.utrecht-toptask-card--focus` class name:
   <Story
     name="ToptaskCard focus"
     args={{
+      icon: "utrecht-icon-afval",
       textContent: "Read more...",
       focus: true,
     }}
@@ -118,6 +128,7 @@ Styling via the `.utrecht-toptask-card--focus-visible` class name:
   <Story
     name="ToptaskCard focus visible"
     args={{
+      icon: "utrecht-icon-afval",
       textContent: "Read more...",
       focus: true,
       focusVisible: true,
@@ -135,6 +146,7 @@ Styling via the `.utrecht-toptaks-card--disabled` class name:
   <Story
     name="ToptaskCard disabled"
     args={{
+      icon: "utrecht-icon-afval",
       textContent: "Read more...",
       disabled: true,
     }}

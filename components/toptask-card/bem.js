@@ -13,6 +13,7 @@ export const defaultArgs = {
   focusVisible: false,
   hover: false,
   textContent: '',
+  icon: null,
 };
 
 export const ToptaskCard = ({
@@ -21,6 +22,7 @@ export const ToptaskCard = ({
   focus = false,
   focusVisible = false,
   hover = false,
+  icon = null,
   textContent = '',
 }) =>
   `<a href="#" title="link to..." class="${clsx('utrecht-toptask-card', {
@@ -32,7 +34,7 @@ export const ToptaskCard = ({
   })}"${disabled ? ' aria-disabled="true"' : ''}>
   <div class="utrecht-toptask-card-container">
     <div class="utrecht-toptask-card__icon">
-      <utrecht-icon-afval></utrecht-icon-afval>
+      ${icon ? `<${icon}></${icon}>` : ''}
     </div>
  <div class="utrecht-toptask-card__body">
   ${textContent}</div></div></a>`;
