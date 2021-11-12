@@ -32,7 +32,7 @@ export const ToptaskCard = ({
   })}"${disabled ? ' aria-disabled="true"' : ''}>
   <div class="utrecht-toptask-card-container">
     <div class="utrecht-toptask-card__icon">
-      <utrecht-icon-loupe></utrecht-icon-loupe>
+      <utrecht-icon-afval></utrecht-icon-afval>
     </div>
  <div class="utrecht-toptask-card__body">
   ${textContent}</div></div></a>`;
