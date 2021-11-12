@@ -8,7 +8,6 @@ import clsx from 'clsx';
 
 export const defaultArgs = {
   active: false,
-  disabled: false,
   focus: false,
   focusVisible: false,
   hover: false,
@@ -18,7 +17,6 @@ export const defaultArgs = {
 
 export const ToptaskCard = ({
   active = false,
-  disabled = false,
   focus = false,
   focusVisible = false,
   hover = false,
@@ -30,8 +28,7 @@ export const ToptaskCard = ({
     'utrecht-toptask-card--hover': hover,
     'utrecht-toptask-card--focus': focus,
     'utrecht-toptask-card--focus-visible': focusVisible,
-    'utrecht-toptask-card--disabled': disabled,
-  })}"${disabled ? ' aria-disabled="true"' : ''}>
+  })}">
   <div class="utrecht-toptask-card-container">
     <div class="utrecht-toptask-card__icon">
       ${icon ? `<${icon}></${icon}>` : ''}

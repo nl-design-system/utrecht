@@ -6,8 +6,8 @@
 
 @import "../common/focus/bem";
 
-.utrecht-toptask-card--hover:not(:disabled),
-.utrecht-toptask-card:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-toptask-card-container--disabled) {
+.utrecht-toptask-card--hover,
+.utrecht-toptask-card:hover {
   background-color: var(--utrecht-color-blue-40);
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }
@@ -42,7 +42,7 @@
 // keep the ideal version around to restore it easily when browser support improves.
 
 @if $utrecht-focus-visible-fallback {
-  .utrecht-toptask-card:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  .utrecht-toptask-card:focus {
     @extend .utrecht-toptask-card--focus;
     @extend .utrecht-toptask-card--focus-visible;
   }
@@ -57,7 +57,7 @@
     @extend .utrecht-toptask-card-containern--focus-visible;
   }
 
-  .utrecht-toptask-card:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  .utrecht-toptask-card:focus {
     @extend .utrecht-toptask-card--focus;
   }
 }

@@ -33,10 +33,6 @@ import "./bem.scss";
       control: { type: "select" },
       options: ["", ...iconSet],
     },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
   }}
   parameters={{
     docs: {
@@ -132,23 +128,6 @@ Styling via the `.utrecht-toptask-card--focus-visible` class name:
       textContent: "Read more...",
       focus: true,
       focusVisible: true,
-    }}
-  >
-    {ToptaskCard.bind({})}
-  </Story>
-</Canvas>
-
-### Disabled
-
-Styling via the `.utrecht-toptaks-card--disabled` class name:
-
-<Canvas>
-  <Story
-    name="ToptaskCard disabled"
-    args={{
-      icon: "utrecht-icon-afval",
-      textContent: "Read more...",
-      disabled: true,
     }}
   >
     {ToptaskCard.bind({})}
