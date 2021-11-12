@@ -1,0 +1,13 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+.utrecht-toptask-nav {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: var(--utrecht-space-row-md);
+  max-width: 600px;
+}

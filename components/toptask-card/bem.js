@@ -10,6 +10,7 @@ export const defaultArgs = {
   active: false,
   focus: false,
   focusVisible: false,
+  href: '',
   hover: false,
   textContent: '',
   icon: null,
@@ -20,18 +21,20 @@ export const ToptaskCard = ({
   focus = false,
   focusVisible = false,
   hover = false,
+  href = '',
   icon = null,
   textContent = '',
 }) =>
-  `<a href="#" title="link to..." class="${clsx('utrecht-toptask-card', {
+  `<a href="${href}" class="${clsx('utrecht-toptask-card', {
     'utrecht-toptask-card--active': active,
     'utrecht-toptask-card--hover': hover,
     'utrecht-toptask-card--focus': focus,
     'utrecht-toptask-card--focus-visible': focusVisible,
   })}">
-  <div class="utrecht-toptask-card-container">
-    <div class="utrecht-toptask-card__icon">
-      ${icon ? `<${icon}></${icon}>` : ''}
-    </div>
- <div class="utrecht-toptask-card__body">
-  ${textContent}</div></div></a>`;
+  ${icon ? `<${icon} class="utrecht-toptask-card__icon"></${icon}>` : ''}
+ <span class="utrecht-toptask-card__title">${textContent}</span>
+</a>`;
+
+export const ToptaskNav = ({ cards }) => `<div class="utrecht-toptask-nav">
+  ${cards.map(ToptaskCard).join('\n')}
+</div>`;

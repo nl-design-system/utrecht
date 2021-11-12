@@ -5,17 +5,13 @@ Copyright (c) 2021 Gemeente Utrecht
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { ToptaskCard, defaultArgs } from "./bem";
+import { defaultArgs, ToptaskCard, ToptaskNav } from "./bem";
 import iconSet from "../icon/icon-set.json";
 import "./bem.scss";
 
 <Meta
-  title="CSS / Toptask Card"
+  title="CSS Component / Toptask Card"
   argTypes={{
-    textContent: {
-      description: "Card text",
-      control: "text",
-    },
     focus: {
       description: "Focus",
       control: "boolean",
@@ -32,6 +28,10 @@ import "./bem.scss";
       description: "Icon",
       control: { type: "select" },
       options: ["", ...iconSet],
+    },
+    textContent: {
+      description: "Link text",
+      control: "text",
     },
   }}
   parameters={{
@@ -50,18 +50,19 @@ Styling via the `.utrecht-toptask-card` class name:
 
 <Canvas>
   <Story
-    name="ToptaskCard"
+    name="Toptask Card"
     args={{
       ...defaultArgs,
+      href: "#",
       icon: "utrecht-icon-afval",
-      textContent: "Het voordeel van structuur",
+      textContent: "Afval",
     }}
   >
     {ToptaskCard.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="ToptaskCard" />
+<ArgsTable story="Toptask Card" />
 
 ## States
 
@@ -71,11 +72,13 @@ Styling via the `.utrecht-toptask-card--active` class name:
 
 <Canvas>
   <Story
-    name="ToptaskCard active"
+    name="Toptask Card active"
     args={{
+      ...defaultArgs,
       active: true,
+      href: "#",
       icon: "utrecht-icon-afval",
-      textContent: "Meer teskt op Card",
+      textContent: "Afval",
     }}
   >
     {ToptaskCard.bind({})}
@@ -88,11 +91,13 @@ Styling via the `.utrecht-toptask-card--hover` class name:
 
 <Canvas>
   <Story
-    name="ToptaskCard hover"
+    name="Toptask Card hover"
     args={{
-      icon: "utrecht-icon-afval",
-      textContent: "Read more...",
+      ...defaultArgs,
       hover: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
     }}
   >
     {ToptaskCard.bind({})}
@@ -105,11 +110,13 @@ Styling via the `.utrecht-toptask-card--focus` class name:
 
 <Canvas>
   <Story
-    name="ToptaskCard focus"
+    name="Toptask Card focus"
     args={{
-      icon: "utrecht-icon-afval",
-      textContent: "Read more...",
+      ...defaultArgs,
       focus: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
     }}
   >
     {ToptaskCard.bind({})}
@@ -122,12 +129,14 @@ Styling via the `.utrecht-toptask-card--focus-visible` class name:
 
 <Canvas>
   <Story
-    name="ToptaskCard focus visible"
+    name="Toptask Card focus visible"
     args={{
-      icon: "utrecht-icon-afval",
-      textContent: "Read more...",
+      ...defaultArgs,
       focus: true,
       focusVisible: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
     }}
   >
     {ToptaskCard.bind({})}

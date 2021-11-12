@@ -6,26 +6,30 @@
 
 @import "../common/focus/bem";
 
-.utrecht-toptask-card--hover,
-.utrecht-toptask-card:hover {
-  background-color: var(--utrecht-color-blue-40);
-  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
-}
-
 .utrecht-toptask-card {
-  background-color: var(--utrecht-button-background-color);
-  text-decoration: none;
-  width: 9rem;
-  max-width: 15rem;
-  height: 8rem;
-  display: block;
+  --utrecht-icon-color: currentColor;
+  --utrecht-icon-size: var(--utrecht-toptask-card-icon-size);
+
+  background-color: var(--utrecht-toptask-card-background-color);
+  color: var(--utrecht-toptask-card-color);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--utrecht-toptask-card-font-size);
+  line-height: var(--utrecht-toptask-card-line-height);
+  min-block-size: var(--utrecht-toptask-card-min-block-size);
+  min-inline-size: var(--utrecht-toptask-card-min-inline-size);
   padding-block-end: var(--utrecht-space-block-lg);
   padding-block-start: var(--utrecht-space-block-lg);
   padding-inline-end: var(--utrecht-space-inline-lg);
   padding-inline-start: var(--utrecht-space-inline-lg);
+  text-decoration: none;
 }
 
-.utrecht-toptask-card--focus {
+.utrecht-toptask-card--hover,
+.utrecht-toptask-card:hover {
+  background-color: var(--utrecht-toptask-card-hover-background-color, var(--utrecht-toptask-card-background-color));
+  color: var(--utrecht-toptask-card-hover-color, var(--utrecht-toptask-card-color));
+  transform: scale(var(--utrecht-toptask-card-hover-transform-scale, 1));
 }
 
 .utrecht-toptask-card--focus-visible {
@@ -34,8 +38,8 @@
 }
 
 .utrecht-toptask-card--focus {
-  background-color: var(--utrecht-button-focus-background-color, var(--utrecht-button-background-color));
-  color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
+  background-color: var(--utrecht-toptask-card-focus-background-color, var(--utrecht-toptask-card-background-color));
+  color: var(--utrecht-toptask-card-focus-color, var(--utrecht-toptask-card-color));
 }
 
 // The workaround for missing `:focus-visible` support makes the code quite complex,
@@ -61,23 +65,12 @@
     @extend .utrecht-toptask-card--focus;
   }
 }
-
-.utrecht-toptask-card-container {
+.utrecht-toptask-card__title {
+  display: block;
 }
 
 .utrecht-toptask-card__icon {
-  --utrecht-icon-color: var(--utrecht-color-white);
-  --utrecht-icon-size: 1.7rem;
-  clear: right;
+  display: block;
   padding-block-end: var(--utrecht-space-block-xs);
   padding-inline-end: var(--utrecht-space-inline-md);
-}
-
-.utrecht-toptask-card__body {
-  color: var(--utrecht-color-white);
-  font-size: 1rem;
-  line-height: 1.2;
-}
-
-.utrecht-toptask-card__title {
 }
