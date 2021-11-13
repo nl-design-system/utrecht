@@ -1,0 +1,27 @@
+diff --git a/node_modules/@stencil/core/internal/client/index.js b/node_modules/@stencil/core/internal/client/index.js
+index eed9f0a..14b8f7b 100644
+--- a/node_modules/@stencil/core/internal/client/index.js
++++ b/node_modules/@stencil/core/internal/client/index.js
+@@ -275,6 +275,11 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
+                     if (BUILD.hydrateServerSide || BUILD.hotModuleReplacement) {
+                         styleElm.setAttribute(HYDRATED_STYLE_ID, scopeId);
+                     }
++                    const nonceElm = styleContainerNode.ownerDocument.querySelector('style[nonce]');
++                    if (nonceElm) {
++                      styleElm.setAttribute('nonce', nonceElm.getAttribute('nonce'));
++                      console.log(`CSP nonce-${nonceElm.getAttribute('nonce')}`);
++                    }
+                     styleContainerNode.insertBefore(styleElm, styleContainerNode.querySelector('link'));
+                 }
+                 if (appliedStyles) {
+@@ -2641,6 +2646,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
+     if (BUILD.invisiblePrehydration && (BUILD.hydratedClass || BUILD.hydratedAttribute)) {
+         visibilityStyle.innerHTML = cmpTags + HYDRATED_CSS;
+         visibilityStyle.setAttribute('data-styles', '');
++        const nonceElm = visibilityStyle.ownerDocument.querySelector('style[nonce]');
++        if (nonceElm) {
++          visibilityStyle.setAttribute('nonce', nonceElm.getAttribute('nonce'));
++        }
+         head.insertBefore(visibilityStyle, metaCharset ? metaCharset.nextSibling : head.firstChild);
+     }
+     // Process deferred connectedCallbacks now all components have been registered
