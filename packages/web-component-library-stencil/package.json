@@ -37,8 +37,8 @@
     "rimraf": "3.0.2"
   },
   "dependencies": {
-    "@stencil/angular-output-target": "0.2.1",
-    "@stencil/core": "2.9.0"
+    "@stencil/angular-output-target": "0.3.0",
+    "@stencil/core": "2.10.0"
   },
   "scripts": {
     "prebuild": "npm run clean",
