@@ -1,0 +1,131 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Dialog, defaultArgs } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Dialog"
+  argTypes={{
+    id: {
+      name: "ID",
+      type: {
+        name: "string",
+        required: true,
+      },
+    },
+    contentHTML: {
+      name: "Content",
+      control: "text",
+    },
+    modal: {
+      name: "Modal Dialog",
+      type: "boolean",
+    },
+    labelHTML: {
+      name: "Title",
+      control: "text",
+    },
+    type: {
+      control: { type: "select" },
+      description: "Type",
+      options: ["", "alert"],
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Dialog(args),
+    },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Dialog
+
+Styling via the `.utrecht-dialog` class name.
+
+<Canvas>
+  <Story
+    name="Dialog"
+    args={{
+      ...defaultArgs,
+      id: "7f09e0f9-74a7-44ef-9cb7-9d6f6aa1f175",
+      labelHTML: "Example Dialog",
+    }}
+  >
+    {Dialog.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Dialog" />
+
+## Modal dialog
+
+<Canvas>
+  <Story
+    name="Modal dialog"
+    args={{
+      ...defaultArgs,
+      labelHTML: "Address check",
+      descriptionHTML: "Can you confirm your address is still '211b Baker Street'?",
+      footerHTML: `<button class="utrecht-button" type="button">Yes</button> <button class="utrecht-button" type="button">No</button>`,
+      id: "2848a213-8360-4775-8aa4-1af132828ab5",
+    }}
+  >
+    {Dialog.bind({})}
+  </Story>
+</Canvas>
+
+## Alert
+
+<Canvas>
+  <Story
+    name="Alert dialog"
+    args={{
+      ...defaultArgs,
+      labelHTML: "Alert dialog",
+      contentHTML: `<p>Something just happened, and you should know about it.</p>`,
+      footerHTML: `<button class="utrecht-button" type="button">OK</button>`,
+      id: "17b7e0f8-5062-4100-8c76-2521f8c98b2e",
+      type: "alert",
+    }}
+  >
+    {Dialog.bind({})}
+  </Story>
+</Canvas>
+
+## Confirm dialog
+
+<Canvas>
+  <Story
+    name="Confirm dialog"
+    args={{
+      ...defaultArgs,
+      labelHTML: "Confirm dialog",
+      contentHTML: `<p>Something just happened, and you should know about it.</p>`,
+      footerHTML: `<button class="utrecht-button" type="button">Cancel</button> <button class="utrecht-button" type="button">OK</button>`,
+      id: "46b7f61a-3847-478d-97dc-49486791cbce",
+    }}
+  >
+    {Dialog.bind({})}
+  </Story>
+</Canvas>
+
+## Input dialog
+
+<Canvas>
+  <Story
+    name="Input dialog"
+    args={{
+      ...defaultArgs,
+      labelHTML: "Input dialog",
+      contentHTML: `<p>What is your name?</p><p><input type="text" /></p>`,
+      footerHTML: `<button class="utrecht-button" type="button">OK</button>`,
+      id: "f551fe82-1d47-4a2f-a2d8-6822c4bb6f6a",
+    }}
+  >
+    {Dialog.bind({})}
+  </Story>
+</Canvas>

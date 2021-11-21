@@ -1,0 +1,45 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+export const defaultArgs = {
+  modal: false,
+};
+
+export const Template = ({ modal = false }) => `<utrecht-dialog${modal ? ' modal="true"' : ""}>
+  <div slot="label">Label</div>
+  <div slot="description">Description</div>
+  <div slot="content">Content</div>
+  <div slot="footer">Footer</div>
+</utrecht-dialog>`;
+
+<Meta
+  title="Web Component/Dialog"
+  argTypes={{
+    modal: {
+      name: "Modal dialog",
+      type: "boolean",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    type: "WORK IN PROGRESS",
+  }}
+/>
+
+# Dialog
+
+<Canvas>
+  <Story
+    name="Dialog"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Dialog" />
