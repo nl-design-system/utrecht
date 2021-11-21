@@ -3,6 +3,7 @@ import { BooleanValueAccessor } from './directives/boolean-value-accessor';
 import { NumericValueAccessor } from './directives/number-value-accessor';
 import {
   UtrechtArticle,
+  UtrechtBackdrop,
   UtrechtBadgeCounter,
   UtrechtBadgeData,
   UtrechtBadgeStatus,
@@ -71,6 +72,7 @@ import { TextValueAccessor } from './directives/text-value-accessor';
 
 const components = [
   UtrechtArticle,
+  UtrechtBackdrop,
   UtrechtBadgeCounter,
   UtrechtBadgeData,
   UtrechtBadgeStatus,

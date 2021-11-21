@@ -1,0 +1,38 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Backdrop, defaultArgs } from "./bem";
+import { checkerboard } from "./checkerboard";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Backdrop"
+  argTypes={{
+    viewport: {
+      name: "Cover viewport",
+      type: "boolean",
+    },
+  }}
+  decorators={[checkerboard]}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Backdrop(args),
+    },
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Backdrop
+
+Styling via the `.utrecht-backdrop` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.
+
+<Canvas>
+  <Story name="Backdrop" args={{ ...defaultArgs }}>
+    {Backdrop.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Backdrop" />
