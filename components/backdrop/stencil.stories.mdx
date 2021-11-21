@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { checkerboard } from "./checkerboard";
+
+export const Template = ({ viewport }) => `<utrecht-backdrop${viewport ? ' viewport="true"' : ""}></utrecht-backdrop>`;
+
+<Meta
+  title="Web Component/Backdrop"
+  argTypes={{
+    viewport: {
+      name: "Cover viewport",
+      type: "boolean",
+    },
+  }}
+  decorators={[checkerboard]}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    layout: "fullscreen",
+    type: "WORK IN PROGRESS",
+  }}
+/>
+
+# Backdrop
+
+<Canvas>
+  <Story name="Backdrop">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Backdrop" />
