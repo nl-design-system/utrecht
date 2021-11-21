@@ -3,6 +3,10 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { checkerboard } from "./checkerboard";
 
+export const defaultArgs = {
+  viewport: false,
+};
+
 export const Template = ({ viewport }) => `<utrecht-backdrop${viewport ? ' viewport="true"' : ""}></utrecht-backdrop>`;
 
 <Meta
@@ -26,7 +30,9 @@ export const Template = ({ viewport }) => `<utrecht-backdrop${viewport ? ' viewp
 # Backdrop
 
 <Canvas>
-  <Story name="Backdrop">{Template.bind({})}</Story>
+  <Story name="Backdrop" args={{ ...defaultArgs }}>
+    {Template.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Backdrop" />
