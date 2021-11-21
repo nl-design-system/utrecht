@@ -1,0 +1,42 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Modal, defaultArgs } from "./bem";
+import "./bem.scss";
+
+<Meta
+  title="CSS Component/Modal content"
+  argTypes={{
+    contentHTML: {
+      control: "text",
+    },
+    titleHTML: {
+      control: "text",
+    },
+  }}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Modal(args),
+    },
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Modal content
+
+<Canvas>
+  <Story
+    name="Modal content"
+    args={{
+      ...defaultArgs,
+      contentHTML: '<div class="utrecht-dialog">CONTENT</div>',
+    }}
+  >
+    {Modal.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Modal content" />

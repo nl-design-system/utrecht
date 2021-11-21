@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+export const Template = ({ contentHTML = "" }) => `<utrecht-modal>${contentHTML}</utrecht-modal>`;
+
+<Meta
+  title="Web Component/Modal content"
+  argTypes={{
+    viewport: {
+      name: "Cover viewport",
+      type: "boolean",
+    },
+  }}
+  decorators={[
+    (story) => `
+  <div style="width: 100%; height: 100%; position: absolute;">${story()}</div>
+  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  `,
+  ]}
+  parameters={{
+    docs: {
+      transformSource: (_src, { args }) => Template(args),
+    },
+    layout: "fullscreen",
+    type: "WORK IN PROGRESS",
+  }}
+/>
+
+# Modal content
+
+<Canvas>
+  <Story name="Modal content">{Template.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Modal content" />
