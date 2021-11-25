@@ -38,6 +38,10 @@ Lead paragraph:
 - `utrecht-paragraph-lead-font-weight`
 - `utrecht-paragraph-lead-line-height`
 
+## Design
+
+Lijnhoogte moet voldoende afstand geven tot de regel eronder dat de de streep van onderstreepte tekst niet dichter bij de regel eronder staat dan de onderstreepte regel. Relevante CSS properties: `line-height`, `text-decoration-offset` en `text-decoration-thickness`.
+
 ## States
 
 Niet van toepassing.
