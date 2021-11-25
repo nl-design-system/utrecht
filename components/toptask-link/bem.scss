@@ -19,10 +19,10 @@
   max-inline-size: var(--utrecht-toptask-link-max-inline-size);
   min-block-size: var(--utrecht-toptask-link-min-block-size);
   min-inline-size: var(--utrecht-toptask-link-min-inline-size);
-  padding-block-end: var(--utrecht-space-block-lg);
-  padding-block-start: var(--utrecht-space-block-lg);
-  padding-inline-end: var(--utrecht-space-inline-lg);
-  padding-inline-start: var(--utrecht-space-inline-lg);
+  padding-block-end: var(--utrecht-toptask-link-padding-block-end);
+  padding-block-start: var(--utrecht-toptask-link-padding-block-start);
+  padding-inline-end: var(--utrecht-toptask-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-toptask-link-padding-inline-start);
   text-decoration: none;
 }
 
