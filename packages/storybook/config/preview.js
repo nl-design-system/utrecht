@@ -1,5 +1,7 @@
+import { DocsContainer } from '@storybook/addon-docs';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil';
 import defaultsDeep from 'lodash.defaultsdeep';
+import React from 'react';
 
 import '@utrecht/components/document/bem.scss';
 import '@utrecht/design-tokens/dist/theme/index.css';
@@ -72,13 +74,11 @@ const addonDocs = {
       state: 'open',
     },
     // Use a custom wrapper element
-    /*
     container: ({ children }) => (
       <DocsContainer>
         <div className="utrecht-theme">{children}</div>
       </DocsContainer>
     ),
-    */
   },
 };
 
