@@ -71,14 +71,6 @@ const addonDocs = {
     source: {
       state: 'open',
     },
-    // Use a custom wrapper element
-    /*
-    container: ({ children }) => (
-      <DocsContainer>
-        <div className="utrecht-theme">{children}</div>
-      </DocsContainer>
-    ),
-    */
   },
 };
 
