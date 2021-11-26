@@ -101,7 +101,7 @@ SpaceTokensTable.propTypes = {
     PropTypes.shape({
       comment: PropTypes.string,
       name: PropTypes.string,
-      path: PropTypes.string,
+      path: PropTypes.arrayOf(PropTypes.string),
       value: PropTypes.string,
     }),
   ),
