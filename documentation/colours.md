@@ -65,8 +65,8 @@ Donkerblauw wordt gebruikt als basiskleur voor links en knoppen. Licht en ijsbla
 | ---------------------------------------------------------------------------------------------- | -------------------------- | -------------------- | --------- | --------------------------------- |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-40)"></div> | `--utrecht-color-green-40` | `hsl(48, 100%, 40%)` | `#CCA300` | Donkere variant van basis groen   |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-50)"></div> | `--utrecht-color-green-50` | `hsl(48, 100%, 50%)` | `#FFCC00` | Basis Gemeente Utrecht groen      |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-80)"></div> | `--utrecht-color-green-60` | `hsl(48, 100%, 80%)` | `#FFD633` | Selecteer achtergrond kleur groen |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-90)"></div> | `--utrecht-color-green-80` | `hsl(48, 100% ,90%)` | `#FFEB99` | Achtergrond groen voor badges     |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-80)"></div> | `--utrecht-color-green-80` | `hsl(48, 100%, 80%)` | `#FFD633` | Selecteer achtergrond kleur groen |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-90)"></div> | `--utrecht-color-green-90` | `hsl(48, 100% ,90%)` | `#FFEB99` | Achtergrond groen voor badges     |
 
 ## Zwart
 
