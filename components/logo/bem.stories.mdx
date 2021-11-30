@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Logo } from "./bem";
+import { Logo, Logowit } from "./bem";
 import "./bem.scss";
 
 <Meta
@@ -9,7 +9,7 @@ import "./bem.scss";
   argTypes={{}}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Logo(args),
+      transformSource: (_src, { args }) => Logo(args), Logowit(args)
     },
     status: {
       type: "WORK IN PROGRESS",
@@ -24,3 +24,11 @@ import "./bem.scss";
 </Canvas>
 
 <ArgsTable story="Logo" />
+
+# Logo wit Gemeente Utrecht
+
+<Canvas>
+  <Story name="Logowit">{Logowit.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Logowit" />
