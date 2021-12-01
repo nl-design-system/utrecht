@@ -67,12 +67,12 @@ Het logo wordt gebruikt in combinatie met een geel accent (utrecht-color-yellow-
 
 ## Groen
 
-| Voorbeeld                                                                                      | Design Token naam          | Hsl kleurencode      | Hex code  | Gebruik                           |
-| ---------------------------------------------------------------------------------------------- | -------------------------- | -------------------- | --------- | --------------------------------- |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-40)"></div> | `--utrecht-color-green-40` | `hsl(48, 100%, 40%)` | `#CCA300` | Donkere variant van basis groen   |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-50)"></div> | `--utrecht-color-green-50` | `hsl(48, 100%, 50%)` | `#FFCC00` | Basis Gemeente Utrecht groen      |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-80)"></div> | `--utrecht-color-green-80` | `hsl(48, 100%, 80%)` | `#FFD633` | Selecteer achtergrond kleur groen |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-90)"></div> | `--utrecht-color-green-90` | `hsl(48, 100% ,90%)` | `#FFEB99` | Achtergrond groen voor badges     |
+| Voorbeeld                                                                                      | Design Token naam          | Hsl kleurencode     | Hex code  | Gebruik                           |
+| ---------------------------------------------------------------------------------------------- | -------------------------- | ------------------- | --------- | --------------------------------- |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-40)"></div> | `--utrecht-color-green-40` | `hsl(90, 30%, 40%)` | `#668547` | Donkere variant van basis groen   |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-50)"></div> | `--utrecht-color-green-50` | `hsl(90, 30%, 50%)` | `#80A659` | Basis Gemeente Utrecht groen      |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-80)"></div> | `--utrecht-color-green-80` | `hsl(90, 30%, 80%)` | `#CCDBBD` | Selecteer achtergrond kleur groen |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-green-90)"></div> | `--utrecht-color-green-90` | `hsl(90, 30%, 90%)` | `#E6EDDE` | Achtergrond groen voor badges     |
 
 ## Zwart
 
