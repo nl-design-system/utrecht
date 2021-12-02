@@ -10,7 +10,7 @@
   display: inline-block;
   font-family: var(--utrecht-document-font-family, sans-serif);
   font-size: var(--utrecht-badge-font-size, inherit);
-  font-style: normal; /* no inheritance */
+  font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
   font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
   line-height: var(--utrecht-badge-line-height);
   padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
