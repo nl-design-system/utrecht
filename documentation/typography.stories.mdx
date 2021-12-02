@@ -1,19 +1,63 @@
 import { Meta, Typeset } from "@storybook/addon-docs";
 import tokens from "@utrecht/design-tokens/dist/tree.json";
 
-<Meta title="Utrecht/Design Tokens/Typography" />
+<Meta
+  title="Utrecht/Design Tokens/Typography"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
 
 # Typography
 
-[Figma - Utrecht Design System - Typography](https://www.figma.com/file/msb3CfQBefPoruqNQ968Zh/Utrecht-Design-System?node-id=1%3A637)
+## Font family
 
-## Lucida Grande
+We gebruiken de Lucida font family omdat het een font is dat goed leesbaar is op digitale applicaties. We gebruiken een sans-serif font vanwege de leesbaarheid op digitale applicaties.
 
-Sans-serif font. Fallback fonts:
+| Beschrijving                                                 | Design Token                                  | Opmerking                   |
+| ------------------------------------------------------------ | --------------------------------------------- | --------------------------- |
+| Font family: Lucida Grande, Lucida Sans Unicode, Lucida Sans | `--utrecht-typography-sans-serif-font-family` | Font voor alle componenten. |
 
-- Lucida Sans Unicode
-- Lucida Sans
-- Verdana
+### Fallback fonts
+
+`TODO: Bespreken met huisstijl wat het fallback font in ons design system zou moeten zijn.`
+
+Ons fallback font is: Verdana.
+
+### Arial
+
+`TODO: Bespreken met huisstijl wat het fallback font in ons design system zou moeten zijn.`
+
+Het Arial font wordt in digitale applicaties niet gebruikt omdat Lucida Grande en de fallback fonts beter leesbaar zijn op digitale applicaties.
+
+## Font weight
+
+We hebben twee font weights:
+
+| Beschrijving     | Design token                               | Opmerking         |
+| ---------------- | ------------------------------------------ | ----------------- |
+| Font weight: 400 | `--utrecht-typography-weight-scale-normal` | Normale tekst     |
+| Font weight: 700 | `--utrecht-typography-weight-scale-bold`   | Dikgedrukte tekst |
+
+## Font sizes
+
+We gebruiken de volgende groottes voor onze fonts:
+
+| Beschrijving                    | Design Token                     | Opmerking                          |
+| ------------------------------- | -------------------------------- | ---------------------------------- |
+| 2 extra Small (8px / 0.5rem)    | `--utrecht-typography-scale-2xs` |                                    |
+| Extra Small (11,2px / 0.7rem)   | `--utrecht-typography-scale-xs`  |                                    |
+| Small (14,4px / 0.9rem)         | `--utrecht-typography-scale-sm`  |                                    |
+| Medium (16px / 1rem)            | `--utrecht-typography-scale-md`  | Standaard grootte voor paragrafen. |
+| Large (18px / 1.125rem)         | `--utrecht-typography-scale-lg`  |                                    |
+| Extra Large (20px / 1.25rem)    | `--utrecht-typography-scale-xl`  |                                    |
+| 2 Extra Large (22px / 1.375rem) | `--utrecht-typography-scale-2xl` |                                    |
+| 3 Extra Large (24px / 1.5rem)   | `--utrecht-typography-scale-3xl` |                                    |
+| 4 Extra Large (32px / 2rem)     | `--utrecht-typography-scale-4xl` |                                    |
+
+Die zien er dan zo uit:
 
 <div style={{ fontSize: "16px" }}>
   <Typeset
@@ -30,6 +74,47 @@ Sans-serif font. Fallback fonts:
       tokens["utrecht"]["typography"]["scale"]["3xl"]["font-size"].value,
       tokens["utrecht"]["typography"]["scale"]["4xl"]["font-size"].value,
     ]}
-    sampleText="The Quick Brown Fox Jumps Over The Lazy Dog"
+    sampleText="Op brute wijze ving de schooljuf de quasi-kalme lynx."
   />
 </div>
+
+## Font style
+
+We gebruiken alleen een normale font style. Italics, of schuingedrukte tekst gebruiken we niet. Dit verslechtert de leesbaarheid en de betekenis van schuine letters komt vaak niet goed over.
+
+De inherit font stijl is om het overerven van een font stijl mogelijk te maken, wat in de toekomst voordelen met zich mee kan brengen. In het huidige systeem zal de bezoeker het verschil niet zien.
+
+| Beschrijving        | Design Token                              | Opmerking                                              |
+| ------------------- | ----------------------------------------- | ------------------------------------------------------ |
+| Font style: Normal  | `--utrecht-typography-font-style-normal`  | De standaard font stijl.                               |
+| Font style: Inherit | `--utrecht-typography-font-style-inherit` | Erft de font stijl over van het bovenliggende element. |
+
+## Letter spacing
+
+We hebben een aantal letter spacings die we gebruiken om tekst leesbaarder te maken.
+
+| Beschrijving             | Design Token                                 | Opmerking                                                       |
+| ------------------------ | -------------------------------------------- | --------------------------------------------------------------- |
+| Normal                   | `--utrecht-typography-letter-spacing-normal` | Standaard gebruiken we bij alle teksten normale letter spacing. |
+| Small (0.8px / 0.05rem)  | `--utrecht-typography-letter-spacing-sm`     |                                                                 |
+| Medium (1px / 0.0625rem) | `--utrecht-typography-letter-spacing-md`     |                                                                 |
+| Large (3px / 0.1875rem)  | `--utrecht-typography-letter-spacing-lg`     |                                                                 |
+
+## Line height
+
+We gebruiken de volgende line heights voor onze typografie:
+
+| Beschrijving                    | Design Token                        | Opmerking                                                 |
+| ------------------------------- | ----------------------------------- | --------------------------------------------------------- |
+| Small Tight (1 / 100%)          | --utrecht-typography-line-height-sm |                                                           |
+| Medium Normal (1.2 / 120%)      | --utrecht-typography-line-height-md | Standaard gebruiken we bij alle teksten deze line height. |
+| Large Loose (1.4 / 140%)        | --utrecht-typography-line-height-lg |                                                           |
+| Extra Large Looser (1.5 / 150%) | --utrecht-typography-line-height-xl |                                                           |
+
+### Line height van 1.2 als standaard
+
+De standaard 1.2 line height is vanwege de dubbele underline die we op het link component bij een hover hebben staan. Met deze line height blijft het leesbaar.
+
+## Design
+
+[Figma - Utrecht Design System - Typography](https://www.figma.com/file/msb3CfQBefPoruqNQ968Zh/Utrecht-Design-System?node-id=1%3A637)

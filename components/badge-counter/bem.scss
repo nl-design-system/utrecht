@@ -11,7 +11,7 @@
   color: var(--utrecht-badge-counter-color, var(--utrecht-badge-color, hsl(0 0% 100%)));
   display: inline-block;
   font-family: var(--utrecht-document-font-family, sans-serif);
-  font-style: normal; /* no inheritance */
+  font-style: var(--utrecht-badge-counter-font-style, normal); /* no inheritance */
   font-weight: var(--utrecht-badge-counter-font-weight, var(--utrecht-badge-font-weight, bold)); /* no inheritance */
   padding-block-end: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-block-start: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));

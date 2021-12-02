@@ -18,6 +18,22 @@
       "weight-scale": {
         "bold": { "font-weight": { "value": "bold" } },
         "normal": { "font-weight": { "value": "normal" } }
+      },
+      "font-style": {
+        "normal": { "value": "normal" },
+        "inherit": { "value": "inherit" }
+      },
+      "letter-spacing": {
+        "normal": { "value": "normal" },
+        "sm": { "value": "0.8px" },
+        "md": { "value": "1px" },
+        "lg": { "value": "3px" }
+      },
+      "line-height": {
+        "sm": { "value": "1" },
+        "md": { "value": "1.2" },
+        "lg": { "value": "1.4" },
+        "xl": { "value": "1.5" }
       }
     }
   }
