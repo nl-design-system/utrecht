@@ -3,9 +3,10 @@
     "heading-2": {
       "color": {"value": "{utrecht.heading.color.value}" },
       "font-family": {"value": "{utrecht.heading.font-family.value}" },
-      "font-size": { "value": "1.25rem" },
-      "font-weight": {},
-      "line-height": { "value": "1.2" },
+      "font-size": { "value": "{utrecht.typography.scale.xl.value}" },
+      "font-weight": { "value": "{utrecht.typography.weight-scale.normal.font-weight.value}" }, // Font-weight zou bold moeten zijn denk ik.
+      "line-height": { "value": "{utrecht.typography.line-height.md.value}" },
+      "letter-spacing": { "value": "{utrecht.typography.letter-spacing.normal.value}" },
       "margin-block-end": { "value": "0.3rem" },
       "margin-block-start": { "value": "1.5rem" },
       "text-transform": {}
