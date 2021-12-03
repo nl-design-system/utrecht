@@ -2,12 +2,12 @@
   "utrecht": {
     "typography": {
       "sans-serif": {
-        "font-family": { "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, sans-serif" }
+        "font-family": { "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Arial, sans-serif" }
       },
       "scale": {
         "2xs": { "font-size": { "value": "0.5rem", "comment": "8px" } },
-        "xs": { "font-size": { "value": "0.7rem", "comment": "11,2px" } },
-        "sm": { "font-size": { "value": "0.9rem", "comment": "14,4px" } },
+        "xs": { "font-size": { "value": "0.75rem", "comment": "12px" } },
+        "sm": { "font-size": { "value": "0.875rem", "comment": "14px" } },
         "md": { "font-size": { "value": "1rem", "comment": "16px" } },
         "lg": { "font-size": { "value": "1.125rem", "comment": "18px" } },
         "xl": { "font-size": { "value": "1.25rem", "comment": "20px" } },
@@ -30,10 +30,10 @@
         "lg": { "value": "3px" }
       },
       "line-height": {
-        "sm": { "value": "1" },
-        "md": { "value": "1.2" },
-        "lg": { "value": "1.4" },
-        "xl": { "value": "1.5" }
+        "xs": { "value": "1" },
+        "sm": { "value": "1.25" },
+        "md": { "value": "1.5" },
+        "lg": { "value": "2" }
       }
     }
   }
