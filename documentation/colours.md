@@ -56,13 +56,22 @@ Het balkje in het digitale logo gebruikt `utrecht-color-yellow-50`.
 
 | Voorbeeld                                                                                     | Design Token naam         | Hsl code          | Hex code  | Gebruik                                                                                                                                                                                                                                              |
 | --------------------------------------------------------------------------------------------- | ------------------------- | ----------------- | --------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-10)"></div> | `--utrecht-color-grey-10` | `hsl(0, 0%, 10%)` | `#1A1A1A` | Wordt gebruikt in Surface component.                                                                                                                                                                                                                 |
+| <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-10)"></div> | `--utrecht-color-grey-10` | `hsl(0, 0%, 10%)` | `#1A1A1A` | Wordt gebruikt als tekstkleur en in Surface component.                                                                                                                                                                                               |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-15)"></div> | `--utrecht-color-grey-15` | `hsl(0, 0%, 15%)` | `#262626` | Wordt gebruikt in Top navigatie als hover over een menu item.                                                                                                                                                                                        |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-30)"></div> | `--utrecht-color-grey-30` | `hsl(0, 0%, 30%)` | `#4D4D4D` | Wordt gebruikt voor borders in formuliercomponenten.                                                                                                                                                                                                 |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-40)"></div> | `--utrecht-color-grey-40` | `hsl(0, 0%, 40%)` | `#666666` | Formulier invul element kleur.                                                                                                                                                                                                                       |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-80)"></div> | `--utrecht-color-grey-80` | `hsl(0, 0%, 80%)` | `#CCCCCC` | Break out op ladingpagina’s, kruimelpad, en diverse content elementen (spotlight, tabel, accordeon). Gebruikt zwart (`--utrecht-color-black`) als tekstkleur op dit grijs. Gebruik voor links het standaard donkerblauw (`--utrecht-color-blue-35`). |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-90)"></div> | `--utrecht-color-grey-90` | `hsl(0, 0%, 90%)` | `#E6E6E6` | Diverse elementen in contentpagina (scheidingslijn, subnav border, accordeon). Gebruikt zwart (`--utrecht-color-black`) als tekstkleur op dit lichte grijs. Gebruik voor tekstlinks het standaard donkerblauw (`--utrecht-color-blue-35`).           |
 | <div class="utrecht-color-demo" style="background-color: var(--utrecht-color-grey-95)"></div> | `--utrecht-color-grey-95` | `hsl(0, 0%, 95%)` | `#F2F2F2` | Basiskleur achtergrond kleur van de body.                                                                                                                                                                                                            |
+
+### Grijs-10 als tekstkleur in plaats van zwart
+
+Om tekst leesbaarder te maken gebruiken we grijs-10 als kleur voor letters in paragraven. Uit onderzoek blijkt dat dit leesbaarder is voor mensen met dyslexie. Grijs-10 ligt dicht genoeg bij zwart om aan de WCAG 2.1 eisen te blijven voldoen.
+
+Deze keuzes is geinspireerd door deze twee bronnen:
+
+- [OPTIMAL COLORS TO IMPROVE READABILITY FOR PEOPLE WITH DYSLEXIA](https://www.w3.org/WAI/RD/2012/text-customization/r11)
+- [A Mobile Application for Displaying More Accessible eBooks for People with Dyslexia](https://www.sciencedirect.com/science/article/pii/S1877050912007880)
 
 ## Groen
 
