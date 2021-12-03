@@ -1,8 +1,8 @@
 {
   "utrecht": {
     "heading-5": {
-      "color": {},
-      "font-family": {},
+      "color": {"value": "{utrecht.heading.color.value}" },
+      "font-family": {"value": "{utrecht.heading.font-family.value}" },
       "font-size": { "value": "0.9rem" },
       "font-weight": { "value": "{utrecht.typography.weight-scale.normal.font-weight.value}" },
       "letter-spacing": { "value": "0.72px" },
