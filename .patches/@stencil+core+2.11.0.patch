@@ -1,5 +1,5 @@
 diff --git a/node_modules/@stencil/core/internal/client/index.js b/node_modules/@stencil/core/internal/client/index.js
-index eed9f0a..14b8f7b 100644
+index 3c9c7bb..be3544e 100644
 --- a/node_modules/@stencil/core/internal/client/index.js
 +++ b/node_modules/@stencil/core/internal/client/index.js
 @@ -275,6 +275,11 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
@@ -14,7 +14,7 @@ index eed9f0a..14b8f7b 100644
                      styleContainerNode.insertBefore(styleElm, styleContainerNode.querySelector('link'));
                  }
                  if (appliedStyles) {
-@@ -2641,6 +2646,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
+@@ -2658,6 +2663,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
      if (BUILD.invisiblePrehydration && (BUILD.hydratedClass || BUILD.hydratedAttribute)) {
          visibilityStyle.innerHTML = cmpTags + HYDRATED_CSS;
          visibilityStyle.setAttribute('data-styles', '');
