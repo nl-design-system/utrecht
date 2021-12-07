@@ -1,31 +1,41 @@
 <!-- @license CC0-1.0 -->
 
-# Release strategy
+# Release strategie
 
-## Semantic versioning and pre-releases
+We gebruiken voor het Design System een status per component. Hieronder worden de statussen uitgelegd, met wat je kan verwachten als een document een bepaalde status heeft.
+
+## Naamgeving en versionering
 
 | Description                                             | npm version     | release type  |
 | ------------------------------------------------------- | --------------- | ------------- |
-| Production: Bugfix or improvement with breaking changes | `>=2.0.0`       | major version |
-| Production: Improvement with no breaking changes        | `^1.1.0`        | minor version |
-| Production: Bugfix with no breaking changes             | `~1.0.1`        | patch version |
-| Production: First stable release                        | `1.0.0`         | release       |
+| Productie: Bugfix of verbetering met 'breaking changes' | `>=2.0.0`       | major version |
+| Productie: Verbetering zonder 'breaking changes'        | `^1.1.0`        | minor version |
+| Productie: Bugfix zonder 'breaking changes'             | `~1.0.1`        | patch version |
+| Productie: Eerste stabiele release                      | `1.0.0`         | release       |
 | Beta                                                    | `1.0.0-beta.0`  | pre-release   |
 | Alpha                                                   | `1.0.0-alpha.0` | pre-release   |
 | Work in Progress                                        | `1.0.0-alpha.0` | pre-release   |
 
-### Production
+### Componenten en tokens met Productie-status.
 
-Used in production in a variety of situations, well tested, stable APIs, mostly patches and minor releases. Changes are communicated via the version number and via the changelog.
+Geteste, stabiele componenten en tokens. Als er iets veranderd met deze componenten worden zijn dat vooral patches en minor releases. Verandering worden gecommuniceerd via het versienummer en de changelog.
 
-### Beta
+### Componenten en tokens met Beta-status.
 
-Used in production in a specific situation, evolving APIs based on feedback, breaking changes are still likely.
+Deze componenten en tokens worden gebruikt in specifieke situaties. Componenten en tokens kunnen nog veranderen op basis van feedback. Breaking changes kunnen voorkomen.
 
-### Alpha
+### Componenten en tokens met Alpha-status.
 
-Used in prototypes and in projects that are still in development, breaking changes occur frequently and are not communicated.
+Componenten en tokens worden gebruikt in prototypes en projecten die nog in ontwikkeling zijn. Componenten en tokens kunnen nog veranderen op basis van feedback. Breaking Changes zullen onaangekondigd gebeuren.
 
-### Work in Progress
+### Componenten en tokens met Work in progress-status.
 
-Do not use in production. Does not follow semantic versioning and any published packages are for internal use only.
+Gebruik deze componenten en tokens niet op een productie-omgeving. Alleen voor intern gebruik.
+
+## Proces
+
+We volgen het onderstaande proces als we kijken wanneer een component naar de volgende fase kan.
+
+| Work in Progress         | Work in Progress                    | Work in Progress           | Work in Progress       | Alpha                              | Alpha                                                      | Alpha                                                                          | Beta                                                              | Productie                                                              |
+| ------------------------ | ----------------------------------- | -------------------------- | ---------------------- | ---------------------------------- | ---------------------------------------------------------- | ------------------------------------------------------------------------------ | ----------------------------------------------------------------- | ---------------------------------------------------------------------- |
+| Component maken in Figma | Component maken in GitHub/Storybook | Definition of Done nalopen | Stempel Team UX zetten | Huisstijl denkt mee en keurt goed. | Kwaliteit van code wordt nagekeken door expert (Frameless) | Informeren Architectuur, IPM'ers, Internetadviseurs, Redacteuren en webmasters | Componenten worden gebruikt in de testomgeving van een applicatie | Componenten worden gebruikt in de productieomgeving van een applicatie |
