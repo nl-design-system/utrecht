@@ -16,19 +16,19 @@ We gebruiken voor het Design System een status per component of groep tokens. Hi
 | Alpha                                                   | `1.0.0-alpha.0` | pre-release   |
 | Work in Progress                                        | `1.0.0-alpha.0` | pre-release   |
 
-### Componenten en tokens met Productie-status.
+### Componenten en tokens met Productie-status
 
 Geteste, stabiele componenten en tokens. Als er iets veranderd met deze componenten zijn dat vooral patches en minor releases. Verandering worden gecommuniceerd via het versienummer en de changelog.
 
-### Componenten en tokens met Beta-status.
+### Componenten en tokens met Beta-status
 
 Deze componenten en tokens worden gebruikt in specifieke situaties. Componenten en tokens kunnen nog veranderen op basis van feedback. Breaking changes kunnen voorkomen.
 
-### Componenten en tokens met Alpha-status.
+### Componenten en tokens met Alpha-status
 
 Componenten en tokens worden gebruikt in prototypes en projecten die nog in ontwikkeling zijn. Componenten en tokens kunnen nog veranderen op basis van feedback en expert reviews. Breaking Changes zullen onaangekondigd gebeuren.
 
-### Componenten en tokens met Work in progress-status.
+### Componenten en tokens met Work in progress-status
 
 Gebruik deze componenten en tokens niet op een productie-omgeving. Alleen voor intern of experimenteel gebruik.
 
