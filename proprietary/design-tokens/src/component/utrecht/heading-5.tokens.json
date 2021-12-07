@@ -1,15 +1,15 @@
 {
   "utrecht": {
     "heading-5": {
-      "color": {},
-      "font-family": {},
-      "font-size": { "value": "0.9rem" },
-      "font-weight": { "value": "{utrecht.typography.weight-scale.normal.font-weight.value}" },
-      "letter-spacing": { "value": "0.72px" },
-      "line-height": { "value": "1.333" },
+      "color": {"value": "{utrecht.color.grey.10.value}"},
+      "font-family": {"value": "{utrecht.typography.sans-serif.font-family.value}"},
+      "font-size": {"value": "{utrecht.typography.scale.sm.font-size.value}"},
+      "font-weight": {"value": "{utrecht.typography.weight-scale.normal.font-weight.value}"},
+      "line-height":  {"value": "{utrecht.typography.line-height.md.value}"},
       "margin-block-end": { "value": "0.2rem" },
       "margin-block-start": { "value": "1rem" },
-      "text-transform": { "value": "uppercase" }
+      "letter-spacing": {"value": "{utrecht.typography.letter-spacing.sm.value}"},
+      "text-transform": {"value": "{utrecht.typography.text-transform.uppercase.value}"}
     }
   }
 }
