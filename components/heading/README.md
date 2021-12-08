@@ -1,12 +1,17 @@
 <!-- @license CC0-1.0 -->
 
-# Heading
+# Gebruik en toegankelijkheid van koppen
 
-De documentatie voor de verschillende heading levels kan verschillen per situatie, het kan zijn dat wordt aangeraden de teksthierarchie te beperken tot en met niveau van h4. Veel design systeems raden af om heading-5 en heading-6 te gebruiken.
+- Gebruik altijd maar één H1 kop op een pagina met digitale content.
+- Gebruik alleen een kop als er content onder staat.
+- Gebruikers van screenreaders gebruiken headers vaak om een indruk te krijgen van de structuur van een pagina.
+- Gebruik koppen niet voor de opmaak maar alleen voor tekstuele hiërarchie van de content.
+- Sla geen niveaus over met het gebruik van koppen, bijvoorbeeld geen H3 gebruiken zonder dat er een voorgaande H2 is.
+- Beperk het aantal koppen op een pagina. In de meeste gevallen hebben teksten niet meer dan `<h2>` koppen nodig en heel soms een `<h3>`. Alleen voor uitzonderlijk lange of complexe pagina's zouden `<h5>` en `<h6>` nodig zijn.
 
 ## Terminologie
 
-- **heading**: [de HTML specificatie van `h1`/`h2`/`h3`/`h4`/`h5`/`h6`](https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements). "h1" is nogal kortaf, daarom schrijven we "heading-1".
+- **heading**: [de HTML specificatie van `h1`/`h2`/`h3`/`h4`/`h5`/`h6`](https://html.spec.whatwg.org/multipage/sections.html#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements). "h1" is nogal kortaf, daarom beschrijven we de token als "heading-1".
 
 In HTML wordt de term "heading" gebruikt, niet "header" (dat is ook iets anders). Let dus op om niet per ongeluk "header" te schrijven in plaats van "heading".
 
@@ -92,7 +97,3 @@ Om gemakkelijk alle headings in één keer te stylen, is er ook sprake van een s
   - `utrecht-heading-6-text-transform`
 
 Of de `*-margin-block-start` en `*-margin-block-end` design tokens effect moeten hebben op de Heading components in elke context is nog de vraag: mogelijk willen we alleen marges toepassen in een bepaalde context, zoals binnen de Rich text component.
-
-## Samenwerken
-
-Voor sommige huisstijlen is ook nog `letter-spacing` nodig als Design Token, die is nu nog niet geïmplementeerd.
