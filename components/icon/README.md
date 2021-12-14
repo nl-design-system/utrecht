@@ -1,10 +1,10 @@
 <!-- @license CC0-1.0 -->
 
-# Icons
+# Iconen in code
 
-## Including icons as Custom Element
+## Iconen gebruiken als Custom Element
 
-One of the most convenient ways to use the icons is by including the web component library, so you the custom elements for icons will work. Every icon is available as custom element. The name if icon (`utrecht-icon-...`) is also the name of the custom element for the icon. For example:
+Eén van de makkelijkste manieren om iconen te gebruiken is door ze te includen in de web component library, zodat je ze als custom element kan gebruiken. Elk icoon is beschikbaar als custom element. De naam van van het icoon (`utrecht-icon-...`) is ook de naam van het custom-element. Voorbeeld:
 
 ```html
 <div>
@@ -12,11 +12,11 @@ One of the most convenient ways to use the icons is by including the web compone
 </div>
 ```
 
-Customize the icon color via the CSS property `color` on a parent element or via the custom property `--utrecht-icon-color`.
+Verander de kleur van het icoon via de CSS-eigenschap `color` op een parent element of via de custom eigenschap `--utrecht-icon-color`.
 
-### `color` of surrounding content
+### `color` van de omgevings content
 
-The following method is most convienent and requires no special configuration. The color of the existing text will also apply to the icon.
+Op onderstaande manier kan je het makkelijkst de kleur aanpassen. De kleur van de bestaande tekst zal ook op het icoon toegepast worden.
 
 ```html
 <button>
@@ -32,9 +32,9 @@ The following method is most convienent and requires no special configuration. T
 </style>
 ```
 
-### `--utrecht-icon-color` for custom icon color
+### `--utrecht-icon-color` als custom icoon kleur
 
-The following method is ideal if you want to have a (small) difference between the text color and the icon color. It uses a CSS custom property named `--utrecht-icon-color` for the icon color.
+Deze manier is handig als je een klein verschil wilt aanbrengen tussen de tekst kleur en de kleur van het icoon. Het gebruikt een CSS custom property `--utrecht-icon-color` als de kleur van het icoon.
 
 ```html
 <button>
@@ -51,9 +51,9 @@ The following method is ideal if you want to have a (small) difference between t
 </style>
 ```
 
-### Configure the icon size
+### Icoon grootte aanpassen
 
-The icon size can be configured with a CSS custom property named `--utrecht-icon-size`:
+De grootte van het icoon kan aangepast worden met de `--utrecht-icon-size` CSS eigenschap:
 
 ```html
 <button>
