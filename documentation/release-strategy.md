@@ -22,7 +22,7 @@ Geteste, stabiele componenten en tokens. Als er iets veranderd met deze componen
 
 ### Componenten en tokens met Beta-status
 
-Deze componenten en tokens worden gebruikt in specifieke situaties. Componenten en tokens kunnen nog veranderen op basis van feedback. Breaking changes kunnen voorkomen.
+Deze componenten en tokens worden gebruikt in specifieke situaties. Componenten en tokens kunnen nog veranderen op basis van feedback. Breaking changes kunnen gebeuren.
 
 ### Componenten en tokens met Alpha-status
 
