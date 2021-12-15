@@ -4,7 +4,7 @@
  */
 
 .utrecht-paragraph {
-  color: var(--utrecht-document-color, inherit);
+  color: var(--utrecht-paragraph-color, inherit);
   font-family: var(--utrecht-paragraph-font-family, var(--utrecht-document-font-family, inherit));
   font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
   font-weight: var(--utrecht-paragraph-font-weight, inherit);
