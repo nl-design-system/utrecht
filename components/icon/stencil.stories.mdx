@@ -3,8 +3,6 @@
 import { ArgsTable, Canvas, Description, IconGallery, IconItem, Meta, Story } from "@storybook/addon-docs";
 import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
 import tokens from "../../proprietary/design-tokens/dist/index.json";
-import contributing from "./CONTRIBUTING.md";
-import readme from "./README.md";
 import design from "./design.md";
 import iconSet from "./icon-set.json";
 import tokensDefinition from "./tokens.json";
@@ -38,7 +36,7 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
   });
 
 <Meta
-  title="Utrecht/Icons"
+  title="Utrecht/Iconen"
   argTypes={{
     color: {
       description: "Color of the icon",
@@ -64,13 +62,11 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
   }}
 />
 
-# Icons
-
-<Description>{design}</Description>
+# Iconen
 
 <Canvas>
   <Story
-    name="Icons"
+    name="Iconen"
     args={{
       color: "#888888",
       icon: "utrecht-icon-instagram",
@@ -85,7 +81,7 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
   </Story>
 </Canvas>
 
-<ArgsTable story="Icons" />
+<ArgsTable story="Iconen" />
 
 ## Social Media
 
@@ -181,10 +177,8 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
   </IconItem>
 </IconGallery>
 
-<Description>{removeMarkdownH1(readme)}</Description>
+<Description>{design}</Description>
 
 ## Design Tokens
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-icon"></ComponentTokensSection>
-
-<Description>{adjustHeadingLevel(contributing, 1)}</Description>
