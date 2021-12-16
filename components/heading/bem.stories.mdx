@@ -1,12 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Heading1 } from "./bem";
-import { Heading2 } from "./bem";
-import { Heading3 } from "./bem";
-import { Heading4 } from "./bem";
-import { Heading5 } from "./bem";
-import { Heading6 } from "./bem";
+import { Heading1 } from "../heading-1/bem";
+import { Heading2 } from "../heading-2/bem";
+import { Heading3 } from "../heading-3/bem";
+import { Heading4 } from "../heading-4/bem";
+import { Heading5 } from "../heading-5/bem";
+import { Heading6 } from "../heading-6/bem";
 import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
 import tokens from "../../proprietary/design-tokens/dist/index.json";
 import tokensDefinitionHeading1 from "../heading-1/tokens.json";
@@ -36,9 +36,6 @@ import "../heading-6/bem.scss";
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Heading1(args),
-    },
     status: {
       type: "ALPHA",
     },
@@ -55,6 +52,11 @@ Styling via `utrecht-heading-1` class name:
     args={{
       distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading1(args),
+      },
     }}
   >
     {Heading1.bind({})}
@@ -84,6 +86,11 @@ Styling via `utrecht-heading-2` class name:
       distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading2(args),
+      },
+    }}
   >
     {Heading2.bind({})}
   </Story>
@@ -111,6 +118,11 @@ Styling via `utrecht-heading-3` class name:
     args={{
       distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading3(args),
+      },
     }}
   >
     {Heading3.bind({})}
@@ -140,6 +152,11 @@ Styling via `utrecht-heading-4` class name:
       distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading4(args),
+      },
+    }}
   >
     {Heading4.bind({})}
   </Story>
@@ -168,6 +185,11 @@ Styling via `utrecht-heading-5` class name:
       distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading5(args),
+      },
+    }}
   >
     {Heading5.bind({})}
   </Story>
@@ -195,6 +217,11 @@ Styling via `utrecht-heading-6` class name:
     args={{
       distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading6(args),
+      },
     }}
   >
     {Heading6.bind({})}
