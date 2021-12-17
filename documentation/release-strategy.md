@@ -76,28 +76,24 @@ Om overzicht te houden in onze commits en uiteindelijk automatische release note
 <footer>
 ```
 
-**Type** en **onderwerp** zijn verplicht. **Scope** is optioneel.
+**Type**. **body** en **onderwerp** zijn verplicht. **Scope** en **footer** zijn optioneel.
 
 - Type: beschrijft het soort verandering waar het om gaat.
 - Scope: beschrijft op welke onderdelen van het design systeem de verandering invloed heeft.
-- Onderwerp: Een korte beschrijving van de verandering.
+- Onderwerp: Een korte beschrijving van de verandering in maximaal vijf woorden. De uitgebreidere beschrijving komt in body.
 - Body: Uitgebreidere toelichting over de verandering.
 - Footer: Referenties naar issues die hiermee opgelost zijn.
-
-**VRAAG: Wat doen we me Body en footer?**
 
 ### Voorbeelden van commit syntax
 
 Voorbeeld 1:
 
 ```
-fix(forms): I indroduced a minor error in a previous PR: pendingValue…
+style(kleuren): blue-30 verwijderd
 
-… is a value not a boolean flag. (#44450)
+--utrecht-blue-30 is vervangen door --utrecht-blue-35.
 
-The bug should have no effect since it's a typings-only, internal-only bug, but it's good to fix nonetheless.
-
-PR Close #44450
+PR close #44450
 ```
 
 Voorbeeld 2:
@@ -110,20 +106,17 @@ The version in our package.json gets copied to the one we publish, and users nee
 
 ### Verschillende types commits:
 
-- **build:** Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-- **ci:** Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-- **docs:** Documentation only changes
-- **feat:** A new feature
-- **fix:** A bug fix
-- **perf:** A code change that improves performance
-- **refactor:** A code change that neither fixes a bug nor adds a feature
-- **style:** Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-- **test:** Adding missing tests or correcting existing tests
+- **docs:** Veranderingen in de documentatie.
+- **style:** Veranderingen die het uiterlijk van iets veranderen.
+- **feat:** Functionaliteit aangepast of toegevoegd..
+- **fix:** Een bugfix.
+- **perf:** Een verandering die de performance verbetert.
+- **refactor:** Een verandering in code die geen bugfix en die ook geen feature toevoegt.
+- **test:** Aanpassen van tests.
+- **build:** Verandering in het build-system of in externe afhankelijkheden. Voorbeeldscopes: gulp, broccoli, npm.
+- **ci:** Veranderingen in onze CI configuratiebestanden en scripts. Voorbeeldscopes: Travis, Circle, BrowserStack, SauceLabs.
 
 ## Bron
 
-https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type
-
-```
-
-```
+- https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type
+- https://www.conventionalcommits.org/en/v1.0.0/
