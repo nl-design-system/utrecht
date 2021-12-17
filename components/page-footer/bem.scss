@@ -24,6 +24,14 @@
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
 }
 
+.utrecht-page-footer .utrecht-link--telephone {
+  color: #fff;
+}
+
+.utrecht-page-footer .utrecht-paragraph {
+  color: #fff;
+}
+
 .utrecht-page-footer__address--reset-address {
   /* reset <address> */
   font-style: inherit;
