@@ -63,3 +63,67 @@ Als aan alle stappen is voldaan krijgt het component de Productie status.
 ### Productie
 
 - Componenten worden gebruikt in de productieomgeving van een applicatie.
+
+## Commit syntax
+
+Om overzicht te houden in onze commits en uiteindelijk automatische release notes te kunnen maken gebruiken we de volgende commit syntax:
+
+```
+<type>(<scope>): <onderwerp>
+<LEGE REGEL>
+<body>
+<LEGE REGEL>
+<footer>
+```
+
+**Type** en **onderwerp** zijn verplicht. **Scope** is optioneel.
+
+- Type: beschrijft het soort verandering waar het om gaat.
+- Scope: beschrijft op welke onderdelen van het design systeem de verandering invloed heeft.
+- Onderwerp: Een korte beschrijving van de verandering.
+- Body: Uitgebreidere toelichting over de verandering.
+- Footer: Referenties naar issues die hiermee opgelost zijn.
+
+**VRAAG: Wat doen we me Body en footer?**
+
+### Voorbeelden van commit syntax
+
+Voorbeeld 1:
+
+```
+fix(forms): I indroduced a minor error in a previous PR: pendingValue…
+
+… is a value not a boolean flag. (#44450)
+
+The bug should have no effect since it's a typings-only, internal-only bug, but it's good to fix nonetheless.
+
+PR Close #44450
+```
+
+Voorbeeld 2:
+
+```
+fix(release): need to depend on latest rxjs and zone.js
+
+The version in our package.json gets copied to the one we publish, and users need the latest of these.
+```
+
+### Verschillende types commits:
+
+- **build:** Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
+- **ci:** Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
+- **docs:** Documentation only changes
+- **feat:** A new feature
+- **fix:** A bug fix
+- **perf:** A code change that improves performance
+- **refactor:** A code change that neither fixes a bug nor adds a feature
+- **style:** Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- **test:** Adding missing tests or correcting existing tests
+
+## Bron
+
+https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type
+
+```
+
+```
