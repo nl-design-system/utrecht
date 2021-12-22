@@ -104,7 +104,7 @@ fix(release): need to depend on latest rxjs and zone.js
 The version in our package.json gets copied to the one we publish, and users need the latest of these.
 ```
 
-### Verschillende types commits:
+### Verschillende types commits
 
 - **docs:** Veranderingen in de documentatie.
 - **style:** Veranderingen die het uiterlijk van iets veranderen.
@@ -118,5 +118,5 @@ The version in our package.json gets copied to the one we publish, and users nee
 
 ## Bron
 
-- https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type
-- https://www.conventionalcommits.org/en/v1.0.0/
+- <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type>
+- <https://www.conventionalcommits.org/en/v1.0.0/>
