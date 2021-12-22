@@ -68,7 +68,7 @@ Als aan alle stappen is voldaan krijgt het component de Productie status.
 
 Om overzicht te houden in onze commits en uiteindelijk automatische release notes te kunnen maken gebruiken we de volgende commit syntax:
 
-```
+```text
 <type>(<scope>): <onderwerp>
 <LEGE REGEL>
 <body>
@@ -88,7 +88,7 @@ Om overzicht te houden in onze commits en uiteindelijk automatische release note
 
 Voorbeeld 1:
 
-```
+```text
 style(kleuren): blue-30 verwijderd
 
 --utrecht-blue-30 is vervangen door --utrecht-blue-35.
@@ -98,7 +98,7 @@ PR close #44450
 
 Voorbeeld 2:
 
-```
+```text
 fix(release): need to depend on latest rxjs and zone.js
 
 The version in our package.json gets copied to the one we publish, and users need the latest of these.
