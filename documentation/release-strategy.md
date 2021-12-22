@@ -63,3 +63,60 @@ Als aan alle stappen is voldaan krijgt het component de Productie status.
 ### Productie
 
 - Componenten worden gebruikt in de productieomgeving van een applicatie.
+
+## Commit syntax
+
+Om overzicht te houden in onze commits en uiteindelijk automatische release notes te kunnen maken gebruiken we de volgende commit syntax:
+
+```text
+<type>(<scope>): <onderwerp>
+<LEGE REGEL>
+<body>
+<LEGE REGEL>
+<footer>
+```
+
+**Type**. **body** en **onderwerp** zijn verplicht. **Scope** en **footer** zijn optioneel.
+
+- Type: beschrijft het soort verandering waar het om gaat.
+- Scope: beschrijft op welke onderdelen van het design systeem de verandering invloed heeft.
+- Onderwerp: Een korte beschrijving van de verandering in maximaal vijf woorden. De uitgebreidere beschrijving komt in body.
+- Body: Uitgebreidere toelichting over de verandering.
+- Footer: Referenties naar issues die hiermee opgelost zijn.
+
+### Voorbeelden van commit syntax
+
+Voorbeeld 1:
+
+```text
+style(kleuren): blue-30 verwijderd
+
+--utrecht-blue-30 is vervangen door --utrecht-blue-35.
+
+PR close #44450
+```
+
+Voorbeeld 2:
+
+```text
+fix(release): need to depend on latest rxjs and zone.js
+
+The version in our package.json gets copied to the one we publish, and users need the latest of these.
+```
+
+### Verschillende types commits
+
+- **docs:** Veranderingen in de documentatie.
+- **style:** Veranderingen die het uiterlijk van iets veranderen.
+- **feat:** Functionaliteit aangepast of toegevoegd..
+- **fix:** Een bugfix.
+- **perf:** Een verandering die de performance verbetert.
+- **refactor:** Een verandering in code die geen bugfix en die ook geen feature toevoegt.
+- **test:** Aanpassen van tests.
+- **build:** Verandering in het build-system of in externe afhankelijkheden. Voorbeeldscopes: gulp, broccoli, npm.
+- **ci:** Veranderingen in onze CI configuratiebestanden en scripts. Voorbeeldscopes: Travis, Circle, BrowserStack, SauceLabs.
+
+## Bron
+
+- <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type>
+- <https://www.conventionalcommits.org/en/v1.0.0/>
