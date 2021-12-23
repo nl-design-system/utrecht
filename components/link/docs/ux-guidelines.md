@@ -2,9 +2,9 @@
 
 <!-- markdownlint-disable MD033 -->
 
-# UX Guidelines
+# Toegankelijkheidsrichtlijnen
 
-## Gebruik van tekst
+## Gebruik van tekst in links
 
 Links moeten duidelijk, gemakkelijk te begrijpen en voorspelbaar zijn. Gebruikers moeten een duidelijke verwachting hebben wat er gebeurt als er interactie is met een link d.m.v. een muis, vinger, spraak of ogen.
 
