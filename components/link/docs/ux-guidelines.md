@@ -6,15 +6,15 @@
 
 ## Gebruik van tekst
 
-Links moeten duidelijk en voorspelbaar zijn. Een gebruiker moet een duidelijke verwachting hebben wat er gebeurt als hij op een link klikt.
+Links moeten duidelijk, gemakkelijk te begrijpen en voorspelbaar zijn. Gebruikers moeten een duidelijke verwachting hebben wat er gebeurt als er interactie is met een link d.m.v. een muis, vinger, spraak of ogen.
 
-Links moeten nooit 'klik hier' of 'hier' als link tekst hebben.
+Gebruikers met ondersteunende technologie, zoals een schermlezer of braillebalk, horen/voelen vaak alle links op een pagina om hen te helpen snel te kunnen navigeren. Er kan ook behoefte zijn om de de content vergroot te willen bekijken, zodat de gebruikers alleen de linktekst en een paar woorden eromheen tegelijkertijd kan zien.
+
+Vermijd onduidelijke tekten in een link zoals 'hier' of 'lees meer' als link tekst hebben.
 
 ### Links in een zin
 
 Links moeten nooit een hele zin in beslag nemen, maar alleen de tekst die beschrijft waar de gebruikers naar toe gaan als ze op de link klikken.
-
-## Best Practice
 
 ### Buttons versus links
 
@@ -33,21 +33,21 @@ Buttons worden gebruikt voor acties, zoals 'toevoegen', 'sluiten' of 'opslaan'.
 
 - Gebruik geen buttons waar je een link kan gebruiken.
 - Gebruik geen vage of te algemene termen voor de link tekst. Help de gebruiker met voorspellen waar hij naar toe gaat.
-- Open interne links niet in een nieuwe tab. Hiermee schakel je één navigatiemanier uit om terug te gaan naar eerdere pagina's, de Nack button.
+- Open interne links niet in een nieuwe tab. Hiermee schakel je één navigatiemanier uit om terug te gaan naar eerdere pagina's, de terug knop van de brower.
 
-### Best practice Referenties
+### Referenties
 
-- Waarom ['klik hier' niet werkt](https://www.interaction-design.org/literature/article/tips-for-better-hyperlink-ux). Artikel van de Interaction Design Foundation.
-- [Best practices](https://blog.prototypr.io/a-guide-to-designing-perfect-links-in-ux-414558f35730) rondom links. Artikel op Prototypr.
-- Interessante Do's en don'ts over Web Design, onder andere over [links](https://uxplanet.org/dos-and-don-ts-of-web-design-8c9d6a5de7c6). Artikel van UX Planet.
-- Hoe schrijf je [goede links](https://www.nngroup.com/articles/writing-links/)? Uitgebreid artikel van de NN Group.
+- [Waarom 'klik hier'niet werkt. Artikel van de Interaction Design Foundation.](https://www.interaction-design.org/literature/article/tips-for-better-hyperlink-ux)
+- [Best practicesrondom links, Artikel op Prototypr.](https://blog.prototypr.io/a-guide-to-designing-perfect-links-in-ux-414558f35730)
+- Interessante Do's en don'ts over Web Design, onder andere over links. [Artikel van UX Planet over links.](https://uxplanet.org/dos-and-don-ts-of-web-design-8c9d6a5de7c6)
+- Hoe schrijf je goede links? [Uitgebreid artikel over links van de NN Group.](https://www.nngroup.com/articles/writing-links/)
 
 ## States
 
 We beschrijven de volgende states van een link:
 
 - **normal**: geen van de onderstaande states is van toepassing op de link. Deze state is gewoon de `:link` class in de code, maar we beschrijven hem hier om aan te geven dat de link 'normaal' is zonder een andere state. We gebruiken `normal` in plaats
-- **active**: de link wordt actief bekeken door de gebruiker. Bijvoorbeeld door er op te klikken.
+- **active**: de link wordt actief gebruikt door de gebruiker. Bijvoorbeeld door er op te klikken.
 - **hover**: de gebruiker pauzeert boven de link. Bijvoorbeeld door met de muiscursor er over te 'zweven'.
 - **focus**: de link heeft de focus doordat er op geklikt of getapt is. Denk ook aan voice of eye-tracking.
 - **focus-visible**: de link heeft de focus door de 'tab' knop van het keyboard.
@@ -55,8 +55,8 @@ We beschrijven de volgende states van een link:
 
 ### States Referenties
 
-- <https://wunder.io/wunderpedia/accessibility/accessible-uis/hover-focus-active/>
-- <https://www.nngroup.com/articles/guidelines-for-visualizing-links/>
+- [Website over: Hover, focus, active, door Wunder](https://wunder.io/wunderpedia/accessibility/accessible-uis/hover-focus-active/)
+- [Richtlijnen over het visualiseren van links, door NN group](https://www.nngroup.com/articles/guidelines-for-visualizing-links/)
 
 ## Soorten links
 
@@ -113,7 +113,7 @@ Ankerlinks zijn blauw, onderstreept en hebben een rood bolletje als voorloopteke
 
 ### Link met pijl
 
-Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst. Ze verwijzen naar gerelateerde informatie over het onderwerp wat er in de voorafgaande tekst is besproken. De links zijn d
+Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst. Ze verwijzen naar gerelateerde informatie over het onderwerp wat er in de voorafgaande tekst is besproken. De links zijn dik gedrukt en niet onderstreept.
 
 ### Linklijst
 
