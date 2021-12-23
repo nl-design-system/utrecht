@@ -4,7 +4,7 @@
 
 # UX Guidelines
 
-## Tekst
+## Gebruik van tekst
 
 Links moeten duidelijk en voorspelbaar zijn. Een gebruiker moet een duidelijke verwachting hebben wat er gebeurt als hij op een link klikt.
 
@@ -35,39 +35,36 @@ Buttons worden gebruikt voor acties, zoals 'toevoegen', 'sluiten' of 'opslaan'.
 - Gebruik geen vage of te algemene termen voor de link tekst. Help de gebruiker met voorspellen waar hij naar toe gaat.
 - Open interne links niet in een nieuwe tab. Hiermee schakel je één navigatiemanier uit om terug te gaan naar eerdere pagina's, de Nack button.
 
-## UX Referenties
+### Best practice Referenties
 
-- Waarom [https://www.interaction-design.org/literature/article/tips-for-better-hyperlink-ux]('klik hier' niet werkt). Artikel van de Interaction Design Foundation.
-- [https://blog.prototypr.io/a-guide-to-designing-perfect-links-in-ux-414558f35730](Best practices) rondom links. Artikel op Prototypr.
-- Interessante Do's en don'ts over Web Design, onder andere over [https://uxplanet.org/dos-and-don-ts-of-web-design-8c9d6a5de7c6](links). Artikel van UX Planet.
-- Hoe schrijf je [https://www.nngroup.com/articles/writing-links/](goede links)? Uitgebreid artikel van de NN Group.
+- Waarom ['klik hier' niet werkt](https://www.interaction-design.org/literature/article/tips-for-better-hyperlink-ux). Artikel van de Interaction Design Foundation.
+- [Best practices](https://blog.prototypr.io/a-guide-to-designing-perfect-links-in-ux-414558f35730) rondom links. Artikel op Prototypr.
+- Interessante Do's en don'ts over Web Design, onder andere over [links](https://uxplanet.org/dos-and-don-ts-of-web-design-8c9d6a5de7c6). Artikel van UX Planet.
+- Hoe schrijf je [goede links](https://www.nngroup.com/articles/writing-links/)? Uitgebreid artikel van de NN Group.
 
-# Terminologie
+## States
 
-De termen de we gebruiken komen uit HTML en CSS.
+We beschrijven de volgende states van een link:
 
-- **link**: `:link` in CSS, "hyperlink" in de HTML specificatie
-- **active**: `:active` in CSS
-- **focus**: `:focus` in CSS
-- **hover**: `:hover` in CSS
-- **visited**: `:visited` in CSS
+- **normal**: geen van de onderstaande states is van toepassing op de link. Deze state is gewoon de `:link` class in de code, maar we beschrijven hem hier om aan te geven dat de link 'normaal' is zonder een andere state. We gebruiken `normal` in plaats
+- **active**: de link wordt actief bekeken door de gebruiker. Bijvoorbeeld door er op te klikken.
+- **hover**: de gebruiker pauzeert boven de link. Bijvoorbeeld door met de muiscursor er over te 'zweven'.
+- **focus**: de link heeft de focus doordat er op geklikt of getapt is. Denk ook aan voice of eye-tracking.
+- **focus-visible**: de link heeft de focus door de 'tab' knop van het keyboard.
+- **visited**: de link is eerder gebruikt door de gebruiker.
 
-Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals de [`<a>`](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) in HTML. Buiten de context van HTML-code (bijvoorbeeld in Figma) is `a`niet duidelijk genoeg, en we verwachten niet dat er grote verwarring ontstaat met het [`<link>`](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element) element van HTML.
+### States Referenties
 
-# States
+- <https://wunder.io/wunderpedia/accessibility/accessible-uis/hover-focus-active/>
+- <https://www.nngroup.com/articles/guidelines-for-visualizing-links/>
 
-We hebben de volgende states:
-
-- normal (experimentele naam)
-- hover
-- focus
-- active
-
-# Soorten links
+## Soorten links
 
 Er zijn een aantal verschillende soorten links in het Design System te vinden:
 
 - Tekstlinks
+- Ankerlinks
+- Links met pijl
 - Linklijst
 - Top navigatie link
 - Side navigatie link
@@ -77,6 +74,8 @@ Er zijn een aantal verschillende soorten links in het Design System te vinden:
 - Telefoonnummer link
 - Accordion link
 - Link cards
+
+TODO: Ankerlinks en links met pijl toevoegen!
 
 Deze links hebben een bepaald weergave als ze in een active, hover of focus staat zijn:
 
@@ -90,9 +89,9 @@ Deze links hebben een bepaald weergave als ze in een active, hover of focus staa
 | :focus outline          | dotted outline        | dotted outline        | dotted outline     | dotted outline            | dotted outline            | dotted outline            | dotted outline          | dotted outline        | dotted outline            |            |
 | :focus onderstreping    | onderstreept          |                       |                    |                           | niet onderstreept         |                           | niet onderstreept       |                       |                           |            |
 
-## Design beslissingen
+### Design beslissingen
 
-We maken de volgende design beslissignen over links:
+We maken de volgende design beslissingen over links:
 
 - Links zijn onderstreept om een gebruiker snel en duidelijk te laten zien dat het een link is.
 <!--- Alle link componenten die in een nieuw tabje geopend kunnen worden hebben een onderstreping. Hoe zit dit dan met toptask en CTA-button?-->
@@ -103,41 +102,50 @@ We maken de volgende design beslissignen over links:
 - We houden de visuele weergave van de focus state en de hover state strict van elkaar gescheiden zodat beide states een eigen unieke ervaring hebben, ook al is de bezoeker hier niet actief mee bezig.
 - Een link die nog niet onderstreept is krijgt bij een hover state juist wel een onderstreping om aan te geven dat je er op kan klikken.
 
-## Tekstlinks
+### Tekstlink
 
 Tekstlinks zijn standaard donkerblauw en onderstreept. In sommige gevallen zijn tekstlinks zwart of wit. Dit geldt bij teksten op een gekleurde achtergrond, waar blauw niet voldoende contrast biedt. De link tekst is andere kleur blauw in hover state De link tekst is onderstreept in hover state maar niet in focus state, een eventueel icon is niet onderstreept
 
-## Linklijst
+### Ankerlinks
+
+Ankerlinks worden gebruikt om te navigeren naar specifieke content op de pagina. Ankerlinks staan boven de content waar ze naar verwijzen, komen alleen voor op contentpagina’s en worden gebruikt als opsomming. Ankerlinks zijn worden veel gebruikt als een soort inhoudsopgave van de pagina.
+Ankerlinks zijn blauw, onderstreept en hebben een rood bolletje als voorloopteken.
+
+### Link met pijl
+
+Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst. Ze verwijzen naar gerelateerde informatie over het onderwerp wat er in de voorafgaande tekst is besproken. De links zijn d
+
+### Linklijst
 
 Lijklijsten hebben een pijl als voorloopteken worden gebruikt aan het einde van een tekst. Ze verwijzen naar gerelateerde informatie over het onderwerp wat er in de voorafgaande tekst is besproken. De links zijn donkerblauw, bold en hebben een pijl (>) als voorloopteken. Dit type link wordt ook gebruikt in de linklijst en de subnavigatie.
 
 Bij een variant van de linklijsten is de pijl zwart (#000) in plaats van donkerblauw. Deze link wordt gebruikt in de linklijsten ‘related’ die verwijzen naar gerelateerde content onderaan een contentpagina.
 
-## Top navigatie link
+### Top navigatie link
 
 De top navigatie link is onderdeel van de top navigatiebalk die wordt gebruikt als hoofdnavigatie en die de gebruiker moet helpen te navigeren door de site.
 
-## Side navigatie link
+### Side navigatie link
 
 De side navigatie link is onderdeel van het metromenu die wordt gebruikt om te kunnen navigeren door een onderdeel van de site.
 
-## Call-to-action button
+### Call-to-action button
 
 De Call-to-action button vertelt de gebruiker een actie uit te voeren.
 
-## Top taak button
+### Top taak button
 
 De Top taak button is onderdeel van een set aan top taken die de gebruiker helpt bij navigeren door de meest gebruikte taken van de site duidelijk aan te bieden.
 
-## Headings als link
+### Headings als link
 
 Soms zijn headers een link.
 
-## Telefoonnummer link
+### Telefoonnummer link
 
 De telefoonnummer link stelt gebruikers in staat vanaf de website direct met de gemeente te bellen.
 
-## Accordion link
+### Accordion link
 
 Accordions geven overzicht door content achter een klik zichtbaar te maken.
 
