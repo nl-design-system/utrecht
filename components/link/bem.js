@@ -16,6 +16,7 @@ export const defaultArgs = {
   telephone: false,
   textContent: '...',
   visited: false,
+  iconleft: false,
 };
 
 export const Link = ({
@@ -28,6 +29,7 @@ export const Link = ({
   telephone = false,
   textContent = '',
   visited = false,
+  iconleft = false,
 }) =>
   `<a href="${href === null ? 'https://example.com/' : href}" class="${clsx('utrecht-link', {
     'utrecht-link--active': active,
@@ -37,4 +39,5 @@ export const Link = ({
     'utrecht-link--hover': hover,
     'utrecht-link--telephone': telephone,
     'utrecht-link--visited': visited,
+    'utrecht-link-icon-left': iconleft,
   })}"${external ? ' rel="external noopener noreferrer"' : ''}>${textContent}</a>`;

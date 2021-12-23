@@ -74,7 +74,7 @@ Styling met de `.utrecht-link` class naam:
     args={{
       ...defaultArgs,
       href: "",
-      textContent: "Read more...",
+      textContent: "Voorbeeld van een link",
     }}
   >
     {Link.bind({})}
@@ -99,6 +99,22 @@ Hieronder een overzicht van de design tokens die gebruikt worden in deze heading
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-link"></ComponentTokensSection>
 
+## Link met pijl
+
+Styling met de `.utrecht-link-icon-left` class naam:
+
+<Canvas>
+  <Story
+    name="Link met pijl"
+    args={{
+      iconleft: true,
+      textContent: "Voorbeeld van een link",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
 ## States
 
 Styling met de `.utrecht-link--hover` class naam:
@@ -110,7 +126,7 @@ Styling met de `.utrecht-link--hover` class naam:
     name="Link hover"
     args={{
       hover: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -127,7 +143,7 @@ Styling met de `.utrecht-link--focus` class naam:
     name="Link focus"
     args={{
       focus: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -144,7 +160,7 @@ Styling met de `.utrecht-link--focus-visible` class naam:
     args={{
       focus: true,
       focusVisible: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -160,7 +176,7 @@ Styling met de `.utrecht-link--active` class naam:
     name="Link active"
     args={{
       active: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -175,7 +191,7 @@ Styling met de `.utrecht-link--visited` class naam:
   <Story
     name="Link visited"
     args={{
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
       visited: true,
     }}
   >
@@ -227,7 +243,7 @@ Styling met de `.utrecht-link--external` class naam.
     args={{
       external: true,
       href: "https://www.whatismyreferer.com",
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
