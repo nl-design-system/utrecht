@@ -8,7 +8,7 @@
 
 Links moeten duidelijk, gemakkelijk te begrijpen en voorspelbaar zijn. Gebruikers moeten een duidelijke verwachting hebben wat er gebeurt als er interactie is met een link d.m.v. een muis, vinger, spraak of ogen.
 
-Gebruikers met ondersteunende technologie, zoals een schermlezer of braillebalk, horen/voelen vaak alle links op een pagina om hen te helpen snel te kunnen navigeren. Er kan ook behoefte zijn om de de content vergroot te willen bekijken, zodat de gebruikers alleen de linktekst en een paar woorden eromheen tegelijkertijd kan zien.
+Gebruikers met ondersteunende technologie, zoals een schermlezer of braillebalk, horen/voelen vaak als eerste alle links in de content om hen te helpen snel te kunnen navigeren door de content. Er kan ook behoefte zijn om de de content vergroot te willen bekijken, zodat de gebruikers alleen de linktekst en een paar woorden eromheen tegelijkertijd kan zien.
 
 Vermijd onduidelijke tekten in een link zoals 'hier' of 'lees meer' als link tekst hebben.
 
