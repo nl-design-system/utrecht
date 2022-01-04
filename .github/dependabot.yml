@@ -17,7 +17,17 @@ updates:
       - "nl-design-system/sysadmin"
     ignore:
       # Stay at webpack 4 until webpack 5 is fully supported by Storybook
+      # Keep all related loader packes on the same major version too
       - dependency-name: "webpack"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "css-loader"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "sass-loader"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "style-loader"
+        update-types: ["version-update:semver-major"]
+      # Percy needs a manual upgrade as it doesn't work without breaking
+      - dependency-name: "@percy/storybook"
         update-types: ["version-update:semver-major"]
       # Stay at React 16 until React 17 is fully supported by Storybook
       - dependency-name: "@types/react"
@@ -31,6 +41,8 @@ updates:
       # Stay at Angular 11 until manual upgrade to Angular 12
       - dependency-name: "@angular/cli"
         update-types: ["version-update:semver-major"]
+      - dependency-name: "@angular/compiler"
+        update-types: ["version-update:semver-major"]
       - dependency-name: "@angular/compiler-cli"
         update-types: ["version-update:semver-major"]
       - dependency-name: "@angular/core"
@@ -42,13 +54,32 @@ updates:
       - dependency-name: "rxjs"
         update-types: ["version-update:semver-major"]
       # `angular-devkit` follows unusual versioning rules.
-      # The important thing is to stay on a version matching Angular 11:
-      #
-      #     npm install --save-dev @angular-devkit/build-angular@v11-lts
+      # The important thing is to stay on a version matching Angular 11
       - dependency-name: "@angular-devkit/build-angular"
         update-types:
-          ["version-update:semver-major", "version-update:semver-minor"]
-      # Angular Compiler requires TypeScript >=4.0.0 and <4.2.0
+          [
+            "version-update:semver-major",
+            "version-update:semver-minor",
+            "version-update:semver-patch",
+          ]
+      # Angular 11 Compiler requires TypeScript >=4.0.0 and <4.2.0
       - dependency-name: "typescript"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      # Storybook 6.4 causes issues with the code samples in our stories.
+      # A fix and manual update is needed before upgrading.
+      - dependency-name: "@storybook/addon-a11y"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/addon-docs"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/addon-viewport"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/html"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/theming"
         update-types:
           ["version-update:semver-major", "version-update:semver-minor"]
