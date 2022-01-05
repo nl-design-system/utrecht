@@ -1,10 +1,10 @@
 {
   "utrecht": {
     "page-footer": {
-      "color": { "value": "{utrecht.color.white.value}" },
-      "background-color": { "value": "{utrecht.color.red.40.value}" },
+      "color": { "value": "{utrecht.color.white}" },
+      "background-color": { "value": "{utrecht.color.red.40}" },
       "background-image": {
-        "value": "linear-gradient(45deg, {utrecht.color.red.40.value}, {utrecht.color.red.40.value} 50%, hsl(5 54% 59%) 50%);"
+        "value": "linear-gradient(45deg, {utrecht.color.red.40}, {utrecht.color.red.40} 50%, hsl(5 54% 59%) 50%);"
       },
       "padding-inline-end": { "value": "1em" },
       "padding-inline-start": { "value": "1em" },
