@@ -16,6 +16,9 @@ updates:
     reviewers:
       - "nl-design-system/sysadmin"
     ignore:
+      # We don't yet use Node 17 so the types of node should also be locked at Node 16.
+      - dependency-name: "@types/node"
+        update-types: ["version-update:semver-major"]
       # Stay at webpack 4 until webpack 5 is fully supported by Storybook
       # Keep all related loader packes on the same major version too
       - dependency-name: "webpack"
