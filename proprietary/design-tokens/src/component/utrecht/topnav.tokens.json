@@ -2,22 +2,22 @@
   "utrecht": {
     "topnav": {
       "list": {
-        "background-color": { "value": "{utrecht.color.grey.15.value}" },
-        "border-color": { "value": "{utrecht.color.grey.40.value}" }
+        "background-color": { "value": "{utrecht.color.grey.15}" },
+        "border-color": { "value": "{utrecht.color.grey.40}" }
       },
       "link": {
-        "color": { "value": "{utrecht.color.white.value}" },
-        "background-color": { "value": "{utrecht.color.blue.40.value}" },
+        "color": { "value": "{utrecht.color.white}" },
+        "background-color": { "value": "{utrecht.color.blue.40}" },
         "focus": {
-          "color": { "value": "{utrecht.color.black.value}" },
-          "box-shadow-color": { "value": "{utrecht.color.yellow.80.value}" },
+          "color": { "value": "{utrecht.color.black}" },
+          "box-shadow-color": { "value": "{utrecht.color.yellow.80}" },
           "border-type": { "value": "dotted" },
           "text-decoration": { "value": "none" },
-          "background-color": { "value": "{utrecht.color.yellow.80.value}" },
-          "outline-color": { "value": "{utrecht.color.black.value}" }
+          "background-color": { "value": "{utrecht.color.yellow.80}" },
+          "outline-color": { "value": "{utrecht.color.black}" }
         },
         "hover": {
-          "background-color": { "value": "{utrecht.color.black.value}" }
+          "background-color": { "value": "{utrecht.color.black}" }
         }
       }
     }

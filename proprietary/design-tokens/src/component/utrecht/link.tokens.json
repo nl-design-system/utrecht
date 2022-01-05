@@ -1,23 +1,23 @@
 {
   "utrecht": {
     "link": {
-      "color": { "value": "{utrecht.color.blue.35.value}" },
+      "color": { "value": "{utrecht.color.blue.35}" },
       "text-decoration": { "value": "underline" },
       "text-underline-offset": { "value": "3px" },
       "active": {
-        "color": { "value": "{utrecht.link.color.value}" }
+        "color": { "value": "{utrecht.link.color}" }
       },
       "focus": {
-        "color": { "value": "{utrecht.color.blue.40.value}" },
+        "color": { "value": "{utrecht.color.blue.40}" },
         "text-decoration": { "value": "none" }
       },
       "hover": {
-        "color": { "value": "{utrecht.link.focus.color.value}" },
+        "color": { "value": "{utrecht.link.focus.color}" },
         "text-decoration": { "value": "underline" },
         "text-decoration-thickness": { "value": "3px" }
       },
       "visited": {
-        "color": { "value": "{utrecht.link.color.value}" }
+        "color": { "value": "{utrecht.link.color}" }
       }
     }
   }

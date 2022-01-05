@@ -5,15 +5,15 @@
         "background-position-x": { "value": ".5em" },
         "background-position-y": { "value": "50%" },
         "background-size": { "value": "1em" },
-        "border-color": { "value": "{utrecht.color.red.40.value}" },
-        "padding-inline-start": { "value": "{utrecht.space.inline.3xl.value}" }
+        "border-color": { "value": "{utrecht.color.red.40}" },
+        "padding-inline-start": { "value": "{utrecht.space.inline.3xl}" }
       },
       "button": {
-        "background-color": { "value": "{utrecht.color.red.40.value}" },
-        "border-color": { "value": "{utrecht.color.red.40.value}" },
-        "color": { "value": "{utrecht.color.white.value}" },
-        "font-size": { "value": "{utrecht.typography.scale.sm.font-size.value}" },
-        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight.value}" },
+        "background-color": { "value": "{utrecht.color.red.40}" },
+        "border-color": { "value": "{utrecht.color.red.40}" },
+        "color": { "value": "{utrecht.color.white}" },
+        "font-size": { "value": "{utrecht.typography.scale.sm.font-size}" },
+        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight}" },
         "letter-spacing": { "value": ".05em" },
         "text-transform": { "value": "uppercase" }
       },
@@ -22,7 +22,7 @@
         "color": {}
       },
       "invalid": {
-        "border-color": { "value": "{utrecht.feedback.invalid.border-color.value}" },
+        "border-color": { "value": "{utrecht.feedback.invalid.border-color}" },
         "border-width": {}
       },
       "read-only": {
