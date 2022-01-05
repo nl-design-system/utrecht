@@ -83,3 +83,12 @@ updates:
       - dependency-name: "@storybook/theming"
         update-types:
           ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/builder-webpack5"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/cli"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]
+      - dependency-name: "@storybook/manager-webpack5"
+        update-types:
+          ["version-update:semver-major", "version-update:semver-minor"]

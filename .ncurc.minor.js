@@ -11,5 +11,8 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/html',
     '@storybook/theming',
+    '@storybook/builder-webpack5',
+    '@storybook/cli',
+    '@storybook/manager-webpack5',
   ],
 };
