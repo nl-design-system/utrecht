@@ -1,13 +1,13 @@
 <!-- @license CC0-1.0 -->
 
-# Gebruik en toegankelijkheid van koppen
+# Gebruik en toegankelijkheid van headings (koppen)
 
-- Gebruik altijd maar één H1 kop op een pagina met digitale content.
-- Gebruik alleen een kop als er content onder staat.
-- Gebruikers van screenreaders gebruiken headers vaak om een indruk te krijgen van de structuur van een pagina.
-- Gebruik koppen niet voor de opmaak maar alleen voor tekstuele hiërarchie van de content.
-- Sla geen niveaus over met het gebruik van koppen, bijvoorbeeld geen H3 gebruiken zonder dat er een voorgaande H2 is.
-- Beperk het aantal koppen op een pagina. In de meeste gevallen hebben teksten niet meer dan `<h2>` koppen nodig en heel soms een `<h3>`. Alleen voor uitzonderlijk lange of complexe pagina's zouden `<h5>` en `<h6>` nodig zijn.
+- Gebruik altijd maar één H1 heading op een pagina met digitale content.
+- Gebruik alleen een heading als er content onder staat.
+- Gebruikers van screenreaders gebruiken headings vaak om een indruk te krijgen van de structuur van een pagina.
+- Gebruik headings niet voor de opmaak maar alleen voor tekstuele hiërarchie van de content.
+- Sla geen niveaus over met het gebruik van headings, bijvoorbeeld geen H3 gebruiken zonder dat er een voorgaande H2 is.
+- Beperk het aantal headings op een pagina. In de meeste gevallen hebben teksten niet meer dan `<h2>` koppen nodig en heel soms een `<h3>`. Alleen voor uitzonderlijk lange of complexe pagina's zouden `<h5>` en `<h6>` nodig zijn.
 
 ## Terminologie
 
