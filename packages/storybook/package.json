@@ -43,7 +43,7 @@
     "webpack": "4.46.0"
   },
   "dependencies": {
-    "http-server": "14.0.0"
+    "http-server": "14.1.0"
   },
   "scripts": {
     "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/style/,../../proprietary/assets/",
