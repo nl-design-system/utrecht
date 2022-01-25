@@ -150,6 +150,7 @@
     "at-rule-name-case": null,
     "string-quotes": null,
     "property-no-vendor-prefix": null,
+    "value-keyword-case": ["lower", { "camelCaseSvgKeywords": true }],
     "declaration-block-no-redundant-longhand-properties": null
   }
 }
