@@ -6,11 +6,13 @@
 
 @import "../common/focus/bem";
 
-.utrecht-navhtml {
-  font-family: var(--utrecht-font-family-sans-serif);
-}
-
 .utrecht-sidenav {
+  --utrecht-sidenav-connection-color: var(--utrecht-sidenav-item-marker-color);
+  --utrecht-sidenav-connection-inline-size: 2px;
+  --utrecht-sidenav-marker-current-color: var(--utrecht-sidenav-link-hover-color);
+  --utrecht-sidenav-marker-offset: 26px;
+  --utrecht-sidenav-connection-block-size: 38px;
+
   border-block-end: 1px solid var(--utrecht-color-grey-80);
   border-block-start: 1px solid var(--utrecht-color-grey-80);
   margin-block-end: 0;
@@ -20,7 +22,7 @@
   width: 13rem;
 }
 
-.utrecht-sidenav__list /*first ul*/ {
+.utrecht-sidenav__list {
   margin-block-end: 0;
   margin-block-start: 0.2rem;
   padding-block-end: 0;
@@ -28,203 +30,51 @@
   padding-inline-start: 0;
 }
 
-.utrecht-sidenav__list ul /*second ul*/ {
-  margin-block-end: 0;
-  padding-block-end: 0;
-  padding-block-start: 0;
-  padding-inline-start: 1.2rem;
+.utrecht-sidenav__list--child {
+  margin-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 1.4rem;
 }
 
-.utrecht-sidenav__item  /*li*/,
-.utrecht-sidenav__sibling__item  /*bottom li*/ {
+.utrecht-sidenav__item {
   list-style: none;
   margin-inline-start: 0;
   position: relative;
-}
-
-.utrecht-sidenav__item:last-child {
-  border-block-end: none;
-}
-
-/* draw the li item box bottom line */
-
-.utrecht-sidenav__item span:not(.utrecht-sidenav__item:last-child span, .utrecht-sidenav__item--has-children span:first-of-type),
-/* .utrecht-sidenav__item--has-children span */ {
-  border-block-end: 1px solid var(--utrecht-color-grey-80);
-  display: block;
-  margin-inline-start: var(--utrecht-space-inline-lg);
-}
-
-/* Remove bottom padding form first item in list with children */
-.utrecht-sidenav__item .utrecht-sidenav__link--has-children {
-  padding-block-end: 0;
-}
-
-.utrecht-sidenav__child__item {
-  list-style: none;
-}
-
-.utrecht-sidenav__link,
-.utrecht-sidenav__link--sibling {
-  color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
-  display: block;
-  margin-inline-start: 0;
-  padding-block-end: var(--utrecht-space-block-xs);
-  padding-block-start: var(--utrecht-space-block-xs);
-  padding-inline-end: var(--utrecht-space-inline-3xs);
-  padding-inline-start: var(--utrecht-space-inline-xl);
-  text-decoration: none;
-}
-
-.utrecht-sidenav__link--child,
-.utrecht-sidenav__link--child--current {
-  color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
-  display: block;
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-block-end: var(--utrecht-space-block-2xs);
-  padding-block-start: var(--utrecht-space-block-2xs);
-  padding-inline-end: var(--utrecht-space-inline-3xs);
-  padding-inline-start: var(--utrecht-space-inline-xl);
-  text-decoration: none;
-}
-
-.utrecht-sidenav__link::before,
-.utrecht-sidenav__link--sibling::before {
-  background-color: var(--utrecht-sidenav-item-marker-color);
-  left: 26px;
-}
-
-/* Little fix to move the dot to the right */
-.utrecht-sidenav__link--current::before {
-  background-color: var(--utrecht-sidenav-link-hover-color);
-  left: 27px;
-}
-
-/* Dot for link with siblings */
-.utrecht-sidenav__link::before,
-.utrecht-sidenav__link--sibling::before,
-.utrecht-sidenav__item:last-child .utrecht-sidenav__link--current::before {
-  border-radius: 100%;
-  box-shadow: 0 0 2px 2px #fff; /* Make var */
-  content: "";
-  height: 8px;
-  overflow: hidden;
-  position: absolute;
-  top: 20px; /* Hard value? */
-  transform: translateY(-50%) translateX(-2.5ch);
-  width: 8px;
-  z-index: 10;
-}
-
-/* Hover layout for mousover on sidenav__link */
-.utrecht-sidenav__link:hover::before,
-.utrecht-sidenav__link--sibling:hover::before {
-  background-color: var(--utrecht-sidenav-link-hover-color);
-}
-
-.utrecht-sidenav__item a:hover {
-  color: var(--utrecht-sidenav-link-hover-color, var(--utrecht-link-hover-color, red));
-  text-decoration: underline;
 }
 
 .utrecht-sidenav__item--current {
   color: var(--utrecht-sidenav-item-hover-color, var(--utrecht-link-hover-color, red));
 }
 
-/* Draw metro connection lines on sidenav link items */
-.utrecht-sidenav__link::after,
-.utrecht-sidenav__item:last-child .utrecht-sidenav__link::after {
-  background: var(--utrecht-sidenav-item-marker-color);
+.utrecht-sidenav__item--last {
+  border-block-end: none;
+}
 
-  /*  min-height: 100%;
-  height: calc(100% + 2px); */
-  bottom: 0;
-  content: "";
+/* draw the li item box bottom line */
+
+.utrecht-sidenav__item-separator:not(.utrecht-sidenav__item--last
+    .utrecht-sidenav__item-separator, .utrecht-sidenav__item--has-children
+    .utrecht-sidenav__item-separator:first-of-type) {
+  /* .utrecht-sidenav__item--has-children span */
+  border-block-end: 1px solid var(--utrecht-color-grey-80);
   display: block;
-  left: 3px;
-  overflow: hidden;
-  position: absolute;
-  top: -22px;
-  width: 3px;
-  z-index: 5;
+  margin-inline-start: var(--utrecht-space-inline-md);
 }
 
-/* Draw short metro connection lines on sidenav child link items */
-.utrecht-sidenav__item:last-child .utrecht-sidenav__link::after,
-.utrecht-sidenav__link--current::after,
-.utrecht-sidenav__item--has-children a::after {
-  height: calc(38px + 2px);
-  min-height: 38px;
+.utrecht-sidenav__link {
+  color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
+  display: block;
+  margin-inline-start: 0;
+  padding-block-end: var(--utrecht-space-block-xs);
+  padding-block-start: var(--utrecht-space-block-xs);
+  padding-inline-end: var(--utrecht-space-inline-3xs);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+  text-decoration: none;
 }
 
-/* Remove first metro line in listing */
-.utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
-  content: "";
-  display: none;
-}
-
-/* Make current link bold */
-.utrecht-sidenav__link--current,
-.utrecht-sidenav__link--child--current {
-  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
-}
-
-.utrecht-sidenav__list--child {
-  margin-block-end: 0;
-  margin-block-start: 0;
-  padding-block-end: 0;
-  padding-block-start: 0;
-  padding-inline-end: 0;
-  padding-inline-start: 1.4rem;
-}
-
-.utrecht-sidenav__item--child {
-  border: none;
-  list-style: none;
-  position: relative;
-}
-
-/* No last border on child item */
-.utrecht-sidenav__item--child:last-child {
-  border: none;
-}
-
-/* Add dot bullets on child links */
-.utrecht-sidenav__link--child::before,
-.utrecht-sidenav__link--child--current::before {
-  background-color: transparent;
-  border: 2px solid var(--utrecht-sidenav-link-color);
-  border-radius: 100%;
-  content: "";
-  height: 4px;
-  left: 1.2rem;
-  overflow: hidden;
-  position: absolute;
-  top: 16px;
-  transform: translateY(-50%) translateX(-19.5px);
-  width: 4px;
-  z-index: 10;
-}
-
-/* Make current marker dots bold */
-.utrecht-sidenav__link--child--current::before {
-  background-color: var(--utrecht-sidenav-link-hover-color);
-}
-
-/* Hover layout for mousover on child__link */
-.utrecht-sidenav__link--child:hover::before {
-  background-color: var(--utrecht-sidenav-link-hover-color);
-  border: 2px solid var(--utrecht-sidenav-link-hover-color);
-}
-
-/* remove :after lines in child and sibling links */
-.utrecht-sidenav__item--child:first-child .utrecht-sidenav__link--child--current::after,
-.utrecht-sidenav__link--child::after,
-.utrecht-sidenav__item .utrecht-sidenav__item--child .utrecht-sidenav__link--child::after,
-.utrecht-sidenav__item .utrecht-sidenav__link--sibling::after,
-.utrecht-sidenav__item--sibling:last-child .utrecht-sidenav__link--sibling::after {
-  display: none;
+.utrecht-sidenav__link:hover {
+  color: var(--utrecht-sidenav-link-hover-color, var(--utrecht-link-hover-color, red));
+  text-decoration: underline;
 }
 
 .utrecht-sidenav__link--focus {
@@ -233,6 +83,119 @@
 
 .utrecht-sidenav__link--focus-visible {
   @include utrecht-focus-visible;
+}
+
+/* Remove bottom padding form first item in list with children */
+.utrecht-sidenav__link--has-children {
+  padding-block-end: 0;
+}
+
+/* Draw metro connection lines on sidenav link items */
+.utrecht-sidenav__connection {
+  // .utrecht-sidenav__item--last .utrecht-sidenav__link::after {
+  background: var(--utrecht-sidenav-connection-color);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(var(--utrecht-sidenav-connection-block-size) + 2px);
+  left: 3px;
+  min-height: var(--utrecht-sidenav-connection-block-size);
+  overflow: hidden;
+  position: absolute;
+  top: -22px;
+  width: var(--utrecht-sidenav-connection-inline-size);
+  z-index: 5;
+}
+
+.utrecht-sidenav__connection--first {
+  display: none;
+}
+
+/* Dot for link with siblings */
+
+/* Little fix to move the dot to the right */
+.utrecht-sidenav__marker {
+  background-color: var(--utrecht-sidenav-item-marker-color);
+  border-radius: 100%;
+  box-shadow: 0 0 2px 2px #fff; /* Make var */
+  content: "";
+  height: 8px;
+  left: var(--utrecht-sidenav-marker-offset);
+  overflow: hidden;
+  position: absolute;
+  top: 20px; /* Hard value? */
+  transform: translateY(-50%) translateX(calc(-1 * var(--utrecht-sidenav-marker-offset)));
+  width: 8px;
+  z-index: 10;
+}
+
+/* Add dot bullets on child links */
+.utrecht-sidenav__marker--child {
+  background-color: transparent;
+  border: 2px solid var(--utrecht-sidenav-link-color);
+  height: 4px;
+  left: 1.2rem;
+  top: 16px;
+  transform: translateY(-50%) translateX(-19.5px);
+  width: 4px;
+}
+
+/* selector must override .utrecht-sidenav__marker--child */
+.utrecht-sidenav__marker--current {
+  background-color: var(--utrecht-sidenav-marker-current-color);
+}
+.utrecht-sidenav__link--child,
+.utrecht-sidenav__link--current-child {
+  color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-block-end: var(--utrecht-space-block-2xs);
+  padding-block-start: var(--utrecht-space-block-2xs);
+  padding-inline-end: var(--utrecht-space-inline-3xs);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+  text-decoration: none;
+}
+.utrecht-sidenav__link--current,
+.utrecht-sidenav__link--current-child {
+  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+}
+
+/* Hover layout for mousover on sidenav__link */
+// .utrecht-sidenav__link:hover::before,
+// .utrecht-sidenav__link--sibling:hover::before {
+.utrecht-sidenav__marker--hover {
+  background-color: var(--utrecht-sidenav-link-hover-color);
+}
+
+/* Hover layout for mousover on child__link */
+.utrecht-sidenav__marker--child.utrecht-sidenav__marker--hover {
+  background-color: var(--utrecht-sidenav-link-hover-color);
+  border: 2px solid var(--utrecht-sidenav-link-hover-color);
+}
+
+.utrecht-sidenav--pseudo-elements {
+  .utrecht-sidenav__link::before {
+    @extend .utrecht-sidenav__marker;
+  }
+  .utrecht-sidenav__link--child::before {
+    @extend .utrecht-sidenav__marker--child;
+  }
+  .utrecht-sidenav__link--current::before,
+  .utrecht-sidenav__link--current-child::before {
+    @extend .utrecht-sidenav__marker--current;
+  }
+  .utrecht-sidenav__link:hover::before {
+    @extend .utrecht-sidenav__marker--hover;
+  }
+  .utrecht-sidenav__link:not(.utrecht-sidenav__link--sibling):not(.utrecht-sidenav__link--child)::after {
+    @extend .utrecht-sidenav__connection;
+  }
+  .utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
+    @extend .utrecht-sidenav__connection--first;
+  }
+  .utrecht-sidenav__link--child::after {
+    display: none;
+  }
 }
 
 // The workaround for missing `:focus-visible` support makes the code quite complex,
