@@ -16,7 +16,7 @@
     "@babel/core": "7.16.12",
     "@babel/plugin-transform-react-jsx-development": "7.16.7",
     "@babel/preset-react": "7.16.7",
-    "@etchteam/storybook-addon-status": "4.1.0",
+    "@etchteam/storybook-addon-status": "4.2.0",
     "@percy/storybook": "3.3.1",
     "@storybook/addon-a11y": "6.3.13",
     "@storybook/addon-docs": "6.3.13",
@@ -36,14 +36,14 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rimraf": "3.0.2",
-    "sass": "1.45.2",
+    "sass": "1.49.0",
     "sass-loader": "10.2.1",
     "storybook-addon-themes": "6.1.0",
     "style-loader": "2.0.0",
     "webpack": "4.46.0"
   },
   "dependencies": {
-    "http-server": "14.0.0"
+    "http-server": "14.1.0"
   },
   "scripts": {
     "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/style/,../../proprietary/assets/",
