@@ -13,16 +13,19 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "scripts": {
-    "copy-docs": "node copy-docs",
-    "watch:docs": "chokidar --follow-symlinks --initial --command 'npm run copy-docs' '../../documentation/website/**/*.md'",
+    "copy-docs": "node copy-dir --input-dir='../../documentation/website' --output-dir='tmp'",
+    "copy-build": "node copy-dir --input-dir='build' --output-dir='../../dist'",
     "docusaurus": "docusaurus",
     "prestart": "npm run copy-docs",
-    "start": "docusaurus start",
+    "start": "npm-run-all --parallel docs:**",
+    "docs:start": "docusaurus start",
+    "docs:watch": "chokidar --follow-symlinks --initial --command 'npm run copy-docs' '../../documentation/website/**/*.md'",
     "prebuild": "npm run copy-docs",
     "build": "docusaurus build",
+    "postbuild": "npm run copy-build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
-    "clear": "docusaurus clear",
+    "clean": "docusaurus clear && rimraf tmp/",
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids"
@@ -33,13 +36,15 @@
     "@mdx-js/react": "^1.6.21",
     "@utrecht/components": "file:../../components",
     "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
-    "clsx": "^1.1.1",
-    "fs-extra": "^10.0.0",
-    "docusaurus-plugin-sass": "^0.2.2",
-    "prism-react-renderer": "^1.2.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "sass": "^1.49.0"
+    "clsx": "1.1.1",
+    "docusaurus-plugin-sass": "0.2.2",
+    "fs-extra": "10.0.0",
+    "prism-react-renderer": "1.2.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "rimraf": "3.0.2",
+    "sass": "1.49.0",
+    "yargs": "^17.3.1"
   },
   "browserslist": {
     "production": [
