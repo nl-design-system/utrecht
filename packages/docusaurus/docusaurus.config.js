@@ -1,8 +1,10 @@
+/* eslint-env node */
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github')
-const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require('prism-react-renderer/themes/github');
 
 module.exports = {
   title: 'Utrecht Design System',
@@ -19,7 +21,7 @@ module.exports = {
     [
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
+      {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           path: 'tmp',
@@ -33,13 +35,13 @@ module.exports = {
             require.resolve('./src/styles/custom.scss'),
           ],
         },
-      }),
+      },
     ],
   ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    ({
+    {
       colorMode: {
         respectPrefersColorScheme: true,
         disableSwitch: true,
@@ -97,5 +99,5 @@ module.exports = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
-    }),
-}
+    },
+};

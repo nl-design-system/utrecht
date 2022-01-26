@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+import { Description } from '@storybook/addon-docs';
 import React from 'react';
-import { Description } from "@storybook/addon-docs";
 
 export const Markdown = ({ children }) => (
-    <Description>{children.replace(/(^|\r?\n)---[\s|\D|\w]+\r?\n---/gm, '')}</Description>
-  );
+  <Description>{children.replace(/(^|\r?\n)---[\s|\D|\w]+\r?\n---/gm, '')}</Description>
+);

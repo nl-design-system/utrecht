@@ -1,41 +1,9 @@
-# Website
+# Documentation site of Utrecht Design System
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+## Docusaurus
 
-### Installation
+We use [Docusaurus](https://docusaurus.io/docs/) to display a website. The sidebar is generated based on the directory structure of the shared `documentation/website` folder and the top navigation is specified in `docusaurus.config.js`.
 
-```
-$ yarn
-```
+## Documentation sourced from shared folder
 
-### Local Development
-
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
-```
-
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
-```
-
-Not using SSH:
-
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The documentation is sourced from the root `/documentation/website` directory. To ensure your docs are build run `npm run docs` from the root of the repo. This will also ensure the watcher for the documentation repo is started.

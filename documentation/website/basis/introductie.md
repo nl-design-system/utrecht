@@ -13,8 +13,6 @@ keywords:
   - design system
 ---
 
-<!-- @license CC0-1.0 -->
-
 # Wat is het Utrecht Design System
 
 ## Eenvoudig herkenbare en kwalitatieve presentatielagen maken

@@ -1,13 +1,15 @@
-const fs = require('fs-extra')
+/* eslint-env node */
 
-async function copyBuild (inputDir, outputDir) {
+const fs = require('fs-extra');
+
+async function copyBuild(inputDir, outputDir) {
   try {
-    await fs.ensureDir(outputDir)
-    await fs.copy(inputDir, outputDir)
+    await fs.ensureDir(outputDir);
+    await fs.copy(inputDir, outputDir);
   } catch (err) {
-    console.error(err)
+    console.error(err);
   }
 }
 
-copyBuild('packages/docusaurus/build', 'dist')
-copyBuild('packages/storybook/dist', 'dist/storybook')
+copyBuild('packages/docusaurus/build', 'dist');
+copyBuild('packages/storybook/dist', 'dist/storybook');

@@ -12,7 +12,9 @@ keywords:
   - Productie
   - Beta
 ---
+
 <!-- @license CC0-1.0 -->
+
 # Release strategie
 
 We gebruiken voor het Design System een status per component of groep tokens. Hieronder worden de statussen uitgelegd, met wat je kan verwachten als een document een bepaalde status heeft.
