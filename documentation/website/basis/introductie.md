@@ -1,3 +1,18 @@
+---
+title: Introductie
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Introductie
+sidebar_position: 1
+pagination_label: Introductie
+description: Utrecht Design System in 5 minuten
+keywords:
+  - wat
+  - 5min
+  - utrecht
+  - design system
+---
+
 <!-- @license CC0-1.0 -->
 
 # Wat is het Utrecht Design System

@@ -1,3 +1,17 @@
+---
+title: Tekst en Taalgebruik
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Taalgebruik
+sidebar_position: 2
+pagination_label: Taalgebruik
+description: Hoe zorgen we voor begrijpelijke taal in onze producten?
+keywords:
+  - tekst
+  - taalgebruik
+  - utrecht
+  - laaggeletterd
+---
 <!-- @license CC0-1.0 -->
 
 # Tekst en taalgebruik

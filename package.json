@@ -53,6 +53,9 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
+    "docs": "npm-run-all --parallel docs:**",
+    "docs:watch": "npm run --workspace packages/docusaurus watch:docs",
+    "docs:start": "npm run --workspace packages/docusaurus start",
     "postinstall": "patch-package --patch-dir .patches",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.{css,scss}'",

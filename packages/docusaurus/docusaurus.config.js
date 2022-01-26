@@ -22,7 +22,7 @@ module.exports = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          path: 'docs',
+          path: 'tmp',
           routeBasePath: 'docs',
           // Please change this to your repo.
           // editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
@@ -53,34 +53,34 @@ module.exports = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: 'basis/introductie',
             position: 'left',
             label: 'De Basis',
           },
-          // {
-          //   type: 'doc',
-          //   docId: 'huisstijl',
-          //   position: 'left',
-          //   label: 'De Stijl',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'content',
-          //   position: 'left',
-          //   label: 'Onderzoek',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'content',
-          //   position: 'left',
-          //   label: 'Tekst',
-          // },
-          // {
-          //   type: 'doc',
-          //   docId: 'content',
-          //   position: 'left',
-          //   label: 'Componenten',
-          // },
+          {
+            type: 'doc',
+            docId: 'huisstijl/colours',
+            position: 'left',
+            label: 'De Stijl',
+          },
+          {
+            type: 'doc',
+            docId: 'gebruikersonderzoek/research',
+            position: 'left',
+            label: 'Onderzoek',
+          },
+          {
+            type: 'doc',
+            docId: 'redactie/content-richtlijnen',
+            position: 'left',
+            label: 'Redactie',
+          },
+          {
+            type: 'doc',
+            docId: 'ontwikkelaars/release-strategy',
+            position: 'left',
+            label: 'Ontwikkelaars',
+          },
           {
             href: 'https://github.com/nl-design-system/utrecht',
             label: 'GitHub',
