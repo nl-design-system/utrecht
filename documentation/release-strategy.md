@@ -108,7 +108,7 @@ The version in our package.json gets copied to the one we publish, and users nee
 
 - **docs:** Veranderingen in de documentatie.
 - **style:** Veranderingen die het uiterlijk van iets veranderen.
-- **feat:** Functionaliteit aangepast of toegevoegd..
+- **feat:** Functionaliteit aangepast of toegevoegd.
 - **fix:** Een bugfix.
 - **perf:** Een verandering die de performance verbetert.
 - **refactor:** Een verandering in code die geen bugfix en die ook geen feature toevoegt.

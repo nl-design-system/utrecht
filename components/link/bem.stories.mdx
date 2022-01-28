@@ -1,7 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
 import { defaultArgs, Link } from "./bem";
+import tokensDefinition from "./tokens.json";
 import "./bem.scss";
 
 <Meta
@@ -55,14 +58,14 @@ import "./bem.scss";
       transformSource: (_src, { args }) => Link(args),
     },
     status: {
-      type: "WORK IN PROGRESS",
+      type: "ALPHA",
     },
   }}
 />
 
 # Link
 
-Styling via the `.utrecht-link` class name:
+Styling met de `.utrecht-link` class naam:
 
 <Canvas>
   <Story
@@ -70,22 +73,50 @@ Styling via the `.utrecht-link` class name:
     args={{
       ...defaultArgs,
       href: "",
-      textContent: "Read more...",
+      textContent: "Voorbeeld van een link",
     }}
   >
     {Link.bind({})}
   </Story>
 </Canvas>
 
-- Use the `<a>` element to create links.
-- Avoid using `href="#"`, because it will move the focus to the very beginning to the page, which is almost never desirable.
-- Avoid unecessarily using `tabindex="-1"` or `tabindex="0"` for the `<a>` element, because links are focusable by default.
-
 <ArgsTable story="Link" />
+
+## Link in plaats van `<a>`
+
+Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals de [`<a>`](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) in HTML. Buiten de context van HTML-code (bijvoorbeeld in Figma) is `a`niet duidelijk genoeg, en we verwachten niet dat er grote verwarring ontstaat met het [`<link>`](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element) element van HTML.
+
+## Algemene richtlijnen voor developers bij links
+
+- Gebruik het `<a>` element om links aan te maken.
+- Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
+- Vermijd het gebruik van `tabindex="-1"` or `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
+
+## Link design tokens
+
+Hieronder een overzicht van de design tokens die gebruikt worden in deze heading met de uiteindelijke waardes die ze gebruiken.
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-link"></ComponentTokensSection>
+
+## Link met pijl
+
+Styling met de `.utrecht-link-icon-left` class naam:
+
+<Canvas>
+  <Story
+    name="Link met pijl"
+    args={{
+      iconleft: true,
+      textContent: "Voorbeeld van een link",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
 
 ## States
 
-Styling via the `.utrecht-link--hover` class name:
+Styling met de `.utrecht-link--hover` class naam:
 
 ### Hover state
 
@@ -94,7 +125,7 @@ Styling via the `.utrecht-link--hover` class name:
     name="Link hover"
     args={{
       hover: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -103,14 +134,15 @@ Styling via the `.utrecht-link--hover` class name:
 
 ### Focus state
 
-Styling via the `.utrecht-link--focus` class name:
+Focus kan op twee verschillende manieren worden aangebracht op een element. Met de `tab` knop van het keyboard en
+Styling met de `.utrecht-link--focus` class naam:
 
 <Canvas>
   <Story
     name="Link focus"
     args={{
       focus: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -119,7 +151,7 @@ Styling via the `.utrecht-link--focus` class name:
 
 ### Focus-visible state
 
-Styling via the `.utrecht-link--focus-visible` class name:
+Styling met de `.utrecht-link--focus-visible` class naam:
 
 <Canvas>
   <Story
@@ -127,7 +159,7 @@ Styling via the `.utrecht-link--focus-visible` class name:
     args={{
       focus: true,
       focusVisible: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -136,14 +168,14 @@ Styling via the `.utrecht-link--focus-visible` class name:
 
 ### Active state
 
-Styling via the `.utrecht-link--active` class name:
+Styling met de `.utrecht-link--active` class naam:
 
 <Canvas>
   <Story
     name="Link active"
     args={{
       active: true,
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -152,13 +184,13 @@ Styling via the `.utrecht-link--active` class name:
 
 ### Visited state
 
-Styling via the `.utrecht-link--visited` class name:
+Styling met de `.utrecht-link--visited` class naam:
 
 <Canvas>
   <Story
     name="Link visited"
     args={{
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
       visited: true,
     }}
   >
@@ -166,13 +198,13 @@ Styling via the `.utrecht-link--visited` class name:
   </Story>
 </Canvas>
 
-## Telephone link
+## Link naar telefoonnummer
 
-Styling via the `.utrecht-link--telephone` class name. Avoid line wrap within the telephone number, it is much clearer to see it on one line.
+Styling met de `.utrecht-link--telephone` class naam. We gebruiken `white-space: nowrap` om line wrapping te voorkomen bij een telefoonnummer, zodat deze goed leesbaar blijft.
 
 <Canvas>
   <Story
-    name="Telephone link"
+    name="Link naar telefoonnummer"
     args={{
       href: "tel:+31555385385",
       textContent: "+31 555 385 385",
@@ -185,7 +217,7 @@ Styling via the `.utrecht-link--telephone` class name. Avoid line wrap within th
 
 ## E-mail link
 
-Styling via the `.utrecht-link--email` class name.
+Styling met de `.utrecht-link--email` class naam.
 
 <Canvas>
   <Story
@@ -200,37 +232,35 @@ Styling via the `.utrecht-link--email` class name.
   </Story>
 </Canvas>
 
-## External link
+## Externe link
 
-Styling via the `.utrecht-link--external` class name.
+Styling met de `.utrecht-link--external` class naam.
 
 <Canvas>
   <Story
-    name="External link"
+    name="Externe link"
     args={{
       external: true,
       href: "https://www.whatismyreferer.com",
-      textContent: "Read more...",
+      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="External link" />
-
 - `rel="external"` is old-school metadata without any particular effect, but it is a sementically valid way help identify external links with the `a[rel~="external"]`.
 - `rel="noopener"` helps security: disable JavaScript contact via `window.opener` between the current page and the page you link to.
 - `rel="noreferer"` helps privacy: normal links leak privacy sensitive data. The 3rd-party website you link to will find out what page you were on via the HTTP `Referer` header. Including `noreferer` disables the `Referer` header.
 - Avoid using `target="_blank"` for external just because you don't want the visitor to leave your website, they can decide themselves to open a link in a new tab or window.
 
-## Link in Arabic script
+## Link in het Arabisch
 
-The underline of the link should not negatively impact the readability of the text, by crossing through any [Arabic diacritics](https://en.wikipedia.org/wiki/Arabic_diacritics). Configuring `text-decoration-skip-ink` in CSS can improve the default rendering of the underline by skipping over the diacritics.
+De underline van een link mag nooit een negatieve impact hebben op de leesbaarheid van de tekst door het doorkruisen van [Arabische diakrische tekens](https://en.wikipedia.org/wiki/Arabic_diacritics). Met de waarde van `text-decoration-skip-ink` in CSS kan de leesbaarheid vergroot worden door de underline niet over diakrieten heen te laten gaan.
 
 <Canvas>
   <Story
-    name="Arabic link"
+    name="Link in het Arabisch"
     args={{
       href: "mailto:info@example.com",
       textContent: "تواصل معنا من خلال البريد الإلكتروني",
