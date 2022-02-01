@@ -10,7 +10,7 @@ module.exports = {
   title: 'Utrecht Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
+  baseUrl: '/utrecht/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
