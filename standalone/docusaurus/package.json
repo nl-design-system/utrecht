@@ -13,7 +13,7 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "scripts": {
-    "copy-docs": "mkdirp tmp && cpx '../../documentation/website/**/*.md' tmp",
+    "copy-docs": "mkdirp tmp && cpx '../../documentation/website/**/**' tmp",
     "docusaurus": "docusaurus",
     "prestart": "npm run copy-docs",
     "start": "npm-run-all --parallel docs:**",
