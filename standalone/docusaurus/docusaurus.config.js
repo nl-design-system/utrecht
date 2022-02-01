@@ -3,9 +3,6 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-
 module.exports = {
   title: 'Utrecht Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
@@ -43,7 +40,8 @@ module.exports = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       colorMode: {
-        respectPrefersColorScheme: true,
+        lightCodeTheme: true,
+        respectPrefersColorScheme: false,
         disableSwitch: true,
       },
       navbar: {
@@ -94,10 +92,6 @@ module.exports = {
             position: 'right',
           },
         ],
-      },
-      prism: {
-        theme: lightCodeTheme,
-        darkTheme: darkCodeTheme,
       },
     },
 };

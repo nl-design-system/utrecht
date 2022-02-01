@@ -5,7 +5,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Voor (en door) iedereen',
-    image: '/img/bicycles.png',
+    image: 'img/bicycles.png',
     description: (
       <>
         Dankzij het Utrecht Design System kunnen de gemeente en alle leveranciers samenwerken aan een begrijpelijke,
@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'Samen met NL Design System',
-    image: '/img/laptop.png',
+    image: 'img/laptop.png',
     description: (
       <>
         Een betrokken, actieve community waarmee meerdere overheidsorganisaties van elkaar kunnen leren en elkaars werk
