@@ -40,7 +40,6 @@ module.exports = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     {
       colorMode: {
-        lightCodeTheme: true,
         respectPrefersColorScheme: false,
         disableSwitch: true,
       },
