@@ -50,10 +50,13 @@
     "stylelint-order": "5.0.0"
   },
   "scripts": {
-    "build": "lerna run build",
-    "clean": "lerna run clean && rimraf dist/",
-    "docs": "npm run --workspace packages/docusaurus start",
-    "postinstall": "patch-package --patch-dir .patches",
+    "prebuild": "rimraf  dist/",
+    "build": "lerna run build && npm run docs:build",
+    "clean": "lerna run clean && rimraf dist/ && (cd standalone/docusaurus && npm run clean)",
+    "predocs": "npm run --workspace proprietary/design-tokens build",
+    "docs": "(cd standalone/docusaurus && npm run start)",
+    "docs:build": "npm run predocs && (cd standalone/docusaurus && npm run build)",
+    "postinstall": "patch-package --patch-dir .patches && (cd standalone/docusaurus && npm install)",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.{css,scss}'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
