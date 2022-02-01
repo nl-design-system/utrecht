@@ -89,7 +89,7 @@ module.exports = {
             position: 'right',
           },
           {
-            href: 'https://nl-design-system.github.io/utrecht/?path=/story/utrecht-readme--page',
+            href: 'https://nl-design-system.github.io/utrecht/storybook',
             label: 'Storybook',
             position: 'right',
           },
