@@ -1,0 +1,61 @@
+{
+  "name": "@utrecht/docusaurus",
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Documentation website for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "scripts": {
+    "copy-docs": "mkdirp tmp && cpx '../../documentation/website/**/**' tmp",
+    "docusaurus": "docusaurus",
+    "prestart": "npm run copy-docs",
+    "start": "npm-run-all --parallel docs:**",
+    "docs:start": "docusaurus start",
+    "docs:watch": "cpx '../../documentation/website/**/*.md' tmp --watch",
+    "prebuild": "npm run copy-docs",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clean": "docusaurus clear && rimraf tmp/",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids"
+  },
+  "devDependencies": {
+    "@docusaurus/core": "2.0.0-beta.14",
+    "@docusaurus/preset-classic": "2.0.0-beta.14",
+    "@mdx-js/react": "1.6.21",
+    "@utrecht/components": "file:../../components",
+    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "clsx": "1.1.1",
+    "cpx": "1.5.0",
+    "docusaurus-plugin-sass": "0.2.2",
+    "joi": "17.5.0",
+    "mkdirp": "1.0.4",
+    "prism-react-renderer": "1.2.1",
+    "react": "16.14.0",
+    "react-dom": "16.14.0",
+    "rimraf": "3.0.2",
+    "sass": "1.49.0",
+    "yargs": "17.3.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

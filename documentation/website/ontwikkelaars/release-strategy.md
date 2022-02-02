@@ -1,3 +1,18 @@
+---
+title: Release strategie
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Release strategie
+sidebar_position: 1
+pagination_label: Release strategie
+description: Wat betekenen de verschillende statussen van de componenten?
+keywords:
+  - Release strategie
+  - versionering
+  - Productie
+  - Beta
+---
+
 <!-- @license CC0-1.0 -->
 
 # Release strategie

@@ -35,6 +35,13 @@ jobs:
         run: |
           npm run test --if-present
 
+      - name: "Retain build artifact: website"
+        uses: actions/upload-artifact@v2
+        with:
+          name: website
+          path: standalone/docusaurus/build/
+          retention-days: 1
+
       - name: "Retain build artifact: Storybook"
         uses: actions/upload-artifact@v2
         with:
@@ -42,7 +49,7 @@ jobs:
           path: packages/storybook/dist/
           retention-days: 1
 
-  publish-storybook:
+  publish-website:
     runs-on: ubuntu-latest
     needs: continuous-integration
     if: github.ref == 'refs/heads/main'
@@ -50,17 +57,23 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: "Restore build artifact: website"
+        uses: actions/download-artifact@v2
+        with:
+          name: website
+          path: standalone/docusaurus/build/
+
       - name: "Restore build artifact: Storybook"
         uses: actions/download-artifact@v2
         with:
           name: storybook
-          path: packages/storybook/dist/
+          path: standalone/docusaurus/build/storybook/
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         with:
           branch: gh-pages
-          folder: packages/storybook/dist/
+          folder: standalone/docusaurus/build/
 
   publish-npm:
     runs-on: ubuntu-latest
