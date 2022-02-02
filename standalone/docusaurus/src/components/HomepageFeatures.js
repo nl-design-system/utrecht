@@ -1,3 +1,6 @@
+import Bicycles from '@site/static/img/bicycles.png';
+import Laptop from '@site/static/img/laptop.png';
+import Utrecht from '@site/static/img/utrecht.png';
 import clsx from 'clsx';
 import React from 'react';
 import styles from './HomepageFeatures.module.css';
@@ -5,7 +8,7 @@ import styles from './HomepageFeatures.module.css';
 const FeatureList = [
   {
     title: 'Voor (en door) iedereen',
-    image: 'img/bicycles.png',
+    image: Bicycles,
     description: (
       <>
         Dankzij het Utrecht Design System kunnen de gemeente en alle leveranciers samenwerken aan een begrijpelijke,
@@ -15,7 +18,7 @@ const FeatureList = [
   },
   {
     title: 'Een solide basis',
-    image: 'img/utrecht.png',
+    image: Utrecht,
     description: (
       <>
         Een solide basis voor ontwerpers en ontwikkelaars. Doordat zij het wiel niet steeds opnieuw hoeven uit te
@@ -25,7 +28,7 @@ const FeatureList = [
   },
   {
     title: 'Samen met NL Design System',
-    image: 'img/laptop.png',
+    image: Laptop,
     description: (
       <>
         Een betrokken, actieve community waarmee meerdere overheidsorganisaties van elkaar kunnen leren en elkaars werk

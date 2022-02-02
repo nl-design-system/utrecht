@@ -47,10 +47,10 @@
     "http-server": "14.1.0"
   },
   "scripts": {
-    "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/style/,../../proprietary/assets/",
+    "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/style/,src/script/,../../proprietary/assets/",
     "clean": "rimraf dist/",
     "percy-snapshot": "percy-storybook --build_dir dist/ --widths=1280",
     "start": "../../node_modules/http-server/bin/http-server dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006 --static-dir src/style/,../../proprietary/assets/"
+    "storybook": "start-storybook --config-dir config/ --port 6006 --static-dir src/style/,src/script/,../../proprietary/assets/"
   }
 }
