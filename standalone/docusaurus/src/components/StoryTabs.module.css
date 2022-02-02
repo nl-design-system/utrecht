@@ -1,0 +1,18 @@
+.story-tabs__tab {
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+}
+
+.story-tabs__link {
+  text-align: right;
+  padding: 10px 20px;
+  display: block;
+  font-weight: bold;
+  background-color: var(--utrecht-button-primary-action-background-color);
+  color: var(--utrecht-button-primary-action-color);
+}
+
+.story-tabs__link:hover {
+  background-color: var(--utrecht-button-primary-action-hover-background-color);
+  color: var(--utrecht-button-primary-action-hover-color);
+}

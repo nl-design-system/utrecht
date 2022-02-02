@@ -1,9 +1,13 @@
 # Ignore 3rd party files
 node_modules
 
+# Ignore minified files
+*.min.js
+
 # Ignore generated files
 dist
 build
+tmp
 .docusaurus
 CHANGELOG.md
 package-lock.json
