@@ -21,7 +21,6 @@
     "docs:watch": "cpx '../../documentation/website/**/*.md' tmp --watch",
     "prebuild": "npm run copy-docs",
     "build": "docusaurus build",
-    "postbuild": "mkdirp '../../dist' && cpx 'build/**/**' '../../dist'",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "clean": "docusaurus clear && rimraf tmp/",
