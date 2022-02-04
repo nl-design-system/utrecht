@@ -1,0 +1,60 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
+import "../heading-5/bem.scss";
+import { Heading5 } from "../heading-5/bem";
+import tokensDefinitionHeading5 from "../heading-5/tokens.json";
+
+<Meta
+  title="CSS Component/Heading/Heading 5"
+  argTypes={{
+    textContent: {
+      description: "De content van de header",
+      control: "text",
+    },
+    distanced: {
+      description: "Zet afstand tussen de header en nabije content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading 5
+
+Styling via `utrecht-heading-5` class name:
+
+<Canvas>
+  <Story
+    name="Heading 5"
+    args={{
+      distanced: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading5(args),
+      },
+    }}
+  >
+    {Heading5.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading 5" />
+
+## Heading 5 design tokens
+
+Hieronder een overzicht van de design tokens die gebruikt worden in deze heading met de uiteindelijke waardes die ze gebruiken.
+
+<ComponentTokensSection
+  tokens={tokens}
+  definition={tokensDefinitionHeading5}
+  component="utrecht-heading-5"
+></ComponentTokensSection>
