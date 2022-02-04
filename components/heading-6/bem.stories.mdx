@@ -1,0 +1,60 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
+import tokens from "../../proprietary/design-tokens/dist/index.json";
+import "../heading-6/bem.scss";
+import { Heading6 } from "../heading-6/bem";
+import tokensDefinitionHeading6 from "../heading-6/tokens.json";
+
+<Meta
+  title="CSS Component/Heading/Heading 6"
+  argTypes={{
+    textContent: {
+      description: "De content van de header",
+      control: "text",
+    },
+    distanced: {
+      description: "Zet afstand tussen de header en nabije content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading 6
+
+Styling via `utrecht-heading-6` class name:
+
+<Canvas>
+  <Story
+    name="Heading 6"
+    args={{
+      distanced: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: {
+        transformSource: (_src, { args }) => Heading6(args),
+      },
+    }}
+  >
+    {Heading6.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Heading 6" />
+
+## Heading 6 design tokens
+
+Hieronder een overzicht van de design tokens die gebruikt worden in deze heading met de uiteindelijke waardes die ze gebruiken.
+
+<ComponentTokensSection
+  tokens={tokens}
+  definition={tokensDefinitionHeading6}
+  component="utrecht-heading-6"
+></ComponentTokensSection>
