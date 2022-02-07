@@ -173,6 +173,10 @@
   border: 2px solid var(--utrecht-sidenav-link-hover-color);
 }
 
+.utrecht-sidenav__link:hover .utrecht-sidenav__marker {
+  @extend .utrecht-sidenav__marker--hover;
+}
+
 .utrecht-sidenav--pseudo-elements {
   .utrecht-sidenav__link::before {
     @extend .utrecht-sidenav__marker;
