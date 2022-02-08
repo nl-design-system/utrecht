@@ -70,7 +70,7 @@ jobs:
           path: standalone/docusaurus/build/storybook/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.2.2
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
           branch: gh-pages
           folder: standalone/docusaurus/build/
