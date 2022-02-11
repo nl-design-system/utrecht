@@ -3,53 +3,9 @@
 Copyright (c) 2021 A Herring
 -->
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import clsx from "clsx";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Sidenav } from "./bem";
 import "./bem.scss";
-export const Template = ({
-  items,
-}) => `<nav class="utrecht-sidenav utrecht-sidenav--pseudo-elements"><style>.utrecht-sidenav__connection, .utrecht-sidenav__marker { display: none; }</style>
-    <ul class="utrecht-sidenav__list">${items
-      .map(
-        ({ href, title, current, focus, children, sibling, haschildren }, index, array) => `<li class="${clsx(
-          "utrecht-sidenav__item",
-          index + 1 === array.length && "utrecht-sidenav__item--last",
-          sibling && "utrecht-sidenav__item--sibling",
-          haschildren && "utrecht-sidenav__item--has-children"
-        )}">
-          <a class="${clsx(
-            "utrecht-sidenav__link",
-            current && "utrecht-sidenav__link--current",
-            focus && "utrecht-sidenav__link--focus",
-            sibling && "utrecht-sidenav__link--sibling",
-            haschildren && "utrecht-sidenav__link--has-children"
-          )}" href="${href}"><div class="utrecht-sidenav__marker"></div><div class="${clsx(
-          "utrecht-sidenav__connection",
-          index === 0 && "utrecht-sidenav__connection--first",
-          index + 1 === array.length && "utrecht-sidenav__connection--last"
-        )}"></div>${title}</a><div class="utrecht-sidenav__item-separator"></div>
-          ${
-            children
-              ? `<ul class="utrecht-sidenav__list utrecht-sidenav__list--child">${children
-                  .map(
-                    ({ href, title, current, focus }) =>
-                      `<li class="utrecht-sidenav__item utrecht-sidenav__item--child"><a class="${clsx(
-                        "utrecht-sidenav__link utrecht-sidenav__link--child",
-                        current && "utrecht-sidenav__link--current utrecht-sidenav__link--current-child",
-                        focus && "utrecht-sidenav__link--focus"
-                      )}" href="${href}"><div class="utrecht-sidenav__marker utrecht-sidenav__marker--child"></div>${title}</a></li>`
-                  )
-                  .join("")}
-          </ul>`
-              : ""
-          }
-          ${children ? '<div class="utrecht-sidenav__item-separator"></div>' : ""}
-        </li>`
-      )
-      .join("")}
-    </ul>
-  </nav>
-`;
 
 <Meta
   title="CSS Component/Navigatie SideNav"
@@ -58,10 +14,14 @@ export const Template = ({
       description: "Menu items",
       control: "array",
     },
+    pseudoElements: {
+      description: "Render using CSS pseudo elements",
+      control: "boolean",
+    },
   }}
   parameters={{
     docs: {
-      transformSource: (_src, { args }) => Template(args),
+      transformSource: (_src, { args }) => Sidenav(args),
     },
     status: "IN DEVELOPMENT",
   }}
@@ -89,11 +49,14 @@ export const Template = ({
           ],
         },
       ],
+      pseudoElements: false,
     }}
   >
-    {Template.bind({})}
+    {Sidenav.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Side Nav" />
 
 <Canvas>
   <Story
@@ -118,6 +81,7 @@ export const Template = ({
         { href: "#", title: "Sibling #2", sibling: true },
         { href: "#", title: "Sibling #3", sibling: true },
       ],
+      pseudoElements: false,
     }}
     parameters={{
       docs: {
@@ -127,9 +91,11 @@ export const Template = ({
       },
     }}
   >
-    {Template.bind({})}
+    {Sidenav.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Side Nav met Siblings" />
 
 <Canvas>
   <Story
@@ -169,6 +135,6 @@ export const Template = ({
       },
     }}
   >
-    {Template.bind({})}
+    {Sidenav.bind({})}
   </Story>
 </Canvas>

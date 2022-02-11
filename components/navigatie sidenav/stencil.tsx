@@ -22,7 +22,7 @@ export class Sidenav {
                 'utrecht-sidenav__item',
                 index + 1 === array.length && 'utrecht-sidenav__item--last',
                 sibling && 'utrecht-sidenav__item--sibling',
-                haschildren && 'utrecht-sidenav__item--has-children',
+                haschildren && 'utrecht-sidenav__item--parent',
               )}
             >
               <a
@@ -31,15 +31,21 @@ export class Sidenav {
                   current && 'utrecht-sidenav__link--current',
                   focus && 'utrecht-sidenav__link--focus',
                   sibling && 'utrecht-sidenav__link--sibling',
-                  haschildren && 'utrecht-sidenav__link--has-children',
+                  haschildren && 'utrecht-sidenav__link--parent',
                 )}
                 href={href}
               >
                 <div class={clsx('utrecht-sidenav__marker', current && 'utrecht-sidenav__marker--current')}></div>
-                {!(sibling || index === 0) ? <div class="utrecht-sidenav__connection"></div> : null}
+                <div
+                  class={clsx(
+                    'utrecht-sidenav__connection',
+                    haschildren && 'utrecht-sidenav__connection--parent',
+                    sibling && 'utrecht-sidenav__connection--sibling',
+                    index + 1 === array.length && 'utrecht-sidenav__connection--last',
+                  )}
+                ></div>
                 {title}
               </a>
-              <div class="utrecht-sidenav__item-separator"></div>
               {children ? (
                 <ul class="utrecht-sidenav__list utrecht-sidenav__list--child">
                   {children.map(({ href, title, current, focus }) => (
@@ -70,7 +76,7 @@ export class Sidenav {
               ) : (
                 ''
               )}
-              {children && <div class="utrecht-sidenav__item-separator"></div>}
+              <div class="utrecht-sidenav__item-separator"></div>
             </li>
           ))}
         </ul>
