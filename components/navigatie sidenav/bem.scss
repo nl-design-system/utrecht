@@ -11,7 +11,9 @@
   --utrecht-sidenav-connection-inline-size: 2px;
   --utrecht-sidenav-marker-current-color: var(--utrecht-sidenav-link-hover-color);
   --utrecht-sidenav-marker-offset: 26px;
-  --utrecht-sidenav-connection-block-size: 38px;
+  --utrecht-sidenav-connection-block-size: 100%;
+  --utrecht-sidenav-marker-height: 8px;
+  --utrecht-sidenav-marker-outline-width: 2px;
 
   border-block-end: 1px solid var(--utrecht-color-grey-80);
   border-block-start: 1px solid var(--utrecht-color-grey-80);
@@ -52,10 +54,8 @@
 
 /* draw the li item box bottom line */
 
-.utrecht-sidenav__item-separator:not(.utrecht-sidenav__item--last
-    .utrecht-sidenav__item-separator, .utrecht-sidenav__item--has-children
-    .utrecht-sidenav__item-separator:first-of-type) {
-  /* .utrecht-sidenav__item--has-children span */
+.utrecht-sidenav__item-separator:not(.utrecht-sidenav__item--last .utrecht-sidenav__item-separator) {
+  /* .utrecht-sidenav__item--parent span */
   border-block-end: 1px solid var(--utrecht-color-grey-80);
   display: block;
   margin-inline-start: var(--utrecht-space-inline-md);
@@ -86,7 +86,7 @@
 }
 
 /* Remove bottom padding form first item in list with children */
-.utrecht-sidenav__link--has-children {
+.utrecht-sidenav__link--parent {
   padding-block-end: 0;
 }
 
@@ -97,17 +97,21 @@
   bottom: 0;
   content: "";
   display: block;
-  height: calc(var(--utrecht-sidenav-connection-block-size) + 2px);
+  height: calc(
+    var(--utrecht-sidenav-connection-block-size) - var(--utrecht-sidenav-marker-height) - 2 *
+      var(--utrecht-sidenav-marker-outline-width)
+  );
   left: 3px;
-  min-height: var(--utrecht-sidenav-connection-block-size);
   overflow: hidden;
   position: absolute;
-  top: -22px;
+  top: calc(var(--utrecht-sidenav-marker-offset));
   width: var(--utrecht-sidenav-connection-inline-size);
   z-index: 5;
 }
 
-.utrecht-sidenav__connection--first {
+.utrecht-sidenav__connection--last,
+.utrecht-sidenav__connection--parent,
+.utrecht-sidenav__connection--sibling {
   display: none;
 }
 
@@ -117,9 +121,8 @@
 .utrecht-sidenav__marker {
   background-color: var(--utrecht-sidenav-item-marker-color);
   border-radius: 100%;
-  box-shadow: 0 0 2px 2px #fff; /* Make var */
   content: "";
-  height: 8px;
+  height: var(--utrecht-sidenav-marker-height);
   left: var(--utrecht-sidenav-marker-offset);
   overflow: hidden;
   position: absolute;
@@ -191,11 +194,8 @@
   .utrecht-sidenav__link:hover::before {
     @extend .utrecht-sidenav__marker--hover;
   }
-  .utrecht-sidenav__link:not(.utrecht-sidenav__link--sibling):not(.utrecht-sidenav__link--child)::after {
+  .utrecht-sidenav__link:not(.utrecht-sidenav__link--sibling):not(.utrecht-sidenav__link--parent):not(.utrecht-sidenav__link--child)::after {
     @extend .utrecht-sidenav__connection;
-  }
-  .utrecht-sidenav__item:first-child .utrecht-sidenav__link::after {
-    @extend .utrecht-sidenav__connection--first;
   }
   .utrecht-sidenav__link--child::after {
     display: none;
