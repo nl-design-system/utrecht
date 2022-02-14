@@ -13,7 +13,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'nl-design-system/utrecht',
   projectName: 'utrecht', // Usually your repo name.
-  plugins: ['docusaurus-plugin-sass'],
+  plugins: ['docusaurus-plugin-sass', require.resolve('docusaurus-lunr-search')],
   customFields: {
     storybookUrl: 'https://nl-design-system.github.io/utrecht/storybook/',
   },
