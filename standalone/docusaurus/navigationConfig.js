@@ -15,7 +15,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      docId: 'tmp/huisstijl/colours',
+      docId: 'tmp/huisstijl/kleuren',
       position: 'left',
       label: 'De Stijl',
     },

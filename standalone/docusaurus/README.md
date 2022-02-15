@@ -38,3 +38,10 @@ In de algemene `package.json` zijn wel alle scripts die nodig zijn voor het loka
 `npm run docs` kopieert alles wat je nodig hebt en start de documentatie op [http://localhost:3000/utrecht/](http://localhost:3000/utrecht/) Een watcher zorgt er in principe voor dat nieuwe aanpassingen in de documentatie ook gelijk te zien zijn. Mocht dit niet lukken, dan kun je af en toe de documentatie opnieuw opstarten.
 
 Als je wil weten of de documentatie ook gebuild werkt, dan kan je dit testen met `npm run build:docs` gevolgd door `npm run serve:docs`.
+
+### Gedeelde documenten met frontmatter
+
+Docusaurus gebruikt metadata aan het begin van `.md` en `.mdx` bestanden voor het genereren van bijvoorbeeld de sidebar labels en volgorde. Storybook herkend dit niet als metadata en stop het gewoon in een paragraaf om te lezen.
+
+In Storybook gebruiken we een component om `.md` heen, die dit oplost, maar voor `.mdx` is dat niet zo makkelijk. Daarom gebruiken we voor bijvoorbeeld `kleuren.mdx` een extra `_kleuren.mdx` waar het gedeelde document in staat zónder frontmatter. Die wordt gebruikt in storybook en ingeladen in het docusaurus document `kleuren.mdx`.
+Bestanden met `_` ervoor worden verder door docusaurus genegeerd.
