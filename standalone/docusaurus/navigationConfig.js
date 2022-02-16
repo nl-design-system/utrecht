@@ -21,7 +21,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      docId: 'componenten/Heading',
+      docId: 'componenten/typografie/Heading',
       position: 'left',
       label: 'Componenten',
     },
