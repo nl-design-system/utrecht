@@ -1,0 +1,53 @@
+---
+title: Paragraaf
+hide_title: false
+hide_table_of_contents: false
+sidebar_label: Paragraaf
+sidebar_position: 1
+pagination_label: Paragraaf
+description: Utrecht Paragraaf component.
+keywords:
+  - paragraaf
+  - lead paragraaf
+  - multiple paragraven
+  - paragraven
+  - tekstblok
+  - tekst
+  - paragraph
+  - paragraphs
+  - text
+---
+
+<!-- @license CC0-1.0 -->
+
+import { Markdown } from "../../../src/components/Markdown";
+import { StoryTabs } from "../../../src/components/StoryTabs";
+import Readme from "../../../tmp/paragraph/README.md";
+
+## UX Richtlijnen
+
+<Markdown headingLevel={3}>
+  <Readme />
+</Markdown>
+
+## Paragraaf Component
+
+### Standaard
+
+<StoryTabs
+  tabs={[
+    { id: "html", label: "HTML", story: "html-paragraph--default-story" },
+    { id: "css", label: "CSS", story: "css-paragraph--default-story" },
+    { id: "web-component", label: "Web Component", story: "web-component-paragraph--default-story" },
+  ]}
+></StoryTabs>
+
+### Lead
+
+<StoryTabs
+  tabs={[
+    { id: "html", label: "HTML", story: "html-paragraph--lead" },
+    { id: "css", label: "CSS", story: "css-paragraph--lead" },
+    { id: "web-component", label: "Web Component", story: "web-component-paragraph--lead" },
+  ]}
+></StoryTabs>
