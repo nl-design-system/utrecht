@@ -95,17 +95,35 @@ You can use any editor you'd like, but in case you use [Visual Studio Code](http
 - [stylelint](https://marketplace.visualstudio.com/items?itemName=stylelint.vscode-stylelint)
 - [Svg Preview](https://marketplace.visualstudio.com/items?itemName=SimonSiefke.svg-preview)
 
+### Developing locally
+
+1. Open Terminal
+2. Select the directory this repository should be cloned into with `cd <name-of-directory>`
+3. Clone this Git repository
+4. `cd utrecht`
+5. `git checkout main` to switch to the main branch, if you previously worked in this repository.
+6. `git pull` to get to the latest version of the main branch
+7. `npm install` to download and install all the dependencies
+
+### Run Docusaurus on your computer
+
+1. Open Terminal
+2. Ensure your current directory is `utrecht`
+3. Run `npm install` to ensure the latest and greatest of all dependencies
+4. Run `npm run docs`
+5. The local version of docusaurus will be running on `localhost:3000/utrecht`
+6. Press `Control+C` in your terminal to stop Docusaurus
+
+Read the `standalone/docusaurus/README.md` for docusaurus details
+
 ### Run Storybook on your computer
 
 1. Open Terminal.
-2. Clone this Git repository to `directory/of/your/choosing`
-3. `cd directory/of/your/choosing`
-4. `git checkout main` to switch to the main branch, if you previously worked in this repository.
-5. `git pull` to get to the latest version of the main branch
-6. `npm install` to download and install all the dependencies
-7. `npm run storybook` to start Storybook
-8. Your main browser opens automatically with your local storybook.
-9. Press `Control+C` in your terminal to stop Storybook.
+2. Ensure your current directory is `utrecht`
+3. Run `npm install` to ensure the latest and greatest of all dependencies
+4. Run `npm run storybook` to start Storybook
+5. Your main browser opens automatically with your local storybook.
+6. Press `Control+C` in your terminal to stop Storybook.
 
 ### Debugging Storybook
 
