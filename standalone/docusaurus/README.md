@@ -45,3 +45,17 @@ Docusaurus gebruikt metadata aan het begin van `.md` en `.mdx` bestanden voor he
 
 In Storybook gebruiken we een component om `.md` heen, die dit oplost, maar voor `.mdx` is dat niet zo makkelijk. Daarom gebruiken we voor bijvoorbeeld `kleuren.mdx` een extra `_kleuren.mdx` waar het gedeelde document in staat zónder frontmatter. Die wordt gebruikt in storybook en ingeladen in het docusaurus document `kleuren.mdx`.
 Bestanden met `_` ervoor worden verder door docusaurus genegeerd.
+
+### Ontwikkelen met een lokale storybook
+
+Om lokale stories in te laden tijdens het ontwikkelen van component documentatie in Docusaurus kun je de storybook verwijzing in docusaurus aanpasssen. Het is handig om dan een gebuilde versie van storybook te gebruiken, omdat anders de verschillende 'watchers' elkaar in de weg kunnen zitten.
+
+1. Ga naar de root van de `utrecht` repository
+1. Draai `npm run build:storybook`
+1. Draai `npm run serve:storybook` om deze gebuilde versie in de browser te openen
+1. Deze gebuilde versie draait nu op `localhost:8080`, vergeet niet om deze steeds opnieuw te bouwen als je in storybook veranderingen hebt die je in docusaurus wil zien.
+1. Open `standalone/docusaurus/docusaurus.config.js`
+1. Verander `storybookUrl: 'https://nl-design-system.github.io/utrecht/storybook/'` naar `storybookUrl: 'http://localhost:8080'`,
+1. Draai `npm run docs`
+1. Tada, je locale storybook wordt getoond en gelinkt in docusaurus component documentatie
+1. BELANGRIJK: vergeet niet na het ontwikkelen de `storybookUrl` weer aan te passen naar `https://nl-design-system.github.io/utrecht/storybook/`
