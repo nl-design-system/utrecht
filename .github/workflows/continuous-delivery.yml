@@ -77,6 +77,14 @@ jobs:
           branch: gh-pages
           folder: standalone/docusaurus/build/
 
+      - name: Continuous Deployment to designsystem.utrecht.nl
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: main
+          folder: standalone/docusaurus/build/
+          repository-name: nl-design-system/designsystem.utrecht.nl
+          token: ${{ secrets.DOCS_GH_TOKEN }}
+
   publish-npm:
     runs-on: ubuntu-latest
     needs: continuous-integration
