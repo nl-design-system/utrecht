@@ -37,8 +37,9 @@ jobs:
           npm run test --if-present
 
       - name: "Continuous Integration: dry run of release"
+        if: github.ref != 'refs/heads/main'
         run: |
-          npx semantic-release --branches "${GITHUB_REF}" --dry-run
+          npx semantic-release --branches "${GITHUB_REF}" --dry-run --no-ci
 
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v2
