@@ -32,7 +32,8 @@ jobs:
         run: |
           echo "${GITHUB_REF}"
           echo "${GITHUB_REF_NAME}"
-          npx semantic-release --branches "${GITHUB_REF_NAME}" --dry-run --no-ci
+          echo "${GITHUB_HEAD_REF}"
+          npx semantic-release --branches "${GITHUB_HEAD_REF}" --dry-run --no-ci
 
       - name: "Continuous Integration: lint"
         run: |
