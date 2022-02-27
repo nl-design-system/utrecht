@@ -95,9 +95,12 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
+      # Fetch all history for all tags and branches, so semantic-release can do a complete analysis
+      # and come up with the correct next version number.
       - name: Checkout release branch
         uses: actions/checkout@v2
         with:
+          fetch-depth: "0"
           token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js version
