@@ -24,6 +24,14 @@ jobs:
           npm ci
           npm ls
 
+      - name: "Continuous Integration: dry run of release"
+        if: github.ref != 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
+        run: |
+          npx semantic-release --branches "${GITHUB_REF_NAME}" --dry-run --no-ci
+
       - name: "Continuous Integration: lint"
         run: |
           npm run lint --if-present
@@ -35,14 +43,6 @@ jobs:
       - name: "Continuous Integration: test"
         run: |
           npm run test --if-present
-
-      - name: "Continuous Integration: dry run of release"
-        if: github.ref != 'refs/heads/main'
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
-        run: |
-          npx semantic-release --branches "${GITHUB_REF_NAME}" --dry-run --no-ci
 
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v2
