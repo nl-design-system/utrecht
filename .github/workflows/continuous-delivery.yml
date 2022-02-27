@@ -28,12 +28,13 @@ jobs:
         if: github.ref != 'refs/heads/main'
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GITHUB_HEAD_REF: ${{ env.GITHUB_HEAD_REF }}
           GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
         run: |
           echo "${GITHUB_REF}"
           echo "${GITHUB_REF_NAME}"
           echo "${GITHUB_HEAD_REF}"
-          unset GITHUB_ACTIONS && npx semantic-release --branches "${GITHUB_HEAD_REF},${GITHUB_REF_NAME}" --dry-run --no-ci
+          npx semantic-release --branches "${GITHUB_HEAD_REF},${GITHUB_REF_NAME}" --dry-run --no-ci --debug
 
       - name: "Continuous Integration: lint"
         run: |
