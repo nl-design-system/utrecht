@@ -38,6 +38,8 @@ jobs:
 
       - name: "Continuous Integration: dry run of release"
         if: github.ref != 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           npx semantic-release --branches "${GITHUB_REF}" --dry-run --no-ci
 
