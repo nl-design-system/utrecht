@@ -30,6 +30,8 @@ jobs:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
         run: |
+          echo "${GITHUB_REF}"
+          echo "${GITHUB_REF_NAME}"
           npx semantic-release --branches "${GITHUB_REF_NAME}" --dry-run --no-ci
 
       - name: "Continuous Integration: lint"
