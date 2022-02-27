@@ -1,0 +1,22 @@
+{
+  "branches": [{ "name": "main", "prerelease": true }],
+  "plugins": [
+    "@semantic-release/changelog",
+    "@semantic-release/commit-analyzer",
+    [
+      "@semantic-release/github",
+      {
+        "assets": []
+      }
+    ],
+    "@semantic-release/npm",
+    "@semantic-release/release-notes-generator",
+    [
+      "@semantic-release/git",
+      {
+        "message": "docs(release): v${nextRelease.version}\n\n${nextRelease.notes}",
+        "assets": ["CHANGELOG.md"]
+      }
+    ]
+  ]
+}
