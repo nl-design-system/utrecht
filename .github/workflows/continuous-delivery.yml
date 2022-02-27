@@ -11,15 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout release branch
+      - name: Checkout branch
         uses: actions/checkout@v2
-        if: github.ref == 'refs/heads/main'
-        with:
-          token: ${{ secrets.GH_TOKEN }}
-
-      - name: Checkout pull request branch
-        uses: actions/checkout@v2
-        if: github.ref != 'refs/heads/main'
 
       - name: Set up Node.js version
         uses: actions/setup-node@v2
@@ -63,7 +56,8 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout release branch
+        uses: actions/checkout@v2
 
       - name: "Restore build artifact: website"
         uses: actions/download-artifact@v2
@@ -89,7 +83,10 @@ jobs:
     if: github.ref == 'refs/heads/main'
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout release branch
+        uses: actions/checkout@v2
+        with:
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Set up Node.js version
         uses: actions/setup-node@v2
