@@ -12,13 +12,14 @@
   ],
   "private": false,
   "scripts": {
-    "prebuild": "mkdir -p dist/",
+    "prebuild": "make-dir dist/",
     "build": "svgo -f . -o dist/"
   },
   "publishConfig": {
     "access": "public"
   },
   "devDependencies": {
+    "make-dir-cli": "3.0.0",
     "svgo": "2.8.0"
   }
 }
