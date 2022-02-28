@@ -54,7 +54,7 @@
   "scripts": {
     "prebuild": "rimraf  dist/",
     "build": "lerna run build && npm run build:docs",
-    "build:docs": "npm run predocs && (cd standalone/docusaurus && npm run build)",
+    "build-skip:docs": "npm run predocs && (cd standalone/docusaurus && npm run build)",
     "clean": "lerna run clean && rimraf dist/ && (cd standalone/docusaurus && npm run clean)",
     "predocs": "npm run --workspace proprietary/design-tokens build",
     "docs": "(cd standalone/docusaurus && npm run start)",
