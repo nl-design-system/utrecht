@@ -45,11 +45,11 @@
   vertical-align: baseline;
 }
 
-.utrecht-table__heading {
-  color: var(--utrecht-table-heading-color);
-  font-size: var(--utrecht-table-heading-font-size);
-  font-weight: var(--utrecht-table-heading-font-weight);
-  text-transform: var(--utrecht-table-heading-text-transform);
+.utrecht-table__header-cell {
+  color: var(--utrecht-table-header-cell-color);
+  font-size: var(--utrecht-table-header-cell-font-size);
+  font-weight: var(--utrecht-table-header-cell-font-weight);
+  text-transform: var(--utrecht-table-header-cell-text-transform);
 }
 
 .utrecht-table__cell {
