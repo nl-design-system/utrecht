@@ -13,7 +13,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'nl-design-system/utrecht',
   projectName: 'utrecht', // Usually your repo name.
-  plugins: ['docusaurus-plugin-sass', require.resolve('docusaurus-lunr-search')],
+  plugins: ['docusaurus-plugin-sass'],
   customFields: {
     storybookUrl: 'https://nl-design-system.github.io/utrecht/storybook/',
   },
@@ -49,5 +49,14 @@ module.exports = {
         theme: require('prism-react-renderer/themes/github'),
       },
       navbar: require('./navigationConfig'),
+      algolia: {
+        // The application ID provided by Algolia
+        appId: 'JTF8SIMZ2F',
+        // Public API key: it is safe to commit it
+        apiKey: '3a66f5c752ed12ad04ee8eb3c1186e93',
+        indexName: 'utrecht-design-system',
+        // Optional: see doc section below
+        contextualSearch: false,
+      },
     },
 };
