@@ -57,6 +57,8 @@ module.exports = {
         indexName: 'utrecht-design-system',
         // Optional: see doc section below
         contextualSearch: false,
+        placeholder: 'Zoek documentatie',
+        disableUserPersonalization: true,
       },
     },
 };
