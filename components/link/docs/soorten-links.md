@@ -2,8 +2,6 @@
 
 <!-- markdownlint-disable MD033 -->
 
-# Soorten links
-
 Er zijn een aantal verschillende soorten links in het Design System te vinden:
 
 - Tekstlinks

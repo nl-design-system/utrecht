@@ -1,0 +1,108 @@
+---
+title: Link
+hide_title: true
+hide_table_of_contents: false
+sidebar_label: Link
+sidebar_position: 1
+pagination_label: Link
+description: Utrecht Link component.
+keywords:
+  - link
+  - links
+  - hyperlink
+  - interactie
+  - anker
+  - ankerlink
+  - navigatie
+  - sitenavigatie
+  - tekstlink
+---
+
+<!-- @license CC0-1.0 -->
+
+import { Markdown } from "../../../src/components/Markdown";
+import { StoryTabs } from "../../../src/components/StoryTabs";
+import UXGuidelines from "../../../tmp/link/README.md";
+import SoortenLinks from "../../../tmp/link/docs/soorten-links.md";
+
+# Link
+
+## UX Richtlijnen
+
+Links helpen je gebruiker te navigeren door je app of pagina.
+
+<Markdown headingLevel={2}>
+  <UXGuidelines />
+</Markdown>
+
+## Soorten links
+
+<Markdown headingLevel={3}>
+  <SoortenLinks />
+</Markdown>
+
+## Link Component
+
+### Standaard
+
+<StoryTabs
+  tabs={[
+    { id: "html", label: "HTML", story: "html-link--default-story" },
+    { id: "css", label: "CSS", story: "css-link--default-story" },
+  ]}
+></StoryTabs>
+
+### Email
+
+<StoryTabs
+  tabs={[
+    { id: "html", label: "HTML", story: "html-link--email" },
+    { id: "css", label: "CSS", story: "css-link--email" },
+  ]}
+></StoryTabs>
+
+### Telefoon 
+
+<StoryTabs
+  tabs={[
+    { id: "html", label: "HTML", story: "html-link--telephone" },
+    { id: "css", label: "CSS", story: "css-link--telephone" },
+  ]}
+></StoryTabs>
+
+### Externe link
+
+<StoryTabs
+  tabs={[
+    { id: "html", label: "HTML", story: "html-link--external" },
+    { id: "css", label: "CSS", story: "css-link--external" },
+  ]}
+></StoryTabs>
+
+### Met icoon links
+
+<StoryTabs
+  tabs={[
+    { id: "css", label: "CSS", story: "css-link--icon-left" },
+  ]}
+></StoryTabs>
+
+### Voor wisselen taal link
+
+Als de taal een andere is dan het huidige document 
+
+<StoryTabs
+  tabs={[
+  { id: "html", label: "HTML", story: "html-link--alternate-lang" },
+  { id: "css", label: "CSS", story: "css-link--alternate-lang" },
+]}
+></StoryTabs>
+
+Als de taal dezelfde taal is als het huidige document
+
+<StoryTabs
+  tabs={[
+  { id: "html", label: "HTML", story: "html-link--current-lang" },
+  { id: "css", label: "CSS", story: "css-link--current-lang" },
+]}
+></StoryTabs>
