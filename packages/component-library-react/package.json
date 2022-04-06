@@ -1,0 +1,47 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "React component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/component-library-react",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsc --project .",
+    "clean": "rimraf dist/",
+    "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
+    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose"
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "clsx": "1.1.1"
+  },
+  "devDependencies": {
+    "next": "12.1.0",
+    "@testing-library/jest-dom": "5.16.2",
+    "@testing-library/react": "12.1.3",
+    "@testing-library/user-event": "14.0.4",
+    "jest": "27.5.1",
+    "@types/react": "17.0.39",
+    "npm-run-all": "4.1.5",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "rimraf": "3.0.2",
+    "typescript": "4.1.6 <4.2"
+  }
+}
