@@ -27,6 +27,7 @@ module.exports = {
           path: 'docs',
           routeBasePath: 'docs',
           editUrl: 'https://github.com/nl-design-system/utrecht/tree/main/documentation',
+          breadcrumbs: false,
         },
         theme: {
           customCss: [
