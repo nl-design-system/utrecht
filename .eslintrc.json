@@ -40,7 +40,7 @@
         "./.eslintrc.react.json"
       ],
       "files": ["*.js", "*.jsx"],
-      "plugins": ["import"]
+      "plugins": ["import", "jest"]
     },
     {
       "extends": [
@@ -51,7 +51,7 @@
       ],
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint", "import"]
+      "plugins": ["@typescript-eslint", "import", "jest"]
     },
     {
       "extends": [
