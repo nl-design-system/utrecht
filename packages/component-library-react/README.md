@@ -28,10 +28,21 @@ export const MyPage = () => (
 Additionally you should also include the CSS for the components and the design tokens to configure the CSS components. For example:
 
 ```js
+// Package with the HTML rendering of components
+import { Document } from "@utrecht/component-library-react/dist/Document";
+import { Heading1 } from "@utrecht/component-library-react/dist/Heading1";
+
 // Package with CSS for white-label components
 import "@utrecht/component-library-css/dist/bem.css";
 
 // Package with Utrecht design tokens for the white-label components
 // Substitute with your another theme for other organisations.
 import "@utrecht/design-tokens/dist/theme/index.css";
+
+export const MyPage = () => (
+  // Class name to apply the design tokens from the theme
+  <Document className="utrecht-theme">
+    <Heading1>Page styled with NL Design System</Heading1>
+  </Document>
+);
 ```
