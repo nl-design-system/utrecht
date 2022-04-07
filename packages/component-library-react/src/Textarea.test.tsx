@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
 import { Textarea } from './Textarea';
 import '@testing-library/jest-dom';
@@ -231,15 +232,71 @@ describe('Textarea', () => {
   });
 
   describe('change event', () => {
-    it('can trigger a change event');
+    it('can trigger a change event', async () => {
+      const handleChange = jest.fn();
 
-    it('does not trigger a change event when disabled');
+      render(<Textarea onChange={handleChange} defaultValue="Hello" />);
+
+      const textarea = screen.getByRole<HTMLTextAreaElement>('textbox');
+
+      expect(textarea).toBeInTheDocument();
+
+      if (textarea) {
+        await userEvent.type(textarea, ', World!');
+      }
+
+      expect(handleChange).toHaveBeenCalled();
+    });
+
+    it('does not trigger a change event when disabled', async () => {
+      const handleChange = jest.fn();
+
+      render(<Textarea onChange={handleChange} defaultValue="Hello" disabled />);
+
+      const textarea = screen.getByRole<HTMLTextAreaElement>('textbox');
+
+      expect(textarea).toBeInTheDocument();
+
+      if (textarea) {
+        await userEvent.type(textarea, ', World!');
+      }
+
+      expect(handleChange).not.toHaveBeenCalled();
+    });
   });
 
   describe('input event', () => {
-    it('can trigger a input event');
+    it('can trigger a change event', async () => {
+      const handleInput = jest.fn();
 
-    it('does not trigger a input event when disabled');
+      render(<Textarea onInput={handleInput} defaultValue="Hello" />);
+
+      const textarea = screen.getByRole<HTMLTextAreaElement>('textbox');
+
+      expect(textarea).toBeInTheDocument();
+
+      if (textarea) {
+        await userEvent.type(textarea, ', World!');
+      }
+
+      expect(handleInput).toHaveBeenCalled();
+    });
+
+    it('does not trigger a change event when disabled', async () => {
+      const handleInput = jest.fn();
+
+      render(<Textarea onInput={handleInput} defaultValue="Hello" disabled />);
+
+      const textarea = screen.getByRole<HTMLTextAreaElement>('textbox');
+
+      expect(textarea).toBeInTheDocument();
+
+      if (textarea) {
+        await userEvent.type(textarea, ', World!');
+      }
+
+      expect(handleInput).not.toHaveBeenCalled();
+    });
   });
 
   it('supports ForwardRef in React', () => {
