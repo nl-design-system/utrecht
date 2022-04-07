@@ -15,9 +15,6 @@ export const Template = ({ viewport }) => `<utrecht-backdrop${viewport ? ' viewp
   }}
   decorators={[checkerboard]}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Template(args),
-    },
     layout: "fullscreen",
     type: "WORK IN PROGRESS",
   }}

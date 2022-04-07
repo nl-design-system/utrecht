@@ -17,9 +17,6 @@ import "./bem.scss";
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => UnorderedList(args),
-    },
     status: {
       type: "WORK IN PROGRESS",
     },
@@ -78,11 +75,6 @@ import "./bem.scss";
       ],
     }}
     name="Nested Ordered list"
-    parameters={{
-      docs: {
-        transformSource: (_src, { args }) => UnorderedList(args),
-      },
-    }}
   >
     {UnorderedList.bind({})}
   </Story>

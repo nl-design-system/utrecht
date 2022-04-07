@@ -56,9 +56,6 @@ export const CustomCheckbox = ({
   }}
   decorators={[(story) => `<form method="POST" action="#">${story()}</form>`]}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => CustomCheckbox(args),
-    },
     status: {
       type: "WORK IN PROGRESS",
     },

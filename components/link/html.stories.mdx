@@ -16,9 +16,6 @@ export const Template = ({ external = false, href = null, textContent = "" }) =>
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Template(args),
-    },
     status: {
       type: "WORK IN PROGRESS",
     },

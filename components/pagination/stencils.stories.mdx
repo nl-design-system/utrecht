@@ -30,9 +30,6 @@ export const Template = ({ currentIndex = -1, links = [], next = null, prev = nu
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Template(args),
-    },
     status: {
       type: "WORK IN PROGRESS",
     },
