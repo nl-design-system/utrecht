@@ -1,4 +1,5 @@
 import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
 import { Textbox } from './Textbox';
 import '@testing-library/jest-dom';
@@ -346,15 +347,71 @@ describe('Textbox', () => {
   });
 
   describe('change event', () => {
-    it('can trigger a change event');
+    it('can trigger a change event', async () => {
+      const handleChange = jest.fn();
 
-    it('does not trigger a change event when disabled');
+      render(<Textbox onChange={handleChange} defaultValue="Hello" />);
+
+      const textbox = screen.getByRole<HTMLInputElement>('textbox');
+
+      expect(textbox).toBeInTheDocument();
+
+      if (textbox) {
+        await userEvent.type(textbox, ', World!');
+      }
+
+      expect(handleChange).toHaveBeenCalled();
+    });
+
+    it('does not trigger a change event when disabled', async () => {
+      const handleChange = jest.fn();
+
+      render(<Textbox onChange={handleChange} defaultValue="Hello" disabled />);
+
+      const textbox = screen.getByRole<HTMLInputElement>('textbox');
+
+      expect(textbox).toBeInTheDocument();
+
+      if (textbox) {
+        await userEvent.type(textbox, ', World!');
+      }
+
+      expect(handleChange).not.toHaveBeenCalled();
+    });
   });
 
   describe('input event', () => {
-    it('can trigger a input event');
+    it('can trigger a change event', async () => {
+      const handleInput = jest.fn();
 
-    it('does not trigger a input event when disabled');
+      render(<Textbox onInput={handleInput} defaultValue="Hello" />);
+
+      const textbox = screen.getByRole<HTMLInputElement>('textbox');
+
+      expect(textbox).toBeInTheDocument();
+
+      if (textbox) {
+        await userEvent.type(textbox, ', World!');
+      }
+
+      expect(handleInput).toHaveBeenCalled();
+    });
+
+    it('does not trigger a change event when disabled', async () => {
+      const handleInput = jest.fn();
+
+      render(<Textbox onInput={handleInput} defaultValue="Hello" disabled />);
+
+      const textbox = screen.getByRole<HTMLInputElement>('textbox');
+
+      expect(textbox).toBeInTheDocument();
+
+      if (textbox) {
+        await userEvent.type(textbox, ', World!');
+      }
+
+      expect(handleInput).not.toHaveBeenCalled();
+    });
   });
 
   it('supports ForwardRef in React', () => {
