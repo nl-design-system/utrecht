@@ -57,9 +57,6 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
   <Story
     name="Focus with BEM"
     parameters={{
-      docs: {
-        transformSource: (_src, { args }) => FocusBEMExample(args),
-      },
       // These CSS components are already tested separately, ignore this story
       percy: { skip: true },
     }}
@@ -74,9 +71,6 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
   <Story
     name="Focus with BEM and :focus"
     parameters={{
-      docs: {
-        transformSource: (_src, { args }) => FocusBEMExample(args),
-      },
       // actual `:focus` state cannot be tested using visual regression testing, ignore this story
       percy: { skip: true },
     }}
@@ -96,9 +90,6 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
   <Story
     name="Focus with BEM and :focus-visible"
     parameters={{
-      docs: {
-        transformSource: (_src, { args }) => FocusBEMExample(args),
-      },
       // actual `:focus-visible` state cannot be tested using visual regression testing, ignore this story
       percy: { skip: true },
     }}
@@ -118,9 +109,6 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
   <Story
     name="Focus with BEM and both :focus and :focus-visible"
     parameters={{
-      docs: {
-        transformSource: (_src, { args }) => FocusBEMExample(args),
-      },
       // actual `:focus` and `:focus-visible` state cannot be tested using visual regression testing, ignore this story
       percy: { skip: true },
     }}
@@ -141,9 +129,6 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
   <Story
     name="Focus with HTML"
     parameters={{
-      docs: {
-        transformSource: (_src, { args }) => FocusHTMLExample(args),
-      },
       // These HTML components are already tested separately, ignore this story
       percy: { skip: true },
     }}

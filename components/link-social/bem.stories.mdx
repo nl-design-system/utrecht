@@ -28,9 +28,6 @@ import "./bem.scss";
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => SocialMediaLink(args),
-    },
     status: {
       type: "WORK IN PROGRESS",
     },
@@ -82,11 +79,6 @@ import "./bem.scss";
           icon: "utrecht-icon-whatsapp",
         },
       ],
-    }}
-    parameters={{
-      docs: {
-        transformSource: (_src, { args }) => SocialMediaLinkList(args),
-      },
     }}
   >
     {SocialMediaLinkList.bind({})}

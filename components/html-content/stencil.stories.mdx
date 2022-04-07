@@ -12,9 +12,6 @@ export const Template = ({ content }) => `<utrecht-html-content>${content}</utre
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Template(args),
-    },
     status: {
       type: "WORK IN PROGRESS",
     },

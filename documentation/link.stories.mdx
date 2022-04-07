@@ -26,9 +26,6 @@ export const ParagraphWithLink = ({ textContent, href, link }) =>
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => ParagraphWithLink(args),
-    },
     percy: { skip: true },
     status: {
       type: "WORK IN PROGRESS",

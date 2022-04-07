@@ -41,9 +41,6 @@ export const AlternateLangLink = ({ textContent, title, current, lang, hreflang 
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => AlternateLangLink(args),
-    },
     status: "WORK IN PROGRESS",
   }}
   decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}

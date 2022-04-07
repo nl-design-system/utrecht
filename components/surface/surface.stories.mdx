@@ -12,9 +12,6 @@ export const Template = ({ innerHTML }) => `<utrecht-surface>${innerHTML}</utrec
     },
   }}
   parameters={{
-    docs: {
-      transformSource: (_src, { args }) => Template(args),
-    },
     layout: "fullscreen",
     status: {
       type: "WORK IN PROGRESS",
