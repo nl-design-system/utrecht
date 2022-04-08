@@ -7,7 +7,7 @@ The `@utrecht/web-component-library-stencil` package contains the actual impleme
 Install both packages to use Angular components in your project:
 
 ```shell
-npm install --save-dev \
+npm install --save-dev --save-exact \
   @utrecht/web-component-library-angular \
   @utrecht/web-component-library-stencil
 ```
