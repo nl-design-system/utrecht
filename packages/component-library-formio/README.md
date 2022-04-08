@@ -7,7 +7,7 @@ The `@utrecht/component-library-formio` package contains implementations of vari
 ## Installation
 
 ```shell
-npm install --save-dev \
+npm install --save-dev --save-exact \
   @utrecht/component-library-css \
   @utrecht/component-library-formio \
   @utrecht/web-component-library-stencil
@@ -16,7 +16,7 @@ npm install --save-dev \
 Additionally, having the core Form.io packages installed is a prerequisite:
 
 ```shell
-npm install --save-dev formiojs react-formio
+npm install --save-dev --save-exact formiojs react-formio
 ```
 
 Configure Form.io to use our custom components instead by including the following code in your app once:
@@ -55,7 +55,7 @@ Every `<Form>` element must be configured with the correct `sanitizeConfig` sett
 To use the Utrecht theme for the components, include the design tokens CSS in your `angular.json`:
 
 ```shell
-npm install --save-dev @utrecht/design-tokens
+npm install --save-dev --save-exact @utrecht/design-tokens
 ```
 
 Include the CSS variables in your page.
