@@ -1,10 +1,10 @@
 <!-- @license CC0-1.0 -->
 
-# React Components
+# React Web Components
 
 The `@utrecht/web-component-library-stencil` package contains the actual implementation of every web component, while the `@utrecht/web-component-library-react` only contains wrapper React components to provide JSX elements for every Web Component. The implementation of each component will be loaded separately and on-demand, so including the entire component library will not slow down your application.
 
-Install both packages to use React components in your project:
+Install both packages to use React web components in your project:
 
 ```shell
 npm install --save-dev --save-exact \
@@ -40,3 +40,9 @@ useEffect(() => {
   import("../public/utrecht/utrecht.esm.js");
 }, []);
 ```
+
+## React Component or React Web Component?
+
+When you're working on a React project and the React component is available, currently you should probably use the React component.
+
+The web components are still experimental. In the future some components might be most convenient to use as web component, and some components might be released exclusively as web component.
