@@ -37,14 +37,14 @@ jobs:
           npm run test --if-present
 
       - name: "Retain build artifact: website"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: website
           path: standalone/docusaurus/build/
           retention-days: 1
 
       - name: "Retain build artifact: Storybook"
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: storybook
           path: packages/storybook/dist/
