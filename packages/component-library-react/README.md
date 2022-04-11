@@ -2,9 +2,9 @@
 
 # Component library for React apps
 
-The `@utrecht/component-library-react` package contains React implementations of various components. You can use this package in React apps, both client side and server side, to render the right HTML elements with the design system class names.
+The `@utrecht/component-library-react` package contains React implementations of various components. You can use this package in React apps, both client side and server side, to render the right HTML elements with the Utrecht design system class names.
 
-Combine this with other packages for the full experience: you also need to add the package with CSS to style these components, as well as the package with design tokens for your theme.
+The CSS components that implement the Utrecht design system class names are published in a separate npm package, so don't forget to install and include `@utrecht/component-library-css` too for the styling of the white-label components, as well as a package with design tokens for your theme.
 
 ## Stability of the components
 
