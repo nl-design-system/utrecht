@@ -66,6 +66,15 @@ describe('Checkbox', () => {
       expect(checkbox).toBeChecked();
     });
 
+    it('can have a checked state with React defaultChecked', () => {
+      const handleChange = () => {};
+      const { container } = render(<Checkbox defaultChecked onChange={handleChange} />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).toBeChecked();
+    });
+
     it('can have a checked state in CSS', () => {
       const handleChange = () => {};
       const { container } = render(<Checkbox checked onChange={handleChange} />);

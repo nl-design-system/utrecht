@@ -46,6 +46,14 @@ describe('RadioButton', () => {
       expect(radioButton).toHaveClass('utrecht-radio-button--checked');
     });
 
+    it('renders a design system BEM modifier class name with React defaultChecked', () => {
+      const { container } = render(<RadioButton defaultChecked />);
+
+      const radioButton = container.querySelector(':only-child');
+
+      expect(radioButton).toHaveClass('utrecht-radio-button--checked');
+    });
+
     it('is not checked by default', () => {
       const { container } = render(<RadioButton />);
 
@@ -56,7 +64,7 @@ describe('RadioButton', () => {
 
     it('omits non-essential checked attributes when not checked', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton checked={false} onChange={handleChange} />);
+      const { container } = render(<RadioButton defaultChecked={false} onChange={handleChange} />);
 
       const radioButton = container.querySelector(':only-child');
 
@@ -67,7 +75,16 @@ describe('RadioButton', () => {
 
     it('can have a checked state', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton checked onChange={handleChange} />);
+      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
+
+      const radioButton = container.querySelector(':only-child');
+
+      expect(radioButton).toBeChecked();
+    });
+
+    it('can have a checked state with React defaultChecked', () => {
+      const handleChange = () => {};
+      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
 
       const radioButton = container.querySelector(':only-child');
 
@@ -76,7 +93,7 @@ describe('RadioButton', () => {
 
     it('can have a checked state in CSS', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton checked onChange={handleChange} />);
+      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
 
       const radioButton = container.querySelector(':checked');
 
@@ -129,7 +146,7 @@ describe('RadioButton', () => {
 
     it('can have an invalid state in CSS', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton required checked={false} onChange={handleChange} />);
+      const { container } = render(<RadioButton required defaultChecked={false} onChange={handleChange} />);
 
       const radioButton = container.querySelector(':invalid');
 

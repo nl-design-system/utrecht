@@ -6,14 +6,19 @@ interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'typ
 }
 
 export const Checkbox = forwardRef(
-  ({ disabled, invalid, required, className, ...restProps }: CheckboxProps, ref: ForwardedRef<HTMLInputElement>) => (
+  (
+    { checked, disabled, invalid, required, className, ...restProps }: CheckboxProps,
+    ref: ForwardedRef<HTMLInputElement>,
+  ) => (
     <input
       {...restProps}
       ref={ref}
       type="checkbox"
+      checked={checked}
       className={clsx(
         'utrecht-checkbox',
         'utrecht-checkbox--html-input',
+        checked && 'utrecht-checkbox--checked',
         disabled && 'utrecht-checkbox--disabled',
         invalid && 'utrecht-checkbox--invalid',
         required && 'utrecht-checkbox--required',
