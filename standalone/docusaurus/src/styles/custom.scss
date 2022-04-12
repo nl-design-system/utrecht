@@ -6,6 +6,14 @@
 
 @import "~@utrecht/component-library-css/dist/bem.css";
 
+:root {
+  /* Prevent Docusaurus forcing `antialiased` instead of `subpixel-antialised` on high-dpi screens */
+  -webkit-font-smoothing: auto !important;
+
+  /* Workaround, because `.utrecht-theme` CSS variables are not available on `:root` */
+  --ifm-font-family-base: "Lucida Grande";
+}
+
 /* You can override the default Infima variables here. */
 .utrecht-theme {
   --ifm-color-primary: var(--utrecht-color-blue-35);
@@ -16,6 +24,7 @@
   --ifm-color-primary-lighter: var(--utrecht-color-blue-50);
   --ifm-color-primary-lightest: var(--utrecht-color-blue-80);
   --ifm-code-font-size: 95%;
+  --ifm-font-family-base: var(--utrecht-typography-sans-serif-font-family);
 }
 
 .docusaurus-highlight-code-line {
