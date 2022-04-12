@@ -21,9 +21,10 @@ tmp/
 # Ignore OS files
 .DS_Store
 
-# Only track the npm 7 workspace root package-lock.json
+# Only track the npm 7 workspace root package-lock.json and standalone package-lock.json
 yarn.lock
 package-lock.json
 !/package-lock.json
+!/standalone/**/package-lock.json
 packages/web-component-library-angular/src/directives/proxies.ts
 packages/web-component-library-angular/src/directives/angular-component-lib/utils.ts
