@@ -4,6 +4,8 @@
  * work well for content-centric websites.
  */
 
+@import "~@utrecht/component-library-css/dist/bem.css";
+
 /* You can override the default Infima variables here. */
 .utrecht-theme {
   --ifm-color-primary: var(--utrecht-color-blue-35);
