@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ProcessSteps } from "./react.jsx";
+import "@gemeente-denhaag/process-steps/index.css";
+
+export const Template = (args) => <ProcessSteps {...args} />;
+
+<Meta
+  title="React Component/Process Steps"
+  argTypes={{}}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Process steps
+
+<ProcessSteps />
+
+<Canvas>
+  <Story name="Process steps" args={{}}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Process steps" />
