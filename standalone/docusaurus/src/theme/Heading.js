@@ -3,12 +3,12 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
-import { Heading1 } from '@utrecht/component-library-react/dist/Heading1';
-import { Heading2 } from '@utrecht/component-library-react/dist/Heading2';
-import { Heading3 } from '@utrecht/component-library-react/dist/Heading3';
-import { Heading4 } from '@utrecht/component-library-react/dist/Heading4';
-import { Heading5 } from '@utrecht/component-library-react/dist/Heading5';
-import { Heading6 } from '@utrecht/component-library-react/dist/Heading6';
+import { Heading1 } from '@utrecht/component-library-react/Heading1';
+import { Heading2 } from '@utrecht/component-library-react/Heading2';
+import { Heading3 } from '@utrecht/component-library-react/Heading3';
+import { Heading4 } from '@utrecht/component-library-react/Heading4';
+import { Heading5 } from '@utrecht/component-library-react/Heading5';
+import { Heading6 } from '@utrecht/component-library-react/Heading6';
 import React from 'react';
 
 export default function MDXHeading({ as, children }) {
