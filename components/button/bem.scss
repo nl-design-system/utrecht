@@ -7,6 +7,7 @@
 
 .utrecht-button {
   background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
+  border-color: var(--utrecht-button-border-color, transparent);
   border-radius: var(--utrecht-button-border-radius);
   border-style: solid;
   border-width: var(--utrecht-button-border-width, 0);
@@ -45,6 +46,7 @@
 .utrecht-button:disabled,
 .utrecht-button--disabled {
   background-color: var(--utrecht-button-disabled-background-color, var(--utrecht-button-background-color));
+  border-color: var(--utrecht-button-disabled-border-color, var(--utrecht-button-border-color));
   color: var(--utrecht-button-disabled-color, var(--utrecht-button-color));
   cursor: var(--utrecht-action-disabled-cursor);
 }
@@ -52,6 +54,7 @@
 .utrecht-button:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
 .utrecht-button--active {
   background-color: var(--utrecht-button-active-background-color, var(--utrecht-button-background-color));
+  border-color: var(--utrecht-button-active-border-color, var(--utrecht-button-border-color));
   color: var(--utrecht-button-active-color, var(--utrecht-button-color));
 }
 
@@ -62,6 +65,7 @@
 
 .utrecht-button--focus {
   background-color: var(--utrecht-button-focus-background-color, var(--utrecht-button-background-color));
+  border-color: var(--utrecht-button-focus-border-color, var(--utrecht-button-border-color));
   color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
 }
 
@@ -92,6 +96,7 @@
 .utrecht-button--hover:not(:disabled),
 .utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   background-color: var(--utrecht-button-hover-background-color, var(--utrecht-button-background-color));
+  border-color: var(--utrecht-button-hover-border-color, var(--utrecht-button-border-color));
   color: var(--utrecht-button-hover-color, var(--utrecht-button-color));
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }
