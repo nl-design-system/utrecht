@@ -17,14 +17,185 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc --project .",
+    "build": "tsc --project ./tsconfig.json",
     "clean": "rimraf dist/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose"
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/cjs/index.js"
+    },
+    "./Article": {
+      "types": "./dist/Article.d.ts",
+      "default": "./dist/cjs/Article.js"
+    },
+    "./Backdrop": {
+      "types": "./dist/Backdrop.d.ts",
+      "default": "./dist/cjs/Backdrop.js"
+    },
+    "./Button": {
+      "types": "./dist/Button.d.ts",
+      "default": "./dist/cjs/Button.js"
+    },
+    "./Checkbox": {
+      "types": "./dist/Checkbox.d.ts",
+      "default": "./dist/cjs/Checkbox.js"
+    },
+    "./Document": {
+      "types": "./dist/Document.d.ts",
+      "default": "./dist/cjs/Document.js"
+    },
+    "./Fieldset": {
+      "types": "./dist/Fieldset.d.ts",
+      "default": "./dist/cjs/Fieldset.js"
+    },
+    "./FieldsetLegend": {
+      "types": "./dist/FieldsetLegend.d.ts",
+      "default": "./dist/cjs/FieldsetLegend.js"
+    },
+    "./FormField": {
+      "types": "./dist/FormField.d.ts",
+      "default": "./dist/cjs/FormField.js"
+    },
+    "./FormFieldDescription": {
+      "types": "./dist/FormFieldDescription.d.ts",
+      "default": "./dist/cjs/FormFieldDescription.js"
+    },
+    "./FormLabel": {
+      "types": "./dist/FormLabel.d.ts",
+      "default": "./dist/cjs/FormLabel.js"
+    },
+    "./HTMLContent": {
+      "types": "./dist/HTMLContent.d.ts",
+      "default": "./dist/cjs/HTMLContent.js"
+    },
+    "./Heading1": {
+      "types": "./dist/Heading1.d.ts",
+      "default": "./dist/cjs/Heading1.js"
+    },
+    "./Heading2": {
+      "types": "./dist/Heading2.d.ts",
+      "default": "./dist/cjs/Heading2.js"
+    },
+    "./Heading3": {
+      "types": "./dist/Heading3.d.ts",
+      "default": "./dist/cjs/Heading3.js"
+    },
+    "./Heading4": {
+      "types": "./dist/Heading4.d.ts",
+      "default": "./dist/cjs/Heading4.js"
+    },
+    "./Heading5": {
+      "types": "./dist/Heading5.d.ts",
+      "default": "./dist/cjs/Heading5.js"
+    },
+    "./Heading6": {
+      "types": "./dist/Heading6.d.ts",
+      "default": "./dist/cjs/Heading6.js"
+    },
+    "./Link": {
+      "types": "./dist/Link.d.ts",
+      "default": "./dist/cjs/Link.js"
+    },
+    "./OrderedList": {
+      "types": "./dist/OrderedList.d.ts",
+      "default": "./dist/cjs/OrderedList.js"
+    },
+    "./OrderedListItem": {
+      "types": "./dist/OrderedListItem.d.ts",
+      "default": "./dist/cjs/OrderedListItem.js"
+    },
+    "./Page": {
+      "types": "./dist/Page.d.ts",
+      "default": "./dist/cjs/Page.js"
+    },
+    "./PageContent": {
+      "types": "./dist/PageContent.d.ts",
+      "default": "./dist/cjs/PageContent.js"
+    },
+    "./PageFooter": {
+      "types": "./dist/PageFooter.d.ts",
+      "default": "./dist/cjs/PageFooter.js"
+    },
+    "./PageHeader": {
+      "types": "./dist/PageHeader.d.ts",
+      "default": "./dist/cjs/PageHeader.js"
+    },
+    "./Paragraph": {
+      "types": "./dist/Paragraph.d.ts",
+      "default": "./dist/cjs/Paragraph.js"
+    },
+    "./RadioButton": {
+      "types": "./dist/RadioButton.d.ts",
+      "default": "./dist/cjs/RadioButton.js"
+    },
+    "./Select": {
+      "types": "./dist/Select.d.ts",
+      "default": "./dist/cjs/Select.js"
+    },
+    "./Separator": {
+      "types": "./dist/Separator.d.ts",
+      "default": "./dist/cjs/Separator.js"
+    },
+    "./Surface": {
+      "types": "./dist/Surface.d.ts",
+      "default": "./dist/cjs/Surface.js"
+    },
+    "./Table": {
+      "types": "./dist/Table.d.ts",
+      "default": "./dist/cjs/Table.js"
+    },
+    "./TableBody": {
+      "types": "./dist/TableBody.d.ts",
+      "default": "./dist/cjs/TableBody.js"
+    },
+    "./TableCaption": {
+      "types": "./dist/TableCaption.d.ts",
+      "default": "./dist/cjs/TableCaption.js"
+    },
+    "./TableCell": {
+      "types": "./dist/TableCell.d.ts",
+      "default": "./dist/cjs/TableCell.js"
+    },
+    "./TableFooter": {
+      "types": "./dist/TableFooter.d.ts",
+      "default": "./dist/cjs/TableFooter.js"
+    },
+    "./TableHeader": {
+      "types": "./dist/TableHeader.d.ts",
+      "default": "./dist/cjs/TableHeader.js"
+    },
+    "./TableHeaderCell": {
+      "types": "./dist/TableHeaderCell.d.ts",
+      "default": "./dist/cjs/TableHeaderCell.js"
+    },
+    "./TableRow": {
+      "types": "./dist/TableRow.d.ts",
+      "default": "./dist/cjs/TableRow.js"
+    },
+    "./Textarea": {
+      "types": "./dist/Textarea.d.ts",
+      "default": "./dist/cjs/Textarea.js"
+    },
+    "./Textbox": {
+      "types": "./dist/Textbox.d.ts",
+      "default": "./dist/cjs/Textbox.js"
+    },
+    "./URLValue": {
+      "types": "./dist/URLValue.d.ts",
+      "default": "./dist/cjs/URLValue.js"
+    },
+    "./UnorderedList": {
+      "types": "./dist/UnorderedList.d.ts",
+      "default": "./dist/cjs/UnorderedList.js"
+    },
+    "./UnorderedListItem": {
+      "types": "./dist/UnorderedListItem.d.ts",
+      "default": "./dist/cjs/UnorderedListItem.js"
+    }
+  },
   "files": [
     "dist/"
   ],
