@@ -59,7 +59,7 @@
     "clean": "lerna run clean && rimraf dist/ && (cd standalone/docusaurus && npm run clean)",
     "predocs": "npm run --workspace proprietary/design-tokens build",
     "docs": "(cd standalone/docusaurus && npm run start)",
-    "postinstall": "patch-package --patch-dir .patches && (cd standalone/docusaurus && npm install)",
+    "postinstall": "patch-package --patch-dir .patches && (cd standalone/docusaurus && npm ci)",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.{css,scss}'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
