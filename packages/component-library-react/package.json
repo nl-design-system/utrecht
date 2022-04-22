@@ -22,9 +22,11 @@
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose"
   },
+  "main": "./dist/cjs/index.js",
+  "types": "./dist/cjs/index.d.ts",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./dist/cjs/index.d.ts",
       "default": "./dist/cjs/index.js"
     },
     "./Article": {
