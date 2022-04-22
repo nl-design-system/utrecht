@@ -7,7 +7,7 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   activeStyle?: boolean;
   external?: boolean;
   focusStyle?: boolean;

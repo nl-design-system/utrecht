@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
 
-type SeparatorProps = HTMLAttributes<HTMLHRElement>;
+export type SeparatorProps = HTMLAttributes<HTMLHRElement>;
 
 // Do not pass `children` along with `restProps` and use _children as it's unused
 export const Separator = forwardRef(

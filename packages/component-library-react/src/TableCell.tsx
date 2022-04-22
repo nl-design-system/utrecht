@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, TdHTMLAttributes } from 'react';
 
-type TableCellProps = TdHTMLAttributes<HTMLTableCellElement>;
+export type TableCellProps = TdHTMLAttributes<HTMLTableCellElement>;
 
 export const TableCell = forwardRef(
   (

@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type PageContentProps = HTMLAttributes<HTMLDivElement>;
+export type PageContentProps = HTMLAttributes<HTMLDivElement>;
 
 export const PageContent = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<PageContentProps>, ref: ForwardedRef<HTMLDivElement>) => (
@@ -18,7 +18,7 @@ export const PageContent = forwardRef(
 
 PageContent.displayName = 'utrecht-page-content';
 
-type PageContentMainProps = HTMLAttributes<HTMLDivElement>;
+export type PageContentMainProps = HTMLAttributes<HTMLDivElement>;
 
 export const PageContentMain = forwardRef(
   (

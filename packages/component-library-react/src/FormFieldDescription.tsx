@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-interface FormFieldDescriptionProps extends HTMLAttributes<HTMLDivElement> {
+export interface FormFieldDescriptionProps extends HTMLAttributes<HTMLDivElement> {
   invalid?: boolean;
   valid?: boolean;
   warning?: boolean;

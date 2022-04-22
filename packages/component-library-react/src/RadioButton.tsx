@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
 
-interface RadioButtonProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
+export interface RadioButtonProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
   invalid?: boolean;
 }
 

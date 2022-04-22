@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, LabelHTMLAttributes, PropsWithChildren } from 'react';
 
-interface FormLabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
+export interface FormLabelProps extends LabelHTMLAttributes<HTMLLabelElement> {
   htmlFor: string;
   type?: 'checkbox' | 'radio';
   disabled?: boolean;

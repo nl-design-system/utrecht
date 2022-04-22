@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, OptionHTMLAttributes, PropsWithChildren, SelectHTMLAttributes } from 'react';
 
-interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   invalid?: boolean;
 }
 
@@ -35,7 +35,7 @@ export const Select = forwardRef(
 
 Select.displayName = 'utrecht-radio-button';
 
-interface SelectOptionProps extends OptionHTMLAttributes<HTMLOptionElement> {
+export interface SelectOptionProps extends OptionHTMLAttributes<HTMLOptionElement> {
   disabled?: boolean;
   invalid?: boolean;
   value?: string;

@@ -3,7 +3,7 @@ import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
 
 export type TextboxTypes = 'email' | 'number' | 'password' | 'tel' | 'text' | 'url';
 
-interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
   invalid?: boolean;
   type?: TextboxTypes;
 }

@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ThHTMLAttributes } from 'react';
 
-type TableHeaderCellProps = ThHTMLAttributes<HTMLTableCellElement>;
+export type TableHeaderCellProps = ThHTMLAttributes<HTMLTableCellElement>;
 
 export const TableHeaderCell = forwardRef(
   (
