@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { FieldsetHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-type FieldsetProps = FieldsetHTMLAttributes<HTMLFieldSetElement>;
+export type FieldsetProps = FieldsetHTMLAttributes<HTMLFieldSetElement>;
 
 export const Fieldset = forwardRef(
   ({ className, children, ...restProps }: PropsWithChildren<FieldsetProps>, ref: ForwardedRef<HTMLFieldSetElement>) => (

@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
+export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   lead?: boolean;
 }
 

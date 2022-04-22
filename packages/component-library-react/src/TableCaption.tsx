@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type TableCaptionProps = HTMLAttributes<HTMLTableCaptionElement>;
+export type TableCaptionProps = HTMLAttributes<HTMLTableCaptionElement>;
 
 export const TableCaption = forwardRef(
   (

@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type UnorderedListProps = HTMLAttributes<HTMLUListElement>;
+export type UnorderedListProps = HTMLAttributes<HTMLUListElement>;
 
 export const UnorderedList = forwardRef(
   (

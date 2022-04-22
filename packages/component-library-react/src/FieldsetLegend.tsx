@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type FieldsetLegendProps = HTMLAttributes<HTMLLegendElement>;
+export type FieldsetLegendProps = HTMLAttributes<HTMLLegendElement>;
 
 export const FieldsetLegend = forwardRef(
   (

@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type Heading5Props = HTMLAttributes<HTMLHeadingElement>;
+export type Heading5Props = HTMLAttributes<HTMLHeadingElement>;
 
 export const Heading5 = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<Heading5Props>, ref: ForwardedRef<HTMLHeadingElement>) => (

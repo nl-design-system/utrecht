@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type TableBodyProps = HTMLAttributes<HTMLTableSectionElement>;
+export type TableBodyProps = HTMLAttributes<HTMLTableSectionElement>;
 
 export const TableBody = forwardRef(
   (

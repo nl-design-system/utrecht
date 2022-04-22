@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, OlHTMLAttributes, PropsWithChildren } from 'react';
 
-type OrderedListProps = OlHTMLAttributes<HTMLOListElement>;
+export type OrderedListProps = OlHTMLAttributes<HTMLOListElement>;
 
 export const OrderedList = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<OrderedListProps>, ref: ForwardedRef<HTMLOListElement>) => (

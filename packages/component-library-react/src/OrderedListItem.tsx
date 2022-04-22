@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, LiHTMLAttributes, PropsWithChildren } from 'react';
 
-type OrderedListItemProps = LiHTMLAttributes<HTMLLIElement>;
+export type OrderedListItemProps = LiHTMLAttributes<HTMLLIElement>;
 
 export const OrderedListItem = forwardRef(
   (

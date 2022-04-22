@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type FormFieldProps = HTMLAttributes<HTMLDivElement>;
+export type FormFieldProps = HTMLAttributes<HTMLDivElement>;
 
 export const FormField = forwardRef(
   ({ className, children, ...restProps }: PropsWithChildren<FormFieldProps>, ref: ForwardedRef<HTMLDivElement>) => (
