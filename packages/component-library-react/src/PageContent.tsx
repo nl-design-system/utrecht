@@ -31,4 +31,4 @@ export const PageContentMain = forwardRef(
   ),
 );
 
-PageContentMain.displayName = 'utrecht-page-content__main';
+PageContentMain.displayName = 'utrecht-page-content-main';
