@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { AlternateLangLink } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-link"
+  title="HTML Component/Link"
+  parameters={{
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+# Alternate Language Link
+
+<Canvas>
+  <Story
+    name="--alternate-lang"
+    args={{
+      hreflang: "en",
+      lang: "en",
+      textContent: "EN",
+      title: "This page in English",
+    }}
+  >
+    {AlternateLangLink.bind({})}
+  </Story>
+</Canvas>
