@@ -1,0 +1,123 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link/States"
+  argTypes={{
+    active: {
+      description: "Active",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
+    visited: {
+      description: "Visited",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Link states
+
+## Hover state
+
+Styling met de `.utrecht-link--hover` class naam of als state op link met `.utrecht-link:hover`:
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      hover: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="hover" />
+
+## Focus state
+
+Focus kan op twee verschillende manieren worden aangebracht op een element. Met de `tab` knop van het keyboard die `.utrecht-link:focus` zet en
+Styling met de `.utrecht-link--focus` class naam:
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      focus: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+## Focus-visible state
+
+Styling met de `.utrecht-link--focus-visible` class naam of als status op `.utrecht-link:focus-visible`:
+
+<Canvas>
+  <Story
+    name="focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+### Active state
+
+Styling met de `.utrecht-link--active` class naam of als status op `.utrecht-link:active`:
+
+<Canvas>
+  <Story
+    name="active"
+    args={{
+      active: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+## Visited state
+
+Styling met de `.utrecht-link--visited` class naam of als status op `.utrecht-link:visited`:
+
+<Canvas>
+  <Story
+    name="visited"
+    args={{
+      textContent: "Voorbeeldlink",
+      visited: true,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

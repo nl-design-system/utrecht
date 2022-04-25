@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Link naar telefoonnummer
+
+Styling met de `.utrecht-link--telephone` class naam. We gebruiken `white-space: nowrap` om line wrapping te voorkomen bij een telefoonnummer, zodat deze goed leesbaar blijft.
+
+<Canvas>
+  <Story
+    name="--telephone"
+    args={{
+      href: "tel:+31555385385",
+      textContent: "+31 555 385 385",
+      telephone: true,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

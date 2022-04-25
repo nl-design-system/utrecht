@@ -1,0 +1,33 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Link in het Arabisch
+
+De underline van een link mag nooit een negatieve impact hebben op de leesbaarheid van de tekst door het doorkruisen van [Arabische diakrische tekens](https://en.wikipedia.org/wiki/Arabic_diacritics). Met de waarde van `text-decoration-skip-ink` in CSS kan de leesbaarheid vergroot worden door de underline niet over diakrieten heen te laten gaan.
+
+<Canvas>
+  <Story
+    name="diakrieten"
+    args={{
+      href: "mailto:info@example.com",
+      textContent: "تواصل معنا من خلال البريد الإلكتروني",
+      mail: true,
+    }}
+    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

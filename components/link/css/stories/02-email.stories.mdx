@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# E-mail link
+
+Styling met de `.utrecht-link--email` class naam.
+
+<Canvas>
+  <Story
+    name="--email"
+    args={{
+      href: "mailto:info@example.com",
+      textContent: "info@example.com",
+      mail: true,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
