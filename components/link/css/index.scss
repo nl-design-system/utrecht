@@ -7,7 +7,7 @@
 // Avoid false positive for new CSS function `max()`
 /* stylelint-disable scss/no-global-function-names */
 
-@import "../common/focus/bem";
+@import "../../common/focus/bem";
 
 /*
 
@@ -154,4 +154,12 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
 .utrecht-link--telephone {
   white-space: nowrap;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link--alternate-lang {
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link--current-lang {
 }

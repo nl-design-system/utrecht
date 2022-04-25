@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link"
+  parameters={{
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+# Alternate Language Link
+
+Styling via de `.utrecht-link--alternate-lang` modifier class name:
+
+<Canvas>
+  <Story
+    name="--alternate-lang"
+    args={{
+      hreflang: "en",
+      lang: "en",
+      textContent: "EN",
+      title: "This page in English",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
