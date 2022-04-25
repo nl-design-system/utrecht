@@ -49,7 +49,7 @@ export const Link = ({
     'utrecht-link--hover': hover,
     'utrecht-link--telephone': telephone,
     'utrecht-link--visited': visited,
-    'utrecht-link-icon-left': iconleft,
+    'utrecht-link--icon-left': iconleft,
   })}"${external ? ' rel="external noopener noreferrer"' : ''}${current ? ' aria-current="page"' : ''}${
     title ? ` title="${title}"` : ''
   }${hreflang ? ` hreflang="${hreflang}"` : ''}${lang ? ` lang="${lang}"` : ''}${
