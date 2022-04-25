@@ -4,8 +4,8 @@ module.exports = {
     builder: 'webpack5',
   },
   stories: [
+    '../stories/**/*stories.@(js|mdx)',
     '../../../components/**/*stories.@(js|mdx)',
-    '../../../documentation/**/*stories.@(js|mdx)',
     '../../../proprietary/**/*stories.@(js|mdx)',
   ],
   features: {
