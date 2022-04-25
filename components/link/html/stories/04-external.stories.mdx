@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-link"
+  title="HTML Component/Link"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# External link
+
+Styling via het `<a>` element wanneer rel="external is gezet:
+
+<Canvas>
+  <Story
+    name="--external"
+    args={{
+      external: true,
+      href: "https://example.com/",
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

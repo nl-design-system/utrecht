@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "./bem";
+@import "../css/index";
 
 .utrecht-html a:link {
   @extend .utrecht-link;
@@ -53,4 +53,11 @@
 
 .utrecht-html a[href^="tel:" i] {
   @extend .utrecht-link--telephone;
+}
+
+.utrecht-html a[hreflang][rel~="alternate" i] {
+  @extend .utrecht-link--alternate-lang;
+}
+.utrecht-html a[hreflang][aria-current="page"] {
+  @extend .utrecht-link--current-lang;
 }

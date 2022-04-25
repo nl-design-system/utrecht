@@ -1,0 +1,37 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-link"
+  title="HTML Component/Link"
+  argTypes={{
+    textContent: {
+      description: "Content of the link",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Telephone link
+
+Styling via the `<a>` element when href includes tel:
+
+<Canvas>
+  <Story
+    name="--telephone"
+    args={{
+      href: "tel:+31555385385",
+      textContent: "+31 555 385 385",
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
