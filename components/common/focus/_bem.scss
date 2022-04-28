@@ -9,7 +9,7 @@ $utrecht-focus-visible-fallback: true !default;
 @mixin utrecht-focus-ring {
   box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
   outline-color: var(--utrecht-focus-outline-color, transparent);
-  outline-offset: 0;
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
   outline-style: var(--utrecht-focus-outline-style, solid);
   outline-width: var(--utrecht-focus-outline-width, 0);
 }
