@@ -15,3 +15,8 @@ export const Paragraph = ({ distanced = false, textContent = '', lead = false })
     'utrecht-paragraph--distanced': distanced,
     'utrecht-paragraph--lead': lead,
   })}">${textContent}</p>`;
+
+export const Paragraphs = ({ textContent = '' }) =>
+  `<p class="utrecht-paragraph utrecht-paragraph--lead">${textContent}</p>
+<p class="utrecht-paragraph">${textContent}</p>
+<p class="utrecht-paragraph">${textContent}</p>`;
