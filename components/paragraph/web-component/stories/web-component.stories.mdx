@@ -1,14 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Paragraph } from '../template';
 
 export const defaultArgs = {
   lead: false,
   textContent: "",
 };
-
-export const Template = ({ lead = false, textContent = "" }) =>
-  `<utrecht-paragraph ${lead ? 'lead="true"' : ""}">${textContent}</p>`;
 
 export const TemplateMulti = ({ textContent = "" }) =>
   `<utrecht-paragraph lead="true">${textContent}</utrecht-paragraph>
@@ -16,6 +14,7 @@ export const TemplateMulti = ({ textContent = "" }) =>
 <utrecht-paragraph">${textContent}</utrecht-paragraph>`;
 
 <Meta
+  id="web-component-paragraph"
   title="Web Component/Paragraph"
   argTypes={{
     textContent: {
@@ -45,7 +44,7 @@ export const TemplateMulti = ({ textContent = "" }) =>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     }}
   >
-    {Template.bind({})}
+    {Paragraph.bind({})}
   </Story>
 </Canvas>
 
@@ -62,6 +61,6 @@ export const TemplateMulti = ({ textContent = "" }) =>
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     }}
   >
-    {Template.bind({})}
+    {Paragraph.bind({})}
   </Story>
 </Canvas>

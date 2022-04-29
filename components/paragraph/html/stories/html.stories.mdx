@@ -1,18 +1,21 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Paragraph } from "./bem";
-import "./bem.scss";
+import { Paragraph } from '../template';
+import "../index.scss";
 
 export const TemplateMulti = ({ textContent = "" }) =>
-  `<p class="utrecht-paragraph utrecht-paragraph--lead">${textContent}</p>
-<p class="utrecht-paragraph">${textContent}</p>
-<p class="utrecht-paragraph">${textContent}</p>`;
+  `<section class="utrecht-html">
+  <p class="lead">${textContent}</p>
+  <p>${textContent}</p>
+  <p>${textContent}</p>
+</section>`;
 
 <Meta
-  title="CSS Component/Paragraph"
+  id="html-paragraph"
+  title="HTML Component/Paragraph"
   argTypes={{
-    textContent: {
+    content: {
       description: "Paragraph text",
       control: "text",
     },
@@ -23,20 +26,19 @@ export const TemplateMulti = ({ textContent = "" }) =>
   }}
   parameters={{
     status: {
-      type: "ALPHA",
+      type: "WORK IN PROGRESS",
     },
   }}
 />
 
 # Paragraph
 
-Styling via the `.utrecht-paragraph` class name:
+Styling via the `<p>` element:
 
 <Canvas>
   <Story
     name="Paragraph"
     args={{
-      ...defaultArgs,
       textContent:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     }}
@@ -45,11 +47,9 @@ Styling via the `.utrecht-paragraph` class name:
   </Story>
 </Canvas>
 
-<ArgsTable story="Paragraph" />
-
 ## Lead paragraph
 
-Styling via the `.utrecht-paragraph--lead` class name:
+Styling via the `<p>` element with the `lead` class name:
 
 <Canvas>
   <Story
