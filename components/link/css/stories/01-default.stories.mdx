@@ -76,13 +76,3 @@ Styling met de `.utrecht-link` class naam:
 </Canvas>
 
 <ArgsTable story="Default" />
-
-## Link in plaats van `<a>`
-
-Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals de [`<a>`](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) in HTML. Buiten de context van HTML-code (bijvoorbeeld in Figma) is `a`niet duidelijk genoeg, en we verwachten niet dat er grote verwarring ontstaat met het [`<link>`](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element) element van HTML.
-
-## Algemene richtlijnen voor developers bij links
-
-- Gebruik het `<a>` element om links aan te maken.
-- Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
-- Vermijd het gebruik van `tabindex="-1"` or `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.

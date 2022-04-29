@@ -1,7 +1,6 @@
 <!-- @license CC0-1.0 -->
 
 <!-- markdownlint-disable MD033 -->
-
 ## Gebruik van links in tekst
 
 Links moeten duidelijk, gemakkelijk te begrijpen en voorspelbaar zijn. Gebruikers moeten een duidelijke verwachting hebben wat er gebeurt als er interactie is met een link d.m.v. een muis, vinger, spraak of ogen.
@@ -55,3 +54,13 @@ We beschrijven de volgende states van een link:
 
 - [Website over: Hover, focus, active, door Wunder](https://wunder.io/wunderpedia/accessibility/accessible-uis/hover-focus-active/)
 - [Richtlijnen over het visualiseren van links, door NN group](https://www.nngroup.com/articles/guidelines-for-visualizing-links/)
+
+## Link in plaats van `<a>`
+
+Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals de [`<a>`](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) in HTML. Buiten de context van HTML-code (bijvoorbeeld in Figma) is `a`niet duidelijk genoeg, en we verwachten niet dat er grote verwarring ontstaat met het [`<link>`](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element) element van HTML.
+
+## Algemene richtlijnen voor developers bij links
+
+- Gebruik het `<a>` element om links aan te maken.
+- Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
+- Vermijd het gebruik van `tabindex="-1"` or `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
