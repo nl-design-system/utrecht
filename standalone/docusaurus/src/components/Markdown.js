@@ -30,6 +30,18 @@ const addBaseUrl = baseUrl => {
   }
 }
 
-export const Markdown = ({ children, headingLevel = 1, baseUrl = '' }) => (
-  <MDXProvider components={{ ...mapHeadings[headingLevel], ...addBaseUrl(baseUrl) }}>{children}</MDXProvider>
+const setHeadings = (omitH1, headingLevel) => {
+  if (omitH1) {
+    const mappedHeadings = { ...mapHeadings[headingLevel - 1] }
+
+    mappedHeadings.h1 = () => null
+
+    return mappedHeadings
+  }
+
+  return mapHeadings[headingLevel]
+}
+
+export const Markdown = ({ children, omitH1 = false, headingLevel = 1, baseUrl = '' }) => (
+  <MDXProvider components={{ ...setHeadings(omitH1, headingLevel), ...addBaseUrl(baseUrl) }}>{children}</MDXProvider>
 )
