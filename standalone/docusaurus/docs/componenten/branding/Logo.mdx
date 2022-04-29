@@ -1,7 +1,7 @@
 ---
 title: Logo
 hide_title: true
-hide_table_of_contents: false
+hide_table_of_contents: true
 sidebar_label: Logo
 sidebar_position: 1
 pagination_label: Logo
@@ -22,9 +22,8 @@ keywords:
 <!-- @license CC0-1.0 -->
 
 import { Markdown } from "../../../src/components/Markdown";
-import { StoryTabs } from "../../../src/components/StoryTabs";
 import Readme from "../../tmp/logo/logo.mdx";
 
-<Markdown headingLevel={1}>
+<Markdown headingLevel={1} baseUrl="/utrecht/">
   <Readme />
 </Markdown>
