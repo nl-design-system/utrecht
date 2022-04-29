@@ -1,7 +1,5 @@
 <!-- @license CC0-1.0 -->
 
-<!-- markdownlint-disable MD033 -->
-
 # UX Guidelines
 
 ## Tekst in de button

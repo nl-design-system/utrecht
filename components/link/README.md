@@ -1,6 +1,7 @@
 <!-- @license CC0-1.0 -->
 
-<!-- markdownlint-disable MD033 -->
+# Link
+
 ## Gebruik van links in tekst
 
 Links moeten duidelijk, gemakkelijk te begrijpen en voorspelbaar zijn. Gebruikers moeten een duidelijke verwachting hebben wat er gebeurt als er interactie is met een link d.m.v. een muis, vinger, spraak of ogen.

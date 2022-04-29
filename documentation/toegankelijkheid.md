@@ -1,7 +1,5 @@
 <!-- @license CC0-1.0 -->
 
-<!-- markdownlint-disable MD033 -->
-
 # Focus
 
 ## WCAG 2.4.11
