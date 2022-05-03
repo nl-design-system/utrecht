@@ -17,6 +17,7 @@ module.exports = {
   customFields: {
     storybookUrl: 'https://nl-design-system.github.io/utrecht/storybook/',
   },
+  staticDirectories: ['static', '../../proprietary/assets'],
   presets: [
     [
       'classic',
