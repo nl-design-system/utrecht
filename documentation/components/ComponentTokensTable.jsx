@@ -3,7 +3,7 @@ import React from 'react';
 import { DesignTokensTable } from './DesignTokensTable';
 
 export const ComponentTokensTable = ({ component, tokens }) => {
-  const componentPath = ['utrecht', component.replace(/^utrecht-/, '')];
+  const componentPath = ['utrecht', component.replace(/^(example|denhaag|utrecht)-/, '')];
 
   const subset = tokens.filter((token) => componentPath.every((name, index) => token.path[index] === name));
 
