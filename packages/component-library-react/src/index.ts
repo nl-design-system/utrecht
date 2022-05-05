@@ -6,6 +6,7 @@
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
 export { Button } from './Button';
+export { ButtonLink } from './ButtonLink';
 export { Checkbox } from './Checkbox';
 export { Document } from './Document';
 export { Fieldset } from './Fieldset';

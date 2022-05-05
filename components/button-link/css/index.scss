@@ -1,0 +1,26 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+@import "../../button/bem";
+
+.utrecht-button-link {
+  @extend .utrecht-button;
+
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.utrecht-button-link--hover {
+  @extend .utrecht-button--hover;
+}
+
+.utrecht-button-link--focus {
+  @extend .utrecht-button--focus;
+}
+
+.utrecht-button-link--focus-visible {
+  @extend .utrecht-button--focus-visible;
+}

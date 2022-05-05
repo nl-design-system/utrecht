@@ -1,0 +1,66 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ButtonLink, defaultArgs } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-button-link"
+  title="CSS Component/Link that looks like a button"
+  argTypes={{
+    external: {
+      description: "External",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
+    href: {
+      description: "Target URL",
+      type: {
+        name: "string",
+        required: true,
+      },
+    },
+    textContent: {
+      description: "Link text",
+      type: {
+        name: "string",
+        required: true,
+      },
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button link: link die er uit ziet als button
+
+Styling met de `.utrecht-button-link` class naam:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      href: "",
+      textContent: "Start je aanvraag",
+    }}
+  >
+    {ButtonLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
