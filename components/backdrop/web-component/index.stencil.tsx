@@ -7,7 +7,7 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'utrecht-backdrop',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class Backdrop {
