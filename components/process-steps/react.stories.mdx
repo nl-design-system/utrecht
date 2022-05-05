@@ -1,14 +1,27 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  Step,
+  StepExpandedIcon,
+  StepHeader,
+  StepHeading,
+  StepList,
+  StepMarker,
+  StepSection,
+  SubStep,
+  SubStepHeading,
+  SubStepList,
+  SubStepMarker,
+} from "@gemeente-denhaag/process-steps";
+import { Canvas, Meta } from "@storybook/addon-docs";
 import { ProcessSteps } from "./react.jsx";
+
 import "@gemeente-denhaag/process-steps/index.css";
 
 export const Template = (args) => <ProcessSteps {...args} />;
 
 <Meta
   title="React Component/Process Steps"
-  argTypes={{}}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,12 +31,65 @@ export const Template = (args) => <ProcessSteps {...args} />;
 
 # Process steps
 
-<ProcessSteps />
-
 <Canvas>
-  <Story name="Process steps" args={{}}>
-    {Template.bind({})}
-  </Story>
+  <StepList>
+    <Step checked expanded>
+      <StepSection>
+        <StepHeader>
+          <StepMarker>
+            <div>1</div>
+          </StepMarker>
+          <StepHeading>Deelname aan geluidsonderzoek</StepHeading>
+          <StepExpandedIcon />
+        </StepHeader>
+      </StepSection>
+      <SubStepList>
+        <SubStep>
+          <SubStepMarker />
+          <SubStepHeading>Aanmelding ontvangen</SubStepHeading>
+        </SubStep>
+      </SubStepList>
+    </Step>
+    <Step current expanded>
+      <StepSection>
+        <StepHeader>
+          <StepMarker>
+            <div>2</div>
+          </StepMarker>
+          <StepHeading>Onderzoek naar geluidsoverlast</StepHeading>
+          <StepExpandedIcon />
+        </StepHeader>
+      </StepSection>
+      <SubStepList>
+        <SubStep>
+          <SubStepMarker />
+          <SubStepHeading>Afspraak meten geluidsoverlast gemaakt</SubStepHeading>
+        </SubStep>
+        <SubStep>
+          <SubStepMarker />
+          <SubStepHeading>Geluidsoverlast gemeten</SubStepHeading>
+        </SubStep>
+        <SubStep>
+          <SubStepMarker />
+          <SubStepHeading>Onderzoek resultaten verwerkt</SubStepHeading>
+        </SubStep>
+      </SubStepList>
+    </Step>
+    <Step>
+      <StepSection>
+        <StepHeader>
+          <StepMarker>3</StepMarker>
+          <StepHeading>Uitvoeren van maatregelen</StepHeading>
+        </StepHeader>
+      </StepSection>
+    </Step>
+    <Step>
+      <StepSection>
+        <StepHeader>
+          <StepMarker>4</StepMarker>
+          <StepHeading>Maatregelen zijn uitgevoerd</StepHeading>
+        </StepHeader>
+      </StepSection>
+    </Step>
+  </StepList>
 </Canvas>
-
-<ArgsTable story="Process steps" />
