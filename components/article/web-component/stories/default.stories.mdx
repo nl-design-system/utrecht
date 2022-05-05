@@ -1,9 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ content }) => `<utrecht-article>${content}</utrecht-article>`;
+import { Article } from "../template";
 
 <Meta
+  id="web-component-article"
   title="Web Component/Article"
   argTypes={{
     content: {
@@ -22,7 +23,7 @@ export const Template = ({ content }) => `<utrecht-article>${content}</utrecht-a
 
 <Canvas>
   <Story
-    name="Article"
+    name="Default"
     args={{
       content: `<h1>Lorem ipsum</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -32,8 +33,8 @@ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offi
 laborum.</p>`,
     }}
   >
-    {Template.bind({})}
+    {Article.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Article" />
+<ArgsTable story="Default" />
