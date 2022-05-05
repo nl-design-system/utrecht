@@ -1,7 +1,4 @@
-/**
- * @license EUPL-1.2
- * Copyright (c) 2021 Robbert Broersma
- */
+export const Backdrop = ({ viewport }) => `<utrecht-backdrop${viewport ? ' viewport="true"' : ''}></utrecht-backdrop>`;
 
 export const checkerboard = (story) =>
   `<div style="
