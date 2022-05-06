@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../badge/bem";
+@import "../badge/css";
 
 .utrecht-badge-counter {
   background-color: var(--utrecht-badge-counter-background-color, var(--utrecht-badge-background-color, hsl(0 0% 0%)));
