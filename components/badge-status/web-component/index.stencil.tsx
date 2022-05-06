@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-badge-status',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class BadgeStatus {
@@ -14,7 +14,7 @@ export class BadgeStatus {
 
   render() {
     return (
-      <div class={`utrecht-badge-status utrecht-badge-status--${this.status}`}>
+      <div class={`utrecht-badge-status utrecht-badge-status--${this.status || 'neutral'}`}>
         <slot></slot>
       </div>
     );
