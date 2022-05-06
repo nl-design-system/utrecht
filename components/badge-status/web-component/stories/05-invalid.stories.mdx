@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeStatus } from "../template.js";
+import "../index.scss";
+
+<Meta
+  id="web-component-status-badge"
+  title="Web Component/Badge/Status Badge"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Invalid badge
+
+<Canvas>
+  <Story
+    name="--invalid"
+    args={{
+      status: "invalid",
+      textContent: "invalid",
+    }}
+  >
+    {BadgeStatus.bind({})}
+  </Story>
+</Canvas>
