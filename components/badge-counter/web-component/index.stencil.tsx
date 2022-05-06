@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-badge-counter',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class BadgeCounter {

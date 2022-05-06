@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeCounter } from "../template";
+
+<Meta
+  id="web-component-counter-badge"
+  title="Web Component/Badge/Counter Badge"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Counter badge with formatted text content
+
+<Canvas>
+  <Story
+    name="formatted text-content"
+    args={{
+      textContent: "1,234",
+    }}
+  >
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>

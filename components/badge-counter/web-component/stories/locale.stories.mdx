@@ -1,0 +1,49 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeCounter } from "../template";
+
+<Meta
+  id="web-component-counter-badge"
+  title="Web Component/Badge/Counter Badge"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Counter badge with automatic number formatting
+
+<Canvas>
+  <Story
+    name="US English"
+    args={{
+      textContent: 1234,
+      value: 1234,
+      locale: "en-US",
+    }}
+  >
+    {BadgeCounter.bind({})}
+  </Story>
+  <Story
+    name="Finnish"
+    args={{
+      textContent: 1234,
+      value: 1234,
+      locale: "fi",
+    }}
+  >
+    {BadgeCounter.bind({})}
+  </Story>
+  <Story
+    name="Dutch"
+    args={{
+      textContent: 1234,
+      value: 1234,
+      locale: "nl-NL",
+    }}
+  >
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
