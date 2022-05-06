@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Blockquote, defaultArgs } from "./bem.js";
-import "./bem.scss";
+import { Blockquote, defaultArgs } from "../template.js";
+import "../index.scss";
 
 <Meta
+  id="css-blockquote"
   title="CSS Component/Blockquote"
   argTypes={{
     textContent: {
@@ -33,10 +34,9 @@ Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class n
 
 <Canvas>
   <Story
-    name="Blockquote"
+    name="Default"
     args={{
       ...defaultArgs,
-      distanced: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
@@ -44,21 +44,4 @@ Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class n
   </Story>
 </Canvas>
 
-<ArgsTable story="Blockquote" />
-
-## Blockquote with attribution
-
-Styling with an additional `.utrecht-blockquote__attribution` class name:
-
-<Canvas>
-  <Story
-    name="Blockquote with attribution"
-    args={{
-      attribution: "L. Ipsum",
-      distanced: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
-    {Blockquote.bind({})}
-  </Story>
-</Canvas>
+<ArgsTable story="Default" />

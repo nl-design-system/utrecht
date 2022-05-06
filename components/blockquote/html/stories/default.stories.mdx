@@ -1,15 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./html.scss";
-export const Template = ({ textContent = "" }) =>
-  `<section class="utrecht-html">
-  <blockquote>
-    <p>${textContent}</p>
-  </blockquote>
-</section>`;
+import { Blockquote } from "../template";
+import "../index.scss";
 
 <Meta
+  id="html-blockquote"
   title="HTML Component/Blockquote"
   argTypes={{
     textContent: {
@@ -30,13 +26,13 @@ Styling via the `<blockquote>` element:
 
 <Canvas>
   <Story
-    name="Blockquote in HTML"
+    name="Default"
     args={{
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
-    {Template.bind({})}
+    {Blockquote.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Blockquote in HTML" />
+<ArgsTable story="Default" />
