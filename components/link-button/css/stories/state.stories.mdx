@@ -1,0 +1,82 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { LinkButton } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link-button"
+  title="CSS Component/Button that looks like a link/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Link button: button that looks like a link
+
+## Hover state
+
+Styling met de `.utrecht-link-button--hover` class naam of als state op link met `.utrecht-link-button:hover`:
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      hover: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {LinkButton.bind({})}
+  </Story>
+</Canvas>
+
+## Focus state
+
+Styling met de `.utrecht-link-button--focus` class naam:
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      focus: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {LinkButton.bind({})}
+  </Story>
+</Canvas>
+
+## Focus-visible state
+
+Styling met de `.utrecht-link-button--focus-visible` class naam of als status op `.utrecht-link-button:focus-visible`:
+
+<Canvas>
+  <Story
+    name="focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {LinkButton.bind({})}
+  </Story>
+</Canvas>
+
+### Active state
+
+Styling met de `.utrecht-link-button--active` class naam of als status op `.utrecht-link-button:active`:
+
+<Canvas>
+  <Story
+    name="active"
+    args={{
+      active: true,
+      textContent: "Voorbeeldlink",
+    }}
+  >
+    {LinkButton.bind({})}
+  </Story>
+</Canvas>
