@@ -1,0 +1,63 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, LinkButton } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-link-button"
+  title="CSS Component/Button that looks like a link"
+  argTypes={{
+    external: {
+      description: "External",
+      control: "boolean",
+    },
+    active: {
+      description: "Active",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    focusVisible: {
+      description: "Focus visible",
+      control: "boolean",
+    },
+    hover: {
+      description: "Hover",
+      control: "boolean",
+    },
+    href: {
+      description: "URL",
+      control: "text",
+    },
+    textContent: {
+      description: "Button text",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Link button: button that looks like a link
+
+Styling via the `.utrecht-link-button` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      textContent: "Terug",
+    }}
+  >
+    {LinkButton.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
