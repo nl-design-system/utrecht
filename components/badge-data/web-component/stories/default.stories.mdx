@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { BadgeData } from "./bem.js";
-import "./bem.scss";
+import { BadgeData } from "../template.js";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Badge/Data Badge"
+  id="web-component-data-badge"
+  title="Web Component/Badge/Data Badge"
   argTypes={{
     textContent: {
       description: "Text content",
@@ -21,11 +22,9 @@ import "./bem.scss";
 
 # Data badge
 
-Styling via the `.utrecht-badge-data` class name:
-
 <Canvas>
   <Story
-    name="Data badge"
+    name="Default"
     args={{
       textContent: "Festivals",
     }}
@@ -34,4 +33,4 @@ Styling via the `.utrecht-badge-data` class name:
   </Story>
 </Canvas>
 
-<ArgsTable story="Data badge" />
+<ArgsTable story="Default" />
