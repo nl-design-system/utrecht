@@ -49,6 +49,7 @@
   color: var(--utrecht-table-header-cell-color);
   font-size: var(--utrecht-table-header-cell-font-size);
   font-weight: var(--utrecht-table-header-cell-font-weight);
+  text-align: start;
   text-transform: var(--utrecht-table-header-cell-text-transform);
 }
 
@@ -75,6 +76,7 @@
   padding-inline-end: var(--utrecht-table-row-padding-inline-end, var(--utrecht-table-cell-padding-inline-end, 0));
 }
 
+.utrecht-table__header-cell--numeric-column,
 .utrecht-table__cell--numeric-column {
   /* stylelint-disable-next-line declaration-property-value-disallowed-list */
   text-align: right;
