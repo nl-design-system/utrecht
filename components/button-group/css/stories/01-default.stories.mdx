@@ -1,0 +1,45 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "../../../button/bem";
+import { ButtonGroup, defaultArgs } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-button-group"
+  title="CSS Component/Button group"
+  argTypes={{
+    direction: {
+      control: { type: "select" },
+      description: "Direction",
+      options: ["", "horizontal", "vertical"],
+    },
+    innerHTML: {
+      description: "HTML content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button group
+
+Styling via the `.utrecht-button-group` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      innerHTML: [Button({ textContent: "Save and continue" }), Button({ textContent: "Back" })].join("\n"),
+    }}
+  >
+    {ButtonGroup.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

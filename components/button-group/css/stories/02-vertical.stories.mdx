@@ -1,0 +1,33 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "../../../button/bem";
+import { ButtonGroup, defaultArgs } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-button-group"
+  title="CSS Component/Button group"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Vertical button group
+
+Styling via the `.utrecht-button-group--vertical` class name:
+
+<Canvas>
+  <Story
+    name="--vertical"
+    args={{
+      ...defaultArgs,
+      direction: "vertical",
+      innerHTML: [Button({ textContent: "Save and continue" }), Button({ textContent: "Back" })].join("\n"),
+    }}
+  >
+    {ButtonGroup.bind({})}
+  </Story>
+</Canvas>
