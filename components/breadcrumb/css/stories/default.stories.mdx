@@ -1,0 +1,48 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Breadcrumb, exampleItems } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-breadcrumb"
+  title="CSS Component/Breadcrumb navigation"
+  argTypes={{
+    items: {
+      description: "Menu items",
+      type: {
+        name: "array",
+        required: true,
+      },
+    },
+    microdata: {
+      description: "Microdata",
+      control: "boolean",
+    },
+    variant: {
+      description: "Variant",
+      control: { type: "select" },
+      options: ["", "arrows"],
+    },
+  }}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Breadcrumb navigation
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: exampleItems,
+      microdata: true,
+      variant: "arrows",
+    }}
+  >
+    {Breadcrumb.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

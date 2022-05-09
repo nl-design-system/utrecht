@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "./bem";
-@import "../link/css/index";
+@import "../css";
+@import "../../link/css";
 
 :host {
   display: block;
