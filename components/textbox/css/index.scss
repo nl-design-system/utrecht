@@ -124,6 +124,7 @@
 }
 
 .utrecht-textbox--numeric {
+  -moz-appearance: textfield; /* avoid spinner input in Firefox */
   font-variant-numeric: lining-nums tabular-nums;
 }
 
