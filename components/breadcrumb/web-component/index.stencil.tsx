@@ -7,7 +7,7 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'utrecht-breadcrumb',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class Breadcrumb {
