@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'utrecht-form-field-textarea',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class FormFieldTextarea {
