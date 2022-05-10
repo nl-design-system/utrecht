@@ -1,0 +1,105 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { CustomCheckbox, defaultArgs } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-custom-checkbox"
+  title="CSS Component/Custom Checkbox/States"
+  decorators={[(story) => `<form method="POST" action="#">${story()}</form>`]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox Component States
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked
+
+<Canvas>
+  <Story
+    name="checked"
+    args={{
+      ...defaultArgs,
+      checked: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate
+
+<Canvas>
+  <Story
+    name="indeterminate"
+    args={{
+      ...defaultArgs,
+      indeterminate: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Required and invalid
+
+The native checkbox should have the same position and size as the custom checkbox, so the native error message tooltip aligns with the custom checkbox.
+
+<Canvas>
+  <Story
+    name="required"
+    args={{
+      ...defaultArgs,
+      invalid: true,
+      required: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story
+    name="active"
+    args={{
+      ...defaultArgs,
+      active: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      ...defaultArgs,
+      focus: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
