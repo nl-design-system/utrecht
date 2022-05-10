@@ -1,10 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-
-export const EidasLogo = () => `<utrecht-eidas-logo></utrecht-eidas-logo>`;
+import { EidasLogo } from "../template";
 
 <Meta
+  id="web-component-eidas-logo"
   title="Web Component/eIDAS Logo"
   parameters={{
     status: {
@@ -16,5 +16,5 @@ export const EidasLogo = () => `<utrecht-eidas-logo></utrecht-eidas-logo>`;
 # eIDAS Logo
 
 <Canvas>
-  <Story name="Eidas Logo">{EidasLogo.bind({})}</Story>
+  <Story name="Default">{EidasLogo.bind({})}</Story>
 </Canvas>
