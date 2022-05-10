@@ -1,0 +1,43 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Checkbox, defaultArgs } from "../template";
+
+<Meta
+  id="web-component-checkbox"
+  title="Web Component/Checkbox"
+  argTypes={{
+    checked: {
+      description: "Checked",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    value: {
+      description: "Set the value of the text box",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox Component
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

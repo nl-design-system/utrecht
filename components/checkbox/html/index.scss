@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "./bem";
+@import "../css";
 
 .utrecht-html input[type="checkbox" i] {
   @extend .utrecht-checkbox;
