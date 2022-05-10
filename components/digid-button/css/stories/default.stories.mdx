@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, DigidButton } from "./bem";
-import "./bem.scss";
+import { defaultArgs, DigidButton } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-digid-button"
   title="CSS Component/DigiD Button"
   argTypes={{
     label: {
@@ -29,7 +30,7 @@ Styling via the `.utrecht-digid-button` class name:
 
 <Canvas>
   <Story
-    name="DigiD Button"
+    name="Default"
     args={{
       ...defaultArgs,
       label: "Log in using DigiD",
@@ -40,20 +41,4 @@ Styling via the `.utrecht-digid-button` class name:
   </Story>
 </Canvas>
 
-<ArgsTable story="DigiD Button" />
-
-## Right-to-left
-
-<Canvas>
-  <Story
-    name="DigiD Button in right-to-left text direction"
-    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
-    args={{
-      ...defaultArgs,
-      label: "تسجيل الدخول باستخدام DigiD",
-      textContent: "تسجيل الدخول",
-    }}
-  >
-    {DigidButton.bind({})}
-  </Story>
-</Canvas>
+<ArgsTable story="Default" />
