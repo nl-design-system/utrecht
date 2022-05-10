@@ -8,7 +8,7 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-digid-button',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class DigidButton {
