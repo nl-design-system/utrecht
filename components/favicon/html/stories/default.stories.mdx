@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ href = "" }) => `<link rel="icon" href="${href}">`;
+import { Favicon } from "../template";
 
 <Meta
-  title="CSS Component/Favicon"
+  id="html-favicon"
+  title="HTML Component/Favicon"
   argTypes={{
     href: {
       description: "Location of the favicon image",
@@ -31,7 +32,7 @@ Ideally, the favicon image is available under the `/favicon.ico` URL in the root
       href: "/favicon.ico",
     }}
   >
-    {Template.bind({})}
+    {Favicon.bind({})}
   </Story>
 </Canvas>
 
