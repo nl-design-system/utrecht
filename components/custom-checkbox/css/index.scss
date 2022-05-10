@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../checkbox/bem";
-@import "../common/focus/bem";
+@import "../../checkbox/bem";
+@import "../../common/focus/bem";
 
 .utrecht-custom-checkbox {
   --utrecht-icon-size: var(--utrecht-custom-checkbox-icon-size, calc(0.75 * var(--utrecht-custom-checkbox-size)));
