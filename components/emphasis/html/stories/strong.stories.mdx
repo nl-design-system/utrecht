@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Emphasis } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-emphasis"
+  title="HTML Component/Emphasis"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Strong emphasis
+
+<Canvas>
+  <Story
+    name="--strong"
+    args={{
+      strong: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Emphasis.bind({})}
+  </Story>
+</Canvas>

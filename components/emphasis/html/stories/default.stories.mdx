@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./bem.scss";
-import { defaultArgs, Emphasis } from "./bem";
+import { defaultArgs, Emphasis } from "../template";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Emphasis"
+  id="html-emphasis"
+  title="HTML Component/Emphasis"
   argTypes={{
     textContent: {
       description: "Set the text content",
@@ -31,10 +32,9 @@ import { defaultArgs, Emphasis } from "./bem";
 
 <Canvas>
   <Story
-    name="Emphasis"
+    name="Default"
     args={{
       ...defaultArgs,
-      stressed: true,
       textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
@@ -42,18 +42,4 @@ import { defaultArgs, Emphasis } from "./bem";
   </Story>
 </Canvas>
 
-<ArgsTable story="Emphasis" />
-
-## Strong emphasis
-
-<Canvas>
-  <Story
-    name="Strong Emphasis"
-    args={{
-      strong: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
-    {Emphasis.bind({})}
-  </Story>
-</Canvas>
+<ArgsTable story="Default" />
