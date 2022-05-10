@@ -1,10 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-
-export const DigidLogo = () => `<utrecht-digid-logo></utrecht-digid-logo>`;
+import { DigidLogo } from "../template";
 
 <Meta
+  id="web-component-digid-logo"
   title="Web Component/DigiD Logo"
   parameters={{
     status: {
@@ -16,5 +16,5 @@ export const DigidLogo = () => `<utrecht-digid-logo></utrecht-digid-logo>`;
 # DigiD Logo
 
 <Canvas>
-  <Story name="DigiD Logo">{DigidLogo.bind({})}</Story>
+  <Story name="Default">{DigidLogo.bind({})}</Story>
 </Canvas>
