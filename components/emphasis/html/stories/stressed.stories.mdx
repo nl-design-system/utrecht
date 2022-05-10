@@ -1,0 +1,43 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Emphasis } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-emphasis"
+  title="HTML Component/Emphasis"
+  argTypes={{
+    textContent: {
+      description: "Set the text content",
+      control: "text",
+    },
+    stressed: {
+      description: "Stressed emphasis",
+      control: "boolean",
+    },
+    strong: {
+      description: "Strong emphasis: very important or urgent content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Stessed Emphasis
+
+<Canvas>
+  <Story
+    name="--stressed"
+    args={{
+      stressed: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Emphasis.bind({})}
+  </Story>
+</Canvas>

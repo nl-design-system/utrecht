@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import "../index.scss";
+import { Emphasis } from "../template";
+
+<Meta
+  id="css-emphasis"
+  title="CSS Component/Emphasis"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Emphasis
+
+<Canvas>
+  <Story
+    name="--stressed"
+    args={{
+      stressed: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Emphasis.bind({})}
+  </Story>
+</Canvas>
