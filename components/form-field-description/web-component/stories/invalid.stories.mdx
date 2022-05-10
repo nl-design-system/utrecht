@@ -1,0 +1,45 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormFieldDescription } from "../template";
+import "../index.scss";
+
+<Meta
+  id="web-component-form-field-description"
+  title="Web Component/Form field description"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Invalid Form field description
+
+<Canvas>
+  <Story
+    name="Invalid form field description"
+    args={{
+      id: "6fda501a-1512-4310-800d-7e4b5d305823",
+      innerHTML: "This is a required field and must not be left empty.",
+      status: "invalid",
+    }}
+  >
+    {FormFieldDescription.bind({})}
+  </Story>
+</Canvas>
+
+## Valid
+
+<Canvas>
+  <Story
+    name="Valid form field description"
+    args={{
+      id: "6fda501a-1512-4310-800d-7e4b5d305823",
+      innerHTML: "This is very safe password!",
+      status: "valid",
+    }}
+  >
+    {FormFieldDescription.bind({})}
+  </Story>
+</Canvas>
