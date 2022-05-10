@@ -1,0 +1,38 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormFieldCheckbox } from "../template";
+import "../../../checkbox/bem.scss";
+import "../../../form-label/bem.scss";
+import "../index.scss";
+
+<Meta
+  id="css-form-field-checkbox"
+  title="CSS Component/Form field with checkbox"
+  argTypes={{
+    label: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with checkbox
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      label: "I agree",
+    }}
+  >
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

@@ -1,17 +1,31 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldCheckbox } from "./bem";
-import "../checkbox/bem.scss";
-import "../form-label/bem.scss";
-import "./bem.scss";
+import { defaultArgs, FormFieldCheckbox } from "../template";
 
 <Meta
-  title="CSS Component/Form field with checkbox"
+  id="web-component-form-field-checkbox"
+  title="Web Component/Form field with checkbox"
   argTypes={{
+    checked: {
+      description: "Checked",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
     label: {
       description: "Set the content of the label",
       control: "text",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
     },
   }}
   parameters={{
@@ -27,6 +41,7 @@ import "./bem.scss";
   <Story
     name="Form field with checkbox"
     args={{
+      ...defaultArgs,
       label: "I agree",
     }}
   >
