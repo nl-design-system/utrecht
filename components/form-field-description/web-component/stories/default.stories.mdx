@@ -1,0 +1,47 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormFieldDescription } from "../template";
+import "../index.scss";
+
+<Meta
+  id="web-component-form-field-description"
+  title="Web Component/Form field description"
+  argTypes={{
+    id: {
+      description: "Unique identifier to associate it with a form input",
+      control: "text",
+    },
+    innerHTML: {
+      description: "Set the content of the description",
+      control: "text",
+    },
+    status: {
+      control: { type: "select" },
+      description: "Status",
+      options: ["", "invalid", "valid"],
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field description
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      id: "0427f759-009c-43ad-8e1c-3d7b9982a133",
+      innerHTML: "Your password must contain at least 16 characters.",
+      status: "",
+    }}
+  >
+    {FormFieldDescription.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

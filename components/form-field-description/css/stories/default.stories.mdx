@@ -1,15 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./bem.scss";
-
-export const FormFieldDescription = ({ id = null, innerHTML = "", status = null }) =>
-  `<utrecht-form-field-description id="${id}"${
-    status ? ` status="${status}"` : ""
-  }>${innerHTML}</utrecht-form-field-description>`;
+import { FormFieldDescription } from "../template";
+import "../index.scss";
 
 <Meta
-  title="Web Component/Form field description"
+  id="css-form-field-description"
+  title="CSS Component/Form field description"
   argTypes={{
     id: {
       description: "Unique identifier to associate it with a form input",
@@ -20,7 +17,10 @@ export const FormFieldDescription = ({ id = null, innerHTML = "", status = null 
       control: "text",
     },
     status: {
-      control: { type: "select" },
+      type: {
+        name: "enum",
+        required: false,
+      },
       description: "Status",
       options: ["", "invalid", "valid"],
     },
@@ -34,9 +34,11 @@ export const FormFieldDescription = ({ id = null, innerHTML = "", status = null 
 
 # Form field description
 
+Combined with the form label, provide an additional and more detailed description of the form field.
+
 <Canvas>
   <Story
-    name="Form field description"
+    name="Default"
     args={{
       id: "0427f759-009c-43ad-8e1c-3d7b9982a133",
       innerHTML: "Your password must contain at least 16 characters.",
@@ -47,9 +49,11 @@ export const FormFieldDescription = ({ id = null, innerHTML = "", status = null 
   </Story>
 </Canvas>
 
-<ArgsTable story="Form field description" />
+<ArgsTable story="Default" />
 
 ## Invalid
+
+Describe that or why the form input is invalid, and possibly instructions on how to remedy the situation.
 
 <Canvas>
   <Story
@@ -65,6 +69,8 @@ export const FormFieldDescription = ({ id = null, innerHTML = "", status = null 
 </Canvas>
 
 ## Valid
+
+Describe that or why the form input is valid.
 
 <Canvas>
   <Story
