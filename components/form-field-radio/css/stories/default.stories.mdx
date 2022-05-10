@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldRadio } from "./bem";
-import "../radio-button/bem.scss";
-import "../form-label/bem.scss";
-import "./bem.scss";
+import { FormFieldRadio } from "../template";
+import "../../../radio-button/bem.scss";
+import "../../../form-label/bem.scss";
+import "../index.scss";
 
 <Meta
+  id="css-form-field-radio"
   title="CSS Component/Form field with radio button"
   argTypes={{
     label: {
@@ -25,7 +26,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Form field with radio"
+    name="Default"
     args={{
       label: "I agree",
     }}
@@ -34,4 +35,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Form field with radio" />
+<ArgsTable story="Default" />
