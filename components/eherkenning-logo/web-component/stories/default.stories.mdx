@@ -1,10 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-
-export const EherkenningLogo = () => `<utrecht-eherkenning-logo></utrecht-eherkenning-logo>`;
+import { EherkenningLogo } from "../template";
 
 <Meta
+  id="web-component-eherkenning-logo"
   title="Web Component/eHerkenning Logo"
   parameters={{
     status: {
@@ -16,5 +16,5 @@ export const EherkenningLogo = () => `<utrecht-eherkenning-logo></utrecht-eherke
 # eIDAS Logo
 
 <Canvas>
-  <Story name="Eherkenning Logo">{EherkenningLogo.bind({})}</Story>
+  <Story name="Default">{EherkenningLogo.bind({})}</Story>
 </Canvas>
