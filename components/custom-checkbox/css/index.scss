@@ -4,7 +4,7 @@
  */
 
 @import "../../checkbox/css";
-@import "../../common/focus/bem";
+@import "../../common/focus";
 
 .utrecht-custom-checkbox {
   --utrecht-icon-size: var(--utrecht-custom-checkbox-icon-size, calc(0.75 * var(--utrecht-custom-checkbox-size)));

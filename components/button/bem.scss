@@ -3,7 +3,7 @@
  * Copyright (c) 2021 The Knights Who Say NIH! B.V.
  * Copyright (c) 2021 Gemeente Utrecht
  */
-@import "../common/focus/bem";
+@import "../common/focus";
 
 .utrecht-button {
   background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
