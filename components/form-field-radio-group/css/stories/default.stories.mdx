@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldRadioGroup } from "./bem";
-import "../form-label/bem.scss";
-import "../radio-button/bem.scss";
-import "./bem.scss";
+import { FormFieldRadioGroup } from "../template";
+import "../../../form-label/bem.scss";
+import "../../../radio-button/bem.scss";
+import "../index.scss";
 
 <Meta
+  id="css-form-field-radio-group"
   title="CSS Component/Form field with radio group"
   argTypes={{
     label: {
@@ -36,7 +37,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Form field with radio group"
+    name="Default"
     args={{
       label: "Which option do you like best?",
       name: "radiobutton",
@@ -61,4 +62,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Form field with radio group" />
+<ArgsTable story="Default" />
