@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormFieldTextbox } from "../template";
+
+<Meta
+  id="web-component-form-field-textbox"
+  title="Web Component/Form field with textbox"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with textbox and placeholder
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="placeholder"
+    args={{
+      label: "Message",
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
