@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldCheckboxGroup } from "./bem";
-import "../checkbox/bem.scss";
-import "../form-label/bem.scss";
-import "./bem.scss";
+import { FormFieldCheckboxGroup } from "../template";
+import "../../../checkbox/bem.scss";
+import "../../../form-label/bem.scss";
+import "../index.scss";
 
 <Meta
+  id="css-form-field-checkbox-group"
   title="CSS Component/Form field with checkbox group"
   argTypes={{
     label: {
@@ -32,7 +33,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Form field with checkbox group"
+    name="Default"
     args={{
       label: "Ik verklaar dat de volgende beweringen kloppen:",
       options: [
@@ -59,4 +60,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Form field with checkbox group" />
+<ArgsTable story="Default" />
