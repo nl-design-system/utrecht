@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormLabel } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-form-label"
+  title="HTML Component/Form label"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component for radio button
+
+<Canvas>
+  <Story
+    name="--radio"
+    args={{
+      textContent: "Username",
+      type: "radio",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>

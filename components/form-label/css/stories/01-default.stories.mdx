@@ -1,0 +1,44 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, FormLabel } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-form-label"
+  title="CSS Component/Form label"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+    type: {
+      description: "Set the type of the form control",
+      options: ["default", "checkbox", "radio"],
+      control: { type: "radio" },
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component
+
+Styling via the `.utrecht-form-label` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      textContent: "Username",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
