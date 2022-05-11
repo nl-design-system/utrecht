@@ -1,0 +1,24 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import { ComponentTokensSection } from "../../../../documentation/components/ComponentTokensSection";
+import tokens from "../../../../proprietary/design-tokens/dist/index.json";
+import tokensDefinition from "../../tokens.json";
+
+<Meta
+  id="web-component-heading-3--design-tokens"
+  title="Web Component/Heading/Heading 3/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading 3 Design Tokens
+
+<ComponentTokensSection
+  tokens={tokens}
+  definition={tokensDefinition}
+  component="utrecht-heading-3"
+></ComponentTokensSection>

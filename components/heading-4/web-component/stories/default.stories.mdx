@@ -1,0 +1,35 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Heading4 } from "../template";
+
+<Meta
+  id="web-component-heading-4"
+  title="Web Component/Heading/Heading 4"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the heading",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "BETA",
+    },
+  }}
+/>
+
+# Heading components
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Heading4.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
