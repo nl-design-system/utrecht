@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormLabel } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-form-label"
+  title="CSS Component/Form label"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component for checked checkbox
+
+Styling via the `.utrecht-form-label--checked` class name:
+
+<Canvas>
+  <Story
+    name="--checked"
+    args={{
+      checked: true,
+      textContent: "Username",
+      type: "checkbox",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,44 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormLabel } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-form-label"
+  title="HTML Component/Form label"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the label",
+      control: "text",
+    },
+    type: {
+      description: "Set the type of the form control",
+      options: ["hidden", "checkbox", "radio"],
+      control: { type: "radio" },
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component
+
+Styling via the `<label>` element:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      textContent: "Username",
+      type: "hidden",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
