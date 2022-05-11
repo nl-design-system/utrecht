@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, FormToggleCheckbox } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-form-toggle"
+  title="CSS Component/Form toggle"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+## Toggle with invisible `<input type="checkbox">`
+
+<Canvas>
+  <Story
+    name="invisible-checkbox-input"
+    args={{
+      ...defaultArgs,
+      id: "0e73edcc-6479-4a9f-9854-9669e5a79ee8",
+    }}
+  >
+    {FormToggleCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Toggle with invisible checkbox input" />
