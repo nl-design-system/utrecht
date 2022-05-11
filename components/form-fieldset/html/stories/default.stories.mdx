@@ -1,22 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./html.scss";
-
-export const defaultArgs = {
-  innerHTML: "",
-  legend: "",
-};
-
-export const Template = ({ innerHTML = "", legend = "" }) =>
-  `<div class="utrecht-html">
-  <fieldset>
-    ${legend ? `<legend>${legend}</legend>` : ""}
-    ${innerHTML}
-  </fieldset>
-</div>`;
+import { defaultArgs, FormFieldset } from "../template";
+import "../index.scss";
 
 <Meta
+  id="html-form-fieldset"
   title="HTML Component/Form fieldset"
   argTypes={{
     innerHTML: {
@@ -44,15 +33,15 @@ Styling via the `<fieldset>` and `<legend>` elements:
 
 <Canvas>
   <Story
-    name="Fieldset"
+    name="Default"
     args={{
       ...defaultArgs,
       innerHTML: "<p>Fieldset body</p>",
       legend: "Fieldset legend",
     }}
   >
-    {Template.bind({})}
+    {FormFieldset.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Fieldset" />
+<ArgsTable story="Default" />
