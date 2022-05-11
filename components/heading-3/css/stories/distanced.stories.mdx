@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Heading3 } from "../template";
+
+import "../index.scss";
+
+<Meta
+  id="css-heading-3"
+  title="CSS Component/Heading/Heading 3"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading 3 distanced
+
+Styling via `utrecht-heading-3` and `utrecht-heading-3--distanced` class names:
+
+<Canvas>
+  <Story
+    name="--distanced"
+    args={{
+      distanced: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Heading3.bind({})}
+  </Story>
+</Canvas>

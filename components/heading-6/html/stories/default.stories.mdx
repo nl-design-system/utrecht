@@ -1,0 +1,39 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Heading6 } from "../template";
+
+import "../index.scss";
+
+<Meta
+  id="html-heading-6"
+  title="HTML Component/Heading/Heading 6"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the heading",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "BETA",
+    },
+  }}
+/>
+
+# Heading 6
+
+Styling via the `<h6>` element:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Heading6.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

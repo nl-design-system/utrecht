@@ -1,0 +1,43 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Heading5 } from "../template";
+
+import "../index.scss";
+
+<Meta
+  id="css-heading-5"
+  title="CSS Component/Heading/Heading 5"
+  argTypes={{
+    textContent: {
+      description: "De content van de header",
+      control: "text",
+    },
+    distanced: {
+      description: "Zet afstand tussen de header en nabije content",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading 5
+
+Styling via `utrecht-heading-5` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Heading5.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
