@@ -1,0 +1,39 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, FormToggle } from "../template";
+import "../index.scss";
+
+<Meta
+  title="Web Component/Form toggle"
+  argTypes={{
+    checked: {
+      description: "Checked",
+      control: "boolean",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form toggle component
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

@@ -1,0 +1,55 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { FormToggle } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-form-toggle"
+  title="CSS Component/Form toggle/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checked
+
+<Canvas>
+  <Story
+    name="checked"
+    args={{
+      checked: true,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled checked
+
+<Canvas>
+  <Story
+    name="disabled checked"
+    args={{
+      disabled: true,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
