@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Logo } from "./bem";
-import "./bem.scss";
+import { Logo } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-logo"
   title="CSS Component/Logo"
   argTypes={{}}
   parameters={{
@@ -17,7 +18,7 @@ import "./bem.scss";
 # Logo Gemeente Utrecht
 
 <Canvas>
-  <Story name="Logo">{Logo.bind({})}</Story>
+  <Story name="Default">{Logo.bind({})}</Story>
 </Canvas>
 
-<ArgsTable story="Logo" />
+<ArgsTable story="Default" />
