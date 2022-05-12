@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { SearchBar } from "./bem";
-import "../textbox/bem.scss";
-import "../button/bem.scss";
-import "./bem.scss";
+import { SearchBar } from "../template";
+import "../../../textbox/bem.scss";
+import "../../../button/bem.scss";
+import "../index.scss";
 
 <Meta
+  id="css-search-bar"
   title="CSS Component/Search Bar"
   argTypes={{}}
   parameters={{
@@ -20,7 +21,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Search Bar"
+    name="Default"
     args={{
       buttonLabel: "Zoeken",
       formLabel: "zoeken in Utrecht.nl",
@@ -32,4 +33,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Search Bar" />
+<ArgsTable story="Default" />
