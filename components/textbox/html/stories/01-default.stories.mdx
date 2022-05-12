@@ -1,0 +1,79 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Textbox } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-textbox"
+  title="HTML Component/Textbox"
+  argTypes={{
+    autoComplete: {
+      description: "Autocomplete type",
+      control: "text",
+    },
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    min: {
+      description: "Minimum",
+      control: "number",
+    },
+    max: {
+      description: "Maximum",
+      control: "number",
+    },
+    pattern: {
+      description: "Pattern",
+      control: "text",
+    },
+    placeholder: {
+      description: "Placeholder",
+      control: "text",
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+    type: {
+      description: "Type",
+      control: "select",
+      options: ["", "email", "number", "password", "search", "tel", "text", "url"],
+    },
+    value: {
+      description: "Set the value of the text box",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box component
+
+Styling via the `<input>` element:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

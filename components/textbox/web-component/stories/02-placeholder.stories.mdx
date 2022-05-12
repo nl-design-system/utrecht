@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "../template";
+
+<Meta
+  id="web-component-textbox"
+  title="Web Component/Textbox"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box with placeholder
+
+<Canvas>
+  <Story
+    name="with placeholder"
+    args={{
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      value: "",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>

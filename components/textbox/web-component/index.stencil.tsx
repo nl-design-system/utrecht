@@ -8,7 +8,7 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'utrecht-textbox',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class Textbox {
