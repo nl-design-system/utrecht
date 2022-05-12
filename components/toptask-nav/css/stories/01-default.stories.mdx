@@ -1,0 +1,64 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+Copyright (c) 2021 Gemeente Utrecht
+-->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, exampleLinks, ToptaskNav } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-toptask-nav"
+  title="CSS Component/Toptask Navigation"
+  argTypes={{
+    links: {
+      description: "Links",
+      type: {
+        name: "array",
+        required: true,
+      },
+    },
+    grid: {
+      type: "boolean",
+      description: "Grid",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Toptask Navigation
+
+Styling via the `.utrecht-toptask-nav` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      links: [...exampleLinks],
+    }}
+    parameters={{
+      viewport: {
+        viewports: {
+          example: {
+            name: "Example",
+            styles: {
+              width: "400px",
+              height: "400px",
+            },
+          },
+        },
+        defaultViewport: "example",
+      },
+    }}
+  >
+    {ToptaskNav.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
