@@ -1,11 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, LogoButton } from "./bem";
-import "./bem.scss";
+import { defaultArgs, LogoButton } from "../template";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Button met Logo"
+  title="CSS Component/Logo Button"
   argTypes={{
     label: {
       description: "Button label",
@@ -34,7 +34,7 @@ Styling via the `.utrecht-logo-button` class name:
 
 <Canvas>
   <Story
-    name="Logo Button"
+    name="Default"
     args={{
       ...defaultArgs,
       label: "Log in using DigiD",
@@ -46,7 +46,7 @@ Styling via the `.utrecht-logo-button` class name:
   </Story>
 </Canvas>
 
-<ArgsTable story="Logo Button" />
+<ArgsTable story="Default" />
 
 ## Right-to-left
 
