@@ -1,0 +1,37 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Table } from "../template";
+
+import "../index.scss";
+
+<Meta
+  id="html-table"
+  title="HTML Component/Table"
+  argTypes={{
+    alternateRowColor: {
+      description: "Alternate row color",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Table
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {Table.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
