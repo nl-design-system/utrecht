@@ -1,8 +1,8 @@
-import clsx from 'clsx'
+import clsx from 'clsx';
 
 export const defaultArgs = {
   alternateRowColor: false,
-}
+};
 
 // Source of table:
 // https://www.utrecht.nl/wonen-en-leven/parkeren/ervaart-u-parkeeroverlast/spinozaplantsoen-invoeren-betaald-parkeren/
@@ -38,4 +38,4 @@ export const Table = ({ alternateRowColor = false }) =>
     </tr>
   </tbody>
 </table>
-  </div>`
+  </div>`;
