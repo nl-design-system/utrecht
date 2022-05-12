@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { SocialMediaLink, SocialMediaLinkList } from "./bem";
-import "./bem.scss";
+import { SocialMediaLink } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-link-social"
   title="CSS Component/Link to Social Media"
   argTypes={{
     distanced: {
@@ -38,7 +39,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Link to Social Media"
+    name="Default"
     args={{
       distanced: false,
       href: "https://www.facebook.com/GemeenteUtrecht",
@@ -49,38 +50,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Link to Social Media" />
-
-## List
-
-<Canvas>
-  <Story
-    name="List of links to Social Media"
-    args={{
-      links: [
-        {
-          href: "https://www.facebook.com/GemeenteUtrecht",
-          icon: "utrecht-icon-facebook",
-        },
-        {
-          href: "https://www.instagram.com/GemeenteUtrecht/",
-          icon: "utrecht-icon-instagram",
-        },
-        {
-          href: "https://nl.linkedin.com/company/gemeente-utrecht",
-          icon: "utrecht-icon-linkedin",
-        },
-        {
-          href: "https://twitter.com/gemeenteutrecht",
-          icon: "utrecht-icon-twitter",
-        },
-        {
-          href: "https://api.whatsapp.com/send?phone=31624927665",
-          icon: "utrecht-icon-whatsapp",
-        },
-      ],
-    }}
-  >
-    {SocialMediaLinkList.bind({})}
-  </Story>
-</Canvas>
+<ArgsTable story="Default" />
