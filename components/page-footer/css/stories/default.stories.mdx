@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageFooter } from "./bem";
-import "./bem.scss";
+import { PageFooter } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-page-footer"
   title="CSS Component/Page Footer"
   argTypes={{
     innerHTML: {
@@ -21,7 +22,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Page Footer"
+    name="Default"
     args={{
       innerHTML: `<address class="utrecht-page-footer__address utrecht-page-footer__address--reset-address">
     <h2 class="utrecht-heading-2 utrecht-heading-2--reset-h2">Gemeente Utrecht</h2>
@@ -56,4 +57,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Page Footer" />
+<ArgsTable story="Default" />
