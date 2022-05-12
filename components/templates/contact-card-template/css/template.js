@@ -1,9 +1,4 @@
-<!-- @license CC0-1.0 -->
-
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./bem.scss";
-
-export const Template = () => `<div class="utrecht-contact-card">
+export const ContactCardTemplate = () => `<div class="utrecht-contact-card">
   <h2 class="utrecht-heading-2">Hulp en contact</h2>
   <div class="utrecht-contact-card__content">
     <div class="utrecht-contact-card__section">
@@ -33,18 +28,3 @@ export const Template = () => `<div class="utrecht-contact-card">
     </div>
   </div>
 </div>`;
-
-<Meta
-  title="CSS Template/Contact Card"
-  parameters={{
-    status: {
-      type: "WORK IN PROGRESS",
-    },
-  }}
-/>
-
-# Contact Card
-
-<Canvas>
-  <Story name="Contact Card">{Template.bind({})}</Story>
-</Canvas>
