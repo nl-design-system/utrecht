@@ -1,0 +1,101 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Select } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-select"
+  title="CSS Component/Select/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form select states
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Select.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      ...defaultArgs,
+      invalid: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Select.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story
+    name="required"
+    args={{
+      ...defaultArgs,
+      required: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Select.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      ...defaultArgs,
+      focus: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Select.bind({})}
+  </Story>
+</Canvas>

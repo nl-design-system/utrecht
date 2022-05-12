@@ -1,18 +1,14 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, exampleOptions, Select } from "./bem";
-import "./html.scss";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Select } from "../template";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Form Select"
+  title="HTML Component/Select/States"
   argTypes={{
     disabled: {
       description: "Disabled",
-      control: "boolean",
-    },
-    focus: {
-      description: "Focus",
       control: "boolean",
     },
     invalid: {
@@ -38,34 +34,16 @@ import "./html.scss";
   }}
 />
 
-# Form select
+# Form Select States
 
-Styling via the `<select>` element:
+## Disabled
 
 <Canvas>
   <Story
-    name="Select"
+    name="disabled"
     args={{
       ...defaultArgs,
-      options: exampleOptions,
-    }}
-  >
-    {Select.bind({})}
-  </Story>
-</Canvas>
-
-<ArgsTable story="Select" />
-
-## States
-
-### Disabled
-
-<Canvas>
-  <Story
-    name="Disabled select"
-    args={{
       disabled: true,
-      options: exampleOptions,
     }}
     parameters={{
       docs: {
@@ -79,14 +57,14 @@ Styling via the `<select>` element:
   </Story>
 </Canvas>
 
-### Invalid
+## Invalid
 
 <Canvas>
   <Story
-    name="Invalid select"
+    name="invalid"
     args={{
+      ...defaultArgs,
       invalid: true,
-      options: exampleOptions,
     }}
     parameters={{
       docs: {
@@ -100,37 +78,14 @@ Styling via the `<select>` element:
   </Story>
 </Canvas>
 
-### Required
+## Required
 
 <Canvas>
   <Story
-    name="Required select"
+    name="required"
     args={{
-      options: exampleOptions,
+      ...defaultArgs,
       required: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
-    }}
-  >
-    {Select.bind({})}
-  </Story>
-</Canvas>
-
-## Interactive States
-
-### Focus
-
-<Canvas>
-  <Story
-    name="Select with focus"
-    args={{
-      focus: true,
-      options: exampleOptions,
     }}
     parameters={{
       docs: {

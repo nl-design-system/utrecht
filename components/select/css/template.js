@@ -4,15 +4,21 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import clsx from 'clsx'
+
+const exampleOptions = [
+  { value: '1', label: 'Option #1' },
+  { value: '2', label: 'Option #2', selected: true },
+  { value: '3', label: 'Option #3' },
+]
 
 export const defaultArgs = {
   disabled: false,
   focus: false,
   invalid: false,
-  options: [],
+  options: exampleOptions,
   required: false,
-};
+}
 
 export const Select = ({ disabled = false, focus = false, invalid = false, options = [], required = false }) =>
   `<select${invalid ? ' aria-invalid="true"' : ''}${disabled ? ' disabled' : ''}${
@@ -30,10 +36,4 @@ export const Select = ({ disabled = false, focus = false, invalid = false, optio
         `<option${selected ? ' selected' : ''}${value ? ` value="${value}"` : ''}>${label}</option>`,
     )
     .join('\n  ')}
-</select>`;
-
-export const exampleOptions = [
-  { value: '1', label: 'Option #1' },
-  { value: '2', label: 'Option #2', selected: true },
-  { value: '3', label: 'Option #3' },
-];
+</select>`
