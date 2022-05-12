@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageContent } from "../page-content/bem";
-import { PageFooter } from "../page-footer/bem";
-import { PageHeader } from "../page-header/bem";
-import { Page } from "./bem.js";
-import "./bem.scss";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { PageContent } from "../../../page-content/bem";
+import { PageFooter } from "../../../page-footer/bem";
+import { PageHeader } from "../../../page-header/bem";
+import { Page } from "../template.js";
+import "../index.scss";
 
 <Meta
+  id="css-page"
   title="CSS Component/Page"
   parameters={{
     layout: "fullscreen",
@@ -21,7 +22,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Page"
+    name="Default"
     args={{
       innerHTML: [
         PageHeader({ innerHTML: "Header area" }),
@@ -33,3 +34,5 @@ import "./bem.scss";
     {Page.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story='Default' />
