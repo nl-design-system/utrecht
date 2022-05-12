@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Pagination } from "./bem";
-import "./bem.scss";
+import { defaultArgs, Pagination } from "../template";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Pagination navigation"
+  id="css-pagination"
+  title="CSS Component/Pagination"
   argTypes={{
     currentIndex: {
       description: "Current index",
@@ -39,7 +40,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Pagination navigation"
+    name="Default"
     args={{
       ...defaultArgs,
       currentIndex: 3,
@@ -83,4 +84,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Pagination navigation" />
+<ArgsTable story="Default" />

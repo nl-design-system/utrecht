@@ -1,16 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const attr = (name, value) => `${name}="${String(value).replace(/"/g, "&quot;")}"`;
-
-export const Template = ({ currentIndex = -1, links = [], next = null, prev = null }) =>
-  `<utrecht-pagination ${attr("links", JSON.stringify(links))} ${attr("next", JSON.stringify(next))} ${attr(
-    "prev",
-    JSON.stringify(prev)
-  )} ${attr("current-index", currentIndex)}></utrecht-pagination>`;
+import { Pagination } from "../template";
 
 <Meta
-  title="Web Component/Pagination navigation"
+  id="web-component-pagination"
+  title="Web Component/Pagination"
   argTypes={{
     currentIndex: {
       description: "Current index",
@@ -40,7 +35,7 @@ export const Template = ({ currentIndex = -1, links = [], next = null, prev = nu
 
 <Canvas>
   <Story
-    name="Pagination navigation"
+    name="Default"
     args={{
       currentIndex: 3,
       distanced: true,
@@ -79,8 +74,8 @@ export const Template = ({ currentIndex = -1, links = [], next = null, prev = nu
       },
     }}
   >
-    {Template.bind({})}
+    {Pagination.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Pagination navigation" />
+<ArgsTable story="Default" />
