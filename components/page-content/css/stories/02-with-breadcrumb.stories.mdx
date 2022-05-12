@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Breadcrumb, exampleItems } from "../../../breadcrumb/css/template";
+import { PageContent } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-page-content"
+  title="CSS Component/Page Content"
+  parameters={{
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+# Page Content with breadcrumb navigation
+
+<Canvas>
+  <Story
+    name="with breadcrumb"
+    args={{
+      innerHTML: `<h1>The Quick Brown Fox Jumps Over The Lazy Dog</h1>`,
+      navHTML: Breadcrumb({ items: exampleItems, microdata: true, variant: "arrows" }),
+    }}
+  >
+    {PageContent.bind({})}
+  </Story>
+</Canvas>

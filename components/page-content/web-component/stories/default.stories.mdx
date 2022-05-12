@@ -1,9 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ innerHTML = "" }) => `<utrecht-page-content>${innerHTML}</utrecht-page-content>`;
+import { PageContent } from "../template";
 
 <Meta
+  id="web-component-page-content"
   title="Web Component/Page Content"
   argTypes={{
     innerHTML: {
@@ -22,13 +23,13 @@ export const Template = ({ innerHTML = "" }) => `<utrecht-page-content>${innerHT
 
 <Canvas>
   <Story
-    name="Page Content"
+    name="Default"
     args={{
       innerHTML: "Main content",
     }}
   >
-    {Template.bind({})}
+    {PageContent.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Page Content" />
+<ArgsTable story="Default" />
