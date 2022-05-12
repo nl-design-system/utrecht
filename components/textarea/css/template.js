@@ -11,7 +11,7 @@ export const defaultArgs = {
   textContent: '',
 };
 
-export const TextArea = ({
+export const Textarea = ({
   disabled = false,
   focus = false,
   hover = false,

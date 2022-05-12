@@ -1,0 +1,101 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textarea } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-textarea"
+  title="CSS Component/Textarea/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text area component states
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      disabled: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      invalid: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story
+    name="read-only"
+    args={{
+      readOnly: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story
+    name="required"
+    args={{
+      required: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      focus: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Hover
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      hover: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
