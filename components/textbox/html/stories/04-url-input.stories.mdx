@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-textbox"
+  title="HTML Component/Textbox"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box component with URL input
+
+<Canvas>
+  <Story
+    name="URL input"
+    args={{
+      type: "url",
+      value: "https://example.fi/",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>

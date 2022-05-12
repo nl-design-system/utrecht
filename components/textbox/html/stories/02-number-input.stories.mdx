@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Textbox } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-textbox"
+  title="HTML Component/Textbox"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box component with number input
+
+<Canvas>
+  <Story
+    name="number input"
+    args={{
+      ...defaultArgs,
+      min: 0,
+      value: "42",
+      max: 100,
+      type: "number",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>

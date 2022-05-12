@@ -1,0 +1,58 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "../template";
+
+<Meta
+  id="web-component-textbox"
+  title="Web Component/Textbox/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box states
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      invalid: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      disabled: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story
+    name="read-only"
+    args={{
+      readOnly: true,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>

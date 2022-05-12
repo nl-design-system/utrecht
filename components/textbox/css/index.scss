@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../common/focus/bem";
+@import "../../common/focus/bem";
 
 .utrecht-textbox {
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));

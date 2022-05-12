@@ -15,7 +15,7 @@ export const defaultArgs = {
   value: '',
 };
 
-export const TextBox = ({
+export const Textbox = ({
   disabled = false,
   focus = false,
   invalid = false,

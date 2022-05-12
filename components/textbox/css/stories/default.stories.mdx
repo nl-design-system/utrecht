@@ -1,0 +1,59 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Textbox } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-textbox"
+  title="CSS Component/Textbox"
+  argTypes={{
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    readOnly: {
+      description: "Read-only",
+      control: "boolean",
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+    value: {
+      description: "Set the value of the text box",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box component
+
+Styling via the `<input>` element:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
