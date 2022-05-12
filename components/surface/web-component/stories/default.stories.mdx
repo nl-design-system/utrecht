@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+export const Template = ({ innerHTML }) => `<utrecht-surface>${innerHTML}</utrecht-surface>`;
+
+<Meta
+  id="web-component-surface"
+  title="Web Component/Surface"
+  argTypes={{
+    innerHTML: {
+      description: "Surface content",
+      control: "text",
+    },
+  }}
+  parameters={{
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Surface component
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      innerHTML: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
