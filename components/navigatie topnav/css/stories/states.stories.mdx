@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { TopNav } from "./bem";
-import "./bem.scss";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Topnav } from "../template";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Navigatie TopNav"
+  id="css-topnav"
+  title="CSS Component/Navigatie Topnav/States"
   argTypes={{
     items: {
       description: "Menu items",
@@ -20,29 +21,13 @@ import "./bem.scss";
   }}
 />
 
-# Navigatie TopNav
+# Navigatie Topnav states
+
+## focus
 
 <Canvas>
   <Story
-    name="Top Nav"
-    args={{
-      items: [
-        { href: "https://example.com/", title: "Wonen en leven" },
-        { href: "https://example.com/", title: "Werk en inkomen" },
-        { href: "https://example.com/", title: "Ondernemen" },
-        { href: "https://example.com/", title: "Bestuur en organisatie" },
-      ],
-    }}
-  >
-    {TopNav.bind({})}
-  </Story>
-</Canvas>
-
-<ArgsTable story="Top Nav" />
-
-<Canvas>
-  <Story
-    name="Top Nav :focus"
+    name="focus"
     args={{
       items: [
         { href: "https://example.com/", title: "Wonen en leven" },
@@ -59,13 +44,15 @@ import "./bem.scss";
       },
     }}
   >
-    {TopNav.bind({})}
+    {Topnav.bind({})}
   </Story>
 </Canvas>
 
+## Current
+
 <Canvas>
   <Story
-    name="Top Nav :current"
+    name="current"
     args={{
       items: [
         { href: "https://example.com/", title: "Wonen en leven", current: true },
@@ -82,6 +69,6 @@ import "./bem.scss";
       },
     }}
   >
-    {TopNav.bind({})}
+    {Topnav.bind({})}
   </Story>
 </Canvas>
