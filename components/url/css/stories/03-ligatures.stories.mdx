@@ -1,0 +1,37 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, URLTemplate } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-url"
+  title="CSS Component/URL"
+  parameters={{
+    // This story is rendered as regular text, no testing required
+    percy: { skip: true },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# URL with common ligatures in top-level-domain
+
+It can be helpful to avoid rendering characters together as a ligatures, such as displaying `fi` as `ﬁ`. The CSS property [`font-variant-ligatures`](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-ligatures) can be used to disable ligatures.
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      url: "https://example.fi/",
+    }}
+    parameters={{
+      // This story uses different text rendering for ligatures, include in visual regression test
+      percy: { skip: false },
+    }}
+    name="ligatures"
+  >
+    {URLTemplate.bind({})}
+  </Story>
+</Canvas>
