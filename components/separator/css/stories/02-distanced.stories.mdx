@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Separator } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-separator"
+  title="CSS Component/Separator"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Separator
+
+Styling via `utrecht-separator` class name:
+
+<Canvas>
+  <Story
+    name="--distanced"
+    args={{
+      ...defaultArgs,
+      distanced: true,
+    }}
+  >
+    {Separator.bind({})}
+  </Story>
+</Canvas>
