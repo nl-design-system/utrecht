@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, UnorderedList } from "./bem";
-import "./bem.scss";
+import { defaultArgs, UnorderedList } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-unordered-list"
   title="CSS Component/Unordered List"
   argTypes={{
     distanced: {
@@ -25,10 +26,9 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Bulleted list"
+    name="Default"
     args={{
       ...defaultArgs,
-      distanced: true,
       items: [
         {
           textContent: "Lorem",
@@ -46,36 +46,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Bulleted list" />
-
-## Nested list
-
-<Canvas>
-  <Story
-    args={{
-      ...defaultArgs,
-      items: [
-        {
-          textContent: "Lorem",
-        },
-        {
-          textContent: "Ipsum",
-          items: [
-            {
-              textContent: "Lorem",
-            },
-            {
-              textContent: "Ipsum",
-            },
-          ],
-        },
-        {
-          textContent: "Dolor",
-        },
-      ],
-    }}
-    name="Nested Ordered list"
-  >
-    {UnorderedList.bind({})}
-  </Story>
-</Canvas>
+<ArgsTable story="Default" />
