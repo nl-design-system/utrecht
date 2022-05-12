@@ -1,0 +1,44 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, URLTemplate } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-url"
+  title="CSS Component/URL"
+  argTypes={{
+    url: {
+      description: "URL",
+      control: "text",
+    },
+    link: {
+      description: "Link",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    // This story is rendered as regular text, no testing required
+    percy: { skip: true },
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# URL
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      link: true,
+      url: "https://example.com/",
+    }}
+    name="Default"
+  >
+    {URLTemplate.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
