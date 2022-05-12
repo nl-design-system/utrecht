@@ -1,9 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ innerHTML = "" }) => `<utrecht-page-footer>${innerHTML}</utrecht-page-footer>`;
+import { PageFooter } from "../template";
 
 <Meta
+  id="web-component-page-footer"
   title="Web Component/Page Footer"
   argTypes={{
     innerHTML: {
@@ -22,13 +23,13 @@ export const Template = ({ innerHTML = "" }) => `<utrecht-page-footer>${innerHTM
 
 <Canvas>
   <Story
-    name="Page Footer"
+    name="Default"
     args={{
       innerHTML: "Footer content",
     }}
   >
-    {Template.bind({})}
+    {PageFooter.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Page Footer" />
+<ArgsTable story="Default" />
