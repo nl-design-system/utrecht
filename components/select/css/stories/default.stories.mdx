@@ -1,0 +1,57 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Select } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-select"
+  title="CSS Component/Select"
+  argTypes={{
+    disabled: {
+      description: "Disabled",
+      control: "boolean",
+    },
+    focus: {
+      description: "Focus",
+      control: "boolean",
+    },
+    invalid: {
+      description: "Invalid",
+      control: "boolean",
+    },
+    options: {
+      description: "Options",
+      type: {
+        name: "array",
+        required: true,
+      },
+    },
+    required: {
+      description: "Required",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form select
+
+Styling via the `<select>` element:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs
+    }}
+  >
+    {Select.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
