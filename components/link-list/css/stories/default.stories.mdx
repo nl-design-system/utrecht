@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { LinkList } from "./bem";
-import "./bem.scss";
+import { LinkList } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-link-list"
   title="CSS Component/Link List"
   argTypes={{
     links: {
@@ -28,7 +29,7 @@ The CSS code is currently very specific to Utrecht, and has no white label desig
 
 <Canvas>
   <Story
-    name="Link List"
+    name="Default"
     args={{
       links: [
         { href: "#", textContent: "Link 1" },
@@ -41,4 +42,4 @@ The CSS code is currently very specific to Utrecht, and has no white label desig
   </Story>
 </Canvas>
 
-<ArgsTable story="Link List" />
+<ArgsTable story="Default" />
