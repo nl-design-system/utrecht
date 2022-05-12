@@ -1,9 +1,10 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = () => `<utrecht-separator></utrecht-separator>`;
+import { Separator } from "../template";
 
 <Meta
+  id="web-component-separator"
   title="Web Component/Separator"
   argTypes={{}}
   parameters={{
@@ -16,5 +17,5 @@ export const Template = () => `<utrecht-separator></utrecht-separator>`;
 # Separator
 
 <Canvas>
-  <Story name="Separator">{Template.bind({})}</Story>
+  <Story name="Default">{Separator.bind({})}</Story>
 </Canvas>

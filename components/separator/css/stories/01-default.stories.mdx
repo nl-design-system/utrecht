@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Separator } from "./bem";
-import "./bem.scss";
+import { defaultArgs, Separator } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-separator"
   title="CSS Component/Separator"
   argTypes={{
     distanced: {
@@ -25,14 +26,13 @@ Styling via `utrecht-separator` class name:
 
 <Canvas>
   <Story
-    name="Separator"
+    name="Default"
     args={{
       ...defaultArgs,
-      distanced: true,
     }}
   >
     {Separator.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Separator" />
+<ArgsTable story="Default" />

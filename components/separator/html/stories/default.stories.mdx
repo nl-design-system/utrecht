@@ -1,13 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import "./html.scss";
-export const Template = () =>
-  `<section class="utrecht-html">
-  <hr>
-</section>`;
+import { Separator } from "../template";
+
+import "../index.scss";
 
 <Meta
+  id="html-separator"
   title="HTML Component/Separator"
   argTypes={{}}
   parameters={{
@@ -22,5 +21,5 @@ export const Template = () =>
 Styling via the `<hr>` element:
 
 <Canvas>
-  <Story name="Separator">{Template.bind({})}</Story>
+  <Story name="Default">{Separator.bind({})}</Story>
 </Canvas>
