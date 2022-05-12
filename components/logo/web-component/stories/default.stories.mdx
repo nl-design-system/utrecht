@@ -1,11 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = () => `<utrecht-logo></utrecht-logo>`;
+import { Logo } from "../template";
 
 <Meta
-  title="Web Component/Logo Gemeente Utrecht"
-  argTypes={{}}
+  id="web-component-logo"
+  title="Web Component/Logo"
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -16,5 +16,5 @@ export const Template = () => `<utrecht-logo></utrecht-logo>`;
 # Logo Gemeente Utrecht
 
 <Canvas>
-  <Story name="Logo">{Template.bind({})}</Story>
+  <Story name="Default">{Logo.bind({})}</Story>
 </Canvas>
