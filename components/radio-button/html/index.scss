@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-@import "./bem";
+@import "../css";
 
 .utrecht-html input[type="radio" i] {
   @extend .utrecht-radio-button;
