@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Menulijst } from "./bem";
-import "./bem.scss";
+import { Menulijst } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-menulijst"
   title="CSS Component/Menulijst"
   parameters={{
     status: {
@@ -19,7 +20,7 @@ import "./bem.scss";
 # Menulijst
 
 <Canvas>
-  <Story name="menulijst">{Menulijst.bind({})}</Story>
+  <Story name="Default">{Menulijst.bind({})}</Story>
 </Canvas>
 
-<ArgsTable story="menulijst" />
+<ArgsTable story="Default" />
