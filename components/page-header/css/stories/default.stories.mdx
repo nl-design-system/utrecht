@@ -1,10 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ innerHTML = "" }) => `<utrecht-page-header>${innerHTML}</utrecht-page-header>`;
+import { PageHeader } from "../template";
+import "../index.scss";
 
 <Meta
-  title="Web Component/Page Header"
+  id="css-page-header"
+  title="CSS Component/Page Header"
   argTypes={{
     innerHTML: {
       description: "HTML content",
@@ -12,9 +14,7 @@ export const Template = ({ innerHTML = "" }) => `<utrecht-page-header>${innerHTM
     },
   }}
   parameters={{
-    status: {
-      type: "WORK IN PROGRESS",
-    },
+    status: "WORK IN PROGRESS",
   }}
 />
 
@@ -22,13 +22,13 @@ export const Template = ({ innerHTML = "" }) => `<utrecht-page-header>${innerHTM
 
 <Canvas>
   <Story
-    name="Page Header"
+    name="Default"
     args={{
       innerHTML: "Header content",
     }}
   >
-    {Template.bind({})}
+    {PageHeader.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Page Header" />
+<ArgsTable story="Default" />

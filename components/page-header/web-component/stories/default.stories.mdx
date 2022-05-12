@@ -1,11 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageHeader } from "./bem";
-import "./bem.scss";
+import { PageHeader } from "../template";
 
 <Meta
-  title="CSS Component/Page Header"
+  id="web-component-page-header"
+  title="Web Component/Page Header"
   argTypes={{
     innerHTML: {
       description: "HTML content",
@@ -13,7 +13,9 @@ import "./bem.scss";
     },
   }}
   parameters={{
-    status: "WORK IN PROGRESS",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
   }}
 />
 
@@ -21,7 +23,7 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Page Header"
+    name="Default"
     args={{
       innerHTML: "Header content",
     }}
@@ -30,4 +32,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Page Header" />
+<ArgsTable story="Default" />
