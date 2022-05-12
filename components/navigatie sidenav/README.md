@@ -42,7 +42,7 @@ Je gebruikt dit component om...
 
 Je kan beter kijken naar een alternatief als...
 
-- ...het om een kleine site gaat met minder dan vijf pagina's. Probeer de site dan horizontaal in te delen zonder navigatie hierarchie. Het Top-nav component biedt dan uitkomst.
+- ...het om een kleine site gaat met minder dan vijf pagina's. Probeer de site dan horizontaal in te delen zonder navigatie hierarchie. Het Topnav component biedt dan uitkomst.
 - ...het toevoegen van een sidenav meer verwarring geeft dan overzicht. Bijvoorbeeld als er veel manieren om te navigeren zijn.
 - ...de componenten die weergegeven worden in de sidenav geen logisch verband met elkaar hebben en de gebruiker niet helpen met het geven van overzicht.
 
