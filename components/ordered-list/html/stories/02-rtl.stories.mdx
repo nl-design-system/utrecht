@@ -1,0 +1,21 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { OrderedListArabic } from "../template";
+
+import "../index.scss";
+
+<Meta
+  id="html-ordered-list"
+  title="HTML Component/Ordered List"
+  argTypes={{}}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+## Ordered list in Arabic
+
+<Canvas>
+  <Story name="right-to-left">{OrderedListArabic.bind({})}</Story>
+</Canvas>

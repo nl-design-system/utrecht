@@ -1,10 +1,11 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { OrderedList } from "./bem";
-import "./bem.scss";
+import { OrderedList } from "../template";
+import "../index.scss";
 
 <Meta
+  id="css-ordered-list"
   title="CSS Component/Ordered List"
   argTypes={{
     distanced: {
@@ -25,9 +26,8 @@ import "./bem.scss";
 
 <Canvas>
   <Story
-    name="Ordered list"
+    name="Default"
     args={{
-      distanced: true,
       items: [
         {
           textContent: "Lorem",
@@ -45,4 +45,4 @@ import "./bem.scss";
   </Story>
 </Canvas>
 
-<ArgsTable story="Ordered list" />
+<ArgsTable story="Default" />
