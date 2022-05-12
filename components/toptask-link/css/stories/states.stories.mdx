@@ -1,0 +1,79 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 Robbert Broersma
+Copyright (c) 2021 Gemeente Utrecht
+-->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, ToptaskLink } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-toptask-link"
+  title="CSS Component/Toptask Link/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Toptask Link states
+
+## Hover
+
+Styling via the `.utrecht-toptask-link--hover` class name:
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      ...defaultArgs,
+      hover: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskLink.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+Styling via the `.utrecht-toptask-link--focus` class name:
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      ...defaultArgs,
+      focus: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskLink.bind({})}
+  </Story>
+</Canvas>
+
+## Focus visible
+
+Styling via the `.utrecht-toptask-link--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="focus-visible"
+    args={{
+      ...defaultArgs,
+      focus: true,
+      focusVisible: true,
+      href: "#",
+      icon: "utrecht-icon-afval",
+      textContent: "Afval",
+    }}
+  >
+    {ToptaskLink.bind({})}
+  </Story>
+</Canvas>

@@ -10,7 +10,7 @@ export const defaultArgs = {
   required: false,
   type: 'text',
   value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
-}
+};
 
 export const Textbox = ({
   autoComplete,
@@ -33,4 +33,4 @@ export const Textbox = ({
   }${required ? ' required' : ''}${readOnly ? ' readonly' : ''} value="${value}"${
     autoComplete ? ` autocomplete="${autoComplete}"` : ''
   }>
-</div>`
+</div>`;
