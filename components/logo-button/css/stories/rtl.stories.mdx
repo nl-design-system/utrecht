@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, LogoButton } from "../template";
+import "../index.scss";
+
+<Meta
+  title="CSS Component/Logo Button"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button met logo Right-to-left
+
+<Canvas>
+  <Story
+    name="right-to-left"
+    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
+    args={{
+      ...defaultArgs,
+      label: "تسجيل الدخول باستخدام DigiD",
+      textContent: "تسجيل الدخول",
+      logo: "digid",
+    }}
+  >
+    {LogoButton.bind({})}
+  </Story>
+</Canvas>
