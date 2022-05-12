@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textarea } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-textarea"
+  title="HTML Component/Textarea"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Textarea component with placeholder
+
+<Canvas>
+  <Story
+    name="with placeholder"
+    args={{
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
