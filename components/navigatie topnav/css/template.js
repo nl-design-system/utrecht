@@ -5,7 +5,7 @@
 
 import clsx from 'clsx';
 
-export const TopNav = ({ items }) => `<div class="utrecht-navhtml">
+export const Topnav = ({ items }) => `<div class="utrecht-navhtml">
   <nav class="topnav">
     <ul class="utrecht-topnav__list">${items
       .map(

@@ -1,0 +1,42 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Topnav } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-topnav"
+  title="CSS Component/Navigatie Topnav"
+  argTypes={{
+    items: {
+      description: "Menu items",
+      type: {
+        name: "array",
+        required: true,
+      },
+    },
+  }}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Navigatie Topnav
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        { href: "https://example.com/", title: "Wonen en leven" },
+        { href: "https://example.com/", title: "Werk en inkomen" },
+        { href: "https://example.com/", title: "Ondernemen" },
+        { href: "https://example.com/", title: "Bestuur en organisatie" },
+      ],
+    }}
+  >
+    {Topnav.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
