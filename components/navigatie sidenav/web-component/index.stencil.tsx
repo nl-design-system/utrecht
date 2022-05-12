@@ -3,7 +3,7 @@ import clsx from 'clsx';
 
 @Component({
   tag: 'utrecht-sidenav',
-  styleUrl: 'bem.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class Sidenav {

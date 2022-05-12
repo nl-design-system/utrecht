@@ -1,0 +1,53 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 A Herring
+-->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Sidenav } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-sidenav"
+  title="CSS Component/Navigatie Sidenav"
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Navigatie Sidenav met children
+
+<Canvas>
+  <Story
+    name="children"
+    args={{
+      items: [
+        { href: "#", title: "Home" },
+        { href: "#", title: "Wonen en leven" },
+        { href: "#", title: "Parken en groen" },
+        {
+          href: "#",
+          title: "Bomen",
+          haschildren: true,
+          children: [
+            { href: "#", title: "Bomennieuws" },
+            { href: "#", title: "Bomen planten en kappen", current: true },
+            { href: "#", title: "Bomenzorg en bomenbeleid" },
+            { href: "#", title: "Ziekten en plagen" },
+            { href: "#", title: "Overlast bomen" },
+            { href: "#", title: "Zorgvuldig met bomen omgaan" },
+          ],
+        },
+      ],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Sidenav.bind({})}
+  </Story>
+</Canvas>

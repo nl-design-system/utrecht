@@ -1,0 +1,46 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 A Herring
+-->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Sidenav } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-sidenav"
+  title="CSS Component/Navigatie Sidenav"
+  argTypes={{
+    items: {
+      description: "Menu items",
+      control: "array",
+    },
+    pseudoElements: {
+      description: "Render using CSS pseudo elements",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Navigatie Sidenav
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items: [
+        { href: "#", title: "Crumb #1" },
+        { href: "#", title: "Crumb #2" },
+        { href: "#", title: "Crumb #3" },
+      ],
+      pseudoElements: false,
+    }}
+  >
+    {Sidenav.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
