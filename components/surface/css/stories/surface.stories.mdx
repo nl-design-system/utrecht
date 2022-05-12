@@ -1,10 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-export const Template = ({ innerHTML }) => `<utrecht-surface>${innerHTML}</utrecht-surface>`;
+import { Surface } from "../template";
+
+import "../index.scss";
 
 <Meta
-  title="Web Component/Surface"
+  id="css-surface"
+  title="CSS Component/Surface"
   argTypes={{
     innerHTML: {
       description: "Surface content",
@@ -23,13 +26,13 @@ export const Template = ({ innerHTML }) => `<utrecht-surface>${innerHTML}</utrec
 
 <Canvas>
   <Story
-    name="Surface"
+    name="Default"
     args={{
       innerHTML: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
-    {Template.bind({})}
+    {Surface.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Surface" />
+<ArgsTable story="Default" />
