@@ -1,57 +1,10 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Description, IconGallery, IconItem, Meta, Story } from "@storybook/addon-docs";
-import { ComponentTokensSection } from "../../documentation/components/ComponentTokensSection";
-import tokens from "../../proprietary/design-tokens/dist/index.json";
-import design from "./design.md";
-import iconSet from "./icon-set.json";
-import tokensDefinition from "./tokens.json";
-
-export const IconExample = ({ color, icon, size }) => `<button type="button" style="
-  --utrecht-icon-color: ${color};
-  --utrecht-icon-size: ${size}px;
-  align-items: center;
-  background-color: transparent;
-  border: 1px solid silver;
-  display: flex;
-  gap: 10px;
-  padding-inline: 10px;
-">
-  <${icon}></${icon}>
-  Search
-</button>`;
-
-export const removeMarkdownH1 = (markdown) => markdown.replace(/(^|\n)#\s.+/, "");
-
-<!--
- * Convert `# First heading` to `## First heading` with an adjustment of +1
- * Convert `## Another heading` to `# Another heading` with an adjustment of -1
- * Since no Markdown parsing, this function can have unintended side effects
- * such as adjusting headings inside Markdown code blocks.
--->
-
-export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
-  markdown.replace(/(^|\n)(#+)/g, (_, lineFeed, headingPrefix) => {
-    return `${lineFeed}${"#".repeat(headingPrefix.length + adjustment)}`;
-  });
+import { Canvas, IconGallery, IconItem, Meta } from "@storybook/addon-docs";
 
 <Meta
-  title="Utrecht/Iconen"
-  argTypes={{
-    color: {
-      description: "Color of the icon",
-      control: "color",
-    },
-    icon: {
-      description: "Icon",
-      control: { type: "select" },
-      options: [...iconSet],
-    },
-    size: {
-      description: "Size of the icon (in pixels)",
-      control: "number",
-    },
-  }}
+  id="utrecht-iconen"
+  title="Utrecht/Iconen/Overzicht"
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -62,23 +15,8 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
 # Iconen
 
 <Canvas>
-  <Story
-    name="Iconen"
-    args={{
-      color: "#888888",
-      icon: "utrecht-icon-instagram",
-      size: 32,
-    }}
-    parameters={{
-      // This is an interactive example where styling is unimportant, ignore this test
-      percy: false,
-    }}
-  >
-    {IconExample.bind({})}
-  </Story>
+  <utrecht-icon-loupe></utrecht-icon-loupe>
 </Canvas>
-
-<ArgsTable story="Iconen" />
 
 ## Social Media
 
@@ -173,9 +111,3 @@ export const adjustHeadingLevel = (markdown = "", adjustment = 0) =>
     <utrecht-icon-zoomout></utrecht-icon-zoomout>
   </IconItem>
 </IconGallery>
-
-<Description>{design}</Description>
-
-## Design Tokens
-
-<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-icon"></ComponentTokensSection>
