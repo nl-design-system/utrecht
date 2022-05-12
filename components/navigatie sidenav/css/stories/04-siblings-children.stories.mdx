@@ -1,37 +1,27 @@
 <!--
 @license EUPL-1.2
-Copyright (c) 2021 Gemeente Utrecht
-Copyright (c) 2021 Robbert Broersma
+Copyright (c) 2021 A Herring
 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-
-import "./bem.scss";
-
-export const Template = ({ json }) => `<utrecht-sidenav json="${json.replace(/"/g, "&quot;")}"></utrecht-sidenav>`;
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Sidenav } from "../template";
+import "../index.scss";
 
 <Meta
-  title="Web Component/Sidebar Navigation"
-  argTypes={{
-    json: {
-      description: "JSON",
-      control: "text",
-    },
-  }}
+  id="css-sidenav"
+  title="CSS Component/Navigatie Sidenav"
   parameters={{
-    status: {
-      type: "WORK IN PROGRESS",
-    },
+    status: "IN DEVELOPMENT",
   }}
 />
 
-# Sidebar Navigation
+# Navigatie Sidenav met siblings en children
 
 <Canvas>
   <Story
-    name="Sidebar Navigation"
+    name="children and siblings"
     args={{
-      json: JSON.stringify([
+      items: [
         { href: "#", title: "Home" },
         { href: "#", title: "Wonen en leven" },
         { href: "#", title: "Parken en groen" },
@@ -55,11 +45,16 @@ export const Template = ({ json }) => `<utrecht-sidenav json="${json.replace(/"/
         { href: "#", title: "Dieren", sibling: true },
         { href: "#", title: "Groenonderhoud", sibling: true },
         { href: "#", title: "Zelfbeheer", sibling: true },
-      ]),
+      ],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
     }}
   >
-    {Template.bind({})}
+    {Sidenav.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable story="Sidebar Navigation" />

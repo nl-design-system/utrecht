@@ -2,7 +2,7 @@
 
 <!-- \*Status: **In development\*** -->
 
-# 1. Navigatie - Side Nav
+# 1. Navigatie - Sidenav
 
 Een hierarchische, verticaal weergegeven manier om te navigeren die geplaatst is aan de zijkant van een pagina.
 

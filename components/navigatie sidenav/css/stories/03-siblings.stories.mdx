@@ -1,0 +1,48 @@
+<!--
+@license EUPL-1.2
+Copyright (c) 2021 A Herring
+-->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Sidenav } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-sidenav"
+  title="CSS Component/Navigatie Sidenav"
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Navigatie Sidenav met siblings
+
+<Canvas>
+  <Story
+    name="siblings"
+    args={{
+      items: [
+        { href: "#", title: "Home" },
+        { href: "#", title: "Wonen en leven" },
+        { href: "#", title: "Parken en groen" },
+        { href: "#", title: "Parken en plantsoenen", sibling: true },
+        { href: "#", title: "Landgoederen Amelisweerd en Rhijnauwen", sibling: true },
+        { href: "#", title: "Begraafplaatsen", sibling: true },
+        { href: "#", title: "Volkstuinen en stadslandbouw", sibling: true },
+        { href: "#", title: "Dieren", sibling: true },
+        { href: "#", title: "Groenonderhoud", sibling: true },
+        { href: "#", title: "Zelfbeheer", sibling: true },
+      ],
+      pseudoElements: false,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {Sidenav.bind({})}
+  </Story>
+</Canvas>
