@@ -1,0 +1,110 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { MapControlButton } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-map-control-button"
+  title="CSS Component/Map Control Button/States"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button states
+
+## Hover
+
+Styling via the `.utrecht-mapcontrolbutton--hover` class name:
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      hover: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+Styling via the `.utrecht-mapcontrolbutton--focus` class name:
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      focus: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
+
+## Focus visible
+
+Styling via the `.utrecht-mapcontrolbutton--focus-visible` class name:
+
+<Canvas>
+  <Story
+    name="focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      disabled: true,
+      icon: "utrecht-icon-zoomin",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          state: "closed",
+        },
+      },
+    }}
+  >
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
