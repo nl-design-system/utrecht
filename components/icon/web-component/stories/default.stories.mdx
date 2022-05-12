@@ -1,0 +1,51 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import iconSet from "../../icon-set.json";
+import { IconExample } from "../template";
+
+<Meta
+  id="web-component-icon"
+  title="Web Component/Icon"
+  argTypes={{
+    color: {
+      description: "Color of the icon",
+      control: "color",
+    },
+    icon: {
+      description: "Icon",
+      control: { type: "select" },
+      options: [...iconSet],
+    },
+    size: {
+      description: "Size of the icon (in pixels)",
+      control: "number",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Icon
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      color: "#888888",
+      icon: "utrecht-icon-loupe",
+      size: 32,
+    }}
+    parameters={{
+      // This is an interactive example where styling is unimportant, ignore this test
+      percy: false,
+    }}
+  >
+    {IconExample.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

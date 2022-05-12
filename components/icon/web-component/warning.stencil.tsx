@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-icon-warning',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class IconWarning {

@@ -2,7 +2,7 @@ import { Component, h } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-icon-arrow',
-  styleUrl: 'stencil.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class IconArrow {
