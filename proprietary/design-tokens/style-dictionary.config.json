@@ -16,7 +16,7 @@
         },
         {
           "format": "javascript/module",
-          "destination": "tree.js"
+          "destination": "tokens.js"
         }
       ]
     },
@@ -25,8 +25,12 @@
       "buildPath": "dist/",
       "files": [
         {
-          "destination": "tree.json",
+          "destination": "index.tokens.json",
           "format": "json"
+        },
+        {
+          "destination": "index.json",
+          "format": "json/list"
         }
       ]
     },
@@ -80,7 +84,7 @@
         },
         {
           "format": "typescript/module-declarations",
-          "destination": "tree.d.ts"
+          "destination": "tokens.d.ts"
         }
       ]
     },
