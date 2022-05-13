@@ -28,7 +28,7 @@ Design decisions at a component level, to make components look a very specific w
 
 ## Files in this package
 
-### `dist/theme/index.css`
+### `dist/index.css`
 
 Opt-in way to apply all the CSS variables to HTML elements with the `utrecht-theme` class name:
 
@@ -41,7 +41,7 @@ Opt-in way to apply all the CSS variables to HTML elements with the `utrecht-the
 
 This method is the preferred way to style the page.
 
-### `dist/index.css`
+### `dist/root.css`
 
 Automatically applies all the CSS variables to HTML elements to the `:root` element:
 
@@ -109,6 +109,14 @@ To use the design tokens in your site via CSS variables, first include the desig
 
 ```html
 <link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
+```
+
+Then add the `utrecht-theme` class name to your page:
+
+```html
+<html class="utrecht-theme">
+  ...
+</html>
 ```
 
 Now the CSS variables will be available and you can use of all the design tokens:

@@ -28,7 +28,7 @@ Combine it with the latest Web Components from the NL Design System community, f
 Then you can go ahead and see the result:
 
 ```html
-<utrecht-html-content>
+<utrecht-html-content class="utrecht-theme">
   <h1>Page styled with NL Design System</h1>
 </utrecht-html-content>
 ```

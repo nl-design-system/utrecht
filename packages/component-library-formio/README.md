@@ -58,7 +58,7 @@ To use the Utrecht theme for the components, include the design tokens CSS in yo
 npm install --save-dev --save-exact @utrecht/design-tokens
 ```
 
-Include the CSS variables in your page.
+Include the CSS variables in your page, and apply the `utrecht-theme` class name.
 
 ```js
 import "@utrecht/design-tokens/dist/index.css";
