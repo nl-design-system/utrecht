@@ -32,7 +32,7 @@ module.exports = {
         },
         theme: {
           customCss: [
-            require.resolve('@utrecht/design-tokens/dist/theme/index.css'),
+            require.resolve('@utrecht/design-tokens/dist/index.css'),
             require.resolve('./src/styles/custom.scss'),
           ],
         },

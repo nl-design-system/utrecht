@@ -49,7 +49,7 @@ import "@utrecht/component-library-css/dist/bem.css";
 
 // Package with Utrecht design tokens for the white-label components
 // Substitute with your another theme for other organisations.
-import "@utrecht/design-tokens/dist/theme/index.css";
+import "@utrecht/design-tokens/dist/index.css";
 
 export const MyPage = () => (
   // Class name to apply the design tokens from the theme

@@ -48,7 +48,7 @@ After this you can use web components in your templates:
 <utrecht-paragraph>Hello world!</utrecht-paragraph>
 ```
 
-To use the Utrecht theme for the components, include the design tokens CSS in your `angular.json`:
+To use the Utrecht theme for the components, use the `utrecht-theme` class name and include the design tokens CSS in your `angular.json`:
 
 ```json
 {

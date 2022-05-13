@@ -50,7 +50,7 @@ For example, in your `App.vue`:
 Since the implementation of the web components needs to be loaded in the browser, include the following effect to import web component library from `@utrecht/web-component-library-stencil`, for example in your `main.js`:
 
 ```js
-import "@utrecht/design-tokens/dist/theme/index.css";
+import "@utrecht/design-tokens/dist/index.css";
 import { defineCustomElements } from "@utrecht/web-component-library-stencil";
 
 createApp(App).use(router).mount("#app");
