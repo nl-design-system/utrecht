@@ -9,7 +9,7 @@
 .utrecht-button-link {
   @extend .utrecht-button;
 
-  cursor: pointer;
+  cursor: var(--utrecht-action-navigate-cursor, pointer);
   text-decoration: none;
 }
 
