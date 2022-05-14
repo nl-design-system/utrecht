@@ -3,6 +3,7 @@
     "action": {
       "busy": { "cursor": { "value": "wait" } },
       "disabled": { "cursor": { "value": "not-allowed" } },
+      "navigate": { "cursor": { "value": "pointer" } },
       "submit": { "cursor": { "value": "pointer" } }
     }
   }
