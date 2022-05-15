@@ -11,7 +11,7 @@ export const defaultArgs = {
   options: exampleOptions,
 };
 
-export const Template = ({ disabled = false, invalid = false, options = [], required = false }) =>
+export const Select = ({ disabled = false, invalid = false, options = [], required = false }) =>
   `<section class="utrecht-html">
   <select${invalid ? ' aria-invalid="true"' : ''}${disabled ? ' disabled' : ''}${
     required ? ' required' : ''
