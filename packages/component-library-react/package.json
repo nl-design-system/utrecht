@@ -18,9 +18,9 @@
   "sideEffects": false,
   "scripts": {
     "build": "tsc --project ./tsconfig.json",
-    "clean": "rimraf dist/",
+    "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
-    "test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose",
+    "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
   },
   "main": "./dist/cjs/index.js",
