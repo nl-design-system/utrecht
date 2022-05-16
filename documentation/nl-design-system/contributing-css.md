@@ -97,7 +97,7 @@ Only use dashes to separate segments of the CSS variable name:
 
 If you need to style HTML elements without class names, define those selectors in a separate file. For example:
 
-`bem.css`
+`css/index.css`
 
 ```css
 .nl-link {
@@ -112,7 +112,7 @@ If you need to style HTML elements without class names, define those selectors i
 `html.scss`:
 
 ```scss
-@import "./bem";
+@import "../css";
 
 a {
   @extend .nl-link;
