@@ -35,7 +35,10 @@ Styling via the `.utrecht-button-group` class name:
     name="Default"
     args={{
       ...defaultArgs,
-      innerHTML: [Button({ textContent: "Save and continue" }), Button({ textContent: "Back" })].join("\n"),
+      innerHTML: [
+        Button({ textContent: "Save and continue", appearance: "primary-action-button" }),
+        Button({ textContent: "Back", appearance: "secondary-action-button" }),
+      ].join("\n"),
     }}
   >
     {ButtonGroup.bind({})}
