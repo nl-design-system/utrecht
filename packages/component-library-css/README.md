@@ -16,7 +16,7 @@ Theoretically you can include the components in your HTML page like so, but this
 <html lang="en">
   <head>
     <title>Example page</title>
-    <link rel="stylesheet" href="node_modules/@utrecht/component-library-css/dist" />
+    <link rel="stylesheet" href="node_modules/@utrecht/component-library-css" />
   </head>
   <body>
     <h1 class="utrecht-heading-1">Home</h1>
@@ -29,7 +29,7 @@ The BEM class names can be particularly useful to include only the CSS you need 
 
 ```js
 import React from "react";
-import style from "@utrecht/component-library-css/dist";
+import style from "@utrecht/component-library-css";
 
 export default class ExamplePage extends React.Component {
   render() {
