@@ -25,7 +25,10 @@ Styling via the `.utrecht-button-group--vertical` class name:
     args={{
       ...defaultArgs,
       direction: "vertical",
-      innerHTML: [Button({ textContent: "Save and continue" }), Button({ textContent: "Back" })].join("\n"),
+      innerHTML: [
+        Button({ textContent: "Save and continue", appearance: "primary-action-button" }),
+        Button({ textContent: "Back", appearance: "secondary-action-button" }),
+      ].join("\n"),
     }}
   >
     {ButtonGroup.bind({})}
