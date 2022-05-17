@@ -25,5 +25,6 @@
     "prebuild": "npm run clean",
     "build": "sass src/:dist/ --load-path=../../node_modules/ --no-source-map",
     "clean": "rimraf dist/"
-  }
+  },
+  "main": "dist/index.css"
 }
