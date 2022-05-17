@@ -1,0 +1,88 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "../components/button/css/template";
+
+export const ButtonTable = ({ textContent }) => `
+<table>
+  <thead>
+    <tr><th></th><th>Default</th><th>Hover</th><th>Focus</th><th>Focus visible</th><th>Disabled</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Default button</th>
+      <td>${Button({ textContent })}</td>
+      <td>${Button({ textContent, hover: true })}</td>
+      <td>${Button({ textContent, focus: true })}</td>
+      <td>${Button({ textContent, focusVisible: true })}</td>
+      <td>${Button({ textContent, disabled: true })}</td>
+    </tr>
+    <tr>
+      <th>Primary action</th>
+      <td>${Button({ textContent, primaryAction: true })}</td>
+      <td>${Button({ textContent, primaryAction: true, hover: true })}</td>
+      <td>${Button({ textContent, primaryAction: true, focus: true })}</td>
+      <td>${Button({ textContent, primaryAction: true, focusVisible: true })}</td>
+      <td>${Button({ textContent, primaryAction: true, disabled: true })}</td>
+    </tr>
+    <tr>
+      <th>Alternative action</th>
+      <td>${Button({ textContent, secondaryAction: true })}</td>
+      <td>${Button({ textContent, secondaryAction: true, hover: true })}</td>
+      <td>${Button({ textContent, secondaryAction: true, focus: true })}</td>
+      <td>${Button({ textContent, secondaryAction: true, focusVisible: true })}</td>
+      <td>${Button({ textContent, secondaryAction: true, disabled: true })}</td>
+    </tr>
+    <tr>
+      <th>Tertiary</th>
+      <td>${Button({ textContent, tertiaryAction: true })}</td>
+      <td>${Button({ textContent, tertiaryAction: true, hover: true })}</td>
+      <td>${Button({ textContent, tertiaryAction: true, focus: true })}</td>
+      <td>${Button({ textContent, tertiaryAction: true, focusVisible: true })}</td>
+      <td>${Button({ textContent, tertiaryAction: true, disabled: true })}</td>
+    </tr>
+    <tr>
+      <th>Danger</th>
+      <td>${Button({ textContent, dangerousAction: true })}</td>
+      <td>${Button({ textContent, dangerousAction: true, hover: true })}</td>
+      <td>${Button({ textContent, dangerousAction: true, focus: true })}</td>
+      <td>${Button({ textContent, dangerousAction: true, focusVisible: true })}</td>
+      <td>${Button({ textContent, dangerousAction: true, disabled: true })}</td>
+    </tr>
+    <tr>
+      <th>Destructive</th>
+      <td>${Button({ textContent, destructiveAction: true })}</td>
+      <td>${Button({ textContent, destructiveAction: true, hover: true })}</td>
+      <td>${Button({ textContent, destructiveAction: true, focus: true })}</td>
+      <td>${Button({ textContent, destructiveAction: true, focusVisible: true })}</td>
+      <td>${Button({ textContent, destructiveAction: true, disabled: true })}</td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+<Meta
+  title="CSS Component/Button/Overview of buttons"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Overview of buttons
+
+## Grid of button variants
+
+<Canvas>
+  <Story
+    name="Grid of button variants"
+    args={{
+      textContent: "Label",
+    }}
+  >
+    {ButtonTable.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Grid of button variants" />

@@ -108,6 +108,7 @@ however browsers don't seem to have implemented great looking supixel tweening y
 .utrecht-link--focus {
   @include utrecht-focus;
 
+  background-color: var(--utrecht-link-focus-background-color, transparent);
   color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
   text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
   text-decoration-skip: none;

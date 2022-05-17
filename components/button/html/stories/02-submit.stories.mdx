@@ -1,0 +1,40 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-button"
+  title="HTML Component/Button"
+  decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+## Types
+
+### Submit
+
+Button with `submit` type:
+
+<Canvas>
+  <Story
+    name="Submit button"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      type: "submit",
+    }}
+    parameters={{
+      // `cursor` cannot be tested using visual regression testing, ignore this story
+      percy: { skip: true },
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

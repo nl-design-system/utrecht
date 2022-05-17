@@ -1,0 +1,65 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button, defaultArgs } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-button"
+  title="HTML Component/Button"
+  decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+## States
+
+### Disabled
+
+Button with `disabled` state:
+
+<Canvas>
+  <Story
+    name="Disabled button"
+    args={{
+      ...defaultArgs,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      disabled: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Disabled and focusable
+
+Button with `disabled` state that remains focusable.
+
+Since the `disabled` attribute on HTML makes it impossible to focus the element, the `aria-disabled="true"` attribute is used instead. Any script handling the activation of such button must first check wether the button is disabled before executing the script, because without the `disabled` attribute the browser no longer prevents activation. For `type="reset"` and `type="submit"` additional scripting is required too, to prevent default behavior.
+
+Considerations for the focusable disabled button:
+
+- must display a focus ring when focused
+- must not appear interactive
+  - must not change appearance for the active state
+  - must not change appearance for the focus state
+  - must not change appearance for the hover state
+
+<Canvas>
+  <Story
+    name="Disabled and focusable button"
+    args={{
+      ...defaultArgs,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      disabled: true,
+      focusable: true,
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

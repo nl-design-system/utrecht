@@ -1,37 +1,13 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Button, defaultArgs } from "./bem";
-import "./bem.scss";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Button, defaultArgs } from "../template";
+import "../index.scss";
 
 <Meta
-  title="CSS Component/Button"
-  argTypes={{
-    textContent: {
-      description: "Button text",
-      control: "text",
-    },
-    busy: {
-      description: "Busy",
-      control: "boolean",
-    },
-    focus: {
-      description: "Focus",
-      control: "boolean",
-    },
-    focusVisible: {
-      description: "Focus visible",
-      control: "boolean",
-    },
-    hover: {
-      description: "Hover",
-      control: "boolean",
-    },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-  }}
+  id="css-button--state"
+  title="CSS Component/Button/States"
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -40,22 +16,6 @@ import "./bem.scss";
 />
 
 # Button
-
-Styling via the `.utrecht-button` class name:
-
-<Canvas>
-  <Story
-    name="Button"
-    args={{
-      ...defaultArgs,
-      textContent: "Read more...",
-    }}
-  >
-    {Button.bind({})}
-  </Story>
-</Canvas>
-
-<ArgsTable story="Button" />
 
 ## States
 
@@ -67,6 +27,7 @@ Styling via the `.utrecht-button--active` class name:
   <Story
     name="Button active"
     args={{
+      ...defaultArgs,
       active: true,
       textContent: "Read more...",
     }}
@@ -83,6 +44,7 @@ Styling via the `.utrecht-button--hover` class name:
   <Story
     name="Button hover"
     args={{
+      ...defaultArgs,
       textContent: "Read more...",
       hover: true,
     }}
@@ -99,6 +61,7 @@ Styling via the `.utrecht-button--focus` class name:
   <Story
     name="Button focus"
     args={{
+      ...defaultArgs,
       textContent: "Read more...",
       focus: true,
     }}
@@ -115,6 +78,7 @@ Styling via the `.utrecht-button--focus-visible` class name:
   <Story
     name="Button focus visible"
     args={{
+      ...defaultArgs,
       textContent: "Read more...",
       focus: true,
       focusVisible: true,
@@ -132,6 +96,7 @@ Styling via the `.utrecht-button--disabled` class name:
   <Story
     name="Button disabled"
     args={{
+      ...defaultArgs,
       textContent: "Read more...",
       disabled: true,
     }}
@@ -148,6 +113,7 @@ Styling via the `.utrecht-button--busy` class name:
   <Story
     name="Button busy"
     args={{
+      ...defaultArgs,
       busy: true,
       textContent: "Read more...",
     }}
