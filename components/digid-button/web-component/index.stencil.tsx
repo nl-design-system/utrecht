@@ -17,7 +17,11 @@ export class DigidButton {
     return (
       <div class="utrecht-digid-button">
         <utrecht-digid-logo class="utrecht-digid-button__logo"></utrecht-digid-logo>
-        <utrecht-button class="utrecht-digid-button__button" type={this.type || null}>
+        <utrecht-button
+          appearance="primary-action-button"
+          class="utrecht-digid-button__button"
+          type={this.type || null}
+        >
           <slot></slot>
         </utrecht-button>
       </div>

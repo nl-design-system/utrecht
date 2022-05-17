@@ -11,5 +11,5 @@ export const SearchBar = ({
   value,
 }) => `<form class="utrecht-search-bar" role="search" aria-label="${formLabel}">
   <input type="search" class="utrecht-search-bar__input utrecht-textbox utrecht-textbox utrecht-textbox--html-input" name="q" autocomplete="off" spellcheck="false" value="${value}" aria-label="${inputLabel}">
-  <button type="submit" value="Zoeken" class="utrecht-search-bar__button utrecht-button">${buttonLabel}</button>
+  <button type="submit" value="Zoeken" class="utrecht-search-bar__button utrecht-button utrecht-button--primary-action">${buttonLabel}</button>
 </form>`;
