@@ -10,7 +10,7 @@ export const defaultArgs = {
 
 export const DigidButton = ({ label = '', textContent = '' }) => `<div class="utrecht-digid-button">
   <utrecht-digid-logo class="utrecht-digid-button__logo"></utrecht-digid-logo>
-  <button class="utrecht-digid-button__button utrecht-button" type="button"${
+  <button class="utrecht-digid-button__button utrecht-button utrecht-button--primary-action" type="button"${
     label ? ` aria-label="${label}"` : ''
   }>${textContent}</button>
 </div>`;

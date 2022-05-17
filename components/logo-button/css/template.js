@@ -11,7 +11,7 @@ export const defaultArgs = {
 
 export const LogoButton = ({ label = '', textContent = '', logo = '' }) => `<div class="utrecht-logo-button">
   <utrecht-${logo}-logo class="utrecht-logo-button__logo"></utrecht-${logo}-logo>
-  <button class="utrecht-logo-button__button utrecht-button" type="button"${
+  <button class="utrecht-logo-button__button utrecht-button utrecht-button--primary-action" type="button"${
     label ? ` aria-label="${label}"` : ''
   }>${textContent}</button>
 </div>`;
