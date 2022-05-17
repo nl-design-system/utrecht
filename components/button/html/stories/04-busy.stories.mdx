@@ -1,0 +1,63 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button, defaultArgs } from "../template";
+import "../index.scss";
+
+<Meta
+  id="html-button"
+  title="HTML Component/Button"
+  decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+## States
+
+### Busy
+
+Button with `aria-busy` state:
+
+<Canvas>
+  <Story
+    name="Busy button"
+    args={{
+      ...defaultArgs,
+      busy: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      // `cursor` cannot be tested using visual regression testing, ignore this story
+      percy: { skip: true },
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+### Busy and disabled
+
+Button that is both busy and disabled. The busy cursor should have precedence over the disabled cursor.
+
+<Canvas>
+  <Story
+    name="Busy and disabled button"
+    args={{
+      ...defaultArgs,
+      busy: true,
+      disabled: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      // `cursor` cannot be tested using visual regression testing, ignore this story
+      percy: { skip: true },
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

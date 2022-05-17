@@ -3,20 +3,24 @@
  * Copyright (c) 2021 The Knights Who Say NIH! B.V.
  * Copyright (c) 2021 Gemeente Utrecht
  */
-@import "../common/focus";
+
+@import "../../common/focus";
 
 .utrecht-button {
-  background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
+  background-color: var(--utrecht-button-background-color);
   border-color: var(--utrecht-button-border-color, transparent);
+  border-bottom-color: var(--utrecht-button-border-bottom-color, var(--utrecht-button-border-color, transparent));
   border-radius: var(--utrecht-button-border-radius);
   border-style: solid;
   border-width: var(--utrecht-button-border-width, 0);
-  color: var(--utrecht-button-primary-action-color, var(--utrecht-button-color));
+  border-bottom-width: var(--utrecht-button-border-bottom-width, var(--utrecht-button-border-width, 0));
+  color: var(--utrecht-button-color);
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
   font-weight: var(--utrecht-button-font-weight);
   inline-size: var(--utrecht-button-inline-size, auto);
   letter-spacing: var(--utrecht-button-letter-spacing);
+  line-height: var(--utrecht-button-line-height);
   min-block-size: var(--utrecht-button-min-block-size, auto);
   min-inline-size: var(--utrecht-button-min-inline-size, 0);
   padding-block-end: var(--utrecht-button-padding-block-end);
@@ -25,12 +29,6 @@
   padding-inline-start: var(--utrecht-button-padding-inline-start);
   text-transform: var(--utrecht-button-text-transform);
   user-select: none;
-}
-
-.utrecht-button--primary-action {
-  background-color: var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color));
-  border-color: var(--utrecht-button-primary-action-border-color, var(--utrecht-button-border-color));
-  color: var(--utrecht-button-primary-action-color, var(--utrecht-button-color));
 }
 
 .utrecht-button--distanced {
@@ -107,24 +105,53 @@
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }
 
-.utrecht-button--primary-action.utrecht-button--hover:not(:disabled),
-.utrecht-button--primary-action.utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
-  background-color: var(
-    --utrecht-button-primary-action-hover-background-color,
-    var(
-      --utrecht-button-hover-background-color,
-      var(--utrecht-button-primary-action-background-color, var(--utrecht-button-background-color))
-    )
-  );
-  border-color: var(
-    --utrecht-button-primary-action-hover-border-color,
-    var(
-      --utrecht-button-hover-border-color,
-      var(--utrecht-button-primary-action-border-color, var(--utrecht-button-border-color))
-    )
-  );
-  color: var(
-    --utrecht-button-primary-action-hover-color,
-    var(--utrecht-button-hover-color, var(--utrecht-button-primary-action-color, var(--utrecht-button-color)))
-  );
+@mixin utrecht-button-appearance($modifier) {
+  .utrecht-button--#{$modifier} {
+    background-color: var(--utrecht-button-#{$modifier}-background-color, var(--utrecht-button-background-color));
+    border-color: var(--utrecht-button-#{$modifier}-border-color, var(--utrecht-button-border-color));
+    border-width: var(--utrecht-button-#{$modifier}-border-width, var(--utrecht-button-border-width));
+    color: var(--utrecht-button-#{$modifier}-color, var(--utrecht-button-color));
+  }
+
+  .utrecht-button--#{$modifier}.utrecht-button--hover:not(:disabled),
+  .utrecht-button--#{$modifier}.utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+    background-color: var(
+      --utrecht-button-#{$modifier}-hover-background-color,
+      var(
+        --utrecht-button-#{$modifier}-background-color,
+        var(--utrecht-button-hover-background-color, var(--utrecht-button-background-color))
+      )
+    );
+    border-color: var(
+      --utrecht-button-#{$modifier}-hover-border-color,
+      var(
+        --utrecht-button-#{$modifier}-border-color,
+        var(--utrecht-button-hover-border-color, var(--utrecht-button-border-color))
+      )
+    );
+    color: var(
+      --utrecht-button-#{$modifier}-hover-color,
+      var(--utrecht-button-#{$modifier}-color, var(--utrecht-button-hover-color, var(--utrecht-button-color)))
+    );
+  }
+
+  .utrecht-button--#{$modifier}.utrecht-button:disabled,
+  .utrecht-button--#{$modifier}.utrecht-button--disabled {
+    background-color: var(
+      --utrecht-button-#{$modifier}-disabled-background-color,
+      var(--utrecht-button-disabled-background-color, var(--utrecht-button-background-color))
+    );
+    border-color: var(
+      --utrecht-button-#{$modifier}-disabled-border-color,
+      var(--utrecht-button-disabled-border-color, var(--utrecht-button-border-color))
+    );
+    color: var(
+      --utrecht-button-#{$modifier}-disabled-color,
+      var(--utrecht-button-disabled-color, var(--utrecht-button-color))
+    );
+  }
 }
+
+@include utrecht-button-appearance("primary-action");
+@include utrecht-button-appearance("secondary-action");
+@include utrecht-button-appearance("subtle");

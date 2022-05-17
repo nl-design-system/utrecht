@@ -1,30 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Button, defaultArgs } from "./html";
-import "./html.scss";
+import { argTypes, Button, defaultArgs } from "../template";
+import "../index.scss";
 
 <Meta
+  id="html-button"
   title="HTML Component/Button"
-  argTypes={{
-    textContent: {
-      description: "Content of the button",
-      control: "text",
-    },
-    busy: {
-      description: "Busy",
-      control: "boolean",
-    },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    type: {
-      description: "Type",
-      control: { type: "select" },
-      options: ["", "button", "reset", "submit"],
-    },
-  }}
+  argTypes={argTypes}
   decorators={[(story) => `<div class="utrecht-html">${story()}</div>`]}
   parameters={{
     status: {
