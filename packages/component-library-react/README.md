@@ -45,7 +45,7 @@ import { Document } from "@utrecht/component-library-react/Document";
 import { Heading1 } from "@utrecht/component-library-react/Heading1";
 
 // Package with CSS for white-label components
-import "@utrecht/component-library-css/dist/bem.css";
+import "@utrecht/component-library-css/dist";
 
 // Package with Utrecht design tokens for the white-label components
 // Substitute with your another theme for other organisations.
