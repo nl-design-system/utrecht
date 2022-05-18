@@ -8,6 +8,7 @@ import clsx from 'clsx';
 
 export const defaultArgs = {
   active: false,
+  alternate: false,
   current: false,
   external: false,
   hreflang: '',
@@ -25,6 +26,7 @@ export const defaultArgs = {
 
 export const Link = ({
   active = defaultArgs.active,
+  alternate = defaultArgs.alternate,
   current = defaultArgs.current,
   external = defaultArgs.external,
   hreflang = defaultArgs.hreflang,
@@ -41,8 +43,8 @@ export const Link = ({
 }) =>
   `<a href="${href === null ? `https://example.com/${lang}` : href}" class="${clsx('utrecht-link', {
     'utrecht-link--active': active,
-    'utrecht-link--alternate-lang': hreflang && !current,
-    'utrecht-link--current-lang': hreflang && current,
+    'utrecht-link--alternate-lang': alternate,
+    'utrecht-link--current-lang': current,
     'utrecht-link--external': external,
     'utrecht-link--focus': focus,
     'utrecht-link--focus-visible': focusVisible,
@@ -50,8 +52,8 @@ export const Link = ({
     'utrecht-link--telephone': telephone,
     'utrecht-link--visited': visited,
     'utrecht-link--icon-left': iconleft,
-  })}"${external ? ' rel="external noopener noreferrer"' : ''}${current ? ' aria-current="page"' : ''}${
-    title ? ` title="${title}"` : ''
-  }${hreflang ? ` hreflang="${hreflang}"` : ''}${lang ? ` lang="${lang}"` : ''}${
-    hreflang && !current ? ' rel="alternate"' : ''
-  }>${textContent}</a>`;
+  })}"${external ? ' rel="external noopener noreferrer"' : alternate ? ' rel="alternate"' : ''}${
+    current ? ' aria-current="page"' : ''
+  }${title ? ` title="${title}"` : ''}${hreflang ? ` hreflang="${hreflang}"` : ''}${lang ? ` lang="${lang}"` : ''}>
+    ${textContent}
+  </a>`;
