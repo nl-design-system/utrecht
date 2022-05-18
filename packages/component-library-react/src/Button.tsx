@@ -38,19 +38,19 @@ export const Button = forwardRef(
 Button.displayName = 'utrecht-button';
 
 export const PrimaryActionButton = ({ ...args }) => {
-  return Button({ ...args, appearance: 'primary-action-button' });
+  return <Button {...args} appearance="primary-action-button" />;
 };
 
 PrimaryActionButton.displayName = 'utrecht-primary-action-button';
 
 export const SecondaryActionButton = ({ ...args }) => {
-  return Button({ ...args, appearance: 'secondary-action-button' });
+  return <Button {...args} appearance="secondary-action-button" />;
 };
 
 SecondaryActionButton.displayName = 'utrecht-secondary-action-button';
 
 export const SubtleButton = ({ ...args }) => {
-  return Button({ ...args, appearance: 'subtle-button' });
+  return <Button {...args} appearance="subtle-button" />;
 };
 
 SubtleButton.displayName = 'utrecht-subtle-button';
