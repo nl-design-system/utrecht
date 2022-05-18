@@ -41,8 +41,8 @@ export const Link = ({
 }) =>
   `<a href="${href === null ? `https://example.com/${lang}` : href}" class="${clsx('utrecht-link', {
     'utrecht-link--active': active,
-    'utrecht-link--alternate-lang': lang && !current,
-    'utrecht-link--current-lang': lang && current,
+    'utrecht-link--alternate-lang': hreflang && !current,
+    'utrecht-link--current-lang': hreflang && current,
     'utrecht-link--external': external,
     'utrecht-link--focus': focus,
     'utrecht-link--focus-visible': focusVisible,
@@ -53,5 +53,5 @@ export const Link = ({
   })}"${external ? ' rel="external noopener noreferrer"' : ''}${current ? ' aria-current="page"' : ''}${
     title ? ` title="${title}"` : ''
   }${hreflang ? ` hreflang="${hreflang}"` : ''}${lang ? ` lang="${lang}"` : ''}${
-    !current ? ' rel="alternate"' : ''
+    hreflang && !current ? ' rel="alternate"' : ''
   }>${textContent}</a>`;
