@@ -5,7 +5,7 @@
 
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
-export { Button } from './Button';
+export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
 export { ButtonLink } from './ButtonLink';
 export { Checkbox } from './Checkbox';
 export { Document } from './Document';
