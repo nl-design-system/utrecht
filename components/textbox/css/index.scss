@@ -3,177 +3,50 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../common/focus";
+@import "../../common/focus/mixin";
+@import "./mixin";
 
 .utrecht-textbox {
-  background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));
-  border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width));
-  border-bottom-width: var(
-    --utrecht-textbox-border-bottom-width,
-    var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))
-  );
-  border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color));
-  border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-input-border-radius, 0));
-  border-style: solid;
-  box-sizing: border-box;
-  color: var(--utrecht-textbox-color, var(--utrecht-form-input-color));
-  font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-input-font-family));
-  font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-input-font-size, 1em));
-  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-input-max-inline-size));
-  padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-input-padding-block-end));
-  padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-input-padding-block-start));
-  padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
-  padding-inline-start: var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
-  width: 100%;
+  @include utrecht-textbox;
 }
 
 .utrecht-textbox--invalid {
-  background-color: var(
-    --utrecht-textbox-invalid-background-color,
-    var(
-      --utrecht-form-input-invalid-background-color,
-      var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color))
-    )
-  );
-  border-color: var(
-    --utrecht-textbox-invalid-border-color,
-    var(
-      --utrecht-form-input-invalid-border-color,
-      var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))
-    )
-  );
-  border-width: var(
-    --utrecht-textbox-invalid-border-width,
-    var(
-      --utrecht-form-input-invalid-border-width,
-      var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))
-    )
-  );
+  @include utrecht-textbox--invalid;
 }
 
 .utrecht-textbox--disabled {
-  background-color: var(
-    --utrecht-textbox-disabled-background-color,
-    var(
-      --utrecht-form-input-disabled-background-color,
-      var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))
-    )
-  );
-  border-color: var(
-    --utrecht-textbox-disabled-border-color,
-    var(
-      --utrecht-form-input-disabled-border-color,
-      var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))
-    )
-  );
-  color: var(
-    --utrecht-textbox-disabled-color,
-    var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
-  );
-  cursor: var(--utrecht-action-disabled-cursor);
+  @include utrecht-textbox--disabled;
 }
 
 .utrecht-textbox--focus {
   @include utrecht-focus;
-
-  background-color: var(
-    --utrecht-textbox-focus-background-color,
-    var(
-      --utrecht-form-input-focus-background-color,
-      var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))
-    )
-  );
-  border-color: var(
-    --utrecht-textbox-focus-border-color,
-    var(
-      --utrecht-form-input-focus-border-color,
-      var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))
-    )
-  );
-  color: var(
-    --utrecht-textbox-focus-color,
-    var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color)))
-  );
+  @include utrecht-textbox--focus;
 }
 
 .utrecht-textbox--focus-visible {
-  @include utrecht-focus-visible;
+  @include utrecht-textbox--focus-visible;
 }
 
 .utrecht-textbox--read-only {
-  border-color: var(
-    --utrecht-textbox-read-only-border-color,
-    var(
-      --utrecht-form-input-read-only-border-color,
-      var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))
-    )
-  );
-  color: var(
-    --utrecht-textbox-read-only-color,
-    var(--utrecht-form-input-read-only-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color)))
-  );
+  @include utrecht-textbox--read-only;
 }
 
 .utrecht-textbox__placeholder {
-  color: var(
-    --utrecht-textbox-placeholder-color,
-    var(--utrecht-form-input-placeholder-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color)))
-  );
-  font-style: var(--utrecht-form-input-placeholder-font-style);
-  opacity: 100%;
+  @include utrecht-textbox__placeholder;
 }
 
 .utrecht-textbox--numeric {
-  -moz-appearance: textfield; /* avoid spinner input in Firefox */
-  font-variant-numeric: lining-nums tabular-nums;
+  @include utrecht-textbox--numeric;
 }
 
 .utrecht-textbox--password {
-  font-variant-ligatures: none;
-  font-variant-numeric: slashed-zero;
+  @include utrecht-textbox--password;
 }
 
 .utrecht-textbox--url {
-  font-variant-ligatures: none;
+  @include utrecht-textbox--url;
 }
 
 .utrecht-textbox--html-input {
-  &:disabled {
-    @extend .utrecht-textbox--disabled;
-  }
-
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
-
-  @if $utrecht-focus-visible-fallback {
-    &:focus {
-      @extend .utrecht-textbox--focus;
-      @extend .utrecht-textbox--focus-visible;
-    }
-
-    &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    &:focus {
-      @extend .utrecht-textbox--focus;
-    }
-
-    &:focus-visible {
-      @extend .utrecht-textbox--focus-visible;
-    }
-  }
-
-  &:invalid,
-  &[aria-invalid="true"] {
-    @extend .utrecht-textbox--invalid;
-  }
-
-  &:read-only {
-    @extend .utrecht-textbox--read-only;
-  }
-
-  &::placeholder {
-    @extend .utrecht-textbox__placeholder;
-  }
+  @include utrecht-textbox--html-input;
 }

@@ -3,16 +3,16 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html fieldset {
-  @extend .utrecht-form-fieldset;
-  @extend .utrecht-form-fieldset--reset-fieldset;
-  @extend .utrecht-form-fieldset--distanced;
+fieldset {
+  @include utrecht-form-fieldset;
+  @include utrecht-form-fieldset--html-fieldset;
+  @include utrecht-form-fieldset--distanced;
 }
 
-.utrecht-html legend {
-  @extend .utrecht-form-fieldset__legend;
-  @extend .utrecht-form-fieldset__legend--reset-legend;
-  @extend .utrecht-form-fieldset__legend--distanced;
+legend {
+  @include utrecht-form-fieldset__legend;
+  @include utrecht-form-fieldset__legend--html-legend;
+  @include utrecht-form-fieldset__legend--distanced;
 }

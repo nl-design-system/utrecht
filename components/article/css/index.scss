@@ -3,6 +3,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "./mixin";
+
 .utrecht-article {
-  max-inline-size: var(--utrecht-article-max-inline-size);
+  @include utrecht-article;
 }

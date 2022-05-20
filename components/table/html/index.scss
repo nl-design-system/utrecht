@@ -3,79 +3,79 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
 /* stylelint-disable selector-class-pattern */
 
-.utrecht-html table {
-  @extend .utrecht-table;
-  @extend .utrecht-table--distanced;
+table {
+  @include utrecht-table;
+  @include utrecht-table--distanced;
 }
 
-.utrecht-html caption {
-  @extend .utrecht-table__caption;
+caption {
+  @include utrecht-table__caption;
 }
 
-.utrecht-html thead {
-  @extend .utrecht-table__header;
+thead {
+  @include utrecht-table__header;
 }
 
-.utrecht-html tbody {
-  @extend .utrecht-table__body;
+tbody {
+  @include utrecht-table__body;
 }
 
-.utrecht-html th {
-  @extend .utrecht-table__header-cell;
+th {
+  @include utrecht-table__header-cell;
 }
 
-.utrecht-html th,
-.utrecht-html td {
-  @extend .utrecht-table__cell;
+th,
+td {
+  @include utrecht-table__cell;
 }
 
-.utrecht-html td:first-child,
-.utrecht-html th:first-child {
-  @extend .utrecht-table__cell--first;
+td:first-child,
+th:first-child {
+  @include utrecht-table__cell--first;
 }
 
-.utrecht-html td:last-child,
-.utrecht-html th:last-child {
-  @extend .utrecht-table__cell--last;
+td:last-child,
+th:last-child {
+  @include utrecht-table__cell--last;
 }
 
-.utrecht-html thead tr:last-child th {
-  @extend .utrecht-table__cell--last-header-row;
+thead tr:last-child th {
+  @include utrecht-table__cell--last-header-row;
 }
 
-.utrecht-html thead > tr > th.numeric,
-.utrecht-html tfoot > tr > th.numeric,
-.utrecht-html th[scope="column"].numeric {
-  @extend .utrecht-table__cell--numeric-column;
+thead > tr > th.numeric,
+tfoot > tr > th.numeric,
+th[scope="column"].numeric {
+  @include utrecht-table__cell--numeric-column;
 }
 
-.utrecht-html td.numeric {
-  @extend .utrecht-table__cell--numeric-column;
-  @extend .utrecht-table__cell--numeric-data;
+td.numeric {
+  @include utrecht-table__cell--numeric-column;
+  @include utrecht-table__cell--numeric-data;
 }
 
-.utrecht-html table.alternate-row-color {
+table.alternate-row-color {
   & > tr:nth-child(even) > td,
   & > tr:nth-child(even) > th {
-    @extend .utrecht-table__row--alternate-even;
+    @include utrecht-table__row--alternate-even;
   }
 
   & > tr:nth-child(odd) > td,
   & > tr:nth-child(odd) > th {
-    @extend .utrecht-table__row--alternate-odd;
+    @include utrecht-table__row--alternate-odd;
   }
 
   & > tbody > tr:nth-child(even) > td,
   & > tbody > tr:nth-child(even) > th {
-    @extend .utrecht-table__row--alternate-even;
+    @include utrecht-table__row--alternate-even;
   }
 
   & > tbody > tr:nth-child(odd) > td,
   & > tbody > tr:nth-child(odd) > th {
-    @extend .utrecht-table__row--alternate-odd;
+    @include utrecht-table__row--alternate-odd;
   }
 }

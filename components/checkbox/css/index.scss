@@ -2,42 +2,37 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
  */
-@import "../../common/focus";
-
-@mixin reset-input-checkbox {
-  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
-  margin-block-start: 0;
-  margin-inline-end: 0;
-  margin-inline-start: 0;
-}
+@import "../../common/focus/mixin";
+@import "./mixin";
 
 .utrecht-checkbox {
-  @include reset-input-checkbox;
+  @include utrecht-checkbox;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-checkbox--checked {
+  @include utrecht-checkbox--checked;
 }
 
 .utrecht-checkbox--disabled {
-  cursor: var(--utrecht-action-disabled-cursor);
+  @include utrecht-checkbox--disabled;
 }
 
 .utrecht-checkbox--focus {
-  @include utrecht-focus;
+  @include utrecht-checkbox--focus;
 }
 
 .utrecht-checkbox--focus-visible {
-  @include utrecht-focus-visible;
+  @include utrecht-checkbox--focus-visible;
 }
 
 .utrecht-checkbox--html-input {
   &:checked {
-    @extend .utrecht-checkbox--checked;
+    @include utrecht-checkbox--checked;
   }
 
   &:disabled {
-    @extend .utrecht-checkbox--disabled;
+    @include utrecht-checkbox--disabled;
   }
 
   @include utrecht-focus-pseudo-classes-backwards-compatible;

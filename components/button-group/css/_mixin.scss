@@ -1,0 +1,28 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Frameless B.V.
+ */
+
+@mixin utrecht-button-group {
+  background-color: var(--utrecht-button-group-background-color);
+  display: flex;
+  gap: var(--utrecht-button-group-inline-gap, 1em);
+  min-block-size: var(--utrecht-button-block-size);
+  padding-block-end: var(--utrecht-button-group-padding-block-end);
+  padding-block-start: var(--utrecht-button-group-padding-block-start);
+}
+
+@mixin utrecht-button-group--distance {
+  margin-block-end: var(--utrecht-button-group-margin-block-end);
+  margin-block-start: var(--utrecht-button-group-margin-block-start);
+}
+
+@mixin utrecht-button-group__button-link--horizontal {
+  --utrecht-button-padding-inline-end: 0;
+  --utrecht-button-padding-inline-start: 0;
+}
+
+@mixin utrecht-button-group--vertical {
+  flex-direction: column;
+  gap: var(--utrecht-button-group-block-gap, 1em);
+}

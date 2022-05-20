@@ -3,16 +3,16 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html label {
-  @extend .utrecht-form-label;
+label {
+  @include utrecht-form-label;
 }
 
-.utrecht-html input[type="checkbox" i] ~ label {
-  @extend .utrecht-form-label--checkbox;
+input[type="checkbox" i] ~ label {
+  @include utrecht-form-label--checkbox;
 }
 
-.utrecht-html input[type="radio" i] ~ label {
-  @extend .utrecht-form-label--radio;
+input[type="radio" i] ~ label {
+  @include utrecht-form-label--radio;
 }

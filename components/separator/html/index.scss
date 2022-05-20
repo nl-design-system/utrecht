@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html hr {
-  @extend .utrecht-separator;
-  @extend .utrecht-separator--distanced;
+hr {
+  @include utrecht-separator;
+  @include utrecht-separator--distanced;
 }

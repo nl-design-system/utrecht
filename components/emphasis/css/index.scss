@@ -3,10 +3,12 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "./mixin";
+
 .utrecht-emphasis--stressed {
-  font-style: var(--utrecht-emphasis-stressed-font-style, italic);
+  @include utrecht-emphasis--stressed;
 }
 
 .utrecht-emphasis--strong {
-  font-weight: var(--utrecht-emphasis-strong-font-weight, bold);
+  @include utrecht-emphasis--strong;
 }

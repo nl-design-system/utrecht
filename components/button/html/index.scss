@@ -3,47 +3,47 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html input[type="button" i],
-.utrecht-html input[type="reset" i],
-.utrecht-html input[type="submit" i],
-.utrecht-html button {
-  @extend .utrecht-button;
-  @extend .utrecht-button--distanced;
+input[type="button" i],
+input[type="reset" i],
+input[type="submit" i],
+button {
+  @include utrecht-button;
+  @include utrecht-button--distanced;
 }
 
-.utrecht-html button[type="submit" i],
-.utrecht-html input[type="submit" i] {
-  @extend .utrecht-button--submit;
+button[type="submit" i],
+input[type="submit" i] {
+  @include utrecht-button--submit;
 }
 
-.utrecht-html button:disabled,
-.utrecht-html button[aria-disabled="true"] {
-  @extend .utrecht-button--disabled;
+button:disabled,
+button[aria-disabled="true"] {
+  @include utrecht-button--disabled;
 }
 
-.utrecht-html button[aria-busy="true"],
-.utrecht-html button[aria-disabled="true"][aria-busy="true"],
-.utrecht-html button:disabled[aria-busy="true"] {
+button[aria-busy="true"],
+button[aria-disabled="true"][aria-busy="true"],
+button:disabled[aria-busy="true"] {
   // Busy cursor has precedence over the disabled cursor.
-  @extend .utrecht-button--busy;
+  @include utrecht-button--busy;
 }
 
-.utrecht-html button:active:not([aria-disabled="true"]):not(:disabled) {
-  @extend .utrecht-button--active;
+button:active:not([aria-disabled="true"]):not(:disabled) {
+  @include utrecht-button--active;
 }
 
-.utrecht-html button:hover:not([aria-disabled="true"]):not(:disabled) {
-  @extend .utrecht-button--hover;
+button:hover:not([aria-disabled="true"]):not(:disabled) {
+  @include utrecht-button--hover;
 }
 
-.utrecht-html button:focus:not([aria-disabled="true"]):not(:disabled) {
-  @extend .utrecht-button--focus;
+button:focus:not([aria-disabled="true"]):not(:disabled) {
+  @include utrecht-button--focus;
 }
 
 /* override the `:focus` selector above */
 /* stylelint-disable-next-line no-descending-specificity */
-.utrecht-html button:focus-visible {
-  @extend .utrecht-button--focus-visible;
+button:focus-visible {
+  @include utrecht-button--focus-visible;
 }

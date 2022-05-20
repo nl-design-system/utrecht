@@ -3,20 +3,12 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "./mixin";
+
 .utrecht-backdrop {
-  background-color: var(--utrecht-backdrop-background-color);
-  bottom: 0;
-  color: var(--utrecht-backdrop-color);
-  display: block;
-  left: 0;
-  opacity: var(--utrecht-backdrop-opacity);
-  position: absolute;
-  right: 0;
-  top: 0;
-  user-select: none;
-  z-index: var(--utrecht-backdrop-z-index);
+  @include utrecht-backdrop;
 }
 
 .utrecht-backdrop--viewport {
-  position: fixed;
+  @include utrecht-backdrop--viewport;
 }

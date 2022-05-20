@@ -3,61 +3,61 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/index";
+@import "../css/mixin";
 
-.utrecht-html a:link {
-  @extend .utrecht-link;
+a:link {
+  @include utrecht-link;
 }
 
-.utrecht-html a:visited {
-  @extend .utrecht-link--visited;
+a:visited {
+  @include utrecht-link--visited;
 }
 
-.utrecht-html a:hover {
-  @extend .utrecht-link--hover;
+a:hover {
+  @include utrecht-link--hover;
 }
 
-.utrecht-html a:active {
-  @extend .utrecht-link--active;
+a:active {
+  @include utrecht-link--active;
 }
 
 // The workaround for missing `:focus-visible` support makes the code quite complex,
 // keep the ideal version around to restore it easily when browser support improves.
 
 @if $utrecht-focus-visible-fallback {
-  .utrecht-html a:focus {
-    @extend .utrecht-link--focus;
-    @extend .utrecht-link--focus-visible;
+  a:focus {
+    @include utrecht-link--focus;
+    @include utrecht-link--focus-visible;
   }
 
-  .utrecht-html a:focus:not(:focus-visible) {
+  a:focus:not(:focus-visible) {
     @include utrecht-focus-ring-reset;
   }
 } @else {
-  .utrecht-html a:focus {
-    @extend .utrecht-link--focus;
+  a:focus {
+    @include utrecht-link--focus;
   }
 
-  .utrecht-html a:focus-visible {
-    @extend .utrecht-link--focus-visible;
+  a:focus-visible {
+    @include utrecht-link--focus-visible;
   }
 }
 
-.utrecht-html a[rel~="external" i] {
-  @extend .utrecht-link--external;
+a[rel~="external" i] {
+  @include utrecht-link--external;
 }
 
-.utrecht-html a[href^="mailto:" i] {
-  @extend .utrecht-link--email;
+a[href^="mailto:" i] {
+  @include utrecht-link--email;
 }
 
-.utrecht-html a[href^="tel:" i] {
-  @extend .utrecht-link--telephone;
+a[href^="tel:" i] {
+  @include utrecht-link--telephone;
 }
 
-.utrecht-html a[hreflang][rel~="alternate" i] {
-  @extend .utrecht-link--alternate-lang;
+a[hreflang][rel~="alternate" i] {
+  @include utrecht-link--alternate-lang;
 }
-.utrecht-html a[hreflang][aria-current="page"] {
-  @extend .utrecht-link--current-lang;
+a[hreflang][aria-current="page"] {
+  @include utrecht-link--current-lang;
 }

@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html input[type="checkbox" i] {
-  @extend .utrecht-checkbox;
-  @extend .utrecht-checkbox--html-input;
+input[type="checkbox" i] {
+  @include utrecht-checkbox;
+  @include utrecht-checkbox--html-input;
 }

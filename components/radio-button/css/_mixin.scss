@@ -1,0 +1,66 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+@import "../../common/focus/mixin";
+
+@mixin reset-input-type-radio {
+  /* reset native margin for input[type="radio" i] */
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+@mixin utrecht-radio-button {
+  @include reset-input-type-radio;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-radio-button--checked {
+}
+
+@mixin utrecht-radio-button--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+@mixin utrecht-radio-button--focus {
+  @include utrecht-focus;
+}
+
+@mixin utrecht-radio-button--focus-visible {
+  @include utrecht-focus-visible;
+}
+
+@mixin utrecht-radio-button--html-input {
+  &:checked {
+    @include utrecht-radio-button--checked;
+  }
+
+  &:disabled {
+    @include utrecht-radio-button--disabled;
+  }
+
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
+
+  @if $utrecht-focus-visible-fallback {
+    &:focus {
+      @include utrecht-radio-button--focus;
+      @include utrecht-radio-button--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset;
+    }
+  } @else {
+    &:focus {
+      @include utrecht-radio-button--focus;
+    }
+
+    &:focus-visible {
+      @include utrecht-radio-button--focus-visible;
+    }
+  }
+}

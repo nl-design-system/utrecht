@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html h6 {
-  @extend .utrecht-heading-6;
-  @extend .utrecht-heading-6--distanced;
+h6 {
+  @include utrecht-heading-6;
+  @include utrecht-heading-6--distanced;
 }

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-.utrecht-badge {
+@mixin utrecht-badge {
   background-color: var(--utrecht-badge-background-color, hsl(0 0% 0%));
   border-radius: var(--utrecht-badge-border-radius, 0.5ch);
   color: var(--utrecht-badge-color, hsl(0 0% 100%));

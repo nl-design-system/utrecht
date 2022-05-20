@@ -1,0 +1,111 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin reset-ol {
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+@mixin utrecht-breadcrumb {
+  --utrecht-focus-background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+  --utrecht-link-background-color: var(--utrecht-breadcrumb-link-background-color);
+  --utrecht-link-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-focus-color: var(--utrecht-breadcrumb-link-focus-color, var(--utrecht-breadcrumb-link-color));
+  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-hover-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
+
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-breadcrumb-font-size);
+  text-transform: var(--utrecht-document-text-transform, inherit);
+}
+
+@mixin utrecht-breadcrumb__list {
+  block-size: var(--utrecht-breadcrumb-block-size);
+  display: flex;
+}
+
+@mixin utrecht-breadcrumb__item {
+  block-size: 100%;
+}
+
+@mixin utrecht-breadcrumb__link {
+  background-color: var(--utrecht-breadcrumb-link-background-color);
+  display: block;
+  padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
+  padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
+  padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
+  padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-breadcrumb__text {
+}
+
+.utrecht-breadcrumb--arrows {
+  /* https://css-tricks.com/triangle-breadcrumbs/ */
+  --utrecht-breadcrumb-arrow-size: 24px;
+
+  overflow: hidden;
+
+  .utrecht-breadcrumb__link {
+    padding-inline-end: 0;
+    position: relative;
+  }
+
+  .utrecht-breadcrumb__link::after,
+  .utrecht-breadcrumb__link::before {
+    border-block-end-width: var(--utrecht-breadcrumb-block-size);
+    border-block-start-width: var(--utrecht-breadcrumb-block-size);
+    border-color: transparent;
+    border-style: solid;
+    content: " ";
+    display: block;
+    height: 0;
+    left: 100%;
+    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+    position: absolute;
+    top: 50%;
+    width: 0;
+  }
+
+  .utrecht-breadcrumb__link::after {
+    border-inline-start-color: var(--utrecht-breadcrumb-link-background-color);
+    border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
+    z-index: 2;
+  }
+
+  .utrecht-breadcrumb__link::before {
+    border-inline-start-color: var(--utrecht-document-background-color);
+    border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
+    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+    margin-inline-start: 1px;
+    z-index: 1;
+  }
+
+  .utrecht-breadcrumb__link--focus,
+  .utrecht-breadcrumb__link:focus {
+    background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+  }
+
+  .utrecht-breadcrumb__link--focus::after,
+  .utrecht-breadcrumb__link:focus::after {
+    border-inline-start-color: var(--utrecht-breadcrumb-link-focus-background-color);
+  }
+
+  .utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item .utrecht-breadcrumb__link {
+    padding-inline-start: calc(
+      var(--utrecht-breadcrumb-item-padding-inline-start) + var(--utrecht-breadcrumb-arrow-size)
+    );
+  }
+}
+
+.utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item {
+  margin-inline-start: var(--utrecht-breadcrumb-item-divider-inline-size);
+}

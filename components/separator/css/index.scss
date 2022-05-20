@@ -5,13 +5,12 @@
  * Copyright (c) 2021 The Knights Who Say NIH! B.V.
  */
 
+@import "./mixin";
+
 .utrecht-separator {
-  border-color: var(--utrecht-separator-color);
-  border-style: solid;
-  border-width: 0 0 var(--utrecht-separator-block-size) 0;
+  @include utrecht-separator;
 }
 
 .utrecht-separator--distanced {
-  margin-block-end: var(--utrecht-separator-margin-block-end);
-  margin-block-start: var(--utrecht-separator-margin-block-start);
+  @include utrecht-separator--distanced;
 }

@@ -3,6 +3,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "./mixin";
+
 @mixin reset-ol {
   list-style: none;
   margin-block-end: 0;
@@ -11,24 +13,11 @@
 }
 
 .utrecht-breadcrumb {
-  --utrecht-focus-background-color: var(--utrecht-breadcrumb-link-focus-background-color);
-  --utrecht-link-background-color: var(--utrecht-breadcrumb-link-background-color);
-  --utrecht-link-color: var(--utrecht-breadcrumb-link-color);
-  --utrecht-link-focus-color: var(--utrecht-breadcrumb-link-focus-color, var(--utrecht-breadcrumb-link-color));
-  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
-  --utrecht-link-hover-color: var(--utrecht-breadcrumb-link-color);
-  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
-  --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
-  --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
-
-  font-family: var(--utrecht-document-font-family, inherit);
-  font-size: var(--utrecht-breadcrumb-font-size);
-  text-transform: var(--utrecht-document-text-transform, inherit);
+  @include utrecht-breadcrumb;
 }
 
 .utrecht-breadcrumb__list {
-  block-size: var(--utrecht-breadcrumb-block-size);
-  display: flex;
+  @include utrecht-breadcrumb__list;
 }
 
 ol.utrecht-breadcrumb__list {
@@ -36,20 +25,16 @@ ol.utrecht-breadcrumb__list {
 }
 
 .utrecht-breadcrumb__item {
-  block-size: 100%;
+  @include utrecht-breadcrumb__item;
 }
 
 .utrecht-breadcrumb__link {
-  background-color: var(--utrecht-breadcrumb-link-background-color);
-  display: block;
-  padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
-  padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
-  padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
-  padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
+  @include utrecht-breadcrumb__link;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-breadcrumb__text {
+  @include utrecht-breadcrumb__text;
 }
 
 .utrecht-breadcrumb--arrows {

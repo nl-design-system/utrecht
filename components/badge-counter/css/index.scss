@@ -3,8 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../badge/css";
-
 .utrecht-badge-counter {
   background-color: var(--utrecht-badge-counter-background-color, var(--utrecht-badge-background-color, hsl(0 0% 0%)));
   border-radius: var(--utrecht-badge-counter-border-radius, var(--utrecht-badge-border-radius, 0.5ch));

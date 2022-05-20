@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html textarea {
-  @extend .utrecht-textarea;
-  @extend .utrecht-textarea--html-textarea;
+textarea {
+  @include utrecht-textarea;
+  @include utrecht-textarea--html-textarea;
 }

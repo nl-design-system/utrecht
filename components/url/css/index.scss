@@ -4,6 +4,8 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
+@import "./mixin";
+
 .utrecht-url {
-  font-variant-ligatures: none;
+  @include utrecht-url;
 }
