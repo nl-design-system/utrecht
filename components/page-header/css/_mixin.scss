@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin utrecht-page-header {
+  background-color: var(--utrecht-page-header-background-color);
+  color: var(--utrecht-page-header-color);
+  grid-area: "utrecht-header";
+  padding-block-end: var(--utrecht-page-header-padding-block-end);
+  padding-block-start: var(--utrecht-page-header-padding-block-start);
+  padding-inline-end: var(--utrecht-page-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-padding-inline-start);
+}
+
+@mixin utrecht-page-header__content {
+  max-inline-size: var(--utrecht-page-max-inline-size);
+}

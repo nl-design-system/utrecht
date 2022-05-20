@@ -1,0 +1,49 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Robbert Broersma
+ */
+
+@import "../../link/css/mixin";
+
+@mixin utrecht-link-button {
+  @include utrecht-link;
+
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-weight: var(--utrecht-button-font-weight);
+  inline-size: var(--utrecht-button-inline-size, auto);
+  letter-spacing: var(--utrecht-button-letter-spacing);
+  min-block-size: var(--utrecht-button-min-block-size, 44px);
+  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
+  padding-block-end: var(--utrecht-button-padding-block-end);
+  padding-block-start: var(--utrecht-button-padding-block-start);
+  padding-inline-end: var(--utrecht-button-padding-inline-end);
+  padding-inline-start: var(--utrecht-button-padding-inline-start);
+  text-transform: var(--utrecht-button-text-transform);
+  user-select: none;
+}
+
+@mixin utrecht-link-button--html-button {
+  background-color: transparent;
+
+  /* reset <button> styling */
+  border-width: 0;
+}
+
+@mixin utrecht-link-button--hover {
+  @include utrecht-link--hover;
+}
+
+@mixin utrecht-link-button--active {
+  @include utrecht-link--active;
+}
+
+@mixin utrecht-link-button--focus {
+  @include utrecht-link--focus;
+}
+
+@mixin utrecht-link-button--focus-visible {
+  @include utrecht-link--focus-visible;
+}

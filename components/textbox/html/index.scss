@@ -3,56 +3,54 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html {
-  input:not([type]),
-  input[type="date" i],
-  input[type="datetime-local" i],
-  input[type="email" i],
-  input[type="month" i],
-  input[type="number" i],
-  input[type="password" i],
-  input[type="search" i],
-  input[type="tel" i],
-  input[type="text" i],
-  input[type="time" i],
-  input[type="url" i],
-  input[type="week" i] {
-    @extend .utrecht-textbox;
-    @extend .utrecht-textbox--html-input;
-  }
+input:not([type]),
+input[type="date" i],
+input[type="datetime-local" i],
+input[type="email" i],
+input[type="month" i],
+input[type="number" i],
+input[type="password" i],
+input[type="search" i],
+input[type="tel" i],
+input[type="text" i],
+input[type="time" i],
+input[type="url" i],
+input[type="week" i] {
+  @include utrecht-textbox;
+  @include utrecht-textbox--html-input;
+}
 
-  input[autocomplete~="current-password" i],
-  input[autocomplete~="new-password" i] {
-    @extend .utrecht-textbox--password;
-  }
+input[autocomplete~="current-password" i],
+input[autocomplete~="new-password" i] {
+  @include utrecht-textbox--password;
+}
 
-  input[type="url" i] {
-    @extend .utrecht-textbox--url;
-  }
+input[type="url" i] {
+  @include utrecht-textbox--url;
+}
 
-  input[autocomplete~="bday" i],
-  input[autocomplete~="bday-day" i],
-  input[autocomplete~="bday-month" i],
-  input[autocomplete~="bday-year" i],
-  input[autocomplete~="cc-csc" i],
-  input[autocomplete~="cc-exp" i],
-  input[autocomplete~="cc-exp-month" i],
-  input[autocomplete~="cc-exp-year" i],
-  input[autocomplete~="cc-number" i],
-  input[autocomplete~="one-time-code" i],
-  input[autocomplete~="postal-code" i],
-  input[autocomplete~="tel" i],
-  input[autocomplete~="tel-area-code" i],
-  input[autocomplete~="tel-country-code" i],
-  input[autocomplete~="tel-extension" i],
-  input[autocomplete~="tel-local" i],
-  input[autocomplete~="tel-national" i],
-  input[autocomplete~="transaction-amount" i],
-  input[inputmode="decimal" i],
-  input[inputmode="numeric" i],
-  input[type="number" i] {
-    @extend .utrecht-textbox--numeric;
-  }
+input[autocomplete~="bday" i],
+input[autocomplete~="bday-day" i],
+input[autocomplete~="bday-month" i],
+input[autocomplete~="bday-year" i],
+input[autocomplete~="cc-csc" i],
+input[autocomplete~="cc-exp" i],
+input[autocomplete~="cc-exp-month" i],
+input[autocomplete~="cc-exp-year" i],
+input[autocomplete~="cc-number" i],
+input[autocomplete~="one-time-code" i],
+input[autocomplete~="postal-code" i],
+input[autocomplete~="tel" i],
+input[autocomplete~="tel-area-code" i],
+input[autocomplete~="tel-country-code" i],
+input[autocomplete~="tel-extension" i],
+input[autocomplete~="tel-local" i],
+input[autocomplete~="tel-national" i],
+input[autocomplete~="transaction-amount" i],
+input[inputmode="decimal" i],
+input[inputmode="numeric" i],
+input[type="number" i] {
+  @include utrecht-textbox--numeric;
 }

@@ -1,0 +1,17 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+
+@mixin utrecht-separator {
+  border-color: var(--utrecht-separator-color);
+  border-style: solid;
+  border-width: 0 0 var(--utrecht-separator-block-size) 0;
+}
+
+@mixin utrecht-separator--distanced {
+  margin-block-end: var(--utrecht-separator-margin-block-end);
+  margin-block-start: var(--utrecht-separator-margin-block-start);
+}

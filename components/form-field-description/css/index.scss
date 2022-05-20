@@ -3,35 +3,24 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "./mixin";
+
 .utrecht-form-field-description {
-  color: var(--utrecht-form-field-description-color);
-  font-family: var(--utrecht-document-font-family, inherit);
-  font-size: var(--utrecht-form-field-description-font-size, inherit);
-  font-style: var(--utrecht-form-field-description-font-style);
+  @include utrecht-form-field-description;
 }
 
 .utrecht-form-field-description--distanced {
-  margin-block-end: var(--utrecht-form-field-description-margin-block-end, var(--utrecht-paragraph-margin-block-end));
-  margin-block-start: var(
-    --utrecht-form-field-description-margin-block-start,
-    var(--utrecht-paragraph-margin-block-start)
-  );
+  @include utrecht-form-field-description--distanced;
 }
 
 .utrecht-form-field-description--invalid {
-  color: var(
-    --utrecht-form-field-description-invalid-color,
-    var(--utrecht-feedback-invalid-color, var(--utrecht-feedback-danger-color))
-  );
+  @include utrecht-form-field-description--invalid;
 }
 
 .utrecht-form-field-description--valid {
-  color: var(
-    --utrecht-form-field-description-valid-color,
-    var(--utrecht-feedback-valid-color, var(--utrecht-feedback-safe-color))
-  );
+  @include utrecht-form-field-description--valid;
 }
 
 .utrecht-form-field-description--warning {
-  color: var(--utrecht-form-field-description-warning-color, var(--utrecht-feedback-warning-color));
+  @include utrecht-form-field-description--warning;
 }

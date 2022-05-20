@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html select {
-  @extend .utrecht-select;
-  @extend .utrecht-select--html-select;
+select {
+  @include utrecht-select;
+  @include utrecht-select--html-select;
 }

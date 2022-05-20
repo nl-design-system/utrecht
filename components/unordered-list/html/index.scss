@@ -3,17 +3,17 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html ul {
-  @extend .utrecht-unordered-list;
-  @extend .utrecht-unordered-list--distanced;
+ul {
+  @include utrecht-unordered-list;
+  @include utrecht-unordered-list--distanced;
 }
 
-.utrecht-html ul > li {
-  @extend .utrecht-unordered-list__item;
+ul > li {
+  @include utrecht-unordered-list__item;
 }
 
-.utrecht-html ul > li::marker {
-  @extend .utrecht-unordered-list__marker;
+ul > li::marker {
+  @include utrecht-unordered-list__marker;
 }

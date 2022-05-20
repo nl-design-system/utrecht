@@ -3,47 +3,28 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
-@import "../../link/css";
+@import "./mixin";
 
 .utrecht-link-button {
-  @extend .utrecht-link;
-
-  cursor: pointer;
-  display: inline-flex;
-  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
-  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
-  font-weight: var(--utrecht-button-font-weight);
-  inline-size: var(--utrecht-button-inline-size, auto);
-  letter-spacing: var(--utrecht-button-letter-spacing);
-  min-block-size: var(--utrecht-button-min-block-size, 44px);
-  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
-  padding-block-end: var(--utrecht-button-padding-block-end);
-  padding-block-start: var(--utrecht-button-padding-block-start);
-  padding-inline-end: var(--utrecht-button-padding-inline-end);
-  padding-inline-start: var(--utrecht-button-padding-inline-start);
-  text-transform: var(--utrecht-button-text-transform);
-  user-select: none;
+  @include utrecht-link-button;
 }
 
 .utrecht-link-button--html-button {
-  background-color: transparent;
-
-  /* reset <button> styling */
-  border-width: 0;
+  @include utrecht-link-button--html-button;
 }
 
 .utrecht-link-button--hover {
-  @extend .utrecht-link--hover;
+  @include utrecht-link-button--hover;
 }
 
 .utrecht-link-button--active {
-  @extend .utrecht-link--active;
+  @include utrecht-link-button--active;
 }
 
 .utrecht-link-button--focus {
-  @extend .utrecht-link--focus;
+  @include utrecht-link-button--focus;
 }
 
 .utrecht-link-button--focus-visible {
-  @extend .utrecht-link--focus-visible;
+  @include utrecht-link-button--focus-visible;
 }

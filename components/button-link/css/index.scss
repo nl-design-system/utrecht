@@ -4,23 +4,21 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-@import "../../button/css";
+@import "../../button/css/mixin";
+@import "./mixin";
 
 .utrecht-button-link {
-  @extend .utrecht-button;
-
-  cursor: var(--utrecht-action-navigate-cursor, pointer);
-  text-decoration: none;
+  @include utrecht-button-link;
 }
 
 .utrecht-button-link--hover {
-  @extend .utrecht-button--hover;
+  @include utrecht-button-link--hover;
 }
 
 .utrecht-button-link--focus {
-  @extend .utrecht-button--focus;
+  @include utrecht-button-link--focus;
 }
 
 .utrecht-button-link--focus-visible {
-  @extend .utrecht-button--focus-visible;
+  @include utrecht-button-link--focus-visible;
 }

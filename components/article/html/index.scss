@@ -3,8 +3,8 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css";
+@import "../css/mixin";
 
-.utrecht-html article {
-  @extend .utrecht-article;
+article {
+  @include utrecht-article;
 }

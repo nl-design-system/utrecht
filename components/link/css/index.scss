@@ -7,120 +7,38 @@
 // Avoid false positive for new CSS function `max()`
 /* stylelint-disable scss/no-global-function-names */
 
-@import "../../common/focus";
-
-/*
-
-# CSS implementation
-
-## `text-decoration-skip`
-
-`text-decoration-skip` can be helpful to avoid making some texts unreadable.
-For example by obscuring Arabic diacritics.
-
-However, the combination of a greater thickness and skipping this thick underline
-leads to a very unappealing rendering of the underline. To avoid this,
-`text-decoration-skip` is disabled for interactive states.
-
-For design token configurations that have identical thickness for normal and interactive
-states, this will lead to the (undesirable) effect that the focus/hover effect is switching
-from an interrupted to an uninterrupted underline (for some texts).
-
-Apart from making `skip-ink` configurable for normal/focus/hover, there is no good solution yet.
-
----
-
-Disabling `text-decoration-skip` for interactive states obscures some texts, and we assume for now
-that moving the pointer away from a link or having focus elsewhere first is simple enough to
-not make this too inconvenient.
-
----
-
-Some folks implement the underline of links using `border-bottom` or even using a finely crafted
-`linear-gradient()` with a solid color at the bottom and transparent behind the text. These approaches
-would unfortunately not be able to provide the improved readability of `text-decoration-skip`.
-
-## `text-decoration-thickness`
-
-Varying `text-decoration-thickness` can be used to distinguish interactive states.
-
----
-
-`text-decoration-thickness` appears to have rendering differences between Chrome and Safari.
-In Safari the line becomes thicker with extra pixels added to the bottom, while in Chrome
-the underline offset also seems to increase along with the thickness, which effectively means
-the underline is closer to the next line than in Safari.
-
----
-
-It might be nice to use font-relative units for `text-decoration-thickness`, and that is why we
-use the `max()` function to ensure the underline remains visible for every font size.
-
-## `transition`
-
-`text-decoration-thickness` could be a candidate for animating between interactive states,
-however browsers don't seem to have implemented great looking supixel tweening yet.
-
-`text-decoration-skip` also makes the transition more challenging to implement.
-
-*/
+@import "../../common/focus/mixin";
+@import "./mixin";
 
 .utrecht-link {
-  color: var(--utrecht-link-color, blue);
-  text-decoration: var(--utrecht-link-text-decoration, underline);
-  text-decoration-skip-ink: all;
-  text-decoration-thickness: max(var(--utrecht-link-text-decoration-thickness), 1px);
-  text-underline-offset: var(--utrecht-link-text-underline-offset);
+  @include utrecht-link;
 }
 
 .utrecht-link--icon-left {
-  background-image: var(--utrecht-link-icon-left-background-image, none);
-  background-position: 0 0.25em;
-  background-repeat: no-repeat;
-  color: var(--utrecht-link-color, blue);
-  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
-  padding-inline-start: var(--utrecht-space-block-md);
-  text-decoration: none;
+  @include utrecht-link--icon-left;
 }
 
 .utrecht-link:visited,
 .utrecht-link--visited {
-  color: var(--utrecht-link-visited-color, var(--utrecht-link-color));
+  @include utrecht-link--visited;
 }
 
 .utrecht-link:hover,
 .utrecht-link--hover {
-  color: var(--utrecht-link-hover-color, var(--utrecht-link-color));
-  text-decoration: var(--utrecht-link-hover-text-decoration, var(--utrecht-link-text-decoration, underline));
-  text-decoration-skip: none;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: max(
-    var(--utrecht-link-hover-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)),
-    1px
-  );
+  @include utrecht-link--hover;
 }
 
 .utrecht-link:active,
 .utrecht-link--active {
-  color: var(--utrecht-link-active-color, var(--utrecht-link-color));
+  @include utrecht-link--active;
 }
 
 .utrecht-link--focus {
-  @include utrecht-focus;
-
-  background-color: var(--utrecht-link-focus-background-color, transparent);
-  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
-  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
-  text-decoration-skip: none;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: max(
-    var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)),
-    1px
-  );
+  @include utrecht-link--focus;
 }
 
 .utrecht-link--focus-visible {
-  @include utrecht-focus-visible;
+  @include utrecht-link--focus-visible;
 }
 
 // The workaround for missing `:focus-visible` support makes the code quite complex,
@@ -128,8 +46,8 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
 @if $utrecht-focus-visible-fallback {
   .utrecht-link:focus {
-    @extend .utrecht-link--focus;
-    @extend .utrecht-link--focus-visible;
+    @include utrecht-link--focus;
+    @include utrecht-link--focus-visible;
   }
 
   .utrecht-link:focus:not(:focus-visible) {
@@ -137,30 +55,34 @@ however browsers don't seem to have implemented great looking supixel tweening y
   }
 } @else {
   .utrecht-link:focus {
-    @extend .utrecht-link--focus;
+    @include utrecht-link--focus;
   }
 
   .utrecht-link:focus-visible {
-    @extend .utrecht-link--focus-visible;
+    @include utrecht-link--focus-visible;
   }
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-link--email {
+  @include utrecht-link--email;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-link--external {
+  @include utrecht-link--external;
 }
 
 .utrecht-link--telephone {
-  white-space: nowrap;
+  @include utrecht-link--telephone;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-link--alternate-lang {
+  @include utrecht-link--alternate-lang;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-link--current-lang {
+  @include utrecht-link--current-lang;
 }
