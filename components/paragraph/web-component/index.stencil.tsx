@@ -14,9 +14,9 @@ export class Paragraph {
 
   render() {
     return (
-      <div class={clsx('utrecht-paragraph', this.lead && 'utrecht-paragraph--lead')}>
+      <p class={clsx('utrecht-paragraph', this.lead && 'utrecht-paragraph--lead')}>
         <slot></slot>
-      </div>
+      </p>
     );
   }
 }
