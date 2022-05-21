@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { TableExample } from "../template";
+
+<Meta
+  id="web-component-table"
+  title="Web Component/Table"
+  argTypes={{}}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Table
+
+This Table web component is experimental, please share your experiences with our team.
+
+The web component version of the Table component has not yet been tested for accessibility with various assistive tools. Using the CSS component of Table is recommended for now.
+
+Accessibility has been tested in the following manner:
+
+- Accessibility panel in Chrome Developer tools shows the same role structure as the native HTML table equivalent.
+
+For accessibility of `<table-header-cell>` you MUST set the `scope="col"` or `scope="row"` attribute.
+
+<Canvas>
+  <Story name="Default">{TableExample.bind({})}</Story>
+</Canvas>

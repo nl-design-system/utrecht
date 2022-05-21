@@ -46,6 +46,10 @@
   vertical-align: baseline;
 }
 
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-table__footer {
+}
+
 @mixin utrecht-table__header-cell {
   color: var(--utrecht-table-header-cell-color);
   font-size: var(--utrecht-table-header-cell-font-size);
@@ -84,6 +88,10 @@
 
 @mixin utrecht-table__cell--numeric-data {
   font-variant-numeric: lining-nums tabular-nums;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-table__row {
 }
 
 @mixin utrecht-table__row--alternate-odd {
