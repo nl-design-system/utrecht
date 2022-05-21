@@ -63,6 +63,14 @@ import {
   UtrechtParagraph,
   UtrechtSeparator,
   UtrechtSidenav,
+  UtrechtTable,
+  UtrechtTableBody,
+  UtrechtTableCaption,
+  UtrechtTableCell,
+  UtrechtTableFooter,
+  UtrechtTableHeader,
+  UtrechtTableHeaderCell,
+  UtrechtTableRow,
   UtrechtTextbox,
 } from './directives/proxies';
 import { SelectValueAccessor } from './directives/select-value-accessor';
@@ -132,6 +140,14 @@ const components = [
   UtrechtParagraph,
   UtrechtSeparator,
   UtrechtSidenav,
+  UtrechtTable,
+  UtrechtTableBody,
+  UtrechtTableCaption,
+  UtrechtTableCell,
+  UtrechtTableFooter,
+  UtrechtTableHeader,
+  UtrechtTableHeaderCell,
+  UtrechtTableRow,
   UtrechtTextbox,
 ];
 
