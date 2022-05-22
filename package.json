@@ -63,7 +63,7 @@
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
     "lint:css": "stylelint '**/*.{css,scss}'",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --report-unused-disable-directives .",
-    "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name .docusaurus \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
+    "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name .docusaurus -or -name component-library-angular \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint:package-lock": "npm ls",
