@@ -79,6 +79,9 @@
           "packages/component-library-formio/tsconfig.json",
           "packages/component-library-react/tsconfig.json",
           "packages/component-library-react/tsconfig.test.json",
+          "packages/component-library-vue/tsconfig.app.json",
+          "packages/component-library-vue/tsconfig.vite-config.json",
+          "packages/component-library-vue/tsconfig.vitest.json",
           "packages/web-component-library-angular/tsconfig.json",
           "packages/web-component-library-react/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.json",
@@ -87,6 +90,27 @@
         ]
       },
       "plugins": ["@typescript-eslint", "import"]
+    },
+    {
+      "extends": [
+        "plugin:vue/vue3-recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "eslint-config-prettier",
+        "./.eslintrc.js.json"
+      ],
+      "files": ["*.vue"],
+      "parserOptions": {
+        "parser": "@typescript-eslint/parser",
+        "extraFileExtensions": [".vue"],
+        "ecmaFeatures": {
+          "jsx": true
+        },
+        "project": ["packages/component-library-vue/tsconfig.app.json"]
+      },
+      "plugins": ["@typescript-eslint"],
+      "rules": {
+        "vue/require-explicit-emits": "off"
+      }
     }
   ]
 }
