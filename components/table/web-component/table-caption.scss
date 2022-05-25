@@ -9,4 +9,6 @@
   @include utrecht-table__caption;
 
   display: table-caption;
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
