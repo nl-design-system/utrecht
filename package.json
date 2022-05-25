@@ -73,6 +73,7 @@
     "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx' --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "lint-workspaces": "lerna run --no-bail lint",
+    "find-undocumented-tokens": "npm run --workspace proprietary/design-tokens/ build:stylelint && npm run lint:css -- --config ./.tokens.stylelintrc.json",
     "prepare": "husky install",
     "prettier": "prettier --write .",
     "serve": "npm-run-all --parallel serve:**",
