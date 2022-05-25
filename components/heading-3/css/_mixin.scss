@@ -5,7 +5,11 @@
  * Copyright (c) 2021 The Knights Who Say NIH! B.V.
  */
 
+@import "../../heading/css/mixin";
+
 @mixin utrecht-heading-3 {
+  @include utrecht-heading;
+
   color: var(--utrecht-heading-3-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
   font-family: var(
     --utrecht-heading-3-font-family,

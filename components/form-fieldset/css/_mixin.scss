@@ -38,6 +38,8 @@
   font-size: var(--utrecht-form-fieldset-legend-font-size);
   font-weight: var(--utrecht-form-fieldset-legend-font-weight);
   line-height: var(--utrecht-form-fieldset-legend-line-height);
+  page-break-after: avoid;
+  page-break-inside: avoid;
   text-transform: var(--utrecht-form-fieldset-legend-text-transform);
 }
 
