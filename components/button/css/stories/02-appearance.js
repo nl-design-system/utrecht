@@ -47,7 +47,7 @@ export const ButtonTable = ({
       <td class="utrecht-table__cell">${Button({ appearance, textContent, active: true })}</td>
       <td class="utrecht-table__cell">${Button({ appearance, textContent, hover: true })}</td>
       <td class="utrecht-table__cell">${Button({ appearance, textContent, focus: true })}</td>
-      <td class="utrecht-table__cell">${Button({ appearance, textContent, focusVisible: true })}</td>
+      <td class="utrecht-table__cell">${Button({ appearance, textContent, focus: true, focusVisible: true })}</td>
       <td class="utrecht-table__cell">${Button({ appearance, textContent, disabled: true })}</td>
     </tr>`,
     )
