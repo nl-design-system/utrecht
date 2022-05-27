@@ -12,28 +12,31 @@ const visualizeToken = (token) => {
 };
 
 export const DesignTokensTable = ({ tokens }) => (
-  <table>
-    <thead>
-      <tr>
-        <th>CSS Variable</th>
-        <th>CSS Value</th>
-      </tr>
-    </thead>
-    <tbody>
-      {tokens.map((token) => {
-        const { name, path, value } = token;
-        return (
-          <tr key={name}>
-            <td>
-              <code>{path2css(path)}</code>
-            </td>
-            <td>{value}</td>
-            <td>{visualizeToken(token)}</td>
-          </tr>
-        );
-      })}
-    </tbody>
-  </table>
+  <section>
+    <h2>Theme for Gemeente Utrecht</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Design token name</th>
+          <th>Design token value</th>
+        </tr>
+      </thead>
+      <tbody>
+        {tokens.map((token) => {
+          const { name, path, value } = token;
+          return (
+            <tr key={name}>
+              <td>
+                <code>{path.join('.')}</code>
+              </td>
+              <td>{value}</td>
+              <td>{visualizeToken(token)}</td>
+            </tr>
+          );
+        })}
+      </tbody>
+    </table>
+  </section>
 );
 
 DesignTokensTable.propTypes = {

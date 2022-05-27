@@ -1,12 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { ComponentTokensTable } from './ComponentTokensTable';
+import { ExampleTokensCSS } from './ExampleTokensCSS';
 import { ExampleTokensJSON } from './ExampleTokensJSON';
 
 export const ComponentTokensSection = ({ component, tokens, definition }) => (
   <>
-    <ComponentTokensTable component={component} tokens={tokens}></ComponentTokensTable>
     {definition ? <ExampleTokensJSON definition={definition}></ExampleTokensJSON> : ''}
+    {definition ? <ExampleTokensCSS definition={definition}></ExampleTokensCSS> : ''}
+    <ComponentTokensTable component={component} tokens={tokens}></ComponentTokensTable>
   </>
 );
 
