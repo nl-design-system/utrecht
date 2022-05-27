@@ -79,9 +79,9 @@
           "packages/component-library-formio/tsconfig.json",
           "packages/component-library-react/tsconfig.json",
           "packages/component-library-react/tsconfig.test.json",
-          "packages/component-library-vue/tsconfig.app.json",
+          "packages/component-library-vue/tsconfig.jest.json",
+          "packages/component-library-vue/tsconfig.lib.json",
           "packages/component-library-vue/tsconfig.vite-config.json",
-          "packages/component-library-vue/tsconfig.vitest.json",
           "packages/web-component-library-angular/tsconfig.json",
           "packages/web-component-library-react/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.json",
@@ -105,7 +105,7 @@
         "ecmaFeatures": {
           "jsx": true
         },
-        "project": ["packages/component-library-vue/tsconfig.app.json"]
+        "project": ["packages/component-library-vue/tsconfig.lib.json"]
       },
       "plugins": ["@typescript-eslint"],
       "rules": {
