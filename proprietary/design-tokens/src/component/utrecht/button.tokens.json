@@ -27,13 +27,21 @@
       "primary-action": {
         "background-color": { "value": "{utrecht.color.blue.35}" },
         "border-color": { "value": "transparent" },
+        "border-width": {
+          "value": "{utrecht.border-width.md}",
+          "comment": "Although the border is not visible, it is needed to match the size of the secondary-action-button appearance"
+        },
         "color": { "value": "{utrecht.color.white}" },
+        "disabled": {
+          "border-color": { "value": "{utrecht.color.grey.90}" }
+        },
         "hover": {
           "background-color": { "value": "{utrecht.color.blue.40}" },
           "border-color": { "value": "transparent" },
           "color": { "value": "{utrecht.color.white}" }
         },
         "focus": {
+          "background-color": { "value": "{utrecht.color.blue.40}" },
           "border-color": { "value": "{utrecht.color.blue.40}" },
           "border-width": { "value": "{utrecht.border-width.md}" }
         }
