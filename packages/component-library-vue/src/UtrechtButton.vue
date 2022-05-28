@@ -3,7 +3,7 @@
     appearance?: string;
     busy?: boolean;
     disabled?: boolean;
-    type?: string;
+    type?: "button" | "reset" | "submit";
   }>();
 </script>
 
@@ -20,6 +20,7 @@
       'utrecht-button--subtle': appearance === 'subtle-button',
     }"
     :disabled="disabled"
+    :type="type || 'button'"
   >
     <slot />
   </button>
