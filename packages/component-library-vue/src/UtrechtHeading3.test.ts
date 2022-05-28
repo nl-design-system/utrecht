@@ -1,11 +1,11 @@
 /* eslint-env jest */
 import { render } from '@testing-library/vue';
-import Heading1 from './UtrechtHeading1.vue';
+import Heading3 from './UtrechtHeading3.vue';
 import '@testing-library/jest-dom';
 
-describe('Heading 1', () => {
+describe('Heading 3', () => {
   it('renders a heading role element', () => {
-    const { getByRole } = render(Heading1, {
+    const { getByRole } = render(Heading3, {
       slots: {
         default: 'Breaking news',
       },
@@ -18,8 +18,8 @@ describe('Heading 1', () => {
     expect(heading).toBeVisible();
   });
 
-  it('renders a heading at heading level 1', () => {
-    const { getByRole } = render(Heading1, {
+  it('renders a heading at heading level 3', () => {
+    const { getByRole } = render(Heading3, {
       slots: {
         default: 'Breaking news',
       },
@@ -27,30 +27,30 @@ describe('Heading 1', () => {
 
     const heading = getByRole('heading', {
       name: 'Breaking news',
-      level: 1,
+      level: 3,
     });
 
     expect(heading).toBeInTheDocument();
   });
 
-  it('renders an HTML h1 element', () => {
-    const { container } = render(Heading1);
+  it('renders an HTML h3 element', () => {
+    const { container } = render(Heading3);
 
-    const heading = container.querySelector('h1:only-child');
+    const heading = container.querySelector('h3:only-child');
 
     expect(heading).toBeInTheDocument();
   });
 
   it('renders a design system BEM class name', () => {
-    const { container } = render(Heading1);
+    const { container } = render(Heading3);
 
     const heading = container.querySelector(':only-child');
 
-    expect(heading).toHaveClass('utrecht-heading-1');
+    expect(heading).toHaveClass('utrecht-heading-3');
   });
 
   it('renders rich text content', () => {
-    const { getByRole } = render(Heading1, {
+    const { getByRole } = render(Heading3, {
       slots: {
         default: '<strong>Breaking</strong> news',
       },
@@ -66,7 +66,7 @@ describe('Heading 1', () => {
   });
 
   it('can be hidden', () => {
-    const { container } = render(Heading1, { props: { hidden: true } });
+    const { container } = render(Heading3, { props: { hidden: true } });
 
     const heading = container.querySelector(':only-child');
 
@@ -74,7 +74,7 @@ describe('Heading 1', () => {
   });
 
   it('can have a custom class name', () => {
-    const { container } = render(Heading1, { props: { class: 'large' } });
+    const { container } = render(Heading3, { props: { class: 'large' } });
 
     const heading = container.querySelector(':only-child');
 
