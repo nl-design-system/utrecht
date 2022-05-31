@@ -47,6 +47,12 @@ module.exports = {
         respectPrefersColorScheme: false,
         disableSwitch: true,
       },
+      metadata: [
+        {
+          name: 'Content-Security-Policy',
+          content: `frame-ancestors 'none'; object-src 'none'; base-uri 'none'; default-src 'self'; media-src 'none'; form-action 'self'; img-src 'self' data:; script-src 'self'; style-src 'unsafe-inline' 'self'; connect-src 'self' https://*.algolia.net https://*.algolianet.com; frame-src 'self' https://nl-design-system.github.io; font-src 'self';`,
+        },
+      ],
       prism: {
         theme: require('prism-react-renderer/themes/github'),
       },
