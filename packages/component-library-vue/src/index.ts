@@ -8,6 +8,7 @@ import FormField from './UtrechtFormField.vue';
 import FormFieldset from './UtrechtFormFieldset.vue';
 import FormFieldsetLegend from './UtrechtFormFieldsetLegend.vue';
 import FormLabel from './UtrechtFormLabel.vue';
+import Heading from './UtrechtHeading.vue';
 import Heading1 from './UtrechtHeading1.vue';
 import Heading2 from './UtrechtHeading2.vue';
 import Heading3 from './UtrechtHeading3.vue';
@@ -37,6 +38,7 @@ export {
   FormFieldset,
   FormFieldsetLegend,
   FormLabel,
+  Heading,
   Heading1,
   Heading2,
   Heading3,
