@@ -31,11 +31,11 @@
   },
   "main": "./dist/component-library-vue.umd.js",
   "module": "./dist/component-library-vue.es.js",
+  "types": "./dist/index.d.ts",
   "files": [
-    "dist/"
+    "dist/*"
   ],
   "devDependencies": {
-    "@rollup/plugin-typescript": "8.3.2",
     "@rushstack/eslint-patch": "1.1.0",
     "@testing-library/vue": "6.4.2",
     "@types/jest": "27.5.1",
@@ -54,6 +54,7 @@
     "ts-jest": "28.0.3",
     "typescript": "4.6.4",
     "vite": "2.9.5",
+    "vite-plugin-dts": "1.2.0",
     "vue": "3.2.33",
     "vue-router": "4.0.14",
     "vue-tsc": "0.34.7"
