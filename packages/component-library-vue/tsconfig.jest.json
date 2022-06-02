@@ -3,6 +3,7 @@
   "include": ["src/**/*.d.ts", "src/**/*.test.ts", "src/**/*.vue"],
   "compilerOptions": {
     "baseUrl": ".",
+    "composite": true,
     "paths": {
       "@/*": ["./src/*"]
     },
