@@ -1,0 +1,46 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, CustomRadioButton } from "../template";
+import "../index.scss";
+
+<Meta
+  id="css-custom-radio-button"
+  title="CSS Component/Custom Radio Button/States"
+  argTypes={{}}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# CustomRadio Button Component states
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+    }}
+  >
+    {CustomRadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Checked
+
+<Canvas>
+  <Story
+    name="checked"
+    args={{
+      ...defaultArgs,
+      checked: true,
+    }}
+  >
+    {CustomRadioButton.bind({})}
+  </Story>
+</Canvas>
