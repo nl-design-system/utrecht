@@ -8,6 +8,7 @@ export { Backdrop } from './Backdrop';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
 export { ButtonLink } from './ButtonLink';
 export { Checkbox } from './Checkbox';
+export { CustomRadioButton } from './CustomRadioButton';
 export { Document } from './Document';
 export { Fieldset } from './Fieldset';
 export { FieldsetLegend } from './FieldsetLegend';
