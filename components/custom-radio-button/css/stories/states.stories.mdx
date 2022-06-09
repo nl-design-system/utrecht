@@ -15,7 +15,7 @@ import "../index.scss";
   }}
 />
 
-# CustomRadio Button Component states
+# Custom radio button component states
 
 ## Disabled
 
@@ -39,6 +39,48 @@ import "../index.scss";
     args={{
       ...defaultArgs,
       checked: true,
+    }}
+  >
+    {CustomRadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      ...defaultArgs,
+      focus: true,
+    }}
+  >
+    {CustomRadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      ...defaultArgs,
+      invalid: true,
+    }}
+  >
+    {CustomRadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story
+    name="active"
+    args={{
+      ...defaultArgs,
+      active: true,
     }}
   >
     {CustomRadioButton.bind({})}

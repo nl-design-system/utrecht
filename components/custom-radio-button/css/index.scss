@@ -14,11 +14,11 @@
   @include utrecht-custom-radio-button--checked;
 }
 
-.utrecht-custom-radio-button:active {
+.utrecht-custom-radio-button:active, .utrecht-custom-radio-button--active {
   @include utrecht-custom-radio-button--active;
 }
 
-.utrecht-custom-radio-button:focus {
+.utrecht-custom-radio-button--focus, .utrecht-custom-radio-button:focus  {
   @include utrecht-custom-radio-button--focus;
 }
 
