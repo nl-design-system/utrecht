@@ -3,14 +3,13 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../radio-button/css";
 @import "../../common/focus/mixin";
 
 @mixin utrecht-custom-radio-button {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background-color: var(--utrecht-custom-radio-button-background-color, #fff);
+  background-color: var(--utrecht-custom-radio-button-background-color);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -24,17 +23,6 @@
   print-color-adjust: exact;
   vertical-align: top;
   width: var(--utrecht-custom-radio-button-size);
-}
-
-@mixin utrecht-custom-radio-button__input {
-  input[type="radio"] {
-    cursor: default;
-    height: 16px;
-    margin-block: 0;
-    margin-inline: 0;
-    opacity: 0%;
-    width: 16px;
-  }
 }
 
 @mixin utrecht-custom-radio-button--checked {
@@ -70,6 +58,10 @@
   );
   color: var(--utrecht-custom-radio-button-disabled-color, var(--utrecht-custom-radio-button-color));
   cursor: var(--utrecht-action-disabled-cursor);
+}
+
+@mixin utrecht-custom-radio-button--focus-visible {
+  @include utrecht-focus-visible;
 }
 
 @mixin utrecht-custom-radio-button--invalid {

@@ -3,14 +3,14 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../common/focus/mixin";
 @import "./mixin";
 
 .utrecht-custom-radio-button {
   @include utrecht-custom-radio-button;
 }
 
-.utrecht-custom-radio-button:checked {
+.utrecht-custom-radio-button:checked,
+.utrecht-custom-radio-button--checked {
   @include utrecht-custom-radio-button--checked;
 }
 
@@ -24,8 +24,9 @@
   @include utrecht-custom-radio-button--focus;
 }
 
-.utrecht-custom-radio-button:focus-visible {
-  @include utrecht-focus-visible;
+.utrecht-custom-radio-button:focus-visible,
+.utrecht-custom-radio-button--focus-visible {
+  @include utrecht-custom-radio-button--focus-visible;
 }
 
 .utrecht-custom-radio-button--disabled {
