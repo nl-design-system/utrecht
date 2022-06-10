@@ -50,6 +50,10 @@
       "types": "./dist/cjs/Checkbox.d.ts",
       "default": "./dist/cjs/Checkbox.js"
     },
+    "./CustomRadioButton": {
+      "types": "./dist/cjs/CustomRadioButton.d.ts",
+      "default": "./dist/cjs/CustomRadioButton.js"
+    },
     "./Document": {
       "types": "./dist/cjs/Document.d.ts",
       "default": "./dist/cjs/Document.js"
@@ -222,6 +226,9 @@
       ],
       "Checkbox": [
         "./dist/cjs/Checkbox.d.ts"
+      ],
+      "CustomRadioButton": [
+        "./dist/cjs/CustomRadioButton.d.ts"
       ],
       "Document": [
         "./dist/cjs/Document.d.ts"

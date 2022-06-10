@@ -1,0 +1,101 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../../common/focus/mixin";
+
+@mixin utrecht-custom-radio-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--utrecht-custom-radio-button-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-color: var(--utrecht-custom-radio-button-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-custom-radio-button-border-width);
+  height: var(--utrecht-custom-radio-button-size);
+  margin-block-start: var(--utrecht-custom-radio-button-margin-block-start);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  vertical-align: top;
+  width: var(--utrecht-custom-radio-button-size);
+}
+
+@mixin utrecht-custom-radio-button--checked {
+  background-color: var(
+    --utrecht-custom-radio-button-checked-background-color,
+    var(--utrecht-custom-radio-button-background-color)
+  );
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(
+    --utrecht-custom-radio-button-checked-border-color,
+    var(--utrecht-custom-radio-button-border-color)
+  );
+  border-width: var(
+    --utrecht-custom-radio-button-checked-border-width,
+    var(--utrecht-custom-radio-button-border-width)
+  );
+  color: var(--utrecht-custom-radio-button-checked-color, var(--utrecht-custom-radio-button-color));
+}
+
+@mixin utrecht-custom-radio-button--disabled {
+  background-color: var(
+    --utrecht-custom-radio-button-disabled-background-color,
+    var(--utrecht-custom-radio-button-background-color)
+  );
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(
+    --utrecht-custom-radio-button-disabled-border-color,
+    var(--utrecht-custom-radio-button-border-color)
+  );
+  border-width: var(
+    --utrecht-custom-radio-button-disabled-border-width,
+    var(--utrecht-custom-radio-button-border-width)
+  );
+  color: var(--utrecht-custom-radio-button-disabled-color, var(--utrecht-custom-radio-button-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+@mixin utrecht-custom-radio-button--focus-visible {
+  @include utrecht-focus-visible;
+}
+
+@mixin utrecht-custom-radio-button--invalid {
+  background-color: var(
+    --utrecht-custom-radio-button-invalid-background-color,
+    var(--utrecht-custom-radio-button-background-color)
+  );
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(
+    --utrecht-custom-radio-button-invalid-border-color,
+    var(--utrecht-custom-radio-button-border-color)
+  );
+  border-width: var(
+    --utrecht-custom-radio-button-invalid-border-width,
+    var(--utrecht-custom-radio-button-border-width)
+  );
+  color: var(--utrecht-custom-radio-button-invalid-color, var(--utrecht-custom-radio-button-color));
+}
+
+@mixin utrecht-custom-radio-button--active {
+  background-color: var(
+    --utrecht-custom-radio-button-active-background-color,
+    var(--utrecht-custom-radio-button-background-color)
+  );
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-active-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-active-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-active-color, var(--utrecht-custom-radio-button-color));
+}
+
+@mixin utrecht-custom-radio-button--focus {
+  @include utrecht-focus;
+
+  border-color: var(--utrecht-custom-radio-button-focus-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-focus-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-focus-color, var(--utrecht-custom-radio-button-color));
+}
