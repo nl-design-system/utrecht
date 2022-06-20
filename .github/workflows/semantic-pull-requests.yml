@@ -20,4 +20,4 @@ jobs:
         with:
           fetch-depth: 0
       - name: Validate commit messages
-        uses: wagoid/commitlint-github-action@v4
+        uses: wagoid/commitlint-github-action@v5
