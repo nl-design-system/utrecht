@@ -22,6 +22,6 @@ Te veel iconen gebruiken op een pagina kan een soort blindheid veroorzaken.
 
 Let er op dat er niet te veel iconen op een pagina komen te staan en voorkom een oerwoud van plaatjes. Bij het gebruik van te veel iconen worden de iconen niets meer dan decoratie op je pagina en mist het z’n doel als navigatiehulp voor de bezoeker.
 
-Door het aantal iconen te beperken, trekken de iconene die je wel gebruikt sneller de aandacht van de gebruiker en wordt het navigeren op de pagina eenvoudiger.
+Door het aantal iconen te beperken, trekken de iconen die je wel gebruikt worden sneller de aandacht van de gebruiker en wordt het navigeren op de pagina eenvoudiger.
 
 De uitstraling van iconen hebben een effect op de vormgeving van de portaal/webpagina. Let dus goed op hoe en welke iconen jullie willen gaan gebruiken.
