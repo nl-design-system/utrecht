@@ -23,6 +23,7 @@ keywords:
 ---
 
 <!-- @license CC0-1.0 -->
+
 # Onderzoek Product Dienst Status Component
 
 **Aanleiding van het onderzoek:**
@@ -35,6 +36,7 @@ Antwoord geven op de vraag: "Neemt het Product Dienst Status component stress we
 De Product Dienst Status component voegt waarde toe voor de inwoner als deze gebruikt wordt in de context van e-mail notificaties en zelf informatie opzoeken.
 
 **Onderzocht door**
+
 - [René Olling, Gemeente Utrecht](mailto:r.olling@utrecht.nl)
 - [Jeroen du Chatinier, Gemeente Utrecht](mailto:j.du.chatinier@utrecht.nl)
 - [Rozerin Ayerdem, Gemeente Den Haag](mailto:rozerin.ayerdem@denhaag.nl)
@@ -73,7 +75,6 @@ Op het moment dat je iets online besteld hebt ben je als gebruiker de controle k
 ## 3. Datum onderzoek en samenwerking
 
 Het onderzoek is gestart op 8 juni 2022 en geindigd op 15 juni 2022. Het onderzoek is uitgevoerd samen met de gemeente Den Haag en de Vereniging Nederlandse Gemeenten (VNG).
-
 
 ## 4. Onderzoeksopzet
 
@@ -123,7 +124,7 @@ Rust en overzicht in het vormgeving van het prototype wordt erg gewaardeerd door
 
 #### 5.1.4 Aanspreken met de voornaam of achternaam?
 
-- Er is een verwachting dat de gemeente redelijk formele taal gebruikt, maar de geïnterviewden vinden het  fijn om met hun voornaam te worden aangesproken.
+- Er is een verwachting dat de gemeente redelijk formele taal gebruikt, maar de geïnterviewden vinden het fijn om met hun voornaam te worden aangesproken.
 - Welke tone of voice ook gebruikt wordt, het is belangrijk deze over alle kanalen heen hetzelfde te houden. Aanspreken met de voornaam maar 'u' gebruiken in de rest van de mail kan voor wat ruis zorgen bij de lezer die afleidt van de boodschap.
 
 ### 5.2 Email
@@ -153,7 +154,6 @@ Inwoners waarderen de duidelijkheid van de mail omdat de inhoud duidelijk is en 
 De volgende inzichten gaan over de mijnOmgeving waarin het Product Dienst Status component zich bevindt.
 
 ![Mijnomgeving screenshot](../../../static/img/pds_mijnomgeving.png)
-
 
 #### 5.3.4 Inloggen op de mijnOmgeving
 
