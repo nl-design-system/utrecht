@@ -35,7 +35,8 @@ Antwoord geven op de vraag: "Neemt het Product Dienst Status component stress we
 **Belangrijkste inzichten:**
 De Product Dienst Status component voegt waarde toe voor de inwoner als deze gebruikt wordt in de context van e-mail notificaties en zelf informatie opzoeken.
 
-**Onderzocht door**
+**Onderzocht:**
+De volgende mensen hebben het onderzoek uitgevoerd:
 
 - [René Olling, Gemeente Utrecht](mailto:r.olling@utrecht.nl)
 - [Jeroen du Chatinier, Gemeente Utrecht](mailto:j.du.chatinier@utrecht.nl)
