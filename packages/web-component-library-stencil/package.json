@@ -45,6 +45,7 @@
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
     "build:web-components": "npm run build:stencil",
+    "build:typescript": "tsc",
     "clean": "npm-run-all clean:**",
     "clean:stencil": "rimraf dist/",
     "clean:angular-output-target": "rimraf ../web-component-library-angular/src/directives/*",
