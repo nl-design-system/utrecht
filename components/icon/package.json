@@ -25,20 +25,12 @@
     "build": "npm run build:svg && npm run build:components",
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path tmp/components",
     "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs",
-    "clean": "rimraf tmp dist loader www",
-    "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "clean": "rimraf tmp dist"
   },
-  "dependencies": {
-    "@stencil/core": "2.15.2"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "@types/jest": "27.0.3",
-    "jest": "27.0.3",
-    "jest-cli": "27.0.3",
     "lodash": "4.17.21",
     "minimist": "1.2.6",
-    "puppeteer": "10.0.0",
     "svgo": "2.8.0"
   },
   "keywords": [
