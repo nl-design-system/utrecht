@@ -67,7 +67,7 @@ describe('RadioButton', () => {
 
     it('can have a checked state', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton checked onChange={handleChange} />);
+      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
 
       const radioButton = container.querySelector(':only-child');
 
@@ -76,7 +76,7 @@ describe('RadioButton', () => {
 
     it('can have a checked state in CSS', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton checked onChange={handleChange} />);
+      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
 
       const radioButton = container.querySelector(':checked');
 
