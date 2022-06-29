@@ -4,23 +4,47 @@
   "description": "Icons for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
   "name": "@utrecht/icon",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "./dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/icon/icon.esm.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
   "files": [
-    "dist"
+    "dist/",
+    "loader/"
   ],
+  "scripts": {
+    "prebuild": "npm run clean",
+    "build": "npm run build:svg && npm run build:components",
+    "build:components": "node src/build.js $1 --prefix utrecht-icon --path tmp/components",
+    "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs",
+    "clean": "rimraf tmp dist loader www",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "@stencil/core": "2.15.2"
+  },
+  "devDependencies": {
+    "@types/jest": "27.0.3",
+    "jest": "27.0.3",
+    "jest-cli": "27.0.3",
+    "lodash": "4.17.21",
+    "minimist": "1.2.6",
+    "puppeteer": "10.0.0",
+    "svgo": "2.8.0"
+  },
   "keywords": [
     "nl-design-system"
   ],
-  "private": false,
-  "scripts": {
-    "prebuild": "make-dir dist/",
-    "build": "svgo -f svg/ -o dist/"
-  },
   "publishConfig": {
     "access": "public"
-  },
-  "devDependencies": {
-    "@gemeente-denhaag/process-steps": "0.1.0-alpha.34",
-    "make-dir-cli": "3.0.0",
-    "svgo": "2.8.0"
   }
 }
