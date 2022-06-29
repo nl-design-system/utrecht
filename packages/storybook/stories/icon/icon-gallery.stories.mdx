@@ -22,19 +22,19 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 ## Social Media
 
 <IconGallery>
-  <IconItem name="Facebook">
+  <IconItem name="utrecht-icon-facebook">
     <utrecht-icon-facebook></utrecht-icon-facebook>
   </IconItem>
-  <IconItem name="Instagram">
+  <IconItem name="utrecht-icon-instagram">
     <utrecht-icon-instagram></utrecht-icon-instagram>
   </IconItem>
-  <IconItem name="Twitter">
+  <IconItem name="utrecht-icon-twitter">
     <utrecht-icon-twitter></utrecht-icon-twitter>
   </IconItem>
-  <IconItem name="Linkedin">
+  <IconItem name="utrecht-icon-linkedin">
     <utrecht-icon-linkedin></utrecht-icon-linkedin>
   </IconItem>
-  <IconItem name="WhatsApp">
+  <IconItem name="utrecht-icon-whatsapp">
     <utrecht-icon-whatsapp></utrecht-icon-whatsapp>
   </IconItem>
 </IconGallery>
@@ -42,16 +42,16 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 ## Functional
 
 <IconGallery>
-  <IconItem name="Arrow">
+  <IconItem name="utrecht-icon-arrow">
     <utrecht-icon-arrow></utrecht-icon-arrow>
   </IconItem>
-  <IconItem name="Checkmark">
+  <IconItem name="utrecht-icon-checkmark">
     <utrecht-icon-checkmark></utrecht-icon-checkmark>
   </IconItem>
-  <IconItem name="Cross">
+  <IconItem name="utrecht-icon-cross">
     <utrecht-icon-cross></utrecht-icon-cross>
   </IconItem>
-  <IconItem name="Loupe">
+  <IconItem name="utrecht-icon-loupe">
     <utrecht-icon-loupe></utrecht-icon-loupe>
   </IconItem>
 </IconGallery>
@@ -59,13 +59,13 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 ## Feedback
 
 <IconGallery>
-  <IconItem name="warning">
+  <IconItem name="utrecht-icon-warning">
     <utrecht-icon-warning></utrecht-icon-warning>
   </IconItem>
-  <IconItem name="error">
+  <IconItem name="utrecht-icon-error">
     <utrecht-icon-error></utrecht-icon-error>
   </IconItem>
-  <IconItem name="information">
+  <IconItem name="utrecht-icon-information">
     <utrecht-icon-information></utrecht-icon-information>
   </IconItem>
 </IconGallery>
@@ -73,25 +73,25 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 ## Top task
 
 <IconGallery>
-  <IconItem name="Rijbewijs">
+  <IconItem name="utrecht-icon-rijbewijs">
     <utrecht-icon-rijbewijs></utrecht-icon-rijbewijs>
   </IconItem>
-  <IconItem name="Paspoort">
+  <IconItem name="utrecht-icon-paspoort">
     <utrecht-icon-paspoort></utrecht-icon-paspoort>
   </IconItem>
-  <IconItem name="Melding">
+  <IconItem name="utrecht-icon-melding">
     <utrecht-icon-melding></utrecht-icon-melding>
   </IconItem>
-  <IconItem name="Verhuizen">
+  <IconItem name="utrecht-icon-verhuizen">
     <utrecht-icon-verhuizen></utrecht-icon-verhuizen>
   </IconItem>
-  <IconItem name="Afval">
+  <IconItem name="utrecht-icon-afval">
     <utrecht-icon-afval></utrecht-icon-afval>
   </IconItem>
-  <IconItem name="Toeslag">
+  <IconItem name="utrecht-icon-toeslag">
     <utrecht-icon-toeslag></utrecht-icon-toeslag>
   </IconItem>
-  <IconItem name="Trouwen">
+  <IconItem name="utrecht-icon-trouwen">
     <utrecht-icon-trouwen></utrecht-icon-trouwen>
   </IconItem>
 </IconGallery>
@@ -99,16 +99,16 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 ## Map Contol
 
 <IconGallery>
-  <IconItem name="Filter">
+  <IconItem name="utrecht-icon-filter">
     <utrecht-icon-filter></utrecht-icon-filter>
   </IconItem>
-  <IconItem name="List">
+  <IconItem name="utrecht-icon-list">
     <utrecht-icon-list></utrecht-icon-list>
   </IconItem>
-  <IconItem name="Zoomin">
+  <IconItem name="utrecht-icon-zoomin">
     <utrecht-icon-zoomin></utrecht-icon-zoomin>
   </IconItem>
-  <IconItem name="Zoomout">
+  <IconItem name="utrecht-icon-zoomout">
     <utrecht-icon-zoomout></utrecht-icon-zoomout>
   </IconItem>
 </IconGallery>
@@ -117,7 +117,7 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 
 <IconGallery>
   {iconSet.map((Icon, index) => (
-    <IconItem key={index}>
+    <IconItem name={Icon} key={index}>
       <Icon />
     </IconItem>
   ))}
