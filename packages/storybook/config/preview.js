@@ -1,4 +1,4 @@
-import { defineCustomElements } from '@utrecht/web-component-library-stencil';
+import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import defaultsDeep from 'lodash.defaultsdeep';
 
 import '@utrecht/components/document/css/index.scss';
