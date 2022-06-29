@@ -14,7 +14,6 @@ export const RadioButton = forwardRef(
       {...restProps}
       ref={ref}
       type="radio"
-      checked={checked}
       className={clsx(
         'utrecht-radio-button',
         'utrecht-radio-button--html-input',
