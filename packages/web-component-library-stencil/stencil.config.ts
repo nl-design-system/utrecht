@@ -1,5 +1,6 @@
 import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 import { Config } from '@stencil/core';
+import { OutputTargetCustom } from '@stencil/core/internal';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 import { vueOutputTarget } from '@stencil/vue-output-target';
@@ -7,7 +8,7 @@ import { patchAngularOutputTarget } from './patch-angular';
 import { patchVueOutputTarget } from './patch-vue';
 import { sequentialOutputTargets } from './sequential-output-targets';
 
-const valueAccessorConfigs: ValueAccessorConfig = [
+const valueAccessorConfigs: ValueAccessorConfig[] = [
   {
     elementSelectors: [
       'utrecht-textarea',
@@ -59,8 +60,13 @@ export const config: Config = {
       esmLoaderPath: '../loader',
     },
     {
-      type: 'dist-custom-elements-bundle',
+      type: 'dist-custom-elements',
     },
+    reactOutputTarget({
+      componentCorePackage: '@utrecht/web-component-library-stencil',
+      proxiesFile: '../web-component-library-react/src/components.ts',
+      includeDefineCustomElements: true,
+    }),
     sequentialOutputTargets(
       angularOutputTarget({
         componentCorePackage: '@utrecht/web-component-library-stencil',
@@ -71,11 +77,7 @@ export const config: Config = {
         componentCorePackage: '@utrecht/web-component-library-stencil',
         directivesProxyFile: '../web-component-library-angular/src/directives/proxies.ts',
       }),
-    ),
-    reactOutputTarget({
-      componentCorePackage: '@utrecht/web-component-library-stencil',
-      proxiesFile: '../web-component-library-react/src/components.ts',
-    }),
+    ) as OutputTargetCustom,
     sequentialOutputTargets(
       vueOutputTarget({
         componentCorePackage: '@utrecht/web-component-library-stencil',
@@ -85,7 +87,7 @@ export const config: Config = {
       patchVueOutputTarget({
         proxiesFile: '../web-component-library-vue/src/components.ts',
       }),
-    ),
+    ) as OutputTargetCustom,
   ],
   plugins: [sass()],
 };

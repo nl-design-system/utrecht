@@ -11,14 +11,14 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "dist/index.cjs.js",
-  "module": "dist/custom-elements/index.js",
-  "es2015": "dist/esm/index.mjs",
-  "es2017": "dist/esm/index.mjs",
-  "types": "dist/custom-elements/index.d.ts",
-  "collection": "dist/collection/collection-manifest.json",
-  "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/yyyy/yyyy.esm.js",
+  "main": "./dist/cjs/utrecht.cjs.js",
+  "module": "./dist/esm/utrecht.js",
+  "es2015": "./dist/cjs/utrecht.cjs.js",
+  "es2017": "./dist/cjs/utrecht.cjs.js",
+  "types": "./dist/types/components.d.ts",
+  "collection": "./dist/collection/collection-manifest.json",
+  "collection:main": "./dist/collection/collection-manifest.json",
+  "unpkg": "./dist/utrecht/utrecht.esm.js",
   "files": [
     "dist/",
     "loader/"
@@ -44,7 +44,6 @@
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
-    "build:typescript": "tsc",
     "build:web-components": "npm run build:stencil",
     "clean": "npm-run-all clean:**",
     "clean:stencil": "rimraf dist/",

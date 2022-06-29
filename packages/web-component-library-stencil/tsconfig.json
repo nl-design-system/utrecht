@@ -15,6 +15,6 @@
     "jsxFactory": "h",
     "skipLibCheck": true
   },
-  "include": ["../../components/"],
-  "exclude": ["dist", "loader", "node_modules"]
+  "include": ["../../components/", "*/*.ts", "*/*.tsx", "./stencil.config.ts"],
+  "exclude": ["node_modules"]
 }
