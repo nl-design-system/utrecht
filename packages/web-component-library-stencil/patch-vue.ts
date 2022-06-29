@@ -1,3 +1,4 @@
+/* eslint-env node */
 import type { CompilerCtx, Config, OutputTargetCustom } from '@stencil/core/internal';
 import { dirname, join } from 'path';
 
@@ -11,11 +12,11 @@ export const patchVueOutputTarget = (outputTarget: OutputTargetPatchVue): Output
   validate() {
     return true;
   },
-  async generator(config: Config, compilerCtx: CompilerCtx, buildCtx) {
+  async generator(_config: Config, compilerCtx: CompilerCtx, buildCtx) {
     const timespan = buildCtx.createTimeSpan(`generate Vue.js patch started`, true);
 
     const utilsFilePath = join(dirname(outputTarget.proxiesFile), './vue-component-lib/utils.ts');
-    const utilsFile = compilerCtx.fs.readFileSync(utilsFilePath).toString('utf8');
+    const utilsFile = (compilerCtx.fs.readFileSync(utilsFilePath) as any as Buffer).toString('utf8');
     const patchedUtilsFile = utilsFile.replace('eventName.toLowerCase()', 'eventName');
 
     await compilerCtx.fs.writeFile(utilsFilePath, patchedUtilsFile);
