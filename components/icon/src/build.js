@@ -74,8 +74,8 @@ const createIconWrapperComponent = () => {
   const cssValue = `.${iconRapperComponent} {
     display: inline-block;
     color: var(--${componentPrefix}color);
-    font-size: var(--${componentPrefix}size);
-    line-height: 1;
+    width: var(--${componentPrefix}size);
+    height: var(--${componentPrefix}size);
   }`;
   fs.mkdirSync(dir);
   fs.writeFile(
