@@ -4,17 +4,20 @@
  */
 
 .utrecht-link-social {
-  --utrecht-icon-color: var(--utrecht-color-white);
+  --utrecht-icon-color: var(--utrecht-link-social-icon-color);
+  --utrecht-icon-size: var(--utrecht-link-social-icon-size);
 
-  background-color: var(--utrecht-color-red-40);
-  border: 2px solid var(--utrecht-color-white);
+  background-color: var(--utrecht-link-social-background-color);
+  border-color: var(--utrecht-link-social-border-color);
   border-radius: 50%;
-  color: var(--utrecht-color-white);
+  border-style: solid;
+  border-width: var(--utrecht-link-social-border-width);
   display: inline-block;
-  height: 2.4em;
-  width: 2.4em;
+  height: var(--utrecht-link-social-size);
+  text-align: center;
+  width: var(--utrecht-link-social-size);
 }
 
-.utrecht-link-social--distanced {
-  margin-inline-end: 0.6em;
+* ~ .utrecht-link-social--distanced {
+  margin-inline-start: var(--utrecht-link-social-distanced);
 }
