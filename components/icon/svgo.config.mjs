@@ -28,12 +28,6 @@ export default {
           {
             fill: "CurrentColor",
           },
-          {
-            width: "1em",
-          },
-          {
-            height: "1em",
-          },
         ],
       },
     },
