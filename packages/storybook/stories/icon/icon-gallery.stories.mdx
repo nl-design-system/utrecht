@@ -1,6 +1,7 @@
 <!-- @license CC0-1.0 -->
 
-import { Canvas, IconGallery, IconItem, Meta } from "@storybook/addon-docs";
+import { Canvas, Meta } from "@storybook/addon-docs";
+import { CustomIconGallery, CustomIconGalleryItem } from "@utrecht/documentation/components/CustomIcomGallery";
 import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 
 <Meta
@@ -21,104 +22,56 @@ import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
 
 ## Social Media
 
-<IconGallery>
-  <IconItem name="utrecht-icon-facebook">
-    <utrecht-icon-facebook></utrecht-icon-facebook>
-  </IconItem>
-  <IconItem name="utrecht-icon-instagram">
-    <utrecht-icon-instagram></utrecht-icon-instagram>
-  </IconItem>
-  <IconItem name="utrecht-icon-twitter">
-    <utrecht-icon-twitter></utrecht-icon-twitter>
-  </IconItem>
-  <IconItem name="utrecht-icon-linkedin">
-    <utrecht-icon-linkedin></utrecht-icon-linkedin>
-  </IconItem>
-  <IconItem name="utrecht-icon-whatsapp">
-    <utrecht-icon-whatsapp></utrecht-icon-whatsapp>
-  </IconItem>
-</IconGallery>
+<CustomIconGallery>
+  <CustomIconGalleryItem name="utrecht-icon-facebook" icon={<utrecht-icon-facebook />} />
+  <CustomIconGalleryItem name="utrecht-icon-instagram" icon={<utrecht-icon-instagram />} />
+  <CustomIconGalleryItem name="utrecht-icon-twitter" icon={<utrecht-icon-twitter />} />
+  <CustomIconGalleryItem name="utrecht-icon-linkedin" icon={<utrecht-icon-linkedin />} />
+  <CustomIconGalleryItem name="utrecht-icon-whatsapp" icon={<utrecht-icon-whatsapp />} />
+</CustomIconGallery>
 
 ## Functional
 
-<IconGallery>
-  <IconItem name="utrecht-icon-arrow">
-    <utrecht-icon-arrow></utrecht-icon-arrow>
-  </IconItem>
-  <IconItem name="utrecht-icon-checkmark">
-    <utrecht-icon-checkmark></utrecht-icon-checkmark>
-  </IconItem>
-  <IconItem name="utrecht-icon-cross">
-    <utrecht-icon-cross></utrecht-icon-cross>
-  </IconItem>
-  <IconItem name="utrecht-icon-loupe">
-    <utrecht-icon-loupe></utrecht-icon-loupe>
-  </IconItem>
-</IconGallery>
+<CustomIconGallery>
+  <CustomIconGalleryItem name="utrecht-icon-arrow" icon={<utrecht-icon-arrow />} />
+  <CustomIconGalleryItem name="utrecht-icon-checkmark" icon={<utrecht-icon-checkmark />} />
+  <CustomIconGalleryItem name="utrecht-icon-cross" icon={<utrecht-icon-cross />} />
+  <CustomIconGalleryItem name="utrecht-icon-loupe" icon={<utrecht-icon-loupe />} />
+</CustomIconGallery>
 
 ## Feedback
 
-<IconGallery>
-  <IconItem name="utrecht-icon-warning">
-    <utrecht-icon-warning></utrecht-icon-warning>
-  </IconItem>
-  <IconItem name="utrecht-icon-error">
-    <utrecht-icon-error></utrecht-icon-error>
-  </IconItem>
-  <IconItem name="utrecht-icon-information">
-    <utrecht-icon-information></utrecht-icon-information>
-  </IconItem>
-</IconGallery>
+<CustomIconGallery>
+  <CustomIconGalleryItem name="utrecht-icon-warning" icon={<utrecht-icon-warning />} />
+  <CustomIconGalleryItem name="utrecht-icon-error" icon={<utrecht-icon-error />} />
+  <CustomIconGalleryItem name="utrecht-icon-information" icon={<utrecht-icon-information />} />
+</CustomIconGallery>
 
 ## Top task
 
-<IconGallery>
-  <IconItem name="utrecht-icon-rijbewijs">
-    <utrecht-icon-rijbewijs></utrecht-icon-rijbewijs>
-  </IconItem>
-  <IconItem name="utrecht-icon-paspoort">
-    <utrecht-icon-paspoort></utrecht-icon-paspoort>
-  </IconItem>
-  <IconItem name="utrecht-icon-melding">
-    <utrecht-icon-melding></utrecht-icon-melding>
-  </IconItem>
-  <IconItem name="utrecht-icon-verhuizen">
-    <utrecht-icon-verhuizen></utrecht-icon-verhuizen>
-  </IconItem>
-  <IconItem name="utrecht-icon-afval">
-    <utrecht-icon-afval></utrecht-icon-afval>
-  </IconItem>
-  <IconItem name="utrecht-icon-toeslag">
-    <utrecht-icon-toeslag></utrecht-icon-toeslag>
-  </IconItem>
-  <IconItem name="utrecht-icon-trouwen">
-    <utrecht-icon-trouwen></utrecht-icon-trouwen>
-  </IconItem>
-</IconGallery>
+<CustomIconGallery>
+  <CustomIconGalleryItem name="utrecht-icon-rijbewijs" icon={<utrecht-icon-rijbewijs />} />
+  <CustomIconGalleryItem name="utrecht-icon-paspoort" icon={<utrecht-icon-paspoort />} />
+  <CustomIconGalleryItem name="utrecht-icon-melding" icon={<utrecht-icon-melding />} />
+  <CustomIconGalleryItem name="utrecht-icon-verhuizen" icon={<utrecht-icon-verhuizen />} />
+  <CustomIconGalleryItem name="utrecht-icon-afval" icon={<utrecht-icon-afval />} />
+  <CustomIconGalleryItem name="utrecht-icon-toeslag" icon={<utrecht-icon-toeslag />} />
+  <CustomIconGalleryItem name="utrecht-icon-trouwen" icon={<utrecht-icon-trouwen />} />
+</CustomIconGallery>
 
 ## Map Contol
 
-<IconGallery>
-  <IconItem name="utrecht-icon-filter">
-    <utrecht-icon-filter></utrecht-icon-filter>
-  </IconItem>
-  <IconItem name="utrecht-icon-list">
-    <utrecht-icon-list></utrecht-icon-list>
-  </IconItem>
-  <IconItem name="utrecht-icon-zoomin">
-    <utrecht-icon-zoomin></utrecht-icon-zoomin>
-  </IconItem>
-  <IconItem name="utrecht-icon-zoomout">
-    <utrecht-icon-zoomout></utrecht-icon-zoomout>
-  </IconItem>
-</IconGallery>
+<CustomIconGallery>
+  <CustomIconGalleryItem name="utrecht-icon-filter" icon={<utrecht-icon-filter />} />
+  <CustomIconGalleryItem name="utrecht-icon-list" icon={<utrecht-icon-list />} />
+  <CustomIconGalleryItem name="utrecht-icon-zoomin" icon={<utrecht-icon-zoomin />} />
+  <CustomIconGalleryItem name="utrecht-icon-zoomout" icon={<utrecht-icon-zoomout />} />
+</CustomIconGallery>
 
 ## Icon Set
 
-<IconGallery>
+<CustomIconGallery>
   {iconSet.map((Icon, index) => (
-    <IconItem name={Icon} key={index}>
-      <Icon />
-    </IconItem>
+    <CustomIconGalleryItem name={Icon} key={index} icon={<Icon />} />
   ))}
-</IconGallery>
+</CustomIconGallery>
