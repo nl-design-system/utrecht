@@ -20,7 +20,7 @@ export const exampleLinks = [
   },
   {
     href: '#',
-    icon: 'utrecht-icon-melding',
+    icon: 'utrecht-icon-melding-klacht',
     textContent: 'Melding/klacht openbare ruimte doorgeven',
   },
   {
@@ -30,15 +30,17 @@ export const exampleLinks = [
   },
   {
     href: '#',
+    icon: 'utrecht-icon-werken',
     textContent: 'Werken bij de gemeente',
   },
   {
     href: '#',
+    icon: 'utrecht-icon-nummerbord',
     textContent: 'Parkeren: kentekenwijziging doorgeven',
   },
   {
     href: '#',
-    icon: 'utrecht-icon-afval',
+    icon: 'utrecht-icon-afval-scheiden',
     textContent: 'Afval',
   },
 ];
