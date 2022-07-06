@@ -27,6 +27,12 @@ module.exports = {
     },
     {
       type: 'doc',
+      docId: 'tmp/designrichtlijnen/designrichtlijnen-algemeen',
+      position: 'left',
+      label: 'Design Richtlijnen',
+    },
+    {
+      type: 'doc',
       docId: 'tmp/gebruikersonderzoek/research',
       position: 'left',
       label: 'Onderzoek',
