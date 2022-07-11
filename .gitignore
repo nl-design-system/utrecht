@@ -6,6 +6,7 @@ node_modules/
 dist/
 tmp/
 *.tgz
+.angular
 
 # Ignore log files
 *.err
@@ -26,6 +27,7 @@ yarn.lock
 package-lock.json
 !/package-lock.json
 !/standalone/**/package-lock.json
+packages/web-component-library-angular/src/directives/**
 packages/web-component-library-angular/src/directives/proxies.ts
 packages/web-component-library-angular/src/directives/angular-component-lib/utils.ts
 package-lock.json

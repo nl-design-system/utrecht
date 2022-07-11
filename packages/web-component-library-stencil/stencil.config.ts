@@ -4,7 +4,6 @@ import { OutputTargetCustom } from '@stencil/core/internal';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 import { vueOutputTarget } from '@stencil/vue-output-target';
-import { patchAngularOutputTarget } from './patch-angular';
 import { patchVueOutputTarget } from './patch-vue';
 import { sequentialOutputTargets } from './sequential-output-targets';
 
@@ -67,17 +66,12 @@ export const config: Config = {
       proxiesFile: '../web-component-library-react/src/components.ts',
       includeDefineCustomElements: true,
     }),
-    sequentialOutputTargets(
-      angularOutputTarget({
-        componentCorePackage: '@utrecht/web-component-library-stencil',
-        directivesProxyFile: '../web-component-library-angular/src/directives/proxies.ts',
-        valueAccessorConfigs,
-      }),
-      patchAngularOutputTarget({
-        componentCorePackage: '@utrecht/web-component-library-stencil',
-        directivesProxyFile: '../web-component-library-angular/src/directives/proxies.ts',
-      }),
-    ) as OutputTargetCustom,
+    angularOutputTarget({
+      componentCorePackage: '@utrecht/web-component-library-stencil',
+      directivesProxyFile: '../web-component-library-angular/src/directives/proxies.ts',
+      directivesArrayFile: '../web-component-library-angular/src/directives/index.ts',
+      valueAccessorConfigs: valueAccessorConfigs,
+    }),
     sequentialOutputTargets(
       vueOutputTarget({
         componentCorePackage: '@utrecht/web-component-library-stencil',
