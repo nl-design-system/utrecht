@@ -60,13 +60,7 @@ describe('${ComponentName}', () => {
 };
 
 exports.generateIconsName = (iconsNames) => {
-  return JSON.stringify(iconsNames);
-};
-
-exports.generateIcons = (iconsNames) => {
-  return `const icons = {
-    ${iconsNames.map((icon) => `\n${upperFirst(camelCase(icon))}`)}
-  }`;
+  return JSON.stringify(iconsNames, null, '  ');
 };
 
 exports.style = (value) => value;

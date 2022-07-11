@@ -5,14 +5,7 @@ const argv = require('minimist')(process.argv.slice(2), {
   string: ['prefix', 'path'],
 });
 const path = require('path');
-const {
-  component,
-  test,
-  generateIconsName,
-  generateIcons,
-  style,
-  iconContainerComponent,
-} = require('./component_templates.js');
+const { component, test, generateIconsName, style, iconContainerComponent } = require('./component_templates.js');
 
 const { kebabCase } = lodash;
 const componentPrefix = `${argv.prefix}-`;
@@ -38,7 +31,10 @@ fs.readdir(directoryPath, function (err, files) {
     return;
   }
 
-  const iconsNames = files.map((file) => `${componentPrefix}${kebabCase(file.replace('.svg', ''))}`);
+  const iconData = files.map((file) => ({
+    id: `${componentPrefix}${kebabCase(file.replace('.svg', ''))}`,
+    src: file,
+  }));
 
   files.forEach(function (file) {
     const fileName = `${componentPrefix}${kebabCase(file.replace('.svg', ''))}`;
@@ -65,8 +61,17 @@ fs.readdir(directoryPath, function (err, files) {
     });
   });
 
-  fs.writeFile(`${componentsPath}/icon-set.json`, generateIconsName(iconsNames), writeFileErrorHandler);
-  fs.writeFile(`${componentsPath}/icons.js`, generateIcons(iconsNames), writeFileErrorHandler);
+  const dirExistsSync = (dir) => {
+    const stats = !!fs.statSync(dir, { throwIfNoEntry: false });
+    return stats ? stats.isDirectory() : false;
+  };
+
+  const outputDir = path.resolve(__dirname, '../dist/');
+
+  if (!dirExistsSync(outputDir)) {
+    fs.mkdirSync(outputDir);
+  }
+  fs.writeFile(path.join(outputDir, './index.json'), generateIconsName(iconData), writeFileErrorHandler);
 });
 
 const createIconWrapperComponent = () => {
