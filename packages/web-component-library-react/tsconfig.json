@@ -21,7 +21,7 @@
     "target": "es2015"
   },
   "include": ["src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["**/__tests__/**"],
+  "exclude": ["node_modules", "dist"],
   "compileOnSave": false,
   "buildOnSave": false
 }
