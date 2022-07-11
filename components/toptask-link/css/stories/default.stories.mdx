@@ -5,7 +5,7 @@ Copyright (c) 2021 Gemeente Utrecht
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import iconSet from "@utrecht/icon/tmp/components/icon-set.json";
+import iconSet from "@utrecht/icon/dist/index.json";
 import { defaultArgs, ToptaskLink } from "../template";
 import "../index.scss";
 
@@ -28,7 +28,7 @@ import "../index.scss";
     icon: {
       description: "Icon",
       control: { type: "select" },
-      options: ["", ...iconSet],
+      options: ["", ...iconSet.map(({ id }) => id)],
     },
     textContent: {
       description: "Link text",

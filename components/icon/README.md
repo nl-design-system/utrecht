@@ -69,3 +69,7 @@ De grootte van het icoon kan aangepast worden met de `--utrecht-icon-size` CSS e
   }
 </style>
 ```
+
+## Overzicht van icons
+
+Wanneer het nodig is een overzicht te hebben van de beschikbare icons, gebruik dan als basis de meegeleverde JSON informatie in `dist/index.json`. Het bevat een array met onder andere de ID van elke icoon. Op dit moment is de naam van de custom element altijd gelijk aan de ID.
