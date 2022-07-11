@@ -19,6 +19,6 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 export class UtrechtRadioButtonAttr {
   @Input() disabled = false;
   @Input() checked = false;
-  @Input() type: string = null;
+  @Input() type?: string;
   constructor() {}
 }

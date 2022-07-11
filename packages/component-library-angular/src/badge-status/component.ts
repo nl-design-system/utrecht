@@ -7,6 +7,6 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UtrechtBadgeStatus {
-  @Input() status: string = null;
+  @Input() status?: string;
   constructor() {}
 }

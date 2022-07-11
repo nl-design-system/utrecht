@@ -17,36 +17,39 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "ng build",
-    "clean": "rimraf dist/",
+    "build": "npm run build:web-components",
+    "build:web-components": "ng build",
+    "clean": "rimraf dist/ .angular/",
     "watch:build": "chokidar --follow-symlinks --initial --command \"npm run build\" \"./src/**/*.(css|js|jsx|html|ts|tsx)\""
-  },
-  "peerDependencies": {
-    "@angular/common": "^11.2.0",
-    "@angular/core": "^11.2.0"
   },
   "dependencies": {
     "tslib": "2.4.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.1102.19",
-    "@angular/cli": "11.2.19",
-    "@angular/common": "11.2.14",
-    "@angular/compiler": "11.2.14",
-    "@angular/compiler-cli": "11.2.14",
-    "@angular/core": "11.2.14",
-    "@angular/forms": "11.2.14",
-    "@utrecht/components": "file:../../components",
-    "chokidar-cli": "3.0.0",
-    "ng-packagr": "11.2.4",
-    "rimraf": "3.0.2",
-    "typescript": "4.1.6 <4.2"
+    "@angular/animations": "14.0.0",
+    "@angular/common": "14.0.0",
+    "@angular/compiler": "14.0.0",
+    "@angular/core": "14.0.0",
+    "@angular/forms": "14.0.0",
+    "@angular/platform-browser": "14.0.0",
+    "@angular/platform-browser-dynamic": "14.0.0",
+    "@angular/router": "14.0.0",
+    "rxjs": "7.5.0",
+    "zone.js": "0.11.6",
+    "@angular-devkit/build-angular": "14.0.5",
+    "@angular/cli": "14.0.5",
+    "@angular/compiler-cli": "14.0.0",
+    "ng-packagr": "14.0.0",
+    "chokidar-cli": "3.0.0"
   },
-  "main": "dist/bundles/utrecht-component-library-angular.umd.js",
-  "module": "dist/fesm2015/utrecht-component-library-angular.js",
-  "es2015": "dist/fesm2015/utrecht-component-library-angular.js",
-  "esm2015": "dist/esm2015/utrecht-component-library-angular.js",
-  "fesm2015": "dist/fesm2015/utrecht-component-library-angular.js",
-  "typings": "dist/utrecht-component-library-angular.d.ts",
-  "metadata": "dist/utrecht-component-library-angular.metadata.json"
+  "peerDependencies": {
+    "@angular/common": "12 - 14",
+    "@angular/core": "12 - 14"
+  },
+  "main": "dist/fesm2020/utrecht-component-library-angular.mjs",
+  "esm2020": "dist/esm2020/public-api.mjs",
+  "module": "dist/fesm2015/utrecht-component-library-angular.mjs",
+  "es2020": "dist/esm2020/public-api.mjs",
+  "fesm2015": "dist/fesm2015/utrecht-component-library-angular.mjs",
+  "typings": "dist/public-api.d.ts"
 }

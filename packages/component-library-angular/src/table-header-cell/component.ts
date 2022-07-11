@@ -12,6 +12,6 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   },
 })
 export class UtrechtTableHeaderCellAttr {
-  @Input() scope: string = null;
+  @Input() scope?: string;
   constructor() {}
 }

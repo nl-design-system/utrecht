@@ -25,6 +25,6 @@ export class UtrechtCheckboxAttr {
   @Input() invalid = false;
   @Input() required = false;
   @Input() checked = false;
-  @Input() type: string = null;
+  @Input() type?: string;
   constructor() {}
 }

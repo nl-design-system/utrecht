@@ -75,14 +75,14 @@
       "parserOptions": {
         "project": [
           "components/tsconfig.json",
-          "packages/component-library-angular/tsconfig.json",
+          "packages/component-library-angular/tsconfig.lib.json",
           "packages/component-library-formio/tsconfig.json",
           "packages/component-library-react/tsconfig.json",
           "packages/component-library-react/tsconfig.test.json",
           "packages/component-library-vue/tsconfig.jest.json",
           "packages/component-library-vue/tsconfig.lib.json",
           "packages/component-library-vue/tsconfig.vite-config.json",
-          "packages/web-component-library-angular/tsconfig.json",
+          "packages/web-component-library-angular/tsconfig.lib.json",
           "packages/web-component-library-react/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.stencil.json",

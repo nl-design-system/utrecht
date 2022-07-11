@@ -11,8 +11,8 @@
   "publishConfig": {
     "access": "public"
   },
-  "main": "./dist/cjs/utrecht.cjs.js",
-  "module": "./dist/esm/utrecht.js",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.js",
   "es2015": "./dist/cjs/utrecht.cjs.js",
   "es2017": "./dist/cjs/utrecht.cjs.js",
   "types": "./dist/types/components.d.ts",
