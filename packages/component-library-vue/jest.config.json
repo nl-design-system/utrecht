@@ -13,5 +13,8 @@
     "^.+\\.tsx?$": "ts-jest",
     "^.+\\.vue$": "@vue/vue3-jest"
   },
-  "testMatch": ["**/*.(spec|test).[jt]s?(x)"]
+  "testMatch": ["**/*.(spec|test).[jt]s?(x)"],
+  "testEnvironmentOptions": {
+    "customExportConditions": ["node", "node-addons"]
+  }
 }
