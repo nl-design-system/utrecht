@@ -15,7 +15,8 @@ module.exports = {
   projectName: 'utrecht', // Usually your repo name.
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
-    storybookUrl: 'https://nl-design-system.github.io/utrecht/storybook/',
+    storybookUrl:
+      process.env['CI'] === 'true' ? 'https://nl-design-system.github.io/utrecht/storybook/' : 'http://localhost:6006/',
   },
   staticDirectories: ['static', '../../proprietary/assets'],
   presets: [
