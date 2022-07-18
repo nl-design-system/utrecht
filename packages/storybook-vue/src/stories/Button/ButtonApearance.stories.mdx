@@ -1,0 +1,66 @@
+import { Canvas, Meta, Source, Story } from "@storybook/addon-docs";
+import { Button } from "@utrecht/component-library-vue";
+import argTypes from "./argTypes.ts";
+
+<Meta title="Vue/Button/Apearance" component={Button} argTypes={argTypes} />
+
+# Button Apearance
+
+export const Template = (args) => ({
+  components: { Button },
+  setup() {
+    return { args };
+  },
+  template: `<Button v-bind="args">${args.default}</Button>`,
+});
+
+<Canvas>
+  <Story
+    name="Primary Button"
+    args={{
+      appearance: "primary-action-button",
+      default: "Primary Button",
+      busy: false,
+      disabled: false,
+      type: "button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Source language="jsx" code={`<Button appearance="primary-action-button">Verzenden</Button>`} />
+
+<Canvas>
+  <Story
+    name="Secondary Button"
+    args={{
+      appearance: "secondary-action-button",
+      default: "Secondary Button",
+      busy: false,
+      disabled: false,
+      type: "button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Source language="jsx" code={`<Button appearance="secondary-action-button">Verzenden</Button>`} />
+
+<Canvas>
+  <Story
+    name="Subtle Button"
+    args={{
+      appearance: "subtle-button",
+      default: "Subtle Button",
+      busy: false,
+      disabled: false,
+      type: "button",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<Source language="jsx" code={`<Button appearance="subtle-button">Verzenden</Button>`} />
