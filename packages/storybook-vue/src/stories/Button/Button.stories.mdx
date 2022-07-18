@@ -1,0 +1,28 @@
+import { Meta, Story } from "@storybook/addon-docs";
+import { Button } from "@utrecht/component-library-vue";
+import argTypes from "./argTypes.ts";
+
+<Meta title="Vue/Button" component={Button} argTypes={argTypes} />
+
+# Button
+
+export const Template = (args) => ({
+  components: { Button },
+  setup() {
+    return { args };
+  },
+  template: `<Button v-bind="args">${args.default}</Button>`,
+});
+
+<Story
+  name="Button"
+  args={{
+    appearance: "primary-action-button",
+    default: "Button",
+    busy: false,
+    disabled: false,
+    type: "button",
+  }}
+>
+  {Template.bind({})}
+</Story>
