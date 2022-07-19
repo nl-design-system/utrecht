@@ -1,0 +1,69 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "@utrecht/component-library-vue";
+import argTypes from "./argTypes.ts";
+
+<Meta id="vue-button-states" title="Vue.js Component/Button/States" component={Button} argTypes={argTypes} />
+
+# Button States
+
+export const Template = (args) => ({
+  components: { Button },
+  setup() {
+    return { args };
+  },
+  template: `<Button v-bind="args">${args.default}</Button>`,
+});
+
+## Button Hover
+
+<Canvas>
+  <Story
+    name="Button Hover"
+    args={{
+      appearance: "primary-action-button",
+      default: "Button Hover",
+      busy: false,
+      disabled: false,
+      type: "button",
+    }}
+    parameters={{ pseudo: { hover: true } }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button Focus
+
+<Canvas>
+  <Story
+    name="Button Focus"
+    args={{
+      appearance: "primary-action-button",
+      default: "Button Focus",
+      busy: false,
+      disabled: false,
+      type: "button",
+    }}
+    parameters={{ pseudo: { focus: true } }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Button Active
+
+<Canvas>
+  <Story
+    name="Button Active"
+    args={{
+      appearance: "primary-action-button",
+      default: "Button Active",
+      busy: false,
+      disabled: false,
+      type: "button",
+    }}
+    parameters={{ pseudo: { active: true } }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
