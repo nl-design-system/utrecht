@@ -49,6 +49,12 @@ jobs:
           name: storybook
           path: packages/storybook/dist/
           retention-days: 1
+      - name: "Retain build artifact: Storybook Vue"
+        uses: actions/upload-artifact@v3
+        with:
+          name: storybook-vue
+          path: packages/storybook-vue/dist/
+          retention-days: 1
 
   publish-website:
     runs-on: ubuntu-latest
@@ -70,6 +76,11 @@ jobs:
         with:
           name: storybook
           path: standalone/docusaurus/build/storybook/
+      - name: "Restore build artifact: Storybook Vue"
+        uses: actions/download-artifact@v3
+        with:
+          name: storybook-vue
+          path: standalone/docusaurus/build/storybook-vue/
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.0
