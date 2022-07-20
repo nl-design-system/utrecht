@@ -1,18 +1,18 @@
 <!-- @license CC0-1.0 -->
 
 import { Meta } from "@storybook/addon-docs";
-import tokensDefinitionHeading1 from "../../../../../components/heading-1/tokens.json";
-import tokensDefinitionHeading2 from "../../../../../components/heading-2/tokens.json";
-import tokensDefinitionHeading3 from "../../../../../components/heading-3/tokens.json";
-import tokensDefinitionHeading4 from "../../../../../components/heading-4/tokens.json";
-import tokensDefinitionHeading5 from "../../../../../components/heading-5/tokens.json";
-import tokensDefinitionHeading6 from "../../../../../components/heading-6/tokens.json";
-import { ComponentTokensSection } from "../../../../../documentation/components/ComponentTokensSection.jsx";
-import tokens from "../../../../../proprietary/design-tokens/dist/index.json";
+import tokensDefinitionHeading1 from "@utrecht/components/heading-1/tokens.json";
+import tokensDefinitionHeading2 from "@utrecht/components/heading-2/tokens.json";
+import tokensDefinitionHeading3 from "@utrecht/components/heading-3/tokens.json";
+import tokensDefinitionHeading4 from "@utrecht/components/heading-4/tokens.json";
+import tokensDefinitionHeading5 from "@utrecht/components/heading-5/tokens.json";
+import tokensDefinitionHeading6 from "@utrecht/components/heading-6/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
 
 <Meta
   id="vuejs-heading--design-tokens"
-  title="Vue.js Component/Heading/ Heading Design Tokens"
+  title="Vue.js Component/Heading/ Design Tokens"
   parameters={{
     status: {
       type: "ALPHA",
@@ -22,28 +22,26 @@ import tokens from "../../../../../proprietary/design-tokens/dist/index.json";
 
 # Heading Design Tokens
 
----
-
-## Heading1
+## Heading 1
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-1" />
 
-## Heading2
+## Heading 2
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading2} component="utrecht-heading-2" />
 
-## Heading3
+## Heading 3
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading3} component="utrecht-heading-3" />
 
-## Heading4
+## Heading 4
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading4} component="utrecht-heading-4" />
 
-## Heading5
+## Heading 5
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading5} component="utrecht-heading-5" />
 
-## Heading6
+## Heading 6
 
 <ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading6} component="utrecht-heading-6" />
