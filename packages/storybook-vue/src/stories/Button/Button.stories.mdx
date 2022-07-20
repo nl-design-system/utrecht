@@ -1,4 +1,4 @@
-import { Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Button } from "@utrecht/component-library-vue";
 import argTypes from "./argTypes.ts";
 
@@ -14,15 +14,21 @@ export const Template = (args) => ({
   template: `<Button v-bind="args">${args.default}</Button>`,
 });
 
-<Story
-  name="Button"
-  args={{
-    appearance: "primary-action-button",
-    default: "Button",
-    busy: false,
-    disabled: false,
-    type: "button",
-  }}
->
-  {Template.bind({})}
-</Story>
+<Canvas>
+  <Story
+    name="Button"
+    args={{
+      appearance: "primary-action-button",
+      default: "Button",
+      busy: false,
+      disabled: false,
+    }}
+    parameters={{
+      docs: { source: { code: `<Button appearance="primary-action-button">Primary Button</Button>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Button} />

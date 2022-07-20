@@ -1,4 +1,4 @@
-import { Canvas, Meta, Source, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Button } from "@utrecht/component-library-vue";
 import argTypes from "./argTypes.ts";
 
@@ -22,14 +22,14 @@ export const Template = (args) => ({
       default: "Primary Button",
       busy: false,
       disabled: false,
-      type: "button",
+    }}
+    parameters={{
+      docs: { source: { code: `<Button appearance="primary-action-button">Primary Button</Button>` } },
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
-
-<Source language="jsx" code={`<Button appearance="primary-action-button">Verzenden</Button>`} />
 
 <Canvas>
   <Story
@@ -39,14 +39,14 @@ export const Template = (args) => ({
       default: "Secondary Button",
       busy: false,
       disabled: false,
-      type: "button",
+    }}
+    parameters={{
+      docs: { source: { code: `<Button appearance="secondary-action-button">Secondary Button</Button>` } },
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
-
-<Source language="jsx" code={`<Button appearance="secondary-action-button">Verzenden</Button>`} />
 
 <Canvas>
   <Story
@@ -56,11 +56,13 @@ export const Template = (args) => ({
       default: "Subtle Button",
       busy: false,
       disabled: false,
-      type: "button",
+    }}
+    parameters={{
+      docs: { source: { code: `<Button appearance="subtle-button">Subtle Button</Button>` } },
     }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
 
-<Source language="jsx" code={`<Button appearance="subtle-button">Verzenden</Button>`} />
+<ArgsTable of={Button} />

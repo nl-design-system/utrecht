@@ -1,4 +1,4 @@
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Button } from "@utrecht/component-library-vue";
 import argTypes from "./argTypes.ts";
 
@@ -24,9 +24,11 @@ export const Template = (args) => ({
       default: "Button Hover",
       busy: false,
       disabled: false,
-      type: "button",
     }}
-    parameters={{ pseudo: { hover: true } }}
+    parameters={{
+      pseudo: { hover: true },
+      docs: { source: { code: `<Button appearance="primary-action-button">Button Hover</Button>` } },
+    }}
   >
     {Template.bind({})}
   </Story>
@@ -42,9 +44,11 @@ export const Template = (args) => ({
       default: "Button Focus",
       busy: false,
       disabled: false,
-      type: "button",
     }}
-    parameters={{ pseudo: { focus: true } }}
+    parameters={{
+      pseudo: { focus: true },
+      docs: { source: { code: `<Button appearance="primary-action-button">Button Focus</Button>` } },
+    }}
   >
     {Template.bind({})}
   </Story>
@@ -60,10 +64,14 @@ export const Template = (args) => ({
       default: "Button Active",
       busy: false,
       disabled: false,
-      type: "button",
     }}
-    parameters={{ pseudo: { active: true } }}
+    parameters={{
+      pseudo: { active: true },
+      docs: { source: { code: `<Button appearance="primary-action-button">Button Active</Button>` } },
+    }}
   >
     {Template.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable of={Button} />
