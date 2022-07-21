@@ -29,9 +29,6 @@ updates:
         update-types: ["version-update:semver-major"]
       - dependency-name: "style-loader"
         update-types: ["version-update:semver-major"]
-      # Percy needs a manual upgrade as it doesn't work without breaking
-      - dependency-name: "@percy/storybook"
-        update-types: ["version-update:semver-major"]
       # Stay at React 16 until React 17 is fully supported by Storybook
       - dependency-name: "@types/react"
         update-types: ["version-update:semver-major"]
