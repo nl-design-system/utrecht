@@ -1,0 +1,180 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeStatus } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-badge-status" title="Vue.js Component/BadgeStatus" component={BadgeStatus} argTypes={argTypes} />
+
+# Badge Status
+
+export const Template = (args) => ({
+  components: { BadgeStatus },
+  setup() {
+    return { args };
+  },
+  template: `<BadgeStatus v-bind="args">${args.default}</BadgeStatus>`,
+});
+
+<Canvas>
+  <Story
+    name="Badge Status Neutral"
+    args={{
+      status: argTypes.status.options[0],
+      default: argTypes.status.options[0],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[0]}">${argTypes.status.options[0]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status danger"
+    args={{
+      status: argTypes.status.options[1],
+      default: argTypes.status.options[1],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[1]}">${argTypes.status.options[1]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Safe"
+    args={{
+      status: argTypes.status.options[2],
+      default: argTypes.status.options[2],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[2]}">${argTypes.status.options[2]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Invalid"
+    args={{
+      status: argTypes.status.options[3],
+      default: argTypes.status.options[3],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[3]}">${argTypes.status.options[3]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Valid"
+    args={{
+      status: argTypes.status.options[4],
+      default: argTypes.status.options[4],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[4]}">${argTypes.status.options[4]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Error"
+    args={{
+      status: argTypes.status.options[5],
+      default: argTypes.status.options[5],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[5]}">${argTypes.status.options[5]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Warning"
+    args={{
+      status: argTypes.status.options[6],
+      default: argTypes.status.options[6],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[6]}">${argTypes.status.options[6]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Succsess"
+    args={{
+      status: argTypes.status.options[7],
+      default: argTypes.status.options[7],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[7]}">${argTypes.status.options[7]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Inactive"
+    args={{
+      status: argTypes.status.options[8],
+      default: argTypes.status.options[8],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[8]}">${argTypes.status.options[8]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Active"
+    args={{
+      status: argTypes.status.options[9],
+      default: argTypes.status.options[9],
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="${argTypes.status.options[9]}">${argTypes.status.options[9]}</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={BadgeStatus} />

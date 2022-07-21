@@ -1,0 +1,35 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeStatus } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-badge-status" title="Vue.js Component/BadgeStatus" component={BadgeStatus} argTypes={argTypes} />
+
+# BadgeStatus
+
+export const Template = (args) => ({
+  components: { BadgeStatus },
+  setup() {
+    return { args };
+  },
+  template: `<BadgeStatus v-bind="args">${args.default}</BadgeStatus>`,
+});
+
+<Canvas>
+  <Story
+    name="Badge Status Default"
+    args={{
+      default: "Default",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus>Default</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={BadgeStatus} />

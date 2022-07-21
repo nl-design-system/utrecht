@@ -1,8 +1,9 @@
 import { app } from '@storybook/vue3';
-import { Button, Heading, Paragraph } from '@utrecht/component-library-vue';
+import { BadgeStatus, Button, Heading, Paragraph } from '@utrecht/component-library-vue';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
 
+app.component('BadgeStatus', BadgeStatus);
 app.component('Button', Button);
 app.component('Heading', Heading);
 app.component('Paragraph', Paragraph);
