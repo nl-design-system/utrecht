@@ -20,7 +20,9 @@
     "@storybook/vue3": "6.5.9",
     "@types/node": "16.11.43",
     "@utrecht/component-library-vue": "file:../component-library-vue",
+    "@utrecht/components": "file:../../components",
     "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "@utrecht/documentation": "file:../../documentation",
     "@utrecht/storybook": "file:../storybook",
     "@vitejs/plugin-vue": "2.3.3",
     "@vitejs/plugin-vue-jsx": "1.3.10",
@@ -39,10 +41,5 @@
     "clean": "rimraf dist/",
     "start": "npx http-server dist/",
     "storybook": "start-storybook --config-dir config/ --port 6006 "
-  },
-  "dependencies": {
-    "@utrecht/components": "file:../../components",
-    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
-    "@utrecht/documentation": "file:../../documentation"
   }
 }
