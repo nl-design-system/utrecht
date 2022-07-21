@@ -1,0 +1,33 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ButtonGroup } from "@utrecht/component-library-vue";
+import { componentArgs } from "./argsTypes.ts";
+
+<Meta id="vue-button-group" title="Vue.js Component/ButtonGroup" component={ButtonGroup} />
+
+# Button Group
+
+export const Template = (args) => ({
+  components: { ButtonGroup },
+  setup() {
+    return { args };
+  },
+  template: `<ButtonGroup v-bind="args">${args.default}</ButtonGroup>`,
+});
+
+<Canvas>
+  <Story
+    name="Button Group"
+    args={componentArgs}
+    parameters={{
+      docs: {
+        source: {
+          code: `<ButtonGroup>${componentArgs.default}</ButtonGroup>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={ButtonGroup} />
