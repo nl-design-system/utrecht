@@ -1,5 +1,10 @@
+import { app } from '@storybook/vue3';
+import { Heading, Paragraph } from '@utrecht/component-library-vue';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
+
+app.component('Heading', Heading);
+app.component('Paragraph', Paragraph);
 
 export const decorators = [
   (story) => ({
