@@ -40,5 +40,10 @@
     "percy-snapshot": "percy-storybook --build_dir dist/ --widths=1280",
     "start": "npx http-server dist/",
     "storybook": "start-storybook --config-dir config/ --port 6006 "
+  },
+  "dependencies": {
+    "@utrecht/components": "file:../../components",
+    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "@utrecht/documentation": "file:../../documentation"
   }
 }
