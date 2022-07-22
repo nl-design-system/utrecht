@@ -1,0 +1,75 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Checkbox } from "@utrecht/component-library-vue";
+import { argTypes, componentArgs } from "./argTypes.ts";
+
+<Meta id="vue-checkbox-states" title="Vue.js Component/Checkbox/States" component={Checkbox} argTypes={argTypes} />
+
+# Checkbox States
+
+export const Template = (args) => ({
+  components: { Checkbox },
+  setup() {
+    return { args };
+  },
+  template: `<Checkbox v-bind="args" @change="action"/>`,
+  methods: { action: action("change") },
+});
+
+## Checkbox Checked
+
+<Canvas>
+  <Story
+    name="Checkbox Checked"
+    args={{ ...componentArgs, checked: true, value: "checked" }}
+    parameters={{
+      docs: { source: { code: `<Checkbox  :checked="true" :value="checked"/>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Checkbox Checked And Disabled
+
+<Canvas>
+  <Story
+    name="Checkbox Checked And Disabled"
+    args={{ ...componentArgs, checked: true, disabled: true }}
+    parameters={{
+      docs: { source: { code: `<Checkbox  :checked="true" :disabled="true"/>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Checkbox Disabled
+
+<Canvas>
+  <Story
+    name="Checkbox Disabled"
+    args={{ ...componentArgs, disabled: true }}
+    parameters={{
+      docs: { source: { code: `<Checkbox :disabled="true"/>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Checkbox Invalid
+
+<Canvas>
+  <Story
+    name="Checkbox Invalid"
+    args={{ ...componentArgs, invalid: true }}
+    parameters={{
+      docs: { source: { code: `<Checkbox :invalid="true" />` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Checkbox} />
