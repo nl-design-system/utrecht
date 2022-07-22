@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinitionArticle from "@utrecht/components/article/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="vuejs-article--design-tokens"
+  title="Vue.js Component/Article/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Article Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionArticle} component="utrecht-article" />

@@ -1,0 +1,180 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeStatus } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-badge-status" title="Vue.js Component/BadgeStatus" component={BadgeStatus} argTypes={argTypes} />
+
+# Badge Status
+
+export const Template = (args) => ({
+  components: { BadgeStatus },
+  setup() {
+    return { args };
+  },
+  template: `<BadgeStatus v-bind="args">${args.default}</BadgeStatus>`,
+});
+
+<Canvas>
+  <Story
+    name="Badge Status Neutral"
+    args={{
+      status: "neutral",
+      default: "Neutral",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="neutral">Neutral</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Danger"
+    args={{
+      status: "danger",
+      default: "Danger",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="danger">Danger</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Safe"
+    args={{
+      status: "safe",
+      default: "Safe",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="safe">Safe</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Invalid"
+    args={{
+      status: "invalid",
+      default: "Invalid",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="invalid">Invalid</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Valid"
+    args={{
+      status: "valid",
+      default: "Valid",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="valid">Valid</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Error"
+    args={{
+      status: "error",
+      default: "Error",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="error">Error</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Warning"
+    args={{
+      status: "warning",
+      default: "Warning",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="warning">Warning</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Success"
+    args={{
+      status: "success",
+      default: "Success",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="success">Success</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Inactive"
+    args={{
+      status: "inactive",
+      default: "Inactive",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="inactive">Inactive</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story
+    name="Badge Status Active"
+    args={{
+      status: "active",
+      default: "Active",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<BadgeStatus status="active">Active</BadgeStatus>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={BadgeStatus} />

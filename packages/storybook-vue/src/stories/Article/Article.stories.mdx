@@ -1,0 +1,33 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Article } from "@utrecht/component-library-vue";
+import { componentArgs } from "./argsTypes.ts";
+
+<Meta id="vue-article" title="Vue.js Component/Article" component={Article} />
+
+# Article
+
+export const Template = (args) => ({
+  components: { Article },
+  setup() {
+    return { args };
+  },
+  template: `<Article v-bind="args">${args.default}</Article>`,
+});
+
+<Canvas>
+  <Story
+    name="Article"
+    args={componentArgs}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Article>${componentArgs.default}</Article>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Article} />

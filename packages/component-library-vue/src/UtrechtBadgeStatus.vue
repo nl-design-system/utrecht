@@ -8,7 +8,7 @@
   <span
     class="utrecht-badge-status"
     :class="{
-      ['utrecht-badge--' + status]: true,
+      [`utrecht-badge-status--${status}`]: true,
     }"
   >
     <slot />
