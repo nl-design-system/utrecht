@@ -1,0 +1,35 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Checkbox } from "@utrecht/component-library-vue";
+import { argTypes, componentArgs } from "./argTypes.ts";
+
+<Meta id="vue-checkbox" title="Vue.js Component/Checkbox" component={Checkbox} argTypes={argTypes} />
+
+# Checkbox With Label
+
+export const Template = (args) => ({
+  components: { Checkbox },
+  setup() {
+    return { args };
+  },
+  template: `
+  <FormField>
+    <FormLabel for="form-field-with-checkbox-and-label">
+        {{args.default}}
+        <Checkbox v-bind="args" id="form-field-with-checkbox-and-label"/>
+    </FormLabel>
+  </FormField>`,
+});
+
+<Canvas>
+  <Story
+    name="Checkbox With Label"
+    args={{ ...componentArgs, default: "Label" }}
+    parameters={{
+      docs: { source: { code: `<Checkbox />` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Checkbox} />
