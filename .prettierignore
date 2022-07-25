@@ -16,13 +16,7 @@ package-lock.json
 
 # Ignore generated files from Stencil
 components/components.d.ts
-packages/web-component-library-angular/src/directives/angular-component-lib/utils.ts
-packages/web-component-library-angular/src/directives/boolean-value-accessor.ts
-packages/web-component-library-angular/src/directives/number-value-accessor.ts
-packages/web-component-library-angular/src/directives/proxies.ts
-packages/web-component-library-angular/src/directives/select-value-accessor.ts
-packages/web-component-library-angular/src/directives/text-value-accessor.ts
-packages/web-component-library-angular/src/directives/value-accessor.ts
+packages/web-component-library-angular/src/directives
 packages/web-component-library-react/src/components.ts
 packages/web-component-library-react/src/react-component-lib/
 packages/web-component-library-stencil/loader
