@@ -14,13 +14,8 @@ tmp
 
 # Ignore generated files from Stencil
 components/components.d.ts
-./packages/web-component-library-angular/src/**
-./packages/web-component-library-angular/src/directives
 packages/web-component-library-angular/src/directives
-packages/web-component-library-angular/src/directives/proxies.ts
-./packages/web-component-library-react/src/**
+packages/web-component-library-react/src
 packages/web-component-library-stencil/loader
-packages/web-component-library-react/src/react-component-lib/
-packages/web-component-library-react/src/*.ts
 packages/web-component-library-vue/src/components.ts
 packages/web-component-library-vue/src/vue-component-lib/
