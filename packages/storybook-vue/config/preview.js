@@ -1,10 +1,21 @@
 import { app } from '@storybook/vue3';
-import { BadgeStatus, Button, Heading, Paragraph } from '@utrecht/component-library-vue';
+import {
+  BadgeStatus,
+  Button,
+  Checkbox,
+  FormField,
+  FormLabel,
+  Heading,
+  Paragraph,
+} from '@utrecht/component-library-vue';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
 
 app.component('BadgeStatus', BadgeStatus);
 app.component('Button', Button);
+app.component('Checkbox', Checkbox);
+app.component('FormField', FormField);
+app.component('FormLabel', FormLabel);
 app.component('Heading', Heading);
 app.component('Paragraph', Paragraph);
 
