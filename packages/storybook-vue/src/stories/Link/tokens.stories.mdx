@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinitionLink from "@utrecht/components/link/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="vuejs-link--design-tokens"
+  title="Vue.js Component/Link/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Link Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionLink} component="utrecht-link" />
