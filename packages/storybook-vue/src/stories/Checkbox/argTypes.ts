@@ -39,3 +39,10 @@ export const componentArgs = {
   disabled: false,
   invalid: false,
 };
+
+export const checkboxWithFieldsetAndLegendData = [
+  { id: 1, label: 'Gratis trouwen', name: 'gratis-trouwen' },
+  { id: 2, label: 'Flits/balie-huwelijk', name: 'flits-bali-huwelijk' },
+  { id: 3, label: 'Eenvoudig trouwen', name: 'eenvoudig-trouwen' },
+  { id: 4, label: 'Uitgebreid trouwen', name: 'uitgebreid-trouwen' },
+];

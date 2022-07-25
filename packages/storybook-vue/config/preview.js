@@ -22,6 +22,8 @@ app.component('Checkbox', Checkbox);
 app.component('FormFieldset', FormFieldset);
 app.component('FormFieldsetLegend', FormFieldsetLegend);
 app.component('FormField', FormField);
+app.component('FormFieldset', FormFieldset);
+app.component('FormFieldsetLegend', FormFieldsetLegend);
 app.component('FormLabel', FormLabel);
 app.component('Heading', Heading);
 app.component('PageContent', PageContent);

@@ -1,0 +1,64 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Checkbox } from "@utrecht/component-library-vue";
+import { argTypes, checkboxWithFieldsetAndLegendData, componentArgs } from "./argTypes.ts";
+
+<Meta id="vue-checkbox" title="Vue.js Component/Checkbox" component={Checkbox} argTypes={argTypes} />
+
+# Checkbox With Fieldset And Legend
+
+export const Template = (args) => ({
+  components: { Checkbox },
+  setup() {
+    return { args, options: args.labelText };
+  },
+  template: `
+  <form>
+  <FormFieldset>
+  <FormFieldsetLegend>Filter op:</FormFieldsetLegend>
+  <FormField v-for="{id, label, name} in options" :key="id">
+    <FormLabel :for="id">
+        <Checkbox v-bind="args" :id="id" name="name"/>
+        {{label}}
+    </FormLabel>
+     </FormField>
+    </FormFieldset>
+  </form>
+  `,
+});
+
+<Canvas>
+  <Story
+    name="Checkbox With Fieldset And Legend"
+    args={{
+      ...componentArgs,
+      labelText: checkboxWithFieldsetAndLegendData,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<form>
+  <FormFieldset>
+  <FormFieldsetLegend>Filter op:</FormFieldsetLegend>
+      ${checkboxWithFieldsetAndLegendData
+        .map(
+          ({ id, label, name }) => ` 
+  <FormField>
+    <FormLabel :for="${id}">
+        <Checkbox :id="${id}" name="${name}"/>
+        ${label}
+    </FormLabel>
+  </FormField>`
+        )
+        .join()}
+    </FormFieldset>
+  </form>
+`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Checkbox} />
