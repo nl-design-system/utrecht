@@ -1,0 +1,53 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Paragraph } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-paragraph" title="Vue.js Component/Paragraph" component={Paragraph} argTypes={argTypes} />
+
+# Paragraph
+
+## Default
+
+export const Template = (args) => ({
+  components: { Paragraph },
+  setup() {
+    return { args };
+  },
+  template: `<Paragraph v-bind="args">${args.paragraphContent}</Paragraph>`,
+});
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      lead: false,
+      paragraphContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    }}
+    parameters={{
+      docs: { source: { code: `<Paragraph>Paragraph Default</Paragraph>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Lead
+
+<Canvas>
+  <Story
+    name="Lead"
+    args={{
+      lead: true,
+      paragraphContent:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
+    }}
+    parameters={{
+      docs: { source: { code: `<Paragraph :lead="true">Paragraph Lead</Paragraph>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Paragraph} />
