@@ -11,13 +11,13 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `<Link v-bind="args">${args.default}</Link>`,
+  template: `<Link v-bind="args">${args.textContent}</Link>`,
 });
 
 <Canvas>
   <Story
     name="Link"
-    args={{ ...componentArgs, default: "Default" }}
+    args={{ ...componentArgs, textContent: "Default" }}
     parameters={{
       docs: {
         source: {
@@ -35,7 +35,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="External"
-    args={{ ...componentArgs, default: "Extenal Link", external: true, target: "_blank", rel: "noopener" }}
+    args={{ ...componentArgs, textContent: "Extenal Link", external: true, target: "_blank", rel: "noopener" }}
     parameters={{
       docs: {
         source: {
@@ -53,7 +53,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Email"
-    args={{ ...componentArgs, default: "Email", href: "mailto:info@example.com" }}
+    args={{ ...componentArgs, textContent: "Email", href: "mailto:info@example.com" }}
     parameters={{
       docs: {
         source: {
@@ -71,7 +71,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Telephone"
-    args={{ ...componentArgs, default: "+31 555 385 385", href: "tel:+31555385385" }}
+    args={{ ...componentArgs, textContent: "+31 555 385 385", href: "tel:+31555385385" }}
     parameters={{
       docs: {
         source: {
@@ -91,7 +91,7 @@ export const Template = (args) => ({
     name="Alternate Language"
     args={{
       ...componentArgs,
-      default: "EN",
+      textContent: "EN",
       href: "https://example.com/en",
       title: "This page in English",
       hreflang: "en",
@@ -123,7 +123,7 @@ export const Template = (args) => ({
     name="Current language"
     args={{
       ...componentArgs,
-      default: "EN",
+      textContent: "EN",
       href: "https://example.com/en",
       "aria-current": "page",
       title: "This page in English",

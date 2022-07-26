@@ -11,7 +11,7 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `<Link v-bind="args">${args.default}</Link>`,
+  template: `<Link v-bind="args">${args.textContent}</Link>`,
 });
 
 ## Hover
@@ -19,7 +19,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Hover"
-    args={{ ...componentArgs, default: "Link Hover" }}
+    args={{ ...componentArgs, textContent: "Link Hover" }}
     parameters={{
       pseudo: { hover: true },
       docs: { source: { code: `<Link>Link Hover</Link>` } },
@@ -34,7 +34,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Focus"
-    args={{ ...componentArgs, default: "Link Focus" }}
+    args={{ ...componentArgs, textContent: "Link Focus" }}
     parameters={{
       pseudo: { focus: true },
       docs: { source: { code: `<Link>Link Focus</Link>` } },
@@ -49,7 +49,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Focus Visible"
-    args={{ ...componentArgs, default: "Link Focus Visible" }}
+    args={{ ...componentArgs, textContent: "Link Focus Visible" }}
     parameters={{
       pseudo: { focusVisible: true },
       docs: { source: { code: `<Link>Link Focus Visible</Link>` } },
@@ -64,7 +64,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Active"
-    args={{ ...componentArgs, default: "Link Active" }}
+    args={{ ...componentArgs, textContent: "Link Active" }}
     parameters={{
       pseudo: { active: true },
       docs: { source: { code: `<Link>Link Active</Link>` } },
@@ -79,7 +79,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Visited"
-    args={{ ...componentArgs, default: "Link Visited" }}
+    args={{ ...componentArgs, textContent: "Link Visited" }}
     parameters={{
       pseudo: { visited: true },
       docs: { source: { code: `<Link>Link Visited</Link>` } },
