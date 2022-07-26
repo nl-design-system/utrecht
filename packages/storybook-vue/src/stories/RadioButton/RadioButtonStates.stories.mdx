@@ -1,0 +1,80 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { RadioButton } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta
+  id="vue-radio-button-states"
+  title="Vue.js Component/Radio Button/States"
+  component={RadioButton}
+  argTypes={argTypes}
+/>
+
+# RadioButton States
+
+export const Template = (args) => ({
+  components: { RadioButton },
+  setup() {
+    return { args };
+  },
+  template: `<RadioButton v-bind="args" @change="action"/>`,
+  methods: { action: action("change") },
+});
+
+## Checked
+
+<Canvas>
+  <Story
+    name="Checked"
+    args={{ checked: true, value: "checked" }}
+    parameters={{
+      docs: { source: { code: `<RadioButton  :checked="true" :value="checked"/>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Checked And Disabled
+
+<Canvas>
+  <Story
+    name="Checked And Disabled"
+    args={{ checked: true, disabled: true }}
+    parameters={{
+      docs: { source: { code: `<RadioButton  :checked="true" :disabled="true"/>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{ disabled: true }}
+    parameters={{
+      docs: { source: { code: `<RadioButton :disabled="true"/>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="Invalid"
+    args={{ invalid: true }}
+    parameters={{
+      docs: { source: { code: `<RadioButton :invalid="true" />` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={RadioButton} />
