@@ -1,7 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { PageFooter } from "@utrecht/component-library-vue";
 
-<Meta id="vue-page-footer" title="Vue.js Component/PageFooter" component={PageFooter} />
+<Meta id="vue-page-footer" title="Vue.js Component/Page Footer" component={PageFooter} />
 
 # PageFooter Component
 
@@ -10,13 +10,13 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `<PageFooter v-bind="args">${args.default}</PageFooter>`,
+  template: `<PageFooter v-bind="args">${args.pageFooterContent}</PageFooter>`,
 });
 
 <Canvas>
   <Story
     name="PageFooter"
-    args={{ default: "PageFooter Content" }}
+    args={{ pageFooterContent: "PageFooter Content" }}
     parameters={{
       docs: {
         source: {
