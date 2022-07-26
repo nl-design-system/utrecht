@@ -1,0 +1,32 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { PageContent } from "@utrecht/component-library-vue";
+
+<Meta id="vue-page-content" title="Vue.js Component/PageContent" component={PageContent} />
+
+# PageContent Component
+
+export const Template = (args) => ({
+  components: { PageContent },
+  setup() {
+    return { args };
+  },
+  template: `<PageContent v-bind="args">${args.default}</PageContent>`,
+});
+
+<Canvas>
+  <Story
+    name="PageContent"
+    args={{ default: "Page Content" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<PageContent>Page Content</PageContent>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={PageContent} />
