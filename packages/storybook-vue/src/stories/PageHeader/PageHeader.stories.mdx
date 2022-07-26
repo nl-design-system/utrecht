@@ -1,7 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { PageHeader } from "@utrecht/component-library-vue";
 
-<Meta id="vue-page-header" title="Vue.js Component/PageHeader" component={PageHeader} />
+<Meta id="vue-page-header" title="Vue.js Component/Page Header" component={PageHeader} />
 
 # PageHeader Component
 
@@ -10,13 +10,13 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `<PageHeader v-bind="args">${args.default}</PageHeader>`,
+  template: `<PageHeader v-bind="args">${args.pageHeaderContent}</PageHeader>`,
 });
 
 <Canvas>
   <Story
     name="PageHeader"
-    args={{ default: "Page Header Content" }}
+    args={{ pageHeaderContent: "Page Header Content" }}
     parameters={{
       docs: {
         source: {

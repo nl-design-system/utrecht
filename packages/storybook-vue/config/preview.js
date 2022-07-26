@@ -8,6 +8,9 @@ import {
   FormFieldsetLegend,
   FormLabel,
   Heading,
+  PageContent,
+  PageFooter,
+  PageHeader,
   Paragraph,
 } from '@utrecht/component-library-vue';
 import '@utrecht/component-library-vue/dist/style.css';
@@ -21,6 +24,9 @@ app.component('FormFieldsetLegend', FormFieldsetLegend);
 app.component('FormField', FormField);
 app.component('FormLabel', FormLabel);
 app.component('Heading', Heading);
+app.component('PageContent', PageContent);
+app.component('PageFooter', PageFooter);
+app.component('PageHeader', PageHeader);
 app.component('Paragraph', Paragraph);
 
 export const decorators = [

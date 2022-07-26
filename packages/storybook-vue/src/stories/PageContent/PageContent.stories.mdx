@@ -1,7 +1,7 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { PageContent } from "@utrecht/component-library-vue";
 
-<Meta id="vue-page-content" title="Vue.js Component/PageContent" component={PageContent} />
+<Meta id="vue-page-content" title="Vue.js Component/Page Content" component={PageContent} />
 
 # PageContent Component
 
@@ -10,13 +10,13 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `<PageContent v-bind="args">${args.default}</PageContent>`,
+  template: `<PageContent v-bind="args">${args.pageContent}</PageContent>`,
 });
 
 <Canvas>
   <Story
     name="PageContent"
-    args={{ default: "Page Content" }}
+    args={{ pageContent: "Page Content" }}
     parameters={{
       docs: {
         source: {
