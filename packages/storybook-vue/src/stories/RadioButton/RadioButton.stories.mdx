@@ -1,0 +1,30 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { RadioButton } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-radio-button" title="Vue.js Component/Radio Button" component={RadioButton} argTypes={argTypes} />
+
+# Radio Button
+
+export const Template = (args) => ({
+  components: { RadioButton },
+  setup() {
+    return { args };
+  },
+  template: `<RadioButton v-bind="args" @change="action"/>`,
+  methods: { action: action("change") },
+});
+
+<Canvas>
+  <Story
+    name="Default"
+    parameters={{
+      docs: { source: { code: `<RadioButton />` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={RadioButton} />

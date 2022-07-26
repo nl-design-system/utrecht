@@ -1,0 +1,47 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { RadioButton } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-radio-button" title="Vue.js Component/Radio Button" component={RadioButton} argTypes={argTypes} />
+
+# With Label
+
+export const Template = (args) => ({
+  components: { RadioButton },
+  setup() {
+    return { args };
+  },
+  template: `
+  <FormField>
+    <FormLabel for="form-field-with-raio-button-and-label" type="radio" :checked="args.checked" :disabled="args.disabled">
+        {{args.labelText}}
+        <RadioButton v-bind="args" id="form-field-with-radio-button-and-label" @change="action" />
+    </FormLabel>
+  </FormField>`,
+  methods: { action: action("change") },
+});
+
+<Canvas>
+  <Story
+    name="With Label"
+    args={{ labelText: "Label" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+  <FormField>
+    <FormLabel for="form-field-with-raio-button-and-label" type="radio">
+        Radio Button Label
+        <RadioButton id="form-field-with-radio-button-and-label"/>
+    </FormLabel>
+  </FormField>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={RadioButton} />

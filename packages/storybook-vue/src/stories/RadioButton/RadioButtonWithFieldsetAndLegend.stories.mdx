@@ -1,0 +1,69 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { RadioButton } from "@utrecht/component-library-vue";
+import { argTypes, radioButtonWithFieldsetAndLegendData } from "./argTypes.ts";
+
+<Meta
+  id="vue-radio-button-with-field-set-and-legend"
+  title="Vue.js Component/Radio Button/ Radio Button With Fieldset And Legend"
+  component={RadioButton}
+  argTypes={argTypes}
+/>
+
+# With Fieldset And Legend
+
+export const Template = (args) => ({
+  components: { RadioButton },
+  setup() {
+    return { args, options: args.radioButtons };
+  },
+  template: `
+  <form>
+  <FormFieldset>
+  <FormFieldsetLegend>Kies locatie</FormFieldsetLegend>
+  <FormField v-for="{id, label, name} in options" :key="id">
+    <FormLabel :for="id" type="radio" :checked="args.checked" :disabled="args.disabled">
+        {{label}}
+        <RadioButton :name="name" v-bind="args" :id="id" @change="action" />
+    </FormLabel>
+     </FormField>
+    </FormFieldset>
+  </form>
+  `,
+  methods: { action: action("change") },
+});
+
+<Canvas>
+  <Story
+    name="RadioButton With Fieldset And Legend"
+    args={{ radioButtons: radioButtonWithFieldsetAndLegendData }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+  <form>
+    <FormFieldset>
+      <FormFieldsetLegend>Kies locatie</FormFieldsetLegend>
+        ${radioButtonWithFieldsetAndLegendData
+          .map(
+            ({ id, label, name }) => `
+              <FormField>
+                <FormLabel :for="${id}">
+                  ${label}
+                  <RadioButton :name="${name}" :id="${id}" />
+                </FormLabel>
+              </FormField>`
+          )
+          .join("")}
+    </FormFieldset>
+  </form>
+`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={RadioButton} />
