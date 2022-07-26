@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinitionPageHeader from "@utrecht/components/page-header/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="vuejs-page-header--design-tokens"
+  title="Vue.js Component/PageHeader/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# PageHeader Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionPageHeader} component="utrecht-page-header" />
