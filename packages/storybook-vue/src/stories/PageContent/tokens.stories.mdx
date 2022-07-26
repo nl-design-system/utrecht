@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinitionPageContent from "@utrecht/components/page-content/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="vuejs-page-content--design-tokens"
+  title="Vue.js Component/PageContent/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# PageContent Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionPageContent} component="utrecht-page-content" />
