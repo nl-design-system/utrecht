@@ -1,0 +1,153 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "@utrecht/component-library-vue";
+import { argsTypes, componentArgs } from "./argTypes.ts";
+
+<Meta id="vue-link" title="Vue.js Component/Link" component={Link} argsTypes={argsTypes} />
+
+# Link
+
+export const Template = (args) => ({
+  components: { Link },
+  setup() {
+    return { args };
+  },
+  template: `<Link v-bind="args">${args.textContent}</Link>`,
+});
+
+<Canvas>
+  <Story
+    name="Link"
+    args={{ ...componentArgs, textContent: "Default" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Link>Default</Link>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## External
+
+<Canvas>
+  <Story
+    name="External"
+    args={{ ...componentArgs, textContent: "Extenal Link", external: true, target: "_blank", rel: "noopener" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Link :external="true" target="_blank" rel="noopener">External Link</Link>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Email
+
+<Canvas>
+  <Story
+    name="Email"
+    args={{ ...componentArgs, textContent: "Email", href: "mailto:info@example.com" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Link href="mailto:info@example.com">Email</Link>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Telephone
+
+<Canvas>
+  <Story
+    name="Telephone"
+    args={{ ...componentArgs, textContent: "+31 555 385 385", href: "tel:+31555385385" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Link href="tel:+31555385385">+31 555 385 385</Link>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Alternate Language
+
+<Canvas>
+  <Story
+    name="Alternate Language"
+    args={{
+      ...componentArgs,
+      textContent: "EN",
+      href: "https://example.com/en",
+      title: "This page in English",
+      hreflang: "en",
+      lang: "en",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Link 
+          title="This page in English" 
+          hreflang="en" 
+          lang="en" 
+          href="https://example.com/en"
+          >
+          EN
+          </Link>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Current language
+
+<Canvas>
+  <Story
+    name="Current language"
+    args={{
+      ...componentArgs,
+      textContent: "EN",
+      href: "https://example.com/en",
+      "aria-current": "page",
+      title: "This page in English",
+      hreflang: "en",
+      lang: "en",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Link 
+          href="https://example.com/en" 
+          aria-current="page" 
+          title="This page in English" 
+          hreflang="en" 
+          lang="en"
+          >
+          EN
+          </Link>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Link} />
