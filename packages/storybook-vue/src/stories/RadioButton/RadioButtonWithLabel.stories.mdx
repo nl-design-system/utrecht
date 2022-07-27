@@ -15,8 +15,13 @@ export const Template = (args) => ({
   template: `
   <FormField>
     <FormLabel for="form-field-with-raio-button-and-label" type="radio" :checked="args.checked" :disabled="args.disabled">
+        <RadioButton
+        v-bind="args"
+        id="form-field-with-radio-button-and-label"
+        name="form-field-with-radio-button-and-label"
+        @change="action"
+        />
         {{args.labelText}}
-        <RadioButton v-bind="args" id="form-field-with-radio-button-and-label" @change="action" />
     </FormLabel>
   </FormField>`,
   methods: { action: action("change") },
@@ -31,9 +36,15 @@ export const Template = (args) => ({
         source: {
           code: `
   <FormField>
-    <FormLabel for="form-field-with-raio-button-and-label" type="radio">
-        Radio Button Label
-        <RadioButton id="form-field-with-radio-button-and-label"/>
+    <FormLabel 
+    for="form-field-with-raio-button-and-label" 
+    type="radio"
+    >
+        <RadioButton 
+        id="form-field-with-radio-button-and-label"
+        name="form-field-with-radio-button-and-label"
+        />
+         Radio Button Label
     </FormLabel>
   </FormField>`,
         },

@@ -23,8 +23,8 @@ export const Template = (args) => ({
   <FormFieldsetLegend>Kies locatie</FormFieldsetLegend>
   <FormField v-for="{id, label, name} in options" :key="id">
     <FormLabel :for="id" type="radio" :checked="args.checked" :disabled="args.disabled">
-        {{label}}
         <RadioButton :name="name" v-bind="args" :id="id" @change="action" />
+        {{label}}
     </FormLabel>
      </FormField>
     </FormFieldset>
@@ -49,8 +49,8 @@ export const Template = (args) => ({
             ({ id, label, name }) => `
               <FormField>
                 <FormLabel :for="${id}">
-                  ${label}
                   <RadioButton :name="${name}" :id="${id}" />
+                  ${label}
                 </FormLabel>
               </FormField>`
           )
