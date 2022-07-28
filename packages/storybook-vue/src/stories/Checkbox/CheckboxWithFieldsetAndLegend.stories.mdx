@@ -16,7 +16,7 @@ export const Template = (args) => ({
   <FormFieldset>
   <FormFieldsetLegend>Filter op:</FormFieldsetLegend>
   <FormField v-for="{id, label, name} in options" :key="id">
-    <FormLabel :for="id">
+    <FormLabel :for="id" type="checkbox">
         <Checkbox v-bind="args" :id="id" name="name"/>
         {{label}}
     </FormLabel>
@@ -43,7 +43,7 @@ export const Template = (args) => ({
         .map(
           ({ id, label, name }) => ` 
   <FormField>
-    <FormLabel :for="${id}">
+    <FormLabel :for="${id}" type="checkbox">
         <Checkbox :id="${id}" name="${name}"/>
         ${label}
     </FormLabel>
