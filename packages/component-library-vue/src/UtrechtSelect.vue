@@ -1,17 +1,28 @@
-<script setup lang="ts">
-  defineEmits<(_type: "update:modelValue", _value: unknown) => void>();
+<script lang="ts">
+  import { defineComponent } from "vue";
+  import { useModelWrapper } from "./helpers";
 
-  defineProps<{
-    disabled?: boolean;
-    invalid?: boolean;
-    modelValue?: string;
-    readonly?: boolean;
-    required?: boolean;
-  }>();
+  export default defineComponent({
+    props: {
+      disabled: { type: Boolean, required: false },
+      invalid: { type: Boolean, required: false },
+      readonly: { type: Boolean, required: false },
+      required: { type: Boolean, required: false },
+      options: { type: [Array, Object], required: true },
+      modelValue: { type: [String, Number, Boolean], require: false, default: "" },
+    },
+    setup(props, { emit }) {
+      return {
+        selected: useModelWrapper(props, emit),
+      };
+    },
+  });
 </script>
 
 <template>
   <select
+    v-if="options && options.length > 0"
+    v-model="selected"
     class="utrecht-select"
     :aria-invalid="invalid || undefined"
     :class="{
@@ -23,10 +34,18 @@
     :disabled="disabled"
     :readonly="readonly"
     :required="required"
-    :value="modelValue"
-    @input="$emit('update:modelValue', (($event as InputEvent).target as HTMLSelectElement).value)"
   >
-    <slot />
+    <option
+      v-for="{value, label} in options"
+      :key="value"
+      :value="value"
+      :class="[
+        {'utrecht-select__option--disabled': disabled},
+        'utrecht-select__option']"
+      :disabled="disabled"
+    >
+      {{label}}
+    </option>
   </select>
 </template>
 
