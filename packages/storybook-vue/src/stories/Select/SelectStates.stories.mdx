@@ -1,0 +1,130 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Select } from "@utrecht/component-library-vue";
+import { argTypes, options } from "./argTypes.ts";
+
+<Meta id="vue-select" title="Vue.js Component/Select/States" component={Select} argTypes={argTypes} />
+
+# Select States
+
+export const Template = (args) => ({
+  components: { Select },
+  setup() {
+    return { args };
+  },
+  template: `
+  <Select v-bind="args" @change="action" />
+  `,
+  methods: { action: action("change") },
+});
+
+## Select Option #2
+
+<Canvas>
+  <Story
+    name="Select Option #2"
+    args={{ options, modelValue: 2 }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Select :options="options" :modelValue="2"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Select Option #2 And Disabled
+
+<Canvas>
+  <Story
+    name="Select Option #2 And Disabled"
+    args={{ options, modelValue: 2, disabled: true }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Select :options="options" :modelValue="2" :disabled="true"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{ options, disabled: true }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Select :options="options" :disabled="true"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="Invalid"
+    args={{ options, invalid: true }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Select :options="options" :invalid="true"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story
+    name="Required"
+    args={{ options, required: true }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Select :options="options" :required="true" />`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="Focus"
+    args={{ options, modelValue: 4 }}
+    parameters={{
+      pseudo: { focus: true },
+      docs: {
+        source: {
+          code: `<Select :options="options" />`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Select} />

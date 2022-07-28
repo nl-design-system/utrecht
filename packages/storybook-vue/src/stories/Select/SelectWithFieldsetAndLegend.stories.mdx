@@ -1,0 +1,64 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Select } from "@utrecht/component-library-vue";
+import { argTypes, options } from "./argTypes.ts";
+
+<Meta
+  id="vue-select-with-field-set-and-legend"
+  title="Vue.js Component/Select/ Select With Fieldset And Legend"
+  component={Select}
+  argTypes={argTypes}
+/>
+
+# With Fieldset And Legend
+
+export const Template = (args) => ({
+  components: { Select },
+  setup() {
+    return { args };
+  },
+  template: `
+  <form>
+  <FormFieldset>
+  <FormFieldsetLegend> Select with Fieldset & Legend</FormFieldsetLegend>
+  <FormField>
+    <FormLabel for="form-field-with-select-and-label" type="default" :checked="args.checked" :disabled="args.disabled">
+        {{args.labelText}}
+    </FormLabel> 
+    <br/>
+    <br/>
+    <Select v-bind="args" @change="action" id="form-field-with-select-and-label"/>
+  </FormField>
+    </FormFieldset>
+  </form>
+  `,
+  methods: { action: action("change") },
+});
+
+<Canvas>
+  <Story
+    name="Select With Fieldset And Legend"
+    args={{ labelText: "Select Label", options, modelValue: 2 }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+  <form>
+    <FormFieldset>
+    <FormFieldsetLegend> Select with Fieldset & Legend</FormFieldsetLegend>
+        <FormField>
+            <FormLabel for="form-field-with-select-and-label" type="default">Select Label</FormLabel>
+            <Select :options="options" :modelValue="2" id="form-field-with-select-and-label" />
+          </FormField>
+    </FormFieldset>
+  </form>
+`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Select} />
