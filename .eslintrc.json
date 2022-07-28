@@ -70,7 +70,7 @@
     {
       "excludedFiles": ["components/**/stencil.tsx", "components/**/*.stencil.tsx"],
       "extends": ["plugin:react/recommended", "eslint-config-prettier", "./.eslintrc.js.json"],
-      "files": ["*.ts", "*.tsx"],
+      "files": ["*.ts", "*.tsx", "*.vue"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": [
