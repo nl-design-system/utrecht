@@ -12,6 +12,7 @@ import {
   PageFooter,
   PageHeader,
   Paragraph,
+  Select,
 } from '@utrecht/component-library-vue';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
@@ -28,6 +29,7 @@ app.component('PageContent', PageContent);
 app.component('PageFooter', PageFooter);
 app.component('PageHeader', PageHeader);
 app.component('Paragraph', Paragraph);
+app.component('Select', Select);
 
 export const decorators = [
   (story) => ({
