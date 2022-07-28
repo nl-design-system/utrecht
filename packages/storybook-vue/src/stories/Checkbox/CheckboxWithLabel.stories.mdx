@@ -13,9 +13,13 @@ export const Template = (args) => ({
   },
   template: `
   <FormField>
-    <FormLabel for="form-field-with-checkbox-and-label">
-        {{args.default}}
-        <Checkbox v-bind="args" id="form-field-with-checkbox-and-label"/>
+    <FormLabel for="form-field-with-checkbox-and-label" type="checkbox">
+        <Checkbox 
+        v-bind="args" 
+        name="form-field-with-checkbox-and-label" 
+        id="form-field-with-checkbox-and-label"
+        />
+        {{args.labelText}}
     </FormLabel>
   </FormField>`,
 });
@@ -23,7 +27,7 @@ export const Template = (args) => ({
 <Canvas>
   <Story
     name="Checkbox With Label"
-    args={{ ...componentArgs, default: "Label" }}
+    args={{ ...componentArgs, labelText: "Label" }}
     parameters={{
       docs: { source: { code: `<Checkbox />` } },
     }}
