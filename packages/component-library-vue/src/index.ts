@@ -23,7 +23,6 @@ import PageHeader from './UtrechtPageHeader.vue';
 import Paragraph from './UtrechtParagraph.vue';
 import RadioButton from './UtrechtRadioButton.vue';
 import Select from './UtrechtSelect.vue';
-import SelectOption from './UtrechtSelectOption.vue';
 import Textarea from './UtrechtTextarea.vue';
 import Textbox from './UtrechtTextbox.vue';
 
@@ -53,7 +52,6 @@ export {
   PageHeader,
   RadioButton,
   Select,
-  SelectOption,
   Textbox,
   Textarea,
 };
