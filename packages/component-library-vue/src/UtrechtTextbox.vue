@@ -1,31 +1,29 @@
-<script setup lang="ts">
-  defineEmits<(_type: "update:modelValue", _value: unknown) => void>();
+<script lang="ts">
+  import { defineComponent } from "vue";
+  import { useModelWrapper } from "./helpers/modelWrapper";
 
-  defineProps<{
-    disabled?: boolean;
-    invalid?: boolean;
-    modelValue?: string;
-    readonly?: boolean;
-    required?: boolean;
-    type?: string;
-  }>();
+  export default defineComponent({
+    props: {
+      invalid: { type: Boolean, required: false },
+      modelValue: { type: [String, Number, Boolean], require: false, default: "" },
+    },
+    setup(props, { emit }) {
+      return {
+        value: useModelWrapper(props, emit),
+      };
+    },
+  });
 </script>
 
 <template>
   <input
-    class="utrecht-textbox"
+    v-model="value"
     :aria-invalid="invalid || undefined"
-    :class="{
-      'utrecht-textbox--disabled': disabled,
-      'utrecht-textbox--invalid': invalid,
-      'utrecht-textbox--required': required,
-      'utrecht-textbox--readonly': readonly,
-    }"
-    :disabled="disabled"
-    :readonly="readonly"
-    :required="required"
-    :value="modelValue"
-    @input="$emit('update:modelValue', (($event as InputEvent).target as HTMLInputElement).value)"
+    :class="[
+      { 'utrecht-textbox--invalid': invalid },
+      'utrecht-textbox',
+      'utrecht-textbox--html-input'
+    ]"
   />
 </template>
 
