@@ -1,0 +1,137 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-textbox-states" title="Vue.js Component/Textbox/States" component={Textbox} argTypes={argTypes} />
+
+# Textbox States
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Textbox },
+  setup() {
+    return { args };
+  },
+  template: `<Textbox v-bind="args" @change="action" />`,
+  methods: { action: action("change") },
+});
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Textbox Disabled"
+    args={{
+      placeholder: "Textbox Disabled",
+      name: "textbox-disabled",
+      id: "textbox-disabled",
+      disabled: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Disabled" name="textbox-disabled" id="textbox-disabled" type="text" :disabled="disabled"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="Textbox Invalid"
+    args={{
+      placeholder: "Textbox Invalid",
+      name: "textbox-invalid",
+      id: "textbox-invalid",
+      invalid: true,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Invalid" name="textbox-invalid" id="textbox-invalid" type="text" :invalid="invalid"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story
+    name="Textbox Read-only"
+    args={{
+      placeholder: "Textbox Read-only",
+      name: "textbox-readonly",
+      id: "textbox-readonly",
+      readonly: true,
+      value: "Textbox Read-only",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Read-only" name="textbox-readonly" id="textbox-readonly" type="text" :readonly="readonly"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story
+    name="Textbox Required"
+    args={{
+      placeholder: "Textbox Required",
+      name: "textbox-required",
+      id: "textbox-required",
+      required: true,
+      modelValue: "",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Required" name="textbox-required" id="textbox-required" type="text" :required="required"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="Textbox Focus"
+    args={{
+      placeholder: "Textbox Focus",
+      name: "textbox-focus",
+      id: "textbox-focus",
+    }}
+    parameters={{
+      pseudo: { focus: true },
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Focus" name="textbox-focus" id="textbox-focus" type="text"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Textbox} />

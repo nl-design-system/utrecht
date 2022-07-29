@@ -1,0 +1,42 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-textbox" title="Vue.js Component/Textbox" component={Textbox} argTypes={argTypes} />
+
+# With Label
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Textbox },
+  setup() {
+    return { args };
+  },
+  template: `<Textbox v-bind="args" @change="action" />`,
+  methods: { action: action("change") },
+});
+
+<Canvas>
+  <Story
+    name="With Label"
+    args={{ labelText: "Textbox Label", id: "form-field-with-textbox-and-label" }}
+    parameters={{
+      docs: {
+        source: {
+          code: `
+  <FormField>
+    <FormLabel for="form-field-with-textbox-and-label" type="default" :disabled="disabled">
+        Textbox Label
+    </FormLabel>
+    <Textbox placeholder="Textbox With Label" name="form-field-with-textbox-and-label" id="form-field-with-textbox-and-label" type="text"/>
+  </FormField>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Textbox} />

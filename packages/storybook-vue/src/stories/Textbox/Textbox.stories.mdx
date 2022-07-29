@@ -1,0 +1,65 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-textbox" title="Vue.js Component/Textbox" component={Textbox} argTypes={argTypes} />
+
+# Textbox
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Textbox },
+  setup() {
+    return { args };
+  },
+  template: `<Textbox v-bind="args" @change="action" />`,
+  methods: { action: action("change") },
+});
+
+## Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      placeholder: "Default Textbox",
+      name: "default-textbox",
+      id: "default-textbox",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Default Textbox" name="default-textbox" id="default-textbox" type="text"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## With Placeholder
+
+<Canvas>
+  <Story
+    name="With Placeholder"
+    args={{
+      placeholder: "With Placeholder Textbox",
+      name: "with-placeholder-textbox",
+      id: "with-placeholder-textbox",
+      modelValue: "",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="With Placeholder Textbox" name="with-placeholder-textbox" id="with-placeholder-textbox" type="text" value=""/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Textbox} />
