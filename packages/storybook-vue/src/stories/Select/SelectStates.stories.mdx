@@ -13,9 +13,10 @@ export const Template = (args) => ({
     return { args };
   },
   template: `
-  <Select v-bind="args" @change="action" />
-  `,
-  methods: { action: action("change") },
+  <Select v-bind="args" @update:modelValue="action"/>`,
+  methods: {
+    action: action("modelValue"),
+  },
 });
 
 ## Select Option #2
@@ -100,6 +101,24 @@ export const Template = (args) => ({
       docs: {
         source: {
           code: `<Select :options="options" :required="true" />`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Read-only
+
+<Canvas>
+  <Story
+    name="Read-only"
+    args={{ options, readonly: true, modelValue: 3 }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Select :options="options" :readonly="true" />`,
         },
       },
     }}

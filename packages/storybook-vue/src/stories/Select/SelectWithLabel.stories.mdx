@@ -16,12 +16,12 @@ export const Template = (args) => ({
   <FormField>
     <FormLabel for="form-field-with-select-and-label" type="default" :checked="args.checked" :disabled="args.disabled">
         {{args.labelText}}
-    </FormLabel> 
+    </FormLabel>
     <br/>
     <br/>
-    <Select v-bind="args" @change="action" id="form-field-with-select-and-label"/>
+    <Select v-bind="args" @update:modelValue="action" id="form-field-with-select-and-label"/>
   </FormField>`,
-  methods: { action: action("change") },
+  methods: { action: action("modelValue") },
 });
 
 <Canvas>
