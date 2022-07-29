@@ -1,13 +1,11 @@
 <script lang="ts">
   import { defineComponent } from "vue";
-  import { useModelWrapper } from "./helpers";
+  import { useModelWrapper } from "./helpers/modelWrapper";
 
   export default defineComponent({
     props: {
-      disabled: { type: Boolean, required: false },
       invalid: { type: Boolean, required: false },
       readonly: { type: Boolean, required: false },
-      required: { type: Boolean, required: false },
       options: { type: [Array, Object], required: true },
       modelValue: { type: [String, Number, Boolean], require: false, default: "" },
     },
@@ -21,22 +19,19 @@
 
 <template>
   <select
-    v-if="options && options.length > 0"
     v-model="selected"
-    class="utrecht-select"
     :aria-invalid="invalid || undefined"
-    :class="{
-      'utrecht-select--disabled': disabled,
-      'utrecht-select--invalid': invalid,
-      'utrecht-select--required': required,
-      'utrecht-select--readonly': readonly,
-    }"
-    :disabled="disabled"
+    :class="[
+      {'utrecht-select--invalid': invalid},
+      {'utrecht-select--readonly': readonly},
+      'utrecht-select--html-select',
+      'utrecht-select'
+    ]"
     :readonly="readonly"
-    :required="required"
   >
     <option
-      v-for="{value, label} in options"
+      v-for="{value, label, disabled} in options"
+      v-if="options && options.length > 0"
       :key="value"
       :value="value"
       :class="[
