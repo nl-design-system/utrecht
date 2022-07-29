@@ -13,9 +13,10 @@ export const Template = (args) => ({
     return { args };
   },
   template: `
-  <Select v-bind="args" @change="action" />
-  `,
-  methods: { action: action("change") },
+  <Select v-bind="args" @update:modelValue="action"/>`,
+  methods: {
+    action: action("modelValue"),
+  },
 });
 
 <Canvas>
