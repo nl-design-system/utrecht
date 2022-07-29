@@ -113,7 +113,8 @@
       },
       "plugins": ["@typescript-eslint"],
       "rules": {
-        "vue/require-explicit-emits": "off"
+        "vue/require-explicit-emits": "off",
+        "vue/no-use-v-if-with-v-for": "off"
       }
     }
   ]
