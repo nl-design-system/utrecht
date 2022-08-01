@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinitionHeading5 from "@utrecht/components/heading-5/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="vue-heading-level-5--design-tokens"
+  title="Vue.js Component/Heading/Heading Level 5/ Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading5} component="utrecht-heading-level-5" />
