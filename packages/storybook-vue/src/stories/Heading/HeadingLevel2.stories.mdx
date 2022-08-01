@@ -1,0 +1,36 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Heading } from "@utrecht/component-library-vue";
+
+<Meta
+  id="vue-heading-level-2"
+  title="Vue.js Component/Heading/Heading Level 2"
+  component={Heading}
+  argTypes={{ level: { type: "number" } }}
+/>
+
+# Heading Level 2
+
+export const Template = (args) => ({
+  components: { Heading },
+  setup() {
+    return { args };
+  },
+  template: `<Heading v-bind="args">${args.HeadingContent}</Heading>`,
+});
+
+<Canvas>
+  <Story
+    name="Heading Level 2"
+    args={{
+      level: 2,
+      HeadingContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: { source: { code: `<Heading :level="2">The Quick Brown Fox Jumps Over The Lazy Dog</Heading>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Heading} />
