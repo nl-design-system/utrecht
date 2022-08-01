@@ -1,32 +1,30 @@
-<script setup lang="ts">
-  defineEmits<(_type: "update:modelValue", _value: unknown) => void>();
+<script lang="ts">
+  import { defineComponent } from "vue";
+  import { useModelWrapper } from "./helpers/modelWrapper";
 
-  defineProps<{
-    disabled?: boolean;
-    invalid?: boolean;
-    modelValue?: string;
-    readonly?: boolean;
-    required?: boolean;
-    type?: string;
-  }>();
+  export default defineComponent({
+    props: {
+      invalid: { type: Boolean, required: false },
+      modelValue: { type: [String, Number, Boolean], require: false, default: "" },
+    },
+    setup(props, { emit }) {
+      return {
+        value: useModelWrapper(props, emit),
+      };
+    },
+  });
 </script>
 
 <template>
   <textarea
-    class="utrecht-textarea"
+    v-model="value"
     :aria-invalid="invalid || undefined"
-    :class="{
-      'utrecht-textarea--disabled': disabled,
-      'utrecht-textarea--invalid': invalid,
-      'utrecht-textarea--required': required,
-      'utrecht-textarea--readonly': readonly,
-    }"
-    :disabled="disabled"
-    :readonly="readonly"
-    :required="required"
-    :value="modelValue"
-    @input="$emit('update:modelValue', (($event as InputEvent).target as HTMLTextAreaElement).value)"
-  ></textarea>
+    :class="[
+    { 'utrecht-textarea--invalid': invalid },
+    'utrecht-textarea',
+    'utrecht-textarea--html-textarea'
+    ]"
+  />
 </template>
 
 <style src="@utrecht/components/textarea/css/index.scss"></style>
