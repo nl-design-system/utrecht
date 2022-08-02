@@ -1,0 +1,30 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Heading6 } from "@utrecht/component-library-vue";
+
+<Meta id="vue-heading-6" title="Vue.js Component/Heading 6" component={Heading6} />
+
+# Heading 6
+
+export const Template = (args) => ({
+  components: { Heading6 },
+  setup() {
+    return { args };
+  },
+  template: `<Heading6 v-bind="args">${args.HeadingContent}</Heading6>`,
+});
+
+<Canvas>
+  <Story
+    name="Heading 6"
+    args={{
+      HeadingContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+    parameters={{
+      docs: { source: { code: `<Heading6>The Quick Brown Fox Jumps Over The Lazy Dog</Heading6>` } },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Heading6} />
