@@ -1,9 +1,9 @@
 /* eslint-env node */
-const fs = require('fs');
 const lodash = require('lodash');
 const argv = require('minimist')(process.argv.slice(2), {
   string: ['prefix', 'path'],
 });
+const { readdir, readFile, writeFile, mkdir } = require('node:fs/promises');
 const path = require('path');
 const { component, test, generateIconsName, style, iconContainerComponent } = require('./component_templates.js');
 
@@ -11,70 +11,73 @@ const { kebabCase } = lodash;
 const componentPrefix = `${argv.prefix}-`;
 const componentsPath = argv.path;
 const iconRapperComponent = `${componentPrefix}container`;
+const cwd = path.resolve(process.cwd(), 'tmp/optimized-svgs');
 
-if (fs.existsSync(componentsPath)) throw new Error(`A component with this name already exists: ${componentsPath}`);
-
-if (!componentsPath) throw new Error('You must include a components path name.');
-
-fs.mkdirSync(componentsPath, { recursive: true });
-
-function writeFileErrorHandler(err) {
-  if (err) throw err;
-}
-
-const directoryPath = path.join(__dirname, '../tmp/optimized-svgs');
-
-fs.readdir(directoryPath, function (err, files) {
-  //handling error
-  if (err) {
-    console.error('Unable to scan directory: ' + err);
-    return;
+const readSVGDir = async () => {
+  let files;
+  try {
+    files = await readdir(cwd);
+    return files;
+  } catch (error) {
+    console.error(error);
   }
+  return files;
+};
 
-  const iconData = files.map((file) => ({
-    id: `${componentPrefix}${kebabCase(file.replace('.svg', ''))}`,
-    src: file,
-  }));
+const getIconData = async () => {
+  let svgData;
 
-  files.forEach(function (file) {
-    const fileName = `${componentPrefix}${kebabCase(file.replace('.svg', ''))}`;
-    const formattedName = kebabCase(fileName);
-    const dir = `${componentsPath}/${formattedName}`;
-
-    fs.readFile(path.join(directoryPath, file), 'utf8', function (err, svg) {
-      if (err) {
-        console.error(err);
-        return;
-      }
-
-      // throw an error if the file already exists
-      if (fs.existsSync(dir)) throw new Error('A component with that name already exists.');
-
-      // create the folder
-      fs.mkdirSync(dir);
-      fs.writeFile(
-        `${dir}/${formattedName}.stencil.tsx`,
-        component(fileName, svg, iconRapperComponent),
-        writeFileErrorHandler,
+  const files = await readSVGDir();
+  try {
+    if (files && files.length > 0) {
+      svgData = await Promise.all(
+        files.map((file) => ({
+          id: `${componentPrefix}${kebabCase(path.parse(file).name)}`,
+          src: file,
+        })),
       );
-      fs.writeFile(`${dir}/${formattedName}.spec.tsx`, test(fileName), writeFileErrorHandler);
-    });
-  });
-
-  const dirExistsSync = (dir) => {
-    const stats = !!fs.statSync(dir, { throwIfNoEntry: false });
-    return stats ? stats.isDirectory() : false;
-  };
-
-  const outputDir = path.resolve(__dirname, '../dist/');
-
-  if (!dirExistsSync(outputDir)) {
-    fs.mkdirSync(outputDir);
+    }
+  } catch (error) {
+    console.error(error);
   }
-  fs.writeFile(path.join(outputDir, './index.json'), generateIconsName(iconData), writeFileErrorHandler);
-});
+  return svgData;
+};
 
-const createIconWrapperComponent = () => {
+const writeComponentFile = async () => {
+  try {
+    const files = await readSVGDir();
+    if (files && files.length > 0) {
+      for (const file of files) {
+        const fileBasename = path.parse(file).name;
+        const fileName = `${componentPrefix}${kebabCase(fileBasename)}`;
+        const formattedName = kebabCase(fileName);
+        const svg = await readFile(`${cwd}/${file}`, 'utf-8');
+
+        await mkdir(`${componentsPath}/${formattedName}`, { recursive: true });
+        await writeFile(
+          `${componentsPath}/${formattedName}/${formattedName}.stencil.tsx`,
+          component(fileName, svg, iconRapperComponent),
+          'utf-8',
+        );
+        await writeFile(`${componentsPath}/${formattedName}/${formattedName}.spec.tsx`, test(fileName), 'utf-8');
+      }
+    } else {
+      console.log('There is no SVG files');
+    }
+  } catch (error) {
+    console.error(error);
+  }
+};
+writeComponentFile();
+
+const generateIconsNameFile = async () => {
+  const data = await getIconData();
+  await mkdir('dist', { recursive: true });
+  await writeFile(path.resolve(process.cwd(), 'dist/index.json'), generateIconsName(data), 'utf-8');
+};
+generateIconsNameFile();
+
+const createIconWrapperComponent = async () => {
   const dir = `${componentsPath}/${iconRapperComponent}`;
   const cssValue = `.${iconRapperComponent} {
     display: inline-block;
@@ -82,13 +85,13 @@ const createIconWrapperComponent = () => {
     width: var(--${componentPrefix}size);
     height: var(--${componentPrefix}size);
   }`;
-  fs.mkdirSync(dir);
-  fs.writeFile(
+  await mkdir(dir, { recursive: true });
+  await writeFile(
     `${dir}/${iconRapperComponent}.stencil.tsx`,
     iconContainerComponent(iconRapperComponent, '<slot/>'),
-    writeFileErrorHandler,
+    'utf-8',
   );
-  fs.writeFile(`${dir}/${iconRapperComponent}.space.tsx`, test(iconRapperComponent), writeFileErrorHandler);
-  fs.writeFile(`${dir}/${iconRapperComponent}.scss`, style(cssValue), writeFileErrorHandler);
+  await writeFile(`${dir}/${iconRapperComponent}.space.tsx`, test(iconRapperComponent), 'utf-8');
+  await writeFile(`${dir}/${iconRapperComponent}.scss`, style(cssValue), 'utf-8');
 };
 createIconWrapperComponent();
