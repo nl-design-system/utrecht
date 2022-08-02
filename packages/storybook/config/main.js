@@ -33,7 +33,7 @@ module.exports = {
     return {
       vue: {
         title: 'Vue.js Component',
-        url: 'https://nl-design-system.github.io/utrecht/storybook-vue/?path=/story/vue-js-component-component-introduction--page',
+        url: 'https://nl-design-system.github.io/utrecht/storybook-vue',
       },
     };
   },
