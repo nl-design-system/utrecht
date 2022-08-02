@@ -31,18 +31,18 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "devDependencies": {
-    "@docsearch/react": "3.0.0",
-    "@docusaurus/core": "2.0.0-rc.1",
-    "@docusaurus/preset-classic": "2.0.0-rc.1",
-    "@docusaurus/theme-common": "2.0.0-rc.1",
-    "@docusaurus/theme-search-algolia": "2.0.0-rc.1",
+    "@docsearch/react": "3.1.1",
+    "@docusaurus/core": "2.0.1",
+    "@docusaurus/preset-classic": "2.0.1",
+    "@docusaurus/theme-common": "2.0.1",
+    "@docusaurus/theme-search-algolia": "2.0.1",
     "@mdx-js/react": "1.6.22",
     "@utrecht/component-library-css": "file:../../packages/component-library-css",
     "@utrecht/component-library-react": "file:../../packages/component-library-react",
     "@utrecht/components": "file:../../components",
     "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
     "@utrecht/web-component-library-react": "file:../../packages/web-component-library-react",
-    "clsx": "1.1.1",
+    "clsx": "1.2.1",
     "cpx": "1.5.0",
     "docusaurus-plugin-sass": "0.2.2",
     "iframe-resizer-react": "1.1.0",
@@ -53,7 +53,7 @@
     "react-dom": "16.14.0",
     "react-html-parser": "2.0.2",
     "rimraf": "3.0.2",
-    "sass": "1.51.0",
+    "sass": "1.54.0",
     "yargs": "17.5.1"
   },
   "browserslist": {
