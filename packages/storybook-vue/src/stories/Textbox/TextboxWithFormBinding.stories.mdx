@@ -14,11 +14,14 @@ export const Template = (args, { argTypes }) => ({
     return { args };
   },
   template: `
-  <FormField> 
+  <FormField>
     <Textbox v-bind="args" @update:modelValue="action" :value="args.modelValue" />
-  <br/>
-  <br/>
-  <Paragraph v-if="args.modelValue"><strong> Textbox Binding:</strong> {{args.modelValue}}</Paragraph>
+    <dl v-if="args.modelValue">
+        <div aria-live="polite" aria-atomic="true">
+            <dt>Textarea Binding:</dt>
+            <dd>{{args.modelValue}}</dd>
+        </div>
+    </dl>
   </FormField>
   `,
   methods: { action: action("modelValue") },

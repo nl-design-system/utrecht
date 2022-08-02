@@ -95,11 +95,59 @@ export const Template = (args, { argTypes }) => ({
       name: "textbox-number",
       id: "textbox-number",
       type: "number",
+      modelValue: 1,
     }}
     parameters={{
       docs: {
         source: {
-          code: `<Textbox placeholder="Textbox Number" name="textbox-number" id="textbox-number" type="number"/>`,
+          code: `<Textbox placeholder="Textbox Number" name="textbox-number" id="textbox-number" type="number" value="1"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## URL
+
+<Canvas>
+  <Story
+    name="Textbox URL"
+    args={{
+      placeholder: "Textbox URL",
+      name: "textbox-url",
+      id: "textbox-url",
+      type: "url",
+      modelValue: "https://example.com",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox URL" name="textbox-url" id="textbox-url" type="url" value="https://example.com"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Tel
+
+<Canvas>
+  <Story
+    name="Textbox Tel"
+    args={{
+      placeholder: "Textbox Tel",
+      name: "textbox-tel",
+      id: "textbox-tel",
+      modelValue: "+31 555 385 385",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Tel" name="textbox-tel" id="textbox-tel" type="tel" value="+31 555 385 385"/>`,
         },
       },
     }}

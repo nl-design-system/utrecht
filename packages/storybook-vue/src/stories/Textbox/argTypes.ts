@@ -27,7 +27,7 @@ export const argTypes = {
   type: {
     name: 'type',
     type: { name: 'select', required: false },
-    options: ['text', 'email', 'password', 'number'],
+    options: ['text', 'email', 'password', 'number', 'tel', 'url'],
     defaultValue: 'text',
   },
 };
