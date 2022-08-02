@@ -7,7 +7,7 @@ module.exports = {
   title: 'Utrecht Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   url: 'https://nl-design-system.github.io/',
-  baseUrl: '/utrecht/',
+  baseUrl: process.env['GH_PAGES'] === 'true' ? '/utrecht/' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -16,7 +16,9 @@ module.exports = {
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
     storybookUrl:
-      process.env['CI'] === 'true' ? 'https://nl-design-system.github.io/utrecht/storybook/' : 'http://localhost:6006/',
+      process.env['GH_PAGES'] === 'true'
+        ? 'https://nl-design-system.github.io/utrecht/storybook/'
+        : 'http://localhost:6006/',
   },
   staticDirectories: ['static', '../../proprietary/assets'],
   presets: [
