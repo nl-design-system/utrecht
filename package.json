@@ -90,7 +90,7 @@
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
-    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps && npm install --workspace packages/web-component-library-angular --save-dev @angular-devkit/build-angular@v11-lts",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
     "test-update": "npm-run-all --sequential lint build test",
     "watch:storybook": "npm run --workspace packages/storybook storybook",
