@@ -1,0 +1,72 @@
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Table } from "@utrecht/component-library-vue";
+
+<Meta id="vue-table" title="Vue.js Component/Table" component={Table} />
+
+# Table component
+
+export const Template = (args) => ({
+  components: { Table },
+  setup() {
+    return { args };
+  },
+  template: `
+  <Table v-bind="args">
+  <TableCaption>Table Caption</TableCaption>
+    <TableHeader>
+      <TableRow>
+          <TableHeaderCell scope="col">Column header cell 1</TableHeaderCell>
+          <TableHeaderCell scope="col">Column header cell 2</TableHeaderCell>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableHeaderCell scope="row">Row header cell</TableHeaderCell>
+        <TableCell>Cell</TableCell>
+      </TableRow>
+    </TableBody>
+    <TableFooter>
+      <TableRow>
+       <TableCell>Footer cell 1</TableCell>
+       <TableCell>Footer cell 2</TableCell>
+      </TableRow>
+    </TableFooter>
+  </Table>`,
+});
+
+<Canvas>
+  <Story
+    name="Default Table"
+    parameters={{
+      docs: {
+        source: {
+          code: `  <Table>
+  <TableCaption> Table Caption </TableCaption>
+    <TableHeader>
+      <TableRow>
+          <TableHeaderCell scope="col">Column header cell 1</TableHeaderCell>
+          <TableHeaderCell scope="col">Column header cell 2</TableHeaderCell>
+      </TableRow>
+    </TableHeader>
+    <TableBody>
+      <TableRow>
+        <TableHeaderCell scope="row">Row header cell</TableHeaderCell>
+        <TableCell>Cell</TableCell>
+      </TableRow>
+    </TableBody>
+    <TableFooter>
+      <TableRow>
+       <TableCell>Footer cell 1</TableCell>
+       <TableCell>Footer cell 2</TableCell>
+      </TableRow>
+    </TableFooter>
+  </Table>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Table} />
