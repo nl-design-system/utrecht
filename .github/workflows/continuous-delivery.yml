@@ -44,7 +44,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: website
-          path: standalone/docusaurus/build/
+          path: packages/docusaurus/build/
           retention-days: 1
 
       - name: "Retain build artifact: Storybook"
@@ -82,30 +82,30 @@ jobs:
         uses: actions/download-artifact@v3
         with:
           name: website
-          path: standalone/docusaurus/build/
+          path: packages/docusaurus/build/
 
       - name: "Restore build artifact: Storybook"
         uses: actions/download-artifact@v3
         with:
           name: storybook
-          path: standalone/docusaurus/build/storybook/
+          path: packages/docusaurus/build/storybook/
       - name: "Restore build artifact: Storybook Vue"
         uses: actions/download-artifact@v3
         with:
           name: storybook-vue
-          path: standalone/docusaurus/build/storybook-vue/
+          path: packages/docusaurus/build/storybook-vue/
 
       - name: Continuous Deployment to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: gh-pages
-          folder: standalone/docusaurus/build/
+          folder: packages/docusaurus/build/
 
       - name: Continuous Deployment to designsystem.utrecht.nl
         uses: JamesIves/github-pages-deploy-action@v4.3.0
         with:
           branch: main
-          folder: standalone/docusaurus/build/
+          folder: packages/docusaurus/build/
           repository-name: nl-design-system/designsystem.utrecht.nl
           token: ${{ secrets.DOCS_GH_TOKEN }}
 

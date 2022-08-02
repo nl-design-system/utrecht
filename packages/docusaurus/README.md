@@ -6,7 +6,7 @@ We gebruiken [Docusaurus](https://docusaurus.io/docs/) voor het opbouwen van de 
 
 Voor documentatie die mogelijk gedeeld wordt met Storybook en die makkelijk gevonden kan worden door mensen die in Github rondkijken gebruiken we de `documentation` folder. Hierin staat een folder `website` die ingeladen wordt door Docusaurus. In de bestaande folders kunnen bestanden worden aangemaakt die automatisch in Docusaurus verschijnen.
 
-De documentatie van componenten wordt opgebouwd in `standalone/docusaurus/docs/componenten`. De component documentatie is in `mdx` formaat. Zo kan de documentatie uit de README.md van het component komen en de component story in een iframe ingeladen worden.
+De documentatie van componenten wordt opgebouwd in `packages/docusaurus/docs/componenten`. De component documentatie is in `mdx` formaat. Zo kan de documentatie uit de README.md van het component komen en de component story in een iframe ingeladen worden.
 
 ### Nieuw document
 
@@ -24,9 +24,9 @@ Om geen dubbel werk te doen renderen we de component niet in Docusaurus zelf, ma
 
 ### Toevoegen nieuwe structuur
 
-De structuur van de `documentation/website` folder wordt met name gebruikt in de sidebar van de website. Deze sidebar wordt [geconfigureerd](https://docusaurus.io/docs/sidebar) met `standalone/docusaurus/sidebarConfig.js`.
+De structuur van de `documentation/website` folder wordt met name gebruikt in de sidebar van de website. Deze sidebar wordt [geconfigureerd](https://docusaurus.io/docs/sidebar) met `packages/docusaurus/sidebarConfig.js`.
 
-Daarnaast zorgt de configuratie van de hoofdnavigatie ervoor dat het menu bovenin naar verschillende pagina's verwijst. Deze configuratie staat in `standalone/docusaurus/navigationConfig.js`.
+Daarnaast zorgt de configuratie van de hoofdnavigatie ervoor dat het menu bovenin naar verschillende pagina's verwijst. Deze configuratie staat in `packages/docusaurus/navigationConfig.js`.
 
 ## Ontwikkelen
 
@@ -54,7 +54,7 @@ Om lokale stories in te laden tijdens het ontwikkelen van component documentatie
 1. Draai `npm run build:storybook`
 1. Draai `npm run serve:storybook` om deze gebuilde versie in de browser te openen
 1. Deze gebuilde versie draait nu op `localhost:8080`, vergeet niet om deze steeds opnieuw te bouwen als je in storybook veranderingen hebt die je in docusaurus wil zien.
-1. Open `standalone/docusaurus/docusaurus.config.js`
+1. Open `packages/docusaurus/docusaurus.config.js`
 1. Verander `storybookUrl: 'https://nl-design-system.github.io/utrecht/storybook/'` naar `storybookUrl: 'http://localhost:8080'`,
 1. Draai `npm run docs`
 1. Tada, je locale storybook wordt getoond en gelinkt in docusaurus component documentatie

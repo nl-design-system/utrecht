@@ -114,7 +114,7 @@ You can use any editor you'd like, but in case you use [Visual Studio Code](http
 5. The local version of docusaurus will be running on `localhost:3000/utrecht`
 6. Press `Control+C` in your terminal to stop Docusaurus
 
-Read the `standalone/docusaurus/README.md` for docusaurus details
+Read the `packages/docusaurus/README.md` for docusaurus details
 
 ### Run Storybook on your computer
 
