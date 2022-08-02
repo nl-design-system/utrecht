@@ -23,6 +23,14 @@ import PageHeader from './UtrechtPageHeader.vue';
 import Paragraph from './UtrechtParagraph.vue';
 import RadioButton from './UtrechtRadioButton.vue';
 import Select from './UtrechtSelect.vue';
+import Table from './UtrechtTable.vue';
+import TableBody from './UtrechtTableBody.vue';
+import TableCaption from './UtrechtTableCaption.vue';
+import TableCell from './UtrechtTableCell.vue';
+import TableFooter from './UtrechtTableFooter.vue';
+import TableHeader from './UtrechtTableHeader.vue';
+import TableHeaderCell from './UtrechtTableHeaderCell.vue';
+import TableRow from './UtrechtTableRow.vue';
 import Textarea from './UtrechtTextarea.vue';
 import Textbox from './UtrechtTextbox.vue';
 
@@ -52,6 +60,14 @@ export {
   PageHeader,
   RadioButton,
   Select,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableFooter,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
   Textbox,
   Textarea,
 };
