@@ -40,6 +40,6 @@
     "build": "build-storybook --output-dir dist/ --config-dir config/ ",
     "clean": "rimraf dist/",
     "start": "npx http-server dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006 "
+    "storybook": "start-storybook --config-dir config/ --port 6007"
   }
 }
