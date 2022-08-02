@@ -1,4 +1,4 @@
-export default {
+export const argTypes = {
   lead: {
     name: 'lead',
     type: { name: 'boolean', required: false },
