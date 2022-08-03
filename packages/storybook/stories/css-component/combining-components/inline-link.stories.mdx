@@ -3,10 +3,37 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Link } from "@utrecht/components/link/css/template";
 import { Paragraph } from "@utrecht/components/paragraph/css/template";
+import { UnorderedList } from "@utrecht/components/unordered-list/css/template";
 
 export const ParagraphWithLink = ({ textContent, href, link }) =>
   Paragraph({
     textContent: textContent.replaceAll(link, () => Link({ textContent: link, href })),
+  });
+
+export const UnorderedListWithLink = ({ textContent, href }) =>
+  UnorderedList({
+    items: [
+      {
+        textContent: Link({ href, textContent }),
+      },
+      {
+        textContent: Link({ href, textContent }),
+      },
+      {
+        textContent: Link({ href, textContent }),
+      },
+    ],
+  });
+
+export const UnorderedListWithMultipleLinks = ({ textContent, href }) =>
+  UnorderedList({
+    items: [
+      {
+        textContent: [Link({ href, textContent }), Link({ href, textContent }), Link({ href, textContent })].join(
+          "<br />"
+        ),
+      },
+    ],
   });
 
 <Meta
@@ -48,6 +75,36 @@ export const ParagraphWithLink = ({ textContent, href, link }) =>
     }}
   >
     {ParagraphWithLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Paragraph with link" />
+
+## Unordered list with multiple links
+
+<Canvas>
+  <Story
+    name="Unordered list with multiple links"
+    args={{
+      href: "https://example.com/",
+      textContent: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {UnorderedListWithLink.bind({})}
+  </Story>
+</Canvas>
+
+## Unordered list item with multiple links
+
+<Canvas>
+  <Story
+    name="Unordered list item with multiple links"
+    args={{
+      href: "https://example.com/",
+      textContent: "Lorem ipsum dolor sit amet",
+    }}
+  >
+    {UnorderedListWithMultipleLinks.bind({})}
   </Story>
 </Canvas>
 
