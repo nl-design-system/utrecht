@@ -21,20 +21,4 @@ module.exports = {
     '@etchteam/storybook-addon-status/register',
     '@whitespace/storybook-addon-html',
   ],
-  refs: (config, { configType }) => {
-    if (configType === 'DEVELOPMENT') {
-      return {
-        vue: {
-          title: 'Vue.js Component',
-          url: 'http://localhost:6007',
-        },
-      };
-    }
-    return {
-      vue: {
-        title: 'Vue.js Component',
-        url: 'https://nl-design-system.github.io/utrecht/storybook-vue',
-      },
-    };
-  },
 };
