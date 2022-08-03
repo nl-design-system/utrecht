@@ -1,6 +1,5 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
-
 export type TextboxTypes = 'email' | 'number' | 'password' | 'tel' | 'text' | 'url';
 
 export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -30,12 +29,6 @@ export const Textbox = forwardRef(
       className={clsx(
         'utrecht-textbox',
         'utrecht-textbox--html-input',
-        type === 'email' && 'utrecht-textbox--url',
-        type === 'password' && 'utrecht-textbox--password',
-        type === 'number' && 'utrecht-textbox--numeric',
-        type === 'tel' && 'utrecht-textbox--numeric',
-        type === 'url' && 'utrecht-textbox--url',
-        inputMode === 'numeric' && 'utrecht-textbox--numeric',
         disabled && 'utrecht-textbox--disabled',
         invalid && 'utrecht-textbox--invalid',
         readOnly && 'utrecht-textbox--readonly',
