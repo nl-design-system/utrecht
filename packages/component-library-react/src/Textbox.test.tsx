@@ -230,14 +230,6 @@ describe('Textbox', () => {
 
       expect(textbox).toBeInTheDocument();
     });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<Textbox type="url" />);
-
-      const textbox = container.querySelector(':only-child');
-
-      expect(textbox).toHaveClass('utrecht-textbox--url');
-    });
   });
 
   describe('variant for email values', () => {
@@ -247,14 +239,6 @@ describe('Textbox', () => {
       const textbox = container.querySelector('input[type="email"]');
 
       expect(textbox).toBeInTheDocument();
-    });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<Textbox type="email" />);
-
-      const textbox = container.querySelector(':only-child');
-
-      expect(textbox).toHaveClass('utrecht-textbox--url');
     });
   });
 
@@ -276,14 +260,6 @@ describe('Textbox', () => {
 
       expect(textbox).toBeInTheDocument();
     });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<Textbox type="tel" />);
-
-      const textbox = container.querySelector(':only-child');
-
-      expect(textbox).toHaveClass('utrecht-textbox--numeric');
-    });
   });
 
   describe('variant for numeric values', () => {
@@ -294,14 +270,6 @@ describe('Textbox', () => {
 
       expect(textbox).toHaveAttribute('inputMode', 'numeric');
     });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<Textbox inputMode="numeric" />);
-
-      const textbox = container.querySelector(':only-child');
-
-      expect(textbox).toHaveClass('utrecht-textbox--numeric');
-    });
   });
 
   describe('variant for number values', () => {
@@ -311,14 +279,6 @@ describe('Textbox', () => {
       const textbox = container.querySelector(':only-child');
 
       expect(textbox).toHaveAttribute('inputMode', 'numeric');
-    });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<Textbox type="number" />);
-
-      const textbox = container.querySelector(':only-child');
-
-      expect(textbox).toHaveClass('utrecht-textbox--numeric');
     });
   });
 
