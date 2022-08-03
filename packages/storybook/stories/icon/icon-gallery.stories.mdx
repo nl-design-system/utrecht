@@ -61,7 +61,7 @@ import iconSet from "@utrecht/icon/dist/index.json";
   <CustomIconGalleryItem name="utrecht-icon-vervoersvoorziening" icon={<utrecht-icon-vervoersvoorziening />} />
   <CustomIconGalleryItem name="utrecht-icon-afval-container" icon={<utrecht-icon-afval-container />} />
   <CustomIconGalleryItem name="utrecht-icon-afval-containerpas" icon={<utrecht-icon-afval-containerpas />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval-kalender" icon={<utrecht-afval-kalender />} />
+  <CustomIconGalleryItem name="utrecht-icon-afval-kalender" icon={<utrecht-icon-afval-kalender />} />
   <CustomIconGalleryItem name="utrecht-icon-afval-scheiden" icon={<utrecht-icon-afval-scheiden />} />
   <CustomIconGalleryItem name="utrecht-icon-afval" icon={<utrecht-icon-afval />} />
   <CustomIconGalleryItem name="utrecht-icon-bewijsstukken" icon={<utrecht-icon-bewijsstukken />} />
@@ -108,7 +108,7 @@ import iconSet from "@utrecht/icon/dist/index.json";
 ## Icon Set
 
 <CustomIconGallery>
-  {iconSet.map(({ id }, index) => (
-    <CustomIconGalleryItem name={id} key={index} icon={<id />} />
+  {iconSet.map(({ id: Icon }, index) => (
+    <CustomIconGalleryItem name={Icon} key={index} icon={<Icon />} />
   ))}
 </CustomIconGallery>
