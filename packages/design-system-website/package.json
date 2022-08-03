@@ -1,0 +1,28 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Utrecht Design System website",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/design-system-website",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "files": [
+    "dist"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "devDependencies": {
+    "@utrecht/docusaurus": "file:../docusaurus",
+    "@utrecht/storybook": "file:../storybook",
+    "@utrecht/storybook-vue": "file:../storybook-vue",
+    "rimraf": "3.0.2"
+  },
+  "scripts": {
+    "clean": "rimraf dist/",
+    "build": "rimraf dist/ && mkdir dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/"
+  }
+}
