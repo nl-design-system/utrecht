@@ -23,12 +23,9 @@ input[type="week" i] {
 }
 
 input[autocomplete~="current-password" i],
-input[autocomplete~="new-password" i] {
+input[autocomplete~="new-password" i],
+input[type="password" i] {
   @include utrecht-textbox--password;
-}
-
-input[type="url" i] {
-  @include utrecht-textbox--url;
 }
 
 input[autocomplete~="bday" i],
@@ -51,6 +48,15 @@ input[autocomplete~="tel-national" i],
 input[autocomplete~="transaction-amount" i],
 input[inputmode="decimal" i],
 input[inputmode="numeric" i],
-input[type="number" i] {
+input[inputmode="tel" i],
+input[type="number" i],
+input[type="tel" i] {
   @include utrecht-textbox--numeric;
+}
+
+input[inputmode="email" i],
+input[inputmode="url" i],
+input[type="email" i],
+input[type="url" i] {
+  @include utrecht-textbox--url;
 }

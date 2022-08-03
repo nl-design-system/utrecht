@@ -49,4 +49,21 @@
 
 .utrecht-textbox--html-input {
   @include utrecht-textbox--html-input;
+
+  &[type="password" i] {
+    @include utrecht-textbox--password;
+  }
+  &[type="url" i],
+  &[type="email" i],
+  &[inputMode="email" i],
+  &[inputMode="url" i] {
+    @include utrecht-textbox--url;
+  }
+  &[type="number" i],
+  &[type="tel" i],
+  &[inputMode="numeric" i],
+  &[inputMode="decimal" i],
+  &[inputMode="tel" i] {
+    @include utrecht-textbox--numeric;
+  }
 }
