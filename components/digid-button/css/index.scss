@@ -5,8 +5,8 @@
 
 .utrecht-digid-button {
   --utrecht-button-min-block-size: var(--utrecht-digid-button-block-size, 50px);
-  --utrecht-logo-max-height: var(--utrecht-digid-button-block-size, 50px);
-  --utrecht-logo-max-width: var(--utrecht-digid-button-block-size, 50px);
+  --utrecht-logo-max-block-size: var(--utrecht-digid-button-block-size, 50px);
+  --utrecht-logo-max-inline-size: var(--utrecht-digid-button-block-size, 50px);
 
   block-size: var(--utrecht-digid-button-block-size, 50px);
   display: inline-flex;
