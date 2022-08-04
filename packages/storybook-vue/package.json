@@ -38,6 +38,7 @@
   },
   "scripts": {
     "build": "build-storybook --output-dir dist/ --config-dir config/ ",
+    "postbuild": "npx storybook extract dist",
     "clean": "rimraf dist/",
     "start": "npx http-server dist/",
     "storybook": "start-storybook --config-dir config/ --port 6007"
