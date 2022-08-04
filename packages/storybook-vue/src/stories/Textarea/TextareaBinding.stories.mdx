@@ -1,0 +1,42 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textarea } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-textarea-with-form-binding" title="Vue.js Component/Textarea" component={Textarea} argTypes={argTypes} />
+
+# Textarea
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Textarea },
+  setup() {
+    return { args };
+  },
+  template: `<Textarea v-bind="args" @update:modelValue="action" />`,
+  methods: { action: action("modelValue") },
+});
+
+## With form binding
+
+<Canvas>
+  <Story
+    name="With form binding"
+    args={{
+      placeholder: "With form binding",
+      name: "with-form-binding-textarea",
+      id: "with-form-binding-textarea",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textarea placeholder="With form binding" name="with-form-binding-textarea" id="with-form-binding-textarea" />`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Textarea} />
