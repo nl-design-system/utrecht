@@ -1,0 +1,40 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-textbox" title="Vue.js Component/Textbox/With Form Binding" component={Textbox} argTypes={argTypes} />
+
+# Textbox With Form Binding
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Textbox },
+  setup() {
+    return { args };
+  },
+  template: `<Textbox v-bind="args" @update:modelValue="action" />`,
+  methods: { action: action("modelValue") },
+});
+
+<Canvas>
+  <Story
+    name="With Form Binding"
+    args={{
+      placeholder: "With Form Binding",
+      name: "with-from-binding-textbox",
+      id: "with-from-binding-textbox",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="With Form Binding" name="with-from-binding-textbox" id="with-from-binding-textbox" type="text"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Textbox} />

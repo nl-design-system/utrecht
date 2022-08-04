@@ -1,0 +1,159 @@
+import { action } from "@storybook/addon-actions";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "@utrecht/component-library-vue";
+import { argTypes } from "./argTypes.ts";
+
+<Meta id="vue-textbox-types" title="Vue.js Component/Textbox/Types" component={Textbox} argTypes={argTypes} />
+
+# Textbox Types
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: { Textbox },
+  setup() {
+    return { args };
+  },
+  template: `<Textbox v-bind="args" @change="action" />`,
+  methods: { action: action("change") },
+});
+
+## Text
+
+<Canvas>
+  <Story
+    name="Textbox Text"
+    args={{
+      placeholder: "Textbox Text",
+      name: "textbox-text",
+      id: "textbox-text",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Text" name="textbox-text" id="textbox-text" type="text"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Email
+
+<Canvas>
+  <Story
+    name="Textbox Email"
+    args={{
+      placeholder: "Textbox Email",
+      name: "textbox-email",
+      id: "textbox-email",
+      type: "email",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Email" name="textbox-email" id="textbox-email" type="email" />`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Password
+
+<Canvas>
+  <Story
+    name="Textbox Password"
+    args={{
+      placeholder: "Textbox Password",
+      name: "textbox-password",
+      id: "textbox-password",
+      type: "password",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Password" name="textbox-password" id="textbox-password" type="password"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Number
+
+<Canvas>
+  <Story
+    name="Textbox Number"
+    args={{
+      placeholder: "Textbox Number",
+      name: "textbox-number",
+      id: "textbox-number",
+      type: "number",
+      modelValue: 1,
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Number" name="textbox-number" id="textbox-number" type="number" value="1"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## URL
+
+<Canvas>
+  <Story
+    name="Textbox URL"
+    args={{
+      placeholder: "Textbox URL",
+      name: "textbox-url",
+      id: "textbox-url",
+      type: "url",
+      modelValue: "https://example.com",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox URL" name="textbox-url" id="textbox-url" type="url" value="https://example.com"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Tel
+
+<Canvas>
+  <Story
+    name="Textbox Tel"
+    args={{
+      placeholder: "Textbox Tel",
+      name: "textbox-tel",
+      id: "textbox-tel",
+      modelValue: "+31 555 385 385",
+    }}
+    parameters={{
+      docs: {
+        source: {
+          code: `<Textbox placeholder="Textbox Tel" name="textbox-tel" id="textbox-tel" type="tel" value="+31 555 385 385"/>`,
+        },
+      },
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={Textbox} />
