@@ -5,6 +5,8 @@
  */
 
 @mixin utrecht-logo {
-  max-height: var(--utrecht-logo-max-height, 192px);
-  max-width: var(--utrecht-logo-max-width, 96px);
+  max-block-size: var(--utrecht-logo-max-block-size, 192px);
+  max-inline-size: var(--utrecht-logo-max-inline-size, 96px);
+  min-block-size: var(--utrecht-logo-min-block-size);
+  min-inline-size: var(--utrecht-logo-min-inline-size);
 }
