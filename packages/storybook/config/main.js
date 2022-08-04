@@ -35,7 +35,7 @@ module.exports = {
     return {
       vue: {
         title: 'Vue.js Components',
-        url: 'https://nl-design-system.github.io/utrecht/storybook-vue',
+        url: '../storybook-vue',
       },
     };
   },
