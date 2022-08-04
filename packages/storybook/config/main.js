@@ -10,6 +10,7 @@ module.exports = {
   ],
   features: {
     postcss: false,
+    buildStoriesJson: true,
   },
   addons: [
     {
@@ -22,4 +23,20 @@ module.exports = {
     '@whitespace/storybook-addon-html',
   ],
   staticDir: ['../../../proprietary/assets', 'src/script/'],
+  refs: (config, { configType }) => {
+    if (configType === 'DEVELOPMENT') {
+      return {
+        vue: {
+          title: 'Vue.js Components',
+          url: 'http://localhost:6007',
+        },
+      };
+    }
+    return {
+      vue: {
+        title: 'Vue.js Components',
+        url: 'https://nl-design-system.github.io/utrecht/storybook-vue',
+      },
+    };
+  },
 };
