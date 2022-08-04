@@ -43,7 +43,8 @@ module.exports = {
       position: 'right',
     },
     {
-      href: 'https://nl-design-system.github.io/utrecht/storybook',
+      prependBaseUrlToHref: true,
+      href: './storybook/',
       label: 'Storybook',
       position: 'right',
     },
