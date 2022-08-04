@@ -21,4 +21,5 @@ module.exports = {
     '@etchteam/storybook-addon-status/register',
     '@whitespace/storybook-addon-html',
   ],
+  staticDir: ['../../../proprietary/assets', 'src/script/'],
 };
