@@ -45,9 +45,9 @@
     "webpack": "4.46.0"
   },
   "scripts": {
-    "build": "build-storybook --output-dir dist/ --config-dir config/ --static-dir src/script/,../../proprietary/assets/",
+    "build": "build-storybook --output-dir dist/ --config-dir config/",
     "clean": "rimraf dist/",
-    "start": "../../node_modules/http-server/bin/http-server dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006 --static-dir src/script/,../../proprietary/assets/"
+    "start": "npx http-server dist/",
+    "storybook": "start-storybook --config-dir config/ --port 6006"
   }
 }
