@@ -1,13 +1,35 @@
 /* eslint-env node */
 
+const cloneDeepWith = require('lodash.clonedeepwith');
+const { resolve } = require('url');
+
+const baseUrl = process.env['BASE_URL'] ? process.env['BASE_URL'] : '/';
+
+// Resolve all relative URLs in the navigation against the baseUrl
+// so they will work consistently from every page in Docusaurus
+const navbar = cloneDeepWith(require('./navigationConfig'), (arg) => {
+  if (!!arg && typeof arg.href === 'string' && arg.prependBaseUrlToHref) {
+    const href = resolve(baseUrl, arg.href);
+    return {
+      type: 'html',
+      value: `<a href="${href}"${arg.target ? ` target="${arg.target}"` : ''} class="navbar__item navbar__link">${
+        arg.label
+      }</a>`,
+      position: arg.position,
+    };
+  } else {
+    return undefined;
+  }
+});
+
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
 module.exports = {
+  baseUrl,
   title: 'Utrecht Design System',
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   url: 'https://nl-design-system.github.io/',
-  baseUrl: process.env['GH_PAGES'] === 'true' ? '/utrecht/' : '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
@@ -16,9 +38,7 @@ module.exports = {
   plugins: ['docusaurus-plugin-sass'],
   customFields: {
     storybookUrl:
-      process.env['GH_PAGES'] === 'true'
-        ? 'https://nl-design-system.github.io/utrecht/storybook/'
-        : 'http://localhost:6006/',
+      process.env['NODE_ENV'] === 'development' ? 'http://localhost:6006/' : resolve(baseUrl, './storybook/'),
   },
   staticDirectories: ['static', '../../proprietary/assets'],
   presets: [
@@ -59,7 +79,7 @@ module.exports = {
       prism: {
         theme: require('prism-react-renderer/themes/github'),
       },
-      navbar: require('./navigationConfig'),
+      navbar,
       algolia: {
         // The application ID provided by Algolia
         appId: 'JTF8SIMZ2F',

@@ -32,7 +32,7 @@ jobs:
 
       - name: "Continuous Integration: build"
         env:
-          GH_PAGES: "true"
+          BASE_URL: "/utrecht/"
         run: |
           npm run build --if-present
 
