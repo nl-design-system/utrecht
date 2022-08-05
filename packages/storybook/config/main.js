@@ -21,6 +21,9 @@ module.exports = {
     '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
     '@whitespace/storybook-addon-html',
+    '@storybook/addon-links',
+    '@storybook/addon-essentials',
+    'storybook-addon-pseudo-states',
   ],
   staticDir: ['../../../proprietary/assets', 'src/script/'],
   refs: (config, { configType }) => {
