@@ -29,10 +29,12 @@
   @include utrecht-custom-radio-button--focus-visible;
 }
 
+.utrecht-custom-radio-button:disabled,
 .utrecht-custom-radio-button--disabled {
   @include utrecht-custom-radio-button--disabled;
 }
 
-.utrecht-custom-radio-button--invalid {
+.utrecht-custom-radio-button--invalid,
+.utrecht-custom-radio-button:invalid {
   @include utrecht-custom-radio-button--invalid;
 }
