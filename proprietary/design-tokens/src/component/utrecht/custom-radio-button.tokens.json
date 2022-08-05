@@ -20,19 +20,20 @@
       "focus": {
         "border-color": {},
         "border-width": { "value": "3px" },
-        "background-color": {}
+        "background-color": { "value": "{utrecht.color.blue.40}" },
+        "color": { "value": "{utrecht.color.blue.40}" }
       },
       "disabled": {
         "border-color": { "value": "{utrecht.color.grey.80}" },
         "border-width": {},
-        "background-color": { "value": "{utrecht.color.white}" },
+        "background-color": { "value": "{utrecht.color.grey.80}" },
         "color": { "value": "{utrecht.color.grey.80}" }
       },
       "checked": {
         "border-color": { "value": "{utrecht.color.blue.40}" },
         "border-width": {},
         "background-color": { "value": "{utrecht.color.blue.40}" },
-        "color": { "value": "{utrecht.color.white}" },
+        "color": { "value": "{utrecht.color.blue.40}" },
         "active": {
           "border-color": {},
           "background-color": {}
