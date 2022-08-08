@@ -29,6 +29,10 @@ module.exports = {
   refs: (config, { configType }) => {
     if (configType === 'DEVELOPMENT') {
       return {
+        angular: {
+          title: 'Angular Components',
+          url: 'http://localhost:6009',
+        },
         vue: {
           title: 'Vue.js Components',
           url: 'http://localhost:6007',
@@ -40,6 +44,10 @@ module.exports = {
       };
     }
     return {
+      angular: {
+        title: 'Angular Components',
+        url: '../storybook-angular',
+      },
       vue: {
         title: 'Vue.js Components',
         url: '../storybook-vue',
