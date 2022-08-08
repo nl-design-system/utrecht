@@ -33,12 +33,20 @@ module.exports = {
           title: 'Vue.js Components',
           url: 'http://localhost:6007',
         },
+        react: {
+          title: 'React.js Components',
+          url: 'http://localhost:6008',
+        },
       };
     }
     return {
       vue: {
         title: 'Vue.js Components',
         url: '../storybook-vue',
+      },
+      react: {
+        title: 'React.js Components',
+        url: '../storybook-react',
       },
     };
   },
