@@ -1,0 +1,44 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "Storybook React website for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/storybook-react",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "scripts": {
+    "build": "build-storybook --output-dir dist/ --config-dir config/ ",
+    "postbuild": "storybook extract dist",
+    "clean": "rimraf dist/",
+    "start": "http-server dist/",
+    "storybook": "start-storybook --config-dir config/ --port 6008"
+  },
+  "devDependencies": {
+    "@babel/core": "7.18.10",
+    "@storybook/addon-a11y": "6.5.9",
+    "@storybook/addon-actions": "6.5.9",
+    "@storybook/addon-essentials": "6.5.9",
+    "@storybook/addon-interactions": "6.5.9",
+    "@storybook/addon-links": "6.5.9",
+    "@storybook/builder-webpack5": "6.5.9",
+    "@storybook/manager-webpack5": "6.5.9",
+    "@storybook/react": "6.5.9",
+    "@storybook/testing-library": "0.0.13",
+    "@utrecht/component-library-css": "file:../component-library-css",
+    "@utrecht/component-library-react": "file:../component-library-react",
+    "@utrecht/components": "file:../../components",
+    "@utrecht/design-tokens": "file:../../proprietary/design-tokens",
+    "@utrecht/documentation": "file:../../documentation",
+    "@utrecht/storybook": "file:../storybook",
+    "babel-loader": "8.2.5",
+    "http-server": "14.1.1",
+    "storybook": "6.5.9",
+    "storybook-addon-pseudo-states": "1.15.1"
+  }
+}
