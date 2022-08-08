@@ -1,0 +1,57 @@
+{
+  "$schema": "../../node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "projects": {
+    "storybook-angular": {
+      "projectType": "application",
+      "root": "../component-library-angular/",
+      "sourceRoot": "../component-library-angular/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "../component-library-angular/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "../component-library-angular/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "../component-library-angular/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "storybook": {
+          "builder": "@storybook/angular:start-storybook",
+          "options": {
+            "browserTarget": "storybook-angular:build",
+            "compodocArgs": ["--exportFormat", "json", "--output", "tmp/"],
+            "configDir": "config/",
+            "styles": [
+              "../../node_modules/@utrecht/component-library-css/src/index.scss",
+              "../../node_modules/@utrecht/design-tokens/dist/index.css"
+            ]
+          }
+        },
+        "build-storybook": {
+          "builder": "@storybook/angular:build-storybook",
+          "options": {
+            "browserTarget": "storybook-angular:build",
+            "compodocArgs": ["--exportFormat", "json", "--output", "tmp/"],
+            "configDir": "config/",
+            "outputDir": "dist/",
+            "styles": [
+              "../../node_modules/@utrecht/component-library-css/dist/index.css",
+              "../../node_modules/@utrecht/design-tokens/dist/index.css"
+            ]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "analytics": false
+  }
+}
