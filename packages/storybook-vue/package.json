@@ -14,11 +14,11 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
-    "@storybook/addon-a11y": "6.5.9",
-    "@storybook/addon-actions": "6.5.9",
-    "@storybook/addon-essentials": "6.5.9",
-    "@storybook/addon-links": "6.5.9",
-    "@storybook/vue3": "6.5.9",
+    "@storybook/addon-a11y": "6.5.10",
+    "@storybook/addon-actions": "6.5.10",
+    "@storybook/addon-essentials": "6.5.10",
+    "@storybook/addon-links": "6.5.10",
+    "@storybook/vue3": "6.5.10",
     "@types/node": "16.11.47",
     "@utrecht/component-library-vue": "file:../component-library-vue",
     "@utrecht/components": "file:../../components",
@@ -35,7 +35,7 @@
     "vite": "2.9.14",
     "vue": "3.2.37",
     "vue-loader": "17.0.0",
-    "vue-tsc": "0.39.4"
+    "vue-tsc": "0.39.5"
   },
   "scripts": {
     "build": "build-storybook --output-dir dist/ --config-dir config/ ",
