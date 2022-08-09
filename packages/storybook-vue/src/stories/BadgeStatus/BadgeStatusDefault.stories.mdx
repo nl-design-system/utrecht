@@ -11,14 +11,14 @@ export const Template = (args) => ({
   setup() {
     return { args };
   },
-  template: `<BadgeStatus v-bind="args">${args.default}</BadgeStatus>`,
+  template: `<BadgeStatus v-bind="args">${args.textContent}</BadgeStatus>`,
 });
 
 <Canvas>
   <Story
     name="Badge Status Default"
     args={{
-      default: "Default",
+      textContent: "Default",
     }}
     parameters={{
       docs: {
@@ -32,4 +32,4 @@ export const Template = (args) => ({
   </Story>
 </Canvas>
 
-<ArgsTable of={BadgeStatus} />
+<ArgsTable story="Badge Status Default" />
