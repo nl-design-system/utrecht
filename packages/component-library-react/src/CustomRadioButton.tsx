@@ -32,4 +32,4 @@ export const CustomRadioButton = forwardRef(
   ),
 );
 
-CustomRadioButton.displayName = 'utrecht-custom-radio-button';
+CustomRadioButton.displayName = 'CustomRadioButton';

@@ -33,7 +33,7 @@ export const Select = forwardRef(
   },
 );
 
-Select.displayName = 'utrecht-radio-button';
+Select.displayName = 'Select';
 
 export interface SelectOptionProps extends OptionHTMLAttributes<HTMLOptionElement> {
   disabled?: boolean;
@@ -65,4 +65,4 @@ export const SelectOption = forwardRef(
   },
 );
 
-SelectOption.displayName = 'utrecht-select-option';
+SelectOption.displayName = 'SelectOption';

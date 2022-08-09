@@ -19,4 +19,4 @@ export const TableFooter = forwardRef(
   ),
 );
 
-TableFooter.displayName = 'utrecht-table-footer';
+TableFooter.displayName = 'TableFooter';

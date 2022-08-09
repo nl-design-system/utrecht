@@ -16,4 +16,4 @@ export const Page = forwardRef(
   ),
 );
 
-Page.displayName = 'utrecht-page';
+Page.displayName = 'Page';

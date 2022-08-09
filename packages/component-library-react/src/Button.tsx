@@ -35,22 +35,22 @@ export const Button = forwardRef(
   },
 );
 
-Button.displayName = 'utrecht-button';
+Button.displayName = 'Button';
 
 export const PrimaryActionButton = ({ ...args }) => {
   return <Button {...args} appearance="primary-action-button" />;
 };
 
-PrimaryActionButton.displayName = 'utrecht-primary-action-button';
+PrimaryActionButton.displayName = 'PrimaryActionButton';
 
 export const SecondaryActionButton = ({ ...args }) => {
   return <Button {...args} appearance="secondary-action-button" />;
 };
 
-SecondaryActionButton.displayName = 'utrecht-secondary-action-button';
+SecondaryActionButton.displayName = 'SecondaryActionButton';
 
 export const SubtleButton = ({ ...args }) => {
   return <Button {...args} appearance="subtle-button" />;
 };
 
-SubtleButton.displayName = 'utrecht-subtle-button';
+SubtleButton.displayName = 'SubtleButton';

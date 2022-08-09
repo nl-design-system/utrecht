@@ -26,4 +26,4 @@ export const Checkbox = forwardRef(
   ),
 );
 
-Checkbox.displayName = 'utrecht-checkbox';
+Checkbox.displayName = 'Checkbox';

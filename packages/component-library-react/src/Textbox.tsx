@@ -45,4 +45,4 @@ export const Textbox = forwardRef(
   ),
 );
 
-Textbox.displayName = 'utrecht-textbox';
+Textbox.displayName = 'Textbox';

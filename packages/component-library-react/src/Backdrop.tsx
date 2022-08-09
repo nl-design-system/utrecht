@@ -16,4 +16,4 @@ export const Backdrop = forwardRef(
   ),
 );
 
-Backdrop.displayName = 'utrecht-backdrop';
+Backdrop.displayName = 'Backdrop';

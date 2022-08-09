@@ -19,4 +19,4 @@ export const TableHeader = forwardRef(
   ),
 );
 
-TableHeader.displayName = 'utrecht-table-header';
+TableHeader.displayName = 'TableHeader';

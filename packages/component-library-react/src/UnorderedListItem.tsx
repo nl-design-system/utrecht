@@ -19,4 +19,4 @@ export const UnorderedListItem = forwardRef(
   ),
 );
 
-UnorderedListItem.displayName = 'utrecht-unordered-list-item';
+UnorderedListItem.displayName = 'UnorderedListItem';

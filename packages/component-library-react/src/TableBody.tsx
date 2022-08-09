@@ -19,4 +19,4 @@ export const TableBody = forwardRef(
   ),
 );
 
-TableBody.displayName = 'utrecht-table-body';
+TableBody.displayName = 'TableBody';

@@ -28,4 +28,4 @@ export const FormFieldDescription = forwardRef(
   ),
 );
 
-FormFieldDescription.displayName = 'utrecht-form-field-description';
+FormFieldDescription.displayName = 'FormFieldDescription';

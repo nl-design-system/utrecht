@@ -16,4 +16,4 @@ export const Surface = forwardRef(
   ),
 );
 
-Surface.displayName = 'utrecht-surface';
+Surface.displayName = 'Surface';

@@ -16,4 +16,4 @@ export const TableRow = forwardRef(
   ),
 );
 
-TableRow.displayName = 'utrecht-table-row';
+TableRow.displayName = 'TableRow';

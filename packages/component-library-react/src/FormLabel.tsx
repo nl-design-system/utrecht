@@ -29,4 +29,4 @@ export const FormLabel = forwardRef(
   ),
 );
 
-FormLabel.displayName = 'utrecht-form-label';
+FormLabel.displayName = 'FormLabel';

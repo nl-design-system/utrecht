@@ -57,4 +57,4 @@ export const Link = forwardRef(
   ),
 );
 
-Link.displayName = 'utrecht-link';
+Link.displayName = 'Link';
