@@ -25,7 +25,7 @@ module.exports = {
     '@storybook/addon-essentials',
     'storybook-addon-pseudo-states',
   ],
-  staticDir: ['../../../proprietary/assets', 'src/script/'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (config, { configType }) => {
     if (configType === 'DEVELOPMENT') {
       return {
