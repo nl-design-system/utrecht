@@ -217,36 +217,4 @@ describe('Link that looks like a button', () => {
       expect(link?.getAttribute('rel')).toContain('external');
     });
   });
-
-  describe('with simulated state', () => {
-    describe('focus variant', () => {
-      it('renders a design system BEM class name', () => {
-        const { container } = render(<ButtonLink focusStyle />);
-
-        const link = container.querySelector(':only-child');
-
-        expect(link).toHaveClass('utrecht-button-link--focus');
-      });
-    });
-
-    describe('focus-visible variant', () => {
-      it('renders a design system BEM class name', () => {
-        const { container } = render(<ButtonLink focusVisibleStyle />);
-
-        const link = container.querySelector(':only-child');
-
-        expect(link).toHaveClass('utrecht-button-link--focus-visible');
-      });
-    });
-
-    describe('hover variant', () => {
-      it('renders a design system BEM class name', () => {
-        const { container } = render(<ButtonLink hoverStyle />);
-
-        const link = container.querySelector(':only-child');
-
-        expect(link).toHaveClass('utrecht-button-link--hover');
-      });
-    });
-  });
 });
