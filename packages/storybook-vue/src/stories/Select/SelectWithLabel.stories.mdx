@@ -1,5 +1,5 @@
 import { action } from "@storybook/addon-actions";
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Select } from "@utrecht/component-library-vue";
 import { argTypes, options } from "./argTypes.ts";
 
@@ -43,5 +43,3 @@ export const Template = (args) => ({
     {Template.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable of={Select} />
