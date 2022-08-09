@@ -9,11 +9,8 @@ import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWit
 
 interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   external?: boolean;
-  focusStyle?: boolean;
-  focusVisibleStyle?: boolean;
-  hoverStyle?: boolean;
-  visitedStyle?: boolean;
 }
+
 const onKeyDown = (evt: KeyboardEvent<HTMLAnchorElement>) => {
   if (evt.key === ' ' && typeof (evt.target as HTMLElement)?.click === 'function') {
     // Prevent other side-effects, such as scrolling
@@ -26,16 +23,7 @@ const onKeyDown = (evt: KeyboardEvent<HTMLAnchorElement>) => {
 
 export const ButtonLink = forwardRef(
   (
-    {
-      children,
-      className,
-      external,
-      focusStyle,
-      focusVisibleStyle,
-      hoverStyle,
-      role,
-      ...restProps
-    }: PropsWithChildren<ButtonLinkProps>,
+    { children, className, external, role, ...restProps }: PropsWithChildren<ButtonLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     let props = restProps;
@@ -58,12 +46,8 @@ export const ButtonLink = forwardRef(
         role={role}
         className={clsx(
           'utrecht-button-link',
-          {
-            'utrecht-button-link--external': external,
-            'utrecht-button-link--focus': focusStyle,
-            'utrecht-button-link--focus-visible': focusVisibleStyle,
-            'utrecht-button-link--hover': hoverStyle,
-          },
+          'utrecht-button-link--html-button',
+          { 'utrecht-button-link--external': external },
           className,
         )}
         rel={external ? 'external noopener noreferrer' : undefined}
