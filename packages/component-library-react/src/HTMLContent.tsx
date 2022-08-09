@@ -16,4 +16,4 @@ export const HTMLContent = forwardRef(
   ),
 );
 
-HTMLContent.displayName = 'utrecht-html';
+HTMLContent.displayName = 'HTMLContent';

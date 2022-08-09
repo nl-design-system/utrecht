@@ -16,4 +16,4 @@ export const Document = forwardRef(
   ),
 );
 
-Document.displayName = 'utrecht-document';
+Document.displayName = 'Document';

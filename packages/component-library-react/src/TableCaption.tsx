@@ -19,4 +19,4 @@ export const TableCaption = forwardRef(
   ),
 );
 
-TableCaption.displayName = 'utrecht-table-caption';
+TableCaption.displayName = 'TableCaption';

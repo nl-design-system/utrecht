@@ -19,4 +19,4 @@ export const TableHeaderCell = forwardRef(
   ),
 );
 
-TableHeaderCell.displayName = 'utrecht-table-header-cell';
+TableHeaderCell.displayName = 'TableHeaderCell';

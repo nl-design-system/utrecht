@@ -15,4 +15,4 @@ export const Fieldset = forwardRef(
   ),
 );
 
-Fieldset.displayName = 'utrecht-form-fieldset';
+Fieldset.displayName = 'Fieldset';

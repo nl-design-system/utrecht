@@ -74,4 +74,4 @@ export const ButtonLink = forwardRef(
   },
 );
 
-ButtonLink.displayName = 'utrecht-button-link';
+ButtonLink.displayName = 'ButtonLink';

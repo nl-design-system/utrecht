@@ -15,4 +15,4 @@ export const Separator = forwardRef(
   ),
 );
 
-Separator.displayName = 'utrecht-separator';
+Separator.displayName = 'Separator';

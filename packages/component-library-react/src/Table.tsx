@@ -16,4 +16,4 @@ export const Table = forwardRef(
   ),
 );
 
-Table.displayName = 'utrecht-table';
+Table.displayName = 'Table';

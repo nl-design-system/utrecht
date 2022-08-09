@@ -21,4 +21,4 @@ export const Paragraph = forwardRef(
   ),
 );
 
-Paragraph.displayName = 'utrecht-paragraph';
+Paragraph.displayName = 'Paragraph';

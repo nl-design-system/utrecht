@@ -16,4 +16,4 @@ export const Heading3 = forwardRef(
   ),
 );
 
-Heading3.displayName = 'utrecht-heading-3';
+Heading3.displayName = 'Heading3';

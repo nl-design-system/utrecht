@@ -30,4 +30,4 @@ export const Textarea = forwardRef(
   ),
 );
 
-Textarea.displayName = 'utrecht-textarea';
+Textarea.displayName = 'Textarea';

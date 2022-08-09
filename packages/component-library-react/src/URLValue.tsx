@@ -16,4 +16,4 @@ export const URLValue = forwardRef(
   ),
 );
 
-URLValue.displayName = 'utrecht-url';
+URLValue.displayName = 'URLValue';

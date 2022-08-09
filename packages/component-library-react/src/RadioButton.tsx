@@ -29,4 +29,4 @@ export const RadioButton = forwardRef(
   ),
 );
 
-RadioButton.displayName = 'utrecht-radio-button';
+RadioButton.displayName = 'RadioButton';
