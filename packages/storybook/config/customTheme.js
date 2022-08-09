@@ -24,6 +24,5 @@ export default create({
 
   brandTitle: 'Gemeente Utrecht',
   brandUrl: 'https://www.utrecht.nl',
-  brandImage:
-    'https://www.utrecht.nl/typo3conf/ext/alternet_sitepackage/Resources/Public/Images/svg/wapen-utrecht-rood.svg',
+  brandImage: 'logo.svg',
 });
