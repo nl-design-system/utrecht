@@ -22,3 +22,7 @@
 .utrecht-button-link--focus-visible {
   @include utrecht-button-link--focus-visible;
 }
+
+.utrecht-button-link--html-button {
+  @include utrecht-button-link--html-button;
+}
