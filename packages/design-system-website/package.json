@@ -18,11 +18,12 @@
   "devDependencies": {
     "@utrecht/docusaurus": "file:../docusaurus",
     "@utrecht/storybook": "file:../storybook",
+    "@utrecht/storybook-react": "file:../storybook-react",
     "@utrecht/storybook-vue": "file:../storybook-vue",
     "rimraf": "3.0.2"
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "rimraf dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/"
+    "build": "rimraf dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/ && cp -R ../storybook-react/dist/ dist/storybook-react/"
   }
 }
