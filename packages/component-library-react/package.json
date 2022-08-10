@@ -26,6 +26,9 @@
   "main": "./dist/cjs/index.js",
   "types": "./dist/cjs/index.d.ts",
   "exports": {
+    "./README.md": {
+      "default": "./README.md"
+    },
     ".": {
       "types": "./dist/cjs/index.d.ts",
       "default": "./dist/cjs/index.js"

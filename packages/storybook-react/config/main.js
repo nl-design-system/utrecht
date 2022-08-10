@@ -1,5 +1,8 @@
 /* eslint-env node */
 module.exports = {
+  core: {
+    builder: 'webpack5',
+  },
   stories: ['../src/stories/**/*.stories.mdx', '../src/stories/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
@@ -8,5 +11,8 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-pseudo-states',
   ],
+  features: {
+    postcss: false,
+  },
   framework: '@storybook/react',
 };
