@@ -13,11 +13,10 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "scripts": {
-    "build": "build-storybook --output-dir dist/ --config-dir config/ ",
-    "postbuild": "storybook extract dist",
+    "build": "../../node_modules/@storybook/react/bin/build.js --output-dir dist/ --config-dir config/ ",
     "clean": "rimraf dist/",
     "start": "http-server dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6008"
+    "storybook": "../../node_modules/@storybook/react/bin/index.js --config-dir config/ --port 6008"
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
