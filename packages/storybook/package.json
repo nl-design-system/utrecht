@@ -48,10 +48,9 @@
     "webpack": "4.46.0"
   },
   "scripts": {
-    "build": "build-storybook --output-dir dist/ --config-dir config/",
-    "postbuild": "npx storybook extract dist",
+    "build": "../../node_modules/@storybook/html/bin/build.js --output-dir dist/ --config-dir config/",
     "clean": "rimraf dist/",
     "start": "npx http-server dist/",
-    "storybook": "start-storybook --config-dir config/ --port 6006"
+    "storybook": "../../node_modules/@storybook/html/bin/index.js --config-dir config/ --port 6006"
   }
 }
