@@ -14,6 +14,9 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
   ],
+  features: {
+    buildStoriesJson: true,
+  },
   framework: '@storybook/angular',
   core: {
     builder: '@storybook/builder-webpack5',
