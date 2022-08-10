@@ -62,4 +62,11 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  docs: {
+    // Show code by default.
+    // Stories without concise code snippets can hide the code at Story level.
+    source: {
+      state: 'open',
+    },
+  },
 };
