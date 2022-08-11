@@ -8,27 +8,12 @@ import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  activeStyle?: boolean;
   external?: boolean;
-  focusStyle?: boolean;
-  focusVisibleStyle?: boolean;
-  hoverStyle?: boolean;
-  visitedStyle?: boolean;
 }
 
 export const Link = forwardRef(
   (
-    {
-      children,
-      className,
-      activeStyle,
-      external,
-      focusStyle,
-      focusVisibleStyle,
-      hoverStyle,
-      visitedStyle,
-      ...restProps
-    }: PropsWithChildren<LinkProps>,
+    { children, className, external, ...restProps }: PropsWithChildren<LinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => (
     // "utrecht-link--telephone" does not have a corresponding API,
@@ -38,18 +23,7 @@ export const Link = forwardRef(
     <a
       {...restProps}
       ref={ref}
-      className={clsx(
-        'utrecht-link',
-        {
-          'utrecht-link--active': activeStyle,
-          'utrecht-link--external': external,
-          'utrecht-link--focus': focusStyle,
-          'utrecht-link--focus-visible': focusVisibleStyle,
-          'utrecht-link--hover': hoverStyle,
-          'utrecht-link--visited': visitedStyle,
-        },
-        className,
-      )}
+      className={clsx('utrecht-link', { 'utrecht-link--external': external }, className)}
       rel={external ? 'external noopener noreferrer' : undefined}
     >
       {children}
