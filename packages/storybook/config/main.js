@@ -12,6 +12,7 @@ module.exports = {
     postcss: false,
     buildStoriesJson: true,
   },
+  framework: '@storybook/html',
   addons: [
     {
       name: '@storybook/addon-docs',
