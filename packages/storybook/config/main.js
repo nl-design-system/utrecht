@@ -12,22 +12,19 @@ module.exports = {
     postcss: false,
     buildStoriesJson: true,
   },
-  framework: '@storybook/html',
+  framework: '@storybook/react',
   addons: [
-    {
-      name: '@storybook/addon-docs',
-    },
+    '@storybook/addon-docs',
     '@storybook/addon-a11y',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
-    '@whitespace/storybook-addon-html',
+    '@whitespace/storybook-addon-html/register',
     '@storybook/addon-links',
-    '@storybook/addon-essentials',
     'storybook-addon-pseudo-states',
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
-  refs: (config, { configType }) => {
+  refs: (_, { configType }) => {
     if (configType === 'DEVELOPMENT') {
       return {
         angular: {
