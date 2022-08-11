@@ -2,6 +2,7 @@
 const lodash = require('lodash');
 const { camelCase, kebabCase, upperFirst } = lodash;
 
+/* eslint-disable-next-line no-unused-vars */
 exports.component = (name, children, container) => {
   const ComponentName = upperFirst(camelCase(name));
   const webComponentName = kebabCase(name);
@@ -10,14 +11,13 @@ exports.component = (name, children, container) => {
 
 @Component({
   tag: '${webComponentName}',
+  styleUrl: "../../../web-component/index.scss",
   shadow: true,
 })
 export class ${ComponentName} {
   render() {
     return (
-      <${container}>
-        ${children}
-      </${container}>
+      ${children}
     );
   }
 }
