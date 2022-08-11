@@ -24,21 +24,25 @@ export const defaultArgs = {
   ],
 };
 
-export const AlternateLangNav = ({ languages = [] }) => (
-  <div class="utrecht-alternate-lang-nav">
-    {languages.map((lang, index) => {
-      if (index < languages.length - 1 && languages.length > 1) {
-        return (
-          <>
-            <Link {...lang} />
-            <span aria-hidden="true"> | </span>
-          </>
-        );
-      } else {
-        return <Link {...lang} />;
-      }
-    })}
-  </div>
-);
+export const AlternateLangNav = ({ languages = [] }) => {
+  // FIXME: Ensure clean code sample, might be unnescessary when all code samples show html code
+  const SEPARATOR = '|';
+  const navItems =
+    languages.length > 1
+      ? languages.reduce((acc, lang, index, all) => {
+          acc.push(lang);
+          if (index < all.length - 1) acc.push(SEPARATOR);
+          return acc;
+        }, [])
+      : languages;
+
+  return (
+    <div className="utrecht-alternate-lang-nav">
+      {navItems.map((item) => {
+        return item === SEPARATOR ? <span ariaHidden="true"> | </span> : <Link {...item} />;
+      })}
+    </div>
+  );
+};
 
 export default AlternateLangNav;

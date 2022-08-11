@@ -1,22 +1,24 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { AlternateLangLink } from "../template";
+import { AlternateLangLink, decorators } from "../story-template";
 
 <Meta
   id="html-link"
-  title="HTML Component/Link"
+  title="HTML Component/Link/Language"
+  decorators={decorators}
   parameters={{
     status: "WORK IN PROGRESS",
   }}
 />
 
-# Alternate Language Link
+# Current language
 
 <Canvas>
   <Story
-    name="--alternate-lang"
+    name="Current"
     args={{
+      current: true,
       hreflang: "en",
       lang: "en",
       textContent: "EN",

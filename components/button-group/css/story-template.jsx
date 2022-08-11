@@ -21,7 +21,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
-  innerHTML: `<button class={clsx('utrecht-button', 'utrecht-button--primary-action')}>Save and continue</button><button class={clsx('utrecht-button', 'utrecht-button--secondary-action')}>Back</button>`,
+  innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
 };
 
 export const ButtonGroup = ({ innerHTML = defaultArgs.innerHTML, direction }) => (

@@ -30,7 +30,7 @@ export const argTypes = {
   },
 };
 
-export const decorators = [(story) => <div class="utrecht-html">${story()}</div>];
+export const decorators = [(story) => <div class="utrecht-html">{story()}</div>];
 
 export const defaultArgs = {
   busy: false,

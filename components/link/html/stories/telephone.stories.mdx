@@ -1,17 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Link } from "../template";
+import { decorators, Link } from "../story-template";
 
 <Meta
   id="html-link"
-  title="HTML Component/Link"
-  argTypes={{
-    textContent: {
-      description: "Content of the link",
-      control: "text",
-    },
-  }}
+  title="HTML Component/Link/Telephone"
+  decorators={decorators}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -25,7 +20,7 @@ Styling via the `<a>` element when href includes tel:
 
 <Canvas>
   <Story
-    name="--telephone"
+    name="Telephone"
     args={{
       href: "tel:+31555385385",
       textContent: "+31 555 385 385",
