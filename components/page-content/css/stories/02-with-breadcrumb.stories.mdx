@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Breadcrumb, exampleItems } from "../../../breadcrumb/css/template";
+import { Breadcrumb, defaultArgs } from "../../../breadcrumb/css/story-template";
 import { PageContent } from "../template";
 import "../index.scss";
 
@@ -20,7 +20,7 @@ import "../index.scss";
     name="with breadcrumb"
     args={{
       innerHTML: `<h1>The Quick Brown Fox Jumps Over The Lazy Dog</h1>`,
-      navHTML: Breadcrumb({ items: exampleItems, microdata: true, variant: "arrows" }),
+      navHTML: Breadcrumb({ ...defaultArgs, microdata: true, variant: "arrows" }),
     }}
   >
     {PageContent.bind({})}

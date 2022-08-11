@@ -1,29 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { BadgeCounter } from "../template";
+import { argTypes, BadgeCounter, defaultArgs } from "../story-template";
 
 <Meta
   id="web-component-counter-badge"
   title="Web Component/Badge/Counter Badge"
-  argTypes={{
-    textContent: {
-      description: "Text content",
-      control: "text",
-    },
-    value: {
-      description: "Value",
-      control: "number",
-    },
-    max: {
-      description: "Maximum",
-      control: "number",
-    },
-    locale: {
-      description: "Locale",
-      control: "text",
-    },
-  }}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -34,16 +17,16 @@ import { BadgeCounter } from "../template";
 # Counter badge
 
 <Canvas>
-  <Story name="Default" args={{ textContent: "7" }}>
+  <Story name="Default" args={defaultArgs}>
     {BadgeCounter.bind({})}
   </Story>
-  <Story name="Double Digit" args={{ textContent: "42" }}>
+  <Story name="Double Digit" args={{ value: 42, textContent: "42" }}>
     {BadgeCounter.bind({})}
   </Story>
-  <Story name="Triple Digit" args={{ textContent: "316" }}>
+  <Story name="Triple Digit" args={{ value: 316, textContent: "316" }}>
     {BadgeCounter.bind({})}
   </Story>
-  <Story name="Quadruple Digit" args={{ textContent: "2148" }}>
+  <Story name="Quadruple Digit" args={{ value: 2148, textContent: "2148" }}>
     {BadgeCounter.bind({})}
   </Story>
 </Canvas>

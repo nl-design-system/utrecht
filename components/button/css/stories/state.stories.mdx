@@ -1,13 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button, defaultArgs } from "../template";
+import { Button, defaultArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-button--state"
   title="CSS Component/Button/States"
-  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -25,7 +24,7 @@ Styling via the `.utrecht-button--active` class name:
 
 <Canvas>
   <Story
-    name="Button active"
+    name="active"
     args={{
       ...defaultArgs,
       active: true,
@@ -42,7 +41,7 @@ Styling via the `.utrecht-button--hover` class name:
 
 <Canvas>
   <Story
-    name="Button hover"
+    name="hover"
     args={{
       ...defaultArgs,
       textContent: "Read more...",
@@ -59,7 +58,7 @@ Styling via the `.utrecht-button--focus` class name:
 
 <Canvas>
   <Story
-    name="Button focus"
+    name="focus"
     args={{
       ...defaultArgs,
       textContent: "Read more...",
@@ -76,7 +75,7 @@ Styling via the `.utrecht-button--focus-visible` class name:
 
 <Canvas>
   <Story
-    name="Button focus visible"
+    name="focus visible"
     args={{
       ...defaultArgs,
       textContent: "Read more...",
@@ -94,7 +93,7 @@ Styling via the `.utrecht-button--disabled` class name:
 
 <Canvas>
   <Story
-    name="Button disabled"
+    name="disabled"
     args={{
       ...defaultArgs,
       textContent: "Read more...",
@@ -111,7 +110,7 @@ Styling via the `.utrecht-button--busy` class name:
 
 <Canvas>
   <Story
-    name="Button busy"
+    name="busy"
     args={{
       ...defaultArgs,
       busy: true,

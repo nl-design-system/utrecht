@@ -1,18 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Backdrop, checkerboard } from "../template";
+import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
 
 <Meta
   id="web-component-backdrop"
   title="Web Component/Backdrop"
-  argTypes={{
-    viewport: {
-      name: "Cover viewport",
-      type: "boolean",
-    },
-  }}
-  decorators={[checkerboard]}
+  argTypes={argTypes}
+  decorators={decorators}
   parameters={{
     layout: "fullscreen",
     type: "WORK IN PROGRESS",
@@ -22,7 +17,9 @@ import { Backdrop, checkerboard } from "../template";
 # Backdrop
 
 <Canvas>
-  <Story name="Backdrop">{Backdrop.bind({})}</Story>
+  <Story args={defaultArgs} name="Default">
+    {Backdrop.bind({})}
+  </Story>
 </Canvas>
 
-<ArgsTable story="Backdrop" />
+<ArgsTable story="Default" />

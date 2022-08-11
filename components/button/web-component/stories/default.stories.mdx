@@ -1,0 +1,25 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Button, defaultArgs } from "../story-template";
+
+<Meta
+  id="web-component-button"
+  title="Web Component/Button"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+<Canvas>
+  <Story name="Default" args={defaultArgs}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

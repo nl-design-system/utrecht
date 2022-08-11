@@ -1,3 +1,5 @@
+<!-- @license CC0-1.0 -->
+
 # Backdrop
 
 The backdrop component can be used as background to obscure the content behind modal user interface elements, such as a modal dialog.

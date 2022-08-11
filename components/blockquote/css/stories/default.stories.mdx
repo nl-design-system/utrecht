@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Blockquote, defaultArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-blockquote"
+  title="CSS Component/Blockquote"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Blockquote
+
+Styling via the `.utrecht-blockquote` and `.utrecht-blockquote__content` class names:
+
+<Canvas>
+  <Story name="Default" args={defaultArgs}>
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

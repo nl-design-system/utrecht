@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Blockquote } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-blockquote"
+  title="CSS Component/Blockquote/attribution"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Blockquote with attribution
+
+Styling via the `.utrecht-blockquote`, `.utrecht-blockquote__content` and `.utrecht-blockquote__attribution` class names:
+
+<Canvas>
+  <Story
+    name="attribution"
+    args={{
+      attribution: "L. Ipsum",
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>

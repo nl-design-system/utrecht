@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Button, decorators, defaultArgs } from "../story-template";
+
+<Meta
+  id="html-button"
+  title="HTML Component/Button"
+  argTypes={argTypes}
+  decorators={decorators}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `<button>` element:
+
+<Canvas>
+  <Story name="Default" args={defaultArgs}>
+    {Button.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
