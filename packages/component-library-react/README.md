@@ -48,7 +48,7 @@ import { Heading1 } from "@utrecht/component-library-react/Heading1";
 import "@utrecht/component-library-css";
 
 // Package with Utrecht design tokens for the white-label components
-// Substitute with your another theme for other organisations.
+// Substitute with your another theme for other organizations.
 import "@utrecht/design-tokens/dist/index.css";
 
 export const MyPage = () => (
@@ -56,6 +56,30 @@ export const MyPage = () => (
   <Document className="utrecht-theme">
     <Heading1>Page styled with NL Design System</Heading1>
   </Document>
+);
+```
+
+Only when you use the `<HTMLContent/>` component, you should import the `html.css` from the `component-library-css`
+
+```jsx
+import { HTMLContent } from "@utrecht/component-library-react";
+
+import "@utrecht/component-library-css/dist/html.css";
+import "@utrecht/design-tokens/dist/index.css";
+
+export const MyPage = () => (
+  // Class name to apply the design tokens from the theme
+  <HTMLContent
+    className="utrecht-theme"
+    dangerouslySetInnerHTML={{
+      _html: `<h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    <h4>Heading 4</h4>
+    <h5>Heading 5</h5>
+    <h6>Heading 6</h6>`,
+    }}
+  />
 );
 ```
 
