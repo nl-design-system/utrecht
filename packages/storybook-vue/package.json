@@ -14,11 +14,11 @@
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
-    "@storybook/addon-a11y": "6.5.9",
-    "@storybook/addon-actions": "6.5.9",
-    "@storybook/addon-essentials": "6.5.9",
-    "@storybook/addon-links": "6.5.9",
-    "@storybook/vue3": "6.5.9",
+    "@storybook/addon-a11y": "6.5.10",
+    "@storybook/addon-actions": "6.5.10",
+    "@storybook/addon-essentials": "6.5.10",
+    "@storybook/addon-links": "6.5.10",
+    "@storybook/vue3": "6.5.10",
     "@types/node": "16.11.47",
     "@utrecht/component-library-vue": "file:../component-library-vue",
     "@utrecht/components": "file:../../components",
@@ -38,9 +38,9 @@
     "vue-tsc": "0.39.4"
   },
   "scripts": {
-    "build": "node_modules/@storybook/vue3/bin/build.js --output-dir dist/ --config-dir config/ ",
+    "build": "../../node_modules/@storybook/vue3/bin/build.js --output-dir dist/ --config-dir config/ ",
     "clean": "rimraf dist/",
     "start": "npx http-server dist/",
-    "storybook": "node_modules/@storybook/vue3/bin/index.js --config-dir config/ --port 6007"
+    "storybook": "../../node_modules/@storybook/vue3/bin/index.js --config-dir config/ --port 6007"
   }
 }
