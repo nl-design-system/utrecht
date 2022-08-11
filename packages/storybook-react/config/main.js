@@ -16,4 +16,5 @@ module.exports = {
     buildStoriesJson: true,
   },
   framework: '@storybook/react',
+  staticDirs: ['../../../proprietary/assets'],
 };
