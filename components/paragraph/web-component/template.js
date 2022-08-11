@@ -8,5 +8,5 @@ export const Paragraph = ({ lead = false, textContent = '' }) =>
 
 export const Paragraphs = ({ textContent = '' }) =>
   `<utrecht-paragraph lead="true">${textContent}</utrecht-paragraph>
-<utrecht-paragraph">${textContent}</utrecht-paragraph>
-<utrecht-paragraph">${textContent}</utrecht-paragraph>`;
+<utrecht-paragraph>${textContent}</utrecht-paragraph>
+<utrecht-paragraph>${textContent}</utrecht-paragraph>`;
