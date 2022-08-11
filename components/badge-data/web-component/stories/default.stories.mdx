@@ -1,18 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { BadgeData } from "../template.js";
+import { argTypes, BadgeData, defaultArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="web-component-data-badge"
   title="Web Component/Badge/Data Badge"
-  argTypes={{
-    textContent: {
-      description: "Text content",
-      control: "text",
-    },
-  }}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -23,12 +18,7 @@ import "../index.scss";
 # Data badge
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      textContent: "Festivals",
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {BadgeData.bind({})}
   </Story>
 </Canvas>

@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import "../index.scss";
+import { BadgeStatus } from "../story-template";
+
+<Meta
+  id="web-component-status-badge"
+  title="Web Component/Badge/Status Badge/status"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+## Neutral badge
+
+<Canvas>
+  <Story
+    name="neutral"
+    args={{
+      status: "neutral",
+      textContent: "neutral",
+    }}
+  >
+    {BadgeStatus.bind({})}
+  </Story>
+</Canvas>

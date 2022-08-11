@@ -1,0 +1,33 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button } from "../story-template";
+
+<Meta
+  id="web-component-button--state"
+  title="Web Component/Button/State"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+## State
+
+### Busy
+
+<Canvas>
+  <Story
+    name="busy"
+    args={{
+      busy: true,
+      textContent: "Send",
+      type: "submit",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

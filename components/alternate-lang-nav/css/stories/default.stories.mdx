@@ -1,21 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { AlternateLangNav } from "../template";
+import { AlternateLangNav, argTypes, defaultArgs } from "../story-template";
 import "../../../link/css/index.scss";
 
 <Meta
   id="css-alternate-lang-nav"
   title="CSS Component/Alternate Language Navigation"
-  argTypes={{
-    languages: {
-      description: "Languages",
-      type: {
-        name: "array",
-        required: true,
-      },
-    },
-  }}
+  argTypes={argTypes}
   parameters={{
     status: "WORK IN PROGRESS",
   }}
@@ -24,17 +16,9 @@ import "../../../link/css/index.scss";
 # Alternative Languages Navigation
 
 <Canvas>
-  <Story
-    name="Alternative Languages Navigation"
-    args={{
-      languages: [
-        { textContent: "EN", title: "This page in English", lang: "en", current: true, hreflang: "en" },
-        { textContent: "NL", title: "Deze pagina in Nederlands", lang: "nl", current: false, hreflang: "nl" },
-      ],
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {AlternateLangNav.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Alternative Languages Navigation" />
+<ArgsTable story="Default" />

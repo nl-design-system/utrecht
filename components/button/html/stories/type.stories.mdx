@@ -1,0 +1,35 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Button, decorators } from "../story-template";
+
+<Meta
+  id="html-button--type"
+  title="HTML Component/Button/Type"
+  decorators={decorators}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+## Types
+
+### Submit
+
+Button with `submit` type:
+
+<Canvas>
+  <Story
+    name="submit"
+    args={{
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+      type: "submit",
+    }}
+  >
+    {Button.bind({})}
+  </Story>
+</Canvas>

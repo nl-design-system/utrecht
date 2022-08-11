@@ -1,0 +1,55 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Meta, Story } from "@storybook/addon-docs";
+import { ButtonTable } from "../story-template";
+
+<Meta
+  id="css-button"
+  title="CSS Component/Button/appearance"
+  argTypes={{
+    textContent: {
+      description: "Button text",
+      control: "text",
+    },
+    defaultButton: {
+      description: "Default button",
+      control: "boolean",
+    },
+    primaryActionButton: {
+      description: "Primary action button",
+      control: "boolean",
+    },
+    secondaryActionButton: {
+      description: "Secondary action button",
+      control: "boolean",
+    },
+    subtleButton: {
+      description: "Subtle button",
+      control: "boolean",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+## Grid of button appearances
+
+<Story
+  name="Appearance grid"
+  args={{
+    defaultButton: true,
+    primaryActionButton: true,
+    secondaryActionButton: true,
+    subtleButton: false,
+    textContent: "Label",
+  }}
+>
+  {ButtonTable.bind({})}
+</Story>
+
+<ArgsTable story="Appearance grid" />

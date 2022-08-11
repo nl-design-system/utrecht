@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ButtonGroup } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-button-group"
+  title="CSS Component/Button group/Direction"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Vertical button group
+
+Styling via the `.utrecht-button-group` and `.utrecht-button-group--vertical` modifier class names:
+
+<Canvas>
+  <Story
+    name="Vertical"
+    args={{
+      direction: "vertical",
+    }}
+  >
+    {ButtonGroup.bind({})}
+  </Story>
+</Canvas>

@@ -1,19 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Backdrop, checkerboard, defaultArgs } from "../template";
+import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-backdrop"
   title="CSS Component/Backdrop"
-  argTypes={{
-    viewport: {
-      name: "Cover viewport",
-      type: "boolean",
-    },
-  }}
-  decorators={[checkerboard]}
+  argTypes={argTypes}
+  decorators={decorators}
   parameters={{
     layout: "fullscreen",
     status: {
@@ -27,9 +22,9 @@ import "../index.scss";
 Styling via the `.utrecht-backdrop` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.
 
 <Canvas>
-  <Story name="Backdrop" args={{ ...defaultArgs }}>
+  <Story name="Default" args={defaultArgs}>
     {Backdrop.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Backdrop" />
+<ArgsTable story="Default" />

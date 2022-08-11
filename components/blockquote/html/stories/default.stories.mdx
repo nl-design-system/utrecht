@@ -1,17 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Blockquote } from "../template";
+import { argTypes, Blockquote, defaultArgs } from "../story-template";
 
 <Meta
   id="html-blockquote"
   title="HTML Component/Blockquote"
-  argTypes={{
-    textContent: {
-      description: "Content of the quote",
-      control: "text",
-    },
-  }}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -24,12 +19,7 @@ import { Blockquote } from "../template";
 Styling via the `<blockquote>` element:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {Blockquote.bind({})}
   </Story>
 </Canvas>
