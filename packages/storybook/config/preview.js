@@ -1,24 +1,30 @@
-import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
-import defaultsDeep from 'lodash.defaultsdeep';
+import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader'
+import parser from 'html-react-parser'
+import defaultsDeep from 'lodash.defaultsdeep'
 
-import '@utrecht/components/document/css/index.scss';
-import '@utrecht/components/html-content/css/index.scss';
-import '@utrecht/design-tokens/dist/index.css';
-import '@utrecht/design-tokens/dist/property.css';
-import '@utrecht/design-tokens/src/custom.scss';
+import '@utrecht/components/document/css/index.scss'
+import '@utrecht/components/html-content/css/index.scss'
+import '@utrecht/design-tokens/dist/index.css'
+import '@utrecht/design-tokens/dist/property.css'
+import '@utrecht/design-tokens/src/custom.scss'
 
-defineCustomElements();
+defineCustomElements()
 
 export const decorators = [
   // Enable `utrecht-document` component as backdrop
   // Enable `utrecht-theme` to configure the design tokens
-  (story) => `<div class="utrecht-document utrecht-document--surface utrecht-theme">${story()}</div>`,
-];
+  // Ensure old html templates will be rendered as react component
+  story => (
+    <div class='utrecht-document utrecht-document--surface utrecht-theme'>
+      {typeof story() === 'string' ? parser(story()) : story()}
+    </div>
+  ),
+]
 
 const defaultTab = {
   // Make the "Docs" tab the default, instead of the "Canvas" tab
   viewMode: 'docs',
-};
+}
 
 const tabOrder = {
   previewTabs: {
@@ -26,7 +32,7 @@ const tabOrder = {
     'storybook/docs/panel': { index: -1, title: 'Documentation' },
     canvas: { title: 'Demo' },
   },
-};
+}
 
 const sidebarOrder = {
   options: {
@@ -64,7 +70,7 @@ const sidebarOrder = {
       ],
     },
   },
-};
+}
 
 // Configure @storybook/addon-docs
 const addonDocs = {
@@ -75,7 +81,7 @@ const addonDocs = {
       state: 'open',
     },
   },
-};
+}
 
 // Configure @etchteam/storybook-addon-status
 const addonStatus = {
@@ -107,7 +113,7 @@ const addonStatus = {
       },
     },
   },
-};
+}
 
 // Configure storybook-addon-themes
 const addonThemes = {
@@ -115,7 +121,7 @@ const addonThemes = {
     default: 'Gemeente Utrecht',
     list: [{ name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' }],
   },
-};
+}
 
 export const parameters = defaultsDeep(
   {},
@@ -126,4 +132,4 @@ export const parameters = defaultsDeep(
   defaultTab,
   sidebarOrder,
   tabOrder,
-);
+)
