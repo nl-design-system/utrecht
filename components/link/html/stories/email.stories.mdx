@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Link } from "../template";
+import { decorators, Link } from "../story-template";
 
 <Meta
   id="html-link"
-  title="HTML Component/Link"
+  title="HTML Component/Link/Email"
+  decorators={decorators}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,7 +20,7 @@ Styling via the `<a>` element when href includes mailto:
 
 <Canvas>
   <Story
-    name="--email"
+    name="Email"
     args={{
       href: "mailto:info@example.com",
       textContent: "info@example.com",

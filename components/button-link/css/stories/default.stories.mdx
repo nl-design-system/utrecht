@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, ButtonLink, defaultArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-button-link"
+  title="CSS Component/Link that looks like a button"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button link: link die er uit ziet als button
+
+Styling met de `.utrecht-button-link` class naam:
+
+<Canvas>
+  <Story name="Default" args={defaultArgs}>
+    {ButtonLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

@@ -1,0 +1,22 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, Paragraphs } from "../story-template";
+
+<Meta
+  id="web-component-paragraph"
+  title="Web Component/Paragraph/Multiple"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Paragraph
+
+<Canvas>
+  <Story name="Multiple" args={defaultArgs}>
+    {Paragraphs.bind({})}
+  </Story>
+</Canvas>

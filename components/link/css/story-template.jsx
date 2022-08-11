@@ -1,7 +1,7 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Gemeente Utrecht
- * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2022 Gemeente Utrecht
+ * Copyright (c) 2022 Frameless B.V.
  */
 import clsx from 'clsx';
 import React from 'react';
