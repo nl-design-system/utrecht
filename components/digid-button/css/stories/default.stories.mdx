@@ -1,22 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, DigidButton } from "../template";
+import { argTypes, defaultArgs, DigidButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-digid-button"
   title="CSS Component/DigiD Button"
-  argTypes={{
-    label: {
-      description: "Button label",
-      control: "text",
-    },
-    textContent: {
-      description: "Button text",
-      control: "text",
-    },
-  }}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -29,14 +20,7 @@ import "../index.scss";
 Styling via the `.utrecht-digid-button` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      label: "Log in using DigiD",
-      textContent: "Log in",
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {DigidButton.bind({})}
   </Story>
 </Canvas>

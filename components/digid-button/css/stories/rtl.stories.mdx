@@ -1,12 +1,19 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, DigidButton } from "../template";
+import { DigidButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-digid-button"
-  title="CSS Component/DigiD Button"
+  title="CSS Component/DigiD Button/Right to left"
+  decorators={[
+    (story) => (
+      <div dir="rtl" lang="ar">
+        {story()}
+      </div>
+    ),
+  ]}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,10 +25,8 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="right-to-left"
-    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
+    name="Right to left"
     args={{
-      ...defaultArgs,
       label: "تسجيل الدخول باستخدام DigiD",
       textContent: "تسجيل الدخول",
     }}

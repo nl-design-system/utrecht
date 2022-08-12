@@ -1,47 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { CustomCheckbox, defaultArgs } from "../template";
+import { argTypes, CustomCheckbox, decorators, defaultArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-custom-checkbox"
   title="CSS Component/Custom Checkbox"
-  argTypes={{
-    active: {
-      description: "Active",
-      control: "boolean",
-    },
-    checked: {
-      description: "Checked",
-      control: "boolean",
-    },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    focus: {
-      description: "Focus",
-      control: "boolean",
-    },
-    indeterminate: {
-      description: "Indeterminate",
-      control: "boolean",
-    },
-    invalid: {
-      description: "Invalid",
-      control: "boolean",
-    },
-    required: {
-      description: "Required",
-      control: "boolean",
-    },
-    value: {
-      description: "Set the value of the text box",
-      control: "text",
-    },
-  }}
-  decorators={[(story) => `<form method="POST" action="#">${story()}</form>`]}
+  argTypes={argTypes}
+  decorators={decorators}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -54,9 +21,7 @@ import "../index.scss";
 <Canvas>
   <Story
     name="Default"
-    args={{
-      ...defaultArgs,
-    }}
+    args={defaultArgs}
   >
     {CustomCheckbox.bind({})}
   </Story>
