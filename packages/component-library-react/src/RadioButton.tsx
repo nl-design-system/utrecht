@@ -6,10 +6,7 @@ export interface RadioButtonProps extends Omit<InputHTMLAttributes<HTMLInputElem
 }
 
 export const RadioButton = forwardRef(
-  (
-    { checked, disabled, invalid, required, className, ...restProps }: RadioButtonProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => (
+  ({ invalid, className, ...restProps }: RadioButtonProps, ref: ForwardedRef<HTMLInputElement>) => (
     <input
       {...restProps}
       ref={ref}
@@ -17,14 +14,9 @@ export const RadioButton = forwardRef(
       className={clsx(
         'utrecht-radio-button',
         'utrecht-radio-button--html-input',
-        checked && 'utrecht-radio-button--checked',
-        disabled && 'utrecht-radio-button--disabled',
         invalid && 'utrecht-radio-button--invalid',
-        required && 'utrecht-radio-button--required',
         className,
       )}
-      disabled={disabled}
-      required={required}
     />
   ),
 );
