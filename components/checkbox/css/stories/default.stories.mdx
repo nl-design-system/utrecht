@@ -1,21 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Checkbox, defaultArgs } from "../template";
+import { argTypes, Checkbox, defaultArgs } from "../story-template";
 
 <Meta
   id="css-checkbox"
   title="CSS Component/Checkbox"
-  argTypes={{
-    checked: {
-      description: "Checked",
-      control: "boolean",
-    },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-  }}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -26,12 +17,7 @@ import { Checkbox, defaultArgs } from "../template";
 # Checkbox Component
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {Checkbox.bind({})}
   </Story>
 </Canvas>
