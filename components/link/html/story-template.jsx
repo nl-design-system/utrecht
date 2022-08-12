@@ -13,7 +13,7 @@ export const argTypes = {
   },
 };
 
-export const decorators = [(story) => <section class="utrecht-html">${story()}</section>];
+export const decorators = [(story) => <section class="utrecht-html">{story()}</section>];
 
 export const defaultArgs = {
   textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',

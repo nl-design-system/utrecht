@@ -1,12 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, UnorderedList } from "../template";
+import { UnorderedList } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-unordered-list"
-  title="CSS Component/Unordered List"
+  title="CSS Component/Unordered List/Nested"
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -14,24 +14,32 @@ import "../index.scss";
   }}
 />
 
+# Nested unordered list
+
 <Canvas>
   <Story
-    name="--distanced"
     args={{
-      ...defaultArgs,
-      distanced: true,
       items: [
         {
-          textContent: "Lorem",
+          innerHTML: "Lorem",
         },
         {
-          textContent: "Ipsum",
+          innerHTML: "Ipsum",
+          items: [
+            {
+              innerHTML: "Lorem",
+            },
+            {
+              innerHTML: "Ipsum",
+            },
+          ],
         },
         {
-          textContent: "Dolor",
+          innerHTML: "Dolor",
         },
       ],
     }}
+    name="Nested"
   >
     {UnorderedList.bind({})}
   </Story>

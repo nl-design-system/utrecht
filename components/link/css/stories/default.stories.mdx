@@ -1,24 +1,27 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, PageContent } from "../story-template";
+import { argTypes, defaultArgs, Link } from "../story-template";
+import "../index.scss";
 
 <Meta
-  id="web-component-page-content"
-  title="Web Component/Page Content"
+  id="css-link"
+  title="CSS Component/Link"
   argTypes={argTypes}
   parameters={{
     status: {
-      type: "WORK IN PROGRESS",
+      type: "ALPHA",
     },
   }}
 />
 
-# Page Content
+# Link
+
+Styling met de `.utrecht-link` class naam:
 
 <Canvas>
   <Story name="Default" args={defaultArgs}>
-    {PageContent.bind({})}
+    {Link.bind({})}
   </Story>
 </Canvas>
 

@@ -6,6 +6,51 @@
 import clsx from 'clsx';
 import React from 'react';
 
+export const argTypes = {
+  active: {
+    description: 'Active',
+    control: 'boolean',
+  },
+  external: {
+    description: 'External',
+    control: 'boolean',
+  },
+  hover: {
+    description: 'Hover',
+    control: 'boolean',
+  },
+  focus: {
+    description: 'Focus',
+    control: 'boolean',
+  },
+  focusVisible: {
+    description: 'Focus visible',
+    control: 'boolean',
+  },
+  href: {
+    description: 'Target URL',
+    type: {
+      name: 'string',
+      required: true,
+    },
+  },
+  telephone: {
+    description: 'Link to telephone number',
+    control: 'boolean',
+  },
+  textContent: {
+    description: 'Link text',
+    type: {
+      name: 'string',
+      required: true,
+    },
+  },
+  visited: {
+    description: 'Visited',
+    control: 'boolean',
+  },
+};
+
 export const defaultArgs = {
   active: false,
   current: false,
@@ -17,7 +62,7 @@ export const defaultArgs = {
   focusVisible: false,
   href: null,
   telephone: false,
-  textContent: '...',
+  textContent: 'Voorbeeld van een link',
   title: '',
   visited: false,
   iconleft: false,

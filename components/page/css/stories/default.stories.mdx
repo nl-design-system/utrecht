@@ -1,15 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageContent } from "../../../page-content/css/template";
-import { PageFooter } from "../../../page-footer/css/template";
-import { PageHeader } from "../../../page-header/css/template";
-import { Page } from "../template.js";
+import { argTypes, defaultArgs, Page } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-page"
   title="CSS Component/Page"
+  argTypes={argTypes}
   parameters={{
     layout: "fullscreen",
     status: {
@@ -21,16 +19,7 @@ import "../index.scss";
 # Page component
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      innerHTML: [
-        PageHeader({ innerHTML: "Header area" }),
-        PageContent({ innerHTML: "Content area" }),
-        PageFooter({ innerHTML: "Footer area" }),
-      ].join("\n"),
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {Page.bind({})}
   </Story>
 </Canvas>

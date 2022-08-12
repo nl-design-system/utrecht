@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, UnorderedList } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-unordered-list"
+  title="CSS Component/Unordered List/Distanced"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+<Canvas>
+  <Story
+    name="Distanced"
+    args={{
+      ...defaultArgs,
+      distanced: true,
+    }}
+  >
+    {UnorderedList.bind({})}
+  </Story>
+</Canvas>

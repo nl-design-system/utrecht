@@ -1,0 +1,25 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { decorators, UnorderedList } from "../story-template";
+
+export const innerHTML = `<li>Lorem</li><li>Ipsum<ul><li>Lorem</li><li>Ipsum</li></ul></li><li>Dolor</li>`;
+
+<Meta
+  id="html-unordered-list"
+  title="HTML Component/Unordered List/Nested"
+  decorators={decorators}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Nested Unordered List
+
+<Canvas>
+  <Story name="Nested" args={{ innerHTML }}>
+    {UnorderedList.bind({})}
+  </Story>
+</Canvas>
