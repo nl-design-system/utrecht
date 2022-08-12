@@ -3,37 +3,11 @@
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Link } from "@utrecht/components/link/css/story-template";
 import { Paragraph } from "@utrecht/components/paragraph/css/template";
-import { UnorderedList } from "@utrecht/components/unordered-list/css/template";
+import { UnorderedList } from "@utrecht/components/unordered-list/css/story-template";
 
 export const ParagraphWithLink = ({ textContent, href, link }) =>
   Paragraph({
     textContent: textContent.replaceAll(link, () => Link({ textContent: link, href })),
-  });
-
-export const UnorderedListWithLink = ({ textContent, href }) =>
-  UnorderedList({
-    items: [
-      {
-        textContent: Link({ href, textContent }),
-      },
-      {
-        textContent: Link({ href, textContent }),
-      },
-      {
-        textContent: Link({ href, textContent }),
-      },
-    ],
-  });
-
-export const UnorderedListWithMultipleLinks = ({ textContent, href }) =>
-  UnorderedList({
-    items: [
-      {
-        textContent: [Link({ href, textContent }), Link({ href, textContent }), Link({ href, textContent })].join(
-          "<br />"
-        ),
-      },
-    ],
   });
 
 <Meta
@@ -80,17 +54,20 @@ export const UnorderedListWithMultipleLinks = ({ textContent, href }) =>
 
 <ArgsTable story="Paragraph with link" />
 
-## Unordered list with multiple links
+## Unordered list with link
 
 <Canvas>
   <Story
     name="Unordered list with multiple links"
     args={{
-      href: "https://example.com/",
-      textContent: "Lorem ipsum dolor sit amet",
+      items: [
+        { innerHTML: Link({ href: "https://example.com/", textContent: "Lorem" }) },
+        { innerHTML: Link({ href: "https://example.com/", textContent: "ipsum dolor" }) },
+        { innerHTML: Link({ href: "https://example.com/", textContent: "sit amet" }) },
+      ],
     }}
   >
-    {UnorderedListWithLink.bind({})}
+    {UnorderedList.bind({})}
   </Story>
 </Canvas>
 
@@ -100,11 +77,22 @@ export const UnorderedListWithMultipleLinks = ({ textContent, href }) =>
   <Story
     name="Unordered list item with multiple links"
     args={{
-      href: "https://example.com/",
-      textContent: "Lorem ipsum dolor sit amet",
+      items: [
+        {
+          innerHTML: (
+            <>
+              {Link({ href: "https://example.com/", textContent: "Lorem" })}
+              <br />
+              {Link({ href: "https://example.com/", textContent: "ipsum dolor" })}
+              <br />
+              {Link({ href: "https://example.com/", textContent: "sit amet" })}
+            </>
+          ),
+        },
+      ],
     }}
   >
-    {UnorderedListWithMultipleLinks.bind({})}
+    {UnorderedList.bind({})}
   </Story>
 </Canvas>
 

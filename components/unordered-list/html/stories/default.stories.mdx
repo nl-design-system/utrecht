@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, PageContent } from "../story-template";
+import { argTypes, decorators, defaultArgs, UnorderedList } from "../story-template";
 
 <Meta
-  id="web-component-page-content"
-  title="Web Component/Page Content"
+  id="html-unordered-list"
+  title="HTML Component/Unordered List"
   argTypes={argTypes}
+  decorators={decorators}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -14,11 +15,11 @@ import { argTypes, defaultArgs, PageContent } from "../story-template";
   }}
 />
 
-# Page Content
+# Unordered List
 
 <Canvas>
   <Story name="Default" args={defaultArgs}>
-    {PageContent.bind({})}
+    {UnorderedList.bind({})}
   </Story>
 </Canvas>
 

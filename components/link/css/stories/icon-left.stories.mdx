@@ -6,24 +6,24 @@ import "../index.scss";
 
 <Meta
   id="css-link"
-  title="CSS Component/Link"
+  title="CSS Component/Link/Icon left"
   parameters={{
-    status: "WORK IN PROGRESS",
+    status: {
+      type: "ALPHA",
+    },
   }}
 />
 
-# Alternate Language Link
+# Link met pijl
 
-Styling via de `.utrecht-link--alternate-lang` modifier class name:
+Styling met de `.utrecht-link--icon-left` class naam:
 
 <Canvas>
   <Story
-    name="--alternate-lang"
+    name="Icon left"
     args={{
-      hreflang: "en",
-      lang: "en",
-      textContent: "EN",
-      title: "This page in English",
+      iconleft: true,
+      textContent: "Voorbeeld van een link",
     }}
   >
     {Link.bind({})}

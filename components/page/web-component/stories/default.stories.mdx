@@ -1,12 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Page } from "../template";
+import { argTypes, defaultArgs, Page } from "../story-template";
 
 <Meta
   id="web-component-page"
   title="Web Component/Page"
-  argTypes={{}}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -17,14 +17,7 @@ import { Page } from "../template";
 # Page component
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      contentHTML: "Main content",
-      footerHTML: "Footer content",
-      headerHTML: "Header content",
-    }}
-  >
+  <Story name="Default" args={defaultArgs}>
     {Page.bind({})}
   </Story>
 </Canvas>

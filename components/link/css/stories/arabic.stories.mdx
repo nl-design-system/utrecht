@@ -6,7 +6,14 @@ import "../index.scss";
 
 <Meta
   id="css-link"
-  title="CSS Component/Link"
+  title="CSS Component/Link/Diakrieten"
+  decorators={[
+    (story) => (
+      <div dir="rtl" lang="ar">
+        {story()}
+      </div>
+    ),
+  ]}
   parameters={{
     status: {
       type: "ALPHA",
@@ -20,13 +27,12 @@ De underline van een link mag nooit een negatieve impact hebben op de leesbaarhe
 
 <Canvas>
   <Story
-    name="diakrieten"
+    name="Diakrieten"
     args={{
       href: "mailto:info@example.com",
       textContent: "تواصل معنا من خلال البريد الإلكتروني",
       mail: true,
     }}
-    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
   >
     {Link.bind({})}
   </Story>

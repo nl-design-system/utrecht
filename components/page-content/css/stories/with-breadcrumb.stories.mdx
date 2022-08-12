@@ -2,12 +2,12 @@
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Breadcrumb, defaultArgs } from "../../../breadcrumb/css/story-template";
-import { PageContent } from "../template";
+import { PageContent } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-page-content"
-  title="CSS Component/Page Content"
+  title="CSS Component/Page Content/With Breadcrumb"
   parameters={{
     status: "WORK IN PROGRESS",
   }}
@@ -17,7 +17,7 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="with breadcrumb"
+    name="With Breadcrumb"
     args={{
       innerHTML: `<h1>The Quick Brown Fox Jumps Over The Lazy Dog</h1>`,
       navHTML: Breadcrumb({ ...defaultArgs, microdata: true, variant: "arrows" }),
