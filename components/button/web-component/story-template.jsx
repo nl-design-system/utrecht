@@ -45,3 +45,5 @@ export const Button = ({ appearance = '', busy = false, disabled = false, textCo
     {textContent}
   </utrecht-button>
 );
+
+export default Button;
