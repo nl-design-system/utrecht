@@ -1,13 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { CustomCheckbox, defaultArgs } from "../template";
+import { CustomCheckbox, decorators, defaultArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-custom-checkbox"
   title="CSS Component/Custom Checkbox/States"
-  decorators={[(story) => `<form method="POST" action="#">${story()}</form>`]}
+  decorators={decorators}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
