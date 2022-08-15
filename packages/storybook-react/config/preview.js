@@ -1,5 +1,5 @@
-import '@utrecht/component-library-css';
-import '@utrecht/component-library-css/dist/html.css';
+import '@utrecht/component-library-css/src/html.scss';
+import '@utrecht/component-library-css/src/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 
 export const decorators = [(Story) => <div className="utrecht-document utrecht-theme">{Story()}</div>];
