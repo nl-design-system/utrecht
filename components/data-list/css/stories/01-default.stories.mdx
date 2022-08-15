@@ -1,0 +1,32 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import "../index.scss";
+import { argTypes, DataList, defaultArgs, exampleArgs } from "../story-template";
+
+<Meta
+  id="css-data-list"
+  title="CSS Component/Data list"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Data list
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...defaultArgs,
+      ...exampleArgs,
+    }}
+  >
+    {DataList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

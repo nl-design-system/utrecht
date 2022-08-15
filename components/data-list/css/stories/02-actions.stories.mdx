@@ -1,0 +1,44 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import "../index.scss";
+import { argTypes, DataList } from "../story-template";
+
+<!-- import { LinkButton } from "../../../link-button/css/story-template.jsx"; -->
+
+<Meta
+  id="css-data-list"
+  title="CSS Component/Data list/With actions"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Data list with actions
+
+<Canvas>
+  <Story
+    name="With actions"
+    args={{
+      appearance: "rows",
+      items: [
+        {
+          key: "Voornaam",
+          value: "Mees",
+          actions: (
+            <a className="utrecht-link-button utrecht-link-button--inline" href="#">
+              Edit
+            </a>
+          ),
+        },
+      ],
+    }}
+  >
+    {DataList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="With actions" />
