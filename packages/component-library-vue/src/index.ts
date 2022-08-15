@@ -3,6 +3,7 @@ export { default as BadgeStatus } from './BadgeStatus.vue';
 export { default as Button } from './Button.vue';
 export { default as ButtonGroup } from './ButtonGroup.vue';
 export { default as Checkbox } from './Checkbox.vue';
+export { default as CustomRadioButton } from './CustomRadioButton.vue';
 export { default as Document } from './Document.vue';
 export { default as FormField } from './FormField.vue';
 export { default as FormFieldset } from './FormFieldset.vue';
