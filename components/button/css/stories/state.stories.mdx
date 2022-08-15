@@ -118,7 +118,7 @@ Styling via the `.utrecht-button--busy` class name:
     }}
     parameters={{
       // `cursor` cannot be tested using visual regression testing, ignore this story
-      percy: { skip: true },
+      chromatic: { disableSnapshot: true },
     }}
   >
     {Button.bind({})}

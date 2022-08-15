@@ -58,7 +58,7 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
     name="Focus with BEM"
     parameters={{
       // These CSS components are already tested separately, ignore this story
-      percy: { skip: true },
+      chromatic: { disableSnapshot: true },
     }}
   >
     {FocusBEMExample.bind({})}
@@ -72,7 +72,7 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
     name="Focus with BEM and :focus"
     parameters={{
       // actual `:focus` state cannot be tested using visual regression testing, ignore this story
-      percy: { skip: true },
+      chromatic: { disableSnapshot: true },
     }}
     args={{
       modifiers: {
@@ -91,7 +91,7 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
     name="Focus with BEM and :focus-visible"
     parameters={{
       // actual `:focus-visible` state cannot be tested using visual regression testing, ignore this story
-      percy: { skip: true },
+      chromatic: { disableSnapshot: true },
     }}
     args={{
       modifiers: {
@@ -110,7 +110,7 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
     name="Focus with BEM and both :focus and :focus-visible"
     parameters={{
       // actual `:focus` and `:focus-visible` state cannot be tested using visual regression testing, ignore this story
-      percy: { skip: true },
+      chromatic: { disableSnapshot: true },
     }}
     args={{
       modifiers: {
@@ -130,7 +130,7 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
     name="Focus with HTML"
     parameters={{
       // These HTML components are already tested separately, ignore this story
-      percy: { skip: true },
+      chromatic: { disableSnapshot: true },
     }}
   >
     {FocusHTMLExample.bind({})}

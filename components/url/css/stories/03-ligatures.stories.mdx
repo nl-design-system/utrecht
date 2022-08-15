@@ -8,8 +8,6 @@ import "../index.scss";
   id="css-url"
   title="CSS Component/URL"
   parameters={{
-    // This story is rendered as regular text, no testing required
-    percy: { skip: true },
     status: {
       type: "WORK IN PROGRESS",
     },
@@ -25,10 +23,6 @@ It can be helpful to avoid rendering characters together as a ligatures, such as
     args={{
       ...defaultArgs,
       url: "https://example.fi/",
-    }}
-    parameters={{
-      // This story uses different text rendering for ligatures, include in visual regression test
-      percy: { skip: false },
     }}
     name="ligatures"
   >
