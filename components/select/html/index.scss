@@ -8,4 +8,12 @@
 select {
   @include utrecht-select;
   @include utrecht-select--html-select;
+
+  &[aria-invalid="true"] {
+    @include utrecht-select--invalid;
+  }
+
+  &[aria-required="true"] {
+    @include utrecht-select--required;
+  }
 }
