@@ -3,25 +3,27 @@ import { ForwardedRef, forwardRef, OptionHTMLAttributes, PropsWithChildren, Sele
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
   invalid?: boolean;
+  /**
+   * `noscript`: Don't let it affect CSS :invalid
+   */
+  noscript?: boolean;
 }
 
 export const Select = forwardRef(
   (
-    { disabled, invalid, required, className, children, ...restProps }: PropsWithChildren<SelectProps>,
+    { invalid, required, className, noscript, children, ...restProps }: PropsWithChildren<SelectProps>,
     ref: ForwardedRef<HTMLSelectElement>,
   ) => {
-    const noscript = true;
     return (
       <select
         {...restProps}
         ref={ref}
         aria-invalid={invalid || undefined}
-        disabled={disabled}
         required={noscript ? required : false}
-        aria-required={noscript ? undefined : required} // Don't let it affect CSS :invalid
+        aria-required={noscript ? undefined : required}
         className={clsx(
           'utrecht-select',
-          disabled && 'utrecht-select--disabled',
+          'utrecht-select--html-select',
           invalid && 'utrecht-select--invalid',
           required && 'utrecht-select--required',
           className,

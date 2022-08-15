@@ -90,15 +90,6 @@ describe('Select', () => {
 
       expect(select).not.toHaveAttribute('aria-invalid');
     });
-
-    it('can have an invalid state in CSS', () => {
-      const handleChange = () => {};
-      const { container } = render(<Select required onChange={handleChange} />);
-
-      const select = container.querySelector(':invalid');
-
-      expect(select).toBeInTheDocument();
-    });
   });
 
   describe('disabled variant', () => {
@@ -118,14 +109,6 @@ describe('Select', () => {
       expect(select).not.toBeDisabled();
       expect(select).not.toHaveClass('utrecht-select--disabled');
       expect(select).not.toHaveAttribute('aria-disabled');
-    });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<Select disabled />);
-
-      const select = container.querySelector(':only-child');
-
-      expect(select).toHaveClass('utrecht-select--disabled');
     });
 
     it('omits non-essential disabled attributes when not disabled', () => {
@@ -179,17 +162,9 @@ describe('Select', () => {
 
       const select = container.querySelector(':only-child');
 
-      expect(select).not.toHaveAttribute('aria-required');
+      expect(select).toHaveAttribute('aria-required', 'false');
 
       expect(select).not.toHaveAttribute('required');
-    });
-
-    it('can have a required state in CSS', () => {
-      const { container } = render(<Select required />);
-
-      const select = container.querySelector(':required');
-
-      expect(select).toBeInTheDocument();
     });
   });
 
