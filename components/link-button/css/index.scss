@@ -9,10 +9,6 @@
   @include utrecht-link-button;
 }
 
-.utrecht-link-button--html-button {
-  @include utrecht-link-button--html-button;
-}
-
 .utrecht-link-button--hover {
   @include utrecht-link-button--hover;
 }
@@ -27,4 +23,28 @@
 
 .utrecht-link-button--focus-visible {
   @include utrecht-link-button--focus-visible;
+}
+
+.utrecht-link-button--inline {
+  @include utrecht-link-button--inline;
+}
+
+.utrecht-link-button--html-button {
+  @include utrecht-link-button--html-button;
+
+  &:hover {
+    @extend .utrecht-link-button--hover;
+  }
+
+  &:active {
+    @extend .utrecht-link-button--active;
+  }
+
+  &:focus {
+    @extend .utrecht-link-button--focus;
+  }
+
+  &:focus-visible {
+    @extend .utrecht-link-button--focus-visible;
+  }
 }

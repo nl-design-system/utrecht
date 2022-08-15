@@ -4,6 +4,7 @@
  */
 
 @import "../../link/css/mixin";
+@import "../../common/focus/mixin";
 
 @mixin utrecht-link-button {
   @include utrecht-link;
@@ -46,4 +47,13 @@
 
 @mixin utrecht-link-button--focus-visible {
   @include utrecht-link--focus-visible;
+}
+
+@mixin utrecht-link-button--inline {
+  min-block-size: auto;
+  min-inline-size: auto;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
 }

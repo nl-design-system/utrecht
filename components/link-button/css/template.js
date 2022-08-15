@@ -11,6 +11,7 @@ export const defaultArgs = {
   focus: false,
   focusVisible: false,
   hover: false,
+  inline: false,
   href: '',
   textContent: '',
 };
@@ -22,6 +23,7 @@ export const LinkButton = ({
   focus = false,
   focusVisible = false,
   hover = false,
+  inline = false,
   textContent = '',
 }) => {
   const stateClassNames = {
@@ -37,6 +39,7 @@ export const LinkButton = ({
     : `<button class="${clsx(
         'utrecht-link-button',
         'utrecht-link-button--html-button',
+        inline && 'utrecht-link-button--inline',
         stateClassNames,
       )}">${textContent}</button>`;
 };
