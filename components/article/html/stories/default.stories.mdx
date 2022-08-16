@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Article, defaultArgs } from "../story-template";
+import { argTypes, Article, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="html-article"
   title="HTML Component/Article"
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,7 +20,7 @@ import { argTypes, Article, defaultArgs } from "../story-template";
 Styling via the `<article>` element:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Article.bind({})}
   </Story>
 </Canvas>

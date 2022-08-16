@@ -25,9 +25,16 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = { value: 7, textContent: '7' };
+export const defaultArgs = { value: 0, textContent: '', locale: 'nl-NL' };
 
-export const BadgeCounter = ({ textContent, locale, value, max }) => (
+export const exampleArgs = { value: 7, textContent: '7' };
+
+export const BadgeCounter = ({
+  textContent = defaultArgs.textContent,
+  locale = defaultArgs.locale,
+  value = defaultArgs.value,
+  max = defaultArgs.max,
+}) => (
   <utrecht-badge-counter max={max} value={value} locale={locale}>
     {textContent}
   </utrecht-badge-counter>

@@ -15,10 +15,14 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  innerHTML: '',
+};
+
+export const exampleArgs = {
   innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
 };
 
-export const Article = ({ innerHTML }) => (
+export const Article = ({ innerHTML = defaultArgs.innerHTML }) => (
   <div class="utrecht-html">
     <article>{parser(innerHTML)}</article>
   </div>

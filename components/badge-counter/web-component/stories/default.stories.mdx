@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, BadgeCounter, defaultArgs } from "../story-template";
+import { argTypes, BadgeCounter, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="web-component-counter-badge"
   title="Web Component/Badge/Counter Badge"
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -17,7 +18,7 @@ import { argTypes, BadgeCounter, defaultArgs } from "../story-template";
 # Counter badge
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {BadgeCounter.bind({})}
   </Story>
   <Story name="Double Digit" args={{ value: 42, textContent: "42" }}>

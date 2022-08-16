@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { AlternateLangNav, argTypes, defaultArgs } from "../story-template";
+import { AlternateLangNav, argTypes, defaultArgs, exampleArgs } from "../story-template";
 import "../../../link/css/index.scss";
 
 <Meta
   id="css-alternate-lang-nav"
   title="CSS Component/Alternate Language Navigation"
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: "WORK IN PROGRESS",
   }}
@@ -16,7 +17,7 @@ import "../../../link/css/index.scss";
 # Alternative Languages Navigation
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {AlternateLangNav.bind({})}
   </Story>
 </Canvas>

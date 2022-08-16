@@ -39,6 +39,8 @@ export const decorators = [checkerboard];
 
 export const defaultArgs = { viewport: false };
 
+export const exampleArgs = defaultArgs;
+
 export const Backdrop = ({ viewport = defaultArgs.viewport }) => (
   <utrecht-backdrop viewport={viewport}></utrecht-backdrop>
 );

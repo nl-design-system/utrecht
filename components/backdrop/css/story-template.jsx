@@ -42,6 +42,8 @@ export const defaultArgs = {
   viewport: false,
 };
 
+export const exampleArgs = defaultArgs;
+
 export const Backdrop = ({ viewport = defaultArgs.viewport }) => (
   <div class={clsx('utrecht-backdrop', viewport && 'utrecht-backdrop--viewport')}></div>
 );

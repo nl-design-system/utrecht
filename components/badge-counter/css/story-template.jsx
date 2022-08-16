@@ -13,7 +13,9 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = { textContent: '7' };
+export const defaultArgs = { textContent: '' };
+
+export const exampleArgs = { textContent: '7' };
 
 export const BadgeCounter = ({ textContent = defaultArgs.textContent }) => (
   <span class="utrecht-badge-counter">

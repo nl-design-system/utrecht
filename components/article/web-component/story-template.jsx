@@ -15,6 +15,10 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  innerHTML: '',
+};
+
+export const exampleArgs = {
   innerHTML: `<h1>Lorem ipsum</h1>
 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
 magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -23,6 +27,8 @@ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui offi
 laborum.</p>`,
 };
 
-export const Article = ({ innerHTML }) => <utrecht-article>{parser(innerHTML)}</utrecht-article>;
+export const Article = ({ innerHTML = defaultArgs.innerHTML }) => (
+  <utrecht-article>{parser(innerHTML)}</utrecht-article>
+);
 
 export default Article;

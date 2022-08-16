@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
+import { argTypes, Backdrop, decorators, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="web-component-backdrop"
   title="Web Component/Backdrop"
   argTypes={argTypes}
+  args={defaultArgs}
   decorators={decorators}
   parameters={{
     layout: "fullscreen",
@@ -17,7 +18,7 @@ import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
 # Backdrop
 
 <Canvas>
-  <Story args={defaultArgs} name="Default">
+  <Story args={exampleArgs} name="Default">
     {Backdrop.bind({})}
   </Story>
 </Canvas>

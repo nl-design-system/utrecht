@@ -18,13 +18,17 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  languages: [],
+};
+
+export const exampleArgs = {
   languages: [
     { textContent: 'EN', title: 'This page in English', lang: 'en', current: true, hreflang: 'en' },
     { textContent: 'NL', title: 'Deze pagina in Nederlands', lang: 'nl', current: false, hreflang: 'nl' },
   ],
 };
 
-export const AlternateLangNav = ({ languages = [] }) => {
+export const AlternateLangNav = ({ languages = defaultArgs.languages }) => {
   // FIXME: Ensure clean code sample, might be unnescessary when all code samples show html code
   const SEPARATOR = '|';
   const navItems =
