@@ -25,6 +25,7 @@ export { Heading5 } from './Heading5';
 export { Heading6 } from './Heading6';
 export { Link } from './Link';
 export { LinkButton } from './LinkButton';
+export { NumberValue } from './NumberValue';
 export { OrderedList } from './OrderedList';
 export { OrderedListItem } from './OrderedListItem';
 export { Page } from './Page';

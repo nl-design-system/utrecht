@@ -1,0 +1,58 @@
+
+Onderbreek de tekst van het getal niet met extra HTML-elementen, dan is het getal niet duidelijk voor veel _screen readers_.
+
+Dus niet:
+
+```html
+<td>
+	<data value="-123"><span class="minus">-</span>123</data>
+</td>
+<td>
+	<data value="42"><span class="digit">4</span><span class="digit">2</span></data>
+</td>
+```
+
+Mocht het in een uiterst geval nodig zijn, gebruik dan de volgende constructie:
+
+```html
+<data value="-123">
+	<span class="utrecht-value-number__presentation" hidden aria-hidden="true"><span class="minus">-</span>123</span></span>
+	<span class="utrecht-value-number__value">-123</span>
+</data>
+```
+
+Het `hidden` attribuut verbergt de extra waarde wanneer de bijbehorende CSS niet geladen is, `aria-hidden` voorkomt dat de waarde dubbel wordt voorgelezen. De CSS maakt het `hidden` attribuut ongedaan, en verbergt de value op een manier dat _screen readers_ wel dit getal kunnen lezen.
+
+
+.utrecht-value-number__presentation {
+  display: inline;
+}
+
+.utrecht-value-number__value {
+  @include invisible-but-accessible;
+}
+
+
+## With additional markup
+
+<Canvas>
+  <Story
+    args={{
+      value: 1234,
+      children: [
+        <span className="utrecht-value-number__presentation">
+          <b>1</b>
+          <u>2</u>
+          <i>3</i>
+        </span>,
+        <span className="utrecht-value-number__value">123 </span>,
+      ],
+    }}
+    name="With additional markup"
+    decorators={[(Story) => <span lang="nl-NL">{Story()}</span>]}
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="With additional markup" />

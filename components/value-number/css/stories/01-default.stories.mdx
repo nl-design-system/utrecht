@@ -1,0 +1,101 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, NumberValue } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-value-number"
+  title="CSS Component/Number Value"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Number value
+
+<Canvas>
+  <Story
+    args={{
+      ...defaultArgs,
+      // A Mersenne prime number
+      children: 137438953471,
+    }}
+    name="Default"
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
+
+## With number formatting
+
+<Canvas>
+  <Story
+    args={{
+      value: 137438953471,
+      children: new Intl.NumberFormat("nl-NL").format(137438953471),
+    }}
+    name="With number formatting"
+    decorators={[(Story) => <span lang="nl-NL">{Story()}</span>]}
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="With number formatting" />
+
+## Machine-readable value
+
+<Canvas>
+  <Story
+    args={{
+      value: 137438953471,
+      children: new Intl.NumberFormat("nl-NL").format(137438953471),
+    }}
+    name="Machine-readable"
+    decorators={[(Story) => <span lang="nl-NL">{Story()}</span>]}
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Machine-readable" />
+
+## Positive
+
+<Canvas>
+  <Story
+    args={{
+      value: 123,
+      children: "123",
+      appearance: "positive",
+    }}
+    name="Positive"
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Positive" />
+
+## Negative
+
+<Canvas>
+  <Story
+    args={{
+      value: -123,
+      children: "-123",
+      appearance: "negative",
+    }}
+    name="Negative"
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Negative" />
