@@ -1,0 +1,34 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@mixin utrecht-value-number {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+@mixin utrecht-value-number--positive {
+  color: var(--utrecht-value-number-positive-color);
+}
+
+@mixin utrecht-value-number--negative {
+  color: var(--utrecht-value-number-negative-color);
+}
+
+@mixin invisible-but-accessible {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
