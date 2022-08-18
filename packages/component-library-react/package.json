@@ -17,338 +17,15 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "tsc --project ./tsconfig.json",
+    "build": "rollup -c",
     "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
   },
-  "main": "./dist/cjs/index.js",
-  "types": "./dist/cjs/index.d.ts",
-  "exports": {
-    "./README.md": {
-      "default": "./README.md"
-    },
-    ".": {
-      "types": "./dist/cjs/index.d.ts",
-      "default": "./dist/cjs/index.js"
-    },
-    "./Article": {
-      "types": "./dist/cjs/Article.d.ts",
-      "default": "./dist/cjs/Article.js"
-    },
-    "./Backdrop": {
-      "types": "./dist/cjs/Backdrop.d.ts",
-      "default": "./dist/cjs/Backdrop.js"
-    },
-    "./Button": {
-      "types": "./dist/cjs/Button.d.ts",
-      "default": "./dist/cjs/Button.js"
-    },
-    "./ButtonLink": {
-      "types": "./dist/cjs/ButtonLink.d.ts",
-      "default": "./dist/cjs/ButtonLink.js"
-    },
-    "./Checkbox": {
-      "types": "./dist/cjs/Checkbox.d.ts",
-      "default": "./dist/cjs/Checkbox.js"
-    },
-    "./CustomRadioButton": {
-      "types": "./dist/cjs/CustomRadioButton.d.ts",
-      "default": "./dist/cjs/CustomRadioButton.js"
-    },
-    "./Document": {
-      "types": "./dist/cjs/Document.d.ts",
-      "default": "./dist/cjs/Document.js"
-    },
-    "./Fieldset": {
-      "types": "./dist/cjs/Fieldset.d.ts",
-      "default": "./dist/cjs/Fieldset.js"
-    },
-    "./FieldsetLegend": {
-      "types": "./dist/cjs/FieldsetLegend.d.ts",
-      "default": "./dist/cjs/FieldsetLegend.js"
-    },
-    "./FormField": {
-      "types": "./dist/cjs/FormField.d.ts",
-      "default": "./dist/cjs/FormField.js"
-    },
-    "./FormFieldDescription": {
-      "types": "./dist/cjs/FormFieldDescription.d.ts",
-      "default": "./dist/cjs/FormFieldDescription.js"
-    },
-    "./FormLabel": {
-      "types": "./dist/cjs/FormLabel.d.ts",
-      "default": "./dist/cjs/FormLabel.js"
-    },
-    "./HTMLContent": {
-      "types": "./dist/cjs/HTMLContent.d.ts",
-      "default": "./dist/cjs/HTMLContent.js"
-    },
-    "./Heading1": {
-      "types": "./dist/cjs/Heading1.d.ts",
-      "default": "./dist/cjs/Heading1.js"
-    },
-    "./Heading2": {
-      "types": "./dist/cjs/Heading2.d.ts",
-      "default": "./dist/cjs/Heading2.js"
-    },
-    "./Heading3": {
-      "types": "./dist/cjs/Heading3.d.ts",
-      "default": "./dist/cjs/Heading3.js"
-    },
-    "./Heading4": {
-      "types": "./dist/cjs/Heading4.d.ts",
-      "default": "./dist/cjs/Heading4.js"
-    },
-    "./Heading5": {
-      "types": "./dist/cjs/Heading5.d.ts",
-      "default": "./dist/cjs/Heading5.js"
-    },
-    "./Heading6": {
-      "types": "./dist/cjs/Heading6.d.ts",
-      "default": "./dist/cjs/Heading6.js"
-    },
-    "./Link": {
-      "types": "./dist/cjs/Link.d.ts",
-      "default": "./dist/cjs/Link.js"
-    },
-    "./OrderedList": {
-      "types": "./dist/cjs/OrderedList.d.ts",
-      "default": "./dist/cjs/OrderedList.js"
-    },
-    "./OrderedListItem": {
-      "types": "./dist/cjs/OrderedListItem.d.ts",
-      "default": "./dist/cjs/OrderedListItem.js"
-    },
-    "./Page": {
-      "types": "./dist/cjs/Page.d.ts",
-      "default": "./dist/cjs/Page.js"
-    },
-    "./PageContent": {
-      "types": "./dist/cjs/PageContent.d.ts",
-      "default": "./dist/cjs/PageContent.js"
-    },
-    "./PageFooter": {
-      "types": "./dist/cjs/PageFooter.d.ts",
-      "default": "./dist/cjs/PageFooter.js"
-    },
-    "./PageHeader": {
-      "types": "./dist/cjs/PageHeader.d.ts",
-      "default": "./dist/cjs/PageHeader.js"
-    },
-    "./Paragraph": {
-      "types": "./dist/cjs/Paragraph.d.ts",
-      "default": "./dist/cjs/Paragraph.js"
-    },
-    "./RadioButton": {
-      "types": "./dist/cjs/RadioButton.d.ts",
-      "default": "./dist/cjs/RadioButton.js"
-    },
-    "./Select": {
-      "types": "./dist/cjs/Select.d.ts",
-      "default": "./dist/cjs/Select.js"
-    },
-    "./Separator": {
-      "types": "./dist/cjs/Separator.d.ts",
-      "default": "./dist/cjs/Separator.js"
-    },
-    "./Surface": {
-      "types": "./dist/cjs/Surface.d.ts",
-      "default": "./dist/cjs/Surface.js"
-    },
-    "./Table": {
-      "types": "./dist/cjs/Table.d.ts",
-      "default": "./dist/cjs/Table.js"
-    },
-    "./TableBody": {
-      "types": "./dist/cjs/TableBody.d.ts",
-      "default": "./dist/cjs/TableBody.js"
-    },
-    "./TableCaption": {
-      "types": "./dist/cjs/TableCaption.d.ts",
-      "default": "./dist/cjs/TableCaption.js"
-    },
-    "./TableCell": {
-      "types": "./dist/cjs/TableCell.d.ts",
-      "default": "./dist/cjs/TableCell.js"
-    },
-    "./TableFooter": {
-      "types": "./dist/cjs/TableFooter.d.ts",
-      "default": "./dist/cjs/TableFooter.js"
-    },
-    "./TableHeader": {
-      "types": "./dist/cjs/TableHeader.d.ts",
-      "default": "./dist/cjs/TableHeader.js"
-    },
-    "./TableHeaderCell": {
-      "types": "./dist/cjs/TableHeaderCell.d.ts",
-      "default": "./dist/cjs/TableHeaderCell.js"
-    },
-    "./TableRow": {
-      "types": "./dist/cjs/TableRow.d.ts",
-      "default": "./dist/cjs/TableRow.js"
-    },
-    "./Textarea": {
-      "types": "./dist/cjs/Textarea.d.ts",
-      "default": "./dist/cjs/Textarea.js"
-    },
-    "./Textbox": {
-      "types": "./dist/cjs/Textbox.d.ts",
-      "default": "./dist/cjs/Textbox.js"
-    },
-    "./URLValue": {
-      "types": "./dist/cjs/URLValue.d.ts",
-      "default": "./dist/cjs/URLValue.js"
-    },
-    "./UnorderedList": {
-      "types": "./dist/cjs/UnorderedList.d.ts",
-      "default": "./dist/cjs/UnorderedList.js"
-    },
-    "./UnorderedListItem": {
-      "types": "./dist/cjs/UnorderedListItem.d.ts",
-      "default": "./dist/cjs/UnorderedListItem.js"
-    }
-  },
-  "typesVersions": {
-    "*": {
-      "index": [
-        "./dist/cjs/index.d.ts"
-      ],
-      "Article": [
-        "./dist/cjs/Article.d.ts"
-      ],
-      "Backdrop": [
-        "./dist/cjs/Backdrop.d.ts"
-      ],
-      "Button": [
-        "./dist/cjs/Button.d.ts"
-      ],
-      "ButtonLink": [
-        "./dist/cjs/ButtonLink.d.ts"
-      ],
-      "Checkbox": [
-        "./dist/cjs/Checkbox.d.ts"
-      ],
-      "CustomRadioButton": [
-        "./dist/cjs/CustomRadioButton.d.ts"
-      ],
-      "Document": [
-        "./dist/cjs/Document.d.ts"
-      ],
-      "Fieldset": [
-        "./dist/cjs/Fieldset.d.ts"
-      ],
-      "FieldsetLegend": [
-        "./dist/cjs/FieldsetLegend.d.ts"
-      ],
-      "FormField": [
-        "./dist/cjs/FormField.d.ts"
-      ],
-      "FormFieldDescription": [
-        "./dist/cjs/FormFieldDescription.d.ts"
-      ],
-      "FormLabel": [
-        "./dist/cjs/FormLabel.d.ts"
-      ],
-      "HTMLContent": [
-        "./dist/cjs/HTMLContent.d.ts"
-      ],
-      "Heading1": [
-        "./dist/cjs/Heading1.d.ts"
-      ],
-      "Heading2": [
-        "./dist/cjs/Heading2.d.ts"
-      ],
-      "Heading3": [
-        "./dist/cjs/Heading3.d.ts"
-      ],
-      "Heading4": [
-        "./dist/cjs/Heading4.d.ts"
-      ],
-      "Heading5": [
-        "./dist/cjs/Heading5.d.ts"
-      ],
-      "Heading6": [
-        "./dist/cjs/Heading6.d.ts"
-      ],
-      "Link": [
-        "./dist/cjs/Link.d.ts"
-      ],
-      "OrderedList": [
-        "./dist/cjs/OrderedList.d.ts"
-      ],
-      "OrderedListItem": [
-        "./dist/cjs/OrderedListItem.d.ts"
-      ],
-      "Page": [
-        "./dist/cjs/Page.d.ts"
-      ],
-      "PageContent": [
-        "./dist/cjs/PageContent.d.ts"
-      ],
-      "PageFooter": [
-        "./dist/cjs/PageFooter.d.ts"
-      ],
-      "PageHeader": [
-        "./dist/cjs/PageHeader.d.ts"
-      ],
-      "Paragraph": [
-        "./dist/cjs/Paragraph.d.ts"
-      ],
-      "RadioButton": [
-        "./dist/cjs/RadioButton.d.ts"
-      ],
-      "Select": [
-        "./dist/cjs/Select.d.ts"
-      ],
-      "Separator": [
-        "./dist/cjs/Separator.d.ts"
-      ],
-      "Surface": [
-        "./dist/cjs/Surface.d.ts"
-      ],
-      "Table": [
-        "./dist/cjs/Table.d.ts"
-      ],
-      "TableBody": [
-        "./dist/cjs/TableBody.d.ts"
-      ],
-      "TableCaption": [
-        "./dist/cjs/TableCaption.d.ts"
-      ],
-      "TableCell": [
-        "./dist/cjs/TableCell.d.ts"
-      ],
-      "TableFooter": [
-        "./dist/cjs/TableFooter.d.ts"
-      ],
-      "TableHeader": [
-        "./dist/cjs/TableHeader.d.ts"
-      ],
-      "TableHeaderCell": [
-        "./dist/cjs/TableHeaderCell.d.ts"
-      ],
-      "TableRow": [
-        "./dist/cjs/TableRow.d.ts"
-      ],
-      "Textarea": [
-        "./dist/cjs/Textarea.d.ts"
-      ],
-      "Textbox": [
-        "./dist/cjs/Textbox.d.ts"
-      ],
-      "URLValue": [
-        "./dist/cjs/URLValue.d.ts"
-      ],
-      "UnorderedList": [
-        "./dist/cjs/UnorderedList.d.ts"
-      ],
-      "UnorderedListItem": [
-        "./dist/cjs/UnorderedListItem.d.ts"
-      ]
-    }
-  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "dist/"
   ],
@@ -356,6 +33,13 @@
     "clsx": "1.2.1"
   },
   "devDependencies": {
+    "@babel/core": "7.18.10",
+    "@babel/plugin-transform-runtime": "7.18.10",
+    "@babel/preset-env": "7.18.10",
+    "@babel/preset-react": "7.18.6",
+    "@rollup/plugin-babel": "5.3.1",
+    "@rollup/plugin-commonjs": "22.0.2",
+    "@rollup/plugin-node-resolve": "13.3.0",
     "@testing-library/jest-dom": "5.16.4",
     "@testing-library/react": "13.3.0",
     "@testing-library/user-event": "14.4.0",
@@ -367,6 +51,12 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rimraf": "3.0.2",
+    "rollup-plugin-delete": "2.0.0",
+    "rollup-plugin-filesize": "9.1.2",
+    "rollup-plugin-node-externals": "4.1.1",
+    "rollup-plugin-node-polyfills": "0.2.1",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-typescript2": "0.32.1",
     "typescript": "4.1.6 <4.2"
   },
   "peerDependencies": {
