@@ -27,7 +27,7 @@ module.exports = {
     },
     {
       type: 'doc',
-      docId: 'tmp/designrichtlijnen/designrichtlijnen-algemeen',
+      docId: 'tmp/designrichtlijnen/richtlijnen-interne-applicaties',
       position: 'left',
       label: 'Design Richtlijnen',
     },
