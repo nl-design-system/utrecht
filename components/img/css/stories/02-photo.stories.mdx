@@ -1,0 +1,38 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Img } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-img"
+  title="CSS Component/Image"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Photo
+
+Photo © 2022 Gemeente Utrecht.
+
+<Canvas>
+  <Story
+    name="Photo"
+    args={{
+      ...defaultArgs,
+      src: "example/photo-nijntje-vuelta.jpg",
+      width: 2048,
+      height: 1536,
+      photo: true,
+      alt: "Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor",
+    }}
+  >
+    {Img.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Photo" />
