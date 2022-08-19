@@ -20,6 +20,7 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@utrecht/component-library-react';
+import React from 'react';
 
 const MDXComponents = {
   a: MDXA,
@@ -43,7 +44,7 @@ const MDXComponents = {
   // details: ...,
   // em: ...,
   // head: ...,
-  // img: ...,
+  img: ({ ...restProps }) => <img className="utrecht-img utrecht-img--fit" {...restProps} />,
   // li: ...,
   // pre: ...,
   // strong: ...,
