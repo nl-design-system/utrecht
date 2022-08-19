@@ -22,7 +22,9 @@ const mapHeadings = {
 
 const addBaseUrl = (baseUrl) => {
   return {
-    img: ({ src, ...restProps }) => <img {...restProps} src={resolveUrl(baseUrl, src)}></img>,
+    img: ({ src, ...restProps }) => (
+      <img {...restProps} src={resolveUrl(baseUrl, src)} className="utrecht-img utrecht-img--fit"></img>
+    ),
   };
 };
 
