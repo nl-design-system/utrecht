@@ -63,6 +63,7 @@ export const Button = ({
   active = false,
   appearance = null,
   busy = false,
+  children,
   disabled = false,
   focus = false,
   focusVisible = false,
@@ -82,10 +83,11 @@ export const Button = ({
       'utrecht-button--secondary-action': appearance === 'secondary-action-button',
       'utrecht-button--subtle': appearance === 'subtle-button',
     })}
-    ariaDisabled={disabled}
+    aria-disabled={disabled}
     type={type}
   >
-    {textContent}
+    {children}
+    {String(textContent)}
   </button>
 );
 
@@ -95,6 +97,7 @@ export const ButtonTable = ({
   primaryActionButton = false,
   secondaryActionButton = false,
   subtleButton = false,
+  icon = false,
 }) => {
   const appearances = [
     defaultButton && 'button',
@@ -113,6 +116,7 @@ export const ButtonTable = ({
           <th className="utrecht-table__header-cell">Focus</th>
           <th className="utrecht-table__header-cell">Focus visible</th>
           <th className="utrecht-table__header-cell">Disabled</th>
+          {icon && <th className="utrecht-table__header-cell">With icon</th>}
         </tr>
       </thead>
       <tbody className="utrecht--table__body">
@@ -127,6 +131,14 @@ export const ButtonTable = ({
               {Button({ appearance, textContent, focus: true, focusVisible: true })}
             </td>
             <td className="utrecht-table__cell">{Button({ appearance, textContent, disabled: true })}</td>
+            {icon && (
+              <td className="utrecht-table__cell">
+                {Button({
+                  appearance,
+                  textContent: [textContent, <utrecht-icon-arrow></utrecht-icon-arrow>],
+                })}
+              </td>
+            )}
           </tr>
         ))}
       </tbody>

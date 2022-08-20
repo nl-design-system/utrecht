@@ -1,0 +1,58 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import iconSet from "@utrecht/icon/dist/index.json";
+import { argTypes, Button, defaultArgs } from "../story-template";
+import "../index.scss";
+
+export const Template = ({ icon, iconPosition, textContent, ...restProps }) => {
+  const IconCustomElement = icon;
+  return (
+    <Button {...restProps}>
+      {icon && iconPosition === "start" ? <IconCustomElement /> : ""}
+      {textContent}
+      {icon && iconPosition === "end" ? <IconCustomElement /> : ""}
+    </Button>
+  );
+};
+
+<Meta
+  id="css-button"
+  title="CSS Component/Button"
+  argTypes={{
+    ...argTypes,
+    icon: {
+      description: "Icon",
+      control: { type: "select" },
+      options: ["", ...iconSet.map(({ id }) => id)],
+    },
+    iconPosition: {
+      control: { type: "select" },
+      description: "Icon position",
+      options: ["start", "end"],
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button with icon
+
+<Canvas>
+  <Story
+    name="with icon"
+    args={{
+      ...defaultArgs,
+      icon: "utrecht-icon-arrow",
+      iconPosition: "end",
+      textContent: "Next",
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="with icon" />

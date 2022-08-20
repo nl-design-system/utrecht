@@ -8,5 +8,7 @@
   color: var(--utrecht-icon-color);
   display: inline-block;
   height: var(--utrecht-icon-size);
+  inset-block-start: var(--utrecht-icon-inset-block-start, 0);
+  position: relative;
   width: var(--utrecht-icon-size);
 }
