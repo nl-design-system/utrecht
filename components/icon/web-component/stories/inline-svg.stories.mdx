@@ -1,0 +1,84 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+
+export const Template = (args) => <utrecht-icon {...args}></utrecht-icon>;
+
+<Meta
+  id="web-component-icon"
+  title="Web Component/Icon"
+  argTypes={{
+    textContent: {
+      description: "Set the content of the heading",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "BETA",
+    },
+  }}
+/>
+
+# Icon with inline SVG
+
+<Canvas>
+  <Story
+    name="with inline SVG"
+    args={{
+      children: (
+        <svg viewBox="0 0 32 32">
+          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
+        </svg>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="with inline SVG" />
+
+## Icon with inline SVG inside a button
+
+<Canvas>
+  <Story
+    name="with inline SVG inside a button"
+    decorators={[(Story) => <utrecht-button appearance="primary-action-button">{Story()} Click me</utrecht-button>]}
+    args={{
+      children: (
+        <svg viewBox="0 0 32 32">
+          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
+        </svg>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+## Icon with inline SVG inside a link
+
+<Canvas>
+  <Story
+    name="with inline SVG inside a link"
+    decorators={[
+      (Story) => (
+        <p className="utrecht-paragraph">
+          <a className="utrecht-link" href="https://example.com/">
+            {Story()}Link
+          </a>
+        </p>
+      ),
+    ]}
+    args={{
+      children: (
+        <svg viewBox="0 0 32 32">
+          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
+        </svg>
+      ),
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
