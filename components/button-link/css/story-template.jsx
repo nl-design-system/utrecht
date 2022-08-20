@@ -8,6 +8,11 @@ import clsx from 'clsx';
 import React from 'react';
 
 export const argTypes = {
+  appearance: {
+    description: 'Appearance',
+    control: { type: 'select' },
+    options: ['', 'button', 'primary-action-button', 'secondary-action-button', 'subtle-button'],
+  },
   external: {
     description: 'External',
     control: 'boolean',
@@ -41,6 +46,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  appearance: '',
   external: false,
   hover: false,
   href: '',
@@ -50,6 +56,7 @@ export const defaultArgs = {
 };
 
 export const ButtonLink = ({
+  appearance,
   external = false,
   hover = false,
   href = '',
@@ -60,12 +67,14 @@ export const ButtonLink = ({
   <a
     role="button"
     href={href}
-    className={clsx(
-      'utrecht-button-link',
-      hover && 'utrecht-button-link--hover',
-      focus && 'utrecht-button-link--focus',
-      focusVisible && 'utrecht-button-link--focus-visible',
-    )}
+    className={clsx('utrecht-button-link', {
+      'utrecht-button-link--hover': hover,
+      'utrecht-button-link--focus': focus,
+      'utrecht-button-link--focus-visible': focusVisible,
+      'utrecht-button-link--primary-action': appearance === 'primary-action-button',
+      'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
+      'utrecht-button-link--subtle': appearance === 'subtle-button',
+    })}
     rel={external && 'external noopener noreferrer'}
   >
     {textContent}

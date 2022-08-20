@@ -72,6 +72,6 @@
   @include utrecht-button--hover;
 }
 
-@include utrecht-button-appearance("primary-action");
-@include utrecht-button-appearance("secondary-action");
-@include utrecht-button-appearance("subtle");
+@include utrecht-button-appearance("utrecht-button", "primary-action");
+@include utrecht-button-appearance("utrecht-button", "secondary-action");
+@include utrecht-button-appearance("utrecht-button", "subtle");

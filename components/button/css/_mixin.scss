@@ -117,8 +117,8 @@
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }
 
-@mixin utrecht-button-appearance($modifier) {
-  .utrecht-button--#{$modifier} {
+@mixin utrecht-button-appearance($block, $modifier) {
+  .#{$block}--#{$modifier} {
     --utrecht-button-active-background-color: var(--utrecht-button-#{$modifier}-active-background-color);
     --utrecht-button-active-border-color: var(--utrecht-button-#{$modifier}-active-border-color);
     --utrecht-button-active-color: var(--utrecht-button-#{$modifier}-active-color);

@@ -26,3 +26,7 @@
 .utrecht-button-link--html-button {
   @include utrecht-button-link--html-button;
 }
+
+@include utrecht-button-appearance("utrecht-button-link", "primary-action");
+@include utrecht-button-appearance("utrecht-button-link", "secondary-action");
+@include utrecht-button-appearance("utrecht-button-link", "subtle");
