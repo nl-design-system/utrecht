@@ -23,8 +23,8 @@
   @include utrecht-button-link--focus-visible;
 }
 
-.utrecht-button-link--html-button {
-  @include utrecht-button-link--html-button;
+.utrecht-button-link--html-a {
+  @include utrecht-button-link--html-a;
 }
 
 @include utrecht-button-appearance("utrecht-button-link", "primary-action");

@@ -26,7 +26,7 @@ Een link button moet op dezelfde manier geactiveerd kunnen worden als een button
 - `Enter` op toetsenbord
 - `Space` op toetsenbord
 
-Een HTML `a` element wordt standaard niet geactiveerd met `Space`, daarvoor is ondersteunende JavaScript nodig.
+Een HTML `a` element wordt standaard niet geactiveerd met `Space`, daarvoor is ondersteunende JavaScript nodig. Gebruik `role="button"` alleen wanneer je door extra JavaScript ook met `Space` de link activeert.
 
 ## States
 

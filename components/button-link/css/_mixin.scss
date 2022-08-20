@@ -25,7 +25,7 @@
   @include utrecht-button--focus-visible;
 }
 
-@mixin utrecht-button-link--html-button {
+@mixin utrecht-button-link--html-a {
   &:hover {
     @include utrecht-button-link--hover;
   }

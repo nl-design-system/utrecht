@@ -25,6 +25,10 @@ export const argTypes = {
     description: 'Focus',
     control: 'boolean',
   },
+  keyboardSupport: {
+    description: 'Supports activation using both Enter and Space',
+    control: 'boolean',
+  },
   focusVisible: {
     description: 'Focus visible',
     control: 'boolean',
@@ -52,6 +56,7 @@ export const defaultArgs = {
   href: '',
   focus: false,
   focusVisible: false,
+  keyboardSupport: false,
   textContent: 'Start je aanvraag',
 };
 
@@ -63,11 +68,12 @@ export const ButtonLink = ({
   focus = false,
   focusVisible = false,
   textContent = defaultArgs.textContent,
+  keyboardSupport = false,
 }) => (
   <a
-    role="button"
+    role={keyboardSupport ? 'button' : undefined}
     href={href}
-    className={clsx('utrecht-button-link', {
+    className={clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
       'utrecht-button-link--hover': hover,
       'utrecht-button-link--focus': focus,
       'utrecht-button-link--focus-visible': focusVisible,

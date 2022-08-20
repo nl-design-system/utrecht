@@ -47,6 +47,7 @@
     var(--utrecht-button-border-width, 0)
   );
 
+  align-items: center;
   background-color: var(--_utrecht-button-background-color);
   border-color: var(--_utrecht-button-border-color);
   border-bottom-color: var(--_utrecht-button-border-bottom-color);
@@ -54,11 +55,14 @@
   border-style: solid;
   border-width: var(--_utrecht-button-border-width);
   border-bottom-width: var(--_utrecht-button-border-bottom-width);
+  box-sizing: border-box;
   color: var(--utrecht-button-color);
+  display: inline-flex;
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
   font-weight: var(--utrecht-button-font-weight);
   inline-size: var(--utrecht-button-inline-size, auto);
+  justify-content: center;
   letter-spacing: var(--utrecht-button-letter-spacing);
   line-height: var(--utrecht-button-line-height);
   min-block-size: var(--utrecht-button-min-block-size, 44px);
