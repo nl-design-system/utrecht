@@ -8,18 +8,18 @@ import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-link',
-  styleUrl: 'link.scss',
+  styleUrl: 'index.scss',
   shadow: true,
 })
 export class Link {
-  @Prop() download?: string;
-  @Prop() href?: string;
-  @Prop() hreflang?: string;
-  @Prop() rel?: string;
-  @Prop() target?: string;
-  @Prop() label?: string;
+  @Prop() download: string?;
+  @Prop() href: string?;
+  @Prop() hreflang: string?;
+  @Prop() rel: string?;
+  @Prop() target: string?;
+  @Prop() title: string?;
   render() {
-    const { download, href, hreflang, rel, target, label } = this;
+    const { download, href, hreflang, rel, target, title } = this;
     const externalRel = 'external noopener noreferrer';
     const combinedRel = external && rel ? `${rel} ${externalRel}` : external ? externalRel : rel;
     return (
@@ -30,7 +30,7 @@ export class Link {
         hreflang={hreflang}
         rel={combinedRel}
         target={target}
-        aria-label={label}
+        title={title}
       >
         <slot></slot>
       </a>
