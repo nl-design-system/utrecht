@@ -4,8 +4,6 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-/* eslint-disable react/jsx-key */
-
 import clsx from 'clsx';
 import React from 'react';
 
