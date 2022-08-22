@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-undef
 module.exports = {
-  branches: ['main'],
+  branches: ['main', 'add-dry-run'],
   plugins: [
     '@semantic-release/commit-analyzer',
     '@semantic-release/release-notes-generator',
