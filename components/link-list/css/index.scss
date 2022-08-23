@@ -30,11 +30,13 @@
   --utrecht-link-text-decoration: none;
   --utrecht-link-hover-text-decoration: underline;
   --utrecht-link-focus-text-decoration: underline;
+
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-link-list-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-link-list-margin-block-start, 0));
 }
 
 .utrecht-link-list--distanced {
-  margin-block-end: var(--utrecht-link-list-margin-block-end, 0);
-  margin-block-start: var(--utrecht-link-list-margin-block-start, 0);
+  --utrecht-space-around: 1;
 }
 
 .utrecht-link-list__marker {

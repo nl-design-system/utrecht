@@ -19,8 +19,9 @@
   padding-inline-start: 0;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-form-fieldset {
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-fieldset-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-fieldset-margin-block-start, 0));
 }
 
 @mixin utrecht-form-fieldset--html-fieldset {
@@ -28,8 +29,7 @@
 }
 
 @mixin utrecht-form-fieldset--distanced {
-  margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
-  margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
+  --utrecht-space-around: 1;
 }
 
 @mixin utrecht-form-fieldset__legend {
@@ -48,6 +48,6 @@
 }
 
 @mixin utrecht-form-fieldset__legend--distanced {
-  margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
-  margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-fieldset-legend-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-fieldset-legend-margin-block-start, 0));
 }

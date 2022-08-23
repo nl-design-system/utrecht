@@ -7,8 +7,8 @@
 @mixin utrecht-data-list {
   /* also set `margin-block` to reset browser styling of <dl> */
   display: block;
-  margin-block-end: calc(var(--utrecht-distance, 0) * var(--utrecht-data-list-margin-block-end));
-  margin-block-start: calc(var(--utrecht-distance, 0) * var(--utrecht-data-list-margin-block-start));
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-data-list-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-data-list-margin-block-start, 0));
 }
 
 /* stylelint-disable-next-line block-no-empty */

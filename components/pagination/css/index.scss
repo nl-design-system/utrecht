@@ -43,7 +43,6 @@
   @include utrecht-pagination__page-link--current;
 }
 
-.utrecht-pagination__page-link--distanced,
 .utrecht-pagination__page-link ~ .utrecht-pagination__page-link {
   @include utrecht-pagination__page-link--distanced;
 }
