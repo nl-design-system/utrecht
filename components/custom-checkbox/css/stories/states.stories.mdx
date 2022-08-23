@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { CustomCheckbox, decorators } from "../story-template";
+import { CustomCheckbox, decorators, defaultArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
@@ -31,12 +31,14 @@ import "../index.scss";
   </Story>
 </Canvas>
 
-## Checked
+## Checked and Disabled
 
 <Canvas>
   <Story
-    name="Checked"
+    name="checked and disabled"
     args={{
+      ...defaultArgs,
+      disabled: true,
       checked: true,
     }}
   >
@@ -44,14 +46,13 @@ import "../index.scss";
   </Story>
 </Canvas>
 
-## Checked and Disabled
+## Checked
 
 <Canvas>
   <Story
-    name="Checked and Disabled"
+    name="Checked"
     args={{
       checked: true,
-      disabled: true,
     }}
   >
     {CustomCheckbox.bind({})}
@@ -105,9 +106,12 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="Active"
+    name="active"
+    parameters={{
+      pseudo: { active: true },
+    }}
     args={{
-      active: true,
+      ...defaultArgs,
     }}
   >
     {CustomCheckbox.bind({})}
@@ -118,9 +122,9 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="Focus"
+    name="focus"
     args={{
-      focus: true,
+      ...defaultArgs,
     }}
   >
     {CustomCheckbox.bind({})}

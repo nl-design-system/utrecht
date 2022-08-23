@@ -8,37 +8,50 @@ import clsx from 'clsx';
 import React from 'react';
 
 export const argTypes = {
-  active: {
-    description: 'Active',
-    control: 'boolean',
-  },
   checked: {
-    description: 'Checked',
-    control: 'boolean',
+    name: 'checked',
+    type: { name: 'boolean', required: false },
+    table: {
+      defaultValue: { summary: false },
+      category: 'HTML attribute',
+    },
   },
   disabled: {
-    description: 'Disabled',
-    control: 'boolean',
-  },
-  focus: {
-    description: 'Focus',
-    control: 'boolean',
+    name: 'disabled',
+    type: { name: 'boolean', required: false },
+    table: {
+      defaultValue: { summary: false },
+      category: 'HTML attribute',
+    },
   },
   indeterminate: {
-    description: 'Indeterminate',
-    control: 'boolean',
+    name: 'indeterminate',
+    type: { name: 'boolean', required: false },
+    table: {
+      defaultValue: { summary: false },
+    },
   },
   invalid: {
-    description: 'Invalid',
-    control: 'boolean',
+    name: 'invalid',
+    type: { name: 'boolean', required: false },
+    table: {
+      defaultValue: { summary: false },
+    },
   },
   required: {
-    description: 'Required',
-    control: 'boolean',
+    name: 'required',
+    type: { name: 'boolean', required: false },
+    table: {
+      defaultValue: { summary: false },
+      category: 'HTML attribute',
+    },
   },
   value: {
-    description: 'Set the value of the text box',
-    control: 'text',
+    name: 'value',
+    type: { name: 'string', required: false },
+    table: {
+      category: 'HTML attribute',
+    },
   },
 };
 
@@ -51,10 +64,8 @@ export const decorators = [
 ];
 
 export const defaultArgs = {
-  active: false,
   checked: false,
   disabled: false,
-  focus: false,
   indeterminate: false,
   invalid: false,
   required: false,
@@ -66,48 +77,26 @@ export const exampleArgs = {
 };
 
 export const CustomCheckbox = ({
-  active = defaultArgs.active,
-  checked = defaultArgs.checked,
-  disabled = defaultArgs.disabled,
-  focus = defaultArgs.focus,
-  indeterminate = defaultArgs.indeterminate,
-  invalid = defaultArgs.invalid,
-  required = defaultArgs.required,
-  value = defaultArgs.value,
+  checked = false,
+  disabled = false,
+  indeterminate = false,
+  required = false,
+  invalid = false,
+  value = '',
 }) => (
-  <span className="utrecht-custom-checkbox">
-    <input
-      type="checkbox"
-      checked={checked}
-      disabled={disabled}
-      value={value}
-      required={required}
-      className="utrecht-custom-checkbox__input"
-    />
-    <span
-      className={clsx(
-        'utrecht-custom-checkbox__box',
-        active && 'utrecht-custom-checkbox__box--active',
-        checked && 'utrecht-custom-checkbox__box--checked',
-        !checked && 'utrecht-custom-checkbox__box--not-checked',
-        disabled && 'utrecht-custom-checkbox__box--disabled',
-        focus && 'utrecht-custom-checkbox__box--focus',
-        invalid && 'utrecht-custom-checkbox__box--invalid',
-        indeterminate && 'utrecht-custom-checkbox__box--indeterminate',
-      )}
-    >
-      {checked && (
-        <utrecht-icon-checkmark className="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--checked">
-          ✔
-        </utrecht-icon-checkmark>
-      )}
-      {indeterminate && (
-        <utrecht-icon-indeterminate className="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--indeterminate">
-          ■
-        </utrecht-icon-indeterminate>
-      )}
-    </span>
-  </span>
+  <input
+    type="checkbox"
+    checked={checked}
+    disabled={disabled}
+    value={value}
+    required={required}
+    className={clsx(
+      'utrecht-custom-checkbox',
+      'utrecht-custom-checkbox--html-input',
+      invalid && 'utrecht-custom-checkbox--invalid',
+      indeterminate && 'utrecht-custom-checkbox--indeterminate',
+    )}
+  />
 );
 
 export default CustomCheckbox;
