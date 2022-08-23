@@ -1,6 +1,18 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
-export type TextboxTypes = 'email' | 'number' | 'password' | 'tel' | 'text' | 'url';
+export type TextboxTypes =
+  | 'date'
+  | 'datetime-local'
+  | 'email'
+  | 'month'
+  | 'number'
+  | 'password'
+  | 'search'
+  | 'tel'
+  | 'text'
+  | 'time'
+  | 'url'
+  | 'week';
 
 export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
   invalid?: boolean;
