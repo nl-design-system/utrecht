@@ -6,11 +6,12 @@
 @mixin utrecht-pagination {
   font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-pagination-font-size, var(--utrecht-document-font-family));
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-pagination-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-pagination-margin-block-start, 0));
 }
 
 @mixin utrecht-pagination--distanced {
-  margin-block-end: var(--utrecht-pagination-margin-block-end);
-  margin-block-start: var(--utrecht-pagination-margin-block-start);
+  --utrecht-space-around: 1;
 }
 
 @mixin utrecht-pagination__relative-link {

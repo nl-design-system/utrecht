@@ -10,12 +10,13 @@
   border-width: var(--utrecht-table-border-width, 0);
   font-family: var(--utrecht-table-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-table-font-size, inherit);
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-table-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-table-margin-block-start, 0));
   width: 100%;
 }
 
 @mixin utrecht-table--distanced {
-  margin-block-end: var(--utrecht-table-margin-block-end);
-  margin-block-start: var(--utrecht-table-margin-block-start);
+  --utrecht-space-around: 1;
 }
 
 @mixin utrecht-table__caption {

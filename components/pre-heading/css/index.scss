@@ -14,12 +14,11 @@
   font-weight: var(--utrecht-pre-heading-font-weight, var(--utrecht-heading-font-weight, bold));
   letter-spacing: var(--utrecht-pre-heading-letter-spacing);
   line-height: var(--utrecht-pre-heading-line-height);
-  margin-block-end: 0;
-  margin-block-start: 0;
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-pre-heading-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-pre-heading-margin-block-start, 0));
   text-transform: var(--utrecht-pre-heading-text-transform, inherit);
 }
 
 .utrecht-pre-heading--distanced {
-  margin-block-end: var(--utrecht-pre-heading-margin-block-end);
-  margin-block-start: var(--utrecht-pre-heading-margin-block-start);
+  --utrecht-space-around: 1;
 }
