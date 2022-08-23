@@ -223,15 +223,12 @@ Name the class name after the purpose instead:
 
 ## Don't affect the layout outside your component: margins are opt-in
 
-Another aspect of keeping your component CSS side-effect free is by not specifying `margin` by default.
+Another aspect of keeping your component CSS side-effect free is by specifying `margin` as `0` by default, and allow to enable it optionally using `--utrecht-space-around: 1`.
 
 ```css
 .example-paragraph {
   font-size: var(--example-paragraph-font-size);
-}
-
-.example-paragraph--distanced {
-  margin-block-start: var(--example-paragraph-margin-block-start);
+  margin-block-start: calc(var(--utrecht-space-between, 0) * var(--example-paragraph-margin-block-start, 0));
 }
 ```
 
