@@ -2,6 +2,7 @@ import { defineCustomElements } from '@utrecht/web-component-library-stencil/loa
 import parser from 'html-react-parser';
 import defaultsDeep from 'lodash.defaultsdeep';
 import React from 'react';
+import * as ReactDOMServer from 'react-dom/server';
 
 import '@utrecht/components/document/css/index.scss';
 import '@utrecht/components/html-content/css/index.scss';
@@ -15,11 +16,16 @@ export const decorators = [
   // Enable `utrecht-document` component as backdrop
   // Enable `utrecht-theme` to configure the design tokens
   // Ensure old html templates will be rendered as react component
-  (story) => (
-    <div class="utrecht-document utrecht-document--surface utrecht-theme">
-      {typeof story() === 'string' ? parser(story()) : story()}
-    </div>
-  ),
+  (story, storyContext) => {
+    // Hack to make current args for a story available in the transformSource of the docs addon
+    storyContext.parameters.args = storyContext.args;
+
+    return (
+      <div class="utrecht-document utrecht-document--surface utrecht-theme">
+        {typeof story() === 'string' ? parser(story()) : story()}
+      </div>
+    );
+  },
 ];
 
 const defaultTab = {
@@ -80,6 +86,13 @@ const addonDocs = {
     // Stories without concise code snippets can hide the code at Story level.
     source: {
       state: 'open',
+    },
+    transformSource: (src, storyContext) => {
+      // Ensure valid HTML in the Preview source
+      if (storyContext.component) {
+        return ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args));
+      }
+      return src;
     },
   },
 };
