@@ -7,10 +7,7 @@
       "border-width": { "value": "1px" },
       "background-color": { "value": "{utrecht.form-input.background-color}" },
       "border-radius": { "value": "0" },
-      "padding": {},
-      "icon": {
-        "size": { "value": "16px" }
-      },
+      "margin-block-start": { "value": 0 },
       "active": {
         "border-color": {},
         "border-width": {},
@@ -18,38 +15,26 @@
         "color": {}
       },
       "focus": {
-        "border-color": {},
+        "border-color": { "value": "" },
         "border-width": { "value": "3px" },
-        "background-color": {}
+        "background-color": { "value": "" }
       },
       "disabled": {
         "border-color": { "value": "{utrecht.color.grey.80}" },
         "border-width": {},
-        "background-color": { "value": "{utrecht.color.white}" },
-        "color": { "value": "{utrecht.color.grey.80}" }
+        "background-color": { "value": "{utrecht.color.grey.80}" }
       },
       "checked": {
         "border-color": { "value": "{utrecht.color.blue.40}" },
         "border-width": {},
-        "background-color": { "value": "{utrecht.color.blue.40}" },
-        "color": { "value": "{utrecht.color.white}" },
-        "active": {
-          "border-color": {},
-          "background-color": {}
-        }
+        "background-color": { "value": "{utrecht.color.blue.40}" }
       },
       "indeterminate": {
-        "color": {}
+        "background-color": { "value": "{utrecht.color.blue.40}" }
       },
       "invalid": {
         "border-color": { "value": "{utrecht.form-input.invalid.border-color}" },
-        "border-width": {},
-        "background-color": { "value": "{utrecht.feedback.invalid.background-color}" },
-        "color": { "value": "{utrecht.color.white}" },
-        "active": {
-          "border-color": {},
-          "background-color": {}
-        }
+        "border-width": {}
       }
     }
   }
