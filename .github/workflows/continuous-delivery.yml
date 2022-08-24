@@ -21,10 +21,23 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: "16.16.x"
+      - name: Get npm cache directory
+        id: npm-cache-dir
+        run: |
+          echo "::set-output name=dir::$(npm config get cache)"
+
+      - uses: actions/cache@v3
+        id: npm-cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Install
         run: |
-          npm ci
+          npm install
           npm ls
 
       - name: "Continuous Integration: lint"
@@ -95,14 +108,23 @@ jobs:
           fetch-depth: 0
           token: ${{ secrets.GH_TOKEN }}
 
-      - name: Set up Node.js version
-        uses: actions/setup-node@v3
-        with:
-          node-version: "16.16.x"
-
-      - name: "Continuous Deployment: install"
+      - name: Get npm cache directory
+        id: npm-cache-dir
         run: |
-          npm ci
+          echo "::set-output name=dir::$(npm config get cache)"
+
+      - uses: actions/cache@v3
+        id: npm-cache
+        if: steps.npm-cache.outputs.cache-hit != 'true'
+        with:
+          path: ${{ steps.npm-cache-dir.outputs.dir }}
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - name: Install
+        run: |
+          npm install
           npm ls
 
       - name: "Continuous Deployment: build"
