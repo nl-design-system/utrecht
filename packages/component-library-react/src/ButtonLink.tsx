@@ -8,6 +8,7 @@ import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren } from 'react';
 
 interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  appearance?: string;
   external?: boolean;
 }
 
@@ -23,7 +24,7 @@ const onKeyDown = (evt: KeyboardEvent<HTMLAnchorElement>) => {
 
 export const ButtonLink = forwardRef(
   (
-    { children, className, external, role, ...restProps }: PropsWithChildren<ButtonLinkProps>,
+    { appearance, children, className, external, role, ...restProps }: PropsWithChildren<ButtonLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     let props = restProps;
@@ -47,7 +48,12 @@ export const ButtonLink = forwardRef(
         className={clsx(
           'utrecht-button-link',
           'utrecht-button-link--html-a',
-          { 'utrecht-button-link--external': external },
+          {
+            'utrecht-button-link--external': external,
+            'utrecht-button-link--primary-action': appearance === 'primary-action-button',
+            'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
+            'utrecht-button-link--subtle': appearance === 'subtle-button',
+          },
           className,
         )}
         rel={external ? 'external noopener noreferrer' : undefined}
