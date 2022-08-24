@@ -1,0 +1,206 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+input:not([type]),
+input[type=date i],
+input[type=datetime-local i],
+input[type=email i],
+input[type=month i],
+input[type=number i],
+input[type=password i],
+input[type=search i],
+input[type=tel i],
+input[type=text i],
+input[type=time i],
+input[type=url i],
+input[type=week i] {
+  background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));
+  border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width));
+  border-bottom-width: var(--utrecht-textbox-border-bottom-width, var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width)));
+  border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color));
+  border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-input-border-radius, 0));
+  border-style: solid;
+  box-sizing: border-box;
+  color: var(--utrecht-textbox-color, var(--utrecht-form-input-color));
+  font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-input-font-family));
+  font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-input-font-size, 1em));
+  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-input-max-inline-size));
+  padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-input-padding-block-end));
+  padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-input-padding-block-start));
+  padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
+  padding-inline-start: var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  width: 100%;
+}
+input:not([type]):disabled,
+input[type=date i]:disabled,
+input[type=datetime-local i]:disabled,
+input[type=email i]:disabled,
+input[type=month i]:disabled,
+input[type=number i]:disabled,
+input[type=password i]:disabled,
+input[type=search i]:disabled,
+input[type=tel i]:disabled,
+input[type=text i]:disabled,
+input[type=time i]:disabled,
+input[type=url i]:disabled,
+input[type=week i]:disabled {
+  background-color: var(--utrecht-textbox-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+input:not([type]):focus,
+input[type=date i]:focus,
+input[type=datetime-local i]:focus,
+input[type=email i]:focus,
+input[type=month i]:focus,
+input[type=number i]:focus,
+input[type=password i]:focus,
+input[type=search i]:focus,
+input[type=tel i]:focus,
+input[type=text i]:focus,
+input[type=time i]:focus,
+input[type=url i]:focus,
+input[type=week i]:focus {
+  background-color: var(--utrecht-textbox-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+input:not([type]):focus:not(:focus-visible),
+input[type=date i]:focus:not(:focus-visible),
+input[type=datetime-local i]:focus:not(:focus-visible),
+input[type=email i]:focus:not(:focus-visible),
+input[type=month i]:focus:not(:focus-visible),
+input[type=number i]:focus:not(:focus-visible),
+input[type=password i]:focus:not(:focus-visible),
+input[type=search i]:focus:not(:focus-visible),
+input[type=tel i]:focus:not(:focus-visible),
+input[type=text i]:focus:not(:focus-visible),
+input[type=time i]:focus:not(:focus-visible),
+input[type=url i]:focus:not(:focus-visible),
+input[type=week i]:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+input:not([type]):invalid, input:not([type])[aria-invalid=true],
+input[type=date i]:invalid,
+input[type=date i][aria-invalid=true],
+input[type=datetime-local i]:invalid,
+input[type=datetime-local i][aria-invalid=true],
+input[type=email i]:invalid,
+input[type=email i][aria-invalid=true],
+input[type=month i]:invalid,
+input[type=month i][aria-invalid=true],
+input[type=number i]:invalid,
+input[type=number i][aria-invalid=true],
+input[type=password i]:invalid,
+input[type=password i][aria-invalid=true],
+input[type=search i]:invalid,
+input[type=search i][aria-invalid=true],
+input[type=tel i]:invalid,
+input[type=tel i][aria-invalid=true],
+input[type=text i]:invalid,
+input[type=text i][aria-invalid=true],
+input[type=time i]:invalid,
+input[type=time i][aria-invalid=true],
+input[type=url i]:invalid,
+input[type=url i][aria-invalid=true],
+input[type=week i]:invalid,
+input[type=week i][aria-invalid=true] {
+  background-color: var(--utrecht-textbox-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-textbox-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))));
+}
+input:not([type]):read-only,
+input[type=date i]:read-only,
+input[type=datetime-local i]:read-only,
+input[type=email i]:read-only,
+input[type=month i]:read-only,
+input[type=number i]:read-only,
+input[type=password i]:read-only,
+input[type=search i]:read-only,
+input[type=tel i]:read-only,
+input[type=text i]:read-only,
+input[type=time i]:read-only,
+input[type=url i]:read-only,
+input[type=week i]:read-only {
+  border-color: var(--utrecht-textbox-read-only-border-color, var(--utrecht-form-input-read-only-border-color, var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-read-only-color, var(--utrecht-form-input-read-only-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color))));
+}
+input:not([type])::placeholder,
+input[type=date i]::placeholder,
+input[type=datetime-local i]::placeholder,
+input[type=email i]::placeholder,
+input[type=month i]::placeholder,
+input[type=number i]::placeholder,
+input[type=password i]::placeholder,
+input[type=search i]::placeholder,
+input[type=tel i]::placeholder,
+input[type=text i]::placeholder,
+input[type=time i]::placeholder,
+input[type=url i]::placeholder,
+input[type=week i]::placeholder {
+  color: var(--utrecht-textbox-placeholder-color, var(--utrecht-form-input-placeholder-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color))));
+  font-style: var(--utrecht-form-input-placeholder-font-style);
+  opacity: 100%;
+}
+
+input[autocomplete~=current-password i],
+input[autocomplete~=new-password i],
+input[type=password i] {
+  font-variant-ligatures: none;
+  font-variant-numeric: slashed-zero;
+}
+
+input[autocomplete~=bday i],
+input[autocomplete~=bday-day i],
+input[autocomplete~=bday-month i],
+input[autocomplete~=bday-year i],
+input[autocomplete~=cc-csc i],
+input[autocomplete~=cc-exp i],
+input[autocomplete~=cc-exp-month i],
+input[autocomplete~=cc-exp-year i],
+input[autocomplete~=cc-number i],
+input[autocomplete~=one-time-code i],
+input[autocomplete~=postal-code i],
+input[autocomplete~=tel i],
+input[autocomplete~=tel-area-code i],
+input[autocomplete~=tel-country-code i],
+input[autocomplete~=tel-extension i],
+input[autocomplete~=tel-local i],
+input[autocomplete~=tel-national i],
+input[autocomplete~=transaction-amount i],
+input[inputmode=decimal i],
+input[inputmode=numeric i],
+input[inputmode=tel i],
+input[type=number i],
+input[type=tel i] {
+  -moz-appearance: textfield; /* avoid spinner input in Firefox */
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+input[inputmode=email i],
+input[inputmode=url i],
+input[type=email i],
+input[type=url i] {
+  font-variant-ligatures: none;
+}
+
+/*# sourceMappingURL=index.css.map */

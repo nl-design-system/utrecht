@@ -1,0 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+:host {
+  background-color: var(--utrecht-table-header-background-color);
+  color: var(--utrecht-table-header-color);
+  font-weight: var(--utrecht-table-header-font-weight);
+  text-transform: var(--utrecht-table-header-text-transform);
+  vertical-align: bottom;
+  display: table-header-group;
+}
+
+/*# sourceMappingURL=table-header.css.map */

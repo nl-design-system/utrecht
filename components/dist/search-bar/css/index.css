@@ -1,0 +1,39 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-search-bar {
+  --utrecht-button-border-color: var(--utrecht-search-bar-button-border-color);
+  --utrecht-button-focus-transform-scale: var(--utrecht-search-bar-hover-transform);
+  --utrecht-button-font-size: var(--utrecht-search-bar-button-font-size);
+  --utrecht-button-font-weight: var(--utrecht-search-bar-button-font-weight);
+  --utrecht-button-letter-spacing: var(--utrecht-search-bar-button-letter-spacing);
+  --utrecht-button-primary-action-background-color: var(--utrecht-search-bar-button-background-color);
+  --utrecht-button-primary-action-color: var(--utrecht-search-bar-button-color);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-search-bar-hover-background-color);
+  --utrecht-button-text-transform: var(--utrecht-search-bar-button-text-transform);
+  --utrecht-textbox-border-color: var(--utrecht-search-bar-textbox-border-color);
+  --utrecht-textbox-padding-inline-start: var(--utrecht-search-bar-textbox-padding-inline-start);
+  --utrecht-textbox-border-bottom-width: var(--utrecht-search-bar-textbox-border-bottom-width);
+  display: flex;
+}
+
+.utrecht-search-bar__input {
+  background-image: var(--utrecht-search-bar-input-background-image, none);
+  background-position-x: var(--utrecht-search-bar-textbox-background-position-x);
+  background-position-y: var(--utrecht-search-bar-textbox-background-position-y);
+  background-repeat: no-repeat;
+  background-size: var(--utrecht-search-bar-textbox-background-size);
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,124 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/* stylelint-disable scss/no-global-function-names */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/*
+
+# CSS implementation
+
+## `text-decoration-skip`
+
+`text-decoration-skip` can be helpful to avoid making some texts unreadable.
+For example by obscuring Arabic diacritics.
+
+However, the combination of a greater thickness and skipping this thick underline
+leads to a very unappealing rendering of the underline. To avoid this,
+`text-decoration-skip` is disabled for interactive states.
+
+For design token configurations that have identical thickness for normal and interactive
+states, this will lead to the (undesirable) effect that the focus/hover effect is switching
+from an interrupted to an uninterrupted underline (for some texts).
+
+Apart from making `skip-ink` configurable for normal/focus/hover, there is no good solution yet.
+
+---
+
+Disabling `text-decoration-skip` for interactive states obscures some texts, and we assume for now
+that moving the pointer away from a link or having focus elsewhere first is simple enough to
+not make this too inconvenient.
+
+---
+
+Some folks implement the underline of links using `border-bottom` or even using a finely crafted
+`linear-gradient()` with a solid color at the bottom and transparent behind the text. These approaches
+would unfortunately not be able to provide the improved readability of `text-decoration-skip`.
+
+## `text-decoration-thickness`
+
+Varying `text-decoration-thickness` can be used to distinguish interactive states.
+
+---
+
+`text-decoration-thickness` appears to have rendering differences between Chrome and Safari.
+In Safari the line becomes thicker with extra pixels added to the bottom, while in Chrome
+the underline offset also seems to increase along with the thickness, which effectively means
+the underline is closer to the next line than in Safari.
+
+---
+
+It might be nice to use font-relative units for `text-decoration-thickness`, and that is why we
+use the `max()` function to ensure the underline remains visible for every font size.
+
+## `transition`
+
+`text-decoration-thickness` could be a candidate for animating between interactive states,
+however browsers don't seem to have implemented great looking supixel tweening yet.
+
+`text-decoration-skip` also makes the transition more challenging to implement.
+
+*/
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+a:link {
+  color: var(--utrecht-link-color, blue);
+  text-decoration: var(--utrecht-link-text-decoration, underline);
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: max(var(--utrecht-link-text-decoration-thickness), 1px);
+  text-underline-offset: var(--utrecht-link-text-underline-offset);
+}
+
+a:visited {
+  color: var(--utrecht-link-visited-color, var(--utrecht-link-color));
+}
+
+a:hover {
+  color: var(--utrecht-link-hover-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-hover-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-hover-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+}
+
+a:active {
+  color: var(--utrecht-link-active-color, var(--utrecht-link-color));
+}
+
+a:focus {
+  background-color: var(--utrecht-link-focus-background-color, transparent);
+  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+a:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+a[href^="tel:" i] {
+  white-space: nowrap;
+}
+
+/*# sourceMappingURL=index.css.map */

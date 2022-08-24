@@ -1,0 +1,70 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox {
+  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-checkbox--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-checkbox--html-input:disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-checkbox--html-input:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-checkbox--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,129 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field {
+  font-family: var(--utrecht-document-font-family, inherit);
+  max-inline-size: var(--utrecht-form-field-max-inline-size);
+}
+
+.utrecht-form-field--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-form-field__label--checkbox {
+  margin-inline-start: 1ch;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-label {
+  color: var(--utrecht-form-label-color);
+  font-size: var(--utrecht-form-label-font-size);
+  font-weight: var(--utrecht-form-label-font-weight);
+}
+
+.utrecht-form-label--checkbox {
+  color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  font-weight: var(--utrecht-form-label-checkbox-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+.utrecht-form-label--checked {
+  font-weight: var(--utrecht-form-label-checked-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+.utrecht-form-label--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+  font-weight: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
+}
+
+.utrecht-form-label--radio {
+  color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  font-weight: var(--utrecht-form-label-radio-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox {
+  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-checkbox--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-checkbox--html-input:disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-checkbox--html-input:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-checkbox--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

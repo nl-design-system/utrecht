@@ -1,0 +1,36 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-1 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-1-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-1-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-1-font-size);
+  font-weight: var(--utrecht-heading-1-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-1-letter-spacing);
+  line-height: var(--utrecht-heading-1-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-1-text-transform, inherit);
+}
+
+.utrecht-heading-1--distanced {
+  margin-block-end: var(--utrecht-heading-1-margin-block-end);
+  margin-block-start: var(--utrecht-heading-1-margin-block-start);
+}
+
+/*# sourceMappingURL=index.css.map */

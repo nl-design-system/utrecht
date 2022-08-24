@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+label {
+  color: var(--utrecht-form-label-color);
+  font-size: var(--utrecht-form-label-font-size);
+  font-weight: var(--utrecht-form-label-font-weight);
+}
+
+input[type=checkbox i] ~ label {
+  color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  font-weight: var(--utrecht-form-label-checkbox-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+input[type=radio i] ~ label {
+  color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  font-weight: var(--utrecht-form-label-radio-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+/*# sourceMappingURL=index.css.map */

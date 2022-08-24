@@ -1,0 +1,64 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-data-list {
+  /* also set `margin-block` to reset browser styling of <dl> */
+  display: block;
+  margin-block-end: calc(var(--utrecht-distance, 0) * var(--utrecht-data-list-margin-block-end));
+  margin-block-start: calc(var(--utrecht-distance, 0) * var(--utrecht-data-list-margin-block-start));
+}
+
+.utrecht-data-list__item-key {
+  color: var(--utrecht-data-list-item-key-color);
+  font-size: var(--utrecht-data-list-item-key-font-size);
+  font-weight: var(--utrecht-data-list-item-key-font-weight);
+  grid-area: label;
+  line-height: var(--utrecht-data-list-item-key-line-height);
+}
+
+.utrecht-data-list__item-value {
+  /* configure `min-block-size` in case the value is empty */
+  color: var(--utrecht-data-list-label-color);
+  font-size: var(--utrecht-data-list-item-value-font-size);
+  font-weight: var(--utrecht-data-list-item-value-font-weight);
+  grid-area: value;
+  line-height: var(--utrecht-data-list-label-line-height);
+  min-block-size: var(--utrecht-data-list-label-line-height);
+}
+
+.utrecht-data-list__actions--html-dd,
+.utrecht-data-list__item-value--html-dd {
+  /* reset browser styling of <dd> */
+  margin-inline-start: 0;
+}
+
+.utrecht-data-list__item-value--multiline {
+  white-space: pre-line;
+}
+
+.utrecht-data-list--rows .utrecht-data-list__actions {
+  align-items: last baseline;
+  display: flex;
+  justify-content: flex-end;
+}
+.utrecht-data-list--rows .utrecht-data-list__item {
+  display: grid;
+  grid-template-areas: "label actions" "value value";
+  margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+}
+.utrecht-data-list--rows .utrecht-data-list__item:first-of-type {
+  margin-block-start: 0;
+}
+.utrecht-data-list--rows .utrecht-data-list__item-value {
+  margin-block-start: var(--utrecht-data-list-rows-item-value-margin-block-start);
+}
+
+/*# sourceMappingURL=index.css.map */

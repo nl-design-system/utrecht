@@ -1,0 +1,72 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-mapcontrolbutton {
+  --utrecht-icon-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-color);
+  align-items: center;
+  background-color: var(--utrecht-mapcontrolbutton-background-color);
+  border-color: var(--utrecht-mapcontrolbutton-border-color);
+  border-radius: var(--utrecht-mapcontrolbutton-border-radius);
+  border-style: var(--utrecht-mapcontrolbutton-border-style);
+  border-width: var(--utrecht-mapcontrolbutton-border-width);
+  color: var(--utrecht-mapcontrolbutton-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-block-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  min-inline-size: var(--utrecht-mapcontrolbutton-min-inline-size);
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-mapcontrolbutton:disabled,
+.utrecht-mapcontrolbutton--disabled {
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-disabled-color, var(--utrecht-mapcontrolbutton-color));
+  background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
+  border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
+  color: var(--utrecht-mapcontrolbutton-disabled-color);
+}
+
+.utrecht-mapcontrolbutton--focus-visible, .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled=true]):not(.utrecht-mapcontrolbutton--disabled) {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-mapcontrolbutton--focus, .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled=true]):not(.utrecht-mapcontrolbutton--disabled) {
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+}
+
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+.utrecht-mapcontrolbutton:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-mapcontrolbutton--hover:not(:disabled),
+.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
+  background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
+  color: var(--utrecht-mapcontrolbutton-color);
+}
+
+.utrecht-mapcontrolbutton__label {
+  display: block;
+  padding-inline-end: var(--utrecht-mapcontrolbutton-label-margin-inline-end);
+  padding-inline-start: var(--utrecht-mapcontrolbutton-label-margin-inline-start);
+}
+
+/*# sourceMappingURL=index.css.map */

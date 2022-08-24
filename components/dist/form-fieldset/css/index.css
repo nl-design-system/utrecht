@@ -1,0 +1,48 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-form-fieldset--html-fieldset {
+  border: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  min-width: 0;
+  padding-block-end: 0;
+  padding-block-start: 0.01em;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-form-fieldset__legend--html-legend {
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-form-fieldset--distanced {
+  margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
+  margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
+}
+
+.utrecht-form-fieldset__legend {
+  color: var(--utrecht-form-fieldset-legend-color, var(--utrecht-document-color, inherit));
+  font-family: var(--utrecht-form-fieldset-legend-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-form-fieldset-legend-font-size);
+  font-weight: var(--utrecht-form-fieldset-legend-font-weight);
+  line-height: var(--utrecht-form-fieldset-legend-line-height);
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  text-transform: var(--utrecht-form-fieldset-legend-text-transform);
+}
+
+.utrecht-form-fieldset__legend--distanced {
+  margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
+  margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
+}
+
+/*# sourceMappingURL=index.css.map */

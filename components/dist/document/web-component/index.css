@@ -1,0 +1,39 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-document {
+  /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
+  color: var(--utrecht-document-color, inherit);
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-document-font-size, inherit);
+  font-weight: var(--utrecht-document-font-weight, inherit);
+  line-height: var(--utrecht-document-line-height, inherit);
+  text-rendering: optimizeLegibility;
+}
+.utrecht-document :lang(ar) {
+  /* `letter-spacing` design tokens break Arabic text rendering, avoid that */
+  letter-spacing: 0 !important;
+}
+
+.utrecht-document--surface {
+  background-color: var(--utrecht-document-background-color, inherit);
+}
+
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

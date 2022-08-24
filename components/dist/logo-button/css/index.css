@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-logo-button {
+  --utrecht-button-min-block-size: var(--utrecht-logo-button-block-size, 50px);
+  --utrecht-logo-max-block-size: var(--utrecht-logo-button-block-size, 50px);
+  --utrecht-logo-max-inline-size: var(--utrecht-logo-button-block-size, 50px);
+  display: inline-flex;
+  gap: var(--utrecht-space-inline-sm);
+}
+
+.utrecht-logo-button__logo {
+  order: 1;
+}
+
+.utrecht-logo-button__button {
+  order: 2;
+}
+
+/*# sourceMappingURL=index.css.map */
