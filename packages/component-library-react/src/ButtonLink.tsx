@@ -46,7 +46,7 @@ export const ButtonLink = forwardRef(
         role={role}
         className={clsx(
           'utrecht-button-link',
-          'utrecht-button-link--html-button',
+          'utrecht-button-link--html-a',
           { 'utrecht-button-link--external': external },
           className,
         )}
