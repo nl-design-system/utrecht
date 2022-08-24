@@ -134,7 +134,6 @@ jobs:
       - name: "Continuous Integration: dry run of release"
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GITHUB_HEAD_REF: ${{ env.GITHUB_HEAD_REF }}
           GITHUB_REF_NAME: ${{ env.GITHUB_REF_NAME }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
