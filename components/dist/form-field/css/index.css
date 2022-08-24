@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field {
+  font-family: var(--utrecht-document-font-family, inherit);
+  max-inline-size: var(--utrecht-form-field-max-inline-size);
+}
+
+.utrecht-form-field--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+/*# sourceMappingURL=index.css.map */

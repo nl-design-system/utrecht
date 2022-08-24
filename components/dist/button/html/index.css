@@ -1,0 +1,140 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+input[type=button i],
+input[type=reset i],
+input[type=submit i],
+button {
+  --_utrecht-button-background-color: var(--utrecht-button-background-color);
+  --_utrecht-button-color: var(--utrecht-button-color);
+  --_utrecht-button-border-color: var(--utrecht-button-border-color, transparent);
+  --_utrecht-button-border-bottom-color: var(
+    --utrecht-button-border-bottom-color,
+    var(--utrecht-button-border-color, transparent)
+  );
+  --_utrecht-button-disabled-background-color: var(
+    --utrecht-button-disabled-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-disabled-border-color: var(
+    --utrecht-button-disabled-border-color,
+    var(--utrecht-button-border-color)
+  );
+  --_utrecht-button-disabled-color: var(--utrecht-button-disabled-color, var(--utrecht-button-color));
+  --_utrecht-button-focus-background-color: var(
+    --utrecht-button-focus-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-focus-border-color: var(--utrecht-button-focus-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-focus-color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
+  --_utrecht-button-hover-background-color: var(
+    --utrecht-button-hover-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-hover-border-color: var(--utrecht-button-hover-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-hover-color: var(--utrecht-button-hover-color, var(--utrecht-button-color));
+  --_utrecht-button-active-background-color: var(
+    --utrecht-button-active-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-active-border-color: var(--utrecht-button-active-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-active-color: var(--utrecht-button-active-color, var(--utrecht-button-color));
+  --_utrecht-button-border-width: var(--utrecht-button-border-width, 0);
+  --_utrecht-button-border-bottom-width: var(
+    --utrecht-button-border-bottom-width,
+    var(--utrecht-button-border-width, 0)
+  );
+  align-items: center;
+  background-color: var(--_utrecht-button-background-color);
+  border-color: var(--_utrecht-button-border-color);
+  border-bottom-color: var(--_utrecht-button-border-bottom-color);
+  border-radius: var(--utrecht-button-border-radius);
+  border-style: solid;
+  border-width: var(--_utrecht-button-border-width);
+  border-bottom-width: var(--_utrecht-button-border-bottom-width);
+  box-sizing: border-box;
+  color: var(--utrecht-button-color);
+  display: inline-flex;
+  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-weight: var(--utrecht-button-font-weight);
+  inline-size: var(--utrecht-button-inline-size, auto);
+  justify-content: center;
+  letter-spacing: var(--utrecht-button-letter-spacing);
+  line-height: var(--utrecht-button-line-height);
+  min-block-size: var(--utrecht-button-min-block-size, 44px);
+  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
+  padding-block-end: var(--utrecht-button-padding-block-end);
+  padding-block-start: var(--utrecht-button-padding-block-start);
+  padding-inline-end: var(--utrecht-button-padding-inline-end);
+  padding-inline-start: var(--utrecht-button-padding-inline-start);
+  text-transform: var(--utrecht-button-text-transform);
+  user-select: none;
+  margin-block-end: var(--utrecht-button-margin-block-end);
+  margin-block-start: var(--utrecht-button-margin-block-start);
+  margin-inline-end: var(--utrecht-button-margin-inline-end);
+  margin-inline-start: var(--utrecht-button-margin-inline-start);
+}
+
+button[type=submit i],
+input[type=submit i] {
+  cursor: var(--utrecht-action-submit-cursor);
+}
+
+button:disabled,
+button[aria-disabled=true] {
+  background-color: var(--_utrecht-button-disabled-background-color);
+  border-color: var(--_utrecht-button-disabled-border-color);
+  color: var(--_utrecht-button-disabled-color);
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+button[aria-busy=true],
+button[aria-disabled=true][aria-busy=true],
+button:disabled[aria-busy=true] {
+  cursor: var(--utrecht-action-busy-cursor);
+}
+
+button:active:not([aria-disabled=true]):not(:disabled) {
+  background-color: var(--_utrecht-button-active-background-color);
+  border-color: var(--_utrecht-button-active-border-color);
+  color: var(--_utrecht-button-active-color);
+}
+
+button:hover:not([aria-disabled=true]):not(:disabled) {
+  background-color: var(--_utrecht-button-hover-background-color);
+  border-color: var(--_utrecht-button-hover-border-color);
+  color: var(--_utrecht-button-hover-color);
+  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+}
+
+button:focus:not([aria-disabled=true]):not(:disabled) {
+  background-color: var(--_utrecht-button-focus-background-color);
+  border-color: var(--_utrecht-button-focus-border-color);
+  color: var(--_utrecht-button-focus-color);
+}
+
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+button:focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+/*# sourceMappingURL=index.css.map */

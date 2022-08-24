@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+.utrecht-link-social {
+  --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+  align-items: center;
+  background-color: var(--utrecht-link-social-background-color);
+  border-color: var(--utrecht-link-social-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-link-social-border-width);
+  color: var(--utrecht-link-social-color);
+  display: inline-flex;
+  height: var(--utrecht-link-social-size);
+  justify-content: center;
+  text-align: center;
+  width: var(--utrecht-link-social-size);
+}
+
+.utrecht-link-social--distanced {
+  margin-inline-start: var(--utrecht-link-social-margin-inline-start);
+}
+
+/*# sourceMappingURL=index.css.map */

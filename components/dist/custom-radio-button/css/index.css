@@ -1,0 +1,135 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-custom-radio-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--utrecht-custom-radio-button-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-color: var(--utrecht-custom-radio-button-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-custom-radio-button-border-width);
+  height: var(--utrecht-custom-radio-button-size);
+  margin-block-start: var(--utrecht-custom-radio-button-margin-block-start);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  vertical-align: top;
+  width: var(--utrecht-custom-radio-button-size);
+}
+
+.utrecht-custom-radio-button--checked {
+  background-color: var(--utrecht-custom-radio-button-checked-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-checked-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-checked-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-checked-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--active {
+  background-color: var(--utrecht-custom-radio-button-active-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-active-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-active-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-active-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--focus {
+  background-color: var(--utrecht-custom-radio-button-focus-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-focus-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-focus-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-focus-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-custom-radio-button--disabled {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-disabled-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-disabled-color, var(--utrecht-custom-radio-button-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-custom-radio-button--disabled:checked {
+  background-color: var(--utrecht-custom-radio-button-disabled-background-color, var(--utrecht-custom-radio-button-background-color));
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+.utrecht-custom-radio-button--disabled:active {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+
+.utrecht-custom-radio-button--invalid {
+  border-color: var(--utrecht-custom-radio-button-invalid-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-invalid-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-invalid-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--html-input:disabled {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-disabled-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-disabled-color, var(--utrecht-custom-radio-button-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-custom-radio-button--html-input:disabled:checked {
+  background-color: var(--utrecht-custom-radio-button-disabled-background-color, var(--utrecht-custom-radio-button-background-color));
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+.utrecht-custom-radio-button--html-input:disabled:active {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+.utrecht-custom-radio-button--html-input:focus {
+  background-color: var(--utrecht-custom-radio-button-focus-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-focus-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-focus-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-focus-color, var(--utrecht-custom-radio-button-color));
+}
+.utrecht-custom-radio-button--html-input:focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-custom-radio-button--html-input:invalid, .utrecht-custom-radio-button--html-input[aria-invalid=true] {
+  border-color: var(--utrecht-custom-radio-button-invalid-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-invalid-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-invalid-color, var(--utrecht-custom-radio-button-color));
+}
+.utrecht-custom-radio-button--html-input:active {
+  background-color: var(--utrecht-custom-radio-button-active-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-active-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-active-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-active-color, var(--utrecht-custom-radio-button-color));
+}
+.utrecht-custom-radio-button--html-input:checked {
+  background-color: var(--utrecht-custom-radio-button-checked-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-checked-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-checked-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-checked-color, var(--utrecht-custom-radio-button-color));
+}
+
+/*# sourceMappingURL=index.css.map */

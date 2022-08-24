@@ -1,0 +1,93 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-badge-status {
+  background-color: var(--utrecht-badge-background-color, hsl(0deg, 0%, 0%));
+  border-radius: var(--utrecht-badge-border-radius, 0.5ch);
+  color: var(--utrecht-badge-color, hsl(0deg, 0%, 100%));
+  display: inline-block;
+  font-family: var(--utrecht-document-font-family, sans-serif);
+  font-size: var(--utrecht-badge-font-size, inherit);
+  font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
+  font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
+  line-height: var(--utrecht-badge-line-height);
+  padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);
+  padding-inline-start: var(--utrecht-badge-padding-inline, 0.5ch);
+  text-decoration: none; /* no inheritance */
+  letter-spacing: var(--utrecht-badge-status-letter-spacing, inherit);
+  text-transform: var(--utrecht-badge-status-text-transform, inherit);
+}
+
+.utrecht-badge-status--danger {
+  background-color: var(--utrecht-feedback-danger-fill-background-color, hsl(0deg, 100%, 50%));
+  color: var(--utrecht-feedback-danger-fill-color, white);
+}
+
+.utrecht-badge-status--warning {
+  background-color: var(--utrecht-feedback-warning-fill-background-color, hsl(39deg, 100%, 50%));
+  color: var(--utrecht-feedback-warning-fill-color, white);
+}
+
+.utrecht-badge-status--safe {
+  background-color: var(--utrecht-feedback-safe-fill-background-color, hsl(120deg, 100%, 25%));
+  color: var(--utrecht-feedback-safe-fill-color, white);
+}
+
+.utrecht-badge-status--neutral {
+  background-color: var(--utrecht-feedback-neutral-fill-background-color, black);
+  color: var(--utrecht-feedback-neutral-fill-color, white);
+}
+
+.utrecht-badge-status--valid {
+  background-color: var(--utrecht-feedback-valid-fill-background-color, var(--utrecht-feedback-safe-fill-background-color, hsl(0deg, 100%, 50%)));
+  color: var(--utrecht-feedback-valid-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--invalid {
+  background-color: var(--utrecht-feedback-invalid-fill-background-color, var(--utrecht-feedback-danger-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-invalid-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+.utrecht-badge-status--error {
+  background-color: var(--utrecht-feedback-error-fill-background-color, var(--utrecht-feedback-danger-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-error-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+.utrecht-badge-status--success {
+  background-color: var(--utrecht-feedback-success-fill-background-color, var(--utrecht-feedback-safe-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-success-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--active {
+  background-color: var(--utrecht-feedback-active-fill-background-color, var(--utrecht-feedback-safe-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-active-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--inactive {
+  background-color: var(--utrecht-feedback-inactive-fill-background-color, var(--utrecht-feedback-danger-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-inactive-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+:host {
+  display: inline-block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

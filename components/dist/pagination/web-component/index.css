@@ -1,0 +1,140 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-pagination__page-link:focus,
+.utrecht-pagination__relative-link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-pagination__page-link:focus:not(:focus-visible),
+.utrecht-pagination__relative-link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-pagination {
+  font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-pagination-font-size, var(--utrecht-document-font-family));
+}
+
+.utrecht-pagination--distanced {
+  margin-block-end: var(--utrecht-pagination-margin-block-end);
+  margin-block-start: var(--utrecht-pagination-margin-block-start);
+}
+
+.utrecht-pagination__relative-link {
+  background-color: var(--utrecht-pagination-relative-link-background-color);
+  border-color: var(--utrecht-pagination-relative-link-border-color);
+  border-radius: var(--utrecht-pagination-relative-link-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-pagination-relative-link-border-width, 0);
+  color: var(--utrecht-pagination-relative-link-color);
+  display: inline-block;
+  font-weight: var(--utrecht-pagination-relative-link-font-weight);
+  padding-block-end: var(--utrecht-pagination-relative-link-padding-block-end);
+  padding-block-start: var(--utrecht-pagination-relative-link-padding-block-start);
+  padding-inline-end: var(--utrecht-pagination-relative-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-pagination-relative-link-padding-inline-start);
+  text-decoration: var(--utrecht-pagination-relative-link-text-decoration);
+  text-transform: var(--utrecht-pagination-relative-link-text-transform);
+}
+
+.utrecht-pagination__relative-link--next {
+  margin-inline-start: var(--utrecht-pagination-relative-link-distanced-margin-inline-start);
+}
+
+.utrecht-pagination__relative-link--prev {
+  margin-inline-end: var(--utrecht-pagination-relative-link-distanced-margin-inline-end);
+}
+
+.utrecht-pagination__relative-link--disabled {
+  background-color: var(--utrecht-pagination-relative-link-disabled-background-color, var(--utrecht-pagination-relative-link-background-color));
+  color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
+}
+
+.utrecht-pagination__relative-link--hover,
+.utrecht-pagination__relative-link:hover {
+  background-color: var(--utrecht-pagination-relative-link-hover-background-color, var(--utrecht-pagination-relative-link-background-color));
+  border-color: var(--utrecht-pagination-relative-link-hover-border-color, var(--utrecht-pagination-relative-link-border-color));
+  color: var(--utrecht-pagination-relative-link-hover-color, var(--utrecht-pagination-relative-link-color));
+}
+
+.utrecht-pagination__page-link {
+  background-color: var(--utrecht-pagination-page-link-background-color);
+  border-color: var(--utrecht-pagination-page-link-border-color, 0);
+  border-radius: var(--utrecht-pagination-page-link-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-pagination-page-link-border-width);
+  color: var(--utrecht-pagination-page-link-color);
+  display: inline-block;
+  font-weight: var(--utrecht-pagination-page-link-font-weight);
+  padding-block-end: var(--utrecht-pagination-page-link-padding-block-end);
+  padding-block-start: var(--utrecht-pagination-page-link-padding-block-start);
+  padding-inline-end: var(--utrecht-pagination-page-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-pagination-page-link-padding-inline-start);
+  text-decoration: var(--utrecht-pagination-page-link-text-decoration);
+}
+
+.utrecht-pagination__page-link--current {
+  --utrecht-pagination-page-link-background-color: var(--utrecht-pagination-page-link-current-background-color);
+  --utrecht-pagination-page-link-border-color: var(--utrecht-pagination-page-link-current-border-color);
+  --utrecht-pagination-page-link-color: var(--utrecht-pagination-page-link-current-color);
+}
+
+.utrecht-pagination__page-link--distanced,
+.utrecht-pagination__page-link ~ .utrecht-pagination__page-link {
+  margin-inline-start: var(--utrecht-pagination-page-link-distanced-margin-inline-start);
+}
+
+.utrecht-pagination__page-link--hover,
+.utrecht-pagination__page-link:hover {
+  background-color: var(--utrecht-pagination-page-link-hover-background-color, var(--utrecht-pagination-page-link-background-color));
+  border-color: var(--utrecht-pagination-page-link-hover-border-color, var(--utrecht-pagination-page-link-border-color));
+  color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
+}
+
+.utrecht-pagination__page-link:focus,
+.utrecht-pagination__relative-link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-pagination__page-link:focus:not(:focus-visible),
+.utrecht-pagination__relative-link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

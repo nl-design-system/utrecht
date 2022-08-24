@@ -1,0 +1,70 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-toptask-link {
+  --utrecht-icon-color: currentColor;
+  --utrecht-icon-size: var(--utrecht-toptask-link-icon-size);
+  background-color: var(--utrecht-toptask-link-background-color);
+  color: var(--utrecht-toptask-link-color);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--utrecht-toptask-link-font-size);
+  line-height: var(--utrecht-toptask-link-line-height);
+  max-inline-size: var(--utrecht-toptask-link-max-inline-size);
+  min-block-size: var(--utrecht-toptask-link-min-block-size);
+  min-inline-size: var(--utrecht-toptask-link-min-inline-size);
+  padding-block-end: var(--utrecht-toptask-link-padding-block-end);
+  padding-block-start: var(--utrecht-toptask-link-padding-block-start);
+  padding-inline-end: var(--utrecht-toptask-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-toptask-link-padding-inline-start);
+  text-decoration: none;
+}
+
+.utrecht-toptask-link--hover,
+.utrecht-toptask-link:hover {
+  background-color: var(--utrecht-toptask-link-hover-background-color, var(--utrecht-toptask-link-background-color));
+  color: var(--utrecht-toptask-link-hover-color, var(--utrecht-toptask-link-color));
+  transform: scale(var(--utrecht-toptask-link-hover-transform-scale, 1));
+}
+
+.utrecht-toptask-link--focus-visible, .utrecht-toptask-link:focus {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-toptask-link--focus, .utrecht-toptask-link:focus {
+  background-color: var(--utrecht-toptask-link-focus-background-color, var(--utrecht-toptask-link-background-color));
+  color: var(--utrecht-toptask-link-focus-color, var(--utrecht-toptask-link-color));
+}
+
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+.utrecht-toptask-link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-toptask-link__title {
+  display: block;
+}
+
+.utrecht-toptask-link__icon {
+  display: block;
+  padding-block-end: var(--utrecht-space-block-xs);
+  padding-inline-end: var(--utrecht-space-inline-md);
+}
+
+/*# sourceMappingURL=index.css.map */

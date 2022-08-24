@@ -1,0 +1,117 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-toggle {
+  align-items: center;
+  border-color: var(--utrecht-form-toggle-border-color, currentColor);
+  border-radius: var(--utrecht-form-toggle-border-radius, 999rem);
+  border-style: var(--utrecht-form-toggle-border-style, solid);
+  border-width: var(--utrecht-form-toggle-border-width, 1px);
+  color: var(--utrecht-form-toggle-color);
+  display: flex;
+  height: var(--utrecht-form-toggle-height, 2em);
+  padding-block-end: var(--utrecht-form-toggle-padding-block-end);
+  padding-block-start: var(--utrecht-form-toggle-padding-block-start);
+  padding-inline-end: var(--utrecht-form-toggle-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-toggle-padding-inline-start);
+  position: relative;
+  user-select: none;
+  width: var(--utrecht-form-toggle-width, 6em);
+}
+
+.utrecht-form-toggle--focus, .utrecht-form-toggle:not(.utrecht-form-toggle--disabled):focus {
+  border-color: var(--utrecht-form-toggle-focus-border-color, var(--utrecht-form-toggle-border-color, currentColor));
+  border-style: var(--utrecht-form-toggle-focus-border-style, var(--utrecht-form-toggle-border-style, solid));
+  border-width: var(--utrecht-form-toggle-focus-border-width, var(--utrecht-form-toggle-border-width, 1px));
+}
+
+.utrecht-form-toggle--hover, .utrecht-form-toggle:not(.utrecht-form-toggle--disabled):hover {
+  background-color: var(--utrecht-form-toggle-hover-background-color, var(--utrecht-form-toggle-background-color));
+  color: var(--utrecht-form-toggle-hover-color, var(--utrecht-form-toggle-color));
+}
+
+.utrecht-form-toggle--disabled {
+  border-color: var(--utrecht-form-toggle-disabled-border-color, var(--utrecht-form-toggle-border-color, currentColor));
+  border-style: var(--utrecht-form-toggle-disabled-border-style, var(--utrecht-form-toggle-border-style, solid));
+  border-width: var(--utrecht-form-toggle-disabled-border-width, var(--utrecht-form-toggle-border-width, 1px));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-form-toggle__thumb {
+  /* To have a circle or square by default (1:1 aspect ratio) we use the `min-inline-size` design token for both `inline` and `block` direction. */
+  background-color: var(--utrecht-form-toggle-thumb-background-color, currentColor);
+  border-radius: var(--utrecht-form-toggle-thumb-border-radius, 50%);
+  box-shadow: var(--utrecht-form-toggle-thumb-box-shadow);
+  margin-inline-end: var(--utrecht-form-toggle-thumb-margin-inline-end, 0);
+  margin-inline-start: var(--utrecht-form-toggle-thumb-margin-inline-start, 0);
+  min-block-size: var(--utrecht-form-toggle-thumb-min-inline-size, 1.5em);
+  min-inline-size: var(--utrecht-form-toggle-thumb-min-inline-size, 1.5em);
+  z-index: 20;
+}
+
+.utrecht-form-toggle__thumb--checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:checked ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+  margin-inline-start: auto;
+}
+
+.utrecht-form-toggle__thumb--not-checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:not(:checked) ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+  margin-inline-end: auto;
+}
+
+.utrecht-form-toggle__thumb--disabled, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:disabled ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+  background-color: var(--utrecht-form-toggle-thumb-disabled-background-color, #aaa);
+  box-shadow: var(--utrecht-form-toggle-thumb-disabled-box-shadow, 0);
+}
+
+.utrecht-form-toggle__track {
+  align-items: center;
+  background-color: var(--utrecht-form-toggle-accent-color);
+  border-radius: var(--utrecht-form-toggle-track-border-radius, var(--utrecht-form-toggle-border-radius));
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.utrecht-form-toggle__track--checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:checked ~ .utrecht-form-toggle__track {
+  background-color: var(--utrecht-form-toggle-checked-accent-color, var(--utrecht-form-toggle-accent-color));
+}
+
+.utrecht-form-toggle__track--disabled, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:disabled ~ .utrecht-form-toggle__track {
+  background-color: var(--utrecht-form-toggle-background-disabled-background-color, #ddd);
+  color: var(--utrecht-form-toggle-disabled-color, black);
+}
+
+.utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+.utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:focus ~ .utrecht-form-toggle__track {
+  outline-color: var(--utrecht-form-toggle-focus-border-color, var(--utrecht-form-toggle-border-color, currentColor));
+  outline-style: var(--utrecht-form-toggle-focus-border-style, var(--utrecht-form-toggle-border-style, solid));
+  outline-width: var(--utrecht-form-toggle-focus-border-width, var(--utrecht-form-toggle-border-width, 1px));
+}
+:host {
+  display: inline-block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
+
+/*# sourceMappingURL=index.css.map */

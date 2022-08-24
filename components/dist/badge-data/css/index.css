@@ -1,0 +1,30 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-badge-data {
+  background-color: var(--utrecht-badge-background-color, hsl(0deg, 0%, 0%));
+  border-radius: var(--utrecht-badge-border-radius, 0.5ch);
+  color: var(--utrecht-badge-color, hsl(0deg, 0%, 100%));
+  display: inline-block;
+  font-family: var(--utrecht-document-font-family, sans-serif);
+  font-size: var(--utrecht-badge-font-size, inherit);
+  font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
+  font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
+  line-height: var(--utrecht-badge-line-height);
+  padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);
+  padding-inline-start: var(--utrecht-badge-padding-inline, 0.5ch);
+  text-decoration: none; /* no inheritance */
+  letter-spacing: var(--utrecht-badge-data-letter-spacing, inherit);
+  text-transform: var(--utrecht-badge-data-text-transform, inherit);
+}
+
+/*# sourceMappingURL=index.css.map */

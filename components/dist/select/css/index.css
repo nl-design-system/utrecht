@@ -1,0 +1,102 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--utrecht-select-background-color, var(--utrecht-form-input-background-color));
+  background-image: var(--utrecht-select-background-image);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 1.4em;
+  border-block-end-width: var(--utrecht-select-border-block-end-width, var(--utrecht-select-border-width, var(--utrecht-form-input-border-width)));
+  border-block-start-width: var(--utrecht-select-border-width, var(--utrecht-form-input-border-width));
+  border-color: var(--utrecht-select-border-color, var(--utrecht-form-input-border-color));
+  border-inline-end-width: var(--utrecht-select-border-width, var(--utrecht-form-input-border-width));
+  border-inline-start-width: var(--utrecht-select-border-width, var(--utrecht-form-input-border-width));
+  border-radius: var(--utrecht-select-border-radius, var(--utrecht-form-input-border-radius, 0));
+  border-style: solid;
+  color: var(--utrecht-select-color, var(--utrecht-form-input-color));
+  font-family: var(--utrecht-select-font-family, var(--utrecht-form-input-font-family));
+  font-size: var(--utrecht-select-font-size, var(--utrecht-form-input-font-size));
+  max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-input-max-inline-size));
+  padding-block-end: var(--utrecht-select-padding-block-end, var(--utrecht-form-input-padding-block-end));
+  padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-input-padding-block-start));
+  padding-inline-end: var(--utrecht-select-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
+  padding-inline-start: var(--utrecht-select-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  width: 100%;
+}
+
+.utrecht-select--disabled {
+  background-color: var(--utrecht-select-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-select--focus {
+  background-color: var(--utrecht-select-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+}
+
+.utrecht-select--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-select--invalid {
+  background-color: var(--utrecht-select-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-select-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-select-border-width, var(--utrecht-form-input-border-width))));
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-select--html-select {
+  /* <select> does not support :read-only */
+}
+.utrecht-select--html-select:disabled {
+  background-color: var(--utrecht-select-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-select--html-select:focus {
+  background-color: var(--utrecht-select-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-select--html-select:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/*# sourceMappingURL=index.css.map */
