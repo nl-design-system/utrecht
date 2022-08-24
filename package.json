@@ -13,7 +13,12 @@
     "./components/",
     "./components/*",
     "./packages/*",
-    "./proprietary/*"
+    "!packages/docusaurus/**",
+    "!packages/storybook/**",
+    "!packages/storybook-angular/**",
+    "!packages/storybook-react/**",
+    "!packages/storybook-vue/**",
+    "proprietary/*"
   ],
   "repository": {
     "type": "git+ssh",
