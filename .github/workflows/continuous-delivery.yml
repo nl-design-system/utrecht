@@ -142,7 +142,9 @@ jobs:
           echo "${GITHUB_REF}"
           echo "${GITHUB_REF_NAME}"
           echo "${GITHUB_HEAD_REF}"
+          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           npm run release --branches "${GITHUB_HEAD_REF},${GITHUB_REF_NAME}" --dry-run --debug
+          npm config delete "//registry.npmjs.org/:_authToken"
 
       - name: "Continuous Deployment: publish to npm"
         env:
