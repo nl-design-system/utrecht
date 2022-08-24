@@ -1,0 +1,12 @@
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import * as i0 from "@angular/core";
+export class UtrechtArticle {
+    constructor() { }
+}
+UtrechtArticle.ɵfac = i0.ɵɵngDeclareFactory({ minVersion: "12.0.0", version: "14.1.0", ngImport: i0, type: UtrechtArticle, deps: [], target: i0.ɵɵFactoryTarget.Component });
+UtrechtArticle.ɵcmp = i0.ɵɵngDeclareComponent({ minVersion: "14.0.0", version: "14.1.0", type: UtrechtArticle, selector: "utrecht-article", ngImport: i0, template: "<article class=\"utrecht-article\">\n  <ng-content></ng-content>\n</article>\n", styles: ["/**\n * @license EUPL-1.2\n * Copyright (c) 2020-2022 Gemeente Utrecht\n * Copyright (c) 2020-2022 Frameless B.V.\n */.utrecht-article{max-inline-size:var(--utrecht-article-max-inline-size)}\n"], changeDetection: i0.ChangeDetectionStrategy.OnPush });
+i0.ɵɵngDeclareClassMetadata({ minVersion: "12.0.0", version: "14.1.0", ngImport: i0, type: UtrechtArticle, decorators: [{
+            type: Component,
+            args: [{ selector: 'utrecht-article', changeDetection: ChangeDetectionStrategy.OnPush, template: "<article class=\"utrecht-article\">\n  <ng-content></ng-content>\n</article>\n", styles: ["/**\n * @license EUPL-1.2\n * Copyright (c) 2020-2022 Gemeente Utrecht\n * Copyright (c) 2020-2022 Frameless B.V.\n */.utrecht-article{max-inline-size:var(--utrecht-article-max-inline-size)}\n"] }]
+        }], ctorParameters: function () { return []; } });
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiY29tcG9uZW50LmpzIiwic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsiLi4vLi4vLi4vc3JjL2FydGljbGUvY29tcG9uZW50LnRzIiwiLi4vLi4vLi4vc3JjL2FydGljbGUvaW5kZXguaHRtbCJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSxPQUFPLEVBQUUsdUJBQXVCLEVBQUUsU0FBUyxFQUFFLE1BQU0sZUFBZSxDQUFDOztBQVFuRSxNQUFNLE9BQU8sY0FBYztJQUN6QixnQkFBZSxDQUFDOzsyR0FETCxjQUFjOytGQUFkLGNBQWMsdURDUjNCLGdGQUdBOzJGREthLGNBQWM7a0JBTjFCLFNBQVM7K0JBQ0UsaUJBQWlCLG1CQUdWLHVCQUF1QixDQUFDLE1BQU0iLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBDaGFuZ2VEZXRlY3Rpb25TdHJhdGVneSwgQ29tcG9uZW50IH0gZnJvbSAnQGFuZ3VsYXIvY29yZSc7XG5cbkBDb21wb25lbnQoe1xuICBzZWxlY3RvcjogJ3V0cmVjaHQtYXJ0aWNsZScsXG4gIHRlbXBsYXRlVXJsOiAnaW5kZXguaHRtbCcsXG4gIHN0eWxlVXJsczogWydpbmRleC5zY3NzJ10sXG4gIGNoYW5nZURldGVjdGlvbjogQ2hhbmdlRGV0ZWN0aW9uU3RyYXRlZ3kuT25QdXNoLFxufSlcbmV4cG9ydCBjbGFzcyBVdHJlY2h0QXJ0aWNsZSB7XG4gIGNvbnN0cnVjdG9yKCkge31cbn1cbiIsIjxhcnRpY2xlIGNsYXNzPVwidXRyZWNodC1hcnRpY2xlXCI+XG4gIDxuZy1jb250ZW50PjwvbmctY29udGVudD5cbjwvYXJ0aWNsZT5cbiJdfQ==

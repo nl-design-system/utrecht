@@ -1,0 +1,46 @@
+{
+  "version": "1.0.0-semantic-release",
+  "author": "Community for NL Design System",
+  "description": "Angular web components for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/component-library-angular",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "tslib": "2.4.0"
+  },
+  "peerDependencies": {
+    "@angular/common": "12 - 14",
+    "@angular/core": "12 - 14"
+  },
+  "main": "dist/fesm2020/utrecht-component-library-angular.mjs",
+  "esm2020": "esm2020/utrecht-component-library-angular.mjs",
+  "module": "fesm2015/utrecht-component-library-angular.mjs",
+  "es2020": "fesm2020/utrecht-component-library-angular.mjs",
+  "fesm2015": "fesm2015/utrecht-component-library-angular.mjs",
+  "typings": "index.d.ts",
+  "fesm2020": "fesm2020/utrecht-component-library-angular.mjs",
+  "exports": {
+    "./package.json": {
+      "default": "./package.json"
+    },
+    ".": {
+      "types": "./index.d.ts",
+      "esm2020": "./esm2020/utrecht-component-library-angular.mjs",
+      "es2020": "./fesm2020/utrecht-component-library-angular.mjs",
+      "es2015": "./fesm2015/utrecht-component-library-angular.mjs",
+      "node": "./fesm2015/utrecht-component-library-angular.mjs",
+      "default": "./fesm2020/utrecht-component-library-angular.mjs"
+    }
+  }
+}
