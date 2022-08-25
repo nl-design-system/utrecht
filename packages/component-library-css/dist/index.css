@@ -1,0 +1,3802 @@
+@charset "UTF-8";
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/* Collection of all BEM class names in the component library */
+/*
+ * TODO: Once every component is a separate npm package, these imports should
+ * be updated to use a package reference instead of a relative path.
+ *
+ * For example:
+ *     @import "../../blockquote/index";
+ *
+ * Will become:
+ *     @import "@utrecht/blockquote/index";
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-article {
+  max-inline-size: var(--utrecht-article-max-inline-size);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-badge-counter {
+  background-color: var(--utrecht-badge-counter-background-color, var(--utrecht-badge-background-color, hsl(0deg, 0%, 0%)));
+  border-radius: var(--utrecht-badge-counter-border-radius, var(--utrecht-badge-border-radius, 0.5ch));
+  color: var(--utrecht-badge-counter-color, var(--utrecht-badge-color, hsl(0deg, 0%, 100%)));
+  display: inline-block;
+  font-family: var(--utrecht-document-font-family, sans-serif);
+  font-style: var(--utrecht-badge-counter-font-style, normal); /* no inheritance */
+  font-weight: var(--utrecht-badge-counter-font-weight, var(--utrecht-badge-font-weight, bold)); /* no inheritance */
+  padding-block-end: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
+  padding-block-start: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
+  padding-inline-end: var(--utrecht-badge-counter-padding-inline, var(--utrecht-badge-padding-inline, 0.5ch));
+  padding-inline-start: var(--utrecht-badge-counter-padding-inline, var(--utrecht-badge-padding-inline, 0.5ch));
+  text-decoration: none; /* no inheritance */
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-badge-data {
+  background-color: var(--utrecht-badge-background-color, hsl(0deg, 0%, 0%));
+  border-radius: var(--utrecht-badge-border-radius, 0.5ch);
+  color: var(--utrecht-badge-color, hsl(0deg, 0%, 100%));
+  display: inline-block;
+  font-family: var(--utrecht-document-font-family, sans-serif);
+  font-size: var(--utrecht-badge-font-size, inherit);
+  font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
+  font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
+  line-height: var(--utrecht-badge-line-height);
+  padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);
+  padding-inline-start: var(--utrecht-badge-padding-inline, 0.5ch);
+  text-decoration: none; /* no inheritance */
+  letter-spacing: var(--utrecht-badge-data-letter-spacing, inherit);
+  text-transform: var(--utrecht-badge-data-text-transform, inherit);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-badge-status {
+  background-color: var(--utrecht-badge-background-color, hsl(0deg, 0%, 0%));
+  border-radius: var(--utrecht-badge-border-radius, 0.5ch);
+  color: var(--utrecht-badge-color, hsl(0deg, 0%, 100%));
+  display: inline-block;
+  font-family: var(--utrecht-document-font-family, sans-serif);
+  font-size: var(--utrecht-badge-font-size, inherit);
+  font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
+  font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
+  line-height: var(--utrecht-badge-line-height);
+  padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
+  padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);
+  padding-inline-start: var(--utrecht-badge-padding-inline, 0.5ch);
+  text-decoration: none; /* no inheritance */
+  letter-spacing: var(--utrecht-badge-status-letter-spacing, inherit);
+  text-transform: var(--utrecht-badge-status-text-transform, inherit);
+}
+
+.utrecht-badge-status--danger {
+  background-color: var(--utrecht-feedback-danger-fill-background-color, hsl(0deg, 100%, 50%));
+  color: var(--utrecht-feedback-danger-fill-color, white);
+}
+
+.utrecht-badge-status--warning {
+  background-color: var(--utrecht-feedback-warning-fill-background-color, hsl(39deg, 100%, 50%));
+  color: var(--utrecht-feedback-warning-fill-color, white);
+}
+
+.utrecht-badge-status--safe {
+  background-color: var(--utrecht-feedback-safe-fill-background-color, hsl(120deg, 100%, 25%));
+  color: var(--utrecht-feedback-safe-fill-color, white);
+}
+
+.utrecht-badge-status--neutral {
+  background-color: var(--utrecht-feedback-neutral-fill-background-color, black);
+  color: var(--utrecht-feedback-neutral-fill-color, white);
+}
+
+.utrecht-badge-status--valid {
+  background-color: var(--utrecht-feedback-valid-fill-background-color, var(--utrecht-feedback-safe-fill-background-color, hsl(0deg, 100%, 50%)));
+  color: var(--utrecht-feedback-valid-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--invalid {
+  background-color: var(--utrecht-feedback-invalid-fill-background-color, var(--utrecht-feedback-danger-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-invalid-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+.utrecht-badge-status--error {
+  background-color: var(--utrecht-feedback-error-fill-background-color, var(--utrecht-feedback-danger-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-error-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+.utrecht-badge-status--success {
+  background-color: var(--utrecht-feedback-success-fill-background-color, var(--utrecht-feedback-safe-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-success-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--active {
+  background-color: var(--utrecht-feedback-active-fill-background-color, var(--utrecht-feedback-safe-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-active-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+}
+
+.utrecht-badge-status--inactive {
+  background-color: var(--utrecht-feedback-inactive-fill-background-color, var(--utrecht-feedback-danger-fill-background-color, hsl(39deg, 100%, 50%)));
+  color: var(--utrecht-feedback-inactive-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-backdrop {
+  background-color: var(--utrecht-backdrop-background-color);
+  bottom: 0;
+  color: var(--utrecht-backdrop-color);
+  display: block;
+  left: 0;
+  opacity: var(--utrecht-backdrop-opacity);
+  position: absolute;
+  right: 0;
+  top: 0;
+  user-select: none;
+  z-index: var(--utrecht-backdrop-z-index);
+}
+
+.utrecht-backdrop--viewport {
+  position: fixed;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-blockquote {
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-blockquote-font-size);
+  margin-inline-end: var(--utrecht-blockquote-margin-inline-end);
+  margin-inline-start: var(--utrecht-blockquote-margin-inline-start);
+}
+
+.utrecht-blockquote__attribution {
+  color: var(--utrecht-blockquote-attribution-color, inherit);
+  font-size: var(--utrecht-blockquote-attribution-font-size, inherit);
+}
+
+.utrecht-blockquote__content {
+  --utrecht-document-color: var(--utrecht-blockquote-content-color, inherit);
+  --utrecht-paragraph-font-size: var(--utrecht-blockquote-content-font-size, inherit);
+  color: var(--utrecht-blockquote-content-color, inherit);
+  font-size: var(--utrecht-blockquote-content-font-size, inherit);
+}
+
+.utrecht-blockquote--distanced {
+  margin-block-end: var(--utrecht-blockquote-margin-block-end);
+  margin-block-start: var(--utrecht-blockquote-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-breadcrumb--arrows {
+  /* https://css-tricks.com/triangle-breadcrumbs/ */
+  --utrecht-breadcrumb-arrow-size: 24px;
+  overflow: hidden;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link {
+  padding-inline-end: 0;
+  position: relative;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::after,
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::before {
+  border-block-end-width: var(--utrecht-breadcrumb-block-size);
+  border-block-start-width: var(--utrecht-breadcrumb-block-size);
+  border-color: transparent;
+  border-style: solid;
+  content: " ";
+  display: block;
+  height: 0;
+  left: 100%;
+  margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::after {
+  border-inline-start-color: var(--utrecht-breadcrumb-link-background-color);
+  border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
+  z-index: 2;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::before {
+  border-inline-start-color: var(--utrecht-document-background-color);
+  border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
+  margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+  margin-inline-start: 1px;
+  z-index: 1;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link--focus,
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link:focus {
+  background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link--focus::after,
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link:focus::after {
+  border-inline-start-color: var(--utrecht-breadcrumb-link-focus-background-color);
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item .utrecht-breadcrumb__link {
+  padding-inline-start: calc(var(--utrecht-breadcrumb-item-padding-inline-start) + var(--utrecht-breadcrumb-arrow-size));
+}
+
+.utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item {
+  margin-inline-start: var(--utrecht-breadcrumb-item-divider-inline-size);
+}
+
+.utrecht-breadcrumb {
+  --utrecht-focus-background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+  --utrecht-link-background-color: var(--utrecht-breadcrumb-link-background-color);
+  --utrecht-link-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-focus-color: var(--utrecht-breadcrumb-link-focus-color, var(--utrecht-breadcrumb-link-color));
+  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-hover-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-breadcrumb-font-size);
+  text-transform: var(--utrecht-document-text-transform, inherit);
+}
+
+.utrecht-breadcrumb__list {
+  block-size: var(--utrecht-breadcrumb-block-size);
+  display: flex;
+}
+
+ol.utrecht-breadcrumb__list {
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-breadcrumb__item {
+  block-size: 100%;
+}
+
+.utrecht-breadcrumb__link {
+  background-color: var(--utrecht-breadcrumb-link-background-color);
+  display: block;
+  padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
+  padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
+  padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
+  padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-breadcrumb--arrows {
+  /* https://css-tricks.com/triangle-breadcrumbs/ */
+  --utrecht-breadcrumb-arrow-size: 24px;
+  overflow: hidden;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link {
+  padding-inline-end: 0;
+  position: relative;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::after,
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::before {
+  border-block-end-width: var(--utrecht-breadcrumb-block-size);
+  border-block-start-width: var(--utrecht-breadcrumb-block-size);
+  border-color: transparent;
+  border-style: solid;
+  content: " ";
+  display: block;
+  height: 0;
+  left: 100%;
+  margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+  position: absolute;
+  top: 50%;
+  width: 0;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::after {
+  border-inline-start-color: var(--utrecht-breadcrumb-link-background-color);
+  border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
+  z-index: 2;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link::before {
+  border-inline-start-color: var(--utrecht-document-background-color);
+  border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
+  margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+  margin-inline-start: 1px;
+  z-index: 1;
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link--focus,
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link:focus {
+  background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link--focus::after,
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__link:focus::after {
+  border-inline-start-color: var(--utrecht-breadcrumb-link-focus-background-color);
+}
+.utrecht-breadcrumb--arrows .utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item .utrecht-breadcrumb__link {
+  padding-inline-start: calc(var(--utrecht-breadcrumb-item-padding-inline-start) + var(--utrecht-breadcrumb-arrow-size));
+}
+
+.utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item {
+  margin-inline-start: var(--utrecht-breadcrumb-item-divider-inline-size);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-button {
+  --_utrecht-button-background-color: var(--utrecht-button-background-color);
+  --_utrecht-button-color: var(--utrecht-button-color);
+  --_utrecht-button-border-color: var(--utrecht-button-border-color, transparent);
+  --_utrecht-button-border-bottom-color: var(
+    --utrecht-button-border-bottom-color,
+    var(--utrecht-button-border-color, transparent)
+  );
+  --_utrecht-button-disabled-background-color: var(
+    --utrecht-button-disabled-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-disabled-border-color: var(
+    --utrecht-button-disabled-border-color,
+    var(--utrecht-button-border-color)
+  );
+  --_utrecht-button-disabled-color: var(--utrecht-button-disabled-color, var(--utrecht-button-color));
+  --_utrecht-button-focus-background-color: var(
+    --utrecht-button-focus-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-focus-border-color: var(--utrecht-button-focus-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-focus-color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
+  --_utrecht-button-hover-background-color: var(
+    --utrecht-button-hover-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-hover-border-color: var(--utrecht-button-hover-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-hover-color: var(--utrecht-button-hover-color, var(--utrecht-button-color));
+  --_utrecht-button-active-background-color: var(
+    --utrecht-button-active-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-active-border-color: var(--utrecht-button-active-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-active-color: var(--utrecht-button-active-color, var(--utrecht-button-color));
+  --_utrecht-button-border-width: var(--utrecht-button-border-width, 0);
+  --_utrecht-button-border-bottom-width: var(
+    --utrecht-button-border-bottom-width,
+    var(--utrecht-button-border-width, 0)
+  );
+  align-items: center;
+  background-color: var(--_utrecht-button-background-color);
+  border-color: var(--_utrecht-button-border-color);
+  border-bottom-color: var(--_utrecht-button-border-bottom-color);
+  border-radius: var(--utrecht-button-border-radius);
+  border-style: solid;
+  border-width: var(--_utrecht-button-border-width);
+  border-bottom-width: var(--_utrecht-button-border-bottom-width);
+  box-sizing: border-box;
+  color: var(--utrecht-button-color);
+  display: inline-flex;
+  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-weight: var(--utrecht-button-font-weight);
+  inline-size: var(--utrecht-button-inline-size, auto);
+  justify-content: center;
+  letter-spacing: var(--utrecht-button-letter-spacing);
+  line-height: var(--utrecht-button-line-height);
+  min-block-size: var(--utrecht-button-min-block-size, 44px);
+  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
+  padding-block-end: var(--utrecht-button-padding-block-end);
+  padding-block-start: var(--utrecht-button-padding-block-start);
+  padding-inline-end: var(--utrecht-button-padding-inline-end);
+  padding-inline-start: var(--utrecht-button-padding-inline-start);
+  text-transform: var(--utrecht-button-text-transform);
+  user-select: none;
+}
+
+.utrecht-button--distanced {
+  margin-block-end: var(--utrecht-button-margin-block-end);
+  margin-block-start: var(--utrecht-button-margin-block-start);
+  margin-inline-end: var(--utrecht-button-margin-inline-end);
+  margin-inline-start: var(--utrecht-button-margin-inline-start);
+}
+
+.utrecht-button--submit {
+  /* lower priority specificty than busy and disabled cursor */
+  cursor: var(--utrecht-action-submit-cursor);
+}
+
+.utrecht-button--busy {
+  cursor: var(--utrecht-action-busy-cursor);
+}
+
+.utrecht-button:disabled,
+.utrecht-button--disabled {
+  background-color: var(--_utrecht-button-disabled-background-color);
+  border-color: var(--_utrecht-button-disabled-border-color);
+  color: var(--_utrecht-button-disabled-color);
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-button:active:not(:disabled):not([aria-disabled=true]):not(.utrecht-button--disabled),
+.utrecht-button--active {
+  background-color: var(--_utrecht-button-active-background-color);
+  border-color: var(--_utrecht-button-active-border-color);
+  color: var(--_utrecht-button-active-color);
+}
+
+.utrecht-button--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-button--focus {
+  background-color: var(--_utrecht-button-focus-background-color);
+  border-color: var(--_utrecht-button-focus-border-color);
+  color: var(--_utrecht-button-focus-color);
+}
+
+.utrecht-button:focus:not(:disabled):not([aria-disabled=true]):not(.utrecht-button--disabled) {
+  background-color: var(--_utrecht-button-focus-background-color);
+  border-color: var(--_utrecht-button-focus-border-color);
+  color: var(--_utrecht-button-focus-color);
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+.utrecht-button:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-button--hover:not(:disabled),
+.utrecht-button:hover:not(:disabled):not([aria-disabled=true]):not(.utrecht-button--disabled) {
+  background-color: var(--_utrecht-button-hover-background-color);
+  border-color: var(--_utrecht-button-hover-border-color);
+  color: var(--_utrecht-button-hover-color);
+  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+}
+
+.utrecht-button--primary-action {
+  --utrecht-button-active-background-color: var(--utrecht-button-primary-action-active-background-color);
+  --utrecht-button-active-border-color: var(--utrecht-button-primary-action-active-border-color);
+  --utrecht-button-active-color: var(--utrecht-button-primary-action-active-color);
+  --utrecht-button-background-color: var(--utrecht-button-primary-action-background-color);
+  --utrecht-button-border-color: var(--utrecht-button-primary-action-border-color);
+  --utrecht-button-border-width: var(--utrecht-button-primary-action-border-width);
+  --utrecht-button-color: var(--utrecht-button-primary-action-color);
+  --utrecht-button-disabled-background-color: var(--utrecht-button-primary-action-disabled-background-color);
+  --utrecht-button-disabled-border-color: var(--utrecht-button-primary-action-disabled-border-color);
+  --utrecht-button-disabled-color: var(--utrecht-button-primary-action-disabled-color);
+  --utrecht-button-focus-background-color: var(--utrecht-button-primary-action-focus-background-color);
+  --utrecht-button-focus-border-color: var(--utrecht-button-primary-action-focus-border-color);
+  --utrecht-button-focus-color: var(--utrecht-button-primary-action-focus-color);
+  --utrecht-button-hover-background-color: var(--utrecht-button-primary-action-hover-background-color);
+  --utrecht-button-hover-border-color: var(--utrecht-button-primary-action-hover-border-color);
+  --utrecht-button-hover-color: var(--utrecht-button-primary-action-hover-color);
+}
+
+.utrecht-button--secondary-action {
+  --utrecht-button-active-background-color: var(--utrecht-button-secondary-action-active-background-color);
+  --utrecht-button-active-border-color: var(--utrecht-button-secondary-action-active-border-color);
+  --utrecht-button-active-color: var(--utrecht-button-secondary-action-active-color);
+  --utrecht-button-background-color: var(--utrecht-button-secondary-action-background-color);
+  --utrecht-button-border-color: var(--utrecht-button-secondary-action-border-color);
+  --utrecht-button-border-width: var(--utrecht-button-secondary-action-border-width);
+  --utrecht-button-color: var(--utrecht-button-secondary-action-color);
+  --utrecht-button-disabled-background-color: var(--utrecht-button-secondary-action-disabled-background-color);
+  --utrecht-button-disabled-border-color: var(--utrecht-button-secondary-action-disabled-border-color);
+  --utrecht-button-disabled-color: var(--utrecht-button-secondary-action-disabled-color);
+  --utrecht-button-focus-background-color: var(--utrecht-button-secondary-action-focus-background-color);
+  --utrecht-button-focus-border-color: var(--utrecht-button-secondary-action-focus-border-color);
+  --utrecht-button-focus-color: var(--utrecht-button-secondary-action-focus-color);
+  --utrecht-button-hover-background-color: var(--utrecht-button-secondary-action-hover-background-color);
+  --utrecht-button-hover-border-color: var(--utrecht-button-secondary-action-hover-border-color);
+  --utrecht-button-hover-color: var(--utrecht-button-secondary-action-hover-color);
+}
+
+.utrecht-button--subtle {
+  --utrecht-button-active-background-color: var(--utrecht-button-subtle-active-background-color);
+  --utrecht-button-active-border-color: var(--utrecht-button-subtle-active-border-color);
+  --utrecht-button-active-color: var(--utrecht-button-subtle-active-color);
+  --utrecht-button-background-color: var(--utrecht-button-subtle-background-color);
+  --utrecht-button-border-color: var(--utrecht-button-subtle-border-color);
+  --utrecht-button-border-width: var(--utrecht-button-subtle-border-width);
+  --utrecht-button-color: var(--utrecht-button-subtle-color);
+  --utrecht-button-disabled-background-color: var(--utrecht-button-subtle-disabled-background-color);
+  --utrecht-button-disabled-border-color: var(--utrecht-button-subtle-disabled-border-color);
+  --utrecht-button-disabled-color: var(--utrecht-button-subtle-disabled-color);
+  --utrecht-button-focus-background-color: var(--utrecht-button-subtle-focus-background-color);
+  --utrecht-button-focus-border-color: var(--utrecht-button-subtle-focus-border-color);
+  --utrecht-button-focus-color: var(--utrecht-button-subtle-focus-color);
+  --utrecht-button-hover-background-color: var(--utrecht-button-subtle-hover-background-color);
+  --utrecht-button-hover-border-color: var(--utrecht-button-subtle-hover-border-color);
+  --utrecht-button-hover-color: var(--utrecht-button-subtle-hover-color);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Frameless B.V.
+ */
+.utrecht-button-group {
+  background-color: var(--utrecht-button-group-background-color);
+  display: flex;
+  gap: var(--utrecht-button-group-inline-gap, 1em);
+  min-block-size: var(--utrecht-button-block-size);
+  padding-block-end: var(--utrecht-button-group-padding-block-end);
+  padding-block-start: var(--utrecht-button-group-padding-block-start);
+}
+
+.utrecht-button-group--distanced {
+  background-color: var(--utrecht-button-group-background-color);
+  display: flex;
+  gap: var(--utrecht-button-group-inline-gap, 1em);
+  min-block-size: var(--utrecht-button-block-size);
+  padding-block-end: var(--utrecht-button-group-padding-block-end);
+  padding-block-start: var(--utrecht-button-group-padding-block-start);
+}
+
+.utrecht-button-group__button-link--horizontal,
+.utrecht-button-group--horizontal .utrecht-button-link,
+.utrecht-button-group:not(.utrecht-button-group--vertical) .utrecht-button-link {
+  --utrecht-button-padding-inline-end: 0;
+  --utrecht-button-padding-inline-start: 0;
+}
+
+.utrecht-button-group--vertical {
+  flex-direction: column;
+  gap: var(--utrecht-button-group-block-gap, 1em);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-button-link {
+  --_utrecht-button-background-color: var(--utrecht-button-background-color);
+  --_utrecht-button-color: var(--utrecht-button-color);
+  --_utrecht-button-border-color: var(--utrecht-button-border-color, transparent);
+  --_utrecht-button-border-bottom-color: var(
+    --utrecht-button-border-bottom-color,
+    var(--utrecht-button-border-color, transparent)
+  );
+  --_utrecht-button-disabled-background-color: var(
+    --utrecht-button-disabled-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-disabled-border-color: var(
+    --utrecht-button-disabled-border-color,
+    var(--utrecht-button-border-color)
+  );
+  --_utrecht-button-disabled-color: var(--utrecht-button-disabled-color, var(--utrecht-button-color));
+  --_utrecht-button-focus-background-color: var(
+    --utrecht-button-focus-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-focus-border-color: var(--utrecht-button-focus-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-focus-color: var(--utrecht-button-focus-color, var(--utrecht-button-color));
+  --_utrecht-button-hover-background-color: var(
+    --utrecht-button-hover-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-hover-border-color: var(--utrecht-button-hover-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-hover-color: var(--utrecht-button-hover-color, var(--utrecht-button-color));
+  --_utrecht-button-active-background-color: var(
+    --utrecht-button-active-background-color,
+    var(--utrecht-button-background-color)
+  );
+  --_utrecht-button-active-border-color: var(--utrecht-button-active-border-color, var(--utrecht-button-border-color));
+  --_utrecht-button-active-color: var(--utrecht-button-active-color, var(--utrecht-button-color));
+  --_utrecht-button-border-width: var(--utrecht-button-border-width, 0);
+  --_utrecht-button-border-bottom-width: var(
+    --utrecht-button-border-bottom-width,
+    var(--utrecht-button-border-width, 0)
+  );
+  align-items: center;
+  background-color: var(--_utrecht-button-background-color);
+  border-color: var(--_utrecht-button-border-color);
+  border-bottom-color: var(--_utrecht-button-border-bottom-color);
+  border-radius: var(--utrecht-button-border-radius);
+  border-style: solid;
+  border-width: var(--_utrecht-button-border-width);
+  border-bottom-width: var(--_utrecht-button-border-bottom-width);
+  box-sizing: border-box;
+  color: var(--utrecht-button-color);
+  display: inline-flex;
+  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-weight: var(--utrecht-button-font-weight);
+  inline-size: var(--utrecht-button-inline-size, auto);
+  justify-content: center;
+  letter-spacing: var(--utrecht-button-letter-spacing);
+  line-height: var(--utrecht-button-line-height);
+  min-block-size: var(--utrecht-button-min-block-size, 44px);
+  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
+  padding-block-end: var(--utrecht-button-padding-block-end);
+  padding-block-start: var(--utrecht-button-padding-block-start);
+  padding-inline-end: var(--utrecht-button-padding-inline-end);
+  padding-inline-start: var(--utrecht-button-padding-inline-start);
+  text-transform: var(--utrecht-button-text-transform);
+  user-select: none;
+  cursor: var(--utrecht-action-navigate-cursor, pointer);
+  text-decoration: none;
+}
+
+.utrecht-button-link--hover {
+  background-color: var(--_utrecht-button-hover-background-color);
+  border-color: var(--_utrecht-button-hover-border-color);
+  color: var(--_utrecht-button-hover-color);
+  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+}
+
+.utrecht-button-link--focus {
+  background-color: var(--_utrecht-button-focus-background-color);
+  border-color: var(--_utrecht-button-focus-border-color);
+  color: var(--_utrecht-button-focus-color);
+}
+
+.utrecht-button-link--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-button-link--html-a:hover {
+  background-color: var(--_utrecht-button-hover-background-color);
+  border-color: var(--_utrecht-button-hover-border-color);
+  color: var(--_utrecht-button-hover-color);
+  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+}
+.utrecht-button-link--html-a:focus {
+  background-color: var(--_utrecht-button-focus-background-color);
+  border-color: var(--_utrecht-button-focus-border-color);
+  color: var(--_utrecht-button-focus-color);
+}
+.utrecht-button-link--html-a:focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-button-link--primary-action {
+  --utrecht-button-active-background-color: var(--utrecht-button-primary-action-active-background-color);
+  --utrecht-button-active-border-color: var(--utrecht-button-primary-action-active-border-color);
+  --utrecht-button-active-color: var(--utrecht-button-primary-action-active-color);
+  --utrecht-button-background-color: var(--utrecht-button-primary-action-background-color);
+  --utrecht-button-border-color: var(--utrecht-button-primary-action-border-color);
+  --utrecht-button-border-width: var(--utrecht-button-primary-action-border-width);
+  --utrecht-button-color: var(--utrecht-button-primary-action-color);
+  --utrecht-button-disabled-background-color: var(--utrecht-button-primary-action-disabled-background-color);
+  --utrecht-button-disabled-border-color: var(--utrecht-button-primary-action-disabled-border-color);
+  --utrecht-button-disabled-color: var(--utrecht-button-primary-action-disabled-color);
+  --utrecht-button-focus-background-color: var(--utrecht-button-primary-action-focus-background-color);
+  --utrecht-button-focus-border-color: var(--utrecht-button-primary-action-focus-border-color);
+  --utrecht-button-focus-color: var(--utrecht-button-primary-action-focus-color);
+  --utrecht-button-hover-background-color: var(--utrecht-button-primary-action-hover-background-color);
+  --utrecht-button-hover-border-color: var(--utrecht-button-primary-action-hover-border-color);
+  --utrecht-button-hover-color: var(--utrecht-button-primary-action-hover-color);
+}
+
+.utrecht-button-link--secondary-action {
+  --utrecht-button-active-background-color: var(--utrecht-button-secondary-action-active-background-color);
+  --utrecht-button-active-border-color: var(--utrecht-button-secondary-action-active-border-color);
+  --utrecht-button-active-color: var(--utrecht-button-secondary-action-active-color);
+  --utrecht-button-background-color: var(--utrecht-button-secondary-action-background-color);
+  --utrecht-button-border-color: var(--utrecht-button-secondary-action-border-color);
+  --utrecht-button-border-width: var(--utrecht-button-secondary-action-border-width);
+  --utrecht-button-color: var(--utrecht-button-secondary-action-color);
+  --utrecht-button-disabled-background-color: var(--utrecht-button-secondary-action-disabled-background-color);
+  --utrecht-button-disabled-border-color: var(--utrecht-button-secondary-action-disabled-border-color);
+  --utrecht-button-disabled-color: var(--utrecht-button-secondary-action-disabled-color);
+  --utrecht-button-focus-background-color: var(--utrecht-button-secondary-action-focus-background-color);
+  --utrecht-button-focus-border-color: var(--utrecht-button-secondary-action-focus-border-color);
+  --utrecht-button-focus-color: var(--utrecht-button-secondary-action-focus-color);
+  --utrecht-button-hover-background-color: var(--utrecht-button-secondary-action-hover-background-color);
+  --utrecht-button-hover-border-color: var(--utrecht-button-secondary-action-hover-border-color);
+  --utrecht-button-hover-color: var(--utrecht-button-secondary-action-hover-color);
+}
+
+.utrecht-button-link--subtle {
+  --utrecht-button-active-background-color: var(--utrecht-button-subtle-active-background-color);
+  --utrecht-button-active-border-color: var(--utrecht-button-subtle-active-border-color);
+  --utrecht-button-active-color: var(--utrecht-button-subtle-active-color);
+  --utrecht-button-background-color: var(--utrecht-button-subtle-background-color);
+  --utrecht-button-border-color: var(--utrecht-button-subtle-border-color);
+  --utrecht-button-border-width: var(--utrecht-button-subtle-border-width);
+  --utrecht-button-color: var(--utrecht-button-subtle-color);
+  --utrecht-button-disabled-background-color: var(--utrecht-button-subtle-disabled-background-color);
+  --utrecht-button-disabled-border-color: var(--utrecht-button-subtle-disabled-border-color);
+  --utrecht-button-disabled-color: var(--utrecht-button-subtle-disabled-color);
+  --utrecht-button-focus-background-color: var(--utrecht-button-subtle-focus-background-color);
+  --utrecht-button-focus-border-color: var(--utrecht-button-subtle-focus-border-color);
+  --utrecht-button-focus-color: var(--utrecht-button-subtle-focus-color);
+  --utrecht-button-hover-background-color: var(--utrecht-button-subtle-hover-background-color);
+  --utrecht-button-hover-border-color: var(--utrecht-button-subtle-hover-border-color);
+  --utrecht-button-hover-color: var(--utrecht-button-subtle-hover-color);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox {
+  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-checkbox--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-checkbox--html-input:disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-checkbox--html-input:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-checkbox--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox {
+  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-checkbox--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-checkbox--html-input:disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-checkbox--html-input:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-checkbox--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox {
+  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-checkbox--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-checkbox--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-checkbox--html-input:disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-checkbox--html-input:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-checkbox--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-custom-checkbox {
+  --utrecht-icon-size: var(--utrecht-custom-checkbox-icon-size, calc(0.75 * var(--utrecht-custom-checkbox-size)));
+  display: inline-block;
+  height: var(--utrecht-custom-checkbox-size);
+  position: relative;
+  width: var(--utrecht-custom-checkbox-size);
+}
+
+.utrecht-custom-checkbox__input {
+  margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  height: var(--utrecht-custom-checkbox-size);
+  left: 0;
+  opacity: 0%;
+  position: absolute;
+  top: 0;
+  width: var(--utrecht-custom-checkbox-size);
+  z-index: 10;
+}
+
+.utrecht-custom-checkbox__box {
+  align-items: center;
+  background-color: var(--utrecht-custom-checkbox-background-color);
+  border-color: var(--utrecht-custom-checkbox-border-color, var(--utrecht-form-input-border-color));
+  border-radius: var(--utrecht-custom-checkbox-border-radius, var(--utrecht-form-input-border-radius));
+  border-style: solid;
+  border-width: var(--utrecht-custom-checkbox-border-width, var(--utrecht-form-input-border-width));
+  box-sizing: border-box;
+  color: var(--utrecht-custom-checkbox-color);
+  display: flex;
+  height: var(--utrecht-custom-checkbox-size);
+  justify-content: center;
+  left: 0;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  width: var(--utrecht-custom-checkbox-size);
+  z-index: 1000;
+}
+
+.utrecht-custom-checkbox__box--checked {
+  background-color: var(--utrecht-custom-checkbox-checked-background-color, var(--utrecht-custom-checkbox-background-color));
+  border-color: var(--utrecht-custom-checkbox-checked-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-checked-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-checked-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--disabled {
+  background-color: var(--utrecht-custom-checkbox-disabled-background-color, var(--utrecht-custom-checkbox-background-color));
+  border-color: var(--utrecht-custom-checkbox-disabled-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-disabled-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-disabled-color, var(--utrecht-custom-checkbox-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-custom-checkbox__box--indeterminate {
+  color: var(--utrecht-custom-checkbox-indeterminate-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--invalid {
+  background-color: var(--utrecht-custom-checkbox-invalid-background-color, var(--utrecht-custom-checkbox-background-color));
+  border-color: var(--utrecht-custom-checkbox-invalid-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-invalid-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-invalid-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--active {
+  background-color: var(--utrecht-custom-checkbox-active-background-color, var(--utrecht-custom-checkbox-background-color));
+  border-color: var(--utrecht-custom-checkbox-active-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-active-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-active-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--focus {
+  background-color: var(--utrecht-custom-checkbox-focus-background-color, var(--utrecht-custom-checkbox-background-color));
+  border-color: var(--utrecht-custom-checkbox-focus-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-focus-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-focus-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__box--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-custom-checkbox__input:indeterminate ~ .utrecht-custom-checkbox__box {
+  color: var(--utrecht-custom-checkbox-indeterminate-color, var(--utrecht-custom-checkbox-color));
+}
+
+.utrecht-custom-checkbox__input:focus ~ .utrecht-custom-checkbox__box {
+  background-color: var(--utrecht-custom-checkbox-focus-background-color, var(--utrecht-custom-checkbox-background-color));
+  border-color: var(--utrecht-custom-checkbox-focus-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-focus-border-width, var(--utrecht-custom-checkbox-border-width));
+  color: var(--utrecht-custom-checkbox-focus-color, var(--utrecht-custom-checkbox-color));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-custom-checkbox__input:focus:not(:focus-visible) ~ .utrecht-custom-checkbox__box {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-custom-checkbox__icon--checked,
+.utrecht-custom-checkbox__icon--indeterminate {
+  display: none;
+}
+
+.utrecht-custom-checkbox__box--checked .utrecht-custom-checkbox__icon--checked {
+  display: block;
+}
+
+.utrecht-custom-checkbox__box--indeterminate .utrecht-custom-checkbox__icon--indeterminate {
+  display: block;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-custom-radio-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-color: var(--utrecht-custom-radio-button-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-color: var(--utrecht-custom-radio-button-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-custom-radio-button-border-width);
+  height: var(--utrecht-custom-radio-button-size);
+  margin-block-start: var(--utrecht-custom-radio-button-margin-block-start);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  vertical-align: top;
+  width: var(--utrecht-custom-radio-button-size);
+}
+
+.utrecht-custom-radio-button--checked {
+  background-color: var(--utrecht-custom-radio-button-checked-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-checked-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-checked-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-checked-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--active {
+  background-color: var(--utrecht-custom-radio-button-active-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-active-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-active-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-active-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--focus {
+  background-color: var(--utrecht-custom-radio-button-focus-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-focus-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-focus-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-focus-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-custom-radio-button--disabled {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-disabled-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-disabled-color, var(--utrecht-custom-radio-button-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-custom-radio-button--disabled:checked {
+  background-color: var(--utrecht-custom-radio-button-disabled-background-color, var(--utrecht-custom-radio-button-background-color));
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+.utrecht-custom-radio-button--disabled:active {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+
+.utrecht-custom-radio-button--invalid {
+  border-color: var(--utrecht-custom-radio-button-invalid-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-invalid-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-invalid-color, var(--utrecht-custom-radio-button-color));
+}
+
+.utrecht-custom-radio-button--html-input:disabled {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-disabled-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-disabled-color, var(--utrecht-custom-radio-button-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-custom-radio-button--html-input:disabled:checked {
+  background-color: var(--utrecht-custom-radio-button-disabled-background-color, var(--utrecht-custom-radio-button-background-color));
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+.utrecht-custom-radio-button--html-input:disabled:active {
+  border-color: var(--utrecht-custom-radio-button-disabled-border-color, var(--utrecht-custom-radio-button-border-color));
+}
+.utrecht-custom-radio-button--html-input:focus {
+  background-color: var(--utrecht-custom-radio-button-focus-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-focus-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-focus-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-focus-color, var(--utrecht-custom-radio-button-color));
+}
+.utrecht-custom-radio-button--html-input:focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-custom-radio-button--html-input:invalid, .utrecht-custom-radio-button--html-input[aria-invalid=true] {
+  border-color: var(--utrecht-custom-radio-button-invalid-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-invalid-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-invalid-color, var(--utrecht-custom-radio-button-color));
+}
+.utrecht-custom-radio-button--html-input:active {
+  background-color: var(--utrecht-custom-radio-button-active-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-active-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-active-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-active-color, var(--utrecht-custom-radio-button-color));
+}
+.utrecht-custom-radio-button--html-input:checked {
+  background-color: var(--utrecht-custom-radio-button-checked-background-color, var(--utrecht-custom-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-custom-radio-button-checked-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-checked-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-checked-color, var(--utrecht-custom-radio-button-color));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-data-list {
+  /* also set `margin-block` to reset browser styling of <dl> */
+  display: block;
+  margin-block-end: calc(var(--utrecht-distance, 0) * var(--utrecht-data-list-margin-block-end));
+  margin-block-start: calc(var(--utrecht-distance, 0) * var(--utrecht-data-list-margin-block-start));
+}
+
+.utrecht-data-list__item-key {
+  color: var(--utrecht-data-list-item-key-color);
+  font-size: var(--utrecht-data-list-item-key-font-size);
+  font-weight: var(--utrecht-data-list-item-key-font-weight);
+  grid-area: label;
+  line-height: var(--utrecht-data-list-item-key-line-height);
+}
+
+.utrecht-data-list__item-value {
+  /* configure `min-block-size` in case the value is empty */
+  color: var(--utrecht-data-list-label-color);
+  font-size: var(--utrecht-data-list-item-value-font-size);
+  font-weight: var(--utrecht-data-list-item-value-font-weight);
+  grid-area: value;
+  line-height: var(--utrecht-data-list-label-line-height);
+  min-block-size: var(--utrecht-data-list-label-line-height);
+}
+
+.utrecht-data-list__actions--html-dd,
+.utrecht-data-list__item-value--html-dd {
+  /* reset browser styling of <dd> */
+  margin-inline-start: 0;
+}
+
+.utrecht-data-list__item-value--multiline {
+  white-space: pre-line;
+}
+
+.utrecht-data-list--rows .utrecht-data-list__actions {
+  align-items: last baseline;
+  display: flex;
+  justify-content: flex-end;
+}
+.utrecht-data-list--rows .utrecht-data-list__item {
+  display: grid;
+  grid-template-areas: "label actions" "value value";
+  margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+}
+.utrecht-data-list--rows .utrecht-data-list__item:first-of-type {
+  margin-block-start: 0;
+}
+.utrecht-data-list--rows .utrecht-data-list__item-value {
+  margin-block-start: var(--utrecht-data-list-rows-item-value-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-digid-button {
+  --utrecht-button-min-block-size: var(--utrecht-digid-button-block-size, 50px);
+  --utrecht-logo-max-block-size: var(--utrecht-digid-button-block-size, 50px);
+  --utrecht-logo-max-inline-size: var(--utrecht-digid-button-block-size, 50px);
+  block-size: var(--utrecht-digid-button-block-size, 50px);
+  display: inline-flex;
+  gap: var(--utrecht-space-inline-sm);
+}
+
+.utrecht-digid-button__logo {
+  order: 1;
+}
+
+.utrecht-digid-button__button {
+  order: 2;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-document {
+  /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
+  color: var(--utrecht-document-color, inherit);
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-document-font-size, inherit);
+  font-weight: var(--utrecht-document-font-weight, inherit);
+  line-height: var(--utrecht-document-line-height, inherit);
+  text-rendering: optimizeLegibility;
+}
+.utrecht-document :lang(ar) {
+  /* `letter-spacing` design tokens break Arabic text rendering, avoid that */
+  letter-spacing: 0 !important;
+}
+
+.utrecht-document--surface {
+  background-color: var(--utrecht-document-background-color, inherit);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-emphasis--stressed {
+  font-style: var(--utrecht-emphasis-stressed-font-style, italic);
+}
+
+.utrecht-emphasis--strong {
+  font-weight: var(--utrecht-emphasis-strong-font-weight, bold);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field-checkbox-group {
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-paragraph-font-size);
+}
+
+.utrecht-form-field-checkbox-group--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-form-field-checkbox-group__label {
+  margin-block-end: var(--utrecht-paragraph-margin-block-end);
+  margin-block-start: var(--utrecht-paragraph-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field {
+  font-family: var(--utrecht-document-font-family, inherit);
+  max-inline-size: var(--utrecht-form-field-max-inline-size);
+}
+
+.utrecht-form-field--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-form-field__label--checkbox {
+  margin-inline-start: 1ch;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field-description {
+  color: var(--utrecht-form-field-description-color);
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-form-field-description-font-size, inherit);
+  font-style: var(--utrecht-form-field-description-font-style);
+}
+
+.utrecht-form-field-description--distanced {
+  margin-block-end: var(--utrecht-form-field-description-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-description-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-form-field-description--invalid {
+  color: var(--utrecht-form-field-description-invalid-color, var(--utrecht-feedback-invalid-color, var(--utrecht-feedback-danger-color)));
+}
+
+.utrecht-form-field-description--valid {
+  color: var(--utrecht-form-field-description-valid-color, var(--utrecht-feedback-valid-color, var(--utrecht-feedback-safe-color)));
+}
+
+.utrecht-form-field-description--warning {
+  color: var(--utrecht-form-field-description-warning-color, var(--utrecht-feedback-warning-color));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field-radio-group {
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-paragraph-font-size);
+}
+
+.utrecht-form-field-radio-group--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-form-field-radio-group__label {
+  margin-block-end: var(--utrecht-paragraph-margin-block-end);
+  margin-block-start: var(--utrecht-paragraph-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field-radio {
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-paragraph-font-size);
+}
+
+.utrecht-form-field-radio--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-form-field-radio__label {
+  margin-inline-start: 1ch;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field-textbox {
+  font-family: var(--utrecht-document-font-family, inherit);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-field {
+  font-family: var(--utrecht-document-font-family, inherit);
+  max-inline-size: var(--utrecht-form-field-max-inline-size);
+}
+
+.utrecht-form-field--distanced {
+  margin-block-end: var(--utrecht-form-field-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-form-field-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-form-fieldset--html-fieldset {
+  border: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  min-width: 0;
+  padding-block-end: 0;
+  padding-block-start: 0.01em;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-form-fieldset__legend--html-legend {
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-form-fieldset--distanced {
+  margin-block-end: var(--utrecht-form-fieldset-margin-block-end, 0);
+  margin-block-start: var(--utrecht-form-fieldset-margin-block-start, 0);
+}
+
+.utrecht-form-fieldset__legend {
+  color: var(--utrecht-form-fieldset-legend-color, var(--utrecht-document-color, inherit));
+  font-family: var(--utrecht-form-fieldset-legend-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-form-fieldset-legend-font-size);
+  font-weight: var(--utrecht-form-fieldset-legend-font-weight);
+  line-height: var(--utrecht-form-fieldset-legend-line-height);
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  text-transform: var(--utrecht-form-fieldset-legend-text-transform);
+}
+
+.utrecht-form-fieldset__legend--distanced {
+  margin-block-end: var(--utrecht-form-fieldset-legend-margin-block-end);
+  margin-block-start: var(--utrecht-form-fieldset-legend-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-label {
+  color: var(--utrecht-form-label-color);
+  font-size: var(--utrecht-form-label-font-size);
+  font-weight: var(--utrecht-form-label-font-weight);
+}
+
+.utrecht-form-label--checkbox {
+  color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  font-weight: var(--utrecht-form-label-checkbox-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+.utrecht-form-label--checked {
+  font-weight: var(--utrecht-form-label-checked-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+.utrecht-form-label--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+  font-weight: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
+}
+
+.utrecht-form-label--radio {
+  color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  font-weight: var(--utrecht-form-label-radio-font-weight, var(--utrecht-form-label-font-weight));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-form-toggle {
+  align-items: center;
+  border-color: var(--utrecht-form-toggle-border-color, currentColor);
+  border-radius: var(--utrecht-form-toggle-border-radius, 999rem);
+  border-style: var(--utrecht-form-toggle-border-style, solid);
+  border-width: var(--utrecht-form-toggle-border-width, 1px);
+  color: var(--utrecht-form-toggle-color);
+  display: flex;
+  height: var(--utrecht-form-toggle-height, 2em);
+  padding-block-end: var(--utrecht-form-toggle-padding-block-end);
+  padding-block-start: var(--utrecht-form-toggle-padding-block-start);
+  padding-inline-end: var(--utrecht-form-toggle-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-toggle-padding-inline-start);
+  position: relative;
+  user-select: none;
+  width: var(--utrecht-form-toggle-width, 6em);
+}
+
+.utrecht-form-toggle--focus {
+  border-color: var(--utrecht-form-toggle-focus-border-color, var(--utrecht-form-toggle-border-color, currentColor));
+  border-style: var(--utrecht-form-toggle-focus-border-style, var(--utrecht-form-toggle-border-style, solid));
+  border-width: var(--utrecht-form-toggle-focus-border-width, var(--utrecht-form-toggle-border-width, 1px));
+}
+
+.utrecht-form-toggle--hover {
+  background-color: var(--utrecht-form-toggle-hover-background-color, var(--utrecht-form-toggle-background-color));
+  color: var(--utrecht-form-toggle-hover-color, var(--utrecht-form-toggle-color));
+}
+
+.utrecht-form-toggle--disabled {
+  border-color: var(--utrecht-form-toggle-disabled-border-color, var(--utrecht-form-toggle-border-color, currentColor));
+  border-style: var(--utrecht-form-toggle-disabled-border-style, var(--utrecht-form-toggle-border-style, solid));
+  border-width: var(--utrecht-form-toggle-disabled-border-width, var(--utrecht-form-toggle-border-width, 1px));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-form-toggle__thumb {
+  /* To have a circle or square by default (1:1 aspect ratio) we use the `min-inline-size` design token for both `inline` and `block` direction. */
+  background-color: var(--utrecht-form-toggle-thumb-background-color, currentColor);
+  border-radius: var(--utrecht-form-toggle-thumb-border-radius, 50%);
+  box-shadow: var(--utrecht-form-toggle-thumb-box-shadow);
+  margin-inline-end: var(--utrecht-form-toggle-thumb-margin-inline-end, 0);
+  margin-inline-start: var(--utrecht-form-toggle-thumb-margin-inline-start, 0);
+  min-block-size: var(--utrecht-form-toggle-thumb-min-inline-size, 1.5em);
+  min-inline-size: var(--utrecht-form-toggle-thumb-min-inline-size, 1.5em);
+  z-index: 20;
+}
+
+.utrecht-form-toggle__thumb--checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:checked ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+  margin-inline-start: auto;
+}
+
+.utrecht-form-toggle__thumb--not-checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:not(:checked) ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+  margin-inline-end: auto;
+}
+
+.utrecht-form-toggle__thumb--disabled, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:disabled ~ .utrecht-form-toggle__track .utrecht-form-toggle__thumb {
+  background-color: var(--utrecht-form-toggle-thumb-disabled-background-color, #aaa);
+  box-shadow: var(--utrecht-form-toggle-thumb-disabled-box-shadow, 0);
+}
+
+.utrecht-form-toggle__track {
+  align-items: center;
+  background-color: var(--utrecht-form-toggle-accent-color);
+  border-radius: var(--utrecht-form-toggle-track-border-radius, var(--utrecht-form-toggle-border-radius));
+  display: flex;
+  height: 100%;
+  width: 100%;
+}
+
+.utrecht-form-toggle__track--checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:checked ~ .utrecht-form-toggle__track {
+  background-color: var(--utrecht-form-toggle-checked-accent-color, var(--utrecht-form-toggle-accent-color));
+}
+
+.utrecht-form-toggle__track--disabled, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:disabled ~ .utrecht-form-toggle__track {
+  background-color: var(--utrecht-form-toggle-background-disabled-background-color, #ddd);
+  color: var(--utrecht-form-toggle-disabled-color, black);
+}
+
+.utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox {
+  /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+  width: 1px !important;
+}
+.utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:focus ~ .utrecht-form-toggle__track {
+  outline-color: var(--utrecht-form-toggle-focus-border-color, var(--utrecht-form-toggle-border-color, currentColor));
+  outline-style: var(--utrecht-form-toggle-focus-border-style, var(--utrecht-form-toggle-border-style, solid));
+  outline-width: var(--utrecht-form-toggle-focus-border-width, var(--utrecht-form-toggle-border-width, 1px));
+}
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-1 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-1-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-1-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-1-font-size);
+  font-weight: var(--utrecht-heading-1-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-1-letter-spacing);
+  line-height: var(--utrecht-heading-1-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-1-text-transform, inherit);
+}
+
+.utrecht-heading-1--distanced {
+  margin-block-end: var(--utrecht-heading-1-margin-block-end);
+  margin-block-start: var(--utrecht-heading-1-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-2 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-2-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-2-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-2-font-size);
+  font-weight: var(--utrecht-heading-2-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-2-letter-spacing);
+  line-height: var(--utrecht-heading-2-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-2-text-transform, inherit);
+}
+
+.utrecht-heading-2--distanced {
+  margin-block-end: var(--utrecht-heading-2-margin-block-end);
+  margin-block-start: var(--utrecht-heading-2-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-3 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-3-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-3-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-3-font-size);
+  font-weight: var(--utrecht-heading-3-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-3-letter-spacing);
+  line-height: var(--utrecht-heading-3-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-3-text-transform, inherit);
+}
+
+.utrecht-heading-3--distanced {
+  margin-block-end: var(--utrecht-heading-3-margin-block-end);
+  margin-block-start: var(--utrecht-heading-3-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-4 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-4-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-4-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-4-font-size);
+  font-weight: var(--utrecht-heading-4-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-4-letter-spacing);
+  line-height: var(--utrecht-heading-4-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-4-text-transform, inherit);
+}
+
+.utrecht-heading-4--distanced {
+  margin-block-end: var(--utrecht-heading-4-margin-block-end);
+  margin-block-start: var(--utrecht-heading-4-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-5 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-5-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-5-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-5-font-size);
+  font-weight: var(--utrecht-heading-5-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-5-letter-spacing);
+  line-height: var(--utrecht-heading-5-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-5-text-transform, inherit);
+}
+
+.utrecht-heading-5--distanced {
+  margin-block-end: var(--utrecht-heading-5-margin-block-end);
+  margin-block-start: var(--utrecht-heading-5-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+.utrecht-heading-6 {
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  color: var(--utrecht-heading-6-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-heading-6-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-heading-6-font-size);
+  font-weight: var(--utrecht-heading-6-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-heading-6-letter-spacing);
+  line-height: var(--utrecht-heading-6-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-heading-6-text-transform, inherit);
+}
+
+.utrecht-heading-6--distanced {
+  margin-block-end: var(--utrecht-heading-6-margin-block-end);
+  margin-block-start: var(--utrecht-heading-6-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-img {
+  height: auto;
+  width: auto;
+}
+
+.utrecht-img--scale-down {
+  /* use this class name with caution, text contained in image might become too small to read */
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.utrecht-img--photo {
+  max-height: 100%;
+  max-width: 100%;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* reset before other stylesheets */
+.utrecht-link-list,
+.utrecht-link-list--html-ul {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+.utrecht-link-list > li,
+.utrecht-link-list--html-ul > li {
+  list-style: none;
+}
+
+.utrecht-link-list {
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-hover-text-decoration: underline;
+  --utrecht-link-focus-text-decoration: underline;
+}
+
+.utrecht-link-list--distanced {
+  margin-block-end: var(--utrecht-link-list-margin-block-end, 0);
+  margin-block-start: var(--utrecht-link-list-margin-block-start, 0);
+}
+
+.utrecht-link-list__marker, .utrecht-link-list__item > a::before {
+  background-image: var(--utrecht-link-list-marker-background-image);
+  background-position-x: left;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  display: inline-block;
+  inline-size: var(--utrecht-link-list-marker-inline-size);
+}
+
+.utrecht-link-list__item {
+  display: block;
+  font-weight: var(--utrecht-link-list-item-font-weight);
+}
+
+.utrecht-link-list__item + .utrecht-link-list__item {
+  margin-block-start: var(--utrecht-link-list-item-margin-block-start);
+}
+
+.utrecht-link-list__item > a {
+  display: block;
+}
+
+.utrecht-link-list__item > a::before {
+  content: "";
+  display: inline-block;
+  height: 1em;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/* stylelint-disable scss/no-global-function-names */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/*
+
+# CSS implementation
+
+## `text-decoration-skip`
+
+`text-decoration-skip` can be helpful to avoid making some texts unreadable.
+For example by obscuring Arabic diacritics.
+
+However, the combination of a greater thickness and skipping this thick underline
+leads to a very unappealing rendering of the underline. To avoid this,
+`text-decoration-skip` is disabled for interactive states.
+
+For design token configurations that have identical thickness for normal and interactive
+states, this will lead to the (undesirable) effect that the focus/hover effect is switching
+from an interrupted to an uninterrupted underline (for some texts).
+
+Apart from making `skip-ink` configurable for normal/focus/hover, there is no good solution yet.
+
+---
+
+Disabling `text-decoration-skip` for interactive states obscures some texts, and we assume for now
+that moving the pointer away from a link or having focus elsewhere first is simple enough to
+not make this too inconvenient.
+
+---
+
+Some folks implement the underline of links using `border-bottom` or even using a finely crafted
+`linear-gradient()` with a solid color at the bottom and transparent behind the text. These approaches
+would unfortunately not be able to provide the improved readability of `text-decoration-skip`.
+
+## `text-decoration-thickness`
+
+Varying `text-decoration-thickness` can be used to distinguish interactive states.
+
+---
+
+`text-decoration-thickness` appears to have rendering differences between Chrome and Safari.
+In Safari the line becomes thicker with extra pixels added to the bottom, while in Chrome
+the underline offset also seems to increase along with the thickness, which effectively means
+the underline is closer to the next line than in Safari.
+
+---
+
+It might be nice to use font-relative units for `text-decoration-thickness`, and that is why we
+use the `max()` function to ensure the underline remains visible for every font size.
+
+## `transition`
+
+`text-decoration-thickness` could be a candidate for animating between interactive states,
+however browsers don't seem to have implemented great looking supixel tweening yet.
+
+`text-decoration-skip` also makes the transition more challenging to implement.
+
+*/
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link-button {
+  color: var(--utrecht-link-color, blue);
+  text-decoration: var(--utrecht-link-text-decoration, underline);
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: max(var(--utrecht-link-text-decoration-thickness), 1px);
+  text-underline-offset: var(--utrecht-link-text-underline-offset);
+  cursor: pointer;
+  display: inline-flex;
+  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-weight: var(--utrecht-button-font-weight);
+  inline-size: var(--utrecht-button-inline-size, auto);
+  letter-spacing: var(--utrecht-button-letter-spacing);
+  min-block-size: var(--utrecht-button-min-block-size, 44px);
+  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
+  padding-block-end: var(--utrecht-button-padding-block-end);
+  padding-block-start: var(--utrecht-button-padding-block-start);
+  padding-inline-end: var(--utrecht-button-padding-inline-end);
+  padding-inline-start: var(--utrecht-button-padding-inline-start);
+  text-transform: var(--utrecht-button-text-transform);
+  user-select: none;
+}
+
+.utrecht-link-button--hover, .utrecht-link-button--html-button:hover {
+  color: var(--utrecht-link-hover-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-hover-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-hover-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+}
+
+.utrecht-link-button--active, .utrecht-link-button--html-button:active {
+  color: var(--utrecht-link-active-color, var(--utrecht-link-color));
+}
+
+.utrecht-link-button--focus, .utrecht-link-button--html-button:focus {
+  background-color: var(--utrecht-link-focus-background-color, transparent);
+  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+}
+
+.utrecht-link-button--focus-visible, .utrecht-link-button--html-button:focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-link-button--inline {
+  min-block-size: auto;
+  min-inline-size: auto;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-link-button--html-button {
+  background-color: transparent;
+  /* reset <button> styling */
+  border-width: 0;
+}
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+.utrecht-link-social {
+  --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+  align-items: center;
+  background-color: var(--utrecht-link-social-background-color);
+  border-color: var(--utrecht-link-social-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-link-social-border-width);
+  color: var(--utrecht-link-social-color);
+  display: inline-flex;
+  height: var(--utrecht-link-social-size);
+  justify-content: center;
+  text-align: center;
+  width: var(--utrecht-link-social-size);
+}
+
+.utrecht-link-social--distanced {
+  margin-inline-start: var(--utrecht-link-social-margin-inline-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/* stylelint-disable scss/no-global-function-names */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/* stylelint-disable scss/no-global-function-names */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/*
+
+# CSS implementation
+
+## `text-decoration-skip`
+
+`text-decoration-skip` can be helpful to avoid making some texts unreadable.
+For example by obscuring Arabic diacritics.
+
+However, the combination of a greater thickness and skipping this thick underline
+leads to a very unappealing rendering of the underline. To avoid this,
+`text-decoration-skip` is disabled for interactive states.
+
+For design token configurations that have identical thickness for normal and interactive
+states, this will lead to the (undesirable) effect that the focus/hover effect is switching
+from an interrupted to an uninterrupted underline (for some texts).
+
+Apart from making `skip-ink` configurable for normal/focus/hover, there is no good solution yet.
+
+---
+
+Disabling `text-decoration-skip` for interactive states obscures some texts, and we assume for now
+that moving the pointer away from a link or having focus elsewhere first is simple enough to
+not make this too inconvenient.
+
+---
+
+Some folks implement the underline of links using `border-bottom` or even using a finely crafted
+`linear-gradient()` with a solid color at the bottom and transparent behind the text. These approaches
+would unfortunately not be able to provide the improved readability of `text-decoration-skip`.
+
+## `text-decoration-thickness`
+
+Varying `text-decoration-thickness` can be used to distinguish interactive states.
+
+---
+
+`text-decoration-thickness` appears to have rendering differences between Chrome and Safari.
+In Safari the line becomes thicker with extra pixels added to the bottom, while in Chrome
+the underline offset also seems to increase along with the thickness, which effectively means
+the underline is closer to the next line than in Safari.
+
+---
+
+It might be nice to use font-relative units for `text-decoration-thickness`, and that is why we
+use the `max()` function to ensure the underline remains visible for every font size.
+
+## `transition`
+
+`text-decoration-thickness` could be a candidate for animating between interactive states,
+however browsers don't seem to have implemented great looking supixel tweening yet.
+
+`text-decoration-skip` also makes the transition more challenging to implement.
+
+*/
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link {
+  color: var(--utrecht-link-color, blue);
+  text-decoration: var(--utrecht-link-text-decoration, underline);
+  text-decoration-skip-ink: all;
+  text-decoration-thickness: max(var(--utrecht-link-text-decoration-thickness), 1px);
+  text-underline-offset: var(--utrecht-link-text-underline-offset);
+}
+
+.utrecht-link--icon-left {
+  background-image: var(--utrecht-link-icon-left-background-image, none);
+  background-position: 0 0.25em;
+  background-repeat: no-repeat;
+  color: var(--utrecht-link-color, blue);
+  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  padding-inline-start: var(--utrecht-space-block-md);
+  text-decoration: none;
+}
+
+.utrecht-link:visited,
+.utrecht-link--visited {
+  color: var(--utrecht-link-visited-color, var(--utrecht-link-color));
+}
+
+.utrecht-link:hover,
+.utrecht-link--hover {
+  color: var(--utrecht-link-hover-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-hover-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-hover-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+}
+
+.utrecht-link:active,
+.utrecht-link--active {
+  color: var(--utrecht-link-active-color, var(--utrecht-link-color));
+}
+
+.utrecht-link--focus {
+  background-color: var(--utrecht-link-focus-background-color, transparent);
+  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+}
+
+.utrecht-link--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-link:focus {
+  background-color: var(--utrecht-link-focus-background-color, transparent);
+  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)), 1px);
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-link--telephone {
+  white-space: nowrap;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-logo-button {
+  --utrecht-button-min-block-size: var(--utrecht-logo-button-block-size, 50px);
+  --utrecht-logo-max-block-size: var(--utrecht-logo-button-block-size, 50px);
+  --utrecht-logo-max-inline-size: var(--utrecht-logo-button-block-size, 50px);
+  display: inline-flex;
+  gap: var(--utrecht-space-inline-sm);
+}
+
+.utrecht-logo-button__logo {
+  order: 1;
+}
+
+.utrecht-logo-button__button {
+  order: 2;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-logo {
+  max-block-size: var(--utrecht-logo-max-block-size, 192px);
+  max-inline-size: var(--utrecht-logo-max-inline-size, 96px);
+  min-block-size: var(--utrecht-logo-min-block-size);
+  min-inline-size: var(--utrecht-logo-min-inline-size);
+}
+
+.utrecht-logo__decoration-1 {
+  fill: var(--utrecht-logo-decoration-1-color, #fff);
+}
+
+.utrecht-logo__decoration-2 {
+  fill: var(--utrecht-logo-decoration-2-color, #c00);
+}
+
+.utrecht-logo__decoration-3 {
+  fill: var(--utrecht-logo-decoration-3-color, #ffb70b);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-mapcontrolbutton {
+  --utrecht-icon-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-color);
+  align-items: center;
+  background-color: var(--utrecht-mapcontrolbutton-background-color);
+  border-color: var(--utrecht-mapcontrolbutton-border-color);
+  border-radius: var(--utrecht-mapcontrolbutton-border-radius);
+  border-style: var(--utrecht-mapcontrolbutton-border-style);
+  border-width: var(--utrecht-mapcontrolbutton-border-width);
+  color: var(--utrecht-mapcontrolbutton-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-block-size: var(--utrecht-mapcontrolbutton-min-block-size);
+  min-inline-size: var(--utrecht-mapcontrolbutton-min-inline-size);
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-mapcontrolbutton:disabled,
+.utrecht-mapcontrolbutton--disabled {
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-disabled-color, var(--utrecht-mapcontrolbutton-color));
+  background-color: var(--utrecht-mapcontrolbutton-disabled-background-color);
+  border-color: var(--utrecht-mapcontrolbutton-disabled-border-color);
+  color: var(--utrecht-mapcontrolbutton-disabled-color);
+}
+
+.utrecht-mapcontrolbutton--focus-visible, .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled=true]):not(.utrecht-mapcontrolbutton--disabled) {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-mapcontrolbutton--focus, .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled=true]):not(.utrecht-mapcontrolbutton--disabled) {
+  --utrecht-icon-color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
+}
+
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+.utrecht-mapcontrolbutton:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-mapcontrolbutton--hover:not(:disabled),
+.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
+  background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
+  color: var(--utrecht-mapcontrolbutton-color);
+}
+
+.utrecht-mapcontrolbutton__label {
+  display: block;
+  padding-inline-end: var(--utrecht-mapcontrolbutton-label-margin-inline-end);
+  padding-inline-start: var(--utrecht-mapcontrolbutton-label-margin-inline-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-menulijst {
+  border-bottom: var(--utrecht-border-width-md) solid var(--utrecht-color-grey-90);
+  border-top: var(--utrecht-border-width-md) solid var(--utrecht-color-grey-90);
+  font-family: var(--utrecht-document-font-family);
+  padding-block-end: var(--utrecht-space-block-sm);
+  padding-block-start: var(--utrecht-space-block-sm);
+  padding-inline-start: 0;
+}
+
+.utrecht-menulijst__item {
+  list-style: none;
+  margin-block-end: var(--utrecht-space-block-sm);
+  margin-block-start: var(--utrecht-space-block-sm);
+}
+
+.utrecht-menulijst__item a:link {
+  background-image: var(--utrecht-menulijst-item-background-image, none);
+  background-position: 0 0.25em;
+  background-repeat: no-repeat;
+  color: var(--utrecht-menulijst-item-color, var(--utrecht-link-color, blue));
+  display: block;
+  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  padding-inline-start: var(--utrecht-space-block-md);
+  text-decoration: none;
+}
+
+.utrecht-menulijst__item a:hover {
+  color: var(--utrecht-menulijst-item-hover-color, var(--utrecht-link-hover-color, red));
+}
+
+.utrecht-menulijst__link--focus-visible, .utrecht-menulijst__link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-menulijst__link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-sidenav {
+  --utrecht-sidenav-connection-color: var(--utrecht-sidenav-item-marker-color);
+  --utrecht-sidenav-connection-inline-size: 2px;
+  --utrecht-sidenav-marker-current-color: var(--utrecht-sidenav-link-hover-color);
+  --utrecht-sidenav-marker-offset: 26px;
+  --utrecht-sidenav-connection-block-size: 100%;
+  --utrecht-sidenav-marker-height: 8px;
+  --utrecht-sidenav-marker-outline-width: 2px;
+  border-block-end: 1px solid var(--utrecht-color-grey-80);
+  border-block-start: 1px solid var(--utrecht-color-grey-80);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  width: 19rem;
+}
+
+.utrecht-sidenav__list {
+  margin-block-end: 0;
+  margin-block-start: 0.2rem;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-sidenav__list--child {
+  margin-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 1.4rem;
+}
+
+.utrecht-sidenav__item {
+  list-style: none;
+  margin-inline-start: 0;
+  position: relative;
+}
+
+.utrecht-sidenav__item--current {
+  color: var(--utrecht-sidenav-item-hover-color, var(--utrecht-link-hover-color, red));
+}
+
+.utrecht-sidenav__item--last {
+  border-block-end: none;
+}
+
+/* draw the li item box bottom line */
+.utrecht-sidenav__item-separator:not(.utrecht-sidenav__item--last .utrecht-sidenav__item-separator) {
+  /* .utrecht-sidenav__item--parent span */
+  border-block-end: 1px solid var(--utrecht-color-grey-80);
+  display: block;
+  margin-inline-start: var(--utrecht-space-inline-lg);
+}
+
+.utrecht-sidenav__link {
+  color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
+  display: block;
+  margin-inline-start: 0;
+  padding-block-end: var(--utrecht-space-block-xs);
+  padding-block-start: var(--utrecht-space-block-xs);
+  padding-inline-end: var(--utrecht-space-inline-3xs);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+  text-decoration: none;
+}
+
+.utrecht-sidenav__link:hover {
+  color: var(--utrecht-sidenav-link-hover-color, var(--utrecht-link-hover-color, red));
+  text-decoration: underline;
+}
+
+.utrecht-sidenav__link--focus-visible, .utrecht-sidenav__link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+/* Remove bottom padding form first item in list with children */
+.utrecht-sidenav__link--parent {
+  padding-block-end: 0;
+}
+
+/* Draw metro connection lines on sidenav link items */
+.utrecht-sidenav__connection, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link:not(.utrecht-sidenav__link--sibling):not(.utrecht-sidenav__link--parent):not(.utrecht-sidenav__link--child)::after {
+  background: var(--utrecht-sidenav-connection-color);
+  bottom: 0;
+  content: "";
+  display: block;
+  height: calc(var(--utrecht-sidenav-connection-block-size) - var(--utrecht-sidenav-marker-height) - 2 * var(--utrecht-sidenav-marker-outline-width));
+  left: 3px;
+  overflow: hidden;
+  position: absolute;
+  top: calc(var(--utrecht-sidenav-marker-offset));
+  width: var(--utrecht-sidenav-connection-inline-size);
+  z-index: 5;
+}
+
+.utrecht-sidenav__connection--last,
+.utrecht-sidenav__connection--parent,
+.utrecht-sidenav__connection--sibling {
+  display: none;
+}
+
+/* Dot for link with siblings */
+/* Little fix to move the dot to the right */
+.utrecht-sidenav__marker, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link::before {
+  background-color: var(--utrecht-sidenav-item-marker-color);
+  border-radius: 100%;
+  content: "";
+  height: var(--utrecht-sidenav-marker-height);
+  left: var(--utrecht-sidenav-marker-offset);
+  overflow: hidden;
+  position: absolute;
+  top: 20px; /* Hard value? */
+  transform: translateY(-50%) translateX(calc(-1 * var(--utrecht-sidenav-marker-offset)));
+  width: 8px;
+  z-index: 10;
+}
+
+/* Add dot bullets on child links */
+.utrecht-sidenav__marker--child, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link--child::before {
+  background-color: transparent;
+  border: 2px solid var(--utrecht-sidenav-link-color);
+  height: 4px;
+  left: 1.2rem;
+  top: 16px;
+  transform: translateY(-50%) translateX(-19.5px);
+  width: 4px;
+}
+
+/* selector must override .utrecht-sidenav__marker--child */
+.utrecht-sidenav__marker--current, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link--current::before,
+.utrecht-sidenav--pseudo-elements .utrecht-sidenav__link--current-child::before {
+  background-color: var(--utrecht-sidenav-marker-current-color);
+}
+
+.utrecht-sidenav__link--child,
+.utrecht-sidenav__link--current-child {
+  color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-block-end: var(--utrecht-space-block-2xs);
+  padding-block-start: var(--utrecht-space-block-2xs);
+  padding-inline-end: var(--utrecht-space-inline-3xs);
+  padding-inline-start: var(--utrecht-space-inline-lg);
+  text-decoration: none;
+}
+
+.utrecht-sidenav__link--current,
+.utrecht-sidenav__link--current-child {
+  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+}
+
+/* Hover layout for mousover on sidenav__link */
+.utrecht-sidenav__marker--hover, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link:hover::before, .utrecht-sidenav__link:hover .utrecht-sidenav__marker, .utrecht-sidenav__link:hover .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link::before, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link:hover .utrecht-sidenav__link::before {
+  background-color: var(--utrecht-sidenav-link-hover-color);
+}
+
+/* Hover layout for mousover on child__link */
+.utrecht-sidenav__marker--child.utrecht-sidenav__marker--hover, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__marker--child.utrecht-sidenav__link:hover::before, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__marker--hover.utrecht-sidenav__link--child::before, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link--child.utrecht-sidenav__link:hover::before, .utrecht-sidenav__link:hover .utrecht-sidenav__marker--child.utrecht-sidenav__marker, .utrecht-sidenav__link:hover .utrecht-sidenav--pseudo-elements .utrecht-sidenav__marker.utrecht-sidenav__link--child::before, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link:hover .utrecht-sidenav__marker.utrecht-sidenav__link--child::before, .utrecht-sidenav__link:hover .utrecht-sidenav--pseudo-elements .utrecht-sidenav__marker--child.utrecht-sidenav__link::before, .utrecht-sidenav__link:hover .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link.utrecht-sidenav__link--child::before, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link:hover .utrecht-sidenav__marker--child.utrecht-sidenav__link::before, .utrecht-sidenav--pseudo-elements .utrecht-sidenav__link:hover .utrecht-sidenav__link.utrecht-sidenav__link--child::before {
+  background-color: var(--utrecht-sidenav-link-hover-color);
+  border: 2px solid var(--utrecht-sidenav-link-hover-color);
+}
+
+.utrecht-sidenav--pseudo-elements .utrecht-sidenav__link--child::after {
+  display: none;
+}
+
+.utrecht-sidenav__link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-navhtml {
+  font-family: var(--utrecht-font-family-sans-serif);
+}
+
+.utrecht-topnav__list {
+  background-color: var(--utrecht-topnav-list-background-color);
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  list-style-image: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  overflow: visible;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-topnav__item {
+  border-inline-end: 1px solid var(--utrecht-topnav-list-border-color);
+  flex: 1 0 auto;
+  margin-inline-start: 0;
+  text-align: center;
+}
+
+.utrecht-topnav__item li:first-child {
+  border-inline-start: 1px solid var(--utrecht-topnav-list-border-color);
+  padding-inline-start: 0;
+}
+
+.utrecht-topnav__link {
+  color: var(--utrecht-topnav-link-color);
+  display: block;
+  padding-block-end: 1rem;
+  padding-block-start: 1rem;
+  text-decoration: none;
+}
+
+.utrecht-topnav__link:hover {
+  background-color: var(--utrecht-topnav-link-hover-background-color);
+  color: var(--utrecht-topnav-link-color);
+  text-decoration: underline;
+}
+
+.utrecht-topnav__link--current {
+  background-color: var(--utrecht-topnav-list-background-active);
+  text-decoration: underline;
+}
+
+.utrecht-topnav__link--focus, .utrecht-topnav__link:focus {
+  background-color: var(--utrecht-topnav-link-focus-background-color, var(--utrecht-topnav-link-background-color));
+  color: var(--utrecht-topnav-link-focus-color, var(--utrecht-topnav-link-color));
+}
+
+.utrecht-topnav__link--focus-visible, .utrecht-topnav__link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-topnav__link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+.utrecht-ordered-list {
+  font-family: var(--utrecht-document-font-family, inherit);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: var(--utrecht-ordered-list-padding-inline-start, var(--utrecht-unordered-list-padding-inline-start, 2ch));
+}
+
+.utrecht-ordered-list--distanced {
+  margin-block-end: var(--utrecht-ordered-list-margin-block-end, var(--utrecht-unordered-list-margin-block-end));
+  margin-block-start: var(--utrecht-ordered-list-margin-block-start, var(--utrecht-unordered-list-margin-block-start));
+}
+
+.utrecht-ordered-list--arabic {
+  list-style: arabic-indic;
+}
+
+.utrecht-ordered-list__item {
+  margin-block-end: var(--utrecht-ordered-list-item-margin-block-end, var(--utrecht-unordered-list-item-margin-block-end));
+  margin-block-start: var(--utrecht-ordered-list-item-margin-block-start, var(--utrecht-unordered-list-item-margin-block-start));
+  padding-inline-start: var(--utrecht-ordered-list-item-padding-inline-start, var(--utrecht-unordered-list-item-padding-inline-start, 1ch));
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-page-content {
+  padding-block-end: var(--utrecht-page-content-padding-block-end);
+  padding-block-start: var(--utrecht-page-content-padding-block-start);
+  padding-inline-end: var(--utrecht-page-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-padding-inline-start);
+}
+
+.utrecht-page-content__main {
+  grid-area: main;
+}
+
+.utrecht-page-content__aside {
+  grid-area: aside;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-page-footer {
+  --utrecht-document-color: currentColor;
+  --utrecht-heading-color: currentColor;
+  --utrecht-link-color: currentColor;
+  --utrecht-link-focus-color: currentColor;
+  --utrecht-link-hover-color: currentColor;
+  --utrecht-link-active-color: currentColor;
+  --utrecht-link-visited-color: currentColor;
+  background-color: var(--utrecht-page-footer-background-color);
+  background-image: var(--utrecht-page-footer-background-image);
+  color: var(--utrecht-page-footer-color);
+  font-family: var(--utrecht-document-font-family);
+  font-size: var(--utrecht-document-font-size);
+  padding-block-end: var(--utrecht-page-footer-padding-block-end);
+  padding-block-start: var(--utrecht-page-footer-padding-block-start);
+  padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+}
+
+.utrecht-page-footer .utrecht-link--telephone {
+  color: #fff;
+}
+
+.utrecht-page-footer .utrecht-paragraph {
+  color: #fff;
+}
+
+.utrecht-page-footer__address--reset-address {
+  /* reset <address> */
+  font-style: inherit;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-page-header {
+  background-color: var(--utrecht-page-header-background-color);
+  color: var(--utrecht-page-header-color);
+  grid-area: "utrecht-header";
+  padding-block-end: var(--utrecht-page-header-padding-block-end);
+  padding-block-start: var(--utrecht-page-header-padding-block-start);
+  padding-inline-end: var(--utrecht-page-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-padding-inline-start);
+}
+
+.utrecht-page-header__content {
+  max-inline-size: var(--utrecht-page-max-inline-size);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-page {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  max-inline-size: calc(var(--utrecht-page-max-inline-size) - var(--utrecht-page-margin-inline-start, 0px) - var(--utrecht-page-margin-inline-end, 0px));
+  padding-inline-end: var(--utrecht-page-margin-inline-end);
+  padding-inline-start: var(--utrecht-page-margin-inline-start);
+}
+
+.utrecht-page__content {
+  background-color: var(--utrecht-page-background-color);
+  color: var(--utrecht-page-color);
+  max-inline-size: var(--utrecht-page-max-inline-size);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-pagination__page-link:focus,
+.utrecht-pagination__relative-link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-pagination__page-link:focus:not(:focus-visible),
+.utrecht-pagination__relative-link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+.utrecht-pagination {
+  font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-pagination-font-size, var(--utrecht-document-font-family));
+}
+
+.utrecht-pagination--distanced {
+  margin-block-end: var(--utrecht-pagination-margin-block-end);
+  margin-block-start: var(--utrecht-pagination-margin-block-start);
+}
+
+.utrecht-pagination__relative-link {
+  background-color: var(--utrecht-pagination-relative-link-background-color);
+  border-color: var(--utrecht-pagination-relative-link-border-color);
+  border-radius: var(--utrecht-pagination-relative-link-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-pagination-relative-link-border-width, 0);
+  color: var(--utrecht-pagination-relative-link-color);
+  display: inline-block;
+  font-weight: var(--utrecht-pagination-relative-link-font-weight);
+  padding-block-end: var(--utrecht-pagination-relative-link-padding-block-end);
+  padding-block-start: var(--utrecht-pagination-relative-link-padding-block-start);
+  padding-inline-end: var(--utrecht-pagination-relative-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-pagination-relative-link-padding-inline-start);
+  text-decoration: var(--utrecht-pagination-relative-link-text-decoration);
+  text-transform: var(--utrecht-pagination-relative-link-text-transform);
+}
+
+.utrecht-pagination__relative-link--next {
+  margin-inline-start: var(--utrecht-pagination-relative-link-distanced-margin-inline-start);
+}
+
+.utrecht-pagination__relative-link--prev {
+  margin-inline-end: var(--utrecht-pagination-relative-link-distanced-margin-inline-end);
+}
+
+.utrecht-pagination__relative-link--disabled {
+  background-color: var(--utrecht-pagination-relative-link-disabled-background-color, var(--utrecht-pagination-relative-link-background-color));
+  color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
+}
+
+.utrecht-pagination__relative-link--hover,
+.utrecht-pagination__relative-link:hover {
+  background-color: var(--utrecht-pagination-relative-link-hover-background-color, var(--utrecht-pagination-relative-link-background-color));
+  border-color: var(--utrecht-pagination-relative-link-hover-border-color, var(--utrecht-pagination-relative-link-border-color));
+  color: var(--utrecht-pagination-relative-link-hover-color, var(--utrecht-pagination-relative-link-color));
+}
+
+.utrecht-pagination__page-link {
+  background-color: var(--utrecht-pagination-page-link-background-color);
+  border-color: var(--utrecht-pagination-page-link-border-color, 0);
+  border-radius: var(--utrecht-pagination-page-link-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-pagination-page-link-border-width);
+  color: var(--utrecht-pagination-page-link-color);
+  display: inline-block;
+  font-weight: var(--utrecht-pagination-page-link-font-weight);
+  padding-block-end: var(--utrecht-pagination-page-link-padding-block-end);
+  padding-block-start: var(--utrecht-pagination-page-link-padding-block-start);
+  padding-inline-end: var(--utrecht-pagination-page-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-pagination-page-link-padding-inline-start);
+  text-decoration: var(--utrecht-pagination-page-link-text-decoration);
+}
+
+.utrecht-pagination__page-link--current {
+  --utrecht-pagination-page-link-background-color: var(--utrecht-pagination-page-link-current-background-color);
+  --utrecht-pagination-page-link-border-color: var(--utrecht-pagination-page-link-current-border-color);
+  --utrecht-pagination-page-link-color: var(--utrecht-pagination-page-link-current-color);
+}
+
+.utrecht-pagination__page-link--distanced,
+.utrecht-pagination__page-link ~ .utrecht-pagination__page-link {
+  margin-inline-start: var(--utrecht-pagination-page-link-distanced-margin-inline-start);
+}
+
+.utrecht-pagination__page-link--hover,
+.utrecht-pagination__page-link:hover {
+  background-color: var(--utrecht-pagination-page-link-hover-background-color, var(--utrecht-pagination-page-link-background-color));
+  border-color: var(--utrecht-pagination-page-link-hover-border-color, var(--utrecht-pagination-page-link-border-color));
+  color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
+}
+
+.utrecht-pagination__page-link:focus,
+.utrecht-pagination__relative-link:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-pagination__page-link:focus:not(:focus-visible),
+.utrecht-pagination__relative-link:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+.utrecht-paragraph {
+  color: var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit));
+  font-family: var(--utrecht-paragraph-font-family, var(--utrecht-document-font-family, inherit));
+  font-size: var(--utrecht-paragraph-font-size, var(--utrecht-document-font-size, inherit));
+  font-weight: var(--utrecht-paragraph-font-weight, inherit);
+  line-height: var(--utrecht-paragraph-line-height, var(--utrecht-document-line-height, inherit));
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.utrecht-paragraph--lead {
+  color: var(--utrecht-paragraph-lead-color, var(--utrecht-document-color, inherit));
+  font-size: var(--utrecht-paragraph-lead-font-size, inherit);
+  font-weight: var(--utrecht-paragraph-lead-font-weight, inherit);
+  line-height: var(--utrecht-paragraph-lead-line-height, inherit);
+}
+
+.utrecht-paragraph--distanced {
+  margin-block-end: var(--utrecht-paragraph-margin-block-end);
+  margin-block-start: var(--utrecht-paragraph-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-pre-heading {
+  color: var(--utrecht-pre-heading-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
+  font-family: var(--utrecht-pre-heading-font-family, var(--utrecht-heading-font-family, var(--utrecht-document-font-family)));
+  font-size: var(--utrecht-pre-heading-font-size);
+  font-weight: var(--utrecht-pre-heading-font-weight, var(--utrecht-heading-font-weight, bold));
+  letter-spacing: var(--utrecht-pre-heading-letter-spacing);
+  line-height: var(--utrecht-pre-heading-line-height);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  text-transform: var(--utrecht-pre-heading-text-transform, inherit);
+}
+
+.utrecht-pre-heading--distanced {
+  margin-block-end: var(--utrecht-pre-heading-margin-block-end);
+  margin-block-start: var(--utrecht-pre-heading-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-radio-button {
+  /* reset native margin for input[type="radio" i] */
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-radio-button--disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-radio-button--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-radio-button--html-input:disabled {
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-radio-button--html-input:focus {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-radio-button--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-search-bar {
+  --utrecht-button-border-color: var(--utrecht-search-bar-button-border-color);
+  --utrecht-button-focus-transform-scale: var(--utrecht-search-bar-hover-transform);
+  --utrecht-button-font-size: var(--utrecht-search-bar-button-font-size);
+  --utrecht-button-font-weight: var(--utrecht-search-bar-button-font-weight);
+  --utrecht-button-letter-spacing: var(--utrecht-search-bar-button-letter-spacing);
+  --utrecht-button-primary-action-background-color: var(--utrecht-search-bar-button-background-color);
+  --utrecht-button-primary-action-color: var(--utrecht-search-bar-button-color);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-search-bar-hover-background-color);
+  --utrecht-button-text-transform: var(--utrecht-search-bar-button-text-transform);
+  --utrecht-textbox-border-color: var(--utrecht-search-bar-textbox-border-color);
+  --utrecht-textbox-padding-inline-start: var(--utrecht-search-bar-textbox-padding-inline-start);
+  --utrecht-textbox-border-bottom-width: var(--utrecht-search-bar-textbox-border-bottom-width);
+  display: flex;
+}
+
+.utrecht-search-bar__input {
+  background-image: var(--utrecht-search-bar-input-background-image, none);
+  background-position-x: var(--utrecht-search-bar-textbox-background-position-x);
+  background-position-y: var(--utrecht-search-bar-textbox-background-position-y);
+  background-repeat: no-repeat;
+  background-size: var(--utrecht-search-bar-textbox-background-size);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: var(--utrecht-select-background-color, var(--utrecht-form-input-background-color));
+  background-image: var(--utrecht-select-background-image);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 1.4em;
+  border-block-end-width: var(--utrecht-select-border-block-end-width, var(--utrecht-select-border-width, var(--utrecht-form-input-border-width)));
+  border-block-start-width: var(--utrecht-select-border-width, var(--utrecht-form-input-border-width));
+  border-color: var(--utrecht-select-border-color, var(--utrecht-form-input-border-color));
+  border-inline-end-width: var(--utrecht-select-border-width, var(--utrecht-form-input-border-width));
+  border-inline-start-width: var(--utrecht-select-border-width, var(--utrecht-form-input-border-width));
+  border-radius: var(--utrecht-select-border-radius, var(--utrecht-form-input-border-radius, 0));
+  border-style: solid;
+  color: var(--utrecht-select-color, var(--utrecht-form-input-color));
+  font-family: var(--utrecht-select-font-family, var(--utrecht-form-input-font-family));
+  font-size: var(--utrecht-select-font-size, var(--utrecht-form-input-font-size));
+  max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-input-max-inline-size));
+  padding-block-end: var(--utrecht-select-padding-block-end, var(--utrecht-form-input-padding-block-end));
+  padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-input-padding-block-start));
+  padding-inline-end: var(--utrecht-select-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
+  padding-inline-start: var(--utrecht-select-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  width: 100%;
+}
+
+.utrecht-select--disabled {
+  background-color: var(--utrecht-select-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-select--focus {
+  background-color: var(--utrecht-select-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+}
+
+.utrecht-select--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-select--invalid {
+  background-color: var(--utrecht-select-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-select-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-select-border-width, var(--utrecht-form-input-border-width))));
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-select--html-select {
+  /* <select> does not support :read-only */
+}
+.utrecht-select--html-select:disabled {
+  background-color: var(--utrecht-select-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-select--html-select:focus {
+  background-color: var(--utrecht-select-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-select-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-select-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-select-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-select-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-select-color, var(--utrecht-form-input-color))));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-select--html-select:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ */
+.utrecht-separator {
+  border-color: var(--utrecht-separator-color);
+  border-style: solid;
+  border-width: 0 0 var(--utrecht-separator-block-size) 0;
+}
+
+.utrecht-separator--distanced {
+  margin-block-end: var(--utrecht-separator-margin-block-end);
+  margin-block-start: var(--utrecht-separator-margin-block-start);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+.utrecht-surface {
+  background-color: var(--utrecht-surface-background-color, inherit);
+  color: var(--utrecht-surface-color, inherit);
+}
+
+.utrecht-surface--html-body {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-table {
+  border-collapse: collapse;
+  border-color: var(--utrecht-table-border-color, 0);
+  border-style: solid;
+  border-width: var(--utrecht-table-border-width, 0);
+  font-family: var(--utrecht-table-font-family, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-table-font-size, inherit);
+  width: 100%;
+}
+
+.utrecht-table--distanced {
+  margin-block-end: var(--utrecht-table-margin-block-end);
+  margin-block-start: var(--utrecht-table-margin-block-start);
+}
+
+.utrecht-table__caption {
+  color: var(--utrecht-table-caption-color);
+  font-family: var(--utrecht-table-caption-font-family);
+  font-size: var(--utrecht-table-caption-font-size);
+  font-weight: var(--utrecht-table-caption-font-weight);
+  line-height: var(--utrecht-table-caption-line-height);
+  margin-block-end: var(--utrecht-table-caption-margin-block-end);
+  text-align: var(--utrecht-table-caption-text-align, center);
+}
+
+.utrecht-table__header {
+  background-color: var(--utrecht-table-header-background-color);
+  color: var(--utrecht-table-header-color);
+  font-weight: var(--utrecht-table-header-font-weight);
+  text-transform: var(--utrecht-table-header-text-transform);
+  vertical-align: bottom;
+}
+
+.utrecht-table__cell--last-header-row {
+  border-block-end-color: var(--utrecht-table-header-border-block-end-color, transparent);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-table-header-border-block-end-width, 0);
+}
+
+.utrecht-table__body {
+  vertical-align: baseline;
+}
+
+.utrecht-table__header-cell {
+  color: var(--utrecht-table-header-cell-color);
+  font-size: var(--utrecht-table-header-cell-font-size);
+  font-weight: var(--utrecht-table-header-cell-font-weight);
+  text-align: start;
+  text-transform: var(--utrecht-table-header-cell-text-transform);
+}
+
+.utrecht-table__cell {
+  border-block-end-color: var(--utrecht-table-row-border-block-end-color, transparent);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-table-row-border-block-end-width, 0);
+  line-height: var(--utrecht-table-cell-line-height, inherit);
+  padding-block-end: var(--utrecht-table-cell-padding-block-end, 0);
+  padding-block-start: var(--utrecht-table-cell-padding-block-start, 0);
+  padding-inline-end: var(--utrecht-table-cell-padding-inline-end, 0);
+  padding-inline-start: var(--utrecht-table-cell-padding-inline-start, 0);
+  text-align: start;
+}
+
+.utrecht-table__cell--first {
+  padding-inline-start: var(--utrecht-table-row-padding-inline-start, var(--utrecht-table-cell-padding-inline-start, 0));
+}
+
+.utrecht-table__cell--last {
+  padding-inline-end: var(--utrecht-table-row-padding-inline-end, var(--utrecht-table-cell-padding-inline-end, 0));
+}
+
+.utrecht-table__header-cell--numeric-column,
+.utrecht-table__cell--numeric-column {
+  /* stylelint-disable-next-line declaration-property-value-disallowed-list */
+  text-align: right;
+}
+
+.utrecht-table__cell--numeric-data {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.utrecht-table__row--alternate-odd {
+  background-color: var(--utrecht-table-row-alternate-odd-background-color);
+  color: var(--utrecht-table-row-alternate-odd-color);
+}
+
+.utrecht-table__row--alternate-even {
+  background-color: var(--utrecht-table-row-alternate-even-background-color);
+  color: var(--utrecht-table-row-alternate-even-color);
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-textarea {
+  background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color));
+  border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-input-border-width));
+  border-bottom-width: var(--utrecht-textarea-border-bottom-width, var(--utrecht-textarea-border-width, var(--utrecht-form-input-border-width)));
+  border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color));
+  border-radius: var(--utrecht-textarea-border-radius, var(--utrecht-form-input-border-radius, 0));
+  border-style: solid;
+  box-sizing: border-box;
+  color: var(--utrecht-textarea-color, var(--utrecht-form-input-color));
+  font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-input-font-family));
+  font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-input-font-size, 1em));
+  max-inline-size: var(--utrecht-textarea-max-inline-size, var(--utrecht-form-input-max-inline-size));
+  min-block-size: var(--utrecht-textarea-min-block-size);
+  padding-block-end: var(--utrecht-textarea-padding-block-end, var(--utrecht-form-input-padding-block-end));
+  padding-block-start: var(--utrecht-textarea-padding-block-start, var(--utrecht-form-input-padding-block-start));
+  padding-inline-end: var(--utrecht-textarea-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
+  padding-inline-start: var(--utrecht-textarea-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  resize: vertical;
+  width: 100%;
+}
+
+.utrecht-textarea--invalid {
+  background-color: var(--utrecht-textarea-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textarea-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-textarea-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-textarea-border-width, var(--utrecht-form-input-border-width))));
+}
+
+.utrecht-textarea--disabled {
+  background-color: var(--utrecht-textarea-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textarea-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textarea-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-textarea--focus {
+  background-color: var(--utrecht-textarea-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textarea-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textarea-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+}
+
+.utrecht-textarea--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-textarea--read-only {
+  border-color: var(--utrecht-textarea-read-only-border, var(--utrecht-form-input-read-only-border-color, var(--utrecht-textarea-border, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textarea-read-only-color, var(--utrecht-form-input-read-only-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+}
+
+.utrecht-textarea__placeholder {
+  color: var(--utrecht-textarea-placeholder-color, var(--utrecht-form-input-placeholder-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  font-style: var(--utrecht-form-input-placeholder-font-style);
+  opacity: 100%;
+}
+
+.utrecht-textarea--html-textarea:disabled {
+  background-color: var(--utrecht-textarea-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textarea-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textarea-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-textarea--html-textarea:focus {
+  background-color: var(--utrecht-textarea-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textarea-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textarea-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-textarea--html-textarea:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+.utrecht-textarea--html-textarea:invalid, .utrecht-textarea--html-textarea[aria-invalid=true] {
+  background-color: var(--utrecht-textarea-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textarea-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-textarea-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-textarea-border-width, var(--utrecht-form-input-border-width))));
+}
+.utrecht-textarea--html-textarea:read-only {
+  border-color: var(--utrecht-textarea-read-only-border, var(--utrecht-form-input-read-only-border-color, var(--utrecht-textarea-border, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textarea-read-only-color, var(--utrecht-form-input-read-only-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+}
+.utrecht-textarea--html-textarea::placeholder {
+  color: var(--utrecht-textarea-placeholder-color, var(--utrecht-form-input-placeholder-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  font-style: var(--utrecht-form-input-placeholder-font-style);
+  opacity: 100%;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-textbox {
+  background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));
+  border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width));
+  border-bottom-width: var(--utrecht-textbox-border-bottom-width, var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width)));
+  border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color));
+  border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-input-border-radius, 0));
+  border-style: solid;
+  box-sizing: border-box;
+  color: var(--utrecht-textbox-color, var(--utrecht-form-input-color));
+  font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-input-font-family));
+  font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-input-font-size, 1em));
+  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-input-max-inline-size));
+  padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-input-padding-block-end));
+  padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-input-padding-block-start));
+  padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
+  padding-inline-start: var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  width: 100%;
+}
+
+.utrecht-textbox--invalid {
+  background-color: var(--utrecht-textbox-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-textbox-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))));
+}
+
+.utrecht-textbox--disabled {
+  background-color: var(--utrecht-textbox-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+
+.utrecht-textbox--focus {
+  background-color: var(--utrecht-textbox-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+}
+
+.utrecht-textbox--focus-visible {
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+
+.utrecht-textbox--read-only {
+  border-color: var(--utrecht-textbox-read-only-border-color, var(--utrecht-form-input-read-only-border-color, var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-read-only-color, var(--utrecht-form-input-read-only-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color))));
+}
+
+.utrecht-textbox__placeholder {
+  color: var(--utrecht-textbox-placeholder-color, var(--utrecht-form-input-placeholder-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color))));
+  font-style: var(--utrecht-form-input-placeholder-font-style);
+  opacity: 100%;
+}
+
+.utrecht-textbox--numeric {
+  -moz-appearance: textfield; /* avoid spinner input in Firefox */
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.utrecht-textbox--password {
+  font-variant-ligatures: none;
+  font-variant-numeric: slashed-zero;
+}
+
+.utrecht-textbox--url {
+  font-variant-ligatures: none;
+}
+
+.utrecht-textbox--html-input:disabled {
+  background-color: var(--utrecht-textbox-disabled-background-color, var(--utrecht-form-input-disabled-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-disabled-border-color, var(--utrecht-form-input-disabled-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-disabled-color, var(--utrecht-form-input-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  cursor: var(--utrecht-action-disabled-cursor);
+}
+.utrecht-textbox--html-input:focus {
+  background-color: var(--utrecht-textbox-focus-background-color, var(--utrecht-form-input-focus-background-color, var(--utrecht-textarea-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-focus-border-color, var(--utrecht-form-input-focus-border-color, var(--utrecht-textarea-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-focus-color, var(--utrecht-form-input-focus-color, var(--utrecht-textarea-color, var(--utrecht-form-input-color))));
+  box-shadow: 0 0 0 var(--utrecht-focus-box-shadow-spread-radius, 0) var(--utrecht-focus-box-shadow-color, transparent);
+  outline-color: var(--utrecht-focus-outline-color, transparent);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, solid);
+  outline-width: var(--utrecht-focus-outline-width, 0);
+}
+.utrecht-textbox--html-input:focus:not(:focus-visible) {
+  /* undo focus ring */
+  box-shadow: none;
+  outline-style: none;
+}
+.utrecht-textbox--html-input:invalid, .utrecht-textbox--html-input[aria-invalid=true] {
+  background-color: var(--utrecht-textbox-invalid-background-color, var(--utrecht-form-input-invalid-background-color, var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color))));
+  border-color: var(--utrecht-textbox-invalid-border-color, var(--utrecht-form-input-invalid-border-color, var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))));
+  border-width: var(--utrecht-textbox-invalid-border-width, var(--utrecht-form-input-invalid-border-width, var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))));
+}
+.utrecht-textbox--html-input:read-only {
+  border-color: var(--utrecht-textbox-read-only-border-color, var(--utrecht-form-input-read-only-border-color, var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color))));
+  color: var(--utrecht-textbox-read-only-color, var(--utrecht-form-input-read-only-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color))));
+}
+.utrecht-textbox--html-input::placeholder {
+  color: var(--utrecht-textbox-placeholder-color, var(--utrecht-form-input-placeholder-color, var(--utrecht-textbox-color, var(--utrecht-form-input-color))));
+  font-style: var(--utrecht-form-input-placeholder-font-style);
+  opacity: 100%;
+}
+.utrecht-textbox--html-input[type=password i] {
+  font-variant-ligatures: none;
+  font-variant-numeric: slashed-zero;
+}
+.utrecht-textbox--html-input[type=url i], .utrecht-textbox--html-input[type=email i], .utrecht-textbox--html-input[inputMode=email i], .utrecht-textbox--html-input[inputMode=url i] {
+  font-variant-ligatures: none;
+}
+.utrecht-textbox--html-input[type=number i], .utrecht-textbox--html-input[type=tel i], .utrecht-textbox--html-input[inputMode=numeric i], .utrecht-textbox--html-input[inputMode=decimal i], .utrecht-textbox--html-input[inputMode=tel i] {
+  -moz-appearance: textfield; /* avoid spinner input in Firefox */
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+.utrecht-unordered-list {
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-document-font-size, inherit);
+  line-height: var(--utrecht-document-line-height, inherit);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start, 2ch);
+}
+
+.utrecht-unordered-list--distanced {
+  margin-block-end: var(--utrecht-unordered-list-margin-block-end, var(--utrecht-paragraph-margin-block-end));
+  margin-block-start: var(--utrecht-unordered-list-margin-block-start, var(--utrecht-paragraph-margin-block-start));
+}
+
+.utrecht-unordered-list--nested {
+  margin-block-end: 0;
+  margin-inline-start: 2ch;
+}
+
+.utrecht-unordered-list__item {
+  margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
+  padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start, 1ch);
+}
+
+.utrecht-unordered-list__item::marker,
+.utrecht-unordered-list__marker {
+  color: var(--utrecht-unordered-list-marker-color);
+  content: "●";
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+.utrecht-url {
+  font-variant-ligatures: none;
+}
+
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+.utrecht-value-number {
+  font-variant-numeric: lining-nums tabular-nums;
+}
+
+.utrecht-value-number--positive {
+  color: var(--utrecht-value-number-positive-color);
+}
+
+.utrecht-value-number--negative {
+  color: var(--utrecht-value-number-negative-color);
+}
