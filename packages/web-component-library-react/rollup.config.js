@@ -17,6 +17,7 @@ import packageJson from './package.json';
 export const outputGlobals = {
   react: 'React',
   'react-dom': 'ReactDOM',
+  '@utrecht/web-component-library-stencil': '@utrecht/web-component-library-stencil/loader',
 };
 
 export default {
@@ -35,7 +36,7 @@ export default {
       globals: outputGlobals,
     },
   ],
-  external: [/@babel\/runtime/, 'react-dom', 'react'],
+  external: [/@babel\/runtime/, 'react-dom', 'react', '@utrecht/web-component-library-stencil'],
   plugins: [
     peerDepsExternal({ includeDependencies: true }),
     nodeExternal(),

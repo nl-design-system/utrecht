@@ -41,7 +41,7 @@
     "vue": "3.2.37",
     "vue-tsc": "0.39.4"
   },
-  "dependencies": {
-    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil"
+  "peerDependencies": {
+    "@utrecht/web-component-library-stencil": "*"
   }
 }

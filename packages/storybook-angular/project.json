@@ -1,0 +1,38 @@
+{
+  "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
+  "root": "packages/storybook-angular",
+  "sourceRoot": "packages/storybook-angular",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["packages/storybook-angular/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/storybook-angular"
+      },
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/storybook-angular"
+      }
+    },
+    "start": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run start",
+        "cwd": "packages/storybook-angular"
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run storybook",
+        "cwd": "packages/storybook-angular"
+      }
+    }
+  }
+}

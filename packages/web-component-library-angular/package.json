@@ -19,7 +19,7 @@
   "scripts": {
     "build": "npm run build:web-components",
     "build:web-components": "ng build",
-    "clean": "rimraf dist/"
+    "clean": "rimraf dist/ .angular/"
   },
   "peerDependencies": {
     "@angular/common": "12 - 14",
@@ -46,7 +46,6 @@
     "@angular/platform-browser": "14.1.0",
     "@angular/platform-browser-dynamic": "14.1.0",
     "@angular/router": "14.1.0",
-    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil",
     "ng-packagr": "14.1.0",
     "rxjs": "7.5.6",
     "zone.js": "0.11.7"

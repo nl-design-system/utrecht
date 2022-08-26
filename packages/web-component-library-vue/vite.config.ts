@@ -12,10 +12,11 @@ export default defineConfig({
       fileName: (format) => `web-component-library-vue.${format}.js`,
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', '@utrecht/web-component-library-stencil'],
       output: {
         globals: {
           vue: 'Vue',
+          '@utrecht/web-component-library-stencil/loader': 'loader',
         },
       },
     },

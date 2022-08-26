@@ -27,9 +27,6 @@
   "files": [
     "dist/"
   ],
-  "dependencies": {
-    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil/"
-  },
   "devDependencies": {
     "@babel/core": "7.18.10",
     "@babel/plugin-transform-runtime": "7.18.10",
@@ -54,7 +51,8 @@
   },
   "peerDependencies": {
     "react": "16 - 18",
-    "react-dom": "16 - 18"
+    "react-dom": "16 - 18",
+    "@utrecht/web-component-library-stencil": "*"
   },
   "jest": {
     "preset": "ts-jest",
