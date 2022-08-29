@@ -1,0 +1,66 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { UnorderedList } from "../story-template";
+import "../index.scss";
+import "../../../rich-text/css/index.scss";
+
+<Meta
+  id="css-unordered-list"
+  title="CSS Component/Unordered List/Complex content"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Nested unordered list
+
+<Canvas>
+  <Story
+    decorators={[(Story) => <div className="utrecht-rich-text">{Story()}</div>]}
+    args={{
+      items: [
+        {
+          innerHTML: [
+            <p className="utrecht-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>,
+            <ul className="utrecht-unordered-list">
+              <li className="utrecht-unordered-list__item">
+                <p className="utrecht-paragraph">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                  dolore magna aliqua.
+                </p>
+              </li>
+            </ul>,
+          ],
+        },
+        {
+          innerHTML: [
+            <p className="utrecht-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>,
+            <p className="utrecht-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>,
+            <p className="utrecht-paragraph">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua.
+            </p>,
+          ],
+        },
+        {
+          innerHTML: "Dolor",
+        },
+      ],
+    }}
+    name="Complex content"
+  >
+    {UnorderedList.bind({})}
+  </Story>
+</Canvas>
