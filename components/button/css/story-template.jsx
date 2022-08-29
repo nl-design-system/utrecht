@@ -83,7 +83,7 @@ export const Button = ({
       'utrecht-button--secondary-action': appearance === 'secondary-action-button',
       'utrecht-button--subtle': appearance === 'subtle-button',
     })}
-    aria-disabled={disabled}
+    aria-disabled={disabled || null}
     type={type}
   >
     {children}
