@@ -8,6 +8,7 @@
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-field-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-field-margin-block-start, 0));
   max-inline-size: var(--utrecht-form-field-max-inline-size);
+  page-break-inside: avoid;
 }
 
 @mixin utrecht-form-field--distanced {
