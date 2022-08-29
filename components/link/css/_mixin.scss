@@ -139,3 +139,17 @@ however browsers don't seem to have implemented great looking supixel tweening y
 /* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-link--current-lang {
 }
+
+/**
+ * Link for elements such as `<img>` or `<article>`, that are not inline elements or plain text.
+ * 
+ * Changing `display: inline` to `inline-block` ensures the focus outline is rendered around the entire box.
+ */
+@mixin utrecht-link--box-content {
+  color: unset;
+  display: inline-block;
+  text-decoration: unset;
+  text-decoration-skip-ink: unset;
+  text-decoration-thickness: unset;
+  text-underline-offset: unset;
+}

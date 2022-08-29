@@ -11,6 +11,10 @@ export const argTypes = {
     description: 'Active',
     control: 'boolean',
   },
+  boxContent: {
+    description: 'Content is a box, such as an image or a section, not just text',
+    control: 'boolean',
+  },
   external: {
     description: 'External',
     control: 'boolean',
@@ -53,6 +57,7 @@ export const argTypes = {
 
 export const defaultArgs = {
   active: false,
+  boxContents: false,
   current: false,
   external: false,
   hreflang: '',
@@ -70,6 +75,7 @@ export const defaultArgs = {
 
 export const Link = ({
   active = defaultArgs.active,
+  boxContent = defaultArgs.boxContent,
   current = defaultArgs.current,
   external = defaultArgs.external,
   hreflang = defaultArgs.hreflang,
@@ -89,6 +95,7 @@ export const Link = ({
     class={clsx('utrecht-link', {
       'utrecht-link--active': active,
       'utrecht-link--alternate-lang': lang && !current,
+      'utrecht-link--box-content': boxContent,
       'utrecht-link--current-lang': lang && current,
       'utrecht-link--external': external,
       'utrecht-link--focus': focus,
@@ -98,7 +105,7 @@ export const Link = ({
       'utrecht-link--visited': visited,
       'utrecht-link--icon-left': iconleft,
     })}
-    rel={external ? 'external noopener noreferrer' : !current ? 'alternate' : ''}
+    rel={external ? 'external noopener noreferrer' : !current ? 'alternate' : null}
     aria-current={current && 'page'}
     title={title}
     hreflang={hreflang}

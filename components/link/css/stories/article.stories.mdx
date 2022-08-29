@@ -1,0 +1,78 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Link } from "../story-template";
+import "../index.scss";
+import "./_article.scss";
+
+export const ExampleArticle = (
+  <article className="example-article" lang="nl-NL" dir="ltr">
+    <p className="utrecht-paragraph">
+      <a className="utrecht-link" href="https://twitter.com/GemeenteUtrecht" rel="external noopener noreferer">
+        <cite>@GemeenteUtrecht</cite>
+      </a>
+      : Wat een dag, wat een feest, wat een winnaar! Om helemaal nooit meer te vergeten. 🥰😍 <a
+        href="https://twitter.com/hashtag/lavuelta22"
+        className="utrecht-link"
+        rel="external noopener noreferer"
+      >
+        #lavuelta22
+      </a>
+    </p>
+  </article>
+);
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link/Article"
+  argTypes={argTypes}
+  component={Link}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Article that is a link
+
+Een voorbeeld van een link voor een heel blok met inhoud. Gebruik deze variant bijvoorbeeld om vanaf de homepage te linken naar het volledige artikel. Dit voorbeeld is op dit moment alleen voor de _style_ van de link.
+
+Let op: dit voorbeeld is niet volledig toegankelijk, er ontbreekt bijvoorbeeld het label voor een toegankelijk link.
+
+Styling met de `.utrecht-link--box-content` class naam:
+
+<Canvas>
+  <Story
+    name="Article"
+    args={{
+      ...defaultArgs,
+      boxContent: true,
+      href: "https://twitter.com/GemeenteUtrecht/status/1560699191508312064",
+      textContent: ExampleArticle,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Article" />
+
+## Focus-visible state
+
+Styling met de `.utrecht-link--focus-visible` class naam of als status op `.utrecht-link:focus-visible`:
+
+<Canvas>
+  <Story
+    name="Focus-visible"
+    args={{
+      boxContent: true,
+      focus: true,
+      focusVisible: true,
+      href: "https://twitter.com/GemeenteUtrecht/status/1560699191508312064",
+      textContent: ExampleArticle,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
