@@ -39,7 +39,7 @@ export const AlternateLangNav = ({ languages = [] }) => {
   return (
     <div className="utrecht-alternate-lang-nav">
       {navItems.map((item) => {
-        return item === SEPARATOR ? <span ariaHidden="true"> | </span> : <Link {...item} />;
+        return item === SEPARATOR ? <span aria-hidden="true"> | </span> : <Link {...item} />;
       })}
     </div>
   );
