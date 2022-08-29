@@ -8,12 +8,13 @@ import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  boxContent?: boolean;
   external?: boolean;
 }
 
 export const Link = forwardRef(
   (
-    { children, className, external, ...restProps }: PropsWithChildren<LinkProps>,
+    { boxContent, children, className, external, ...restProps }: PropsWithChildren<LinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => (
     // "utrecht-link--telephone" does not have a corresponding API,
@@ -23,7 +24,14 @@ export const Link = forwardRef(
     <a
       {...restProps}
       ref={ref}
-      className={clsx('utrecht-link', { 'utrecht-link--external': external }, className)}
+      className={clsx(
+        'utrecht-link',
+        {
+          'utrecht-link--box-content': boxContent,
+          'utrecht-link--external': external,
+        },
+        className,
+      )}
       rel={external ? 'external noopener noreferrer' : undefined}
     >
       {children}

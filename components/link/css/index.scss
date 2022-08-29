@@ -63,12 +63,10 @@
   }
 }
 
-/* stylelint-disable-next-line block-no-empty */
 .utrecht-link--email {
   @include utrecht-link--email;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 .utrecht-link--external {
   @include utrecht-link--external;
 }
@@ -77,12 +75,14 @@
   @include utrecht-link--telephone;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 .utrecht-link--alternate-lang {
   @include utrecht-link--alternate-lang;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 .utrecht-link--current-lang {
   @include utrecht-link--current-lang;
+}
+
+.utrecht-link--box-content {
+  @include utrecht-link--box-content;
 }

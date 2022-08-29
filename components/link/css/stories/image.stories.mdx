@@ -1,0 +1,55 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Link } from "../story-template";
+import "../index.scss";
+
+export const ExampleImage = <img src="logo.svg" width="192" height="100" alt="Wapen van de Gemeente Utrecht" />;
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link/Image"
+  argTypes={argTypes}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Image that is a link
+
+Styling met de `.utrecht-link` class naam:
+
+<Canvas>
+  <Story
+    name="Image"
+    args={{
+      ...defaultArgs,
+      boxContent: true,
+      textContent: ExampleImage,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Image" />
+
+## Focus-visible state
+
+Styling met de `.utrecht-link--focus-visible` class naam of als status op `.utrecht-link:focus-visible`:
+
+<Canvas>
+  <Story
+    name="Focus-visible"
+    args={{
+      boxContent: true,
+      focus: true,
+      focusVisible: true,
+      textContent: ExampleImage,
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>

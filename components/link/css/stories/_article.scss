@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+.example-article {
+  border: 1px solid silver;
+  border-radius: 0.5em;
+  padding-block-end: 1em;
+  padding-block-start: 1em;
+  padding-inline-end: 1em;
+  padding-inline-start: 1em;
+}
+
+.example-article--link-hover,
+:link:hover .example-article {
+  outline-color: var(--utrecht-link-text-decoration-color, var(--utrecht-link-color, currentColor));
+  outline-style: solid;
+  outline-width: var(--utrecht-link-text-decoration-thickness, 2px);
+}
