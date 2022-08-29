@@ -1,0 +1,38 @@
+{
+  "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
+  "root": "packages/storybook-react",
+  "sourceRoot": "packages/storybook-react",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["packages/storybook-react/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/storybook-react"
+      },
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/storybook-react"
+      }
+    },
+    "start": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run start",
+        "cwd": "packages/storybook-react"
+      }
+    },
+    "storybook": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run storybook",
+        "cwd": "packages/storybook-react"
+      }
+    }
+  }
+}

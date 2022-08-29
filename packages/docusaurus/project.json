@@ -1,0 +1,38 @@
+{
+  "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
+  "root": "packages/docusaurus",
+  "sourceRoot": "packages/docusaurus",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["packages/docusaurus/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/docusaurus"
+      },
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/docusaurus"
+      }
+    },
+    "start": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run start",
+        "cwd": "packages/docusaurus"
+      }
+    },
+    "docusaurus": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run docusaurus",
+        "cwd": "packages/docusaurus"
+      }
+    }
+  }
+}
