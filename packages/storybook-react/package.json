@@ -41,5 +41,8 @@
     "react-dom": "18.2.0",
     "storybook": "6.5.10",
     "storybook-addon-pseudo-states": "1.15.1"
+  },
+  "dependencies": {
+    "@utrecht/web-component-library-react": "file:../web-component-library-react"
   }
 }
