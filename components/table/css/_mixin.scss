@@ -26,6 +26,7 @@
   font-weight: var(--utrecht-table-caption-font-weight);
   line-height: var(--utrecht-table-caption-line-height);
   margin-block-end: var(--utrecht-table-caption-margin-block-end);
+  page-break-after: avoid;
   text-align: var(--utrecht-table-caption-text-align, center);
 }
 
@@ -33,6 +34,7 @@
   background-color: var(--utrecht-table-header-background-color);
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
+  page-break-inside: avoid;
   text-transform: var(--utrecht-table-header-text-transform);
   vertical-align: bottom;
 }
@@ -91,8 +93,8 @@
   font-variant-numeric: lining-nums tabular-nums;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-table__row {
+  page-break-inside: avoid;
 }
 
 @mixin utrecht-table__row--alternate-odd {
