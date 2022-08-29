@@ -20,7 +20,7 @@
     "build": "npm run build:components",
     "build:components": "ng build",
     "clean": "rimraf dist/ .angular/",
-    "watch:build": "chokidar --follow-symlinks --initial --command \"npm run build\" \"./src/**/*.(css|js|jsx|html|ts|tsx)\""
+    "watch-build": "ng build --watch"
   },
   "dependencies": {
     "tslib": "2.4.0"

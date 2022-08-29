@@ -1,0 +1,24 @@
+{
+  "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
+  "root": "packages/web-component-library-react",
+  "sourceRoot": "packages/web-component-library-react",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["packages/web-component-library-react/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/web-component-library-react"
+      },
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/web-component-library-react"
+      }
+    }
+  }
+}

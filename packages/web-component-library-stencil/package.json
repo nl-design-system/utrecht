@@ -44,15 +44,10 @@
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
-    "build:web-components": "npm run build:stencil",
     "build:typescript": "tsc",
-    "clean": "npm-run-all clean:**",
-    "clean:stencil": "rimraf dist/",
-    "clean:angular-output-target": "rimraf ../web-component-library-angular/src/directives/*",
-    "clean:react-output-target": "rimraf ../web-component-library-react/src/react-component-lib/ ../web-component-library-react/src/react-component-lib/components.ts",
+    "clean": "rimraf dist/",
     "start": "stencil build --dev --watch --serve",
-    "watch": "npm-run-all --parallel watch:**",
-    "watch:stencil": "chokidar --follow-symlinks --initial --command \"npm run build:stencil\" \"../../components/**/*.(js|jsx|ts|tsx)\"",
+    "watch:build": "stencil build --watch",
     "generate": "stencil generate"
   }
 }

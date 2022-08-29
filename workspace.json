@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "$schema": "/node_modules/nx/schemas/workspace-schema.json",
+  "projects": {
+    "documentation": "documentation",
+    "components": "components",
+    "icon": "/components/icon",
+    "component-library-angular": "packages/component-library-angular",
+    "component-library-css": "packages/component-library-css",
+    "component-library-formio": "packages/component-library-formio",
+    "component-library-react": "packages/component-library-react",
+    "component-library-vue": "packages/component-library-vue",
+    "design-system-website": "packages/design-system-website",
+    "docusaurus": "packages/docusaurus",
+    "storybook": "packages/storybook",
+    "storybook-angular": "packages/storybook-angular",
+    "storybook-react": "packages/storybook-react",
+    "storybook-vue": "packages/storybook-vue",
+    "web-component-library-angular": "packages/web-component-library-angular",
+    "web-component-library-react": "packages/web-component-library-react",
+    "web-component-library-stencil": "packages/web-component-library-stencil",
+    "web-component-library-vue": "packages/web-component-library-vue",
+    "design-tokens": "proprietary/design-tokens"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/workspace"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
+  "root": "packages/component-library-vue",
+  "sourceRoot": "packages/component-library-vue",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["packages/component-library-vue/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/component-library-vue"
+      }
+    },
+    "clean": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/component-library-vue"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run test",
+        "cwd": "packages/component-library-vue"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run lint",
+        "cwd": "packages/component-library-vue"
+      }
+    }
+  }
+}
