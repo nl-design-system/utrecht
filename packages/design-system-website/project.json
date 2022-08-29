@@ -1,0 +1,25 @@
+{
+  "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
+  "root": "packages/design-system-website",
+  "sourceRoot": "packages/design-system-website",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["packages/design-system-website/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/design-system-website"
+      },
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/design-system-website"
+      }
+    }
+  },
+  "implicitDependencies": ["docusaurus", "storybook", "storybook-angular", "storybook-react", "storybook-vue"]
+}
