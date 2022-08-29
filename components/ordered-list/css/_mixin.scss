@@ -29,6 +29,8 @@
 }
 
 @mixin utrecht-ordered-list__item {
+  font-size: var(--utrecht-ordered-list-item-font-size, var(--utrecht-document-font-size, inherit));
+  line-height: var(--utrecht-ordered-list-item-line-height, var(--utrecht-document-line-height, inherit));
   margin-block-end: var(
     --utrecht-ordered-list-item-margin-block-end,
     var(--utrecht-unordered-list-item-margin-block-end)

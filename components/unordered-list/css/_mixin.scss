@@ -6,8 +6,6 @@
 
 @mixin utrecht-unordered-list {
   font-family: var(--utrecht-document-font-family, inherit);
-  font-size: var(--utrecht-document-font-size, inherit);
-  line-height: var(--utrecht-document-line-height, inherit);
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-unordered-list-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
@@ -29,6 +27,8 @@
 }
 
 @mixin utrecht-unordered-list__item {
+  font-size: var(--utrecht-unordered-list-item-font-size, var(--utrecht-document-font-size, inherit));
+  line-height: var(--utrecht-unordered-list-item-line-height, var(--utrecht-document-line-height, inherit));
   margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
   margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
   padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start, 1ch);

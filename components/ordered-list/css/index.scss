@@ -18,6 +18,10 @@
   @include utrecht-ordered-list--arabic;
 }
 
+.utrecht-ordered-list--lower-alpha {
+  @include utrecht-ordered-list--lower-alpha;
+}
+
 .utrecht-ordered-list__item {
   @include utrecht-ordered-list__item;
 }
