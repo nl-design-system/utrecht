@@ -10,7 +10,7 @@ export type URLValueProps = HTMLAttributes<HTMLElement>;
 
 export const URLValue = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<URLValueProps>, ref: ForwardedRef<HTMLElement>) => (
-    <bdi {...restProps} ref={ref} className={clsx('utrecht-url', className)}>
+    <bdi translate="no" {...restProps} ref={ref} className={clsx('utrecht-url', className)}>
       {children}
     </bdi>
   ),
