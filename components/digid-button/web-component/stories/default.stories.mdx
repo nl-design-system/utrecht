@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, DigidButton } from "../story-template";
+import { argTypes, DigidButton } from "../story-template";
 
 <Meta
   id="web-component-digid-button"
@@ -18,7 +18,16 @@ import { argTypes, defaultArgs, DigidButton } from "../story-template";
 # DigiD Button
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story
+    name="Default"
+    args={{
+      children: (
+        <utrecht-button appearance="primary-action-button">
+          Inloggen <utrecht-icon-arrow></utrecht-icon-arrow>
+        </utrecht-button>
+      ),
+    }}
+  >
     {DigidButton.bind({})}
   </Story>
 </Canvas>
