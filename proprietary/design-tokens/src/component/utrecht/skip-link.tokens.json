@@ -1,0 +1,18 @@
+{
+  "utrecht": {
+    "skip-link": {
+      "background-color": { "value": "{utrecht.topnav.list.background-color}" },
+      "color": { "value": "{utrecht.topnav.link.color}" },
+      "padding-block-end": { "value": "{utrecht.button.padding-block-end}" },
+      "padding-block-start": { "value": "{utrecht.button.padding-block-start}" },
+      "padding-inline-end": { "value": "{utrecht.button.padding-inline-end}" },
+      "padding-inline-start": { "value": "{utrecht.button.padding-inline-start}" },
+      "text-decoration": { "value": "{utrecht.link.text-decoration}" },
+      "focus": {
+        "color": { "value": "{utrecht.topnav.link.focus.color}" },
+        "background-color": { "value": "{utrecht.topnav.link.focus.background-color}" },
+        "text-decoration": { "value": "{utrecht.link.focus.text-decoration}" }
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, exampleArgs, SkipLink } from "../story-template";
+import { ExampleViewport } from "./default.stories.mdx";
+import "../index.scss";
+
+<Meta
+  id="css-skip-link"
+  title="CSS Component/Skip link/Visible on focus"
+  argTypes={argTypes}
+  decorators={[ExampleViewport]}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Skip link
+
+## Visible on focus
+
+Styling met de `.utrecht-skip-link--visible-on-focus` class naam. Standaard niet zichtbaar, wordt zichtbaar wanneer je met het toetsenbord er naar toe tabt.
+
+<Canvas>
+  <Story
+    name="Visible on focus"
+    args={{
+      ...exampleArgs,
+      visibleOnFocus: true,
+    }}
+    parameters={{
+      status: {
+        type: "WORK IN PROGRESS",
+        chromatic: { disableSnapshot: true },
+      },
+    }}
+  >
+    {SkipLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Visible on focus" />
