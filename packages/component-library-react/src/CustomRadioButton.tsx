@@ -23,6 +23,7 @@ export const CustomRadioButton = forwardRef(
       ref={ref}
       className={clsx(
         'utrecht-custom-radio-button',
+        'utrecht-custom-radio-button--html-input',
         disabled && 'utrecht-custom-radio-button--disabled',
         invalid && 'utrecht-custom-radio-button--invalid',
         className,
