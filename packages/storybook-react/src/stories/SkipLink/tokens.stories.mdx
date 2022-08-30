@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinition from "@utrecht/components/skip-link/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="react-skip-link--design-tokens"
+  title="React.js Component/Skip link/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Skip link design tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-skip-link" />
