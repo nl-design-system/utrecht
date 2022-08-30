@@ -4,14 +4,10 @@ import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, exampleArgs, SkipLink } from "../story-template";
 import "../index.scss";
 
-export const ExampleViewport = (Story) => <div style={{ position: "relative" }}>{Story()}</div>;
-ExampleViewport.displayName = "ExampleViewport";
-
 <Meta
   id="css-skip-link"
   title="CSS Component/Skip link"
   argTypes={argTypes}
-  decorators={[ExampleViewport]}
   parameters={{
     status: {
       type: "ALPHA",
