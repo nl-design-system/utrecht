@@ -1,23 +1,17 @@
 {
   "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
-  "root": "/components/icon",
-  "sourceRoot": "/components/icon",
+  "root": "{workspaceRoot}/components/icon",
+  "sourceRoot": "{projectRoot}",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["components/icon/dist", "components/icon/tmp"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
         "cwd": "components/icon"
-      }
-    },
-    "clean": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run clean",
-        "cwd": "components/icon"
-      }
+      },
+      "dependsOn": ["^build"]
     }
   }
 }

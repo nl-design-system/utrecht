@@ -1,24 +1,17 @@
 {
   "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
-  "root": "packages/component-library-css",
-  "sourceRoot": "packages/component-library-css",
+  "root": "{workspaceRoot}/packages/component-library-css",
+  "sourceRoot": "{projectRoot}",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["packages/component-library-css/dist"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
         "cwd": "packages/component-library-css"
       },
       "dependsOn": ["^build"]
-    },
-    "clean": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run clean",
-        "cwd": "packages/component-library-css"
-      }
     }
   }
 }

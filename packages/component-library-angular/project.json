@@ -1,12 +1,12 @@
 {
   "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
-  "root": "packages/component-library-angular",
-  "sourceRoot": "packages/component-library-angular",
+  "root": "{workspaceRoot}/packages/component-library-angular",
+  "sourceRoot": "{projectRoot}",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["packages/component-library-angular/dist"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
         "cwd": "packages/component-library-angular"
@@ -15,16 +15,9 @@
     },
     "watch-build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["packages/component-library-angular/dist"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run watch-build",
-        "cwd": "packages/component-library-angular"
-      }
-    },
-    "clean": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run clean",
         "cwd": "packages/component-library-angular"
       }
     }
