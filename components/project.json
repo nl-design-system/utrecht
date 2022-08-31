@@ -11,7 +11,8 @@
       "options": {
         "command": "npm run build",
         "cwd": "components"
-      }
+      },
+      "dependsOn": ["^build"]
     }
   }
 }

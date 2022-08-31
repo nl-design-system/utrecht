@@ -10,7 +10,8 @@
       "options": {
         "command": "npm run build",
         "cwd": "proprietary/design-tokens"
-      }
+      },
+      "dependsOn": ["^build"]
     },
     "watch": {
       "executor": "@nrwl/workspace:run-commands",

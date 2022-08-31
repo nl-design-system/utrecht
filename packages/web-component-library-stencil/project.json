@@ -10,7 +10,8 @@
       "options": {
         "command": "npm run build",
         "cwd": "packages/web-component-library-stencil"
-      }
+      },
+      "dependsOn": ["^build"]
     },
     "watch-build": {
       "executor": "@nrwl/workspace:run-commands",
@@ -19,5 +20,6 @@
         "cwd": "packages/web-component-library-stencil"
       }
     }
-  }
+  },
+  "implicitDependencies": ["components-icon"]
 }

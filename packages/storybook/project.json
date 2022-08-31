@@ -25,7 +25,8 @@
       "options": {
         "command": "npm run storybook",
         "cwd": "packages/storybook"
-      }
+      },
+      "dependsOn": ["^build"]
     }
   }
 }

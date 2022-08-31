@@ -10,7 +10,8 @@
       "options": {
         "command": "npm run build",
         "cwd": "components/icon"
-      }
+      },
+      "dependsOn": ["^build"]
     }
   }
 }

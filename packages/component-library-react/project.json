@@ -10,7 +10,8 @@
       "options": {
         "command": "npm run build",
         "cwd": "packages/component-library-react"
-      }
+      },
+      "dependsOn": ["^build"]
     },
     "test": {
       "executor": "@nrwl/workspace:run-commands",

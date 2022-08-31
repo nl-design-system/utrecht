@@ -10,7 +10,8 @@
       "options": {
         "command": "npm run build",
         "cwd": "packages/component-library-vue"
-      }
+      },
+      "dependsOn": ["^build"]
     },
     "test": {
       "executor": "@nrwl/workspace:run-commands",
