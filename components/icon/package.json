@@ -12,7 +12,7 @@
     "prebuild": "npm run clean",
     "build": "npm run build:svg && npm run build:components",
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path tmp/components",
-    "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs",
+    "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
     "clean": "rimraf tmp dist"
   },
   "devDependencies": {
