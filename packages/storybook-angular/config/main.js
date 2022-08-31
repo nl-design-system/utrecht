@@ -21,4 +21,11 @@ module.exports = {
   core: {
     builder: '@storybook/builder-webpack5',
   },
+  webpackFinal: async (config) => ({
+    ...config,
+    performance: {
+      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
+      hints: false,
+    },
+  }),
 };

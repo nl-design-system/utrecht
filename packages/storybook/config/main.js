@@ -56,4 +56,11 @@ module.exports = {
       },
     };
   },
+  webpackFinal: async (config) => ({
+    ...config,
+    performance: {
+      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
+      hints: false,
+    },
+  }),
 };
