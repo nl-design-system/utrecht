@@ -1,6 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
+    "baseUrl": ".",
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node"
