@@ -2,6 +2,7 @@
 module.exports = {
   core: {
     builder: 'webpack5',
+    disableTelemetry: true,
   },
   features: {
     postcss: false,
@@ -18,6 +19,7 @@ module.exports = {
   staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => ({
     ...config,
+    quiet: true,
     performance: {
       // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
       hints: false,
