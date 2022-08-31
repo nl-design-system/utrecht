@@ -25,6 +25,6 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "rimraf dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/ && cp -R ../storybook-react/dist/ dist/storybook-react/ && cp -R ../storybook-angular/dist/ dist/storybook-angular/"
+    "build": "rimraf dist/ && mkdir -p dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/ && cp -R ../storybook-react/dist/ dist/storybook-react/ && cp -R ../storybook-angular/dist/ dist/storybook-angular/"
   }
 }

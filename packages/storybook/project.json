@@ -1,24 +1,17 @@
 {
   "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
-  "root": "packages/storybook",
-  "sourceRoot": "packages/storybook",
+  "root": "{workspaceRoot}/packages/storybook",
+  "sourceRoot": "{projectRoot}",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["packages/storybook/dist", "packages/design-system-website/dist"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
         "cwd": "packages/storybook"
       },
       "dependsOn": ["^build"]
-    },
-    "clean": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run clean",
-        "cwd": "packages/storybook"
-      }
     },
     "start": {
       "executor": "@nrwl/workspace:run-commands",
@@ -34,6 +27,5 @@
         "cwd": "packages/storybook"
       }
     }
-  },
-  "implicitDependencies": ["web-component-library-stencil"]
+  }
 }
