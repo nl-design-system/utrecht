@@ -2,6 +2,7 @@
 module.exports = {
   core: {
     builder: 'webpack5',
+    disableTelemetry: true,
   },
   stories: [
     '../stories/**/*stories.@(js|mdx)',
