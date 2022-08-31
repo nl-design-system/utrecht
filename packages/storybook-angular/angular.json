@@ -27,7 +27,6 @@
           "builder": "@storybook/angular:start-storybook",
           "options": {
             "browserTarget": "storybook-angular:build",
-            "compodocArgs": ["--exportFormat", "json", "--output", "tmp/"],
             "configDir": "config/",
             "styles": [
               "../../node_modules/@utrecht/component-library-css/src/index.scss",
