@@ -1,23 +1,18 @@
 {
   "$schema": "../node_modules/nx/schemas/workspace-schema.json",
-  "root": "components",
-  "sourceRoot": "components",
+  "root": "{workspaceRoot}/components",
+  "sourceRoot": "{projectRoot}",
   "projectType": "library",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["components/dist"],
+      "inputs": ["{projectRoot}/**/*.scss"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
         "cwd": "components"
-      }
-    },
-    "clean": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run clean",
-        "cwd": "components"
-      }
+      },
+      "dependsOn": ["^build"]
     }
   }
 }

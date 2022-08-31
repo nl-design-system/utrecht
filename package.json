@@ -60,8 +60,8 @@
   },
   "scripts": {
     "build": "nx run-many --target=build --all --parallel --with-deps",
-    "build:docs": "nx run-many --target=build --parallel --with-deps --projects=component-library-css,components,design-tokens,web-component-library-react",
-    "clean": "nx run-many --target=clean --all",
+    "build:docs": "nx run-many --target=build --parallel --with-deps",
+    "clean": "npm run --if-present --workspaces clean",
     "docs": "npm run --workspace packages/docusaurus start",
     "postinstall": "patch-package --patch-dir .patches",
     "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",

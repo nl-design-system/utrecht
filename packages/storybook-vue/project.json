@@ -1,24 +1,17 @@
 {
   "$schema": "../../node_modules/nx/schemas/workspace-schema.json",
-  "root": "packages/storybook-vue",
-  "sourceRoot": "packages/storybook-vue",
+  "root": "{workspaceRoot}/packages/storybook-vue",
+  "sourceRoot": "{projectRoot}",
   "projectType": "application",
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["packages/storybook-vue/dist"],
+      "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
         "cwd": "packages/storybook-vue"
       },
       "dependsOn": ["^build"]
-    },
-    "clean": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run clean",
-        "cwd": "packages/storybook-vue"
-      }
     },
     "start": {
       "executor": "@nrwl/workspace:run-commands",
@@ -33,8 +26,8 @@
       "options": {
         "command": "npm run storybook",
         "cwd": "packages/storybook-vue"
-      }
+      },
+      "dependsOn": ["^build"]
     }
-  },
-  "implicitDependencies": ["component-library-vue"]
+  }
 }
