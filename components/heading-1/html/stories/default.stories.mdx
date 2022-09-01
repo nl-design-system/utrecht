@@ -1,17 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Heading1 } from "../template";
+import { argTypes, defaultArgs, exampleArgs, Heading1 } from "../story-template";
 
 <Meta
   id="html-heading-1"
   title="HTML Component/Heading/Heading 1"
-  argTypes={{
-    textContent: {
-      description: "Set the content of the heading",
-      control: "text",
-    },
-  }}
+  component={Heading1}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "BETA",
@@ -24,12 +21,7 @@ import { Heading1 } from "../template";
 Styling via the `<h1>` element:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Heading1.bind({})}
   </Story>
 </Canvas>
