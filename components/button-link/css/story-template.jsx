@@ -4,6 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
+import iconSet from '@utrecht/icon/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
 
@@ -47,6 +48,16 @@ export const argTypes = {
       required: true,
     },
   },
+  iconBefore: {
+    description: 'Icon before textContent',
+    control: { type: 'select' },
+    options: ['', ...iconSet.map(({ id }) => id)],
+  },
+  iconAfter: {
+    description: 'Icon after textContent',
+    control: { type: 'select' },
+    options: ['', ...iconSet.map(({ id }) => id)],
+  },
 };
 
 export const defaultArgs = {
@@ -57,32 +68,45 @@ export const defaultArgs = {
   focus: false,
   focusVisible: false,
   keyboardSupport: false,
+  textContent: '',
+  iconBefore: '',
+  iconAfter: '',
+};
+export const exampleArgs = {
   textContent: 'Start je aanvraag',
 };
-
 export const ButtonLink = ({
-  appearance,
-  external = false,
-  hover = false,
-  href = '',
-  focus = false,
-  focusVisible = false,
+  appearance = defaultArgs.appearance,
+  external = defaultArgs.external,
+  hover = defaultArgs.hover,
+  href = defaultArgs.href,
+  focus = defaultArgs.focus,
+  focusVisible = defaultArgs.focusVisible,
   textContent = defaultArgs.textContent,
-  keyboardSupport = false,
-}) => (
-  <a
-    role={keyboardSupport ? 'button' : undefined}
-    href={href}
-    className={clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
-      'utrecht-button-link--hover': hover,
-      'utrecht-button-link--focus': focus,
-      'utrecht-button-link--focus-visible': focusVisible,
-      'utrecht-button-link--primary-action': appearance === 'primary-action-button',
-      'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
-      'utrecht-button-link--subtle': appearance === 'subtle-button',
-    })}
-    rel={external && 'external noopener noreferrer'}
-  >
-    {textContent}
-  </a>
-);
+  keyboardSupport = defaultArgs.keyboardSupport,
+  iconBefore = defaultArgs.iconBefore,
+  iconAfter = defaultArgs.iconAfter,
+}) => {
+  const IconBefore = iconBefore;
+  const IconAfter = iconAfter;
+
+  return (
+    <a
+      role={keyboardSupport ? 'button' : undefined}
+      href={href}
+      className={clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
+        'utrecht-button-link--hover': hover,
+        'utrecht-button-link--focus': focus,
+        'utrecht-button-link--focus-visible': focusVisible,
+        'utrecht-button-link--primary-action': appearance === 'primary-action-button',
+        'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
+        'utrecht-button-link--subtle': appearance === 'subtle-button',
+      })}
+      rel={external && 'external noopener noreferrer'}
+    >
+      {iconBefore && <IconBefore />}
+      {textContent}
+      {iconAfter && <IconAfter />}
+    </a>
+  );
+};
