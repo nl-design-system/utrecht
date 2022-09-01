@@ -7,12 +7,21 @@
 import React from 'react';
 
 export const argTypes = {
-  children: {
-    name: 'children',
-    type: { name: 'ReactNode', required: false },
+  textContent: {
+    description: 'textContent',
+    control: 'text',
   },
 };
 
-export const DigidButton = ({ children }) => <utrecht-digid-button>{children}</utrecht-digid-button>;
+export const defaultArgs = { textContent: '' };
+export const exampleArgs = { textContent: 'Inloggen' };
+
+export const DigidButton = ({ textContent = defaultArgs.textContent }) => (
+  <utrecht-digid-button>
+    <utrecht-button appearance="primary-action-button">
+      {textContent} <utrecht-icon-arrow></utrecht-icon-arrow>
+    </utrecht-button>
+  </utrecht-digid-button>
+);
 
 export default DigidButton;
