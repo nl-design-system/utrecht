@@ -60,7 +60,7 @@
   },
   "scripts": {
     "build": "lerna run --stream build",
-    "build-nx": "nx run-many --target=build --all --parallel --with-deps",
+    "build-nx": "nx run-many --target=build --all --parallel",
     "build:docs": "lerna run --scope @utrecht/docusaurus --include-dependencies build",
     "clean": "lerna run clean && rimraf dist/",
     "clean-nx": "npm run --if-present --workspaces clean",
