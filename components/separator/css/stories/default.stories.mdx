@@ -1,18 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Separator } from "../template";
+import { argTypes, defaultArgs, Separator } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-separator"
   title="CSS Component/Separator"
-  argTypes={{
-    distanced: {
-      description: "Distance the element from adjacent content",
-      control: "boolean",
-    },
-  }}
+  component={Separator}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -25,14 +22,7 @@ import "../index.scss";
 Styling via `utrecht-separator` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-    }}
-  >
-    {Separator.bind({})}
-  </Story>
+  <Story name="Default">{Separator.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />
