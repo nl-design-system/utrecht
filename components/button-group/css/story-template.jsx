@@ -5,7 +5,7 @@
  */
 
 import clsx from 'clsx';
-import parser from 'html-react-parser';
+import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
@@ -21,18 +21,23 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  innerHTML: '',
+  direction: '',
+};
+
+export const exampleArgs = {
   innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
 };
 
 export const ButtonGroup = ({ innerHTML = defaultArgs.innerHTML, direction }) => (
   <div
-    class={clsx(
+    className={clsx(
       'utrecht-button-group',
       direction === 'horizontal' && 'utrecht-button-group--horizontal',
       direction === 'vertical' && 'utrecht-button-group--vertical',
     )}
     role="group"
   >
-    {parser(innerHTML)}
+    {parse(innerHTML)}
   </div>
 );
