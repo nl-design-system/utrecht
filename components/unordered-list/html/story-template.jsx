@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import parser from 'html-react-parser';
+import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
@@ -14,10 +14,12 @@ export const argTypes = {
   },
 };
 
-export const decorators = [(story) => <section class="utrecht-html">{story()}</section>];
+export const decorators = [(story) => <section className="utrecht-html">{story()}</section>];
 
 export const defaultArgs = {
   innerHTML: `<li>Lorem</li><li>Ipsum</li><li>Dolor</li>`,
 };
 
-export const UnorderedList = ({ innerHTML = defaultArgs.innerHTML }) => <ul>{parser(innerHTML)}</ul>;
+export const UnorderedList = ({ innerHTML = defaultArgs.innerHTML }) => <ul>{parse(innerHTML)}</ul>;
+
+export default UnorderedList;

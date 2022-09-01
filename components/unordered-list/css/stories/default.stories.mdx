@@ -1,13 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, UnorderedList } from "../story-template";
+import { argTypes, defaultArgs, exampleArgs, UnorderedList } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-unordered-list"
   title="CSS Component/Unordered List"
+  component={UnorderedList}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -16,7 +18,7 @@ import "../index.scss";
 />
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {UnorderedList.bind({})}
   </Story>
 </Canvas>

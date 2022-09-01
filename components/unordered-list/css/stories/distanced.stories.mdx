@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, UnorderedList } from "../story-template";
+import { exampleArgs, UnorderedList } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-unordered-list"
   title="CSS Component/Unordered List/Distanced"
+  component={UnorderedList}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,7 +19,7 @@ import "../index.scss";
   <Story
     name="Distanced"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       distanced: true,
     }}
   >
