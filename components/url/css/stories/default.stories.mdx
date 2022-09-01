@@ -1,22 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, URLTemplate } from "../template";
+import { argTypes, defaultArgs, exampleArgs, URLTemplate } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-url"
   title="CSS Component/URL"
-  argTypes={{
-    url: {
-      description: "URL",
-      control: "text",
-    },
-    link: {
-      description: "Link",
-      control: "boolean",
-    },
-  }}
+  component={URLTemplate}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     // This story is rendered as regular text, no testing required
     chromatic: { disableSnapshot: true },
@@ -29,14 +22,7 @@ import "../index.scss";
 # URL
 
 <Canvas>
-  <Story
-    args={{
-      ...defaultArgs,
-      link: true,
-      url: "https://example.com/",
-    }}
-    name="Default"
-  >
+  <Story args={exampleArgs} name="Default">
     {URLTemplate.bind({})}
   </Story>
 </Canvas>
