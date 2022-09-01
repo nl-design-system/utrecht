@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { ButtonGroup } from "../story-template";
+import { ButtonGroup, exampleArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
@@ -15,7 +15,9 @@ import "../index.scss";
   }}
 />
 
-# Vertical button group
+# Button group directions
+
+## Horizontal
 
 Styling via the `.utrecht-button-group` and `.utrecht-button-group--horizontal` modifier class names:
 
@@ -23,7 +25,24 @@ Styling via the `.utrecht-button-group` and `.utrecht-button-group--horizontal` 
   <Story
     name="Horizontal"
     args={{
+      ...exampleArgs,
       direction: "horizontal",
+    }}
+  >
+    {ButtonGroup.bind({})}
+  </Story>
+</Canvas>
+
+## Vertical
+
+Styling via the `.utrecht-button-group` and `.utrecht-button-group--vertical` modifier class names:
+
+<Canvas>
+  <Story
+    name="Vertical"
+    args={{
+      ...exampleArgs,
+      direction: "vertical",
     }}
   >
     {ButtonGroup.bind({})}

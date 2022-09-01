@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, ButtonGroup, defaultArgs } from "../story-template";
+import { argTypes, ButtonGroup, defaultArgs, exampleArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
@@ -9,6 +9,7 @@ import "../index.scss";
   title="CSS Component/Button group"
   component={ButtonGroup}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,7 +22,7 @@ import "../index.scss";
 Styling via the `.utrecht-button-group` class name:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {ButtonGroup.bind({})}
   </Story>
 </Canvas>
