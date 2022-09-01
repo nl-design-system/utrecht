@@ -1,13 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Page } from "../story-template";
+import { argTypes, defaultArgs, exampleArgs, Page } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-page"
   title="CSS Component/Page"
+  component={Page}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     layout: "fullscreen",
     status: {
@@ -19,7 +21,7 @@ import "../index.scss";
 # Page component
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Page.bind({})}
   </Story>
 </Canvas>
