@@ -1,17 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageHeader } from "../template";
+import { argTypes, defaultArgs, exampleArgs, PageHeader } from "../story-template";
 
 <Meta
   id="web-component-page-header"
   title="Web Component/Page Header"
-  argTypes={{
-    innerHTML: {
-      description: "HTML content",
-      control: "text",
-    },
-  }}
+  component={PageHeader}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -22,12 +19,7 @@ import { PageHeader } from "../template";
 # Page Header
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      innerHTML: "Header content",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {PageHeader.bind({})}
   </Story>
 </Canvas>
