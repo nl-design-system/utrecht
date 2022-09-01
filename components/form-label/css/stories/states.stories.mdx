@@ -1,0 +1,68 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { exampleArgs, FormLabel } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-form-label"
+  title="CSS Component/Form label/State"
+  component={FormLabel}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component states
+
+## For disabled input
+
+Styling via the `.utrecht-form-label--disabled` class name:
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      ...exampleArgs,
+      disabled: true,
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
+
+## For checked checkbox
+
+Styling via the `.utrecht-form-label--checked` class name:
+
+<Canvas>
+  <Story
+    name="Checked Checkbox"
+    args={{
+      checked: true,
+      textContent: "Username",
+      type: "checkbox",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
+
+## Checked radio button
+
+Styling via the `.utrecht-form-label--radio` and `.utrecht-form-label--checked` class names:
+
+<Canvas>
+  <Story
+    name="Checked Radio button"
+    args={{
+      checked: true,
+      textContent: "Option 1",
+      type: "radio",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>

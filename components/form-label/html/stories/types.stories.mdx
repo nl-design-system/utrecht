@@ -1,0 +1,45 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { exampleArgs, FormLabel } from "../story-template";
+
+<Meta
+  id="html-form-label"
+  title="HTML Component/Form label/Type"
+  component={FormLabel}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component Types
+
+## For checkbox
+
+<Canvas>
+  <Story
+    name="Checkbox"
+    args={{
+      ...exampleArgs,
+      type: "checkbox",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
+
+## For radio button
+
+<Canvas>
+  <Story
+    name="Radio"
+    args={{
+      ...exampleArgs,
+      type: "radio",
+    }}
+  >
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
