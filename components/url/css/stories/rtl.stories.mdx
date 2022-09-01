@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, URLTemplate } from "../template";
+import { exampleArgs, URLTemplate } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-url"
-  title="CSS Component/URL"
+  title="CSS Component/URL/Right to left"
+  component={URLTemplate}
   parameters={{
     // This story is rendered as regular text, no testing required
     chromatic: { disableSnapshot: true },
@@ -23,7 +24,7 @@ When displaying an URL in HTML, explicitly mark the text directionality as left-
 <Canvas>
   <Story
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       url: "https://example.com/الأمثلة/",
     }}
     name="URL with right-to-left path"
@@ -37,7 +38,7 @@ When displaying an URL in HTML, explicitly mark the text directionality as left-
 <Canvas>
   <Story
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       url: "https://example.شبكة/",
     }}
     name="URL with right-to-left top-level domain"

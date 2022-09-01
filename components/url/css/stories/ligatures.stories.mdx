@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, URLTemplate } from "../template";
+import { exampleArgs, URLTemplate } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-url"
-  title="CSS Component/URL"
+  title="CSS Component/URL/Ligatures"
+  component={URLTemplate}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -20,11 +21,11 @@ It can be helpful to avoid rendering characters together as a ligatures, such as
 
 <Canvas>
   <Story
+    name="Ligatures"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       url: "https://example.fi/",
     }}
-    name="ligatures"
   >
     {URLTemplate.bind({})}
   </Story>
