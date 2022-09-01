@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldRadioGroup } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldRadioGroup } from "../story-template";
 import "../../../form-label/css/index.scss";
 import "../../../radio-button/css/index.scss";
 import "../index.scss";
@@ -9,23 +9,9 @@ import "../index.scss";
 <Meta
   id="css-form-field-radio-group"
   title="CSS Component/Form field with radio group"
-  argTypes={{
-    label: {
-      description: "Set the content of the label",
-      control: "text",
-    },
-    name: {
-      description: "Set the name of the radio button",
-      control: "text",
-    },
-    options: {
-      description: "Options for which there must be a the radio button",
-      type: {
-        name: "array",
-        required: true,
-      },
-    },
-  }}
+  component={FormFieldRadioGroup}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -36,28 +22,7 @@ import "../index.scss";
 # Form field with radio
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      label: "Which option do you like best?",
-      name: "radiobutton",
-      options: [
-        {
-          label: "Option 1",
-          value: "1",
-        },
-        {
-          checked: true,
-          label: "Option 2",
-          value: "2",
-        },
-        {
-          label: "Option 3",
-          value: "3",
-        },
-      ],
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldRadioGroup.bind({})}
   </Story>
 </Canvas>
