@@ -2,18 +2,20 @@
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { exampleArgs, Paragraphs } from "../story-template";
+import "../index.scss";
 
 <Meta
-  id="web-component-paragraph"
-  title="Web Component/Paragraph/Multiple"
+  id="css-paragraph"
+  title="CSS Component/Paragraph/Multiple"
+  component={Paragraphs}
   parameters={{
     status: {
-      type: "WORK IN PROGRESS",
+      type: "ALPHA",
     },
   }}
 />
 
-# Paragraph
+# Multiple paragraphs with whitespace
 
 <Canvas>
   <Story name="Multiple" args={{ items: [{ ...exampleArgs, lead: true }, exampleArgs, exampleArgs] }}>
