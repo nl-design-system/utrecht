@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, MapControlButton } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-map-control-button"
+  title="CSS Component/Map Control Button"
+  component={MapControlButton}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button
+
+Styling via the `.utrecht-mapcontrolbutton` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {MapControlButton.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
