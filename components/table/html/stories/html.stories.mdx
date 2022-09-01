@@ -1,17 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Table } from "../template";
+import { argTypes, defaultArgs, Table } from "../story-template";
 
 <Meta
   id="html-table"
   title="HTML Component/Table"
-  argTypes={{
-    alternateRowColor: {
-      description: "Alternate row color",
-      control: "boolean",
-    },
-  }}
+  component={Table}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -22,14 +19,7 @@ import { defaultArgs, Table } from "../template";
 # Table
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-    }}
-  >
-    {Table.bind({})}
-  </Story>
+  <Story name="Default">{Table.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />
