@@ -1,25 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Emphasis } from "../template";
+import { argTypes, defaultArgs, Emphasis, exampleArgs } from "../story-template";
 
 <Meta
   id="html-emphasis"
   title="HTML Component/Emphasis"
-  argTypes={{
-    textContent: {
-      description: "Set the text content",
-      control: "text",
-    },
-    stressed: {
-      description: "Stressed emphasis",
-      control: "boolean",
-    },
-    strong: {
-      description: "Strong emphasis: very important or urgent content",
-      control: "boolean",
-    },
-  }}
+  component={Emphasis}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -30,13 +19,7 @@ import { defaultArgs, Emphasis } from "../template";
 # Emphasis
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Emphasis.bind({})}
   </Story>
 </Canvas>

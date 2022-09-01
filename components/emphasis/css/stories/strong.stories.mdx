@@ -2,11 +2,12 @@
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import "../index.scss";
-import { Emphasis } from "../template";
+import { Emphasis, exampleArgs } from "../story-template";
 
 <Meta
   id="css-emphasis"
-  title="CSS Component/Emphasis"
+  title="CSS Component/Emphasis/Strong"
+  component={Emphasis}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,10 +19,10 @@ import { Emphasis } from "../template";
 
 <Canvas>
   <Story
-    name="--strong"
+    name="Strong"
     args={{
+      ...exampleArgs,
       strong: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Emphasis.bind({})}
