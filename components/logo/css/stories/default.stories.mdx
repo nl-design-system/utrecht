@@ -1,13 +1,13 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Logo } from "../template";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Logo } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-logo"
   title="CSS Component/Logo"
-  argTypes={{}}
+  component={Logo}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -20,5 +20,3 @@ import "../index.scss";
 <Canvas>
   <Story name="Default">{Logo.bind({})}</Story>
 </Canvas>
-
-<ArgsTable story="Default" />
