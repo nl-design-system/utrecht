@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Button, decorators, defaultArgs } from "../story-template";
+import { argTypes, Button, decorators, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="html-button"
   title="HTML Component/Button"
   component={Button}
   argTypes={argTypes}
+  args={defaultArgs}
   decorators={decorators}
   parameters={{
     status: {
@@ -21,7 +22,7 @@ import { argTypes, Button, decorators, defaultArgs } from "../story-template";
 Styling via the `<button>` element:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Button.bind({})}
   </Story>
 </Canvas>
