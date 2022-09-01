@@ -1,26 +1,29 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Menulijst } from "../template";
+import { argTypes, decorators, defaultArgs, exampleArgs, Menulijst } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-menulijst"
   title="CSS Component/Menulijst"
+  component={Menulijst}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
   }}
-  decorators={[
-    (story) => `<div style="max-inline-size: var(--utrecht-sidebar-max-inline-size, 20rem)">${story()}</div>`,
-  ]}
+  decorators={decorators}
 />
 
 # Menulijst
 
 <Canvas>
-  <Story name="Default">{Menulijst.bind({})}</Story>
+  <Story name="Default" args={exampleArgs}>
+    {Menulijst.bind({})}
+  </Story>
 </Canvas>
 
 <ArgsTable story="Default" />
