@@ -1,23 +1,20 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Topnav } from "../template";
+import { Topnav } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-topnav"
   title="CSS Component/Navigatie Topnav/States"
-  argTypes={{
-    items: {
-      description: "Menu items",
-      type: {
-        name: "array",
-        required: true,
-      },
-    },
-  }}
+  component={Topnav}
   parameters={{
     status: "IN DEVELOPMENT",
+    docs: {
+      source: {
+        state: "closed",
+      },
+    },
   }}
 />
 
@@ -36,13 +33,6 @@ import "../index.scss";
         { href: "https://example.com/", title: "Bestuur en organisatie" },
       ],
     }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
-    }}
   >
     {Topnav.bind({})}
   </Story>
@@ -60,13 +50,6 @@ import "../index.scss";
         { href: "https://example.com/", title: "Ondernemen" },
         { href: "https://example.com/", title: "Bestuur en organisatie" },
       ],
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Topnav.bind({})}

@@ -1,0 +1,26 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Topnav } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-topnav"
+  title="CSS Component/Navigatie Topnav"
+  component={Topnav}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Navigatie Topnav
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Topnav.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
