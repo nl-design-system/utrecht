@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { MapControlButton } from "../template";
+import { MapControlButton } from "../story-template";
 
 import "../index.scss";
 
 <Meta
   id="css-map-control-button"
-  title="CSS Component/Map Control Button"
+  title="CSS Component/Map Control Button/With label"
+  component={MapControlButton}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,7 +20,7 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="with label"
+    name="With label"
     args={{
       icon: "utrecht-icon-filter",
       label: "Filter",

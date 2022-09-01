@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { MapControlButton } from "../template";
+import { exampleArgs, MapControlButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-map-control-button"
   title="CSS Component/Map Control Button/States"
+  component={MapControlButton}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -24,8 +25,8 @@ Styling via the `.utrecht-mapcontrolbutton--hover` class name:
   <Story
     name="hover"
     args={{
+      ...exampleArgs,
       hover: true,
-      icon: "utrecht-icon-zoomin",
     }}
     parameters={{
       docs: {
@@ -47,8 +48,8 @@ Styling via the `.utrecht-mapcontrolbutton--focus` class name:
   <Story
     name="focus"
     args={{
+      ...exampleArgs,
       focus: true,
-      icon: "utrecht-icon-zoomin",
     }}
     parameters={{
       docs: {
@@ -70,9 +71,9 @@ Styling via the `.utrecht-mapcontrolbutton--focus-visible` class name:
   <Story
     name="focus-visible"
     args={{
+      ...exampleArgs,
       focus: true,
       focusVisible: true,
-      icon: "utrecht-icon-zoomin",
     }}
     parameters={{
       docs: {
@@ -94,8 +95,8 @@ Styling via the `.utrecht-mapcontrolbutton--disabled` class name:
   <Story
     name="disabled"
     args={{
+      ...exampleArgs,
       disabled: true,
-      icon: "utrecht-icon-zoomin",
     }}
     parameters={{
       docs: {
