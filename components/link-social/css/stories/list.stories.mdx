@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { SocialMediaLinkList } from "../template";
+import { SocialMediaLinkList } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-link-social"
-  title="CSS Component/Link to Social Media"
+  title="CSS Component/Link to Social Media/List"
+  component={SocialMediaLinkList}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,7 +19,7 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="list of links"
+    name="List"
     args={{
       links: [
         {
