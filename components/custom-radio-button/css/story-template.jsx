@@ -39,17 +39,17 @@ export const defaultArgs = {
 };
 
 export const CustomRadioButton = ({
-  checked = false,
-  disabled = false,
-  active = false,
-  focus = false,
-  invalid = false,
+  checked = defaultArgs.checked,
+  disabled = defaultArgs.disabled,
+  active = defaultArgs.active,
+  focus = defaultArgs.focus,
+  invalid = defaultArgs.invalid,
 }) => (
   <input
     autofocus="true"
     type="radio"
-    checked={checked}
-    disabled={disabled}
+    checked={checked || null}
+    disabled={disabled || null}
     className={clsx(
       'utrecht-custom-radio-button',
       checked && 'utrecht-custom-radio-button--checked',

@@ -9,6 +9,7 @@ import "../index.scss";
   title="CSS Component/Custom Radio Button"
   component={CustomRadioButton}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,9 +20,7 @@ import "../index.scss";
 # Custom Radio Button Component
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
-    {CustomRadioButton.bind({})}
-  </Story>
+  <Story name="Default">{CustomRadioButton.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />

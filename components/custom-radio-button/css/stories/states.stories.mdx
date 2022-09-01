@@ -21,7 +21,7 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
       disabled: true,
     }}
@@ -34,9 +34,23 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="checked"
+    name="Checked"
     args={{
       checked: true,
+    }}
+  >
+    {CustomRadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Checked
+
+<Canvas>
+  <Story
+    name="Checked and Disabled"
+    args={{
+      checked: true,
+      disabled: true,
     }}
   >
     {CustomRadioButton.bind({})}
