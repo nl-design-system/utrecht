@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { OrderedList } from "../template";
+import { exampleArgs, OrderedList } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-ordered-list"
-  title="CSS Component/Ordered List"
+  title="CSS Component/Ordered List/Distanced"
+  component={OrderedList}
   parameters={{
     status: "IN DEVELOPMENT",
   }}
@@ -16,20 +17,10 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="--distanced"
+    name="Distanced"
     args={{
+      ...exampleArgs,
       distanced: true,
-      items: [
-        {
-          textContent: "Lorem",
-        },
-        {
-          textContent: "Ipsum",
-        },
-        {
-          textContent: "Dolor",
-        },
-      ],
     }}
   >
     {OrderedList.bind({})}
