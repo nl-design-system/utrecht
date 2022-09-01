@@ -14,11 +14,15 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  textContent: '',
+};
+
+export const exampleArgs = {
   textContent: 'Festivals',
 };
 
 export const BadgeData = ({ textContent = defaultArgs.textContent }) => (
-  <div class="utrecht-badge-data">{textContent}</div>
+  <div className="utrecht-badge-data">{textContent}</div>
 );
 
 export default BadgeData;
