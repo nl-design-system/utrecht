@@ -1,19 +1,16 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Surface } from "../template";
+import { argTypes, defaultArgs, exampleArgs, Surface } from "../story-template";
 
 import "../index.scss";
 
 <Meta
   id="css-surface"
   title="CSS Component/Surface"
-  argTypes={{
-    innerHTML: {
-      description: "Surface content",
-      control: "text",
-    },
-  }}
+  component={Surface}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     layout: "fullscreen",
     status: {
@@ -25,12 +22,7 @@ import "../index.scss";
 # Surface component
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      innerHTML: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Surface.bind({})}
   </Story>
 </Canvas>
