@@ -1,24 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, FormFieldset } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldset } from "../story-template";
 
 <Meta
   id="html-form-fieldset"
   title="HTML Component/Form fieldset"
-  argTypes={{
-    innerHTML: {
-      description: "Set the content of the fieldset",
-      type: {
-        name: "string",
-        required: true,
-      },
-    },
-    legend: {
-      description: "Set the content of the legend",
-      control: "text",
-    },
-  }}
+  component={FormFieldset}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -31,14 +21,7 @@ import { defaultArgs, FormFieldset } from "../template";
 Styling via the `<fieldset>` and `<legend>` elements:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      innerHTML: "<p>Fieldset body</p>",
-      legend: "Fieldset legend",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldset.bind({})}
   </Story>
 </Canvas>
