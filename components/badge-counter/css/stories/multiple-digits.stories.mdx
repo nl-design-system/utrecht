@@ -1,0 +1,44 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeCounter } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-counter-badge"
+  title="CSS Component/Badge/Counter Badge"
+  component={BadgeCounter}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Counter badge
+
+Styling via the `.utrecht-badge-counter` class name:
+
+## Double Digit
+
+<Canvas>
+  <Story name="Double Digit" args={{ textContent: "42" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
+
+## Triple Digit
+
+<Canvas>
+  <Story name="Triple Digit" args={{ textContent: "316" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
+
+## Quadruple Digit
+
+<Canvas>
+  <Story name="Quadruple Digit" args={{ textContent: "2148" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
