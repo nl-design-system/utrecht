@@ -18,7 +18,8 @@ export const argTypes = {
   },
 };
 
-export const defaultArgs = { status: 'neutral', textContent: 'normaal' };
+export const defaultArgs = { status: 'neutral', textContent: '' };
+export const exampleArgs = { status: 'neutral', textContent: 'normaal' };
 
 export const BadgeStatus = ({ status = defaultArgs.status, textContent = defaultArgs.textContent }) => (
   <utrecht-badge-status status={status}>{textContent}</utrecht-badge-status>
