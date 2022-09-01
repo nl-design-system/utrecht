@@ -1,13 +1,13 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Img } from "../story-template";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Img } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-img"
-  title="CSS Component/Image"
-  argTypes={argTypes}
+  title="CSS Component/Image/Alt in another language"
+  component={Img}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,9 +21,8 @@ Photo © 2022 Gemeente Utrecht.
 
 <Canvas>
   <Story
-    name="Text alternative in another language"
+    name="Alt in another language"
     args={{
-      ...defaultArgs,
       src: "example/je-maintiendrai.svg",
       alt: "Je maintiendrai",
       lang: "fr",
@@ -34,5 +33,3 @@ Photo © 2022 Gemeente Utrecht.
     {Img.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable story="Text alternative in another language" />
