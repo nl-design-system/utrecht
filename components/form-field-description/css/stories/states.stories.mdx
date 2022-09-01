@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldDescription } from "../template";
+import { FormFieldDescription } from "../story-template";
 import "../index.scss";
 
 <Meta
-  id="web-component-form-field-description"
-  title="Web Component/Form field description"
+  id="css-form-field-description"
+  title="CSS Component/Form field description/State"
+  component={FormFieldDescription}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -14,13 +15,17 @@ import "../index.scss";
   }}
 />
 
-# Invalid Form field description
+# Form field description states
+
+## Invalid
+
+Describe that or why the form input is invalid, and possibly instructions on how to remedy the situation.
 
 <Canvas>
   <Story
-    name="Invalid form field description"
+    name="Invalid"
     args={{
-      id: "6fda501a-1512-4310-800d-7e4b5d305823",
+      id: "8cda724s-1512-4221-999e-9e0f6e10675",
       innerHTML: "This is a required field and must not be left empty.",
       status: "invalid",
     }}
@@ -31,9 +36,11 @@ import "../index.scss";
 
 ## Valid
 
+Describe that or why the form input is valid.
+
 <Canvas>
   <Story
-    name="Valid form field description"
+    name="Valid"
     args={{
       id: "6fda501a-1512-4310-800d-7e4b5d305823",
       innerHTML: "This is very safe password!",

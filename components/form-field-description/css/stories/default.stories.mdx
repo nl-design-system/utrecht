@@ -1,30 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldDescription } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldDescription } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-form-field-description"
   title="CSS Component/Form field description"
-  argTypes={{
-    id: {
-      description: "Unique identifier to associate it with a form input",
-      control: "text",
-    },
-    innerHTML: {
-      description: "Set the content of the description",
-      control: "text",
-    },
-    status: {
-      type: {
-        name: "enum",
-        required: false,
-      },
-      description: "Status",
-      options: ["", "invalid", "valid"],
-    },
-  }}
+  component={FormFieldDescription}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -37,50 +22,9 @@ import "../index.scss";
 Combined with the form label, provide an additional and more detailed description of the form field.
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      id: "0427f759-009c-43ad-8e1c-3d7b9982a133",
-      innerHTML: "Your password must contain at least 16 characters.",
-      status: "",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldDescription.bind({})}
   </Story>
 </Canvas>
 
 <ArgsTable story="Default" />
-
-## Invalid
-
-Describe that or why the form input is invalid, and possibly instructions on how to remedy the situation.
-
-<Canvas>
-  <Story
-    name="Invalid form field description"
-    args={{
-      id: "6fda501a-1512-4310-800d-7e4b5d305823",
-      innerHTML: "This is a required field and must not be left empty.",
-      status: "invalid",
-    }}
-  >
-    {FormFieldDescription.bind({})}
-  </Story>
-</Canvas>
-
-## Valid
-
-Describe that or why the form input is valid.
-
-<Canvas>
-  <Story
-    name="Valid form field description"
-    args={{
-      id: "6fda501a-1512-4310-800d-7e4b5d305823",
-      innerHTML: "This is very safe password!",
-      status: "valid",
-    }}
-  >
-    {FormFieldDescription.bind({})}
-  </Story>
-</Canvas>
