@@ -1,12 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { OrderedList } from "../template";
+import { argTypes, defaultArgs, exampleArgs, OrderedList } from "../story-template";
 
 <Meta
   id="html-ordered-list"
   title="HTML Component/Ordered List"
-  argTypes={{}}
+  component={OrderedList}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: "IN DEVELOPMENT",
   }}
@@ -15,5 +17,7 @@ import { OrderedList } from "../template";
 ## Ordered list
 
 <Canvas>
-  <Story name="Default">{OrderedList.bind({})}</Story>
+  <Story name="Default" args={exampleArgs}>
+    {OrderedList.bind({})}
+  </Story>
 </Canvas>

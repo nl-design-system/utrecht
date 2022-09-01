@@ -1,0 +1,26 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, OrderedList } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-ordered-list"
+  title="CSS Component/Ordered List"
+  component={OrderedList}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Ordered list
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {OrderedList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

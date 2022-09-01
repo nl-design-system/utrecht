@@ -1,0 +1,38 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { OrderedList } from "../story-template";
+
+<Meta
+  id="html-ordered-list"
+  title="HTML Component/Ordered List/Right to left"
+  component={OrderedList}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+## Ordered list in Arabic
+
+<Canvas>
+  <Story
+    name="Right to left"
+    args={{
+      items: [
+        {
+          textContent: "واحد",
+        },
+        {
+          textContent: "إثنان",
+        },
+        {
+          textContent: "ثلاثة",
+        },
+      ],
+      dir: "rtl",
+      lang: "ar",
+    }}
+  >
+    {OrderedList.bind({})}
+  </Story>
+</Canvas>
