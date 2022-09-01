@@ -5,36 +5,15 @@ Copyright (c) 2021 Gemeente Utrecht
 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import iconSet from "@utrecht/icon/dist/index.json";
-import { defaultArgs, ToptaskLink } from "../template";
+import { argTypes, defaultArgs, exampleArgs, ToptaskLink } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-toptask-link"
   title="CSS Component/Toptask Link"
-  argTypes={{
-    focus: {
-      description: "Focus",
-      control: "boolean",
-    },
-    focusVisible: {
-      description: "Focus visible",
-      control: "boolean",
-    },
-    hover: {
-      description: "Hover",
-      control: "boolean",
-    },
-    icon: {
-      description: "Icon",
-      control: { type: "select" },
-      options: ["", ...iconSet.map(({ id }) => id)],
-    },
-    textContent: {
-      description: "Link text",
-      control: "text",
-    },
-  }}
+  component={ToptaskLink}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -47,15 +26,7 @@ import "../index.scss";
 Styling via the `.utrecht-toptask-link` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      href: "#",
-      icon: "utrecht-icon-afval",
-      textContent: "Afval",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {ToptaskLink.bind({})}
   </Story>
 </Canvas>
