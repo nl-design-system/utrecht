@@ -1,26 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, LogoButton } from "../template";
+import { argTypes, defaultArgs, exampleArgs, LogoButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   title="CSS Component/Logo Button"
-  argTypes={{
-    label: {
-      description: "Button label",
-      control: "text",
-    },
-    textContent: {
-      description: "Button text",
-      control: "text",
-    },
-    logo: {
-      description: "Type logo",
-      control: { type: "select" },
-      options: { DigiD: "digid", eIDAS: "eidas", eHerkenning: "eherkenning" },
-    },
-  }}
+  component={LogoButton}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -33,34 +21,9 @@ import "../index.scss";
 Styling via the `.utrecht-logo-button` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      label: "Log in using DigiD",
-      textContent: "Log in",
-      logo: "digid",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {LogoButton.bind({})}
   </Story>
 </Canvas>
 
 <ArgsTable story="Default" />
-
-## Right-to-left
-
-<Canvas>
-  <Story
-    name="Logo Button in right-to-left text direction"
-    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
-    args={{
-      ...defaultArgs,
-      label: "تسجيل الدخول باستخدام DigiD",
-      textContent: "تسجيل الدخول",
-      logo: "digid",
-    }}
-  >
-    {LogoButton.bind({})}
-  </Story>
-</Canvas>

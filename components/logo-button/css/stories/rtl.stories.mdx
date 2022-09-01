@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, LogoButton } from "../template";
+import { LogoButton } from "../story-template";
 import "../index.scss";
 
 <Meta
-  title="CSS Component/Logo Button"
+  title="CSS Component/Logo Button/Right to left"
+  component={LogoButton}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -17,10 +18,15 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="right-to-left"
-    decorators={[(story) => `<div dir="rtl" lang="ar">${story()}</div>`]}
+    name="Right to left"
+    decorators={[
+      (story) => (
+        <div dir="rtl" lang="ar">
+          {story()}
+        </div>
+      ),
+    ]}
     args={{
-      ...defaultArgs,
       label: "تسجيل الدخول باستخدام DigiD",
       textContent: "تسجيل الدخول",
       logo: "digid",
