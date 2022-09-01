@@ -1,13 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, RadioButton } from "../template";
+import { argTypes, defaultArgs, RadioButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-radio-button"
   title="CSS Component/Radio Button"
-  argTypes={{}}
+  component={RadioButton}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,14 +20,7 @@ import "../index.scss";
 # Radio Button Component
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-    }}
-  >
-    {RadioButton.bind({})}
-  </Story>
+  <Story name="Default">{RadioButton.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />

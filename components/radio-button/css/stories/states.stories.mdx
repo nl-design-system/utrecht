@@ -1,13 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, RadioButton } from "../template";
+import { RadioButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-radio-button"
   title="CSS Component/Radio Button/States"
-  argTypes={{}}
+  component={RadioButton}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -20,13 +20,7 @@ import "../index.scss";
 ## Disabled
 
 <Canvas>
-  <Story
-    name="disabled"
-    args={{
-      ...defaultArgs,
-      disabled: true,
-    }}
-  >
+  <Story name="disabled" args={{ disabled: true }}>
     {RadioButton.bind({})}
   </Story>
 </Canvas>
@@ -34,13 +28,7 @@ import "../index.scss";
 ## Checked
 
 <Canvas>
-  <Story
-    name="checked"
-    args={{
-      ...defaultArgs,
-      checked: true,
-    }}
-  >
+  <Story name="checked" args={{ checked: true }}>
     {RadioButton.bind({})}
   </Story>
 </Canvas>

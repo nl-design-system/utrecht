@@ -1,33 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, RadioButton } from "../template";
+import { argTypes, defaultArgs, RadioButton } from "../story-template";
 
 <Meta
   id="html-radio-button"
   title="HTML Component/Radio Button"
-  argTypes={{
-    checked: {
-      description: "Checked",
-      control: "boolean",
-    },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    invalid: {
-      description: "Invalid",
-      control: "boolean",
-    },
-    required: {
-      description: "Required",
-      control: "boolean",
-    },
-    value: {
-      description: "Set the value of the text box",
-      control: "text",
-    },
-  }}
+  component={RadioButton}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -38,14 +19,7 @@ import { defaultArgs, RadioButton } from "../template";
 # Radio Button Component
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-    }}
-  >
-    {RadioButton.bind({})}
-  </Story>
+  <Story name="Default">{RadioButton.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />
