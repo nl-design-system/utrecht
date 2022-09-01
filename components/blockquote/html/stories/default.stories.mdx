@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Blockquote, defaultArgs } from "../story-template";
+import { argTypes, Blockquote, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="html-blockquote"
   title="HTML Component/Blockquote"
   component={Blockquote}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -20,7 +21,7 @@ import { argTypes, Blockquote, defaultArgs } from "../story-template";
 Styling via the `<blockquote>` element:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Blockquote.bind({})}
   </Story>
 </Canvas>

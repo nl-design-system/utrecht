@@ -14,6 +14,10 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  textContent: '',
+};
+
+export const exampleArgs = {
   textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
 };
 
