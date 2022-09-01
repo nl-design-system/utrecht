@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldCheckboxGroup } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldCheckboxGroup } from "../story-template";
 import "../../../checkbox/css/index.scss";
 import "../../../form-label/css/index.scss";
 import "../index.scss";
@@ -9,19 +9,9 @@ import "../index.scss";
 <Meta
   id="css-form-field-checkbox-group"
   title="CSS Component/Form field with checkbox group"
-  argTypes={{
-    label: {
-      description: "Set the content of the label",
-      control: "text",
-    },
-    options: {
-      description: "Options for which there must be a the checkbox",
-      type: {
-        name: "array",
-        required: true,
-      },
-    },
-  }}
+  component={FormFieldCheckboxGroup}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -32,30 +22,7 @@ import "../index.scss";
 # Form field with checkbox
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      label: "Ik verklaar dat de volgende beweringen kloppen:",
-      options: [
-        {
-          name: "requirement1",
-          value: "true",
-          label: "Ik sta niet onder curatele",
-          checked: true,
-        },
-        {
-          name: "requirement2",
-          value: "true",
-          label: "Ik ben woonachtig in Nederland",
-        },
-        {
-          name: "requirement3",
-          value: "true",
-          label: "Ik trouw niet onder dwang",
-        },
-      ],
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldCheckboxGroup.bind({})}
   </Story>
 </Canvas>
