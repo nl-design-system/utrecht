@@ -1,27 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import iconSet from "@utrecht/icon/dist/index.json";
-import { IconExample } from "../template";
+import { argTypes, defaultArgs, exampleArgs, Icon } from "../story-template";
 
 <Meta
   id="web-component-icon"
   title="Web Component/Icon"
-  argTypes={{
-    color: {
-      description: "Color of the icon",
-      control: "color",
-    },
-    icon: {
-      description: "Icon",
-      control: { type: "select" },
-      options: [...iconSet.map(({ id }) => id)],
-    },
-    size: {
-      description: "Size of the icon (in pixels)",
-      control: "number",
-    },
-  }}
+  component={Icon}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -32,15 +19,8 @@ import { IconExample } from "../template";
 # Icon
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      color: "#888888",
-      icon: "utrecht-icon-loupe",
-      size: 32,
-    }}
-  >
-    {IconExample.bind({})}
+  <Story name="Default" args={exampleArgs}>
+    {Icon.bind({})}
   </Story>
 </Canvas>
 
