@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Gemeente Utrecht
  * Copyright (c) 2022 Frameless B.V.
  */
-import parser from 'html-react-parser';
+import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
@@ -22,24 +22,24 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  asideHTML: '',
+  innerHTML: '',
+  navHTML: '',
+};
+
+export const exampleArgs = {
   innerHTML: `<h1>The Quick Brown Fox Jumps Over The Lazy Dog</h1>`,
 };
 
-export const PageContent = ({ asideHTML = null, innerHTML = '', navHTML = null }) => (
+export const PageContent = ({
+  asideHTML = defaultArgs.asideHTML,
+  innerHTML = defaultArgs.innerHTML,
+  navHTML = defaultArgs.navHTML,
+}) => (
   <div className="utrecht-page-content">
-    {navHTML && (
-      <nav className="utrecht-page-content__nav">{typeof navHTML === 'string' ? parser(navHTML) : navHTML}</nav>
-    )}
-    {innerHTML && (
-      <main className="utrecht-page-content__main">
-        {typeof innerHTML === 'string' ? parser(innerHTML) : innerHTML}
-      </main>
-    )}
-    {asideHTML && (
-      <aside className="utrecht-page-content__aside">
-        {typeof asideHTML === 'string' ? parser(asideHTML) : asideHTML}
-      </aside>
-    )}
+    {navHTML && <nav className="utrecht-page-content__nav">{parse(navHTML)}</nav>}
+    {innerHTML && <main className="utrecht-page-content__main">{parse(innerHTML)}</main>}
+    {asideHTML && <aside className="utrecht-page-content__aside">{parse(asideHTML)}</aside>}
   </div>
 );
 

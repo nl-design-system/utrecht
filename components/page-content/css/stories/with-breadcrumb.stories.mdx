@@ -1,13 +1,16 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Breadcrumb, defaultArgs } from "../../../breadcrumb/css/story-template";
-import { PageContent } from "../story-template";
+import * as ReactDOMServer from "react-dom/server";
+import { Breadcrumb, exampleArgs as breadcrumbArgs } from "../../../breadcrumb/css/story-template";
+import { exampleArgs, PageContent } from "../story-template";
+
 import "../index.scss";
 
 <Meta
   id="css-page-content"
   title="CSS Component/Page Content/With Breadcrumb"
+  component={PageContent}
   parameters={{
     status: "WORK IN PROGRESS",
   }}
@@ -19,8 +22,8 @@ import "../index.scss";
   <Story
     name="With Breadcrumb"
     args={{
-      innerHTML: `<h1>The Quick Brown Fox Jumps Over The Lazy Dog</h1>`,
-      navHTML: Breadcrumb({ ...defaultArgs, microdata: true, variant: "arrows" }),
+      ...exampleArgs,
+      navHTML: ReactDOMServer.renderToStaticMarkup(Breadcrumb({ ...breadcrumbArgs })),
     }}
   >
     {PageContent.bind({})}
