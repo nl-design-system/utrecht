@@ -60,17 +60,21 @@ export const defaultArgs = {
   boxContents: false,
   current: false,
   external: false,
-  hreflang: '',
+  hrefLang: '',
   hover: false,
   lang: '',
   focus: false,
   focusVisible: false,
   href: null,
   telephone: false,
-  textContent: 'Voorbeeld van een link',
+  textContent: '',
   title: '',
   visited: false,
   iconleft: false,
+};
+
+export const exampleArgs = {
+  textContent: 'Voorbeeldlink',
 };
 
 export const Link = ({
@@ -78,7 +82,7 @@ export const Link = ({
   boxContent = defaultArgs.boxContent,
   current = defaultArgs.current,
   external = defaultArgs.external,
-  hreflang = defaultArgs.hreflang,
+  hrefLang = defaultArgs.hrefLang,
   hover = defaultArgs.hover,
   lang = defaultArgs.lang,
   focus = defaultArgs.focus,
@@ -92,7 +96,7 @@ export const Link = ({
 }) => (
   <a
     href={href === null ? `https://example.com/${lang}` : href}
-    class={clsx('utrecht-link', {
+    className={clsx('utrecht-link', {
       'utrecht-link--active': active,
       'utrecht-link--alternate-lang': lang && !current,
       'utrecht-link--box-content': boxContent,
@@ -105,11 +109,11 @@ export const Link = ({
       'utrecht-link--visited': visited,
       'utrecht-link--icon-left': iconleft,
     })}
-    rel={external ? 'external noopener noreferrer' : !current ? 'alternate' : null}
-    aria-current={current && 'page'}
-    title={title}
-    hreflang={hreflang}
-    lang={lang}
+    rel={external ? 'external noopener noreferrer' : null}
+    aria-current={current ? 'page' : null}
+    title={title || null}
+    hrefLang={hrefLang || null}
+    lang={lang || null}
   >
     {textContent}
   </a>

@@ -1,34 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Link } from "../story-template";
+import { exampleArgs, Link } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-link"
   title="CSS Component/Link/States"
-  argTypes={{
-    active: {
-      description: "Active",
-      control: "boolean",
-    },
-    hover: {
-      description: "Hover",
-      control: "boolean",
-    },
-    focus: {
-      description: "Focus",
-      control: "boolean",
-    },
-    focusVisible: {
-      description: "Focus visible",
-      control: "boolean",
-    },
-    visited: {
-      description: "Visited",
-      control: "boolean",
-    },
-  }}
+  component={Link}
   parameters={{
     status: {
       type: "ALPHA",
@@ -46,8 +25,8 @@ Styling met de `.utrecht-link--hover` class naam of als state op link met `.utre
   <Story
     name="hover"
     args={{
+      ...exampleArgs,
       hover: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -65,8 +44,8 @@ Styling met de `.utrecht-link--focus` class naam:
   <Story
     name="focus"
     args={{
+      ...exampleArgs,
       focus: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -81,9 +60,9 @@ Styling met de `.utrecht-link--focus-visible` class naam of als status op `.utre
   <Story
     name="focus-visible"
     args={{
+      ...exampleArgs,
       focus: true,
       focusVisible: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -98,8 +77,8 @@ Styling met de `.utrecht-link--active` class naam of als status op `.utrecht-lin
   <Story
     name="active"
     args={{
+      ...exampleArgs,
       active: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {Link.bind({})}
@@ -114,7 +93,7 @@ Styling met de `.utrecht-link--visited` class naam of als status op `.utrecht-li
   <Story
     name="visited"
     args={{
-      textContent: "Voorbeeldlink",
+      ...exampleArgs,
       visited: true,
     }}
   >
