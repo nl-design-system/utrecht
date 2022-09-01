@@ -1,34 +1,19 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Select } from "../template";
+import { exampleArgs, Select } from "../story-template";
 
 <Meta
-  title="HTML Component/Select/States"
-  argTypes={{
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    invalid: {
-      description: "Invalid",
-      control: "boolean",
-    },
-    options: {
-      description: "Options",
-      type: {
-        name: "array",
-        required: true,
-      },
-    },
-    required: {
-      description: "Required",
-      control: "boolean",
-    },
-  }}
+  title="HTML Component/Select/State"
+  component={Select}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
+    },
+    docs: {
+      source: {
+        state: "closed",
+      },
     },
   }}
 />
@@ -39,17 +24,10 @@ import { defaultArgs, Select } from "../template";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       disabled: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
@@ -60,17 +38,10 @@ import { defaultArgs, Select } from "../template";
 
 <Canvas>
   <Story
-    name="invalid"
+    name="Invalid"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       invalid: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
@@ -81,17 +52,10 @@ import { defaultArgs, Select } from "../template";
 
 <Canvas>
   <Story
-    name="required"
+    name="Required"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       required: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
