@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormLabel } from "../story-template";
+
+<Meta
+  id="html-form-label"
+  title="HTML Component/Form label"
+  component={FormLabel}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Label component
+
+Styling via the `<label>` element:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {FormLabel.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
