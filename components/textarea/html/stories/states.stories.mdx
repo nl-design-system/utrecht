@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Textarea } from "../template";
+import { exampleArgs, Textarea } from "../story-template";
 
 <Meta
   id="html-textarea"
-  title="HTML Component/Textarea/States"
+  title="HTML Component/Textarea/State"
+  component={Textarea}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,10 +20,10 @@ import { Textarea } from "../template";
 
 <Canvas>
   <Story
-    name="invalid"
+    name="Invalid"
     args={{
+      ...exampleArgs,
       invalid: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -33,10 +34,10 @@ import { Textarea } from "../template";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
+      ...exampleArgs,
       disabled: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -47,10 +48,10 @@ import { Textarea } from "../template";
 
 <Canvas>
   <Story
-    name="read-only"
+    name="Read-only"
     args={{
+      ...exampleArgs,
       readOnly: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -61,10 +62,10 @@ import { Textarea } from "../template";
 
 <Canvas>
   <Story
-    name="required"
+    name="Required"
     args={{
+      ...exampleArgs,
       required: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}

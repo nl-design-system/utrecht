@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Textarea } from "../template";
+import { Textarea } from "../story-template";
 
 <Meta
   id="html-textarea"
-  title="HTML Component/Textarea"
+  title="HTML Component/Textarea/Placeholder"
+  component={Textarea}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -17,7 +18,7 @@ import { Textarea } from "../template";
 
 <Canvas>
   <Story
-    name="with placeholder"
+    name="Placeholder"
     args={{
       placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
