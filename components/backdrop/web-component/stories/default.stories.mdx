@@ -6,8 +6,9 @@ import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
 <Meta
   id="web-component-backdrop"
   title="Web Component/Backdrop"
-  argTypes={argTypes}
   component={Backdrop}
+  argTypes={argTypes}
+  args={defaultArgs}
   decorators={decorators}
   parameters={{
     layout: "fullscreen",
@@ -18,9 +19,7 @@ import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
 # Backdrop
 
 <Canvas>
-  <Story args={defaultArgs} name="Default">
-    {Backdrop.bind({})}
-  </Story>
+  <Story name="Default">{Backdrop.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />
