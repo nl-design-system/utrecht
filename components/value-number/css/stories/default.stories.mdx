@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, NumberValue } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-value-number"
+  title="CSS Component/Number Value"
+  component={NumberValue}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Number value
+
+<Canvas>
+  <Story args={exampleArgs} name="Default">
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

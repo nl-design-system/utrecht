@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { NumberValue } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-value-number"
+  title="CSS Component/Number Value/Number formatting"
+  component={NumberValue}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Number value with number formatting
+
+<Canvas>
+  <Story
+    args={{
+      value: 137438953471,
+      textContent: new Intl.NumberFormat("nl-NL").format(137438953471),
+    }}
+    name="Number formatting"
+    decorators={[(Story) => <span lang="nl-NL">{Story()}</span>]}
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>

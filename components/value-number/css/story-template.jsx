@@ -23,11 +23,25 @@ export const argTypes = {
       required: false,
     },
   },
+  textContent: {
+    description: 'Children',
+    type: 'text',
+  },
 };
 
-export const defaultArgs = {};
+export const defaultArgs = { textContent: '', value: '', appearance: '' };
 
-export const NumberValue = ({ children, appearance, value }) => {
+export const exampleArgs = {
+  // A Mersenne prime number
+  textContent: '137438953471',
+  value: 137438953471,
+};
+
+export const NumberValue = ({
+  textContent = defaultArgs.textContent,
+  appearance = defaultArgs.appearance,
+  value = defaultArgs.value,
+}) => {
   const className = clsx(
     'utrecht-value-number',
     appearance === 'negative' && 'utrecht-value-number--negative',
@@ -35,10 +49,10 @@ export const NumberValue = ({ children, appearance, value }) => {
   );
   return value ? (
     <data value={String(value)} className={className}>
-      {children}
+      {textContent}
     </data>
   ) : (
-    <span className={className}>{children}</span>
+    <span className={className}>{textContent}</span>
   );
 };
 

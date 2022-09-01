@@ -1,0 +1,48 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { NumberValue } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-value-number"
+  title="CSS Component/Number Value/Appearance"
+  component={NumberValue}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Number value appearance
+
+# Positive
+
+<Canvas>
+  <Story
+    args={{
+      value: 123,
+      textContent: "123",
+      appearance: "positive",
+    }}
+    name="Positive"
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
+
+# Negative
+
+<Canvas>
+  <Story
+    args={{
+      value: -123,
+      textContent: "-123",
+      appearance: "negative",
+    }}
+    name="Negative"
+  >
+    {NumberValue.bind({})}
+  </Story>
+</Canvas>
