@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Textbox } from "../template";
+import { exampleArgs, Textbox } from "../story-template";
 
 <Meta
   id="web-component-textbox"
   title="Web Component/Textbox/States"
+  component={Textbox}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,8 +22,8 @@ import { Textbox } from "../template";
   <Story
     name="invalid"
     args={{
+      ...exampleArgs,
       invalid: true,
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textbox.bind({})}
@@ -35,8 +36,8 @@ import { Textbox } from "../template";
   <Story
     name="disabled"
     args={{
+      ...exampleArgs,
       disabled: true,
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textbox.bind({})}
@@ -49,8 +50,8 @@ import { Textbox } from "../template";
   <Story
     name="read-only"
     args={{
+      ...exampleArgs,
       readOnly: true,
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textbox.bind({})}

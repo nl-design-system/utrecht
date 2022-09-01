@@ -2,11 +2,10 @@
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, exampleArgs, Textbox } from "../story-template";
-import "../index.scss";
 
 <Meta
-  id="css-textbox"
-  title="CSS Component/Textbox"
+  id="web-component-textbox"
+  title="Web Component/Textbox"
   component={Textbox}
   argTypes={argTypes}
   args={defaultArgs}
@@ -17,9 +16,7 @@ import "../index.scss";
   }}
 />
 
-# Text box component
-
-Styling via the `<input>` element:
+# Text box
 
 <Canvas>
   <Story name="Default" args={exampleArgs}>

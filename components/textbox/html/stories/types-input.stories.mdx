@@ -1,0 +1,63 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "../story-template";
+
+<Meta
+  id="html-textbox"
+  title="HTML Component/Textbox/Type"
+  component={Textbox}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box component types
+
+## with number input
+
+<Canvas>
+  <Story
+    name="Number"
+    args={{
+      min: 0,
+      value: "42",
+      max: 100,
+      type: "number",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## with password input
+
+<Canvas>
+  <Story
+    name="Password"
+    args={{
+      autoComplete: "current-password",
+      required: true,
+      value: "very$ecret2021",
+      type: "password",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## with URL input
+
+<Canvas>
+  <Story
+    name="URL"
+    args={{
+      type: "url",
+      value: "https://example.fi/",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>

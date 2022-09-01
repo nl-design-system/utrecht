@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Textbox } from "../template";
+import { exampleArgs, Textbox } from "../story-template";
 
 <Meta
   id="html-textbox"
-  title="HTML Component/Textbox/States"
+  title="HTML Component/Textbox/State"
+  component={Textbox}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,9 +20,9 @@ import { defaultArgs, Textbox } from "../template";
 
 <Canvas>
   <Story
-    name="invalid"
+    name="Invalid"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       invalid: true,
     }}
   >
@@ -33,9 +34,9 @@ import { defaultArgs, Textbox } from "../template";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       disabled: true,
     }}
   >
@@ -47,9 +48,9 @@ import { defaultArgs, Textbox } from "../template";
 
 <Canvas>
   <Story
-    name="read-only"
+    name="Read-only"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       readOnly: true,
     }}
   >
@@ -61,7 +62,7 @@ import { defaultArgs, Textbox } from "../template";
 
 <Canvas>
   <Story
-    name="required"
+    name="Required"
     args={{
       required: true,
     }}

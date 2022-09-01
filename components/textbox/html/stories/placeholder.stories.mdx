@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Textbox } from "../template";
+import { Textbox } from "../story-template";
 
 <Meta
   id="html-textbox"
   title="HTML Component/Textbox"
+  component={Textbox}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -13,17 +14,13 @@ import { defaultArgs, Textbox } from "../template";
   }}
 />
 
-# Text box component with password input
+# Text box component with placeholder
 
 <Canvas>
   <Story
-    name="password input"
+    name="with placeholder"
     args={{
-      ...defaultArgs,
-      autoComplete: "current-password",
-      required: true,
-      value: "very$ecret2021",
-      type: "password",
+      placeholder: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textbox.bind({})}
