@@ -1,6 +1,8 @@
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import parser from 'html-react-parser';
 import defaultsDeep from 'lodash.defaultsdeep';
+import prettierBabel from 'prettier/parser-babel';
+import prettier from 'prettier/standalone';
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
@@ -90,7 +92,10 @@ const addonDocs = {
     transformSource: (src, storyContext) => {
       // Ensure valid HTML in the Preview source
       if (storyContext.component) {
-        return ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args));
+        return prettier.format(
+          ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args)),
+          { parser: 'babel', plugins: [prettierBabel] },
+        );
       }
       return src;
     },
