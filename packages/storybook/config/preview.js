@@ -23,7 +23,7 @@ export const decorators = [
     storyContext.parameters.args = storyContext.args;
 
     return (
-      <div class="utrecht-document utrecht-document--surface utrecht-theme">
+      <div className="utrecht-document utrecht-document--surface utrecht-theme">
         {typeof story() === 'string' ? parser(story()) : story()}
       </div>
     );
