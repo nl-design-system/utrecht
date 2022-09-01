@@ -1,21 +1,20 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Favicon } from "../template";
+import { argTypes, defaultArgs, exampleArgs, Favicon } from "../story-template";
 
 <Meta
   id="html-favicon"
   title="HTML Component/Favicon"
-  argTypes={{
-    href: {
-      description: "Location of the favicon image",
-      control: "text",
-    },
-  }}
+  component={Favicon}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
     },
+    // Favicon is not visible in Chromatic
+    chromatic: { disableSnapshot: true },
   }}
 />
 
@@ -26,14 +25,9 @@ Place the `<link>` element reference to the favicon image in the `<head>` sectio
 Ideally, the favicon image is available under the `/favicon.ico` URL in the root of your host, to make it work even on pages without the `<link>` element reference to the image.
 
 <Canvas>
-  <Story
-    name="Favicon"
-    args={{
-      href: "/favicon.ico",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Favicon.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Favicon" />
+<ArgsTable story="Default" />
