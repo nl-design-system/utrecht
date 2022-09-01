@@ -27,29 +27,39 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  items: [],
+  microdata: false,
+  variant: '',
+};
+
+export const exampleArgs = {
   items: [
     { href: 'https://example.com/', title: 'Home', focus: true },
     { href: 'https://example.com/a/', title: 'Wonen en leven' },
     { href: 'https://example.com/a/b/', title: 'Afval' },
     { href: 'https://example.com/a/b/c/', title: "Kliko's", current: true },
   ],
-  microdata: true,
   variant: 'arrows',
 };
 
-export const Breadcrumb = ({ items, microdata, variant }) => (
+export const Breadcrumb = ({
+  items = defaultArgs.items,
+  microdata = defaultArgs.microdata,
+  variant = defaultArgs.variant,
+}) => (
   <nav className={clsx('utrecht-breadcrumb', variant === 'arrows' && 'utrecht-breadcrumb--arrows')}>
     <ol
       className="utrecht-breadcrumb__list"
-      itemscope={microdata}
-      itemType={microdata && 'https://schema.org/BreadcrumbList'}
+      itemScope={microdata || null}
+      itemType={(microdata && 'https://schema.org/BreadcrumbList') || null}
     >
       {items.map(({ href, title, current, focus }) => (
         <li
           key={href}
           className="utrecht-breadcrumb__item"
-          itemscope={microdata}
-          itemtype={microdata && ' itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement"'}
+          itemScope={microdata || null}
+          itemType={microdata ? 'https://schema.org/ListItem' : null}
+          itemProp={microdata ? 'itemListElement' : null}
         >
           <a
             className={clsx(
@@ -60,13 +70,13 @@ export const Breadcrumb = ({ items, microdata, variant }) => (
               focus && 'utrecht-link--focus',
             )}
             href={href}
-            ariaCurrent={current && 'location'}
-            itemprop={microdata && 'item'}
+            aria-current={current && 'location'}
+            itemProp={microdata ? 'item' : null}
           >
-            <span class="utrecht-breadcrumb__text" itemprop={microdata && 'name'}>
+            <span className="utrecht-breadcrumb__text" itemProp={microdata ? 'name' : null}>
               {title}
             </span>
-            {microdata && <meta itemprop="position" content="${index + 1}" />}
+            {microdata && <meta itemProp="position" content="${index + 1}" />}
           </a>
         </li>
       ))}

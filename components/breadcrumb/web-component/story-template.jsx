@@ -24,6 +24,11 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  items: [],
+  variant: '',
+};
+
+export const exampleArgs = {
   items: [
     { href: 'https://example.com/', title: 'Home' },
     { href: 'https://example.com/a/', title: 'Wonen en leven' },
@@ -33,7 +38,7 @@ export const defaultArgs = {
   variant: 'arrows',
 };
 
-export const Breadcrumb = ({ items, variant }) => {
+export const Breadcrumb = ({ items = defaultArgs.items, variant = defaultArgs.variant }) => {
   return <utrecht-breadcrumb json={JSON.stringify(items)} variant={variant}></utrecht-breadcrumb>;
 };
 

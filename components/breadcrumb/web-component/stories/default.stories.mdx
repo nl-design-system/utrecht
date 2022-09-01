@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Breadcrumb, defaultArgs } from "../story-template";
+import { argTypes, Breadcrumb, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="web-component-breadcrumb"
   title="Web Component/Breadcrumb navigation"
   component={Breadcrumb}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: "IN DEVELOPMENT",
   }}
@@ -16,7 +17,7 @@ import { argTypes, Breadcrumb, defaultArgs } from "../story-template";
 # Breadcrumb navigation
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Breadcrumb.bind({})}
   </Story>
 </Canvas>
