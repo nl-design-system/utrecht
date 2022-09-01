@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldTextbox } from "../template";
+import { exampleArgs, FormFieldTextbox } from "../story-template";
 
 <Meta
   id="web-component-form-field-textbox"
-  title="Web Component/Form field with textbox/States"
+  title="Web Component/Form field with textbox/State"
+  component={FormFieldTextbox}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,9 +22,9 @@ import { FormFieldTextbox } from "../template";
   <Story
     name="disabled"
     args={{
+      ...exampleArgs,
+      value: "",
       disabled: true,
-      label: "Message",
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {FormFieldTextbox.bind({})}
@@ -36,9 +37,8 @@ import { FormFieldTextbox } from "../template";
   <Story
     name="invalid"
     args={{
+      ...exampleArgs,
       invalid: true,
-      label: "Message",
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {FormFieldTextbox.bind({})}
@@ -51,9 +51,8 @@ import { FormFieldTextbox } from "../template";
   <Story
     name="required"
     args={{
+      ...exampleArgs,
       required: true,
-      label: "Message",
-      value: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {FormFieldTextbox.bind({})}
