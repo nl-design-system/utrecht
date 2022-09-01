@@ -21,22 +21,8 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
-      disabled: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
-## Disabled and checked
-
-<Canvas>
-  <Story
-    name="disabled and checked"
-    args={{
-      checked: true,
       disabled: true,
     }}
   >
@@ -57,13 +43,41 @@ import "../index.scss";
   </Story>
 </Canvas>
 
+## Checkend and Disabled
+
+<Canvas>
+  <Story
+    name="Checkend and Disabled"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
 ## Indeterminate
 
 <Canvas>
   <Story
-    name="indeterminate"
+    name="Indeterminate"
     args={{
       indeterminate: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and Disabled
+
+<Canvas>
+  <Story
+    name="Indeterminate and Disabled"
+    args={{
+      indeterminate: true,
+      disabled: true,
     }}
   >
     {CustomCheckbox.bind({})}
@@ -76,7 +90,7 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="invalid and checked"
+    name="Invalid and Checked"
     args={{
       checked: true,
       invalid: true,
@@ -90,7 +104,7 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="required"
+    name="Required and Invalid"
     args={{
       invalid: true,
       required: true,

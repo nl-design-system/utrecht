@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, CustomCheckbox, decorators, defaultArgs } from "../story-template";
+import { argTypes, CustomCheckbox, decorators, defaultArgs, exampleArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
@@ -9,6 +9,7 @@ import "../index.scss";
   title="CSS Component/Custom Checkbox"
   component={CustomCheckbox}
   argTypes={argTypes}
+  args={defaultArgs}
   decorators={decorators}
   parameters={{
     status: {
@@ -20,7 +21,7 @@ import "../index.scss";
 # Checkbox Component
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {CustomCheckbox.bind({})}
   </Story>
 </Canvas>
