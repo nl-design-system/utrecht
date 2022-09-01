@@ -1,33 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, FormFieldCheckbox } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldCheckbox } from "../story-template";
 
 <Meta
   id="web-component-form-field-checkbox"
   title="Web Component/Form field with checkbox"
-  argTypes={{
-    checked: {
-      description: "Checked",
-      control: "boolean",
-    },
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    invalid: {
-      description: "Invalid",
-      control: "boolean",
-    },
-    label: {
-      description: "Set the content of the label",
-      control: "text",
-    },
-    required: {
-      description: "Required",
-      control: "boolean",
-    },
-  }}
+  component={FormFieldCheckbox}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -38,15 +19,9 @@ import { defaultArgs, FormFieldCheckbox } from "../template";
 # Form field with checkbox
 
 <Canvas>
-  <Story
-    name="Form field with checkbox"
-    args={{
-      ...defaultArgs,
-      label: "I agree",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldCheckbox.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="Form field with checkbox" />
+<ArgsTable story="Default" />
