@@ -9,6 +9,7 @@ import { argTypes, DataList, defaultArgs, exampleArgs } from "../story-template"
   title="CSS Component/Data list"
   component={DataList}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,13 +20,7 @@ import { argTypes, DataList, defaultArgs, exampleArgs } from "../story-template"
 # Data list
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      ...exampleArgs,
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {DataList.bind({})}
   </Story>
 </Canvas>

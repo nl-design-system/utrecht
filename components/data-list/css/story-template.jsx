@@ -23,6 +23,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  appearance: '',
   items: [],
 };
 
@@ -45,7 +46,7 @@ export const exampleArgs = {
   ],
 };
 
-export const DataList = ({ appearance, items }) => (
+export const DataList = ({ appearance = defaultArgs.appearance, items = defaultArgs.items }) => (
   <dl className={clsx('utrecht-data-list', appearance === 'rows' && 'utrecht-data-list--rows')}>
     {items.map(({ key, value, actions, multiline }) => (
       <div className="utrecht-data-list__item">
