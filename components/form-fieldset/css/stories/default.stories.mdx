@@ -1,22 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldset } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldset } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-form-fieldset"
   title="CSS Component/Form fieldset"
-  argTypes={{
-    content: {
-      description: "Set the content of the fieldset",
-      control: "text",
-    },
-    legend: {
-      description: "Set the content of the legend",
-      control: "text",
-    },
-  }}
+  component={FormFieldset}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -29,13 +22,7 @@ import "../index.scss";
 Styling via the `.utrecht-form-fieldset` and `.utrecht-form-fieldset__legend` class names:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      content: "<p>Fieldset body</p>",
-      legend: "Fieldset legend",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldset.bind({})}
   </Story>
 </Canvas>
