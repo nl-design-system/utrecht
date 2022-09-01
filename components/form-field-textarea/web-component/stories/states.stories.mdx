@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldTextarea } from "../template";
+import { exampleArgs, FormFieldTextarea } from "../story-template";
 
 <Meta
   id="web-component-form-field-textarea"
-  title="Web Component/Form field with textarea/States"
+  title="Web Component/Form field with textarea/State"
+  component={FormFieldTextarea}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,11 +20,10 @@ import { FormFieldTextarea } from "../template";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
+      ...exampleArgs,
       disabled: true,
-      label: "Message",
-      value: "Lorem ipsum dolor sit amet",
     }}
   >
     {FormFieldTextarea.bind({})}
@@ -34,11 +34,11 @@ import { FormFieldTextarea } from "../template";
 
 <Canvas>
   <Story
-    name="invalid"
+    name="Invalid"
     args={{
+      ...exampleArgs,
       invalid: true,
-      label: "Message",
-      value: "Lorem ipsum dolor sit amet",
+      value: "Lorum Ipsum",
     }}
   >
     {FormFieldTextarea.bind({})}
@@ -49,11 +49,11 @@ import { FormFieldTextarea } from "../template";
 
 <Canvas>
   <Story
-    name="read-only"
+    name="Read-only"
     args={{
-      required: true,
-      label: "Message",
-      value: "Lorem ipsum dolor sit amet",
+      ...exampleArgs,
+      readOnly: true,
+      value: "Lorum Ipsum",
     }}
   >
     {FormFieldTextarea.bind({})}
@@ -64,11 +64,10 @@ import { FormFieldTextarea } from "../template";
 
 <Canvas>
   <Story
-    name="required"
+    name="Required"
     args={{
+      ...exampleArgs,
       required: true,
-      label: "Message",
-      value: "Lorem ipsum dolor sit amet",
     }}
   >
     {FormFieldTextarea.bind({})}

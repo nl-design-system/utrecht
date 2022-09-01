@@ -1,41 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldTextarea } from "../template";
+import { argTypes, defaultArgs, exampleArgs, FormFieldTextarea } from "../story-template";
 
 <Meta
   id="web-component-form-field-textarea"
   title="Web Component/Form field with textarea"
-  argTypes={{
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    invalid: {
-      description: "Invalid",
-      control: "boolean",
-    },
-    label: {
-      description: "Set the content of the label",
-      control: "text",
-    },
-    placeholder: {
-      description: "Placeholder",
-      control: "text",
-    },
-    readOnly: {
-      description: "Read-only",
-      control: "boolean",
-    },
-    required: {
-      description: "Required",
-      control: "boolean",
-    },
-    value: {
-      description: "Value",
-      control: "text",
-    },
-  }}
+  component={FormFieldTextarea}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -46,18 +19,7 @@ import { FormFieldTextarea } from "../template";
 # Form field with textarea
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      disabled: false,
-      invalid: false,
-      label: "Message",
-      placeholder: "",
-      readOnly: false,
-      required: false,
-      value: "Lorem ipsum dolor sit amet",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {FormFieldTextarea.bind({})}
   </Story>
 </Canvas>

@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldTextarea } from "../template";
+import { exampleArgs, FormFieldTextarea } from "../story-template";
 
 <Meta
   id="web-component-form-field-textarea"
   title="Web Component/Form field with textarea"
+  component={FormFieldTextarea}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,8 +20,9 @@ import { FormFieldTextarea } from "../template";
   <Story
     name="placeholder"
     args={{
-      label: "Message",
+      ...exampleArgs,
       placeholder: "Lorem ipsum dolor sit amet",
+      value: "",
     }}
   >
     {FormFieldTextarea.bind({})}
