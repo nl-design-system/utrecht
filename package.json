@@ -60,7 +60,7 @@
   },
   "scripts": {
     "build": "lerna run --stream build",
-    "build-nx": "nx run-many --target=build --all --parallel --with-deps",
+    "build-nx": "nx run-many --target=build --all --parallel",
     "build:docs": "lerna run --scope @utrecht/docusaurus --include-dependencies build",
     "clean": "lerna run clean && rimraf dist/",
     "clean-nx": "npm run --if-present --workspaces clean",
@@ -79,6 +79,8 @@
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint:package-lock": "npm ls",
     "lint:prettier": "prettier --check .",
+    "lint-nx": "npx nx run-many --target=lint --all --parallel",
+    "lint-fix-nx": "npx nx run-many --target=lint-fix --all --parallel",
     "postinstall": "patch-package --patch-dir .patches",
     "prepare": "husky install",
     "prettier": "prettier --write .",

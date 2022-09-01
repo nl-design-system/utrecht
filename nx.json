@@ -1,6 +1,15 @@
 {
-  "extends": "nx/presets/npm.json",
   "npmScope": "utrecht",
+  "implicitDependencies": {
+    ".eslintrc.*.json": "*",
+    ".eslintrc.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "package-lock.json": "*",
+    "tsconfig.json": "*"
+  },
   "affected": {
     "defaultBase": "main"
   },
@@ -8,7 +17,30 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build", "lint", "test"]
+        "cacheableOperations": [
+          "build",
+          "lint",
+          "lint-eslint",
+          "lint-html",
+          "lint-md",
+          "lint-package-json",
+          "lint-package-lock",
+          "lint-stylelint",
+          "lint-prettier",
+          "lint-fix-prettier",
+          "lint-fix-eslint",
+          "lint-fix-stylelint",
+          "test"
+        ]
+      }
+    }
+  },
+  "targets": {
+    "lint-css": {
+      "inputs": ["**/*.{css,scss}"],
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run lint:css"
       }
     }
   }
