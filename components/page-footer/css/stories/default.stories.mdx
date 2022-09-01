@@ -1,18 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageFooter } from "../template";
+import { argTypes, defaultArgs, exampleArgs, PageFooter } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-page-footer"
   title="CSS Component/Page Footer"
-  argTypes={{
-    innerHTML: {
-      description: "HTML content",
-      control: "text",
-    },
-  }}
+  component={PageFooter}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: "WORK IN PROGRESS",
   }}
@@ -21,38 +18,7 @@ import "../index.scss";
 # Page Footer
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      innerHTML: `<address class="utrecht-page-footer__address utrecht-page-footer__address--reset-address">
-    <h2 class="utrecht-heading-2 utrecht-heading-2--reset-h2">Gemeente Utrecht</h2>
-    <section>
-      <h3 class="utrecht-heading-3 utrecht-heading-3--distanced">Telefoon</h3>
-      <p class="utrecht-paragraph utrecht-paragraph--distanced">
-        <a href="tel:+31302860000" class="utrecht-link utrecht-link--telephone">14 030</a>
-      </p>
-    </section>
-    <section>
-      <h3 class="utrecht-heading-3 utrecht-heading-3--distanced">Adres</h3>
-      <p class="utrecht-paragraph utrecht-paragraph--distanced">
-        <strong>Stadskantoor</strong><br>
-        Stadsplateau 1<br>
-        3521AZ
-      </p>
-    </section>
-  </address>
-  <div class="utrecht-page-footer__navigation">
-    <ul class="utrecht-link-list utrecht-link-list--chevron">
-      <li class="utrecht-link-list__item">
-        <a href="/contact/" class="utrecht-link">Meer contactinformatie</a>
-      </li>
-      <li class="utrecht-link-list__item">
-        <a href="/over-deze-website" class="utrecht-link">Over deze website</a>
-      </li>
-    </ul>
-  </div>`,
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {PageFooter.bind({})}
   </Story>
 </Canvas>
