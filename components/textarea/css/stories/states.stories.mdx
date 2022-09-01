@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Textarea } from "../template";
+import { exampleArgs, Textarea } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-textarea"
   title="CSS Component/Textarea/States"
+  component={Textarea}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -22,8 +23,8 @@ import "../index.scss";
   <Story
     name="disabled"
     args={{
+      ...exampleArgs,
       disabled: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -36,8 +37,8 @@ import "../index.scss";
   <Story
     name="invalid"
     args={{
+      ...exampleArgs,
       invalid: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -50,8 +51,8 @@ import "../index.scss";
   <Story
     name="read-only"
     args={{
+      ...exampleArgs,
       readOnly: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -64,8 +65,8 @@ import "../index.scss";
   <Story
     name="required"
     args={{
+      ...exampleArgs,
       required: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -78,8 +79,8 @@ import "../index.scss";
   <Story
     name="focus"
     args={{
+      ...exampleArgs,
       focus: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
@@ -92,8 +93,8 @@ import "../index.scss";
   <Story
     name="hover"
     args={{
+      ...exampleArgs,
       hover: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Textarea.bind({})}
