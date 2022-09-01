@@ -2,21 +2,24 @@
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, exampleArgs, Paragraph } from "../story-template";
+import "../index.scss";
 
 <Meta
-  id="web-component-paragraph"
-  title="Web Component/Paragraph"
+  id="css-paragraph"
+  title="CSS Component/Paragraph"
   component={Paragraph}
   argTypes={argTypes}
   args={defaultArgs}
   parameters={{
     status: {
-      type: "WORK IN PROGRESS",
+      type: "ALPHA",
     },
   }}
 />
 
 # Paragraph
+
+Styling via the `.utrecht-paragraph` class name:
 
 <Canvas>
   <Story name="Default" args={exampleArgs}>

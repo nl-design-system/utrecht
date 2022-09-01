@@ -2,18 +2,22 @@
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { exampleArgs, Paragraph } from "../story-template";
+import "../index.scss";
 
 <Meta
-  id="web-component-paragraph"
-  title="Web Component/Paragraph/Lead"
+  id="css-paragraph"
+  title="CSS Component/Paragraph/Lead"
+  component={Paragraph}
   parameters={{
     status: {
-      type: "WORK IN PROGRESS",
+      type: "ALPHA",
     },
   }}
 />
 
 # Lead paragraph
+
+Styling via the `.utrecht-paragraph` and `.utrecht-paragraph--lead` modifier class name:
 
 <Canvas>
   <Story

@@ -2,7 +2,7 @@
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { Link } from "@utrecht/components/link/css/story-template";
-import { Paragraph } from "@utrecht/components/paragraph/css/template";
+import { Paragraph } from "@utrecht/components/paragraph/css/story-template";
 import { UnorderedList } from "@utrecht/components/unordered-list/css/story-template";
 
 export const ParagraphWithLink = ({ textContent = "", href, link }) =>
@@ -12,6 +12,7 @@ export const ParagraphWithLink = ({ textContent = "", href, link }) =>
 
 <Meta
   title="CSS Component/Combining components/Link"
+  component={ParagraphWithLink}
   argTypes={{
     href: {
       description: "URL",

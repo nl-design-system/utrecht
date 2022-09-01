@@ -4,8 +4,9 @@ import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { exampleArgs, Paragraphs } from "../story-template";
 
 <Meta
-  id="web-component-paragraph"
-  title="Web Component/Paragraph/Multiple"
+  id="html-paragraph"
+  title="HTML Component/Paragraph/Multiple"
+  component={Paragraphs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -13,10 +14,15 @@ import { exampleArgs, Paragraphs } from "../story-template";
   }}
 />
 
-# Paragraph
+# Multiple paragraphs with whitespace
 
 <Canvas>
-  <Story name="Multiple" args={{ items: [{ ...exampleArgs, lead: true }, exampleArgs, exampleArgs] }}>
+  <Story
+    name="Multiple"
+    args={{
+      items: [{ ...exampleArgs, lead: true }, exampleArgs, exampleArgs],
+    }}
+  >
     {Paragraphs.bind({})}
   </Story>
 </Canvas>

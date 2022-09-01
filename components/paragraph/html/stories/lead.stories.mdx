@@ -4,8 +4,9 @@ import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import { exampleArgs, Paragraph } from "../story-template";
 
 <Meta
-  id="web-component-paragraph"
-  title="Web Component/Paragraph/Lead"
+  id="html-paragraph"
+  title="HTML Component/Paragraph/Lead"
+  component={Paragraph}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -14,6 +15,8 @@ import { exampleArgs, Paragraph } from "../story-template";
 />
 
 # Lead paragraph
+
+Styling via the `<p>` element with the `lead` class name:
 
 <Canvas>
   <Story
