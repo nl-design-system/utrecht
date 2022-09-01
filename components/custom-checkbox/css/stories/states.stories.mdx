@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { CustomCheckbox, decorators, defaultArgs } from "../story-template";
+import { CustomCheckbox, decorators } from "../story-template";
 import "../index.scss";
 
 <Meta
@@ -22,9 +22,8 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
-      ...defaultArgs,
       disabled: true,
     }}
   >
@@ -36,10 +35,23 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="checked"
+    name="Checked"
     args={{
-      ...defaultArgs,
       checked: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked and Disabled
+
+<Canvas>
+  <Story
+    name="Checked and Disabled"
+    args={{
+      checked: true,
+      disabled: true,
     }}
   >
     {CustomCheckbox.bind({})}
@@ -50,10 +62,23 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="indeterminate"
+    name="Indeterminate"
     args={{
-      ...defaultArgs,
       indeterminate: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and Disabled
+
+<Canvas>
+  <Story
+    name="Indeterminate and Disabled"
+    args={{
+      indeterminate: true,
+      disabled: true,
     }}
   >
     {CustomCheckbox.bind({})}
@@ -66,9 +91,8 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="required"
+    name="Required and Invalid"
     args={{
-      ...defaultArgs,
       invalid: true,
       required: true,
     }}
@@ -81,9 +105,8 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="active"
+    name="Active"
     args={{
-      ...defaultArgs,
       active: true,
     }}
   >
@@ -95,9 +118,8 @@ The native checkbox should have the same position and size as the custom checkbo
 
 <Canvas>
   <Story
-    name="focus"
+    name="Focus"
     args={{
-      ...defaultArgs,
       focus: true,
     }}
   >

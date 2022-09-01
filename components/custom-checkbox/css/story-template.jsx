@@ -61,17 +61,21 @@ export const defaultArgs = {
   value: '',
 };
 
+export const exampleArgs = {
+  value: 'I agree',
+};
+
 export const CustomCheckbox = ({
-  active = false,
-  checked = false,
-  disabled = false,
-  focus = false,
-  indeterminate = false,
-  invalid = false,
-  required = false,
-  value = '',
+  active = defaultArgs.active,
+  checked = defaultArgs.checked,
+  disabled = defaultArgs.disabled,
+  focus = defaultArgs.focus,
+  indeterminate = defaultArgs.indeterminate,
+  invalid = defaultArgs.invalid,
+  required = defaultArgs.required,
+  value = defaultArgs.value,
 }) => (
-  <span class="utrecht-custom-checkbox">
+  <span className="utrecht-custom-checkbox">
     <input
       type="checkbox"
       checked={checked}
@@ -92,12 +96,16 @@ export const CustomCheckbox = ({
         indeterminate && 'utrecht-custom-checkbox__box--indeterminate',
       )}
     >
-      <utrecht-icon-checkmark class="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--checked">
-        ✔
-      </utrecht-icon-checkmark>
-      <utrecht-icon-indeterminate class="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--indeterminate">
-        ■
-      </utrecht-icon-indeterminate>
+      {checked && (
+        <utrecht-icon-checkmark className="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--checked">
+          ✔
+        </utrecht-icon-checkmark>
+      )}
+      {indeterminate && (
+        <utrecht-icon-indeterminate className="utrecht-custom-checkbox__icon utrecht-custom-checkbox__icon--indeterminate">
+          ■
+        </utrecht-icon-indeterminate>
+      )}
     </span>
   </span>
 );

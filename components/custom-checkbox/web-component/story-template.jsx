@@ -50,20 +50,24 @@ export const defaultArgs = {
   value: '',
 };
 
+export const exampleArgs = {
+  value: 'I agree',
+};
+
 export const CustomCheckbox = ({
-  checked = false,
-  disabled = false,
-  indeterminate = false,
-  invalid = false,
-  required = false,
-  value = '',
+  checked = defaultArgs.checked,
+  disabled = defaultArgs.disabled,
+  indeterminate = defaultArgs.indeterminate,
+  invalid = defaultArgs.invalid,
+  required = defaultArgs.required,
+  value = defaultArgs.value,
 }) => (
   <utrecht-custom-checkbox
-    checked={checked}
-    disabled={disabled}
-    indeterminate={indeterminate}
-    invalid={invalid}
-    required={required}
+    checked={checked || null}
+    disabled={disabled || null}
+    indeterminate={indeterminate || null}
+    invalid={invalid || null}
+    required={required || null}
     value={value}
   ></utrecht-custom-checkbox>
 );
