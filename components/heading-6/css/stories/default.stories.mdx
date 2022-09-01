@@ -1,23 +1,16 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Heading6 } from "../template";
+import { argTypes, defaultArgs, exampleArgs, Heading6 } from "../story-template";
 
 import "../index.scss";
 
 <Meta
   id="css-heading-6"
   title="CSS Component/Heading/Heading 6"
-  argTypes={{
-    textContent: {
-      description: "De content van de header",
-      control: "text",
-    },
-    distanced: {
-      description: "Zet afstand tussen de header en nabije content",
-      control: "boolean",
-    },
-  }}
+  component={Heading6}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "ALPHA",
@@ -30,12 +23,7 @@ import "../index.scss";
 Styling via `utrecht-heading-6` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Heading6.bind({})}
   </Story>
 </Canvas>
