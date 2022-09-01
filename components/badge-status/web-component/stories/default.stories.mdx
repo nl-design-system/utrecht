@@ -2,13 +2,14 @@
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import "../index.scss";
-import { argTypes, BadgeStatus, defaultArgs } from "../story-template";
+import { argTypes, BadgeStatus, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="web-component-status-badge"
   title="Web Component/Badge/Status Badge"
   component={BadgeStatus}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,7 +22,7 @@ import { argTypes, BadgeStatus, defaultArgs } from "../story-template";
 When status is not provided, neutral will be used as default
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {BadgeStatus.bind({})}
   </Story>
 </Canvas>
