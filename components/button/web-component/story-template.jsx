@@ -6,13 +6,6 @@
 
 import React from 'react';
 
-export const defaultArgs = {
-  busy: false,
-  disabled: false,
-  textContent: 'Read more...',
-  type: '',
-};
-
 export const argTypes = {
   appearance: {
     description: 'Appearance',
@@ -40,8 +33,24 @@ export const argTypes = {
   },
 };
 
-export const Button = ({ appearance = '', busy = false, disabled = false, textContent = '', type = '' }) => (
-  <utrecht-button appearance={appearance} busy={busy} disabled={disabled} type={type}>
+export const defaultArgs = {
+  busy: false,
+  disabled: false,
+  textContent: '',
+  type: '',
+};
+
+export const exampleArgs = {
+  textContent: 'Read more...',
+};
+export const Button = ({
+  appearance = defaultArgs.appearance,
+  busy = defaultArgs.busy,
+  disabled = defaultArgs.disabled,
+  textContent = defaultArgs.textContent,
+  type = defaultArgs.type,
+}) => (
+  <utrecht-button appearance={appearance} busy={busy || null} disabled={disabled || null} type={type || null}>
     {textContent}
   </utrecht-button>
 );

@@ -4,20 +4,9 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
+import iconSet from '@utrecht/icon/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
-
-export const defaultArgs = {
-  active: false,
-  appearance: 'button',
-  busy: false,
-  disabled: false,
-  focus: false,
-  focusVisible: false,
-  hover: false,
-  textContent: 'Read more...',
-  type: 'button',
-};
 
 export const argTypes = {
   active: {
@@ -57,39 +46,74 @@ export const argTypes = {
     control: { type: 'select' },
     options: ['', 'button', 'reset', 'submit'],
   },
+  iconBefore: {
+    description: 'Icon before textContent',
+    control: { type: 'select' },
+    options: ['', ...iconSet.map(({ id }) => id)],
+  },
+  iconAfter: {
+    description: 'Icon after textContent',
+    control: { type: 'select' },
+    options: ['', ...iconSet.map(({ id }) => id)],
+  },
+};
+
+export const defaultArgs = {
+  active: false,
+  appearance: '',
+  busy: false,
+  disabled: false,
+  focus: false,
+  focusVisible: false,
+  hover: false,
+  textContent: '',
+  type: 'button',
+  iconBefore: '',
+  iconAfter: '',
+};
+
+export const exampleArgs = {
+  textContent: 'Read more...',
 };
 
 export const Button = ({
-  active = false,
-  appearance = null,
-  busy = false,
-  children,
-  disabled = false,
-  focus = false,
-  focusVisible = false,
-  hover = false,
-  textContent = '',
-  type = 'button',
-}) => (
-  <button
-    className={clsx('utrecht-button', {
-      'utrecht-button--active': active,
-      'utrecht-button--busy': busy,
-      'utrecht-button--hover': hover,
-      'utrecht-button--focus': focus,
-      'utrecht-button--focus-visible': focusVisible,
-      'utrecht-button--disabled': disabled,
-      'utrecht-button--primary-action': appearance === 'primary-action-button',
-      'utrecht-button--secondary-action': appearance === 'secondary-action-button',
-      'utrecht-button--subtle': appearance === 'subtle-button',
-    })}
-    aria-disabled={disabled || null}
-    type={type}
-  >
-    {children}
-    {String(textContent)}
-  </button>
-);
+  active = defaultArgs.active,
+  appearance = defaultArgs.appearance,
+  busy = defaultArgs.busy,
+  disabled = defaultArgs.disabled,
+  focus = defaultArgs.focus,
+  focusVisible = defaultArgs.focusVisible,
+  hover = defaultArgs.hover,
+  textContent = defaultArgs.textContent,
+  type = defaultArgs.type,
+  iconBefore = defaultArgs.iconBefore,
+  iconAfter = defaultArgs.iconAfter,
+}) => {
+  const IconBefore = iconBefore;
+  const IconAfter = iconAfter;
+
+  return (
+    <button
+      className={clsx('utrecht-button', {
+        'utrecht-button--active': active,
+        'utrecht-button--busy': busy,
+        'utrecht-button--hover': hover,
+        'utrecht-button--focus': focus,
+        'utrecht-button--focus-visible': focusVisible,
+        'utrecht-button--disabled': disabled,
+        'utrecht-button--primary-action': appearance === 'primary-action-button',
+        'utrecht-button--secondary-action': appearance === 'secondary-action-button',
+        'utrecht-button--subtle': appearance === 'subtle-button',
+      })}
+      aria-disabled={disabled || null}
+      type={type || null}
+    >
+      {iconBefore && <IconBefore />}
+      {textContent}
+      {iconAfter && <IconAfter />}
+    </button>
+  );
+};
 
 export const ButtonTable = ({
   textContent = '',
