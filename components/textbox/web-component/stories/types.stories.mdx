@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Textbox } from "../template";
+import { Textbox } from "../story-template";
 
 <Meta
-  id="html-textbox"
-  title="HTML Component/Textbox"
+  id="web-component-textbox"
+  title="Web Component/Textbox/Type"
+  component={Textbox}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -13,14 +14,16 @@ import { Textbox } from "../template";
   }}
 />
 
-# Text box component with URL input
+# Text box with number input
 
 <Canvas>
   <Story
-    name="URL input"
+    name="Number"
     args={{
-      type: "url",
-      value: "https://example.fi/",
+      min: 0,
+      max: 100,
+      type: "number",
+      value: "42",
     }}
   >
     {Textbox.bind({})}
