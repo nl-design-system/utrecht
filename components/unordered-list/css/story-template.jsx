@@ -5,6 +5,7 @@
  */
 
 import clsx from 'clsx';
+import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
@@ -20,6 +21,10 @@ export const argTypes = {
 
 export const defaultArgs = {
   distanced: false,
+  items: [],
+};
+
+export const exampleArgs = {
   items: [
     {
       innerHTML: 'Lorem',
@@ -33,7 +38,7 @@ export const defaultArgs = {
   ],
 };
 
-export const UnorderedList = ({ distanced = false, items = [], nested = false }) => (
+export const UnorderedList = ({ distanced = defaultArgs.distanced, items = defaultArgs.items, nested = false }) => (
   <ul
     className={clsx(
       'utrecht-unordered-list',
@@ -43,7 +48,7 @@ export const UnorderedList = ({ distanced = false, items = [], nested = false })
   >
     {items.map(({ items: subItems, innerHTML }, index) => (
       <li className="utrecht-unordered-list__item" key={index}>
-        {innerHTML}
+        {parse(innerHTML)}
         {subItems && UnorderedList({ nested: true, items: subItems })}
       </li>
     ))}
