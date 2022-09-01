@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import parser from 'html-react-parser';
+import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
@@ -15,12 +15,16 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  innerHTML: '',
+};
+
+export const exampleArgs = {
   innerHTML: 'The Quick Brown Fox Jumps Over The Lazy Dog',
 };
 
 export const Article = ({ innerHTML }) => (
-  <div class="utrecht-html">
-    <article>{parser(innerHTML)}</article>
+  <div className="utrecht-html">
+    <article>{parse(innerHTML)}</article>
   </div>
 );
 

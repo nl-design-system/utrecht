@@ -1,14 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, Article, defaultArgs } from "../story-template";
+import { argTypes, Article, defaultArgs, exampleArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-article"
   title="CSS Component/Article"
-  argTypes={argTypes}
   component={Article}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,7 +22,7 @@ import "../index.scss";
 Styling via the `.utrecht-article` class name:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Article.bind({})}
   </Story>
 </Canvas>
