@@ -1,14 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, BadgeData, defaultArgs } from "../story-template";
+import { argTypes, BadgeData, defaultArgs, exampleArgs } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-data-badge"
   title="CSS Component/Badge/Data Badge"
-  argTypes={argTypes}
   component={BadgeData}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -21,7 +22,7 @@ import "../index.scss";
 Styling via the `.utrecht-badge-data` class name:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {BadgeData.bind({})}
   </Story>
 </Canvas>
