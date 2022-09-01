@@ -1,17 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { PageFooter } from "../template";
+import { argTypes, defaultArgs, exampleArgs, PageFooter } from "../story-template";
 
 <Meta
   id="web-component-page-footer"
   title="Web Component/Page Footer"
-  argTypes={{
-    innerHTML: {
-      description: "HTML content",
-      control: "text",
-    },
-  }}
+  component={PageFooter}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -22,12 +19,7 @@ import { PageFooter } from "../template";
 # Page Footer
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      innerHTML: "Footer content",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {PageFooter.bind({})}
   </Story>
 </Canvas>
