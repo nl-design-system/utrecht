@@ -5,12 +5,13 @@ Copyright (c) 2021 Gemeente Utrecht
 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, exampleLinks, ToptaskNav } from "../template";
+import { exampleArgs, ToptaskNav } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-toptask-nav"
-  title="CSS Component/Toptask Navigation"
+  title="CSS Component/Toptask Navigation/Grid"
+  component={ToptaskNav}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -24,10 +25,9 @@ Styling via the `.utrecht-toptask-nav--grid` class name:
 
 <Canvas>
   <Story
-    name="--grid"
+    name="Grid"
     args={{
-      ...defaultArgs,
-      links: [...exampleLinks],
+      ...exampleArgs,
       grid: true,
     }}
   >
