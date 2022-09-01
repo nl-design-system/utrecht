@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Gemeente Utrecht
  * Copyright (c) 2022 Frameless B.V.
  */
-import parser from 'html-react-parser';
+import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
@@ -14,9 +14,15 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  innerHTML: '',
+};
+
+export const exampleArgs = {
   innerHTML: 'Main content',
 };
 
-export const PageContent = ({ innerHTML = '' }) => <utrecht-page-content>{parser(innerHTML)}</utrecht-page-content>;
+export const PageContent = ({ innerHTML = defaultArgs.innerHTML }) => (
+  <utrecht-page-content>{parse(innerHTML)}</utrecht-page-content>
+);
 
 export default PageContent;
