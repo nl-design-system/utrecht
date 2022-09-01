@@ -8,6 +8,7 @@ import { argTypes, Checkbox, defaultArgs } from "../story-template";
   title="CSS Component/Checkbox"
   component={Checkbox}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,9 +19,7 @@ import { argTypes, Checkbox, defaultArgs } from "../story-template";
 # Checkbox Component
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
-    {Checkbox.bind({})}
-  </Story>
+  <Story name="Default">{Checkbox.bind({})}</Story>
 </Canvas>
 
 <ArgsTable story="Default" />

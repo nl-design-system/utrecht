@@ -20,7 +20,7 @@ import { Checkbox } from "../story-template";
 
 <Canvas>
   <Story
-    name="checked"
+    name="Checked"
     args={{
       checked: true,
     }}
@@ -33,8 +33,22 @@ import { Checkbox } from "../story-template";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
+      disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked and Disabled
+
+<Canvas>
+  <Story
+    name="Checked and Disabled"
+    args={{
+      checked: true,
       disabled: true,
     }}
   >

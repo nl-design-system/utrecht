@@ -27,6 +27,12 @@ export const defaultArgs = {
   value: '',
 };
 
-export const Checkbox = ({ checked = false, disabled = false, value = '' }) => (
-  <utrecht-checkbox checked={checked} disabled={disabled} value={value} />
-);
+export const exampleArgs = {
+  value: 'I agree',
+};
+
+export const Checkbox = ({
+  checked = defaultArgs.checked,
+  disabled = defaultArgs.disabled,
+  value = defaultArgs.value,
+}) => <utrecht-checkbox checked={checked || null} disabled={disabled || null} value={value || null} />;

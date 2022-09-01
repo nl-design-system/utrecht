@@ -23,7 +23,7 @@ export const defaultArgs = {
   disabled: false,
 };
 
-export const Checkbox = ({ checked = false, disabled = false }) => (
+export const Checkbox = ({ checked = defaultArgs.checked, disabled = defaultArgs.disabled }) => (
   <input
     type="checkbox"
     checked={checked}
