@@ -16,16 +16,16 @@ export const argTypes = {
     control: 'text',
   },
 };
+export const defaultArgs = { label: '', textContent: '' };
+export const exampleArgs = { label: 'Log in using DigiD', textContent: 'Log in' };
 
-export const defaultArgs = { label: 'Log in using DigiD', textContent: 'Log in' };
-
-export const DigidButton = ({ label = '', textContent = '' }) => (
-  <div class="utrecht-digid-button">
-    <utrecht-digid-logo className="utrecht-digid-button__logo"></utrecht-digid-logo>
+export const DigidButton = ({ label = defaultArgs.label, textContent = defaultArgs.textContent }) => (
+  <div className="utrecht-digid-button">
+    <utrecht-digid-logo class="utrecht-digid-button__logo"></utrecht-digid-logo>
     <button
       className="utrecht-digid-button__button utrecht-button utrecht-button--primary-action"
       type="button"
-      ariaLabel={label}
+      aria-label={label}
     >
       {textContent}
     </button>
