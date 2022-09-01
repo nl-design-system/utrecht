@@ -13,13 +13,12 @@ import {
   SubStepList,
   SubStepMarker,
 } from "@gemeente-denhaag/process-steps";
-import { Canvas, Meta } from "@storybook/addon-docs";
-
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import "@gemeente-denhaag/process-steps/index.css";
 
 <Meta
-  id="react-process-steps--default-story"
-  title="React Component/Process Steps/Default"
+  id="react-process-steps"
+  title="React Component/Process Steps"
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -30,64 +29,66 @@ import "@gemeente-denhaag/process-steps/index.css";
 # Process steps
 
 <Canvas>
-  <StepList>
-    <Step checked expanded>
-      <StepSection>
-        <StepHeader>
-          <StepMarker>
-            <div>1</div>
-          </StepMarker>
-          <StepHeading>Deelname aan geluidsonderzoek</StepHeading>
-          <StepExpandedIcon />
-        </StepHeader>
-      </StepSection>
-      <SubStepList>
-        <SubStep>
-          <SubStepMarker />
-          <SubStepHeading>Aanmelding ontvangen</SubStepHeading>
-        </SubStep>
-      </SubStepList>
-    </Step>
-    <Step current expanded>
-      <StepSection>
-        <StepHeader>
-          <StepMarker>
-            <div>2</div>
-          </StepMarker>
-          <StepHeading>Onderzoek naar geluidsoverlast</StepHeading>
-          <StepExpandedIcon />
-        </StepHeader>
-      </StepSection>
-      <SubStepList>
-        <SubStep>
-          <SubStepMarker />
-          <SubStepHeading>Afspraak meten geluidsoverlast gemaakt</SubStepHeading>
-        </SubStep>
-        <SubStep>
-          <SubStepMarker />
-          <SubStepHeading>Geluidsoverlast gemeten</SubStepHeading>
-        </SubStep>
-        <SubStep>
-          <SubStepMarker />
-          <SubStepHeading>Onderzoek resultaten verwerkt</SubStepHeading>
-        </SubStep>
-      </SubStepList>
-    </Step>
-    <Step>
-      <StepSection>
-        <StepHeader>
-          <StepMarker>3</StepMarker>
-          <StepHeading>Uitvoeren van maatregelen</StepHeading>
-        </StepHeader>
-      </StepSection>
-    </Step>
-    <Step>
-      <StepSection>
-        <StepHeader>
-          <StepMarker>4</StepMarker>
-          <StepHeading>Maatregelen zijn uitgevoerd</StepHeading>
-        </StepHeader>
-      </StepSection>
-    </Step>
-  </StepList>
+  <Story name="Default">
+    <StepList>
+      <Step checked expanded>
+        <StepSection>
+          <StepHeader>
+            <StepMarker>
+              <div>1</div>
+            </StepMarker>
+            <StepHeading>Deelname aan geluidsonderzoek</StepHeading>
+            <StepExpandedIcon />
+          </StepHeader>
+        </StepSection>
+        <SubStepList>
+          <SubStep>
+            <SubStepMarker />
+            <SubStepHeading>Aanmelding ontvangen</SubStepHeading>
+          </SubStep>
+        </SubStepList>
+      </Step>
+      <Step current expanded>
+        <StepSection>
+          <StepHeader>
+            <StepMarker>
+              <div>2</div>
+            </StepMarker>
+            <StepHeading>Onderzoek naar geluidsoverlast</StepHeading>
+            <StepExpandedIcon />
+          </StepHeader>
+        </StepSection>
+        <SubStepList>
+          <SubStep>
+            <SubStepMarker />
+            <SubStepHeading>Afspraak meten geluidsoverlast gemaakt</SubStepHeading>
+          </SubStep>
+          <SubStep>
+            <SubStepMarker />
+            <SubStepHeading>Geluidsoverlast gemeten</SubStepHeading>
+          </SubStep>
+          <SubStep>
+            <SubStepMarker />
+            <SubStepHeading>Onderzoek resultaten verwerkt</SubStepHeading>
+          </SubStep>
+        </SubStepList>
+      </Step>
+      <Step>
+        <StepSection>
+          <StepHeader>
+            <StepMarker>3</StepMarker>
+            <StepHeading>Uitvoeren van maatregelen</StepHeading>
+          </StepHeader>
+        </StepSection>
+      </Step>
+      <Step>
+        <StepSection>
+          <StepHeader>
+            <StepMarker>4</StepMarker>
+            <StepHeading>Maatregelen zijn uitgevoerd</StepHeading>
+          </StepHeader>
+        </StepSection>
+      </Step>
+    </StepList>
+  </Story>
 </Canvas>
