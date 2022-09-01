@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormToggle } from "../template";
+import { FormToggle } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-form-toggle"
-  title="CSS Component/Form toggle/States"
+  title="CSS Component/Form toggle/State"
+  component={FormToggle}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -18,7 +19,7 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="checked"
+    name="Checked"
     args={{
       checked: true,
     }}
@@ -31,7 +32,7 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
       checked: true,
       disabled: true,
@@ -45,9 +46,10 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="disabled checked"
+    name="Checked and Disabled"
     args={{
       disabled: true,
+      checked: true,
     }}
   >
     {FormToggle.bind({})}

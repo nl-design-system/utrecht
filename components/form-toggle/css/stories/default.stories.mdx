@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, FormToggle } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-form-toggle"
+  title="CSS Component/Form toggle"
+  component={FormToggle}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form toggle component
+
+Styling via the `.utrecht-form-toggle` class name:
+
+<Canvas>
+  <Story name="Default">{FormToggle.bind({})}</Story>
+</Canvas>
+
+<ArgsTable story="Default" />
