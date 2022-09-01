@@ -1,18 +1,12 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-
-export const Template = (args) => <utrecht-icon {...args}></utrecht-icon>;
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Icon } from "../story-template";
 
 <Meta
   id="web-component-icon"
   title="Web Component/Icon"
-  argTypes={{
-    textContent: {
-      description: "Set the content of the heading",
-      control: "text",
-    },
-  }}
+  component={Icon}
   parameters={{
     status: {
       type: "BETA",
@@ -26,18 +20,12 @@ export const Template = (args) => <utrecht-icon {...args}></utrecht-icon>;
   <Story
     name="with inline SVG"
     args={{
-      children: (
-        <svg viewBox="0 0 32 32">
-          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
-        </svg>
-      ),
+      innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
     }}
   >
-    {Template.bind({})}
+    {Icon.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable story="with inline SVG" />
 
 ## Icon with inline SVG inside a button
 
@@ -46,14 +34,10 @@ export const Template = (args) => <utrecht-icon {...args}></utrecht-icon>;
     name="with inline SVG inside a button"
     decorators={[(Story) => <utrecht-button appearance="primary-action-button">{Story()} Click me</utrecht-button>]}
     args={{
-      children: (
-        <svg viewBox="0 0 32 32">
-          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
-        </svg>
-      ),
+      innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
     }}
   >
-    {Template.bind({})}
+    {Icon.bind({})}
   </Story>
 </Canvas>
 
@@ -72,13 +56,9 @@ export const Template = (args) => <utrecht-icon {...args}></utrecht-icon>;
       ),
     ]}
     args={{
-      children: (
-        <svg viewBox="0 0 32 32">
-          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
-        </svg>
-      ),
+      innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
     }}
   >
-    {Template.bind({})}
+    {Icon.bind({})}
   </Story>
 </Canvas>
