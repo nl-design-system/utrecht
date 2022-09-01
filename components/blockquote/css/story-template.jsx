@@ -23,10 +23,19 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  textContent: '',
+  attribution: '',
+  distanced: false,
+};
+export const exampleArgs = {
   textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
 };
 
-export const Blockquote = ({ textContent = '', attribution = null, distanced = false }) => (
+export const Blockquote = ({
+  textContent = defaultArgs.textContent,
+  attribution = defaultArgs.attribution,
+  distanced = defaultArgs.distanced,
+}) => (
   <blockquote className={clsx('utrecht-blockquote', { 'utrecht-blockquote--distanced': distanced })}>
     <div className="utrecht-blockquote__content">
       <p>{textContent}</p>
