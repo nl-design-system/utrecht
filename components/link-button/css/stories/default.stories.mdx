@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, LinkButton } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-link-button"
+  title="CSS Component/Button that looks like a link"
+  component={LinkButton}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Link button: button that looks like a link
+
+Styling via the `.utrecht-link-button` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {LinkButton.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

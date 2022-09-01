@@ -1,12 +1,13 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { LinkButton } from "../template";
+import { exampleArgs, LinkButton } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-link-button"
   title="CSS Component/Button that looks like a link/States"
+  component={LinkButton}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -22,10 +23,10 @@ Styling met de `.utrecht-link-button--hover` class naam of als state op link met
 
 <Canvas>
   <Story
-    name="hover"
+    name="Hover"
     args={{
+      ...exampleArgs,
       hover: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {LinkButton.bind({})}
@@ -38,10 +39,10 @@ Styling met de `.utrecht-link-button--focus` class naam:
 
 <Canvas>
   <Story
-    name="focus"
+    name="Focus"
     args={{
+      ...exampleArgs,
       focus: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {LinkButton.bind({})}
@@ -54,11 +55,11 @@ Styling met de `.utrecht-link-button--focus-visible` class naam of als status op
 
 <Canvas>
   <Story
-    name="focus-visible"
+    name="Focus-visible"
     args={{
+      ...exampleArgs,
       focus: true,
       focusVisible: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {LinkButton.bind({})}
@@ -71,10 +72,10 @@ Styling met de `.utrecht-link-button--active` class naam of als status op `.utre
 
 <Canvas>
   <Story
-    name="active"
+    name="Active"
     args={{
+      ...exampleArgs,
       active: true,
-      textContent: "Voorbeeldlink",
     }}
   >
     {LinkButton.bind({})}
