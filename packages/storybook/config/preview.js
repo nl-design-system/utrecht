@@ -1,5 +1,4 @@
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
-import parser from 'html-react-parser';
 import defaultsDeep from 'lodash.defaultsdeep';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
@@ -18,13 +17,13 @@ export const decorators = [
   // Enable `utrecht-document` component as backdrop
   // Enable `utrecht-theme` to configure the design tokens
   // Ensure old html templates will be rendered as react component
-  (story, storyContext) => {
+  (Story, storyContext) => {
     // Hack to make current args for a story available in the transformSource of the docs addon
     storyContext.parameters.args = storyContext.args;
 
     return (
       <div className="utrecht-document utrecht-document--surface utrecht-theme">
-        {typeof story() === 'string' ? parser(story()) : story()}
+        <Story />
       </div>
     );
   },
