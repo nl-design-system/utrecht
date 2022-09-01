@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { FormFieldTextbox } from "../template";
+import { FormFieldTextbox } from "../story-template";
 
 <Meta
   id="web-component-form-field-textbox"
-  title="Web Component/Form field with textbox"
+  title="Web Component/Form field with textbox/Type"
+  component={FormFieldTextbox}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -19,7 +20,7 @@ import { FormFieldTextbox } from "../template";
 
 <Canvas>
   <Story
-    name="number"
+    name="Number"
     args={{
       min: 0,
       max: 100,
