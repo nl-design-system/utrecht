@@ -18,29 +18,29 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  languages: [],
+};
+
+export const exampleArgs = {
   languages: [
-    { textContent: 'EN', title: 'This page in English', lang: 'en', current: true, hreflang: 'en' },
-    { textContent: 'NL', title: 'Deze pagina in Nederlands', lang: 'nl', current: false, hreflang: 'nl' },
+    { textContent: 'EN', title: 'This page in English', lang: 'en', current: true, hrefLang: 'en' },
+    { textContent: 'NL', title: 'Deze pagina in Nederlands', lang: 'nl', current: false, hrefLang: 'nl' },
   ],
 };
 
 export const AlternateLangNav = ({ languages = [] }) => {
-  // FIXME: Ensure clean code sample, might be unnescessary when all code samples show html code
-  const SEPARATOR = '|';
-  const navItems =
-    languages.length > 1
-      ? languages.reduce((acc, lang, index, all) => {
-          acc.push(lang);
-          if (index < all.length - 1) acc.push(SEPARATOR);
-          return acc;
-        }, [])
-      : languages;
-
   return (
     <div className="utrecht-alternate-lang-nav">
-      {navItems.map((item) => {
-        return item === SEPARATOR ? <span aria-hidden="true"> | </span> : <Link {...item} />;
-      })}
+      {languages.map((langLink, index, { length }) =>
+        index < length - 1 && length > 1 ? (
+          <React.Fragment key={index}>
+            <Link {...langLink} key={index} />
+            <span aria-hidden="true"> | </span>
+          </React.Fragment>
+        ) : (
+          <Link {...langLink} key={index} />
+        ),
+      )}
     </div>
   );
 };
