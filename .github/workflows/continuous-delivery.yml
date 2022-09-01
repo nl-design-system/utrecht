@@ -55,6 +55,37 @@ jobs:
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook/dist/
 
+  continuous-integration-nx:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout branch
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js version
+        uses: actions/setup-node@v3
+        with:
+          node-version: "16.16.x"
+
+      - name: Install
+        run: |
+          npm ci
+          npm ls
+
+      - name: "Continuous Integration: lint with nx"
+        run: |
+          npm run lint-nx --if-present
+
+      - name: "Continuous Integration: build with nx"
+        env:
+          BASE_URL: "/utrecht/"
+        run: |
+          npm run build-nx --if-present
+
+      - name: "Continuous Integration: test"
+        run: |
+          npm run test-nx --if-present
+
   publish-website:
     runs-on: ubuntu-latest
     needs: continuous-integration
