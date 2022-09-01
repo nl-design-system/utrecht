@@ -2,23 +2,20 @@
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, exampleArgs, Sidenav } from "../story-template";
-
 import "../index.scss";
 
 <Meta
-  id="web-component-sidenav"
-  title="Web Component/Navigatie Sidenav"
+  id="css-sidenav"
+  title="CSS Component/Navigatie Sidenav"
   component={Sidenav}
   argTypes={argTypes}
   args={defaultArgs}
   parameters={{
-    status: {
-      type: "WORK IN PROGRESS",
-    },
+    status: "IN DEVELOPMENT",
   }}
 />
 
-# Sidenav Navigation
+# Navigatie Sidenav
 
 <Canvas>
   <Story name="Default" args={exampleArgs}>
