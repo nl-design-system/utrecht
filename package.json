@@ -79,6 +79,8 @@
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
     "lint:package-lock": "npm ls",
     "lint:prettier": "prettier --check .",
+    "lint-nx": "npx nx run-many --target=lint --all --parallel",
+    "lint-fix-nx": "npx nx run-many --target=lint-fix --all --parallel",
     "postinstall": "patch-package --patch-dir .patches",
     "prepare": "husky install",
     "prettier": "prettier --write .",

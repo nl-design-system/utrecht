@@ -1,0 +1,29 @@
+# Ignore 3rd party files
+node_modules/
+.npm/
+
+# Ignore generated files
+dist/
+tmp/
+*.tgz
+.angular
+
+# Ignore log files
+*.err
+*.log
+*.tmp
+
+# Ignore code editor files
+.vscode/
+*.sublime-workspace
+.vs/
+.idea/
+
+# Ignore OS files
+.DS_Store
+
+# Only track the npm 7 workspace root package-lock.json and standalone package-lock.json
+yarn.lock
+package-lock.json
+!/package-lock.json
+package-lock.json
