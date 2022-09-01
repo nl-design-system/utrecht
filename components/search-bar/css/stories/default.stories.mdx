@@ -1,7 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { SearchBar } from "../template";
+import { argTypes, defaultArgs, exampleArgs, SearchBar } from "../story-template";
 import "../../../textbox/css/index.scss";
 import "../../../button/css/index.scss";
 import "../index.scss";
@@ -9,7 +9,9 @@ import "../index.scss";
 <Meta
   id="css-search-bar"
   title="CSS Component/Search Bar"
-  argTypes={{}}
+  component={SearchBar}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -20,15 +22,7 @@ import "../index.scss";
 # Search Bar
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      buttonLabel: "Zoeken",
-      formLabel: "zoeken in Utrecht.nl",
-      inputLabel: "zoektermen",
-      value: "The answer to life, the universe, and everything",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {SearchBar.bind({})}
   </Story>
 </Canvas>
