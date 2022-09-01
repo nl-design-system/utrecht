@@ -1,13 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Link } from "../story-template";
+import { argTypes, defaultArgs, exampleArgs, Link } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-link"
   title="CSS Component/Link"
+  component={Link}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "ALPHA",
@@ -20,7 +22,7 @@ import "../index.scss";
 Styling met de `.utrecht-link` class naam:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Link.bind({})}
   </Story>
 </Canvas>

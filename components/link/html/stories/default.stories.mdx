@@ -1,12 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, decorators, defaultArgs, Link } from "../story-template";
+import { argTypes, decorators, defaultArgs, exampleArgs, Link } from "../story-template";
 
 <Meta
   id="html-link"
   title="HTML Component/Link"
+  component={Link}
   argTypes={argTypes}
+  args={defaultArgs}
   decorators={decorators}
   parameters={{
     status: {
@@ -20,7 +22,7 @@ import { argTypes, decorators, defaultArgs, Link } from "../story-template";
 Styling via the `<a>` element:
 
 <Canvas>
-  <Story name="Default" args={defaultArgs}>
+  <Story name="Default" args={exampleArgs}>
     {Link.bind({})}
   </Story>
 </Canvas>

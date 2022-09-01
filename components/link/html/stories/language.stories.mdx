@@ -6,20 +6,48 @@ import { AlternateLangLink, decorators } from "../story-template";
 <Meta
   id="html-link"
   title="HTML Component/Link/Language"
+  component={AlternateLangLink}
+  args={{
+    textContent: "",
+    current: false,
+    title: "",
+    lang: undefined,
+    hrefLang: undefined,
+    alternate: false,
+  }}
   decorators={decorators}
   parameters={{
     status: "WORK IN PROGRESS",
   }}
 />
 
-# Current language
+## Alternate Language Link
+
+## Alternate Language
+
+<Canvas>
+  <Story
+    name="Alternate"
+    args={{
+      alternate: true,
+      hrefLang: "en",
+      lang: "en",
+      textContent: "EN",
+      title: "This page in English",
+    }}
+  >
+    {AlternateLangLink.bind({})}
+  </Story>
+</Canvas>
+
+## Current language
 
 <Canvas>
   <Story
     name="Current"
     args={{
       current: true,
-      hreflang: "en",
+      hrefLang: "en",
       lang: "en",
       textContent: "EN",
       title: "This page in English",

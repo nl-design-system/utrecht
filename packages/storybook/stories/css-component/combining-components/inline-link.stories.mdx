@@ -5,7 +5,7 @@ import { Link } from "@utrecht/components/link/css/story-template";
 import { Paragraph } from "@utrecht/components/paragraph/css/template";
 import { UnorderedList } from "@utrecht/components/unordered-list/css/story-template";
 
-export const ParagraphWithLink = ({ textContent, href, link }) =>
+export const ParagraphWithLink = ({ textContent = "", href, link }) =>
   Paragraph({
     textContent: textContent.replaceAll(link, () => Link({ textContent: link, href })),
   });
