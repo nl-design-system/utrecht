@@ -1,11 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { ContactCardTemplate } from "../template";
+import { ContactCardTemplate } from "../story-template";
 
 <Meta
   id="web-component-template-contact-card"
   title="Templates/Web Component/Contact Card"
+  component={ContactCardTemplate}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -16,5 +17,5 @@ import { ContactCardTemplate } from "../template";
 # Contact Card
 
 <Canvas>
-  <Story name="Contact Card">{ContactCardTemplate.bind({})}</Story>
+  <Story name="Default">{ContactCardTemplate.bind({})}</Story>
 </Canvas>
