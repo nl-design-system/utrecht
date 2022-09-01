@@ -1,37 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Select } from "../template";
+import { argTypes, defaultArgs, exampleArgs, Select } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-select"
   title="CSS Component/Select"
-  argTypes={{
-    disabled: {
-      description: "Disabled",
-      control: "boolean",
-    },
-    focus: {
-      description: "Focus",
-      control: "boolean",
-    },
-    invalid: {
-      description: "Invalid",
-      control: "boolean",
-    },
-    options: {
-      description: "Options",
-      type: {
-        name: "array",
-        required: true,
-      },
-    },
-    required: {
-      description: "Required",
-      control: "boolean",
-    },
-  }}
+  component={Select}
+  argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -44,12 +22,7 @@ import "../index.scss";
 Styling via the `<select>` element:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Select.bind({})}
   </Story>
 </Canvas>

@@ -1,15 +1,20 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { defaultArgs, Select } from "../template";
+import { exampleArgs, Select } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-select"
-  title="CSS Component/Select/States"
+  title="CSS Component/Select/State"
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
+    },
+    docs: {
+      source: {
+        state: "closed",
+      },
     },
   }}
 />
@@ -20,17 +25,10 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="disabled"
+    name="Disabled"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       disabled: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
@@ -41,17 +39,10 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="invalid"
+    name="Invalid"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       invalid: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
@@ -62,17 +53,10 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="required"
+    name="Required"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       required: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
@@ -83,17 +67,10 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="focus"
+    name="Focus"
     args={{
-      ...defaultArgs,
+      ...exampleArgs,
       focus: true,
-    }}
-    parameters={{
-      docs: {
-        source: {
-          state: "closed",
-        },
-      },
     }}
   >
     {Select.bind({})}
