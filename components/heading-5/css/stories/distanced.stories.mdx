@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Heading5 } from "../template";
+import { exampleArgs, Heading5 } from "../story-template";
 
 import "../index.scss";
 
 <Meta
   id="css-heading-5"
-  title="CSS Component/Heading/Heading 5"
+  title="CSS Component/Heading/Heading 5/Distanced"
+  component={Heading5}
   parameters={{
     status: {
       type: "ALPHA",
@@ -21,10 +22,10 @@ Styling via `utrecht-heading-5` and `utrecht-heading-5--distanced` class names:
 
 <Canvas>
   <Story
-    name="--distanced"
+    name="Distanced"
     args={{
+      ...exampleArgs,
       distanced: true,
-      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
     }}
   >
     {Heading5.bind({})}
