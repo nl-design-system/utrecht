@@ -1,12 +1,12 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { TableExample } from "../template";
+import { Table } from "../story-template";
 
 <Meta
   id="web-component-table"
   title="Web Component/Table"
-  argTypes={{}}
+  component={Table}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -27,5 +27,5 @@ Accessibility has been tested in the following manner:
 For accessibility of `<table-header-cell>` you MUST set the `scope="col"` or `scope="row"` attribute.
 
 <Canvas>
-  <Story name="Default">{TableExample.bind({})}</Story>
+  <Story name="Default">{Table.bind({})}</Story>
 </Canvas>
