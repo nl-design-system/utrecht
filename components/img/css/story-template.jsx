@@ -17,22 +17,19 @@ export const argTypes = {
   },
   lang: {
     description: 'Language of text alternative',
-    type: {
-      name: 'text',
-      required: false,
-    },
+    type: 'text',
   },
   height: {
     description: 'Height (in pixels)',
     type: {
-      name: 'text',
+      name: 'number',
       required: true,
     },
   },
   width: {
     description: 'Width (in pixels)',
     type: {
-      name: 'text',
+      name: 'number',
       required: true,
     },
   },
@@ -45,26 +42,41 @@ export const argTypes = {
   },
   photo: {
     description: 'Image is a photo',
-    type: {
-      name: 'boolean',
-      required: false,
-    },
+    type: 'boolean',
   },
 };
 
 export const defaultArgs = {
+  alt: undefined,
+  height: undefined,
+  lang: '',
   photo: false,
   src: '',
+  width: undefined,
 };
 
-export const Img = ({ alt, height, lang, photo, src, width }) => (
+export const exampleArgs = {
+  src: 'logo.svg',
+  width: 188,
+  height: 101,
+  alt: 'Gemeente Utrecht',
+};
+
+export const Img = ({
+  alt = defaultArgs.alt,
+  height = defaultArgs.height,
+  lang = defaultArgs.lang,
+  photo = defaultArgs.photo,
+  src = defaultArgs.src,
+  width = defaultArgs.width,
+}) => (
   <img
     className={clsx('utrecht-img', photo && 'utrecht-img--photo')}
     width={String(width)}
     height={String(height)}
     src={src}
     alt={alt}
-    lang={lang}
+    lang={lang || null}
   />
 );
 

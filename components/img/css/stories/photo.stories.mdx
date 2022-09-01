@@ -1,13 +1,13 @@
 <!-- @license CC0-1.0 -->
 
-import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Img } from "../story-template";
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Img } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-img"
-  title="CSS Component/Image"
-  argTypes={argTypes}
+  title="CSS Component/Image/Photo"
+  component={Img}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -23,7 +23,6 @@ Photo © 2022 Gemeente Utrecht.
   <Story
     name="Photo"
     args={{
-      ...defaultArgs,
       src: "example/photo-nijntje-vuelta.jpg",
       width: 2048,
       height: 1536,
@@ -34,5 +33,3 @@ Photo © 2022 Gemeente Utrecht.
     {Img.bind({})}
   </Story>
 </Canvas>
-
-<ArgsTable story="Photo" />

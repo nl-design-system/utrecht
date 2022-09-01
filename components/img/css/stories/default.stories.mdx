@@ -1,13 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, Img } from "../story-template";
+import { argTypes, defaultArgs, exampleArgs, Img } from "../story-template";
 import "../index.scss";
 
 <Meta
   id="css-img"
   title="CSS Component/Image"
+  component={Img}
   argTypes={argTypes}
+  args={defaultArgs}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -20,16 +22,7 @@ import "../index.scss";
 Styling via the `.utrecht-img` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      ...defaultArgs,
-      src: "logo.svg",
-      width: 188,
-      height: 101,
-      alt: "Gemeente Utrecht",
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {Img.bind({})}
   </Story>
 </Canvas>
