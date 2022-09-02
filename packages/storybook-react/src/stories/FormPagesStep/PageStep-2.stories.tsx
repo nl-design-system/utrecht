@@ -30,8 +30,8 @@ import {
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Form Pages Step/ Two',
-  id: 'react-form-pages-step-two',
+  title: 'Template/Form Pages Step/ Two',
+  id: 'template-form-pages-step-two',
   component: Page,
 } as ComponentMeta<typeof Page>;
 
