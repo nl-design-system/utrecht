@@ -20,8 +20,8 @@ import {
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Login page',
-  id: 'react-login-page',
+  title: 'Template/Form Pages Step/Login',
+  id: 'template-form-pages-step-login',
   component: Page,
 } as ComponentMeta<typeof Page>;
 
@@ -64,4 +64,4 @@ const Template: ComponentStory<typeof Page> = () => (
   </Page>
 );
 
-export const Default = Template.bind({});
+export const Login = Template.bind({});
