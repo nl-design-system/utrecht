@@ -44,7 +44,7 @@ const Template: ComponentStory<typeof Page> = (args) => (
         <UtrechtLogo />
       </Link>
     </PageHeader>
-    <PageContent>
+    <PageContent style={{ '--utrecht-space-around': 1 } as any}>
       <UtrechtBreadcrumb
         json={JSON.stringify([
           { href: 'https://example/', title: 'Home', current: false },
