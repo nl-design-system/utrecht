@@ -73,7 +73,7 @@
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --report-unused-disable-directives .",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
-    "lint:package-lock": "npm ls",
+    "lint:package-lock": "pnpm ls --recursive",
     "lint:prettier": "prettier --check .",
     "nx-lint": "npx nx run-many --target=lint --all --parallel",
     "nx-lint-fix": "npx nx run-many --target=lint-fix --all --parallel",
