@@ -9,9 +9,17 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/storybook-vue"
+        "cwd": "packages/storybook-vue",
+        "outputPath": "packages/storybook-vue/dist"
       },
       "dependsOn": ["^build"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "packages-storybook-vue:build",
+        "port": 7007
+      }
     },
     "start": {
       "executor": "@nrwl/workspace:run-commands",
@@ -24,7 +32,7 @@
     "storybook": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm run storybook",
+        "command": "npm run storybook -- --no-open",
         "cwd": "packages/storybook-vue"
       },
       "dependsOn": ["^build"]
