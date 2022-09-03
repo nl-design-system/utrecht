@@ -31,12 +31,14 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "devDependencies": {
+    "@algolia/client-search": "4.14.2",
     "@docsearch/react": "3.1.1",
     "@docusaurus/core": "2.0.1",
     "@docusaurus/preset-classic": "2.0.1",
     "@docusaurus/theme-common": "2.0.1",
     "@docusaurus/theme-search-algolia": "2.0.1",
     "@mdx-js/react": "1.6.22",
+    "@types/react": "17.0.2",
     "@utrecht/component-library-css": "file:../../packages/component-library-css",
     "@utrecht/component-library-react": "file:../../packages/component-library-react",
     "@utrecht/components": "file:../../components",
@@ -50,11 +52,15 @@
     "lodash.clonedeepwith": "4.5.0",
     "mkdirp": "1.0.4",
     "prism-react-renderer": "1.3.5",
+    "prop-types": "15.8.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rimraf": "3.0.2",
     "sass": "1.54.0",
-    "yargs": "17.5.1"
+    "sass-loader": "10.3.1",
+    "typescript": "4.7.4",
+    "yargs": "17.5.1",
+    "webpack": "5.73.0"
   },
   "browserslist": {
     "production": [
