@@ -42,7 +42,7 @@ jobs:
 
       - name: Install
         run: |
-          npm ci
+          npm ci --prefer-offline
           npm ls
 
       - name: "Continuous Integration: lint"
@@ -107,7 +107,7 @@ jobs:
 
       - name: Install
         run: |
-          npm ci
+          npm ci --prefer-offline
           npm ls
 
       - name: "Continuous Integration: lint with nx"
@@ -190,7 +190,7 @@ jobs:
 
       - name: "Continuous Deployment: install"
         run: |
-          npm ci
+          npm ci --prefer-offline
           npm ls
 
       - name: "Continuous Deployment: build"
