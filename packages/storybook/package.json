@@ -53,9 +53,9 @@
     "webpack": "5.73.0"
   },
   "scripts": {
-    "build": "../../node_modules/@storybook/react/bin/build.js --output-dir dist/ --config-dir config/ --quiet",
+    "build": "bin/build-storybook.js --output-dir dist/ --config-dir config/ --quiet",
     "clean": "rimraf dist/",
     "start": "npx http-server dist/",
-    "storybook": "../../node_modules/@storybook/react/bin/index.js --config-dir config/ --port 6006"
+    "storybook": "bin/start-storybook.js --config-dir config/ --port 6006"
   }
 }
