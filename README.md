@@ -138,6 +138,42 @@ You can also check the build logs of the design tokens for errors, if you have c
 1. `cd proprietary/design-tokens/`
 2. `npm run build`
 
+### npm scripts for development web servers
+
+| script                            | description                                                                                                                                                                       |
+| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `npm run docusaurus`              | Start development docusaurus at [localhost:3000](http://localhost:3000/) (without access to Storybook, start `npm run nx-storybook` in parallel if you need that)                 |
+| `npm run nx-storybook`            | Start development Storybook with [composition](https://storybook.js.org/docs/react/sharing/storybook-composition/) for each framework at [localhost:6006](http://localhost:6006/) |
+| `npm run serve-docusaurus`        | Start production Docusaurus website (without access to Storybook) at [localhost:8080](http://localhost:8080/)                                                                     |
+| `npm run serve-storybook-angular` | Start production Storybook for Angular Components at [localhost:7009](http://localhost:7009/)                                                                                     |
+| `npm run serve-storybook-react`   | Start production Storybook for React Components at [localhost:7008](http://localhost:7008/)                                                                                       |
+| `npm run serve-storybook-vue`     | Start production Storybook for Vue.js Components at [localhost:7007](http://localhost:7007/)                                                                                      |
+| `npm run serve`                   | Start production Docusaurus website with access to each Storybook at [localhost:8080](http://localhost:8080/)                                                                     |
+| `npm run storybook-angular`       | Start development Storybook for Angular Components at [localhost:6009](http://localhost:6009/)                                                                                    |
+| `npm run storybook-css`           | Start development Storybook for CSS Components, HTML Components and Web Components at [localhost:6006](http://localhost:6006/)                                                    |
+| `npm run storybook-react`         | Start development Storybook for React Components at [localhost:6008](http://localhost:6008/)                                                                                      |
+| `npm run storybook-vue`           | Start development Storybook for Vue.js Components at [localhost:6007](http://localhost:6007/)                                                                                     |
+
+### npm scripts for quality assurance
+
+| script                | description                                                                                |
+| --------------------- | ------------------------------------------------------------------------------------------ |
+| `npm run lint-fix`    | Check code formatting and automatically fix some types of issues                           |
+| `npm run lint`        | Check code formatting et cetera                                                            |
+| `npm run nx-lint-fix` | Check code formatting and automatically fix some types of issues (but faster, using cache) |
+| `npm run nx-lint`     | Check code formatting et cetera (but faster, using cache)                                  |
+| `npm run nx-test`     | Run unit test for each package (but faster, using cache)                                   |
+| `npm run test`        | Run unit test for each package                                                             |
+
+### npm scripts for the release process
+
+| script             | description                                                               |
+| ------------------ | ------------------------------------------------------------------------- |
+| `npm run build`    | Build each package                                                        |
+| `npm run nx-build` | Build each package (but faster, using cache)                              |
+| `npm run publish`  | Publish each package to the npm registry                                  |
+| `npm run release`  | Determine new version number automatically and update each `package.json` |
+
 ## Code of Conduct
 
 We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community. Read [our Code of Conduct](CODE_OF_CONDUCT.md) if you haven't already.
