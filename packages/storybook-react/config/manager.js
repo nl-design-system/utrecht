@@ -1,6 +1,7 @@
 import { addons } from '@storybook/addons';
-import utrechtTheme from '@utrecht/storybook/config/customTheme';
+import { create } from '@storybook/theming/create';
+import theme from '../../storybook-helpers/storybook-theme.json';
 
 addons.setConfig({
-  theme: utrechtTheme,
+  theme: create(theme),
 });

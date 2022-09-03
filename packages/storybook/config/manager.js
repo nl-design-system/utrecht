@@ -1,9 +1,7 @@
 import { addons } from '@storybook/addons';
-import customTheme from './customTheme';
+import { create } from '@storybook/theming/create';
+import theme from '../../storybook-helpers/storybook-theme.json';
 
 addons.setConfig({
-  theme: customTheme,
-  sidebar: {
-    collapsedRoots: ['semantic-html', 'onderzoek', 'molecules'],
-  },
+  theme: create(theme),
 });
