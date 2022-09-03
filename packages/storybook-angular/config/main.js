@@ -22,6 +22,7 @@ module.exports = {
     builder: '@storybook/builder-webpack5',
     disableTelemetry: true,
   },
+  staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => ({
     ...config,
     performance: {
