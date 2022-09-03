@@ -28,6 +28,7 @@
           "options": {
             "browserTarget": "storybook-angular:build",
             "configDir": "config/",
+            "compodocArgs": ["--config", ".compodocrc.json", "--output", "tmp/"],
             "quiet": true,
             "styles": [
               "../../node_modules/@utrecht/component-library-css/src/index.scss",
@@ -39,7 +40,7 @@
           "builder": "@storybook/angular:build-storybook",
           "options": {
             "browserTarget": "storybook-angular:build",
-            "compodocArgs": ["--exportFormat", "json", "--output", "tmp/"],
+            "compodocArgs": ["--config", ".compodocrc.json", "--output", "tmp/"],
             "configDir": "config/",
             "outputDir": "dist/",
             "quiet": true,
