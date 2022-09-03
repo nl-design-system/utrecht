@@ -9,9 +9,17 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/storybook"
+        "cwd": "packages/storybook",
+        "outputPath": "packages/storybook/dist"
       },
       "dependsOn": ["^build"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "packages-storybook:build",
+        "port": 7006
+      }
     },
     "start": {
       "executor": "@nrwl/workspace:run-commands",
@@ -23,7 +31,7 @@
     "storybook": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm run storybook",
+        "command": "npm run storybook -- --no-open",
         "cwd": "packages/storybook"
       },
       "dependsOn": ["^build"]

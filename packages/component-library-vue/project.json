@@ -9,7 +9,8 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/component-library-vue"
+        "cwd": "packages/component-library-vue",
+        "outputPath": "packages/component-library-vue/dist"
       },
       "dependsOn": ["^build"]
     },

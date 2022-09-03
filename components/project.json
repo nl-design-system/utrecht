@@ -10,7 +10,8 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "components"
+        "cwd": "components",
+        "outputPath": "components/dist"
       },
       "dependsOn": ["^build"]
     }

@@ -9,7 +9,8 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/web-component-library-stencil"
+        "cwd": "packages/web-component-library-stencil",
+        "outputPath": "packages/web-component-library-stencil/dist"
       },
       "dependsOn": ["^build"]
     },

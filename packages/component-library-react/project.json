@@ -9,7 +9,8 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/component-library-react"
+        "cwd": "packages/component-library-react",
+        "outputPath": "packages/component-library-react/dist"
       },
       "dependsOn": ["^build"]
     },

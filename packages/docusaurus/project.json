@@ -9,9 +9,17 @@
       "outputs": ["{projectRoot}/build"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/docusaurus"
+        "cwd": "packages/docusaurus",
+        "outputPath": "packages/docusaurus/build"
       },
       "dependsOn": ["^build"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "packages-docusaurus:build",
+        "port": 8080
+      }
     },
     "start": {
       "executor": "@nrwl/workspace:run-commands",

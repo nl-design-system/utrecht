@@ -9,9 +9,17 @@
       "outputs": ["{projectRoot}/dist"],
       "options": {
         "command": "npm run build",
-        "cwd": "packages/storybook-angular"
+        "cwd": "packages/storybook-angular",
+        "outputPath": "packages/storybook-angular/dist"
       },
       "dependsOn": ["^build"]
+    },
+    "serve": {
+      "executor": "@nrwl/web:file-server",
+      "options": {
+        "buildTarget": "packages-storybook-angular:build",
+        "port": 7009
+      }
     },
     "start": {
       "executor": "@nrwl/workspace:run-commands",
