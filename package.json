@@ -48,7 +48,6 @@
     "npm-package-json-lint": "6.3.0",
     "npm-run-all": "4.1.5",
     "nx": "14.5.10",
-    "patch-package": "6.4.7",
     "postcss": "8.4.14",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
@@ -78,7 +77,6 @@
     "lint:prettier": "prettier --check .",
     "nx-lint": "npx nx run-many --target=lint --all --parallel",
     "nx-lint-fix": "npx nx run-many --target=lint-fix --all --parallel",
-    "postinstall": "patch-package --patch-dir .patches",
     "prepare": "husky install",
     "prettier": "prettier --list-different --write .",
     "publish": "lerna publish from-package",
@@ -102,5 +100,10 @@
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@stencil/core@2.17.2": "patches/@stencil__core@2.17.2.patch"
+    }
   }
 }

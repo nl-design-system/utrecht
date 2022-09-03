@@ -1,8 +1,8 @@
-diff --git a/node_modules/@stencil/core/internal/client/index.js b/node_modules/@stencil/core/internal/client/index.js
-index 69baa50..6fbf427 100644
---- a/node_modules/@stencil/core/internal/client/index.js
-+++ b/node_modules/@stencil/core/internal/client/index.js
-@@ -275,6 +275,11 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
+diff --git a/internal/client/index.js b/internal/client/index.js
+index 4058b461c83e363a98a3948a7c3e85e1f5c71916..6dcf25ec8a9d11593910d2c3c22943f3cd758c18 100644
+--- a/internal/client/index.js
++++ b/internal/client/index.js
+@@ -280,6 +280,11 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
                      if (BUILD.hydrateServerSide || BUILD.hotModuleReplacement) {
                          styleElm.setAttribute(HYDRATED_STYLE_ID, scopeId);
                      }
@@ -14,7 +14,7 @@ index 69baa50..6fbf427 100644
                      styleContainerNode.insertBefore(styleElm, styleContainerNode.querySelector('link'));
                  }
                  if (appliedStyles) {
-@@ -2685,6 +2690,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
+@@ -2693,6 +2698,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
      if (BUILD.invisiblePrehydration && (BUILD.hydratedClass || BUILD.hydratedAttribute)) {
          visibilityStyle.innerHTML = cmpTags + HYDRATED_CSS;
          visibilityStyle.setAttribute('data-styles', '');
