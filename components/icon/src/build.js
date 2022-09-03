@@ -91,7 +91,7 @@ const createIconWrapperComponent = async () => {
     iconContainerComponent(iconRapperComponent, '<slot/>'),
     'utf-8',
   );
-  await writeFile(`${dir}/${iconRapperComponent}.space.tsx`, test(iconRapperComponent), 'utf-8');
+  await writeFile(`${dir}/${iconRapperComponent}.spec.tsx`, test(iconRapperComponent), 'utf-8');
   await writeFile(`${dir}/${iconRapperComponent}.scss`, style(cssValue), 'utf-8');
 };
 createIconWrapperComponent();
