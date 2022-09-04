@@ -28,7 +28,7 @@
     "dist/"
   ],
   "dependencies": {
-    "@utrecht/web-component-library-stencil": "file:../web-component-library-stencil/"
+    "@utrecht/web-component-library-stencil": "*"
   },
   "devDependencies": {
     "@babel/core": "7.18.10",
