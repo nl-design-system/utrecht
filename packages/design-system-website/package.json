@@ -16,11 +16,11 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "devDependencies": {
-    "@utrecht/docusaurus": "file:../docusaurus",
-    "@utrecht/storybook": "file:../storybook",
-    "@utrecht/storybook-angular": "file:../storybook-angular",
-    "@utrecht/storybook-react": "file:../storybook-react",
-    "@utrecht/storybook-vue": "file:../storybook-vue",
+    "@utrecht/docusaurus": "*",
+    "@utrecht/storybook": "*",
+    "@utrecht/storybook-angular": "*",
+    "@utrecht/storybook-react": "*",
+    "@utrecht/storybook-vue": "*",
     "rimraf": "3.0.2"
   },
   "scripts": {
