@@ -35,6 +35,8 @@ function mergeFacetFilters(f1, f2) {
 function DocSearch({ contextualSearch, externalUrlRegex, ...props }) {
     var _a, _b;
     const { siteMetadata } = useDocusaurusContext();
+    // FIXME: Avoid broken build
+    return <div/>;
     const contextualSearchFacetFilters = useAlgoliaContextualFacetFilters();
     const configFacetFilters = (_b = (_a = props.searchParameters) === null || _a === void 0 ? void 0 : _a.facetFilters) !== null && _b !== void 0 ? _b : [];
     const facetFilters = contextualSearch
