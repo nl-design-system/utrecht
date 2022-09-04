@@ -45,8 +45,8 @@
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
-    "build:typescript": "tsc",
     "clean": "rimraf dist/",
+    "lint": "tsc --noEmit --project tsconfig.json",
     "start": "stencil build --dev --watch --serve",
     "watch:build": "stencil build --watch",
     "generate": "stencil generate"
