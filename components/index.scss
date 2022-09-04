@@ -1,0 +1,84 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+/* Collection of all BEM class names in the component library */
+
+/*
+ * TODO: Once every component is a separate npm package, these imports should
+ * be updated to use a package reference instead of a relative path.
+ *
+ * For example:
+ *     @import "../../blockquote/index";
+ *
+ * Will become:
+ *     @import "@utrecht/blockquote/index";
+ */
+
+@import "./article/css";
+@import "./badge-counter/css";
+@import "./badge-data/css";
+@import "./badge-status/css";
+@import "./backdrop/css";
+@import "./blockquote/css";
+@import "./breadcrumb/css";
+@import "./button/css";
+@import "./button-group/css";
+@import "./button-link/css";
+@import "./checkbox/css";
+@import "./custom-checkbox/css";
+@import "./custom-radio-button/css";
+@import "./data-list/css";
+@import "./digid-button/css";
+@import "./document/css";
+@import "./emphasis/css";
+@import "./form-field-checkbox-group/css";
+@import "./form-field-checkbox/css";
+@import "./form-field-description/css";
+@import "./form-field-radio-group/css";
+@import "./form-field-radio/css";
+@import "./form-field-textbox/css";
+@import "./form-field/css";
+@import "./form-fieldset/css";
+@import "./form-label/css";
+@import "./form-toggle/css";
+@import "./heading-1/css";
+@import "./heading-2/css";
+@import "./heading-3/css";
+@import "./heading-4/css";
+@import "./heading-5/css";
+@import "./heading-6/css";
+@import "./heading-group/css";
+@import "./icon/css";
+@import "./img/css";
+@import "./link-list/css";
+@import "./link-button/css";
+@import "./link-social/css";
+@import "./link/css";
+@import "./logo-button/css";
+@import "./logo/css";
+@import "./mapcontrolbutton/css";
+@import "./menulijst/css";
+@import "./navigatie sidenav/css";
+@import "./navigatie topnav/css";
+@import "./ordered-list/css";
+@import "./page-content/css";
+@import "./page-footer/css";
+@import "./page-header/css";
+@import "./page/css";
+@import "./pagination/css";
+@import "./paragraph/css";
+@import "./pre-heading/css";
+@import "./radio-button/css";
+@import "./search-bar/css";
+@import "./select/css";
+@import "./separator/css";
+@import "./skip-link/css";
+@import "./surface/css";
+@import "./table/css";
+@import "./textarea/css";
+@import "./textbox/css";
+@import "./unordered-list/css";
+@import "./url/css";
+@import "./value-number/css";
