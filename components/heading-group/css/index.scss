@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2022 Gemeente Utrecht
+ * Copyright (c) 2022 Robbert Broersma
+ * Copyright (c) 2022 The Knights Who Say NIH! B.V.
+ */
+
+@import "./mixin";
+
+.utrecht-heading-group {
+  @include utrecht-heading-group;
+}
