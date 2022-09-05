@@ -15,12 +15,6 @@ module.exports = {
     },
     {
       type: 'doc',
-      docId: 'tmp/huisstijl/kleuren',
-      position: 'left',
-      label: 'De Stijl',
-    },
-    {
-      type: 'doc',
       docId: 'componenten/typografie/heading',
       position: 'left',
       label: 'Componenten',
@@ -39,14 +33,17 @@ module.exports = {
     },
     {
       href: 'https://github.com/nl-design-system/utrecht',
-      label: 'GitHub',
       position: 'right',
+      className: 'header-github-link',
+      'aria-label': 'GitHub repository',
     },
     {
       prependBaseUrlToHref: true,
       href: './storybook/',
-      label: 'Storybook',
       position: 'right',
+      className: 'header-github-link',
+      label: 'Storybook',
+      'aria-label': 'Storybook for all components',
     },
   ],
-};
+}
