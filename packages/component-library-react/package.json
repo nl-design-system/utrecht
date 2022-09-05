@@ -18,6 +18,7 @@
   "sideEffects": false,
   "scripts": {
     "build": "rollup -c",
+    "build:watch": "rollup -c --watch",
     "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",

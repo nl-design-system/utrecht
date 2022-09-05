@@ -14,6 +14,15 @@
       },
       "dependsOn": ["^build"]
     },
+    "build-watch": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "npm run build:watch",
+        "cwd": "packages/component-library-react"
+      },
+      "dependsOn": ["^build"]
+    },
     "test": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
