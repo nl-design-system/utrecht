@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { HeadingGroup } from "../template";
+
+import "../index.scss";
+
+<Meta
+  id="css-heading-group"
+  title="CSS Component/Heading Group"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading Group
+
+Styling via `utrecht-heading-group` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      children: `
+      <h1 class="utrecht-heading-1">The Quick Brown Fox Jumps Over The Lazy Dog</h1>
+      <p class="utrecht-paragraph">The Quick Brown Fox Jumps Over The Lazy Dog</p>
+      `,
+    }}
+  >
+    {HeadingGroup.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

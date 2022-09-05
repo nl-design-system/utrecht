@@ -1,0 +1,24 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+import tokensDefinition from "../../tokens.json";
+
+<Meta
+  id="css-heading-group--design-tokens"
+  title="CSS Component/Heading Group/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading Group Design tokens
+
+<ComponentTokensSection
+  tokens={tokens}
+  definition={tokensDefinition}
+  component="utrecht-heading-group"
+></ComponentTokensSection>
