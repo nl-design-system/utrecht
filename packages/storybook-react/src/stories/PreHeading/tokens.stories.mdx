@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinition from "@utrecht/components/pre-heading/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="react-pre-heading--design-tokens"
+  title="React.js Component/Pre-heading/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Pre-heading Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-pre-heading" />
