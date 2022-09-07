@@ -23,6 +23,7 @@ export { Heading3 } from './Heading3';
 export { Heading4 } from './Heading4';
 export { Heading5 } from './Heading5';
 export { Heading6 } from './Heading6';
+export { Image } from './Image';
 export { Link } from './Link';
 export { LinkButton } from './LinkButton';
 export { NumberValue } from './NumberValue';
