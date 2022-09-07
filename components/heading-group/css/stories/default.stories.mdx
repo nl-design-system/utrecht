@@ -1,12 +1,15 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { HeadingGroup } from "../template";
+import { argTypes, defaultArgs, exampleArgs, HeadingGroup } from "../story-template";
 
 import "../index.scss";
 
 <Meta
   id="css-heading-group"
+  component={HeadingGroup}
+  argTypes={argTypes}
+  args={defaultArgs}
   title="CSS Component/Heading Group"
   parameters={{
     status: {
@@ -20,15 +23,7 @@ import "../index.scss";
 Styling via `utrecht-heading-group` class name:
 
 <Canvas>
-  <Story
-    name="Default"
-    args={{
-      children: `
-      <h1 class="utrecht-heading-1">The Quick Brown Fox Jumps Over The Lazy Dog</h1>
-      <p class="utrecht-paragraph">The Quick Brown Fox Jumps Over The Lazy Dog</p>
-      `,
-    }}
-  >
+  <Story name="Default" args={exampleArgs}>
     {HeadingGroup.bind({})}
   </Story>
 </Canvas>

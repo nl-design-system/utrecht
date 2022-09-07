@@ -1,0 +1,35 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, HeadingGroup } from "../story-template";
+
+<Meta
+  id="css-heading-group"
+  component={HeadingGroup}
+  argTypes={argTypes}
+  args={defaultArgs}
+  title="CSS Component/Heading Group/Pre-heading"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading Group with pre-heading
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      innerHTML: `
+      <h1 class="utrecht-heading-1">The Quick Brown Fox Jumps Over The Lazy Dog</h1>
+      <p class="utrecht-pre-heading">The Quick Brown Fox Jumps Over The Lazy Dog</p>
+      `,
+    }}
+  >
+    {HeadingGroup.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
