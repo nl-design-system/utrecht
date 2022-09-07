@@ -59,18 +59,16 @@
     "typescript": "4.7.4"
   },
   "scripts": {
-    "build": "lerna run --stream build",
+    "build": "NX_VERBOSE_LOGGING=true npm run nx-build -- --skip-nx-cache",
     "nx-build": "nx run-many --target=build --all --parallel",
-    "build:docs": "lerna run --scope @utrecht/docusaurus --include-dependencies build",
     "clean": "npm run --if-present --workspaces clean",
     "docs": "npm run --workspace packages/docusaurus start",
     "find-undocumented-tokens": "npm run --workspace proprietary/design-tokens/ build:stylelint && npm run lint:css -- --config ./.tokens.stylelintrc.json",
-    "lint": "npm-run-all --continue-on-error lint:** lint-workspaces",
-    "lint-fix": "npm-run-all --continue-on-error lint-fix:** prettier",
+    "lint": "NX_VERBOSE_LOGGING=true npm run nx-lint -- --skip-nx-cache",
+    "lint-fix": "NX_VERBOSE_LOGGING=true npm run nx-lint-fix -- --skip-nx-cache",
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
     "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
-    "lint-workspaces": "lerna run --no-bail --stream lint",
     "lint:css": "stylelint '**/*.{css,scss}'",
     "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name .docusaurus -or -name component-library-angular \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --report-unused-disable-directives .",
@@ -82,7 +80,7 @@
     "nx-lint-fix": "npx nx run-many --target=lint-fix --all --parallel",
     "postinstall": "patch-package --patch-dir .patches",
     "prepare": "husky install",
-    "prettier": "prettier --write .",
+    "prettier": "prettier --list-different --write .",
     "publish": "lerna publish from-package",
     "release": "lerna version prerelease --no-changelog --no-private",
     "storybook": "npm-run-all --parallel watch:**",
@@ -98,15 +96,11 @@
     "serve-storybook-angular": "nx serve packages-storybook-angular",
     "serve-storybook-react": "nx serve packages-storybook-react",
     "serve-storybook-vue": "nx serve packages-storybook-vue",
-    "test": "npm run test-workspaces",
+    "test": "NX_VERBOSE_LOGGING=true npm run nx-test -- --skip-nx-cache",
     "nx-test": "nx run-many --target=test --all --parallel",
     "test-update": "npm-run-all --sequential lint build test",
-    "test-workspaces": "lerna run --no-bail --stream test",
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
-    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps",
-    "watch:stencil": "lerna run watch:stencil",
-    "watch:storybook": "npm run build --workspace packages/component-library-react/ && lerna run build:style-dictionary && lerna run build:stencil && npm run --workspace packages/storybook storybook",
-    "watch:style-dictionary": "lerna run watch:style-dictionary"
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps"
   }
 }
