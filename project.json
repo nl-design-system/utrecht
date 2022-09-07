@@ -9,56 +9,56 @@
       "inputs": ["{projectRoot}/**/*.{js,json,jsx,mdx,ts,tsx,vue}"],
       "options": {
         "command": "npm run lint:js"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-fix-eslint": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.{js,json,jsx,mdx,ts,tsx,vue}"],
       "options": {
         "command": "npm run lint-fix:js"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-html": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.html"],
       "options": {
         "command": "npm run lint:html"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-md": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.md"],
       "options": {
         "command": "npm run lint:md"
-      },
-      "tags": ["lint"]
+      }
+    },
+    "lint-fix-md": {
+      "executor": "@nrwl/workspace:run-commands",
+      "inputs": ["{projectRoot}/**/*.md"],
+      "options": {
+        "command": "npm run lint-fix:md"
+      }
     },
     "lint-package-json": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/package.json"],
       "options": {
         "command": "npm run lint:package-json"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-package-lock": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/package.json", "{projectRoot}/**/package-lock.json"],
       "options": {
         "command": "npm run lint:package-lock"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-prettier": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.{css,html,js,json,jsx,scss,ts,tsx,vue}"],
       "options": {
         "command": "npm run lint:prettier"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-fix-prettier": {
       "executor": "@nrwl/workspace:run-commands",
@@ -66,24 +66,21 @@
       "options": {
         "command": "npm run prettier"
       },
-      "tags": ["lint"],
-      "dependsOn": ["lint-fix-eslint", "lint-fix-stylelint"]
+      "dependsOn": ["lint-fix-eslint", "lint-fix-md", "lint-fix-stylelint"]
     },
     "lint-stylelint": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.{css,scss}"],
       "options": {
         "command": "npm run lint:css"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint-fix-stylelint": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.{css,scss}"],
       "options": {
         "command": "npm run lint-fix:css"
-      },
-      "tags": ["lint"]
+      }
     },
     "lint": {
       "executor": "@nrwl/workspace:run-commands",
