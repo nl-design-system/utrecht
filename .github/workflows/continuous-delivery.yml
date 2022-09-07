@@ -110,19 +110,19 @@ jobs:
           npm ci --prefer-offline
           npm ls
 
-      - name: "Continuous Integration: lint with nx"
+      - name: "Continuous Integration: lint"
         run: |
-          npm run lint-nx --if-present
+          npm run nx-lint --if-present
 
-      - name: "Continuous Integration: build with nx"
+      - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
         run: |
-          npm run build-nx --if-present
+          npm run nx-build --if-present
 
       - name: "Continuous Integration: test"
         run: |
-          npm run test-nx --if-present
+          npm run nx-test --if-present
 
   publish-website:
     runs-on: ubuntu-latest
