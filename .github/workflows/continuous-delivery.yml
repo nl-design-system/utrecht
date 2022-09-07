@@ -21,43 +21,43 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - name: Cache Node packages
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-packages
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          version: 7
+          run_install: false
 
-      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
-
-      - name: Install
+      - name: Get pnpm store directory
+        id: pnpm-cache
         run: |
-          npm ci --prefer-offline
-          npm ls
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+          pnpm ls --recursive
 
       - name: "Continuous Integration: lint"
         run: |
-          npm run lint --if-present
+          pnpm run --if-present lint
 
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
         run: |
-          npm run build --if-present
+          pnpm run --if-present build
 
       - name: "Continuous Integration: test"
         run: |
-          npm run test --if-present
+          pnpm run --if-present test
 
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v3
@@ -86,43 +86,43 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - name: Cache Node packages
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-packages
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          version: 7
+          run_install: false
 
-      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
-
-      - name: Install
+      - name: Get pnpm store directory
+        id: pnpm-cache
         run: |
-          npm ci --prefer-offline
-          npm ls
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: |
+          pnpm install
+          pnpm ls --recursive
 
       - name: "Continuous Integration: lint"
         run: |
-          npm run nx-lint --if-present
+          pnpm run --if-present nx-lint
 
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
         run: |
-          npm run nx-build --if-present
+          pnpm run --if-present nx-build
 
       - name: "Continuous Integration: test"
         run: |
-          npm run nx-test --if-present
+          pnpm run --if-present nx-test
 
   publish-website:
     runs-on: ubuntu-latest
@@ -169,33 +169,33 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - name: Cache Node packages
-        id: cache-npm
-        uses: actions/cache@v3
-        env:
-          cache-name: cache-node-packages
+      - uses: pnpm/action-setup@v2.0.1
+        name: Install pnpm
+        id: pnpm-install
         with:
-          # npm cache files are stored in `~/.npm` on Linux/macOS
-          path: ~/.npm
-          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-build-${{ env.cache-name }}-
-            ${{ runner.os }}-build-
-            ${{ runner.os }}-
+          version: 7
+          run_install: false
 
-      - if: ${{ steps.cache-npm.outputs.cache-hit != 'true' }}
-        name: List the state of node modules
-        continue-on-error: true
-        run: npm list
+      - name: Get pnpm store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+      - uses: actions/cache@v3
+        name: Setup pnpm cache
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
 
       - name: "Continuous Deployment: install"
         run: |
-          npm ci --prefer-offline
-          npm ls
+          pnpm install
+          pnpm ls --recursive
 
       - name: "Continuous Deployment: build"
         run: |
-          npm run build --if-present
+          pnpm run --if-present build
 
       - name: "Continuous Deployment: publish to GitHub repository"
         env:
