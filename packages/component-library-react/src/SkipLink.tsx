@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement>;
+export type LinkProps = AnchorHTMLAttributes<HTMLAnchorElement>;
 
 export const SkipLink = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<LinkProps>, ref: ForwardedRef<HTMLAnchorElement>) => (

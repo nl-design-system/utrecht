@@ -7,7 +7,7 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren } from 'react';
 
-interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+export interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   appearance?: string;
   external?: boolean;
 }
