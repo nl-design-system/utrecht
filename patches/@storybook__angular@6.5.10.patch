@@ -1,0 +1,13 @@
+diff --git a/dist/ts3.9/builders/utils/run-compodoc.js b/dist/ts3.9/builders/utils/run-compodoc.js
+index bed63f27489ea67320f776a368193cddd69f0047..82ba95bb0fd676e21030c903053837ad5e779930 100644
+--- a/dist/ts3.9/builders/utils/run-compodoc.js
++++ b/dist/ts3.9/builders/utils/run-compodoc.js
+@@ -42,7 +42,7 @@ exports.runCompodoc = ({ compodocArgs, tsconfig }, context) => {
+         ];
+         try {
+             context.logger.info(finalCompodocArgs.join(' '));
+-            const child = child_process_1.spawn('npx', finalCompodocArgs, {
++            const child = child_process_1.spawn('pnpm', ['exec', ...finalCompodocArgs], {
+                 cwd: context.workspaceRoot,
+                 env: process.env,
+                 shell: true,
