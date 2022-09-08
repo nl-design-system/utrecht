@@ -206,12 +206,12 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
         run: |
           git push --set-upstream origin HEAD
-          npm run release -- --yes
+          pnpm run release
 
       - name: "Continuous Deployment: publish to npm"
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-          npm run publish -- --no-verify-access --yes
-          npm config delete "//registry.npmjs.org/:_authToken"
+          pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+          pnpm run publish
+          pnpm config delete "//registry.npmjs.org/:_authToken"
