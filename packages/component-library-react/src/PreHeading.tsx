@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type PreHeadingProps = HTMLAttributes<HTMLParagraphElement>;
+export type PreHeadingProps = HTMLAttributes<HTMLParagraphElement>;
 
 export const PreHeading = forwardRef(
   (
