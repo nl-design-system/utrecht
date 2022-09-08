@@ -4,6 +4,9 @@ patchedDependencies:
   '@stencil/core@2.17.2':
     hash: vk6ep37heit6vyo4vmbdvcj5pm
     path: patches/@stencil__core@2.17.2.patch
+  '@storybook/angular@6.5.10':
+    hash: xppjmrviuexyctyshs2hnrmxya
+    path: patches/@storybook__angular@6.5.10.patch
 
 importers:
 
@@ -581,7 +584,7 @@ importers:
       '@storybook/addon-toolbars': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/addon-viewport': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/addons': 6.5.10_biqbaboplfbrettd7655fr4n2y
-      '@storybook/angular': 6.5.10_sjakmciq7ictx2e7sb43gaq7wu
+      '@storybook/angular': 6.5.10_xppjmrviuexyctyshs2hnrmxya_sjakmciq7ictx2e7sb43gaq7wu
       '@storybook/api': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/builder-webpack5': 6.5.10_xrxvbtylmve4l2tr3vmmqgfp7q
       '@storybook/components': 6.5.10_biqbaboplfbrettd7655fr4n2y
@@ -10214,7 +10217,7 @@ packages:
       regenerator-runtime: 0.13.9
     dev: true
 
-  /@storybook/angular/6.5.10_sjakmciq7ictx2e7sb43gaq7wu:
+  /@storybook/angular/6.5.10_xppjmrviuexyctyshs2hnrmxya_sjakmciq7ictx2e7sb43gaq7wu:
     resolution: {integrity: sha512-UxhZ8lHxGl/mCw/EOlW7+6ZnY61+i1aptV0rujPNoIVKmGDXkJWTyL8pxYrqde2WCTLoQoIGhEPwU0hz26Xawg==}
     engines: {node: '>=10.13.0'}
     hasBin: true
@@ -10312,6 +10315,7 @@ packages:
       - webpack-cli
       - webpack-command
     dev: true
+    patched: true
 
   /@storybook/api/6.5.10_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-AkmgSPNEGdKp4oZA4KQ+RJsacw7GwfvjsVDnCkcXqS9zmSr/RNL0fhpcd60KKkmx/hGKPTDFpK3ZayxDrJ/h4A==}

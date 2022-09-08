@@ -103,7 +103,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@stencil/core@2.17.2": "patches/@stencil__core@2.17.2.patch"
+      "@stencil/core@2.17.2": "patches/@stencil__core@2.17.2.patch",
+      "@storybook/angular@6.5.10": "patches/@storybook__angular@6.5.10.patch"
     }
   }
 }
