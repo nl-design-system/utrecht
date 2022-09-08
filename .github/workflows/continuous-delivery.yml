@@ -81,7 +81,7 @@ jobs:
 
       - name: "Continuous Integration: lint"
         run: |
-          pnpm run --if-present lint
+          pnpm run --if-present nx-lint
 
   build:
     runs-on: ubuntu-latest
@@ -121,7 +121,7 @@ jobs:
 
       - name: "Continuous Integration: build"
         run: |
-          pnpm run --if-present build
+          pnpm run --if-present nx-build
 
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v3
@@ -175,7 +175,7 @@ jobs:
 
       - name: "Continuous Integration: test"
         run: |
-          pnpm run --if-present test
+          pnpm run --if-present nx-test
 
   visual-regression-test:
     runs-on: ubuntu-latest
