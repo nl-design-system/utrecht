@@ -81,7 +81,7 @@ importers:
       '@mdx-js/react': 1.6.22
       '@stencil/core': 2.17.2
       '@storybook/addon-docs': 6.5.10
-      '@utrecht/icon': '*'
+      '@utrecht/icon': workspace:*
       clsx: 1.2.1
       html-react-parser: 3.0.1
       npm-run-all: 4.1.5
@@ -98,7 +98,7 @@ importers:
       '@mdx-js/react': 1.6.22_react@18.2.0
       '@stencil/core': 2.17.2_vk6ep37heit6vyo4vmbdvcj5pm
       '@storybook/addon-docs': 6.5.10_azamxij2dds4yrmbtgicf7ixui
-      '@utrecht/icon': 1.0.0-alpha.211
+      '@utrecht/icon': link:icon
       html-react-parser: 3.0.1_react@18.2.0
       npm-run-all: 4.1.5
       react: 18.2.0
@@ -155,7 +155,7 @@ importers:
       '@angular/platform-browser': 14.1.0
       '@angular/platform-browser-dynamic': 14.1.0
       '@angular/router': 14.1.0
-      '@utrecht/component-library-css': '*'
+      '@utrecht/components': workspace:*
       chokidar-cli: 3.0.0
       ng-packagr: 14.1.0
       rxjs: 7.5.6
@@ -176,7 +176,7 @@ importers:
       '@angular/platform-browser': 14.1.0_fsfxn3q5jfgkydsi5rfuqudspa
       '@angular/platform-browser-dynamic': 14.1.0_4uelz7lddsxzh2as2vx6t5hnym
       '@angular/router': 14.1.0_oh7ssot2niyqdg7a6md2mriq4i
-      '@utrecht/component-library-css': 1.0.0-alpha.323
+      '@utrecht/components': link:../../components
       chokidar-cli: 3.0.0
       ng-packagr: 14.1.0_qxl63n46gkl6c7gayqnfuyyndq
       rxjs: 7.5.6
@@ -195,7 +195,7 @@ importers:
 
   packages/component-library-formio:
     specifiers:
-      '@utrecht/web-component-library-stencil': '*'
+      '@utrecht/web-component-library-stencil': workspace:*
       formiojs: 4.14.8
       npm-run-all: 4.1.5
       react: 16.14.0
@@ -204,7 +204,7 @@ importers:
       rimraf: 3.0.2
       typescript: 4.1.6 <4.2
     devDependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
       formiojs: 4.14.8
       npm-run-all: 4.1.5
       react: 16.14.0
@@ -290,7 +290,7 @@ importers:
       '@types/jsdom': 16.2.15
       '@types/node': 16.11.47
       '@types/testing-library__jest-dom': 5.14.5
-      '@utrecht/components': '*'
+      '@utrecht/components': workspace:*
       '@vitejs/plugin-vue': 2.3.3
       '@vue/compiler-sfc': 3.2.37
       '@vue/test-utils': 2.0.2
@@ -320,7 +320,7 @@ importers:
       '@types/jsdom': 16.2.15
       '@types/node': 16.11.47
       '@types/testing-library__jest-dom': 5.14.5
-      '@utrecht/components': 1.0.0-alpha.284
+      '@utrecht/components': link:../../components
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.14+vue@3.2.37
       '@vue/compiler-sfc': 3.2.37
       '@vue/test-utils': 2.0.2_vue@3.2.37
@@ -344,11 +344,11 @@ importers:
 
   packages/design-system-website:
     specifiers:
-      '@utrecht/docusaurus': '*'
-      '@utrecht/storybook': '*'
-      '@utrecht/storybook-angular': '*'
-      '@utrecht/storybook-react': '*'
-      '@utrecht/storybook-vue': '*'
+      '@utrecht/docusaurus': workspace:*
+      '@utrecht/storybook': workspace:*
+      '@utrecht/storybook-angular': workspace:*
+      '@utrecht/storybook-react': workspace:*
+      '@utrecht/storybook-vue': workspace:*
       rimraf: 3.0.2
     devDependencies:
       '@utrecht/docusaurus': link:../docusaurus
@@ -368,11 +368,11 @@ importers:
       '@docusaurus/theme-search-algolia': 2.0.1
       '@mdx-js/react': 1.6.22
       '@types/react': 17.0.2
-      '@utrecht/component-library-css': '*'
-      '@utrecht/component-library-react': '*'
-      '@utrecht/components': '*'
-      '@utrecht/design-tokens': '*'
-      '@utrecht/web-component-library-react': '*'
+      '@utrecht/component-library-css': workspace:*
+      '@utrecht/component-library-react': workspace:*
+      '@utrecht/components': workspace:*
+      '@utrecht/design-tokens': workspace:*
+      '@utrecht/web-component-library-react': workspace:*
       clsx: 1.2.1
       cpx: 1.5.0
       docusaurus-plugin-sass: 0.2.2
@@ -399,11 +399,11 @@ importers:
       '@docusaurus/theme-search-algolia': 2.0.1_speegizsjm72dwllcaffcvfp7y
       '@mdx-js/react': 1.6.22_react@17.0.2
       '@types/react': 17.0.2
-      '@utrecht/component-library-css': 1.0.0-alpha.323
-      '@utrecht/component-library-react': 1.0.0-alpha.132_sfoxds7t5ydpegc3knd667wn6m
-      '@utrecht/components': 1.0.0-alpha.284
-      '@utrecht/design-tokens': 1.0.0-alpha.316
-      '@utrecht/web-component-library-react': 1.0.0-alpha.322_sfoxds7t5ydpegc3knd667wn6m
+      '@utrecht/component-library-css': link:../component-library-css
+      '@utrecht/component-library-react': link:../component-library-react
+      '@utrecht/components': link:../../components
+      '@utrecht/design-tokens': link:../../proprietary/design-tokens
+      '@utrecht/web-component-library-react': link:../web-component-library-react
       clsx: 1.2.1
       cpx: 1.5.0
       docusaurus-plugin-sass: 0.2.2_6vqqivb4wbwwxkruq7gtd32sgy
@@ -441,12 +441,12 @@ importers:
       '@storybook/preset-scss': 1.0.3
       '@storybook/react': 6.5.10
       '@storybook/theming': 6.5.10
-      '@utrecht/component-library-css': '*'
-      '@utrecht/components': '*'
-      '@utrecht/design-tokens': '*'
-      '@utrecht/documentation': '*'
-      '@utrecht/icon': '*'
-      '@utrecht/web-component-library-stencil': '*'
+      '@utrecht/component-library-css': workspace:*
+      '@utrecht/components': workspace:*
+      '@utrecht/design-tokens': workspace:*
+      '@utrecht/documentation': workspace:*
+      '@utrecht/icon': workspace:*
+      '@utrecht/web-component-library-stencil': workspace:*
       '@whitespace/storybook-addon-html': 5.0.0
       babel-loader: 8.2.5
       cpx: 1.5.0
@@ -482,12 +482,12 @@ importers:
       '@storybook/preset-scss': 1.0.3_zrxhpndycme2aynp25qntdvi6q
       '@storybook/react': 6.5.10_eukaoi4yu25h3xk5f5pflm247m
       '@storybook/theming': 6.5.10_biqbaboplfbrettd7655fr4n2y
-      '@utrecht/component-library-css': 1.0.0-alpha.323
-      '@utrecht/components': 1.0.0-alpha.284
-      '@utrecht/design-tokens': 1.0.0-alpha.316
+      '@utrecht/component-library-css': link:../component-library-css
+      '@utrecht/components': link:../../components
+      '@utrecht/design-tokens': link:../../proprietary/design-tokens
       '@utrecht/documentation': link:../../documentation
-      '@utrecht/icon': 1.0.0-alpha.211
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
+      '@utrecht/icon': link:../../components/icon
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
       '@whitespace/storybook-addon-html': 5.0.0_nrub5ii6rhp6huxbftvl6wo4x4
       babel-loader: 8.2.5_t5lqpictcry45jvv466griokye
       cpx: 1.5.0
@@ -542,11 +542,11 @@ importers:
       '@storybook/theming': 6.5.10
       '@types/node': 16.11.47
       '@types/react': 18.0.15
-      '@utrecht/component-library-angular': '*'
-      '@utrecht/component-library-css': '*'
-      '@utrecht/components': '*'
-      '@utrecht/design-tokens': '*'
-      '@utrecht/documentation': '*'
+      '@utrecht/component-library-angular': workspace:*
+      '@utrecht/component-library-css': workspace:*
+      '@utrecht/components': workspace:*
+      '@utrecht/design-tokens': workspace:*
+      '@utrecht/documentation': workspace:*
       babel-loader: 8.2.5
       npm-run-all: 4.1.5
       react: 18.2.0
@@ -591,10 +591,10 @@ importers:
       '@storybook/theming': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@types/node': 16.11.47
       '@types/react': 18.0.15
-      '@utrecht/component-library-angular': 1.0.0-alpha.102_ekenp3nso5gir7vsvgspyllbxi
-      '@utrecht/component-library-css': 1.0.0-alpha.323
-      '@utrecht/components': 1.0.0-alpha.284
-      '@utrecht/design-tokens': 1.0.0-alpha.316
+      '@utrecht/component-library-angular': link:../component-library-angular
+      '@utrecht/component-library-css': link:../component-library-css
+      '@utrecht/components': link:../../components
+      '@utrecht/design-tokens': link:../../proprietary/design-tokens
       '@utrecht/documentation': link:../../documentation
       babel-loader: 8.2.5_t5lqpictcry45jvv466griokye
       npm-run-all: 4.1.5
@@ -628,11 +628,11 @@ importers:
       '@storybook/testing-library': 0.0.13
       '@storybook/theming': 6.5.10
       '@types/react': 18.0.15
-      '@utrecht/component-library-react': '*'
-      '@utrecht/components': '*'
-      '@utrecht/design-tokens': '*'
-      '@utrecht/documentation': '*'
-      '@utrecht/web-component-library-react': '*'
+      '@utrecht/component-library-react': workspace:*
+      '@utrecht/components': workspace:*
+      '@utrecht/design-tokens': workspace:*
+      '@utrecht/documentation': workspace:*
+      '@utrecht/web-component-library-react': workspace:*
       babel-loader: 8.2.5
       css-loader: 5.2.7
       http-server: 14.1.1
@@ -666,11 +666,11 @@ importers:
       '@storybook/testing-library': 0.0.13_biqbaboplfbrettd7655fr4n2y
       '@storybook/theming': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.15
-      '@utrecht/component-library-react': 1.0.0-alpha.132_biqbaboplfbrettd7655fr4n2y
-      '@utrecht/components': 1.0.0-alpha.284
-      '@utrecht/design-tokens': 1.0.0-alpha.316
+      '@utrecht/component-library-react': link:../component-library-react
+      '@utrecht/components': link:../../components
+      '@utrecht/design-tokens': link:../../proprietary/design-tokens
       '@utrecht/documentation': link:../../documentation
-      '@utrecht/web-component-library-react': 1.0.0-alpha.322_biqbaboplfbrettd7655fr4n2y
+      '@utrecht/web-component-library-react': link:../web-component-library-react
       babel-loader: 8.2.5_t5lqpictcry45jvv466griokye
       css-loader: 5.2.7_webpack@5.73.0
       http-server: 14.1.1
@@ -702,10 +702,10 @@ importers:
       '@storybook/theming': 6.5.10
       '@storybook/vue3': 6.5.10
       '@types/node': 16.11.47
-      '@utrecht/component-library-vue': '*'
-      '@utrecht/components': '*'
-      '@utrecht/design-tokens': '*'
-      '@utrecht/documentation': '*'
+      '@utrecht/component-library-vue': workspace:*
+      '@utrecht/components': workspace:*
+      '@utrecht/design-tokens': workspace:*
+      '@utrecht/documentation': workspace:*
       '@vitejs/plugin-vue': 2.3.3
       '@vitejs/plugin-vue-jsx': 1.3.10
       '@vue/compiler-sfc': 3.2.37
@@ -738,9 +738,9 @@ importers:
       '@storybook/theming': 6.5.10_biqbaboplfbrettd7655fr4n2y
       '@storybook/vue3': 6.5.10_wnupclyv3iueec3ydjbzrvdweq
       '@types/node': 16.11.47
-      '@utrecht/component-library-vue': 1.0.0-alpha.100
-      '@utrecht/components': 1.0.0-alpha.284
-      '@utrecht/design-tokens': 1.0.0-alpha.316
+      '@utrecht/component-library-vue': link:../component-library-vue
+      '@utrecht/components': link:../../components
+      '@utrecht/design-tokens': link:../../proprietary/design-tokens
       '@utrecht/documentation': link:../../documentation
       '@vitejs/plugin-vue': 2.3.3_vite@2.9.14+vue@3.2.37
       '@vitejs/plugin-vue-jsx': 1.3.10
@@ -771,7 +771,7 @@ importers:
       '@angular/platform-browser': 14.1.0
       '@angular/platform-browser-dynamic': 14.1.0
       '@angular/router': 14.1.0
-      '@utrecht/web-component-library-stencil': '*'
+      '@utrecht/web-component-library-stencil': workspace:*
       ng-packagr: 14.1.0
       rxjs: 7.5.6
       tslib: 2.4.0
@@ -791,7 +791,7 @@ importers:
       '@angular/platform-browser': 14.1.0_fsfxn3q5jfgkydsi5rfuqudspa
       '@angular/platform-browser-dynamic': 14.1.0_4uelz7lddsxzh2as2vx6t5hnym
       '@angular/router': 14.1.0_oh7ssot2niyqdg7a6md2mriq4i
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
       ng-packagr: 14.1.0_qxl63n46gkl6c7gayqnfuyyndq
       rxjs: 7.5.6
       typescript: 4.7.4
@@ -823,7 +823,7 @@ importers:
       tslib: 2.4.0
       typescript: 4.3.5
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.323
     devDependencies:
       '@babel/core': 7.18.10
       '@babel/plugin-transform-runtime': 7.18.10_@babel+core@7.18.10
@@ -855,7 +855,7 @@ importers:
       '@stencil/react-output-target': 0.3.1
       '@stencil/sass': 1.5.2
       '@stencil/vue-output-target': 0.6.2
-      '@utrecht/icon': '*'
+      '@utrecht/icon': workspace:*
       chokidar-cli: 3.0.0
       node-sass-package-importer: 5.3.2
       npm-run-all: 4.1.5
@@ -867,7 +867,7 @@ importers:
       '@stencil/react-output-target': 0.3.1_@stencil+core@2.17.2
       '@stencil/sass': 1.5.2_@stencil+core@2.17.2
       '@stencil/vue-output-target': 0.6.2_@stencil+core@2.17.2
-      '@utrecht/icon': 1.0.0-alpha.211
+      '@utrecht/icon': link:../../components/icon
       chokidar-cli: 3.0.0
       node-sass-package-importer: 5.3.2
       npm-run-all: 4.1.5
@@ -885,7 +885,7 @@ importers:
       vue: 3.2.37
       vue-tsc: 0.39.4
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
+      '@utrecht/web-component-library-stencil': 1.0.0-alpha.323
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
       '@vue/tsconfig': 0.1.3
@@ -9621,6 +9621,7 @@ packages:
       '@stencil/core': ^2.9.0
     dependencies:
       '@stencil/core': 2.17.2_vk6ep37heit6vyo4vmbdvcj5pm
+    dev: false
 
   /@stencil/core/2.17.2_vk6ep37heit6vyo4vmbdvcj5pm:
     resolution: {integrity: sha512-IEqjIx0e00wwRnbFuzLVXXWpoadLHkDPNfqjkta2qt/MzmdC7oO6tYHXxvho45ehCYmEq3zFRh2TB1Ycv2vM5w==}
@@ -13116,88 +13117,12 @@ packages:
       eslint-visitor-keys: 3.3.0
     dev: true
 
-  /@utrecht/component-library-angular/1.0.0-alpha.102_ekenp3nso5gir7vsvgspyllbxi:
-    resolution: {integrity: sha512-cwtwEVM4xQJDNYwUHCPJtF5Xdco11WyCbTqDVChrMWcKkCWhwdcxONNcDhH3t5GGEx8X4L/WCBRbeL87KMsCJQ==}
-    peerDependencies:
-      '@angular/common': 12 - 14
-      '@angular/core': 12 - 14
-    dependencies:
-      '@angular/common': 14.1.0_36wbdubzobvek5dwkv7hqxvz7e
-      '@angular/core': 14.1.0_rxjs@7.5.6+zone.js@0.11.7
-      tslib: 2.4.0
-    dev: true
-
-  /@utrecht/component-library-css/1.0.0-alpha.323:
-    resolution: {integrity: sha512-93aiSaZHIr3FlV1U/LgKeecGkwAxExBWYeUtEfYBFvaTyBMcRW/dzyfplF8Sox2CjiiWuKwDYS9su3Phhtx6FA==}
-    dev: true
-
-  /@utrecht/component-library-react/1.0.0-alpha.132_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-CVwqSfric878fyR+sVdz55dnFZlZMMUYXUv0Gabkcj1HSSa0ckgsPf0jvDUqHe7Twkorg+pHg4UEc5SZxl/QFA==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      clsx: 1.2.1
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: true
-
-  /@utrecht/component-library-react/1.0.0-alpha.132_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-CVwqSfric878fyR+sVdz55dnFZlZMMUYXUv0Gabkcj1HSSa0ckgsPf0jvDUqHe7Twkorg+pHg4UEc5SZxl/QFA==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      clsx: 1.2.1
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-    dev: true
-
-  /@utrecht/component-library-vue/1.0.0-alpha.100:
-    resolution: {integrity: sha512-u2L0EZyy7b8JO9AQyK06Npr6izfc1qJDU4YpEREdDB7SWpxhqEmSfvKXSqr4ofVUDztYnVu4ls2ccYA7Rg4XKQ==}
-    dev: true
-
-  /@utrecht/components/1.0.0-alpha.284:
-    resolution: {integrity: sha512-aJVpOZaYLDxugPeswempDJlZSrUVx1Kbkm2LVn3hPV594Ulg32i5DRthiuRLV1bAeW4Z3npV0xHUH9hrUkNZHA==}
-    dependencies:
-      clsx: 1.2.1
-    dev: true
-
-  /@utrecht/design-tokens/1.0.0-alpha.316:
-    resolution: {integrity: sha512-0QwsFAAnvE0qeTuk0FWSPlTD7IH6pHp6hqxUXuLZNffN1WxZpIjzblp//VbFtswAGWHex9foWDz6h96JJKBnIw==}
-    dev: true
-
-  /@utrecht/icon/1.0.0-alpha.211:
-    resolution: {integrity: sha512-IVHVaYaoOl0D1mQY2fvHGmkYGukv3q7T9ycup7TKHZzFcTexnprlOxZ6LBociH9lO8pBTEqO/f+mW7U4uowc7w==}
-    dev: true
-
-  /@utrecht/web-component-library-react/1.0.0-alpha.322_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-SaAWRHqEjeyeRRZN2Fpupwwm7CdECQ+sVt3P1lgIdggTDdMIunug40wpVP0VeO6KeAgyWHom8Zu3/fTz2ucgvA==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-    dev: true
-
-  /@utrecht/web-component-library-react/1.0.0-alpha.322_sfoxds7t5ydpegc3knd667wn6m:
-    resolution: {integrity: sha512-SaAWRHqEjeyeRRZN2Fpupwwm7CdECQ+sVt3P1lgIdggTDdMIunug40wpVP0VeO6KeAgyWHom8Zu3/fTz2ucgvA==}
-    peerDependencies:
-      react: 16 - 18
-      react-dom: 16 - 18
-    dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.322
-      react: 17.0.2
-      react-dom: 17.0.2_react@17.0.2
-    dev: true
-
-  /@utrecht/web-component-library-stencil/1.0.0-alpha.322:
-    resolution: {integrity: sha512-tZxOr7tCE2o/yrupESuUZSF5duhRaU16ySMtqSv+SzV1/lSqEDwZiN+CAC8OsKtI0YVa6lz28AyJXqId8I6PFw==}
+  /@utrecht/web-component-library-stencil/1.0.0-alpha.323:
+    resolution: {integrity: sha512-dwcCXg/ldJaoWpCeAWcjiWZ0CsgBGJy6fi3zWAl6z7UuIq7xwI+8kbzfwl/Uv1n7j19/Jm0TjWf9R8HvEtmiPA==}
     dependencies:
       '@stencil/angular-output-target': 0.4.0_@stencil+core@2.17.2
       '@stencil/core': 2.17.2_vk6ep37heit6vyo4vmbdvcj5pm
+    dev: false
 
   /@vitejs/plugin-vue-jsx/1.3.10:
     resolution: {integrity: sha512-Cf5zznh4yNMiEMBfTOztaDVDmK1XXfgxClzOSUVUc8WAmHzogrCUeM8B05ABzuGtg0D1amfng+mUmSIOFGP3Pw==}
