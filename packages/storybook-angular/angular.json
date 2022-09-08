@@ -30,10 +30,7 @@
             "configDir": "config/",
             "compodocArgs": ["--config", ".compodocrc.json", "--output", "tmp/"],
             "quiet": true,
-            "styles": [
-              "../../node_modules/@utrecht/component-library-css/src/index.scss",
-              "../../node_modules/@utrecht/design-tokens/dist/index.css"
-            ]
+            "styles": ["./src/index.scss"]
           }
         },
         "build-storybook": {
@@ -44,10 +41,7 @@
             "configDir": "config/",
             "outputDir": "dist/",
             "quiet": true,
-            "styles": [
-              "../../node_modules/@utrecht/component-library-css/dist/index.css",
-              "../../node_modules/@utrecht/design-tokens/dist/index.css"
-            ]
+            "styles": ["./src/index.scss"]
           }
         }
       }
