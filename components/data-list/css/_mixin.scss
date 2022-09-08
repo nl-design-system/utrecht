@@ -19,18 +19,17 @@
   color: var(--utrecht-data-list-item-key-color);
   font-size: var(--utrecht-data-list-item-key-font-size);
   font-weight: var(--utrecht-data-list-item-key-font-weight);
-  grid-area: label;
   line-height: var(--utrecht-data-list-item-key-line-height);
 }
 
 @mixin utrecht-data-list-item-value {
   /* configure `min-block-size` in case the value is empty */
-  color: var(--utrecht-data-list-label-color);
+  color: var(--utrecht-data-list-item-value-color, var(--utrecht-data-list-label-color));
   font-size: var(--utrecht-data-list-item-value-font-size);
   font-weight: var(--utrecht-data-list-item-value-font-weight);
-  grid-area: value;
-  line-height: var(--utrecht-data-list-label-line-height);
-  min-block-size: var(--utrecht-data-list-label-line-height);
+  grid-column-end: span 2;
+  line-height: var(--utrecht-data-list-item-value-line-height);
+  min-block-size: calc(var(--utrecht-data-list-item-value-line-height) * 1rem);
 }
 
 @mixin utrecht-data-list__item-value--multiline {
@@ -43,18 +42,19 @@
 }
 
 @mixin utrecht-data-list__item--rows {
+  border-bottom-color: var(--utrecht-data-list-rows-border-bottom-color);
+  border-bottom-style: solid;
+  border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width);
   display: grid;
-  grid-template-areas: "label actions" "value value";
-
-  // gap: 10px;
-  // grid-template-columns: auto auto;
+  grid-template-columns: var(--utrecht-data-list-rows-grid-template-columns);
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+  padding-block-end: var(--utrecht-data-list-rows-gap);
+  padding-inline-start: var(--utrecht-data-list-rows-item-padding-inline-start);
 }
 
 @mixin utrecht-data-list__actions--rows {
-  align-items: last baseline;
-  display: flex;
-  justify-content: flex-end;
+  position: absolute;
+  right: 2em;
 }
 
 @mixin utrecht-data-list__item-value--rows {

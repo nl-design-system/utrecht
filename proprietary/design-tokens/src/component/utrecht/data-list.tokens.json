@@ -1,24 +1,48 @@
 {
   "utrecht": {
     "data-list": {
-      "margin-block-end": {},
-      "margin-block-start": { "value": "{utrecht.space.block.md}" },
+      "margin-block-end": {
+        "value": "{utrecht.space.block.md}"
+      },
+      "margin-block-start": {
+        "value": "{utrecht.space.block.md}"
+      },
       "item-key": {
         "color": {},
         "font-size": {},
-        "font-weight": { "value": "bold" },
+        "font-weight": {
+          "value": "bold"
+        },
         "line-height": {}
       },
       "item-value": {
+        "color": {},
         "font-size": {},
         "line-height": {}
       },
       "rows": {
         "item": {
-          "margin-block-start": { "value": "{utrecht.space.block.md}" }
+          "margin-block-start": {
+            "value": "{utrecht.space.block.md}"
+          },
+          "padding-inline-start": {}
         },
         "item-value": {
-          "margin-block-start": { "value": "{utrecht.space.block.xs}" }
+          "margin-block-start": {
+            "value": "{utrecht.space.block.xs}"
+          }
+        },
+        "grid-template-columns": {
+          "value": "repeat(auto-fill, 100%)"
+        },
+        "gap": {
+          "value": "0px"
+        },
+        "border-bottom-width": {
+          "value": "0px"
+        },
+        "border-bottom-color": {
+          "value": "transparent"
         }
       }
     }
