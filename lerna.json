@@ -1,14 +1,17 @@
 {
-  "npmClient": "npm",
+  "$schema": "node_modules/@lerna-lite/cli/schemas/lerna-schema.json",
+  "npmClient": "pnpm",
   "version": "independent",
+  "useNx": true,
   "useWorkspaces": true,
   "command": {
     "publish": {},
     "version": {
-      "allowBranch": ["main"],
+      "allowBranch": ["main", "ci/pnpm"],
       "conventionalCommits": true,
+      "syncWorkspaceLock": true,
       "exact": true,
-      "message": "docs(release): design system packages"
+      "message": "docs(release): design system packages %v"
     }
   }
 }
