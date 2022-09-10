@@ -1,0 +1,41 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeCounter } from "./story-template";
+
+<Meta
+  id="web-component-counter-badge"
+  title="Web Component/Badge/Counter Badge"
+  component={BadgeCounter}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Counter badge
+
+## Double Digit
+
+<Canvas>
+  <Story name="Double Digit" args={{ value: 42, textContent: "42" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
+
+## Triple Digit
+
+<Canvas>
+  <Story name="Triple Digit" args={{ value: 316, textContent: "316" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
+
+## Quadruple Digit
+
+<Canvas>
+  <Story name="Quadruple Digit" args={{ value: 2148, textContent: "2148" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>

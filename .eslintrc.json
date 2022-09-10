@@ -60,21 +60,20 @@
         "./.eslintrc.js.json",
         "./.eslintrc.react.json"
       ],
-      "files": ["components/**/stencil.tsx", "components/**/*.stencil.tsx"],
+      "files": ["**/stencil.tsx", "**/*.stencil.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": ["components/tsconfig.json"]
+        "project": ["packages/web-component-library-stencil/tsconfig.json"]
       },
       "plugins": ["@typescript-eslint", "import"]
     },
     {
-      "excludedFiles": ["components/**/stencil.tsx", "components/**/*.stencil.tsx"],
+      "excludedFiles": ["**/stencil.tsx", "**/*.stencil.tsx"],
       "extends": ["plugin:react/recommended", "eslint-config-prettier", "./.eslintrc.js.json"],
-      "files": ["*.ts", "*.tsx", "*.vue"],
+      "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": [
-          "components/tsconfig.json",
           "packages/component-library-angular/tsconfig.lib.json",
           "packages/component-library-formio/tsconfig.json",
           "packages/component-library-react/tsconfig.json",
@@ -89,6 +88,7 @@
           "packages/web-component-library-angular/tsconfig.lib.json",
           "packages/web-component-library-react/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.json",
+          "packages/web-component-library-stencil/tsconfig.jest.json",
           "packages/web-component-library-vue/tsconfig.json",
           "packages/web-component-library-vue/tsconfig.app.json",
           "packages/web-component-library-vue/tsconfig.vite-config.json"

@@ -11,7 +11,7 @@ exports.component = (name, children, container) => {
 
 @Component({
   tag: '${webComponentName}',
-  styleUrl: "../../../web-component/index.scss",
+  styleUrl: "../../icon/index.scss",
   shadow: true,
 })
 export class ${ComponentName} {
@@ -50,7 +50,9 @@ exports.iconContainerComponent = (name, children) => {
 exports.test = (name) => {
   const ComponentName = upperFirst(camelCase(name));
   const webComponentName = kebabCase(name);
-  return `import { ${ComponentName} } from './${webComponentName}.stencil';
+  return `/* eslint-env jest */
+import { ${ComponentName} } from './${webComponentName}.stencil';
+
 describe('${ComponentName}', () => {
   it('builds', () => {
     expect(new ${ComponentName}()).toBeTruthy();

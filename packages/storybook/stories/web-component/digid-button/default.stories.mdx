@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, DigidButton, exampleArgs } from "./story-template";
+
+<Meta
+  id="web-component-digid-button"
+  title="Web Component/DigiD Button"
+  component={DigidButton}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# DigiD Button
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {DigidButton.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

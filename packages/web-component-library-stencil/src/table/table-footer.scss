@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "~@utrecht/components/table/css/mixin";
+
+:host {
+  @include utrecht-table__footer;
+
+  display: table-footer-group;
+}

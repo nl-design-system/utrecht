@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormFieldCheckbox } from "./story-template";
+
+<Meta
+  id="web-component-form-field-checkbox"
+  title="Web Component/Form field with checkbox"
+  component={FormFieldCheckbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with checkbox
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

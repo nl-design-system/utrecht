@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Page } from "./story-template";
+
+<Meta
+  id="web-component-page"
+  title="Web Component/Page"
+  component={Page}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Page component
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Page.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

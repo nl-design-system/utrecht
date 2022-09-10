@@ -1,8 +1,0 @@
-{
-  "extends": "../packages/web-component-library-stencil/tsconfig.json",
-  "compilerOptions": {
-    "outDir": "dist"
-  },
-  "include": ["."],
-  "exclude": ["**/node_modules"]
-}

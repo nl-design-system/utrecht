@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Textbox } from "./story-template";
+
+<Meta
+  id="web-component-textbox"
+  title="Web Component/Textbox"
+  component={Textbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

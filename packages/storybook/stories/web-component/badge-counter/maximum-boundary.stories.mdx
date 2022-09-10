@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeCounter } from "./story-template";
+
+<Meta
+  id="web-component-counter-badge"
+  title="Web Component/Badge/Counter Badge/Maximum boundary"
+  component={BadgeCounter}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Counter badge with maximum boundary
+
+<Canvas>
+  <Story
+    name="Maximum boundary"
+    args={{
+      max: 999,
+      value: 1024,
+    }}
+  >
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>

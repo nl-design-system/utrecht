@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormFieldTextbox } from "./story-template";
+
+<Meta
+  id="web-component-form-field-textbox"
+  title="Web Component/Form field with textbox"
+  component={FormFieldTextbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with textbox
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

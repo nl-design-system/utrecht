@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, BadgeData, defaultArgs, exampleArgs } from "./story-template";
+
+<Meta
+  id="web-component-data-badge"
+  title="Web Component/Badge/Data Badge"
+  component={BadgeData}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Data badge
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {BadgeData.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

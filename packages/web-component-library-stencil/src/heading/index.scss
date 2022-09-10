@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "~@utrecht/components/heading-1/css";
+@import "~@utrecht/components/heading-2/css";
+@import "~@utrecht/components/heading-3/css";
+@import "~@utrecht/components/heading-4/css";
+@import "~@utrecht/components/heading-5/css";
+@import "~@utrecht/components/heading-6/css";
+
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
