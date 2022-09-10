@@ -1,0 +1,21 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { EherkenningLogo } from "./story-template";
+
+<Meta
+  id="web-component-eherkenning-logo"
+  title="Web Component/eHerkenning Logo"
+  component={EherkenningLogo}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# eIDAS Logo
+
+<Canvas>
+  <Story name="Default">{EherkenningLogo.bind({})}</Story>
+</Canvas>

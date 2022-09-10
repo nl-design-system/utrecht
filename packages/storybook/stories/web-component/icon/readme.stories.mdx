@@ -1,0 +1,23 @@
+<!-- @license CC0-1.0 -->
+
+import { Description, Meta } from "@storybook/addon-docs";
+import document from "@utrecht/components/icon/README.md";
+import design from "@utrecht/components/icon/design.md";
+
+export const removeMarkdownH1 = (markdown) => markdown.replace(/(^|\n)#\s.+/, "");
+
+<Meta
+  id="web-component-icon"
+  title="Web Component/Icon/README"
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Iconen
+
+<Description>{removeMarkdownH1(design)}</Description>
+
+<Description>{removeMarkdownH1(document)}</Description>

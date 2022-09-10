@@ -1,0 +1,21 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { DigidLogo } from "./story-template";
+
+<Meta
+  id="web-component-digid-logo"
+  title="Web Component/DigiD Logo"
+  component={DigidLogo}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# DigiD Logo
+
+<Canvas>
+  <Story name="Default">{DigidLogo.bind({})}</Story>
+</Canvas>

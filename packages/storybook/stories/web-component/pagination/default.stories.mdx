@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Pagination } from "./story-template";
+
+<Meta
+  id="web-component-pagination"
+  title="Web Component/Pagination"
+  component={Pagination}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Pagination navigation
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Pagination.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

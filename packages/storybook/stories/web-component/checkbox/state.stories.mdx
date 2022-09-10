@@ -1,0 +1,57 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Checkbox } from "./story-template";
+
+<Meta
+  id="web-component-checkbox"
+  title="Web Component/Checkbox/States"
+  component={Checkbox}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Checkbox Component States
+
+## Checked
+
+<Canvas>
+  <Story
+    name="Checked"
+    args={{
+      checked: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Checkend and Disabled"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>

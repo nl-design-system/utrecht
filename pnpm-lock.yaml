@@ -828,7 +828,7 @@ importers:
       tslib: 2.4.0
       typescript: 4.3.5
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.323
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
     devDependencies:
       '@babel/core': 7.18.10
       '@babel/plugin-transform-runtime': 7.18.10_@babel+core@7.18.10
@@ -860,8 +860,11 @@ importers:
       '@stencil/react-output-target': 0.3.1
       '@stencil/sass': 1.5.2
       '@stencil/vue-output-target': 0.6.2
+      '@types/jest': 29.0.0
+      '@utrecht/components': workspace:*
       '@utrecht/icon': workspace:*
       chokidar-cli: 3.0.0
+      clsx: 1.2.1
       node-sass-package-importer: 5.3.2
       npm-run-all: 4.1.5
       rimraf: 3.0.2
@@ -872,8 +875,11 @@ importers:
       '@stencil/react-output-target': 0.3.1_@stencil+core@2.17.2
       '@stencil/sass': 1.5.2_@stencil+core@2.17.2
       '@stencil/vue-output-target': 0.6.2_@stencil+core@2.17.2
+      '@types/jest': 29.0.0
+      '@utrecht/components': link:../../components
       '@utrecht/icon': link:../../components/icon
       chokidar-cli: 3.0.0
+      clsx: 1.2.1
       node-sass-package-importer: 5.3.2
       npm-run-all: 4.1.5
       rimraf: 3.0.2
@@ -890,7 +896,7 @@ importers:
       vue: 3.2.37
       vue-tsc: 0.39.4
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.323
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
       '@vue/tsconfig': 0.1.3
@@ -12533,13 +12539,6 @@ packages:
       '@typescript-eslint/types': 5.36.1
       eslint-visitor-keys: 3.3.0
     dev: true
-
-  /@utrecht/web-component-library-stencil/1.0.0-alpha.323:
-    resolution: {integrity: sha512-dwcCXg/ldJaoWpCeAWcjiWZ0CsgBGJy6fi3zWAl6z7UuIq7xwI+8kbzfwl/Uv1n7j19/Jm0TjWf9R8HvEtmiPA==}
-    dependencies:
-      '@stencil/angular-output-target': 0.4.0_@stencil+core@2.17.2
-      '@stencil/core': 2.17.2_vk6ep37heit6vyo4vmbdvcj5pm
-    dev: false
 
   /@vitejs/plugin-vue-jsx/1.3.10:
     resolution: {integrity: sha512-Cf5zznh4yNMiEMBfTOztaDVDmK1XXfgxClzOSUVUc8WAmHzogrCUeM8B05ABzuGtg0D1amfng+mUmSIOFGP3Pw==}

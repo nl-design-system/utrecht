@@ -1,0 +1,27 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Paragraph } from "./story-template";
+
+<Meta
+  id="web-component-paragraph"
+  title="Web Component/Paragraph"
+  component={Paragraph}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Paragraph
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Paragraph.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

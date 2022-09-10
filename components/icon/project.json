@@ -6,13 +6,20 @@
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["{projectRoot}/dist"],
+      "outputs": ["{projectRoot}/dist", "{workspaceRoot}/packages/web-component-library-stencil/src/generated"],
       "options": {
         "command": "npm run build",
         "cwd": "components/icon",
         "outputPath": "componentss/icon/dist"
       },
       "dependsOn": ["^build"]
+    },
+    "lint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run lint",
+        "cwd": "components/icon"
+      }
     }
   }
 }

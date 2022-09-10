@@ -1,0 +1,60 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { exampleArgs, FormFieldTextbox } from "./story-template";
+
+<Meta
+  id="web-component-form-field-textbox"
+  title="Web Component/Form field with textbox/State"
+  component={FormFieldTextbox}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form field with textbox states
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="disabled"
+    args={{
+      ...exampleArgs,
+      value: "",
+      disabled: true,
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      ...exampleArgs,
+      invalid: true,
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Required
+
+<Canvas>
+  <Story
+    name="required"
+    args={{
+      ...exampleArgs,
+      required: true,
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>

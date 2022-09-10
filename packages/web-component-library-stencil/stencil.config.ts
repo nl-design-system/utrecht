@@ -49,7 +49,7 @@ const vueComponentModels = valueAccessorConfigs.map(({ elementSelectors, event, 
 
 export const config: Config = {
   namespace: 'utrecht',
-  srcDir: '../../components/',
+  srcDir: 'src/',
   outputTargets: [
     {
       type: 'dist',

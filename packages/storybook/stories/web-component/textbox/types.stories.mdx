@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textbox } from "./story-template";
+
+<Meta
+  id="web-component-textbox"
+  title="Web Component/Textbox/Type"
+  component={Textbox}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Text box with number input
+
+<Canvas>
+  <Story
+    name="Number"
+    args={{
+      min: 0,
+      max: 100,
+      type: "number",
+      value: "42",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>

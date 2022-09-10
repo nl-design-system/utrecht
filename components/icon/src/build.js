@@ -11,12 +11,12 @@ const { kebabCase } = lodash;
 const componentPrefix = `${argv.prefix}-`;
 const componentsPath = argv.path;
 const iconRapperComponent = `${componentPrefix}container`;
-const cwd = path.resolve(process.cwd(), 'tmp/optimized-svgs');
+const svgPath = path.resolve(process.cwd(), 'tmp/optimized-svgs');
 
 const readSVGDir = async () => {
   let files;
   try {
-    files = await readdir(cwd);
+    files = await readdir(svgPath);
     return files;
   } catch (error) {
     console.error(error);
@@ -51,7 +51,7 @@ const writeComponentFile = async () => {
         const fileBasename = path.parse(file).name;
         const fileName = `${componentPrefix}${kebabCase(fileBasename)}`;
         const formattedName = kebabCase(fileName);
-        const svg = await readFile(`${cwd}/${file}`, 'utf-8');
+        const svg = await readFile(`${svgPath}/${file}`, 'utf-8');
 
         await mkdir(`${componentsPath}/${formattedName}`, { recursive: true });
         await writeFile(

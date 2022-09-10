@@ -1,0 +1,64 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Icon } from "./story-template";
+
+<Meta
+  id="web-component-icon"
+  title="Web Component/Icon"
+  component={Icon}
+  parameters={{
+    status: {
+      type: "BETA",
+    },
+  }}
+/>
+
+# Icon with inline SVG
+
+<Canvas>
+  <Story
+    name="with inline SVG"
+    args={{
+      innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
+    }}
+  >
+    {Icon.bind({})}
+  </Story>
+</Canvas>
+
+## Icon with inline SVG inside a button
+
+<Canvas>
+  <Story
+    name="with inline SVG inside a button"
+    decorators={[(Story) => <utrecht-button appearance="primary-action-button">{Story()} Click me</utrecht-button>]}
+    args={{
+      innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
+    }}
+  >
+    {Icon.bind({})}
+  </Story>
+</Canvas>
+
+## Icon with inline SVG inside a link
+
+<Canvas>
+  <Story
+    name="with inline SVG inside a link"
+    decorators={[
+      (Story) => (
+        <p className="utrecht-paragraph">
+          <a className="utrecht-link" href="https://example.com/">
+            {Story()}Link
+          </a>
+        </p>
+      ),
+    ]}
+    args={{
+      innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
+    }}
+  >
+    {Icon.bind({})}
+  </Story>
+</Canvas>
