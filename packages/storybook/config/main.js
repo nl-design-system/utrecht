@@ -40,6 +40,10 @@ module.exports = {
           title: 'React.js Components',
           url: 'http://localhost:6008',
         },
+        webComponent: {
+          title: 'Web Components',
+          url: 'http://localhost:6010',
+        },
       };
     }
     return {
@@ -54,6 +58,10 @@ module.exports = {
       react: {
         title: 'React.js Components',
         url: '../storybook-react',
+      },
+      webComponent: {
+        title: 'React.js Component',
+        url: '../storybook-web-component',
       },
     };
   },
