@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -56,7 +56,7 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -96,7 +96,7 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -150,7 +150,7 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.2
         name: Install pnpm
         id: pnpm-install
         with:
@@ -246,7 +246,7 @@ jobs:
         with:
           node-version: "16.16.x"
 
-      - uses: pnpm/action-setup@v2.0.1
+      - uses: pnpm/action-setup@v2.2.2
         name: Install pnpm
         id: pnpm-install
         with:
