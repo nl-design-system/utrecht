@@ -80,10 +80,10 @@ generateIconsNameFile();
 const createIconWrapperComponent = async () => {
   const dir = `${componentsPath}/${iconRapperComponent}`;
   const cssValue = `.${iconRapperComponent} {
-    display: inline-block;
     color: var(--${componentPrefix}color);
-    width: var(--${componentPrefix}size);
+    display: inline-block;
     height: var(--${componentPrefix}size);
+    width: var(--${componentPrefix}size);
   }`;
   await mkdir(dir, { recursive: true });
   await writeFile(
