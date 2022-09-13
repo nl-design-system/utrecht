@@ -28,6 +28,18 @@ import { ButtonTable } from "../story-template";
       description: "Subtle button",
       control: "boolean",
     },
+    dangerHint: {
+      description: "Danger hint",
+      control: "boolean",
+    },
+    warningHint: {
+      description: "Warning hint",
+      control: "boolean",
+    },
+    readyHint: {
+      description: "Ready hint",
+      control: "boolean",
+    },
   }}
   parameters={{
     status: {
@@ -47,6 +59,9 @@ import { ButtonTable } from "../story-template";
     primaryActionButton: true,
     secondaryActionButton: true,
     subtleButton: false,
+    dangerHint: false,
+    warningHint: false,
+    readyHint: false,
     textContent: "Label",
   }}
 >

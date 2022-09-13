@@ -46,6 +46,10 @@ export const argTypes = {
     control: { type: 'select' },
     options: ['', 'button', 'reset', 'submit'],
   },
+  hint: {
+    control: { type: 'select' },
+    options: ['', 'danger', 'warning', 'ready'],
+  },
   iconBefore: {
     description: 'Icon before textContent',
     control: { type: 'select' },
@@ -65,6 +69,7 @@ export const defaultArgs = {
   disabled: false,
   focus: false,
   focusVisible: false,
+  hint: false,
   hover: false,
   textContent: '',
   type: 'button',
@@ -83,6 +88,7 @@ export const Button = ({
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
+  hint = defaultArgs.hint,
   hover = defaultArgs.hover,
   textContent = defaultArgs.textContent,
   type = defaultArgs.type,
@@ -104,6 +110,9 @@ export const Button = ({
         'utrecht-button--primary-action': appearance === 'primary-action-button',
         'utrecht-button--secondary-action': appearance === 'secondary-action-button',
         'utrecht-button--subtle': appearance === 'subtle-button',
+        'utrecht-button--danger': hint === 'danger',
+        'utrecht-button--warning': hint === 'warning',
+        'utrecht-button--ready': hint === 'ready',
       })}
       aria-disabled={disabled || null}
       type={type || null}
@@ -115,12 +124,40 @@ export const Button = ({
   );
 };
 
+const ButtonTableRow = ({ appearance, hint, textContent, icon }) => (
+  <tr className="utrecht-table__row" key={appearance}>
+    <th className="utrecht-table__header-cell">
+      {appearance} {hint || ''}
+    </th>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent })}</td>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, active: true })}</td>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, hover: true })}</td>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, focus: true })}</td>
+    <td className="utrecht-table__cell">
+      {Button({ appearance, hint, textContent, focus: true, focusVisible: true })}
+    </td>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true })}</td>
+    {icon && (
+      <td className="utrecht-table__cell">
+        {Button({
+          appearance,
+          hint,
+          textContent: [textContent, <utrecht-icon-arrow></utrecht-icon-arrow>],
+        })}
+      </td>
+    )}
+  </tr>
+);
+
 export const ButtonTable = ({
   textContent = '',
   defaultButton = true,
   primaryActionButton = false,
   secondaryActionButton = false,
   subtleButton = false,
+  dangerHint = false,
+  warningHint = false,
+  readyHint = false,
   icon = false,
 }) => {
   const appearances = [
@@ -145,25 +182,12 @@ export const ButtonTable = ({
       </thead>
       <tbody className="utrecht--table__body">
         {appearances.map((appearance) => (
-          <tr className="utrecht-table__row" key={appearance}>
-            <th className="utrecht-table__header-cell">{appearance}</th>
-            <td className="utrecht-table__cell">{Button({ appearance, textContent })}</td>
-            <td className="utrecht-table__cell">{Button({ appearance, textContent, active: true })}</td>
-            <td className="utrecht-table__cell">{Button({ appearance, textContent, hover: true })}</td>
-            <td className="utrecht-table__cell">{Button({ appearance, textContent, focus: true })}</td>
-            <td className="utrecht-table__cell">
-              {Button({ appearance, textContent, focus: true, focusVisible: true })}
-            </td>
-            <td className="utrecht-table__cell">{Button({ appearance, textContent, disabled: true })}</td>
-            {icon && (
-              <td className="utrecht-table__cell">
-                {Button({
-                  appearance,
-                  textContent: [textContent, <utrecht-icon-arrow></utrecht-icon-arrow>],
-                })}
-              </td>
-            )}
-          </tr>
+          <>
+            {ButtonTableRow({ appearance, hint: '', textContent, icon })}
+            {dangerHint && ButtonTableRow({ appearance, hint: 'danger', textContent, icon })}
+            {warningHint && ButtonTableRow({ appearance, hint: 'warning', textContent, icon })}
+            {readyHint && ButtonTableRow({ appearance, hint: 'ready', textContent, icon })}
+          </>
         ))}
       </tbody>
     </table>

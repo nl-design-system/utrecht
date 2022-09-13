@@ -4,11 +4,12 @@ import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } fro
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: string;
   busy?: boolean;
+  hint?: string;
 }
 
 export const Button = forwardRef(
   (
-    { appearance, busy, disabled, children, className, type, ...restProps }: PropsWithChildren<ButtonProps>,
+    { appearance, busy, disabled, children, className, hint, type, ...restProps }: PropsWithChildren<ButtonProps>,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
     return (
@@ -23,6 +24,9 @@ export const Button = forwardRef(
           appearance === 'primary-action-button' && 'utrecht-button--primary-action',
           appearance === 'secondary-action-button' && 'utrecht-button--secondary-action',
           appearance === 'subtle-button' && 'utrecht-button--subtle',
+          hint === 'danger' && 'utrecht-button--primary-action',
+          hint === 'warning' && 'utrecht-button--secondary-action',
+          hint === 'ready' && 'utrecht-button--subtle',
           className,
         )}
         aria-busy={busy || undefined}

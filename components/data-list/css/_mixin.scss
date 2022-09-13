@@ -25,7 +25,7 @@
 
 @mixin utrecht-data-list-item-value {
   /* configure `min-block-size` in case the value is empty */
-  color: var(--utrecht-data-list-label-color);
+  color: var(--utrecht-data-list-item-value-color);
   font-size: var(--utrecht-data-list-item-value-font-size);
   font-weight: var(--utrecht-data-list-item-value-font-weight);
   grid-area: value;
