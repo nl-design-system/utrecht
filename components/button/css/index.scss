@@ -75,3 +75,15 @@
 @include utrecht-button-appearance("utrecht-button", "primary-action");
 @include utrecht-button-appearance("utrecht-button", "secondary-action");
 @include utrecht-button-appearance("utrecht-button", "subtle");
+
+@include utrecht-button-hint("utrecht-button", "primary-action", "danger");
+@include utrecht-button-hint("utrecht-button", "primary-action", "ready");
+@include utrecht-button-hint("utrecht-button", "primary-action", "warning");
+
+@include utrecht-button-hint("utrecht-button", "secondary-action", "danger");
+@include utrecht-button-hint("utrecht-button", "secondary-action", "ready");
+@include utrecht-button-hint("utrecht-button", "secondary-action", "warning");
+
+@include utrecht-button-hint("utrecht-button", "subtle", "danger");
+@include utrecht-button-hint("utrecht-button", "subtle", "ready");
+@include utrecht-button-hint("utrecht-button", "subtle", "warning");
