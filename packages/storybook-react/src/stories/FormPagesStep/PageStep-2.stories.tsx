@@ -14,7 +14,6 @@ import {
   Link,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
   Paragraph,
   Separator,
@@ -28,6 +27,7 @@ import {
   UtrechtLogo,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import { WithContent as Footer } from '../PageFooter/PageFooter.stories';
 
 export default {
   title: 'Template/Form Pages Step/ Two',
@@ -111,7 +111,7 @@ const Template: ComponentStory<typeof Page> = (args) => (
         </form>
       </section>
     </PageContent>
-    <PageFooter />
+    <Footer {...Footer.args} />
   </Page>
 );
 
