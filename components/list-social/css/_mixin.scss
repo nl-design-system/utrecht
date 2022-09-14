@@ -1,0 +1,15 @@
+@mixin utrecht-list-social {
+  display: flex;
+  margin-block-end: var(--utrecht-list-social-margin-block-end);
+  margin-block-start: var(--utrecht-list-social-margin-block-start);
+  padding-inline-end: var(--utrecht-list-social-padding-inline-end);
+  padding-inline-start: var(--utrecht-list-social-padding-inline-start);
+}
+
+@mixin utrecht-list-social__item {
+  list-style-type: none;
+  margin-inline-end: var(--utrecht-list-social-item-margin-inline-end);
+  &:last-child {
+    margin-inline-end: 0;
+  }
+}
