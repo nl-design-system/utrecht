@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinition from "@utrecht/components/link-social/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="react-link-social--design-tokens"
+  title="React.js Component/Link Social/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Link Social Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-link-social" />
