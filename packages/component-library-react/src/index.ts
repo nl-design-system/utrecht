@@ -27,6 +27,7 @@ export { HeadingGroup } from './HeadingGroup';
 export { Image } from './Image';
 export { Link } from './Link';
 export { LinkButton } from './LinkButton';
+export * from './LinkSocial';
 export { NumberValue } from './NumberValue';
 export { OrderedList } from './OrderedList';
 export { OrderedListItem } from './OrderedListItem';
