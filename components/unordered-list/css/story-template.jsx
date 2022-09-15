@@ -52,6 +52,7 @@ export const UnorderedList = ({
       distanced && 'utrecht-unordered-list--distanced',
       nested && 'utrecht-unordered-list--nested',
     )}
+    role="list"
   >
     {children}
     {items.map(({ items: subItems, innerHTML }, index) => (

@@ -4,6 +4,8 @@
 
 Lijsten worden gebruikt voor opsommingen op een contentpagina. Hier gaan opsommingen vooraf met een bullet of een cijfer. De marge tussen twee list items (li) is 0.5em (8px).
 
+Gebruik `role="list"` om te voorkomen dat de component niet toegankelijkheid is in combinatie met een eigen icoon voor elke list item, wanneer je `list-style: none` gebruikt om de browser-icoon uit te zetten. ([Safari behandelt lijsten met eigen `list-style` anders dan normaal.](https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html))
+
 ## Terminologie
 
 - **unordered list**: uitgeschreven versie van de HTML afkorting `<ul>`
