@@ -18,7 +18,10 @@
       "item-value": {
         "color": {},
         "font-size": {},
-        "line-height": {}
+        "line-height": {},
+        "grid-column": {
+          "value": "1 / -1"
+        }
       },
       "rows": {
         "item": {
@@ -32,8 +35,8 @@
             "value": "{utrecht.space.block.xs}"
           }
         },
-        "grid-template-columns": {
-          "value": "repeat(auto-fill, 100%)"
+        "column-width": {
+          "value": "100%"
         },
         "gap": {
           "value": "0px"

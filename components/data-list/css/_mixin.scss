@@ -19,6 +19,7 @@
   color: var(--utrecht-data-list-item-key-color);
   font-size: var(--utrecht-data-list-item-key-font-size);
   font-weight: var(--utrecht-data-list-item-key-font-weight);
+  grid-column: 1;
   line-height: var(--utrecht-data-list-item-key-line-height);
 }
 
@@ -27,7 +28,7 @@
   color: var(--utrecht-data-list-item-value-color, var(--utrecht-data-list-label-color));
   font-size: var(--utrecht-data-list-item-value-font-size);
   font-weight: var(--utrecht-data-list-item-value-font-weight);
-  grid-column-end: span 2;
+  grid-column: var(--utrecht-data-list-item-value-grid-column);
   line-height: var(--utrecht-data-list-item-value-line-height);
   min-block-size: calc(var(--utrecht-data-list-item-value-line-height) * 1rem);
 }
@@ -46,7 +47,7 @@
   border-bottom-style: solid;
   border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width);
   display: grid;
-  grid-template-columns: var(--utrecht-data-list-rows-grid-template-columns);
+  grid-template-columns: repeat(auto-fill, clamp(20ch, var(--utrecht-data-list-rows-column-width), 100%));
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
   padding-block-end: var(--utrecht-data-list-rows-gap);
   padding-inline-start: var(--utrecht-data-list-rows-item-padding-inline-start);
