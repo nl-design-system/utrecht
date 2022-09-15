@@ -42,8 +42,8 @@
 
 @mixin utrecht-data-list__item--rows {
   --_utrecht-minmax: max(
-    var(--utrecht-data-list-rows-min-column-width, 100%),
-    var(--utrecht-data-list-rows-column-width, 100%)
+    var(--utrecht-data-list-rows-min-column-width, 25ch),
+    var(--utrecht-data-list-rows-column-width, 80%)
   );
   --_utrecht-auto-col: minmax(var(--_utrecht-minmax), max-content);
 
@@ -51,6 +51,8 @@
   border-bottom-style: solid;
   border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
   display: grid;
+  gap: 0 var(--utrecht-data-list-rows-gap);
+  grid-auto-columns: 1fr;
   grid-template-columns: repeat(auto-fit, var(--_utrecht-auto-col));
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
   padding-block-end: var(--utrecht-data-list-rows-gap);
@@ -58,7 +60,10 @@
 }
 
 @mixin utrecht-data-list__actions--rows {
+  align-items: baseline;
   display: flex;
+  grid-column: -1;
+  grid-row: 1;
   justify-content: flex-end;
 }
 
