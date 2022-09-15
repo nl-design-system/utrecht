@@ -43,11 +43,15 @@
 }
 
 @mixin utrecht-data-list__item--rows {
-  border-bottom-color: var(--utrecht-data-list-rows-border-bottom-color);
+  --_utrecht-min-col: var(--utrecht-data-list-rows-min-column-width, 100%);
+  --_utrecht-col: var(--utrecht-data-list-rows-column-width, 100%);
+  --_utrecht-clamp-col: clamp(var(--_utrecht-min-col), var(--_utrecht-col), 100%);
+
+  border-bottom-color: var(--utrecht-data-list-rows-border-bottom-color, transparent);
   border-bottom-style: solid;
-  border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width);
+  border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
   display: grid;
-  grid-template-columns: repeat(auto-fill, clamp(20ch, var(--utrecht-data-list-rows-column-width), 100%));
+  grid-template-columns: repeat(auto-fit, var(--_utrecht-clamp-col));
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
   padding-block-end: var(--utrecht-data-list-rows-gap);
   padding-inline-start: var(--utrecht-data-list-rows-item-padding-inline-start);
