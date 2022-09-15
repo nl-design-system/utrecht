@@ -1,6 +1,22 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Heading2, Heading3, Link, PageFooter, Paragraph } from '@utrecht/component-library-react';
-import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
+import {
+  Heading2,
+  Heading3,
+  Link,
+  LinkSocial,
+  ListSocial,
+  ListSocialItem,
+  PageFooter,
+  Paragraph,
+} from '@utrecht/component-library-react';
+import {
+  UtrechtIconArrow,
+  UtrechtIconFacebook,
+  UtrechtIconInstagram,
+  UtrechtIconLinkedin,
+  UtrechtIconTwitter,
+  UtrechtIconWhatsapp,
+} from '@utrecht/web-component-library-react';
 import React from 'react';
 
 type List = {
@@ -20,6 +36,40 @@ const exampleFooterListItemCSS: React.CSSProperties = {
   listStyleType: 'none',
   marginBlockEnd: '1rem',
 };
+
+const socialIcon = {
+  facebook: UtrechtIconFacebook,
+  instagram: UtrechtIconInstagram,
+  linkedin: UtrechtIconLinkedin,
+  twitter: UtrechtIconTwitter,
+  whatsapp: UtrechtIconWhatsapp,
+};
+
+type SocialMediaList = {
+  href: string;
+  title: string;
+  icon: keyof typeof socialIcon;
+};
+interface ExampleFooterSocialMediaListProps {
+  socialList: SocialMediaList[];
+}
+
+const ExampleFooterSocialMediaList: React.FC<ExampleFooterSocialMediaListProps> = ({ socialList }) => (
+  <ListSocial>
+    {socialList &&
+      socialList.length > 0 &&
+      socialList.map(({ href, icon, title }, index) => {
+        const Icon = socialIcon[icon];
+        return (
+          <ListSocialItem key={index}>
+            <LinkSocial href={href} title={title} external>
+              <Icon />
+            </LinkSocial>
+          </ListSocialItem>
+        );
+      })}
+  </ListSocial>
+);
 
 const ExampleFooterList: React.FC<ExampleFooterListProps> = ({ list }) => {
   return (
@@ -70,7 +120,22 @@ export const WithContent = Template.bind({});
 WithContent.args = {
   children: (
     <React.Fragment>
-      <Heading2 style={{ paddingBlock: '30px' }}>GEMEENTE UTRECHT</Heading2>
+      <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'space-between' }}>
+        <Heading2 style={{ paddingBlock: '30px' }}>GEMEENTE UTRECHT</Heading2>
+        <ExampleFooterSocialMediaList
+          socialList={[
+            { icon: 'facebook', href: 'https://www.facebook.com/GemeenteUtrecht', title: 'Facebook' },
+            { icon: 'instagram', href: 'https://www.instagram.com/GemeenteUtrecht', title: 'Instagram' },
+            {
+              icon: 'linkedin',
+              href: 'https://www.linkedin.com/company/gemeente-utrecht/?originalSubdomain=nl',
+              title: 'Linkedin',
+            },
+            { icon: 'twitter', href: 'https://twitter.com/gemeenteutrecht', title: 'Twitter' },
+            { icon: 'whatsapp', href: 'https://api.whatsapp.com/send?phone=31624927665', title: 'Whatsapp' },
+          ]}
+        />
+      </div>
       <ExampleFooterContainer>
         <div>
           <section style={{ display: 'grid' }}>
