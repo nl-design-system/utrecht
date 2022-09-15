@@ -13,7 +13,7 @@ export const UnorderedList = forwardRef(
     { children, className, ...restProps }: PropsWithChildren<UnorderedListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => (
-    <ul {...restProps} ref={ref} className={clsx('utrecht-unordered-list', className)}>
+    <ul role="list" {...restProps} ref={ref} className={clsx('utrecht-unordered-list', className)}>
       {children}
     </ul>
   ),
