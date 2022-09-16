@@ -15,10 +15,25 @@ export const argTypes = {
   },
   href: {
     description: 'Target URL',
-    control: 'text',
+    type: { name: 'string', required: true },
+    table: {
+      category: 'HTML attribute',
+      defaultValue: { summary: '' },
+    },
+  },
+  title: {
+    description: 'Icon Description',
+    type: { name: 'string', required: true },
+    table: {
+      category: 'HTML attribute',
+      defaultValue: { summary: '' },
+    },
   },
   icon: {
-    description: 'Distance the element from adjacent content',
+    description: 'Demonstrate the social media icons',
+    table: {
+      category: 'Demo',
+    },
     control: { type: 'select' },
     options: [
       '',
@@ -35,24 +50,22 @@ export const defaultArgs = {
   distanced: false,
   href: '',
   icon: '',
+  title: '',
 };
 
 export const exampleArgs = {
   href: 'https://www.facebook.com/GemeenteUtrecht',
   icon: 'utrecht-icon-facebook',
+  title: 'Facebook',
 };
 
 export const SocialMediaLink = ({
   href = defaultArgs.href,
   icon = defaultArgs.icon,
+  title = defaultArgs.title,
   distanced = defaultArgs.distanced,
 }) => (
-  <a href={href} className={clsx('utrecht-link-social', distanced && 'utrecht-link-social--distanced')}>
-    {parse(`<${icon} class="utrecht-link-social__icon"></${icon}>`)}
+  <a href={href} className={clsx('utrecht-link-social', distanced && 'utrecht-link-social--distanced')} title={title}>
+    {parse(`<${icon}></${icon}>`)}
   </a>
 );
-
-export const SocialMediaLinkList = ({ links }) =>
-  links.map((link) => ({ ...link, distanced: true })).map(SocialMediaLink);
-
-export default SocialMediaLink;
