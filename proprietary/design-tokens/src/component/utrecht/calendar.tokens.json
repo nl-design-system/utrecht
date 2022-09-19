@@ -1,0 +1,131 @@
+{
+  "utrecht": {
+    "calendar": {
+      "width": {
+        "value": "425px"
+      },
+      "background-color": {
+        "value": "425px"
+      },
+      "table": {
+        "padding-block-start": {
+          "value": "30px"
+        },
+        "padding-block-end": {
+          "value": "30px"
+        },
+        "weeks-item": {
+          "width": {
+            "value": "44px"
+          }
+        },
+        "days-item-day": {
+          "size": {
+            "value": "44px"
+          },
+          "color": {
+            "value": "{utrecht.color.black}"
+          },
+          "border-width": {},
+          "border-color": {
+            "value": "transparent"
+          },
+          "hover": {
+            "background-color": {},
+            "color": {
+              "value": "{utrecht.color.blue.40}"
+            },
+            "border-color": {
+              "value": "transparent"
+            }
+          },
+          "focus": {
+            "background-color": {},
+            "color": {},
+            "border-color": {
+              "value": "transparent"
+            }
+          },
+          "active": {
+            "background-color": {},
+            "color": {},
+            "border-color": {
+              "value": "transparent"
+            }
+          },
+          "out-of-the-month": {
+            "color": {
+              "value": "{utrecht.color.grey.80}"
+            },
+            "border-color": {
+              "value": "transparent"
+            },
+            "background-color": {}
+          },
+          "is-today": {
+            "color": {
+              "value": "{utrecht.color.blue.40}"
+            },
+            "font-weight": {
+              "value": "700"
+            },
+            "border-color": {
+              "value": "transparent"
+            },
+            "background-color": {}
+          },
+          "emphasis": {
+            "color": {},
+            "font-weight": {},
+            "border-color": {
+              "value": "transparent"
+            },
+            "background-color": {}
+          },
+          "selected": {
+            "color": {},
+            "font-weight": {},
+            "border-color": {
+              "value": "transparent"
+            },
+            "background-color": {}
+          },
+          "disabled": {
+            "color": {},
+            "border-color": {
+              "value": "transparent"
+            },
+            "background-color": {}
+          }
+        }
+      },
+      "navigation": {
+        "background-color": {
+          "value": "{utrecht.color.black}"
+        },
+        "color": {
+          "value": "{utrecht.color.white}"
+        },
+        "padding-block-start": {
+          "value": "20px"
+        },
+        "padding-block-end": {
+          "value": "20px"
+        },
+        "label": {
+          "min-inline-size": {
+            "value": "200px"
+          },
+          "color": {
+            "value": "{utrecht.color.white}"
+          }
+        }
+      },
+      "icon": {
+        "size": {
+          "value": "24px"
+        }
+      }
+    }
+  }
+}
