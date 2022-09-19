@@ -1,0 +1,75 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+
+@import "./mixin";
+
+.utrecht-calendar {
+  @include utrecht-calendar;
+}
+
+.utrecht-calendar__table {
+  @include utrecht-calendar__table;
+}
+
+.utrecht-calendar__table-weeks-item {
+  @include utrecht-calendar__table-weeks-item;
+}
+
+.utrecht-calendar__table-days-item-day {
+  @include utrecht-calendar__table-days-item-day;
+}
+
+.utrecht-calendar__table-days-item-day:hover {
+  @include utrecht-calendar__table-days-item-day-hover;
+}
+
+.utrecht-calendar__table-days-item-day:focus {
+  @include utrecht-calendar__table-days-item-day-focus;
+}
+
+.utrecht-calendar__table-days-item-day:active {
+  @include utrecht-calendar__table-days-item-day-active;
+}
+
+.utrecht-calendar__table-days-item-day:disabled {
+  @include utrecht-calendar__table-days-item-day-disabled;
+}
+
+.utrecht-calendar__table-days-item-day--out-of-the-month {
+  @include utrecht-calendar__table-days-item-day--out-of-the-month;
+}
+
+.utrecht-calendar__table-days-item-day--is-today {
+  @include utrecht-calendar__table-days-item-day--is-today;
+}
+
+.utrecht-calendar__table-days-item-day--emphasis {
+  @include utrecht-calendar__table-days-item-day--emphasis;
+}
+
+.utrecht-calendar__table-days-item-day--selected {
+  @include utrecht-calendar__table-days-item-day--selected;
+}
+
+.utrecht-calendar__navigation {
+  @include utrecht-calendar__navigation;
+}
+
+.utrecht-calendar__navigation-label {
+  @include utrecht-calendar__navigation-label;
+}
+
+.utrecht-calendar__navigation-buttons {
+  @include utrecht-calendar__navigation-buttons;
+}
+
+.utrecht-calendar__button {
+  @include utrecht-calendar__button;
+}
+
+.utrecht-calendar__icon {
+  @include utrecht-calendar__icon;
+}
