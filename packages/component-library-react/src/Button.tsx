@@ -24,9 +24,9 @@ export const Button = forwardRef(
           appearance === 'primary-action-button' && 'utrecht-button--primary-action',
           appearance === 'secondary-action-button' && 'utrecht-button--secondary-action',
           appearance === 'subtle-button' && 'utrecht-button--subtle',
-          hint === 'danger' && 'utrecht-button--primary-action',
-          hint === 'warning' && 'utrecht-button--secondary-action',
-          hint === 'ready' && 'utrecht-button--subtle',
+          hint === 'danger' && 'utrecht-button--danger',
+          hint === 'warning' && 'utrecht-button--warning',
+          hint === 'ready' && 'utrecht-button--ready',
           className,
         )}
         aria-busy={busy || undefined}
