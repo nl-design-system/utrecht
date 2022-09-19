@@ -1,0 +1,66 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+/* Collection of all semantic HTML styles in the component library */
+
+@import "../../article/html/mixin";
+@import "../../blockquote/html/mixin";
+@import "../../button/html/mixin";
+@import "../../checkbox/html/mixin";
+@import "../../document/html/mixin";
+@import "../../emphasis/html/mixin";
+@import "../../form-fieldset/html/mixin";
+@import "../../form-label/html/mixin";
+@import "../../heading-1/html/mixin";
+@import "../../heading-2/html/mixin";
+@import "../../heading-3/html/mixin";
+@import "../../heading-4/html/mixin";
+@import "../../heading-5/html/mixin";
+@import "../../heading-6/html/mixin";
+@import "../../heading-group/html/mixin";
+@import "../../link/html/mixin";
+@import "../../ordered-list/html/mixin";
+@import "../../paragraph/html/mixin";
+@import "../../radio-button/html/mixin";
+@import "../../select/html/mixin";
+@import "../../separator/html/mixin";
+@import "../../table/html/mixin";
+@import "../../textarea/html/mixin";
+@import "../../textbox/html/mixin";
+@import "../../unordered-list/html/mixin";
+
+@mixin utrecht-html-content {
+  @include utrecht-html-article;
+  @include utrecht-html-blockquote;
+  @include utrecht-html-button;
+  @include utrecht-html-input-checkbox;
+  @include utrecht-html-body;
+  @include utrecht-html-em;
+  @include utrecht-html-strong;
+  @include utrecht-html-fieldset;
+  @include utrecht-html-legend;
+  @include utrecht-html-label;
+  @include utrecht-html-h1;
+  @include utrecht-html-h2;
+  @include utrecht-html-h3;
+  @include utrecht-html-h4;
+  @include utrecht-html-h5;
+  @include utrecht-html-h6;
+  @include utrecht-html-hgroup;
+  @include utrecht-html-a;
+  @include utrecht-html-ol;
+  @include utrecht-html-p;
+  @include utrecht-html-input-radio;
+  @include utrecht-html-select;
+  @include utrecht-html-hr;
+  @include utrecht-html-table;
+  @include utrecht-html-textarea;
+  @include utrecht-html-input;
+  @include utrecht-html-ul;
+}
+
+@mixin utrecht-html-content-container {
+  --utrecht-space-around: 1;
+}

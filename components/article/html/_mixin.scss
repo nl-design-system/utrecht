@@ -4,6 +4,10 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "./mixin";
+@import "../css/mixin";
 
-@include utrecht-html-article;
+@mixin utrecht-html-article {
+  article {
+    @include utrecht-article;
+  }
+}

@@ -3,10 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-blockquote {
-  @include utrecht-blockquote;
-  @include utrecht-blockquote__content;
-  @include utrecht-blockquote--distanced;
-}
+@include utrecht-html-blockquote;

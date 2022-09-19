@@ -1,0 +1,22 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-fieldset {
+  fieldset {
+    @include utrecht-form-fieldset;
+    @include utrecht-form-fieldset--html-fieldset;
+    @include utrecht-form-fieldset--distanced;
+  }
+}
+
+@mixin utrecht-html-legend {
+  legend {
+    @include utrecht-form-fieldset__legend;
+    @include utrecht-form-fieldset__legend--html-legend;
+    @include utrecht-form-fieldset__legend--distanced;
+  }
+}

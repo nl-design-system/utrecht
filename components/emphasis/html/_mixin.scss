@@ -1,0 +1,18 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-em {
+  em {
+    @include utrecht-emphasis--stressed;
+  }
+}
+
+@mixin utrecht-html-strong {
+  strong {
+    @include utrecht-emphasis--strong;
+  }
+}

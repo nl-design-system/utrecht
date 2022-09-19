@@ -3,12 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-em {
-  @include utrecht-emphasis--stressed;
-}
-
-strong {
-  @include utrecht-emphasis--strong;
-}
+@include utrecht-html-em;
+@include utrecht-html-strong;

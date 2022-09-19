@@ -1,0 +1,13 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-input-checkbox {
+  input[type="checkbox" i] {
+    @include utrecht-checkbox;
+    @include utrecht-checkbox--html-input;
+  }
+}

@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-select {
+  select {
+    @include utrecht-select;
+    @include utrecht-select--html-select;
+
+    &[aria-invalid="true"] {
+      @include utrecht-select--invalid;
+    }
+
+    &[aria-required="true"] {
+      @include utrecht-select--required;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-h2 {
+  h2 {
+    @include utrecht-heading-2;
+    @include utrecht-heading-2--distanced;
+  }
+}

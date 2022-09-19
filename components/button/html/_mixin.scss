@@ -1,0 +1,51 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-button {
+  input[type="button" i],
+  input[type="reset" i],
+  input[type="submit" i],
+  button {
+    @include utrecht-button;
+    @include utrecht-button--distanced;
+  }
+
+  button[type="submit" i],
+  input[type="submit" i] {
+    @include utrecht-button--submit;
+  }
+
+  button:disabled,
+  button[aria-disabled="true"] {
+    @include utrecht-button--disabled;
+  }
+
+  button[aria-busy="true"],
+  button[aria-disabled="true"][aria-busy="true"],
+  button:disabled[aria-busy="true"] {
+    // Busy cursor has precedence over the disabled cursor.
+    @include utrecht-button--busy;
+  }
+
+  button:active:not([aria-disabled="true"]):not(:disabled) {
+    @include utrecht-button--active;
+  }
+
+  button:hover:not([aria-disabled="true"]):not(:disabled) {
+    @include utrecht-button--hover;
+  }
+
+  button:focus:not([aria-disabled="true"]):not(:disabled) {
+    @include utrecht-button--focus;
+  }
+
+  /* override the `:focus` selector above */
+  /* stylelint-disable-next-line no-descending-specificity */
+  button:focus-visible {
+    @include utrecht-button--focus-visible;
+  }
+}

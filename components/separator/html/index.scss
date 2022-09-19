@@ -3,9 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-hr {
-  @include utrecht-separator;
-  @include utrecht-separator--distanced;
-}
+@include utrecht-html-hr;
