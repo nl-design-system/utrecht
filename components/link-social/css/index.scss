@@ -3,8 +3,11 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
+@import "../../common/focus/mixin";
+
 .utrecht-link-social {
   --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+  --utrecht-icon-color: currentColor;
 
   align-items: center;
   background-color: var(--utrecht-link-social-background-color);
@@ -16,8 +19,15 @@
   display: inline-flex;
   height: var(--utrecht-link-social-size);
   justify-content: center;
-  text-align: center;
   width: var(--utrecht-link-social-size);
+}
+
+.utrecht-link-social:hover {
+  transform: scale(var(--utrecht-link-social-hover-scale));
+}
+
+.utrecht-link-social:focus-visible {
+  @include utrecht-focus-visible;
 }
 
 .utrecht-link-social--distanced {

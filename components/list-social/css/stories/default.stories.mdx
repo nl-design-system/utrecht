@@ -1,13 +1,14 @@
 <!-- @license CC0-1.0 -->
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { SocialMediaLinkList } from "../story-template";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, ListSocial } from "../story-template";
 import "../index.scss";
 
 <Meta
-  id="css-link-social"
-  title="CSS Component/Link to Social Media/List"
-  component={SocialMediaLinkList}
+  id="css-list-social"
+  title="CSS Component/Link to social media/Link list"
+  component={ListSocial}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -15,36 +16,43 @@ import "../index.scss";
   }}
 />
 
-# List of links to Social Media
+# Link to Social Media
 
 <Canvas>
   <Story
-    name="List"
+    name="Default"
     args={{
-      links: [
+      socialMediaContent: [
         {
           href: "https://www.facebook.com/GemeenteUtrecht",
           icon: "utrecht-icon-facebook",
+          title: "facebook",
         },
         {
           href: "https://www.instagram.com/GemeenteUtrecht/",
           icon: "utrecht-icon-instagram",
+          title: "instagram",
         },
         {
           href: "https://nl.linkedin.com/company/gemeente-utrecht",
           icon: "utrecht-icon-linkedin",
+          title: "linkedin",
         },
         {
           href: "https://twitter.com/gemeenteutrecht",
           icon: "utrecht-icon-twitter",
+          title: "twitter",
         },
         {
           href: "https://api.whatsapp.com/send?phone=31624927665",
           icon: "utrecht-icon-whatsapp",
+          title: "whatsapp",
         },
       ],
     }}
   >
-    {SocialMediaLinkList.bind({})}
+    {ListSocial.bind({})}
   </Story>
 </Canvas>
+
+<ArgsTable story="Default" />
