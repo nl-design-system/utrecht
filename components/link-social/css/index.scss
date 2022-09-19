@@ -5,7 +5,7 @@
 
 .utrecht-link-social {
   --utrecht-icon-size: var(--utrecht-link-social-icon-size);
-  --utrecht-icon-color: var(--utrecht-link-social-color);
+  --utrecht-icon-color: currentColor;
 
   align-items: center;
   background-color: var(--utrecht-link-social-background-color);
@@ -13,6 +13,7 @@
   border-radius: 50%;
   border-style: solid;
   border-width: var(--utrecht-link-social-border-width);
+  color: var(--utrecht-link-social-color);
   display: inline-flex;
   height: var(--utrecht-link-social-size);
   justify-content: center;
