@@ -3,35 +3,10 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@import "./mixin";
+
 /* Collection of all semantic HTML styles in the component library */
-
-/* stylelint-disable no-invalid-position-at-import-rule */
 .utrecht-html {
-  --utrecht-space-around: 1;
-
-  @import "../../article/html";
-  @import "../../blockquote/html";
-  @import "../../button/html";
-  @import "../../checkbox/html";
-  @import "../../document/html";
-  @import "../../emphasis/html";
-  @import "../../form-fieldset/html";
-  @import "../../form-label/html";
-  @import "../../heading-1/html";
-  @import "../../heading-2/html";
-  @import "../../heading-3/html";
-  @import "../../heading-4/html";
-  @import "../../heading-5/html";
-  @import "../../heading-6/html";
-  @import "../../heading-group/html";
-  @import "../../link/html";
-  @import "../../ordered-list/html";
-  @import "../../paragraph/html";
-  @import "../../radio-button/html";
-  @import "../../select/html";
-  @import "../../separator/html";
-  @import "../../table/html";
-  @import "../../textarea/html";
-  @import "../../textbox/html";
-  @import "../../unordered-list/html";
+  @include utrecht-html-content;
+  @include utrecht-html-content-container;
 }

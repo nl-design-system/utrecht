@@ -3,61 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-a:link {
-  @include utrecht-link;
-}
-
-a:visited {
-  @include utrecht-link--visited;
-}
-
-a:hover {
-  @include utrecht-link--hover;
-}
-
-a:active {
-  @include utrecht-link--active;
-}
-
-// The workaround for missing `:focus-visible` support makes the code quite complex,
-// keep the ideal version around to restore it easily when browser support improves.
-
-@if $utrecht-focus-visible-fallback {
-  a:focus {
-    @include utrecht-link--focus;
-    @include utrecht-link--focus-visible;
-  }
-
-  a:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset;
-  }
-} @else {
-  a:focus {
-    @include utrecht-link--focus;
-  }
-
-  a:focus-visible {
-    @include utrecht-link--focus-visible;
-  }
-}
-
-a[rel~="external" i] {
-  @include utrecht-link--external;
-}
-
-a[href^="mailto:" i] {
-  @include utrecht-link--email;
-}
-
-a[href^="tel:" i] {
-  @include utrecht-link--telephone;
-}
-
-a[hreflang][rel~="alternate" i] {
-  @include utrecht-link--alternate-lang;
-}
-a[hreflang][aria-current="page"] {
-  @include utrecht-link--current-lang;
-}
+@include utrecht-html-a;

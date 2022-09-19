@@ -3,17 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-select {
-  @include utrecht-select;
-  @include utrecht-select--html-select;
-
-  &[aria-invalid="true"] {
-    @include utrecht-select--invalid;
-  }
-
-  &[aria-required="true"] {
-    @include utrecht-select--required;
-  }
-}
+@include utrecht-html-select;

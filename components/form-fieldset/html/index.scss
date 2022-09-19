@@ -3,16 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-fieldset {
-  @include utrecht-form-fieldset;
-  @include utrecht-form-fieldset--html-fieldset;
-  @include utrecht-form-fieldset--distanced;
-}
-
-legend {
-  @include utrecht-form-fieldset__legend;
-  @include utrecht-form-fieldset__legend--html-legend;
-  @include utrecht-form-fieldset__legend--distanced;
-}
+@include utrecht-html-fieldset;
+@include utrecht-html-legend;

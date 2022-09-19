@@ -3,9 +3,6 @@
  * Copyright (c) 2021 Gemeente Utrecht
  */
 
-@import "../css/mixin";
+@import "./mixin";
 
-input[type="radio" i] {
-  @include utrecht-radio-button;
-  @include utrecht-radio-button--html-input;
-}
+@include utrecht-html-input-radio;

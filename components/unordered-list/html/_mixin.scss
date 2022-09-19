@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "../css/mixin";
+
+@mixin utrecht-html-ul {
+  ul {
+    @include utrecht-unordered-list;
+    @include utrecht-unordered-list--distanced;
+  }
+
+  ul > li {
+    @include utrecht-unordered-list__item;
+  }
+
+  ul > li::marker {
+    @include utrecht-unordered-list__marker;
+  }
+}
