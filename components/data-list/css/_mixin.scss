@@ -42,8 +42,8 @@
 
 @mixin utrecht-data-list__item--rows {
   --_utrecht-minmax: max(
-    var(--utrecht-data-list-rows-min-column-width, 25ch),
-    var(--utrecht-data-list-rows-column-width, 80%)
+    var(--utrecht-data-list-rows-column-min-inline-size, 25ch),
+    var(--utrecht-data-list-rows-column-inline-size, 80%)
   );
   --_utrecht-auto-col: minmax(var(--_utrecht-minmax), max-content);
 

@@ -32,8 +32,10 @@
             "value": "{utrecht.space.block.xs}"
           }
         },
-        "column-width": {},
-        "min-column-width": {},
+        "column": {
+          "inline-size": { "value": "80%" },
+          "min-inline-size": { "value": "25ch" }
+        },
         "gap": {},
         "border-bottom-width": {},
         "border-bottom-color": {}
