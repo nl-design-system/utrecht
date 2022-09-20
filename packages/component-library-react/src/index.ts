@@ -6,6 +6,7 @@
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
+export { ButtonGroup } from './ButtonGroup';
 export { ButtonLink } from './ButtonLink';
 export { Checkbox } from './Checkbox';
 export { CustomRadioButton } from './CustomRadioButton';
