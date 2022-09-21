@@ -19,6 +19,7 @@ export { FormField } from './FormField';
 export { FormFieldDescription } from './FormFieldDescription';
 export { FormLabel } from './FormLabel';
 export { HTMLContent } from './HTMLContent';
+export { Heading } from './Heading';
 export { Heading1 } from './Heading1';
 export { Heading2 } from './Heading2';
 export { Heading3 } from './Heading3';
