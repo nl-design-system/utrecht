@@ -19,6 +19,7 @@
   color: var(--utrecht-textarea-color, var(--utrecht-form-input-color));
   font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-input-font-family));
   font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-input-font-size, 1em));
+  line-height: var(--utrecht-textarea-line-height, initial);
   max-inline-size: var(--utrecht-textarea-max-inline-size, var(--utrecht-form-input-max-inline-size));
   min-block-size: var(--utrecht-textarea-min-block-size);
   padding-block-end: var(--utrecht-textarea-padding-block-end, var(--utrecht-form-input-padding-block-end));
