@@ -59,6 +59,8 @@
   &[inputMode="url" i] {
     @include utrecht-textbox--url;
   }
+  &[pattern="\\d*"],
+  &[pattern="[0-9]*"],
   &[type="number" i],
   &[type="tel" i],
   &[inputMode="numeric" i],
