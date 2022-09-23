@@ -19,11 +19,17 @@
   color: var(--utrecht-textbox-color, var(--utrecht-form-input-color));
   font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-input-font-family));
   font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-input-font-size, 1em));
+  font-weight: initial; /* harden */
+  height: initial; /* harden */
+  line-height: initial; /* harden */
   max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-input-max-inline-size));
-  padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-input-padding-block-end));
-  padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-input-padding-block-start));
-  padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-input-padding-inline-end));
-  padding-inline-start: var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-input-padding-inline-start));
+  padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-input-padding-block-end, 0));
+  padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-input-padding-block-start, 0));
+  padding-inline-end: var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-input-padding-inline-end, initial));
+  padding-inline-start: var(
+    --utrecht-textbox-padding-inline-start,
+    var(--utrecht-form-input-padding-inline-start, initial)
+  );
   width: 100%;
 }
 
