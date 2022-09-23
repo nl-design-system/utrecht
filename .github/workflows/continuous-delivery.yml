@@ -120,6 +120,8 @@ jobs:
           pnpm install
 
       - name: "Continuous Integration: build"
+        env:
+          BASE_URL: "/utrecht/"
         run: |
           pnpm run --if-present build
 
