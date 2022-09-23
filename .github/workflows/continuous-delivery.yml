@@ -133,7 +133,7 @@ jobs:
       - name: "Retain build artifact: storybook"
         uses: actions/upload-artifact@v3
         with:
-          name: website
+          name: storybook
           path: packages/storybook/dist/
           retention-days: 1
 
@@ -190,7 +190,7 @@ jobs:
       - name: "Restore build artifact: storybook"
         uses: actions/download-artifact@v3
         with:
-          name: website
+          name: storybook
           path: packages/storybook/dist/
 
       - name: Publish to Chromatic
