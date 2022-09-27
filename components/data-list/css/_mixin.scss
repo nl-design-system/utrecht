@@ -5,6 +5,10 @@
  */
 
 @mixin utrecht-data-list {
+  border-color: var(--utrecht-data-list-border-color, transparent);
+  border-style: solid;
+  border-width: var(--utrecht-data-list-border-width, 0);
+
   /* also set `margin-block` to reset browser styling of <dl> */
   display: block;
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-data-list-margin-block-end, 0));
@@ -16,10 +20,17 @@
 }
 
 @mixin utrecht-data-list-item-key {
+  border-right-color: var(--utrecht-data-list-item-key-border-right-color, transparent);
+  border-right-style: solid;
+  border-right-width: var(--utrecht-data-list-item-key-border-right-width, 0);
   color: var(--utrecht-data-list-item-key-color);
   font-size: var(--utrecht-data-list-item-key-font-size);
   font-weight: var(--utrecht-data-list-item-key-font-weight);
   line-height: var(--utrecht-data-list-item-key-line-height);
+  padding-block-end: var(--utrecht-data-list-item-key-padding-block-end, 0);
+  padding-block-start: var(--utrecht-data-list-item-key-padding-block-start, 0);
+  padding-inline-end: var(--utrecht-data-list-item-key-padding-inline-end, 0);
+  padding-inline-start: var(--utrecht-data-list-item-key-padding-inline-start, 0);
 }
 
 @mixin utrecht-data-list-item-value {
@@ -29,6 +40,10 @@
   font-weight: var(--utrecht-data-list-item-value-font-weight);
   line-height: var(--utrecht-data-list-item-value-line-height);
   min-block-size: calc(var(--utrecht-data-list-item-value-line-height) * 1rem);
+  padding-block-end: var(--utrecht-data-list-item-value-padding-block-end, 0);
+  padding-block-start: var(--utrecht-data-list-item-value-padding-block-start, 0);
+  padding-inline-end: var(--utrecht-data-list-item-value-padding-inline-end, 0);
+  padding-inline-start: var(--utrecht-data-list-item-value-padding-inline-start, 0);
 }
 
 @mixin utrecht-data-list__item-value--multiline {
@@ -55,6 +70,10 @@
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(auto-fit, var(--_utrecht-auto-col));
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+  &:last-child {
+    /* Hide the bottom border of the table */
+    margin-block-end: calc(var(--utrecht-data-list-rows-border-bottom-width, 0) * -1);
+  }
 }
 
 @mixin utrecht-data-list__actions--rows {
