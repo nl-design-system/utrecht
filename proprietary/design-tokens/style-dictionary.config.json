@@ -26,11 +26,11 @@
       "files": [
         {
           "destination": "index.tokens.json",
-          "format": "json"
+          "format": "json/nested"
         },
         {
           "destination": "index.json",
-          "format": "json/list"
+          "format": "json/flat"
         }
       ]
     },
@@ -75,6 +75,7 @@
       ]
     },
     "typescript": {
+      "transforms": ["attribute/cti", "name/cti/camel", "color/hsl-4"],
       "transformGroup": "js",
       "buildPath": "dist/",
       "files": [
