@@ -8,8 +8,8 @@
 @mixin utrecht-textbox {
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-input-background-color));
   border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width));
-  border-bottom-width: var(
-    --utrecht-textbox-border-bottom-width,
+  border-block-end-width: var(
+    --utrecht-textbox-block-end-width,
     var(--utrecht-textbox-border-width, var(--utrecht-form-input-border-width))
   );
   border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-input-border-color));
