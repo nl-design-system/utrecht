@@ -47,12 +47,14 @@ const jsonConfig = {
     ...jsonListFormat,
   },
   platforms: {
-    files: [
-      {
-        destination: 'index.json',
-        format: 'json/list',
-      },
-    ].sort(destinationSort),
+    json: {
+      files: [
+        {
+          destination: 'index.json',
+          format: 'json/list',
+        },
+      ].sort(destinationSort),
+    },
   },
 };
 
