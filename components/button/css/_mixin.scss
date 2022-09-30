@@ -188,7 +188,7 @@
   display: inline-flex;
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
-  font-weight: var(--utrecht-button-font-weight);
+  font-weight: var(--_utrecht-button-appearance-font-weight, var(--utrecht-button-font-weight));
   gap: var(--utrecht-button-icon-gap);
   inline-size: var(--utrecht-button-inline-size, auto);
   justify-content: center;
@@ -259,6 +259,7 @@
     --_utrecht-button-appearance-border-color: var(--utrecht-button-#{$modifier}-border-color);
     --_utrecht-button-appearance-border-width: var(--utrecht-button-#{$modifier}-border-width);
     --_utrecht-button-appearance-color: var(--utrecht-button-#{$modifier}-color);
+    --_utrecht-button-appearance-font-weight: var(--utrecht-button-#{$modifier}-font-weight);
     --_utrecht-button-appearance-disabled-background-color: var(
       --utrecht-button-#{$modifier}-disabled-background-color
     );
