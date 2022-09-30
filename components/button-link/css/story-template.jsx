@@ -41,6 +41,10 @@ export const argTypes = {
       required: true,
     },
   },
+  placeholder: {
+    description: 'Placeholder for a link',
+    control: 'boolean',
+  },
   textContent: {
     description: 'Link text',
     type: {
@@ -68,11 +72,13 @@ export const defaultArgs = {
   focus: false,
   focusVisible: false,
   keyboardSupport: false,
+  placeholder: false,
   textContent: '',
   iconBefore: '',
   iconAfter: '',
 };
 export const exampleArgs = {
+  href: 'https://example.com/',
   textContent: 'Start je aanvraag',
 };
 export const ButtonLink = ({
@@ -82,6 +88,7 @@ export const ButtonLink = ({
   href = defaultArgs.href,
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
+  placeholder = defaultArgs.placeholder,
   textContent = defaultArgs.textContent,
   keyboardSupport = defaultArgs.keyboardSupport,
   iconBefore = defaultArgs.iconBefore,
@@ -92,8 +99,8 @@ export const ButtonLink = ({
 
   return (
     <a
-      role={keyboardSupport ? 'button' : undefined}
-      href={href}
+      role={keyboardSupport ? 'button' : placeholder ? 'link' : undefined}
+      href={placeholder ? undefined : href}
       className={clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
         'utrecht-button-link--hover': hover,
         'utrecht-button-link--focus': focus,
@@ -101,8 +108,10 @@ export const ButtonLink = ({
         'utrecht-button-link--primary-action': appearance === 'primary-action-button',
         'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
         'utrecht-button-link--subtle': appearance === 'subtle-button',
+        'utrecht-button-link--placeholder': placeholder,
       })}
-      rel={external && 'external noopener noreferrer'}
+      aria-disabled={placeholder ? 'true' : undefined}
+      rel={external ? 'external noopener noreferrer' : undefined}
     >
       {iconBefore && <IconBefore />}
       {textContent}

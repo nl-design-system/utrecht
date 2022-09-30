@@ -25,14 +25,18 @@
   @include utrecht-button--focus-visible;
 }
 
+@mixin utrecht-button-link--placeholder {
+  @include utrecht-button--disabled;
+}
+
 @mixin utrecht-button-link--html-a {
-  &:hover {
-    @include utrecht-button-link--hover;
-  }
   &:focus {
     @include utrecht-button-link--focus;
   }
   &:focus-visible {
     @include utrecht-button-link--focus-visible;
+  }
+  &:link:hover {
+    @include utrecht-button-link--hover;
   }
 }

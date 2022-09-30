@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, ButtonLink, defaultArgs, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-button-link"
+  title="CSS Component/Link that looks like a button"
+  component={ButtonLink}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Placeholder for a button link: link die er uit ziet als disabled button
+
+Styling met de `.utrecht-button-link--placeholder` class naam:
+
+<Canvas>
+  <Story
+    name="Placeholder"
+    args={{
+      ...exampleArgs,
+      placeholder: true,
+    }}
+  >
+    {ButtonLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Placeholder" />

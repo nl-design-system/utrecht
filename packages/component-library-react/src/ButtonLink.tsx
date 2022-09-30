@@ -7,9 +7,11 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren } from 'react';
 
-export interface ButtonLinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+// Somehow `placeholder` incorrectly is a global HTML attribute in React, ignore that
+export interface ButtonLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'placeholder'> {
   appearance?: string;
   external?: boolean;
+  placeholder?: boolean;
 }
 
 const onKeyDown = (evt: KeyboardEvent<HTMLAnchorElement>) => {
@@ -24,7 +26,16 @@ const onKeyDown = (evt: KeyboardEvent<HTMLAnchorElement>) => {
 
 export const ButtonLink = forwardRef(
   (
-    { appearance, children, className, external, role, ...restProps }: PropsWithChildren<ButtonLinkProps>,
+    {
+      appearance,
+      children,
+      className,
+      external,
+      href,
+      placeholder,
+      role,
+      ...restProps
+    }: PropsWithChildren<ButtonLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     let props = restProps;
@@ -42,9 +53,9 @@ export const ButtonLink = forwardRef(
 
     return (
       <a
-        {...props}
+        href={placeholder ? undefined : href}
         ref={ref}
-        role={role}
+        role={role || (placeholder ? 'link' : undefined)}
         className={clsx(
           'utrecht-button-link',
           'utrecht-button-link--html-a',
@@ -53,10 +64,13 @@ export const ButtonLink = forwardRef(
             'utrecht-button-link--primary-action': appearance === 'primary-action-button',
             'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
             'utrecht-button-link--subtle': appearance === 'subtle-button',
+            'utrecht-button-link--placeholder': placeholder,
           },
           className,
         )}
         rel={external ? 'external noopener noreferrer' : undefined}
+        aria-disabled={placeholder ? 'true' : undefined}
+        {...props}
       >
         {children}
       </a>
