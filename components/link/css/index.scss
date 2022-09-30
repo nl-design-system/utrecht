@@ -23,12 +23,12 @@
   @include utrecht-link--visited;
 }
 
-.utrecht-link:hover,
+.utrecht-link:link:hover,
 .utrecht-link--hover {
   @include utrecht-link--hover;
 }
 
-.utrecht-link:active,
+.utrecht-link:link:active,
 .utrecht-link--active {
   @include utrecht-link--active;
 }
@@ -85,4 +85,8 @@
 
 .utrecht-link--box-content {
   @include utrecht-link--box-content;
+}
+
+.utrecht-link--placeholder {
+  @include utrecht-link--placeholder;
 }

@@ -22,6 +22,13 @@ External.args = {
   external: true,
 };
 
+export const Placeholder = Template.bind({});
+
+Placeholder.args = {
+  href: 'https://www.example.com',
+  placeholder: true,
+};
+
 export const Email = Template.bind({});
 
 Email.args = {

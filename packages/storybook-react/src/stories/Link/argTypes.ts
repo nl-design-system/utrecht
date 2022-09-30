@@ -40,6 +40,14 @@ export const argTypes = {
       defaultValue: { summary: '' },
     },
   },
+  placeholder: {
+    name: 'placeholder',
+    type: { name: 'boolean', required: false },
+    table: {
+      category: 'API',
+      defaultValue: { summary: false },
+    },
+  },
   rel: {
     name: 'rel',
     type: { name: 'string', required: false },

@@ -5,33 +5,17 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React.js Component/Link that looks like a button',
-  id: 'react-button-link-appearance',
+  id: 'react-button-link-external',
   component: ButtonLink,
   argTypes,
 } as ComponentMeta<typeof ButtonLink>;
 
 const Template: ComponentStory<typeof ButtonLink> = (args) => <ButtonLink {...args} />;
 
-export const Primary = Template.bind({});
+export const PlaceholderForLink = Template.bind({});
 
-Primary.args = {
+PlaceholderForLink.args = {
   children: 'Read more...',
   href: '#',
-  appearance: 'primary-action-button',
-};
-
-export const Secondary = Template.bind({});
-
-Secondary.args = {
-  children: 'Read more...',
-  href: '#',
-  appearance: 'secondary-action-button',
-};
-
-export const Subtle = Template.bind({});
-
-Subtle.args = {
-  children: 'Read more...',
-  href: '#',
-  appearance: 'subtle-button',
+  placeholder: true,
 };

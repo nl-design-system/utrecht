@@ -23,6 +23,10 @@
   @include utrecht-button-link--focus-visible;
 }
 
+.utrecht-button-link--placeholder {
+  @include utrecht-button-link--placeholder;
+}
+
 .utrecht-button-link--html-a {
   @include utrecht-button-link--html-a;
 }

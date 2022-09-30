@@ -53,6 +53,10 @@ export const argTypes = {
     description: 'Visited',
     control: 'boolean',
   },
+  placeholder: {
+    description: 'Placeholder for a link',
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs = {
@@ -66,6 +70,7 @@ export const defaultArgs = {
   focus: false,
   focusVisible: false,
   href: null,
+  placeholder: false,
   telephone: false,
   textContent: '',
   title: '',
@@ -88,6 +93,7 @@ export const Link = ({
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
   href = defaultArgs.href,
+  placeholder = defaultArgs.placeholder,
   telephone = defaultArgs.telephone,
   textContent = defaultArgs.textContent,
   title = defaultArgs.title,
@@ -95,7 +101,7 @@ export const Link = ({
   iconleft = defaultArgs.iconleft,
 }) => (
   <a
-    href={href === null ? `https://example.com/${lang}` : href}
+    href={placeholder ? null : href === null ? `https://example.com/${lang}` : href}
     className={clsx('utrecht-link', {
       'utrecht-link--active': active,
       'utrecht-link--alternate-lang': lang && !current,
@@ -105,12 +111,15 @@ export const Link = ({
       'utrecht-link--focus': focus,
       'utrecht-link--focus-visible': focusVisible,
       'utrecht-link--hover': hover,
+      'utrecht-link--placeholder': placeholder,
       'utrecht-link--telephone': telephone,
       'utrecht-link--visited': visited,
       'utrecht-link--icon-left': iconleft,
     })}
     rel={external ? 'external noopener noreferrer' : null}
     aria-current={current ? 'page' : null}
+    aria-disabled={placeholder ? 'true' : null}
+    role={placeholder ? 'link' : null}
     title={title || null}
     hrefLang={hrefLang || null}
     lang={lang || null}

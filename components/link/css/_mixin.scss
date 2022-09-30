@@ -118,6 +118,12 @@ however browsers don't seem to have implemented great looking supixel tweening y
   );
 }
 
+@mixin utrecht-link--placeholder {
+  color: var(--utrecht-link-placeholder-color, var(--utrecht-link-color));
+  cursor: var(--utrecht-action-disabled-cursor);
+  text-decoration: none;
+}
+
 @mixin utrecht-link--focus-visible {
   @include utrecht-focus-visible;
 }
