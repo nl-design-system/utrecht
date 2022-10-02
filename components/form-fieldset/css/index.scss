@@ -26,6 +26,10 @@
   @include utrecht-form-fieldset__legend;
 }
 
+.utrecht-form-fieldset__legend--disabled {
+  @include utrecht-form-fieldset__legend--disabled;
+}
+
 .utrecht-form-fieldset__legend--distanced {
   @include utrecht-form-fieldset__legend--distanced;
 }

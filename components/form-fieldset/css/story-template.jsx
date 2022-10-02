@@ -4,10 +4,15 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
+import clsx from 'clsx';
 import parse from 'html-react-parser';
 import React from 'react';
 
 export const argTypes = {
+  disabled: {
+    description: 'Disabled',
+    control: 'boolean',
+  },
   innerHTML: {
     description: 'Set the content of the fieldset',
     control: 'text',
@@ -19,20 +24,34 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  disabled: false,
   innerHTML: '',
   legend: '',
 };
 
 export const exampleArgs = {
+  disabled: false,
   innerHTML: '<p>Fieldset body</p>',
   legend: 'Fieldset legend',
 };
 
-export const FormFieldset = ({ innerHTML = defaultArgs.innerHTML, legend = defaultArgs.legend }) => (
-  <div className="utrecht-form-fieldset">
-    {legend && <div className="utrecht-form-fieldset__legend utrecht-form-fieldset__legend--distanced">{legend}</div>}
+export const FormFieldset = ({
+  disabled = defaultArgs.disabled,
+  innerHTML = defaultArgs.innerHTML,
+  legend = defaultArgs.legend,
+}) => (
+  <fieldset className={clsx('utrecht-form-fieldset', 'utrecht-form-fieldset--html-fieldset')} disabled={disabled}>
+    {legend && (
+      <legend
+        className={clsx('utrecht-form-fieldset__legend', 'utrecht-form-fieldset__legend--html-legend', {
+          'utrecht-form-fieldset__legend--disabled': disabled,
+        })}
+      >
+        {legend}
+      </legend>
+    )}
     {parse(innerHTML)}
-  </div>
+  </fieldset>
 );
 
 export default FormFieldset;

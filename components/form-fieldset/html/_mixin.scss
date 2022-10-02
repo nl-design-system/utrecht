@@ -19,4 +19,8 @@
     @include utrecht-form-fieldset__legend--html-legend;
     @include utrecht-form-fieldset__legend--distanced;
   }
+
+  fieldset:disabled > legend {
+    @include utrecht-form-fieldset__legend--disabled;
+  }
 }

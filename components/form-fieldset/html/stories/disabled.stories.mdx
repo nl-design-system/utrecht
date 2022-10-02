@@ -1,0 +1,35 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormFieldset } from "../story-template";
+
+<Meta
+  id="html-form-fieldset"
+  title="HTML Component/Form fieldset"
+  component={FormFieldset}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Fieldset
+
+Styling via the `<fieldset>` with the `disabled` attribute.
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      ...exampleArgs,
+      disabled: true,
+    }}
+  >
+    {FormFieldset.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Disabled" />
