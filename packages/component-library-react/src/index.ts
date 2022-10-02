@@ -16,6 +16,8 @@ export { DataList, DataListItem, DataListActions, DataListKey, DataListValue } f
 export { Emphasis } from './Emphasis';
 export { Fieldset } from './Fieldset';
 export { FieldsetLegend } from './FieldsetLegend';
+export { Figure } from './Figure';
+export { FigureCaption } from './FigureCaption';
 export { FormField } from './FormField';
 export { FormFieldDescription } from './FormFieldDescription';
 export { FormLabel } from './FormLabel';
