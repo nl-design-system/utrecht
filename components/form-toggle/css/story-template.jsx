@@ -37,6 +37,8 @@ export const defaultArgs = {
   hover: false,
 };
 
+export const exampleArgs = {};
+
 export const FormToggle = ({
   checked = defaultArgs.checked,
   disabled = defaultArgs.disabled,

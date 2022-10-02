@@ -38,6 +38,8 @@ export const defaultArgs = {
   invalid: false,
 };
 
+export const exampleArgs = {};
+
 export const CustomRadioButton = ({
   checked = defaultArgs.checked,
   disabled = defaultArgs.disabled,
