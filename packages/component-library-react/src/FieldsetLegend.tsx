@@ -11,7 +11,7 @@ export const FieldsetLegend = forwardRef(
     <legend
       {...restProps}
       ref={ref}
-      className={clsx('utrecht-form-fieldset__legend', 'utrecht-form-fieldset__legend--reset-legend', className)}
+      className={clsx('utrecht-form-fieldset__legend', 'utrecht-form-fieldset__legend--html-legend', className)}
     >
       {children}
     </legend>

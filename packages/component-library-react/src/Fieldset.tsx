@@ -8,7 +8,7 @@ export const Fieldset = forwardRef(
     <fieldset
       {...restProps}
       ref={ref}
-      className={clsx('utrecht-form-fieldset', 'utrecht-form-fieldset--reset-fieldset', className)}
+      className={clsx('utrecht-form-fieldset', 'utrecht-form-fieldset--html-fieldset', className)}
     >
       {children}
     </fieldset>
