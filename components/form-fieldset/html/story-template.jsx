@@ -15,6 +15,10 @@ export const argTypes = {
       required: true,
     },
   },
+  disabled: {
+    description: 'Disabled',
+    control: 'boolean',
+  },
   legend: {
     description: 'Set the content of the legend',
     control: 'text',
@@ -22,6 +26,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  disabled: false,
   innerHTML: '',
   legend: '',
 };
@@ -31,9 +36,13 @@ export const exampleArgs = {
   legend: 'Fieldset legend',
 };
 
-export const FormFieldset = ({ innerHTML = defaultArgs.innerHTML, legend = defaultArgs.legend }) => (
+export const FormFieldset = ({
+  disabled = defaultArgs.disabled,
+  innerHTML = defaultArgs.innerHTML,
+  legend = defaultArgs.legend,
+}) => (
   <div className="utrecht-html">
-    <fieldset>
+    <fieldset disabled={disabled}>
       {legend && <legend>{legend}</legend>}
       {parse(innerHTML)}
     </fieldset>

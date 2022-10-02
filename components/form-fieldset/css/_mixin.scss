@@ -15,6 +15,7 @@
 }
 
 @mixin reset-legend {
+  inline-size: 100%;
   padding-inline-end: 0;
   padding-inline-start: 0;
 }
@@ -41,6 +42,13 @@
   page-break-after: avoid;
   page-break-inside: avoid;
   text-transform: var(--utrecht-form-fieldset-legend-text-transform);
+}
+
+@mixin utrecht-form-fieldset__legend--disabled {
+  color: var(
+    --utrecht-form-fieldset-legend-disabled-color,
+    var(--utrecht-form-fieldset-legend-color, var(--utrecht-document-color, inherit))
+  );
 }
 
 @mixin utrecht-form-fieldset__legend--html-legend {

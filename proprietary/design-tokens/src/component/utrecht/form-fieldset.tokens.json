@@ -11,7 +11,10 @@
         "line-height": { "value": "1.4" },
         "margin-block-end": { "value": "{utrecht.space.block.sm}" },
         "margin-block-start": { "value": "{utrecht.space.block.xl}" },
-        "text-transform": { "value": "uppercase" }
+        "text-transform": { "value": "uppercase" },
+        "disabled": {
+          "color": { "value": "{utrecht.color.grey.40}" }
+        }
       }
     }
   }
