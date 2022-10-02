@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./mixin";
+
+.utrecht-figure {
+  @include utrecht-figure;
+}
+
+.utrecht-figure__caption {
+  @include utrecht-figure__caption;
+}

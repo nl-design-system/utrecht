@@ -1,0 +1,57 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../../../link/css/story-template";
+import { argTypes, defaultArgs, FigureWithImage } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-figure"
+  title="CSS Component/Figure"
+  component={FigureWithImage}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Figure Component
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      caption: (
+        <>
+          Fotograaf: Gemeente Utrecht
+          <br />
+          Titel: Nijntje Vuelta
+          <br />
+          Locatie: Stadsplateau
+          <br />
+          Geplaatst: 17 augustus 2022
+          <br />
+          <Link
+            href="https://www.flickr.com/photos/gemeenteutrecht/52287504255/in/dateposted-public/"
+            external
+            title="'Nijntje / Vuelta' op Flickr"
+          >
+            Bron: Flickr
+          </Link>
+        </>
+      ),
+      src: "example/photo-nijntje-vuelta.jpg",
+      width: 2048,
+      height: 1536,
+      photo: true,
+      alt: "Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor",
+    }}
+  >
+    {FigureWithImage.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

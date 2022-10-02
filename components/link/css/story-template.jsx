@@ -85,6 +85,7 @@ export const exampleArgs = {
 export const Link = ({
   active = defaultArgs.active,
   boxContent = defaultArgs.boxContent,
+  children,
   current = defaultArgs.current,
   external = defaultArgs.external,
   hrefLang = defaultArgs.hrefLang,
@@ -124,6 +125,7 @@ export const Link = ({
     hrefLang={hrefLang || null}
     lang={lang || null}
   >
+    {children}
     {textContent}
   </a>
 );
