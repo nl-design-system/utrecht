@@ -26,7 +26,7 @@ export const defaultArgs = {
 export const Checkbox = ({ checked = defaultArgs.checked, disabled = defaultArgs.disabled }) => (
   <input
     type="checkbox"
-    checked={checked}
+    defaultChecked={checked}
     disabled={disabled}
     className={clsx(
       'utrecht-checkbox',
