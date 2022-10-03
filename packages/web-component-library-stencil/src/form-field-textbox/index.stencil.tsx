@@ -32,10 +32,11 @@ export class FormFieldTextbox {
     const { autoComplete, disabled, invalid, min, max, pattern, placeholder, readOnly, required, type, value } = this;
 
     return (
-      <div class="utrecht-form-field-textbox">
+      <div class="utrecht-form-field-textbox utrecht-form-field--textbox">
         <input
           id="input"
           class={clsx(
+            'utrecht-form-field__input',
             'utrecht-textbox',
             'utrecht-textbox--html-input',
             disabled && 'utrecht-textbox--disabled',
@@ -60,7 +61,7 @@ export class FormFieldTextbox {
             this.utrechtInput.emit(evt);
           }}
         />
-        <label class="utrecht-form-field-textbox__label utrecht-form-label" htmlFor="input">
+        <label class="utrecht-form-field__label utrecht-form-label" htmlFor="input">
           <slot></slot>
         </label>
       </div>

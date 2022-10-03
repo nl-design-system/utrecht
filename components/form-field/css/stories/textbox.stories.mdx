@@ -1,0 +1,115 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormFieldTextbox } from "../story-template";
+import "../../../checkbox/css/index.scss";
+import "../../../form-label/css/index.scss";
+import "../index.scss";
+
+<Meta
+  id="css-form-field"
+  title="CSS Component/Form field/with textbox"
+  component={FormFieldTextbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+## label
+
+<Canvas>
+  <Story
+    name="label"
+    args={{
+      ...exampleArgs,
+      id: "172cd71b-8854-41ee-bcdc-9c8ac856c5d1",
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Heading as label
+
+<Canvas>
+  <Story
+    name="Heading as label"
+    args={{
+      ...exampleArgs,
+      id: "5657eb52-c943-4106-85dd-9a3926a9155a",
+      headingLevel: 1,
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+# Form field with description
+
+<Canvas>
+  <Story
+    name="description"
+    args={{
+      ...exampleArgs,
+      id: "c2d1cc9c-4ec4-4806-8fc7-caa66fc4986a",
+      description: "Do not use any emoji characters.",
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+# invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      ...exampleArgs,
+      value: "I ❤️ NY",
+      id: "5da58629-c3d5-4fad-bb7c-eca1f8df972e",
+      description: "Do not use any emoji characters.",
+      invalid: true,
+      invalidDescription: "Remove the emoji characters from the subject.",
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Rich text description
+
+<Canvas>
+  <Story
+    name="Rich text description"
+    args={{
+      ...exampleArgs,
+      id: "fb436ace-88ff-4a38-b7ca-b03bbf43a7c0",
+      description: (
+        <>
+          <p className="utrecht-paragraph">Your new password needs to meet these requirements:</p>
+          <ul className="utrecht-unordered-list">
+            <li>At least 1 character</li>
+            <li>No more than 2 characters</li>
+            <li>Use at least one uppercase letter and one lowercase letter.</li>
+          </ul>
+        </>
+      ),
+      invalidDescription: (
+        <>
+          <p className="utrecht-paragraph">Your new password does not meet these requirements:</p>
+          <ul className="utrecht-unordered-list">
+            <li>Your password is too long.</li>
+            <li>Use at least one uppercase letter.</li>
+          </ul>
+        </>
+      ),
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>

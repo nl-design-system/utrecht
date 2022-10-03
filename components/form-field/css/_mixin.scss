@@ -14,3 +14,127 @@
 @mixin utrecht-form-field--distanced {
   --utrecht-space-around: 1;
 }
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-form-field--text {
+}
+
+@mixin utrecht-form-field--text-flex {
+  --utrecht-space-around: 0;
+
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin utrecht-form-field--text-grid {
+  --utrecht-space-around: 0;
+
+  display: grid;
+  grid-template-areas: "label" "description" "description-before" "description-invalid" "input" "description-after";
+}
+
+@mixin utrecht-form-field--option {
+  display: grid;
+  font-family: var(--utrecht-document-font-family, inherit);
+  gap: 0 var(--utrecht-space-inline-sm);
+  grid-template-areas: "input label" ". description";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto;
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-field-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-field-margin-block-start, 0));
+  max-inline-size: var(--utrecht-form-field-max-inline-size);
+  page-break-inside: avoid;
+}
+
+@mixin utrecht-form-field--invalid {
+  border-inline-start-color: var(--utrecht-form-field-invalid-border-inline-start-color);
+  border-inline-start-style: solid;
+  border-inline-start-width: var(--utrecht-form-field-invalid-border-inline-start-width);
+  padding-inline-start: var(--utrecht-form-field-invalid-padding-inline-start);
+}
+
+@mixin utrecht-form-field__input {
+  grid-area: input;
+  order: 5;
+}
+
+@mixin utrecht-form-field__label {
+  /* Assign the margin-block-end to padding instead, so the clickable area of the label increases
+  and we avoid a small gap between the label and input that cannot be clicked to focus the input. */
+  grid-area: label;
+  margin-block-end: var(--utrecht-form-field-label-margin-block-end);
+
+  // padding-block-end: var(--utrecht-form-field-label-margin-block-end);
+  margin-block-start: 0;
+  order: 1;
+}
+
+@mixin utrecht-form-field__description {
+  grid-area: description;
+  margin-block-end: var(--utrecht-form-field-description-margin-block-end);
+  margin-block-start: var(--utrecht-form-field-description-margin-block-start);
+  order: 2;
+}
+
+@mixin utrecht-form-field__description--invalid {
+  grid-area: description-invalid;
+  order: 3;
+}
+
+@mixin utrecht-form-field__description--after {
+  grid-area: description-after;
+  order: 6;
+}
+
+@mixin utrecht-form-field__description--before {
+  grid-area: description-before;
+  order: 4;
+}
+
+@mixin utrecht-form-field--checkbox {
+  display: grid;
+  gap: 0 var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+  grid-template-areas: "input label" "input description" "input description-invalid";
+  grid-template-columns: var(--utrecht-custom-checkbox-size) 100fr;
+
+  /*
+  .utrecht-form-field__label .utrecht-form-field__input {
+    margin-inline-start: calc(
+      -1 * (var(--utrecht-custom-checkbox-size) + var(--utrecht-custom-checkbox-margin-inline-end, 12px))
+    );
+    margin-inline-end: var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+  }
+  */
+  .utrecht-form-field__label:has(.utrecht-form-field__input) {
+    margin-inline-start: calc(
+      -1 * (var(--utrecht-custom-checkbox-size) + var(--utrecht-custom-checkbox-margin-inline-end, 12px))
+    );
+  }
+  .utrecht-form-field__label .utrecht-form-field__input {
+    margin-inline-end: var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+  }
+}
+
+@mixin utrecht-form-field--radio {
+  display: grid;
+  gap: 0 var(--utrecht-custom-radio-button-margin-inline-end, 12px);
+  grid-template-areas: "input label" "input description" "input description-invalid";
+  grid-template-columns: var(--utrecht-custom-radio-button-size) 100fr;
+
+  /*
+  .utrecht-form-field__label .utrecht-form-field__input {
+    margin-inline-start: calc(
+      -1 * (var(--utrecht-custom-checkbox-size) + var(--utrecht-custom-checkbox-margin-inline-end, 12px))
+    );
+    margin-inline-end: var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+  }
+  */
+  .utrecht-form-field__label:has(.utrecht-form-field__input) {
+    margin-inline-start: calc(
+      -1 * (var(--utrecht-custom-radio-button-size) + var(--utrecht-custom-radio-button-margin-inline-end, 12px))
+    );
+  }
+  .utrecht-form-field__label .utrecht-form-field__input {
+    margin-inline-end: var(--utrecht-custom-radio-button-margin-inline-end, 12px);
+  }
+}

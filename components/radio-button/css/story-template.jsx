@@ -22,9 +22,16 @@ export const defaultArgs = {
   disabled: false,
 };
 
-export const RadioButton = ({ checked = defaultArgs.checked, disabled = defaultArgs.disabled }) => (
+export const RadioButton = ({
+  id,
+  checked = defaultArgs.checked,
+  disabled = defaultArgs.disabled,
+  name = defaultArgs.name,
+}) => (
   <input
     type="radio"
+    id={id || null}
+    name={name || null}
     checked={checked || null}
     disabled={disabled || null}
     className={clsx(

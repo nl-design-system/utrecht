@@ -12,3 +12,43 @@
 .utrecht-form-field--distanced {
   @include utrecht-form-field--distanced;
 }
+
+.utrecht-form-field--invalid {
+  @include utrecht-form-field--invalid;
+}
+
+.utrecht-form-field--text {
+  @include utrecht-form-field--text;
+}
+
+.utrecht-form-field--checkbox {
+  @include utrecht-form-field--checkbox;
+}
+
+.utrecht-form-field--radio {
+  @include utrecht-form-field--radio;
+}
+
+.utrecht-form-field__input {
+  @include utrecht-form-field__input;
+}
+
+.utrecht-form-field__label {
+  @include utrecht-form-field__label;
+}
+
+.utrecht-form-field .utrecht-form-field-description {
+  @include utrecht-form-field__description;
+}
+
+.utrecht-form-field .utrecht-form-field-description--invalid {
+  @include utrecht-form-field__description--invalid;
+}
+
+.utrecht-form-field__description {
+  @include utrecht-form-field__description;
+}
+
+.utrecht-form-field__description--before {
+  @include utrecht-form-field__description--before;
+}

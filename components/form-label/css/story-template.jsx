@@ -35,18 +35,24 @@ export const FormLabel = ({
   disabled = defaultArgs.disabled,
   textContent = defaultArgs.textContent,
   type = defaultArgs.type,
+  className,
+  children,
+  ...restProps
 }) => (
-  <span
+  <label
+    {...restProps}
     className={clsx(
       'utrecht-form-label',
       type === 'checkbox' && 'utrecht-form-label--checkbox',
       checked && 'utrecht-form-label--checked',
       disabled && 'utrecht-form-label--disabled',
       type === 'radio' && 'utrecht-form-label--radio',
+      className,
     )}
   >
     {textContent}
-  </span>
+    {children}
+  </label>
 );
 
 export default FormLabel;
