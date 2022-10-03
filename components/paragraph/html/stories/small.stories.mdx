@@ -1,0 +1,31 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { exampleArgs, Paragraph } from "../story-template";
+
+<Meta
+  id="html-paragraph"
+  title="HTML Component/Paragraph"
+  component={Paragraph}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Small print paragraph
+
+Styling via the `<p>` element with a `small` element:
+
+<Canvas>
+  <Story
+    name="Small print"
+    args={{
+      ...exampleArgs,
+      small: true,
+    }}
+  >
+    {Paragraph.bind({})}
+  </Story>
+</Canvas>

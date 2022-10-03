@@ -8,15 +8,25 @@ import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'rea
 
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
   lead?: boolean;
+  small?: boolean;
 }
 
 export const Paragraph = forwardRef(
   (
-    { children, className, lead, ...restProps }: PropsWithChildren<ParagraphProps>,
+    { children, className, lead, small, ...restProps }: PropsWithChildren<ParagraphProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => (
-    <p {...restProps} ref={ref} className={clsx('utrecht-paragraph', lead && 'utrecht-paragraph--lead', className)}>
-      {children}
+    <p
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'utrecht-paragraph',
+        lead && 'utrecht-paragraph--lead',
+        small && 'utrecht-paragraph--small',
+        className,
+      )}
+    >
+      {small ? <small className="utrecht-paragraph__small">{children}</small> : children}
     </p>
   ),
 );

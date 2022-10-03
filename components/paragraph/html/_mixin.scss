@@ -19,4 +19,12 @@
   * ~ p {
     @include utrecht-paragraph--distanced;
   }
+
+  p:has(> small:only-child) {
+    @include utrecht-paragraph--small;
+  }
+
+  p > small:only-child {
+    @include utrecht-paragraph__html-small;
+  }
 }
