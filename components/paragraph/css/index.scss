@@ -13,6 +13,14 @@
   @include utrecht-paragraph--lead;
 }
 
+.utrecht-paragraph--small {
+  @include utrecht-paragraph--small;
+}
+
+.utrecht-paragraph__small {
+  @include utrecht-paragraph__html-small;
+}
+
 .utrecht-paragraph--distanced {
   @include utrecht-paragraph--distanced;
 }

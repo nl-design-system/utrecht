@@ -16,12 +16,17 @@ export const argTypes = {
     description: 'Lead paragraph',
     control: 'boolean',
   },
+  small: {
+    description: 'Paragraph with small print',
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs = {
   distanced: false,
   lead: false,
   innerHTML: '',
+  small: false,
 };
 
 export const exampleArgs = {
@@ -33,17 +38,24 @@ export const Paragraph = ({
   distanced = defaultArgs.distanced,
   innerHTML = defaultArgs.innerHTML,
   lead = defaultArgs.lead,
-}) => (
-  <p
-    className={clsx('utrecht-paragraph', {
-      'utrecht-paragraph--distanced': distanced,
-      'utrecht-paragraph--lead': lead,
-    })}
-  >
-    {parse(innerHTML)}
-  </p>
-);
+  small = defaultArgs.small,
+}) => {
+  const content = parse(innerHTML);
+  return (
+    <p
+      className={clsx('utrecht-paragraph', {
+        'utrecht-paragraph--distanced': distanced,
+        'utrecht-paragraph--lead': lead,
+        'utrecht-paragraph--small': small,
+      })}
+    >
+      {small ? <small className="utrecht-paragraph__small">{content}</small> : content}
+    </p>
+  );
+};
 
-export const Paragraphs = ({ items = [] }) => <>{items.map(Paragraph)}</>;
+export const Paragraphs = ({ items = [] }) => (
+  <div>{[items.map((args, index) => <Paragraph key={index} {...args} />)]}</div>
+);
 
 export default Paragraph;

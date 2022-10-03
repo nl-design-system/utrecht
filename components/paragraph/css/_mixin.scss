@@ -20,6 +20,17 @@
   line-height: var(--utrecht-paragraph-lead-line-height, var(--utrecht-paragraph-line-height, inherit));
 }
 
+@mixin utrecht-paragraph--small {
+  color: var(--utrecht-paragraph-small-color, var(--utrecht-paragraph-color, var(--utrecht-document-color, inherit)));
+  font-size: var(--utrecht-paragraph-small-font-size, var(--utrecht-paragraph-font-size, inherit));
+  font-weight: var(--utrecht-paragraph-small-font-weight, var(--utrecht-paragraph-font-weight, inherit));
+  line-height: var(--utrecht-paragraph-small-line-height, var(--utrecht-paragraph-line-height, inherit));
+}
+
+@mixin utrecht-paragraph__html-small {
+  font-size: inherit;
+}
+
 @mixin utrecht-paragraph--distanced {
   --utrecht-space-around: 1;
 }
