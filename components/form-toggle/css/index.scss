@@ -27,6 +27,7 @@
   border-style: var(--utrecht-form-toggle-border-style, solid);
   border-width: var(--utrecht-form-toggle-border-width, 1px);
   color: var(--utrecht-form-toggle-color);
+  cursor: var(--utrecht-action-activate-cursor);
   display: flex;
   height: var(--utrecht-form-toggle-height, 2em);
   padding-block-end: var(--utrecht-form-toggle-padding-block-end);
