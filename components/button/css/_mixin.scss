@@ -54,11 +54,8 @@
     )
   );
   --_utrecht-button-disabled-color: var(
-    --utrecht-hint-button-disabled-color,
-    var(
-      --utrecht-button-appearance-button-disabled-color,
-      var(--utrecht-button-disabled-color, var(--utrecht-button-color))
-    )
+    --_utrecht-button-hint-disabled-color,
+    var(--_utrecht-button-appearance-disabled-color, var(--utrecht-button-disabled-color, var(--utrecht-button-color)))
   );
   --_utrecht-button-focus-background-color: var(
     --_utrecht-button-hint-focus-background-color,
@@ -185,6 +182,7 @@
   border-bottom-width: var(--_utrecht-button-border-bottom-width);
   box-sizing: border-box;
   color: var(--_utrecht-button-color);
+  cursor: var(--utrecht-action-activate-cursor);
   display: inline-flex;
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
