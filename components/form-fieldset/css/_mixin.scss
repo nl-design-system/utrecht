@@ -4,6 +4,7 @@
  */
 
 @mixin reset-fieldset {
+  all: revert;
   border: 0;
   margin-inline-end: 0;
   margin-inline-start: 0;
@@ -15,6 +16,7 @@
 }
 
 @mixin reset-legend {
+  display: table;
   inline-size: 100%;
   padding-inline-end: 0;
   padding-inline-start: 0;
@@ -31,6 +33,22 @@
 
 @mixin utrecht-form-fieldset--distanced {
   --utrecht-space-around: 1;
+}
+
+@mixin utrecht-form-fieldset--invalid {
+  border-inline-start-color: var(
+    --utrecht-form-fieldset-invalid-border-inline-start-color,
+    var(--utrecht-form-field-invalid-border-inline-start-color)
+  );
+  border-inline-start-style: solid;
+  border-inline-start-width: var(
+    --utrecht-form-fieldset-invalid-border-inline-start-width,
+    var(--utrecht-form-field-invalid-border-inline-start-width)
+  );
+  padding-inline-start: var(
+    --utrecht-form-fieldset-invalid-padding-inline-start,
+    var(--utrecht-form-field-invalid-padding-inline-start)
+  );
 }
 
 @mixin utrecht-form-fieldset__legend {

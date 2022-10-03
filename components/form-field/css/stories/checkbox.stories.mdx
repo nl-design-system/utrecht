@@ -1,0 +1,136 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormFieldCheckbox } from "../story-template";
+import "../../../checkbox/css/index.scss";
+import "../../../form-label/css/index.scss";
+import "../index.scss";
+
+export
+
+<Meta
+  id="css-form-field-checkbox"
+  title="CSS Component/Form field/with one checkbox"
+  component={FormFieldCheckbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# label
+
+<Canvas>
+  <Story
+    name="label"
+    args={{
+      ...exampleArgs,
+      id: "172cd71b-8854-41ee-bcdc-9c8ac856c5d1",
+      label: "Ik ga akkoord met de algemene voorwaarden",
+      type: "checkbox",
+    }}
+  >
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+# Form field with description
+
+<Canvas>
+  <Story
+    name="description"
+    args={{
+      ...exampleArgs,
+      id: "7cdd4f82-e7eb-4573-bad3-2b520aac504b",
+      label: "Ik ga akkoord met de algemene voorwaarden",
+      description: "U kunt ons echt vertrouwen!",
+      type: "checkbox",
+    }}
+  >
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      ...exampleArgs,
+      id: "6cfb69fc-3a52-4fd8-b8a1-0c2d0dfb11ed",
+      label: "Ik ga akkoord met de algemene voorwaarden",
+      description: "U kunt ons echt vertrouwen!",
+      invalid: true,
+      required: true,
+      invalidDescription: "U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.",
+      type: "checkbox",
+    }}
+  >
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Right-to-left script
+
+<Canvas>
+  <Story
+    name="Right-to-left script"
+    decorators={[
+      (Story) => (
+        <div lang="ar" dir="rtl">
+          {Story()}
+        </div>
+      ),
+    ]}
+    args={{
+      ...exampleArgs,
+      id: "2d692d60-e111-4582-a487-385cdbd3f994",
+      label: "أوافق على الشروط",
+      description: "يمكنك حقا أن تثق بنا!",
+      invalid: true,
+      required: true,
+      invalidDescription: "يجب أن توافق على الشروط والأحكام وإلا فلن تتمكن من المتابعة.",
+      type: "checkbox",
+    }}
+  >
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Rich text description
+
+<Canvas>
+  <Story
+    name="Rich text description"
+    args={{
+      ...exampleArgs,
+      id: "f23a0d30-29b5-4e82-a6e5-7eb83e5cd47a",
+      description: (
+        <>
+          <p className="utrecht-paragraph">Your new password needs to meet these requirements:</p>
+          <ul className="utrecht-unordered-list">
+            <li>At least 1 character</li>
+            <li>No more than 2 characters</li>
+            <li>Use at least one uppercase letter and one lowercase letter.</li>
+          </ul>
+        </>
+      ),
+      invalidDescription: (
+        <>
+          <p className="utrecht-paragraph">Your new password does not meet these requirements:</p>
+          <ul className="utrecht-unordered-list">
+            <li>Your password is too long.</li>
+            <li>Use at least one uppercase letter.</li>
+          </ul>
+        </>
+      ),
+      type: "checkbox",
+    }}
+  >
+    {FormFieldCheckbox.bind({})}
+  </Story>
+</Canvas>

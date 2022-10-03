@@ -4,6 +4,8 @@
  */
 
 @mixin utrecht-form-field-description {
+  --utrecht-document-color: currentColor;
+
   color: var(--utrecht-form-field-description-color);
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-form-field-description-font-size, inherit);
@@ -16,6 +18,10 @@
     var(--utrecht-space-around, 0) *
       var(--utrecht-form-field-description-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
+
+  & > * {
+    --utrecht-space-around: 1;
+  }
 }
 
 @mixin utrecht-form-field-description--distanced {

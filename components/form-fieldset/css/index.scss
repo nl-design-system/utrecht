@@ -33,3 +33,7 @@
 .utrecht-form-fieldset__legend--distanced {
   @include utrecht-form-fieldset__legend--distanced;
 }
+
+.utrecht-form-fieldset--invalid {
+  @include utrecht-form-fieldset--invalid;
+}

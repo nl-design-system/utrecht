@@ -44,6 +44,8 @@ export const FormFieldDescription = ({
   innerHTML = defaultArgs.innerHTML,
   status = defaultArgs.status,
   distanced = defaultArgs.distanced,
+  className,
+  children,
 }) => (
   <div
     id={id}
@@ -53,8 +55,10 @@ export const FormFieldDescription = ({
       status === 'invalid' && 'utrecht-form-field-description--invalid',
       status === 'valid' && 'utrecht-form-field-description--valid',
       status === 'warning' && 'utrecht-form-field-description--warning',
+      className,
     )}
   >
+    {children}
     {parse(innerHTML)}
   </div>
 );

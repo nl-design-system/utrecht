@@ -128,8 +128,11 @@ export const Textbox = ({
   required = defaultArgs.required,
   type = defaultArgs.type,
   value = defaultArgs.value,
+  className,
+  ...restProps
 }) => (
   <input
+    {...restProps}
     className={clsx(
       'utrecht-textbox',
       'utrecht-textbox--html-input',
@@ -138,6 +141,7 @@ export const Textbox = ({
       invalid && 'utrecht-textbox--invalid',
       readOnly && 'utrecht-textbox--readonly',
       required && 'utrecht-textbox--required',
+      className,
     )}
     autoComplete={autocomplete || null}
     disabled={disabled || null}
@@ -146,7 +150,7 @@ export const Textbox = ({
     readOnly={readOnly || null}
     required={required || null}
     type={type || null}
-    value={value}
+    defaultValue={value}
   />
 );
 
