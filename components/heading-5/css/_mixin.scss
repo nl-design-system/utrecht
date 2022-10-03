@@ -15,7 +15,7 @@
     --utrecht-heading-5-font-family,
     var(--utrecht-heading-font-family, var(--utrecht-document-font-family))
   );
-  font-size: var(--utrecht-heading-5-font-size);
+  font-size: var(--utrecht-heading-5-font-size, revert);
   font-weight: var(--utrecht-heading-5-font-weight, var(--utrecht-heading-font-weight, bold));
   letter-spacing: var(--utrecht-heading-5-letter-spacing);
   line-height: var(--utrecht-heading-5-line-height);
