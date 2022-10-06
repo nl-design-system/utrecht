@@ -1,8 +1,11 @@
 {
   "utrecht": {
-    "marker": {
+    "map-marker": {
       "background-color": {
-        "value": "{utrecht.color.blue.20}"
+        "value": "{utrecht.color.blue.30}"
+      },
+      "color": {
+        "value": "{utrecht.color.white}"
       },
       "size": {
         "value": "48px"
@@ -17,9 +20,6 @@
         "value": "rgb(0 0 0 / 20%)"
       },
       "icon": {
-        "color": {
-          "value": "{utrecht.color.white}"
-        },
         "size": {
           "value": "30px"
         }

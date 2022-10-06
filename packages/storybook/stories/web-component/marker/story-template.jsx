@@ -20,12 +20,12 @@ export const defaultArgs = { icon: 'utrecht-icon-bestemmingsplan' };
 
 export const exampleArgs = { icon: 'utrecht-icon-loupe' };
 
-export const Marker = ({ icon = defaultArgs.icon }) => (
+export const MapMarker = ({ icon = defaultArgs.icon }) => (
   <div
     className="example-wrapper"
     style={{ backgroundColor: 'rgb(208 208 208)', display: 'flex', justifyContent: 'center', padding: '3rem' }}
   >
     {' '}
-    {parse(`<utrecht-marker><${icon}></${icon}></utrecht-marker>`)}
+    {parse(`<utrecht-map-marker><${icon}></${icon}></utrecht-map-marker>`)}
   </div>
 );
