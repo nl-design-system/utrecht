@@ -1,11 +1,11 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'utrecht-marker',
+  tag: 'utrecht-map-marker',
   styleUrl: './index.scss',
   shadow: true,
 })
-export class Marker {
+export class MapMarker {
   render() {
     return <slot></slot>;
   }
