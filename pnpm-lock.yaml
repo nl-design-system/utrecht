@@ -826,7 +826,7 @@ importers:
       '@types/node': 16.11.47
       '@types/react': 18.0.15
       '@types/react-dom': 18.0.6
-      '@utrecht/web-component-library-stencil': '*'
+      '@utrecht/web-component-library-stencil': workspace:*
       react: 18.2.0
       react-dom: 18.2.0
       rimraf: 3.0.2
@@ -840,7 +840,7 @@ importers:
       tslib: 2.4.0
       typescript: 4.3.5
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.343
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
     devDependencies:
       '@babel/core': 7.18.10
       '@babel/plugin-transform-runtime': 7.18.10_@babel+core@7.18.10
@@ -898,7 +898,7 @@ importers:
 
   packages/web-component-library-vue:
     specifiers:
-      '@utrecht/web-component-library-stencil': '*'
+      '@utrecht/web-component-library-stencil': workspace:*
       '@vitejs/plugin-vue': 3.0.1
       '@vue/tsconfig': 0.1.3
       rimraf: 3.0.2
@@ -908,7 +908,7 @@ importers:
       vue: 3.2.37
       vue-tsc: 0.39.4
     dependencies:
-      '@utrecht/web-component-library-stencil': 1.0.0-alpha.343
+      '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
     devDependencies:
       '@vitejs/plugin-vue': 3.0.1_vite@3.0.4+vue@3.2.37
       '@vue/tsconfig': 0.1.3
@@ -12577,13 +12577,6 @@ packages:
       '@typescript-eslint/types': 5.36.1
       eslint-visitor-keys: 3.3.0
     dev: true
-
-  /@utrecht/web-component-library-stencil/1.0.0-alpha.343:
-    resolution: {integrity: sha512-iNZR5cNQlz+TVZh+WwompMTPSX+5Tpr/PbHZwMZJuO1jbjQP3By8Jf4vAbrEEiN2aPeG/STVHmQ9540e4Scvhw==}
-    dependencies:
-      '@stencil/angular-output-target': 0.4.0_@stencil+core@2.17.2
-      '@stencil/core': 2.17.2_vk6ep37heit6vyo4vmbdvcj5pm
-    dev: false
 
   /@vitejs/plugin-vue-jsx/1.3.10:
     resolution: {integrity: sha512-Cf5zznh4yNMiEMBfTOztaDVDmK1XXfgxClzOSUVUc8WAmHzogrCUeM8B05ABzuGtg0D1amfng+mUmSIOFGP3Pw==}
