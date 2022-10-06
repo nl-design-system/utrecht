@@ -13,13 +13,6 @@
         "outputPath": "componentss/icon/dist"
       },
       "dependsOn": ["^build"]
-    },
-    "lint": {
-      "executor": "@nrwl/workspace:run-commands",
-      "options": {
-        "command": "npm run lint",
-        "cwd": "components/icon"
-      }
     }
   }
 }

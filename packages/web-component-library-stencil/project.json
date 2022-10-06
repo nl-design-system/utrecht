@@ -8,6 +8,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "outputs": [
         "{projectRoot}/dist",
+        "{projectRoot}/src/components.d.ts",
         "{workspaceRoot}/packages/web-component-library-angular/src/directives/",
         "{workspaceRoot}/packages/web-component-library-react/src/components.ts",
         "{workspaceRoot}/packages/web-component-library-react/src/react-component-lib/",
