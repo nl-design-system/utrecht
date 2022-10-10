@@ -19,7 +19,7 @@ export const LinkSocial = forwardRef(
       {...restProps}
       ref={ref}
       className={clsx('utrecht-link-social', className)}
-      rel={external ? 'external noopener noreferrer' : undefined}
+      rel={external !== false ? 'external noopener noreferrer' : undefined}
     >
       {children}
     </a>
