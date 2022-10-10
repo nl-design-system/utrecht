@@ -5,14 +5,14 @@
 
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-export interface LinkProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
-  boxContent?: boolean;
+
+export interface LinkSocialProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
   external?: boolean;
 }
 
 export const LinkSocial = forwardRef(
   (
-    { children, className, external, ...restProps }: PropsWithChildren<LinkProps>,
+    { children, className, external, ...restProps }: PropsWithChildren<LinkSocialProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => (
     <a
