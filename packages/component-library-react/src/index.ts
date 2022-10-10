@@ -30,6 +30,7 @@ export { Heading4 } from './Heading4';
 export { Heading5 } from './Heading5';
 export { Heading6 } from './Heading6';
 export { HeadingGroup } from './HeadingGroup';
+export { Icon } from './Icon';
 export { Image } from './Image';
 export { Link } from './Link';
 export { LinkButton } from './LinkButton';
