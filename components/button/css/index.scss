@@ -39,7 +39,7 @@
   @include utrecht-focus-visible;
 }
 
-.utrecht-button--focus {
+.utrecht-button--focus:not(.utrecht-button--disabled) {
   @include utrecht-button--focus;
 }
 
@@ -47,6 +47,12 @@
 // keep the ideal version around to restore it easily when browser support improves.
 
 @if $utrecht-focus-visible-fallback {
+  .utrecht-button:focus {
+    /* Show focus ring even for disabled :focus-visible buttons. *
+    /* For example: <button disabled tabindex="0"> */
+    @include utrecht-focus-ring;
+  }
+
   .utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
     @include utrecht-button--focus;
     @include utrecht-button--focus-visible;
@@ -67,7 +73,7 @@
   }
 }
 
-.utrecht-button--hover:not(:disabled),
+.utrecht-button--hover:not(:disabled):not(.utrecht-button--disabled),
 .utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
   @include utrecht-button--hover;
 }

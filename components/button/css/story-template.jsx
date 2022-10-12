@@ -134,9 +134,17 @@ const ButtonTableRow = ({ appearance, hint, textContent, icon }) => (
     <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, hover: true })}</td>
     <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, focus: true })}</td>
     <td className="utrecht-table__cell">
+      {Button({ appearance, hint, textContent, hover: true, focus: true, focusVisible: true })}
+    </td>
+    <td className="utrecht-table__cell">
       {Button({ appearance, hint, textContent, focus: true, focusVisible: true })}
     </td>
     <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true })}</td>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true, hover: true })}</td>
+    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true, focus: true })}</td>
+    <td className="utrecht-table__cell">
+      {Button({ appearance, hint, textContent, disabled: true, focus: true, focusVisible: true })}
+    </td>
     {icon && (
       <td className="utrecht-table__cell">
         {Button({
@@ -172,11 +180,15 @@ export const ButtonTable = ({
         <tr className="utrecht-table__row">
           <th className="utrecht-table__header-cell"></th>
           <th className="utrecht-table__header-cell">Default</th>
-          <th className="utrecht-table__header-cell">Active</th>
+          <th className="utrecht-table__header-cell">Active or Pressed</th>
           <th className="utrecht-table__header-cell">Hover</th>
           <th className="utrecht-table__header-cell">Focus</th>
           <th className="utrecht-table__header-cell">Focus visible</th>
+          <th className="utrecht-table__header-cell">Hover + Focus visible</th>
           <th className="utrecht-table__header-cell">Disabled</th>
+          <th className="utrecht-table__header-cell">Disabled + Hover</th>
+          <th className="utrecht-table__header-cell">Disabled + Focus</th>
+          <th className="utrecht-table__header-cell">Disabled + Focus visible</th>
           {icon && <th className="utrecht-table__header-cell">With icon</th>}
         </tr>
       </thead>
