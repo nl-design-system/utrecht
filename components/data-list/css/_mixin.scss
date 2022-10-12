@@ -20,9 +20,9 @@
 }
 
 @mixin utrecht-data-list-item-key {
-  border-right-color: var(--utrecht-data-list-item-key-border-right-color, transparent);
-  border-right-style: solid;
-  border-right-width: var(--utrecht-data-list-item-key-border-right-width, 0);
+  border-inline-end-color: var(--utrecht-data-list-item-key-border-inline-end-color, transparent);
+  border-inline-end-style: solid;
+  border-inline-end-width: var(--utrecht-data-list-item-key-border-inline-end-width, 0);
   color: var(--utrecht-data-list-item-key-color);
   font-size: var(--utrecht-data-list-item-key-font-size);
   font-weight: var(--utrecht-data-list-item-key-font-weight);
@@ -62,9 +62,9 @@
   );
   --_utrecht-auto-col: minmax(var(--_utrecht-minmax), max-content);
 
-  border-bottom-color: var(--utrecht-data-list-rows-border-bottom-color, transparent);
-  border-bottom-style: solid;
-  border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
+  border-block-end-color: var(--utrecht-data-list-rows-border-block-end-color, transparent);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-data-list-rows-border-block-end-width, 0);
   display: grid;
   gap: 0 var(--utrecht-data-list-rows-gap);
   grid-auto-columns: 1fr;
@@ -82,6 +82,10 @@
   grid-column: -1;
   grid-row: 1;
   justify-content: flex-end;
+  padding-block-end: var(--utrecht-data-list-actions-padding-block-end, 0);
+  padding-block-start: var(--utrecht-data-list-actions-padding-block-start, 0);
+  padding-inline-end: var(--utrecht-data-list-actions-padding-inline-end, 0);
+  padding-inline-start: var(--utrecht-data-list-actions-padding-inline-start, 0);
 }
 
 @mixin utrecht-data-list__item-value--rows {
