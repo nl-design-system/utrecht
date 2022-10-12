@@ -124,37 +124,104 @@ export const Button = ({
   );
 };
 
-const ButtonTableRow = ({ appearance, hint, textContent, icon }) => (
-  <tr className="utrecht-table__row" key={appearance}>
-    <th className="utrecht-table__header-cell">
-      {appearance} {hint || ''}
-    </th>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent })}</td>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, active: true })}</td>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, hover: true })}</td>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, focus: true })}</td>
-    <td className="utrecht-table__cell">
-      {Button({ appearance, hint, textContent, hover: true, focus: true, focusVisible: true })}
-    </td>
-    <td className="utrecht-table__cell">
-      {Button({ appearance, hint, textContent, focus: true, focusVisible: true })}
-    </td>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true })}</td>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true, hover: true })}</td>
-    <td className="utrecht-table__cell">{Button({ appearance, hint, textContent, disabled: true, focus: true })}</td>
-    <td className="utrecht-table__cell">
-      {Button({ appearance, hint, textContent, disabled: true, focus: true, focusVisible: true })}
-    </td>
+const ButtonTableBody = ({ variants, textContent, icon }) => (
+  <tbody className="utrecht--table__body">
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Default
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Active or Pressed
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, active: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Hover
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, hover: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Focus
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, focus: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Focus visible
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">
+          {Button({ ...variant, textContent, hover: true, focus: true, focusVisible: true })}
+        </td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Hover + Focus visible
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, focus: true, focusVisible: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Disabled
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, disabled: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Disabled + Hover
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, disabled: true, hover: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Disabled + Focus
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, disabled: true, focus: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell">Disabled + Focus visible</th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">
+          {Button({ ...variant, textContent, disabled: true, focus: true, focusVisible: true })}
+        </td>
+      ))}
+    </tr>
     {icon && (
-      <td className="utrecht-table__cell">
-        {Button({
-          appearance,
-          hint,
-          textContent: [textContent, <utrecht-icon-arrow></utrecht-icon-arrow>],
-        })}
-      </td>
+      <tr>
+        <th className="utrecht-table__header-cell">Icon</th>
+        {variants.map((variant) => (
+          <td className="utrecht-table__cell">
+            {Button({
+              ...variant,
+              textContent: [textContent, <utrecht-icon-arrow></utrecht-icon-arrow>],
+            })}
+          </td>
+        ))}
+      </tr>
     )}
-  </tr>
+  </tbody>
 );
 
 export const ButtonTable = ({
@@ -168,40 +235,96 @@ export const ButtonTable = ({
   readyHint = false,
   icon = false,
 }) => {
-  const appearances = [
-    defaultButton && 'button',
-    primaryActionButton && 'primary-action-button',
-    secondaryActionButton && 'secondary-action-button',
-    subtleButton && 'subtle-button',
-  ].filter(Boolean);
+  const variants = [
+    {
+      appearance: '',
+      enabled: defaultButton,
+      title: 'Default',
+    },
+    {
+      appearance: 'primary-action-button',
+      enabled: primaryActionButton,
+      title: 'Primary action',
+    },
+    {
+      appearance: 'primary-action-button',
+      hint: 'danger',
+      enabled: primaryActionButton && dangerHint,
+      title: 'Primary action + danger',
+    },
+    {
+      appearance: 'primary-action-button',
+      hint: 'warning',
+      enabled: primaryActionButton && warningHint,
+      title: 'Primary action + warning',
+    },
+    {
+      appearance: 'primary-action-button',
+      hint: 'ready',
+      enabled: primaryActionButton && readyHint,
+      title: 'Primary action + ready',
+    },
+    {
+      appearance: 'secondary-action-button',
+      enabled: secondaryActionButton,
+      title: 'Secondary action',
+    },
+    {
+      appearance: 'secondary-action-button',
+      hint: 'danger',
+      enabled: secondaryActionButton && dangerHint,
+      title: 'Secondary action + danger',
+    },
+    {
+      appearance: 'secondary-action-button',
+      hint: 'warning',
+      enabled: secondaryActionButton && warningHint,
+      title: 'Secondary action + warning',
+    },
+    {
+      appearance: 'secondary-action-button',
+      hint: 'ready',
+      enabled: secondaryActionButton && readyHint,
+      title: 'Secondary action + ready',
+    },
+    {
+      appearance: 'subtle-button',
+      enabled: subtleButton,
+      title: 'Subtle',
+    },
+    {
+      appearance: 'subtle-button',
+      hint: 'danger',
+      enabled: subtleButton && dangerHint,
+      title: 'Subtle + danger',
+    },
+    {
+      appearance: 'subtle-button',
+      hint: 'warning',
+      enabled: subtleButton && warningHint,
+      title: 'Subtle + warning',
+    },
+    {
+      appearance: 'subtle-button',
+      hint: 'ready',
+      enabled: subtleButton && readyHint,
+      title: 'Subtle + ready',
+    },
+  ].filter(({ enabled }) => enabled);
+
   return (
     <table className="utrecht-table" style={{ 'inline-size': 'auto' }}>
       <thead className="utrecht--table__header">
         <tr className="utrecht-table__row">
-          <th className="utrecht-table__header-cell"></th>
-          <th className="utrecht-table__header-cell">Default</th>
-          <th className="utrecht-table__header-cell">Active or Pressed</th>
-          <th className="utrecht-table__header-cell">Hover</th>
-          <th className="utrecht-table__header-cell">Focus</th>
-          <th className="utrecht-table__header-cell">Focus visible</th>
-          <th className="utrecht-table__header-cell">Hover + Focus visible</th>
-          <th className="utrecht-table__header-cell">Disabled</th>
-          <th className="utrecht-table__header-cell">Disabled + Hover</th>
-          <th className="utrecht-table__header-cell">Disabled + Focus</th>
-          <th className="utrecht-table__header-cell">Disabled + Focus visible</th>
-          {icon && <th className="utrecht-table__header-cell">With icon</th>}
+          <th></th>
+          {variants.map(({ title }) => (
+            <th className="utrecht-table__header-cell" scope="column">
+              {title}
+            </th>
+          ))}
         </tr>
       </thead>
-      <tbody className="utrecht--table__body">
-        {appearances.map((appearance) => (
-          <>
-            {ButtonTableRow({ appearance, hint: '', textContent, icon })}
-            {dangerHint && ButtonTableRow({ appearance, hint: 'danger', textContent, icon })}
-            {warningHint && ButtonTableRow({ appearance, hint: 'warning', textContent, icon })}
-            {readyHint && ButtonTableRow({ appearance, hint: 'ready', textContent, icon })}
-          </>
-        ))}
-      </tbody>
+      <ButtonTableBody variants={variants} textContent={textContent} icon={icon} />
     </table>
   );
 };
