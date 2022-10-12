@@ -22,13 +22,9 @@
         "margin-inline-end": { "value": "{utrecht.space.inline.xs}" }
       },
       "focus": {
-        "color": { "value": "{utrecht.focus.color}" },
-        "box-shadow-color": { "value": "{utrecht.focus.box-shadow-color}" },
-        "border-style": { "value": "{utrecht.focus.border-style}" },
+        "color": { "value": "{utrecht.color.black}" },
         "text-decoration": { "value": "none" },
-        "background-color": {},
-        "outline-color": { "value": "{utrecht.focus.outline-color}" },
-        "border-color": { "value": "{utrecht.focus.border-color}" }
+        "background-color": {}
       },
       "hover": {
         "background-color": { "value": "{utrecht.color.grey.90}" },

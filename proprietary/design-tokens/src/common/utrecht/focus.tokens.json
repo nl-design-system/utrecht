@@ -1,15 +1,13 @@
 {
   "utrecht": {
     "focus": {
-      "background-color": {},
-      "border-color": { "value": "{utrecht.color.black}" },
-      "border-style": { "value": "{utrecht.border-style.dotted}" },
-      "box-shadow-color": { "value": "{utrecht.color.white}" },
-      "box-shadow-spread-radius": { "value": "{utrecht.border-width.md}" },
-      "color": { "value": "{utrecht.color.black}" },
+      "background-color": { "value": "{utrecht.color.yellow.60}" },
       "outline-color": { "value": "{utrecht.color.black}" },
-      "outline-style": { "value": "{utrecht.border-style.dotted}" },
-      "outline-width": { "value": "{utrecht.border-width.md}" }
+      "outline-style": { "value": "dotted" },
+      "outline-width": { "value": "{utrecht.border-width.md}" },
+      "inverse": {
+        "outline-color": { "value": "{utrecht.color.white}" }
+      }
     }
   }
 }
