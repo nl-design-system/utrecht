@@ -35,12 +35,18 @@ export const exampleArgs = {
 };
 
 export const Paragraph = ({
+  children,
   distanced = defaultArgs.distanced,
   innerHTML = defaultArgs.innerHTML,
   lead = defaultArgs.lead,
   small = defaultArgs.small,
 }) => {
-  const content = parse(innerHTML);
+  const content = (
+    <>
+      {children}
+      {parse(innerHTML)}
+    </>
+  );
   return (
     <p
       className={clsx('utrecht-paragraph', {
@@ -49,7 +55,7 @@ export const Paragraph = ({
         'utrecht-paragraph--small': small,
       })}
     >
-      {small ? <small className="utrecht-paragraph__small">{content}</small> : content}
+      {small ? <small className="utrecht-paragraph__small">{content}</small> : <>{content}</>}
     </p>
   );
 };
