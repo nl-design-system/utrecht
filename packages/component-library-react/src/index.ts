@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
+export { Alert } from './Alert';
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
