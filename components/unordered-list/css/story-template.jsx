@@ -38,7 +38,14 @@ export const exampleArgs = {
   ],
 };
 
-export const UnorderedList = ({ distanced = defaultArgs.distanced, items = defaultArgs.items, nested = false }) => (
+export const UnorderedListItem = ({ children }) => <li className="utrecht-unordered-list__item">{children}</li>;
+
+export const UnorderedList = ({
+  children,
+  distanced = defaultArgs.distanced,
+  items = defaultArgs.items,
+  nested = false,
+}) => (
   <ul
     className={clsx(
       'utrecht-unordered-list',
@@ -46,11 +53,12 @@ export const UnorderedList = ({ distanced = defaultArgs.distanced, items = defau
       nested && 'utrecht-unordered-list--nested',
     )}
   >
+    {children}
     {items.map(({ items: subItems, innerHTML }, index) => (
-      <li className="utrecht-unordered-list__item" key={index}>
+      <UnorderedListItem key={index}>
         {parse(innerHTML)}
         {subItems && UnorderedList({ nested: true, items: subItems })}
-      </li>
+      </UnorderedListItem>
     ))}
   </ul>
 );
