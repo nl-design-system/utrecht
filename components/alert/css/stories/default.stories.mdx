@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Alert, argTypes, defaultArgs, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-alert"
+  title="CSS Component/Alert"
+  component={Alert}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Alert
+
+Styling via the `.utrecht-alert` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

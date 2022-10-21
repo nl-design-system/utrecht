@@ -1,0 +1,36 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@mixin utrecht-alert {
+  background-color: var(--_utrecht-alert-background-color, var(--utrecht-alert-background-color));
+  color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
+  display: grid;
+  gap: var(--utrecht-alert-icon-gap);
+  grid-template-areas: "icon message";
+  grid-template-columns: 0fr 100fr;
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-alert-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-alert-margin-block-start, 0));
+  padding-block-end: var(--utrecht-alert-padding-block-end);
+  padding-block-start: var(--utrecht-alert-padding-block-start);
+  padding-inline-end: var(--utrecht-alert-padding-inline-end);
+  padding-inline-start: var(--utrecht-alert-padding-inline-start);
+}
+
+@mixin utrecht-alert__icon {
+  --utrecht-icon-color: var(--_utrecht-alert-icon-color, var(--utrecht-alert-icon-color));
+
+  grid-area: icon;
+}
+
+@mixin utrecht-alert__message {
+  grid-area: message;
+}
+
+@mixin utrecht-alert-type($type) {
+  --_utrecht-alert-icon-color: var(--utrecht-alert-icon-#{$type}-color);
+  --_utrecht-alert-background-color: var(--utrecht-alert-#{$type}-background-color);
+  --_utrecht-alert-color: var(--utrecht-alert-#{$type}-color);
+}

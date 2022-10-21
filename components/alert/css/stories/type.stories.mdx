@@ -1,0 +1,76 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Alert, argTypes, defaultArgs, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-alert"
+  title="CSS Component/Alert"
+  component={Alert}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Alert type
+
+## Error
+
+<Canvas>
+  <Story
+    name="Error"
+    args={{
+      ...exampleArgs,
+      type: "error",
+    }}
+  >
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+## Warning
+
+<Canvas>
+  <Story
+    name="Warning"
+    args={{
+      ...exampleArgs,
+      type: "warning",
+    }}
+  >
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+## OK
+
+<Canvas>
+  <Story
+    name="OK"
+    args={{
+      ...exampleArgs,
+      type: "ok",
+    }}
+  >
+    {Alert.bind({})}
+  </Story>
+</Canvas>
+
+## Info
+
+<Canvas>
+  <Story
+    name="Info"
+    args={{
+      ...exampleArgs,
+      type: "info",
+    }}
+  >
+    {Alert.bind({})}
+  </Story>
+</Canvas>

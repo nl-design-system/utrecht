@@ -1,0 +1,51 @@
+{
+  "utrecht": {
+    "alert": {
+      "background-color": { "value": "{utrecht.color.blue.90}" },
+      "color": { "value": "{utrecht.color.black}" },
+      "padding-block-end": { "value": "{utrecht.space.block.lg}" },
+      "padding-block-start": { "value": "{utrecht.space.block.lg}" },
+      "padding-inline-end": { "value": "{utrecht.space.block.lg}" },
+      "padding-inline-start": { "value": "{utrecht.space.block.lg}" },
+      "info": {
+        "background-color": { "value": "{utrecht.color.blue.90}" },
+        "color": { "value": "{utrecht.color.black}" }
+      },
+      "error": {
+        "background-color": { "value": "{utrecht.color.red.95}" },
+        "color": { "value": "{utrecht.color.black}" }
+      },
+      "invalid": {
+        "background-color": { "value": "{utrecht.color.red.95}" },
+        "color": { "value": "{utrecht.color.black}" }
+      },
+      "warning": {
+        "background-color": { "value": "{utrecht.color.yellow.80}" },
+        "color": { "value": "{utrecht.color.black}" }
+      },
+      "ok": {
+        "background-color": { "value": "{utrecht.color.green.90}" },
+        "color": { "value": "{utrecht.color.black}" }
+      },
+      "icon": {
+        "color": { "value": "{utrecht.color.blue.35}" },
+        "gap": { "value": "{utrecht.space.column.md}" },
+        "info": {
+          "color": { "value": "{utrecht.color.blue.35}" }
+        },
+        "error": {
+          "color": { "value": "{utrecht.color.red.40}" }
+        },
+        "invalid": {
+          "color": { "value": "{utrecht.color.red.40}" }
+        },
+        "warning": {
+          "color": { "value": "{utrecht.color.yellow.40}" }
+        },
+        "ok": {
+          "color": { "value": "{utrecht.color.green.40}" }
+        }
+      }
+    }
+  }
+}

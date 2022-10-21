@@ -1,0 +1,35 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@import "./mixin";
+
+.utrecht-alert {
+  @include utrecht-alert;
+}
+
+.utrecht-alert__icon {
+  @include utrecht-alert__icon;
+}
+
+.utrecht-alert__message {
+  @include utrecht-alert__message;
+}
+
+.utrecht-alert--info {
+  @include utrecht-alert-type("info");
+}
+
+.utrecht-alert--ok {
+  @include utrecht-alert-type("ok");
+}
+
+.utrecht-alert--warning {
+  @include utrecht-alert-type("warning");
+}
+
+.utrecht-alert--error {
+  @include utrecht-alert-type("error");
+}
