@@ -34,10 +34,12 @@ export const exampleArgs = {
   ],
 };
 
-export const OrderedList = ({ distanced = defaultArgs.distanced, items = defaultArgs.items }) => (
+export const OrderedListItem = ({ children }) => <li className="utrecht-ordered-list__item">{children}</li>;
+export const OrderedList = ({ children, distanced = defaultArgs.distanced, items = defaultArgs.items }) => (
   <ol className={clsx('utrecht-ordered-list', distanced && 'utrecht-ordered-list--distanced')}>
+    {children}
     {items.map(({ textContent }) => (
-      <li className="utrecht-ordered-list__item">{textContent}</li>
+      <OrderedListItem>{textContent}</OrderedListItem>
     ))}
   </ol>
 );
