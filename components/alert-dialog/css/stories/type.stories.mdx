@@ -5,7 +5,7 @@ import { ButtonGroup } from "../../../button-group/css/story-template";
 import { Button } from "../../../button/css/story-template";
 import { Heading1 } from "../../../heading-1/css/story-template";
 import { Paragraph } from "../../../paragraph/css/story-template";
-import { AlertDialog, argTypes, defaultArgs } from "../story-template";
+import { AlertDialog, argTypes, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="css-alert-dialog"
@@ -28,6 +28,7 @@ import { AlertDialog, argTypes, defaultArgs } from "../story-template";
   <Story
     name="Error"
     args={{
+      ...exampleArgs,
       children: (
         <form method="dialog">
           <Heading1>Formulier opslaan niet gelukt!</Heading1>
@@ -45,7 +46,7 @@ import { AlertDialog, argTypes, defaultArgs } from "../story-template";
       ),
       type: "error",
     }}
-    height="1024px"
+    height="320px"
   >
     {AlertDialog.bind({})}
   </Story>
@@ -57,6 +58,7 @@ import { AlertDialog, argTypes, defaultArgs } from "../story-template";
   <Story
     name="Warning"
     args={{
+      ...exampleArgs,
       children: (
         <form method="dialog">
           <Heading1>Wilt u ingelogd blijven?</Heading1>
@@ -72,7 +74,7 @@ import { AlertDialog, argTypes, defaultArgs } from "../story-template";
       ),
       type: "warning",
     }}
-    height="1024px"
+    height="320px"
   >
     {AlertDialog.bind({})}
   </Story>
@@ -84,6 +86,7 @@ import { AlertDialog, argTypes, defaultArgs } from "../story-template";
   <Story
     name="Info"
     args={{
+      ...exampleArgs,
       children: (
         <form method="dialog">
           <Heading1>U bent nu uitgelogd</Heading1>
@@ -101,7 +104,7 @@ import { AlertDialog, argTypes, defaultArgs } from "../story-template";
       ),
       type: "info",
     }}
-    height="1024px"
+    height="320px"
   >
     {AlertDialog.bind({})}
   </Story>

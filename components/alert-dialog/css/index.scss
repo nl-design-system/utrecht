@@ -6,7 +6,13 @@
 
 @import "./mixin";
 
-.utrecht-alert-dialog {
+/*
+Apply `.utrecht-alert-dialog` to any element with this class name, with one exception.
+
+The HTML `<dialog>` element must have `display: none` until the `open` attribute is set,
+so do not apply these styles to an HTML `<dialog>` element without `open` attribute.
+*/
+.utrecht-alert-dialog:not(dialog:not([open])) {
   @include utrecht-alert-dialog;
 }
 

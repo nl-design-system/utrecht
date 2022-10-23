@@ -6,15 +6,18 @@
 
 @mixin utrecht-backdrop {
   background-color: var(--utrecht-backdrop-background-color);
-  bottom: 0;
   color: var(--utrecht-backdrop-color);
+  opacity: var(--utrecht-backdrop-opacity);
+  user-select: none;
+}
+
+@mixin utrecht-backdrop--position {
+  bottom: 0;
   display: block;
   left: 0;
-  opacity: var(--utrecht-backdrop-opacity);
   position: absolute;
   right: 0;
   top: 0;
-  user-select: none;
   z-index: var(--utrecht-backdrop-z-index);
 }
 

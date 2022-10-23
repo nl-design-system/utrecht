@@ -8,6 +8,9 @@
 @import "../../backdrop/css/mixin";
 
 @mixin utrecht-alert-dialog {
+  --utrecht-alert-dialog-margin-block-start: auto;
+  --utrecht-alert-dialog-margin-block-end: auto;
+
   @include utrecht-alert;
 
   border-color: var(--utrecht-alert-dialog-border-color);
