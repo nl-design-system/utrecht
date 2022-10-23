@@ -15,6 +15,8 @@
 
 @mixin utrecht-radio-button {
   @include reset-input-type-radio;
+
+  cursor: var(--utrecht-action-activate-cursor, revert);
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -22,7 +24,7 @@
 }
 
 @mixin utrecht-radio-button--disabled {
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, revert);
 }
 
 @mixin utrecht-radio-button--focus {

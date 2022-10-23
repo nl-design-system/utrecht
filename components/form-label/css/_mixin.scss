@@ -11,6 +11,7 @@
 
 @mixin utrecht-form-label--checkbox {
   color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  cursor: var(--utrecht-action-activate-cursor, revert);
   font-weight: var(--utrecht-form-label-checkbox-font-weight, var(--utrecht-form-label-font-weight));
 }
 
@@ -19,11 +20,12 @@
 }
 
 @mixin utrecht-form-label--disabled {
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, revert);
   font-weight: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
 }
 
 @mixin utrecht-form-label--radio {
   color: var(--utrecht-form-label-checkbox-color, var(--utrecht-form-label-color));
+  cursor: var(--utrecht-action-activate-cursor, revert);
   font-weight: var(--utrecht-form-label-radio-font-weight, var(--utrecht-form-label-font-weight));
 }
