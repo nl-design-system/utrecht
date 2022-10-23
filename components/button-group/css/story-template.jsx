@@ -29,7 +29,7 @@ export const exampleArgs = {
   innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
 };
 
-export const ButtonGroup = ({ innerHTML = defaultArgs.innerHTML, direction }) => (
+export const ButtonGroup = ({ children, innerHTML = defaultArgs.innerHTML, direction }) => (
   <div
     className={clsx(
       'utrecht-button-group',
@@ -38,6 +38,7 @@ export const ButtonGroup = ({ innerHTML = defaultArgs.innerHTML, direction }) =>
     )}
     role="group"
   >
+    {children}
     {parse(innerHTML)}
   </div>
 );

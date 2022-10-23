@@ -85,6 +85,7 @@ export const Button = ({
   active = defaultArgs.active,
   appearance = defaultArgs.appearance,
   busy = defaultArgs.busy,
+  children,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
@@ -118,6 +119,7 @@ export const Button = ({
       type={type || null}
     >
       {iconBefore && <IconBefore />}
+      {children}
       {textContent}
       {iconAfter && <IconAfter />}
     </button>
