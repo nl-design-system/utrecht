@@ -1,0 +1,44 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@import "../../alert/css/mixin";
+@import "../../backdrop/css/mixin";
+
+@mixin utrecht-alert-dialog {
+  @include utrecht-alert;
+
+  border-style: none; /* reset <dialog> element */
+  max-block-size: var(--utrecht-alert-dialog-max-block-size);
+  max-inline-size: var(--utrecht-alert-dialog-max-inline-size);
+  min-block-size: var(--utrecht-alert-dialog-min-block-size);
+  min-inline-size: var(--utrecht-alert-dialog-min-inline-size);
+}
+
+@mixin utrecht-alert-dialog__backdrop {
+  @include utrecht-backdrop;
+}
+
+@mixin utrecht-alert-dialog__icon {
+  @include utrecht-alert__icon;
+}
+
+@mixin utrecht-alert-dialog__message {
+  @include utrecht-alert__message;
+}
+
+@mixin utrecht-alert-dialog--error {
+  @include utrecht-alert-type("error");
+}
+
+@mixin utrecht-alert-dialog--info {
+  @include utrecht-alert-type("info");
+}
+
+/* No good use case for `--ok` yet */
+
+@mixin utrecht-alert-dialog--warning {
+  @include utrecht-alert-type("warning");
+}

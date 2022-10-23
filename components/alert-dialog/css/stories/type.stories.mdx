@@ -1,0 +1,108 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { ButtonGroup } from "../../../button-group/css/story-template";
+import { Button } from "../../../button/css/story-template";
+import { Heading1 } from "../../../heading-1/css/story-template";
+import { Paragraph } from "../../../paragraph/css/story-template";
+import { AlertDialog, argTypes, defaultArgs } from "../story-template";
+
+<Meta
+  id="css-alert-dialog"
+  title="CSS Component/Alert dialog"
+  component={AlertDialog}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Alert dialog type
+
+## Error
+
+<Canvas>
+  <Story
+    name="Error"
+    args={{
+      children: (
+        <form method="dialog">
+          <Heading1>Formulier opslaan niet gelukt!</Heading1>
+          <Paragraph>
+            Door een storing is het niet gelukt uw gegevens op te slaan. U kunt over enkele minuten nogmaals proberen
+            het formulier te verzenden, hopelijk is de storing dan voorbij.
+          </Paragraph>
+          <ButtonGroup>
+            <Button appearance="primary-action-button">Opnieuw proberen</Button>
+            <Button appearance="secondary-action-button" hint="danger">
+              Stoppen met het formulier
+            </Button>
+          </ButtonGroup>
+        </form>
+      ),
+      type: "error",
+    }}
+    height="1024px"
+  >
+    {AlertDialog.bind({})}
+  </Story>
+</Canvas>
+
+## Warning
+
+<Canvas>
+  <Story
+    name="Warning"
+    args={{
+      children: (
+        <form method="dialog">
+          <Heading1>Wilt u ingelogd blijven?</Heading1>
+          <Paragraph>
+            Klik op “Ingelogd blijven” om uw sessie te verlengen en ingelogd te blijven. Wanneer u geen actie onderneemt
+            wordt u uit veiligheidsoverwegingen automatisch uitgelogd.
+          </Paragraph>
+          <ButtonGroup>
+            <Button appearance="primary-action-button">Ingelogd blijven</Button>
+            <Button appearance="secondary-action-button">Uitloggen</Button>
+          </ButtonGroup>
+        </form>
+      ),
+      type: "warning",
+    }}
+    height="1024px"
+  >
+    {AlertDialog.bind({})}
+  </Story>
+</Canvas>
+
+## Info
+
+<Canvas>
+  <Story
+    name="Info"
+    args={{
+      children: (
+        <form method="dialog">
+          <Heading1>U bent nu uitgelogd</Heading1>
+          <Paragraph>
+            Uit veiligheidsoverwegingen bent u uitgelogd omdat u langere tijd geen actie heeft ondernomen.
+          </Paragraph>
+          <Paragraph>
+            Uw gegevens zijn opgeslagen zodat u op een later moment opnieuw kan inloggen en verder kunt gaan.
+          </Paragraph>
+          <ButtonGroup>
+            <Button appearance="primary-action-button">Opnieuw inloggen</Button>
+            <Button appearance="secondary-action-button">Terug naar het begin</Button>
+          </ButtonGroup>
+        </form>
+      ),
+      type: "info",
+    }}
+    height="1024px"
+  >
+    {AlertDialog.bind({})}
+  </Story>
+</Canvas>
