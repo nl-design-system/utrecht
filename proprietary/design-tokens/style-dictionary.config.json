@@ -55,7 +55,7 @@
           "destination": "index.css",
           "format": "css/variables",
           "options": {
-            "selector": ".utrecht-theme",
+            "selector": ".utrecht-theme, .utrecht-theme ::backdrop",
             "outputReferences": true
           }
         }

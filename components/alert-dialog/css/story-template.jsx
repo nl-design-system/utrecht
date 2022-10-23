@@ -16,6 +16,10 @@ export const argTypes = {
     description: 'HTML content of the alert dialog',
     control: 'text',
   },
+  open: {
+    description: 'Open',
+    type: 'boolean',
+  },
   type: {
     description: 'Type',
     control: { type: 'select' },
@@ -25,10 +29,12 @@ export const argTypes = {
 
 export const defaultArgs = {
   children: '',
-  variant: '',
+  open: false,
+  type: '',
 };
 
 export const exampleArgs = {
+  open: true,
   children: (
     <form method="dialog">
       <Heading1>Lorem ipsum</Heading1>
@@ -40,8 +46,12 @@ export const exampleArgs = {
         laborum.
       </Paragraph>
       <ButtonGroup>
-        <Button appearance="primary-action-button">OK</Button>
-        <Button appearance="secondary-action-button">Annuleren</Button>
+        <Button appearance="primary-action-button" type="submit">
+          OK
+        </Button>
+        <Button appearance="secondary-action-button" type="submit">
+          Annuleren
+        </Button>
       </ButtonGroup>
     </form>
   ),
@@ -56,6 +66,7 @@ export const AlertDialog = ({ children, icon = null, open, type }) => (
       'utrecht-alert-dialog--warning': type === 'warning',
     })}
     open={open}
+    role="alertdialog"
   >
     {icon && <div className="utrecht-alert-dialog__icon">{icon}</div>}
     <div className="utrecht-alert-dialog__message">{children}</div>

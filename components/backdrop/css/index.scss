@@ -8,6 +8,7 @@
 
 .utrecht-backdrop {
   @include utrecht-backdrop;
+  @include utrecht-backdrop--position;
 }
 
 .utrecht-backdrop--viewport {
