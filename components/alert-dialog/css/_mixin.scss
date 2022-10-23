@@ -10,7 +10,11 @@
 @mixin utrecht-alert-dialog {
   @include utrecht-alert;
 
-  border-style: none; /* reset <dialog> element */
+  border-color: var(--utrecht-alert-dialog-border-color);
+  border-radius: var(--utrecht-alert-dialog-border-radius, 0);
+  border-style: solid;
+  border-width: var(--utrecht-alert-dialog-border-width, 0); /* reset HTML <dialog> border by default */
+  box-shadow: var(--utrecht-alert-dialog-box-shadow);
   max-block-size: var(--utrecht-alert-dialog-max-block-size);
   max-inline-size: var(--utrecht-alert-dialog-max-inline-size);
   min-block-size: var(--utrecht-alert-dialog-min-block-size);
