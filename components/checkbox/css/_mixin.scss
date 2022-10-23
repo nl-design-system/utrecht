@@ -13,6 +13,8 @@
 
 @mixin utrecht-checkbox {
   @include reset-input-checkbox;
+
+  cursor: var(--utrecht-action-activate-cursor, revert);
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -20,7 +22,7 @@
 }
 
 @mixin utrecht-checkbox--disabled {
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, revert);
 }
 
 @mixin utrecht-checkbox--focus {
