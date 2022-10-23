@@ -42,6 +42,7 @@
           "destination": "root.css",
           "format": "css/variables",
           "options": {
+            "selector": ":root, ::backdrop",
             "outputReferences": true
           }
         }
