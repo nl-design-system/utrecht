@@ -4,6 +4,7 @@
  */
 
 export { Alert } from './Alert';
+export { AlertDialog } from './AlertDialog';
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
