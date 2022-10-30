@@ -11,6 +11,10 @@
   @include utrecht-button-link;
 }
 
+.utrecht-button-link--active {
+  @include utrecht-button-link--active;
+}
+
 .utrecht-button-link--hover {
   @include utrecht-button-link--hover;
 }
