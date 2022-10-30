@@ -2,6 +2,35 @@
 
 # Text box
 
+## Metadata van veelgebruikte formuliervelden
+
+| Data type                | `autocomplete`                                   | `spellcheck` | `translate` | value component |
+| ------------------------ | ------------------------------------------------ | ------------ | ----------- | --------------- |
+| Naam                     | `name`                                           |              | `no`        | `bdi`           |
+| Voornaam (1 of meerdere) | `given-name`                                     |              | `no`        | `bdi`           |
+| Voorvoegsel              |                                                  |              | `no`        | `bdi`           |
+| Achternaam               | `family-name`                                    |              | `no`        | `bdi`           |
+| Adresregel 1             | `address-line1`                                  |              | `no`        | -               |
+| Adresregel 2             | `address-line2`                                  |              | `no`        | -               |
+| Adresregel 3             | `address-line3`                                  |              | `no`        | -               |
+| Postcode                 | `postal-code`                                    | `false`      | `no`        | -               |
+| Straatnaam               |                                                  |              | `no`        | -               |
+| Huisnummer               |                                                  |              | `no`        | -               |
+| Huisletter               |                                                  |              | `no`        | -               |
+| Huisnummer toevoeging    |                                                  | `false`      | `no`        | -               |
+| Woonplaats               |                                                  |              |             | -               |
+| Burgerservicenummer      |                                                  |              | `no`        | -               |
+| E-mailadres              | `email`                                          | `false`      | `no`        | `URLValue`      |
+| Website                  | `url`                                            | `false`      | `no`        | `URLValue`      |
+| Bestandsnaam             |                                                  |              | `no`        | `URLValue`      |
+| Wachtwoord               | `password` / `new-password` / `current-password` | `false`      | `no`        | `URLValue`      |
+| Geboortedatum            | `bday`                                           |              |             |                 |
+| Kenteken                 |                                                  | `false`      |             |                 |
+
+_Let op:_
+
+- Straatnaam moet niet `autocomplete="street-address"` gebruiken, `street-address` is voor een textarea.
+
 ## Terminologie
 
 - **textbox**: [`role="textbox"` in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/#textbox), [Text box lemma op Wikipedia](https://en.wikipedia.org/wiki/Text_box). HTML noemt het "text control" en text edit control". [MDN noemt het](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text) "text field" en "text input".
