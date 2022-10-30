@@ -1,0 +1,139 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Textbox } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-textbox"
+  title="CSS Component/Textbox/Autocomplete"
+  component={Textbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Textbox met autocomplete
+
+Voor [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose) moet je altijd een `autocomplete` waarde gebruiken als een toepasselijke waarde beschikbaar is. Op deze pagina is een overzicht van veelvoorkomende velden die een `autocomplete` attribuut moeten gebruiken.
+
+## Naam
+
+Gebruik de `autocomplete` waarde `name` als je de naam van een persoon nodig hebt, en het niet nodig is om de onderdelen van de naam te gebruiken. Dit is de meest gebruiksvriendelijke manier van een naam vragen, gebruik bij voorkeur één formulierveld voor de naam.
+
+<Canvas>
+  <Story
+    name="Naam"
+    args={{
+      ...exampleArgs,
+      autocomplete: "name",
+      value: "Sjors van Amerongen",
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Voornaam
+
+Gebruik de `autocomplete` waarde `given-name` wanneer je alleen de voornaam nodig hebt, of je de voornaam nodig hebt als los onderdeel van de naam.
+
+Er is geen `autocomplete` waarde voor "Voornamen". De `autocomplete` waarde `given-name` gaat alleen om de eerste naam. Als losse `autocomplete` optie bestaat `additional-name`, maar er is geen combinatie mogelijk.
+
+<Canvas>
+  <Story
+    name="Voornaam"
+    args={{
+      ...exampleArgs,
+      value: "Sjors",
+      autocomplete: "given-name",
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Postcode in Nederland
+
+Gebruik de `autocomplete` waarde `postal-code`.
+
+Als je alleen wilt vragen om de eerste vier cijfers van de postcode, dan zou het autocomplete resultaat van `postal-code` door de laatste twee letters niet aan het juist formaat voldoen. Accepteer in zo'n geval ook de volledige postcode als invoer, en negeer de letters van de spotcode. Gebruik helemaal geen `autocomplete` als het niet mogelijk is om ook de letters te accepteren.
+
+Gebruik voor validatie niet een limiet kleiner dan `maxlength="7"` zodat een spatie tussen de cijfers en letters past.
+
+<Canvas>
+  <Story
+    name="Postcode"
+    args={{
+      ...exampleArgs,
+      value: "3521 AZ",
+      autocomplete: "postal-code",
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Telefoonnummer
+
+Gebruik de `autocomplete` waarde `tel` of `tel-national`, en `type="tel"`.
+
+<Canvas>
+  <Story
+    name="Telefoonnummer"
+    args={{
+      ...exampleArgs,
+      autocomplete: "tel",
+      type: "tel",
+      value: "+31 30 286 00 00",
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## E-mailadres
+
+Gebruik de `autocomplete` waarde `email`, `type="email"` en de `utrecht-textbox--url` _class name_.
+
+<Canvas>
+  <Story
+    name="E-mailadres"
+    args={{
+      ...exampleArgs,
+      autocomplete: "email",
+      type: "email",
+      value: "info@example.fi",
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Website
+
+Gebruik de `autocomplete` waarde `url`, `type="url"` en de `utrecht-textbox--url` _class name_.
+
+<Canvas>
+  <Story
+    name="Website"
+    args={{
+      ...exampleArgs,
+      autocomplete: "url",
+      type: "url",
+      value: "https://example.fi",
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
