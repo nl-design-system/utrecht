@@ -18,6 +18,10 @@ export const argTypes = {
     description: 'External',
     control: 'boolean',
   },
+  active: {
+    description: 'Active',
+    control: 'boolean',
+  },
   hover: {
     description: 'Hover',
     control: 'boolean',
@@ -65,6 +69,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  active: false,
   appearance: '',
   external: false,
   hover: false,
@@ -82,6 +87,7 @@ export const exampleArgs = {
   textContent: 'Start je aanvraag',
 };
 export const ButtonLink = ({
+  active = defaultArgs.active,
   appearance = defaultArgs.appearance,
   external = defaultArgs.external,
   hover = defaultArgs.hover,
@@ -102,6 +108,7 @@ export const ButtonLink = ({
       role={keyboardSupport ? 'button' : placeholder ? 'link' : undefined}
       href={placeholder ? undefined : href}
       className={clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
+        'utrecht-button-link--active': active,
         'utrecht-button-link--hover': hover,
         'utrecht-button-link--focus': focus,
         'utrecht-button-link--focus-visible': focusVisible,

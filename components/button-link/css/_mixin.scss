@@ -13,6 +13,10 @@
   text-decoration: none;
 }
 
+@mixin utrecht-button-link--active {
+  @include utrecht-button--active;
+}
+
 @mixin utrecht-button-link--hover {
   @include utrecht-button--hover;
 }
@@ -30,6 +34,9 @@
 }
 
 @mixin utrecht-button-link--html-a {
+  &:active {
+    @include utrecht-button-link--active;
+  }
   &:focus {
     @include utrecht-button-link--focus;
   }
