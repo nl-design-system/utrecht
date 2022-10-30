@@ -24,6 +24,10 @@
   @include utrecht-button--busy;
 }
 
+.utrecht-button--pressed {
+  @include utrecht-button--pressed;
+}
+
 .utrecht-button:disabled,
 .utrecht-button--disabled {
   @include utrecht-button--disabled;
