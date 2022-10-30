@@ -66,15 +66,16 @@ export const defaultArgs = {
   focusVisible: false,
   hover: false,
   inline: false,
+  innerHTML: '',
   href: '',
   pressed: '',
-  textContent: '',
 };
 
 export const exampleArgs = { innerHTML: 'Terug' };
 
 export const LinkButton = ({
   active = defaultArgs.active,
+  children,
   external = defaultArgs.external,
   href = defaultArgs.href,
   focus = defaultArgs.focus,
@@ -83,6 +84,7 @@ export const LinkButton = ({
   inline = defaultArgs.inline,
   innerHTML = defaultArgs.innerHTML,
   pressed = defaultArgs.pressed,
+  ...restProps
 }) => {
   const stateClassNames = {
     'utrecht-link-button--active': active,
@@ -91,13 +93,21 @@ export const LinkButton = ({
     'utrecht-link-button--hover': hover,
     'utrecht-link-button--pressed': pressed,
   };
+  const content = (
+    <>
+      {children}
+      {parse(innerHTML)}
+    </>
+  );
+
   return href ? (
     <a
       href={href}
       className={clsx('utrecht-link-button', stateClassNames)}
       rel={external ? 'external noopener noreferrer' : ''}
+      {...restProps}
     >
-      {parse(innerHTML)}
+      {content}
     </a>
   ) : (
     <button
@@ -108,8 +118,9 @@ export const LinkButton = ({
         stateClassNames,
       )}
       aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
+      {...restProps}
     >
-      {parse(innerHTML)}
+      {content}
     </button>
   );
 };
