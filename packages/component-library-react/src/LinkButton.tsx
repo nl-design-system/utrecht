@@ -14,7 +14,7 @@ export interface LinkButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>
 
 export const LinkButton = forwardRef(
   (
-    { children, inline, className, pressed, ...restProps }: PropsWithChildren<LinkButtonProps>,
+    { children, disabled, inline, className, pressed, type, ...restProps }: PropsWithChildren<LinkButtonProps>,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => (
     <button
@@ -24,11 +24,15 @@ export const LinkButton = forwardRef(
         'utrecht-link-button',
         'utrecht-link-button--html-button',
         {
+          'utrecht-link-button--disabled': disabled,
           'utrecht-link-button--inline': inline,
           'utrecht-link-button--pressed': pressed,
         },
         className,
       )}
+      disabled={disabled}
+      type={type || 'button'}
+      {...restProps}
     >
       {children}
     </button>

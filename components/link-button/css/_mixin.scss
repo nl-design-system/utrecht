@@ -58,6 +58,10 @@
   @include utrecht-link--active;
 }
 
+@mixin utrecht-link-button--disabled {
+  @include utrecht-link--placeholder;
+}
+
 @mixin utrecht-link-button--focus {
   @include utrecht-link--focus;
 }

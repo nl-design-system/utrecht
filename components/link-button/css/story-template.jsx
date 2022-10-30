@@ -17,6 +17,10 @@ export const argTypes = {
     description: 'Active',
     control: 'boolean',
   },
+  disabled: {
+    description: 'Disabled',
+    control: 'boolean',
+  },
   focus: {
     description: 'Focus',
     control: 'boolean',
@@ -61,6 +65,7 @@ export const decorators = [
 
 export const defaultArgs = {
   active: false,
+  disabled: false,
   external: false,
   focus: false,
   focusVisible: false,
@@ -76,6 +81,7 @@ export const exampleArgs = { innerHTML: 'Terug' };
 export const LinkButton = ({
   active = defaultArgs.active,
   children,
+  disabled = defaultArgs.disabled,
   external = defaultArgs.external,
   href = defaultArgs.href,
   focus = defaultArgs.focus,
@@ -88,6 +94,7 @@ export const LinkButton = ({
 }) => {
   const stateClassNames = {
     'utrecht-link-button--active': active,
+    'utrecht-link-button--disabled': disabled,
     'utrecht-link-button--focus': focus,
     'utrecht-link-button--focus-visible': focusVisible,
     'utrecht-link-button--hover': hover,

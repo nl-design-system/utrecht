@@ -17,6 +17,10 @@
   @include utrecht-link-button--active;
 }
 
+.utrecht-link-button--disabled {
+  @include utrecht-link-button--disabled;
+}
+
 .utrecht-link-button--focus {
   @include utrecht-link-button--focus;
 }
