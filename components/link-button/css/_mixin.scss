@@ -39,6 +39,17 @@
   border-width: 0;
 }
 
+@mixin utrecht-link-button--pressed {
+  /* Copy `active` styles for now.
+  Later we can decide to:
+  - merge `active` and `pressed` and name the state `pressed`, or:
+  - merge `active` and `pressed` and name the state `active`, or:
+  - style `pressed` like the link state `current`, or:
+  - add `pressed` design tokens
+  */
+  @include utrecht-link--active;
+}
+
 @mixin utrecht-link-button--hover {
   @include utrecht-link--hover;
 }
