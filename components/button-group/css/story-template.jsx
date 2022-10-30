@@ -14,6 +14,10 @@ export const argTypes = {
     description: 'Direction',
     options: ['', 'horizontal', 'vertical'],
   },
+  div: {
+    description: 'Avoid the semantic HTML element <p>',
+    type: 'boolean',
+  },
   innerHTML: {
     description: 'HTML content',
     control: 'text',
@@ -21,6 +25,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  div: false,
   innerHTML: '',
   direction: '',
 };
@@ -29,16 +34,26 @@ export const exampleArgs = {
   innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
 };
 
-export const ButtonGroup = ({ children, innerHTML = defaultArgs.innerHTML, direction }) => (
-  <div
-    className={clsx(
-      'utrecht-button-group',
-      direction === 'horizontal' && 'utrecht-button-group--horizontal',
-      direction === 'vertical' && 'utrecht-button-group--vertical',
-    )}
-    role="group"
-  >
-    {children}
-    {parse(innerHTML)}
-  </div>
-);
+export const ButtonGroup = ({ children, div = defaultArgs.div, innerHTML = defaultArgs.innerHTML, direction }) => {
+  const classNames = [
+    'utrecht-button-group',
+    direction === 'horizontal' && 'utrecht-button-group--horizontal',
+    direction === 'vertical' && 'utrecht-button-group--vertical',
+  ];
+
+  const attributes = {
+    className: clsx(classNames),
+    role: 'group',
+  };
+
+  const content = (
+    <>
+      {children}
+      {parse(innerHTML)}
+    </>
+  );
+
+  return div ? <div {...attributes}>{content}</div> : <p {...attributes}>{content}</p>;
+};
+
+export default ButtonGroup;
