@@ -37,6 +37,14 @@ export const argTypes = {
     description: 'Button content',
     control: 'text',
   },
+  pressed: {
+    description: 'Pressed',
+    control: { type: 'select' },
+    options: ['', false, true],
+    type: {
+      required: false,
+    },
+  },
 };
 
 export const decorators = [
@@ -59,6 +67,7 @@ export const defaultArgs = {
   hover: false,
   inline: false,
   href: '',
+  pressed: '',
   textContent: '',
 };
 
@@ -73,12 +82,14 @@ export const LinkButton = ({
   hover = defaultArgs.hover,
   inline = defaultArgs.inline,
   innerHTML = defaultArgs.innerHTML,
+  pressed = defaultArgs.pressed,
 }) => {
   const stateClassNames = {
     'utrecht-link-button--active': active,
     'utrecht-link-button--focus': focus,
     'utrecht-link-button--focus-visible': focusVisible,
     'utrecht-link-button--hover': hover,
+    'utrecht-link-button--pressed': pressed,
   };
   return href ? (
     <a
@@ -96,6 +107,7 @@ export const LinkButton = ({
         inline && 'utrecht-link-button--inline',
         stateClassNames,
       )}
+      aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
     >
       {parse(innerHTML)}
     </button>

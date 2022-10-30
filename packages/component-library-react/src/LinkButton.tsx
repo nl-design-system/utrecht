@@ -9,21 +9,23 @@ import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } fro
 
 export interface LinkButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   inline?: boolean;
+  pressed?: boolean;
 }
 
 export const LinkButton = forwardRef(
   (
-    { children, inline, className, ...restProps }: PropsWithChildren<LinkButtonProps>,
+    { children, inline, className, pressed, ...restProps }: PropsWithChildren<LinkButtonProps>,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => (
     <button
-      {...restProps}
       ref={ref}
+      aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
       className={clsx(
         'utrecht-link-button',
         'utrecht-link-button--html-button',
         {
           'utrecht-link-button--inline': inline,
+          'utrecht-link-button--pressed': pressed,
         },
         className,
       )}

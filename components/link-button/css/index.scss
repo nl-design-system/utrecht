@@ -29,6 +29,10 @@
   @include utrecht-link-button--inline;
 }
 
+.utrecht-link-button--pressed {
+  @include utrecht-link-button--pressed;
+}
+
 .utrecht-link-button--html-button {
   @include utrecht-link-button--html-button;
 
