@@ -5,11 +5,22 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: string;
   busy?: boolean;
   hint?: string;
+  pressed?: boolean;
 }
 
 export const Button = forwardRef(
   (
-    { appearance, busy, disabled, children, className, hint, type, ...restProps }: PropsWithChildren<ButtonProps>,
+    {
+      appearance,
+      busy,
+      disabled,
+      children,
+      className,
+      hint,
+      pressed,
+      type,
+      ...restProps
+    }: PropsWithChildren<ButtonProps>,
     ref: ForwardedRef<HTMLButtonElement>,
   ) => {
     return (
@@ -27,9 +38,11 @@ export const Button = forwardRef(
           hint === 'danger' && 'utrecht-button--danger',
           hint === 'warning' && 'utrecht-button--warning',
           hint === 'ready' && 'utrecht-button--ready',
+          pressed === true && 'utrecht-button--pressed',
           className,
         )}
         aria-busy={busy || undefined}
+        aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
         disabled={disabled}
         type={type || 'button'}
       >

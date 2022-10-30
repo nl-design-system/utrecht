@@ -38,6 +38,14 @@ export const argTypes = {
     description: 'Hover',
     control: 'boolean',
   },
+  pressed: {
+    description: 'Pressed',
+    control: { type: 'select' },
+    options: ['', false, true],
+    type: {
+      required: false,
+    },
+  },
   textContent: {
     description: 'Button text',
     control: 'text',
@@ -71,6 +79,7 @@ export const defaultArgs = {
   focusVisible: false,
   hint: false,
   hover: false,
+  pressed: '',
   textContent: '',
   type: 'button',
   iconBefore: '',
@@ -91,6 +100,7 @@ export const Button = ({
   focusVisible = defaultArgs.focusVisible,
   hint = defaultArgs.hint,
   hover = defaultArgs.hover,
+  pressed = defaultArgs.pressed,
   textContent = defaultArgs.textContent,
   type = defaultArgs.type,
   iconBefore = defaultArgs.iconBefore,
@@ -108,6 +118,7 @@ export const Button = ({
         'utrecht-button--focus': focus,
         'utrecht-button--focus-visible': focusVisible,
         'utrecht-button--disabled': disabled,
+        'utrecht-button--pressed': pressed,
         'utrecht-button--primary-action': appearance === 'primary-action-button',
         'utrecht-button--secondary-action': appearance === 'secondary-action-button',
         'utrecht-button--subtle': appearance === 'subtle-button',
@@ -116,6 +127,7 @@ export const Button = ({
         'utrecht-button--ready': hint === 'ready',
       })}
       aria-disabled={disabled || null}
+      aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
       type={type || null}
     >
       {iconBefore && <IconBefore />}

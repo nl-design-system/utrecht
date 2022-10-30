@@ -248,6 +248,16 @@
   transform: scale(var(--utrecht-button-focus-transform-scale, 1));
 }
 
+@mixin utrecht-button--pressed {
+  /* Copy `active` styles for now.
+  Later we can decide to:
+  - merge `active` and `pressed` and name the state `pressed`, or:
+  - merge `active` and `pressed` and name the state `active`, or:
+  - add `pressed` design tokens
+  */
+  @include utrecht-button--active;
+}
+
 @mixin utrecht-button-appearance($block, $modifier) {
   .#{$block}--#{$modifier} {
     --_utrecht-button-appearance-active-background-color: var(--utrecht-button-#{$modifier}-active-background-color);
