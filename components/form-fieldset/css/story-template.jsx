@@ -29,6 +29,10 @@ export const argTypes = {
     control: { type: 'select' },
     options: ['', 'group', 'radiogroup'],
   },
+  section: {
+    description: 'Section appearance',
+    type: 'boolean',
+  },
 };
 
 export const defaultArgs = {
@@ -37,6 +41,8 @@ export const defaultArgs = {
   innerHTML: '',
   invalid: false,
   legend: '',
+  role: '',
+  section: false,
 };
 
 export const exampleArgs = {
@@ -46,7 +52,7 @@ export const exampleArgs = {
   legend: 'Fieldset legend',
 };
 
-export const FormFieldsetLegend = ({ children, div = defaultArgs.div, id }) =>
+export const FormFieldsetLegend = ({ children, disabled = false, div = defaultArgs.div, id }) =>
   div ? (
     <div
       className={clsx('utrecht-form-fieldset__legend', {
@@ -67,14 +73,17 @@ export const FormFieldsetLegend = ({ children, div = defaultArgs.div, id }) =>
   );
 
 export const FormFieldset = ({
+  className,
   children,
   disabled = false,
-  div = false,
+  div = defaultArgs.div,
   id,
   innerHTML = defaultArgs.innerHTML,
   invalid = defaultArgs.invalid,
   legend = defaultArgs.legend,
-  role,
+  role = defaultArgs.role,
+  section = defaultArgs.section,
+  ...restProps
 }) => {
   const labelId = id && `${id}-legend`;
   const content = (
@@ -92,10 +101,13 @@ export const FormFieldset = ({
     <div
       className={clsx('utrecht-form-fieldset', {
         'utrecht-form-fieldset--invalid': invalid,
+        'utrecht-form-fieldset--section': section,
+        className,
       })}
       aria-disabled={disabled ? 'true' : undefined}
       role={role || 'group'}
       aria-labelledby={labelId}
+      {...restProps}
     >
       {content}
     </div>
@@ -103,9 +115,12 @@ export const FormFieldset = ({
     <fieldset
       className={clsx('utrecht-form-fieldset', 'utrecht-form-fieldset--html-fieldset', {
         'utrecht-form-fieldset--invalid': invalid,
+        'utrecht-form-fieldset--section': section,
+        className,
       })}
       disabled={disabled}
       role={role || undefined}
+      {...restProps}
     >
       {content}
     </fieldset>

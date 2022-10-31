@@ -51,6 +51,11 @@
   );
 }
 
+@mixin utrecht-form-fieldset--section {
+  background-color: var(--utrecht-form-fieldset-section-background-color);
+  color: var(--utrecht-form-fieldset-section-color);
+}
+
 @mixin utrecht-form-fieldset__legend {
   color: var(--utrecht-form-fieldset-legend-color, var(--utrecht-document-color, inherit));
   font-family: var(--utrecht-form-fieldset-legend-font-family, var(--utrecht-document-font-family));
