@@ -9,25 +9,34 @@ import React from 'react';
 
 export const argTypes = {
   checked: {
-    name: 'checked',
-    type: { name: 'boolean', required: false },
+    description: 'Checked',
+    control: 'boolean',
     table: {
-      defaultValue: { summary: false },
       category: 'HTML attribute',
+      defaultValue: { summary: false },
     },
   },
   disabled: {
-    name: 'disabled',
-    type: { name: 'boolean', required: false },
+    description: 'Disabled',
+    control: 'boolean',
     table: {
-      defaultValue: { summary: false },
       category: 'HTML attribute',
+      defaultValue: { summary: false },
+    },
+  },
+  id: {
+    description: 'ID',
+    control: 'text',
+    table: {
+      category: 'HTML attribute',
+      defaultValue: { summary: '' },
     },
   },
   indeterminate: {
     name: 'indeterminate',
     type: { name: 'boolean', required: false },
     table: {
+      category: 'HTML attribute',
       defaultValue: { summary: false },
     },
   },
@@ -36,6 +45,14 @@ export const argTypes = {
     type: { name: 'boolean', required: false },
     table: {
       defaultValue: { summary: false },
+    },
+  },
+  name: {
+    description: 'Name',
+    control: 'text',
+    table: {
+      category: 'HTML attribute',
+      defaultValue: { summary: '' },
     },
   },
   required: {
@@ -47,10 +64,11 @@ export const argTypes = {
     },
   },
   value: {
-    name: 'value',
-    type: { name: 'string', required: false },
+    description: 'Value',
+    control: 'text',
     table: {
       category: 'HTML attribute',
+      defaultValue: { summary: '' },
     },
   },
 };
@@ -66,8 +84,10 @@ export const decorators = [
 export const defaultArgs = {
   checked: false,
   disabled: false,
+  id: '',
   indeterminate: false,
   invalid: false,
+  name: '',
   required: false,
   value: '',
 };
@@ -77,25 +97,35 @@ export const exampleArgs = {
 };
 
 export const CustomCheckbox = ({
-  checked = false,
-  disabled = false,
-  indeterminate = false,
-  required = false,
-  invalid = false,
-  value = '',
+  checked = defaultArgs.checked,
+  className,
+  disabled = defaultArgs.disabled,
+  id = defaultArgs.id,
+  indeterminate = defaultArgs.indeterminate,
+  invalid = defaultArgs.invalid,
+  name = defaultArgs.name,
+  required = defaultArgs.required,
+  value = defaultArgs.value,
+  ...restProps
 }) => (
   <input
-    type="checkbox"
-    checked={checked}
-    disabled={disabled}
-    value={value}
-    required={required}
+    aria-invalid={invalid || undefined}
     className={clsx(
       'utrecht-custom-checkbox',
       'utrecht-custom-checkbox--html-input',
       invalid && 'utrecht-custom-checkbox--invalid',
       indeterminate && 'utrecht-custom-checkbox--indeterminate',
+      className,
     )}
+    defaultChecked={checked}
+    disabled={disabled}
+    id={id || undefined}
+    indeterminate={!!indeterminate}
+    name={name || undefined}
+    required={required}
+    type="checkbox"
+    value={value || undefined}
+    {...restProps}
   />
 );
 

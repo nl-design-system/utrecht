@@ -48,7 +48,6 @@ export const CustomRadioButton = ({
   invalid = defaultArgs.invalid,
 }) => (
   <input
-    autofocus="true"
     type="radio"
     checked={checked || null}
     disabled={disabled || null}
