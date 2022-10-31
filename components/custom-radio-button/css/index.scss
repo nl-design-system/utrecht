@@ -5,34 +5,42 @@
 
 @import "./mixin";
 
+.utrecht-radio-button--custom,
 .utrecht-custom-radio-button {
   @include utrecht-custom-radio-button;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--checked,
 .utrecht-custom-radio-button--checked {
   @include utrecht-custom-radio-button--checked;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--active,
 .utrecht-custom-radio-button--active {
   @include utrecht-custom-radio-button--active;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--focus,
 .utrecht-custom-radio-button--focus {
   @include utrecht-custom-radio-button--focus;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--focus-visible,
 .utrecht-custom-radio-button--focus-visible {
   @include utrecht-custom-radio-button--focus-visible;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--disabled,
 .utrecht-custom-radio-button--disabled {
   @include utrecht-custom-radio-button--disabled;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--invalid,
 .utrecht-custom-radio-button--invalid {
   @include utrecht-custom-radio-button--invalid;
 }
 
+.utrecht-radio-button--custom.utrecht-radio-button--html-input,
 .utrecht-custom-radio-button--html-input {
   @include utrecht-custom-radio-button--html-input;
 }

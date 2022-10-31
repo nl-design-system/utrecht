@@ -5,38 +5,47 @@
 
 @import "./mixin";
 
+.utrecht-checkbox--custom,
 .utrecht-custom-checkbox {
   @include utrecht-custom-checkbox;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--checked,
 .utrecht-custom-checkbox--checked {
   @include utrecht-custom-checkbox--checked;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--disabled,
 .utrecht-custom-checkbox--disabled {
   @include utrecht-custom-checkbox--disabled;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--indeterminate,
 .utrecht-custom-checkbox--indeterminate {
   @include utrecht-custom-checkbox--indeterminate;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--invalid,
 .utrecht-custom-checkbox--invalid {
   @include utrecht-custom-checkbox--invalid;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--active,
 .utrecht-custom-checkbox--active {
   @include utrecht-custom-checkbox--active;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--focus,
 .utrecht-custom-checkbox--focus {
   @include utrecht-custom-checkbox--focus;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--focus-visible,
 .utrecht-custom-checkbox--focus-visible {
   @include utrecht-custom-checkbox--focus-visible;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--html-input,
 .utrecht-custom-checkbox--html-input {
   @include utrecht-custom-checkbox--html-input;
 }
