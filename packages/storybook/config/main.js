@@ -23,6 +23,7 @@ module.exports = {
     '@whitespace/storybook-addon-html/register',
     '@storybook/addon-links',
     'storybook-addon-pseudo-states',
+    'storybook-addon-themes',
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (_, { configType }) => {
