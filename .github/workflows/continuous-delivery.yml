@@ -247,13 +247,13 @@ jobs:
           path: packages/design-system-website/dist/
 
       - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: gh-pages
           folder: packages/design-system-website/dist/
 
       - name: Continuous Deployment to designsystem.utrecht.nl
-        uses: JamesIves/github-pages-deploy-action@v4.4.0
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
           branch: main
           folder: packages/design-system-website/dist/
