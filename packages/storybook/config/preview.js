@@ -22,7 +22,7 @@ export const decorators = [
     storyContext.parameters.args = storyContext.args;
 
     return (
-      <div className="utrecht-document utrecht-document--surface utrecht-theme">
+      <div className="utrecht-document utrecht-document--surface">
         <Story />
       </div>
     );
@@ -135,8 +135,10 @@ const addonStatus = {
 
 // Configure storybook-addon-themes
 const addonThemes = {
+  clearable: true,
   themes: {
     default: 'Gemeente Utrecht',
+    target: 'root',
     list: [{ name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' }],
   },
 };
