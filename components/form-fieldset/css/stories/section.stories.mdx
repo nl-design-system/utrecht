@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, FormFieldset } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-form-fieldset"
+  title="CSS Component/Form fieldset"
+  component={FormFieldset}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Fieldset
+
+Styling via the `.utrecht-form-fieldset` and `.utrecht-form-fieldset--section` class names:
+
+<Canvas>
+  <Story
+    name="Section"
+    args={{
+      ...exampleArgs,
+      section: true,
+    }}
+  >
+    {FormFieldset.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Section" />
