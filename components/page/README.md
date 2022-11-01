@@ -29,3 +29,8 @@ Achieving both goals is made possible by implementing the `margin-inline` as `pa
 ### Padding
 
 Padding is not applied directly in the page component itself, but in the child components such as Page Header, Page Content and Page Footer.
+
+## Relevante WCAG regels
+
+- [WCAG eis 2.4.1](https://www.w3.org/TR/WCAG21/#bypass-blocks): gebruik de skip link zodat gebruikers direct naar de _main page content_ kunnen gaan.
+- [WCAG eis 2.4.2](https://www.w3.org/TR/WCAG21/#page-titled): de pagina moet een duidelijke titel hebben
