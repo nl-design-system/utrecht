@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Form } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-form"
+  title="CSS Component/Form"
+  component={Form}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Form
+
+Styling via the `.utrecht-form` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Form.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

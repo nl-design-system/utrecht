@@ -12,6 +12,7 @@
 @import "../../document/html/mixin";
 @import "../../emphasis/html/mixin";
 @import "../../figure/html/mixin";
+@import "../../form/html/mixin";
 @import "../../form-fieldset/html/mixin";
 @import "../../form-label/html/mixin";
 @import "../../heading-1/html/mixin";
@@ -43,6 +44,7 @@
   @include utrecht-html-fieldset;
   @include utrecht-html-figure;
   @include utrecht-html-figcaption;
+  @include utrecht-html-form;
   @include utrecht-html-legend;
   @include utrecht-html-label;
   @include utrecht-html-h1;
