@@ -65,3 +65,9 @@ Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals
 - Gebruik het `<a>` element om links aan te maken.
 - Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
 - Vermijd het gebruik van `tabindex="-1"` or `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
+
+## Privacy
+
+Als de `visited` een ander visueel ontwerp heeft dan een normale link, dan kunnen anderen zien welke pagina's zijn bekeken. Gebruik daarom liever geen `visited` design tokens voor websites waar de privacy van de gebruiker in gevaar komt.
+
+Als je een linkt maakt naar een externe website, dan kan die website zien op welke pagina de bezoeker op dat moment was. Dit is slecht voor de privacy, gebruik daarom altijd gebruik van de "externe link" code om deze informatie af te schermen.

@@ -23,12 +23,17 @@ Use the `<nav>` with `<a>` element approach for hyperlinks to alternate language
 
 ## Relevante WCAG eisen
 
+- [WCAG eis 1.3.1](https://www.w3.org/TR/WCAG21/#info-and-relationships): de heading van de landmark gebruikt de juiste _heading level_.
 - [WCAG eis 1.3.6](https://www.w3.org/TR/WCAG21/#identify-purpose)
   - de `hreflang` maakt duidelijk dat de link verwijst naar een pagina in een andere taal
   - `rel="alternate"` maakt duidelijk dat het om dezelfde informatie gaat op een andere pagina
   - `aria-current` maakt duidelijk welke pagina op dit moment wordt weergegeven
   - maak duidelijk dat je kunt navigeren naar alternatieve versies door het plaatsen van deze links in een `navigation` landmark (`<nav>`)
 - [WCAG eis 2.4.4](https://www.w3.org/TR/WCAG21/#link-purpose-in-context): met alleen de naam van de taal als label ("English") is het doel van de link duidelijk in de context van een navigation landmark
+- [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): alle labels moeten duidelijk zijn:
+  - het label van de landmark (de heading in de `nav` of `section`)
+  - het zichtbare label van de links of buttons
+  - het langere label van de link of button (in `aria-label` of `title`)
 - [WCAG eis 2.4.9](https://www.w3.org/TR/WCAG21/#link-purpose-link-only): gebruik een label als "This page in English" zodat het doel van de link ook duidelijk is zonder context.
 - [WCAG eis 2.5.3](https://www.w3.org/TR/WCAG21/#label-in-name): door een afkorting te gebruiken als link-tekst, wordt het moeilijk om met een gesproken instructie de link te activeren.
 - [WCAG eis 2.5.5](https://www.w3.org/TR/WCAG21/#target-size): de link moet groot genoeg zijn om aan te klikken, en kleine links moeten niet te dicht op een andere link staan.
