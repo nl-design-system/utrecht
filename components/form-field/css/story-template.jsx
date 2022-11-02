@@ -189,7 +189,7 @@ export const FormFieldCheckboxGroup = ({
   groupName,
   invalid = defaultArgs.invalid,
   implicitLabel = true,
-  items = [],
+  options = [],
   headingLevel,
 }) => {
   const groupDescriptionId = groupId && groupDescription ? `${groupId}-description` : null;
@@ -208,7 +208,7 @@ export const FormFieldCheckboxGroup = ({
           {groupInvalidDescription}
         </FormFieldDescription>
       ) : undefined}
-      {items.map(({ description, checked, id, invalid, invalidDescription, label, name, value }) => {
+      {options.map(({ description, checked, id, invalid, invalidDescription, label, name, value }) => {
         const descriptionId = `${id}-description`;
         const invalidDescriptionId = invalid ? `${id}-invalid-description` : null;
         const checkbox = (
@@ -260,7 +260,7 @@ export const FormFieldRadioGroup = ({
   invalid = defaultArgs.invalid,
   groupInvalidDescription,
   implicitLabel = true,
-  items,
+  options,
   headingLevel,
 }) => {
   const groupDescriptionId = groupDescription ? `${groupId}-description` : null;
@@ -280,7 +280,7 @@ export const FormFieldRadioGroup = ({
           {groupInvalidDescription}
         </FormFieldDescription>
       ) : undefined}
-      {items.map(({ id, label, description, invalidDescription, value }) => {
+      {options.map(({ id, label, description, invalidDescription, value }) => {
         const descriptionId = description ? `${id}-description` : null;
         const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : null;
         const input = (
