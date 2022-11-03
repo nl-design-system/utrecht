@@ -9,7 +9,9 @@ import '@utrecht/components/document/css/index.scss';
 import '@utrecht/components/html-content/css/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/property.css';
-import '@utrecht/design-tokens/src/custom.scss';
+import '@utrecht/design-tokens/dist/index.css';
+import '@utrecht/design-tokens/dist/dark/index.css';
+import './storybook.css';
 
 defineCustomElements();
 
@@ -139,7 +141,10 @@ const addonThemes = {
   themes: {
     default: 'Gemeente Utrecht',
     target: 'root',
-    list: [{ name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' }],
+    list: [
+      { name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' },
+      { name: 'Gemeente Utrecht (dark mode)', class: 'utrecht-theme--dark', color: '#000000' },
+    ],
   },
 };
 
