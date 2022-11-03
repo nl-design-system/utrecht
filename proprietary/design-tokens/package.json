@@ -31,7 +31,8 @@
   "scripts": {
     "build": "npm-run-all build:**",
     "build:scss": "sass src/:dist/",
-    "build:style-dictionary": "style-dictionary build --config src/style-dictionary-config.js",
+    "build:style-dictionary:default": "style-dictionary build --config src/style-dictionary-config.js",
+    "build:style-dictionary:dark": "style-dictionary build --config src/style-dictionary-config-dark.js",
     "build:stylelint": "node ./build-stylelint.mjs",
     "clean": "rimraf dist/",
     "prebuild": "npm run clean",

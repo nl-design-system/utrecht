@@ -2,8 +2,12 @@
   "source": [
     "../../components/**/tokens.json",
     "../../components/**/*.tokens.json",
-    "./src/**/tokens.json",
-    "./src/**/*.tokens.json"
+    "./src/brand/tokens.json",
+    "./src/brand/**/*.tokens.json",
+    "./src/common/tokens.json",
+    "./src/common/**/*.tokens.json",
+    "./src/component/tokens.json",
+    "./src/component/**/*.tokens.json"
   ],
   "platforms": {
     "js": {
