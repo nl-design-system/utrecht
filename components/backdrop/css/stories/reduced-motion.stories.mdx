@@ -1,0 +1,38 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Backdrop, decorators, defaultArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-backdrop"
+  title="CSS Component/Backdrop"
+  component={Backdrop}
+  argTypes={argTypes}
+  args={defaultArgs}
+  decorators={decorators}
+  parameters={{
+    layout: "fullscreen",
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Backdrop with reduced motion
+
+Styling via the `.utrecht-backdrop--reduced-motion` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.
+
+<Canvas>
+  <Story
+    name="Reduced motion"
+    args={{
+      ...defaultArgs,
+      reducedMotion: true,
+    }}
+  >
+    {Backdrop.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Reduced motion" />

@@ -30,6 +30,10 @@ const checkerboard = (story) => (
 );
 
 export const argTypes = {
+  reducedMotion: {
+    name: 'Reduced motion',
+    type: 'boolean',
+  },
   reducedTransparency: {
     name: 'Reduced transparency',
     type: 'boolean',
@@ -43,16 +47,19 @@ export const argTypes = {
 export const decorators = [checkerboard];
 
 export const defaultArgs = {
+  reducedMotion: false,
   reducedTransparency: false,
   viewport: false,
 };
 
 export const Backdrop = ({
+  reducedMotion = defaultArgs.reducedMotion,
   reducedTransparency = defaultArgs.reducedTransparency,
   viewport = defaultArgs.viewport,
 }) => (
   <div
     className={clsx('utrecht-backdrop', {
+      'utrecht-backdrop--reduced-motion': reducedMotion,
       'utrecht-backdrop--reduced-transparency': reducedTransparency,
       'utrecht-backdrop--viewport': viewport,
     })}
