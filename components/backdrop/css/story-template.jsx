@@ -30,6 +30,10 @@ const checkerboard = (story) => (
 );
 
 export const argTypes = {
+  reducedTransparency: {
+    name: 'Reduced transparency',
+    type: 'boolean',
+  },
   viewport: {
     name: 'Cover viewport',
     type: 'boolean',
@@ -39,11 +43,20 @@ export const argTypes = {
 export const decorators = [checkerboard];
 
 export const defaultArgs = {
+  reducedTransparency: false,
   viewport: false,
 };
 
-export const Backdrop = ({ viewport = defaultArgs.viewport }) => (
-  <div className={clsx('utrecht-backdrop', viewport && 'utrecht-backdrop--viewport')}></div>
+export const Backdrop = ({
+  reducedTransparency = defaultArgs.reducedTransparency,
+  viewport = defaultArgs.viewport,
+}) => (
+  <div
+    className={clsx('utrecht-backdrop', {
+      'utrecht-backdrop--reduced-transparency': reducedTransparency,
+      'utrecht-backdrop--viewport': viewport,
+    })}
+  ></div>
 );
 
 export default Backdrop;

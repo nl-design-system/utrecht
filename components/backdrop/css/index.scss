@@ -11,6 +11,16 @@
   @include utrecht-backdrop--position;
 }
 
+.utrecht-backdrop--reduced-transparency {
+  @include utrecht-backdrop--reduced-transparency;
+}
+
 .utrecht-backdrop--viewport {
   @include utrecht-backdrop--viewport;
+}
+
+@media (prefers-reduced-transparency: reduce) {
+  .utrecht-backdrop {
+    @include utrecht-backdrop--reduced-transparency;
+  }
 }
