@@ -13,6 +13,22 @@
   user-select: none;
 }
 
+@mixin utrecht-backdrop--fade-in {
+  --_utrecht-backdrop-fade-in-animation-duration: var(--utrecht-backdrop-fade-in-animation-duration, 0);
+
+  animation: utrecht-backdrop-fade-in var(--_utrecht-backdrop-fade-in-animation-duration, 0) ease-in-out;
+
+  @keyframes utrecht-backdrop-fade-in {
+    from {
+      opacity: 0%;
+    }
+
+    to {
+      opacity: var(--_utrecht-backdrop-opacity);
+    }
+  }
+}
+
 @mixin utrecht-backdrop--position {
   bottom: 0;
   display: block;
@@ -21,6 +37,10 @@
   right: 0;
   top: 0;
   z-index: var(--utrecht-backdrop-z-index);
+}
+
+@mixin utrecht-backdrop--reduced-motion {
+  --_utrecht-backdrop-fade-in-animation-duration: 0;
 }
 
 @mixin utrecht-backdrop--reduced-transparency {
