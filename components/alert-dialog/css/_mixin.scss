@@ -28,6 +28,10 @@
   @include utrecht-backdrop;
 }
 
+@mixin utrecht-alert-dialog__backdrop--reduced-transparency {
+  @include utrecht-backdrop--reduced-transparency;
+}
+
 @mixin utrecht-alert-dialog__icon {
   @include utrecht-alert__icon;
 }

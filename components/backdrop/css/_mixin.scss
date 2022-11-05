@@ -5,9 +5,11 @@
  */
 
 @mixin utrecht-backdrop {
+  --_utrecht-backdrop-opacity: var(--utrecht-backdrop-opacity);
+
   background-color: var(--utrecht-backdrop-background-color);
   color: var(--utrecht-backdrop-color);
-  opacity: var(--utrecht-backdrop-opacity);
+  opacity: var(--_utrecht-backdrop-opacity);
   user-select: none;
 }
 
@@ -19,6 +21,10 @@
   right: 0;
   top: 0;
   z-index: var(--utrecht-backdrop-z-index);
+}
+
+@mixin utrecht-backdrop--reduced-transparency {
+  --_utrecht-backdrop-opacity: var(--utrecht-backdrop-reduced-transparency-opacity, 100%);
 }
 
 @mixin utrecht-backdrop--viewport {

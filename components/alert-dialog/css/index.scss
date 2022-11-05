@@ -39,3 +39,9 @@ so do not apply these styles to an HTML `<dialog>` element without `open` attrib
 .utrecht-alert-dialog--warning {
   @include utrecht-alert-dialog--warning;
 }
+
+@media (prefers-reduced-transparency: reduce) {
+  .utrecht-alert-dialog::backdrop {
+    @include utrecht-alert-dialog__backdrop--reduced-transparency;
+  }
+}
