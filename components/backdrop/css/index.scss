@@ -8,7 +8,6 @@
 
 .utrecht-backdrop {
   @include utrecht-backdrop;
-  @include utrecht-backdrop--fade-in;
   @include utrecht-backdrop--position;
 }
 
@@ -22,16 +21,4 @@
 
 .utrecht-backdrop--viewport {
   @include utrecht-backdrop--viewport;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .utrecht-backdrop {
-    @include utrecht-backdrop--reduced-motion;
-  }
-}
-
-@media (prefers-reduced-transparency: reduce) {
-  .utrecht-backdrop {
-    @include utrecht-backdrop--reduced-transparency;
-  }
 }

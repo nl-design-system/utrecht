@@ -6,17 +6,13 @@
 
 @mixin utrecht-backdrop {
   --_utrecht-backdrop-opacity: var(--utrecht-backdrop-opacity);
+  --_utrecht-backdrop-fade-in-animation-duration: var(--utrecht-backdrop-fade-in-animation-duration, 0);
 
+  animation: utrecht-backdrop-fade-in var(--_utrecht-backdrop-fade-in-animation-duration, 0) ease-in-out;
   background-color: var(--utrecht-backdrop-background-color);
   color: var(--utrecht-backdrop-color);
   opacity: var(--_utrecht-backdrop-opacity);
   user-select: none;
-}
-
-@mixin utrecht-backdrop--fade-in {
-  --_utrecht-backdrop-fade-in-animation-duration: var(--utrecht-backdrop-fade-in-animation-duration, 0);
-
-  animation: utrecht-backdrop-fade-in var(--_utrecht-backdrop-fade-in-animation-duration, 0) ease-in-out;
 
   @keyframes utrecht-backdrop-fade-in {
     from {
@@ -25,6 +21,18 @@
 
     to {
       opacity: var(--_utrecht-backdrop-opacity);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & {
+      @include utrecht-backdrop--reduced-motion;
+    }
+  }
+
+  @media (prefers-reduced-transparency: reduce) {
+    & {
+      @include utrecht-backdrop--reduced-transparency;
     }
   }
 }
