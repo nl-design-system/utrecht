@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { defaultArgs, exampleArgs, ParagraphWithQuote, storyArgTypes } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-quote"
+  title="CSS Component/Quote"
+  component={ParagraphWithQuote}
+  argTypes={storyArgTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Quote
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {ParagraphWithQuote.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

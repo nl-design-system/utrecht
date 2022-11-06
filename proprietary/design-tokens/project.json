@@ -20,6 +20,13 @@
         "command": "npm run watch",
         "cwd": "proprietary/design-tokens"
       }
+    },
+    "watch:design-tokens": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "command": "npm run watch",
+        "cwd": "proprietary/design-tokens"
+      }
     }
   }
 }
