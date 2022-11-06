@@ -4,3 +4,7 @@
   background-color: var(--utrecht-document-background-color);
   color: var(--utrecht-document-color);
 }
+
+.utrecht-reduced-motion {
+  --utrecht-motion-max-animation-duration: 0;
+}

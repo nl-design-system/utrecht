@@ -470,6 +470,7 @@ importers:
       '@utrecht/web-component-library-stencil': workspace:*
       '@whitespace/storybook-addon-html': 5.0.0
       babel-loader: 8.2.5
+      clsx: 1.2.1
       cpx: 1.5.0
       css-loader: 5.2.7
       html-react-parser: 3.0.1
@@ -511,6 +512,7 @@ importers:
       '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
       '@whitespace/storybook-addon-html': 5.0.0_nrub5ii6rhp6huxbftvl6wo4x4
       babel-loader: 8.2.5_t5lqpictcry45jvv466griokye
+      clsx: 1.2.1
       cpx: 1.5.0
       css-loader: 5.2.7_webpack@5.73.0
       html-react-parser: 3.0.1_react@18.2.0
@@ -5510,7 +5512,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.19.0
       '@types/react': 18.0.15
-      clsx: 1.1.0
+      clsx: 1.2.1
       focus-lock: 0.8.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
