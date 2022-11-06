@@ -1,4 +1,6 @@
+/* eslint-env node */
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
+import clsx from 'clsx';
 import defaultsDeep from 'lodash.defaultsdeep';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
@@ -24,7 +26,11 @@ export const decorators = [
     storyContext.parameters.args = storyContext.args;
 
     return (
-      <div className="utrecht-document utrecht-document--surface">
+      <div
+        className={clsx('utrecht-document', 'utrecht-document--surface', {
+          'utrecht-reduced-motion': ['1', 'true'].includes(process.env.STORYBOOK_REDUCED_MOTION),
+        })}
+      >
         <Story />
       </div>
     );

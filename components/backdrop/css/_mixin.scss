@@ -8,7 +8,12 @@
   --_utrecht-backdrop-opacity: var(--utrecht-backdrop-opacity);
   --_utrecht-backdrop-fade-in-animation-duration: var(--utrecht-backdrop-fade-in-animation-duration, 0);
 
-  animation: utrecht-backdrop-fade-in var(--_utrecht-backdrop-fade-in-animation-duration, 0) ease-in-out;
+  animation-duration: min(
+    var(--utrecht-motion-max-animation-duration, var(--_utrecht-backdrop-fade-in-animation-duration)),
+    var(--_utrecht-backdrop-fade-in-animation-duration, 0)
+  );
+  animation-name: utrecht-backdrop-fade-in;
+  animation-timing-function: ease-in-out;
   background-color: var(--utrecht-backdrop-background-color);
   color: var(--utrecht-backdrop-color);
   opacity: var(--_utrecht-backdrop-opacity);
