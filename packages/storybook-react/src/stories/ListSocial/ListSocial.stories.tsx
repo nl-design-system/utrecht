@@ -11,7 +11,7 @@ import {
 import React from 'react';
 
 export default {
-  title: 'React.js Component/List Social',
+  title: 'React Component/List Social',
   id: 'react-list-social',
   component: ListSocial,
 } as ComponentMeta<typeof ListSocial>;

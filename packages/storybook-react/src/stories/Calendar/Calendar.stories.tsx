@@ -5,7 +5,7 @@ import React from 'react';
 import { argTypes, events } from './argTypes';
 
 export default {
-  title: 'React.js Component/Calendar',
+  title: 'React Component/Calendar',
   id: 'react-calendar',
   component: Calendar,
   argTypes,

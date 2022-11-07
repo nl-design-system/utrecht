@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Form Label/Types',
+  title: 'React Component/Form Label/Types',
   id: 'react-form-label-types',
   component: FormLabel,
   argTypes,

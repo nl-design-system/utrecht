@@ -66,7 +66,7 @@ const storyArgTypes = {
 };
 
 export default {
-  title: 'React.js Component/Form Field',
+  title: 'React Component/Form Field',
   id: 'react-form-field3',
   component: FormField,
   argTypes: storyArgTypes,

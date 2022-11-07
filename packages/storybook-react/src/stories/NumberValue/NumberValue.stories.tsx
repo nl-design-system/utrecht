@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Number Value',
+  title: 'React Component/Number Value',
   id: 'react-value-number',
   component: NumberValue,
   argTypes,

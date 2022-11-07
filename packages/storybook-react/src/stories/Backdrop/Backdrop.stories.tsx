@@ -3,7 +3,7 @@ import { Backdrop } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Backdrop',
+  title: 'React Component/Backdrop',
   id: 'react-backdrop',
   component: Backdrop,
 } as ComponentMeta<typeof Backdrop>;

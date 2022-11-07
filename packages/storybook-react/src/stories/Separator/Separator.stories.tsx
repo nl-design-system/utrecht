@@ -3,7 +3,7 @@ import { Separator } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Separator',
+  title: 'React Component/Separator',
   id: 'react-separator',
   component: Separator,
 } as ComponentMeta<typeof Separator>;

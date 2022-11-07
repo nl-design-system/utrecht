@@ -19,7 +19,7 @@ const ExampleViewport = (Story) => (
 ExampleViewport.displayName = 'ExampleViewport';
 
 export default {
-  title: 'React.js Component/Skip link',
+  title: 'React Component/Skip link',
   id: 'react-skip-link',
   component: SkipLink,
   argTypes,

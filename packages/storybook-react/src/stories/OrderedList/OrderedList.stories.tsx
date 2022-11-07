@@ -7,7 +7,7 @@ import { Default as OrderedListItem } from './OrderedListItem.stories.tsx';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Ordered List',
+  title: 'React Component/Ordered List',
   id: 'react-ordered-list',
   component: OrderedList,
   subcomponents: { OrderedListItem },

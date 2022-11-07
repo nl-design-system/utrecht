@@ -3,7 +3,7 @@ import { Heading1, PageHeader } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Page Header',
+  title: 'React Component/Page Header',
   id: 'react-page-header',
   component: PageHeader,
 } as ComponentMeta<typeof PageHeader>;

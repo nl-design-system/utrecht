@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Checkbox/With Label',
+  title: 'React Component/Checkbox/With Label',
   id: 'react-checkbox-with-label',
   component: Checkbox,
   argTypes,

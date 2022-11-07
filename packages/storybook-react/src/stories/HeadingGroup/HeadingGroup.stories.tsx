@@ -3,7 +3,7 @@ import { Heading1, HeadingGroup, Paragraph, PreHeading } from '@utrecht/componen
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Heading Group',
+  title: 'React Component/Heading Group',
   id: 'react-heading-group',
   component: HeadingGroup,
 } as ComponentMeta<typeof HeadingGroup>;

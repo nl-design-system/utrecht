@@ -7,7 +7,7 @@ import { Default as PageFooter } from '../PageFooter/PageFooter.stories';
 import { Default as PageHeader } from '../PageHeader/PageContent.stories';
 
 export default {
-  title: 'React.js Component/Page',
+  title: 'React Component/Page',
   id: 'react-page',
   component: Page,
   subcomponents: { PageContent, PageFooter, PageHeader },

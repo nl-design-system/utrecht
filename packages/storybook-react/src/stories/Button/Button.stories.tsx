@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Button',
+  title: 'React Component/Button',
   id: 'react-button',
   component: Button,
   argTypes,

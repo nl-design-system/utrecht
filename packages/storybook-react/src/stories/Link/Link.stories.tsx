@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Link',
+  title: 'React Component/Link',
   id: 'react-link',
   component: Link,
   argTypes,
