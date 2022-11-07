@@ -2,11 +2,15 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
 
 export interface RadioButtonProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
+  appearance?: string;
   invalid?: boolean;
 }
 
 export const RadioButton = forwardRef(
-  ({ invalid, className, ...restProps }: RadioButtonProps, ref: ForwardedRef<HTMLInputElement>) => (
+  (
+    { appearance = 'utrecht-radio-button', invalid, className, ...restProps }: RadioButtonProps,
+    ref: ForwardedRef<HTMLInputElement>,
+  ) => (
     <input
       {...restProps}
       ref={ref}
@@ -14,7 +18,10 @@ export const RadioButton = forwardRef(
       className={clsx(
         'utrecht-radio-button',
         'utrecht-radio-button--html-input',
-        invalid && 'utrecht-radio-button--invalid',
+        {
+          'utrecht-radio-button--custom': appearance === 'utrecht-radio-button',
+          'utrecht-radio-button--invalid': invalid,
+        },
         className,
       )}
     />
