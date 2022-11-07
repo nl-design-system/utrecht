@@ -4,5 +4,6 @@
  */
 
 import '../../../../components/checkbox/css/index.scss';
+import '../../../../components/custom-checkbox/css/index.scss';
 
 export * from '../Checkbox';
