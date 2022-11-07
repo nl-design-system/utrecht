@@ -118,6 +118,22 @@ The native checkbox should have the same position and size as the custom checkbo
   </Story>
 </Canvas>
 
+## Hover
+
+<Canvas>
+  <Story
+    name="hover"
+    parameters={{
+      pseudo: { hover: true },
+    }}
+    args={{
+      ...defaultArgs,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
 ## Focus
 
 <Canvas>
