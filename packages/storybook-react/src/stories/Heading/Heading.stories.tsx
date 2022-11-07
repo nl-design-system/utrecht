@@ -1,53 +1,63 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { Heading } from '@utrecht/component-library-react';
 import React from 'react';
+import { argTypes, exampleArgs } from './argTypes';
 
 export default {
   title: 'React Component/Heading',
   id: 'react-heading',
   component: Heading,
+  argTypes,
 } as ComponentMeta<typeof Heading>;
 
 const Template: ComponentStory<typeof Heading> = (args) => <Heading {...args} />;
 
-export const Heading1 = Template.bind({});
+export const HeadingLevel1 = Template.bind({});
 
-Heading1.args = {
-  children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+HeadingLevel1.args = {
+  ...exampleArgs,
   level: 1,
 };
 
-export const Heading2 = Template.bind({});
+export const HeadingLevel2 = Template.bind({});
 
-Heading2.args = {
-  ...Heading1.args,
+HeadingLevel2.args = {
+  ...exampleArgs,
   level: 2,
 };
 
-export const Heading3 = Template.bind({});
+export const HeadingLevel3 = Template.bind({});
 
-Heading3.args = {
-  ...Heading1.args,
+HeadingLevel3.args = {
+  ...exampleArgs,
   level: 3,
 };
 
-export const Heading4 = Template.bind({});
+export const HeadingLevel4 = Template.bind({});
 
-Heading4.args = {
-  ...Heading1.args,
+HeadingLevel4.args = {
+  ...exampleArgs,
   level: 4,
 };
 
-export const Heading5 = Template.bind({});
+export const HeadingLevel5 = Template.bind({});
 
-Heading5.args = {
-  ...Heading1.args,
+HeadingLevel5.args = {
+  ...exampleArgs,
   level: 5,
 };
 
-export const Heading6 = Template.bind({});
+export const HeadingLevel6 = Template.bind({});
 
-Heading6.args = {
-  ...Heading1.args,
+HeadingLevel6.args = {
+  ...exampleArgs,
   level: 6,
+};
+
+export const HeadingAppearance = Template.bind({});
+
+HeadingAppearance.args = {
+  ...exampleArgs,
+  appearance: 'utrecht-heading-4',
+  level: 2,
 };
