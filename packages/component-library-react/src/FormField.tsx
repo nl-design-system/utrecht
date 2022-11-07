@@ -1,11 +1,30 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type FormFieldProps = HTMLAttributes<HTMLDivElement>;
+export interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
+  invalid?: boolean;
+  type?: string;
+}
 
 export const FormField = forwardRef(
-  ({ className, children, ...restProps }: PropsWithChildren<FormFieldProps>, ref: ForwardedRef<HTMLDivElement>) => (
-    <div {...restProps} ref={ref} className={clsx('utrecht-form-field', className)}>
+  (
+    { className, children, invalid, type, ...restProps }: PropsWithChildren<FormFieldProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => (
+    <div
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'utrecht-form-field',
+        {
+          'utrecht-form-field--invalid': invalid,
+          'utrecht-form-field--checkbox': type === 'checkbox',
+          'utrecht-form-field--radio': type === 'radio',
+          'utrecht-form-field--text': !type || type === 'text',
+        },
+        className,
+      )}
+    >
       {children}
     </div>
   ),
