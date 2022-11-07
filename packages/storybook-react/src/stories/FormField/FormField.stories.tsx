@@ -1,18 +1,17 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
-import { Checkbox, FormField, FormFieldDescription, FormLabel, Paragraph } from '@utrecht/component-library-react';
+import {
+  FormField,
+  FormFieldDescription,
+  FormLabel,
+  Paragraph,
+  Textarea,
+  Textbox,
+} from '@utrecht/component-library-react';
 import React from 'react';
 import { argTypes } from './argTypes';
 
 const storyArgTypes = {
   ...argTypes,
-  checked: {
-    description: 'Checked',
-    control: 'boolean',
-    table: {
-      category: 'Story',
-      defaultValue: { summary: false },
-    },
-  },
   required: {
     description: 'Required',
     control: 'boolean',
@@ -80,26 +79,26 @@ export default {
 } as ComponentMeta<typeof FormField>;
 
 const Template: ComponentStory<typeof FormField> = (args) => {
-  const { checked, description, disabled, id, invalid, invalidDescription, label, name, required, value, type } = args;
+  const { description, disabled, id, Input, invalid, invalidDescription, label, name, required, value, type } = args;
   const descriptionId = description ? `${id}-description` : null;
   const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : null;
   return (
     <FormField invalid={invalid} type={type}>
-      <Paragraph className="utrecht-form-field__label utrecht-form-field__label--checkbox">
-        <FormLabel disabled={disabled} type="checkbox" htmlFor={id}>
-          <Checkbox
-            aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || null}
-            className="utrecht-form-field__input"
-            defaultChecked={checked}
-            disabled={disabled}
-            id={id}
-            invalid={invalid}
-            required={required}
-            name={name}
-            value={value}
-          />
+      <Paragraph className="utrecht-form-field__label">
+        <FormLabel disabled={disabled} htmlFor={id}>
           {label}
         </FormLabel>
+      </Paragraph>
+      <Paragraph className="utrecht-form-field__input">
+        <Input
+          id={id}
+          disabled={disabled}
+          invalid={invalid}
+          name={name}
+          type={type}
+          required={required}
+          value={value}
+        />
       </Paragraph>
       {description ? (
         <FormFieldDescription id={descriptionId} className="utrecht-form-field__description">
@@ -115,18 +114,34 @@ const Template: ComponentStory<typeof FormField> = (args) => {
   );
 };
 
-export const FormFieldCheckbox = Template.bind({});
+export const FormFieldTextbox = Template.bind({});
 
-FormFieldCheckbox.args = {
-  checked: false,
-  description: 'U kunt ons echt vertrouwen!',
+FormFieldTextbox.args = {
+  description: 'Maximaal 140 karakters',
   disabled: false,
-  id: '43f471c8-c6f1-4867-bc53-9602c06b8a32',
+  id: '3a43bbe9-635c-46c2-86cd-b0aa63855598',
   invalid: true,
-  invalidDescription: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
-  label: 'Ik ga akkoord met de algemene voorwaarden',
-  name: 'consent',
-  value: 'true',
+  invalidDescription: 'Fout: het veld is nog leeg. Vul een bericht in.',
+  label: 'Tweet',
+  name: 'message',
+  value: '',
   required: true,
-  type: 'checkbox',
+  type: 'text',
+  Input: Textbox,
+};
+
+export const FormFieldTextarea = Template.bind({});
+
+FormFieldTextarea.args = {
+  description: 'Maximaal 140 karakters',
+  disabled: false,
+  id: '3a43bbe9-635c-46c2-86cd-b0aa63855598',
+  invalid: true,
+  invalidDescription: 'Fout: het veld is nog leeg. Vul een bericht in.',
+  label: 'Tweet',
+  name: 'message',
+  value: '',
+  required: true,
+  type: 'text',
+  Input: Textarea,
 };
