@@ -37,7 +37,7 @@ export { Image } from './Image';
 export { Link } from './Link';
 export { LinkButton } from './LinkButton';
 export { LinkSocial } from './LinkSocial';
-export { ListSocial } from './ListSocial';
+export { ListSocial, ListSocialItem } from './ListSocial';
 export { NumberValue } from './NumberValue';
 export { OrderedList } from './OrderedList';
 export { OrderedListItem } from './OrderedListItem';
