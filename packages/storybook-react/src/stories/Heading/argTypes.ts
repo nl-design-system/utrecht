@@ -2,13 +2,13 @@ export const argTypes = {
   level: {
     description: 'Heading level',
     control: { type: 'select' },
-    options: ['1', '2', '3', '4', '5', '6'],
+    options: [1, 2, 3, 4, 5, 6],
   },
   appearance: {
     description: 'Appearance',
     control: { type: 'select' },
     options: [
-      '',
+      undefined,
       'utrecht-heading-1',
       'utrecht-heading-2',
       'utrecht-heading-3',
