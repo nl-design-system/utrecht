@@ -6,6 +6,14 @@
 
 @mixin utrecht-ordered-list {
   font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(
+    --utrecht-ordered-list-font-size,
+    var(--utrecht-unordered-list-font-size, var(--utrecht-document-font-size, inherit))
+  );
+  line-height: var(
+    --utrecht-ordered-list-font-size,
+    var(--utrecht-unordered-list-line-height, var(--utrecht-document-line-height, inherit))
+  );
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-ordered-list-margin-block-end, var(--utrecht-unordered-list-margin-block-end, 0))
