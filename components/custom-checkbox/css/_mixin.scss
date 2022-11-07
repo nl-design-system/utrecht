@@ -78,6 +78,15 @@
   color: var(--utrecht-custom-checkbox-active-color, var(--utrecht-custom-checkbox-color));
 }
 
+@mixin utrecht-custom-checkbox--hover {
+  background-color: var(
+    --utrecht-custom-checkbox-hover-background-color,
+    var(--utrecht-custom-checkbox-background-color)
+  );
+  border-color: var(--utrecht-custom-checkbox-hover-border-color, var(--utrecht-custom-checkbox-border-color));
+  border-width: var(--utrecht-custom-checkbox-hover-border-width, var(--utrecht-custom-checkbox-border-width));
+}
+
 @mixin utrecht-custom-checkbox--focus {
   @include utrecht-focus;
 
@@ -97,6 +106,10 @@
 @mixin utrecht-custom-checkbox--html-input {
   &:disabled {
     @include utrecht-custom-checkbox--disabled;
+  }
+
+  &:hover {
+    @include utrecht-custom-checkbox--hover;
   }
 
   &:focus {

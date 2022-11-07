@@ -105,6 +105,16 @@
 @mixin utrecht-custom-radio-button--required {
 }
 
+@mixin utrecht-custom-radio-button--hover {
+  background-color: var(
+    --utrecht-custom-radio-button-hover-background-color,
+    var(--utrecht-custom-radio-button-background-color)
+  );
+  border-color: var(--utrecht-custom-radio-button-hover-border-color, var(--utrecht-custom-radio-button-border-color));
+  border-width: var(--utrecht-custom-radio-button-hover-border-width, var(--utrecht-custom-radio-button-border-width));
+  color: var(--utrecht-custom-radio-button-hover-color, var(--utrecht-custom-radio-button-color));
+}
+
 @mixin utrecht-custom-radio-button--focus {
   @include utrecht-focus;
 
@@ -121,6 +131,10 @@
 @mixin utrecht-custom-radio-button--html-input {
   &:disabled {
     @include utrecht-custom-radio-button--disabled;
+  }
+
+  &:hover {
+    @include utrecht-custom-radio-button--hover;
   }
 
   &:focus {

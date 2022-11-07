@@ -20,6 +20,10 @@ export const argTypes = {
     description: 'Active',
     control: 'boolean',
   },
+  hover: {
+    description: 'Hover',
+    control: 'boolean',
+  },
   focus: {
     description: 'Focus',
     control: 'boolean',
@@ -34,6 +38,7 @@ export const defaultArgs = {
   checked: false,
   disabled: false,
   active: false,
+  hover: false,
   focus: false,
   invalid: false,
 };
@@ -44,6 +49,7 @@ export const CustomRadioButton = ({
   checked = defaultArgs.checked,
   disabled = defaultArgs.disabled,
   active = defaultArgs.active,
+  hover = defaultArgs.hover,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
 }) => (
@@ -56,6 +62,7 @@ export const CustomRadioButton = ({
       checked && 'utrecht-custom-radio-button--checked',
       disabled && 'utrecht-custom-radio-button--disabled',
       active && 'utrecht-custom-radio-button--active',
+      hover && 'utrecht-custom-radio-button--hover',
       focus && 'utrecht-custom-radio-button--focus',
       invalid && 'utrecht-custom-radio-button--invalid',
     )}

@@ -35,6 +35,11 @@
   @include utrecht-custom-checkbox--active;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--hover,
+.utrecht-custom-checkbox--hover {
+  @include utrecht-custom-checkbox--hover;
+}
+
 .utrecht-checkbox--custom.utrecht-checkbox--focus,
 .utrecht-custom-checkbox--focus {
   @include utrecht-custom-checkbox--focus;
