@@ -4,7 +4,7 @@ import { UtrechtIconFacebook } from '@utrecht/web-component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Link Social',
+  title: 'React Component/Link Social',
   id: 'react-link-social',
   component: LinkSocial,
 } as ComponentMeta<typeof LinkSocial>;

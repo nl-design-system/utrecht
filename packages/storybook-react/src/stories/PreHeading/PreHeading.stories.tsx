@@ -3,7 +3,7 @@ import { PreHeading } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Pre-heading',
+  title: 'React Component/Pre-heading',
   id: 'react-pre-heading',
   component: PreHeading,
   args: {

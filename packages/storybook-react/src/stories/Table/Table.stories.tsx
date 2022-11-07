@@ -11,7 +11,7 @@ import {
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Table',
+  title: 'React Component/Table',
   id: 'react-table',
   component: Table,
 } as ComponentMeta<typeof Table>;

@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes, options } from './argTypes';
 
 export default {
-  title: 'React.js Component/Select/With Label',
+  title: 'React Component/Select/With Label',
   id: 'react-select-with-label',
   component: Select,
   argTypes,

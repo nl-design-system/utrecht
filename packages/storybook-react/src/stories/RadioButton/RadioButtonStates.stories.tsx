@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Radio Button/States',
+  title: 'React Component/Radio Button/States',
   id: 'react-radio-button-states',
   component: RadioButton,
   argTypes,

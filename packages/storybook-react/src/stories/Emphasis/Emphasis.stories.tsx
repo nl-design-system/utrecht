@@ -3,7 +3,7 @@ import { Emphasis, Paragraph } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Emphasis',
+  title: 'React Component/Emphasis',
   id: 'react-document',
   component: Emphasis,
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],

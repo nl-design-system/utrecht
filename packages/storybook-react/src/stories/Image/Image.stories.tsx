@@ -3,7 +3,7 @@ import { Image } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Image',
+  title: 'React Component/Image',
   id: 'react-image',
   component: Image,
 } as ComponentMeta<typeof Image>;

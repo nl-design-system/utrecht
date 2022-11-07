@@ -3,7 +3,7 @@ import { ButtonGroup, Heading, LinkButton } from '@utrecht/component-library-rea
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Alternate language navigation/Button group',
+  title: 'React Component/Alternate language navigation/Button group',
   id: 'react-alternate-lang-button-group',
   component: LinkButton,
 } as ComponentMeta<typeof LinkButton>;

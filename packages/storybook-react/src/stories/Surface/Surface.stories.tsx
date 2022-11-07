@@ -3,7 +3,7 @@ import { Surface } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Surface',
+  title: 'React Component/Surface',
   id: 'react-surface',
   component: Surface,
 } as ComponentMeta<typeof Surface>;

@@ -3,7 +3,7 @@ import { DataList, DataListItem, DataListKey, DataListValue } from '@utrecht/com
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Data List',
+  title: 'React Component/Data List',
   id: 'react-data-list',
   component: DataList,
 } as ComponentMeta<typeof DataList>;

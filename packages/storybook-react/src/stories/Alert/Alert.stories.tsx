@@ -3,7 +3,7 @@ import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Alert',
+  title: 'React Component/Alert',
   id: 'react-alert',
   component: Alert,
 } as ComponentMeta<typeof Alert>;

@@ -3,7 +3,7 @@ import { Heading } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Heading',
+  title: 'React Component/Heading',
   id: 'react-heading',
   component: Heading,
 } as ComponentMeta<typeof Heading>;

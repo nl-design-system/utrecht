@@ -3,7 +3,7 @@ import { Heading, Link } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Alternate language navigation',
+  title: 'React Component/Alternate language navigation',
   id: 'react-alternate-lang-nav',
   component: Link,
 } as ComponentMeta<typeof Link>;

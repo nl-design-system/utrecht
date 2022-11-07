@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes, options } from './argTypes';
 
 export default {
-  title: 'React.js Component/Select',
+  title: 'React Component/Select',
   id: 'react-select',
   component: Select,
   argTypes,

@@ -3,7 +3,7 @@ import { Paragraph, Strong } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Strong',
+  title: 'React Component/Strong',
   id: 'react-document',
   component: Strong,
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],

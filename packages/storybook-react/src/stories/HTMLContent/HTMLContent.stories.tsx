@@ -3,7 +3,7 @@ import { HTMLContent } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/HTML Content',
+  title: 'React Component/HTML Content',
   id: 'react-html-content',
   component: HTMLContent,
 } as ComponentMeta<typeof HTMLContent>;

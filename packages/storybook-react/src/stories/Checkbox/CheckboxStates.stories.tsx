@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Checkbox/States',
+  title: 'React Component/Checkbox/States',
   id: 'react-checkbox-states',
   component: Checkbox,
   argTypes,

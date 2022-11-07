@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Link that looks like a button',
+  title: 'React Component/Link that looks like a button',
   id: 'react-button-link',
   component: ButtonLink,
   argTypes,

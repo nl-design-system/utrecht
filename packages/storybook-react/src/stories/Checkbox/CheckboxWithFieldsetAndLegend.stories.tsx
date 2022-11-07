@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes, data } from './argTypes';
 
 export default {
-  title: 'React.js Component/Checkbox/With Fieldset And Legend',
+  title: 'React Component/Checkbox/With Fieldset And Legend',
   id: 'react-checkbox-with-fieldset-and-legend',
   component: Checkbox,
   argTypes,

@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes, data } from './argTypes';
 
 export default {
-  title: 'React.js Component/Radio Button/With Fieldset And Legend',
+  title: 'React Component/Radio Button/With Fieldset And Legend',
   id: 'react-radio-button-with-fieldset-and-legend',
   component: RadioButton,
   subcomponents: { FormLabel, FormField },

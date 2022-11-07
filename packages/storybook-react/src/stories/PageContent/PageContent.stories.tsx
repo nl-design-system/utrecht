@@ -3,7 +3,7 @@ import { PageContent, Paragraph } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Page Content',
+  title: 'React Component/Page Content',
   id: 'react-page-content',
   component: PageContent,
 } as ComponentMeta<typeof PageContent>;

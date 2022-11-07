@@ -4,7 +4,7 @@ import React from 'react';
 import { Default } from './Alert.stories';
 
 export default {
-  title: 'React.js Component/Alert/Type',
+  title: 'React Component/Alert/Type',
   id: 'react-alert-type',
   component: Alert,
 } as ComponentMeta<typeof Alert>;

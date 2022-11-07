@@ -3,7 +3,7 @@ import { Icon } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Icon',
+  title: 'React Component/Icon',
   id: 'react-icon',
   component: Icon,
 } as ComponentMeta<typeof Icon>;

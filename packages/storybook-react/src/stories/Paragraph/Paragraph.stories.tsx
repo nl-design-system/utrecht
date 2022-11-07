@@ -3,7 +3,7 @@ import { Paragraph } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Paragraph',
+  title: 'React Component/Paragraph',
   id: 'react-paragraph',
   component: Paragraph,
   args: {

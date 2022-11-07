@@ -4,7 +4,7 @@ import React from 'react';
 import { argTypes } from './argTypes';
 
 export default {
-  title: 'React.js Component/Button/States',
+  title: 'React Component/Button/States',
   id: 'react-button-states',
   component: Button,
   argTypes,

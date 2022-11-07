@@ -3,7 +3,7 @@ import { PageFooter, Paragraph } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Page Footer',
+  title: 'React Component/Page Footer',
   id: 'react-page-footer',
   component: PageFooter,
 } as ComponentMeta<typeof PageFooter>;

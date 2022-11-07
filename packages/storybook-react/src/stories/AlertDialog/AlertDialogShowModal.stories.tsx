@@ -3,7 +3,7 @@ import { AlertDialog, Button, ButtonGroup, Paragraph, PrimaryActionButton } from
 import React, { createRef, useState } from 'react';
 
 export default {
-  title: 'React.js Component/Alert dialog',
+  title: 'React Component/Alert dialog',
   id: 'react-alert-dialog',
   component: AlertDialog,
 } as ComponentMeta<typeof AlertDialog>;

@@ -3,7 +3,7 @@ import { Article, Heading1, Paragraph } from '@utrecht/component-library-react';
 import React from 'react';
 
 export default {
-  title: 'React.js Component/Article',
+  title: 'React Component/Article',
   id: 'react-article',
   component: Article,
 } as ComponentMeta<typeof Article>;
