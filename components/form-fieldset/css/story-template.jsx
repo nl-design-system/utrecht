@@ -21,6 +21,10 @@ export const argTypes = {
     description: 'Set the content of the fieldset',
     control: 'text',
   },
+  invalid: {
+    description: 'Invalid',
+    control: 'boolean',
+  },
   legend: {
     description: 'Set the content of the legend',
     control: 'text',
@@ -105,6 +109,7 @@ export const FormFieldset = ({
         className,
       })}
       aria-disabled={disabled ? 'true' : undefined}
+      aria-invalid={invalid ? 'true' : undefined}
       role={role || 'group'}
       aria-labelledby={labelId}
       {...restProps}
@@ -118,6 +123,7 @@ export const FormFieldset = ({
         'utrecht-form-fieldset--section': section,
         className,
       })}
+      aria-invalid={invalid ? 'true' : undefined}
       disabled={disabled}
       role={role || undefined}
       {...restProps}
