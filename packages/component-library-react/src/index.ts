@@ -12,6 +12,7 @@ export { ButtonGroup } from './ButtonGroup';
 export { ButtonLink } from './ButtonLink';
 export * from './Calendar';
 export { Checkbox } from './Checkbox';
+export { Combobox } from './Combobox';
 export { CustomRadioButton } from './CustomRadioButton';
 export { Document } from './Document';
 export { DataList, DataListItem, DataListActions, DataListKey, DataListValue } from './DataList';
