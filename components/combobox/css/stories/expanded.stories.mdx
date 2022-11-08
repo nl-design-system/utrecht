@@ -1,0 +1,61 @@
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Combobox, countries, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-combobox-expended"
+  title="CSS Component/Combobox/Expended"
+  argTypes={argTypes}
+  component={Combobox}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Combobox component Default
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      ...exampleArgs,
+      options: countries.filter((country) => !country.selectedItem && !country.hovered),
+      isOpen: true,
+    }}
+  >
+    {Combobox.bind({})}
+  </Story>
+</Canvas>
+
+# Combobox List Item component highlighted
+
+<Canvas>
+  <Story
+    name="Highlighted list item"
+    args={{
+      ...exampleArgs,
+      options: countries.filter((country) => !country.hovered),
+      ariaActivedescendant: countries.find((country) => country.selectedItem).id,
+      isOpen: true,
+    }}
+  >
+    {Combobox.bind({})}
+  </Story>
+</Canvas>
+
+# Combobox List Item component Hovered
+
+<Canvas>
+  <Story
+    name="hovered list item"
+    args={{
+      ...exampleArgs,
+      options: countries.filter((country) => !country.selectedItem),
+      isOpen: true,
+    }}
+  >
+    {Combobox.bind({})}
+  </Story>
+</Canvas>

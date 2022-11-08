@@ -1,0 +1,64 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Combobox, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-combobox"
+  title="CSS Component/Combobox/States"
+  component={Combobox}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Combobox component states
+
+## Focus
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      ...exampleArgs,
+    }}
+    parameters={{
+      pseudo: { focus: true, focusVisible: true },
+    }}
+  >
+    {Combobox.bind({})}
+  </Story>
+</Canvas>
+
+## Hover
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      ...exampleArgs,
+    }}
+    parameters={{
+      pseudo: { hover: true },
+    }}
+  >
+    {Combobox.bind({})}
+  </Story>
+</Canvas>
+
+## Value
+
+<Canvas>
+  <Story
+    name="value"
+    args={{
+      ...exampleArgs,
+      value: "Netherlands",
+    }}
+  >
+    {Combobox.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Combobox, defaultArgs, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-combobox"
+  title="CSS Component/Combobox"
+  component={Combobox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Combobox
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Combobox.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
