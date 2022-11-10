@@ -1,0 +1,10 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin utrecht-mark {
+  background-color: var(--utrecht-mark-background-color, revert);
+  color: var(--utrecht-mark-color, revert);
+}

@@ -38,6 +38,7 @@ export { Link } from './Link';
 export { LinkButton } from './LinkButton';
 export { LinkSocial } from './LinkSocial';
 export { ListSocial, ListSocialItem } from './ListSocial';
+export { Mark } from './Mark';
 export { NumberValue } from './NumberValue';
 export { OrderedList } from './OrderedList';
 export { OrderedListItem } from './OrderedListItem';

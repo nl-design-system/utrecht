@@ -1,0 +1,22 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import { Paragraph } from "@utrecht/component-library-react";
+import tokensDefinition from "@utrecht/components/mark/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="react-mark--design-tokens"
+  title="React Component/Mark/Design Tokens"
+  decorators={[(Story) => <Paragraph>{Story()}</Paragraph>]}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Mark Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-mark" />
