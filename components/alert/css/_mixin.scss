@@ -6,6 +6,9 @@
 
 @mixin utrecht-alert {
   background-color: var(--_utrecht-alert-background-color, var(--utrecht-alert-background-color));
+  border-color: var(--_utrecht-alert-border-color, var(--utrecht-alert-border-color));
+  border-style: solid;
+  border-width: var(--_utrecht-alert-border-width, var(--utrecht-alert-border-width, 0));
   color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
   display: grid;
   gap: var(--utrecht-alert-icon-gap);
@@ -32,5 +35,7 @@
 @mixin utrecht-alert-type($type) {
   --_utrecht-alert-icon-color: var(--utrecht-alert-icon-#{$type}-color);
   --_utrecht-alert-background-color: var(--utrecht-alert-#{$type}-background-color);
+  --_utrecht-alert-border-color: var(--utrecht-alert-#{$type}-border-color);
+  --_utrecht-alert-border-width: var(--utrecht-alert-#{$type}-border-width);
   --_utrecht-alert-color: var(--utrecht-alert-#{$type}-color);
 }
