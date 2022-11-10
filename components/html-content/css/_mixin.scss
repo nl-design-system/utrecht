@@ -23,6 +23,7 @@
 @import "../../heading-6/html/mixin";
 @import "../../heading-group/html/mixin";
 @import "../../link/html/mixin";
+@import "../../mark/html/mixin";
 @import "../../ordered-list/html/mixin";
 @import "../../paragraph/html/mixin";
 @import "../../radio-button/html/mixin";
@@ -47,6 +48,7 @@
   @include utrecht-html-form;
   @include utrecht-html-legend;
   @include utrecht-html-label;
+  @include utrecht-html-mark;
   @include utrecht-html-h1;
   @include utrecht-html-h2;
   @include utrecht-html-h3;

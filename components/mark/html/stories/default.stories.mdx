@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, Mark } from "../story-template";
+
+<Meta
+  id="html-mark"
+  title="HTML Component/Mark"
+  component={Mark}
+  argTypes={argTypes}
+  args={defaultArgs}
+  decorators={[(Story) => <p>{Story()}</p>]}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Mark
+
+Styling via the `<mark>` element:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Mark.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
