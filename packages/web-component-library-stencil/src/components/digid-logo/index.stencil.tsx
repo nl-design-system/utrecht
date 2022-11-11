@@ -14,7 +14,14 @@ import { Component, h } from '@stencil/core';
 export class DigidLogo {
   render() {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 150 150">
+      <svg
+        class="utrecht-icon"
+        width="100%"
+        height="100%"
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        viewBox="0 0 150 150"
+      >
         <title>DigiD</title>
         <path d="M136 150H14c-8 0-14-6-14-14V14C0 6 6 0 14 0h122c8 0 14 6 14 14v122c0 8-6 14-14 14z" />
         <path

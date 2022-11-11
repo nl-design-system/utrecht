@@ -14,7 +14,7 @@ import { Component, h } from '@stencil/core';
 export class EherkenningLogo {
   render() {
     return (
-      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 0 81 80">
+      <svg class="utrecht-icon" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="-1 0 81 80">
         <title>Eherkenning</title>
         <rect fill="#E0E0E0" width="80" height="80" />
         <path
