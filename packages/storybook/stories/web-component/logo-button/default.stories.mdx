@@ -1,11 +1,14 @@
 {/* @license CC0-1.0 */}
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
-import { DigidButton } from "./story-template";
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, LogoButton } from "./story-template";
 
 <Meta
   title="Web Component/Logo Button"
-  component={DigidButton}
+  id="web-component-logo-button"
+  component={LogoButton}
+  args={defaultArgs}
+  argTypes={argTypes}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -13,8 +16,10 @@ import { DigidButton } from "./story-template";
   }}
 />
 
-# Logo Button
+# Default Logo Button
 
 <Canvas>
-  <Story name="Default">{DigidButton.bind({})}</Story>
+  <Story name="Default">{LogoButton.bind({})}</Story>
 </Canvas>
+
+<ArgsTable story="Default" />

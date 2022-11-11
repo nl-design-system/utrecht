@@ -14,7 +14,7 @@ import { Component, h } from '@stencil/core';
 export class EidasLogo {
   render() {
     return (
-      <svg viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <svg class="utrecht-icon" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
           d="M21 17.3383C21 18.2955 20.2291 19.0664 19.272 19.0664H1.72805C0.770872 19.0664 0 18.2955 0 17.3383V1.72805C0 0.770879 0.777296 0 1.72805 0H19.272C20.2291 0 21 0.777303 21 1.72805V17.3383Z"
           fill="#2C4375"
