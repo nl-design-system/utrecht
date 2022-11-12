@@ -8,6 +8,14 @@ import clsx from 'clsx';
 import React from 'react';
 
 export const argTypes = {
+  print: {
+    description: 'Appearance in print',
+    control: 'boolean',
+  },
+  windowsHighContrast: {
+    description: 'Appearance in Windows High Contrast mode',
+    control: 'boolean',
+  },
   span: {
     description: 'Avoid the HTML span element',
     control: 'boolean',
@@ -19,12 +27,20 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  print: false,
   textContent: '',
+  windowsHighContrast: false,
 };
 
 export const exampleArgs = { textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog' };
 
-export const Mark = ({ children, span = defaultArgs.span, textContent = defaultArgs.textContent }) => {
+export const Mark = ({
+  children,
+  print = defaultArgs.print,
+  span = defaultArgs.span,
+  textContent = defaultArgs.textContent,
+  windowsHighContrast = defaultArgs.windowsHighContrast,
+}) => {
   const content = (
     <>
       {textContent}
@@ -32,11 +48,14 @@ export const Mark = ({ children, span = defaultArgs.span, textContent = defaultA
     </>
   );
 
-  return span ? (
-    <mark className={clsx('utrecht-mark')}>{content}</mark>
-  ) : (
-    <span className={clsx('utrecht-mark')}>{content}</span>
-  );
+  const attributes = {
+    className: clsx('utrecht-mark', {
+      'utrecht-mark--print': print,
+      'utrecht-mark--windows-high-contrast': windowsHighContrast,
+    }),
+  };
+
+  return span ? <span {...attributes}>{content}</span> : <mark {...attributes}>{content}</mark>;
 };
 
 export default Mark;

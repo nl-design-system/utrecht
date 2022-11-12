@@ -9,3 +9,13 @@
 .utrecht-mark {
   @include utrecht-mark;
 }
+
+/* class name available only for Storybook */
+.utrecht-mark--print {
+  @include utrecht-mark--print;
+}
+
+/* class name available only for Storybook */
+.utrecht-mark--windows-high-contrast {
+  @include utrecht-mark--windows-high-contrast;
+}

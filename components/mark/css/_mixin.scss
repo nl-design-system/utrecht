@@ -4,7 +4,30 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@mixin utrecht-mark--print {
+  outline-color: currentColor;
+  outline-style: dotted;
+  outline-width: 0.1em;
+}
+
+@mixin utrecht-mark--windows-high-contrast {
+  background-color: Highlight;
+  color: HighlightText;
+}
+
 @mixin utrecht-mark {
   background-color: var(--utrecht-mark-background-color, revert);
   color: var(--utrecht-mark-color, revert);
+
+  @media print {
+    & {
+      @include utrecht-mark--print;
+    }
+  }
+
+  @media screen and (-ms-high-contrast: active) {
+    & {
+      @include utrecht-mark--windows-high-contrast;
+    }
+  }
 }
