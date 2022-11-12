@@ -1,0 +1,54 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Paragraph } from "../../../paragraph/css/story-template";
+import { argTypes, defaultArgs, exampleArgs, Mark } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-mark"
+  title="CSS Component/Mark"
+  component={Mark}
+  argTypes={argTypes}
+  args={defaultArgs}
+  decorators={[(Story) => <Paragraph>{Story()}</Paragraph>]}
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Mark
+
+## Appearance in print
+
+Print styling for the mark component.
+
+<Canvas>
+  <Story
+    name="Print"
+    args={{
+      ...exampleArgs,
+      print: true,
+    }}
+  >
+    {Mark.bind({})}
+  </Story>
+</Canvas>
+
+## Appearance in Windows High Contrast mode
+
+High contrast styling for the mark component.
+
+<Canvas>
+  <Story
+    name="Windows High Contrast mode"
+    args={{
+      ...exampleArgs,
+      windowsHighContrast: true,
+    }}
+  >
+    {Mark.bind({})}
+  </Story>
+</Canvas>
