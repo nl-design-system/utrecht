@@ -1,0 +1,23 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin reset-fieldset {
+  all: revert;
+  border: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  min-width: 0;
+  padding-block-end: 0;
+  padding-block-start: 0.01em;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+@mixin reset-legend {
+  display: table;
+  inline-size: 100%;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
