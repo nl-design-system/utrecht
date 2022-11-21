@@ -117,19 +117,23 @@ export const FormFieldset = ({
       {content}
     </div>
   ) : (
-    <fieldset
-      className={clsx('utrecht-form-fieldset', 'utrecht-form-fieldset--html-fieldset', {
+    <div
+      className={clsx('utrecht-form-fieldset', {
         'utrecht-form-fieldset--invalid': invalid,
         'utrecht-form-fieldset--section': section,
         className,
       })}
-      aria-invalid={invalid ? 'true' : undefined}
-      disabled={disabled}
-      role={role || undefined}
-      {...restProps}
     >
-      {content}
-    </fieldset>
+      <fieldset
+        className={clsx('utrecht-form-fieldset__fieldset', 'utrecht-form-fieldset__fieldset--html-fieldset')}
+        aria-invalid={invalid ? 'true' : undefined}
+        disabled={disabled}
+        role={role || undefined}
+        {...restProps}
+      >
+        {content}
+      </fieldset>
+    </div>
   );
 };
 

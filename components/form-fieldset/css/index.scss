@@ -5,12 +5,16 @@
 
 @import "./mixin";
 
-/* stylelint-disable-next-line block-no-empty */
 .utrecht-form-fieldset {
   @include utrecht-form-fieldset;
 }
 
-.utrecht-form-fieldset--html-fieldset {
+.utrecht-form-fieldset__fieldset {
+  @include utrecht-form-fieldset__fieldset;
+}
+
+.utrecht-form-fieldset--html-fieldset,
+.utrecht-form-fieldset__fieldset--html-fieldset {
   @include utrecht-form-fieldset--html-fieldset;
 }
 
