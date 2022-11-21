@@ -77,7 +77,7 @@ describe('Fieldset', () => {
   });
 
   it('supports ForwardRef in React', () => {
-    const ref = createRef<HTMLFieldSetElement>();
+    const ref = createRef<HTMLDivElement>();
 
     const { container } = render(<Fieldset ref={ref} />);
 
