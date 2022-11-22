@@ -6,7 +6,8 @@
 
 @import "./mixin";
 
-.utrecht-ordered-list {
+.utrecht-ordered-list,
+.utrecht-ordered-list--html-content ol {
   @include utrecht-ordered-list;
 }
 
@@ -18,6 +19,8 @@
   @include utrecht-ordered-list--arabic;
 }
 
+.utrecht-ordered-list--html-content > li,
+.utrecht-ordered-list--html-content ol > li,
 .utrecht-ordered-list__item {
   @include utrecht-ordered-list__item;
 }

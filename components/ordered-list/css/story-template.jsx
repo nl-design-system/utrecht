@@ -12,35 +12,82 @@ export const argTypes = {
     description: 'Distance the element from adjacent content',
     control: 'boolean',
   },
+  htmlContent: {
+    description: 'Content is HTML without class names',
+    control: 'boolean',
+  },
   items: {
     description: 'List items',
     control: 'array',
   },
 };
 
-export const defaultArgs = { distanced: false, items: [] };
+export const defaultArgs = {
+  distanced: false,
+  htmlContent: false,
+  items: [],
+};
 
 export const exampleArgs = {
   items: [
     {
-      textContent: 'Lorem',
+      children: 'Lorem',
     },
     {
-      textContent: 'Ipsum',
+      children: 'Ipsum',
     },
     {
-      textContent: 'Dolor',
+      children: 'Dolor',
     },
   ],
 };
 
-export const OrderedListItem = ({ children }) => <li className="utrecht-ordered-list__item">{children}</li>;
-export const OrderedList = ({ children, distanced = defaultArgs.distanced, items = defaultArgs.items }) => (
-  <ol className={clsx('utrecht-ordered-list', distanced && 'utrecht-ordered-list--distanced')}>
+export const HTMLOrderedListItem = ({ children, items }) => (
+  <li>
     {children}
-    {items.map(({ textContent }) => (
-      <OrderedListItem>{textContent}</OrderedListItem>
-    ))}
+    {items && HTMLOrderedList({ items })}
+  </li>
+);
+
+export const HTMLOrderedList = ({ children, items = defaultArgs.items }) => (
+  <ol>
+    {children}
+    {items &&
+      items.map(({ children: subChildren, items: subItems }, index) => (
+        <HTMLOrderedListItem key={index} items={subItems}>
+          {subChildren}
+        </HTMLOrderedListItem>
+      ))}
+  </ol>
+);
+
+export const OrderedListItem = ({ children }) => <li className="utrecht-ordered-list__item">{children}</li>;
+
+export const OrderedList = ({
+  children,
+  distanced = defaultArgs.distanced,
+  items = defaultArgs.items,
+  htmlContent = defaultArgs.htmlContent,
+}) => (
+  <ol
+    className={clsx('utrecht-ordered-list', {
+      'utrecht-ordered-list--distanced': distanced,
+      'utrecht-ordered-list--html-content': htmlContent,
+    })}
+  >
+    {children}
+    {htmlContent
+      ? items.map(({ children: subChildren, items: subItems }, index) => (
+          <HTMLOrderedListItem key={index} items={subItems}>
+            {subChildren}
+          </HTMLOrderedListItem>
+        ))
+      : items.map(({ children: subChildren, items: subItems }, index) => (
+          <OrderedListItem key={index}>
+            {subChildren}
+            {subItems && OrderedList({ items: subItems })}
+          </OrderedListItem>
+        ))}
   </ol>
 );
 

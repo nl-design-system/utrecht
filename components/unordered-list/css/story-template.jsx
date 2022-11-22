@@ -13,6 +13,10 @@ export const argTypes = {
     description: 'Distance the element from adjacent content',
     control: 'boolean',
   },
+  htmlContent: {
+    description: 'Content is HTML without class names',
+    control: 'boolean',
+  },
   items: {
     description: 'List items',
     control: 'array',
@@ -21,6 +25,7 @@ export const argTypes = {
 
 export const defaultArgs = {
   distanced: false,
+  htmlContent: false,
   items: [],
 };
 
@@ -38,29 +43,57 @@ export const exampleArgs = {
   ],
 };
 
+export const HTMLUnorderedListItem = ({ children, innerHTML, items }) => (
+  <li>
+    {children}
+    {innerHTML && parse(innerHTML)}
+    {items && HTMLUnorderedList({ items })}
+  </li>
+);
+
+export const HTMLUnorderedList = ({ children, items = defaultArgs.items }) => (
+  <ul>
+    {children}
+    {items &&
+      items.map(({ children: subChildren, items: subItems, innerHTML }, index) => (
+        <HTMLUnorderedListItem key={index} innerHTML={innerHTML} items={subItems}>
+          {subChildren}
+        </HTMLUnorderedListItem>
+      ))}
+  </ul>
+);
+
 export const UnorderedListItem = ({ children }) => <li className="utrecht-unordered-list__item">{children}</li>;
 
 export const UnorderedList = ({
   children,
   distanced = defaultArgs.distanced,
   items = defaultArgs.items,
+  htmlContent = defaultArgs.htmlContent,
   nested = false,
 }) => (
   <ul
-    className={clsx(
-      'utrecht-unordered-list',
-      distanced && 'utrecht-unordered-list--distanced',
-      nested && 'utrecht-unordered-list--nested',
-    )}
+    className={clsx('utrecht-unordered-list', {
+      'utrecht-unordered-list--distanced': distanced,
+      'utrecht-unordered-list--html-content': htmlContent,
+      'utrecht-unordered-list--nested': nested,
+    })}
     role="list"
   >
     {children}
-    {items.map(({ items: subItems, innerHTML }, index) => (
-      <UnorderedListItem key={index}>
-        {parse(innerHTML)}
-        {subItems && UnorderedList({ nested: true, items: subItems })}
-      </UnorderedListItem>
-    ))}
+    {htmlContent
+      ? items.map(({ children: subChildren, items: subItems, innerHTML }, index) => (
+          <HTMLUnorderedListItem key={index} items={subItems} innerHTML={innerHTML}>
+            {subChildren}
+          </HTMLUnorderedListItem>
+        ))
+      : items.map(({ children: subChildren, items: subItems, innerHTML }, index) => (
+          <UnorderedListItem key={index}>
+            {subChildren}
+            {innerHTML && parse(innerHTML)}
+            {subItems && UnorderedList({ nested: true, items: subItems })}
+          </UnorderedListItem>
+        ))}
   </ul>
 );
 
