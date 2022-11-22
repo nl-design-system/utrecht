@@ -6,7 +6,8 @@
 
 @import "./mixin";
 
-.utrecht-unordered-list {
+.utrecht-unordered-list,
+.utrecht-unordered-list--html-content ul {
   @include utrecht-unordered-list;
 }
 
@@ -14,14 +15,19 @@
   @include utrecht-unordered-list--distanced;
 }
 
-.utrecht-unordered-list--nested {
+.utrecht-unordered-list--nested,
+.utrecht-unordered-list--html-content ul {
   @include utrecht-unordered-list--nested;
 }
 
+.utrecht-unordered-list--html-content > li,
+.utrecht-unordered-list--html-content ul > li,
 .utrecht-unordered-list__item {
   @include utrecht-unordered-list__item;
 }
 
+.utrecht-unordered-list--html-content > li::marker,
+.utrecht-unordered-list--html-content ul > li::marker,
 .utrecht-unordered-list__item::marker,
 .utrecht-unordered-list__marker {
   @include utrecht-unordered-list__marker;

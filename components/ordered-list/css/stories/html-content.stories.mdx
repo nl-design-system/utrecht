@@ -1,0 +1,55 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, OrderedList } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-ordered-list"
+  title="CSS Component/Ordered List/HTML Content"
+  component={OrderedList}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Ordered list
+
+Use the `--html-content` modifier when you only have control
+over the template for the outer `<ol>` and cannot add BEM
+class names to the `<li>` elements.
+
+<Canvas>
+  <Story
+    name="HTML Content"
+    args={{
+      ...exampleArgs,
+      htmlContent: true,
+      items: [
+        {
+          children: "Lorem",
+        },
+        {
+          children: "Ipsum",
+          items: [
+            {
+              children: "Lorem",
+            },
+            {
+              children: "Ipsum",
+            },
+          ],
+        },
+        {
+          children: "Dolor",
+        },
+      ],
+    }}
+  >
+    {OrderedList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="HTML Content" />

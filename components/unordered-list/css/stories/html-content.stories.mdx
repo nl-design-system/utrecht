@@ -1,0 +1,55 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, UnorderedList } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-unordered-list"
+  title="CSS Component/Unordered List/HTML Content"
+  component={UnorderedList}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Unordered list
+
+Use the `--html-content` modifier when you only have control
+over the template for the outer `<ul>` and cannot add BEM
+class names to the `<li>` elements.
+
+<Canvas>
+  <Story
+    name="HTML Content"
+    args={{
+      ...exampleArgs,
+      htmlContent: true,
+      items: [
+        {
+          children: "Lorem",
+        },
+        {
+          children: "Ipsum",
+          items: [
+            {
+              children: "Lorem",
+            },
+            {
+              children: "Ipsum",
+            },
+          ],
+        },
+        {
+          children: "Dolor",
+        },
+      ],
+    }}
+  >
+    {UnorderedList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="HTML Content" />
