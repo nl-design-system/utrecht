@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, SpotlightSection } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-spotlight-section"
+  title="CSS Component/Spotlight section"
+  component={SpotlightSection}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Spotlight
+
+Styling via the `.utrecht-spotlight-section` and `.utrecht-spotlight-section--info` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {SpotlightSection.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
