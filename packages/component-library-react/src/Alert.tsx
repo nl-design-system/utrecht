@@ -21,13 +21,16 @@ export const Alert = forwardRef(
     <div
       {...restProps}
       ref={ref}
-      className={clsx('utrecht-alert', {
-        'utrecht-alert--error': type === 'error',
-        'utrecht-alert--info': type === 'info',
-        'utrecht-alert--ok': type === 'ok',
-        'utrecht-alert--warning': type === 'warning',
+      className={clsx(
+        'utrecht-alert',
+        {
+          'utrecht-alert--error': type === 'error',
+          'utrecht-alert--info': type === 'info',
+          'utrecht-alert--ok': type === 'ok',
+          'utrecht-alert--warning': type === 'warning',
+        },
         className,
-      })}
+      )}
     >
       {icon && <div className="utrecht-alert__icon">{icon}</div>}
       <div className="utrecht-alert__message">{children}</div>
