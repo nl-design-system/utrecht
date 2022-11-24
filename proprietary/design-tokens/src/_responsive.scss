@@ -7,14 +7,16 @@
 /* stylelint-disable no-duplicate-selectors */
 
 @media (min-width: 35em) {
-  .utrecht-theme--responsive {
+  .utrecht-theme--media-query,
+  .utrecht-theme--media-query-viewport {
     --utrecht-heading-1-font-size: 28px; /* 28px on tablet min-width-35e */
     --utrecht-paragraph-lead-font-size: 1.25em; /* 20px on tablet min-width-35e */
   }
 }
 
 @media (min-width: 60em) {
-  .utrecht-theme--responsive {
+  .utrecht-theme--media-query,
+  .utrecht-theme--media-query-viewport {
     --utrecht-heading-1-font-size: 32px; /* 32px on desktop min-width-60em */
     --utrecht-paragraph-lead-font-size: 1.25em; /* 20px on desktop min-width-60em */
   }

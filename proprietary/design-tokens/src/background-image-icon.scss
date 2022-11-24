@@ -1,15 +1,19 @@
-@import "./component/utrecht/page-footer/custom";
-@import "./responsive";
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
 
-:root {
+.utrecht-theme,
+.utrecht-theme ::backdrop {
   --utrecht-menulijst-item-background-image: url("./pijltje.svg");
   --utrecht-link-icon-left-background-image: url("./pijltje.svg");
   --utrecht-search-bar-input-background-image: url("./icoon-zoek-rood.svg");
   --utrecht-select-background-image: url("./arrow-dropdown.svg");
   --utrecht-link-list-marker-background-image: url("./pijltje-zwart.svg");
-}
 
-utrecht-page-footer,
-.utrecht-page-footer {
-  --utrecht-link-list-marker-background-image: url("./pijltje-wit.svg");
+  utrecht-page-footer,
+  .utrecht-page-footer {
+    --utrecht-link-list-marker-background-image: url("./pijltje-wit.svg");
+  }
 }

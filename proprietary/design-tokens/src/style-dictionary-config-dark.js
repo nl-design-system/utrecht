@@ -38,5 +38,19 @@ module.exports = {
         },
       ],
     },
+    'scss-theme-mixin': {
+      transforms: ['attribute/cti', 'name/cti/kebab', 'color/hsl-4'],
+      buildPath: 'dist/dark/',
+      files: [
+        {
+          destination: '_mixin-theme.scss',
+          format: 'css/variables',
+          options: {
+            selector: '@mixin utrecht-theme--dark',
+            outputReferences: true,
+          },
+        },
+      ],
+    },
   },
 };
