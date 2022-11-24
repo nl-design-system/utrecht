@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0-alpha.0",
+  "author": "Community for NL Design System",
+  "description": "Assets for the Municipality of Utrecht",
+  "license": "SEE LICENSE IN ../LICENSE.md",
+  "name": "@utrecht/assets",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "favicon.ico"
+  ],
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git"
+  }
+}
