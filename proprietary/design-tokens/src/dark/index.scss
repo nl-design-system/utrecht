@@ -1,0 +1,13 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+@use "../../dist/variables";
+@import "../../dist/dark/mixin-theme";
+
+.utrecht-theme--color-scheme-dark,
+.utrecht-theme--color-scheme-dark ::backdrop {
+  @include utrecht-theme--dark;
+}

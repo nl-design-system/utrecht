@@ -29,8 +29,9 @@
     "style-dictionary": "3.7.1"
   },
   "scripts": {
-    "build": "npm-run-all build:**",
-    "build:scss": "sass src/:dist/",
+    "build": "npm run build:style-dictionary && npm run build:scss",
+    "build:scss": "sass --no-source-map src/:dist/",
+    "build:style-dictionary": "npm-run-all build:style-dictionary:**",
     "build:style-dictionary:default": "style-dictionary build --config src/style-dictionary-config.js",
     "build:style-dictionary:dark": "style-dictionary build --config src/style-dictionary-config-dark.js",
     "build:stylelint": "node ./build-stylelint.mjs",

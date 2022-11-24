@@ -1,0 +1,36 @@
+/**
+ * @license SEE LICENSE.md
+ * Copyright (c) 2021 Gemeente Utrecht
+ * All rights reserved
+ */
+
+@use "../dist/variables";
+
+@import "../dist/mixin-theme";
+@import "../dist/dark/mixin-theme";
+
+@import "./responsive";
+
+.utrecht-theme,
+.utrecht-theme ::backdrop {
+  @include utrecht-theme;
+
+  utrecht-page-footer,
+  .utrecht-page-footer {
+    --utrecht-heading-2-color: var(--utrecht-color-white);
+    --utrecht-heading-2-font-size: 1em;
+    --utrecht-heading-2-text-transform: uppercase;
+    --utrecht-heading-3-color: var(--utrecht-color-white);
+    --utrecht-heading-3-font-size: 1.125em;
+    --utrecht-heading-3-font-weight: normal;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .utrecht-theme--media-query,
+  .utrecht-theme--media-query ::backdrop,
+  .utrecht-theme--media-query-color-scheme,
+  .utrecht-theme--media-query-color-scheme ::backdrop {
+    @include utrecht-theme--dark;
+  }
+}

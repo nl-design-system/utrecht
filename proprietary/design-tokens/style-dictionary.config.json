@@ -57,7 +57,7 @@
       "buildPath": "dist/",
       "files": [
         {
-          "destination": "index.css",
+          "destination": "theme.css",
           "format": "css/variables",
           "options": {
             "selector": ".utrecht-theme, .utrecht-theme ::backdrop",
@@ -74,6 +74,20 @@
           "destination": "_variables.scss",
           "format": "scss/variables",
           "options": {
+            "outputReferences": true
+          }
+        }
+      ]
+    },
+    "scss-theme-mixin": {
+      "transforms": ["attribute/cti", "name/cti/kebab", "color/hsl-4"],
+      "buildPath": "dist/",
+      "files": [
+        {
+          "destination": "_mixin-theme.scss",
+          "format": "css/variables",
+          "options": {
+            "selector": "@mixin utrecht-theme",
             "outputReferences": true
           }
         }

@@ -41,6 +41,21 @@ Opt-in way to apply all the CSS variables to HTML elements with the `utrecht-the
 
 This method is the preferred way to style the page.
 
+Theme variations based on a media query are opt-in.
+
+- Use the `utrecht-theme--media-query-color-scheme` to support dark mode.**Warning**: Only use dark mode when all components on your page support dark mode, including 3rd party components.
+- Use the `utrecht-theme--media-query-viewport` to support responsive styling of certain components.
+- Use the `utrecht-theme--media-query` to enable both dark mode and responsive layout with one class name.
+
+For example:
+
+```html
+<!DOCTYPE html>
+<html class="utrecht-theme utrecht-theme--media-query">
+  <!-- this page supports light and dark mode as well as responsive layout -->
+</html>
+```
+
 ### `dist/root.css`
 
 Automatically applies all the CSS variables to HTML elements to the `:root` element:
