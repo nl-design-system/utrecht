@@ -1,0 +1,20 @@
+<!-- @license CC0-1.0 -->
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinition from "@utrecht/components/accordion/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="react-accordion--design-tokens"
+  title="React Component/Accordion/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Accordion Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinition} component="utrecht-accordion" />
