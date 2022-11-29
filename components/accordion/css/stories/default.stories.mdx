@@ -1,0 +1,29 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Accordion } from "../../../../packages/component-library-react/src";
+import { argTypes, defaultArgs, exampleArgs } from "../args";
+import "../index.scss";
+
+<Meta
+  id="css-accordion"
+  title="CSS Component/Accordion"
+  component={Accordion}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Accordion
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {Accordion.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

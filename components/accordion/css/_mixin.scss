@@ -1,0 +1,81 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@mixin utrecht-accordion {
+  --utrecht-button-focus-transform-scale: 1;
+  --utrecht-button-inline-size: 100%;
+  --utrecht-button-subtle-background-color: var(
+    --utrecht-accordion-button-background-color,
+    var(--utrecht-color-grey-95)
+  );
+  --utrecht-button-subtle-color: var(--utrecht-accordion-button-color, var(--utrecht-color-grey-10));
+  --utrecht-button-subtle-hover-background-color: var(
+    --utrecht-accordion-button-hover-background-color,
+    var(--utrecht-color-grey-95)
+  );
+  --utrecht-button-subtle-hover-border-color: var(
+    --utrecht-accordion-button-hover-border-color,
+    var(--utrecht-color-grey-95)
+  );
+  --utrecht-button-subtle-border-color: var(--utrecht-accordion-button-border-color, var(--utrecht-color-grey-95));
+  --utrecht-button-subtle-border-width: var(--utrecht-accordion-button-border-color);
+}
+
+@mixin utrecht-accordion__button {
+  justify-content: start !important;
+  padding-inline-end: var(--utrecht-accordion-button-padding-inline-end, 30px);
+  position: relative;
+}
+
+@mixin utrecht-accordion__button-icon-arrow-down {
+  background-color: var(--utrecht-accordion-icon-background-color, var(--utrecht-color-yellow-50));
+  background-image: var(
+    --utrecht-accordion-icon-arrow-down,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.39' height='14.39'%3E%3Cpath fill='none' stroke='%231D1D1D' stroke-width='3' stroke-miterlimit='10' d='M15.866 4.135l-5.32 5.322-5.322-5.322'/%3E%3C/svg%3E")
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+  height: var(--utrecht-accordion-button-icon-size, 24px);
+  position: absolute;
+  top: 0;
+  width: var(--utrecht-accordion-button-icon-size, 24px);
+}
+
+@mixin utrecht-accordion__button-icon-arrow-up {
+  background-image: var(
+    --utrecht-accordion-icon-arrow-up,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.39' height='14.39'%3E%3Cpath fill='none' stroke='%231D1D1D' stroke-width='3' stroke-miterlimit='10' d='M5.223 9.457l5.32-5.322 5.322 5.322'/%3E%3C/svg%3E")
+  );
+  background-position: center;
+  background-repeat: no-repeat;
+  content: "";
+}
+
+@mixin utrecht-accordion__button--rtl {
+  justify-content: end !important;
+}
+
+@mixin utrecht-accordion__button-icon--rtl {
+  left: 0;
+  position: absolute;
+}
+
+@mixin utrecht-accordion__button-icon--ltr {
+  position: absolute;
+  right: 0;
+}
+
+@mixin utrecht-accordion__body {
+  border-color: var(--utrecht-accordion-body-border-color, var(--utrecht-color-grey-95));
+  border-style: solid;
+  border-top: none;
+  border-width: var(--utrecht-accordion-body-border-width, 2px);
+  padding-block-end: var(--utrecht-accordion-body-padding-block-end, 10px);
+  padding-block-start: var(--utrecht-accordion-body-padding-block-start, 10px);
+  padding-inline-end: var(--utrecht-accordion-body-padding-inline-end, 10px);
+  padding-inline-start: var(--utrecht-accordion-body-padding-inline-start, 10px);
+}
