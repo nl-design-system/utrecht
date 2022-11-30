@@ -1,0 +1,83 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+
+@mixin utrecht-combobox {
+  --utrecht-textbox-padding-inline-start: var(--utrecht-combobox-list-item-padding-inline-start);
+  --utrecht-textbox-padding-inline-end: var(--utrecht-combobox-list-item-padding-inline-end);
+  --utrecht-textbox-max-inline-size: var(--utrecht-combobox-max-inline-size);
+
+  max-inline-size: var(--utrecht-combobox-max-inline-size, var(--utrecht-form-input-max-inline-size));
+  position: relative;
+}
+
+@mixin utrecht-combobox__list {
+  background-color: var(--utrecht-combobox-list-background-color, var(--utrecht-color-white));
+  box-shadow: 0 4px 6px -1px var(--utrecht-combobox-list-box-shadow, rgb(0 0 0 / 30%)),
+    0 2px 4px -2px var(--utrecht-combobox-list-box-shadow, rgb(0 0 0 / 30%));
+  box-sizing: border-box;
+  color: var(--utrecht-combobox-list-color);
+  font-size: var(--utrecht-combobox-list-font-size);
+  inline-size: 100%;
+  list-style: none;
+  margin-block: 0;
+  max-block-size: var(--utrecht-combobox-list-max-block-size);
+  overflow: scroll;
+  overflow-inline: hidden;
+  overflow-x: hidden;
+  padding-inline: 0;
+  position: absolute;
+}
+
+@mixin utrecht-combobox__list-item {
+  padding-block-end: var(--utrecht-combobox-list-item-padding-block-end, 10px);
+  padding-block-start: var(--utrecht-combobox-list-item-padding-block-start, 10px);
+  padding-inline-end: var(--utrecht-combobox-list-item-padding-inline-end, 12px);
+  padding-inline-start: var(--utrecht-combobox-list-item-padding-inline-start, 12px);
+}
+
+@mixin utrecht-combobox__list-item--hover {
+  background-color: var(--utrecht-combobox-list-item-hover-background-color, var(--utrecht-color-grey-95));
+}
+
+@mixin utrecht-combobox__list-item--highlighted {
+  background-color: var(--utrecht-combobox-list-item-highlighted-background-color, var(--utrecht-color-grey-95));
+}
+
+@mixin utrecht-combobox__list-item--selected {
+  background-color: var(--utrecht-combobox-list-item-selected-background-color, var(--utrecht-color-grey-95));
+  color: var(--utrecht-combobox-list-item-selected-color);
+  font-weight: var(--utrecht-combobox-list-item-selected-font-weight, 700);
+}
+
+@mixin utrecht-combobox__input-wrapper {
+  max-inline-size: var(--utrecht-combobox-max-inline-size);
+  position: relative;
+}
+
+@mixin utrecht-combobox__icon {
+  height: var(--utrecht-combobox-icon-size, 32px);
+  width: var(--utrecht-combobox-icon-size, 32px);
+}
+
+@mixin utrecht-combobox__button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+  inline-size: fit-content;
+  inset-block-start: 50%;
+  inset-inline-start: 92%;
+  padding-block: 0;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  z-index: var(--utrecht-combobox-button-z-index, 3);
+}
+
+@mixin utrecht-combobox__input {
+  --utrecht-textbox-padding-inline-end: var(--utrecht-combobox-icon-size);
+
+  position: relative;
+  z-index: calc(var(--utrecht-combobox-button-z-index) - 1);
+}
