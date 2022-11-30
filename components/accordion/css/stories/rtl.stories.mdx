@@ -1,16 +1,21 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { Accordion } from "../../../../packages/component-library-react/src";
-import { argTypes, defaultArgs, exampleArgs } from "../args";
-import "../index.scss";
+import { Accordion, argTypes, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
   id="css-accordion-rtl"
-  title="CSS Component/Accordion/RTL"
+  title="CSS Component/Accordion/Right-to-left"
   component={Accordion}
   argTypes={argTypes}
   args={defaultArgs}
+  decorators={[
+    (Story) => (
+      <div lang="ar" dir="rtl">
+        {Story()}
+      </div>
+    ),
+  ]}
   parameters={{
     status: {
       type: "WORK IN PROGRESS",
@@ -22,16 +27,20 @@ import "../index.scss";
 
 <Canvas>
   <Story
-    name="RTL"
+    name="Right-to-left"
     args={{
       ...exampleArgs,
-      label: 'ما هو "لوريم إيبسوم" ؟',
-      body: ' المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.',
-      locale: "ar",
+      sections: [
+        {
+          label: 'ما هو "لوريم إيبسوم" ؟',
+          children:
+            ' المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.',
+        },
+      ],
     }}
   >
     {Accordion.bind({})}
   </Story>
 </Canvas>
 
-<ArgsTable story="RTL" />
+<ArgsTable story="Right-to-left" />

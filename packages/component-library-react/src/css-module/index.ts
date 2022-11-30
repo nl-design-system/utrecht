@@ -3,6 +3,7 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
+export { Accordion, AccordionSection } from './Accordion';
 export { Alert } from './Alert';
 export { AlertDialog } from './AlertDialog';
 export { Article } from './Article';

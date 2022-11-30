@@ -12,21 +12,17 @@
 
 .utrecht-accordion__button {
   @include utrecht-accordion__button;
-  &::after {
+
+  &[aria-expanded]::after {
+    @include utrecht-accordion__button-icon;
+  }
+
+  &[aria-expanded="false"]::after {
     @include utrecht-accordion__button-icon-arrow-down;
   }
 
   &[aria-expanded="true"]::after {
     @include utrecht-accordion__button-icon-arrow-up;
-  }
-  &[dir="ar"] {
-    @include utrecht-accordion__button--rtl;
-  }
-  &[dir="ar"]::after {
-    @include utrecht-accordion__button-icon--rtl;
-  }
-  &[dir]:not([dir="ar"])::after {
-    @include utrecht-accordion__button-icon--ltr;
   }
 }
 

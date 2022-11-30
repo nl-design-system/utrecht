@@ -1,0 +1,94 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Accordion, argTypes, defaultArgs } from "../story-template";
+
+<Meta
+  id="css-accordion"
+  title="CSS Component/Accordion"
+  component={Accordion}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Accordion
+
+<Canvas>
+  <Story
+    name="Avoid landmark overload"
+    args={{
+      group: true,
+      sections: [
+        {
+          label: "Section 1",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 2",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 3",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 4",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 5",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 6",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 7",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 8",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 9",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+        {
+          label: "Section 10",
+          children: <p>Lorem ipsum</p>,
+          section: false,
+          expanded: true,
+        },
+      ],
+    }}
+  >
+    {Accordion.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Avoid landmark overload" />
