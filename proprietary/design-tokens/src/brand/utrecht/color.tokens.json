@@ -18,7 +18,7 @@
       },
       "grey": {
         "10": { "value": "hsl(0 0% 10%)", "comment": "experimenteel / beperkt gebruiken" },
-        "15": { "value": "hsl(0 0% 15%)", "comment": "experimenteel / beperkt gebruiken" },
+        "15": { "value": "hsl(0 0% 15%)", "comment": "experimenteel / achtergrond kleur voor darkmode" },
         "20": { "value": "hsl(0 0% 20%)", "comment": "experimenteel / beperkt gebruiken" },
         "30": { "value": "hsl(0 0% 30%)", "comment": "border grijs #888" },
         "40": { "value": "hsl(0 0% 40%)", "comment": "basis grijs #727272" },
@@ -27,12 +27,14 @@
         "95": { "value": "hsl(0 0% 95%)", "comment": "grijs variant voor achtergrond accordion #f2f2f2" }
       },
       "yellow": {
+        "20": { "value": "hsl(48 100% 20%)", "comment": "donker geel voor darkmode achtergrond" },
         "40": { "value": "hsl(48 100% 40%)", "comment": "donker geel" },
         "50": { "value": "hsl(48 100% 50%)", "comment": "basis geel #ffcc00" },
         "60": { "value": "hsl(48 100% 60%)", "comment": "selecteer geel" },
         "80": { "value": "hsl(48 100% 80%)", "comment": "spotlight en uitgelicht" }
       },
       "green": {
+        "30": { "value": "hsl(90 30% 30%)", "comment": "donker groen voor darkmode achtergrond" },
         "40": { "value": "hsl(90 30% 40%)", "comment": "donker groen" },
         "50": { "value": "hsl(90 30% 50%)", "comment": "Standaard groen #80a659 " },
         "80": { "value": "hsl(90 30% 80%)", "comment": "Licht groen" },
