@@ -87,12 +87,13 @@ export const exampleArgs = {
 export const Accordion = ({ sections = defaultArgs.sections }) => {
   return (
     <ReactAccordion>
-      {sections.map(({ children, expanded, headingLevel, label, section }, index) => (
+      {sections.map(({ children, disabled, expanded, headingLevel, label, section }, index) => (
         <ReactAccordionSection
           defaultExpanded={expanded}
           label={label}
           headingLevel={headingLevel}
           section={section}
+          disabled={disabled}
           key={index}
         >
           {children}
