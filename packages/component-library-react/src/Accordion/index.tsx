@@ -116,8 +116,8 @@ const previousItem = <T,>(items: T[], item: T): T | undefined => {
 
 export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | undefined>) => {
   // const sections: AccordionSectionProviderProps[] = [];
-  let activeElement: RefObject<HTMLDivElement | undefined> | null = null;
-  const refs: RefObject<HTMLDivElement | undefined>[] = sections.map((_) => useRef<HTMLDivElement>());
+  let activeElement: RefObject<HTMLDivElement> | null = null;
+  const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
   return {
     ref,
     refs,
@@ -169,7 +169,7 @@ interface AccordionProviderProps {
 }
 
 export const AccordionProvider = ({ sections }: AccordionProviderProps) => {
-  const ref = useRef();
+  const ref = useRef<HTMLDivElement>(null);
   const { refs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } = useAccordion(
     sections,
     ref,
