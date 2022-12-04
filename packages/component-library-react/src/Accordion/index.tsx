@@ -8,9 +8,24 @@ import {
   RefObject,
   useId,
   useRef,
+  useState,
 } from 'react';
 import { Button } from '../Button';
 import { Heading } from '../Heading';
+
+const firstItem = <T,>(items: T[]): T | undefined => (items.length >= 1 ? items[0] : undefined);
+
+const lastItem = <T,>(items: T[]): T | undefined => (items.length >= 1 ? items[items.length - 1] : undefined);
+
+const nextItem = <T,>(items: T[], item: T): T | undefined => {
+  const currentIndex = item ? items.indexOf(item) : -1;
+  return currentIndex >= 0 && currentIndex + 1 <= items.length - 1 ? items[currentIndex + 1] : undefined;
+};
+
+const previousItem = <T,>(items: T[], item: T): T | undefined => {
+  const currentIndex = item ? items.indexOf(item) : -1;
+  return currentIndex >= 0 && currentIndex - 1 <= items.length - 1 ? items[currentIndex - 1] : undefined;
+};
 
 export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel?: number;
@@ -20,11 +35,26 @@ export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
   section?: boolean;
   onActivate?: Function;
+  onButtonFocus?: Function;
+  onButtonBlur?: Function;
+  buttonRef?: RefObject<HTMLButtonElement>;
 }
 
 export const AccordionSection = forwardRef(
   (
-    { id, label, headingLevel = 1, expanded = false, disabled, section, children, onActivate }: AccordionSectionProps,
+    {
+      id,
+      label,
+      headingLevel = 1,
+      expanded = false,
+      disabled,
+      section,
+      children,
+      buttonRef,
+      onActivate,
+      onButtonBlur,
+      onButtonFocus,
+    }: AccordionSectionProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const panelAttributes = {
@@ -58,7 +88,10 @@ export const AccordionSection = forwardRef(
             aria-controls={panelId}
             disabled={disabled}
             id={buttonId}
-            onClick={() => typeof onActivate === 'function' && onActivate()}
+            onClick={() => typeof onActivate === 'function' && onActivate(ref)}
+            onFocus={() => typeof onButtonFocus === 'function' && onButtonFocus(ref)}
+            onBlur={() => typeof onButtonBlur === 'function' && onButtonBlur(ref)}
+            ref={buttonRef}
           >
             {label}
           </Button>
@@ -75,6 +108,7 @@ export const AccordionSection = forwardRef(
   },
 );
 
+AccordionSection.displayName = 'AccordionSection';
 export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel?: number;
   heading?: string; // TODO: Allow nodes
@@ -83,7 +117,7 @@ export interface AccordionProps extends HTMLAttributes<HTMLDivElement> {
 
 export const Accordion = forwardRef(
   (
-    { children, group, headingLevel, heading }: PropsWithChildren<AccordionProps>,
+    { children, group, headingLevel, heading, ...props }: PropsWithChildren<AccordionProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const headingId = useId();
@@ -95,6 +129,7 @@ export const Accordion = forwardRef(
           className={clsx('utrecht-accordion')}
           role={group ? 'group' : undefined}
           aria-labelledby={group ? headingId : undefined}
+          {...props}
           ref={ref}
         >
           {children}
@@ -104,45 +139,41 @@ export const Accordion = forwardRef(
   },
 );
 
-const nextItem = <T,>(items: T[], item: T): T | undefined => {
-  const currentIndex = item ? items.indexOf(item) : -1;
-  return currentIndex >= 0 && currentIndex + 1 <= items.length - 1 ? items[currentIndex + 1] : undefined;
-};
-
-const previousItem = <T,>(items: T[], item: T): T | undefined => {
-  const currentIndex = item ? items.indexOf(item) : -1;
-  return currentIndex >= 0 && currentIndex - 1 <= items.length - 1 ? items[currentIndex - 1] : undefined;
-};
-
 export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | undefined>) => {
+  console.log('useAccordion');
   // const sections: AccordionSectionProviderProps[] = [];
-  let activeElement: RefObject<HTMLDivElement> | null = null;
   const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
+  const buttonRefs = sections.map((_) => useRef<HTMLButtonElement>(null));
+
   return {
     ref,
     refs,
+    buttonRefs,
 
     /* ForwardedRef of the last section to receive focus */
     activeElement: null,
 
     /* ForwardedRef for each section, in document order */
     sections,
-    focusNextSection: () => {
-      const nextSection: RefObject<HTMLDivElement | undefined> | undefined = activeElement
-        ? nextItem(refs, activeElement)
-        : undefined;
+    focusNextSection: (activeElement: RefObject<HTMLDivElement>) => {
+      const index = refs.indexOf(activeElement);
+      const buttonRef = index >= 0 ? buttonRefs[index] : undefined;
+      const nextSection = buttonRef ? nextItem(buttonRefs, buttonRef) : undefined;
       nextSection?.current?.focus();
     },
     focusFirstSection: () => {
-      const firstSection = refs[0];
+      const firstSection = firstItem(buttonRefs);
+      console.log(refs);
       firstSection?.current?.focus();
     },
-    focusPreviousSection: () => {
-      const previousSection = activeElement ? previousItem(refs, activeElement) : undefined;
+    focusPreviousSection: (activeElement: RefObject<HTMLDivElement>) => {
+      const index = refs.indexOf(activeElement);
+      const buttonRef = index >= 0 ? buttonRefs[index] : undefined;
+      const previousSection = buttonRef ? previousItem(buttonRefs, buttonRef) : undefined;
       previousSection?.current?.focus();
     },
     focusLastSection: () => {
-      const firstSection = refs[refs.length - 1];
+      const firstSection = lastItem(buttonRefs);
       firstSection?.current?.focus();
     },
   };
@@ -170,10 +201,19 @@ interface AccordionProviderProps {
 
 export const AccordionProvider = ({ sections }: AccordionProviderProps) => {
   const ref = useRef<HTMLDivElement>(null);
-  const { refs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } = useAccordion(
-    sections,
-    ref,
-  );
+  const { refs, buttonRefs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } =
+    useAccordion(sections, ref);
+
+  const [activeElement, setActiveElement] = useState<RefObject<HTMLDivElement> | null>(null);
+  const [sectionsState, setSectionsState] = useState(sections);
+
+  const handleButtonFocus = (ref: RefObject<HTMLDivElement>) => {
+    setActiveElement(ref);
+  };
+
+  const handleButtonBlur = (_: RefObject<HTMLDivElement>) => {
+    setActiveElement(null);
+  };
 
   const handleKeyDown = (evt: KeyboardEvent<HTMLDivElement>) => {
     if (evt.code === 'End') {
@@ -183,11 +223,15 @@ export const AccordionProvider = ({ sections }: AccordionProviderProps) => {
       console.log('Section: Focus first section');
       focusFirstSection();
     } else if (evt.code === 'ArrowDown') {
-      console.log('Section: Focus next section');
-      focusNextSection();
+      console.log('Section: Focus next section', activeElement);
+      if (activeElement) {
+        focusNextSection(activeElement);
+      }
     } else if (evt.code === 'ArrowUp') {
-      console.log('Section: Focus previous section');
-      focusPreviousSection();
+      console.log('Section: Focus previous section', activeElement);
+      if (activeElement) {
+        focusPreviousSection(activeElement);
+      }
     } else {
       return;
     }
@@ -198,11 +242,34 @@ export const AccordionProvider = ({ sections }: AccordionProviderProps) => {
 
   return (
     <Accordion onKeyDown={handleKeyDown} ref={ref}>
-      {sections.map((section, index) => {
-        const handleActivate = () => console.log('activate', section);
+      {sectionsState.map((section, index) => {
+        const handleActivate = (ref: RefObject<HTMLDivElement>) => {
+          const activatedIndex = refs.indexOf(ref);
+          // const activatedSection = activatedIndex >= 0 ? sections[index] : undefined;
+          setSectionsState(
+            sectionsState.map((section, index) => {
+              if (index === activatedIndex) {
+                return {
+                  ...section,
+                  expanded: !section.expanded,
+                };
+              } else {
+                return section;
+              }
+            }),
+          );
+        };
         return (
-          <AccordionSection {...section} ref={refs[index]} key={index} onActivate={handleActivate}>
-            {section.children}
+          <AccordionSection
+            {...section}
+            ref={refs[index]}
+            buttonRef={buttonRefs[index]}
+            key={index}
+            onButtonFocus={handleButtonFocus}
+            onButtonBlur={handleButtonBlur}
+            onActivate={handleActivate}
+          >
+            {section.body}
           </AccordionSection>
         );
       })}
@@ -210,6 +277,8 @@ export const AccordionProvider = ({ sections }: AccordionProviderProps) => {
   );
 };
 
+AccordionProvider.displayName = 'AccordionProvider';
+
 export const test = () => {
-  <AccordionProvider sections={[{ label: 'Hello world', body: <p>Lorem ipsum</p> }]} />;
+  <AccordionProvider sections={[{ expanded: true, label: 'Hello world', body: <p>Lorem ipsum</p> }]} />;
 };

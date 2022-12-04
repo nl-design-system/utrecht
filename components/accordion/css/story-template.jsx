@@ -7,6 +7,7 @@
 import React from 'react';
 import {
   Accordion as ReactAccordion,
+  AccordionProvider as ReactAccordionProvider,
   AccordionSection as ReactAccordionSection,
 } from '../../../packages/component-library-react/src';
 import './index.scss';
@@ -84,7 +85,7 @@ export const exampleArgs = {
   ],
 };
 
-export const Accordion = ({ sections = defaultArgs.sections }) => {
+export const Accordion2 = ({ sections = defaultArgs.sections }) => {
   return (
     <ReactAccordion>
       {sections.map(({ children, disabled, expanded, headingLevel, label, section }, index) => (
@@ -100,6 +101,21 @@ export const Accordion = ({ sections = defaultArgs.sections }) => {
         </ReactAccordionSection>
       ))}
     </ReactAccordion>
+  );
+};
+
+export const Accordion = ({ sections = defaultArgs.sections }) => {
+  return (
+    <ReactAccordionProvider
+      sections={sections.map(({ children, disabled, expanded, headingLevel, label, section }) => ({
+        body: children,
+        headingLevel,
+        section,
+        disabled,
+        expanded,
+        label,
+      }))}
+    />
   );
 };
 
