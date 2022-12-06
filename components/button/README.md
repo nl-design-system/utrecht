@@ -33,7 +33,7 @@ Links met een pijl als voorloopteken worden gebruikt aan het einde van een tekst
 
 ## Relevante WCAG regels
 
-- [WCAG eis 2.1.3](https://www.w3.org/TR/WCAG21/#keyboard-no-exception): je kan de button activeren met `Enter` of `Space`, en het is mogelijk met `Tab` de button te focussen.
+- [WCAG eis 2.1.3](https://www.w3.org/TR/WCAG21/#keyboard-no-exception): je kan de button activeren met `Enter` of `Space`, en het is mogelijk met `Tab` de button te focussen. `Space` gebruiken heeft dan niet het effect dat de pagina scrollt.
 - [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): de label van de button moet duidelijk zijn
 - [WCAG eis 2.5.2](https://www.w3.org/TR/WCAG21/#pointer-cancellation):
   - gebruik niet de `mousedown` event om de button te activeren, gebruik liever de `click` event
