@@ -1,0 +1,39 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Paragraph } from "../../../paragraph/css/story-template";
+import { Blockquote } from "../story-template";
+
+<Meta
+  id="css-blockquote"
+  title="CSS Component/Blockquote/Language"
+  component={Blockquote}
+  decorators={[
+    (Story) => (
+      <div lang="nl">
+        <Paragraph>Zoals René Descartes ooit schreef:</Paragraph>
+        {Story()}
+      </div>
+    ),
+  ]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    chromatic: { disableSnapshot: true },
+  }}
+/>
+
+# Blockquote in another language
+
+<Canvas>
+  <Story
+    name="Language"
+    args={{
+      lang: "fr",
+      textContent: "Je pense, donc je suis",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
