@@ -30,3 +30,7 @@ Quotes worden gebruikt om uitspraken te accentueren. De quote bestaat uit een ui
   - `--utrecht-blockquote-font-family`
   - Blockquote content:
     - `--utrecht-blockquote-content-color`
+
+## Relevante WCAG eisen
+
+- [WCAG eis 3.1.2](https://www.w3.org/TR/WCAG21/#language-of-parts): wanneer het citaat in een andere taal is geschreven dan de pagina, dan moet het `lang` attribuut gebruikt worden om de taal duidelijk te maken.
