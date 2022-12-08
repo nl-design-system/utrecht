@@ -38,6 +38,13 @@ export const argTypes = {
       required: true,
     },
   },
+  tabIndex: {
+    description: 'Tabindex',
+    type: {
+      name: 'string',
+      required: false,
+    },
+  },
   telephone: {
     description: 'Link to telephone number',
     control: 'boolean',
@@ -71,11 +78,13 @@ export const defaultArgs = {
   focusVisible: false,
   href: null,
   placeholder: false,
+  tabIndex: '',
   telephone: false,
   textContent: '',
   title: '',
   visited: false,
   iconleft: false,
+  ariaLabelledby: '',
 };
 
 export const exampleArgs = {
@@ -95,11 +104,13 @@ export const Link = ({
   focusVisible = defaultArgs.focusVisible,
   href = defaultArgs.href,
   placeholder = defaultArgs.placeholder,
+  tabIndex = defaultArgs.tabIndex,
   telephone = defaultArgs.telephone,
   textContent = defaultArgs.textContent,
   title = defaultArgs.title,
   visited = defaultArgs.visited,
   iconleft = defaultArgs.iconleft,
+  ...restProps
 }) => (
   <a
     href={placeholder ? null : href === null ? `https://example.com/${lang}` : href}
@@ -124,6 +135,8 @@ export const Link = ({
     title={title || null}
     hrefLang={hrefLang || null}
     lang={lang || null}
+    tabIndex={tabIndex || null}
+    {...restProps}
   >
     {children}
     {textContent}
