@@ -76,12 +76,14 @@ You need to have the following tools installed to run Storybook locally:
 
 - Git
 - [Node.js and npm](https://nodejs.org/en/)
+- [pnpm](https://pnpm.js.org). After installing Node.js with npm, you can install pnpm by running: `npm install -g pnpm`
 
 Open a terminal and run the following commands to check:
 
-- `git --version`: a relatively recent version should be installed (Git 2.28 or later)
-- `node -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json)
-- `npm -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json)
+- `git --version`: a relatively recent version should be installed (Git 2.28 or later).
+- `node -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json).
+- `npm -v`: should be at least the version defined in the `engines` section of [`package.json`](./package.json).
+- `pnpm -v`: should be at least version 7.
 
 ### Install code editor
 
@@ -103,15 +105,15 @@ You can use any editor you'd like, but in case you use [Visual Studio Code](http
 4. `cd utrecht`
 5. `git checkout main` to switch to the main branch, if you previously worked in this repository.
 6. `git pull` to get to the latest version of the main branch
-7. `npm install` to download and install all the dependencies
+7. `pnpm install` to download and install all the dependencies
 
 ### Run Docusaurus on your computer
 
 1. Open Terminal
 2. Ensure your current directory is `utrecht`
-3. Run `npm install` to ensure the latest and greatest of all dependencies
-4. Run `npm run docs`
-5. The local version of docusaurus will be running on `localhost:3000/utrecht`
+3. Run `pnpm install` to ensure the latest and greatest of all dependencies
+4. Run `pnpm run docs`
+5. The local version of docusaurus will be running on [`localhost:3000/utrecht`](http://localhost:3000/utrecht)
 6. Press `Control+C` in your terminal to stop Docusaurus
 
 Read the `packages/docusaurus/README.md` for docusaurus details
@@ -120,8 +122,8 @@ Read the `packages/docusaurus/README.md` for docusaurus details
 
 1. Open Terminal.
 2. Ensure your current directory is `utrecht`
-3. Run `npm install` to ensure the latest and greatest of all dependencies
-4. Run `npm run storybook` to start Storybook
+3. Run `pnpm install` to ensure the latest and greatest of all dependencies
+4. Run `pnpm run storybook` to start Storybook
 5. Your main browser opens automatically with your local storybook.
 6. Press `Control+C` in your terminal to stop Storybook.
 
@@ -131,48 +133,66 @@ First check the logs in the terminal if any error is displayed, if something doe
 
 Secondly check the JavaScript logs in your browsers developer tools if there are errors or warnings.
 
-You can run the code checks with `npm run lint` to see if any code errors can be detected.
+You can run the code checks with `pnpm run lint` to see if any code errors can be detected.
 
 You can also check the build logs of the design tokens for errors, if you have changed Style Dictionary JSON files, by building those separately:
 
 1. `cd proprietary/design-tokens/`
-2. `npm run build`
+2. `pnpm run build`
 
 ### npm scripts for development web servers
 
-| script                            | description                                                                                                                                                                       |
-| --------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `npm run docusaurus`              | Start development docusaurus at [localhost:3000](http://localhost:3000/) (without access to Storybook, start `npm run nx-storybook` in parallel if you need that)                 |
-| `npm run nx-storybook`            | Start development Storybook with [composition](https://storybook.js.org/docs/react/sharing/storybook-composition/) for each framework at [localhost:6006](http://localhost:6006/) |
-| `npm run serve-docusaurus`        | Start production Docusaurus website (without access to Storybook) at [localhost:8080](http://localhost:8080/)                                                                     |
-| `npm run serve-storybook-angular` | Start production Storybook for Angular Components at [localhost:7009](http://localhost:7009/)                                                                                     |
-| `npm run serve-storybook-react`   | Start production Storybook for React Components at [localhost:7008](http://localhost:7008/)                                                                                       |
-| `npm run serve-storybook-vue`     | Start production Storybook for Vue.js Components at [localhost:7007](http://localhost:7007/)                                                                                      |
-| `npm run serve`                   | Start production Docusaurus website with access to each Storybook at [localhost:8080](http://localhost:8080/)                                                                     |
-| `npm run storybook-angular`       | Start development Storybook for Angular Components at [localhost:6009](http://localhost:6009/)                                                                                    |
-| `npm run storybook-css`           | Start development Storybook for CSS Components, HTML Components and Web Components at [localhost:6006](http://localhost:6006/)                                                    |
-| `npm run storybook-react`         | Start development Storybook for React Components at [localhost:6008](http://localhost:6008/)                                                                                      |
-| `npm run storybook-vue`           | Start development Storybook for Vue.js Components at [localhost:6007](http://localhost:6007/)                                                                                     |
+| script                             | description                                                                                                                                                                       |
+| ---------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `pnpm run docusaurus`              | Start development docusaurus at [localhost:3000](http://localhost:3000/) (without access to Storybook, start `pnpm run nx-storybook` in parallel if you need that)                |
+| `pnpm run storybook`               | Start HTML/CSS Components Storybook [localhost:6006](http://localhost:6006/)                                                                                                      |
+| `pnpm run storybook-all`           | Start development Storybook with [composition](https://storybook.js.org/docs/react/sharing/storybook-composition/) for each framework at [localhost:6006](http://localhost:6006/) |
+| `pnpm run serve-docusaurus`        | Start production Docusaurus website (without access to Storybook) at [localhost:8080](http://localhost:8080/)                                                                     |
+| `pnpm run serve-storybook-angular` | Start production Storybook for Angular Components at [localhost:7009](http://localhost:7009/)                                                                                     |
+| `pnpm run serve-storybook-react`   | Start production Storybook for React Components at [localhost:7008](http://localhost:7008/)                                                                                       |
+| `pnpm run serve-storybook-vue`     | Start production Storybook for Vue.js Components at [localhost:7007](http://localhost:7007/)                                                                                      |
+| `pnpm run serve`                   | Start production Docusaurus website with access to each Storybook at [localhost:8080](http://localhost:8080/)                                                                     |
+| `pnpm run storybook-angular`       | Start development Storybook for Angular Components at [localhost:6009](http://localhost:6009/)                                                                                    |
+| `pnpm run storybook-css`           | Start development Storybook for CSS Components, HTML Components and Web Components at [localhost:6006](http://localhost:6006/)                                                    |
+| `pnpm run storybook-react`         | Start development Storybook for React Components at [localhost:6008](http://localhost:6008/)                                                                                      |
+| `pnpm run storybook-vue`           | Start development Storybook for Vue.js Components at [localhost:6007](http://localhost:6007/)                                                                                     |
+
+The scripts above use `nx` to automatically run all scripts that are a prerequisite for that particular script. Unfortunately `nx` often hides the error message when something is wrong. In case nx doesn't work, use follow these simple steps instead to better see the error message in the terminal.
+
+| Project                      | Steps                                                                                                  |
+| ---------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Design tokens                | `cd proprietary/design-tokens`, `npm run build`                                                        |
+| Storybook for HTML/CSS       | `cd packages/storybook`, `npm run storybook`. Depends on design tokens.                                |
+| Storybook for React          | `cd packages/storybook-react`, `npm run storybook`. Depends on design tokens and React components.     |
+| Storybook for Vue.js         | `cd packages/storybook-vue`, `npm run storybook`. Depends on design tokens and Vue.js components.      |
+| Storybook for Angular        | `cd packages/storybook-angular`, `npm run storybook`. Depends on design tokens and Angular components. |
+| Build Angular components     | `cd packages/component-library-angular`, `npm run build`                                               |
+| Build Vue.js components      | `cd packages/component-library-vue`, `npm run build`                                                   |
+| Build React components       | `cd packages/component-library-react`, `npm run build`                                                 |
+| Build Web components         | `cd packages/web-component-library-stencil`, `npm run build`. Depends on icons.                        |
+| Build Icons                  | `cd components/icon`, `npm run build`                                                                  |
+| Build Docusaurus             | `cd packages/docusaurus`, `npm run build`                                                              |
+| Build CSS for all components | `cd components`, `npm run build`                                                                       |
 
 ### npm scripts for quality assurance
 
-| script                | description                                                                                |
-| --------------------- | ------------------------------------------------------------------------------------------ |
-| `npm run lint-fix`    | Check code formatting and automatically fix some types of issues                           |
-| `npm run lint`        | Check code formatting et cetera                                                            |
-| `npm run nx-lint-fix` | Check code formatting and automatically fix some types of issues (but faster, using cache) |
-| `npm run nx-lint`     | Check code formatting et cetera (but faster, using cache)                                  |
-| `npm run nx-test`     | Run unit test for each package (but faster, using cache)                                   |
-| `npm run test`        | Run unit test for each package                                                             |
+| script                 | description                                                                                |
+| ---------------------- | ------------------------------------------------------------------------------------------ |
+| `pnpm run lint-fix`    | Check code formatting and automatically fix some types of issues                           |
+| `pnpm run lint`        | Check code formatting et cetera                                                            |
+| `pnpm run nx-lint-fix` | Check code formatting and automatically fix some types of issues (but faster, using cache) |
+| `pnpm run nx-lint`     | Check code formatting et cetera (but faster, using cache)                                  |
+| `pnpm run nx-test`     | Run unit test for each package (but faster, using cache)                                   |
+| `pnpm run test`        | Run unit test for each package                                                             |
 
 ### npm scripts for the release process
 
-| script             | description                                                               |
-| ------------------ | ------------------------------------------------------------------------- |
-| `npm run build`    | Build each package                                                        |
-| `npm run nx-build` | Build each package (but faster, using cache)                              |
-| `npm run publish`  | Publish each package to the npm registry                                  |
-| `npm run release`  | Determine new version number automatically and update each `package.json` |
+| script              | description                                                               |
+| ------------------- | ------------------------------------------------------------------------- |
+| `pnpm run build`    | Build each package                                                        |
+| `pnpm run nx-build` | Build each package (but faster, using cache)                              |
+| `pnpm run publish`  | Publish each package to the npm registry                                  |
+| `pnpm run release`  | Determine new version number automatically and update each `package.json` |
 
 ## Code of Conduct
 
