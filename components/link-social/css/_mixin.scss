@@ -1,0 +1,24 @@
+@mixin utrecht-link-social {
+  --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+  --utrecht-icon-color: currentColor;
+
+  align-items: center;
+  background-color: var(--utrecht-link-social-background-color);
+  border-color: var(--utrecht-link-social-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-link-social-border-width);
+  color: var(--utrecht-link-social-color);
+  display: inline-flex;
+  height: var(--utrecht-link-social-size);
+  justify-content: center;
+  width: var(--utrecht-link-social-size);
+}
+
+@mixin utrecht-link-social--hover {
+  transform: scale(var(--utrecht-link-social-hover-transform-scale));
+}
+
+@mixin utrecht-link-social--distanced {
+  margin-inline-start: var(--utrecht-link-social-margin-inline-start);
+}
