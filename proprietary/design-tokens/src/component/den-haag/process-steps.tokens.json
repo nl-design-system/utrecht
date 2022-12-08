@@ -13,6 +13,7 @@
           "color": { "value": "{utrecht.color.black}" }
         },
         "checked": {
+          "background-color": { "value": "{utrecht.color.white}" },
           "color": { "value": "{utrecht.color.black}" }
         },
         "not-checked": {
@@ -50,7 +51,7 @@
       "sub-step-marker": {
         "background-color": { "value": "{utrecht.color.white}" },
         "border-color": { "value": "{utrecht.color.green.30}" },
-        "size": { "value": "8px" },
+        "size": { "value": "12px" },
         "current": {
           "border-color": {}
         },
