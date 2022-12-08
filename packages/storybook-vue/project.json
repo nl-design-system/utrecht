@@ -32,7 +32,7 @@
     "storybook": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm run storybook -- --no-open",
+        "command": "npm run storybook",
         "cwd": "packages/storybook-vue"
       },
       "dependsOn": ["^build"]
