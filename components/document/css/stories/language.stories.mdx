@@ -1,0 +1,132 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, Document, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-document"
+  title="CSS Component/Document/Language"
+  component={Document}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    chromatic: { disableSnapshot: true },
+  }}
+/>
+
+# Document language
+
+Maak duidelijk welke taal het document is ([WCAG eis 3.1.1](https://www.w3.org/TR/WCAG21/#language-of-page)) met het `lang` attribuut.
+
+Het is gebruikelijk om de tweeletterige ISO-639-1 code te gebruiken als die bestaat, anders de drieletterige ISO-639-3 code.
+
+## Nederlands
+
+De ISO 639-1 code voor Nederlands is `nl`.
+
+<Canvas>
+  <Story
+    name="Nederlands"
+    args={{
+      ...exampleArgs,
+      children: "Nederlands",
+      div: false,
+      lang: "nl",
+    }}
+  >
+    {Document.bind({})}
+  </Story>
+</Canvas>
+
+## Fries
+
+De ISO 639-1 code voor Fries is `fy`.
+
+<Canvas>
+  <Story
+    name="Fries"
+    args={{
+      ...exampleArgs,
+      children: "Frysk",
+      div: false,
+      lang: "fy",
+    }}
+  >
+    {Document.bind({})}
+  </Story>
+</Canvas>
+
+## Drents
+
+De ISO 639-3 code voor Drents is `drt`.
+
+<Canvas>
+  <Story
+    name="Drents"
+    args={{
+      ...exampleArgs,
+      children: "Drèents",
+      div: false,
+      lang: "drt",
+    }}
+  >
+    {Document.bind({})}
+  </Story>
+</Canvas>
+
+## Limburgs
+
+De ISO 639-1 code voor Limburgs is `li`.
+
+<Canvas>
+  <Story
+    name="Limburgs"
+    args={{
+      children: "Limburgs (ouch waal: Lèmburgs)",
+      div: false,
+      lang: "li",
+    }}
+  >
+    {Document.bind({})}
+  </Story>
+</Canvas>
+
+## Zeeuws
+
+De ISO 639-3 code voor Twents is `zea`.
+
+<Canvas>
+  <Story
+    name="Zeeuws"
+    args={{
+      ...exampleArgs,
+      children: "Zeêuws",
+      div: false,
+      lang: "zea",
+    }}
+  >
+    {Document.bind({})}
+  </Story>
+</Canvas>
+
+## Twents
+
+De ISO 639-3 code voor Twents is `twd`.
+
+<Canvas>
+  <Story
+    name="Twents"
+    args={{
+      ...exampleArgs,
+      children: "Twents",
+      div: false,
+      lang: "twd",
+    }}
+  >
+    {Document.bind({})}
+  </Story>
+</Canvas>
