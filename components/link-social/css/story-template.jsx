@@ -48,9 +48,11 @@ export const argTypes = {
 
 export const defaultArgs = {
   distanced: false,
+  hover: false,
   href: '',
   icon: '',
   title: '',
+  focusVisible: false,
 };
 
 export const exampleArgs = {
@@ -64,8 +66,19 @@ export const SocialMediaLink = ({
   icon = defaultArgs.icon,
   title = defaultArgs.title,
   distanced = defaultArgs.distanced,
+  hover = defaultArgs.hover,
+  focusVisible = defaultArgs.focusVisible,
 }) => (
-  <a href={href} className={clsx('utrecht-link-social', distanced && 'utrecht-link-social--distanced')} title={title}>
+  <a
+    href={href}
+    className={clsx(
+      'utrecht-link-social',
+      distanced && 'utrecht-link-social--distanced',
+      hover && 'utrecht-link-social--hover',
+      focusVisible && 'utrecht-link-social--focus-visible',
+    )}
+    title={title}
+  >
     {parse(`<${icon}></${icon}>`)}
   </a>
 );

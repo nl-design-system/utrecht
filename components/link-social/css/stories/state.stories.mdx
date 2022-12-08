@@ -1,0 +1,34 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { exampleArgs, SocialMediaLink } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-link-social"
+  title="CSS Component/Link to social media/State"
+  component={SocialMediaLink}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Link to Social Media
+
+## Hover
+
+<Canvas>
+  <Story name="Hover" args={{ ...exampleArgs, hover: true }}>
+    {SocialMediaLink.bind({})}
+  </Story>
+</Canvas>
+
+## Focus visible
+
+<Canvas>
+  <Story name="Focus visible" args={{ ...exampleArgs, focusVisible: true }}>
+    {SocialMediaLink.bind({})}
+  </Story>
+</Canvas>
