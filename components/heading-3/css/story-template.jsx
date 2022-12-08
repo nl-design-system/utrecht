@@ -27,11 +27,17 @@ export const exampleArgs = {
   textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
 };
 
-export const Heading3 = ({ children, textContent = defaultArgs.textContent, distanced = defaultArgs.distanced }) => (
+export const Heading3 = ({
+  children,
+  textContent = defaultArgs.textContent,
+  distanced = defaultArgs.distanced,
+  ...restProps
+}) => (
   <h3
     className={clsx('utrecht-heading-3', {
       'utrecht-heading-3--distanced': distanced,
     })}
+    {...restProps}
   >
     {children}
     {textContent}

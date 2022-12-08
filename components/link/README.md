@@ -60,11 +60,32 @@ We beschrijven de volgende states van een link:
 
 Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals de [`<a>`](https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-a-element) in HTML. Buiten de context van HTML-code (bijvoorbeeld in Figma) is `a`niet duidelijk genoeg, en we verwachten niet dat er grote verwarring ontstaat met het [`<link>`](https://html.spec.whatwg.org/multipage/semantics.html#the-link-element) element van HTML.
 
-## Algemene richtlijnen voor developers bij links
+## HTML
 
 - Gebruik het `<a>` element om links aan te maken.
+- Gebruik nooit een `<button>` of een ander element met een `click` event om zelf een link na te maken.
+- Gebruik `aria-current="page"` wanneer de link verwijst naar de huidige pagina. Voor consistente navigatie ([WCAG eis 3.2.3](https://www.w3.org/TR/WCAG21/#consistent-navigation)) is het beter om links in de navigatie te laten staan dan om geen `<a>` te gebruiken voor de huidige pagina.
 - Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
-- Vermijd het gebruik van `tabindex="-1"` or `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
+- Gebruik nooit `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
+- Vermijd onnodig gebruik van `tabindex="-1"`, er zijn weinig situaties waar het nodig is.
+
+### `tabindex="-1"`
+
+Gebruik `tabindex="-1"` in zeldzame gevallen dat het gebruiksvriendelijker is om een link weg te halen uit tabvolgorde. Toetsenbordgebruikers moeten toegang hebben tot dezelfde links als gebruikers van een muis.
+
+Als het nodig is twee identieke links kort na elkaar te plaatsen, dan is het onnodig en onhandig dat dezelfde link twee keer na elkaar focus krijgt. In dat geval is het beter om één van de links uit de tabvolgorde te verwijderen.
+
+Bijvoorbeeld:
+
+```html
+<article>
+  <h2 id="heading-puppy-geboren"><a href="/nieuws/monster-puppy">Puppy met zes poten</a></h2>
+  <p>
+    In de gemeente Monster is een puppy geboren met zes poten.
+    <a href="/nieuws/monster-puppy" tabindex="-1" aria-labelledby="heading-puppy-geboren">Lees verder...</a>
+  </p>
+</article>
+```
 
 ## Privacy
 
