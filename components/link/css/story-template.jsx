@@ -68,7 +68,7 @@ export const argTypes = {
 
 export const defaultArgs = {
   active: false,
-  boxContents: false,
+  boxContent: false,
   current: false,
   external: false,
   hrefLang: '',
