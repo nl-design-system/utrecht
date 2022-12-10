@@ -7,17 +7,24 @@
 $utrecht-focus-visible-fallback: true !default;
 
 @mixin utrecht-focus-ring {
-  box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0) var(--utrecht-focus-inverse-outline-color, transparent);
-  outline-color: var(--utrecht-focus-outline-color, transparent);
-  outline-offset: var(--utrecht-focus-outline-offset, 0);
-  outline-style: var(--utrecht-focus-outline-style, solid);
-  outline-width: var(--utrecht-focus-outline-width, 0);
+  /* - The browser default focus ring should apply when these CSS custom properties are not set.
+   * - Make the `box-shadow` value available, so components that have their own `box-shadow`
+   *   can combine it with the focus ring box shadow.
+   */
+  --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
+    var(--utrecht-focus-inverse-outline-color, transparent);
+
+  box-shadow: var(--_utrecht-focus-ring-box-shadow);
+  outline-color: var(--utrecht-focus-outline-color, revert);
+  outline-offset: var(--utrecht-focus-outline-offset, revert);
+  outline-style: var(--utrecht-focus-outline-style, revert);
+  outline-width: var(--utrecht-focus-outline-width, revert);
 }
 
 @mixin utrecht-focus-ring-reset {
   /* undo focus ring */
   box-shadow: none;
-  outline-style: none;
+  outline-style: revert;
 }
 
 /* stylelint-disable-next-line block-no-empty */
