@@ -40,6 +40,12 @@ Browser support for [`:focus-visible`](https://developer.mozilla.org/en-US/docs/
 - A focus ring should be visible on backgrounds with unknown and mixed colors, such as background images.
 - When using CSS with `overflow: hidden` in your component, the `outline` rendering can become partially or completely invisible. Be careful not to break the focus indication when using `overflow: hidden`.
 
+## CSS
+
+- The default browser focus outline must not be removed, but it may be replaced by something better suited for the design.
+- The default browser focus outline is not perceivable on certain background colors, so for many designs it is benificial to replace the default styling with a higher contrast focus ring.
+- When CSS outline properties are set to a CSS variable, make sure use `revert` as fallback value: this way the default styling is not removed when the custom property is not set.
+
 ## Related reading
 
 - [Giving users and developers more control over focus - Chromium Blog](https://blog.chromium.org/2020/09/giving-users-and-developers-more.html)
