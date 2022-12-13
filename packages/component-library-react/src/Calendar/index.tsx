@@ -20,7 +20,7 @@ import {
   startOfWeek,
 } from 'date-fns';
 import { enUS } from 'date-fns/locale';
-import { chunk, toNumber } from 'lodash';
+import chunk from 'lodash.chunk';
 import { FC, useState } from 'react';
 import { CalendarNavigation } from './CalendarNavigation';
 import { CalendarNavigationButtons } from './CalendarNavigationButtons';
@@ -166,7 +166,7 @@ export const Calendar: FC<CalendarProps> = ({
                       dayOutOfTheMonth={!isSameMonth(day.date, date)}
                       key={index}
                       onClick={(event) => {
-                        const selectedDay = setDateFns(date, toNumber((event.target as HTMLButtonElement).textContent));
+                        const selectedDay = setDateFns(date, Number((event.target as HTMLButtonElement).textContent));
                         setDate(selectedDay);
                         onCalendarClick(formatISO(selectedDay));
                       }}
