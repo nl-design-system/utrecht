@@ -13,7 +13,7 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "scripts": {
-    "copy:docs": "rimraf docs/tmp && mkdirp docs/tmp && cpx '../../documentation/website/**/**' docs/tmp",
+    "copy:docs": "rimraf docs/tmp && mkdirp docs/tmp && cpx '../../documentation/website/**/**' docs/tmp && cpx 'node_modules/@nl-design-system-unstable/documentation/**/_*.md' docs/tmp/nl-design-system",
     "copy:components": "rimraf tmp && mkdirp tmp && cpx '../../components/**/*.md' tmp",
     "docusaurus": "docusaurus",
     "prestart": "npm-run-all --parallel copy:**",
@@ -39,6 +39,7 @@
     "@docusaurus/theme-common": "2.0.1",
     "@docusaurus/theme-search-algolia": "2.0.1",
     "@mdx-js/react": "1.6.22",
+    "@nl-design-system-unstable/documentation": "0.0.2-alpha.0",
     "@types/react": "17.0.2",
     "@utrecht/component-library-css": "workspace:*",
     "@utrecht/component-library-react": "workspace:*",
