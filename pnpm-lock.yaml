@@ -640,7 +640,7 @@ importers:
   packages/storybook-react:
     specifiers:
       '@babel/core': 7.18.10
-      '@gemeente-denhaag/process-steps': 0.1.0-alpha.79
+      '@gemeente-denhaag/process-steps': 0.1.0-alpha.125
       '@mdx-js/react': 1.6.22
       '@nl-design-system-unstable/documentation': 0.0.2-alpha.0
       '@storybook/addon-a11y': 6.5.10
@@ -680,7 +680,7 @@ importers:
       webpack: 5.73.0
     devDependencies:
       '@babel/core': 7.18.10
-      '@gemeente-denhaag/process-steps': 0.1.0-alpha.79_react@18.2.0
+      '@gemeente-denhaag/process-steps': 0.1.0-alpha.125_react@18.2.0
       '@mdx-js/react': 1.6.22_react@18.2.0
       '@nl-design-system-unstable/documentation': 0.0.2-alpha.0
       '@storybook/addon-a11y': 6.5.10_biqbaboplfbrettd7655fr4n2y
@@ -6692,48 +6692,48 @@ packages:
     resolution: {integrity: sha512-k2Ty1JcVojjJFwrg/ThKi2ujJ7XNLYaFGNB/bWT9wGR+oSMJHMa5w+CUq6p/pVrKeNNgA7pCqEcjSnHVoqJQFw==}
     dev: true
 
-  /@gemeente-denhaag/basedatadisplayprops/0.2.3-alpha.250_react@18.2.0:
-    resolution: {integrity: sha512-8JsKCocsmFifLGBRAZfPo4y41haKl2t5xPMSGyzGzzBgFHLxkecf0u7tISFFVwNMNJYZWh8COkJC3rtQ8dRgkA==}
+  /@gemeente-denhaag/basedatadisplayprops/0.2.3-alpha.296_react@18.2.0:
+    resolution: {integrity: sha512-nMkC+P/1hfOYmDBc5MJfHg8wUJG4B1Ee93480fM0RbB9eI3RbZhynMzaQqsWI6u+Jfhu60ELiWU1bOkxcr4BYA==}
     peerDependencies:
       react: ^17.0.0
     dependencies:
-      '@gemeente-denhaag/baseprops': 0.2.3-alpha.250_react@18.2.0
+      '@gemeente-denhaag/baseprops': 0.2.3-alpha.296_react@18.2.0
       react: 18.2.0
     dev: true
 
-  /@gemeente-denhaag/baseprops/0.2.3-alpha.250_react@18.2.0:
-    resolution: {integrity: sha512-MDCzg8fTB9q1TVaXjOhhmPnp4on72NaJUZQyYSFaBZXdKURbT5xRhX5oJipu/frbMBDykEBbZxjaL0dRDd9jmg==}
-    peerDependencies:
-      react: ^17.0.0
-    dependencies:
-      react: 18.2.0
-    dev: true
-
-  /@gemeente-denhaag/icons/0.2.3-alpha.250_react@18.2.0:
-    resolution: {integrity: sha512-h6dJdP5/Jd6BwLRtbi6TAGrCzbp5KJTG/lsBldGY8Vlrq+nraCuasdcK52XoxkSGj8K9iQjxOCiIMuJXoR0TPw==}
+  /@gemeente-denhaag/baseprops/0.2.3-alpha.296_react@18.2.0:
+    resolution: {integrity: sha512-hlSC9mutR4tlaFn44FIQgWJJmlHysoIcmZ2TqKbzXLoMaDIAuKSaSB4N1h0DmkI6ueSeLfYAsc4KZgGrernY+w==}
     peerDependencies:
       react: ^17.0.0
     dependencies:
       react: 18.2.0
     dev: true
 
-  /@gemeente-denhaag/process-steps/0.1.0-alpha.79_react@18.2.0:
-    resolution: {integrity: sha512-steOHQH/GFihswSWEV/ob5ogACfjc9MTqU9gJwYXqfuk+qWD19muqT/z83XmLzy4LNGlzldZx3AZTRUflQ36Aw==}
+  /@gemeente-denhaag/icons/0.2.3-alpha.296_react@18.2.0:
+    resolution: {integrity: sha512-EVPkRyPG/xIz7bg94CBPvn+IS876EQL5L4sejhUH69/aCUAAKAa6MkkklojhPq7Vvb2ypHrEVRIxC9VLOxKk3A==}
     peerDependencies:
       react: ^17.0.0
     dependencies:
-      '@gemeente-denhaag/baseprops': 0.2.3-alpha.250_react@18.2.0
-      '@gemeente-denhaag/icons': 0.2.3-alpha.250_react@18.2.0
-      '@gemeente-denhaag/typography': 0.2.3-alpha.250_react@18.2.0
       react: 18.2.0
     dev: true
 
-  /@gemeente-denhaag/typography/0.2.3-alpha.250_react@18.2.0:
-    resolution: {integrity: sha512-dQc518KNu8aQm7txLvmCLCFB/T7/n+bocpE2lTv11XIcpGBemDMc1z2mKAkHl0PMNeKPGm9KTDcgYtLQoysoKw==}
+  /@gemeente-denhaag/process-steps/0.1.0-alpha.125_react@18.2.0:
+    resolution: {integrity: sha512-e8f36VBzh7u7IVwu84/kvH8fyVhcuOiW7gTmpvNIZaCKSt8bcTQp+hoR9G+Pu8pFyD9HlC7YOzN9BcG5fj+Jdg==}
     peerDependencies:
       react: ^17.0.0
     dependencies:
-      '@gemeente-denhaag/basedatadisplayprops': 0.2.3-alpha.250_react@18.2.0
+      '@gemeente-denhaag/baseprops': 0.2.3-alpha.296_react@18.2.0
+      '@gemeente-denhaag/icons': 0.2.3-alpha.296_react@18.2.0
+      '@gemeente-denhaag/typography': 0.2.3-alpha.296_react@18.2.0
+      react: 18.2.0
+    dev: true
+
+  /@gemeente-denhaag/typography/0.2.3-alpha.296_react@18.2.0:
+    resolution: {integrity: sha512-xk69oo7OQoztgybgHG6tOlLIZCDu+6MQppjZIhc+o/MUrMOgGgVN4D4rfXZmAhDDXfaNug/J627S4eKGToItIw==}
+    peerDependencies:
+      react: ^17.0.0
+    dependencies:
+      '@gemeente-denhaag/basedatadisplayprops': 0.2.3-alpha.296_react@18.2.0
       react: 18.2.0
     dev: true
 
@@ -11081,7 +11081,7 @@ packages:
       style-loader: '*'
     dependencies:
       css-loader: 5.2.7_webpack@5.73.0
-      sass-loader: 10.3.1_sass@1.54.0+webpack@5.73.0
+      sass-loader: 10.3.1_webpack@5.73.0
       style-loader: 2.0.0_webpack@5.73.0
     dev: true
 
@@ -20273,7 +20273,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.17.0
+      uglify-js: 3.17.4
     dev: true
 
   /har-schema/2.0.0:
@@ -32777,8 +32777,8 @@ packages:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: true
 
-  /uglify-js/3.17.0:
-    resolution: {integrity: sha512-aTeNPVmgIMPpm1cxXr2Q/nEbvkmV8yq66F3om7X3P/cvOXQ0TMQ64Wk63iyT1gPlmdmGzjGpyLh1f3y8MZWXGg==}
+  /uglify-js/3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
