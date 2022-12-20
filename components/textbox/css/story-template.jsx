@@ -105,7 +105,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
-  autocomplete: '',
+  autoComplete: '',
   disabled: false,
   focus: false,
   invalid: false,
@@ -114,12 +114,13 @@ export const defaultArgs = {
   placeholder: '',
   type: '',
   value: '',
+  minLength: 0,
 };
 
 export const exampleArgs = { value: 'The Quick Brown Fox Jumps Over The Lazy Dog' };
 
 export const Textbox = ({
-  autocomplete = defaultArgs.autocomplete,
+  autoComplete = defaultArgs.autoComplete,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
@@ -128,6 +129,7 @@ export const Textbox = ({
   required = defaultArgs.required,
   type = defaultArgs.type,
   value = defaultArgs.value,
+  minLength = defaultArgs.minLength,
   className,
   ...restProps
 }) => (
@@ -143,14 +145,15 @@ export const Textbox = ({
       required && 'utrecht-textbox--required',
       className,
     )}
-    autoComplete={autocomplete || null}
+    minLength={!minLength || (minLength === 1 && required) ? undefined : minLength}
+    autoComplete={autoComplete || null}
     disabled={disabled || null}
     aria-invalid={invalid || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
     required={required || null}
     type={type || null}
-    defaultValue={value}
+    defaultValue={value || undefined}
   />
 );
 

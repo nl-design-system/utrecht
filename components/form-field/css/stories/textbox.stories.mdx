@@ -1,10 +1,8 @@
 <!-- @license CC0-1.0 -->
 
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Textarea } from "../../../textarea/css/story-template";
 import { argTypes, defaultArgs, exampleArgs, FormFieldTextbox } from "../story-template";
-import "../../../checkbox/css/index.scss";
-import "../../../form-label/css/index.scss";
-import "../index.scss";
 
 <Meta
   id="css-form-field"
@@ -108,6 +106,21 @@ import "../index.scss";
           </ul>
         </>
       ),
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Textarea
+
+<Canvas>
+  <Story
+    name="Textarea"
+    args={{
+      ...exampleArgs,
+      id: "93051d49-ac02-4a15-b5a2-b424eccb35d6",
+      component: Textarea,
     }}
   >
     {FormFieldTextbox.bind({})}

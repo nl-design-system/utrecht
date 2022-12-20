@@ -1,8 +1,13 @@
 <!-- @license CC0-1.0 -->
 
-import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
 import { argTypes, defaultArgs, exampleArgs, Textbox } from "../story-template";
 import "../index.scss";
+import achternaamDocs from "./_achternaam.md";
+import naamDocs from "./_naam.md";
+import postcodeDocs from "./_postcode.md";
+import voornaamDocs from "./_voornaam.md";
+import voorvoegselDocs from "./_voorvoegsel.md";
 
 <Meta
   id="css-textbox"
@@ -23,7 +28,7 @@ Voor [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose) moet
 
 ## Naam
 
-Gebruik de `autocomplete` waarde `name` als je de naam van een persoon nodig hebt, en het niet nodig is om de onderdelen van de naam te gebruiken. Dit is de meest gebruiksvriendelijke manier van een naam vragen, gebruik bij voorkeur één formulierveld voor de naam.
+<Description>{naamDocs}</Description>
 
 <Canvas>
   <Story
@@ -43,12 +48,7 @@ Gebruik de `autocomplete` waarde `name` als je de naam van een persoon nodig heb
 
 ## Voornaam
 
-Gebruik de `autocomplete` waarde `given-name` wanneer je alleen de voornaam nodig hebt, of je de voornaam nodig hebt als los onderdeel van de naam.
-
-Er is geen `autocomplete` waarde voor "Voornamen". De `autocomplete` waarde `given-name` gaat alleen om de eerste naam. Als losse `autocomplete` optie bestaat `additional-name`, maar er is geen combinatie mogelijk.
-
-Gebruik nooit een minimumlengte voor de validatie van een voornaam. Er zijn diverse namen van één letter die voorkomen in Nederland en België. Gebruik liever `required` dan `minlength="1"` omdat het een duidelijkere foutmelding oplevert.
-Bekijk op de [Nederlandse Voornamenbank](https://www.meertens.knaw.nl/nvb/) van het Meertens Instituut de voornamen die voorkomen in Nederland.
+<Description>{voornaamDocs}</Description>
 
 <Canvas>
   <Story
@@ -68,13 +68,7 @@ Bekijk op de [Nederlandse Voornamenbank](https://www.meertens.knaw.nl/nvb/) van 
 
 ## Achternaam
 
-Gebruik de `autocomplete` waarde `family-name` wanneer je de achternaam inclusief voorvoegsel nodig hebt.
-
-Als je een eigen textbox voor voorvoegsel gebruikt, gebruik dan niet `autocomplete="family-name"` omdat daarmee het voorvoegsel automatisch in het verkeerde veld wordt ingevuld.
-
-Gebruik nooit een minimumlengte voor de validatie van een achternaam. "O" is een achternaam van één letter die voorkomt in Nederland en Belgie ([zie Wikipedia](<https://nl.wikipedia.org/wiki/O_(achternaam)>)). Gebruik liever `required` dan `minlength="1"` omdat het een duidelijkere foutmelding oplevert.
-
-Je kunt op de [FamilienamenBank website](https://www.cbgfamilienamen.nl/nfb/) van het Centrum voor Familiegeschiedenis vinden welke familienamen voorkomen in Nederland.
+<Description>{achternaamDocs}</Description>
 
 <Canvas>
   <Story
@@ -94,17 +88,11 @@ Je kunt op de [FamilienamenBank website](https://www.cbgfamilienamen.nl/nfb/) va
 
 ## Voorvoegsel
 
-Als je naast achternaam een eigen textbox voor voorvoegsel gebruikt, overweeg dan of het niet mogelijk is hele achternaam in één veld te vragen, of zelfs de gehele naam in één veld te vragen: dit is gebruiksvriendelijker en werkt beter met autocomplete.
-
-De Rijksdienst voor Identiteitsgegevens publiceert een tabel met voorvoegels: _Landelijke tabel 36_. Je kunt [de lijst met voorvoegsels als CSV downloaden](https://publicaties.rvig.nl/dsresource?objectid=cc448b91-6574-47d3-b458-1e7c6cded8cd).
+<Description>{voorvoegselDocs}</Description>
 
 ## Postcode in Nederland
 
-Gebruik de `autocomplete` waarde `postal-code`.
-
-Als je alleen wilt vragen om de eerste vier cijfers van de postcode, dan zou het autocomplete resultaat van `postal-code` door de laatste twee letters niet aan het juist formaat voldoen. Accepteer in zo'n geval ook de volledige postcode als invoer, en negeer de letters van de spotcode. Gebruik helemaal geen `autocomplete` als het niet mogelijk is om ook de letters te accepteren.
-
-Gebruik voor validatie niet een limiet kleiner dan `maxlength="7"` zodat een spatie tussen de cijfers en letters past.
+<Description>{postcodeDocs}</Description>
 
 <Canvas>
   <Story
