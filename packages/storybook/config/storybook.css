@@ -8,3 +8,8 @@
 .utrecht-reduced-motion {
   --utrecht-motion-max-animation-duration: 0;
 }
+
+.no-style .docs-story,
+.no-style .docs-story * {
+  all: revert !important;
+}
