@@ -1,0 +1,292 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import achternaamDocs from "../../../textbox/css/stories/_achternaam.md";
+import naamDocs from "../../../textbox/css/stories/_naam.md";
+import postcodeDocs from "../../../textbox/css/stories/_postcode.md";
+import voornaamDocs from "../../../textbox/css/stories/_voornaam.md";
+import voorvoegselDocs from "../../../textbox/css/stories/_voorvoegsel.md";
+import { argTypes, defaultArgs, FormFieldExample } from "../story-template";
+import emailDocs from "./_email.md";
+import newPasswordDocs from "./_new-password.md";
+import telDocs from "./_tel.md";
+import voorvoegsels from "./voorvoegsels-tabel-36.json";
+
+<Meta
+  id="css-form-field"
+  title="CSS Component/Form field/Common examples"
+  component={FormFieldExample}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Common examples of form fields
+
+## Naam
+
+<Description>{naamDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Naam"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Naam",
+      minLength: 1,
+      maxLength: 412, // 200 + 1 + 10 + 1 + 200,
+      required: true,
+      autoComplete: "name",
+      spellcheck: "false",
+      id: "4c6d647b-bacd-437f-b160-6304353ddbdd",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Voornaam
+
+<Description>{voornaamDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Voornaam"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Voornaam",
+      required: true,
+      minLength: 1,
+      maxLength: 200,
+      spellcheck: "false",
+      autoComplete: "given-name",
+      id: "af0084ba-cef6-489d-a876-1da92277624c",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Voornamen
+
+<Canvas>
+  <Story
+    name="Voornamen"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Voornaam (1 of meerdere)",
+      minLength: 1,
+      maxLength: 200,
+      spellcheck: "false",
+      required: true,
+      id: "8ad75c24-32b9-4558-9057-9b5b327f9b70",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Achternaam
+
+<Description>{achternaamDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Achternaam"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Achternaam",
+      minLength: 1,
+      maxLength: 200,
+      required: true,
+      spellcheck: "false",
+      autoComplete: "family-name",
+      id: "12719913-e6d1-43a9-8068-239f609abea0",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Voorvoegsel
+
+<Description>{voorvoegselDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Voorvoegsel"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Voorvoegsel",
+      minLength: 1,
+      maxLength: 10,
+      required: false,
+      spellcheck: "false",
+      datalist: voorvoegsels.map((item) => ({ label: item })),
+      id: "ac0c98d6-2ad1-453e-9e06-6b26a5f61546",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Postcode
+
+<Description>{postcodeDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Postcode"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Postcode",
+      spellcheck: "false",
+      autoComplete: "postal-code",
+      id: "16e1fde4-94e2-4848-9cae-27679070bc93",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Gebruikersnaam
+
+<Canvas>
+  <Story
+    name="Gebruikersnaam"
+    args={{
+      control: "text",
+      type: "text",
+      label: "Gebruikersnaam",
+      spellcheck: "false",
+      autoComplete: "username",
+      id: "6b4dc32d-1a12-496b-bfe6-19470f48f156",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Wachtwoord
+
+<Canvas>
+  <Story
+    name="Wachtwoord"
+    args={{
+      control: "text",
+      type: "password",
+      label: "Wachtwoord",
+      autoComplete: "current-password",
+      spellcheck: "false",
+      id: "0e462594-7b98-4755-ad8e-3a661df6da05",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## E-mail
+
+<Description>{emailDocs}</Description>
+
+<Canvas>
+  <Story
+    name="E-mail"
+    args={{
+      control: "text",
+      type: "email",
+      label: "E-mailadres",
+      description: "Wij sturen op dit e-mailadres de ontvangstbevestiging en we nemen via e-mail contact met u op.",
+      required: true,
+      autoComplete: "email",
+      spellcheck: "false",
+      id: "ba119f18-ce9d-42d7-8d32-cdfbc6531137",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Telefoonnummer
+
+<Description>{telDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Telefoonnummer"
+    args={{
+      control: "text",
+      type: "tel",
+      label: "Telefoonnummer",
+      description: "Wij bellen u als de afspraak onverwacht niet door kan gaan. We sturen dan ook een e-mail.",
+      autoComplete: "tel",
+      spellcheck: "false",
+      id: "88b391aa-7b6b-4e86-8033-e810ee4e847e",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
+
+## Nieuw wachtwoord
+
+<Description>{newPasswordDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Nieuw wachtwoord"
+    args={{
+      control: "text",
+      type: "password",
+      label: "Nieuw wachtwoord",
+      autoComplete: "new-password",
+      spellcheck: "false",
+      id: "6dcec3ba-eb91-4173-af55-1b229688d3f7",
+    }}
+    parameters={{
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldExample.bind({})}
+  </Story>
+</Canvas>
