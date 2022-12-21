@@ -1,0 +1,40 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Code, defaultArgs } from "../story-template";
+import ligaturesDocs from "./_ligatures.md";
+import "../index.scss";
+
+<Meta
+  id="css-code"
+  title="CSS Component/Code"
+  component={Code}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+export const ContainerWithLigatures = (Story) => (
+  <div style={{ "font-variant-ligatures": "common-ligatures" }}>{Story()}</div>
+);
+
+# Ligatures in code
+
+<Description>{ligaturesDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Ligatures in code"
+    decorators={[ContainerWithLigatures]}
+    args={{
+      textContent:
+        "/* “fi,” “ff,” and “fl“ are common ligatures. In code they should take up the space of two characters. Some ligatures are available in Unicode as one character, such as “ﬁ” (U+FB01), Ĳ (U+0132) and ĳ (U+0133). */",
+    }}
+  >
+    {Code.bind({})}
+  </Story>
+</Canvas>

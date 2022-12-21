@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@mixin utrecht-code {
+  /* Use `monospace` as fallback both when the custom property isn't set and when the font is not available */
+  background-color: var(--utrecht-code-background-color);
+  color: var(--utrecht-code-color);
+  font-family: var(--utrecht-code-font-family, monospace), monospace;
+  font-size: var(--utrecht-code-font-size);
+  font-variant-ligatures: none;
+  line-height: var(--utrecht-code-line-height);
+}
+
+@mixin utrecht-code--html-span {
+  white-space: pre-wrap;
+}

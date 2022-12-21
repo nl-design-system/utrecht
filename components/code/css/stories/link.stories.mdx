@@ -1,0 +1,36 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { CodeInLink } from "../story-template";
+
+<Meta
+  id="css-code"
+  title="CSS Component/Code"
+  component={CodeInLink}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+    docs: {
+      source: {
+        state: "closed",
+      },
+    },
+  }}
+/>
+
+# Code in link
+
+De code die een link is moet herkenbaar zijn als link.
+
+<Canvas>
+  <Story
+    name="Code in link"
+    args={{
+      href: "https://w3c.github.io/csswg-drafts/mediaqueries-5/#prefers-color-scheme",
+      textContent: "@media (prefers-color-scheme: dark) {}",
+    }}
+  >
+    {CodeInLink.bind({})}
+  </Story>
+</Canvas>
