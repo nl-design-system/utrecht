@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, CodeBlock, defaultArgs, exampleArgs } from "../story-template";
+
+<Meta
+  id="html-code-block"
+  title="HTML Component/Code block"
+  component={CodeBlock}
+  argTypes={argTypes}
+  args={defaultArgs}
+  decorators={[(Story) => <div className="utrecht-html">{Story()}</div>]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Code block
+
+Styling via the `pre` and `code` HTML elements:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {CodeBlock.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

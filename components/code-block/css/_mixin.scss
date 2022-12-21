@@ -1,0 +1,35 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@import "../../code/css/mixin";
+
+@mixin utrecht-code-block {
+  @include utrecht-code;
+
+  --utrecht-code-color: var(--utrecht-code-block-color, inherit);
+  --utrecht-code-background-color: var(--utrecht-code-block-background-color, inherit);
+  --utrecht-code-font-weight: var(--utrecht-code-block-font-weight, inherit);
+  --utrecht-code-font-size: var(--utrecht-code-block-font-size, inherit);
+  --utrecht-code-font-family: var(--utrecht-code-block-font-family, monospace);
+
+  background-color: var(--utrecht-code-block-background-color);
+  display: block;
+  margin-block-end: var(--utrecht-code-block-margin-block-end);
+  margin-block-start: var(--utrecht-code-block-margin-block-start);
+  margin-inline-end: var(--utrecht-code-block-margin-inline-end);
+  margin-inline-start: var(--utrecht-code-block-margin-inline-start);
+  padding-block-end: var(--utrecht-code-block-padding-block-end);
+  padding-block-start: var(--utrecht-code-block-padding-block-start);
+  padding-inline-end: var(--utrecht-code-block-padding-inline-end);
+  padding-inline-start: var(--utrecht-code-block-padding-inline-start);
+  white-space: pre;
+}
+
+@mixin utrecht-code-block__content {
+  /* reset effect of <code> */
+  font-family: inherit;
+  font-size: inherit;
+}

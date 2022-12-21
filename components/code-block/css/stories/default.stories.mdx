@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, CodeBlock, defaultArgs, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-code-block"
+  title="CSS Component/Code block"
+  component={CodeBlock}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Code block
+
+Styling via the `.utrecht-code-block` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {CodeBlock.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
