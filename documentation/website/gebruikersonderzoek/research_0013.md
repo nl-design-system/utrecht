@@ -24,7 +24,7 @@ keywords:
 
 # Onderzoek verscheidene iconen November
 
-**tl;dr: Er is een duidelijke voorkeur van icoon per onderwerp te vinden.**
+**tl;dr: Er is bij een aantal iconen een duidelijke voorkeur van icoon per onderwerp te vinden.**
 
 ## Doel van het onderzoek
 
@@ -41,9 +41,15 @@ Er achter komen of bij de volgende onderwerpen één van de getoonde iconen sign
 
 Het onderzoek is gestart op 9 november 2022 en geindigd op 23 november 2022.
 
-## Opzet en resultaten
+## Opzet
 
 We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enquete ook nog doorgestuurd naar deelnemers van openGemeenten. We hebben gevraagd welke knoppen het beste passen bij het onderwerp, en we hebben gevraagd of de respondent dit wilde toelichten. In totaal hebben 47 mensen de enquete ingevuld.
+
+## Resultaten en inzichten
+
+Er is bij een aantal vragen een duidelijke voorkeur te zien voor een icoon, zie de percentages bij de resultaten boven. We zien die duidelijke voorkeur terug bij Energietoeslag, Betaald parkeren, Omgevingsvisie, Rioolheffing en Thuiswerken.
+
+Hieronder volgende de inzichten, specifiek per vraag.
 
 ### Energietoeslag
 
@@ -58,6 +64,12 @@ We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enq
 - Knop C: 53%
 - Knop D: 5%
 
+#### Inzicht: Het handje wordt geassocieerd met ontvangen, de portemonnee met geld
+
+Uit een groot aantal opmerkingen (36,2%) bij het energieteoeslag icoon blijkt dat het handje geassocieerd wordt met iets ontvangen. Bij het overgrote deel van deze opmerkingen (14 van de 17) blijft dat neutraal. Bij een klein aantal (3 van de 17) wordt het opgestoken handje als bedelen gezien.
+
+De portemonnee wordt geassocieerd met geld, maar door een kleiner aantal (17,0%) personen.
+
 ### Betaald parkeren
 
 "Hieronder staan twee (fictieve) knoppen. Vind jij knop A of knop B het beste passen bij informatie over betaald parkeren?"
@@ -68,6 +80,10 @@ We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enq
 
 - Knop A: 67%
 - Knop B: 33%
+
+#### Inzicht: Het euroteken wordt bij de getoonde grootte als duidelijker ervaren dan het muntje met daarin een euroteken
+
+Bij de geteste grootte van de iconen wordt door de een groot gedeelte van de deelnemers (51,1%) aangegeven dat ze het euroteken dat los wordt weergegeven (Knop A) als duidelijker ervaren dan het euroteken in de munt (Knop B).
 
 ### Milieuzone
 
@@ -84,6 +100,14 @@ We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enq
 ### Milieuzone ontheffing
 
 "Hieronder staan drie (fictieve) knoppen. Vind jij knop A, knop B of knop C het beste passen bij informatie over milieuzone ontheffing?"
+
+#### Inzicht: Uitroepteken in of buiten de vrachtwagen maakt een groot verschil
+
+De locatie van het uitroepteken (binnen of buiten de vrachtwagen) heeft invloed op de betekenis van het icoon als geheel. Als het uitroepteken binnen de vrachtwagen staat, wordt het icoon geassocieerd met iets wat er in de vrachtwagen zit. Als het icoon buiten de vrachtwagen staat dan wordt het icoon geassocieerd met iets dat de vrachtwagen doet. Opgemerkt door 17,0% van de deelnemers.
+
+#### Inzicht: Alle drie de iconen niet heel duidelijk
+
+Er waren een aantal deelnemers (10,6%) die geen van de drie keuzes duidelijk vonden.
 
 ![de drie Milieuzone ontheffing iconen](../../../static/img/onderzoek_milieuzone_ontheffing.png)
 
@@ -106,6 +130,10 @@ We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enq
 - Knop C: 70%
 - Knop D: 9%
 
+#### Inzicht: De cirkel in het icoon werkt goed
+
+Veel van de respondenten (29,8%) geven bij de opmerkingen aan dat de de circkel om het huisje duidelijk aangeeft dat het om de omgeving gaat.
+
 ### Rioolheffing
 
 "Hieronder staan twee (fictieve) knoppen. Vind jij knop A of knop B het beste passen bij informatie over rioolheffing?"
@@ -116,6 +144,18 @@ We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enq
 
 - Knop A: 70%
 - Knop B: 30%
+
+#### Inzicht: Het euroteken wordt ook bij de rioolheffing bij de getoonde grootte als duidelijker ervaren dan het muntje met daarin een euroteken
+
+Bij de geteste grootte van de iconen wordt door de een groot gedeelte van de deelnemers (21,3%) aangegeven dat ze het euroteken dat los wordt weergegeven (Knop A) als duidelijker ervaren dan het euroteken in de munt (Knop B).
+
+#### Inzicht: Geld door de WC spoelen
+
+Bij knop B krijgen een aantal deelnemers (17,0%) de associatie dat er geld door de wc wordt gespoeld
+
+#### Duidelijke WC
+
+Van de deelnemers vonden een groot aantal (29,8%) Knop A een duidelijkere WC weergeven dan die van Knop B. Een veel kleiner aantal (8,5%) vonden de WC op Knop B een duidelijkere WC dan die op Knop A.
 
 ### Thuiswerken
 
@@ -128,19 +168,13 @@ We hebben in eerste instantie 47 mensen de enquete gestuurd. Daarnaast is de enq
 - Knop A: 35%
 - Knop B: 65%
 
-## Belangrijkste inzichten
+#### Inzicht: Huisje wordt geassocieerd met thuiswerken
 
-De belangrijkste inzichten zijn:
+Een aantal deelnemers (19,1%) associeerden het huisje direct met thuiswerken.
 
-### Voorkeur
+#### Inzicht: Beide iconen niet heel duidelijk
 
-Er is bij een aantal vragen een duidelijke voorkeur te zien voor een icoon, zie de percentages bij de resultaten boven. We zien die duidelijke voorkeur terug bij Energietoeslag, Betaald parkeren, Omgevingsvisie, Rioolheffing en Thuiswerken.
-
-### Het handje wordt geassocieerd met ontvangen, portemonnee met geld
-
-Uit de opmerkingen bij het energieteoeslag icoon blijkt dat het handje geassocieerd wordt met iets ontvangen. Bij de meeste opmerkingen (14) blijft dat neutraal. Bij een klein aantal (3) wordt het opgestoken handje als bedelen gezien.
-
-De portemonnee wordt geassocieerd met geld, maar door een kleiner aantal (8) personen.
+Er waren een aantal deelnemers (17,0%) die geen van beide knoppen duidelijk vonden.
 
 ## Wie hebben het onderzocht
 

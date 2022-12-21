@@ -23,6 +23,10 @@ Gebruiksvriendelijk en toegankelijke producten en diensten voor alle inwoners va
 Hieronder staat een overzicht van de gebruikersonderzoeken die we gedaan hebben. Mis je iets? Neem dan [contact met ons op](mailto:ux@utrecht.nl).
 
 - Onderzoek online meldingen (inclusief Blinden en Slechtziende respondenten)
+- Onderzoek Parkeer Iconen
+- Onderzoek bevrijdingsdag, koningsdag en melding/klacht doorgeven iconen
+- Onderzoek verscheidene iconen November
+- Onderzoek Product Dienst Status Component
 
 ## Onderzoekers
 
