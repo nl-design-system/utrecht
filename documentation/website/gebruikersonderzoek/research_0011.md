@@ -19,7 +19,7 @@ keywords:
 
 <!-- @license CC0-1.0 -->
 
-# Onderzoek online meldingen
+# Onderzoek parkeer icoon
 
 **tl;dr: Het parkeer icoon dat niet gevuld is werd door de respondenten als de meest duidelijke ervaren.**
 
