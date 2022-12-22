@@ -37,6 +37,10 @@
   @include utrecht-form-field__label;
 }
 
+.utrecht-form-field--subtle {
+  @include utrecht-form-field--subtle;
+}
+
 .utrecht-form-field .utrecht-form-field-description {
   @include utrecht-form-field__description;
 }

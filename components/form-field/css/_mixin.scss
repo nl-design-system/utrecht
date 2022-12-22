@@ -138,3 +138,9 @@
     margin-inline-end: var(--utrecht-custom-radio-button-margin-inline-end, 12px);
   }
 }
+
+@mixin utrecht-form-field--subtle {
+  .utrecht-form-field__label {
+    font-weight: 400;
+  }
+}

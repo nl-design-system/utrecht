@@ -38,6 +38,10 @@ export const argTypes = {
     control: { type: 'select' },
     options: ['', 'checkbox', 'radio', 'text'],
   },
+  subtle: {
+    description: 'Subtle',
+    control: 'boolean',
+  },
 };
 
 export const defaultArgs = {
@@ -45,6 +49,7 @@ export const defaultArgs = {
   label: '',
   headingLevel: '',
   type: '',
+  subtle: false,
 };
 
 export const exampleArgs = {
@@ -71,7 +76,7 @@ export const Heading = ({ children, level }) => {
   return <HeadingComponent>{children}</HeadingComponent>;
 };
 
-export const FormField = ({ children, id, invalid, type }) => (
+export const FormField = ({ children, id, invalid, type, subtle }) => (
   <div
     id={id}
     className={clsx('utrecht-form-field', {
@@ -79,6 +84,7 @@ export const FormField = ({ children, id, invalid, type }) => (
       'utrecht-form-field--checkbox': type === 'checkbox',
       'utrecht-form-field--radio': type === 'radio',
       'utrecht-form-field--text': !type || type === 'text',
+      'utrecht-form-field--subtle': subtle,
     })}
   >
     {children}
