@@ -45,3 +45,12 @@
 .utrecht-form-fieldset--invalid {
   @include utrecht-form-fieldset--invalid;
 }
+
+.utrecht-form-fieldset--grid {
+  @include utrecht-form-fieldset--grid;
+}
+.utrecht-form-fieldset--subtle {
+  .utrecht-form-label {
+    font-weight: 400;
+  }
+}
