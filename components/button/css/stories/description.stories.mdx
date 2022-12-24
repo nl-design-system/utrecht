@@ -1,0 +1,105 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { Alert } from "../../../alert/css/story-template";
+import { ButtonGroup } from "../../../button-group/css/story-template";
+import { FormFieldDescription } from "../../../form-field-description/css/story-template";
+import { Paragraph } from "../../../paragraph/css/story-template";
+import { argTypes, Button, defaultArgs } from "../story-template";
+import descriptionDocs from "./_description.md";
+import "../index.scss";
+
+export const ButtonWithDescription = ({ id, description, small, status, alertType, ...restProps }) => {
+  const descriptionId = description ? `${id}-description` : id;
+  return (
+    <div>
+      {!!(description && !alertType) && (
+        <FormFieldDescription id={descriptionId} status={status}>
+          <Paragraph small={small}>{description}</Paragraph>
+        </FormFieldDescription>
+      )}
+      <ButtonGroup>
+        <Button {...restProps} aria-describedby={descriptionId} />
+      </ButtonGroup>
+      {description && alertType ? (
+        <Alert type={alertType}>
+          <Paragraph id={descriptionId}>{description}</Paragraph>
+        </Alert>
+      ) : (
+        false
+      )}
+    </div>
+  );
+};
+
+<Meta
+  id="css-button"
+  title="CSS Component/Button"
+  component={ButtonWithDescription}
+  argTypes={argTypes}
+  args={defaultArgs}
+  decorators={[(Story) => <div style={{ "--utrecht-space-around": 1 }}>{Story()}</div>]}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Button with description
+
+## Description with disclaimer
+
+<Description>{descriptionDocs}</Description>
+
+<Canvas>
+  <Story
+    name="Description with disclamer"
+    args={{
+      id: "4f426303-538c-42fe-9eaa-04c4175bde17",
+      appearance: "primary-action-button",
+      textContent: "Doorgaan naar iDEAL",
+      type: "submit",
+      small: true,
+      description: `Als je op ‘Doorgaan naar iDEAL’ klikt, ga je ermee akkoord dat de verkoopvoorwaarden gelden voor je bestelling en we een factuur naar je e-mailadres sturen.`,
+    }}
+  >
+    {ButtonWithDescription.bind({})}
+  </Story>
+</Canvas>
+
+## Description with validation message
+
+<Canvas>
+  <Story
+    name="Description with validation message"
+    args={{
+      id: "b4f338f9-cc8a-4d20-bbd2-542439d124fd",
+      appearance: "primary-action-button",
+      textContent: "Verzenden",
+      type: "submit",
+      status: "invalid",
+      description: `Vul eerst de verplichten velden in: Naam en E-mailadres.`,
+    }}
+  >
+    {ButtonWithDescription.bind({})}
+  </Story>
+</Canvas>
+
+## Description with error message
+
+<Canvas>
+  <Story
+    name="Description with error message"
+    args={{
+      id: "64cd1500-a938-49b0-9644-de410b8a1d02",
+      appearance: "primary-action-button",
+      textContent: "Opslaan en later verder gaan",
+      type: "submit",
+      alertType: "error",
+      description: `Opslaan is niet gelukt omdat geen contact gemaakt kan worden met de server. Wacht even en probeer het nog een keer.`,
+    }}
+  >
+    {ButtonWithDescription.bind({})}
+  </Story>
+</Canvas>

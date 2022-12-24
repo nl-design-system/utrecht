@@ -105,6 +105,7 @@ export const Button = ({
   type = defaultArgs.type,
   iconBefore = defaultArgs.iconBefore,
   iconAfter = defaultArgs.iconAfter,
+  ...restProps
 }) => {
   const IconBefore = iconBefore;
   const IconAfter = iconAfter;
@@ -129,6 +130,7 @@ export const Button = ({
       aria-disabled={disabled || null}
       aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
       type={type || null}
+      {...restProps}
     >
       {iconBefore && <IconBefore />}
       {children}
