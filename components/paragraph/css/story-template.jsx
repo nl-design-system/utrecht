@@ -40,6 +40,7 @@ export const Paragraph = ({
   innerHTML = defaultArgs.innerHTML,
   lead = defaultArgs.lead,
   small = defaultArgs.small,
+  ...restProps
 }) => {
   const content = (
     <>
@@ -54,6 +55,7 @@ export const Paragraph = ({
         'utrecht-paragraph--lead': lead,
         'utrecht-paragraph--small': small,
       })}
+      {...restProps}
     >
       {small ? <small className="utrecht-paragraph__small">{content}</small> : <>{content}</>}
     </p>
