@@ -86,6 +86,7 @@ Deze global design tokens worden gebruikt in dit component:
 
 ## 1.5 Best practices
 
+- Gebruik een link naar de homepage als er geen andere duidelijke manier is om naar de homepage te gaan. Een link naar de homepage belangrijk, en niet iedereen weet dat het logo meestal een link is naar de homepage. Als je ook _breadcrumb navigation_ gebruikt, dan is de "Home" link daarin voldoende en dan hoeft de hoofdnavigatie niet ook zo'n link te hebben.
 - Hou de tekst van de links in de sidebar kort. Verkort desnoods de naam naar een gedeelte van de pagina titel.
 - Test altijd de sidenav. Zeker bij een langere hierarchie is het soms nodig om het eindproduct te zien. Mogelijk valt een gedeelte van de navigatie weg van de onderkant van het scherm.
 
