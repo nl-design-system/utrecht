@@ -61,18 +61,18 @@
 
   .utrecht-breadcrumb__link::after,
   .utrecht-breadcrumb__link::before {
+    block-size: 0;
     border-block-end-width: var(--utrecht-breadcrumb-block-size);
     border-block-start-width: var(--utrecht-breadcrumb-block-size);
     border-color: transparent;
     border-style: solid;
     content: " ";
     display: block;
-    height: 0;
-    left: 100%;
+    inline-size: 0;
+    inset-block-start: 50%;
+    inset-inline-start: 100%;
     margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
     position: absolute;
-    top: 50%;
-    width: 0;
   }
 
   .utrecht-breadcrumb__link::after {
