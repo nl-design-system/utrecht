@@ -27,6 +27,11 @@ export const argTypes = {
     description: 'Required',
     control: 'boolean',
   },
+  spellcheck: {
+    description: 'Spellcheck',
+    control: { type: 'select' },
+    options: ['', 'false', 'true'],
+  },
   textContent: {
     description: 'Set the value of the Text area',
     control: 'text',
@@ -41,6 +46,7 @@ export const defaultArgs = {
   placeholder: '',
   readOnly: false,
   required: false,
+  spellcheck: '',
   textContent: '',
 };
 
@@ -56,6 +62,7 @@ export const Textarea = ({
   placeholder = defaultArgs.placeholder,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
+  spellcheck = defaultArgs.spellcheck,
   textContent = defaultArgs.textContent,
 }) => (
   <textarea
@@ -73,6 +80,7 @@ export const Textarea = ({
     aria-invalid={invalid || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
+    spellcheck={spellcheck || null}
     required={required || null}
   >
     {textContent}
