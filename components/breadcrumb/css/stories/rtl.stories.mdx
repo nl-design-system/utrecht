@@ -1,6 +1,7 @@
 <!-- @license CC0-1.0 -->
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import locale from "../../i18n/ar.json";
 import { argTypes, Breadcrumb, defaultArgs, exampleArgs } from "../story-template";
 
 <Meta
@@ -28,11 +29,12 @@ import { argTypes, Breadcrumb, defaultArgs, exampleArgs } from "../story-templat
     ]}
     args={{
       ...exampleArgs,
+      label: locale.label,
       items: [
-        { href: "https://example.com/", title: "الصفحة الرئيسية" },
+        { href: "https://example.com/", title: "الصفحة الرئيسية", rel: "home" },
         { href: "https://example.com/a/", title: "المستوى 1" },
         { href: "https://example.com/a/b/", title: "المستوي 2" },
-        { href: "https://example.com/a/b/c/", title: "مستوى 3" },
+        { href: "https://example.com/a/b/c/", title: "مستوى 3", rel: "up" },
       ],
     }}
   >

@@ -16,6 +16,10 @@
   @include utrecht-breadcrumb;
 }
 
+.utrecht-breadcrumb__heading {
+  @include utrecht-breadcrumb__heading;
+}
+
 .utrecht-breadcrumb__list {
   @include utrecht-breadcrumb__list;
 }

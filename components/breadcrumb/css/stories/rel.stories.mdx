@@ -1,0 +1,45 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, Breadcrumb, defaultArgs, exampleArgs } from "../story-template";
+
+<Meta
+  id="css-breadcrumb"
+  title="CSS Component/Breadcrumb navigation"
+  component={Breadcrumb}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Breadcrumb navigation
+
+Stel je voor: je hebt _breacrumb navigation_ op de derde pagina met zoekresultaten voor “openingstijden zwembad”. De huidige URL is `https://example.com/search?q=openingstijden+zwembad?page=3`. Dan kan het handig zijn om terug te gaan naar de eerste pagina van de zoekresultaten. Het kan ook handig zijn om terug te gaan naar de zoekpagina, om andere zoektermen te kiezen.
+
+- **Home**: `rel="home"`
+- **Zoeken**: `rel="up"`
+- **Pagina 1** van “openingstijden zwembad”: `rel="first"`
+
+<Canvas>
+  <Story
+    name="Link relations"
+    args={{
+      ...exampleArgs,
+      items: [
+        { href: "https://example.com/", title: "Home", rel: "home" },
+        { href: "https://example.com/search", title: "Zoeken", rel: "up" },
+        {
+          href: "https://example.com/search?q=openingstijden+zwembad",
+          title: "“openingstijden zwembad”",
+          rel: "first",
+        },
+      ],
+    }}
+  >
+    {Breadcrumb.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Link relations" />
