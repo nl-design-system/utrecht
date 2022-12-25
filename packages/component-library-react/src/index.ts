@@ -7,6 +7,7 @@ export { Alert } from './Alert';
 export { AlertDialog } from './AlertDialog';
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
+export { BreadcrumbNav, BreadcrumbLink } from './BreadcrumbNav';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { ButtonLink } from './ButtonLink';
