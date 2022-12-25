@@ -26,6 +26,10 @@
   text-transform: var(--utrecht-document-text-transform, inherit);
 }
 
+@mixin utrecht-breadcrumb__heading {
+  display: none;
+}
+
 @mixin utrecht-breadcrumb__list {
   block-size: var(--utrecht-breadcrumb-block-size);
   display: flex;
