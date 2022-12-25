@@ -36,6 +36,7 @@ Voor [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose) moet
     args={{
       ...exampleArgs,
       autocomplete: "name",
+      spellcheck: "false",
       value: "Sjors van Amerongen",
     }}
     parameters={{
@@ -57,6 +58,7 @@ Voor [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose) moet
       ...exampleArgs,
       value: "Sjors",
       autocomplete: "given-name",
+      spellcheck: "false",
     }}
     parameters={{
       chromatic: { disableSnapshot: true },
@@ -77,6 +79,7 @@ Voor [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose) moet
       ...exampleArgs,
       value: "van der Meer",
       autocomplete: "family-name",
+      spellcheck: "false",
     }}
     parameters={{
       chromatic: { disableSnapshot: true },
@@ -101,6 +104,7 @@ Voor [WCAG eis 1.3.5](https://www.w3.org/TR/WCAG21/#identify-input-purpose) moet
       ...exampleArgs,
       value: "3521 AZ",
       autocomplete: "postal-code",
+      spellcheck: "false",
     }}
     parameters={{
       chromatic: { disableSnapshot: true },
@@ -120,6 +124,7 @@ Gebruik de `autocomplete` waarde `tel` of `tel-national`, en `type="tel"`.
     args={{
       ...exampleArgs,
       autocomplete: "tel",
+      spellcheck: "false",
       type: "tel",
       value: "+31 30 286 00 00",
     }}
@@ -141,6 +146,7 @@ Gebruik de `autocomplete` waarde `email`, `type="email"` en de `utrecht-textbox-
     args={{
       ...exampleArgs,
       autocomplete: "email",
+      spellcheck: "false",
       type: "email",
       value: "info@example.fi",
     }}
@@ -162,6 +168,7 @@ Gebruik de `autocomplete` waarde `url`, `type="url"` en de `utrecht-textbox--url
     args={{
       ...exampleArgs,
       autocomplete: "url",
+      spellcheck: "false",
       type: "url",
       value: "https://example.fi",
     }}

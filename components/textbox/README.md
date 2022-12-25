@@ -6,10 +6,10 @@
 
 | Data type                | `autocomplete`                                   | `spellcheck` | `translate` | value component |
 | ------------------------ | ------------------------------------------------ | ------------ | ----------- | --------------- |
-| Naam                     | `name`                                           |              | `no`        | `bdi`           |
-| Voornaam (1 of meerdere) | `given-name`                                     |              | `no`        | `bdi`           |
-| Voorvoegsel              |                                                  |              | `no`        | `bdi`           |
-| Achternaam               | `family-name`                                    |              | `no`        | `bdi`           |
+| Naam                     | `name`                                           | `false`      | `no`        | `bdi`           |
+| Voornaam (1 of meerdere) | `given-name`                                     | `false`      | `no`        | `bdi`           |
+| Voorvoegsel              |                                                  | `false`      | `no`        | `bdi`           |
+| Achternaam               | `family-name`                                    | `false`      | `no`        | `bdi`           |
 | Adresregel 1             | `address-line1`                                  |              | `no`        | -               |
 | Adresregel 2             | `address-line2`                                  |              | `no`        | -               |
 | Adresregel 3             | `address-line3`                                  |              | `no`        | -               |
@@ -19,7 +19,7 @@
 | Huisletter               |                                                  |              | `no`        | -               |
 | Huisnummer toevoeging    |                                                  | `false`      | `no`        | -               |
 | Woonplaats               |                                                  |              |             | -               |
-| Burgerservicenummer      |                                                  |              | `no`        | -               |
+| Burgerservicenummer      |                                                  | `false`      | `no`        | -               |
 | E-mailadres              | `email`                                          | `false`      | `no`        | `URLValue`      |
 | Website                  | `url`                                            | `false`      | `no`        | `URLValue`      |
 | Bestandsnaam             |                                                  |              | `no`        | `URLValue`      |
@@ -69,3 +69,7 @@ _Let op:_
   - Modifier: `read-only`:
     - `--utrecht-textbox-read-only-border-color`
     - `--utrecht-textbox-read-only-color`
+
+## Privacy
+
+Gebruik `spellcheck="false"` voor velden die gevoelige informatie kunnen bevatten, zoals wachtwoorden en persoonsgegevens. Sommige _browser extensions_ voor spellingcontrole sturen deze informatie naar externe servers.
