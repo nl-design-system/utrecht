@@ -11,6 +11,10 @@ export const argTypes = {
     description: 'Active',
     control: 'boolean',
   },
+  ariaLabel: {
+    description: 'Provide the full accessible name here if the accessible name cannot be used as text content.',
+    control: 'text',
+  },
   boxContent: {
     description: 'Content is a box, such as an image or a section, not just text',
     control: 'boolean',
@@ -68,6 +72,7 @@ export const argTypes = {
 
 export const defaultArgs = {
   active: false,
+  ariaLabel: '',
   boxContent: false,
   current: false,
   external: false,
@@ -81,10 +86,8 @@ export const defaultArgs = {
   tabIndex: '',
   telephone: false,
   textContent: '',
-  title: '',
   visited: false,
   iconleft: false,
-  ariaLabelledby: '',
 };
 
 export const exampleArgs = {
@@ -93,6 +96,7 @@ export const exampleArgs = {
 
 export const Link = ({
   active = defaultArgs.active,
+  ariaLabel = defaultArgs.ariaLabel,
   boxContent = defaultArgs.boxContent,
   children,
   current = defaultArgs.current,
@@ -107,7 +111,6 @@ export const Link = ({
   tabIndex = defaultArgs.tabIndex,
   telephone = defaultArgs.telephone,
   textContent = defaultArgs.textContent,
-  title = defaultArgs.title,
   visited = defaultArgs.visited,
   iconleft = defaultArgs.iconleft,
   ...restProps
@@ -129,10 +132,10 @@ export const Link = ({
       'utrecht-link--icon-left': iconleft,
     })}
     rel={external ? 'external noopener noreferrer' : null}
+    aria-label={ariaLabel || null}
     aria-current={current ? 'page' : null}
     aria-disabled={placeholder ? 'true' : null}
     role={placeholder ? 'link' : null}
-    title={title || null}
     hrefLang={hrefLang || null}
     lang={lang || null}
     tabIndex={tabIndex || null}
