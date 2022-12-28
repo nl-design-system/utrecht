@@ -114,6 +114,7 @@ Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals
 ## HTML
 
 - Gebruik het `<a>` element om links aan te maken.
+- Gebuik niet het `title` attribuut. Sommige browsers gebruiken een tooltip om de tekst uit het `title` attribuut te tonen, die tooltip kan over de tekst heenstaan waardoor het niet leesbaar is.
 - Gebruik nooit een `<button>` of een ander element met een `click` event om zelf een link na te maken.
 - Gebruik `aria-current="page"` wanneer de link verwijst naar de huidige pagina. Voor consistente navigatie ([WCAG eis 3.2.3](https://www.w3.org/TR/WCAG21/#consistent-navigation)) is het beter om links in de navigatie te laten staan dan om geen `<a>` te gebruiken voor de huidige pagina.
 - Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
@@ -268,4 +269,5 @@ Wel goed: logo zonder link op de homepage.
 - [WCAG 1.4.1](https://www.w3.org/TR/WCAG21/#use-of-color): een link is niet voor iedereen duidelijk herkenbaar wanneer je alleen kleur gebruikt. Gebruik ook onderstreping om de link duidelijk te maken.
 - [WCAG 1.4.3](https://www.w3.org/TR/WCAG21/#contrast-minimum)
 - [WCAG 2.4.4](https://www.w3.org/TR/WCAG21/#link-purpose-in-context)
+- [WCAG 2.5.3](https://www.w3.org/TR/WCAG21/#label-in-name)
 - [WCAG 3.1.2](https://www.w3.org/TR/WCAG21/#language-of-parts)
