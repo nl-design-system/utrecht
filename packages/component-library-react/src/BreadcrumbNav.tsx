@@ -67,12 +67,13 @@ BreadcrumbNav.displayName = 'BreadcrumbNav';
 export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
   current?: boolean;
   href: string;
+  rel?: string;
   index?: number;
 }
 
 export const BreadcrumbLink = forwardRef(
   (
-    { children, current, href, index }: PropsWithChildren<BreadcrumbLinkProps>,
+    { children, current, href, index, rel }: PropsWithChildren<BreadcrumbLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => (
     <li
@@ -82,6 +83,7 @@ export const BreadcrumbLink = forwardRef(
       <Link
         className="utrecht-breadcrumb__link"
         href={href}
+        rel={rel}
         aria-current={current && 'location'}
         {...useMicrodataProp('item')}
         ref={ref}
