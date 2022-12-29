@@ -11,3 +11,7 @@ Use the `id` attribute on the description to associate the form field descriptio
 - `description` from `aria-describedby`
 - `invalid` from `:valid` in CSS and `aria-invalid`
 - `valid` from `:valid` in CSS
+
+## Bibliography
+
+- [WCAG Technique ARIA1: Using the `aria-describedby` property to provide a descriptive label for user interface controls](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA1)
