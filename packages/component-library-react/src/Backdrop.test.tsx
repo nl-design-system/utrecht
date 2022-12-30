@@ -51,12 +51,13 @@ describe('Backdrop', () => {
     expect(backdrop).not.toBeVisible();
   });
 
-  it('can have a custom class name', () => {
+  it('can have an additional custom class name', () => {
     const { container } = render(<Backdrop className="lightbox" />);
 
     const backdrop = container.querySelector(':only-child');
 
     expect(backdrop).toHaveClass('lightbox');
+    expect(backdrop).toHaveClass('utrecht-backdrop');
   });
 
   it('supports ForwardRef in React', () => {
