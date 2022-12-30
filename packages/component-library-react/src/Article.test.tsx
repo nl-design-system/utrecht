@@ -51,12 +51,14 @@ describe('Article', () => {
     expect(article).not.toBeVisible();
   });
 
-  it('can have a custom class name', () => {
+  it('can have a additional class name', () => {
     const { container } = render(<Article className="breaking-news" />);
 
     const article = container.querySelector(':only-child');
 
     expect(article).toHaveClass('breaking-news');
+
+    expect(article).toHaveClass('utrecht-article');
   });
 
   it('supports ForwardRef in React', () => {
