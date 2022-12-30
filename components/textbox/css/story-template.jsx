@@ -93,6 +93,11 @@ export const argTypes = {
     description: 'Required',
     control: 'boolean',
   },
+  spellcheck: {
+    description: 'Spellcheck',
+    control: { type: 'select' },
+    options: ['', 'false', 'true'],
+  },
   type: {
     description: 'Type',
     control: 'select',
@@ -112,6 +117,7 @@ export const defaultArgs = {
   readOnly: false,
   required: false,
   placeholder: '',
+  spellcheck: null,
   type: '',
   value: '',
   minLength: 0,
@@ -127,6 +133,7 @@ export const Textbox = ({
   placeholder = defaultArgs.placeholder,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
+  spellcheck = defaultArgs.spellcheck,
   type = defaultArgs.type,
   value = defaultArgs.value,
   minLength = defaultArgs.minLength,
@@ -152,8 +159,9 @@ export const Textbox = ({
     placeholder={placeholder || null}
     readOnly={readOnly || null}
     required={required || null}
+    spellcheck={spellcheck || null}
     type={type || null}
-    defaultValue={value || undefined}
+    defaultValue={value || null}
   />
 );
 
