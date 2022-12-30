@@ -91,7 +91,7 @@ Links moeten nooit een hele zin in beslag nemen, maar alleen de tekst die beschr
 
 ### Don'ts
 
-- Gebruik geen buttons waar je een link kan gebruiken.
+- Gebruik nooit een link wanneer het aanklikken een actie is die effect heeft, zoals uitloggen of akkoord gaan met voorwaarden. Gebruik voor acties met een effect altijd een button. De server moet voor acties met een neveneffect ook geen `GET`-request ondersteunen (zodat een link nooit zou werken), maar bijvoorbeeld een `POST`, `PUT` of `DELETE` request vereisen.
 - Gebruik geen vage of te algemene termen voor de link tekst. Help de gebruiker met voorspellen waar hij naar toe gaat.
 - Open interne links niet in een nieuwe tab. Hiermee schakel je één navigatiemanier uit om terug te gaan naar eerdere pagina's, de terug knop van de brower.
 
