@@ -1,3 +1,4 @@
+import { withTests } from '@storybook/addon-jest';
 import { app } from '@storybook/vue3';
 import {
   BadgeStatus,
@@ -22,6 +23,7 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@utrecht/component-library-vue';
+import results from '@utrecht/component-library-vue/dist/.jest-test-results.json';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
 
@@ -52,6 +54,7 @@ export const decorators = [
     components: { story },
     template: '<div class="utrecht-theme"><story /></div>',
   }),
+  withTests({ results }),
 ];
 
 export const parameters = {
