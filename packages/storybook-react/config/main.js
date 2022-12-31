@@ -12,6 +12,7 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-pseudo-states',
     '@storybook/preset-scss',
+    '@storybook/addon-jest',
   ],
   features: {
     postcss: false,
