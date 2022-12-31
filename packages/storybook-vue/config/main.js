@@ -17,6 +17,7 @@ module.exports = {
     '@storybook/addon-essentials',
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
+    '@storybook/addon-jest',
   ],
   framework: {
     name: '@storybook/vue3',

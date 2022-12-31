@@ -23,7 +23,9 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "npm run build:vue && npm run build:test-results",
+    "build:test-results": "jest --json --outputFile dist/.jest-test-results.json",
+    "build:vue": "vue-tsc --noEmit && vite build",
     "lint": "npm-run-all lint:**",
     "lint:ts": "vue-tsc --noEmit -p tsconfig.lib.json --composite false",
     "lint:ts-jest": "vue-tsc --noEmit -p tsconfig.jest.json --composite false",
