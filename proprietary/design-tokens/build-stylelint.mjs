@@ -1,9 +1,9 @@
-import glob from "glob";
-import merge from "lodash.merge";
-import isPlainObject from "lodash.isplainobject";
-import { resolve } from "path";
-import { readFileSync, writeFileSync } from "fs";
-import RegexTrie from "regex-trie";
+import glob from 'glob';
+import merge from 'lodash.merge';
+import isPlainObject from 'lodash.isplainobject';
+import { resolve } from 'path';
+import { readFileSync, writeFileSync } from 'fs';
+import RegexTrie from 'regex-trie';
 
 const _traverseDeep = (root, parents, current, valueTest, callback) => {
   if (valueTest(current)) {
@@ -46,7 +46,7 @@ const _traverseDeep = (root, parents, current, valueTest, callback) => {
  * Out of this we generate a stylelintrc.json config file that contains
  * the configuration with such a complicated generated regular expression.
  */
-glob("../../components/**/tokens.json", function (err, paths) {
+glob('../../components/**/tokens.json', function (err, paths) {
   if (err) {
     console.error(err);
   } else {
@@ -57,8 +57,8 @@ glob("../../components/**/tokens.json", function (err, paths) {
       tokens,
       [],
       tokens,
-      (value) => Object.prototype.hasOwnProperty.call(value, "css"),
-      (path, value) => cssVariables.push(path.join("-"))
+      (value) => Object.prototype.hasOwnProperty.call(value, 'css'),
+      (path, value) => cssVariables.push(path.join('-')),
     );
 
     const trie = new RegexTrie();
@@ -67,13 +67,13 @@ glob("../../components/**/tokens.json", function (err, paths) {
     const json = JSON.stringify(
       {
         rules: {
-          "custom-property-pattern": `^${trie.toRegExp().source}$`,
+          'custom-property-pattern': `^${trie.toRegExp().source}$`,
         },
       },
       null,
-      "  "
+      '  ',
     );
 
-    writeFileSync("./dist/tokens.stylelintrc.json", json);
+    writeFileSync('./dist/tokens.stylelintrc.json', json);
   }
 });

@@ -5,28 +5,28 @@ export default {
     pretty: true,
   },
   plugins: [
-    "preset-default",
-    "removeDimensions",
-    "removeTitle",
-    "convertStyleToAttrs",
+    'preset-default',
+    'removeDimensions',
+    'removeTitle',
+    'convertStyleToAttrs',
     {
-      name: "removeAttrs",
+      name: 'removeAttrs',
       params: {
-        attrs: ["path:(fill|stroke)", "fill"],
+        attrs: ['path:(fill|stroke)', 'fill'],
       },
     },
     {
-      name: "sortAttrs",
+      name: 'sortAttrs',
       params: {
-        xmlnsOrder: "alphabetical",
+        xmlnsOrder: 'alphabetical',
       },
     },
     {
-      name: "addAttributesToSVGElement",
+      name: 'addAttributesToSVGElement',
       params: {
         attributes: [
           {
-            fill: "CurrentColor",
+            fill: 'CurrentColor',
           },
         ],
       },
