@@ -31,7 +31,7 @@
     "@stencil/react-output-target": "0.3.1",
     "@stencil/sass": "1.5.2",
     "@stencil/vue-output-target": "0.6.2",
-    "@types/jest": "29.0.0",
+    "@types/jest": "29.0.3",
     "@utrecht/components": "workspace:*",
     "@utrecht/icon": "workspace:*",
     "chokidar-cli": "3.0.0",
@@ -42,7 +42,7 @@
   },
   "dependencies": {
     "@stencil/angular-output-target": "0.4.0",
-    "@stencil/core": "2.17.2"
+    "@stencil/core": "2.17.4"
   },
   "scripts": {
     "prebuild": "npm run clean",
