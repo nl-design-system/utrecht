@@ -26,10 +26,10 @@
   "devDependencies": {
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@lerna-lite/cli": "1.11.2",
+    "@lerna-lite/cli": "1.11.3",
     "@nrwl/cli": "14.5.10",
     "@nrwl/nx-cloud": "14.6.2",
-    "@nrwl/web": "14.6.4",
+    "@nrwl/web": "14.6.5",
     "@nrwl/workspace": "14.5.10",
     "@typescript-eslint/eslint-plugin": "5.32.0",
     "@typescript-eslint/parser": "5.32.0",
@@ -42,18 +42,18 @@
     "eslint-plugin-react": "7.30.1",
     "eslint-plugin-vue": "9.3.0",
     "html-validate": "7.1.2",
-    "husky": "8.0.1",
+    "husky": "8.0.2",
     "lint-staged": "12.5.0",
-    "markdownlint-cli": "0.32.1",
-    "npm-check-updates": "16.0.5",
+    "markdownlint-cli": "0.32.2",
+    "npm-check-updates": "16.0.6",
     "npm-package-json-lint": "6.3.0",
     "npm-run-all": "4.1.5",
     "nx": "14.5.10",
-    "postcss": "8.4.14",
+    "postcss": "8.4.20",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "stylelint": "14.9.1",
-    "stylelint-config-prettier": "9.0.3",
+    "stylelint-config-prettier": "9.0.4",
     "stylelint-config-standard-scss": "3.0.0",
     "stylelint-order": "5.0.0",
     "typescript": "4.7.4"
@@ -98,14 +98,14 @@
     "test": "npm run nx-test -- --skip-nx-cache",
     "nx-test": "nx run-many --target=test --all --parallel",
     "test-update": "npm-run-all --sequential lint build test",
-    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && npm install --legacy-peer-deps",
-    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && npm install --legacy-peer-deps",
-    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && npm install --legacy-peer-deps"
+    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install"
   },
   "pnpm": {
     "patchedDependencies": {
-      "@stencil/core@2.17.2": "patches/@stencil__core@2.17.2.patch",
-      "@storybook/angular@6.5.10": "patches/@storybook__angular@6.5.10.patch"
+      "@stencil/core@2.17.4": "patches/@stencil__core@2.17.4.patch",
+      "@storybook/angular@6.5.15": "patches/@storybook__angular@6.5.15.patch"
     }
   }
 }
