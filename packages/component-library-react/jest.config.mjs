@@ -1,5 +1,5 @@
 /* eslint-env node */
-const nextJest = require('next/jest');
+import nextJest from 'next/jest.js';
 
 // Next Jest config is great for Jest 27 + React + TypeScript, so let's use that as basis
 const createJestConfig = nextJest({
@@ -16,4 +16,4 @@ const customJestConfig = {
   // transformIgnorePatterns: ['node_modules/(?!@utrecht/web-component-library-react)'],
 };
 
-module.exports = createJestConfig(customJestConfig);
+export default createJestConfig(customJestConfig);
