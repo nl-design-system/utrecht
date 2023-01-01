@@ -480,8 +480,10 @@ importers:
       css-loader: 5.2.7
       html-react-parser: 3.0.6
       lodash.defaultsdeep: 4.6.1
+      prettier: 2.7.1
       react: 18.2.0
       react-dom: 18.2.0
+      react-syntax-highlighter: 15.5.0
       require-from-string: 2.0.2
       rimraf: 3.0.2
       sass: 1.54.9
@@ -516,15 +518,17 @@ importers:
       '@utrecht/documentation': link:../../documentation
       '@utrecht/icon': link:../../components/icon
       '@utrecht/web-component-library-stencil': link:../web-component-library-stencil
-      '@whitespace/storybook-addon-html': 5.0.3_pmt6gdvpkbsejpsyufhkfrbkda
+      '@whitespace/storybook-addon-html': 5.0.3_xaur4eu7q3yrdhgqws2zlbuwvu
       babel-loader: 8.2.5_wzuaocg5ud3awsba7gdlkn73ee
       clsx: 1.2.1
       cpx: 1.5.0
       css-loader: 5.2.7_webpack@5.73.0
       html-react-parser: 3.0.6_react@18.2.0
       lodash.defaultsdeep: 4.6.1
+      prettier: 2.7.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-syntax-highlighter: 15.5.0_react@18.2.0
       require-from-string: 2.0.2
       rimraf: 3.0.2
       sass: 1.54.9
@@ -12253,7 +12257,7 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
-  /@whitespace/storybook-addon-html/5.0.3_pmt6gdvpkbsejpsyufhkfrbkda:
+  /@whitespace/storybook-addon-html/5.0.3_xaur4eu7q3yrdhgqws2zlbuwvu:
     resolution: {integrity: sha512-aR9eRMST/NxEPxtF0Sne7uyFuieXmBKB3hDbB6L+Vh5c/dPtAM0sVLaA62xW/iJS8P8oLW84fShFHUOv190qCQ==}
     peerDependencies:
       '@storybook/addons': ^6.5.8
@@ -12276,8 +12280,10 @@ packages:
       '@storybook/components': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@storybook/core-events': 6.5.15
       '@storybook/theming': 6.5.15_biqbaboplfbrettd7655fr4n2y
+      prettier: 2.7.1
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
+      react-syntax-highlighter: 15.5.0_react@18.2.0
     dev: true
 
   /@xtuc/ieee754/1.2.0:
@@ -18196,6 +18202,12 @@ packages:
       reusify: 1.0.4
     dev: true
 
+  /fault/1.0.4:
+    resolution: {integrity: sha512-CJ0HCB5tL5fYTEA7ToAq5+kTwd++Borf1/bifxd9iT70QcXr4MRrO3Llf8Ifs70q+SJcGHFtnIE/Nw6giCtECA==}
+    dependencies:
+      format: 0.2.2
+    dev: true
+
   /faye-websocket/0.11.4:
     resolution: {integrity: sha512-CzbClwlXAuiRQAlUyfqPgvPoNKTckTPGfwZV4ZdAhVcP2lh9KUxJg2b5GkE7XbjKQ3YJnQ9z6D9ntLAlB+tP8g==}
     engines: {node: '>=0.8.0'}
@@ -18730,6 +18742,11 @@ packages:
       asynckit: 0.4.0
       combined-stream: 1.0.8
       mime-types: 2.1.35
+    dev: true
+
+  /format/0.2.2:
+    resolution: {integrity: sha512-wzsgA6WOq+09wrU1tsJ09udeR/YZRaeArL9e1wPbFg3GG2yDnC2ldKpxs4xunpFF9DgqCqOIra3bc1HWrJ37Ww==}
+    engines: {node: '>=0.4.x'}
     dev: true
 
   /formiojs/4.14.11:
@@ -19685,6 +19702,10 @@ packages:
     dependencies:
       capital-case: 1.0.4
       tslib: 2.4.1
+    dev: true
+
+  /highlight.js/10.7.3:
+    resolution: {integrity: sha512-tzcUFauisWKNHaRkN4Wjl/ZA07gENAjFl3J/c480dprkGTg5EQstgaNFqBfUqCq54kZRIEcreTsAgF/m2quD7A==}
     dev: true
 
   /history/4.10.1:
@@ -23535,6 +23556,13 @@ packages:
   /lowercase-keys/3.0.0:
     resolution: {integrity: sha512-ozCC6gdQ+glXOQsveKD0YsDy8DSQFjDTz4zyzEHNV5+JP5D62LmfDZ6o1cycFx9ouG940M5dE8C8CTewdj2YWQ==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
+    dev: true
+
+  /lowlight/1.20.0:
+    resolution: {integrity: sha512-8Ktj+prEb1RoCPkEOrPMYUN/nCggB7qAWe3a7OpMjWQkh3l2RD5wKRQ+o8Q8YuI9RG/xs95waaI/E6ym/7NsTw==}
+    dependencies:
+      fault: 1.0.4
+      highlight.js: 10.7.3
     dev: true
 
   /lru-cache/4.1.5:
@@ -27954,6 +27982,11 @@ packages:
       react: 17.0.2
     dev: true
 
+  /prismjs/1.27.0:
+    resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
+    engines: {node: '>=6'}
+    dev: true
+
   /prismjs/1.29.0:
     resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
     engines: {node: '>=6'}
@@ -28748,6 +28781,19 @@ packages:
       throttle-debounce: 3.0.1
     dev: true
 
+  /react-syntax-highlighter/15.5.0_react@18.2.0:
+    resolution: {integrity: sha512-+zq2myprEnQmH5yw6Gqc8lD55QHnpKaU8TOcFeC/Lg/MQSs8UknEA0JC4nTZGFAXC2J2Hyj/ijJ7NlabyPi2gg==}
+    peerDependencies:
+      react: '>= 0.14.0'
+    dependencies:
+      '@babel/runtime': 7.19.4
+      highlight.js: 10.7.3
+      lowlight: 1.20.0
+      prismjs: 1.29.0
+      react: 18.2.0
+      refractor: 3.6.0
+    dev: true
+
   /react-textarea-autosize/8.3.4_q5o373oqrklnndq2vhekyuzhxi:
     resolution: {integrity: sha512-CdtmP8Dc19xL8/R6sWvtknD/eCXkQr30dtvC4VmGInhRsfF8X/ihXCq6+9l9qbxmKRiq407/7z5fxE7cVWQNgQ==}
     engines: {node: '>=10'}
@@ -28977,6 +29023,14 @@ packages:
 
   /reflect-metadata/0.1.13:
     resolution: {integrity: sha512-Ts1Y/anZELhSsjMcU605fU9RE4Oi3p5ORujwbIKXfWa+0Zxs510Qrmrce5/Jowq3cHSZSJqBjypxmHarc+vEWg==}
+    dev: true
+
+  /refractor/3.6.0:
+    resolution: {integrity: sha512-MY9W41IOWxxk31o+YvFCNyNzdkc9M20NoZK5vq6jkv4I/uh2zkWcfudj0Q1fovjUQJrNewS9NMzeTtqPf+n5EA==}
+    dependencies:
+      hastscript: 6.0.0
+      parse-entities: 2.0.0
+      prismjs: 1.27.0
     dev: true
 
   /regenerate-unicode-properties/10.0.1:
