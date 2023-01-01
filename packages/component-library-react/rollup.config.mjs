@@ -2,13 +2,17 @@ import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 // import del from 'rollup-plugin-delete';
+import { readFileSync } from 'fs';
 import filesize from 'rollup-plugin-filesize';
 import nodeExternal from 'rollup-plugin-node-externals';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
-import packageJson from './package.json';
+// `assert` is not yet supported by ESLint <https://github.com/eslint/eslint/discussions/15305>
+// import packageJson from './package.json' assert { type: 'json' };
+
+const packageJson = JSON.parse(readFileSync('./package.json', 'utf8'));
 
 // rollup.config.js
 /**
