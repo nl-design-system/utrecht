@@ -50,7 +50,7 @@
 // keep the ideal version around to restore it easily when browser support improves.
 
 @if $utrecht-focus-visible-fallback {
-  .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-mapcontrolbutton--disabled) {
+  .utrecht-mapcontrolbutton:focus:not(:disabled, [aria-disabled="true"], .utrecht-mapcontrolbutton--disabled) {
     @extend .utrecht-mapcontrolbutton--focus;
     @extend .utrecht-mapcontrolbutton--focus-visible;
   }
@@ -61,7 +61,7 @@
     @include utrecht-focus-ring-reset;
   }
 } @else {
-  .utrecht-mapcontrolbutton:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-mapcontrolbutton--disabled) {
+  .utrecht-mapcontrolbutton:focus:not(:disabled, [aria-disabled="true"], .utrecht-mapcontrolbutton--disabled) {
     @extend .utrecht-mapcontrolbutton--focus;
   }
 
@@ -73,7 +73,7 @@
 }
 
 .utrecht-mapcontrolbutton--hover:not(:disabled),
-.utrecht-mapcontrolbutton:hover:not(:disabled):not(.utrecht-mapcontrolbutton--disabled) {
+.utrecht-mapcontrolbutton:hover:not(:disabled, .utrecht-mapcontrolbutton--disabled) {
   background-color: var(--utrecht-mapcontrolbutton-hover-background-color);
   color: var(--utrecht-mapcontrolbutton-color);
 }

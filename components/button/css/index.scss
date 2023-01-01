@@ -33,7 +33,7 @@
   @include utrecht-button--disabled;
 }
 
-.utrecht-button:active:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled),
+.utrecht-button:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
 .utrecht-button--active {
   @include utrecht-button--active;
 }
@@ -57,7 +57,7 @@
     @include utrecht-focus-ring;
   }
 
-  .utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  .utrecht-button:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
     @include utrecht-button--focus;
     @include utrecht-button--focus-visible;
   }
@@ -72,13 +72,13 @@
     @include utrecht-button--focus-visible;
   }
 
-  .utrecht-button:focus:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+  .utrecht-button:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
     @include utrecht-button--focus;
   }
 }
 
-.utrecht-button--hover:not(:disabled):not(.utrecht-button--disabled),
-.utrecht-button:hover:not(:disabled):not([aria-disabled="true"]):not(.utrecht-button--disabled) {
+.utrecht-button--hover:not(:disabled, .utrecht-button--disabled),
+.utrecht-button:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
   @include utrecht-button--hover;
 }
 

@@ -31,15 +31,15 @@
     @include utrecht-button--busy;
   }
 
-  button:active:not([aria-disabled="true"]):not(:disabled) {
+  button:active:not([aria-disabled="true"], :disabled) {
     @include utrecht-button--active;
   }
 
-  button:hover:not([aria-disabled="true"]):not(:disabled) {
+  button:hover:not([aria-disabled="true"], :disabled) {
     @include utrecht-button--hover;
   }
 
-  button:focus:not([aria-disabled="true"]):not(:disabled) {
+  button:focus:not([aria-disabled="true"], :disabled) {
     @include utrecht-button--focus;
   }
 
