@@ -196,7 +196,9 @@
   }
 
   /* stylelint-disable selector-pseudo-class-parentheses-space-inside */
-  .utrecht-sidenav__link:not(.utrecht-sidenav__link--sibling):not(.utrecht-sidenav__link--parent):not(
+  .utrecht-sidenav__link:not(
+      .utrecht-sidenav__link--sibling,
+      .utrecht-sidenav__link--parent,
       .utrecht-sidenav__link--child
     )::after {
     @extend .utrecht-sidenav__connection;
