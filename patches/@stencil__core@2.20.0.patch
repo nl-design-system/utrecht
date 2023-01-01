@@ -1,8 +1,8 @@
 diff --git a/internal/client/index.js b/internal/client/index.js
-index 4058b461c83e363a98a3948a7c3e85e1f5c71916..6dcf25ec8a9d11593910d2c3c22943f3cd758c18 100644
+index bf05e5d3adf709985e28e76d9ed962359c2dccc9..19fdaa10d1425a742d05aae90dbc1c02fc0eb0f2 100644
 --- a/internal/client/index.js
 +++ b/internal/client/index.js
-@@ -280,6 +280,11 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
+@@ -654,6 +654,11 @@ const addStyle = (styleContainerNode, cmpMeta, mode, hostElm) => {
                      if (BUILD.hydrateServerSide || BUILD.hotModuleReplacement) {
                          styleElm.setAttribute(HYDRATED_STYLE_ID, scopeId);
                      }
@@ -14,7 +14,7 @@ index 4058b461c83e363a98a3948a7c3e85e1f5c71916..6dcf25ec8a9d11593910d2c3c22943f3
                      styleContainerNode.insertBefore(styleElm, styleContainerNode.querySelector('link'));
                  }
                  if (appliedStyles) {
-@@ -2693,6 +2698,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
+@@ -2792,6 +2797,10 @@ const bootstrapLazy = (lazyBundles, options = {}) => {
      if (BUILD.invisiblePrehydration && (BUILD.hydratedClass || BUILD.hydratedAttribute)) {
          visibilityStyle.innerHTML = cmpTags + HYDRATED_CSS;
          visibilityStyle.setAttribute('data-styles', '');
