@@ -1,17 +1,21 @@
 {
-  "globals": {
-    "ts-jest": {
-      "tsconfig": "./tsconfig.jest.json",
-      "babelConfig": true
-    }
-  },
   "moduleDirectories": ["node_modules", "<rootDir>/"],
   "moduleFileExtensions": ["js", "json", "ts", "vue"],
   "testEnvironment": "jest-environment-jsdom",
   "testPathIgnorePatterns": ["/dist/"],
   "transform": {
-    "^.+\\.tsx?$": "ts-jest",
-    "^.+\\.vue$": "@vue/vue3-jest"
+    "^.+\\.tsx?$": [
+      "ts-jest",
+      {
+        "tsconfig": "./tsconfig.jest.json"
+      }
+    ],
+    "^.+\\.vue$": [
+      "@vue/vue3-jest",
+      {
+        "tsconfig": "./tsconfig.jest.json"
+      }
+    ]
   },
   "testMatch": ["**/*.(spec|test).[jt]s?(x)"],
   "testEnvironmentOptions": {
