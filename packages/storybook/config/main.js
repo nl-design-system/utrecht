@@ -20,7 +20,7 @@ module.exports = {
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
     '@etchteam/storybook-addon-status/register',
-    '@whitespace/storybook-addon-html/register',
+    '@whitespace/storybook-addon-html',
     '@storybook/addon-links',
     'storybook-addon-pseudo-states',
     'storybook-addon-themes',
