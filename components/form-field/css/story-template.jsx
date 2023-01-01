@@ -17,6 +17,7 @@ import { Heading4 } from '../../heading-4/css/story-template';
 import { Heading5 } from '../../heading-5/css/story-template';
 import { Heading6 } from '../../heading-6/css/story-template';
 import { RadioButton } from '../../radio-button/css/story-template';
+import { Textarea } from '../../textarea/css/story-template';
 import { Textbox } from '../../textbox/css/story-template';
 
 export const argTypes = {
@@ -321,4 +322,13 @@ export const FormFieldRadioGroup = ({
       })}
     </FormFieldset>
   );
+};
+
+export const FormFieldExample = ({ control, ...restProps }) => {
+  if (control === 'text' || control === 'textarea') {
+    let component = control === 'textarea' ? Textarea : Textbox;
+    return FormFieldTextbox({ ...restProps, component });
+  } else {
+    return <></>;
+  }
 };
