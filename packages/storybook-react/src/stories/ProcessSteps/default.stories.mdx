@@ -1,18 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-import {
-  Step,
-  StepExpandedIcon,
-  StepHeader,
-  StepHeading,
-  StepList,
-  StepMarker,
-  StepSection,
-  SubStep,
-  SubStepHeading,
-  SubStepList,
-  SubStepMarker,
-} from "@gemeente-denhaag/process-steps";
+import { ProcessSteps } from "@gemeente-denhaag/process-steps";
 import { Canvas, Meta, Story } from "@storybook/addon-docs";
 import "@gemeente-denhaag/process-steps/index.css";
 
@@ -30,65 +18,52 @@ import "@gemeente-denhaag/process-steps/index.css";
 
 <Canvas>
   <Story name="Default">
-    <StepList>
-      <Step checked expanded>
-        <StepSection>
-          <StepHeader>
-            <StepMarker>
-              <div>1</div>
-            </StepMarker>
-            <StepHeading>Deelname aan geluidsonderzoek</StepHeading>
-            <StepExpandedIcon />
-          </StepHeader>
-        </StepSection>
-        <SubStepList>
-          <SubStep>
-            <SubStepMarker />
-            <SubStepHeading>Aanmelding ontvangen</SubStepHeading>
-          </SubStep>
-        </SubStepList>
-      </Step>
-      <Step current expanded>
-        <StepSection>
-          <StepHeader>
-            <StepMarker>
-              <div>2</div>
-            </StepMarker>
-            <StepHeading>Onderzoek naar geluidsoverlast</StepHeading>
-            <StepExpandedIcon />
-          </StepHeader>
-        </StepSection>
-        <SubStepList>
-          <SubStep>
-            <SubStepMarker />
-            <SubStepHeading>Afspraak meten geluidsoverlast gemaakt</SubStepHeading>
-          </SubStep>
-          <SubStep>
-            <SubStepMarker />
-            <SubStepHeading>Geluidsoverlast gemeten</SubStepHeading>
-          </SubStep>
-          <SubStep>
-            <SubStepMarker />
-            <SubStepHeading>Onderzoek resultaten verwerkt</SubStepHeading>
-          </SubStep>
-        </SubStepList>
-      </Step>
-      <Step>
-        <StepSection>
-          <StepHeader>
-            <StepMarker>3</StepMarker>
-            <StepHeading>Uitvoeren van maatregelen</StepHeading>
-          </StepHeader>
-        </StepSection>
-      </Step>
-      <Step>
-        <StepSection>
-          <StepHeader>
-            <StepMarker>4</StepMarker>
-            <StepHeading>Maatregelen zijn uitgevoerd</StepHeading>
-          </StepHeader>
-        </StepSection>
-      </Step>
-    </StepList>
+    <ProcessSteps
+      expandedSteps={["deelname", "onderzoek"]}
+      steps={[
+        {
+          key: "deelname",
+          marker: 1,
+          status: "checked",
+          steps: [
+            {
+              status: "checked",
+              title: "Aanmelding ontvangen",
+            },
+          ],
+          title: "Deelname aan geluidsonderzoek",
+        },
+        {
+          key: "onderzoek",
+          marker: 2,
+          status: "current",
+          steps: [
+            {
+              status: "checked",
+              title: "Afspraak meten geluidsoverlast gemaakt",
+            },
+            {
+              status: "checked",
+              title: "Geluidsoverlast gemeten",
+            },
+            {
+              status: "checked",
+              title: "Onderzoek resultaten verwerkt",
+            },
+          ],
+          title: "Onderzoek naar geluidsoverlast",
+        },
+        {
+          key: "uitvoeren",
+          marker: 3,
+          title: "Uitvoeren van maatregelen",
+        },
+        {
+          key: "klaar",
+          marker: 4,
+          title: "Maatregelen zijn uitgevoerd",
+        },
+      ]}
+    />
   </Story>
 </Canvas>
