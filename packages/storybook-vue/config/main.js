@@ -7,6 +7,7 @@ module.exports = {
   features: {
     postcss: false,
     buildStoriesJson: true,
+    previewMdx2: true,
   },
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [

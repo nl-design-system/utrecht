@@ -16,6 +16,7 @@ module.exports = {
   ],
   features: {
     buildStoriesJson: true,
+    previewMdx2: true,
   },
   framework: '@storybook/angular',
   core: {
