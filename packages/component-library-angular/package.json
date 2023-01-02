@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.185",
+  "version": "1.0.0-alpha.186",
   "author": "Community for NL Design System",
   "description": "Angular web components for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -44,7 +44,6 @@
     "typescript": "4.8.2",
     "zone.js": "0.12.0"
   },
-  "peerDependencies": {},
   "main": "dist/fesm2020/utrecht-component-library-angular.mjs",
   "esm2020": "dist/esm2020/public-api.mjs",
   "module": "dist/fesm2015/utrecht-component-library-angular.mjs",

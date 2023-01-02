@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.389",
+  "version": "1.0.0-alpha.390",
   "author": "Community for NL Design System",
   "description": "Angular web components for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -21,7 +21,6 @@
     "build:web-components": "ng build",
     "clean": "rimraf dist/"
   },
-  "peerDependencies": {},
   "dependencies": {
     "tslib": "2.4.1"
   },
