@@ -52,7 +52,6 @@ const tabOrder = {
 
 const sidebarOrder = {
   options: {
-    panelPosition: 'bottom',
     storySort: {
       order: [
         'Utrecht',
