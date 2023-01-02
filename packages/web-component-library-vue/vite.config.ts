@@ -20,5 +20,12 @@ export default defineConfig({
       },
     },
   },
-  plugins: [dts({ copyDtsFiles: false, outputDir: './dist', tsConfigFilePath: './tsconfig.json' }), vue()],
+  plugins: [
+    dts({
+      copyDtsFiles: false,
+      outputDir: './dist',
+      skipDiagnostics: true,
+    }),
+    vue(),
+  ],
 });
