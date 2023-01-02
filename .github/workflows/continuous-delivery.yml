@@ -17,7 +17,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.12.x"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -54,7 +54,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.12.x"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -94,7 +94,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.12.x"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -150,7 +150,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.12.x"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -192,7 +192,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.12.x"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
@@ -274,7 +274,7 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: "16.16.x"
+          node-version: "18.12.x"
 
       - uses: pnpm/action-setup@v2.0.1
         name: Install pnpm
