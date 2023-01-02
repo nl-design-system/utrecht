@@ -15,10 +15,10 @@
           },
           "configurations": {
             "production": {
-              "tsConfig": "../component-library-angular/tsconfig.lib.prod.json"
+              "tsConfig": "../component-library-angular/tsconfig.prod.json"
             },
             "development": {
-              "tsConfig": "../component-library-angular/tsconfig.lib.json"
+              "tsConfig": "../component-library-angular/tsconfig.json"
             }
           },
           "defaultConfiguration": "production"

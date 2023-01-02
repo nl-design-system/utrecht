@@ -74,7 +74,7 @@
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": [
-          "packages/component-library-angular/tsconfig.lib.json",
+          "packages/component-library-angular/tsconfig.json",
           "packages/component-library-formio/tsconfig.json",
           "packages/component-library-react/tsconfig.json",
           "packages/component-library-react/tsconfig.test.json",
@@ -85,7 +85,7 @@
           "packages/storybook-angular/tsconfig.json",
           "packages/storybook-react/tsconfig.json",
           "packages/storybook-vue/tsconfig.json",
-          "packages/web-component-library-angular/tsconfig.lib.json",
+          "packages/web-component-library-angular/tsconfig.json",
           "packages/web-component-library-react/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.json",
           "packages/web-component-library-stencil/tsconfig.jest.json",
