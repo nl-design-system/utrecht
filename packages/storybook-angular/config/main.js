@@ -1,6 +1,6 @@
 /* eslint-env node */
 module.exports = {
-  stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
   addons: [
     '@storybook/addon-a11y',
     '@storybook/addon-actions',
@@ -15,11 +15,15 @@ module.exports = {
     '@storybook/preset-scss',
   ],
   features: {
+    babelModeV7: true,
     buildStoriesJson: true,
     previewMdx2: true,
     storyStoreV7: false,
   },
-  framework: '@storybook/angular',
+  framework: {
+    name: '@storybook/angular',
+    options: {},
+  },
   core: {
     builder: '@storybook/builder-webpack5',
     disableTelemetry: true,

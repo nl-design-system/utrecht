@@ -4,7 +4,7 @@ module.exports = {
     builder: 'webpack5',
     disableTelemetry: true,
   },
-  stories: ['../src/stories/**/*.stories.mdx', '../src/stories/**/*.stories.@(js|jsx|ts|tsx)'],
+  stories: ['../src/stories/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
@@ -15,12 +15,16 @@ module.exports = {
     '@storybook/addon-jest',
   ],
   features: {
+    babelModeV7: true,
     postcss: false,
     buildStoriesJson: true,
     previewMdx2: true,
     storyStoreV7: false,
   },
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react',
+    options: {},
+  },
   staticDirs: ['../../../proprietary/assets'],
   webpackFinal: async (config) => ({
     ...config,
