@@ -30,7 +30,10 @@
         "plugin:mdx/overrides"
       ],
       "files": ["*.mdx"],
-      "plugins": ["import"]
+      "plugins": ["import"],
+      "settings": {
+        "mdx/code-blocks": true
+      }
     },
     {
       "extends": [
