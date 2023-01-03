@@ -31,7 +31,7 @@ Dit Design System draagt bij aan gebruiksvriendelijkere diensten van een betere 
 > Hierdoor kunnen er zaken veranderen.
 > Houdt hier dus rekening mee voor je aan de slag gaat.
 > We zouden het op prijs stellen als je wilt bijdragen om het Design System tot een succes te maken.
-> Dit kan in onze gitlab of met een mailtje aan: <mailto:r.olling@utrecht.nl> of <mailto:j.du.chatinier@utrecht.nl>
+> Dit kan in onze gitlab of met een mailtje aan: [r.olling@utrecht.nl](mailto:r.olling@utrecht.nl) of [j.du.chatinier@utrecht.nl](mailto:j.du.chatinier@utrecht.nl)
 
 ## Wat is een Design System
 
