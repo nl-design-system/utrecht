@@ -18,6 +18,7 @@ module.exports = {
     postcss: false,
     buildStoriesJson: true,
     previewMdx2: true,
+    storyStoreV7: false,
   },
   framework: '@storybook/react',
   staticDirs: ['../../../proprietary/assets'],
