@@ -10,12 +10,16 @@ module.exports = {
     '../../../proprietary/**/*stories.@(js|mdx)',
   ],
   features: {
+    babelModeV7: true,
     postcss: false,
     buildStoriesJson: true,
     previewMdx2: true,
     storyStoreV7: false,
   },
-  framework: '@storybook/react',
+  framework: {
+    name: '@storybook/react',
+    options: {},
+  },
   addons: [
     '@storybook/addon-docs',
     '@storybook/addon-a11y',
