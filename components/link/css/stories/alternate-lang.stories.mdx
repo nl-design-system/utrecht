@@ -5,7 +5,7 @@ import { Link } from "../story-template";
 import "../index.scss";
 
 <Meta
-  id="css-link"
+  id="css-link--rel-alternate-lang"
   title="CSS Component/Link/Languages"
   component={Link}
   parameters={{
@@ -21,6 +21,7 @@ Styling via de `.utrecht-link--alternate-lang` modifier class name:
   <Story
     name="Alternate"
     args={{
+      rel: "alternate",
       hrefLang: "en",
       lang: "en",
       textContent: "EN",
