@@ -4,7 +4,7 @@ import React, { createRef, useState } from 'react';
 
 export default {
   title: 'React Component/Alert dialog',
-  id: 'react-alert-dialog',
+  id: 'react-alert-dialog--show-modal',
   component: AlertDialog,
 } as ComponentMeta<typeof AlertDialog>;
 

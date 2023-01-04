@@ -5,7 +5,7 @@ import { argTypes, options } from './argTypes';
 
 export default {
   title: 'React Component/Select/With Label',
-  id: 'react-select-with-label',
+  id: 'react-select--label',
   component: Select,
   argTypes,
 } as ComponentMeta<typeof Select>;

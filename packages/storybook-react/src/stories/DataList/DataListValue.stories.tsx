@@ -27,7 +27,7 @@ const argTypes = {
 
 export default {
   title: 'React Component/Data List/Value',
-  id: 'react-data-list-value',
+  id: 'react-data-list--value',
   component: DataListValue,
   decorators: [
     (Story) => (

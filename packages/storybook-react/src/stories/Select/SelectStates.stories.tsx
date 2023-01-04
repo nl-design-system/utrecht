@@ -5,7 +5,7 @@ import { argTypes, options } from './argTypes';
 
 export default {
   title: 'React Component/Select/States',
-  id: 'react-select-states',
+  id: 'react-select--state',
   component: Select,
   argTypes,
 } as ComponentMeta<typeof Select>;

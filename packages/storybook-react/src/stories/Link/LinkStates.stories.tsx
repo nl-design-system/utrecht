@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Link/States',
-  id: 'react-link-states',
+  id: 'react-link--state',
   component: Link,
   args: {
     children: 'Read more',

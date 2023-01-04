@@ -5,7 +5,7 @@ import { Default } from './AlertDialog.stories';
 
 export default {
   title: 'React Component/Alert dialog/Type',
-  id: 'react-alert-dialog-type',
+  id: 'react-alert-dialog--type',
   component: AlertDialog,
 } as ComponentMeta<typeof AlertDialog>;
 

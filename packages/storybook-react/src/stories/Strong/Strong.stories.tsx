@@ -4,7 +4,7 @@ import React from 'react';
 
 export default {
   title: 'React Component/Strong',
-  id: 'react-document',
+  id: 'react-strong',
   component: Strong,
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
 } as ComponentMeta<typeof Strong>;

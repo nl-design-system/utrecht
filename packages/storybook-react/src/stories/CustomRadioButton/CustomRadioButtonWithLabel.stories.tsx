@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Custom Radio Button/With Label',
-  id: 'react-custom-radio-button-with-label',
+  id: 'react-custom-radio-button--label',
   component: CustomRadioButton,
   argTypes,
 } as ComponentMeta<typeof CustomRadioButton>;

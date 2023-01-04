@@ -1,0 +1,30 @@
+{/* @license CC0-1.0 */}
+
+import { Meta } from "@storybook/addon-docs";
+import tokensDefinitionHeading1 from "@utrecht/components/heading-1/tokens.json";
+import tokens from "@utrecht/design-tokens/dist/index.json";
+import { ComponentTokensSection } from "@utrecht/documentation/components/ComponentTokensSection.jsx";
+
+<Meta
+  id="vue-heading--tokens"
+  title="Vue.js Component/Heading/Design Tokens"
+  parameters={{
+    status: {
+      type: "ALPHA",
+    },
+  }}
+/>
+
+# Heading Design Tokens
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-1" />
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-2" />
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-3" />
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-4" />
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-5" />
+
+<ComponentTokensSection tokens={tokens} definition={tokensDefinitionHeading1} component="utrecht-heading-6" />

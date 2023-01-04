@@ -4,7 +4,7 @@ import { argTypes } from './argTypes';
 
 export default {
   component: CustomRadioButton,
-  id: 'vue-custom-radio-button-with-label',
+  id: 'vue-custom-radio-button--label',
   title: 'Vue.js Component/Custom Radio Button/ With Label',
   argTypes: argTypes,
 } as Meta<typeof CustomRadioButton>;

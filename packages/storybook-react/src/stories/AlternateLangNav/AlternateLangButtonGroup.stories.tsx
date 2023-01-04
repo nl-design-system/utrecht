@@ -4,7 +4,7 @@ import React from 'react';
 
 export default {
   title: 'React Component/Alternate language navigation/Button group',
-  id: 'react-alternate-lang-button-group',
+  id: 'react-alternate-lang-nav--button-group',
   component: LinkButton,
 } as ComponentMeta<typeof LinkButton>;
 

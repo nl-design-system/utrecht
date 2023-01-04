@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Button/Appearance',
-  id: 'react-button-appearance',
+  id: 'react-button--appearance',
   component: Button,
   argTypes,
 } as ComponentMeta<typeof Button>;

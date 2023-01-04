@@ -4,7 +4,7 @@ import React from 'react';
 
 export default {
   title: 'React Component/Emphasis',
-  id: 'react-document',
+  id: 'react-emphasis',
   component: Emphasis,
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
 } as ComponentMeta<typeof Emphasis>;
