@@ -4,7 +4,7 @@ import { CustomRadioButton } from '@utrecht/component-library-vue';
 import { argTypes, data } from './argTypes';
 export default {
   component: CustomRadioButton,
-  id: 'vue-custom-radio-button-with-fieldset-and-legend',
+  id: 'vue-custom-radio-button--fieldset-legend',
   title: 'Vue.js Component/Custom Radio Button/ Custom Radio Button With Fieldset And Legend',
   argTypes: argTypes,
 } as Meta<typeof CustomRadioButton>;

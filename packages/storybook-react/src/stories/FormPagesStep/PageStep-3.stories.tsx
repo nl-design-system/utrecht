@@ -31,7 +31,7 @@ import React from 'react';
 
 export default {
   title: 'Template/Form Pages Step/ Three',
-  id: 'template-form-pages-step-three',
+  id: 'template-form-pages-step-3',
   component: Page,
 } as ComponentMeta<typeof Page>;
 

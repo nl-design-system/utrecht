@@ -67,7 +67,7 @@ const storyArgTypes = {
 
 export default {
   title: 'React Component/Form Field',
-  id: 'react-form-field3',
+  id: 'react-form-field--radio-group',
   component: FormField,
   argTypes: storyArgTypes,
 } as ComponentMeta<typeof FormField>;

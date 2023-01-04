@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Link/Types',
-  id: 'react-link-types',
+  id: 'react-link--type',
   component: Link,
   args: {
     children: 'Read more',

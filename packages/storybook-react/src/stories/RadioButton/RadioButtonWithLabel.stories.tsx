@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Radio Button/With Label',
-  id: 'react-radio-button-with-label',
+  id: 'react-radio-button--label',
   component: RadioButton,
   subcomponents: { FormLabel, FormField },
   argTypes,

@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Link that looks like a button',
-  id: 'react-button-link-appearance',
+  id: 'react-button-link--appearance',
   component: ButtonLink,
   argTypes,
 } as ComponentMeta<typeof ButtonLink>;

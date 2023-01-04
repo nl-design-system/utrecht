@@ -5,7 +5,7 @@ import { itemArgTypes } from './argTypes';
 
 export default {
   title: 'React Component/Ordered List/Item',
-  id: 'react-ordered-list-item',
+  id: 'react-ordered-list--item',
   component: OrderedListItem,
   decorators: [(Story) => <OrderedList>{Story()}</OrderedList>],
   argTypes: itemArgTypes,

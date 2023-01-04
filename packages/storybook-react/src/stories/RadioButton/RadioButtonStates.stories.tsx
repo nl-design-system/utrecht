@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Radio Button/States',
-  id: 'react-radio-button-states',
+  id: 'react-radio-button--state',
   component: RadioButton,
   argTypes,
 } as ComponentMeta<typeof RadioButton>;

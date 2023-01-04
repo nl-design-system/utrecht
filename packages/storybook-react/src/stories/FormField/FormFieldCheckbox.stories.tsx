@@ -74,7 +74,7 @@ const storyArgTypes = {
 
 export default {
   title: 'React Component/Form Field',
-  id: 'react-form-field',
+  id: 'react-form-field--checkbox',
   component: FormField,
   argTypes: storyArgTypes,
 } as ComponentMeta<typeof FormField>;

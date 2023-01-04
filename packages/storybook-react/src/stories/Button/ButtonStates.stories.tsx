@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Button/States',
-  id: 'react-button-states',
+  id: 'react-button--state',
   component: Button,
   argTypes,
 } as ComponentMeta<typeof Button>;

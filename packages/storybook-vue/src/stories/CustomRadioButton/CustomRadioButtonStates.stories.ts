@@ -4,7 +4,7 @@ import { argTypes } from './argTypes';
 
 export default {
   component: CustomRadioButton,
-  id: 'vue-custom-radio-button-states',
+  id: 'vue-custom-radio-button--state',
   title: 'Vue.js Component/Custom Radio Button/States',
   argTypes,
 } as Meta<typeof CustomRadioButton>;

@@ -5,7 +5,7 @@ import { argTypes, data } from './argTypes';
 
 export default {
   title: 'React Component/Custom Radio Button/With Fieldset And Legend',
-  id: 'react-custom-radio-button-with-fieldset-and-legend',
+  id: 'react-custom-radio-button--fieldset-legend',
   component: CustomRadioButton,
   argTypes,
 } as ComponentMeta<typeof CustomRadioButton>;

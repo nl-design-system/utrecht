@@ -5,7 +5,7 @@ import { argTypes } from './argTypes';
 
 export default {
   title: 'React Component/Checkbox/States',
-  id: 'react-checkbox-states',
+  id: 'react-checkbox--state',
   component: Checkbox,
   argTypes,
 } as ComponentMeta<typeof Checkbox>;
