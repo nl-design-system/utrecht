@@ -1,7 +1,7 @@
 import React from 'react';
 
 export interface CalendarTableWeeksItemProps
-  extends React.DetailedHTMLProps<React.ThHTMLAttributes<HTMLTableHeaderCellElement>, HTMLTableHeaderCellElement> {
+  extends React.DetailedHTMLProps<React.ThHTMLAttributes<HTMLTableCellElement>, HTMLTableCellElement> {
   children?: React.ReactNode;
 }
 
