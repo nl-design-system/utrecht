@@ -10,9 +10,11 @@ module.exports = {
     '@storybook/addon-links',
     '@storybook/addon-measure',
     '@storybook/addon-outline',
+    'storybook-addon-pseudo-states',
     '@storybook/addon-toolbars',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
+    '@storybook/addon-jest',
   ],
   features: {
     babelModeV7: true,

@@ -1,11 +1,14 @@
+// @ts-check
 import { setCompodocJson } from '@storybook/addon-docs/angular';
+import { withTests } from '@storybook/addon-jest';
 import { componentWrapperDecorator } from '@storybook/angular';
+import results from '@utrecht/component-library-angular/dist/.jest-test-results.json';
 import docJson from '../tmp/documentation.json';
-
 setCompodocJson(docJson);
 
 export const decorators = [
   componentWrapperDecorator((story) => `<div class="utrecht-document utrecht-theme">${story}</div>`),
+  withTests({ results }),
 ];
 
 export const parameters = {
