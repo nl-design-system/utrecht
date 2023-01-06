@@ -2,7 +2,8 @@
   "env": {
     "browser": true,
     "es6": true,
-    "node": false
+    "node": false,
+    "jest": true
   },
   "parserOptions": {
     "ecmaVersion": 2018,
@@ -76,26 +77,7 @@
       "files": ["*.ts", "*.tsx"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": [
-          "packages/component-library-angular/tsconfig.json",
-          "packages/component-library-formio/tsconfig.json",
-          "packages/component-library-react/tsconfig.json",
-          "packages/component-library-react/tsconfig.test.json",
-          "packages/component-library-vue/tsconfig.jest.json",
-          "packages/component-library-vue/tsconfig.json",
-          "packages/component-library-vue/tsconfig.lib.json",
-          "packages/component-library-vue/tsconfig.vite-config.json",
-          "packages/storybook-angular/tsconfig.json",
-          "packages/storybook-react/tsconfig.json",
-          "packages/storybook-vue/tsconfig.json",
-          "packages/web-component-library-angular/tsconfig.json",
-          "packages/web-component-library-react/tsconfig.json",
-          "packages/web-component-library-stencil/tsconfig.json",
-          "packages/web-component-library-stencil/tsconfig.jest.json",
-          "packages/web-component-library-vue/tsconfig.json",
-          "packages/web-component-library-vue/tsconfig.app.json",
-          "packages/web-component-library-vue/tsconfig.vite-config.json"
-        ]
+        "createDefaultProgram": true
       },
       "plugins": ["@typescript-eslint", "import"]
     },
