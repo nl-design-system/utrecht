@@ -1,15 +1,10 @@
 /* eslint-disable no-undef */
 module.exports = {
-  core: {
-    builder: 'webpack5',
-    disableTelemetry: true,
-  },
   features: {
-    babelModeV7: true,
     postcss: false,
     buildStoriesJson: true,
     previewMdx2: true,
-    storyStoreV7: false,
+    storyStoreV7: true,
   },
   stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
   addons: [
@@ -20,18 +15,11 @@ module.exports = {
     '@storybook/addon-jest',
   ],
   framework: {
-    name: '@storybook/vue3-webpack5',
+    name: '@storybook/vue3-vite',
     options: {},
   },
   staticDirs: ['../../../proprietary/assets'],
-  webpackFinal: async (config) => ({
-    ...config,
-    performance: {
-      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
-      hints: false,
-    },
-  }),
   docs: {
-    autodocs: true,
+    autodocs: 'tag',
   },
 };
