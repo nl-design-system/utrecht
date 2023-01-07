@@ -20,7 +20,7 @@ module.exports = {
     '@storybook/addon-jest',
   ],
   framework: {
-    name: '@storybook/vue3',
+    name: '@storybook/vue3-webpack5',
     options: {},
   },
   staticDirs: ['../../../proprietary/assets'],
@@ -31,4 +31,7 @@ module.exports = {
       hints: false,
     },
   }),
+  docs: {
+    autodocs: true,
+  },
 };
