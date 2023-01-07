@@ -33,7 +33,7 @@
     "test": "jest"
   },
   "main": "./dist/component-library-vue.umd.js",
-  "module": "./dist/component-library-vue.es.js",
+  "module": "./dist/component-library-vue.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/*"
