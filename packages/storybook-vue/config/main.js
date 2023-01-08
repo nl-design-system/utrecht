@@ -6,7 +6,9 @@ module.exports = {
     previewMdx2: true,
     storyStoreV7: true,
   },
-  stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
+  // stories: ['../src/**/*(?!docs).stories.@(js|jsx|mdx|ts|tsx)'],
+  // stories: ['../src/stories/Article/**/*.stories.*'],
+  stories: ['../src/stories/**/*.stories.ts'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
