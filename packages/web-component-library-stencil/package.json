@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@stencil/react-output-target": "0.3.1",
-    "@stencil/sass": "2.0.1",
+    "@stencil/sass": "2.0.2",
     "@stencil/vue-output-target": "0.6.2",
     "@types/jest": "29.2.5",
     "@utrecht/components": "workspace:*",
@@ -40,7 +40,7 @@
   },
   "dependencies": {
     "@stencil/angular-output-target": "0.4.0",
-    "@stencil/core": "2.20.0"
+    "@stencil/core": "2.21.0"
   },
   "scripts": {
     "prebuild": "npm run clean",
