@@ -233,7 +233,7 @@ Vermijd het zetten van hele woorden in hoofdletters (all-caps). De leesbaarheid 
 ### Internet en e-mail
 
 - Gebruik bij het vermelden van internet- en e-mailadressen in een tekst kleine letters. Voorbeeld: info@pgb.nl.
-- Gebruik geen toevoeging ‘‘http://‘ of ‘https://’
+- Gebruik geen toevoeging ‘`http://`‘ of ‘`https://`’
 
 ### Koppeltekens
 

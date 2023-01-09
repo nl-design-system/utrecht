@@ -19,7 +19,7 @@ Maak niet alleen gebruik van kleur om duidelijk te maken dat een getal negatief 
 
 ## HTML
 
-Gebruik in HTML het `<data>` element zodat het `value` attribuut het getal kan bevatten in [_valid floating-point number_ notatie]([https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-floating-point-number), net als bijvoorbeeld `<input type="number">`.
+Gebruik in HTML het `<data>` element zodat het `value` attribuut het getal kan bevatten in [_valid floating-point number_ notatie](https://html.spec.whatwg.org/multipage/common-microsyntaxes.html#valid-floating-point-number), net als bijvoorbeeld `<input type="number">`.
 
 Bijvoorbeeld:
 
