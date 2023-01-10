@@ -3,13 +3,15 @@ import { UtrechtLinkAttr } from '@utrecht/component-library-angular';
 
 export default {
   title: 'Angular Component/Link',
+  id: 'angular-link',
   decorators: [componentWrapperDecorator((story) => `<div class="utrecht-document utrecht-theme">${story}</div>`)],
   component: UtrechtLinkAttr,
-} as Meta;
+} as Meta<typeof UtrechtLinkAttr>;
 
-const Template: Story = (args) => ({
+const Template: Story<typeof UtrechtLinkAttr> = (args) => ({
   props: args,
-  template: '<a href="https://example.com/" utrecht-link>Link</a>',
+  template: '<a [external]="external" href="https://example.com/" utrecht-link>Link</a>',
+  component: UtrechtLinkAttr,
 });
 
 export const Default = Template.bind({});
