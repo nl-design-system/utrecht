@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/angular';
 import { clearElements } from '../utils';
 import { UtrechtButtonGroup } from './component';
 
-const buttonGroupWithChildren = `<utrecht-button-group role="group">
+const buttonGroupWithChildren = `<utrecht-button-group>
 <button utrecht-button>Save and continue</button>
 <button utrecht-button>Back</button>
 </utrecht-button-group>`;
