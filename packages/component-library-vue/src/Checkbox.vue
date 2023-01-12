@@ -4,6 +4,7 @@
   export default defineComponent({
     name: "UtrechtCheckbox",
     props: {
+      appearance: { type: String, required: false, default: "custom" },
       invalid: { type: Boolean, required: false },
       modelValue: { type: [String, Number, Boolean], required: false, default: "" },
     },
@@ -23,9 +24,11 @@
     :class="[
       'utrecht-checkbox',
       'utrecht-checkbox--html-input',
-      { 'utrecht-checkbox--invalid': invalid}
-      ]"
+      { 'utrecht-checkbox--invalid': invalid },
+      { 'utrecht-checkbox--custom': appearance === 'custom' },
+    ]"
   />
 </template>
 
 <style src="@utrecht/components/checkbox/css/index.scss"></style>
+<style src="@utrecht/components/custom-checkbox/css/index.scss"></style>
