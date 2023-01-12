@@ -6,7 +6,7 @@
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node"
   },
-  "exclude": ["src/test.ts", "src/**/*.spec.ts", "projects/**/*.spec.ts"],
+  "exclude": ["**/node_modules/*", "src/test.ts", "src/**/*.spec.ts", "projects/**/*.spec.ts"],
   "include": ["src/**/*", "../projects/**/*"],
   "files": ["config/typings.d.ts"]
 }

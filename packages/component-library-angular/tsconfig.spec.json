@@ -6,6 +6,6 @@
     "esModuleInterop": true,
     "emitDecoratorMetadata": true
   },
-  "files": ["./setup-jest.ts"],
-  "include": ["src/**/*.spec.ts", "src/**/*.d.ts"]
+  "include": ["./setup-jest.ts", "src/**/*.spec.ts", "src/**/*.d.ts"],
+  "exclude": ["**/node_modules/*"]
 }
