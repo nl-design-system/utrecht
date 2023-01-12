@@ -22,5 +22,5 @@
     "target": "es2020"
   },
   "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"]
+  "exclude": ["**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"]
 }
