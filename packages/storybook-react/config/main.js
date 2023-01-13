@@ -19,10 +19,10 @@ module.exports = {
     postcss: false,
     buildStoriesJson: true,
     previewMdx2: true,
-    storyStoreV7: false,
+    storyStoreV7: true,
   },
   framework: {
-    name: '@storybook/react',
+    name: '@storybook/react-webpack5',
     options: {},
   },
   staticDirs: ['../../../proprietary/assets'],
@@ -33,4 +33,7 @@ module.exports = {
       hints: false,
     },
   }),
+  docs: {
+    autodocs: false,
+  },
 };
