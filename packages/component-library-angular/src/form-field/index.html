@@ -1,3 +1,12 @@
-<div class="utrecht-form-field">
+<div
+  [ngClass]="{
+  'utrecht-form-field': true,
+  'utrecht-form-field--invalid': invalid,
+  'utrecht-form-field--checkbox': type === 'checkbox',
+  'utrecht-form-field--radio': type === 'radio',
+  'utrecht-form-field--text': type === 'text'
+}"
+  [class]="class"
+>
   <ng-content></ng-content>
 </div>

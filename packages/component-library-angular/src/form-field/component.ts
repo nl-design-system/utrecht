@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'utrecht-form-field',
@@ -7,5 +7,8 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UtrechtFormField {
+  @Input() invalid?: boolean = false;
+  @Input() type?: 'checkbox' | 'radio' | 'text';
+  @Input() class?: string;
   constructor() {}
 }
