@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { LinkSocial, ListSocial, ListSocialItem } from '@utrecht/component-library-react';
 import {
