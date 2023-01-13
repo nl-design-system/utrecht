@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-key */
 // performance optimizations are not relevant for story rendering, ignore ESLint
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import { OrderedList } from '@utrecht/component-library-react';
