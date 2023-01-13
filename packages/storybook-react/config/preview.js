@@ -1,7 +1,5 @@
 import { withTests } from '@storybook/addon-jest';
 import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
-import '@utrecht/components/html-content/css/index.scss';
-import '@utrecht/components/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 
 export const decorators = [
