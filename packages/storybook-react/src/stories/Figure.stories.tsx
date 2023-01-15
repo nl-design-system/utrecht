@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Figure, FigureCaption, Image, Link } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/figure/README.md';
+import readme from '@utrecht/components/figure/README.md?raw';
 import tokensDefinition from '@utrecht/components/figure/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';

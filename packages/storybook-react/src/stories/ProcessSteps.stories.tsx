@@ -1,6 +1,6 @@
 import { ProcessSteps } from '@gemeente-denhaag/process-steps';
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/process-steps/README.md';
+import readme from '@utrecht/components/process-steps/README.md?raw';
 import tokensDefinition from '@utrecht/components/process-steps/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';

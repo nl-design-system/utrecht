@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Heading2 } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/heading-2/README.md';
+import readme from '@utrecht/components/heading-2/README.md?raw';
 import tokensDefinition from '@utrecht/components/heading-2/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
