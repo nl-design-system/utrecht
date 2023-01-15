@@ -35,13 +35,12 @@
     "@storybook/addon-links": "7.0.0-beta.25",
     "@storybook/addons": "7.0.0-beta.25",
     "@storybook/api": "7.0.0-beta.25",
-    "@storybook/builder-webpack5": "7.0.0-beta.25",
     "@storybook/components": "7.0.0-beta.25",
     "@storybook/core-events": "7.0.0-beta.25",
-    "@storybook/manager-webpack5": "6.5.15",
     "@storybook/mdx2-csf": "1.0.0-next.4",
     "@storybook/preset-scss": "1.0.3",
     "@storybook/react": "7.0.0-beta.25",
+    "@storybook/react-vite": "7.0.0-beta.25",
     "@storybook/testing-library": "0.0.14-next.1",
     "@storybook/theming": "7.0.0-beta.25",
     "@types/react": "18.0.26",
@@ -50,6 +49,7 @@
     "@utrecht/design-tokens": "workspace:*",
     "@utrecht/documentation": "workspace:*",
     "@utrecht/web-component-library-react": "workspace:*",
+    "@vitejs/plugin-react": "3.0.1",
     "babel-loader": "9.1.0",
     "css-loader": "6.7.3",
     "date-fns": "2.29.3",
@@ -62,6 +62,6 @@
     "storybook-addon-pseudo-states": "2.0.0-next.0",
     "style-loader": "3.3.1",
     "typescript": "4.7.4",
-    "webpack": "5.75.0"
+    "vite": "4.0.4"
   }
 }

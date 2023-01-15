@@ -1,7 +1,6 @@
 /* eslint-env node */
 module.exports = {
   core: {
-    builder: 'webpack5',
     disableTelemetry: true,
   },
   stories: ['../src/stories/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
@@ -12,7 +11,7 @@ module.exports = {
     '@storybook/addon-a11y',
     'storybook-addon-pseudo-states',
     '@storybook/preset-scss',
-    '@storybook/addon-jest',
+    // '@storybook/addon-jest',
   ],
   features: {
     babelModeV7: true,
@@ -22,7 +21,7 @@ module.exports = {
     storyStoreV7: true,
   },
   framework: {
-    name: '@storybook/react-webpack5',
+    name: '@storybook/react-vite',
     options: {},
   },
   staticDirs: ['../../../proprietary/assets'],
