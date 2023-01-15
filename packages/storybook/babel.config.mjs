@@ -10,6 +10,7 @@ export default {
       },
     ],
     '@babel/preset-react',
+    '@babel/preset-typescript',
   ],
   plugins: [],
 };

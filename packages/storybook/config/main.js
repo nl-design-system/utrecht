@@ -5,9 +5,9 @@ module.exports = {
     disableTelemetry: true,
   },
   stories: [
-    '../stories/**/*stories.@(js|mdx)',
-    '../../../components/**/*stories.@(js|mdx)',
-    '../../../proprietary/**/*stories.@(js|mdx)',
+    '../stories/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../../../components/**/*stories.@(js|jsx|mdx|ts|tsx)',
+    '../../../proprietary/**/*stories.@(js|jsx|mdx|ts|tsx)',
   ],
   features: {
     babelModeV7: true,
@@ -71,4 +71,7 @@ module.exports = {
       hints: false,
     },
   }),
+  docs: {
+    autodocs: true,
+  },
 };
