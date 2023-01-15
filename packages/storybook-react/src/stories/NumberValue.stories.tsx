@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { NumberValue } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/value-number/README.md';
+import readme from '@utrecht/components/value-number/README.md?raw';
 import React from 'react';
 
 const meta = {

@@ -1,7 +1,7 @@
 // performance optimizations are not relevant for story rendering, ignore ESLint
 import { Meta, StoryObj } from '@storybook/react';
 import { OrderedList } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/ordered-list/README.md';
+import readme from '@utrecht/components/ordered-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/ordered-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
