@@ -1,11 +1,8 @@
-/**
- * @license EUPL-1.2
- * Copyright (c) 2020-2022 Gemeente Utrecht
- * Copyright (c) 2020-2022 Frameless B.V.
- */
+/* @license CC0-1.0 */
 
 import clsx from 'clsx';
 import React from 'react';
+import '@utrecht/components/alert/css/index.scss';
 
 export const Alert = ({ children, icon = null, type }) => (
   <div
@@ -22,5 +19,3 @@ export const Alert = ({ children, icon = null, type }) => (
     </div>
   </div>
 );
-
-export default Alert;
