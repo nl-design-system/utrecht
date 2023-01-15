@@ -1,10 +1,10 @@
-import { withTests } from '@storybook/addon-jest';
-import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
+// import { withTests } from '@storybook/addon-jest';
+// import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
 import '@utrecht/design-tokens/dist/index.css';
 
 export const decorators = [
   (Story) => <div className="utrecht-document utrecht-theme">{Story()}</div>,
-  withTests({ results }),
+  // withTests({ results }),
 ];
 
 export const parameters = {
