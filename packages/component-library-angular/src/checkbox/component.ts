@@ -9,22 +9,22 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   encapsulation: ViewEncapsulation.None,
   host: {
     '[attr.aria-invalid]': 'invalid || undefined',
-    '[attr.aria-required]': 'required || undefined',
+    '[attr.aria-required]': 'required && noValidate || undefined',
+    '[attr.required]': 'required && !noValidate ? "required": null',
     '[attr.disabled]': 'disabled ? "disabled": null',
-    '[attr.required]': 'required ? "required": null',
-    '[class.utrecht-checkbox--disabled]': 'disabled',
-    '[class.utrecht-checkbox--html-input]': 'true',
+    '[attr.checked]': 'checked ? "checked": null',
     '[class.utrecht-checkbox--invalid]': 'invalid',
-    '[class.utrecht-checkbox--required]': 'required',
-    '[class.utrecht-checkbox--checked]': 'checked',
+    '[class.utrecht-checkbox--html-input]': 'true',
+    '[class.utrecht-checkbox--custom]': 'appearance === "custom"',
     '[class.utrecht-checkbox]': 'true',
   },
 })
 export class UtrechtCheckboxAttr {
-  @Input() disabled = false;
   @Input() invalid = false;
-  @Input() required = false;
+  @Input() disabled = false;
   @Input() checked = false;
-  @Input() type?: string;
+  @Input() required = false;
+  @Input() noValidate: boolean = false;
+  @Input() appearance?: string = 'custom';
   constructor() {}
 }
