@@ -25,10 +25,12 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
     '[attr.required]': 'required ? "required": null',
   },
 })
-export class UtrechtTextboxAttr {
-  @Input() disabled = false;
+export class UtrechtTextboxAttr extends HTMLInputElement {
+  @Input() override disabled = false;
   @Input() invalid = false;
-  @Input() required = false;
+  @Input() override required = false;
   @Input() readonly = false;
-  constructor() {}
+  constructor() {
+    super();
+  }
 }
