@@ -22,7 +22,7 @@ export const exampleArgs = {
 };
 
 export const BadgeData = ({ textContent = defaultArgs.textContent }) => (
-  <div className="utrecht-badge-data">{textContent}</div>
+  <span className="utrecht-badge-data">{textContent}</span>
 );
 
 export default BadgeData;

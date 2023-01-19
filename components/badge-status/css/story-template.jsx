@@ -23,9 +23,9 @@ export const defaultArgs = { status: 'neutral', textContent: '' };
 export const exampleArgs = { status: 'neutral', textContent: 'normaal' };
 
 export const BadgeStatus = ({ status = defaultArgs.status, textContent = defaultArgs.textContent }) => (
-  <div className={clsx('utrecht-badge-status', `utrecht-badge-status--${status ? status : 'neutral'}`)}>
+  <span className={clsx('utrecht-badge-status', `utrecht-badge-status--${status ? status : 'neutral'}`)}>
     {textContent}
-  </div>
+  </span>
 );
 
 export default BadgeStatus;
