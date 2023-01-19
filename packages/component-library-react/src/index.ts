@@ -16,6 +16,7 @@ export { Checkbox } from './Checkbox';
 export { Code } from './Code';
 export { CodeBlock } from './CodeBlock';
 export { CustomRadioButton } from './CustomRadioButton';
+export { DataBadge } from './DataBadge';
 export { Document } from './Document';
 export { DataList, DataListItem, DataListActions, DataListKey, DataListValue } from './DataList';
 export { Emphasis } from './Emphasis';
