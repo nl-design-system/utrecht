@@ -70,6 +70,7 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
   color: var(--utrecht-link-color, blue);
   text-decoration: var(--utrecht-link-text-decoration, underline);
+  text-decoration-color: var(--utrecht-link-text-decoration-color, currentColor);
   text-decoration-skip-ink: all;
   text-decoration-thickness: max(var(--utrecht-link-text-decoration-thickness), 1px);
   text-underline-offset: var(--utrecht-link-text-underline-offset);
