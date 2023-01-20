@@ -9,23 +9,27 @@
       "padding-inline-start": { "value": "{utrecht.space.block.lg}" },
       "info": {
         "background-color": { "value": "{utrecht.color.blue.90}" },
-        "color": { "value": "{utrecht.color.black}" }
+        "color": { "value": "{utrecht.color.black}" },
+        "border-color": {},
+        "border-width": {}
       },
       "error": {
         "background-color": { "value": "{utrecht.color.red.95}" },
-        "color": { "value": "{utrecht.color.black}" }
-      },
-      "invalid": {
-        "background-color": { "value": "{utrecht.color.red.95}" },
-        "color": { "value": "{utrecht.color.black}" }
+        "color": { "value": "{utrecht.color.black}" },
+        "border-color": {},
+        "border-width": {}
       },
       "warning": {
         "background-color": { "value": "{utrecht.color.yellow.80}" },
-        "color": { "value": "{utrecht.color.black}" }
+        "color": { "value": "{utrecht.color.black}" },
+        "border-color": {},
+        "border-width": {}
       },
       "ok": {
         "background-color": { "value": "{utrecht.color.green.90}" },
-        "color": { "value": "{utrecht.color.black}" }
+        "color": { "value": "{utrecht.color.black}" },
+        "border-color": {},
+        "border-width": {}
       },
       "icon": {
         "color": { "value": "{utrecht.color.blue.35}" },
@@ -34,9 +38,6 @@
           "color": { "value": "{utrecht.color.blue.35}" }
         },
         "error": {
-          "color": { "value": "{utrecht.color.red.40}" }
-        },
-        "invalid": {
           "color": { "value": "{utrecht.color.red.40}" }
         },
         "warning": {
