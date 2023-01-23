@@ -2,7 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import {
   Button,
   ButtonLink,
-  CustomRadioButton,
   Fieldset,
   FieldsetLegend,
   FormField,
@@ -17,6 +16,7 @@ import {
   PageFooter,
   PageHeader,
   Paragraph,
+  RadioButton,
   Separator,
   Textbox,
 } from '@utrecht/component-library-react';
@@ -83,11 +83,11 @@ const Template: StoryObj<typeof Page> = (args) => (
             <div role="radiogroup" aria-labelledby="nieuwe-adres-label" data-rating-value="">
               <Heading4 id="nieuwe-adres-label">Hoe wilt u zoeken *</Heading4>
               <FormField>
-                <CustomRadioButton id="postcode" name="woonplaats-en-straat" />
+                <RadioButton id="postcode" name="woonplaats-en-straat" />
                 <FormLabel htmlFor="postcode">Postcode</FormLabel>
               </FormField>
               <FormField>
-                <CustomRadioButton id="woonplaats-en-straat" name="woonplaats-en-straat" />
+                <RadioButton id="woonplaats-en-straat" name="woonplaats-en-straat" />
                 <FormLabel htmlFor="woonplaats-en-straat">Woonplaats en Straat</FormLabel>
               </FormField>
             </div>

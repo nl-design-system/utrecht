@@ -1,29 +1,34 @@
-import clsx from 'clsx';
-import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
 
-export interface RadioButtonProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
-  appearance?: string;
+import clsx from 'clsx';
+import { ForwardedRef, forwardRef, InputHTMLAttributes, PropsWithChildren } from 'react';
+
+export type RadioButtonProps = InputHTMLAttributes<HTMLInputElement> & {
   invalid?: boolean;
-}
+};
 
 export const RadioButton = forwardRef(
   (
-    { appearance = 'utrecht-radio-button', invalid, className, ...restProps }: RadioButtonProps,
+    { disabled, required, className, invalid, ...restProps }: PropsWithChildren<RadioButtonProps>,
     ref: ForwardedRef<HTMLInputElement>,
   ) => (
     <input
-      {...restProps}
-      ref={ref}
       type="radio"
+      aria-invalid={invalid || undefined}
+      disabled={disabled}
+      required={required}
+      ref={ref}
       className={clsx(
         'utrecht-radio-button',
         'utrecht-radio-button--html-input',
-        {
-          'utrecht-radio-button--custom': appearance === 'utrecht-radio-button',
-          'utrecht-radio-button--invalid': invalid,
-        },
+        disabled && 'utrecht-radio-button--disabled',
+        invalid && 'utrecht-radio-button--invalid',
         className,
       )}
+      {...restProps}
     />
   ),
 );

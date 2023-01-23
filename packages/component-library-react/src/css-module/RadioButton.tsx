@@ -4,6 +4,5 @@
  */
 
 import '../../../../components/radio-button/css/index.scss';
-import '../../../../components/custom-radio-button/css/index.scss';
 
 export * from '../RadioButton';

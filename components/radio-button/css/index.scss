@@ -1,6 +1,6 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
  */
 
 @import "./mixin";
@@ -9,13 +9,12 @@
   @include utrecht-radio-button;
 }
 
-/* stylelint-disable-next-line block-no-empty */
 .utrecht-radio-button--checked {
   @include utrecht-radio-button--checked;
 }
 
-.utrecht-radio-button--disabled {
-  @include utrecht-radio-button--disabled;
+.utrecht-radio-button--active {
+  @include utrecht-radio-button--active;
 }
 
 .utrecht-radio-button--focus {
@@ -24,6 +23,14 @@
 
 .utrecht-radio-button--focus-visible {
   @include utrecht-radio-button--focus-visible;
+}
+
+.utrecht-radio-button--disabled {
+  @include utrecht-radio-button--disabled;
+}
+
+.utrecht-radio-button--invalid {
+  @include utrecht-radio-button--invalid;
 }
 
 .utrecht-radio-button--html-input {

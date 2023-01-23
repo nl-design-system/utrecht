@@ -1,12 +1,14 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
  */
 
 @import "../../common/focus/mixin";
 
 @mixin reset-input-type-radio {
-  /* reset native margin for input[type="radio" i] */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-end: 0;
@@ -16,53 +18,121 @@
 @mixin utrecht-radio-button {
   @include reset-input-type-radio;
 
-  cursor: var(--utrecht-action-activate-cursor, revert);
+  background-color: var(--utrecht-radio-button-background-color);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  border-color: var(--utrecht-radio-button-border-color);
+  border-radius: 50%;
+  border-style: solid;
+  border-width: var(--utrecht-radio-button-border-width);
+  cursor: var(--utrecht-action-activate-cursor);
+  height: var(--utrecht-radio-button-size);
+  margin-inline-end: var(--utrecht-radio-button-margin-inline-end);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  vertical-align: top;
+  width: var(--utrecht-radio-button-size);
 }
 
-/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-radio-button--checked {
+  background-color: var(--utrecht-radio-button-checked-background-color, var(--utrecht-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-radio-button-checked-border-color, var(--utrecht-radio-button-border-color));
+  border-width: var(--utrecht-radio-button-checked-border-width, var(--utrecht-radio-button-border-width));
+  color: var(--utrecht-radio-button-checked-color, var(--utrecht-radio-button-color));
 }
 
 @mixin utrecht-radio-button--disabled {
-  cursor: var(--utrecht-action-disabled-cursor, revert);
-}
+  &:checked {
+    background-color: var(
+      --utrecht-radio-button-disabled-background-color,
+      var(--utrecht-radio-button-background-color)
+    );
+    border-color: var(--utrecht-radio-button-disabled-border-color, var(--utrecht-radio-button-border-color));
+  }
 
-@mixin utrecht-radio-button--focus {
-  @include utrecht-focus;
+  &:active {
+    border-color: var(--utrecht-radio-button-disabled-border-color, var(--utrecht-radio-button-border-color));
+  }
+
+  border-color: var(--utrecht-radio-button-disabled-border-color, var(--utrecht-radio-button-border-color));
+  border-width: var(--utrecht-radio-button-disabled-border-width, var(--utrecht-radio-button-border-width));
+  color: var(--utrecht-radio-button-disabled-color, var(--utrecht-radio-button-color));
+  cursor: var(--utrecht-action-disabled-cursor);
 }
 
 @mixin utrecht-radio-button--focus-visible {
   @include utrecht-focus-visible;
 }
 
-@mixin utrecht-radio-button--html-input {
-  &:checked {
-    @include utrecht-radio-button--checked;
-  }
+@mixin utrecht-radio-button--invalid {
+  border-color: var(--utrecht-radio-button-invalid-border-color, var(--utrecht-radio-button-border-color));
+  border-width: var(--utrecht-radio-button-invalid-border-width, var(--utrecht-radio-button-border-width));
+  color: var(--utrecht-radio-button-invalid-color, var(--utrecht-radio-button-color));
+}
 
+@mixin utrecht-radio-button--active {
+  background-color: var(--utrecht-radio-button-active-background-color, var(--utrecht-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-radio-button-active-border-color, var(--utrecht-radio-button-border-color));
+  border-width: var(--utrecht-radio-button-active-border-width, var(--utrecht-radio-button-border-width));
+  color: var(--utrecht-radio-button-active-color, var(--utrecht-radio-button-color));
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-radio-button--required {
+}
+
+@mixin utrecht-radio-button--hover {
+  background-color: var(--utrecht-radio-button-hover-background-color, var(--utrecht-radio-button-background-color));
+  border-color: var(--utrecht-radio-button-hover-border-color, var(--utrecht-radio-button-border-color));
+  border-width: var(--utrecht-radio-button-hover-border-width, var(--utrecht-radio-button-border-width));
+  color: var(--utrecht-radio-button-hover-color, var(--utrecht-radio-button-color));
+}
+
+@mixin utrecht-radio-button--focus {
+  @include utrecht-focus;
+
+  background-color: var(--utrecht-radio-button-focus-background-color, var(--utrecht-radio-button-background-color));
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  border-color: var(--utrecht-radio-button-focus-border-color, var(--utrecht-radio-button-border-color));
+  border-width: var(--utrecht-radio-button-focus-border-width, var(--utrecht-radio-button-border-width));
+  color: var(--utrecht-radio-button-focus-color, var(--utrecht-radio-button-color));
+}
+
+@mixin utrecht-radio-button--html-input {
   &:disabled {
     @include utrecht-radio-button--disabled;
   }
 
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
+  &:hover {
+    @include utrecht-radio-button--hover;
+  }
 
-  @if $utrecht-focus-visible-fallback {
-    &:focus {
-      @include utrecht-radio-button--focus;
-      @include utrecht-radio-button--focus-visible;
-    }
+  &:focus {
+    @include utrecht-radio-button--focus;
+  }
 
-    &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    &:focus {
-      @include utrecht-radio-button--focus;
-    }
+  &:focus-visible {
+    @include utrecht-radio-button--focus-visible;
+  }
 
-    &:focus-visible {
-      @include utrecht-radio-button--focus-visible;
-    }
+  &:invalid,
+  &[aria-invalid="true"] {
+    @include utrecht-radio-button--invalid;
+  }
+
+  &:required,
+  &[aria-required="true"] {
+    @include utrecht-radio-button--required;
+  }
+
+  &:active {
+    @include utrecht-radio-button--active;
+  }
+
+  &:checked {
+    @include utrecht-radio-button--checked;
   }
 }

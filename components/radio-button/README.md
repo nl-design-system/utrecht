@@ -10,7 +10,3 @@
 ## Class names
 
 - `.utrecht-radio-button`
-
-## Design tokens
-
-Nog geen design tokens.
