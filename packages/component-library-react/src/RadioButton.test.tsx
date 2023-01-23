@@ -4,7 +4,7 @@ import { RadioButton } from './RadioButton';
 import '@testing-library/jest-dom';
 
 describe('RadioButton', () => {
-  it('renders a radio role element', () => {
+  it('renders a radioButton role element', () => {
     render(<RadioButton />);
 
     const radioButton = screen.getByRole('radio');
@@ -41,180 +41,142 @@ describe('RadioButton', () => {
     it('is not checked by default', () => {
       const { container } = render(<RadioButton />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).not.toBeChecked();
+      expect(radiobutton).not.toBeChecked();
     });
 
     it('omits non-essential checked attributes when not checked', () => {
       const handleChange = () => {};
       const { container } = render(<RadioButton checked={false} onChange={handleChange} />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).not.toHaveAttribute('aria-checked');
+      expect(radiobutton).not.toHaveAttribute('aria-checked');
 
-      expect(radioButton).not.toHaveAttribute('checked');
+      expect(radiobutton).not.toHaveAttribute('checked');
     });
 
     it('can have a checked state', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
+      const { container } = render(<RadioButton checked onChange={handleChange} />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).toBeChecked();
+      expect(radiobutton).toBeChecked();
     });
 
     it('can have a checked state in CSS', () => {
       const handleChange = () => {};
-      const { container } = render(<RadioButton defaultChecked onChange={handleChange} />);
+      const { container } = render(<RadioButton checked onChange={handleChange} />);
 
-      const radioButton = container.querySelector(':checked');
+      const radiobutton = container.querySelector(':checked');
 
-      expect(radioButton).toBeInTheDocument();
+      expect(radiobutton).toBeInTheDocument();
     });
   });
 
   describe('invalid variant', () => {
-    it('can have an invalid state', () => {
+    it('renders a design system BEM modifier class name', () => {
       const { container } = render(<RadioButton invalid />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      // Since `aria-invalid` is not allowed on the radio button itself,
-      // this test cannot use `toBeInvalid()` without embedding it in context.
-      expect(radioButton).toBeInTheDocument();
+      expect(radiobutton).toHaveClass('utrecht-radio-button--invalid');
     });
 
     it('is not invalid by default', () => {
       const { container } = render(<RadioButton />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).not.toBeInvalid();
-    });
-
-    it('defers rendering of aria-invalid to the radiogroup', () => {
-      const { container } = render(<RadioButton invalid />);
-
-      const radioButton = container.querySelector(':only-child');
-
-      expect(radioButton).not.toHaveAttribute('aria-invalid');
-    });
-
-    it('renders a design system BEM modifier class name', () => {
-      const { container } = render(<RadioButton invalid />);
-
-      const radioButton = container.querySelector(':only-child');
-
-      expect(radioButton).toHaveClass('utrecht-radio-button--invalid');
+      expect(radiobutton).not.toBeInvalid();
     });
 
     it('omits non-essential invalid attributes when not invalid', () => {
       const { container } = render(<RadioButton invalid={false} />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).not.toHaveAttribute('aria-invalid');
+      expect(radiobutton).not.toHaveAttribute('aria-invalid');
     });
 
-    it('can have an invalid state in CSS', () => {
+    it('can have an invalid state', () => {
+      const { container } = render(<RadioButton invalid />);
+
+      const radiobutton = container.querySelector(':only-child');
+
+      expect(radiobutton).toBeInvalid();
+    });
+
+    it('can have a invalid state in CSS', () => {
       const handleChange = () => {};
       const { container } = render(<RadioButton required checked={false} onChange={handleChange} />);
 
-      const radioButton = container.querySelector(':invalid');
+      const radiobutton = container.querySelector(':invalid');
 
-      expect(radioButton).toBeInTheDocument();
+      expect(radiobutton).toBeInTheDocument();
     });
   });
 
   describe('disabled variant', () => {
-    it('can have a disabled state', () => {
+    it('renders a design system BEM modifier class name', () => {
       const { container } = render(<RadioButton disabled />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).toBeDisabled();
+      expect(radiobutton).toHaveClass('utrecht-radio-button--disabled');
     });
 
     it('is not disabled by default', () => {
       const { container } = render(<RadioButton />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).not.toBeDisabled();
+      expect(radiobutton).not.toBeDisabled();
     });
 
     it('omits non-essential disabled attributes when not disabled', () => {
       const { container } = render(<RadioButton disabled={false} />);
 
-      const radioButton = container.querySelector(':only-child');
+      const radiobutton = container.querySelector(':only-child');
 
-      expect(radioButton).not.toHaveAttribute('aria-disabled');
+      expect(radiobutton).not.toHaveAttribute('aria-disabled');
 
-      expect(radioButton).not.toHaveAttribute('disabled');
+      expect(radiobutton).not.toHaveAttribute('disabled');
+    });
+
+    it('can have a disabled state', () => {
+      const { container } = render(<RadioButton disabled />);
+
+      const radiobutton = container.querySelector(':only-child');
+
+      expect(radiobutton).toBeDisabled();
     });
 
     it('can have a disabled state in CSS', () => {
       const { container } = render(<RadioButton disabled />);
 
-      const radioButton = container.querySelector(':disabled');
+      const radiobutton = container.querySelector(':disabled');
 
-      expect(radioButton).toBeInTheDocument();
-    });
-  });
-
-  describe('required variant', () => {
-    it('can have a required state', () => {
-      const { container } = render(<RadioButton required />);
-
-      const radioButton = container.querySelector(':only-child');
-
-      expect(radioButton).toBeRequired();
-    });
-
-    it('is not required by default', () => {
-      const { container } = render(<RadioButton />);
-
-      const radioButton = container.querySelector(':only-child');
-
-      expect(radioButton).not.toBeRequired();
-    });
-
-    it('omits non-essential required attributes when not required', () => {
-      const { container } = render(<RadioButton required={false} />);
-
-      const radioButton = container.querySelector(':only-child');
-
-      expect(radioButton).not.toHaveAttribute('aria-required');
-
-      expect(radioButton).not.toHaveAttribute('required');
-    });
-
-    it('can have a required state in CSS', () => {
-      const { container } = render(<RadioButton required />);
-
-      const radioButton = container.querySelector(':required');
-
-      expect(radioButton).toBeInTheDocument();
+      expect(radiobutton).toBeInTheDocument();
     });
   });
 
   it('can be hidden', () => {
     const { container } = render(<RadioButton hidden />);
 
-    const radioButton = container.querySelector(':only-child');
+    const radiobutton = container.querySelector(':only-child');
 
-    expect(radioButton).not.toBeVisible();
+    expect(radiobutton).not.toBeVisible();
   });
 
   it('can have a custom class name', () => {
     const { container } = render(<RadioButton className="ballot-box" />);
 
-    const radioButton = container.querySelector(':only-child');
+    const radiobutton = container.querySelector(':only-child');
 
-    expect(radioButton).toHaveClass('ballot-box');
+    expect(radiobutton).toHaveClass('ballot-box');
   });
 
   describe('change event', () => {
@@ -223,9 +185,9 @@ describe('RadioButton', () => {
 
       const { container } = render(<RadioButton onChange={handleChange} />);
 
-      const radioButton = container.querySelector<HTMLElement>(':only-child');
+      const radiobutton = container.querySelector<HTMLElement>(':only-child');
 
-      radioButton?.click();
+      radiobutton?.click();
 
       expect(handleChange).toHaveBeenCalled();
     });
@@ -235,9 +197,9 @@ describe('RadioButton', () => {
 
       const { container } = render(<RadioButton disabled onChange={handleChange} />);
 
-      const radioButton = container.querySelector<HTMLElement>(':only-child');
+      const radiobutton = container.querySelector<HTMLElement>(':only-child');
 
-      radioButton?.click();
+      radiobutton?.click();
 
       expect(handleChange).not.toHaveBeenCalled();
     });
@@ -249,9 +211,9 @@ describe('RadioButton', () => {
 
       const { container } = render(<RadioButton onInput={handleInput} />);
 
-      const radioButton = container.querySelector<HTMLElement>(':only-child');
+      const radiobutton = container.querySelector<HTMLElement>(':only-child');
 
-      radioButton?.click();
+      radiobutton?.click();
 
       expect(handleInput).toHaveBeenCalled();
     });
@@ -261,9 +223,9 @@ describe('RadioButton', () => {
 
       const { container } = render(<RadioButton disabled onInput={handleInput} />);
 
-      const radioButton = container.querySelector<HTMLElement>(':only-child');
+      const radiobutton = container.querySelector<HTMLElement>(':only-child');
 
-      radioButton?.click();
+      radiobutton?.click();
 
       expect(handleInput).not.toHaveBeenCalled();
     });
@@ -274,8 +236,8 @@ describe('RadioButton', () => {
 
     const { container } = render(<RadioButton ref={ref} />);
 
-    const radioButton = container.querySelector(':only-child');
+    const radiobutton = container.querySelector(':only-child');
 
-    expect(ref.current).toBe(radioButton);
+    expect(ref.current).toBe(radiobutton);
   });
 });

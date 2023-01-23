@@ -6,7 +6,7 @@ import "../index.scss";
 
 <Meta
   id="css-radio-button--state"
-  title="CSS Component/Radio Button/States"
+  title="CSS Component/ Radio Button/States"
   component={RadioButton}
   parameters={{
     status: {
@@ -15,12 +15,17 @@ import "../index.scss";
   }}
 />
 
-# Radio Button Component states
+# radio button component states
 
 ## Disabled
 
 <Canvas>
-  <Story name="disabled" args={{ disabled: true }}>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+    }}
+  >
     {RadioButton.bind({})}
   </Story>
 </Canvas>
@@ -28,7 +33,78 @@ import "../index.scss";
 ## Checked
 
 <Canvas>
-  <Story name="checked" args={{ checked: true }}>
+  <Story
+    name="Checked"
+    args={{
+      checked: true,
+    }}
+  >
+    {RadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Checked
+
+<Canvas>
+  <Story
+    name="Checked and Disabled"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+  >
+    {RadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Hover
+
+<Canvas>
+  <Story
+    name="hover"
+    args={{
+      hover: true,
+    }}
+  >
+    {RadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+<Canvas>
+  <Story
+    name="focus"
+    args={{
+      focus: true,
+    }}
+  >
+    {RadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Invalid
+
+<Canvas>
+  <Story
+    name="invalid"
+    args={{
+      invalid: true,
+    }}
+  >
+    {RadioButton.bind({})}
+  </Story>
+</Canvas>
+
+## Active
+
+<Canvas>
+  <Story
+    name="active"
+    args={{
+      active: true,
+    }}
+  >
     {RadioButton.bind({})}
   </Story>
 </Canvas>

@@ -5,7 +5,6 @@
   export default defineComponent({
     name: "UtrechtRadioButton",
     props: {
-      appearance: { type: String, required: false, default: "custom" },
       invalid: { type: Boolean, required: false },
       modelValue: { type: [String, Number, Boolean], required: false, default: "" },
     },
@@ -25,11 +24,9 @@
     :class="[
       'utrecht-radio-button',
       'utrecht-radio-button--html-input',
-      { 'utrecht-radio-button--invalid': invalid },
-      { 'utrecht-radio-button--custom': appearance === 'custom' },
+      { 'utrecht-radio-button--invalid': invalid }
     ]"
   />
 </template>
 
 <style src="@utrecht/components/radio-button/css/index.scss"></style>
-<style src="@utrecht/components/custom-radio-button/css/index.scss"></style>
