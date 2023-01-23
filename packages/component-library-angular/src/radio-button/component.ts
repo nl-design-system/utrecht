@@ -8,17 +8,16 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
   host: {
-    '[attr.disabled]': 'disabled ? "disabled": null',
-    '[attr.type]': 'type || "radio"',
-    '[class.utrecht-radio-button--disabled]': 'disabled',
+    '[attr.aria-invalid]': 'invalid || undefined',
+    '[attr.disabled]': 'disabled || null',
+    '[attr.aria-disabled]': 'disabled || undefined',
+    '[class.utrecht-radio-button--invalid]': 'invalid',
     '[class.utrecht-radio-button--html-input]': 'true',
-    '[class.utrecht-radio-button--checked]': 'checked',
     '[class.utrecht-radio-button]': 'true',
   },
 })
 export class UtrechtRadioButtonAttr {
-  @Input() disabled = false;
-  @Input() checked = false;
-  @Input() type?: string;
+  @Input() invalid?: boolean = false;
+  @Input() disabled?: boolean = false;
   constructor() {}
 }
