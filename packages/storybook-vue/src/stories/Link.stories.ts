@@ -63,8 +63,7 @@ export const ExternalLink: Story = createStory(meta, {
   name: 'External link',
   args: {
     external: true,
-    target: '_blank',
-    rel: 'noopener',
+    href: 'https://example.com',
     textContent: 'External Link',
   },
 });
