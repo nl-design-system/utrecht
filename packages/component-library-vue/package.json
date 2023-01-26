@@ -30,7 +30,8 @@
     "lint:ts": "vue-tsc --noEmit -p tsconfig.lib.json --composite false",
     "lint:ts-jest": "vue-tsc --noEmit -p tsconfig.jest.json --composite false",
     "preview": "vite preview --port 5050",
-    "test": "jest"
+    "test": "jest --verbose",
+    "watch:test": "jest --verbose --watch"
   },
   "main": "./dist/component-library-vue.umd.js",
   "module": "./dist/component-library-vue.mjs",
