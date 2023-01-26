@@ -11,10 +11,8 @@
 
 <template>
   <a
-    :class="[
-      'utrecht-link',
-      {'utrecht-link--external': external}
-      ]"
+    :class="['utrecht-link', { 'utrecht-link--external': external }]"
+    :rel="external ? 'external noopener noreferrer' : undefined"
   >
     <slot />
   </a>
