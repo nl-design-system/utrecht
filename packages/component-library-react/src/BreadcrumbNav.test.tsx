@@ -114,10 +114,10 @@ describe('Breadcrumb Navigation', () => {
   it('can have an additional custom class name', () => {
     const { container } = render(<BreadcrumbNav className="arrows" />);
 
-    const list = container.querySelector(':only-child');
+    const breadcrumbNav = container.querySelector(':only-child');
 
-    expect(list).toHaveClass('arrows');
-    expect(list).toHaveClass('utrecht-breadcrumb');
+    expect(breadcrumbNav).toHaveClass('arrows');
+    expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb');
   });
 
   it('supports ForwardRef in React', () => {

@@ -29,14 +29,22 @@ describe('Checkbox', () => {
     expect(checkbox).toHaveStyle({ display: 'inline-block' });
   });
 
-  it('renders a design system BEM block class name', () => {
+  it('renders a design system BEM class name', () => {
     const { container } = render(<Checkbox />);
+
+    const link = container.querySelector(':only-child');
+
+    expect(link).toHaveClass('utrecht-checkbox');
+  });
+  it('can have a additional class name', () => {
+    const { container } = render(<Checkbox className="large" />);
 
     const checkbox = container.querySelector(':only-child');
 
+    expect(checkbox).toHaveClass('large');
+
     expect(checkbox).toHaveClass('utrecht-checkbox');
   });
-
   describe('checked variant', () => {
     it('is not checked by default', () => {
       const { container } = render(<Checkbox />);
@@ -213,14 +221,6 @@ describe('Checkbox', () => {
     const checkbox = container.querySelector(':only-child');
 
     expect(checkbox).not.toBeVisible();
-  });
-
-  it('can have a custom class name', () => {
-    const { container } = render(<Checkbox className="ballot-box" />);
-
-    const checkbox = container.querySelector(':only-child');
-
-    expect(checkbox).toHaveClass('ballot-box');
   });
 
   describe('change event', () => {

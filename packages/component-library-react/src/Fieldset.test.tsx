@@ -37,7 +37,15 @@ describe('Fieldset', () => {
 
     expect(fieldset).toHaveClass('utrecht-form-fieldset');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Fieldset className="large" />);
 
+    const fieldSet = container.querySelector(':only-child');
+
+    expect(fieldSet).toHaveClass('large');
+
+    expect(fieldSet).toHaveClass('utrecht-form-fieldset');
+  });
   it('displays as CSS block element', () => {
     const { container } = render(<Fieldset />);
 

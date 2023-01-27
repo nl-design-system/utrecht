@@ -39,7 +39,15 @@ describe('Data badge', () => {
 
     expect(badge).toHaveClass('utrecht-badge-data');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<DataBadge className="large" />);
 
+    const dataBadge = container.querySelector(':only-child');
+
+    expect(dataBadge).toHaveClass('large');
+
+    expect(dataBadge).toHaveClass('utrecht-badge-data');
+  });
   it('renders rich text content', () => {
     const { container } = render(
       <DataBadge>

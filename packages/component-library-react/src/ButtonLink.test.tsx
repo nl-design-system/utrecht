@@ -129,12 +129,14 @@ describe('Link that looks like a button', () => {
     });
   });
 
-  it('renders a design system BEM class name', () => {
-    const { container } = render(<ButtonLink />);
+  it('can have a additional class name', () => {
+    const { container } = render(<ButtonLink className="large" />);
 
-    const link = container.querySelector(':only-child');
+    const buttonLink = container.querySelector(':only-child');
 
-    expect(link).toHaveClass('utrecht-button-link');
+    expect(buttonLink).toHaveClass('large');
+
+    expect(buttonLink).toHaveClass('utrecht-button-link');
   });
 
   it('renders rich text content', () => {

@@ -267,12 +267,14 @@ describe('Button', () => {
     expect(handleReset).toHaveBeenCalled();
   });
 
-  it('can have a custom class name', () => {
+  it('can have a additional class name', () => {
     const { container } = render(<Button className="large" />);
 
     const button = container.querySelector(':only-child');
 
     expect(button).toHaveClass('large');
+
+    expect(button).toHaveClass('utrecht-button');
   });
 
   it('can trigger a click event', () => {
