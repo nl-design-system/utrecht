@@ -11,6 +11,7 @@ import {
 } from '@utrecht/component-library-react';
 import React from 'react';
 import FormFieldMeta from './FormField.stories';
+import readme from './FormFieldRadioGroup.md?raw';
 
 const storyArgTypes = {
   ...FormFieldMeta.argTypes,
@@ -70,6 +71,13 @@ const meta = {
   id: 'react-form-field--radio-group',
   component: FormField,
   argTypes: storyArgTypes,
+  parameters: {
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
 } as Meta<typeof FormField>;
 
 export default meta;
