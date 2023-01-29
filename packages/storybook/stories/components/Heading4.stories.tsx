@@ -64,6 +64,7 @@ Distanced.args = {
 };
 
 Distanced.parameters = {
+  chromatic: { disableSnapshot: true },
   status: {
     type: 'WORK IN PROGRESS',
   },
