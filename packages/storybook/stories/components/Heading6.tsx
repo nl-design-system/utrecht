@@ -4,22 +4,22 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { Heading2 as Heading2Component } from '@utrecht/component-library-react/dist/css-module';
-import type { Heading2Props } from '@utrecht/component-library-react/src/Heading2';
+import { Heading6 as Heading6Component } from '@utrecht/component-library-react/dist/css-module';
+import type { Heading6Props } from '@utrecht/component-library-react/src/Heading6';
 import React, { PropsWithChildren } from 'react';
 
-interface CSSHeading2Props extends Heading2Props {
+interface CSSHeading6Props extends Heading6Props {
   distanced?: boolean;
   textContent?: string;
 }
 
-export const Heading2 = ({
+export const Heading6 = ({
   children = null,
   textContent = '',
   distanced = false,
   ...restProps
-}: PropsWithChildren<CSSHeading2Props>) => (
-  <Heading2Component
+}: PropsWithChildren<CSSHeading6Props>) => (
+  <Heading6Component
     {...restProps}
     style={
       distanced
@@ -31,7 +31,7 @@ export const Heading2 = ({
   >
     {children}
     {textContent}
-  </Heading2Component>
+  </Heading6Component>
 );
 
-export default Heading2;
+export default Heading6;

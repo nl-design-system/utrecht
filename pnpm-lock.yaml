@@ -491,6 +491,7 @@ importers:
       '@storybook/theming': 6.5.15
       '@types/react': 18.0.26
       '@utrecht/component-library-css': workspace:*
+      '@utrecht/component-library-react': workspace:*
       '@utrecht/components': workspace:*
       '@utrecht/design-tokens': workspace:*
       '@utrecht/documentation': workspace:*
@@ -543,6 +544,7 @@ importers:
       '@storybook/theming': 6.5.15_biqbaboplfbrettd7655fr4n2y
       '@types/react': 18.0.26
       '@utrecht/component-library-css': link:../component-library-css
+      '@utrecht/component-library-react': link:../component-library-react
       '@utrecht/components': link:../../components
       '@utrecht/design-tokens': link:../../proprietary/design-tokens
       '@utrecht/documentation': link:../../documentation

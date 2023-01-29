@@ -3,35 +3,34 @@
  * Copyright (c) 2022 Gemeente Utrecht
  * Copyright (c) 2022 Frameless B.V.
  */
-import clsx from 'clsx';
+import { Paragraph as ParagraphComponent } from '@utrecht/component-library-react/dist/css-module';
 import parse from 'html-react-parser';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
+interface ParagraphProps {
+  distanced?: boolean;
+  innerHTML?: string;
+}
 export const Paragraph = ({
-  children = null,
+  children,
   distanced = false,
   innerHTML = '',
-  lead = false,
-  small = false,
   ...restProps
-}) => {
-  const content = (
-    <>
+}: PropsWithChildren<ParagraphProps>) => {
+  return (
+    <ParagraphComponent
+      {...restProps}
+      style={
+        distanced
+          ? {
+              '--utrecht-space-around': 1,
+            }
+          : undefined
+      }
+    >
       {children}
       {parse(innerHTML)}
-    </>
-  );
-  return (
-    <p
-      className={clsx('utrecht-paragraph', {
-        'utrecht-paragraph--distanced': distanced,
-        'utrecht-paragraph--lead': lead,
-        'utrecht-paragraph--small': small,
-      })}
-      {...restProps}
-    >
-      {small ? <small className="utrecht-paragraph__small">{content}</small> : <>{content}</>}
-    </p>
+    </ParagraphComponent>
   );
 };
 

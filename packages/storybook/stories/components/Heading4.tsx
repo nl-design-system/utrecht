@@ -1,25 +1,25 @@
 /*
- * @license EUPL-1.2
+ * @license EUPL-4.2
  * Copyright (c) 2020-2022 Gemeente Utrecht
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { Heading2 as Heading2Component } from '@utrecht/component-library-react/dist/css-module';
-import type { Heading2Props } from '@utrecht/component-library-react/src/Heading2';
+import { Heading4 as Heading4Component } from '@utrecht/component-library-react/dist/css-module';
+import type { Heading4Props } from '@utrecht/component-library-react/src/Heading4';
 import React, { PropsWithChildren } from 'react';
 
-interface CSSHeading2Props extends Heading2Props {
+interface CSSHeading4Props extends Heading4Props {
   distanced?: boolean;
   textContent?: string;
 }
 
-export const Heading2 = ({
+export const Heading4 = ({
   children = null,
   textContent = '',
   distanced = false,
   ...restProps
-}: PropsWithChildren<CSSHeading2Props>) => (
-  <Heading2Component
+}: PropsWithChildren<CSSHeading4Props>) => (
+  <Heading4Component
     {...restProps}
     style={
       distanced
@@ -31,7 +31,7 @@ export const Heading2 = ({
   >
     {children}
     {textContent}
-  </Heading2Component>
+  </Heading4Component>
 );
 
-export default Heading2;
+export default Heading4;
