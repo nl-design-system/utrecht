@@ -57,65 +57,57 @@ const meta = {
 
 export default meta;
 
-const Template: StoryObj<typeof meta> = ({ innerHTML, ...args }) => <NumberValue {...args}>{innerHTML}</NumberValue>;
-
-export const Default = Template.bind({});
-
-Default.storyName = 'Number value';
-
-Default.parameters = {
-  status: {
-    type: 'WORK IN PROGRESS',
+export const Default: StoryObj<typeof NumberValue> = {
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
   },
+  storyName: 'Number value',
 };
 
-export const Positive = Template.bind({});
-
-Positive.args = {
-  value: 123,
-  textContent: '123',
-  appearance: 'positive',
-};
-
-Positive.parameters = {
-  status: {
-    type: 'WORK IN PROGRESS',
+export const Positive: StoryObj<typeof NumberValue> = {
+  args: {
+    value: 123,
+    textContent: '123',
+    appearance: 'positive',
   },
-};
-
-Positive.storyName = 'Positive';
-
-export const Negative = Template.bind({});
-
-Negative.args = {
-  value: -123,
-  textContent: '-123',
-  appearance: 'negative',
-};
-
-Negative.parameters = {
-  status: {
-    type: 'WORK IN PROGRESS',
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
   },
+  storyName: 'Positive',
 };
 
-Negative.storyName = 'Negative';
-
-export const NumberFormatting = Template.bind({});
-
-NumberFormatting.args = {
-  value: 137438953471,
-  textContent: new Intl.NumberFormat('nl-NL').format(137438953471),
-};
-
-NumberFormatting.decorators = [(Story) => <span lang="nl-NL">{Story()}</span>];
-
-NumberFormatting.parameters = {
-  status: {
-    type: 'WORK IN PROGRESS',
+export const Negative: StoryObj<typeof NumberValue> = {
+  args: {
+    value: -123,
+    textContent: '-123',
+    appearance: 'negative',
   },
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+  storyName: 'Negative',
 };
 
-NumberFormatting.storyName = 'Number formatting';
+export const NumberFormatting: StoryObj<typeof NumberValue> = {
+  args: {
+    value: 137438953471,
+    textContent: new Intl.NumberFormat('nl-NL').format(137438953471),
+  },
+  decorators: [(Story) => <span lang="nl-NL">{Story()}</span>],
 
-export const DesignTokens = designTokenStory(meta);
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+
+  storyName: 'Number formatting',
+};
+
+export const DesignTokens: StoryObj<typeof NumberValue> = designTokenStory(meta);
