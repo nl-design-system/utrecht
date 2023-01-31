@@ -109,6 +109,7 @@ describe('Fieldset legend', () => {
     const legend = container.querySelector(':only-child');
 
     expect(legend).toHaveClass('large');
+
     expect(legend).toHaveClass('utrecht-form-fieldset__legend');
   });
 
