@@ -113,7 +113,7 @@ describe('Table cell', () => {
     expect(tableCell).toHaveClass('negative');
   });
   it('can have a additional class name', () => {
-    const { container } = render(
+    render(
       <Table>
         <TableBody>
           <TableRow>
