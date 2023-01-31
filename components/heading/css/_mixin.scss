@@ -3,6 +3,56 @@
  * Copyright (c) 2021-2022 Frameless B.V.
  */
 
+@mixin utrecht-hyphenation {
+  /*
+
+  Use `hyphenate-limit-last: always` to prevent hyphenation at the end of a page or a column,
+  when it would be dificult to find the rest of the word.
+
+  The following CSS variables can be used to influence hyphenation:
+
+  - `--utrecht-hyphenate-limit-chars-after`
+  - `--utrecht-hyphenate-limit-chars-before`
+  - `--utrecht-hyphenate-limit-chars-word`
+  - `--utrecht-hyphenate-limit-lines`
+
+  Probably these settings can be optimized for a language. For example, using the `:lang` selector:
+
+  ```css
+  :lang(nl) {
+    --utrecht-hyphenate-limit-chars-before: 8;
+    --utrecht-hyphenate-limit-chars-after: 4;
+    --utrecht-hyphenate-limit-chars-word: 12;
+    --utrecht-hyphenate-limit-lines: 2;
+  }
+  ```
+
+  */
+
+  -webkit-hyphenate-limit-after: var(--utrecht-hyphenate-limit-chars-after);
+  -webkit-hyphenate-limit-before: var(--utrecht-hyphenate-limit-chars-before);
+  -webkit-hyphenate-limit-chars: var(--utrecht-hyphenate-limit-chars-word) var(--utrecht-hyphenate-limit-chars-before)
+    var(--utrecht-hyphenate-limit-chars-after);
+  -moz-hyphenate-limit-chars: var(--utrecht-hyphenate-limit-chars-word) var(--utrecht-hyphenate-limit-chars-before)
+    var(--utrecht-hyphenate-limit-chars-after);
+  -ms-hyphenate-limit-chars: var(--utrecht-hyphenate-limit-chars-word) var(--utrecht-hyphenate-limit-chars-before)
+    var(--utrecht-hyphenate-limit-chars-after);
+  hyphenate-limit-chars: var(--utrecht-hyphenate-limit-chars-word) var(--utrecht-hyphenate-limit-chars-before)
+    var(--utrecht-hyphenate-limit-chars-after);
+  -webkit-hyphenate-limit-last: always;
+  -moz-hyphenate-limit-last: always;
+  -ms-hyphenate-limit-last: always;
+  hyphenate-limit-last: always;
+  -webkit-hyphenate-limit-lines: var(--utrecht-hyphenate-limit-lines);
+  -moz-hyphenate-limit-lines: var(--utrecht-hyphenate-limit-lines);
+  -ms-hyphenate-limit-lines: var(--utrecht-hyphenate-limit-lines);
+  hyphenate-limit-lines: var(--utrecht-hyphenate-limit-lines);
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+
 @mixin utrecht-heading {
   page-break-after: avoid;
   page-break-inside: avoid;

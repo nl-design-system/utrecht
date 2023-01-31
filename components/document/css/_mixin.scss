@@ -16,6 +16,13 @@
     /* `letter-spacing` design tokens break Arabic text rendering, avoid that */
     letter-spacing: 0 !important;
   }
+
+  :lang(nl) {
+    --utrecht-hyphenate-limit-chars-before: 8;
+    --utrecht-hyphenate-limit-chars-after: 4;
+    --utrecht-hyphenate-limit-chars-word: 12;
+    --utrecht-hyphenate-limit-lines: 2;
+  }
 }
 
 @mixin utrecht-document--surface {
