@@ -43,31 +43,26 @@ const meta = {
 
 export default meta;
 
-const Template: StoryObj<typeof meta> = ({ innerHTML, ...args }) => <Heading2 {...args}>{innerHTML}</Heading2>;
-
-export const Default = Template.bind({});
-
-Default.storyName = 'Heading 2';
-
-Default.parameters = {
-  status: {
-    type: 'ALPHA',
+export const Default: StoryObj<typeof Heading2> = {
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
   },
+  storyName: 'Heading 2',
 };
 
-export const Distanced = Template.bind({});
-
-Distanced.storyName = 'Distanced';
-
-Distanced.args = {
-  distanced: true,
-};
-
-Distanced.parameters = {
-  chromatic: { disableSnapshot: true },
-  status: {
-    type: 'WORK IN PROGRESS',
+export const Distanced: StoryObj<typeof Heading2> = {
+  args: {
+    distanced: true,
   },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+  storyName: 'Distanced',
 };
 
-export const DesignTokens = designTokenStory(meta);
+export const DesignTokens: StoryObj<typeof Heading2> = designTokenStory(meta);

@@ -9,6 +9,9 @@ import { Paragraph } from './Paragraph';
 import { designTokenStory } from './util';
 import '@utrecht/components/paragraph/css/index.scss';
 
+const lipsum =
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.';
+
 const meta = {
   title: 'CSS Component/Paragraph',
   id: 'css-paragraph',
@@ -31,8 +34,7 @@ const meta = {
     },
   },
   args: {
-    innerHTML:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+    innerHTML: lipsum,
   },
   tags: ['autodocs'],
   parameters: {
@@ -49,72 +51,64 @@ const meta = {
 
 export default meta;
 
-const Template: StoryObj<typeof meta> = ({ innerHTML, ...args }) => <Paragraph {...args}>{innerHTML}</Paragraph>;
-
-const ParagraphsTemplate: StoryObj<typeof meta> = ({ items = [] }) => (
-  <div>{[items.map((args) => <Paragraph {...args} />)]}</div>
-);
-export const Default = Template.bind({});
-
-Default.storyName = 'Paragraph';
-
-Default.parameters = {
-  status: {
-    type: 'ALPHA',
+export const Default: StoryObj<typeof Paragraph> = {
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
   },
+  storyName: 'Paragraph',
 };
 
-export const LeadParagraph = Template.bind({});
-
-LeadParagraph.storyName = 'Lead paragraph';
-
-LeadParagraph.args = {
-  lead: true,
-};
-
-LeadParagraph.parameters = {
-  status: {
-    type: 'ALPHA',
+export const LeadParagraph: StoryObj<typeof Paragraph> = {
+  args: {
+    lead: true,
   },
-};
-
-export const SmallPrint = Template.bind({});
-
-SmallPrint.storyName = 'Small print';
-
-SmallPrint.args = {
-  small: true,
-};
-
-SmallPrint.parameters = {
-  status: {
-    type: 'WORK IN PROGRESS',
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
   },
+  storyName: 'Lead paragraph',
 };
 
-export const Multiple = ParagraphsTemplate.bind({});
-
-Multiple.args = {
-  items: [
-    {
-      innerHTML: meta.args.innerHTML,
-      lead: true,
+export const SmallPrint: StoryObj<typeof Paragraph> = {
+  args: {
+    small: true,
+  },
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
     },
-    {
-      innerHTML: meta.args.innerHTML,
-    },
-    {
-      innerHTML: meta.args.innerHTML,
-    },
-    {
-      innerHTML: meta.args.innerHTML,
-      small: true,
-    },
-  ],
+  },
+  storyName: 'Small print',
 };
 
-Multiple.decorators = [(Story) => <div style={{ '--utrecht-space-around': 1 }}>{Story()}</div>];
+export const Multiple: StoryObj<typeof Paragraph> = {
+  args: {
+    items: [
+      {
+        children: lipsum,
+        lead: true,
+      },
+      {
+        children: lipsum,
+      },
+      {
+        children: lipsum,
+      },
+      {
+        children: lipsum,
+        small: true,
+      },
+    ],
+  },
+  decorators: [(Story) => <div style={{ '--utrecht-space-around': 1 }}>{Story()}</div>],
+  render: ({ items = [] }) => {
+    console.log(items);
+    return <div>{[items.map((args) => <Paragraph {...args} />)]}</div>;
+  },
+  storyName: 'Multiple paragraphs',
+};
 
-Multiple.storyName = 'Multiple paragraphs';
-
-export const DesignTokens = designTokenStory(meta);
+export const DesignTokens: StoryObj<typeof Paragraph> = designTokenStory(meta);
