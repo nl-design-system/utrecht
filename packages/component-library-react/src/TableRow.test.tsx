@@ -82,7 +82,22 @@ describe('Table row', () => {
 
     expect(tableRow).toHaveClass('odd');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(
+      <Table>
+        <TableBody>
+          <TableRow className="large" />
+        </TableBody>
+      </Table>,
+    );
 
+    const table = container.querySelector(':only-child');
+    const tableBody = table?.querySelector(':only-child');
+    const tableRow = tableBody?.querySelector(':only-child');
+
+    expect(tableRow).toHaveClass('large');
+    expect(tableRow).toHaveClass('utrecht-table__row');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableRowElement>();
 

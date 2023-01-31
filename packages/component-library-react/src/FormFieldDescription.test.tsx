@@ -86,6 +86,15 @@ describe('Form field description', () => {
 
     expect(desc).toHaveClass('internal-server-error');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<FormFieldDescription className="large" />);
+
+    const desc = container.querySelector(':only-child');
+
+    expect(desc).toHaveClass('large');
+
+    expect(desc).toHaveClass('utrecht-form-field-description');
+  });
 
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();

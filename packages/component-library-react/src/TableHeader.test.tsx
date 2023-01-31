@@ -80,7 +80,20 @@ describe('Table header', () => {
 
     expect(tableHeader).toHaveClass('alternate-column-colors');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(
+      <Table>
+        <TableHeader className="large" />
+      </Table>,
+    );
 
+    const table = container.querySelector(':only-child');
+    const tableHeader = table?.querySelector(':only-child');
+
+    expect(tableHeader).toHaveClass('large');
+
+    expect(tableHeader).toHaveClass('utrecht-table__header');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableSectionElement>();
     const { container } = render(

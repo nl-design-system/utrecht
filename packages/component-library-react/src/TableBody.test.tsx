@@ -82,6 +82,21 @@ describe('Table body', () => {
     expect(tableBody).toHaveClass('alternate-row-colors');
   });
 
+  it('can have a additional class name', () => {
+    const { container } = render(
+      <Table>
+        <TableBody className="large" />
+      </Table>,
+    );
+
+    const table = container.querySelector(':only-child');
+    const tableBody = table?.querySelector(':only-child');
+
+    expect(tableBody).toHaveClass('large');
+
+    expect(tableBody).toHaveClass('utrecht-table__body');
+  });
+
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableSectionElement>();
     const { container } = render(

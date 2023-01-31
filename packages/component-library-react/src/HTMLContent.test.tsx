@@ -59,7 +59,15 @@ describe('HTML content', () => {
     expect(htmlContent).toHaveClass('max-w-prose');
     expect(htmlContent).toHaveClass('mx-auto');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<HTMLContent className="large" />);
 
+    const htmlContent = container.querySelector(':only-child');
+
+    expect(htmlContent).toHaveClass('large');
+
+    expect(htmlContent).toHaveClass('utrecht-html');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

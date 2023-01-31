@@ -58,6 +58,15 @@ describe('Page', () => {
 
     expect(page).toHaveClass('large');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Page className="large" />);
+
+    const page = container.querySelector(':only-child');
+
+    expect(page).toHaveClass('large');
+
+    expect(page).toHaveClass('utrecht-page');
+  });
 
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();

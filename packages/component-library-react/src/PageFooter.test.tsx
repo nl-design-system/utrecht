@@ -66,7 +66,15 @@ describe('Page footer', () => {
 
     expect(footer).toHaveClass('condensed');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<PageFooter className="large" />);
 
+    const footer = container.querySelector(':only-child');
+
+    expect(footer).toHaveClass('large');
+
+    expect(footer).toHaveClass('utrecht-page-footer');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

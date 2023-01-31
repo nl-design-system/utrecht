@@ -231,6 +231,16 @@ describe('Textarea', () => {
     expect(textarea).toHaveClass('ballot-box');
   });
 
+  it('can have a additional class name', () => {
+    const { container } = render(<Textarea className="large" />);
+
+    const textarea = container.querySelector(':only-child');
+
+    expect(textarea).toHaveClass('large');
+
+    expect(textarea).toHaveClass('utrecht-textarea');
+  });
+
   describe('change event', () => {
     it('can trigger a change event', async () => {
       const handleChange = jest.fn();

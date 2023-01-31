@@ -19,7 +19,15 @@ describe('Document', () => {
 
     expect(doc).toHaveClass('utrecht-document');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Document className="large" />);
 
+    const document = container.querySelector(':only-child');
+
+    expect(document).toHaveClass('large');
+
+    expect(document).toHaveClass('utrecht-document');
+  });
   it('displays as CSS block element', () => {
     const { container } = render(<Document />);
 

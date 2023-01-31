@@ -73,7 +73,15 @@ describe('Paragraph', () => {
 
     expect(paragraph).toHaveClass('intro');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Paragraph className="large" />);
 
+    const paragraph = container.querySelector(':only-child');
+
+    expect(paragraph).toHaveClass('large');
+
+    expect(paragraph).toHaveClass('utrecht-paragraph');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLParagraphElement>();
 

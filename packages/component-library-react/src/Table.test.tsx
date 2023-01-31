@@ -68,7 +68,15 @@ describe('Table', () => {
 
     expect(table).toHaveClass('full-width');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Table className="large" />);
 
+    const table = container.querySelector(':only-child');
+
+    expect(table).toHaveClass('large');
+
+    expect(table).toHaveClass('utrecht-table');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableElement>();
 
