@@ -124,6 +124,15 @@ describe('Form label', () => {
 
     expect(label).toHaveClass('question');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<FormLabel className="large" />);
+
+    const label = container.querySelector(':only-child');
+
+    expect(label).toHaveClass('large');
+
+    expect(label).toHaveClass('utrecht-form-label');
+  });
 
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLLabelElement>();
