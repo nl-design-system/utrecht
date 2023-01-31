@@ -66,7 +66,15 @@ describe('Unordered list item', () => {
 
     expect(listItem).toHaveClass('odd');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<UnorderedListItem className="large" />);
 
+    const listItem = container.querySelector(':only-child');
+
+    expect(listItem).toHaveClass('large');
+
+    expect(listItem).toHaveClass('utrecht-unordered-list__item');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLLIElement>();
 

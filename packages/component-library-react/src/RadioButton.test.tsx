@@ -178,6 +178,15 @@ describe('RadioButton', () => {
 
     expect(radiobutton).toHaveClass('ballot-box');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<RadioButton className="large" />);
+
+    const radiobutton = container.querySelector(':only-child');
+
+    expect(radiobutton).toHaveClass('large');
+
+    expect(radiobutton).toHaveClass('utrecht-radio-button');
+  });
 
   describe('change event', () => {
     it('can trigger a change event', () => {

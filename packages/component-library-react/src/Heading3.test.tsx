@@ -73,7 +73,15 @@ describe('Heading 3', () => {
 
     expect(heading).toHaveClass('large');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Heading3 className="large" />);
 
+    const heading = container.querySelector(':only-child');
+
+    expect(heading).toHaveClass('large');
+
+    expect(heading).toHaveClass('utrecht-heading-3');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLHeadingElement>();
 

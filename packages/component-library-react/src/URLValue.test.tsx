@@ -51,6 +51,16 @@ describe('URL value', () => {
     expect(urlValue).toHaveClass('visited');
   });
 
+  it('can have a additional class name', () => {
+    const { container } = render(<URLValue className="large" />);
+
+    const urlValue = container.querySelector(':only-child');
+
+    expect(urlValue).toHaveClass('large');
+
+    expect(urlValue).toHaveClass('utrecht-url');
+  });
+
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLElement>();
 

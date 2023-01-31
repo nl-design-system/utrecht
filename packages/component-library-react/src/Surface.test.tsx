@@ -58,7 +58,15 @@ describe('Surface', () => {
 
     expect(surface).toHaveClass('checkerboard');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Surface className="large" />);
 
+    const surface = container.querySelector(':only-child');
+
+    expect(surface).toHaveClass('large');
+
+    expect(surface).toHaveClass('utrecht-surface');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

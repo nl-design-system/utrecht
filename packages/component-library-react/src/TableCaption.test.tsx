@@ -69,6 +69,20 @@ describe('Table caption', () => {
     expect(caption).toHaveClass('heading-2');
   });
 
+  it('can have a additional class name', () => {
+    const { container } = render(
+      <Table>
+        <TableCaption className="large" />
+      </Table>,
+    );
+
+    const table = container.querySelector(':only-child');
+    const caption = table?.querySelector(':only-child');
+
+    expect(caption).toHaveClass('large');
+
+    expect(caption).toHaveClass('utrecht-table__caption');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableCaptionElement>();
 

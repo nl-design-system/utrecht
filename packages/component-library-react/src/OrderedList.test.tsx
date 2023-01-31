@@ -67,7 +67,15 @@ describe('Ordered list', () => {
 
     expect(list).toHaveClass('latin-numerals');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<OrderedList className="large" />);
 
+    const list = container.querySelector(':only-child');
+
+    expect(list).toHaveClass('large');
+
+    expect(list).toHaveClass('utrecht-ordered-list');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLOListElement>();
 

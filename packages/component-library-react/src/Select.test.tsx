@@ -183,7 +183,15 @@ describe('Select', () => {
 
     expect(select).toHaveClass('ballot-box');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Select className="large" />);
 
+    const select = container.querySelector(':only-child');
+
+    expect(select).toHaveClass('large');
+
+    expect(select).toHaveClass('utrecht-select');
+  });
   describe('change event', () => {
     it('can trigger a change event', async () => {
       const handleChange = jest.fn();

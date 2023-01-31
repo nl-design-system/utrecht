@@ -298,6 +298,16 @@ describe('Textbox', () => {
     expect(textbox).toHaveClass('search');
   });
 
+  it('can have a additional class name', () => {
+    const { container } = render(<Textbox className="large" />);
+
+    const textbox = container.querySelector(':only-child');
+
+    expect(textbox).toHaveClass('large');
+
+    expect(textbox).toHaveClass('utrecht-textbox');
+  });
+
   it('can limit the input length in a way that prevents screen reader from announcing blocked typed input', () => {
     const { container } = render(<Textbox maxLength={42} />);
 

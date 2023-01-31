@@ -68,7 +68,15 @@ describe('Page header', () => {
 
     expect(header).toHaveClass('condensed');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<PageHeader className="large" />);
 
+    const header = container.querySelector(':only-child');
+
+    expect(header).toHaveClass('large');
+
+    expect(header).toHaveClass('utrecht-page-header');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

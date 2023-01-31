@@ -58,7 +58,15 @@ describe('Page content', () => {
 
     expect(pageContent).toHaveClass('condensed');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<PageContent className="large" />);
 
+    const pageContent = container.querySelector(':only-child');
+
+    expect(pageContent).toHaveClass('large');
+
+    expect(pageContent).toHaveClass('utrecht-page-content');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

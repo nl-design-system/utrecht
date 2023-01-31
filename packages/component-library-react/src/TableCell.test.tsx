@@ -112,7 +112,25 @@ describe('Table cell', () => {
 
     expect(tableCell).toHaveClass('negative');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(
+      <Table>
+        <TableBody>
+          <TableRow>
+            <TableCell className="large" data-testid="table-cell">
+              -42
+            </TableCell>
+          </TableRow>
+        </TableBody>
+      </Table>,
+    );
 
+    const tableCell = screen.getByTestId('table-cell');
+
+    expect(tableCell).toHaveClass('large');
+
+    expect(tableCell).toHaveClass('utrecht-table__cell');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableCellElement>();
 

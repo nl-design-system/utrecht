@@ -124,8 +124,9 @@ describe('Form label', () => {
 
     expect(label).toHaveClass('question');
   });
+
   it('can have a additional class name', () => {
-    const { container } = render(<FormLabel className="large" />);
+    const { container } = render(<FormLabel className="large" htmlFor="form-control" />);
 
     const label = container.querySelector(':only-child');
 

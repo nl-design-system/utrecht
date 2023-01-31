@@ -129,7 +129,24 @@ describe('Table header cell', () => {
 
     expect(tableCell).toHaveClass('sort-ascending');
   });
+  it('can have a additional class name', () => {
+    render(
+      <Table>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell className="large" data-testid="table-header-cell">
+              Subject
+            </TableHeaderCell>
+          </TableRow>
+        </TableBody>
+      </Table>,
+    );
+    const tableCell = screen.getByTestId('table-header-cell');
 
+    expect(tableCell).toHaveClass('large');
+
+    expect(tableCell).toHaveClass('utrecht-table__header-cell');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLTableCellElement>();
 

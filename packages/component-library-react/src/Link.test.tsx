@@ -59,7 +59,15 @@ describe('Link', () => {
 
     expect(link).toHaveClass('visited');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<Link className="large" />);
 
+    const link = container.querySelector(':only-child');
+
+    expect(link).toHaveClass('large');
+
+    expect(link).toHaveClass('utrecht-link');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLAnchorElement>();
 
