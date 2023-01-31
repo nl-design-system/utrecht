@@ -57,7 +57,22 @@ describe('Form field', () => {
 
     expect(field).toHaveClass('invalid');
   });
+  it('can have a additional class name', () => {
+    const { container } = render(<FormField className="large" />);
 
+    const field = container.querySelector(':only-child');
+
+    expect(field).toHaveClass('large');
+    expect(field).toHaveClass('utrecht-form-field');
+  });
+  it('can have a additional class name', () => {
+    const { container } = render(<FormField className="large" />);
+
+    const field = container.querySelector(':only-child');
+
+    expect(field).toHaveClass('large');
+    expect(field).toHaveClass('utrecht-form-field');
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

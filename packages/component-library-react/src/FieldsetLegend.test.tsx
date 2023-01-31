@@ -103,6 +103,15 @@ describe('Fieldset legend', () => {
     expect(legend).toHaveClass('heading-2');
   });
 
+  it('can have a additional class name', () => {
+    const { container } = render(<FieldsetLegend className="large" />);
+
+    const legend = container.querySelector(':only-child');
+
+    expect(legend).toHaveClass('large');
+    expect(legend).toHaveClass('utrecht-form-fieldset__legend');
+  });
+
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLLegendElement>();
 
