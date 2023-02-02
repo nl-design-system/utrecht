@@ -1,6 +1,7 @@
 export * from './article/component';
 export * from './badge-status/component';
 export * from './button-group/component';
+export * from './button-link/component';
 export * from './button/component';
 export * from './checkbox/component';
 export * from './document/component';
