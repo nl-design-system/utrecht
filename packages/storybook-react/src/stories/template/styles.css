@@ -1,0 +1,32 @@
+.utrecht-demo-page--wrapper {
+  --utrecht-space-around: 1;
+  --utrecht-logo-min-block-size: 96px;
+  --utrecht-logo-min-inline-size: 192px;
+}
+
+.utrecht-demo-page__layout {
+  display: grid;
+  grid-template-rows: "auto auto 1fr auto";
+  min-block-size: 100vh;
+}
+
+.utrecht-demo-intro-section-row {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+}
+
+.utrecht-demo-intro-section-row__logo-button {
+  display: grid;
+  grid-row-gap: 1rem;
+  inline-size: calc(3 / 12 * 100%);
+}
+
+.utrecht-demo-intro-section-row__description {
+  inline-size: calc(8 / 12 * 100%);
+}
+
+.utrecht-demo-col--8 {
+  max-inline-size: calc(8 / 12 * 100%);
+}
