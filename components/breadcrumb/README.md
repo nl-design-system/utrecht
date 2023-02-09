@@ -25,6 +25,36 @@ Bijvoorbeeld:
 
 Gebruik `rel` om duidelijk te maken wat het doel is van de links. ([WCAG eis 1.3.6](https://www.w3.org/TR/WCAG21/#identify-purpose)). Gebruik [`rel="home"`](https://microformats.org/wiki/rel-home) voor de link naar de homepage (deze relatie is nog slechts een voorstel). Gebruik [`rel="up"`](https://microformats.org/wiki/rel-up) voor pagina's die één niveau hoger zijn in een hierarchie. Gebruik `rel="first"` voor de eerste pagina in een serie.
 
+## Hoe het niet moet
+
+### Navigatie in de verkeerde _landmark_
+
+Plaats het `<nav>` HTML-element met de breadcrumb navigation niet binnen de _main page content_, ofwel het `<main>` HTML-element.
+
+Niet:
+
+```html
+<main>
+  <nav class="breadcrumbs">
+    <a href="/">Home</a> /
+    <a href="/contact" aria-current="page">Contact</a>
+  </nav>
+  <h1>Contact</h1>
+</main>
+```
+
+Wel:
+
+```html
+<nav class="breadcrumbs">
+  <a href="/">Home</a> /
+  <a href="/contact" aria-current="page">Contact</a>
+</nav>
+<main>
+  <h1>Contact</h1>
+</main>
+```
+
 ## Related info
 
 - [Google Search Central - Advanced SEO - Breadcrumb](https://developers.google.com/search/docs/data-types/breadcrumb)
@@ -35,6 +65,9 @@ Gebruik `rel` om duidelijk te maken wat het doel is van de links. ([WCAG eis 1.3
 ## Relevante WCAG regels
 
 - [WCAG eis 1.3.1](https://www.w3.org/TR/WCAG21/#info-and-relationships): gebruik het `<nav>` element voor de `navigation` landmark role.
-- [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): de label van de `navigation` landmark maakt duidelijk dat het om het broodkruimelpad gaat.
 - [WCAG eis 1.3.6](https://www.w3.org/TR/WCAG21/#identify-purpose)
-- [WCAG eis 2.4.8](https://www.w3.org/TR/WCAG21/#location): een kruimelpad is een manier om duidelijk te maken waar de gebruiker zich bevind in de context van een site met meerdere pagina's.
+- [WCAG eis 2.4.5](https://www.w3.org/TR/WCAG21/#multiple-ways)
+- [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): de label van de `navigation` landmark maakt duidelijk dat het om het broodkruimelpad gaat.
+- [WCAG eis 2.4.8](https://www.w3.org/TR/WCAG21/#location):
+  - gebruik `<a aria-current="location">` om de huidige pagina te markeren
+  - een kruimelpad is een manier om duidelijk te maken waar de gebruiker zich bevind in de context van een site met meerdere pagina's.
