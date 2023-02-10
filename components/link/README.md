@@ -105,6 +105,7 @@ We beschrijven de volgende states van een link:
 - **focus**: de link heeft de focus doordat er op geklikt of getapt is. Denk ook aan voice of eye-tracking.
 - **focus-visible**: de link heeft de focus door de 'tab' knop van het keyboard.
 - **visited**: de link is eerder gebruikt door de gebruiker.
+- **busy**: de button is geactiveerd en de actie wordt nu nog uitgevoerd.
 
 ## Link in plaats van `<a>`
 
