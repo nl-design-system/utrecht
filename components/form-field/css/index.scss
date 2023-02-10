@@ -21,6 +21,10 @@
   @include utrecht-form-field--text;
 }
 
+.utrecht-form-field__label-text {
+  @include utrecht-form-field__label-text;
+}
+
 .utrecht-form-field--checkbox {
   @include utrecht-form-field--checkbox;
 }

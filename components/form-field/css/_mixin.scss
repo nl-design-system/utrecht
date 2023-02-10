@@ -19,6 +19,11 @@
 @mixin utrecht-form-field--text {
 }
 
+@mixin utrecht-form-field__label-text {
+  margin-block-end: var(--utrecht-form-field-label-text-margin-block-end);
+  margin-block-start: 0;
+}
+
 @mixin utrecht-form-field--text-flex {
   --utrecht-space-around: 0;
 
