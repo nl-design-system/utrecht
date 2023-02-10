@@ -13,3 +13,98 @@
 .no-style .docs-story * {
   all: revert !important;
 }
+
+#docs-root details {
+  position: relative;
+  z-index: 99;
+}
+
+/*
+#docs-root .sbdocs-wrapper {
+  background: white;
+  min-height: auto;
+}
+
+#docs-root .sbdocs-img.featured-image {
+  max-width: 100%;
+  margin: 48px 0;
+  display: block;
+}
+
+#docs-root .sbdocs-img {
+  border-radius: 24px;
+}
+
+#docs-root .sbdocs-hr {
+  margin: 48px 0;
+  height: 0;
+  border-top: 1px solid #ebebeb;
+}*/
+
+#docs-root .sbdocs-h2 code {
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+#docs-root .sbdocs-h3 code {
+  border-radius: 3px;
+  font-size: 16px;
+}
+
+/*
+#docs-root .sbdocs-preview {
+  border-radius: 16px;
+  background: var(--colorBrandBackgroundInverted, #fff);
+  padding: 0;
+  box-shadow: none;
+  border: 1px solid var(--colorNeutralStroke1, #e1dfdd);
+}
+
+#docs-root .innerZoomElementWrapper {
+  padding: 30px;
+}
+
+#docs-root .sbdocs-preview > .os-host {
+  display: none;
+}
+
+.docs-story > div:nth-child(2) {
+  z-index: auto;
+}
+
+#docs-root .docblock-code-toggle,
+.docs-story .with-code-sandbox-button {
+  font-family: "Segoe UI", "Segoe UI Web (West European)", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue",
+    sans-serif;
+  min-width: 91px;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  margin-right: 32px !important;
+  line-height: 150% !important;
+  color: #201f1e !important;
+  text-align: center !important;
+  justify-content: center !important;
+  letter-spacing: -0.01em !important;
+  background: #f8f8f8 !important;
+  border: none !important;
+  border-radius: 5px 5px 0px 0px !important;
+}
+*/
+
+#docs-root a.sbdocs-a {
+  color: #0078d4;
+}
+
+#docs-root code {
+  font-family: var(--nldesignsystem-typography-monospace-font-family), monospace;
+  vertical-align: 1%;
+  font-feature-settings: "cv01", "cv13", "cv20", "ss01", "ss02", "ss03";
+  border-inline-start: 0;
+  border-inline-end: 0;
+  background-color: transparent !important;
+  border-width: 0;
+}
+
+#docs-root .sbdocs-preview .prismjs {
+  overflow: hidden;
+}

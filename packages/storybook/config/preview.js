@@ -7,6 +7,21 @@ import prettier from 'prettier/standalone';
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
+import '@fontsource/fira-sans/200.css';
+import '@fontsource/fira-sans/200-italic.css';
+import '@fontsource/fira-sans/300.css';
+import '@fontsource/fira-sans/300-italic.css';
+import '@fontsource/fira-sans/400.css';
+import '@fontsource/fira-sans/400-italic.css';
+import '@fontsource/fira-sans/500.css';
+import '@fontsource/fira-sans/500-italic.css';
+import '@fontsource/fira-sans/600.css';
+import '@fontsource/fira-sans/600-italic.css';
+import '@fontsource/fira-sans/700.css';
+import '@fontsource/fira-sans/700-italic.css';
+import 'firacode/distr/fira_code.css';
+import '@nl-design-system-unstable/design-tokens/dist/theme.css';
+import '@nl-design-system-unstable/design-tokens/src/font';
 import '@utrecht/components/document/css/index.scss';
 import '@utrecht/components/html-content/css/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
@@ -14,6 +29,7 @@ import '@utrecht/design-tokens/dist/property.css';
 import '@utrecht/design-tokens/dist/dark/index.css';
 import '@utrecht/design-tokens/src/background-image-icon.scss';
 import './storybook.css';
+import './storybook-docs.scss';
 
 defineCustomElements();
 
@@ -90,6 +106,10 @@ const sidebarOrder = {
 // Configure @storybook/addon-docs
 const addonDocs = {
   docs: {
+    components: {
+      h1: ({ children }) => <code>{children}</code>,
+      code: ({ children }) => <code>{children}</code>,
+    },
     // Show code by default.
     // Stories without concise code snippets can hide the code at Story level.
     source: {
@@ -144,13 +164,14 @@ const addonStatus = {
 const addonThemes = {
   clearable: true,
   themes: {
-    default: 'Gemeente Utrecht',
+    default: 'NL Design System',
     target: 'root',
     list: [
       { name: 'No style', class: 'no-style', color: '#000000' },
       { name: 'No design tokens', class: 'no-theme', color: '#CCCCCC' },
       { name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' },
       { name: 'Gemeente Utrecht (dark mode)', class: 'utrecht-theme--color-scheme-dark', color: '#000000' },
+      { name: 'NL Design System', class: 'nldesignsystem-theme', color: '#CC0000' },
     ],
   },
 };

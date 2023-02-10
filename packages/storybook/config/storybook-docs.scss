@@ -1,0 +1,100 @@
+@import "../../../components/article/css/mixin";
+@import "../../../components/heading-1/css/mixin";
+@import "../../../components/heading-2/css/mixin";
+@import "../../../components/heading-3/css/mixin";
+@import "../../../components/paragraph/css/mixin";
+@import "../../../components/code/css/mixin";
+@import "../../../components/code-block/css/mixin";
+@import "../../../components/ordered-list/css/mixin";
+@import "../../../components/unordered-list/css/mixin";
+@import "../../../components/link/css/mixin";
+
+.sbdocs * {
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+}
+.sbdocs .sbdocs-content {
+  @include utrecht-article;
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  --utrecht-space-around: 1;
+}
+
+.sbdocs h1,
+.sbdocs h1.sbdocs-title {
+  @include utrecht-heading-1;
+  font-family: var(--nldesignsystem-typography-sans-serif-font-family), sans-serif;
+  --utrecht-space-around: 1;
+}
+
+.sbdocs h2 {
+  @include utrecht-heading-2;
+  font-family: var(--nldesignsystem-typography-sans-serif-font-family), sans-serif;
+  --utrecht-space-around: 1;
+}
+
+.sbdocs h3 {
+  @include utrecht-heading-3;
+  font-family: var(--nldesignsystem-typography-sans-serif-font-family), sans-serif;
+}
+
+.sbdocs p,
+.sbdocs .sbdocs-p {
+  @include utrecht-paragraph;
+  font-family: var(--nldesignsystem-typography-sans-serif-font-family), sans-serif;
+}
+
+.sbdocs .sbdocs-ul {
+  @include utrecht-unordered-list;
+}
+
+.sbdocs .sbdocs-ul > .sbdocs-li {
+  @include utrecht-unordered-list__item;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.sbdocs .sbdocs-ol {
+  @include utrecht-ordered-list;
+}
+
+.sbdocs .sbdocs-ol > .sbdocs-li {
+  @include utrecht-ordered-list__item;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.sbdocs .sbdocs-code,
+.sbdocs samp {
+  @include utrecht-code;
+  font-size: inherit;
+  vertical-align: 1%;
+  font-feature-settings: "cv01", "cv13", "cv20", "ss01", "ss02", "ss03";
+  margin-inline-start: 0;
+  margin-inline-end: 0;
+  padding-inline-start: 0;
+  padding-inline-end: 0;
+  padding-block-start: 0;
+  padding-block-end: 0;
+  display: inline;
+}
+
+.sbdocs pre {
+  @include utrecht-code-block;
+  font-feature-settings: "cv01", "cv13", "cv20", "ss01", "ss02", "ss03";
+  font-size: var(--utrecht-code-block-font-size) !important;
+  line-height: var(--utrecht-code-block-line-height) !important;
+}
+
+.sbdocs .sbdocs-pre > * {
+  border-radius: 0;
+}
+
+.sbdocs pre * .token {
+  font-family: inherit;
+}
+
+#docs-root a.sbdocs-a {
+  @include utrecht-link;
+  font-family: inherit;
+}
