@@ -2,6 +2,6 @@
 
 <!-- markdownlint-disable first-line-h1 -->
 
-## Design
+## Huisstijl gemeente Utrecht
 
 [Figma - Utrecht Design System - Button](https://www.figma.com/file/msb3CfQBefPoruqNQ968Zh/Utrecht-Design-System?node-id=40%3A143)
