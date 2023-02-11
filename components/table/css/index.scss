@@ -12,37 +12,71 @@
   @include utrecht-table--distanced;
 }
 
+.utrecht-table--html-table > caption,
 .utrecht-table__caption {
   @include utrecht-table__caption;
 }
 
+.utrecht-table--html-table > thead,
 .utrecht-table__header {
   @include utrecht-table__header;
 }
 
+.utrecht-table--html-table > thead > tr:last-of-type,
 .utrecht-table__cell--last-header-row {
   @include utrecht-table__cell--last-header-row;
 }
 
+.utrecht-table--html-table > tbody,
 .utrecht-table__body {
   @include utrecht-table__body;
 }
 
+/* `.utrecht-table--html-table` should not affect nested tables.
+ * We will use the `>` direct descendant selector so the styling doesn't affect nested tables. */
+
+/* stylelint-disable no-descending-specificity */
+
+.utrecht-table--html-table > tr,
+.utrecht-table--html-table > thead > tr,
+.utrecht-table--html-table > tbody > tr,
+.utrecht-table--html-table > tfoot > tr,
+.utrecht-table__row {
+  @include utrecht-table__row;
+}
+
+.utrecht-table--html-table > tr > th,
+.utrecht-table--html-table > thead > tr > th,
+.utrecht-table--html-table > tbody > tr > th,
+.utrecht-table--html-table > tfoot > tr > th,
 .utrecht-table__header-cell {
   @include utrecht-table__header-cell;
 }
 
+.utrecht-table--html-table > tr > td,
+.utrecht-table--html-table > thead > tr > td,
+.utrecht-table--html-table > tbody > tr > td,
+.utrecht-table--html-table > tfoot > tr > td,
 .utrecht-table__cell {
   @include utrecht-table__cell;
 }
 
+.utrecht-table--html-table > tr > td:first-child,
+.utrecht-table--html-table > thead > tr > td:first-child,
+.utrecht-table--html-table > tbody > tr > td:first-child,
+.utrecht-table--html-table > tfoot > tr > td:first-child,
 .utrecht-table__cell--first {
   @include utrecht-table__cell--first;
 }
 
+.utrecht-table--html-table > tr > td:last-child,
+.utrecht-table--html-table > thead > tr > td:last-child,
+.utrecht-table--html-table > tbody > tr > td:last-child,
+.utrecht-table--html-table > tfoot > tr > td:last-child,
 .utrecht-table__cell--last {
   @include utrecht-table__cell--last;
 }
+/* stylelint-enable no-descending-specificity */
 
 .utrecht-table__header-cell--numeric-column,
 .utrecht-table__cell--numeric-column {
