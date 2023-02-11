@@ -10,6 +10,6 @@ addons.setConfig({
     ...theme,
     fontBase: nldesignsystemTypographySansSerifFontFamily,
     fontCode: nldesignsystemTypographyMonospaceFontFamily,
-    fontSize: '18px',
+    fontSize: '120%',
   }),
 });
