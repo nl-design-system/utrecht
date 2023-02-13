@@ -53,6 +53,7 @@ export { Paragraph } from './Paragraph';
 export { PreHeading } from './PreHeading';
 export { RadioButton } from './RadioButton';
 export { Select, SelectOption } from './Select';
+export * from './SelectFormField';
 export { Separator } from './Separator';
 export { SkipLink } from './SkipLink';
 export { SpotlightSection } from './SpotlightSection';
