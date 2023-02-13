@@ -52,6 +52,7 @@ export { PageHeader } from './PageHeader';
 export { Paragraph } from './Paragraph';
 export { PreHeading } from './PreHeading';
 export { RadioButton } from './RadioButton';
+export * from './RadioButtonFormField';
 export { Select, SelectOption } from './Select';
 export { Separator } from './Separator';
 export { SkipLink } from './SkipLink';
