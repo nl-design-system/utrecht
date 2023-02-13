@@ -11,16 +11,6 @@ const meta = {
   id: 'react-textbox-form-field',
   component: TextboxFormField,
   argTypes: {
-    className: {
-      type: {
-        name: 'string',
-        required: false,
-      },
-      table: {
-        category: 'DOM API',
-        defaultValue: { summary: false },
-      },
-    },
     invalid: {
       name: 'invalid',
       type: { name: 'boolean', required: false },
@@ -31,8 +21,7 @@ const meta = {
     },
     label: {
       name: 'label',
-      description:
-        '`label: { htmlFor: string; disabled?: boolean; checked?: boolean; text: string; className?: string;}`',
+      description: '`label: { htmlFor: string; disabled?: boolean; checked?: boolean; text: string; }`',
       table: {
         category: 'Component API',
         defaultValue: { summary: false },
@@ -40,7 +29,7 @@ const meta = {
     },
     description: {
       name: 'description',
-      description: '`description: {id:  string; message: string; className: string | undefined}`',
+      description: '`description: {id:  string; message: string; }`',
       table: {
         category: 'Component API',
         defaultValue: { summary: false },
@@ -48,8 +37,7 @@ const meta = {
     },
     validation: {
       name: 'validation',
-      description:
-        ' ` description: {state: invalid | valid | warning; id:  string; message: string; className: string | undefined}`',
+      description: ' ` description: {state: invalid | valid | warning; id:  string; message: string; }`',
       table: {
         category: 'Component API',
         defaultValue: { summary: false },
@@ -112,34 +100,12 @@ export const Disabled: Story = {
   },
 };
 
-export const CustomClassName: Story = {
-  ...Template,
-  args: {
-    label: {
-      htmlFor: inputId,
-      text: 'Label',
-      className: 'fancy-label',
-    },
-  },
-};
-
 export const WithDescription: Story = {
   ...Template,
   args: {
     description: {
       id: 'D3C862EB-D4B6-42C8-B32D-E3635391E2E7',
       message: 'With Form Field Description',
-    },
-  },
-};
-
-export const WithDescriptionCustomClass: Story = {
-  ...Template,
-  args: {
-    description: {
-      id: 'D3C862EB-D4B6-42C8-B32D-E3635391E2E7',
-      message: 'With Form Field Description Custom CSS Class',
-      className: 'custom-class',
     },
   },
 };
@@ -178,19 +144,6 @@ export const WithDescriptionStatusWarning: Story = {
   },
 };
 
-export const WithDescriptionStatusCustomClass: Story = {
-  ...Template,
-  args: {
-    invalid: true,
-    validation: {
-      id: 'F867D85B-31BF-4242-AD1E-83EBF851A06A',
-      message: 'With Form Field Description Status Custom CSS Class',
-      state: 'invalid',
-      className: 'custom-class',
-    },
-  },
-};
-
 export const WithDescriptionStatusAndDescription: Story = {
   ...Template,
   args: {
@@ -199,7 +152,6 @@ export const WithDescriptionStatusAndDescription: Story = {
       id: 'F867D85B-31BF-4242-AD1E-83EBF851A06A-error',
       message: 'With Form Field Description Status Custom CSS Class',
       state: 'invalid',
-      className: 'custom-class',
     },
     description: {
       id: 'A872061E-215F-41AA-8B5E-CCFD769F9775-description',

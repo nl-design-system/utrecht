@@ -7,20 +7,17 @@ type ValidationTypes = {
   state: 'invalid' | 'valid' | 'warning';
   message: string;
   id: string;
-  className?: string;
 };
 
 type DescriptionTypes = {
   id: string;
   message: string;
-  className?: string;
 };
 
 type LabelTypes = {
   htmlFor: string;
   disabled?: boolean;
   text: string;
-  className?: string;
 };
 
 export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
@@ -42,7 +39,6 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
    * label={{
    *  htmlFor: string;
    *  disabled?: boolean;
-   *  className?: string;
    *  text: string;
    *  }}
    *  ```
@@ -55,7 +51,6 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
    *    htmlFor: "the textbox id",
    *    disabled: "optional",
    *    text="Label content",
-   *    className="modifier CSS class"
    *     }}
    * />
    * ```
@@ -68,7 +63,6 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
    * description={{
    *  id: string;
    *  message: string;
-   *  className?: string;
    *  }}
    *  ```
    * @description
@@ -78,7 +72,6 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
    *  <TextboxFormField description={{
    *    id: "the id should be connected to the textbox element by `aria-describedby`",
    *    message="Helper text appear below the textbox",
-   *    className="modifier CSS class"
    *    }}
    *  />
    * ```
@@ -92,7 +85,6 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
    *  state: 'invalid' | 'valid' | 'warning';
    *  id: string;
    *  message: string;
-   *  className?: string;
    *   }}
    *  ```
    * @description
@@ -103,7 +95,6 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
    *    id: "the id should be connected to the textbox element by `aria-describedby`",
    *    state: "invalid",
    *    message="Helper text appear below the textbox",
-   *    className="modifier CSS class"
    *    }}
    *  />
    * ```
@@ -136,25 +127,20 @@ export const TextboxFormField = forwardRef(
       )}
     >
       {label && label.text && label.htmlFor && (
-        <p className={clsx('utrecht-form-field__label-text')}>
-          <FormLabel className={clsx(label.className)} htmlFor={label.htmlFor} disabled={label.disabled}>
+        <p className={clsx('utrecht-form-field__label')}>
+          <FormLabel htmlFor={label.htmlFor} disabled={label.disabled}>
             {label.text}
           </FormLabel>
         </p>
       )}
       {children}
-      {description && (
-        <FormFieldDescription className={clsx(description.className)} id={description.id}>
-          {description.message}
-        </FormFieldDescription>
-      )}
+      {description && <FormFieldDescription id={description.id}>{description.message}</FormFieldDescription>}
       {validation && validation.message && (
         <FormFieldDescription
           id={validation.id}
           invalid={validation.state === 'invalid'}
           valid={validation.state === 'valid'}
           warning={validation.state === 'warning'}
-          className={clsx(validation.className)}
         >
           {validation.message}
         </FormFieldDescription>
