@@ -13,6 +13,7 @@ export { ButtonGroup } from './ButtonGroup';
 export { ButtonLink } from './ButtonLink';
 export * from './Calendar';
 export { Checkbox } from './Checkbox';
+export * from './CheckboxFormField';
 export { Code } from './Code';
 export { CodeBlock } from './CodeBlock';
 export { DataBadge } from './DataBadge';
