@@ -3,16 +3,14 @@
     "custom-checkbox": {
       "size": { "value": "24px" },
       "border-color": { "value": "{utrecht.form-input.border-color}" },
-      "color": { "value": "{utrecht.form-input.color}" },
       "border-width": { "value": "1px" },
       "background-color": { "value": "{utrecht.form-input.background-color}" },
       "border-radius": { "value": "0" },
-      "margin-block-start": { "value": 0 },
+      "margin-inline-end": { "value": "{utrecht.space.inline.sm}" },
       "active": {
         "border-color": {},
         "border-width": {},
-        "background-color": {},
-        "color": {}
+        "background-color": {}
       },
       "focus": {
         "border-color": {},
@@ -30,7 +28,9 @@
         "background-color": { "value": "{utrecht.color.blue.40}" }
       },
       "indeterminate": {
-        "background-color": { "value": "{utrecht.color.blue.40}" }
+        "background-color": { "value": "{utrecht.color.blue.40}" },
+        "border-color": {},
+        "border-width": {}
       },
       "invalid": {
         "border-color": { "value": "{utrecht.form-input.invalid.border-color}" },
