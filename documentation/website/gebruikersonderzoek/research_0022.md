@@ -1,11 +1,11 @@
 ---
-title: Onderzoek Product Dienst Status Component
+title: Onderzoek Status Component van MijnZaken
 hide_title: true
 hide_table_of_contents: false
-sidebar_label: Onderzoek Product Dienst Status Component
+sidebar_label: Onderzoek Status Component van MijnZaken
 sidebar_position: 2
-pagination_label: Onderzoek Product Dienst Status Component
-description: Onderzoek Product Dienst Status Component
+pagination_label: Onderzoek Status Component van MijnZaken
+description: Onderzoek Status Component van MijnZaken
 keywords:
   - onderzoek
   - product dienst status
@@ -24,16 +24,16 @@ keywords:
 
 <!-- @license CC0-1.0 -->
 
-# Onderzoek Product Dienst Status Component
+# Onderzoek Status Component van MijnZaken
 
 **Aanleiding van het onderzoek:**
 Op het moment dat je iets online besteld hebt ben je als gebruiker de controle kwijt over de rest van het proces. Dat levert stress op. Komt het wel goed?
 
 **Doel van het onderzoek:**
-Antwoord geven op de vraag: "Neemt het Product Dienst Status component stress weg bij de inwoner?"
+Antwoord geven op de vraag: "Neemt het Status component stress weg bij de inwoner?"
 
 **Belangrijkste inzichten:**
-De Product Dienst Status component voegt waarde toe voor de inwoner als deze gebruikt wordt in de context van e-mail notificaties en zelf informatie opzoeken.
+Het Status component voegt waarde toe voor de inwoner als deze gebruikt wordt in de context van e-mail notificaties en zelf informatie opzoeken.
 
 **Onderzocht:**
 De volgende mensen hebben het onderzoek uitgevoerd:
@@ -45,9 +45,9 @@ De volgende mensen hebben het onderzoek uitgevoerd:
 
 ---
 
-## 1. Wat is het Product Dienst Status component?
+## 1. Wat is het Status component?
 
-Het Product Dienst Status component is een onderdeel van een app of site waarin getoond wordt waar in het proces de aanvraag van de inwoner zich bevindt. Een voorbeeld hiervan staat hieronder.
+Het Status component is een onderdeel van een app of site waarin getoond wordt waar in het proces de aanvraag van de inwoner zich bevindt. Een voorbeeld hiervan staat hieronder.
 
 ![het PDS  prototype](../../../static/img/pds_prototype_03.png)
 
@@ -91,7 +91,7 @@ Het scenario bestond uit de volgende stappen:
 
 - De inwoner ontvangt een brief van de gemeente met het aanbod om gratis geluidsisolatie te plaatsen in de woning.
 - De inwoner ontvangt een e-mail notificatie over de voortgang in het proces.
-- Na enige tijd wil de inwoner weten wat de status is van het proces en kijkt in de mijnOmgeving naar het Product Dienst Status component.
+- Na enige tijd wil de inwoner weten wat de status is van het proces en kijkt in de mijnOmgeving naar het Status component.
 
 ### 4.3 Brief
 
@@ -108,7 +108,7 @@ De e-mail notificatie is tijdens de test opgestuurd naar de geinterviewde.
 
 ![het Email prototype](../../../static/img/pds_prototype_02.png)
 
-### 4.4 Product Dienst Status Component
+### 4.4 Status Component
 
 Gemeente Den Haag heeft het [klikbare prototype](https://www.figma.com/file/Aha3GymAVMn7xGmU5zHLyD/Status-hackathon---MijnDenHaag?node-id=463%3A29814) gemaakt dat we hebben gebruikt in onze test.
 
@@ -130,7 +130,7 @@ De geinterviewden vinden de combinatie van het mailtje wat ze toegestuurd wordt 
 
 #### 5.1.2 De informatie moet kloppen anders gaat de inwoner bellen
 
-De data die getoond wordt in de e-mail en het Product Dienst Status component moet kloppen. Als dat niet klopt raakt de inwoner het vertrouwen kwijt en zullen ze gewoon weer gaan bellen om er achter te komen wat de status is, omdat ze (terecht) denken dat de informatie die ze opzoeken en/of opgestuurd krijgen waardeloos is.
+De data die getoond wordt in de e-mail en het Status component moet kloppen. Als dat niet klopt raakt de inwoner het vertrouwen kwijt en zullen ze gewoon weer gaan bellen om er achter te komen wat de status is, omdat ze (terecht) denken dat de informatie die ze opzoeken en/of opgestuurd krijgen waardeloos is.
 
 #### 5.1.3 De rust en overzicht in het prototype werken goed
 
@@ -167,7 +167,7 @@ Inwoners waarderen de duidelijkheid van de mail omdat de inhoud duidelijk is en 
 
 ### 5.3 mijnOmgeving
 
-De volgende inzichten gaan over de mijnOmgeving waarin het Product Dienst Status component zich bevindt.
+De volgende inzichten gaan over de mijnOmgeving waarin het Status component zich bevindt.
 
 ![Mijnomgeving screenshot](../../../static/img/pds_mijnomgeving.png)
 
@@ -181,15 +181,15 @@ Navigeren naar de zaak ging snel en zonder verwarring. Een paar soepele kliks zo
 
 ### 5.4 Status pagina
 
-De volgende inzichten gaan over het Product Dienst Status component en de pagina waarin het component zich bevindt.
+De volgende inzichten gaan over het Status component en de pagina waarin het component zich bevindt.
 
 ![het PDS  prototype](../../../static/img/pds_prototype_03.png)
 
-#### 5.4.1 De Product Dienst Status component wordt als optimaal ervaren
+#### 5.4.1 Het Status component wordt als optimaal ervaren
 
 De combinatie van zelf status opzoeken en notificaties ontvangen wordt als optimaal gezien door de geinterviewden
 
-#### 5.4.2 De weergave van stappen in Product Dienst Status component werkt goed
+#### 5.4.2 De weergave van stappen in Status component werkt goed
 
 De weergaven van de stappen zoals deze is getoond in het component werkte goed. De geinterviewden vonden het duidelijk en konden zien bij welke stap ze waren.
 
@@ -201,7 +201,7 @@ In dit prototype stond een afspraak gepland, en deze werdt getoond bij de stap. 
 
 In dit test scenario verwachten de geinterviewden de status boven de key info omdat deze belangrijker is. Belangrijk om te onthouden is dat dit ook de opdracht is die we ze hebben meegegeven, dus mogelijk meer onderzoek voor nodig. Het lijkt wel logisch dat de status een meer gezocht informatie is dan de key info
 
-#### 5.4.5 Key-info weergave in Product Dienst Status pagina nog niet optimaal
+#### 5.4.5 Key-info weergave in het Status pagina nog niet optimaal
 
 ![het PDS Figma prototype](../../../static/img/pds_prototype_01.png)
 
@@ -226,12 +226,12 @@ Wij denken dat de volgende onderzoeksvragen interessant zouden zijn voor vervolg
 
 ## 7. Wat is er met de onderzoeksresultaten gedaan?
 
-- De resultaten van dit onderzoek zijn gedeeld met de Designer en Product Owner van de gemeente Den Haag om het Product Dienst Status component te verbeteren.
+- De resultaten van dit onderzoek zijn gedeeld met de Designer en Product Owner van de gemeente Den Haag om het Status component te verbeteren.
 - De resultaten van dit onderzoek worden gebruikt als springplank voor verder onderzoek van de VNG.
 
 ## 8. Verdere informatie
 
 - [Klikbaar prototype versie 1](https://www.figma.com/proto/Aha3GymAVMn7xGmU5zHLyD/Status-hackathon---MijnDenHaag?node-id=563%3A40575&scaling=scale-down&page-id=365%3A21554&starting-point-node-id=563%3A40575).
-- [Klikbaar prototype versie 2](https://www.figma.com/proto/Aha3GymAVMn7xGmU5zHLyD/Status-hackathon---MijnDenHaag?node-id=563%3A40741&scaling=scale-down&page-id=365%3A21554&starting-point-node-id=563%3A40575). Dit prototype heeft een andere weergave van de stappen in het Product Status Component.
+- [Klikbaar prototype versie 2](https://www.figma.com/proto/Aha3GymAVMn7xGmU5zHLyD/Status-hackathon---MijnDenHaag?node-id=563%3A40741&scaling=scale-down&page-id=365%3A21554&starting-point-node-id=563%3A40575). Dit prototype heeft een andere weergave van de stappen in het Status Component.
 - [Status Trackers and Progress Updates: 16 Design Guidelines](https://www.nngroup.com/articles/status-tracker-progress-update/) (NN Group artikel).
 - [Het MIRO bord dat gebruikt is tijdens het onderzoek](https://miro.com/app/board/uXjVO-Iw_Vc=/).
