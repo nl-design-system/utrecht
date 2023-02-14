@@ -70,7 +70,7 @@ Describe the atanomy of a component, for example:
 
 Deze global design tokens worden gebruikt in dit component:
 
-- --utrecht-font-family-sans-serif
+- --utrecht-typography-sans-serif-font-family
 - --utrecht-space-inline-2xs
 - --utrecht-space-inline-xs
 - --utrecht-space-inline-md
