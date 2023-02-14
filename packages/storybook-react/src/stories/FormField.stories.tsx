@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Textbox, TextboxFormField } from '@utrecht/component-library-react';
+import { FormField, Paragraph, Textbox } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/form-field/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-field/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -7,39 +7,32 @@ import React from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
-  title: 'React Component/Textbox Form Field',
-  id: 'react-textbox-form-field',
-  component: TextboxFormField,
+  title: 'React Component/Form Field/Textbox',
+  id: 'react-form-field',
+  component: FormField,
   argTypes: {
+    disabled: {
+      description: 'Disabled',
+      control: 'boolean',
+      table: {
+        category: 'Component',
+        defaultValue: { summary: false },
+      },
+    },
     invalid: {
       name: 'invalid',
       type: { name: 'boolean', required: false },
       table: {
-        category: 'Component API',
+        category: 'Component',
         defaultValue: { summary: false },
       },
     },
-    label: {
-      name: 'label',
-      description: '`label: { htmlFor: string; disabled?: boolean; checked?: boolean; text: string; }`',
+    type: {
+      name: 'type',
+      control: { type: 'select' },
+      options: ['', 'checkbox', 'radio', 'text'],
       table: {
-        category: 'Component API',
-        defaultValue: { summary: false },
-      },
-    },
-    description: {
-      name: 'description',
-      description: '`description: {id:  string; message: string; }`',
-      table: {
-        category: 'Component API',
-        defaultValue: { summary: false },
-      },
-    },
-    validation: {
-      name: 'validation',
-      description: ' ` description: {state: invalid | valid | warning; id:  string; message: string; }`',
-      table: {
-        category: 'Component API',
+        category: 'Component',
         defaultValue: { summary: false },
       },
     },
@@ -55,109 +48,35 @@ const meta = {
       },
     },
   },
-} as Meta<typeof TextboxFormField>;
+} as Meta<typeof FormField>;
 
 export default meta;
 
-type Story = StoryObj<typeof TextboxFormField>;
-const inputId = `utrecht-textbox-A872061E-215F-41AA-8B5E-CCFD769F9775`;
-const Template: Story = {
-  render: (args) => {
-    const descriptionId = args.description ? args.description.id : undefined;
-    const validationId = args.validation?.message ? args.validation.id : undefined;
-
-    const ariaDescribedby =
-      validationId || descriptionId
-        ? `${validationId ? validationId : ''} ${descriptionId ? descriptionId : ''}`
-        : undefined;
-
-    return (
-      <TextboxFormField
-        {...args}
-        label={{
-          htmlFor: inputId,
-          text: 'Label',
-        }}
-      >
-        <Textbox id={inputId} aria-describedby={ariaDescribedby} disabled={args.label?.disabled} />
-      </TextboxFormField>
-    );
-  },
+const Template: StoryObj<typeof FormField> = (args) => {
+  const { description, invalid, label, type, input } = args;
+  return (
+    <FormField invalid={invalid} type={type}>
+      <Paragraph className="utrecht-form-field__label">{label}</Paragraph>
+      <Paragraph className="utrecht-form-field__input">{input}</Paragraph>
+      {description}
+    </FormField>
+  );
 };
 
-export const Default: Story = {
-  ...Template,
-};
+export const FormFieldStory = Template.bind({});
 
-export const Disabled: Story = {
-  ...Template,
-  args: {
-    label: {
-      htmlFor: inputId,
-      text: 'Label',
-      disabled: true,
-    },
-  },
-};
-
-export const WithDescription: Story = {
-  ...Template,
-  args: {
-    description: {
-      id: 'D3C862EB-D4B6-42C8-B32D-E3635391E2E7',
-      message: 'With Form Field Description',
-    },
-  },
-};
-
-export const WithDescriptionStatusInvalid: Story = {
-  ...Template,
-  args: {
-    invalid: true,
-    validation: {
-      id: 'F867D85B-31BF-4242-AD1E-83EBF851A06A',
-      message: 'With Form Field Description Status Invalid',
-      state: 'invalid',
-    },
-  },
-};
-
-export const WithDescriptionStatusValid: Story = {
-  ...Template,
-  args: {
-    validation: {
-      id: 'F867D85B-31BF-4242-AD1E-83EBF851A06A',
-      message: 'With Form Field Description Status Valid',
-      state: 'valid',
-    },
-  },
-};
-
-export const WithDescriptionStatusWarning: Story = {
-  ...Template,
-  args: {
-    validation: {
-      id: 'F867D85B-31BF-4242-AD1E-83EBF851A06A',
-      message: 'With Form Field Description Status Warning',
-      state: 'warning',
-    },
-  },
-};
-
-export const WithDescriptionStatusAndDescription: Story = {
-  ...Template,
-  args: {
-    invalid: true,
-    validation: {
-      id: 'F867D85B-31BF-4242-AD1E-83EBF851A06A-error',
-      message: 'With Form Field Description Status Custom CSS Class',
-      state: 'invalid',
-    },
-    description: {
-      id: 'A872061E-215F-41AA-8B5E-CCFD769F9775-description',
-      message: 'With Form Field Description',
-    },
-  },
+FormFieldStory.args = {
+  description: 'Maximaal 140 karakters',
+  disabled: false,
+  id: '3a43bbe9-635c-46c2-86cd-b0aa63855598',
+  invalid: true,
+  invalidDescription: 'Fout: het veld is nog leeg. Vul een bericht in.',
+  label: 'Tweet',
+  name: 'message',
+  value: '',
+  required: true,
+  type: 'text',
+  Input: Textbox,
 };
 
 export const DesignTokens = designTokenStory(meta);
