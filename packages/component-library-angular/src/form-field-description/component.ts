@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'utrecht-form-field-description',
@@ -7,5 +7,9 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class UtrechtFormFieldDescription {
+  @Input() invalid?: boolean = false;
+  @Input() valid?: boolean = false;
+  @Input() warning?: boolean = false;
+  @Input() class?: string;
   constructor() {}
 }
