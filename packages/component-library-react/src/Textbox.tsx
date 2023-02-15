@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
+
 export type TextboxTypes =
   | 'date'
   | 'datetime-local'
@@ -16,6 +17,7 @@ export type TextboxTypes =
 
 export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
   invalid?: boolean;
+  novalidate?: boolean;
   type?: TextboxTypes;
 }
 
@@ -28,8 +30,8 @@ export const Textbox = forwardRef(
       required,
       className,
       type = 'text',
-      maxLength,
       inputMode,
+      novalidate = false,
       ...restProps
     }: TextboxProps,
     ref: ForwardedRef<HTMLInputElement>,
@@ -47,10 +49,10 @@ export const Textbox = forwardRef(
         required && 'utrecht-textbox--required',
         className,
       )}
-      maxLength={maxLength}
       disabled={disabled}
       readOnly={readOnly}
-      required={required}
+      required={required && !novalidate ? required : undefined}
+      aria-required={(required && novalidate) || undefined}
       aria-invalid={invalid || undefined}
       inputMode={inputMode || (type === 'number' ? 'numeric' : undefined)}
     />

@@ -68,6 +68,7 @@ export { TableHeaderCell } from './TableHeaderCell';
 export { TableRow } from './TableRow';
 export { Textarea } from './Textarea';
 export { Textbox } from './Textbox';
+export { TextboxFormField } from './TextboxFormField';
 export { URLValue } from './URLValue';
 export { UnorderedList } from './UnorderedList';
 export { UnorderedListItem } from './UnorderedListItem';
