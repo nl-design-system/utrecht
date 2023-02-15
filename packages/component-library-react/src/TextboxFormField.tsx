@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import { FormFieldDescription } from './FormFieldDescription';
 import { FormLabel } from './FormLabel';
+import { Textbox } from './Textbox';
 
 type ValidationTypes = {
   state: 'invalid' | 'valid' | 'warning';
@@ -105,19 +106,32 @@ export interface TextboxFormFieldProps extends HTMLAttributes<HTMLDivElement> {
 export const TextboxFormField = forwardRef(
   (
     {
-      className,
       children,
-      invalid,
-      label,
+      className,
+      defaultValue,
       description,
+      disabled,
+      id,
+      invalid,
+      inputMode,
+      name,
+      novalidate,
+      onChange,
+      onInput,
+      onBlur,
+      onFocus,
+      readOnly,
+      label,
+      required,
+      type,
       validation,
+      value,
       ...restProps
     }: PropsWithChildren<TextboxFormFieldProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
     <div
       {...restProps}
-      ref={ref}
       className={clsx(
         'utrecht-form-field',
         {
@@ -133,7 +147,26 @@ export const TextboxFormField = forwardRef(
           </FormLabel>
         </p>
       )}
-      {children}
+      {children ? (
+        children
+      ) : (
+        <Textbox
+          defaultValue={defaultValue}
+          disabled={disabled}
+          id={id}
+          onChange={onChange}
+          onInput={onInput}
+          onBlur={onBlur}
+          onFocus={onFocus}
+          inputMode={inputMode}
+          name={name}
+          novalidate={novalidate}
+          ref={ref}
+          readOnly={readOnly}
+          required={required}
+          type={type}
+        />
+      )}
       {description && <FormFieldDescription id={description.id}>{description.message}</FormFieldDescription>}
       {validation && validation.message && (
         <FormFieldDescription
