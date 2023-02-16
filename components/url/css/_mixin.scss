@@ -6,4 +6,6 @@
 
 @mixin utrecht-url {
   font-variant-ligatures: none;
+  hyphens: none;
+  page-break-inside: avoid;
 }
