@@ -7,20 +7,22 @@ import {
 } from '@utrecht/component-library-angular';
 
 export default {
-  title: 'Angular Component/Form Field Description',
+  title: 'Angular Component/Form field description',
   id: 'angular-component-form-field-description',
   argTypes: {
     invalid: {
       type: { name: 'boolean', required: false },
       description: 'indicates if the related form field is invalid',
+      defaultValue: false,
       table: {
         defaultValue: { summary: false },
-        category: 'DOM API',
+        category: 'Component API',
       },
     },
     valid: {
       type: { name: 'boolean', required: false },
       description: 'indicates if the related form field is valid',
+      defaultValue: false,
       table: {
         defaultValue: { summary: false },
         category: 'Component API',
@@ -29,17 +31,19 @@ export default {
     warning: {
       type: { name: 'boolean', required: false },
       description: 'indicates if the description contains a warning',
+      defaultValue: false,
       table: {
         defaultValue: { summary: false },
         category: 'Component API',
       },
     },
-    class: {
-      type: { name: 'string', required: false },
-      description: 'a modifier CSS class',
+    textContent: {
+      type: { name: 'string', required: true },
+      description: 'Description',
+      defaultValue: '',
       table: {
-        defaultValue: { summary: false },
-        category: 'DOM API',
+        defaultValue: { summary: '' },
+        category: 'Story',
       },
     },
   },
@@ -51,14 +55,19 @@ export default {
   ],
   component: UtrechtFormFieldDescription,
 } as Meta;
-type Story = StoryObj<UtrechtFormFieldDescription>;
+
+interface StoryArgs {
+  textContent: string;
+}
+
+type Story = StoryObj<UtrechtFormFieldDescription & StoryArgs>;
 
 const Template: Story = {
   render: (args) => ({
     props: args,
     template: `
-  <utrecht-form-field-description [invalid]="invalid" [valid]="valid" [warning]="warning" [class]="class">
-    <strong>The form field below contains requires you to fill in your last name.</strong>
+  <utrecht-form-field-description [invalid]="invalid" [valid]="valid" [warning]="warning">
+    {{textContent}}
   </utrecht-form-field-description>
 `,
     component: UtrechtFormFieldDescription,
@@ -66,5 +75,44 @@ const Template: Story = {
 };
 export const Default: Story = {
   ...Template,
-  args: {},
+  args: {
+    textContent: 'Your password must contain at least 16 characters.',
+  },
+  parameters: {
+    status: 'ALPHA',
+  },
+};
+
+export const Invalid: Story = {
+  ...Template,
+  args: {
+    invalid: true,
+    textContent: 'This is a required field and must not be left empty.',
+  },
+  parameters: {
+    status: 'ALPHA',
+  },
+};
+
+export const Valid: Story = {
+  ...Template,
+  args: {
+    valid: true,
+    textContent: 'This is a very safe password!',
+  },
+  parameters: {
+    status: 'WORK IN PROGRESS',
+  },
+};
+
+export const Warning: Story = {
+  ...Template,
+  args: {
+    warning: true,
+    textContent:
+      'When you proceed without providing a mobile number, you will be locked out of your account when you forget the password.',
+  },
+  parameters: {
+    status: 'WORK IN PROGRESS',
+  },
 };
