@@ -1,5 +1,3 @@
-import { TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
 import { render } from '@testing-library/angular';
 import { clearElements } from '../utils';
 import { UtrechtFormFieldDescription } from './component';
@@ -9,17 +7,21 @@ afterEach(() => {
 });
 
 describe('Form Field Description', () => {
+  const cssSelector = 'utrecht-form-field-description > :only-child';
+
   it('renders an HTML div element', async () => {
-    const fixture = TestBed.createComponent(UtrechtFormFieldDescription);
-    fixture.detectChanges();
-    expect(fixture.nativeElement).toBeInTheDocument();
+    const { container } = await render('<utrecht-form-field-description></utrecht-form-field-description>', {
+      declarations: [UtrechtFormFieldDescription],
+    });
+    const desc = container.querySelector('div');
+    expect(desc).toBeInTheDocument();
   });
 
   it('renders a design system BEM class name', async () => {
     const { container } = await render('<utrecht-form-field-description></utrecht-form-field-description>', {
       declarations: [UtrechtFormFieldDescription],
     });
-    const field = container.querySelector('div');
+    const field = container.querySelector(cssSelector);
     expect(field).toHaveClass('utrecht-form-field-description');
   });
 
@@ -31,7 +33,7 @@ describe('Form Field Description', () => {
           declarations: [UtrechtFormFieldDescription],
         },
       );
-      const field = container.querySelector('div');
+      const field = container.querySelector(cssSelector);
       expect(field).toHaveClass('utrecht-form-field-description--invalid');
     });
   });
@@ -44,7 +46,7 @@ describe('Form Field Description', () => {
           declarations: [UtrechtFormFieldDescription],
         },
       );
-      const field = container.querySelector('div');
+      const field = container.querySelector(cssSelector);
       expect(field).toHaveClass('utrecht-form-field-description--valid');
     });
   });
@@ -57,7 +59,7 @@ describe('Form Field Description', () => {
           declarations: [UtrechtFormFieldDescription],
         },
       );
-      const field = container.querySelector('div');
+      const field = container.querySelector(cssSelector);
       expect(field).toHaveClass('utrecht-form-field-description--warning');
     });
   });
@@ -66,7 +68,7 @@ describe('Form Field Description', () => {
     const { container } = await render('<utrecht-form-field-description></utrecht-form-field-description>', {
       declarations: [UtrechtFormFieldDescription],
     });
-    const field = container.querySelector('div');
+    const field = container.querySelector(cssSelector);
     expect(field).toHaveStyle({ display: 'block' });
   });
 
@@ -78,7 +80,7 @@ describe('Form Field Description', () => {
       },
     );
 
-    const desc = container.querySelector('div');
+    const desc = container.querySelector('strong');
     expect(desc).toBeInTheDocument();
   });
 
@@ -87,32 +89,29 @@ describe('Form Field Description', () => {
       declarations: [UtrechtFormFieldDescription],
     });
 
-    const desc = container.querySelector('div');
+    const desc = container.querySelector(cssSelector);
     expect(desc).not.toBeVisible();
   });
 
   it('can have a custom class name', async () => {
-    const { fixture } = await render(
+    const { container } = await render(
       '<utrecht-form-field-description class="custom-class"></utrecht-form-field-description>',
       {
         declarations: [UtrechtFormFieldDescription],
       },
     );
-    fixture.detectChanges();
-    const debugElement = fixture.debugElement.query(By.css('.utrecht-form-field-description'));
-    expect(debugElement.nativeElement).toHaveClass('custom-class');
+    const desc = container.querySelector(cssSelector);
+    expect(desc).toHaveClass('custom-class');
   });
 
   it('can have a additional class name', async () => {
-    const { fixture } = await render(
+    const { container } = await render(
       '<utrecht-form-field-description class="custom-class"></utrecht-form-field-description>',
       {
         declarations: [UtrechtFormFieldDescription],
       },
     );
-    fixture.detectChanges();
-    const debugElement = fixture.debugElement.query(By.css('.utrecht-form-field-description'));
-    expect(debugElement.nativeElement).toHaveClass('custom-class');
-    expect(debugElement.nativeElement).toHaveClass('utrecht-form-field-description');
+    const desc = container.querySelector(cssSelector);
+    expect(desc).toHaveClass('custom-class');
   });
 });
