@@ -13,6 +13,7 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "devDependencies": {
+    "@etchteam/storybook-addon-status": "4.2.2",
     "@mdx-js/react": "2.2.1",
     "@nl-design-system-unstable/documentation": "0.0.2-alpha.1",
     "@storybook/addon-a11y": "7.0.0-beta.25",
@@ -34,6 +35,7 @@
     "@utrecht/components": "workspace:*",
     "@utrecht/design-tokens": "workspace:*",
     "@utrecht/documentation": "workspace:*",
+    "@utrecht/storybook-helpers": "workspace:*",
     "@vitejs/plugin-vue": "4.0.0",
     "@vitejs/plugin-vue-jsx": "3.0.0",
     "@vue/compiler-sfc": "3.2.45",

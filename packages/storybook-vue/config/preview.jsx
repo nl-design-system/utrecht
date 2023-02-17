@@ -1,3 +1,4 @@
+import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 // import { withTests } from '@storybook/addon-jest';
 // import results from '@utrecht/component-library-vue/dist/.jest-test-results.json';
 import '@utrecht/component-library-vue/dist/style.css';
@@ -13,6 +14,7 @@ export const decorators = [
 ];
 
 export const parameters = {
+  ...addonStatus,
   actions: { argTypesRegex: '^on[A-Z].*' },
   controls: {
     matchers: {
