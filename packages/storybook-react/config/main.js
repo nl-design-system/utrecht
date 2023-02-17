@@ -12,6 +12,7 @@ module.exports = {
     'storybook-addon-pseudo-states',
     '@storybook/preset-scss',
     // '@storybook/addon-jest',
+    '@etchteam/storybook-addon-status/register',
   ],
   features: {
     babelModeV7: true,

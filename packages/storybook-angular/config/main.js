@@ -14,6 +14,8 @@ module.exports = {
     '@storybook/addon-toolbars',
     '@storybook/addon-viewport',
     '@storybook/preset-scss',
+    // Somehow `storybook-addon-status` breaks the Angular Storybook, need to investigate further
+    // '@etchteam/storybook-addon-status/register',
     '@storybook/addon-jest',
   ],
   features: {

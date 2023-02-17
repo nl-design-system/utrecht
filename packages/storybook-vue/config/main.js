@@ -15,6 +15,7 @@ module.exports = {
     'storybook-addon-pseudo-states',
     '@storybook/addon-a11y',
     '@storybook/addon-jest',
+    '@etchteam/storybook-addon-status/register',
   ],
   framework: {
     name: '@storybook/vue3-vite',
