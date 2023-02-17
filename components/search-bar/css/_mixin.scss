@@ -13,19 +13,65 @@
   --utrecht-button-letter-spacing: var(--utrecht-search-bar-button-letter-spacing);
   --utrecht-button-primary-action-background-color: var(--utrecht-search-bar-button-background-color);
   --utrecht-button-primary-action-color: var(--utrecht-search-bar-button-color);
-  --utrecht-button-primary-action-hover-background-color: var(--utrecht-search-bar-hover-background-color);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-search-bar-button-hover-background-color);
   --utrecht-button-text-transform: var(--utrecht-search-bar-button-text-transform);
-  --utrecht-textbox-border-color: var(--utrecht-search-bar-textbox-border-color);
-  --utrecht-textbox-padding-inline-start: var(--utrecht-search-bar-textbox-padding-inline-start);
-  --utrecht-textbox-border-bottom-width: var(--utrecht-search-bar-textbox-border-bottom-width);
+  --utrecht-textbox-border-color: var(--utrecht-search-bar-input-border-color);
+  --utrecht-textbox-padding-inline-start: var(--utrecht-search-bar-input-padding-inline-start);
+  --utrecht-textbox-border-bottom-width: var(--utrecht-search-bar-input-border-bottom-width);
+  --utrecht-textbox-max-inline-size: var(--utrecht-search-bar-input-max-inline-size);
 
   display: flex;
 }
 
 @mixin utrecht-search-bar__input {
   background-image: var(--utrecht-search-bar-input-background-image, none);
-  background-position-x: var(--utrecht-search-bar-textbox-background-position-x);
-  background-position-y: var(--utrecht-search-bar-textbox-background-position-y);
+  background-position-x: var(--utrecht-search-bar-input-background-position-x);
+  background-position-y: var(--utrecht-search-bar-input-background-position-y);
   background-repeat: no-repeat;
-  background-size: var(--utrecht-search-bar-textbox-background-size);
+  background-size: var(--utrecht-search-bar-input-background-size);
+}
+
+@mixin utrecht-search-bar__dropdown {
+  border-color: var(--utrecht-search-bar-dropdown-border-color);
+  border-style: solid;
+  border-width: var(--utrecht-search-bar-dropdown-border-width);
+  inline-size: var(--utrecht-search-bar-dropdown-inline-size, var(--utrecht-form-input-max-inline-size));
+  max-block-size: var(--utrecht-search-bar-dropdown-max-block-size);
+  overflow: auto;
+  padding-block-end: var(--utrecht-search-bar-dropdown-padding-block-end);
+  padding-block-start: var(--utrecht-search-bar-dropdown-padding-block-start);
+  padding-inline-end: var(--utrecht-search-bar-dropdown-padding-inline-end);
+  padding-inline-start: var(--utrecht-search-bar-dropdown-padding-inline-start);
+  position: absolute;
+  z-index: var(--utrecht-search-bar-dropdown-z-index);
+}
+
+@mixin utrecht-search-bar__section {
+  margin-block-end: var(--utrecht-search-bar-section-margin-block-end);
+}
+
+@mixin utrecht-search-bar__section-title {
+  color: var(--utrecht-search-bar-section-title-color);
+  font-size: var(--utrecht-search-bar-section-title-font-size);
+  font-weight: var(--utrecht-search-bar-section-title-font-weight);
+  line-height: var(--utrecht-search-bar-section-title-line-height);
+  margin-inline-start: var(--utrecht-search-bar-section-title-margin-inline-start);
+}
+
+@mixin utrecht-search-bar__list-item {
+  padding-block-end: var(--utrecht-search-bar-list-item-padding-block-end);
+  padding-block-start: var(--utrecht-search-bar-list-item-padding-block-start);
+  padding-inline-end: var(--utrecht-search-bar-list-item-padding-inline-end);
+  padding-inline-start: var(--utrecht-search-bar-list-item-padding-inline-start);
+}
+
+@mixin utrecht-search-bar__list-item--is-active {
+  background-color: var(--utrecht-search-bar-list-item-is-active-background-color);
+  color: var(--utrecht-search-bar-list-item-is-active-color);
+  font-weight: var(--utrecht-search-bar-list-item-is-active-font-weight);
+}
+
+@mixin utrecht-search-bar__list-item--is-selected {
+  background-color: var(--utrecht-search-bar-list-item-is-selected-background-color);
+  color: var(--utrecht-search-bar-list-item-is-selected-color);
 }

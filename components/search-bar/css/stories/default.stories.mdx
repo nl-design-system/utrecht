@@ -22,7 +22,31 @@ import "../index.scss";
 # Search Bar
 
 <Canvas>
-  <Story name="Default" args={exampleArgs}>
+  <Story name="Default" args={{ ...exampleArgs, isOpen: false }}>
+    {SearchBar.bind({})}
+  </Story>
+</Canvas>
+
+# Search Bar dropdown is open
+
+<Canvas>
+  <Story name="Dropdown is open" args={{ ...exampleArgs, isOpen: true }}>
+    {SearchBar.bind({})}
+  </Story>
+</Canvas>
+
+# is Selected
+
+<Canvas>
+  <Story name="Is selected" args={{ ...exampleArgs, isOpen: true, isSelected: true }}>
+    {SearchBar.bind({})}
+  </Story>
+</Canvas>
+
+# is Active
+
+<Canvas>
+  <Story name="Is Active" args={{ ...exampleArgs, isOpen: true, isActive: true }}>
     {SearchBar.bind({})}
   </Story>
 </Canvas>

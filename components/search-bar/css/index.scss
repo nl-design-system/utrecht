@@ -12,3 +12,23 @@
 .utrecht-search-bar__input {
   @include utrecht-search-bar__input;
 }
+
+.utrecht-search-bar__dropdown {
+  @include utrecht-search-bar__dropdown;
+}
+
+.utrecht-search-bar__section-title {
+  @include utrecht-search-bar__section-title;
+}
+
+.utrecht-search-bar__list-item {
+  @include utrecht-search-bar__list-item;
+}
+
+.utrecht-search-bar__list-item--is-active {
+  @include utrecht-search-bar__list-item--is-active;
+}
+
+.utrecht-search-bar__list-item--is-selected {
+  @include utrecht-search-bar__list-item--is-selected;
+}
