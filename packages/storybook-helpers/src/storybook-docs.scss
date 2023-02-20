@@ -1,0 +1,273 @@
+@import "../../../components/article/css/mixin";
+@import "../../../components/heading-1/css/mixin";
+@import "../../../components/heading-2/css/mixin";
+@import "../../../components/heading-3/css/mixin";
+@import "../../../components/heading-4/css/mixin";
+@import "../../../components/paragraph/css/mixin";
+@import "../../../components/code/css/mixin";
+@import "../../../components/code-block/css/mixin";
+@import "../../../components/ordered-list/css/mixin";
+@import "../../../components/unordered-list/css/mixin";
+@import "../../../components/table/css/mixin";
+@import "../../../components/link/css/mixin";
+
+/* allow `sbdocs` prefix */
+/* stylelint-disable selector-class-pattern */
+/* stylelint-disable no-descending-specificity */
+
+/* allow `nldesignsystem` prefix */
+/* stylelint-disable custom-property-pattern */
+
+@mixin reset-font-smoothing() {
+  -webkit-font-smoothing: initial !important;
+  -moz-osx-font-smoothing: initial !important;
+}
+
+@mixin reset-dfn() {
+  font-style: normal;
+}
+
+.docs-story {
+  background-color: var(--utrecht-document-background-color);
+  color: var(--utrecht-document-color);
+}
+
+.utrecht-reduced-motion {
+  --utrecht-motion-max-animation-duration: 0;
+}
+
+.no-style .docs-story,
+.no-style .docs-story * {
+  all: revert !important;
+}
+
+.sbdocs * {
+  @include reset-font-smoothing;
+
+  --utrecht-paragraph-margin-block-start: 1em;
+  --utrecht-paragraph-margin-block-end: 1em;
+}
+
+.sbdocs h1,
+.sbdocs h2,
+.sbdocs h3,
+.sbdocs h4,
+.sbdocs p,
+.sbdocs table:not(.docblock-argstable),
+.sbdocs .sbdocs-content ul:not([class]),
+.sbdocs .sbdocs-content ol:not([class]),
+.sbdocs .sbdocs-p,
+.sbdocs .sbdocs-h1,
+.sbdocs .sbdocs-h2,
+.sbdocs .sbdocs-h3,
+.sbdocs .sbdocs-h4,
+.sbdocs .sbdocs-ul,
+.sbdocs .sbdocs-ol,
+.sbdocs-content > :not(.sb-anchor, .sbdocs-preview, :has(.docblock-argstable, .sbdocs-pre)) {
+  margin-inline-end: auto !important;
+  margin-inline-start: auto !important;
+  max-inline-size: 800px; /* approximately 80ch in 18px Fira Sans */
+  // border-inline-end: 1px solid silver;
+}
+
+.sbdocs .sbdocs-content {
+  --utrecht-space-around: 1;
+
+  margin-inline-end: auto;
+
+  // @include utrecht-article;
+  margin-inline-start: auto;
+  max-inline-size: none;
+}
+
+.sbdocs h1,
+.sbdocs h1.sbdocs-title {
+  --utrecht-space-around: 1;
+
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  @include utrecht-heading-1;
+}
+
+.sbdocs h2 {
+  --utrecht-space-around: 1;
+
+  @include utrecht-heading-2;
+}
+
+.sbdocs h3 {
+  @include utrecht-heading-3;
+}
+
+.sbdocs h4 {
+  @include utrecht-heading-4;
+}
+
+.sbdocs p,
+.sbdocs .sbdocs-p {
+  --utrecht-space-around: 1;
+  @include utrecht-paragraph;
+}
+
+.sbdocs-content ul:not([class]),
+.sbdocs .sbdocs-ul {
+  @include utrecht-unordered-list;
+
+  box-sizing: border-box;
+  color: var(--utrecht-document-color);
+}
+
+.sbdocs-content ul:not([class]) > li,
+.sbdocs .sbdocs-ul > .sbdocs-li {
+  @include utrecht-unordered-list__item;
+
+  color: inherit; /* reset */
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.sbdocs-content ol:not([class]),
+.sbdocs .sbdocs-ol {
+  @include utrecht-ordered-list;
+
+  box-sizing: border-box;
+}
+
+.sbdocs-content ol:not([class]) > li,
+.sbdocs .sbdocs-ol > .sbdocs-li {
+  @include utrecht-ordered-list__item;
+
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.sbdocs .sbdocs-code,
+.sbdocs samp,
+.sbdocs pre {
+  font-feature-settings: "cv13", "cv20", "ss01", "ss02", "ss03";
+  font-variant-ligatures: initial !important;
+}
+
+.sbdocs .sbdocs-code {
+  // background-color: transparent !important;
+  border-inline-end: 0;
+  border-inline-start: 0;
+  border-width: 0;
+}
+.sbdocs .sbdocs-code,
+.sbdocs samp {
+  @include utrecht-code;
+
+  display: inline;
+  font-size: inherit;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+  vertical-align: 1%;
+}
+
+.sbdocs pre:not(.prismjs, .sbdocs-pre) {
+  @include utrecht-code-block;
+}
+
+.sbdocs .prismjs {
+  font-size: var(--utrecht-code-block-font-size) !important;
+  line-height: var(--utrecht-code-block-line-height) !important;
+}
+
+.sbdocs .sbdocs-pre > * {
+  border-radius: 0;
+}
+
+.sbdocs pre * .token {
+  font-family: inherit;
+}
+
+.sbdocs-content a,
+.sbdocs a.sbdocs-a {
+  @include utrecht-link;
+  @include utrecht-link--html-a;
+
+  font-family: inherit;
+}
+
+@mixin block-wide {
+  margin-inline-end: auto !important;
+  margin-inline-start: auto !important;
+  max-inline-size: calc(
+    1084px + var(--utrecht-code-block-padding-inline-end) + var(--utrecht-code-block-padding-inline-start)
+  );
+}
+
+.sbdocs .sbdocs-preview,
+.sbdocs div:has(.docblock-argstable:only-child) {
+  @include block-wide;
+}
+
+.sbdocs .sbdocs-pre {
+  /* 1084px is approximately 100 characters in Fira Code 18px */
+
+  & > .sbdocs-code:only-child,
+  & > div,
+  & > sbdocs-code {
+    @include utrecht-code-block;
+
+    @include block-wide;
+
+    border: 0;
+    box-shadow: none;
+    padding-inline-end: var(--utrecht-code-block-padding-inline-end);
+    padding-inline-start: var(--utrecht-code-block-padding-inline-start);
+  }
+  pre.prismjs {
+    padding-block-end: 0;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+}
+.prismjs {
+  --utrecht-code-background-color: auto;
+  --utrecht-code-color: auto;
+}
+
+.sbdocs dfn {
+  @include reset-dfn;
+
+  /* HTML element we add ourselves in markdown */
+
+  /* styled to be less bold than <strong> */
+  font-weight: 500;
+}
+
+.sbdocs table:not([class]),
+.sbdocs .sbdocs-table {
+  @include utrecht-table;
+  @include utrecht-table--html-table;
+
+  & > tr,
+  & > thead > tr,
+  & > tbody > tr,
+  & > tfoot > tr {
+    background-color: transparent;
+    border-top-width: 0;
+  }
+
+  & > tr > th,
+  & > thead > tr > th,
+  & > tbody > tr > th,
+  & > tfoot > tr > th {
+    border: 0;
+  }
+
+  & > tr > td,
+  & > thead > tr > td,
+  & > tbody > tr > td,
+  & > tfoot > tr > td {
+    background-color: none;
+    border: 0;
+  }
+}

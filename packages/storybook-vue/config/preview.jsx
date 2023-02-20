@@ -3,6 +3,7 @@ import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 // import results from '@utrecht/component-library-vue/dist/.jest-test-results.json';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
+import '@utrecht/storybook-helpers/src/storybook-docs.scss';
 // import React from 'react';
 
 export const decorators = [
