@@ -162,3 +162,39 @@ however browsers don't seem to have implemented great looking supixel tweening y
   text-decoration-thickness: unset;
   text-underline-offset: unset;
 }
+
+@mixin utrecht-link--html-a {
+  &:visited {
+    @include utrecht-link--visited;
+  }
+
+  &:link:hover {
+    @include utrecht-link--hover;
+  }
+
+  &:link:active {
+    @include utrecht-link--active;
+  }
+
+  // The workaround for missing `:focus-visible` support makes the code quite complex,
+  // keep the ideal version around to restore it easily when browser support improves.
+
+  @if $utrecht-focus-visible-fallback {
+    &:focus {
+      @include utrecht-link--focus;
+      @include utrecht-link--focus-visible;
+    }
+
+    &:focus:not(:focus-visible) {
+      @include utrecht-focus-ring-reset;
+    }
+  } @else {
+    &:focus {
+      @include utrecht-link--focus;
+    }
+
+    &:focus-visible {
+      @include utrecht-link--focus-visible;
+    }
+  }
+}
