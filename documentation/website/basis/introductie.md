@@ -25,13 +25,18 @@ Daarom gaan we tussen organisatieonderdelen en afdelingen principes, interactiep
 
 Dit Design System draagt bij aan gebruiksvriendelijkere diensten van een betere kwaliteit en toegankelijkheid en het helpt ook dubbel werk te voorkomen.
 
-> ⚠️ **LET OP**
->
-> Het Utrecht Design System bevindt zich momenteel nog in de pilotfase.
-> Hierdoor kunnen er zaken veranderen.
-> Houdt hier dus rekening mee voor je aan de slag gaat.
-> We zouden het op prijs stellen als je wilt bijdragen om het Design System tot een succes te maken.
-> Dit kan in onze gitlab of met een mailtje aan: [r.olling@utrecht.nl](mailto:r.olling@utrecht.nl) of [j.du.chatinier@utrecht.nl](mailto:j.du.chatinier@utrecht.nl)
+<!-- markdownlint-disable no-inline-html -->
+
+<div class="utrecht-spotlight-section utrecht-spotlight-section--warning">
+
+⚠️ **LET OP**: Het Utrecht Design System bevindt zich momenteel nog in de pilotfase.
+
+Hierdoor kunnen er zaken veranderen. Houdt hier dus rekening mee voor je aan de slag gaat.
+
+We zouden het op prijs stellen als je wilt bijdragen om het Design System tot een succes te maken.
+Dit kan in onze gitlab of met een mailtje aan: [r.olling@utrecht.nl](mailto:r.olling@utrecht.nl) of [j.du.chatinier@utrecht.nl](mailto:j.du.chatinier@utrecht.nl)
+
+</div>
 
 ## Wat is een Design System
 
