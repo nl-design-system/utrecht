@@ -8,13 +8,14 @@ import prettier from 'prettier/standalone';
 import React from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
+import 'firacode/distr/fira_code.css';
 import '@utrecht/components/document/css/index.scss';
 import '@utrecht/components/html-content/css/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/property.css';
 import '@utrecht/design-tokens/dist/dark/index.css';
 import '@utrecht/design-tokens/src/background-image-icon.scss';
-import './storybook.css';
+import '@utrecht/storybook-helpers/src/storybook-docs.scss';
 
 defineCustomElements();
 
