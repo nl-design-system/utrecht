@@ -4,10 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/heading-3/README.md?raw';
 import tokensDefinition from '@utrecht/components/heading-3/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
 import { Heading3 } from './Heading3';
 import { designTokenStory } from './util';
-import '@utrecht/components/heading-3/css/index.scss';
 
 const meta = {
   title: 'CSS Component/Heading/Heading 3',
@@ -49,7 +47,7 @@ export const Default: StoryObj<typeof Heading3> = {
       type: 'ALPHA',
     },
   },
-  storyName: 'Heading 3',
+  name: 'Heading 3',
 };
 
 export const Distanced: StoryObj<typeof Heading3> = {
@@ -62,7 +60,7 @@ export const Distanced: StoryObj<typeof Heading3> = {
       type: 'WORK IN PROGRESS',
     },
   },
-  storyName: 'Distanced',
+  name: 'Distanced',
 };
 
 export const DesignTokens: StoryObj<typeof Heading3> = designTokenStory(meta);

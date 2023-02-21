@@ -4,19 +4,34 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
-import React from 'react';
+import { Heading6 as Heading6Component } from '@utrecht/component-library-react/dist/css-module';
+import type { Heading6Props } from '@utrecht/component-library-react/src/Heading6';
+import React, { PropsWithChildren } from 'react';
 
-export const Heading6 = ({ children = null, textContent = '', distanced = false, ...restProps }) => (
-  <h6
-    className={clsx('utrecht-heading-6', {
-      'utrecht-heading-6--distanced': distanced,
-    })}
+interface CSSHeading6Props extends Heading6Props {
+  distanced?: boolean;
+  textContent?: string;
+}
+
+export const Heading6 = ({
+  children = null,
+  textContent = '',
+  distanced = false,
+  ...restProps
+}: PropsWithChildren<CSSHeading6Props>) => (
+  <Heading6Component
     {...restProps}
+    style={
+      distanced
+        ? {
+            '--utrecht-space-around': 1,
+          }
+        : undefined
+    }
   >
     {children}
     {textContent}
-  </h6>
+  </Heading6Component>
 );
 
 export default Heading6;

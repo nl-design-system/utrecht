@@ -4,19 +4,34 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
-import React from 'react';
+import { Heading5 as Heading5Component } from '@utrecht/component-library-react/dist/css-module';
+import type { Heading5Props } from '@utrecht/component-library-react/src/Heading5';
+import React, { PropsWithChildren } from 'react';
 
-export const Heading5 = ({ children = null, textContent = '', distanced = false, ...restProps }) => (
-  <h5
-    className={clsx('utrecht-heading-5', {
-      'utrecht-heading-5--distanced': distanced,
-    })}
+interface CSSHeading5Props extends Heading5Props {
+  distanced?: boolean;
+  textContent?: string;
+}
+
+export const Heading5 = ({
+  children = null,
+  textContent = '',
+  distanced = false,
+  ...restProps
+}: PropsWithChildren<CSSHeading5Props>) => (
+  <Heading5Component
     {...restProps}
+    style={
+      distanced
+        ? {
+            '--utrecht-space-around': 1,
+          }
+        : undefined
+    }
   >
     {children}
     {textContent}
-  </h5>
+  </Heading5Component>
 );
 
 export default Heading5;

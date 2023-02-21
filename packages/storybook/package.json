@@ -37,6 +37,7 @@
     "@storybook/theming": "6.5.15",
     "@types/react": "18.0.26",
     "@utrecht/component-library-css": "workspace:*",
+    "@utrecht/component-library-react": "workspace:*",
     "@utrecht/components": "workspace:*",
     "@utrecht/design-tokens": "workspace:*",
     "@utrecht/documentation": "workspace:*",
@@ -66,6 +67,7 @@
   "scripts": {
     "build": "bin/build-storybook.js --output-dir dist/ --config-dir config/ --quiet",
     "clean": "rimraf dist/",
+    "lint:ts": "tsc --project ./tsconfig.json --noEmit",
     "start": "npx http-server dist/",
     "storybook": "bin/start-storybook.js --config-dir config/ --port 6006"
   }

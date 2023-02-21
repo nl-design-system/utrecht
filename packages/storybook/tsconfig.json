@@ -1,9 +1,12 @@
 {
-  "compilerOptions": {
-    "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true
-  },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx", "stories/**/*", "stories/**/*.ts", "stories/**/*.tsx"],
-  "exclude": ["**/node_modules/*"]
+  "compilerOptions": {
+    "types": ["node"],
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "jsx": "react-jsx",
+    "resolveJsonModule": true
+  },
+  "exclude": ["**/node_modules/*"],
+  "include": ["stories/csstype.d.ts", "stories/**/*.ts", "stories/**/*.tsx"]
 }

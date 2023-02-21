@@ -4,19 +4,34 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
-import React from 'react';
+import { Heading2 as Heading2Component } from '@utrecht/component-library-react/dist/css-module';
+import type { Heading2Props } from '@utrecht/component-library-react/src/Heading2';
+import React, { PropsWithChildren } from 'react';
 
-export const Heading2 = ({ children = null, textContent = '', distanced = false, ...restProps }) => (
-  <h2
-    className={clsx('utrecht-heading-2', {
-      'utrecht-heading-2--distanced': distanced,
-    })}
+interface CSSHeading2Props extends Heading2Props {
+  distanced?: boolean;
+  textContent?: string;
+}
+
+export const Heading2 = ({
+  children = null,
+  textContent = '',
+  distanced = false,
+  ...restProps
+}: PropsWithChildren<CSSHeading2Props>) => (
+  <Heading2Component
     {...restProps}
+    style={
+      distanced
+        ? {
+            '--utrecht-space-around': 1,
+          }
+        : undefined
+    }
   >
     {children}
     {textContent}
-  </h2>
+  </Heading2Component>
 );
 
 export default Heading2;
