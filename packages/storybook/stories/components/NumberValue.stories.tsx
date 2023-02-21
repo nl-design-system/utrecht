@@ -63,7 +63,7 @@ export const Default: StoryObj<typeof NumberValue> = {
       type: 'WORK IN PROGRESS',
     },
   },
-  storyName: 'Number value',
+  name: 'Number value',
 };
 
 export const Positive: StoryObj<typeof NumberValue> = {
@@ -77,7 +77,7 @@ export const Positive: StoryObj<typeof NumberValue> = {
       type: 'WORK IN PROGRESS',
     },
   },
-  storyName: 'Positive',
+  name: 'Positive',
 };
 
 export const Negative: StoryObj<typeof NumberValue> = {
@@ -91,7 +91,7 @@ export const Negative: StoryObj<typeof NumberValue> = {
       type: 'WORK IN PROGRESS',
     },
   },
-  storyName: 'Negative',
+  name: 'Negative',
 };
 
 export const NumberFormatting: StoryObj<typeof NumberValue> = {
@@ -107,7 +107,7 @@ export const NumberFormatting: StoryObj<typeof NumberValue> = {
     },
   },
 
-  storyName: 'Number formatting',
+  name: 'Number formatting',
 };
 
 export const DesignTokens: StoryObj<typeof NumberValue> = designTokenStory(meta);

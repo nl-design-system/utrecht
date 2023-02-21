@@ -3,10 +3,18 @@
  * Copyright (c) 2022 Gemeente Utrecht
  * Copyright (c) 2022 Frameless B.V.
  */
+import { NumberValue as NumberValueComponent } from '@utrecht/component-library-react/dist/css-module';
+import type { NumberValueProps } from '@utrecht/component-library-react/src/NumberValue';
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-export const defaultArgs = {
+interface CSSNumberValueProps extends NumberValueProps {
+  appearance?: string;
+  textContent?: string;
+  value?: string;
+}
+
+export const defaultArgs: CSSNumberValueProps = {
   appearance: '',
   textContent: '',
   value: '',
@@ -14,20 +22,21 @@ export const defaultArgs = {
 
 export const NumberValue = ({
   appearance = defaultArgs.appearance,
+  children,
   textContent = defaultArgs.textContent,
-  value = defaultArgs.value,
-}) => {
-  const className = clsx(
-    'utrecht-value-number',
-    appearance === 'negative' && 'utrecht-value-number--negative',
-    appearance === 'positive' && 'utrecht-value-number--positive',
-  );
-  return value ? (
-    <data value={String(value)} className={className}>
+  ...restProps
+}: PropsWithChildren<CSSNumberValueProps>) => {
+  return (
+    <NumberValueComponent
+      {...restProps}
+      className={clsx(
+        appearance === 'negative' && 'utrecht-value-number--negative',
+        appearance === 'positive' && 'utrecht-value-number--positive',
+      )}
+    >
+      {children}
       {textContent}
-    </data>
-  ) : (
-    <span className={className}>{textContent}</span>
+    </NumberValueComponent>
   );
 };
 
