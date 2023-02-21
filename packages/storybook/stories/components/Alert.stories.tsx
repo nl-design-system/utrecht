@@ -51,34 +51,36 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Alert>;
+} satisfies Meta<typeof Alert>;
 
 export default meta;
 
-export const Default: StoryObj<typeof Alert> = {};
+type Story = StoryObj<typeof meta>;
 
-export const Info: StoryObj<typeof Alert> = {
+export const Default = {};
+
+export const Info: Story = {
   args: {
     type: 'info',
   },
 };
 
-export const OK: StoryObj<typeof Alert> = {
+export const OK: Story = {
   args: {
     type: 'ok',
   },
 };
 
-export const Warning: StoryObj<typeof Alert> = {
+export const Warning: Story = {
   args: {
     type: 'warning',
   },
 };
 
-export const Error: StoryObj<typeof Alert> = {
+export const Error: Story = {
   args: {
     type: 'error',
   },
 };
 
-export const DesignTokens: StoryObj<typeof Alert> = designTokenStory(meta);
+export const DesignTokens = designTokenStory(meta);
