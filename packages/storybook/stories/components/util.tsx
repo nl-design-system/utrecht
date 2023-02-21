@@ -2,30 +2,45 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentTokensSection } from '@utrecht/documentation/components/ComponentTokensSection.jsx';
 import React from 'react';
 
-export const designTokenStory = (meta: Meta) => {
-  const DesignTokens: StoryObj = ({ tokens, definition, component }) => (
-    <ComponentTokensSection tokens={tokens} definition={definition} component={component} />
-  );
+interface DesignToken {
+  value?: string;
+}
 
-  const DesignTokensStory = DesignTokens.bind({});
+interface DesignTokenArgs {
+  tokens: Array<DesignToken>;
+  definition: Object;
+  component: string;
+}
 
-  DesignTokensStory.args = {
-    tokens: meta.parameters.tokens,
-    definition: meta.parameters.tokensDefinition,
-    component: meta.parameters.tokensPrefix,
+interface DesignTokenParameters {
+  parameters: {
+    tokens: Array<DesignToken>;
+    tokensDefinition: Object;
+    tokenPrefix: string;
   };
+}
 
-  DesignTokensStory.parameters = {
-    chromatic: {
-      disableSnapshot: true,
+export const designTokenStory = <T,>(meta: Meta<T> & DesignTokenParameters): StoryObj<T> => {
+  return {
+    args: {
+      tokens: meta.parameters['tokens'],
+      definition: meta.parameters['tokensDefinition'],
+      component: meta.parameters['tokensPrefix'],
     },
-    docs: {
-      source: {
-        code: '',
+    name: 'Design tokens',
+    render: ({ tokens, definition, component }: DesignTokenArgs) => (
+      <ComponentTokensSection tokens={tokens} definition={definition} component={component} />
+    ),
+    parameters: {
+      chromatic: {
+        disableSnapshot: true,
       },
+      docs: {
+        source: {
+          code: '',
+        },
+      },
+      status: null,
     },
-    status: null,
   };
-
-  return DesignTokensStory;
 };
