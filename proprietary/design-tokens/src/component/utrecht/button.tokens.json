@@ -19,13 +19,13 @@
       "icon": {
         "gap": { "value": "{utrecht.space.text.xs}" }
       },
-      "focus": {
-        "transform-scale": { "value": "1.02" }
-      },
       "disabled": {
         "background-color": { "value": "{utrecht.color.grey.90}" },
         "color": { "value": "{utrecht.color.grey.80}" },
         "border-color": { "value": "{utrecht.color.grey.80}" }
+      },
+      "hover": {
+        "scale": { "value": "1.02" }
       },
       "primary-action": {
         "background-color": { "value": "{utrecht.color.blue.35}" },
