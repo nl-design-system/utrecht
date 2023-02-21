@@ -3,10 +3,8 @@ import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import clsx from 'clsx';
 import defaultsDeep from 'lodash.defaultsdeep';
-import prettierBabel from 'prettier/parser-babel';
-import prettier from 'prettier/standalone';
 import React from 'react';
-import * as ReactDOMServer from 'react-dom/server';
+import { transformSource } from './transformSource';
 
 import 'firacode/distr/fira_code.css';
 import '@utrecht/components/document/css/index.scss';
@@ -97,16 +95,7 @@ const addonDocs = {
     source: {
       state: 'open',
     },
-    transformSource: (src, storyContext) => {
-      // Ensure valid HTML in the Preview source
-      if (storyContext.component) {
-        return prettier.format(
-          ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.parameters.args)),
-          { parser: 'babel', plugins: [prettierBabel] },
-        );
-      }
-      return src;
-    },
+    transformSource,
   },
 };
 
