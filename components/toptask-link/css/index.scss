@@ -30,7 +30,7 @@
 .utrecht-toptask-link:hover {
   background-color: var(--utrecht-toptask-link-hover-background-color, var(--utrecht-toptask-link-background-color));
   color: var(--utrecht-toptask-link-hover-color, var(--utrecht-toptask-link-color));
-  transform: scale(var(--utrecht-toptask-link-hover-transform-scale, 1));
+  transform: var(--utrecht-toptask-link-hover-transform-scale, 1);
 }
 
 .utrecht-toptask-link--focus-visible {
