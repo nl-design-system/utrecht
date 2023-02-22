@@ -13,10 +13,10 @@
   @include utrecht-button-group;
 }
 
-.utrecht-button-group__button-link--horizontal,
-.utrecht-button-group--horizontal .utrecht-button-link,
-.utrecht-button-group:not(.utrecht-button-group--vertical) .utrecht-button-link {
-  @include utrecht-button-group__button-link--horizontal;
+.utrecht-button-group__link-button--horizontal,
+.utrecht-button-group--horizontal .utrecht-link-button,
+.utrecht-button-group:not(.utrecht-button-group--vertical) .utrecht-link-button {
+  @include utrecht-button-group__link-button--horizontal;
 }
 
 .utrecht-button-group--vertical {
