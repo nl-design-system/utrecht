@@ -239,13 +239,14 @@
   background-color: var(--_utrecht-button-focus-background-color);
   border-color: var(--_utrecht-button-focus-border-color);
   color: var(--_utrecht-button-focus-color);
+  scale: var(--utrecht-button-focus-scale, 1);
 }
 
 @mixin utrecht-button--hover {
   background-color: var(--_utrecht-button-hover-background-color);
   border-color: var(--_utrecht-button-hover-border-color);
   color: var(--_utrecht-button-hover-color);
-  transform: scale(var(--utrecht-button-focus-transform-scale, 1));
+  scale: var(--utrecht-button-hover-scale, 1);
 }
 
 @mixin utrecht-button--pressed {

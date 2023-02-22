@@ -18,7 +18,7 @@
 @mixin utrecht-link-social--hover {
   background-color: var(--utrecht-link-social-hover-background-color, var(--utrecht-link-social-background-color));
   color: var(--utrecht-link-social-hover-color, var(--utrecht-link-social-color));
-  transform: scale(var(--utrecht-link-social-hover-transform-scale));
+  transform: var(--utrecht-link-social-hover-transform-scale);
 }
 
 @mixin utrecht-link-social--distanced {

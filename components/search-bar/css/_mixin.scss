@@ -7,7 +7,7 @@
 
 @mixin utrecht-search-bar {
   --utrecht-button-border-color: var(--utrecht-search-bar-button-border-color);
-  --utrecht-button-focus-transform-scale: var(--utrecht-search-bar-hover-transform);
+  --utrecht-button-hover-scale: var(--utrecht-search-bar-hover-transform);
   --utrecht-button-font-size: var(--utrecht-search-bar-button-font-size);
   --utrecht-button-font-weight: var(--utrecht-search-bar-button-font-weight);
   --utrecht-button-letter-spacing: var(--utrecht-search-bar-button-letter-spacing);
