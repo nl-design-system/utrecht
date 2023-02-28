@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
-import { UtrechtCheckboxAttr, UtrechtFieldsetAttr, UtrechtFormLabelAttr } from '@utrecht/component-library-angular';
+import { UtrechtFieldsetAttr, UtrechtFormLabelAttr } from '@utrecht/component-library-angular';
 
 export default {
   title: 'Angular Component/Form Fieldset',
@@ -26,7 +26,7 @@ export default {
   },
   decorators: [
     moduleMetadata({
-      declarations: [UtrechtFieldsetAttr, UtrechtCheckboxAttr, UtrechtFormLabelAttr],
+      declarations: [UtrechtFieldsetAttr, UtrechtFormLabelAttr],
       imports: [CommonModule],
     }),
   ],
@@ -42,31 +42,50 @@ const Template: Story = {
   render: (args) => ({
     props: args,
     template: `
-  <fieldset utrecht-fieldset [disabled]="disabled" [invalid]="invalid">
+  <fieldset utrecht-fieldset>
     {{textContent}}
   </fieldset>`,
     component: UtrechtFieldsetAttr,
   }),
 };
+
+const Template_Invalid: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+  <fieldset utrecht-fieldset invalid="true">
+    {{textContent}}
+  </fieldset>`,
+    component: UtrechtFieldsetAttr,
+  }),
+};
+
+const Template_Disabled: Story = {
+  render: (args) => ({
+    props: args,
+    template: `
+  <fieldset utrecht-fieldset disabled="true">
+    {{textContent}}
+  </fieldset>`,
+    component: UtrechtFieldsetAttr,
+  }),
+};
+
 export const Default: Story = {
   ...Template,
   args: {
     textContent: 'This is an utrecht fieldset.',
-    name: 'utrecht fieldset',
-    role: 'group',
   },
 };
 export const Invalid: Story = {
-  ...Template,
+  ...Template_Invalid,
   args: {
-    invalid: true,
     textContent: 'The contents of this utrecht fieldset are invalid. Please provide valid input.',
   },
 };
 export const Disabled: Story = {
-  ...Template,
+  ...Template_Disabled,
   args: {
-    disabled: true,
     textContent: 'This utrecht fieldset is disabled. You cannot edit its contents.',
   },
 };
