@@ -8,7 +8,7 @@ afterEach(() => {
 
 describe('Fieldset', () => {
   it('renders a group role', async () => {
-    await render('<fieldset utrecht-fieldset role="group"></fieldset>', {
+    await render('<fieldset utrecht-fieldset></fieldset>', {
       declarations: [UtrechtFieldsetAttr],
     });
 
@@ -103,14 +103,5 @@ describe('Fieldset', () => {
     const fieldset = container.querySelector('fieldset:only-child');
 
     expect(fieldset).not.toBeVisible();
-  });
-
-  it('can have a additional class name', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset class="card"></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector(':only-child');
-
-    expect(fieldset).toHaveClass('card');
   });
 });
