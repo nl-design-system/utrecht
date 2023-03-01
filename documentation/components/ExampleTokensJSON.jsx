@@ -5,7 +5,9 @@ import React from 'react';
 import { CopyButton } from './CopyButton';
 
 export const ExampleTokensJSON = ({ definition }) => {
-  const x = cloneDeepWith(definition, (item) => (isPlainObject(item.css) ? {} : undefined));
+  const x = cloneDeepWith(definition, (item) =>
+    isPlainObject(item['$extensions']) || isPlainObject(item['$value']) ? {} : undefined,
+  );
 
   const code = JSON.stringify(x, null, '  ');
   return (

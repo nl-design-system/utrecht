@@ -27,7 +27,16 @@ const findDesignTokens = (tokens, callback) => traverseDeep(tokens, [], tokens, 
 const tokensToCSS = (tokens) => {
   const lines = [];
   findDesignTokens(tokens, (path, value) =>
-    lines.push(`  --${path.join('-')}: ${value && value.css && value.css.syntax ? value.css.syntax : '<value>'};`),
+    lines.push(
+      `  --${path.join('-')}: ${
+        value &&
+        value['$extensions'] &&
+        value['$extensions']['nl.nldesignsystem.css.property'] &&
+        value['$extensions']['nl.nldesignsystem.css.property'].syntax
+          ? '<value>'
+          : undefined
+      };`,
+    ),
   );
   return `.your-theme {\n  /* Comment out the custom properties you don't need */\n${lines.join('\n')}\n}`;
 };

@@ -57,7 +57,7 @@ glob('../../components/**/tokens.json', function (err, paths) {
       tokens,
       [],
       tokens,
-      (value) => Object.prototype.hasOwnProperty.call(value, 'css'),
+      (value) => Object.prototype.hasOwnProperty.call(value, '$extensions'),
       (path, value) => cssVariables.push(path.join('-')),
     );
 
