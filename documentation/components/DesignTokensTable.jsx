@@ -4,7 +4,11 @@ export const path2css = (path) => `var(--${path.join('-')})`;
 import { ColorExample } from './ColorExample';
 
 const visualizeToken = (token) => {
-  if (token.css && token.css.syntax === '<color>') {
+  if (
+    token['$extensions'] &&
+    token['$extensions']['nl.nldesignsystem.css.property'] &&
+    token['$extensions']['nl.nldesignsystem.css.property'].syntax === '<color>'
+  ) {
     return <ColorExample color={token.value}></ColorExample>;
   } else {
     return '';
