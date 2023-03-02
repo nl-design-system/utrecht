@@ -1,11 +1,12 @@
 import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
 import { Meta, StoryObj } from '@storybook/react';
-import { Paragraph } from '@utrecht/component-library-react';
+import { Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 
-export const Default: Meta<typeof Paragraph> = {
+export const Default = {
   title: 'React Component/Paragraph',
+  id: 'react-paragraph',
   component: Paragraph,
   args: {
     lead: false,
@@ -23,10 +24,10 @@ export const Default: Meta<typeof Paragraph> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Paragraph>;
 
 export default Default;
-type Story = StoryObj<typeof Paragraph>;
+type Story = StoryObj<typeof Default>;
 
 export const Lead: Story = {
   args: {
