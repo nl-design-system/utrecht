@@ -3,11 +3,13 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { designTokenStory } from './util';
 
 export const Default = {
   title: 'React Component/Paragraph',
   id: 'react-paragraph',
   component: Paragraph,
+  tags: ['autodocs'],
   args: {
     lead: false,
     small: false,
@@ -41,3 +43,5 @@ export const Small: Story = {
     small: true,
   },
 };
+
+export const DesignTokens = designTokenStory(Default);
