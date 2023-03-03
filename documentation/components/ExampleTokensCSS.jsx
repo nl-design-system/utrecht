@@ -2,6 +2,7 @@ import isPlainObject from 'lodash.isplainobject';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { CopyButton } from './CopyButton';
+import { isHiddenDesignToken } from './design-tokens.js';
 
 const traverseDeep = (root, parents, current, valueTest, callback) => {
   if (valueTest(current)) {
@@ -26,7 +27,10 @@ const findDesignTokens = (tokens, callback) => traverseDeep(tokens, [], tokens, 
 
 const tokensToCSS = (tokens) => {
   const lines = [];
-  findDesignTokens(tokens, (path, value) =>
+  findDesignTokens(tokens, (path, value) => {
+    if (isHiddenDesignToken(value)) {
+      return;
+    }
     lines.push(
       `  --${path.join('-')}: ${
         value &&
@@ -36,8 +40,8 @@ const tokensToCSS = (tokens) => {
           ? '<value>'
           : undefined
       };`,
-    ),
-  );
+    );
+  });
   return `.your-theme {\n  /* Comment out the custom properties you don't need */\n${lines.join('\n')}\n}`;
 };
 
