@@ -1,7 +1,7 @@
 {/* @license CC0-1.0 */}
 
 import { Description, Meta, Source } from "@storybook/addon-docs";
-import { utrechtSurfaceBackgroundColor } from "../../../../proprietary/design-tokens/dist/index.js";
+import { utrechtSurfaceBackgroundColor } from "../../../../proprietary/design-tokens/dist/index.mjs";
 import document from "../../README.md";
 
 <Meta id="css-surface--readme" title="CSS Component/Surface/README" />
@@ -17,7 +17,7 @@ To make the browser user interface match your websites surface background color,
 For projects that use JSX and React, the following code sample shows how to refer to the design token package to automatically use the most recent choice of color.
 
 ```jsx
-import { utrechtSurfaceBackgroundColor } from "@utrecht/design-tokens/dist/index.js";
+import { utrechtSurfaceBackgroundColor } from "@utrecht/design-tokens/dist/index.mjs";
 
 export const ThemeColor = () => <meta name="theme-color" content={utrechtSurfaceBackgroundColor} />;
 ```

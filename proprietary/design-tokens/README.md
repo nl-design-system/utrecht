@@ -84,7 +84,7 @@ This file should only be included when you have visual regression test for both 
 Use files from this package in JavaScript projects, for example in React Native or Storybook:
 
 ```js
-import { utrechtButtonFontSize } from "@utrecht/design-tokens/dist/index.js";
+import { utrechtButtonFontSize } from "@utrecht/design-tokens/dist/index.mjs";
 ```
 
 ### `dist/_variables.scss`

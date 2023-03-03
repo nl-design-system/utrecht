@@ -1,6 +1,6 @@
 import { addons } from '@storybook/addons';
 import { create } from '@storybook/theming/create';
-import { utrechtTypographySansSerifFontFamily } from '@utrecht/design-tokens/dist/index.js';
+import { utrechtTypographySansSerifFontFamily } from '@utrecht/design-tokens/dist/index.mjs';
 import theme from '@utrecht/storybook-helpers/storybook-theme.json';
 
 addons.setConfig({

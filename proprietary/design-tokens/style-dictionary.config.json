@@ -15,12 +15,16 @@
       "buildPath": "dist/",
       "files": [
         {
-          "destination": "index.js",
+          "destination": "index.cjs",
+          "format": "javascript/module-flat"
+        },
+        {
+          "destination": "index.mjs",
           "format": "javascript/es6"
         },
         {
           "format": "javascript/module",
-          "destination": "tokens.js"
+          "destination": "tokens.cjs"
         }
       ]
     },
