@@ -1,11 +1,14 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { DesignTokensTable } from './DesignTokensTable';
+import { isHiddenDesignToken } from './design-tokens.js';
 
 export const ComponentTokensTable = ({ component, tokens }) => {
   const componentPath = ['utrecht', component.replace(/^(example|denhaag|utrecht)-/, '')];
 
-  const subset = tokens.filter((token) => componentPath.every((name, index) => token.path[index] === name));
+  const subset = tokens
+    .filter((token) => componentPath.every((name, index) => token.path[index] === name))
+    .filter((token) => !isHiddenDesignToken(token));
 
   if (subset.length === 0) {
     return (

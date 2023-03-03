@@ -1,15 +1,25 @@
 import cloneDeepWith from 'lodash.clonedeepwith';
 import isPlainObject from 'lodash.isplainobject';
+import mapValues from 'lodash.mapvalues';
+import omitBy from 'lodash.omitby';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { CopyButton } from './CopyButton';
+import { isHiddenDesignToken } from './design-tokens.js';
 
 export const ExampleTokensJSON = ({ definition }) => {
-  const x = cloneDeepWith(definition, (item) =>
-    isPlainObject(item['$extensions']) || isPlainObject(item['$value']) ? {} : undefined,
-  );
+  const filter = (item) =>
+    isPlainObject(item['$extensions']) || isPlainObject(item['$value'])
+      ? {}
+      : isPlainObject(item)
+      ? mapValues(
+          omitBy(item, (item) => isHiddenDesignToken(item)),
+          (item) => cloneDeepWith(item, filter),
+        )
+      : undefined;
+  const tokens = cloneDeepWith(definition, filter);
 
-  const code = JSON.stringify(x, null, '  ');
+  const code = JSON.stringify(tokens, null, '  ');
   return (
     <section>
       <h2>
