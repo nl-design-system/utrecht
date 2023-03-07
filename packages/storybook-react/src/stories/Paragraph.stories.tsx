@@ -1,12 +1,13 @@
-// import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
+import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
+import { Description } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-// import React from 'react';
-import { CustomDocumentationComponent } from './CustomDocumentationComponent';
+import React from 'react';
 import { designTokenStory } from './util';
 
+const Documentation = () => <Description markdown={readme} />;
 export const Default = {
   title: 'React Component/Paragraph',
   id: 'react-paragraph',
@@ -22,18 +23,7 @@ export const Default = {
     tokens,
     tokensDefinition,
     docs: {
-      page: CustomDocumentationComponent /* option 1: https://storybook.js.org/docs/react/writing-docs/docs-page#with-a-custom-component */,
-      /* option 2: https://storybook.js.org/docs/react/writing-docs/docs-page#remixing-docspage-using-doc-blocks */
-      // page: () => (
-      //   <>
-      //     <Title />
-      //     <Subtitle />
-      //     <Description />
-      //     <Primary />
-      //     <ArgsTable story={PRIMARY_STORY} />
-      //     <Stories />
-      //   </>
-      // )
+      page: Documentation,
     },
   },
 } satisfies Meta<typeof Paragraph>;
