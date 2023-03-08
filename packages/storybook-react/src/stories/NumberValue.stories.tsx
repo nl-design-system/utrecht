@@ -7,6 +7,9 @@ const meta = {
   title: 'React Component/Number Value',
   id: 'react-value-number',
   component: NumberValue,
+  args: {
+    children: '1234567890',
+  },
   argTypes: {
     value: {
       name: 'value',
@@ -17,7 +20,6 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     docs: {
       description: {
@@ -25,21 +27,17 @@ const meta = {
       },
     },
   },
-} as Meta<typeof NumberValue>;
+} satisfies Meta<typeof NumberValue>;
 
 export default meta;
 
-const Template: StoryObj<typeof NumberValue> = (args) => <NumberValue {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
+export const Default: Story = {};
 
-Default.args = {
-  children: '1234567890',
-};
-
-export const WithFormatting = Template.bind({});
-
-WithFormatting.args = {
-  children: '1.234.567.890',
-  value: '1234567890',
+export const WithFormatting: Story = {
+  args: {
+    children: '1.234.567.890',
+    value: '1234567890',
+  },
 };
