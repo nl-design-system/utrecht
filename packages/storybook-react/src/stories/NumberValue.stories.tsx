@@ -33,7 +33,7 @@ const meta = {
       ),
     },
   },
-} as Meta<typeof NumberValue>;
+} satisfies Meta<typeof NumberValue>;
 
 export default meta;
 

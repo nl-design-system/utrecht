@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph, Strong } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/emphasis/README.md?raw';
@@ -11,27 +12,29 @@ const meta = {
   id: 'react-strong',
   component: Strong,
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
-  tags: ['autodocs'],
+  args: {
+    children: 'Hello, World!',
+  },
   parameters: {
     tokensPrefix: 'utrecht-emphasis',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Strong>;
+} satisfies Meta<typeof Strong>;
 
 export default meta;
 
-const Template: StoryObj<typeof Strong> = (args) => <Strong {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'Hello, World!',
-};
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);
