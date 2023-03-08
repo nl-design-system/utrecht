@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { PreHeading } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/pre-heading/README.md?raw';
@@ -13,23 +14,26 @@ const meta = {
   args: {
     children: 'Lorem ipsum dolor sit amet',
   },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-pre-heading',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof PreHeading>;
+} satisfies Meta<typeof PreHeading>;
 
 export default meta;
 
-const Template: StoryObj<typeof PreHeading> = (args) => <PreHeading {...args} />;
-
-export const Default = Template.bind({});
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);
