@@ -1,4 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Description } from '@storybook/addon-docs';
+import { Meta } from '@storybook/react';
 import { Code } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/code/README.md?raw';
 import tokensDefinition from '@utrecht/components/code/tokens.json';
@@ -6,31 +7,24 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
 
-const meta = {
+const Documentation = () => <Description markdown={readme} />;
+export const Default = {
   title: 'React Component/Code',
   id: 'react-code',
   component: Code,
-  tags: ['autodocs'],
+  args: {
+    children: '<input type="url" value="https://example.fi/">',
+  },
   parameters: {
     tokensPrefix: 'utrecht-code',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: Documentation,
     },
   },
 } as Meta<typeof Code>;
 
-export default meta;
+export default Default;
 
-const Template: StoryObj<typeof Code> = (args) => <Code {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: '<input type="url" value="https://example.fi/">',
-};
-
-export const DesignTokens = designTokenStory(meta);
+export const DesignTokens = designTokenStory(Default);
