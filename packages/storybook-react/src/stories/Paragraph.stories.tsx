@@ -8,7 +8,8 @@ import React from 'react';
 import { designTokenStory } from './util';
 
 const Documentation = () => <Description markdown={readme} />;
-export const Default = {
+
+const meta = {
   title: 'React Component/Paragraph',
   id: 'react-paragraph',
   component: Paragraph,
@@ -28,8 +29,8 @@ export const Default = {
   },
 } satisfies Meta<typeof Paragraph>;
 
-export default Default;
-type Story = StoryObj<typeof Default>;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const Lead: Story = {
   args: {
