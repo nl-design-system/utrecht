@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.443",
+  "version": "1.0.0-alpha.444",
   "author": "Community for NL Design System",
   "description": "Design Tokens for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "SEE LICENSE IN ../LICENSE.md",
@@ -26,7 +26,7 @@
     "regex-trie": "1.0.4",
     "rimraf": "3.0.2",
     "sass": "1.57.1",
-    "style-dictionary": "3.7.1"
+    "style-dictionary": "3.7.2"
   },
   "scripts": {
     "build": "npm run build:style-dictionary && npm run build:scss",

@@ -1,9 +1,11 @@
 {
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true
+    "resolveJsonModule": true
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["**/node_modules/*"]
 }

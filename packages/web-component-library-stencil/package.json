@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.449",
+  "version": "1.0.0-alpha.450",
   "author": "Community for NL Design System",
   "description": "Stencil component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -27,9 +27,9 @@
   },
   "devDependencies": {
     "@stencil/react-output-target": "0.3.1",
-    "@stencil/sass": "2.0.1",
+    "@stencil/sass": "2.0.4",
     "@stencil/vue-output-target": "0.6.2",
-    "@types/jest": "29.2.5",
+    "@types/jest": "29.2.6",
     "@utrecht/components": "workspace:*",
     "@utrecht/icon": "workspace:*",
     "chokidar-cli": "3.0.0",
