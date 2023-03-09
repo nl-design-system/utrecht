@@ -28,7 +28,7 @@ keywords:
 
 ## Doel van het onderzoek
 
-Er achter komen of bij de volgende onderwerpen één van de getoonde iconen significant duidelijker is dan de andere:
+Er achter komen of bij de volgende onderwerpen één van de getoonde iconen veel duidelijker is dan de andere:
 
 - Informatie over de gemeenteraad
 - Informatie over burgemeester
@@ -41,7 +41,7 @@ Het onderzoek is gestart op 14 februari 2023 en geindigd op 4 maart 2023.
 
 ## Opzet
 
-We hebben de enquete gestuurd naar inwoners, ambtenaren, designers en developers. Daarnaast is de enquete ook nog doorgestuurd naar deelnemers van openGemeenten. We hebben gevraagd welke knoppen het beste passen bij het onderwerp, en we hebben gevraagd of de respondent dit wilde toelichten. In totaal hebben 38 mensen de enquete ingevuld.
+We hebben de enquete gestuurd naar inwoners, ambtenaren, designers en developers. Daarnaast is de enquete ook nog doorgestuurd naar deelnemers van openGemeenten. We hebben gevraagd welke knoppen het beste passen bij het onderwerp en we hebben gevraagd of de respondent dit wilde toelichten. In totaal hebben 38 mensen de enquete ingevuld.
 
 ## Resultaten en inzichten
 
