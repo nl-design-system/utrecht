@@ -24,7 +24,7 @@ keywords:
 
 # Onderzoek iconen Februari 2023
 
-tl;dr: Weten we nog niet
+**tl;dr: Er zijn een aantal sterke voorkeuren bij de iconen te zien als het gaat over de gemeenteraad en de afvalcontainers.**
 
 ## Doel van het onderzoek
 
@@ -37,15 +37,15 @@ Er achter komen of bij de volgende onderwerpen één van de getoonde iconen sign
 
 ## Datum onderzoek
 
-Het onderzoek is gestart op 14 februari 2023 en geindigd op -DATUM-.
+Het onderzoek is gestart op 14 februari 2023 en geindigd op 4 maart 2023.
 
 ## Opzet
 
-We hebben de enquete gestuurd naar inwoners, ambtenaren, designers en developers. Daarnaast is de enquete ook nog doorgestuurd naar deelnemers van openGemeenten. We hebben gevraagd welke knoppen het beste passen bij het onderwerp, en we hebben gevraagd of de respondent dit wilde toelichten. In totaal hebben -AANTAL- mensen de enquete ingevuld.
+We hebben de enquete gestuurd naar inwoners, ambtenaren, designers en developers. Daarnaast is de enquete ook nog doorgestuurd naar deelnemers van openGemeenten. We hebben gevraagd welke knoppen het beste passen bij het onderwerp, en we hebben gevraagd of de respondent dit wilde toelichten. In totaal hebben 38 mensen de enquete ingevuld.
 
 ## Resultaten en inzichten
 
-Er is bij een aantal vragen een duidelijke voorkeur te zien voor een icoon, zie de percentages bij de resultaten boven. We zien die duidelijke voorkeur terug bij -ONDERWERPEN-
+Er is bij een aantal vragen een duidelijke voorkeur te zien voor een icoon, zie de percentages bij de resultaten boven. We zien die duidelijke voorkeur terug bij het icoon over de gemeenteraad en de afvalcontainer.
 
 Hieronder volgende de inzichten, specifiek per vraag.
 
@@ -57,11 +57,26 @@ Hieronder volgende de inzichten, specifiek per vraag.
 
 #### Resultaten Gemeenteraad
 
--RESULTATEN-
+- Knop A: 21% (8 stemmen)
+- Knop B: 74% (28 stemmen)
+- Knop C: 3% (1 stem)
+- Knop D: 3% (1 stem)
 
-#### Inzicht: -INZICHT GEMEENTERAAD-
+#### Inzicht: Voorkeur voor icoon B
 
--INZICHT-
+Met vier vragen en 74% van de stemmen heeft het icoon dat gebruikt wordt bij knop B een duidelijk voorkeur.
+
+#### Inzicht: Gelijkwaardig overleg wordt geassocieerd met de gemeenteraad
+
+Uit een groot aantal opmerkingen (14 stuks, 37%) blijkt dat een groep mensen die met elkaar op gelijkwaardig niveau dingen bespreken essentiele kenmerken zijn van de gemeenteraad. Zij verwachten dat ook terug te zien in een icoon
+
+#### Inzicht: Icoon A wordt geassocieerd met een toespraak of presentatie
+
+Een prettige bijvangst: icoon A wordt gezien (11 opmerkingen, 29%) als iemand die een toespraak houdt of een presentatie geeft.
+
+#### Inzicht: Het is niet duidelijk wat uitgebeeld wordt met icoon D
+
+Het was voor veel (15 opmerkingen, 39%) van de respondenten niet duidelijk wat er uitgebeeld werd met icoon D. Het werd als vanalles gezien, van schilderspallet tot ufo.
 
 ### Burgemeester
 
@@ -71,11 +86,13 @@ Hieronder volgende de inzichten, specifiek per vraag.
 
 #### Resultaten Burgemeester
 
--RESULTATEN-
+- Knop A: 45% (17 stemmen)
+- Knop B: 26% (10 stemmen)
+- Knop C: 29% (11 stemmen)
 
-#### Inzicht: -INZICHT BURGEMEESTER-
+#### Inzicht: De meningen zijn vervdeeld over welk kapsel welk geslacht voorstelt
 
--INZICHT-
+Bij deze vraag kwamen veel (16, 42%) opmerkingen opmerkingen over het geslacht van het poppetje in het icoon. Opvallend was dat deze opmerkingen elkaar tegenspraken. Waar de ene persoon een icoontje genderneutraal vind, ziet de ander er weer duidelijk een geslacht in.
 
 ### Afvalcontainer
 
@@ -85,11 +102,22 @@ Hieronder volgende de inzichten, specifiek per vraag.
 
 #### Resultaten Afvalcontainer
 
--RESULTATEN-
+- Knop A: 32% (12 stemmen)
+- Knop B: 39% (15 stemmen)
+- Knop C: 11% (4 stemmen)
+- Knop D: 18% (7 stemmen)
 
-#### Inzicht: -INZICHT AFVALCONAINER-
+#### Inzicht: Het icoon van de moderne afvalcontainer wordt gezien als de beste keuze
 
--INZICHT-
+Knoppen A en B tonen beiden de moderne afvalcontainer en hebben samen het overgrote deel (27, 71%) van de stemmen ontvangen.
+
+#### Inzicht: Veel van de respondenten vinden niet dat er een vuilniszak naast de container moet staan in het icoon
+
+Veel respondenten (17, 45%) vinden het een slecht idee om een vuilniszak 'naast' de container te zetten, omdat zij vinden dat het op zou roepen om vuilniszakken naast de container te plaatsen, wat een probleem is bij de gemeente.
+
+#### Inzicht: De vuilniszak naast de afvalcontainer maakt het duidelijker dat het om een afvalcontainer gaat
+
+Veel respondenten (18, 47%) geven aan dat de vuiliniszak in het icoon het duidelijker maakt dat het om een afvalcontainer gaat. Vaak (bij 6 van de 18) gebeurt dat ook door dezelfde mensen die aangeven dat ze eigenlijk vinden dat de vuilniszak er niet bij moet.
 
 ### Afval
 
@@ -99,11 +127,20 @@ Hieronder volgende de inzichten, specifiek per vraag.
 
 #### Resultaten Afval
 
--RESULTATEN-
+- Knop A: 55% (21 stemmen)
+- Knop B: 45% (17 stemmen)
 
-#### Inzicht: -INZICHT AFVAL-
+#### Inzicht: Een aantal van de respondenten vinden niet dat er een vuilniszak naast de kliko moet staan in het icoon
 
--INZICHT-
+Een aantal respondenten (6, 16%) vinden het een slecht idee om een vuilniszak 'naast' de kliko te zetten, omdat zij vinden dat het op zou roepen om vuilniszakken naast de kliko te plaatsen, wat een probleem is bij de gemeente.
+
+#### Inzicht: De vuilniszak naast de kliko maakt het duidelijker dat het om een vuilnisbak gaat
+
+Veel respondenten (12, 32%) geven aan dat de vuiliniszak in het icoon het duidelijker maakt dat het om een afvalbak gaat.
+
+#### Inzicht: De vuilniszak naast de kliko is overbodig
+
+Een aantal respondenten (6, 32%) geven aan dat de vuiliniszak overbodig is omdat de kliko al duidelijk genoeg is.
 
 ## Wie hebben het onderzocht
 
