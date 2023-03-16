@@ -5,6 +5,11 @@ import { UtrechtFieldsetAttr, UtrechtFormLabelAttr } from '@utrecht/component-li
 export default {
   title: 'Angular Component/Form Fieldset',
   id: 'angular-component-form-fieldset',
+  args: {
+    textContent: '',
+    disabled: false,
+    invalid: false,
+  },
   argTypes: {
     invalid: {
       type: { name: 'boolean', required: false },
@@ -42,29 +47,7 @@ const Template: Story = {
   render: (args) => ({
     props: args,
     template: `
-  <fieldset utrecht-fieldset>
-    {{textContent}}
-  </fieldset>`,
-    component: UtrechtFieldsetAttr,
-  }),
-};
-
-const Template_Invalid: Story = {
-  render: (args) => ({
-    props: args,
-    template: `
-  <fieldset utrecht-fieldset invalid="true">
-    {{textContent}}
-  </fieldset>`,
-    component: UtrechtFieldsetAttr,
-  }),
-};
-
-const Template_Disabled: Story = {
-  render: (args) => ({
-    props: args,
-    template: `
-  <fieldset utrecht-fieldset disabled="true">
+  <fieldset utrecht-fieldset [disabled]="disabled" [invalid]="invalid">
     {{textContent}}
   </fieldset>`,
     component: UtrechtFieldsetAttr,
@@ -78,14 +61,16 @@ export const Default: Story = {
   },
 };
 export const Invalid: Story = {
-  ...Template_Invalid,
+  ...Template,
   args: {
+    invalid: true,
     textContent: 'The contents of this utrecht fieldset are invalid. Please provide valid input.',
   },
 };
 export const Disabled: Story = {
-  ...Template_Disabled,
+  ...Template,
   args: {
+    disabled: true,
     textContent: 'This utrecht fieldset is disabled. You cannot edit its contents.',
   },
 };
