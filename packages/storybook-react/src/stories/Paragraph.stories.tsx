@@ -17,6 +17,24 @@ const meta = {
     children:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
   },
+  argTypes: {
+    lead: {
+      name: 'lead',
+      type: { name: 'boolean', required: false },
+      table: {
+        category: 'API',
+        defaultValue: { summary: false },
+      },
+    },
+    small: {
+      name: 'small',
+      type: { name: 'boolean', required: false },
+      table: {
+        category: 'API',
+        defaultValue: { summary: false },
+      },
+    },
+  },
   parameters: {
     tokensPrefix: 'utrecht-paragraph',
     tokens,
@@ -32,7 +50,9 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<typeof Paragraph>;
+} as Meta<typeof Paragraph>;
+
+export default meta;
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
@@ -50,4 +70,4 @@ export const Small: Story = {
   },
 };
 
-export const DesignTokens = designTokenStory(Default);
+export const DesignTokens = designTokenStory(meta);
