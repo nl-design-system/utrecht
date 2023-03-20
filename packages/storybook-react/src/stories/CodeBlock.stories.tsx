@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { CodeBlock } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/code-block/README.md?raw';
@@ -10,37 +11,39 @@ const meta = {
   title: 'React Component/Code block',
   id: 'react-code-block',
   component: CodeBlock,
-  tags: ['autodocs'],
+  args: {
+    children: `<!DOCTYPE html>
+      <html lang="nl" dir="ltr">
+        <head>
+          <title>NL Design System</title>
+          <meta charset="utf-8"/>
+        </head>
+        <body>
+          <h1>NL Design System</h1>
+        </body>
+      </html>
+  `,
+  },
   parameters: {
     tokensPrefix: 'utrecht-code-block',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof CodeBlock>;
+} satisfies Meta<typeof CodeBlock>;
 
 export default meta;
 
-const Template: StoryObj<typeof CodeBlock> = (args) => <CodeBlock {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: `<!DOCTYPE html>
-  <html lang="nl" dir="ltr">
-    <head>
-      <title>NL Design System</title>
-      <meta charset="utf-8"/>
-    </head>
-    <body>
-      <h1>NL Design System</h1>
-    </body>
-  </html>
-  `,
-};
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

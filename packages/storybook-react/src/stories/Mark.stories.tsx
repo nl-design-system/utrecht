@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Mark } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/mark/README.md?raw';
@@ -14,29 +15,33 @@ const meta = {
     children: {
       name: 'Text content',
       type: { name: 'string', required: true },
+      table: {
+        category: 'API',
+      },
     },
   },
-  tags: ['autodocs'],
+  args: {
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+  },
   parameters: {
     tokensPrefix: 'utrecht-mark',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Mark>;
+} satisfies Meta<typeof Mark>;
 
 export default meta;
 
-const Template: StoryObj<typeof Mark> = (args) => <Mark {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
-};
-
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 export const DesignTokens = designTokenStory(meta);
