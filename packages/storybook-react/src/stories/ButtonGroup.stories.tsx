@@ -1,4 +1,4 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
 import { Button, ButtonGroup } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/button-group/README.md?raw';
@@ -27,7 +27,7 @@ const meta = {
     docs: {
       page: () => (
         <>
-          <Description markdown={readme} />
+          <Description>{readme}</Description>
           <Primary />
           <ArgsTable story={PRIMARY_STORY} />
           <Stories />
