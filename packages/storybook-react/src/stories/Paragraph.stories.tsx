@@ -1,5 +1,5 @@
 import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
@@ -11,6 +11,7 @@ const meta = {
   title: 'React Component/Paragraph',
   id: 'react-paragraph',
   component: Paragraph,
+  tags: ['autodocs'],
   args: {
     lead: false,
     small: false,
@@ -42,7 +43,7 @@ const meta = {
     docs: {
       page: () => (
         <>
-          <Description markdown={readme} />
+          <Description>{readme}</Description>
           <Primary />
           <ArgsTable story={PRIMARY_STORY} />
           <Stories />

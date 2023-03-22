@@ -18,7 +18,7 @@ const meta = {
     docs: {
       page: () => (
         <>
-          <Description markdown={readme} />
+          <Description>{readme}</Description>
           <Primary />
           <ArgsTable story={PRIMARY_STORY} />
           <Stories />
