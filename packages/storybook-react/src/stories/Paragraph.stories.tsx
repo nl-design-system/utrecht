@@ -59,12 +59,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Lead: Story = {
+  name: 'Lead',
   args: {
     ...Default.args,
     lead: true,
   },
 };
 export const Small: Story = {
+  name: 'Small',
   args: {
     ...Default.args,
     small: true,
