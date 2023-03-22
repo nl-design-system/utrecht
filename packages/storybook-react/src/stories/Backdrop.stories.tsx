@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { AlertDialog, Backdrop, Button, Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/backdrop/README.md?raw';
@@ -10,36 +11,38 @@ const meta = {
   title: 'React Component/Backdrop',
   id: 'react-backdrop',
   component: Backdrop,
-  tags: ['autodocs'],
+  args: {
+    children: (
+      <AlertDialog open>
+        <Paragraph>Greetings, one and all!</Paragraph>
+        <form method="dialog">
+          <Button type="submit" appearance="primary-action-button">
+            OK
+          </Button>
+        </form>
+      </AlertDialog>
+    ),
+  },
   parameters: {
     tokensPrefix: 'utrecht-backdrop',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Backdrop>;
+} satisfies Meta<typeof Backdrop>;
 
 export default meta;
 
-const Template: StoryObj<typeof Backdrop> = (args) => <Backdrop {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: (
-    <AlertDialog open>
-      <Paragraph>Greetings, one and all!</Paragraph>
-      <form method="dialog">
-        <Button type="submit" appearance="primary-action-button">
-          OK
-        </Button>
-      </form>
-    </AlertDialog>
-  ),
-};
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

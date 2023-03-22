@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: '[utrecht-fieldset]',
@@ -8,8 +8,13 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
   encapsulation: ViewEncapsulation.None,
   host: {
     '[class.utrecht-fieldset]': 'true',
+    '[class.utrecht-form-fieldset--html-fieldset]': 'true',
+    '[class.utrecht-form-fieldset--disabled]': 'disabled || null',
+    '[class.utrecht-form-fieldset--invalid]': 'invalid || null',
   },
 })
 export class UtrechtFieldsetAttr {
+  @Input() disabled?: boolean = false;
+  @Input() invalid?: boolean = false;
   constructor() {}
 }

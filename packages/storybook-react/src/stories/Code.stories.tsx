@@ -1,5 +1,5 @@
-import { Description } from '@storybook/addon-docs';
-import { Meta } from '@storybook/react';
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
+import { Meta, StoryObj } from '@storybook/react';
 import { Code } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/code/README.md?raw';
 import tokensDefinition from '@utrecht/components/code/tokens.json';
@@ -7,24 +7,41 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
 
-const Documentation = () => <Description markdown={readme} />;
-export const Default = {
+const meta = {
   title: 'React Component/Code',
   id: 'react-code',
   component: Code,
   args: {
     children: '<input type="url" value="https://example.fi/">',
   },
+  argTypes: {
+    children: {
+      name: 'Text content',
+      type: { name: 'string', required: true },
+      table: {
+        category: 'API',
+      },
+    },
+  },
   parameters: {
     tokensPrefix: 'utrecht-code',
     tokens,
     tokensDefinition,
     docs: {
-      page: Documentation,
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Code>;
+} satisfies Meta<typeof Code>;
 
-export default Default;
+export default meta;
 
-export const DesignTokens = designTokenStory(Default);
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
+export const DesignTokens = designTokenStory(meta);

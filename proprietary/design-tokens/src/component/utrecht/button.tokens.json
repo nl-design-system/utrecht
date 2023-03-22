@@ -174,9 +174,20 @@
       },
       "subtle": {
         "background-color": { "value": "transparent" },
-        "border-width": { "value": "0" },
-        "color": { "value": "{utrecht.color.grey.40}" },
-        "hover": {},
+        "border-color": { "value": "transparent" },
+        "border-width": { "value": "{utrecht.border-width.md}" },
+        "color": { "value": "{utrecht.color.blue.35}" },
+        "font-weight": { "value": "700" },
+        "hover": {
+          "background-color": { "value": "{utrecht.color.white}" },
+          "color": { "value": "{utrecht.color.blue.35}" },
+          "border-color": { "value": "{utrecht.color.blue.40}" }
+        },
+        "focus": {
+          "background-color": { "value": "{utrecht.color.white}" },
+          "color": { "value": "{utrecht.color.blue.35}" },
+          "border-color": { "value": "{utrecht.color.blue.35}" }
+        },
         "disabled": {
           "background-color": { "value": "transparent" },
           "color": { "value": "{utrecht.color.grey.80}" }

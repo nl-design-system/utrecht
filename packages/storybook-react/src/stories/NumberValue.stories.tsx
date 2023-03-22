@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { NumberValue } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/value-number/README.md?raw';
@@ -7,6 +8,9 @@ const meta = {
   title: 'React Component/Number Value',
   id: 'react-value-number',
   component: NumberValue,
+  args: {
+    children: '1234567890',
+  },
   argTypes: {
     value: {
       name: 'value',
@@ -17,29 +21,29 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description markdown={readme} />
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof NumberValue>;
+} satisfies Meta<typeof NumberValue>;
 
 export default meta;
 
-const Template: StoryObj<typeof NumberValue> = (args) => <NumberValue {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
+export const Default: Story = {};
 
-Default.args = {
-  children: '1234567890',
-};
-
-export const WithFormatting = Template.bind({});
-
-WithFormatting.args = {
-  children: '1.234.567.890',
-  value: '1234567890',
+export const WithFormatting: Story = {
+  args: {
+    children: '1.234.567.890',
+    value: '1234567890',
+  },
 };
