@@ -94,7 +94,7 @@ export const AccordionSection = forwardRef(
       <div className={clsx('utrecht-accordion__section')} id={id} ref={ref}>
         <Heading level={headingLevel} className={clsx('utrecht-accordion__header')}>
           <Button
-            className={clsx('utrecht-accordion__button')}
+            className={clsx('utrecht-accordion__button', expanded && 'utrecht-accordion__button--expanded')}
             appearance="subtle-button"
             aria-expanded={expanded === true}
             aria-controls={panelId}

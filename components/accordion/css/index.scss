@@ -26,6 +26,17 @@
   }
 }
 
+.utrecht-accordion__button--expanded {
+  @include utrecht-accordion__button--expanded;
+}
+
 .utrecht-accordion__body {
   @include utrecht-accordion__body;
+}
+
+.utrecht-accordion__section {
+  border-block-end-width: var(--utrecht-accordion-section-border-block-end-width, 0);
+  border-color: var(--utrecht-accordion-section-border-color, transparent);
+  border-style: solid;
+  border-width: var(--utrecht-accordion-section-border-width, 0);
 }
