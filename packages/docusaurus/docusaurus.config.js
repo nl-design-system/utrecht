@@ -80,6 +80,10 @@ module.exports = {
         theme: require('prism-react-renderer/themes/github'),
       },
       navbar,
+      tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 2,
+      },
       algolia: {
         // The application ID provided by Algolia
         appId: 'JTF8SIMZ2F',
