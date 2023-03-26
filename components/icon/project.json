@@ -6,7 +6,10 @@
   "targets": {
     "build": {
       "executor": "@nrwl/workspace:run-commands",
-      "outputs": ["{projectRoot}/dist", "{workspaceRoot}/packages/web-component-library-stencil/src/generated"],
+      "outputs": [
+        "{projectRoot}/dist",
+        "{workspaceRoot}/packages/web-component-library-stencil/src/components/generated"
+      ],
       "options": {
         "command": "npm run build",
         "cwd": "components/icon",
