@@ -58,6 +58,10 @@
       var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width))
     )
   );
+  color: var(
+    --utrecht-textbox-invalid-color,
+    var(--utrecht-form-control-invalid-color, var(--utrecht-textbox-color, var(--utrecht-form-control-color)))
+  );
 }
 
 @mixin utrecht-textbox--disabled {
@@ -110,6 +114,13 @@
 }
 
 @mixin utrecht-textbox--read-only {
+  background-color: var(
+    --utrecht-textbox-read-only-background-color,
+    var(
+      --utrecht-form-control-read-only-background-color,
+      var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color))
+    )
+  );
   border-color: var(
     --utrecht-textbox-read-only-border-color,
     var(
