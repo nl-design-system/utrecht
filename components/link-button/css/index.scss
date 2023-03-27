@@ -40,19 +40,19 @@
 .utrecht-link-button--html-button {
   @include utrecht-link-button--html-button;
 
-  &:hover {
+  &:focus-visible {
+    @extend .utrecht-link-button--focus-visible;
+  }
+
+  &:not(:disabled):hover {
     @extend .utrecht-link-button--hover;
   }
 
-  &:active {
+  &:not(:disabled):active {
     @extend .utrecht-link-button--active;
   }
 
-  &:focus {
+  &:not(:disabled):focus {
     @extend .utrecht-link-button--focus;
-  }
-
-  &:focus-visible {
-    @extend .utrecht-link-button--focus-visible;
   }
 }

@@ -58,6 +58,10 @@ export const config: Config = {
     {
       type: 'dist-custom-elements',
     },
+    {
+      type: 'www',
+      serviceWorker: null, // disable service workers
+    },
     reactOutputTarget({
       componentCorePackage: '@utrecht/web-component-library-stencil',
       proxiesFile: '../web-component-library-react/src/components.ts',

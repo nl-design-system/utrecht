@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.461",
+  "version": "1.0.0-alpha.464",
   "author": "Community for NL Design System",
   "description": "Stencil component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -23,12 +23,14 @@
   ],
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git+ssh://git@github.com/nl-design-system/utrecht.git"
   },
   "devDependencies": {
-    "@stencil/react-output-target": "0.3.1",
-    "@stencil/sass": "2.0.4",
-    "@stencil/vue-output-target": "0.6.2",
+    "@stencil/angular-output-target": "0.5.0",
+    "@stencil/react-output-target": "0.4.0",
+    "@stencil/sass": "3.0.0",
+    "@stencil/vue-output-target": "0.7.0",
+    "@types/node": "18.11.19",
     "@types/jest": "29.2.6",
     "@utrecht/components": "workspace:*",
     "@utrecht/icon": "workspace:*",
@@ -39,15 +41,14 @@
     "rimraf": "3.0.2"
   },
   "dependencies": {
-    "@stencil/angular-output-target": "0.4.0",
-    "@stencil/core": "2.20.0"
+    "@stencil/core": "3.2.0"
   },
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
     "build:stencil": "stencil build",
     "clean": "npm-run-all clean:**",
-    "clean:stencil": "rimraf dist/ loader/",
+    "clean:stencil": "rimraf dist/ loader/ www/",
     "clean:angular-output-target": "rimraf ../web-component-library-angular/src/directives/",
     "clean:react-output-target": "rimraf ../web-component-library-react/src/components.ts ../web-component-library-react/src/react-component-lib/",
     "clean:vue-output-target": "rimraf ../web-component-library-vue/src/components.ts ../web-component-library-vue/src/vue-component-lib/",
