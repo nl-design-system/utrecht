@@ -32,12 +32,13 @@
 }
 
 @mixin utrecht-table__header {
+  --_utrecht-table-header-cell-vertical-align: bottom;
+
   background-color: var(--utrecht-table-header-background-color);
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
   page-break-inside: avoid;
   text-transform: var(--utrecht-table-header-text-transform);
-  vertical-align: bottom;
 }
 
 @mixin utrecht-table__cell--last-header-row {
@@ -46,8 +47,8 @@
   border-block-end-width: var(--utrecht-table-header-border-block-end-width, 0);
 }
 
+/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-table__body {
-  vertical-align: baseline;
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -60,6 +61,7 @@
   font-weight: var(--utrecht-table-header-cell-font-weight);
   text-align: start;
   text-transform: var(--utrecht-table-header-cell-text-transform);
+  vertical-align: var(--_utrecht-table-header-cell-vertical-align, top);
 }
 
 @mixin utrecht-table__cell {
@@ -72,6 +74,7 @@
   padding-inline-end: var(--utrecht-table-cell-padding-inline-end, 0);
   padding-inline-start: var(--utrecht-table-cell-padding-inline-start, 0);
   text-align: start;
+  vertical-align: top;
 }
 
 @mixin utrecht-table__cell--first {
