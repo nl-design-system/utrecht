@@ -1,0 +1,52 @@
+{/* @license CC0-1.0 */}
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { BadgeData } from "../../../badge-data/css/story-template.jsx";
+import "../index.scss";
+
+export const BadgeList = ({ children }) => <div className="utrecht-badge-list">{children}</div>;
+
+export const BadgeListStory = ({ items }) => (
+  <BadgeList>
+    {(typeof items === "string" ? items.split(/[\s.,()&;]+/g).filter(Boolean) : Array.isArray(items) ? items : []).map(
+      (item, index) => (
+        <BadgeData key={index}>{item}</BadgeData>
+      )
+    )}
+  </BadgeList>
+);
+
+<Meta
+  id="css-badge-list"
+  title="CSS Component/Badge list"
+  component={BadgeListStory}
+  argTypes={{
+    items: {
+      description: "Items",
+      control: "text",
+    },
+  }}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Badge list
+
+Styling via the `.utrecht-badge-list` class name:
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      items:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
+    }}
+  >
+    {BadgeListStory.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />

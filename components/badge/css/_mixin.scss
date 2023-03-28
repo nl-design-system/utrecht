@@ -5,6 +5,7 @@
  */
 
 @mixin utrecht-badge {
+  /* `line-height` has a default value, so `line-height` can be used on a parent element to add vertical space between badges */
   background-color: var(--utrecht-badge-background-color, hsl(0 0% 0%));
   border-radius: var(--utrecht-badge-border-radius, 0.5ch);
   color: var(--utrecht-badge-color, hsl(0 0% 100%));
@@ -13,7 +14,7 @@
   font-size: var(--utrecht-badge-font-size, inherit);
   font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
   font-weight: var(--utrecht-badge-font-weight, bold); /* no inheritance */
-  line-height: var(--utrecht-badge-line-height);
+  line-height: var(--utrecht-badge-line-height, 1em);
   padding-block-end: var(--utrecht-badge-padding-block, 0.5ex);
   padding-block-start: var(--utrecht-badge-padding-block, 0.5ex);
   padding-inline-end: var(--utrecht-badge-padding-inline, 0.5ch);
