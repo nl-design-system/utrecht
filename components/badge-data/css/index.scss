@@ -4,11 +4,8 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "../../badge/css/mixin";
+@import "./mixin";
 
 .utrecht-badge-data {
-  @include utrecht-badge;
-
-  letter-spacing: var(--utrecht-badge-data-letter-spacing, inherit);
-  text-transform: var(--utrecht-badge-data-text-transform, inherit);
+  @include utrecht-badge-data;
 }
