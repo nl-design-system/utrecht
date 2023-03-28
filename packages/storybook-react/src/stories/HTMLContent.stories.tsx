@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { HTMLContent } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/html-content/README.md?raw';
@@ -7,25 +8,9 @@ const meta = {
   title: 'React Component/HTML Content',
   id: 'react-html-content',
   component: HTMLContent,
-  tags: ['autodocs'],
-  parameters: {
-    docs: {
-      description: {
-        component: readme,
-      },
-    },
-  },
-} as Meta<typeof HTMLContent>;
-
-export default meta;
-
-const Template: StoryObj<typeof HTMLContent> = (args) => <HTMLContent {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  dangerouslySetInnerHTML: {
-    __html: `
+  args: {
+    dangerouslySetInnerHTML: {
+      __html: `
     <article>
     <h1>Heading 1</h1>
     <h2>Heading 2</h2>
@@ -153,5 +138,23 @@ Default.args = {
         <button type="submit">Login</button>
       </p>
     </form>`,
+    },
   },
-};
+  parameters: {
+    docs: {
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
+    },
+  },
+} satisfies Meta<typeof HTMLContent>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};

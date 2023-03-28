@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Heading1, HeadingGroup, Paragraph, PreHeading } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/heading-group/README.md?raw';
@@ -10,37 +11,45 @@ const meta = {
   title: 'React Component/Heading Group',
   id: 'react-heading-group',
   component: HeadingGroup,
-  tags: ['autodocs'],
+  args: {
+    children: (
+      <HeadingGroup style={{ '--utrecht-space-around': 1 } as any}>
+        <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>
+        <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
+      </HeadingGroup>
+    ),
+  },
   parameters: {
     tokensPrefix: 'utrecht-heading-group',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof HeadingGroup>;
+} satisfies Meta<typeof HeadingGroup>;
 
 export default meta;
 
-const Template: StoryObj<typeof HeadingGroup> = () => (
-  <HeadingGroup style={{ '--utrecht-space-around': 1 } as any}>
-    <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>
-    <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
-  </HeadingGroup>
-);
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-const PreHeadingTemplate: StoryObj<typeof HeadingGroup> = () => (
-  <HeadingGroup style={{ '--utrecht-space-around': 1 } as any}>
-    <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>
-    <PreHeading>The Quick Brown Fox Jumps Over The Lazy Dog</PreHeading>
-  </HeadingGroup>
-);
-
-export const WithPreHeading = PreHeadingTemplate.bind({});
+export const WithPreHeading: Story = {
+  args: {
+    children: (
+      <HeadingGroup style={{ '--utrecht-space-around': 1 } as any}>
+        <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>
+        <PreHeading>The Quick Brown Fox Jumps Over The Lazy Dog</PreHeading>
+      </HeadingGroup>
+    ),
+  },
+};
 
 export const DesignTokens = designTokenStory(meta);
