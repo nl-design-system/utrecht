@@ -21,8 +21,11 @@ export const exampleArgs = {
   textContent: 'Festivals',
 };
 
-export const BadgeData = ({ textContent = defaultArgs.textContent }) => (
-  <span className="utrecht-badge-data">{textContent}</span>
+export const BadgeData = ({ children, textContent = defaultArgs.textContent }) => (
+  <span className="utrecht-badge-data">
+    {textContent}
+    {children}
+  </span>
 );
 
 export default BadgeData;

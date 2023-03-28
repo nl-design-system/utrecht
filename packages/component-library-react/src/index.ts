@@ -9,6 +9,7 @@ export { AlertDialog } from './AlertDialog';
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
 export { BadgeCounter } from './BadgeCounter';
+export { BadgeList } from './BadgeList';
 export { BreadcrumbNav, BreadcrumbLink } from './BreadcrumbNav';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
 export { ButtonGroup } from './ButtonGroup';

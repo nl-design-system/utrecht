@@ -1,0 +1,11 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@mixin utrecht-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--utrecht-badge-list-item-margin-block) var(--utrecht-badge-list-item-margin-inline);
+}
