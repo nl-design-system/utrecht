@@ -3,13 +3,15 @@ import { FormLabel } from '@utrecht/component-library-react/dist/css-module/inde
 import readme from '@utrecht/components/form-label/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-label/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
   title: 'React Component/Form Label',
   id: 'react-form-label',
   component: FormLabel,
+  args: {
+    children: 'Username',
+  },
   argTypes: {
     type: {
       type: 'select',
@@ -26,7 +28,6 @@ const meta = {
       table: { defaultValue: { summary: false } },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-form-label',
     tokens,
@@ -37,44 +38,39 @@ const meta = {
       },
     },
   },
-} as Meta<typeof FormLabel>;
+} satisfies Meta<typeof FormLabel>;
 
 export default meta;
 
-const Template: StoryObj<typeof FormLabel> = (args) => <FormLabel {...args} />;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'Username',
+export const Checked: Story = {
+  args: {
+    children: 'Form Label Checked',
+    type: 'checkbox',
+  },
 };
 
-export const Checked = Template.bind({});
-
-Checked.args = {
-  children: 'Form Label Checked',
-  type: 'checkbox',
+export const Disabled: Story = {
+  args: {
+    children: 'Form Label Disabled',
+    type: 'radio',
+  },
 };
 
-export const Disabled = Template.bind({});
-
-Disabled.args = {
-  children: 'Form Label Disabled',
-  type: 'radio',
+export const Checkbox: Story = {
+  args: {
+    children: 'Form Label Checkbox',
+    type: 'checkbox',
+  },
 };
 
-export const Checkbox = Template.bind({});
-
-Checkbox.args = {
-  children: 'Form Label Checkbox',
-  type: 'checkbox',
-};
-
-export const Radio = Template.bind({});
-
-Radio.args = {
-  children: 'Form Label Radio',
-  type: 'radio',
+export const Radio: Story = {
+  args: {
+    children: 'Form Label Radio',
+    type: 'radio',
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

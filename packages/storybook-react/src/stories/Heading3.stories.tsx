@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Heading3 } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/heading-3/README.md?raw';
@@ -10,24 +11,30 @@ const meta = {
   title: 'React Component/Heading 3',
   id: 'react-heading-3',
   component: Heading3,
-  tags: ['autodocs'],
+  args: {
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+  },
   parameters: {
     tokensPrefix: 'utrecht-heading-3',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Heading3>;
+} satisfies Meta<typeof Heading3>;
 
 export default meta;
 
-const Template: StoryObj<typeof Heading3> = (args) => <Heading3 {...args} />;
-
-export const Default = Template.bind({});
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 Default.args = {
   children: 'The Quick Brown Fox Jumps Over The Lazy Dog',

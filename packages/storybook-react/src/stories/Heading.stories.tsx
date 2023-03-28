@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Heading } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/heading/README.md?raw';
@@ -30,75 +31,79 @@ const meta = {
       ],
     },
   },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-heading',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Heading>;
+} satisfies Meta<typeof Heading>;
 
 export default meta;
-
-const Template: StoryObj<typeof Heading> = (args) => <Heading {...args} />;
 
 const exampleArgs = {
   children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
 };
 
-export const HeadingLevel1 = Template.bind({});
-
-HeadingLevel1.args = {
-  ...exampleArgs,
-  level: 1,
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {
+  name: 'Heading Level 1',
+  args: {
+    level: 1,
+    ...exampleArgs,
+  },
 };
 
-export const HeadingLevel2 = Template.bind({});
-
-HeadingLevel2.args = {
-  ...exampleArgs,
-  level: 2,
+export const HeadingLevel2: Story = {
+  args: {
+    level: 2,
+    ...exampleArgs,
+  },
 };
 
-export const HeadingLevel3 = Template.bind({});
-
-HeadingLevel3.args = {
-  ...exampleArgs,
-  level: 3,
+export const HeadingLevel3: Story = {
+  args: {
+    level: 3,
+    ...exampleArgs,
+  },
 };
 
-export const HeadingLevel4 = Template.bind({});
-
-HeadingLevel4.args = {
-  ...exampleArgs,
-  level: 4,
+export const HeadingLevel4: Story = {
+  args: {
+    level: 4,
+    ...exampleArgs,
+  },
 };
 
-export const HeadingLevel5 = Template.bind({});
-
-HeadingLevel5.args = {
-  ...exampleArgs,
-  level: 5,
+export const HeadingLevel5: Story = {
+  args: {
+    level: 5,
+    ...exampleArgs,
+  },
 };
 
-export const HeadingLevel6 = Template.bind({});
-
-HeadingLevel6.args = {
-  ...exampleArgs,
-  level: 6,
+export const HeadingLevel6: Story = {
+  args: {
+    level: 6,
+    ...exampleArgs,
+  },
 };
 
-export const HeadingAppearance = Template.bind({});
-
-HeadingAppearance.args = {
-  ...exampleArgs,
-  appearance: 'utrecht-heading-4',
-  level: 2,
+export const HeadingAppearance: Story = {
+  args: {
+    ...exampleArgs,
+    appearance: 'utrecht-heading-4',
+    level: 2,
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
