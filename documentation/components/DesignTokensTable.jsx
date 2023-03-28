@@ -39,9 +39,12 @@ export const DesignTokensTable = ({ tokens }) => (
               <td>{visualizeToken(token)}</td>
               <td>
                 {token['$extensions'] && token['$extensions']['nl.nldesignsystem.figma.supports-token'] === false ? (
-                  <span className="utrecht-badge-data">CSS&nbsp;only</span>
+                  <span className="utrecht-badge-data">CSS</span>
                 ) : typeof token['type'] === 'string' ? (
-                  <span className="utrecht-badge-data">Figma</span>
+                  <div className="utrecht-badge-list">
+                    <span className="utrecht-badge-data">CSS</span>
+                    <span className="utrecht-badge-data">Figma</span>
+                  </div>
                 ) : (
                   ''
                 )}
