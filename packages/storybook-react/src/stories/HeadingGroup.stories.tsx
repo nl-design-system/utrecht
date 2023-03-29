@@ -11,12 +11,13 @@ const meta = {
   title: 'React Component/Heading Group',
   id: 'react-heading-group',
   component: HeadingGroup,
+  decorators: [(Story) => <div style={{ '--utrecht-space-around': 1 } as any}>{Story()}</div>],
   args: {
     children: (
-      <HeadingGroup style={{ '--utrecht-space-around': 1 } as any}>
+      <>
         <Heading1>The Quick Brown Fox Jumps Over The Lazy Dog</Heading1>
         <Paragraph>The Quick Brown Fox Jumps Over The Lazy Dog</Paragraph>
-      </HeadingGroup>
+      </>
     ),
   },
   parameters: {
