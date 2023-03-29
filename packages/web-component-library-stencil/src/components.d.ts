@@ -133,6 +133,374 @@ export namespace Components {
     }
     interface UtrechtIcon {
     }
+    interface UtrechtIconAfspraakMaken {
+    }
+    interface UtrechtIconAfval {
+    }
+    interface UtrechtIconAfvalContainer {
+    }
+    interface UtrechtIconAfvalContainerpas {
+    }
+    interface UtrechtIconAfvalKalender {
+    }
+    interface UtrechtIconAfvalPmd {
+    }
+    interface UtrechtIconAfvalScheiden {
+    }
+    interface UtrechtIconAfvalkalender {
+    }
+    interface UtrechtIconAlleen {
+    }
+    interface UtrechtIconArrow {
+    }
+    interface UtrechtIconAuto {
+    }
+    interface UtrechtIconBegroting {
+    }
+    interface UtrechtIconBestemmingsplan {
+    }
+    interface UtrechtIconBetaaldatum {
+    }
+    interface UtrechtIconBewijsstukken {
+    }
+    interface UtrechtIconBijstand {
+    }
+    interface UtrechtIconBlad {
+    }
+    interface UtrechtIconBouwproject {
+    }
+    interface UtrechtIconBrandgevaar {
+    }
+    interface UtrechtIconBriefBetalen {
+    }
+    interface UtrechtIconCheckmark {
+    }
+    interface UtrechtIconCollegeBW {
+    }
+    interface UtrechtIconContainer {
+    }
+    interface UtrechtIconContainerBio {
+    }
+    interface UtrechtIconContainerGlas {
+    }
+    interface UtrechtIconContainerGroenafval {
+    }
+    interface UtrechtIconContainerMetZak {
+    }
+    interface UtrechtIconContainerPapier {
+    }
+    interface UtrechtIconContainerPmd {
+    }
+    interface UtrechtIconContainerRestafval {
+    }
+    interface UtrechtIconContainerTextiel {
+    }
+    interface UtrechtIconCross {
+    }
+    interface UtrechtIconDakloos {
+    }
+    interface UtrechtIconDementie {
+    }
+    interface UtrechtIconDocumenten {
+    }
+    interface UtrechtIconDuurzaam {
+    }
+    interface UtrechtIconEenzaamheid {
+    }
+    interface UtrechtIconEikenprocessie {
+    }
+    interface UtrechtIconElektrischRijden {
+    }
+    interface UtrechtIconEnergieVergoeding {
+    }
+    interface UtrechtIconEnergietransitie {
+    }
+    interface UtrechtIconError {
+    }
+    interface UtrechtIconEvenementen {
+    }
+    interface UtrechtIconFacebook {
+    }
+    interface UtrechtIconFiets {
+    }
+    interface UtrechtIconFilter {
+    }
+    interface UtrechtIconGeboorte {
+    }
+    interface UtrechtIconGebruikerCentraal {
+    }
+    interface UtrechtIconGebruikerIngelogd {
+    }
+    interface UtrechtIconGegevenswoordenboek {
+    }
+    interface UtrechtIconGeluid {
+    }
+    interface UtrechtIconGemeenteLocatie {
+    }
+    interface UtrechtIconGemeenteraad {
+    }
+    interface UtrechtIconGereedschap {
+    }
+    interface UtrechtIconGezicht {
+    }
+    interface UtrechtIconGezin {
+    }
+    interface UtrechtIconGlasAfval {
+    }
+    interface UtrechtIconGlijbaan {
+    }
+    interface UtrechtIconGrafiek {
+    }
+    interface UtrechtIconGrofvuil {
+    }
+    interface UtrechtIconGrofvuilOphalen {
+    }
+    interface UtrechtIconHerdenking {
+    }
+    interface UtrechtIconHondenbelasting {
+    }
+    interface UtrechtIconHoreca {
+    }
+    interface UtrechtIconHorecavergunning {
+    }
+    interface UtrechtIconHuis {
+    }
+    interface UtrechtIconHuisEnOmgeving {
+    }
+    interface UtrechtIconHuishoudelijkGeweld {
+    }
+    interface UtrechtIconHulpHuishouden {
+    }
+    interface UtrechtIconHulpVervoer {
+    }
+    interface UtrechtIconHulpZorg {
+    }
+    interface UtrechtIconHulpmiddelenGezin {
+    }
+    interface UtrechtIconHulpverlening {
+    }
+    interface UtrechtIconIdee {
+    }
+    interface UtrechtIconInformatie {
+    }
+    interface UtrechtIconInformation {
+    }
+    interface UtrechtIconInnovatie {
+    }
+    interface UtrechtIconInspraakInwoners {
+    }
+    interface UtrechtIconInstagram {
+    }
+    interface UtrechtIconKalender {
+    }
+    interface UtrechtIconKennis {
+    }
+    interface UtrechtIconKerstbomen {
+    }
+    interface UtrechtIconKlachten {
+    }
+    interface UtrechtIconKroon {
+    }
+    interface UtrechtIconLaadpaal {
+    }
+    interface UtrechtIconLantaarnpaal {
+    }
+    interface UtrechtIconLantaarnpaalOud {
+    }
+    interface UtrechtIconLeren {
+    }
+    interface UtrechtIconLetOp {
+    }
+    interface UtrechtIconLinkedin {
+    }
+    interface UtrechtIconList {
+    }
+    interface UtrechtIconLoupe {
+    }
+    interface UtrechtIconMarkt {
+    }
+    interface UtrechtIconMelding {
+    }
+    interface UtrechtIconMeldingBoom {
+    }
+    interface UtrechtIconMeldingKlacht {
+    }
+    interface UtrechtIconMeldingOpenbareruimte {
+    }
+    interface UtrechtIconMeldingVerlichting {
+    }
+    interface UtrechtIconMenselijk {
+    }
+    interface UtrechtIconMeterkast {
+    }
+    interface UtrechtIconMilieuOntheffing {
+    }
+    interface UtrechtIconMilieuZone {
+    }
+    interface UtrechtIconMobiliteit {
+    }
+    interface UtrechtIconNatuur {
+    }
+    interface UtrechtIconNieuwHuis {
+    }
+    interface UtrechtIconNummerbord {
+    }
+    interface UtrechtIconOmHetHuis {
+    }
+    interface UtrechtIconOmgeving {
+    }
+    interface UtrechtIconOmgevingsvisie {
+    }
+    interface UtrechtIconOmgevingswet {
+    }
+    interface UtrechtIconOnderhoud {
+    }
+    interface UtrechtIconOndernemen {
+    }
+    interface UtrechtIconOpeningstijden {
+    }
+    interface UtrechtIconOverDeStad {
+    }
+    interface UtrechtIconOverlijden {
+    }
+    interface UtrechtIconPanden {
+    }
+    interface UtrechtIconPark {
+    }
+    interface UtrechtIconParkeerkaart {
+    }
+    interface UtrechtIconParkeervergunning {
+    }
+    interface UtrechtIconParken {
+    }
+    interface UtrechtIconParkeren {
+    }
+    interface UtrechtIconParkerenBedrijven {
+    }
+    interface UtrechtIconParkerenBetaalautomaat {
+    }
+    interface UtrechtIconParkerenBetalen {
+    }
+    interface UtrechtIconParticipatieCampagne {
+    }
+    interface UtrechtIconParticipatieLike {
+    }
+    interface UtrechtIconParticipatiePitch {
+    }
+    interface UtrechtIconPaspoort {
+    }
+    interface UtrechtIconPresentatie {
+    }
+    interface UtrechtIconPrijskaartje {
+    }
+    interface UtrechtIconRijbewijs {
+    }
+    interface UtrechtIconRioolheffing {
+    }
+    interface UtrechtIconRolstoel {
+    }
+    interface UtrechtIconSchildGemeenteUtrecht {
+    }
+    interface UtrechtIconShoppen {
+    }
+    interface UtrechtIconSinterklaas {
+    }
+    interface UtrechtIconSlechtziendeHoordende {
+    }
+    interface UtrechtIconSport {
+    }
+    interface UtrechtIconSportEnCultuur {
+    }
+    interface UtrechtIconSportVoetbal {
+    }
+    interface UtrechtIconStookverbod {
+    }
+    interface UtrechtIconStrand {
+    }
+    interface UtrechtIconStrooien {
+    }
+    interface UtrechtIconSubsidie {
+    }
+    interface UtrechtIconSubsidieGezin {
+    }
+    interface UtrechtIconTShirt {
+    }
+    interface UtrechtIconThuiswerken {
+    }
+    interface UtrechtIconToeslag {
+    }
+    interface UtrechtIconTrein {
+    }
+    interface UtrechtIconTrouwen {
+    }
+    interface UtrechtIconTwitter {
+    }
+    interface UtrechtIconUwWijk {
+    }
+    interface UtrechtIconVaccinatie {
+    }
+    interface UtrechtIconVeiligeWijk {
+    }
+    interface UtrechtIconVergaderen {
+    }
+    interface UtrechtIconVergaderendigitaal {
+    }
+    interface UtrechtIconVergoeding {
+    }
+    interface UtrechtIconVerhuizen {
+    }
+    interface UtrechtIconVerkeerslicht {
+    }
+    interface UtrechtIconVerkiezingen {
+    }
+    interface UtrechtIconVerslaving {
+    }
+    interface UtrechtIconVervoersvoorziening {
+    }
+    interface UtrechtIconVirus {
+    }
+    interface UtrechtIconVluchtelingen {
+    }
+    interface UtrechtIconVoorzieningenVervoer {
+    }
+    interface UtrechtIconVrijwilligerswerk {
+    }
+    interface UtrechtIconVuilnisbak {
+    }
+    interface UtrechtIconVuilniszak {
+    }
+    interface UtrechtIconVuurwerk {
+    }
+    interface UtrechtIconWandelstok {
+    }
+    interface UtrechtIconWarm {
+    }
+    interface UtrechtIconWarning {
+    }
+    interface UtrechtIconWerken {
+    }
+    interface UtrechtIconWerkzaamheden {
+    }
+    interface UtrechtIconWhatsapp {
+    }
+    interface UtrechtIconWonenKosten {
+    }
+    interface UtrechtIconWoningZoeken {
+    }
+    interface UtrechtIconYoutube {
+    }
+    interface UtrechtIconZelfstandigWonen {
+    }
+    interface UtrechtIconZoomin {
+    }
+    interface UtrechtIconZoomout {
+    }
+    interface UtrechtIconZorgHuis {
+    }
+    interface UtrechtIconZweefpaal {
+    }
+    interface UtrechtIconZwemmen {
+    }
     interface UtrechtLink {
         "href": string;
     }
@@ -481,6 +849,1110 @@ declare global {
         prototype: HTMLUtrechtIconElement;
         new (): HTMLUtrechtIconElement;
     };
+    interface HTMLUtrechtIconAfspraakMakenElement extends Components.UtrechtIconAfspraakMaken, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfspraakMakenElement: {
+        prototype: HTMLUtrechtIconAfspraakMakenElement;
+        new (): HTMLUtrechtIconAfspraakMakenElement;
+    };
+    interface HTMLUtrechtIconAfvalElement extends Components.UtrechtIconAfval, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalElement: {
+        prototype: HTMLUtrechtIconAfvalElement;
+        new (): HTMLUtrechtIconAfvalElement;
+    };
+    interface HTMLUtrechtIconAfvalContainerElement extends Components.UtrechtIconAfvalContainer, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalContainerElement: {
+        prototype: HTMLUtrechtIconAfvalContainerElement;
+        new (): HTMLUtrechtIconAfvalContainerElement;
+    };
+    interface HTMLUtrechtIconAfvalContainerpasElement extends Components.UtrechtIconAfvalContainerpas, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalContainerpasElement: {
+        prototype: HTMLUtrechtIconAfvalContainerpasElement;
+        new (): HTMLUtrechtIconAfvalContainerpasElement;
+    };
+    interface HTMLUtrechtIconAfvalKalenderElement extends Components.UtrechtIconAfvalKalender, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalKalenderElement: {
+        prototype: HTMLUtrechtIconAfvalKalenderElement;
+        new (): HTMLUtrechtIconAfvalKalenderElement;
+    };
+    interface HTMLUtrechtIconAfvalPmdElement extends Components.UtrechtIconAfvalPmd, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalPmdElement: {
+        prototype: HTMLUtrechtIconAfvalPmdElement;
+        new (): HTMLUtrechtIconAfvalPmdElement;
+    };
+    interface HTMLUtrechtIconAfvalScheidenElement extends Components.UtrechtIconAfvalScheiden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalScheidenElement: {
+        prototype: HTMLUtrechtIconAfvalScheidenElement;
+        new (): HTMLUtrechtIconAfvalScheidenElement;
+    };
+    interface HTMLUtrechtIconAfvalkalenderElement extends Components.UtrechtIconAfvalkalender, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAfvalkalenderElement: {
+        prototype: HTMLUtrechtIconAfvalkalenderElement;
+        new (): HTMLUtrechtIconAfvalkalenderElement;
+    };
+    interface HTMLUtrechtIconAlleenElement extends Components.UtrechtIconAlleen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAlleenElement: {
+        prototype: HTMLUtrechtIconAlleenElement;
+        new (): HTMLUtrechtIconAlleenElement;
+    };
+    interface HTMLUtrechtIconArrowElement extends Components.UtrechtIconArrow, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconArrowElement: {
+        prototype: HTMLUtrechtIconArrowElement;
+        new (): HTMLUtrechtIconArrowElement;
+    };
+    interface HTMLUtrechtIconAutoElement extends Components.UtrechtIconAuto, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconAutoElement: {
+        prototype: HTMLUtrechtIconAutoElement;
+        new (): HTMLUtrechtIconAutoElement;
+    };
+    interface HTMLUtrechtIconBegrotingElement extends Components.UtrechtIconBegroting, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBegrotingElement: {
+        prototype: HTMLUtrechtIconBegrotingElement;
+        new (): HTMLUtrechtIconBegrotingElement;
+    };
+    interface HTMLUtrechtIconBestemmingsplanElement extends Components.UtrechtIconBestemmingsplan, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBestemmingsplanElement: {
+        prototype: HTMLUtrechtIconBestemmingsplanElement;
+        new (): HTMLUtrechtIconBestemmingsplanElement;
+    };
+    interface HTMLUtrechtIconBetaaldatumElement extends Components.UtrechtIconBetaaldatum, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBetaaldatumElement: {
+        prototype: HTMLUtrechtIconBetaaldatumElement;
+        new (): HTMLUtrechtIconBetaaldatumElement;
+    };
+    interface HTMLUtrechtIconBewijsstukkenElement extends Components.UtrechtIconBewijsstukken, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBewijsstukkenElement: {
+        prototype: HTMLUtrechtIconBewijsstukkenElement;
+        new (): HTMLUtrechtIconBewijsstukkenElement;
+    };
+    interface HTMLUtrechtIconBijstandElement extends Components.UtrechtIconBijstand, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBijstandElement: {
+        prototype: HTMLUtrechtIconBijstandElement;
+        new (): HTMLUtrechtIconBijstandElement;
+    };
+    interface HTMLUtrechtIconBladElement extends Components.UtrechtIconBlad, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBladElement: {
+        prototype: HTMLUtrechtIconBladElement;
+        new (): HTMLUtrechtIconBladElement;
+    };
+    interface HTMLUtrechtIconBouwprojectElement extends Components.UtrechtIconBouwproject, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBouwprojectElement: {
+        prototype: HTMLUtrechtIconBouwprojectElement;
+        new (): HTMLUtrechtIconBouwprojectElement;
+    };
+    interface HTMLUtrechtIconBrandgevaarElement extends Components.UtrechtIconBrandgevaar, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBrandgevaarElement: {
+        prototype: HTMLUtrechtIconBrandgevaarElement;
+        new (): HTMLUtrechtIconBrandgevaarElement;
+    };
+    interface HTMLUtrechtIconBriefBetalenElement extends Components.UtrechtIconBriefBetalen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBriefBetalenElement: {
+        prototype: HTMLUtrechtIconBriefBetalenElement;
+        new (): HTMLUtrechtIconBriefBetalenElement;
+    };
+    interface HTMLUtrechtIconCheckmarkElement extends Components.UtrechtIconCheckmark, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconCheckmarkElement: {
+        prototype: HTMLUtrechtIconCheckmarkElement;
+        new (): HTMLUtrechtIconCheckmarkElement;
+    };
+    interface HTMLUtrechtIconCollegeBWElement extends Components.UtrechtIconCollegeBW, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconCollegeBWElement: {
+        prototype: HTMLUtrechtIconCollegeBWElement;
+        new (): HTMLUtrechtIconCollegeBWElement;
+    };
+    interface HTMLUtrechtIconContainerElement extends Components.UtrechtIconContainer, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerElement: {
+        prototype: HTMLUtrechtIconContainerElement;
+        new (): HTMLUtrechtIconContainerElement;
+    };
+    interface HTMLUtrechtIconContainerBioElement extends Components.UtrechtIconContainerBio, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerBioElement: {
+        prototype: HTMLUtrechtIconContainerBioElement;
+        new (): HTMLUtrechtIconContainerBioElement;
+    };
+    interface HTMLUtrechtIconContainerGlasElement extends Components.UtrechtIconContainerGlas, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerGlasElement: {
+        prototype: HTMLUtrechtIconContainerGlasElement;
+        new (): HTMLUtrechtIconContainerGlasElement;
+    };
+    interface HTMLUtrechtIconContainerGroenafvalElement extends Components.UtrechtIconContainerGroenafval, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerGroenafvalElement: {
+        prototype: HTMLUtrechtIconContainerGroenafvalElement;
+        new (): HTMLUtrechtIconContainerGroenafvalElement;
+    };
+    interface HTMLUtrechtIconContainerMetZakElement extends Components.UtrechtIconContainerMetZak, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerMetZakElement: {
+        prototype: HTMLUtrechtIconContainerMetZakElement;
+        new (): HTMLUtrechtIconContainerMetZakElement;
+    };
+    interface HTMLUtrechtIconContainerPapierElement extends Components.UtrechtIconContainerPapier, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerPapierElement: {
+        prototype: HTMLUtrechtIconContainerPapierElement;
+        new (): HTMLUtrechtIconContainerPapierElement;
+    };
+    interface HTMLUtrechtIconContainerPmdElement extends Components.UtrechtIconContainerPmd, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerPmdElement: {
+        prototype: HTMLUtrechtIconContainerPmdElement;
+        new (): HTMLUtrechtIconContainerPmdElement;
+    };
+    interface HTMLUtrechtIconContainerRestafvalElement extends Components.UtrechtIconContainerRestafval, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerRestafvalElement: {
+        prototype: HTMLUtrechtIconContainerRestafvalElement;
+        new (): HTMLUtrechtIconContainerRestafvalElement;
+    };
+    interface HTMLUtrechtIconContainerTextielElement extends Components.UtrechtIconContainerTextiel, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconContainerTextielElement: {
+        prototype: HTMLUtrechtIconContainerTextielElement;
+        new (): HTMLUtrechtIconContainerTextielElement;
+    };
+    interface HTMLUtrechtIconCrossElement extends Components.UtrechtIconCross, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconCrossElement: {
+        prototype: HTMLUtrechtIconCrossElement;
+        new (): HTMLUtrechtIconCrossElement;
+    };
+    interface HTMLUtrechtIconDakloosElement extends Components.UtrechtIconDakloos, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconDakloosElement: {
+        prototype: HTMLUtrechtIconDakloosElement;
+        new (): HTMLUtrechtIconDakloosElement;
+    };
+    interface HTMLUtrechtIconDementieElement extends Components.UtrechtIconDementie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconDementieElement: {
+        prototype: HTMLUtrechtIconDementieElement;
+        new (): HTMLUtrechtIconDementieElement;
+    };
+    interface HTMLUtrechtIconDocumentenElement extends Components.UtrechtIconDocumenten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconDocumentenElement: {
+        prototype: HTMLUtrechtIconDocumentenElement;
+        new (): HTMLUtrechtIconDocumentenElement;
+    };
+    interface HTMLUtrechtIconDuurzaamElement extends Components.UtrechtIconDuurzaam, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconDuurzaamElement: {
+        prototype: HTMLUtrechtIconDuurzaamElement;
+        new (): HTMLUtrechtIconDuurzaamElement;
+    };
+    interface HTMLUtrechtIconEenzaamheidElement extends Components.UtrechtIconEenzaamheid, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconEenzaamheidElement: {
+        prototype: HTMLUtrechtIconEenzaamheidElement;
+        new (): HTMLUtrechtIconEenzaamheidElement;
+    };
+    interface HTMLUtrechtIconEikenprocessieElement extends Components.UtrechtIconEikenprocessie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconEikenprocessieElement: {
+        prototype: HTMLUtrechtIconEikenprocessieElement;
+        new (): HTMLUtrechtIconEikenprocessieElement;
+    };
+    interface HTMLUtrechtIconElektrischRijdenElement extends Components.UtrechtIconElektrischRijden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconElektrischRijdenElement: {
+        prototype: HTMLUtrechtIconElektrischRijdenElement;
+        new (): HTMLUtrechtIconElektrischRijdenElement;
+    };
+    interface HTMLUtrechtIconEnergieVergoedingElement extends Components.UtrechtIconEnergieVergoeding, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconEnergieVergoedingElement: {
+        prototype: HTMLUtrechtIconEnergieVergoedingElement;
+        new (): HTMLUtrechtIconEnergieVergoedingElement;
+    };
+    interface HTMLUtrechtIconEnergietransitieElement extends Components.UtrechtIconEnergietransitie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconEnergietransitieElement: {
+        prototype: HTMLUtrechtIconEnergietransitieElement;
+        new (): HTMLUtrechtIconEnergietransitieElement;
+    };
+    interface HTMLUtrechtIconErrorElement extends Components.UtrechtIconError, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconErrorElement: {
+        prototype: HTMLUtrechtIconErrorElement;
+        new (): HTMLUtrechtIconErrorElement;
+    };
+    interface HTMLUtrechtIconEvenementenElement extends Components.UtrechtIconEvenementen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconEvenementenElement: {
+        prototype: HTMLUtrechtIconEvenementenElement;
+        new (): HTMLUtrechtIconEvenementenElement;
+    };
+    interface HTMLUtrechtIconFacebookElement extends Components.UtrechtIconFacebook, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconFacebookElement: {
+        prototype: HTMLUtrechtIconFacebookElement;
+        new (): HTMLUtrechtIconFacebookElement;
+    };
+    interface HTMLUtrechtIconFietsElement extends Components.UtrechtIconFiets, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconFietsElement: {
+        prototype: HTMLUtrechtIconFietsElement;
+        new (): HTMLUtrechtIconFietsElement;
+    };
+    interface HTMLUtrechtIconFilterElement extends Components.UtrechtIconFilter, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconFilterElement: {
+        prototype: HTMLUtrechtIconFilterElement;
+        new (): HTMLUtrechtIconFilterElement;
+    };
+    interface HTMLUtrechtIconGeboorteElement extends Components.UtrechtIconGeboorte, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGeboorteElement: {
+        prototype: HTMLUtrechtIconGeboorteElement;
+        new (): HTMLUtrechtIconGeboorteElement;
+    };
+    interface HTMLUtrechtIconGebruikerCentraalElement extends Components.UtrechtIconGebruikerCentraal, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGebruikerCentraalElement: {
+        prototype: HTMLUtrechtIconGebruikerCentraalElement;
+        new (): HTMLUtrechtIconGebruikerCentraalElement;
+    };
+    interface HTMLUtrechtIconGebruikerIngelogdElement extends Components.UtrechtIconGebruikerIngelogd, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGebruikerIngelogdElement: {
+        prototype: HTMLUtrechtIconGebruikerIngelogdElement;
+        new (): HTMLUtrechtIconGebruikerIngelogdElement;
+    };
+    interface HTMLUtrechtIconGegevenswoordenboekElement extends Components.UtrechtIconGegevenswoordenboek, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGegevenswoordenboekElement: {
+        prototype: HTMLUtrechtIconGegevenswoordenboekElement;
+        new (): HTMLUtrechtIconGegevenswoordenboekElement;
+    };
+    interface HTMLUtrechtIconGeluidElement extends Components.UtrechtIconGeluid, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGeluidElement: {
+        prototype: HTMLUtrechtIconGeluidElement;
+        new (): HTMLUtrechtIconGeluidElement;
+    };
+    interface HTMLUtrechtIconGemeenteLocatieElement extends Components.UtrechtIconGemeenteLocatie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGemeenteLocatieElement: {
+        prototype: HTMLUtrechtIconGemeenteLocatieElement;
+        new (): HTMLUtrechtIconGemeenteLocatieElement;
+    };
+    interface HTMLUtrechtIconGemeenteraadElement extends Components.UtrechtIconGemeenteraad, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGemeenteraadElement: {
+        prototype: HTMLUtrechtIconGemeenteraadElement;
+        new (): HTMLUtrechtIconGemeenteraadElement;
+    };
+    interface HTMLUtrechtIconGereedschapElement extends Components.UtrechtIconGereedschap, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGereedschapElement: {
+        prototype: HTMLUtrechtIconGereedschapElement;
+        new (): HTMLUtrechtIconGereedschapElement;
+    };
+    interface HTMLUtrechtIconGezichtElement extends Components.UtrechtIconGezicht, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGezichtElement: {
+        prototype: HTMLUtrechtIconGezichtElement;
+        new (): HTMLUtrechtIconGezichtElement;
+    };
+    interface HTMLUtrechtIconGezinElement extends Components.UtrechtIconGezin, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGezinElement: {
+        prototype: HTMLUtrechtIconGezinElement;
+        new (): HTMLUtrechtIconGezinElement;
+    };
+    interface HTMLUtrechtIconGlasAfvalElement extends Components.UtrechtIconGlasAfval, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGlasAfvalElement: {
+        prototype: HTMLUtrechtIconGlasAfvalElement;
+        new (): HTMLUtrechtIconGlasAfvalElement;
+    };
+    interface HTMLUtrechtIconGlijbaanElement extends Components.UtrechtIconGlijbaan, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGlijbaanElement: {
+        prototype: HTMLUtrechtIconGlijbaanElement;
+        new (): HTMLUtrechtIconGlijbaanElement;
+    };
+    interface HTMLUtrechtIconGrafiekElement extends Components.UtrechtIconGrafiek, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGrafiekElement: {
+        prototype: HTMLUtrechtIconGrafiekElement;
+        new (): HTMLUtrechtIconGrafiekElement;
+    };
+    interface HTMLUtrechtIconGrofvuilElement extends Components.UtrechtIconGrofvuil, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGrofvuilElement: {
+        prototype: HTMLUtrechtIconGrofvuilElement;
+        new (): HTMLUtrechtIconGrofvuilElement;
+    };
+    interface HTMLUtrechtIconGrofvuilOphalenElement extends Components.UtrechtIconGrofvuilOphalen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGrofvuilOphalenElement: {
+        prototype: HTMLUtrechtIconGrofvuilOphalenElement;
+        new (): HTMLUtrechtIconGrofvuilOphalenElement;
+    };
+    interface HTMLUtrechtIconHerdenkingElement extends Components.UtrechtIconHerdenking, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHerdenkingElement: {
+        prototype: HTMLUtrechtIconHerdenkingElement;
+        new (): HTMLUtrechtIconHerdenkingElement;
+    };
+    interface HTMLUtrechtIconHondenbelastingElement extends Components.UtrechtIconHondenbelasting, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHondenbelastingElement: {
+        prototype: HTMLUtrechtIconHondenbelastingElement;
+        new (): HTMLUtrechtIconHondenbelastingElement;
+    };
+    interface HTMLUtrechtIconHorecaElement extends Components.UtrechtIconHoreca, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHorecaElement: {
+        prototype: HTMLUtrechtIconHorecaElement;
+        new (): HTMLUtrechtIconHorecaElement;
+    };
+    interface HTMLUtrechtIconHorecavergunningElement extends Components.UtrechtIconHorecavergunning, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHorecavergunningElement: {
+        prototype: HTMLUtrechtIconHorecavergunningElement;
+        new (): HTMLUtrechtIconHorecavergunningElement;
+    };
+    interface HTMLUtrechtIconHuisElement extends Components.UtrechtIconHuis, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHuisElement: {
+        prototype: HTMLUtrechtIconHuisElement;
+        new (): HTMLUtrechtIconHuisElement;
+    };
+    interface HTMLUtrechtIconHuisEnOmgevingElement extends Components.UtrechtIconHuisEnOmgeving, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHuisEnOmgevingElement: {
+        prototype: HTMLUtrechtIconHuisEnOmgevingElement;
+        new (): HTMLUtrechtIconHuisEnOmgevingElement;
+    };
+    interface HTMLUtrechtIconHuishoudelijkGeweldElement extends Components.UtrechtIconHuishoudelijkGeweld, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHuishoudelijkGeweldElement: {
+        prototype: HTMLUtrechtIconHuishoudelijkGeweldElement;
+        new (): HTMLUtrechtIconHuishoudelijkGeweldElement;
+    };
+    interface HTMLUtrechtIconHulpHuishoudenElement extends Components.UtrechtIconHulpHuishouden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHulpHuishoudenElement: {
+        prototype: HTMLUtrechtIconHulpHuishoudenElement;
+        new (): HTMLUtrechtIconHulpHuishoudenElement;
+    };
+    interface HTMLUtrechtIconHulpVervoerElement extends Components.UtrechtIconHulpVervoer, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHulpVervoerElement: {
+        prototype: HTMLUtrechtIconHulpVervoerElement;
+        new (): HTMLUtrechtIconHulpVervoerElement;
+    };
+    interface HTMLUtrechtIconHulpZorgElement extends Components.UtrechtIconHulpZorg, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHulpZorgElement: {
+        prototype: HTMLUtrechtIconHulpZorgElement;
+        new (): HTMLUtrechtIconHulpZorgElement;
+    };
+    interface HTMLUtrechtIconHulpmiddelenGezinElement extends Components.UtrechtIconHulpmiddelenGezin, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHulpmiddelenGezinElement: {
+        prototype: HTMLUtrechtIconHulpmiddelenGezinElement;
+        new (): HTMLUtrechtIconHulpmiddelenGezinElement;
+    };
+    interface HTMLUtrechtIconHulpverleningElement extends Components.UtrechtIconHulpverlening, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconHulpverleningElement: {
+        prototype: HTMLUtrechtIconHulpverleningElement;
+        new (): HTMLUtrechtIconHulpverleningElement;
+    };
+    interface HTMLUtrechtIconIdeeElement extends Components.UtrechtIconIdee, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconIdeeElement: {
+        prototype: HTMLUtrechtIconIdeeElement;
+        new (): HTMLUtrechtIconIdeeElement;
+    };
+    interface HTMLUtrechtIconInformatieElement extends Components.UtrechtIconInformatie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconInformatieElement: {
+        prototype: HTMLUtrechtIconInformatieElement;
+        new (): HTMLUtrechtIconInformatieElement;
+    };
+    interface HTMLUtrechtIconInformationElement extends Components.UtrechtIconInformation, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconInformationElement: {
+        prototype: HTMLUtrechtIconInformationElement;
+        new (): HTMLUtrechtIconInformationElement;
+    };
+    interface HTMLUtrechtIconInnovatieElement extends Components.UtrechtIconInnovatie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconInnovatieElement: {
+        prototype: HTMLUtrechtIconInnovatieElement;
+        new (): HTMLUtrechtIconInnovatieElement;
+    };
+    interface HTMLUtrechtIconInspraakInwonersElement extends Components.UtrechtIconInspraakInwoners, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconInspraakInwonersElement: {
+        prototype: HTMLUtrechtIconInspraakInwonersElement;
+        new (): HTMLUtrechtIconInspraakInwonersElement;
+    };
+    interface HTMLUtrechtIconInstagramElement extends Components.UtrechtIconInstagram, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconInstagramElement: {
+        prototype: HTMLUtrechtIconInstagramElement;
+        new (): HTMLUtrechtIconInstagramElement;
+    };
+    interface HTMLUtrechtIconKalenderElement extends Components.UtrechtIconKalender, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconKalenderElement: {
+        prototype: HTMLUtrechtIconKalenderElement;
+        new (): HTMLUtrechtIconKalenderElement;
+    };
+    interface HTMLUtrechtIconKennisElement extends Components.UtrechtIconKennis, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconKennisElement: {
+        prototype: HTMLUtrechtIconKennisElement;
+        new (): HTMLUtrechtIconKennisElement;
+    };
+    interface HTMLUtrechtIconKerstbomenElement extends Components.UtrechtIconKerstbomen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconKerstbomenElement: {
+        prototype: HTMLUtrechtIconKerstbomenElement;
+        new (): HTMLUtrechtIconKerstbomenElement;
+    };
+    interface HTMLUtrechtIconKlachtenElement extends Components.UtrechtIconKlachten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconKlachtenElement: {
+        prototype: HTMLUtrechtIconKlachtenElement;
+        new (): HTMLUtrechtIconKlachtenElement;
+    };
+    interface HTMLUtrechtIconKroonElement extends Components.UtrechtIconKroon, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconKroonElement: {
+        prototype: HTMLUtrechtIconKroonElement;
+        new (): HTMLUtrechtIconKroonElement;
+    };
+    interface HTMLUtrechtIconLaadpaalElement extends Components.UtrechtIconLaadpaal, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLaadpaalElement: {
+        prototype: HTMLUtrechtIconLaadpaalElement;
+        new (): HTMLUtrechtIconLaadpaalElement;
+    };
+    interface HTMLUtrechtIconLantaarnpaalElement extends Components.UtrechtIconLantaarnpaal, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLantaarnpaalElement: {
+        prototype: HTMLUtrechtIconLantaarnpaalElement;
+        new (): HTMLUtrechtIconLantaarnpaalElement;
+    };
+    interface HTMLUtrechtIconLantaarnpaalOudElement extends Components.UtrechtIconLantaarnpaalOud, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLantaarnpaalOudElement: {
+        prototype: HTMLUtrechtIconLantaarnpaalOudElement;
+        new (): HTMLUtrechtIconLantaarnpaalOudElement;
+    };
+    interface HTMLUtrechtIconLerenElement extends Components.UtrechtIconLeren, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLerenElement: {
+        prototype: HTMLUtrechtIconLerenElement;
+        new (): HTMLUtrechtIconLerenElement;
+    };
+    interface HTMLUtrechtIconLetOpElement extends Components.UtrechtIconLetOp, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLetOpElement: {
+        prototype: HTMLUtrechtIconLetOpElement;
+        new (): HTMLUtrechtIconLetOpElement;
+    };
+    interface HTMLUtrechtIconLinkedinElement extends Components.UtrechtIconLinkedin, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLinkedinElement: {
+        prototype: HTMLUtrechtIconLinkedinElement;
+        new (): HTMLUtrechtIconLinkedinElement;
+    };
+    interface HTMLUtrechtIconListElement extends Components.UtrechtIconList, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconListElement: {
+        prototype: HTMLUtrechtIconListElement;
+        new (): HTMLUtrechtIconListElement;
+    };
+    interface HTMLUtrechtIconLoupeElement extends Components.UtrechtIconLoupe, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconLoupeElement: {
+        prototype: HTMLUtrechtIconLoupeElement;
+        new (): HTMLUtrechtIconLoupeElement;
+    };
+    interface HTMLUtrechtIconMarktElement extends Components.UtrechtIconMarkt, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMarktElement: {
+        prototype: HTMLUtrechtIconMarktElement;
+        new (): HTMLUtrechtIconMarktElement;
+    };
+    interface HTMLUtrechtIconMeldingElement extends Components.UtrechtIconMelding, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMeldingElement: {
+        prototype: HTMLUtrechtIconMeldingElement;
+        new (): HTMLUtrechtIconMeldingElement;
+    };
+    interface HTMLUtrechtIconMeldingBoomElement extends Components.UtrechtIconMeldingBoom, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMeldingBoomElement: {
+        prototype: HTMLUtrechtIconMeldingBoomElement;
+        new (): HTMLUtrechtIconMeldingBoomElement;
+    };
+    interface HTMLUtrechtIconMeldingKlachtElement extends Components.UtrechtIconMeldingKlacht, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMeldingKlachtElement: {
+        prototype: HTMLUtrechtIconMeldingKlachtElement;
+        new (): HTMLUtrechtIconMeldingKlachtElement;
+    };
+    interface HTMLUtrechtIconMeldingOpenbareruimteElement extends Components.UtrechtIconMeldingOpenbareruimte, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMeldingOpenbareruimteElement: {
+        prototype: HTMLUtrechtIconMeldingOpenbareruimteElement;
+        new (): HTMLUtrechtIconMeldingOpenbareruimteElement;
+    };
+    interface HTMLUtrechtIconMeldingVerlichtingElement extends Components.UtrechtIconMeldingVerlichting, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMeldingVerlichtingElement: {
+        prototype: HTMLUtrechtIconMeldingVerlichtingElement;
+        new (): HTMLUtrechtIconMeldingVerlichtingElement;
+    };
+    interface HTMLUtrechtIconMenselijkElement extends Components.UtrechtIconMenselijk, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMenselijkElement: {
+        prototype: HTMLUtrechtIconMenselijkElement;
+        new (): HTMLUtrechtIconMenselijkElement;
+    };
+    interface HTMLUtrechtIconMeterkastElement extends Components.UtrechtIconMeterkast, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMeterkastElement: {
+        prototype: HTMLUtrechtIconMeterkastElement;
+        new (): HTMLUtrechtIconMeterkastElement;
+    };
+    interface HTMLUtrechtIconMilieuOntheffingElement extends Components.UtrechtIconMilieuOntheffing, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMilieuOntheffingElement: {
+        prototype: HTMLUtrechtIconMilieuOntheffingElement;
+        new (): HTMLUtrechtIconMilieuOntheffingElement;
+    };
+    interface HTMLUtrechtIconMilieuZoneElement extends Components.UtrechtIconMilieuZone, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMilieuZoneElement: {
+        prototype: HTMLUtrechtIconMilieuZoneElement;
+        new (): HTMLUtrechtIconMilieuZoneElement;
+    };
+    interface HTMLUtrechtIconMobiliteitElement extends Components.UtrechtIconMobiliteit, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMobiliteitElement: {
+        prototype: HTMLUtrechtIconMobiliteitElement;
+        new (): HTMLUtrechtIconMobiliteitElement;
+    };
+    interface HTMLUtrechtIconNatuurElement extends Components.UtrechtIconNatuur, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconNatuurElement: {
+        prototype: HTMLUtrechtIconNatuurElement;
+        new (): HTMLUtrechtIconNatuurElement;
+    };
+    interface HTMLUtrechtIconNieuwHuisElement extends Components.UtrechtIconNieuwHuis, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconNieuwHuisElement: {
+        prototype: HTMLUtrechtIconNieuwHuisElement;
+        new (): HTMLUtrechtIconNieuwHuisElement;
+    };
+    interface HTMLUtrechtIconNummerbordElement extends Components.UtrechtIconNummerbord, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconNummerbordElement: {
+        prototype: HTMLUtrechtIconNummerbordElement;
+        new (): HTMLUtrechtIconNummerbordElement;
+    };
+    interface HTMLUtrechtIconOmHetHuisElement extends Components.UtrechtIconOmHetHuis, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOmHetHuisElement: {
+        prototype: HTMLUtrechtIconOmHetHuisElement;
+        new (): HTMLUtrechtIconOmHetHuisElement;
+    };
+    interface HTMLUtrechtIconOmgevingElement extends Components.UtrechtIconOmgeving, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOmgevingElement: {
+        prototype: HTMLUtrechtIconOmgevingElement;
+        new (): HTMLUtrechtIconOmgevingElement;
+    };
+    interface HTMLUtrechtIconOmgevingsvisieElement extends Components.UtrechtIconOmgevingsvisie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOmgevingsvisieElement: {
+        prototype: HTMLUtrechtIconOmgevingsvisieElement;
+        new (): HTMLUtrechtIconOmgevingsvisieElement;
+    };
+    interface HTMLUtrechtIconOmgevingswetElement extends Components.UtrechtIconOmgevingswet, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOmgevingswetElement: {
+        prototype: HTMLUtrechtIconOmgevingswetElement;
+        new (): HTMLUtrechtIconOmgevingswetElement;
+    };
+    interface HTMLUtrechtIconOnderhoudElement extends Components.UtrechtIconOnderhoud, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOnderhoudElement: {
+        prototype: HTMLUtrechtIconOnderhoudElement;
+        new (): HTMLUtrechtIconOnderhoudElement;
+    };
+    interface HTMLUtrechtIconOndernemenElement extends Components.UtrechtIconOndernemen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOndernemenElement: {
+        prototype: HTMLUtrechtIconOndernemenElement;
+        new (): HTMLUtrechtIconOndernemenElement;
+    };
+    interface HTMLUtrechtIconOpeningstijdenElement extends Components.UtrechtIconOpeningstijden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOpeningstijdenElement: {
+        prototype: HTMLUtrechtIconOpeningstijdenElement;
+        new (): HTMLUtrechtIconOpeningstijdenElement;
+    };
+    interface HTMLUtrechtIconOverDeStadElement extends Components.UtrechtIconOverDeStad, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOverDeStadElement: {
+        prototype: HTMLUtrechtIconOverDeStadElement;
+        new (): HTMLUtrechtIconOverDeStadElement;
+    };
+    interface HTMLUtrechtIconOverlijdenElement extends Components.UtrechtIconOverlijden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconOverlijdenElement: {
+        prototype: HTMLUtrechtIconOverlijdenElement;
+        new (): HTMLUtrechtIconOverlijdenElement;
+    };
+    interface HTMLUtrechtIconPandenElement extends Components.UtrechtIconPanden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconPandenElement: {
+        prototype: HTMLUtrechtIconPandenElement;
+        new (): HTMLUtrechtIconPandenElement;
+    };
+    interface HTMLUtrechtIconParkElement extends Components.UtrechtIconPark, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkElement: {
+        prototype: HTMLUtrechtIconParkElement;
+        new (): HTMLUtrechtIconParkElement;
+    };
+    interface HTMLUtrechtIconParkeerkaartElement extends Components.UtrechtIconParkeerkaart, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkeerkaartElement: {
+        prototype: HTMLUtrechtIconParkeerkaartElement;
+        new (): HTMLUtrechtIconParkeerkaartElement;
+    };
+    interface HTMLUtrechtIconParkeervergunningElement extends Components.UtrechtIconParkeervergunning, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkeervergunningElement: {
+        prototype: HTMLUtrechtIconParkeervergunningElement;
+        new (): HTMLUtrechtIconParkeervergunningElement;
+    };
+    interface HTMLUtrechtIconParkenElement extends Components.UtrechtIconParken, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkenElement: {
+        prototype: HTMLUtrechtIconParkenElement;
+        new (): HTMLUtrechtIconParkenElement;
+    };
+    interface HTMLUtrechtIconParkerenElement extends Components.UtrechtIconParkeren, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkerenElement: {
+        prototype: HTMLUtrechtIconParkerenElement;
+        new (): HTMLUtrechtIconParkerenElement;
+    };
+    interface HTMLUtrechtIconParkerenBedrijvenElement extends Components.UtrechtIconParkerenBedrijven, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkerenBedrijvenElement: {
+        prototype: HTMLUtrechtIconParkerenBedrijvenElement;
+        new (): HTMLUtrechtIconParkerenBedrijvenElement;
+    };
+    interface HTMLUtrechtIconParkerenBetaalautomaatElement extends Components.UtrechtIconParkerenBetaalautomaat, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkerenBetaalautomaatElement: {
+        prototype: HTMLUtrechtIconParkerenBetaalautomaatElement;
+        new (): HTMLUtrechtIconParkerenBetaalautomaatElement;
+    };
+    interface HTMLUtrechtIconParkerenBetalenElement extends Components.UtrechtIconParkerenBetalen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParkerenBetalenElement: {
+        prototype: HTMLUtrechtIconParkerenBetalenElement;
+        new (): HTMLUtrechtIconParkerenBetalenElement;
+    };
+    interface HTMLUtrechtIconParticipatieCampagneElement extends Components.UtrechtIconParticipatieCampagne, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParticipatieCampagneElement: {
+        prototype: HTMLUtrechtIconParticipatieCampagneElement;
+        new (): HTMLUtrechtIconParticipatieCampagneElement;
+    };
+    interface HTMLUtrechtIconParticipatieLikeElement extends Components.UtrechtIconParticipatieLike, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParticipatieLikeElement: {
+        prototype: HTMLUtrechtIconParticipatieLikeElement;
+        new (): HTMLUtrechtIconParticipatieLikeElement;
+    };
+    interface HTMLUtrechtIconParticipatiePitchElement extends Components.UtrechtIconParticipatiePitch, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconParticipatiePitchElement: {
+        prototype: HTMLUtrechtIconParticipatiePitchElement;
+        new (): HTMLUtrechtIconParticipatiePitchElement;
+    };
+    interface HTMLUtrechtIconPaspoortElement extends Components.UtrechtIconPaspoort, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconPaspoortElement: {
+        prototype: HTMLUtrechtIconPaspoortElement;
+        new (): HTMLUtrechtIconPaspoortElement;
+    };
+    interface HTMLUtrechtIconPresentatieElement extends Components.UtrechtIconPresentatie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconPresentatieElement: {
+        prototype: HTMLUtrechtIconPresentatieElement;
+        new (): HTMLUtrechtIconPresentatieElement;
+    };
+    interface HTMLUtrechtIconPrijskaartjeElement extends Components.UtrechtIconPrijskaartje, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconPrijskaartjeElement: {
+        prototype: HTMLUtrechtIconPrijskaartjeElement;
+        new (): HTMLUtrechtIconPrijskaartjeElement;
+    };
+    interface HTMLUtrechtIconRijbewijsElement extends Components.UtrechtIconRijbewijs, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconRijbewijsElement: {
+        prototype: HTMLUtrechtIconRijbewijsElement;
+        new (): HTMLUtrechtIconRijbewijsElement;
+    };
+    interface HTMLUtrechtIconRioolheffingElement extends Components.UtrechtIconRioolheffing, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconRioolheffingElement: {
+        prototype: HTMLUtrechtIconRioolheffingElement;
+        new (): HTMLUtrechtIconRioolheffingElement;
+    };
+    interface HTMLUtrechtIconRolstoelElement extends Components.UtrechtIconRolstoel, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconRolstoelElement: {
+        prototype: HTMLUtrechtIconRolstoelElement;
+        new (): HTMLUtrechtIconRolstoelElement;
+    };
+    interface HTMLUtrechtIconSchildGemeenteUtrechtElement extends Components.UtrechtIconSchildGemeenteUtrecht, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSchildGemeenteUtrechtElement: {
+        prototype: HTMLUtrechtIconSchildGemeenteUtrechtElement;
+        new (): HTMLUtrechtIconSchildGemeenteUtrechtElement;
+    };
+    interface HTMLUtrechtIconShoppenElement extends Components.UtrechtIconShoppen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconShoppenElement: {
+        prototype: HTMLUtrechtIconShoppenElement;
+        new (): HTMLUtrechtIconShoppenElement;
+    };
+    interface HTMLUtrechtIconSinterklaasElement extends Components.UtrechtIconSinterklaas, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSinterklaasElement: {
+        prototype: HTMLUtrechtIconSinterklaasElement;
+        new (): HTMLUtrechtIconSinterklaasElement;
+    };
+    interface HTMLUtrechtIconSlechtziendeHoordendeElement extends Components.UtrechtIconSlechtziendeHoordende, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSlechtziendeHoordendeElement: {
+        prototype: HTMLUtrechtIconSlechtziendeHoordendeElement;
+        new (): HTMLUtrechtIconSlechtziendeHoordendeElement;
+    };
+    interface HTMLUtrechtIconSportElement extends Components.UtrechtIconSport, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSportElement: {
+        prototype: HTMLUtrechtIconSportElement;
+        new (): HTMLUtrechtIconSportElement;
+    };
+    interface HTMLUtrechtIconSportEnCultuurElement extends Components.UtrechtIconSportEnCultuur, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSportEnCultuurElement: {
+        prototype: HTMLUtrechtIconSportEnCultuurElement;
+        new (): HTMLUtrechtIconSportEnCultuurElement;
+    };
+    interface HTMLUtrechtIconSportVoetbalElement extends Components.UtrechtIconSportVoetbal, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSportVoetbalElement: {
+        prototype: HTMLUtrechtIconSportVoetbalElement;
+        new (): HTMLUtrechtIconSportVoetbalElement;
+    };
+    interface HTMLUtrechtIconStookverbodElement extends Components.UtrechtIconStookverbod, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconStookverbodElement: {
+        prototype: HTMLUtrechtIconStookverbodElement;
+        new (): HTMLUtrechtIconStookverbodElement;
+    };
+    interface HTMLUtrechtIconStrandElement extends Components.UtrechtIconStrand, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconStrandElement: {
+        prototype: HTMLUtrechtIconStrandElement;
+        new (): HTMLUtrechtIconStrandElement;
+    };
+    interface HTMLUtrechtIconStrooienElement extends Components.UtrechtIconStrooien, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconStrooienElement: {
+        prototype: HTMLUtrechtIconStrooienElement;
+        new (): HTMLUtrechtIconStrooienElement;
+    };
+    interface HTMLUtrechtIconSubsidieElement extends Components.UtrechtIconSubsidie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSubsidieElement: {
+        prototype: HTMLUtrechtIconSubsidieElement;
+        new (): HTMLUtrechtIconSubsidieElement;
+    };
+    interface HTMLUtrechtIconSubsidieGezinElement extends Components.UtrechtIconSubsidieGezin, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconSubsidieGezinElement: {
+        prototype: HTMLUtrechtIconSubsidieGezinElement;
+        new (): HTMLUtrechtIconSubsidieGezinElement;
+    };
+    interface HTMLUtrechtIconTShirtElement extends Components.UtrechtIconTShirt, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconTShirtElement: {
+        prototype: HTMLUtrechtIconTShirtElement;
+        new (): HTMLUtrechtIconTShirtElement;
+    };
+    interface HTMLUtrechtIconThuiswerkenElement extends Components.UtrechtIconThuiswerken, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconThuiswerkenElement: {
+        prototype: HTMLUtrechtIconThuiswerkenElement;
+        new (): HTMLUtrechtIconThuiswerkenElement;
+    };
+    interface HTMLUtrechtIconToeslagElement extends Components.UtrechtIconToeslag, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconToeslagElement: {
+        prototype: HTMLUtrechtIconToeslagElement;
+        new (): HTMLUtrechtIconToeslagElement;
+    };
+    interface HTMLUtrechtIconTreinElement extends Components.UtrechtIconTrein, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconTreinElement: {
+        prototype: HTMLUtrechtIconTreinElement;
+        new (): HTMLUtrechtIconTreinElement;
+    };
+    interface HTMLUtrechtIconTrouwenElement extends Components.UtrechtIconTrouwen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconTrouwenElement: {
+        prototype: HTMLUtrechtIconTrouwenElement;
+        new (): HTMLUtrechtIconTrouwenElement;
+    };
+    interface HTMLUtrechtIconTwitterElement extends Components.UtrechtIconTwitter, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconTwitterElement: {
+        prototype: HTMLUtrechtIconTwitterElement;
+        new (): HTMLUtrechtIconTwitterElement;
+    };
+    interface HTMLUtrechtIconUwWijkElement extends Components.UtrechtIconUwWijk, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconUwWijkElement: {
+        prototype: HTMLUtrechtIconUwWijkElement;
+        new (): HTMLUtrechtIconUwWijkElement;
+    };
+    interface HTMLUtrechtIconVaccinatieElement extends Components.UtrechtIconVaccinatie, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVaccinatieElement: {
+        prototype: HTMLUtrechtIconVaccinatieElement;
+        new (): HTMLUtrechtIconVaccinatieElement;
+    };
+    interface HTMLUtrechtIconVeiligeWijkElement extends Components.UtrechtIconVeiligeWijk, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVeiligeWijkElement: {
+        prototype: HTMLUtrechtIconVeiligeWijkElement;
+        new (): HTMLUtrechtIconVeiligeWijkElement;
+    };
+    interface HTMLUtrechtIconVergaderenElement extends Components.UtrechtIconVergaderen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVergaderenElement: {
+        prototype: HTMLUtrechtIconVergaderenElement;
+        new (): HTMLUtrechtIconVergaderenElement;
+    };
+    interface HTMLUtrechtIconVergaderendigitaalElement extends Components.UtrechtIconVergaderendigitaal, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVergaderendigitaalElement: {
+        prototype: HTMLUtrechtIconVergaderendigitaalElement;
+        new (): HTMLUtrechtIconVergaderendigitaalElement;
+    };
+    interface HTMLUtrechtIconVergoedingElement extends Components.UtrechtIconVergoeding, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVergoedingElement: {
+        prototype: HTMLUtrechtIconVergoedingElement;
+        new (): HTMLUtrechtIconVergoedingElement;
+    };
+    interface HTMLUtrechtIconVerhuizenElement extends Components.UtrechtIconVerhuizen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVerhuizenElement: {
+        prototype: HTMLUtrechtIconVerhuizenElement;
+        new (): HTMLUtrechtIconVerhuizenElement;
+    };
+    interface HTMLUtrechtIconVerkeerslichtElement extends Components.UtrechtIconVerkeerslicht, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVerkeerslichtElement: {
+        prototype: HTMLUtrechtIconVerkeerslichtElement;
+        new (): HTMLUtrechtIconVerkeerslichtElement;
+    };
+    interface HTMLUtrechtIconVerkiezingenElement extends Components.UtrechtIconVerkiezingen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVerkiezingenElement: {
+        prototype: HTMLUtrechtIconVerkiezingenElement;
+        new (): HTMLUtrechtIconVerkiezingenElement;
+    };
+    interface HTMLUtrechtIconVerslavingElement extends Components.UtrechtIconVerslaving, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVerslavingElement: {
+        prototype: HTMLUtrechtIconVerslavingElement;
+        new (): HTMLUtrechtIconVerslavingElement;
+    };
+    interface HTMLUtrechtIconVervoersvoorzieningElement extends Components.UtrechtIconVervoersvoorziening, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVervoersvoorzieningElement: {
+        prototype: HTMLUtrechtIconVervoersvoorzieningElement;
+        new (): HTMLUtrechtIconVervoersvoorzieningElement;
+    };
+    interface HTMLUtrechtIconVirusElement extends Components.UtrechtIconVirus, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVirusElement: {
+        prototype: HTMLUtrechtIconVirusElement;
+        new (): HTMLUtrechtIconVirusElement;
+    };
+    interface HTMLUtrechtIconVluchtelingenElement extends Components.UtrechtIconVluchtelingen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVluchtelingenElement: {
+        prototype: HTMLUtrechtIconVluchtelingenElement;
+        new (): HTMLUtrechtIconVluchtelingenElement;
+    };
+    interface HTMLUtrechtIconVoorzieningenVervoerElement extends Components.UtrechtIconVoorzieningenVervoer, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVoorzieningenVervoerElement: {
+        prototype: HTMLUtrechtIconVoorzieningenVervoerElement;
+        new (): HTMLUtrechtIconVoorzieningenVervoerElement;
+    };
+    interface HTMLUtrechtIconVrijwilligerswerkElement extends Components.UtrechtIconVrijwilligerswerk, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVrijwilligerswerkElement: {
+        prototype: HTMLUtrechtIconVrijwilligerswerkElement;
+        new (): HTMLUtrechtIconVrijwilligerswerkElement;
+    };
+    interface HTMLUtrechtIconVuilnisbakElement extends Components.UtrechtIconVuilnisbak, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVuilnisbakElement: {
+        prototype: HTMLUtrechtIconVuilnisbakElement;
+        new (): HTMLUtrechtIconVuilnisbakElement;
+    };
+    interface HTMLUtrechtIconVuilniszakElement extends Components.UtrechtIconVuilniszak, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVuilniszakElement: {
+        prototype: HTMLUtrechtIconVuilniszakElement;
+        new (): HTMLUtrechtIconVuilniszakElement;
+    };
+    interface HTMLUtrechtIconVuurwerkElement extends Components.UtrechtIconVuurwerk, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVuurwerkElement: {
+        prototype: HTMLUtrechtIconVuurwerkElement;
+        new (): HTMLUtrechtIconVuurwerkElement;
+    };
+    interface HTMLUtrechtIconWandelstokElement extends Components.UtrechtIconWandelstok, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWandelstokElement: {
+        prototype: HTMLUtrechtIconWandelstokElement;
+        new (): HTMLUtrechtIconWandelstokElement;
+    };
+    interface HTMLUtrechtIconWarmElement extends Components.UtrechtIconWarm, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWarmElement: {
+        prototype: HTMLUtrechtIconWarmElement;
+        new (): HTMLUtrechtIconWarmElement;
+    };
+    interface HTMLUtrechtIconWarningElement extends Components.UtrechtIconWarning, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWarningElement: {
+        prototype: HTMLUtrechtIconWarningElement;
+        new (): HTMLUtrechtIconWarningElement;
+    };
+    interface HTMLUtrechtIconWerkenElement extends Components.UtrechtIconWerken, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWerkenElement: {
+        prototype: HTMLUtrechtIconWerkenElement;
+        new (): HTMLUtrechtIconWerkenElement;
+    };
+    interface HTMLUtrechtIconWerkzaamhedenElement extends Components.UtrechtIconWerkzaamheden, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWerkzaamhedenElement: {
+        prototype: HTMLUtrechtIconWerkzaamhedenElement;
+        new (): HTMLUtrechtIconWerkzaamhedenElement;
+    };
+    interface HTMLUtrechtIconWhatsappElement extends Components.UtrechtIconWhatsapp, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWhatsappElement: {
+        prototype: HTMLUtrechtIconWhatsappElement;
+        new (): HTMLUtrechtIconWhatsappElement;
+    };
+    interface HTMLUtrechtIconWonenKostenElement extends Components.UtrechtIconWonenKosten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWonenKostenElement: {
+        prototype: HTMLUtrechtIconWonenKostenElement;
+        new (): HTMLUtrechtIconWonenKostenElement;
+    };
+    interface HTMLUtrechtIconWoningZoekenElement extends Components.UtrechtIconWoningZoeken, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWoningZoekenElement: {
+        prototype: HTMLUtrechtIconWoningZoekenElement;
+        new (): HTMLUtrechtIconWoningZoekenElement;
+    };
+    interface HTMLUtrechtIconYoutubeElement extends Components.UtrechtIconYoutube, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconYoutubeElement: {
+        prototype: HTMLUtrechtIconYoutubeElement;
+        new (): HTMLUtrechtIconYoutubeElement;
+    };
+    interface HTMLUtrechtIconZelfstandigWonenElement extends Components.UtrechtIconZelfstandigWonen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconZelfstandigWonenElement: {
+        prototype: HTMLUtrechtIconZelfstandigWonenElement;
+        new (): HTMLUtrechtIconZelfstandigWonenElement;
+    };
+    interface HTMLUtrechtIconZoominElement extends Components.UtrechtIconZoomin, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconZoominElement: {
+        prototype: HTMLUtrechtIconZoominElement;
+        new (): HTMLUtrechtIconZoominElement;
+    };
+    interface HTMLUtrechtIconZoomoutElement extends Components.UtrechtIconZoomout, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconZoomoutElement: {
+        prototype: HTMLUtrechtIconZoomoutElement;
+        new (): HTMLUtrechtIconZoomoutElement;
+    };
+    interface HTMLUtrechtIconZorgHuisElement extends Components.UtrechtIconZorgHuis, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconZorgHuisElement: {
+        prototype: HTMLUtrechtIconZorgHuisElement;
+        new (): HTMLUtrechtIconZorgHuisElement;
+    };
+    interface HTMLUtrechtIconZweefpaalElement extends Components.UtrechtIconZweefpaal, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconZweefpaalElement: {
+        prototype: HTMLUtrechtIconZweefpaalElement;
+        new (): HTMLUtrechtIconZweefpaalElement;
+    };
+    interface HTMLUtrechtIconZwemmenElement extends Components.UtrechtIconZwemmen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconZwemmenElement: {
+        prototype: HTMLUtrechtIconZwemmenElement;
+        new (): HTMLUtrechtIconZwemmenElement;
+    };
     interface HTMLUtrechtLinkElement extends Components.UtrechtLink, HTMLStencilElement {
     }
     var HTMLUtrechtLinkElement: {
@@ -702,6 +2174,190 @@ declare global {
         "utrecht-heading-group": HTMLUtrechtHeadingGroupElement;
         "utrecht-html-content": HTMLUtrechtHtmlContentElement;
         "utrecht-icon": HTMLUtrechtIconElement;
+        "utrecht-icon-afspraak-maken": HTMLUtrechtIconAfspraakMakenElement;
+        "utrecht-icon-afval": HTMLUtrechtIconAfvalElement;
+        "utrecht-icon-afval-container": HTMLUtrechtIconAfvalContainerElement;
+        "utrecht-icon-afval-containerpas": HTMLUtrechtIconAfvalContainerpasElement;
+        "utrecht-icon-afval-kalender": HTMLUtrechtIconAfvalKalenderElement;
+        "utrecht-icon-afval-pmd": HTMLUtrechtIconAfvalPmdElement;
+        "utrecht-icon-afval-scheiden": HTMLUtrechtIconAfvalScheidenElement;
+        "utrecht-icon-afvalkalender": HTMLUtrechtIconAfvalkalenderElement;
+        "utrecht-icon-alleen": HTMLUtrechtIconAlleenElement;
+        "utrecht-icon-arrow": HTMLUtrechtIconArrowElement;
+        "utrecht-icon-auto": HTMLUtrechtIconAutoElement;
+        "utrecht-icon-begroting": HTMLUtrechtIconBegrotingElement;
+        "utrecht-icon-bestemmingsplan": HTMLUtrechtIconBestemmingsplanElement;
+        "utrecht-icon-betaaldatum": HTMLUtrechtIconBetaaldatumElement;
+        "utrecht-icon-bewijsstukken": HTMLUtrechtIconBewijsstukkenElement;
+        "utrecht-icon-bijstand": HTMLUtrechtIconBijstandElement;
+        "utrecht-icon-blad": HTMLUtrechtIconBladElement;
+        "utrecht-icon-bouwproject": HTMLUtrechtIconBouwprojectElement;
+        "utrecht-icon-brandgevaar": HTMLUtrechtIconBrandgevaarElement;
+        "utrecht-icon-brief-betalen": HTMLUtrechtIconBriefBetalenElement;
+        "utrecht-icon-checkmark": HTMLUtrechtIconCheckmarkElement;
+        "utrecht-icon-college-b-w": HTMLUtrechtIconCollegeBWElement;
+        "utrecht-icon-container": HTMLUtrechtIconContainerElement;
+        "utrecht-icon-container-bio": HTMLUtrechtIconContainerBioElement;
+        "utrecht-icon-container-glas": HTMLUtrechtIconContainerGlasElement;
+        "utrecht-icon-container-groenafval": HTMLUtrechtIconContainerGroenafvalElement;
+        "utrecht-icon-container-met-zak": HTMLUtrechtIconContainerMetZakElement;
+        "utrecht-icon-container-papier": HTMLUtrechtIconContainerPapierElement;
+        "utrecht-icon-container-pmd": HTMLUtrechtIconContainerPmdElement;
+        "utrecht-icon-container-restafval": HTMLUtrechtIconContainerRestafvalElement;
+        "utrecht-icon-container-textiel": HTMLUtrechtIconContainerTextielElement;
+        "utrecht-icon-cross": HTMLUtrechtIconCrossElement;
+        "utrecht-icon-dakloos": HTMLUtrechtIconDakloosElement;
+        "utrecht-icon-dementie": HTMLUtrechtIconDementieElement;
+        "utrecht-icon-documenten": HTMLUtrechtIconDocumentenElement;
+        "utrecht-icon-duurzaam": HTMLUtrechtIconDuurzaamElement;
+        "utrecht-icon-eenzaamheid": HTMLUtrechtIconEenzaamheidElement;
+        "utrecht-icon-eikenprocessie": HTMLUtrechtIconEikenprocessieElement;
+        "utrecht-icon-elektrisch-rijden": HTMLUtrechtIconElektrischRijdenElement;
+        "utrecht-icon-energie-vergoeding": HTMLUtrechtIconEnergieVergoedingElement;
+        "utrecht-icon-energietransitie": HTMLUtrechtIconEnergietransitieElement;
+        "utrecht-icon-error": HTMLUtrechtIconErrorElement;
+        "utrecht-icon-evenementen": HTMLUtrechtIconEvenementenElement;
+        "utrecht-icon-facebook": HTMLUtrechtIconFacebookElement;
+        "utrecht-icon-fiets": HTMLUtrechtIconFietsElement;
+        "utrecht-icon-filter": HTMLUtrechtIconFilterElement;
+        "utrecht-icon-geboorte": HTMLUtrechtIconGeboorteElement;
+        "utrecht-icon-gebruiker-centraal": HTMLUtrechtIconGebruikerCentraalElement;
+        "utrecht-icon-gebruiker-ingelogd": HTMLUtrechtIconGebruikerIngelogdElement;
+        "utrecht-icon-gegevenswoordenboek": HTMLUtrechtIconGegevenswoordenboekElement;
+        "utrecht-icon-geluid": HTMLUtrechtIconGeluidElement;
+        "utrecht-icon-gemeente-locatie": HTMLUtrechtIconGemeenteLocatieElement;
+        "utrecht-icon-gemeenteraad": HTMLUtrechtIconGemeenteraadElement;
+        "utrecht-icon-gereedschap": HTMLUtrechtIconGereedschapElement;
+        "utrecht-icon-gezicht": HTMLUtrechtIconGezichtElement;
+        "utrecht-icon-gezin": HTMLUtrechtIconGezinElement;
+        "utrecht-icon-glas-afval": HTMLUtrechtIconGlasAfvalElement;
+        "utrecht-icon-glijbaan": HTMLUtrechtIconGlijbaanElement;
+        "utrecht-icon-grafiek": HTMLUtrechtIconGrafiekElement;
+        "utrecht-icon-grofvuil": HTMLUtrechtIconGrofvuilElement;
+        "utrecht-icon-grofvuil-ophalen": HTMLUtrechtIconGrofvuilOphalenElement;
+        "utrecht-icon-herdenking": HTMLUtrechtIconHerdenkingElement;
+        "utrecht-icon-hondenbelasting": HTMLUtrechtIconHondenbelastingElement;
+        "utrecht-icon-horeca": HTMLUtrechtIconHorecaElement;
+        "utrecht-icon-horecavergunning": HTMLUtrechtIconHorecavergunningElement;
+        "utrecht-icon-huis": HTMLUtrechtIconHuisElement;
+        "utrecht-icon-huis-en-omgeving": HTMLUtrechtIconHuisEnOmgevingElement;
+        "utrecht-icon-huishoudelijk-geweld": HTMLUtrechtIconHuishoudelijkGeweldElement;
+        "utrecht-icon-hulp-huishouden": HTMLUtrechtIconHulpHuishoudenElement;
+        "utrecht-icon-hulp-vervoer": HTMLUtrechtIconHulpVervoerElement;
+        "utrecht-icon-hulp-zorg": HTMLUtrechtIconHulpZorgElement;
+        "utrecht-icon-hulpmiddelen-gezin": HTMLUtrechtIconHulpmiddelenGezinElement;
+        "utrecht-icon-hulpverlening": HTMLUtrechtIconHulpverleningElement;
+        "utrecht-icon-idee": HTMLUtrechtIconIdeeElement;
+        "utrecht-icon-informatie": HTMLUtrechtIconInformatieElement;
+        "utrecht-icon-information": HTMLUtrechtIconInformationElement;
+        "utrecht-icon-innovatie": HTMLUtrechtIconInnovatieElement;
+        "utrecht-icon-inspraak-inwoners": HTMLUtrechtIconInspraakInwonersElement;
+        "utrecht-icon-instagram": HTMLUtrechtIconInstagramElement;
+        "utrecht-icon-kalender": HTMLUtrechtIconKalenderElement;
+        "utrecht-icon-kennis": HTMLUtrechtIconKennisElement;
+        "utrecht-icon-kerstbomen": HTMLUtrechtIconKerstbomenElement;
+        "utrecht-icon-klachten": HTMLUtrechtIconKlachtenElement;
+        "utrecht-icon-kroon": HTMLUtrechtIconKroonElement;
+        "utrecht-icon-laadpaal": HTMLUtrechtIconLaadpaalElement;
+        "utrecht-icon-lantaarnpaal": HTMLUtrechtIconLantaarnpaalElement;
+        "utrecht-icon-lantaarnpaal-oud": HTMLUtrechtIconLantaarnpaalOudElement;
+        "utrecht-icon-leren": HTMLUtrechtIconLerenElement;
+        "utrecht-icon-let-op": HTMLUtrechtIconLetOpElement;
+        "utrecht-icon-linkedin": HTMLUtrechtIconLinkedinElement;
+        "utrecht-icon-list": HTMLUtrechtIconListElement;
+        "utrecht-icon-loupe": HTMLUtrechtIconLoupeElement;
+        "utrecht-icon-markt": HTMLUtrechtIconMarktElement;
+        "utrecht-icon-melding": HTMLUtrechtIconMeldingElement;
+        "utrecht-icon-melding-boom": HTMLUtrechtIconMeldingBoomElement;
+        "utrecht-icon-melding-klacht": HTMLUtrechtIconMeldingKlachtElement;
+        "utrecht-icon-melding-openbareruimte": HTMLUtrechtIconMeldingOpenbareruimteElement;
+        "utrecht-icon-melding-verlichting": HTMLUtrechtIconMeldingVerlichtingElement;
+        "utrecht-icon-menselijk": HTMLUtrechtIconMenselijkElement;
+        "utrecht-icon-meterkast": HTMLUtrechtIconMeterkastElement;
+        "utrecht-icon-milieu-ontheffing": HTMLUtrechtIconMilieuOntheffingElement;
+        "utrecht-icon-milieu-zone": HTMLUtrechtIconMilieuZoneElement;
+        "utrecht-icon-mobiliteit": HTMLUtrechtIconMobiliteitElement;
+        "utrecht-icon-natuur": HTMLUtrechtIconNatuurElement;
+        "utrecht-icon-nieuw-huis": HTMLUtrechtIconNieuwHuisElement;
+        "utrecht-icon-nummerbord": HTMLUtrechtIconNummerbordElement;
+        "utrecht-icon-om-het-huis": HTMLUtrechtIconOmHetHuisElement;
+        "utrecht-icon-omgeving": HTMLUtrechtIconOmgevingElement;
+        "utrecht-icon-omgevingsvisie": HTMLUtrechtIconOmgevingsvisieElement;
+        "utrecht-icon-omgevingswet": HTMLUtrechtIconOmgevingswetElement;
+        "utrecht-icon-onderhoud": HTMLUtrechtIconOnderhoudElement;
+        "utrecht-icon-ondernemen": HTMLUtrechtIconOndernemenElement;
+        "utrecht-icon-openingstijden": HTMLUtrechtIconOpeningstijdenElement;
+        "utrecht-icon-over-de-stad": HTMLUtrechtIconOverDeStadElement;
+        "utrecht-icon-overlijden": HTMLUtrechtIconOverlijdenElement;
+        "utrecht-icon-panden": HTMLUtrechtIconPandenElement;
+        "utrecht-icon-park": HTMLUtrechtIconParkElement;
+        "utrecht-icon-parkeerkaart": HTMLUtrechtIconParkeerkaartElement;
+        "utrecht-icon-parkeervergunning": HTMLUtrechtIconParkeervergunningElement;
+        "utrecht-icon-parken": HTMLUtrechtIconParkenElement;
+        "utrecht-icon-parkeren": HTMLUtrechtIconParkerenElement;
+        "utrecht-icon-parkeren-bedrijven": HTMLUtrechtIconParkerenBedrijvenElement;
+        "utrecht-icon-parkeren-betaalautomaat": HTMLUtrechtIconParkerenBetaalautomaatElement;
+        "utrecht-icon-parkeren-betalen": HTMLUtrechtIconParkerenBetalenElement;
+        "utrecht-icon-participatie-campagne": HTMLUtrechtIconParticipatieCampagneElement;
+        "utrecht-icon-participatie-like": HTMLUtrechtIconParticipatieLikeElement;
+        "utrecht-icon-participatie-pitch": HTMLUtrechtIconParticipatiePitchElement;
+        "utrecht-icon-paspoort": HTMLUtrechtIconPaspoortElement;
+        "utrecht-icon-presentatie": HTMLUtrechtIconPresentatieElement;
+        "utrecht-icon-prijskaartje": HTMLUtrechtIconPrijskaartjeElement;
+        "utrecht-icon-rijbewijs": HTMLUtrechtIconRijbewijsElement;
+        "utrecht-icon-rioolheffing": HTMLUtrechtIconRioolheffingElement;
+        "utrecht-icon-rolstoel": HTMLUtrechtIconRolstoelElement;
+        "utrecht-icon-schild-gemeente-utrecht": HTMLUtrechtIconSchildGemeenteUtrechtElement;
+        "utrecht-icon-shoppen": HTMLUtrechtIconShoppenElement;
+        "utrecht-icon-sinterklaas": HTMLUtrechtIconSinterklaasElement;
+        "utrecht-icon-slechtziende-hoordende": HTMLUtrechtIconSlechtziendeHoordendeElement;
+        "utrecht-icon-sport": HTMLUtrechtIconSportElement;
+        "utrecht-icon-sport-en-cultuur": HTMLUtrechtIconSportEnCultuurElement;
+        "utrecht-icon-sport-voetbal": HTMLUtrechtIconSportVoetbalElement;
+        "utrecht-icon-stookverbod": HTMLUtrechtIconStookverbodElement;
+        "utrecht-icon-strand": HTMLUtrechtIconStrandElement;
+        "utrecht-icon-strooien": HTMLUtrechtIconStrooienElement;
+        "utrecht-icon-subsidie": HTMLUtrechtIconSubsidieElement;
+        "utrecht-icon-subsidie-gezin": HTMLUtrechtIconSubsidieGezinElement;
+        "utrecht-icon-t-shirt": HTMLUtrechtIconTShirtElement;
+        "utrecht-icon-thuiswerken": HTMLUtrechtIconThuiswerkenElement;
+        "utrecht-icon-toeslag": HTMLUtrechtIconToeslagElement;
+        "utrecht-icon-trein": HTMLUtrechtIconTreinElement;
+        "utrecht-icon-trouwen": HTMLUtrechtIconTrouwenElement;
+        "utrecht-icon-twitter": HTMLUtrechtIconTwitterElement;
+        "utrecht-icon-uw-wijk": HTMLUtrechtIconUwWijkElement;
+        "utrecht-icon-vaccinatie": HTMLUtrechtIconVaccinatieElement;
+        "utrecht-icon-veilige-wijk": HTMLUtrechtIconVeiligeWijkElement;
+        "utrecht-icon-vergaderen": HTMLUtrechtIconVergaderenElement;
+        "utrecht-icon-vergaderendigitaal": HTMLUtrechtIconVergaderendigitaalElement;
+        "utrecht-icon-vergoeding": HTMLUtrechtIconVergoedingElement;
+        "utrecht-icon-verhuizen": HTMLUtrechtIconVerhuizenElement;
+        "utrecht-icon-verkeerslicht": HTMLUtrechtIconVerkeerslichtElement;
+        "utrecht-icon-verkiezingen": HTMLUtrechtIconVerkiezingenElement;
+        "utrecht-icon-verslaving": HTMLUtrechtIconVerslavingElement;
+        "utrecht-icon-vervoersvoorziening": HTMLUtrechtIconVervoersvoorzieningElement;
+        "utrecht-icon-virus": HTMLUtrechtIconVirusElement;
+        "utrecht-icon-vluchtelingen": HTMLUtrechtIconVluchtelingenElement;
+        "utrecht-icon-voorzieningen-vervoer": HTMLUtrechtIconVoorzieningenVervoerElement;
+        "utrecht-icon-vrijwilligerswerk": HTMLUtrechtIconVrijwilligerswerkElement;
+        "utrecht-icon-vuilnisbak": HTMLUtrechtIconVuilnisbakElement;
+        "utrecht-icon-vuilniszak": HTMLUtrechtIconVuilniszakElement;
+        "utrecht-icon-vuurwerk": HTMLUtrechtIconVuurwerkElement;
+        "utrecht-icon-wandelstok": HTMLUtrechtIconWandelstokElement;
+        "utrecht-icon-warm": HTMLUtrechtIconWarmElement;
+        "utrecht-icon-warning": HTMLUtrechtIconWarningElement;
+        "utrecht-icon-werken": HTMLUtrechtIconWerkenElement;
+        "utrecht-icon-werkzaamheden": HTMLUtrechtIconWerkzaamhedenElement;
+        "utrecht-icon-whatsapp": HTMLUtrechtIconWhatsappElement;
+        "utrecht-icon-wonen-kosten": HTMLUtrechtIconWonenKostenElement;
+        "utrecht-icon-woning-zoeken": HTMLUtrechtIconWoningZoekenElement;
+        "utrecht-icon-youtube": HTMLUtrechtIconYoutubeElement;
+        "utrecht-icon-zelfstandig-wonen": HTMLUtrechtIconZelfstandigWonenElement;
+        "utrecht-icon-zoomin": HTMLUtrechtIconZoominElement;
+        "utrecht-icon-zoomout": HTMLUtrechtIconZoomoutElement;
+        "utrecht-icon-zorg-huis": HTMLUtrechtIconZorgHuisElement;
+        "utrecht-icon-zweefpaal": HTMLUtrechtIconZweefpaalElement;
+        "utrecht-icon-zwemmen": HTMLUtrechtIconZwemmenElement;
         "utrecht-link": HTMLUtrechtLinkElement;
         "utrecht-link-button": HTMLUtrechtLinkButtonElement;
         "utrecht-logo": HTMLUtrechtLogoElement;
@@ -882,6 +2538,374 @@ declare namespace LocalJSX {
     }
     interface UtrechtIcon {
     }
+    interface UtrechtIconAfspraakMaken {
+    }
+    interface UtrechtIconAfval {
+    }
+    interface UtrechtIconAfvalContainer {
+    }
+    interface UtrechtIconAfvalContainerpas {
+    }
+    interface UtrechtIconAfvalKalender {
+    }
+    interface UtrechtIconAfvalPmd {
+    }
+    interface UtrechtIconAfvalScheiden {
+    }
+    interface UtrechtIconAfvalkalender {
+    }
+    interface UtrechtIconAlleen {
+    }
+    interface UtrechtIconArrow {
+    }
+    interface UtrechtIconAuto {
+    }
+    interface UtrechtIconBegroting {
+    }
+    interface UtrechtIconBestemmingsplan {
+    }
+    interface UtrechtIconBetaaldatum {
+    }
+    interface UtrechtIconBewijsstukken {
+    }
+    interface UtrechtIconBijstand {
+    }
+    interface UtrechtIconBlad {
+    }
+    interface UtrechtIconBouwproject {
+    }
+    interface UtrechtIconBrandgevaar {
+    }
+    interface UtrechtIconBriefBetalen {
+    }
+    interface UtrechtIconCheckmark {
+    }
+    interface UtrechtIconCollegeBW {
+    }
+    interface UtrechtIconContainer {
+    }
+    interface UtrechtIconContainerBio {
+    }
+    interface UtrechtIconContainerGlas {
+    }
+    interface UtrechtIconContainerGroenafval {
+    }
+    interface UtrechtIconContainerMetZak {
+    }
+    interface UtrechtIconContainerPapier {
+    }
+    interface UtrechtIconContainerPmd {
+    }
+    interface UtrechtIconContainerRestafval {
+    }
+    interface UtrechtIconContainerTextiel {
+    }
+    interface UtrechtIconCross {
+    }
+    interface UtrechtIconDakloos {
+    }
+    interface UtrechtIconDementie {
+    }
+    interface UtrechtIconDocumenten {
+    }
+    interface UtrechtIconDuurzaam {
+    }
+    interface UtrechtIconEenzaamheid {
+    }
+    interface UtrechtIconEikenprocessie {
+    }
+    interface UtrechtIconElektrischRijden {
+    }
+    interface UtrechtIconEnergieVergoeding {
+    }
+    interface UtrechtIconEnergietransitie {
+    }
+    interface UtrechtIconError {
+    }
+    interface UtrechtIconEvenementen {
+    }
+    interface UtrechtIconFacebook {
+    }
+    interface UtrechtIconFiets {
+    }
+    interface UtrechtIconFilter {
+    }
+    interface UtrechtIconGeboorte {
+    }
+    interface UtrechtIconGebruikerCentraal {
+    }
+    interface UtrechtIconGebruikerIngelogd {
+    }
+    interface UtrechtIconGegevenswoordenboek {
+    }
+    interface UtrechtIconGeluid {
+    }
+    interface UtrechtIconGemeenteLocatie {
+    }
+    interface UtrechtIconGemeenteraad {
+    }
+    interface UtrechtIconGereedschap {
+    }
+    interface UtrechtIconGezicht {
+    }
+    interface UtrechtIconGezin {
+    }
+    interface UtrechtIconGlasAfval {
+    }
+    interface UtrechtIconGlijbaan {
+    }
+    interface UtrechtIconGrafiek {
+    }
+    interface UtrechtIconGrofvuil {
+    }
+    interface UtrechtIconGrofvuilOphalen {
+    }
+    interface UtrechtIconHerdenking {
+    }
+    interface UtrechtIconHondenbelasting {
+    }
+    interface UtrechtIconHoreca {
+    }
+    interface UtrechtIconHorecavergunning {
+    }
+    interface UtrechtIconHuis {
+    }
+    interface UtrechtIconHuisEnOmgeving {
+    }
+    interface UtrechtIconHuishoudelijkGeweld {
+    }
+    interface UtrechtIconHulpHuishouden {
+    }
+    interface UtrechtIconHulpVervoer {
+    }
+    interface UtrechtIconHulpZorg {
+    }
+    interface UtrechtIconHulpmiddelenGezin {
+    }
+    interface UtrechtIconHulpverlening {
+    }
+    interface UtrechtIconIdee {
+    }
+    interface UtrechtIconInformatie {
+    }
+    interface UtrechtIconInformation {
+    }
+    interface UtrechtIconInnovatie {
+    }
+    interface UtrechtIconInspraakInwoners {
+    }
+    interface UtrechtIconInstagram {
+    }
+    interface UtrechtIconKalender {
+    }
+    interface UtrechtIconKennis {
+    }
+    interface UtrechtIconKerstbomen {
+    }
+    interface UtrechtIconKlachten {
+    }
+    interface UtrechtIconKroon {
+    }
+    interface UtrechtIconLaadpaal {
+    }
+    interface UtrechtIconLantaarnpaal {
+    }
+    interface UtrechtIconLantaarnpaalOud {
+    }
+    interface UtrechtIconLeren {
+    }
+    interface UtrechtIconLetOp {
+    }
+    interface UtrechtIconLinkedin {
+    }
+    interface UtrechtIconList {
+    }
+    interface UtrechtIconLoupe {
+    }
+    interface UtrechtIconMarkt {
+    }
+    interface UtrechtIconMelding {
+    }
+    interface UtrechtIconMeldingBoom {
+    }
+    interface UtrechtIconMeldingKlacht {
+    }
+    interface UtrechtIconMeldingOpenbareruimte {
+    }
+    interface UtrechtIconMeldingVerlichting {
+    }
+    interface UtrechtIconMenselijk {
+    }
+    interface UtrechtIconMeterkast {
+    }
+    interface UtrechtIconMilieuOntheffing {
+    }
+    interface UtrechtIconMilieuZone {
+    }
+    interface UtrechtIconMobiliteit {
+    }
+    interface UtrechtIconNatuur {
+    }
+    interface UtrechtIconNieuwHuis {
+    }
+    interface UtrechtIconNummerbord {
+    }
+    interface UtrechtIconOmHetHuis {
+    }
+    interface UtrechtIconOmgeving {
+    }
+    interface UtrechtIconOmgevingsvisie {
+    }
+    interface UtrechtIconOmgevingswet {
+    }
+    interface UtrechtIconOnderhoud {
+    }
+    interface UtrechtIconOndernemen {
+    }
+    interface UtrechtIconOpeningstijden {
+    }
+    interface UtrechtIconOverDeStad {
+    }
+    interface UtrechtIconOverlijden {
+    }
+    interface UtrechtIconPanden {
+    }
+    interface UtrechtIconPark {
+    }
+    interface UtrechtIconParkeerkaart {
+    }
+    interface UtrechtIconParkeervergunning {
+    }
+    interface UtrechtIconParken {
+    }
+    interface UtrechtIconParkeren {
+    }
+    interface UtrechtIconParkerenBedrijven {
+    }
+    interface UtrechtIconParkerenBetaalautomaat {
+    }
+    interface UtrechtIconParkerenBetalen {
+    }
+    interface UtrechtIconParticipatieCampagne {
+    }
+    interface UtrechtIconParticipatieLike {
+    }
+    interface UtrechtIconParticipatiePitch {
+    }
+    interface UtrechtIconPaspoort {
+    }
+    interface UtrechtIconPresentatie {
+    }
+    interface UtrechtIconPrijskaartje {
+    }
+    interface UtrechtIconRijbewijs {
+    }
+    interface UtrechtIconRioolheffing {
+    }
+    interface UtrechtIconRolstoel {
+    }
+    interface UtrechtIconSchildGemeenteUtrecht {
+    }
+    interface UtrechtIconShoppen {
+    }
+    interface UtrechtIconSinterklaas {
+    }
+    interface UtrechtIconSlechtziendeHoordende {
+    }
+    interface UtrechtIconSport {
+    }
+    interface UtrechtIconSportEnCultuur {
+    }
+    interface UtrechtIconSportVoetbal {
+    }
+    interface UtrechtIconStookverbod {
+    }
+    interface UtrechtIconStrand {
+    }
+    interface UtrechtIconStrooien {
+    }
+    interface UtrechtIconSubsidie {
+    }
+    interface UtrechtIconSubsidieGezin {
+    }
+    interface UtrechtIconTShirt {
+    }
+    interface UtrechtIconThuiswerken {
+    }
+    interface UtrechtIconToeslag {
+    }
+    interface UtrechtIconTrein {
+    }
+    interface UtrechtIconTrouwen {
+    }
+    interface UtrechtIconTwitter {
+    }
+    interface UtrechtIconUwWijk {
+    }
+    interface UtrechtIconVaccinatie {
+    }
+    interface UtrechtIconVeiligeWijk {
+    }
+    interface UtrechtIconVergaderen {
+    }
+    interface UtrechtIconVergaderendigitaal {
+    }
+    interface UtrechtIconVergoeding {
+    }
+    interface UtrechtIconVerhuizen {
+    }
+    interface UtrechtIconVerkeerslicht {
+    }
+    interface UtrechtIconVerkiezingen {
+    }
+    interface UtrechtIconVerslaving {
+    }
+    interface UtrechtIconVervoersvoorziening {
+    }
+    interface UtrechtIconVirus {
+    }
+    interface UtrechtIconVluchtelingen {
+    }
+    interface UtrechtIconVoorzieningenVervoer {
+    }
+    interface UtrechtIconVrijwilligerswerk {
+    }
+    interface UtrechtIconVuilnisbak {
+    }
+    interface UtrechtIconVuilniszak {
+    }
+    interface UtrechtIconVuurwerk {
+    }
+    interface UtrechtIconWandelstok {
+    }
+    interface UtrechtIconWarm {
+    }
+    interface UtrechtIconWarning {
+    }
+    interface UtrechtIconWerken {
+    }
+    interface UtrechtIconWerkzaamheden {
+    }
+    interface UtrechtIconWhatsapp {
+    }
+    interface UtrechtIconWonenKosten {
+    }
+    interface UtrechtIconWoningZoeken {
+    }
+    interface UtrechtIconYoutube {
+    }
+    interface UtrechtIconZelfstandigWonen {
+    }
+    interface UtrechtIconZoomin {
+    }
+    interface UtrechtIconZoomout {
+    }
+    interface UtrechtIconZorgHuis {
+    }
+    interface UtrechtIconZweefpaal {
+    }
+    interface UtrechtIconZwemmen {
+    }
     interface UtrechtLink {
         "href"?: string;
     }
@@ -1025,6 +3049,190 @@ declare namespace LocalJSX {
         "utrecht-heading-group": UtrechtHeadingGroup;
         "utrecht-html-content": UtrechtHtmlContent;
         "utrecht-icon": UtrechtIcon;
+        "utrecht-icon-afspraak-maken": UtrechtIconAfspraakMaken;
+        "utrecht-icon-afval": UtrechtIconAfval;
+        "utrecht-icon-afval-container": UtrechtIconAfvalContainer;
+        "utrecht-icon-afval-containerpas": UtrechtIconAfvalContainerpas;
+        "utrecht-icon-afval-kalender": UtrechtIconAfvalKalender;
+        "utrecht-icon-afval-pmd": UtrechtIconAfvalPmd;
+        "utrecht-icon-afval-scheiden": UtrechtIconAfvalScheiden;
+        "utrecht-icon-afvalkalender": UtrechtIconAfvalkalender;
+        "utrecht-icon-alleen": UtrechtIconAlleen;
+        "utrecht-icon-arrow": UtrechtIconArrow;
+        "utrecht-icon-auto": UtrechtIconAuto;
+        "utrecht-icon-begroting": UtrechtIconBegroting;
+        "utrecht-icon-bestemmingsplan": UtrechtIconBestemmingsplan;
+        "utrecht-icon-betaaldatum": UtrechtIconBetaaldatum;
+        "utrecht-icon-bewijsstukken": UtrechtIconBewijsstukken;
+        "utrecht-icon-bijstand": UtrechtIconBijstand;
+        "utrecht-icon-blad": UtrechtIconBlad;
+        "utrecht-icon-bouwproject": UtrechtIconBouwproject;
+        "utrecht-icon-brandgevaar": UtrechtIconBrandgevaar;
+        "utrecht-icon-brief-betalen": UtrechtIconBriefBetalen;
+        "utrecht-icon-checkmark": UtrechtIconCheckmark;
+        "utrecht-icon-college-b-w": UtrechtIconCollegeBW;
+        "utrecht-icon-container": UtrechtIconContainer;
+        "utrecht-icon-container-bio": UtrechtIconContainerBio;
+        "utrecht-icon-container-glas": UtrechtIconContainerGlas;
+        "utrecht-icon-container-groenafval": UtrechtIconContainerGroenafval;
+        "utrecht-icon-container-met-zak": UtrechtIconContainerMetZak;
+        "utrecht-icon-container-papier": UtrechtIconContainerPapier;
+        "utrecht-icon-container-pmd": UtrechtIconContainerPmd;
+        "utrecht-icon-container-restafval": UtrechtIconContainerRestafval;
+        "utrecht-icon-container-textiel": UtrechtIconContainerTextiel;
+        "utrecht-icon-cross": UtrechtIconCross;
+        "utrecht-icon-dakloos": UtrechtIconDakloos;
+        "utrecht-icon-dementie": UtrechtIconDementie;
+        "utrecht-icon-documenten": UtrechtIconDocumenten;
+        "utrecht-icon-duurzaam": UtrechtIconDuurzaam;
+        "utrecht-icon-eenzaamheid": UtrechtIconEenzaamheid;
+        "utrecht-icon-eikenprocessie": UtrechtIconEikenprocessie;
+        "utrecht-icon-elektrisch-rijden": UtrechtIconElektrischRijden;
+        "utrecht-icon-energie-vergoeding": UtrechtIconEnergieVergoeding;
+        "utrecht-icon-energietransitie": UtrechtIconEnergietransitie;
+        "utrecht-icon-error": UtrechtIconError;
+        "utrecht-icon-evenementen": UtrechtIconEvenementen;
+        "utrecht-icon-facebook": UtrechtIconFacebook;
+        "utrecht-icon-fiets": UtrechtIconFiets;
+        "utrecht-icon-filter": UtrechtIconFilter;
+        "utrecht-icon-geboorte": UtrechtIconGeboorte;
+        "utrecht-icon-gebruiker-centraal": UtrechtIconGebruikerCentraal;
+        "utrecht-icon-gebruiker-ingelogd": UtrechtIconGebruikerIngelogd;
+        "utrecht-icon-gegevenswoordenboek": UtrechtIconGegevenswoordenboek;
+        "utrecht-icon-geluid": UtrechtIconGeluid;
+        "utrecht-icon-gemeente-locatie": UtrechtIconGemeenteLocatie;
+        "utrecht-icon-gemeenteraad": UtrechtIconGemeenteraad;
+        "utrecht-icon-gereedschap": UtrechtIconGereedschap;
+        "utrecht-icon-gezicht": UtrechtIconGezicht;
+        "utrecht-icon-gezin": UtrechtIconGezin;
+        "utrecht-icon-glas-afval": UtrechtIconGlasAfval;
+        "utrecht-icon-glijbaan": UtrechtIconGlijbaan;
+        "utrecht-icon-grafiek": UtrechtIconGrafiek;
+        "utrecht-icon-grofvuil": UtrechtIconGrofvuil;
+        "utrecht-icon-grofvuil-ophalen": UtrechtIconGrofvuilOphalen;
+        "utrecht-icon-herdenking": UtrechtIconHerdenking;
+        "utrecht-icon-hondenbelasting": UtrechtIconHondenbelasting;
+        "utrecht-icon-horeca": UtrechtIconHoreca;
+        "utrecht-icon-horecavergunning": UtrechtIconHorecavergunning;
+        "utrecht-icon-huis": UtrechtIconHuis;
+        "utrecht-icon-huis-en-omgeving": UtrechtIconHuisEnOmgeving;
+        "utrecht-icon-huishoudelijk-geweld": UtrechtIconHuishoudelijkGeweld;
+        "utrecht-icon-hulp-huishouden": UtrechtIconHulpHuishouden;
+        "utrecht-icon-hulp-vervoer": UtrechtIconHulpVervoer;
+        "utrecht-icon-hulp-zorg": UtrechtIconHulpZorg;
+        "utrecht-icon-hulpmiddelen-gezin": UtrechtIconHulpmiddelenGezin;
+        "utrecht-icon-hulpverlening": UtrechtIconHulpverlening;
+        "utrecht-icon-idee": UtrechtIconIdee;
+        "utrecht-icon-informatie": UtrechtIconInformatie;
+        "utrecht-icon-information": UtrechtIconInformation;
+        "utrecht-icon-innovatie": UtrechtIconInnovatie;
+        "utrecht-icon-inspraak-inwoners": UtrechtIconInspraakInwoners;
+        "utrecht-icon-instagram": UtrechtIconInstagram;
+        "utrecht-icon-kalender": UtrechtIconKalender;
+        "utrecht-icon-kennis": UtrechtIconKennis;
+        "utrecht-icon-kerstbomen": UtrechtIconKerstbomen;
+        "utrecht-icon-klachten": UtrechtIconKlachten;
+        "utrecht-icon-kroon": UtrechtIconKroon;
+        "utrecht-icon-laadpaal": UtrechtIconLaadpaal;
+        "utrecht-icon-lantaarnpaal": UtrechtIconLantaarnpaal;
+        "utrecht-icon-lantaarnpaal-oud": UtrechtIconLantaarnpaalOud;
+        "utrecht-icon-leren": UtrechtIconLeren;
+        "utrecht-icon-let-op": UtrechtIconLetOp;
+        "utrecht-icon-linkedin": UtrechtIconLinkedin;
+        "utrecht-icon-list": UtrechtIconList;
+        "utrecht-icon-loupe": UtrechtIconLoupe;
+        "utrecht-icon-markt": UtrechtIconMarkt;
+        "utrecht-icon-melding": UtrechtIconMelding;
+        "utrecht-icon-melding-boom": UtrechtIconMeldingBoom;
+        "utrecht-icon-melding-klacht": UtrechtIconMeldingKlacht;
+        "utrecht-icon-melding-openbareruimte": UtrechtIconMeldingOpenbareruimte;
+        "utrecht-icon-melding-verlichting": UtrechtIconMeldingVerlichting;
+        "utrecht-icon-menselijk": UtrechtIconMenselijk;
+        "utrecht-icon-meterkast": UtrechtIconMeterkast;
+        "utrecht-icon-milieu-ontheffing": UtrechtIconMilieuOntheffing;
+        "utrecht-icon-milieu-zone": UtrechtIconMilieuZone;
+        "utrecht-icon-mobiliteit": UtrechtIconMobiliteit;
+        "utrecht-icon-natuur": UtrechtIconNatuur;
+        "utrecht-icon-nieuw-huis": UtrechtIconNieuwHuis;
+        "utrecht-icon-nummerbord": UtrechtIconNummerbord;
+        "utrecht-icon-om-het-huis": UtrechtIconOmHetHuis;
+        "utrecht-icon-omgeving": UtrechtIconOmgeving;
+        "utrecht-icon-omgevingsvisie": UtrechtIconOmgevingsvisie;
+        "utrecht-icon-omgevingswet": UtrechtIconOmgevingswet;
+        "utrecht-icon-onderhoud": UtrechtIconOnderhoud;
+        "utrecht-icon-ondernemen": UtrechtIconOndernemen;
+        "utrecht-icon-openingstijden": UtrechtIconOpeningstijden;
+        "utrecht-icon-over-de-stad": UtrechtIconOverDeStad;
+        "utrecht-icon-overlijden": UtrechtIconOverlijden;
+        "utrecht-icon-panden": UtrechtIconPanden;
+        "utrecht-icon-park": UtrechtIconPark;
+        "utrecht-icon-parkeerkaart": UtrechtIconParkeerkaart;
+        "utrecht-icon-parkeervergunning": UtrechtIconParkeervergunning;
+        "utrecht-icon-parken": UtrechtIconParken;
+        "utrecht-icon-parkeren": UtrechtIconParkeren;
+        "utrecht-icon-parkeren-bedrijven": UtrechtIconParkerenBedrijven;
+        "utrecht-icon-parkeren-betaalautomaat": UtrechtIconParkerenBetaalautomaat;
+        "utrecht-icon-parkeren-betalen": UtrechtIconParkerenBetalen;
+        "utrecht-icon-participatie-campagne": UtrechtIconParticipatieCampagne;
+        "utrecht-icon-participatie-like": UtrechtIconParticipatieLike;
+        "utrecht-icon-participatie-pitch": UtrechtIconParticipatiePitch;
+        "utrecht-icon-paspoort": UtrechtIconPaspoort;
+        "utrecht-icon-presentatie": UtrechtIconPresentatie;
+        "utrecht-icon-prijskaartje": UtrechtIconPrijskaartje;
+        "utrecht-icon-rijbewijs": UtrechtIconRijbewijs;
+        "utrecht-icon-rioolheffing": UtrechtIconRioolheffing;
+        "utrecht-icon-rolstoel": UtrechtIconRolstoel;
+        "utrecht-icon-schild-gemeente-utrecht": UtrechtIconSchildGemeenteUtrecht;
+        "utrecht-icon-shoppen": UtrechtIconShoppen;
+        "utrecht-icon-sinterklaas": UtrechtIconSinterklaas;
+        "utrecht-icon-slechtziende-hoordende": UtrechtIconSlechtziendeHoordende;
+        "utrecht-icon-sport": UtrechtIconSport;
+        "utrecht-icon-sport-en-cultuur": UtrechtIconSportEnCultuur;
+        "utrecht-icon-sport-voetbal": UtrechtIconSportVoetbal;
+        "utrecht-icon-stookverbod": UtrechtIconStookverbod;
+        "utrecht-icon-strand": UtrechtIconStrand;
+        "utrecht-icon-strooien": UtrechtIconStrooien;
+        "utrecht-icon-subsidie": UtrechtIconSubsidie;
+        "utrecht-icon-subsidie-gezin": UtrechtIconSubsidieGezin;
+        "utrecht-icon-t-shirt": UtrechtIconTShirt;
+        "utrecht-icon-thuiswerken": UtrechtIconThuiswerken;
+        "utrecht-icon-toeslag": UtrechtIconToeslag;
+        "utrecht-icon-trein": UtrechtIconTrein;
+        "utrecht-icon-trouwen": UtrechtIconTrouwen;
+        "utrecht-icon-twitter": UtrechtIconTwitter;
+        "utrecht-icon-uw-wijk": UtrechtIconUwWijk;
+        "utrecht-icon-vaccinatie": UtrechtIconVaccinatie;
+        "utrecht-icon-veilige-wijk": UtrechtIconVeiligeWijk;
+        "utrecht-icon-vergaderen": UtrechtIconVergaderen;
+        "utrecht-icon-vergaderendigitaal": UtrechtIconVergaderendigitaal;
+        "utrecht-icon-vergoeding": UtrechtIconVergoeding;
+        "utrecht-icon-verhuizen": UtrechtIconVerhuizen;
+        "utrecht-icon-verkeerslicht": UtrechtIconVerkeerslicht;
+        "utrecht-icon-verkiezingen": UtrechtIconVerkiezingen;
+        "utrecht-icon-verslaving": UtrechtIconVerslaving;
+        "utrecht-icon-vervoersvoorziening": UtrechtIconVervoersvoorziening;
+        "utrecht-icon-virus": UtrechtIconVirus;
+        "utrecht-icon-vluchtelingen": UtrechtIconVluchtelingen;
+        "utrecht-icon-voorzieningen-vervoer": UtrechtIconVoorzieningenVervoer;
+        "utrecht-icon-vrijwilligerswerk": UtrechtIconVrijwilligerswerk;
+        "utrecht-icon-vuilnisbak": UtrechtIconVuilnisbak;
+        "utrecht-icon-vuilniszak": UtrechtIconVuilniszak;
+        "utrecht-icon-vuurwerk": UtrechtIconVuurwerk;
+        "utrecht-icon-wandelstok": UtrechtIconWandelstok;
+        "utrecht-icon-warm": UtrechtIconWarm;
+        "utrecht-icon-warning": UtrechtIconWarning;
+        "utrecht-icon-werken": UtrechtIconWerken;
+        "utrecht-icon-werkzaamheden": UtrechtIconWerkzaamheden;
+        "utrecht-icon-whatsapp": UtrechtIconWhatsapp;
+        "utrecht-icon-wonen-kosten": UtrechtIconWonenKosten;
+        "utrecht-icon-woning-zoeken": UtrechtIconWoningZoeken;
+        "utrecht-icon-youtube": UtrechtIconYoutube;
+        "utrecht-icon-zelfstandig-wonen": UtrechtIconZelfstandigWonen;
+        "utrecht-icon-zoomin": UtrechtIconZoomin;
+        "utrecht-icon-zoomout": UtrechtIconZoomout;
+        "utrecht-icon-zorg-huis": UtrechtIconZorgHuis;
+        "utrecht-icon-zweefpaal": UtrechtIconZweefpaal;
+        "utrecht-icon-zwemmen": UtrechtIconZwemmen;
         "utrecht-link": UtrechtLink;
         "utrecht-link-button": UtrechtLinkButton;
         "utrecht-logo": UtrechtLogo;
@@ -1095,6 +3303,190 @@ declare module "@stencil/core" {
             "utrecht-heading-group": LocalJSX.UtrechtHeadingGroup & JSXBase.HTMLAttributes<HTMLUtrechtHeadingGroupElement>;
             "utrecht-html-content": LocalJSX.UtrechtHtmlContent & JSXBase.HTMLAttributes<HTMLUtrechtHtmlContentElement>;
             "utrecht-icon": LocalJSX.UtrechtIcon & JSXBase.HTMLAttributes<HTMLUtrechtIconElement>;
+            "utrecht-icon-afspraak-maken": LocalJSX.UtrechtIconAfspraakMaken & JSXBase.HTMLAttributes<HTMLUtrechtIconAfspraakMakenElement>;
+            "utrecht-icon-afval": LocalJSX.UtrechtIconAfval & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalElement>;
+            "utrecht-icon-afval-container": LocalJSX.UtrechtIconAfvalContainer & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalContainerElement>;
+            "utrecht-icon-afval-containerpas": LocalJSX.UtrechtIconAfvalContainerpas & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalContainerpasElement>;
+            "utrecht-icon-afval-kalender": LocalJSX.UtrechtIconAfvalKalender & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalKalenderElement>;
+            "utrecht-icon-afval-pmd": LocalJSX.UtrechtIconAfvalPmd & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalPmdElement>;
+            "utrecht-icon-afval-scheiden": LocalJSX.UtrechtIconAfvalScheiden & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalScheidenElement>;
+            "utrecht-icon-afvalkalender": LocalJSX.UtrechtIconAfvalkalender & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalkalenderElement>;
+            "utrecht-icon-alleen": LocalJSX.UtrechtIconAlleen & JSXBase.HTMLAttributes<HTMLUtrechtIconAlleenElement>;
+            "utrecht-icon-arrow": LocalJSX.UtrechtIconArrow & JSXBase.HTMLAttributes<HTMLUtrechtIconArrowElement>;
+            "utrecht-icon-auto": LocalJSX.UtrechtIconAuto & JSXBase.HTMLAttributes<HTMLUtrechtIconAutoElement>;
+            "utrecht-icon-begroting": LocalJSX.UtrechtIconBegroting & JSXBase.HTMLAttributes<HTMLUtrechtIconBegrotingElement>;
+            "utrecht-icon-bestemmingsplan": LocalJSX.UtrechtIconBestemmingsplan & JSXBase.HTMLAttributes<HTMLUtrechtIconBestemmingsplanElement>;
+            "utrecht-icon-betaaldatum": LocalJSX.UtrechtIconBetaaldatum & JSXBase.HTMLAttributes<HTMLUtrechtIconBetaaldatumElement>;
+            "utrecht-icon-bewijsstukken": LocalJSX.UtrechtIconBewijsstukken & JSXBase.HTMLAttributes<HTMLUtrechtIconBewijsstukkenElement>;
+            "utrecht-icon-bijstand": LocalJSX.UtrechtIconBijstand & JSXBase.HTMLAttributes<HTMLUtrechtIconBijstandElement>;
+            "utrecht-icon-blad": LocalJSX.UtrechtIconBlad & JSXBase.HTMLAttributes<HTMLUtrechtIconBladElement>;
+            "utrecht-icon-bouwproject": LocalJSX.UtrechtIconBouwproject & JSXBase.HTMLAttributes<HTMLUtrechtIconBouwprojectElement>;
+            "utrecht-icon-brandgevaar": LocalJSX.UtrechtIconBrandgevaar & JSXBase.HTMLAttributes<HTMLUtrechtIconBrandgevaarElement>;
+            "utrecht-icon-brief-betalen": LocalJSX.UtrechtIconBriefBetalen & JSXBase.HTMLAttributes<HTMLUtrechtIconBriefBetalenElement>;
+            "utrecht-icon-checkmark": LocalJSX.UtrechtIconCheckmark & JSXBase.HTMLAttributes<HTMLUtrechtIconCheckmarkElement>;
+            "utrecht-icon-college-b-w": LocalJSX.UtrechtIconCollegeBW & JSXBase.HTMLAttributes<HTMLUtrechtIconCollegeBWElement>;
+            "utrecht-icon-container": LocalJSX.UtrechtIconContainer & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerElement>;
+            "utrecht-icon-container-bio": LocalJSX.UtrechtIconContainerBio & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerBioElement>;
+            "utrecht-icon-container-glas": LocalJSX.UtrechtIconContainerGlas & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerGlasElement>;
+            "utrecht-icon-container-groenafval": LocalJSX.UtrechtIconContainerGroenafval & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerGroenafvalElement>;
+            "utrecht-icon-container-met-zak": LocalJSX.UtrechtIconContainerMetZak & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerMetZakElement>;
+            "utrecht-icon-container-papier": LocalJSX.UtrechtIconContainerPapier & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerPapierElement>;
+            "utrecht-icon-container-pmd": LocalJSX.UtrechtIconContainerPmd & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerPmdElement>;
+            "utrecht-icon-container-restafval": LocalJSX.UtrechtIconContainerRestafval & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerRestafvalElement>;
+            "utrecht-icon-container-textiel": LocalJSX.UtrechtIconContainerTextiel & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerTextielElement>;
+            "utrecht-icon-cross": LocalJSX.UtrechtIconCross & JSXBase.HTMLAttributes<HTMLUtrechtIconCrossElement>;
+            "utrecht-icon-dakloos": LocalJSX.UtrechtIconDakloos & JSXBase.HTMLAttributes<HTMLUtrechtIconDakloosElement>;
+            "utrecht-icon-dementie": LocalJSX.UtrechtIconDementie & JSXBase.HTMLAttributes<HTMLUtrechtIconDementieElement>;
+            "utrecht-icon-documenten": LocalJSX.UtrechtIconDocumenten & JSXBase.HTMLAttributes<HTMLUtrechtIconDocumentenElement>;
+            "utrecht-icon-duurzaam": LocalJSX.UtrechtIconDuurzaam & JSXBase.HTMLAttributes<HTMLUtrechtIconDuurzaamElement>;
+            "utrecht-icon-eenzaamheid": LocalJSX.UtrechtIconEenzaamheid & JSXBase.HTMLAttributes<HTMLUtrechtIconEenzaamheidElement>;
+            "utrecht-icon-eikenprocessie": LocalJSX.UtrechtIconEikenprocessie & JSXBase.HTMLAttributes<HTMLUtrechtIconEikenprocessieElement>;
+            "utrecht-icon-elektrisch-rijden": LocalJSX.UtrechtIconElektrischRijden & JSXBase.HTMLAttributes<HTMLUtrechtIconElektrischRijdenElement>;
+            "utrecht-icon-energie-vergoeding": LocalJSX.UtrechtIconEnergieVergoeding & JSXBase.HTMLAttributes<HTMLUtrechtIconEnergieVergoedingElement>;
+            "utrecht-icon-energietransitie": LocalJSX.UtrechtIconEnergietransitie & JSXBase.HTMLAttributes<HTMLUtrechtIconEnergietransitieElement>;
+            "utrecht-icon-error": LocalJSX.UtrechtIconError & JSXBase.HTMLAttributes<HTMLUtrechtIconErrorElement>;
+            "utrecht-icon-evenementen": LocalJSX.UtrechtIconEvenementen & JSXBase.HTMLAttributes<HTMLUtrechtIconEvenementenElement>;
+            "utrecht-icon-facebook": LocalJSX.UtrechtIconFacebook & JSXBase.HTMLAttributes<HTMLUtrechtIconFacebookElement>;
+            "utrecht-icon-fiets": LocalJSX.UtrechtIconFiets & JSXBase.HTMLAttributes<HTMLUtrechtIconFietsElement>;
+            "utrecht-icon-filter": LocalJSX.UtrechtIconFilter & JSXBase.HTMLAttributes<HTMLUtrechtIconFilterElement>;
+            "utrecht-icon-geboorte": LocalJSX.UtrechtIconGeboorte & JSXBase.HTMLAttributes<HTMLUtrechtIconGeboorteElement>;
+            "utrecht-icon-gebruiker-centraal": LocalJSX.UtrechtIconGebruikerCentraal & JSXBase.HTMLAttributes<HTMLUtrechtIconGebruikerCentraalElement>;
+            "utrecht-icon-gebruiker-ingelogd": LocalJSX.UtrechtIconGebruikerIngelogd & JSXBase.HTMLAttributes<HTMLUtrechtIconGebruikerIngelogdElement>;
+            "utrecht-icon-gegevenswoordenboek": LocalJSX.UtrechtIconGegevenswoordenboek & JSXBase.HTMLAttributes<HTMLUtrechtIconGegevenswoordenboekElement>;
+            "utrecht-icon-geluid": LocalJSX.UtrechtIconGeluid & JSXBase.HTMLAttributes<HTMLUtrechtIconGeluidElement>;
+            "utrecht-icon-gemeente-locatie": LocalJSX.UtrechtIconGemeenteLocatie & JSXBase.HTMLAttributes<HTMLUtrechtIconGemeenteLocatieElement>;
+            "utrecht-icon-gemeenteraad": LocalJSX.UtrechtIconGemeenteraad & JSXBase.HTMLAttributes<HTMLUtrechtIconGemeenteraadElement>;
+            "utrecht-icon-gereedschap": LocalJSX.UtrechtIconGereedschap & JSXBase.HTMLAttributes<HTMLUtrechtIconGereedschapElement>;
+            "utrecht-icon-gezicht": LocalJSX.UtrechtIconGezicht & JSXBase.HTMLAttributes<HTMLUtrechtIconGezichtElement>;
+            "utrecht-icon-gezin": LocalJSX.UtrechtIconGezin & JSXBase.HTMLAttributes<HTMLUtrechtIconGezinElement>;
+            "utrecht-icon-glas-afval": LocalJSX.UtrechtIconGlasAfval & JSXBase.HTMLAttributes<HTMLUtrechtIconGlasAfvalElement>;
+            "utrecht-icon-glijbaan": LocalJSX.UtrechtIconGlijbaan & JSXBase.HTMLAttributes<HTMLUtrechtIconGlijbaanElement>;
+            "utrecht-icon-grafiek": LocalJSX.UtrechtIconGrafiek & JSXBase.HTMLAttributes<HTMLUtrechtIconGrafiekElement>;
+            "utrecht-icon-grofvuil": LocalJSX.UtrechtIconGrofvuil & JSXBase.HTMLAttributes<HTMLUtrechtIconGrofvuilElement>;
+            "utrecht-icon-grofvuil-ophalen": LocalJSX.UtrechtIconGrofvuilOphalen & JSXBase.HTMLAttributes<HTMLUtrechtIconGrofvuilOphalenElement>;
+            "utrecht-icon-herdenking": LocalJSX.UtrechtIconHerdenking & JSXBase.HTMLAttributes<HTMLUtrechtIconHerdenkingElement>;
+            "utrecht-icon-hondenbelasting": LocalJSX.UtrechtIconHondenbelasting & JSXBase.HTMLAttributes<HTMLUtrechtIconHondenbelastingElement>;
+            "utrecht-icon-horeca": LocalJSX.UtrechtIconHoreca & JSXBase.HTMLAttributes<HTMLUtrechtIconHorecaElement>;
+            "utrecht-icon-horecavergunning": LocalJSX.UtrechtIconHorecavergunning & JSXBase.HTMLAttributes<HTMLUtrechtIconHorecavergunningElement>;
+            "utrecht-icon-huis": LocalJSX.UtrechtIconHuis & JSXBase.HTMLAttributes<HTMLUtrechtIconHuisElement>;
+            "utrecht-icon-huis-en-omgeving": LocalJSX.UtrechtIconHuisEnOmgeving & JSXBase.HTMLAttributes<HTMLUtrechtIconHuisEnOmgevingElement>;
+            "utrecht-icon-huishoudelijk-geweld": LocalJSX.UtrechtIconHuishoudelijkGeweld & JSXBase.HTMLAttributes<HTMLUtrechtIconHuishoudelijkGeweldElement>;
+            "utrecht-icon-hulp-huishouden": LocalJSX.UtrechtIconHulpHuishouden & JSXBase.HTMLAttributes<HTMLUtrechtIconHulpHuishoudenElement>;
+            "utrecht-icon-hulp-vervoer": LocalJSX.UtrechtIconHulpVervoer & JSXBase.HTMLAttributes<HTMLUtrechtIconHulpVervoerElement>;
+            "utrecht-icon-hulp-zorg": LocalJSX.UtrechtIconHulpZorg & JSXBase.HTMLAttributes<HTMLUtrechtIconHulpZorgElement>;
+            "utrecht-icon-hulpmiddelen-gezin": LocalJSX.UtrechtIconHulpmiddelenGezin & JSXBase.HTMLAttributes<HTMLUtrechtIconHulpmiddelenGezinElement>;
+            "utrecht-icon-hulpverlening": LocalJSX.UtrechtIconHulpverlening & JSXBase.HTMLAttributes<HTMLUtrechtIconHulpverleningElement>;
+            "utrecht-icon-idee": LocalJSX.UtrechtIconIdee & JSXBase.HTMLAttributes<HTMLUtrechtIconIdeeElement>;
+            "utrecht-icon-informatie": LocalJSX.UtrechtIconInformatie & JSXBase.HTMLAttributes<HTMLUtrechtIconInformatieElement>;
+            "utrecht-icon-information": LocalJSX.UtrechtIconInformation & JSXBase.HTMLAttributes<HTMLUtrechtIconInformationElement>;
+            "utrecht-icon-innovatie": LocalJSX.UtrechtIconInnovatie & JSXBase.HTMLAttributes<HTMLUtrechtIconInnovatieElement>;
+            "utrecht-icon-inspraak-inwoners": LocalJSX.UtrechtIconInspraakInwoners & JSXBase.HTMLAttributes<HTMLUtrechtIconInspraakInwonersElement>;
+            "utrecht-icon-instagram": LocalJSX.UtrechtIconInstagram & JSXBase.HTMLAttributes<HTMLUtrechtIconInstagramElement>;
+            "utrecht-icon-kalender": LocalJSX.UtrechtIconKalender & JSXBase.HTMLAttributes<HTMLUtrechtIconKalenderElement>;
+            "utrecht-icon-kennis": LocalJSX.UtrechtIconKennis & JSXBase.HTMLAttributes<HTMLUtrechtIconKennisElement>;
+            "utrecht-icon-kerstbomen": LocalJSX.UtrechtIconKerstbomen & JSXBase.HTMLAttributes<HTMLUtrechtIconKerstbomenElement>;
+            "utrecht-icon-klachten": LocalJSX.UtrechtIconKlachten & JSXBase.HTMLAttributes<HTMLUtrechtIconKlachtenElement>;
+            "utrecht-icon-kroon": LocalJSX.UtrechtIconKroon & JSXBase.HTMLAttributes<HTMLUtrechtIconKroonElement>;
+            "utrecht-icon-laadpaal": LocalJSX.UtrechtIconLaadpaal & JSXBase.HTMLAttributes<HTMLUtrechtIconLaadpaalElement>;
+            "utrecht-icon-lantaarnpaal": LocalJSX.UtrechtIconLantaarnpaal & JSXBase.HTMLAttributes<HTMLUtrechtIconLantaarnpaalElement>;
+            "utrecht-icon-lantaarnpaal-oud": LocalJSX.UtrechtIconLantaarnpaalOud & JSXBase.HTMLAttributes<HTMLUtrechtIconLantaarnpaalOudElement>;
+            "utrecht-icon-leren": LocalJSX.UtrechtIconLeren & JSXBase.HTMLAttributes<HTMLUtrechtIconLerenElement>;
+            "utrecht-icon-let-op": LocalJSX.UtrechtIconLetOp & JSXBase.HTMLAttributes<HTMLUtrechtIconLetOpElement>;
+            "utrecht-icon-linkedin": LocalJSX.UtrechtIconLinkedin & JSXBase.HTMLAttributes<HTMLUtrechtIconLinkedinElement>;
+            "utrecht-icon-list": LocalJSX.UtrechtIconList & JSXBase.HTMLAttributes<HTMLUtrechtIconListElement>;
+            "utrecht-icon-loupe": LocalJSX.UtrechtIconLoupe & JSXBase.HTMLAttributes<HTMLUtrechtIconLoupeElement>;
+            "utrecht-icon-markt": LocalJSX.UtrechtIconMarkt & JSXBase.HTMLAttributes<HTMLUtrechtIconMarktElement>;
+            "utrecht-icon-melding": LocalJSX.UtrechtIconMelding & JSXBase.HTMLAttributes<HTMLUtrechtIconMeldingElement>;
+            "utrecht-icon-melding-boom": LocalJSX.UtrechtIconMeldingBoom & JSXBase.HTMLAttributes<HTMLUtrechtIconMeldingBoomElement>;
+            "utrecht-icon-melding-klacht": LocalJSX.UtrechtIconMeldingKlacht & JSXBase.HTMLAttributes<HTMLUtrechtIconMeldingKlachtElement>;
+            "utrecht-icon-melding-openbareruimte": LocalJSX.UtrechtIconMeldingOpenbareruimte & JSXBase.HTMLAttributes<HTMLUtrechtIconMeldingOpenbareruimteElement>;
+            "utrecht-icon-melding-verlichting": LocalJSX.UtrechtIconMeldingVerlichting & JSXBase.HTMLAttributes<HTMLUtrechtIconMeldingVerlichtingElement>;
+            "utrecht-icon-menselijk": LocalJSX.UtrechtIconMenselijk & JSXBase.HTMLAttributes<HTMLUtrechtIconMenselijkElement>;
+            "utrecht-icon-meterkast": LocalJSX.UtrechtIconMeterkast & JSXBase.HTMLAttributes<HTMLUtrechtIconMeterkastElement>;
+            "utrecht-icon-milieu-ontheffing": LocalJSX.UtrechtIconMilieuOntheffing & JSXBase.HTMLAttributes<HTMLUtrechtIconMilieuOntheffingElement>;
+            "utrecht-icon-milieu-zone": LocalJSX.UtrechtIconMilieuZone & JSXBase.HTMLAttributes<HTMLUtrechtIconMilieuZoneElement>;
+            "utrecht-icon-mobiliteit": LocalJSX.UtrechtIconMobiliteit & JSXBase.HTMLAttributes<HTMLUtrechtIconMobiliteitElement>;
+            "utrecht-icon-natuur": LocalJSX.UtrechtIconNatuur & JSXBase.HTMLAttributes<HTMLUtrechtIconNatuurElement>;
+            "utrecht-icon-nieuw-huis": LocalJSX.UtrechtIconNieuwHuis & JSXBase.HTMLAttributes<HTMLUtrechtIconNieuwHuisElement>;
+            "utrecht-icon-nummerbord": LocalJSX.UtrechtIconNummerbord & JSXBase.HTMLAttributes<HTMLUtrechtIconNummerbordElement>;
+            "utrecht-icon-om-het-huis": LocalJSX.UtrechtIconOmHetHuis & JSXBase.HTMLAttributes<HTMLUtrechtIconOmHetHuisElement>;
+            "utrecht-icon-omgeving": LocalJSX.UtrechtIconOmgeving & JSXBase.HTMLAttributes<HTMLUtrechtIconOmgevingElement>;
+            "utrecht-icon-omgevingsvisie": LocalJSX.UtrechtIconOmgevingsvisie & JSXBase.HTMLAttributes<HTMLUtrechtIconOmgevingsvisieElement>;
+            "utrecht-icon-omgevingswet": LocalJSX.UtrechtIconOmgevingswet & JSXBase.HTMLAttributes<HTMLUtrechtIconOmgevingswetElement>;
+            "utrecht-icon-onderhoud": LocalJSX.UtrechtIconOnderhoud & JSXBase.HTMLAttributes<HTMLUtrechtIconOnderhoudElement>;
+            "utrecht-icon-ondernemen": LocalJSX.UtrechtIconOndernemen & JSXBase.HTMLAttributes<HTMLUtrechtIconOndernemenElement>;
+            "utrecht-icon-openingstijden": LocalJSX.UtrechtIconOpeningstijden & JSXBase.HTMLAttributes<HTMLUtrechtIconOpeningstijdenElement>;
+            "utrecht-icon-over-de-stad": LocalJSX.UtrechtIconOverDeStad & JSXBase.HTMLAttributes<HTMLUtrechtIconOverDeStadElement>;
+            "utrecht-icon-overlijden": LocalJSX.UtrechtIconOverlijden & JSXBase.HTMLAttributes<HTMLUtrechtIconOverlijdenElement>;
+            "utrecht-icon-panden": LocalJSX.UtrechtIconPanden & JSXBase.HTMLAttributes<HTMLUtrechtIconPandenElement>;
+            "utrecht-icon-park": LocalJSX.UtrechtIconPark & JSXBase.HTMLAttributes<HTMLUtrechtIconParkElement>;
+            "utrecht-icon-parkeerkaart": LocalJSX.UtrechtIconParkeerkaart & JSXBase.HTMLAttributes<HTMLUtrechtIconParkeerkaartElement>;
+            "utrecht-icon-parkeervergunning": LocalJSX.UtrechtIconParkeervergunning & JSXBase.HTMLAttributes<HTMLUtrechtIconParkeervergunningElement>;
+            "utrecht-icon-parken": LocalJSX.UtrechtIconParken & JSXBase.HTMLAttributes<HTMLUtrechtIconParkenElement>;
+            "utrecht-icon-parkeren": LocalJSX.UtrechtIconParkeren & JSXBase.HTMLAttributes<HTMLUtrechtIconParkerenElement>;
+            "utrecht-icon-parkeren-bedrijven": LocalJSX.UtrechtIconParkerenBedrijven & JSXBase.HTMLAttributes<HTMLUtrechtIconParkerenBedrijvenElement>;
+            "utrecht-icon-parkeren-betaalautomaat": LocalJSX.UtrechtIconParkerenBetaalautomaat & JSXBase.HTMLAttributes<HTMLUtrechtIconParkerenBetaalautomaatElement>;
+            "utrecht-icon-parkeren-betalen": LocalJSX.UtrechtIconParkerenBetalen & JSXBase.HTMLAttributes<HTMLUtrechtIconParkerenBetalenElement>;
+            "utrecht-icon-participatie-campagne": LocalJSX.UtrechtIconParticipatieCampagne & JSXBase.HTMLAttributes<HTMLUtrechtIconParticipatieCampagneElement>;
+            "utrecht-icon-participatie-like": LocalJSX.UtrechtIconParticipatieLike & JSXBase.HTMLAttributes<HTMLUtrechtIconParticipatieLikeElement>;
+            "utrecht-icon-participatie-pitch": LocalJSX.UtrechtIconParticipatiePitch & JSXBase.HTMLAttributes<HTMLUtrechtIconParticipatiePitchElement>;
+            "utrecht-icon-paspoort": LocalJSX.UtrechtIconPaspoort & JSXBase.HTMLAttributes<HTMLUtrechtIconPaspoortElement>;
+            "utrecht-icon-presentatie": LocalJSX.UtrechtIconPresentatie & JSXBase.HTMLAttributes<HTMLUtrechtIconPresentatieElement>;
+            "utrecht-icon-prijskaartje": LocalJSX.UtrechtIconPrijskaartje & JSXBase.HTMLAttributes<HTMLUtrechtIconPrijskaartjeElement>;
+            "utrecht-icon-rijbewijs": LocalJSX.UtrechtIconRijbewijs & JSXBase.HTMLAttributes<HTMLUtrechtIconRijbewijsElement>;
+            "utrecht-icon-rioolheffing": LocalJSX.UtrechtIconRioolheffing & JSXBase.HTMLAttributes<HTMLUtrechtIconRioolheffingElement>;
+            "utrecht-icon-rolstoel": LocalJSX.UtrechtIconRolstoel & JSXBase.HTMLAttributes<HTMLUtrechtIconRolstoelElement>;
+            "utrecht-icon-schild-gemeente-utrecht": LocalJSX.UtrechtIconSchildGemeenteUtrecht & JSXBase.HTMLAttributes<HTMLUtrechtIconSchildGemeenteUtrechtElement>;
+            "utrecht-icon-shoppen": LocalJSX.UtrechtIconShoppen & JSXBase.HTMLAttributes<HTMLUtrechtIconShoppenElement>;
+            "utrecht-icon-sinterklaas": LocalJSX.UtrechtIconSinterklaas & JSXBase.HTMLAttributes<HTMLUtrechtIconSinterklaasElement>;
+            "utrecht-icon-slechtziende-hoordende": LocalJSX.UtrechtIconSlechtziendeHoordende & JSXBase.HTMLAttributes<HTMLUtrechtIconSlechtziendeHoordendeElement>;
+            "utrecht-icon-sport": LocalJSX.UtrechtIconSport & JSXBase.HTMLAttributes<HTMLUtrechtIconSportElement>;
+            "utrecht-icon-sport-en-cultuur": LocalJSX.UtrechtIconSportEnCultuur & JSXBase.HTMLAttributes<HTMLUtrechtIconSportEnCultuurElement>;
+            "utrecht-icon-sport-voetbal": LocalJSX.UtrechtIconSportVoetbal & JSXBase.HTMLAttributes<HTMLUtrechtIconSportVoetbalElement>;
+            "utrecht-icon-stookverbod": LocalJSX.UtrechtIconStookverbod & JSXBase.HTMLAttributes<HTMLUtrechtIconStookverbodElement>;
+            "utrecht-icon-strand": LocalJSX.UtrechtIconStrand & JSXBase.HTMLAttributes<HTMLUtrechtIconStrandElement>;
+            "utrecht-icon-strooien": LocalJSX.UtrechtIconStrooien & JSXBase.HTMLAttributes<HTMLUtrechtIconStrooienElement>;
+            "utrecht-icon-subsidie": LocalJSX.UtrechtIconSubsidie & JSXBase.HTMLAttributes<HTMLUtrechtIconSubsidieElement>;
+            "utrecht-icon-subsidie-gezin": LocalJSX.UtrechtIconSubsidieGezin & JSXBase.HTMLAttributes<HTMLUtrechtIconSubsidieGezinElement>;
+            "utrecht-icon-t-shirt": LocalJSX.UtrechtIconTShirt & JSXBase.HTMLAttributes<HTMLUtrechtIconTShirtElement>;
+            "utrecht-icon-thuiswerken": LocalJSX.UtrechtIconThuiswerken & JSXBase.HTMLAttributes<HTMLUtrechtIconThuiswerkenElement>;
+            "utrecht-icon-toeslag": LocalJSX.UtrechtIconToeslag & JSXBase.HTMLAttributes<HTMLUtrechtIconToeslagElement>;
+            "utrecht-icon-trein": LocalJSX.UtrechtIconTrein & JSXBase.HTMLAttributes<HTMLUtrechtIconTreinElement>;
+            "utrecht-icon-trouwen": LocalJSX.UtrechtIconTrouwen & JSXBase.HTMLAttributes<HTMLUtrechtIconTrouwenElement>;
+            "utrecht-icon-twitter": LocalJSX.UtrechtIconTwitter & JSXBase.HTMLAttributes<HTMLUtrechtIconTwitterElement>;
+            "utrecht-icon-uw-wijk": LocalJSX.UtrechtIconUwWijk & JSXBase.HTMLAttributes<HTMLUtrechtIconUwWijkElement>;
+            "utrecht-icon-vaccinatie": LocalJSX.UtrechtIconVaccinatie & JSXBase.HTMLAttributes<HTMLUtrechtIconVaccinatieElement>;
+            "utrecht-icon-veilige-wijk": LocalJSX.UtrechtIconVeiligeWijk & JSXBase.HTMLAttributes<HTMLUtrechtIconVeiligeWijkElement>;
+            "utrecht-icon-vergaderen": LocalJSX.UtrechtIconVergaderen & JSXBase.HTMLAttributes<HTMLUtrechtIconVergaderenElement>;
+            "utrecht-icon-vergaderendigitaal": LocalJSX.UtrechtIconVergaderendigitaal & JSXBase.HTMLAttributes<HTMLUtrechtIconVergaderendigitaalElement>;
+            "utrecht-icon-vergoeding": LocalJSX.UtrechtIconVergoeding & JSXBase.HTMLAttributes<HTMLUtrechtIconVergoedingElement>;
+            "utrecht-icon-verhuizen": LocalJSX.UtrechtIconVerhuizen & JSXBase.HTMLAttributes<HTMLUtrechtIconVerhuizenElement>;
+            "utrecht-icon-verkeerslicht": LocalJSX.UtrechtIconVerkeerslicht & JSXBase.HTMLAttributes<HTMLUtrechtIconVerkeerslichtElement>;
+            "utrecht-icon-verkiezingen": LocalJSX.UtrechtIconVerkiezingen & JSXBase.HTMLAttributes<HTMLUtrechtIconVerkiezingenElement>;
+            "utrecht-icon-verslaving": LocalJSX.UtrechtIconVerslaving & JSXBase.HTMLAttributes<HTMLUtrechtIconVerslavingElement>;
+            "utrecht-icon-vervoersvoorziening": LocalJSX.UtrechtIconVervoersvoorziening & JSXBase.HTMLAttributes<HTMLUtrechtIconVervoersvoorzieningElement>;
+            "utrecht-icon-virus": LocalJSX.UtrechtIconVirus & JSXBase.HTMLAttributes<HTMLUtrechtIconVirusElement>;
+            "utrecht-icon-vluchtelingen": LocalJSX.UtrechtIconVluchtelingen & JSXBase.HTMLAttributes<HTMLUtrechtIconVluchtelingenElement>;
+            "utrecht-icon-voorzieningen-vervoer": LocalJSX.UtrechtIconVoorzieningenVervoer & JSXBase.HTMLAttributes<HTMLUtrechtIconVoorzieningenVervoerElement>;
+            "utrecht-icon-vrijwilligerswerk": LocalJSX.UtrechtIconVrijwilligerswerk & JSXBase.HTMLAttributes<HTMLUtrechtIconVrijwilligerswerkElement>;
+            "utrecht-icon-vuilnisbak": LocalJSX.UtrechtIconVuilnisbak & JSXBase.HTMLAttributes<HTMLUtrechtIconVuilnisbakElement>;
+            "utrecht-icon-vuilniszak": LocalJSX.UtrechtIconVuilniszak & JSXBase.HTMLAttributes<HTMLUtrechtIconVuilniszakElement>;
+            "utrecht-icon-vuurwerk": LocalJSX.UtrechtIconVuurwerk & JSXBase.HTMLAttributes<HTMLUtrechtIconVuurwerkElement>;
+            "utrecht-icon-wandelstok": LocalJSX.UtrechtIconWandelstok & JSXBase.HTMLAttributes<HTMLUtrechtIconWandelstokElement>;
+            "utrecht-icon-warm": LocalJSX.UtrechtIconWarm & JSXBase.HTMLAttributes<HTMLUtrechtIconWarmElement>;
+            "utrecht-icon-warning": LocalJSX.UtrechtIconWarning & JSXBase.HTMLAttributes<HTMLUtrechtIconWarningElement>;
+            "utrecht-icon-werken": LocalJSX.UtrechtIconWerken & JSXBase.HTMLAttributes<HTMLUtrechtIconWerkenElement>;
+            "utrecht-icon-werkzaamheden": LocalJSX.UtrechtIconWerkzaamheden & JSXBase.HTMLAttributes<HTMLUtrechtIconWerkzaamhedenElement>;
+            "utrecht-icon-whatsapp": LocalJSX.UtrechtIconWhatsapp & JSXBase.HTMLAttributes<HTMLUtrechtIconWhatsappElement>;
+            "utrecht-icon-wonen-kosten": LocalJSX.UtrechtIconWonenKosten & JSXBase.HTMLAttributes<HTMLUtrechtIconWonenKostenElement>;
+            "utrecht-icon-woning-zoeken": LocalJSX.UtrechtIconWoningZoeken & JSXBase.HTMLAttributes<HTMLUtrechtIconWoningZoekenElement>;
+            "utrecht-icon-youtube": LocalJSX.UtrechtIconYoutube & JSXBase.HTMLAttributes<HTMLUtrechtIconYoutubeElement>;
+            "utrecht-icon-zelfstandig-wonen": LocalJSX.UtrechtIconZelfstandigWonen & JSXBase.HTMLAttributes<HTMLUtrechtIconZelfstandigWonenElement>;
+            "utrecht-icon-zoomin": LocalJSX.UtrechtIconZoomin & JSXBase.HTMLAttributes<HTMLUtrechtIconZoominElement>;
+            "utrecht-icon-zoomout": LocalJSX.UtrechtIconZoomout & JSXBase.HTMLAttributes<HTMLUtrechtIconZoomoutElement>;
+            "utrecht-icon-zorg-huis": LocalJSX.UtrechtIconZorgHuis & JSXBase.HTMLAttributes<HTMLUtrechtIconZorgHuisElement>;
+            "utrecht-icon-zweefpaal": LocalJSX.UtrechtIconZweefpaal & JSXBase.HTMLAttributes<HTMLUtrechtIconZweefpaalElement>;
+            "utrecht-icon-zwemmen": LocalJSX.UtrechtIconZwemmen & JSXBase.HTMLAttributes<HTMLUtrechtIconZwemmenElement>;
             "utrecht-link": LocalJSX.UtrechtLink & JSXBase.HTMLAttributes<HTMLUtrechtLinkElement>;
             "utrecht-link-button": LocalJSX.UtrechtLinkButton & JSXBase.HTMLAttributes<HTMLUtrechtLinkButtonElement>;
             "utrecht-logo": LocalJSX.UtrechtLogo & JSXBase.HTMLAttributes<HTMLUtrechtLogoElement>;
