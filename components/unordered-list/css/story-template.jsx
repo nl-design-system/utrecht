@@ -67,6 +67,7 @@ export const UnorderedListItem = ({ children }) => <li className="utrecht-unorde
 
 export const UnorderedList = ({
   children,
+  center = defaultArgs.center,
   distanced = defaultArgs.distanced,
   items = defaultArgs.items,
   htmlContent = defaultArgs.htmlContent,
@@ -74,6 +75,7 @@ export const UnorderedList = ({
 }) => (
   <ul
     className={clsx('utrecht-unordered-list', {
+      'utrecht-unordered-list--center': center,
       'utrecht-unordered-list--distanced': distanced,
       'utrecht-unordered-list--html-content': htmlContent,
       'utrecht-unordered-list--nested': nested,

@@ -1,0 +1,45 @@
+{/* @license CC0-1.0 */}
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, OrderedList } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-ordered-list"
+  title="CSS Component/Ordered List/Center"
+  component={OrderedList}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: "IN DEVELOPMENT",
+  }}
+/>
+
+# Ordered list
+
+_Ordered list_ moet niet als gecentreerde tekst gebruikt worden worden. Wanneer het niet te vermijden is, dan moeten marker dicht naast de tekst staan, niet in de marge.
+
+<Canvas>
+  <Story
+    name="Center"
+    args={{
+      center: true,
+      items: [
+        {
+          children: "The Quick Brown Fox",
+        },
+        {
+          children: "Jumps",
+        },
+        {
+          children: "Over The Lazy Dog",
+        },
+      ],
+    }}
+    decorators={[(Story) => <div style={{ "text-align": "center" }}>{Story()}</div>]}
+  >
+    {OrderedList.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Center" />

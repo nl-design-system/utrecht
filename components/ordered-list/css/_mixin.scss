@@ -5,6 +5,7 @@
  */
 
 @mixin utrecht-ordered-list {
+  /* Configure `width` and `text-align` for `--center` */
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(
     --utrecht-ordered-list-font-size,
@@ -26,6 +27,13 @@
     --utrecht-ordered-list-padding-inline-start,
     var(--utrecht-unordered-list-padding-inline-start, 2ch)
   );
+  text-align: start;
+  width: max-content;
+}
+
+@mixin utrecht-ordered-list--center {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 
 @mixin utrecht-ordered-list--distanced {
