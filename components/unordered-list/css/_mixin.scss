@@ -17,6 +17,13 @@
       var(--utrecht-unordered-list-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
   padding-inline-start: var(--utrecht-unordered-list-padding-inline-start, 2ch);
+  text-align: start;
+  width: max-content;
+}
+
+@mixin utrecht-unordered-list--center {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
 }
 
 @mixin utrecht-unordered-list--distanced {

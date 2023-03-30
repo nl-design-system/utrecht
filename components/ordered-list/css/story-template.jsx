@@ -8,6 +8,10 @@ import clsx from 'clsx';
 import React from 'react';
 
 export const argTypes = {
+  center: {
+    description: 'Center',
+    control: 'boolean',
+  },
   distanced: {
     description: 'Distance the element from adjacent content',
     control: 'boolean',
@@ -65,12 +69,14 @@ export const OrderedListItem = ({ children }) => <li className="utrecht-ordered-
 
 export const OrderedList = ({
   children,
+  center = defaultArgs.center,
   distanced = defaultArgs.distanced,
   items = defaultArgs.items,
   htmlContent = defaultArgs.htmlContent,
 }) => (
   <ol
     className={clsx('utrecht-ordered-list', {
+      'utrecht-ordered-list--center': center,
       'utrecht-ordered-list--distanced': distanced,
       'utrecht-ordered-list--html-content': htmlContent,
     })}

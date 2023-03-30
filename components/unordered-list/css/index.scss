@@ -11,6 +11,10 @@
   @include utrecht-unordered-list;
 }
 
+.utrecht-unordered-list--center {
+  @include utrecht-unordered-list--center;
+}
+
 .utrecht-unordered-list--distanced {
   @include utrecht-unordered-list--distanced;
 }
