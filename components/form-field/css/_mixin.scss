@@ -93,25 +93,23 @@
 
 @mixin utrecht-form-field--checkbox {
   display: grid;
-  gap: 0 var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+  gap: 0 var(--utrecht-checkbox-margin-inline-end, 12px);
   grid-template-areas: "input label" "input description" "input description-invalid";
-  grid-template-columns: var(--utrecht-custom-checkbox-size) 100fr;
+  grid-template-columns: var(--utrecht-checkbox-size) 100fr;
 
   /*
   .utrecht-form-field__label .utrecht-form-field__input {
     margin-inline-start: calc(
-      -1 * (var(--utrecht-custom-checkbox-size) + var(--utrecht-custom-checkbox-margin-inline-end, 12px))
+      -1 * (var(--utrecht-checkbox-size) + var(--utrecht-checkbox-margin-inline-end, 12px))
     );
-    margin-inline-end: var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+    margin-inline-end: var(--utrecht-checkbox-margin-inline-end, 12px);
   }
   */
   .utrecht-form-field__label:has(.utrecht-form-field__input) {
-    margin-inline-start: calc(
-      -1 * (var(--utrecht-custom-checkbox-size) + var(--utrecht-custom-checkbox-margin-inline-end, 12px))
-    );
+    margin-inline-start: calc(-1 * (var(--utrecht-checkbox-size) + var(--utrecht-checkbox-margin-inline-end, 12px)));
   }
   .utrecht-form-field__label .utrecht-form-field__input {
-    margin-inline-end: var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+    margin-inline-end: var(--utrecht-checkbox-margin-inline-end, 12px);
   }
 }
 
@@ -124,9 +122,9 @@
   /*
   .utrecht-form-field__label .utrecht-form-field__input {
     margin-inline-start: calc(
-      -1 * (var(--utrecht-custom-checkbox-size) + var(--utrecht-custom-checkbox-margin-inline-end, 12px))
+      -1 * (var(--utrecht-checkbox-size) + var(--utrecht-checkbox-margin-inline-end, 12px))
     );
-    margin-inline-end: var(--utrecht-custom-checkbox-margin-inline-end, 12px);
+    margin-inline-end: var(--utrecht-checkbox-margin-inline-end, 12px);
   }
   */
   .utrecht-form-field__label:has(.utrecht-form-field__input) {
