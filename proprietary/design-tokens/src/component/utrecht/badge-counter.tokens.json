@@ -5,14 +5,15 @@
         "value": "{utrecht.color.red.40}"
       },
       "border-radius": {
-        "value": "3ex"
+        "value": "{utrecht.badge-counter.font-size}"
       },
       "color": {
         "value": "{utrecht.color.white}"
       },
+      "font-size": { "value": "16px" },
       "font-weight": {},
       "font-style": {
-        "value": "{utrecht.typography.font-style.normal}"
+        "value": "{utrecht.typography.scale.md.font-size}"
       },
       "padding-block": {
         "value": "1ex"

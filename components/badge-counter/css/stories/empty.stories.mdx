@@ -1,0 +1,30 @@
+{/* @license CC0-1.0 */}
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, BadgeCounter, defaultArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-counter-badge--empty"
+  title="CSS Component/Badge/Counter Badge/Empty"
+  component={BadgeCounter}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Counter badge
+
+Wanneer de counter badge leeg is, zoals in een UI designer interface, dan moet de component wel zichtbaar zijn. De gebruiker moet er een getal in kunnen typen.
+
+<Canvas>
+  <Story name="Empty" args={{ textContent: "" }}>
+    {BadgeCounter.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Empty" />
