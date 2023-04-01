@@ -13,7 +13,7 @@
     "build": "npm run build:svg && npm run build:components",
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../../packages/web-component-library-stencil/src/components/generated/",
     "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
-    "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/components/generated/"
+    "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../../packages/web-component-library-stencil/src/components/generated/"
   },
   "devDependencies": {
     "lodash": "4.17.21",
