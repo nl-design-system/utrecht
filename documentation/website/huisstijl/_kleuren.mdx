@@ -4,13 +4,10 @@
 
 export const ColorExample = ({ color }) => (
   <div
+    className="utrecht-color-sample"
     style={{
-      backgroundColor: `var(${color})`,
-      border: "1px solid hsl(0 0% 50%)",
-      boxSizing: "border-box",
-      display: "inline-block",
-      height: "4em",
-      width: "4em",
+      color,
+      outline: "1px solid silver",
     }}
   ></div>
 );

@@ -1,0 +1,32 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+
+@mixin utrecht-color-sample {
+  background-color: var(--utrecht-color-sample-background-color, currentColor);
+  block-size: 2em;
+  border-color: var(--utrecht-color-sample-border-color, var(--utrecht-color-sample-default-border-color));
+  border-style: solid;
+  border-width: var(--utrecht-color-sample-border-width, 0);
+  box-sizing: border-box;
+  display: inline-block;
+  inline-size: 2em;
+
+  @media (forced-colors: active) {
+    & {
+      forced-color-adjust: none;
+    }
+  }
+  @media (forced-colors: active) and (prefers-color-scheme: dark) {
+    & {
+      --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-dark-border-color, #000);
+    }
+  }
+  @media (forced-colors: active) and (prefers-color-scheme: light) {
+    & {
+      --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-light-border-color, #fff);
+    }
+  }
+}
