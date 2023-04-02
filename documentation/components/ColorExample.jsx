@@ -3,13 +3,14 @@ import React from 'react';
 import '../../components/color-sample/css/index.scss';
 
 export const ColorExample = ({ color }) => (
-  <div
+  <data
     className="utrecht-color-sample"
     style={{
       color,
       outline: '1px solid silver',
     }}
-  ></div>
+    value={color}
+  ></data>
 );
 
 ColorExample.propTypes = {
