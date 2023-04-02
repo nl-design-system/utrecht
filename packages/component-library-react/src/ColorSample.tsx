@@ -7,18 +7,24 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export interface ColorSampleProps extends HTMLAttributes<HTMLDivElement> {
+export interface ColorSampleProps extends HTMLAttributes<HTMLDataElement> {
   color?: string;
 }
 
 export const ColorSample = forwardRef(
   (
     { children, className, color, style, ...restProps }: PropsWithChildren<ColorSampleProps>,
-    ref: ForwardedRef<HTMLDivElement>,
+    ref: ForwardedRef<HTMLDataElement>,
   ) => (
-    <div ref={ref} className={clsx('utrecht-color-sample', className)} style={{ ...style, color }} {...restProps}>
+    <data
+      ref={ref}
+      className={clsx('utrecht-color-sample', className)}
+      style={{ ...style, color }}
+      value={color}
+      {...restProps}
+    >
       {children}
-    </div>
+    </data>
   ),
 );
 
