@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { DataBadge, Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/badge-data/README.md?raw';
@@ -10,7 +11,9 @@ const meta = {
   title: 'React Component/Data badge',
   id: 'react-data-badge',
   component: DataBadge,
-  tags: ['autodocs'],
+  args: {
+    children: 'Utrecht',
+  },
   argTypes: {
     dateTime: {
       name: 'dateTime',
@@ -28,9 +31,14 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
@@ -38,26 +46,21 @@ const meta = {
 
 export default meta;
 
-const Template: StoryObj<typeof DataBadge> = (args) => <DataBadge {...args} />;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'Utrecht',
+export const Value: Story = {
+  args: {
+    children: '50,000',
+    value: '50000',
+  },
 };
 
-export const Value = Template.bind({});
-
-Value.args = {
-  children: '50,000',
-  value: '50000',
-};
-
-export const Time = Template.bind({});
-
-Time.args = {
-  children: '19 januari 2038 om 03:14:08',
-  dateTime: '2038-01-19T03:14:08Z',
+export const Time: Story = {
+  args: {
+    children: '19 januari 2038 om 03:14:08',
+    dateTime: '2038-01-19T03:14:08Z',
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

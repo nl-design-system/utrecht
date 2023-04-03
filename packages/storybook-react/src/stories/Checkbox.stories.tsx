@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Checkbox } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/checkbox/README.md?raw';
@@ -10,15 +11,19 @@ const meta = {
   title: 'React Component/Checkbox',
   id: 'react-checkbox',
   component: Checkbox,
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-checkbox',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
   argTypes: {
@@ -37,49 +42,48 @@ const meta = {
       type: { name: 'string', required: false },
     },
   },
-} as Meta<typeof Checkbox>;
+} satisfies Meta<typeof Checkbox>;
 
 export default meta;
 
-const Template: StoryObj<typeof Checkbox> = (args) => <Checkbox {...args} />;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-export const Checked = Template.bind({});
-
-Checked.args = {
-  checked: true,
+export const Checked: Story = {
+  args: {
+    checked: true,
+  },
 };
 
-export const CheckedAndDisabled = Template.bind({});
-
-CheckedAndDisabled.args = {
-  checked: true,
-  disabled: true,
+export const CheckedAndDisabled: Story = {
+  args: {
+    checked: true,
+    disabled: true,
+  },
 };
 
-export const Disabled = Template.bind({});
-
-Disabled.args = {
-  disabled: true,
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
 };
 
-export const Hover = Template.bind({});
-
-Hover.parameters = {
-  pseudo: { hover: true },
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
 };
 
-export const Focus = Template.bind({});
-
-Focus.parameters = {
-  pseudo: { focus: true },
+export const Focus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
 };
 
-export const FocusVisible = Template.bind({});
-
-FocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const FocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

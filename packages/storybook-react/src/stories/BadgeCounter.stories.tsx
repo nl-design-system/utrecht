@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { BadgeCounter, Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/badge-counter/README.md?raw';
@@ -10,7 +11,9 @@ const meta = {
   title: 'React Component/Badge counter',
   id: 'react-badge-counter',
   component: BadgeCounter,
-  tags: ['autodocs'],
+  args: {
+    children: '42',
+  },
   argTypes: {
     value: {
       name: 'value',
@@ -23,29 +26,30 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
-} as Meta<typeof BadgeCounter>;
+} satisfies Meta<typeof BadgeCounter>;
 
 export default meta;
 
-const Template: StoryObj<typeof BadgeCounter> = (args) => <BadgeCounter {...args} />;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: '42',
-};
-
-export const Value = Template.bind({});
-
-Value.args = {
-  children: '50,000',
-  value: '50000',
+export const Value: Story = {
+  args: {
+    ...Default.args,
+    children: '50,000',
+    value: '50000',
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

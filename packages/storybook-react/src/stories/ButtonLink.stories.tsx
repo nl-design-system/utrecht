@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { ButtonLink } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/button-link/README.md?raw';
@@ -10,16 +11,24 @@ const meta = {
   title: 'React Component/Link that looks like a button',
   id: 'react-button-link',
   component: ButtonLink,
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-button-link',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
+  },
+  args: {
+    children: 'Read more...',
+    href: '#',
   },
   argTypes: {
     appearance: {
@@ -54,101 +63,85 @@ const meta = {
       },
     },
   },
-} as Meta<typeof ButtonLink>;
+} satisfies Meta<typeof ButtonLink>;
 
 export default meta;
 
-const Template: StoryObj<typeof ButtonLink> = (args) => <ButtonLink {...args} />;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'Read more...',
-  href: '#',
+export const External: Story = {
+  args: {
+    children: 'Read more...',
+    href: 'https://example.com/',
+    external: true,
+  },
 };
 
-export const External = Template.bind({});
-
-External.args = {
-  children: 'Read more...',
-  href: 'https://example.com/',
-  external: true,
+export const PlaceholderForLink: Story = {
+  args: {
+    ...Default.args,
+    placeholder: true,
+  },
 };
 
-export const PlaceholderForLink = Template.bind({});
-
-PlaceholderForLink.args = {
-  children: 'Read more...',
-  href: '#',
-  placeholder: true,
+export const PrimaryButtonLink: Story = {
+  name: 'Primary',
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+  },
 };
 
-export const Primary = Template.bind({});
-
-Primary.args = {
-  children: 'Read more...',
-  href: '#',
-  appearance: 'primary-action-button',
+export const Secondary: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+  },
 };
 
-export const Secondary = Template.bind({});
-
-Secondary.args = {
-  children: 'Read more...',
-  href: '#',
-  appearance: 'secondary-action-button',
+export const Subtle: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
 };
 
-export const Subtle = Template.bind({});
-
-Subtle.args = {
-  children: 'Read more...',
-  href: '#',
-  appearance: 'subtle-button',
+export const Hover: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
+  parameters: {
+    pseudo: { hover: true },
+  },
 };
 
-export const Hover = Template.bind({});
-
-Hover.args = {
-  children: 'Read more...',
-  href: '#',
+export const Focus: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    pseudo: { focus: true },
+  },
 };
 
-Hover.parameters = {
-  pseudo: { hover: true },
+export const Active: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    pseudo: { active: true },
+  },
 };
 
-export const Focus = Template.bind({});
-
-Focus.args = {
-  children: 'Read more...',
-  href: '#',
-};
-
-Focus.parameters = {
-  pseudo: { focus: true },
-};
-
-export const Active = Template.bind({});
-
-Active.args = {
-  children: 'Read more...',
-  href: '#',
-};
-
-Active.parameters = {
-  pseudo: { active: true },
-};
-
-export const FocusVisible = Template.bind({});
-
-FocusVisible.args = {
-  children: 'Read more...',
-  href: '#',
-};
-
-FocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const FocusVisible: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
