@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import {
   DataList,
@@ -15,34 +16,36 @@ const meta = {
   title: 'React Component/Data List',
   id: 'react-data-list',
   component: DataList,
-  tags: ['autodocs'],
+  args: {
+    appearance: 'rows',
+    children: (
+      <DataListItem>
+        <DataListKey>Gereserveerde zitplaats</DataListKey>
+        <DataListValue>42</DataListValue>
+      </DataListItem>
+    ),
+  },
   parameters: {
     tokensPrefix: 'utrecht-data-list',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof DataList>;
+  decorators: [(Story) => <div>{Story()}</div>],
+} satisfies Meta<typeof DataList>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryObj<typeof DataList> = (args) => (
-  <DataList {...args}>
-    <DataListItem>
-      <DataListKey>Gereserveerde zitplaats</DataListKey>
-      <DataListValue>42</DataListValue>
-    </DataListItem>
-  </DataList>
-);
-
-export const Default = Template.bind({});
-
-Default.args = {
-  appearance: 'rows',
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

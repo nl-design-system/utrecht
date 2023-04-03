@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Button } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/button/README.md?raw';
@@ -10,15 +11,22 @@ const meta = {
   title: 'React Component/Button',
   id: 'react-button',
   component: Button,
-  tags: ['autodocs'],
+  args: {
+    children: 'Read more...',
+  },
   parameters: {
     tokensPrefix: 'utrecht-button',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
   argTypes: {
@@ -31,219 +39,206 @@ const meta = {
       options: [undefined, 'button', 'submit', 'reset'],
     },
   },
-} as Meta<typeof Button>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 
-const Template: StoryObj<typeof Button> = (args) => <Button {...args} />;
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'Read more...',
+export const DefaultDisabled: Story = {
+  args: {
+    disabled: true,
+    children: 'Read more...',
+  },
 };
 
-export const DefaultDisabled = Template.bind({});
-
-DefaultDisabled.args = {
-  children: 'Read more...',
-  disabled: true,
+export const DefaultBusy: Story = {
+  args: {
+    children: 'Read more...',
+    busy: true,
+  },
 };
 
-export const DefaultBusy = Template.bind({});
-
-DefaultBusy.args = {
-  children: 'Read more...',
-  busy: true,
+export const DefaultHover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+  args: {
+    ...Default.args,
+  },
 };
 
-export const DefaultHover = Template.bind({});
-
-DefaultHover.args = {
-  children: 'Read more...',
+export const DefaultFocus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    ...Default.args,
+  },
 };
 
-DefaultHover.parameters = {
-  pseudo: { hover: true },
+export const DefaultActive: Story = {
+  parameters: {
+    pseudo: { active: true },
+  },
+  args: {
+    ...Default.args,
+  },
 };
 
-export const DefaultFocus = Template.bind({});
-
-DefaultFocus.args = {
-  children: 'Read more...',
-};
-
-DefaultFocus.parameters = {
-  pseudo: { focus: true },
-};
-
-export const DefaultActive = Template.bind({});
-
-DefaultActive.args = {
-  children: 'Read more...',
-};
-
-DefaultActive.parameters = {
-  pseudo: { active: true },
-};
-
-export const DefaultFocusVisible = Template.bind({});
-
-DefaultFocusVisible.args = {
-  children: 'Read more...',
-};
-
-DefaultFocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const DefaultFocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
+  args: {
+    ...Default.args,
+  },
 };
 
 // PrimaryAction
-export const PrimaryActionDefault = Template.bind({});
-
-PrimaryActionDefault.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
+export const PrimaryActionDefault: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+  },
 };
 
-export const PrimaryActionDisabled = Template.bind({});
-
-PrimaryActionDisabled.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
-  disabled: true,
+export const PrimaryActionDisabled: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+    disabled: true,
+  },
 };
 
-export const PrimaryActionBusy = Template.bind({});
-
-PrimaryActionBusy.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
-  busy: true,
+export const PrimaryActionBusy: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+    busy: true,
+  },
 };
 
-export const PrimaryActionHover = Template.bind({});
-
-PrimaryActionHover.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
+export const PrimaryActionHover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+  },
 };
 
-PrimaryActionHover.parameters = {
-  pseudo: { hover: true },
+export const PrimaryActionFocus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+  },
 };
 
-export const PrimaryActionFocus = Template.bind({});
-
-PrimaryActionFocus.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
+export const PrimaryActionActive: Story = {
+  parameters: {
+    pseudo: { active: true },
+    args: {
+      ...Default.args,
+      appearance: 'primary-action-button',
+    },
+  },
 };
 
-PrimaryActionFocus.parameters = {
-  pseudo: { focus: true },
-};
-
-export const PrimaryActionActive = Template.bind({});
-
-PrimaryActionActive.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
-};
-
-PrimaryActionActive.parameters = {
-  pseudo: { active: true },
-};
-
-export const PrimaryActionFocusVisible = Template.bind({});
-
-PrimaryActionFocusVisible.args = {
-  children: 'Read more...',
-  appearance: 'primary-action-button',
-};
-
-PrimaryActionFocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const PrimaryActionFocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+  },
 };
 
 // SecondaryAction
-
-export const SecondaryActionDefault = Template.bind({});
-
-SecondaryActionDefault.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
+export const SecondaryActionDefault: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+  },
 };
 
-export const SecondaryActionDisabled = Template.bind({});
-
-SecondaryActionDisabled.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
-  disabled: true,
+export const SecondaryActionDisabled: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+    disabled: true,
+  },
 };
 
-export const SecondaryActionBusy = Template.bind({});
-
-SecondaryActionBusy.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
-  busy: true,
+export const SecondaryActionBusy: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+    busy: true,
+  },
 };
 
-export const SecondaryActionHover = Template.bind({});
-
-SecondaryActionHover.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
+export const SecondaryActionHover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+  },
 };
 
-SecondaryActionHover.parameters = {
-  pseudo: { hover: true },
+export const SecondaryActionFocus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+  },
 };
 
-export const SecondaryActionFocus = Template.bind({});
-
-SecondaryActionFocus.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
+export const SecondaryActionActive: Story = {
+  parameters: {
+    pseudo: { active: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+  },
 };
 
-SecondaryActionFocus.parameters = {
-  pseudo: { focus: true },
-};
-
-export const SecondaryActionActive = Template.bind({});
-
-SecondaryActionActive.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
-};
-
-SecondaryActionActive.parameters = {
-  pseudo: { active: true },
-};
-
-export const SecondaryActionFocusVisible = Template.bind({});
-
-SecondaryActionFocusVisible.args = {
-  children: 'Read more...',
-  appearance: 'secondary-action-button',
-};
-
-SecondaryActionFocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const SecondaryActionFocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+  },
 };
 
 // Subtle
-
-export const SubtleDefault = Template.bind({});
-
-SubtleDefault.args = {
-  children: 'Read more...',
-  appearance: 'subtle-button',
+export const SubtleDefault: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
 };
 
-export const SubtleDisabled = Template.bind({});
+export const SubtleDisabled: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+    disabled: true,
+  },
+};
 
 SubtleDisabled.args = {
   children: 'Read more...',
@@ -251,56 +246,52 @@ SubtleDisabled.args = {
   disabled: true,
 };
 
-export const SubtleBusy = Template.bind({});
-
-SubtleBusy.args = {
-  children: 'Read more...',
-  appearance: 'subtle-button',
-  busy: true,
+export const SubtleBusy: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+    busy: true,
+  },
 };
 
-export const SubtleHover = Template.bind({});
-
-SubtleHover.args = {
-  children: 'Read more...',
-  appearance: 'subtle-button',
+export const SubtleHover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
 };
 
-SubtleHover.parameters = {
-  pseudo: { hover: true },
+export const SubtleFocus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
 };
 
-export const SubtleFocus = Template.bind({});
-
-SubtleFocus.args = {
-  children: 'Read more...',
-  appearance: 'subtle-button',
+export const SubtleActive: Story = {
+  parameters: {
+    pseudo: { active: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
 };
 
-SubtleFocus.parameters = {
-  pseudo: { focus: true },
-};
-
-export const SubtleActive = Template.bind({});
-
-SubtleActive.args = {
-  children: 'Read more...',
-  appearance: 'subtle-button',
-};
-
-SubtleActive.parameters = {
-  pseudo: { active: true },
-};
-
-export const SubtleFocusVisible = Template.bind({});
-
-SubtleFocusVisible.args = {
-  children: 'Read more...',
-  appearance: 'subtle-button',
-};
-
-SubtleFocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const SubtleFocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
