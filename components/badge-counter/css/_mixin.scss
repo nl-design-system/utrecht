@@ -5,7 +5,8 @@
  */
 
 @mixin utrecht-badge-counter {
-  /* Limit size to `max-content`, so the badge will not be stretched out of proportion inside a flexbox */
+  /* Limit size to `max-content`, to prevent stretching beyond the intended design when `flex: 320px` is set.
+   * This way the badge will still look good inside a flexbox. */
   background-color: var(--utrecht-badge-counter-background-color, var(--utrecht-badge-background-color, hsl(0 0% 0%)));
   border-radius: var(--utrecht-badge-counter-border-radius, var(--utrecht-badge-border-radius, 0.5ch));
   color: var(--utrecht-badge-counter-color, var(--utrecht-badge-color, hsl(0 0% 100%)));
