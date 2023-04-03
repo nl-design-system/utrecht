@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { FormLabel } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/form-label/README.md?raw';
@@ -26,55 +27,59 @@ const meta = {
       table: { defaultValue: { summary: false } },
     },
   },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-form-label',
     tokens,
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        page: () => (
+          <>
+            <Description>{readme}</Description>
+            <Primary />
+            <ArgsTable story={PRIMARY_STORY} />
+            <Stories />
+          </>
+        ),
       },
     },
   },
-} as Meta<typeof FormLabel>;
+  args: {
+    children: 'Username',
+  },
+} satisfies Meta<typeof FormLabel>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryObj<typeof FormLabel> = (args) => <FormLabel {...args} />;
+export const Default: Story = {};
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'Username',
+export const Checked: Story = {
+  args: {
+    children: 'Form Label Checked',
+    type: 'checkbox',
+  },
 };
 
-export const Checked = Template.bind({});
-
-Checked.args = {
-  children: 'Form Label Checked',
-  type: 'checkbox',
+export const Disabled: Story = {
+  args: {
+    children: 'Form Label Disabled',
+    type: 'radio',
+  },
 };
 
-export const Disabled = Template.bind({});
-
-Disabled.args = {
-  children: 'Form Label Disabled',
-  type: 'radio',
+export const Checkbox: Story = {
+  args: {
+    children: 'Form Label Checkbox',
+    type: 'checkbox',
+  },
 };
 
-export const Checkbox = Template.bind({});
-
-Checkbox.args = {
-  children: 'Form Label Checkbox',
-  type: 'checkbox',
-};
-
-export const Radio = Template.bind({});
-
-Radio.args = {
-  children: 'Form Label Radio',
-  type: 'radio',
+export const Radio: Story = {
+  args: {
+    children: 'Form Label Radio',
+    type: 'radio',
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
