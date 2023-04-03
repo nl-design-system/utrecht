@@ -9,7 +9,6 @@ module.exports = {
     '@storybook/addon-essentials',
     '@storybook/addon-interactions',
     '@storybook/addon-a11y',
-    '@storybook/addon-blocks',
     'storybook-addon-pseudo-states',
     '@storybook/preset-scss',
     // '@storybook/addon-jest',
