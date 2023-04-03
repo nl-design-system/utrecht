@@ -277,6 +277,24 @@ describe('Button', () => {
     expect(button).toHaveClass('utrecht-button');
   });
 
+  it('can configure aria-busy', () => {
+    /* The `busy` property is preferred, but this should work too */
+    const { container } = render(<Button aria-busy={true} />);
+
+    const button = container.querySelector(':only-child');
+
+    expect(button).toHaveAttribute('aria-busy', 'true');
+  });
+
+  it('can configure aria-pressed', () => {
+    /* The `pressed` property is preferred, but this should work too */
+    const { container } = render(<Button aria-pressed={true} />);
+
+    const button = container.querySelector(':only-child');
+
+    expect(button).toHaveAttribute('aria-pressed', 'true');
+  });
+
   it('can trigger a click event', () => {
     const handleClick = jest.fn();
 
