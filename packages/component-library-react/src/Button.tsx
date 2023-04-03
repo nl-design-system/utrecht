@@ -25,7 +25,6 @@ export const Button = forwardRef(
   ) => {
     return (
       <button
-        {...restProps}
         ref={ref}
         className={clsx(
           'utrecht-button',
@@ -45,6 +44,7 @@ export const Button = forwardRef(
         aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
         disabled={disabled}
         type={type || 'button'}
+        {...restProps}
       >
         {children}
       </button>
