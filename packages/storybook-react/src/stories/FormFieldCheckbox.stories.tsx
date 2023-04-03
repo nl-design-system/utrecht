@@ -83,58 +83,58 @@ const meta = {
   id: 'react-form-field--checkbox',
   component: FormField,
   argTypes: storyArgTypes,
-} as Meta<typeof FormField>;
+  args: {
+    checked: false,
+    description: 'U kunt ons echt vertrouwen!',
+    disabled: false,
+    id: '43f471c8-c6f1-4867-bc53-9602c06b8a32',
+    invalid: true,
+    invalidDescription: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
+    label: 'Ik ga akkoord met de algemene voorwaarden',
+    name: 'consent',
+    value: 'true',
+    required: true,
+    type: 'checkbox',
+  },
+  render: (args) => {
+    const { checked, description, disabled, id, invalid, invalidDescription, label, name, required, value, type } =
+      args;
+    const descriptionId = description ? `${id}-description` : null;
+    const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : null;
+    return (
+      <FormField invalid={invalid} type={type}>
+        <Paragraph className="utrecht-form-field__label utrecht-form-field__label--checkbox">
+          <FormLabel disabled={disabled} type="checkbox" htmlFor={id}>
+            <Checkbox
+              aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || null}
+              className="utrecht-form-field__input"
+              defaultChecked={checked}
+              disabled={disabled}
+              id={id}
+              invalid={invalid}
+              required={required}
+              name={name}
+              value={value}
+            />
+            {label}
+          </FormLabel>
+        </Paragraph>
+        {description ? (
+          <FormFieldDescription id={descriptionId} className="utrecht-form-field__description">
+            {description}
+          </FormFieldDescription>
+        ) : undefined}
+        {invalidDescription ? (
+          <FormFieldDescription id={invalidDescriptionId} invalid className="utrecht-form-field__description">
+            {invalidDescription}
+          </FormFieldDescription>
+        ) : undefined}
+      </FormField>
+    );
+  },
+} satisfies Meta<typeof FormField>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryObj<typeof FormField> = (args) => {
-  const { checked, description, disabled, id, invalid, invalidDescription, label, name, required, value, type } = args;
-  const descriptionId = description ? `${id}-description` : null;
-  const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : null;
-  return (
-    <FormField invalid={invalid} type={type}>
-      <Paragraph className="utrecht-form-field__label utrecht-form-field__label--checkbox">
-        <FormLabel disabled={disabled} type="checkbox" htmlFor={id}>
-          <Checkbox
-            aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || null}
-            className="utrecht-form-field__input"
-            defaultChecked={checked}
-            disabled={disabled}
-            id={id}
-            invalid={invalid}
-            required={required}
-            name={name}
-            value={value}
-          />
-          {label}
-        </FormLabel>
-      </Paragraph>
-      {description ? (
-        <FormFieldDescription id={descriptionId} className="utrecht-form-field__description">
-          {description}
-        </FormFieldDescription>
-      ) : undefined}
-      {invalidDescription ? (
-        <FormFieldDescription id={invalidDescriptionId} invalid className="utrecht-form-field__description">
-          {invalidDescription}
-        </FormFieldDescription>
-      ) : undefined}
-    </FormField>
-  );
-};
-
-export const FormFieldCheckbox = Template.bind({});
-
-FormFieldCheckbox.args = {
-  checked: false,
-  description: 'U kunt ons echt vertrouwen!',
-  disabled: false,
-  id: '43f471c8-c6f1-4867-bc53-9602c06b8a32',
-  invalid: true,
-  invalidDescription: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
-  label: 'Ik ga akkoord met de algemene voorwaarden',
-  name: 'consent',
-  value: 'true',
-  required: true,
-  type: 'checkbox',
-};
+export const FormFieldCheckbox: Story = {};
