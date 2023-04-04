@@ -40,7 +40,6 @@ const meta = {
       ),
     },
   },
-  decorators: [(Story) => <div>{Story()}</div>],
 } satisfies Meta<typeof DataList>;
 
 export default meta;

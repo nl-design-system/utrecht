@@ -1,5 +1,5 @@
-import { Meta, StoryObj } from '@storybook/react';
-import { Figure, Image, Link } from '@utrecht/component-library-react/dist/css-module/index';
+import { Args, Meta, StoryObj } from '@storybook/react';
+import { Figure, FigureCaption, Image, Link } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/figure/README.md?raw';
 import tokensDefinition from '@utrecht/components/figure/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -43,6 +43,14 @@ const meta = {
       type: { name: 'string', required: true },
     },
   },
+  render: ({ caption, children }: Args) => {
+    return (
+      <Figure>
+        {children}
+        <FigureCaption>{caption}</FigureCaption>
+      </Figure>
+    );
+  },
   parameters: {
     tokensPrefix: 'utrecht-figure',
     tokens,
@@ -56,13 +64,6 @@ const meta = {
 } as Meta<typeof Figure>;
 
 export default meta;
-
-// const Template: StoryObj<typeof Figure> = ({ caption, children }) => (
-//   <Figure>
-//     {children}
-//     <FigureCaption>{caption}</FigureCaption>
-//   </Figure>
-// );
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};

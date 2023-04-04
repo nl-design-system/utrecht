@@ -82,7 +82,7 @@ export const Focus: Story = {
 
 export const FocusVisible: Story = {
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: true, focus: true },
   },
 };
 

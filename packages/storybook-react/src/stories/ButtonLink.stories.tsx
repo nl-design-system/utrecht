@@ -140,7 +140,7 @@ export const FocusVisible: Story = {
     ...Default.args,
   },
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: true, focus: true },
   },
 };
 

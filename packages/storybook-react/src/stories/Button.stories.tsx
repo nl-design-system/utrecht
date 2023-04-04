@@ -89,7 +89,7 @@ export const DefaultActive: Story = {
 
 export const DefaultFocusVisible: Story = {
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: true, focus: true },
   },
   args: {
     ...Default.args,
@@ -152,7 +152,7 @@ export const PrimaryActionActive: Story = {
 
 export const PrimaryActionFocusVisible: Story = {
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: true, focus: true },
   },
   args: {
     ...Default.args,
@@ -216,7 +216,7 @@ export const SecondaryActionActive: Story = {
 
 export const SecondaryActionFocusVisible: Story = {
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: true, focus: true },
   },
   args: {
     ...Default.args,
@@ -286,7 +286,7 @@ export const SubtleActive: Story = {
 
 export const SubtleFocusVisible: Story = {
   parameters: {
-    pseudo: { focusVisible: true },
+    pseudo: { focusVisible: true, focus: true },
   },
   args: {
     ...Default.args,
