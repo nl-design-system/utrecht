@@ -16,6 +16,7 @@ const meta = {
     height: 100,
     src: 'logo.svg',
     width: 192,
+    photo: false,
   },
   parameters: {
     tokensPrefix: 'utrecht-image',
