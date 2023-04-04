@@ -1,0 +1,6 @@
+{
+  "watch": ["./nodemailer"],
+  "ext": ".ts,.js",
+  "ignore": [],
+  "exec": "ts-node ./nodemailer/index.ts"
+}

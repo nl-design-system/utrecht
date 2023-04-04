@@ -1,0 +1,37 @@
+{
+  "name": "@utrecht/react-emails",
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "",
+  "license": "EUPL-1.2",
+  "keywords": [],
+  "scripts": {
+    "dev-react-email": "email dev --dir src/emails",
+    "dev-nodemailer": "nodemon",
+    "build-nodemailer": "tsc",
+    "export": "email export --dir src/emails --outDir dist/ --pretty",
+    "clean": "rimraf .react-email dist"
+  },
+  "dependencies": {
+    "@react-email/body": "0.0.2",
+    "@react-email/button": "0.0.7",
+    "@react-email/container": "0.0.8",
+    "@react-email/head": "0.0.5",
+    "@react-email/html": "0.0.4",
+    "@react-email/img": "0.0.5",
+    "@react-email/render": "0.0.6",
+    "@react-email/text": "0.0.5",
+    "@utrecht/component-library-css": "workspace:*",
+    "@utrecht/component-library-react": "workspace:*",
+    "@utrecht/design-tokens": "workspace:*",
+    "nodemailer": "6.9.1",
+    "react-email": "1.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.15.11",
+    "@types/nodemailer": "6.4.7",
+    "@types/react": "18.0.28",
+    "nodemon": "2.0.22",
+    "ts-node": "10.9.1"
+  }
+}

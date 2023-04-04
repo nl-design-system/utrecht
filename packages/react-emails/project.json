@@ -1,0 +1,39 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "{workspaceRoot}/packages/react-emails",
+  "sourceRoot": "{projectRoot}",
+  "projectType": "library",
+  "targets": {
+    "dev-react-email": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run dev-react-email",
+        "cwd": "packages/react-emails",
+        "outputPath": "packages/react-emails/.react-email"
+      }
+    },
+    "dev-nodemailer": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run dev-nodemailer",
+        "cwd": "packages/react-emails",
+        "outputPath": "packages/react-emails/.react-email"
+      }
+    },
+    "export": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run export",
+        "cwd": "packages/react-emails",
+        "outputPath": "packages/react-emails/out"
+      }
+    },
+    "clean": {
+      "executor": "nx:run-commands",
+      "options": {
+        "command": "npm run clean",
+        "cwd": "packages/react-emails"
+      }
+    }
+  }
+}
