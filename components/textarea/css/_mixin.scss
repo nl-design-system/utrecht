@@ -39,6 +39,14 @@
 }
 
 @mixin utrecht-textarea--invalid {
+  --_utrecht-textarea-border-width: var(
+    --utrecht-textarea-invalid-border-width,
+    var(
+      --utrecht-form-control-invalid-border-width,
+      var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width))
+    )
+  );
+
   background-color: var(
     --utrecht-textarea-invalid-background-color,
     var(
@@ -53,11 +61,15 @@
       var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color))
     )
   );
-  border-width: var(
-    --utrecht-textarea-invalid-border-width,
+  border-width: var(--_utrecht-textarea-border-width);
+  border-bottom-width: var(
+    --utrecht-textarea-invalid-border-bottom-width,
     var(
-      --utrecht-form-control-invalid-border-width,
-      var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width))
+      --utrecht-form-control-invalid-border-bottom-width,
+      var(
+        --utrecht-textarea-border-bottom-width,
+        var(--utrecht-form-control-border-bottom-width, var(--_utrecht-textarea-border-width))
+      )
     )
   );
   color: var(
