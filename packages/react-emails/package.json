@@ -6,10 +6,10 @@
   "license": "EUPL-1.2",
   "keywords": [],
   "scripts": {
-    "dev-react-email": "email dev",
+    "dev-react-email": "email dev --dir src/emails",
     "dev-nodemailer": "nodemon",
     "build-nodemailer": "tsc",
-    "export": "email export --outDir ../dist --pretty",
+    "export": "email export --dir src/emails --outDir dist/ --pretty",
     "clean": "rimraf .react-email dist"
   },
   "dependencies": {
