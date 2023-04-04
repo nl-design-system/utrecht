@@ -85,6 +85,14 @@
 }
 
 @mixin utrecht-select--invalid {
+  --_utrecht-select-border-width: var(
+    --utrecht-select-invalid-border-width,
+    var(
+      --utrecht-form-control-invalid-border-width,
+      var(--utrecht-select-border-width, var(--utrecht-form-control-border-width))
+    )
+  );
+
   background-color: var(
     --utrecht-select-invalid-background-color,
     var(
@@ -99,11 +107,15 @@
       var(--utrecht-select-border-color, var(--utrecht-form-control-border-color))
     )
   );
-  border-width: var(
-    --utrecht-select-invalid-border-width,
+  border-width: var(--_utrecht-select-border-width);
+  border-bottom-width: var(
+    --utrecht-select-invalid-border-block-end-width,
     var(
-      --utrecht-form-control-invalid-border-width,
-      var(--utrecht-select-border-width, var(--utrecht-form-control-border-width))
+      --utrecht-form-control-invalid-border-block-end-width,
+      var(
+        --utrecht-select-border-block-end-width,
+        var(--utrecht-form-control-border-block-end-width, var(--_utrecht-select-border-width))
+      )
     )
   );
 }
