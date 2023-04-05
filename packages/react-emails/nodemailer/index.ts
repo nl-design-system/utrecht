@@ -2,7 +2,7 @@
 
 import { render } from '@react-email/render';
 import nodemailer from 'nodemailer';
-import { AanvragerEmail } from '../emails/aanvrager-email';
+import { AanvragerEmail } from '../src/emails/aanvrager-email';
 
 const emailHtml = render(AanvragerEmail());
 
