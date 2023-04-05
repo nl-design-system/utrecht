@@ -7,8 +7,6 @@ import { Img } from '@react-email/img';
 import { Text } from '@react-email/text';
 import { Heading1 } from '@utrecht/component-library-react';
 import React from 'react';
-import '@utrecht/component-library-css';
-import '@utrecht/design-tokens/dist/index.css';
 
 // const baseUrl = process.env.VERCEL_URL
 //   ? `https://${process.env.VERCEL_URL}`
