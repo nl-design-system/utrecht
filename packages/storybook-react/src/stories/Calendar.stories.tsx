@@ -1,31 +1,42 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Calendar } from '@utrecht/component-library-react/dist/Calendar';
+import { Calendar } from '@utrecht/component-library-react/dist/css-module';
 import tokensDefinition from '@utrecht/components/calendar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { enUS, nl } from 'date-fns/locale';
-import React from 'react';
 import { designTokenStory } from './util';
+
+const events = [
+  { date: '2022-09-22T21:59:59.999Z', emphasis: true, selected: false, disabled: false },
+  { date: '2022-09-23T21:59:59.999Z', emphasis: false, selected: false, disabled: false },
+  { date: '2022-09-24T21:59:59.999Z', emphasis: false, selected: false, disabled: true },
+];
 
 const meta = {
   title: 'React Component/Calendar',
   id: 'react-calendar',
   component: Calendar,
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-calendar',
     tokens,
     tokensDefinition,
-    docs: {
-      description: {
-        // component: readme,
-      },
+  },
+  args: {
+    onCalendarClick: (date) => {
+      console.log(date);
     },
+    currentDate: new Date(),
+    events,
+    locale: nl,
+    previousYearButtonTitle: 'Vorig jaar',
+    nextYearButtonTitle: 'volgend jaar',
+    previousMonthButtonTitle: 'Vorige maand',
+    nextMonthButtonTitle: 'volgende maand',
   },
   argTypes: {
     onCalendarClick: {
       name: 'onCalendarClick',
       description: "It's a callback function that returns the selected date, triggered when you click on the day",
-      type: { name: 'Func', required: false },
+      type: { name: 'number', required: false },
       table: { category: 'API' },
     },
     events: {
@@ -80,42 +91,22 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Calendar>;
+} satisfies Meta<typeof Calendar>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryObj<typeof Calendar> = (args) => <Calendar {...args} />;
+export const Default: Story = {};
 
-const events = [
-  { date: '2022-09-22T21:59:59.999Z', emphasis: true, selected: false, disabled: false },
-  { date: '2022-09-23T21:59:59.999Z', emphasis: false, selected: false, disabled: false },
-  { date: '2022-09-24T21:59:59.999Z', emphasis: false, selected: false, disabled: true },
-];
-
-export const Default = Template.bind({});
-
-Default.args = {
-  onCalendarClick: (date) => {
-    console.log(date);
+export const EnglishCalendar: Story = {
+  args: {
+    onCalendarClick: (date) => {
+      console.log(date);
+    },
+    currentDate: new Date(),
+    events,
+    locale: enUS,
   },
-  currentDate: new Date(),
-  events,
-  locale: nl,
-  previousYearButtonTitle: 'Vorig jaar',
-  nextYearButtonTitle: 'volgend jaar',
-  previousMonthButtonTitle: 'Vorige maand',
-  nextMonthButtonTitle: 'volgende maand',
-};
-
-export const EnglishCalendar = Template.bind({});
-
-EnglishCalendar.args = {
-  onCalendarClick: (date) => {
-    console.log(date);
-  },
-  currentDate: new Date(),
-  events,
-  locale: enUS,
 };
 
 export const DesignTokens = designTokenStory(meta);

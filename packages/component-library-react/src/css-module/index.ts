@@ -14,7 +14,7 @@ export { BreadcrumbNav, BreadcrumbLink } from './BreadcrumbNav';
 export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from './Button';
 export { ButtonGroup } from './ButtonGroup';
 export { ButtonLink } from './ButtonLink';
-// export * from './Calendar';
+export * from './Calendar';
 export { Checkbox } from './Checkbox';
 export { Code } from './Code';
 export { CodeBlock } from './CodeBlock';
