@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { BadgeList, DataBadge } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/badge-list/README.md?raw';
@@ -10,7 +11,9 @@ const meta = {
   title: 'React Component/Badge list',
   id: 'react-badge-list',
   component: BadgeList,
-  tags: ['autodocs'],
+  args: {
+    children: [<DataBadge>Badge A</DataBadge>, <DataBadge>Badge B</DataBadge>, <DataBadge>Badge C</DataBadge>],
+  },
   argTypes: {
     items: {
       name: 'value',
@@ -23,21 +26,22 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof BadgeList>;
+} satisfies Meta<typeof BadgeList>;
 
 export default meta;
 
-const Template: StoryObj<typeof BadgeList> = (args) => <BadgeList {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: [<DataBadge>Badge A</DataBadge>, <DataBadge>Badge B</DataBadge>, <DataBadge>Badge C</DataBadge>],
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

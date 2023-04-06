@@ -6,7 +6,11 @@ const meta = {
   title: 'React Component/Ordered List/Item',
   id: 'react-ordered-list--item',
   component: OrderedListItem,
+  name: OrderedListItem,
   decorators: [(Story) => <OrderedList>{Story()}</OrderedList>],
+  args: {
+    children: 'List item',
+  },
   argTypes: {
     value: {
       type: { name: 'number', required: false },
@@ -16,15 +20,9 @@ const meta = {
       },
     },
   },
-} as Meta<typeof OrderedListItem>;
+} satisfies Meta<typeof OrderedListItem>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-export const Default: StoryObj<typeof OrderedListItem> = (args) => <OrderedListItem {...args} />;
-
-Default.args = {
-  children: 'List item',
-};
-
-// Configure a `displayName` for the code snippet when used as Storybook subcomponent
-Default.displayName = 'OrderedListItem';
+export const Default: Story = {};

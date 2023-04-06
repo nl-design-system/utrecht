@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Page } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/page/README.md?raw';
@@ -14,31 +15,33 @@ const meta = {
   id: 'react-page',
   component: Page,
   subcomponents: { PageContent, PageFooter, PageHeader },
-  tags: ['autodocs'],
+  args: {
+    children: [
+      <PageHeader {...PageContent.args} />,
+      <PageContent {...PageContent.args} />,
+      <PageFooter {...PageFooter.args} />,
+    ],
+  },
   parameters: {
     tokensPrefix: 'utrecht-page',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Page>;
+} satisfies Meta<typeof Page>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryObj<typeof Page> = (args) => <Page {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: [
-    <PageHeader {...PageContent.args} />,
-    <PageContent {...PageContent.args} />,
-    <PageFooter {...PageFooter.args} />,
-  ],
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);
