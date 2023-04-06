@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { SkipLink } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/skip-link/README.md?raw';
@@ -7,7 +8,7 @@ import React from 'react';
 import { designTokenStory } from './util';
 
 // `will-change: transform` will create a "containing block" that will contain `position: fixed` elements.
-const ExampleViewport = (Story) => (
+const ExampleViewport = (Story: () => React.ReactElement<any, string | React.JSXElementConstructor<any>>) => (
   <div
     style={{
       minHeight: '240px',
@@ -19,51 +20,51 @@ const ExampleViewport = (Story) => (
     {Story()}
   </div>
 );
-ExampleViewport.displayName = 'ExampleViewport';
 
 const meta = {
   title: 'React Component/Skip link',
   id: 'react-skip-link',
   component: SkipLink,
-  href: {
-    name: 'href',
-    type: { name: 'string', required: true },
-    table: {
-      category: 'HTML attribute',
-      defaultValue: { summary: '' },
+  argTypes: {
+    href: {
+      name: 'href',
+      type: { name: 'string', required: true },
+      table: {
+        category: 'HTML attribute',
+        defaultValue: { summary: '' },
+      },
     },
   },
   decorators: [ExampleViewport],
-  tags: ['autodocs'],
+  args: {
+    href: '#main',
+    children: 'Skip to main content',
+  },
   parameters: {
+    pseudo: {
+      // Since skip link is not visible by default, simulate focus state by default
+      focus: true,
+      focusVisible: true,
+    },
     tokensPrefix: 'utrecht-skip-link',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof SkipLink>;
+} satisfies Meta<typeof SkipLink>;
 
 export default meta;
 
-const Template: StoryObj<typeof SkipLink> = (args) => <SkipLink {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  href: '#main',
-  children: 'Skip to main content',
-};
-
-// Since skip link is not visible by default, simulate focus state by default
-Default.parameters = {
-  pseudo: {
-    focus: true,
-    focusVisible: true,
-  },
-};
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

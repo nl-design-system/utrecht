@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { FormField, FormLabel, RadioButton } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/radio-button/README.md?raw';
@@ -11,15 +12,19 @@ const meta = {
   id: 'react-radio-button',
   component: RadioButton,
   subcomponents: { FormLabel, FormField },
-  tags: ['autodocs'],
   parameters: {
     tokensPrefix: 'utrecht-radio-button',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
   argTypes: {
@@ -62,62 +67,67 @@ const meta = {
       },
     },
   },
-} as Meta<typeof RadioButton>;
+} satisfies Meta<typeof RadioButton>;
 
 export default meta;
 
-const Template: StoryObj<typeof RadioButton> = (args) => <RadioButton {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
+export const Default: Story = {};
 
-export const Hover = Template.bind({});
-
-Hover.parameters = {
-  pseudo: { hover: true },
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
 };
 
-export const Focus = Template.bind({});
-
-Focus.parameters = {
-  pseudo: { focus: true },
+export const Focus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
 };
 
-export const FocusVisible = Template.bind({});
-
-FocusVisible.parameters = {
-  pseudo: { focusVisible: true },
+export const FocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true },
+  },
 };
 
-export const Checked = Template.bind({});
+export const Checked: Story = {
+  args: {
+    checked: true,
+    value: 'checked',
+  },
+};
 
 Checked.args = {
   checked: true,
   value: 'checked',
 };
 
-export const CheckedAndDisabled = Template.bind({});
-
-CheckedAndDisabled.args = {
-  checked: true,
-  disabled: true,
+export const CheckedAndDisabled: Story = {
+  args: {
+    checked: true,
+    disabled: true,
+  },
 };
 
-export const Disabled = Template.bind({});
-
-Disabled.args = {
-  disabled: true,
+export const Disabled: Story = {
+  args: {
+    disabled: true,
+  },
 };
 
-export const Invalid = Template.bind({});
-
-Invalid.args = {
-  invalid: true,
+export const Invalid: Story = {
+  args: {
+    invalid: true,
+  },
 };
 
-export const Required = Template.bind({});
-
-Required.args = {
-  required: true,
+export const Required: Story = {
+  args: {
+    required: true,
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

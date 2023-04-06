@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { LinkSocial, ListSocial, ListSocialItem } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/list-social/README.md?raw';
@@ -17,57 +18,60 @@ const meta = {
   title: 'React Component/List Social',
   id: 'react-list-social',
   component: ListSocial,
-  tags: ['autodocs'],
+  args: {
+    children: [
+      <ListSocialItem>
+        <LinkSocial title="facebook" external href="https://www.facebook.com/GemeenteUtrecht">
+          <UtrechtIconFacebook />
+        </LinkSocial>
+      </ListSocialItem>,
+      <ListSocialItem>
+        <LinkSocial title="instagram" external href="https://www.instagram.com/GemeenteUtrecht/">
+          <UtrechtIconInstagram />
+        </LinkSocial>
+      </ListSocialItem>,
+      <ListSocialItem>
+        <LinkSocial
+          title="linkedin"
+          external
+          href="https://www.linkedin.com/company/gemeente-utrecht/?originalSubdomain=nl"
+        >
+          <UtrechtIconLinkedin />
+        </LinkSocial>
+      </ListSocialItem>,
+      <ListSocialItem>
+        <LinkSocial title="twitter" external href="https://twitter.com/gemeenteutrecht">
+          <UtrechtIconTwitter />
+        </LinkSocial>
+      </ListSocialItem>,
+      <ListSocialItem>
+        <LinkSocial title="whatsapp" external href="https://api.whatsapp.com/send?phone=31624927665">
+          <UtrechtIconWhatsapp />
+        </LinkSocial>
+      </ListSocialItem>,
+    ],
+  },
   parameters: {
     tokensPrefix: 'utrecht-list-social',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof ListSocial>;
+} satisfies Meta<typeof ListSocial>;
 
 export default meta;
 
-const Template: StoryObj<typeof ListSocial> = (args) => <ListSocial {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-
-Default.args = {
-  children: [
-    <ListSocialItem>
-      <LinkSocial title="facebook" external href="https://www.facebook.com/GemeenteUtrecht">
-        <UtrechtIconFacebook />
-      </LinkSocial>
-    </ListSocialItem>,
-    <ListSocialItem>
-      <LinkSocial title="instagram" external href="https://www.instagram.com/GemeenteUtrecht/">
-        <UtrechtIconInstagram />
-      </LinkSocial>
-    </ListSocialItem>,
-    <ListSocialItem>
-      <LinkSocial
-        title="linkedin"
-        external
-        href="https://www.linkedin.com/company/gemeente-utrecht/?originalSubdomain=nl"
-      >
-        <UtrechtIconLinkedin />
-      </LinkSocial>
-    </ListSocialItem>,
-    <ListSocialItem>
-      <LinkSocial title="twitter" external href="https://twitter.com/gemeenteutrecht">
-        <UtrechtIconTwitter />
-      </LinkSocial>
-    </ListSocialItem>,
-    <ListSocialItem>
-      <LinkSocial title="whatsapp" external href="https://api.whatsapp.com/send?phone=31624927665">
-        <UtrechtIconWhatsapp />
-      </LinkSocial>
-    </ListSocialItem>,
-  ],
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

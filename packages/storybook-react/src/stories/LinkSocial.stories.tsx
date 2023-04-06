@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { LinkSocial } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/link-social/README.md?raw';
@@ -11,30 +12,32 @@ const meta = {
   title: 'React Component/Link Social',
   id: 'react-link-social',
   component: LinkSocial,
-  tags: ['autodocs'],
+  args: {
+    children: <UtrechtIconFacebook />,
+    href: 'https://www.facebook.com/GemeenteUtrecht',
+    external: true,
+    title: 'facebook',
+  },
   parameters: {
     tokensPrefix: 'utrecht-link-social',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof LinkSocial>;
+} satisfies Meta<typeof LinkSocial>;
 
 export default meta;
+type Story = StoryObj<typeof meta>;
 
-const Template: StoryObj<typeof LinkSocial> = (args) => <LinkSocial {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: <UtrechtIconFacebook />,
-  href: 'https://www.facebook.com/GemeenteUtrecht',
-  external: true,
-  title: 'facebook',
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

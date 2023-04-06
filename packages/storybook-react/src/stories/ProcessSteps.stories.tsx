@@ -1,4 +1,5 @@
 import { ProcessSteps } from '@gemeente-denhaag/process-steps';
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/process-steps/README.md?raw';
 import tokensDefinition from '@utrecht/components/process-steps/tokens.json';
@@ -11,71 +12,76 @@ const meta = {
   title: 'React Component/Process steps',
   id: 'react-process-steps',
   component: ProcessSteps,
-  tags: ['autodocs'],
+  args: {
+    expandedSteps: ['deelname', 'onderzoek'],
+    steps: [
+      {
+        id: 'deelname',
+        marker: 1,
+        status: 'checked',
+        steps: [
+          {
+            id: '1',
+            status: 'checked',
+            title: 'Aanmelding ontvangen',
+          },
+        ],
+        title: 'Deelname aan geluidsonderzoek',
+      },
+      {
+        id: 'onderzoek',
+        marker: 2,
+        status: 'current',
+        steps: [
+          {
+            id: '2',
+            status: 'checked',
+            title: 'Afspraak meten geluidsoverlast gemaakt',
+          },
+          {
+            id: '3',
+            status: 'checked',
+            title: 'Geluidsoverlast gemeten',
+          },
+          {
+            id: '4',
+            status: 'checked',
+            title: 'Onderzoek resultaten verwerkt',
+          },
+        ],
+        title: 'Onderzoek naar geluidsoverlast',
+      },
+      {
+        id: 'uitvoeren',
+        marker: 3,
+        title: 'Uitvoeren van maatregelen',
+      },
+      {
+        id: 'klaar',
+        marker: 4,
+        title: 'Maatregelen zijn uitgevoerd',
+      },
+    ],
+  },
   parameters: {
     tokensPrefix: 'denhaag-process-steps',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof ProcessSteps>;
+} satisfies Meta<typeof ProcessSteps>;
 
 export default meta;
-
-const Template: StoryObj<typeof ProcessSteps> = (args) => <ProcessSteps {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  expandedSteps: ['deelname', 'onderzoek'],
-  steps: [
-    {
-      key: 'deelname',
-      marker: 1,
-      status: 'checked',
-      steps: [
-        {
-          status: 'checked',
-          title: 'Aanmelding ontvangen',
-        },
-      ],
-      title: 'Deelname aan geluidsonderzoek',
-    },
-    {
-      key: 'onderzoek',
-      marker: 2,
-      status: 'current',
-      steps: [
-        {
-          status: 'checked',
-          title: 'Afspraak meten geluidsoverlast gemaakt',
-        },
-        {
-          status: 'checked',
-          title: 'Geluidsoverlast gemeten',
-        },
-        {
-          status: 'checked',
-          title: 'Onderzoek resultaten verwerkt',
-        },
-      ],
-      title: 'Onderzoek naar geluidsoverlast',
-    },
-    {
-      key: 'uitvoeren',
-      marker: 3,
-      title: 'Uitvoeren van maatregelen',
-    },
-    {
-      key: 'klaar',
-      marker: 4,
-      title: 'Maatregelen zijn uitgevoerd',
-    },
-  ],
-};
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

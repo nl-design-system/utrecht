@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import {
   Table,
@@ -18,49 +19,54 @@ const meta = {
   title: 'React Component/Table',
   id: 'react-table',
   component: Table,
-  tags: ['autodocs'],
+  args: {
+    children: (
+      <>
+        <TableHeader>
+          <TableRow>
+            <TableHeaderCell scope="col">Column A</TableHeaderCell>
+            <TableHeaderCell scope="col">Column B</TableHeaderCell>
+            <TableHeaderCell scope="col">Column C</TableHeaderCell>
+          </TableRow>
+        </TableHeader>
+        <TableBody>
+          <TableRow>
+            <TableHeaderCell scope="row">Item 1</TableHeaderCell>
+            <TableCell>Data</TableCell>
+            <TableCell>More data</TableCell>
+          </TableRow>
+        </TableBody>
+        <TableFooter>
+          <TableRow>
+            <TableCell>More data</TableCell>
+            <TableCell>More data</TableCell>
+            <TableCell>More data</TableCell>
+          </TableRow>
+        </TableFooter>
+      </>
+    ),
+  },
   parameters: {
     tokensPrefix: 'utrecht-table',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Table>;
+} satisfies Meta<typeof Table>;
 
 export default meta;
 
-const Template: StoryObj<typeof Table> = () => (
-  <Table>
-    <TableHeader>
-      <TableRow>
-        <TableHeaderCell scope="col">Column A</TableHeaderCell>
-        <TableHeaderCell scope="col">Column B</TableHeaderCell>
-        <TableHeaderCell scope="col">Column C</TableHeaderCell>
-      </TableRow>
-    </TableHeader>
-    <TableBody>
-      <TableRow>
-        <TableHeaderCell scope="row">Item 1</TableHeaderCell>
-        <TableCell>Data</TableCell>
-        <TableCell>More data</TableCell>
-      </TableRow>
-    </TableBody>
-    <TableFooter>
-      <TableRow>
-        <TableCell>More data</TableCell>
-        <TableCell>More data</TableCell>
-        <TableCell>More data</TableCell>
-      </TableRow>
-    </TableFooter>
-  </Table>
-);
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
-
-Default.args = {};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

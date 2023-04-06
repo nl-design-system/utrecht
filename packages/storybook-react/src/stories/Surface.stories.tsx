@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Surface } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/surface/README.md?raw';
@@ -10,27 +11,29 @@ const meta = {
   title: 'React Component/Surface',
   id: 'react-surface',
   component: Surface,
-  tags: ['autodocs'],
+  args: {
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+  },
   parameters: {
     tokensPrefix: 'utrecht-surface',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof Surface>;
+} satisfies Meta<typeof Surface>;
 
 export default meta;
 
-const Template: StoryObj<typeof Surface> = (args) => <Surface {...args} />;
-
-export const Default = Template.bind({});
-
-Default.args = {
-  children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
-};
+type Story = StoryObj<typeof meta>;
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

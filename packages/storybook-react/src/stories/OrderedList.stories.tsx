@@ -1,4 +1,5 @@
 // performance optimizations are not relevant for story rendering, ignore ESLint
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { OrderedList } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/ordered-list/README.md?raw';
@@ -29,29 +30,34 @@ const meta = {
       },
     },
   },
-  tags: ['autodocs'],
+  args: {
+    children: [
+      <OrderedListItem {...OrderedListItem.args} />,
+      <OrderedListItem {...OrderedListItem.args} />,
+      <OrderedListItem {...OrderedListItem.args} />,
+    ],
+  },
   parameters: {
     tokensPrefix: 'utrecht-ordered-list',
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
-} as Meta<typeof OrderedList>;
+} satisfies Meta<typeof OrderedList>;
 
 export default meta;
 
-export const Default: StoryObj<typeof OrderedList> = (args) => <OrderedList {...args} />;
+type Story = StoryObj<typeof meta>;
 
-Default.args = {
-  children: [
-    <OrderedListItem {...OrderedListItem.args} />,
-    <OrderedListItem {...OrderedListItem.args} />,
-    <OrderedListItem {...OrderedListItem.args} />,
-  ],
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

@@ -1,3 +1,4 @@
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Args, Meta, StoryObj } from '@storybook/react';
 import { Figure, FigureCaption, Image, Link } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/figure/README.md?raw';
@@ -56,9 +57,14 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
 } as Meta<typeof Figure>;
