@@ -3,9 +3,11 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "resolveJsonModule": true
+    "resolveJsonModule": true,
+    "types": ["node"],
+    "moduleResolution": "node"
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/stories/**/*.tsx", "config/**/*.ts"],
   "exclude": ["**/node_modules/*"]
 }

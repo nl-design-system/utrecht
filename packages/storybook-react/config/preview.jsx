@@ -3,6 +3,7 @@ import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 // import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
+import { transformSource } from './transformSource';
 
 export const decorators = [
   (Story) => <div className="utrecht-document utrecht-theme">{Story()}</div>,
@@ -23,6 +24,7 @@ export const parameters = {
     source: {
       state: 'open',
     },
+    transformSource,
   },
   ...addonStatus,
 };
