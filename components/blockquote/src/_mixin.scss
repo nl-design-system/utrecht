@@ -4,6 +4,8 @@
  */
 
 @mixin utrecht-blockquote {
+  /* Setting `margin-inline-start` is necessary for overriding the default stylesheet of `<blockquote>` and `<figure>`.
+   * Setting `margin-inline-end` is necessary for overriding the default stylesheet of `<figure>` */
   background-color: var(--utrecht-blockquote-background-color);
   border-color: var(--utrecht-blockquote-border-color);
   border-inline-start-width: var(--utrecht-blockquote-border-inline-start-width, 0);
@@ -23,12 +25,21 @@
   padding-inline-start: var(--utrecht-blockquote-padding-inline-start);
 }
 
-@mixin utrecht-blockquote__attribution {
-  color: var(--utrecht-blockquote-attribution-color, inherit);
-  font-size: var(--utrecht-blockquote-attribution-font-size, inherit);
+@mixin utrecht-blockquote__caption {
+  color: var(--utrecht-blockquote-caption-color, inherit);
+  font-size: var(--utrecht-blockquote-caption-font-size, inherit);
 }
 
-@mixin utrecht-blockquote__content {
+@mixin utrecht-blockquote__figure {
+  /* `<figure>` is an optional semantic container, the CSS needs to reset the default stylesheet of `<figure>` */
+
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
+@mixin utrecht-blockquote__quote {
   --utrecht-document-color: var(--utrecht-blockquote-content-color, inherit);
   --utrecht-paragraph-font-size: var(--utrecht-blockquote-content-font-size, inherit);
 
@@ -38,4 +49,22 @@
 
 @mixin utrecht-blockquote--distanced {
   --utrecht-space-around: 1;
+}
+
+/**
+ * Temporarily keep the old name for backwards compatibility.
+ *
+ * @deprecated
+ */
+@mixin utrecht-blockquote__attribution {
+  @include utrecht-blockquote__caption;
+}
+
+/**
+ * Temporarily keep the old name for backwards compatibility.
+ *
+ * @deprecated
+ */
+@mixin utrecht-blockquote__content {
+  @include utrecht-blockquote__quote;
 }

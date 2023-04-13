@@ -8,7 +8,7 @@
 @mixin utrecht-html-blockquote {
   blockquote {
     @include utrecht-blockquote;
-    @include utrecht-blockquote__content;
+    @include utrecht-blockquote__quote;
     @include utrecht-blockquote--distanced;
   }
 }
