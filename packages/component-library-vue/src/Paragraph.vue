@@ -5,6 +5,7 @@
     name: "UtrechtParagraph",
     props: {
       lead: { type: Boolean, required: false, default: false },
+      small: { type: Boolean, required: false, default: false },
     },
   });
 </script>
@@ -13,9 +14,12 @@
   <p
     :class="[
     'utrecht-paragraph',
-    { 'utrecht-paragraph--lead': lead }
+    { 'utrecht-paragraph--lead': lead,
+     'utrecht-paragraph--small': small }
     ]"
   >
+    <small v-if="small" class="utrecht-paragraph__small"><slot /></small>
+    <slot v-else />
     <slot />
   </p>
 </template>
