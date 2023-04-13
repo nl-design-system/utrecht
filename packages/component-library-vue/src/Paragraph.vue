@@ -14,10 +14,12 @@
   <p
     :class="[
     'utrecht-paragraph',
-    { 'utrecht-paragraph--lead': lead },
-    { 'utrecht-paragraph--small': small }
+    { 'utrecht-paragraph--lead': lead,
+     'utrecht-paragraph--small': small }
     ]"
   >
+    <small v-if="small" class="utrecht-paragraph__small"><slot /></small>
+    <slot v-else />
     <slot />
   </p>
 </template>

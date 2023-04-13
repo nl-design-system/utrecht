@@ -118,4 +118,22 @@ describe('Paragraph', () => {
       expect(small).toBeInTheDocument();
     });
   });
+
+  describe('small variant', () => {
+    it('is not a small paragraph variant by default', () => {
+      const { container } = render(Paragraph);
+
+      const paragraph = container.querySelector(':only-child');
+
+      expect(paragraph).not.toHaveClass('utrecht-paragraph--small');
+    });
+
+    it('has a small paragraph variant', () => {
+      const { container } = render(Paragraph, { props: { small: true } });
+
+      const smallParagraph = container.querySelector(':only-child');
+
+      expect(smallParagraph).toHaveClass('utrecht-paragraph--small');
+    });
+  });
 });
