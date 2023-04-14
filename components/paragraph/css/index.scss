@@ -21,6 +21,10 @@
   @include utrecht-paragraph__html-small;
 }
 
+.utrecht-paragraph__b {
+  @include utrecht-paragraph__b;
+}
+
 .utrecht-paragraph--distanced {
   @include utrecht-paragraph--distanced;
 }
