@@ -1,1 +1,13 @@
-<ng-content></ng-content>
+<ng-container *ngIf="!contentWrapper; else contentWrapper">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
+</ng-container>
+<ng-template #leadWrapper
+  ><b class="utrecht-paragraph__b"><ng-container *ngTemplateOutlet="content"></ng-container></b
+></ng-template>
+<ng-template #smallWrapper
+  ><small class="utrecht-paragraph__small"><ng-container *ngTemplateOutlet="content"></ng-container></small
+></ng-template>
+
+<ng-template #content>
+  <ng-content></ng-content>
+</ng-template>

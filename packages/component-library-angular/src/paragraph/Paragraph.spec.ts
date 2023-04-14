@@ -19,6 +19,16 @@ describe('Paragraph', () => {
     expect(paragraph).toBeInTheDocument();
   });
 
+  it('renders no additional elements', async () => {
+    const { container } = await render('<p utrecht-paragraph></p>', {
+      declarations: [UtrechtParagraph],
+    });
+
+    const elements = container.querySelectorAll('*');
+
+    expect(elements.length).toBe(1);
+  });
+
   it('renders a block element', async () => {
     const { container } = await render('<p utrecht-paragraph></p>', {
       declarations: [UtrechtParagraph],
@@ -74,6 +84,35 @@ describe('Paragraph', () => {
     expect(leadParagraph).toHaveClass('utrecht-paragraph--lead');
   });
 
+  describe('lead', () => {
+    it('has renders a <b> element', async () => {
+      const { container } = await render('<p utrecht-paragraph [lead]="lead"></p>', {
+        declarations: [UtrechtParagraph],
+        componentProperties: {
+          lead: true,
+        },
+      });
+
+      const bold = container.querySelector('b');
+
+      expect(bold).toBeInTheDocument();
+    });
+  });
+
+  describe('small print', () => {
+    it('has renders a <small> element', async () => {
+      const { container } = await render('<p utrecht-paragraph [small]="small"></p>', {
+        declarations: [UtrechtParagraph],
+        componentProperties: {
+          small: true,
+        },
+      });
+
+      const small = container.querySelector('small');
+
+      expect(small).toBeInTheDocument();
+    });
+  });
   it('can be hidden', async () => {
     const { container } = await render('<p utrecht-paragraph [hidden]="hidden"></p>', {
       declarations: [UtrechtParagraph],
