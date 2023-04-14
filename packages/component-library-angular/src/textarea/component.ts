@@ -11,7 +11,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
     '[attr.name]': 'name || null',
     '[attr.readonly]': 'readonly || null',
     '[class.utrecht-textarea--disabled]': 'disabled',
-    '[class.utrecht-textarea--html-input]': 'true',
+    '[class.utrecht-textarea--html-textarea]': 'true',
     '[class.utrecht-textarea--invalid]': 'invalid',
     '[class.utrecht-textarea--readonly]': 'readonly',
     '[class.utrecht-textarea--required]': 'required',
