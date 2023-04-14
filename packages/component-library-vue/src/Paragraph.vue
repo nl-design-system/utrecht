@@ -5,6 +5,7 @@
     name: "UtrechtParagraph",
     props: {
       lead: { type: Boolean, required: false, default: false },
+      small: { type: Boolean, required: false, default: false },
     },
   });
 </script>
@@ -13,7 +14,8 @@
   <p
     :class="[
     'utrecht-paragraph',
-    { 'utrecht-paragraph--lead': lead }
+    { 'utrecht-paragraph--lead': lead },
+    { 'utrecht-paragraph--small': small }
     ]"
   >
     <slot />
