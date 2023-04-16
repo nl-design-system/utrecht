@@ -2,48 +2,231 @@
   "utrecht": {
     "color": {
       "red": {
-        "20": { "value": "hsl(0 100% 20%)", "comment": "donker rood" },
-        "30": { "value": "hsl(0 100% 30%)", "comment": "hover rood" },
-        "40": { "value": "hsl(0 100% 40%)", "comment": "basis rood #cc0000" },
-        "95": { "value": "hsl(0 100% 95%)", "comment": "Achtergrond rode kleur" }
+        "20": {
+          "value": "hsl(0 100% 20%)",
+          "comment": "donker rood",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "30": {
+          "value": "hsl(0 100% 30%)",
+          "comment": "hover rood",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "40": {
+          "value": "hsl(0 100% 40%)",
+          "comment": "basis rood #cc0000",
+          "$extensions": {
+            "nl.nldesignsystem.essential-color": true
+          }
+        },
+        "95": {
+          "value": "hsl(0 100% 95%)",
+          "comment": "Achtergrond rode kleur",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        }
       },
       "blue": {
-        "20": { "value": "hsl(211 60% 20%)", "comment": "basis donkerblauw (OS focus)" },
-        "30": { "value": "hsl(211 60% 30%)", "comment": "Deze kleur gebruiken we niet" },
-        "35": { "value": "hsl(211 60% 35%)", "comment": "basis link en knoppen CTA donkerblauw" },
-        "40": { "value": "hsl(211 60% 40%)", "comment": "blauw variant bij hover/focus #3669a5" },
-        "50": { "value": "hsl(211 60% 50%)", "comment": "experimenteel / beperkt gebruiken" },
-        "60": { "value": "hsl(211 60% 60%)", "comment": "experimenteel / Drak mode link en button kleur" },
-        "80": { "value": "hsl(211 60% 80%)", "comment": "licht blauw voor achtergrond" },
-        "90": { "value": "hsl(211 60% 90%)", "comment": "ijsblauw variant achtergrond, spotlight en uitgelicht" }
+        "20": {
+          "value": "hsl(211 60% 20%)",
+          "comment": "basis donkerblauw (OS focus)",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "30": {
+          "value": "hsl(211 60% 30%)",
+          "comment": "Deze kleur gebruiken we niet",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "35": {
+          "value": "hsl(211 60% 35%)",
+          "comment": "basis link en knoppen CTA donkerblauw",
+          "$extensions": {
+            "nl.nldesignsystem.essential-color": true
+          }
+        },
+        "40": {
+          "value": "hsl(211 60% 40%)",
+          "comment": "blauw variant bij hover/focus #3669a5",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "50": {
+          "value": "hsl(211 60% 50%)",
+          "comment": "experimenteel / beperkt gebruiken",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "60": {
+          "value": "hsl(211 60% 60%)",
+          "comment": "experimenteel / Drak mode link en button kleur",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "80": {
+          "value": "hsl(211 60% 80%)",
+          "comment": "licht blauw voor achtergrond",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "90": {
+          "value": "hsl(211 60% 90%)",
+          "comment": "ijsblauw variant achtergrond, spotlight en uitgelicht",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        }
       },
       "grey": {
-        "10": { "value": "hsl(0 0% 10%)", "comment": "experimenteel / beperkt gebruiken" },
-        "15": { "value": "hsl(0 0% 15%)", "comment": "experimenteel / achtergrond kleur voor darkmode" },
-        "20": { "value": "hsl(0 0% 20%)", "comment": "experimenteel / beperkt gebruiken" },
+        "10": {
+          "value": "hsl(0 0% 10%)",
+          "comment": "experimenteel / beperkt gebruiken",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "15": {
+          "value": "hsl(0 0% 15%)",
+          "comment": "experimenteel / achtergrond kleur voor darkmode",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "20": {
+          "value": "hsl(0 0% 20%)",
+          "comment": "experimenteel / beperkt gebruiken",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
         "30": { "value": "hsl(0 0% 30%)", "comment": "border grijs #888" },
-        "40": { "value": "hsl(0 0% 40%)", "comment": "basis grijs #727272" },
-        "80": { "value": "hsl(0 0% 80%)", "comment": "grijs variant voor achtergrond content #e5e5e5" },
-        "90": { "value": "hsl(0 0% 90%)", "comment": "grijs variant voor achtergrond templates #e6e6e6" },
+        "40": {
+          "value": "hsl(0 0% 40%)",
+          "comment": "basis grijs #727272",
+          "$extensions": {
+            "nl.nldesignsystem.essential-color": true
+          }
+        },
+        "80": {
+          "value": "hsl(0 0% 80%)",
+          "comment": "grijs variant voor achtergrond content #e5e5e5",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "90": {
+          "value": "hsl(0 0% 90%)",
+          "comment": "grijs variant voor achtergrond templates #e6e6e6",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
         "95": { "value": "hsl(0 0% 95%)", "comment": "grijs variant voor achtergrond accordion #f2f2f2" }
       },
       "yellow": {
-        "20": { "value": "hsl(48 100% 20%)", "comment": "donker geel voor darkmode achtergrond" },
-        "40": { "value": "hsl(48 100% 40%)", "comment": "donker geel" },
-        "50": { "value": "hsl(48 100% 50%)", "comment": "basis geel #ffcc00" },
-        "60": { "value": "hsl(48 100% 60%)", "comment": "selecteer geel" },
-        "80": { "value": "hsl(48 100% 80%)", "comment": "spotlight en uitgelicht" }
+        "20": {
+          "value": "hsl(48 100% 20%)",
+          "comment": "donker geel voor darkmode achtergrond",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "40": {
+          "value": "hsl(48 100% 40%)",
+          "comment": "donker geel",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "50": {
+          "value": "hsl(48 100% 50%)",
+          "comment": "basis geel #ffcc00",
+          "$extensions": {
+            "nl.nldesignsystem.essential-color": true
+          }
+        },
+        "60": {
+          "value": "hsl(48 100% 60%)",
+          "comment": "selecteer geel",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "80": {
+          "value": "hsl(48 100% 80%)",
+          "comment": "spotlight en uitgelicht",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        }
       },
       "green": {
-        "30": { "value": "hsl(90 30% 30%)", "comment": "donker groen voor darkmode achtergrond" },
-        "40": { "value": "hsl(90 30% 38%)", "comment": "donker groen" },
-        "50": { "value": "hsl(90 30% 50%)", "comment": "Standaard groen #80a659 " },
-        "80": { "value": "hsl(90 30% 80%)", "comment": "Licht groen" },
-        "90": { "value": "hsl(90 30% 90%)", "comment": "Achtergrond licht groen" }
+        "30": {
+          "value": "hsl(90 30% 30%)",
+          "comment": "donker groen voor darkmode achtergrond",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "40": {
+          "value": "hsl(90 30% 38%)",
+          "comment": "donker groen",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "50": {
+          "value": "hsl(90 30% 50%)",
+          "comment": "Standaard groen #80a659 ",
+          "$extensions": {
+            "nl.nldesignsystem.essential-color": true
+          }
+        },
+        "80": {
+          "value": "hsl(90 30% 80%)",
+          "comment": "Licht groen",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        },
+        "90": {
+          "value": "hsl(90 30% 90%)",
+          "comment": "Achtergrond licht groen",
+          "$extensions": {
+            "nl.nldesignsystem.complementary-color": true
+          }
+        }
       },
-      "invalid": { "value": "#990000" },
-      "white": { "value": "hsl(0 0% 100%)" },
-      "black": { "value": "hsl(0 0% 0%)" }
+      "invalid": {
+        "value": "#990000",
+        "$extensions": {
+          "nl.nldesignsystem.complementary-color": true
+        }
+      },
+      "white": {
+        "value": "hsl(0 0% 100%)",
+        "$extensions": {
+          "nl.nldesignsystem.essential-color": true
+        }
+      },
+      "black": {
+        "value": "hsl(0 0% 0%)",
+        "$extensions": {
+          "nl.nldesignsystem.essential-color": true
+        }
+      }
     }
   }
 }
