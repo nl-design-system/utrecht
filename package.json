@@ -103,7 +103,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@stencil/core@2.20.0": "patches/@stencil__core@2.20.0.patch"
+      "@stencil/core@2.20.0": "patches/@stencil__core@2.20.0.patch",
+      "bridge-pca@0.1.6": "patches/bridge-pca@0.1.6.patch"
     }
   }
 }

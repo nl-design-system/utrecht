@@ -1,0 +1,12 @@
+diff --git a/package.json b/package.json
+index 2ead393ddc1a527f98adc19dd9209af9eddb0819..937668017457ed566a33fd5663423dfa7ee51dee 100644
+--- a/package.json
++++ b/package.json
+@@ -3,6 +3,7 @@
+   "version": "0.1.6",
+   "description": "A Bridge for WCAG_2 contrast using APCA (Advanced Perceptual Contrast Algorithm), technology.",
+   "main": "./src/bridge-pca.js",
++  "type": "module",
+   "keywords": [
+     "color",
+     "colour",
