@@ -5,11 +5,12 @@
   export default defineComponent({
     name: "UtrechtAlert",
     props: {
-      icon: { type: Object as () => VNode, required: false },
+      icon: { type: Object as () => VNode, required: false, default: undefined },
       type: {
         type: String,
         required: false,
         validator: (value: string) => ["info", "ok", "warning", "error"].includes(value),
+        default: "info",
       },
     },
   });

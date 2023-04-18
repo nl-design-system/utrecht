@@ -20,7 +20,6 @@
   >
     <small v-if="small" class="utrecht-paragraph__small"><slot /></small>
     <slot v-else />
-    <slot />
   </p>
 </template>
 
