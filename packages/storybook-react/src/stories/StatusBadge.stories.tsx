@@ -1,8 +1,8 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph, StatusBadge } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/badge-data/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-data/tokens.json';
+import readme from '@utrecht/components/badge-status/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
@@ -47,7 +47,7 @@ export const Default: Story = {};
 export const Value: Story = {
   args: {
     ...Default.args,
-    children: 'warning',
+    children: 'waring',
     status: 'warning',
   },
 };
