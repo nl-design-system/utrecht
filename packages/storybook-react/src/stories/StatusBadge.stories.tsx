@@ -12,7 +12,7 @@ const meta = {
   id: 'react-status-badge',
   component: StatusBadge,
   args: {
-    children: 'Utrecht',
+    children: 'status',
   },
   argTypes: {
     status: {
@@ -37,18 +37,79 @@ const meta = {
     },
   },
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
-} as Meta<typeof StatusBadge>;
+} satisfies Meta<typeof StatusBadge>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
-export const Value: Story = {
+export const Success: Story = {
   args: {
     ...Default.args,
-    children: 'waring',
+    children: 'success',
+    status: 'success',
+  },
+};
+
+export const Warning: Story = {
+  args: {
+    ...Default.args,
+    children: 'warning',
     status: 'warning',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    ...Default.args,
+    children: 'error',
+    status: 'error',
+  },
+};
+
+export const Safe: Story = {
+  args: {
+    ...Default.args,
+    children: 'safe',
+    status: 'safe',
+  },
+};
+
+export const Danger: Story = {
+  args: {
+    ...Default.args,
+    children: 'danger',
+    status: 'danger',
+  },
+};
+
+export const Active: Story = {
+  args: {
+    ...Default.args,
+    children: 'active',
+    status: 'active',
+  },
+};
+export const Inactive: Story = {
+  args: {
+    ...Default.args,
+    children: 'inactive',
+    status: 'inactive',
+  },
+};
+export const Valid: Story = {
+  args: {
+    ...Default.args,
+    children: 'valid',
+    status: 'valid',
+  },
+};
+export const Invalid: Story = {
+  args: {
+    ...Default.args,
+    children: 'invalid',
+    status: 'invalid',
   },
 };
 

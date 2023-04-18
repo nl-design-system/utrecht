@@ -42,7 +42,7 @@ const meta = {
     },
   },
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
-} as Meta<typeof DataBadge>;
+} satisfies Meta<typeof DataBadge>;
 
 export default meta;
 
