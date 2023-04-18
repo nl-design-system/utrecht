@@ -31,13 +31,13 @@ describe('Status Badge', () => {
   it('renders rich text content', () => {
     const { container } = render(
       <StatusBadge>
-        <span>neutral</span>
+        <i>neutral</i>
       </StatusBadge>,
     );
 
     const badge = container.querySelector(':only-child');
 
-    const richText = badge?.querySelector('span');
+    const richText = badge?.querySelector('i');
 
     expect(richText).toBeInTheDocument();
   });
