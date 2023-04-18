@@ -12,11 +12,11 @@
 
 <template>
   <time v-if="typeof dateTime !== 'undefined'" :datetime="dateTime" class="utrecht-badge-data">
-    <slot />
+    <slot name="dateTimeSlotContent" />
   </time>
 
   <data v-else-if="typeof value !== 'undefined'" :value="value" class="utrecht-badge-data">
-    <slot />
+    <slot name="valueSlotContent" />
   </data>
 
   <span v-else class="utrecht-badge-data"><slot /></span>

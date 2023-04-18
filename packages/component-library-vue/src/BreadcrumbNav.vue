@@ -34,12 +34,12 @@
     ]"
     :aria-labelledby="headingId"
   >
-    {{ label }} && (
+    {{ label }}
     <UtrechtHeading :id="headingId" class="utrecht-breadcrumb__heading" :level="headingLevel ?? 2" aria-hidden="true">
       {{ label }}
     </UtrechtHeading>
-    )
-    <ol class="utrecht-breadcrumb__list" v-bind="{...useMicrodataItem({ type: 'https://schema.org/BreadcrumbList' })}">
+
+    <ol class="utrecht-breadcrumb__list" v-bind="{...useMicrodataItem({type: 'https://schema.org/BreadcrumbList' })}">
       <slot />
     </ol>
   </nav>
