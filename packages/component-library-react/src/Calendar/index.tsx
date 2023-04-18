@@ -139,7 +139,9 @@ export const Calendar: FC<CalendarProps> = ({
             onPreviousClick={() => setDate(setMonth(date, date.getMonth() - 1))}
             onNextClick={() => setDate(addMonths(date, 1))}
           >
-            <CalendarNavigationLabel label={format(date, 'LLLL Y', { locale })} />
+            <CalendarNavigationLabel dateTime={format(date, 'yyyy-mm')}>
+              {format(date, 'LLLL Y', { locale })}
+            </CalendarNavigationLabel>
           </CalendarNavigationButtons>
         </CalendarNavigationButtons>
       </CalendarNavigation>
