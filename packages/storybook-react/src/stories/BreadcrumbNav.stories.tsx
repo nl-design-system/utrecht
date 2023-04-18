@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { BreadcrumbNav } from '@utrecht/component-library-react/dist/css-module/index';
+import { BreadcrumbLink, BreadcrumbNav } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/breadcrumb/README.md?raw';
 import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -14,10 +14,16 @@ const meta = {
   args: {
     appearance: 'arrows',
     label: 'Kruimelpad',
-    items: [
-      { href: '/', rel: 'home', index: 0, children: 'Home' },
-      { href: '/a/', index: 1, children: 'Niveau 1' },
-      { href: '/a/b/', rel: 'up', index: 2, children: 'Niveau 2' },
+    children: [
+      <BreadcrumbLink href={'/'} rel={'home'} index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbLink href={'/a/'} index={1}>
+        Niveau 1
+      </BreadcrumbLink>,
+      <BreadcrumbLink href={'/a/b/'} rel={'up'} index={2}>
+        Niveau 2
+      </BreadcrumbLink>,
     ],
   },
   argTypes: {
