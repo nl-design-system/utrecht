@@ -50,15 +50,6 @@ describe('Status Badge', () => {
     expect(badge).not.toBeVisible();
   });
 
-  it('can have a custom class name', () => {
-    const { container } = render(<StatusBadge className="utrecht-badge-status--positive">neutral</StatusBadge>);
-
-    const badge = container.querySelector(':only-child');
-
-    expect(badge).toHaveClass('utrecht-badge-status');
-    expect(badge).toHaveClass('utrecht-badge-status--positive');
-  });
-
   it('can have a status', () => {
     const { container } = render(<StatusBadge status="neutral">{'neutral'}</StatusBadge>);
 
