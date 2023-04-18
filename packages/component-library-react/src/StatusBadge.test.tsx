@@ -36,7 +36,6 @@ describe('Status Badge', () => {
     );
 
     const badge = container.querySelector(':only-child');
-
     const richText = badge?.querySelector('i');
 
     expect(richText).toBeInTheDocument();
