@@ -7,7 +7,9 @@
 </script>
 
 <template>
-  <code class="utrecht-code"><slot /></code>
+  <code class="utrecht-code">
+    <slot />
+  </code>
 </template>
 
 <style src="@utrecht/components/code/css/index.scss"></style>
