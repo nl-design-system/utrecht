@@ -26,7 +26,9 @@
           "color": {
             "value": "{utrecht.color.black}"
           },
-          "border-width": {},
+          "border-width": {
+            "value": "2px"
+          },
           "border-color": {
             "value": "transparent"
           },
@@ -36,7 +38,7 @@
               "value": "{utrecht.color.blue.40}"
             },
             "border-color": {
-              "value": "transparent"
+              "value": "{utrecht.color.black}"
             }
           },
           "focus": {
@@ -83,12 +85,16 @@
             "background-color": {}
           },
           "selected": {
-            "color": {},
+            "color": {
+              "value": "{utrecht.color.white}"
+            },
             "font-weight": {},
             "border-color": {
               "value": "transparent"
             },
-            "background-color": {}
+            "background-color": {
+              "value": "{utrecht.color.blue.30}"
+            }
           },
           "disabled": {
             "color": {},
