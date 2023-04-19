@@ -34,7 +34,6 @@
     ]"
     :aria-labelledby="headingId"
   >
-    {{ label }}
     <UtrechtHeading :id="headingId" class="utrecht-breadcrumb__heading" :level="headingLevel ?? 2" aria-hidden="true">
       {{ label }}
     </UtrechtHeading>
