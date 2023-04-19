@@ -163,7 +163,7 @@ export const Calendar: FC<CalendarProps> = ({
                 {week.map((day, index) => {
                   return (
                     <CalendarTableDaysItemDay
-                      isToday={isSameDay(date, day.date)}
+                      isToday={isSameDay(day.date, Date.now())}
                       dayOutOfTheMonth={!isSameMonth(day.date, date)}
                       key={index}
                       onClick={() => {
@@ -173,7 +173,7 @@ export const Calendar: FC<CalendarProps> = ({
                       aria-label={format(day.date, 'eeee dd LLLL Y', { locale })}
                       day={day.date.getDate().toString()}
                       emphasis={day.emphasis}
-                      selected={day.selected}
+                      selected={day.selected || isSameDay(day.date, date)}
                       disabled={day.disabled}
                     />
                   );
