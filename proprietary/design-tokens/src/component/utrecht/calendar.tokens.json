@@ -66,15 +66,17 @@
           },
           "is-today": {
             "color": {
-              "value": "{utrecht.color.blue.40}"
+              "value": "{utrecht.color.blue.30}"
             },
             "font-weight": {
               "value": "700"
             },
             "border-color": {
-              "value": "transparent"
+              "value": "{utrecht.color.blue.35}"
             },
-            "background-color": {}
+            "background-color": {
+              "value": "{utrecht.color.blue.90}"
+            }
           },
           "emphasis": {
             "color": {},
@@ -97,7 +99,9 @@
             }
           },
           "disabled": {
-            "color": {},
+            "color": {
+              "value": "{utrecht.color.grey.40}"
+            },
             "border-color": {
               "value": "transparent"
             },
@@ -123,7 +127,7 @@
           "color": {
             "value": "{utrecht.color.black}"
           },
-          "min-font-size": {
+          "font-size": {
             "value": "{utrecht.typography.scale.lg.font-size}"
           }
         }
