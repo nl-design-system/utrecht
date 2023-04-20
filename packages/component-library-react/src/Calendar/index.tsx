@@ -13,7 +13,6 @@ import {
   isSameMonth,
   Locale,
   parseISO,
-  setDate as setDateFns,
   setMonth,
   setYear,
   startOfMonth,
@@ -140,7 +139,9 @@ export const Calendar: FC<CalendarProps> = ({
             onPreviousClick={() => setDate(setMonth(date, date.getMonth() - 1))}
             onNextClick={() => setDate(addMonths(date, 1))}
           >
-            <CalendarNavigationLabel label={format(date, 'LLLL Y', { locale })} />
+            <CalendarNavigationLabel dateTime={format(date, 'yyyy-mm')}>
+              {format(date, 'LLLL Y', { locale })}
+            </CalendarNavigationLabel>
           </CalendarNavigationButtons>
         </CalendarNavigationButtons>
       </CalendarNavigation>
@@ -165,10 +166,9 @@ export const Calendar: FC<CalendarProps> = ({
                       isToday={isSameDay(date, day.date)}
                       dayOutOfTheMonth={!isSameMonth(day.date, date)}
                       key={index}
-                      onClick={(event) => {
-                        const selectedDay = setDateFns(date, Number((event.target as HTMLButtonElement).textContent));
-                        setDate(selectedDay);
-                        onCalendarClick(formatISO(selectedDay));
+                      onClick={() => {
+                        setDate(day.date);
+                        onCalendarClick(formatISO(day.date));
                       }}
                       aria-label={format(day.date, 'eeee dd LLLL Y', { locale })}
                       day={day.date.getDate().toString()}

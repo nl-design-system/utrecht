@@ -21,6 +21,14 @@ describe('Paragraph', () => {
     expect(paragraph).toBeInTheDocument();
   });
 
+  it('renders no additional elements', () => {
+    const { container } = render(Paragraph);
+
+    const elements = container.querySelectorAll('*');
+
+    expect(elements.length).toBe(1);
+  });
+
   it('renders a design system BEM class name', () => {
     const { container } = render(Paragraph);
 
@@ -74,6 +82,40 @@ describe('Paragraph', () => {
       const leadParagraph = container.querySelector(':only-child');
 
       expect(leadParagraph).toHaveClass('utrecht-paragraph--lead');
+    });
+
+    it.skip('renders an HTML b element', () => {
+      const { container } = render(Paragraph, { props: { lead: true } });
+
+      const bold = container.querySelector('b');
+
+      expect(bold).toBeInTheDocument();
+    });
+  });
+
+  describe('small print variant', () => {
+    it('is not a small paragraph variant by default', () => {
+      const { container } = render(Paragraph);
+
+      const paragraph = container.querySelector(':only-child');
+
+      expect(paragraph).not.toHaveClass('utrecht-paragraph--lead');
+    });
+
+    it('has a small paragraph variant', () => {
+      const { container } = render(Paragraph, { props: { small: true } });
+
+      const smallPrint = container.querySelector(':only-child');
+
+      expect(smallPrint).toHaveClass('utrecht-paragraph--small');
+    });
+
+    it.skip('renders an HTML small element', () => {
+      const { container } = render(Paragraph, { props: { small: true } });
+
+      const small = container.querySelector('small');
+
+      expect(small).toBeInTheDocument();
     });
   });
 

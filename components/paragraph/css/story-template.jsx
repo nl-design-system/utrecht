@@ -57,7 +57,13 @@ export const Paragraph = ({
       })}
       {...restProps}
     >
-      {small ? <small className="utrecht-paragraph__small">{content}</small> : <>{content}</>}
+      {lead ? (
+        <b className="utrecht-paragraph__b">{content}</b>
+      ) : small ? (
+        <small className="utrecht-paragraph__small">{content}</small>
+      ) : (
+        <>{content}</>
+      )}
     </p>
   );
 };

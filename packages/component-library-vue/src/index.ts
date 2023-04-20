@@ -1,4 +1,3 @@
-export { default as Alert } from './Alert.vue';
 export { default as Article } from './Article.vue';
 export { default as BadgeCounter } from './BadgeCounter.vue';
 export { default as BadgeStatus } from './BadgeStatus.vue';
@@ -9,7 +8,6 @@ export { default as ButtonGroup } from './ButtonGroup.vue';
 export { default as Checkbox } from './Checkbox.vue';
 export { default as Code } from './Code.vue';
 export { default as CodeBlock } from './CodeBlock.vue';
-export { default as DataBadge } from './DataBadge.vue';
 export { default as DataList } from './DataList.vue';
 export { default as DataListActions } from './DataListActions.vue';
 export { default as DataListItem } from './DataListItem.vue';

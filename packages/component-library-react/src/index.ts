@@ -60,6 +60,7 @@ export { Select, SelectOption } from './Select';
 export { Separator } from './Separator';
 export { SkipLink } from './SkipLink';
 export { SpotlightSection } from './SpotlightSection';
+export { StatusBadge } from './StatusBadge';
 export { Strong } from './Strong';
 export { Surface } from './Surface';
 export { Table } from './Table';

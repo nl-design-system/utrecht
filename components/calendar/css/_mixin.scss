@@ -1,6 +1,6 @@
 @mixin utrecht-calendar {
   background-color: var(--utrecht-calendar-background-color);
-  width: var(--utrecht-calendar-width);
+  width: fit-content;
 }
 
 @mixin utrecht-calendar__table {
@@ -10,6 +10,9 @@
 }
 
 @mixin utrecht-calendar__table-weeks-item {
+  line-height: var(--utrecht-calendar-table-weeks-item-line-height, inherit);
+  padding-block-end: var(--utrecht-calendar-table-weeks-item-padding-block-end);
+  padding-block-start: var(--utrecht-calendar-table-weeks-item-padding-block-start);
   width: var(--utrecht-calendar-table-weeks-item-width);
 }
 
@@ -87,17 +90,16 @@
 }
 
 @mixin utrecht-calendar__navigation-label {
-  --utrecht-heading-2-color: var(--utrecht-calendar-navigation-label-color);
-
+  color: var(--utrecht-calendar-navigation-label-color);
   font-size: var(--utrecht-calendar-navigation-label-min-font-size);
-  min-inline-size: var(--utrecht-calendar-navigation-label-min-inline-size);
   text-align: center;
 }
 
 @mixin utrecht-calendar__navigation-buttons {
   align-items: center;
   display: flex;
-  justify-content: center;
+  flex-grow: 1;
+  justify-content: space-between;
 }
 
 @mixin utrecht-calendar__button {
