@@ -5,7 +5,7 @@ import { createStory } from './util';
 
 const meta = {
   title: 'Vue.js Component/Data List/Value',
-  id: 'react-data-list--value',
+  id: 'vue-data-list--value',
   component: DataListValue,
   argTypes: {
     multiline: {

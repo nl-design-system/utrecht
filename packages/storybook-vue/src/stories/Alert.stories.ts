@@ -7,7 +7,7 @@ import { createStory } from './util';
 
 const meta = {
   title: 'Vue.js Component/Alert',
-  id: 'react-alert',
+  id: 'vue-alert',
   component: Alert,
   parameters: {
     tokensPrefix: 'utrecht-alert',
