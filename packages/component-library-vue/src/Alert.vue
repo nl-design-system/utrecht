@@ -26,7 +26,7 @@
     class="utrecht-alert"
   >
     <div v-if="icon" class="utrecht-alert__icon"><slot name="iconSlot"></slot></div>
-    <div class="utrecht-alert__message"><slot name="messageSlot"></slot></div>
+    <div class="utrecht-alert__message"><slot></slot></div>
   </div>
 </template>
 
