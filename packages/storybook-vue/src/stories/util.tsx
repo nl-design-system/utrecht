@@ -1,12 +1,18 @@
 import { ArgsTable, Description, Primary, Stories, Subtitle, Title } from '@storybook/addon-docs';
+import type { Meta, StoryContext, StoryObj } from '@storybook/vue3';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { ComponentTokensSection } from '@utrecht/documentation/components/ComponentTokensSection.jsx';
 import React from 'react';
 
-export const templateSourceCode = (templateSource, args, replacing = ' v-bind="$props"') => {
+// `Args` is not exported from `@storybook/addon-docs`, so it is copied here.
+interface Args {
+  [key: string]: any;
+}
+
+export const templateSourceCode = (templateSource: string, args: Args, replacing = ' v-bind="$props"') => {
   const { textContent, slot, ...restArgs } = args;
 
-  const propToSource = (key, val) => {
+  const propToSource = (key: string, val: string) => {
     const type = typeof val;
     switch (type) {
       case 'boolean':
@@ -45,12 +51,16 @@ export const templateSourceCode = (templateSource, args, replacing = ' v-bind="$
   return result;
 };
 
-export const createStory = (meta, story) => {
-  const render =
-    typeof meta.render === 'function'
-      ? (args) => {
-          const out = meta.render(args);
+export const createStory = <T,>(meta: Meta<T>, story: StoryObj): StoryObj => {
+  type Parameters = typeof meta.parameters;
+  type RenderFn = typeof story.render;
 
+  const _render = story.render || meta.render;
+
+  const render: RenderFn =
+    typeof _render === 'function'
+      ? (args, context) => {
+          const out = _render(args, context);
           // Override the template with args
           const template = typeof out.template === 'string' ? templateSourceCode(out.template, args) : out.template;
           console.log(template);
@@ -61,21 +71,42 @@ export const createStory = (meta, story) => {
         }
       : undefined;
 
-  const code = meta.parameters?.docs?.source?.code
-    ? templateSourceCode(meta.parameters.docs.source.code, story.args)
+  const context: StoryContext = {
+    ...meta,
+    componentId: '',
+    id: '',
+    kind: '',
+    name: '',
+    story: '',
+    title: '',
+    tags: [],
+    initialArgs: {},
+    parameters: {},
+    argTypes: {},
+    globals: {},
+    args: {},
+    hooks: undefined,
+    viewMode: 'story',
+    originalStoryFn: (() => {}) as any,
+    loaded: undefined as any,
+    abortSignal: undefined as any,
+    canvasElement: undefined as any,
+  };
+  const docs = meta.parameters ? meta.parameters['docs'] : undefined;
+  const code = docs?.source?.code
+    ? templateSourceCode(docs.source.code, story.args)
     : typeof render === 'function'
-    ? render(story.args).template
+    ? render({ ...story.args }, context).template
     : undefined;
-  console.log(code);
-  return {
+
+  const metaParameters: Parameters = meta.parameters || {};
+
+  const extendedStory = {
     ...story,
     render,
     parameters: {
       ...(story.parameters || {}),
       docs: {
-        // description: {
-        //   component: "Pluggables are similar to React's Portal, but provide more control over how inserts are rendered",
-        // },
         page: () => (
           <>
             <Title />
@@ -84,11 +115,11 @@ export const createStory = (meta, story) => {
             <Primary />
             <ArgsTable />
             <Stories />
-            {meta.parameters?.tokenPrefix && meta.parameters?.tokens ? (
+            {metaParameters['tokenPrefix'] && metaParameters['tokens'] ? (
               <ComponentTokensSection
                 tokens={tokens}
-                definition={meta.parameters?.tokens}
-                component={meta.parameters?.tokenPrefix}
+                definition={metaParameters['tokens']}
+                component={metaParameters['tokenPrefix']}
               />
             ) : (
               ''
@@ -101,4 +132,5 @@ export const createStory = (meta, story) => {
       },
     },
   };
+  return extendedStory;
 };
