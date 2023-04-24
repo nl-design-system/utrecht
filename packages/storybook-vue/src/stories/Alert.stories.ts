@@ -1,14 +1,42 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import { Alert, Heading1, Paragraph } from '@utrecht/component-library-vue';
+import { Alert } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/alert/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { createStory } from './util';
 
+//export type SlottedMeta<TComponent extends abstract new (...args: any) => any, TSlots extends string> = Meta<DefineComponent<InstanceType<TComponent>['$props'] & Record<TSlots, string>>>
+
 const meta = {
   title: 'Vue.js Component/Alert',
   id: 'vue-alert',
   component: Alert,
+  argTypes: {
+    icon: {
+      control: {
+        type: 'text',
+      },
+      defaultValue: 'Icon',
+      meta_description: 'icon slot content',
+      table: {
+        type: {
+          summary: null,
+        },
+      },
+    },
+    message: {
+      control: {
+        type: 'text',
+      },
+      defaultValue: 'Message in an alert',
+      meta_description: 'message slot content',
+      table: {
+        type: {
+          summary: null,
+        },
+      },
+    },
+  },
   parameters: {
     tokensPrefix: 'utrecht-alert',
     tokens,
@@ -19,17 +47,25 @@ const meta = {
       },
     },
   },
+  render: (args, { argTypes }) => ({
+    props: Object.keys(argTypes),
+    components: { Alert },
+    template: `<Alert v-bind="$props">
+    <template v-if="${'icon' in args}" v-slot:iconSlot>{{icon}}</template>
+    <template v-if="${'message' in args}" v-slot>{{message}}</template>
+    </Alert>`,
+  }),
 } satisfies Meta<typeof Alert>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
 export const Default: Story = createStory(meta, {
   args: {
     type: 'info',
     icon: `<i>Icon Placeholder</i>`,
-    iconSlot: `<i>Icon Placeholder</i>`,
-    messageSlot: `<Heading1>Lorem ipsum</Heading1>
+    message: `<Heading1>Lorem ipsum</Heading1>
       <Paragraph>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
         magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -38,14 +74,6 @@ export const Default: Story = createStory(meta, {
         laborum.
       </Paragraph>`,
   },
-  render: (args) => ({
-    components: {
-      Alert,
-      Heading1,
-      Paragraph,
-    },
-    template: `<Alert v-bind="$props"><slot name="iconSlot">${args.iconSlot}</slot><slot name="messageSlot">${args.messageSlot}</slot></Alert>`,
-  }),
 });
 
 export const Info: Story = createStory(meta, {
