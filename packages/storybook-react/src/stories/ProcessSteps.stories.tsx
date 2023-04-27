@@ -1,4 +1,4 @@
-import { ProcessSteps } from '@gemeente-denhaag/process-steps';
+import { Status } from '@gemeente-denhaag/process-steps';
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/process-steps/README.md?raw';
@@ -11,7 +11,7 @@ import '@gemeente-denhaag/process-steps/index.css';
 const meta = {
   title: 'React Component/Process steps',
   id: 'react-process-steps',
-  component: ProcessSteps,
+  component: Status,
   args: {
     expandedSteps: ['deelname', 'onderzoek'],
     steps: [
@@ -78,7 +78,7 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<typeof ProcessSteps>;
+} satisfies Meta<typeof Status>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
