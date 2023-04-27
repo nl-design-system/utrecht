@@ -1,5 +1,6 @@
 /* eslint-env node */
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
+import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import clsx from 'clsx';
 import defaultsDeep from 'lodash.defaultsdeep';
@@ -131,6 +132,7 @@ export const parameters = defaultsDeep(
   addonDocs,
   addonStatus,
   addonThemes,
+  addonViewport,
   defaultTab,
   sidebarOrder,
   tabOrder,
