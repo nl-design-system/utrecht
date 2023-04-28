@@ -6,8 +6,8 @@
 
 import React from 'react';
 import { ButtonGroup } from '../../button-group/css/story-template';
-import { LinkButton } from '../../link-button/css/story-template';
 import { Link } from '../../link/css/story-template';
+import { LinkButton } from '../../link-button/css/story-template';
 import './index.scss';
 
 export const argTypes = {
