@@ -6,8 +6,8 @@
 
 import clsx from 'clsx';
 import React from 'react';
-import { ButtonGroup } from '../../button-group/css/story-template';
 import { Button } from '../../button/css/story-template';
+import { ButtonGroup } from '../../button-group/css/story-template';
 import { Heading1 } from '../../heading-1/css/story-template';
 import { Paragraph } from '../../paragraph/css/story-template';
 

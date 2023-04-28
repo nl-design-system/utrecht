@@ -1,6 +1,6 @@
 import { render } from '@testing-library/angular';
-import { clearElements } from '../utils';
 import { UtrechtParagraph } from './component';
+import { clearElements } from '../utils';
 
 import '@testing-library/jest-dom';
 

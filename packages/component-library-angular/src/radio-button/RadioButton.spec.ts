@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/angular';
 import '@testing-library/jest-dom';
-import { clearElements } from '../utils';
 import { UtrechtRadioButtonAttr } from './component';
+import { clearElements } from '../utils';
 
 afterEach(() => {
   clearElements();
