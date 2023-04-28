@@ -134,3 +134,89 @@ export const createStory = <T,>(meta: Meta<T>, story: StoryObj): StoryObj => {
   };
   return extendedStory;
 };
+
+export const handleNamedSlotContents = (inputString: string = '') => {
+  const tagRegex = /(<\/?[A-Z][^>]*>|[^<]+)/g;
+  const htmlTagRegex = /(<[a-z][^>]*>.*?<\/[a-z]+>)/gs;
+  const textRegex = /(?:<\/[\w\d]+>\s*)([^<>\n]*)(?!\s*<[\w\d]+>)/gm;
+
+  const combinedRegex = new RegExp(tagRegex.source + '|' + htmlTagRegex.source + '|' + textRegex.source, 'g');
+  const matches = inputString.match(combinedRegex) ?? [];
+
+  const output: any[] = [];
+
+  matches.forEach((match: any, index: number) => {
+    if (match.match(/<\/?[A-Z][^>]*>/)) {
+      const componentName = match.match(/^<([A-Z][a-zA-Z0-9]*)/) ? match.match(/^<([A-Z][a-zA-Z0-9]*)/)[1] : null;
+      const componentContent = matches[index + 1];
+
+      // is custom component
+      if (componentName && componentContent) {
+        output.push({
+          name: componentName,
+          content: componentContent,
+          isComponent: true,
+        });
+      }
+      // is html content
+    } else if (match.match(htmlTagRegex)) {
+      output.push({
+        content: match.match(htmlTagRegex)[0],
+        isComponent: false,
+      });
+    } else {
+      /* 1. check if there is a previous element in the array.
+          1.1 if yes, check if it is an opening tag.
+            1.1.1 if so, ignore the current item and do not match with it.
+            1.1.2 if not, match with the current item.
+          1.2. check if the previous element ends on
+            1.2.1 a closing tag => match with the current item
+            1.2.2 a self-closing tag => match with the current item
+          1.3 if there is no previous element, match with the current item
+      */
+
+      if (matches[index - 1]) {
+        // 1. check if there is a previous element in the array.
+        const openingTagRegex = /^<[^/]+?>$/;
+        const closingTagRegex = /^.+?<\/\w+>$/;
+        const selfClosingTagRegex = /^<.+?(?:\/>|\/\s*>)/;
+
+        if (matches[index - 1].match(openingTagRegex) === null) {
+          // 1.1 if yes, check if it is an opening tag.
+          // 1.1.1 if so, ignore the current item and do not match with it.
+          // 1.1.2 if not, match with the current item.
+          output.push({
+            content: match,
+            isComponent: false,
+          });
+          return;
+        }
+
+        // 1.2.1 previous element ends on a closing tag => match with the current item
+        if (matches[index - 1].match(closingTagRegex)) {
+          output.push({
+            content: match,
+            isComponent: false,
+          });
+          return;
+        }
+
+        // 1.2.2 previous element ends on a self-closing tag, match with the current item
+        if (matches[index - 1].match(selfClosingTagRegex)) {
+          output.push({
+            content: match,
+            isComponent: false,
+          });
+        }
+      } else {
+        // 1.3 if there is no previous element, match with the current item
+        output.push({
+          content: match,
+          isComponent: false,
+        });
+      }
+    }
+  });
+
+  return output;
+};
