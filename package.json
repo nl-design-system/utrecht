@@ -100,10 +100,5 @@
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install"
-  },
-  "pnpm": {
-    "patchedDependencies": {
-      "@stencil/core@2.20.0": "patches/@stencil__core@2.20.0.patch"
-    }
   }
 }
