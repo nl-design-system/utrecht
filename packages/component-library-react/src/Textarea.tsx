@@ -3,11 +3,12 @@ import { ForwardedRef, forwardRef, TextareaHTMLAttributes } from 'react';
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
   invalid?: boolean;
+  novalidate?: boolean;
 }
 
 export const Textarea = forwardRef(
   (
-    { disabled, invalid, readOnly, required, className, ...restProps }: TextareaProps,
+    { disabled, invalid, readOnly, required, className, novalidate = false, ...restProps }: TextareaProps,
     ref: ForwardedRef<HTMLTextAreaElement>,
   ) => (
     <textarea
@@ -24,7 +25,8 @@ export const Textarea = forwardRef(
       )}
       disabled={disabled}
       readOnly={readOnly}
-      required={required}
+      required={required && !novalidate ? required : undefined}
+      aria-required={(required && novalidate) || undefined}
       aria-invalid={invalid || undefined}
     />
   ),
