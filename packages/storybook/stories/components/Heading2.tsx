@@ -5,9 +5,17 @@
  */
 
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
-export const Heading2 = ({ children = null, textContent = '', distanced = false, ...restProps }) => (
+export const Heading2 = ({
+  children = null,
+  textContent = '',
+  distanced = false,
+  ...restProps
+}: PropsWithChildren<{
+  distanced?: boolean;
+  textContent?: string;
+}>) => (
   <h2
     className={clsx('utrecht-heading-2', {
       'utrecht-heading-2--distanced': distanced,

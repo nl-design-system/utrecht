@@ -45,7 +45,13 @@ import { Icon } from "./story-template";
 <Canvas>
   <Story
     name="with inline SVG inside a button"
-    decorators={[(Story) => <utrecht-button appearance="primary-action-button">{Story()} Click me</utrecht-button>]}
+    decorators={[
+      (Story) => (
+        <button className="utrecht-button utrecht-button--html-button" appearance="primary-action-button">
+          {Story()} Click me
+        </button>
+      ),
+    ]}
     args={{
       innerHTML: `<svg viewBox="0 0 32 32"><rect fill="currentColor" x="0" y="0" width="32" height="32" /></svg>`,
     }}

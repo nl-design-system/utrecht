@@ -1,0 +1,39 @@
+.utrecht-custom-icon-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.utrecht-custom-icon-gallery > * {
+  flex: 1 1 25ch;
+}
+
+.utrecht-custom-icon-gallery-item {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+}
+
+.utrecht-custom-icon-gallery-item__icon {
+  align-items: center;
+  background: rgb(255 255 255);
+  border: 1px solid rgb(0 0 0 / 10%);
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 10%) 0 1px 3px 0;
+  display: flex;
+  flex: none;
+  height: 70px;
+  justify-content: center;
+  overflow: hidden;
+  width: 70px;
+}
+
+.utrecht-custom-icon-gallery-item__name {
+  color: #333;
+  font-family: "Nunito Sans", -apple-system, ".SFNSText-Regular", "San Francisco", BlinkMacSystemFont, "Segoe UI",
+    "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+  margin-inline-end: 10px;
+  word-break: break-word;
+}
