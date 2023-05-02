@@ -232,7 +232,7 @@ Vermijd het zetten van hele woorden in hoofdletters (all-caps). De leesbaarheid 
 
 ### Internet en e-mail
 
-- Gebruik bij het vermelden van internet- en e-mailadressen in een tekst kleine letters. Voorbeeld: info@pgb.nl.
+- Gebruik bij het vermelden van internet- en e-mailadressen in een tekst kleine letters. Voorbeeld: [info@utrecht.nl](mailto:info@utrecht.nl).
 - Gebruik geen toevoeging ‘‘http://‘ of ‘https://’
 
 ### Koppeltekens
@@ -372,9 +372,9 @@ Een tekst wordt beter scanbaar door opsommingen te gebruiken.
 - Maak geen links in de intro van het bericht of pagina
 - Gebruik relevante inhoudswoorden en laat zien waarnaar ze verwijzen.
   - Niet: klik hier
-  - Gebruik de url van de externe website als link. (Meer informatie vind je op www.rijksoverheid.nl)
+  - Gebruik de url van de externe website als link. (Meer informatie vind je op [www.rijksoverheid.nl](https://www.rijksoverheid.nl/)).
   - Vermeld bij een pdf achter de link dat het om een pdf-bestand gaat en hoeveel kB of MB deze is, afgerond op hele getallen. Bijvoorbeeld: Download de routebeschrijving (pdf, 50 kB)
-- Bij een link naar een e-mailadres moet het e-mailadres zichtbaar zijn als link: info@rijksoverheid.nl
+- Bij een link naar een e-mailadres moet het e-mailadres zichtbaar zijn als link: [info@rijksoverheid.nl](mailto:info@rijksoverheid.nl).
 - Verwijs niet naar vormen, kleuren of plekken op desktopweergave. Bijvoorbeeld ‘In de rechterkolom vind je een overzicht van relevante documenten’. In de mobiele weergave heb je bijvoorbeeld geen rechterkolom.
 - Links openen in hetzelfde venster/tabblad. Dit geldt ook voor links naar externe websites.
 
