@@ -1,9 +1,17 @@
 {
   "compilerOptions": {
     "jsx": "react-jsx",
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true
   },
   "extends": "../../tsconfig.json",
-  "include": ["src/**/*", "src/**/*.ts", "src/**/*.tsx", "stories/**/*", "stories/**/*.ts", "stories/**/*.tsx"],
+  "include": [
+    "config/**/*.ts",
+    "config/**/*.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
+    "stories/**/*.ts",
+    "stories/**/*.tsx"
+  ],
   "exclude": ["**/node_modules/*"]
 }

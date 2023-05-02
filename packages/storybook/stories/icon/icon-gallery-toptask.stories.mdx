@@ -1,7 +1,7 @@
 {/* @license CC0-1.0 */}
 
 import { Meta } from "@storybook/blocks";
-import { CustomIconGallery, CustomIconGalleryItem } from "@utrecht/documentation/components/CustomIcomGallery";
+import { CustomIconGallery, CustomIconGalleryItem } from "./CustomIconGallery";
 
 <Meta
   id="utrecht-iconen-toptask"
@@ -14,48 +14,136 @@ import { CustomIconGallery, CustomIconGalleryItem } from "@utrecht/documentation
 />
 
 <CustomIconGallery>
-  <CustomIconGalleryItem name="utrecht-icon-rijbewijs" icon={<utrecht-icon-rijbewijs />} />
-  <CustomIconGalleryItem name="utrecht-icon-paspoort" icon={<utrecht-icon-paspoort />} />
-  <CustomIconGalleryItem name="utrecht-icon-melding" icon={<utrecht-icon-melding-klacht />} />
-  <CustomIconGalleryItem name="utrecht-icon-verhuizen" icon={<utrecht-icon-verhuizen />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval" icon={<utrecht-icon-afval />} />
-  <CustomIconGalleryItem name="utrecht-icon-toeslag" icon={<utrecht-icon-toeslag />} />
-  <CustomIconGalleryItem name="utrecht-icon-trouwen" icon={<utrecht-icon-trouwen />} />
-  <CustomIconGalleryItem name="utrecht-icon-afspraak-maken" icon={<utrecht-icon-afspraak-maken />} />
-  <CustomIconGalleryItem name="utrecht-icon-vervoersvoorziening" icon={<utrecht-icon-vervoersvoorziening />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval-container" icon={<utrecht-icon-afval-container />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval-containerpas" icon={<utrecht-icon-afval-containerpas />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval-kalender" icon={<utrecht-icon-afval-kalender />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval-scheiden" icon={<utrecht-icon-afval-scheiden />} />
-  <CustomIconGalleryItem name="utrecht-icon-afval" icon={<utrecht-icon-afval />} />
-  <CustomIconGalleryItem name="utrecht-icon-bewijsstukken" icon={<utrecht-icon-bewijsstukken />} />
-  <CustomIconGalleryItem name="utrecht-icon-bijstand" icon={<utrecht-icon-bijstand />} />
-  <CustomIconGalleryItem name="utrecht-icon-bouwproject" icon={<utrecht-icon-bouwproject />} />
-  <CustomIconGalleryItem name="utrecht-icon-college-b-w" icon={<utrecht-icon-college-b-w />} />
-  <CustomIconGalleryItem name="utrecht-icon-container-bio" icon={<utrecht-icon-container-bio />} />
-  <CustomIconGalleryItem name="utrecht-icon-dakloos" icon={<utrecht-icon-dakloos />} />
-  <CustomIconGalleryItem name="utrecht-icon-parken" icon={<utrecht-icon-parken />} />
-  <CustomIconGalleryItem name="utrecht-icon-parkeren-bedrijven" icon={<utrecht-icon-parkeren-bedrijven />} />
-  <CustomIconGalleryItem name="utrecht-icon-parkeren-betalen" icon={<utrecht-icon-parkeren-betalen />} />
-  <CustomIconGalleryItem name="utrecht-icon-kroon" icon={<utrecht-icon-kroon />} />
-  <CustomIconGalleryItem name="utrecht-icon-markt" icon={<utrecht-icon-markt />} />
-  <CustomIconGalleryItem name="utrecht-icon-parkeervergunning" icon={<utrecht-icon-parkeervergunning />} />
-  <CustomIconGalleryItem name="utrecht-icon-park" icon={<utrecht-icon-park />} />
-  <CustomIconGalleryItem name="utrecht-icon-grofvuil" icon={<utrecht-icon-grofvuil />} />
-  <CustomIconGalleryItem name="utrecht-icon-horeca" icon={<utrecht-icon-horeca />} />
-  <CustomIconGalleryItem name="utrecht-icon-kerstbomen" icon={<utrecht-icon-kerstbomen />} />
-  <CustomIconGalleryItem name="utrecht-icon-klachten" icon={<utrecht-icon-klachten />} />
-  <CustomIconGalleryItem name="utrecht-icon-laadpaal" icon={<utrecht-icon-laadpaal />} />
-  <CustomIconGalleryItem name="utrecht-icon-fiets" icon={<utrecht-icon-fiets />} />
-  <CustomIconGalleryItem name="utrecht-icon-gemeenteraad" icon={<utrecht-icon-gemeenteraad />} />
-  <CustomIconGalleryItem name="utrecht-icon-energie-vergoeding" icon={<utrecht-icon-energie-vergoeding />} />
-  <CustomIconGalleryItem name="utrecht-icon-virus" icon={<utrecht-icon-virus />} />
-  <CustomIconGalleryItem name="utrecht-icon-werken" icon={<utrecht-icon-werken />} />
-  <CustomIconGalleryItem name="utrecht-icon-woning-zoeken" icon={<utrecht-icon-woning-zoeken />} />
-  <CustomIconGalleryItem name="utrecht-icon-verhuizen" icon={<utrecht-icon-verhuizen />} />
-  <CustomIconGalleryItem name="utrecht-icon-verkiezingen" icon={<utrecht-icon-verkiezingen />} />
-  <CustomIconGalleryItem name="utrecht-icon-vluchtelingen" icon={<utrecht-icon-vluchtelingen />} />
-  <CustomIconGalleryItem name="utrecht-icon-omgevingsvisie" icon={<utrecht-icon-omgevingsvisie />} />
-  <CustomIconGalleryItem name="utrecht-icon-omgevingswet" icon={<utrecht-icon-omgevingswet />} />
-  <CustomIconGalleryItem name="utrecht-icon-openingstijden" icon={<utrecht-icon-openingstijden />} />
+  <CustomIconGalleryItem name="utrecht-icon-rijbewijs">
+    <utrecht-icon-rijbewijs />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-paspoort">
+    <utrecht-icon-paspoort />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-melding">
+    <utrecht-icon-melding-klacht />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-verhuizen">
+    <utrecht-icon-verhuizen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afval">
+    <utrecht-icon-afval />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-toeslag">
+    <utrecht-icon-toeslag />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-trouwen">
+    <utrecht-icon-trouwen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afspraak-maken">
+    <utrecht-icon-afspraak-maken />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-vervoersvoorziening">
+    <utrecht-icon-vervoersvoorziening />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afval-container">
+    <utrecht-icon-afval-container />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afval-containerpas">
+    <utrecht-icon-afval-containerpas />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afval-kalender">
+    <utrecht-icon-afval-kalender />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afval-scheiden">
+    <utrecht-icon-afval-scheiden />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-afval">
+    <utrecht-icon-afval />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-bewijsstukken">
+    <utrecht-icon-bewijsstukken />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-bijstand">
+    <utrecht-icon-bijstand />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-bouwproject">
+    <utrecht-icon-bouwproject />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-college-b-w">
+    <utrecht-icon-college-b-w />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-container-bio">
+    <utrecht-icon-container-bio />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-dakloos">
+    <utrecht-icon-dakloos />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-parken">
+    <utrecht-icon-parken />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-parkeren-bedrijven">
+    <utrecht-icon-parkeren-bedrijven />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-parkeren-betalen">
+    <utrecht-icon-parkeren-betalen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-kroon">
+    <utrecht-icon-kroon />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-markt">
+    <utrecht-icon-markt />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-parkeervergunning">
+    <utrecht-icon-parkeervergunning />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-park">
+    <utrecht-icon-park />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-grofvuil">
+    <utrecht-icon-grofvuil />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-horeca">
+    <utrecht-icon-horeca />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-kerstbomen">
+    <utrecht-icon-kerstbomen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-klachten">
+    <utrecht-icon-klachten />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-laadpaal">
+    <utrecht-icon-laadpaal />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-fiets">
+    <utrecht-icon-fiets />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-gemeenteraad">
+    <utrecht-icon-gemeenteraad />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-energie-vergoeding">
+    <utrecht-icon-energie-vergoeding />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-virus">
+    <utrecht-icon-virus />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-werken">
+    <utrecht-icon-werken />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-woning-zoeken">
+    <utrecht-icon-woning-zoeken />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-verhuizen">
+    <utrecht-icon-verhuizen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-verkiezingen">
+    <utrecht-icon-verkiezingen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-vluchtelingen">
+    <utrecht-icon-vluchtelingen />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-omgevingsvisie">
+    <utrecht-icon-omgevingsvisie />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-omgevingswet">
+    <utrecht-icon-omgevingswet />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-openingstijden">
+    <utrecht-icon-openingstijden />
+  </CustomIconGalleryItem>
 </CustomIconGallery>

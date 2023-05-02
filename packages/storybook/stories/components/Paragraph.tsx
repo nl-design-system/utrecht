@@ -5,7 +5,7 @@
  */
 import clsx from 'clsx';
 import parse from 'html-react-parser';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 
 export const Paragraph = ({
   children = null,
@@ -14,7 +14,12 @@ export const Paragraph = ({
   lead = false,
   small = false,
   ...restProps
-}) => {
+}: PropsWithChildren<{
+  distanced?: boolean;
+  lead?: boolean;
+  small?: boolean;
+  innerHTML?: string;
+}>) => {
   const content = (
     <>
       {children}

@@ -51,36 +51,36 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Alert>;
+} satisfies Meta<typeof Alert>;
 
 export default meta;
 
-const Template: StoryObj<typeof meta> = (args) => <Alert {...args} />;
+type Story = StoryObj<typeof meta>;
 
-export const Default = Template.bind({});
+export const Default: Story = {};
 
-export const Info = Template.bind({});
-
-Info.args = {
-  type: 'info',
+export const Info: Story = {
+  args: {
+    type: 'info',
+  },
 };
 
-export const OK = Template.bind({});
-
-OK.args = {
-  type: 'ok',
+export const OK: Story = {
+  args: {
+    type: 'ok',
+  },
 };
 
-export const Warning = Template.bind({});
-
-Warning.args = {
-  type: 'warning',
+export const Warning: Story = {
+  args: {
+    type: 'warning',
+  },
 };
 
-export const Error = Template.bind({});
-
-Error.args = {
-  type: 'error',
+export const Error: Story = {
+  args: {
+    type: 'error',
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

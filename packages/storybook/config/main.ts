@@ -1,7 +1,7 @@
-/* eslint-env node */
-module.exports = {
+import type { StorybookConfig } from '@storybook/react-webpack5';
+
+const config: StorybookConfig = {
   core: {
-    builder: 'webpack5',
     disableTelemetry: true,
   },
   stories: [
@@ -10,14 +10,14 @@ module.exports = {
     '../../../proprietary/**/*stories.@(js|jsx|mdx|ts|tsx)',
   ],
   features: {
-    babelModeV7: true,
-    postcss: false,
+    // babelModeV7: true,
+    // postcss: false,
     buildStoriesJson: true,
-    previewMdx2: true,
-    storyStoreV7: false,
+    // previewMdx2: true,
+    storyStoreV7: true,
   },
   framework: {
-    name: '@storybook/react',
+    name: '@storybook/react-webpack5',
     options: {},
   },
   addons: [
@@ -30,6 +30,7 @@ module.exports = {
     '@storybook/addon-links',
     'storybook-addon-pseudo-states',
     'storybook-addon-themes',
+    //'@storybook/addon-mdx-gfm',
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (_, { configType }) => {
@@ -64,14 +65,9 @@ module.exports = {
       },
     };
   },
-  webpackFinal: async (config) => ({
-    ...config,
-    performance: {
-      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
-      hints: false,
-    },
-  }),
   docs: {
     autodocs: true,
   },
 };
+
+export default config;

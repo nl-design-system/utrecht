@@ -90,15 +90,14 @@ export const Accordion2 = ({ sections = defaultArgs.sections }) => {
     <ReactAccordion>
       {sections.map(({ children, disabled, expanded, headingLevel, label, section }, index) => (
         <ReactAccordionSection
-          defaultExpanded={expanded}
+          expanded={expanded}
           label={label}
           headingLevel={headingLevel}
           section={section}
           disabled={disabled}
           key={index}
-        >
-          {children}
-        </ReactAccordionSection>
+          body={children}
+        />
       ))}
     </ReactAccordion>
   );

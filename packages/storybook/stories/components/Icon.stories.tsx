@@ -1,15 +1,15 @@
 /* @license CC0-1.0 */
 
-import type { Meta } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/icon/README.md?raw';
 import tokensDefinition from '@utrecht/components/icon/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 // import { Icon } from '@utrecht/component-library-react/src/Icon';
 import { designTokenStory } from './util';
 import '@utrecht/components/icon/css/index.scss';
 
-export const Icon = ({ children }) => <span className="utrecht-icon">{children}</span>;
+export const Icon = ({ children }: PropsWithChildren) => <span className="utrecht-icon">{children}</span>;
 
 const meta = {
   title: 'CSS Component/Icon',
@@ -37,12 +37,14 @@ const meta = {
       },
     },
   },
-} as Meta<typeof Icon>;
+} satisfies Meta<typeof Icon>;
 
 export default meta;
 
+type Story = StoryObj<typeof meta>;
+
 /* The icon should be 16px, regardless of the width="512px". The icon must not be stretched. */
-export const SizeCSSVariable = {
+export const SizeCSSVariable: Story = {
   decorators: [(Story) => <div style={{ '--utrecht-icon-size': '16px' }}>{Story()}</div>],
   args: {
     children: (
@@ -54,7 +56,7 @@ export const SizeCSSVariable = {
 };
 
 /* The icon should be red, using the `--utrecht-icon-color` custom property */
-export const ColorCSSVariable = {
+export const ColorCSSVariable: Story = {
   decorators: [(Story) => <div style={{ '--utrecht-icon-color': 'red' }}>{Story()}</div>],
   args: {
     children: (
@@ -66,7 +68,7 @@ export const ColorCSSVariable = {
 };
 
 /* The icon should be red, when the parent element is red */
-export const ParentColor = {
+export const ParentColor: Story = {
   decorators: [(Story) => <div style={{ color: 'red' }}>{Story()}</div>],
   args: {
     children: (
@@ -77,7 +79,7 @@ export const ParentColor = {
   },
 };
 
-export const SVGWidth = {
+export const SVGWidth: Story = {
   args: {
     children: (
       <svg viewBox="0 0 32 32" width="512px">
@@ -87,7 +89,7 @@ export const SVGWidth = {
   },
 };
 
-export const SVGHeight = {
+export const SVGHeight: Story = {
   args: {
     children: (
       <svg viewBox="0 0 32 32" height="512px">
@@ -97,7 +99,7 @@ export const SVGHeight = {
   },
 };
 
-export const SVGWidthHeight = {
+export const SVGWidthHeight: Story = {
   args: {
     children: (
       <svg viewBox="0 0 32 32" width="512px" height="512px">
@@ -108,7 +110,7 @@ export const SVGWidthHeight = {
 };
 
 /* The <svg> with 1em as `width` and `height` is reasonably sized even when no CSS is available */
-export const SVGWidthHeightEm = {
+export const SVGWidthHeightEm: Story = {
   args: {
     children: (
       <svg viewBox="0 0 32 32" width="1em" height="1em">
@@ -118,4 +120,4 @@ export const SVGWidthHeightEm = {
   },
 };
 
-export const DesignTokens = designTokenStory(meta);
+export const DesignTokens: Story = designTokenStory(meta);

@@ -1,7 +1,7 @@
 {/* @license CC0-1.0 */}
 
 import { Meta } from "@storybook/blocks";
-import { CustomIconGallery, CustomIconGalleryItem } from "@utrecht/documentation/components/CustomIcomGallery";
+import { CustomIconGallery, CustomIconGalleryItem } from "./CustomIconGallery";
 
 <Meta
   id="utrecht-iconen-functional"
@@ -14,8 +14,16 @@ import { CustomIconGallery, CustomIconGalleryItem } from "@utrecht/documentation
 />
 
 <CustomIconGallery>
-  <CustomIconGalleryItem name="utrecht-icon-arrow" icon={<utrecht-icon-arrow />} />
-  <CustomIconGalleryItem name="utrecht-icon-checkmark" icon={<utrecht-icon-checkmark />} />
-  <CustomIconGalleryItem name="utrecht-icon-cross" icon={<utrecht-icon-cross />} />
-  <CustomIconGalleryItem name="utrecht-icon-loupe" icon={<utrecht-icon-loupe />} />
+  <CustomIconGalleryItem name="utrecht-icon-arrow">
+    <utrecht-icon-arrow />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-checkmark">
+    <utrecht-icon-checkmark />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-cross">
+    <utrecht-icon-cross />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-loupe">
+    <utrecht-icon-loupe />
+  </CustomIconGalleryItem>
 </CustomIconGallery>
