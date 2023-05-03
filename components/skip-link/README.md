@@ -67,6 +67,17 @@ Wel:
 }
 ```
 
+## Privacy
+
+Het moet voor skip link gebruikers duidelijk zijn als er een _cookie consent_ is op de pagina, je wilt niet dat deze belangrijke functionaliteit wordt overgeslagen.
+
 ## Links
 
-- [WCAG 3.2.3](https://www.w3.org/TR/WCAG21/#consistent-navigation)
+- [WCAG 1.3.1](https://www.w3.org/TR/WCAG21/#info-and-relationships): een `link` role wordt gebruikt, het liefst door het `a` HTML-element met een _fragment identifier_ URL: `<a href="#target">`. Gebruik niet `button`.
+- [WCAG 1.3.2](https://www.w3.org/TR/WCAG21/#meaningful-sequence): een _cookie consent_ formulier moet als eerste komen, de skip link als tweede.
+- [WCAG 2.5.2](https://www.w3.org/TR/WCAG21/#pointer-cancellation): een skip link moet geactiveerd worden bij `click`, niet bij `mousedown`.
+- [WCAG 2.5.2](https://www.w3.org/TR/WCAG21/#label-in-name)
+- [WCAG 2.5.5](https://www.w3.org/TR/WCAG21/#target-size): skip link afmeting is ten minste 44×44px.
+- [WCAG 3.2.3](https://www.w3.org/TR/WCAG21/#consistent-navigation): skip link wordt consistent gebruikt op elke pagina.
+- [WCAG 3.1.3](https://www.w3.org/TR/WCAG21/#unusual-words): gebruik duidelijke taal voor het label. Bijvoorbeeld niet: "Direct naar de secundaire content met widgets".
+- [WCAG 3.2.4](https://www.w3.org/TR/WCAG21/#consistent-identification): gebruik dezelfde labels voor de _skip link_ op alle pagina's. Bijvoorbeeld niet: "Navigatie overslaan" op een gedeelte van de site, en "Naar de inhoud" op andere pagina's.
