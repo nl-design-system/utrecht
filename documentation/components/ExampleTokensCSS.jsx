@@ -32,17 +32,17 @@ const tokensToCSS = (tokens) => {
       return;
     }
     lines.push(
-      `  --${path.join('-')}: ${
+      `  /* --${path.join('-')}: ${
         value &&
         value['$extensions'] &&
         value['$extensions']['nl.nldesignsystem.css.property'] &&
         value['$extensions']['nl.nldesignsystem.css.property'].syntax
-          ? '<value>'
-          : undefined
-      };`,
+          ? value['$extensions']['nl.nldesignsystem.css.property'].syntax
+          : '<value>'
+      }; */`,
     );
   });
-  return `.your-theme {\n  /* Comment out the custom properties you don't need */\n${lines.join('\n')}\n}`;
+  return `.your-theme {\n  /* Uncomment each custom property you need */\n${lines.join('\n')}\n}`;
 };
 
 export const ExampleTokensCSS = ({ definition }) => {
