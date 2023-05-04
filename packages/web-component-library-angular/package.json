@@ -1,5 +1,5 @@
 {
-  "version": "1.0.0-alpha.468",
+  "version": "1.0.0-alpha.480",
   "author": "Community for NL Design System",
   "description": "Angular web components for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -22,7 +22,7 @@
     "clean": "rimraf dist/"
   },
   "dependencies": {
-    "tslib": "2.4.1"
+    "tslib": "2.5.0"
   },
   "main": "dist/fesm2020/utrecht-web-component-library-angular.mjs",
   "module": "dist/fesm2015/utrecht-web-component-library-angular.js",
@@ -31,21 +31,21 @@
   "fesm2015": "dist/fesm2015/utrecht-web-component-library-angular.js",
   "typings": "dist/index.d.ts",
   "devDependencies": {
-    "@angular-devkit/build-angular": "15.0.5",
-    "@angular/animations": "15.0.4",
-    "@angular/cli": "15.0.5",
-    "@angular/common": "15.0.4",
-    "@angular/compiler": "15.0.4",
-    "@angular/compiler-cli": "15.0.4",
-    "@angular/core": "15.0.4",
-    "@angular/forms": "15.0.4",
-    "@angular/platform-browser": "15.0.4",
-    "@angular/platform-browser-dynamic": "15.0.4",
-    "@angular/router": "15.0.4",
+    "@angular-devkit/build-angular": "15.2.7",
+    "@angular/animations": "15.2.8",
+    "@angular/cli": "15.2.7",
+    "@angular/common": "15.2.8",
+    "@angular/compiler": "15.2.8",
+    "@angular/compiler-cli": "15.2.8",
+    "@angular/core": "15.2.8",
+    "@angular/forms": "15.2.8",
+    "@angular/platform-browser": "15.2.8",
+    "@angular/platform-browser-dynamic": "15.2.8",
+    "@angular/router": "15.2.8",
     "@utrecht/web-component-library-stencil": "workspace:*",
-    "ng-packagr": "15.0.3",
-    "rxjs": "7.8.0",
+    "ng-packagr": "15.2.2",
+    "rxjs": "7.8.1",
     "typescript": "4.8.4",
-    "zone.js": "0.12.0"
+    "zone.js": "0.13.0"
   }
 }

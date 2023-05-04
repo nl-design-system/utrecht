@@ -21,7 +21,7 @@
   font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-control-font-size, 1em));
   font-weight: initial; /* harden */
   height: initial; /* harden */
-  line-height: initial; /* harden */
+  line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
   max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));

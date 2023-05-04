@@ -119,6 +119,7 @@ Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals
 - Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
 - Gebruik nooit `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
 - Vermijd onnodig gebruik van `tabindex="-1"`, er zijn weinig situaties waar het nodig is.
+- Gebruik `aria-label` en niet `title` voor het volledige label van de link. Soms is de inhoud van het `a` element niet een goed label, bijvoorbeeld wanneer er een icoon in staat of het zichtbare label een algemene tekst is zoals "Lees meer". Zie ook [WCAG Technique ARIA8](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
 
 ### `tabindex="-1"`
 

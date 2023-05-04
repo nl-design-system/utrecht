@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/angular';
-import { clearElements } from '../utils';
 import { UtrechtFieldsetAttr } from './component';
+import { clearElements } from '../utils';
 
 afterEach(() => {
   clearElements();

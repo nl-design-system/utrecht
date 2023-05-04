@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { render, screen } from '@testing-library/angular';
-import { clearElements } from '../utils';
 import { UtrechtButtonGroup } from './component';
+import { clearElements } from '../utils';
 
 const buttonGroupWithChildren = `<utrecht-button-group>
 <button utrecht-button>Save and continue</button>

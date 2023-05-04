@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Calendar } from '@utrecht/component-library-react/dist/css-module';
 import tokensDefinition from '@utrecht/components/calendar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { addDays } from 'date-fns';
 import { enUS, nl } from 'date-fns/locale';
 import { designTokenStory } from './util';
 
@@ -24,7 +25,7 @@ const meta = {
     onCalendarClick: (date) => {
       console.log(date);
     },
-    currentDate: new Date(),
+    currentDate: addDays(new Date(), 3),
     events,
     locale: nl,
     previousYearButtonTitle: 'Vorig jaar',

@@ -1,4 +1,5 @@
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
+import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
 // import { withTests } from '@storybook/addon-jest';
 // import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
 import '@utrecht/design-tokens/dist/index.css';
@@ -25,4 +26,5 @@ export const parameters = {
     },
   },
   ...addonStatus,
+  ...addonViewport,
 };
