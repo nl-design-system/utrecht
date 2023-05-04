@@ -19,7 +19,7 @@
     },
     data() {
       return {
-        headingId: this.$props.label ? getCurrentInstance()?.uid : undefined,
+        headingId: this.$props.label ? String(getCurrentInstance()?.uid) : undefined,
       };
     },
     methods: { useMicrodataItem, getCurrentInstance },
