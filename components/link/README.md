@@ -99,7 +99,7 @@ Links moeten nooit een hele zin in beslag nemen, maar alleen de tekst die beschr
 
 We beschrijven de volgende states van een link:
 
-- **normal**: geen van de onderstaande states is van toepassing op de link. Deze state is gewoon de `:link` class in de code, maar we beschrijven hem hier om aan te geven dat de link 'normaal' is zonder een andere state. We gebruiken `normal` in plaats
+- **normal**: geen van de onderstaande states is van toepassing op de link. Deze state is gewoon de `utrecht-link` class in de code, maar we beschrijven hem hier om aan te geven dat de link 'normaal' is zonder een andere state.
 - **active**: de gebruiker activeert de link op dit moment. Bijvoorbeeld door er op te klikken. De `active` state duurt maar heel kort.
 - **hover**: de gebruiker heeft de aanwijzer boven de link. Bijvoorbeeld door met de muiscursor er over te 'zweven'.
 - **focus**: de link heeft de focus doordat er op geklikt of getapt is. Denk ook aan voice of eye-tracking.

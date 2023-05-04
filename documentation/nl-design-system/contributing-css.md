@@ -164,7 +164,7 @@ For example, a `xyz` prefix for class names:
 For example, a `xyz` prefix for CSS variables:
 
 ```css
-a:link {
+a {
   color: var(--xyz-link-color);
 }
 ```

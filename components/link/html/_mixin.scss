@@ -6,7 +6,7 @@
 @import "../css/mixin";
 
 @mixin utrecht-html-a {
-  a:link {
+  a {
     @include utrecht-link;
   }
 

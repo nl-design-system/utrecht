@@ -14,7 +14,7 @@
 }
 
 .example-article--link-hover,
-:link:hover .example-article {
+:any-link:hover .example-article {
   outline-color: var(--utrecht-link-text-decoration-color, var(--utrecht-link-color, currentColor));
   outline-style: solid;
   outline-width: var(--utrecht-link-text-decoration-thickness, 2px);

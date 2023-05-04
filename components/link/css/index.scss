@@ -23,14 +23,9 @@
   @include utrecht-link--visited;
 }
 
-.utrecht-link:link:hover,
+.utrecht-link:hover,
 .utrecht-link--hover {
   @include utrecht-link--hover;
-}
-
-.utrecht-link:link:active,
-.utrecht-link--active {
-  @include utrecht-link--active;
 }
 
 .utrecht-link--focus {
@@ -61,6 +56,11 @@
   .utrecht-link:focus-visible {
     @include utrecht-link--focus-visible;
   }
+}
+
+.utrecht-link:active,
+.utrecht-link--active {
+  @include utrecht-link--active;
 }
 
 .utrecht-link--email {

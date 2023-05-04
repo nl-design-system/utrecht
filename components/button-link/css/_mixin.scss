@@ -34,16 +34,16 @@
 }
 
 @mixin utrecht-button-link--html-a {
-  &:link:active {
-    @include utrecht-button-link--active;
-  }
-  &:link:focus {
+  &:focus {
     @include utrecht-button-link--focus;
   }
-  &:link:focus-visible {
+  &:focus-visible {
     @include utrecht-button-link--focus-visible;
   }
-  &:link:hover {
+  &:hover {
     @include utrecht-button-link--hover;
+  }
+  &:active {
+    @include utrecht-button-link--active;
   }
 }
