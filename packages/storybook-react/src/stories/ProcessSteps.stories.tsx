@@ -1,4 +1,4 @@
-import { Status } from '@gemeente-denhaag/process-steps';
+import Status from '@gemeente-denhaag/process-steps';
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/process-steps/README.md?raw';
