@@ -9,6 +9,8 @@ import {
   format,
   formatISO,
   getYear,
+  isAfter,
+  isBefore,
   isSameDay,
   isSameMonth,
   Locale,
@@ -77,6 +79,8 @@ interface CalendarProps {
   nextYearButtonTitle?: string;
   previousMonthButtonTitle?: string;
   nextMonthButtonTitle?: string;
+  minDate?: Date;
+  maxDate?: Date;
 }
 
 /**
@@ -93,6 +97,8 @@ export const Calendar: FC<CalendarProps> = ({
   nextYearButtonTitle = 'Next year',
   previousMonthButtonTitle = 'Previous month',
   nextMonthButtonTitle = 'Next month',
+  minDate,
+  maxDate,
 }) => {
   const [visibleMonth, setVisibleMonth] = useState(currentDate || new Date());
   const [selectedDate, setSelectedDate] = useState(currentDate);
@@ -178,7 +184,11 @@ export const Calendar: FC<CalendarProps> = ({
                       day={day.date.getDate().toString()}
                       emphasis={day.emphasis}
                       selected={day.selected || (selectedDate && isSameDay(day.date, selectedDate))}
-                      disabled={day.disabled}
+                      disabled={
+                        day.disabled ||
+                        (minDate && isBefore(day.date, minDate)) ||
+                        (maxDate && isAfter(day.date, maxDate))
+                      }
                     />
                   );
                 })}
