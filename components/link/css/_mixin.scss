@@ -168,11 +168,11 @@ however browsers don't seem to have implemented great looking supixel tweening y
     @include utrecht-link--visited;
   }
 
-  &:link:hover {
+  &:hover {
     @include utrecht-link--hover;
   }
 
-  &:link:active {
+  &:active {
     @include utrecht-link--active;
   }
 

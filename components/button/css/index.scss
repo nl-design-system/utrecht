@@ -33,11 +33,6 @@
   @include utrecht-button--disabled;
 }
 
-.utrecht-button:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
-.utrecht-button--active {
-  @include utrecht-button--active;
-}
-
 .utrecht-button--focus-visible {
   /* the pseudo-class for `:focus-visible` is implemented via the mixin */
   @include utrecht-focus-visible;
@@ -80,6 +75,11 @@
 .utrecht-button--hover:not(:disabled, .utrecht-button--disabled),
 .utrecht-button:hover:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
   @include utrecht-button--hover;
+}
+
+.utrecht-button:active:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled),
+.utrecht-button--active {
+  @include utrecht-button--active;
 }
 
 @include utrecht-button-appearance("utrecht-button", "primary-action");
