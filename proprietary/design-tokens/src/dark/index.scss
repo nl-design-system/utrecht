@@ -8,6 +8,7 @@
 @import "../../dist/dark/mixin-theme";
 
 .utrecht-theme--color-scheme-dark,
-.utrecht-theme--color-scheme-dark ::backdrop {
+.utrecht-theme--color-scheme-dark ::backdrop,
+.utrecht-theme--color-scheme-dark ::selection {
   @include utrecht-theme--dark;
 }
