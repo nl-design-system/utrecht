@@ -6,14 +6,27 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, TdHTMLAttributes } from 'react';
 
-export type TableCellProps = TdHTMLAttributes<HTMLTableCellElement>;
+export interface TableCellProps extends TdHTMLAttributes<HTMLTableCellElement> {
+  selected?: boolean;
+}
 
 export const TableCell = forwardRef(
   (
-    { children, className, ...restProps }: PropsWithChildren<TableCellProps>,
+    { children, className, selected, ...restProps }: PropsWithChildren<TableCellProps>,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => (
-    <td {...restProps} ref={ref} className={clsx('utrecht-table__cell', className)}>
+    <td
+      aria-selected={selected ? true : undefined}
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'utrecht-table__cell',
+        {
+          'utrecht-table__cell--selected': selected,
+        },
+        className,
+      )}
+    >
       {children}
     </td>
   ),
