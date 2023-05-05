@@ -45,12 +45,20 @@
   @include utrecht-table__row;
 }
 
+.utrecht-table__row--selected {
+  @include utrecht-table__row--selected;
+}
+
 .utrecht-table--html-table > tr > th,
 .utrecht-table--html-table > thead > tr > th,
 .utrecht-table--html-table > tbody > tr > th,
 .utrecht-table--html-table > tfoot > tr > th,
 .utrecht-table__header-cell {
   @include utrecht-table__header-cell;
+}
+
+.utrecht-table__header-cell--selected {
+  @include utrecht-table__header-cell--selected;
 }
 
 .utrecht-table--html-table > tr > td,
@@ -76,6 +84,11 @@
 .utrecht-table__cell--last {
   @include utrecht-table__cell--last;
 }
+
+.utrecht-table__cell--selected {
+  @include utrecht-table__cell--selected;
+}
+
 /* stylelint-enable no-descending-specificity */
 
 .utrecht-table__header-cell--numeric-column,
