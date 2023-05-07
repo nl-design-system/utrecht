@@ -20,12 +20,29 @@ export const templateSourceCode = (templateSource, args, replacing = ' v-bind="$
     }
   };
 
-  return templateSource.replace('<slot></slot>', slot || textContent || '').replace(
+  let result = templateSource;
+
+  if (slot || textContent) {
+    result = result.replace('<slot></slot>', slot || textContent);
+    result = result.replace('<slot/>', slot || textContent);
+    result = result.replace('<slot />', slot || textContent);
+  }
+
+  const namedSlots = Object.keys(restArgs).filter((key) => key.startsWith('slot:'));
+
+  namedSlots.forEach((key) => {
+    result = result.replace(`<slot name="${key.slice(5)}"></slot>`, restArgs[key]);
+    delete restArgs[key];
+  });
+
+  result = result.replace(
     replacing,
     Object.keys(restArgs)
       .map((key) => propToSource(key, args[key]))
       .join(''),
   );
+
+  return result;
 };
 
 export const createStory = (meta, story) => {
