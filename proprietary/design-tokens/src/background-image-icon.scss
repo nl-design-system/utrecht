@@ -5,8 +5,7 @@
  */
 
 .utrecht-theme,
-.utrecht-theme ::backdrop,
-.utrecht-theme ::selection {
+.utrecht-theme ::backdrop {
   --utrecht-menulijst-item-background-image: url("./pijltje.svg");
   --utrecht-link-icon-left-background-image: url("./pijltje.svg");
   --utrecht-search-bar-input-background-image: url("./icoon-zoek-rood.svg");
