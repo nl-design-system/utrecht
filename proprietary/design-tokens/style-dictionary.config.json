@@ -50,7 +50,7 @@
           "destination": "root.css",
           "format": "css/variables",
           "options": {
-            "selector": ":root, ::backdrop, ::selection",
+            "selector": ":root, ::backdrop",
             "outputReferences": true
           }
         }
@@ -64,7 +64,7 @@
           "destination": "theme.css",
           "format": "css/variables",
           "options": {
-            "selector": ".utrecht-theme, .utrecht-theme ::backdrop, .utrecht-theme ::selection",
+            "selector": ".utrecht-theme, .utrecht-theme ::backdrop",
             "outputReferences": true
           }
         }

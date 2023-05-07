@@ -18,7 +18,7 @@ module.exports = {
           destination: 'root.css',
           format: 'css/variables',
           options: {
-            selector: ':root, ::backdrop, ::selection',
+            selector: ':root, ::backdrop',
             outputReferences: true,
           },
         },
@@ -32,7 +32,7 @@ module.exports = {
           destination: 'index.css',
           format: 'css/variables',
           options: {
-            selector: '.utrecht-theme--dark, .utrecht-theme--dark ::backdrop, .utrecht-theme--dark ::selection',
+            selector: '.utrecht-theme--dark, .utrecht-theme--dark ::backdrop',
             outputReferences: true,
           },
         },
