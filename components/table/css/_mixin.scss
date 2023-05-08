@@ -74,7 +74,7 @@
 
   color: var(--utrecht-table-header-cell-color);
   font-size: var(--utrecht-table-header-cell-font-size);
-  font-weight: var(--utrecht-table-header-cell-font-weight);
+  font-weight: var(--utrecht-table-header-cell-font-weight, bold);
   text-transform: var(--utrecht-table-header-cell-text-transform);
   vertical-align: var(--_utrecht-table-header-cell-vertical-align, top);
 }
