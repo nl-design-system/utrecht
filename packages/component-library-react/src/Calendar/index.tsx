@@ -17,6 +17,7 @@ import {
   parseISO,
   setMonth,
   setYear,
+  startOfDay,
   startOfMonth,
   startOfWeek,
 } from 'date-fns';
@@ -186,8 +187,8 @@ export const Calendar: FC<CalendarProps> = ({
                       selected={day.selected || (selectedDate && isSameDay(day.date, selectedDate))}
                       disabled={
                         day.disabled ||
-                        (minDate && isBefore(day.date, minDate)) ||
-                        (maxDate && isAfter(day.date, maxDate))
+                        (minDate && isBefore(day.date, startOfDay(minDate))) ||
+                        (maxDate && isAfter(day.date, endOfDay(maxDate)))
                       }
                     />
                   );
