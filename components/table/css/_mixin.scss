@@ -65,8 +65,8 @@
 }
 
 @mixin utrecht-table__any-cell--selected {
-  background-color: var(--utrecht-table-cell-selected-background-color, var(--utrecht-table-cell-background-color));
-  color: var(--utrecht-table-cell-selected-color, var(--utrecht-table-header-cell-color));
+  background-color: var(--utrecht-table-cell-selected-background-color, highlight);
+  color: var(--utrecht-table-cell-selected-color, highlightText);
 }
 
 @mixin utrecht-table__header-cell {
