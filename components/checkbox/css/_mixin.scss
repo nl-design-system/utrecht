@@ -15,6 +15,7 @@
   @include reset-input-checkbox;
 
   cursor: var(--utrecht-action-activate-cursor, revert);
+  user-select: none;
 }
 
 /* stylelint-disable-next-line block-no-empty */

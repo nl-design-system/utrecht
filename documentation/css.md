@@ -27,3 +27,17 @@ Gebruik `pointer-events: none` niet om een interactief element _disabled_ te mak
 - Gebruik in de meeste gevallen `inset-inline-end` in plaats van `right`.
 - Gebruik in de meeste gevallen `inset-block-start` in plaats van `top`.
 - Gebruik in de meeste gevallen `inset-block-end` in plaats van `bottom`.
+
+## `user-select: none`
+
+Onder andere de volgende componenten moeten `user-select: none;` gebruiken:
+
+- _form controls_ zonder tekstinvoer:
+  - _checkbox_
+  - _radio button_
+  - _toggle button_
+- knoppen
+  - _button_
+  - _button that looks like a link_
+- componenten die niet moeten reageren op interactie (inerte componenten)
+  - _backdrop_
