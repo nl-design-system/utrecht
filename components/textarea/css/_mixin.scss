@@ -18,7 +18,7 @@
   box-sizing: border-box;
   color: var(--utrecht-textarea-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-control-font-family));
-  font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-control-font-size, 1em));
+  font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-control-font-size, inherit));
   font-weight: initial; /* harden */
   height: initial; /* harden */
   line-height: var(--utrecht-textarea-line-height, initial);

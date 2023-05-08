@@ -185,7 +185,7 @@
   cursor: var(--utrecht-action-activate-cursor);
   display: inline-flex;
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
-  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family));
+  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family, inherit));
   font-weight: var(--_utrecht-button-appearance-font-weight, var(--utrecht-button-font-weight));
   gap: var(--utrecht-button-icon-gap);
   inline-size: var(--utrecht-button-inline-size, auto);
