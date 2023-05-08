@@ -13,6 +13,7 @@ module.exports = {
     '@storybook/preset-scss',
     // '@storybook/addon-jest',
     '@etchteam/storybook-addon-status/register',
+    'storybook-addon-themes',
   ],
   features: {
     babelModeV7: true,
