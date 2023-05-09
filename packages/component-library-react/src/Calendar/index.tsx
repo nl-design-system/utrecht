@@ -47,7 +47,7 @@ function createCalendar(today: Date): Date[] {
   return eachDayOfInterval({ start, end });
 }
 
-type Events = {
+export type Events = {
   date: string;
   emphasis?: boolean;
   selected?: boolean;
