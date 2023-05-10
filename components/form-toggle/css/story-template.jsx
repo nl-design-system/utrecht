@@ -89,7 +89,7 @@ export const FormToggleCheckbox = ({
       id={id}
       type="checkbox"
       className="utrecht-form-toggle__checkbox"
-      checked={checked || null}
+      defaultChecked={checked || null}
       disabled={disabled || null}
     />
     <label htmlFor={id} className={clsx('utrecht-form-toggle__track')}>

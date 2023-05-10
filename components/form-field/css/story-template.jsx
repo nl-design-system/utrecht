@@ -218,7 +218,7 @@ export const FormFieldCheckboxGroup = ({
             id={id}
             value={value}
             name={name || groupName}
-            checked={checked}
+            defaultChecked={checked}
             custom={true}
             aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || null}
           />

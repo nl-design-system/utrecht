@@ -51,7 +51,7 @@ export const Checkbox = ({
   <div className="utrecht-html">
     <input
       type="checkbox"
-      checked={checked}
+      defaultChecked={checked}
       aria-invalid={invalid}
       disabled={disabled}
       required={required}
