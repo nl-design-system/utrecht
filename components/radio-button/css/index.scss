@@ -13,8 +13,8 @@
   @include utrecht-radio-button--checked;
 }
 
-.utrecht-radio-button--active {
-  @include utrecht-radio-button--active;
+.utrecht-radio-button--hover {
+  @include utrecht-radio-button--hover;
 }
 
 .utrecht-radio-button--focus {
@@ -23,6 +23,10 @@
 
 .utrecht-radio-button--focus-visible {
   @include utrecht-radio-button--focus-visible;
+}
+
+.utrecht-radio-button--active {
+  @include utrecht-radio-button--active;
 }
 
 .utrecht-radio-button--disabled {
