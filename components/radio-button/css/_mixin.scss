@@ -16,55 +16,104 @@
 }
 
 @mixin utrecht-radio-button {
+  /*
+   * For the `radial-gradient()` use a 5% gradient size to improve anti-aliasing.
+   * With a 0% gradient, the circle will have jagged edges.
+   */
   @include reset-input-type-radio;
 
-  --_utrecht-radio-button-icon: var(
-    --utrecht-radio-button-icon,
-    url("data:image/svg+xml,%3Csvg viewBox='-4 -4 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e")
+  --_utrecht-radio-button-background-color: var(
+    --_utrecht-radio-button-interactive-background-color,
+    var(--_utrecht-radio-button-state-background-color, var(--utrecht-radio-button-background-color))
   );
+  --_utrecht-radio-button-border-color: var(
+    --_utrecht-radio-button-interactive-border-color,
+    var(--_utrecht-radio-button-state-border-color, var(--utrecht-radio-button-border-color, currentColor))
+  );
+  --_utrecht-radio-button-border-width: var(
+    --_utrecht-radio-button-interactive-border-width,
+    var(--_utrecht-radio-button-state-border-width, var(--utrecht-radio-button-border-width))
+  );
+  --_utrecht-radio-button-color: var(
+    --_utrecht-radio-button-interactive-color,
+    var(--_utrecht-radio-button-state-color, var(--utrecht-radio-button-color, currentColor))
+  );
+  --_utrecht-radio-button-icon-size: 0;
 
-  background-color: var(--utrecht-radio-button-background-color);
+  background-color: var(--_utrecht-radio-button-background-color);
+  background-image: radial-gradient(
+    circle,
+    var(--_utrecht-radio-button-color, transparent) calc(var(--_utrecht-radio-button-icon-size, 50%) - 5%),
+    var(--_utrecht-radio-button-background-color, currentColor) var(--_utrecht-radio-button-icon-size, 50%)
+  );
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
-  border-color: var(--utrecht-radio-button-border-color);
+  block-size: var(--utrecht-radio-button-size, 1em);
+  border-color: var(--_utrecht-radio-button-border-color);
   border-radius: 50%;
   border-style: solid;
-  border-width: var(--utrecht-radio-button-border-width);
+  border-width: var(--_utrecht-radio-button-border-width);
   cursor: var(--utrecht-action-activate-cursor);
-  height: var(--utrecht-radio-button-size);
+  inline-size: var(--utrecht-radio-button-size, 1em);
   margin-inline-end: var(--utrecht-radio-button-margin-inline-end);
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   user-select: none;
   vertical-align: top;
-  width: var(--utrecht-radio-button-size);
 }
 
 @mixin utrecht-radio-button--checked {
-  background-color: var(--utrecht-radio-button-checked-background-color, var(--utrecht-radio-button-background-color));
-  background-image: var(--_utrecht-radio-button-icon);
-  border-color: var(--utrecht-radio-button-checked-border-color, var(--utrecht-radio-button-border-color));
-  border-width: var(--utrecht-radio-button-checked-border-width, var(--utrecht-radio-button-border-width));
-  color: var(--utrecht-radio-button-checked-color, var(--utrecht-radio-button-color));
+  --_utrecht-radio-button-icon-size: var(--utrecht-radio-button-icon-size, 50%);
+  --_utrecht-radio-button-state-background-color: var(--utrecht-radio-button-checked-background-color);
+  --_utrecht-radio-button-state-border-color: var(--utrecht-radio-button-checked-border-color);
+  --_utrecht-radio-button-state-border-width: var(--utrecht-radio-button-checked-border-width);
+  --_utrecht-radio-button-state-color: var(--utrecht-radio-button-checked-color);
+  --_utrecht-radio-button-state-active-background-color: var(--utrecht-radio-button-checked-active-background-color);
+  --_utrecht-radio-button-state-active-border-color: var(--utrecht-radio-button-checked-active-border-color);
+  --_utrecht-radio-button-state-active-border-width: var(--utrecht-radio-button-checked-active-border-width);
+  --_utrecht-radio-button-state-active-color: var(--utrecht-radio-button-checked-active-color);
+  --_utrecht-radio-button-state-focus-background-color: var(--utrecht-radio-button-checked-focus-background-color);
+  --_utrecht-radio-button-state-focus-border-color: var(--utrecht-radio-button-checked-focus-border-color);
+  --_utrecht-radio-button-state-focus-border-width: var(--utrecht-radio-button-checked-focus-border-width);
+  --_utrecht-radio-button-state-focus-color: var(--utrecht-radio-button-checked-focus-color);
+  --_utrecht-radio-button-state-hover-background-color: var(--utrecht-radio-button-checked-hover-background-color);
+  --_utrecht-radio-button-state-hover-border-color: var(--utrecht-radio-button-checked-hover-border-color);
+  --_utrecht-radio-button-state-hover-border-width: var(--utrecht-radio-button-checked-hover-border-width);
+  --_utrecht-radio-button-state-hover-color: var(--utrecht-radio-button-checked-hover-color);
 }
 
 @mixin utrecht-radio-button--disabled {
-  &:checked {
-    background-color: var(
-      --utrecht-radio-button-disabled-background-color,
-      var(--utrecht-radio-button-background-color)
-    );
-    border-color: var(--utrecht-radio-button-disabled-border-color, var(--utrecht-radio-button-border-color));
-  }
+  /*
+   * The disabled radio button should have:
+   * - should have no active effect
+   * - should have no focus effect
+   * - should have no hover effect
+   * - should have a working focus-visible effect, in case someone sets `<input type="radio" disabled tabindex="0">`
+   */
+  --_utrecht-radio-button-background-color: var(--utrecht-radio-button-disabled-background-color);
+  --_utrecht-radio-button-border-color: var(--utrecht-radio-button-disabled-border-color);
+  --_utrecht-radio-button-border-width: var(--utrecht-radio-button-disabled-border-width);
+  --_utrecht-radio-button-color: var(--utrecht-radio-button-disabled-color);
 
-  &:active {
-    border-color: var(--utrecht-radio-button-disabled-border-color, var(--utrecht-radio-button-border-color));
-  }
+  /* no focus effect */
+  --_utrecht-radio-button-focus-background-color: var(--_utrecht-radio-button-background-color);
+  --_utrecht-radio-button-focus-border-color: var(--_utrecht-radio-button-border-color);
+  --_utrecht-radio-button-focus-border-width: var(--_utrecht-radio-button-border-width);
+  --_utrecht-radio-button-focus-color: var(--_utrecht-radio-button-color);
 
-  border-color: var(--utrecht-radio-button-disabled-border-color, var(--utrecht-radio-button-border-color));
-  border-width: var(--utrecht-radio-button-disabled-border-width, var(--utrecht-radio-button-border-width));
-  color: var(--utrecht-radio-button-disabled-color, var(--utrecht-radio-button-color));
+  /* no active effect */
+  --_utrecht-radio-button-active-background-color: var(--_utrecht-radio-button-background-color);
+  --_utrecht-radio-button-active-border-color: var(--_utrecht-radio-button-border-color);
+  --_utrecht-radio-button-active-border-width: var(--_utrecht-radio-button-border-width);
+  --_utrecht-radio-button-active-color: var(--_utrecht-radio-button-color);
+
+  /* no hover effect */
+  --_utrecht-radio-button-hover-background-color: var(--_utrecht-radio-button-background-color);
+  --_utrecht-radio-button-hover-border-color: var(--_utrecht-radio-button-border-color);
+  --_utrecht-radio-button-hover-border-width: var(--_utrecht-radio-button-border-width);
+  --_utrecht-radio-button-hover-color: var(--_utrecht-radio-button-color);
+
   cursor: var(--utrecht-action-disabled-cursor);
 }
 
@@ -79,11 +128,22 @@
 }
 
 @mixin utrecht-radio-button--active {
-  background-color: var(--utrecht-radio-button-active-background-color, var(--utrecht-radio-button-background-color));
-  background-image: var(--_utrecht-radio-button-icon);
-  border-color: var(--utrecht-radio-button-active-border-color, var(--utrecht-radio-button-border-color));
-  border-width: var(--utrecht-radio-button-active-border-width, var(--utrecht-radio-button-border-width));
-  color: var(--utrecht-radio-button-active-color, var(--utrecht-radio-button-color));
+  --_utrecht-radio-button-interactive-background-color: var(
+    --_utrecht-radio-button-state-active-background-color,
+    var(--utrecht-radio-button-active-background-color)
+  );
+  --_utrecht-radio-button-interactive-border-color: var(
+    --_utrecht-radio-button-state-active-border-color,
+    var(--utrecht-radio-button-active-border-color)
+  );
+  --_utrecht-radio-button-interactive-border-width: var(
+    --_utrecht-radio-button-state-active-border-width,
+    var(--utrecht-radio-button-active-border-width)
+  );
+  --_utrecht-radio-button-interactive-color: var(
+    --_utrecht-radio-button-state-active-color,
+    var(--utrecht-radio-button-active-color)
+  );
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -91,37 +151,52 @@
 }
 
 @mixin utrecht-radio-button--hover {
-  background-color: var(--utrecht-radio-button-hover-background-color, var(--utrecht-radio-button-background-color));
-  border-color: var(--utrecht-radio-button-hover-border-color, var(--utrecht-radio-button-border-color));
-  border-width: var(--utrecht-radio-button-hover-border-width, var(--utrecht-radio-button-border-width));
-  color: var(--utrecht-radio-button-hover-color, var(--utrecht-radio-button-color));
+  --_utrecht-radio-button-interactive-background-color: var(
+    --_utrecht-radio-button-state-hover-background-color,
+    var(--utrecht-radio-button-hover-background-color)
+  );
+  --_utrecht-radio-button-interactive-border-color: var(
+    --_utrecht-radio-button-state-hover-border-color,
+    var(--utrecht-radio-button-hover-border-color)
+  );
+  --_utrecht-radio-button-interactive-border-width: var(
+    --_utrecht-radio-button-state-hover-border-width,
+    var(--utrecht-radio-button-hover-border-width)
+  );
+  --_utrecht-radio-button-interactive-color: var(
+    --_utrecht-radio-button-state-hover-color,
+    var(--utrecht-radio-button-hover-color)
+  );
 }
 
 @mixin utrecht-radio-button--focus {
   @include utrecht-focus;
 
-  background-color: var(--utrecht-radio-button-focus-background-color, var(--utrecht-radio-button-background-color));
-  background-image: var(--_utrecht-radio-button-icon);
-  border-color: var(--utrecht-radio-button-focus-border-color, var(--utrecht-radio-button-border-color));
-  border-width: var(--utrecht-radio-button-focus-border-width, var(--utrecht-radio-button-border-width));
-  color: var(--utrecht-radio-button-focus-color, var(--utrecht-radio-button-color));
+  --_utrecht-radio-button-interactive-background-color: var(
+    --utrecht-radio-button-focus-background-color,
+    var(--utrecht-radio-button-focus-background-color)
+  );
+  --_utrecht-radio-button-interactive-border-color: var(
+    --utrecht-radio-button-focus-border-color,
+    var(--utrecht-radio-button-focus-border-color)
+  );
+  --_utrecht-radio-button-interactive-border-width: var(
+    --utrecht-radio-button-focus-border-width,
+    var(--utrecht-radio-button-focus-border-width)
+  );
+  --_utrecht-radio-button-interactive-color: var(
+    --utrecht-radio-button-focus-color,
+    var(--utrecht-radio-button-focus-color)
+  );
 }
 
 @mixin utrecht-radio-button--html-input {
+  &:checked {
+    @include utrecht-radio-button--checked;
+  }
+
   &:disabled {
     @include utrecht-radio-button--disabled;
-  }
-
-  &:hover {
-    @include utrecht-radio-button--hover;
-  }
-
-  &:focus {
-    @include utrecht-radio-button--focus;
-  }
-
-  &:focus-visible {
-    @include utrecht-radio-button--focus-visible;
   }
 
   &:invalid,
@@ -134,11 +209,21 @@
     @include utrecht-radio-button--required;
   }
 
-  &:active {
-    @include utrecht-radio-button--active;
+  &:focus:not([aria-disabled="true"], :disabled) {
+    @include utrecht-radio-button--focus;
   }
 
-  &:checked {
-    @include utrecht-radio-button--checked;
+  /* override the `:focus` selector above */
+  /* stylelint-disable-next-line no-descending-specificity */
+  &:focus-visible {
+    @include utrecht-radio-button--focus-visible;
+  }
+
+  &:hover:not([aria-disabled="true"], :disabled) {
+    @include utrecht-radio-button--hover;
+  }
+
+  &:active:not([aria-disabled="true"], :disabled) {
+    @include utrecht-radio-button--active;
   }
 }
