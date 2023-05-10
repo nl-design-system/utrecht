@@ -55,7 +55,7 @@ export const RadioButton = ({
 }) => (
   <input
     type="radio"
-    checked={checked || null}
+    defaultChecked={checked || null}
     disabled={disabled || null}
     className={clsx(
       'utrecht-radio-button',
