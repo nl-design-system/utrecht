@@ -45,6 +45,8 @@ export const defaultArgs = {
   hover: false,
   focus: false,
   invalid: false,
+  name: '',
+  id: '',
 };
 
 export const exampleArgs = {};
@@ -57,6 +59,8 @@ export const RadioButton = ({
   focus = defaultArgs.focus,
   focusVisible = defaultArgs.focusVisible,
   invalid = defaultArgs.invalid,
+  name = defaultArgs.name,
+  id = defaultArgs.id,
 }) => (
   <input
     type="radio"
@@ -73,6 +77,8 @@ export const RadioButton = ({
       focusVisible && 'utrecht-radio-button--focus-visible',
       invalid && 'utrecht-radio-button--invalid',
     )}
+    name={name || undefined}
+    id={id || undefined}
   />
 );
 
