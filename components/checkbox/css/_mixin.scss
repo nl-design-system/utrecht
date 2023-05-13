@@ -15,6 +15,7 @@
   @include reset-input-checkbox;
 
   cursor: var(--utrecht-action-activate-cursor, revert);
+  -webkit-user-select: none;
   user-select: none;
 }
 

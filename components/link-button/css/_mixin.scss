@@ -29,6 +29,7 @@
   padding-inline-end: var(--utrecht-button-padding-inline-end);
   padding-inline-start: var(--utrecht-button-padding-inline-start);
   text-transform: var(--utrecht-button-text-transform);
+  -webkit-user-select: none;
   user-select: none;
 }
 

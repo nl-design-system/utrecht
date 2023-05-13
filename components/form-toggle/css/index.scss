@@ -35,6 +35,7 @@
   padding-inline-end: var(--utrecht-form-toggle-padding-inline-end);
   padding-inline-start: var(--utrecht-form-toggle-padding-inline-start);
   position: relative;
+  -webkit-user-select: none;
   user-select: none;
   width: var(--utrecht-form-toggle-width, 6em);
 }

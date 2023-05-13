@@ -59,6 +59,7 @@
   margin-inline-end: var(--utrecht-radio-button-margin-inline-end);
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
+  -webkit-user-select: none;
   user-select: none;
   vertical-align: top;
 }
