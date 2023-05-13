@@ -6,14 +6,14 @@
 
 @mixin utrecht-color-sample {
   background-color: var(--utrecht-color-sample-background-color, currentColor);
-  block-size: 2em;
+  block-size: var(--utrecht-color-sample-block-size, 2em);
   border-color: var(--utrecht-color-sample-border-color, var(--utrecht-color-sample-default-border-color));
   border-radius: var(--utrecht-color-sample-border-radius, 0);
   border-style: solid;
   border-width: var(--utrecht-color-sample-border-width, 0);
   box-sizing: border-box;
   display: inline-block;
-  inline-size: 2em;
+  inline-size: var(--utrecht-color-sample-inline-size, 2em);
 
   @media (forced-colors: active) {
     & {
