@@ -14,6 +14,8 @@
   box-sizing: border-box;
   display: inline-block;
   inline-size: var(--utrecht-color-sample-inline-size, 2em);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
 
   @media (forced-colors: active) {
     & {
