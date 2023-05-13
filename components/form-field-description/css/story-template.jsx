@@ -34,10 +34,7 @@ export const defaultArgs = {
   distanced: false,
 };
 
-export const exampleArgs = {
-  id: '0427f759-009c-43ad-8e1c-3d7b9982a133',
-  innerHTML: '<p>Your password must contain at least 16 characters.</p>',
-};
+export const exampleArgs = {};
 
 export const FormFieldDescription = ({
   id = defaultArgs.id,
