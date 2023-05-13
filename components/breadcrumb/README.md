@@ -67,7 +67,7 @@ Wel:
 - [WCAG eis 1.3.1](https://www.w3.org/TR/WCAG21/#info-and-relationships): gebruik het `<nav>` element voor de `navigation` landmark role.
 - [WCAG eis 1.3.6](https://www.w3.org/TR/WCAG21/#identify-purpose)
 - [WCAG eis 2.4.5](https://www.w3.org/TR/WCAG21/#multiple-ways)
-- [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): de label van de `navigation` landmark maakt duidelijk dat het om het broodkruimelpad gaat.
+- [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): de label van de `navigation` landmark maakt duidelijk dat het om het broodkruimelpad gaat. Zie ook: [Using `aria-label` to provide labels for objects](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA5).
 - [WCAG eis 2.4.8](https://www.w3.org/TR/WCAG21/#location):
   - gebruik `<a aria-current="location">` om de huidige pagina te markeren
   - een kruimelpad is een manier om duidelijk te maken waar de gebruiker zich bevind in de context van een site met meerdere pagina's.
