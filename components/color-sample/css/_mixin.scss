@@ -8,6 +8,7 @@
   background-color: var(--utrecht-color-sample-background-color, currentColor);
   block-size: 2em;
   border-color: var(--utrecht-color-sample-border-color, var(--utrecht-color-sample-default-border-color));
+  border-radius: var(--utrecht-color-sample-border-radius, 0);
   border-style: solid;
   border-width: var(--utrecht-color-sample-border-width, 0);
   box-sizing: border-box;
