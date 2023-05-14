@@ -1,0 +1,30 @@
+<!-- @license CC0-1.0 -->
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, ExampleTableWithLink } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-table"
+  title="CSS Component/Table"
+  component={ExampleTableWithLink}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Table row with a link
+
+Zie ook: [WCAG Technique: Using `aria-labelledby` to concatenate a label from several text nodes](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA9)
+
+<Canvas>
+  <Story name="Table row with a link" args={exampleArgs}>
+    {ExampleTableWithLink.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Table row a link" />

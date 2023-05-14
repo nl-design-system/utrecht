@@ -1,0 +1,48 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import {
+  argTypes,
+  defaultArgs,
+  exampleArgs,
+  ExampleTableWithCheckbox,
+  ExampleTableWithRadioButton,
+} from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-table"
+  title="CSS Component/Table"
+  component={ExampleTableWithCheckbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Table row with a checkbox
+
+<Canvas>
+  <Story name="Table row with a checkbox" args={exampleArgs}>
+    {ExampleTableWithCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+# Table row with a checkbox that controls a column of checkboxes
+
+Gebruik `aria-controls` om een koppeling te maken met welke checkboxes _checked_ of _not checked_ worden door een "Selecteer alles" checkbox te activeren.
+
+<Canvas>
+  <Story
+    name="Table row with a checkbox that controls a column of checkboxes"
+    args={{
+      ...exampleArgs,
+      selectAllCheckbox: true,
+    }}
+  >
+    {ExampleTableWithCheckbox.bind({})}
+  </Story>
+</Canvas>

@@ -1,0 +1,28 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, defaultArgs, exampleArgs, ExampleTableWithRadioButton } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-table"
+  title="CSS Component/Table"
+  component={ExampleTableWithRadioButton}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Table
+
+## Table row with a radio button group
+
+<Canvas>
+  <Story name="Table row with a radio button" args={exampleArgs}>
+    {ExampleTableWithRadioButton.bind({})}
+  </Story>
+</Canvas>

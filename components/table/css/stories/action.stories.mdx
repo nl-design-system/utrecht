@@ -1,0 +1,55 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import {
+  argTypes,
+  defaultArgs,
+  exampleArgs,
+  ExampleTableWithButton,
+  ExampleTableWithButtonGroup,
+} from "../story-template";
+import actionDocs from "./_table-row-action.md";
+import "../index.scss";
+
+<Meta
+  id="css-table"
+  title="CSS Component/Table"
+  component={ExampleTableWithButton}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Table row with a button
+
+<Description>{actionDocs}</Description>
+
+## Table row with a button
+
+Gebruik _subtle button_ als je wilt voorkomen dat de tabel visueel te druk is wanneer er veel buttons op het scherm zijn.
+
+<Canvas>
+  <Story
+    name="Table row with a button"
+    args={{
+      ...exampleArgs,
+      buttonAppearance: "subtle-button",
+    }}
+  >
+    {ExampleTableWithButton.bind({})}
+  </Story>
+</Canvas>
+
+## Table row with a button group
+
+Gebruik een _button group_ component als je meerdere buttons bij een tabelrij wilt hebben.
+
+<Canvas>
+  <Story name="Table row with a button group" args={exampleArgs}>
+    {ExampleTableWithButtonGroup.bind({})}
+  </Story>
+</Canvas>
