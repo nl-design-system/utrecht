@@ -18,90 +18,6 @@ import "../index.scss";
 
 # Checkbox Component States
 
-## Disabled
-
-<Canvas>
-  <Story
-    name="Disabled"
-    args={{
-      disabled: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
-## Checked and Disabled
-
-<Canvas>
-  <Story
-    name="checked and disabled"
-    args={{
-      ...defaultArgs,
-      disabled: true,
-      checked: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
-## Checked
-
-<Canvas>
-  <Story
-    name="Checked"
-    args={{
-      checked: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
-## Indeterminate
-
-<Canvas>
-  <Story
-    name="Indeterminate"
-    args={{
-      indeterminate: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
-## Indeterminate and Disabled
-
-<Canvas>
-  <Story
-    name="Indeterminate and Disabled"
-    args={{
-      indeterminate: true,
-      disabled: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
-## Required and invalid
-
-The native checkbox should have the same position and size as the custom checkbox, so the native error message tooltip aligns with the custom checkbox.
-
-<Canvas>
-  <Story
-    name="Required and Invalid"
-    args={{
-      invalid: true,
-      required: true,
-    }}
-  >
-    {CustomCheckbox.bind({})}
-  </Story>
-</Canvas>
-
 ## Active
 
 <Canvas>
@@ -141,6 +57,317 @@ The native checkbox should have the same position and size as the custom checkbo
     name="focus"
     args={{
       ...defaultArgs,
+    }}
+    parameters={{
+      pseudo: { focus: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Focus-visible
+
+<Canvas>
+  <Story
+    name="focus-visible"
+    args={{
+      ...defaultArgs,
+    }}
+    parameters={{
+      pseudo: { focus: true, focusVisible: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled
+
+<Canvas>
+  <Story
+    name="Disabled"
+    args={{
+      disabled: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled and active
+
+Disabled checkbox moet geen `active` variant hebben.
+
+<Canvas>
+  <Story
+    name="Disabled and active"
+    args={{
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { active: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled and hover
+
+Disabled checkbox moet geen `hover` variant hebben.
+
+<Canvas>
+  <Story
+    name="Disabled and hover"
+    args={{
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { hover: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled and focus
+
+Disabled checkbox moet geen `focus` variant hebben.
+
+<Canvas>
+  <Story
+    name="Disabled and focus"
+    args={{
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { focus: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Disabled and focus-visible
+
+<Canvas>
+  <Story
+    name="Disabled and focus-visible"
+    args={{
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { focus: true, focusVisible: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked and Disabled
+
+<Canvas>
+  <Story
+    name="checked and disabled"
+    args={{
+      ...defaultArgs,
+      disabled: true,
+      checked: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked, disabled and active
+
+Checked, disabled checkbox moet geen `active` variant hebben.
+
+<Canvas>
+  <Story
+    name="Checked, disabled and active"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { active: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked, disabled and hover
+
+Checked, disabled checkbox moet geen `hover` variant hebben.
+
+<Canvas>
+  <Story
+    name="Checked, disabled and hover"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { hover: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked, disabled and focus
+
+Checked, disabled checkbox moet geen `focus` variant hebben.
+
+<Canvas>
+  <Story
+    name="Checked, disabled and focus"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { focus: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked, disabled and focus-visible
+
+<Canvas>
+  <Story
+    name="Checked, disabled and focus-visible"
+    args={{
+      checked: true,
+      disabled: true,
+    }}
+    parameters={{
+      pseudo: { focus: true, focusVisible: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked
+
+<Canvas>
+  <Story
+    name="Checked"
+    args={{
+      checked: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate
+
+<Canvas>
+  <Story
+    name="Indeterminate"
+    args={{
+      indeterminate: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and active
+
+<Canvas>
+  <Story
+    name="Indeterminate and active"
+    args={{
+      indeterminate: true,
+    }}
+    parameters={{
+      pseudo: { active: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and hover
+
+<Canvas>
+  <Story
+    name="Indeterminate and hover"
+    args={{
+      indeterminate: true,
+    }}
+    parameters={{
+      pseudo: { hover: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and focus
+
+<Canvas>
+  <Story
+    name="Indeterminate and focus"
+    args={{
+      indeterminate: true,
+    }}
+    parameters={{
+      pseudo: { focus: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and focus-visible
+
+<Canvas>
+  <Story
+    name="Indeterminate and focus-visible"
+    args={{
+      indeterminate: true,
+    }}
+    parameters={{
+      pseudo: { focus: true, focusVisible: true },
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate and Disabled
+
+<Canvas>
+  <Story
+    name="Indeterminate and Disabled"
+    args={{
+      indeterminate: true,
+      disabled: true,
+    }}
+  >
+    {CustomCheckbox.bind({})}
+  </Story>
+</Canvas>
+
+## Required and invalid
+
+The native checkbox should have the same position and size as the custom checkbox, so the native error message tooltip aligns with the custom checkbox.
+
+<Canvas>
+  <Story
+    name="Required and Invalid"
+    args={{
+      invalid: true,
+      required: true,
     }}
   >
     {CustomCheckbox.bind({})}

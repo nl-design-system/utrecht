@@ -29,6 +29,19 @@ import { Checkbox } from "../story-template";
   </Story>
 </Canvas>
 
+## Active
+
+<Canvas>
+  <Story
+    name="Active"
+    args={{
+      active: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
 ## Disabled
 
 <Canvas>
@@ -36,6 +49,20 @@ import { Checkbox } from "../story-template";
     name="Disabled"
     args={{
       disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+## Checked + Active
+
+<Canvas>
+  <Story
+    name="Checked + Active"
+    args={{
+      active: true,
+      checked: true,
     }}
   >
     {Checkbox.bind({})}
@@ -50,6 +77,19 @@ import { Checkbox } from "../story-template";
     args={{
       checked: true,
       disabled: true,
+    }}
+  >
+    {Checkbox.bind({})}
+  </Story>
+</Canvas>
+
+## Indeterminate
+
+<Canvas>
+  <Story
+    name="Indeterminate"
+    args={{
+      indeterminate: true,
     }}
   >
     {Checkbox.bind({})}
