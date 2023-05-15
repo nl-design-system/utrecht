@@ -26,7 +26,9 @@ export default {
       params: {
         attributes: [
           {
-            fill: 'CurrentColor',
+            fill: 'currentColor',
+            height: '1em',
+            width: '1em',
           },
         ],
       },
