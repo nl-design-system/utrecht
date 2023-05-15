@@ -35,7 +35,7 @@ The components are rendered using custom elements, but since we provide a corres
 To make the custom elements work, you also need to call `defineCustomElements()` once in your page, immediately when it is loaded. Add this to `main.ts`:
 
 ```ts
-import { defineCustomElements } from "@utrecht/web-component-library-stencil";
+import { defineCustomElements } from "@utrecht/web-component-library-stencil/loader";
 
 defineCustomElements();
 ```
