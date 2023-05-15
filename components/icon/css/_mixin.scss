@@ -12,3 +12,14 @@
   position: relative;
   width: var(--utrecht-icon-size);
 }
+
+@mixin utrecht-icon__svg {
+  /*
+   * Override the width of SVGs when they are hardcoded, and avoid oversized SVG icons.
+   * For example:
+   * 
+   *   <svg width="128px" height="128px">
+   */
+  height: 100%;
+  width: 100%;
+}
