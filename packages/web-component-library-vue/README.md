@@ -51,7 +51,7 @@ Since the implementation of the web components needs to be loaded in the browser
 
 ```js
 import "@utrecht/design-tokens/dist/index.css";
-import { defineCustomElements } from "@utrecht/web-component-library-stencil";
+import { defineCustomElements } from "@utrecht/web-component-library-stencil/loader";
 
 createApp(App).use(router).mount("#app");
 
