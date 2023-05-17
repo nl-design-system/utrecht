@@ -6,8 +6,8 @@
 
 import React from 'react';
 import { ButtonGroup } from '../../button-group/css/story-template';
-import { LinkButton } from '../../link-button/css/story-template';
 import { Link } from '../../link/css/story-template';
+import { LinkButton } from '../../link-button/css/story-template';
 import './index.scss';
 
 export const argTypes = {
@@ -31,8 +31,8 @@ export const defaultArgs = {
 export const exampleArgs = {
   headingLevel: 2,
   languages: [
-    { textContent: 'EN', title: 'This page in English', lang: 'en', current: true, hrefLang: 'en' },
-    { textContent: 'NL', title: 'Deze pagina in Nederlands', lang: 'nl', current: false, hrefLang: 'nl' },
+    { textContent: 'EN', ariaLabel: 'This page in English', lang: 'en', current: true, hrefLang: 'en' },
+    { textContent: 'NL', ariaLabel: 'Deze pagina in Nederlands', lang: 'nl', current: false, hrefLang: 'nl' },
   ],
 };
 
@@ -78,8 +78,8 @@ export const AlternateLangButtonGroup = ({ headingLevel = defaultArgs.headingLev
         Taal kiezen
       </Heading>
       <ButtonGroup>
-        {languages.map(({ current, lang, textContent, title }, index) => (
-          <LinkButton pressed={!!current} aria-label={title} lang={lang} key={index}>
+        {languages.map(({ current, lang, textContent, ariaLabel }, index) => (
+          <LinkButton pressed={!!current} aria-label={ariaLabel} lang={lang} key={index}>
             {textContent}
           </LinkButton>
         ))}

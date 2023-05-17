@@ -99,7 +99,7 @@ Links moeten nooit een hele zin in beslag nemen, maar alleen de tekst die beschr
 
 We beschrijven de volgende states van een link:
 
-- **normal**: geen van de onderstaande states is van toepassing op de link. Deze state is gewoon de `:link` class in de code, maar we beschrijven hem hier om aan te geven dat de link 'normaal' is zonder een andere state. We gebruiken `normal` in plaats
+- **normal**: geen van de onderstaande states is van toepassing op de link. Deze state is gewoon de `utrecht-link` class in de code, maar we beschrijven hem hier om aan te geven dat de link 'normaal' is zonder een andere state.
 - **active**: de gebruiker activeert de link op dit moment. Bijvoorbeeld door er op te klikken. De `active` state duurt maar heel kort.
 - **hover**: de gebruiker heeft de aanwijzer boven de link. Bijvoorbeeld door met de muiscursor er over te 'zweven'.
 - **focus**: de link heeft de focus doordat er op geklikt of getapt is. Denk ook aan voice of eye-tracking.
@@ -114,11 +114,13 @@ Voor de component naam hebben we voor "`link`" gekozen, en niet voor "`a`" zoals
 ## HTML
 
 - Gebruik het `<a>` element om links aan te maken.
+- Gebuik niet het `title` attribuut. Sommige browsers gebruiken een tooltip om de tekst uit het `title` attribuut te tonen, die tooltip kan over de tekst heenstaan waardoor het niet leesbaar is.
 - Gebruik nooit een `<button>` of een ander element met een `click` event om zelf een link na te maken.
 - Gebruik `aria-current="page"` wanneer de link verwijst naar de huidige pagina. Voor consistente navigatie ([WCAG eis 3.2.3](https://www.w3.org/TR/WCAG21/#consistent-navigation)) is het beter om links in de navigatie te laten staan dan om geen `<a>` te gebruiken voor de huidige pagina.
 - Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
 - Gebruik nooit `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
 - Vermijd onnodig gebruik van `tabindex="-1"`, er zijn weinig situaties waar het nodig is.
+- Gebruik `aria-label` en niet `title` voor het volledige label van de link. Soms is de inhoud van het `a` element niet een goed label, bijvoorbeeld wanneer er een icoon in staat of het zichtbare label een algemene tekst is zoals "Lees meer". Zie ook [WCAG Technique ARIA8](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
 
 ### `tabindex="-1"`
 
@@ -267,4 +269,5 @@ Wel goed: logo zonder link op de homepage.
 - [WCAG 1.4.1](https://www.w3.org/TR/WCAG21/#use-of-color): een link is niet voor iedereen duidelijk herkenbaar wanneer je alleen kleur gebruikt. Gebruik ook onderstreping om de link duidelijk te maken.
 - [WCAG 1.4.3](https://www.w3.org/TR/WCAG21/#contrast-minimum)
 - [WCAG 2.4.4](https://www.w3.org/TR/WCAG21/#link-purpose-in-context)
+- [WCAG 2.5.3](https://www.w3.org/TR/WCAG21/#label-in-name)
 - [WCAG 3.1.2](https://www.w3.org/TR/WCAG21/#language-of-parts)

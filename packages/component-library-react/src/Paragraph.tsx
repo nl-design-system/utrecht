@@ -26,7 +26,13 @@ export const Paragraph = forwardRef(
         className,
       )}
     >
-      {small ? <small className="utrecht-paragraph__small">{children}</small> : children}
+      {lead ? (
+        <b className="utrecht-paragraph__b">{children}</b>
+      ) : small ? (
+        <small className="utrecht-paragraph__small">{children}</small>
+      ) : (
+        children
+      )}
     </p>
   ),
 );

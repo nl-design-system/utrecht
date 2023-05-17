@@ -1,10 +1,9 @@
-import { FC } from 'react';
-import { Heading2 } from '../Heading2';
+import { FC, TimeHTMLAttributes } from 'react';
 
-interface CalendarNavigationLabelProps {
-  label?: string;
-}
+type CalendarNavigationLabelProps = TimeHTMLAttributes<HTMLTimeElement>;
 
-export const CalendarNavigationLabel: FC<CalendarNavigationLabelProps> = ({ label }) => (
-  <Heading2 className="utrecht-calendar__navigation-label">{label}</Heading2>
+export const CalendarNavigationLabel: FC<CalendarNavigationLabelProps> = ({ children, ...props }) => (
+  <time className="utrecht-calendar__navigation-label" {...props}>
+    {children}
+  </time>
 );

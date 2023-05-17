@@ -28,6 +28,10 @@ export const argTypes = {
     description: 'Focus',
     control: 'boolean',
   },
+  focusVisible: {
+    description: 'Focus-visible',
+    control: 'boolean',
+  },
   invalid: {
     description: 'Invalid',
     control: 'boolean',
@@ -41,6 +45,8 @@ export const defaultArgs = {
   hover: false,
   focus: false,
   invalid: false,
+  name: '',
+  id: '',
 };
 
 export const exampleArgs = {};
@@ -51,21 +57,28 @@ export const RadioButton = ({
   active = defaultArgs.active,
   hover = defaultArgs.hover,
   focus = defaultArgs.focus,
+  focusVisible = defaultArgs.focusVisible,
   invalid = defaultArgs.invalid,
+  name = defaultArgs.name,
+  id = defaultArgs.id,
 }) => (
   <input
     type="radio"
-    checked={checked || null}
+    defaultChecked={checked || null}
     disabled={disabled || null}
     className={clsx(
       'utrecht-radio-button',
+      'utrecht-radio-button--html-input',
       checked && 'utrecht-radio-button--checked',
       disabled && 'utrecht-radio-button--disabled',
       active && 'utrecht-radio-button--active',
       hover && 'utrecht-radio-button--hover',
       focus && 'utrecht-radio-button--focus',
+      focusVisible && 'utrecht-radio-button--focus-visible',
       invalid && 'utrecht-radio-button--invalid',
     )}
+    name={name || undefined}
+    id={id || undefined}
   />
 );
 

@@ -27,6 +27,10 @@
   line-height: var(--utrecht-paragraph-small-line-height, var(--utrecht-paragraph-line-height, inherit));
 }
 
+@mixin utrecht-paragraph__b {
+  font-weight: inherit;
+}
+
 @mixin utrecht-paragraph__html-small {
   font-size: inherit;
 }

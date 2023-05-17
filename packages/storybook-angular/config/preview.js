@@ -4,6 +4,7 @@ import { withTests } from '@storybook/addon-jest';
 import { componentWrapperDecorator } from '@storybook/angular';
 import results from '@utrecht/component-library-angular/dist/.jest-test-results.json';
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
+import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
 import docJson from '../tmp/documentation.json';
 setCompodocJson(docJson);
 
@@ -28,4 +29,5 @@ export const parameters = {
     },
   },
   ...addonStatus,
+  ...addonViewport,
 };

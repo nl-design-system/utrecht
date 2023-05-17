@@ -1,6 +1,6 @@
 import { render } from '@testing-library/angular';
-import { clearElements } from '../utils';
 import { UtrechtFormFieldDescription } from './component';
+import { clearElements } from '../utils';
 
 afterEach(() => {
   clearElements();

@@ -29,7 +29,11 @@
         "padding-block-end": { "value": "0.5em" },
         "padding-block-start": { "value": "0.5em" },
         "padding-inline-end": { "value": "0" },
-        "padding-inline-start": { "value": "0.4em" }
+        "padding-inline-start": { "value": "0.4em" },
+        "selected": {
+          "background-color": { "value": "{utrecht.color.blue.90}" },
+          "color": { "value": "{utrecht.color.black}" }
+        }
       },
       "row": {
         "padding-inline-end": {},

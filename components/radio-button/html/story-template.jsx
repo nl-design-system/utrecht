@@ -46,7 +46,7 @@ export const RadioButton = ({
   <div className="utrecht-html">
     <input
       type="radio"
-      checked={checked || null}
+      defaultChecked={checked || null}
       aria-invalid={invalid || null}
       disabled={disabled || null}
       required={required || null}

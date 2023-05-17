@@ -52,6 +52,9 @@ export namespace Components {
     }
     interface UtrechtCodeBlock {
     }
+    interface UtrechtColorSample {
+        "color": string;
+    }
     interface UtrechtContactCardTemplate {
     }
     interface UtrechtCustomCheckbox {
@@ -709,6 +712,12 @@ declare global {
     var HTMLUtrechtCodeBlockElement: {
         prototype: HTMLUtrechtCodeBlockElement;
         new (): HTMLUtrechtCodeBlockElement;
+    };
+    interface HTMLUtrechtColorSampleElement extends Components.UtrechtColorSample, HTMLStencilElement {
+    }
+    var HTMLUtrechtColorSampleElement: {
+        prototype: HTMLUtrechtColorSampleElement;
+        new (): HTMLUtrechtColorSampleElement;
     };
     interface HTMLUtrechtContactCardTemplateElement extends Components.UtrechtContactCardTemplate, HTMLStencilElement {
     }
@@ -2150,6 +2159,7 @@ declare global {
         "utrecht-checkbox": HTMLUtrechtCheckboxElement;
         "utrecht-code": HTMLUtrechtCodeElement;
         "utrecht-code-block": HTMLUtrechtCodeBlockElement;
+        "utrecht-color-sample": HTMLUtrechtColorSampleElement;
         "utrecht-contact-card-template": HTMLUtrechtContactCardTemplateElement;
         "utrecht-custom-checkbox": HTMLUtrechtCustomCheckboxElement;
         "utrecht-digid-button": HTMLUtrechtDigidButtonElement;
@@ -2439,6 +2449,9 @@ declare namespace LocalJSX {
     interface UtrechtCode {
     }
     interface UtrechtCodeBlock {
+    }
+    interface UtrechtColorSample {
+        "color"?: string;
     }
     interface UtrechtContactCardTemplate {
     }
@@ -3024,6 +3037,7 @@ declare namespace LocalJSX {
         "utrecht-checkbox": UtrechtCheckbox;
         "utrecht-code": UtrechtCode;
         "utrecht-code-block": UtrechtCodeBlock;
+        "utrecht-color-sample": UtrechtColorSample;
         "utrecht-contact-card-template": UtrechtContactCardTemplate;
         "utrecht-custom-checkbox": UtrechtCustomCheckbox;
         "utrecht-digid-button": UtrechtDigidButton;
@@ -3278,6 +3292,7 @@ declare module "@stencil/core" {
             "utrecht-checkbox": LocalJSX.UtrechtCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtCheckboxElement>;
             "utrecht-code": LocalJSX.UtrechtCode & JSXBase.HTMLAttributes<HTMLUtrechtCodeElement>;
             "utrecht-code-block": LocalJSX.UtrechtCodeBlock & JSXBase.HTMLAttributes<HTMLUtrechtCodeBlockElement>;
+            "utrecht-color-sample": LocalJSX.UtrechtColorSample & JSXBase.HTMLAttributes<HTMLUtrechtColorSampleElement>;
             "utrecht-contact-card-template": LocalJSX.UtrechtContactCardTemplate & JSXBase.HTMLAttributes<HTMLUtrechtContactCardTemplateElement>;
             "utrecht-custom-checkbox": LocalJSX.UtrechtCustomCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtCustomCheckboxElement>;
             "utrecht-digid-button": LocalJSX.UtrechtDigidButton & JSXBase.HTMLAttributes<HTMLUtrechtDigidButtonElement>;

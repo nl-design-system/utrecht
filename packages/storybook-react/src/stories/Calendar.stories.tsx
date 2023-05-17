@@ -2,6 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Calendar } from '@utrecht/component-library-react/dist/css-module';
 import tokensDefinition from '@utrecht/components/calendar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { addDays, addWeeks, addYears } from 'date-fns';
 import { enUS, nl } from 'date-fns/locale';
 import { designTokenStory } from './util';
 
@@ -24,13 +25,15 @@ const meta = {
     onCalendarClick: (date) => {
       console.log(date);
     },
-    currentDate: new Date(),
+    currentDate: addDays(new Date(), 3),
     events,
     locale: nl,
     previousYearButtonTitle: 'Vorig jaar',
     nextYearButtonTitle: 'volgend jaar',
     previousMonthButtonTitle: 'Vorige maand',
     nextMonthButtonTitle: 'volgende maand',
+    minDate: new Date(),
+    maxDate: addYears(new Date(), 1),
   },
   argTypes: {
     onCalendarClick: {
@@ -90,6 +93,20 @@ const meta = {
         defaultValue: { summary: 'Next month' },
       },
     },
+    minDate: {
+      name: 'minDate',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'Minimum date' },
+      },
+    },
+    maxDate: {
+      name: 'maxDate',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'Maximum date' },
+      },
+    },
   },
 } satisfies Meta<typeof Calendar>;
 
@@ -97,6 +114,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const LimitedRangeCalendar: Story = {
+  args: {
+    onCalendarClick: (date) => {
+      console.log(date);
+    },
+    currentDate: new Date(),
+    minDate: new Date(),
+    maxDate: addWeeks(new Date(), 2),
+    events,
+  },
+};
 
 export const EnglishCalendar: Story = {
   args: {

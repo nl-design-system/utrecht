@@ -9,13 +9,15 @@ import {
   format,
   formatISO,
   getYear,
+  isAfter,
+  isBefore,
   isSameDay,
   isSameMonth,
   Locale,
   parseISO,
-  setDate as setDateFns,
   setMonth,
   setYear,
+  startOfDay,
   startOfMonth,
   startOfWeek,
 } from 'date-fns';
@@ -45,7 +47,7 @@ function createCalendar(today: Date): Date[] {
   return eachDayOfInterval({ start, end });
 }
 
-type Events = {
+export type Events = {
   date: string;
   emphasis?: boolean;
   selected?: boolean;
@@ -78,6 +80,8 @@ interface CalendarProps {
   nextYearButtonTitle?: string;
   previousMonthButtonTitle?: string;
   nextMonthButtonTitle?: string;
+  minDate?: Date;
+  maxDate?: Date;
 }
 
 /**
@@ -94,11 +98,14 @@ export const Calendar: FC<CalendarProps> = ({
   nextYearButtonTitle = 'Next year',
   previousMonthButtonTitle = 'Previous month',
   nextMonthButtonTitle = 'Next month',
+  minDate,
+  maxDate,
 }) => {
-  const [date, setDate] = useState(currentDate || new Date());
-  const calendar = createCalendar(date);
-  const start = startOfWeek(date, { weekStartsOn: 1 });
-  const end = endOfWeek(date, { weekStartsOn: 1 });
+  const [visibleMonth, setVisibleMonth] = useState(currentDate || new Date());
+  const [selectedDate, setSelectedDate] = useState(currentDate);
+  const calendar = createCalendar(visibleMonth);
+  const start = startOfWeek(visibleMonth, { weekStartsOn: 1 });
+  const end = endOfWeek(visibleMonth, { weekStartsOn: 1 });
 
   const currentWeek = eachDayOfInterval({ start, end }).map((day) => day);
   const chunksWeeks = chunk(calendar, calendar.length / 6);
@@ -131,16 +138,18 @@ export const Calendar: FC<CalendarProps> = ({
         <CalendarNavigationButtons
           previousIcon={<IconArrowLeftDouble title={previousYearButtonTitle} />}
           nextIcon={<IconArrowRightDouble title={nextYearButtonTitle} />}
-          onPreviousClick={() => setDate(setYear(date, getYear(date) - 1))}
-          onNextClick={() => setDate(addYears(date, 1))}
+          onPreviousClick={() => setVisibleMonth(setYear(visibleMonth, getYear(visibleMonth) - 1))}
+          onNextClick={() => setVisibleMonth(addYears(visibleMonth, 1))}
         >
           <CalendarNavigationButtons
             previousIcon={<IconArrowLeft title={previousMonthButtonTitle} />}
             nextIcon={<IconArrowRight title={nextMonthButtonTitle} />}
-            onPreviousClick={() => setDate(setMonth(date, date.getMonth() - 1))}
-            onNextClick={() => setDate(addMonths(date, 1))}
+            onPreviousClick={() => setVisibleMonth(setMonth(visibleMonth, visibleMonth.getMonth() - 1))}
+            onNextClick={() => setVisibleMonth(addMonths(visibleMonth, 1))}
           >
-            <CalendarNavigationLabel label={format(date, 'LLLL Y', { locale })} />
+            <CalendarNavigationLabel dateTime={format(visibleMonth, 'yyyy-mm')}>
+              {format(visibleMonth, 'LLLL Y', { locale })}
+            </CalendarNavigationLabel>
           </CalendarNavigationButtons>
         </CalendarNavigationButtons>
       </CalendarNavigation>
@@ -162,19 +171,25 @@ export const Calendar: FC<CalendarProps> = ({
                 {week.map((day, index) => {
                   return (
                     <CalendarTableDaysItemDay
-                      isToday={isSameDay(date, day.date)}
-                      dayOutOfTheMonth={!isSameMonth(day.date, date)}
+                      isToday={isSameDay(day.date, Date.now())}
+                      dayOutOfTheMonth={!isSameMonth(day.date, visibleMonth)}
                       key={index}
-                      onClick={(event) => {
-                        const selectedDay = setDateFns(date, Number((event.target as HTMLButtonElement).textContent));
-                        setDate(selectedDay);
-                        onCalendarClick(formatISO(selectedDay));
+                      onClick={() => {
+                        setVisibleMonth(day.date);
+                        if (isSameMonth(day.date, visibleMonth)) {
+                          setSelectedDate(day.date);
+                          onCalendarClick(formatISO(day.date));
+                        }
                       }}
                       aria-label={format(day.date, 'eeee dd LLLL Y', { locale })}
                       day={day.date.getDate().toString()}
                       emphasis={day.emphasis}
-                      selected={day.selected}
-                      disabled={day.disabled}
+                      selected={day.selected || (selectedDate && isSameDay(day.date, selectedDate))}
+                      disabled={
+                        day.disabled ||
+                        (minDate && isBefore(day.date, startOfDay(minDate))) ||
+                        (maxDate && isAfter(day.date, endOfDay(maxDate)))
+                      }
                     />
                   );
                 })}

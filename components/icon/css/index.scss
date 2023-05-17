@@ -9,3 +9,7 @@
 .utrecht-icon {
   @include utrecht-icon;
 }
+
+.utrecht-icon svg {
+  @include utrecht-icon__svg;
+}

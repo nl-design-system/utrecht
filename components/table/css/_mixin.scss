@@ -55,25 +55,40 @@
 @mixin utrecht-table__footer {
 }
 
-@mixin utrecht-table__header-cell {
-  color: var(--utrecht-table-header-cell-color);
-  font-size: var(--utrecht-table-header-cell-font-size);
-  font-weight: var(--utrecht-table-header-cell-font-weight);
-  text-align: start;
-  text-transform: var(--utrecht-table-header-cell-text-transform);
-  vertical-align: var(--_utrecht-table-header-cell-vertical-align, top);
-}
-
-@mixin utrecht-table__cell {
-  border-block-end-color: var(--utrecht-table-row-border-block-end-color, transparent);
-  border-block-end-style: solid;
-  border-block-end-width: var(--utrecht-table-row-border-block-end-width, 0);
+@mixin utrecht-table__any-cell {
   line-height: var(--utrecht-table-cell-line-height, inherit);
   padding-block-end: var(--utrecht-table-cell-padding-block-end, 0);
   padding-block-start: var(--utrecht-table-cell-padding-block-start, 0);
   padding-inline-end: var(--utrecht-table-cell-padding-inline-end, 0);
   padding-inline-start: var(--utrecht-table-cell-padding-inline-start, 0);
   text-align: start;
+}
+
+@mixin utrecht-table__any-cell--selected {
+  background-color: var(--utrecht-table-cell-selected-background-color, highlight);
+  color: var(--utrecht-table-cell-selected-color, highlightText);
+}
+
+@mixin utrecht-table__header-cell {
+  @include utrecht-table__any-cell;
+
+  color: var(--utrecht-table-header-cell-color);
+  font-size: var(--utrecht-table-header-cell-font-size);
+  font-weight: var(--utrecht-table-header-cell-font-weight, bold);
+  text-transform: var(--utrecht-table-header-cell-text-transform);
+  vertical-align: var(--_utrecht-table-header-cell-vertical-align, top);
+}
+
+@mixin utrecht-table__header-cell--selected {
+  @include utrecht-table__any-cell--selected;
+}
+
+@mixin utrecht-table__cell {
+  @include utrecht-table__any-cell;
+
+  border-block-end-color: var(--utrecht-table-row-border-block-end-color, transparent);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-table-row-border-block-end-width, 0);
   vertical-align: top;
 }
 
@@ -86,6 +101,10 @@
 
 @mixin utrecht-table__cell--last {
   padding-inline-end: var(--utrecht-table-row-padding-inline-end, var(--utrecht-table-cell-padding-inline-end, 0));
+}
+
+@mixin utrecht-table__cell--selected {
+  @include utrecht-table__any-cell--selected;
 }
 
 @mixin utrecht-table__cell--numeric-column {
@@ -109,6 +128,10 @@
 @mixin utrecht-table__row--alternate-even {
   background-color: var(--utrecht-table-row-alternate-even-background-color);
   color: var(--utrecht-table-row-alternate-even-color);
+}
+
+@mixin utrecht-table__row--selected {
+  @include utrecht-table__any-cell--selected;
 }
 
 @mixin utrecht-table--html-table {

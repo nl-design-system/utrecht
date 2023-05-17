@@ -73,7 +73,7 @@ _Let op:_ Op het moment van schrijven is het Design System nog volop in ontwikke
 
 ### Mis je een component?
 
-Reageer in gitlab of stuur een mailtje aan: René Olling: r.olling@utrecht.nl of Jeroen du Chatinier: j.du.chatinier@utrecht.nl
+Reageer in gitlab of stuur een mailtje aan: René Olling: [r.olling@utrecht.nl](mailto:r.olling@utrecht.nl) of Jeroen du Chatinier: [j.du.chatinier@utrecht.nl](mailto:j.du.chatinier@utrecht.nl)
 
 ## UX principes
 
@@ -241,4 +241,4 @@ We weten dat deze handzame set richtlijnen niet compleet is. Hij is ook aan vera
 
 Het belangrijkste: zet de eindgebruiker (je collega) centraal en niet de organisatie of de automatiseringsprocessen. Zo zorg je ervoor dat je niemand buitensluit en dat iedereen prettig kan werken.
 
-Heb je vragen of kunnen we je helpen bij jouw UX-strategie? Neem contact met ons op. René Olling: r.olling@utrecht.nl of Jeroen du Chatinier: j.du.chatinier@utrecht.nl .
+Heb je vragen of kunnen we je helpen bij jouw UX-strategie? Neem contact met ons op. René Olling: [r.olling@utrecht.nl](mailto:r.olling@utrecht.nl) of Jeroen du Chatinier: [j.du.chatinier@utrecht.nl](mailto:j.du.chatinier@utrecht.nl).

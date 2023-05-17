@@ -1,5 +1,7 @@
 /* eslint-env node */
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
+import { addonThemes } from '@utrecht/storybook-helpers/src/addon-themes';
+import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import clsx from 'clsx';
 import defaultsDeep from 'lodash.defaultsdeep';
@@ -110,27 +112,13 @@ const addonDocs = {
   },
 };
 
-// Configure storybook-addon-themes
-const addonThemes = {
-  clearable: true,
-  themes: {
-    default: 'Gemeente Utrecht',
-    target: 'root',
-    list: [
-      { name: 'No style', class: 'no-style', color: '#000000' },
-      { name: 'No design tokens', class: 'no-theme', color: '#CCCCCC' },
-      { name: 'Gemeente Utrecht', class: 'utrecht-theme', color: '#CC0000' },
-      { name: 'Gemeente Utrecht (dark mode)', class: 'utrecht-theme--color-scheme-dark', color: '#000000' },
-    ],
-  },
-};
-
 export const parameters = defaultsDeep(
   {},
   // Deep merge the following configurations:
   addonDocs,
   addonStatus,
   addonThemes,
+  addonViewport,
   defaultTab,
   sidebarOrder,
   tabOrder,

@@ -32,7 +32,11 @@
       <span class="utrecht-breadcrumb__text" v-bind="{...useMicrodataProp('name')}">
         <slot />
       </span>
-      <meta v-if="typeof index === 'number'" v-bind="{...useMicrodataProp('position')}" :content="index + 1" />
+      <meta
+        v-if="typeof index === 'number'"
+        v-bind="{...useMicrodataProp('position')}"
+        :content="(index + 1).toString()"
+      />
     </UtrechtLink>
   </li>
 </template>

@@ -1,20 +1,22 @@
 {
   "utrecht": {
     "calendar": {
-      "width": {
-        "value": "425px"
-      },
       "background-color": {},
       "table": {
-        "padding-block-start": {
-          "value": "30px"
-        },
-        "padding-block-end": {
-          "value": "30px"
-        },
+        "padding-block-start": {},
+        "padding-block-end": {},
         "weeks-item": {
           "width": {
             "value": "44px"
+          },
+          "padding-block-start": {
+            "value": "4px"
+          },
+          "padding-block-end": {
+            "value": "10px"
+          },
+          "line-height": {
+            "value": "24px"
           }
         },
         "days-item-day": {
@@ -24,7 +26,9 @@
           "color": {
             "value": "{utrecht.color.black}"
           },
-          "border-width": {},
+          "border-width": {
+            "value": "2px"
+          },
           "border-color": {
             "value": "transparent"
           },
@@ -34,7 +38,7 @@
               "value": "{utrecht.color.blue.40}"
             },
             "border-color": {
-              "value": "transparent"
+              "value": "{utrecht.color.black}"
             }
           },
           "focus": {
@@ -62,15 +66,17 @@
           },
           "is-today": {
             "color": {
-              "value": "{utrecht.color.blue.40}"
+              "value": "{utrecht.color.blue.30}"
             },
             "font-weight": {
               "value": "700"
             },
             "border-color": {
-              "value": "transparent"
+              "value": "{utrecht.color.blue.35}"
             },
-            "background-color": {}
+            "background-color": {
+              "value": "{utrecht.color.blue.90}"
+            }
           },
           "emphasis": {
             "color": {},
@@ -81,15 +87,21 @@
             "background-color": {}
           },
           "selected": {
-            "color": {},
+            "color": {
+              "value": "{utrecht.color.white}"
+            },
             "font-weight": {},
             "border-color": {
               "value": "transparent"
             },
-            "background-color": {}
+            "background-color": {
+              "value": "{utrecht.color.blue.30}"
+            }
           },
           "disabled": {
-            "color": {},
+            "color": {
+              "value": "{utrecht.color.grey.40}"
+            },
             "border-color": {
               "value": "transparent"
             },
@@ -98,24 +110,25 @@
         }
       },
       "navigation": {
-        "background-color": {
-          "value": "{utrecht.color.black}"
-        },
+        "background-color": {},
         "color": {
-          "value": "{utrecht.color.white}"
+          "value": "{utrecht.color.blue.30}"
         },
         "padding-block-start": {
-          "value": "20px"
+          "value": "2px"
         },
         "padding-block-end": {
-          "value": "20px"
+          "value": "2px"
         },
         "label": {
           "min-inline-size": {
             "value": "200px"
           },
           "color": {
-            "value": "{utrecht.color.white}"
+            "value": "{utrecht.color.black}"
+          },
+          "font-size": {
+            "value": "{utrecht.typography.scale.lg.font-size}"
           }
         }
       },

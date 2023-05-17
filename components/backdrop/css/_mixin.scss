@@ -17,6 +17,7 @@
   background-color: var(--utrecht-backdrop-background-color);
   color: var(--utrecht-backdrop-color);
   opacity: var(--_utrecht-backdrop-opacity);
+  -webkit-user-select: none;
   user-select: none;
 
   @keyframes utrecht-backdrop-fade-in {
