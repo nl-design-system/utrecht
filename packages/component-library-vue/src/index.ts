@@ -1,3 +1,4 @@
+export { default as AlertDialog } from './AlertDialog.vue';
 export { default as Article } from './Article.vue';
 export { default as BadgeStatus } from './BadgeStatus.vue';
 export { default as Button } from './Button.vue';
