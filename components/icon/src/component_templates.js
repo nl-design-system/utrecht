@@ -11,7 +11,7 @@ exports.component = (name, children, container) => {
 
 @Component({
   tag: '${webComponentName}',
-  styleUrl: "../../icon/index.scss",
+  styleUrl: "../../icon/generated.scss",
   shadow: true,
 })
 export class ${ComponentName} {
