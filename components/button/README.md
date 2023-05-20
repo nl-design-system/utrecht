@@ -37,6 +37,7 @@ Enkele voorbeelden waar je een button gebruikt:
 ### Terminologie
 
 - **button**: van het `<button>` HTML element, `role="button"` in ARIA.
+- **appearance**: van de [CSS `appearance` property](https://developer.mozilla.org/en-US/docs/Web/CSS/appearance) (bijvoorbeeld: `appearance: push-button`).
 
 ### States
 
