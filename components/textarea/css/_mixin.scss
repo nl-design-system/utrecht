@@ -6,6 +6,7 @@
 @import "../../common/focus/mixin";
 
 @mixin utrecht-textarea {
+  /* Fall back to `resize: vertical` for browsers that don't support `resize: block` */
   background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color));
   border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width));
   border-bottom-width: var(
@@ -35,6 +36,7 @@
     var(--utrecht-form-control-padding-inline-start, initial)
   );
   resize: vertical;
+  resize: block;
   width: 100%;
 }
 
