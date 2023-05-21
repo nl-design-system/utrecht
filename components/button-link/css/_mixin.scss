@@ -8,6 +8,7 @@
 
 @mixin utrecht-button-link {
   @include utrecht-button;
+  @include utrecht-button--media-query-forced-colors;
 
   cursor: var(--utrecht-action-navigate-cursor, pointer);
   text-decoration: none;
