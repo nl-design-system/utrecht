@@ -9,6 +9,7 @@
 
 .utrecht-button {
   @include utrecht-button;
+  @include utrecht-button--media-query-forced-colors;
 }
 
 .utrecht-button--distanced {

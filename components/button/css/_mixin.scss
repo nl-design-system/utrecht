@@ -203,6 +203,25 @@
   user-select: none;
 }
 
+@mixin utrecht-button--media-query-forced-colors {
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    --_utrecht-button-disabled-border-color: GrayText;
+    --_utrecht-button-disabled-color: GrayText;
+
+    /*
+     * `<button>` has these styles by default, but other elements styles as button do not:
+     *
+     * - `<div role="button">` needs this.
+     * - `<a role="button">` needs this.
+     */
+    background-color: ButtonFace;
+    border-color: buttonborder;
+    color: ButtonText;
+
+    /* TODO: Find a way to express the `pressed` state */
+  }
+}
+
 @mixin utrecht-button--distanced {
   margin-block-end: var(--utrecht-button-margin-block-end);
   margin-block-start: var(--utrecht-button-margin-block-start);
