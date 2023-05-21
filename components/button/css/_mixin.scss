@@ -57,6 +57,42 @@
     --_utrecht-button-hint-disabled-color,
     var(--_utrecht-button-appearance-disabled-color, var(--utrecht-button-disabled-color, var(--utrecht-button-color)))
   );
+  --_utrecht-button-pressed-background-color: var(
+    --_utrecht-button-hint-pressed-background-color,
+    var(
+      --_utrecht-button-hint-background-color,
+      var(
+        --_utrecht-button-appearance-pressed-background-color,
+        var(
+          --_utrecht-button-appearance-background-color,
+          var(--utrecht-button-pressed-background-color, var(--utrecht-button-background-color))
+        )
+      )
+    )
+  );
+  --_utrecht-button-pressed-border-color: var(
+    --_utrecht-button-hint-pressed-border-color,
+    var(
+      --_utrecht-button-hint-border-color,
+      var(
+        --_utrecht-button-appearance-pressed-border-color,
+        var(
+          --_utrecht-button-appearance-border-color,
+          var(--utrecht-button-pressed-border-color, var(--utrecht-button-border-color))
+        )
+      )
+    )
+  );
+  --_utrecht-button-pressed-color: var(
+    --_utrecht-button-hint-pressed-color,
+    var(
+      --_utrecht-button-hint-color,
+      var(
+        --_utrecht-button-appearance-pressed-color,
+        var(--_utrecht-button-appearance-color, var(--utrecht-button-pressed-color, var(--utrecht-button-color)))
+      )
+    )
+  );
   --_utrecht-button-focus-background-color: var(
     --_utrecht-button-hint-focus-background-color,
     var(
@@ -270,13 +306,9 @@
 }
 
 @mixin utrecht-button--pressed {
-  /* Copy `active` styles for now.
-  Later we can decide to:
-  - merge `active` and `pressed` and name the state `pressed`, or:
-  - merge `active` and `pressed` and name the state `active`, or:
-  - add `pressed` design tokens
-  */
-  @include utrecht-button--active;
+  background-color: var(--_utrecht-button-pressed-background-color);
+  border-color: var(--_utrecht-button-pressed-border-color);
+  color: var(--_utrecht-button-pressed-color);
 }
 
 @mixin utrecht-button-appearance($block, $modifier) {
@@ -300,6 +332,9 @@
     --_utrecht-button-appearance-hover-background-color: var(--utrecht-button-#{$modifier}-hover-background-color);
     --_utrecht-button-appearance-hover-border-color: var(--utrecht-button-#{$modifier}-hover-border-color);
     --_utrecht-button-appearance-hover-color: var(--utrecht-button-#{$modifier}-hover-color);
+    --_utrecht-button-appearance-pressed-background-color: var(--utrecht-button-#{$modifier}-pressed-background-color);
+    --_utrecht-button-appearance-pressed-border-color: var(--utrecht-button-#{$modifier}-pressed-border-color);
+    --_utrecht-button-appearance-pressed-color: var(--utrecht-button-#{$modifier}-pressed-color);
   }
 }
 
@@ -322,5 +357,10 @@
     --_utrecht-button-hint-hover-background-color: var(--utrecht-button-#{$modifier}-#{$hint}-hover-background-color);
     --_utrecht-button-hint-hover-border-color: var(--utrecht-button-#{$modifier}-#{$hint}-hover-border-color);
     --_utrecht-button-hint-hover-color: var(--utrecht-button-#{$modifier}-#{$hint}-hover-color);
+    --_utrecht-button-hint-pressed-background-color: var(
+      --utrecht-button-#{$modifier}-#{$hint}-pressed-background-color
+    );
+    --_utrecht-button-hint-pressed-border-color: var(--utrecht-button-#{$modifier}-#{$hint}-pressed-border-color);
+    --_utrecht-button-hint-pressed-color: var(--utrecht-button-#{$modifier}-#{$hint}-pressed-color);
   }
 }

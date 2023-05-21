@@ -152,10 +152,18 @@ const ButtonTableBody = ({ variants, textContent, icon }) => (
     </tr>
     <tr>
       <th className="utrecht-table__header-cell" scope="row">
-        Active or Pressed
+        Active
       </th>
       {variants.map((variant) => (
         <td className="utrecht-table__cell">{Button({ ...variant, textContent, active: true })}</td>
+      ))}
+    </tr>
+    <tr>
+      <th className="utrecht-table__header-cell" scope="row">
+        Pressed
+      </th>
+      {variants.map((variant) => (
+        <td className="utrecht-table__cell">{Button({ ...variant, textContent, pressed: true })}</td>
       ))}
     </tr>
     <tr>

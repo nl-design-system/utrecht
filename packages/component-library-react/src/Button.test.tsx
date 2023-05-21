@@ -307,6 +307,42 @@ describe('Button', () => {
     expect(handleClick).toHaveBeenCalled();
   });
 
+  describe('toggle button', () => {
+    it('is not a toggle button by default', () => {
+      const { container } = render(<Button />);
+
+      const button = container.querySelector(':only-child');
+
+      expect(button).not.toHaveAttribute('aria-pressed');
+    });
+
+    it('can be a toggle button', () => {
+      const { container } = render(<Button pressed={false} />);
+
+      const button = container.querySelector(':only-child');
+
+      expect(button).toHaveAttribute('aria-pressed', 'false');
+    });
+
+    describe('pressed state', () => {
+      it('can be pressed', () => {
+        const { container } = render(<Button pressed />);
+
+        const button = container.querySelector(':only-child');
+
+        expect(button).toHaveAttribute('aria-pressed', 'true');
+      });
+
+      it('renders a design system BEM class name', () => {
+        const { container } = render(<Button pressed />);
+
+        const button = container.querySelector(':only-child');
+
+        expect(button).toHaveClass('utrecht-button--pressed');
+      });
+    });
+  });
+
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLButtonElement>();
 

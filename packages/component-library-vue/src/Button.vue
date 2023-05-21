@@ -8,6 +8,7 @@
       appearance: { type: String as PropType<AppearanceType>, required: false, default: undefined },
       type: { type: String as PropType<ButtonTypes>, required: false, default: "button" },
       busy: { type: Boolean, required: false, default: false },
+      pressed: { type: Boolean, required: false, default: undefined },
     },
   });
 </script>
@@ -15,9 +16,11 @@
 <template>
   <button
     :aria-busy="busy || undefined"
+    :aria-pressed="pressed"
     :class="[
     'utrecht-button',
     { 'utrecht-button--busy': busy },
+    { 'utrecht-button--pressed': pressed },
     { 'utrecht-button--primary-action': appearance === 'primary-action-button' },
     { 'utrecht-button--secondary-action': appearance === 'secondary-action-button' },
     { 'utrecht-button--submit': type === 'submit' },
