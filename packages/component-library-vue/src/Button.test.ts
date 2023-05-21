@@ -108,6 +108,45 @@ describe('Button', () => {
     });
   });
 
+  describe('toggle button', () => {
+    it('is not a toggle button by default', () => {
+      const { getByRole } = render(Button);
+
+      const button = getByRole('button');
+
+      expect(button).not.toHaveAttribute('aria-pressed');
+    });
+
+    it('can be a toggle button', () => {
+      const { getByRole } = render(Button, { props: { pressed: false } });
+
+      const button = getByRole('button');
+
+      expect(button).toHaveAttribute('aria-pressed');
+      //  Unfortunately `not.toBePressed()` is not an API yet
+      expect(button).toHaveAttribute('aria-pressed', 'false');
+    });
+
+    describe('pressed state', () => {
+      it('can have a pressed state', () => {
+        const { container } = render(Button, { props: { pressed: true } });
+
+        const button = container.querySelector(':only-child');
+
+        //  Unfortunately `toBePressed()` is not an API yet
+        expect(button).toHaveAttribute('aria-pressed', 'true');
+      });
+
+      it('renders a design system BEM class name', () => {
+        const { container } = render(Button, { props: { pressed: true } });
+
+        const button = container.querySelector(':only-child');
+
+        expect(button).toHaveClass('utrecht-button--pressed');
+      });
+    });
+  });
+
   describe('submit button', () => {
     it('is not a submit button by default', () => {
       const { container } = render(Button);

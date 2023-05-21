@@ -11,12 +11,14 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   host: {
     '[attr.aria-busy]': 'busy ? "true": null',
     '[attr.aria-invalid]': 'invalid || undefined',
+    '[attr.aria-pressed]': 'pressed',
     '[attr.disabled]': 'disabled ? "disabled": null',
     '[attr.required]': 'required ? "required": null',
     '[attr.type]': 'type || "button"',
     '[class.utrecht-button--busy]': 'busy',
     '[class.utrecht-button--disabled]': 'disabled',
     '[class.utrecht-button--html-button]': 'true',
+    '[class.utrecht-button--pressed]': 'pressed',
     '[class.utrecht-button--primary-action]': 'appearance === "primary-action-button"',
     '[class.utrecht-button--secondary-action]': 'appearance === "secondary-action-button"',
     '[class.utrecht-button--submit]': 'type === "submit"',
@@ -26,6 +28,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 })
 export class UtrechtButtonAttr {
   @Input() busy = false;
+  @Input() pressed? = undefined;
   @Input() appearance?: string;
   constructor() {}
 }

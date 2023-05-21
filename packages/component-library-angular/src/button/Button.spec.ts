@@ -99,6 +99,38 @@ describe('Button', () => {
     expect(fixture.nativeElement.style.hidden).toBeUndefined();
   });
 
+  describe('toggle button', () => {
+    it('is not a toggle button by default', async () => {
+      const fixture = TestBed.createComponent(UtrechtButtonAttr);
+
+      fixture.detectChanges();
+      expect(fixture.nativeElement).not.toHaveAttribute('aria-pressed');
+    });
+
+    it('is can be a toggle button', async () => {
+      const fixture = TestBed.createComponent(UtrechtButtonAttr);
+      fixture.componentRef.setInput('pressed', false);
+      fixture.detectChanges();
+      expect(fixture.nativeElement).toHaveAttribute('aria-pressed', 'false');
+    });
+
+    describe('pressed state', () => {
+      it('can have a pressed state', () => {
+        const fixture = TestBed.createComponent(UtrechtButtonAttr);
+        fixture.componentRef.setInput('pressed', true);
+        fixture.detectChanges();
+        expect(fixture.nativeElement).toHaveAttribute('aria-pressed', 'true');
+      });
+
+      it('renders a design system BEM class name', () => {
+        const fixture = TestBed.createComponent(UtrechtButtonAttr);
+        fixture.componentRef.setInput('pressed', true);
+        fixture.detectChanges();
+        expect(fixture.nativeElement).toHaveClass('utrecht-button--pressed');
+      });
+    });
+  });
+
   it('does not trigger a form submit when disabled', async () => {
     const handleSubmit = jest.fn();
 

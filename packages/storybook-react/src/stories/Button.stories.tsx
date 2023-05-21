@@ -53,6 +53,20 @@ export const DefaultDisabled: Story = {
   },
 };
 
+export const DefaultToggle: Story = {
+  args: {
+    pressed: false,
+    children: 'Toggle something',
+  },
+};
+
+export const DefaultTogglePressed: Story = {
+  args: {
+    pressed: true,
+    children: 'Toggle something',
+  },
+};
+
 export const DefaultBusy: Story = {
   args: {
     children: 'Read more...',
@@ -109,6 +123,14 @@ export const PrimaryActionDisabled: Story = {
     ...Default.args,
     appearance: 'primary-action-button',
     disabled: true,
+  },
+};
+
+export const PrimaryActionPressed: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'primary-action-button',
+    pressed: true,
   },
 };
 
@@ -176,6 +198,14 @@ export const SecondaryActionDisabled: Story = {
   },
 };
 
+export const SecondaryActionPressed: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'secondary-action-button',
+    pressed: true,
+  },
+};
+
 export const SecondaryActionBusy: Story = {
   args: {
     ...Default.args,
@@ -237,6 +267,14 @@ export const SubtleDisabled: Story = {
     ...Default.args,
     appearance: 'subtle-button',
     disabled: true,
+  },
+};
+
+export const SubtlePressed: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'subtle-button',
+    pressed: true,
   },
 };
 

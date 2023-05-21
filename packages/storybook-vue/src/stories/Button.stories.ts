@@ -62,6 +62,22 @@ export const Subtle: Story = createStory(meta, {
   },
 });
 
+export const ToggleButton: Story = createStory(meta, {
+  name: 'Toggle button',
+  args: {
+    pressed: false,
+    textContent: 'Toggle action',
+  },
+});
+
+export const ToggleButtonPressed: Story = createStory(meta, {
+  name: 'Toggle button pressed',
+  args: {
+    pressed: true,
+    textContent: 'Toggle action',
+  },
+});
+
 export const Hover: Story = createStory(meta, {
   name: 'Hover',
   args: {

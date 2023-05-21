@@ -21,6 +21,18 @@ DefaultDisabled.args = {
   disabled: true,
 };
 
+export const DefaultToggle = Template.bind({});
+
+DefaultToggle.args = {
+  pressed: false,
+};
+
+export const DefaultTogglePressed = Template.bind({});
+
+DefaultTogglePressed.args = {
+  pressed: true,
+};
+
 export const DefaultBusy = Template.bind({});
 
 DefaultBusy.args = {
