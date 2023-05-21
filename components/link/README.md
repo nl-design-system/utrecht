@@ -254,6 +254,14 @@ Wel goed: logo zonder link op de homepage.
 <h1>Home</h1>
 ```
 
+### Link zonder `href` attribuut
+
+Niet goed: een link zonder `href` attribuut is niet _focusable_, waardoor je de link niet kan activeren.
+
+```html
+<a onclick="navigate('/step-1')">Vorige</a>
+```
+
 ## Referenties
 
 - [_Tips for Better Hyperlink UX_, door de Interaction Design Foundation](https://www.interaction-design.org/literature/article/tips-for-better-hyperlink-ux): waarom 'klik hier' niet werkt.
