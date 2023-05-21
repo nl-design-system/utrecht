@@ -235,3 +235,20 @@ Gebruik `spellcheck="false"` zodat het wachtwoord niet wordt gedeeld met _browse
     {Textbox.bind({})}
   </Story>
 </Canvas>
+
+## Organisatienaam
+
+Gebruik dit veld voor de naam van organisaties, zoals bijvoorbeeld bedrijven, stichtingen en religieuze instellingen.
+
+<Canvas>
+  <Story
+    name="Naam van de organisatie"
+    args={{
+      ...exampleArgs,
+      autocomplete: "organization",
+      value: "",
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
