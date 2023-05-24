@@ -6,24 +6,22 @@
 @import "../../common/focus/mixin";
 
 @mixin utrecht-custom-checkbox {
-  --_utrecht-checkbox-size: var(--utrecht-checkbox-size, 1em);
-
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  block-size: var(--utrecht-checkbox-size, 1em);
   border-color: var(--utrecht-checkbox-border-color);
   border-style: solid;
   border-width: var(--utrecht-checkbox-border-width);
   cursor: var(--utrecht-action-activate-cursor, revert);
-  height: var(--_utrecht-checkbox-size);
+  inline-size: var(--utrecht-checkbox-size, 1em);
   margin-block-start: var(--utrecht-checkbox-margin-block-start);
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   vertical-align: top;
-  width: var(--_utrecht-checkbox-size);
 }
 
 @mixin utrecht-custom-checkbox--checked {
