@@ -20,6 +20,10 @@ export const argTypes = {
     description: 'Focus',
     control: 'boolean',
   },
+  focusVisible: {
+    description: 'Focus-visible',
+    control: 'boolean',
+  },
   hover: {
     description: 'Hover',
     control: 'boolean',
@@ -34,6 +38,7 @@ export const defaultArgs = {
   checked: false,
   disabled: false,
   focus: false,
+  focusVisible: false,
   hover: false,
 };
 
@@ -44,18 +49,21 @@ export const FormToggle = ({
   disabled = defaultArgs.disabled,
   hover = defaultArgs.hover,
   focus = defaultArgs.focus,
+  focusVisible = defaultArgs.focusVisible,
 }) => (
   <div
     className={clsx(
       'utrecht-form-toggle',
+      'utrecht-form-toggle--html-div',
       checked && 'utrecht-form-toggle--checked',
       !checked && 'utrecht-form-toggle--not-checked',
       disabled && 'utrecht-form-toggle--disabled',
       focus && 'utrecht-form-toggle--focus',
+      focusVisible && 'utrecht-form-toggle--focus-visible',
       hover && 'utrecht-form-toggle--hover',
     )}
     role="switch"
-    tabindex="0"
+    tabIndex="0"
     aria-checked={checked || null}
     aria-disabled={disabled || null}
   >

@@ -15,6 +15,46 @@ import "../index.scss";
   }}
 />
 
+# Hover
+
+<Canvas>
+  <Story
+    name="Hover"
+    args={{
+      hover: true,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
+
+# Focus
+
+<Canvas>
+  <Story
+    name="Focus"
+    args={{
+      focus: true,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
+
+# Focus-visible
+
+<Canvas>
+  <Story
+    name="Focus-visible"
+    args={{
+      focus: true,
+      focusVisible: true,
+    }}
+  >
+    {FormToggle.bind({})}
+  </Story>
+</Canvas>
+
 # Checked
 
 <Canvas>
@@ -34,7 +74,6 @@ import "../index.scss";
   <Story
     name="Disabled"
     args={{
-      checked: true,
       disabled: true,
     }}
   >
