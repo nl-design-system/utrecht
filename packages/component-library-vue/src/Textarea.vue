@@ -5,6 +5,7 @@
   export default defineComponent({
     name: "UtrechtTextarea",
     props: {
+      dir: { type: String, required: false, default: "auto" },
       invalid: { type: Boolean, required: false },
       modelValue: { type: [String, Number, Boolean], require: false, default: "" },
     },
@@ -20,11 +21,8 @@
   <textarea
     v-model="value"
     :aria-invalid="invalid || undefined"
-    :class="[
-    { 'utrecht-textarea--invalid': invalid },
-    'utrecht-textarea',
-    'utrecht-textarea--html-textarea'
-    ]"
+    :class="[{ 'utrecht-textarea--invalid': invalid }, 'utrecht-textarea', 'utrecht-textarea--html-textarea']"
+    :dir="dir"
   />
 </template>
 
