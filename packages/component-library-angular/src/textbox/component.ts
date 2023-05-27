@@ -9,6 +9,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   inputs: ['inputmode', 'type'],
   host: {
     '[attr.aria-invalid]': 'invalid || undefined',
+    '[attr.dir]': 'dir || "auto"',
     '[attr.inputMode]': "inputMode || (type === 'number' ? 'numeric' : undefined)",
     '[attr.name]': 'name || null',
     '[attr.readonly]': 'readonly || null',

@@ -8,6 +8,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   encapsulation: ViewEncapsulation.None,
   host: {
     '[attr.aria-invalid]': 'invalid || undefined',
+    '[attr.dir]': 'dir || "auto"',
     '[attr.name]': 'name || null',
     '[attr.readonly]': 'readonly || null',
     '[class.utrecht-textarea--disabled]': 'disabled',
@@ -22,6 +23,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   },
 })
 export class UtrechtTextareaAttr {
+  @Input() dir = '';
   @Input() disabled = false;
   @Input() invalid = false;
   @Input() required = false;
