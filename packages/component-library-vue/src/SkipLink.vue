@@ -14,11 +14,9 @@
 </script>
 
 <template>
-  <p>
-    <a v-bind="$attrs" :href="$props.href" class="utrecht-skip-link utrecht-skip-link--visible-on-focus">
-      <slot></slot>
-    </a>
-  </p>
+  <a v-bind="$attrs" :href="$props.href" class="utrecht-skip-link utrecht-skip-link--visible-on-focus">
+    <slot></slot>
+  </a>
 </template>
 
 <style src="@utrecht/components/skip-link/css/index.scss"></style>

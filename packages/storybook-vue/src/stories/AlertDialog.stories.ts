@@ -92,16 +92,21 @@ export const ShowModal = {
       const alertDialogRef = ref<typeof AlertDialog>();
 
       const openDialog = () => {
+        args.open = true;
         alertDialogRef.value?.['$el'].showModal();
       };
 
-      return { alertDialogRef, openDialog, args };
+      const closeDialog = () => {
+        args.open = false;
+      };
+
+      return { alertDialogRef, openDialog, closeDialog, args };
     },
     template: `
       <div>
-      <Button @click="openDialog" :aria-pressed="args?.open" :appearance="args?.buttonAppearance" :hint="args?.buttonHint">{{ args?.buttonLabel }}</Button>
+      <ButtonGroup><Button @click="openDialog" :aria-pressed="args?.open" :appearance="args?.buttonAppearance" :hint="args?.buttonHint">{{ args?.buttonLabel }}</Button></ButtonGroup>
       <AlertDialog ref="alertDialogRef" :type="args.type">
-        <form method="dialog">
+        <form method="dialog" @submit="closeDialog">
           <Paragraph>
             {{ args?.default }}
           </Paragraph>

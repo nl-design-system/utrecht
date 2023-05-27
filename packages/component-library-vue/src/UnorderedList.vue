@@ -7,9 +7,9 @@
 </script>
 
 <template>
-  <ol class="utrecht-unordered-list" v-bind="$attrs">
+  <ul class="utrecht-unordered-list" v-bind="$attrs">
     <slot></slot>
-  </ol>
+  </ul>
 </template>
 
 <style src="@utrecht/components/unordered-list/css/index.scss"></style>

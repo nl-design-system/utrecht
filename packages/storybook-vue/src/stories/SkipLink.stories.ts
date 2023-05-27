@@ -19,13 +19,12 @@ const meta: Meta<typeof SkipLink> = {
       },
     },
   },
-  decorators: [() => ({ template: '<div class="utrecht-document utrecht-theme"><story/></div>' })],
   render: (args) => ({
     setup() {
       return { args };
     },
     components: { SkipLink },
-    template: `<div style="min-height: 240px; min-width: 320px; position: relative; will-change: transform;"><SkipLink :href="args.href"><slot></slot></SkipLink></div>`,
+    template: `<div style="min-block-size: 240px; min-inline-size: 320px; position: relative; will-change: transform;"><SkipLink :href="args.href"><slot></slot></SkipLink></div>`,
   }),
   parameters: {
     status: {

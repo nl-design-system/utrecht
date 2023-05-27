@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import { Strong } from '@utrecht/component-library-vue';
+import { Paragraph, Strong } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/emphasis/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { createStory } from './util';
@@ -10,7 +10,12 @@ const meta: Meta<typeof Strong> = {
   component: Strong,
   tags: ['autodocs'],
   argTypes: {},
-  decorators: [() => ({ template: '<div class="utrecht-document utrecht-theme"><story/></div>' })],
+  decorators: [
+    () => ({
+      components: { Paragraph },
+      template: '<Paragraph><story/></Paragraph>',
+    }),
+  ],
   render: (args) => ({
     setup() {
       return { args };
