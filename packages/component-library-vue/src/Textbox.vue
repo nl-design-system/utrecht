@@ -5,6 +5,7 @@
   export default defineComponent({
     name: "UtrechtTextbox",
     props: {
+      dir: { type: String, required: false, default: "auto" },
       invalid: { type: Boolean, required: false },
       modelValue: { type: [String, Number, Boolean], require: false, default: "" },
     },
@@ -25,6 +26,7 @@
       'utrecht-textbox',
       'utrecht-textbox--html-input'
     ]"
+    :dir="dir"
   />
 </template>
 
