@@ -169,6 +169,24 @@
   font-variant-ligatures: none;
 }
 
+@mixin utrecht-textbox--placeholder-rtl {
+  &::placeholder,
+  &:placeholder-shown {
+    /* For <input dir="rtr" placeholder="+31 555 1234">,
+     * behave as `dir="auto"` when the placeholder is shown. */
+    direction: rtl;
+  }
+}
+
+@mixin utrecht-textbox--placeholder-ltr {
+  &::placeholder,
+  &:placeholder-shown {
+    /* For <input dir="rtr" placeholder="+31 555 1234">,
+     * behave as `dir="auto"` when the placeholder is shown. */
+    direction: ltr;
+  }
+}
+
 @mixin utrecht-textbox--html-input {
   &:disabled {
     @include utrecht-textbox--disabled;

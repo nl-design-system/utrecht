@@ -4,28 +4,38 @@
 
 ## Metadata van veelgebruikte formuliervelden
 
-| Data type                | `autocomplete`                                   | `spellcheck` | `translate` | value component |
-| ------------------------ | ------------------------------------------------ | ------------ | ----------- | --------------- |
-| Naam                     | `name`                                           | `false`      | `no`        | `bdi`           |
-| Voornaam (1 of meerdere) | `given-name`                                     | `false`      | `no`        | `bdi`           |
-| Voorvoegsel              |                                                  | `false`      | `no`        | `bdi`           |
-| Achternaam               | `family-name`                                    | `false`      | `no`        | `bdi`           |
-| Adresregel 1             | `address-line1`                                  |              | `no`        | -               |
-| Adresregel 2             | `address-line2`                                  |              | `no`        | -               |
-| Adresregel 3             | `address-line3`                                  |              | `no`        | -               |
-| Postcode                 | `postal-code`                                    | `false`      | `no`        | -               |
-| Straatnaam               |                                                  |              | `no`        | -               |
-| Huisnummer               |                                                  |              | `no`        | -               |
-| Huisletter               |                                                  |              | `no`        | -               |
-| Huisnummer toevoeging    |                                                  | `false`      | `no`        | -               |
-| Woonplaats               |                                                  |              |             | -               |
-| Burgerservicenummer      |                                                  | `false`      | `no`        | -               |
-| E-mailadres              | `email`                                          | `false`      | `no`        | `URLValue`      |
-| Website                  | `url`                                            | `false`      | `no`        | `URLValue`      |
-| Bestandsnaam             |                                                  |              | `no`        | `URLValue`      |
-| Wachtwoord               | `password` / `new-password` / `current-password` | `false`      | `no`        | `URLValue`      |
-| Geboortedatum            | `bday`                                           |              |             |                 |
-| Kenteken                 |                                                  | `false`      |             |                 |
+| Data type                                        | `autocomplete`                                   | `spellcheck` | `translate` | value component | input direction |
+| ------------------------------------------------ | ------------------------------------------------ | ------------ | ----------- | --------------- | --------------- |
+| Naam                                             | `name`                                           | `false`      | `no`        | `bdi`           | `auto`          |
+| Voornaam (1 of meerdere)                         | `given-name`                                     | `false`      | `no`        | `bdi`           | leeg of `auto`  |
+| Voorvoegsel                                      |                                                  | `false`      | `no`        | `bdi`           | `auto`          |
+| Achternaam                                       | `family-name`                                    | `false`      | `no`        | `bdi`           | `auto`          |
+| Adresregel 1                                     | `address-line1`                                  |              | `no`        | -               | -               |
+| Adresregel 2                                     | `address-line2`                                  |              | `no`        | -               | -               |
+| Adresregel 3                                     | `address-line3`                                  |              | `no`        | -               | -               |
+| Postcode                                         | `postal-code`                                    | `false`      | `no`        | -               | -               |
+| Straatnaam                                       |                                                  |              | `no`        | -               | -               |
+| Huisnummer                                       |                                                  |              | `no`        | -               | -               |
+| Huisletter                                       |                                                  |              | `no`        | -               | -               |
+| Huisnummer toevoeging                            |                                                  | `false`      | `no`        | -               | -               |
+| Woonplaats                                       |                                                  |              |             | -               | -               |
+| Burgerservicenummer                              |                                                  | `false`      | `no`        | -               | -               |
+| E-mailadres                                      | `email`                                          | `false`      | `no`        | `URLValue`      | `ltr`           |
+| Website                                          | `url`                                            | `false`      | `no`        | `URLValue`      | `ltr`           |
+| Bestandsnaam                                     |                                                  |              | `no`        | `URLValue`      | -               |
+| Wachtwoord                                       | `password` / `new-password` / `current-password` | `false`      | `no`        | `URLValue`      | -               |
+| Geboortedatum                                    | `bday`                                           |              |             |                 | -               |
+| Telefoonnummer (Europa en internationaal)        | `tel`                                            | `false`      |             |                 | `ltr`           |
+| Mobiel telefoonnummer (Europa en internationaal) | `mobile tel`                                     | `false`      |             |                 | `ltr`           |
+| Telefoonnummer thuis (Europa en internationaal)  | `home tel`                                       | `false`      |             |                 | `ltr`           |
+| Telefoonnummer werk (Europa en internationaal)   | `work tel`                                       | `false`      |             |                 | `ltr`           |
+| Faxnummer (Europa en internationaal)             | `fax tel`                                        | `false`      |             |                 | `ltr`           |
+| Telefoonnummer binnen Nederland                  | `tel-national`                                   | `false`      |             |                 | `ltr`           |
+| Mobiel telefoonnummer binnen Nederland           | `mobile tel-national`                            | `false`      |             |                 | `ltr`           |
+| Telefoonnummer thuis binnen Nederland            | `home tel-national`                              | `false`      |             |                 | `ltr`           |
+| Telefoonnummer werk binnen Nederland             | `work tel-national`                              | `false`      |             |                 | `ltr`           |
+| Faxnummer binnen Nederland                       | `fax tel-national`                               | `false`      |             |                 | `ltr`           |
+| Kenteken                                         |                                                  | `false`      |             |                 | -               |
 
 _Let op:_
 

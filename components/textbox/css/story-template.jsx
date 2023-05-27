@@ -73,6 +73,11 @@ export const argTypes = {
       'work',
     ],
   },
+  dir: {
+    description: 'Direction',
+    control: 'select',
+    options: ['', 'auto', 'ltr', 'rtl'],
+  },
   disabled: {
     description: 'Disabled',
     control: 'boolean',
@@ -84,6 +89,15 @@ export const argTypes = {
   invalid: {
     description: 'Invalid',
     control: 'boolean',
+  },
+  placeholder: {
+    description: 'Set the text of the placeholder',
+    control: 'text',
+  },
+  placeholderDir: {
+    description: 'Placeholder direction',
+    control: 'select',
+    options: ['', 'auto', 'ltr', 'rtl'],
   },
   readOnly: {
     description: 'Read-only',
@@ -111,6 +125,7 @@ export const argTypes = {
 
 export const defaultArgs = {
   autoComplete: '',
+  dir: 'auto',
   disabled: false,
   focus: false,
   invalid: false,
@@ -127,10 +142,12 @@ export const exampleArgs = { value: 'The Quick Brown Fox Jumps Over The Lazy Dog
 
 export const Textbox = ({
   autoComplete = defaultArgs.autoComplete,
+  dir = defaultArgs.dir,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   invalid = defaultArgs.invalid,
   placeholder = defaultArgs.placeholder,
+  placeholderDir = defaultArgs.placeholderDir,
   readOnly = defaultArgs.readOnly,
   required = defaultArgs.required,
   spellcheck = defaultArgs.spellcheck,
@@ -150,16 +167,19 @@ export const Textbox = ({
       invalid && 'utrecht-textbox--invalid',
       readOnly && 'utrecht-textbox--readonly',
       required && 'utrecht-textbox--required',
+      placeholderDir === 'ltr' && 'utrecht-textbox--placeholder-ltr',
+      placeholderDir === 'rtl' && 'utrecht-textbox--placeholder-rtl',
       className,
     )}
     minLength={!minLength || (minLength === 1 && required) ? undefined : minLength}
     autoComplete={autoComplete || null}
     disabled={disabled || null}
     aria-invalid={invalid || null}
+    dir={dir || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
     required={required || null}
-    spellcheck={spellcheck || null}
+    spellCheck={spellcheck || null}
     type={type || null}
     defaultValue={value || null}
   />

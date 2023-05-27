@@ -1,0 +1,404 @@
+{/* @license CC0-1.0 */}
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { arabicDecorator, argTypes, defaultArgs, exampleArgs, FormFieldTextbox } from "../story-template";
+
+export const PlaceholderRTLWarning = () =>
+  `Let op: dit is helaas nog niet gelukt om de placeholder automatisch rechts uit te lijnen, wanneer de tekst van de
+    placeholder right-to-left is. Op dit moment gebruiken we de volgende class name: utrecht-textbox--placeholder-rtl`;
+
+<Meta
+  id="css-form-field--textbox"
+  title="CSS Component/Form field/with textbox (right-to-left)"
+  component={FormFieldTextbox}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Textbox in right-to-left script
+
+Let op: de labels in dit voorbeeld zijn gemaakt met Google Translate.
+
+## Full name
+
+### Full name (empty)
+
+In een _right-to-left_ schrift zoals Arabisch moet de tekst van het label, placeholder en van de invoer meestal rechts uitgelijnd zijn.
+
+Sommige invoer is links-naar-rechts, daarom zijn er enkele uitzonderingen:
+
+- e-mailadressen
+- website URLs
+- telefoonnummers
+- zoek naar code (kleurocodes, programmeertalen)
+
+Gebruik een passend formaat van de textbox, zodat het het rechts uitgelijnde label niet een onnodig grote afstand heeft tot de links uitgelijnde invoer.
+
+<Canvas>
+  <Story
+    name="Full name (empty)"
+    args={{
+      ...exampleArgs,
+      label: "الاسم الكامل",
+      autoComplete: "name",
+      type: "text",
+      dir: "auto",
+      id: "5e95c937-e454-4605-a220-a59dd226aebf",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Full name
+
+### Full name (right-to-left placeholder)
+
+A right-to-left placeholder should be right aligned.
+
+{PlaceholderRTLWarning()}
+
+<Canvas>
+  <Story
+    name="Full name (right-to-left placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "الاسم الكامل",
+      placeholder: "الاسم الكامل",
+      autoComplete: "name",
+      type: "text",
+      dir: "auto",
+      placeholderDir: "rtl",
+      id: "a79112b4-26b6-4393-96bd-c514aaac0781",
+    }}
+    decorators={[arabicDecorator]}
+    parameters={{
+      status: {
+        type: "WORK IN PROGRESS",
+      },
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Full name (left-to-right placeholder)
+
+A left-to-right placeholder should be left aligned.
+
+<Canvas>
+  <Story
+    name="Full name (left-to-right placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "الاسم الكامل",
+      placeholder: "Jane Doe",
+      autoComplete: "name",
+      type: "text",
+      dir: "auto",
+      id: "5dfbb67d-699c-47c2-9ec7-ce18d7efe71c",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Full name (value)
+
+<Canvas>
+  <Story
+    name="Full name"
+    args={{
+      ...exampleArgs,
+      label: "الاسم الكامل",
+      autoComplete: "name",
+      type: "text",
+      value: "Jan Janssen",
+      dir: "auto",
+      id: "e341cf11-0666-4ae5-abed-8fe1e2af3bd9",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## E-mail address
+
+### E-mail address (empty)
+
+<Canvas>
+  <Story
+    name="E-mail address (empty)"
+    args={{
+      ...exampleArgs,
+      label: "بريد إلكتروني",
+      type: "email",
+      autoComplete: "email",
+      dir: "ltr",
+      id: "b3b9491b-c32a-4eee-b742-46c14324a417",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### E-mail address (right-to-left placeholder)
+
+Voor een e-mailadres, die _left-to-right_ moet zijn, moet een _right-to-left_ placeholder tekst rechts uitgelijnd zijn.
+
+{PlaceholderRTLWarning()}
+
+<Canvas>
+  <Story
+    name="E-mail address (placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "بريد إلكتروني",
+      placeholder: "بريد إلكتروني",
+      type: "email",
+      autoComplete: "email",
+      dir: "ltr",
+      placeholderDir: "rtl",
+      id: "1cede51f-042c-4839-b7a7-e29d8702a16e",
+    }}
+    decorators={[arabicDecorator]}
+    parameters={{
+      status: {
+        type: "WORK IN PROGRESS",
+      },
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### E-mail address (left-to-right placeholder)
+
+<Canvas>
+  <Story
+    name="E-mail address (left-to-right placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "بريد إلكتروني",
+      placeholder: "info@example.com",
+      type: "email",
+      autoComplete: "email",
+      dir: "ltr",
+      id: "5cbdd2ff-6fae-49bf-977d-a5e762618506",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### E-mail address (value)
+
+<Canvas>
+  <Story
+    name="E-mail address"
+    args={{
+      ...exampleArgs,
+      label: "بريد إلكتروني",
+      type: "email",
+      autoComplete: "email",
+      value: "info@example.com",
+      dir: "ltr",
+      id: "fece1712-c6ca-4972-b735-0fb5fa705ce7",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Website
+
+### Website URL (empty)
+
+<Canvas>
+  <Story
+    name="Website URL (empty)"
+    args={{
+      ...exampleArgs,
+      label: "موقع إلكتروني",
+      type: "url",
+      autoComplete: "url",
+      dir: "ltr",
+      id: "b3b9491b-c32a-4eee-b742-46c14324a417",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Website URL (right-to-left placeholder)
+
+{PlaceholderRTLWarning()}
+
+<Canvas>
+  <Story
+    name="Website URL (placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "موقع إلكتروني",
+      placeholder: "موقع إلكتروني",
+      type: "url",
+      autoComplete: "email",
+      dir: "ltr",
+      placeholderDir: "rtl",
+      id: "1cede51f-042c-4839-b7a7-e29d8702a16e",
+    }}
+    decorators={[arabicDecorator]}
+    parameters={{
+      status: {
+        type: "WORK IN PROGRESS",
+      },
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Website URL (left-to-right placeholder)
+
+<Canvas>
+  <Story
+    name="Website URL (left-to-right placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "موقع إلكتروني",
+      placeholder: "https://example.com/",
+      type: "url",
+      autoComplete: "email",
+      dir: "ltr",
+      id: "5cbdd2ff-6fae-49bf-977d-a5e762618506",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Website URL (value)
+
+<Canvas>
+  <Story
+    name="Website URL"
+    args={{
+      ...exampleArgs,
+      label: "موقع إلكتروني",
+      type: "url",
+      autoComplete: "email",
+      value: "https://example.com/",
+      dir: "ltr",
+      id: "fece1712-c6ca-4972-b735-0fb5fa705ce7",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+## Mobile phone number
+
+### Mobile phone number (empty)
+
+<Canvas>
+  <Story
+    name="Mobile phone number (empty)"
+    args={{
+      ...exampleArgs,
+      label: "رقم الهاتف المحمول",
+      type: "tel",
+      autoComplete: "mobile tel",
+      dir: "ltr",
+      id: "8f455e89-85be-4911-ad05-b666a8cc2ff7",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Mobile phone number (right-to-left placeholder)
+
+{PlaceholderRTLWarning()}
+
+<Canvas>
+  <Story
+    name="Mobile phone number (right-to-left placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "رقم الهاتف المحمول",
+      placeholder: "رقم الهاتف المحمول",
+      type: "tel",
+      autoComplete: "mobile tel",
+      dir: "ltr",
+      id: "73c41136-aecf-421d-9f06-16caf39b09e7",
+      placeholderDir: "rtl",
+    }}
+    decorators={[arabicDecorator]}
+    parameters={{
+      status: {
+        type: "WORK IN PROGRESS",
+      },
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Mobile phone number (left-to-right placeholder)
+
+<Canvas>
+  <Story
+    name="Mobile phone number (left-to-right placeholder)"
+    args={{
+      ...exampleArgs,
+      label: "رقم الهاتف المحمول",
+      placeholder: "+1 555 1234",
+      type: "tel",
+      autoComplete: "mobile tel",
+      dir: "ltr",
+      id: "785ba9e3-6bab-4155-9ae6-6d0af71f7479",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
+
+### Mobile phone number (value)
+
+<Canvas>
+  <Story
+    name="Mobile phone number"
+    args={{
+      ...exampleArgs,
+      label: "رقم الهاتف المحمول",
+      type: "tel",
+      autoComplete: "mobile tel",
+      value: "+31 6 1234 5678",
+      dir: "ltr",
+      id: "c155f4b2-9d08-4690-8639-a4059929dba9",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {FormFieldTextbox.bind({})}
+  </Story>
+</Canvas>
