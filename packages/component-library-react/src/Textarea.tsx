@@ -7,7 +7,7 @@ export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElemen
 
 export const Textarea = forwardRef(
   (
-    { disabled, invalid, readOnly, required, className, ...restProps }: TextareaProps,
+    { dir, disabled, invalid, readOnly, required, className, ...restProps }: TextareaProps,
     ref: ForwardedRef<HTMLTextAreaElement>,
   ) => (
     <textarea
@@ -22,6 +22,7 @@ export const Textarea = forwardRef(
         required && 'utrecht-textarea--required',
         className,
       )}
+      dir={dir ?? 'auto'}
       disabled={disabled}
       readOnly={readOnly}
       required={required}

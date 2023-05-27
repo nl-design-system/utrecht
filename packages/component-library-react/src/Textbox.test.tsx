@@ -46,6 +46,22 @@ describe('Textbox', () => {
     expect(textbox).toHaveClass('utrecht-textbox');
   });
 
+  it('renders bidirectional by default using `dir="auto"`', () => {
+    const { container } = render(<Textbox />);
+
+    const textarea = container.querySelector('input:only-child');
+
+    expect(textarea).toHaveAttribute('dir', 'auto');
+  });
+
+  it('renders left-to-right by using `dir="ltr"`', () => {
+    const { container } = render(<Textbox dir="ltr" />);
+
+    const textarea = container.querySelector('input:only-child');
+
+    expect(textarea).toHaveAttribute('dir', 'ltr');
+  });
+
   describe('disabled variant', () => {
     it('can have a disabled state', () => {
       const { container } = render(<Textbox disabled />);
