@@ -22,6 +22,7 @@ export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
 export const Textbox = forwardRef(
   (
     {
+      dir,
       disabled,
       invalid,
       readOnly,
@@ -48,6 +49,7 @@ export const Textbox = forwardRef(
         className,
       )}
       maxLength={maxLength}
+      dir={dir ?? 'auto'}
       disabled={disabled}
       readOnly={readOnly}
       required={required}

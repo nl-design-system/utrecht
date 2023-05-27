@@ -38,6 +38,22 @@ describe('Textarea', () => {
     expect(textarea).toHaveClass('utrecht-textarea');
   });
 
+  it('renders bidirectional by default using `dir="auto"`', () => {
+    const { container } = render(<Textarea />);
+
+    const textarea = container.querySelector('textarea:only-child');
+
+    expect(textarea).toHaveAttribute('dir', 'auto');
+  });
+
+  it('renders left-to-right by using `dir="ltr"`', () => {
+    const { container } = render(<Textarea dir="ltr" />);
+
+    const textarea = container.querySelector('textarea:only-child');
+
+    expect(textarea).toHaveAttribute('dir', 'ltr');
+  });
+
   describe('disabled variant', () => {
     it('can have a disabled state', () => {
       const { container } = render(<Textarea disabled />);
