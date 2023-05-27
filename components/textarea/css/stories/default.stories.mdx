@@ -1,7 +1,7 @@
 {/* @license CC0-1.0 */}
 
 import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
-import { argTypes, defaultArgs, exampleArgs, Textarea } from "../story-template";
+import { arabicDecorator, argTypes, defaultArgs, exampleArgs, Textarea } from "../story-template";
 import "../index.scss";
 
 <Meta
@@ -28,3 +28,50 @@ Styling via the `.utrecht-textarea` class name.
 </Canvas>
 
 <ArgsTable story="Default" />
+
+## Placeholder
+
+<Canvas>
+  <Story
+    name="Placeholder"
+    args={{
+      ...exampleArgs,
+      textContent: "",
+      placeholder: "Typ je bericht...",
+    }}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Placeholder (right-to-left)
+
+<Canvas>
+  <Story
+    name="Placeholder (right-to-left)"
+    args={{
+      ...exampleArgs,
+      textContent: "",
+      placeholder: "اكتب رسالتك",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>
+
+## Right-to-left
+
+<Canvas>
+  <Story
+    name="Right-to-left"
+    args={{
+      ...exampleArgs,
+      textContent:
+        "لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة، وأكرر بأنه لا يوجد من يرغب في الحب ونيل المنال ويتلذذ بالآلام، الألم هو الألم ولكن نتيجة لظروف ما قد تكمن السعاده فيما نتحمله من كد وأسي.",
+    }}
+    decorators={[arabicDecorator]}
+  >
+    {Textarea.bind({})}
+  </Story>
+</Canvas>

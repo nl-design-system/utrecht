@@ -39,6 +39,7 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  dir: 'auto',
   disabled: false,
   focus: false,
   hover: false,
@@ -55,6 +56,7 @@ export const exampleArgs = {
 };
 
 export const Textarea = ({
+  dir = defaultArgs.disabled,
   disabled = defaultArgs.disabled,
   focus = defaultArgs.focus,
   hover = defaultArgs.hover,
@@ -76,15 +78,21 @@ export const Textarea = ({
       readOnly && 'utrecht-textarea--readonly',
       required && 'utrecht-textarea--required',
     )}
+    defaultValue={textContent}
+    dir={dir || null}
     disabled={disabled || null}
     aria-invalid={invalid || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
     spellcheck={spellcheck || null}
     required={required || null}
-  >
-    {textContent}
-  </textarea>
+  ></textarea>
+);
+
+export const arabicDecorator = (Story) => (
+  <div dir="rtl" lang="ar">
+    {Story()}
+  </div>
 );
 
 export default Textarea;

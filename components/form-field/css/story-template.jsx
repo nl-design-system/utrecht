@@ -96,6 +96,12 @@ export const FormFieldTextbox = ({
   invalidDescription = defaultArgs.invalidDescription,
   headingLevel = null,
   FormComponent = Textbox,
+  autoComplete,
+  inputMode,
+  dir,
+  placeholder,
+  placeholderDir,
+  type,
 }) => {
   const descriptionId = description ? `${id}-description` : null;
   const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : null;
@@ -125,6 +131,12 @@ export const FormFieldTextbox = ({
         id={id}
         value={value}
         name={name}
+        autoComplete={autoComplete}
+        type={type}
+        inputMode={inputMode}
+        dir={dir}
+        placeholder={placeholder}
+        placeholderDir={placeholderDir}
         aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || null}
       />
     </FormField>
@@ -332,3 +344,9 @@ export const FormFieldExample = ({ control, ...restProps }) => {
     return <></>;
   }
 };
+
+export const arabicDecorator = (Story) => (
+  <div dir="rtl" lang="ar">
+    {Story()}
+  </div>
+);

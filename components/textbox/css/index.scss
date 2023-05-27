@@ -43,6 +43,20 @@
   @include utrecht-textbox--password;
 }
 
+/**
+ * This class name is experimental.
+ */
+.utrecht-textbox--placeholder-ltr {
+  @include utrecht-textbox--placeholder-ltr;
+}
+
+/**
+ * This class name is experimental.
+ */
+.utrecht-textbox--placeholder-rtl {
+  @include utrecht-textbox--placeholder-rtl;
+}
+
 .utrecht-textbox--url {
   @include utrecht-textbox--url;
 }
