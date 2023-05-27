@@ -73,18 +73,18 @@ export const Default: Story = createStory(meta, {
   args: {
     slot: `
           <ListSocialItem>
-        <LinkSocial title="facebook" external href="https://www.facebook.com/GemeenteUtrecht">
+        <LinkSocial aria-title="facebook" external href="https://www.facebook.com/GemeenteUtrecht">
           <UtrechtIconFacebook />
         </LinkSocial>
       </ListSocialItem>
       <ListSocialItem>
-        <LinkSocial title="instagram" external href="https://www.instagram.com/GemeenteUtrecht/">
+        <LinkSocial aria-title="instagram" external href="https://www.instagram.com/GemeenteUtrecht/">
           <UtrechtIconInstagram />
         </LinkSocial>
       </ListSocialItem>
       <ListSocialItem>
         <LinkSocial
-          title="linkedin"
+          aria-title="linkedin"
           external
           href="https://www.linkedin.com/company/gemeente-utrecht/?originalSubdomain=nl"
         >
@@ -92,7 +92,7 @@ export const Default: Story = createStory(meta, {
         </LinkSocial>
       </ListSocialItem>
       <ListSocialItem>
-        <LinkSocial title="twitter" external href="https://twitter.com/gemeenteutrecht">
+        <LinkSocial aria-title="twitter" external href="https://twitter.com/gemeenteutrecht">
           <UtrechtIconTwitter />
         </LinkSocial>
       </ListSocialItem>

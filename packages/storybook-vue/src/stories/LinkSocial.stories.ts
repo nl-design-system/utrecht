@@ -61,6 +61,6 @@ export const Default: Story = createStory(meta, {
     slot: `<UtrechtIconFacebook />`,
     href: 'https://www.facebook.com/GemeenteUtrecht',
     external: true,
-    title: 'facebook',
+    'aria-label': 'de gemeente Utrecht op Facebook',
   },
 });

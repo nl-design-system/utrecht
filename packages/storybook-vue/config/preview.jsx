@@ -1,16 +1,16 @@
+import { Document } from '@utrecht/component-library-vue';
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
+import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
-import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
-
 defineCustomElements();
 
 export const decorators = [
   (story) => ({
-    components: { story },
-    template: '<div class="utrecht-theme"><story /></div>',
+    components: { Document, story },
+    template: '<Document class="utrecht-theme"><story /></Document>',
   }),
 ];
 

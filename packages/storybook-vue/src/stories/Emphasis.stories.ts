@@ -19,8 +19,14 @@ const meta: Meta<typeof Emphasis> = {
       },
     },
   },
+  decorators: [
+    () => ({
+      components: { Paragraph },
+      template: '<Paragraph><story/></Paragraph>',
+    }),
+  ],
   render: () => ({
-    components: { Emphasis, Paragraph },
+    components: { Emphasis },
     template: `<Emphasis v-bind="$props"><slot></slot></Emphasis>`,
   }),
   parameters: {

@@ -17,7 +17,7 @@
   <img
     class="utrecht-img"
     v-bind="$attrs"
-    :class="{'utrecht-img--photo': photo}"
+    :class="{ 'utrecht-img--photo': photo }"
     :alt="$attrs?.alt as string"
     :src="$attrs.src as string"
     :height="$attrs?.height as CSSNumberish"

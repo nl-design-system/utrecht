@@ -28,9 +28,11 @@
   <dialog
     ref="dialogRef"
     class="utrecht-alert-dialog"
-    :class="{'utrecht-alert-dialog--error': type === 'error',
-                   'utrecht-alert-dialog--info': type === 'info',
-                   'utrecht-alert-dialog--warning': type === 'warning'}"
+    :class="{
+      'utrecht-alert-dialog--error': type === 'error',
+      'utrecht-alert-dialog--info': type === 'info',
+      'utrecht-alert-dialog--warning': type === 'warning',
+    }"
   >
     <div v-if="icon" class="utrecht-alert-dialog__icon">{{ icon }}</div>
     <div class="utrecht-alert-dialog__message">
