@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { CodeBlock } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/code-block/README.md?raw';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/components/code-block/tokens.json';
 import { createStory } from './util';
 
 const meta: Meta<typeof CodeBlock> = {
@@ -13,7 +13,7 @@ const meta: Meta<typeof CodeBlock> = {
     status: {
       type: 'ALPHA',
     },
-    tokensPrefix: 'utrecht-code-block',
+    tokenPrefix: 'utrecht-code-block',
     tokens,
     docs: {
       description: {

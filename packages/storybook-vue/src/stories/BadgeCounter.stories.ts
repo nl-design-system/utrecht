@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { BadgeCounter } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/badge-counter/README.md?raw';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/components/badge-counter/tokens.json';
 import { createStory } from './util';
 
 const meta: Meta<typeof BadgeCounter> = {
@@ -21,7 +21,7 @@ const meta: Meta<typeof BadgeCounter> = {
     status: {
       type: 'ALPHA',
     },
-    tokensPrefix: 'utrecht-badge-counter',
+    tokenPrefix: 'utrecht-badge-counter',
     tokens,
     docs: {
       description: {

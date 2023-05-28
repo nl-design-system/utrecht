@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { URLValue } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/url/README.md?raw';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/components/url/tokens.json';
 import { createStory } from './util';
 
 const meta: Meta<typeof URLValue> = {

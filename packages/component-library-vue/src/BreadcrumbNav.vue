@@ -19,7 +19,7 @@
     },
     data() {
       return {
-        headingId: this.$props.label ? getCurrentInstance()?.uid : undefined,
+        headingId: this.$props.label ? String(getCurrentInstance()?.uid) : undefined,
       };
     },
     methods: { useMicrodataItem, getCurrentInstance },
@@ -30,7 +30,7 @@
   <nav
     :class="[
       'utrecht-breadcrumb',
-      { 'utrecht-breadcrumb-nav--arrows': appearance === 'arrows' },
+      { 'utrecht-breadcrumb--arrows': appearance === 'arrows' },
     ]"
     :aria-labelledby="headingId"
   >

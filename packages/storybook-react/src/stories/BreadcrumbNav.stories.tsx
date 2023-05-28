@@ -15,13 +15,13 @@ const meta = {
     appearance: 'arrows',
     label: 'Kruimelpad',
     children: [
-      <BreadcrumbLink href={'/'} rel={'home'} index={0}>
+      <BreadcrumbLink href="/" rel="home" index={0}>
         Home
       </BreadcrumbLink>,
-      <BreadcrumbLink href={'/a/'} index={1}>
+      <BreadcrumbLink href="/a/" index={1}>
         Niveau 1
       </BreadcrumbLink>,
-      <BreadcrumbLink href={'/a/b/'} rel={'up'} index={2}>
+      <BreadcrumbLink href="/a/b/" rel="up" index={2}>
         Niveau 2
       </BreadcrumbLink>,
     ],
