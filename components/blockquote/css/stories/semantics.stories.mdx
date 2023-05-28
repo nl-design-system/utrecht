@@ -1,0 +1,148 @@
+{/* @license CC0-1.0 */}
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Paragraph } from "../../../paragraph/css/story-template";
+import { Blockquote } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-blockquote--semantics"
+  title="CSS Component/Blockquote/Caption"
+  component={Blockquote}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Blockquote with caption
+
+Styling via the `.utrecht-blockquote`, `.utrecht-blockquote__quote` and `.utrecht-blockquote__caption` class names:
+
+<Canvas>
+  <Story
+    name="Caption"
+    args={{
+      caption: "L. Ipsum",
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
+
+## Aside
+
+Gebruik _aside_ wanneer de quote niet een essentiëel onderdeel is van de tekst. Een "pull quote" is een goed voorbeeld: wanneer een uitspraak uit een artikel als illustratie wordt uitvergroot om de aandacht te trekken. De quote is dan niet essentiëel, omdat de tekst ook al in het artikel staat.
+
+Als je dit type quote markeert als _aside_, dan kan het voorkomen dat het in "Reader mode" getoond wordt, of kan het helpen papier te besparen door de quote te verbergen bij het printen van de pagina.
+
+Als de pull quote een caption heeft zoals de naam van de persoon, dan moet je _aside_ combineren met _figure_ en _figcaption_.
+
+<Canvas>
+  <Story
+    name="Aside"
+    args={{
+      aside: true,
+      textContent: "“Het was liefde op het eerste gezicht!”",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
+
+## Figure
+
+Gebruik
+
+<Canvas>
+  <Story
+    name="Figure"
+    args={{
+      figure: true,
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
+
+## Figure and aside
+
+Gebruik _aside_ en _figure_ tegelijk voor bijvoorbeeld een _pull quote_ met een caption: dat is een illustratie die niet essentiëel is voor het artikel.
+
+<Canvas>
+  <Story
+    name="Figure"
+    args={{
+      aside: true,
+      figure: true,
+      caption: "– Narcissus",
+      textContent: "“Het was liefde op het eerste gezicht!”",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
+
+## Aside, figure and caption
+
+<Canvas>
+  <Story
+    name="Aside, figure and caption"
+    args={{
+      aside: true,
+      caption: "L. Ipsum",
+      textContent: "The Quick Brown Fox Jumps Over The Lazy Dog",
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
+
+## Multiple lines
+
+De tekst van het citaat en _caption_ van het citaat moeten goed leesbaar zijn, ook wanneer ze meerdere regels lang zijn. Gebruik dit voorbeeld om `line-height` te testen.
+
+<Canvas>
+  <Story
+    name="Multiple lines"
+    args={{
+      figure: true,
+      lang: "en-US",
+      caption: (
+        <Paragraph>
+          <cite lang="en-US">Fast as You Can</cite>, op het album{" "}
+          <cite lang="en-US">
+            When the pawn hits the conflicts he thinks like a king
+            <br />
+            What he knows throws the blows when he goes to the fight
+            <br />
+            And he'll win the whole thing 'fore he enters the ring
+            <br />
+            There's no body to batter when your mind is your might
+            <br />
+            So when you go solo, you hold your own hand
+            <br />
+            And remember that depth is the greatest of heights
+            <br />
+            And if you know where you stand, then you know where to land
+            <br />
+            And if you fall it won't matter, cuz you'll know that you're right
+          </cite>{" "}
+          van Fiona Apple (1999)
+        </Paragraph>
+      ),
+      children: (
+        <Paragraph>
+          Sometimes my mind don't shake and shift
+          <br />
+          But most of the time, it does
+        </Paragraph>
+      ),
+    }}
+  >
+    {Blockquote.bind({})}
+  </Story>
+</Canvas>
