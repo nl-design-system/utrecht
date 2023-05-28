@@ -23,7 +23,7 @@ describe('Badge Counter', () => {
       },
     });
 
-    const badge = container.querySelector('data[value]:only-child');
+    const badge = container.querySelector('data:only-child');
 
     expect(badge).toBeInTheDocument();
     expect(badge).toHaveAttribute('value', value);
@@ -78,19 +78,19 @@ describe('Badge Counter', () => {
     expect(badge).not.toBeVisible();
   });
 
-  it('can have a custom class name', () => {
+  it('renders a `number` type value', () => {
     const { container } = render(BadgeCounter, {
-      attrs: {
-        class: 'utrecht-badge-counter--positive',
+      props: {
+        value: 123.4,
       },
       slots: {
-        default: '259',
+        default: '123.40',
       },
     });
 
-    const badge = container.querySelector(':only-child');
+    const badge = container.querySelector('data:only-child');
 
-    expect(badge).toHaveClass('utrecht-badge-counter');
-    expect(badge).toHaveClass('utrecht-badge-counter--positive');
+    expect(badge).toBeInTheDocument();
+    expect(badge).toHaveAttribute('value', '123.4');
   });
 });

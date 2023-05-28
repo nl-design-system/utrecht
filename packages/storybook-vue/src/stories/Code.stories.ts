@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Code } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/code/README.md?raw';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/components/code/tokens.json';
 import { createStory } from './util';
 
 const meta: Meta<typeof Code> = {
@@ -13,7 +13,7 @@ const meta: Meta<typeof Code> = {
     status: {
       type: 'ALPHA',
     },
-    tokensPrefix: 'utrecht-code',
+    tokenPrefix: 'utrecht-code',
     tokens,
     docs: {
       description: {
