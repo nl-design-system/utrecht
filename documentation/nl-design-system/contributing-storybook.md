@@ -36,11 +36,11 @@ To enpower a wide variety of experts to contribute and publish our documentation
 `readme.stories.mdx`:
 
 ```mdx
-import { Description, Meta } from "@storybook/addon-docs";
+import { Markdown, Meta } from "@storybook/blocks";
 
 import markdown from "./readme.md";
 
 <Meta title="Example Design System/README" />
 
-<Description>{markdown}</Description>
+<Markdown>{markdown}</Markdown>
 ```
