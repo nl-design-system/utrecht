@@ -1,6 +1,6 @@
 import { Document } from '@utrecht/component-library-vue';
-import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
-import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
+import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
+import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';

@@ -88,8 +88,6 @@ module.exports = {
           'packages/web-component-library-vue/tsconfig.json',
           'packages/web-component-library-vue/tsconfig.app.json',
           'packages/web-component-library-vue/tsconfig.vite-config.json',
-          'packages/email-template-nodemailer/tsconfig.json',
-          'packages/react-emails/tsconfig.json',
         ],
         tsconfigRootDir: __dirname,
       },
