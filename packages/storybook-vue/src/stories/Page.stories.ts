@@ -4,7 +4,7 @@ import readme from '@utrecht/components/page/README.md?raw';
 import tokens from '@utrecht/components/page/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Page> = {
+const meta = {
   id: 'vue-page',
   title: 'Vue.js Component/Page',
   component: Page,
@@ -33,7 +33,7 @@ const meta: Meta<typeof Page> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Page>;
 
 export default meta;
 

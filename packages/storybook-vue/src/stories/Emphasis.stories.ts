@@ -4,7 +4,7 @@ import readme from '@utrecht/components/emphasis/README.md?raw';
 import tokens from '@utrecht/components/emphasis/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Emphasis> = {
+const meta = {
   id: 'vue-emphasis',
   title: 'Vue.js Component/Emphasis',
   component: Emphasis,
@@ -41,7 +41,7 @@ const meta: Meta<typeof Emphasis> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Emphasis>;
 
 export default meta;
 

@@ -4,7 +4,7 @@ import readme from '@utrecht/components/code/README.md?raw';
 import tokens from '@utrecht/components/code/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Code> = {
+const meta = {
   id: 'vue-code',
   title: 'Vue.js Component/Code',
   component: Code,
@@ -34,7 +34,7 @@ const meta: Meta<typeof Code> = {
       </Code>
     `,
   }),
-};
+} satisfies Meta<typeof Code>;
 
 export default meta;
 

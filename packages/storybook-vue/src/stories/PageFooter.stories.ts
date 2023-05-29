@@ -4,7 +4,7 @@ import readme from '@utrecht/components/page-footer/README.md?raw';
 import tokens from '@utrecht/components/page-footer/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof PageFooter> = {
+const meta = {
   id: 'vue-page-footer',
   title: 'Vue.js Component/Page footer',
   component: PageFooter,
@@ -30,7 +30,7 @@ const meta: Meta<typeof PageFooter> = {
       },
     },
   },
-};
+} satisfies Meta<typeof PageFooter>;
 
 export default meta;
 

@@ -5,7 +5,7 @@ import readme from '@utrecht/components/checkbox/README.md?raw';
 import tokens from '@utrecht/components/checkbox/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Checkbox> = {
+const meta = {
   id: 'vue-checkbox',
   title: 'Vue.js Component/Checkbox',
   component: Checkbox,
@@ -76,7 +76,7 @@ const meta: Meta<typeof Checkbox> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Checkbox>;
 
 export default meta;
 

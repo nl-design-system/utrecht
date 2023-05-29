@@ -5,7 +5,7 @@ import tokens from '@utrecht/components/data-list/tokens.json';
 import tokensDefinition from '@utrecht/components/data-list/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof DataList> = {
+const meta = {
   id: 'vue-data-list',
   title: 'Vue.js Component/Data List',
   component: DataList,
@@ -54,7 +54,7 @@ const meta: Meta<typeof DataList> = {
         </DataListItem>
       </DataList>`,
   }),
-};
+} satisfies Meta<typeof DataList>;
 
 export default meta;
 

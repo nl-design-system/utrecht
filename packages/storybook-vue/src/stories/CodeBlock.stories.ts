@@ -4,7 +4,7 @@ import readme from '@utrecht/components/code-block/README.md?raw';
 import tokens from '@utrecht/components/code-block/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof CodeBlock> = {
+const meta = {
   id: 'vue-code-block',
   title: 'Vue.js Component/Code Block',
   component: CodeBlock,
@@ -34,7 +34,7 @@ const meta: Meta<typeof CodeBlock> = {
       </CodeBlock>
     `,
   }),
-};
+} satisfies Meta<typeof CodeBlock>;
 
 export default meta;
 

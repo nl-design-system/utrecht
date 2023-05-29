@@ -4,7 +4,7 @@ import readme from '@utrecht/components/separator/README.md?raw';
 import tokens from '@utrecht/components/separator/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Separator> = {
+const meta = {
   id: 'vue-separator',
   title: 'Vue.js Component/Separator',
   component: Separator,
@@ -29,7 +29,7 @@ const meta: Meta<typeof Separator> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Separator>;
 
 export default meta;
 

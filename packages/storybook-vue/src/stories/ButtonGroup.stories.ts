@@ -4,7 +4,7 @@ import readme from '@utrecht/components/button-group/README.md?raw';
 import tokens from '@utrecht/components/button-group/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof ButtonGroup> = {
+const meta = {
   id: 'vue-button-group',
   title: 'Vue.js Component/Button group',
   component: ButtonGroup,
@@ -30,7 +30,7 @@ const meta: Meta<typeof ButtonGroup> = {
       },
     },
   },
-};
+} satisfies Meta<typeof ButtonGroup>;
 
 export default meta;
 

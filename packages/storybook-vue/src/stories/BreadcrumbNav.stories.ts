@@ -4,7 +4,7 @@ import readme from '@utrecht/components/breadcrumb/README.md?raw';
 import tokens from '@utrecht/components/breadcrumb/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof BreadcrumbNav> = {
+const meta = {
   id: 'vue-breadcrumb-nav',
   title: 'Vue.js Component/Breadcrumb Nav',
   component: BreadcrumbNav,
@@ -47,7 +47,7 @@ const meta: Meta<typeof BreadcrumbNav> = {
       </BreadcrumbNav>
     `,
   }),
-};
+} satisfies Meta<typeof BreadcrumbNav>;
 
 export default meta;
 

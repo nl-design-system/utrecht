@@ -3,7 +3,7 @@ import { Heading } from '@utrecht/component-library-vue';
 import tokens from '@utrecht/components/heading/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Heading> = {
+const meta = {
   id: 'vue-heading',
   title: 'Vue.js Component/Heading',
   component: Heading,
@@ -22,7 +22,7 @@ const meta: Meta<typeof Heading> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Heading>;
 
 export default meta;
 

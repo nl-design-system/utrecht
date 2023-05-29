@@ -4,7 +4,7 @@ import readme from '@utrecht/components/link/README.md?raw';
 import tokens from '@utrecht/components/link/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Link> = {
+const meta = {
   id: 'vue-link',
   title: 'Vue.js Component/Link',
   component: Link,
@@ -46,7 +46,7 @@ const meta: Meta<typeof Link> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Link>;
 
 export default meta;
 

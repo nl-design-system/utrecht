@@ -4,7 +4,7 @@ import { Paragraph } from '@utrecht/component-library-vue';
 import tokens from '@utrecht/components/paragraph/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Paragraph> = {
+const meta = {
   id: 'vue-paragraph',
   title: 'Vue.js Component/Paragraph',
   component: Paragraph,
@@ -55,7 +55,7 @@ const meta: Meta<typeof Paragraph> = {
       <Paragraph v-bind="$props"><slot></slot></Paragraph>
     `,
   }),
-};
+} satisfies Meta<typeof Paragraph>;
 
 export default meta;
 

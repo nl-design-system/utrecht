@@ -4,7 +4,7 @@ import readme from '@utrecht/components/skip-link/README.md?raw';
 import tokens from '@utrecht/components/skip-link/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof SkipLink> = {
+const meta = {
   id: 'vue-skip-link',
   title: 'Vue.js Component/Skip Link',
   component: SkipLink,
@@ -43,7 +43,7 @@ const meta: Meta<typeof SkipLink> = {
       },
     },
   },
-};
+} satisfies Meta<typeof SkipLink>;
 
 export default meta;
 

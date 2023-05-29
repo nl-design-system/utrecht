@@ -4,7 +4,7 @@ import readme from '@utrecht/components/badge-status/README.md?raw';
 import tokens from '@utrecht/components/badge-status/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof BadgeStatus> = {
+const meta = {
   id: 'vue-badge-status',
   title: 'Vue.js Component/Status badge',
   component: BadgeStatus,
@@ -40,7 +40,7 @@ const meta: Meta<typeof BadgeStatus> = {
       },
     },
   },
-};
+} satisfies Meta<typeof BadgeStatus>;
 
 export default meta;
 

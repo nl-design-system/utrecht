@@ -3,7 +3,7 @@ import { AlertDialog, Button, ButtonGroup, Paragraph } from '@utrecht/component-
 import { ref } from 'vue';
 import { createStory } from './util';
 
-const meta: Meta<typeof AlertDialog> = {
+const meta = {
   id: 'vue-alert-dialog',
   title: 'Vue.js Component/Alert Dialog',
   component: AlertDialog,
@@ -33,7 +33,7 @@ const meta: Meta<typeof AlertDialog> = {
       </AlertDialog>
     `,
   }),
-};
+} satisfies Meta<typeof AlertDialog>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;

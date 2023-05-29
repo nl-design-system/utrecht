@@ -4,7 +4,7 @@ import readme from '@utrecht/components/form-field/README.md?raw';
 import tokens from '@utrecht/components/form-field/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof FormField> = {
+const meta = {
   id: 'vue-form-field',
   title: 'Vue.js Component/Form field',
   component: FormField,
@@ -43,7 +43,7 @@ const meta: Meta<typeof FormField> = {
       },
     },
   },
-};
+} satisfies Meta<typeof FormField>;
 
 export default meta;
 

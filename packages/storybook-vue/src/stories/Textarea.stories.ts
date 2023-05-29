@@ -5,7 +5,7 @@ import readme from '@utrecht/components/textarea/README.md?raw';
 import tokens from '@utrecht/components/textarea/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Textarea> = {
+const meta = {
   id: 'vue-textarea',
   title: 'Vue.js Component/Textarea',
   component: Textarea,
@@ -77,7 +77,7 @@ const meta: Meta<typeof Textarea> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Textarea>;
 
 export default meta;
 

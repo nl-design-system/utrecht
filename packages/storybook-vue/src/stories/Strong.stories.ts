@@ -4,7 +4,7 @@ import readme from '@utrecht/components/emphasis/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Strong> = {
+const meta = {
   id: 'vue-strong',
   title: 'Vue.js Component/Strong',
   component: Strong,
@@ -35,7 +35,7 @@ const meta: Meta<typeof Strong> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Strong>;
 
 export default meta;
 
