@@ -1,7 +1,7 @@
 /* eslint-env node */
-import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
-import { addonThemes } from '@utrecht/storybook-helpers/src/addon-themes';
-import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
+import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
+import { addonThemes } from '@utrecht/storybook-helpers/dist/addon-themes';
+import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import clsx from 'clsx';
 import defaultsDeep from 'lodash.defaultsdeep';

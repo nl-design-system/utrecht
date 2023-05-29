@@ -1,5 +1,6 @@
-/* eslint-env node */
-module.exports = {
+import type { StorybookConfig } from '@storybook/react-vite';
+
+const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
@@ -16,10 +17,7 @@ module.exports = {
     'storybook-addon-themes',
   ],
   features: {
-    babelModeV7: true,
-    postcss: false,
     buildStoriesJson: true,
-    previewMdx2: true,
     storyStoreV7: true,
   },
   framework: {
@@ -27,14 +25,9 @@ module.exports = {
     options: {},
   },
   staticDirs: ['../../../proprietary/assets'],
-  webpackFinal: async (config) => ({
-    ...config,
-    performance: {
-      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
-      hints: false,
-    },
-  }),
   docs: {
     autodocs: true,
   },
 };
+
+export default config;

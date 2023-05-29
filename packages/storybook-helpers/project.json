@@ -1,0 +1,18 @@
+{
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "root": "{workspaceRoot}/packages/storybook-helpers",
+  "sourceRoot": "{projectRoot}",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": ["{projectRoot}/dist"],
+      "options": {
+        "command": "npm run build",
+        "cwd": "packages/storybook-helpers",
+        "outputPath": "packages/storybook-helpers/dist"
+      },
+      "dependsOn": ["^build"]
+    }
+  }
+}
