@@ -122,7 +122,7 @@ importers:
       '@stencil/core':
         specifier: 2.22.3
         version: 2.22.3
-      '@storybook/addon-docs':
+      '@storybook/blocks':
         specifier: 7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/icon':
@@ -179,7 +179,7 @@ importers:
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@18.2.0)
-      '@storybook/addon-docs':
+      '@storybook/blocks':
         specifier: 7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
       lodash.clonedeepwith:
@@ -2955,7 +2955,7 @@ packages:
     dependencies:
       '@babel/core': 7.20.12
       '@babel/helper-create-class-features-plugin': 7.20.7(@babel/core@7.20.12)
-      '@babel/helper-plugin-utils': 7.21.5
+      '@babel/helper-plugin-utils': 7.20.2
     transitivePeerDependencies:
       - supports-color
     dev: true

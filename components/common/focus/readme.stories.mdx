@@ -1,4 +1,4 @@
-import { Canvas, Description, Meta, Story } from "@storybook/addon-docs";
+import { Canvas, Markdown, Meta, Story } from "@storybook/blocks";
 import clsx from "clsx";
 import readme from "./README.md";
 import tokensDefinition from "./tokens.json";
@@ -47,7 +47,7 @@ export const FocusBEMExample = ({ modifiers = {} }) => `
 
 <Meta title="Common Patterns/Focus" />
 
-<Description>{readme}</Description>
+<Markdown>{readme}</Markdown>
 
 ## Example
 
