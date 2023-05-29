@@ -13,8 +13,7 @@ const meta: Meta<typeof LinkSocial> = {
   argTypes: {
     slot: {
       name: 'slot',
-      control: { type: 'text' },
-      type: { required: false },
+      type: { name: 'string', required: false },
       table: {
         defaultValue: { summary: '' },
       },
