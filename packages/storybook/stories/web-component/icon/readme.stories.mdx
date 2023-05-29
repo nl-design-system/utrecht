@@ -1,6 +1,6 @@
 {/* @license CC0-1.0 */}
 
-import { Description, Meta } from "@storybook/blocks";
+import { Markdown, Meta } from "@storybook/blocks";
 import document from "@utrecht/components/icon/README.md?raw";
 import design from "@utrecht/components/icon/design.md?raw";
 
@@ -18,6 +18,6 @@ export const removeMarkdownH1 = (markdown) => markdown.replace(/(^|\n)#\s.+/, ""
 
 # Iconen
 
-<Description>{removeMarkdownH1(design)}</Description>
+<Markdown>{removeMarkdownH1(design)}</Markdown>
 
-<Description>{removeMarkdownH1(document)}</Description>
+<Markdown>{removeMarkdownH1(document)}</Markdown>
