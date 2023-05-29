@@ -31,11 +31,11 @@ const meta = {
   },
   argTypes: {
     appearance: {
-      type: 'select',
+      control: { type: 'select' },
       options: [undefined, 'primary-action-button', 'secondary-action-button', 'subtle-button'],
     },
     type: {
-      type: 'select',
+      control: { type: 'select' },
       options: [undefined, 'button', 'submit', 'reset'],
     },
   },

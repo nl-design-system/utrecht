@@ -27,13 +27,6 @@ const meta = {
     ],
   },
   argTypes: {
-    items: {
-      description: 'Links',
-      type: {
-        name: 'array',
-        required: true,
-      },
-    },
     appearance: {
       description: 'Appearance',
       control: { type: 'select' },

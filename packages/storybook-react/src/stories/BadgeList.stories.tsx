@@ -14,13 +14,7 @@ const meta = {
   args: {
     children: [<DataBadge>Badge A</DataBadge>, <DataBadge>Badge B</DataBadge>, <DataBadge>Badge C</DataBadge>],
   },
-  argTypes: {
-    items: {
-      name: 'value',
-      type: { name: 'string', required: false },
-      table: { defaultValue: { summary: '' } },
-    },
-  },
+  argTypes: {},
   parameters: {
     tokensPrefix: 'utrecht-badge-list',
     tokens,

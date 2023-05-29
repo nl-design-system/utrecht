@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react';
 import { ComponentTokensSection } from '@utrecht/documentation/components/ComponentTokensSection.jsx';
 import React from 'react';
 
@@ -19,17 +19,13 @@ interface Props {
   tokens: DesignToken[];
 }
 
-interface DesignTokenStoryParameters {
+export interface DesignTokenStoryParameters {
   tokens: DesignToken[];
   tokensPrefix: string;
   definition: DesignTokenTree;
 }
 
-export const designTokenStory = <T,>(
-  meta: Meta<T> & {
-    parameters: DesignTokenStoryParameters;
-  },
-) => {
+export const designTokenStory = (meta: any): any => {
   const DesignTokensStory: StoryObj<Props> = {
     args: {
       tokens: meta.parameters['tokens'],

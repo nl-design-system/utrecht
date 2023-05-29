@@ -6,7 +6,6 @@ const meta = {
   title: 'React Component/Unordered List/Item',
   id: 'react-unordered-list--item',
   component: UnorderedListItem,
-  name: UnorderedListItem,
   decorators: [(Story) => <UnorderedList>{Story()}</UnorderedList>],
   args: {
     children: 'List item',
