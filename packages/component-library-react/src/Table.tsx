@@ -6,11 +6,24 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, TableHTMLAttributes } from 'react';
 
-export type TableProps = TableHTMLAttributes<HTMLTableElement>;
+export interface TableProps extends TableHTMLAttributes<HTMLTableElement> {
+  busy?: boolean;
+}
 
 export const Table = forwardRef(
-  ({ children, className, ...restProps }: PropsWithChildren<TableProps>, ref: ForwardedRef<HTMLTableElement>) => (
-    <table {...restProps} ref={ref} className={clsx('utrecht-table', className)}>
+  ({ busy, children, className, ...restProps }: PropsWithChildren<TableProps>, ref: ForwardedRef<HTMLTableElement>) => (
+    <table
+      aria-busy={busy}
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'utrecht-table',
+        {
+          'utrecht-table--busy': busy,
+        },
+        className,
+      )}
+    >
       {children}
     </table>
   ),

@@ -7,12 +7,13 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, TdHTMLAttributes } from 'react';
 
 export interface TableCellProps extends TdHTMLAttributes<HTMLTableCellElement> {
+  numericColumn?: boolean;
   selected?: boolean;
 }
 
 export const TableCell = forwardRef(
   (
-    { children, className, selected, ...restProps }: PropsWithChildren<TableCellProps>,
+    { children, className, numericColumn, selected, ...restProps }: PropsWithChildren<TableCellProps>,
     ref: ForwardedRef<HTMLTableCellElement>,
   ) => (
     <td
@@ -23,6 +24,7 @@ export const TableCell = forwardRef(
         'utrecht-table__cell',
         {
           'utrecht-table__cell--selected': selected,
+          'utrecht-table__cell--numeric-column': numericColumn,
         },
         className,
       )}

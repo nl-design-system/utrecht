@@ -6,14 +6,26 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type TableHeaderProps = HTMLAttributes<HTMLTableSectionElement>;
+export interface TableHeaderProps extends HTMLAttributes<HTMLTableSectionElement> {
+  sticky?: boolean;
+}
 
 export const TableHeader = forwardRef(
   (
-    { children, className, ...restProps }: PropsWithChildren<TableHeaderProps>,
+    { children, className, sticky, ...restProps }: PropsWithChildren<TableHeaderProps>,
     ref: ForwardedRef<HTMLTableSectionElement>,
   ) => (
-    <thead {...restProps} ref={ref} className={clsx('utrecht-table__header', className)}>
+    <thead
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'utrecht-table__header',
+        {
+          'utrecht-table__header--sticky': sticky,
+        },
+        className,
+      )}
+    >
       {children}
     </thead>
   ),

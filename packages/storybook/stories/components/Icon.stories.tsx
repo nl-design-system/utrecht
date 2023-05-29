@@ -4,12 +4,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/icon/README.md?raw';
 import tokensDefinition from '@utrecht/components/icon/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 // import { Icon } from '@utrecht/component-library-react/src/Icon';
 import { designTokenStory } from './util';
+import { Icon } from '../../../component-library-react/src/Icon';
 import '@utrecht/components/icon/css/index.scss';
-
-export const Icon = ({ children }: PropsWithChildren) => <span className="utrecht-icon">{children}</span>;
 
 const meta = {
   title: 'CSS Component/Icon',

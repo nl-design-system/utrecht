@@ -4,8 +4,12 @@
  */
 
 @mixin utrecht-table {
-  border-collapse: collapse;
+  /* `border-collapse: collapse` results in a broken border for sticky header and sticky footer.
+   * Therefore we need to use `border-collapse: separate` instead.
+   */
+  border-collapse: separate;
   border-color: var(--utrecht-table-border-color, 0);
+  border-spacing: 0;
   border-style: solid;
   border-width: var(--utrecht-table-border-width, 0);
   font-family: var(--utrecht-table-font-family, var(--utrecht-document-font-family));
@@ -14,6 +18,10 @@
   line-height: var(--utrecht-table-line-height, inherit);
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-table-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-table-margin-block-start, 0));
+}
+
+@mixin utrecht-table--busy {
+  cursor: var(--utrecht-action-busy-cursor, busy);
 }
 
 @mixin utrecht-table--distanced {
@@ -33,12 +41,54 @@
 
 @mixin utrecht-table__header {
   --_utrecht-table-header-cell-vertical-align: bottom;
+  --_utrecht-table-header-cell-z-index: 8;
 
   background-color: var(--utrecht-table-header-background-color);
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
   page-break-inside: avoid;
   text-transform: var(--utrecht-table-header-text-transform);
+}
+
+@mixin utrecht-table__header--sticky {
+  th {
+    background-color: var(--utrecht-table-header-sticky-background-color);
+    color: var(--utrecht-table-header-sticky-color);
+    inset-block-start: 0;
+    position: sticky;
+  }
+
+  tr:last-child > th {
+    border-block-end-color: var(
+      --utrecht-table-header-sticky-border-block-end-color,
+      var(--utrecht-table-header-border-block-end-color, transparent)
+    );
+    border-block-end-style: solid;
+    border-block-end-width: var(
+      --utrecht-table-header-sticky-border-block-end-width,
+      var(--utrecht-table-header-border-block-end-width, 0)
+    );
+  }
+}
+
+@mixin utrecht-table__footer--sticky {
+  background-color: var(--utrecht-table-footer-sticky-background-color, var(--utrecht-table-footer-background-color));
+  color: var(--utrecht-table-footer-sticky-color, var(--utrecht-table-footer-color));
+  inset-block-end: 0;
+  position: sticky;
+
+  tr:first-child > th,
+  tr:first-child > td {
+    border-block-start-color: var(
+      --utrecht-table-header-sticky-border-block-start-color,
+      var(--utrecht-table-header-border-block-start-color, transparent)
+    );
+    border-block-start-style: solid;
+    border-block-start-width: var(
+      --utrecht-table-header-sticky-border-block-start-width,
+      var(--utrecht-table-header-border-block-start-width, 0)
+    );
+  }
 }
 
 @mixin utrecht-table__cell--last-header-row {
@@ -49,13 +99,23 @@
 
 /* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-table__body {
+  --_utrecht-table-header-cell-z-index: 2;
+
+  // z-index: 1;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-table__footer {
+  --_utrecht-table-header-cell-z-index: 5;
+
+  z-index: 3;
 }
 
 @mixin utrecht-table__any-cell {
+  --utrecht-icon-size: var(--utrecht-table-cell-icon-size);
+
+  /* In tables `block-size` acts as `min-block-size`, but `min-block-size` is a clearer name for the design token */
+  block-size: var(--utrecht-table-cell-line-height, 1em);
   line-height: var(--utrecht-table-cell-line-height, inherit);
   padding-block-end: var(--utrecht-table-cell-padding-block-end, 0);
   padding-block-start: var(--utrecht-table-cell-padding-block-start, 0);
@@ -77,10 +137,27 @@
   font-weight: var(--utrecht-table-header-cell-font-weight, bold);
   text-transform: var(--utrecht-table-header-cell-text-transform);
   vertical-align: var(--_utrecht-table-header-cell-vertical-align, top);
+  z-index: var(--_utrecht-table-header-cell-z-index);
 }
 
 @mixin utrecht-table__header-cell--selected {
   @include utrecht-table__any-cell--selected;
+}
+
+@mixin utrecht-table__header-cell--sticky-block {
+  background-color: #eee;
+  color: black;
+  inset-block-start: 0;
+  position: sticky;
+  z-index: calc(var(--_utrecht-table-header-cell-z-index, 0) + 2);
+}
+
+@mixin utrecht-table__header-cell--sticky-inline {
+  background-color: #eee;
+  color: black;
+  inset-inline-start: 0;
+  position: sticky;
+  z-index: calc(var(--_utrecht-table-header-cell-z-index, 0) + 1);
 }
 
 @mixin utrecht-table__cell {
@@ -108,8 +185,9 @@
 }
 
 @mixin utrecht-table__cell--numeric-column {
+  --_utrecht-table-cell-text-align: right;
   /* stylelint-disable-next-line declaration-property-value-disallowed-list */
-  text-align: right;
+  text-align: var(--_utrecht-table-cell-text-align);
 }
 
 @mixin utrecht-table__cell--numeric-data {
