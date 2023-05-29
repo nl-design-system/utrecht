@@ -11,7 +11,7 @@ import {
 } from '@utrecht/web-component-library-vue';
 import { createStory } from './util';
 
-const meta: Meta<typeof ListSocial> = {
+const meta = {
   id: 'vue-list-social',
   title: 'Vue.js Component/List Social',
   component: ListSocial,
@@ -61,7 +61,7 @@ const meta: Meta<typeof ListSocial> = {
       },
     },
   },
-};
+} satisfies Meta<typeof ListSocial>;
 
 export default meta;
 

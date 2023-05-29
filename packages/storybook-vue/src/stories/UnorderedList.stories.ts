@@ -4,7 +4,7 @@ import readme from '@utrecht/components/unordered-list/README.md?raw';
 import tokens from '@utrecht/components/unordered-list/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof UnorderedList> = {
+const meta = {
   id: 'vue-unordered-list',
   title: 'Vue.js Component/Unordered List',
   component: UnorderedList,
@@ -38,7 +38,7 @@ const meta: Meta<typeof UnorderedList> = {
       },
     },
   },
-};
+} satisfies Meta<typeof UnorderedList>;
 
 export default meta;
 

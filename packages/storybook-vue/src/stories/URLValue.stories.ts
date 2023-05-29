@@ -4,7 +4,7 @@ import readme from '@utrecht/components/url/README.md?raw';
 import tokens from '@utrecht/components/url/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof URLValue> = {
+const meta = {
   id: 'vue-url-value',
   title: 'Vue.js Component/URL Value',
   component: URLValue,
@@ -36,7 +36,7 @@ const meta: Meta<typeof URLValue> = {
       <URLValue v-bind="$props"><slot></slot></URLValue>
     `,
   }),
-};
+} satisfies Meta<typeof URLValue>;
 
 export default meta;
 

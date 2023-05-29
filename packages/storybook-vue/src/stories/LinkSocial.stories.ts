@@ -5,7 +5,7 @@ import tokens from '@utrecht/components/link-social/tokens.json';
 import { UtrechtIconFacebook } from '@utrecht/web-component-library-vue';
 import { createStory } from './util';
 
-const meta: Meta<typeof LinkSocial> = {
+const meta = {
   id: 'vue-link-social',
   title: 'Vue.js Component/Link Social',
   component: LinkSocial,
@@ -46,7 +46,7 @@ const meta: Meta<typeof LinkSocial> = {
       },
     },
   },
-};
+} satisfies Meta<typeof LinkSocial>;
 
 export default meta;
 

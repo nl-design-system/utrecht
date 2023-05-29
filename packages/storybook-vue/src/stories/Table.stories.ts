@@ -13,7 +13,7 @@ import readme from '@utrecht/components/table/README.md?raw';
 import tokens from '@utrecht/components/table/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Table> = {
+const meta = {
   id: 'vue-table',
   title: 'Vue.js Component/Table',
   component: Table,
@@ -45,7 +45,7 @@ const meta: Meta<typeof Table> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Table>;
 
 export default meta;
 

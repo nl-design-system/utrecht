@@ -3,7 +3,7 @@ import { Button } from '@utrecht/component-library-vue';
 import tokens from '@utrecht/components/button/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Button> = {
+const meta = {
   id: 'vue-button',
   title: 'Vue.js Component/Button',
   component: Button,
@@ -32,7 +32,7 @@ const meta: Meta<typeof Button> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Button>;
 
 export default meta;
 

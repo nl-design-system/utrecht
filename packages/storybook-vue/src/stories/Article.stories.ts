@@ -4,7 +4,7 @@ import readme from '@utrecht/components/article/README.md?raw';
 import tokens from '@utrecht/components/article/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Article> = {
+const meta = {
   id: 'vue-article',
   title: 'Vue.js Component/Article',
   component: Article,
@@ -31,7 +31,7 @@ const meta: Meta<typeof Article> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Article>;
 
 export default meta;
 

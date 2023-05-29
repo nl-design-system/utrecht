@@ -5,7 +5,7 @@ import readme from '@utrecht/components/textbox/README.md?raw';
 import tokens from '@utrecht/components/textbox/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Textbox> = {
+const meta = {
   id: 'vue-textbox',
   title: 'Vue.js Component/Textbox',
   component: Textbox,
@@ -83,7 +83,7 @@ const meta: Meta<typeof Textbox> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Textbox>;
 
 export default meta;
 

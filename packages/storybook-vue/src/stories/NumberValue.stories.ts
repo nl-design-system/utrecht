@@ -4,7 +4,7 @@ import readme from '@utrecht/components/value-number/README.md?raw';
 import tokens from '@utrecht/components/value-number/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof NumberValue> = {
+const meta = {
   id: 'vue-number-value',
   title: 'Vue.js Component/Number Value',
   component: NumberValue,
@@ -42,7 +42,7 @@ const meta: Meta<typeof NumberValue> = {
     },
     template: `<NumberValue v-bind="$props"><slot></slot></NumberValue>`,
   }),
-};
+} satisfies Meta<typeof NumberValue>;
 
 export default meta;
 

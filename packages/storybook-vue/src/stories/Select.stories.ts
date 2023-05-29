@@ -5,7 +5,7 @@ import readme from '@utrecht/components/select/README.md?raw';
 import tokens from '@utrecht/components/select/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Select> = {
+const meta = {
   id: 'vue-select',
   title: 'Vue.js Component/Select',
   component: Select,
@@ -66,7 +66,7 @@ const meta: Meta<typeof Select> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Select>;
 
 export default meta;
 

@@ -4,7 +4,7 @@ import readme from '@utrecht/components/form-label/README.md?raw';
 import tokens from '@utrecht/components/form-label/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof FormLabel> = {
+const meta = {
   id: 'vue-form-label',
   title: 'Vue.js Component/Form label',
   component: FormLabel,
@@ -57,7 +57,7 @@ const meta: Meta<typeof FormLabel> = {
       },
     },
   },
-};
+} satisfies Meta<typeof FormLabel>;
 
 export default meta;
 

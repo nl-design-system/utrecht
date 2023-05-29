@@ -4,7 +4,7 @@ import readme from '@utrecht/components/figure/README.md?raw';
 import tokens from '@utrecht/components/figure/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Figure> = {
+const meta = {
   id: 'vue-figure',
   title: 'Vue.js Component/Figure',
   component: Figure,
@@ -46,7 +46,7 @@ const meta: Meta<typeof Figure> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Figure>;
 
 export default meta;
 

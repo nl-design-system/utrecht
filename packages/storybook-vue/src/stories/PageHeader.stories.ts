@@ -4,7 +4,7 @@ import readme from '@utrecht/components/page-header/README.md?raw';
 import tokens from '@utrecht/components/page-header/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof PageHeader> = {
+const meta = {
   id: 'vue-page-header',
   title: 'Vue.js Component/Page header',
   component: PageHeader,
@@ -30,7 +30,7 @@ const meta: Meta<typeof PageHeader> = {
       },
     },
   },
-};
+} satisfies Meta<typeof PageHeader>;
 
 export default meta;
 

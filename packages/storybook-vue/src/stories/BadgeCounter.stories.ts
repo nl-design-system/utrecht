@@ -4,7 +4,7 @@ import readme from '@utrecht/components/badge-counter/README.md?raw';
 import tokens from '@utrecht/components/badge-counter/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof BadgeCounter> = {
+const meta = {
   id: 'vue-badge-counter',
   title: 'Vue.js Component/Badge Counter',
   component: BadgeCounter,
@@ -44,7 +44,7 @@ const meta: Meta<typeof BadgeCounter> = {
       </BadgeCounter>
     `,
   }),
-};
+} satisfies Meta<typeof BadgeCounter>;
 
 export default meta;
 

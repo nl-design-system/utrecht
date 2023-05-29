@@ -4,7 +4,7 @@ import readme from '@utrecht/components/form-field/README.md?raw';
 import tokens from '@utrecht/components/form-field/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof Image> = {
+const meta = {
   id: 'vue-image',
   title: 'Vue.js Component/Image',
   component: Image,
@@ -38,7 +38,7 @@ const meta: Meta<typeof Image> = {
       },
     },
   },
-};
+} satisfies Meta<typeof Image>;
 
 export default meta;
 

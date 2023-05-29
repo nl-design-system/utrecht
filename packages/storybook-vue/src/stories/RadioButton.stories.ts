@@ -5,7 +5,7 @@ import readme from '@utrecht/components/radio-button/README.md?raw';
 import tokens from '@utrecht/components/radio-button/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof RadioButton> = {
+const meta = {
   id: 'vue-radio-button',
   title: 'Vue.js Component/Radio button',
   component: RadioButton,
@@ -70,7 +70,7 @@ const meta: Meta<typeof RadioButton> = {
       },
     },
   },
-};
+} satisfies Meta<typeof RadioButton>;
 
 export default meta;
 

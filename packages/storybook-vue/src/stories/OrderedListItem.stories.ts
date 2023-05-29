@@ -4,7 +4,7 @@ import readme from '@utrecht/components/ordered-list/README.md?raw';
 import tokens from '@utrecht/components/ordered-list/tokens.json';
 import { createStory } from './util';
 
-const meta: Meta<typeof OrderedListItem> = {
+const meta = {
   id: 'vue-ordered-list--item',
   title: 'Vue.js Component/Ordered List/Item',
   component: OrderedListItem,
@@ -38,7 +38,7 @@ const meta: Meta<typeof OrderedListItem> = {
       },
     },
   },
-};
+} satisfies Meta<typeof OrderedListItem>;
 
 export default meta;
 
