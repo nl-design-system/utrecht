@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/vue3';
 import { DataList, DataListItem, DataListValue } from '@utrecht/component-library-vue';
-import { URLValue } from '@utrecht/component-library-vue/src';
+import { URLValue } from '@utrecht/component-library-vue';
 import { createStory } from './util';
 
 const meta = {

@@ -13,9 +13,11 @@ const meta: Meta<typeof BadgeCounter> = {
     value: '42',
   },
   argTypes: {
-    name: 'Value',
-    type: { name: 'string', required: false },
-    table: { defaultValue: { summary: '' } },
+    value: {
+      name: 'Value',
+      type: { name: 'string', required: false },
+      table: { defaultValue: { summary: '' } },
+    },
   },
   parameters: {
     status: {

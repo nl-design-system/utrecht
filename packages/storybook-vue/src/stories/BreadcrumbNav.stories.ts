@@ -14,9 +14,11 @@ const meta: Meta<typeof BreadcrumbNav> = {
     label: 'Kruimelpad',
   },
   argTypes: {
-    description: 'Appearance',
-    control: { type: 'select' },
-    options: ['', 'arrows'],
+    appearance: {
+      description: 'Appearance',
+      control: { type: 'select' },
+      options: ['', 'arrows'],
+    },
   },
   parameters: {
     status: {

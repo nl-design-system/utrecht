@@ -19,8 +19,7 @@ const meta: Meta<typeof ListSocial> = {
   argTypes: {
     slot: {
       name: 'slot',
-      control: { type: 'text' },
-      type: { required: false },
+      type: { name: 'string', required: false },
       table: {
         defaultValue: { summary: '' },
       },

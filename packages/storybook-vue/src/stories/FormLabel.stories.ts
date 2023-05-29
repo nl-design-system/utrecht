@@ -35,7 +35,7 @@ const meta: Meta<typeof FormLabel> = {
       name: 'type',
       control: { type: 'select' },
       options: ['', 'checkbox', 'radio'],
-      type: { required: false },
+      type: { name: 'string', required: false },
       table: {
         defaultValue: { summary: '' },
       },

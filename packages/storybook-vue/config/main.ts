@@ -1,13 +1,10 @@
-/* eslint-disable no-undef */
-module.exports = {
+import type { StorybookConfig } from '@storybook/vue3-vite';
+
+const config: StorybookConfig = {
   features: {
-    postcss: false,
     buildStoriesJson: true,
-    previewMdx2: true,
     storyStoreV7: true,
   },
-  // stories: ['../src/**/*(?!docs).stories.@(js|jsx|mdx|ts|tsx)'],
-  // stories: ['../src/stories/Article/**/*.stories.*'],
   stories: ['../src/stories/**/*.stories.ts'],
   addons: [
     '@storybook/addon-links',
@@ -26,3 +23,5 @@ module.exports = {
     autodocs: 'tag',
   },
 };
+
+export default config;

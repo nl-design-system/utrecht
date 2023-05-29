@@ -10,11 +10,11 @@ const meta: Meta<typeof Button> = {
   tags: ['autodocs'],
   argTypes: {
     appearance: {
-      type: 'select',
+      type: 'string',
       options: ['primary-action-button', 'secondary-action-button', 'subtle-button'],
     },
     type: {
-      type: 'select',
+      type: 'string',
       options: ['button', 'submit', 'reset'],
     },
     onClick: { action: 'clicked' },

@@ -11,13 +11,13 @@ const meta: Meta<typeof BadgeStatus> = {
   tags: ['autodocs'],
   argTypes: {
     textContent: {
-      type: 'text',
+      type: 'string',
       table: {
         defaultValue: { summary: '' },
       },
     },
     status: {
-      type: 'select',
+      type: 'string',
       options: ['neutral', 'danger', 'safe', 'invalid', 'valid', 'error', 'warning', 'success', 'inactive', 'active'],
       table: {
         defaultValue: { summary: '' },
