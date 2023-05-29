@@ -20,7 +20,10 @@ const meta = {
       control: {
         type: 'color',
       },
-      type: { required: true },
+      type: {
+        name: 'string',
+        required: true,
+      },
       table: {
         category: 'API',
       },

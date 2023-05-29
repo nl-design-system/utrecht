@@ -6,7 +6,6 @@ const meta = {
   title: 'React Component/Ordered List/Item',
   id: 'react-ordered-list--item',
   component: OrderedListItem,
-  name: OrderedListItem,
   decorators: [(Story) => <OrderedList>{Story()}</OrderedList>],
   args: {
     children: 'List item',

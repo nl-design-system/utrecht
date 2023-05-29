@@ -13,7 +13,7 @@ const meta = {
   component: FormLabel,
   argTypes: {
     type: {
-      type: 'select',
+      type: { name: 'string', required: false },
       options: [undefined, 'checkbox', 'radio'],
     },
     checked: {

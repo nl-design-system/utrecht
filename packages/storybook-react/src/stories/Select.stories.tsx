@@ -81,7 +81,7 @@ const meta = {
       },
     },
   },
-  render: ({ ...args }) => (
+  render: ({ options, ...args }) => (
     <Select {...args}>
       {options &&
         options.length > 0 &&
