@@ -22,14 +22,34 @@
   @include utrecht-table__header;
 }
 
-.utrecht-table--html-table > thead > tr:last-of-type,
-.utrecht-table__cell--last-header-row {
-  @include utrecht-table__cell--last-header-row;
+.utrecht-table__header--sticky {
+  @include utrecht-table__header--sticky;
+}
+
+.utrecht-table__footer {
+  @include utrecht-table__footer;
+}
+
+.utrecht-table__footer--sticky {
+  @include utrecht-table__footer--sticky;
 }
 
 .utrecht-table--html-table > tbody,
 .utrecht-table__body {
   @include utrecht-table__body;
+}
+
+.utrecht-table--fixed {
+  inline-size: fit-content;
+  table-layout: fixed;
+}
+
+.utrecht-table--fixed th,
+.utrecht-table--oneline th,
+.utrecht-table--oneline td {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* `.utrecht-table--html-table` should not affect nested tables.
@@ -59,6 +79,14 @@
 
 .utrecht-table__header-cell--selected {
   @include utrecht-table__header-cell--selected;
+}
+
+.utrecht-table__header-cell--sticky-block {
+  @include utrecht-table__header-cell--sticky-block;
+}
+
+.utrecht-table__header-cell--sticky-inline {
+  @include utrecht-table__header-cell--sticky-inline;
 }
 
 .utrecht-table--html-table > tr > td,
@@ -106,4 +134,106 @@
 
 .utrecht-table__row--alternate-even {
   @include utrecht-table__row--alternate-even;
+}
+
+.utrecht-table__header-cell {
+  --utrecht-button-font-size: inherit;
+  --utrecht-button-font-weight: inherit;
+  --utrecht-button-padding-inline-start: var(--utrecht-table-cell-padding-inline-start);
+  --utrecht-button-padding-inline-end: var(--utrecht-table-cell-padding-inline-end);
+  --utrecht-button-padding-block-start: var(--utrecht-table-cell-padding-block-start);
+  --utrecht-button-padding-block-end: var(--utrecht-table-cell-padding-block-end);
+  --utrecht-button-hover-scale: 1;
+  --utrecht-button-focus-scale: 1;
+  --utrecht-button-min-block-size: 100%;
+  --utrecht-button-min-inline-size: 100%;
+  --utrecht-button-border-color: transparent;
+  --utrecht-button-border-size: 1px;
+}
+
+.utrecht-table__header-cell:has(.utrecht-button) {
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+}
+
+.utrecht-table__header-cell-button {
+  justify-content: var(--_utrecht-table-cell-text-align, start);
+
+  // border: 1px solid transparent;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-table__data {
+}
+
+.utrecht-table__data--truncate {
+  display: block;
+  max-inline-size: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.utrecht-table__container {
+  max-inline-size: 100%;
+  overflow-inline: scroll;
+
+  // position: relative;
+}
+
+.utrecht-table__header--hidden {
+  block-size: 1px;
+  border: 0 solid silver;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  inline-size: 1px;
+  outline: 1px solid red;
+  overflow: hidden;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+}
+
+.utrecht-table--busy {
+  @include utrecht-table--busy;
+}
+
+.utrecht-table--alternate-row-color {
+  .utrecht-table__body {
+    .utrecht-table__row:nth-child(odd) {
+      @include utrecht-table__row--alternate-odd;
+    }
+    .utrecht-table__row:nth-child(even) {
+      @include utrecht-table__row--alternate-even;
+    }
+  }
+}
+
+.utrecht-table--row-hover {
+  .utrecht-table__body {
+    .utrecht-table__row:hover {
+      // @media screen and (forced-colors: active) {
+      .utrecht-table__header-cell,
+      .utrecht-table__cell {
+        background-color: papayawhip;
+        color: maroon;
+      }
+    }
+  }
+}
+
+.utrecht-table--row-focus-within {
+  .utrecht-table__body {
+    .utrecht-table__row:focus-within {
+      // @media screen and (forced-colors: active) {
+      .utrecht-table__header-cell,
+      .utrecht-table__cell {
+        background-color: papayawhip;
+        color: maroon;
+      }
+    }
+  }
 }

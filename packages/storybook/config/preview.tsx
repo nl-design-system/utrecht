@@ -96,7 +96,7 @@ const preview: Preview = {
       },
       transformSource: (src: string, storyContext: StoryContext): string => {
         // Ensure valid HTML in the Preview source
-        if (storyContext.component) {
+        if (typeof storyContext.component === 'function') {
           return prettier.format(ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.args)), {
             parser: 'babel',
             plugins: [prettierBabel],

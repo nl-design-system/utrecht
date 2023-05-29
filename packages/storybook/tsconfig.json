@@ -6,12 +6,16 @@
   },
   "extends": "../../tsconfig.json",
   "include": [
+    "config/**/*",
     "config/**/*.ts",
     "config/**/*.tsx",
+    "src/**/*",
     "src/**/*.ts",
     "src/**/*.tsx",
+    "stories/**/*",
     "stories/**/*.ts",
     "stories/**/*.tsx"
   ],
-  "exclude": ["**/node_modules/*"]
+  "exclude": ["**/node_modules/*"],
+  "references": [{ "path": "../component-library-react" }]
 }

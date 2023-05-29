@@ -6,14 +6,26 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type TableFooterProps = HTMLAttributes<HTMLTableSectionElement>;
+export interface TableFooterProps extends HTMLAttributes<HTMLTableSectionElement> {
+  sticky?: boolean;
+}
 
 export const TableFooter = forwardRef(
   (
-    { children, className, ...restProps }: PropsWithChildren<TableFooterProps>,
+    { children, className, sticky, ...restProps }: PropsWithChildren<TableFooterProps>,
     ref: ForwardedRef<HTMLTableSectionElement>,
   ) => (
-    <tfoot {...restProps} ref={ref} className={clsx('utrecht-table__footer', className)}>
+    <tfoot
+      {...restProps}
+      ref={ref}
+      className={clsx(
+        'utrecht-table__footer',
+        {
+          'utrecht-table__footer--sticky': sticky,
+        },
+        className,
+      )}
+    >
       {children}
     </tfoot>
   ),

@@ -17,7 +17,26 @@
         "color": {},
         "text-transform": {},
         "border-block-end-color": { "value": "{utrecht.color.red.40}" },
-        "border-block-end-width": { "value": "{utrecht.border-width.md}" }
+        "border-block-end-width": { "value": "{utrecht.border-width.md}" },
+        "sticky": {
+          "background-color": { "value": "{utrecht.color.white}" },
+          "color": { "value": "{utrecht.color.black}" },
+          "border-block-end-color": { "value": "{utrecht.color.red.40}" },
+          "border-block-end-width": { "value": "2px" }
+        }
+      },
+      "footer": {
+        "font-weight": {},
+        "color": {},
+        "text-transform": {},
+        "border-block-end-color": {},
+        "border-block-end-width": {},
+        "sticky": {
+          "background-color": { "value": "{utrecht.color.white}" },
+          "color": { "value": "{utrecht.color.black}" },
+          "border-block-start-color": { "value": "{utrecht.color.red.40}" },
+          "border-block-start-width": { "value": "2px" }
+        }
       },
       "header-cell": {
         "font-weight": {},
@@ -25,14 +44,17 @@
         "text-transform": {}
       },
       "cell": {
-        "line-height": {},
+        "line-height": { "value": "24px" },
         "padding-block-end": { "value": "0.5em" },
         "padding-block-start": { "value": "0.5em" },
-        "padding-inline-end": { "value": "0" },
+        "padding-inline-end": { "value": "0.4em" },
         "padding-inline-start": { "value": "0.4em" },
         "selected": {
           "background-color": { "value": "{utrecht.color.blue.90}" },
           "color": { "value": "{utrecht.color.black}" }
+        },
+        "icon": {
+          "size": { "value": "1em" }
         }
       },
       "row": {
@@ -41,12 +63,12 @@
         "border-block-end-width": { "value": "{utrecht.border-width.sm}" },
         "border-block-end-color": { "value": "{utrecht.color.grey.90}" },
         "alternate-odd": {
-          "background-color": {},
-          "color": {}
+          "background-color": { "value": "{utrecht.color.white}" },
+          "color": { "value": "{utrecht.color.black}" }
         },
         "alternate-even": {
-          "background-color": {},
-          "color": {}
+          "background-color": { "value": "{utrecht.color.grey.95}" },
+          "color": { "value": "{utrecht.color.black}" }
         }
       }
     }
