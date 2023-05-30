@@ -10,14 +10,6 @@
   @include utrecht-page-footer;
 }
 
-.utrecht-page-footer .utrecht-link--telephone {
-  color: #fff;
-}
-
-.utrecht-page-footer .utrecht-paragraph {
-  color: #fff;
-}
-
 .utrecht-page-footer__address--reset-address {
   @include utrecht-page-footer__address--reset-address;
 }
