@@ -13,7 +13,7 @@ export default defineConfig({
       name: 'component-library-vue',
     },
     rollupOptions: {
-      external: ['vue'],
+      external: ['vue', 'pinia'],
       output: {
         sourcemap: false,
         // Provide global variables to use in the UMD build
