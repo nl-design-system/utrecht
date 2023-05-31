@@ -1,6 +1,14 @@
 {
   "utrecht": {
     "data-list": {
+      "actions": {
+        "padding-block-end": {},
+        "padding-block-start": {},
+        "padding-inline-end": {},
+        "padding-inline-start": {}
+      },
+      "border-color": {},
+      "border-width": {},
       "margin-block-end": {
         "value": "{utrecht.space.block.md}"
       },
@@ -8,19 +16,31 @@
         "value": "{utrecht.space.block.md}"
       },
       "item-key": {
+        "border-inline-end-color": {},
+        "border-inline-end-width": {},
         "color": {},
         "font-size": {},
         "font-weight": {
           "value": "{utrecht.typography.weight-scale.bold.font-weight}"
         },
-        "line-height": {}
+        "line-height": {},
+        "padding-block-end": {},
+        "padding-block-start": {},
+        "padding-inline-end": {},
+        "padding-inline-start": {}
       },
       "item-value": {
         "color": {},
         "font-size": {},
-        "line-height": {}
+        "line-height": {},
+        "padding-block-end": {},
+        "padding-block-start": {},
+        "padding-inline-end": {},
+        "padding-inline-start": {}
       },
       "rows": {
+        "border-block-end-color": {},
+        "border-block-end-width": {},
         "item": {
           "margin-block-start": {
             "value": "{utrecht.space.block.md}"
@@ -33,12 +53,14 @@
           }
         },
         "column": {
-          "inline-size": { "value": "80%" },
-          "min-inline-size": { "value": "25ch" }
+          "inline-size": {
+            "value": "80%"
+          },
+          "min-inline-size": {
+            "value": "25ch"
+          }
         },
-        "gap": {},
-        "border-bottom-width": {},
-        "border-bottom-color": {}
+        "gap": {}
       }
     }
   }
