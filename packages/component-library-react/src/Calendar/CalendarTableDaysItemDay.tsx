@@ -19,7 +19,7 @@ export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> =
   disabled,
   ...props
 }) => (
-  <td>
+  <td role="gridcell" aria-current={isToday ? 'date' : undefined} aria-selected={selected}>
     <CalendarButton
       className={clsx(
         'utrecht-calendar__table-days-item-day',

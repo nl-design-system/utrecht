@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import {
+  addDays,
   addMonths,
   addWeeks,
   addYears,
   eachDayOfInterval,
   endOfDay,
+  endOfMonth,
   endOfWeek,
   format,
   formatISO,
@@ -266,6 +268,81 @@ export const Calendar: FC<CalendarProps> = ({
     })),
   };
 
+  const focusPreviousWeek = () => {
+    console.log('Previous week');
+    setVisibleMonth(addWeeks(selectedDate, -1));
+  };
+  const focusNextWeek = () => {
+    console.log('Next week');
+    setVisibleMonth(addWeeks(selectedDate, 1));
+  };
+  const focusStartOfWeek = () => {
+    console.log('Start of week');
+    setVisibleMonth(startOfWeek(selectedDate));
+  };
+  const focusPreviousDay = () => {
+    console.log('Previous day');
+    setVisibleMonth(addDays(selectedDate, -1));
+  };
+  const focusEndOfWeek = () => {
+    console.log('End of week');
+    setVisibleMonth(endOfWeek(selectedDate));
+  };
+  const focusNextDay = () => {
+    console.log('Next day');
+    setVisibleMonth(addDays(selectedDate, 1));
+  };
+  const focusStartOfMonth = () => {
+    console.log('Start of month');
+    setVisibleMonth(startOfMonth(selectedDate));
+  };
+  const focusNextMonth = () => {
+    console.log('Next month');
+    setVisibleMonth(addMonths(selectedDate, -1));
+  };
+  const focusNextYear = () => {
+    console.log('Next year');
+    setVisibleMonth(addYears(selectedDate, -1));
+  };
+  const focusEndOfMonth = () => {
+    console.log('End of month');
+    setVisibleMonth(endOfMonth(selectedDate));
+  };
+  const focusPreviousYear = () => {
+    console.log('Previous year');
+    setVisibleMonth(addYears(selectedDate, -1));
+  };
+  const focusPreviousMonth = () => {
+    console.log('Previous month');
+    setVisibleMonth(addMonths(selectedDate, -1));
+  };
+  const handleKeyPress = (evt) => {
+    let action;
+
+    if (evt.key === 'ArrowUp') {
+      action = focusPreviousWeek;
+    } else if (evt.key === 'ArrowDown') {
+      action = focusNextWeek;
+    } else if (evt.key === 'ArrowLeft') {
+      action = evt.ctrlKey ? focusStartOfWeek : focusPreviousDay;
+    } else if (evt.key === 'ArrowRight') {
+      action = evt.ctrlKey ? focusEndOfWeek : focusNextDay;
+    } else if (evt.key === 'Home') {
+      action = focusStartOfMonth;
+    } else if (evt.key === 'End') {
+      action = focusEndOfMonth;
+    } else if (evt.key === 'PageUp') {
+      action = evt.ctrlKey ? focusPreviousYear : focusPreviousMonth;
+    } else if (evt.key === 'PageDown') {
+      action = evt.ctrlKey ? focusNextYear : focusNextMonth;
+    }
+
+    if (action) {
+      evt.preventDefault();
+      action();
+    }
+  };
+
   return (
     <div className="utrecht-calendar">
       <CalendarNavigation>
@@ -309,6 +386,8 @@ export const Calendar: FC<CalendarProps> = ({
                       emphasis={emphasis}
                       selected={selected}
                       disabled={disabled}
+                      onKeyDown={handleKeyPress}
+                      onKeyPress={handleKeyPress}
                     />
                   );
                 },
