@@ -37,6 +37,17 @@ import { IconArrowLeftDouble } from './IconArrowLeftDouble';
 import { IconArrowRight } from './IconArrowRight';
 import { IconArrowRightDouble } from './IconArrowRightDouble';
 
+/* date-fns `Day` type */
+enum Day {
+  SUNDAY = 0,
+  MONDAY = 1,
+  TUESDAY = 2,
+  WEDNESDAY = 3,
+  THURSDAY = 4,
+  FRIDAY = 5,
+  SATURDAY = 6,
+}
+
 function createCalendar(today: Date): Date[] {
   const start = startOfWeek(startOfMonth(today), {
     weekStartsOn: 1 /* Monday */,
@@ -48,11 +59,22 @@ function createCalendar(today: Date): Date[] {
 }
 
 export type Events = {
+  /** ISO 8601 date string */
   date: string;
   emphasis?: boolean;
   selected?: boolean;
   disabled?: boolean;
 };
+
+/**
+ * Public API is ISO 8601 date string, internally we use a `Date` object.
+ */
+interface InternalDayState {
+  date: Date;
+  emphasis?: boolean;
+  disabled?: boolean;
+  selected?: boolean;
+}
 
 interface CalendarProps {
   /**
@@ -101,25 +123,31 @@ export const Calendar: FC<CalendarProps> = ({
   minDate,
   maxDate,
 }) => {
-  const [visibleMonth, setVisibleMonth] = useState(currentDate || new Date());
+  const now = new Date();
+  const _events: InternalDayState[] = (events || []).map((day: Events) => ({
+    ...day,
+    date: parseISO(day.date),
+  }));
+
+  const [visibleMonth, setVisibleMonth] = useState(currentDate || now);
   const [selectedDate, setSelectedDate] = useState(currentDate);
   const calendar = createCalendar(visibleMonth);
-  const start = startOfWeek(visibleMonth, { weekStartsOn: 1 });
-  const end = endOfWeek(visibleMonth, { weekStartsOn: 1 });
+  const start = startOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
+  const end = endOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
 
-  const currentWeek = eachDayOfInterval({ start, end }).map((day) => day);
-  const chunksWeeks = chunk(calendar, calendar.length / 6);
+  const maxRows = 6;
+  const currentWeek = eachDayOfInterval({ start, end });
+  const chunksWeeks = chunk(calendar, calendar.length / maxRows);
 
-  const weeks = chunksWeeks.map((week) =>
+  const weeks: InternalDayState[][] = chunksWeeks.map((week) =>
     week.map((date) => {
-      const currentEvent =
-        events && events.length > 0 && events.find((e) => isSameDay(endOfDay(parseISO(e.date)), date));
+      const currentEvent = _events.find((e) => isSameDay(endOfDay(e.date), date));
       if (currentEvent) {
         return {
           date,
-          emphasis: currentEvent.emphasis,
-          selected: currentEvent.selected,
-          disabled: currentEvent.disabled,
+          emphasis: currentEvent.emphasis || false,
+          selected: currentEvent.selected || false,
+          disabled: currentEvent.disabled || false,
         };
       } else {
         return {
@@ -132,69 +160,103 @@ export const Calendar: FC<CalendarProps> = ({
     }),
   );
 
+  const grid = {
+    currentMonth: format(visibleMonth, 'yyyy-mm'),
+    currentMonthLabel: format(visibleMonth, 'LLLL Y', { locale }),
+    actions: {
+      showPreviousYear: {
+        action: () => setVisibleMonth(setYear(visibleMonth, getYear(visibleMonth) - 1)),
+        label: previousYearButtonTitle,
+      },
+      showPreviousMonth: {
+        action: () => setVisibleMonth(setMonth(visibleMonth, visibleMonth.getMonth() - 1)),
+        label: previousMonthButtonTitle,
+      },
+      showNextMonth: {
+        action: () => setVisibleMonth(addMonths(visibleMonth, 1)),
+        label: nextMonthButtonTitle,
+      },
+      showNextYear: {
+        action: () => setVisibleMonth(addYears(visibleMonth, 1)),
+        label: nextYearButtonTitle,
+      },
+    },
+    columnHeaders: currentWeek.map((day) => ({
+      label: format(day, 'EEEEEE', { locale }),
+      labelAbbr: format(day, 'EEEE', { locale }),
+    })),
+    rows: weeks.map((week) => ({
+      columns: week.map((day) => ({
+        isToday: isSameDay(day.date, now),
+        isCurrentMonth: isSameMonth(day.date, visibleMonth),
+        onClick: () => {
+          setVisibleMonth(day.date);
+          if (isSameMonth(day.date, visibleMonth)) {
+            setSelectedDate(day.date);
+            onCalendarClick(formatISO(day.date));
+          }
+        },
+        label: format(day.date, 'eeee dd LLLL Y', { locale }),
+        date: day.date.getDate().toString(),
+        emphasis: day.emphasis,
+        selected: day.selected || (selectedDate && isSameDay(day.date, selectedDate)),
+        disabled:
+          day.disabled ||
+          (minDate && isBefore(day.date, startOfDay(minDate))) ||
+          (maxDate && isAfter(day.date, endOfDay(maxDate))),
+      })),
+    })),
+  };
+
   return (
     <div className="utrecht-calendar">
       <CalendarNavigation>
         <CalendarNavigationButtons
-          previousIcon={<IconArrowLeftDouble title={previousYearButtonTitle} />}
-          nextIcon={<IconArrowRightDouble title={nextYearButtonTitle} />}
-          onPreviousClick={() => setVisibleMonth(setYear(visibleMonth, getYear(visibleMonth) - 1))}
-          onNextClick={() => setVisibleMonth(addYears(visibleMonth, 1))}
+          previousIcon={<IconArrowLeftDouble title={grid.actions.showPreviousYear.label} />}
+          nextIcon={<IconArrowRightDouble title={grid.actions.showNextYear.label} />}
+          onPreviousClick={grid.actions.showPreviousYear.action}
+          onNextClick={grid.actions.showNextYear.action}
         >
           <CalendarNavigationButtons
-            previousIcon={<IconArrowLeft title={previousMonthButtonTitle} />}
-            nextIcon={<IconArrowRight title={nextMonthButtonTitle} />}
-            onPreviousClick={() => setVisibleMonth(setMonth(visibleMonth, visibleMonth.getMonth() - 1))}
-            onNextClick={() => setVisibleMonth(addMonths(visibleMonth, 1))}
+            previousIcon={<IconArrowLeft title={grid.actions.showPreviousMonth.label} />}
+            nextIcon={<IconArrowRight title={grid.actions.showNextMonth.label} />}
+            onPreviousClick={grid.actions.showPreviousMonth.action}
+            onNextClick={grid.actions.showNextMonth.action}
           >
-            <CalendarNavigationLabel dateTime={format(visibleMonth, 'yyyy-mm')}>
-              {format(visibleMonth, 'LLLL Y', { locale })}
-            </CalendarNavigationLabel>
+            <CalendarNavigationLabel dateTime={grid.currentMonth}>{grid.currentMonthLabel}</CalendarNavigationLabel>
           </CalendarNavigationButtons>
         </CalendarNavigationButtons>
       </CalendarNavigation>
       <table className="utrecht-calendar__table" role="grid">
         <CalendarTableWeeksContainer>
-          {currentWeek &&
-            currentWeek.length > 0 &&
-            currentWeek.map((day, index) => (
-              <CalendarTableWeeksItem scope="col" abbr={format(day, 'EEEE', { locale })} key={index}>
-                {format(day, 'EEEEEE', { locale })}
-              </CalendarTableWeeksItem>
-            ))}
+          {grid.columnHeaders.map(({ label, labelAbbr }, index) => (
+            <CalendarTableWeeksItem scope="col" abbr={labelAbbr} key={index}>
+              {label}
+            </CalendarTableWeeksItem>
+          ))}
         </CalendarTableWeeksContainer>
         <CalendarTableDaysContainer>
-          {weeks &&
-            weeks.length > 0 &&
-            weeks.map((week, index) => (
-              <CalendarTableDaysItem key={index}>
-                {week.map((day, index) => {
+          {grid.rows.map((row, rowIndex) => (
+            <CalendarTableDaysItem key={rowIndex}>
+              {row.columns.map(
+                ({ date, isToday, isCurrentMonth, onClick, label, selected, emphasis, disabled }, columnIndex) => {
                   return (
                     <CalendarTableDaysItemDay
-                      isToday={isSameDay(day.date, Date.now())}
-                      dayOutOfTheMonth={!isSameMonth(day.date, visibleMonth)}
-                      key={index}
-                      onClick={() => {
-                        setVisibleMonth(day.date);
-                        if (isSameMonth(day.date, visibleMonth)) {
-                          setSelectedDate(day.date);
-                          onCalendarClick(formatISO(day.date));
-                        }
-                      }}
-                      aria-label={format(day.date, 'eeee dd LLLL Y', { locale })}
-                      day={day.date.getDate().toString()}
-                      emphasis={day.emphasis}
-                      selected={day.selected || (selectedDate && isSameDay(day.date, selectedDate))}
-                      disabled={
-                        day.disabled ||
-                        (minDate && isBefore(day.date, startOfDay(minDate))) ||
-                        (maxDate && isAfter(day.date, endOfDay(maxDate)))
-                      }
+                      isToday={isToday}
+                      dayOutOfTheMonth={!isCurrentMonth}
+                      key={columnIndex}
+                      onClick={onClick}
+                      aria-label={label}
+                      day={date}
+                      emphasis={emphasis}
+                      selected={selected}
+                      disabled={disabled}
                     />
                   );
-                })}
-              </CalendarTableDaysItem>
-            ))}
+                },
+              )}
+            </CalendarTableDaysItem>
+          ))}
         </CalendarTableDaysContainer>
       </table>
     </div>

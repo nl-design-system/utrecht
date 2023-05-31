@@ -9,7 +9,7 @@ describe('Calendar', () => {
     let selectedDate = '';
     render(
       <Calendar
-        currentDate={new Date(2023, 5, 11)}
+        currentDate={new Date('2023-06-11')}
         onCalendarClick={(date) => {
           selectedDate = date;
         }}
