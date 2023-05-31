@@ -78,9 +78,9 @@ interface InternalDayState {
 
 export interface CalendarProps {
   /**
-   * `onChange` It's a callback function that returns the selected date, triggered when you click on the day
+   * `onChange` It's a callback function that returns the selected date in `evt.detail.value`, triggered when you click on the day
    */
-  onChange?: (value: string) => void;
+  onChange?: (value: CustomEvent<{ value: string }>) => void;
   /**
    * `events` An array of event objects that contain some properties that allow you to change the calendar day style base on your value
    * `{date?: string; emphasis?: boolean; selected?: boolean; disabled?: boolean;}`
@@ -246,7 +246,13 @@ export const Calendar: FC<CalendarProps> = ({
               onCalendarClick(formatISO(day.date));
             }
             if (typeof onChange === 'function') {
-              onChange(formatISO(day.date, { representation: 'date' }));
+              onChange(
+                new CustomEvent('change', {
+                  detail: {
+                    value: formatISO(day.date, { representation: 'date' }),
+                  },
+                }),
+              );
             }
           }
         },

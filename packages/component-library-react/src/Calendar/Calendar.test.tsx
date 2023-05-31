@@ -9,8 +9,8 @@ describe('Calendar', () => {
     render(
       <Calendar
         defaultValue="2023-06-11"
-        onChange={(date) => {
-          selectedDate = date;
+        onChange={(evt) => {
+          selectedDate = evt.detail.value;
         }}
         locale={nl}
       />,
