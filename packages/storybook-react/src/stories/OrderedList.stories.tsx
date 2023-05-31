@@ -1,7 +1,7 @@
 // performance optimizations are not relevant for story rendering, ignore ESLint
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module/index';
+import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/ordered-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/ordered-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

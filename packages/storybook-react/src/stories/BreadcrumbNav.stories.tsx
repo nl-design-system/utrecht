@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { BreadcrumbLink, BreadcrumbNav } from '@utrecht/component-library-react/dist/css-module/index';
+import { BreadcrumbLink, BreadcrumbNav } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/breadcrumb/README.md?raw';
 import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

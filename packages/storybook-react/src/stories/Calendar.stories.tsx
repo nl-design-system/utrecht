@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Calendar } from '@utrecht/component-library-react/dist/css-module';
+import { Calendar } from '@utrecht/component-library-react/src';
 import tokensDefinition from '@utrecht/components/calendar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { addDays, addWeeks, addYears } from 'date-fns';

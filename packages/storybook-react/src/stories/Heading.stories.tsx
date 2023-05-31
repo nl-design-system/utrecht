@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading } from '@utrecht/component-library-react/dist/css-module/index';
+import { Heading } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/heading/README.md?raw';
 import tokensDefinition from '@utrecht/components/heading/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

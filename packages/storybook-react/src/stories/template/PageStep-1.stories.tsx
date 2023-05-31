@@ -19,7 +19,7 @@ import {
   Paragraph,
   Separator,
   Textbox,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react/src';
 import {
   UtrechtBreadcrumb,
   UtrechtDigidButton,

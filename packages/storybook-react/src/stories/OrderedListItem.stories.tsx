@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module/index';
+import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/src/css-module/index';
 import React from 'react';
 
 const meta = {

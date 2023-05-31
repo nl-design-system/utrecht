@@ -1,10 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import {
-  DataList,
-  DataListItem,
-  DataListValue,
-  URLValue,
-} from '@utrecht/component-library-react/dist/css-module/index';
+import { DataList, DataListItem, DataListValue, URLValue } from '@utrecht/component-library-react/src/css-module/index';
 import React from 'react';
 
 const meta = {

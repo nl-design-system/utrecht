@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import type { Meta, StoryObj } from '@storybook/react';
-import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
+import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/alert/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
