@@ -76,35 +76,52 @@ interface InternalDayState {
   selected?: boolean;
 }
 
-interface CalendarProps {
+export interface CalendarProps {
   /**
-   * `onCalendarClick` It's a callback function that returns the selected date, triggered when you click on the day
-   *
-   * */
-  onCalendarClick: (date: string) => void;
+   * `onChange` It's a callback function that returns the selected date, triggered when you click on the day
+   */
+  onChange?: (value: string) => void;
   /**
    * `events` An array of event objects that contain some properties that allow you to change the calendar day style base on your value
-   * `{date?: Date; emphasis?: boolean; selected?: boolean; disabled?: boolean;}`
-   *
-   * */
+   * `{date?: string; emphasis?: boolean; selected?: boolean; disabled?: boolean;}`
+   */
   events?: Events[];
   /**
-   * `currentDate` The default value is `new Date()`, but you can provide a different date
-   *   https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date
-   * */
-  currentDate?: Date;
+   * `showDate` The default value is current system date, but you can provide a different date as ISO 8601 date.
+   */
+  defaultValue?: string;
   /**
    * `locale` to change the calendar language by using 'date-fns/locale'
    *  `import { nl, enUS } from 'date-fns/locale';`
-   * */
+   */
   locale?: Locale;
   previousYearButtonTitle?: string;
   nextYearButtonTitle?: string;
   previousMonthButtonTitle?: string;
   nextMonthButtonTitle?: string;
+  min?: string;
+  max?: string;
+
+  /** @deprecated */
+  onCalendarClick?: (dateTime: string) => void;
+
+  /** @deprecated */
+  currentDate?: Date;
+
+  /** @deprecated */
   minDate?: Date;
+
+  /** @deprecated */
   maxDate?: Date;
 }
+
+const deprecated = (prev: string, current: string) => {
+  try {
+    console.warn(`${prev} is deprecated, please use: ${current}`);
+  } catch (e) {
+    // Ignore when no developers tools are available
+  }
+};
 
 /**
  * Calendar Component
@@ -112,25 +129,57 @@ interface CalendarProps {
  * */
 
 export const Calendar: FC<CalendarProps> = ({
-  onCalendarClick,
+  onChange,
   events,
-  currentDate,
+  defaultValue,
   locale = enUS,
   previousYearButtonTitle = 'Previous year',
   nextYearButtonTitle = 'Next year',
   previousMonthButtonTitle = 'Previous month',
   nextMonthButtonTitle = 'Next month',
+  onCalendarClick,
   minDate,
   maxDate,
+  min,
+  max,
+  currentDate,
 }) => {
+  let _minDate: Date, _maxDate: Date;
+
+  if (onCalendarClick) {
+    deprecated('onCalendarClick', 'onChange');
+  }
+  if (minDate instanceof Date) {
+    deprecated('minDate', 'min');
+    _minDate = startOfDay(minDate);
+  }
+  if (maxDate instanceof Date) {
+    deprecated('maxDate', 'max');
+    _maxDate = endOfDay(maxDate);
+  }
+
+  if (typeof min === 'string') {
+    _minDate = startOfDay(parseISO(min));
+  }
+  if (typeof max === 'string') {
+    _maxDate = endOfDay(parseISO(max));
+  }
+
   const now = new Date();
   const _events: InternalDayState[] = (events || []).map((day: Events) => ({
     ...day,
     date: parseISO(day.date),
   }));
 
-  const [visibleMonth, setVisibleMonth] = useState(currentDate || now);
-  const [selectedDate, setSelectedDate] = useState(currentDate);
+  let defaultDate = typeof defaultValue === 'string' ? parseISO(defaultValue) : undefined;
+
+  if (currentDate instanceof Date) {
+    deprecated('currentDate', 'defaultValue');
+    defaultDate = currentDate;
+  }
+
+  const [visibleMonth, setVisibleMonth] = useState(defaultDate || now);
+  const [selectedDate, setSelectedDate] = useState(defaultDate);
   const calendar = createCalendar(visibleMonth);
   const start = startOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
   const end = endOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
@@ -193,7 +242,12 @@ export const Calendar: FC<CalendarProps> = ({
           setVisibleMonth(day.date);
           if (isSameMonth(day.date, visibleMonth)) {
             setSelectedDate(day.date);
-            onCalendarClick(formatISO(day.date));
+            if (typeof onCalendarClick === 'function') {
+              onCalendarClick(formatISO(day.date));
+            }
+            if (typeof onChange === 'function') {
+              onChange(formatISO(day.date, { representation: 'date' }));
+            }
           }
         },
         label: format(day.date, 'eeee dd LLLL Y', { locale }),
@@ -201,9 +255,7 @@ export const Calendar: FC<CalendarProps> = ({
         emphasis: day.emphasis,
         selected: day.selected || (selectedDate && isSameDay(day.date, selectedDate)),
         disabled:
-          day.disabled ||
-          (minDate && isBefore(day.date, startOfDay(minDate))) ||
-          (maxDate && isAfter(day.date, endOfDay(maxDate))),
+          day.disabled || (_minDate && isBefore(day.date, _minDate)) || (_maxDate && isAfter(day.date, _maxDate)),
       })),
     })),
   };
