@@ -16,6 +16,6 @@ export const addonViewport = {
         },
       },
     },
-    defaultViewport: 'responsive',
+    defaultViewport: 'wcagDefault',
   },
 };
