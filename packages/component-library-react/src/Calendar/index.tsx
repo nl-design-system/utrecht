@@ -25,7 +25,7 @@ import {
 } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import chunk from 'lodash.chunk';
-import { FC, useState } from 'react';
+import { FC, ReactNode, useState } from 'react';
 import { CalendarNavigation } from './CalendarNavigation';
 import { CalendarNavigationButtons } from './CalendarNavigationButtons';
 import { CalendarNavigationLabel } from './CalendarNavigationLabel';
@@ -97,10 +97,10 @@ export interface CalendarProps {
    *  `import { nl, enUS } from 'date-fns/locale';`
    */
   locale?: Locale;
-  previousYearButtonTitle?: string;
-  nextYearButtonTitle?: string;
-  previousMonthButtonTitle?: string;
-  nextMonthButtonTitle?: string;
+  previousYearButtonTitle?: ReactNode;
+  nextYearButtonTitle?: ReactNode;
+  previousMonthButtonTitle?: ReactNode;
+  nextMonthButtonTitle?: ReactNode;
   min?: string;
   max?: string;
 
