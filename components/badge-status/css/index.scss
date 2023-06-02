@@ -8,6 +8,7 @@
 
 .utrecht-badge-status {
   @include utrecht-badge;
+  @include utrecht-badge--media-query-forced-colors;
 
   letter-spacing: var(--utrecht-badge-status-letter-spacing, inherit);
   text-transform: var(--utrecht-badge-status-text-transform, inherit);

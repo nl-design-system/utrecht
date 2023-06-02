@@ -21,3 +21,13 @@
   padding-inline-start: var(--utrecht-badge-padding-inline, 0.5ch);
   text-decoration: none; /* no inheritance */
 }
+
+@mixin utrecht-badge--media-query-forced-colors {
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    border-color: currentColor;
+    border-style: solid;
+
+    /* Warning: there layout difference because of the added 1px border */
+    border-width: 1px;
+  }
+}
