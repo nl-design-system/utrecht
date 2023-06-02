@@ -5,7 +5,9 @@
  */
 
 @import "./mixin";
+@import "../../badge/css/mixin";
 
 .utrecht-badge-counter {
   @include utrecht-badge-counter;
+  @include utrecht-badge--media-query-forced-colors;
 }
