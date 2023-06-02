@@ -6,7 +6,7 @@ export interface CalendarNavigationProps
 }
 
 export const CalendarNavigation: React.FC<CalendarNavigationProps> = ({ children, ...props }) => (
-  <div className="utrecht-calendar__navigation" {...props}>
+  <div className="utrecht-calendar__navigation" role="group" {...props}>
     {children}
   </div>
 );

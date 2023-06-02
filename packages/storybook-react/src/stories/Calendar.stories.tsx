@@ -3,8 +3,21 @@ import { Calendar } from '@utrecht/component-library-react/src/css-module';
 import tokensDefinition from '@utrecht/components/calendar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { addDays, addWeeks, addYears } from 'date-fns';
-import { enUS, nl } from 'date-fns/locale';
+import { ar, enUS, faIR, ja, nl, zhCN } from 'date-fns/locale';
+import React from 'react';
 import { designTokenStory } from './util';
+
+const arabicDecorator = (Story) => (
+  <div dir="rtl" lang="ar">
+    {Story()}
+  </div>
+);
+
+const farsiDecorator = (Story) => (
+  <div dir="rtl" lang="fa">
+    {Story()}
+  </div>
+);
 
 const events = [
   { date: '2022-09-22T21:59:59.999Z', emphasis: true, selected: false, disabled: false },
@@ -159,6 +172,51 @@ export const EnglishCalendar: Story = {
     defaultValue: new Date().toISOString(),
     events,
     locale: enUS,
+  },
+};
+export const ArabicCalendar: Story = {
+  args: {
+    onChange: (date) => {
+      console.log(date);
+    },
+    defaultValue: new Date().toISOString(),
+    events,
+    locale: ar,
+  },
+  decorators: [arabicDecorator],
+};
+
+export const ChineseCalendar: Story = {
+  args: {
+    onChange: (date) => {
+      console.log(date);
+    },
+    defaultValue: new Date().toISOString(),
+    events,
+    locale: zhCN,
+  },
+};
+
+export const FarsiCalendar: Story = {
+  args: {
+    onChange: (date) => {
+      console.log(date);
+    },
+    defaultValue: new Date().toISOString(),
+    events,
+    locale: faIR,
+  },
+  decorators: [farsiDecorator],
+};
+
+export const JapaneseCalendar: Story = {
+  args: {
+    onChange: (date) => {
+      console.log(date);
+    },
+    defaultValue: new Date().toISOString(),
+    events,
+    locale: ja,
   },
 };
 

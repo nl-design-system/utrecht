@@ -20,11 +20,11 @@ export const CalendarNavigationButtons: React.FC<CalendarNavigationButtonsProps>
   ...props
 }) => (
   <div className="utrecht-calendar__navigation-buttons">
-    <CalendarButton onClick={onPreviousClick} {...props}>
+    <CalendarButton onClick={onPreviousClick} {...props} rel="prev">
       <CalendarIcon>{previousIcon}</CalendarIcon>
     </CalendarButton>
     {children}
-    <CalendarButton onClick={onNextClick} {...props}>
+    <CalendarButton onClick={onNextClick} {...props} rel="next">
       <CalendarIcon>{nextIcon}</CalendarIcon>
     </CalendarButton>
   </div>

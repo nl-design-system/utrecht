@@ -3,6 +3,7 @@ import React from 'react';
 import { CalendarButton, CalendarButtonProps } from './CalendarButton';
 export interface CalendarTableDaysItemDayProps extends CalendarButtonProps {
   day: string;
+  date: string;
   dayOutOfTheMonth?: boolean;
   isToday: boolean;
   emphasis?: boolean;
@@ -13,6 +14,7 @@ export interface CalendarTableDaysItemDayProps extends CalendarButtonProps {
 export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> = ({
   day,
   dayOutOfTheMonth,
+  date,
   isToday,
   emphasis,
   selected,
@@ -31,7 +33,7 @@ export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> =
       disabled={disabled}
       {...props}
     >
-      {day}
+      <time dateTime={date}>{day}</time>
     </CalendarButton>
   </td>
 );
