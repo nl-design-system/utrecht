@@ -31,6 +31,7 @@ export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> =
         { 'utrecht-calendar__table-days-item-day--selected': selected },
       )}
       disabled={disabled}
+      value={date}
       {...props}
     >
       <time dateTime={date}>{day}</time>

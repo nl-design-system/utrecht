@@ -1,6 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { ar, nl, zhCN } from 'date-fns/locale';
+import React from 'react';
 import { Calendar, Events } from './index';
 
 describe('Calendar', () => {
@@ -149,6 +150,26 @@ describe('Calendar', () => {
     expect(calendar).toHaveClass('utrecht-calendar');
   });
 
+  it('renders a columnheader role for each day of the week', () => {
+    render(<Calendar defaultValue="2022-01-01" locale={nl} />);
+
+    const headerMonday = screen.getByRole('columnheader', { name: 'maandag' });
+    const headerTuesday = screen.getByRole('columnheader', { name: 'dinsdag' });
+    const headerWednesday = screen.getByRole('columnheader', { name: 'woensdag' });
+    const headerThursday = screen.getByRole('columnheader', { name: 'donderdag' });
+    const headerFriday = screen.getByRole('columnheader', { name: 'vrijdag' });
+    const headerSaturday = screen.getByRole('columnheader', { name: 'zaterdag' });
+    const headerSunday = screen.getByRole('columnheader', { name: 'zondag' });
+
+    expect(headerMonday).toBeInTheDocument();
+    expect(headerTuesday).toBeInTheDocument();
+    expect(headerWednesday).toBeInTheDocument();
+    expect(headerThursday).toBeInTheDocument();
+    expect(headerFriday).toBeInTheDocument();
+    expect(headerSaturday).toBeInTheDocument();
+    expect(headerSunday).toBeInTheDocument();
+  });
+
   it('renders an abbr attribute for day of week when the locale has an abbreviation', () => {
     const { container } = render(<Calendar locale={nl} />);
 
@@ -175,6 +196,39 @@ describe('Calendar', () => {
     fireEvent.click(dayButton);
 
     expect(dayButton).toHaveClass('utrecht-calendar__table-days-item-day--selected');
+  });
+
+  it('renders the selected date after changing defaultValue', () => {
+    const initialDate = '2023-06-15';
+    const newDate = '2000-01-01';
+
+    const onChangeHandler = jest.fn();
+    const { container, rerender } = render(
+      <Calendar onChange={onChangeHandler} defaultValue={initialDate} locale={nl} />,
+    );
+
+    const initialDateElement = container.querySelector(`time[datetime="${initialDate}"]`);
+    let selectedGridCell = screen.getByRole('gridcell', { selected: true });
+
+    let calendar = screen.getByRole('grid', { name: 'juni 2023' });
+
+    expect(calendar).toBeInTheDocument();
+    expect(initialDateElement).toBeInTheDocument();
+    expect(selectedGridCell).toContainElement(initialDateElement);
+
+    rerender(<Calendar defaultValue={newDate} locale={nl} />);
+
+    expect(onChangeHandler).not.toHaveBeenCalled();
+
+    const newDateElement = container.querySelector(`time[datetime="${newDate}"]`);
+    selectedGridCell = screen.getByRole('gridcell', { selected: true });
+
+    expect(newDateElement).toBeInTheDocument();
+    expect(selectedGridCell).toContainElement(newDateElement);
+
+    calendar = screen.getByRole('grid', { name: 'januari 2000' });
+
+    expect(calendar).toBeInTheDocument();
   });
 
   it('disables dates before the minDate value', () => {
@@ -231,70 +285,74 @@ describe('Calendar', () => {
     expect(selectedEventButton).toHaveClass('utrecht-calendar__table-days-item-day--selected');
   });
 
-  it('navigates to previous year', () => {
-    const currentDate = '2023-03-01';
-    const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
+  describe('button group', () => {
+    it('navigates to previous year', () => {
+      const currentDate = '2023-03-01';
+      const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
 
-    let previousYearButton = screen.getByRole('button', { name: 'Previous year' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+      let previousYearButton = screen.getByRole('button', { name: 'Previous year' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
 
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (previousYearButton) fireEvent.click(previousYearButton);
-    expect(currentDateLabel).toContainHTML('maart 2022');
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (previousYearButton) fireEvent.click(previousYearButton);
+      expect(currentDateLabel).toContainHTML('maart 2022');
+    });
+
+    it('navigates to next year', () => {
+      const currentDate = '2023-03-01';
+      const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
+
+      let nextYearButton = screen.getByRole('button', { name: 'Next year' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (nextYearButton) fireEvent.click(nextYearButton);
+      expect(currentDateLabel).toContainHTML('maart 2024');
+    });
+
+    it('navigates to previous month', () => {
+      const currentDate = '2023-03-01';
+      const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
+
+      let previousMonthButton = screen.getByRole('button', { name: 'Previous month' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (previousMonthButton) fireEvent.click(previousMonthButton);
+      expect(currentDateLabel).toContainHTML('februari 2023');
+    });
+
+    it('navigates to next month', () => {
+      const currentDate = '2023-03-01';
+      const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
+
+      let nextMonthButton = screen.getByRole('button', { name: 'Next month' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (nextMonthButton) fireEvent.click(nextMonthButton);
+      expect(currentDateLabel).toContainHTML('april 2023');
+    });
   });
 
-  it('navigates to next year', () => {
-    const currentDate = '2023-03-01';
-    const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
-
-    let nextYearButton = screen.getByRole('button', { name: 'Next year' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
-
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (nextYearButton) fireEvent.click(nextYearButton);
-    expect(currentDateLabel).toContainHTML('maart 2024');
-  });
-
-  it('navigates to previous month', () => {
-    const currentDate = '2023-03-01';
-    const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
-
-    let previousMonthButton = screen.getByRole('button', { name: 'Previous month' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
-
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (previousMonthButton) fireEvent.click(previousMonthButton);
-    expect(currentDateLabel).toContainHTML('februari 2023');
-  });
-
-  it('navigates to next month', () => {
-    const currentDate = '2023-03-01';
-    const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
-
-    let nextMonthButton = screen.getByRole('button', { name: 'Next month' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
-
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (nextMonthButton) fireEvent.click(nextMonthButton);
-    expect(currentDateLabel).toContainHTML('april 2023');
-  });
-
-  describe('keyboard controls', () => {
-    it('navigates to next day', () => {
+  describe('keyboard control', () => {
+    it('ArrowRight navigates to next day', () => {
       const currentDate = '2023-03-01';
       render(<Calendar locale={nl} defaultValue={currentDate} />);
 
+      // const selectedGridCell = container.querySelector('[aria-selected="true"]');
+      let selectedGridCell = screen.getByRole('gridcell', { selected: true });
       const currentDayButton = screen.getByRole('button', { name: '1 maart 2023' });
 
+      expect(selectedGridCell).toContainElement(currentDayButton);
+
       currentDayButton.focus();
-      fireEvent.keyDown(currentDayButton, { key: 'ArrowUp' });
+      fireEvent.keyDown(currentDayButton, { key: 'ArrowRight' });
       fireEvent.keyDown(currentDayButton, { key: 'Enter' });
 
-      const prevDayButton = screen.getByRole('button', { name: '28 februari 2023' });
-      expect(prevDayButton).toBeInTheDocument();
-      expect(prevDayButton).not.toBeDisabled();
-      // const selectedCell = container.querySelector('[aria-selected="true"]');
-      // expect(currentDateLabel).toContainElement(button);
+      selectedGridCell = screen.getByRole('gridcell', { selected: true });
+      const nextDayButton = screen.getByRole('button', { name: '28 februari 2023' });
+      expect(selectedGridCell).toContainElement(nextDayButton);
     });
   });
 });
@@ -390,51 +448,53 @@ describe('Calendar (deprecated API)', () => {
     expect(selectedEventButton).toHaveClass('utrecht-calendar__table-days-item-day--selected');
   });
 
-  it('navigates to previous year', () => {
-    const currentDate = new Date('2023-03-01');
-    const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+  describe('button group', () => {
+    it('navigates to previous year', () => {
+      const currentDate = new Date('2023-03-01');
+      const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
 
-    let previousYearButton = screen.getByRole('button', { name: 'Previous year' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+      let previousYearButton = screen.getByRole('button', { name: 'Previous year' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
 
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (previousYearButton) fireEvent.click(previousYearButton);
-    expect(currentDateLabel).toContainHTML('maart 2022');
-  });
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (previousYearButton) fireEvent.click(previousYearButton);
+      expect(currentDateLabel).toContainHTML('maart 2022');
+    });
 
-  it('navigates to next year', () => {
-    const currentDate = new Date('2023-03-01');
-    const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+    it('navigates to next year', () => {
+      const currentDate = new Date('2023-03-01');
+      const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
 
-    let nextYearButton = screen.getByRole('button', { name: 'Next year' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+      let nextYearButton = screen.getByRole('button', { name: 'Next year' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
 
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (nextYearButton) fireEvent.click(nextYearButton);
-    expect(currentDateLabel).toContainHTML('maart 2024');
-  });
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (nextYearButton) fireEvent.click(nextYearButton);
+      expect(currentDateLabel).toContainHTML('maart 2024');
+    });
 
-  it('navigates to previous month', () => {
-    const currentDate = new Date('2023-03-01');
-    const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+    it('navigates to previous month', () => {
+      const currentDate = new Date('2023-03-01');
+      const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
 
-    let previousMonthButton = screen.getByRole('button', { name: 'Previous month' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+      let previousMonthButton = screen.getByRole('button', { name: 'Previous month' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
 
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (previousMonthButton) fireEvent.click(previousMonthButton);
-    expect(currentDateLabel).toContainHTML('februari 2023');
-  });
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (previousMonthButton) fireEvent.click(previousMonthButton);
+      expect(currentDateLabel).toContainHTML('februari 2023');
+    });
 
-  it('navigates to next month', () => {
-    const currentDate = new Date('2023-03-01');
-    const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+    it('navigates to next month', () => {
+      const currentDate = new Date('2023-03-01');
+      const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
 
-    let nextMonthButton = screen.getByRole('button', { name: 'Next month' });
-    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+      let nextMonthButton = screen.getByRole('button', { name: 'Next month' });
+      let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
 
-    expect(currentDateLabel).toContainHTML('maart 2023');
-    if (nextMonthButton) fireEvent.click(nextMonthButton);
-    expect(currentDateLabel).toContainHTML('april 2023');
+      expect(currentDateLabel).toContainHTML('maart 2023');
+      if (nextMonthButton) fireEvent.click(nextMonthButton);
+      expect(currentDateLabel).toContainHTML('april 2023');
+    });
   });
 });

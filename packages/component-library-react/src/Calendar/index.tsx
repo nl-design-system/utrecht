@@ -13,6 +13,7 @@ import {
   getYear,
   isAfter,
   isBefore,
+  isEqual,
   isSameDay,
   isSameMonth,
   Locale,
@@ -25,7 +26,7 @@ import {
 } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import chunk from 'lodash.chunk';
-import { FC, KeyboardEvent, ReactNode, useId, useState } from 'react';
+import { FC, KeyboardEvent, ReactNode, useId, useRef, useState } from 'react';
 import { CalendarNavigation } from './CalendarNavigation';
 import { CalendarNavigationButtons } from './CalendarNavigationButtons';
 import { CalendarNavigationLabel } from './CalendarNavigationLabel';
@@ -50,12 +51,20 @@ enum Day {
   SATURDAY = 6,
 }
 
+/** returns YYYY-MM format */
+const formatISOMonth = (date: Date): string =>
+  // remove the day of month part (-DD)
+  formatISO(date, { representation: 'date' }).replace(/-\d+$/, '');
+
 function createCalendar(today: Date): Date[] {
+  const MAX_DAYS_PER_MONTH = 31;
+  const DAYS_PER_WEEK = 7;
+  const MAX_WEEKS_PER_MONTH = Math.ceil(MAX_DAYS_PER_MONTH / DAYS_PER_WEEK);
   const start = startOfWeek(startOfMonth(today), {
-    weekStartsOn: 1 /* Monday */,
+    weekStartsOn: Day.MONDAY,
   });
-  const end = endOfWeek(addWeeks(start, 5), {
-    weekStartsOn: 1 /* Monday */,
+  const end = endOfWeek(addWeeks(start, MAX_WEEKS_PER_MONTH), {
+    weekStartsOn: Day.MONDAY,
   });
   return eachDayOfInterval({ start, end });
 }
@@ -182,6 +191,12 @@ export const Calendar: FC<CalendarProps> = ({
 
   const [visibleMonth, setVisibleMonth] = useState(defaultDate || now);
   const [selectedDate, setSelectedDate] = useState(defaultDate);
+
+  if (defaultDate && !(selectedDate && isEqual(selectedDate, defaultDate))) {
+    setSelectedDate(defaultDate);
+    setVisibleMonth(defaultDate);
+  }
+
   const calendar = createCalendar(visibleMonth);
   const start = startOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
   const end = endOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
@@ -213,8 +228,8 @@ export const Calendar: FC<CalendarProps> = ({
   );
 
   const grid = {
-    currentMonth: format(visibleMonth, 'yyyy-mm'),
-    currentMonthLabel: format(visibleMonth, 'LLLL Y', { locale }),
+    currentMonth: formatISOMonth(visibleMonth),
+    currentMonthLabel: format(visibleMonth, 'LLLL y', { locale }),
     actions: {
       showPreviousYear: {
         action: () => setVisibleMonth(setYear(visibleMonth, getYear(visibleMonth) - 1)),
@@ -262,7 +277,7 @@ export const Calendar: FC<CalendarProps> = ({
         },
         label: format(day.date, 'PPP', { locale }),
         day: format(day.date, 'd', { locale }),
-        date: day.date.toISOString(),
+        date: formatISO(day.date, { representation: 'date' }),
         emphasis: day.emphasis,
         selected: day.selected || (selectedDate && isSameDay(day.date, selectedDate)),
         disabled:
@@ -271,76 +286,92 @@ export const Calendar: FC<CalendarProps> = ({
     })),
   };
 
+  const calendarRef = useRef<HTMLTableElement>(null);
+
+  const focusCalendar = () => {
+    if (calendarRef.current) {
+      calendarRef.current.focus();
+    }
+  };
+
+  // const move = setVisibleMonth;
+  const move = (date: Date) => {
+    setSelectedDate(date);
+    setVisibleMonth(date);
+  };
+
   const focusPreviousWeek = () => {
     if (selectedDate) {
       console.log('Previous week');
-      setVisibleMonth(addWeeks(selectedDate, -1));
+      move(addWeeks(selectedDate, -1));
     }
   };
   const focusNextWeek = () => {
     if (selectedDate) {
       console.log('Next week');
-      setVisibleMonth(addWeeks(selectedDate, 1));
+      move(addWeeks(selectedDate, 1));
     }
   };
   const focusStartOfWeek = () => {
     if (selectedDate) {
       console.log('Start of week');
-      setVisibleMonth(startOfWeek(selectedDate));
+      move(startOfWeek(selectedDate));
     }
   };
   const focusPreviousDay = () => {
     if (selectedDate) {
       console.log('Previous day');
-      setVisibleMonth(addDays(selectedDate, -1));
+      move(addDays(selectedDate, -1));
+      focusCalendar();
     }
   };
   const focusEndOfWeek = () => {
     if (selectedDate) {
       console.log('End of week');
-      setVisibleMonth(endOfWeek(selectedDate));
+      move(endOfWeek(selectedDate));
     }
   };
   const focusNextDay = () => {
     if (selectedDate) {
       console.log('Next day');
-      setVisibleMonth(addDays(selectedDate, 1));
+      move(addDays(selectedDate, 1));
+      focusCalendar();
     }
   };
   const focusStartOfMonth = () => {
     if (selectedDate) {
       console.log('Start of month');
-      setVisibleMonth(startOfMonth(selectedDate));
+      move(startOfMonth(selectedDate));
     }
   };
   const focusNextMonth = () => {
     if (selectedDate) {
       console.log('Next month');
-      setVisibleMonth(addMonths(selectedDate, -1));
+      move(addMonths(selectedDate, -1));
     }
   };
   const focusNextYear = () => {
     if (selectedDate) {
       console.log('Next year');
-      setVisibleMonth(addYears(selectedDate, -1));
+      move(addYears(selectedDate, -1));
     }
   };
   const focusEndOfMonth = () => {
     if (selectedDate) {
       console.log('End of month');
-      setVisibleMonth(endOfMonth(selectedDate));
+      move(endOfMonth(selectedDate));
     }
   };
   const focusPreviousYear = () => {
     if (selectedDate) {
       console.log('Previous year');
-      setVisibleMonth(addYears(selectedDate, -1));
+      move(addYears(selectedDate, -1));
     }
   };
   const focusPreviousMonth = () => {
     if (selectedDate) {
       console.log('Previous month');
-      setVisibleMonth(addMonths(selectedDate, -1));
+      move(addMonths(selectedDate, -1));
     }
   };
   const handleKeyPress = (evt: KeyboardEvent) => {
@@ -369,7 +400,7 @@ export const Calendar: FC<CalendarProps> = ({
       action();
     }
   };
-  console.log(JSON.stringify(grid.columnHeaders, null, 2));
+
   return (
     <div className="utrecht-calendar" dir="auto">
       <CalendarNavigation>
@@ -391,10 +422,23 @@ export const Calendar: FC<CalendarProps> = ({
           </CalendarNavigationButtons>
         </CalendarNavigationButtons>
       </CalendarNavigation>
-      <table className="utrecht-calendar__table" role="grid" aria-labelledby={captionId}>
+      <table
+        className="utrecht-calendar__table"
+        role="grid"
+        aria-labelledby={captionId}
+        tabIndex={-1}
+        ref={calendarRef}
+        onKeyDown={handleKeyPress}
+      >
         <CalendarTableWeeksContainer>
           {grid.columnHeaders.map(({ id, label, labelAbbr }, index) => (
-            <CalendarTableWeeksItem scope="col" abbr={labelAbbr !== label ? label : undefined} key={index} id={id}>
+            <CalendarTableWeeksItem
+              scope="col"
+              abbr={labelAbbr !== label ? label : undefined}
+              aria-label={labelAbbr !== label ? label : undefined}
+              key={index}
+              id={id}
+            >
               {labelAbbr}
             </CalendarTableWeeksItem>
           ))}
@@ -418,7 +462,6 @@ export const Calendar: FC<CalendarProps> = ({
                       selected={selected}
                       disabled={disabled}
                       onKeyDown={handleKeyPress}
-                      onKeyPress={handleKeyPress}
                     />
                   );
                 },
