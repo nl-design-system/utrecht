@@ -38,15 +38,12 @@ const meta = {
     onChange: (value) => {
       console.log(value);
     },
-    defaultValue: addDays(new Date(), 3).toISOString(),
     events,
     locale: nl,
     previousYearButtonTitle: 'Vorig jaar',
     nextYearButtonTitle: 'volgend jaar',
     previousMonthButtonTitle: 'Vorige maand',
     nextMonthButtonTitle: 'volgende maand',
-    min: new Date().toISOString(),
-    max: addYears(new Date(), 1).toISOString(),
   },
   argTypes: {
     onChange: {
@@ -150,13 +147,16 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    defaultValue: addDays(new Date(), 3).toISOString(),
+    min: new Date().toISOString(),
+    max: addYears(new Date(), 1).toISOString(),
+  },
+};
 
 export const LimitedRangeCalendar: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: new Date().toISOString(),
     minDate: new Date(),
     maxDate: addWeeks(new Date(), 2),
@@ -164,11 +164,20 @@ export const LimitedRangeCalendar: Story = {
   },
 };
 
+export const UncontrolledValue: Story = {
+  args: {
+    defaultValue: '2000-01-01',
+  },
+};
+
+export const ControlledValue: Story = {
+  args: {
+    value: '2000-01-01',
+  },
+};
+
 export const EnglishCalendar: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: new Date().toISOString(),
     events,
     locale: enUS,
@@ -176,9 +185,6 @@ export const EnglishCalendar: Story = {
 };
 export const ArabicCalendar: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: new Date().toISOString(),
     events,
     locale: ar,
@@ -188,9 +194,6 @@ export const ArabicCalendar: Story = {
 
 export const ChineseCalendar: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: new Date().toISOString(),
     events,
     locale: zhCN,
@@ -199,9 +202,6 @@ export const ChineseCalendar: Story = {
 
 export const FarsiCalendar: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: new Date().toISOString(),
     events,
     locale: faIR,
@@ -211,9 +211,6 @@ export const FarsiCalendar: Story = {
 
 export const JapaneseCalendar: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: new Date().toISOString(),
     events,
     locale: ja,
@@ -222,9 +219,6 @@ export const JapaneseCalendar: Story = {
 
 export const EmptyValue: Story = {
   args: {
-    onChange: (date) => {
-      console.log(date);
-    },
     defaultValue: undefined,
     locale: enUS,
   },

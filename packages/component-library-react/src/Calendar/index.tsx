@@ -26,7 +26,8 @@ import {
 } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import chunk from 'lodash.chunk';
-import { FC, KeyboardEvent, ReactNode, useId, useRef, useState } from 'react';
+import { FC, KeyboardEvent, ReactNode, useEffect, useId, useRef, useState } from 'react';
+import { RefObject } from 'react';
 import { CalendarNavigation } from './CalendarNavigation';
 import { CalendarNavigationButtons } from './CalendarNavigationButtons';
 import { CalendarNavigationLabel } from './CalendarNavigationLabel';
@@ -51,10 +52,12 @@ enum Day {
   SATURDAY = 6,
 }
 
+const formatISODate = (date: Date): string => formatISO(date, { representation: 'date' });
+
 /** returns YYYY-MM format */
 const formatISOMonth = (date: Date): string =>
   // remove the day of month part (-DD)
-  formatISO(date, { representation: 'date' }).replace(/-\d+$/, '');
+  formatISODate(date).replace(/-\d+$/, '');
 
 function createCalendar(today: Date): Date[] {
   const MAX_DAYS_PER_MONTH = 31;
@@ -86,7 +89,52 @@ interface InternalDayState {
   disabled?: boolean;
   selected?: boolean;
 }
+interface Cell {
+  isToday: boolean;
+  isCurrentMonth: boolean;
+  onClick: any;
+  label: string;
+  day: string;
+  date: string;
+  dateObj: Date;
+  buttonRef: RefObject<HTMLButtonElement>;
+  emphasis: boolean;
+  selected: boolean;
+  disabled: boolean;
+}
 
+interface Row {
+  columns: Cell[];
+}
+
+interface Grid {
+  rows: Row[];
+  currentMonth: string;
+  currentMonthLabel: string;
+  actions: {
+    showPreviousYear: {
+      action: () => void;
+      label: ReactNode;
+    };
+    showPreviousMonth: {
+      action: () => void;
+      label: ReactNode;
+    };
+    showNextMonth: {
+      action: () => void;
+      label: ReactNode;
+    };
+    showNextYear: {
+      action: () => void;
+      label: ReactNode;
+    };
+  };
+  columnHeaders: {
+    id: string;
+    label: string;
+    labelAbbr: string;
+  }[];
+}
 export interface CalendarProps {
   /**
    * `onChange` It's a callback function that returns the selected date in `evt.detail.value`, triggered when you click on the day
@@ -97,6 +145,9 @@ export interface CalendarProps {
    * `{date?: string; emphasis?: boolean; selected?: boolean; disabled?: boolean;}`
    */
   events?: Events[];
+
+  value?: string;
+
   /**
    * `showDate` The default value is current system date, but you can provide a different date as ISO 8601 date.
    */
@@ -143,6 +194,7 @@ export const Calendar: FC<CalendarProps> = ({
   onChange,
   events,
   defaultValue,
+  value,
   locale = enUS,
   previousYearButtonTitle = 'Previous year',
   nextYearButtonTitle = 'Next year',
@@ -189,13 +241,17 @@ export const Calendar: FC<CalendarProps> = ({
     defaultDate = currentDate;
   }
 
-  const [visibleMonth, setVisibleMonth] = useState(defaultDate || now);
-  const [selectedDate, setSelectedDate] = useState(defaultDate);
+  const [outputValue, setOutputValue] = useState(typeof value === 'string' ? parseISO(value) : null);
 
-  if (defaultDate && !(selectedDate && isEqual(selectedDate, defaultDate))) {
-    setSelectedDate(defaultDate);
-    setVisibleMonth(defaultDate);
-  }
+  const [visibleMonth, setVisibleMonth] = useState(defaultDate || now);
+  const [focusDate, setFocusDate] = useState(defaultDate);
+  const [autofocusDate, setAutofocusDate] = useState(defaultDate);
+
+  // if (defaultDate && !(focusDate && isEqual(focusDate, defaultDate))) {
+  //   console.log('reset focus date');
+  //   setFocusDate(defaultDate);
+  //   setVisibleMonth(defaultDate);
+  // }
 
   const calendar = createCalendar(visibleMonth);
   const start = startOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
@@ -227,7 +283,9 @@ export const Calendar: FC<CalendarProps> = ({
     }),
   );
 
-  const grid = {
+  let focusValue: (date: Date) => void;
+
+  const grid: Grid = {
     currentMonth: formatISOMonth(visibleMonth),
     currentMonthLabel: format(visibleMonth, 'LLLL y', { locale }),
     actions: {
@@ -254,37 +312,66 @@ export const Calendar: FC<CalendarProps> = ({
       labelAbbr: format(day, 'EEEEEE', { locale }),
     })),
     rows: weeks.map((week) => ({
-      columns: week.map((day) => ({
-        isToday: isSameDay(day.date, now),
-        isCurrentMonth: isSameMonth(day.date, visibleMonth),
-        onClick: () => {
-          setVisibleMonth(day.date);
-          if (isSameMonth(day.date, visibleMonth)) {
-            setSelectedDate(day.date);
-            if (typeof onCalendarClick === 'function') {
-              onCalendarClick(formatISO(day.date));
+      columns: week.map((day): Cell => {
+        const buttonRef = useRef<HTMLButtonElement>(null);
+
+        return {
+          isToday: isSameDay(day.date, now),
+          isCurrentMonth: isSameMonth(day.date, visibleMonth),
+          onClick: () => {
+            setVisibleMonth(day.date);
+            if (isSameMonth(day.date, visibleMonth)) {
+              setFocusDate(day.date);
+              setOutputValue(day.date);
+              focusValue(day.date);
+              if (typeof onCalendarClick === 'function') {
+                onCalendarClick(formatISO(day.date));
+              }
+              if (typeof onChange === 'function') {
+                onChange(
+                  new CustomEvent('change', {
+                    detail: {
+                      value: formatISODate(day.date),
+                    },
+                  }),
+                );
+              }
             }
-            if (typeof onChange === 'function') {
-              onChange(
-                new CustomEvent('change', {
-                  detail: {
-                    value: formatISO(day.date, { representation: 'date' }),
-                  },
-                }),
-              );
-            }
-          }
-        },
-        label: format(day.date, 'PPP', { locale }),
-        day: format(day.date, 'd', { locale }),
-        date: formatISO(day.date, { representation: 'date' }),
-        emphasis: day.emphasis,
-        selected: day.selected || (selectedDate && isSameDay(day.date, selectedDate)),
-        disabled:
-          day.disabled || (_minDate && isBefore(day.date, _minDate)) || (_maxDate && isAfter(day.date, _maxDate)),
-      })),
+          },
+          label: format(day.date, 'PPP', { locale }),
+          day: format(day.date, 'd', { locale }),
+          date: formatISODate(day.date),
+          dateObj: day.date,
+          buttonRef,
+          emphasis: day.emphasis || false,
+          selected: day.selected || (focusDate && isSameDay(day.date, focusDate)) || false,
+          disabled:
+            day.disabled || (_minDate && isBefore(day.date, _minDate)) || (_maxDate && isAfter(day.date, _maxDate)),
+        };
+      }),
     })),
   };
+
+  const getCells = () => {
+    const cells: Cell[] = [];
+    grid.rows.reduce((arr, row) => {
+      arr.push.apply(arr, row.columns);
+      return arr;
+    }, cells);
+    return cells;
+  };
+
+  focusValue = (date: Date) => {};
+
+  useEffect(() => {
+    if (focusDate) {
+      const cells = getCells();
+      const isoDate = formatISODate(focusDate);
+      const cell = cells.find(({ date }) => date === isoDate);
+      console.log(`useEffect Focus ${isoDate}`, cell?.buttonRef.current);
+      cell?.buttonRef.current?.focus();
+    }
+  }, [autofocusDate]);
 
   const calendarRef = useRef<HTMLTableElement>(null);
 
@@ -296,82 +383,85 @@ export const Calendar: FC<CalendarProps> = ({
 
   // const move = setVisibleMonth;
   const move = (date: Date) => {
-    setSelectedDate(date);
+    console.log(`-> move from ${formatISODate(focusDate)} to ${formatISODate(date)}`);
+    setFocusDate(date);
+    setAutofocusDate(date);
     setVisibleMonth(date);
+    focusValue(date);
   };
 
   const focusPreviousWeek = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Previous week');
-      move(addWeeks(selectedDate, -1));
+      move(addWeeks(focusDate, -1));
     }
   };
   const focusNextWeek = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Next week');
-      move(addWeeks(selectedDate, 1));
+      move(addWeeks(focusDate, 1));
     }
   };
   const focusStartOfWeek = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Start of week');
-      move(startOfWeek(selectedDate));
+      move(startOfWeek(focusDate));
     }
   };
   const focusPreviousDay = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Previous day');
-      move(addDays(selectedDate, -1));
+      move(addDays(focusDate, -1));
       focusCalendar();
     }
   };
   const focusEndOfWeek = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('End of week');
-      move(endOfWeek(selectedDate));
+      move(endOfWeek(focusDate));
     }
   };
   const focusNextDay = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Next day');
-      move(addDays(selectedDate, 1));
+      move(addDays(focusDate, 1));
       focusCalendar();
     }
   };
   const focusStartOfMonth = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Start of month');
-      move(startOfMonth(selectedDate));
+      move(startOfMonth(focusDate));
     }
   };
   const focusNextMonth = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Next month');
-      move(addMonths(selectedDate, -1));
+      move(addMonths(focusDate, -1));
     }
   };
   const focusNextYear = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Next year');
-      move(addYears(selectedDate, -1));
+      move(addYears(focusDate, -1));
     }
   };
   const focusEndOfMonth = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('End of month');
-      move(endOfMonth(selectedDate));
+      move(endOfMonth(focusDate));
     }
   };
   const focusPreviousYear = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Previous year');
-      move(addYears(selectedDate, -1));
+      move(addYears(focusDate, -1));
     }
   };
   const focusPreviousMonth = () => {
-    if (selectedDate) {
+    if (focusDate) {
       console.log('Previous month');
-      move(addMonths(selectedDate, -1));
+      move(addMonths(focusDate, -1));
     }
   };
   const handleKeyPress = (evt: KeyboardEvent) => {
@@ -447,7 +537,22 @@ export const Calendar: FC<CalendarProps> = ({
           {grid.rows.map((row, rowIndex) => (
             <CalendarTableDaysItem key={rowIndex}>
               {row.columns.map(
-                ({ day, date, isToday, isCurrentMonth, onClick, label, selected, emphasis, disabled }, columnIndex) => {
+                (
+                  {
+                    day,
+                    date,
+                    dateObj,
+                    isToday,
+                    isCurrentMonth,
+                    onClick,
+                    label,
+                    selected,
+                    emphasis,
+                    disabled,
+                    buttonRef,
+                  },
+                  columnIndex,
+                ) => {
                   return (
                     <CalendarTableDaysItemDay
                       isToday={isToday}
@@ -462,6 +567,11 @@ export const Calendar: FC<CalendarProps> = ({
                       selected={selected}
                       disabled={disabled}
                       onKeyDown={handleKeyPress}
+                      onFocus={() => {
+                        console.log('setFocus', dateObj);
+                        setFocusDate(dateObj);
+                      }}
+                      buttonRef={buttonRef}
                     />
                   );
                 },
@@ -470,6 +580,10 @@ export const Calendar: FC<CalendarProps> = ({
           ))}
         </CalendarTableDaysContainer>
       </table>
+      <p>default value: {defaultDate && formatISODate(defaultDate)}</p>
+      <p>focus: {focusDate && formatISODate(focusDate)}</p>
+      <p>auto focus: {autofocusDate && formatISODate(autofocusDate)}</p>
+      <p>output value: {outputValue && formatISODate(outputValue)}</p>
     </div>
   );
 };

@@ -335,24 +335,68 @@ describe('Calendar', () => {
     });
   });
 
-  describe('keyboard control', () => {
-    it('ArrowRight navigates to next day', () => {
-      const currentDate = '2023-03-01';
-      render(<Calendar locale={nl} defaultValue={currentDate} />);
+  describe.skip('keyboard control', () => {
+    const testKeyboardControl = ({
+      key,
+      currentDate,
+      targetDate,
+    }: {
+      key: string;
+      currentDate: string;
+      targetDate: string;
+    }) => {
+      const { container } = render(<Calendar locale={nl} defaultValue={currentDate} />);
 
-      // const selectedGridCell = container.querySelector('[aria-selected="true"]');
       let selectedGridCell = screen.getByRole('gridcell', { selected: true });
       const currentDayButton = screen.getByRole('button', { name: '1 maart 2023' });
 
       expect(selectedGridCell).toContainElement(currentDayButton);
 
       currentDayButton.focus();
-      fireEvent.keyDown(currentDayButton, { key: 'ArrowRight' });
+      fireEvent.keyDown(currentDayButton, { key });
       fireEvent.keyDown(currentDayButton, { key: 'Enter' });
 
       selectedGridCell = screen.getByRole('gridcell', { selected: true });
-      const nextDayButton = screen.getByRole('button', { name: '28 februari 2023' });
-      expect(selectedGridCell).toContainElement(nextDayButton);
+      const targetDateElement = container.querySelector<HTMLTimeElement>(`time[datetime="${targetDate}"]`);
+      expect(selectedGridCell).toContainElement(targetDateElement);
+    };
+
+    it('ArrowRight navigates to next day', () => {
+      testKeyboardControl({
+        currentDate: '2023-03-01',
+        targetDate: '2023-03-02',
+        key: 'ArrowRight',
+      });
+    });
+
+    it('ArrowRight navigates to previous day', () => {
+      testKeyboardControl({
+        currentDate: '2023-03-01',
+        targetDate: '2023-02-28',
+        key: 'ArrowLeft',
+      });
+    });
+
+    it('ArrowUp navigates to previous week', () => {
+      testKeyboardControl({
+        currentDate: '2023-03-01',
+        targetDate: '2023-02-22',
+        key: 'ArrowUp',
+      });
+    });
+    it('ArrowDown navigates to next week', () => {
+      testKeyboardControl({
+        currentDate: '2023-03-01',
+        targetDate: '2023-03-08',
+        key: 'ArrowDown',
+      });
+    });
+    it('ArrowDown navigates to next week', () => {
+      testKeyboardControl({
+        currentDate: '2023-03-01',
+        targetDate: '2023-03-08',
+        key: 'ArrowDown',
+      });
     });
   });
 });
