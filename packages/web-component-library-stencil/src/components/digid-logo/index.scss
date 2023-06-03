@@ -4,8 +4,23 @@
  */
 @import "~@utrecht/components/icon/css";
 
+@mixin utrecht-black-icon--media-query-forced-colors {
+  /* A black icon can become invisible on a forced black background.
+   * Add a contrasting border color */
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    border-color: currentColor;
+    border-radius: 5px;
+    border-style: solid;
+
+    /* Warning: there layout difference because of the added 1px border */
+    border-width: 1px;
+  }
+}
+
 :host {
   display: inline;
+
+  @include utrecht-black-icon--media-query-forced-colors;
 }
 
 :host([hidden]) {
