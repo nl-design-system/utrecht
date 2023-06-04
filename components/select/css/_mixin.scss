@@ -5,6 +5,9 @@
 
 @import "../../common/focus/mixin";
 
+/* TODO: Enable ordering properties when the plugin supports logical CSS properties
+ * https://github.com/hudochenkov/stylelint-order/pull/162 */
+/* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-select {
   -moz-appearance: none;
   -webkit-appearance: none;
@@ -100,15 +103,8 @@
       var(--utrecht-select-background-color, var(--utrecht-form-control-background-color))
     )
   );
-  border-color: var(
-    --utrecht-select-invalid-border-color,
-    var(
-      --utrecht-form-control-invalid-border-color,
-      var(--utrecht-select-border-color, var(--utrecht-form-control-border-color))
-    )
-  );
   border-width: var(--_utrecht-select-border-width);
-  border-bottom-width: var(
+  border-block-end-width: var(
     --utrecht-select-invalid-border-block-end-width,
     var(
       --utrecht-form-control-invalid-border-block-end-width,
@@ -116,6 +112,13 @@
         --utrecht-select-border-block-end-width,
         var(--utrecht-form-control-border-block-end-width, var(--_utrecht-select-border-width))
       )
+    )
+  );
+  border-color: var(
+    --utrecht-select-invalid-border-color,
+    var(
+      --utrecht-form-control-invalid-border-color,
+      var(--utrecht-select-border-color, var(--utrecht-form-control-border-color))
     )
   );
 }

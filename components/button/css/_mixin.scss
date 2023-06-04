@@ -202,7 +202,7 @@
     )
   );
   --_utrecht-button-border-width: var(--_utrecht-button-appearance-border-width, var(--utrecht-button-border-width, 0));
-  --_utrecht-button-border-bottom-width: var(
+  --_utrecht-button-border-block-end-width: var(
     --utrecht-button-border-bottom-width,
     var(--_utrecht-button-border-width, 0)
   );
@@ -210,12 +210,12 @@
 
   align-items: center;
   background-color: var(--_utrecht-button-background-color);
+  border-block-end-color: var(--_utrecht-button-border-bottom-color);
+  border-block-end-width: var(--_utrecht-button-border-block-end-width);
   border-color: var(--_utrecht-button-border-color);
-  border-bottom-color: var(--_utrecht-button-border-bottom-color);
   border-radius: var(--utrecht-button-border-radius);
   border-style: solid;
   border-width: var(--_utrecht-button-border-width);
-  border-bottom-width: var(--_utrecht-button-border-bottom-width);
   box-sizing: border-box;
   color: var(--_utrecht-button-color);
   cursor: var(--utrecht-action-activate-cursor);

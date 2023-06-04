@@ -13,7 +13,10 @@
 }
 
 @mixin utrecht-img--scale-down {
+  /* stylelint-disable-next-line property-disallowed-list */
   max-height: 100%;
+
+  /* stylelint-disable-next-line property-disallowed-list */
   max-width: 100%;
 }
 
