@@ -28,12 +28,12 @@
   background-color: var(--utrecht-accordion-button-icon-background-color);
   background-position: center;
   background-repeat: no-repeat;
+  block-size: var(--utrecht-accordion-button-icon-size);
   content: "";
-  height: var(--utrecht-accordion-button-icon-size);
+  inline-size: var(--utrecht-accordion-button-icon-size);
   inset-block-start: 0;
   inset-inline-end: 0;
   position: absolute;
-  width: var(--utrecht-accordion-button-icon-size);
 }
 
 @mixin utrecht-accordion__button-icon-arrow-down {

@@ -61,8 +61,8 @@
   display: block;
 }
 .utrecht-link-list__item > a::before {
+  block-size: 1em;
   content: "";
   display: inline-block;
-  height: 1em;
   @extend .utrecht-link-list__marker;
 }
