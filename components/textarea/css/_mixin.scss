@@ -5,12 +5,15 @@
 
 @import "../../common/focus/mixin";
 
+/* TODO: Enable ordering properties when the plugin supports logical CSS properties
+ * https://github.com/hudochenkov/stylelint-order/pull/162 */
+/* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-textarea {
   /* Fall back to `resize: vertical` for browsers that don't support `resize: block` */
   background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color));
   block-size: initial; /* harden */
   border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width));
-  border-bottom-width: var(
+  border-block-end-width: var(
     --utrecht-textarea-border-bottom-width,
     var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width))
   );
@@ -56,15 +59,8 @@
       var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color))
     )
   );
-  border-color: var(
-    --utrecht-textarea-invalid-border-color,
-    var(
-      --utrecht-form-control-invalid-border-color,
-      var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color))
-    )
-  );
   border-width: var(--_utrecht-textarea-border-width);
-  border-bottom-width: var(
+  border-block-end-width: var(
     --utrecht-textarea-invalid-border-bottom-width,
     var(
       --utrecht-form-control-invalid-border-bottom-width,
@@ -72,6 +68,13 @@
         --utrecht-textarea-border-bottom-width,
         var(--utrecht-form-control-border-bottom-width, var(--_utrecht-textarea-border-width))
       )
+    )
+  );
+  border-color: var(
+    --utrecht-textarea-invalid-border-color,
+    var(
+      --utrecht-form-control-invalid-border-color,
+      var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color))
     )
   );
   color: var(

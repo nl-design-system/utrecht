@@ -47,9 +47,9 @@
   );
   --_utrecht-auto-col: minmax(var(--_utrecht-minmax), max-content);
 
-  border-bottom-color: var(--utrecht-data-list-rows-border-bottom-color, transparent);
-  border-bottom-style: solid;
-  border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
+  border-block-end-color: var(--utrecht-data-list-rows-border-bottom-color, transparent);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
   display: grid;
   gap: 0 var(--utrecht-data-list-rows-gap);
   grid-auto-columns: 1fr;

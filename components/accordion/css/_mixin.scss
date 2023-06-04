@@ -58,9 +58,9 @@
 }
 
 @mixin utrecht-accordion__body {
+  border-block-start: none;
   border-color: var(--utrecht-accordion-body-border-color);
   border-style: solid;
-  border-top: none;
   border-width: var(--utrecht-accordion-body-border-width);
   padding-block-end: var(--utrecht-accordion-body-padding-block-end);
   padding-block-start: var(--utrecht-accordion-body-padding-block-start);
