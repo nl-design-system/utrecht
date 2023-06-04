@@ -44,12 +44,12 @@
 }
 
 @mixin utrecht-backdrop--position {
-  bottom: 0;
   display: block;
-  left: 0;
+  inset-block-end: 0;
+  inset-block-start: 0;
+  inset-inline-end: 0;
+  inset-inline-start: 0;
   position: absolute;
-  right: 0;
-  top: 0;
   z-index: var(--utrecht-backdrop-z-index);
 }
 

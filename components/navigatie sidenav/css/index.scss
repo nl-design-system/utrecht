@@ -98,14 +98,14 @@
     var(--utrecht-sidenav-connection-block-size) - var(--utrecht-sidenav-marker-height) - 2 *
       var(--utrecht-sidenav-marker-outline-width)
   );
-  bottom: 0;
   content: "";
   display: block;
   inline-size: var(--utrecht-sidenav-connection-inline-size);
-  left: 3px;
+  inset-block-end: 0;
+  inset-block-start: calc(var(--utrecht-sidenav-marker-offset));
+  inset-inline-start: 3px;
   overflow: hidden;
   position: absolute;
-  top: calc(var(--utrecht-sidenav-marker-offset));
   z-index: 5;
 }
 
@@ -124,10 +124,10 @@
   border-radius: 100%;
   content: "";
   inline-size: 8px;
-  left: var(--utrecht-sidenav-marker-offset);
+  inset-block-start: 20px; /* Hard value? */
+  inset-inline-start: var(--utrecht-sidenav-marker-offset);
   overflow: hidden;
   position: absolute;
-  top: 20px; /* Hard value? */
   transform: translateY(-50%) translateX(calc(-1 * var(--utrecht-sidenav-marker-offset)));
   z-index: 10;
 }
@@ -138,8 +138,8 @@
   block-size: 4px;
   border: 2px solid var(--utrecht-sidenav-link-color);
   inline-size: 4px;
-  left: 1.2rem;
-  top: 16px;
+  inset-block-start: 16px;
+  inset-inline-start: 1.2rem;
   transform: translateY(-50%) translateX(-19.5px);
 }
 

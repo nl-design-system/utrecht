@@ -62,10 +62,10 @@ ol.utrecht-breadcrumb__list {
     content: " ";
     display: block;
     inline-size: 0;
-    left: 100%;
+    inset-block-start: 50%;
+    inset-inline-start: 100%;
     margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
     position: absolute;
-    top: 50%;
   }
 
   .utrecht-breadcrumb__link::after {
