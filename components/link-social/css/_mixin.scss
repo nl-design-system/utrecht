@@ -4,15 +4,15 @@
 
   align-items: center;
   background-color: var(--utrecht-link-social-background-color);
+  block-size: var(--utrecht-link-social-size);
   border-color: var(--utrecht-link-social-border-color);
   border-radius: 50%;
   border-style: solid;
   border-width: var(--utrecht-link-social-border-width);
   color: var(--utrecht-link-social-color);
   display: inline-flex;
-  height: var(--utrecht-link-social-size);
+  inline-size: var(--utrecht-link-social-size);
   justify-content: center;
-  width: var(--utrecht-link-social-size);
 }
 
 @mixin utrecht-link-social--hover {

@@ -27,12 +27,12 @@
   color: var(--utrecht-select-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-select-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-select-font-size, var(--utrecht-form-control-font-size));
+  inline-size: 100%;
   max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-control-max-inline-size));
   padding-block-end: var(--utrecht-select-padding-block-end, var(--utrecht-form-control-padding-block-end));
   padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-control-padding-block-start));
   padding-inline-end: var(--utrecht-select-padding-inline-end, var(--utrecht-form-control-padding-inline-end));
   padding-inline-start: var(--utrecht-select-padding-inline-start, var(--utrecht-form-control-padding-inline-start));
-  width: 100%;
 }
 
 @mixin utrecht-select--disabled {

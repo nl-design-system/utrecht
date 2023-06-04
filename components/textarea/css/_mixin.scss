@@ -8,6 +8,7 @@
 @mixin utrecht-textarea {
   /* Fall back to `resize: vertical` for browsers that don't support `resize: block` */
   background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color));
+  block-size: initial; /* harden */
   border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width));
   border-bottom-width: var(
     --utrecht-textarea-border-bottom-width,
@@ -21,7 +22,7 @@
   font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-control-font-size, inherit));
   font-weight: initial; /* harden */
-  height: initial; /* harden */
+  inline-size: 100%;
   line-height: var(--utrecht-textarea-line-height, initial);
   max-inline-size: var(--utrecht-textarea-max-inline-size, var(--utrecht-form-control-max-inline-size));
   min-block-size: var(--utrecht-textarea-min-block-size);
@@ -37,7 +38,6 @@
   );
   resize: vertical;
   resize: block;
-  width: 100%;
 }
 
 @mixin utrecht-textarea--invalid {

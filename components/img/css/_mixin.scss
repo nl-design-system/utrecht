@@ -5,7 +5,10 @@
  */
 
 @mixin utrecht-img {
+  /* stylelint-disable-next-line property-disallowed-list */
   height: auto;
+
+  /* stylelint-disable-next-line property-disallowed-list */
   width: auto;
 }
 

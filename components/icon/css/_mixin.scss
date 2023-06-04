@@ -5,12 +5,12 @@
  */
 
 @mixin utrecht-icon {
+  block-size: var(--utrecht-icon-size);
   color: var(--utrecht-icon-color);
   display: inline-block;
-  height: var(--utrecht-icon-size);
+  inline-size: var(--utrecht-icon-size);
   inset-block-start: var(--utrecht-icon-inset-block-start, 0);
   position: relative;
-  width: var(--utrecht-icon-size);
 }
 
 @mixin utrecht-icon__svg {
@@ -20,6 +20,10 @@
    * 
    *   <svg width="128px" height="128px">
    */
+
+  /* stylelint-disable-next-line property-disallowed-list */
   height: 100%;
+
+  /* stylelint-disable-next-line property-disallowed-list */
   width: 100%;
 }

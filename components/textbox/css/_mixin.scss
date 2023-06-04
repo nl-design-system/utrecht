@@ -7,6 +7,7 @@
 
 @mixin utrecht-textbox {
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
+  block-size: initial; /* harden */
   border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
   border-bottom-width: var(
     --utrecht-textbox-border-bottom-width,
@@ -20,7 +21,7 @@
   font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-control-font-size, inherit));
   font-weight: initial; /* harden */
-  height: initial; /* harden */
+  inline-size: 100%;
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
   max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
@@ -33,7 +34,6 @@
     --utrecht-textbox-padding-inline-start,
     var(--utrecht-form-control-padding-inline-start, initial)
   );
-  width: 100%;
 }
 
 @mixin utrecht-textbox--invalid {
