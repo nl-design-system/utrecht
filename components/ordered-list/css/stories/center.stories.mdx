@@ -43,3 +43,84 @@ _Ordered list_ moet niet als gecentreerde tekst gebruikt worden worden. Wanneer 
 </Canvas>
 
 <ArgsTable story="Center" />
+
+<Canvas>
+  <Story
+    name="Center (container width is 50%)"
+    args={{
+      center: true,
+      items: [
+        {
+          children: "The Quick Brown Fox",
+        },
+        {
+          children: "Jumps",
+        },
+        {
+          children: "Over The Lazy Dog",
+        },
+      ],
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            "text-align": "center",
+            "inline-size": "50%",
+            "border-inline-start": "1px solid currentColor",
+            "border-inline-end": "1px solid currentColor",
+          }}
+        >
+          {Story()}
+        </div>
+      ),
+    ]}
+  >
+    {OrderedList.bind({})}
+  </Story>
+</Canvas>
+
+Lange tekst moet binnen de container passen.
+
+<Canvas>
+  <Story
+    name="Center (multiple lines of text, container width is 50%)"
+    args={{
+      center: true,
+      items: [
+        {
+          children: "The Quick Brown Fox",
+        },
+        {
+          children: "Jumps",
+        },
+        {
+          children: "Over The Lazy Dog",
+        },
+        {
+          children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.`,
+        },
+      ],
+    }}
+    decorators={[
+      (Story) => (
+        <div
+          style={{
+            "text-align": "center",
+            "inline-size": "50%",
+            "border-inline-start": "1px solid currentColor",
+            "border-inline-end": "1px solid currentColor",
+          }}
+        >
+          {Story()}
+        </div>
+      ),
+    ]}
+  >
+    {OrderedList.bind({})}
+  </Story>
+</Canvas>
