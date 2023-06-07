@@ -34,6 +34,11 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
+.navbar__link svg,
+.menu__link svg {
+  display: none;
+}
+
 html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
