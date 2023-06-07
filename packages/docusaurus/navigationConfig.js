@@ -33,10 +33,9 @@ module.exports = {
       label: 'Design Richtlijnen',
     },
     {
-      type: 'doc',
-      docId: 'tmp/gebruikersonderzoek/research',
-      position: 'left',
+      href: 'https://nl-design-system.github.io/gebruikersonderzoek/',
       label: 'Onderzoek',
+      position: 'left',
     },
     {
       href: 'https://github.com/nl-design-system/utrecht',
