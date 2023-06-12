@@ -45,3 +45,7 @@
 .utrecht-form-fieldset--invalid {
   @include utrecht-form-fieldset--invalid;
 }
+
+.utrecht-form-fieldset--grid {
+  @include utrecht-form-fieldset--grid;
+}

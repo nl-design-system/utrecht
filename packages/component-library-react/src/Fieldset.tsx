@@ -89,4 +89,4 @@ export const FieldsetOnly = forwardRef(
   ),
 );
 
-FieldsetOnly.displayName = 'Fieldset';
+FieldsetOnly.displayName = 'FieldsetOnly';

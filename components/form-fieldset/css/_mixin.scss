@@ -37,6 +37,10 @@
 @mixin utrecht-form-fieldset--section {
   background-color: var(--utrecht-form-fieldset-section-background-color);
   color: var(--utrecht-form-fieldset-section-color);
+  padding-block-end: var(--utrecht-form-fieldset-section-padding-block-end);
+  padding-block-start: var(--utrecht-form-fieldset-section-padding-block-start);
+  padding-inline-end: var(--utrecht-form-fieldset-section-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-fieldset-section-padding-inline-start);
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -68,4 +72,87 @@
 @mixin utrecht-form-fieldset__legend--distanced {
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-fieldset-legend-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-form-fieldset-legend-margin-block-start, 0));
+}
+
+@mixin utrecht-form-fieldset--grid {
+  --_utrecht-form-fieldset-display: grid;
+  --_utrecht-form-fieldset-row-gap: 2ex;
+  --_utrecht-form-fieldset-column-gap: 1ch;
+  --_utrecht-form-fieldset-grid-template-columns: repeat(12, 1fr);
+  --_utrecht-form-field-display: grid;
+  --_utrecht-form-field-align-content: space-between;
+  --_utrecht-form-field-column-gap: 1ch;
+  --_utrecht-form-field-grid-column: 1 / -1;
+  --_utrecht-form-field-row-gap: 1ex;
+
+  .utrecht-form-fieldset__fieldset,
+  fieldset.utrecht-form-fieldset {
+    column-gap: var(--_utrecht-form-fieldset-column-gap, inherit);
+    display: var(--_utrecht-form-fieldset-display, inherit);
+    grid-template-columns: var(--_utrecht-form-fieldset-grid-template-columns, 1fr);
+    row-gap: var(--_utrecht-form-fieldset-row-gap, inherit);
+
+    &:last-of-type,
+    &:first-of-type {
+      margin-block-start: 0;
+    }
+
+    & > * {
+      align-content: var(--_utrecht-form-field-align-content, initial);
+      column-gap: var(--_utrecht-form-field-column-gap, inherit);
+      display: var(--_utrecht-form-field-display, block);
+      grid-column: var(--_utrecht-form-field-grid-column, none);
+      row-gap: var(--_utrecht-form-field-row-gap, inherit);
+      width: unset;
+    }
+  }
+  .utrecht-form-fieldset {
+    &__legend {
+      &--label {
+        color: var(--utrecht-form-label-color);
+        display: block;
+        float: none;
+        font-size: var(--utrecht-form-label-font-size);
+        font-weight: var(--utrecht-form-label-font-weight);
+        margin-block-end: var(--_utrecht-form-field-row-gap, 0);
+        margin-block-start: 0;
+      }
+    }
+  }
+
+  .utrecht-form-field {
+    clear: both;
+    margin-block-end: 0;
+    margin-block-start: 0;
+    min-width: var(--_utrecht-form-field-min-width, unset);
+
+    &--start {
+      grid-column-start: 1 !important;
+    }
+  }
+  label:has(input) {
+    align-items: center;
+    column-gap: var(--_utrecht-form-field-column-gap);
+    display: flex !important;
+  }
+  .utrecht-form-field-description--invalid {
+    color: var(--utrecht-color-red-20);
+  }
+
+  .utrecht-form-field-description {
+    margin-block-end: var(--utrecht-form-field-description-margin-block-end);
+    margin-block-start: var(--utrecht-form-field-description-margin-block-start);
+  }
+
+  div.utrecht-form-fieldset {
+    margin-block-end: 0;
+    margin-block-start: 0;
+    padding-block-end: 0;
+    padding-block-start: 0;
+    padding-inline-end: 0;
+    padding-inline-start: 0;
+  }
+  .utrecht-form-fieldset__fieldset div.utrecht-form-fieldset:not(:last-child) {
+    margin-block-end: 3ex;
+  }
 }
