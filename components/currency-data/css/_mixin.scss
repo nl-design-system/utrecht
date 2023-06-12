@@ -1,0 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin utrecht-currency-data {
+  /* lining-nums: avoid "oldstyle-nums" where some numbers have descenders */
+
+  /* tabular-nums: vertically align amounts */
+  font-variant-numeric: lining-nums tabular-nums;
+  white-space: nowrap;
+}
