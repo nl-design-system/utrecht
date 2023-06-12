@@ -1,30 +1,43 @@
 {
   "utrecht": {
     "accordion": {
+      "section": {
+        "border": {
+          "width": { "value": "0", "type": "borderWidth" },
+          "color": { "value": "transparent", "type": "color" }
+        },
+        "border-block-end": {
+          "width": { "value": "0", "type": "borderWidth" }
+        }
+      },
       "button": {
-        "padding-inline-end": { "value": "30px" },
-        "background-color": { "value": "{utrecht.color.grey.95}" },
-        "color": { "value": "{utrecht.color.grey.10}" },
-        "border-color": { "value": "{utrecht.color.grey.95}" },
-        "border-width": { "value": "0" },
+        "padding-inline-end": { "value": "30px", "type": "spacing" },
+        "background-color": { "value": "{utrecht.color.grey.95}", "type": "color" },
+        "color": { "value": "{utrecht.color.grey.10}", "type": "color" },
+        "border-color": { "value": "{utrecht.color.grey.95}", "type": "color" },
+        "border-width": { "value": "0", "type": "borderWidth" },
+        "expanded": {
+          "background-color": { "value": "{utrecht.color.grey.80}", "type": "color" },
+          "color": { "value": "{utrecht.color.black}", "type": "color" }
+        },
         "hover": {
-          "background-color": { "value": "{utrecht.color.grey.95}" },
-          "border-color": { "value": "{utrecht.color.grey.95}" }
+          "background-color": { "value": "{utrecht.color.grey.95}", "type": "color" },
+          "border-color": { "value": "{utrecht.color.grey.95}", "type": "color" }
         },
         "icon": {
           "arrow-down": {},
           "arrow-up": {},
-          "background-color": { "value": "{utrecht.color.yellow.50}" },
-          "size": { "value": "24px" }
+          "background-color": { "value": "{utrecht.color.yellow.50}", "type": "color" },
+          "size": { "value": "24px", "type": "sizing" }
         }
       },
       "body": {
-        "border-color": { "value": "{utrecht.color.grey.95}" },
-        "border-width": { "value": "2px" },
-        "padding-block-start": { "value": "10px" },
-        "padding-block-end": { "value": "10px" },
-        "padding-inline-start": { "value": "10px" },
-        "padding-inline-end": { "value": "10px" }
+        "border-color": { "value": "{utrecht.color.grey.95}", "type": "color" },
+        "border-width": { "value": "2px", "type": "color" },
+        "padding-block-start": { "value": "10px", "type": "spacing" },
+        "padding-block-end": { "value": "10px", "type": "spacing" },
+        "padding-inline-start": { "value": "10px", "type": "spacing" },
+        "padding-inline-end": { "value": "10px", "type": "spacing" }
       }
     }
   }
