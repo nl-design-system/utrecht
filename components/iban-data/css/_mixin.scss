@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin utrecht-iban-data {
+  /* lining-nums: avoid "oldstyle-nums" where some numbers have descenders */
+
+  /* slashed-zero: avoid confusion between LATIN LETTER O (U+004F) and DIGIT ZERO (U+0030) */
+
+  /* tabular-nums: vertically align IBAN values */
+  font-variant-numeric: lining-nums slashed-zero tabular-nums;
+  white-space: nowrap;
+}
