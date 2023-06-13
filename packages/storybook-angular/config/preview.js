@@ -6,6 +6,10 @@ import results from '@utrecht/component-library-angular/dist/.jest-test-results.
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import docJson from '../tmp/documentation.json';
+import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
+import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
+
 setCompodocJson(docJson);
 
 export const decorators = [
