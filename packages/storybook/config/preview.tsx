@@ -17,6 +17,9 @@ import '@utrecht/components/html-content/css/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/property.css';
 import '@utrecht/design-tokens/dist/dark/index.css';
+import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
+import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@utrecht/design-tokens/src/background-image-icon.scss';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
 
