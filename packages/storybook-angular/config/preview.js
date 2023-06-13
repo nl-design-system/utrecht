@@ -6,6 +6,7 @@ import results from '@utrecht/component-library-angular/dist/.jest-test-results.
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import docJson from '../tmp/documentation.json';
+
 setCompodocJson(docJson);
 
 export const decorators = [

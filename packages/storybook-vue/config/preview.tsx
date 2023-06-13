@@ -6,6 +6,10 @@ import { defineCustomElements } from '@utrecht/web-component-library-stencil/loa
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
+import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
+import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
+
 defineCustomElements();
 
 const preview: Preview = {

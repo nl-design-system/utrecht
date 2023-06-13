@@ -677,12 +677,21 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 4.2.2
         version: 4.2.2(react-dom@18.2.0)(react@18.2.0)
+      '@gemeente-denhaag/design-tokens-components':
+        specifier: 0.2.3-alpha.321
+        version: 0.2.3-alpha.321
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@18.2.0)
+      '@nl-design-system-unstable/amsterdam-design-tokens':
+        specifier: 1.0.0-alpha.108
+        version: 1.0.0-alpha.108
       '@nl-design-system-unstable/documentation':
         specifier: 0.0.2-alpha.55
         version: 0.0.2-alpha.55
+      '@nl-design-system-unstable/rotterdam-design-tokens':
+        specifier: 1.0.0-alpha.101
+        version: 1.0.0-alpha.101
       '@storybook/addon-a11y':
         specifier: 7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
@@ -887,9 +896,18 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 4.2.2
         version: 4.2.2(react-dom@18.2.0)(react@18.2.0)
+      '@gemeente-denhaag/design-tokens-components':
+        specifier: 0.2.3-alpha.316
+        version: 0.2.3-alpha.316
+      '@nl-design-system-unstable/amsterdam-design-tokens':
+        specifier: 1.0.0-alpha.107
+        version: 1.0.0-alpha.107
       '@nl-design-system-unstable/documentation':
         specifier: 0.0.2-alpha.55
         version: 0.0.2-alpha.55
+      '@nl-design-system-unstable/rotterdam-design-tokens':
+        specifier: 1.0.0-alpha.100
+        version: 1.0.0-alpha.100
       '@storybook/addon-a11y':
         specifier: 7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
@@ -1028,15 +1046,24 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 4.2.2
         version: 4.2.2(react-dom@18.2.0)(react@18.2.0)
+      '@gemeente-denhaag/design-tokens-components':
+        specifier: 0.2.3-alpha.316
+        version: 0.2.3-alpha.316
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.0-alpha.140
         version: 0.1.0-alpha.140(react@18.2.0)
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@18.2.0)
+      '@nl-design-system-unstable/amsterdam-design-tokens':
+        specifier: 1.0.0-alpha.107
+        version: 1.0.0-alpha.107
       '@nl-design-system-unstable/documentation':
         specifier: 0.0.2-alpha.55
         version: 0.0.2-alpha.55
+      '@nl-design-system-unstable/rotterdam-design-tokens':
+        specifier: 1.0.0-alpha.100
+        version: 1.0.0-alpha.100
       '@storybook/addon-a11y':
         specifier: 7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
@@ -1163,12 +1190,21 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 4.2.2
         version: 4.2.2(react-dom@18.2.0)(react@18.2.0)
+      '@gemeente-denhaag/design-tokens-components':
+        specifier: 0.2.3-alpha.316
+        version: 0.2.3-alpha.316
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@18.2.0)
+      '@nl-design-system-unstable/amsterdam-design-tokens':
+        specifier: 1.0.0-alpha.107
+        version: 1.0.0-alpha.107
       '@nl-design-system-unstable/documentation':
         specifier: 0.0.2-alpha.55
         version: 0.0.2-alpha.55
+      '@nl-design-system-unstable/rotterdam-design-tokens':
+        specifier: 1.0.0-alpha.100
+        version: 1.0.0-alpha.100
       '@storybook/addon-a11y':
         specifier: 7.0.7
         version: 7.0.7(react-dom@18.2.0)(react@18.2.0)
@@ -6349,6 +6385,14 @@ packages:
       react: 18.2.0
     dev: true
 
+  /@gemeente-denhaag/design-tokens-components@0.2.3-alpha.316:
+    resolution: {integrity: sha512-bduK7QD1Pq/Viou39lq3lmH1O+oOlhDlU4C7GUB0gdEAMU9mS7PGZ3L40iGhlyUe1/t6vVgoueGjuRC98Wj/Kw==}
+    dev: true
+
+  /@gemeente-denhaag/design-tokens-components@0.2.3-alpha.321:
+    resolution: {integrity: sha512-gaVYIW/deuxZQZpMaqv15gMl5VcT4tbt5jK/Ec1kuzBFzc6vYfEHHHxNnSzfvyRcGw3NxIkS7v3Fpzs0py56Ig==}
+    dev: true
+
   /@gemeente-denhaag/icons@0.2.3-alpha.311(react@18.2.0):
     resolution: {integrity: sha512-MnJig+JkzgwKchCTTaAxLzk1aQI9H2RMag0ZHdsYSIADq1XxCt4RjLqKUcQy+IBJT4NlwdlKS0HmUfAv6BNV7w==}
     peerDependencies:
@@ -7333,8 +7377,24 @@ packages:
       webpack: 5.76.1(esbuild@0.17.8)
     dev: true
 
+  /@nl-design-system-unstable/amsterdam-design-tokens@1.0.0-alpha.107:
+    resolution: {integrity: sha512-YTixMpGLuS9gluB73OSsFfPaiDapQI0frjgxpWtqsSpeslnwkzPhYzbEppY81nkIXrwIpScioz1/CDwBjmh9Gw==}
+    dev: true
+
+  /@nl-design-system-unstable/amsterdam-design-tokens@1.0.0-alpha.108:
+    resolution: {integrity: sha512-Xo3x41fKikIjek+e+XJn8oMDN0Pkm2d5ChlysQLv9cGseAkasu/IlyyHvzh78S59cd2CE3G9bUaKPaDgl5608w==}
+    dev: true
+
   /@nl-design-system-unstable/documentation@0.0.2-alpha.55:
     resolution: {integrity: sha512-BLYaj7SUcHbli/t/MO2dR/CCzRm3S62Nkvfy2Yu/+BxbzuiFTGf6WENZPsm2fGpi/9Bs7vvkN6f/cd2zijsjXw==}
+    dev: true
+
+  /@nl-design-system-unstable/rotterdam-design-tokens@1.0.0-alpha.100:
+    resolution: {integrity: sha512-ciaFKCMD2SBZBnxq2YS5PUSJssQRIvWyosbupxlXDHsWBNR0JotnD5J1KnXnMTQuqTi79c5YJxgKTy8EBQSw4g==}
+    dev: true
+
+  /@nl-design-system-unstable/rotterdam-design-tokens@1.0.0-alpha.101:
+    resolution: {integrity: sha512-bDlMxlwfzxxnIZo82ipsRl6UbEpjwaaa5xRqIbjwRFV4hg/CHI4LY+Y8jLS5/oST5GJyOy7gEhREMh5FL8R+lQ==}
     dev: true
 
   /@nodelib/fs.scandir@2.1.5:
@@ -29385,7 +29445,7 @@ packages:
       mime-types: 2.1.35
       range-parser: 1.2.1
       schema-utils: 4.0.0
-      webpack: 5.81.0
+      webpack: 5.81.0(esbuild@0.17.18)
     dev: true
 
   /webpack-dev-middleware@6.0.1(webpack@5.76.1):

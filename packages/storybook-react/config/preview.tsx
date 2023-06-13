@@ -7,6 +7,9 @@ import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
 import React from 'react';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
+import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
+import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
+import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 
 const preview: Preview = {
   decorators: [
