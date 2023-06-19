@@ -43,6 +43,20 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
+export const Unicode: Story = {
+  decorators: [(Story) => <div style={{ '--utrecht-icon-size': '32px' }}>{Story()}</div>],
+  args: {
+    children: '→',
+  },
+};
+
+export const UnicodeEmoji: Story = {
+  decorators: [(Story) => <div style={{ '--utrecht-icon-size': '32px' }}>{Story()}</div>],
+  args: {
+    children: '❤️',
+  },
+};
+
 /* The icon should be 16px, regardless of the width="512px". The icon must not be stretched. */
 export const SizeCSSVariable: Story = {
   decorators: [(Story) => <div style={{ '--utrecht-icon-size': '16px' }}>{Story()}</div>],
