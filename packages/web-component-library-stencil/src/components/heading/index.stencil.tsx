@@ -42,17 +42,11 @@ export class Heading {
           <slot></slot>
         </h5>
       );
-    } else if (this.level === 6) {
+    } else {
       return (
         <h6 class="utrecht-heading-6">
           <slot></slot>
         </h6>
-      );
-    } else {
-      return (
-        <div class="utrecht-heading" role="heading" aria-level={this.level}>
-          <slot></slot>
-        </div>
       );
     }
   }
