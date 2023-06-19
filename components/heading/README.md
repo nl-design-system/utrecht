@@ -7,6 +7,8 @@
 - Gebruikers van screenreaders gebruiken headings vaak om een indruk te krijgen van de structuur van een pagina.
 - Gebruik headings niet voor de opmaak maar alleen voor tekstuele hiërarchie van de content.
 - Sla geen niveaus over met het gebruik van headings, bijvoorbeeld geen H3 gebruiken zonder dat er een voorgaande H2 is.
+- Gebruik een lager heading niveau voor inhoud die onderdeel is van de vorige heading, zodat gebruikers makkelijk die inhoud over kunnen slaan en door kunnen naar de volgende heading op hetzelfde niveau.
+- Weet je niet zeker welk heading niveau gebruikt moet worden? Gebruik dan _heading level_ 6. Zo kunnen gebruikers toch gemakkelijk de inhoud overslaan en verder gaan naar de volgende heading op een hoger niveau. Deze aanpak is niet WCAG-compliant, maar het is minder ongebruiksvriendelijk dan bijvoorbeeld bij twijfel _heading level 1_ gebruiken.
 - Beperk het aantal headings op een pagina. In de meeste gevallen hebben teksten niet meer dan `<h2>` koppen nodig en heel soms een `<h3>`. Alleen voor uitzonderlijk lange of complexe pagina's zouden `<h5>` en `<h6>` nodig zijn.
 
 ## Terminologie
