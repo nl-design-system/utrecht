@@ -11,7 +11,7 @@ export type IconProps = HTMLAttributes<HTMLElement>;
 
 export const Icon = forwardRef(
   ({ children, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLElement>) => (
-    <span ref={ref} className={clsx('utrecht-icon', className)} {...restProps}>
+    <span aria-hidden="true" ref={ref} className={clsx('utrecht-icon', className)} {...restProps}>
       {children}
     </span>
   ),
