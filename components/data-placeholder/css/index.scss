@@ -1,0 +1,30 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 The Knights Who Say NIH! B.V.
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+@import "./mixin";
+
+.utrecht-data-placeholder {
+  @include utrecht-data-placeholder;
+}
+
+.utrecht-data-placeholder--loading {
+  @include utrecht-data-placeholder--loading;
+}
+
+/* class name available only for Storybook */
+.utrecht-data-placeholder--print {
+  @include utrecht-data-placeholder--print;
+}
+
+/* class name available only for Storybook */
+.utrecht-data-placeholder--forced-colors {
+  @include utrecht-data-placeholder--forced-colors;
+}
+
+/* class name available only for Storybook */
+.utrecht-data-placeholder--high-contrast {
+  @include utrecht-data-placeholder--loading;
+}

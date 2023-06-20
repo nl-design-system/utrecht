@@ -56,6 +56,7 @@ export { PageContent } from './PageContent';
 export { PageFooter } from './PageFooter';
 export { PageHeader } from './PageHeader';
 export { Paragraph } from './Paragraph';
+export { DataPlaceholder } from './DataPlaceholder';
 export { PreHeading } from './PreHeading';
 export { RadioButton } from './RadioButton';
 // export { SearchBar } from './SearchBar'; // TODO find a way to make the downshift compatible with nextjs 13 app/directory
