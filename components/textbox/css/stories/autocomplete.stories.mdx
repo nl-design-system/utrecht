@@ -240,6 +240,8 @@ Gebruik `spellcheck="false"` zodat het wachtwoord niet wordt gedeeld met _browse
 
 Gebruik dit veld voor de naam van organisaties, zoals bijvoorbeeld bedrijven, stichtingen en religieuze instellingen.
 
+Gebruik `autocomplete="organization"`.
+
 <Canvas>
   <Story
     name="Naam van de organisatie"
@@ -247,6 +249,179 @@ Gebruik dit veld voor de naam van organisaties, zoals bijvoorbeeld bedrijven, st
       ...exampleArgs,
       autocomplete: "organization",
       value: "",
+    }}
+    parameters={{
+      status: {
+        type: "ALPHA",
+      },
+      // This story has no distinct visual design
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Huisnummer (in Nederland)
+
+In de [Basisregistratie Adressen en Gebouwen (BAG)](https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html) hebben we gecontroleerd welke soort data huisnummer kan hebben. (Unieke waarden gevonden met SQL: `SELECT DISTINCT huisnummer FROM nums WHERE huisnummer ORDER BY huisnummer;`). Laatst gecontroleerd: juni 2023.
+
+De waarde is een getal tussen 1 en 99999.
+
+Huisnummer heeft geen `autocomplete` type.
+
+Valide waarden om mee te testen:
+
+- 1
+- 99999
+
+Invalide waarden om mee te testen:
+
+- 0
+- 100000
+
+<Canvas>
+  <Story
+    name="Huisnummer"
+    args={{
+      ...exampleArgs,
+      value: "",
+      inputMode: "numeric",
+      maxLength: 5,
+      min: 1,
+      max: 99999,
+      pattern: "[0-9]+",
+    }}
+    parameters={{
+      status: {
+        type: "ALPHA",
+      },
+      // This story has no distinct visual design
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Huisletter (in Nederland)
+
+In de [Basisregistratie Adressen en Gebouwen (BAG)](https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html) hebben we gecontroleerd welke soort data huisletter kan hebben. (Unieke waarden gevonden met SQL: `SELECT DISTINCT huisletter FROM nums ORDER BY huisletter;`). Laatst gecontroleerd: juni 2023.
+
+De waarde kan 1 letter zijn van A tot Z, als hoofdletter of kleine letter. De waarde kan ook leeg zijn.
+
+Huisletter heeft geen `autocomplete` type.
+
+Waarden om mee te testen:
+
+- a
+- z
+- A
+- Z
+
+Invalide waarden om mee te testen:
+
+- 0
+- xx
+
+<Canvas>
+  <Story
+    name="Huisletter"
+    args={{
+      ...exampleArgs,
+      value: "",
+      maxLength: 1,
+      pattern: "[A-Za-z]+",
+    }}
+    parameters={{
+      status: {
+        type: "ALPHA",
+      },
+      // This story has no distinct visual design
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Huistoevoeging (in Nederland)
+
+In de [Basisregistratie Adressen en Gebouwen (BAG)](https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html) hebben we gecontroleerd welke soort data huistoevoeging kan hebben. (Unieke waarden gevonden met SQL: `SELECT DISTINCT huistoevoeging FROM nums ORDER BY LENGTH(huistoevoeging);`). Laatst gecontroleerd: juni 2023.
+
+De waarde kan leeg zijn, of maximaal 4 letters of cijfers bevatten.
+
+Huistoevoeging heeft geen `autocomplete` type.
+
+Waarden om mee te testen (en test ook leeg huistoevoeging niet invullen):
+
+- a
+- 0
+- AANL
+- AA08
+- 0000
+- zW28
+- zorg
+
+<Canvas>
+  <Story
+    name="Huistoevoeging"
+    args={{
+      ...exampleArgs,
+      value: "",
+      maxLength: 4,
+      pattern: "[A-Za-z0-9]{0,4}",
+    }}
+    parameters={{
+      status: {
+        type: "ALPHA",
+      },
+      // This story has no distinct visual design
+      chromatic: { disableSnapshot: true },
+    }}
+  >
+    {Textbox.bind({})}
+  </Story>
+</Canvas>
+
+## Woonplaats (in Nederland)
+
+In de [Basisregistratie Adressen en Gebouwen (BAG)](https://bagviewer.kadaster.nl/lvbag/bag-viewer/index.html) hebben we gecontroleerd welke soort data "woonplaats" kan hebben. (Unieke waarden gevonden met SQL: `SELECT naam FROM wpls;`). Laatst gecontroleerd: juni 2023.
+
+De waarde kan de volgende soorten tekens hebben: letters, letters met diakrieten (accent, omgekeerd accent, accent circonflexe, umlaut, etcetera), cijfers, spaties, leestekens zoals haakjes `(` en `)`, koppelteken `-`, apostrof `'`. De langste woonplaats in Nederland.
+
+Op dit moment is de langste woonplaatsnaam in Nederland 28 tekens lang: Westerhaar-Vriezenveensewijk.
+
+Laatst gecontroleerd: juni 2023.
+
+Sommige gebruikers willen misschien een waarde plakken met een speciale apostrof `’` (`U+2019 RIGHT SINGLE QUOTATION MARK`): `’s-Hertogenbosch`.
+
+Waarden om mee te testen:
+
+- Ie
+- Oss
+- Ohé en Laak
+- Bergen (NH)
+- Sibrandahûs
+- 2e Exloërmond
+- 's-Hertogenbosch
+- Stad aan 't Haringvliet
+- Nieuwerkerk aan den IJssel
+- Westerhaar-Vriezenveensewijk
+
+<Canvas>
+  <Story
+    name="Woonplaats"
+    args={{
+      ...exampleArgs,
+      value: "",
+    }}
+    parameters={{
+      status: {
+        type: "ALPHA",
+      },
+      // This story has no distinct visual design
+      chromatic: { disableSnapshot: true },
     }}
   >
     {Textbox.bind({})}
