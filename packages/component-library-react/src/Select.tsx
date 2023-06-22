@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, OptionHTMLAttributes, PropsWithChildren, SelectHTMLAttributes } from 'react';
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
+  busy?: boolean;
   invalid?: boolean;
   /**
    * `noscript`: Don't let it affect CSS :invalid
@@ -11,23 +12,25 @@ export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
 
 export const Select = forwardRef(
   (
-    { invalid, required, className, noscript, children, ...restProps }: PropsWithChildren<SelectProps>,
+    { busy, invalid, required, className, noscript, children, ...restProps }: PropsWithChildren<SelectProps>,
     ref: ForwardedRef<HTMLSelectElement>,
   ) => {
     return (
       <select
-        {...restProps}
-        ref={ref}
+        aria-busy={busy || undefined}
         aria-invalid={invalid || undefined}
         required={noscript ? required : false}
         aria-required={noscript ? undefined : required}
         className={clsx(
           'utrecht-select',
           'utrecht-select--html-select',
+          busy && 'utrecht-select--busy',
           invalid && 'utrecht-select--invalid',
           required && 'utrecht-select--required',
           className,
         )}
+        ref={ref}
+        {...restProps}
       >
         {children}
       </select>

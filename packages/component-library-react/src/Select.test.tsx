@@ -56,6 +56,50 @@ describe('Select', () => {
     expect(select).toContain(option);
   });
 
+  describe('busy state', () => {
+    it('is not busy by default', () => {
+      const { container } = render(<Select />);
+
+      const select = container.querySelector(':only-child');
+
+      expect(select).not.toHaveAttribute('aria-busy');
+      expect(select).not.toHaveClass('utrecht-select--busy');
+    });
+
+    it('does not specify `aria-busy` when not busy', () => {
+      const { container } = render(<Select busy={false} />);
+
+      const select = container.querySelector(':only-child');
+
+      expect(select).not.toHaveAttribute('aria-busy');
+    });
+
+    it('can have a busy state', () => {
+      const { container } = render(<Select busy={true} />);
+
+      const select = container.querySelector(':only-child');
+
+      expect(select).toHaveAttribute('aria-busy', 'true');
+    });
+
+    it('can configure aria-busy', () => {
+      /* The `busy` property is preferred, but this should work too */
+      const { container } = render(<Select aria-busy={true} />);
+
+      const select = container.querySelector(':only-child');
+
+      expect(select).toHaveAttribute('aria-busy', 'true');
+    });
+
+    it('renders a design system BEM class name', () => {
+      const { container } = render(<Select busy={true} />);
+
+      const select = container.querySelector(':only-child');
+
+      expect(select).toHaveClass('utrecht-select--busy');
+    });
+  });
+
   describe('invalid variant', () => {
     it('can have an invalid state', () => {
       const { container } = render(<Select invalid />);

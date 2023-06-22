@@ -22,6 +22,10 @@
   @include utrecht-select--focus-visible;
 }
 
+.utrecht-select--busy {
+  @include utrecht-select--busy;
+}
+
 .utrecht-select--invalid {
   @include utrecht-select--invalid;
 }

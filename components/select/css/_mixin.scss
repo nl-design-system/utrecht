@@ -87,6 +87,10 @@
   @include utrecht-focus-visible;
 }
 
+@mixin utrecht-select--busy {
+  cursor: var(--utrecht-action-busy-cursor, busy);
+}
+
 @mixin utrecht-select--invalid {
   --_utrecht-select-border-width: var(
     --utrecht-select-invalid-border-width,

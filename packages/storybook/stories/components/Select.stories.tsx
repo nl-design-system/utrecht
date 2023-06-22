@@ -15,6 +15,10 @@ const meta = {
   id: 'css-select',
   component: Select,
   argTypes: {
+    busy: {
+      description: 'Busy',
+      control: 'boolean',
+    },
     disabled: {
       description: 'Disabled',
       control: 'boolean',
@@ -107,6 +111,13 @@ export const Invalid: Story = {
 export const Required: Story = {
   args: {
     required: true,
+  },
+};
+
+export const Busy: Story = {
+  args: {
+    busy: true,
+    options: [],
   },
 };
 
