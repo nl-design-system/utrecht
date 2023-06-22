@@ -1,7 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/alert-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-css/dist/tokens.mjs';
-import { Alert, AlertProps, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import {
+  Alert,
+  AlertProps,
+  Button,
+  ButtonGroup,
+  Heading1,
+  Link,
+  Paragraph,
+} from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import React from 'react';
@@ -13,7 +21,11 @@ interface AlertStoryProps extends AlertProps {
 
 const AlertStory = ({ children, icon, ...props }: AlertStoryProps) => {
   const IconElement = icon;
-  return <Alert icon={IconElement ? <IconElement /> : null}>{children}</Alert>;
+  return (
+    <Alert icon={IconElement ? <IconElement /> : null} {...props}>
+      {children}
+    </Alert>
+  );
 };
 
 const meta = {
@@ -90,6 +102,33 @@ export const WithIcon: Story = {
     ...Default.args,
     type: 'info',
     icon: 'utrecht-icon-loupe',
+  },
+};
+
+export const ActionsWarning: Story = {
+  args: {
+    type: 'warning',
+    children: (
+      <Paragraph>
+        De sessie is afgelopen, omdat je 15 minuten niets hebt gedaan. Je kan weer opnieuw beginnen.
+      </Paragraph>
+    ),
+    actions: (
+      <ButtonGroup>
+        <Button appearance="primary-action-button">Opnieuw beginnen</Button>
+      </ButtonGroup>
+    ),
+  },
+};
+export const LinkActionsWarning: Story = {
+  args: {
+    type: 'warning',
+    children: <Paragraph>Uw sessie is verlopen.</Paragraph>,
+    actions: (
+      <Paragraph>
+        Gebruik deze link om <Link href="#">opnieuw te beginnen</Link>.
+      </Paragraph>
+    ),
   },
 };
 

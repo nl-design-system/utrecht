@@ -4,11 +4,12 @@ import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
 export interface AlertProps extends PropsWithChildren {
+  actions?: ReactNode;
   icon?: ReactNode;
   type?: string;
 }
 
-export const Alert = ({ children, icon = null, type }: PropsWithChildren<AlertProps>) => (
+export const Alert = ({ actions, children, icon = null, type }: PropsWithChildren<AlertProps>) => (
   <div
     className={clsx('utrecht-alert', {
       'utrecht-alert--error': type === 'error',
@@ -23,5 +24,6 @@ export const Alert = ({ children, icon = null, type }: PropsWithChildren<AlertPr
         {children}
       </div>
     </div>
+    {actions && <div className="utrecht-alert__actions">{actions}</div>}
   </div>
 );
