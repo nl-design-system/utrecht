@@ -5,7 +5,7 @@
  */
 import clsx from 'clsx';
 import React from 'react';
-
+import { Link } from '../../link/css/story-template';
 export const SearchBarDropdown = ({ isSelected, isActive }) => (
   <div className={clsx('utrecht-search-bar__dropdown')}>
     <section className={clsx('utrecht-search-bar__section')}>
@@ -17,7 +17,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
           id="item-1-section-1"
           aria-selected={false}
         >
-          Option #1
+          <Link href="#">Option #1</Link>
         </li>
         <li
           role="option"
@@ -25,7 +25,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
           id="item-2-section-1"
           aria-selected={false}
         >
-          Option #2
+          <Link href="#">Option #2</Link>
         </li>
         <li
           role="option"
@@ -33,7 +33,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
           id="item-3-section-1"
           aria-selected={false}
         >
-          Option #3
+          <Link href="#">Option #3</Link>
         </li>
       </ul>
     </section>
@@ -49,7 +49,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
           id="item-1-section-2"
           aria-selected={isSelected}
         >
-          Option #1
+          <Link href="#">Option #1</Link>
         </li>
         <li
           role="option"
@@ -57,7 +57,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
           id="item-2-section-2"
           aria-selected={false}
         >
-          Option #2
+          <Link href="#">Option #2</Link>
         </li>
         <li
           role="option"
@@ -65,7 +65,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
           id="item-3-section-2"
           aria-selected={false}
         >
-          Option #3
+          <Link href="#">Option #3</Link>
         </li>
       </ul>
     </section>
@@ -135,6 +135,7 @@ export const SearchBar = ({
     aria-haspopup="listbox"
     aria-expanded={isOpen}
     aria-owns={isOpen ? 'utrecht-search-bar-1-menu' : undefined}
+    style={{ maxInlineSize: '500px', position: 'relative' }}
   >
     <div className={clsx('utrecht-search-bar')}>
       <input
