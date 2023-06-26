@@ -1,5 +1,5 @@
 {
-  "moduleDirectories": ["node_modules", "<rootDir>/"],
+  "moduleDirectories": ["node_modules", "<rootDir>/", "src"],
   "moduleFileExtensions": ["js", "json", "ts", "vue"],
   "testEnvironment": "jest-environment-jsdom",
   "testPathIgnorePatterns": ["/dist/"],
