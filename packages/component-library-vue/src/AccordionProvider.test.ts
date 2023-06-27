@@ -52,7 +52,7 @@ describe('AccordionProvider', () => {
     const wrapperInstance = (wrapper.vm as any);
 
     expect(wrapperInstance.sectionsRefs[0].value.expanded).toBe(false);
-    wrapperInstance.handleActivate(wrapperInstance.sectionsRefs[0].value.id);
+    wrapperInstance.handleActivate(wrapperInstance.sectionsRefs[0].id);
     expect(wrapperInstance.sectionsRefs[0].value.expanded).toBe(true);
   });
 
@@ -165,7 +165,7 @@ describe('AccordionProvider', () => {
     expect(preventDefaultSpy).not.toHaveBeenCalled();
   });
 
-  it('should focus an element when the handleButtonFocus method is triggered', () => {
+  fit('should focus an element when the handleButtonFocus method is triggered', () => {
     const wrapper = mount(AccordionProvider, {
       props: {
         sections: [
@@ -179,7 +179,7 @@ describe('AccordionProvider', () => {
     const wrapperInstance = (wrapper.vm as any);
     expect(wrapperInstance.activeSection).toBeNull();
 
-    wrapperInstance.handleButtonFocus(wrapperInstance.buttonRefs[0].value.id);
+    wrapperInstance.handleButtonFocus(wrapperInstance.buttonRefs[0].id);
     // expect(wrapperInstance.activeSection).toEqual(wrapperInstance.buttonRefs[0].value);
     //
     // console.log(document.getElementById(wrapperInstance.buttonRefs[0].value?.id))

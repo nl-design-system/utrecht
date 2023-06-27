@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { v4 as uuidv4 } from 'uuid';
-import { ref, type Ref} from "vue";
+import {reactive, ref, type Ref} from "vue";
 import UtrechtAccordion from "./Accordion.vue";
 import UtrechtAccordionSection from "./AccordionSection.vue";
 import {firstItem, lastItem, nextItem, previousItem} from "./helpers/arrayHelpers";
@@ -32,36 +32,28 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['keydown']);
-const sectionsRefs: Ref<AccordionSectionProps>[] = [];
+const sectionsRefs: Ref<AccordionSectionProps>[] = reactive([]);
+const buttonRefs: Ref<ButtonElement>[] = reactive([]);
+
 props.sections?.forEach((section) => {
-    sectionsRefs.push(
-        ref({
-            ...section,
-            label: section.label,
-            body: section.body,
-            id: uuidv4()
-        })
-    )}
-);
+    const sectionId = uuidv4();
+
+    sectionsRefs.push(ref({
+        ...section,
+        label: section.label,
+        body: section.body,
+        id: sectionId
+    }))
+
+    buttonRefs.push(ref({
+        id: sectionId + '-button',
+        sectionId
+    }))
+});
+console.log('sectionsRefs', sectionsRefs);
+console.log('buttonRefs', buttonRefs);
 
 let activeSection = ref(null) as Ref<ButtonElement|null>;
-
-const buttonRefs: Ref<ButtonElement>[] = [];
-sectionsRefs?.forEach((section) => {
-    if (section.value.id) {
-      buttonRefs.push(
-          ref({
-            id: `${section.value.id}-button`,
-            sectionId: section.value.id
-          })
-      )
-    }
-});
-
-// console.log('setup buttonRefs:', buttonRefs)
-// console.log('setup buttonRefs[0]:', buttonRefs[0])
-// console.log('setup buttonRefs[0].value:', buttonRefs[0].value)
-console.log('setup buttonRefs[0].value.id:', buttonRefs[0].value.id)
 
 const focusNextSection: () => void = () => {
     if (!activeSection?.value) {
@@ -78,7 +70,7 @@ const focusNextSection: () => void = () => {
 
 const focusFirstSection: () => void = () => {
     const firstSection = firstItem(buttonRefs);
-    activeSection.value = firstSection?.value ?? null;
+    activeSection = firstSection ?? ref(null);
 
     if (firstSection?.value?.id) {
         document.getElementById(firstSection?.value?.id)?.focus();
@@ -107,8 +99,6 @@ const focusLastSection: () => void = () => {
 }
 
 const handleButtonFocus: (buttonId: string) => void = (buttonId: string) => {
-    console.log('handleButtonFocus buttonId', buttonId)
-    console.log('handleButtonFocus buttonRefs[0].value.id', buttonRefs[0].value.id)
     const itemToBeFocussed = buttonRefs.find(buttonRef => buttonRef?.value?.id === buttonId);
     activeSection.value = itemToBeFocussed?.value ?? null;
     document.getElementById(buttonId)?.focus();
@@ -123,13 +113,14 @@ const handleButtonBlur: (activeSection: Ref<HTMLDivElement | null>) => void = (a
 
 const handleActivate: (sectionId: string) => void = (sectionId: string) => {
     const activatedIndex = sectionsRefs.findIndex((sectionRef => sectionRef?.value?.id === sectionId));
-    sectionsRefs.map((section: Ref<AccordionSectionProps|null>, index: number) => {
+    sectionsRefs.map((section: Ref<AccordionSectionProps>, index: number) => {
         if (activatedIndex > -1 && index === activatedIndex && section?.value) {
             section.value = {
                 ...section?.value,
-                expanded: !section?.value?.expanded
+                expanded: section?.value?.expanded !== undefined ? !section?.value?.expanded : undefined
             };
         }
+
         return section;
     })
 }
@@ -185,7 +176,7 @@ export default {
             :on-activate="handleActivate"
             :on-button-focus="handleButtonFocus"
             :on-button-blur="handleButtonBlur"
-            ref="accordionSectionRef"
+            :ref="el => { buttonRefs[index] = el }"
           >
               {{ section?.value?.body }}
           </UtrechtAccordionSection>

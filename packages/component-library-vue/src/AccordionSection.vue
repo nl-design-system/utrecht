@@ -75,9 +75,9 @@ const {
 const idPrefix = 'utrecht-accordion';
 const idSuffix = uuidv4();
 const id = `${idPrefix}-${idSuffix}`;
-const buttonId = props.buttonRef?.value?.id;
 const panelId = `${id}-panel`;
 const sectionId = props.sectionId;
+const buttonId = props.buttonRef?.value?.id;
 </script>
 
 <script lang="ts">
@@ -92,7 +92,7 @@ const sectionId = props.sectionId;
     <UtrechtHeading :level="headingLevel ?? 1" class="utrecht-accordion__header">
       <UtrechtButton
         :id="buttonId"
-        ref="buttonRef"
+        :ref="buttonRef"
         class="utrecht-accordion__button"
         :appearance="'subtle-button'"
         :aria-expanded="expanded === true"
