@@ -35,7 +35,7 @@
   const sectionsRefs: Ref<AccordionSectionProps>[] = reactive([]);
   const buttonRefs: Ref<ButtonElement>[] = reactive([]);
 
-  props.sections?.forEach((section) => {
+  props.sections.forEach((section) => {
     const sectionId = uuidv4();
 
     sectionsRefs.push(

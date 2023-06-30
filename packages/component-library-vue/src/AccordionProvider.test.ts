@@ -48,9 +48,13 @@ describe('AccordionProvider', () => {
   it('should set the sections expanded property to true if it was false initially', async () => {
     const wrapper = mount(AccordionProvider, {
       props: {
-        sections: {
-          ...providerOptions.props.sections,
-        },
+        sections: [
+          {
+            label: 'section label',
+            body: 'section body',
+            expanded: false,
+          },
+        ],
       },
     } as any);
     const wrapperInstance = wrapper.vm as any;
