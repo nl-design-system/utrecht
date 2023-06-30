@@ -88,7 +88,11 @@ const meta = {
       {
         id: '62824075-bcc1-4563-a97b-78d1eae3544f',
         value: '3',
-        label: 'Option 3',
+        label: `
+          Ullam perferendis amet nostrum expedita architecto. Nesciunt voluptas labore
+          ipsam voluptate. Reprehenderit odio quia impedit rerum est commodi autem ut.
+          Exercitationem et nihil et aut. Qui ipsum quia doloribus sed qui aut quaerat.
+        `,
       },
     ],
   },
@@ -117,15 +121,15 @@ const meta = {
           const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : undefined;
           return (
             <FormField type="radio" key={id}>
+              <RadioButton
+                className="utrecht-form-field__input"
+                id={id}
+                value={value}
+                name={name}
+                aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || undefined}
+              />
               <Paragraph className="utrecht-form-field__label utrecht-form-field__label--radio">
                 <FormLabel type="radio" htmlFor={id}>
-                  <RadioButton
-                    className="utrecht-form-field__input"
-                    id={id}
-                    value={value}
-                    name={name}
-                    aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || undefined}
-                  />
                   {label}
                 </FormLabel>
               </Paragraph>
