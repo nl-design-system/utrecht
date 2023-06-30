@@ -1,12 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import {
-  Accordion,
-  AccordionProvider,
-  AccordionSection,
-} from '@utrecht/component-library-vue';
+import { Accordion, AccordionProvider, AccordionSection } from '@utrecht/component-library-vue';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import tokens from '@utrecht/components/accordion/tokens.json';
-import {Ref} from "vue";
+import { Ref } from 'vue';
 import { createStory } from './util';
 
 export interface AccordionSectionProps extends HTMLDivElement {
@@ -32,8 +28,8 @@ const accordionSections: AccordionSectionProps[] = [
       pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
       laborum.`,
     section: true,
-    expanded: false
-  }
+    expanded: false,
+  },
 ] as AccordionSectionProps[];
 
 const meta: Meta<typeof AccordionProvider> = {
@@ -43,17 +39,17 @@ const meta: Meta<typeof AccordionProvider> = {
   component: AccordionProvider,
   argTypes: {},
   args: {
-    sections: accordionSections
+    sections: accordionSections,
   },
   render: () => ({
     components: {
       AccordionProvider,
       Accordion,
-      AccordionSection
+      AccordionSection,
     },
     setup(args: any) {
       return {
-        args
+        args,
       };
     },
     template: `<AccordionProvider :sections="args.sections" />`,
@@ -78,7 +74,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = createStory(meta, {
   args: {
-    sections: accordionSections
+    sections: accordionSections,
   },
 });
 
@@ -86,15 +82,14 @@ const rtlSections: AccordionSectionProps[] = [
   {
     label: 'ما هو "لوريم إيبسوم" ؟',
     body: ' المحتوى) ويُستخدم في صناعات المطابع ودور النشر. كان لوريم إيبسوم ولايزال المعيار للنص الشكلي منذ القرن الخامس عشر عندما قامت مطبعة مجهولة برص مجموعة من الأحرف بشكل عشوائي أخذتها من نص، لتكوّن كتيّب بمثابة دليل أو مرجع شكلي لهذه الأحرف. خمسة قرون من الزمن لم تقضي على هذا النص، بل انه حتى صار مستخدماً وبشكله الأصلي في الطباعة والتنضيد الإلكتروني. انتشر بشكل كبير في ستينيّات هذا القرن مع إصدار رقائق "ليتراسيت" (Letraset) البلاستيكية تحوي مقاطع من هذا النص، وعاد لينتشر مرة أخرى مؤخراَ مع ظهور برامج النشر الإلكتروني مثل "ألدوس بايج مايكر" (Aldus PageMaker) والتي حوت أيضاً على نسخ من نص لوريم إيبسوم.',
-    expanded: false
-  }
+    expanded: false,
+  },
 ] as AccordionSectionProps[];
 
 export const RTL: Story = createStory(meta, {
-    args: {
-      sections: rtlSections
-    },
-    decorators: [() => ({ template: '<div lang="ar" dir="rtl"><story/></div>' })],
-    name: 'Right-to-left',
+  args: {
+    sections: rtlSections,
+  },
+  decorators: [() => ({ template: '<div lang="ar" dir="rtl"><story/></div>' })],
+  name: 'Right-to-left',
 });
-

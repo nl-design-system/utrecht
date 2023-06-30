@@ -1,41 +1,38 @@
 import '@testing-library/jest-dom';
 import { render } from '@testing-library/vue';
-import AccordionSection from "./AccordionSection.vue";
-import {mount} from "@vue/test-utils";
-import AccordionProvider from "./AccordionProvider.vue";
+import AccordionSection from './AccordionSection.vue';
 describe('AccordionSection', () => {
-
   const containerOptions = {
     props: {
       label: 'accordion section label',
-      sectionId: 'sectionId'
+      sectionId: 'sectionId',
     },
     slots: {
-      default: 'lorem ipsum body'
-    }
+      default: 'lorem ipsum body',
+    },
   };
 
   it('renders an html div element', () => {
-    const {container} = render(AccordionSection, containerOptions);
+    const { container } = render(AccordionSection, containerOptions);
 
     const accordionSection = container.querySelector('.utrecht-accordion__section');
     expect(accordionSection).toBeInTheDocument();
   });
 
   it('renders a heading element', () => {
-    const {container} = render(AccordionSection, containerOptions);
+    const { container } = render(AccordionSection, containerOptions);
 
     const heading = container.querySelector('.utrecht-accordion__header');
     expect(heading).toBeVisible();
   });
 
   it('render a section element if section is true', () => {
-    const {container} = render(AccordionSection, {
+    const { container } = render(AccordionSection, {
       ...containerOptions,
       props: {
         ...containerOptions.props,
         section: true,
-      }
+      },
     });
 
     const section = container.querySelector('section.utrecht-accordion__panel');
@@ -43,12 +40,12 @@ describe('AccordionSection', () => {
   });
 
   it('render a div element if section is false', () => {
-    const {container} = render(AccordionSection, {
+    const { container } = render(AccordionSection, {
       ...containerOptions,
       props: {
         ...containerOptions.props,
         section: false,
-      }
+      },
     });
 
     const sectionDiv = container.querySelector('div.utrecht-accordion__panel');
@@ -56,13 +53,13 @@ describe('AccordionSection', () => {
   });
 
   it('render a hidden section if expanded is false', () => {
-    const {container} = render(AccordionSection, {
+    const { container } = render(AccordionSection, {
       ...containerOptions,
       props: {
         ...containerOptions.props,
         section: true,
-        expanded: false
-      }
+        expanded: false,
+      },
     });
 
     const sectionDiv = container.querySelector('section.utrecht-accordion__panel');
@@ -71,13 +68,13 @@ describe('AccordionSection', () => {
   });
 
   it('render a hidden section if expanded is true', () => {
-    const {container} = render(AccordionSection, {
+    const { container } = render(AccordionSection, {
       ...containerOptions,
       props: {
         ...containerOptions.props,
         section: true,
-        expanded: true
-      }
+        expanded: true,
+      },
     });
 
     const sectionDiv = container.querySelector('section.utrecht-accordion__panel');
@@ -86,13 +83,13 @@ describe('AccordionSection', () => {
   });
 
   it('render a hidden div if expanded is false', () => {
-    const {container} = render(AccordionSection, {
+    const { container } = render(AccordionSection, {
       ...containerOptions,
       props: {
         ...containerOptions.props,
         section: false,
-        expanded: false
-      }
+        expanded: false,
+      },
     });
 
     const sectionDiv = container.querySelector('div.utrecht-accordion__panel');
@@ -101,13 +98,13 @@ describe('AccordionSection', () => {
   });
 
   it('render a visible div if expanded is true', () => {
-    const {container} = render(AccordionSection, {
+    const { container } = render(AccordionSection, {
       ...containerOptions,
       props: {
         ...containerOptions.props,
         section: false,
-        expanded: true
-      }
+        expanded: true,
+      },
     });
 
     const sectionDiv = container.querySelector('div.utrecht-accordion__panel');
