@@ -1,3 +1,6 @@
+export { default as Accordion } from './Accordion.vue';
+export { default as AccordionProvider } from './AccordionProvider.vue';
+export { default as AccordionSection } from './AccordionSection.vue';
 export { default as AlertDialog } from './AlertDialog.vue';
 export { default as Article } from './Article.vue';
 export { default as BadgeCounter } from './BadgeCounter.vue';
