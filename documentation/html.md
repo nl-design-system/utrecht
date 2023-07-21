@@ -172,4 +172,4 @@ Gebruik `nav` niet voor de _skip link navigation_.
 
 ## `title` attribute
 
-Vermijd het `title` attribuut.
+Vermijd het `title` attribuut, omdat een tooltip met deze tekst andere content kan verbergen. Er zijn goede alternatieven. Uitzondering: `title` voor `<iframe>`. Lees meer: [Use `title` attributes - The A11y project](https://www.a11yproject.com/posts/title-attributes/).
