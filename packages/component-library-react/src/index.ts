@@ -31,6 +31,7 @@ export { FigureCaption } from './FigureCaption';
 export { FormField } from './FormField';
 export { FormFieldDescription } from './FormFieldDescription';
 export { FormLabel } from './FormLabel';
+export { FormToggle } from './FormToggle';
 export { HTMLContent } from './HTMLContent';
 export { Heading } from './Heading';
 export { Heading1 } from './Heading1';

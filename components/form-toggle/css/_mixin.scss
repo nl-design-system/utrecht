@@ -115,6 +115,10 @@
   color: var(--utrecht-form-toggle-disabled-color, black);
 }
 
+@mixin utrecht-form-toggle__track--focus-visible {
+  @include utrecht-focus-ring;
+}
+
 @mixin utrecht-form-toggle__thumb--not-checked {
   margin-inline-end: auto;
 }
