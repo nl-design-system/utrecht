@@ -54,17 +54,16 @@
   @include utrecht-form-toggle__track--disabled;
 }
 
+.utrecht-form-toggle__track--focus-visible {
+  @include utrecht-form-toggle__track--focus-visible;
+}
+
 .utrecht-form-toggle--html-checkbox {
   .utrecht-form-toggle__checkbox {
     @include invisible-but-focusable;
 
-    &:focus ~ .utrecht-form-toggle__track {
-      // outline-color: var(
-      //   --utrecht-form-toggle-focus-border-color,
-      //   var(--utrecht-form-toggle-border-color, currentColor)
-      // );
-      // outline-style: var(--utrecht-form-toggle-focus-border-style, var(--utrecht-form-toggle-border-style, solid));
-      // outline-width: var(--utrecht-form-toggle-focus-border-width, var(--utrecht-form-toggle-border-width, 1px));
+    &:focus-visible ~ .utrecht-form-toggle__track {
+      @include utrecht-form-toggle__track--focus-visible;
     }
 
     &:checked ~ .utrecht-form-toggle__track {
