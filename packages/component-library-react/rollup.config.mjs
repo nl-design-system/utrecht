@@ -1,5 +1,6 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
+import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 // import del from 'rollup-plugin-delete';
 import { readFileSync } from 'fs';
@@ -52,6 +53,7 @@ export default [
       nodePolyfills(),
       // del({ targets: ['dist/*', 'pages/*'] }),
       typescript({ includeDependencies: false }),
+      json(),
       babel({
         presets: ['@babel/preset-react'],
         babelHelpers: 'runtime',
@@ -94,6 +96,7 @@ export default [
         minimize: true,
       }),
       typescript({ includeDependencies: false }),
+      json(),
       babel({
         presets: ['@babel/preset-react'],
         babelHelpers: 'runtime',
