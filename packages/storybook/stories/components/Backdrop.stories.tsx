@@ -1,14 +1,12 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import {
-  Backdrop,
-} from '@utrecht/component-library-react/dist/css-module';
+import { Backdrop } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/backdrop/README.md?raw';
 import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './util';
-import clsx from "clsx";
 
 const checkerboard = (story: any) => (
   <div
@@ -40,7 +38,7 @@ const meta = {
   args: {
     reducedMotion: false,
     reducedTransparency: false,
-    viewport: false
+    viewport: false,
   },
   argTypes: {
     reducedMotion: {
@@ -75,11 +73,15 @@ const meta = {
 
 export default meta;
 
-const render = (args: any) => (<Backdrop className={clsx('utrecht-backdrop', {
-  'utrecht-backdrop--reduced-motion': args.reducedMotion,
-  'utrecht-backdrop--reduced-transparency': args.reducedTransparency,
-  'utrecht-backdrop--viewport': args.viewport
-})} />);
+const render = (args: any) => (
+  <Backdrop
+    className={clsx('utrecht-backdrop', {
+      'utrecht-backdrop--reduced-motion': args.reducedMotion,
+      'utrecht-backdrop--reduced-transparency': args.reducedTransparency,
+      'utrecht-backdrop--viewport': args.viewport,
+    })}
+  />
+);
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {

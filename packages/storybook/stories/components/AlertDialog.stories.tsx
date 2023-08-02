@@ -92,12 +92,12 @@ interface ShowModalProps extends AlertDialogProps {
 
 export const ShowModal = {
   render: ({
-             buttonLabel,
-             buttonAppearance,
-             buttonHint,
-             children,
-             ...restProps
-           }: PropsWithChildren<ShowModalProps>) => {
+    buttonLabel,
+    buttonAppearance,
+    buttonHint,
+    children,
+    ...restProps
+  }: PropsWithChildren<ShowModalProps>) => {
     const alertDialog = createRef<HTMLDialogElement>();
     const [open, setOpen] = useState(false);
     const showModal = () => {
