@@ -4,8 +4,8 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { ButtonGroup } from '@utrecht/component-library-react';
 import React from 'react';
+import { ButtonGroup } from '../../button/css/story-template';
 import { Link } from '../../link/css/story-template';
 import { LinkButton } from '../../link-button/css/story-template';
 import './index.scss';
