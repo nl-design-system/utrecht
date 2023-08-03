@@ -1,8 +1,8 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { BadgeCounter, Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/button-group/README.md?raw';
-import tokensDefinition from '@utrecht/components/button-group/tokens.json';
+import readme from '@utrecht/components/badge-counter/README.md?raw';
+import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
@@ -15,7 +15,7 @@ const meta = {
     children: '4',
   },
   argTypes: {
-    value: {
+    children: {
       name: 'value',
       type: { name: 'string', required: false },
       table: { defaultValue: { summary: '' } },
@@ -55,7 +55,6 @@ export const TripleDigits: Story = {
   args: {
     ...Default.args,
     children: '316',
-    value: '316',
   },
 };
 
@@ -63,7 +62,6 @@ export const QuadrupleDigits: Story = {
   args: {
     ...Default.args,
     children: '2148',
-    value: '2148',
   },
 };
 
@@ -71,7 +69,6 @@ export const Empty: Story = {
   args: {
     ...Default.args,
     children: '',
-    value: '',
   },
 };
 

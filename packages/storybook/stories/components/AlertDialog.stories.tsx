@@ -63,13 +63,6 @@ export const Info: Story = {
   },
 };
 
-export const OK: Story = {
-  args: {
-    open: true,
-    type: 'ok',
-  },
-};
-
 export const Warning: Story = {
   args: {
     open: true,

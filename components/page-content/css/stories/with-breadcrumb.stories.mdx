@@ -2,8 +2,7 @@
 
 import { Canvas, Meta, Story } from "@storybook/blocks";
 import * as ReactDOMServer from "react-dom/server";
-import { BreadcrumbNav } from "../../../../packages/component-library-react/src";
-import { exampleArgs, PageContent } from "../story-template";
+import { Breadcrumb, breadcrumbArgs, exampleArgs, PageContent } from "../story-template";
 
 import "../index.scss";
 
@@ -23,9 +22,7 @@ import "../index.scss";
     name="With Breadcrumb"
     args={{
       ...exampleArgs,
-      navHTML: ReactDOMServer.renderToStaticMarkup(
-        BreadcrumbNav({ label: "", items: [], microdata: false, variant: "" })
-      ),
+      navHTML: ReactDOMServer.renderToStaticMarkup(Breadcrumb({ ...breadcrumbArgs })),
     }}
   >
     {PageContent.bind({})}
