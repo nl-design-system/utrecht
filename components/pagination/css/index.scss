@@ -14,6 +14,10 @@
   @include utrecht-pagination--distanced;
 }
 
+.utrecht-pagination__heading {
+  @include utrecht-pagination__heading;
+}
+
 .utrecht-pagination__relative-link {
   @include utrecht-pagination__relative-link;
 }

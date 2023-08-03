@@ -14,6 +14,13 @@
   --utrecht-space-around: 1;
 }
 
+@mixin utrecht-pagination__heading {
+  /* Heading can be hidden.
+   * It will be accessible when referenced with `aria-describedby`.
+   */
+  display: none;
+}
+
 @mixin utrecht-pagination__relative-link {
   background-color: var(--utrecht-pagination-relative-link-background-color);
   border-color: var(--utrecht-pagination-relative-link-border-color);
