@@ -6,7 +6,7 @@
 
 import clsx from 'clsx';
 import React from 'react';
-import { Checkbox } from '../../checkbox/css/story-template';
+import { Checkbox } from '../../checkbox/html/story-template';
 import { FormFieldDescription } from '../../form-field-description/css/story-template';
 import { FormFieldset, FormFieldsetLegend } from '../../form-fieldset/css/story-template';
 import { FormLabel } from '../../form-label/css/story-template';
