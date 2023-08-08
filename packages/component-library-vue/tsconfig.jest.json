@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,
+    "rootDir": "./src/",
     "paths": {
       "@/*": ["./src/*"]
     }
