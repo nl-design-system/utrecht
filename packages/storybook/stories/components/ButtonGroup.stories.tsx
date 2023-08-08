@@ -25,6 +25,9 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-button-group',
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
     tokens,
     tokensDefinition,
     docs: {

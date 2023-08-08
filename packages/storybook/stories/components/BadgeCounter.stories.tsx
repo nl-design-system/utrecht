@@ -23,6 +23,9 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-badge-counter',
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
     tokens,
     tokensDefinition,
     docs: {

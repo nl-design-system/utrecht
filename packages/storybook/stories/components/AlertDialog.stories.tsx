@@ -36,6 +36,9 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-alert-dialog',
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
     tokens,
     tokensDefinition,
     docs: {

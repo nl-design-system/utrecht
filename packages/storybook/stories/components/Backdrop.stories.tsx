@@ -56,6 +56,10 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-backdrop',
+    layout: 'fullscreen',
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
     tokens,
     tokensDefinition,
     docs: {

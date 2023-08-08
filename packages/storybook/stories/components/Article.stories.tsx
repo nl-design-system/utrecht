@@ -25,6 +25,9 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-article',
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
     tokens,
     tokensDefinition,
     docs: {
