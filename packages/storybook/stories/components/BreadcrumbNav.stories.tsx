@@ -74,6 +74,13 @@ export const Rel: Story = {
 };
 
 export const RTL: Story = {
+  decorators: [
+    (Story) => (
+      <div lang="ar" dir="rtl">
+        {Story()}
+      </div>
+    ),
+  ],
   args: {
     ...Default.args,
     children: [
