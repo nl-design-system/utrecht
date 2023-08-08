@@ -22,9 +22,10 @@ const meta = {
           { a: 'I', b: 52 },
         ],
       },
+      title: 'Example bar chart',
       mark: 'bar',
       encoding: {
-        x: { field: 'a', type: 'nominal', axis: { labelAngle: 0 } },
+        x: { field: 'a', type: 'nominal', axis: { labelAngle: 0 }, title: 'x-Axis' },
         y: { field: 'b', type: 'quantitative' },
       },
     },
