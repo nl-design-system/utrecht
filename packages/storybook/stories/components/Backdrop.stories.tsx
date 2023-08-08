@@ -11,7 +11,6 @@ import { designTokenStory } from './util';
 const checkerboard = (story: any) => (
   <div
     style={{
-      // @ts-ignore
       '--checkerboard-color-1': '#000000',
       '--checkerboard-color-2': '#ffffff',
       '--checkerboard-size': '16px',

@@ -16,7 +16,7 @@ const meta = {
   },
   argTypes: {
     children: {
-      name: 'value',
+      name: 'Text content',
       type: { name: 'string', required: false },
       table: { defaultValue: { summary: '' } },
     },
@@ -51,6 +51,7 @@ export const Value: Story = {
   args: {
     ...Default.args,
     children: '4',
+    value: '4',
   },
 };
 
