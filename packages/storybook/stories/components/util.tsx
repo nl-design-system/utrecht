@@ -43,6 +43,7 @@ export const designTokenStory = (meta: any): any => {
       },
       status: null,
     },
+    decorators: [],
     // TODO: Investigate how to avoid `as any`
     render: (({ tokens, definition, component }: Props) => (
       <ComponentTokensSection tokens={tokens} definition={definition} component={component} />

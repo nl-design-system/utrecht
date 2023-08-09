@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { BadgeCounter, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { BadgeCounter } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/badge-counter/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -39,7 +39,7 @@ const meta = {
       ),
     },
   },
-  decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
+  decorators: [(Story) => <div>{Story()}</div>],
 } satisfies Meta<typeof BadgeCounter>;
 
 export default meta;
