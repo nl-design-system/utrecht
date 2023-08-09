@@ -62,6 +62,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
+      description: {
+        story: `Styling via the \`.utrecht-backdrop\` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.`,
+      },
       page: () => (
         <>
           <Description>{readme}</Description>
@@ -105,6 +108,15 @@ export const ReducedTransparency: Story = {
   args: {
     ...Default.args,
     reducedTransparency: true,
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      ...Default.parameters?.['docs'],
+      description: {
+        story: `Styling via the \`.utrecht-backdrop--reduced-transparency\` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.`,
+      },
+    },
   },
   render,
 };

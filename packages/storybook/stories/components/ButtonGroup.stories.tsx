@@ -31,6 +31,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
+      description: {
+        story: `Styling via the \`.utrecht-button-group\` class name.`,
+      },
       page: () => (
         <>
           <Description>{readme}</Description>
@@ -86,6 +89,16 @@ export const DirectionHorizontal: Story = {
     innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
     direction: 'horizontal',
   },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      ...Default.parameters?.['docs'],
+      description: {
+        story: `Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--horizontal\` modifier class names.
+        Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
+      },
+    },
+  },
   render: (args) => {
     const { children, direction, innerHTML } = args;
     return (
@@ -102,6 +115,16 @@ export const DirectionVertical: Story = {
     children: '',
     innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
     direction: 'vertical',
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      ...Default.parameters?.['docs'],
+      description: {
+        story: `Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--vertical\` modifier class names.
+        Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
+      },
+    },
   },
   render: (args) => {
     const { children, direction, innerHTML } = args;

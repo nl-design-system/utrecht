@@ -29,6 +29,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
+      description: {
+        story: `Styling via the \`.utrecht-badge-counter\` class name.`,
+      },
       page: () => (
         <>
           <Description>{readme}</Description>
@@ -73,6 +76,15 @@ export const Empty: Story = {
   args: {
     ...Default.args,
     children: '',
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      ...Default.parameters?.['docs'],
+      description: {
+        story: `Wanneer de counter badge leeg is, zoals in een UI designer interface, dan moet de component wel zichtbaar zijn. De gebruiker moet er een getal in kunnen typen.`,
+      },
+    },
   },
 };
 
