@@ -1,8 +1,8 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/badge-counter/README.md?raw';
-import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
+import readme from '@utrecht/components/button-group/README.md?raw';
+import tokensDefinition from '@utrecht/components/button-group/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import parse from 'html-react-parser';
@@ -14,7 +14,7 @@ const meta = {
   id: 'css-button-group',
   component: ButtonGroup,
   args: {
-    innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
+    innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
   },
   argTypes: {
     innerHTML: {
@@ -83,7 +83,7 @@ export const DirectionHorizontal: Story = {
   args: {
     ...Default.args,
     children: '',
-    innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
+    innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
     direction: 'horizontal',
   },
   render: (args) => {
@@ -100,7 +100,7 @@ export const DirectionVertical: Story = {
   args: {
     ...Default.args,
     children: '',
-    innerHTML: `<button class='utrecht-button utrecht-button--primary-action'>Save and continue</button><button class='utrecht-button utrecht-button--secondary-action'>Back</button>`,
+    innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
     direction: 'vertical',
   },
   render: (args) => {
