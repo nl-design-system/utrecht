@@ -24,7 +24,7 @@ const defaultConfig = {
     labelAngle: 0,
     ticks: false,
     labelPadding: 12,
-    domainColor: 'black',
+    domainColor: "var(--utrecht-vega-visualization-axis-domain-color, 'black')",
   },
   axisY: {
     titleAngle: 0,
