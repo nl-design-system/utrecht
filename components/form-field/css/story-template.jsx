@@ -6,7 +6,6 @@
 
 import clsx from 'clsx';
 import React from 'react';
-import { Checkbox } from '../../checkbox/html/story-template';
 import { FormFieldDescription } from '../../form-field-description/css/story-template';
 import { FormFieldset, FormFieldsetLegend } from '../../form-fieldset/css/story-template';
 import { FormLabel } from '../../form-label/css/story-template';
@@ -46,12 +45,54 @@ export const defaultArgs = {
   label: '',
   headingLevel: '',
   type: '',
+  checked: false,
+  disabled: false,
+  id: '',
+  indeterminate: false,
+  name: '',
+  required: false,
+  value: '',
 };
 
 export const exampleArgs = {
   name: 'subject',
   label: 'Onderwerp',
 };
+
+export const Checkbox = ({
+  checked = defaultArgs.checked,
+  className,
+  custom = false,
+  disabled = defaultArgs.disabled,
+  id = defaultArgs.id,
+  indeterminate = defaultArgs.indeterminate,
+  invalid = defaultArgs.invalid,
+  name = defaultArgs.name,
+  required = defaultArgs.required,
+  value = defaultArgs.value,
+  ...restProps
+}) => (
+  <input
+    aria-invalid={invalid || undefined}
+    className={clsx(
+      'utrecht-checkbox',
+      'utrecht-checkbox--html-input',
+      custom && 'utrecht-checkbox--custom',
+      checked && 'utrecht-checkbox--checked',
+      disabled && 'utrecht-checkbox--disabled',
+      className,
+    )}
+    defaultChecked={checked}
+    disabled={disabled}
+    id={id || undefined}
+    indeterminate={!!indeterminate}
+    name={name || undefined}
+    required={!!required}
+    type="checkbox"
+    value={value || undefined}
+    {...restProps}
+  />
+);
 
 export const Heading = ({ children, level }) => {
   const HeadingComponent =
