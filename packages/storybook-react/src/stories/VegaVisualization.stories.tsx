@@ -1,17 +1,31 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { VegaVisualization } from '@utrecht/component-library-react/dist/css-module/index';
+import tokensDefinition from '@utrecht/components/vega-visualization/tokens.json';
+import tokens from '@utrecht/design-tokens/dist/index.json';
+import { designTokenStory } from './util';
 
 const meta = {
   title: 'React Component/Vega Visualization',
   id: 'react-vega-visualization',
   component: VegaVisualization,
   argTypes: {
+    'aria-label': {
+      description: 'Accessible label to describe the visualization on screen readers.',
+      control: {
+        type: 'string',
+      },
+    },
     spec: {
       description: 'The specification of the visualization according to the Vega or Vega-Lite schema.',
       control: {
         type: 'object',
       },
     },
+  },
+  parameters: {
+    tokensPrefix: 'utrecht-vega-visualization',
+    tokens,
+    tokensDefinition,
   },
 } satisfies Meta<typeof VegaVisualization>;
 
@@ -21,6 +35,7 @@ type Story = StoryObj<typeof meta>;
 
 export const BarChart: Story = {
   args: {
+    'aria-label': 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       description: 'A simple bar chart with embedded data.',
@@ -37,7 +52,7 @@ export const BarChart: Story = {
           { a: 'I', b: 52 },
         ],
       },
-      title: 'Example bar chart',
+      title: 'Staafgrafiek',
       mark: 'bar',
       encoding: {
         x: { field: 'a', type: 'nominal', axis: { labelAngle: 0 }, title: 'x-Axis' },
@@ -49,9 +64,10 @@ export const BarChart: Story = {
 
 export const LineChart: Story = {
   args: {
+    'aria-label': 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
-      description: 'A simple bar chart with embedded data.',
+      description: 'A simple line chart with embedded data.',
       data: {
         values: [
           { a: 'A', b: 28 },
@@ -65,7 +81,7 @@ export const LineChart: Story = {
           { a: 'I', b: 52 },
         ],
       },
-      title: 'Example bar chart',
+      title: 'Lijngrafiek',
       mark: {
         type: 'line',
         point: true,
@@ -80,6 +96,7 @@ export const LineChart: Story = {
 
 export const PieChart: Story = {
   args: {
+    'aria-label': 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       description: 'A simple pie chart with embedded data.',
@@ -101,3 +118,5 @@ export const PieChart: Story = {
     },
   },
 };
+
+export const DesignTokens = designTokenStory(meta);

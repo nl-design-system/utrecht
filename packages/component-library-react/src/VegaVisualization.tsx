@@ -9,7 +9,7 @@ export interface VegaVisualisationProps extends Omit<VegaProps, 'renderer'> {
 }
 
 const defaultConfig = {
-  font: 'var(--utrecht-vega-visualisation-font-family)',
+  font: 'var(--utrecht-vega-visualization-font-family)',
   title: {
     fontSize: 20,
     anchor: 'start',
