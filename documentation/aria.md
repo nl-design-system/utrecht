@@ -151,3 +151,16 @@
 ## `role="table"`
 
 - _Table_ component
+
+## `aria-description`
+
+`aria-description` wordt overgeslagen door veel hulpmiddelen om automatisch vertalingen van webpagina's te maken.
+
+Gebruik liever `aria-describedby`.
+
+## `aria-label`
+
+`aria-label` wordt overgeslagen door veel hulpmiddelen om automatisch vertalingen van webpagina's te maken. Google Translate vertaalt `aria-label` vaak wel, maar veel andere software niet. Dit is in 2023 nog getest door Adrian Roselli: [aria-label Does Not Translate
+](https://adrianroselli.com/2019/11/aria-label-does-not-translate.html).
+
+Gebruik liever `aria-labelledby`.
