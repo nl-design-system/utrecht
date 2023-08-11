@@ -12,13 +12,26 @@ import clsx from 'clsx';
   shadow: true,
 })
 export class Pagination {
+  /**
+   * Use `group` to use the `group` role instead of the `navigation` landmark role.
+   *
+   * Pagination usually is an ARIA landmark, so by default this component renders a `<nav>` element.
+   * Sometimes pagination should not be a landmark, so there must be a way to opt out of this behavior.
+   *
+   * `<utrecht-pagination role="group">` would incorrectly apply the group role on the custom element too.
+   *
+   * Convention for boolean attributes is to be true by default, so `<utrecht-pagination nav="false">` would be unexpected.
+   *
+   * That's why we now use `<utrecht-pagination group>` to opt out of the navigation landmark.
+   */
+  @Prop() group: boolean;
   @Prop() links: string;
   @Prop() next: string;
   @Prop() prev: string;
   @Prop({ attribute: 'current-index' }) currentIndex: number;
 
   render() {
-    const { currentIndex } = this;
+    const { currentIndex, group } = this;
     const links = typeof this.links === 'string' ? JSON.parse(this.links) : null;
     const next = typeof this.next === 'string' ? JSON.parse(this.next) : null;
     const prev = typeof this.prev === 'string' ? JSON.parse(this.next) : null;
@@ -34,6 +47,8 @@ export class Pagination {
           )}
           aria-label={title || null}
         >
+          {rel === 'next' && <slot name="next" />}
+          {rel === 'prev' && <slot name="prev" />}
           {textContent}
         </span>
       ) : (
@@ -64,7 +79,10 @@ export class Pagination {
     );
 
     return (
-      <nav class="utrecht-pagination">
+      <nav class="utrecht-pagination" role={group ? undefined : 'group'} aria-labelledby="heading">
+        <div id="heading" class="utrecht-pagination__heading">
+          <slot name="heading" />
+        </div>
         <span class="utrecht-pagination__before">
           {prev ? RelativeLink({ ...prev, rel: 'prev', textContent: 'Vorige' }) : ''}
         </span>
