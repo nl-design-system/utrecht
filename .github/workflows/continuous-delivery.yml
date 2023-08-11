@@ -122,6 +122,7 @@ jobs:
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
+          NODE_OPTIONS: "--max-old-space-size=6114"
         run: |
           pnpm run --if-present build
 
@@ -301,6 +302,8 @@ jobs:
           pnpm ls --recursive
 
       - name: "Continuous Deployment: build"
+        env:
+          NODE_OPTIONS: "--max-old-space-size=6114"
         run: |
           pnpm run --if-present build
 
