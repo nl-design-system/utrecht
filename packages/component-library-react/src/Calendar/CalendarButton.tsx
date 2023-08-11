@@ -1,11 +1,15 @@
 import { clsx } from 'clsx';
-import React from 'react';
+import { ForwardedRef, forwardRef } from 'react';
 import { Button, ButtonProps } from '../Button';
 
 export interface CalendarButtonProps extends ButtonProps {}
 
-export const CalendarButton: React.FC<CalendarButtonProps> = ({ children, className, ...props }) => (
-  <Button appearance="subtle-button" {...props} className={clsx('utrecht-calendar__button', className)}>
-    {children}
-  </Button>
+export const CalendarButton = forwardRef(
+  ({ children, className, ...props }: CalendarButtonProps, ref: ForwardedRef<HTMLButtonElement>) => (
+    <Button appearance="subtle-button" {...props} ref={ref} className={clsx('utrecht-calendar__button', className)}>
+      {children}
+    </Button>
+  ),
 );
+
+CalendarButton.displayName = 'CalendarButton';

@@ -5,6 +5,7 @@
  */
 
 @import "./mixin";
+@import "../../common/focus/mixin";
 
 .utrecht-calendar {
   @include utrecht-calendar;
@@ -12,6 +13,10 @@
 
 .utrecht-calendar__table {
   @include utrecht-calendar__table;
+}
+
+.utrecht-calendar__table:focus-visible {
+  @include utrecht-focus-ring;
 }
 
 .utrecht-calendar__table-weeks-item {

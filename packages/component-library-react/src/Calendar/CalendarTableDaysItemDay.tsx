@@ -1,25 +1,29 @@
 import clsx from 'clsx';
-import React from 'react';
+import { Ref } from 'react';
 import { CalendarButton, CalendarButtonProps } from './CalendarButton';
 export interface CalendarTableDaysItemDayProps extends CalendarButtonProps {
   day: string;
+  date: string;
   dayOutOfTheMonth?: boolean;
   isToday: boolean;
   emphasis?: boolean;
   selected?: boolean;
   disabled?: boolean;
+  buttonRef: Ref<HTMLButtonElement>;
 }
 
-export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> = ({
+export const CalendarTableDaysItemDay = ({
   day,
   dayOutOfTheMonth,
+  date,
   isToday,
   emphasis,
   selected,
   disabled,
+  buttonRef,
   ...props
-}) => (
-  <td>
+}: CalendarTableDaysItemDayProps) => (
+  <td role="gridcell" aria-current={isToday ? 'date' : undefined} aria-selected={selected}>
     <CalendarButton
       className={clsx(
         'utrecht-calendar__table-days-item-day',
@@ -29,9 +33,11 @@ export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> =
         { 'utrecht-calendar__table-days-item-day--selected': selected },
       )}
       disabled={disabled}
+      value={date}
+      ref={buttonRef}
       {...props}
     >
-      {day}
+      <time dateTime={date}>{day}</time>
     </CalendarButton>
   </td>
 );
