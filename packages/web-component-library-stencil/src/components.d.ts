@@ -21,6 +21,8 @@ export namespace Components {
     }
     interface UtrechtBadgeData {
     }
+    interface UtrechtBadgeList {
+    }
     interface UtrechtBadgeStatus {
         "status": string;
     }
@@ -664,6 +666,12 @@ declare global {
     var HTMLUtrechtBadgeDataElement: {
         prototype: HTMLUtrechtBadgeDataElement;
         new (): HTMLUtrechtBadgeDataElement;
+    };
+    interface HTMLUtrechtBadgeListElement extends Components.UtrechtBadgeList, HTMLStencilElement {
+    }
+    var HTMLUtrechtBadgeListElement: {
+        prototype: HTMLUtrechtBadgeListElement;
+        new (): HTMLUtrechtBadgeListElement;
     };
     interface HTMLUtrechtBadgeStatusElement extends Components.UtrechtBadgeStatus, HTMLStencilElement {
     }
@@ -2151,6 +2159,7 @@ declare global {
         "utrecht-backdrop": HTMLUtrechtBackdropElement;
         "utrecht-badge-counter": HTMLUtrechtBadgeCounterElement;
         "utrecht-badge-data": HTMLUtrechtBadgeDataElement;
+        "utrecht-badge-list": HTMLUtrechtBadgeListElement;
         "utrecht-badge-status": HTMLUtrechtBadgeStatusElement;
         "utrecht-breadcrumb": HTMLUtrechtBreadcrumbElement;
         "utrecht-button": HTMLUtrechtButtonElement;
@@ -2412,6 +2421,8 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface UtrechtBadgeData {
+    }
+    interface UtrechtBadgeList {
     }
     interface UtrechtBadgeStatus {
         "status"?: string;
@@ -3029,6 +3040,7 @@ declare namespace LocalJSX {
         "utrecht-backdrop": UtrechtBackdrop;
         "utrecht-badge-counter": UtrechtBadgeCounter;
         "utrecht-badge-data": UtrechtBadgeData;
+        "utrecht-badge-list": UtrechtBadgeList;
         "utrecht-badge-status": UtrechtBadgeStatus;
         "utrecht-breadcrumb": UtrechtBreadcrumb;
         "utrecht-button": UtrechtButton;
@@ -3284,6 +3296,7 @@ declare module "@stencil/core" {
             "utrecht-backdrop": LocalJSX.UtrechtBackdrop & JSXBase.HTMLAttributes<HTMLUtrechtBackdropElement>;
             "utrecht-badge-counter": LocalJSX.UtrechtBadgeCounter & JSXBase.HTMLAttributes<HTMLUtrechtBadgeCounterElement>;
             "utrecht-badge-data": LocalJSX.UtrechtBadgeData & JSXBase.HTMLAttributes<HTMLUtrechtBadgeDataElement>;
+            "utrecht-badge-list": LocalJSX.UtrechtBadgeList & JSXBase.HTMLAttributes<HTMLUtrechtBadgeListElement>;
             "utrecht-badge-status": LocalJSX.UtrechtBadgeStatus & JSXBase.HTMLAttributes<HTMLUtrechtBadgeStatusElement>;
             "utrecht-breadcrumb": LocalJSX.UtrechtBreadcrumb & JSXBase.HTMLAttributes<HTMLUtrechtBreadcrumbElement>;
             "utrecht-button": LocalJSX.UtrechtButton & JSXBase.HTMLAttributes<HTMLUtrechtButtonElement>;
