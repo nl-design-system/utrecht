@@ -136,6 +136,9 @@ export namespace Components {
     }
     interface UtrechtHtmlContent {
     }
+    interface UtrechtIbanData {
+        "value": string;
+    }
     interface UtrechtIcon {
     }
     interface UtrechtIconAfspraakMaken {
@@ -860,6 +863,12 @@ declare global {
     var HTMLUtrechtHtmlContentElement: {
         prototype: HTMLUtrechtHtmlContentElement;
         new (): HTMLUtrechtHtmlContentElement;
+    };
+    interface HTMLUtrechtIbanDataElement extends Components.UtrechtIbanData, HTMLStencilElement {
+    }
+    var HTMLUtrechtIbanDataElement: {
+        prototype: HTMLUtrechtIbanDataElement;
+        new (): HTMLUtrechtIbanDataElement;
     };
     interface HTMLUtrechtIconElement extends Components.UtrechtIcon, HTMLStencilElement {
     }
@@ -2193,6 +2202,7 @@ declare global {
         "utrecht-heading-6": HTMLUtrechtHeading6Element;
         "utrecht-heading-group": HTMLUtrechtHeadingGroupElement;
         "utrecht-html-content": HTMLUtrechtHtmlContentElement;
+        "utrecht-iban-data": HTMLUtrechtIbanDataElement;
         "utrecht-icon": HTMLUtrechtIconElement;
         "utrecht-icon-afspraak-maken": HTMLUtrechtIconAfspraakMakenElement;
         "utrecht-icon-afval": HTMLUtrechtIconAfvalElement;
@@ -2560,6 +2570,9 @@ declare namespace LocalJSX {
     interface UtrechtHeadingGroup {
     }
     interface UtrechtHtmlContent {
+    }
+    interface UtrechtIbanData {
+        "value"?: string;
     }
     interface UtrechtIcon {
     }
@@ -3074,6 +3087,7 @@ declare namespace LocalJSX {
         "utrecht-heading-6": UtrechtHeading6;
         "utrecht-heading-group": UtrechtHeadingGroup;
         "utrecht-html-content": UtrechtHtmlContent;
+        "utrecht-iban-data": UtrechtIbanData;
         "utrecht-icon": UtrechtIcon;
         "utrecht-icon-afspraak-maken": UtrechtIconAfspraakMaken;
         "utrecht-icon-afval": UtrechtIconAfval;
@@ -3330,6 +3344,7 @@ declare module "@stencil/core" {
             "utrecht-heading-6": LocalJSX.UtrechtHeading6 & JSXBase.HTMLAttributes<HTMLUtrechtHeading6Element>;
             "utrecht-heading-group": LocalJSX.UtrechtHeadingGroup & JSXBase.HTMLAttributes<HTMLUtrechtHeadingGroupElement>;
             "utrecht-html-content": LocalJSX.UtrechtHtmlContent & JSXBase.HTMLAttributes<HTMLUtrechtHtmlContentElement>;
+            "utrecht-iban-data": LocalJSX.UtrechtIbanData & JSXBase.HTMLAttributes<HTMLUtrechtIbanDataElement>;
             "utrecht-icon": LocalJSX.UtrechtIcon & JSXBase.HTMLAttributes<HTMLUtrechtIconElement>;
             "utrecht-icon-afspraak-maken": LocalJSX.UtrechtIconAfspraakMaken & JSXBase.HTMLAttributes<HTMLUtrechtIconAfspraakMakenElement>;
             "utrecht-icon-afval": LocalJSX.UtrechtIconAfval & JSXBase.HTMLAttributes<HTMLUtrechtIconAfvalElement>;
