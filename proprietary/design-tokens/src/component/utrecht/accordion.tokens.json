@@ -1,15 +1,33 @@
 {
   "utrecht": {
     "accordion": {
+      "section": {
+        "margin-block-start": { "value": "{utrecht.space.block.xs}" },
+        "margin-block-end": { "value": "{utrecht.space.block.xs}" }
+      },
       "button": {
-        "padding-inline-end": { "value": "30px" },
+        "padding-inline-start": { "value": "{utrecht.space.block.md}" },
+        "padding-inline-end": { "value": "{utrecht.space.block.md}" },
+        "padding-block-start": { "value": "{utrecht.space.block.xs}" },
+        "padding-block-end": { "value": "{utrecht.space.block.xs}" },
         "background-color": { "value": "{utrecht.color.grey.95}" },
         "color": { "value": "{utrecht.color.grey.10}" },
         "border-color": { "value": "{utrecht.color.grey.95}" },
         "border-width": { "value": "0" },
         "hover": {
-          "background-color": { "value": "{utrecht.color.grey.95}" },
-          "border-color": { "value": "{utrecht.color.grey.95}" }
+          "background-color": { "value": "inherit" },
+          "border-color": { "value": "{utrecht.color.grey.95}" },
+          "color": { "value": "{utrecht.color.grey.10}" }
+        },
+        "active": {
+          "background-color": { "value": "{utrecht.color.grey.80}" },
+          "border-color": { "value": "{utrecht.color.grey.95}" },
+          "color": { "value": "{utrecht.color.grey.10}" }
+        },
+        "focus": {
+          "background-color": { "value": "{utrecht.color.grey.80}" },
+          "border-color": { "value": "{utrecht.color.grey.95}" },
+          "color": { "value": "{utrecht.color.grey.10}" }
         },
         "icon": {
           "arrow-down": {},
@@ -18,13 +36,13 @@
           "size": { "value": "24px" }
         }
       },
-      "body": {
+      "panel": {
         "border-color": { "value": "{utrecht.color.grey.95}" },
         "border-width": { "value": "2px" },
-        "padding-block-start": { "value": "10px" },
-        "padding-block-end": { "value": "10px" },
-        "padding-inline-start": { "value": "10px" },
-        "padding-inline-end": { "value": "10px" }
+        "padding-inline-start": { "value": "{utrecht.space.block.md}" },
+        "padding-inline-end": { "value": "{utrecht.space.block.md}" },
+        "padding-block-start": { "value": "{utrecht.space.block.xs}" },
+        "padding-block-end": { "value": "{utrecht.space.block.xs}" }
       }
     }
   }
