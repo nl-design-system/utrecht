@@ -10,6 +10,10 @@
   @include utrecht-accordion;
 }
 
+.utrecht-accordion__section {
+  @include utrecht-accordion__section;
+}
+
 .utrecht-accordion__button {
   @include utrecht-accordion__button;
 
@@ -26,6 +30,6 @@
   }
 }
 
-.utrecht-accordion__body {
-  @include utrecht-accordion__body;
+.utrecht-accordion__panel {
+  @include utrecht-accordion__panel;
 }
