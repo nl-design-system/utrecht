@@ -25,6 +25,8 @@ const defaultConfig = {
     ticks: false,
     labelPadding: 12,
     domainColor: "var(--utrecht-vega-visualization-axis-domain-color, 'black')",
+    gridColor: "var(--utrecht-vega-visualization-axis-grid-color, 'gray')",
+    tickColor: "var(--utrecht-vega-visualization-axis-tick-color, 'black')",
   },
   axisY: {
     titleAngle: 0,
@@ -37,7 +39,7 @@ const defaultConfig = {
   legend: { labelFontSize: 16, titleFontSize: 16 },
   bar: { width: { band: 0.85 } },
   view: { stroke: null },
-  padding: { left: 20, top: 20, right: 20, bottom: 20 },
+  padding: { left: 20, top: 20, right: 25, bottom: 20 },
   locale: {
     number: {
       decimal: ',',
