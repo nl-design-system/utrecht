@@ -16,6 +16,9 @@ const defaultConfig = {
     offset: 32,
     subtitleFontSize: 16,
   },
+  range: {
+    category: { scheme: 'set1' },
+  },
   axis: {
     labelFontSize: 16,
     titleFontSize: 16,
