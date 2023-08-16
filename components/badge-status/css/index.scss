@@ -4,80 +4,48 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "../../badge/css/mixin";
+@import "./mixin";
 
 .utrecht-badge-status {
-  @include utrecht-badge;
-  @include utrecht-badge--media-query-forced-colors;
-
-  letter-spacing: var(--utrecht-badge-status-letter-spacing, inherit);
-  text-transform: var(--utrecht-badge-status-text-transform, inherit);
+  @include utrecht-badge-status;
 }
 
 .utrecht-badge-status--danger {
-  background-color: var(--utrecht-feedback-danger-fill-background-color, hsl(0 100% 40%));
-  color: var(--utrecht-feedback-danger-fill-color, white);
+  @include utrecht-badge-status--danger;
 }
 
 .utrecht-badge-status--warning {
-  background-color: var(--utrecht-feedback-warning-fill-background-color, hsl(48 100% 50%));
-  color: var(--utrecht-feedback-warning-fill-color, white);
+  @include utrecht-badge-status--warning;
 }
 
 .utrecht-badge-status--safe {
-  background-color: var(--utrecht-feedback-safe-fill-background-color, hsl(90 30% 50%));
-  color: var(--utrecht-feedback-safe-fill-color, white);
+  @include utrecht-badge-status--safe;
 }
 
 .utrecht-badge-status--neutral {
-  background-color: var(--utrecht-feedback-neutral-fill-background-color, black);
-  color: var(--utrecht-feedback-neutral-fill-color, white);
+  @include utrecht-badge-status--neutral;
 }
 
 .utrecht-badge-status--valid {
-  background-color: var(
-    --utrecht-feedback-valid-fill-background-color,
-    var(--utrecht-feedback-safe-fill-background-color, hsl(90 30% 50%))
-  );
-  color: var(--utrecht-feedback-valid-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+  @include utrecht-badge-status--valid;
 }
 
 .utrecht-badge-status--invalid {
-  background-color: var(
-    --utrecht-feedback-invalid-fill-background-color,
-    var(--utrecht-feedback-danger-fill-background-color, hsl(39 100% 50%))
-  );
-  color: var(--utrecht-feedback-invalid-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+  @include utrecht-badge-status--invalid;
 }
 
 .utrecht-badge-status--error {
-  background-color: var(
-    --utrecht-feedback-error-fill-background-color,
-    var(--utrecht-feedback-danger-fill-background-color, hsl(0 100% 30%))
-  );
-  color: var(--utrecht-feedback-error-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+  @include utrecht-badge-status--error;
 }
 
 .utrecht-badge-status--success {
-  background-color: var(
-    --utrecht-feedback-success-fill-background-color,
-    var(--utrecht-feedback-safe-fill-background-color, hsl(90 30% 50%))
-  );
-  color: var(--utrecht-feedback-success-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+  @include utrecht-badge-status--success;
 }
 
 .utrecht-badge-status--active {
-  background-color: var(
-    --utrecht-feedback-active-fill-background-color,
-    var(--utrecht-feedback-safe-fill-background-color, hsl(90 30% 50%))
-  );
-  color: var(--utrecht-feedback-active-fill-color, var(--utrecht-feedback-safe-fill-color, white));
+  @include utrecht-badge-status--active;
 }
 
 .utrecht-badge-status--inactive {
-  background-color: var(
-    --utrecht-feedback-inactive-fill-background-color,
-    var(--utrecht-feedback-danger-fill-background-color, hsl(0 100% 40%))
-  );
-  color: var(--utrecht-feedback-inactive-fill-color, var(--utrecht-feedback-danger-fill-color, white));
+  @include utrecht-badge-status--inactive;
 }
