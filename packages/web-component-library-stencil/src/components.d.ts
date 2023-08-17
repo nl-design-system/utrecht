@@ -573,6 +573,8 @@ export namespace Components {
     interface UtrechtSpotlightSection {
         "appearance": string;
     }
+    interface UtrechtSurface {
+    }
     interface UtrechtTable {
     }
     interface UtrechtTableBody {
