@@ -495,6 +495,8 @@ export namespace Components {
     }
     interface UtrechtIconWoningZoeken {
     }
+    interface UtrechtIconX {
+    }
     interface UtrechtIconYoutube {
     }
     interface UtrechtIconZelfstandigWonen {
@@ -1938,6 +1940,12 @@ declare global {
         prototype: HTMLUtrechtIconWoningZoekenElement;
         new (): HTMLUtrechtIconWoningZoekenElement;
     };
+    interface HTMLUtrechtIconXElement extends Components.UtrechtIconX, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconXElement: {
+        prototype: HTMLUtrechtIconXElement;
+        new (): HTMLUtrechtIconXElement;
+    };
     interface HTMLUtrechtIconYoutubeElement extends Components.UtrechtIconYoutube, HTMLStencilElement {
     }
     var HTMLUtrechtIconYoutubeElement: {
@@ -2103,6 +2111,12 @@ declare global {
     var HTMLUtrechtSpotlightSectionElement: {
         prototype: HTMLUtrechtSpotlightSectionElement;
         new (): HTMLUtrechtSpotlightSectionElement;
+    };
+    interface HTMLUtrechtSurfaceElement extends Components.UtrechtSurface, HTMLStencilElement {
+    }
+    var HTMLUtrechtSurfaceElement: {
+        prototype: HTMLUtrechtSurfaceElement;
+        new (): HTMLUtrechtSurfaceElement;
     };
     interface HTMLUtrechtTableElement extends Components.UtrechtTable, HTMLStencilElement {
     }
@@ -2381,6 +2395,7 @@ declare global {
         "utrecht-icon-whatsapp": HTMLUtrechtIconWhatsappElement;
         "utrecht-icon-wonen-kosten": HTMLUtrechtIconWonenKostenElement;
         "utrecht-icon-woning-zoeken": HTMLUtrechtIconWoningZoekenElement;
+        "utrecht-icon-x": HTMLUtrechtIconXElement;
         "utrecht-icon-youtube": HTMLUtrechtIconYoutubeElement;
         "utrecht-icon-zelfstandig-wonen": HTMLUtrechtIconZelfstandigWonenElement;
         "utrecht-icon-zoomin": HTMLUtrechtIconZoominElement;
@@ -2406,6 +2421,7 @@ declare global {
         "utrecht-sidenav": HTMLUtrechtSidenavElement;
         "utrecht-skip-link": HTMLUtrechtSkipLinkElement;
         "utrecht-spotlight-section": HTMLUtrechtSpotlightSectionElement;
+        "utrecht-surface": HTMLUtrechtSurfaceElement;
         "utrecht-table": HTMLUtrechtTableElement;
         "utrecht-table-body": HTMLUtrechtTableBodyElement;
         "utrecht-table-caption": HTMLUtrechtTableCaptionElement;
@@ -2930,6 +2946,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconWoningZoeken {
     }
+    interface UtrechtIconX {
+    }
     interface UtrechtIconYoutube {
     }
     interface UtrechtIconZelfstandigWonen {
@@ -3012,6 +3030,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtSpotlightSection {
         "appearance"?: string;
+    }
+    interface UtrechtSurface {
     }
     interface UtrechtTable {
     }
@@ -3266,6 +3286,7 @@ declare namespace LocalJSX {
         "utrecht-icon-whatsapp": UtrechtIconWhatsapp;
         "utrecht-icon-wonen-kosten": UtrechtIconWonenKosten;
         "utrecht-icon-woning-zoeken": UtrechtIconWoningZoeken;
+        "utrecht-icon-x": UtrechtIconX;
         "utrecht-icon-youtube": UtrechtIconYoutube;
         "utrecht-icon-zelfstandig-wonen": UtrechtIconZelfstandigWonen;
         "utrecht-icon-zoomin": UtrechtIconZoomin;
@@ -3291,6 +3312,7 @@ declare namespace LocalJSX {
         "utrecht-sidenav": UtrechtSidenav;
         "utrecht-skip-link": UtrechtSkipLink;
         "utrecht-spotlight-section": UtrechtSpotlightSection;
+        "utrecht-surface": UtrechtSurface;
         "utrecht-table": UtrechtTable;
         "utrecht-table-body": UtrechtTableBody;
         "utrecht-table-caption": UtrechtTableCaption;
@@ -3523,6 +3545,7 @@ declare module "@stencil/core" {
             "utrecht-icon-whatsapp": LocalJSX.UtrechtIconWhatsapp & JSXBase.HTMLAttributes<HTMLUtrechtIconWhatsappElement>;
             "utrecht-icon-wonen-kosten": LocalJSX.UtrechtIconWonenKosten & JSXBase.HTMLAttributes<HTMLUtrechtIconWonenKostenElement>;
             "utrecht-icon-woning-zoeken": LocalJSX.UtrechtIconWoningZoeken & JSXBase.HTMLAttributes<HTMLUtrechtIconWoningZoekenElement>;
+            "utrecht-icon-x": LocalJSX.UtrechtIconX & JSXBase.HTMLAttributes<HTMLUtrechtIconXElement>;
             "utrecht-icon-youtube": LocalJSX.UtrechtIconYoutube & JSXBase.HTMLAttributes<HTMLUtrechtIconYoutubeElement>;
             "utrecht-icon-zelfstandig-wonen": LocalJSX.UtrechtIconZelfstandigWonen & JSXBase.HTMLAttributes<HTMLUtrechtIconZelfstandigWonenElement>;
             "utrecht-icon-zoomin": LocalJSX.UtrechtIconZoomin & JSXBase.HTMLAttributes<HTMLUtrechtIconZoominElement>;
@@ -3564,6 +3587,7 @@ declare module "@stencil/core" {
             "utrecht-sidenav": LocalJSX.UtrechtSidenav & JSXBase.HTMLAttributes<HTMLUtrechtSidenavElement>;
             "utrecht-skip-link": LocalJSX.UtrechtSkipLink & JSXBase.HTMLAttributes<HTMLUtrechtSkipLinkElement>;
             "utrecht-spotlight-section": LocalJSX.UtrechtSpotlightSection & JSXBase.HTMLAttributes<HTMLUtrechtSpotlightSectionElement>;
+            "utrecht-surface": LocalJSX.UtrechtSurface & JSXBase.HTMLAttributes<HTMLUtrechtSurfaceElement>;
             "utrecht-table": LocalJSX.UtrechtTable & JSXBase.HTMLAttributes<HTMLUtrechtTableElement>;
             "utrecht-table-body": LocalJSX.UtrechtTableBody & JSXBase.HTMLAttributes<HTMLUtrechtTableBodyElement>;
             "utrecht-table-caption": LocalJSX.UtrechtTableCaption & JSXBase.HTMLAttributes<HTMLUtrechtTableCaptionElement>;
