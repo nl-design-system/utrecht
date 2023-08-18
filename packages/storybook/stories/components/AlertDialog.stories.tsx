@@ -11,7 +11,7 @@ import {
 import readme from '@utrecht/components/alert-dialog/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React, { createRef, PropsWithChildren, useState } from 'react';
+import React, { createRef, useState } from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
@@ -57,68 +57,55 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
 export const Default: Story = {};
 
 export const Info: Story = {
   args: {
-    open: true,
+    ...Default.args,
     type: 'info',
   },
 };
 
 export const Warning: Story = {
   args: {
-    open: true,
+    ...Default.args,
     type: 'warning',
   },
 };
 
 export const Error: Story = {
   args: {
-    open: true,
+    ...Default.args,
     type: 'error',
   },
 };
 
-interface ShowModalProps extends AlertDialogProps {
-  buttonLabel: string;
-  buttonAppearance?: 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
-  buttonHint?: string;
-}
+const ShowModalStory = (props: AlertDialogProps) => {
+  const alertDialog = createRef<HTMLDialogElement>();
+  const [open, setOpen] = useState(false);
+  const showModal = () => {
+    if (alertDialog.current) {
+      setOpen(true);
+      alertDialog.current.showModal();
+    }
+  };
+  return (
+    <div>
+      <ButtonGroup>
+        <Button onClick={showModal} aria-pressed={open} appearance="secondary-action-button" hint="danger">
+          Stoppen
+        </Button>
+      </ButtonGroup>
+      <AlertDialog ref={alertDialog} {...props} />
+    </div>
+  );
+};
 
 export const ShowModal = {
-  render: ({
-    buttonLabel,
-    buttonAppearance,
-    buttonHint,
-    children,
-    ...restProps
-  }: PropsWithChildren<ShowModalProps>) => {
-    const alertDialog = createRef<HTMLDialogElement>();
-    const [open, setOpen] = useState(false);
-    const showModal = () => {
-      if (alertDialog.current) {
-        setOpen(true);
-        alertDialog.current.showModal();
-      }
-    };
-    return (
-      <div>
-        <ButtonGroup>
-          <Button onClick={showModal} aria-pressed={open} appearance={buttonAppearance} hint={buttonHint}>
-            {buttonLabel}
-          </Button>
-        </ButtonGroup>
-        <AlertDialog {...restProps} ref={alertDialog}>
-          {children}
-        </AlertDialog>
-      </div>
-    );
-  },
+  render: ShowModalStory,
   args: {
-    buttonLabel: 'Stoppen',
-    buttonAppearance: 'secondary-action-button',
-    buttonHint: 'danger',
+    ...Default.args,
     type: 'warning',
     children: (
       <form method="dialog">
@@ -134,23 +121,6 @@ export const ShowModal = {
         </ButtonGroup>
       </form>
     ),
-  },
-  argTypes: {
-    buttonLabel: {
-      type: 'text',
-    },
-    buttonAppearance: {
-      type: 'select',
-      options: [undefined, 'primary-action-button', 'secondary-action-button', 'subtle-button'],
-    },
-    buttonHint: {
-      type: 'select',
-      options: [undefined, 'warning', 'danger'],
-    },
-    type: {
-      type: 'select',
-      options: ['info', 'ok', 'warning', 'error'],
-    },
   },
 };
 export const DesignTokens = designTokenStory(meta);
