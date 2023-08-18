@@ -13,6 +13,7 @@ const meta = {
   component: BadgeCounter,
   args: {
     children: '4',
+    value: '4',
   },
   argTypes: {
     children: {
@@ -42,7 +43,6 @@ const meta = {
       ),
     },
   },
-  decorators: [(Story) => <div>{Story()}</div>],
 } satisfies Meta<typeof BadgeCounter>;
 
 export default meta;
@@ -50,11 +50,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
-export const Value: Story = {
+export const DoubleDigits: Story = {
   args: {
     ...Default.args,
-    children: '4',
-    value: '4',
+    children: '42',
+    value: '42',
   },
 };
 
@@ -62,6 +62,7 @@ export const TripleDigits: Story = {
   args: {
     ...Default.args,
     children: '316',
+    value: '316',
   },
 };
 
@@ -69,6 +70,7 @@ export const QuadrupleDigits: Story = {
   args: {
     ...Default.args,
     children: '2148',
+    value: '2148',
   },
 };
 
@@ -76,6 +78,7 @@ export const Empty: Story = {
   args: {
     ...Default.args,
     children: '',
+    value: undefined,
   },
   parameters: {
     ...Default.parameters,
