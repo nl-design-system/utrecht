@@ -97,7 +97,7 @@ const preview: Preview = {
       source: {
         state: 'open',
       },
-      transformSource: (src: string, storyContext: StoryContext): string => {
+      transformSource: (src: string, storyContext: StoryContext<any>): string => {
         // Ensure valid HTML in the Preview source
         const render =
           typeof storyContext.component === 'function'

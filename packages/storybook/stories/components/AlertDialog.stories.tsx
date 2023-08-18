@@ -5,8 +5,10 @@ import {
   AlertDialog,
   Button,
   ButtonGroup,
+  Heading1,
   Paragraph,
   PrimaryActionButton,
+  SecondaryActionButton,
 } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/alert-dialog/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
@@ -22,16 +24,20 @@ const meta = {
     open: true,
     type: 'info',
     children: [
-      <Paragraph>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.
-      </Paragraph>,
-      <ButtonGroup>
-        <PrimaryActionButton>OK</PrimaryActionButton>
-      </ButtonGroup>,
+      <form method="dialog">
+        <Heading1>Lorem ipsum</Heading1>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+          est laborum.
+        </Paragraph>
+        <ButtonGroup>
+          <PrimaryActionButton type="submit">OK</PrimaryActionButton>
+          <SecondaryActionButton type="submit">Annuleren</SecondaryActionButton>
+        </ButtonGroup>
+      </form>,
     ],
   },
   parameters: {
