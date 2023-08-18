@@ -1,5 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
+import { PartialStoryFn } from '@storybook/types';
 import { AlertDialogProps } from '@utrecht/component-library-react/dist/AlertDialog';
 import {
   AlertDialog,
@@ -20,19 +21,26 @@ const meta = {
   title: 'CSS Component/Alert dialog',
   id: 'css-alert-dialog',
   component: AlertDialog,
+  decorators: [
+    (Story: PartialStoryFn<ReactRenderer>) => (
+      <div style={{ minHeight: '250px' }}>
+        <Story />
+      </div>
+    ),
+  ],
   args: {
     open: true,
     type: 'info',
     children: [
+      <Heading1>Lorem ipsum</Heading1>,
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </Paragraph>,
       <form method="dialog">
-        <Heading1>Lorem ipsum</Heading1>
-        <Paragraph>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-          magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-          est laborum.
-        </Paragraph>
         <ButtonGroup>
           <PrimaryActionButton type="submit">OK</PrimaryActionButton>
           <SecondaryActionButton type="submit">Annuleren</SecondaryActionButton>
@@ -112,6 +120,7 @@ export const ShowModal = {
   render: ShowModalStory,
   args: {
     ...Default.args,
+    open: false,
     type: 'warning',
     children: (
       <form method="dialog">
