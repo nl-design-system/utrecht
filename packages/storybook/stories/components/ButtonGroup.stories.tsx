@@ -1,28 +1,41 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
+import { Button, ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import tokensDefinition from '@utrecht/components/button-group/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
-import parse from 'html-react-parser';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './util';
+
+interface ButtonGroupStoryProps {
+  vertical?: boolean;
+}
+
+const ButtonGroupStory = ({ vertical, ...props }: PropsWithChildren<ButtonGroupStoryProps>) => (
+  <ButtonGroup {...props} className={clsx(vertical && 'utrecht-button-group--vertical')} />
+);
 
 const meta = {
   title: 'CSS Component/Button Group',
   id: 'css-button-group',
   component: ButtonGroup,
   args: {
-    innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
+    children: [
+      <Button appearance="primary-action-button">Save and continue</Button>,
+      <Button appearance="secondary-action-button">Back</Button>,
+    ],
   },
   argTypes: {
-    innerHTML: {
-      name: 'innerHTML',
-      type: { name: 'string', required: false },
-      table: { defaultValue: { summary: '' } },
+    vertical: {
+      description: 'Set the vertical modifier',
+      control: 'boolean',
+      table: {
+        category: 'Demo',
+      },
     },
   },
+  render: ButtonGroupStory,
   parameters: {
     tokensPrefix: 'utrecht-button-group',
     status: {
@@ -44,95 +57,37 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<typeof ButtonGroup>;
-
-const ButtonGroupRender = ({ children, div = false, innerHTML = '', direction }) => {
-  const classNames = [
-    'utrecht-button-group',
-    direction === 'horizontal' && 'utrecht-button-group--horizontal',
-    direction === 'vertical' && 'utrecht-button-group--vertical',
-  ];
-
-  const attributes = {
-    className: clsx(classNames),
-    role: 'group',
-  };
-
-  const content = (
-    <>
-      {children}
-      {parse(innerHTML)}
-    </>
-  );
-
-  return div ? <div {...attributes}>{content}</div> : <p {...attributes}>{content}</p>;
-};
+} satisfies Meta<typeof ButtonGroupStory>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-export const Default: Story = {
-  render: (args) => {
-    const { children, direction, innerHTML } = args;
-    return (
-      <ButtonGroupRender direction={direction} innerHTML={innerHTML}>
-        {children}
-      </ButtonGroupRender>
-    );
-  },
-};
 
-export const DirectionHorizontal: Story = {
-  args: {
-    ...Default.args,
-    children: '',
-    innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
-    direction: 'horizontal',
-  },
+export const Default: Story = {
   parameters: {
-    ...Default.parameters,
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
-        story: `Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--horizontal\` modifier class names.
-        Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
+        story: `
+Styling via the \`.utrecht-button-group\` class name.
+Er moet lege ruimte zijn tussen de buttons, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
       },
     },
-  },
-  render: (args) => {
-    const { children, direction, innerHTML } = args;
-    return (
-      <ButtonGroupRender direction={direction} innerHTML={innerHTML}>
-        {children}
-      </ButtonGroupRender>
-    );
   },
 };
 
 export const DirectionVertical: Story = {
   args: {
     ...Default.args,
-    children: '',
-    innerHTML: `<utrecht-button appearance="primary-action-button">Save and continue</utrecht-button><utrecht-button appearance="secondary-action-button">Back</utrecht-button>`,
-    direction: 'vertical',
+    vertical: true,
   },
   parameters: {
-    ...Default.parameters,
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
-        story: `Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--vertical\` modifier class names.
-        Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
+        story: `
+Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--vertical\` modifier class names.
+Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
       },
     },
-  },
-  render: (args) => {
-    const { children, direction, innerHTML } = args;
-    return (
-      <ButtonGroupRender direction={direction} innerHTML={innerHTML}>
-        {children}
-      </ButtonGroupRender>
-    );
   },
 };
 
