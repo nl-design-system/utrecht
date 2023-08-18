@@ -1,6 +1,8 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
+import { PartialStoryFn } from '@storybook/types';
 import { Backdrop } from '@utrecht/component-library-react/dist/css-module';
+import { BackdropProps } from '@utrecht/component-library-react/src/Backdrop';
 import readme from '@utrecht/components/backdrop/README.md?raw';
 import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -8,26 +10,42 @@ import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './util';
 
-const checkerboard = (story: any) => (
+const checkerboard = (Story: PartialStoryFn<ReactRenderer>) => (
   <div
     style={{
-      '--checkerboard-color-1': '#000000',
-      '--checkerboard-color-2': '#ffffff',
-      '--checkerboard-size': '16px',
-      'background-color': 'var(--checkerboard-color-2)',
-      'background-image':
-        'linear-gradient(45deg, var(--checkerboard-color-1) 25%, transparent 25%, transparent 75%, var(--checkerboard-color-1) 75%,var(--checkerboard-color-1)), linear-gradient(45deg, var(--checkerboard-color-1) 25%, transparent 25%, transparent 75%, var(--checkerboard-color-1) 75%, var(--checkerboard-color-1))',
-      'background-position': ' 0 0, var(--checkerboard-size) var(--checkerboard-size)',
-      'background-size': 'calc(var(--checkerboard-size) * 2) calc(var(--checkerboard-size) * 2)',
+      '--example-checkerboard-color-1': '#000000',
+      '--example-checkerboard-color-2': '#ffffff',
+      '--example-checkerboard-size': '16px',
+      backgroundColor: 'var(--example-checkerboard-color-2)',
+      backgroundImage:
+        'linear-gradient(45deg, var(--example-checkerboard-color-1) 25%, transparent 25%, transparent 75%, var(--example-checkerboard-color-1) 75%,var(--example-checkerboard-color-1)), linear-gradient(45deg, var(--example-checkerboard-color-1) 25%, transparent 25%, transparent 75%, var(--example-checkerboard-color-1) 75%, var(--example-checkerboard-color-1))',
+      backgroundPosition: ' 0 0, var(--example-checkerboard-size) var(--example-checkerboard-size)',
+      backgroundSize: 'calc(var(--example-checkerboard-size) * 2) calc(var(--example-checkerboard-size) * 2)',
       height: '100%',
-      'min-height': 'calc(40 * var(--checkerboard-size))',
-      'min-width': 'calc(40 * var(--checkerboard-size))',
+      minHeight: 'calc(40 * var(--example-checkerboard-size))',
+      minWidth: 'calc(40 * var(--example-checkerboard-size))',
       position: 'relative',
       width: '100%',
     }}
   >
-    {story()}
+    <Story />
   </div>
+);
+interface BackdropStoryProps extends BackdropProps {
+  reducedMotion?: boolean;
+  reducedTransparency?: boolean;
+  viewport?: boolean;
+}
+
+const BackdropStory = ({ reducedMotion, reducedTransparency, viewport, ...args }: BackdropStoryProps) => (
+  <Backdrop
+    className={clsx({
+      'utrecht-backdrop--reduced-motion': reducedMotion,
+      'utrecht-backdrop--reduced-transparency': reducedTransparency,
+      'utrecht-backdrop--viewport': viewport,
+    })}
+    {...args}
+  />
 );
 
 const meta = {
@@ -43,10 +61,16 @@ const meta = {
     reducedMotion: {
       name: 'Reduced motion',
       type: 'boolean',
+      table: {
+        category: 'Demo',
+      },
     },
     reducedTransparency: {
       name: 'Reduced transparency',
       type: 'boolean',
+      table: {
+        category: 'Demo',
+      },
     },
     viewport: {
       name: 'Cover viewport',
@@ -75,36 +99,24 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<typeof Backdrop>;
+  render: BackdropStory,
+  decorators: [checkerboard],
+} satisfies Meta<typeof BackdropStory>;
 
 export default meta;
 
-const render = (args: any) => (
-  <Backdrop
-    className={clsx('utrecht-backdrop', {
-      'utrecht-backdrop--reduced-motion': args.reducedMotion,
-      'utrecht-backdrop--reduced-transparency': args.reducedTransparency,
-      'utrecht-backdrop--viewport': args.viewport,
-    })}
-  />
-);
-
 type Story = StoryObj<typeof meta>;
-export const Default: Story = {
-  decorators: [checkerboard],
-  render,
-};
+
+export const Default: Story = {};
 
 export const ReducedMotion: Story = {
-  decorators: [checkerboard],
   args: {
     ...Default.args,
     reducedMotion: true,
   },
-  render,
 };
+
 export const ReducedTransparency: Story = {
-  decorators: [checkerboard],
   args: {
     ...Default.args,
     reducedTransparency: true,
@@ -118,7 +130,6 @@ export const ReducedTransparency: Story = {
       },
     },
   },
-  render,
 };
 
 export const DesignTokens = designTokenStory(meta);
