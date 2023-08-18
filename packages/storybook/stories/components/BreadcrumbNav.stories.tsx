@@ -1,5 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
+import { PartialStoryFn } from '@storybook/types';
 import { BreadcrumbLink, BreadcrumbNav } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/breadcrumb/README.md?raw';
 import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
@@ -77,24 +78,27 @@ export const Rel: Story = {
       ...Default.parameters?.['docs'],
       description: {
         story: `
-          Stel je voor: je hebt _breacrumb navigation_ op de derde pagina met zoekresultaten voor “openingstijden zwembad”. De huidige URL is \`https://example.com/search?q=openingstijden+zwembad?page=3\`. Dan kan het handig zijn om terug te gaan naar de eerste pagina van de zoekresultaten. Het kan ook handig zijn om terug te gaan naar de zoekpagina, om andere zoektermen te kiezen.
+Stel je voor: je hebt _breacrumb navigation_ op de derde pagina met zoekresultaten voor “openingstijden zwembad”. 
+De huidige URL is \`https://example.com/search?q=openingstijden+zwembad?page=3\`. 
+Dan kan het handig zijn om terug te gaan naar de eerste pagina van de zoekresultaten. 
+Het kan ook handig zijn om terug te gaan naar de zoekpagina, om andere zoektermen te kiezen.
 
-          - **Home**: \`rel="home"\`
-          - **Zoeken**: \`rel="up"\`
-          - **Pagina 1** van “openingstijden zwembad”: \`rel="first"\``,
+- **Home**: \`rel="home"\`
+- **Zoeken**: \`rel="up"\`
+- **Pagina 1** van “openingstijden zwembad”: \`rel="first"\``,
       },
     },
   },
 };
 
+const RTLStoryDecorator = (Story: PartialStoryFn<ReactRenderer>) => (
+  <div lang="ar" dir="rtl">
+    <Story />
+  </div>
+);
+
 export const RTL: Story = {
-  decorators: [
-    (Story) => (
-      <div lang="ar" dir="rtl">
-        {Story()}
-      </div>
-    ),
-  ],
+  decorators: [RTLStoryDecorator],
   args: {
     ...Default.args,
     children: [
