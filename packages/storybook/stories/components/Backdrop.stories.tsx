@@ -87,9 +87,6 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        story: `Styling via the \`.utrecht-backdrop\` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.`,
-      },
       page: () => (
         <>
           <Description>{readme}</Description>
@@ -107,12 +104,31 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story: `Styling via the \`.utrecht-backdrop\` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.`,
+      },
+    },
+  },
+};
 
 export const ReducedMotion: Story = {
   args: {
     ...Default.args,
     reducedMotion: true,
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      ...Default.parameters?.['docs'],
+      description: {
+        story: `
+Happens automatically when \`@media (prefers-reduced-motion: reduce)\` is triggered.
+Simulated with \`.utrecht-backdrop--reduced-motion\``,
+      },
+    },
   },
 };
 
@@ -126,7 +142,11 @@ export const ReducedTransparency: Story = {
     docs: {
       ...Default.parameters?.['docs'],
       description: {
-        story: `Styling via the \`.utrecht-backdrop--reduced-transparency\` class name. Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.`,
+        story: `
+Happens automatically when \`@media (prefers-reduced-transparency: reduce)\` is triggered.
+Simulated with the \`.utrecht-backdrop--reduced-transparency\` class name. The reduced transparency can be set with design tokens.
+
+Displayed on a black-and-white checkerboard, so you can see the effect of the configured opacity.`,
       },
     },
   },
