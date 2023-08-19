@@ -1,16 +1,15 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
-import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
-import { PartialStoryFn } from '@storybook/types';
+import { Meta, StoryObj } from '@storybook/react';
 import { Backdrop } from '@utrecht/component-library-react/dist/css-module';
 import { BackdropProps } from '@utrecht/component-library-react/src/Backdrop';
 import readme from '@utrecht/components/backdrop/README.md?raw';
 import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './util';
 
-const checkerboard = (Story: PartialStoryFn<ReactRenderer>) => (
+const Checkerboard = ({ children }: PropsWithChildren<{}>) => (
   <div
     style={{
       '--example-checkerboard-color-1': '#000000',
@@ -28,7 +27,7 @@ const checkerboard = (Story: PartialStoryFn<ReactRenderer>) => (
       width: '100%',
     }}
   >
-    <Story />
+    {children}
   </div>
 );
 interface BackdropStoryProps extends BackdropProps {
@@ -38,14 +37,16 @@ interface BackdropStoryProps extends BackdropProps {
 }
 
 const BackdropStory = ({ reducedMotion, reducedTransparency, viewport, ...args }: BackdropStoryProps) => (
-  <Backdrop
-    className={clsx({
-      'utrecht-backdrop--reduced-motion': reducedMotion,
-      'utrecht-backdrop--reduced-transparency': reducedTransparency,
-      'utrecht-backdrop--viewport': viewport,
-    })}
-    {...args}
-  />
+  <Checkerboard>
+    <Backdrop
+      className={clsx({
+        'utrecht-backdrop--reduced-motion': reducedMotion,
+        'utrecht-backdrop--reduced-transparency': reducedTransparency,
+        'utrecht-backdrop--viewport': viewport,
+      })}
+      {...args}
+    />
+  </Checkerboard>
 );
 
 const meta = {
@@ -100,7 +101,6 @@ const meta = {
     },
   },
   render: BackdropStory,
-  decorators: [checkerboard],
 } satisfies Meta<typeof BackdropStory>;
 
 export default meta;
