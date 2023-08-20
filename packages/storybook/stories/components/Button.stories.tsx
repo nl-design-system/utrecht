@@ -159,3 +159,19 @@ export const PrimaryAction: Story = {
     },
   },
 };
+
+export const SecondaryAction: Story = {
+  args: {
+    appearance: 'secondary-action-button',
+    children: 'Secondary action button',
+    type: 'button',
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      description: {
+        story: `Styling via the \`.utrecht-button\` and \`.utrecht-button--secondary-action-button\` class names.`,
+      },
+    },
+  },
+};
