@@ -163,10 +163,6 @@
 }
 
 @mixin utrecht-textarea--html-textarea {
-  &:disabled {
-    @include utrecht-textarea--disabled;
-  }
-
   // The workaround for missing `:focus-visible` support makes the code quite complex,
   // keep the ideal version around to restore it easily when browser support improves.
 
@@ -194,8 +190,18 @@
     @include utrecht-textarea--invalid;
   }
 
+  /* The `textarea:read-only` pseudo selector applies to both `<textarea readonly>` and `<textarea disabled>` */
   &:read-only {
     @include utrecht-textarea--read-only;
+  }
+
+  /*
+   * The `textarea:disabled` pseudo selector applies to `<textarea disabled>`, but not to `<textarea aria-disabled="true">`
+   *
+   * We consider `disabled` more specific than `read-only`, so the `:disabled` selector should come after the `:read-only` selector.
+   */
+  &:disabled {
+    @include utrecht-textarea--disabled;
   }
 
   &::placeholder {
