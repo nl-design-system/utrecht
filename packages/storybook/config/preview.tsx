@@ -97,10 +97,17 @@ const preview: Preview = {
       source: {
         state: 'open',
       },
-      transformSource: (src: string, storyContext: StoryContext): string => {
+      transformSource: (src: string, storyContext: StoryContext<any>): string => {
         // Ensure valid HTML in the Preview source
-        if (typeof storyContext.component === 'function') {
-          return prettier.format(ReactDOMServer.renderToStaticMarkup(storyContext.component(storyContext.args)), {
+        const render =
+          typeof storyContext.component === 'function'
+            ? storyContext.component
+            : typeof storyContext.component?.render === 'function'
+            ? storyContext.component?.render
+            : null;
+
+        if (render) {
+          return prettier.format(ReactDOMServer.renderToStaticMarkup(render(storyContext.args)), {
             parser: 'babel',
             plugins: [prettierBabel],
           });

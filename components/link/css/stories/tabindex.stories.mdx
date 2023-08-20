@@ -1,11 +1,17 @@
 {/* @license CC0-1.0 */}
 
 import { Canvas, Meta, Story } from "@storybook/blocks";
-import { Article } from "../../../article/css/story-template";
+import clsx from "clsx";
 import { Heading2 } from "../../../heading-2/css/story-template";
 import { Paragraph } from "../../../paragraph/css/story-template";
 import { Link } from "../story-template";
 import "../index.scss";
+
+export const Article = ({ children, className, ...restProps }, ref) => (
+  <article {...restProps} ref={ref} className={clsx("utrecht-article", className)}>
+    {children}
+  </article>
+);
 
 <Meta
   id="css-link--tabindex"

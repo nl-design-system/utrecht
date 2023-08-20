@@ -90,6 +90,22 @@ export const exampleArgs = {
   textContent: 'Read more...',
 };
 
+export const Alert = ({ children, icon = null, type }) => (
+  <div
+    className={clsx('utrecht-alert', {
+      'utrecht-alert--error': type === 'error',
+      'utrecht-alert--info': type === 'info',
+      'utrecht-alert--ok': type === 'ok',
+      'utrecht-alert--warning': type === 'warning',
+    })}
+  >
+    {icon && <div className="utrecht-alert__icon">{icon}</div>}
+    <div className="utrecht-alert__message" role="alert">
+      {children}
+    </div>
+  </div>
+);
+
 export const Button = ({
   active = defaultArgs.active,
   appearance = defaultArgs.appearance,
@@ -139,6 +155,12 @@ export const Button = ({
     </button>
   );
 };
+
+export const ButtonGroup = ({ children, className, ...restProps }, ref) => (
+  <p {...restProps} ref={ref} className={clsx('utrecht-button-group', className)}>
+    {children}
+  </p>
+);
 
 const ButtonTableBody = ({ variants, textContent, icon }) => (
   <tbody className="utrecht--table__body">
