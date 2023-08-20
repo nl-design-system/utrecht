@@ -175,3 +175,19 @@ export const SecondaryAction: Story = {
     },
   },
 };
+
+export const Subtle: Story = {
+  args: {
+    appearance: 'subtle-button',
+    children: 'Subtle button',
+    type: 'button',
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      description: {
+        story: `Styling via the \`.utrecht-button\` and \`.utrecht-button--subtle-button\` class names.`,
+      },
+    },
+  },
+};
