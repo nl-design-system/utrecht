@@ -191,10 +191,6 @@
 }
 
 @mixin utrecht-textbox--html-input {
-  &:disabled {
-    @include utrecht-textbox--disabled;
-  }
-
   // The workaround for missing `:focus-visible` support makes the code quite complex,
   // keep the ideal version around to restore it easily when browser support improves.
 
@@ -222,8 +218,18 @@
     @include utrecht-textbox--invalid;
   }
 
+  /* The `input:read-only` pseudo selector applies to both `<input readonly>` and `<input disabled>` */
   &:read-only {
     @include utrecht-textbox--read-only;
+  }
+
+  /*
+   * The `input:disabled` pseudo selector applies to `<input disabled>`, but not to `<input aria-disabled="true">`
+   *
+   * We consider `disabled` more specific than `read-only`, so the `:disabled` selector should come after the `:read-only` selector.
+   */
+  &:disabled {
+    @include utrecht-textbox--disabled;
   }
 
   &::placeholder {
