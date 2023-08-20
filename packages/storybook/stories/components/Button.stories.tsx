@@ -191,3 +191,17 @@ export const Subtle: Story = {
     },
   },
 };
+
+export const IconAfter: Story = {
+  args: {
+    iconAfter: 'utrecht-icon-arrow',
+    textContent: 'Next',
+  },
+};
+
+export const IconBefore: Story = {
+  args: {
+    iconBefore: 'utrecht-icon-checkmark',
+    textContent: 'Versturen',
+  },
+};
