@@ -143,3 +143,19 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const PrimaryAction: Story = {
+  args: {
+    appearance: 'primary-action-button',
+    children: 'Primary action button',
+    type: 'button',
+  },
+  parameters: {
+    ...Default.parameters,
+    docs: {
+      description: {
+        story: `Styling via the \`.utrecht-button\` and \`.utrecht-button--primary-action-button\` class names.`,
+      },
+    },
+  },
+};
