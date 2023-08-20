@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ButtonAppearanceGrid } from './util/ButtonAppearanceGrid';
+import { ButtonAppearanceGrid } from '../util/ButtonAppearanceGrid';
 
 const meta = {
   title: 'CSS Component/Button/Appearance',
