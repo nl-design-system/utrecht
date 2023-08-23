@@ -176,10 +176,8 @@ export const Calendar: FC<CalendarProps> = ({
                       key={index}
                       onClick={() => {
                         setVisibleMonth(day.date);
-                        if (isSameMonth(day.date, visibleMonth)) {
-                          setSelectedDate(day.date);
-                          onCalendarClick(formatISO(day.date));
-                        }
+                        setSelectedDate(day.date);
+                        onCalendarClick(formatISO(day.date));
                       }}
                       aria-label={format(day.date, 'eeee dd LLLL Y', { locale })}
                       day={day.date.getDate().toString()}
