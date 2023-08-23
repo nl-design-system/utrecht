@@ -18,7 +18,8 @@
   "sideEffects": false,
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "vue-tsc --noEmit && vite build"
+    "build": "vite build",
+    "lint": "vue-tsc --noEmit --lib ES2020,DOM"
   },
   "files": [
     "dist"
