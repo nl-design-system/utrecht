@@ -6,6 +6,8 @@
 export { Accordion, AccordionProvider, AccordionSection } from './Accordion';
 export { Alert } from './Alert';
 export { AlertDialog } from './AlertDialog';
+export { AlphabetNavigation } from './AlphabetNavigation';
+export type { AlphabetNavigationProps } from './AlphabetNavigation';
 export { Article } from './Article';
 export { Backdrop } from './Backdrop';
 export { BadgeCounter } from './BadgeCounter';
