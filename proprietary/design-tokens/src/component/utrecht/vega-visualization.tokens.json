@@ -1,9 +1,11 @@
 {
   "utrecht": {
     "vega-visualization": {
-      "font-family": { "value": "{utrecht.typography.sans-serif.font-family}" },
+      "font-family": {},
       "axis": {
-        "domain-color": { "value": "{utrecht.color.black}" }
+        "domain": {
+          "color": {}
+        }
       }
     }
   }

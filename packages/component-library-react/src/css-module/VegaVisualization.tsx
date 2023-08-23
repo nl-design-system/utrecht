@@ -1,3 +1,8 @@
-//import '../../../../components/vega-visualization/css/index.scss';
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2023 Frameless B.V.
+ */
+
+import '../../../../components/vega-visualization/css/index.scss';
 
 export * from '../VegaVisualization';

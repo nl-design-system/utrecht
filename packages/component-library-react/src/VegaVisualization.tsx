@@ -1,15 +1,20 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2023 Frameless B.V.
+ */
+
 import clsx from 'clsx';
 import { Vega } from 'react-vega';
 import { VegaProps } from 'react-vega/lib/Vega';
 import { Config } from 'vega';
 
 export interface VegaVisualisationProps extends Omit<VegaProps, 'renderer'> {
-  'aria-label'?: string;
+  label?: string;
   config?: Config;
 }
 
 const defaultConfig = {
-  font: 'var(--utrecht-vega-visualization-font-family)',
+  font: 'var(--utrecht-vega-visualization-font-family, var(--utrecht-document-font-family))',
   title: {
     fontSize: 20,
     anchor: 'start',
@@ -27,9 +32,9 @@ const defaultConfig = {
     labelAngle: 0,
     ticks: false,
     labelPadding: 12,
-    domainColor: "var(--utrecht-vega-visualization-axis-domain-color, 'black')",
-    gridColor: "var(--utrecht-vega-visualization-axis-grid-color, 'gray')",
-    tickColor: "var(--utrecht-vega-visualization-axis-tick-color, 'black')",
+    domainColor: 'var(--utrecht-vega-visualization-axis-domain-color, black)',
+    gridColor: 'var(--utrecht-vega-visualization-axis-grid-color, gray)',
+    tickColor: 'var(--utrecht-vega-visualization-axis-tick-color, black)',
   },
   axisY: {
     titleAngle: 0,
@@ -76,17 +81,17 @@ const defaultConfig = {
   },
 } as Config;
 
-export const VegaVisualization = ({ actions = false, className, config, ...restProps }: VegaVisualisationProps) => {
+export const VegaVisualization = ({
+  actions = false,
+  className,
+  config,
+  label,
+  ...restProps
+}: VegaVisualisationProps) => {
   return (
-    <div role={'image'} aria-label={restProps['aria-label']}>
+    <div className={clsx('utrecht-vega-visualisation', className)} role="image" aria-label={label}>
       <div aria-hidden={true}>
-        <Vega
-          {...restProps}
-          actions={actions}
-          renderer={'svg'}
-          className={clsx('utrecht-vega-visualisation', className)}
-          config={{ ...defaultConfig, ...config }}
-        />
+        <Vega {...restProps} actions={actions} renderer={'svg'} config={{ ...defaultConfig, ...config }} />
       </div>
     </div>
   );
