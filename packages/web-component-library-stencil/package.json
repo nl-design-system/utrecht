@@ -26,12 +26,12 @@
     "url": "git+ssh://git@github.com/nl-design-system/utrecht.git"
   },
   "devDependencies": {
-    "@stencil/angular-output-target": "0.6.0",
+    "@stencil/angular-output-target": "0.8.1",
     "@stencil/react-output-target": "0.5.3",
     "@stencil/sass": "3.0.5",
     "@stencil/vue-output-target": "0.8.6",
     "@types/jest": "29.5.4",
-    "@types/node": "18.16.20",
+    "@types/node": "18.17.8",
     "@utrecht/components": "workspace:*",
     "@utrecht/icon": "workspace:*",
     "chokidar-cli": "3.0.0",
@@ -41,7 +41,7 @@
     "rimraf": "3.0.2"
   },
   "dependencies": {
-    "@stencil/core": "3.2.2"
+    "@stencil/core": "3.4.2"
   },
   "scripts": {
     "prebuild": "npm run clean",

@@ -29,7 +29,7 @@
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
   },
   "dependencies": {
-    "tslib": "2.5.3"
+    "tslib": "2.6.2"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "15.2.9",
@@ -44,7 +44,7 @@
     "@angular/platform-browser-dynamic": "15.2.9",
     "@angular/router": "15.2.9",
     "@testing-library/angular": "13.4.0",
-    "@testing-library/jest-dom": "5.16.5",
+    "@testing-library/jest-dom": "5.17.0",
     "@types/jest": "29.5.4",
     "@types/testing-library__jest-dom": "5.14.9",
     "@utrecht/components": "workspace:*",
