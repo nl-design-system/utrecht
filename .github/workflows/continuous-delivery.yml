@@ -46,6 +46,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     needs: install
+    env:
+      NODE_OPTIONS: "--max-old-space-size=6114"
 
     steps:
       - name: Checkout branch
@@ -86,6 +88,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: install
+    env:
+      NODE_OPTIONS: "--max-old-space-size=6114"
 
     steps:
       - name: Checkout branch
@@ -122,9 +126,7 @@ jobs:
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
-          NODE_OPTIONS: "--max-old-space-size=6114"
         run: |
-          export NODE_OPTIONS=--max-old-space-size=4096
           pnpm run --if-present build
 
       - name: "Retain build artifact: website"
@@ -144,6 +146,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: install
+    env:
+      NODE_OPTIONS: "--max-old-space-size=6114"
 
     steps:
       - name: Checkout branch
@@ -184,6 +188,8 @@ jobs:
   visual-regression-test:
     runs-on: ubuntu-latest
     needs: install
+    env:
+      NODE_OPTIONS: "--max-old-space-size=6114"
 
     steps:
       - name: Checkout branch
@@ -223,7 +229,6 @@ jobs:
         env:
           STORYBOOK_REDUCED_MOTION: 1
         run: |
-          export NODE_OPTIONS=--max-old-space-size=4096
           pnpm run --if-present build
 
       - name: Publish to Chromatic
@@ -267,6 +272,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test]
     if: github.ref == 'refs/heads/main'
+    env:
+      NODE_OPTIONS: "--max-old-space-size=6114"
 
     steps:
       - name: Checkout release branch
@@ -304,10 +311,7 @@ jobs:
           pnpm ls --recursive
 
       - name: "Continuous Deployment: build"
-        env:
-          NODE_OPTIONS: "--max-old-space-size=6114"
         run: |
-          export NODE_OPTIONS=--max-old-space-size=4096
           pnpm run --if-present build
 
       - name: "Continuous Deployment: publish to GitHub repository"
