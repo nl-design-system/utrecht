@@ -4,10 +4,16 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
+import { Link } from '@utrecht/component-library-react/dist/css-module';
+import { LinkProps } from '@utrecht/component-library-react/src/Link';
 import React from 'react';
-import { Link } from '../../link/css/story-template';
+import '@utrecht/components/link-list/css/index.scss';
 
-export const LinkList = ({ links = [] }) => (
+interface LinkListProps {
+  links: LinkProps[];
+}
+
+export const LinkList = ({ links }: LinkListProps) => (
   <ul className="utrecht-link-list utrecht-link-list--html-ul">
     {links.map((link) => (
       <li className="utrecht-link-list__item">
@@ -16,5 +22,3 @@ export const LinkList = ({ links = [] }) => (
     ))}
   </ul>
 );
-
-export default LinkList;
