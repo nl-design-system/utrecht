@@ -28,8 +28,10 @@
 }
 
 .docs-story {
+  /* Avoid "Show code"/"Hide code" button to become invisible for stories that render no visible content, using `min-block-size` */
   background-color: var(--utrecht-document-background-color);
   color: var(--utrecht-document-color);
+  min-block-size: 2em;
 }
 
 .utrecht-reduced-motion {
