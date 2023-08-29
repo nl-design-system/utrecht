@@ -289,13 +289,15 @@
 @mixin utrecht-button--focus-visible {
   /* the pseudo-class for `:focus-visible` is implemented via the mixin */
   @include utrecht-focus-visible;
-}
 
-@mixin utrecht-button--focus {
   background-color: var(--_utrecht-button-focus-background-color);
   border-color: var(--_utrecht-button-focus-border-color);
   color: var(--_utrecht-button-focus-color);
   scale: var(--utrecht-button-focus-scale, 1);
+}
+
+@mixin utrecht-button--focus {
+  @include utrecht-focus;
 }
 
 @mixin utrecht-button--hover {
