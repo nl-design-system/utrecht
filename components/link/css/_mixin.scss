@@ -107,16 +107,6 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
 @mixin utrecht-link--focus {
   @include utrecht-focus;
-
-  background-color: var(--utrecht-link-focus-background-color, transparent);
-  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
-  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
-  text-decoration-skip: none;
-  text-decoration-skip-ink: none;
-  text-decoration-thickness: max(
-    var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)),
-    1px
-  );
 }
 
 @mixin utrecht-link--placeholder {
@@ -127,6 +117,16 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
 @mixin utrecht-link--focus-visible {
   @include utrecht-focus-visible;
+
+  background-color: var(--utrecht-link-focus-background-color, transparent);
+  color: var(--utrecht-link-focus-color, var(--utrecht-link-color));
+  text-decoration: var(--utrecht-link-focus-text-decoration, var(--utrecht-link-text-decoration, underline));
+  text-decoration-skip: none;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: max(
+    var(--utrecht-link-focus-text-decoration-thickness, var(--utrecht-link-text-decoration-thickness)),
+    1px
+  );
 }
 
 /* stylelint-disable-next-line block-no-empty */
