@@ -1,12 +1,7 @@
-/**
- * @license EUPL-1.2
- * Copyright (c) 2022 Gemeente Utrecht
- * Copyright (c) 2022 Frameless B.V.
- */
 import clsx from 'clsx';
 import React from 'react';
 
-export const SearchBarDropdown = ({ isSelected, isActive }) => (
+const SearchBarDropdown = ({ isSelected, isActive }) => (
   <div className={clsx('utrecht-search-bar__dropdown')}>
     <section className={clsx('utrecht-search-bar__section')}>
       <span className={clsx('utrecht-search-bar__section-title')}>Section #1</span>
@@ -72,62 +67,14 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
   </div>
 );
 
-export const argTypes = {
-  buttonLabel: {
-    description: 'Label for the searchbar button',
-    type: 'text',
-  },
-  formLabel: {
-    description: 'Label for the searchbar',
-    type: 'text',
-  },
-  inputLabel: {
-    description: 'Label for the search input',
-    type: 'text',
-  },
-  value: {
-    description: 'Current search term',
-    type: 'text',
-  },
-  isOpen: {
-    type: 'boolean',
-  },
-  isActive: {
-    type: 'boolean',
-  },
-  isSelected: {
-    type: 'boolean',
-  },
-};
-
-export const defaultArgs = {
-  buttonLabel: '',
-  formLabel: '',
-  inputLabel: '',
-  value: '',
-  isOpen: false,
-  isActive: false,
-  isSelected: false,
-};
-
-export const exampleArgs = {
-  buttonLabel: 'Zoeken',
-  formLabel: 'zoeken in Utrecht.nl',
-  inputLabel: 'zoektermen',
-  value: '',
-  isOpen: false,
-  isActive: false,
-  isSelected: false,
-};
-
 export const SearchBar = ({
-  buttonLabel = defaultArgs.buttonLabel,
-  formLabel = defaultArgs.formLabel,
-  inputLabel = defaultArgs.inputLabel,
-  value = defaultArgs.value,
-  isOpen = defaultArgs.isOpen,
-  isActive = defaultArgs.isActive,
-  isSelected = defaultArgs.isSelected,
+  buttonLabel = '',
+  formLabel = '',
+  inputLabel = '',
+  value = '',
+  isOpen = false,
+  isActive = false,
+  isSelected = false,
 }) => (
   <form
     role="search"
@@ -161,5 +108,3 @@ export const SearchBar = ({
     {isOpen && <SearchBarDropdown isActive={isActive} isSelected={isSelected} />}
   </form>
 );
-
-export default SearchBar;
