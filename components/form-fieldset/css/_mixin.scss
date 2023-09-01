@@ -51,7 +51,6 @@
   line-height: var(--utrecht-form-fieldset-legend-line-height);
   page-break-after: avoid;
   page-break-inside: avoid;
-  text-transform: var(--utrecht-form-fieldset-legend-text-transform);
 }
 
 @mixin utrecht-form-fieldset__legend--disabled {
