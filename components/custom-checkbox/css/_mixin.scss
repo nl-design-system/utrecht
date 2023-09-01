@@ -6,6 +6,10 @@
 @import "../../common/focus/mixin";
 
 @mixin utrecht-custom-checkbox {
+  /*
+   * Use 24x24px as hardcoded minimum target size, to meet WCAG 2.5.8 standards.
+   * https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+   */
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -19,6 +23,8 @@
   cursor: var(--utrecht-action-activate-cursor, revert);
   inline-size: var(--utrecht-checkbox-size, 1em);
   margin-block-start: var(--utrecht-checkbox-margin-block-start);
+  min-block-size: 24px;
+  min-inline-size: 24px;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   vertical-align: top;
