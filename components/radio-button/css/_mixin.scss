@@ -17,6 +17,11 @@
 
 @mixin utrecht-radio-button {
   /*
+   * Use 24x24px as hardcoded minimum target size, to meet WCAG 2.5.8 standards.
+   * https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+   */
+
+  /*
    * For the `radial-gradient()` use a 5% gradient size to improve anti-aliasing.
    * With a 0% gradient, the circle will have jagged edges.
    */
@@ -57,6 +62,8 @@
   cursor: var(--utrecht-action-activate-cursor);
   inline-size: var(--utrecht-radio-button-size, 1em);
   margin-inline-end: var(--utrecht-radio-button-margin-inline-end);
+  min-block-size: 24px;
+  min-inline-size: 24px;
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
   -webkit-user-select: none;
