@@ -46,7 +46,7 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
-    title: {
+    'aria-label': {
       description: 'Icon Description',
       type: { name: 'string', required: true },
       table: {
@@ -67,6 +67,7 @@ const meta = {
         'utrecht-icon-linkedin',
         'utrecht-icon-twitter',
         'utrecht-icon-whatsapp',
+        'utrecht-icon-x',
       ],
     },
   },
@@ -74,7 +75,7 @@ const meta = {
     hover: false,
     href: '',
     icon: '',
-    title: '',
+    'aria-label': '',
     focusVisible: false,
   },
   parameters: {
@@ -100,7 +101,7 @@ export const Default: Story = {
   args: {
     href: 'https://www.facebook.com/GemeenteUtrecht',
     icon: 'utrecht-icon-facebook',
-    title: 'Facebook',
+    'aria-label': 'Facebook',
   },
   name: 'Facebook',
 };
