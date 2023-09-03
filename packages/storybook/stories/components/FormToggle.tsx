@@ -1,56 +1,15 @@
-/*
- * @license EUPL-1.2
- * Copyright (c) 2020-2022 Gemeente Utrecht
- * Copyright (c) 2020-2022 Frameless B.V.
- */
-
 import clsx from 'clsx';
 import React from 'react';
 
-export const argTypes = {
-  checked: {
-    description: 'Checked',
-    control: 'boolean',
-  },
-  disabled: {
-    description: 'Disabled',
-    control: 'boolean',
-  },
-  focus: {
-    description: 'Focus',
-    control: 'boolean',
-  },
-  focusVisible: {
-    description: 'Focus-visible',
-    control: 'boolean',
-  },
-  hover: {
-    description: 'Hover',
-    control: 'boolean',
-  },
-  id: {
-    description: 'id',
-    control: 'text',
-  },
-};
+interface FormToggleDivProps {
+  checked?: boolean;
+  disabled?: boolean;
+  hover?: boolean;
+  focus?: boolean;
+  focusVisible?: boolean;
+}
 
-export const defaultArgs = {
-  checked: false,
-  disabled: false,
-  focus: false,
-  focusVisible: false,
-  hover: false,
-};
-
-export const exampleArgs = {};
-
-export const FormToggle = ({
-  checked = defaultArgs.checked,
-  disabled = defaultArgs.disabled,
-  hover = defaultArgs.hover,
-  focus = defaultArgs.focus,
-  focusVisible = defaultArgs.focusVisible,
-}) => (
+const FormToggleDiv = ({ checked, disabled, hover, focus, focusVisible, ...restProps }: FormToggleDivProps) => (
   <div
     className={clsx(
       'utrecht-form-toggle',
@@ -63,9 +22,10 @@ export const FormToggle = ({
       hover && 'utrecht-form-toggle--hover',
     )}
     role="switch"
-    tabIndex="0"
+    tabIndex={0}
     aria-checked={checked || null}
     aria-disabled={disabled || null}
+    {...restProps}
   >
     <div
       className={clsx(
@@ -87,11 +47,13 @@ export const FormToggle = ({
   </div>
 );
 
-export const FormToggleCheckbox = ({
-  checked = defaultArgs.checked,
-  disabled = defaultArgs.disabled,
-  id = defaultArgs.id,
-}) => (
+interface FormToggleCheckboxProps {
+  checked?: boolean;
+  disabled?: boolean;
+  id?: string;
+}
+
+const FormToggleCheckbox = ({ checked, disabled, id }: FormToggleCheckboxProps) => (
   <div className={clsx('utrecht-form-toggle', 'utrecht-form-toggle--html-checkbox')}>
     <input
       id={id}
@@ -106,4 +68,8 @@ export const FormToggleCheckbox = ({
   </div>
 );
 
-export default FormToggle;
+export const FormToggleStory = ({
+  element,
+  ...restProps
+}: FormToggleCheckboxProps & FormToggleDivProps & { element?: string }) =>
+  element === 'div' ? <FormToggleDiv {...restProps} /> : <FormToggleCheckbox {...restProps} />;
