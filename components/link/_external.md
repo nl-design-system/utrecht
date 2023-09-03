@@ -1,36 +1,8 @@
-{/* @license CC0-1.0 */}
+<!-- @license CC0-1.0 -->
 
-import { Canvas, Meta, Story } from "@storybook/blocks";
-import { Link } from "../story-template";
-import "../index.scss";
-
-<Meta
-  id="css-link--rel-external"
-  title="CSS Component/Link/External"
-  component={Link}
-  parameters={{
-    status: {
-      type: "ALPHA",
-    },
-  }}
-/>
-
-# Externe link
+<!-- markdownlint-disable MD041 -->
 
 Styling met de `.utrecht-link--external` class naam.
-
-<Canvas>
-  <Story
-    name="External"
-    args={{
-      external: true,
-      href: "https://www.whatismyreferer.com",
-      textContent: "Voorbeeldlink",
-    }}
-  >
-    {Link.bind({})}
-  </Story>
-</Canvas>
 
 - `rel="external"` is old-school metadata without any particular effect, but it is a sementically valid way help identify external links with the `a[rel~="external"]`.
 - `rel="noopener"` helps security: disable JavaScript contact via `window.opener` between the current page and the page you link to.
