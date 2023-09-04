@@ -31,6 +31,7 @@
 }
 
 @mixin utrecht-search-bar__dropdown {
+  background-color: var(--utrecht-search-bar-dropdown-background-color);
   border-color: var(--utrecht-search-bar-dropdown-border-color);
   border-style: solid;
   border-width: var(--utrecht-search-bar-dropdown-border-width);
