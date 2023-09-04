@@ -24,13 +24,18 @@
         }
       },
       "dropdown": {
-        "inline-size": {},
+        "inline-size": {
+          "value": "448px"
+        },
         "z-index": {},
         "border-width": {
           "value": "1px"
         },
         "border-color": {
           "value": "{utrecht.color.red.40}"
+        },
+        "background-color": {
+          "value": "{utrecht.color.white}"
         },
         "padding-block-start": {
           "value": "{utrecht.space.block.xs}"
@@ -39,10 +44,7 @@
           "value": "{utrecht.space.block.xs}"
         },
         "padding-inline-start": {},
-        "padding-inline-end": {},
-        "max-block-size": {
-          "value": "300px"
-        }
+        "padding-inline-end": {}
       },
       "section": {
         "margin-block-end": {
