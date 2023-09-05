@@ -13,7 +13,7 @@ interface TextareaStoryProps extends TextareaProps {
   focus?: boolean;
   focusVisible?: boolean;
   hover?: boolean;
-  children?: any;
+  children?: string;
 }
 
 const arabicDecorator = (Story) => (
@@ -22,21 +22,33 @@ const arabicDecorator = (Story) => (
   </div>
 );
 
-const TextareaStory = ({ children, focus, focusVisible, hover, ...args }: TextareaStoryProps) => {
-  const classNames = {
-    'utrecht-textarea--focus': focus,
-    'utrecht-textarea--focus-visible': focusVisible,
-    'utrecht-textarea--hover': hover,
-  };
-
-  return <Textarea className={clsx(classNames)} defaultValue={children} {...args} />;
-};
+const TextareaStory = ({ children, focus, focusVisible, hover, ...args }: TextareaStoryProps) => (
+  <Textarea
+    className={clsx({
+      'utrecht-textarea--focus': focus,
+      'utrecht-textarea--focus-visible': focusVisible,
+      'utrecht-textarea--hover': hover,
+    })}
+    defaultValue={children}
+    {...args}
+  />
+);
 
 const meta = {
   title: 'CSS Component/Textarea',
   id: 'css-textarea',
   component: TextareaStory,
   argTypes: {
+    dir: {
+      description: 'Text direction',
+      control: { type: 'select' },
+      options: {
+        '': undefined,
+        auto: 'auto',
+        ltr: 'ltr',
+        rtl: 'rtl',
+      },
+    },
     disabled: {
       description: 'Disabled',
       control: 'boolean',
@@ -64,7 +76,11 @@ const meta = {
     spellCheck: {
       description: 'Spellcheck',
       control: { type: 'select' },
-      options: ['', 'false', 'true'],
+      options: {
+        '': undefined,
+        false: 'false',
+        true: 'true',
+      },
     },
   },
   args: {
@@ -77,6 +93,7 @@ const meta = {
     readOnly: false,
     required: false,
     children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    spellCheck: undefined,
   },
   tags: ['autodocs'],
   parameters: {
@@ -92,7 +109,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Textarea>;
+} satisfies Meta<typeof TextareaStory>;
 
 export default meta;
 
@@ -106,6 +123,22 @@ export const Default: Story = {
     docs: {
       description: {
         story: `Styling via the \`.utrecht-textarea\` class name.`,
+      },
+    },
+  },
+};
+
+export const Placeholder: Story = {
+  name: 'Placeholder',
+  args: {
+    ...Default.args,
+    children: '',
+    placeholder: 'Typ je bericht...',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'De `::placeholder` styling werkt automatisch als met de `utrecht-textarea--html-textarea` class name',
       },
     },
   },
@@ -128,6 +161,7 @@ export const RightToLeft: Story = {
       'لكن لا بد أن أوضح لك أن كل هذه الأفكار المغلوطة حول استنكار  النشوة وتمجيد الألم نشأت بالفعل، وسأعرض لك التفاصيل لتكتشف حقيقة وأساس تلك السعادة البشرية، فلا أحد يرفض أو يكره أو يتجنب الشعور بالسعادة، ولكن بفضل هؤلاء الأشخاص الذين لا يدركون بأن السعادة لا بد أن نستشعرها بصورة أكثر عقلانية ومنطقية فيعرضهم هذا لمواجهة الظروف الأليمة، وأكرر بأنه لا يوجد من يرغب في الحب ونيل المنال ويتلذذ بالآلام، الألم هو الألم ولكن نتيجة لظروف ما قد تكمن السعاده فيما نتحمله من كد وأسي.',
   },
   decorators: [arabicDecorator],
+  name: 'Right-to-left',
 };
 
 export const Spellcheck: Story = {
@@ -135,6 +169,7 @@ export const Spellcheck: Story = {
     ...Default.args,
     spellCheck: false,
   },
+  name: 'Disable spell check',
 };
 
 export const Disabled: Story = {
@@ -142,6 +177,7 @@ export const Disabled: Story = {
     ...Default.args,
     disabled: true,
   },
+  name: 'Disabled',
 };
 
 export const Invalid: Story = {
@@ -149,6 +185,7 @@ export const Invalid: Story = {
     ...Default.args,
     invalid: true,
   },
+  name: 'Invalid',
 };
 
 export const ReadOnly: Story = {
@@ -156,6 +193,7 @@ export const ReadOnly: Story = {
     ...Default.args,
     readOnly: true,
   },
+  name: 'Read-only',
 };
 
 export const Required: Story = {
@@ -163,14 +201,24 @@ export const Required: Story = {
     ...Default.args,
     required: true,
   },
+  name: 'Required',
 };
 
 export const Focus: Story = {
   args: {
     ...Default.args,
     focus: true,
+  },
+  name: 'Focus',
+};
+
+export const FocusVisible: Story = {
+  args: {
+    ...Default.args,
+    focus: true,
     focusVisible: true,
   },
+  name: 'Focus-visible',
 };
 
 export const Hover: Story = {
@@ -178,6 +226,7 @@ export const Hover: Story = {
     ...Default.args,
     hover: true,
   },
+  name: 'Hover',
 };
 
 export const DesignTokens = designTokenStory(meta);
