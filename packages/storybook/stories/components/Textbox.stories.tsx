@@ -3,41 +3,43 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Textbox, TextboxProps } from '@utrecht/component-library-react/src/css-module/Textbox';
 import readme from '@utrecht/components/textbox/README.md?raw';
+import achternaamDocs from '@utrecht/components/textbox/_achternaam.md?raw';
+import emailDocs from '@utrecht/components/textbox/_email.md?raw';
+import houseletterDocs from '@utrecht/components/textbox/_huisletter.md?raw';
+import housenumberDocs from '@utrecht/components/textbox/_huisnummer.md?raw';
+import houseSuffixDocs from '@utrecht/components/textbox/_huistoevoeging.md?raw';
+import choosePasswordDocs from '@utrecht/components/textbox/_kiesWachtwoord.md?raw';
+import naamDocs from '@utrecht/components/textbox/_naam.md?raw';
+import organisationDocs from '@utrecht/components/textbox/_organisatie.md?raw';
+import postcodeDocs from '@utrecht/components/textbox/_postcode.md?raw';
+import requiredDocs from '@utrecht/components/textbox/_required.md?raw';
+import voornaamDocs from '@utrecht/components/textbox/_voornaam.md?raw';
+import namePrefixDocs from '@utrecht/components/textbox/_voorvoegsel.md?raw';
+import passwordForAuthentificationDocs from '@utrecht/components/textbox/_wachtwoordVoorAuthentificatie.md?raw';
+import websiteDocs from '@utrecht/components/textbox/_website.md?raw';
+import placeOfResidenceDocs from '@utrecht/components/textbox/_woonplaats.md?raw';
 import tokensDefinition from '@utrecht/components/textbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
-import achternaamDocs from './docs/autocomplete/_achternaam.md?raw';
-import houseletterDocs from './docs/autocomplete/_huisletter.md?raw';
-import housenumberDocs from './docs/autocomplete/_huisnummer.md?raw';
-import houseSuffixDocs from './docs/autocomplete/_huistoevoeging.md?raw';
-import choosePasswordDocs from './docs/autocomplete/_kiesWachtwoord.md?raw';
-import naamDocs from './docs/autocomplete/_naam.md?raw';
-import organisationDocs from './docs/autocomplete/_organisatie.md?raw';
-import postcodeDocs from './docs/autocomplete/_postcode.md?raw';
-import voornaamDocs from './docs/autocomplete/_voornaam.md?raw';
-import namePrefixDocs from './docs/autocomplete/_voorvoegsel.md?raw';
-import passwordForAuthentificationDocs from './docs/autocomplete/_wachtwoordVoorAuthentificatie.md?raw';
-import websiteDocs from './docs/autocomplete/_website.md?raw';
-import placeOfResidenceDocs from './docs/autocomplete/_woonplaats.md?raw';
-import requiredDocs from './docs/state/_required.md?raw';
 import { designTokenStory } from './util';
 
 interface TextboxStoryProps extends TextboxProps {
   focus?: boolean;
   focusVisible?: boolean;
-  hover?: boolean;
-  children?: any;
+  placeholderDir?: string;
 }
 
-const TextboxStory = ({ children, focus, focusVisible, ...args }: TextboxStoryProps) => {
-  const classNames = {
-    'utrecht-textarea--focus': focus,
-    'utrecht-textarea--focus-visible': focusVisible,
-  };
-
-  return <Textbox className={clsx(classNames)} defaultValue={children} {...args} />;
-};
+const TextboxStory = ({ value, focus, focusVisible, ...args }: TextboxStoryProps) => (
+  <Textbox
+    className={clsx({
+      'utrecht-textarea--focus': focus,
+      'utrecht-textarea--focus-visible': focusVisible,
+    })}
+    defaultValue={value}
+    {...args}
+  />
+);
 
 const meta = {
   title: 'CSS Component/Textbox',
@@ -152,7 +154,16 @@ const meta = {
     type: {
       description: 'Type',
       control: 'select',
-      options: ['', 'email', 'number', 'password', 'search', 'tel', 'text', 'url'],
+      options: {
+        '': null,
+        email: 'email',
+        number: 'number',
+        password: 'number',
+        search: 'search',
+        tel: 'tel',
+        text: 'text',
+        url: 'url',
+      },
     },
     value: {
       description: 'Set the value of the text box',
@@ -167,7 +178,8 @@ const meta = {
     invalid: false,
     readOnly: false,
     required: false,
-    defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    value: '',
+    type: null,
   },
   tags: ['autodocs'],
   parameters: {
@@ -183,25 +195,28 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Textbox>;
+} satisfies Meta<typeof TextboxStory>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    value: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+  },
+};
 
 export const AutocompleteNaam: Story = {
   name: 'Naam',
   args: {
     autoComplete: 'name',
     spellCheck: 'false',
-    defaultValue: 'Sjors van Amerongen',
+    value: 'Sjors van Amerongen',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: naamDocs,
       },
@@ -212,15 +227,13 @@ export const AutocompleteNaam: Story = {
 export const AutocompleteVoornaam: Story = {
   name: 'Voornaam',
   args: {
-    ...Default.args,
     autoComplete: 'given-name',
     spellCheck: 'false',
-    defaultValue: 'Sjors',
+    value: 'Sjors',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: voornaamDocs,
       },
@@ -233,12 +246,11 @@ export const AutocompleteAchternaam: Story = {
   args: {
     autoComplete: 'family-name',
     spellCheck: 'false',
-    defaultValue: 'van der Meer',
+    value: 'van der Meer',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: achternaamDocs,
       },
@@ -249,15 +261,13 @@ export const AutocompleteAchternaam: Story = {
 export const AutocompleteVoorvoegsel: Story = {
   name: 'Voorvoegsel',
   args: {
-    ...Default.args,
     autoComplete: 'name-prefix',
     spellCheck: 'false',
-    defaultValue: 'van der',
+    value: 'van der',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: namePrefixDocs,
       },
@@ -268,15 +278,13 @@ export const AutocompleteVoorvoegsel: Story = {
 export const AutocompletePostcode: Story = {
   name: 'Postcode',
   args: {
-    ...Default.args,
     autoComplete: 'postal-code',
     spellCheck: 'false',
-    defaultValue: '3521 AZ',
+    value: '3521 AZ',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: postcodeDocs,
       },
@@ -287,18 +295,34 @@ export const AutocompletePostcode: Story = {
 export const AutocompleteTelefoonnummer: Story = {
   name: 'Telefoonnummer',
   args: {
-    ...Default.args,
     autoComplete: 'tel',
     type: 'tel',
     spellCheck: 'false',
-    defaultValue: '+31 30 286 00 00',
+    value: '+31 30 286 00 00',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: `Gebruik de \`autocomplete\` waarde \`tel\` of \`tel-national\`, en \`type="tel"\`.`,
+      },
+    },
+  },
+};
+
+export const AutocompleteTelefoonnummerNational: Story = {
+  name: 'Telefoonnummer (in Nederland)',
+  args: {
+    autoComplete: 'tel',
+    type: 'tel-national',
+    spellCheck: 'false',
+    value: '030 286 00 00',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: `Gebruik de \`autocomplete\` waarde \`tel-national\` en \`type="tel"\`.`,
       },
     },
   },
@@ -307,18 +331,16 @@ export const AutocompleteTelefoonnummer: Story = {
 export const AutocompleteEmailadres: Story = {
   name: 'E-mailadres',
   args: {
-    ...Default.args,
     autoComplete: 'email',
     type: 'email',
     spellCheck: 'false',
-    defaultValue: 'info@example.fi',
+    value: 'info@example.fi',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
-        story: `Gebruik de \`autocomplete\` waarde \`email\`, \`type="email"\` en de \`utrecht-textbox--url\` _class name_.`,
+        story: emailDocs,
       },
     },
   },
@@ -327,16 +349,14 @@ export const AutocompleteEmailadres: Story = {
 export const AutocompleteWebsite: Story = {
   name: 'Website',
   args: {
-    ...Default.args,
     autoComplete: 'url',
     type: 'url',
     spellCheck: 'false',
-    defaultValue: 'https://example.fi',
+    value: 'https://example.fi',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: websiteDocs,
       },
@@ -348,13 +368,13 @@ export const AutocompleteWachtwoordVoorAuthenticatie: Story = {
   name: 'Wachtwoord',
   args: {
     autoComplete: 'current-password',
+    value: 'warn7cavil@flicker8MIGHTY',
     type: 'password',
     spellCheck: 'false',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: passwordForAuthentificationDocs,
       },
@@ -365,16 +385,14 @@ export const AutocompleteWachtwoordVoorAuthenticatie: Story = {
 export const AutocompleteWachtwoordKiezen: Story = {
   name: 'Wachtwoord kiezen',
   args: {
-    ...Default.args,
     autoComplete: 'new-password',
     type: 'password',
     spellCheck: 'false',
-    defaultValue: undefined,
+    value: 'hypnotic*exhaust_sees9SHADE',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: choosePasswordDocs,
       },
@@ -385,9 +403,8 @@ export const AutocompleteWachtwoordKiezen: Story = {
 export const AutocompleteOrganisatienaamInNederland: Story = {
   name: 'Organisatienaam',
   args: {
-    ...Default.args,
     autoComplete: 'organization',
-    defaultValue: undefined,
+    value: 'Kamer van Koophandel',
   },
   parameters: {
     status: {
@@ -395,7 +412,6 @@ export const AutocompleteOrganisatienaamInNederland: Story = {
     },
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: organisationDocs,
       },
@@ -406,13 +422,12 @@ export const AutocompleteOrganisatienaamInNederland: Story = {
 export const AutocompleteHuisnummerInNederland: Story = {
   name: 'Huisnummer (in Nederland)',
   args: {
-    ...Default.args,
     inputMode: 'numeric',
     maxLength: 5,
     min: 1,
     max: 99999,
     pattern: '[0-9]+',
-    defaultValue: undefined,
+    value: '42',
   },
   parameters: {
     status: {
@@ -420,7 +435,6 @@ export const AutocompleteHuisnummerInNederland: Story = {
     },
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: housenumberDocs,
       },
@@ -431,10 +445,9 @@ export const AutocompleteHuisnummerInNederland: Story = {
 export const AutocompleteHuisletterInNederland: Story = {
   name: 'Huisletter (in Nederland)',
   args: {
-    ...Default.args,
     maxLength: 1,
     pattern: '[A-Za-z]+',
-    defaultValue: undefined,
+    value: 'Q',
   },
   parameters: {
     status: {
@@ -442,7 +455,6 @@ export const AutocompleteHuisletterInNederland: Story = {
     },
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: houseletterDocs,
       },
@@ -453,10 +465,9 @@ export const AutocompleteHuisletterInNederland: Story = {
 export const AutocompleteHuistoevoegingInNederland: Story = {
   name: 'Huistoevoeging (in Nederland)',
   args: {
-    ...Default.args,
     maxLength: 4,
     pattern: '[A-Za-z0-9]{0,4}',
-    defaultValue: undefined,
+    value: 'AA08',
   },
   parameters: {
     status: {
@@ -464,7 +475,6 @@ export const AutocompleteHuistoevoegingInNederland: Story = {
     },
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: houseSuffixDocs,
       },
@@ -475,8 +485,7 @@ export const AutocompleteHuistoevoegingInNederland: Story = {
 export const AutocompleteWoonplaatsInNederland: Story = {
   name: 'Woonplaats (in Nederland)',
   args: {
-    ...Default.args,
-    defaultValue: undefined,
+    value: 'Westerhaar-Vriezenveensewijk',
   },
   parameters: {
     status: {
@@ -484,7 +493,6 @@ export const AutocompleteWoonplaatsInNederland: Story = {
     },
     chromatic: { disableSnapshot: true },
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: placeOfResidenceDocs,
       },
@@ -493,7 +501,7 @@ export const AutocompleteWoonplaatsInNederland: Story = {
 };
 
 export const DisabledState: Story = {
-  name: 'Disabled Textbox',
+  name: 'Disabled',
   args: {
     ...Default.args,
     disabled: true,
@@ -501,7 +509,7 @@ export const DisabledState: Story = {
 };
 
 export const InvalidState: Story = {
-  name: 'Invalid Textbox',
+  name: 'Invalid',
   args: {
     ...Default.args,
     invalid: true,
@@ -509,7 +517,7 @@ export const InvalidState: Story = {
 };
 
 export const ReadonlyState: Story = {
-  name: 'Read-only Textbox',
+  name: 'Read-only',
   args: {
     ...Default.args,
     readOnly: true,
@@ -517,14 +525,13 @@ export const ReadonlyState: Story = {
 };
 
 export const RequiredState: Story = {
-  name: 'Required Textbox',
+  name: 'Required',
   args: {
     ...Default.args,
     required: true,
   },
   parameters: {
     docs: {
-      ...Default.parameters?.['docs'],
       description: {
         story: requiredDocs,
       },
@@ -533,7 +540,7 @@ export const RequiredState: Story = {
 };
 
 export const FocusState: Story = {
-  name: 'Focussed Textbox',
+  name: 'Focus-visible',
   args: {
     ...Default.args,
     focus: true,
