@@ -17,16 +17,18 @@ interface RadioButtonStoryProps extends RadioButtonProps {
   active?: boolean;
 }
 
-const RadioButtonStory = ({ active, focus, focusVisible, hover, ...args }: RadioButtonStoryProps) => {
-  const classNames = {
-    'utrecht-radio-button--active': active,
-    'utrecht-radio-button--focus': focus,
-    'utrecht-radio-button--focus-visible': focusVisible,
-    'utrecht-radio-button--hover': hover,
-  };
-
-  return <RadioButton className={clsx(classNames)} {...args} />;
-};
+const RadioButtonStory = ({ active, focus, focusVisible, hover, name, ...args }: RadioButtonStoryProps) => (
+  <RadioButton
+    className={clsx({
+      'utrecht-radio-button--active': active,
+      'utrecht-radio-button--focus': focus,
+      'utrecht-radio-button--focus-visible': focusVisible,
+      'utrecht-radio-button--hover': hover,
+    })}
+    name={name || undefined}
+    {...args}
+  />
+);
 
 const meta = {
   title: 'CSS Component/Radio Button',
@@ -41,7 +43,6 @@ const meta = {
     focusVisible: false,
     invalid: false,
     name: '',
-    id: '',
   },
   argTypes: {
     checked: {
@@ -72,6 +73,10 @@ const meta = {
       description: 'Invalid',
       control: 'boolean',
     },
+    name: {
+      description: 'Radio group name. Use the same name for each radio button in a group.',
+      control: 'string',
+    },
   },
   parameters: {
     tokensPrefix: 'utrecht-radio-button',
@@ -86,7 +91,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof RadioButton>;
+} satisfies Meta<typeof RadioButtonStory>;
 
 export default meta;
 
@@ -95,39 +100,34 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
 
 export const Hover: Story = {
-  name: 'Hover State',
+  name: 'Hover',
   args: {
-    ...Default.args,
     hover: true,
   },
 };
 
 export const Focus: Story = {
-  name: 'Focus State',
+  name: 'Focus',
   args: {
-    ...Default.args,
     focus: true,
   },
 };
 
 export const FocusVisible: Story = {
-  name: 'Focus Visible State',
+  name: 'Focus Visible',
   args: {
-    ...Default.args,
     focus: true,
     focusVisible: true,
   },
 };
 
 export const Active: Story = {
-  name: 'Active State',
+  name: 'Active',
   args: {
-    ...Default.args,
     active: true,
     focus: true,
   },
   parameters: {
-    ...Default.parameters,
     docs: {
       description: {
         story: `When the component is \`active\`, it always has \`focus\` too. Test these states together for accurate results.`,
@@ -137,26 +137,23 @@ export const Active: Story = {
 };
 
 export const Disabled: Story = {
-  name: 'Disabled State',
+  name: 'Disabled',
   args: {
-    ...Default.args,
     disabled: true,
   },
 };
 
 export const DisabledAndFocussed: Story = {
-  name: 'Disabled and Focus State',
+  name: 'Disabled and Focus',
   args: {
-    ...Default.args,
     disabled: true,
     focus: true,
   },
 };
 
 export const DisabledAndFocusVisible: Story = {
-  name: 'Disabled and Focus-Visible State',
+  name: 'Disabled and Focus-Visible',
   args: {
-    ...Default.args,
     disabled: true,
     focus: true,
     focusVisible: true,
@@ -164,44 +161,39 @@ export const DisabledAndFocusVisible: Story = {
 };
 
 export const DisabledAndHover: Story = {
-  name: 'Disabled and Hover State',
+  name: 'Disabled and Hover',
   args: {
-    ...Default.args,
     disabled: true,
     hover: true,
   },
 };
 
 export const DisabledAndActive: Story = {
-  name: 'Disabled and Active State',
+  name: 'Disabled and Active',
   args: {
-    ...Default.args,
     disabled: true,
     active: true,
   },
 };
 
 export const Checked: Story = {
-  name: 'Checked State',
+  name: 'Checked',
   args: {
-    ...Default.args,
     checked: true,
   },
 };
 
 export const CheckedAndFocus: Story = {
-  name: 'Checked and Focus State',
+  name: 'Checked and Focus',
   args: {
-    ...Default.args,
     checked: true,
     focus: true,
   },
 };
 
 export const CheckedAndFocusVisible: Story = {
-  name: 'Checked and Focus-Visible State',
+  name: 'Checked and Focus-Visible',
   args: {
-    ...Default.args,
     checked: true,
     focus: true,
     focusVisible: true,
@@ -209,42 +201,37 @@ export const CheckedAndFocusVisible: Story = {
 };
 
 export const CheckedAndHover: Story = {
-  name: 'Checked and Hover State',
+  name: 'Checked and Hover',
   args: {
-    ...Default.args,
     checked: true,
     hover: true,
   },
 };
 
 export const CheckedAndActive: Story = {
-  name: 'Checked and Active State',
+  name: 'Checked and Active',
   args: {
-    ...Default.args,
     checked: true,
     active: true,
   },
 };
 
 export const CheckedAndDisabled: Story = {
-  name: 'Checked and Disabled State',
+  name: 'Checked and Disabled',
   args: {
-    ...Default.args,
     checked: true,
     disabled: true,
   },
 };
 
 export const CheckedDisabledAndHover: Story = {
-  name: 'Checked, Disabled and Hover State',
+  name: 'Checked, Disabled and Hover',
   args: {
-    ...Default.args,
     checked: true,
     disabled: true,
     hover: true,
   },
   parameters: {
-    ...Default.parameters,
     docs: {
       description: {
         story: `Should be identical to "Checked + disabled"`,
@@ -254,15 +241,30 @@ export const CheckedDisabledAndHover: Story = {
 };
 
 export const CheckedDisabledAndFocus: Story = {
-  name: 'Checked, Disabled and Focus State',
+  name: 'Checked, Disabled and Focus',
   args: {
-    ...Default.args,
     checked: true,
     disabled: true,
     focus: true,
   },
   parameters: {
-    ...Default.parameters,
+    docs: {
+      description: {
+        story: `Should be identical to "Checked + disabled"`,
+      },
+    },
+  },
+};
+
+export const CheckedDisabledAndFocusVisible: Story = {
+  name: 'Checked, Disabled and Focus-visible',
+  args: {
+    checked: true,
+    disabled: true,
+    focus: true,
+    focusVisible: true,
+  },
+  parameters: {
     docs: {
       description: {
         story: `Should be identical to "Checked + disabled"`,
@@ -272,16 +274,14 @@ export const CheckedDisabledAndFocus: Story = {
 };
 
 export const CheckedDisabledAndActive: Story = {
-  name: 'Checked, Disabled and Active State',
+  name: 'Checked, Disabled and Active',
   args: {
-    ...Default.args,
     checked: true,
     disabled: true,
     active: true,
     focus: true,
   },
   parameters: {
-    ...Default.parameters,
     docs: {
       description: {
         story: `Should be identical to "Checked + disabled"`,
@@ -291,17 +291,15 @@ export const CheckedDisabledAndActive: Story = {
 };
 
 export const Invalid: Story = {
-  name: 'Invalid State',
+  name: 'Invalid',
   args: {
-    ...Default.args,
     invalid: true,
   },
 };
 
 export const CheckedAndInvalid: Story = {
-  name: 'Checked and Invalid State',
+  name: 'Checked and Invalid',
   args: {
-    ...Default.args,
     checked: true,
     invalid: true,
   },
