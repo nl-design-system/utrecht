@@ -1,15 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import {
-  Button,
-  Combobox,
-  Listbox,
-  ListboxOption,
-  ListboxOptionGroup,
-  SearchBarFormField,
-  Textbox,
-} from '@utrecht/component-library-react/dist/css-module/index';
-import clsx from 'clsx';
-import React, { PropsWithChildren, ReactNode } from 'react';
+import comboboxDocs from '@utrecht/components/search-bar/_combobox.md?raw';
+import defaultDocs from '@utrecht/components/search-bar/_default.md?raw';
+import React from 'react';
+import { SearchBarComboboxStory } from './SearchBar';
 
 const spaceForPopover = (Story) => <div style={{ minBlockSize: '42em' }}>{Story()}</div>;
 
@@ -61,100 +54,8 @@ const exampleOptionGroups = [
   },
 ];
 
-interface SearchBarComboboxStoryProps {
-  buttonLabel?: string;
-  formLabel?: string;
-  textboxLabel?: string;
-  textboxPlaceholder?: string;
-  expanded?: boolean;
-  options: {
-    id: string;
-    label: ReactNode;
-    active?: boolean;
-    selected?: boolean;
-    value?: any;
-    options?: {
-      id: string;
-      label: ReactNode;
-      active?: boolean;
-      selected?: boolean;
-      value?: any;
-    }[];
-  }[];
-}
-
-const SearchBarTextbox = ({ ...restProps }) => (
-  <Textbox type="search" autoComplete="off" className="utrecht-search-bar__input" {...restProps} />
-);
-
-const SearchBarCombobox = ({ ...restProps }) => <Combobox className="utrecht-search-bar__combobox" {...restProps} />;
-
-const SearchBarButton = ({ ...restProps }) => (
-  <Button type="submit" appearance="primary-action-button" className="utrecht-search-bar__button" {...restProps} />
-);
-
-const SearchBarListboxPopover = ({ expanded, ...restProps }: PropsWithChildren<{ expanded?: boolean }>) => (
-  <Listbox
-    className={clsx('utrecht-search-bar__popover', 'utrecht-search-bar__popover--block-end')}
-    hidden={!expanded}
-    {...restProps}
-  />
-);
-const SearchBarComboboxStory = ({
-  options,
-  expanded,
-  formLabel,
-  textboxLabel,
-  textboxPlaceholder,
-  buttonLabel,
-}: SearchBarComboboxStoryProps) => {
-  return (
-    <form role="search" aria-label={formLabel || undefined}>
-      <SearchBarFormField>
-        <SearchBarCombobox>
-          <SearchBarTextbox aria-label={textboxLabel || undefined} placeholder={textboxPlaceholder || undefined} />
-          {Array.isArray(options) && (
-            <SearchBarListboxPopover expanded={expanded}>
-              {
-                options.reduce(
-                  (result: { list: ReactNode[]; itemIndex: number }, group, groupIndex) => {
-                    if (group.options && Array.isArray(group.options)) {
-                      result.list.push(
-                        <ListboxOptionGroup key={groupIndex} label={group?.label}>
-                          {group.options.map((item, itemIndex) => {
-                            result.itemIndex++;
-                            return (
-                              <ListboxOption active={item.active} selected={item.selected} key={itemIndex}>
-                                {item.label}
-                              </ListboxOption>
-                            );
-                          })}
-                        </ListboxOptionGroup>,
-                      );
-                    } else {
-                      result.list.push(
-                        <ListboxOption active={group.active} selected={group.selected} key={groupIndex}>
-                          {group.label}
-                        </ListboxOption>,
-                      );
-                    }
-
-                    return result;
-                  },
-                  { list: [], itemIndex: 0 },
-                ).list
-              }
-            </SearchBarListboxPopover>
-          )}
-        </SearchBarCombobox>
-        <SearchBarButton>{buttonLabel}</SearchBarButton>
-      </SearchBarFormField>
-    </form>
-  );
-};
-
 const meta = {
-  title: 'CSS Component/Search bar/Combobox',
+  title: 'CSS Component/Search bar/Search bar with combobox',
   id: 'css-search-bar-combobox',
   component: SearchBarComboboxStory,
   tags: ['autodocs'],
@@ -166,6 +67,10 @@ const meta = {
     expanded: {
       description: 'Expanded',
       type: 'boolean',
+    },
+    name: {
+      description: 'Name in HTTP submit',
+      type: 'string',
     },
     formLabel: {
       description: 'Form label',
@@ -198,6 +103,16 @@ const meta = {
     options: [],
   },
   decorators: [spaceForPopover],
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+    docs: {
+      description: {
+        component: comboboxDocs,
+      },
+    },
+  },
 } satisfies Meta<typeof SearchBarComboboxStory>;
 
 export default meta;
@@ -208,23 +123,36 @@ export const Default: Story = {
   args: {
     buttonLabel: 'Zoeken',
     formLabel: 'zoeken in Utrecht.nl',
+    name: 'q',
+    popoverId: 'ea5da879-6022-4a76-911e-0aae3813cbdb',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: defaultDocs,
+      },
+    },
   },
 };
 
 export const Options: Story = {
   args: {
     buttonLabel: 'Zoeken',
-    formLabel: 'zoeken in Utrecht.nl',
     expanded: true,
+    formLabel: 'zoeken in Utrecht.nl',
+    name: 'q',
     options: exampleOptions,
+    popoverId: '4e023c43-3a7f-4636-b298-4154fe02d382',
   },
 };
 
 export const OptionGroup: Story = {
   args: {
     buttonLabel: 'Zoeken',
-    formLabel: 'zoeken in Utrecht.nl',
     expanded: true,
+    formLabel: 'zoeken in Utrecht.nl',
+    name: 'q',
     options: exampleOptionGroups,
+    popoverId: '2ca6fdf8-a216-4967-a7f2-889540619b56',
   },
 };

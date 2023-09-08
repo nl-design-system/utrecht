@@ -31,23 +31,27 @@
 }
 
 @mixin utrecht-combobox {
-  position: relative;
   inline-size: 100%;
   max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
+  position: relative;
 }
 
 @mixin utrecht-search-bar__popover {
+  background-color: canvas;
+
   /* reset `padding` and `border` default styling from [popover] attribute */
   block-size: fit-content;
-  inline-size: fit-content;
-  position: absolute;
-  overflow: auto;
-  z-index: var(--utrecht-search-bar-dropdown-z-index);
-  color: CanvasText;
-  background-color: Canvas;
-  padding: 0;
   border-width: 0;
+  color: canvastext;
+  inline-size: fit-content;
   inset: 0;
+  overflow: auto;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+  padding-inline-start: 0;
+  position: absolute;
+  z-index: var(--utrecht-search-bar-dropdown-z-index);
 }
 
 @mixin utrecht-search-bar__popover--block-end {
@@ -60,8 +64,8 @@
   border-style: solid;
   border-width: var(--utrecht-search-bar-dropdown-border-width);
   inline-size: var(--utrecht-search-bar-dropdown-inline-size, var(--utrecht-form-input-max-inline-size));
-  min-block-size: 1em;
   max-block-size: var(--utrecht-search-bar-dropdown-max-block-size);
+  min-block-size: 1em;
   padding-block-end: var(--utrecht-search-bar-dropdown-padding-block-end);
   padding-block-start: var(--utrecht-search-bar-dropdown-padding-block-start);
   padding-inline-end: var(--utrecht-search-bar-dropdown-padding-inline-end);

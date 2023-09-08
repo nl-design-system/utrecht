@@ -1,6 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SearchBar } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/search-bar/README.md?raw';
+import { SearchBar } from '@utrecht/component-library-react/src/SearchBarDownshift';
 import defaultDocs from '@utrecht/components/search-bar/_default.md?raw';
 import expandedDocs from '@utrecht/components/search-bar/_expanded.md?raw';
 import optionActiveDocs from '@utrecht/components/search-bar/_option-active.md?raw';
