@@ -30,27 +30,49 @@
   background-size: var(--utrecht-search-bar-input-background-size);
 }
 
-@mixin utrecht-search-bar__dropdown {
+@mixin utrecht-combobox {
+  position: relative;
+  inline-size: 100%;
+  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
+}
+
+@mixin utrecht-search-bar__popover {
+  /* reset `padding` and `border` default styling from [popover] attribute */
+  block-size: fit-content;
+  inline-size: fit-content;
+  position: absolute;
+  overflow: auto;
+  z-index: var(--utrecht-search-bar-dropdown-z-index);
+  color: CanvasText;
+  background-color: Canvas;
+  padding: 0;
+  border-width: 0;
+  inset: 0;
+}
+
+@mixin utrecht-search-bar__popover--block-end {
+  inset-block-start: 100%;
+}
+
+@mixin utrecht-listbox {
   background-color: var(--utrecht-search-bar-dropdown-background-color);
   border-color: var(--utrecht-search-bar-dropdown-border-color);
   border-style: solid;
   border-width: var(--utrecht-search-bar-dropdown-border-width);
   inline-size: var(--utrecht-search-bar-dropdown-inline-size, var(--utrecht-form-input-max-inline-size));
+  min-block-size: 1em;
   max-block-size: var(--utrecht-search-bar-dropdown-max-block-size);
-  overflow: auto;
   padding-block-end: var(--utrecht-search-bar-dropdown-padding-block-end);
   padding-block-start: var(--utrecht-search-bar-dropdown-padding-block-start);
   padding-inline-end: var(--utrecht-search-bar-dropdown-padding-inline-end);
   padding-inline-start: var(--utrecht-search-bar-dropdown-padding-inline-start);
-  position: absolute;
-  z-index: var(--utrecht-search-bar-dropdown-z-index);
 }
 
-@mixin utrecht-search-bar__section {
+@mixin utrecht-listbox__group {
   margin-block-end: var(--utrecht-search-bar-section-margin-block-end);
 }
 
-@mixin utrecht-search-bar__section-title {
+@mixin utrecht-listbox__group-label {
   color: var(--utrecht-search-bar-section-title-color);
   font-size: var(--utrecht-search-bar-section-title-font-size);
   font-weight: var(--utrecht-search-bar-section-title-font-weight);
@@ -58,20 +80,20 @@
   margin-inline-start: var(--utrecht-search-bar-section-title-margin-inline-start);
 }
 
-@mixin utrecht-search-bar__list-item {
+@mixin utrecht-listbox__option {
   padding-block-end: var(--utrecht-search-bar-list-item-padding-block-end);
   padding-block-start: var(--utrecht-search-bar-list-item-padding-block-start);
   padding-inline-end: var(--utrecht-search-bar-list-item-padding-inline-end);
   padding-inline-start: var(--utrecht-search-bar-list-item-padding-inline-start);
 }
 
-@mixin utrecht-search-bar__list-item--is-active {
+@mixin utrecht-listbox__option--active {
   background-color: var(--utrecht-search-bar-list-item-is-active-background-color);
   color: var(--utrecht-search-bar-list-item-is-active-color);
   font-weight: var(--utrecht-search-bar-list-item-is-active-font-weight);
 }
 
-@mixin utrecht-search-bar__list-item--is-selected {
+@mixin utrecht-listbox__option--selected {
   background-color: var(--utrecht-search-bar-list-item-is-selected-background-color);
   color: var(--utrecht-search-bar-list-item-is-selected-color);
 }

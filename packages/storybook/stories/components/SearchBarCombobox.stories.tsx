@@ -2,10 +2,10 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { SearchBar } from '@utrecht/component-library-react/dist/css-module/index';
 import tokensDefinition from '@utrecht/components/search-bar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { ReactNode } from 'react';
 import { designTokenStory } from './util';
 
-const customRenderOptions = (option: any) => {
+const CustomOption = (option: { name: ReactNode; year: number }) => {
   return (
     <div>
       <h4>Language: {option.name}</h4>
@@ -13,6 +13,90 @@ const customRenderOptions = (option: any) => {
     </div>
   );
 };
+
+const itemToString = (item: any) => {
+  return item ? item.name : '';
+};
+
+const meta = {
+  title: 'CSS Component/Search bar combobox',
+  id: 'css-search-bar-combobox',
+  component: SearchBar,
+  tags: ['autodocs'],
+  argTypes: {
+    input: {
+      name: 'input',
+      type: { name: 'string', required: true },
+      default: {},
+      description: 'Configuration for an input field, extending properties from TextboxProps.',
+      table: {
+        type: {
+          summary: 'object',
+        },
+      },
+    },
+    itemToString: {
+      name: 'itemToString',
+      type: { name: 'function', required: true },
+      default: itemToString,
+      options: [itemToString],
+      description:
+        'A function responsible for converting an item into its string representation for display in the list.',
+      table: {
+        type: {
+          summary: 'function',
+        },
+      },
+    },
+    items: {
+      name: 'items',
+      default: undefined,
+      description: "An array of items to populate the search bar's dropdown list.",
+      table: {
+        type: {
+          summary: 'array',
+        },
+      },
+    },
+    button: {
+      name: 'button',
+      default: {},
+      description: 'Configuration for a button, extending properties from ButtonProps.',
+      table: {
+        type: {
+          summary: 'object',
+        },
+      },
+    },
+    renderOptions: {
+      name: 'renderOptions',
+      type: { name: 'function', required: false },
+      default: CustomOption,
+      options: [CustomOption],
+      description: 'A function that provides custom rendering for individual search result options.',
+      table: {
+        type: {
+          summary: 'function',
+        },
+      },
+    },
+  },
+  parameters: {
+    tokensPrefix: 'utrecht-search-bar',
+    tokens,
+    tokensDefinition,
+    docs: {
+      description: {
+        component:
+          '`SearchBar`  This component extends the [Downshift](https://www.npmjs.com/package/downshift#onstatechange) Component Thant means you can use `Downshift` props',
+      },
+    },
+  },
+} satisfies Meta<typeof SearchBar>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 const languages = [
   {
@@ -97,89 +181,6 @@ const languages = [
     ],
   },
 ];
-const itemToString = (item: any) => {
-  return item ? item.name : '';
-};
-
-const meta: Meta<typeof SearchBar> = {
-  title: 'CSS Component/SearchBar',
-  id: 'css-search-bar',
-  component: SearchBar,
-  tags: ['autodocs'],
-  argTypes: {
-    input: {
-      name: 'input',
-      type: { name: 'string', required: true },
-      default: {},
-      description: 'Configuration for an input field, extending properties from TextboxProps.',
-      table: {
-        type: {
-          summary: 'object',
-        },
-      },
-    },
-    itemToString: {
-      name: 'itemToString',
-      type: { name: 'function', required: true },
-      default: itemToString,
-      options: [itemToString],
-      description:
-        'A function responsible for converting an item into its string representation for display in the list.',
-      table: {
-        type: {
-          summary: 'function',
-        },
-      },
-    },
-    items: {
-      name: 'items',
-      default: undefined,
-      description: "An array of items to populate the search bar's dropdown list.",
-      table: {
-        type: {
-          summary: 'array',
-        },
-      },
-    },
-    button: {
-      name: 'button',
-      default: {},
-      description: 'Configuration for a button, extending properties from ButtonProps.',
-      table: {
-        type: {
-          summary: 'object',
-        },
-      },
-    },
-    renderOptions: {
-      name: 'renderOptions',
-      type: { name: 'function', required: false },
-      default: customRenderOptions,
-      options: [customRenderOptions],
-      description: 'A function that provides custom rendering for individual search result options.',
-      table: {
-        type: {
-          summary: 'function',
-        },
-      },
-    },
-  },
-  parameters: {
-    tokensPrefix: 'utrecht-search-bar',
-    tokens,
-    tokensDefinition,
-    docs: {
-      description: {
-        component:
-          '`SearchBar`  This component extends the [Downshift](https://www.npmjs.com/package/downshift#onstatechange) Component Thant means you can use `Downshift` props',
-      },
-    },
-  },
-};
-
-export default meta;
-
-type Story = StoryObj<typeof SearchBar>;
 
 /**
  * SearchBar Component
@@ -248,6 +249,14 @@ export const Default: Story = {
   },
 };
 
+export const Vertical: Story = {
+  args: {
+    ...Default.args,
+  },
+  decorators: [(Story) => <div style={{ writingMode: 'vertical-lr' }}>{Story()}</div>],
+  name: 'Vertical writing mode',
+};
+
 export const IsOpen: Story = {
   args: {
     isOpen: true,
@@ -289,7 +298,7 @@ export const CustomRenderOptions: Story = {
     items: languages,
     initialSelectedItem: languages[0].list[0],
     itemToString,
-    renderOptions: customRenderOptions,
+    renderOptions: CustomOption,
     button: {
       label: 'Search',
     },

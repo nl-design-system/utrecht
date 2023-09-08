@@ -13,22 +13,37 @@
   @include utrecht-search-bar__input;
 }
 
-.utrecht-search-bar__dropdown {
-  @include utrecht-search-bar__dropdown;
+.utrecht-search-bar__popover {
+  @include utrecht-search-bar__popover;
+}
+.utrecht-search-bar__popover--block-end {
+  @include utrecht-search-bar__popover--block-end;
 }
 
-.utrecht-search-bar__section-title {
-  @include utrecht-search-bar__section-title;
+.utrecht-combobox {
+  @include utrecht-combobox;
 }
 
-.utrecht-search-bar__list-item {
-  @include utrecht-search-bar__list-item;
+.utrecht-listbox {
+  @include utrecht-listbox;
 }
 
-.utrecht-search-bar__list-item--is-active {
-  @include utrecht-search-bar__list-item--is-active;
+.utrecht-listbox__group {
+  @include utrecht-listbox__group;
 }
 
-.utrecht-search-bar__list-item--is-selected {
-  @include utrecht-search-bar__list-item--is-selected;
+.utrecht-listbox__group-label {
+  @include utrecht-listbox__group-label;
+}
+
+.utrecht-listbox__option {
+  @include utrecht-listbox__option;
+}
+
+.utrecht-listbox__option--active {
+  @include utrecht-listbox__option--active;
+}
+
+.utrecht-listbox__option--selected {
+  @include utrecht-listbox__option--selected;
 }

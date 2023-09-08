@@ -1,5 +1,6 @@
 import { fireEvent, getByText, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import React from 'react';
 import { SearchBar } from './SearchBar';
 
 const languages = [
@@ -216,7 +217,7 @@ describe('SearchBar', () => {
           }}
         />,
       );
-      const searchBarDropdown = container.querySelector('.utrecht-search-bar__dropdown');
+      const searchBarDropdown = container.querySelector('.utrecht-search-bar__popover');
       expect(searchBarDropdown).toBeFalsy();
     });
 
@@ -230,7 +231,7 @@ describe('SearchBar', () => {
           }}
         />,
       );
-      const searchBarDropdown = container.querySelector('.utrecht-search-bar__dropdown');
+      const searchBarDropdown = container.querySelector('.utrecht-search-bar__popover');
 
       expect(searchBarDropdown).toBeInTheDocument();
     });
@@ -306,12 +307,12 @@ describe('SearchBar', () => {
           }}
         />,
       );
-      const li = container.querySelector('.utrecht-search-bar__list-item');
+      const li = container.querySelector('.utrecht-listbox__option');
 
       expect(li).toBeInTheDocument();
     });
 
-    it('renders a design system is-selected BEM class name ', () => {
+    it('renders a design system selected BEM class name ', () => {
       const { container } = render(
         <SearchBar
           itemToString={itemToStringHandler}
@@ -330,12 +331,12 @@ describe('SearchBar', () => {
           cancelable: true,
         }),
       );
-      const selectedItem = container.querySelector('.utrecht-search-bar__list-item--is-selected');
+      const selectedItem = container.querySelector('.utrecht-listbox__option--selected');
       expect(selectedItem).toBeInTheDocument();
       expect(selectedItem).toBeVisible();
     });
 
-    it('renders a design system is-active BEM class name ', () => {
+    it('renders a design system active BEM class name ', () => {
       const { container } = render(
         <SearchBar
           itemToString={itemToStringHandler}
@@ -383,7 +384,7 @@ describe('SearchBar', () => {
         );
 
         const section = container.querySelector('section');
-        expect(section).toHaveClass('utrecht-search-bar__section');
+        expect(section).toHaveClass('utrecht-listbox__group');
       });
       it('renders a section title', () => {
         const { container } = render(
@@ -413,7 +414,7 @@ describe('SearchBar', () => {
           />,
         );
         const sectionTitle = getByText(container, '1980s');
-        expect(sectionTitle).toHaveClass('utrecht-search-bar__section-title');
+        expect(sectionTitle).toHaveClass('utrecht-listbox__group-label');
       });
       it('renders a section with children', () => {
         const { container } = render(

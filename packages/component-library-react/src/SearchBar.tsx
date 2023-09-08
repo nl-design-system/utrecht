@@ -5,11 +5,9 @@
 
 import clsx from 'clsx';
 import Downshift, { DownshiftProps } from 'downshift';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 import { Button, ButtonProps } from './Button';
 import { Textbox, TextboxProps } from './Textbox';
-import { UnorderedList } from './UnorderedList';
-import { UnorderedListItem } from './UnorderedListItem';
 
 interface InputTypes extends TextboxProps {}
 
@@ -17,7 +15,7 @@ interface ButtonTypes extends ButtonProps {
   label: string;
 }
 
-export interface SearchBarProps extends DownshiftProps<any> {
+export interface SearchBarProps<T = any> extends DownshiftProps<T> {
   /**
    * Configuration for an input field, extending properties from TextboxProps.
    */
@@ -40,7 +38,7 @@ export interface SearchBarProps extends DownshiftProps<any> {
    *   return item ? `${item.name} ${item.year}` : '';
    * };
    */
-  itemToString: (_item?: any) => string;
+  itemToString: (_item: T | null) => string;
   /**
    * An array of items to populate the search bar's dropdown list.
    *
@@ -60,7 +58,10 @@ export interface SearchBarProps extends DownshiftProps<any> {
    *   },
    * ];
    */
-  items?: any[];
+  items?: {
+    title: ReactNode;
+    list: string[];
+  }[];
   /**
    * Configuration for a button, including additional properties inherited from ButtonProps.
    */
@@ -90,28 +91,55 @@ export interface SearchBarProps extends DownshiftProps<any> {
    * // Pass the custom rendering function as the renderOptions prop.
    * <SearchBar renderOptions={customRenderOptions} />
    */
-  renderOptions?: (_option: any) => React.ReactNode;
+  renderOptions?: (_option?: T) => React.ReactNode;
 }
 
-interface SearchBarDropdownProps {
-  children: React.ReactNode;
-}
+export type ComboboxProps = HTMLAttributes<HTMLDivElement>;
 
-export const SearchBarDropdown: React.FC<SearchBarDropdownProps> = ({ children }) => (
-  <div className={clsx('utrecht-search-bar__dropdown')}>{children}</div>
+export const Combobox = ({ className, ...restProps }: PropsWithChildren<ComboboxProps>) => (
+  <div className={clsx('utrecht-combobox', className)} {...restProps} />
 );
 
-interface SearchBarSectionProps {
-  children: React.ReactNode;
-  title?: string;
+export type ListboxProps = HTMLAttributes<HTMLDivElement>;
+
+export const Listbox = ({ className, ...restProps }: PropsWithChildren<ListboxProps>) => (
+  <div className={clsx('utrecht-listbox', className)} {...restProps} />
+);
+
+export interface ListboxOptionGroupProps extends HTMLAttributes<HTMLDivElement> {
+  label?: ReactNode;
 }
 
-export const SearchBarSection: React.FC<SearchBarSectionProps> = ({ children, title }) => (
-  <section className={clsx('utrecht-search-bar__section')}>
-    {title && <span className={clsx('utrecht-search-bar__section-title')}>{title}</span>}
-    {children}
-  </section>
+export const ListboxOptionGroup = ({ children, label, ...restProps }: PropsWithChildren<ListboxOptionGroupProps>) => {
+  const id = useId();
+  return (
+    <div className="utrecht-listbox__group" role="group" aria-labelledby={id} {...restProps}>
+      {label && (
+        <div id={id} className="utrecht-listbox__group-label">
+          {label}
+        </div>
+      )}
+      <ul>{children}</ul>
+    </div>
+  );
+};
+export interface ListboxOptionProps extends HTMLAttributes<HTMLLIElement> {
+  active?: boolean;
+  selected?: boolean;
+}
+
+export const ListboxOption = ({ active, selected, ...restProps }: PropsWithChildren<ListboxOptionProps>) => (
+  <li
+    className={clsx('utrecht-listbox__option', {
+      'utrecht-listbox__option--active': active,
+      'utrecht-listbox__option--selected': selected,
+    })}
+    role="option"
+    {...restProps}
+  />
 );
+
+export const SearchBarFormField = ({ ...restProps }) => <div className="utrecht-search-bar" {...restProps} />;
 
 /**
  * SearchBar Component
@@ -121,55 +149,50 @@ export const SearchBarSection: React.FC<SearchBarSectionProps> = ({ children, ti
  * while providing a convenient and accessible search bar interface.
  */
 
-export const SearchBar: React.FC<SearchBarProps> = ({ itemToString, items, input, button, renderOptions, ...rest }) => {
+export const SearchBar = ({ itemToString, items, input, button, renderOptions, ...rest }: SearchBarProps) => {
   return (
     <Downshift itemToString={itemToString} {...rest}>
-      {({ getInputProps, getItemProps, isOpen, selectedItem, highlightedIndex, getMenuProps }) => (
+      {({ getInputProps, getItemProps, getMenuProps, isOpen, selectedItem, highlightedIndex }) => (
         <div>
-          <div className={clsx('utrecht-search-bar')}>
-            <Textbox {...getInputProps()} type="search" className={clsx('utrecht-search-bar__input')} {...input} />
-            <Button
-              type="submit"
-              appearance="primary-action-button"
-              className={clsx('utrecht-search-bar__button')}
-              {...button}
-            >
-              {button?.label}
-            </Button>
-          </div>
-          {(items && items.length === 0) || !isOpen ? null : (
-            <SearchBarDropdown>
-              {items &&
-                items.reduce(
-                  (result: any, section: any, sectionIndex: any) => {
-                    result.list.push(
-                      <SearchBarSection key={sectionIndex} title={section?.title}>
-                        <UnorderedList {...getMenuProps()}>
-                          {section.list.map((item: any, itemIndex: any) => {
+          <SearchBarFormField>
+            <Combobox>
+              <Textbox type="search" className="utrecht-search-bar__input" {...getInputProps()} {...input} />
+              <Listbox
+                className={clsx('utrecht-search-bar__popover', 'utrecht-search-bar__popover--block-end')}
+                hidden={!isOpen}
+              >
+                {Array.isArray(items) &&
+                  items.length >= 1 &&
+                  items.reduce(
+                    (result: { list: ReactNode[]; itemIndex: number }, group, groupIndex) => {
+                      result.list.push(
+                        <ListboxOptionGroup key={groupIndex} label={group?.title} {...getMenuProps()}>
+                          {group.list.map((item, itemIndex) => {
                             const index = result.itemIndex++;
                             return (
-                              <UnorderedListItem
-                                className={clsx('utrecht-search-bar__list-item', {
-                                  'utrecht-search-bar__list-item--is-active': highlightedIndex === index,
-                                  'utrecht-search-bar__list-item--is-selected': selectedItem === item,
-                                })}
+                              <ListboxOption
+                                active={highlightedIndex === index}
+                                selected={selectedItem === item}
                                 key={itemIndex}
                                 {...getItemProps({ item, index })}
                               >
                                 {renderOptions ? renderOptions(item) : itemToString(item)}
-                              </UnorderedListItem>
+                              </ListboxOption>
                             );
                           })}
-                        </UnorderedList>
-                      </SearchBarSection>,
-                    );
+                        </ListboxOptionGroup>,
+                      );
 
-                    return result;
-                  },
-                  { list: [], itemIndex: 0 },
-                ).list}
-            </SearchBarDropdown>
-          )}
+                      return result;
+                    },
+                    { list: [], itemIndex: 0 },
+                  ).list}
+              </Listbox>
+            </Combobox>
+            <Button type="submit" appearance="primary-action-button" className="utrecht-search-bar__button" {...button}>
+              {button?.label}
+            </Button>
+          </SearchBarFormField>
         </div>
       )}
     </Downshift>
