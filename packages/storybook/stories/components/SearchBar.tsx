@@ -14,10 +14,12 @@ export interface SearchBarComboboxStoryProps {
   buttonLabel?: string;
   formLabel?: string;
   name?: string;
+  activeId?: string;
   popoverId?: string;
   textboxLabel?: string;
   textboxPlaceholder?: string;
   expanded?: boolean;
+  value?: string;
   options: {
     id: string;
     label: ReactNode;
@@ -58,6 +60,7 @@ const SearchBarListboxPopover = ({
 );
 
 export const SearchBarComboboxStory = ({
+  activeId,
   options,
   expanded,
   formLabel,
@@ -65,7 +68,13 @@ export const SearchBarComboboxStory = ({
   textboxLabel,
   textboxPlaceholder,
   buttonLabel,
+  value,
 }: SearchBarComboboxStoryProps) => {
+  const flatOptions = options.reduce(
+    (arr: { active?: boolean; id: string }[], item) =>
+      Array.isArray(item.options) ? [...arr, ...item.options] : [...arr, item],
+    [],
+  );
   return (
     <form role="search" aria-label={formLabel || undefined}>
       <SearchBarFormField>
@@ -73,22 +82,30 @@ export const SearchBarComboboxStory = ({
           <SearchBarTextbox
             autoComplete="off"
             aria-autocomplete="list"
+            aria-haspopup="listbox"
             aria-label={textboxLabel || undefined}
             placeholder={textboxPlaceholder || undefined}
+            aria-activedescendant={flatOptions.find(({ active }) => active)?.id}
             aria-controls={popoverId}
+            value={value}
           />
           {Array.isArray(options) && (
             <SearchBarListboxPopover expanded={expanded} id={popoverId}>
               {
                 options.reduce(
-                  (result: { list: ReactNode[]; itemIndex: number }, group, groupIndex) => {
+                  (result: { list: ReactNode[]; itemIndex: number }, group) => {
                     if (group.options && Array.isArray(group.options)) {
                       result.list.push(
-                        <ListboxOptionGroup key={groupIndex} label={group?.label}>
-                          {group.options.map((item, itemIndex) => {
+                        <ListboxOptionGroup key={group.id} label={group?.label}>
+                          {group.options.map((item) => {
                             result.itemIndex++;
                             return (
-                              <ListboxOption active={item.active} selected={item.selected} key={itemIndex}>
+                              <ListboxOption
+                                active={item.active || (!!activeId && item.id === activeId)}
+                                key={item.id}
+                                id={item.id}
+                                selected={item.selected}
+                              >
                                 {item.label}
                               </ListboxOption>
                             );
@@ -97,7 +114,12 @@ export const SearchBarComboboxStory = ({
                       );
                     } else {
                       result.list.push(
-                        <ListboxOption active={group.active} selected={group.selected} key={groupIndex}>
+                        <ListboxOption
+                          active={group.active || (!!activeId && group.id === activeId)}
+                          key={group.id}
+                          id={group.id}
+                          selected={group.selected}
+                        >
                           {group.label}
                         </ListboxOption>,
                       );

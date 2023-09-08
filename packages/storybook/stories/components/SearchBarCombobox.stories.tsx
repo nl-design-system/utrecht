@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import comboboxDocs from '@utrecht/components/search-bar/_combobox.md?raw';
 import defaultDocs from '@utrecht/components/search-bar/_default.md?raw';
+import optionActiveDocs from '@utrecht/components/search-bar/_option-active.md?raw';
+import optionSelectedDocs from '@utrecht/components/search-bar/_option-selected.md?raw';
 import React from 'react';
 import { SearchBarComboboxStory } from './SearchBar';
 
@@ -86,6 +88,15 @@ const meta = {
         '2 option groups': exampleOptionGroups,
       },
     },
+    activeId: {
+      description: 'Active option',
+      control: 'select',
+      options: {
+        C: '1b21002d-1f33-484e-bd43-11159502c6d1',
+        'C++': '9795886d-1d5a-4b8a-ac4d-fd0114c7e7f6',
+        Perl: '3b992d19-21a4-42c0-ab95-fd60b6f89011',
+      },
+    },
     textboxLabel: {
       description: 'Textbox label',
       type: 'string',
@@ -130,6 +141,50 @@ export const Default: Story = {
     docs: {
       description: {
         story: defaultDocs,
+      },
+    },
+  },
+};
+
+export const ActiveOption: Story = {
+  args: {
+    buttonLabel: 'Zoeken',
+    expanded: true,
+    formLabel: 'zoeken in Utrecht.nl',
+    name: 'q',
+    value: 'C',
+    options: exampleOptions.map((obj, index) => ({
+      ...obj,
+      active: index === 0,
+    })),
+    popoverId: '4e023c43-3a7f-4636-b298-4154fe02d382',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: optionActiveDocs,
+      },
+    },
+  },
+};
+
+export const SelectedOption: Story = {
+  args: {
+    buttonLabel: 'Zoeken',
+    expanded: true,
+    formLabel: 'zoeken in Utrecht.nl',
+    name: 'q',
+    value: 'C++',
+    options: exampleOptions.map((obj, index) => ({
+      ...obj,
+      selected: index === 1,
+    })),
+    popoverId: '4e023c43-3a7f-4636-b298-4154fe02d382',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: optionSelectedDocs,
       },
     },
   },
