@@ -1,308 +1,230 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SearchBar } from '@utrecht/component-library-react/dist/css-module/index';
-import tokensDefinition from '@utrecht/components/search-bar/tokens.json';
-import tokens from '@utrecht/design-tokens/dist/index.json';
-import React, { ReactNode } from 'react';
-import { designTokenStory } from './util';
+import {
+  Button,
+  Combobox,
+  Listbox,
+  ListboxOption,
+  ListboxOptionGroup,
+  SearchBarFormField,
+  Textbox,
+} from '@utrecht/component-library-react/dist/css-module/index';
+import clsx from 'clsx';
+import React, { PropsWithChildren, ReactNode } from 'react';
 
-const CustomOption = (option: { name: ReactNode; year: number }) => {
-  return (
-    <div>
-      <h4>Language: {option.name}</h4>
-      <p>Year: {option.year}</p>
-    </div>
-  );
-};
+const spaceForPopover = (Story) => <div style={{ minBlockSize: '42em' }}>{Story()}</div>;
 
-const itemToString = (item: any) => {
-  return item ? item.name : '';
-};
-
-const meta = {
-  title: 'CSS Component/Search bar combobox',
-  id: 'css-search-bar-combobox',
-  component: SearchBar,
-  tags: ['autodocs'],
-  argTypes: {
-    input: {
-      name: 'input',
-      type: { name: 'string', required: true },
-      default: {},
-      description: 'Configuration for an input field, extending properties from TextboxProps.',
-      table: {
-        type: {
-          summary: 'object',
-        },
-      },
-    },
-    itemToString: {
-      name: 'itemToString',
-      type: { name: 'function', required: true },
-      default: itemToString,
-      options: [itemToString],
-      description:
-        'A function responsible for converting an item into its string representation for display in the list.',
-      table: {
-        type: {
-          summary: 'function',
-        },
-      },
-    },
-    items: {
-      name: 'items',
-      default: undefined,
-      description: "An array of items to populate the search bar's dropdown list.",
-      table: {
-        type: {
-          summary: 'array',
-        },
-      },
-    },
-    button: {
-      name: 'button',
-      default: {},
-      description: 'Configuration for a button, extending properties from ButtonProps.',
-      table: {
-        type: {
-          summary: 'object',
-        },
-      },
-    },
-    renderOptions: {
-      name: 'renderOptions',
-      type: { name: 'function', required: false },
-      default: CustomOption,
-      options: [CustomOption],
-      description: 'A function that provides custom rendering for individual search result options.',
-      table: {
-        type: {
-          summary: 'function',
-        },
-      },
-    },
-  },
-  parameters: {
-    tokensPrefix: 'utrecht-search-bar',
-    tokens,
-    tokensDefinition,
-    docs: {
-      description: {
-        component:
-          '`SearchBar`  This component extends the [Downshift](https://www.npmjs.com/package/downshift#onstatechange) Component Thant means you can use `Downshift` props',
-      },
-    },
-  },
-} satisfies Meta<typeof SearchBar>;
-
-export default meta;
-
-type Story = StoryObj<typeof meta>;
-
-const languages = [
+const exampleOptions = [
   {
-    title: '1970s',
-    list: [
+    id: '1b21002d-1f33-484e-bd43-11159502c6d1',
+    label: 'C',
+    value: 1972,
+  },
+  {
+    id: '9795886d-1d5a-4b8a-ac4d-fd0114c7e7f6',
+    label: 'C++',
+    value: 1983,
+  },
+  {
+    id: '3b992d19-21a4-42c0-ab95-fd60b6f89011',
+    label: 'Perl',
+    value: 1987,
+  },
+];
+
+const exampleOptionGroups = [
+  {
+    id: '15a6eabc-7b94-4965-8ee1-e2dc8f5a2282',
+    label: '1970s',
+    options: [
       {
-        name: 'C',
-        year: 1972,
+        id: '1b21002d-1f33-484e-bd43-11159502c6d1',
+        label: 'C',
+        value: 1972,
       },
     ],
   },
   {
-    title: '1980s',
-    list: [
+    id: 'e28e470a-f4bd-4293-a9a7-261dbc16c375',
+    label: '1980s',
+    options: [
       {
-        name: 'C++',
-        year: 1983,
+        id: '9795886d-1d5a-4b8a-ac4d-fd0114c7e7f6',
+        label: 'C++',
+        value: 1983,
       },
       {
-        name: 'Perl',
-        year: 1987,
-      },
-    ],
-  },
-  {
-    title: '1990s',
-    list: [
-      {
-        name: 'Haskell',
-        year: 1990,
-      },
-      {
-        name: 'Python',
-        year: 1991,
-      },
-      {
-        name: 'Java',
-        year: 1995,
-      },
-      {
-        name: 'Javascript',
-        year: 1995,
-      },
-      {
-        name: 'PHP',
-        year: 1995,
-      },
-      {
-        name: 'Ruby',
-        year: 1995,
-      },
-    ],
-  },
-  {
-    title: '2000s',
-    list: [
-      {
-        name: 'C#',
-        year: 2000,
-      },
-      {
-        name: 'Scala',
-        year: 2003,
-      },
-      {
-        name: 'Clojure',
-        year: 2007,
-      },
-      {
-        name: 'Go',
-        year: 2009,
-      },
-    ],
-  },
-  {
-    title: '2010s',
-    list: [
-      {
-        name: 'Elm',
-        year: 2012,
+        id: '3b992d19-21a4-42c0-ab95-fd60b6f89011',
+        label: 'Perl',
+        value: 1987,
       },
     ],
   },
 ];
 
-/**
- * SearchBar Component
- *
- * This component extends the functionality of the [Downshift](https://www.npmjs.com/package/downshift#onstatechange) component,
- * allowing you to leverage its powerful features and customize its behavior
- * while providing a convenient and accessible search bar interface.
- */
+interface SearchBarComboboxStoryProps {
+  buttonLabel?: string;
+  formLabel?: string;
+  textboxLabel?: string;
+  textboxPlaceholder?: string;
+  expanded?: boolean;
+  options: {
+    id: string;
+    label: ReactNode;
+    active?: boolean;
+    selected?: boolean;
+    value?: any;
+    options?: {
+      id: string;
+      label: ReactNode;
+      active?: boolean;
+      selected?: boolean;
+      value?: any;
+    }[];
+  }[];
+}
+
+const SearchBarTextbox = ({ ...restProps }) => (
+  <Textbox type="search" autoComplete="off" className="utrecht-search-bar__input" {...restProps} />
+);
+
+const SearchBarCombobox = ({ ...restProps }) => <Combobox className="utrecht-search-bar__combobox" {...restProps} />;
+
+const SearchBarButton = ({ ...restProps }) => (
+  <Button type="submit" appearance="primary-action-button" className="utrecht-search-bar__button" {...restProps} />
+);
+
+const SearchBarListboxPopover = ({ expanded, ...restProps }: PropsWithChildren<{ expanded?: boolean }>) => (
+  <Listbox
+    className={clsx('utrecht-search-bar__popover', 'utrecht-search-bar__popover--block-end')}
+    hidden={!expanded}
+    {...restProps}
+  />
+);
+const SearchBarComboboxStory = ({
+  options,
+  expanded,
+  formLabel,
+  textboxLabel,
+  textboxPlaceholder,
+  buttonLabel,
+}: SearchBarComboboxStoryProps) => {
+  return (
+    <form role="search" aria-label={formLabel || undefined}>
+      <SearchBarFormField>
+        <SearchBarCombobox>
+          <SearchBarTextbox aria-label={textboxLabel || undefined} placeholder={textboxPlaceholder || undefined} />
+          {Array.isArray(options) && (
+            <SearchBarListboxPopover expanded={expanded}>
+              {
+                options.reduce(
+                  (result: { list: ReactNode[]; itemIndex: number }, group, groupIndex) => {
+                    if (group.options && Array.isArray(group.options)) {
+                      result.list.push(
+                        <ListboxOptionGroup key={groupIndex} label={group?.label}>
+                          {group.options.map((item, itemIndex) => {
+                            result.itemIndex++;
+                            return (
+                              <ListboxOption active={item.active} selected={item.selected} key={itemIndex}>
+                                {item.label}
+                              </ListboxOption>
+                            );
+                          })}
+                        </ListboxOptionGroup>,
+                      );
+                    } else {
+                      result.list.push(
+                        <ListboxOption active={group.active} selected={group.selected} key={groupIndex}>
+                          {group.label}
+                        </ListboxOption>,
+                      );
+                    }
+
+                    return result;
+                  },
+                  { list: [], itemIndex: 0 },
+                ).list
+              }
+            </SearchBarListboxPopover>
+          )}
+        </SearchBarCombobox>
+        <SearchBarButton>{buttonLabel}</SearchBarButton>
+      </SearchBarFormField>
+    </form>
+  );
+};
+
+const meta = {
+  title: 'CSS Component/Search bar/Combobox',
+  id: 'css-search-bar-combobox',
+  component: SearchBarComboboxStory,
+  tags: ['autodocs'],
+  argTypes: {
+    buttonLabel: {
+      description: 'Button label',
+      type: 'string',
+    },
+    expanded: {
+      description: 'Expanded',
+      type: 'boolean',
+    },
+    formLabel: {
+      description: 'Form label',
+      type: 'string',
+    },
+    options: {
+      description: 'Options',
+      control: 'select',
+      options: {
+        '': undefined,
+        empty: [],
+        '3 options': exampleOptions,
+        '2 option groups': exampleOptionGroups,
+      },
+    },
+    textboxLabel: {
+      description: 'Textbox label',
+      type: 'string',
+    },
+    textboxPlaceholder: {
+      description: 'Textbox placeholder text',
+      type: 'string',
+    },
+  },
+  args: {
+    buttonLabel: '',
+    expanded: false,
+    textboxLabel: '',
+    textboxPlaceholder: '',
+    options: [],
+  },
+  decorators: [spaceForPopover],
+} satisfies Meta<typeof SearchBarComboboxStory>;
+
+export default meta;
+
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: () => {
-    const [items, setItems] = React.useState(languages);
-
-    function escapeRegexCharacters(str: any) {
-      return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-    }
-
-    const getItems = (value: any) => {
-      const escapedValue = escapeRegexCharacters(value.trim());
-
-      if (escapedValue === '') {
-        return languages;
-      }
-
-      const regex = new RegExp('^' + escapedValue, 'i');
-
-      return languages
-        .map((list: any) => {
-          return {
-            title: list.title,
-            list: list.list.filter(({ name }: any) => regex.test(name)),
-          };
-        })
-        .filter((list: any) => list.list.length > 0);
-    };
-
-    const handleStateChange = (changes: any) => {
-      if (Object.prototype.hasOwnProperty.call(changes, 'inputValue')) {
-        setItems(getItems(changes.inputValue));
-      }
-    };
-
-    const onChange = (selectedItem: any, downshiftState: any) => {
-      // handle the new selectedItem here
-      console.log(selectedItem);
-      console.log(downshiftState);
-    };
-
-    return (
-      <form role="search" aria-label="zoeken in Utrecht.nl">
-        <SearchBar
-          button={{
-            label: 'Search',
-          }}
-          onStateChange={handleStateChange}
-          onChange={onChange}
-          items={items}
-          input={{
-            'aria-label': 'Search',
-            placeholder: 'Search',
-          }}
-          itemToString={itemToString}
-        />
-      </form>
-    );
-  },
-};
-
-export const Vertical: Story = {
   args: {
-    ...Default.args,
+    buttonLabel: 'Zoeken',
+    formLabel: 'zoeken in Utrecht.nl',
   },
-  decorators: [(Story) => <div style={{ writingMode: 'vertical-lr' }}>{Story()}</div>],
-  name: 'Vertical writing mode',
 };
 
-export const IsOpen: Story = {
+export const Options: Story = {
   args: {
-    isOpen: true,
-    items: languages,
-    itemToString,
-    button: {
-      label: 'Search',
-    },
+    buttonLabel: 'Zoeken',
+    formLabel: 'zoeken in Utrecht.nl',
+    expanded: true,
+    options: exampleOptions,
   },
 };
 
-export const IsActiveElement: Story = {
+export const OptionGroup: Story = {
   args: {
-    isOpen: true,
-    items: languages,
-    initialHighlightedIndex: 1,
-    itemToString,
-    button: {
-      label: 'Search',
-    },
+    buttonLabel: 'Zoeken',
+    formLabel: 'zoeken in Utrecht.nl',
+    expanded: true,
+    options: exampleOptionGroups,
   },
 };
-
-export const IsSelectedElement: Story = {
-  args: {
-    isOpen: true,
-    items: languages,
-    initialSelectedItem: languages[0].list[0],
-    itemToString,
-    button: {
-      label: 'Search',
-    },
-  },
-};
-
-export const CustomRenderOptions: Story = {
-  args: {
-    isOpen: true,
-    items: languages,
-    initialSelectedItem: languages[0].list[0],
-    itemToString,
-    renderOptions: CustomOption,
-    button: {
-      label: 'Search',
-    },
-  },
-};
-
-export const DesignTokens = designTokenStory(meta);
