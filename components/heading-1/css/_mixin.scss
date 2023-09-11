@@ -17,7 +17,6 @@
   );
   font-size: var(--utrecht-heading-1-font-size, revert);
   font-weight: var(--utrecht-heading-1-font-weight, var(--utrecht-heading-font-weight, bold));
-  letter-spacing: var(--utrecht-heading-1-letter-spacing);
   line-height: var(--utrecht-heading-1-line-height);
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-heading-1-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-heading-1-margin-block-start, 0));
