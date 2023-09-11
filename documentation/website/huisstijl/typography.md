@@ -64,17 +64,6 @@ De inherit font stijl is om het overerven van een font stijl mogelijk te maken, 
 | Font style: Normal  | `--utrecht-typography-font-style-normal`  | De standaard font stijl.                               |
 | Font style: Inherit | `--utrecht-typography-font-style-inherit` | Erft de font stijl over van het bovenliggende element. |
 
-## Letter spacing
-
-We hebben een aantal letter spacings die we gebruiken om tekst leesbaarder te maken.
-
-| Beschrijving              | Design Token                                 | Opmerking                                                       |
-| ------------------------- | -------------------------------------------- | --------------------------------------------------------------- |
-| Normal                    | `--utrecht-typography-letter-spacing-normal` | Standaard gebruiken we bij alle teksten normale letter spacing. |
-| Small (0.8px of 0.05rem)  | `--utrecht-typography-letter-spacing-sm`     |                                                                 |
-| Medium (1px of 0.0625rem) | `--utrecht-typography-letter-spacing-md`     |                                                                 |
-| Large (3px of 0.1875rem)  | `--utrecht-typography-letter-spacing-lg`     |                                                                 |
-
 ## Line height
 
 We gebruiken de volgende line heights voor onze typografie:
