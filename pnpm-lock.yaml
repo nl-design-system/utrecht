@@ -124,8 +124,8 @@ importers:
         specifier: 0.0.2-alpha.94
         version: 0.0.2-alpha.94
       '@stencil/core':
-        specifier: 2.22.3
-        version: 2.22.3
+        specifier: 4.2.0
+        version: 4.2.0
       '@storybook/blocks':
         specifier: 7.4.0
         version: 7.4.0(react-dom@18.2.0)(react@18.2.0)
@@ -1463,21 +1463,21 @@ importers:
   packages/web-component-library-stencil:
     dependencies:
       '@stencil/core':
-        specifier: 3.4.2
-        version: 3.4.2
+        specifier: 4.2.0
+        version: 4.2.0
     devDependencies:
       '@stencil/angular-output-target':
         specifier: 0.8.2
-        version: 0.8.2(@stencil/core@3.4.2)
+        version: 0.8.2(@stencil/core@4.2.0)
       '@stencil/react-output-target':
         specifier: 0.5.3
-        version: 0.5.3(@stencil/core@3.4.2)
+        version: 0.5.3(@stencil/core@4.2.0)
       '@stencil/sass':
         specifier: 3.0.5
-        version: 3.0.5(@stencil/core@3.4.2)
+        version: 3.0.5(@stencil/core@4.2.0)
       '@stencil/vue-output-target':
         specifier: 0.8.6
-        version: 0.8.6(@stencil/core@3.4.2)
+        version: 0.8.6(@stencil/core@4.2.0)
       '@types/jest':
         specifier: 29.5.4
         version: 29.5.4
@@ -9675,48 +9675,42 @@ packages:
     resolution: {integrity: sha512-XExJS3cLqgrmNBIP3bBw6+1oQ1ksGjFh0+oClDKFYpCCqx/hlqwWO5KO/S63fzUo67SxI9dMrF0y5T/Ey7h8Zw==}
     dev: true
 
-  /@stencil/angular-output-target@0.8.2(@stencil/core@3.4.2):
+  /@stencil/angular-output-target@0.8.2(@stencil/core@4.2.0):
     resolution: {integrity: sha512-i2Oxq2VPQTo1OoP3iDN39N2f/CDO9crS8oUfGEtjwzMgMNuYSMB2VprFoVDUTwqaCP6N409M8+/wJK3oApTDuQ==}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 3.4.2
+      '@stencil/core': 4.2.0
     dev: true
 
-  /@stencil/core@2.22.3:
-    resolution: {integrity: sha512-kmVA0M/HojwsfkeHsifvHVIYe4l5tin7J5+DLgtl8h6WWfiMClND5K3ifCXXI2ETDNKiEk21p6jql3Fx9o2rng==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
-    dev: true
-
-  /@stencil/core@3.4.2:
-    resolution: {integrity: sha512-FAUhUVaakCy29nU2GwO/HQBRV1ihPRvncz3PUc8oR+UJLAxGabTmP8PLY7wvHfbw+Cvi4VXfJFTBvdfDu6iKPQ==}
-    engines: {node: '>=14.10.0', npm: '>=6.0.0'}
+  /@stencil/core@4.2.0:
+    resolution: {integrity: sha512-HhxRs/b/VHTCM35lunFCzYajRQeYezsJQGgalENNpkrKUOPMvzv0dalXe8Yn/8p9eyn+GZVZuWLd0CAR4VWBbA==}
+    engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
 
-  /@stencil/react-output-target@0.5.3(@stencil/core@3.4.2):
+  /@stencil/react-output-target@0.5.3(@stencil/core@4.2.0):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 3.4.2
+      '@stencil/core': 4.2.0
     dev: true
 
-  /@stencil/sass@3.0.5(@stencil/core@3.4.2):
+  /@stencil/sass@3.0.5(@stencil/core@4.2.0):
     resolution: {integrity: sha512-9nyllMXOEvHywo6fP2iwXgnq32A+OOUE36Aq7iUjzwT3wdr04qsvupO1JNIyRvmvCDF15hOKXztrZH1/wDu2Zg==}
     engines: {node: '>=12.0.0', npm: '>=6.0.0'}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3.0.0-beta.0 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 3.4.2
+      '@stencil/core': 4.2.0
     dev: true
 
-  /@stencil/vue-output-target@0.8.6(@stencil/core@3.4.2):
+  /@stencil/vue-output-target@0.8.6(@stencil/core@4.2.0):
     resolution: {integrity: sha512-B1gQW8FWeU7x/KBPm9R28jYFGN5NsZTZR4jwfDMhKBmU1Q2dIxFY52ARhbrfj5tJQxKoxr2tQJD2S14r9t1v7w==}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 3.4.2
+      '@stencil/core': 4.2.0
     dev: true
 
   /@storybook/addon-a11y@7.4.0(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
@@ -13508,6 +13502,7 @@ packages:
   /amdefine@1.0.1:
     resolution: {integrity: sha512-S2Hw0TtNkMJhIabBwIojKL9YHO5T0n5eNqWJ7Lrlel/zDbftQpxpapi8tZs3X1HWa+u+QeydGmzzNU0m09+Rcg==}
     engines: {node: '>=0.4.2'}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -14476,6 +14471,7 @@ packages:
 
   /bindings@1.5.0:
     resolution: {integrity: sha512-p2q/t/mhvuOj/UeLlV6566GD/guowlr0hHxClI0W9m7MWYkL1F0hLo+0Aexs9HSPCtR1SXQ0TD3MMKrXZajbiQ==}
+    requiresBuild: true
     dependencies:
       file-uri-to-path: 1.0.0
     dev: true
@@ -18629,6 +18625,7 @@ packages:
 
   /file-uri-to-path@1.0.0:
     resolution: {integrity: sha512-0Zt+s3L7Vf1biwWZ29aARiVYLx7iMGnEUl9x33fbB/j3jR81u/O2LbqK+Bm1CDSNDKVtJ/YjwY7TUd5SkeLQLw==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -24593,6 +24590,7 @@ packages:
 
   /nan@2.16.0:
     resolution: {integrity: sha512-UdAqHyFngu7TfQKsCBgAA6pWDkT8MAO7d0jyOecVhN5354xbLqdn8mV9Tat9gepAupm0bt2DbeaSC8vS52MuFA==}
+    requiresBuild: true
     dev: true
     optional: true
 
@@ -27374,6 +27372,7 @@ packages:
 
   /prr@1.0.1:
     resolution: {integrity: sha512-yPw4Sng1gWghHQWj0B3ZggWUm4qVbPwPFcRG8KyxiU7J2OHFSoEHKS+EZ3fv5l1t9CyCiop6l/ZYeWbrgoQejw==}
+    requiresBuild: true
     dev: true
     optional: true
 
