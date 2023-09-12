@@ -13,13 +13,115 @@ import { CustomIconGallery, CustomIconGalleryItem } from "./CustomIconGallery";
   }}
 />
 
+## Functionele iconen
+
+### Waar komen die functionele iconen toch vandaan:
+
+Veel functionele iconen zijn afkomstig uit de **Tabler icon set**. Ze zijn aangepast naar een lijndikte van **2px** om consistentie in ons design te behouden.
+
+#### Naam voor de functionele iconen
+
+Start altijd met het vaste voorvoegsel:
+
+Elk icoon begint met het voorvoegsel `utrecht-icon-` om consistentie te waarborgen en om onderscheid te maken tussen iconen en andere elementen in het design system.
+
+**Voorbeeld:**
+`utrecht-icon-search`
+
+#### Beschrijvend en functioneel:
+
+De naam van het icoon moet zijn primaire functie of doel beschrijven. Overweeg wat het icoon vertegenwoordigt of de actie die het suggereert.
+
+**Voorbeelden:**
+
+- `utrecht-icon-chevron-down` (Voor een naar beneden wijzend chevron-icoon)
+- `utrecht-icon-close` (Voor een sluit-icoon)
+
+#### Vermijd dubbelzinnigheid:
+
+Zorg ervoor dat elke naam uniek is en niet kan worden verward met een ander icoon of functie. Gebruik geen vage termen.
+
+**Liever niet:**
+
+- `utrecht-icon-top` (Het is niet duidelijk of dit betekent "bovenaan" of een pijl die naar boven wijst.)
+
+#### Eenvoud en consistentie:
+
+Houd de namen kort en eenvoudig. Als je voor bepaalde typen iconen een specifieke term gebruikt, zorg dan dat je deze consequent gebruikt voor alle vergelijkbare iconen.
+
+#### Meervoud vs enkelvoud:
+
+Gebruik enkelvoud voor icoonnamen. Dit helpt bij het handhaven van een uniforme conventie.
+
+**Voorbeeld:**
+
+- **Goed:** `utrecht-icon-folder`
+- **Liever niet:** `utrecht-icon-folders`
+
+#### Documenteer speciale gevallen:
+
+Als er een icoon is dat een specifieke functie heeft die afwijkt van zijn algemeen aanvaarde betekenis, documenteer dit dan. Dit helpt gebruikers van het design system om de juiste iconen te kiezen voor hun specifieke behoeften.
+
+#### Review regelmatig:
+
+Naarmate het aantal iconen groeit, is het belangrijk om regelmatig een review te houden van de icoonnamen om er zeker van te zijn dat ze nog steeds relevant en begrijpelijk zijn voor gebruikers.
+
+### Iconen
+
 <CustomIconGallery>
-  <CustomIconGalleryItem name="utrecht-icon-arrow">
-    <utrecht-icon-arrow />
+  <CustomIconGalleryItem name="utrecht-icon-chevron-up">
+    <utrecht-icon-chevron-up />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-chevron-right">
+    <utrecht-icon-chevron-right />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-chevron-down">
+    <utrecht-icon-chevron-down />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-chevron-left">
+    <utrecht-icon-chevron-left />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-minus">
+    <utrecht-icon-minus />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-zoom-plus">
+    <utrecht-icon-zoom-plus />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-minus-vertical">
+    <utrecht-icon-minus-vertical />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-close">
+    <utrecht-icon-close />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-hamburger-menu">
+    <utrecht-icon-hamburger-menu />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-user">
+    <utrecht-icon-user />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-language">
+    <utrecht-icon-language />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-search">
+    <utrecht-icon-search />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-list">
+    <utrecht-icon-list />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-list-number">
+    <utrecht-icon-list-number />
+  </CustomIconGalleryItem>
+  <CustomIconGalleryItem name="utrecht-icon-list-check">
+    <utrecht-icon-list-check />
   </CustomIconGalleryItem>
   <CustomIconGalleryItem name="utrecht-icon-checkmark">
     <utrecht-icon-checkmark />
   </CustomIconGalleryItem>
+</CustomIconGallery>
+
+### Oudere iconen
+
+<CustomIconGallery>
   <CustomIconGalleryItem name="utrecht-icon-cross">
     <utrecht-icon-cross />
   </CustomIconGalleryItem>
@@ -27,3 +129,6 @@ import { CustomIconGallery, CustomIconGalleryItem } from "./CustomIconGallery";
     <utrecht-icon-loupe />
   </CustomIconGalleryItem>
 </CustomIconGallery>
+<CustomIconGalleryItem name="utrecht-icon-arrow">
+  <utrecht-icon-arrow />
+</CustomIconGalleryItem>
