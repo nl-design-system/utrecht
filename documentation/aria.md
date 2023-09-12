@@ -162,6 +162,6 @@ Gebruik liever `aria-describedby`.
 
 `aria-label` wordt overgeslagen door veel hulpmiddelen om automatisch vertalingen van webpagina's te maken. Google Translate vertaalt `aria-label` vaak wel, maar veel andere software niet. Dit is in 2023 nog getest door Adrian Roselli: [aria-label Does Not Translate
 ](https://adrianroselli.com/2019/11/aria-label-does-not-translate.html).
-Daarnaast is een labeltekst die met `aria-label` wordt toegevoegd alleen aanwezig in de codelaag, en niet zichtbaar op het scherm. Dit vergroot het risico dat iemand  zo'n label vergeet aan te passen bij wijzigingen, wat vervolgens gebruikers in de weg kan zitten.
+Daarnaast is een labeltekst die met `aria-label` wordt toegevoegd alleen aanwezig in de codelaag, en niet zichtbaar op het scherm. Dit vergroot het risico dat iemand zo'n label vergeet aan te passen bij wijzigingen, wat vervolgens gebruikers in de weg kan zitten.
 
 Gebruik liever `aria-labelledby`.
