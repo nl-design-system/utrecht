@@ -4,6 +4,10 @@ import { BreadcrumbLink, BreadcrumbNav } from './BreadcrumbNav';
 
 import '@testing-library/jest-dom';
 
+const CustomLink = ({ children, ...rest }: any) => {
+  return <a {...rest}>{children}</a>;
+};
+
 describe('Breadcrumb Navigation', () => {
   it('renders a list role element', () => {
     render(<BreadcrumbNav />);
@@ -128,5 +132,26 @@ describe('Breadcrumb Navigation', () => {
     const list = container.querySelector(':only-child');
 
     expect(ref.current).toBe(list);
+  });
+
+  it('renders with custom link', () => {
+    const { getByRole } = render(
+      <BreadcrumbLink href="/custom" customLink={CustomLink} className="utrecht-link">
+        Custom Link
+      </BreadcrumbLink>,
+    );
+
+    const link = getByRole('link');
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/custom');
+  });
+
+  it('renders with default Link when customLink is not provided', () => {
+    const { getByRole } = render(<BreadcrumbLink href="/default">Default Link</BreadcrumbLink>);
+
+    const link = getByRole('link');
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/default');
+    expect(link.tagName).toBe('A');
   });
 });
