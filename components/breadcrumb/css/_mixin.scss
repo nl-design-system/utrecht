@@ -11,16 +11,6 @@
 }
 
 @mixin utrecht-breadcrumb {
-  --utrecht-focus-background-color: var(--utrecht-breadcrumb-link-focus-background-color);
-  --utrecht-link-background-color: var(--utrecht-breadcrumb-link-background-color);
-  --utrecht-link-color: var(--utrecht-breadcrumb-link-color);
-  --utrecht-link-focus-color: var(--utrecht-breadcrumb-link-focus-color, var(--utrecht-breadcrumb-link-color));
-  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
-  --utrecht-link-hover-color: var(--utrecht-breadcrumb-link-color);
-  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
-  --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
-  --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
-
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-breadcrumb-font-size);
   text-transform: var(--utrecht-document-text-transform, inherit);
@@ -40,12 +30,29 @@
 }
 
 @mixin utrecht-breadcrumb__link {
+  --utrecht-focus-background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+  --utrecht-link-background-color: var(--utrecht-breadcrumb-link-background-color);
+  --utrecht-link-focus-color: var(--utrecht-breadcrumb-link-focus-color, var(--utrecht-breadcrumb-link-color));
+  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-hover-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-color: var(--utrecht-breadcrumb-link-color);
+
   background-color: var(--utrecht-breadcrumb-link-background-color);
   display: block;
   padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
   padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
   padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
   padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
+}
+
+@mixin utrecht-breadcrumb__link--current {
+  --utrecht-breadcrumb-link-color: var(--utrecht-breadcrumb-link-current-color);
+  --utrecht-breadcrumb-link-background-color: var(--utrecht-breadcrumb-link-current-background-color);
+
+  background-color: var(--utrecht-breadcrumb-link-current-background-color);
 }
 
 /* stylelint-disable-next-line block-no-empty */
