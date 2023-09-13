@@ -7,6 +7,11 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
 
+// custom link component for storybook
+const DemoLink = ({ children, ...rest }: any) => {
+  return <a {...rest}>{children}</a>;
+};
+
 const meta = {
   title: 'React Component/Breadcrumb navigation',
   id: 'react-breadcrumb-nav',
@@ -53,5 +58,37 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
+
+export const Current: Story = {
+  args: {
+    children: [
+      <BreadcrumbLink href="/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbLink href="/a/" index={1}>
+        Niveau 1
+      </BreadcrumbLink>,
+      <BreadcrumbLink href="/a/b/" rel="up" index={2} current>
+        Niveau 2
+      </BreadcrumbLink>,
+    ],
+  },
+};
+
+export const CustomLink: Story = {
+  args: {
+    children: [
+      <BreadcrumbLink customLink={DemoLink} className="utrecht-link" href="/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbLink customLink={DemoLink} className="utrecht-link" href="/a/" index={1}>
+        Niveau 1
+      </BreadcrumbLink>,
+      <BreadcrumbLink customLink={DemoLink} className="utrecht-link" href="/a/b/" rel="up" index={2} current>
+        Niveau 2
+      </BreadcrumbLink>,
+    ],
+  },
+};
 
 export const DesignTokens = designTokenStory(meta);
