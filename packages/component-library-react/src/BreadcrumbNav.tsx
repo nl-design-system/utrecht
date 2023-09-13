@@ -119,7 +119,7 @@ export const BreadcrumbLink = forwardRef(
           })}
           href={href}
           rel={rel}
-          aria-current={current && 'location'}
+          aria-current={current && 'page'}
           {...useMicrodataProp('item')}
           {...restProps}
           ref={ref}
