@@ -154,4 +154,20 @@ describe('Breadcrumb Navigation', () => {
     expect(link).toHaveAttribute('href', '/default');
     expect(link.tagName).toBe('A');
   });
+
+  it('renders a design system BEM class utrecht-breadcrumb__link--current', () => {
+    const { getByText } = render(
+      <BreadcrumbNav>
+        <BreadcrumbLink current href="/current">
+          <span className="utrecht-breadcrumb__text">Current Link</span>
+        </BreadcrumbLink>
+      </BreadcrumbNav>,
+    );
+
+    const link = getByText('Current Link');
+    const anchor = link.closest('a');
+
+    expect(anchor).toBeInTheDocument();
+    expect(anchor).toHaveClass('utrecht-breadcrumb__link--current');
+  });
 });
