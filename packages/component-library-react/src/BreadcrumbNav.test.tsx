@@ -1,11 +1,24 @@
 import { render, screen } from '@testing-library/react';
-import { createRef } from 'react';
+import { Link } from 'gatsby';
+import NextLink from 'next/link';
+import React, { createRef } from 'react';
 import { BreadcrumbLink, BreadcrumbNav } from './BreadcrumbNav';
-
 import '@testing-library/jest-dom';
 
 const CustomLink = ({ children, ...rest }: any) => {
   return <a {...rest}>{children}</a>;
+};
+
+const CustomGatsbyLink = ({ children, href, ...rest }: any) => {
+  return (
+    <Link to={href} {...rest}>
+      {children}
+    </Link>
+  );
+};
+
+const CustomNextjsLink = ({ children, ...rest }: any) => {
+  return <NextLink {...rest}>{children}</NextLink>;
 };
 
 describe('Breadcrumb Navigation', () => {
@@ -169,5 +182,29 @@ describe('Breadcrumb Navigation', () => {
 
     expect(anchor).toBeInTheDocument();
     expect(anchor).toHaveClass('utrecht-breadcrumb__link--current');
+  });
+
+  test('renders with custom Gatsby link', () => {
+    const { getByRole } = render(
+      <BreadcrumbLink customLink={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
+        Gatsby Link
+      </BreadcrumbLink>,
+    );
+    const link = getByRole('link');
+
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/gatsby-link');
+  });
+
+  test('renders with custom Nextjs link', () => {
+    const { getByRole } = render(
+      <BreadcrumbLink customLink={CustomNextjsLink} className="utrecht-link" href="/next-link">
+        Nextjs Link
+      </BreadcrumbLink>,
+    );
+    const link = getByRole('link');
+
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/next-link');
   });
 });
