@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ComponentType, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 import { Heading } from './Heading';
-import { Link } from './Link';
+import { Link as UtrechtLink } from './Link';
 
 interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
   appearance?: string;
@@ -80,24 +80,24 @@ export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
    * const DemoComponent = () => {
    * return (
    *  <BreadcrumbNav>
-   *    <BreadcrumbLink customLink={Link} className="utrecht-link"  rel="home" href="/" index={0}>Home</BreadcrumbLink>
-   *    <BreadcrumbLink customLink={Link} className="utrecht-link" rel="products"  href="/products" index={1} >Products</BreadcrumbLink>
+   *    <BreadcrumbLink Link={Link} className="utrecht-link"  rel="home" href="/" index={0}>Home</BreadcrumbLink>
+   *    <BreadcrumbLink Link={Link} className="utrecht-link" rel="products"  href="/products" index={1} >Products</BreadcrumbLink>
    * </BreadcrumbNav>
    *   )
    *  }
    *
    * ```
    */
-  customLink?: ComponentType<any>;
+  Link?: ComponentType<any>;
 }
 
 export const BreadcrumbLink = forwardRef(
   (
-    { children, current, href, index, rel, customLink, className }: PropsWithChildren<BreadcrumbLinkProps>,
+    { children, current, href, index, rel, Link = UtrechtLink, className }: PropsWithChildren<BreadcrumbLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const DefaultLinkComponent = Link;
-    const LinkComponent = customLink || DefaultLinkComponent;
+    const LinkComponent = Link || DefaultLinkComponent;
 
     return (
       <li

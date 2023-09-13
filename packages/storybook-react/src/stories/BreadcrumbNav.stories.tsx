@@ -8,9 +8,11 @@ import React from 'react';
 import { designTokenStory } from './util';
 
 // custom link component for storybook
-const DemoLink = ({ children, ...rest }: any) => {
+const ExampleCustomLink = ({ children, ...rest }: any) => {
   return <a {...rest}>{children}</a>;
 };
+
+ExampleCustomLink.displayName = 'ExampleCustomLink';
 
 const meta = {
   title: 'React Component/Breadcrumb navigation',
@@ -78,13 +80,13 @@ export const Current: Story = {
 export const CustomLink: Story = {
   args: {
     children: [
-      <BreadcrumbLink customLink={DemoLink} className="utrecht-link" href="/" rel="home" index={0}>
+      <BreadcrumbLink Link={ExampleCustomLink} className="utrecht-link" href="/" rel="home" index={0}>
         Home
       </BreadcrumbLink>,
-      <BreadcrumbLink customLink={DemoLink} className="utrecht-link" href="/a/" index={1}>
+      <BreadcrumbLink Link={ExampleCustomLink} className="utrecht-link" href="/a/" index={1}>
         Niveau 1
       </BreadcrumbLink>,
-      <BreadcrumbLink customLink={DemoLink} className="utrecht-link" href="/a/b/" rel="up" index={2} current>
+      <BreadcrumbLink Link={ExampleCustomLink} className="utrecht-link" href="/a/b/" rel="up" index={2} current>
         Niveau 2
       </BreadcrumbLink>,
     ],
