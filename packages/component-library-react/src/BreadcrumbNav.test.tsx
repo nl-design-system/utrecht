@@ -149,7 +149,7 @@ describe('Breadcrumb Navigation', () => {
 
   it('renders with custom link', () => {
     const { getByRole } = render(
-      <BreadcrumbLink href="/custom" customLink={CustomLink} className="utrecht-link">
+      <BreadcrumbLink href="/custom" Link={CustomLink} className="utrecht-link">
         Custom Link
       </BreadcrumbLink>,
     );
@@ -186,7 +186,7 @@ describe('Breadcrumb Navigation', () => {
 
   test('renders with custom Gatsby link', () => {
     const { getByRole } = render(
-      <BreadcrumbLink customLink={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
+      <BreadcrumbLink Link={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
         Gatsby Link
       </BreadcrumbLink>,
     );
@@ -198,7 +198,7 @@ describe('Breadcrumb Navigation', () => {
 
   test('renders with custom Nextjs link', () => {
     const { getByRole } = render(
-      <BreadcrumbLink customLink={CustomNextjsLink} className="utrecht-link" href="/next-link">
+      <BreadcrumbLink Link={CustomNextjsLink} className="utrecht-link" href="/next-link">
         Nextjs Link
       </BreadcrumbLink>,
     );

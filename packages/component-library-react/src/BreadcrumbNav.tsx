@@ -6,7 +6,8 @@
 import clsx from 'clsx';
 import { ComponentType, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 import { Heading } from './Heading';
-import { Link } from './Link';
+import { Link as UtrechtLink } from './Link';
+import type { LinkProps as UtrechtLinkProps } from './Link';
 
 interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
   appearance?: string;
@@ -64,7 +65,7 @@ export const BreadcrumbNav = forwardRef(
 
 BreadcrumbNav.displayName = 'BreadcrumbNav';
 
-export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
+export interface BreadcrumbLinkProps<LinkProps = UtrechtLinkProps> extends HTMLAttributes<HTMLElement> {
   current?: boolean;
   href: string;
   rel?: string;
@@ -88,40 +89,45 @@ export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
    *
    * ```
    */
-  customLink?: ComponentType<any>;
+  Link?: ComponentType<LinkProps>;
 }
 
 export const BreadcrumbLink = forwardRef(
-  (
-    { children, current, href, index, rel, customLink, className }: PropsWithChildren<BreadcrumbLinkProps>,
+  <LinkProps,>(
+    {
+      children,
+      current,
+      href,
+      index,
+      rel,
+      Link = UtrechtLink,
+      className,
+      ...restProps
+    }: PropsWithChildren<BreadcrumbLinkProps<LinkProps>>,
     ref: ForwardedRef<HTMLAnchorElement>,
-  ) => {
-    const DefaultLinkComponent = Link;
-    const LinkComponent = customLink || DefaultLinkComponent;
-
-    return (
-      <li
-        className={clsx('utrecht-breadcrumb__item')}
-        {...useMicrodataItem({ type: 'https://schema.org/ListItem', prop: 'itemListElement' })}
+  ) => (
+    <li
+      className={clsx('utrecht-breadcrumb__item')}
+      {...useMicrodataItem({ type: 'https://schema.org/ListItem', prop: 'itemListElement' })}
+    >
+      <Link
+        className={clsx('utrecht-breadcrumb__link', className, {
+          'utrecht-breadcrumb__link--current': current,
+        })}
+        href={href}
+        rel={rel}
+        aria-current={current && 'location'}
+        {...useMicrodataProp('item')}
+        {...restProps}
+        ref={ref}
       >
-        <LinkComponent
-          className={clsx('utrecht-breadcrumb__link', className, {
-            'utrecht-breadcrumb__link--current': current,
-          })}
-          href={href}
-          rel={rel}
-          aria-current={current && 'location'}
-          {...useMicrodataProp('item')}
-          ref={ref}
-        >
-          <span className="utrecht-breadcrumb__text" {...useMicrodataProp('name')}>
-            {children}
-          </span>
-          {typeof index === 'number' ? <meta {...useMicrodataProp('position')} content={String(index + 1)} /> : null}
-        </LinkComponent>
-      </li>
-    );
-  },
+        <span className="utrecht-breadcrumb__text" {...useMicrodataProp('name')}>
+          {children}
+        </span>
+        {typeof index === 'number' ? <meta {...useMicrodataProp('position')} content={String(index + 1)} /> : null}
+      </Link>
+    </li>
+  ),
 );
 
 BreadcrumbLink.displayName = 'BreadcrumbLink';
