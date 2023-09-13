@@ -1,24 +1,25 @@
 import { render, screen } from '@testing-library/react';
-import { Link } from 'gatsby';
+import { Link as GatsbyLink } from 'gatsby';
+import type { GatsbyLinkProps } from 'gatsby';
 import NextLink from 'next/link';
-import React, { createRef } from 'react';
+import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
 import { BreadcrumbLink, BreadcrumbNav } from './BreadcrumbNav';
 import '@testing-library/jest-dom';
 
-const CustomLink = ({ children, ...rest }: any) => {
-  return <a {...rest}>{children}</a>;
+const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
+  return <a {...restProps}>{children}</a>;
 };
 
-const CustomGatsbyLink = ({ children, href, ...rest }: any) => {
+const CustomGatsbyLink = <TState,>({
+  children,
+  href,
+  ...restProps
+}: PropsWithChildren<GatsbyLinkProps<TState> & any>) => {
   return (
-    <Link to={href} {...rest}>
+    <GatsbyLink {...restProps} to={href}>
       {children}
-    </Link>
+    </GatsbyLink>
   );
-};
-
-const CustomNextjsLink = ({ children, ...rest }: any) => {
-  return <NextLink {...rest}>{children}</NextLink>;
 };
 
 describe('Breadcrumb Navigation', () => {
@@ -149,7 +150,7 @@ describe('Breadcrumb Navigation', () => {
 
   it('renders with custom link', () => {
     const { getByRole } = render(
-      <BreadcrumbLink href="/custom" customLink={CustomLink} className="utrecht-link">
+      <BreadcrumbLink href="/custom" Link={CustomLink} className="utrecht-link">
         Custom Link
       </BreadcrumbLink>,
     );
@@ -186,7 +187,7 @@ describe('Breadcrumb Navigation', () => {
 
   test('renders with custom Gatsby link', () => {
     const { getByRole } = render(
-      <BreadcrumbLink customLink={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
+      <BreadcrumbLink Link={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
         Gatsby Link
       </BreadcrumbLink>,
     );
@@ -198,7 +199,7 @@ describe('Breadcrumb Navigation', () => {
 
   test('renders with custom Nextjs link', () => {
     const { getByRole } = render(
-      <BreadcrumbLink customLink={CustomNextjsLink} className="utrecht-link" href="/next-link">
+      <BreadcrumbLink Link={NextLink} className="utrecht-link" href="/next-link">
         Nextjs Link
       </BreadcrumbLink>,
     );
