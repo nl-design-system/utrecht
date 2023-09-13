@@ -93,7 +93,16 @@ export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
 
 export const BreadcrumbLink = forwardRef(
   (
-    { children, current, href, index, rel, Link = UtrechtLink, className }: PropsWithChildren<BreadcrumbLinkProps>,
+    {
+      children,
+      current,
+      href,
+      index,
+      rel,
+      Link = UtrechtLink,
+      className,
+      ...restProps
+    }: PropsWithChildren<BreadcrumbLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const DefaultLinkComponent = Link;
@@ -112,6 +121,7 @@ export const BreadcrumbLink = forwardRef(
           rel={rel}
           aria-current={current && 'location'}
           {...useMicrodataProp('item')}
+          {...restProps}
           ref={ref}
         >
           <span className="utrecht-breadcrumb__text" {...useMicrodataProp('name')}>
