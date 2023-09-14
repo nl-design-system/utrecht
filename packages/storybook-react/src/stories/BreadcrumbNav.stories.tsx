@@ -80,16 +80,23 @@ export const Current: Story = {
 export const CustomLink: Story = {
   args: {
     children: [
-      <BreadcrumbLink Link={ExampleCustomLink} className="utrecht-link" href="/" rel="home" index={0}>
+      <BreadcrumbLink Link={ExampleCustomLink} href="/" rel="home" index={0}>
         Home
       </BreadcrumbLink>,
-      <BreadcrumbLink Link={ExampleCustomLink} className="utrecht-link" href="/a/" index={1}>
+      <BreadcrumbLink Link={ExampleCustomLink} href="/a/" index={1}>
         Niveau 1
       </BreadcrumbLink>,
-      <BreadcrumbLink Link={ExampleCustomLink} className="utrecht-link" href="/a/b/" rel="up" index={2} current>
-        Niveau 2
+      <BreadcrumbLink Link={ExampleCustomLink} href="/a/b/" index={2} current>
+        Huidige pagina
       </BreadcrumbLink>,
     ],
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'The `Link` property is used to override the default link component.',
+      },
+    },
   },
 };
 
