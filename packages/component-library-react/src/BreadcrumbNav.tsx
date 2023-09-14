@@ -69,25 +69,6 @@ export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
   href: string;
   rel?: string;
   index?: number;
-  /**
-   * This property is used to override the default Link component.
-   * @example  The Nextjs Link component can be used as a custom component.
-   *
-   * ```jsx
-   * import { BreadcrumbLink } from '@utrecht/design-system';
-   * import Link from 'next/link';
-   *
-   * const DemoComponent = () => {
-   * return (
-   *  <BreadcrumbNav>
-   *    <BreadcrumbLink Link={Link} className="utrecht-link"  rel="home" href="/" index={0}>Home</BreadcrumbLink>
-   *    <BreadcrumbLink Link={Link} className="utrecht-link" rel="products"  href="/products" index={1} >Products</BreadcrumbLink>
-   * </BreadcrumbNav>
-   *   )
-   *  }
-   *
-   * ```
-   */
   Link?: ComponentType<any>;
 }
 
