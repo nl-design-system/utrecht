@@ -22,7 +22,7 @@ const CustomGatsbyLink = <TState,>({
   );
 };
 
-describe('Breadcrumb Navigation', () => {
+describe('Breadcrumb navigation', () => {
   it('renders a list role element', () => {
     render(<BreadcrumbNav />);
 
@@ -73,13 +73,15 @@ describe('Breadcrumb Navigation', () => {
 
     expect(list).toBeInTheDocument();
   });
-  it('renders a navigation role element', () => {
+
+  it('renders a navigation role element with label', () => {
     render(<BreadcrumbNav label="breadcrumb navigation" />);
 
     const list = screen.getByRole('navigation', { name: 'breadcrumb navigation' });
 
     expect(list).toBeInTheDocument();
   });
+
   it('it renders no heading role element for', () => {
     render(<BreadcrumbNav label="breadcrumb navigation" />);
 
@@ -148,64 +150,86 @@ describe('Breadcrumb Navigation', () => {
     expect(ref.current).toBe(list);
   });
 
-  it('renders with custom link', () => {
-    const { getByRole } = render(
-      <BreadcrumbLink href="/custom" Link={CustomLink} className="utrecht-link">
-        Custom Link
-      </BreadcrumbLink>,
-    );
+  describe('custom link component', () => {
+    it('renders with custom link', () => {
+      const { getByRole } = render(
+        <BreadcrumbLink href="/custom" Link={CustomLink} className="utrecht-link">
+          Custom Link
+        </BreadcrumbLink>,
+      );
 
-    const link = getByRole('link');
-    expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/custom');
+      const link = getByRole('link');
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute('href', '/custom');
+    });
+
+    it('renders with default Link when customLink is not provided', () => {
+      const { getByRole } = render(<BreadcrumbLink href="/default">Default Link</BreadcrumbLink>);
+
+      const link = getByRole('link');
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute('href', '/default');
+      expect(link.tagName).toBe('A');
+    });
+
+    describe('with Gatsby component', () => {
+      it('renders', () => {
+        const { getByRole } = render(
+          <BreadcrumbLink Link={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
+            Gatsby link
+          </BreadcrumbLink>,
+        );
+        const link = getByRole('link');
+
+        expect(link).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', '/gatsby-link');
+      });
+    });
+
+    describe('with Next.js component', () => {
+      it('renders', () => {
+        const { getByRole } = render(
+          <BreadcrumbLink Link={NextLink} className="utrecht-link" href="/next-link">
+            Next.js link
+          </BreadcrumbLink>,
+        );
+        const link = getByRole('link');
+
+        expect(link).toBeInTheDocument();
+        expect(link).toHaveAttribute('href', '/next-link');
+      });
+    });
   });
 
-  it('renders with default Link when customLink is not provided', () => {
-    const { getByRole } = render(<BreadcrumbLink href="/default">Default Link</BreadcrumbLink>);
+  describe('current page', () => {
+    it('renders aria-current', () => {
+      const { getByRole } = render(
+        <BreadcrumbNav>
+          <BreadcrumbLink current href="/current">
+            Current page
+          </BreadcrumbLink>
+        </BreadcrumbNav>,
+      );
 
-    const link = getByRole('link');
-    expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/default');
-    expect(link.tagName).toBe('A');
-  });
+      const link = getByRole('link', { name: 'Current page' });
 
-  it('renders a design system BEM class utrecht-breadcrumb__link--current', () => {
-    const { getByText } = render(
-      <BreadcrumbNav>
-        <BreadcrumbLink current href="/current">
-          <span className="utrecht-breadcrumb__text">Current Link</span>
-        </BreadcrumbLink>
-      </BreadcrumbNav>,
-    );
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute('aria-current', 'page');
+    });
 
-    const link = getByText('Current Link');
-    const anchor = link.closest('a');
+    it('renders a design system BEM class name', () => {
+      const { getByRole } = render(
+        <BreadcrumbNav>
+          <BreadcrumbLink current href="/current">
+            Current page
+          </BreadcrumbLink>
+        </BreadcrumbNav>,
+      );
 
-    expect(anchor).toBeInTheDocument();
-    expect(anchor).toHaveClass('utrecht-breadcrumb__link--current');
-  });
+      const link = getByRole('link', { name: 'Current page' });
 
-  test('renders with custom Gatsby link', () => {
-    const { getByRole } = render(
-      <BreadcrumbLink Link={CustomGatsbyLink} className="utrecht-link" href="/gatsby-link">
-        Gatsby Link
-      </BreadcrumbLink>,
-    );
-    const link = getByRole('link');
-
-    expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/gatsby-link');
-  });
-
-  test('renders with custom Nextjs link', () => {
-    const { getByRole } = render(
-      <BreadcrumbLink Link={NextLink} className="utrecht-link" href="/next-link">
-        Nextjs Link
-      </BreadcrumbLink>,
-    );
-    const link = getByRole('link');
-
-    expect(link).toBeInTheDocument();
-    expect(link).toHaveAttribute('href', '/next-link');
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveClass('utrecht-breadcrumb__link--current');
+    });
   });
 });
