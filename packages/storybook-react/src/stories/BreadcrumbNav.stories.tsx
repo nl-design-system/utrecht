@@ -9,7 +9,11 @@ import { designTokenStory } from './util';
 
 // custom link component for storybook
 const ExampleCustomLink = ({ children, ...rest }: any) => {
-  return <a {...rest}>{children}</a>;
+  return (
+    <a className="utrecht-link utrecht-link--html-a" {...rest}>
+      {children}
+    </a>
+  );
 };
 
 ExampleCustomLink.displayName = 'ExampleCustomLink';
@@ -70,8 +74,8 @@ export const Current: Story = {
       <BreadcrumbLink href="/a/" index={1}>
         Niveau 1
       </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/b/" rel="up" index={2} current>
-        Niveau 2
+      <BreadcrumbLink href="/a/b/" index={2} current>
+        Huidige pagina
       </BreadcrumbLink>,
     ],
   },
