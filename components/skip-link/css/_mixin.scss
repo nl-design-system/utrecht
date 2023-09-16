@@ -7,10 +7,17 @@
 @import "../../common/focus/mixin";
 
 @mixin utrecht-skip-link {
+  /* Use `ButtonFace` as default `background-color`
+   * to ensure the skip link is not transparent and unreadable
+   * when CSS variables are not defined.
+   * 
+   * My only concern with this is that it makes it look like a button,
+   * and it implies the `Space` button should work, but it won't work.
+   */
   align-items: center;
-  background-color: var(--utrecht-skip-link-background-color);
+  background-color: var(--utrecht-skip-link-background-color, ButtonFace);
   box-sizing: border-box;
-  color: var(--utrecht-skip-link-color);
+  color: var(--utrecht-skip-link-color, ButtonText);
   display: inline-flex;
   justify-content: center;
   min-block-size: var(--utrecht-skip-link-min-block-size, 44px);
