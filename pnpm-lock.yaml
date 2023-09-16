@@ -791,6 +791,9 @@ importers:
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
+      '@utrecht/web-component-library-react':
+        specifier: workspace:*
+        version: link:../web-component-library-react
       '@utrecht/web-component-library-stencil':
         specifier: workspace:*
         version: link:../web-component-library-stencil
@@ -11512,7 +11515,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.4
-      vue-component-type-helpers: 1.8.10
+      vue-component-type-helpers: 1.8.11
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -32745,8 +32748,8 @@ packages:
     resolution: {integrity: sha512-EcswR2S8bpR7fD0YPeS7r2xXExrScVMxg4MedACaWHEtx9ftCF/qHG1xGkolzTPcEmjTavCQgbVzHUIdTMzFGA==}
     dev: true
 
-  /vue-component-type-helpers@1.8.10:
-    resolution: {integrity: sha512-FJtmfw2Gn6eQ8kAVNEhw9nYIzWmVQJjdyQRtJXZ7tgXh/FoZhQnZ2KyxR+NuF9U4iZLBvSspeetIpnP9yxxyMw==}
+  /vue-component-type-helpers@1.8.11:
+    resolution: {integrity: sha512-CWItFzuEWjkSXDeMGwQEc5cFH4FaueyPQHfi1mBDe+wA2JABqNjFxFUtmZJ9WHkb0HpEwqgBg1umiXrWYXkXHw==}
     dev: true
 
   /vue-component-type-helpers@1.8.4:
