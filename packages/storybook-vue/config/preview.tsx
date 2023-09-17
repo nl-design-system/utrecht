@@ -1,5 +1,7 @@
+import { withTests } from '@storybook/addon-jest';
 import { Preview } from '@storybook/vue3';
 import { Document } from '@utrecht/component-library-vue';
+import results from '@utrecht/component-library-vue/dist/.jest-test-results.json';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
@@ -18,6 +20,7 @@ const preview: Preview = {
       components: { Document, story },
       template: '<Document class="utrecht-theme"><story /></Document>',
     }),
+    withTests({ results }),
   ],
   parameters: {
     ...addonStatus,

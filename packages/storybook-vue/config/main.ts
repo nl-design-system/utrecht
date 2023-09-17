@@ -22,6 +22,20 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  async viteFinal(config) {
+    // Workaround for `@storybook/addon-jest` with Vite
+    // https://github.com/storybookjs/storybook/issues/14856#issuecomment-1262333250
+    if (config.resolve) {
+      config.resolve = {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          path: require.resolve('path-browserify'),
+        },
+      };
+    }
+    return config;
+  },
 };
 
 export default config;
