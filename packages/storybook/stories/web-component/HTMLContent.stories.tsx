@@ -3,15 +3,14 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/html-content/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtHtmlContent } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
-
-const HTMLContent = ({ children }) => <utrecht-html-content>{children}</utrecht-html-content>;
 
 const meta = {
   title: 'Web Component/HTML content',
   id: 'web-component-html-content',
-  component: HTMLContent,
+  component: UtrechtHtmlContent,
   argTypes: {
     children: {
       description: 'HTML content',
@@ -34,7 +33,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof HTMLContent>;
+} satisfies Meta<typeof UtrechtHtmlContent>;
 
 export default meta;
 

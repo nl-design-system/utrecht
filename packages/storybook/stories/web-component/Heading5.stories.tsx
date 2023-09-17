@@ -4,15 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/heading-5/README.md?raw';
 import tokensDefinition from '@utrecht/components/heading-5/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtHeading5 } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const Heading1 = ({ children }) => <utrecht-heading-5>{children}</utrecht-heading-5>;
 
 const meta = {
   title: 'Web Component/Heading/Heading 5',
   id: 'web-component-heading-5',
-  component: Heading1,
+  component: UtrechtHeading5,
   argTypes: {
     children: {
       description: 'Content of the heading',
@@ -35,7 +33,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Heading1>;
+} satisfies Meta<typeof UtrechtHeading5>;
 
 export default meta;
 

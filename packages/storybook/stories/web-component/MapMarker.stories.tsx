@@ -5,10 +5,15 @@ import readme from '@utrecht/components/map-marker/README.md?raw';
 import tokensDefinition from '@utrecht/components/map-marker/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import { UtrechtMapMarker } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const MapMarker = ({ icon }) => {
+interface MapMarkerStoryProps {
+  icon?: string;
+}
+
+const MapMarkerStory = ({ icon }: MapMarkerStoryProps) => {
   const IconElement = icon;
   return (
     <div
@@ -20,9 +25,9 @@ const MapMarker = ({ icon }) => {
         padding: '3rem',
       }}
     >
-      <utrecht-map-marker>
+      <UtrechtMapMarker>
         <IconElement></IconElement>
-      </utrecht-map-marker>
+      </UtrechtMapMarker>
     </div>
   );
 };
@@ -30,7 +35,7 @@ const MapMarker = ({ icon }) => {
 const meta = {
   title: 'Web Component/Map marker',
   id: 'web-component-map-marker',
-  component: MapMarker,
+  component: MapMarkerStory,
   argTypes: {
     icon: {
       description: 'Icon',
@@ -53,7 +58,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof MapMarker>;
+} satisfies Meta<typeof MapMarkerStory>;
 
 export default meta;
 

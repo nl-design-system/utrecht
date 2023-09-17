@@ -4,19 +4,27 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/button/README.md?raw';
 import tokensDefinition from '@utrecht/components/button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtButton } from '@utrecht/web-component-library-react';
 import React from 'react';
+import { PropsWithChildren } from 'react';
 import { designTokenStory } from '../components/util';
 
-const Button = ({ appearance, busy, children, disabled, type }) => (
-  <utrecht-button appearance={appearance} busy={busy || null} disabled={disabled || null} type={type || null}>
+interface ButtonStoryProps {
+  appearance?: string;
+  busy?: boolean;
+  disabled?: boolean;
+  type?: string;
+}
+const ButtonStory = ({ appearance, busy, children, disabled, type }: PropsWithChildren<ButtonStoryProps>) => (
+  <UtrechtButton appearance={appearance} busy={busy || null} disabled={disabled || null} type={type || null}>
     {children}
-  </utrecht-button>
+  </UtrechtButton>
 );
 
 const meta = {
   title: 'Web Component/Button',
   id: 'web-component-button',
-  component: Button,
+  component: ButtonStory,
   argTypes: {
     appearance: {
       description: 'Appearance',
@@ -63,7 +71,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof ButtonStory>;
 
 export default meta;
 

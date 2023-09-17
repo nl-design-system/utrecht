@@ -4,21 +4,27 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/badge-counter/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtBadgeCounter } from '@utrecht/web-component-library-react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from '../components/util';
 
-const BadgeCounter = ({ textContent, locale, value, max }) => (
-  <utrecht-badge-counter max={max} value={value} locale={locale}>
-    {textContent}
-  </utrecht-badge-counter>
+const BadgeCounterStory = ({
+  children,
+  locale,
+  value,
+  max,
+}: PropsWithChildren<{ locale?: string; value?: string | number; max?: number }>) => (
+  <UtrechtBadgeCounter max={max} value={value} locale={locale}>
+    {children}
+  </UtrechtBadgeCounter>
 );
 
 const meta = {
   title: 'Web Component/Badge counter',
   id: 'web-component-badge-counter',
-  component: BadgeCounter,
+  component: BadgeCounterStory,
   argTypes: {
-    textContent: {
+    children: {
       description: 'Text content',
       control: 'text',
     },
@@ -36,7 +42,7 @@ const meta = {
     },
   },
   args: {
-    textContent: '',
+    children: '',
   },
   tags: ['autodocs'],
   parameters: {
@@ -52,7 +58,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof BadgeCounter>;
+} satisfies Meta<typeof BadgeCounterStory>;
 
 export default meta;
 
@@ -61,13 +67,13 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     value: 7,
-    textContent: '7',
+    children: '7',
   },
 };
 
 export const NumberFormatUSEnglish: Story = {
   args: {
-    textContent: 1234,
+    children: 1234,
     value: 1234,
     locale: 'en-US',
   },
@@ -76,7 +82,7 @@ export const NumberFormatUSEnglish: Story = {
 
 export const NumberFormatFinnish: Story = {
   args: {
-    textContent: 1234,
+    children: 1234,
     value: 1234,
     locale: 'fi',
   },
@@ -85,7 +91,7 @@ export const NumberFormatFinnish: Story = {
 
 export const NumberFormatDutch: Story = {
   args: {
-    textContent: 1234,
+    children: 1234,
     value: 1234,
     locale: 'nl-NL',
   },
@@ -107,7 +113,7 @@ export const MaximumBoundary: Story = {
 
 export const FormattedTextContent: Story = {
   args: {
-    textContent: '1,234',
+    children: '1,234',
   },
   parameters: {
     status: {
@@ -120,7 +126,7 @@ export const FormattedTextContent: Story = {
 export const DoubleDigit: Story = {
   args: {
     value: 42,
-    textContent: '42',
+    children: '42',
   },
   parameters: {
     status: {
@@ -133,7 +139,7 @@ export const DoubleDigit: Story = {
 export const TripleDigit: Story = {
   args: {
     value: 316,
-    textContent: '316',
+    children: '316',
   },
   parameters: {
     status: {
@@ -146,7 +152,7 @@ export const TripleDigit: Story = {
 export const QuadrupleDigit: Story = {
   args: {
     value: 2148,
-    textContent: '2148',
+    children: '2148',
   },
   parameters: {
     status: {

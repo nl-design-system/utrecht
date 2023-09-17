@@ -4,17 +4,23 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/form-toggle/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-toggle/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtFormToggle } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const FormToggle = ({ checked, disabled }) => (
-  <utrecht-form-toggle checked={checked || null} disabled={disabled || null}></utrecht-form-toggle>
+interface FormToggleStoryProps {
+  checked?: boolean;
+  disabled?: boolean;
+}
+
+const FormToggleStory = ({ checked, disabled }: FormToggleStoryProps) => (
+  <UtrechtFormToggle checked={checked || null} disabled={disabled || null}></UtrechtFormToggle>
 );
 
 const meta = {
   title: 'Web Component/Form toggle',
   id: 'web-component-form-toggle',
-  component: FormToggle,
+  component: FormToggleStory,
   argTypes: {
     checked: {
       description: 'Checked',
@@ -43,7 +49,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormToggle>;
+} satisfies Meta<typeof FormToggleStory>;
 
 export default meta;
 

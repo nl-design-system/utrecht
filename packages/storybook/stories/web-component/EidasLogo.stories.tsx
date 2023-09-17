@@ -2,15 +2,13 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtEidasLogo } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const EidasLogo = () => <utrecht-eidas-logo></utrecht-eidas-logo>;
 
 const meta = {
   title: 'Web Component/eIDAS Logo',
   id: 'web-component-eidas-logo',
-  component: EidasLogo,
+  component: UtrechtEidasLogo,
   argTypes: {},
   args: {},
   tags: ['autodocs'],
@@ -27,7 +25,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof EidasLogo>;
+} satisfies Meta<typeof UtrechtEidasLogo>;
 
 export default meta;
 

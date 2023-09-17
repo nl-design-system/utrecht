@@ -4,11 +4,18 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/checkbox/README.md?raw';
 import tokensDefinition from '@utrecht/components/checkbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtCheckbox } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const Checkbox = ({ checked, disabled, value }) => (
-  <utrecht-checkbox checked={checked || null} disabled={disabled || null} value={value || null} />
+interface CheckboxStoryProps {
+  checked?: boolean;
+  disabled?: boolean;
+  value?: string;
+}
+
+const Checkbox = ({ checked, disabled, value }: CheckboxStoryProps) => (
+  <UtrechtCheckbox checked={checked || null} disabled={disabled || null} value={value || null} />
 );
 
 const meta = {

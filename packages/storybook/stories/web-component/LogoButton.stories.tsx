@@ -3,29 +3,48 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import tokensDefinition from '@utrecht/components/logo-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import {
+  UtrechtButton,
+  UtrechtDigidLogo,
+  UtrechtEherkenningLogo,
+  UtrechtEidasLogo,
+  UtrechtIconArrow,
+  UtrechtLogoButton,
+} from '@utrecht/web-component-library-react';
 import React from 'react';
+import { ComponentType } from 'react';
 import { designTokenStory } from '../components/util';
 
-const LogoButton = ({ logo, label, appearance }) => {
-  const LogoElement = logo;
+interface LogoButtonStoryProps {
+  LogoImage: ComponentType;
+  label?: string;
+  appearance?: string;
+}
+
+const LogoButtonStory = ({ LogoImage, label, appearance }: LogoButtonStoryProps) => {
   return (
-    <utrecht-logo-button>
-      <LogoElement></LogoElement>
-      <utrecht-button appearance={appearance}>
-        {label} <utrecht-icon-arrow></utrecht-icon-arrow>
-      </utrecht-button>
-    </utrecht-logo-button>
+    <UtrechtLogoButton>
+      <LogoImage></LogoImage>
+      <UtrechtButton appearance={appearance}>
+        {label} <UtrechtIconArrow></UtrechtIconArrow>
+      </UtrechtButton>
+    </UtrechtLogoButton>
   );
 };
+
 const meta = {
   title: 'Web Component/Logo button',
   id: 'web-component-logo-button',
-  component: LogoButton,
+  component: LogoButtonStory,
   argTypes: {
-    logo: {
+    LogoImage: {
       name: 'logo',
-      control: 'select',
-      options: ['utrecht-digid-logo', 'utrecht-eherkenning-logo', 'utrecht-eidas-logo'],
+      control: { type: 'select' },
+      options: {
+        'utrecht-digid-logo': UtrechtDigidLogo,
+        'utrecht-eherkenning-logo': UtrechtEherkenningLogo,
+        'utrecht-eidas-logo': UtrechtEidasLogo,
+      },
       table: {
         category: 'DEMO',
         defaultValue: { summary: undefined },
@@ -64,7 +83,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof LogoButton>;
+} satisfies Meta<typeof LogoButtonStory>;
 
 export default meta;
 
@@ -72,7 +91,7 @@ type Story = StoryObj<typeof meta>;
 
 export const DigidButton: Story = {
   args: {
-    logo: 'utrecht-digid-logo',
+    LogoImage: UtrechtDigidLogo,
     label: 'Inloggen met DigiD',
     appearance: 'primary-action-button',
   },
@@ -81,7 +100,7 @@ export const DigidButton: Story = {
 
 export const EherkenningButton: Story = {
   args: {
-    logo: 'utrecht-eherkenning-logo',
+    LogoImage: UtrechtEherkenningLogo,
     label: 'Inloggen met eHerkenning',
     appearance: 'primary-action-button',
   },
@@ -90,7 +109,7 @@ export const EherkenningButton: Story = {
 
 export const EidasButton: Story = {
   args: {
-    logo: 'utrecht-eidas-logo',
+    LogoImage: UtrechtEidasLogo,
     label: 'Inloggen met eIDAS',
     appearance: 'primary-action-button',
   },

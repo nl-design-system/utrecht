@@ -2,11 +2,30 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtFormFieldTextarea } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const FormFieldTextarea = ({ disabled, invalid, label, placeholder, readOnly, required, value }) => (
-  <utrecht-form-field-textarea
+interface FormFieldTextareaProps {
+  disabled?: boolean;
+  invalid?: boolean;
+  label?: string;
+  placeholder?: string;
+  readOnly?: string;
+  required?: boolean;
+  value?: boolean;
+}
+
+const FormFieldTextareaStory = ({
+  disabled,
+  invalid,
+  label,
+  placeholder,
+  readOnly,
+  required,
+  value,
+}: FormFieldTextareaProps) => (
+  <UtrechtFormFieldTextarea
     disabled={disabled || null}
     invalid={invalid || null}
     placeholder={placeholder || null}
@@ -15,12 +34,12 @@ const FormFieldTextarea = ({ disabled, invalid, label, placeholder, readOnly, re
     value={value}
   >
     {label}
-  </utrecht-form-field-textarea>
+  </UtrechtFormFieldTextarea>
 );
 const meta = {
   title: 'Web Component/Form field with textarea',
   id: 'web-component-form-field-textarea',
-  component: FormFieldTextarea,
+  component: FormFieldTextareaStory,
   argTypes: {
     disabled: {
       description: 'Disabled',
@@ -74,7 +93,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldTextarea>;
+} satisfies Meta<typeof FormFieldTextareaStory>;
 
 export default meta;
 

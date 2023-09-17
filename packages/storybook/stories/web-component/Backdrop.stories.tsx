@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/backdrop/README.md?raw';
 import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtBackdrop } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
@@ -29,13 +30,14 @@ const checkerboard = (story) => (
   </div>
 );
 
-const Backdrop = ({ viewport }) => <utrecht-backdrop viewport={viewport ? true : undefined}></utrecht-backdrop>;
+const BackdropStory = ({ viewport }: { viewport?: boolean }) => (
+  <UtrechtBackdrop viewport={viewport ? true : undefined} />
+);
 
 const meta = {
   title: 'Web Component/Backdrop',
   id: 'web-component-backdrop',
-  component: Backdrop,
-  decorators: [checkerboard],
+  component: BackdropStory,
   argTypes: {
     viewport: {
       name: 'Cover viewport',
@@ -64,12 +66,14 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Backdrop>;
+} satisfies Meta<typeof BackdropStory>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  decorators: [checkerboard],
+};
 
 export const DesignTokens = designTokenStory(meta);

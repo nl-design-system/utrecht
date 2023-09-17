@@ -4,15 +4,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/paragraph/README.md?raw';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtParagraph } from '@utrecht/web-component-library-react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from '../components/util';
 
-const Paragraph = ({ children, lead }) => <utrecht-paragraph lead={lead || null}>{children}</utrecht-paragraph>;
+interface ParagraphStoryProps {
+  lead?: boolean;
+}
+
+const ParagraphStory = ({ children, lead }: PropsWithChildren<ParagraphStoryProps>) => (
+  <UtrechtParagraph lead={lead || null}>{children}</UtrechtParagraph>
+);
 
 const meta = {
   title: 'Web Component/Paragraph',
   id: 'web-component-paragraph',
-  component: Paragraph,
+  component: ParagraphStory,
   argTypes: {
     children: {
       description: 'Content of the paragraph',
@@ -37,7 +44,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Paragraph>;
+} satisfies Meta<typeof ParagraphStory>;
 
 export default meta;
 

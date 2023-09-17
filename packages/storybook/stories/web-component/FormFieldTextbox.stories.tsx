@@ -2,10 +2,26 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtFormFieldTextbox } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const FormFieldTextbox = ({
+interface FormFieldTextboxStoryProps {
+  autoComplete?: string;
+  disabled?: boolean;
+  invalid?: boolean;
+  label?: string;
+  min?: number | string;
+  max?: number | string;
+  pattern?: string;
+  placeholder?: string;
+  readOnly?: boolean;
+  required?: boolean;
+  value?: boolean;
+  type?: boolean;
+}
+
+const FormFieldTextboxStory = ({
   autoComplete,
   disabled,
   invalid,
@@ -18,8 +34,8 @@ const FormFieldTextbox = ({
   value,
   min,
   max,
-}) => (
-  <utrecht-form-field-textbox
+}: FormFieldTextboxStoryProps) => (
+  <UtrechtFormFieldTextbox
     autoComplete={autoComplete || null}
     disabled={disabled || null}
     invalid={invalid || null}
@@ -33,13 +49,13 @@ const FormFieldTextbox = ({
     type={type || null}
   >
     {label}
-  </utrecht-form-field-textbox>
+  </UtrechtFormFieldTextbox>
 );
 
 const meta = {
   title: 'Web Component/Form field with textbox',
   id: 'web-component-form-field-textbox',
-  component: FormFieldTextbox,
+  component: FormFieldTextboxStory,
   argTypes: {
     autoComplete: {
       description: 'Autocomplete',
@@ -179,7 +195,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldTextbox>;
+} satisfies Meta<typeof FormFieldTextboxStory>;
 
 export default meta;
 

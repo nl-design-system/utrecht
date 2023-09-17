@@ -4,27 +4,34 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/heading/README.md?raw';
 import tokensDefinition from '@utrecht/components/heading/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtHeading } from '@utrecht/web-component-library-react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from '../components/util';
 
-const Heading = ({ level, textContent }) => <utrecht-heading level={level}>{textContent}</utrecht-heading>;
+interface HeadingStoryProps {
+  level?: number;
+}
+
+const HeadingStory = ({ children, level }: PropsWithChildren<HeadingStoryProps>) => (
+  <UtrechtHeading level={level}>{children}</UtrechtHeading>
+);
 
 const meta = {
   title: 'Web Component/Heading',
   id: 'web-component-heading',
-  component: Heading,
+  component: HeadingStory,
   argTypes: {
     level: {
       description: 'Heading level',
       type: { name: 'number', required: true },
     },
-    textContent: {
+    children: {
       description: 'Set the content of the heading',
       control: 'text',
     },
   },
   args: {
-    textContent: '',
+    children: '',
     level: 1,
   },
   tags: ['autodocs'],
@@ -41,7 +48,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Heading>;
+} satisfies Meta<typeof HeadingStory>;
 
 export default meta;
 
@@ -50,7 +57,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     level: 1,
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
   },
   parameters: {
     status: {
@@ -62,7 +69,7 @@ export const Default: Story = {
 export const Heading2: Story = {
   args: {
     level: 2,
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
   },
   parameters: {
     status: {
@@ -74,7 +81,7 @@ export const Heading2: Story = {
 export const Heading3: Story = {
   args: {
     level: 3,
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
   },
   parameters: {
     status: {
@@ -86,7 +93,7 @@ export const Heading3: Story = {
 export const Heading4: Story = {
   args: {
     level: 4,
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
   },
   parameters: {
     status: {
@@ -98,7 +105,7 @@ export const Heading4: Story = {
 export const Heading5: Story = {
   args: {
     level: 5,
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
   },
   parameters: {
     status: {
@@ -110,7 +117,7 @@ export const Heading5: Story = {
 export const Heading6: Story = {
   args: {
     level: 6,
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
   },
   parameters: {
     status: {
@@ -122,7 +129,7 @@ export const Heading6: Story = {
 export const Heading11: Story = {
   args: {
     level: 11,
-    textContent: 'These go to eleven!',
+    children: 'These go to eleven!',
   },
   parameters: {
     docs: {

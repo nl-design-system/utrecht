@@ -2,24 +2,33 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtFormFieldCheckbox } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const FormFieldCheckbox = ({ checked, disabled, invalid, label, required }) => (
-  <utrecht-form-field-checkbox
+interface FormFieldCheckboxStoryProps {
+  checked?: boolean;
+  disabled?: boolean;
+  invalid?: boolean;
+  label?: string;
+  required?: boolean;
+}
+
+const FormFieldCheckboxStory = ({ checked, disabled, invalid, label, required }: FormFieldCheckboxStoryProps) => (
+  <UtrechtFormFieldCheckbox
     checked={checked || null}
     disabled={disabled || null}
     invalid={invalid || null}
     required={required || null}
   >
     {label}
-  </utrecht-form-field-checkbox>
+  </UtrechtFormFieldCheckbox>
 );
 
 const meta = {
   title: 'Web Component/Form field with checkbox',
   id: 'web-component-form-field-checkbox',
-  component: FormFieldCheckbox,
+  component: FormFieldCheckboxStory,
   argTypes: {
     checked: {
       description: 'Checked',
@@ -63,7 +72,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldCheckbox>;
+} satisfies Meta<typeof FormFieldCheckboxStory>;
 
 export default meta;
 

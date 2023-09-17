@@ -4,19 +4,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/badge-status/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-status/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtBadgeStatus } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const BadgeStatus = ({ textContent, status }) => (
-  <utrecht-badge-status status={status}>{textContent}</utrecht-badge-status>
-);
 
 const meta = {
   title: 'Web Component/Badge status',
   id: 'web-component-badge-status',
-  component: BadgeStatus,
+  component: UtrechtBadgeStatus,
   argTypes: {
-    textContent: {
+    children: {
       description: 'Text content',
       control: 'text',
     },
@@ -27,7 +23,7 @@ const meta = {
     },
   },
   args: {
-    textContent: '',
+    children: '',
   },
   tags: ['autodocs'],
   parameters: {
@@ -43,7 +39,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof BadgeStatus>;
+} satisfies Meta<typeof UtrechtBadgeStatus>;
 
 export default meta;
 
@@ -52,7 +48,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     status: '',
-    textContent: 'Normaal',
+    children: 'Normaal',
   },
   parameters: {
     docs: {
@@ -66,77 +62,77 @@ export const Default: Story = {
 export const Empty: Story = {
   args: {
     status: 'neutral',
-    textContent: '',
+    children: '',
   },
 };
 
 export const Neutral: Story = {
   args: {
     status: 'neutral',
-    textContent: 'Neutral',
+    children: 'Neutral',
   },
 };
 
 export const Success: Story = {
   args: {
     status: 'success',
-    textContent: 'Success',
+    children: 'Success',
   },
 };
 
 export const Warning: Story = {
   args: {
     status: 'warning',
-    textContent: 'Warning',
+    children: 'Warning',
   },
 };
 
 export const Error: Story = {
   args: {
     status: 'error',
-    textContent: 'Error',
+    children: 'Error',
   },
 };
 
 export const Safe: Story = {
   args: {
     status: 'safe',
-    textContent: 'Safe',
+    children: 'Safe',
   },
 };
 
 export const Danger: Story = {
   args: {
     status: 'danger',
-    textContent: 'Danger',
+    children: 'Danger',
   },
 };
 
 export const Active: Story = {
   args: {
     status: 'active',
-    textContent: 'Active',
+    children: 'Active',
   },
 };
 
 export const Inactive: Story = {
   args: {
     status: 'inactive',
-    textContent: 'Inactive',
+    children: 'Inactive',
   },
 };
 
 export const Valid: Story = {
   args: {
     status: 'valid',
-    textContent: 'Valid',
+    children: 'Valid',
   },
 };
 
 export const Invalid: Story = {
   args: {
     status: 'invalid',
-    textContent: 'Invalid',
+    children: 'Invalid',
   },
 };
 

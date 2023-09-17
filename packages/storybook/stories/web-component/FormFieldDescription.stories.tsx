@@ -4,19 +4,25 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/form-field-description/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-field-description/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtFormFieldDescription } from '@utrecht/web-component-library-react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from '../components/util';
 
-const FormFieldDescription = ({ children, id, status }) => (
-  <utrecht-form-field-description id={id} status={status}>
+interface FormFieldDescriptionStoryProps {
+  id?: string;
+  status?: string;
+}
+
+const FormFieldDescriptionStory = ({ children, id, status }: PropsWithChildren<FormFieldDescriptionStoryProps>) => (
+  <UtrechtFormFieldDescription id={id} status={status}>
     {children}
-  </utrecht-form-field-description>
+  </UtrechtFormFieldDescription>
 );
 
 const meta = {
   title: 'Web Component/Form field description',
   id: 'web-component-form-field-description',
-  component: FormFieldDescription,
+  component: FormFieldDescriptionStory,
   argTypes: {
     id: {
       description: 'Unique identifier to associate it with a form input',
@@ -49,7 +55,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof FormFieldDescription>;
+} satisfies Meta<typeof FormFieldDescriptionStory>;
 
 export default meta;
 

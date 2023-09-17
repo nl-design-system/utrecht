@@ -4,15 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/logo/README.md?raw';
 import tokensDefinition from '@utrecht/components/logo/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtLogo } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const Logo = () => <utrecht-logo></utrecht-logo>;
 
 const meta = {
   title: 'Web Component/Logo',
   id: 'web-component-logo',
-  component: Logo,
+  component: UtrechtLogo,
   argTypes: {},
   args: {},
   tags: ['autodocs'],
@@ -29,7 +27,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Logo>;
+} satisfies Meta<typeof UtrechtLogo>;
 
 export default meta;
 

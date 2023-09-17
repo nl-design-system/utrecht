@@ -4,15 +4,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/document/README.md?raw';
 import tokensDefinition from '@utrecht/components/document/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtDocument } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
-
-const Document = ({ children }) => <utrecht-document>{children}</utrecht-document>;
 
 const meta = {
   title: 'Web Component/Document',
   id: 'web-component-document',
-  component: Document,
+  component: UtrechtDocument,
   argTypes: {
     children: {
       description: 'Content of the document',
@@ -35,7 +34,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Document>;
+} satisfies Meta<typeof UtrechtDocument>;
 
 export default meta;
 
