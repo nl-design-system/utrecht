@@ -17,7 +17,7 @@ https://stenciljs.com/docs/dev-server
 
     <script type="module" src="/build/utrecht.esm.js"></script>
     <script nomodule src="/build/utrecht.js"></script>
-    <link rel="stylesheet" type="text/css" href="/node_modules/@utrecht/design-tokens/dist/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
   </head>
   <body>
     <utrecht-document>
@@ -25,6 +25,84 @@ https://stenciljs.com/docs/dev-server
       <utrecht-page>
         <utrecht-page-header><utrecht-logo></utrecht-logo></utrecht-page-header>
         <utrecht-page-content>
+          <form action="/search" method="get">
+            <utrecht-form-field-textbox name="q" value="Value here">
+              <span slot="label">Label here</span>
+              <utrecht-paragraph slot="description">Description here</utrecht-paragraph>
+              <utrecht-paragraph slot="error-message">Error message here</utrecht-paragraph>
+              <utrecht-paragraph slot="status">Status here</utrecht-paragraph>
+            </utrecht-form-field-textbox>
+            <utrecht-form-field-textbox
+              type="password"
+              name="password"
+              autocomplete="current-password"
+              value="wordy.shading0seashore"
+              label="Password"
+            >
+            </utrecht-form-field-textbox>
+            <utrecht-form-field-textbox
+              type="password"
+              name="password"
+              autocomplete="new-password"
+              value="wordy.shading0seashore"
+              label="New password"
+            >
+            </utrecht-form-field-textbox>
+            <utrecht-form-field-checkbox
+              name="coc"
+              value="I accept the Code of Conduct"
+              checked
+              label="I accept the Code of Conduct 👍"
+            ></utrecht-form-field-checkbox>
+            <utrecht-form-field-textarea
+              name="message"
+              value="I accept the Code of Conduct"
+              label="Message"
+            ></utrecht-form-field-textarea>
+            <utrecht-form-field-textarea
+              name="excerpt"
+              placeholder="Type a short description here..."
+              label="Excerpt"
+            ></utrecht-form-field-textarea>
+            <utrecht-form-field-checkbox name="coc" value="I accept the Code of Conduct" checked>
+              <span slot="label">I accept the Code of Conduct</span>
+            </utrecht-form-field-checkbox>
+            <utrecht-form-field-checkbox name="coc" value="I accept the Code of Conduct" required invalid>
+              <span slot="label">I accept the Code of Conduct</span>
+              <utrecht-paragraph slot="description"
+                ><utrecht-link href="https://github.com/nl-design-system/.github/blob/main/CODE_OF_CONDUCT.nl.md"
+                  >Code of Conduct van NL Design System</utrecht-link
+                ></utrecht-paragraph
+              >
+              <utrecht-paragraph slot="error-message">Code of conduct is required, please accept!</utrecht-paragraph>
+            </utrecht-form-field-checkbox>
+            <utrecht-form-field-textbox name="q" value="My query">
+              <span slot="label">Hello world</span>
+              <utrecht-paragraph slot="description">The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
+              <utrecht-paragraph slot="error-message">The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
+              <utrecht-paragraph slot="status">30/144 characters</utrecht-paragraph>
+            </utrecht-form-field-textbox>
+            <utrecht-form-field-textbox name="q" value="" required invalid>
+              <span slot="label">E-mail address</span>
+            </utrecht-form-field-textbox>
+            <utrecht-form-field-textbox name="q" value="My query" invalid>
+              <span slot="label">Hello world</span>
+            </utrecht-form-field-textbox>
+            <utrecht-button-group>
+              <utrecht-link-button>⃪ Previous</utrecht-link-button>
+              <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
+            </utrecht-button-group>
+          </form>
+          <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
+          <utrecht-button-group>
+            <button type="button" popovertarget="mypopover" popovertargetaction="show">Show popover</button>
+            <button type="button" popovertarget="mypopover" popovertargetaction="hide">Hide popover</button>
+          </utrecht-button-group>
+          <utrecht-button-group
+            ><utrecht-button popovertarget="mypopover" popovertargetaction="show">Show popover</utrecht-button>
+            <utrecht-button popovertarget="mypopover" popovertargetaction="hide">Hide popover</utrecht-button>
+          </utrecht-button-group>
+          <div id="mypopover" popover>Popover content</div>
           <utrecht-article id="main" style="--utrecht-space-around: 1">
             <utrecht-color-sample color="#007dad"></utrecht-color-sample>
             <utrecht-alert>
