@@ -4,15 +4,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/table/README.md?raw';
 import tokensDefinition from '@utrecht/components/table/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtTable } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
-
-const Table = ({ children }) => <utrecht-table>{children}</utrecht-table>;
 
 const meta = {
   title: 'Web Component/Table',
   id: 'web-component-table',
-  component: Table,
+  component: UtrechtTable,
   argTypes: {
     children: {
       description: 'Content of the table',
@@ -35,7 +34,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Table>;
+} satisfies Meta<typeof UtrechtTable>;
 
 export default meta;
 

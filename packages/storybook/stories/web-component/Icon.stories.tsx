@@ -8,7 +8,13 @@ import iconSet from '@utrecht/icon/dist/index.json';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const Icon = ({ color, icon, size }) => {
+interface IconStoryProps {
+  color?: string;
+  icon?: string;
+  size?: string;
+}
+
+const IconStory = ({ color, icon, size }: IconStoryProps) => {
   const IconElement = icon;
   if (color || size) {
     return (
@@ -24,7 +30,7 @@ const Icon = ({ color, icon, size }) => {
 const meta = {
   title: 'Web Component/Icon',
   id: 'web-component-icon',
-  component: Icon,
+  component: IconStory,
   argTypes: {
     children: {
       description: 'Content of the icon, for example: an <svg> element',
@@ -63,7 +69,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Icon>;
+} satisfies Meta<typeof IconStory>;
 
 export default meta;
 

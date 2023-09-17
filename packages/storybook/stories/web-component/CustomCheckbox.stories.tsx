@@ -4,24 +4,41 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/custom-checkbox/README.md?raw';
 import tokensDefinition from '@utrecht/components/custom-checkbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtCustomCheckbox } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const CustomCheckbox = ({ checked, disabled, indeterminate, invalid, required, value }) => (
-  <utrecht-custom-checkbox
+interface CustomCheckboxStoryProps {
+  checked?: boolean;
+  disabled?: boolean;
+  indeterminate?: boolean;
+  invalid?: boolean;
+  required?: boolean;
+  value?: string;
+}
+
+const CustomCheckboxStory = ({
+  checked,
+  disabled,
+  indeterminate,
+  invalid,
+  required,
+  value,
+}: CustomCheckboxStoryProps) => (
+  <UtrechtCustomCheckbox
     checked={checked || null}
     disabled={disabled || null}
     indeterminate={indeterminate || null}
     invalid={invalid || null}
     required={required || null}
     value={value}
-  ></utrecht-custom-checkbox>
+  ></UtrechtCustomCheckbox>
 );
 
 const meta = {
   title: 'Web Component/Custom checkbox',
   id: 'web-component-custom-checkbox',
-  component: CustomCheckbox,
+  component: CustomCheckboxStory,
   argTypes: {
     checked: {
       description: 'Checked',
@@ -70,7 +87,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof CustomCheckbox>;
+} satisfies Meta<typeof CustomCheckboxStory>;
 
 export default meta;
 

@@ -4,15 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/separator/README.md?raw';
 import tokensDefinition from '@utrecht/components/separator/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtSeparator } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const Separator = ({ children }) => <utrecht-separator>{children}</utrecht-separator>;
 
 const meta = {
   title: 'Web Component/Separator',
   id: 'web-component-separator',
-  component: Separator,
+  component: UtrechtSeparator,
   argTypes: {},
   args: {},
   tags: ['autodocs'],
@@ -29,7 +27,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Separator>;
+} satisfies Meta<typeof UtrechtSeparator>;
 
 export default meta;
 

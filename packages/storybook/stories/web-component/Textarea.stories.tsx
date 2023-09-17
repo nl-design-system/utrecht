@@ -5,12 +5,33 @@ import readme from '@utrecht/components/textarea/README.md?raw';
 import tokensDefinition from '@utrecht/components/textarea/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtTextarea } from '@utrecht/web-component-library-react';
+import { React } from 'react';
 import { designTokenStory } from '../components/util';
+
+interface TextareaStoryProps {
+  disabled?: boolean;
+  invalid?: boolean;
+  placeholder?: string;
+  readOnly?: boolean;
+  required?: boolean;
+  value?: boolean;
+}
+
+const TextareaStory = ({ disabled, invalid, placeholder, readOnly, required, value }: TextareaStoryProps) => (
+  <UtrechtTextarea
+    disabled={disabled || null}
+    invalid={invalid || null}
+    placeholder={placeholder || null}
+    readOnly={readOnly || null}
+    required={required || null}
+    value={value}
+  ></UtrechtTextarea>
+);
 
 const meta = {
   title: 'Web Component/Textarea',
   id: 'web-component-textarea',
-  component: UtrechtTextarea,
+  component: TextareaStory,
   argTypes: {
     disabled: {
       description: 'Disabled',
@@ -59,7 +80,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof UtrechtTextarea>;
+} satisfies Meta<typeof TextareaStory>;
 
 export default meta;
 

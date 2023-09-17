@@ -4,15 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/page-header/README.md?raw';
 import tokensDefinition from '@utrecht/components/page-header/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtPageHeader } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const PageHeader = ({ children }) => <utrecht-page-header>{children}</utrecht-page-header>;
 
 const meta = {
   title: 'Web Component/Page header',
   id: 'web-component-page-header',
-  component: PageHeader,
+  component: UtrechtPageHeader,
   argTypes: {
     children: {
       description: 'Content of the page header',
@@ -35,7 +33,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof PageHeader>;
+} satisfies Meta<typeof UtrechtPageHeader>;
 
 export default meta;
 

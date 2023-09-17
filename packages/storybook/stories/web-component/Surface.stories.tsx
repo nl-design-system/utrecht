@@ -6,17 +6,16 @@ import themeColorDocs from '@utrecht/components/surface/_surface-theme-color.md?
 import tokensDefinition from '@utrecht/components/surface/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { utrechtSurfaceBackgroundColor } from '@utrecht/design-tokens/dist/index.mjs';
+import { UtrechtSurface } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
-
-const Surface = ({ children }) => <utrecht-surface>{children}</utrecht-surface>;
 
 const MetaThemeColor = ({ color }) => <meta name="theme-color" content={color} />;
 
 const meta = {
   title: 'Web Component/Surface',
   id: 'web-component-surface',
-  component: Surface,
+  component: UtrechtSurface,
   argTypes: {
     children: {
       description: 'Content of the surface',
@@ -40,7 +39,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Surface>;
+} satisfies Meta<typeof UtrechtSurface>;
 
 export default meta;
 

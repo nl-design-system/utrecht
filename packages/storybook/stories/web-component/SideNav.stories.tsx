@@ -3,15 +3,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/navigatie sidenav/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtSidenav } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const SideNav = ({ json }) => <utrecht-sidenav json={JSON.stringify(json)}></utrecht-sidenav>;
+interface SideNavStoryProps {
+  json: string;
+}
+
+const SideNavStory = ({ json }: SideNavStoryProps) => <UtrechtSidenav json={JSON.stringify(json)}></UtrechtSidenav>;
 
 const meta = {
   title: 'Web Component/Side navigation',
   id: 'web-component-sidenav',
-  component: SideNav,
+  component: SideNavStory,
   argTypes: {
     json: {
       description: 'JSON',
@@ -35,7 +40,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof SideNav>;
+} satisfies Meta<typeof SideNavStory>;
 
 export default meta;
 

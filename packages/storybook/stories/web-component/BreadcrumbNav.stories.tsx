@@ -4,21 +4,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/breadcrumb/README.md?raw';
 import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtBreadcrumb } from '@utrecht/web-component-library-react';
+import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from '../components/util';
 
-const Breadcrumb = ({ children, items, variant }) => {
+const BreadcrumbStory = ({ children, items, variant }: PropsWithChildren<{ json: any; variant?: string }>) => {
   return (
-    <utrecht-breadcrumb json={JSON.stringify(items)} variant={variant}>
+    <UtrechtBreadcrumb json={JSON.stringify(items)} variant={variant}>
       {children}
-    </utrecht-breadcrumb>
+    </UtrechtBreadcrumb>
   );
 };
 
 const meta = {
   title: 'Web Component/Breadcrumb navigation',
   id: 'web-component-breadcrumb-nav',
-  component: Breadcrumb,
+  component: BreadcrumbStory,
   argTypes: {
     items: {
       description: 'Menu items',
@@ -53,7 +54,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Breadcrumb>;
+} satisfies Meta<typeof BreadcrumbStory>;
 
 export default meta;
 

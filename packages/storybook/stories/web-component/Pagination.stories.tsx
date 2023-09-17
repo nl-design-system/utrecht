@@ -4,22 +4,38 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/pagination/README.md?raw';
 import tokensDefinition from '@utrecht/components/pagination/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtPagination } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const Pagination = ({ currentIndex, links, next, prev }) => (
-  <utrecht-pagination
-    links={JSON.stringify(links)}
-    next={JSON.stringify(next)}
-    prev={JSON.stringify(prev)}
+interface PaginationLink {
+  disabled?: boolean;
+  href?: string;
+  textContent?: string;
+  title?: string;
+  index?: number;
+}
+
+interface PaginationStoryProps {
+  currentIndex?: number;
+  links?: string | PaginationLink[];
+  next?: string | PaginationLink;
+  prev?: string | PaginationLink;
+}
+
+const PaginationStory = ({ currentIndex, links, next, prev }: PaginationStoryProps) => (
+  <UtrechtPagination
+    links={typeof links !== 'string' ? (JSON.stringify(links) as PaginationLink[]) : links}
+    next={typeof next !== 'string' ? (JSON.stringify(next) as PaginationLink) : next}
+    prev={typeof prev !== 'string' ? (JSON.stringify(prev) as PaginationLink) : prev}
     current-index={currentIndex}
-  ></utrecht-pagination>
+  ></UtrechtPagination>
 );
 
 const meta = {
   title: 'Web Component/Pagination',
   id: 'web-component-pagination',
-  component: Pagination,
+  component: PaginationStory,
   argTypes: {
     currentIndex: {
       description: 'Current index',
@@ -58,7 +74,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Pagination>;
+} satisfies Meta<typeof PaginationStory>;
 
 export default meta;
 

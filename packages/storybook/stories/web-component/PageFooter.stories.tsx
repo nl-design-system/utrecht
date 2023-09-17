@@ -4,15 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/page-footer/README.md?raw';
 import tokensDefinition from '@utrecht/components/page-footer/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtPageFooter } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const PageFooter = ({ children }) => <utrecht-page-footer>{children}</utrecht-page-footer>;
 
 const meta = {
   title: 'Web Component/Page footer',
   id: 'web-component-page-footer',
-  component: PageFooter,
+  component: UtrechtPageFooter,
   argTypes: {
     children: {
       description: 'Content of the page footer',
@@ -35,7 +33,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof PageFooter>;
+} satisfies Meta<typeof UtrechtPageFooter>;
 
 export default meta;
 

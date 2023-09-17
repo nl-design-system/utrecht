@@ -4,15 +4,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/page/README.md?raw';
 import tokensDefinition from '@utrecht/components/page/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtPage } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
-
-const Page = ({ children }) => <utrecht-page>{children}</utrecht-page>;
 
 const meta = {
   title: 'Web Component/Page',
   id: 'web-component-page',
-  component: Page,
+  component: UtrechtPage,
   argTypes: {
     children: {
       description: 'Content of the page',
@@ -39,7 +38,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Page>;
+} satisfies Meta<typeof UtrechtPage>;
 
 export default meta;
 

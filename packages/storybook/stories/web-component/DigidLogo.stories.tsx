@@ -2,15 +2,13 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtDigidLogo } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const DigidLogo = () => <utrecht-digid-logo></utrecht-digid-logo>;
 
 const meta = {
   title: 'Web Component/DigiD logo',
   id: 'web-component-digid-logo',
-  component: DigidLogo,
+  component: UtrechtDigidLogo,
   argTypes: {},
   args: {},
   tags: ['autodocs'],
@@ -27,7 +25,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof DigidLogo>;
+} satisfies Meta<typeof UtrechtDigidLogo>;
 
 export default meta;
 

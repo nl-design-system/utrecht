@@ -2,15 +2,13 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import { UtrechtEherkenningLogo } from '@utrecht/web-component-library-react';
 import { designTokenStory } from '../components/util';
-
-const EherkenningLogo = () => <utrecht-eherkenning-logo></utrecht-eherkenning-logo>;
 
 const meta = {
   title: 'Web Component/eHerkenning Logo',
   id: 'web-component-eherkenning-logo',
-  component: EherkenningLogo,
+  component: UtrechtEherkenningLogo,
   argTypes: {},
   args: {},
   tags: ['autodocs'],
@@ -27,7 +25,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof EherkenningLogo>;
+} satisfies Meta<typeof UtrechtEherkenningLogo>;
 
 export default meta;
 

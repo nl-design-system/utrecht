@@ -4,10 +4,25 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/textbox/README.md?raw';
 import tokensDefinition from '@utrecht/components/textbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtTextbox } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from '../components/util';
 
-const Textbox = ({
+interface TextboxStoryProps {
+  autoComplete?: string;
+  disabled?: boolean;
+  invalid?: boolean;
+  min?: number | string;
+  max?: number | string;
+  pattern?: string;
+  placeholder?: string;
+  readOnly?: boolean;
+  required?: boolean;
+  value?: boolean;
+  type?: boolean;
+}
+
+const TextboxStory = ({
   autoComplete,
   disabled,
   invalid,
@@ -19,8 +34,8 @@ const Textbox = ({
   required,
   type,
   value,
-}) => (
-  <utrecht-textbox
+}: TextboxStoryProps) => (
+  <UtrechtTextbox
     autoComplete={autoComplete || null}
     disabled={disabled || null}
     invalid={invalid || null}
@@ -32,13 +47,13 @@ const Textbox = ({
     required={required || null}
     value={value}
     type={type || null}
-  ></utrecht-textbox>
+  ></UtrechtTextbox>
 );
 
 const meta = {
   title: 'Web Component/Textbox',
   id: 'web-component-textbox',
-  component: Textbox,
+  component: TextboxStory,
   argTypes: {
     autoComplete: {
       description: 'Autocomplete',
@@ -175,7 +190,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Textbox>;
+} satisfies Meta<typeof TextboxStory>;
 
 export default meta;
 
