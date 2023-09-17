@@ -48,6 +48,10 @@ const config: StorybookConfig = {
           title: 'React.js Components',
           url: 'http://localhost:6008',
         },
+        webComponent: {
+          title: 'Web Components',
+          url: 'http://localhost:6010',
+        },
       };
     }
     return {
@@ -62,6 +66,10 @@ const config: StorybookConfig = {
       react: {
         title: 'React.js Components',
         url: '../storybook-react',
+      },
+      webComponent: {
+        title: 'Web Components',
+        url: '../storybook-web-component',
       },
     };
   },
