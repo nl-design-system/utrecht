@@ -78,6 +78,7 @@ module.exports = {
           'packages/storybook/tsconfig.json',
           'packages/storybook-angular/tsconfig.json',
           'packages/storybook-helpers/tsconfig.json',
+          'packages/storybook-html/tsconfig.json',
           'packages/storybook-react/tsconfig.json',
           'packages/storybook-react/tsconfig.node.json',
           'packages/storybook-vue/tsconfig.json',

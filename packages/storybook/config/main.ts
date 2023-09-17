@@ -34,44 +34,58 @@ const config: StorybookConfig = {
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (_, { configType }) => {
+    // https://storybook.js.org/docs/react/sharing/storybook-composition#compose-storybooks-per-environment
+    let config = {};
+
     if (configType === 'DEVELOPMENT') {
-      return {
+      config = {
         angular: {
           title: 'Angular Components',
           url: 'http://localhost:6009',
         },
-        vue: {
-          title: 'Vue.js Components',
-          url: 'http://localhost:6007',
+        html: {
+          title: 'HTML Components',
+          url: 'http://localhost:6011',
         },
         react: {
           title: 'React.js Components',
           url: 'http://localhost:6008',
         },
-        webComponent: {
+        vue: {
+          title: 'Vue.js Components',
+          url: 'http://localhost:6007',
+        },
+        webcomponent: {
           title: 'Web Components',
           url: 'http://localhost:6010',
         },
       };
+    } else {
+      config = {
+        angular: {
+          title: 'Angular Components',
+          url: '../storybook-angular',
+        },
+        html: {
+          title: 'HTML Components',
+          url: '../storybook-html',
+        },
+        react: {
+          title: 'React.js Components',
+          url: '../storybook-react',
+        },
+        vue: {
+          title: 'Vue.js Components',
+          url: '../storybook-vue',
+        },
+        webcomponent: {
+          title: 'Web Components',
+          url: '../storybook-web-component',
+        },
+      };
     }
-    return {
-      angular: {
-        title: 'Angular Components',
-        url: '../storybook-angular',
-      },
-      vue: {
-        title: 'Vue.js Components',
-        url: '../storybook-vue',
-      },
-      react: {
-        title: 'React.js Components',
-        url: '../storybook-react',
-      },
-      webComponent: {
-        title: 'Web Components',
-        url: '../storybook-web-component',
-      },
-    };
+
+    return config;
   },
   docs: {
     autodocs: true,
