@@ -57,36 +57,7 @@ const preview: Preview = {
 
     options: {
       storySort: {
-        order: [
-          'Utrecht',
-          [
-            'README',
-            'Wat is het Utrecht Design System?',
-            'Toestemming voor gebruik',
-            'Design Tokens',
-            ['Design Tokens'],
-            'Gebruikersonderzoek',
-            ['Gebruikersonderzoek'],
-          ],
-          'NL Design System',
-          'Onderzoek',
-          'CSS Component',
-          ['README'],
-          'HTML Component',
-          ['README'],
-          'Web Component',
-          ['README'],
-          'Angular Web Component',
-          ['README'],
-          'React Component',
-          ['README'],
-          'React Web Component',
-          ['README'],
-          'Vue.js Web Component',
-          ['README'],
-          'Form.io Component',
-          ['README'],
-        ],
+        order: ['Web Component', ['README', 'Angular', 'React', 'Vue.js']],
       },
     },
 
