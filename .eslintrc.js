@@ -77,6 +77,7 @@ module.exports = {
           'packages/component-library-vue/tsconfig.vite-config.json',
           'packages/storybook/tsconfig.json',
           'packages/storybook-angular/tsconfig.json',
+          'packages/storybook-css/tsconfig.json',
           'packages/storybook-helpers/tsconfig.json',
           'packages/storybook-html/tsconfig.json',
           'packages/storybook-react/tsconfig.json',

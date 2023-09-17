@@ -5,7 +5,7 @@ import { Heading1 } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/common/focus/README.md?raw';
 import tokensDefinition from '@utrecht/components/common/focus/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { designTokenStory } from '../components/util';
+import { designTokenStory } from '../../src/design-token-story';
 
 const meta = {
   title: 'Utrecht/Design tokens/Focus',
