@@ -1,6 +1,6 @@
 <!-- @license CC0-1.0 -->
 
-# React Web Components
+# Web Components in React
 
 The `@utrecht/web-component-library-stencil` package contains the actual implementation of every web component, while the `@utrecht/web-component-library-react` only contains wrapper React components to provide JSX elements for every Web Component. The implementation of each component will be loaded separately and on-demand, so including the entire component library will not slow down your application.
 
