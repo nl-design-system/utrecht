@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -12,11 +12,15 @@ import clsx from 'clsx';
   shadow: true,
 })
 export class FormFieldTextbox {
+  @Element() hostElement!: HTMLElement;
+
   @Prop({ attribute: 'autocomplete', reflect: true }) autoComplete: string = '';
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
+  @Prop() label: string = '';
   @Prop() min: string = '';
   @Prop() max: string = '';
+  @Prop() name: string = '';
   @Prop() pattern: string = '';
   @Prop() placeholder: string = '';
   @Prop({ attribute: 'readonly', reflect: true }) readOnly: boolean = false;
@@ -29,41 +33,102 @@ export class FormFieldTextbox {
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { autoComplete, disabled, invalid, min, max, pattern, placeholder, readOnly, required, type, value } = this;
+    const {
+      autoComplete,
+      disabled,
+      hostElement,
+      invalid,
+      label,
+      min,
+      max,
+      name,
+      pattern,
+      placeholder,
+      readOnly,
+      required,
+      type,
+      value,
+    } = this;
+
+    let input = hostElement.querySelector('input[type="hidden"]') as HTMLInputElement | null;
+
+    if (input && !name) {
+      input.parentNode.removeChild(input);
+    }
+
+    if (!input && name) {
+      input = hostElement.ownerDocument.createElement('input');
+      input.type = 'hidden';
+      input.ariaHidden = 'true';
+      hostElement.appendChild(input);
+    }
+
+    if (input && name) {
+      input.name = name;
+      input.value = value || '';
+    }
 
     return (
-      <div class="utrecht-form-field-textbox utrecht-form-field--textbox">
-        <input
-          id="input"
-          class={clsx(
-            'utrecht-form-field__input',
-            'utrecht-textbox',
-            'utrecht-textbox--html-input',
-            disabled && 'utrecht-textbox--disabled',
-            invalid && 'utrecht-textbox--invalid',
-            readOnly && 'utrecht-textbox--readonly',
-          )}
-          type={type || 'text'}
-          autoComplete={autoComplete ? autoComplete : null}
-          disabled={disabled}
-          min={min ? min : null}
-          max={max ? max : null}
-          pattern={pattern ? pattern : null}
-          placeholder={placeholder || null}
-          readonly={readOnly}
-          required={required}
-          value={value}
-          onBlur={(evt) => this.utrechtBlur.emit(evt)}
-          onChange={(evt) => this.utrechtChange.emit(evt)}
-          onFocus={(evt) => this.utrechtFocus.emit(evt)}
-          onInput={(evt) => {
-            this.value = (evt.target as HTMLInputElement).value;
-            this.utrechtInput.emit(evt);
-          }}
-        />
-        <label class="utrecht-form-field__label utrecht-form-label" htmlFor="input">
-          <slot></slot>
-        </label>
+      <div
+        class={clsx('utrecht-form-field', 'utrecht-form-field--textbox', {
+          'utrecht-form-field--invalid': invalid,
+        })}
+      >
+        <p class="utrecht-form-field__label">
+          <label
+            class={clsx('utrecht-form-label', {
+              'utrecht-form-label--disabled': disabled,
+            })}
+            htmlFor="input"
+          >
+            {label}
+            <slot name="label"></slot>
+          </label>
+        </p>
+        <utrecht-form-field-description id="description">
+          <slot name="description"></slot>
+        </utrecht-form-field-description>
+        <p class="utrecht-form-field__input">
+          <input
+            id="input"
+            class={clsx(
+              'utrecht-form-field__input',
+              'utrecht-textbox',
+              'utrecht-textbox--html-input',
+              disabled && 'utrecht-textbox--disabled',
+              invalid && 'utrecht-textbox--invalid',
+              readOnly && 'utrecht-textbox--readonly',
+            )}
+            type={type || 'text'}
+            autoComplete={autoComplete ? autoComplete : null}
+            aria-describedby={clsx('description', 'status', { 'error-message': invalid })}
+            disabled={disabled}
+            min={min ? min : null}
+            max={max ? max : null}
+            pattern={pattern ? pattern : null}
+            placeholder={placeholder || null}
+            readonly={readOnly}
+            required={required}
+            value={value}
+            onBlur={(evt) => this.utrechtBlur.emit(evt)}
+            onChange={(evt) => this.utrechtChange.emit(evt)}
+            onFocus={(evt) => this.utrechtFocus.emit(evt)}
+            onInput={(evt) => {
+              this.value = (evt.target as HTMLInputElement).value;
+              this.utrechtInput.emit(evt);
+            }}
+          />
+        </p>
+        {invalid && (
+          <utrecht-form-field-description status="invalid" class="utrecht-form-field__error-message" id="error-message">
+            <slot name="error-message"></slot>
+          </utrecht-form-field-description>
+        )}
+        <div class="utrecht-form-field__status" id="status">
+          <div class="utrecht-form-field-description utrecht-form-field-description--status">
+            <slot name="status"></slot>
+          </div>
+        </div>
       </div>
     );
   }

@@ -34,7 +34,17 @@ export namespace Components {
         "appearance": string;
         "busy": boolean;
         "disabled": boolean;
+        "form": string;
+        "formAction": string;
+        "formEnctype": string;
+        "formMethod": string;
+        "formNoValidate": boolean;
+        "formTarget": string;
+        "name": string;
+        "popoverTarget": string;
+        "popoverTargetAction": string;
         "type": string;
+        "value": string;
     }
     interface UtrechtButtonGroup {
     }
@@ -83,8 +93,10 @@ export namespace Components {
         "checked": boolean;
         "disabled": boolean;
         "invalid": boolean;
-        "label": boolean;
+        "label": string;
+        "name": string;
         "required": boolean;
+        "value": string;
     }
     interface UtrechtFormFieldDescription {
         "status"?: string;
@@ -92,6 +104,8 @@ export namespace Components {
     interface UtrechtFormFieldTextarea {
         "disabled": boolean;
         "invalid": boolean;
+        "label": string;
+        "name": string;
         "placeholder": string;
         "readOnly": boolean;
         "required": boolean;
@@ -101,8 +115,10 @@ export namespace Components {
         "autoComplete": string;
         "disabled": boolean;
         "invalid": boolean;
+        "label": string;
         "max": string;
         "min": string;
+        "name": string;
         "pattern": string;
         "placeholder": string;
         "readOnly": boolean;
@@ -2644,9 +2660,19 @@ declare namespace LocalJSX {
         "appearance"?: string;
         "busy"?: boolean;
         "disabled"?: boolean;
+        "form"?: string;
+        "formAction"?: string;
+        "formEnctype"?: string;
+        "formMethod"?: string;
+        "formNoValidate"?: boolean;
+        "formTarget"?: string;
+        "name"?: string;
         "onUtrechtRequestReset"?: (event: UtrechtButtonCustomEvent<any>) => void;
         "onUtrechtRequestSubmit"?: (event: UtrechtButtonCustomEvent<any>) => void;
+        "popoverTarget"?: string;
+        "popoverTargetAction"?: string;
         "type"?: string;
+        "value"?: string;
     }
     interface UtrechtButtonGroup {
     }
@@ -2699,12 +2725,14 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "disabled"?: boolean;
         "invalid"?: boolean;
-        "label"?: boolean;
+        "label"?: string;
+        "name"?: string;
         "onUtrechtBlur"?: (event: UtrechtFormFieldCheckboxCustomEvent<any>) => void;
         "onUtrechtChange"?: (event: UtrechtFormFieldCheckboxCustomEvent<any>) => void;
         "onUtrechtFocus"?: (event: UtrechtFormFieldCheckboxCustomEvent<any>) => void;
         "onUtrechtInput"?: (event: UtrechtFormFieldCheckboxCustomEvent<any>) => void;
         "required"?: boolean;
+        "value"?: string;
     }
     interface UtrechtFormFieldDescription {
         "status"?: string;
@@ -2712,6 +2740,8 @@ declare namespace LocalJSX {
     interface UtrechtFormFieldTextarea {
         "disabled"?: boolean;
         "invalid"?: boolean;
+        "label"?: string;
+        "name"?: string;
         "onUtrechtBlur"?: (event: UtrechtFormFieldTextareaCustomEvent<any>) => void;
         "onUtrechtChange"?: (event: UtrechtFormFieldTextareaCustomEvent<any>) => void;
         "onUtrechtFocus"?: (event: UtrechtFormFieldTextareaCustomEvent<any>) => void;
@@ -2725,8 +2755,10 @@ declare namespace LocalJSX {
         "autoComplete"?: string;
         "disabled"?: boolean;
         "invalid"?: boolean;
+        "label"?: string;
         "max"?: string;
         "min"?: string;
+        "name"?: string;
         "onUtrechtBlur"?: (event: UtrechtFormFieldTextboxCustomEvent<any>) => void;
         "onUtrechtChange"?: (event: UtrechtFormFieldTextboxCustomEvent<any>) => void;
         "onUtrechtFocus"?: (event: UtrechtFormFieldTextboxCustomEvent<any>) => void;
