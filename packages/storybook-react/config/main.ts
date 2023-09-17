@@ -12,7 +12,7 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     'storybook-addon-pseudo-states',
     '@storybook/preset-scss',
-    // '@storybook/addon-jest',
+    '@storybook/addon-jest',
     '@etchteam/storybook-addon-status/register',
     'storybook-addon-themes',
   ],
@@ -27,6 +27,20 @@ const config: StorybookConfig = {
   staticDirs: ['../../../proprietary/assets'],
   docs: {
     autodocs: true,
+  },
+  async viteFinal(config) {
+    // Workaround for `@storybook/addon-jest` with Vite
+    // https://github.com/storybookjs/storybook/issues/14856#issuecomment-1262333250
+    if (config.resolve) {
+      config.resolve = {
+        ...config.resolve,
+        alias: {
+          ...config.resolve.alias,
+          path: require.resolve('path-browserify'),
+        },
+      };
+    }
+    return config;
   },
 };
 
