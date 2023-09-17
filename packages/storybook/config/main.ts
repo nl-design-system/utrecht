@@ -39,6 +39,10 @@ const config: StorybookConfig = {
 
     if (configType === 'DEVELOPMENT') {
       config = {
+        css: {
+          title: 'CSS Components',
+          url: 'http://localhost:6012',
+        },
         angular: {
           title: 'Angular Components',
           url: 'http://localhost:6009',
@@ -62,6 +66,10 @@ const config: StorybookConfig = {
       };
     } else {
       config = {
+        css: {
+          title: 'CSS Components',
+          url: '../storybook-css',
+        },
         angular: {
           title: 'Angular Components',
           url: '../storybook-angular',

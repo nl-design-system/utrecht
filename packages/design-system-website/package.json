@@ -19,6 +19,7 @@
     "@utrecht/docusaurus": "workspace:*",
     "@utrecht/storybook": "workspace:*",
     "@utrecht/storybook-angular": "workspace:*",
+    "@utrecht/storybook-css": "workspace:*",
     "@utrecht/storybook-html": "workspace:*",
     "@utrecht/storybook-react": "workspace:*",
     "@utrecht/storybook-vue": "workspace:*",
@@ -27,6 +28,6 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "rimraf dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/ && cp -R ../storybook-react/dist/ dist/storybook-react/ && cp -R ../storybook-angular/dist/ dist/storybook-angular/ && cp -R ../storybook-web-component/dist/ dist/storybook-web-component/ && cp -R ../storybook-html/dist/ dist/storybook-html/"
+    "build": "rimraf dist/ && cp -R ../docusaurus/build/ dist/ && cp -R ../docusaurus/build/ dist/ && rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/ && cp -R ../storybook-react/dist/ dist/storybook-react/ && cp -R ../storybook-angular/dist/ dist/storybook-angular/ && cp -R ../storybook-web-component/dist/ dist/storybook-web-component/ && cp -R ../storybook-html/dist/ dist/storybook-html/ && cp -R ../storybook-html/dist/ dist/storybook-css/"
   }
 }
