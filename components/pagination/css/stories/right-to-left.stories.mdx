@@ -1,0 +1,74 @@
+{/* @license CC0-1.0 */}
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { argTypes, defaultArgs, exampleArgs, Pagination } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-pagination-rtl"
+  title="CSS Component/Pagination"
+  component={Pagination}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Pagination navigation
+
+## Arabic
+
+<Canvas>
+  <Story
+    name="Arabic"
+    args={{ ...exampleArgs, dir: "rtl", lang: "ar" }}
+    decorators={[
+      (Story) => (
+        <div dir="rtl" lang="ar">
+          {Story()}
+        </div>
+      ),
+    ]}
+  >
+    {Pagination.bind({})}
+  </Story>
+</Canvas>
+
+## Farsi
+
+<Canvas>
+  <Story
+    name="Farsi"
+    args={{ ...exampleArgs, dir: "rtl", lang: "fa" }}
+    decorators={[
+      (Story) => (
+        <div dir="rtl" lang="fa">
+          {Story()}
+        </div>
+      ),
+    ]}
+  >
+    {Pagination.bind({})}
+  </Story>
+</Canvas>
+
+## Hebrew
+
+<Canvas>
+  <Story
+    name="Hebrew"
+    args={{ ...exampleArgs, dir: "rtl", lang: "he" }}
+    decorators={[
+      (Story) => (
+        <div dir="rtl" lang="he">
+          {Story()}
+        </div>
+      ),
+    ]}
+  >
+    {Pagination.bind({})}
+  </Story>
+</Canvas>
