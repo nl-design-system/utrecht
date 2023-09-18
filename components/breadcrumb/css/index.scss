@@ -36,13 +36,17 @@ ol.utrecht-breadcrumb__list {
   @include utrecht-breadcrumb__link;
 }
 
-.utrecht-breadcrumb__link--current {
-  @include utrecht-breadcrumb__link--current;
+.utrecht-breadcrumb__link--disabled {
+  @include utrecht-breadcrumb__link--disabled;
 }
 
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-breadcrumb__text {
   @include utrecht-breadcrumb__text;
+}
+
+.utrecht-breadcrumb__separator {
+  @include utrecht-breadcrumb__separator;
 }
 
 .utrecht-breadcrumb--arrows {

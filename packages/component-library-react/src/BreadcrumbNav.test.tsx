@@ -232,4 +232,50 @@ describe('Breadcrumb navigation', () => {
       expect(link).toHaveClass('utrecht-breadcrumb__link--current');
     });
   });
+
+  describe('disabled link', () => {
+    it('is a link role element', () => {
+      const { getByRole } = render(
+        <BreadcrumbNav>
+          <BreadcrumbLink disabled href="/current">
+            Current page
+          </BreadcrumbLink>
+        </BreadcrumbNav>,
+      );
+
+      const link = getByRole('link', { name: 'Current page' });
+
+      expect(link).toBeInTheDocument();
+    });
+
+    it('renders aria-disabled', () => {
+      const { getByRole } = render(
+        <BreadcrumbNav>
+          <BreadcrumbLink disabled href="/current">
+            Current page
+          </BreadcrumbLink>
+        </BreadcrumbNav>,
+      );
+
+      const link = getByRole('link', { name: 'Current page' });
+
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveAttribute('aria-disabled', 'true');
+    });
+
+    it('renders a design system BEM class name', () => {
+      const { getByRole } = render(
+        <BreadcrumbNav>
+          <BreadcrumbLink disabled href="/current">
+            Current page
+          </BreadcrumbLink>
+        </BreadcrumbNav>,
+      );
+
+      const link = getByRole('link', { name: 'Current page' });
+
+      expect(link).toBeInTheDocument();
+      expect(link).toHaveClass('utrecht-breadcrumb__link--disabled');
+    });
+  });
 });
