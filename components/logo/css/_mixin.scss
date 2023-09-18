@@ -5,8 +5,15 @@
  */
 
 @mixin utrecht-logo {
+  display: block;
   max-block-size: var(--utrecht-logo-max-block-size, 192px);
   max-inline-size: var(--utrecht-logo-max-inline-size, 96px);
   min-block-size: var(--utrecht-logo-min-block-size);
   min-inline-size: var(--utrecht-logo-min-inline-size);
+}
+
+@mixin utrecht-logo__image {
+  block-size: 100%;
+  display: inline-block;
+  inline-size: auto;
 }

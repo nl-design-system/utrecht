@@ -50,6 +50,8 @@ export { Link } from './Link';
 export { LinkButton } from './LinkButton';
 export { LinkSocial } from './LinkSocial';
 export { ListSocial, ListSocialItem } from './ListSocial';
+export { Logo } from './Logo';
+export { LogoImage } from './LogoImage';
 export { Mark } from './Mark';
 export { NumberValue } from './NumberValue';
 export { OrderedList } from './OrderedList';

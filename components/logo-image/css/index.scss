@@ -1,0 +1,21 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-logo-image {
+}
+
+.utrecht-logo-image__decoration-1 {
+  fill: var(--utrecht-logo-decoration-1-color, #fff);
+}
+
+.utrecht-logo-image__decoration-2 {
+  fill: var(--utrecht-logo-decoration-2-color, #c00);
+}
+
+.utrecht-logo-image__decoration-3 {
+  fill: var(--utrecht-logo-decoration-3-color, #ffb70b);
+}

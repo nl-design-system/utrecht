@@ -576,6 +576,8 @@ export namespace Components {
     }
     interface UtrechtLogoButton {
     }
+    interface UtrechtLogoImage {
+    }
     interface UtrechtMapMarker {
     }
     interface UtrechtMark {
@@ -2184,6 +2186,12 @@ declare global {
         prototype: HTMLUtrechtLogoButtonElement;
         new (): HTMLUtrechtLogoButtonElement;
     };
+    interface HTMLUtrechtLogoImageElement extends Components.UtrechtLogoImage, HTMLStencilElement {
+    }
+    var HTMLUtrechtLogoImageElement: {
+        prototype: HTMLUtrechtLogoImageElement;
+        new (): HTMLUtrechtLogoImageElement;
+    };
     interface HTMLUtrechtMapMarkerElement extends Components.UtrechtMapMarker, HTMLStencilElement {
     }
     var HTMLUtrechtMapMarkerElement: {
@@ -2603,6 +2611,7 @@ declare global {
         "utrecht-link-button": HTMLUtrechtLinkButtonElement;
         "utrecht-logo": HTMLUtrechtLogoElement;
         "utrecht-logo-button": HTMLUtrechtLogoButtonElement;
+        "utrecht-logo-image": HTMLUtrechtLogoImageElement;
         "utrecht-map-marker": HTMLUtrechtMapMarkerElement;
         "utrecht-mark": HTMLUtrechtMarkElement;
         "utrecht-number-value": HTMLUtrechtNumberValueElement;
@@ -3224,6 +3233,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtLogoButton {
     }
+    interface UtrechtLogoImage {
+    }
     interface UtrechtMapMarker {
     }
     interface UtrechtMark {
@@ -3577,6 +3588,7 @@ declare namespace LocalJSX {
         "utrecht-link-button": UtrechtLinkButton;
         "utrecht-logo": UtrechtLogo;
         "utrecht-logo-button": UtrechtLogoButton;
+        "utrecht-logo-image": UtrechtLogoImage;
         "utrecht-map-marker": UtrechtMapMarker;
         "utrecht-mark": UtrechtMark;
         "utrecht-number-value": UtrechtNumberValue;
@@ -3855,6 +3867,7 @@ declare module "@stencil/core" {
             "utrecht-link-button": LocalJSX.UtrechtLinkButton & JSXBase.HTMLAttributes<HTMLUtrechtLinkButtonElement>;
             "utrecht-logo": LocalJSX.UtrechtLogo & JSXBase.HTMLAttributes<HTMLUtrechtLogoElement>;
             "utrecht-logo-button": LocalJSX.UtrechtLogoButton & JSXBase.HTMLAttributes<HTMLUtrechtLogoButtonElement>;
+            "utrecht-logo-image": LocalJSX.UtrechtLogoImage & JSXBase.HTMLAttributes<HTMLUtrechtLogoImageElement>;
             "utrecht-map-marker": LocalJSX.UtrechtMapMarker & JSXBase.HTMLAttributes<HTMLUtrechtMapMarkerElement>;
             "utrecht-mark": LocalJSX.UtrechtMark & JSXBase.HTMLAttributes<HTMLUtrechtMarkElement>;
             "utrecht-number-value": LocalJSX.UtrechtNumberValue & JSXBase.HTMLAttributes<HTMLUtrechtNumberValueElement>;
