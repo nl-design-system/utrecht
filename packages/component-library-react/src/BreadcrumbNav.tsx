@@ -64,8 +64,51 @@ export const BreadcrumbNav = forwardRef(
 
 BreadcrumbNav.displayName = 'BreadcrumbNav';
 
+export const BreadcrumbItem = forwardRef(
+  (
+    { className, children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLLIElement>>,
+    ref: ForwardedRef<HTMLLIElement>,
+  ) => {
+    return (
+      <li
+        className={clsx('utrecht-breadcrumb__item', className)}
+        {...useMicrodataItem({ type: 'https://schema.org/ListItem', prop: 'itemListElement' })}
+        ref={ref}
+        {...restProps}
+      >
+        {children}
+      </li>
+    );
+  },
+);
+
+BreadcrumbItem.displayName = 'BreadcrumbItem';
+
+export const BreadcrumbSeparator = forwardRef(
+  (
+    { className, children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLLIElement>>,
+    ref: ForwardedRef<HTMLLIElement>,
+  ) => {
+    return (
+      <li
+        aria-hidden="true"
+        hidden
+        style={{ display: 'var(--_utrecht-breadcrumb-separator-display, block)' }}
+        className={clsx('utrecht-breadcrumb__separator', className)}
+        ref={ref}
+        {...restProps}
+      >
+        {children}
+      </li>
+    );
+  },
+);
+
+BreadcrumbSeparator.displayName = 'BreadcrumbSeparator';
+
 export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
   current?: boolean;
+  disabled?: boolean;
   href: string;
   rel?: string;
   index?: number;
@@ -76,10 +119,12 @@ export const BreadcrumbLink = forwardRef(
   (
     {
       children,
+      disabled,
       current,
       href,
       index,
       rel,
+      role,
       Link = UtrechtLink,
       className,
       ...restProps
@@ -90,17 +135,17 @@ export const BreadcrumbLink = forwardRef(
     const LinkComponent = Link || DefaultLinkComponent;
 
     return (
-      <li
-        className={clsx('utrecht-breadcrumb__item')}
-        {...useMicrodataItem({ type: 'https://schema.org/ListItem', prop: 'itemListElement' })}
-      >
+      <BreadcrumbItem>
         <LinkComponent
           className={clsx('utrecht-breadcrumb__link', className, {
             'utrecht-breadcrumb__link--current': current,
+            'utrecht-breadcrumb__link--disabled': disabled,
           })}
-          href={href}
+          href={disabled ? undefined : href}
           rel={rel}
+          role={role || (disabled ? 'link' : undefined)}
           aria-current={current && 'page'}
+          aria-disabled={disabled ? 'true' : undefined}
           {...useMicrodataProp('item')}
           {...restProps}
           ref={ref}
@@ -110,7 +155,7 @@ export const BreadcrumbLink = forwardRef(
           </span>
           {typeof index === 'number' ? <meta {...useMicrodataProp('position')} content={String(index + 1)} /> : null}
         </LinkComponent>
-      </li>
+      </BreadcrumbItem>
     );
   },
 );
