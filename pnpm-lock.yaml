@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -107,8 +111,8 @@ importers:
   components:
     dependencies:
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
     devDependencies:
       '@babel/core':
         specifier: 7.22.17
@@ -328,8 +332,8 @@ importers:
   packages/component-library-react:
     dependencies:
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       date-fns:
         specifier: 2.30.0
         version: 2.30.0
@@ -632,8 +636,8 @@ importers:
         specifier: workspace:*
         version: link:../web-component-library-react
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -812,8 +816,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.17)(webpack@5.88.2)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -1175,8 +1179,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.17)(webpack@5.88.2)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -1376,8 +1380,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.17)(webpack@5.88.2)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -1556,8 +1560,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.17)(webpack@5.88.2)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       css-loader:
         specifier: 6.8.1
         version: 6.8.1(webpack@5.88.2)
@@ -1856,8 +1860,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.17)(webpack@5.88.2)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -2084,8 +2088,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.0.0
+        version: 2.0.0
       node-sass-package-importer:
         specifier: 5.3.3
         version: 5.3.3
@@ -12889,7 +12893,7 @@ packages:
       vite: ^3.0.0 || ^4.0.0
     dependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript': 0.2.1(typescript@4.9.5)(vite@4.4.9)
-      '@rollup/pluginutils': 5.0.2(rollup@3.9.1)
+      '@rollup/pluginutils': 5.0.2(rollup@3.29.1)
       '@storybook/builder-vite': 7.4.0(typescript@4.9.5)(vite@4.4.9)
       '@storybook/react': 7.4.0(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       '@vitejs/plugin-react': 3.1.0(vite@4.4.9)
@@ -17448,6 +17452,11 @@ packages:
 
   /clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: true
+
+  /clsx@2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
 
   /cmd-shim@6.0.1:
@@ -36775,7 +36784,7 @@ packages:
       vite: '>=2.9.0'
     dependencies:
       '@microsoft/api-extractor': 7.33.7
-      '@rollup/pluginutils': 5.0.2(rollup@3.9.1)
+      '@rollup/pluginutils': 5.0.2(rollup@3.29.1)
       '@rushstack/node-core-library': 3.53.3
       debug: 4.3.4
       fast-glob: 3.2.12
