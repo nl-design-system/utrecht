@@ -1,17 +1,16 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/logo/README.md?raw';
-import tokensDefinition from '@utrecht/components/logo/tokens.json';
+import readme from '@utrecht/components/logo-image/README.md?raw';
+import tokensDefinition from '@utrecht/components/logo-image/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtLogo, UtrechtLogoImage } from '@utrecht/web-component-library-react';
-import React from 'react';
+import { UtrechtLogoImage } from '@utrecht/web-component-library-react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'Web Component/Logo',
-  id: 'web-component-logo',
-  component: UtrechtLogo,
+  title: 'Web Component/Logo image',
+  id: 'web-component-logo-image',
+  component: UtrechtLogoImage,
   argTypes: {},
   args: {},
   tags: ['autodocs'],
@@ -19,7 +18,7 @@ const meta = {
     status: {
       type: 'WORK IN PROGRESS',
     },
-    tokensPrefix: 'utrecht-logo',
+    tokensPrefix: 'utrecht-logo-image',
     tokens,
     tokensDefinition,
     docs: {
@@ -28,16 +27,12 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof UtrechtLogo>;
+} satisfies Meta<typeof UtrechtLogoImage>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  args: {
-    children: <UtrechtLogoImage />,
-  },
-};
+export const Default: Story = {};
 
 export const DesignTokens = designTokenStory(meta);

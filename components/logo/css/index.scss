@@ -10,14 +10,7 @@
   @include utrecht-logo;
 }
 
-.utrecht-logo__decoration-1 {
-  fill: var(--utrecht-logo-decoration-1-color, #fff);
-}
-
-.utrecht-logo__decoration-2 {
-  fill: var(--utrecht-logo-decoration-2-color, #c00);
-}
-
-.utrecht-logo__decoration-3 {
-  fill: var(--utrecht-logo-decoration-3-color, #ffb70b);
+/* The element in side `<div class="utrecht-logo">` can be an `<img>`, `<svg>` or even a custom element. */
+.utrecht-logo > * {
+  @include utrecht-logo__image;
 }

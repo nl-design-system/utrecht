@@ -1,18 +1,16 @@
-/* @license CC0-1.0 */
-
+import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { Logo, LogoImage } from '@utrecht/component-library-react/dist/css-module';
+import { Logo, LogoImage } from '@utrecht/component-library-react/dist/css-module/index';
 import readme from '@utrecht/components/logo/README.md?raw';
 import tokensDefinition from '@utrecht/components/logo/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
-import { designTokenStory } from './design-token-story';
+import { designTokenStory } from './util';
 
 const meta = {
-  title: 'CSS Component/Logo',
-  id: 'css-logo',
+  title: 'React Component/Logo',
+  id: 'react-logo',
   component: Logo,
-  argTypes: {},
   args: {},
   parameters: {
     status: {
@@ -22,9 +20,14 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      description: {
-        component: readme,
-      },
+      page: () => (
+        <>
+          <Description>{readme}</Description>
+          <Primary />
+          <ArgsTable story={PRIMARY_STORY} />
+          <Stories />
+        </>
+      ),
     },
   },
 } satisfies Meta<typeof Logo>;
@@ -36,13 +39,6 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: <LogoImage />,
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'Styling via `utrecht-logo` class name.',
-      },
-    },
   },
 };
 

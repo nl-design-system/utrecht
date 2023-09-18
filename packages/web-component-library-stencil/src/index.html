@@ -23,7 +23,11 @@ https://stenciljs.com/docs/dev-server
     <utrecht-document>
       <utrecht-skip-link href="#main">Naar de inhoud</utrecht-skip-link>
       <utrecht-page>
-        <utrecht-page-header><utrecht-logo></utrecht-logo></utrecht-page-header>
+        <utrecht-page-header>
+          <utrecht-logo>
+            <utrecht-link href="#"> <utrecht-logo-image></utrecht-logo-image></utrecht-link>
+          </utrecht-logo>
+        </utrecht-page-header>
         <utrecht-page-content>
           <form action="/search" method="get">
             <utrecht-form-field-textbox name="q" value="Value here">
