@@ -3,16 +3,17 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+import { Link as UtrechtLink } from '@utrecht/component-library-react';
 import clsx from 'clsx';
-import { ComponentType, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
-import { Heading } from './Heading';
-import { Link as UtrechtLink } from './Link';
-
-interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
-  appearance?: string;
-  headingLevel?: number;
-  label?: ReactNode | ReactNode[];
-}
+import React, {
+  ComponentType,
+  ForwardedRef,
+  forwardRef,
+  HTMLAttributes,
+  PropsWithChildren,
+  ReactNode,
+  useId,
+} from 'react';
 
 const useMicrodataItem = ({
   prop,
@@ -30,9 +31,20 @@ const useMicrodataProp = (prop: string): Pick<HTMLAttributes<HTMLElement>, 'item
   itemProp: prop,
 });
 
+interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
+  appearance?: string;
+  label?: ReactNode | ReactNode[];
+}
+
+/**
+ * This file provides an alternative implementation of the breadcrumb navigation component,
+ * with alternative markup. The default React breadcrumb navigation is preferred.
+ *
+ * This file exist to test that the CSS is flexible and supports various markup approaches.
+ */
 export const BreadcrumbNav = forwardRef(
   (
-    { appearance, children, className, headingLevel = 2, label, ...restProps }: PropsWithChildren<BreadcrumbNavProps>,
+    { appearance, children, className, label, ...restProps }: PropsWithChildren<BreadcrumbNavProps>,
     ref: ForwardedRef<HTMLOListElement>,
   ) => {
     const headingId = label ? useId() : undefined;
@@ -42,7 +54,6 @@ export const BreadcrumbNav = forwardRef(
         ref={ref}
         className={clsx(
           'utrecht-breadcrumb',
-          'utrecht-breadcrumb--html-ol',
           {
             'utrecht-breadcrumb--arrows': appearance === 'arrows',
           },
@@ -50,17 +61,17 @@ export const BreadcrumbNav = forwardRef(
         )}
         aria-labelledby={headingId}
       >
-        {label && (
-          <Heading id={headingId} className="utrecht-breadcrumb__heading" level={headingLevel} aria-hidden="true">
-            {label}
-          </Heading>
-        )}
-        <ol
-          className="utrecht-breadcrumb__list utrecht-breadcrumb__list--html-ol"
+        <p
+          className="utrecht-breadcrumb__list utrecht-breadcrumb__list--html-p"
           {...useMicrodataItem({ type: 'https://schema.org/BreadcrumbList' })}
         >
+          {label && (
+            <span id={headingId} className="utrecht-breadcrumb__heading" aria-hidden="true">
+              {label}{' '}
+            </span>
+          )}
           {children}
-        </ol>
+        </p>
       </nav>
     );
   },
@@ -68,42 +79,19 @@ export const BreadcrumbNav = forwardRef(
 
 BreadcrumbNav.displayName = 'BreadcrumbNav';
 
-export const BreadcrumbItem = forwardRef(
-  (
-    { className, children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLLIElement>>,
-    ref: ForwardedRef<HTMLLIElement>,
-  ) => {
-    return (
-      <li
-        className={clsx('utrecht-breadcrumb__item', className)}
-        {...useMicrodataItem({ type: 'https://schema.org/ListItem', prop: 'itemListElement' })}
-        ref={ref}
-        {...restProps}
-      >
-        {children}
-      </li>
-    );
-  },
-);
-
-BreadcrumbItem.displayName = 'BreadcrumbItem';
-
 export const BreadcrumbSeparator = forwardRef(
   (
     { className, children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLLIElement>>,
     ref: ForwardedRef<HTMLLIElement>,
   ) => {
     return (
-      <li
-        aria-hidden="true"
-        hidden
-        style={{ display: 'var(--_utrecht-breadcrumb-separator-display, block)' }}
+      <span
         className={clsx('utrecht-breadcrumb__separator', 'utrecht-breadcrumb__separator--html-li', className)}
         ref={ref}
         {...restProps}
       >
         {children}
-      </li>
+      </span>
     );
   },
 );
@@ -139,7 +127,8 @@ export const BreadcrumbLink = forwardRef(
     const LinkComponent = Link || DefaultLinkComponent;
 
     return (
-      <BreadcrumbItem>
+      <>
+        {' '}
         <LinkComponent
           className={clsx('utrecht-breadcrumb__link', className, {
             'utrecht-breadcrumb__link--current': current,
@@ -159,7 +148,7 @@ export const BreadcrumbLink = forwardRef(
           </span>
           {typeof index === 'number' ? <meta {...useMicrodataProp('position')} content={String(index + 1)} /> : null}
         </LinkComponent>
-      </BreadcrumbItem>
+      </>
     );
   },
 );

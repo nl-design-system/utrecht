@@ -22,7 +22,11 @@ export class Breadcrumb {
 
     return (
       <nav class={clsx('utrecht-breadcrumb', variant === 'arrows' && 'utrecht-breadcrumb--arrows')}>
-        <ol class="utrecht-breadcrumb__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+        <ol
+          class="utrecht-breadcrumb__list utrecht-breadcrumb__list--html-ol"
+          itemscope
+          itemtype="https://schema.org/BreadcrumbList"
+        >
           {items.map(({ href, title, current }, index) => (
             <li
               key={href}

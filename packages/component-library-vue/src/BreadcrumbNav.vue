@@ -38,7 +38,10 @@
       {{ label }}
     </UtrechtHeading>
 
-    <ol class="utrecht-breadcrumb__list" v-bind="{...useMicrodataItem({type: 'https://schema.org/BreadcrumbList' })}">
+    <ol
+      class="utrecht-breadcrumb__list utrecht-breadcrumb__list--html-ol"
+      v-bind="{...useMicrodataItem({type: 'https://schema.org/BreadcrumbList' })}"
+    >
       <slot />
     </ol>
   </nav>
