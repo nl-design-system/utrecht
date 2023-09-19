@@ -1,21 +1,22 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
 import { PartialStoryFn } from '@storybook/types';
-import { BreadcrumbLink, BreadcrumbNav, BreadcrumbSeparator, Code } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/breadcrumb/README.md?raw';
-import hreflangDocs from '@utrecht/components/breadcrumb/_hreflang.md?raw';
-import langDocs from '@utrecht/components/breadcrumb/_lang.md?raw';
 import relDocs from '@utrecht/components/breadcrumb/_rel.md?raw';
 import rtlSeparatorDocs from '@utrecht/components/breadcrumb/_rtl-separator.md?raw';
 import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtIconChevronLeft, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import {
+  UtrechtIconChevronLeft,
+  UtrechtIconChevronRight,
+  UtrechtIconDakloos,
+} from '@utrecht/web-component-library-react';
 import React from 'react';
-import { designTokenStory } from './design-token-story';
+import { BreadcrumbLink, BreadcrumbNav, BreadcrumbSeparator } from './BreadcrumbNav';
 
 const meta = {
-  title: 'CSS Component/Breadcrumb navigation',
-  id: 'css-breadcrumb-nav',
+  title: 'CSS Component/Breadcrumb navigation/Alternate markup',
+  id: 'css-breadcrumb-nav--html-p',
   component: BreadcrumbNav,
   args: {},
   argTypes: {
@@ -49,7 +50,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Kruimelpad',
+    label: 'Kruimelpad:',
     children: [
       <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
         Home
@@ -64,7 +65,7 @@ export const Default: Story = {
   },
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -72,7 +73,7 @@ export const Default: Story = {
 export const Arrows: Story = {
   args: {
     appearance: 'arrows',
-    label: 'Kruimelpad',
+    label: 'Kruimelpad:',
     children: [
       <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
         Home
@@ -88,7 +89,7 @@ export const Arrows: Story = {
   name: 'Arrows',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -96,7 +97,7 @@ export const Arrows: Story = {
 export const ArrowsDisabledCurrent: Story = {
   args: {
     appearance: 'arrows',
-    label: 'Kruimelpad',
+    label: 'Kruimelpad:',
     children: [
       <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
         Home
@@ -115,35 +116,7 @@ export const ArrowsDisabledCurrent: Story = {
   name: 'Arrows: current link is disabled',
   parameters: {
     status: {
-      type: 'ALHPA',
-    },
-  },
-};
-
-export const Rel: Story = {
-  args: {
-    label: 'Kruimelpad',
-    children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
-        Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/search" rel="up" index={1}>
-        Zoeken
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/search?q=openingstijden+zwembad" rel="first" index={2}>
-        “openingstijden zwembad”
-      </BreadcrumbLink>,
-    ],
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        story: relDocs,
-      },
-    },
-    status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -172,7 +145,7 @@ export const Current: Story = {
   name: 'Current page',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -201,112 +174,7 @@ export const Disabled: Story = {
   name: 'Disabled link',
   parameters: {
     status: {
-      type: 'ALHPA',
-    },
-  },
-};
-
-export const OtherLanguage: Story = {
-  args: {
-    label: 'Kruimelpad:',
-    children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
-        Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
-        Zorg en onderwijs
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" index={2}>
-        Nieuwkomers
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" disabled current index={3} lang="uk" hrefLang="uk">
-        Біженці з України
-      </BreadcrumbLink>,
-    ],
-  },
-  name: 'Document language',
-  parameters: {
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        story: hreflangDocs,
-      },
-    },
-    status: {
-      type: 'ALHPA',
-    },
-  },
-};
-
-export const DocumentTitleLanguage: Story = {
-  args: {
-    label: 'Kruimelpad:',
-    children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
-        Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" disabled current index={1} lang="fr">
-        Le roi est mort, vive le roi!
-      </BreadcrumbLink>,
-    ],
-  },
-  name: 'Document title language',
-  parameters: {
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        story: langDocs,
-      },
-    },
-    status: {
-      type: 'ALHPA',
-    },
-  },
-};
-
-export const CodeTitle: Story = {
-  args: {
-    label: 'Kruimelpad:',
-    children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
-        Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
-        HTML
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" index={2}>
-        Elements
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" disabled current index={3} lang="uk" hrefLang="uk">
-        <Code>{'<code>'}</Code> element
-      </BreadcrumbLink>,
-    ],
-  },
-  name: 'Code in link text',
-  parameters: {
-    status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -335,7 +203,86 @@ export const DisabledCurrent: Story = {
   name: 'Current page link is disabled',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
+    },
+  },
+};
+
+export const Icons: Story = {
+  args: {
+    label: 'Kruimelpad:',
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+        <UtrechtIconDakloos />
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbLink href="https://example.com/a/" index={1}>
+        Wonen en leven
+      </BreadcrumbLink>,
+      <BreadcrumbLink href="https://example.com/a/b/" rel="up" index={2}>
+        Afval
+      </BreadcrumbLink>,
+    ],
+  },
+  parameters: {
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const Separator: Story = {
+  args: {
+    label: 'Kruimelpad:',
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/" index={1}>
+        Wonen en leven
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/b/" rel="up" index={2}>
+        Afval
+      </BreadcrumbLink>,
+    ],
+  },
+  name: 'Separator',
+  parameters: {
+    status: {
+      type: 'EXPERIMENTAL',
+    },
+  },
+};
+
+export const Rel: Story = {
+  args: {
+    ...Default.args,
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbLink href="https://example.com/search" rel="up" index={1}>
+        Zoeken
+      </BreadcrumbLink>,
+      <BreadcrumbLink href="https://example.com/search?q=openingstijden+zwembad" rel="first" index={2}>
+        “openingstijden zwembad”
+      </BreadcrumbLink>,
+    ],
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: relDocs,
+      },
+    },
+    status: {
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -367,7 +314,7 @@ export const RightToLeft: Story = {
   name: 'Right-to-left',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -407,7 +354,7 @@ export const RightToLeftSeparator: Story = {
       },
     },
     status: {
-      type: 'ALHPA',
+      type: 'EXPERIMENTAL',
     },
   },
 };
@@ -455,62 +402,12 @@ export const ManyLinks: Story = {
     ],
   },
   name: 'Many links',
-  parameters: {
-    status: {
-      type: 'ALHPA',
-    },
-  },
 };
 
 export const LineWrap: Story = {
   args: {
-    children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
-        Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/" index={1}>
-        Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/" index={2}>
-        Parken en groen
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/" index={3}>
-        Dieren
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/" index={4}>
-        Wilde dieren helpen
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink
-        href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/diervriendelijk-bouwen/"
-        rel="up"
-        index={5}
-      >
-        Diervriendelijk bouwen
-      </BreadcrumbLink>,
-    ],
+    ...ManyLinks.args,
   },
   decorators: [(Story) => <div style={{ maxInlineSize: '320px' }}>{Story()}</div>],
   name: 'Line wrap',
-  parameters: {
-    status: {
-      type: 'ALHPA',
-    },
-  },
 };
-
-export const DesignTokens = designTokenStory(meta);

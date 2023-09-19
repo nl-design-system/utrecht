@@ -12,6 +12,11 @@
   padding-inline-start: 0;
 }
 
+@mixin reset-p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
 .utrecht-breadcrumb {
   @include utrecht-breadcrumb;
 }
@@ -24,8 +29,12 @@
   @include utrecht-breadcrumb__list;
 }
 
-ol.utrecht-breadcrumb__list {
+.utrecht-breadcrumb__list--html-ol {
   @include reset-ol;
+}
+
+.utrecht-breadcrumb__list--html-p {
+  @include reset-p;
 }
 
 .utrecht-breadcrumb__item {
@@ -40,6 +49,11 @@ ol.utrecht-breadcrumb__list {
   @include utrecht-breadcrumb__link--disabled;
 }
 
+.utrecht-breadcrumb__link--current:any-link {
+  /* `current` should override `disabled` */
+  @include utrecht-breadcrumb__link--current;
+}
+
 /* stylelint-disable-next-line block-no-empty */
 .utrecht-breadcrumb__text {
   @include utrecht-breadcrumb__text;
@@ -49,13 +63,19 @@ ol.utrecht-breadcrumb__list {
   @include utrecht-breadcrumb__separator;
 }
 
+.utrecht-breadcrumb__separator--html-li {
+  @include utrecht-breadcrumb__separator;
+}
+
 .utrecht-breadcrumb--arrows {
   /* https://css-tricks.com/triangle-breadcrumbs/ */
   --utrecht-breadcrumb-arrow-size: 24px;
 
+  min-block-size: var(--utrecht-breadcrumb-min-block-size);
   overflow: hidden;
 
   .utrecht-breadcrumb__link {
+    background-color: var(--utrecht-breadcrumb-arrows-link-background-color);
     padding-inline-end: 0;
     position: relative;
   }
@@ -63,8 +83,8 @@ ol.utrecht-breadcrumb__list {
   .utrecht-breadcrumb__link::after,
   .utrecht-breadcrumb__link::before {
     block-size: 0;
-    border-block-end-width: var(--utrecht-breadcrumb-block-size);
-    border-block-start-width: var(--utrecht-breadcrumb-block-size);
+    border-block-end-width: var(--utrecht-breadcrumb-min-block-size);
+    border-block-start-width: var(--utrecht-breadcrumb-min-block-size);
     border-color: transparent;
     border-style: solid;
     content: " ";
@@ -72,12 +92,12 @@ ol.utrecht-breadcrumb__list {
     inline-size: 0;
     inset-block-start: 50%;
     inset-inline-start: 100%;
-    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-min-block-size));
     position: absolute;
   }
 
   .utrecht-breadcrumb__link::after {
-    border-inline-start-color: var(--utrecht-breadcrumb-link-background-color);
+    border-inline-start-color: var(--utrecht-breadcrumb-arrows-link-background-color);
     border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
     z-index: 2;
   }
@@ -85,21 +105,24 @@ ol.utrecht-breadcrumb__list {
   .utrecht-breadcrumb__link::before {
     border-inline-start-color: var(--utrecht-document-background-color);
     border-inline-start-width: var(--utrecht-breadcrumb-arrow-size);
-    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-block-size));
+    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-min-block-size));
     margin-inline-start: 1px;
     z-index: 1;
   }
 
   .utrecht-breadcrumb__link--focus,
   .utrecht-breadcrumb__link:focus {
-    background-color: var(--utrecht-breadcrumb-link-focus-background-color);
+    --utrecht-link-focus-background-color: var(--utrecht-breadcrumb-arrows-link-focus-background-color);
+
+    background-color: var(--utrecht-breadcrumb-arrows-link-focus-background-color);
   }
 
   .utrecht-breadcrumb__link--focus::after,
   .utrecht-breadcrumb__link:focus::after {
-    border-inline-start-color: var(--utrecht-breadcrumb-link-focus-background-color);
+    border-inline-start-color: var(--utrecht-breadcrumb-arrows-link-focus-background-color);
   }
 
+  .utrecht-breadcrumb__link ~ .utrecht-breadcrumb__link,
   .utrecht-breadcrumb__item ~ .utrecht-breadcrumb__item .utrecht-breadcrumb__link {
     padding-inline-start: calc(
       var(--utrecht-breadcrumb-item-padding-inline-start) + var(--utrecht-breadcrumb-arrow-size)

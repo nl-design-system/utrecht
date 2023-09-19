@@ -20,6 +20,7 @@
   --utrecht-link-visited-color: var(--utrecht-breadcrumb-link-color);
   --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
   --utrecht-link-color: var(--utrecht-breadcrumb-link-color);
+  --utrecht-link-placeholder-color: var(--utrecht-link-breadcrumb-link-disabled-color);
 
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-breadcrumb-font-size);
@@ -31,8 +32,9 @@
 }
 
 @mixin utrecht-breadcrumb__list {
-  block-size: var(--utrecht-breadcrumb-block-size);
   display: flex;
+  flex-wrap: wrap;
+  min-block-size: var(--utrecht-breadcrumb-min-block-size);
 }
 
 @mixin utrecht-breadcrumb__item {
@@ -40,12 +42,19 @@
 }
 
 @mixin utrecht-breadcrumb__link {
+  --utrecht-icon-size: var(--utrecht-breadcrumb-link-icon-size);
+  --utrecht-link-icon-size: var(--utrecht-breadcrumb-link-icon-size);
+
   background-color: var(--utrecht-breadcrumb-link-background-color);
-  display: block;
+  display: inline-block;
   padding-block-end: var(--utrecht-breadcrumb-item-padding-block-end, 8px);
   padding-block-start: var(--utrecht-breadcrumb-item-padding-block-start, 8px);
   padding-inline-end: var(--utrecht-breadcrumb-item-padding-inline-end, 8px);
   padding-inline-start: var(--utrecht-breadcrumb-item-padding-inline-start, 8px);
+}
+
+@mixin utrecht-breadcrumb__link--current {
+  cursor: var(--utrecht-action-inert-cursor, default);
 }
 
 @mixin utrecht-breadcrumb__link--disabled {
@@ -56,6 +65,7 @@
     var(--utrecht-breadcrumb-link-background-color)
   );
   color: var(--utrecht-link-placeholder-color);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -67,11 +77,19 @@
    * Overwrite `style` attribute using "private" CSS variable for <li> hack:
    * <li aria-hidden="true" hidden style="display: var(--_utrecht-breadcrumb-separator-display, block)">
    */
-  --_utrecht-breadcrumb-separator-display: flex;
+  --_utrecht-breadcrumb-separator-display: inline-flex;
   --utrecht-icon-size: var(--utrecht-breadcrumb-separator-icon-size);
   --utrecht-icon-color: var(--utrecht-breadcrumb-separator-icon-color);
 
   align-items: center;
   display: var(--_utrecht-breadcrumb-separator-display);
-  inline-size: var(--utrecht-breadcrumb-separator-inline-size);
+  inline-size: fit-content;
+}
+
+@mixin utrecht-breadcrumb__separator--html-li {
+  /*
+   * Overwrite `style` attribute using "private" CSS variable for <li> hack:
+   * <li aria-hidden="true" hidden style="display: var(--_utrecht-breadcrumb-separator-display, block)">
+   */
+  display: var(--_utrecht-breadcrumb-separator-display);
 }
