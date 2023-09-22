@@ -10,6 +10,7 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   host: {
     '[attr.rel]': 'external ? (rel ? rel + " " : "") + "external noopener noreferer" : rel',
     '[class.utrecht-link]': 'true',
+    '[class.utrecht-link--html-a]': 'true',
     '[class.utrecht-link--external]': 'external',
   },
 })

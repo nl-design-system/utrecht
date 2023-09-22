@@ -15,7 +15,7 @@ export class Link {
   @Prop() href: string;
   render() {
     return (
-      <a href={typeof this.href === 'string' ? this.href : undefined} class="utrecht-link">
+      <a href={typeof this.href === 'string' ? this.href : undefined} class="utrecht-link utrecht-link--html-a">
         <slot></slot>
       </a>
     );

@@ -8,6 +8,7 @@
 
 @mixin utrecht-link-button {
   @include utrecht-link;
+  @include utrecht-link--any-link;
 
   --utrecht-icon-size: var(--utrecht-button-icon-size, 1em);
 

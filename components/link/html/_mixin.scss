@@ -49,7 +49,7 @@
   }
 
   a[href^="mailto:" i] {
-    @include utrecht-link--email;
+    @include utrecht-link--mailto;
   }
 
   a[href^="tel:" i] {

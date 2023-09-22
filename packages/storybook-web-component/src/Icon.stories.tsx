@@ -128,7 +128,7 @@ export const LinkIcon: Story = {
   decorators: [
     (Story) => (
       <p className="utrecht-paragraph">
-        <a className="utrecht-link" href="https://example.com/">
+        <a className="utrecht-link utrecht-link--html-a" href="https://example.com/">
           {Story()}Link
         </a>
       </p>

@@ -14,16 +14,20 @@
   @include utrecht-link;
 }
 
+.utrecht-link:any-link {
+  @include utrecht-link--any-link;
+}
+
 .utrecht-link--icon-left {
   @include utrecht-link--icon-left;
 }
 
-.utrecht-link:visited,
 .utrecht-link--visited {
   @include utrecht-link--visited;
 }
 
-.utrecht-link:hover,
+/* `:hover` should only apply to links with `href`, not on disabled links */
+.utrecht-link--html-a:any-link:hover,
 .utrecht-link--hover {
   @include utrecht-link--hover;
 }
@@ -40,31 +44,39 @@
 // keep the ideal version around to restore it easily when browser support improves.
 
 @if $utrecht-focus-visible-fallback {
-  .utrecht-link:focus {
+  /* `:focus` should only apply to links with `href`, not on disabled links */
+  .utrecht-link--html-span:focus,
+  .utrecht-link--html-a:any-link:focus {
     @include utrecht-link--focus;
     @include utrecht-link--focus-visible;
   }
 
-  .utrecht-link:focus:not(:focus-visible) {
+  .utrecht-link--html-span:focus:not(:focus-visible),
+  .utrecht-link--html-a:any-link:focus:not(:focus-visible) {
     @include utrecht-focus-ring-reset;
   }
 } @else {
-  .utrecht-link:focus {
-    @include utrecht-link--focus;
+  /* The `:focus-visible` styling for the focus should apply disabled links too, in case of `tabindex="0"` */
+  .utrecht-link--html-span:focus-visible,
+  .utrecht-link--html-a:focus-visible {
+    @include utrecht-link--focus-visible;
   }
 
-  .utrecht-link:focus-visible {
-    @include utrecht-link--focus-visible;
+  /* `:focus` should only apply to links with `href`, not on disabled links */
+  .utrecht-link--html-span:focus,
+  .utrecht-link--html-a:any-link:focus {
+    @include utrecht-link--focus;
   }
 }
 
-.utrecht-link:active,
+.utrecht-link--html-span:active,
+.utrecht-link--html-a:any-link:active,
 .utrecht-link--active {
   @include utrecht-link--active;
 }
 
-.utrecht-link--email {
-  @include utrecht-link--email;
+.utrecht-link--mailto {
+  @include utrecht-link--mailto;
 }
 
 .utrecht-link--external {
@@ -79,14 +91,25 @@
   @include utrecht-link--alternate-lang;
 }
 
+.utrecht-link--current {
+  @include utrecht-link--current;
+}
+
 .utrecht-link--current-lang {
   @include utrecht-link--current-lang;
 }
 
-.utrecht-link--box-content {
+.utrecht-link--box-content:any-link {
   @include utrecht-link--box-content;
 }
 
 .utrecht-link--placeholder {
   @include utrecht-link--placeholder;
+}
+
+/**
+ * Simulate forced-colors mode.
+ */
+.utrecht-link--forced-colors {
+  @include utrecht-link--forced-colors;
 }

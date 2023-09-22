@@ -16,7 +16,7 @@ export class ContactCardTemplate {
             <utrecht-paragraph class="utrecht-contact-card__telephone">
               <a
                 href="tel:14-030"
-                class="utrecht-link utrecht-link--telephone"
+                class="utrecht-link utrecht-link--html-a utrecht-link--telephone"
                 title="Telefoonnummer van gemeente Utrecht"
               >
                 14 030
@@ -28,7 +28,7 @@ export class ContactCardTemplate {
             <utrecht-heading-3>E-mail</utrecht-heading-3>
             <utrecht-paragraph>
               <a
-                class="utrecht-link"
+                class="utrecht-link utrecht-link--html-a utrecht-link--html-a"
                 href="https://www.utrecht.nl/reactieformulier"
                 title="Algemeen reactieformulier van de gemeente Utrecht"
               >
