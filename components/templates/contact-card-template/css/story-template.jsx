@@ -14,7 +14,7 @@ export const ContactCardTemplate = () => (
         <p className="utrecht-contact-card__telephone utrecht-paragraph">
           <a
             href="tel:14-030"
-            className="utrecht-link utrecht-link--telephone"
+            className="utrecht-link utrecht-link--html-a utrecht-link--telephone"
             title="Telefoonnummer van gemeente Utrecht"
           >
             14 030
@@ -26,7 +26,7 @@ export const ContactCardTemplate = () => (
         <h3 className="utrecht-heading-3">E-mail</h3>
         <p className="utrecht-paragraph">
           <a
-            className="utrecht-link"
+            className="utrecht-link utrecht-link--html-a utrecht-link--html-a"
             href="https://www.utrecht.nl/reactieformulier"
             title="Algemeen reactieformulier van de gemeente Utrecht"
           >

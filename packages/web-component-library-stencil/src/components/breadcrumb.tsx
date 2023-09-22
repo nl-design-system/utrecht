@@ -32,7 +32,12 @@ export class Breadcrumb {
               itemprop="itemListElement"
             >
               <a
-                class={clsx('utrecht-breadcrumb__link', 'utrecht-link', current && 'utrecht-link--current')}
+                class={clsx(
+                  'utrecht-breadcrumb__link',
+                  'utrecht-link',
+                  'utrecht-link--html-a',
+                  current && 'utrecht-link--current',
+                )}
                 href={href}
                 aria-current={current ? 'location' : null}
                 itemprop="item"

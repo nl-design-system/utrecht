@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Article, Heading2, Link, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Article, Heading2, Icon, Link, Paragraph, URLValue } from '@utrecht/component-library-react/src';
 import readme from '@utrecht/components/link/README.md?raw';
 import diacriticsDocs from '@utrecht/components/link/_diacritics.md?raw';
 import externalDocs from '@utrecht/components/link/_external.md?raw';
@@ -80,6 +80,12 @@ const meta = {
       type: {
         name: 'string',
         required: false,
+      },
+      control: { type: 'select' },
+      options: {
+        '': undefined,
+        '0: included in tab order': '0',
+        '-1: excluded from tab order': '-1',
       },
     },
     telephone: {
@@ -201,6 +207,16 @@ Simuleer styling met de \`.utrecht-link--focus\` class naam of als state op link
   },
 };
 
+export const FocusVisibleHover: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    hover: true,
+    focus: true,
+    focusVisible: true,
+  },
+  name: 'Focus-visible and hover',
+};
+
 export const FocusVisible: Story = {
   args: {
     children: 'Voorbeeldlink',
@@ -213,6 +229,123 @@ export const FocusVisible: Story = {
       description: {
         story:
           'Simuleer styling met de `.utrecht-link--focus` en `.utrecht-link--focus-visible` class naam of als state op link met `.utrecht-link:focus-visible`.',
+      },
+    },
+  },
+};
+
+const aHrefAlternative =
+  'Links with `<a href="">` as markup work like this automatically, but for other elements that are styled like a link this must be styled explicitly.';
+
+export const ForcedColors: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    forcedColors: true,
+  },
+  name: 'Forced colors',
+  parameters: {
+    docs: {
+      description: {
+        story: `In forced-colors mode the link text should be \`color: LinkText\`.
+
+${aHrefAlternative}
+
+Simulate forced-colors with the \`utrecht-link--forced-colors\` class name.`,
+      },
+    },
+  },
+};
+
+export const ForcedColorsVisited: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    forcedColors: true,
+    visited: true,
+  },
+  name: 'Forced colors visited',
+  parameters: {
+    docs: {
+      description: {
+        story: `In forced-colors mode the link text should be \`color: VisitedText\`, unless there is a privacy concern in making visited links visible.
+
+${aHrefAlternative}
+
+Simulate forced-colors with the \`utrecht-link--forced-colors\` and \`utrecht-link--visited\` class names.`,
+      },
+    },
+  },
+};
+
+export const ForcedColorsFocusActive: Story = {
+  args: {
+    active: true,
+    children: 'Voorbeeldlink',
+    forcedColors: true,
+  },
+  name: 'Forced colors with active',
+  parameters: {
+    docs: {
+      description: {
+        story: `In forced-colors mode the link text should be \`color: ActiveText\`. ${aHrefAlternative}
+
+Simulate forced-colors with the \`utrecht-link--forced-colors\` and \`utrecht-link--active\` class names.`,
+      },
+    },
+  },
+};
+
+export const ForcedColorsDisabled: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    forcedColors: true,
+    placeholder: true,
+  },
+  name: 'Forced colors placeholder',
+  parameters: {
+    docs: {
+      description: {
+        story: `In forced-colors mode the disabled links should be \`color: GrayText\`. ${aHrefAlternative}
+
+Simulate forced-colors with the \`utrecht-link--forced-colors\` and \`utrecht-link--placeholder\` class names.`,
+      },
+    },
+  },
+};
+
+export const ForcedColorsFocusVisible: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    forcedColors: true,
+    focus: true,
+    focusVisible: true,
+  },
+  name: 'Forced colors with focus-visible',
+  parameters: {
+    docs: {
+      description: {
+        story: `In forced-colors mode a link with focus-visible should have a focus ring with \`Highlight\` as color. ${aHrefAlternative}`,
+      },
+    },
+  },
+};
+
+export const ForcedColorsIcon: Story = {
+  args: {
+    children: [
+      <Icon>
+        <svg viewBox="0 0 32 32">
+          <rect fill="currentColor" x="0" y="0" width="32" height="32" />
+        </svg>
+      </Icon>,
+      ' Voorbeeldlink',
+    ],
+    forcedColors: true,
+  },
+  name: 'Forced colors with icon',
+  parameters: {
+    docs: {
+      description: {
+        story: `In forced-colors mode icons in a link are best visible, when the SVG icon uses \`currentColor\` as fill and stroke color.`,
       },
     },
   },
@@ -356,6 +489,90 @@ export const Placeholder: Story = {
   },
 };
 
+export const PlaceholderHover: Story = {
+  args: {
+    ...Default.args,
+    placeholder: true,
+    hover: true,
+  },
+  name: 'Placeholder hover',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Placeholder links should not have any hover effect, because they have no action and a hover would incorrectly indicate interactive behavior.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const PlaceholderFocus: Story = {
+  args: {
+    ...Default.args,
+    placeholder: true,
+    focus: true,
+  },
+  name: 'Placeholder focus',
+  parameters: {
+    docs: {
+      description: {
+        story: `Placeholder links should not have any active effect, because they have no action and a active would incorrectly indicate interactive behavior.
+
+The \`cursor\` should indicate that activating the link is currently not allowed (\`cursor: not-allowed\`), to indicate there is an action which is currently blocked.`,
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const PlaceholderActive: Story = {
+  args: {
+    ...Default.args,
+    placeholder: true,
+    active: true,
+    focus: true,
+  },
+  name: 'Placeholder active',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Placeholder links should not have any hover effect, because they have no action and a hover would incorrectly indicate interactive behavior.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const PlaceholderFocusVisible: Story = {
+  args: {
+    ...Default.args,
+    focus: true,
+    focusVisible: true,
+    tabIndex: '0',
+    placeholder: true,
+  },
+  name: 'Placeholder with focus-visible',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Placeholder links have are not focusable by default, but they can be made focusable using `tabindex="0"`. ` When `focus-visible` applies to a placeholder link, the focus ring should be consistent with the focus ring of interactive links.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
 export const External: Story = {
   args: {
     external: true,
@@ -398,11 +615,43 @@ export const Email: Story = {
     children: 'info@example.com',
     mail: true,
   },
-  name: 'Email',
+  name: 'E-mail',
   parameters: {
     docs: {
       description: {
-        story: 'Styling met de `.utrecht-link--email` class naam.',
+        story: 'Styling met de `.utrecht-link--mailto` class naam.',
+      },
+    },
+  },
+};
+
+export const URLValueStory: Story = {
+  args: {
+    href: 'https://example.fi/',
+    children: <URLValue>https://example.fi/</URLValue>,
+  },
+  name: 'URL value',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Combineer `.utrecht-link` met `utrecht-url` voor links die de URL als link tekst hebben.',
+      },
+    },
+  },
+};
+
+export const URLValueRightToLeftStory: Story = {
+  args: {
+    href: 'https://example.fi/',
+    children: <URLValue>https://example.fi/</URLValue>,
+  },
+  decorators: [arabicDecorator],
+  name: 'URL value (right-to-left)',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Combineer `.utrecht-link` met het `<bdi>` element van de URL component voor links die de URL als link tekst hebben. Voorkom dat `https://example.com/` weergegeven wordt als `/https://example.com`.',
       },
     },
   },

@@ -31,7 +31,11 @@ export const FocusHTMLExample = () => `
 
 export const FocusBEMExample = ({ modifiers = {} }) => `
 <div>
-  <div><a href="https://example.com" target="_new" class="${bem("utrecht-link", modifiers)}">example.com</a></div>
+  <div><a href="https://example.com" target="_new" class="${bem(
+    "utrecht-link",
+    "utrecht-link--html-a",
+    modifiers
+  )}">example.com</a></div>
   <div><input type="text" class="${bem("utrecht-textbox", modifiers, "utrecht-textbox--html-input")}"></div>
   <div><input type="checkbox" class="${bem("utrecht-checkbox", modifiers, "utrecht-textbox--html-input")}"></div>
   <div><input type="radio" class="${bem("utrecht-radio-button", modifiers, "utrecht-textbox--html-input")}"></div>
