@@ -15,10 +15,10 @@ $utrecht-focus-visible-fallback: true !default;
     var(--utrecht-focus-inverse-outline-color, transparent);
 
   box-shadow: var(--_utrecht-focus-ring-box-shadow);
-  outline-color: var(--utrecht-focus-outline-color, revert);
-  outline-offset: var(--utrecht-focus-outline-offset, revert);
-  outline-style: var(--utrecht-focus-outline-style, revert);
-  outline-width: var(--utrecht-focus-outline-width, revert);
+  outline-color: var(--utrecht-focus-outline-color, invert);
+  outline-offset: var(--utrecht-focus-outline-offset, 0);
+  outline-style: var(--utrecht-focus-outline-style, none);
+  outline-width: var(--utrecht-focus-outline-width, medium);
 }
 
 @mixin utrecht-focus-ring-reset {
