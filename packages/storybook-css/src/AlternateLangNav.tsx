@@ -4,9 +4,9 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { ButtonGroup, Link, LinkButton } from '@utrecht/component-library-react/dist/css-module';
-import { LinkProps } from '@utrecht/component-library-react/src/css-module/Link';
-import { LinkButtonProps } from '@utrecht/component-library-react/src/css-module/LinkButton';
+import { ButtonGroup, Link, LinkButton } from '@utrecht/component-library-react';
+import { LinkProps } from '@utrecht/component-library-react/src/Link';
+import { LinkButtonProps } from '@utrecht/component-library-react/src/LinkButton';
 import React from 'react';
 import { HTMLHeading } from './util/HTMLHeading';
 

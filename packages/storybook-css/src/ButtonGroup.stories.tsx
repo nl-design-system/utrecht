@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { Button, ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
+import { Button, ButtonGroup } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import tokensDefinition from '@utrecht/components/button-group/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

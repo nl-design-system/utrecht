@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { Button } from '@utrecht/component-library-react/dist/css-module';
+import { Button } from '@utrecht/component-library-react';
 import React, { HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 export interface LogoButtonProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {

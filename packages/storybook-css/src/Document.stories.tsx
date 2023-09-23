@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Document, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Document, Heading1, Paragraph } from '@utrecht/component-library-react';
 import { DocumentProps } from '@utrecht/component-library-react/src/Document';
 import readme from '@utrecht/components/document/README.md?raw';
 import langDocs from '@utrecht/components/document/_lang.md?raw';

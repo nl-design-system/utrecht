@@ -1,6 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { DataPlaceholder, DataPlaceholderProps } from '@utrecht/component-library-react/src/DataPlaceholder';
 import {
   DataList,
   DataListItem,
@@ -12,7 +13,6 @@ import {
   Heading4,
   Paragraph,
 } from '@utrecht/component-library-react/src/css-module';
-import { DataPlaceholder, DataPlaceholderProps } from '@utrecht/component-library-react/src/css-module/DataPlaceholder';
 import readme from '@utrecht/components/data-placeholder/README.md?raw';
 import tokensDefinition from '@utrecht/components/data-placeholder/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

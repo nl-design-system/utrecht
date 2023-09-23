@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { Link } from '@utrecht/component-library-react/dist/css-module';
+import { Link } from '@utrecht/component-library-react';
 import { LinkProps } from '@utrecht/component-library-react/src/Link';
 import React from 'react';
 import '@utrecht/components/link-list/css/index.scss';

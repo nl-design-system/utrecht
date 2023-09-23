@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Image } from '@utrecht/component-library-react/dist/css-module';
+import { Image } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/img/README.md?raw';
 import tokensDefinition from '@utrecht/components/img/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

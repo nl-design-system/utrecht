@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module';
+import { OrderedList, OrderedListItem } from '@utrecht/component-library-react';
 import { OrderedListProps } from '@utrecht/component-library-react/src/OrderedList';
 import readme from '@utrecht/components/ordered-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/ordered-list/tokens.json';

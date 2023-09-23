@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Mark } from '@utrecht/component-library-react/dist/css-module';
+import { Mark } from '@utrecht/component-library-react';
 import { MarkProps } from '@utrecht/component-library-react/src/Mark';
 import readme from '@utrecht/components/mark/README.md?raw';
 import tokensDefinition from '@utrecht/components/mark/tokens.json';

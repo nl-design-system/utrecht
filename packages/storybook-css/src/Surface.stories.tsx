@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading2, Paragraph, Surface } from '@utrecht/component-library-react/dist/css-module';
+import { Heading2, Paragraph, Surface } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/surface/README.md?raw';
 import themeColorDocs from '@utrecht/components/surface/_surface-theme-color.md?raw';
 import tokensDefinition from '@utrecht/components/surface/tokens.json';

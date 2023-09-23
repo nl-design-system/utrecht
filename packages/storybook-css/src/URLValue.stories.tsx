@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Link, Paragraph, URLValue } from '@utrecht/component-library-react/dist/css-module';
+import { Link, Paragraph, URLValue } from '@utrecht/component-library-react';
 import { URLValueProps } from '@utrecht/component-library-react/src/URLValue';
 import readme from '@utrecht/components/url/README.md?raw';
 import tokensDefinition from '@utrecht/components/url/tokens.json';

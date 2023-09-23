@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Fieldset, FieldsetLegend, Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import { FieldsetProps } from '@utrecht/component-library-react/dist/css-module/Fieldset';
+import { Fieldset, FieldsetLegend, Paragraph } from '@utrecht/component-library-react';
+import { FieldsetProps } from '@utrecht/component-library-react/src/Fieldset';
 import readme from '@utrecht/components/form-fieldset/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-fieldset/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

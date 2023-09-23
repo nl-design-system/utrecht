@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { NumberValue } from '@utrecht/component-library-react/dist/css-module';
+import { NumberValue } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/value-number/README.md?raw';
 import tokensDefinition from '@utrecht/components/value-number/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

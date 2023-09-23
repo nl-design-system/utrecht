@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { CodeBlock } from '@utrecht/component-library-react/dist/css-module';
+import { CodeBlock } from '@utrecht/component-library-react';
 import { CodeBlockProps } from '@utrecht/component-library-react/src/CodeBlock';
 import readme from '@utrecht/components/code-block/README.md?raw';
 import tokensDefinition from '@utrecht/components/code-block/tokens.json';
