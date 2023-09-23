@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Emphasis, Strong as StrongComponent } from '@utrecht/component-library-react/dist/css-module';
+import { Emphasis, Strong as StrongComponent } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/emphasis/README.md?raw';
 import tokensDefinition from '@utrecht/components/emphasis/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

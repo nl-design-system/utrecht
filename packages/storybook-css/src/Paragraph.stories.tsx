@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Paragraph } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/paragraph/README.md?raw';
 import leadParagraphDocs from '@utrecht/components/paragraph/_lead.md?raw';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';

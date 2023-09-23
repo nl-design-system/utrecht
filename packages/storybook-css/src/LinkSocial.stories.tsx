@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { LinkSocial } from '@utrecht/component-library-react/dist/css-module';
-import { LinkSocialProps } from '@utrecht/component-library-react/src/css-module/LinkSocial';
+import { LinkSocial } from '@utrecht/component-library-react';
+import { LinkSocialProps } from '@utrecht/component-library-react/src/LinkSocial';
 import readme from '@utrecht/components/link-social/README.md?raw';
 import tokensDefinition from '@utrecht/components/link-social/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

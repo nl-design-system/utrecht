@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading3 } from '@utrecht/component-library-react/dist/css-module';
+import { Heading3 } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/heading-3/README.md?raw';
 import tokensDefinition from '@utrecht/components/heading-3/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

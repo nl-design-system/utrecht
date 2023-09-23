@@ -12,7 +12,7 @@ import {
   Paragraph,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
 import readme from '@utrecht/components/page-content/README.md?raw';
 import tokensDefinition from '@utrecht/components/page-content/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

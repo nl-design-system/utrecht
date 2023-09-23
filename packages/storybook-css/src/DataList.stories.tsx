@@ -9,7 +9,7 @@ import {
   DataListValue,
   Link,
   LinkButton,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
 import readme from '@utrecht/components/data-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/data-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

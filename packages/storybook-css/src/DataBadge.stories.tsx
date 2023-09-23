@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { DataBadge } from '@utrecht/component-library-react/dist/css-module';
+import { DataBadge } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/badge-data/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

@@ -1,7 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
 import { PartialStoryFn } from '@storybook/types';
-import { AlertDialogProps } from '@utrecht/component-library-react/dist/AlertDialog';
 import {
   AlertDialog,
   Button,
@@ -10,7 +9,8 @@ import {
   Paragraph,
   PrimaryActionButton,
   SecondaryActionButton,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react';
+import { AlertDialogProps } from '@utrecht/component-library-react/dist/AlertDialog';
 import readme from '@utrecht/components/alert-dialog/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

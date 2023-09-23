@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { PageHeader } from '@utrecht/component-library-react/dist/css-module';
+import { PageHeader } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/page-header/README.md?raw';
 import tokensDefinition from '@utrecht/components/page-header/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

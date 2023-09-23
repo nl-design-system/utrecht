@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { StatusBadge } from '@utrecht/component-library-react/dist/css-module';
+import { StatusBadge } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/badge-status/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-status/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

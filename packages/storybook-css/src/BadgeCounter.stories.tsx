@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { BadgeCounter } from '@utrecht/component-library-react/dist/css-module';
+import { BadgeCounter } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/badge-counter/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

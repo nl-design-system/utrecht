@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading2, Paragraph, SpotlightSection } from '@utrecht/component-library-react/dist/css-module';
+import { Heading2, Paragraph, SpotlightSection } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/spotlight-section/README.md?raw';
 import tokensDefinition from '@utrecht/components/spotlight-section/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

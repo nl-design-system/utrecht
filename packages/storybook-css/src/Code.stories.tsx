@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Code, Link, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Code, Link, Paragraph } from '@utrecht/component-library-react';
 import { CodeProps } from '@utrecht/component-library-react/src/Code';
 import readme from '@utrecht/components/code/README.md?raw';
 import ligaturesDocs from '@utrecht/components/code/_ligatures.md?raw';

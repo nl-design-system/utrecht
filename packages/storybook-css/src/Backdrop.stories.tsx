@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { Backdrop } from '@utrecht/component-library-react/dist/css-module';
+import { Backdrop } from '@utrecht/component-library-react';
 import { BackdropProps } from '@utrecht/component-library-react/src/Backdrop';
 import readme from '@utrecht/components/backdrop/README.md?raw';
 import tokensDefinition from '@utrecht/components/backdrop/tokens.json';

@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Article, Link, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Article, Link, Paragraph } from '@utrecht/component-library-react';
 import articleDocs from '@utrecht/components/link/_article.md?raw';
 import React from 'react';
 import { LinkStory } from './Link';
