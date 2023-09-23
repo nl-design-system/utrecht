@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowsSort, IconLock, IconSortAscending, IconSortDescending } from '@tabler/icons-react';
 import readme from '@utrecht/components/table/README.md?raw';
-import actionReadme from '@utrecht/components/table/css/stories/_table-row-action.md?raw';
+import actionReadme from '@utrecht/components/table/_table-row-action.md?raw';
 import tokensDefinition from '@utrecht/components/table/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
