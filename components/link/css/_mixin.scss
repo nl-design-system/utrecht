@@ -146,7 +146,13 @@ however browsers don't seem to have implemented great looking supixel tweening y
 }
 
 @mixin utrecht-link--focus-visible {
+  /*
+   * WCAG SC 2.4.12: Focus Not Obscured
+   * Use `z-index` to ensure the focus ring is stacked above adjecent elements with a `background`
+   */
   @include utrecht-focus-visible;
+
+  z-index: var(--utrecht-stack-focus-z-index, 1);
 }
 
 /**
