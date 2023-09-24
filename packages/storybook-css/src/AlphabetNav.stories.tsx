@@ -2,13 +2,13 @@
 
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
-import { AlphabetNavigation, AlphabetNavigationProps } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/alphabet-navigation/README.md?raw';
-import tokensDefinition from '@utrecht/components/alphabet-navigation/tokens.json';
+import { AlphabetNav, AlphabetNavProps } from '@utrecht/component-library-react/dist/css-module';
+import readme from '@utrecht/components/alphabet-nav/README.md?raw';
+import tokensDefinition from '@utrecht/components/alphabet-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { designTokenStory } from './util';
-import '@utrecht/components/alphabet-navigation/css/index.scss';
+import { designTokenStory } from './design-token-story';
+import '@utrecht/components/alphabet-nav/css/index.scss';
 
 const createAlphabetArray = (): string[] => {
   const alphabet = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
@@ -16,8 +16,9 @@ const createAlphabetArray = (): string[] => {
 };
 
 const meta = {
-  title: 'CSS Component/Alphabet Navigation',
-  id: 'css-alphabet-navigation',
+  title: 'CSS Component/Alphabet navigation',
+  id: 'css-alphabet-nav',
+  component: AlphabetNav,
   argTypes: {
     pathname: {
       control: 'text',
@@ -47,15 +48,12 @@ const meta = {
     },
   },
   args: {},
-  render: (props: AlphabetNavigationProps) => {
-    return <AlphabetNavigation {...props} />;
-  },
   tags: ['autodocs'],
   parameters: {
     status: {
       type: 'ALPHA',
     },
-    tokensPrefix: 'utrecht-alphabet-navigation',
+    tokensPrefix: 'utrecht-alphabet-nav',
     tokens,
     tokensDefinition,
     docs: {
@@ -69,7 +67,7 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<AlphabetNavigationProps>;
+} satisfies Meta<AlphabetNavProps>;
 
 export default meta;
 
