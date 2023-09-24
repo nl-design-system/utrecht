@@ -2,17 +2,17 @@
 
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
-import { AlphabetNavigation, AlphabetNavigationProps } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/alphabet-navigation/README.md?raw';
-import tokensDefinition from '@utrecht/components/alphabet-navigation/tokens.json';
+import { AlphabetNav, AlphabetNavProps } from '@utrecht/component-library-react/dist/css-module';
+import readme from '@utrecht/components/alphabet-nav/README.md?raw';
+import tokensDefinition from '@utrecht/components/alphabet-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { designTokenStory } from './util';
-import '@utrecht/components/alphabet-navigation/css/index.scss';
+import '@utrecht/components/alphabet-nav/css/index.scss';
 
 const meta = {
-  title: 'React Component/Alphabet Navigation',
-  id: 'react-alphabet-navigation',
+  title: 'React Component/Alphabet navigation',
+  id: 'react-alphabet-nav',
   argTypes: {
     pathname: {
       control: 'text',
@@ -42,8 +42,8 @@ const meta = {
     },
   },
   args: {},
-  render: (props: AlphabetNavigationProps) => {
-    return <AlphabetNavigation {...props} />;
+  render: (props: AlphabetNavProps) => {
+    return <AlphabetNav {...props} />;
   },
 
   tags: ['autodocs'],
@@ -51,7 +51,7 @@ const meta = {
     status: {
       type: 'ALPHA',
     },
-    tokensPrefix: 'utrecht-alphabet-navigation',
+    tokensPrefix: 'utrecht-alphabet-nav',
     tokens,
     tokensDefinition,
     docs: {
@@ -65,7 +65,7 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<AlphabetNavigationProps>;
+} satisfies Meta<AlphabetNavProps>;
 
 export default meta;
 
