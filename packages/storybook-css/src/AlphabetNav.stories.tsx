@@ -6,7 +6,7 @@ import { AlphabetNav, AlphabetNavProps } from '@utrecht/component-library-react/
 import readme from '@utrecht/components/alphabet-nav/README.md?raw';
 import tokensDefinition from '@utrecht/components/alphabet-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import React from 'react';
 import { designTokenStory } from './design-token-story';
 import '@utrecht/components/alphabet-nav/css/index.scss';
 
@@ -25,10 +25,6 @@ const meta = {
       description: 'The URL to navigate to when a letter is clicked.',
       defaultValue: 'letter',
     },
-    handleLetterClick: {
-      control: null,
-      description: 'Function to handle letter click and return the navigation URL.',
-    },
     currentLetter: {
       control: 'text',
       description: 'The current letter.',
@@ -41,10 +37,6 @@ const meta = {
       options: ['link', 'button'],
       control: { type: 'radio' },
       description: 'The component to use for the navigation.',
-    },
-    customLinkComponent: {
-      control: null, // This control won't be shown as it's a component
-      description: 'Custom component to use for navigation.',
     },
   },
   args: {},
@@ -72,11 +64,6 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
-const DemoLinkComponent = forwardRef((props: PropsWithChildren<any>, ref: ForwardedRef<any>) => {
-  return <a ref={ref} {...props} />;
-});
-DemoLinkComponent.displayName = 'DemoLinkComponent';
 
 export const LinkDefault: Story = {
   args: {
@@ -123,63 +110,6 @@ export const LinkAvailable: Story = {
     alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
     component: 'link',
     handleLetterClick: (selectedLetter: string) => selectedLetter,
-  },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const CustomLink: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: Math.random() < 0.5 })),
-    component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
-  },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const CustomLinkCurrentLetter: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
-    component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
-    currentLetter: 'A',
-  },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const CustomLinkAvailable: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
-    component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
-  },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const CustomLinkUnavailable: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: false })),
-    component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
   },
   parameters: {
     status: {
