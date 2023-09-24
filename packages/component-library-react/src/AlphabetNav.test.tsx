@@ -24,7 +24,7 @@ describe('Alphabet navigation', () => {
   afterEach(() => {
     mockHandleLetterClick.mockClear();
   });
-  const alphabet = createAlphabetArray().map((letter) => ({ letter, availability: Math.random() < 0.5 }));
+  const alphabet = createAlphabetArray().map((letter) => ({ letter, disabled: Math.random() < 0.5 }));
 
   const defaultProps: AlphabetNavProps = {
     handleLetterClick: mockHandleLetterClick,
@@ -40,13 +40,13 @@ describe('Alphabet navigation', () => {
     expect(letters).toHaveLength(26);
     alphabet.forEach((item, index) => {
       const element = letters[index];
-      const expectedClass = item.availability ? 'utrecht-button--secondary-action' : 'utrecht-button--disabled';
+      const expectedClass = item.disabled ? 'utrecht-button--disabled' : 'utrecht-button--secondary-action';
       debug(element);
       expect(element).toHaveClass(expectedClass);
     });
   });
-  it('disables the button when availability is false', () => {
-    const alphabet = [{ letter: 'A', availability: false }];
+  it('disables the button when disabled is true', () => {
+    const alphabet = [{ letter: 'A', disabled: true }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} component="button" />);
 
@@ -54,8 +54,8 @@ describe('Alphabet navigation', () => {
 
     expect(button).toBeDisabled();
   });
-  it('does not disable the button when availability is true', () => {
-    const alphabet = [{ letter: 'B', availability: true }];
+  it('does not disable the button when disabled is false', () => {
+    const alphabet = [{ letter: 'B', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} component="button" />);
 
@@ -66,7 +66,7 @@ describe('Alphabet navigation', () => {
   it('calls handleLetterClick when a letter is clicked', async () => {
     const alphabet = createAlphabetArray().map((letter) => ({
       letter,
-      availability: true,
+      disabled: false,
     }));
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} component="button" />);
@@ -92,7 +92,7 @@ describe('Alphabet navigation', () => {
     expect(ref.current).toBe(letters[25]);
   });
   it('sets aria-pressed attribute to true when currentLetter matches for the link component', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" />);
 
@@ -101,7 +101,7 @@ describe('Alphabet navigation', () => {
     expect(link).toHaveAttribute('aria-pressed', 'true');
   });
   it('sets aria-pressed attribute to true when currentLetter matches for the button', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} component="button" currentLetter="A" />);
 
@@ -110,7 +110,7 @@ describe('Alphabet navigation', () => {
     expect(button).toHaveAttribute('aria-pressed', 'true');
   });
   it('sets aria-pressed attribute to false when currentLetter does not match for the button', () => {
-    const alphabet = [{ letter: 'B', availability: true }];
+    const alphabet = [{ letter: 'B', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} component="button" currentLetter="C" />);
 
@@ -119,7 +119,7 @@ describe('Alphabet navigation', () => {
     expect(button).toHaveAttribute('aria-pressed', 'false');
   });
   it('sets aria-pressed attribute to false when currentLetter does not match for the link', () => {
-    const alphabet = [{ letter: 'B', availability: true }];
+    const alphabet = [{ letter: 'B', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} component="link" currentLetter="C" />);
 
@@ -129,8 +129,8 @@ describe('Alphabet navigation', () => {
   });
   it('sets aria-pressed attribute based on currentLetter for the custom link component', () => {
     const alphabet = [
-      { letter: 'A', availability: true },
-      { letter: 'B', availability: true },
+      { letter: 'A', disabled: false },
+      { letter: 'B', disabled: false },
     ];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" customLinkComponent={CustomLink} />);
@@ -143,8 +143,8 @@ describe('Alphabet navigation', () => {
   });
   it('updates aria-pressed attribute for the link component when letter is clicked', async () => {
     const alphabet = [
-      { letter: 'A', availability: true },
-      { letter: 'B', availability: false },
+      { letter: 'A', disabled: false },
+      { letter: 'B', disabled: true },
     ];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="B" />);
@@ -156,7 +156,7 @@ describe('Alphabet navigation', () => {
     });
   });
   it('Renders utrecht-button-link--primary-action CSS className when currentLetter matches for link component', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" />);
 
@@ -165,7 +165,7 @@ describe('Alphabet navigation', () => {
     expect(link).toHaveClass('utrecht-button-link--primary-action');
   });
   it('Renders utrecht-button-link--secondary-action CSS className when currentLetter matches for link component', () => {
-    const alphabet = [{ letter: 'B', availability: true }];
+    const alphabet = [{ letter: 'B', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="C" />);
 
@@ -173,7 +173,7 @@ describe('Alphabet navigation', () => {
     expect(link).toHaveClass('utrecht-button-link--secondary-action');
   });
   it('Renders utrecht-alphabet-nav--current-letter CSS className when currentLetter matches for link component', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" />);
 
@@ -182,7 +182,7 @@ describe('Alphabet navigation', () => {
     expect(link).toHaveClass('utrecht-alphabet-nav--current-letter');
   });
   it('Renders utrecht-button--primary-action CSS className when currentLetter matches for button component', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" component="button" />);
 
@@ -191,7 +191,7 @@ describe('Alphabet navigation', () => {
     expect(link).toHaveClass('utrecht-button--primary-action');
   });
   it('Renders utrecht-button--secondary-action CSS className when currentLetter matches for button component', () => {
-    const alphabet = [{ letter: 'B', availability: true }];
+    const alphabet = [{ letter: 'B', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="C" component="button" />);
 
@@ -199,7 +199,7 @@ describe('Alphabet navigation', () => {
     expect(link).toHaveClass('utrecht-button--secondary-action');
   });
   it('Renders utrecht-alphabet-nav--current-letter CSS className when currentLetter matches for button component', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" component="button" />);
 
@@ -214,40 +214,40 @@ describe('Alphabet navigation', () => {
     expect(customLink).toHaveClass('utrecht-button-link--secondary-action');
   });
   it('renders custom link component with placeholder appearance when placeholder is true', () => {
-    const alphabet = [{ letter: 'B', availability: false }];
+    const alphabet = [{ letter: 'B', disabled: true }];
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" customLinkComponent={CustomLink} />);
 
     const customLink = screen.getByText('B');
     expect(customLink).toHaveClass('utrecht-button-link--placeholder');
   });
   it('renders link component with placeholder appearance when placeholder is true', () => {
-    const alphabet = [{ letter: 'B', availability: false }];
+    const alphabet = [{ letter: 'B', disabled: true }];
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} />);
 
     const customLink = screen.getByText('B');
     expect(customLink).toHaveClass('utrecht-button-link--placeholder');
   });
-  it('applies `utrecht-alphabet-nav__link--unavailable` class when availability is false for CustomLink component', () => {
-    const alphabet = [{ letter: 'A', availability: false }];
+  it('applies `utrecht-alphabet-nav__link--disabled` class when disabled is true for CustomLink component', () => {
+    const alphabet = [{ letter: 'A', disabled: true }];
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} customLinkComponent={CustomLink} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
 
-    expect(letterA).toHaveClass('utrecht-alphabet-nav__link--unavailable');
+    expect(letterA).toHaveClass('utrecht-alphabet-nav__link--disabled');
   });
-  it('applies `utrecht-alphabet-nav__link--unavailable` class when availability is false for the link component', () => {
-    const alphabet = [{ letter: 'A', availability: false }];
+  it('applies `utrecht-alphabet-nav__link--disabled` class when disabled is true for the link component', () => {
+    const alphabet = [{ letter: 'A', disabled: true }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
 
-    expect(letterA).toHaveClass('utrecht-alphabet-nav__link--unavailable');
+    expect(letterA).toHaveClass('utrecht-alphabet-nav__link--disabled');
   });
-  it('sets aria-disabled attribute for the link component based on availability', () => {
+  it('sets aria-disabled attribute for the link component based on disabled', () => {
     const alphabet = [
-      { letter: 'A', availability: true },
-      { letter: 'B', availability: false },
+      { letter: 'A', disabled: false },
+      { letter: 'B', disabled: true },
     ];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} />);
@@ -258,10 +258,10 @@ describe('Alphabet navigation', () => {
     expect(letterA).toHaveAttribute('aria-disabled', 'false');
     expect(letterB).toHaveAttribute('aria-disabled', 'true');
   });
-  it('sets aria-disabled attribute for the custom link component based on availability', () => {
+  it('sets aria-disabled attribute for the custom link component based on disabled', () => {
     const alphabet = [
-      { letter: 'A', availability: true },
-      { letter: 'B', availability: false },
+      { letter: 'A', disabled: false },
+      { letter: 'B', disabled: true },
     ];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} customLinkComponent={CustomLink} />);
@@ -273,7 +273,7 @@ describe('Alphabet navigation', () => {
     expect(letterB).toHaveAttribute('aria-disabled', 'true');
   });
   it('generates correct href based on pathname and letter', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} currentLetter="A" pathname="/example" />);
 
@@ -286,7 +286,7 @@ describe('Alphabet navigation', () => {
     expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
   });
   it('generates a letter-based href by default', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     render(<AlphabetNav {...defaultProps} alphabet={alphabet} />);
 
@@ -298,14 +298,14 @@ describe('Alphabet navigation', () => {
 
     expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
   });
-  it('sets tabIndex attribute based on availability', () => {
-    const alphabet = [{ letter: 'A', availability: true }];
+  it('sets tabIndex attribute based on disabled', () => {
+    const alphabet = [{ letter: 'A', disabled: false }];
 
     const { rerender } = render(<AlphabetNav {...defaultProps} alphabet={alphabet} />);
     const letterA = screen.getByRole('link', { name: 'A' });
     expect(letterA).toHaveAttribute('tabIndex', '0');
-    // Re-render with availability set to false
-    rerender(<AlphabetNav {...defaultProps} alphabet={[{ letter: 'A', availability: false }]} />);
+    // Re-render with disabled set to false
+    rerender(<AlphabetNav {...defaultProps} alphabet={[{ letter: 'A', disabled: true }]} />);
 
     expect(letterA).toHaveAttribute('tabIndex', '-1');
   });
