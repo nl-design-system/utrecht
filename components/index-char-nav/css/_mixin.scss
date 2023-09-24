@@ -15,11 +15,15 @@
   margin-block-start: var(--utrecht-index-char-nav-margin-block-start);
 }
 
-@mixin utrecht-index-char-nav--current-letter {
-  --utrecht-button-primary-action-font-weight: var(--utrecht-index-char-nav-current-letter-font-weight);
-  --utrecht-button-link-primary-action-font-weight: var(--utrecht-index-char-nav-current-letter-font-weight);
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-index-char-nav__link {
 }
 
-@mixin utrecht-index-char-nav__link--unavailable {
+@mixin utrecht-index-char-nav__link--current {
+  --utrecht-button-primary-action-font-weight: var(--utrecht-index-char-nav-link-current-font-weight);
+  --utrecht-button-link-primary-action-font-weight: var(--utrecht-index-char-nav-link-current-font-weight);
+}
+
+@mixin utrecht-index-char-nav__link--disabled {
   pointer-events: none;
 }

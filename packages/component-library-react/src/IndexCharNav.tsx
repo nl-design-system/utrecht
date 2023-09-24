@@ -4,42 +4,45 @@
  */
 
 import clsx from 'clsx';
-import React from 'react';
-import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { ComponentType, ForwardedRef, forwardRef, PropsWithChildren, Ref } from 'react';
 import { Button } from './Button';
 import { ButtonLink } from './ButtonLink';
 
 export interface IndexCharNavProps {
   /**
    *
-   * @param letter The letter that was clicked.
+   * @param char The character that was clicked.
    * @returns The URL to navigate to.
    *
    * @example
    * ```ts
-   * const handleLetterClick = (letter: string) => {
-   *   return `/${letter}`;
+   * const onLinkClick = (char: string) => {
+   *   return `/${char}`;
    * }
    *```
    */
   // eslint-disable-next-line no-unused-vars
-  handleLetterClick: (letter: string) => void;
+  onLinkClick?: (char: string) => void;
   /**
-   * The current letter.
+   * The current char.
    */
-  currentLetter?: string;
+  currentChar?: string;
   /**
-   * The alphabet.
+   * The characters.
    * @example
    * ```ts
-   *  const alphabet = [{ letter: 'A', disabled: true }, { letter: 'B', disabled: false }]
+   *  const characters = [{ letter: 'A', disabled: true }, { letter: 'B', disabled: false }]
    * ```
    */
-  alphabet: { letter: string; disabled: boolean }[];
+  characters: {
+    char: string;
+    disabled?: boolean;
+    href?: string;
+  }[];
   /**
    * The component to use for the navigation.
    */
-  component: 'link' | 'button';
+  component?: 'link' | 'button';
   /**
    * The custom component to use for the navigation.
    * @example The Nextjs Link component can be used as a custom component.
@@ -47,100 +50,85 @@ export interface IndexCharNavProps {
    *  import Link from 'next/link';
    * <IndexCharNav
    *    component={'link'}
-   *    customLinkComponent={Link}
-   *    alphabet={[]}
-   *    handleLetterClick={(letter) => console.log(letter)}
+   *    Link={Link}
+   *    characters={[]}
+   *    onLinkClick={(char) => console.log(char)}
    *  />
    * ```
    */
-  customLinkComponent?: React.ComponentType<any>;
-  /**
-   *
-   * The URL to navigate to when a letter is clicked
-   * @example `href="/products/alphabet/a"`
-   * @default `href="/a"`
-   *
-   */
-  pathname?: string;
+  Link?: ComponentType<any>;
 }
 
 export const IndexCharNav = forwardRef(
   <T extends HTMLButtonElement | HTMLAnchorElement>(
-    {
-      component,
-      currentLetter,
-      alphabet,
-      handleLetterClick,
-      customLinkComponent,
-      pathname,
-      ...restProps
-    }: PropsWithChildren<IndexCharNavProps>,
+    { component, currentChar, characters, onLinkClick, Link, ...restProps }: PropsWithChildren<IndexCharNavProps>,
     ref: ForwardedRef<T>,
   ) => {
-    const LinkComponent = customLinkComponent ? customLinkComponent : ButtonLink;
-    switch (component) {
-      case 'button':
+    const LinkComponent = Link ? Link : ButtonLink;
+    let links = [];
+
+    if (component === 'button') {
+      links = characters.map(({ char, disabled }) => {
+        const current = currentChar === char;
         return (
-          <div className={clsx('utrecht-index-char-nav')}>
-            {alphabet.map(({ letter, disabled }) => (
-              <Button
-                {...restProps}
-                className={clsx({ 'utrecht-index-char-nav--current-letter': currentLetter === letter })}
-                ref={ref as React.Ref<HTMLButtonElement>}
-                key={letter}
-                appearance={currentLetter === letter ? 'primary-action-button' : 'secondary-action-button'}
-                disabled={disabled}
-                onClick={() => handleLetterClick(letter)}
-                pressed={currentLetter === letter}
-              >
-                {letter}
-              </Button>
-            ))}
-          </div>
-        );
-      case 'link':
-        return (
-          <div className={clsx('utrecht-index-char-nav')}>
-            {alphabet.map(({ letter, disabled }) => {
-              const customLinkComponentStyle = clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
-                'utrecht-index-char-nav--current-letter': currentLetter === letter,
-                'utrecht-button-link--primary-action': currentLetter === letter,
-                'utrecht-button-link--secondary-action': currentLetter !== letter,
-                'utrecht-index-char-nav__link--disabled': disabled,
-                'utrecht-button-link--placeholder': disabled,
-              });
-              return (
-                <LinkComponent
-                  ref={ref as React.Ref<HTMLAnchorElement>}
-                  appearance={
-                    customLinkComponent
-                      ? undefined
-                      : currentLetter === letter
-                      ? 'primary-action-button'
-                      : 'secondary-action-button'
-                  }
-                  href={`${pathname ? `${pathname}/` : ''}${letter.toLocaleLowerCase()}`}
-                  className={clsx(customLinkComponent && customLinkComponentStyle, {
-                    'utrecht-index-char-nav__link--disabled': disabled,
-                    'utrecht-index-char-nav--current-letter': currentLetter === letter,
-                  })}
-                  placeholder={disabled}
-                  tabIndex={disabled ? -1 : 0}
-                  key={letter}
-                  onClick={() => handleLetterClick(letter)}
-                  aria-pressed={currentLetter === letter}
-                  aria-disabled={disabled}
-                  {...restProps}
-                >
-                  {letter}
-                </LinkComponent>
-              );
+          <Button
+            {...restProps}
+            className={clsx({
+              'utrecht-index-char-nav__link--current': current,
             })}
-          </div>
+            ref={ref as Ref<HTMLButtonElement>}
+            key={char}
+            appearance={current ? 'primary-action-button' : 'secondary-action-button'}
+            disabled={disabled}
+            onClick={() => typeof onLinkClick === 'function' && onLinkClick(char)}
+            pressed={current}
+          >
+            {char}
+          </Button>
         );
-      default:
-        return <></>;
+      });
+    } else {
+      links = characters.map(({ char, disabled, href }) => {
+        const current = currentChar === char;
+        const customLinkComponentStyle = clsx(
+          'utrecht-button-link',
+          'utrecht-button-link--html-a',
+          'utrecht-index-char-nav__link',
+          {
+            'utrecht-index-char-nav__link--current': current,
+            'utrecht-button-link--primary-action': current,
+            'utrecht-button-link--secondary-action': !current,
+            'utrecht-index-char-nav__link--disabled': disabled,
+            'utrecht-button-link--placeholder': disabled,
+          },
+        );
+        return (
+          <LinkComponent
+            ref={ref as Ref<HTMLAnchorElement>}
+            appearance={Link ? undefined : current ? 'primary-action-button' : 'secondary-action-button'}
+            href={href}
+            className={clsx(Link && customLinkComponentStyle, 'utrecht-index-char-nav__link', {
+              'utrecht-index-char-nav__link--disabled': disabled,
+              'utrecht-index-char-nav__link--current': current,
+            })}
+            aria-current={current ? 'page' : undefined}
+            aria-disabled={disabled}
+            placeholder={Link ? undefined : disabled}
+            key={char}
+            onClick={() => typeof onLinkClick === 'function' && onLinkClick(char)}
+            {...restProps}
+          >
+            {char}
+          </LinkComponent>
+        );
+      });
     }
+
+    return (
+      <div className="utrecht-index-char-nav" role="group">
+        {links}
+      </div>
+    );
   },
 );
 

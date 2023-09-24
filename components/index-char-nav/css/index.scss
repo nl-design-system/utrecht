@@ -10,10 +10,14 @@
   @include utrecht-index-char-nav;
 }
 
-.utrecht-index-char-nav--current-letter {
-  @include utrecht-index-char-nav--current-letter;
+.utrecht-index-char-nav__link {
+  @include utrecht-index-char-nav__link;
 }
 
-.utrecht-index-char-nav__link--unavailable {
-  @include utrecht-index-char-nav__link--unavailable;
+.utrecht-index-char-nav__link--current {
+  @include utrecht-index-char-nav__link--current;
+}
+
+.utrecht-index-char-nav__link--disabled {
+  @include utrecht-index-char-nav__link--disabled;
 }

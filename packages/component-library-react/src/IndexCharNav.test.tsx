@@ -1,16 +1,7 @@
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { IndexCharNav, IndexCharNavProps } from './IndexCharNav';
+import { IndexCharNav } from './IndexCharNav';
 import '@testing-library/jest-dom';
-
-const createAlphabetArray = (): string[] => {
-  const alphabet = Array.from(
-    { length: 26 },
-    (_, index) => String.fromCharCode(65 + index),
-    // A: 65, B: 66, ..., Z: 90
-  );
-  return alphabet;
-};
 
 const CustomLink = ({ children, ...props }: any) => {
   return <a {...props}>{children}</a>;
@@ -24,233 +15,239 @@ describe('Index character navigation', () => {
   afterEach(() => {
     mockHandleLetterClick.mockClear();
   });
-  const alphabet = createAlphabetArray().map((letter) => ({ letter, disabled: Math.random() < 0.5 }));
 
-  const defaultProps: IndexCharNavProps = {
-    handleLetterClick: mockHandleLetterClick,
-    component: 'link',
-    alphabet,
-  };
+  const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
+  const latinCharacters = latinAlphabet.split(/\s+/g).map((char) => ({
+    char,
+    disabled: Math.random() < 0.5,
+    href: `./${char}/`,
+  }));
 
   it('renders button component letters with correct styles', () => {
-    const { debug } = render(<IndexCharNav {...defaultProps} component="button" />);
+    render(<IndexCharNav characters={latinCharacters} component="button" />);
 
-    const letters = screen.getAllByRole('button');
+    const buttons = screen.getAllByRole('button');
 
-    expect(letters).toHaveLength(26);
-    alphabet.forEach((item, index) => {
-      const element = letters[index];
-      const expectedClass = item.disabled ? 'utrecht-button--disabled' : 'utrecht-button--secondary-action';
-      debug(element);
-      expect(element).toHaveClass(expectedClass);
+    expect(buttons).toHaveLength(26);
+
+    buttons.forEach((button) => {
+      expect(button).toHaveClass('utrecht-button--secondary-action');
     });
   });
-  it('disables the button when disabled is true', () => {
-    const alphabet = [{ letter: 'A', disabled: true }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} component="button" />);
+  it('disables the button when disabled is true', () => {
+    const characters = [{ char: 'A', disabled: true }];
+
+    render(<IndexCharNav characters={characters} component="button" />);
 
     const button = screen.getByRole('button', { name: 'A' });
 
     expect(button).toBeDisabled();
   });
-  it('does not disable the button when disabled is false', () => {
-    const alphabet = [{ letter: 'B', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} component="button" />);
+  it('does not disable the button when disabled is false', () => {
+    const characters = [{ char: 'B', disabled: false }];
+
+    render(<IndexCharNav characters={characters} component="button" />);
 
     const button = screen.getByRole('button', { name: 'B' });
 
     expect(button).not.toBeDisabled();
   });
-  it('calls handleLetterClick when a letter is clicked', async () => {
-    const alphabet = createAlphabetArray().map((letter) => ({
-      letter,
+
+  it('calls onLinkClick when a letter is clicked', async () => {
+    const characters = latinCharacters.map(({ char }) => ({
+      char,
       disabled: false,
     }));
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} component="button" />);
-    const letters = screen.getAllByRole('button');
-    fireEvent.click(letters[0]);
+    render(<IndexCharNav onLinkClick={mockHandleLetterClick} characters={characters} component="button" />);
+    const buttons = screen.getAllByRole('button');
+    fireEvent.click(buttons[0]);
 
     expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
   });
+
   it('supports button ForwardRef in React', () => {
     const ref = createRef<HTMLButtonElement>();
 
-    render(<IndexCharNav {...defaultProps} component="button" ref={ref} />);
+    render(<IndexCharNav characters={latinCharacters} component="button" ref={ref} />);
 
-    const letters = screen.getAllByRole('button');
-    expect(ref.current).toBe(letters[25]);
+    const buttons = screen.getAllByRole('button');
+    expect(ref.current).toBe(buttons[25]);
   });
+
   it('supports link ForwardRef in React', () => {
     const ref = createRef<HTMLButtonElement>();
 
-    render(<IndexCharNav {...defaultProps} ref={ref} />);
+    render(<IndexCharNav characters={latinCharacters} ref={ref} />);
 
-    const letters = screen.getAllByRole('link');
-    expect(ref.current).toBe(letters[25]);
+    const buttons = screen.getAllByRole('link');
+    expect(ref.current).toBe(buttons[25]);
   });
-  it('sets aria-pressed attribute to true when currentLetter matches for the link component', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" />);
+  it('sets aria-current attribute to true when currentChar matches for the link component', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
+
+    render(<IndexCharNav characters={characters} currentChar="A" />);
 
     const link = screen.getByRole('link', { name: 'A' });
 
-    expect(link).toHaveAttribute('aria-pressed', 'true');
+    expect(link).toHaveAttribute('aria-current', 'page');
   });
-  it('sets aria-pressed attribute to true when currentLetter matches for the button', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} component="button" currentLetter="A" />);
+  it('sets aria-pressed attribute to true when currentChar matches for the button', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
+
+    render(<IndexCharNav characters={characters} component="button" currentChar="A" />);
 
     const button = screen.getByRole('button', { name: 'A' });
 
     expect(button).toHaveAttribute('aria-pressed', 'true');
   });
-  it('sets aria-pressed attribute to false when currentLetter does not match for the button', () => {
-    const alphabet = [{ letter: 'B', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} component="button" currentLetter="C" />);
+  it('sets aria-pressed attribute to false when currentChar does not match for the button', () => {
+    const characters = [{ char: 'B', disabled: false, href: './b/' }];
+
+    render(<IndexCharNav characters={characters} component="button" currentChar="C" />);
 
     const button = screen.getByRole('button', { name: 'B' });
 
     expect(button).toHaveAttribute('aria-pressed', 'false');
   });
-  it('sets aria-pressed attribute to false when currentLetter does not match for the link', () => {
-    const alphabet = [{ letter: 'B', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} component="link" currentLetter="C" />);
+  it('sets no aria-current attribute when currentChar does not match for the link', () => {
+    const characters = [{ char: 'B', disabled: false, href: './b/' }];
+
+    render(<IndexCharNav characters={characters} component="link" currentChar="C" />);
 
     const link = screen.getByRole('link', { name: 'B' });
 
-    expect(link).toHaveAttribute('aria-pressed', 'false');
+    expect(link).not.toHaveAttribute('aria-current');
   });
-  it('sets aria-pressed attribute based on currentLetter for the custom link component', () => {
-    const alphabet = [
-      { letter: 'A', disabled: false },
-      { letter: 'B', disabled: false },
+
+  it('sets aria-current attribute based on currentChar for the custom link component', () => {
+    const characters = [
+      { char: 'A', disabled: false, href: './a/' },
+      { char: 'B', disabled: false, href: './b/' },
     ];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" customLinkComponent={CustomLink} />);
+    render(<IndexCharNav characters={characters} currentChar="A" Link={CustomLink} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
     const letterB = screen.getByRole('link', { name: 'B' });
 
-    expect(letterA).toHaveAttribute('aria-pressed', 'true');
-    expect(letterB).toHaveAttribute('aria-pressed', 'false');
+    expect(letterA).toHaveAttribute('aria-current', 'page');
+    expect(letterB).not.toHaveAttribute('aria-current');
   });
-  it('updates aria-pressed attribute for the link component when letter is clicked', async () => {
-    const alphabet = [
-      { letter: 'A', disabled: false },
-      { letter: 'B', disabled: true },
-    ];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="B" />);
-    const letterB = screen.getByRole('link', { name: 'B' });
+  it('Renders utrecht-button-link--primary-action CSS className when currentChar matches for link component', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
 
-    fireEvent.click(letterB);
-    await waitFor(() => {
-      expect(letterB).toHaveAttribute('aria-pressed', 'true');
-    });
-  });
-  it('Renders utrecht-button-link--primary-action CSS className when currentLetter matches for link component', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
-
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" />);
+    render(<IndexCharNav characters={characters} currentChar="A" />);
 
     const link = screen.queryByText('A');
 
     expect(link).toHaveClass('utrecht-button-link--primary-action');
   });
-  it('Renders utrecht-button-link--secondary-action CSS className when currentLetter matches for link component', () => {
-    const alphabet = [{ letter: 'B', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="C" />);
+  it('Renders utrecht-button-link--secondary-action CSS className when currentChar matches for link component', () => {
+    const characters = [{ char: 'B', disabled: false, href: './b/' }];
+
+    render(<IndexCharNav characters={characters} currentChar="C" />);
 
     const link = screen.queryByText('B');
     expect(link).toHaveClass('utrecht-button-link--secondary-action');
   });
-  it('Renders utrecht-index-char-nav--current-letter CSS className when currentLetter matches for link component', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" />);
+  it('Renders utrecht-index-char-nav__link--current CSS className when currentChar matches for link component', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
+
+    render(<IndexCharNav characters={characters} currentChar="A" />);
 
     const link = screen.queryByText('A');
 
-    expect(link).toHaveClass('utrecht-index-char-nav--current-letter');
+    expect(link).toHaveClass('utrecht-index-char-nav__link--current');
   });
-  it('Renders utrecht-button--primary-action CSS className when currentLetter matches for button component', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" component="button" />);
+  it('Renders utrecht-button--primary-action CSS className when currentChar matches for button component', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
+
+    render(<IndexCharNav characters={characters} currentChar="A" component="button" />);
 
     const link = screen.queryByText('A');
 
     expect(link).toHaveClass('utrecht-button--primary-action');
   });
-  it('Renders utrecht-button--secondary-action CSS className when currentLetter matches for button component', () => {
-    const alphabet = [{ letter: 'B', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="C" component="button" />);
+  it('Renders utrecht-button--secondary-action CSS className when currentChar matches for button component', () => {
+    const characters = [{ char: 'B', disabled: false, href: './b/' }];
+
+    render(<IndexCharNav characters={characters} currentChar="C" component="button" />);
 
     const link = screen.queryByText('B');
     expect(link).toHaveClass('utrecht-button--secondary-action');
   });
-  it('Renders utrecht-index-char-nav--current-letter CSS className when currentLetter matches for button component', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" component="button" />);
+  it('Renders utrecht-index-char-nav__link--current CSS className when currentChar matches for button component', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
+
+    render(<IndexCharNav characters={characters} currentChar="A" component="button" />);
 
     const link = screen.queryByText('A');
 
-    expect(link).toHaveClass('utrecht-index-char-nav--current-letter');
+    expect(link).toHaveClass('utrecht-index-char-nav__link--current');
   });
-  it('renders custom link component when customLinkComponent is provided', () => {
-    render(<IndexCharNav {...defaultProps} customLinkComponent={CustomLink} />);
+
+  it('renders custom link component when Link is provided', () => {
+    render(<IndexCharNav characters={latinCharacters} Link={CustomLink} />);
 
     const customLink = screen.getByRole('link', { name: 'A' });
     expect(customLink).toHaveClass('utrecht-button-link--secondary-action');
   });
+
   it('renders custom link component with placeholder appearance when placeholder is true', () => {
-    const alphabet = [{ letter: 'B', disabled: true }];
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" customLinkComponent={CustomLink} />);
+    const characters = [{ char: 'B', disabled: true, href: './b/' }];
+    render(<IndexCharNav characters={characters} currentChar="A" Link={CustomLink} />);
 
     const customLink = screen.getByText('B');
     expect(customLink).toHaveClass('utrecht-button-link--placeholder');
   });
+
   it('renders link component with placeholder appearance when placeholder is true', () => {
-    const alphabet = [{ letter: 'B', disabled: true }];
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} />);
+    const characters = [{ char: 'B', disabled: true, href: './b/' }];
+    render(<IndexCharNav characters={characters} />);
 
     const customLink = screen.getByText('B');
     expect(customLink).toHaveClass('utrecht-button-link--placeholder');
   });
+
   it('applies `utrecht-index-char-nav__link--disabled` class when disabled is true for CustomLink component', () => {
-    const alphabet = [{ letter: 'A', disabled: true }];
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} customLinkComponent={CustomLink} />);
+    const characters = [{ char: 'A', disabled: true, href: './a/' }];
+    render(<IndexCharNav characters={characters} Link={CustomLink} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
 
     expect(letterA).toHaveClass('utrecht-index-char-nav__link--disabled');
   });
+
   it('applies `utrecht-index-char-nav__link--disabled` class when disabled is true for the link component', () => {
-    const alphabet = [{ letter: 'A', disabled: true }];
+    const characters = [{ char: 'A', disabled: true, href: './a/' }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} />);
+    render(<IndexCharNav characters={characters} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
 
     expect(letterA).toHaveClass('utrecht-index-char-nav__link--disabled');
   });
+
   it('sets aria-disabled attribute for the link component based on disabled', () => {
-    const alphabet = [
-      { letter: 'A', disabled: false },
-      { letter: 'B', disabled: true },
+    const characters = [
+      { char: 'A', disabled: false, href: './a/' },
+      { char: 'B', disabled: true, href: './b/' },
     ];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} />);
+    render(<IndexCharNav characters={characters} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
     const letterB = screen.getByRole('link', { name: 'B' });
@@ -258,13 +255,14 @@ describe('Index character navigation', () => {
     expect(letterA).toHaveAttribute('aria-disabled', 'false');
     expect(letterB).toHaveAttribute('aria-disabled', 'true');
   });
+
   it('sets aria-disabled attribute for the custom link component based on disabled', () => {
-    const alphabet = [
-      { letter: 'A', disabled: false },
-      { letter: 'B', disabled: true },
+    const characters = [
+      { char: 'A', disabled: false, href: './a/' },
+      { char: 'B', disabled: true, href: './b/' },
     ];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} customLinkComponent={CustomLink} />);
+    render(<IndexCharNav characters={characters} Link={CustomLink} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
     const letterB = screen.getByRole('link', { name: 'B' });
@@ -272,41 +270,18 @@ describe('Index character navigation', () => {
     expect(letterA).toHaveAttribute('aria-disabled', 'false');
     expect(letterB).toHaveAttribute('aria-disabled', 'true');
   });
-  it('generates correct href based on pathname and letter', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
 
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} currentLetter="A" pathname="/example" />);
+  it('generates link with the correct href', () => {
+    const characters = [{ char: 'A', disabled: false, href: './a/' }];
+
+    render(<IndexCharNav onLinkClick={mockHandleLetterClick} characters={characters} />);
 
     const letterA = screen.getByRole('link', { name: 'A' });
 
-    expect(letterA).toHaveAttribute('href', '/example/a');
+    expect(letterA).toHaveAttribute('href', './a/');
 
     fireEvent.click(letterA);
 
     expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
-  });
-  it('generates a letter-based href by default', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
-
-    render(<IndexCharNav {...defaultProps} alphabet={alphabet} />);
-
-    const letterA = screen.getByRole('link', { name: 'A' });
-
-    expect(letterA).toHaveAttribute('href', 'a');
-
-    fireEvent.click(letterA);
-
-    expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
-  });
-  it('sets tabIndex attribute based on disabled', () => {
-    const alphabet = [{ letter: 'A', disabled: false }];
-
-    const { rerender } = render(<IndexCharNav {...defaultProps} alphabet={alphabet} />);
-    const letterA = screen.getByRole('link', { name: 'A' });
-    expect(letterA).toHaveAttribute('tabIndex', '0');
-    // Re-render with disabled set to false
-    rerender(<IndexCharNav {...defaultProps} alphabet={[{ letter: 'A', disabled: true }]} />);
-
-    expect(letterA).toHaveAttribute('tabIndex', '-1');
   });
 });

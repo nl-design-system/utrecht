@@ -4,8 +4,10 @@
       "gap": { "value": "{utrecht.space.column.sm}" },
       "margin-block-start": { "value": "{utrecht.space.block.lg}" },
       "margin-block-end": { "value": "{utrecht.space.block.md}" },
-      "current-letter": {
-        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight}" }
+      "link": {
+        "current": {
+          "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight}" }
+        }
       }
     }
   }
