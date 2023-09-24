@@ -32,10 +32,10 @@ export interface AlphabetNavProps {
    * The alphabet.
    * @example
    * ```ts
-   *  const alphabet = [{ letter: 'A', availability: true }, { letter: 'B', availability: false }]
+   *  const alphabet = [{ letter: 'A', disabled: true }, { letter: 'B', disabled: false }]
    * ```
    */
-  alphabet: { letter: string; availability: boolean }[];
+  alphabet: { letter: string; disabled: boolean }[];
   /**
    * The component to use for the navigation.
    */
@@ -82,14 +82,14 @@ export const AlphabetNav = forwardRef(
       case 'button':
         return (
           <div className={clsx('utrecht-alphabet-nav')}>
-            {alphabet.map(({ letter, availability }) => (
+            {alphabet.map(({ letter, disabled }) => (
               <Button
                 {...restProps}
                 className={clsx({ 'utrecht-alphabet-nav--current-letter': currentLetter === letter })}
                 ref={ref as React.Ref<HTMLButtonElement>}
                 key={letter}
                 appearance={currentLetter === letter ? 'primary-action-button' : 'secondary-action-button'}
-                disabled={!availability}
+                disabled={disabled}
                 onClick={() => handleLetterClick(letter)}
                 pressed={currentLetter === letter}
               >
@@ -101,13 +101,13 @@ export const AlphabetNav = forwardRef(
       case 'link':
         return (
           <div className={clsx('utrecht-alphabet-nav')}>
-            {alphabet.map(({ letter, availability }) => {
+            {alphabet.map(({ letter, disabled }) => {
               const customLinkComponentStyle = clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
                 'utrecht-alphabet-nav--current-letter': currentLetter === letter,
                 'utrecht-button-link--primary-action': currentLetter === letter,
                 'utrecht-button-link--secondary-action': currentLetter !== letter,
-                'utrecht-alphabet-nav__link--unavailable': !availability,
-                'utrecht-button-link--placeholder': !availability,
+                'utrecht-alphabet-nav__link--disabled': disabled,
+                'utrecht-button-link--placeholder': disabled,
               });
               return (
                 <LinkComponent
@@ -121,15 +121,15 @@ export const AlphabetNav = forwardRef(
                   }
                   href={`${pathname ? `${pathname}/` : ''}${letter.toLocaleLowerCase()}`}
                   className={clsx(customLinkComponent && customLinkComponentStyle, {
-                    'utrecht-alphabet-nav__link--unavailable': !availability,
+                    'utrecht-alphabet-nav__link--disabled': disabled,
                     'utrecht-alphabet-nav--current-letter': currentLetter === letter,
                   })}
-                  placeholder={!availability}
-                  tabIndex={availability ? 0 : -1}
+                  placeholder={disabled}
+                  tabIndex={disabled ? -1 : 0}
                   key={letter}
                   onClick={() => handleLetterClick(letter)}
                   aria-pressed={currentLetter === letter}
-                  aria-disabled={!availability}
+                  aria-disabled={disabled}
                   {...restProps}
                 >
                   {letter}
