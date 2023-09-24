@@ -2,7 +2,7 @@
 
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
-import { IndexCharNav, IndexCharNavProps } from '@utrecht/component-library-react/dist/css-module';
+import { IndexCharNav } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/index-char-nav/README.md?raw';
 import tokensDefinition from '@utrecht/components/index-char-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -10,42 +10,70 @@ import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { designTokenStory } from './util';
 import '@utrecht/components/index-char-nav/css/index.scss';
 
+const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
+const greekAlphabet = 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω';
+const ukranianAlphabet = 'А	Б	В	Г	Ґ	Д	Е	Є	Ж	З	И І	Ї	Й	К	Л	М	Н	О	П	Р	С Т	У	Ф	Х	Ц	Ч	Ш	Щ	Ь	Ю	Я';
+
+const createCharacters = (str: string) =>
+  str
+    .trim()
+    .split(/\s+/g)
+    .map((char) => ({
+      char,
+      href: `./${char.toLocaleLowerCase()}/`,
+    }));
+
+const latinCharacters = createCharacters(latinAlphabet);
+const greekCharacters = createCharacters(greekAlphabet);
+const ukranianCharacters = createCharacters(ukranianAlphabet);
+
+const noAvailability = (characters: any[]) =>
+  characters.map(({ ...props }) => ({
+    ...props,
+    disabled: true,
+  }));
+
+const mixedAvailability = (characters: any[]) =>
+  characters.map(({ ...props }, index) => ({
+    ...props,
+    disabled: index % 3 === 0,
+  }));
+
 const meta = {
   title: 'React Component/Index character navigation',
   id: 'react-index-char-nav',
+  component: IndexCharNav,
   argTypes: {
-    pathname: {
-      control: 'text',
-      description: 'The URL to navigate to when a letter is clicked.',
-      defaultValue: 'letter',
-    },
-    handleLetterClick: {
+    onLinkClick: {
       control: null,
-      description: 'Function to handle letter click and return the navigation URL.',
+      description: 'Function to handle character click and return the navigation URL.',
     },
-    currentLetter: {
+    currentChar: {
       control: 'text',
-      description: 'The current letter.',
+      description: 'The current character.',
     },
-    alphabet: {
-      control: 'object',
-      description: 'The alphabet with availability for each letter.',
+    characters: {
+      control: { type: 'radio' },
+      description: 'The characters with data for each character.',
+      options: {
+        [latinAlphabet]: latinCharacters,
+        [greekAlphabet]: greekCharacters,
+        [ukranianAlphabet]: ukranianCharacters,
+      },
     },
     component: {
       options: ['link', 'button'],
       control: { type: 'radio' },
       description: 'The component to use for the navigation.',
     },
-    customLinkComponent: {
+    Link: {
       control: null, // This control won't be shown as it's a component
       description: 'Custom component to use for navigation.',
     },
   },
-  args: {},
-  render: (props: IndexCharNavProps) => {
-    return <IndexCharNav {...props} />;
+  args: {
+    onLinkClick: (char: string) => char,
   },
-
   tags: ['autodocs'],
   parameters: {
     status: {
@@ -65,16 +93,11 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<IndexCharNavProps>;
+} satisfies Meta<typeof IndexCharNav>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-
-const createAlphabetArray = (): string[] => {
-  const alphabet = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
-  return alphabet;
-};
 
 const DemoLinkComponent = forwardRef((props: PropsWithChildren<any>, ref: ForwardedRef<any>) => {
   return <a ref={ref} {...props} />;
@@ -82,152 +105,113 @@ const DemoLinkComponent = forwardRef((props: PropsWithChildren<any>, ref: Forwar
 
 DemoLinkComponent.displayName = 'DemoLinkComponent';
 
-export const LinkDefault: Story = {
+export const Default: Story = {
   args: {
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: Math.random() < 0.5 })),
+    characters: latinCharacters,
     component: 'link',
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
+  name: 'Link',
 };
 
-export const LinkCurrentLetter: Story = {
+export const LinkCurrent: Story = {
   args: {
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
+    characters: latinCharacters,
     component: 'link',
-    currentLetter: 'A',
+    currentChar: 'A',
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
+  name: 'Current page',
 };
 
-export const LinkUnavailable: Story = {
+export const LinkDisabled: Story = {
   args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: false })),
+    availability: 'none',
+    characters: noAvailability(latinCharacters),
     component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
+  name: 'Disabled link',
 };
 
-export const LinkAvailable: Story = {
+export const LinkMixed: Story = {
   args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
+    availability: 'mixed',
+    characters: mixedAvailability(latinCharacters),
     component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
+  name: 'Links with mixed availability',
+};
+
+export const Button: Story = {
+  args: {
+    characters: latinCharacters,
+    component: 'button',
+    onLinkClick: (char) => char,
   },
+  name: 'Button',
+};
+
+export const ButtonPressed: Story = {
+  args: {
+    currentChar: 'A',
+    characters: latinCharacters,
+    component: 'button',
+  },
+  name: 'Pressed button',
+};
+
+export const ButtonMixed: Story = {
+  args: {
+    availability: 'mixed',
+    characters: mixedAvailability(latinCharacters),
+    component: 'button',
+    onLinkClick: (char) => char,
+  },
+  name: 'Buttons with mixed availability',
+};
+
+export const ButtonDisabled: Story = {
+  args: {
+    availability: 'none',
+    characters: noAvailability(latinCharacters),
+    component: 'button',
+  },
+  name: 'Disabled button',
 };
 
 export const CustomLink: Story = {
   args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: Math.random() < 0.5 })),
+    characters: latinCharacters,
     component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
+    Link: DemoLinkComponent,
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
+  name: 'Custom Link component',
 };
 
-export const CustomLinkCurrentLetter: Story = {
+export const CustomLinkCurrentChar: Story = {
   args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
+    characters: latinCharacters,
     component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
-    currentLetter: 'A',
+    Link: DemoLinkComponent,
+    currentChar: 'A',
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
+  name: 'Custom Link component with current char',
 };
 
-export const CustomLinkAvailable: Story = {
+export const CustomLinkDisabled: Story = {
   args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
+    characters: noAvailability(latinCharacters),
     component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
+    Link: DemoLinkComponent,
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
+  name: 'Custom disabled Link component',
 };
 
-export const CustomLinkUnavailable: Story = {
+export const CustomLinkMixed: Story = {
   args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: false })),
+    characters: mixedAvailability(latinCharacters),
     component: 'link',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-    customLinkComponent: DemoLinkComponent,
+    Link: DemoLinkComponent,
   },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const ButtonDefault: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: Math.random() < 0.5 })),
-    component: 'button',
-    handleLetterClick: (selectedLetter) => selectedLetter,
-  },
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const ButtonCurrentLetter: Story = {
-  args: {
-    currentLetter: 'A',
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
-    component: 'button',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-  },
-};
-
-export const ButtonAvailable: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: true })),
-    component: 'button',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-  },
-};
-
-export const ButtonUnavailable: Story = {
-  args: {
-    alphabet: createAlphabetArray().map((letter: string) => ({ letter, availability: false })),
-    component: 'button',
-    handleLetterClick: (selectedLetter: string) => selectedLetter,
-  },
+  name: 'Custom Link component with mixed availability',
 };
 
 export const DesignTokens = designTokenStory(meta);
