@@ -2,13 +2,13 @@
 
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
-import { AlphabetNav, AlphabetNavProps } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/alphabet-nav/README.md?raw';
-import tokensDefinition from '@utrecht/components/alphabet-nav/tokens.json';
+import { IndexCharNav, IndexCharNavProps } from '@utrecht/component-library-react/dist/css-module';
+import readme from '@utrecht/components/index-char-nav/README.md?raw';
+import tokensDefinition from '@utrecht/components/index-char-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/alphabet-nav/css/index.scss';
+import '@utrecht/components/index-char-nav/css/index.scss';
 
 const createAlphabetArray = (): string[] => {
   const alphabet = Array.from({ length: 26 }, (_, index) => String.fromCharCode(65 + index));
@@ -16,9 +16,9 @@ const createAlphabetArray = (): string[] => {
 };
 
 const meta = {
-  title: 'CSS Component/Alphabet navigation',
-  id: 'css-alphabet-nav',
-  component: AlphabetNav,
+  title: 'CSS Component/Index character navigation',
+  id: 'css-index-char-nav',
+  component: IndexCharNav,
   argTypes: {
     pathname: {
       control: 'text',
@@ -45,7 +45,7 @@ const meta = {
     status: {
       type: 'ALPHA',
     },
-    tokensPrefix: 'utrecht-alphabet-nav',
+    tokensPrefix: 'utrecht-index-char-nav',
     tokens,
     tokensDefinition,
     docs: {
@@ -59,7 +59,7 @@ const meta = {
       ),
     },
   },
-} satisfies Meta<AlphabetNavProps>;
+} satisfies Meta<IndexCharNavProps>;
 
 export default meta;
 
