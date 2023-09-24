@@ -9,7 +9,7 @@ import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Button } from './Button';
 import { ButtonLink } from './ButtonLink';
 
-export interface AlphabetNavProps {
+export interface IndexCharNavProps {
   /**
    *
    * @param letter The letter that was clicked.
@@ -45,7 +45,7 @@ export interface AlphabetNavProps {
    * @example The Nextjs Link component can be used as a custom component.
    * ```tsx
    *  import Link from 'next/link';
-   * <AlphabetNav
+   * <IndexCharNav
    *    component={'link'}
    *    customLinkComponent={Link}
    *    alphabet={[]}
@@ -64,7 +64,7 @@ export interface AlphabetNavProps {
   pathname?: string;
 }
 
-export const AlphabetNav = forwardRef(
+export const IndexCharNav = forwardRef(
   <T extends HTMLButtonElement | HTMLAnchorElement>(
     {
       component,
@@ -74,18 +74,18 @@ export const AlphabetNav = forwardRef(
       customLinkComponent,
       pathname,
       ...restProps
-    }: PropsWithChildren<AlphabetNavProps>,
+    }: PropsWithChildren<IndexCharNavProps>,
     ref: ForwardedRef<T>,
   ) => {
     const LinkComponent = customLinkComponent ? customLinkComponent : ButtonLink;
     switch (component) {
       case 'button':
         return (
-          <div className={clsx('utrecht-alphabet-nav')}>
+          <div className={clsx('utrecht-index-char-nav')}>
             {alphabet.map(({ letter, disabled }) => (
               <Button
                 {...restProps}
-                className={clsx({ 'utrecht-alphabet-nav--current-letter': currentLetter === letter })}
+                className={clsx({ 'utrecht-index-char-nav--current-letter': currentLetter === letter })}
                 ref={ref as React.Ref<HTMLButtonElement>}
                 key={letter}
                 appearance={currentLetter === letter ? 'primary-action-button' : 'secondary-action-button'}
@@ -100,13 +100,13 @@ export const AlphabetNav = forwardRef(
         );
       case 'link':
         return (
-          <div className={clsx('utrecht-alphabet-nav')}>
+          <div className={clsx('utrecht-index-char-nav')}>
             {alphabet.map(({ letter, disabled }) => {
               const customLinkComponentStyle = clsx('utrecht-button-link', 'utrecht-button-link--html-a', {
-                'utrecht-alphabet-nav--current-letter': currentLetter === letter,
+                'utrecht-index-char-nav--current-letter': currentLetter === letter,
                 'utrecht-button-link--primary-action': currentLetter === letter,
                 'utrecht-button-link--secondary-action': currentLetter !== letter,
-                'utrecht-alphabet-nav__link--disabled': disabled,
+                'utrecht-index-char-nav__link--disabled': disabled,
                 'utrecht-button-link--placeholder': disabled,
               });
               return (
@@ -121,8 +121,8 @@ export const AlphabetNav = forwardRef(
                   }
                   href={`${pathname ? `${pathname}/` : ''}${letter.toLocaleLowerCase()}`}
                   className={clsx(customLinkComponent && customLinkComponentStyle, {
-                    'utrecht-alphabet-nav__link--disabled': disabled,
-                    'utrecht-alphabet-nav--current-letter': currentLetter === letter,
+                    'utrecht-index-char-nav__link--disabled': disabled,
+                    'utrecht-index-char-nav--current-letter': currentLetter === letter,
                   })}
                   placeholder={disabled}
                   tabIndex={disabled ? -1 : 0}
@@ -144,4 +144,4 @@ export const AlphabetNav = forwardRef(
   },
 );
 
-AlphabetNav.displayName = 'AlphabetNav';
+IndexCharNav.displayName = 'IndexCharNav';
