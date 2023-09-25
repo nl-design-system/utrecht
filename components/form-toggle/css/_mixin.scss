@@ -30,7 +30,7 @@
   border-style: var(--utrecht-form-toggle-border-style, solid);
   border-width: var(--utrecht-form-toggle-border-width, 1px);
   color: var(--utrecht-form-toggle-color);
-  cursor: var(--utrecht-action-activate-cursor);
+  cursor: var(--utrecht-action-activate-cursor, revert);
   display: flex;
   inline-size: var(--utrecht-form-toggle-width, 6em);
   padding-block-end: var(--utrecht-form-toggle-padding-block-end);
@@ -63,7 +63,7 @@
   border-color: var(--utrecht-form-toggle-disabled-border-color, var(--utrecht-form-toggle-border-color, currentColor));
   border-style: var(--utrecht-form-toggle-disabled-border-style, var(--utrecht-form-toggle-border-style, solid));
   border-width: var(--utrecht-form-toggle-disabled-border-width, var(--utrecht-form-toggle-border-width, 1px));
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 @mixin utrecht-form-toggle--focus {

@@ -102,7 +102,7 @@
     --utrecht-textarea-disabled-color,
     var(--utrecht-form-control-disabled-color, var(--utrecht-textarea-color, var(--utrecht-form-control-color)))
   );
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 @mixin utrecht-textarea--focus {
