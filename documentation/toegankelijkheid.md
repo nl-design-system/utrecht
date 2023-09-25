@@ -22,4 +22,4 @@ Het verschil tussen de achtergrond met focus en de omgeving moet voldoen aan een
 De toegevoegde waarde van deze beslissingen is:
 
 - Bij het gebruik van het toetsenbord om door de links te navigeren is het visueel duidelijker welke link geselecteerd is.
-- We voldoen aan [WCAG eis 2.4.1](https://www.w3.org/TR/WCAG22/#focus-appearance-minimum), zodat we de voldoen aan de [wettelijke bepaling voor een gemeente](https://wcag.nl/wat-is-wcag/wet--en-regelgeving).
+- We voldoen aan [WCAG eis 2.4.1](https://www.w3.org/TR/WCAG22/#focus-appearance-minimum), zodat we de voldoen aan de [wettelijke bepaling voor een gemeente](https://digitoegankelijk.nl/wetgeving/wat-is-verplicht).
