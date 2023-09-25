@@ -57,7 +57,7 @@
     --utrecht-select-disabled-color,
     var(--utrecht-form-control-disabled-color, var(--utrecht-select-color, var(--utrecht-form-control-color)))
   );
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 @mixin utrecht-select--focus {

@@ -48,7 +48,7 @@
 
   border-color: var(--utrecht-checkbox-disabled-border-color, var(--utrecht-checkbox-border-color));
   border-width: var(--utrecht-checkbox-disabled-border-width, var(--utrecht-checkbox-border-width));
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 @mixin utrecht-custom-checkbox--indeterminate {

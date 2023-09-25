@@ -218,7 +218,7 @@
   border-width: var(--_utrecht-button-border-width);
   box-sizing: border-box;
   color: var(--_utrecht-button-color);
-  cursor: var(--utrecht-action-activate-cursor);
+  cursor: var(--utrecht-action-activate-cursor, revert);
   display: inline-flex;
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family, inherit));
@@ -265,18 +265,18 @@
 }
 
 @mixin utrecht-button--submit {
-  cursor: var(--utrecht-action-submit-cursor);
+  cursor: var(--utrecht-action-submit-cursor, revert);
 }
 
 @mixin utrecht-button--busy {
-  cursor: var(--utrecht-action-busy-cursor);
+  cursor: var(--utrecht-action-busy-cursor, wait);
 }
 
 @mixin utrecht-button--disabled {
   background-color: var(--_utrecht-button-disabled-background-color);
   border-color: var(--_utrecht-button-disabled-border-color);
   color: var(--_utrecht-button-disabled-color);
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 @mixin utrecht-button--active {

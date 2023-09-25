@@ -59,7 +59,7 @@
   border-radius: 50%;
   border-style: solid;
   border-width: var(--_utrecht-radio-button-border-width);
-  cursor: var(--utrecht-action-activate-cursor);
+  cursor: var(--utrecht-action-activate-cursor, revert);
   inline-size: var(--utrecht-radio-button-size, 1em);
   margin-inline-end: var(--utrecht-radio-button-margin-inline-end);
   min-block-size: 24px;
@@ -122,7 +122,7 @@
   --_utrecht-radio-button-hover-border-width: var(--_utrecht-radio-button-border-width);
   --_utrecht-radio-button-hover-color: var(--_utrecht-radio-button-color);
 
-  cursor: var(--utrecht-action-disabled-cursor);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
 @mixin utrecht-radio-button--focus-visible {
