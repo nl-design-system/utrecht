@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<!--
+Start this Stencil development page using:
+
+  `pnpm run start`
+
+-->
+<html lang="en" dir="ltr" class="voorbeeld-theme">
+  <head>
+    <meta charset="utf-8" />
+    <title>Web Components example</title>
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
+    <link rel="stylesheet" href="../../../../../rijkshuisstijl-community/packages/design-tokens/dist/index.css" />
+    <link rel="stylesheet" href="../../../../../themes/packages/voorbeeld-design-tokens/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@nl-rvo/assets@1.0.0-alpha.257/fonts/index.css" />
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+
+      .rhc-header-nav {
+        min-block-size: var(--rhc-header-nav-min-block-size);
+        background-color: var(--rhc-header-nav-background-color);
+        color: var(--rhc-header-nav-color);
+      }
+
+      .rhc-page-footer {
+        --utrecht-document-color: currentColor;
+        --utrecht-heading-color: currentColor;
+        --utrecht-link-color: currentColor;
+        --utrecht-link-focus-color: currentColor;
+        --utrecht-link-hover-color: currentColor;
+        --utrecht-link-active-color: currentColor;
+        --utrecht-link-visited-color: currentColor;
+
+        background-color: var(--utrecht-page-footer-background-color);
+        background-image: var(--utrecht-page-footer-background-image);
+        color: var(--utrecht-page-footer-color);
+        font-family: var(--utrecht-document-font-family);
+        font-size: var(--utrecht-document-font-size);
+        max-inline-size: 100%;
+      }
+
+      .rhc-page-footer__content {
+        padding-block-end: var(--utrecht-page-footer-padding-block-end);
+        padding-block-start: var(--utrecht-page-footer-padding-block-start);
+        padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
+        padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+        max-inline-size: var(--utrecht-page-footer-content-max-inline-size);
+        margin-inline-start: auto;
+        margin-inline-end: auto;
+      }
+
+      .chart {
+        --utrecht-color-sample-border-radius: 50%;
+        --utrecht-color-sample-size: 1.9rem;
+      }
+
+      .grid-container {
+        --grid-column-count: 4;
+        --grid-layout-gap: 3.2rem;
+        --grid-item--min-width: 30rem;
+        --gap-count: calc(var(--grid-column-count) - 1);
+        --total-gap-width: calc(var(--gap-count) * var(--grid-layout-gap));
+        --grid-item--max-width: calc((100% - var(--total-gap-width)) / var(--grid-column-count));
+        grid-template-columns: repeat(
+          auto-fill,
+          minmax(max(var(--grid-item--min-width), var(--grid-item--max-width)), 1fr)
+        );
+        grid-gap: var(--grid-layout-gap);
+        display: grid;
+      }
+    </style>
+  </head>
+  <body>
+    <utrecht-surface>
+      <utrecht-document>
+        <utrecht-skip-link href="#main">Naar de inhoud</utrecht-skip-link>
+        <utrecht-page>
+          <utrecht-page-header>
+            <!-- <utrecht-logo></utrecht-logo> -->
+            <utrecht-link href="#">
+              <rhc-logo
+                organisation="Rijksinstituut voor Volksgezondheid en Milieu"
+                subtitle="Ministerie van Volksgezondheid,
+Welzijn en Sport"
+              ></rhc-logo>
+            </utrecht-link>
+            <div class="rhc-header-nav">
+              <utrecht-breadcrumb
+                json='[{"href":"https://example.com/","title":"Home"},{"href":"https://example.com/a/","title":"Wonen en leven"},{"href":"https://example.com/a/b/","title":"Afval"},{"href":"https://example.com/a/b/c/","title":"Kliko&#x27;s","current":true}]'
+              ></utrecht-breadcrumb>
+            </div>
+          </utrecht-page-header>
+          <utrecht-page-content>
+            <div class="grid-container">
+              <div class="grid-container__area">
+                <h2 class="utrecht-heading-3">Wat is digitale toegankelijkheid?</h2>
+                <utrecht-html-content>
+                  <p>
+                    Digitale toegankelijkheid zegt iets over hoe websites en apps zijn gemaakt. Zit een site of app goed
+                    in elkaar? Dan kan elke bezoeker die gebruiken. Ook iemand met een beperking.
+                  </p>
+                  <p>
+                    Soms kan een website of app niet door iedereen goed worden gebruikt. Bijvoorbeeld doordat een
+                    filmpje geen ondertitels heeft. Zo’n site of app is dan niet digitaal toegankelijk. Dat is een
+                    probleem, want in onze samenleving zijn websites en apps heel belangrijk. Je kunt bijna niet meer
+                    zonder. Daarom moeten alle overheidsorganisaties hun websites en apps verplicht digitaal
+                    toegankelijk maken.
+                  </p>
+                </utrecht-html-content>
+              </div>
+              <div class="grid-container__area">
+                <h2 class="utrecht-heading-3">Hoe controleer je de toegankelijkheid?</h2>
+                <utrecht-html-content>
+                  <p>
+                    Wil je weten of een site of app toegankelijk is? Zoek de status dan op in dit dashboard. Elke site
+                    en app heeft status A, B, C, D of E. Alleen sites en apps met status A zijn al helemaal
+                    toegankelijk.
+                  </p>
+
+                  <p>
+                    Overheidsorganisaties moeten bewijzen dat hun site of app echt toegankelijk is. Daarvoor moeten ze
+                    een <a href="https://digitoegankelijk.nl/aan-de-slag/toegankelijkheidsonderzoek">onderzoek</a> laten
+                    doen. Ze voegen het onderzoeksrapport toe aan de toegankelijkheidsverklaring van de site of app. In
+                    het rapport staat hoeveel fouten bij het onderzoek zijn gevonden. Bij status A mogen er geen fouten
+                    meer zijn.
+                  </p>
+                </utrecht-html-content>
+              </div>
+              <div class="grid-container__area">
+                <h2 class="utrecht-heading-3">Wat zegt de wet?</h2>
+                <utrecht-html-content>
+                  <p>
+                    Overheidsorganisaties moeten hun websites en apps toegankelijk maken en houden. En ze moeten voor al
+                    die websites en apps verklaringen maken. Dat staat in het
+                    <a href="https://digitoegankelijk.nl/wetgeving">Besluit digitale toegankelijkheid overheid</a>.
+                  </p>
+                  <p>
+                    Overheidswebsites en -apps hoeven niet in één keer toegankelijk te zijn (status A). In de wet is
+                    status A, B en C toegestaan. Maar er zijn wel voorwaarden voor status B en C. Websites en apps met
+                    die status moeten elk jaar beter worden. En uiteindelijk moeten ze status A krijgen.
+                  </p>
+                </utrecht-html-content>
+              </div>
+            </div>
+            <utrecht-alert type="info">
+              <utrecht-icon slot="icon">
+                <svg
+                  aria-hidden="true"
+                  focusable="false"
+                  width="24"
+                  height="24"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                >
+                  <use xlink:href="#info"></use>
+                </svg>
+              </utrecht-icon>
+              <span slot="heading">Dit dashboard wordt nog aangevuld</span>
+              <utrecht-html-content>
+                <utrecht-paragraph
+                  >Op dit moment bevat dit dashboard naar schatting een derde van alle overheidswebsites en -apps. We
+                  zijn bezig dit verder uit te breiden.
+                  <a href="https://digitoegankelijk.nl/dashboard/hoe-zorg-ik-voor-een-compleet-overzicht"
+                    >Help je mee?</a
+                  ></utrecht-paragraph
+                >
+              </utrecht-html-content>
+            </utrecht-alert>
+            <form action="/search" method="GET">
+              <utrecht-form-field>
+                <utrecht-textbox name="q" type="search"></utrecht-textbox>
+                <utrecht-button type="submit" name="q">Zoeken</utrecht-button>
+                <utrecht-form-field-description
+                  >Bijvoorbeeld: "Belastingdienst", "www.logius.nl" of "Afvalkalender"</utrecht-form-field-description
+                >
+              </utrecht-form-field>
+            </form>
+            <section aria-labelledby="69f1c5a2-8324-4791-8020-6d11d595c3ca">
+              <utrecht-heading-4 id="uuid-69f1c5a2-8324-4791-8020-6d11d595c3ca"
+                >Status van toegankelijkheid</utrecht-heading-4
+              >
+              <figure class="chart">
+                <div
+                  class="data graph-wrapper"
+                  data-graph-target="graphContainer"
+                  data-graph-id-part="main-1"
+                  data-graph-title="Aantal verklaringen van De Nederlandse overheid, gesorteerd op status"
+                  data-graph-label-x="Aantal websites en apps per status."
+                >
+                  <svg
+                    role="img"
+                    aria-labelledby="desc-main-1-0 desc-main-1-1 desc-main-1-2 desc-main-1-3 desc-main-1-4"
+                    width="300"
+                    height="300"
+                  >
+                    <title>Aantal verklaringen van De Nederlandse overheid, gesorteerd op status</title>
+                    <g transform="translate(40, 30)">
+                      <text class="text-size--xsmall" text-anchor="start" x="0" y="0" transform="translate(0, 260)">
+                        <tspan x="0" y="0" dy="0em">Aantal websites en apps per status.</tspan>
+                      </text>
+                      <g fill="none" text-anchor="end">
+                        <path class="domain" stroke="currentColor" d="M0,220V0"></path>
+                        <g class="tick" opacity="1" transform="translate(0,220)">
+                          <line stroke="currentColor" x2="250" class="y-axis-gridline"></line>
+                          <text fill="currentColor" x="-3" dy="0.32em">0</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(0,156.41618497109826)">
+                          <line stroke="currentColor" x2="250" class="y-axis-gridline"></line>
+                          <text fill="currentColor" x="-3" dy="0.32em">500</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(0,92.83236994219652)">
+                          <line stroke="currentColor" x2="250" class="y-axis-gridline"></line>
+                          <text fill="currentColor" x="-3" dy="0.32em">1000</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(0,29.248554913294797)">
+                          <line stroke="currentColor" x2="250" class="y-axis-gridline"></line>
+                          <text fill="currentColor" x="-3" dy="0.32em">1500</text>
+                        </g>
+                      </g>
+                      <g transform="translate(0, 220)" fill="none" text-anchor="middle">
+                        <path class="domain" stroke="currentColor" d="M0,0H250"></path>
+                        <g class="tick" opacity="1" transform="translate(28.846153846153857,0)">
+                          <line y2="6"></line>
+                          <text fill="currentColor" y="9" dy="0.71em" class="text-weight--bold">A</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(76.92307692307693,0)">
+                          <line y2="6"></line>
+                          <text fill="currentColor" y="9" dy="0.71em" class="text-weight--bold">B</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(125,0)">
+                          <line y2="6"></line>
+                          <text fill="currentColor" y="9" dy="0.71em" class="text-weight--bold">C</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(173.0769230769231,0)">
+                          <line y2="6"></line>
+                          <text fill="currentColor" y="9" dy="0.71em" class="text-weight--bold">D</text>
+                        </g>
+                        <g class="tick" opacity="1" transform="translate(221.15384615384613,0)">
+                          <line y2="6"></line>
+                          <text fill="currentColor" y="9" dy="0.71em" class="text-weight--bold">E</text>
+                        </g>
+                      </g>
+                      <g>
+                        <rect
+                          x="9.615384615384627"
+                          y="172.05780346820808"
+                          width="38.46153846153846"
+                          height="47.94219653179192"
+                          style="fill: url('#gradient-main-1-0')"
+                        ></rect>
+                        <desc id="desc-main-1-0">Status A: 377 verklaringen</desc>
+                        <text x="28.846153846153857" y="167.05780346820808" text-anchor="middle">377</text>
+                      </g>
+                      <g>
+                        <rect
+                          x="57.6923076923077"
+                          y="0"
+                          width="38.46153846153846"
+                          height="220"
+                          style="fill: url('#gradient-main-1-1')"
+                        ></rect>
+                        <desc id="desc-main-1-1">Status B: 1730 verklaringen</desc>
+                        <text x="76.92307692307693" y="-5" text-anchor="middle">1730</text>
+                      </g>
+                      <g>
+                        <rect
+                          x="105.76923076923077"
+                          y="82.78612716763006"
+                          width="38.46153846153846"
+                          height="137.21387283236993"
+                          style="fill: url('#gradient-main-1-2')"
+                        ></rect>
+                        <desc id="desc-main-1-2">Status C: 1079 verklaringen</desc>
+                        <text x="125" y="77.78612716763006" text-anchor="middle">1079</text>
+                      </g>
+                      <g>
+                        <rect
+                          x="153.84615384615387"
+                          y="10.682080924855486"
+                          width="38.46153846153846"
+                          height="209.31791907514452"
+                          style="fill: url('#gradient-main-1-3')"
+                        ></rect>
+                        <desc id="desc-main-1-3">Status D: 1646 verklaringen</desc>
+                        <text x="173.0769230769231" y="5.6820809248554855" text-anchor="middle">1646</text>
+                      </g>
+                      <g>
+                        <rect
+                          x="201.9230769230769"
+                          y="160.485549132948"
+                          width="38.46153846153846"
+                          height="59.514450867052005"
+                          style="fill: url('#gradient-main-1-4')"
+                        ></rect>
+                        <desc id="desc-main-1-4">Status E: 468 verklaringen</desc>
+                        <text x="221.15384615384613" y="155.485549132948" text-anchor="middle">468</text>
+                      </g>
+                    </g>
+                    <defs>
+                      <linearGradient id="gradient-main-1-0" x1="0%" y1="0%" x2="100%" y2="00%" spreadMethod="pad">
+                        <stop offset="0%" stop-color="#226022"></stop>
+                        <stop offset="33.33%" stop-color="#297129"></stop>
+                        <stop offset="100%" stop-color="#399439"></stop>
+                      </linearGradient>
+                      <linearGradient id="gradient-main-1-1" x1="0%" y1="0%" x2="100%" y2="00%" spreadMethod="pad">
+                        <stop offset="0%" stop-color="#399439"></stop>
+                        <stop offset="33.33%" stop-color="#44B144"></stop>
+                        <stop offset="100%" stop-color="#4AC04A"></stop>
+                      </linearGradient>
+                      <linearGradient id="gradient-main-1-2" x1="0%" y1="0%" x2="100%" y2="00%" spreadMethod="pad">
+                        <stop offset="0%" stop-color="#FEBD57"></stop>
+                        <stop offset="33.33%" stop-color="#FEC64F"></stop>
+                        <stop offset="100%" stop-color="#FFD816"></stop>
+                      </linearGradient>
+                      <linearGradient id="gradient-main-1-3" x1="0%" y1="0%" x2="100%" y2="00%" spreadMethod="pad">
+                        <stop offset="0%" stop-color="#FD6B39"></stop>
+                        <stop offset="33.33%" stop-color="#FD8A34"></stop>
+                        <stop offset="100%" stop-color="#FEBD57"></stop>
+                      </linearGradient>
+                      <linearGradient id="gradient-main-1-4" x1="0%" y1="0%" x2="100%" y2="00%" spreadMethod="pad">
+                        <stop offset="0%" stop-color="#FC142E"></stop>
+                        <stop offset="33.33%" stop-color="#FC3F2C"></stop>
+                        <stop offset="100%" stop-color="#FD6B39"></stop>
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </div>
+                <figcaption>
+                  <ul class="list--levels text-size--small">
+                    <li class="level level--0">
+                      <utrecht-color-sample color="rgb(57, 148, 57)"></utrecht-color-sample>
+                      <!-- linear-gradient(270deg, rgb(57, 148, 57) -33.89%, rgb(34, 96, 34) 62.11%) -->
+                      <span class="text"> A: Voldoet volledig </span>
+                    </li>
+                    <li class="level level--1">
+                      <utrecht-color-sample color="rgb(74, 192, 74)"></utrecht-color-sample>
+                      <!-- linear-gradient(270deg, rgb(74, 192, 74) -57.89%, rgb(57, 148, 57) 50.11%); -->
+                      <span class="level-indicator level-indicator--1" aria-hidden="true"></span>
+                      <span class="text"> B: Voldoet gedeeltelijk </span>
+                    </li>
+                    <li class="level level--2">
+                      <utrecht-color-sample color="rgb(255, 216, 22)"></utrecht-color-sample>
+                      <!-- linear-gradient(270deg, rgb(255, 216, 22) -50.89%, rgb(254, 189, 87) 50.11%); -->
+                      <span class="level-indicator level-indicator--2" aria-hidden="true"></span>
+                      <span class="text"> C: Eerste maatregelen genomen </span>
+                    </li>
+                    <li class="level level--3">
+                      <utrecht-color-sample color="rgb(254, 189, 87)"></utrecht-color-sample>
+                      <!-- linear-gradient(270deg, rgb(254, 189, 87) -48.89%, rgb(253, 107, 57) 50.11%); -->
+                      <span class="level-indicator level-indicator--3" aria-hidden="true"></span>
+                      <span class="text"> D: Voldoet niet </span>
+                    </li>
+                    <li class="level level--4">
+                      <utrecht-color-sample color="rgb(252, 20, 46)"></utrecht-color-sample>
+                      <!-- linear-gradient(90deg, rgb(252, 20, 46) 49.89%, rgb(253, 107, 57) 127.89%); -->
+                      <span class="level-indicator level-indicator--4" aria-hidden="true"></span>
+                      <span class="text"> E: Geen verklaring (wordt nog aangevuld) </span>
+                    </li>
+                  </ul>
+                  <p>
+                    De <a href="https://digitoegankelijk.nl/wetgeving/status">statussen</a> komen uit de
+                    toegankelijkheidsverklaringen van de organisatie. Bij een E-status heeft een site of app géén
+                    verklaring, maar is wel bekend wie de eigenaar is.
+                  </p>
+                  <p>
+                    Laatst bijgewerkt:
+                    <time datetime="2023-08-24T06:00">24-08-2023 06:00</time>
+                  </p>
+                </figcaption>
+              </figure>
+            </section>
+            <utrecht-button-group>
+              <utrecht-button-link href="https://digitoegankelijk.nl/toegankelijkheid/wat-is-digitale-toegankelijkheid"
+                >Meer over digitale toegankelijkheid</utrecht-button-link
+              >
+            </utrecht-button-group>
+            <form>
+              <utrecht-paragraph
+                ><utrecht-code>utrecht-form-field</utrecht-code> met
+                <utrecht-code>utrecht-textbox</utrecht-code></utrecht-paragraph
+              >
+              <utrecht-form-field>
+                <utrecht-form-label>Voornaam</utrecht-form-label>
+                <utrecht-textbox autocomplete="given-name"></utrecht-textbox>
+              </utrecht-form-field>
+              <utrecht-form-field>
+                <utrecht-form-label>Wachtwoord</utrecht-form-label>
+                <utrecht-textbox type="password" value="0a2df8b6-c45b-4855-8a6b-6592b27c0b8a"></utrecht-textbox>
+              </utrecht-form-field>
+              <utrecht-paragraph>
+                <utrecht-code>utrecht-form-field</utrecht-code> met
+                <utrecht-code>utrecht-textarea</utrecht-code></utrecht-paragraph
+              >
+              <utrecht-form-field>
+                <utrecht-form-label>Bericht</utrecht-form-label>
+                <utrecht-textarea autocomplete="given-name"></utrecht-textarea>
+              </utrecht-form-field>
+            </form>
+            <utrecht-article id="main" style="--utrecht-space-around: 1">
+              <utrecht-color-sample color="#007dad"></utrecht-color-sample>
+              <utrecht-alert>
+                <utrecht-heading-2>Alert: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              </utrecht-alert>
+              <utrecht-alert type="ok">
+                <utrecht-heading-2>Alert OK: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              </utrecht-alert>
+              <utrecht-alert type="error">
+                <utrecht-heading-2>Alert error: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              </utrecht-alert>
+              <utrecht-alert type="info">
+                <utrecht-heading-2>Alert info: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              </utrecht-alert>
+              <utrecht-alert type="warning">
+                <utrecht-heading-2>Alert warning: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              </utrecht-alert>
+              <utrecht-icon>
+                <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group" fill="#000000" fill-rule="nonzero">
+                      <path
+                        d="M7,0 C3.13483333,0 0,3.13425 0,7 C0,10.0928333 2.0055,12.7166667 4.78741667,13.6424167 C5.13683333,13.7071667 5.25,13.4901667 5.25,13.3058333 L5.25,12.0026667 C3.30283333,12.4261667 2.89741667,11.1766667 2.89741667,11.1766667 C2.57891667,10.3675833 2.11983333,10.1523333 2.11983333,10.1523333 C1.48458333,9.71775 2.16825,9.72708333 2.16825,9.72708333 C2.87116667,9.77608333 3.241,10.4486667 3.241,10.4486667 C3.86516667,11.5185 4.87841667,11.2093333 5.278,11.03025 C5.34041667,10.5781667 5.52183333,10.269 5.7225,10.0945833 C4.16791667,9.91666667 2.53341667,9.31641667 2.53341667,6.63483333 C2.53341667,5.87008333 2.807,5.24591667 3.25441667,4.75591667 C3.18208333,4.57916667 2.94233333,3.86691667 3.32266667,2.90325 C3.32266667,2.90325 3.91066667,2.71541667 5.24825,3.62075 C5.8065,3.46558333 6.405,3.388 7,3.38508333 C7.595,3.388 8.19408333,3.46558333 8.7535,3.62075 C10.0899167,2.71541667 10.67675,2.90325 10.67675,2.90325 C11.0576667,3.8675 10.8179167,4.57975 10.7455833,4.75591667 C11.19475,5.24591667 11.466,5.87066667 11.466,6.63483333 C11.466,9.32341667 9.82858333,9.9155 8.26991667,10.08875 C8.52075,10.30575 8.75,10.7315833 8.75,11.3849167 L8.75,13.3058333 C8.75,13.4919167 8.862,13.7106667 9.21725,13.6418333 C11.9968333,12.7149167 14,10.0916667 14,7 C14,3.13425 10.86575,0 7,0 Z"
+                        id="Path"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </utrecht-icon>
+              <utrecht-icon style="--utrecht-icon-size: 128px">
+                <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                    <g id="Group" fill="#000000" fill-rule="nonzero">
+                      <path
+                        d="M7,0 C3.13483333,0 0,3.13425 0,7 C0,10.0928333 2.0055,12.7166667 4.78741667,13.6424167 C5.13683333,13.7071667 5.25,13.4901667 5.25,13.3058333 L5.25,12.0026667 C3.30283333,12.4261667 2.89741667,11.1766667 2.89741667,11.1766667 C2.57891667,10.3675833 2.11983333,10.1523333 2.11983333,10.1523333 C1.48458333,9.71775 2.16825,9.72708333 2.16825,9.72708333 C2.87116667,9.77608333 3.241,10.4486667 3.241,10.4486667 C3.86516667,11.5185 4.87841667,11.2093333 5.278,11.03025 C5.34041667,10.5781667 5.52183333,10.269 5.7225,10.0945833 C4.16791667,9.91666667 2.53341667,9.31641667 2.53341667,6.63483333 C2.53341667,5.87008333 2.807,5.24591667 3.25441667,4.75591667 C3.18208333,4.57916667 2.94233333,3.86691667 3.32266667,2.90325 C3.32266667,2.90325 3.91066667,2.71541667 5.24825,3.62075 C5.8065,3.46558333 6.405,3.388 7,3.38508333 C7.595,3.388 8.19408333,3.46558333 8.7535,3.62075 C10.0899167,2.71541667 10.67675,2.90325 10.67675,2.90325 C11.0576667,3.8675 10.8179167,4.57975 10.7455833,4.75591667 C11.19475,5.24591667 11.466,5.87066667 11.466,6.63483333 C11.466,9.32341667 9.82858333,9.9155 8.26991667,10.08875 C8.52075,10.30575 8.75,10.7315833 8.75,11.3849167 L8.75,13.3058333 C8.75,13.4919167 8.862,13.7106667 9.21725,13.6418333 C11.9968333,12.7149167 14,10.0916667 14,7 C14,3.13425 10.86575,0 7,0 Z"
+                        id="Path"
+                      ></path>
+                    </g>
+                  </g>
+                </svg>
+              </utrecht-icon>
+              <utrecht-heading-group>
+                <utrecht-heading-1>Heading 1: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-1>
+                <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
+              </utrecht-heading-group>
+              <utrecht-heading-2>Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              <utrecht-heading level="2">Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
+              <utrecht-heading-3>Heading 3: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-3>
+              <utrecht-heading level="3">Heading 3: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
+              <utrecht-heading-4>Heading 4: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-4>
+              <utrecht-heading level="4">Heading 4: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
+              <utrecht-heading-5>Heading 5: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-5>
+              <utrecht-heading level="5">Heading 5: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
+              <utrecht-heading-6>Heading 6: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-6>
+              <utrecht-heading level="6">Heading 6: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
+              <utrecht-paragraph lead>Lead paragraph: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
+              <utrecht-paragraph>Paragraph: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
+              <utrecht-separator></utrecht-separator>
+              <utrecht-paragraph
+                ><utrecht-code>Code: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-code></utrecht-paragraph
+              >
+              <utrecht-paragraph>URL: <utrecht-url>https://example.fi/</utrecht-url></utrecht-paragraph>
+              <utrecht-paragraph>Number: <utrecht-number-value>52,000</utrecht-number-value></utrecht-paragraph>
+              <utrecht-paragraph
+                ><utrecht-link href="https://example.com/">Link</utrecht-link>: The Quick Brown Fox Jumps Over The Lazy
+                Dog</utrecht-paragraph
+              >
+              <utrecht-code-block>Code block: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-code-block>
+              <utrecht-separator></utrecht-separator>
+              <utrecht-paragraph>Paragraph: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
+              <utrecht-paragraph
+                ><utrecht-mark>Mark</utrecht-mark>: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph
+              >
+              <utrecht-paragraph
+                ><utrecht-emphasis>Emphasis</utrecht-emphasis>: The Quick Brown Fox Jumps Over The Lazy
+                Dog</utrecht-paragraph
+              >
+              <utrecht-form-field-description
+                >Form field description: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-form-field-description
+              >
+              <utrecht-form-field-description status="invalid"
+                >Form field description invalid: The Quick Brown Fox Jumps Over The Lazy
+                Dog</utrecht-form-field-description
+              >
+              <utrecht-form-field-description status="valid"
+                >Form field description valid: The Quick Brown Fox Jumps Over The Lazy
+                Dog</utrecht-form-field-description
+              >
+              <div>
+                <utrecht-badge-counter>42</utrecht-badge-counter>
+              </div>
+              <div>
+                <utrecht-badge-data>latest</utrecht-badge-data>
+              </div>
+              <div>
+                <utrecht-badge-status>disabled</utrecht-badge-status>
+              </div>
+              <utrecht-button-group>
+                <utrecht-button>foo</utrecht-button>
+              </utrecht-button-group>
+              <utrecht-button-group>
+                <utrecht-button appearance="primary-action-button">foo</utrecht-button>
+              </utrecht-button-group>
+              <utrecht-button-group>
+                <utrecht-button appearance="secondary-action-button">foo</utrecht-button>
+              </utrecht-button-group>
+              <utrecht-button-group>
+                <utrecht-button appearance="subtle-button">foo</utrecht-button>
+              </utrecht-button-group>
+              <section>
+                <utrecht-heading-2>Button link</utrecht-heading-2>
+                <utrecht-button-group>
+                  <utrecht-button-link href="#">foo</utrecht-button-link>
+                  <utrecht-button-link href="#" placeholder>foo</utrecht-button-link>
+                </utrecht-button-group>
+                <utrecht-button-group>
+                  <utrecht-button-link href="#" appearance="primary-action-button">Primary action</utrecht-button-link>
+                  <utrecht-button-link href="#" appearance="primary-action-button" placeholder
+                    >Primary action</utrecht-button-link
+                  >
+                </utrecht-button-group>
+                <utrecht-button-group>
+                  <utrecht-button-link href="#" appearance="secondary-action-button"
+                    >Secondary action</utrecht-button-link
+                  >
+                  <utrecht-button-link href="#" appearance="secondary-action-button" placeholder
+                    >Secondary action</utrecht-button-link
+                  >
+                </utrecht-button-group>
+                <utrecht-button-group>
+                  <utrecht-button-link href="#" appearance="subtle-button">Subtle button</utrecht-button-link>
+                  <utrecht-button-link href="#" appearance="subtle-button" placeholder
+                    >Subtle button</utrecht-button-link
+                  >
+                </utrecht-button-group>
+              </section>
+              <section>
+                <utrecht-heading-2>Link button</utrecht-heading-2>
+                <utrecht-button-group>
+                  <utrecht-link-button>Link button</utrecht-link-button>
+                  <utrecht-link-button disabled>Disabled link button</utrecht-link-button>
+                  <utrecht-link-button pressed>Pressed link button</utrecht-link-button>
+                </utrecht-button-group>
+              </section>
+            </utrecht-article>
+            <utrecht-spotlight-section>
+              <utrecht-paragraph>Paragraph in a spotlight section</utrecht-paragraph>
+            </utrecht-spotlight-section>
+            <utrecht-spotlight-section appearance="info">
+              <utrecht-paragraph>Paragraph in a info spotlight section</utrecht-paragraph>
+            </utrecht-spotlight-section>
+            <utrecht-spotlight-section appearance="warning">
+              <utrecht-paragraph>Paragraph in a warning spotlight section</utrecht-paragraph>
+            </utrecht-spotlight-section>
+            <utrecht-paragraph>
+              <utrecht-iban-data value="GO 00 BACK 1234 6789 9012">GO 00 BACK 1234 6789 9012</utrecht-iban-data>
+            </utrecht-paragraph>
+            <utrecht-paragraph>
+              <utrecht-url-value>https://example.fi/</utrecht-url-value>
+            </utrecht-paragraph>
+            <utrecht-paragraph> Hello <utrecht-mark>world</utrecht-mark> </utrecht-paragraph>
+            <utrecht-badge-list>
+              <utrecht-badge-data>foo</utrecht-badge-data>
+              <utrecht-badge-data>bar</utrecht-badge-data>
+              <utrecht-badge-data>quux</utrecht-badge-data>
+            </utrecht-badge-list>
+          </utrecht-page-content>
+          <div class="rhc-page-footer">
+            <div class="rhc-page-footer__content">
+              <p>footer</p>
+            </div>
+          </div>
+        </utrecht-page>
+      </utrecht-document>
+    </utrecht-surface>
+    <script type="module">
+      import { defineCustomElements } from "../loader/index.js";
+      defineCustomElements();
+    </script>
+    <script type="module">
+      import { defineCustomElements } from "../../../../../rijkshuisstijl-community-web-components/packages/web-components-stencil/loader/index.js";
+      defineCustomElements();
+    </script>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <symbol id="check" viewBox="0 0 11.55 11.49">
+        <title>check</title>
+        <path
+          d="M11.18.18A.9.9 0 0 0 10 .3L4.68 6.22 1.5 3.47a.91.91 0 0 0-1.18 0 .89.89 0 0 0-.19 1.14L4 11.05a.92.92 0 0 0 .78.44.91.91 0 0 0 .77-.44l5.89-9.68a.9.9 0 0 0-.26-1.19Z"
+        ></path>
+      </symbol>
+      <symbol id="chevron-down" viewBox="0 0 11.98 7.26">
+        <title>chevron-down</title>
+        <path
+          d="M.49.49c.5-.5 1.1-.7 1.6-.1L6 4.19 9.89.29c.5-.5 1.1-.3 1.6.2s.7 1.1.2 1.6l-4.8 4.8a1.27 1.27 0 0 1-1.8 0l-4.8-4.8C-.21 1.69 0 1 .49.49Z"
+        ></path>
+      </symbol>
+      <symbol id="chevron" viewBox="0 0 7.26 11.98">
+        <title>chevron</title>
+        <path
+          d="M.49 11.49c-.5-.5-.7-1.1-.1-1.6l3.8-3.9-3.9-3.9c-.5-.5-.3-1.1.2-1.6s1.1-.7 1.6-.2l4.8 4.8a1.27 1.27 0 0 1 0 1.8l-4.8 4.8c-.4.5-1.1.3-1.6-.2Z"
+        ></path>
+      </symbol>
+      <symbol fill="none" id="compliant" viewBox="0 0 30 30">
+        <title>compliant</title>
+        <circle cx="15" cy="15" r="15" fill="#39870C"></circle>
+        <path
+          d="M21.244 8.538a1.044 1.044 0 0 0-1.4.143l-6.11 6.838-3.674-3.183a1.042 1.042 0 0 0-1.579 1.325l4.45 7.427c.188.314.527.506.892.507h.004c.363 0 .702-.19.891-.501l6.796-11.176c.28-.46.163-1.059-.27-1.38Z"
+          fill="#fff"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 16 16" id="copy" viewBox="0 0 16 16">
+        <title>copy</title>
+        <path
+          d="M14.7 1.3C13-.4 10.3-.4 8.6 1.3l-2 2C5 4.9 5 7.6 6.7 9.3c.6.6 1.2.9 1.9 1.1-.1.4-.3.8-.6 1.1l-2 2c-1 1-2.5 1-3.5 0s-1-2.5 0-3.5l2-2c.1-.1.3-.2.4-.3-.2-.7-.2-1.3-.1-2-.6.2-1.1.5-1.6 1l-2 2c-1.7 1.7-1.7 4.4 0 6.1.8.8 1.9 1.3 3 1.3s2.2-.4 3-1.3l2-2c1-1 1.4-2.4 1.2-3.7-.1-.9-.6-1.7-1.2-2.4-.3-.4-.8-.7-1.3-.9-.2.4-.2 1.1-.1 1.5.1.4.2.5.2.6V8c-.6-.6-.7-1.3-.7-1.9 0-.6.3-1.2.7-1.6l2-2c.5-.5 1.1-.7 1.7-.7.6 0 1.3.2 1.7.7 1 1 1 2.5 0 3.5l-2 2c-.1.1-.3.2-.4.3.2.6.2 1.3.2 2 .6-.2 1.1-.5 1.6-1l2-2c1.6-1.6 1.6-4.4-.1-6z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+      <symbol fill="none" id="cross" viewBox="0 0 16 16">
+        <title>cross</title>
+        <path
+          d="m12.097 2.275-4.152 3.66-4.15-3.66c-.438-.367-1.093-.367-1.458 0a1.137 1.137 0 0 0-.072 1.537l3.714 4.174-3.642 4.174a1.219 1.219 0 0 0 0 1.537c.437.366 1.093.44 1.53 0l4.151-3.66 4.151 3.66a1.202 1.202 0 0 0 1.53 0c.364-.439.437-1.098 0-1.537L9.985 7.986l3.641-4.174a1.219 1.219 0 0 0 0-1.537 1.202 1.202 0 0 0-1.53 0Z"
+          fill="#282828"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 20 18" id="cup" viewBox="0 0 20 18">
+        <title>cup</title>
+        <path
+          d="M13.4 9.6c1.6 0 3.3-.6 4.4-1.8C20.2 5.4 20 2 20 1.4s-.3-.6-.6-.6h-4V0H6.8v4.7c0 3.2.8 3.9.8 3.9-.1.1-.2.1-.3 0-.4-.4-1.4-1.5-1.4-3.9V0H4.7v.8h-4c-.4 0-.7 0-.7.6s-.2 4 2.2 6.4C3.4 9 5 9.6 6.7 9.6c.5.6 1.3 1 2.1 1.1 0 0 .4 2-1.1 2.6s-3 1-3 1.5V18h10.6v-3.2c0-.5-1.5-.9-3-1.5s-1.1-2.6-1.1-2.6c.9-.1 1.6-.5 2.2-1.1zm2-5.2V1.9h3c.3 0 .5 0 .4.4C18.6 4 18 5.7 16.9 7c-.7.7-1.6 1.2-2.6 1.3.7-1.2 1.1-2.5 1.1-3.9zM3.1 7C2 5.7 1.4 4 1.3 2.3c0-.4.1-.4.4-.4h2.9v2.5c0 1.4.3 2.7 1 3.9-.9-.2-1.8-.6-2.5-1.3zm11 8.6v1.2H5.8v-1.3l8.3.1z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 12.8 16" id="delete" viewBox="0 0 12.8 16">
+        <title>delete</title>
+        <path
+          d="M9.6 1.6H12c.4 0 .8.4.8.8V4H0V2.4c0-.4.4-.8.8-.8h2.4V.8c0-.4.4-.8.8-.8h4.8c.4 0 .8.4.8.8v.8zM1.6 16c-.4 0-.8-.4-.8-.8V4.8H12v10.4c0 .4-.4.8-.8.8H1.6zm8.8-2.4V6.4H8.8v8l1.6-.8zM7.2 6.4H5.6v8l1.6-.8V6.4zM4 6.4H2.4v8l1.6-.8V6.4z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 12 13.3" id="download" viewBox="0 0 12 13.3">
+        <title>download</title>
+        <path
+          d="M6 10c-.3 0-.5-.1-.7-.3L1.4 4.8c-.2-.3-.2-.8.1-1.1.3-.3.8-.4 1.2-.2l2 1.3V.9C4.7.2 5.3 0 6 0c.7 0 1.3.2 1.3.9v3.8l2-1.3c.4-.2.9-.2 1.2.2.3.3.3.8 0 1.2L6.7 9.6c-.2.3-.4.4-.7.4zm4 1.3V10h2v2.7c0 .4-.3.7-.7.7H.7c-.4-.1-.7-.4-.7-.7V10h2v1.3h8z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+      <symbol id="error" viewBox="0 0 91.88 83.65">
+        <defs>
+          <style>
+            .cls-2 {
+              fill: #fff;
+            }
+            .st0 {
+              fill: #226022;
+            }
+          </style>
+        </defs>
+        <title>icon-error</title>
+        <path
+          d="M2.16 70.48 38.73 6.63a13.17 13.17 0 0 0 .64-1.24c1-2.24 5.93-11.19 13.33.48C61.07 19.08 90.07 70.3 90.07 70.3s6.76 13.21-5.8 13.21H9.3c-.57 0-1.13 0-1.69.08-2.11.21-8.7.25-7.45-7.59a15.92 15.92 0 0 1 2-5.52Z"
+          style="fill: #d52b1e"
+        ></path>
+        <path class="cls-2" d="M40.63 52.49V24.46l10.63-1.61v29.64H40.63z"></path>
+        <rect class="cls-2" x="38.91" y="58.95" width="14.06" height="14.06" rx="7.03"></rect>
+      </symbol>
+      <symbol style="enable-background: new 0 0 24 24" id="external" viewBox="0 0 24 24">
+        <title>external</title>
+        <path style="fill: none" d="M0 0h24v24H0z"></path>
+        <path
+          d="M16 20H4V8h6V5H2.1C1.5 5 1 5.5 1 6.1v15.8c0 .6.5 1.1 1.1 1.1h15.8c.6 0 1.1-.5 1.1-1.1V14h-3v6zm5.6-17.6c-.3-.3-.6-.4-1-.3l-8.4.9c-.6.1-1.1.6-1.1 1.2s.5 1.1 1.1 1.2l3.7.3-4.7 4.7c-.8.8-.4 1.6.2 2.2.6.6 1.4 1 2.2.2l4.7-4.7.3 3.7c.1.6.6 1.1 1.2 1.1s1.1-.5 1.2-1.1l.9-8.4c.1-.4-.1-.7-.3-1z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 8.6 16.1" id="facebook" viewBox="0 0 8.6 16.1">
+        <title>facebook</title>
+        <path
+          d="M2.5 9v7h3.1V9H8l.4-2.9H5.7V4.2c0-.8.4-1.6 1.6-1.6h1.3V.2S7.5 0 6.4 0C4 0 2.5 1.4 2.5 3.9v2.2H0V9h2.5z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 21 21" id="info" viewBox="0 0 21 21">
+        <title>info</title>
+        <path
+          d="M20.5 2.3c-.2-1-.9-1.7-1.8-1.8C16 0 11.4 0 10.5 0S5 0 2.3.5C1.3.6.6 1.3.5 2.3 0 5 0 9.6 0 10.5s0 5.5.5 8.2c.2 1 .9 1.7 1.8 1.8 2.7.5 7.3.5 8.2.5.9 0 5.5 0 8.2-.5 1-.2 1.7-.9 1.8-1.8.5-2.7.5-7.3.5-8.2 0-2.7 0-5.5-.5-8.2z"
+        ></path>
+        <path
+          d="M9.5 4.5c-.2.3-.3.6-.3.9 0 .3.1.6.3.9.2.2.5.3.9.3s.7-.1.9-.4c.2-.2.3-.5.3-.9s-.1-.7-.3-.9c-.2-.2-.5-.4-.9-.4s-.6.3-.9.5zm2.1 12.3v-9l-2.2.1v8.9h2.2z"
+          style="fill-rule: evenodd; clip-rule: evenodd; fill: #fff"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 16 15.3" id="linkedin" viewBox="0 0 16 15.3">
+        <title>linkedin</title>
+        <path
+          d="M1.9 3.6C.7 3.6 0 2.8 0 1.8S.8 0 1.9 0c1.2 0 1.9.8 1.9 1.8.1 1-.7 1.8-1.9 1.8zm1.7 11.7H.2V5h3.4v10.3zm9 0H16V9.4c0-3.2-1.7-4.6-3.9-4.6-1.8 0-2.6 1-3.1 1.7V5H5.5v10.3H9V9.5c0-.3 0-.6.1-.8.2-.6.8-1.3 1.8-1.3 1.2 0 1.7.9 1.7 2.3v5.6z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+      <symbol id="log-out" viewBox="0 0 20 20">
+        <title>log-out</title>
+        <path
+          d="M7 20H3a3 3 0 0 1-3-3V3a3 3 0 0 1 3-3h4a1 1 0 0 1 0 2H3a1.05 1.05 0 0 0-.71.29A1.05 1.05 0 0 0 2 3v14a1.05 1.05 0 0 0 .29.71A1.05 1.05 0 0 0 3 18h4a1 1 0 0 1 0 2Zm7-4a1 1 0 0 1-.71-.29 1 1 0 0 1 0-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 0 1.42l-5 5A1 1 0 0 1 14 16Z"
+        ></path>
+        <path d="M19 11H7a1 1 0 0 1 0-2h12a1 1 0 0 1 0 2Z"></path>
+      </symbol>
+      <symbol id="logo-large" viewBox="0 0 213.14 72">
+        <title>logo-large</title>
+        <path d="M36 0H0v72h36Z" style="fill: #154273"></path>
+        <path
+          d="M18.64 55.7H18V54h.63Zm2.82-7.7h-.62v-1.7h.62Zm-11.6-3s-.37 0-.37.07.15 0 .37.07c.5.09.7.34 1.05.34a.5.5 0 0 0 .52-.68c0-.08-.06-.06-.08 0a.55.55 0 0 1-.57.33c-.33 0-.4-.12-.92-.12Zm-3.45 1.78c.06.08.65.84-.26 1.14 0 0-.05 0 0 .08a.78.78 0 0 0 1-.24A1 1 0 0 1 7 49a1.42 1.42 0 0 0 .88.48 1.22 1.22 0 0 0 .55-.57 1 1 0 0 1 0 .66c1.37.12 1.85-1 2.91-.77a2.18 2.18 0 0 0-1.72-2.16c-1.31-.26-1-.79-1-.79a1.43 1.43 0 0 1 .86.22.31.31 0 0 0-.05-.34.74.74 0 0 0 .08-.29c-.61 0-.77-.14-.77-.14-.1-.36.16-.88 1.08-.33a.66.66 0 0 0 .2-.52.23.23 0 0 0 .12-.18c0-.15-.73-.57-.92-.62 0-.22-.33-.54-1.2-.42-.41.05-.7-.06-.56-.3 0 0 0-.05-.09 0a.32.32 0 0 0 .13.54.75.75 0 0 1 .5.53c0 .09-.09.1-.11 0a1.1 1.1 0 0 0-1.64-.46.71.71 0 0 0 .62.6.31.31 0 0 0 .29-.29c0-.08 0-.07.07 0a.49.49 0 0 1-.79.43 1.4 1.4 0 0 0-.26 1.44c.09.43-.12.85-.52.66a.49.49 0 0 0 .78.34Zm2.94-2.69c-.25.28-.65.21-.76-.25.51-.03.74.02.76.25Zm15.88 1.07a.54.54 0 0 1-.56-.33s-.06-.07-.08 0a.5.5 0 0 0 .51.68c.36 0 .55-.25 1.06-.34.22 0 .37 0 .37-.07s-.32-.06-.37-.06c-.52 0-.59.11-.93.11Zm5.16 1.27h-.05c-.39.2-.6-.22-.51-.66a1.41 1.41 0 0 0-.26-1.43.49.49 0 0 1-.79-.43c0-.07.07-.08.07 0a.3.3 0 0 0 .28.29.72.72 0 0 0 .63-.6 1.1 1.1 0 0 0-1.64.47c0 .08-.12.07-.11 0a.76.76 0 0 1 .42-.66c.36-.18.23-.44.13-.54s-.12 0-.09 0c.14.24-.15.35-.56.3-.86-.12-1.14.2-1.19.42-.19 0-.92.46-.92.61a.24.24 0 0 0 .11.19.75.75 0 0 0 .21.52c.91-.56 1.17 0 1.08.33a1.5 1.5 0 0 1-.79.14.87.87 0 0 0 .08.28.32.32 0 0 0 0 .34 1.39 1.39 0 0 1 .86-.21s.36.53-.95.78a2.19 2.19 0 0 0-1.72 2.16s0 0 .05 0c1-.19 1.54.9 2.91.77a1 1 0 0 1 0-.66 1.2 1.2 0 0 0 .55.58A1.42 1.42 0 0 0 29 49a1 1 0 0 1-.18-1.21.77.77 0 0 0 1 .24c.06 0 0-.06 0-.08-.9-.29-.31-1.06-.25-1.14a.49.49 0 0 0 .77-.34Zm-3-2.58c-.1.46-.5.52-.75.24.05-.22.26-.27.78-.24Zm-9.65-7.69a.51.51 0 0 0 .09.27c.08.12.06.18 0 .22s-.1.05-.22 0a.51.51 0 0 0-.27-.09.25.25 0 1 0 0 .48.51.51 0 0 0 .27-.09c.12-.08.18-.06.22 0a3.25 3.25 0 0 1-.07.75.58.58 0 0 0-.48.48c0 .4.42.62.67.76.24-.13.67-.36.67-.76a.58.58 0 0 0-.48-.48 2.72 2.72 0 0 1-.07-.75s.1 0 .22 0a.48.48 0 0 0 .27.09.24.24 0 1 0 0-.48.48.48 0 0 0-.27.09c-.12.08-.18.06-.22 0s-.05-.1 0-.22a.51.51 0 0 0 .09-.27.25.25 0 1 0-.48 0Zm.26 2.92a.49.49 0 0 0 0 1 .49.49 0 0 0 0-1Zm0 4.62a10.39 10.39 0 0 1 3 .36c0-1 0-1.51.56-1.43-.3-.81 1-1.14 1-2.19 0-.7-.5-.78-.64-.78-.43 0-.37.28-.74.28h-.09s.1.33.27.33.23-.23.41-.23.18.06.18.3a2.23 2.23 0 0 1-.65 1.34.4.4 0 0 0-.33-.18.44.44 0 0 0-.38.48.51.51 0 0 0 .05.25.8.8 0 0 1-.3.1.36.36 0 0 1-.39-.41c0-.77 1-1.45 1-2.43a.9.9 0 0 0-1-.93c-.7 0-.57.64-1.17.64h-.05s.1.4.41.4.43-.58.73-.58c.11 0 .28.07.28.46a3.76 3.76 0 0 1-.37 1.27.45.45 0 0 0-.31-.14.5.5 0 0 0-.44.55.68.68 0 0 0 .2.49.72.72 0 0 1-.52.35c-.41 0-.59-.24-.59-.5s.51-.38.51-.81a.42.42 0 0 0-.38-.46.53.53 0 0 0-.32.13.54.54 0 0 0-.33-.13.41.41 0 0 0-.37.46c0 .43.51.54.51.81s-.19.5-.6.5c-.21 0-.36-.16-.51-.35a.7.7 0 0 0 .2-.49.5.5 0 0 0-.45-.55.43.43 0 0 0-.3.14 3.59 3.59 0 0 1-.37-1.27c0-.39.17-.46.28-.46.29 0 .38.58.72.58s.42-.35.42-.4 0 0-.05 0c-.61 0-.48-.64-1.17-.64a.91.91 0 0 0-1 .93c0 1 1 1.66 1 2.43a.37.37 0 0 1-.4.41.71.71 0 0 1-.29-.1.53.53 0 0 0 .05-.25.44.44 0 0 0-.39-.48.4.4 0 0 0-.32.18 2.21 2.21 0 0 1-.64-1.34c0-.23.1-.3.18-.3s.17.23.4.23.27-.21.27-.33-.05 0-.09 0c-.37 0-.3-.28-.73-.28-.15 0-.64.08-.64.78 0 1.06 1.31 1.38 1 2.19.56-.08.55.46.56 1.43a10.48 10.48 0 0 1 3-.36Zm-3.52 1.43c-.53.11-.9.22-1.07.27a.47.47 0 0 1 .31-.49c-.47-.31-.71.28-.72.3-.16 0-.41 0-.41.26 0 .67-1.53 1-1.88 1.09a1.81 1.81 0 0 1 .88 1 4 4 0 0 1 1.1-.85c.13 0 .17.15.18.24.23-.35.12-.43.1-.54a.3.3 0 0 1 .35-.35v4.46h-.18c-.08 0-.73-.54-1.47-1s-1.15-.21-2 .25a2.66 2.66 0 0 1-2.24.06c-1 .68-1.29 2.67-1.29 2.67a2.27 2.27 0 0 1-.8.16c-.74 0-.87-.44-.87-.7C4.53 50.8 6 50.31 6 49.2a1.34 1.34 0 0 0-1.48-1.37H3.25a.72.72 0 0 1-.7-.5c0-.06-.08 0-.06 0s-.06.23-.06.52a.68.68 0 0 0 .77.72 1.05 1.05 0 0 0 .5-.11v.05a.87.87 0 0 0-.14.83s.05 0 .05 0a1.24 1.24 0 0 1 1.17-.93.68.68 0 0 1 .73.78C5.56 50.12 4 50.78 4 52s1.34 1.54 2.11 1.34c0 1.27-1.49 1.7-1.54.8 0-.05 0-.05-.06 0-.18.44-.1.84.46 1v.06c-.56.35-.26 1.75-.23 2.16 0 .59-.54.52-.59.5s-.06 0 0 0A.63.63 0 0 0 5 58c.39.12.16.45-.11.62v.06s.66.06.77-.43a.62.62 0 0 0 .74.16c.12 0 .68-.26.73.37h.06a.51.51 0 0 0-.29-.9.42.42 0 0 1 .67.08c0-.68-.52-.74-.88-.44 0-.07-.14-.46.4-.44v-.05a.52.52 0 0 0-.85.06c-.19.23-.66.13-.7.13.14-2.37 2.23-1.52 2.52-2.68 0-.05 0 0 0 0 .08.28.79.32.92-.23 0 0 0-.06 0 0-.61.61-2-1.28-.11-2.81a2.68 2.68 0 0 1 3.54-.15.22.22 0 0 1-.16.27s0 0 0 .05a.4.4 0 0 0 .46-.1c.34.24 0 .54-.08.62s0 0 0 .05a.56.56 0 0 0 .59-.45V53c0 1.91 2.2 2.18 4.63 3.8 2.43-1.63 4.63-1.89 4.63-3.8v-1.32h.05a.55.55 0 0 0 .58.45s0 0 0-.05-.43-.38-.09-.62a.4.4 0 0 0 .46.1c.05 0 0 0 0-.05a.22.22 0 0 1-.15-.27 2.67 2.67 0 0 1 3.54.15c1.85 1.53.49 3.41-.11 2.81.13.55.83.51.91.23.29 1.16 2.37.31 2.52 2.68 0 0-.51.1-.69-.13a.52.52 0 0 0-.85-.06s0 .05 0 .05c.54 0 .42.37.4.44-.36-.3-.91-.24-.87.44 0 .05 0 .05 0 0a.42.42 0 0 1 .67-.08.52.52 0 0 0-.29.9s0 .05.05 0c.06-.63.62-.43.73-.37a.64.64 0 0 0 .75-.16c.1.49.71.44.77.43s0 0 0-.06c-.26-.17-.51-.5-.12-.62a.64.64 0 0 0 .94-.05s0-.06 0 0-.64.09-.6-.5c0-.41.33-1.81-.23-2.16 0 0-.05 0 0-.06.56-.12.63-.52.45-1 0-.06-.06-.05-.06 0 0 .9-1.49.47-1.54-.8.99.26 2.3-.02 2.3-1.32s-1.59-1.91-1.59-2.82a.69.69 0 0 1 .73-.78 1.24 1.24 0 0 1 1.18.93.88.88 0 0 0-.15-.83s0-.07 0-.05a1.1 1.1 0 0 0 .51.11.67.67 0 0 0 .76-.72c0-.29-.1-.43-.06-.52s0-.07 0 0a.73.73 0 0 1-.71.5h-1.15A1.34 1.34 0 0 0 30 49.2c0 1.11 1.42 1.6 1.42 2.73 0 .26-.14.7-.86.7a2.23 2.23 0 0 1-.81-.16s-.32-2-1.29-2.67a2.65 2.65 0 0 1-2.24-.06c-.85-.46-1.25-.77-2-.25s-1.39 1.07-1.47 1h-.18v-4.44a.3.3 0 0 1 .35.35c0 .1-.13.19.1.54h.05c.05 0 .06-.24.17-.24a3.86 3.86 0 0 1 1.1.85 1.83 1.83 0 0 1 .89-1c-.35-.06-1.88-.42-1.88-1.09 0-.23-.25-.28-.42-.26 0 0-.26-.61-.71-.3a.45.45 0 0 1 .3.49 16.86 16.86 0 0 0-4.52-.66 15.63 15.63 0 0 0-2.89.28v1.54h-.63v-1.42M10.31 61a.39.39 0 0 1-.27-.4v-1a7 7 0 0 0-2.53-.38c-1.24 0-1.63.28-1.65.38l-.33 1.83S6 61 7.84 61.08c2.17.13 4.42 1.42 4.42.05v-.81c-1.7 0-1.95.54-1.95.62Zm13.38-.62v.81c0 1.36 2.26.08 4.43-.06 1.81-.11 2.31.35 2.31.35l-.33-1.88c0-.1-.41-.38-1.66-.38a7.13 7.13 0 0 0-2.52.38v1a.41.41 0 0 1-.27.4c0-.08-.26-.62-2-.62ZM18 59.5c3.5 0 7.06.18 7.52.71h.05v-1.89c0-.54-3.67-.86-7.58-.86s-7.58.32-7.58.86v1.86s0 .07 0 0c.47-.52 4-.71 7.52-.71Zm-3.12-8.75-.36-.1v.05l-.41-.18h.37l-.31-.31.4.15-.27-.39.39.26-.19-.47.36.35-.1-.46.27.38v-.43s.12.26.17.39l.14-.33V50h-.06l-.07.53c.53-.12 1.19-1 1.69-1s.82.71 1.93.35a3.39 3.39 0 0 1 .49 1.27c.43.41 1 .27 1-.15 0-.58-.62-.69-.62-1.29a.65.65 0 0 1 .69-.66c.28 0 .67.12.9.12a.35.35 0 0 0 .36-.28c0-.06.1 0 .1 0v.26c0 .38-.56.43-.62.38s.06.3 0 .44a.83.83 0 0 0-.66-.61.3.3 0 0 0-.31.3c0 .34.69.66.69 1.36s-.73.92-1.47.73c0 .7 1.07 1.11 1.09.61.15.22.08.38-.12.46.18.08.22.45.27.67s.43.15.45.14a.37.37 0 0 1-.48.21c-.18.13 0 .25.2.3s-.38.13-.51-.09a.34.34 0 0 1-.36.22c-.14 0-.22.14-.19.33a.29.29 0 0 1 0-.53.23.23 0 0 0-.33.16c-.14-.38.16-.49.38-.39a.35.35 0 0 0-.42-.18s.18-.28.45-.11.37 0 .39-.05c-.47-.93-1.37-.15-1.58-.88s-.45.17-.52-.13.18.11.35-.12a1 1 0 0 0 .12-.51 1.6 1.6 0 0 0-1.44-1.51 2.87 2.87 0 0 0-1.6.54L16 51a.63.63 0 0 1-.81.55l.07-.47a.56.56 0 0 0-.31.2.38.38 0 0 1 .21-.44.38.38 0 0 0-.34.19.3.3 0 0 1 .05-.29Zm1.2 3.25c-.16.2-.3 0-.51 0a.21.21 0 0 0-.22.23.28.28 0 0 1 .17-.49.24.24 0 0 0-.37 0c0-.38.29-.41.49-.24 0-.14-.06-.24-.22-.24a.26.26 0 0 1 .19-.1c.21 0 .24.27.37.27a1 1 0 0 0 .52-.3 2.64 2.64 0 0 1-.16-.87s-.34 0-.34-.26.29 0 .37-.12.62-.86 1.3-.86a1 1 0 0 1 .5.2c-.23.29 0 .56.18.52-.91.33-1.31.47-1.31 1.23 0 .4.13.62.36.57a.36.36 0 0 1-.26.14c-.19 0-.22-.1-.32-.1s-.44.2-.44.36a.28.28 0 0 0 .16.23c-.08 0-.35 0-.41-.21Zm2.39-7.38c-.28 0-.47 0-.46.14s.33.1.46-.17Zm-1 .7a1.14 1.14 0 0 1 .44 0s0 .06 0 .06c-.42.05-.44.25-.7.25a.33.33 0 0 1-.3-.44s.19.24.52.15ZM12 56.55c.27.35.53 0 .9 0 .18 0 .4.06.43.42a.52.52 0 0 0-.32-.89.47.47 0 0 1 .69.07h.05c0-.68-.51-.73-.89-.44-.07-.26.13-.44.39-.44-.46-.49-.8.13-.88.22-.18.25-.83-.21-1.1-.49a2.11 2.11 0 0 0 .58-1.16v-.1a.51.51 0 0 0 .21.06c.13 0 .38 0 .38-.52a.26.26 0 0 1-.2.12c-.47 0-1.44-1.55-2.6-1.55a1.87 1.87 0 0 0-1.15.52.36.36 0 0 1 .15.38.43.43 0 0 1-.34.34 10.52 10.52 0 0 1 1.88.83c.28.24.23.7.07 1.34s-.5.54-.63.51a.64.64 0 0 0 .49.25c.3 0 .42-.19.57-.19s.81.37.81.66a.51.51 0 0 1-.29.41s.64.07.74-.39Zm12.68.39a.54.54 0 0 1-.29-.41c0-.29.55-.66.82-.66s.26.19.57.19a.67.67 0 0 0 .49-.25s-.47.1-.62-.51-.23-1.1.06-1.34a10.86 10.86 0 0 1 1.88-.83.43.43 0 0 1-.34-.34.39.39 0 0 1 .15-.38 1.92 1.92 0 0 0-1.16-.52c-1.15 0-2.12 1.55-2.59 1.55a.22.22 0 0 1-.2-.12c0 .47.25.52.38.52a.55.55 0 0 0 .17-.14v.1a2.11 2.11 0 0 0 .62 1.2c-.26.28-.92.73-1.11.49s-.41-.71-.87-.22c.26 0 .46.18.39.44-.37-.29-.88-.24-.88.44a.47.47 0 0 1 .69-.07.52.52 0 0 0-.32.89c.05-.35.26-.42.44-.42.36 0 .62.33.9 0 .19.45.71.45.83.39ZM15.4 48c0 .05-.16 0-.2 0s.15.26.32.26.2 0 .22-.1.68.22 1 .31a1.16 1.16 0 0 0-.23.6c-.27-.16-1.35-.74-1.35-.74l-.33.46c-.05.08-.32-.12-.26-.19l.25-.35c-.09-.09-.29 0-.35 0a.36.36 0 0 1 .47-.19c0-.19-.29-.13-.37-.11a.46.46 0 0 1 .58-.12l.12-.16-.27-.32.14-.2.17.21 1.24-1.7a1.06 1.06 0 0 1 .37-.14 1.61 1.61 0 0 1 0 .39l-1.22 1.73.26.08-.15.2-.3-.14Zm4.37-.28c0 .15.1.38.3.31 0 .17-.35.33-.48.13a.45.45 0 0 0 .17.66.35.35 0 0 1-.53-.13.46.46 0 0 0-.06.65 1.42 1.42 0 0 1-1.18.1 2 2 0 0 0-1.16-.36c.06-.68.4-.85 1-1s.56-.31.49-.49a1 1 0 0 0-.47.11.17.17 0 0 1 0-.19.43.43 0 0 1-.05-.15c.35 0 .41-.08.41-.08.07-.36-.3-.4-.58-.2a.33.33 0 0 1-.11-.27.17.17 0 0 1-.06-.11c0-.09.41-.32.52-.34s.17-.29.61-.25a1.47 1.47 0 0 0-.09-.65s0-.05 0 0 .31.46.42.46.49-.25.51-.24.09.56.09.56.45 0 .61.07 0 0 0 .06a1.46 1.46 0 0 0-.58.3 1.66 1.66 0 0 1 .12 1Z"
+          style="fill: #fff"
+        ></path>
+        <path
+          d="M44.21 46.43c.41-.13.63-.33.66-.67l.49-5.7-.65-.19v-.32a14.1 14.1 0 0 1 1.52-.08h.4l1.75 5.41 1.69-5.41h.49a10.71 10.71 0 0 1 1.35.08v.32l-.69.17.49 6.14.65.12v.25a2.75 2.75 0 0 1-1.08.19 5 5 0 0 1-1.23-.12v-.21a.76.76 0 0 0 .66-.85l-.28-5.07-2 6.2-.43.05-2-6.24-.35 5.6.73.19v.24a3.65 3.65 0 0 1-1.28.19 3.24 3.24 0 0 1-.86-.12v-.2Zm9.01.01c.3-.11.59-.33.59-.6v-3.78l-.71-.3v-.24a5.44 5.44 0 0 1 1.32-.21h.36l-.06.61v4.24l.63.17v.2a3.47 3.47 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm.47-6.79a.63.63 0 0 1 .63-.65.57.57 0 0 1 .58.6.64.64 0 0 1-.62.69.59.59 0 0 1-.59-.63Zm2.57 6.79c.29-.11.59-.33.59-.6v-3.78l-.72-.3v-.24a5.05 5.05 0 0 1 1.33-.21h.27v.61a2.38 2.38 0 0 1 1.65-.63c.93 0 1.56.59 1.56 1.74v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.26 2.26 0 0 1-.73-.1v-.19a.68.68 0 0 0 .38-.73v-2.13c0-1.1-.46-1.51-1.12-1.51a2 2 0 0 0-1.15.35v3.75l.63.17v.2a3.53 3.53 0 0 1-1.3.19 2.86 2.86 0 0 1-.83-.1v-.19Zm6.15 0c.3-.11.59-.33.59-.6v-3.78l-.71-.3v-.24a5.44 5.44 0 0 1 1.33-.21H64l-.06.61v4.24l.63.17v.2a3.47 3.47 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm.47-6.79a.63.63 0 0 1 .63-.65.57.57 0 0 1 .58.6.64.64 0 0 1-.62.69.59.59 0 0 1-.59-.63Zm2.5 5.77a2.22 2.22 0 0 0 1.58.7c.62 0 1-.3 1-.69s-.23-.63-1-1l-.55-.24a1.46 1.46 0 0 1-1-1.38 1.77 1.77 0 0 1 1.94-1.64c.9 0 1.25.27 1.25.69a2.42 2.42 0 0 1 0 .47 2.39 2.39 0 0 0-1.35-.33c-.71 0-1 .31-1 .7s.2.62.87.87l.61.24c.8.31 1.11.73 1.11 1.38a1.87 1.87 0 0 1-2.08 1.65c-1 0-1.41-.31-1.41-.92a1 1 0 0 1 .1-.46Zm4.69-1.84V42.1h-.57v-.37l1.2-1.19h.37v1h1.43l-.08.61H71v2.7c0 .91.27 1.22.68 1.22a1.34 1.34 0 0 0 .83-.29h.12c0 .66-.44 1-1.21 1s-1.32-.47-1.32-1.56v-1.64Zm5.22-2.35a1.87 1.87 0 0 1 1.93 2.09v.72h-3.3c0 1.25.73 2 1.65 2a2.94 2.94 0 0 0 1.58-.48 1 1 0 0 1 0 .28c0 .51-.73 1-1.92 1A2.36 2.36 0 0 1 73 44.23c0-1.94 1.17-3 2.33-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm1.84 2.99c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.78l.31-.34a1.3 1.3 0 0 1 1-.49c.38 0 .59.16.59.48a1.53 1.53 0 0 1-.18.67 1.15 1.15 0 0 0-.7-.26 1.42 1.42 0 0 0-1 .46v3.55l.78.17v.2a3.78 3.78 0 0 1-1.39.19 3.11 3.11 0 0 1-.89-.1v-.19Zm3.76 0c.3-.11.59-.33.59-.6v-3.78l-.72-.3v-.24a5.58 5.58 0 0 1 1.34-.21h.35v4.85l.62.17v.2a3.41 3.41 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm.46-6.79A.63.63 0 0 1 83 39a.57.57 0 0 1 .58.6.65.65 0 0 1-.63.69.59.59 0 0 1-.59-.63Zm4.81 1.58a1.87 1.87 0 0 1 1.93 2.09v.72h-3.3c0 1.25.72 2 1.64 2a2.94 2.94 0 0 0 1.57-.51 1 1 0 0 1 0 .28c0 .51-.73 1-1.92 1a2.36 2.36 0 0 1-2.31-2.56c0-1.94 1.17-3 2.33-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm3.74-1.55-.45-.32v-.27h2.13v.27l-.63.27 1.2 3.53 1.24-3.5-.63-.31v-.26h1.72v.26l-.31.26-2 4.93h-.38l-1.9-4.88Zm7.67 1.83v-.3c0-1.2-.29-1.46-1-1.46a2.37 2.37 0 0 0-1.68.73 1.76 1.76 0 0 1 0-.34c0-.71.53-1.13 1.83-1.13 1.13 0 1.8.57 1.8 1.49v2.94a1.5 1.5 0 0 0 .45.57 2.52 2.52 0 0 1-.76.57 1.5 1.5 0 0 1-.51-.55 2.25 2.25 0 0 1-1.5.54 1.29 1.29 0 0 1-1.42-1.24c0-1 1.07-1.82 2.9-1.82Zm-1.07 2.39a2.32 2.32 0 0 0 1.07-.3v-1.56c-1.26 0-1.94.52-1.94 1.13 0 .45.3.73.87.73Zm3.33.32c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.61a2.38 2.38 0 0 1 1.65-.63c.93 0 1.56.59 1.56 1.74v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.73v-2.13c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.15.35v3.75l.62.17v.2a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm8.36-.03a.75.75 0 0 0 .64-.83v-5.49l-.7-.24v-.24a10 10 0 0 1 2.23-.16c1.62 0 2.4.59 2.4 1.65a2 2 0 0 1-1.63 1.8 1.71 1.71 0 0 1 1.94 1.69c0 1.21-1.13 2.16-2.86 2.16a10.27 10.27 0 0 1-2-.14Zm3.56-5.2c0-.72-.49-1.16-1.46-1.16h-.51v2.66c1.22.04 1.97-.53 1.97-1.5Zm-1.38 4.94A1.53 1.53 0 0 0 114 44.7c0-.94-.65-1.42-1.88-1.42h-.36v2.82a3.13 3.13 0 0 0 .59 0Zm3.77.29c.31-.11.6-.33.6-.6v-3.78l-.72-.3v-.24a5.58 5.58 0 0 1 1.33-.21h.36v4.85l.62.17v.2a3.41 3.41 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm.47-6.79a.63.63 0 0 1 .64-.65.57.57 0 0 1 .58.6.65.65 0 0 1-.63.69.59.59 0 0 1-.59-.63Zm2.58 6.79c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.61a2.38 2.38 0 0 1 1.65-.63 1.52 1.52 0 0 1 1.56 1.71v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.73v-2.1c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.15.35v3.75l.62.17v.2a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm6.15 0c.28-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.06 5.06 0 0 1 1.34-.21h.26v.61a2.4 2.4 0 0 1 1.65-.63A1.52 1.52 0 0 1 130 43v3.13l.58.17v.2a3 3 0 0 1-1.18.19 2.2 2.2 0 0 1-.72-.1v-.19c.28-.12.4-.33.4-.73v-2.1c0-1.1-.46-1.51-1.12-1.51a2 2 0 0 0-1.15.35v3.75l.63.17v.2a3.47 3.47 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm8.37-5.21a1.86 1.86 0 0 1 1.93 2.09V44h-3.29c0 1.25.72 2 1.64 2a2.94 2.94 0 0 0 1.58-.48 1 1 0 0 1 0 .28c0 .51-.73 1-1.92 1a2.36 2.36 0 0 1-2.31-2.56c0-1.94 1.18-3 2.33-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm1.84 2.99c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.25v.61a2.38 2.38 0 0 1 1.65-.63c.93 0 1.56.59 1.56 1.74v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.73v-2.13c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.15.35v3.75l.62.17v.2a3.44 3.44 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm6.15 0c.28-.11.59-.33.59-.6v-6.48l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.36l-.06.63v6.92l.63.17v.2a3.5 3.5 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm5.74-2.71v-.3c0-1.2-.29-1.46-1-1.46a2.37 2.37 0 0 0-1.68.73 1.76 1.76 0 0 1 0-.34c0-.71.53-1.13 1.83-1.13 1.13 0 1.8.57 1.8 1.49v2.94a1.5 1.5 0 0 0 .45.57 2.52 2.52 0 0 1-.76.57 1.5 1.5 0 0 1-.51-.55 2.25 2.25 0 0 1-1.5.54 1.29 1.29 0 0 1-1.42-1.24c0-1 1.07-1.82 2.9-1.82Zm-1.07 2.39a2.32 2.32 0 0 0 1.07-.3v-1.56c-1.26 0-1.94.52-1.94 1.13 0 .45.3.73.87.73Zm3.34.32c.28-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.61a2.38 2.38 0 0 1 1.64-.63 1.52 1.52 0 0 1 1.57 1.71v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.73v-2.1c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.16.35v3.75l.63.17v.2a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm8.71-5.19a3.44 3.44 0 0 1 .77.08v-2l-.76-.3v-.24a5.38 5.38 0 0 1 1.38-.21h.36l-.06.63v6.39a1.55 1.55 0 0 0 .42.65 3.85 3.85 0 0 1-.77.53 1.91 1.91 0 0 1-.54-.67 2.21 2.21 0 0 1-1.42.63 2.15 2.15 0 0 1-2-2.42c0-2 1.21-3.1 2.67-3.1Zm.78 4.44V42a2.61 2.61 0 0 0-.81-.12c-.95 0-1.66.74-1.66 2.29 0 1.22.63 1.87 1.33 1.87a1.87 1.87 0 0 0 1.14-.36Zm2.28-.27a2.22 2.22 0 0 0 1.58.7c.62 0 .95-.3.95-.69s-.22-.63-1-1l-.55-.24a1.46 1.46 0 0 1-1-1.38 1.77 1.77 0 0 1 1.94-1.64c.9 0 1.25.27 1.25.69a2.42 2.42 0 0 1-.05.47 2.39 2.39 0 0 0-1.28-.43c-.71 0-1 .31-1 .7s.21.62.87.87l.61.24c.8.31 1.11.73 1.11 1.38a1.87 1.87 0 0 1-2.08 1.65c-1 0-1.41-.31-1.41-.92a1 1 0 0 1 .1-.46Zm6.44-4.19a1.86 1.86 0 0 1 1.93 2.09v.72h-3.29c0 1.25.73 2 1.65 2a2.93 2.93 0 0 0 1.57-.48.7.7 0 0 1 0 .28c0 .51-.74 1-1.93 1a2.36 2.36 0 0 1-2.31-2.56c0-1.94 1.18-3 2.34-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm3.72 2.9 3.53-6.17h-2a.93.93 0 0 0-.91.76l-.08.24h-.36l.14-1.66h4.34l.1.25-3.47 6.23h2a1 1 0 0 0 1.16-.79l.06-.21h.36l-.18 1.66h-4.58l-.1-.28Zm8.23-2.62v-.3c0-1.2-.29-1.46-1-1.46a2.41 2.41 0 0 0-1.68.73 1.79 1.79 0 0 1 0-.34c0-.71.52-1.13 1.82-1.13 1.13 0 1.8.57 1.8 1.49v2.94a1.5 1.5 0 0 0 .45.57 2.52 2.52 0 0 1-.76.57 1.59 1.59 0 0 1-.51-.55 2.25 2.25 0 0 1-1.5.54 1.29 1.29 0 0 1-1.49-1.24c0-1 1.07-1.82 2.9-1.82Zm-1.07 2.39a2.29 2.29 0 0 0 1.07-.3v-1.56c-1.26 0-1.94.52-1.94 1.13 0 .45.3.73.87.73Zm3.32.32c.31-.11.61-.33.61-.6v-6.48l-.73-.3v-.24a5.11 5.11 0 0 1 1.33-.21h.39l-.07.63v4.46l.61-.53a3 3 0 0 0 1.16-1.78 1.62 1.62 0 0 1 .59-.09 1.09 1.09 0 0 1 .44.1 3.17 3.17 0 0 1-1.52 2l-.39.28 1.72 2.08a1.14 1.14 0 0 0 .83.54v.24a1.42 1.42 0 0 1-.83.23.92.92 0 0 1-.79-.42l-1.82-2.4v2.25l.58.18v.21a3.47 3.47 0 0 1-1.25.18 2.93 2.93 0 0 1-.84-.1v-.19Zm7.52-5.21a1.87 1.87 0 0 1 1.93 2.09v.72h-3.29c0 1.25.73 2 1.65 2a3 3 0 0 0 1.58-.48 1 1 0 0 1 0 .28c0 .51-.74 1-1.92 1a2.35 2.35 0 0 1-2.31-2.56c0-1.94 1.17-3 2.33-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.54 1.54 0 0 0-1.26 1.62Zm1.83 2.99c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.61a2.38 2.38 0 0 1 1.64-.63 1.52 1.52 0 0 1 1.57 1.71v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.73v-2.1c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.16.35v3.75l.63.17v.2a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm10.58-5.21a1.87 1.87 0 0 1 1.95 2.09v.72h-3.29c0 1.25.73 2 1.65 2a2.91 2.91 0 0 0 1.57-.48.7.7 0 0 1 0 .28c0 .51-.74 1-1.92 1a2.35 2.35 0 0 1-2.31-2.56c0-1.94 1.17-3 2.33-3Zm1 2.22c0-1.09-.46-1.62-1.13-1.62a1.54 1.54 0 0 0-1.25 1.62Zm1.83 2.99c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.61a2.38 2.38 0 0 1 1.64-.63c.93 0 1.56.59 1.56 1.74v3.13l.59.17v.2a3 3 0 0 1-1.18.19 2.2 2.2 0 0 1-.72-.1v-.19c.28-.12.4-.33.4-.73v-2.13c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.16.35v3.75l.63.17v.2a3.47 3.47 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19ZM44.54 59.08a.76.76 0 0 0 .65-.85v-5.5l-.71-.18v-.24a4.69 4.69 0 0 1 1.27-.18 4.18 4.18 0 0 1 1 .11v.21a.74.74 0 0 0-.64.83v5.52l.7.18v.24a4.23 4.23 0 0 1-1.32.19 3.5 3.5 0 0 1-1-.12v-.21Zm1.65-3.39 2.64-3-.61-.14v-.25a3.92 3.92 0 0 1 1.22-.18 2.43 2.43 0 0 1 .77.1v.21a2.25 2.25 0 0 0-.81.59l-2.24 2.49 2 2.52a2.86 2.86 0 0 0 1.24.95v.23a1.35 1.35 0 0 1-.79.24c-.53 0-.86-.18-1.4-.93l-2-2.8Zm6.88-1.79a2.42 2.42 0 0 1 2.43 2.58 2.78 2.78 0 0 1-2.61 3 2.4 2.4 0 0 1-2.45-2.58 2.77 2.77 0 0 1 2.62-3ZM53 58.83c.75 0 1.53-.73 1.53-2.25 0-1.31-.71-2-1.5-2s-1.53.77-1.53 2.24.71 2.05 1.5 2.05Zm3.21.28c.28-.11.58-.33.58-.6v-3.78l-.72-.3v-.24a5 5 0 0 1 1.34-.2h.26v.6a2.38 2.38 0 0 1 1.65-.59c.93 0 1.56.59 1.56 1.75v3.12l.59.17v.21a3.29 3.29 0 0 1-1.18.18 2.2 2.2 0 0 1-.72-.1v-.23c.28-.12.4-.33.4-.73v-2.13c0-1.09-.46-1.51-1.12-1.51a2 2 0 0 0-1.15.35v3.75l.63.17v.21a3.74 3.74 0 0 1-1.3.18 2.9 2.9 0 0 1-.83-.1v-.19Zm6.14 0c.3-.11.59-.33.59-.6v-3.78l-.71-.3v-.24a5.35 5.35 0 0 1 1.32-.2h.36v4.84l.62.17v.21a3.64 3.64 0 0 1-1.29.18 3 3 0 0 1-.84-.1v-.19Zm.47-6.79a.63.63 0 0 1 .63-.66.59.59 0 0 1 .59.6.66.66 0 0 1-.63.7.6.6 0 0 1-.59-.64Zm2.58 6.79c.28-.11.59-.33.59-.6v-3.78l-.73-.3v-.24A5 5 0 0 1 66.6 54h.26v.6a2.4 2.4 0 0 1 1.65-.6c.93 0 1.56.59 1.56 1.75v3.12l.59.17v.21a3.22 3.22 0 0 1-1.18.18 2.2 2.2 0 0 1-.72-.1v-.23c.28-.12.4-.33.4-.73v-2.13c0-1.09-.46-1.51-1.11-1.51a2 2 0 0 0-1.16.35v3.75l.63.17v.21a3.7 3.7 0 0 1-1.3.18 2.9 2.9 0 0 1-.83-.1v-.19Zm6.13 0c.3-.11.6-.33.6-.6V52l-.73-.3v-.24a5.1 5.1 0 0 1 1.34-.2h.38l-.07.62v4.47l.62-.54a3.06 3.06 0 0 0 1.15-1.78 1.62 1.62 0 0 1 .59-.09 1.09 1.09 0 0 1 .44.1 3.17 3.17 0 0 1-1.52 2l-.38.28 1.72 2.09a1.16 1.16 0 0 0 .82.53v.24a1.41 1.41 0 0 1-.82.23.9.9 0 0 1-.79-.42l-1.83-2.4v2.26l.59.18v.2a3.52 3.52 0 0 1-1.26.18 3 3 0 0 1-.84-.1v-.2Zm5.28 0c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24A5.1 5.1 0 0 1 78 54h.27v.78l.31-.35a1.32 1.32 0 0 1 1-.48c.38 0 .59.16.59.48a1.42 1.42 0 0 1-.19.67 1.08 1.08 0 0 0-.69-.26 1.38 1.38 0 0 0-1 .46v3.55l.77.16v.21a3.78 3.78 0 0 1-1.39.19 3.11 3.11 0 0 1-.89-.1Zm4.04 0c.3-.11.59-.33.59-.6v-3.78l-.71-.3v-.24a5.35 5.35 0 0 1 1.33-.2h.36l-.06.6v4.24L83 59v.21a3.7 3.7 0 0 1-1.3.18 2.9 2.9 0 0 1-.83-.1v-.19Zm.47-6.79a.63.63 0 0 1 .63-.66.58.58 0 0 1 .58.6.65.65 0 0 1-.62.7.6.6 0 0 1-.59-.64Zm3.12 2.41-.71-.3v-.24a5.42 5.42 0 0 1 1.34-.2h.36l-.07.62v5c0 1.83-.54 2.4-1.26 2.4a.77.77 0 0 1-.62-.27v-.18c.49 0 1-.56 1-1.69v-5.14Zm-.12-2.41a.63.63 0 0 1 .63-.66.59.59 0 0 1 .59.6.66.66 0 0 1-.63.7.6.6 0 0 1-.59-.64Zm2.23 6.79c.3-.11.6-.33.6-.6V52l-.73-.3v-.24a5.1 5.1 0 0 1 1.34-.2h.38l-.06.62v4.47l.61-.54a3.06 3.06 0 0 0 1.15-1.78 1.66 1.66 0 0 1 .59-.09 1.18 1.18 0 0 1 .45.1 3.25 3.25 0 0 1-1.52 2l-.39.28 1.72 2.09a1.16 1.16 0 0 0 .83.53v.24a1.46 1.46 0 0 1-.83.23.91.91 0 0 1-.79-.41l-1.82-2.4v2.26l.58.18v.2a3.52 3.52 0 0 1-1.26.18 3 3 0 0 1-.84-.1v-.2Zm5.21-1.02a2.21 2.21 0 0 0 1.58.71c.62 0 1-.31 1-.7s-.23-.63-1-1l-.56-.23a1.47 1.47 0 0 1-1-1.39 1.78 1.78 0 0 1 1.94-1.64c.89 0 1.25.27 1.25.69a2.42 2.42 0 0 1 0 .47 2.47 2.47 0 0 0-1.28-.42c-.71 0-1 .31-1 .69s.2.62.87.88l.61.23c.8.31 1.11.73 1.11 1.39a1.87 1.87 0 0 1-2.08 1.64c-1 0-1.42-.31-1.42-.92a1.15 1.15 0 0 1 .1-.46ZM96 59.11c.29-.11.59-.33.59-.6v-3.78l-.72-.3v-.24a5 5 0 0 1 1.34-.2h.26v.78l.31-.35a1.29 1.29 0 0 1 1-.48c.37 0 .58.16.58.48a1.4 1.4 0 0 1-.18.67 1.12 1.12 0 0 0-.69-.26 1.4 1.4 0 0 0-1 .46v3.55l.77.16v.21a3.72 3.72 0 0 1-1.38.19 3.07 3.07 0 0 1-.89-.1v-.19Zm6-5.2a1.86 1.86 0 0 1 1.88 2.09v.72h-3.29c0 1.25.72 2 1.65 2a2.93 2.93 0 0 0 1.57-.48 1 1 0 0 1 0 .29c0 .5-.74 1-1.93 1a2.36 2.36 0 0 1-2.31-2.56c0-1.94 1.18-3 2.34-3Zm1 2.21c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm1.79 2.99c.29-.11.59-.33.59-.6V52l-.73-.3v-.24a5 5 0 0 1 1.34-.2h.36l-.06.62v6.92l.63.17v.21a3.74 3.74 0 0 1-1.3.18 2.9 2.9 0 0 1-.83-.1v-.16Zm5.74-2.71v-.3c0-1.2-.29-1.46-1-1.46a2.41 2.41 0 0 0-1.68.73 1.84 1.84 0 0 1 0-.33c0-.72.52-1.13 1.82-1.13 1.13 0 1.8.57 1.8 1.49v2.94a1.5 1.5 0 0 0 .45.57 2.52 2.52 0 0 1-.76.57 1.59 1.59 0 0 1-.51-.55 2.31 2.31 0 0 1-1.5.54 1.29 1.29 0 0 1-1.42-1.24c-.1-.98.97-1.83 2.8-1.83Zm-1.07 2.4a2.33 2.33 0 0 0 1.07-.31v-1.56c-1.26 0-1.94.53-1.94 1.13 0 .45.3.74.87.74Zm3.82-2.55v-1.48h-.62v-.37l1.21-1.19h.36v1h1.48l-.08.6h-1.43v2.71c0 .9.26 1.21.68 1.21a1.38 1.38 0 0 0 .83-.28h.11c0 .66-.43 1-1.2 1s-1.32-.46-1.32-1.54v-1.65Zm2.99 2.86c.3-.11.59-.33.59-.6v-3.78l-.72-.3v-.24a5.49 5.49 0 0 1 1.33-.2h.36l-.06.6v4.24l.63.17v.21a3.7 3.7 0 0 1-1.3.18 2.9 2.9 0 0 1-.83-.1v-.19Zm.47-6.79a.63.63 0 0 1 .63-.66.58.58 0 0 1 .58.6.65.65 0 0 1-.62.7.6.6 0 0 1-.59-.64Zm4.8 1.59a1.86 1.86 0 0 1 1.93 2.09v.72h-3.28c0 1.25.72 2 1.64 2a2.94 2.94 0 0 0 1.58-.48 1.06 1.06 0 0 1 0 .29c0 .5-.73 1-1.92 1a2.36 2.36 0 0 1-2.31-2.56c0-1.94 1.18-3 2.33-3Zm1 2.21c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm1.77 1.97a2.21 2.21 0 0 0 1.57.71c.63 0 1-.31 1-.7s-.22-.63-1-1l-.56-.23a1.47 1.47 0 0 1-1-1.39 1.78 1.78 0 0 1 2-1.64c.89 0 1.25.27 1.25.69a1.84 1.84 0 0 1-.06.47 2.46 2.46 0 0 0-1.27-.42c-.71 0-1.05.31-1.05.69s.2.62.87.88l.6.23c.81.31 1.11.73 1.11 1.39a1.87 1.87 0 0 1-2.07 1.64c-1 0-1.42-.31-1.42-.92a1.15 1.15 0 0 1 .1-.46Z"
+        ></path>
+      </symbol>
+      <symbol id="logo-small" viewBox="0 0 140.15 72">
+        <title>logo-small</title>
+        <path d="M36 0H0v72h36Z" style="fill: #154273"></path>
+        <path
+          d="M18.64 55.7H18V54h.63Zm2.82-7.7h-.62v-1.7h.62Zm-11.6-3s-.37 0-.37.07.15 0 .37.07c.5.09.7.34 1.05.34a.5.5 0 0 0 .52-.68c0-.08-.06-.06-.08 0a.55.55 0 0 1-.57.33c-.33 0-.4-.12-.92-.12Zm-3.45 1.78c.06.08.65.84-.26 1.14 0 0-.05 0 0 .08a.78.78 0 0 0 1-.24A1 1 0 0 1 7 49a1.42 1.42 0 0 0 .88.48 1.22 1.22 0 0 0 .55-.57 1 1 0 0 1 0 .66c1.37.12 1.85-1 2.91-.77a2.18 2.18 0 0 0-1.72-2.16c-1.31-.26-1-.79-1-.79a1.43 1.43 0 0 1 .86.22.31.31 0 0 0-.05-.34.74.74 0 0 0 .08-.29c-.61 0-.77-.14-.77-.14-.1-.36.16-.88 1.08-.33a.66.66 0 0 0 .2-.52.23.23 0 0 0 .12-.18c0-.15-.73-.57-.92-.62 0-.22-.33-.54-1.2-.42-.41.05-.7-.06-.56-.3 0 0 0-.05-.09 0a.32.32 0 0 0 .13.54.75.75 0 0 1 .5.53c0 .09-.09.1-.11 0a1.1 1.1 0 0 0-1.64-.46.71.71 0 0 0 .62.6.31.31 0 0 0 .29-.29c0-.08 0-.07.07 0a.49.49 0 0 1-.79.43 1.4 1.4 0 0 0-.26 1.44c.09.43-.12.85-.52.66a.49.49 0 0 0 .78.34Zm2.94-2.69c-.25.28-.65.21-.76-.25.51-.03.74.02.76.25Zm15.88 1.07a.54.54 0 0 1-.56-.33s-.06-.07-.08 0a.5.5 0 0 0 .51.68c.36 0 .55-.25 1.06-.34.22 0 .37 0 .37-.07s-.32-.06-.37-.06c-.52 0-.59.11-.93.11Zm5.16 1.27h-.05c-.39.2-.6-.22-.51-.66a1.41 1.41 0 0 0-.26-1.43.49.49 0 0 1-.79-.43c0-.07.07-.08.07 0a.3.3 0 0 0 .28.29.72.72 0 0 0 .63-.6 1.1 1.1 0 0 0-1.64.47c0 .08-.12.07-.11 0a.76.76 0 0 1 .42-.66c.36-.18.23-.44.13-.54s-.12 0-.09 0c.14.24-.15.35-.56.3-.86-.12-1.14.2-1.19.42-.19 0-.92.46-.92.61a.24.24 0 0 0 .11.19.75.75 0 0 0 .21.52c.91-.56 1.17 0 1.08.33a1.5 1.5 0 0 1-.79.14.87.87 0 0 0 .08.28.32.32 0 0 0 0 .34 1.39 1.39 0 0 1 .86-.21s.36.53-.95.78a2.19 2.19 0 0 0-1.72 2.16s0 0 .05 0c1-.19 1.54.9 2.91.77a1 1 0 0 1 0-.66 1.2 1.2 0 0 0 .55.58A1.42 1.42 0 0 0 29 49a1 1 0 0 1-.18-1.21.77.77 0 0 0 1 .24c.06 0 0-.06 0-.08-.9-.29-.31-1.06-.25-1.14a.49.49 0 0 0 .77-.34Zm-3-2.58c-.1.46-.5.52-.75.24.05-.22.26-.27.78-.24Zm-9.65-7.69a.51.51 0 0 0 .09.27c.08.12.06.18 0 .22s-.1.05-.22 0a.51.51 0 0 0-.27-.09.25.25 0 1 0 0 .48.51.51 0 0 0 .27-.09c.12-.08.18-.06.22 0a3.25 3.25 0 0 1-.07.75.58.58 0 0 0-.48.48c0 .4.42.62.67.76.24-.13.67-.36.67-.76a.58.58 0 0 0-.48-.48 2.72 2.72 0 0 1-.07-.75s.1 0 .22 0a.48.48 0 0 0 .27.09.24.24 0 1 0 0-.48.48.48 0 0 0-.27.09c-.12.08-.18.06-.22 0s-.05-.1 0-.22a.51.51 0 0 0 .09-.27.25.25 0 1 0-.48 0Zm.26 2.92a.49.49 0 0 0 0 1 .49.49 0 0 0 0-1Zm0 4.62a10.39 10.39 0 0 1 3 .36c0-1 0-1.51.56-1.43-.3-.81 1-1.14 1-2.19 0-.7-.5-.78-.64-.78-.43 0-.37.28-.74.28h-.09s.1.33.27.33.23-.23.41-.23.18.06.18.3a2.23 2.23 0 0 1-.65 1.34.4.4 0 0 0-.33-.18.44.44 0 0 0-.38.48.51.51 0 0 0 .05.25.8.8 0 0 1-.3.1.36.36 0 0 1-.39-.41c0-.77 1-1.45 1-2.43a.9.9 0 0 0-1-.93c-.7 0-.57.64-1.17.64h-.05s.1.4.41.4.43-.58.73-.58c.11 0 .28.07.28.46a3.76 3.76 0 0 1-.37 1.27.45.45 0 0 0-.31-.14.5.5 0 0 0-.44.55.68.68 0 0 0 .2.49.72.72 0 0 1-.52.35c-.41 0-.59-.24-.59-.5s.51-.38.51-.81a.42.42 0 0 0-.38-.46.53.53 0 0 0-.32.13.54.54 0 0 0-.33-.13.41.41 0 0 0-.37.46c0 .43.51.54.51.81s-.19.5-.6.5c-.21 0-.36-.16-.51-.35a.7.7 0 0 0 .2-.49.5.5 0 0 0-.45-.55.43.43 0 0 0-.3.14 3.59 3.59 0 0 1-.37-1.27c0-.39.17-.46.28-.46.29 0 .38.58.72.58s.42-.35.42-.4 0 0-.05 0c-.61 0-.48-.64-1.17-.64a.91.91 0 0 0-1 .93c0 1 1 1.66 1 2.43a.37.37 0 0 1-.4.41.71.71 0 0 1-.29-.1.53.53 0 0 0 .05-.25.44.44 0 0 0-.39-.48.4.4 0 0 0-.32.18 2.21 2.21 0 0 1-.64-1.34c0-.23.1-.3.18-.3s.17.23.4.23.27-.21.27-.33-.05 0-.09 0c-.37 0-.3-.28-.73-.28-.15 0-.64.08-.64.78 0 1.06 1.31 1.38 1 2.19.56-.08.55.46.56 1.43a10.48 10.48 0 0 1 3-.36Zm-3.52 1.43c-.53.11-.9.22-1.07.27a.47.47 0 0 1 .31-.49c-.47-.31-.71.28-.72.3-.16 0-.41 0-.41.26 0 .67-1.53 1-1.88 1.09a1.81 1.81 0 0 1 .88 1 4 4 0 0 1 1.1-.85c.13 0 .17.15.18.24.23-.35.12-.43.1-.54a.3.3 0 0 1 .35-.35v4.46h-.18c-.08 0-.73-.54-1.47-1s-1.15-.21-2 .25a2.66 2.66 0 0 1-2.24.06c-1 .68-1.29 2.67-1.29 2.67a2.27 2.27 0 0 1-.8.16c-.74 0-.87-.44-.87-.7C4.53 50.8 6 50.31 6 49.2a1.34 1.34 0 0 0-1.48-1.37H3.25a.72.72 0 0 1-.7-.5c0-.06-.08 0-.06 0s-.06.23-.06.52a.68.68 0 0 0 .77.72 1.05 1.05 0 0 0 .5-.11v.05a.87.87 0 0 0-.14.83s.05 0 .05 0a1.24 1.24 0 0 1 1.17-.93.68.68 0 0 1 .73.78C5.56 50.12 4 50.78 4 52s1.34 1.54 2.11 1.34c0 1.27-1.49 1.7-1.54.8 0-.05 0-.05-.06 0-.18.44-.1.84.46 1v.06c-.56.35-.26 1.75-.23 2.16 0 .59-.54.52-.59.5s-.06 0 0 0A.63.63 0 0 0 5 58c.39.12.16.45-.11.62v.06s.66.06.77-.43a.62.62 0 0 0 .74.16c.12 0 .68-.26.73.37h.06a.51.51 0 0 0-.29-.9.42.42 0 0 1 .67.08c0-.68-.52-.74-.88-.44 0-.07-.14-.46.4-.44v-.05a.52.52 0 0 0-.85.06c-.19.23-.66.13-.7.13.14-2.37 2.23-1.52 2.52-2.68 0-.05 0 0 0 0 .08.28.79.32.92-.23 0 0 0-.06 0 0-.61.61-2-1.28-.11-2.81a2.68 2.68 0 0 1 3.54-.15.22.22 0 0 1-.16.27s0 0 0 .05a.4.4 0 0 0 .46-.1c.34.24 0 .54-.08.62s0 0 0 .05a.56.56 0 0 0 .59-.45V53c0 1.91 2.2 2.18 4.63 3.8 2.43-1.63 4.63-1.89 4.63-3.8v-1.32h.05a.55.55 0 0 0 .58.45s0 0 0-.05-.43-.38-.09-.62a.4.4 0 0 0 .46.1c.05 0 0 0 0-.05a.22.22 0 0 1-.15-.27 2.67 2.67 0 0 1 3.54.15c1.85 1.53.49 3.41-.11 2.81.13.55.83.51.91.23.29 1.16 2.37.31 2.52 2.68 0 0-.51.1-.69-.13a.52.52 0 0 0-.85-.06s0 .05 0 .05c.54 0 .42.37.4.44-.36-.3-.91-.24-.87.44 0 .05 0 .05 0 0a.42.42 0 0 1 .67-.08.52.52 0 0 0-.29.9s0 .05.05 0c.06-.63.62-.43.73-.37a.64.64 0 0 0 .75-.16c.1.49.71.44.77.43s0 0 0-.06c-.26-.17-.51-.5-.12-.62a.64.64 0 0 0 .94-.05s0-.06 0 0-.64.09-.6-.5c0-.41.33-1.81-.23-2.16 0 0-.05 0 0-.06.56-.12.63-.52.45-1 0-.06-.06-.05-.06 0 0 .9-1.49.47-1.54-.8.99.26 2.3-.02 2.3-1.32s-1.59-1.91-1.59-2.82a.69.69 0 0 1 .73-.78 1.24 1.24 0 0 1 1.18.93.88.88 0 0 0-.15-.83s0-.07 0-.05a1.1 1.1 0 0 0 .51.11.67.67 0 0 0 .76-.72c0-.29-.1-.43-.06-.52s0-.07 0 0a.73.73 0 0 1-.71.5h-1.15A1.34 1.34 0 0 0 30 49.2c0 1.11 1.42 1.6 1.42 2.73 0 .26-.14.7-.86.7a2.23 2.23 0 0 1-.81-.16s-.32-2-1.29-2.67a2.65 2.65 0 0 1-2.24-.06c-.85-.46-1.25-.77-2-.25s-1.39 1.07-1.47 1h-.18v-4.44a.3.3 0 0 1 .35.35c0 .1-.13.19.1.54h.05c.05 0 .06-.24.17-.24a3.86 3.86 0 0 1 1.1.85 1.83 1.83 0 0 1 .89-1c-.35-.06-1.88-.42-1.88-1.09 0-.23-.25-.28-.42-.26 0 0-.26-.61-.71-.3a.45.45 0 0 1 .3.49 16.86 16.86 0 0 0-4.52-.66 15.63 15.63 0 0 0-2.89.28v1.54h-.63v-1.42M10.31 61a.39.39 0 0 1-.27-.4v-1a7 7 0 0 0-2.53-.38c-1.24 0-1.63.28-1.65.38l-.33 1.83S6 61 7.84 61.08c2.17.13 4.42 1.42 4.42.05v-.81c-1.7 0-1.95.54-1.95.62Zm13.38-.62v.81c0 1.36 2.26.08 4.43-.06 1.81-.11 2.31.35 2.31.35l-.33-1.88c0-.1-.41-.38-1.66-.38a7.13 7.13 0 0 0-2.52.38v1a.41.41 0 0 1-.27.4c0-.08-.26-.62-2-.62ZM18 59.5c3.5 0 7.06.18 7.52.71h.05v-1.89c0-.54-3.67-.86-7.58-.86s-7.58.32-7.58.86v1.86s0 .07 0 0c.47-.52 4-.71 7.52-.71Zm-3.12-8.75-.36-.1v.05l-.41-.18h.37l-.31-.31.4.15-.27-.39.39.26-.19-.47.36.35-.1-.46.27.38v-.43s.12.26.17.39l.14-.33V50h-.06l-.07.53c.53-.12 1.19-1 1.69-1s.82.71 1.93.35a3.39 3.39 0 0 1 .49 1.27c.43.41 1 .27 1-.15 0-.58-.62-.69-.62-1.29a.65.65 0 0 1 .69-.66c.28 0 .67.12.9.12a.35.35 0 0 0 .36-.28c0-.06.1 0 .1 0v.26c0 .38-.56.43-.62.38s.06.3 0 .44a.83.83 0 0 0-.66-.61.3.3 0 0 0-.31.3c0 .34.69.66.69 1.36s-.73.92-1.47.73c0 .7 1.07 1.11 1.09.61.15.22.08.38-.12.46.18.08.22.45.27.67s.43.15.45.14a.37.37 0 0 1-.48.21c-.18.13 0 .25.2.3s-.38.13-.51-.09a.34.34 0 0 1-.36.22c-.14 0-.22.14-.19.33a.29.29 0 0 1 0-.53.23.23 0 0 0-.33.16c-.14-.38.16-.49.38-.39a.35.35 0 0 0-.42-.18s.18-.28.45-.11.37 0 .39-.05c-.47-.93-1.37-.15-1.58-.88s-.45.17-.52-.13.18.11.35-.12a1 1 0 0 0 .12-.51 1.6 1.6 0 0 0-1.44-1.51 2.87 2.87 0 0 0-1.6.54L16 51a.63.63 0 0 1-.81.55l.07-.47a.56.56 0 0 0-.31.2.38.38 0 0 1 .21-.44.38.38 0 0 0-.34.19.3.3 0 0 1 .05-.29Zm1.2 3.25c-.16.2-.3 0-.51 0a.21.21 0 0 0-.22.23.28.28 0 0 1 .17-.49.24.24 0 0 0-.37 0c0-.38.29-.41.49-.24 0-.14-.06-.24-.22-.24a.26.26 0 0 1 .19-.1c.21 0 .24.27.37.27a1 1 0 0 0 .52-.3 2.64 2.64 0 0 1-.16-.87s-.34 0-.34-.26.29 0 .37-.12.62-.86 1.3-.86a1 1 0 0 1 .5.2c-.23.29 0 .56.18.52-.91.33-1.31.47-1.31 1.23 0 .4.13.62.36.57a.36.36 0 0 1-.26.14c-.19 0-.22-.1-.32-.1s-.44.2-.44.36a.28.28 0 0 0 .16.23c-.08 0-.35 0-.41-.21Zm2.39-7.38c-.28 0-.47 0-.46.14s.33.1.46-.17Zm-1 .7a1.14 1.14 0 0 1 .44 0s0 .06 0 .06c-.42.05-.44.25-.7.25a.33.33 0 0 1-.3-.44s.19.24.52.15ZM12 56.55c.27.35.53 0 .9 0 .18 0 .4.06.43.42a.52.52 0 0 0-.32-.89.47.47 0 0 1 .69.07h.05c0-.68-.51-.73-.89-.44-.07-.26.13-.44.39-.44-.46-.49-.8.13-.88.22-.18.25-.83-.21-1.1-.49a2.11 2.11 0 0 0 .58-1.16v-.1a.51.51 0 0 0 .21.06c.13 0 .38 0 .38-.52a.26.26 0 0 1-.2.12c-.47 0-1.44-1.55-2.6-1.55a1.87 1.87 0 0 0-1.15.52.36.36 0 0 1 .15.38.43.43 0 0 1-.34.34 10.52 10.52 0 0 1 1.88.83c.28.24.23.7.07 1.34s-.5.54-.63.51a.64.64 0 0 0 .49.25c.3 0 .42-.19.57-.19s.81.37.81.66a.51.51 0 0 1-.29.41s.64.07.74-.39Zm12.68.39a.54.54 0 0 1-.29-.41c0-.29.55-.66.82-.66s.26.19.57.19a.67.67 0 0 0 .49-.25s-.47.1-.62-.51-.23-1.1.06-1.34a10.86 10.86 0 0 1 1.88-.83.43.43 0 0 1-.34-.34.39.39 0 0 1 .15-.38 1.92 1.92 0 0 0-1.16-.52c-1.15 0-2.12 1.55-2.59 1.55a.22.22 0 0 1-.2-.12c0 .47.25.52.38.52a.55.55 0 0 0 .17-.14v.1a2.11 2.11 0 0 0 .62 1.2c-.26.28-.92.73-1.11.49s-.41-.71-.87-.22c.26 0 .46.18.39.44-.37-.29-.88-.24-.88.44a.47.47 0 0 1 .69-.07.52.52 0 0 0-.32.89c.05-.35.26-.42.44-.42.36 0 .62.33.9 0 .19.45.71.45.83.39ZM15.4 48c0 .05-.16 0-.2 0s.15.26.32.26.2 0 .22-.1.68.22 1 .31a1.16 1.16 0 0 0-.23.6c-.27-.16-1.35-.74-1.35-.74l-.33.46c-.05.08-.32-.12-.26-.19l.25-.35c-.09-.09-.29 0-.35 0a.36.36 0 0 1 .47-.19c0-.19-.29-.13-.37-.11a.46.46 0 0 1 .58-.12l.12-.16-.27-.32.14-.2.17.21 1.24-1.7a1.06 1.06 0 0 1 .37-.14 1.61 1.61 0 0 1 0 .39l-1.22 1.73.26.08-.15.2-.3-.14Zm4.37-.28c0 .15.1.38.3.31 0 .17-.35.33-.48.13a.45.45 0 0 0 .17.66.35.35 0 0 1-.53-.13.46.46 0 0 0-.06.65 1.42 1.42 0 0 1-1.18.1 2 2 0 0 0-1.16-.36c.06-.68.4-.85 1-1s.56-.31.49-.49a1 1 0 0 0-.47.11.17.17 0 0 1 0-.19.43.43 0 0 1-.05-.15c.35 0 .41-.08.41-.08.07-.36-.3-.4-.58-.2a.33.33 0 0 1-.11-.27.17.17 0 0 1-.06-.11c0-.09.41-.32.52-.34s.17-.29.61-.25a1.47 1.47 0 0 0-.09-.65s0-.05 0 0 .31.46.42.46.49-.25.51-.24.09.56.09.56.45 0 .61.07 0 0 0 .06a1.46 1.46 0 0 0-.58.3 1.66 1.66 0 0 1 .12 1Z"
+          style="fill: #fff"
+        ></path>
+        <path
+          d="M44.21 41.43c.41-.13.63-.33.66-.67l.49-5.7-.65-.19v-.32a11.93 11.93 0 0 1 1.52-.08h.4l1.75 5.41 1.69-5.41h.49a9.11 9.11 0 0 1 1.35.08v.32l-.69.17.49 6.14.65.12v.25a2.75 2.75 0 0 1-1.08.19 5 5 0 0 1-1.23-.12v-.21a.76.76 0 0 0 .66-.85l-.28-5.07-2 6.19-.43.06-2-6.24-.34 5.6.73.19v.24a3.89 3.89 0 0 1-1.28.19 3.71 3.71 0 0 1-.86-.12v-.2Zm9.01.01c.3-.11.59-.33.59-.6v-3.78l-.71-.3v-.24a5.44 5.44 0 0 1 1.32-.21h.36l-.06.61v4.24l.63.16v.21a3.47 3.47 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm.47-6.79a.62.62 0 0 1 .63-.65.57.57 0 0 1 .58.6.64.64 0 0 1-.62.69.6.6 0 0 1-.59-.63Zm2.57 6.79c.29-.11.59-.33.59-.6v-3.78l-.72-.3v-.24a5.05 5.05 0 0 1 1.33-.21h.27v.61a2.38 2.38 0 0 1 1.65-.63c.93 0 1.56.59 1.56 1.74v3.13l.58.16v.21a3 3 0 0 1-1.17.19 2.26 2.26 0 0 1-.73-.1v-.19a.68.68 0 0 0 .38-.73v-2.13c0-1.1-.46-1.51-1.12-1.51a2 2 0 0 0-1.15.35v3.75l.63.16v.21a3.53 3.53 0 0 1-1.3.19 2.86 2.86 0 0 1-.83-.1v-.19Zm6.15 0c.3-.11.59-.33.59-.6v-3.78l-.71-.3v-.24a5.44 5.44 0 0 1 1.33-.21H64l-.06.61v4.24l.63.16v.21a3.5 3.5 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm.47-6.79a.62.62 0 0 1 .63-.65.57.57 0 0 1 .58.6.64.64 0 0 1-.62.69.6.6 0 0 1-.59-.63Zm2.5 5.77a2.2 2.2 0 0 0 1.58.7c.62 0 1-.3 1-.69s-.23-.63-1-1l-.55-.24a1.46 1.46 0 0 1-1-1.38 1.77 1.77 0 0 1 1.94-1.64c.9 0 1.25.27 1.25.69a2.42 2.42 0 0 1 0 .47 2.39 2.39 0 0 0-1.35-.33c-.71 0-1 .31-1 .7s.2.62.87.87l.61.24c.8.31 1.11.73 1.11 1.38a1.87 1.87 0 0 1-2.08 1.65c-1 0-1.42-.31-1.42-.92a1 1 0 0 1 .11-.46Zm4.69-1.84V37.1h-.57v-.37l1.2-1.19h.37v1h1.43l-.08.61H71v2.7c0 .91.27 1.22.68 1.22a1.34 1.34 0 0 0 .83-.29h.12c0 .66-.44 1-1.21 1s-1.32-.47-1.32-1.56v-1.64Zm5.22-2.35a1.87 1.87 0 0 1 1.93 2.09v.72h-3.29c0 1.25.72 2 1.64 2a2.94 2.94 0 0 0 1.58-.48 1 1 0 0 1 0 .28c0 .51-.73 1-1.92 1A2.36 2.36 0 0 1 73 39.23c0-1.94 1.17-3 2.33-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm1.84 2.99c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.78l.31-.34a1.3 1.3 0 0 1 1-.49c.38 0 .59.16.59.48a1.42 1.42 0 0 1-.19.67 1.08 1.08 0 0 0-.69-.26 1.42 1.42 0 0 0-1 .46v3.55l.78.16v.21a3.78 3.78 0 0 1-1.39.19 3.11 3.11 0 0 1-.89-.1v-.19Zm3.75 0c.31-.11.6-.33.6-.6v-3.78l-.72-.3v-.24a5.58 5.58 0 0 1 1.34-.21h.35v4.85l.62.16v.21a3.41 3.41 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm.47-6.79A.63.63 0 0 1 83 34a.57.57 0 0 1 .58.6.65.65 0 0 1-.63.69.6.6 0 0 1-.59-.63Zm4.81 1.58a1.87 1.87 0 0 1 1.93 2.09v.72h-3.3c0 1.25.72 2 1.64 2a2.94 2.94 0 0 0 1.57-.51 1 1 0 0 1 0 .28c0 .51-.73 1-1.92 1a2.36 2.36 0 0 1-2.31-2.56c0-1.94 1.17-3 2.33-3Zm1 2.22c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.26 1.62Zm3.74-1.55-.45-.32v-.27h2.13v.27l-.63.27 1.2 3.53 1.24-3.5-.63-.31v-.26h1.72v.26l-.31.26-2 4.93h-.38l-1.9-4.88Zm7.67 1.83v-.3c0-1.2-.29-1.46-1-1.46a2.37 2.37 0 0 0-1.68.73 1.76 1.76 0 0 1 0-.34c0-.72.53-1.13 1.83-1.13 1.13 0 1.8.57 1.8 1.49v2.94a1.5 1.5 0 0 0 .45.57 2.52 2.52 0 0 1-.76.57 1.5 1.5 0 0 1-.51-.55 2.25 2.25 0 0 1-1.5.54 1.29 1.29 0 0 1-1.42-1.24c0-1 1.07-1.82 2.9-1.82Zm-1.07 2.39a2.32 2.32 0 0 0 1.07-.3v-1.56c-1.26 0-1.94.52-1.94 1.13 0 .45.3.73.87.73Zm3.33.32c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.27v.61a2.38 2.38 0 0 1 1.65-.63 1.52 1.52 0 0 1 1.56 1.71v3.13l.58.16v.21a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.73v-2.1c0-1.1-.46-1.51-1.11-1.51a2 2 0 0 0-1.15.35v3.75l.62.16v.21a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19ZM44.06 53.8a.77.77 0 0 0 .65-.83v-5.49l-.71-.24V47a10.66 10.66 0 0 1 2.23-.16c1.62 0 2.4.6 2.4 1.65A2 2 0 0 1 47 50.28c1.18 0 2 .65 2 1.68 0 1.22-1.14 2.17-2.87 2.17a10.27 10.27 0 0 1-2-.14Zm3.56-5.21c0-.71-.49-1.15-1.46-1.15a3.25 3.25 0 0 0-.51 0v2.65c1.22.04 1.97-.53 1.97-1.5Zm-1.37 4.95a1.53 1.53 0 0 0 1.64-1.46c0-.93-.65-1.41-1.88-1.41h-.36v2.82a4.22 4.22 0 0 0 .6 0Zm3.75.29c.3-.11.59-.33.59-.61v-3.77l-.71-.3v-.24a5 5 0 0 1 1.33-.21h.36l-.06.61v4.24l.62.16v.21a3.41 3.41 0 0 1-1.29.19A3 3 0 0 1 50 54v-.19Zm.49-6.83a.63.63 0 0 1 .63-.66.58.58 0 0 1 .58.61.65.65 0 0 1-.63.69.6.6 0 0 1-.58-.64Zm2.57 6.83c.29-.11.59-.34.59-.61v-3.77l-.72-.3v-.25a5.42 5.42 0 0 1 1.33-.2h.27v.6a2.38 2.38 0 0 1 1.65-.62c.93 0 1.56.59 1.56 1.74v3.13l.58.16v.21a3.18 3.18 0 0 1-1.17.19 2.26 2.26 0 0 1-.73-.1v-.19a.69.69 0 0 0 .41-.74V51c0-1.09-.46-1.5-1.12-1.5a2.09 2.09 0 0 0-1.15.34v3.76l.62.16v.21a3.44 3.44 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm6.15 0c.29-.11.59-.34.59-.61v-3.77l-.73-.3v-.25a5.49 5.49 0 0 1 1.34-.2h.27v.6a2.37 2.37 0 0 1 1.64-.62 1.52 1.52 0 0 1 1.57 1.74v3.13l.58.16v.21a3.18 3.18 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.74V51c0-1.09-.46-1.5-1.11-1.5a2.09 2.09 0 0 0-1.15.34v3.76l.62.16v.21a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm8.38-5.21a1.86 1.86 0 0 1 1.92 2.09v.71h-3.29c0 1.25.73 2 1.65 2a2.85 2.85 0 0 0 1.57-.48 1 1 0 0 1 0 .29c0 .5-.74 1-1.92 1a2.35 2.35 0 0 1-2.32-2.55c0-1.95 1.18-3 2.34-3Zm1 2.22c0-1.1-.47-1.62-1.13-1.62a1.54 1.54 0 0 0-1.26 1.62Zm1.83 2.99c.29-.11.59-.34.59-.61v-3.77l-.72-.3v-.25a5.42 5.42 0 0 1 1.33-.2h.27v.6a2.38 2.38 0 0 1 1.65-.62c.93 0 1.56.59 1.56 1.74v3.13l.58.16v.21a3.18 3.18 0 0 1-1.17.19 2.26 2.26 0 0 1-.73-.1v-.19a.69.69 0 0 0 .41-.74V51c0-1.09-.46-1.5-1.12-1.5a2.09 2.09 0 0 0-1.15.34v3.76l.62.16v.21a3.44 3.44 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm6.15 0c.29-.11.59-.33.59-.61v-6.47l-.73-.3v-.25a5.49 5.49 0 0 1 1.34-.2h.36l-.06.63v6.92l.63.16v.21a3.5 3.5 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm5.74-2.71v-.3c0-1.21-.29-1.46-1-1.46a2.39 2.39 0 0 0-1.68.72 1.79 1.79 0 0 1 0-.34c0-.71.52-1.13 1.82-1.13 1.13 0 1.8.57 1.8 1.5v2.94a1.5 1.5 0 0 0 .45.57 2.8 2.8 0 0 1-.75.57 1.53 1.53 0 0 1-.52-.55 2.3 2.3 0 0 1-1.5.53 1.28 1.28 0 0 1-1.42-1.24c0-1 1.07-1.82 2.9-1.82Zm-1.07 2.39a2.41 2.41 0 0 0 1.07-.3v-1.56c-1.26 0-1.94.52-1.94 1.13 0 .44.3.73.87.73Zm3.34.32c.29-.11.59-.34.59-.61v-3.77l-.73-.3v-.25a5.49 5.49 0 0 1 1.34-.2h.27v.6a2.38 2.38 0 0 1 1.65-.62 1.52 1.52 0 0 1 1.56 1.74v3.13l.58.16v.21a3.18 3.18 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19c.28-.12.4-.33.4-.74V51c0-1.09-.46-1.5-1.11-1.5a2.06 2.06 0 0 0-1.15.34v3.76l.62.16v.21a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm8.71-5.19a4.22 4.22 0 0 1 .77.07v-2l-.76-.3v-.21a5.77 5.77 0 0 1 1.38-.2H95l-.06.63V53a1.61 1.61 0 0 0 .42.65 3.46 3.46 0 0 1-.77.52 1.91 1.91 0 0 1-.54-.67 2.23 2.23 0 0 1-1.42.64 2.16 2.16 0 0 1-2-2.42c0-2 1.22-3.1 2.67-3.1Zm.78 4.44v-3.7a3 3 0 0 0-.81-.12c-1 0-1.66.75-1.66 2.3 0 1.22.63 1.87 1.33 1.87a1.87 1.87 0 0 0 1.14-.36Zm2.28-.28a2.23 2.23 0 0 0 1.58.71c.63 0 .95-.3.95-.69s-.22-.64-1-1l-.55-.24a1.47 1.47 0 0 1-1-1.38 1.77 1.77 0 0 1 1.94-1.64c.9 0 1.26.26 1.26.69a1.89 1.89 0 0 1-.06.47 2.39 2.39 0 0 0-1.27-.43c-.72 0-1 .31-1 .69s.2.63.87.88l.6.24c.81.31 1.11.73 1.11 1.38a1.86 1.86 0 0 1-2.07 1.64c-1 0-1.42-.31-1.42-.91a1 1 0 0 1 .1-.46Zm6.45-4.18a1.87 1.87 0 0 1 1.93 2.09v.71h-3.29c0 1.25.73 2 1.65 2a2.88 2.88 0 0 0 1.58-.48 1.06 1.06 0 0 1 0 .29c0 .5-.73 1-1.92 1a2.35 2.35 0 0 1-2.31-2.55c0-1.95 1.17-3 2.33-3Zm1 2.22c0-1.1-.46-1.62-1.13-1.62a1.54 1.54 0 0 0-1.26 1.62Zm4.08 3.28 3.53-6.12h-2a.93.93 0 0 0-.92.75l-.08.25h-.36l.14-1.67h4.34l.1.25-3.5 6.19h2a1 1 0 0 0 1.15-.79l.07-.21h.36l-.18 1.66H108l-.1-.28Zm8.23-2.61v-.31c0-1.2-.28-1.46-1-1.46a2.41 2.41 0 0 0-1.68.73 1.79 1.79 0 0 1 0-.34c0-.71.52-1.13 1.82-1.13 1.13 0 1.8.57 1.8 1.5v2.94a1.4 1.4 0 0 0 .45.56 2.26 2.26 0 0 1-.76.57 1.56 1.56 0 0 1-.51-.54 2.28 2.28 0 0 1-1.5.53 1.29 1.29 0 0 1-1.42-1.24c0-1 1.08-1.82 2.9-1.82ZM115 53.9a2.3 2.3 0 0 0 1.07-.31V52c-1.26 0-1.94.53-1.94 1.13s.34.77.87.77Zm3.37.31c.3-.11.6-.33.6-.6v-6.48l-.73-.3v-.24a5.1 5.1 0 0 1 1.34-.2h.42l-.07.62v4.47l.61-.54a3 3 0 0 0 1.15-1.78 1.69 1.69 0 0 1 .59-.09 1.1 1.1 0 0 1 .45.1 3.17 3.17 0 0 1-1.52 2l-.39.28 1.72 2.09a1.16 1.16 0 0 0 .83.53v.24a1.42 1.42 0 0 1-.83.23.92.92 0 0 1-.79-.42l-1.82-2.4V54l.58.18v.2a3.49 3.49 0 0 1-1.26.18 3 3 0 0 1-.83-.1v-.2Zm7.51-5.21a1.86 1.86 0 0 1 1.93 2.09v.71h-3.29c0 1.25.73 2 1.65 2a3 3 0 0 0 1.58-.48 1.06 1.06 0 0 1 0 .29c0 .5-.73 1-1.92 1a2.35 2.35 0 0 1-2.28-2.61c0-1.94 1.17-3 2.33-3Zm1 2.21c0-1.09-.47-1.62-1.13-1.62a1.54 1.54 0 0 0-1.26 1.62Zm1.83 3c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5 5 0 0 1 1.34-.2h.27v.6a2.38 2.38 0 0 1 1.65-.63c.92 0 1.56.59 1.56 1.75v3.12l.58.17v.21a3.2 3.2 0 0 1-1.17.18 2.22 2.22 0 0 1-.73-.1v-.18a.7.7 0 0 0 .4-.74v-2.13c0-1.09-.46-1.51-1.11-1.51a2 2 0 0 0-1.16.35v3.75l.63.17v.21a3.68 3.68 0 0 1-1.29.18 2.93 2.93 0 0 1-.84-.1v-.18Zm-82.38 7.13a1.86 1.86 0 0 1 1.93 2.08v.72H45c0 1.25.73 2 1.65 2a3 3 0 0 0 1.58-.48 1 1 0 0 1 0 .28c0 .51-.73 1-1.92 1A2.36 2.36 0 0 1 44 64.33c0-1.94 1.17-3 2.33-3Zm1 2.21c0-1.09-.47-1.62-1.13-1.62a1.55 1.55 0 0 0-1.2 1.62Zm1.83 2.99c.29-.11.59-.33.59-.6v-3.78l-.73-.3v-.24a5.18 5.18 0 0 1 1.34-.21h.27V62a2.38 2.38 0 0 1 1.65-.63c.93 0 1.56.59 1.56 1.74v3.13l.58.17v.2a3 3 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19a.68.68 0 0 0 .41-.73v-2.11c0-1.1-.47-1.51-1.12-1.51a2 2 0 0 0-1.15.35v3.75l.62.17v.2a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm7.84.26a.77.77 0 0 0 .65-.86v-5.49l-.71-.18V60a4.82 4.82 0 0 1 1.28-.18 4.21 4.21 0 0 1 1.05.12v.21a.73.73 0 0 0-.65.82v5.52l.71.18v.24a4.06 4.06 0 0 1-1.33.19 3.47 3.47 0 0 1-1-.1v-.2Zm1.65-3.39 2.64-3-.6-.14V60a3.59 3.59 0 0 1 1.21-.18 2.39 2.39 0 0 1 .77.1v.21a2.43 2.43 0 0 0-.81.59l-2.26 2.51 2 2.52a2.89 2.89 0 0 0 1.23 1v.22a1.24 1.24 0 0 1-.79.25c-.53 0-.85-.18-1.39-.93l-2-2.8Zm6.85-1.8a2.41 2.41 0 0 1 2.43 2.58 2.78 2.78 0 0 1-2.61 3 2.4 2.4 0 0 1-2.44-2.57 2.78 2.78 0 0 1 2.61-3Zm-.11 4.94c.75 0 1.53-.73 1.53-2.26 0-1.3-.71-2-1.5-2s-1.52.71-1.52 2.22.7 2 1.49 2Zm3.25.28c.29-.12.59-.33.59-.61v-3.77l-.73-.3v-.25a5.49 5.49 0 0 1 1.34-.2h.27v.61a2.34 2.34 0 0 1 1.65-.63 1.52 1.52 0 0 1 1.56 1.74v3.13l.58.16v.21a3.18 3.18 0 0 1-1.17.19A2.22 2.22 0 0 1 72 67v-.19c.28-.12.4-.33.4-.73V64c0-1.09-.46-1.5-1.11-1.5a2.09 2.09 0 0 0-1.15.34v3.76l.62.16v.21a3.44 3.44 0 0 1-1.29.19 2.93 2.93 0 0 1-.84-.1v-.19Zm6.15 0c.3-.12.59-.33.59-.61v-3.77l-.72-.3v-.24A5.11 5.11 0 0 1 76 61.7h.36l-.06.6v4.25l.63.16v.21a3.47 3.47 0 0 1-1.3.19 2.9 2.9 0 0 1-.83-.1v-.19Zm.46-6.83a.64.64 0 0 1 .64-.67.58.58 0 0 1 .58.61.65.65 0 0 1-.63.69.6.6 0 0 1-.59-.63Zm2.58 6.83c.29-.12.59-.33.59-.61v-3.77l-.73-.3v-.25a5.56 5.56 0 0 1 1.31-.2h.27v.61a2.34 2.34 0 0 1 1.73-.63c.93 0 1.56.59 1.56 1.74v3.13l.58.16v.21a3.18 3.18 0 0 1-1.17.19 2.22 2.22 0 0 1-.73-.1v-.19a.68.68 0 0 0 .41-.73V64c0-1.09-.47-1.5-1.12-1.5a2.09 2.09 0 0 0-1.15.34v3.76l.62.16v.21a3.44 3.44 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm6.17 0c.31-.12.61-.33.61-.61v-6.47l-.74-.3v-.25a5.62 5.62 0 0 1 1.34-.2h.38l-.06.63v4.46l.61-.53a3 3 0 0 0 1.15-1.79 1.91 1.91 0 0 1 .59-.08 1 1 0 0 1 .45.1 3.16 3.16 0 0 1-1.52 2l-.39.28 1.72 2.09a1.16 1.16 0 0 0 .83.53v.24a1.38 1.38 0 0 1-.83.24.93.93 0 0 1-.79-.43l-1.82-2.39v2.25l.58.18V67a3.49 3.49 0 0 1-1.26.18A2.9 2.9 0 0 1 84 67v-.19Zm5.25 0c.28-.12.59-.33.59-.61v-3.77l-.73-.3v-.25a5.42 5.42 0 0 1 1.34-.2h.26v.79l.31-.35a1.3 1.3 0 0 1 1-.49c.37 0 .58.17.58.48a1.4 1.4 0 0 1-.18.67 1.16 1.16 0 0 0-.69-.26 1.4 1.4 0 0 0-1 .46v3.55l.77.17v.21a4 4 0 0 1-1.38.18 3.11 3.11 0 0 1-.89-.1Zm4.03 0c.31-.12.59-.33.59-.61v-3.77l-.71-.3v-.24a5.05 5.05 0 0 1 1.33-.21h.36l-.06.6v4.25l.63.16v.21a3.41 3.41 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm.47-6.83a.64.64 0 0 1 .63-.67.58.58 0 0 1 .62.67.65.65 0 0 1-.63.69.6.6 0 0 1-.62-.69Zm3.13 2.45-.72-.3v-.24a5.12 5.12 0 0 1 1.34-.21h.36l-.06.63v5c0 1.83-.55 2.4-1.26 2.4a.79.79 0 0 1-.63-.27v-.18c.49 0 1-.56 1-1.7v-5.14ZM96.75 60a.64.64 0 0 1 .64-.67.58.58 0 0 1 .61.67.65.65 0 0 1-.63.69.6.6 0 0 1-.62-.69ZM99 66.83c.31-.12.61-.33.61-.61v-6.47l-.74-.3v-.25a5.62 5.62 0 0 1 1.34-.2h.38l-.06.63v4.46l.61-.53a3 3 0 0 0 1.15-1.79 2 2 0 0 1 .59-.08 1 1 0 0 1 .45.1 3.16 3.16 0 0 1-1.52 2l-.39.28 1.72 2.09a1.16 1.16 0 0 0 .83.53v.24a1.36 1.36 0 0 1-.83.24.93.93 0 0 1-.79-.43l-1.82-2.39v2.25l.58.18V67a3.49 3.49 0 0 1-1.26.18A2.9 2.9 0 0 1 99 67v-.19Zm5.2-1.03a2.19 2.19 0 0 0 1.57.71c.63 0 1-.3 1-.69s-.22-.64-1-.95l-.55-.24a1.47 1.47 0 0 1-1-1.38 1.77 1.77 0 0 1 2-1.64c.89 0 1.25.26 1.25.69a1.89 1.89 0 0 1-.06.47 2.39 2.39 0 0 0-1.27-.43c-.72 0-1 .31-1 .69s.2.63.87.88l.6.24c.81.31 1.11.73 1.11 1.38a1.86 1.86 0 0 1-2.07 1.64c-1 0-1.42-.31-1.42-.91a1.15 1.15 0 0 1 .1-.46Zm4.2 1.03c.29-.12.59-.33.59-.61v-3.77l-.73-.3v-.25a5.49 5.49 0 0 1 1.34-.2h.27v.79l.31-.35a1.33 1.33 0 0 1 1-.49c.38 0 .59.17.59.48a1.53 1.53 0 0 1-.18.67 1.21 1.21 0 0 0-.69-.26 1.4 1.4 0 0 0-1 .46v3.55l.77.17v.21a4 4 0 0 1-1.39.18 3.11 3.11 0 0 1-.89-.1v-.18Zm5.99-5.21a1.87 1.87 0 0 1 1.93 2.09v.71H113c0 1.25.73 2 1.65 2a2.88 2.88 0 0 0 1.58-.48 1.06 1.06 0 0 1 0 .29c0 .5-.73 1-1.92 1a2.35 2.35 0 0 1-2.31-2.55c0-2 1.17-3 2.33-3Zm1 2.22c0-1.1-.47-1.62-1.13-1.62a1.54 1.54 0 0 0-1.26 1.62Zm1.83 2.99c.29-.12.59-.33.59-.61v-6.47l-.72-.3v-.25a5.42 5.42 0 0 1 1.33-.2h.37l-.06.63v6.92l.62.16v.21a3.44 3.44 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm5.78-2.71v-.3c0-1.21-.29-1.46-1-1.46a2.35 2.35 0 0 0-1.67.72 1.19 1.19 0 0 1 0-.33c0-.71.53-1.13 1.83-1.13 1.13 0 1.8.57 1.8 1.5v2.94a1.41 1.41 0 0 0 .45.57 2.5 2.5 0 0 1-.76.56 1.47 1.47 0 0 1-.51-.54 2.33 2.33 0 0 1-1.51.53 1.29 1.29 0 0 1-1.41-1.24c-.15-.94.92-1.82 2.78-1.82Zm-1.08 2.39a2.45 2.45 0 0 0 1.08-.3v-1.56c-1.26 0-2 .52-2 1.13 0 .44.33.73.89.73Zm3.8-2.51v-1.48h-.61v-.37l1.2-1.2h.37v1h1.47l-.08.61h-1.42v2.7c0 .91.27 1.22.69 1.22a1.34 1.34 0 0 0 .82-.29h.12c0 .67-.43 1-1.2 1s-1.33-.47-1.33-1.55V64Zm2.98 2.83c.31-.12.59-.33.59-.61v-3.77l-.71-.3v-.24a5 5 0 0 1 1.32-.21h.37l-.06.6v4.25l.62.16v.21a3.41 3.41 0 0 1-1.29.19 3 3 0 0 1-.84-.1v-.19Zm.47-6.79a.64.64 0 0 1 .63-.67.59.59 0 0 1 .59.61.65.65 0 0 1-.63.69.6.6 0 0 1-.59-.67Zm4.83 1.58a1.87 1.87 0 0 1 1.93 2.09v.71h-3.29c0 1.25.73 2 1.65 2a2.83 2.83 0 0 0 1.57-.48.76.76 0 0 1 0 .29c0 .5-.74 1-1.92 1a2.35 2.35 0 0 1-2.31-2.55c0-2 1.17-3 2.33-3Zm1 2.22c0-1.1-.47-1.62-1.13-1.62a1.54 1.54 0 0 0-1.27 1.62Zm1.74 1.96a2.23 2.23 0 0 0 1.58.71c.63 0 1-.3 1-.69s-.22-.64-1-.95l-.55-.24a1.47 1.47 0 0 1-1-1.38 1.77 1.77 0 0 1 1.94-1.64c.89 0 1.26.26 1.26.69a2.52 2.52 0 0 1-.06.47 2.39 2.39 0 0 0-1.28-.43c-.71 0-1.05.31-1.05.69s.2.63.87.88l.61.24c.8.31 1.11.73 1.11 1.38a1.87 1.87 0 0 1-2.08 1.64c-1 0-1.41-.31-1.41-.91a1 1 0 0 1 .1-.46Z"
+        ></path>
+      </symbol>
+      <symbol id="logo" viewBox="0 0 44 77">
+        <title>logo</title>
+        <path fill="#154273" d="M0 0h44v77H0z"></path>
+        <path
+          fill="#FFF"
+          d="M22.764 56.35h-.765v-2.123h.765v2.123zm3.45-9.353h-.765v-2.123h.765v2.123zm-14.166-3.661c-.058 0-.455.002-.455.084s.184.041.455.084c.611.105.854.414 1.283.414.39 0 .789-.266.635-.828-.026-.094-.083-.072-.094-.008-.061.25-.371.396-.697.396-.404.001-.49-.142-1.127-.142zm-4.213 2.122c.066.092.79 1.03-.319 1.387-.05.017-.066.064.007.097.819.342 1.215-.287 1.215-.287.413.94-.219 1.465-.219 1.465.089.17.481.455 1.076.588.224-.121.542-.352.671-.707 0 0 .161.412.014.805 1.672.152 2.264-1.186 3.552-.943.037.007.055-.018.055-.057 0-.824-.506-2.33-2.101-2.637-1.588-.309-1.161-.961-1.161-.961.672-.029 1.059.262 1.059.262.122-.201-.052-.418-.052-.418.065-.076.101-.35.101-.35-.756 0-.954-.164-.954-.164-.117-.447.196-1.08 1.318-.402.279-.25.258-.631.258-.631.083-.039.135-.172.135-.229 0-.188-.896-.688-1.126-.75-.055-.271-.403-.662-1.458-.521-.499.062-.858-.069-.69-.358.028-.049-.061-.06-.107-.011-.115.115-.275.441.161.66.485.244.513.729.518.799.007.104-.116.113-.143.011-.223-.818-1.341-.996-2.004-.562.039.438.509.729.769.729.149 0 .355-.146.355-.353 0-.101.051-.086.079-.01.11.291-.319.896-.961.526-.652.65-.392 1.455-.326 1.752.117.531-.144 1.047-.623.806-.025-.011-.05-.021-.05.037.001.337.436.714.951.427zm3.591-3.288c-.306.34-.8.264-.919-.297.625-.033.892.031.919.297zm19.398 1.309c-.327 0-.635-.146-.695-.396-.016-.064-.068-.088-.092.008-.155.564.24.828.634.828.429 0 .669-.309 1.282-.414.268-.045.453-.002.453-.084s-.396-.084-.453-.084c-.639-.001-.726.142-1.129.142zm6.289 1.553c0-.058-.023-.048-.047-.037-.48.239-.739-.272-.623-.806.063-.297.324-1.102-.325-1.752-.642.367-1.074-.235-.964-.526.029-.078.078-.091.078.01 0 .203.209.353.354.353.259 0 .729-.291.771-.729-.662-.435-1.779-.258-2.002.562-.027.104-.152.093-.145-.011a.942.942 0 0 1 .518-.799c.437-.219.275-.545.162-.66-.051-.049-.138-.038-.108.011.169.291-.192.422-.688.358-1.054-.142-1.402.25-1.457.521-.229.06-1.128.562-1.128.75 0 .056.054.189.138.229 0 0-.021.381.258.631 1.121-.678 1.433-.045 1.318.402 0 0-.199.164-.955.164 0 0 .034.273.102.35 0 0-.174.217-.053.418 0 0 .388-.291 1.06-.262 0 0 .426.652-1.164.961-1.593.307-2.101 1.812-2.101 2.637 0 .039.018.062.056.055 1.29-.239 1.88 1.097 3.551.944-.146-.394.017-.806.017-.806.131.354.449.586.672.707.596-.133.986-.418 1.076-.588 0 0-.631-.523-.219-1.465 0 0 .396.629 1.215.287.071-.031.057-.08.008-.097-1.108-.356-.387-1.295-.319-1.387.511.288.944-.089.944-.425zm-3.619-3.158c-.119.56-.615.637-.918.297.026-.267.293-.331.918-.297zM21.705 32.48c0 .142.061.266.11.334.097.14.084.218.037.263-.047.047-.123.062-.263-.035a.608.608 0 0 0-.333-.11c-.243 0-.362.157-.362.295 0 .135.119.293.362.293a.624.624 0 0 0 .333-.109c.14-.098.216-.082.263-.035.047.043-.02.529-.076.91-.399.086-.591.404-.591.592 0 .479.513.758.814.918.303-.16.817-.438.817-.918 0-.188-.194-.506-.592-.592-.055-.381-.122-.865-.075-.91.045-.047.125-.062.264.035.066.049.19.109.333.109.24 0 .359-.158.359-.293 0-.138-.119-.295-.359-.295a.592.592 0 0 0-.333.11c-.14.099-.219.082-.264.035-.047-.045-.062-.123.036-.263a.6.6 0 0 0 .109-.334c0-.24-.159-.361-.294-.361-.137.002-.295.121-.295.361zm.294 3.571a.585.585 0 1 0 0 1.166.585.585 0 0 0 0-1.166zm0 5.635c2.347 0 3.672.447 3.672.447.011-1.184.003-1.846.683-1.746-.371-.994 1.229-1.387 1.229-2.684 0-.855-.604-.953-.785-.953-.528 0-.446.346-.897.346-.057 0-.114-.014-.114.025 0 .148.127.404.333.404.277 0 .285-.275.49-.275.088 0 .218.072.218.355 0 .553-.362 1.164-.789 1.639a.473.473 0 0 0-.392-.221c-.252 0-.474.264-.474.588 0 .121.019.207.062.311-.144.08-.269.125-.363.125-.189 0-.482-.078-.482-.5 0-.939 1.262-1.77 1.262-2.959 0-.568-.379-1.135-1.174-1.135-.854 0-.693.777-1.431.777-.034 0-.062.01-.062.041 0 .049.129.479.51.479.406 0 .521-.705.883-.705.137 0 .339.08.339.559 0 .371-.187.972-.45 1.547a.537.537 0 0 0-.369-.166c-.318 0-.545.308-.545.673 0 .229.092.452.248.6-.186.24-.375.433-.635.433-.509 0-.733-.289-.733-.604 0-.34.622-.465.622-.996 0-.36-.234-.565-.459-.565-.245 0-.369.162-.394.162-.023 0-.148-.162-.392-.162-.226 0-.461.203-.461.565 0 .531.623.656.623.996 0 .313-.227.604-.734.604-.259 0-.448-.193-.635-.433a.822.822 0 0 0 .247-.6c0-.365-.226-.673-.541-.673a.541.541 0 0 0-.373.166c-.264-.573-.448-1.176-.448-1.547 0-.479.203-.559.338-.559.359 0 .474.705.884.705.38 0 .508-.43.508-.479 0-.031-.027-.041-.06-.041-.737 0-.579-.777-1.43-.777-.795 0-1.176.566-1.176 1.135 0 1.191 1.263 2.021 1.263 2.959 0 .422-.292.5-.483.5-.095 0-.222-.045-.366-.125a.727.727 0 0 0 .062-.311c0-.324-.222-.588-.473-.588a.473.473 0 0 0-.389.221c-.429-.475-.789-1.086-.789-1.639 0-.283.128-.355.216-.355.206 0 .212.275.49.275.205 0 .333-.254.333-.404 0-.041-.058-.025-.114-.025-.453 0-.369-.346-.899-.346-.178 0-.782.098-.782.953 0 1.297 1.6 1.688 1.229 2.684.679-.098.669.562.683 1.746-.002 0 1.32-.447 3.666-.447zm-4.301 1.752a16.96 16.96 0 0 0-1.301.334c.01-.282.117-.543.369-.602.033-.01.04-.053.011-.07-.568-.379-.875.346-.883.369-.201-.016-.509.049-.509.32 0 .814-1.866 1.268-2.296 1.334.763.293 1.08 1.254 1.08 1.254.553-.553 1.198-1.041 1.34-1.041.147 0 .203.184.214.293.001.037.037.049.061.018.289-.432.148-.528.126-.655-.019-.101.011-.479.434-.435v5.439l-.217.043c-.1.02-.896-.658-1.807-1.289-.909-.629-1.399-.252-2.437.311-1.359.734-2.733.068-2.733.068-1.173.836-1.572 3.258-1.572 3.258-.233.1-.62.205-.986.205-.896 0-1.059-.541-1.059-.865 0-1.379 1.729-1.973 1.729-3.334 0-.33-.151-1.672-1.814-1.672l-1.486-.004c-.623 0-.778-.447-.864-.617-.035-.066-.098-.03-.075.024.048.114-.071.287-.071.633 0 .554.326.886.929.886.274 0 .534-.078.618-.127.056-.033.086.021.059.051-.263.309-.284.885-.176 1.024.025.033.058.022.064-.004.146-.582.692-1.135 1.428-1.135.903 0 .898.766.898.95 0 1.107-1.946 1.921-1.946 3.441 0 1.547 1.632 1.877 2.578 1.633-.056 1.547-1.826 2.072-1.88.967-.004-.052-.042-.063-.072.007-.224.547-.135 1.026.554 1.18.047.013.023.037-.019.065-.682.434-.312 2.139-.278 2.639.051.725-.668.639-.727.615-.031-.012-.059.004-.014.061.51.625 1.139.055 1.139.055.476.15.182.556-.136.769-.05.035-.046.065.008.069.071.007.807.066.938-.521.326.392.806.248.907.197.142-.072.833-.324.9.453.004.055.037.02.061-.011.52-.655-.037-1.062-.348-1.106a.523.523 0 0 1 .818.096c.023.033.049.041.054-.024.042-.83-.634-.906-1.073-.545-.019-.084-.166-.554.496-.535.014 0 .047-.021.014-.055-.513-.543-.936-.05-1.034.067-.229.271-.797.162-.85.154.179-2.89 2.724-1.865 3.074-3.271.017-.074.049-.047.056-.02.097.344.96.391 1.119-.283.009-.043.004-.076-.025-.045-.737.736-2.398-1.564-.133-3.434 1.934-1.595 3.667-.705 4.326-.181.035.229-.103.306-.19.332-.033.011-.042.039.009.06.184.069.443.049.564-.125.416.291.061.654-.107.756-.043.027-.025.055.013.062.38.068.695-.319.708-.545l.065.037v1.642c0 2.338 2.696 2.661 5.655 4.645 2.959-1.982 5.658-2.307 5.658-4.645v-1.642l.063-.037c.015.226.329.613.708.545.034-.008.055-.034.014-.062-.168-.102-.522-.465-.107-.756.121.172.381.194.564.125.049-.021.039-.049.011-.06-.089-.026-.228-.103-.193-.332.66-.524 2.396-1.414 4.326.181 2.267 1.869.604 4.17-.131 3.434-.031-.031-.035.002-.026.045.159.674 1.021.627 1.118.283.007-.027.041-.055.058.02.351 1.404 2.896.381 3.073 3.271-.054.008-.623.114-.853-.154-.096-.119-.521-.61-1.032-.067-.033.032-.002.055.015.055.662-.018.516.451.494.535-.438-.361-1.115-.285-1.07.545.004.065.027.059.056.024a.523.523 0 0 1 .817-.096c-.312.047-.867.451-.348 1.106.021.027.055.064.061.011.066-.777.756-.525.899-.453.101.051.579.194.905-.197.13.588.865.525.938.521.053-.002.057-.034.01-.069-.317-.211-.611-.617-.137-.769 0 0 .631.57 1.139-.055.045-.057.017-.07-.012-.061-.061.021-.779.107-.728-.615.034-.5.403-2.205-.277-2.641-.044-.027-.067-.053-.018-.064.687-.152.774-.633.552-1.18-.027-.07-.066-.059-.07-.006-.054 1.106-1.822.578-1.879-.967.944.244 2.577-.086 2.577-1.634 0-1.521-1.944-2.334-1.944-3.442 0-.185-.004-.949.896-.949.736 0 1.281.551 1.429 1.135.009.027.04.037.065.004.105-.141.086-.717-.178-1.023-.024-.03.002-.084.06-.053.083.051.344.129.617.129.604 0 .931-.334.931-.887 0-.346-.12-.52-.072-.633.025-.055-.039-.092-.072-.023-.086.17-.241.619-.862.619l-1.485.004c-1.662 0-1.816 1.342-1.816 1.672 0 1.359 1.732 1.953 1.732 3.334 0 .322-.166.863-1.06.863-.37 0-.755-.104-.987-.203 0 0-.398-2.422-1.572-3.26 0 0-1.373.668-2.73-.068-1.039-.562-1.528-.938-2.439-.309-.908.629-1.703 1.307-1.806 1.289l-.217-.043v-5.439c.422-.045.452.332.433.435-.021.127-.162.225.127.655.022.031.057.021.061-.018.013-.109.066-.295.216-.295.144 0 .788.488 1.34 1.041 0 0 .315-.959 1.08-1.254-.433-.064-2.296-.52-2.296-1.334 0-.271-.309-.336-.51-.32-.008-.021-.313-.746-.883-.369-.029.021-.021.062.012.07.25.059.355.318.369.604a20.483 20.483 0 0 0-5.604-.817c-1.332 0-2.559.153-3.536.33v1.887h-.77v-1.733l-.002-.003m-5.062 19.314c-.203-.082-.338-.213-.338-.479v-1.172c-.336-.117-1.252-.467-3.08-.467-1.521 0-1.999.344-2.02.465l-.404 2.229s.616-.564 2.821-.42c2.657.17 5.408 1.736 5.408.064v-.98c-2.084.001-2.387.662-2.387.76zm16.343-.759v.981c0 1.672 2.752.104 5.408-.063 2.205-.146 2.82.42 2.82.42l-.402-2.229c-.021-.123-.5-.463-2.021-.463-1.829 0-2.748.348-3.081.467v1.17c0 .268-.135.397-.338.479-.002-.101-.306-.762-2.386-.762zm-6.98-1.013c4.276 0 8.622.224 9.188.869.045.051.062-.002.062-.041V59.54c0-.66-4.479-1.045-9.253-1.045-4.771 0-9.251.387-9.251 1.045v2.268c0 .039.019.092.065.041.569-.645 4.911-.869 9.189-.869zm-3.813-10.688-.433-.11-.035.053-.503-.221s.371-.002.451-.004c.042 0 .044-.025.023-.047l-.385-.377.496.186c.032.013.045-.014.028-.035l-.329-.483s.403.271.485.324c.025.021.047.002.038-.023-.11-.268-.231-.569-.231-.569l.443.42c.02.02.044.01.037-.021l-.121-.567.323.477c.019.027.045.02.045-.014l.011-.521.206.476c.014.031.04.035.056-.008l.168-.4.019.541-.072.014-.092.652c.646-.152 1.45-1.258 2.069-1.258.734 0 1.001.863 2.358.426.344.506.464.945.595 1.559.525.494 1.262.328 1.262-.193 0-.705-.767-.838-.767-1.571 0-.326.229-.798.856-.798.332 0 .814.142 1.096.142.33 0 .4-.237.438-.34.03-.074.122-.05.112.01-.009.068.04.164.04.32 0 .465-.676.524-.76.467-.034-.022-.059.015-.034.033.101.082.079.356-.043.532-.015.021-.033.019-.036-.002-.074-.332-.462-.741-.807-.741-.125 0-.377.071-.377.362 0 .418.834.797.834 1.664 0 .898-.889 1.113-1.785.892.029.852 1.301 1.356 1.332.75.001-.043.025-.019.035 0 .188.26.104.459-.137.559.223.101.262.548.325.814.099.399.522.18.545.168.021-.015.029-.002.021.022-.16.418-.588.26-.588.26-.224.156.047.298.25.357.031.008.031.029.006.039-.149.057-.469.156-.625-.111-.114.275-.35.271-.443.271-.164 0-.273.166-.234.392.002.021-.012.024-.023.014-.391-.258-.166-.562-.01-.639a.283.283 0 0 0-.41.188c-.01.023-.024.023-.033.002-.17-.453.202-.586.473-.473-.02-.062-.16-.284-.514-.215-.018.006-.025 0-.018-.023.058-.139.232-.344.553-.137.165.104.443-.045.47-.06-.567-1.131-1.674-.185-1.921-1.071-.005-.019-.025-.035-.042.015-.058.188-.541.202-.63-.171-.007-.027.005-.031.023-.014.07.071.221.135.42-.152.131-.189.149-.443.149-.615 0-.688-.688-1.846-1.761-1.846-.677 0-1.406.266-1.946.658l.503.114a.776.776 0 0 1-.986.681l.076-.582c-.076.022-.274.094-.38.244-.01.012-.023.008-.028-.005-.09-.329.182-.495.267-.538.01-.007.01-.015-.009-.015-.242-.01-.38.17-.421.231-.007.011-.016.008-.019 0-.021-.068-.062-.238.051-.359zm1.495 3.937c-.193.234-.362.011-.615.011-.238 0-.277.2-.283.278-.002.015-.009.019-.02.004-.268-.369.033-.567.207-.596-.025-.025-.288-.203-.458.041-.012.018-.028.01-.028-.012-.01-.459.354-.49.592-.289.045-.174-.067-.291-.261-.299-.023 0-.027-.016-.019-.025.082-.088.161-.127.239-.127.254 0 .287.32.453.32.249 0 .602-.336.637-.371-.008-.02-.248-.666-.199-1.053.002-.017-.007-.019-.019-.012-.119.067-.426.063-.426-.312 0-.029.009-.031.025-.008.135.186.352-.023.462-.146.116-.129.744-1.045 1.582-1.045.184.002.421.102.612.236-.289.352-.001.688.212.645.026-.004.031.02.007.027-1.108.418-1.602.584-1.602 1.51 0 .484.165.752.451.688.02-.004.025.006.011.021a.413.413 0 0 1-.318.164c-.232 0-.274-.127-.397-.127-.125 0-.538.242-.538.443 0 .078.049.182.194.277.01.006.004.014-.003.014-.095.024-.422.052-.498-.257zm2.915-9.014c-.347-.021-.567.057-.559.166.172.178.396.159.559-.166zm-1.275.855c.242-.062.513-.032.54-.022.04.015.038.072-.007.078-.509.063-.532.299-.859.299-.214 0-.445-.215-.358-.532.011-.041.044-.043.054-.004.032.134.231.283.63.181zM14.7 57.374c.337.435.662.024 1.105.024.217 0 .48.074.53.509.002.021.021.028.042 0 .483-.66-.068-1.033-.383-1.08.068-.062.539-.353.84.075.017.023.049.017.049-.018 0-.834-.628-.893-1.08-.531-.084-.326.161-.541.476-.541.037 0 .051-.024.032-.047-.56-.602-.979.154-1.073.273-.223.297-1.024-.262-1.341-.594 0 0 .704-.74.704-1.414 0-.041-.004-.098-.004-.121 0-.021.01-.029.031-.02.07.039.168.067.259.067.161 0 .466-.051.466-.625 0-.043-.019-.041-.037-.017-.083.123-.178.148-.25.148-.568 0-1.758-1.9-3.162-1.9-.366 0-1.059.265-1.409.644.167.101.201.308.184.457-.025.239-.216.358-.412.416-.035.008-.04.033 0 .049.706.271 1.997.759 2.29 1.011.346.299.277.864.078 1.646-.194.75-.609.646-.761.623-.023-.004-.03.01-.017.027a.756.756 0 0 0 .595.309c.369 0 .506-.229.697-.229.319 0 .991.459.991.81 0 .196-.154.375-.35.502-.014.01-.012.024.007.028.154.03.782.083.903-.481zm15.501.485c.018-.004.023-.02.009-.028-.198-.127-.353-.306-.353-.502 0-.349.674-.81.994-.81.188 0 .325.229.694.229.19 0 .413-.078.599-.309.015-.019.004-.031-.018-.027-.152.023-.566.127-.761-.623-.2-.779-.271-1.346.075-1.646.295-.25 1.582-.74 2.291-1.011.039-.016.035-.041 0-.049-.194-.054-.387-.172-.414-.416-.016-.149.017-.354.187-.457-.353-.379-1.045-.644-1.409-.644-1.404 0-2.596 1.9-3.164 1.9-.07 0-.164-.025-.248-.146-.02-.026-.037-.028-.037.015 0 .574.304.625.463.625a.535.535 0 0 0 .262-.065c.02-.013.027-.004.027.018 0 .023-.004.082-.004.121 0 .678.707 1.416.707 1.416-.32.332-1.119.891-1.343.594-.095-.121-.513-.875-1.071-.273-.02.021-.006.047.033.047.312 0 .559.215.475.541-.455-.362-1.079-.305-1.079.531 0 .031.032.041.05.018.297-.428.771-.139.839-.077-.315.049-.864.42-.383 1.08.019.028.037.022.042 0 .05-.433.311-.507.527-.507.44 0 .767.408 1.104-.024.124.558.754.505.906.479zM18.849 46.893c-.044.062-.191 0-.247-.026-.015-.007-.017 0-.012.01.035.08.177.315.389.315.095 0 .236-.057.274-.119 0 0 .825.269 1.233.382a1.392 1.392 0 0 0-.277.741c-.329-.202-1.646-.909-1.646-.909l-.411.559c-.067.093-.394-.145-.326-.237l.312-.426c-.102-.109-.352-.041-.419-.021-.01.002-.019-.002-.01-.02.04-.082.196-.343.583-.226.003-.238-.351-.162-.443-.136-.012.003-.017-.002-.005-.014.096-.104.383-.334.702-.145l.14-.193-.281-.297.177-.242.198.269 1.522-2.085c.038-.053.339-.139.454-.163.012.116.022.428-.013.479l-1.497 2.104.315.102-.173.244-.373-.172-.166.226zm5.335-.34c0 .193.119.473.373.393.014-.006.026-.002.023.011-.04.213-.42.408-.596.157-.152.324-.114.63.216.81.019.011.022.033.003.05-.2.145-.51.11-.653-.166-.274.204-.233.643-.067.791 0 .002-.756.45-1.44.129-.455-.218-.824-.496-1.412-.451.082-.822.493-1.039 1.248-1.156.604-.098.683-.375.596-.584-.206-.055-.582.133-.582.133-.067-.113.031-.23.031-.23-.039-.045-.056-.197-.056-.197.422 0 .497-.094.497-.094.077-.438-.372-.485-.715-.248-.159-.141-.132-.328-.132-.328-.047-.021-.077-.096-.077-.127 0-.104.5-.385.63-.42.032-.146.213-.35.747-.299.064-.143-.039-.656-.104-.795-.021-.043.011-.064.058-.035.186.117.371.551.496.56 0 0 .6-.312.627-.295.028.018.112.684.112.684.079.099.542.002.743.091.052.021.048.059.003.065-.149.024-.631.233-.71.367.271.406.141 1.016.141 1.184z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 16 11.2" id="mail" viewBox="0 0 16 11.2">
+        <title>mail</title>
+        <path
+          d="M15.4 0H.6C.3 0 0 .3 0 .7v9.9c0 .4.3.7.6.7h14.7c.4 0 .6-.3.6-.7V.7c.1-.4-.2-.7-.5-.7zm-1.3 1.6L8 5.8 1.9 1.6h12.2zM1.6 3l6 4.1c.2.1.3.1.4.1.1 0 .2 0 .4-.1l6-4.1v6.5l-3.8-2.8s-.1.1 0 .1c.1.1 2.2 2.7 2.2 2.7H3.3s2.1-2.6 2.2-2.7c.1-.1 0-.1 0-.1L1.6 9.6V3z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+      <symbol fill="none" id="not-compliant" viewBox="0 0 30 30">
+        <title>not-compliant</title>
+        <circle cx="15" cy="15" r="15" fill="#D52B1E"></circle>
+        <path
+          d="M19.63 8.65 15 12.75l-4.63-4.1a1.258 1.258 0 0 0-1.696.025 1.258 1.258 0 0 0-.025 1.695L12.75 15l-4.1 4.63a1.258 1.258 0 0 0 .024 1.695 1.258 1.258 0 0 0 1.696.025l4.63-4.1 4.63 4.1c.486.431 1.222.42 1.695-.025a1.258 1.258 0 0 0 .025-1.695L17.25 15l4.1-4.63a1.258 1.258 0 0 0-.025-1.695 1.258 1.258 0 0 0-1.695-.025ZM15 15.012l-.006-.006-.006-.006.006-.006.006-.006.006.006.006.006-.006.006-.006.006Z"
+          fill="#fff"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 13.3 13.3" id="plus" viewBox="0 0 13.3 13.3">
+        <title>plus</title>
+        <path
+          d="M12.3 5.2H8.1V1c0-.8-.7-1-1.5-1-.7 0-1.4.2-1.4 1v4.1H1c-.8 0-1 .7-1 1.5s.2 1.5 1 1.5h4.1v4.1c0 .8.7 1 1.5 1s1.5-.2 1.5-1V8.1h4.1c.8 0 1-.7 1-1.5s-.1-1.4-.9-1.4z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 12 12" id="search" viewBox="0 0 12 12">
+        <title>search</title>
+        <path
+          d="m8.6 6.7 3 3c.5.5.5 1.2 0 1.7l-.2.2c-.5.5-1.2.5-1.7 0l-3-3c-.6.3-1.4.5-2.1.5C2 9.1 0 7.1 0 4.6 0 2 2 0 4.6 0c2.5 0 4.6 2 4.6 4.6-.1.7-.3 1.5-.6 2.1zm-4-4.9C3 1.8 1.8 3 1.8 4.6c0 1.5 1.2 2.8 2.8 2.8 1.5 0 2.8-1.2 2.8-2.8C7.3 3 6.1 1.8 4.6 1.8z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+      <symbol fill="none" id="semi-compliant" viewBox="0 0 30 30">
+        <title>semi-compliant</title>
+        <circle cx="15" cy="15" r="15" fill="#FFB612"></circle>
+        <path
+          d="M13 19.343c0-.477.13-.889.391-1.214.261-.336.652-.498 1.185-.498.522 0 .924.151 1.196.433.272.293.413.715.413 1.279 0 .465-.13.866-.391 1.18-.261.314-.653.477-1.185.477-.522 0-.924-.14-1.196-.422-.272-.271-.413-.683-.413-1.235Zm.337-11.126L16.033 8l-.24 5.97v2.848l-2.467.054V8.217h.011Z"
+          fill="#333"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 16 16" id="signal" viewBox="0 0 16 16">
+        <title>signal</title>
+        <path
+          d="m6.1.2.2.8c-.7.2-1.4.5-2 .8l-.4-.7C4.6.7 5.3.4 6.1.2zm3.8 0-.2.8c.7.2 1.4.5 2 .8l.4-.6c-.7-.5-1.4-.8-2.2-1zM1.2 3.9c-.5.7-.8 1.4-1 2.2l.8.2c.2-.7.5-1.4.8-2l-.6-.4zM.8 8c0-.4 0-.7.1-1.1l-.8-.1C0 7.6 0 8.4.1 9.2l.7-.1c0-.4-.1-.7 0-1.1zm11.3 6.8-.4-.6c-.6.4-1.3.7-2 .8l.2.7c.8-.1 1.5-.4 2.2-.9zM15.3 8c0 .4 0 .7-.1 1.1l.7.1c.1-.8.1-1.6 0-2.4l-.7.1c0 .4.1.7.1 1.1zm.5 1.9-.8-.2c-.2.7-.5 1.4-.8 2l.6.4c.5-.7.8-1.4 1-2.2zm-6.7 5.3c-.7.1-1.5.1-2.2 0l-.1.7c.8.1 1.6.1 2.4 0l-.1-.7zm4.7-2.9c-.4.6-1 1.1-1.5 1.5l.4.6c.6-.5 1.2-1 1.7-1.7l-.6-.4zM12.3 2.2c.6.4 1.1 1 1.5 1.5l.6-.4c-.5-.6-1-1.2-1.7-1.7l-.4.6zM2.2 3.7c.4-.6 1-1.1 1.5-1.5l-.4-.6c-.7.4-1.3 1-1.7 1.6l.6.5zm12.6.2-.6.4c.4.6.7 1.3.8 2l.7-.2c-.1-.8-.4-1.5-.9-2.2zM6.9.8C7.6.7 8.4.7 9.1.8l.1-.7C8.4 0 7.6 0 6.8.1l.1.7zM2.5 14.6 1 15l.4-1.5-.7-.2-.4 1.5v.4c0 .1.1.2.2.3.1.1.2.2.3.2h.4l1.5-.4-.2-.7zm-1.7-2 .7.2.2-1.1c-.4-.6-.6-1.3-.8-2l-.7.2c.2.7.4 1.3.7 1.9l-.1.8zm3.5 1.6-1.1.2.2.7.8-.1c.6.3 1.2.6 1.9.7l.2-.7c-.7-.1-1.4-.4-2-.8zM8 1.5c-1.2 0-2.3.3-3.3.9S2.9 3.8 2.3 4.9 1.5 7 1.5 8.2c0 1.2.4 2.3 1 3.3l-.6 2.7 2.7-.6c.9.5 1.8.9 2.8 1 1 .1 2 0 3-.4.9-.4 1.8-.9 2.5-1.7.7-.7 1.2-1.6 1.5-2.6.3-1 .3-2 .1-3-.2-1-.6-1.9-1.2-2.7-.6-.8-1.4-1.5-2.3-1.9-1-.6-2-.8-3-.8z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 28 28" id="status-a" viewBox="0 0 28 28">
+        <title>status-a</title>
+        <path
+          class="st0"
+          d="M28 14c-.1-1.3-.8-2.5-1.9-3.2.6-1.2.6-2.6 0-3.8-.7-1.1-1.9-1.8-3.3-1.9-.1-1.3-.8-2.5-1.8-3.3-1.2-.6-2.6-.6-3.8 0C16.5.8 15.3.1 14 0c-1.3.1-2.5.8-3.2 1.9-1.2-.6-2.6-.6-3.8 0-1.1.7-1.8 1.9-1.9 3.2-1.3.1-2.5.8-3.2 1.9-.6 1.2-.6 2.6 0 3.8C.8 11.5.1 12.7 0 14c.1 1.3.8 2.5 1.9 3.2-.6 1.2-.6 2.6 0 3.8.7 1.1 1.9 1.8 3.3 1.9.1 1.3.8 2.5 1.8 3.3 1.2.6 2.6.6 3.8 0 .7 1.1 1.9 1.8 3.2 1.9 1.3-.1 2.5-.8 3.2-1.9 1.2.6 2.6.6 3.8 0 1.1-.7 1.8-1.9 1.9-3.3 1.3-.1 2.5-.8 3.3-1.8.6-1.2.6-2.6 0-3.8 1-.8 1.7-2 1.8-3.3zM14 24.1C8.4 24.1 3.9 19.6 3.9 14S8.4 3.9 14 3.9 24.1 8.4 24.1 14 19.6 24.1 14 24.1z"
+        ></path>
+        <path
+          class="st0"
+          d="M14 5c-5 0-9 4-9 9s4 9 9 9 9-4 9-9-4-9-9-9zm5.4 5.3-5.6 9.3c-.2.3-.5.4-.8.4-.3 0-.6-.2-.7-.4l-3.6-6.1c-.2-.4-.1-.8.2-1.1s.8-.3 1.1 0l3 2.6 5-5.7c.3-.3.9-.3 1.2 0 .3.3.4.7.2 1z"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 25 30.5" id="status-law" viewBox="0 0 25 30.5">
+        <title>status-law</title>
+        <path
+          d="m22.2 0-2.8 8 .6 1.5V14h-.9l-6.6-9.5L5.9 14H5V9.5L5.5 8 2.8 0 0 8l.5 1.5v21H8V29h1v-2.8l2-.4V29h3v-2.8l2-.4V29h1v1.5h7.5v-21L25 8l-2.8-8zm-9.7 13.4c1.2 0 2.1.9 2.1 2.1 0 1.2-.9 2.1-2.1 2.1s-2.1-.9-2.1-2.1c0-1.2.9-2.1 2.1-2.1zm4 11.6h-2.6c-.3-1.5-1.4-2-1.4-2s-1.1.5-1.4 2H8.5v-.5l4-4.5 4 4.5v.5z"
+          style="fill: #a90061"
+        ></path>
+      </symbol>
+      <symbol id="success" viewBox="0 0 20 20">
+        <title>success</title>
+        <g data-name="icon succes">
+          <path
+            d="M19.57 2.17A2.09 2.09 0 0 0 17.83.44 58.36 58.36 0 0 0 10 0a58.36 58.36 0 0 0-7.83.44A2.07 2.07 0 0 0 .44 2.17 58.36 58.36 0 0 0 0 10a58.36 58.36 0 0 0 .44 7.83 2.08 2.08 0 0 0 1.73 1.74A59.71 59.71 0 0 0 10 20a59.71 59.71 0 0 0 7.83-.43 2.1 2.1 0 0 0 1.74-1.74A59.71 59.71 0 0 0 20 10a47.82 47.82 0 0 0-.43-7.83Z"
+            style="fill-rule: evenodd; fill: #39870c"
+          ></path>
+          <path
+            data-name="Path"
+            d="M15.11 6.42 10 14.84a.78.78 0 0 1-.67.38.78.78 0 0 1-.67-.38l-3.33-5.6a.8.8 0 0 1 .17-1 .79.79 0 0 1 1 0l2.75 2.4 4.58-5.16a.79.79 0 0 1 1.26.94"
+            style="fill: #fff; fill-rule: evenodd"
+          ></path>
+        </g>
+      </symbol>
+      <symbol id="triangle" viewBox="0 0 511.45 446.62">
+        <title>triangle</title>
+        <path
+          d="M2.31 426 244.14 7.19a13.38 13.38 0 0 1 23.18 0L509.14 426a13.39 13.39 0 0 1-11.59 20.08H13.9A13.39 13.39 0 0 1 2.31 426Z"
+          style="stroke: #000"
+        ></path>
+      </symbol>
+      <symbol style="enable-background: new 0 0 15.9 12.9" id="twitter" viewBox="0 0 15.9 12.9">
+        <title>twitter</title>
+        <path
+          d="M14.3 3.2v.4c0 4.3-3.3 9.3-9.3 9.3-1.8 0-3.5-.5-5-1.5h.8c1.5 0 2.9-.5 4-1.4-1.4 0-2.6-.9-3-2.3.5.1 1 .1 1.5-.1C1.7 7.5.6 6.1.6 4.6c.5.3 1 .4 1.5.4C.7 4 .2 2.1 1.1.6c1.7 2 4.1 3.3 6.7 3.4-.2-1.1.1-2.3 1-3.1 1.3-1.2 3.4-1.2 4.6.1.7-.1 1.4-.4 2.1-.8-.3.8-.8 1.4-1.5 1.8.6-.1 1.3-.2 1.9-.5-.5.7-1 1.3-1.6 1.7z"
+        ></path>
+      </symbol>
+      <symbol id="warning" viewBox="0 0 91.88 83.65">
+        <title>icon-warning</title>
+        <path
+          d="M2.16 70.48 38.73 6.63a13.17 13.17 0 0 0 .64-1.24c1-2.24 5.93-11.19 13.33.48C61.07 19.08 90.07 70.3 90.07 70.3s6.76 13.21-5.8 13.21H9.3c-.57 0-1.13 0-1.69.08-2.11.21-8.7.25-7.45-7.59a15.92 15.92 0 0 1 2-5.52Z"
+          style="fill: #ffb612"
+        ></path>
+        <path d="M40.63 52.49V24.46l10.63-1.61v29.64H40.63z"></path>
+        <rect x="38.91" y="58.95" width="14.06" height="14.06" rx="7.03"></rect>
+      </symbol>
+      <symbol style="enable-background: new 0 0 16.6 16.7" id="whatsapp" viewBox="0 0 16.6 16.7">
+        <title>whatsapp</title>
+        <path
+          d="M14.2 2.4C12.6.9 10.5 0 8.3 0 3.8 0 .1 3.7.1 8.3c0 1.5.4 2.9 1.1 4.1L0 16.7l4.4-1.1c1.2.7 2.6 1 3.9 1 4.6 0 8.3-3.7 8.3-8.3 0-2.2-.9-4.3-2.4-5.9zM8.3 15.1c-1.2 0-2.4-.3-3.5-1l-.2-.1-2.6.7.7-2.5-.2-.3c-.7-1.1-1.1-2.4-1-3.7 0-3.8 3.1-6.9 6.9-6.9 1.8 0 3.6.7 4.9 2s2 3 2 4.9c-.1 3.8-3.2 6.9-7 6.9zm3.8-5.1-1.4-.7c-.2-.1-.3-.1-.5.1-.1.2-.5.7-.7.8-.1.1-.2.2-.4.1s-.9-.3-1.7-1c-.6-.6-1-1.3-1.1-1.5-.1-.2 0-.3.1-.4.2-.3.4-.6.5-.7.1-.1 0-.3 0-.4-.1-.1-.5-1.1-.6-1.5-.2-.4-.4-.3-.5-.3h-.4c-.1-.1-.4 0-.5.2-.2.2-.8.7-.8 1.7s.7 2 .8 2.1c.1.1 1.5 2.2 3.5 3.1.6.3 1 .4 1.3.5.5.2.9.1 1.3.1.4-.1 1.2-.5 1.4-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"
+          style="fill-rule: evenodd; clip-rule: evenodd"
+        ></path>
+      </symbol>
+    </svg>
+  </body>
+</html>
