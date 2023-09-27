@@ -27,7 +27,7 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'css-breadcrumb-nav',
-    status: 'IN DEVELOPMENT',
+    status: 'ALPHA',
     tokens,
     tokensDefinition,
     docs: {
@@ -64,7 +64,7 @@ export const Default: Story = {
   },
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -88,7 +88,7 @@ export const Arrows: Story = {
   name: 'Arrows',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -115,7 +115,7 @@ export const ArrowsDisabledCurrent: Story = {
   name: 'Arrows: current link is disabled',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -143,7 +143,7 @@ export const Rel: Story = {
       },
     },
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -172,7 +172,7 @@ export const Current: Story = {
   name: 'Current page',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -201,7 +201,7 @@ export const Disabled: Story = {
   name: 'Disabled link',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -242,7 +242,7 @@ export const OtherLanguage: Story = {
       },
     },
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -271,7 +271,7 @@ export const DocumentTitleLanguage: Story = {
       },
     },
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -306,7 +306,7 @@ export const CodeTitle: Story = {
   name: 'Code in link text',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -335,7 +335,7 @@ export const DisabledCurrent: Story = {
   name: 'Current page link is disabled',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -367,7 +367,64 @@ export const RightToLeft: Story = {
   name: 'Right-to-left',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
+    },
+  },
+};
+
+export const SeparatorChar: Story = {
+  args: {
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>/</BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/" index={1}>
+        Wonen en leven
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>/</BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/b/" current disabled index={2}>
+        Afval
+      </BreadcrumbLink>,
+    ],
+  },
+  name: 'Separator character',
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
+export const SeparatorIcon: Story = {
+  args: {
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/" index={1}>
+        Wonen en leven
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/b/" current disabled index={2}>
+        Afval
+      </BreadcrumbLink>,
+    ],
+  },
+  name: 'Separator icon',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Use an SVG icon with `fill="currentColor"` to apply the color from `--utrecht-icon-separator-color`.',
+      },
+    },
+    status: {
+      type: 'ALPHA',
     },
   },
 };
@@ -407,7 +464,7 @@ export const RightToLeftSeparator: Story = {
       },
     },
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -457,7 +514,7 @@ export const ManyLinks: Story = {
   name: 'Many links',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
@@ -508,7 +565,7 @@ export const LineWrap: Story = {
   name: 'Line wrap',
   parameters: {
     status: {
-      type: 'ALHPA',
+      type: 'ALPHA',
     },
   },
 };
