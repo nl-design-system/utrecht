@@ -1,3 +1,4 @@
+/* eslint-env node */
 import { angularOutputTarget, ValueAccessorConfig } from '@stencil/angular-output-target';
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
@@ -61,6 +62,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
+      baseUrl: process.env.STENCIL_BASE_URL,
     },
     reactOutputTarget({
       componentCorePackage: '@utrecht/web-component-library-stencil',
