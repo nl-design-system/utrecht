@@ -231,7 +231,32 @@ export const Icons: Story = {
   },
 };
 
-export const Separator: Story = {
+export const SeparatorChar: Story = {
+  args: {
+    label: 'Kruimelpad:',
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+        Home
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>/</BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/" index={1}>
+        Wonen en leven
+      </BreadcrumbLink>,
+      <BreadcrumbSeparator>/</BreadcrumbSeparator>,
+      <BreadcrumbLink href="https://example.com/a/b/" rel="up" index={2}>
+        Afval
+      </BreadcrumbLink>,
+    ],
+  },
+  name: 'Separator character',
+  parameters: {
+    status: {
+      type: 'EXPERIMENTAL',
+    },
+  },
+};
+
+export const SeparatorIcon: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
@@ -252,7 +277,7 @@ export const Separator: Story = {
       </BreadcrumbLink>,
     ],
   },
-  name: 'Separator',
+  name: 'Separator icon',
   parameters: {
     status: {
       type: 'EXPERIMENTAL',
