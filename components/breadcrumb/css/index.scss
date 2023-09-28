@@ -49,8 +49,11 @@
   @include utrecht-breadcrumb__link--disabled;
 }
 
-.utrecht-breadcrumb__link--current:any-link {
-  /* `current` should override `disabled` */
+.utrecht-breadcrumb__link--current {
+  /*
+   * `current` should apply to `disabled` links too, and it should override `disabled`.
+   * The override is the reason why this selector is not ordered alphabetically.
+   */
   @include utrecht-breadcrumb__link--current;
 }
 
