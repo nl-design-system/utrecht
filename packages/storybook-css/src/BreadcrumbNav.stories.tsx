@@ -206,6 +206,22 @@ export const Disabled: Story = {
   },
 };
 
+export const Home: Story = {
+  args: {
+    label: 'Home only',
+    children: [
+      <BreadcrumbLink href="https://example.com/" rel="home" index={0} current disabled>
+        Home
+      </BreadcrumbLink>,
+    ],
+  },
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
 export const OtherLanguage: Story = {
   args: {
     label: 'Kruimelpad:',
