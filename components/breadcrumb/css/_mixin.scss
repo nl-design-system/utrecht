@@ -54,7 +54,10 @@
 }
 
 @mixin utrecht-breadcrumb__link--current {
+  --utrecht-link-current-font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
+
   cursor: var(--utrecht-action-inert-cursor, default);
+  font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
 }
 
 @mixin utrecht-breadcrumb__link--disabled {
