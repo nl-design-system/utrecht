@@ -27,6 +27,9 @@
   /* stylelint-disable-next-line property-disallowed-list */
   height: 100%;
 
+  /* Remove tooltip from SVG `<title>` element using `pointer-events: none` */
+  pointer-events: none;
+
   /* stylelint-disable-next-line property-disallowed-list */
   width: 100%;
 }
