@@ -9,10 +9,13 @@ Start this Stencil development page using:
   <head>
     <meta charset="utf-8" />
     <title>Web Components example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
     <link rel="stylesheet" href="../../../../../rijkshuisstijl-community/packages/design-tokens/dist/index.css" />
     <link rel="stylesheet" href="../../../../../themes/packages/voorbeeld-design-tokens/dist/index.css" />
     <link rel="stylesheet" href="https://unpkg.com/@nl-rvo/assets@1.0.0-alpha.257/fonts/index.css" />
+    <script type="module" src="/build/utrecht.esm.js"></script>
+    <script nomodule src="/build/utrecht.js"></script>
     <style>
       html,
       body {
@@ -573,10 +576,6 @@ Welzijn en Sport"
         </utrecht-page>
       </utrecht-document>
     </utrecht-surface>
-    <script type="module">
-      import { defineCustomElements } from "../loader/index.js";
-      defineCustomElements();
-    </script>
     <script type="module">
       import { defineCustomElements } from "../../../../../rijkshuisstijl-community-web-components/packages/web-components-stencil/loader/index.js";
       defineCustomElements();

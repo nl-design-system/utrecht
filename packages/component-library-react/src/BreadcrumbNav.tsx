@@ -42,7 +42,6 @@ export const BreadcrumbNav = forwardRef(
         ref={ref}
         className={clsx(
           'utrecht-breadcrumb',
-          'utrecht-breadcrumb--html-ol',
           {
             'utrecht-breadcrumb--arrows': appearance === 'arrows',
           },

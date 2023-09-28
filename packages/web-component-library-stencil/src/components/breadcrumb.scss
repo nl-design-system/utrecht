@@ -13,3 +13,11 @@
 :host([hidden]) {
   display: none !important;
 }
+
+:slotted(utrecht-link) {
+  @include utrecht-breadcrumb__link;
+}
+
+:slotted(utrecht-icon) {
+  @include utrecht-breadcrumb__separator;
+}
