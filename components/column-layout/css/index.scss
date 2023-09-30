@@ -1,0 +1,15 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@import "./mixin";
+
+.utrecht-column-layout {
+  @include utrecht-column-layout;
+}
+
+.utrecht-column-layout--rule {
+  @include utrecht-column-layout--rule;
+}

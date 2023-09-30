@@ -67,6 +67,9 @@ export namespace Components {
     interface UtrechtColorSample {
         "color": string;
     }
+    interface UtrechtColumnLayout {
+        "rule": boolean;
+    }
     interface UtrechtContactCardTemplate {
     }
     interface UtrechtCustomCheckbox {
@@ -801,6 +804,12 @@ declare global {
     var HTMLUtrechtColorSampleElement: {
         prototype: HTMLUtrechtColorSampleElement;
         new (): HTMLUtrechtColorSampleElement;
+    };
+    interface HTMLUtrechtColumnLayoutElement extends Components.UtrechtColumnLayout, HTMLStencilElement {
+    }
+    var HTMLUtrechtColumnLayoutElement: {
+        prototype: HTMLUtrechtColumnLayoutElement;
+        new (): HTMLUtrechtColumnLayoutElement;
     };
     interface HTMLUtrechtContactCardTemplateElement extends Components.UtrechtContactCardTemplate, HTMLStencilElement {
     }
@@ -2388,6 +2397,7 @@ declare global {
         "utrecht-code": HTMLUtrechtCodeElement;
         "utrecht-code-block": HTMLUtrechtCodeBlockElement;
         "utrecht-color-sample": HTMLUtrechtColorSampleElement;
+        "utrecht-column-layout": HTMLUtrechtColumnLayoutElement;
         "utrecht-contact-card-template": HTMLUtrechtContactCardTemplateElement;
         "utrecht-custom-checkbox": HTMLUtrechtCustomCheckboxElement;
         "utrecht-digid-button": HTMLUtrechtDigidButtonElement;
@@ -2716,6 +2726,9 @@ declare namespace LocalJSX {
     }
     interface UtrechtColorSample {
         "color"?: string;
+    }
+    interface UtrechtColumnLayout {
+        "rule"?: boolean;
     }
     interface UtrechtContactCardTemplate {
     }
@@ -3368,6 +3381,7 @@ declare namespace LocalJSX {
         "utrecht-code": UtrechtCode;
         "utrecht-code-block": UtrechtCodeBlock;
         "utrecht-color-sample": UtrechtColorSample;
+        "utrecht-column-layout": UtrechtColumnLayout;
         "utrecht-contact-card-template": UtrechtContactCardTemplate;
         "utrecht-custom-checkbox": UtrechtCustomCheckbox;
         "utrecht-digid-button": UtrechtDigidButton;
@@ -3648,6 +3662,7 @@ declare module "@stencil/core" {
             "utrecht-code": LocalJSX.UtrechtCode & JSXBase.HTMLAttributes<HTMLUtrechtCodeElement>;
             "utrecht-code-block": LocalJSX.UtrechtCodeBlock & JSXBase.HTMLAttributes<HTMLUtrechtCodeBlockElement>;
             "utrecht-color-sample": LocalJSX.UtrechtColorSample & JSXBase.HTMLAttributes<HTMLUtrechtColorSampleElement>;
+            "utrecht-column-layout": LocalJSX.UtrechtColumnLayout & JSXBase.HTMLAttributes<HTMLUtrechtColumnLayoutElement>;
             "utrecht-contact-card-template": LocalJSX.UtrechtContactCardTemplate & JSXBase.HTMLAttributes<HTMLUtrechtContactCardTemplateElement>;
             "utrecht-custom-checkbox": LocalJSX.UtrechtCustomCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtCustomCheckboxElement>;
             "utrecht-digid-button": LocalJSX.UtrechtDigidButton & JSXBase.HTMLAttributes<HTMLUtrechtDigidButtonElement>;
