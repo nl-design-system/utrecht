@@ -53,6 +53,7 @@ export { ListSocial, ListSocialItem } from './ListSocial';
 export { Logo } from './Logo';
 export { LogoImage } from './LogoImage';
 export { Mark } from './Mark';
+export { MultilineData } from './MultilineData';
 export { NumberValue } from './NumberValue';
 export { OrderedList } from './OrderedList';
 export { OrderedListItem } from './OrderedListItem';

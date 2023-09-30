@@ -582,6 +582,8 @@ export namespace Components {
     }
     interface UtrechtMark {
     }
+    interface UtrechtMultilineData {
+    }
     interface UtrechtNumberValue {
         "value": number | string;
     }
@@ -2204,6 +2206,12 @@ declare global {
         prototype: HTMLUtrechtMarkElement;
         new (): HTMLUtrechtMarkElement;
     };
+    interface HTMLUtrechtMultilineDataElement extends Components.UtrechtMultilineData, HTMLStencilElement {
+    }
+    var HTMLUtrechtMultilineDataElement: {
+        prototype: HTMLUtrechtMultilineDataElement;
+        new (): HTMLUtrechtMultilineDataElement;
+    };
     interface HTMLUtrechtNumberValueElement extends Components.UtrechtNumberValue, HTMLStencilElement {
     }
     var HTMLUtrechtNumberValueElement: {
@@ -2614,6 +2622,7 @@ declare global {
         "utrecht-logo-image": HTMLUtrechtLogoImageElement;
         "utrecht-map-marker": HTMLUtrechtMapMarkerElement;
         "utrecht-mark": HTMLUtrechtMarkElement;
+        "utrecht-multiline-data": HTMLUtrechtMultilineDataElement;
         "utrecht-number-value": HTMLUtrechtNumberValueElement;
         "utrecht-page": HTMLUtrechtPageElement;
         "utrecht-page-content": HTMLUtrechtPageContentElement;
@@ -3239,6 +3248,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtMark {
     }
+    interface UtrechtMultilineData {
+    }
     interface UtrechtNumberValue {
         "value"?: number | string;
     }
@@ -3591,6 +3602,7 @@ declare namespace LocalJSX {
         "utrecht-logo-image": UtrechtLogoImage;
         "utrecht-map-marker": UtrechtMapMarker;
         "utrecht-mark": UtrechtMark;
+        "utrecht-multiline-data": UtrechtMultilineData;
         "utrecht-number-value": UtrechtNumberValue;
         "utrecht-page": UtrechtPage;
         "utrecht-page-content": UtrechtPageContent;
@@ -3870,6 +3882,7 @@ declare module "@stencil/core" {
             "utrecht-logo-image": LocalJSX.UtrechtLogoImage & JSXBase.HTMLAttributes<HTMLUtrechtLogoImageElement>;
             "utrecht-map-marker": LocalJSX.UtrechtMapMarker & JSXBase.HTMLAttributes<HTMLUtrechtMapMarkerElement>;
             "utrecht-mark": LocalJSX.UtrechtMark & JSXBase.HTMLAttributes<HTMLUtrechtMarkElement>;
+            "utrecht-multiline-data": LocalJSX.UtrechtMultilineData & JSXBase.HTMLAttributes<HTMLUtrechtMultilineDataElement>;
             "utrecht-number-value": LocalJSX.UtrechtNumberValue & JSXBase.HTMLAttributes<HTMLUtrechtNumberValueElement>;
             /**
              * @license EUPL-1.2
