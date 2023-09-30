@@ -16,6 +16,12 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 
+const arabicDecorator = (Story) => (
+  <div dir="rtl" lang="ar">
+    {Story()}
+  </div>
+);
+
 interface DataListStoryProps {
   appearance?: string | '' | 'rows';
   items: {
@@ -152,6 +158,74 @@ export const ActionButton: Story = {
     ],
   },
   name: 'Action button',
+};
+
+const rtlLtrStory =
+  'When the label is left-to-right, and the value is right-to-left (or the other way around). In that case the distance between the key and the value might be too great, and become unclear.';
+
+export const RightToLeftValue: Story = {
+  args: {
+    appearance: 'rows',
+    items: [
+      {
+        key: 'Voornaam',
+        value: 'علي,',
+      },
+    ],
+  },
+  name: 'Right-to-left value',
+  parameters: {
+    docs: {
+      description: {
+        story: rtlLtrStory,
+      },
+    },
+  },
+};
+
+export const RightToLeftKey: Story = {
+  args: {
+    appearance: 'rows',
+    items: [
+      {
+        key: 'الاسم الأول',
+        value: 'Mees',
+      },
+    ],
+  },
+  decorators: [arabicDecorator],
+  name: 'Right-to-left key',
+  parameters: {
+    docs: {
+      description: {
+        story: rtlLtrStory,
+      },
+    },
+  },
+};
+
+export const RightToLeftActionButton: Story = {
+  args: {
+    appearance: 'rows',
+    items: [
+      {
+        key: 'الاسم الأول',
+        keyId: '3a44adbc-5e75-47cd-8ac5-de6af62af0f0',
+        value: 'علي,',
+        actions: (
+          <LinkButton
+            inline
+            id="c2150d4a-6067-4343-9b70-025587c80d8d"
+            aria-labelledby="c2150d4a-6067-4343-9b70-025587c80d8d 3a44adbc-5e75-47cd-8ac5-de6af62af0f0"
+          >
+            صحح
+          </LinkButton>
+        ),
+      },
+    ],
+  },
+  decorators: [arabicDecorator],
+  name: 'Right-to-left actions',
 };
 
 export const DesignTokens = designTokenStory(meta);
