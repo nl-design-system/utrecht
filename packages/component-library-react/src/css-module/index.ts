@@ -21,6 +21,7 @@ export { Checkbox } from './Checkbox';
 export { Code } from './Code';
 export { CodeBlock } from './CodeBlock';
 export { ColorSample } from './ColorSample';
+export { ColumnLayout } from './ColumnLayout';
 export { CurrencyData } from './CurrencyData';
 export { DataBadge } from './DataBadge';
 export { Document } from './Document';
