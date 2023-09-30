@@ -4,6 +4,11 @@
  * Copyright (c) 2021-2022 Frameless B.V.
  */
 
+@mixin reset-html-dd {
+  /* reset browser styling of <dd> */
+  margin-inline-start: 0;
+}
+
 @mixin utrecht-data-list {
   /* also set `margin-block` to reset browser styling of <dl> */
   display: block;
@@ -11,18 +16,24 @@
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-data-list-margin-block-start, 0));
 }
 
-@mixin utrecht-data-list-item {
+/* `@mixin utrecht-data-list--html-dl` is not necessary.
+ * Default styles include only `display` and `margin`, and those properties are configured by default.
+ */
+
+@mixin utrecht-data-list__item {
   page-break-inside: avoid;
 }
 
-@mixin utrecht-data-list-item-key {
+@mixin utrecht-data-list__item-key {
   color: var(--utrecht-data-list-item-key-color);
   font-size: var(--utrecht-data-list-item-key-font-size);
   font-weight: var(--utrecht-data-list-item-key-font-weight);
   line-height: var(--utrecht-data-list-item-key-line-height);
 }
 
-@mixin utrecht-data-list-item-value {
+/* `@mixin utrecht-data-list__item-key--html-dt` is not necessary, `<dt>` has no default styles. */
+
+@mixin utrecht-data-list__item-value {
   /* configure `min-block-size` in case the value is empty */
   color: var(--utrecht-data-list-item-value-color);
   font-size: var(--utrecht-data-list-item-value-font-size);
@@ -31,13 +42,20 @@
   min-block-size: calc(var(--utrecht-data-list-item-value-line-height) * 1rem);
 }
 
+@mixin utrecht-data-list__item-value--html-dd {
+  @include reset-html-dd;
+}
+
 @mixin utrecht-data-list__item-value--multiline {
   white-space: pre-line;
 }
 
-@mixin reset-html-dd {
-  /* reset browser styling of <dd> */
-  margin-inline-start: 0;
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-data-list__actions {
+}
+
+@mixin utrecht-data-list__actions--html-dd {
+  @include reset-html-dd;
 }
 
 @mixin utrecht-data-list__item--rows {
@@ -50,11 +68,12 @@
   border-block-end-color: var(--utrecht-data-list-rows-border-bottom-color, transparent);
   border-block-end-style: solid;
   border-block-end-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
+  column-gap: var(--utrecht-data-list-rows-gap);
   display: grid;
-  gap: 0 var(--utrecht-data-list-rows-gap);
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(auto-fit, var(--_utrecht-auto-col));
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+  row-gap: 0;
 }
 
 @mixin utrecht-data-list__actions--rows {
@@ -63,6 +82,10 @@
   grid-column: -1;
   grid-row: 1;
   justify-content: flex-end;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-data-list__item-key--rows {
 }
 
 @mixin utrecht-data-list__item-value--rows {
