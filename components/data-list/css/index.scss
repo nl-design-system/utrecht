@@ -11,16 +11,23 @@
 }
 
 .utrecht-data-list__item-key {
-  @include utrecht-data-list-item-key;
+  @include utrecht-data-list__item-key;
 }
 
 .utrecht-data-list__item-value {
-  @include utrecht-data-list-item-value;
+  @include utrecht-data-list__item-value;
 }
 
-.utrecht-data-list__actions--html-dd,
+.utrecht-data-list__actions {
+  @include utrecht-data-list__actions;
+}
+
+.utrecht-data-list__actions--html-dd {
+  @include utrecht-data-list__actions--html-dd;
+}
+
 .utrecht-data-list__item-value--html-dd {
-  @include reset-html-dd;
+  @include utrecht-data-list__item-value--html-dd;
 }
 
 .utrecht-data-list__item-value--multiline {

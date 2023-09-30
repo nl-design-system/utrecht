@@ -79,6 +79,16 @@ export namespace Components {
         "invalid"?: boolean;
         "required"?: boolean;
     }
+    interface UtrechtDataList {
+    }
+    interface UtrechtDataListActions {
+    }
+    interface UtrechtDataListItem {
+    }
+    interface UtrechtDataListKey {
+    }
+    interface UtrechtDataListValue {
+    }
     interface UtrechtDigidButton {
         "type": string;
     }
@@ -822,6 +832,36 @@ declare global {
     var HTMLUtrechtCustomCheckboxElement: {
         prototype: HTMLUtrechtCustomCheckboxElement;
         new (): HTMLUtrechtCustomCheckboxElement;
+    };
+    interface HTMLUtrechtDataListElement extends Components.UtrechtDataList, HTMLStencilElement {
+    }
+    var HTMLUtrechtDataListElement: {
+        prototype: HTMLUtrechtDataListElement;
+        new (): HTMLUtrechtDataListElement;
+    };
+    interface HTMLUtrechtDataListActionsElement extends Components.UtrechtDataListActions, HTMLStencilElement {
+    }
+    var HTMLUtrechtDataListActionsElement: {
+        prototype: HTMLUtrechtDataListActionsElement;
+        new (): HTMLUtrechtDataListActionsElement;
+    };
+    interface HTMLUtrechtDataListItemElement extends Components.UtrechtDataListItem, HTMLStencilElement {
+    }
+    var HTMLUtrechtDataListItemElement: {
+        prototype: HTMLUtrechtDataListItemElement;
+        new (): HTMLUtrechtDataListItemElement;
+    };
+    interface HTMLUtrechtDataListKeyElement extends Components.UtrechtDataListKey, HTMLStencilElement {
+    }
+    var HTMLUtrechtDataListKeyElement: {
+        prototype: HTMLUtrechtDataListKeyElement;
+        new (): HTMLUtrechtDataListKeyElement;
+    };
+    interface HTMLUtrechtDataListValueElement extends Components.UtrechtDataListValue, HTMLStencilElement {
+    }
+    var HTMLUtrechtDataListValueElement: {
+        prototype: HTMLUtrechtDataListValueElement;
+        new (): HTMLUtrechtDataListValueElement;
     };
     interface HTMLUtrechtDigidButtonElement extends Components.UtrechtDigidButton, HTMLStencilElement {
     }
@@ -2400,6 +2440,11 @@ declare global {
         "utrecht-column-layout": HTMLUtrechtColumnLayoutElement;
         "utrecht-contact-card-template": HTMLUtrechtContactCardTemplateElement;
         "utrecht-custom-checkbox": HTMLUtrechtCustomCheckboxElement;
+        "utrecht-data-list": HTMLUtrechtDataListElement;
+        "utrecht-data-list-actions": HTMLUtrechtDataListActionsElement;
+        "utrecht-data-list-item": HTMLUtrechtDataListItemElement;
+        "utrecht-data-list-key": HTMLUtrechtDataListKeyElement;
+        "utrecht-data-list-value": HTMLUtrechtDataListValueElement;
         "utrecht-digid-button": HTMLUtrechtDigidButtonElement;
         "utrecht-digid-logo": HTMLUtrechtDigidLogoElement;
         "utrecht-document": HTMLUtrechtDocumentElement;
@@ -2738,6 +2783,16 @@ declare namespace LocalJSX {
         "indeterminate"?: boolean;
         "invalid"?: boolean;
         "required"?: boolean;
+    }
+    interface UtrechtDataList {
+    }
+    interface UtrechtDataListActions {
+    }
+    interface UtrechtDataListItem {
+    }
+    interface UtrechtDataListKey {
+    }
+    interface UtrechtDataListValue {
     }
     interface UtrechtDigidButton {
         "type"?: string;
@@ -3384,6 +3439,11 @@ declare namespace LocalJSX {
         "utrecht-column-layout": UtrechtColumnLayout;
         "utrecht-contact-card-template": UtrechtContactCardTemplate;
         "utrecht-custom-checkbox": UtrechtCustomCheckbox;
+        "utrecht-data-list": UtrechtDataList;
+        "utrecht-data-list-actions": UtrechtDataListActions;
+        "utrecht-data-list-item": UtrechtDataListItem;
+        "utrecht-data-list-key": UtrechtDataListKey;
+        "utrecht-data-list-value": UtrechtDataListValue;
         "utrecht-digid-button": UtrechtDigidButton;
         "utrecht-digid-logo": UtrechtDigidLogo;
         "utrecht-document": UtrechtDocument;
@@ -3665,6 +3725,11 @@ declare module "@stencil/core" {
             "utrecht-column-layout": LocalJSX.UtrechtColumnLayout & JSXBase.HTMLAttributes<HTMLUtrechtColumnLayoutElement>;
             "utrecht-contact-card-template": LocalJSX.UtrechtContactCardTemplate & JSXBase.HTMLAttributes<HTMLUtrechtContactCardTemplateElement>;
             "utrecht-custom-checkbox": LocalJSX.UtrechtCustomCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtCustomCheckboxElement>;
+            "utrecht-data-list": LocalJSX.UtrechtDataList & JSXBase.HTMLAttributes<HTMLUtrechtDataListElement>;
+            "utrecht-data-list-actions": LocalJSX.UtrechtDataListActions & JSXBase.HTMLAttributes<HTMLUtrechtDataListActionsElement>;
+            "utrecht-data-list-item": LocalJSX.UtrechtDataListItem & JSXBase.HTMLAttributes<HTMLUtrechtDataListItemElement>;
+            "utrecht-data-list-key": LocalJSX.UtrechtDataListKey & JSXBase.HTMLAttributes<HTMLUtrechtDataListKeyElement>;
+            "utrecht-data-list-value": LocalJSX.UtrechtDataListValue & JSXBase.HTMLAttributes<HTMLUtrechtDataListValueElement>;
             "utrecht-digid-button": LocalJSX.UtrechtDigidButton & JSXBase.HTMLAttributes<HTMLUtrechtDigidButtonElement>;
             "utrecht-digid-logo": LocalJSX.UtrechtDigidLogo & JSXBase.HTMLAttributes<HTMLUtrechtDigidLogoElement>;
             "utrecht-document": LocalJSX.UtrechtDocument & JSXBase.HTMLAttributes<HTMLUtrechtDocumentElement>;
