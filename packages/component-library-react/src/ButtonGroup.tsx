@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-type ButtonGroupProps = HTMLAttributes<HTMLParagraphElement>;
+export type ButtonGroupProps = HTMLAttributes<HTMLParagraphElement>;
 
 export const ButtonGroup = forwardRef(
   (

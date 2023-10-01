@@ -8,7 +8,7 @@ import { ComponentType, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChild
 import { Heading } from './Heading';
 import { Link as UtrechtLink } from './Link';
 
-interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
+export interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
   appearance?: string;
   headingLevel?: number;
   label?: ReactNode | ReactNode[];
@@ -88,9 +88,11 @@ export const BreadcrumbItem = forwardRef(
 
 BreadcrumbItem.displayName = 'BreadcrumbItem';
 
+export type BreadcrumbSeparatorProps = HTMLAttributes<HTMLLIElement>;
+
 export const BreadcrumbSeparator = forwardRef(
   (
-    { className, children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLLIElement>>,
+    { className, children, ...restProps }: PropsWithChildren<BreadcrumbSeparatorProps>,
     ref: ForwardedRef<HTMLLIElement>,
   ) => {
     return (

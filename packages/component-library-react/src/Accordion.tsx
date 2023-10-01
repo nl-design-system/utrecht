@@ -193,7 +193,7 @@ export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | 
   };
 };
 
-interface AccordionSectionProviderProps {
+export interface AccordionSectionProviderProps {
   defaultExpanded?: boolean;
   expanded?: boolean;
 }
@@ -208,7 +208,7 @@ export const useAccordionSection = (
   };
 };
 
-interface AccordionProviderProps {
+export interface AccordionProviderProps {
   sections: AccordionSectionProps[];
 }
 
