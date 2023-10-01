@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
-import { AlertDialog, Backdrop, Button, Paragraph } from '@utrecht/component-library-react/dist/css-module/index';
+import { AlertDialog, Backdrop, Button, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/backdrop/README.md?raw';
 import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { VegaVisualization } from '@utrecht/component-library-react/dist/css-module/index';
+import { VegaVisualization } from '@utrecht/component-library-react/src/css-module/index';
 import tokensDefinition from '@utrecht/components/vega-visualization/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';

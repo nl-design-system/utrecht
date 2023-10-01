@@ -4,7 +4,7 @@ import {
   BreadcrumbLink,
   BreadcrumbNav,
   BreadcrumbSeparator,
-} from '@utrecht/component-library-react/dist/css-module/index';
+} from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/breadcrumb/README.md?raw';
 import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

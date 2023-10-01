@@ -5,7 +5,7 @@ import {
   FormFieldDescription,
   FormLabel,
   Paragraph,
-} from '@utrecht/component-library-react/dist/css-module/index';
+} from '@utrecht/component-library-react/src/css-module/index';
 import React from 'react';
 import FormFieldMeta from './FormField.stories';
 
