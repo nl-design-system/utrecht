@@ -54,7 +54,7 @@ export type Events = {
   disabled?: boolean;
 };
 
-interface CalendarProps {
+export interface CalendarProps {
   /**
    * `onCalendarClick` It's a callback function that returns the selected date, triggered when you click on the day
    *

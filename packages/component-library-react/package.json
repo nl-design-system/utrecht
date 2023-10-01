@@ -19,7 +19,8 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "npm-run-all build:**",
-    "build:rollup": "rollup -c",
+    "build:rollup": "rollup --config rollup.config.mjs",
+    "build:rollup-components": "rollup --config rollup-components.config.mjs",
     "build:test-results": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=dist/.jest-test-results.json --silent",
     "clean": "rimraf dist/ pages/",
     "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
@@ -35,7 +36,6 @@
   ],
   "dependencies": {
     "clsx": "1.2.1",
-    "date-fns": "2.30.0",
     "lodash.chunk": "4.2.0"
   },
   "devDependencies": {
@@ -53,11 +53,11 @@
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "13.4.0",
     "@testing-library/user-event": "14.4.3",
-    "@types/date-fns": "2.6.0",
     "@types/jest": "29.5.4",
     "@types/lodash.chunk": "4.2.7",
     "@types/react": "18.2.21",
     "@types/testing-library__jest-dom": "5.14.9",
+    "date-fns": "2.30.0",
     "gatsby": "5.12.4",
     "jest": "29.6.4",
     "jest-environment-jsdom": "29.6.4",
@@ -83,7 +83,21 @@
     "vega-lite": "5.14.1"
   },
   "peerDependencies": {
+    "date-fns": "^2.30.0",
     "react": "18",
-    "react-dom": "18"
+    "react-dom": "18",
+    "react-vega": "^7.6.0",
+    "vega": "^5.25.0"
+  },
+  "peerDependenciesMeta": {
+    "date-fns": {
+      "optional": true
+    },
+    "react-vega": {
+      "optional": true
+    },
+    "vega": {
+      "optional": true
+    }
   }
 }
