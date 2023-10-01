@@ -49,7 +49,7 @@ export const sanitizeConfig = {
     'utrecht-badge-counter',
     'utrecht-badge-data',
     'utrecht-badge-status',
-    'utrecht-breadcrumb',
+    'utrecht-breadcrumb-nav',
     'utrecht-button',
     'utrecht-checkbox',
     'utrecht-document',

@@ -1,18 +1,18 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/breadcrumb/README.md?raw';
-import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
+import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
+import tokensDefinition from '@utrecht/components/breadcrumb-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtBreadcrumb } from '@utrecht/web-component-library-react';
+import { UtrechtBreadcrumbNav } from '@utrecht/web-component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 
 const BreadcrumbStory = ({ children, items, variant }: PropsWithChildren<{ json: any; variant?: string }>) => {
   return (
-    <UtrechtBreadcrumb json={JSON.stringify(items)} variant={variant}>
+    <UtrechtBreadcrumbNav json={JSON.stringify(items)} variant={variant}>
       {children}
-    </UtrechtBreadcrumb>
+    </UtrechtBreadcrumbNav>
   );
 };
 
@@ -45,7 +45,7 @@ const meta = {
     status: {
       type: 'WORK IN PROGRESS',
     },
-    tokensPrefix: 'utrecht-breadcrumb',
+    tokensPrefix: 'utrecht-breadcrumb-nav',
     tokens,
     tokensDefinition,
     docs: {

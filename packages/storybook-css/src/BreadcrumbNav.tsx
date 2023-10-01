@@ -53,20 +53,20 @@ export const BreadcrumbNav = forwardRef(
         {...restProps}
         ref={ref}
         className={clsx(
-          'utrecht-breadcrumb',
+          'utrecht-breadcrumb-nav',
           {
-            'utrecht-breadcrumb--arrows': appearance === 'arrows',
+            'utrecht-breadcrumb-nav--arrows': appearance === 'arrows',
           },
           className,
         )}
         aria-labelledby={headingId}
       >
         <p
-          className="utrecht-breadcrumb__list utrecht-breadcrumb__list--html-p"
+          className="utrecht-breadcrumb-nav__list utrecht-breadcrumb-nav__list--html-p"
           {...useMicrodataItem({ type: 'https://schema.org/BreadcrumbList' })}
         >
           {label && (
-            <span id={headingId} className="utrecht-breadcrumb__heading" aria-hidden="true">
+            <span id={headingId} className="utrecht-breadcrumb-nav__heading" aria-hidden="true">
               {label}{' '}
             </span>
           )}
@@ -79,14 +79,14 @@ export const BreadcrumbNav = forwardRef(
 
 BreadcrumbNav.displayName = 'BreadcrumbNav';
 
-export const BreadcrumbSeparator = forwardRef(
+export const BreadcrumbNavSeparator = forwardRef(
   (
     { className, children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLLIElement>>,
     ref: ForwardedRef<HTMLLIElement>,
   ) => {
     return (
       <span
-        className={clsx('utrecht-breadcrumb__separator', 'utrecht-breadcrumb__separator--html-li', className)}
+        className={clsx('utrecht-breadcrumb-nav__separator', 'utrecht-breadcrumb-nav__separator--html-li', className)}
         ref={ref}
         {...restProps}
       >
@@ -96,9 +96,9 @@ export const BreadcrumbSeparator = forwardRef(
   },
 );
 
-BreadcrumbSeparator.displayName = 'BreadcrumbSeparator';
+BreadcrumbNavSeparator.displayName = 'BreadcrumbNavSeparator';
 
-export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
+export interface BreadcrumbNavLinkProps extends HTMLAttributes<HTMLElement> {
   current?: boolean;
   disabled?: boolean;
   href: string;
@@ -107,7 +107,7 @@ export interface BreadcrumbLinkProps extends HTMLAttributes<HTMLElement> {
   Link?: ComponentType<any>;
 }
 
-export const BreadcrumbLink = forwardRef(
+export const BreadcrumbNavLink = forwardRef(
   (
     {
       children,
@@ -120,7 +120,7 @@ export const BreadcrumbLink = forwardRef(
       Link = UtrechtLink,
       className,
       ...restProps
-    }: PropsWithChildren<BreadcrumbLinkProps>,
+    }: PropsWithChildren<BreadcrumbNavLinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => {
     const DefaultLinkComponent = Link;
@@ -130,9 +130,9 @@ export const BreadcrumbLink = forwardRef(
       <>
         {' '}
         <LinkComponent
-          className={clsx('utrecht-breadcrumb__link', className, {
-            'utrecht-breadcrumb__link--current': current,
-            'utrecht-breadcrumb__link--disabled': disabled,
+          className={clsx('utrecht-breadcrumb-nav__link', className, {
+            'utrecht-breadcrumb-nav__link--current': current,
+            'utrecht-breadcrumb-nav__link--disabled': disabled,
           })}
           href={disabled ? undefined : href}
           rel={rel}
@@ -143,7 +143,7 @@ export const BreadcrumbLink = forwardRef(
           {...restProps}
           ref={ref}
         >
-          <span className="utrecht-breadcrumb__text" {...useMicrodataProp('name')}>
+          <span className="utrecht-breadcrumb-nav__text" {...useMicrodataProp('name')}>
             {children}
           </span>
           {typeof index === 'number' ? <meta {...useMicrodataProp('position')} content={String(index + 1)} /> : null}
@@ -153,4 +153,4 @@ export const BreadcrumbLink = forwardRef(
   },
 );
 
-BreadcrumbLink.displayName = 'BreadcrumbLink';
+BreadcrumbNavLink.displayName = 'BreadcrumbNavLink';

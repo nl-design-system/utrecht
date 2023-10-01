@@ -3,7 +3,7 @@ import { Link as GatsbyLink } from 'gatsby';
 import type { GatsbyLinkProps } from 'gatsby';
 import NextLink from 'next/link';
 import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
-import { BreadcrumbLink, BreadcrumbNav } from './BreadcrumbNav';
+import { BreadcrumbNav, BreadcrumbNavLink } from './BreadcrumbNav';
 import '@testing-library/jest-dom';
 
 const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
@@ -34,7 +34,7 @@ describe('Breadcrumb navigation', () => {
   it('renders a listitem element', () => {
     render(
       <BreadcrumbNav>
-        <BreadcrumbLink href="/" index={0} rel="home"></BreadcrumbLink>
+        <BreadcrumbNavLink href="/" index={0} rel="home"></BreadcrumbNavLink>
       </BreadcrumbNav>,
     );
 
@@ -45,7 +45,7 @@ describe('Breadcrumb navigation', () => {
   it('renders a link element', () => {
     render(
       <BreadcrumbNav>
-        <BreadcrumbLink href="/" rel="home"></BreadcrumbLink>
+        <BreadcrumbNavLink href="/" rel="home"></BreadcrumbNavLink>
       </BreadcrumbNav>,
     );
 
@@ -57,7 +57,7 @@ describe('Breadcrumb navigation', () => {
   it('renders a link element', () => {
     render(
       <BreadcrumbNav>
-        <BreadcrumbLink href="/"></BreadcrumbLink>
+        <BreadcrumbNavLink href="/"></BreadcrumbNavLink>
       </BreadcrumbNav>,
     );
 
@@ -111,7 +111,7 @@ describe('Breadcrumb navigation', () => {
 
     const list = container.querySelector('*');
 
-    expect(list).toHaveClass('utrecht-breadcrumb');
+    expect(list).toHaveClass('utrecht-breadcrumb-nav');
   });
 
   it('displays as block element', () => {
@@ -137,7 +137,7 @@ describe('Breadcrumb navigation', () => {
     const breadcrumbNav = container.querySelector(':only-child');
 
     expect(breadcrumbNav).toHaveClass('arrows');
-    expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb');
+    expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb-nav');
   });
 
   it('supports ForwardRef in React', () => {
@@ -153,9 +153,9 @@ describe('Breadcrumb navigation', () => {
   describe('custom link component', () => {
     it('renders with custom link', () => {
       const { getByRole } = render(
-        <BreadcrumbLink href="/custom" Link={CustomLink} className="utrecht-link utrecht-link--html-a">
+        <BreadcrumbNavLink href="/custom" Link={CustomLink} className="utrecht-link utrecht-link--html-a">
           Custom Link
-        </BreadcrumbLink>,
+        </BreadcrumbNavLink>,
       );
 
       const link = getByRole('link');
@@ -164,7 +164,7 @@ describe('Breadcrumb navigation', () => {
     });
 
     it('renders with default Link when customLink is not provided', () => {
-      const { getByRole } = render(<BreadcrumbLink href="/default">Default Link</BreadcrumbLink>);
+      const { getByRole } = render(<BreadcrumbNavLink href="/default">Default Link</BreadcrumbNavLink>);
 
       const link = getByRole('link');
       expect(link).toBeInTheDocument();
@@ -175,9 +175,9 @@ describe('Breadcrumb navigation', () => {
     describe('with Gatsby component', () => {
       it('renders', () => {
         const { getByRole } = render(
-          <BreadcrumbLink Link={CustomGatsbyLink} className="utrecht-link utrecht-link--html-a" href="/gatsby-link">
+          <BreadcrumbNavLink Link={CustomGatsbyLink} className="utrecht-link utrecht-link--html-a" href="/gatsby-link">
             Gatsby link
-          </BreadcrumbLink>,
+          </BreadcrumbNavLink>,
         );
         const link = getByRole('link');
 
@@ -189,9 +189,9 @@ describe('Breadcrumb navigation', () => {
     describe('with Next.js component', () => {
       it('renders', () => {
         const { getByRole } = render(
-          <BreadcrumbLink Link={NextLink} className="utrecht-link utrecht-link--html-a" href="/next-link">
+          <BreadcrumbNavLink Link={NextLink} className="utrecht-link utrecht-link--html-a" href="/next-link">
             Next.js link
-          </BreadcrumbLink>,
+          </BreadcrumbNavLink>,
         );
         const link = getByRole('link');
 
@@ -205,9 +205,9 @@ describe('Breadcrumb navigation', () => {
     it('renders aria-current', () => {
       const { getByRole } = render(
         <BreadcrumbNav>
-          <BreadcrumbLink current href="/current">
+          <BreadcrumbNavLink current href="/current">
             Current page
-          </BreadcrumbLink>
+          </BreadcrumbNavLink>
         </BreadcrumbNav>,
       );
 
@@ -220,16 +220,16 @@ describe('Breadcrumb navigation', () => {
     it('renders a design system BEM class name', () => {
       const { getByRole } = render(
         <BreadcrumbNav>
-          <BreadcrumbLink current href="/current">
+          <BreadcrumbNavLink current href="/current">
             Current page
-          </BreadcrumbLink>
+          </BreadcrumbNavLink>
         </BreadcrumbNav>,
       );
 
       const link = getByRole('link', { name: 'Current page' });
 
       expect(link).toBeInTheDocument();
-      expect(link).toHaveClass('utrecht-breadcrumb__link--current');
+      expect(link).toHaveClass('utrecht-breadcrumb-nav__link--current');
     });
   });
 
@@ -237,9 +237,9 @@ describe('Breadcrumb navigation', () => {
     it('is a link role element', () => {
       const { getByRole } = render(
         <BreadcrumbNav>
-          <BreadcrumbLink disabled href="/current">
+          <BreadcrumbNavLink disabled href="/current">
             Current page
-          </BreadcrumbLink>
+          </BreadcrumbNavLink>
         </BreadcrumbNav>,
       );
 
@@ -251,9 +251,9 @@ describe('Breadcrumb navigation', () => {
     it('renders aria-disabled', () => {
       const { getByRole } = render(
         <BreadcrumbNav>
-          <BreadcrumbLink disabled href="/current">
+          <BreadcrumbNavLink disabled href="/current">
             Current page
-          </BreadcrumbLink>
+          </BreadcrumbNavLink>
         </BreadcrumbNav>,
       );
 
@@ -266,16 +266,16 @@ describe('Breadcrumb navigation', () => {
     it('renders a design system BEM class name', () => {
       const { getByRole } = render(
         <BreadcrumbNav>
-          <BreadcrumbLink disabled href="/current">
+          <BreadcrumbNavLink disabled href="/current">
             Current page
-          </BreadcrumbLink>
+          </BreadcrumbNavLink>
         </BreadcrumbNav>,
       );
 
       const link = getByRole('link', { name: 'Current page' });
 
       expect(link).toBeInTheDocument();
-      expect(link).toHaveClass('utrecht-breadcrumb__link--disabled');
+      expect(link).toHaveClass('utrecht-breadcrumb-nav__link--disabled');
     });
   });
 });

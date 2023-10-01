@@ -1,12 +1,12 @@
 import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
 import { PartialStoryFn } from '@storybook/types';
-import { BreadcrumbLink, BreadcrumbNav, BreadcrumbSeparator, Code } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/breadcrumb/README.md?raw';
-import hreflangDocs from '@utrecht/components/breadcrumb/_hreflang.md?raw';
-import langDocs from '@utrecht/components/breadcrumb/_lang.md?raw';
-import relDocs from '@utrecht/components/breadcrumb/_rel.md?raw';
-import rtlSeparatorDocs from '@utrecht/components/breadcrumb/_rtl-separator.md?raw';
-import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
+import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator, Code } from '@utrecht/component-library-react';
+import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
+import hreflangDocs from '@utrecht/components/breadcrumb-nav/_hreflang.md?raw';
+import langDocs from '@utrecht/components/breadcrumb-nav/_lang.md?raw';
+import relDocs from '@utrecht/components/breadcrumb-nav/_rel.md?raw';
+import rtlSeparatorDocs from '@utrecht/components/breadcrumb-nav/_rtl-separator.md?raw';
+import tokensDefinition from '@utrecht/components/breadcrumb-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronLeft, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React from 'react';
@@ -45,15 +45,15 @@ export const Default: Story = {
   args: {
     label: 'Kruimelpad',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/b/" rel="up" index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" rel="up" index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {
@@ -68,15 +68,15 @@ export const Arrows: Story = {
     appearance: 'arrows',
     label: 'Kruimelpad',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/b/" rel="up" index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" rel="up" index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Arrows',
@@ -92,18 +92,18 @@ export const ArrowsDisabledCurrent: Story = {
     appearance: 'arrows',
     label: 'Kruimelpad',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/b/" rel="up" index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" rel="up" index={2}>
         Afval
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" index={3} current disabled>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/b/c/" index={3} current disabled>
         Kliko
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Arrows: current link is disabled',
@@ -118,15 +118,15 @@ export const Rel: Story = {
   args: {
     label: 'Kruimelpad',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/search" rel="up" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/search" rel="up" index={1}>
         Zoeken
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/search?q=openingstijden+zwembad" rel="first" index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/search?q=openingstijden+zwembad" rel="first" index={2}>
         “openingstijden zwembad”
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {
@@ -146,21 +146,21 @@ export const Current: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" current index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" current index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Current page',
@@ -175,21 +175,21 @@ export const Disabled: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" disabled index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" disabled index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Disabled link',
@@ -204,9 +204,9 @@ export const Home: Story = {
   args: {
     label: 'Home only',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0} current disabled>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0} current disabled>
         Home
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {
@@ -220,27 +220,27 @@ export const OtherLanguage: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Zorg en onderwijs
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" index={2}>
         Nieuwkomers
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" disabled current index={3} lang="uk" hrefLang="uk">
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/c/" disabled current index={3} lang="uk" hrefLang="uk">
         Біженці з України
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Document language',
@@ -261,15 +261,15 @@ export const DocumentTitleLanguage: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" disabled current index={1} lang="fr">
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/c/" disabled current index={1} lang="fr">
         Le roi est mort, vive le roi!
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Document title language',
@@ -290,27 +290,27 @@ export const CodeTitle: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         HTML
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" index={2}>
         Elements
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" disabled current index={3} lang="uk" hrefLang="uk">
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/c/" disabled current index={3} lang="uk" hrefLang="uk">
         <Code>{'<code>'}</Code> element
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Code in link text',
@@ -325,21 +325,21 @@ export const DisabledCurrent: Story = {
   args: {
     label: 'Kruimelpad:',
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" current disabled index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" current disabled index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Current page link is disabled',
@@ -360,18 +360,18 @@ export const RightToLeft: Story = {
   decorators: [RTLStoryDecorator],
   args: {
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         الصفحة الرئيسية
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         المستوى 1
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/b/" index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" index={2}>
         المستوي 2
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" rel="up" index={3}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="https://example.com/a/b/c/" rel="up" index={3}>
         المستوي 3
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Right-to-left',
@@ -385,17 +385,17 @@ export const RightToLeft: Story = {
 export const SeparatorChar: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>/</BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>/</BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>/</BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" current disabled index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>/</BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" current disabled index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Separator character',
@@ -409,21 +409,21 @@ export const SeparatorChar: Story = {
 export const SeparatorIcon: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" current disabled index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" current disabled index={2}>
         Afval
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Separator icon',
@@ -443,27 +443,27 @@ export const RightToLeftSeparator: Story = {
   decorators: [RTLStoryDecorator],
   args: {
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         الصفحة الرئيسية
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronLeft />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         المستوى 1
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronLeft />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/" index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" index={2}>
         المستوي 2
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronLeft />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/a/b/c/" rel="up" index={3}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/c/" rel="up" index={3}>
         المستوي 3
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Right-to-left separator',
@@ -482,43 +482,46 @@ export const RightToLeftSeparator: Story = {
 export const ManyLinks: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/wonen-en-level/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/" index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/wonen-en-level/parken-en-groen/" index={2}>
         Parken en groen
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/" index={3}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/" index={3}>
         Dieren
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/" index={4}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink
+        href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/"
+        index={4}
+      >
         Wilde dieren helpen
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink
         href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/diervriendelijk-bouwen/"
         rel="up"
         index={5}
       >
         Diervriendelijk bouwen
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   name: 'Many links',
@@ -532,43 +535,46 @@ export const ManyLinks: Story = {
 export const LineWrap: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="https://example.com/" rel="home" index={0}>
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/wonen-en-level/" index={1}>
         Wonen en leven
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/" index={2}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/wonen-en-level/parken-en-groen/" index={2}>
         Parken en groen
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/" index={3}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/" index={3}>
         Dieren
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/" index={4}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink
+        href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/"
+        index={4}
+      >
         Wilde dieren helpen
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink
         href="https://example.com/wonen-en-level/parken-en-groen/dieren/wilde-dieren-helpen/diervriendelijk-bouwen/"
         rel="up"
         index={5}
       >
         Diervriendelijk bouwen
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   decorators: [(Story) => <div style={{ maxInlineSize: '320px' }}>{Story()}</div>],
