@@ -1,10 +1,8 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Link } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/link/README.md?raw';
 import tokensDefinition from '@utrecht/components/link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
@@ -20,14 +18,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
   argTypes: {

@@ -1,8 +1,6 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { NumberValue } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/value-number/README.md?raw';
-import React from 'react';
 
 const meta = {
   title: 'React Component/Number Value',
@@ -23,14 +21,9 @@ const meta = {
   },
   parameters: {
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
 } satisfies Meta<typeof NumberValue>;

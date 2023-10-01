@@ -1,4 +1,5 @@
 import { withTests } from '@storybook/addon-jest';
+import { Controls, Description, Primary, Stories } from '@storybook/blocks';
 import { Preview } from '@storybook/react';
 import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
@@ -30,6 +31,17 @@ const preview: Preview = {
       // Stories without concise code snippets can hide the code at Story level.
       source: {
         state: 'open',
+      },
+      page: () => {
+        // Exclude `<Title>` because the title comes from the Markdown file
+        return (
+          <>
+            <Description />
+            <Primary />
+            <Controls />
+            <Stories />
+          </>
+        );
       },
     },
     ...addonStatus,

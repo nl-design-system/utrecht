@@ -1,6 +1,5 @@
 /* @license CC0-1.0 */
 
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
 import { IndexCharNav } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/index-char-nav/README.md?raw';
@@ -12,7 +11,7 @@ import '@utrecht/components/index-char-nav/css/index.scss';
 
 const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
 const greekAlphabet = 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω';
-const ukranianAlphabet = 'А	Б	В	Г	Ґ	Д	Е	Є	Ж	З	И І	Ї	Й	К	Л	М	Н	О	П	Р	С Т	У	Ф	Х	Ц	Ч	Ш	Щ	Ь	Ю	Я';
+const ukranianAlphabet = 'А Б В Г Ґ Д Е Є Ж З И І Ї Й К Л М Н О П Р С Т У Ф Х Ц Ч Ш Щ Ь Ю Я';
 
 const createCharacters = (str: string) =>
   str
@@ -83,14 +82,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
 } satisfies Meta<typeof IndexCharNav>;

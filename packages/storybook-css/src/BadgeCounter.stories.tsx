@@ -1,10 +1,8 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { BadgeCounter } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/badge-counter/README.md?raw';
 import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -31,16 +29,8 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        story: `Styling via the \`.utrecht-badge-counter\` class name.`,
+        story: readme,
       },
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
     },
   },
 } satisfies Meta<typeof BadgeCounter>;

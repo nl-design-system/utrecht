@@ -1,4 +1,3 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { ButtonGroup, Heading, Link, LinkButton } from '@utrecht/component-library-react/src/css-module/index';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
@@ -23,14 +22,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
   render: () => {

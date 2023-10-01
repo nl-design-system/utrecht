@@ -1,10 +1,8 @@
 import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '@utrecht/component-library-react/src/css-module/index';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
@@ -41,14 +39,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
 } as Meta<typeof Paragraph>;
