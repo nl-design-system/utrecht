@@ -20,10 +20,10 @@
 | Huisnummer toevoeging                            |                                                  | `false`      | `no`        | -               | -               |
 | Woonplaats                                       |                                                  |              |             | -               | -               |
 | Burgerservicenummer                              |                                                  | `false`      | `no`        | -               | -               |
-| E-mailadres                                      | `email`                                          | `false`      | `no`        | `URLValue`      | `ltr`           |
-| Website                                          | `url`                                            | `false`      | `no`        | `URLValue`      | `ltr`           |
-| Bestandsnaam                                     |                                                  |              | `no`        | `URLValue`      | -               |
-| Wachtwoord                                       | `password` / `new-password` / `current-password` | `false`      | `no`        | `URLValue`      | -               |
+| E-mailadres                                      | `email`                                          | `false`      | `no`        | `URLData`       | `ltr`           |
+| Website                                          | `url`                                            | `false`      | `no`        | `URLData`       | `ltr`           |
+| Bestandsnaam                                     |                                                  |              | `no`        | `URLData`       | -               |
+| Wachtwoord                                       | `password` / `new-password` / `current-password` | `false`      | `no`        | `URLData`       | -               |
 | Geboortedatum                                    | `bday`                                           |              |             |                 | -               |
 | Telefoonnummer (Europa en internationaal)        | `tel`                                            | `false`      |             |                 | `ltr`           |
 | Mobiel telefoonnummer (Europa en internationaal) | `mobile tel`                                     | `false`      |             |                 | `ltr`           |

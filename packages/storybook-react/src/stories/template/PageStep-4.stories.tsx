@@ -21,7 +21,7 @@ import {
   PageHeader,
   Paragraph,
   Separator,
-  URLValue,
+  URLData,
 } from '@utrecht/component-library-react';
 import {
   UtrechtBreadcrumb,
@@ -142,7 +142,7 @@ export const Four: Story = {
             <DataListItem>
               <DataListKey>E-mailadres</DataListKey>
               <DataListValue notranslate>
-                <URLValue>example@example.com</URLValue>
+                <URLData>example@example.com</URLData>
               </DataListValue>
             </DataListItem>
           </DataList>

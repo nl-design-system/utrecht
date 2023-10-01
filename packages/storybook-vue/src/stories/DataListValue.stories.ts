@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/vue3';
 import { DataList, DataListItem, DataListValue } from '@utrecht/component-library-vue';
-import { URLValue } from '@utrecht/component-library-vue';
+import { URLData } from '@utrecht/component-library-vue';
 import { createStory } from './util';
 
 const meta = {
@@ -69,7 +69,7 @@ export const NoTranslate: Story = createStory(meta, {
 
 export const ValueWithURL: Story = createStory(meta, {
   components: {
-    URLValue: URLValue,
+    URLData: URLData,
   },
   props: {
     value: { type: String, default: 'https://example.fi/' },
@@ -77,16 +77,16 @@ export const ValueWithURL: Story = createStory(meta, {
   args: {
     // Perhaps "voorbeeld.fi" when translated from English to Dutch
     // "fi" is used so we can test rendering of ligatures is avoided
-    slot: `<URLValue>https://example.fi/</URLValue>`,
-    value: `<URLValue>https://example.fi/</URLValue>`,
+    slot: `<URLData>https://example.fi/</URLData>`,
+    value: `<URLData>https://example.fi/</URLData>`,
     notranslate: true,
   },
 });
 
 export const ValueWithEmail: Story = createStory(meta, {
   args: {
-    slot: `<URLValue>mail@example.fi</URLValue>`,
-    value: `<URLValue>mail@example.fi</URLValue>`,
+    slot: `<URLData>mail@example.fi</URLData>`,
+    value: `<URLData>mail@example.fi</URLData>`,
     notranslate: true,
   },
 });

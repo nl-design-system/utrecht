@@ -7,14 +7,14 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'utrecht-url',
-  styleUrl: 'url-value.scss',
+  tag: 'utrecht-url-data',
+  styleUrl: 'url-data.scss',
   shadow: true,
 })
-export class URLValue {
+export class URLData {
   render() {
     return (
-      <span class="utrecht-url">
+      <span class="utrecht-url-data">
         <slot></slot>
       </span>
     );

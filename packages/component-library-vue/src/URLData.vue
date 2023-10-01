@@ -2,14 +2,14 @@
   import { defineComponent } from "vue";
 
   export default defineComponent({
-    name: "UtrechtURLValue",
+    name: "UtrechtURLData",
   });
 </script>
 
 <template>
-  <bdi translate="no" class="utrecht-url">
+  <bdi translate="no" class="utrecht-url-data">
     <slot />
   </bdi>
 </template>
 
-<style src="@utrecht/components/url/css/index.scss"></style>
+<style src="@utrecht/components/url-data/css/index.scss"></style>

@@ -33,7 +33,7 @@ import {
   Textbox,
   UnorderedList,
   UnorderedListItem,
-  URLValue,
+  URLData,
 } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/table/README.md?raw';
 import actionReadme from '@utrecht/components/table/_table-row-action.md?raw';
@@ -1449,7 +1449,7 @@ export const TableMarkDataOverflow: Story = {
   },
 };
 
-export const TableURLValue: Story = {
+export const TableURLData: Story = {
   args: {
     children: (
       <>
@@ -1467,13 +1467,13 @@ export const TableURLValue: Story = {
             <TableCell>
               <Link href="mailto:jane+file-under-very-very-very-very-very-very-very-long-inbox@example.com">
                 <TableCellData truncate>
-                  <URLValue>jane+file-under-very-very-very-very-very-very-very-long-inbox@example.com</URLValue>
+                  <URLData>jane+file-under-very-very-very-very-very-very-very-long-inbox@example.com</URLData>
                 </TableCellData>
               </Link>
             </TableCell>
             <TableCell>
               <Link href="https://very-very-very-very-very-very-very-long-subdomain.example.com/jane">
-                <URLValue>https://very-very-very-very-very-very-very-long-subdomain.example.com/jane</URLValue>
+                <URLData>https://very-very-very-very-very-very-very-long-subdomain.example.com/jane</URLData>
               </Link>
             </TableCell>
           </TableRow>
@@ -1482,12 +1482,12 @@ export const TableURLValue: Story = {
             <TableCell>Doe</TableCell>
             <TableCell style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               <Link href="mailto:joe+file-under-very-very-very-very-very-very-very-long-inbox@example.com">
-                <URLValue>joe+file-under-very-very-very-very-very-very-very-long-inbox@example.com</URLValue>
+                <URLData>joe+file-under-very-very-very-very-very-very-very-long-inbox@example.com</URLData>
               </Link>
             </TableCell>
             <TableCell style={{ overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap' }}>
               <Link href="https://very-very-very-very-very-very-very-long-subdomain.example.com/joe">
-                <URLValue>https://very-very-very-very-very-very-very-long-subdomain.example.com/joe</URLValue>
+                <URLData>https://very-very-very-very-very-very-very-long-subdomain.example.com/joe</URLData>
               </Link>
             </TableCell>
           </TableRow>
@@ -2295,7 +2295,7 @@ export const TableRowCheckbox: Story = {
               <TableRow>
                 <TableHeaderCell scope="row">
                   <FormLabel htmlFor={inputId} type="checkbox">
-                    <Checkbox id={inputId} value={inputValue} /> <URLValue>{inputLabel}</URLValue>
+                    <Checkbox id={inputId} value={inputValue} /> <URLData>{inputLabel}</URLData>
                   </FormLabel>
                 </TableHeaderCell>
                 <TableCell>{type}</TableCell>
@@ -2371,7 +2371,7 @@ export const TableRowColumnCheckbox: Story = {
               <TableRow key={index}>
                 <TableHeaderCell scope="row">
                   <FormLabel htmlFor={inputId} type="checkbox">
-                    <Checkbox id={inputId} value={inputValue} /> <URLValue>{inputLabel}</URLValue>
+                    <Checkbox id={inputId} value={inputValue} /> <URLData>{inputLabel}</URLData>
                   </FormLabel>
                 </TableHeaderCell>
                 <TableCell>{type}</TableCell>
@@ -2512,7 +2512,7 @@ export const TableRowRadioButton: Story = {
                 <TableHeaderCell scope="row">
                   <FormLabel htmlFor={inputId} type="radio">
                     <RadioButton id={inputId} name="table-radio" defaultValue={inputValue} />{' '}
-                    <URLValue>{inputLabel}</URLValue>
+                    <URLData>{inputLabel}</URLData>
                   </FormLabel>
                 </TableHeaderCell>
                 <TableCell>{type}</TableCell>
@@ -3785,10 +3785,10 @@ export const TableStatusBadge: Story = {
                   <Icon>
                     <IconLock />
                   </Icon>
-                  <URLValue>localhost:6006</URLValue>
+                  <URLData>localhost:6006</URLData>
                 </TableCell>
                 <TableCell>
-                  <URLValue>/?path=/story/css-table--table-url-value</URLValue>
+                  <URLData>/?path=/story/css-table--table-url-data</URLData>
                 </TableCell>
                 <TableCell numericColumn>2,04 kB</TableCell>
                 <TableCell numericColumn>4,98 kB</TableCell>
