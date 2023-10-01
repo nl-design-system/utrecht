@@ -89,7 +89,7 @@ export const VegaVisualization = ({
   ...restProps
 }: VegaVisualizationProps) => {
   return (
-    <div className={clsx('utrecht-vega-visualisation', className)} role="image" aria-label={label}>
+    <div className={clsx('utrecht-vega-visualization', className)} role="image" aria-label={label}>
       <div aria-hidden={true}>
         <Vega {...restProps} actions={actions} renderer={'svg'} config={{ ...defaultConfig, ...config }} />
       </div>
