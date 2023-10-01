@@ -5,6 +5,7 @@
  */
 
 @mixin utrecht-url {
+  break-inside: avoid;
   font-variant-ligatures: none;
   hyphens: none;
   page-break-inside: avoid;

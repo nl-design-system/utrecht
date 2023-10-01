@@ -44,6 +44,7 @@
 }
 
 @mixin utrecht-form-fieldset__legend {
+  break-inside: avoid;
   color: var(--utrecht-form-fieldset-legend-color, var(--utrecht-document-color, inherit));
   font-family: var(--utrecht-form-fieldset-legend-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-form-fieldset-legend-font-size);

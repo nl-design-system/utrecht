@@ -21,6 +21,7 @@
  */
 
 @mixin utrecht-data-list__item {
+  /* `break-inside: avoid` would probably be too much in situations, especially with nested lists */
   page-break-inside: avoid;
 }
 
