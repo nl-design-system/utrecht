@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { Textarea, TextareaProps } from '@utrecht/component-library-react/src/Textarea';
+import { Textarea } from '@utrecht/component-library-react';
+import type { TextareaProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/textarea/README.md?raw';
 import tokensDefinition from '@utrecht/components/textarea/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

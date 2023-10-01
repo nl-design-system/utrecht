@@ -2,21 +2,6 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { IconArrowsSort, IconLock, IconSortAscending, IconSortDescending } from '@tabler/icons-react';
-import readme from '@utrecht/components/table/README.md?raw';
-import actionReadme from '@utrecht/components/table/_table-row-action.md?raw';
-import tokensDefinition from '@utrecht/components/table/tokens.json';
-import tokens from '@utrecht/design-tokens/dist/index.json';
-import clsx from 'clsx';
-import groupBy from 'lodash.groupby';
-import React, { createRef, PropsWithChildren, ReactNode, useId, useState } from 'react';
-import { designTokenStory } from './design-token-story';
-import { ExampleDateValue } from './util/ExampleDateValue';
-import { ExampleDialog } from './util/ExampleDialog';
-import { ExampleFullscreenDocument } from './util/ExampleFullscreenDocument';
-import { ExampleInvisibleText } from './util/ExampleInvisibleText';
-import { ExampleMarkMatches } from './util/ExampleMarkMatches';
-import { ExampleTimeDuration } from './util/ExampleTimeDuration';
-import { useFullscreenButton } from './util/useFullscreenButton';
 import {
   Alert,
   Article,
@@ -49,7 +34,22 @@ import {
   UnorderedList,
   UnorderedListItem,
   URLValue,
-} from '../../component-library-react/src';
+} from '@utrecht/component-library-react';
+import readme from '@utrecht/components/table/README.md?raw';
+import actionReadme from '@utrecht/components/table/_table-row-action.md?raw';
+import tokensDefinition from '@utrecht/components/table/tokens.json';
+import tokens from '@utrecht/design-tokens/dist/index.json';
+import clsx from 'clsx';
+import groupBy from 'lodash.groupby';
+import React, { createRef, PropsWithChildren, ReactNode, useId, useState } from 'react';
+import { designTokenStory } from './design-token-story';
+import { ExampleDateValue } from './util/ExampleDateValue';
+import { ExampleDialog } from './util/ExampleDialog';
+import { ExampleFullscreenDocument } from './util/ExampleFullscreenDocument';
+import { ExampleInvisibleText } from './util/ExampleInvisibleText';
+import { ExampleMarkMatches } from './util/ExampleMarkMatches';
+import { ExampleTimeDuration } from './util/ExampleTimeDuration';
+import { useFullscreenButton } from './util/useFullscreenButton';
 import '@utrecht/components/table/css/index.scss';
 
 const meta = {

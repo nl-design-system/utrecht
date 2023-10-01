@@ -5,7 +5,8 @@ import readme from '@utrecht/components/logo-button/README.md?raw';
 import tokensDefinition from '@utrecht/components/logo-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
-import { LogoButton, LogoButtonProps } from './LogoButton';
+import { LogoButton } from './LogoButton';
+import type { LogoButtonProps } from './LogoButton';
 import { designTokenStory } from './design-token-story';
 
 const arabicDecorator = (Story) => (

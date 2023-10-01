@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { ButtonLink } from '@utrecht/component-library-react';
-import { ButtonLinkProps } from '@utrecht/component-library-react/src/ButtonLink';
+import type { ButtonLinkProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/button-link/README.md?raw';
 import tokensDefinition from '@utrecht/components/button-link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

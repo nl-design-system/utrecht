@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { SkipLink, SkipLinkProps } from '@utrecht/component-library-react/src/SkipLink';
+import { SkipLink } from '@utrecht/component-library-react';
+import type { SkipLinkProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/skip-link/README.md?raw';
 import tokensDefinition from '@utrecht/components/skip-link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

@@ -5,8 +5,7 @@
  */
 
 import { ButtonGroup, Link, LinkButton } from '@utrecht/component-library-react';
-import { LinkProps } from '@utrecht/component-library-react/src/Link';
-import { LinkButtonProps } from '@utrecht/component-library-react/src/LinkButton';
+import type { LinkButtonProps, LinkProps } from '@utrecht/component-library-react';
 import React from 'react';
 import { HTMLHeading } from './util/HTMLHeading';
 

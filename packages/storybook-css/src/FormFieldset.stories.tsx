@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Fieldset, FieldsetLegend, Paragraph } from '@utrecht/component-library-react';
-import { FieldsetProps } from '@utrecht/component-library-react/src/Fieldset';
+import type { FieldsetProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/form-fieldset/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-fieldset/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

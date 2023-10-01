@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Mark } from '@utrecht/component-library-react';
-import { MarkProps } from '@utrecht/component-library-react/src/Mark';
+import type { MarkProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/mark/README.md?raw';
 import tokensDefinition from '@utrecht/components/mark/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

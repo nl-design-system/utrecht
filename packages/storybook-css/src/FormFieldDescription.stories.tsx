@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { FormFieldDescription, Paragraph } from '@utrecht/component-library-react';
-import { FormFieldDescriptionProps } from '@utrecht/component-library-react/src/FormFieldDescription';
+import type { FormFieldDescriptionProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/form-field-description/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-field-description/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

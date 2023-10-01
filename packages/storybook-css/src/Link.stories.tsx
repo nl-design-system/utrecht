@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Article, Heading2, Icon, Link, Paragraph, URLValue } from '@utrecht/component-library-react/src';
+import { Article, Heading2, Icon, Link, Paragraph, URLValue } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/link/README.md?raw';
 import diacriticsDocs from '@utrecht/components/link/_diacritics.md?raw';
 import externalDocs from '@utrecht/components/link/_external.md?raw';
