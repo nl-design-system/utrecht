@@ -59,4 +59,4 @@ export { default as Textarea } from './Textarea.vue';
 export { default as Textbox } from './Textbox.vue';
 export { default as UnorderedList } from './UnorderedList.vue';
 export { default as UnorderedListItem } from './UnorderedListItem.vue';
-export { default as URLValue } from './URLValue.vue';
+export { default as URLData } from './URLData.vue';

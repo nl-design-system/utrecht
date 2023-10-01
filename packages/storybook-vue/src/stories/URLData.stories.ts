@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import { URLValue } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/url/README.md?raw';
-import tokens from '@utrecht/components/url/tokens.json';
+import { URLData } from '@utrecht/component-library-vue';
+import readme from '@utrecht/components/url-data/README.md?raw';
+import tokens from '@utrecht/components/url-data/tokens.json';
 import { createStory } from './util';
 
 const meta = {
-  id: 'vue-url-value',
-  title: 'Vue.js Component/URL Value',
-  component: URLValue,
+  id: 'vue-url-data',
+  title: 'Vue.js Component/URL data',
+  component: URLData,
   tags: ['autodocs'],
   args: {},
   parameters: {
@@ -15,28 +15,28 @@ const meta = {
       type: 'ALPHA',
     },
     tokens,
-    tokenPrefix: 'utrecht-url-value',
+    tokenPrefix: 'utrecht-url-data',
     docs: {
       description: {
         component: readme,
       },
       source: {
-        code: '<URLValue v-bind="$props"><slot></slot></URLValue>',
+        code: '<URLData v-bind="$props"><slot></slot></URLData>',
       },
     },
   },
   render: (args) => ({
     components: {
-      URLValue,
+      URLData,
     },
     setup() {
       return { args };
     },
     template: `
-      <URLValue v-bind="$props"><slot></slot></URLValue>
+      <URLData v-bind="$props"><slot></slot></URLData>
     `,
   }),
-} satisfies Meta<typeof URLValue>;
+} satisfies Meta<typeof URLData>;
 
 export default meta;
 

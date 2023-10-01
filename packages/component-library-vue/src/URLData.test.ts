@@ -1,10 +1,10 @@
 import { render } from '@testing-library/vue';
-import UtrechtURLValue from './URLValue.vue';
+import UtrechtURLData from './URLData.vue';
 import '@testing-library/jest-dom';
 
-describe('URL value', () => {
+describe('URL data', () => {
   it('renders an HTML bdi element', () => {
-    const { container } = render(UtrechtURLValue, {
+    const { container } = render(UtrechtURLData, {
       slots: {
         default: 'https://example.com/',
       },
@@ -16,15 +16,15 @@ describe('URL value', () => {
   });
 
   it('renders a design system BEM class name', () => {
-    const { container } = render(UtrechtURLValue);
+    const { container } = render(UtrechtURLData);
 
     const urlValue = container.querySelector(':only-child');
 
-    expect(urlValue).toHaveClass('utrecht-url');
+    expect(urlValue).toHaveClass('utrecht-url-data');
   });
 
   it('renders rich text content', () => {
-    const { container } = render(UtrechtURLValue, {
+    const { container } = render(UtrechtURLData, {
       slots: {
         default: '<strong>https:</strong>//example.com/',
       },
@@ -37,7 +37,7 @@ describe('URL value', () => {
   });
 
   it('can be hidden', () => {
-    const { container } = render(UtrechtURLValue, {
+    const { container } = render(UtrechtURLData, {
       attrs: {
         hidden: true,
       },
@@ -49,7 +49,7 @@ describe('URL value', () => {
   });
 
   it('can have a custom class name', () => {
-    const { container } = render(UtrechtURLValue, {
+    const { container } = render(UtrechtURLData, {
       attrs: {
         class: 'visited',
       },
@@ -64,7 +64,7 @@ describe('URL value', () => {
   });
 
   it('can have an additional class name', () => {
-    const { container } = render(UtrechtURLValue, {
+    const { container } = render(UtrechtURLData, {
       attrs: {
         class: 'large',
       },
@@ -73,6 +73,6 @@ describe('URL value', () => {
     const urlValue = container.querySelector(':only-child');
 
     expect(urlValue).toHaveClass('large');
-    expect(urlValue).toHaveClass('utrecht-url');
+    expect(urlValue).toHaveClass('utrecht-url-data');
   });
 });

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { DataList, DataListItem, DataListValue, URLValue } from '@utrecht/component-library-react/src/css-module/index';
+import { DataList, DataListItem, DataListValue, URLData } from '@utrecht/component-library-react/src/css-module/index';
 import React from 'react';
 
 const meta = {
@@ -61,14 +61,14 @@ export const ValueWithURL: Story = {
   args: {
     // Perhaps "voorbeeld.fi" when translated from English to Dutch
     // "fi" is used so we can test rendering of ligatures is avoided
-    children: <URLValue>https://example.fi/</URLValue>,
+    children: <URLData>https://example.fi/</URLData>,
     notranslate: true,
   },
 };
 
 export const ValueWithEmail: Story = {
   args: {
-    children: <URLValue>mail@example.fi</URLValue>,
+    children: <URLData>mail@example.fi</URLData>,
     notranslate: true,
   },
 };

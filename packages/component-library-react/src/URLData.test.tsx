@@ -1,11 +1,11 @@
 import { render } from '@testing-library/react';
 import { createRef } from 'react';
-import { URLValue } from './URLValue';
+import { URLData } from './URLData';
 import '@testing-library/jest-dom';
 
-describe('URL value', () => {
+describe('URL data', () => {
   it('renders an HTML bdi element', () => {
-    const { container } = render(<URLValue>{'https://example.com/'}</URLValue>);
+    const { container } = render(<URLData>{'https://example.com/'}</URLData>);
 
     const urlValue = container.querySelector('bdi:only-child');
 
@@ -13,19 +13,19 @@ describe('URL value', () => {
   });
 
   it('renders a design system BEM class name', () => {
-    const { container } = render(<URLValue />);
+    const { container } = render(<URLData />);
 
     const urlValue = container.querySelector(':only-child');
 
-    expect(urlValue).toHaveClass('utrecht-url');
+    expect(urlValue).toHaveClass('utrecht-url-data');
   });
 
   it('renders rich text content', () => {
     const { container } = render(
-      <URLValue>
+      <URLData>
         <strong>https:</strong>
         {'//example.com/'}
-      </URLValue>,
+      </URLData>,
     );
 
     const urlValue = container.querySelector(':only-child');
@@ -36,7 +36,7 @@ describe('URL value', () => {
   });
 
   it('can be hidden', () => {
-    const { container } = render(<URLValue hidden>Secrets</URLValue>);
+    const { container } = render(<URLData hidden>Secrets</URLData>);
 
     const urlValue = container.querySelector(':only-child');
 
@@ -44,7 +44,7 @@ describe('URL value', () => {
   });
 
   it('can have a custom class name', () => {
-    const { container } = render(<URLValue className="visited">{'https://example.com/'}</URLValue>);
+    const { container } = render(<URLData className="visited">{'https://example.com/'}</URLData>);
 
     const urlValue = container.querySelector(':only-child');
 
@@ -52,19 +52,19 @@ describe('URL value', () => {
   });
 
   it('can have a additional class name', () => {
-    const { container } = render(<URLValue className="large" />);
+    const { container } = render(<URLData className="large" />);
 
     const urlValue = container.querySelector(':only-child');
 
     expect(urlValue).toHaveClass('large');
 
-    expect(urlValue).toHaveClass('utrecht-url');
+    expect(urlValue).toHaveClass('utrecht-url-data');
   });
 
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLElement>();
 
-    const { container } = render(<URLValue ref={ref}>{'https://example.com/'}</URLValue>);
+    const { container } = render(<URLData ref={ref}>{'https://example.com/'}</URLData>);
 
     const urlValue = container.querySelector(':only-child');
 

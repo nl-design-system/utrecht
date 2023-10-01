@@ -14,7 +14,7 @@ import {
   UtrechtLinkButton,
   UtrechtMultilineData,
   UtrechtNumberValue,
-  UtrechtUrl,
+  UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -125,18 +125,18 @@ export const URLData: Story = {
       <UtrechtDataListItem>
         <UtrechtDataListKey>Website</UtrechtDataListKey>
         <UtrechtDataListValue>
-          <UtrechtUrl>https://example.fi/</UtrechtUrl>
+          <UtrechtUrlData>https://example.fi/</UtrechtUrlData>
         </UtrechtDataListValue>
       </UtrechtDataListItem>,
       <UtrechtDataListItem>
         <UtrechtDataListKey>E-mailadres</UtrechtDataListKey>
         <UtrechtDataListValue>
-          <UtrechtUrl>info@example.fi</UtrechtUrl>
+          <UtrechtUrlData>info@example.fi</UtrechtUrlData>
         </UtrechtDataListValue>
       </UtrechtDataListItem>,
     ],
   },
-  name: 'URL value',
+  name: 'URL data',
 };
 
 export const NumberData: Story = {

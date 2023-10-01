@@ -129,7 +129,7 @@ import { TableHeaderCell } from "@utrecht/component-library-react/TableHeaderCel
 import { TableRow } from "@utrecht/component-library-react/TableRow";
 import { Textarea } from "@utrecht/component-library-react/Textarea";
 import { Textbox } from "@utrecht/component-library-react/Textbox";
-import { URLValue } from "@utrecht/component-library-react/URLValue";
+import { URLData } from "@utrecht/component-library-react/URLData";
 import { UnorderedList } from "@utrecht/component-library-react/UnorderedList";
 import { UnorderedListItem } from "@utrecht/component-library-react/UnorderedListItem";
 ```

@@ -10,7 +10,7 @@ De _data list_ component gebruik je onder andere voor:
 
 Om verschillende soorten data optimaal weer te geven, zijn er speciale componenten gemaakt:
 
-- URL Value: gebruik deze voor internetadressen en e-mailadressen
+- URL data: gebruik deze voor internetadressen en e-mailadressen
 - IBAN: gebruik deze voor dit type bankrekeningnummer
 
 Er zijn _BEM modifier class names_ beschikbaar van `utrecht-data-list__value`, voor datatypes:

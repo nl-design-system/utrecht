@@ -1,15 +1,15 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Link, Paragraph, URLValue } from '@utrecht/component-library-react';
-import type { URLValueProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/url/README.md?raw';
-import tokensDefinition from '@utrecht/components/url/tokens.json';
+import { Link, Paragraph, URLData } from '@utrecht/component-library-react';
+import type { URLDataProps } from '@utrecht/component-library-react';
+import readme from '@utrecht/components/url-data/README.md?raw';
+import tokensDefinition from '@utrecht/components/url-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
-type HypenatedTextWithLinksProps = URLValueProps & { paragraph: string; href: string; external?: boolean };
+type HypenatedTextWithLinksProps = URLDataProps & { paragraph: string; href: string; external?: boolean };
 
 const HypenatedTextWithLinks = ({ children, paragraph, external, href, ...props }: HypenatedTextWithLinksProps) => (
   <Paragraph
@@ -23,7 +23,7 @@ const HypenatedTextWithLinks = ({ children, paragraph, external, href, ...props 
         text || (
           <>
             <Link href={href} external={external}>
-              <URLValue {...props}>{children}</URLValue>
+              <URLData {...props}>{children}</URLData>
             </Link>
           </>
         ),
@@ -31,17 +31,17 @@ const HypenatedTextWithLinks = ({ children, paragraph, external, href, ...props 
   </Paragraph>
 );
 
-const URLValuestory = ({ paragraph, external, href, ...props }: HypenatedTextWithLinksProps) =>
+const URLDatastory = ({ paragraph, external, href, ...props }: HypenatedTextWithLinksProps) =>
   paragraph ? (
     <HypenatedTextWithLinks paragraph={paragraph} external={external} href={href} {...props} />
   ) : (
-    <URLValue {...props} />
+    <URLData {...props} />
   );
 
 const meta = {
-  title: 'CSS Component/URL value',
+  title: 'CSS Component/URL data',
   id: 'css-url',
-  component: URLValuestory,
+  component: URLDatastory,
   argTypes: {
     children: {
       description: 'URL',
@@ -52,7 +52,7 @@ const meta = {
     children: [],
   },
   parameters: {
-    tokensPrefix: 'utrecht-url',
+    tokensPrefix: 'utrecht-url-data',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -64,7 +64,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof URLValuestory>;
+} satisfies Meta<typeof URLDatastory>;
 
 export default meta;
 
@@ -133,7 +133,7 @@ export const HyphenatedWebsite: Story = {
       description: {
         story: `Internetadressen (URLs) en e-mailadressen werken niet goed als je per ongeluk een extra koppelstreepje gebruikt. Aan het einde van een regel worden deze adressen soms per ongeluk opgeknipt met een koppelstreepje: dan is het erg onduidelijk of het streepje onderdeel is van het adres of dat het genegeerd moet worden.
 
-Gebruik de _URL value_ component voor deze adressen om met CSS het koppelstreepje te voorkomen.`,
+Gebruik de _URL data_ component voor deze adressen om met CSS het koppelstreepje te voorkomen.`,
       },
     },
   },

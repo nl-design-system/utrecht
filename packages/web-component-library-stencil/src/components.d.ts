@@ -689,7 +689,7 @@ export namespace Components {
         "type": string;
         "value": string;
     }
-    interface UtrechtUrl {
+    interface UtrechtUrlData {
     }
 }
 export interface UtrechtButtonCustomEvent<T> extends CustomEvent<T> {
@@ -2415,11 +2415,11 @@ declare global {
         prototype: HTMLUtrechtTextboxElement;
         new (): HTMLUtrechtTextboxElement;
     };
-    interface HTMLUtrechtUrlElement extends Components.UtrechtUrl, HTMLStencilElement {
+    interface HTMLUtrechtUrlDataElement extends Components.UtrechtUrlData, HTMLStencilElement {
     }
-    var HTMLUtrechtUrlElement: {
-        prototype: HTMLUtrechtUrlElement;
-        new (): HTMLUtrechtUrlElement;
+    var HTMLUtrechtUrlDataElement: {
+        prototype: HTMLUtrechtUrlDataElement;
+        new (): HTMLUtrechtUrlDataElement;
     };
     interface HTMLElementTagNameMap {
         "utrecht-alert": HTMLUtrechtAlertElement;
@@ -2701,7 +2701,7 @@ declare global {
         "utrecht-table-row": HTMLUtrechtTableRowElement;
         "utrecht-textarea": HTMLUtrechtTextareaElement;
         "utrecht-textbox": HTMLUtrechtTextboxElement;
-        "utrecht-url": HTMLUtrechtUrlElement;
+        "utrecht-url-data": HTMLUtrechtUrlDataElement;
     }
 }
 declare namespace LocalJSX {
@@ -3418,7 +3418,7 @@ declare namespace LocalJSX {
         "type"?: string;
         "value"?: string;
     }
-    interface UtrechtUrl {
+    interface UtrechtUrlData {
     }
     interface IntrinsicElements {
         "utrecht-alert": UtrechtAlert;
@@ -3700,7 +3700,7 @@ declare namespace LocalJSX {
         "utrecht-table-row": UtrechtTableRow;
         "utrecht-textarea": UtrechtTextarea;
         "utrecht-textbox": UtrechtTextbox;
-        "utrecht-url": UtrechtUrl;
+        "utrecht-url-data": UtrechtUrlData;
     }
 }
 export { LocalJSX as JSX };
@@ -4002,7 +4002,7 @@ declare module "@stencil/core" {
             "utrecht-table-row": LocalJSX.UtrechtTableRow & JSXBase.HTMLAttributes<HTMLUtrechtTableRowElement>;
             "utrecht-textarea": LocalJSX.UtrechtTextarea & JSXBase.HTMLAttributes<HTMLUtrechtTextareaElement>;
             "utrecht-textbox": LocalJSX.UtrechtTextbox & JSXBase.HTMLAttributes<HTMLUtrechtTextboxElement>;
-            "utrecht-url": LocalJSX.UtrechtUrl & JSXBase.HTMLAttributes<HTMLUtrechtUrlElement>;
+            "utrecht-url-data": LocalJSX.UtrechtUrlData & JSXBase.HTMLAttributes<HTMLUtrechtUrlDataElement>;
         }
     }
 }

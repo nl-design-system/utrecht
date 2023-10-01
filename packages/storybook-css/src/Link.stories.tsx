@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Article, Heading2, Icon, Link, Paragraph, URLValue } from '@utrecht/component-library-react';
+import { Article, Heading2, Icon, Link, Paragraph, URLData } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/link/README.md?raw';
 import diacriticsDocs from '@utrecht/components/link/_diacritics.md?raw';
 import externalDocs from '@utrecht/components/link/_external.md?raw';
@@ -625,28 +625,28 @@ export const Email: Story = {
   },
 };
 
-export const URLValueStory: Story = {
+export const URLDataStory: Story = {
   args: {
     href: 'https://example.fi/',
-    children: <URLValue>https://example.fi/</URLValue>,
+    children: <URLData>https://example.fi/</URLData>,
   },
-  name: 'URL value',
+  name: 'URL data',
   parameters: {
     docs: {
       description: {
-        story: 'Combineer `.utrecht-link` met `utrecht-url` voor links die de URL als link tekst hebben.',
+        story: 'Combineer `.utrecht-link` met `utrecht-url-data` voor links die de URL als link tekst hebben.',
       },
     },
   },
 };
 
-export const URLValueRightToLeftStory: Story = {
+export const URLDataRightToLeftStory: Story = {
   args: {
     href: 'https://example.fi/',
-    children: <URLValue>https://example.fi/</URLValue>,
+    children: <URLData>https://example.fi/</URLData>,
   },
   decorators: [arabicDecorator],
-  name: 'URL value (right-to-left)',
+  name: 'URL data (right-to-left)',
   parameters: {
     docs: {
       description: {
