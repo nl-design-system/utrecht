@@ -1,4 +1,3 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Article, Heading1, Paragraph } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/article/README.md?raw';
@@ -31,14 +30,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
 } satisfies Meta<typeof Article>;

@@ -1,4 +1,3 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/blocks';
 import type { Meta, StoryObj } from '@storybook/react';
 import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/src/css-module';
 import readme from '@utrecht/components/alert/README.md?raw';
@@ -28,14 +27,9 @@ const meta = {
     tokens,
     tokensDefinition,
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
 } satisfies Meta<typeof Alert>;

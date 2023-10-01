@@ -1,4 +1,5 @@
 /* eslint-env node */
+import { Controls, Description, Primary, Stories } from '@storybook/blocks';
 import type { Preview } from '@storybook/react';
 import type { StoryContext } from '@storybook/types';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
@@ -113,6 +114,17 @@ const preview: Preview = {
           });
         }
         return src;
+      },
+      page: () => {
+        // Exclude `<Title>` because the title comes from the Markdown file
+        return (
+          <>
+            <Description />
+            <Primary />
+            <Controls />
+            <Stories />
+          </>
+        );
       },
     },
     ...addonStatus,

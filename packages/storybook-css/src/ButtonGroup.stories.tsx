@@ -1,4 +1,3 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { Button, ButtonGroup } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/button-group/README.md?raw';
@@ -45,16 +44,8 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        story: `Styling via the \`.utrecht-button-group\` class name.`,
+        story: readme,
       },
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
     },
   },
 } satisfies Meta<typeof ButtonGroupStory>;

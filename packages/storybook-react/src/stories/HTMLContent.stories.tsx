@@ -1,8 +1,6 @@
-import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
 import { HTMLContent } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/html-content/README.md?raw';
-import React from 'react';
 
 const meta = {
   title: 'React Component/HTML Content',
@@ -142,14 +140,9 @@ const meta = {
   },
   parameters: {
     docs: {
-      page: () => (
-        <>
-          <Description>{readme}</Description>
-          <Primary />
-          <ArgsTable story={PRIMARY_STORY} />
-          <Stories />
-        </>
-      ),
+      description: {
+        component: readme,
+      },
     },
   },
 } satisfies Meta<typeof HTMLContent>;
