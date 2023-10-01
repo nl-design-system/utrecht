@@ -5,4 +5,5 @@
 
 import '../../../../components/calendar/css/index.scss';
 
-export * from '../Calendar/index';
+export type { CalendarProps } from '../Calendar/index';
+export { Calendar } from '../Calendar/index';
