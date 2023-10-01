@@ -7,7 +7,8 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
-import { MapControlButton, MapControlButtonProps } from './MapControlButton';
+import { MapControlButton } from './MapControlButton';
+import type { MapControlButtonProps } from './MapControlButton';
 import { designTokenStory } from './design-token-story';
 
 interface MapControlButtonStoryProps extends Omit<MapControlButtonProps, 'focus'> {

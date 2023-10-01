@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { Textbox, TextboxProps } from '@utrecht/component-library-react/src/Textbox';
+import { Textbox } from '@utrecht/component-library-react';
+import type { TextboxProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/textbox/README.md?raw';
 import achternaamDocs from '@utrecht/components/textbox/_achternaam.md?raw';
 import emailDocs from '@utrecht/components/textbox/_email.md?raw';

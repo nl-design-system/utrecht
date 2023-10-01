@@ -4,12 +4,12 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import React from 'react';
 import {
   Accordion as ReactAccordion,
   AccordionProvider as ReactAccordionProvider,
   AccordionSection as ReactAccordionSection,
-} from '../../../component-library-react/src';
+} from '@utrecht/component-library-react';
+import React from 'react';
 import '@utrecht/components/accordion/css/index.scss';
 
 export const argTypes = {

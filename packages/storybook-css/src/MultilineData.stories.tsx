@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { MultilineData } from '@utrecht/component-library-react';
-import { MultilineDataProps } from '@utrecht/component-library-react/src/MultilineData';
+import type { MultilineDataProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/multiline-data/README.md?raw';
 import tokensDefinition from '@utrecht/components/multiline-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

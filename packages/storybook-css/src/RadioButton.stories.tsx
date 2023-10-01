@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { RadioButton } from '@utrecht/component-library-react';
-import { RadioButtonProps } from '@utrecht/component-library-react/src/RadioButton';
+import type { RadioButtonProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/radio-button/README.md?raw';
 import tokensDefinition from '@utrecht/components/radio-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

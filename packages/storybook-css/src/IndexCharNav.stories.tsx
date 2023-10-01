@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { IndexCharNav, IndexCharNavProps } from '@utrecht/component-library-react/dist/css-module';
+import type { IndexCharNavProps } from '@utrecht/component-library-react';
+import { IndexCharNav } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/index-char-nav/README.md?raw';
 import tokensDefinition from '@utrecht/components/index-char-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

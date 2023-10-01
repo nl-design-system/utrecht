@@ -1,5 +1,5 @@
-import { Link } from '@utrecht/component-library-react/src';
-import { LinkProps } from '@utrecht/component-library-react/src/Link';
+import { Link } from '@utrecht/component-library-react';
+import type { LinkProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 

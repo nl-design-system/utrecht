@@ -1,5 +1,5 @@
 import { LinkButton } from '@utrecht/component-library-react';
-import { LinkButtonProps } from '@utrecht/component-library-react/src/LinkButton';
+import type { LinkButtonProps } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 

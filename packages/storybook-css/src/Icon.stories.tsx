@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
+import { Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/icon/README.md?raw';
 import tokensDefinition from '@utrecht/components/icon/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
-// import { Icon } from '@utrecht/component-library-react/src/Icon';
+// import { Icon } from '@utrecht/component-library-react';
 import { designTokenStory } from './design-token-story';
-import { Icon } from '../../component-library-react/src/Icon';
 import '@utrecht/components/icon/css/index.scss';
 
 const meta = {

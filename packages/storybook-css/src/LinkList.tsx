@@ -5,7 +5,7 @@
  */
 
 import { Link } from '@utrecht/component-library-react';
-import { LinkProps } from '@utrecht/component-library-react/src/Link';
+import type { LinkProps } from '@utrecht/component-library-react';
 import React from 'react';
 import '@utrecht/components/link-list/css/index.scss';
 

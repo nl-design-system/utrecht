@@ -2,8 +2,8 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { LinkSocial, ListSocial, ListSocialItem } from '@utrecht/component-library-react';
-import { LinkSocialProps } from '@utrecht/component-library-react/src/LinkSocial';
-import { ListSocialProps } from '@utrecht/component-library-react/src/ListSocial';
+import type { LinkSocialProps } from '@utrecht/component-library-react';
+import type { ListSocialProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/list-social/README.md?raw';
 import tokensDefinition from '@utrecht/components/list-social/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

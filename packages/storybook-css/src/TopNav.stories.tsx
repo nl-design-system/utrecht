@@ -6,7 +6,8 @@ import tokensDefinition from '@utrecht/components/navigatie topnav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
-import { TopNav, TopNavItem, TopNavLink, TopNavLinkProps, TopNavProps } from './TopNav';
+import { TopNav, TopNavItem, TopNavLink } from './TopNav';
+import type { TopNavLinkProps, TopNavProps } from './TopNav';
 import { designTokenStory } from './design-token-story';
 
 interface TopNavStoryProps extends TopNavProps {

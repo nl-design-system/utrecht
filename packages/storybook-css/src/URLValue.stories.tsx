@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Link, Paragraph, URLValue } from '@utrecht/component-library-react';
-import { URLValueProps } from '@utrecht/component-library-react/src/URLValue';
+import type { URLValueProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/url/README.md?raw';
 import tokensDefinition from '@utrecht/components/url/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

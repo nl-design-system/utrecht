@@ -1,5 +1,5 @@
+import { Mark } from '@utrecht/component-library-react';
 import React from 'react';
-import { Mark } from '../../../component-library-react/src';
 
 /**
  * Seperate between matching and non-matching substrings.

@@ -1,7 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { Select, SelectOption, SelectProps } from '@utrecht/component-library-react/src/Select';
+import { Select, SelectOption } from '@utrecht/component-library-react';
+import type { SelectProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/select/README.md?raw';
 import tokensDefinition from '@utrecht/components/select/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

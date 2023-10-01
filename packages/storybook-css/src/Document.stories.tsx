@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Document, Heading1, Paragraph } from '@utrecht/component-library-react';
-import { DocumentProps } from '@utrecht/component-library-react/src/Document';
+import type { DocumentProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/document/README.md?raw';
 import langDocs from '@utrecht/components/document/_lang.md?raw';
 import tokensDefinition from '@utrecht/components/document/tokens.json';

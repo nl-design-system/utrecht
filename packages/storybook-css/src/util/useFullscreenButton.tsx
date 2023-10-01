@@ -1,5 +1,5 @@
+import type { ButtonProps } from '@utrecht/component-library-react';
 import { Dispatch, RefObject, SetStateAction, useEffect, useState } from 'react';
-import { ButtonProps } from '../../../component-library-react/src/Button';
 
 const createFullscreenListener =
   (ref: RefObject<HTMLElement>, setFullscreen: Dispatch<SetStateAction<boolean>>) => () => {

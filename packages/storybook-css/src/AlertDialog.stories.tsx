@@ -10,7 +10,7 @@ import {
   PrimaryActionButton,
   SecondaryActionButton,
 } from '@utrecht/component-library-react';
-import { AlertDialogProps } from '@utrecht/component-library-react/dist/AlertDialog';
+import type { AlertDialogProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/alert-dialog/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
