@@ -29,6 +29,7 @@
 }
 
 @mixin utrecht-table__caption {
+  break-inside: avoid;
   color: var(--utrecht-table-caption-color);
   font-family: var(--utrecht-table-caption-font-family);
   font-size: var(--utrecht-table-caption-font-size);
@@ -44,6 +45,7 @@
   --_utrecht-table-header-cell-z-index: 8;
 
   background-color: var(--utrecht-table-header-background-color);
+  break-inside: avoid;
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
   page-break-inside: avoid;
@@ -195,6 +197,7 @@
 }
 
 @mixin utrecht-table__row {
+  break-inside: avoid;
   page-break-inside: avoid;
 }
 

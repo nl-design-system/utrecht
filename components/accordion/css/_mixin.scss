@@ -9,6 +9,7 @@
 }
 
 @mixin utrecht-accordion__section {
+  break-inside: avoid;
   margin-block-end: var(--utrecht-accordion-section-margin-block-end);
   margin-block-start: var(--utrecht-accordion-section-margin-block-start);
 }
