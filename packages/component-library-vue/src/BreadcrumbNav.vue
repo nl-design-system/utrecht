@@ -28,23 +28,25 @@
 
 <template>
   <nav
-    :class="[
-      'utrecht-breadcrumb',
-      { 'utrecht-breadcrumb--arrows': appearance === 'arrows' },
-    ]"
+    :class="['utrecht-breadcrumb-nav', { 'utrecht-breadcrumb-nav--arrows': appearance === 'arrows' }]"
     :aria-labelledby="headingId"
   >
-    <UtrechtHeading :id="headingId" class="utrecht-breadcrumb__heading" :level="headingLevel ?? 2" aria-hidden="true">
+    <UtrechtHeading
+      :id="headingId"
+      class="utrecht-breadcrumb-nav__heading"
+      :level="headingLevel ?? 2"
+      aria-hidden="true"
+    >
       {{ label }}
     </UtrechtHeading>
 
     <ol
-      class="utrecht-breadcrumb__list utrecht-breadcrumb__list--html-ol"
-      v-bind="{...useMicrodataItem({type: 'https://schema.org/BreadcrumbList' })}"
+      class="utrecht-breadcrumb-nav__list utrecht-breadcrumb-nav__list--html-ol"
+      v-bind="{ ...useMicrodataItem({ type: 'https://schema.org/BreadcrumbList' }) }"
     >
       <slot />
     </ol>
   </nav>
 </template>
 
-<style src="@utrecht/components/breadcrumb/css/index.scss"></style>
+<style src="@utrecht/components/breadcrumb-nav/css/index.scss"></style>

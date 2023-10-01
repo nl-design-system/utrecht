@@ -1,0 +1,104 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin reset-ol {
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+@mixin utrecht-breadcrumb-nav {
+  --utrecht-focus-background-color: var(--utrecht-breadcrumb-nav-link-focus-background-color);
+  --utrecht-link-background-color: var(--utrecht-breadcrumb-nav-link-background-color);
+  --utrecht-link-focus-color: var(--utrecht-breadcrumb-nav-link-focus-color, var(--utrecht-breadcrumb-nav-link-color));
+  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-hover-color: var(--utrecht-breadcrumb-nav-link-color);
+  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-visited-color: var(--utrecht-breadcrumb-nav-link-color);
+  --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-color: var(--utrecht-breadcrumb-nav-link-color);
+  --utrecht-link-placeholder-color: var(--utrecht-link-breadcrumb-link-disabled-color);
+
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-breadcrumb-nav-font-size);
+  text-transform: var(--utrecht-document-text-transform, inherit);
+}
+
+@mixin utrecht-breadcrumb-nav__heading {
+  display: none;
+}
+
+@mixin utrecht-breadcrumb-nav__list {
+  display: flex;
+  flex-wrap: wrap;
+  min-block-size: var(--utrecht-breadcrumb-nav-min-block-size);
+}
+
+@mixin utrecht-breadcrumb-nav__item {
+  block-size: 100%;
+}
+
+@mixin utrecht-breadcrumb-nav__link {
+  --utrecht-icon-size: var(--utrecht-breadcrumb-nav-link-icon-size);
+  --utrecht-link-icon-size: var(--utrecht-breadcrumb-nav-link-icon-size);
+
+  background-color: var(--utrecht-breadcrumb-nav-link-background-color);
+  display: inline-block;
+  padding-block-end: var(--utrecht-breadcrumb-nav-item-padding-block-end, 8px);
+  padding-block-start: var(--utrecht-breadcrumb-nav-item-padding-block-start, 8px);
+  padding-inline-end: var(--utrecht-breadcrumb-nav-item-padding-inline-end, 8px);
+  padding-inline-start: var(--utrecht-breadcrumb-nav-item-padding-inline-start, 8px);
+}
+
+@mixin utrecht-breadcrumb-nav__link--current {
+  --utrecht-link-current-font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
+
+  cursor: var(--utrecht-action-inert-cursor, default);
+  font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
+}
+
+@mixin utrecht-breadcrumb-nav__link--disabled {
+  --utrecht-link-placeholder-color: var(
+    --utrecht-breadcrumb-nav-link-disabled-color,
+    var(--utrecht-breadcrumb-nav-link-color)
+  );
+
+  background-color: var(
+    --utrecht-breadcrumb-nav-link-disabled-background-color,
+    var(--utrecht-breadcrumb-nav-link-background-color)
+  );
+  color: var(--utrecht-link-placeholder-color);
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-breadcrumb-nav__text {
+}
+
+@mixin utrecht-breadcrumb-nav__separator {
+  /*
+   * Overwrite `style` attribute using "private" CSS variable for <li> hack:
+   * <li aria-hidden="true" hidden style="display: var(--_utrecht-breadcrumb-nav-separator-display, block)">
+   */
+  --_utrecht-breadcrumb-nav-separator-display: inline-flex;
+  --utrecht-icon-size: var(--utrecht-breadcrumb-nav-separator-icon-size);
+
+  align-items: center;
+  color: var(--utrecht-breadcrumb-nav-separator-color);
+  cursor: var(--utrecht-action-inert-cursor, default);
+  display: var(--_utrecht-breadcrumb-nav-separator-display);
+  inline-size: fit-content;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+@mixin utrecht-breadcrumb-nav__separator--html-li {
+  /*
+   * Overwrite `style` attribute using "private" CSS variable for <li> hack:
+   * <li aria-hidden="true" hidden style="display: var(--_utrecht-breadcrumb-nav-separator-display, block)">
+   */
+  display: var(--_utrecht-breadcrumb-nav-separator-display);
+}

@@ -26,7 +26,7 @@ export namespace Components {
     interface UtrechtBadgeStatus {
         "status": string;
     }
-    interface UtrechtBreadcrumb {
+    interface UtrechtBreadcrumbNav {
         "json": string;
         "variant": string;
     }
@@ -767,11 +767,11 @@ declare global {
         prototype: HTMLUtrechtBadgeStatusElement;
         new (): HTMLUtrechtBadgeStatusElement;
     };
-    interface HTMLUtrechtBreadcrumbElement extends Components.UtrechtBreadcrumb, HTMLStencilElement {
+    interface HTMLUtrechtBreadcrumbNavElement extends Components.UtrechtBreadcrumbNav, HTMLStencilElement {
     }
-    var HTMLUtrechtBreadcrumbElement: {
-        prototype: HTMLUtrechtBreadcrumbElement;
-        new (): HTMLUtrechtBreadcrumbElement;
+    var HTMLUtrechtBreadcrumbNavElement: {
+        prototype: HTMLUtrechtBreadcrumbNavElement;
+        new (): HTMLUtrechtBreadcrumbNavElement;
     };
     interface HTMLUtrechtButtonElement extends Components.UtrechtButton, HTMLStencilElement {
     }
@@ -2429,7 +2429,7 @@ declare global {
         "utrecht-badge-data": HTMLUtrechtBadgeDataElement;
         "utrecht-badge-list": HTMLUtrechtBadgeListElement;
         "utrecht-badge-status": HTMLUtrechtBadgeStatusElement;
-        "utrecht-breadcrumb": HTMLUtrechtBreadcrumbElement;
+        "utrecht-breadcrumb-nav": HTMLUtrechtBreadcrumbNavElement;
         "utrecht-button": HTMLUtrechtButtonElement;
         "utrecht-button-group": HTMLUtrechtButtonGroupElement;
         "utrecht-button-link": HTMLUtrechtButtonLinkElement;
@@ -2725,7 +2725,7 @@ declare namespace LocalJSX {
     interface UtrechtBadgeStatus {
         "status"?: string;
     }
-    interface UtrechtBreadcrumb {
+    interface UtrechtBreadcrumbNav {
         "json"?: string;
         "variant"?: string;
     }
@@ -3428,7 +3428,7 @@ declare namespace LocalJSX {
         "utrecht-badge-data": UtrechtBadgeData;
         "utrecht-badge-list": UtrechtBadgeList;
         "utrecht-badge-status": UtrechtBadgeStatus;
-        "utrecht-breadcrumb": UtrechtBreadcrumb;
+        "utrecht-breadcrumb-nav": UtrechtBreadcrumbNav;
         "utrecht-button": UtrechtButton;
         "utrecht-button-group": UtrechtButtonGroup;
         "utrecht-button-link": UtrechtButtonLink;
@@ -3714,7 +3714,7 @@ declare module "@stencil/core" {
             "utrecht-badge-data": LocalJSX.UtrechtBadgeData & JSXBase.HTMLAttributes<HTMLUtrechtBadgeDataElement>;
             "utrecht-badge-list": LocalJSX.UtrechtBadgeList & JSXBase.HTMLAttributes<HTMLUtrechtBadgeListElement>;
             "utrecht-badge-status": LocalJSX.UtrechtBadgeStatus & JSXBase.HTMLAttributes<HTMLUtrechtBadgeStatusElement>;
-            "utrecht-breadcrumb": LocalJSX.UtrechtBreadcrumb & JSXBase.HTMLAttributes<HTMLUtrechtBreadcrumbElement>;
+            "utrecht-breadcrumb-nav": LocalJSX.UtrechtBreadcrumbNav & JSXBase.HTMLAttributes<HTMLUtrechtBreadcrumbNavElement>;
             "utrecht-button": LocalJSX.UtrechtButton & JSXBase.HTMLAttributes<HTMLUtrechtButtonElement>;
             "utrecht-button-group": LocalJSX.UtrechtButtonGroup & JSXBase.HTMLAttributes<HTMLUtrechtButtonGroupElement>;
             "utrecht-button-link": LocalJSX.UtrechtButtonLink & JSXBase.HTMLAttributes<HTMLUtrechtButtonLinkElement>;

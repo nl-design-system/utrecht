@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  BreadcrumbLink,
   BreadcrumbNav,
-  BreadcrumbSeparator,
+  BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
 } from '@utrecht/component-library-react/src/css-module/index';
-import readme from '@utrecht/components/breadcrumb/README.md?raw';
-import tokensDefinition from '@utrecht/components/breadcrumb/tokens.json';
+import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
+import tokensDefinition from '@utrecht/components/breadcrumb-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import clsx from 'clsx';
@@ -30,15 +30,15 @@ const meta = {
   args: {
     label: 'Kruimelpad',
     children: [
-      <BreadcrumbLink href="/" rel="home" index={0}>
+      <BreadcrumbNavLink href="/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="/a/" index={1}>
         Niveau 1
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/b/" rel="up" index={2}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="/a/b/" rel="up" index={2}>
         Niveau 2
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   argTypes: {
@@ -83,15 +83,15 @@ export const Default: Story = {};
 export const Current: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="/" rel="home" index={0}>
+      <BreadcrumbNavLink href="/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="/a/" index={1}>
         Niveau 1
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/b/" index={2} current>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="/a/b/" index={2} current>
         Huidige pagina
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {
@@ -109,21 +109,21 @@ export const Current: Story = {
 export const Separator: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="/" rel="home" index={0}>
+      <BreadcrumbNavLink href="/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="/a/" index={1}>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="/a/" index={1}>
         Niveau 1
-      </BreadcrumbLink>,
-      <BreadcrumbSeparator>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
         <UtrechtIconChevronRight />
-      </BreadcrumbSeparator>,
-      <BreadcrumbLink href="/a/b/" index={2} current>
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="/a/b/" index={2} current>
         Huidige pagina
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {
@@ -135,15 +135,15 @@ export const Separator: Story = {
 export const CurrentDisabled: Story = {
   args: {
     children: [
-      <BreadcrumbLink href="/" rel="home" index={0}>
+      <BreadcrumbNavLink href="/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="/a/" index={1}>
         Niveau 1
-      </BreadcrumbLink>,
-      <BreadcrumbLink href="/a/b/" index={2} current disabled>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink href="/a/b/" index={2} current disabled>
         Huidige pagina
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {
@@ -166,15 +166,15 @@ Meer informatie over disabled links:
 export const CustomLink: Story = {
   args: {
     children: [
-      <BreadcrumbLink Link={ExampleCustomLink} href="/" rel="home" index={0}>
+      <BreadcrumbNavLink Link={ExampleCustomLink} href="/" rel="home" index={0}>
         Home
-      </BreadcrumbLink>,
-      <BreadcrumbLink Link={ExampleCustomLink} href="/a/" index={1}>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink Link={ExampleCustomLink} href="/a/" index={1}>
         Niveau 1
-      </BreadcrumbLink>,
-      <BreadcrumbLink Link={ExampleCustomLink} href="/a/b/" index={2} current>
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavLink Link={ExampleCustomLink} href="/a/b/" index={2} current>
         Huidige pagina
-      </BreadcrumbLink>,
+      </BreadcrumbNavLink>,
     ],
   },
   parameters: {

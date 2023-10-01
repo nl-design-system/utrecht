@@ -1,0 +1,138 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./mixin";
+
+@mixin reset-ol {
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
+@mixin reset-p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+.utrecht-breadcrumb-nav {
+  @include utrecht-breadcrumb-nav;
+}
+
+.utrecht-breadcrumb-nav__heading {
+  @include utrecht-breadcrumb-nav__heading;
+}
+
+.utrecht-breadcrumb-nav__list {
+  @include utrecht-breadcrumb-nav__list;
+}
+
+.utrecht-breadcrumb-nav__list--html-ol {
+  @include reset-ol;
+}
+
+.utrecht-breadcrumb-nav__list--html-p {
+  @include reset-p;
+}
+
+.utrecht-breadcrumb-nav__item {
+  @include utrecht-breadcrumb-nav__item;
+}
+
+.utrecht-breadcrumb-nav__link {
+  @include utrecht-breadcrumb-nav__link;
+}
+
+.utrecht-breadcrumb-nav__link--disabled {
+  @include utrecht-breadcrumb-nav__link--disabled;
+}
+
+.utrecht-breadcrumb-nav__link--current {
+  /*
+   * `current` should apply to `disabled` links too, and it should override `disabled`.
+   * The override is the reason why this selector is not ordered alphabetically.
+   */
+  @include utrecht-breadcrumb-nav__link--current;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+.utrecht-breadcrumb-nav__text {
+  @include utrecht-breadcrumb-nav__text;
+}
+
+.utrecht-breadcrumb-nav__separator {
+  @include utrecht-breadcrumb-nav__separator;
+}
+
+.utrecht-breadcrumb-nav__separator--html-li {
+  @include utrecht-breadcrumb-nav__separator;
+}
+
+.utrecht-breadcrumb-nav--arrows {
+  /* https://css-tricks.com/triangle-breadcrumbs/ */
+  --utrecht-breadcrumb-nav-arrow-size: 24px;
+
+  min-block-size: var(--utrecht-breadcrumb-nav-min-block-size);
+  overflow: hidden;
+
+  .utrecht-breadcrumb-nav__link {
+    background-color: var(--utrecht-breadcrumb-nav-arrows-link-background-color);
+    padding-inline-end: 0;
+    position: relative;
+  }
+
+  .utrecht-breadcrumb-nav__link::after,
+  .utrecht-breadcrumb-nav__link::before {
+    block-size: 0;
+    border-block-end-width: var(--utrecht-breadcrumb-nav-min-block-size);
+    border-block-start-width: var(--utrecht-breadcrumb-nav-min-block-size);
+    border-color: transparent;
+    border-style: solid;
+    content: " ";
+    display: block;
+    inline-size: 0;
+    inset-block-start: 50%;
+    inset-inline-start: 100%;
+    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-nav-min-block-size));
+    position: absolute;
+  }
+
+  .utrecht-breadcrumb-nav__link::after {
+    border-inline-start-color: var(--utrecht-breadcrumb-nav-arrows-link-background-color);
+    border-inline-start-width: var(--utrecht-breadcrumb-nav-arrow-size);
+    z-index: 2;
+  }
+
+  .utrecht-breadcrumb-nav__link::before {
+    border-inline-start-color: var(--utrecht-document-background-color);
+    border-inline-start-width: var(--utrecht-breadcrumb-nav-arrow-size);
+    margin-block-start: calc(-1 * var(--utrecht-breadcrumb-nav-min-block-size));
+    margin-inline-start: 1px;
+    z-index: 1;
+  }
+
+  .utrecht-breadcrumb-nav__link--focus,
+  .utrecht-breadcrumb-nav__link:focus {
+    --utrecht-link-focus-background-color: var(--utrecht-breadcrumb-nav-arrows-link-focus-background-color);
+
+    background-color: var(--utrecht-breadcrumb-nav-arrows-link-focus-background-color);
+  }
+
+  .utrecht-breadcrumb-nav__link--focus::after,
+  .utrecht-breadcrumb-nav__link:focus::after {
+    border-inline-start-color: var(--utrecht-breadcrumb-nav-arrows-link-focus-background-color);
+  }
+
+  .utrecht-breadcrumb-nav__link ~ .utrecht-breadcrumb-nav__link,
+  .utrecht-breadcrumb-nav__item ~ .utrecht-breadcrumb-nav__item .utrecht-breadcrumb-nav__link {
+    padding-inline-start: calc(
+      var(--utrecht-breadcrumb-nav-item-padding-inline-start) + var(--utrecht-breadcrumb-nav-arrow-size)
+    );
+  }
+}
+
+.utrecht-breadcrumb-nav__item ~ .utrecht-breadcrumb-nav__item {
+  margin-inline-start: var(--utrecht-breadcrumb-nav-item-divider-inline-size);
+}

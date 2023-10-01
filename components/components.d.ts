@@ -470,7 +470,7 @@ declare global {
         prototype: HTMLUtrechtBadgeStatusElement;
         new (): HTMLUtrechtBadgeStatusElement;
     };
-    interface HTMLUtrechtBreadcrumbElement extends Components.UtrechtBreadcrumb, HTMLStencilElement {
+    interface HTMLUtrechtBreadcrumbElement extends Components.UtrechtBreadcrumbNav, HTMLStencilElement {
     }
     var HTMLUtrechtBreadcrumbElement: {
         prototype: HTMLUtrechtBreadcrumbElement;

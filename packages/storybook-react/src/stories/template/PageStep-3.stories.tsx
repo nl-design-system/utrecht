@@ -22,7 +22,7 @@ import {
   Textbox,
 } from '@utrecht/component-library-react';
 import {
-  UtrechtBreadcrumb,
+  UtrechtBreadcrumbNav,
   UtrechtDigidButton,
   UtrechtIconArrow,
   UtrechtLogo,
@@ -48,7 +48,7 @@ export const Three: Story = {
         </Link>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <UtrechtBreadcrumb
+        <UtrechtBreadcrumbNav
           json={JSON.stringify([
             { href: 'https://example/', title: 'Home', current: false },
             { href: 'https://example/', title: 'Online loket', current: true },

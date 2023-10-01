@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom';
 import { render, screen } from '@testing-library/vue';
-import BreadcrumbLink from './BreadcrumbLink.vue';
 import BreadcrumbNav from './BreadcrumbNav.vue';
+import BreadcrumbNavLink from './BreadcrumbNavLink.vue';
 describe('Breadcrumb Navigation', () => {
   it('renders list role element', () => {
     render(BreadcrumbNav);
@@ -11,7 +11,7 @@ describe('Breadcrumb Navigation', () => {
   });
 
   it('renders a listitem element', () => {
-    render(BreadcrumbLink, {
+    render(BreadcrumbNavLink, {
       props: {
         href: '/',
       },
@@ -22,7 +22,7 @@ describe('Breadcrumb Navigation', () => {
   });
 
   it('renders a link element', () => {
-    render(BreadcrumbLink, {
+    render(BreadcrumbNavLink, {
       props: {
         href: '/',
       },
@@ -82,7 +82,7 @@ describe('Breadcrumb Navigation', () => {
     const { container } = render(BreadcrumbNav);
     const list = container.querySelector('*');
 
-    expect(list).toHaveClass('utrecht-breadcrumb');
+    expect(list).toHaveClass('utrecht-breadcrumb-nav');
   });
 
   it('displays as block element', () => {
@@ -116,6 +116,6 @@ describe('Breadcrumb Navigation', () => {
     const breadcrumbNav = container.querySelector(':only-child');
 
     expect(breadcrumbNav).toHaveClass('arrows');
-    expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb');
+    expect(breadcrumbNav).toHaveClass('utrecht-breadcrumb-nav');
   });
 });

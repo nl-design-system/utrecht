@@ -4,7 +4,7 @@
   import { useMicrodataItem, useMicrodataProp } from "./helpers/microdata";
 
   export default defineComponent({
-    name: "UtrechtBreadcrumbLink",
+    name: "UtrechtBreadcrumbNavLink",
     components: { UtrechtLink },
     props: {
       href: { type: String, required: true },
@@ -18,18 +18,18 @@
 
 <template>
   <li
-    class="utrecht-breadcrumb__item"
+    class="utrecht-breadcrumb-nav__item"
     v-bind="useMicrodataItem({ type: 'https://schema.org/ListItem', prop: 'itemListElement' })"
   >
     <UtrechtLink
       v-bind="{ ...useMicrodataProp('item') }"
       :ref="ref"
-      class="utrecht-breadcrumb__link"
+      class="utrecht-breadcrumb-nav__link"
       :aria-current="current && 'location'"
       :href="href"
       :rel="rel"
     >
-      <span class="utrecht-breadcrumb__text" v-bind="{ ...useMicrodataProp('name') }">
+      <span class="utrecht-breadcrumb-nav__text" v-bind="{ ...useMicrodataProp('name') }">
         <slot />
       </span>
       <meta
@@ -41,4 +41,4 @@
   </li>
 </template>
 
-<style src="@utrecht/components/breadcrumb/css/index.scss"></style>
+<style src="@utrecht/components/breadcrumb-nav/css/index.scss"></style>

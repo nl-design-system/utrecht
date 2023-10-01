@@ -2,7 +2,7 @@ export { default as AlertDialog } from './AlertDialog.vue';
 export { default as Article } from './Article.vue';
 export { default as BadgeCounter } from './BadgeCounter.vue';
 export { default as BadgeStatus } from './BadgeStatus.vue';
-export { default as BreadcrumbLink } from './BreadcrumbLink.vue';
+export { default as BreadcrumbNavLink } from './BreadcrumbNavLink.vue';
 export { default as BreadcrumbNav } from './BreadcrumbNav.vue';
 export { default as Button } from './Button.vue';
 export { default as ButtonGroup } from './ButtonGroup.vue';

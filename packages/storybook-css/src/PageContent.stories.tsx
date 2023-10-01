@@ -2,8 +2,8 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  BreadcrumbLink,
   BreadcrumbNav,
+  BreadcrumbNavLink,
   Code,
   Heading1,
   Heading2,
@@ -87,13 +87,13 @@ export const PageContentWithBreadcrumb: Story = {
   args: {
     nav: (
       <BreadcrumbNav appearance="arrows">
-        <BreadcrumbLink href="https://example.com/" rel="home">
+        <BreadcrumbNavLink href="https://example.com/" rel="home">
           Home
-        </BreadcrumbLink>
-        <BreadcrumbLink href="https://example.com/a/">Wonen en leven</BreadcrumbLink>
-        <BreadcrumbLink href="https://example.com/a/b/" rel="up">
+        </BreadcrumbNavLink>
+        <BreadcrumbNavLink href="https://example.com/a/">Wonen en leven</BreadcrumbNavLink>
+        <BreadcrumbNavLink href="https://example.com/a/b/" rel="up">
           Afval
-        </BreadcrumbLink>
+        </BreadcrumbNavLink>
       </BreadcrumbNav>
     ),
     main: [
