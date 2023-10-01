@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { SkipLink } from '@utrecht/component-library-react/dist/css-module/index';
+import { SkipLink } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/skip-link/README.md?raw';
 import tokensDefinition from '@utrecht/components/skip-link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

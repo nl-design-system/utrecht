@@ -1,13 +1,13 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { AlertDialogProps } from '@utrecht/component-library-react/dist/AlertDialog';
+import type { AlertDialogProps } from '@utrecht/component-library-react/src';
 import {
   AlertDialog,
   Button,
   ButtonGroup,
   Paragraph,
   PrimaryActionButton,
-} from '@utrecht/component-library-react/dist/css-module';
+} from '@utrecht/component-library-react/src/css-module';
 import readme from '@utrecht/components/alert-dialog/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

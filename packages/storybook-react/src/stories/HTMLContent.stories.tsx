@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { HTMLContent } from '@utrecht/component-library-react/dist/css-module/index';
+import { HTMLContent } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/html-content/README.md?raw';
 import React from 'react';
 

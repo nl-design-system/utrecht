@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { LinkSocial } from '@utrecht/component-library-react/dist/css-module/index';
+import { LinkSocial } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/link-social/README.md?raw';
 import tokensDefinition from '@utrecht/components/link-social/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

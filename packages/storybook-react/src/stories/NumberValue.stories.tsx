@@ -1,6 +1,6 @@
 import { ArgsTable, Description, Primary, PRIMARY_STORY, Stories } from '@storybook/addon-docs';
 import { Meta, StoryObj } from '@storybook/react';
-import { NumberValue } from '@utrecht/component-library-react/dist/css-module/index';
+import { NumberValue } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/value-number/README.md?raw';
 import React from 'react';
 
