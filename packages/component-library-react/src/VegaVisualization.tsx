@@ -8,7 +8,7 @@ import { Vega } from 'react-vega';
 import { VegaProps } from 'react-vega/lib/Vega';
 import { Config } from 'vega';
 
-export interface VegaVisualisationProps extends Omit<VegaProps, 'renderer'> {
+export interface VegaVisualizationProps extends Omit<VegaProps, 'renderer'> {
   label?: string;
   config?: Config;
 }
@@ -87,7 +87,7 @@ export const VegaVisualization = ({
   config,
   label,
   ...restProps
-}: VegaVisualisationProps) => {
+}: VegaVisualizationProps) => {
   return (
     <div className={clsx('utrecht-vega-visualisation', className)} role="image" aria-label={label}>
       <div aria-hidden={true}>
