@@ -128,6 +128,8 @@ export type { DataPlaceholderProps } from '../DataPlaceholder';
 export { DataPlaceholder } from './DataPlaceholder';
 export type { PreHeadingProps } from '../PreHeading';
 export { PreHeading } from './PreHeading';
+export type { PreserveDataProps } from './PreserveData';
+export { PreserveData } from './PreserveData';
 export type { RadioButtonProps } from '../RadioButton';
 export { RadioButton } from './RadioButton';
 // export type { SearchBarProps } from '../SearchBar';
