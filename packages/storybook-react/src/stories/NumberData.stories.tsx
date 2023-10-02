@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { NumberValue } from '@utrecht/component-library-react/src/css-module/index';
-import readme from '@utrecht/components/value-number/README.md?raw';
+import { NumberData } from '@utrecht/component-library-react/src/css-module/index';
+import readme from '@utrecht/components/number-data/README.md?raw';
 
 const meta = {
-  title: 'React Component/Number Value',
-  id: 'react-value-number',
-  component: NumberValue,
+  title: 'React Component/Number data',
+  id: 'react-number-data',
+  component: NumberData,
   args: {
     children: '1234567890',
   },
@@ -26,7 +26,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof NumberValue>;
+} satisfies Meta<typeof NumberData>;
 
 export default meta;
 

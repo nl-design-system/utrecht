@@ -6,24 +6,24 @@
 import clsx from 'clsx';
 import { DataHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
-export interface NumberValueProps extends DataHTMLAttributes<HTMLDataElement> {
+export interface NumberDataProps extends DataHTMLAttributes<HTMLDataElement> {
   value?: number | string;
 }
 
-export const NumberValue = forwardRef(
+export const NumberData = forwardRef(
   (
-    { children, className, value, ...restProps }: PropsWithChildren<NumberValueProps>,
+    { children, className, value, ...restProps }: PropsWithChildren<NumberDataProps>,
     ref: ForwardedRef<HTMLDataElement>,
   ) => (
     <data
       value={typeof value === 'string' || typeof value === 'number' ? String(value) : undefined}
       {...restProps}
       ref={ref}
-      className={clsx('utrecht-value-number', className)}
+      className={clsx('utrecht-number-data', className)}
     >
       {children}
     </data>
   ),
 );
 
-NumberValue.displayName = 'NumberValue';
+NumberData.displayName = 'NumberData';

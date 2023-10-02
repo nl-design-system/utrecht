@@ -13,7 +13,7 @@ import {
   UtrechtIbanData,
   UtrechtLinkButton,
   UtrechtMultilineData,
-  UtrechtNumberValue,
+  UtrechtNumberData,
   UtrechtUrlData,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
@@ -145,7 +145,7 @@ export const NumberData: Story = {
       <UtrechtDataListItem>
         <UtrechtDataListKey>Aantal</UtrechtDataListKey>
         <UtrechtDataListValue>
-          <UtrechtNumberValue>1,250</UtrechtNumberValue>
+          <UtrechtNumberData>1,250</UtrechtNumberData>
         </UtrechtDataListValue>
       </UtrechtDataListItem>,
     ],

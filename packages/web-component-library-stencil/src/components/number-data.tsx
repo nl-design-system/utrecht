@@ -7,11 +7,11 @@
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'utrecht-number-value',
-  styleUrl: 'number-value.scss',
+  tag: 'utrecht-number-data',
+  styleUrl: 'number-data.scss',
   shadow: true,
 })
-export class NumberValue {
+export class NumberData {
   @Prop() value: number | string;
   render() {
     const { value } = this;

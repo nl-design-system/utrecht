@@ -1,28 +1,28 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { NumberValue } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/value-number/README.md?raw';
-import tokensDefinition from '@utrecht/components/value-number/tokens.json';
+import { NumberData } from '@utrecht/component-library-react';
+import readme from '@utrecht/components/number-data/README.md?raw';
+import tokensDefinition from '@utrecht/components/number-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
-const NumberValueStory = ({ appearance, ...restProps }) => (
-  <NumberValue
+const NumberDataStory = ({ appearance, ...restProps }) => (
+  <NumberData
     className={clsx(
-      appearance === 'negative' && 'utrecht-value-number--negative',
-      appearance === 'positive' && 'utrecht-value-number--positive',
+      appearance === 'negative' && 'utrecht-number data--negative',
+      appearance === 'positive' && 'utrecht-number data--positive',
     )}
     {...restProps}
   />
 );
 
 const meta = {
-  title: 'CSS Component/Number value',
-  id: 'css-value-number',
-  component: NumberValueStory,
+  title: 'CSS Component/Number data',
+  id: 'css-number data',
+  component: NumberDataStory,
   argTypes: {
     children: {
       description: 'Number formatted as human readable text',
@@ -48,7 +48,7 @@ const meta = {
     children: [],
   },
   parameters: {
-    tokensPrefix: 'utrecht-value-number',
+    tokensPrefix: 'utrecht-number data',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -60,7 +60,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof NumberValueStory>;
+} satisfies Meta<typeof NumberDataStory>;
 
 export default meta;
 

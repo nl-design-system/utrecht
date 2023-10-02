@@ -597,7 +597,7 @@ export namespace Components {
     }
     interface UtrechtMultilineData {
     }
-    interface UtrechtNumberValue {
+    interface UtrechtNumberData {
         "value": number | string;
     }
     /**
@@ -2261,11 +2261,11 @@ declare global {
         prototype: HTMLUtrechtMultilineDataElement;
         new (): HTMLUtrechtMultilineDataElement;
     };
-    interface HTMLUtrechtNumberValueElement extends Components.UtrechtNumberValue, HTMLStencilElement {
+    interface HTMLUtrechtNumberDataElement extends Components.UtrechtNumberData, HTMLStencilElement {
     }
-    var HTMLUtrechtNumberValueElement: {
-        prototype: HTMLUtrechtNumberValueElement;
-        new (): HTMLUtrechtNumberValueElement;
+    var HTMLUtrechtNumberDataElement: {
+        prototype: HTMLUtrechtNumberDataElement;
+        new (): HTMLUtrechtNumberDataElement;
     };
     /**
      * @license EUPL-1.2
@@ -2678,7 +2678,7 @@ declare global {
         "utrecht-map-marker": HTMLUtrechtMapMarkerElement;
         "utrecht-mark": HTMLUtrechtMarkElement;
         "utrecht-multiline-data": HTMLUtrechtMultilineDataElement;
-        "utrecht-number-value": HTMLUtrechtNumberValueElement;
+        "utrecht-number-data": HTMLUtrechtNumberDataElement;
         "utrecht-page": HTMLUtrechtPageElement;
         "utrecht-page-content": HTMLUtrechtPageContentElement;
         "utrecht-page-footer": HTMLUtrechtPageFooterElement;
@@ -3318,7 +3318,7 @@ declare namespace LocalJSX {
     }
     interface UtrechtMultilineData {
     }
-    interface UtrechtNumberValue {
+    interface UtrechtNumberData {
         "value"?: number | string;
     }
     /**
@@ -3677,7 +3677,7 @@ declare namespace LocalJSX {
         "utrecht-map-marker": UtrechtMapMarker;
         "utrecht-mark": UtrechtMark;
         "utrecht-multiline-data": UtrechtMultilineData;
-        "utrecht-number-value": UtrechtNumberValue;
+        "utrecht-number-data": UtrechtNumberData;
         "utrecht-page": UtrechtPage;
         "utrecht-page-content": UtrechtPageContent;
         "utrecht-page-footer": UtrechtPageFooter;
@@ -3963,7 +3963,7 @@ declare module "@stencil/core" {
             "utrecht-map-marker": LocalJSX.UtrechtMapMarker & JSXBase.HTMLAttributes<HTMLUtrechtMapMarkerElement>;
             "utrecht-mark": LocalJSX.UtrechtMark & JSXBase.HTMLAttributes<HTMLUtrechtMarkElement>;
             "utrecht-multiline-data": LocalJSX.UtrechtMultilineData & JSXBase.HTMLAttributes<HTMLUtrechtMultilineDataElement>;
-            "utrecht-number-value": LocalJSX.UtrechtNumberValue & JSXBase.HTMLAttributes<HTMLUtrechtNumberValueElement>;
+            "utrecht-number-data": LocalJSX.UtrechtNumberData & JSXBase.HTMLAttributes<HTMLUtrechtNumberDataElement>;
             /**
              * @license EUPL-1.2
              * Copyright (c) 2021 Gemeente Utrecht
