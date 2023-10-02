@@ -638,6 +638,20 @@ export namespace Components {
     }
     interface UtrechtPreHeading {
     }
+    interface UtrechtProgressList {
+    }
+    interface UtrechtProgressListItem {
+        "appearance"?: string;
+        "checked": boolean;
+        "details"?: boolean;
+        "from"?: string;
+        "open"?: boolean;
+        "to"?: string;
+    }
+    interface UtrechtProgressSublistItem {
+        "appearance"?: string;
+        "checked"?: boolean;
+    }
     interface UtrechtSeparator {
     }
     interface UtrechtSidenav {
@@ -2325,6 +2339,24 @@ declare global {
         prototype: HTMLUtrechtPreHeadingElement;
         new (): HTMLUtrechtPreHeadingElement;
     };
+    interface HTMLUtrechtProgressListElement extends Components.UtrechtProgressList, HTMLStencilElement {
+    }
+    var HTMLUtrechtProgressListElement: {
+        prototype: HTMLUtrechtProgressListElement;
+        new (): HTMLUtrechtProgressListElement;
+    };
+    interface HTMLUtrechtProgressListItemElement extends Components.UtrechtProgressListItem, HTMLStencilElement {
+    }
+    var HTMLUtrechtProgressListItemElement: {
+        prototype: HTMLUtrechtProgressListItemElement;
+        new (): HTMLUtrechtProgressListItemElement;
+    };
+    interface HTMLUtrechtProgressSublistItemElement extends Components.UtrechtProgressSublistItem, HTMLStencilElement {
+    }
+    var HTMLUtrechtProgressSublistItemElement: {
+        prototype: HTMLUtrechtProgressSublistItemElement;
+        new (): HTMLUtrechtProgressSublistItemElement;
+    };
     interface HTMLUtrechtSeparatorElement extends Components.UtrechtSeparator, HTMLStencilElement {
     }
     var HTMLUtrechtSeparatorElement: {
@@ -2686,6 +2718,9 @@ declare global {
         "utrecht-pagination": HTMLUtrechtPaginationElement;
         "utrecht-paragraph": HTMLUtrechtParagraphElement;
         "utrecht-pre-heading": HTMLUtrechtPreHeadingElement;
+        "utrecht-progress-list": HTMLUtrechtProgressListElement;
+        "utrecht-progress-list-item": HTMLUtrechtProgressListItemElement;
+        "utrecht-progress-sublist-item": HTMLUtrechtProgressSublistItemElement;
         "utrecht-separator": HTMLUtrechtSeparatorElement;
         "utrecht-sidenav": HTMLUtrechtSidenavElement;
         "utrecht-skip-link": HTMLUtrechtSkipLinkElement;
@@ -3359,6 +3394,20 @@ declare namespace LocalJSX {
     }
     interface UtrechtPreHeading {
     }
+    interface UtrechtProgressList {
+    }
+    interface UtrechtProgressListItem {
+        "appearance"?: string;
+        "checked"?: boolean;
+        "details"?: boolean;
+        "from"?: string;
+        "open"?: boolean;
+        "to"?: string;
+    }
+    interface UtrechtProgressSublistItem {
+        "appearance"?: string;
+        "checked"?: boolean;
+    }
     interface UtrechtSeparator {
     }
     interface UtrechtSidenav {
@@ -3685,6 +3734,9 @@ declare namespace LocalJSX {
         "utrecht-pagination": UtrechtPagination;
         "utrecht-paragraph": UtrechtParagraph;
         "utrecht-pre-heading": UtrechtPreHeading;
+        "utrecht-progress-list": UtrechtProgressList;
+        "utrecht-progress-list-item": UtrechtProgressListItem;
+        "utrecht-progress-sublist-item": UtrechtProgressSublistItem;
         "utrecht-separator": UtrechtSeparator;
         "utrecht-sidenav": UtrechtSidenav;
         "utrecht-skip-link": UtrechtSkipLink;
@@ -3987,6 +4039,9 @@ declare module "@stencil/core" {
             "utrecht-pagination": LocalJSX.UtrechtPagination & JSXBase.HTMLAttributes<HTMLUtrechtPaginationElement>;
             "utrecht-paragraph": LocalJSX.UtrechtParagraph & JSXBase.HTMLAttributes<HTMLUtrechtParagraphElement>;
             "utrecht-pre-heading": LocalJSX.UtrechtPreHeading & JSXBase.HTMLAttributes<HTMLUtrechtPreHeadingElement>;
+            "utrecht-progress-list": LocalJSX.UtrechtProgressList & JSXBase.HTMLAttributes<HTMLUtrechtProgressListElement>;
+            "utrecht-progress-list-item": LocalJSX.UtrechtProgressListItem & JSXBase.HTMLAttributes<HTMLUtrechtProgressListItemElement>;
+            "utrecht-progress-sublist-item": LocalJSX.UtrechtProgressSublistItem & JSXBase.HTMLAttributes<HTMLUtrechtProgressSublistItemElement>;
             "utrecht-separator": LocalJSX.UtrechtSeparator & JSXBase.HTMLAttributes<HTMLUtrechtSeparatorElement>;
             "utrecht-sidenav": LocalJSX.UtrechtSidenav & JSXBase.HTMLAttributes<HTMLUtrechtSidenavElement>;
             "utrecht-skip-link": LocalJSX.UtrechtSkipLink & JSXBase.HTMLAttributes<HTMLUtrechtSkipLinkElement>;

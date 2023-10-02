@@ -1,0 +1,16 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@import "~@gemeente-denhaag/process-steps/dist/index.css";
+@import "~@gemeente-denhaag/step-marker/dist/index.css";
+
+:host {
+  display: contents;
+}
+
+:host([hidden]) {
+  display: none !important;
+}

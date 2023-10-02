@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 importers:
 
   .:
@@ -2053,6 +2057,12 @@ importers:
         specifier: 3.4.2
         version: 3.4.2
     devDependencies:
+      '@gemeente-denhaag/process-steps':
+        specifier: 0.1.0-alpha.158
+        version: 0.1.0-alpha.158(react@18.2.0)
+      '@gemeente-denhaag/step-marker':
+        specifier: 0.0.1-alpha.46
+        version: 0.0.1-alpha.46(react@18.2.0)
       '@stencil/angular-output-target':
         specifier: 0.8.2
         version: 0.8.2(@stencil/core@3.4.2)
@@ -7487,6 +7497,14 @@ packages:
 
   /@gemeente-denhaag/step-marker@0.0.1-alpha.30(react@18.2.0):
     resolution: {integrity: sha512-PbhOIzpa4y9bYfAMja+wXxamIb/aPAxeOMiJu6zvvU3WLK3coO2tyh8EreqHlJkAxa7I2VH75fDsdaQH3RLMkg==}
+    peerDependencies:
+      react: ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: true
+
+  /@gemeente-denhaag/step-marker@0.0.1-alpha.46(react@18.2.0):
+    resolution: {integrity: sha512-Zy3lp4S4LwHTJ2wF8UJ7ipikv4oLJakP5HCBLL5OkT7dczJiRSAlFvkpMs/4bckH21806JdStLV3r3HSlUDQTA==}
     peerDependencies:
       react: ^17.0.0 || ^18.0.0
     dependencies:
@@ -38117,7 +38135,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
