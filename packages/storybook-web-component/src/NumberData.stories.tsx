@@ -1,17 +1,17 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/number-value/README.md?raw';
-import tokensDefinition from '@utrecht/components/number-value/tokens.json';
+import readme from '@utrecht/components/number-data/README.md?raw';
+import tokensDefinition from '@utrecht/components/number-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtNumberValue, UtrechtParagraph } from '@utrecht/web-component-library-react';
+import { UtrechtNumberData, UtrechtParagraph } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
   title: 'Web Component/Number value',
-  id: 'web-component-number-value',
-  component: UtrechtNumberValue,
+  id: 'web-component-number-data',
+  component: UtrechtNumberData,
   argTypes: {
     children: {
       description: 'Text content',
@@ -24,7 +24,7 @@ const meta = {
     status: {
       type: 'WORK IN PROGRESS',
     },
-    tokensPrefix: 'utrecht-number-value',
+    tokensPrefix: 'utrecht-number-data',
     tokens,
     tokensDefinition,
     docs: {
@@ -34,7 +34,7 @@ const meta = {
     },
   },
   decorators: [(Story) => <UtrechtParagraph>{Story()}</UtrechtParagraph>],
-} satisfies Meta<typeof UtrechtNumberValue>;
+} satisfies Meta<typeof UtrechtNumberData>;
 
 export default meta;
 

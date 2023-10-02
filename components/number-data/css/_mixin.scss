@@ -4,16 +4,16 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@mixin utrecht-value-number {
+@mixin utrecht-number-data {
   font-variant-numeric: lining-nums tabular-nums;
 }
 
-@mixin utrecht-value-number--positive {
-  color: var(--utrecht-value-number-positive-color);
+@mixin utrecht-number-data--positive {
+  color: var(--utrecht-number-data-positive-color);
 }
 
-@mixin utrecht-value-number--negative {
-  color: var(--utrecht-value-number-negative-color);
+@mixin utrecht-number-data--negative {
+  color: var(--utrecht-number-data-negative-color);
 }
 
 @mixin invisible-but-accessible {

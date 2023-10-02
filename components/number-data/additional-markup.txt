@@ -16,19 +16,19 @@ Mocht het in een uiterst geval nodig zijn, gebruik dan de volgende constructie:
 
 ```html
 <data value="-123">
-	<span class="utrecht-value-number__presentation" hidden aria-hidden="true"><span class="minus">-</span>123</span></span>
-	<span class="utrecht-value-number__value">-123</span>
+	<span class="utrecht-number-data__presentation" hidden aria-hidden="true"><span class="minus">-</span>123</span></span>
+	<span class="utrecht-number-data__value">-123</span>
 </data>
 ```
 
 Het `hidden` attribuut verbergt de extra waarde wanneer de bijbehorende CSS niet geladen is, `aria-hidden` voorkomt dat de waarde dubbel wordt voorgelezen. De CSS maakt het `hidden` attribuut ongedaan, en verbergt de value op een manier dat _screen readers_ wel dit getal kunnen lezen.
 
 
-.utrecht-value-number__presentation {
+.utrecht-number-data__presentation {
   display: inline;
 }
 
-.utrecht-value-number__value {
+.utrecht-number-data__value {
   @include invisible-but-accessible;
 }
 
@@ -40,18 +40,18 @@ Het `hidden` attribuut verbergt de extra waarde wanneer de bijbehorende CSS niet
     args={{
       value: 1234,
       children: [
-        <span className="utrecht-value-number__presentation">
+        <span className="utrecht-number-data__presentation">
           <b>1</b>
           <u>2</u>
           <i>3</i>
         </span>,
-        <span className="utrecht-value-number__value">123 </span>,
+        <span className="utrecht-number-data__value">123 </span>,
       ],
     }}
     name="With additional markup"
     decorators={[(Story) => <span lang="nl-NL">{Story()}</span>]}
   >
-    {NumberValue.bind({})}
+    {NumberData.bind({})}
   </Story>
 </Canvas>
 

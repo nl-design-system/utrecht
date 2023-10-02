@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import { NumberValue } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/value-number/README.md?raw';
-import tokens from '@utrecht/components/value-number/tokens.json';
+import { NumberData } from '@utrecht/component-library-vue';
+import readme from '@utrecht/components/number-data/README.md?raw';
+import tokens from '@utrecht/components/number-data/tokens.json';
 import { createStory } from './util';
 
 const meta = {
-  id: 'vue-number-value',
-  title: 'Vue.js Component/Number Value',
-  component: NumberValue,
+  id: 'vue-number-data',
+  title: 'Vue.js Component/Number data',
+  component: NumberData,
   tags: ['autodocs'],
   argTypes: {
     value: {
@@ -26,23 +26,23 @@ const meta = {
       type: 'ALPHA',
     },
     tokens,
-    tokenPrefix: 'utrecht-number-value',
+    tokenPrefix: 'utrecht-number-data',
     docs: {
       description: {
         component: readme,
       },
       source: {
-        code: '<NumberValue v-bind="$props"><slot></slot></NumberValue>',
+        code: '<NumberData v-bind="$props"><slot></slot></NumberData>',
       },
     },
   },
   render: () => ({
     components: {
-      NumberValue,
+      NumberData,
     },
-    template: `<NumberValue v-bind="$props"><slot></slot></NumberValue>`,
+    template: `<NumberData v-bind="$props"><slot></slot></NumberData>`,
   }),
-} satisfies Meta<typeof NumberValue>;
+} satisfies Meta<typeof NumberData>;
 
 export default meta;
 

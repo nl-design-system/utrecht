@@ -12,8 +12,8 @@ Als het lettertype de mogelijkheid heeft, dan worden "tabulaire cijfers" gebruik
 
 Er twee varianten om positieve of juist negative getallen extra opvallend te maken:
 
-- `utrecht-value-number--positive`
-- `utrecht-value-number--negative`
+- `utrecht-number-data--positive`
+- `utrecht-number-data--negative`
 
 Maak niet alleen gebruik van kleur om duidelijk te maken dat een getal negatief is, gebruik ook een minteken. Dit is belangrijk voor onder andere gebruikers die beperkt kleuren zien en gebruikers van _screen readers_.
 
