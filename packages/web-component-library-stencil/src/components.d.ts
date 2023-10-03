@@ -645,7 +645,6 @@ export namespace Components {
         "checked": boolean;
         "details"?: boolean;
         "from"?: string;
-        "open"?: boolean;
         "to"?: string;
     }
     interface UtrechtProgressSublistItem {
@@ -3401,7 +3400,6 @@ declare namespace LocalJSX {
         "checked"?: boolean;
         "details"?: boolean;
         "from"?: string;
-        "open"?: boolean;
         "to"?: string;
     }
     interface UtrechtProgressSublistItem {
