@@ -5,5 +5,6 @@
  */
 
 @mixin utrecht-form {
+  display: block;
   max-inline-size: var(--utrecht-form-max-inline-size);
 }

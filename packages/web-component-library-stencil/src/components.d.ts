@@ -102,6 +102,14 @@ export namespace Components {
     }
     interface UtrechtEmphasis {
     }
+    interface UtrechtForm {
+        "action"?: string;
+        "autocomplete"?: string;
+        "enctype"?: string;
+        "method"?: string;
+        "noValidate"?: string;
+        "target"?: string;
+    }
     interface UtrechtFormFieldCheckbox {
         "checked": boolean;
         "disabled": boolean;
@@ -911,6 +919,12 @@ declare global {
     var HTMLUtrechtEmphasisElement: {
         prototype: HTMLUtrechtEmphasisElement;
         new (): HTMLUtrechtEmphasisElement;
+    };
+    interface HTMLUtrechtFormElement extends Components.UtrechtForm, HTMLStencilElement {
+    }
+    var HTMLUtrechtFormElement: {
+        prototype: HTMLUtrechtFormElement;
+        new (): HTMLUtrechtFormElement;
     };
     interface HTMLUtrechtFormFieldCheckboxElement extends Components.UtrechtFormFieldCheckbox, HTMLStencilElement {
     }
@@ -2482,6 +2496,7 @@ declare global {
         "utrecht-eherkenning-logo": HTMLUtrechtEherkenningLogoElement;
         "utrecht-eidas-logo": HTMLUtrechtEidasLogoElement;
         "utrecht-emphasis": HTMLUtrechtEmphasisElement;
+        "utrecht-form": HTMLUtrechtFormElement;
         "utrecht-form-field-checkbox": HTMLUtrechtFormFieldCheckboxElement;
         "utrecht-form-field-description": HTMLUtrechtFormFieldDescriptionElement;
         "utrecht-form-field-textarea": HTMLUtrechtFormFieldTextareaElement;
@@ -2840,6 +2855,14 @@ declare namespace LocalJSX {
     interface UtrechtEidasLogo {
     }
     interface UtrechtEmphasis {
+    }
+    interface UtrechtForm {
+        "action"?: string;
+        "autocomplete"?: string;
+        "enctype"?: string;
+        "method"?: string;
+        "noValidate"?: string;
+        "target"?: string;
     }
     interface UtrechtFormFieldCheckbox {
         "checked"?: boolean;
@@ -3497,6 +3520,7 @@ declare namespace LocalJSX {
         "utrecht-eherkenning-logo": UtrechtEherkenningLogo;
         "utrecht-eidas-logo": UtrechtEidasLogo;
         "utrecht-emphasis": UtrechtEmphasis;
+        "utrecht-form": UtrechtForm;
         "utrecht-form-field-checkbox": UtrechtFormFieldCheckbox;
         "utrecht-form-field-description": UtrechtFormFieldDescription;
         "utrecht-form-field-textarea": UtrechtFormFieldTextarea;
@@ -3786,6 +3810,7 @@ declare module "@stencil/core" {
             "utrecht-eherkenning-logo": LocalJSX.UtrechtEherkenningLogo & JSXBase.HTMLAttributes<HTMLUtrechtEherkenningLogoElement>;
             "utrecht-eidas-logo": LocalJSX.UtrechtEidasLogo & JSXBase.HTMLAttributes<HTMLUtrechtEidasLogoElement>;
             "utrecht-emphasis": LocalJSX.UtrechtEmphasis & JSXBase.HTMLAttributes<HTMLUtrechtEmphasisElement>;
+            "utrecht-form": LocalJSX.UtrechtForm & JSXBase.HTMLAttributes<HTMLUtrechtFormElement>;
             "utrecht-form-field-checkbox": LocalJSX.UtrechtFormFieldCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldCheckboxElement>;
             "utrecht-form-field-description": LocalJSX.UtrechtFormFieldDescription & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldDescriptionElement>;
             "utrecht-form-field-textarea": LocalJSX.UtrechtFormFieldTextarea & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldTextareaElement>;

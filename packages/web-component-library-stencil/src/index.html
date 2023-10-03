@@ -29,7 +29,8 @@ https://stenciljs.com/docs/dev-server
           </utrecht-logo>
         </utrecht-page-header>
         <utrecht-page-content>
-          <form action="/search" method="get">
+          <utrecht-form action="/search" method="get">
+            <utrecht-heading-2 slot="heading">Form!</utrecht-heading-2>
             <utrecht-form-field-textbox name="q" value="Value here">
               <span slot="label">Label here</span>
               <utrecht-paragraph slot="description">Description here</utrecht-paragraph>
@@ -96,7 +97,7 @@ https://stenciljs.com/docs/dev-server
               <utrecht-link-button>⃪ Previous</utrecht-link-button>
               <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
             </utrecht-button-group>
-          </form>
+          </utrecht-form>
           <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
           <utrecht-button-group>
             <button type="button" popovertarget="mypopover" popovertargetaction="show">Show popover</button>
