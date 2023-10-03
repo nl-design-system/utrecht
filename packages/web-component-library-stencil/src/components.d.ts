@@ -114,6 +114,8 @@ export namespace Components {
     interface UtrechtFormFieldDescription {
         "status"?: string;
     }
+    interface UtrechtFormFieldErrorMessage {
+    }
     interface UtrechtFormFieldTextarea {
         "disabled": boolean;
         "invalid": boolean;
@@ -923,6 +925,12 @@ declare global {
     var HTMLUtrechtFormFieldDescriptionElement: {
         prototype: HTMLUtrechtFormFieldDescriptionElement;
         new (): HTMLUtrechtFormFieldDescriptionElement;
+    };
+    interface HTMLUtrechtFormFieldErrorMessageElement extends Components.UtrechtFormFieldErrorMessage, HTMLStencilElement {
+    }
+    var HTMLUtrechtFormFieldErrorMessageElement: {
+        prototype: HTMLUtrechtFormFieldErrorMessageElement;
+        new (): HTMLUtrechtFormFieldErrorMessageElement;
     };
     interface HTMLUtrechtFormFieldTextareaElement extends Components.UtrechtFormFieldTextarea, HTMLStencilElement {
     }
@@ -2484,6 +2492,7 @@ declare global {
         "utrecht-emphasis": HTMLUtrechtEmphasisElement;
         "utrecht-form-field-checkbox": HTMLUtrechtFormFieldCheckboxElement;
         "utrecht-form-field-description": HTMLUtrechtFormFieldDescriptionElement;
+        "utrecht-form-field-error-message": HTMLUtrechtFormFieldErrorMessageElement;
         "utrecht-form-field-textarea": HTMLUtrechtFormFieldTextareaElement;
         "utrecht-form-field-textbox": HTMLUtrechtFormFieldTextboxElement;
         "utrecht-form-toggle": HTMLUtrechtFormToggleElement;
@@ -2856,6 +2865,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtFormFieldDescription {
         "status"?: string;
+    }
+    interface UtrechtFormFieldErrorMessage {
     }
     interface UtrechtFormFieldTextarea {
         "disabled"?: boolean;
@@ -3499,6 +3510,7 @@ declare namespace LocalJSX {
         "utrecht-emphasis": UtrechtEmphasis;
         "utrecht-form-field-checkbox": UtrechtFormFieldCheckbox;
         "utrecht-form-field-description": UtrechtFormFieldDescription;
+        "utrecht-form-field-error-message": UtrechtFormFieldErrorMessage;
         "utrecht-form-field-textarea": UtrechtFormFieldTextarea;
         "utrecht-form-field-textbox": UtrechtFormFieldTextbox;
         "utrecht-form-toggle": UtrechtFormToggle;
@@ -3788,6 +3800,7 @@ declare module "@stencil/core" {
             "utrecht-emphasis": LocalJSX.UtrechtEmphasis & JSXBase.HTMLAttributes<HTMLUtrechtEmphasisElement>;
             "utrecht-form-field-checkbox": LocalJSX.UtrechtFormFieldCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldCheckboxElement>;
             "utrecht-form-field-description": LocalJSX.UtrechtFormFieldDescription & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldDescriptionElement>;
+            "utrecht-form-field-error-message": LocalJSX.UtrechtFormFieldErrorMessage & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldErrorMessageElement>;
             "utrecht-form-field-textarea": LocalJSX.UtrechtFormFieldTextarea & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldTextareaElement>;
             "utrecht-form-field-textbox": LocalJSX.UtrechtFormFieldTextbox & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldTextboxElement>;
             "utrecht-form-toggle": LocalJSX.UtrechtFormToggle & JSXBase.HTMLAttributes<HTMLUtrechtFormToggleElement>;

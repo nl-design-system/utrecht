@@ -1,0 +1,15 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
+ */
+
+@import "~@utrecht/components/form-field-error-message/css";
+
+:host {
+  @include utrecht-form-field-error-message;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
