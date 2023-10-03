@@ -102,6 +102,7 @@ export class FormFieldTextbox {
             type={type || 'text'}
             autoComplete={autoComplete ? autoComplete : null}
             aria-describedby={clsx('description', 'status', { 'error-message': invalid })}
+            aria-invalid={invalid}
             disabled={disabled}
             min={min ? min : null}
             max={max ? max : null}
