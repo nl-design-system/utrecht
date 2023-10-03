@@ -114,6 +114,7 @@ export class Button {
       setAttribute(button, 'popovertargetaction', popoverTargetAction);
       setAttribute(button, 'popovertarget', popoverTarget);
       setAttribute(button, 'type', type);
+      button.style.display = 'none';
       button.value = value || '';
     }
 
