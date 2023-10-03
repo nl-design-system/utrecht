@@ -76,6 +76,7 @@ export class FormFieldTextarea {
               invalid && 'utrecht-textarea--invalid',
               readOnly && 'utrecht-textarea--readonly',
             )}
+            aria-invalid={invalid}
             disabled={disabled}
             placeholder={placeholder || null}
             readonly={readOnly}
