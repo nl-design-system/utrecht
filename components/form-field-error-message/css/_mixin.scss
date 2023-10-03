@@ -6,7 +6,7 @@
 @mixin utrecht-form-field-error-message {
   --utrecht-document-color: currentColor;
 
-  background-color: var(--utrecht-error-message-background-color);
+  background-color: var(--utrecht-form-field-error-message-background-color);
   color: var(--utrecht-form-field-error-message-color);
   display: block;
   font-family: var(--utrecht-document-font-family, inherit);
@@ -20,10 +20,10 @@
     var(--utrecht-space-around, 0) *
       var(--utrecht-form-field-error-message-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
-  padding-block-end: var(--utrecht-error-message-padding-block-end);
-  padding-block-start: var(--utrecht-error-message-padding-block-start);
-  padding-inline-end: var(--utrecht-error-message-padding-inline-end);
-  padding-inline-start: var(--utrecht-error-message-padding-inline-start);
+  padding-block-end: var(--utrecht-form-field-error-message-padding-block-end);
+  padding-block-start: var(--utrecht-form-field-error-message-padding-block-start);
+  padding-inline-end: var(--utrecht-form-field-error-message-padding-inline-end);
+  padding-inline-start: var(--utrecht-form-field-error-message-padding-inline-start);
 
   & > * {
     --utrecht-space-around: 1;
