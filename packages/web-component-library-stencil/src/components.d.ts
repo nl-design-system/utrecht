@@ -96,6 +96,12 @@ export namespace Components {
     }
     interface UtrechtDocument {
     }
+    interface UtrechtDrawer {
+        "align": string;
+        "close": () => Promise<void>;
+        "open": boolean;
+        "showModal": () => Promise<void>;
+    }
     interface UtrechtEherkenningLogo {
     }
     interface UtrechtEidasLogo {
@@ -903,6 +909,12 @@ declare global {
     var HTMLUtrechtDocumentElement: {
         prototype: HTMLUtrechtDocumentElement;
         new (): HTMLUtrechtDocumentElement;
+    };
+    interface HTMLUtrechtDrawerElement extends Components.UtrechtDrawer, HTMLStencilElement {
+    }
+    var HTMLUtrechtDrawerElement: {
+        prototype: HTMLUtrechtDrawerElement;
+        new (): HTMLUtrechtDrawerElement;
     };
     interface HTMLUtrechtEherkenningLogoElement extends Components.UtrechtEherkenningLogo, HTMLStencilElement {
     }
@@ -2501,6 +2513,7 @@ declare global {
         "utrecht-digid-button": HTMLUtrechtDigidButtonElement;
         "utrecht-digid-logo": HTMLUtrechtDigidLogoElement;
         "utrecht-document": HTMLUtrechtDocumentElement;
+        "utrecht-drawer": HTMLUtrechtDrawerElement;
         "utrecht-eherkenning-logo": HTMLUtrechtEherkenningLogoElement;
         "utrecht-eidas-logo": HTMLUtrechtEidasLogoElement;
         "utrecht-emphasis": HTMLUtrechtEmphasisElement;
@@ -2858,6 +2871,10 @@ declare namespace LocalJSX {
     interface UtrechtDigidLogo {
     }
     interface UtrechtDocument {
+    }
+    interface UtrechtDrawer {
+        "align"?: string;
+        "open"?: boolean;
     }
     interface UtrechtEherkenningLogo {
     }
@@ -3528,6 +3545,7 @@ declare namespace LocalJSX {
         "utrecht-digid-button": UtrechtDigidButton;
         "utrecht-digid-logo": UtrechtDigidLogo;
         "utrecht-document": UtrechtDocument;
+        "utrecht-drawer": UtrechtDrawer;
         "utrecht-eherkenning-logo": UtrechtEherkenningLogo;
         "utrecht-eidas-logo": UtrechtEidasLogo;
         "utrecht-emphasis": UtrechtEmphasis;
@@ -3819,6 +3837,7 @@ declare module "@stencil/core" {
             "utrecht-digid-button": LocalJSX.UtrechtDigidButton & JSXBase.HTMLAttributes<HTMLUtrechtDigidButtonElement>;
             "utrecht-digid-logo": LocalJSX.UtrechtDigidLogo & JSXBase.HTMLAttributes<HTMLUtrechtDigidLogoElement>;
             "utrecht-document": LocalJSX.UtrechtDocument & JSXBase.HTMLAttributes<HTMLUtrechtDocumentElement>;
+            "utrecht-drawer": LocalJSX.UtrechtDrawer & JSXBase.HTMLAttributes<HTMLUtrechtDrawerElement>;
             "utrecht-eherkenning-logo": LocalJSX.UtrechtEherkenningLogo & JSXBase.HTMLAttributes<HTMLUtrechtEherkenningLogoElement>;
             "utrecht-eidas-logo": LocalJSX.UtrechtEidasLogo & JSXBase.HTMLAttributes<HTMLUtrechtEidasLogoElement>;
             "utrecht-emphasis": LocalJSX.UtrechtEmphasis & JSXBase.HTMLAttributes<HTMLUtrechtEmphasisElement>;
