@@ -49,6 +49,8 @@ export type {
 } from '../DataList';
 export { DataList, DataListItem, DataListActions, DataListKey, DataListValue } from './DataList';
 export type { EmphasisProps } from '../Emphasis';
+export type { DrawerAlignType, DrawerProps } from './Drawer';
+export { Drawer } from './Drawer';
 export { Emphasis } from './Emphasis';
 export type { FieldsetProps } from '../Fieldset';
 export { Fieldset } from './Fieldset';
