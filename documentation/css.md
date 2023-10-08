@@ -2,6 +2,38 @@
 
 # Design system ten op zichte van CSS
 
+## `all`
+
+`all: revert` kan de `display` property aanpassen, waardoor het `hidden` HTML attribute niet werkt. Lees onder onder `display` wat een oplossing is.
+
+## `display`
+
+Het `display` attribuut overschrijft de browser stylesheet voor het `hidden` attribuut, waardoor je onverwacht gedrag hebt wanneer je `hidden` gebruikt op componenten.
+
+Wanneer je `display` gebruikt, zorg dat het `hidden` HTML attribuut nog steeds werkt. Bijvoorbeeld:
+
+```css
+.my-selector {
+  display: flex;
+}
+
+.my-selector[hidden] {
+  display: none;
+}
+```
+
+Bij web components kun je het zo doen:
+
+```css
+:host {
+  display: contents;
+}
+
+:host[hidden] {
+  display: none;
+}
+```
+
 ## `font-size`
 
 - Gebruik geen `font-size` kleiner dan `16px`.
