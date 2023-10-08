@@ -4,11 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/blockquote/README.md?raw';
 import tokensDefinition from '@utrecht/components/blockquote/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Blockquote = ({ children }) => <blockquote>{children}</blockquote>;
+const Blockquote = ({ ...restProps }: PropsWithChildren<HTMLAttributes<HTMLElement>>) => <blockquote {...restProps} />;
 
 const meta = {
   title: 'HTML Component/Blockquote',
@@ -19,9 +21,11 @@ const meta = {
     children: {
       description: 'Content of the quote',
     },
+    hidden,
   },
   args: {
     children: [],
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -59,6 +63,20 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'Markup using the `<blockquote>` element.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

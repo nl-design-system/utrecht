@@ -4,17 +4,23 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/radio-button/README.md?raw';
 import tokensDefinition from '@utrecht/components/radio-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const RadioButton = ({ checked, disabled, invalid, required, value, ...attributes }) => (
+interface RadioButtonProps extends InputHTMLAttributes<HTMLInputElement> {
+  invalid?: boolean;
+}
+
+const RadioButton = ({ checked, disabled, invalid, required, value, ...attributes }: RadioButtonProps) => (
   <input
     type="radio"
-    defaultChecked={checked || null}
-    aria-invalid={invalid || null}
-    disabled={disabled || null}
-    required={required || null}
+    defaultChecked={checked || undefined}
+    aria-invalid={invalid || undefined}
+    disabled={disabled || undefined}
+    required={required || undefined}
     value={value}
     {...attributes}
   />
@@ -34,6 +40,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     invalid: {
       description: 'Invalid',
       control: 'boolean',
@@ -50,6 +57,7 @@ const meta = {
   args: {
     checked: false,
     disabled: false,
+    hidden: false,
     invalid: false,
     required: false,
     value: '',
@@ -148,6 +156,20 @@ export const Invalid: Story = {
     docs: {
       description: {
         story: 'Markup using the `aria-invalid="true"` attribute.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

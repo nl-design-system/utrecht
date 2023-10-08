@@ -14,6 +14,10 @@
     @include utrecht-button--distanced;
   }
 
+  button[hidden] {
+    display: none;
+  }
+
   button[type="submit" i],
   input[type="submit" i] {
     @include utrecht-button--submit;

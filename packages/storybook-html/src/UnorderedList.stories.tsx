@@ -4,16 +4,28 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/unordered-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/unordered-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const UnorderedList = ({ children, ...attributes }) => <ul {...attributes}>{children}</ul>;
+interface UnorderedListItemStoryProps extends HTMLAttributes<HTMLLIElement> {}
 
-const UnorderedListItem = ({ children, ...attributes }) => <li {...attributes}>{children}</li>;
+interface UnorderedListProps extends HTMLAttributes<HTMLUListElement> {}
 
-const UnorderedListStory = ({ items }) => (
-  <UnorderedList>
+interface UnorderedListStoryProps extends UnorderedListProps {
+  items: PropsWithChildren<UnorderedListItemStoryProps>[];
+}
+
+const UnorderedList = ({ children, ...attributes }: UnorderedListProps) => <ul {...attributes}>{children}</ul>;
+
+const UnorderedListItem = ({ children, ...attributes }: UnorderedListItemStoryProps) => (
+  <li {...attributes}>{children}</li>
+);
+
+const UnorderedListStory = ({ items, ...restProps }: UnorderedListStoryProps) => (
+  <UnorderedList {...restProps}>
     {items.map(({ children }) => (
       <UnorderedListItem>{children}</UnorderedListItem>
     ))}
@@ -26,6 +38,7 @@ const meta = {
   component: UnorderedListStory,
   decorators: [htmlContentDecorator],
   argTypes: {
+    hidden,
     items: {
       description: 'List items',
       control: 'array',
@@ -41,6 +54,7 @@ const meta = {
   },
   args: {
     items: [],
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -100,6 +114,20 @@ export const Nested: Story = {
     </ul>
   ),
   name: 'Nested',
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
+      },
+    },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

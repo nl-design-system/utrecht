@@ -4,10 +4,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/textbox/README.md?raw';
 import tokensDefinition from '@utrecht/components/textbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
+interface TextboxStoryProps extends InputHTMLAttributes<HTMLInputElement> {
+  invalid?: boolean;
+}
 const Textbox = ({
   autoComplete,
   disabled,
@@ -20,19 +25,21 @@ const Textbox = ({
   required,
   type,
   value,
-}) => (
+  ...restProps
+}: TextboxStoryProps) => (
   <input
     type={type}
-    aria-invalid={invalid || null}
-    disabled={disabled || null}
-    min={min || null}
-    max={max || null}
-    pattern={pattern || null}
-    placeholder={placeholder || null}
-    required={required || null}
-    readOnly={readOnly || null}
+    aria-invalid={invalid || undefined}
+    disabled={disabled || undefined}
+    min={min || undefined}
+    max={max || undefined}
+    pattern={pattern || undefined}
+    placeholder={placeholder || undefined}
+    required={required || undefined}
+    readOnly={readOnly || undefined}
     defaultValue={value}
-    autoComplete={autoComplete || null}
+    autoComplete={autoComplete || undefined}
+    {...restProps}
   />
 );
 
@@ -50,6 +57,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     invalid: {
       description: 'Invalid',
       control: 'boolean',
@@ -91,6 +99,7 @@ const meta = {
   args: {
     autoComplete: null,
     disabled: false,
+    hidden: false,
     invalid: false,
     min: '',
     max: '',
@@ -268,6 +277,20 @@ export const Email: Story = {
     docs: {
       description: {
         story: 'Markup using the `type="email"` attribute.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

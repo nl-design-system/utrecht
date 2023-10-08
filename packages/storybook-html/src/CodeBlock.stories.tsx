@@ -4,12 +4,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/code-block/README.md?raw';
 import tokensDefinition from '@utrecht/components/code-block/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const CodeBlock = ({ children }) => (
-  <pre>
+const CodeBlock = ({ children, ...restProps }: PropsWithChildren<HTMLAttributes<HTMLPreElement>>) => (
+  <pre {...restProps}>
     <code>{children}</code>
   </pre>
 );
@@ -24,6 +26,7 @@ const meta = {
       description: 'Code',
       control: 'text',
     },
+    hidden,
   },
   args: {
     children: `<!DOCTYPE html>
@@ -37,6 +40,7 @@ const meta = {
   </body>
 </html>
 `,
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -63,6 +67,20 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'Markup using the `<pre>` and `<code>` elements.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

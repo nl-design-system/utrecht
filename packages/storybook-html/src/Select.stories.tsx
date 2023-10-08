@@ -4,14 +4,32 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/select/README.md?raw';
 import tokensDefinition from '@utrecht/components/select/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { SelectHTMLAttributes } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Select = ({ disabled, invalid, options, required, value }) => (
-  <select aria-invalid={invalid || null} disabled={disabled || null} required={required || null} defaultValue={value}>
-    {options.map(({ label, selected, value }) => (
-      <option selected={selected || null} value={value || null}>
+interface OptionProps {
+  label: string;
+  selected?: boolean;
+  value: string;
+}
+interface SelectStoryProps extends SelectHTMLAttributes<HTMLSelectElement> {
+  invalid?: boolean;
+  options: OptionProps[];
+}
+
+const Select = ({ disabled, invalid, options, required, value, ...restProps }: SelectStoryProps) => (
+  <select
+    aria-invalid={invalid || undefined}
+    disabled={disabled || undefined}
+    required={required || undefined}
+    defaultValue={value}
+    {...restProps}
+  >
+    {options.map(({ label, selected, value }: OptionProps) => (
+      <option selected={selected || undefined} value={value || undefined}>
         {label}
       </option>
     ))}
@@ -28,6 +46,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     invalid: {
       description: 'Invalid',
       control: 'boolean',
@@ -50,6 +69,7 @@ const meta = {
   },
   args: {
     disabled: false,
+    hidden: false,
     invalid: false,
     options: [],
     required: false,
@@ -132,6 +152,20 @@ export const Required: Story = {
     docs: {
       description: {
         story: 'Markup using the `required` or `aria-required="true"` attribute.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

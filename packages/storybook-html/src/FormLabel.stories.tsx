@@ -4,14 +4,22 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/form-label/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-label/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { LabelHTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const FormLabelStory = ({ id, children, type }) => (
+interface FormLabelStoryProps extends LabelHTMLAttributes<HTMLLabelElement> {
+  type?: string;
+}
+
+const FormLabelStory = ({ id, children, type, ...restProps }: PropsWithChildren<FormLabelStoryProps>) => (
   <p>
     <input type={type} id={id} />
-    <label htmlFor={id}>{children}</label>
+    <label htmlFor={id} {...restProps}>
+      {children}
+    </label>
   </p>
 );
 
@@ -25,6 +33,7 @@ const meta = {
       description: 'Set the content of the label',
       control: 'text',
     },
+    hidden,
     type: {
       description: 'Set the type of the form control',
       options: ['hidden', 'checkbox', 'radio'],
@@ -42,6 +51,7 @@ const meta = {
         laborum.
       </p>,
     ],
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -72,6 +82,20 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'Markup using the `<label>` element.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

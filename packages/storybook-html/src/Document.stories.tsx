@@ -4,17 +4,23 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/document/README.md?raw';
 import tokensDefinition from '@utrecht/components/document/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Document = ({ children, lang, dir, pageTitle }) => (
+interface DocumentStoryProps extends HTMLAttributes<HTMLHtmlElement> {
+  pageTitle?: string;
+}
+
+const Document = ({ children, hidden, lang, dir, pageTitle }: PropsWithChildren<DocumentStoryProps>) => (
   <html lang={lang} dir={dir}>
     <head>
       <meta charSet="utf-8" />
-      <title>{pageTitle}</title>
+      {pageTitle && <title>{pageTitle}</title>}
     </head>
-    <body>{children}</body>
+    <body hidden={hidden}>{children}</body>
   </html>
 );
 
@@ -32,6 +38,7 @@ const meta = {
       control: { type: 'select' },
       options: ['', 'ltr', 'auto', 'rtl'],
     },
+    hidden,
     lang: {
       description: 'Language',
       control: 'text',
@@ -43,6 +50,8 @@ const meta = {
   },
   args: {
     children: [],
+    hidden: false,
+    pageTitle: '',
   },
   tags: ['autodocs'],
   parameters: {
@@ -84,6 +93,20 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'Markup using the `<body>` element.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

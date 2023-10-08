@@ -4,6 +4,7 @@
  */
 
 @mixin reset-fieldset {
+  /* `all: revert` unfortunately has as side-effect that the `hidde` attribute has no effect */
   all: revert;
   border: 0;
   margin-inline-end: 0;

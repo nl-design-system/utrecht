@@ -4,11 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/emphasis/README.md?raw';
 import tokensDefinition from '@utrecht/components/emphasis/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Strong = ({ children }) => <strong>{children}</strong>;
+const Strong = ({ ...restProps }: PropsWithChildren<HTMLAttributes<HTMLElement>>) => <strong {...restProps} />;
 
 const meta = {
   title: 'HTML Component/Strong',
@@ -19,9 +21,11 @@ const meta = {
     children: {
       description: 'Content of the strong emphasis',
     },
+    hidden,
   },
   args: {
     children: '',
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -53,6 +57,20 @@ export const Default: Story = {
         story: `Markup using the \`<strong>\` element.
 
 Strong emphasis: very important or urgent content`,
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },
