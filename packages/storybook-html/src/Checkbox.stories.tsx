@@ -4,11 +4,27 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/checkbox/README.md?raw';
 import tokensDefinition from '@utrecht/components/checkbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Checkbox = ({ checked, disabled, indeterminate, invalid, name, required, value, ...attributes }) => (
+interface CheckboxProps extends InputHTMLAttributes<HTMLInputElement> {
+  indeterminate?: boolean;
+  invalid?: boolean;
+}
+
+const Checkbox = ({
+  checked,
+  disabled,
+  indeterminate,
+  invalid,
+  name,
+  required,
+  value,
+  ...attributes
+}: CheckboxProps) => (
   <input
     name={name}
     type="checkbox"
@@ -36,6 +52,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     invalid: {
       description: 'Invalid',
       control: 'boolean',
@@ -60,6 +77,7 @@ const meta = {
   args: {
     checked: false,
     disabled: false,
+    hidden: false,
     invalid: false,
     required: false,
     name: 'i-agree',
@@ -122,6 +140,20 @@ export const Indeterminate: Story = {
     indeterminate: true,
   },
   name: 'Indeterminate',
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
+      },
+    },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

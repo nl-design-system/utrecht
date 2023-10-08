@@ -4,11 +4,19 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/link/README.md?raw';
 import tokensDefinition from '@utrecht/components/link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { AnchorHTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
 const normalizeTokenList = (str: string): string => str.replace(/\s+/g, ' ').trim();
+
+interface LinkStoryProps extends PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>> {
+  alternate?: boolean;
+  current?: boolean;
+  external?: boolean;
+}
 
 const Link = ({
   children,
@@ -18,7 +26,8 @@ const Link = ({
   hrefLang = undefined,
   alternate = false,
   external = false,
-}) => (
+  ...restProps
+}: LinkStoryProps) => (
   <a
     href={href === null ? '#' : href}
     aria-current={current || undefined}
@@ -28,6 +37,7 @@ const Link = ({
       normalizeTokenList(`${alternate ? 'alternate' : ''} ${external ? 'external noopener noreferrer' : ''}`) ||
       undefined
     }
+    {...restProps}
   >
     {children}
   </a>
@@ -56,6 +66,7 @@ const meta = {
       description: 'Link is external link',
       type: 'boolean',
     },
+    hidden,
     href: {
       description: 'Link href',
       control: 'text',
@@ -73,6 +84,7 @@ const meta = {
     alternate: false,
     children: [],
     external: false,
+    hidden: false,
     hrefLang: '',
     lang: '',
   },
@@ -178,6 +190,20 @@ export const CurrentLang: Story = {
     ariaLabel: 'This page in English',
   },
   name: 'Current language',
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
+      },
+    },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);

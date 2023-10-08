@@ -4,12 +4,14 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/button/README.md?raw';
 import tokensDefinition from '@utrecht/components/button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import buttonDisabledTabindexMarkdown from './_button-disabled-tabindex.md?raw';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Button = ({ children, ...attributes }) => <button {...attributes}>{children}</button>;
+const Button = ({ ...attributes }: PropsWithChildren<HTMLAttributes<HTMLButtonElement>>) => <button {...attributes} />;
 
 const meta = {
   title: 'HTML Component/Button',
@@ -28,6 +30,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     tabindex: {
       description: 'Tabindex',
       control: 'boolean',
@@ -40,6 +43,7 @@ const meta = {
   },
   args: {
     disabled: false,
+    hidden: false,
     type: 'button',
   },
   tags: ['autodocs'],
@@ -157,6 +161,20 @@ export const Submit: Story = {
     docs: {
       description: {
         story: 'Button with `type="submit"` attribute.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

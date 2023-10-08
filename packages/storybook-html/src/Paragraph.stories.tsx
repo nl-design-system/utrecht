@@ -4,12 +4,21 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/paragraph/README.md?raw';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Paragraph = ({ children, lead, small }) => (
-  <p className={lead ? 'lead' : null}>{small ? <small>{children}</small> : children}</p>
+interface ParagraphStoryProps extends HTMLAttributes<HTMLParagraphElement> {
+  lead?: boolean;
+  small?: boolean;
+}
+
+const Paragraph = ({ children, lead, small, ...restProps }: PropsWithChildren<ParagraphStoryProps>) => (
+  <p className={lead ? 'lead' : undefined} {...restProps}>
+    {small ? <small>{children}</small> : children}
+  </p>
 );
 
 const meta = {
@@ -21,6 +30,7 @@ const meta = {
     children: {
       description: 'Content of the paragraph',
     },
+    hidden,
     lead: {
       description: 'Lead paragraph',
       control: 'boolean',
@@ -32,6 +42,7 @@ const meta = {
   },
   args: {
     children: '',
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -92,6 +103,20 @@ export const Small: Story = {
   parameters: {
     status: {
       type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
+      },
     },
   },
 };

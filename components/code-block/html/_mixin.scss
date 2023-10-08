@@ -11,6 +11,10 @@
     @include utrecht-code-block;
   }
 
+  pre[hidden]:has(> code:only-child) {
+    display: none;
+  }
+
   pre:has(> code:only-child) > code {
     display: contents;
   }

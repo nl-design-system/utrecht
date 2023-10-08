@@ -4,16 +4,20 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/ordered-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/ordered-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { LiHTMLAttributes, OlHTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const OrderedList = ({ children, ...attributes }) => <ol {...attributes}>{children}</ol>;
+const OrderedList = ({ ...restProps }: PropsWithChildren<OlHTMLAttributes<HTMLOListElement>>) => <ol {...restProps} />;
 
-const OrderedListItem = ({ children, ...attributes }) => <li {...attributes}>{children}</li>;
+type OrderedListItemProps = PropsWithChildren<LiHTMLAttributes<HTMLLIElement>>;
 
-const OrderedListStory = ({ items }) => (
-  <OrderedList>
+const OrderedListItem = ({ ...restProps }: OrderedListItemProps) => <li {...restProps} />;
+
+const OrderedListStory = ({ items, ...restProps }: { items: OrderedListItemProps[] }) => (
+  <OrderedList {...restProps}>
     {items.map(({ children }) => (
       <OrderedListItem>{children}</OrderedListItem>
     ))}
@@ -34,12 +38,14 @@ const meta = {
       description: 'Text direction',
       control: 'text',
     },
+    hidden,
     lang: {
       description: 'Lang',
       control: 'text',
     },
   },
   args: {
+    hidden: false,
     items: [],
   },
   tags: ['autodocs'],
@@ -108,6 +114,20 @@ export const Arabic: Story = {
         story: `Right-to-left text should have list item markers before the text, on the right.
 
 With CSS you can use Arabic script digits for list item numbers, instead of the default latin numbers.`,
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

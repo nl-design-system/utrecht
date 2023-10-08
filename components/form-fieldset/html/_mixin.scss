@@ -11,6 +11,10 @@
     @include utrecht-form-fieldset--html-fieldset;
     @include utrecht-form-fieldset--distanced;
   }
+
+  fieldset[hidden] {
+    display: none;
+  }
 }
 
 @mixin utrecht-html-legend {
@@ -18,6 +22,10 @@
     @include utrecht-form-fieldset__legend;
     @include utrecht-form-fieldset__legend--html-legend;
     @include utrecht-form-fieldset__legend--distanced;
+  }
+
+  legend[hidden] {
+    display: none;
   }
 
   fieldset:disabled > legend {

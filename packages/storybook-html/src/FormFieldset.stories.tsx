@@ -4,12 +4,17 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/form-fieldset/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-fieldset/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { FieldsetHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Fieldset = ({ disabled, children, legend }) => (
-  <fieldset disabled={disabled || undefined}>
+interface FieldsetStory extends FieldsetHTMLAttributes<HTMLFieldSetElement> {
+  legend?: ReactNode;
+}
+const Fieldset = ({ disabled, children, legend, ...restProps }: PropsWithChildren<FieldsetStory>) => (
+  <fieldset disabled={disabled || undefined} {...restProps}>
     {legend ? <legend>{legend}</legend> : null}
     {children}
   </fieldset>
@@ -28,6 +33,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     legend: {
       description: 'Set the content of the legend',
       control: 'text',
@@ -44,6 +50,7 @@ const meta = {
         laborum.
       </p>,
     ],
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -90,6 +97,20 @@ export const Disabled: Story = {
     docs: {
       description: {
         story: 'Markup using the `disabled` attribute.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

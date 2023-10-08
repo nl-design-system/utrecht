@@ -4,11 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/table/README.md?raw';
 import tokensDefinition from '@utrecht/components/table/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { PropsWithChildren, TableHTMLAttributes } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Table = ({ children, ...attributes }) => <table {...attributes}>{children}</table>;
+const Table = ({ ...restProps }: PropsWithChildren<TableHTMLAttributes<HTMLTableElement>>) => <table {...restProps} />;
 
 const meta = {
   title: 'HTML Component/Table',
@@ -19,6 +21,7 @@ const meta = {
     children: {
       description: 'Content of the table',
     },
+    hidden,
     summary: {
       description: 'Summary of the table contents',
       control: 'text',
@@ -26,6 +29,7 @@ const meta = {
   },
   args: {
     children: [],
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -86,6 +90,20 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'Markup using the `<table>` element.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

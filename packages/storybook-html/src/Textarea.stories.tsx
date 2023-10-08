@@ -4,18 +4,33 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/textarea/README.md?raw';
 import tokensDefinition from '@utrecht/components/textarea/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { PropsWithChildren, TextareaHTMLAttributes } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Textarea = ({ disabled, invalid, placeholder, readOnly, required, value }) => (
+interface TextareaStory extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  invalid?: boolean;
+}
+
+const Textarea = ({
+  disabled,
+  invalid,
+  placeholder,
+  readOnly,
+  required,
+  value,
+  ...restProps
+}: PropsWithChildren<TextareaStory>) => (
   <textarea
-    disabled={disabled || null}
-    aria-invalid={invalid || null}
-    placeholder={placeholder || null}
-    readOnly={readOnly || null}
-    required={required || null}
+    disabled={disabled || undefined}
+    aria-invalid={invalid || undefined}
+    placeholder={placeholder || undefined}
+    readOnly={readOnly || undefined}
+    required={required || undefined}
     defaultValue={value}
+    {...restProps}
   ></textarea>
 );
 
@@ -37,6 +52,7 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    hidden,
     placeholder: {
       description: 'Placeholder',
       control: 'text',
@@ -52,6 +68,7 @@ const meta = {
   },
   args: {
     disabled: false,
+    hidden: false,
     invalid: false,
     placeholder: '',
     readOnly: false,
@@ -161,6 +178,20 @@ export const Required: Story = {
     docs: {
       description: {
         story: 'Markup using the `required` or `aria-required="true"` attribute.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },

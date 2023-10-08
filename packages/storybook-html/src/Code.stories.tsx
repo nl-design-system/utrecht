@@ -4,11 +4,13 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/code/README.md?raw';
 import tokensDefinition from '@utrecht/components/code/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import React from 'react';
+import React, { HTMLAttributes, PropsWithChildren } from 'react';
+import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import { hidden } from './util/htmlArgTypes';
 
-const Code = ({ children }) => <code>{children}</code>;
+const Code = ({ ...restProps }: PropsWithChildren<HTMLAttributes<HTMLElement>>) => <code {...restProps} />;
 
 const meta = {
   title: 'HTML Component/Code',
@@ -20,9 +22,11 @@ const meta = {
       description: 'Code',
       control: 'text',
     },
+    hidden,
   },
   args: {
     children: '<input type="url" value="https://example.fi/">',
+    hidden: false,
   },
   tags: ['autodocs'],
   parameters: {
@@ -49,6 +53,20 @@ export const Default: Story = {
     docs: {
       description: {
         story: 'Markup using the `<code>` element.',
+      },
+    },
+  },
+};
+
+export const Hidden: Story = {
+  args: {
+    ...Default.args,
+    hidden: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: hiddenDocs,
       },
     },
   },
