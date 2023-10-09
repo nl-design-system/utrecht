@@ -7,7 +7,8 @@
 @import "~@utrecht/components/drawer/css";
 
 :host {
-  display: block;
+  /* Display `contents`: is necessary for the `<dialog>` element to render full height */
+  display: contents;
 }
 
 :host([hidden]) {
