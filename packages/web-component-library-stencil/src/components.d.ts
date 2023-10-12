@@ -720,6 +720,8 @@ export namespace Components {
     }
     interface UtrechtUrlData {
     }
+    interface UtrechtWrapAlternative {
+    }
 }
 export interface UtrechtButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -2486,6 +2488,12 @@ declare global {
         prototype: HTMLUtrechtUrlDataElement;
         new (): HTMLUtrechtUrlDataElement;
     };
+    interface HTMLUtrechtWrapAlternativeElement extends Components.UtrechtWrapAlternative, HTMLStencilElement {
+    }
+    var HTMLUtrechtWrapAlternativeElement: {
+        prototype: HTMLUtrechtWrapAlternativeElement;
+        new (): HTMLUtrechtWrapAlternativeElement;
+    };
     interface HTMLElementTagNameMap {
         "utrecht-alert": HTMLUtrechtAlertElement;
         "utrecht-article": HTMLUtrechtArticleElement;
@@ -2773,6 +2781,7 @@ declare global {
         "utrecht-textarea": HTMLUtrechtTextareaElement;
         "utrecht-textbox": HTMLUtrechtTextboxElement;
         "utrecht-url-data": HTMLUtrechtUrlDataElement;
+        "utrecht-wrap-alternative": HTMLUtrechtWrapAlternativeElement;
     }
 }
 declare namespace LocalJSX {
@@ -3518,6 +3527,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtUrlData {
     }
+    interface UtrechtWrapAlternative {
+    }
     interface IntrinsicElements {
         "utrecht-alert": UtrechtAlert;
         "utrecht-article": UtrechtArticle;
@@ -3805,6 +3816,7 @@ declare namespace LocalJSX {
         "utrecht-textarea": UtrechtTextarea;
         "utrecht-textbox": UtrechtTextbox;
         "utrecht-url-data": UtrechtUrlData;
+        "utrecht-wrap-alternative": UtrechtWrapAlternative;
     }
 }
 export { LocalJSX as JSX };
@@ -4113,6 +4125,7 @@ declare module "@stencil/core" {
             "utrecht-textarea": LocalJSX.UtrechtTextarea & JSXBase.HTMLAttributes<HTMLUtrechtTextareaElement>;
             "utrecht-textbox": LocalJSX.UtrechtTextbox & JSXBase.HTMLAttributes<HTMLUtrechtTextboxElement>;
             "utrecht-url-data": LocalJSX.UtrechtUrlData & JSXBase.HTMLAttributes<HTMLUtrechtUrlDataElement>;
+            "utrecht-wrap-alternative": LocalJSX.UtrechtWrapAlternative & JSXBase.HTMLAttributes<HTMLUtrechtWrapAlternativeElement>;
         }
     }
 }

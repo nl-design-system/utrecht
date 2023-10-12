@@ -18,6 +18,29 @@ https://stenciljs.com/docs/dev-server
     <script type="module" src="/build/utrecht.esm.js"></script>
     <script nomodule src="/build/utrecht.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
+    <style>
+      .menu {
+        display: flex;
+        flex-wrap: wrap;
+        min-height: 100px;
+        justify-content: space-between;
+        outline: 1px solid green;
+        inline-size: 100%;
+      }
+      .menu > div {
+        padding: 2em;
+      }
+      utrecht-document {
+        --utrecht-page-background-color: silver;
+        --utrecht-page-max-inline-size: 80vw;
+        --utrecht-page-min-inline-size: 640px;
+      }
+      /*utrecht-document:hover {
+        --utrecht-page-background-color: silver;
+        --utrecht-page-max-inline-size: 50%;
+        --utrecht-page-min-inline-size: 640px;
+      }*/
+    </style>
   </head>
   <body>
     <utrecht-document>
@@ -27,6 +50,35 @@ https://stenciljs.com/docs/dev-server
           <utrecht-logo>
             <utrecht-link href="#"> <utrecht-logo-image></utrecht-logo-image></utrecht-link>
           </utrecht-logo>
+          <utrecht-flex-wrap-fallback flextarget="main-nav">
+            <div class="menu" id="main-nav">
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+              <div><a href="">Home</a></div>
+            </div>
+            <utrecht-button-group slot="fallback">
+              <utrecht-button appearance="subtle" expanded="false">Open menu</utrecht-button>
+            </utrecht-button-group>
+            <utrecht-drawer open="true" slot="fallback">
+              <ul>
+                <li><utrecht-link href="#">Link 1</utrecht-link></li>
+                <li><utrecht-link href="#">Link 2</utrecht-link></li>
+                <li><utrecht-link href="#">Link 3</utrecht-link></li>
+                <li><utrecht-link href="#">Link 4</utrecht-link></li>
+                <li><utrecht-link href="#">Link 5</utrecht-link></li>
+                <li><utrecht-link href="#">Link 6</utrecht-link></li>
+                <li><utrecht-link href="#">Link 7</utrecht-link></li>
+                <li><utrecht-link href="#">Link 8</utrecht-link></li>
+                <li><utrecht-link href="#">Link 9</utrecht-link></li>
+              </ul>
+            </utrecht-drawer>
+          </utrecht-flex-wrap-fallback>
         </utrecht-page-header>
         <utrecht-page-content>
           <utrecht-form action="/search" method="get">
