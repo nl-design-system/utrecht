@@ -28,7 +28,7 @@ describe('Drawer', () => {
 
     expect(document).toHaveClass('utrecht-drawer');
   });
-  it('displays as CSS block element', () => {
+  it('displays as none', () => {
     const { container } = render(<Drawer />);
 
     const doc = container.querySelector(':only-child');
