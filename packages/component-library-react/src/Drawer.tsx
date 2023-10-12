@@ -43,13 +43,16 @@ export const Drawer = forwardRef(
       <dialog
         {...restProps}
         ref={dialogRef}
-        className={clsx('utrecht-drawer', {
-          'utrecht-drawer--block-end': align === 'block-end',
-          'utrecht-drawer--block-start': align === 'block-start',
-          'utrecht-drawer--inline-end': align === 'inline-end',
-          'utrecht-drawer--inline-start': align === 'inline-start' || !align,
+        className={clsx(
+          'utrecht-drawer',
+          {
+            'utrecht-drawer--block-end': align === 'block-end',
+            'utrecht-drawer--block-start': align === 'block-start',
+            'utrecht-drawer--inline-end': align === 'inline-end',
+            'utrecht-drawer--inline-start': align === 'inline-start' || !align,
+          },
           className,
-        })}
+        )}
       >
         {children}
       </dialog>
