@@ -68,7 +68,7 @@ describe('Drawer', () => {
   });
 
   it('supports ForwardRef in React', () => {
-    const ref = createRef<HTMLDivElement>();
+    const ref = createRef<HTMLDialogElement>();
 
     const { container } = render(<Drawer ref={ref} />);
 
