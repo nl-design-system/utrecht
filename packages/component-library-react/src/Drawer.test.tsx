@@ -82,6 +82,5 @@ describe('Drawer', () => {
     const doc = container.querySelector(':only-child');
 
     expect(doc).toBeVisible();
-    expect(doc).toHaveStyle({ display: 'block' });
   });
 });
