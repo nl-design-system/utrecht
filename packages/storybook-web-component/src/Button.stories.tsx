@@ -13,10 +13,25 @@ interface ButtonStoryProps {
   appearance?: string;
   busy?: boolean;
   disabled?: boolean;
+  expanded?: boolean | string;
+  pressed?: boolean | string;
   type?: string;
 }
-const ButtonStory = ({ appearance, busy, children, disabled, type }: PropsWithChildren<ButtonStoryProps>) => (
-  <UtrechtButton appearance={appearance} busy={busy || null} disabled={disabled || null} type={type || null}>
+const ButtonStory = ({
+  appearance,
+  busy,
+  children,
+  disabled,
+  type,
+  ...restProps
+}: PropsWithChildren<ButtonStoryProps>) => (
+  <UtrechtButton
+    appearance={appearance}
+    busy={busy || null}
+    disabled={disabled || null}
+    type={type || null}
+    {...restProps}
+  >
     {children}
   </UtrechtButton>
 );
@@ -42,6 +57,24 @@ const meta = {
     disabled: {
       description: 'Disabled',
       control: 'boolean',
+    },
+    expanded: {
+      description: 'Expanded',
+      control: 'select',
+      options: {
+        '': undefined,
+        false: 'false',
+        true: 'true',
+      },
+    },
+    pressed: {
+      description: 'Pressed',
+      control: 'select',
+      options: {
+        '': undefined,
+        false: 'false',
+        true: 'true',
+      },
     },
     type: {
       description: 'Type',
@@ -95,6 +128,34 @@ export const Busy: Story = {
     busy: true,
     children: 'Send',
     type: 'submit',
+  },
+};
+
+export const ToggleButton: Story = {
+  args: {
+    children: 'Open menu',
+    pressed: false,
+  },
+};
+
+export const ToggleButtonPressed: Story = {
+  args: {
+    children: 'Open menu',
+    pressed: true,
+  },
+};
+
+export const ExpandButton: Story = {
+  args: {
+    children: 'Open section',
+    expanded: false,
+  },
+};
+
+export const CollapseButton: Story = {
+  args: {
+    children: 'Close section',
+    expanded: true,
   },
 };
 

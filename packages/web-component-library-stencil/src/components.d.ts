@@ -34,6 +34,7 @@ export namespace Components {
         "appearance": string;
         "busy": boolean;
         "disabled": boolean;
+        "expanded": boolean | string | 'false' | 'true';
         "form": string;
         "formAction": string;
         "formEnctype": string;
@@ -43,6 +44,7 @@ export namespace Components {
         "name": string;
         "popoverTarget": string;
         "popoverTargetAction": string;
+        "pressed": boolean | string | 'false' | 'true';
         "type": string;
         "value": string;
     }
@@ -107,6 +109,9 @@ export namespace Components {
     interface UtrechtEidasLogo {
     }
     interface UtrechtEmphasis {
+    }
+    interface UtrechtFlexWrapFallback {
+        "flexTarget"?: string;
     }
     interface UtrechtForm {
         "action"?: string;
@@ -720,8 +725,6 @@ export namespace Components {
     }
     interface UtrechtUrlData {
     }
-    interface UtrechtWrapAlternative {
-    }
 }
 export interface UtrechtButtonCustomEvent<T> extends CustomEvent<T> {
     detail: T;
@@ -935,6 +938,12 @@ declare global {
     var HTMLUtrechtEmphasisElement: {
         prototype: HTMLUtrechtEmphasisElement;
         new (): HTMLUtrechtEmphasisElement;
+    };
+    interface HTMLUtrechtFlexWrapFallbackElement extends Components.UtrechtFlexWrapFallback, HTMLStencilElement {
+    }
+    var HTMLUtrechtFlexWrapFallbackElement: {
+        prototype: HTMLUtrechtFlexWrapFallbackElement;
+        new (): HTMLUtrechtFlexWrapFallbackElement;
     };
     interface HTMLUtrechtFormElement extends Components.UtrechtForm, HTMLStencilElement {
     }
@@ -2488,12 +2497,6 @@ declare global {
         prototype: HTMLUtrechtUrlDataElement;
         new (): HTMLUtrechtUrlDataElement;
     };
-    interface HTMLUtrechtWrapAlternativeElement extends Components.UtrechtWrapAlternative, HTMLStencilElement {
-    }
-    var HTMLUtrechtWrapAlternativeElement: {
-        prototype: HTMLUtrechtWrapAlternativeElement;
-        new (): HTMLUtrechtWrapAlternativeElement;
-    };
     interface HTMLElementTagNameMap {
         "utrecht-alert": HTMLUtrechtAlertElement;
         "utrecht-article": HTMLUtrechtArticleElement;
@@ -2525,6 +2528,7 @@ declare global {
         "utrecht-eherkenning-logo": HTMLUtrechtEherkenningLogoElement;
         "utrecht-eidas-logo": HTMLUtrechtEidasLogoElement;
         "utrecht-emphasis": HTMLUtrechtEmphasisElement;
+        "utrecht-flex-wrap-fallback": HTMLUtrechtFlexWrapFallbackElement;
         "utrecht-form": HTMLUtrechtFormElement;
         "utrecht-form-field-checkbox": HTMLUtrechtFormFieldCheckboxElement;
         "utrecht-form-field-description": HTMLUtrechtFormFieldDescriptionElement;
@@ -2781,7 +2785,6 @@ declare global {
         "utrecht-textarea": HTMLUtrechtTextareaElement;
         "utrecht-textbox": HTMLUtrechtTextboxElement;
         "utrecht-url-data": HTMLUtrechtUrlDataElement;
-        "utrecht-wrap-alternative": HTMLUtrechtWrapAlternativeElement;
     }
 }
 declare namespace LocalJSX {
@@ -2813,6 +2816,7 @@ declare namespace LocalJSX {
         "appearance"?: string;
         "busy"?: boolean;
         "disabled"?: boolean;
+        "expanded"?: boolean | string | 'false' | 'true';
         "form"?: string;
         "formAction"?: string;
         "formEnctype"?: string;
@@ -2824,6 +2828,7 @@ declare namespace LocalJSX {
         "onUtrechtRequestSubmit"?: (event: UtrechtButtonCustomEvent<any>) => void;
         "popoverTarget"?: string;
         "popoverTargetAction"?: string;
+        "pressed"?: boolean | string | 'false' | 'true';
         "type"?: string;
         "value"?: string;
     }
@@ -2890,6 +2895,9 @@ declare namespace LocalJSX {
     interface UtrechtEidasLogo {
     }
     interface UtrechtEmphasis {
+    }
+    interface UtrechtFlexWrapFallback {
+        "flexTarget"?: string;
     }
     interface UtrechtForm {
         "action"?: string;
@@ -3527,8 +3535,6 @@ declare namespace LocalJSX {
     }
     interface UtrechtUrlData {
     }
-    interface UtrechtWrapAlternative {
-    }
     interface IntrinsicElements {
         "utrecht-alert": UtrechtAlert;
         "utrecht-article": UtrechtArticle;
@@ -3560,6 +3566,7 @@ declare namespace LocalJSX {
         "utrecht-eherkenning-logo": UtrechtEherkenningLogo;
         "utrecht-eidas-logo": UtrechtEidasLogo;
         "utrecht-emphasis": UtrechtEmphasis;
+        "utrecht-flex-wrap-fallback": UtrechtFlexWrapFallback;
         "utrecht-form": UtrechtForm;
         "utrecht-form-field-checkbox": UtrechtFormFieldCheckbox;
         "utrecht-form-field-description": UtrechtFormFieldDescription;
@@ -3816,7 +3823,6 @@ declare namespace LocalJSX {
         "utrecht-textarea": UtrechtTextarea;
         "utrecht-textbox": UtrechtTextbox;
         "utrecht-url-data": UtrechtUrlData;
-        "utrecht-wrap-alternative": UtrechtWrapAlternative;
     }
 }
 export { LocalJSX as JSX };
@@ -3853,6 +3859,7 @@ declare module "@stencil/core" {
             "utrecht-eherkenning-logo": LocalJSX.UtrechtEherkenningLogo & JSXBase.HTMLAttributes<HTMLUtrechtEherkenningLogoElement>;
             "utrecht-eidas-logo": LocalJSX.UtrechtEidasLogo & JSXBase.HTMLAttributes<HTMLUtrechtEidasLogoElement>;
             "utrecht-emphasis": LocalJSX.UtrechtEmphasis & JSXBase.HTMLAttributes<HTMLUtrechtEmphasisElement>;
+            "utrecht-flex-wrap-fallback": LocalJSX.UtrechtFlexWrapFallback & JSXBase.HTMLAttributes<HTMLUtrechtFlexWrapFallbackElement>;
             "utrecht-form": LocalJSX.UtrechtForm & JSXBase.HTMLAttributes<HTMLUtrechtFormElement>;
             "utrecht-form-field-checkbox": LocalJSX.UtrechtFormFieldCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldCheckboxElement>;
             "utrecht-form-field-description": LocalJSX.UtrechtFormFieldDescription & JSXBase.HTMLAttributes<HTMLUtrechtFormFieldDescriptionElement>;
@@ -4125,7 +4132,6 @@ declare module "@stencil/core" {
             "utrecht-textarea": LocalJSX.UtrechtTextarea & JSXBase.HTMLAttributes<HTMLUtrechtTextareaElement>;
             "utrecht-textbox": LocalJSX.UtrechtTextbox & JSXBase.HTMLAttributes<HTMLUtrechtTextboxElement>;
             "utrecht-url-data": LocalJSX.UtrechtUrlData & JSXBase.HTMLAttributes<HTMLUtrechtUrlDataElement>;
-            "utrecht-wrap-alternative": LocalJSX.UtrechtWrapAlternative & JSXBase.HTMLAttributes<HTMLUtrechtWrapAlternativeElement>;
         }
     }
 }
