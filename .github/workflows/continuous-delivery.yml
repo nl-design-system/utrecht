@@ -130,6 +130,18 @@ jobs:
         run: |
           pnpm run --if-present build
 
+      - name: "Continuous Integration: Git status"
+        shell: bash
+        run: |
+          if git diff --no-ext-diff --quiet --exit-code ; then
+            echo "No unstaged changes that would prevent 'npm publish'"
+            exit 0
+          else
+            echo "The following unstaged changes occur after the build step. Add the files to Git or specify the paths in '.gitignore' to proceed."
+            git diff --exit-code
+            exit 1
+          fi
+
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v3
         with:
