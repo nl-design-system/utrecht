@@ -10,6 +10,8 @@ export class Button {
   @Prop() appearance: string;
   @Prop() busy: boolean;
   @Prop() disabled: boolean;
+  @Prop() expanded: boolean | string | 'false' | 'true';
+  @Prop() pressed: boolean | string | 'false' | 'true';
   @Prop({ attribute: 'readonly', reflect: true }) form: string;
   @Prop({ attribute: 'formaction', reflect: true }) formAction: string;
   @Prop({ attribute: 'formenctype', reflect: true }) formEnctype: string;
@@ -55,6 +57,8 @@ export class Button {
 
     const {
       hostElement,
+      expanded,
+      pressed,
       name,
       value,
       form,
@@ -124,12 +128,19 @@ export class Button {
           'utrecht-button',
           this.busy && 'utrecht-button--busy',
           this.disabled && 'utrecht-button--disabled',
+          pressed && 'utrecht-button--pressed',
           this.type === 'submit' && 'utrecht-button--submit',
           this.appearance === 'primary-action-button' && 'utrecht-button--primary-action',
           this.appearance === 'secondary-action-button' && 'utrecht-button--secondary-action',
           this.appearance === 'subtle-button' && 'utrecht-button--subtle',
         )}
         aria-busy={this.busy ? 'true' : null}
+        aria-expanded={
+          typeof this.expanded === 'boolean' ? String(expanded) : typeof expanded === 'string' ? expanded : null
+        }
+        aria-pressed={
+          typeof this.pressed === 'boolean' ? String(pressed) : typeof pressed === 'string' ? pressed : null
+        }
         disabled={this.disabled}
         type={this.type || 'button'}
         onClick={handleClick}
