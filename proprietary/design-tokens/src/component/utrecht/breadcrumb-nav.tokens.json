@@ -4,7 +4,7 @@
       "min-block-size": { "value": "34px" },
       "font-family": {},
       "font-size": {
-        "value": "{utrecht.typography.scale.sm.font-size}"
+        "value": "{utrecht.typography.scale.md.font-size}"
       },
       "text-transform": {},
       "divider": {
@@ -20,33 +20,47 @@
           "value": "{utrecht.space.block.xs}"
         },
         "padding-inline-end": {
-          "value": "{utrecht.space.inline.md}"
+          "value": "{utrecht.space.inline.xs}"
         },
         "padding-inline-start": {
-          "value": "{utrecht.space.inline.md}"
+          "value": "{utrecht.space.inline.xs}"
         }
       },
       "separator": {
         "color": {
-          "value": "{utrecht.color.grey.40}"
+          "value": "{utrecht.color.blue.35}"
         },
         "icon": {
           "size": {
-            "value": "1em"
+            "value": "{utrecht.typography.scale.sm.font-size}"
           }
         }
       },
       "link": {
         "background-color": {},
         "color": {
-          "value": "{utrecht.color.black}"
+          "value": "{utrecht.color.blue.35}"
+        },
+        "text-decoration": {
+          "value": "none"
         },
         "focus": {
           "background-color": {
-            "value": "{utrecht.color.yellow.60}"
+            "value": "{utrecht.focus.background-color}"
           },
           "color": {
-            "value": "{utrecht.color.black}"
+            "value": "{utrecht.color.blue.40}"
+          },
+          "text-decoration": {
+            "value": "underline"
+          }
+        },
+        "hover": {
+          "color": {
+            "value": "{utrecht.color.blue.40}"
+          },
+          "text-decoration": {
+            "value": "underline"
           }
         },
         "disabled": {
@@ -70,7 +84,7 @@
           },
           "focus": {
             "background-color": {
-              "value": "{utrecht.color.yellow.60}"
+              "value": "{utrecht.focus.background-color}"
             },
             "color": {
               "value": "{utrecht.color.black}"
