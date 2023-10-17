@@ -13,10 +13,17 @@
 @mixin utrecht-breadcrumb-nav {
   --utrecht-focus-background-color: var(--utrecht-breadcrumb-nav-link-focus-background-color);
   --utrecht-link-background-color: var(--utrecht-breadcrumb-nav-link-background-color);
+  --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-text-decoration);
   --utrecht-link-focus-color: var(--utrecht-breadcrumb-nav-link-focus-color, var(--utrecht-breadcrumb-nav-link-color));
-  --utrecht-link-focus-text-decoration: var(--utrecht-link-text-decoration);
-  --utrecht-link-hover-color: var(--utrecht-breadcrumb-nav-link-color);
-  --utrecht-link-hover-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-link-focus-text-decoration: var(
+    --utrecht-breadcrumb-nav-link-focus-text-decoration,
+    var(--utrecht-breadcrumb-nav-link-text-decoration)
+  );
+  --utrecht-link-hover-color: var(--utrecht-breadcrumb-nav-link-hover-color, var(--utrecht-breadcrumb-nav-link-color));
+  --utrecht-link-hover-text-decoration: var(
+    --utrecht-breadcrumb-nav-link-hover-text-decoration,
+    var(--utrecht-breadcrumb-nav-link-text-decoration)
+  );
   --utrecht-link-visited-color: var(--utrecht-breadcrumb-nav-link-color);
   --utrecht-link-visited-text-decoration: var(--utrecht-link-text-decoration);
   --utrecht-link-color: var(--utrecht-breadcrumb-nav-link-color);
