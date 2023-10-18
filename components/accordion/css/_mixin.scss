@@ -83,3 +83,7 @@
   padding-inline-end: var(--utrecht-accordion-panel-padding-inline-end);
   padding-inline-start: var(--utrecht-accordion-panel-padding-inline-start);
 }
+
+@mixin utrecht-accordion__header {
+  --utrecht-space-around: 0;
+}
