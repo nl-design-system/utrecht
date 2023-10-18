@@ -33,3 +33,7 @@
 .utrecht-accordion__panel {
   @include utrecht-accordion__panel;
 }
+
+.utrecht-accordion__header {
+  @include utrecht-accordion__header;
+}
