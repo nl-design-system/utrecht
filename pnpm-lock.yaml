@@ -4,6 +4,11 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+patchedDependencies:
+  '@stencil/core@4.5.0':
+    hash: vzq4a43m5dnyibev4zgaqm45y4
+    path: patches/@stencil__core@4.5.0.patch
+
 importers:
 
   .:
@@ -2055,7 +2060,7 @@ importers:
     dependencies:
       '@stencil/core':
         specifier: 4.5.0
-        version: 4.5.0
+        version: 4.5.0(patch_hash=vzq4a43m5dnyibev4zgaqm45y4)
     devDependencies:
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.0-alpha.158
@@ -11344,7 +11349,7 @@ packages:
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.5.0
+      '@stencil/core': 4.5.0(patch_hash=vzq4a43m5dnyibev4zgaqm45y4)
     dev: true
 
   /@stencil/core@2.22.3:
@@ -11353,17 +11358,18 @@ packages:
     hasBin: true
     dev: true
 
-  /@stencil/core@4.5.0:
+  /@stencil/core@4.5.0(patch_hash=vzq4a43m5dnyibev4zgaqm45y4):
     resolution: {integrity: sha512-XRbHdb9t4SQzCCbF9qsh0dexvnlArEzCDJl19BJzxzazVBM398SeJUKCBh4p91AZIWveN0gHuZSIGMhLWR7qSA==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
     hasBin: true
+    patched: true
 
   /@stencil/react-output-target@0.5.3(@stencil/core@4.5.0):
     resolution: {integrity: sha512-68jwRp35CjAcwhTJ9yFD/3n+jrHOqvEH2jreVuPVvZK+4tkhPlYlwz0d1E1RlF3jyifUSfdkWUGgXIEy8Fo3yw==}
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.5.0
+      '@stencil/core': 4.5.0(patch_hash=vzq4a43m5dnyibev4zgaqm45y4)
     dev: true
 
   /@stencil/sass@3.0.6(@stencil/core@4.5.0):
@@ -11372,7 +11378,7 @@ packages:
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3.0.0-beta.0 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.5.0
+      '@stencil/core': 4.5.0(patch_hash=vzq4a43m5dnyibev4zgaqm45y4)
     dev: true
 
   /@stencil/vue-output-target@0.8.6(@stencil/core@4.5.0):
@@ -11380,7 +11386,7 @@ packages:
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
     dependencies:
-      '@stencil/core': 4.5.0
+      '@stencil/core': 4.5.0(patch_hash=vzq4a43m5dnyibev4zgaqm45y4)
     dev: true
 
   /@storybook/addon-a11y@7.4.0(@types/react-dom@18.2.7)(@types/react@18.2.21)(react-dom@18.2.0)(react@18.2.0):
