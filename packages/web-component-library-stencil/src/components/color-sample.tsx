@@ -14,12 +14,11 @@ import { Component, h, Host, Prop } from '@stencil/core';
 export class ColorSample {
   @Prop() color: string;
   render() {
-    // TODO: Support <data value={this.color}>
-    // Currently the TypeScript definitions are insufficient to support this:
-    // Property 'value' does not exist on type 'HTMLAttributes<HTMLDataElement>'.
     return (
       <Host style={{ color: this.color }}>
-        <slot></slot>
+        <data value={this.color}>
+          <slot></slot>
+        </data>
       </Host>
     );
   }

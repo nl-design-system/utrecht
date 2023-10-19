@@ -58,6 +58,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      customElementsExportBehavior: 'bundle',
     },
     {
       type: 'www',

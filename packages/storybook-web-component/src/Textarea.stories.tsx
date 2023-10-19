@@ -9,6 +9,8 @@ import { React } from 'react';
 import { designTokenStory } from './design-token-story';
 
 interface TextareaStoryProps {
+  autocomplete?: string;
+  spellcheck?: boolean;
   disabled?: boolean;
   invalid?: boolean;
   placeholder?: string;
@@ -17,13 +19,24 @@ interface TextareaStoryProps {
   value?: boolean;
 }
 
-const TextareaStory = ({ disabled, invalid, placeholder, readOnly, required, value }: TextareaStoryProps) => (
+const TextareaStory = ({
+  autocomplete,
+  disabled,
+  invalid,
+  placeholder,
+  readOnly,
+  required,
+  spellcheck,
+  value,
+}: TextareaStoryProps) => (
   <UtrechtTextarea
+    autocomplete={autocomplete || null}
     disabled={disabled || null}
     invalid={invalid || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
     required={required || null}
+    spellcheck={spellcheck}
     value={value}
   ></UtrechtTextarea>
 );
@@ -33,6 +46,11 @@ const meta = {
   id: 'web-component-textarea',
   component: TextareaStory,
   argTypes: {
+    autocomplete: {
+      description: 'Autocomplete',
+      control: 'select',
+      options: ['', 'off', 'on', 'street-address'],
+    },
     disabled: {
       description: 'Disabled',
       control: 'boolean',
@@ -52,6 +70,15 @@ const meta = {
     required: {
       description: 'Required',
       control: 'boolean',
+    },
+    spellcheck: {
+      description: 'Spellcheck',
+      control: 'select',
+      options: {
+        '': undefined,
+        false: false,
+        true: false,
+      },
     },
     value: {
       description: 'Value',

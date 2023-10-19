@@ -703,11 +703,13 @@ export namespace Components {
     interface UtrechtTableRow {
     }
     interface UtrechtTextarea {
+        "autocomplete": string;
         "disabled": boolean;
         "invalid": boolean;
         "placeholder": string;
         "readOnly": boolean;
         "required": boolean;
+        "spellcheck": boolean;
         "value": string;
     }
     interface UtrechtTextbox {
@@ -3505,6 +3507,7 @@ declare namespace LocalJSX {
     interface UtrechtTableRow {
     }
     interface UtrechtTextarea {
+        "autocomplete"?: string;
         "disabled"?: boolean;
         "invalid"?: boolean;
         "onUtrechtBlur"?: (event: UtrechtTextareaCustomEvent<any>) => void;
@@ -3514,6 +3517,7 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "readOnly"?: boolean;
         "required"?: boolean;
+        "spellcheck"?: boolean;
         "value"?: string;
     }
     interface UtrechtTextbox {
