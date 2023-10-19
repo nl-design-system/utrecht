@@ -28,16 +28,11 @@ export class IBANData {
     const { value } = this;
     const normalized = normalizeIBAN(value);
     const formatted = formatIBAN(normalized);
-    /*
-     * TODO: Add `value={normalized}` attribute when TypeScript definitions for `<data>` allow it
-     *
-     * Type '{ class: string; value: string; }' is not assignable to type
-     * HTMLAttributes<HTMLDataElement>'.Property 'value' does not exist on type 'HTMLAttributes<HTMLDataElement>'.
-     */
 
-    /*
-     * TODO: Add `translate="no"` when TypeScript definitions allow it
-     */
-    return <data class="utrecht-iban-data">{formatted}</data>;
+    return (
+      <data class="utrecht-iban-data" value={normalized} translate="no">
+        {formatted}
+      </data>
+    );
   }
 }
