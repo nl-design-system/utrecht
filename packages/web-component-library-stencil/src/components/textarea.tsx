@@ -12,8 +12,8 @@ import clsx from 'clsx';
   shadow: true,
 })
 export class Textarea {
-  // TODO: Support `autoComplete` when TypeScript types from Stencil support all actual DOM properties
-  // TODO: Support `spellCheck` when TypeScript types from Stencil support all actual DOM properties
+  @Prop() autocomplete: string = '';
+  @Prop() spellcheck: boolean = false;
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
   @Prop() placeholder: string = '';
@@ -26,10 +26,11 @@ export class Textarea {
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { disabled, invalid, placeholder, readOnly, required, value } = this;
+    const { autocomplete, disabled, invalid, placeholder, readOnly, required, spellcheck, value } = this;
 
     return (
       <textarea
+        autoComplete={autocomplete || null}
         class={clsx(
           'utrecht-textarea',
           'utrecht-textarea--html-textarea',
@@ -41,6 +42,7 @@ export class Textarea {
         placeholder={placeholder || null}
         readonly={readOnly}
         required={required}
+        spellcheck={spellcheck || null}
         value={value}
         onBlur={(evt) => this.utrechtBlur.emit(evt)}
         onChange={(evt) => this.utrechtChange.emit(evt)}
