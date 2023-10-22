@@ -345,9 +345,9 @@ jobs:
           setupGitUser: false
           title: "docs(release): design system packages"
           publish: |
-            pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
-            pnpm publish --recursive
-            pnpm config delete "//registry.npmjs.org/:_authToken"
+            pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}";
+            pnpm publish --recursive;
+            pnpm config delete "//registry.npmjs.org/:_authToken";
 
       - name: "Continuous Deployment: publish to GitHub repository"
         if: steps.changeset.outputs.hasChangesets == 'false'
