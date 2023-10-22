@@ -6,6 +6,9 @@ on:
       - main
   pull_request:
 
+env:
+  CI: true
+
 jobs:
   install:
     runs-on: ubuntu-latest
@@ -327,7 +330,27 @@ jobs:
         run: |
           pnpm run --if-present build
 
+      - name: "Continuous Deployment: publish changeset to GitHub repository"
+        uses: changesets/action@v1
+        id: changeset
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GIT_AUTHOR_NAME: "NL Design System"
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          GIT_COMMITTER_NAME: "NL Design System"
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        with:
+          commit: "docs(release): design system packages"
+          setupGitUser: false
+          title: "docs(release): design system packages"
+          publish: |
+            pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
+            pnpm publish --recursive
+            pnpm config delete "//registry.npmjs.org/:_authToken"
+
       - name: "Continuous Deployment: publish to GitHub repository"
+        if: steps.changeset.outputs.hasChangesets == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
