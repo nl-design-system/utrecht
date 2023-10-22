@@ -347,7 +347,8 @@ jobs:
           publish: "pnpm run publish:changeset"
 
       - name: "Continuous Deployment: publish to GitHub repository"
-        if: steps.changeset.outputs.hasChangesets == 'false'
+        # For the time being, always publish pre-release versions.
+        # if: steps.changeset.outputs.hasChangesets == 'false'
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
