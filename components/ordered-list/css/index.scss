@@ -23,6 +23,10 @@
   @include utrecht-ordered-list--arabic;
 }
 
+.utrecht-ordered-list--lower-alpha {
+  @include utrecht-ordered-list--lower-alpha;
+}
+
 .utrecht-ordered-list--html-content > li,
 .utrecht-ordered-list--html-content ol > li,
 .utrecht-ordered-list__item {
