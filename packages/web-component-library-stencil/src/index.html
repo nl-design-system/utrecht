@@ -18,6 +18,7 @@ https://stenciljs.com/docs/dev-server
     <script type="module" src="/build/utrecht.esm.js"></script>
     <script nomodule src="/build/utrecht.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/@utrecht/component-library-css/dist/index.css" />
     <style>
       .menu {
         display: flex;
@@ -27,302 +28,751 @@ https://stenciljs.com/docs/dev-server
         outline: 1px solid green;
         inline-size: 100%;
       }
+      .spacing-token-examples > div + div {
+        margin-block-start: 1em;
+      }
       .menu > div {
         padding: 2em;
       }
+      section.space-demo + section.space-demo {
+        border-block-start: 50px solid papayawhip;
+      }
+      .reset-margin-block {
+        --utrecht-heading-1-margin-block-start: 0;
+        --utrecht-heading-1-margin-block-end: 0;
+        --utrecht-heading-2-margin-block-start: 0;
+        --utrecht-heading-2-margin-block-end: 0;
+        --utrecht-heading-3-margin-block-start: 0;
+        --utrecht-heading-3-margin-block-end: 0;
+        --utrecht-heading-4-margin-block-start: 0;
+        --utrecht-heading-4-margin-block-end: 0;
+        --utrecht-heading-5-margin-block-start: 0;
+        --utrecht-heading-5-margin-block-end: 0;
+        --utrecht-heading-6-margin-block-start: 0;
+        --utrecht-heading-6-margin-block-end: 0;
+        --utrecht-paragraph-margin-block-start: 0;
+        --utrecht-paragraph-margin-block-end: 0;
+        --utrecht-button-group-margin-block-start: 0;
+        --utrecht-button-group-margin-block-end: 0;
+        --utrecht-button-group-block-gap: 0;
+        --utrecht-ordered-list-margin-block-start: 0;
+        --utrecht-ordered-list-margin-block-end: 0;
+        --utrecht-ordered-list-item-margin-block-start: 0;
+        --utrecht-ordered-list-item-margin-block-end: 0;
+        --utrecht-unordered-list-margin-block-start: 0;
+        --utrecht-unordered-list-margin-block-end: 0;
+        --utrecht-unordered-list-item-margin-block-start: 0;
+        --utrecht-unordered-list-item-margin-block-end: 0;
+        --utrecht-separator-margin-block-start: 0;
+        --utrecht-separator-margin-block-end: 0;
+      }
       utrecht-document {
-        --utrecht-page-background-color: silver;
+        /*        --utrecht-page-background-color: silver;*/
         --utrecht-page-max-inline-size: 80vw;
         --utrecht-page-min-inline-size: 640px;
+        --utrecht-space-around: 1;
       }
       /*utrecht-document:hover {
         --utrecht-page-background-color: silver;
         --utrecht-page-max-inline-size: 50%;
         --utrecht-page-min-inline-size: 640px;
       }*/
+
+      .utrecht-space-block,
+      .utrecht-space-row {
+        border-block-start: min(calc(var(--size) / 2), 1px) solid currentColor;
+        border-block-end: min(calc(var(--size) / 2), 1px) solid currentColor;
+        background-color: papayawhip;
+        block-size: var(--size);
+        max-block-size: var(--size);
+      }
+
+      .utrecht-space-row,
+      .utrecht-space-block,
+      .utrecht-space-inline,
+      .utrecht-space-column,
+      .utrecht-space-text {
+        box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .utrecht-space-row,
+      .utrecht-space-block,
+      .utrecht-space-inline,
+      .utrecht-space-column {
+        display: flex;
+      }
+
+      .utrecht-space-inline,
+      .utrecht-space-column,
+      .utrecht-space-text {
+        border-inline-start: min(calc(var(--size) / 2), 1px) solid currentColor;
+        border-inline-end: min(calc(var(--size) / 2), 1px) solid currentColor;
+        background-color: papayawhip;
+        min-block-size: 1em;
+        inline-size: var(--size);
+        font-size: 10px;
+      }
+      .utrecht-space-text {
+        display: inline-flex;
+      }
+
+      .utrecht-space-column--5xl {
+        --size: var(--utrecht-space-column-5xl);
+      }
+      .utrecht-space-column--4xl {
+        --size: var(--utrecht-space-column-4xl);
+      }
+      .utrecht-space-column--3xl {
+        --size: var(--utrecht-space-column-3xl);
+      }
+      .utrecht-space-column--2xl {
+        --size: var(--utrecht-space-column-2xl);
+      }
+      .utrecht-space-column--xl {
+        --size: var(--utrecht-space-column-xl);
+      }
+      .utrecht-space-column--lg {
+        --size: var(--utrecht-space-column-lg);
+      }
+      .utrecht-space-column--md {
+        --size: var(--utrecht-space-column-md);
+      }
+      .utrecht-space-column--sm {
+        --size: var(--utrecht-space-column-sm);
+      }
+      .utrecht-space-column--xs {
+        --size: var(--utrecht-space-column-xs);
+      }
+      .utrecht-space-column--2xs {
+        --size: var(--utrecht-space-column-2xs);
+      }
+      .utrecht-space-column--3xs {
+        --size: var(--utrecht-space-column-3xs);
+      }
+      .utrecht-space-column--4xs {
+        --size: var(--utrecht-space-column-4xs);
+      }
+      .utrecht-space-row--5xl {
+        --size: var(--utrecht-space-row-5xl);
+      }
+      .utrecht-space-row--4xl {
+        --size: var(--utrecht-space-row-4xl);
+      }
+      .utrecht-space-row--3xl {
+        --size: var(--utrecht-space-row-3xl);
+      }
+      .utrecht-space-row--2xl {
+        --size: var(--utrecht-space-row-2xl);
+      }
+      .utrecht-space-row--xl {
+        --size: var(--utrecht-space-row-xl);
+      }
+      .utrecht-space-row--lg {
+        --size: var(--utrecht-space-row-lg);
+      }
+      .utrecht-space-row--md {
+        --size: var(--utrecht-space-row-md);
+      }
+      .utrecht-space-row--sm {
+        --size: var(--utrecht-space-row-sm);
+      }
+      .utrecht-space-row--xs {
+        --size: var(--utrecht-space-row-xs);
+      }
+      .utrecht-space-row--2xs {
+        --size: var(--utrecht-space-row-2xs);
+      }
+      .utrecht-space-row--3xs {
+        --size: var(--utrecht-space-row-3xs);
+      }
+      .utrecht-space-row--4xs {
+        --size: var(--utrecht-space-row-4xs);
+      }
+      .utrecht-space-text--3xl {
+        --size: var(--utrecht-space-text-3xl);
+      }
+      .utrecht-space-text--2xl {
+        --size: var(--utrecht-space-text-2xl);
+      }
+      .utrecht-space-text--xl {
+        --size: var(--utrecht-space-text-xl);
+      }
+      .utrecht-space-text--lg {
+        --size: var(--utrecht-space-text-lg);
+      }
+      .utrecht-space-text--md {
+        --size: var(--utrecht-space-text-md);
+      }
+      .utrecht-space-text--sm {
+        --size: var(--utrecht-space-text-sm);
+      }
+      .utrecht-space-text--xs {
+        --size: var(--utrecht-space-text-xs);
+      }
+      .utrecht-space-text--2xs {
+        --size: var(--utrecht-space-text-2xs);
+      }
+      .utrecht-space-text--3xs {
+        --size: var(--utrecht-space-text-3xs);
+      }
+      .utrecht-space-inline--4xl {
+        --size: var(--utrecht-space-inline-4xl);
+      }
+      .utrecht-space-inline--3xl {
+        --size: var(--utrecht-space-inline-3xl);
+      }
+      .utrecht-space-inline--2xl {
+        --size: var(--utrecht-space-inline-2xl);
+      }
+      .utrecht-space-inline--xl {
+        --size: var(--utrecht-space-inline-xl);
+      }
+      .utrecht-space-inline--lg {
+        --size: var(--utrecht-space-inline-lg);
+      }
+      .utrecht-space-inline--md {
+        --size: var(--utrecht-space-inline-md);
+      }
+      .utrecht-space-inline--sm {
+        --size: var(--utrecht-space-inline-sm);
+      }
+      .utrecht-space-inline--xs {
+        --size: var(--utrecht-space-inline-xs);
+      }
+      .utrecht-space-inline--2xs {
+        --size: var(--utrecht-space-inline-2xs);
+      }
+      .utrecht-space-inline--3xs {
+        --size: var(--utrecht-space-inline-3xs);
+      }
+      .utrecht-space-block--4xs {
+        --size: var(--utrecht-space-block-4xs);
+      }
+      .utrecht-space-block--4xl {
+        --size: var(--utrecht-space-block-4xl);
+      }
+      .utrecht-space-block--3xl {
+        --size: var(--utrecht-space-block-3xl);
+      }
+      .utrecht-space-block--2xl {
+        --size: var(--utrecht-space-block-2xl);
+      }
+      .utrecht-space-block--xl {
+        --size: var(--utrecht-space-block-xl);
+      }
+      .utrecht-space-block--lg {
+        --size: var(--utrecht-space-block-lg);
+      }
+      .utrecht-space-block--md {
+        --size: var(--utrecht-space-block-md);
+      }
+      .utrecht-space-block--sm {
+        --size: var(--utrecht-space-block-sm);
+      }
+      .utrecht-space-block--xs {
+        --size: var(--utrecht-space-block-xs);
+      }
+      .utrecht-space-block--2xs {
+        --size: var(--utrecht-space-block-2xs);
+      }
+      .utrecht-space-block--3xs {
+        --size: var(--utrecht-space-block-3xs);
+      }
     </style>
+    <script>
+      class UtrechtLoremIpsum extends HTMLElement {
+        constructor() {
+          super();
+        }
+
+        connectedCallback() {
+          if (!this.firstChild) {
+            this.appendChild(
+              document.createTextNode(
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+              )
+            );
+          }
+        }
+      }
+
+      customElements.define("utrecht-lorem-ipsum", UtrechtLoremIpsum);
+    </script>
   </head>
-  <body>
+  <body class="utrecht-theme">
     <utrecht-document>
-      <utrecht-skip-link href="#main">Naar de inhoud</utrecht-skip-link>
       <utrecht-page>
-        <utrecht-page-header>
-          <utrecht-logo>
-            <utrecht-link href="#"> <utrecht-logo-image></utrecht-logo-image></utrecht-link>
-          </utrecht-logo>
-          <utrecht-flex-wrap-fallback flextarget="main-nav">
-            <div class="menu" id="main-nav">
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-              <div><a href="">Home</a></div>
-            </div>
-            <utrecht-button-group slot="fallback">
-              <utrecht-button appearance="subtle" expanded="false">Open menu</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-drawer open="true" slot="fallback">
-              <ul>
-                <li><utrecht-link href="#">Link 1</utrecht-link></li>
-                <li><utrecht-link href="#">Link 2</utrecht-link></li>
-                <li><utrecht-link href="#">Link 3</utrecht-link></li>
-                <li><utrecht-link href="#">Link 4</utrecht-link></li>
-                <li><utrecht-link href="#">Link 5</utrecht-link></li>
-                <li><utrecht-link href="#">Link 6</utrecht-link></li>
-                <li><utrecht-link href="#">Link 7</utrecht-link></li>
-                <li><utrecht-link href="#">Link 8</utrecht-link></li>
-                <li><utrecht-link href="#">Link 9</utrecht-link></li>
-              </ul>
-            </utrecht-drawer>
-          </utrecht-flex-wrap-fallback>
-        </utrecht-page-header>
-        <utrecht-page-content>
-          <utrecht-form action="/search" method="get">
-            <utrecht-heading-2 slot="heading">Form!</utrecht-heading-2>
-            <utrecht-form-field-textbox name="q" value="Value here">
-              <span slot="label">Label here</span>
-              <utrecht-paragraph slot="description">Description here</utrecht-paragraph>
-              <utrecht-paragraph slot="error-message">Error message here</utrecht-paragraph>
-              <utrecht-paragraph slot="status">Status here</utrecht-paragraph>
-            </utrecht-form-field-textbox>
-            <utrecht-form-field-textbox
-              type="password"
-              name="password"
-              autocomplete="current-password"
-              value="wordy.shading0seashore"
-              label="Password"
-            >
-            </utrecht-form-field-textbox>
-            <utrecht-form-field-textbox
-              type="password"
-              name="password"
-              autocomplete="new-password"
-              value="wordy.shading0seashore"
-              label="New password"
-            >
-            </utrecht-form-field-textbox>
-            <utrecht-form-field-checkbox
-              name="coc"
-              value="I accept the Code of Conduct"
-              checked
-              label="I accept the Code of Conduct 👍"
-            ></utrecht-form-field-checkbox>
-            <utrecht-form-field-textarea
-              name="message"
-              value="I accept the Code of Conduct"
-              label="Message"
-            ></utrecht-form-field-textarea>
-            <utrecht-form-field-textarea
-              name="excerpt"
-              placeholder="Type a short description here..."
-              label="Excerpt"
-            ></utrecht-form-field-textarea>
-            <utrecht-form-field-checkbox name="coc" value="I accept the Code of Conduct" checked>
-              <span slot="label">I accept the Code of Conduct</span>
-            </utrecht-form-field-checkbox>
-            <utrecht-form-field-checkbox name="coc" value="I accept the Code of Conduct" required invalid>
-              <span slot="label">I accept the Code of Conduct</span>
-              <utrecht-paragraph slot="description"
-                ><utrecht-link href="https://github.com/nl-design-system/.github/blob/main/CODE_OF_CONDUCT.nl.md"
-                  >Code of Conduct van NL Design System</utrecht-link
-                ></utrecht-paragraph
-              >
-              <utrecht-paragraph slot="error-message">Code of conduct is required, please accept!</utrecht-paragraph>
-            </utrecht-form-field-checkbox>
-            <utrecht-form-field-textbox name="q" value="My query">
-              <span slot="label">Hello world</span>
-              <utrecht-paragraph slot="description">The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
-              <utrecht-paragraph slot="error-message">The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
-              <utrecht-paragraph slot="status">30/144 characters</utrecht-paragraph>
-            </utrecht-form-field-textbox>
-            <utrecht-form-field-textbox name="q" value="" required invalid>
-              <span slot="label">E-mail address</span>
-            </utrecht-form-field-textbox>
-            <utrecht-form-field-textbox name="q" value="My query" invalid>
-              <span slot="label">Hello world</span>
-            </utrecht-form-field-textbox>
-            <utrecht-button-group>
-              <utrecht-link-button>⃪ Previous</utrecht-link-button>
-              <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
-            </utrecht-button-group>
-          </utrecht-form>
-          <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
-          <utrecht-button-group>
-            <button type="button" popovertarget="mypopover" popovertargetaction="show">Show popover</button>
-            <button type="button" popovertarget="mypopover" popovertargetaction="hide">Hide popover</button>
-          </utrecht-button-group>
-          <utrecht-button-group
-            ><utrecht-button popovertarget="mypopover" popovertargetaction="show">Show popover</utrecht-button>
-            <utrecht-button popovertarget="mypopover" popovertargetaction="hide">Hide popover</utrecht-button>
-          </utrecht-button-group>
-          <div id="mypopover" popover>Popover content</div>
-          <utrecht-article id="main" style="--utrecht-space-around: 1">
-            <utrecht-color-sample color="#007dad"></utrecht-color-sample>
-            <utrecht-alert>
-              <utrecht-heading-2>Alert: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
-            </utrecht-alert>
-            <utrecht-alert type="ok">
-              <utrecht-heading-2>Alert OK: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
-            </utrecht-alert>
-            <utrecht-alert type="error">
-              <utrecht-heading-2>Alert error: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
-            </utrecht-alert>
-            <utrecht-alert type="info">
-              <utrecht-heading-2>Alert info: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
-            </utrecht-alert>
-            <utrecht-alert type="warning">
-              <utrecht-heading-2>Alert warning: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
-            </utrecht-alert>
-            <utrecht-icon>
-              <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Group" fill="#000000" fill-rule="nonzero">
-                    <path
-                      d="M7,0 C3.13483333,0 0,3.13425 0,7 C0,10.0928333 2.0055,12.7166667 4.78741667,13.6424167 C5.13683333,13.7071667 5.25,13.4901667 5.25,13.3058333 L5.25,12.0026667 C3.30283333,12.4261667 2.89741667,11.1766667 2.89741667,11.1766667 C2.57891667,10.3675833 2.11983333,10.1523333 2.11983333,10.1523333 C1.48458333,9.71775 2.16825,9.72708333 2.16825,9.72708333 C2.87116667,9.77608333 3.241,10.4486667 3.241,10.4486667 C3.86516667,11.5185 4.87841667,11.2093333 5.278,11.03025 C5.34041667,10.5781667 5.52183333,10.269 5.7225,10.0945833 C4.16791667,9.91666667 2.53341667,9.31641667 2.53341667,6.63483333 C2.53341667,5.87008333 2.807,5.24591667 3.25441667,4.75591667 C3.18208333,4.57916667 2.94233333,3.86691667 3.32266667,2.90325 C3.32266667,2.90325 3.91066667,2.71541667 5.24825,3.62075 C5.8065,3.46558333 6.405,3.388 7,3.38508333 C7.595,3.388 8.19408333,3.46558333 8.7535,3.62075 C10.0899167,2.71541667 10.67675,2.90325 10.67675,2.90325 C11.0576667,3.8675 10.8179167,4.57975 10.7455833,4.75591667 C11.19475,5.24591667 11.466,5.87066667 11.466,6.63483333 C11.466,9.32341667 9.82858333,9.9155 8.26991667,10.08875 C8.52075,10.30575 8.75,10.7315833 8.75,11.3849167 L8.75,13.3058333 C8.75,13.4919167 8.862,13.7106667 9.21725,13.6418333 C11.9968333,12.7149167 14,10.0916667 14,7 C14,3.13425 10.86575,0 7,0 Z"
-                      id="Path"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </utrecht-icon>
-            <utrecht-icon style="--utrecht-icon-size: 128px">
-              <svg width="14px" height="14px" viewBox="0 0 14 14" version="1.1">
-                <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <g id="Group" fill="#000000" fill-rule="nonzero">
-                    <path
-                      d="M7,0 C3.13483333,0 0,3.13425 0,7 C0,10.0928333 2.0055,12.7166667 4.78741667,13.6424167 C5.13683333,13.7071667 5.25,13.4901667 5.25,13.3058333 L5.25,12.0026667 C3.30283333,12.4261667 2.89741667,11.1766667 2.89741667,11.1766667 C2.57891667,10.3675833 2.11983333,10.1523333 2.11983333,10.1523333 C1.48458333,9.71775 2.16825,9.72708333 2.16825,9.72708333 C2.87116667,9.77608333 3.241,10.4486667 3.241,10.4486667 C3.86516667,11.5185 4.87841667,11.2093333 5.278,11.03025 C5.34041667,10.5781667 5.52183333,10.269 5.7225,10.0945833 C4.16791667,9.91666667 2.53341667,9.31641667 2.53341667,6.63483333 C2.53341667,5.87008333 2.807,5.24591667 3.25441667,4.75591667 C3.18208333,4.57916667 2.94233333,3.86691667 3.32266667,2.90325 C3.32266667,2.90325 3.91066667,2.71541667 5.24825,3.62075 C5.8065,3.46558333 6.405,3.388 7,3.38508333 C7.595,3.388 8.19408333,3.46558333 8.7535,3.62075 C10.0899167,2.71541667 10.67675,2.90325 10.67675,2.90325 C11.0576667,3.8675 10.8179167,4.57975 10.7455833,4.75591667 C11.19475,5.24591667 11.466,5.87066667 11.466,6.63483333 C11.466,9.32341667 9.82858333,9.9155 8.26991667,10.08875 C8.52075,10.30575 8.75,10.7315833 8.75,11.3849167 L8.75,13.3058333 C8.75,13.4919167 8.862,13.7106667 9.21725,13.6418333 C11.9968333,12.7149167 14,10.0916667 14,7 C14,3.13425 10.86575,0 7,0 Z"
-                      id="Path"
-                    ></path>
-                  </g>
-                </g>
-              </svg>
-            </utrecht-icon>
-            <utrecht-heading-group>
-              <utrecht-heading-1>Heading 1: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-1>
-              <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
-            </utrecht-heading-group>
-            <utrecht-heading-2>Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
-            <utrecht-heading level="2">Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
-            <utrecht-heading-3>Heading 3: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-3>
-            <utrecht-heading level="3">Heading 3: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
-            <utrecht-heading-4>Heading 4: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-4>
-            <utrecht-heading level="4">Heading 4: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
-            <utrecht-heading-5>Heading 5: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-5>
-            <utrecht-heading level="5">Heading 5: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
-            <utrecht-heading-6>Heading 6: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-6>
-            <utrecht-heading level="6">Heading 6: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
-            <utrecht-paragraph lead>Lead paragraph: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
-            <utrecht-paragraph>Paragraph: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
-            <utrecht-separator></utrecht-separator>
-            <utrecht-paragraph
-              ><utrecht-code>Code: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-code></utrecht-paragraph
-            >
-            <utrecht-paragraph>URL: <utrecht-url>https://example.fi/</utrecht-url></utrecht-paragraph>
-            <utrecht-paragraph>Number: <utrecht-number-data>52,000</utrecht-number-data></utrecht-paragraph>
-            <utrecht-paragraph
-              ><utrecht-link href="https://example.com/">Link</utrecht-link>: The Quick Brown Fox Jumps Over The Lazy
-              Dog</utrecht-paragraph
-            >
-            <utrecht-code-block>Code block: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-code-block>
-            <utrecht-separator></utrecht-separator>
-            <utrecht-paragraph>Paragraph: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph>
-            <utrecht-paragraph
-              ><utrecht-mark>Mark</utrecht-mark>: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-paragraph
-            >
-            <utrecht-paragraph
-              ><utrecht-emphasis>Emphasis</utrecht-emphasis>: The Quick Brown Fox Jumps Over The Lazy
-              Dog</utrecht-paragraph
-            >
-            <utrecht-form-field-description
-              >Form field description: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-form-field-description
-            >
-            <utrecht-form-field-description status="invalid"
-              >Form field description invalid: The Quick Brown Fox Jumps Over The Lazy
-              Dog</utrecht-form-field-description
-            >
-            <utrecht-form-field-description status="valid"
-              >Form field description valid: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-form-field-description
-            >
-            <div>
-              <utrecht-badge-counter>42</utrecht-badge-counter>
-            </div>
-            <div>
-              <utrecht-badge-data>latest</utrecht-badge-data>
-            </div>
-            <div>
-              <utrecht-badge-status>disabled</utrecht-badge-status>
-            </div>
-            <utrecht-button-group>
-              <utrecht-button>foo</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-button-group>
-              <utrecht-button appearance="primary-action-button">foo</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-button-group>
-              <utrecht-button appearance="secondary-action-button">foo</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-button-group>
-              <utrecht-button appearance="subtle-button">foo</utrecht-button>
-            </utrecht-button-group>
-            <section>
-              <utrecht-heading-2>Button link</utrecht-heading-2>
-              <utrecht-button-group>
-                <utrecht-button-link href="#">foo</utrecht-button-link>
-                <utrecht-button-link href="#" placeholder>foo</utrecht-button-link>
-              </utrecht-button-group>
-              <utrecht-button-group>
-                <utrecht-button-link href="#" appearance="primary-action-button">Primary action</utrecht-button-link>
-                <utrecht-button-link href="#" appearance="primary-action-button" placeholder
-                  >Primary action</utrecht-button-link
-                >
-              </utrecht-button-group>
-              <utrecht-button-group>
-                <utrecht-button-link href="#" appearance="secondary-action-button"
-                  >Secondary action</utrecht-button-link
-                >
-                <utrecht-button-link href="#" appearance="secondary-action-button" placeholder
-                  >Secondary action</utrecht-button-link
-                >
-              </utrecht-button-group>
-              <utrecht-button-group>
-                <utrecht-button-link href="#" appearance="subtle-button">Subtle button</utrecht-button-link>
-                <utrecht-button-link href="#" appearance="subtle-button" placeholder>Subtle button</utrecht-button-link>
-              </utrecht-button-group>
+        <utrecht-page-content class="reset-margin-block">
+          <div>
+            <dl class="spacing-token-examples">
+              <div>
+                <dt>Column: Extra Large 5</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--5xl">
+                    <code class="utrecht-code">64px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Large 4</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--4xl">
+                    <code class="utrecht-code">48px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Large 3</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--3xl">
+                    <code class="utrecht-code">32px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Large 2</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--2xl">
+                    <code class="utrecht-code">28px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Large</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--xl">
+                    <code class="utrecht-code">24px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Large</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--lg">
+                    <code class="utrecht-code">20px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Medium</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--md">
+                    <code class="utrecht-code">16px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Small</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--sm">
+                    <code class="utrecht-code">12px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Small</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--xs"><code class="utrecht-code">8px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Small 2</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--2xs">
+                    <code class="utrecht-code">4px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Small 3</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--3xs">
+                    <code class="utrecht-code">2px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Column: Extra Small 4</dt>
+                <dd>
+                  <div class="utrecht-space-column utrecht-space-column--4xs">
+                    <code class="utrecht-code">1px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Large 5</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--5xl"><code class="utrecht-code">64px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Large 4</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--4xl"><code class="utrecht-code">48px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Large 3</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--3xl"><code class="utrecht-code">32px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Large 2</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--2xl"><code class="utrecht-code">28px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Large</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--xl"><code class="utrecht-code">24px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Large</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--lg"><code class="utrecht-code">20px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Medium</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--md"><code class="utrecht-code">16px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Small</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--sm"><code class="utrecht-code">12px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Small</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--xs"><code class="utrecht-code">8px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Small 2</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--2xs"><code class="utrecht-code">4px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Small 3</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--3xs"><code class="utrecht-code">2px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Row: Extra Small 4</dt>
+                <dd>
+                  <div class="utrecht-space-row utrecht-space-row--4xs"><code class="utrecht-code">1px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Extra Large 3</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--3xl"><code class="utrecht-code">3ch</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Extra Large 2</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--2xl"><code class="utrecht-code">2ch</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Extra Large</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--xl"><code class="utrecht-code">1</code>.75ch</div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Large</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--lg"><code class="utrecht-code">1</code>.5ch</div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Medium</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--md"><code class="utrecht-code">1ch</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Small</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--sm"><code class="utrecht-code">0</code>.75ch</div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Extra Small</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--xs"><code class="utrecht-code">0</code>.5ch</div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Extra Small 2</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--2xs"><code class="utrecht-code">0</code>.25ch</div>
+                </dd>
+              </div>
+              <div>
+                <dt>Text: Extra Small 3</dt>
+                <dd>
+                  <div class="utrecht-space-text utrecht-space-text--3xs">
+                    <code class="utrecht-code">0</code>.125ch
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Large 4</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--4xl">
+                    <code class="utrecht-code">48px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Large 3</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--3xl">
+                    <code class="utrecht-code">32px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Large 2</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--2xl">
+                    <code class="utrecht-code">28px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Large</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--xl">
+                    <code class="utrecht-code">24px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Large</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--lg">
+                    <code class="utrecht-code">20px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Medium</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--md">
+                    <code class="utrecht-code">16px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Small</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--sm">
+                    <code class="utrecht-code">12px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Small</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--xs"><code class="utrecht-code">8px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Small 2</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--2xs">
+                    <code class="utrecht-code">4px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Small 3</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--3xs">
+                    <code class="utrecht-code">2px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Inline: Extra Small 4</dt>
+                <dd>
+                  <div class="utrecht-space-inline utrecht-space-inline--4xs">
+                    <code class="utrecht-code">1px</code>
+                  </div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Large 4</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--4xl"><code class="utrecht-code">64px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Large 3</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--3xl"><code class="utrecht-code">48px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Large 2</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--2xl"><code class="utrecht-code">32px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Large</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--xl"><code class="utrecht-code">24px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Large</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--lg"><code class="utrecht-code">20px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Medium</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--md"><code class="utrecht-code">16px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Small</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--sm"><code class="utrecht-code">12px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Small</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--xs"><code class="utrecht-code">8px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Small 2</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--2xs"><code class="utrecht-code">4px</code></div>
+                </dd>
+              </div>
+              <div>
+                <dt>Block: Extra Small 3</dt>
+                <dd>
+                  <div class="utrecht-space-block utrecht-space-block--3xs"><code class="utrecht-code">2px</code></div>
+                </dd>
+              </div>
+            </dl>
+
+            <section class="space-demo">
+              <utrecht-heading-1>Heading 1</utrecht-heading-1>
+              <utrecht-heading-2>Heading 1 + Heading 2</utrecht-heading-2>
+              <utrecht-heading-3>Heading 2 + Heading 3</utrecht-heading-3>
+              <utrecht-heading-4>Heading 3 + Heading 4</utrecht-heading-4>
+              <utrecht-heading-5>Heading 4 + Heading 5</utrecht-heading-5>
+              <utrecht-heading-6>Heading 5 + Heading 6</utrecht-heading-6>
             </section>
-            <section>
-              <utrecht-heading-2>Link button</utrecht-heading-2>
-              <utrecht-button-group>
-                <utrecht-link-button>Link button</utrecht-link-button>
-                <utrecht-link-button disabled>Disabled link button</utrecht-link-button>
-                <utrecht-link-button pressed>Pressed link button</utrecht-link-button>
-              </utrecht-button-group>
+
+            <section class="space-demo">
+              <utrecht-heading-1>Heading 1</utrecht-heading-1>
+              <utrecht-paragraph>Heading 1 + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
             </section>
-          </utrecht-article>
-          <utrecht-spotlight-section>
-            <utrecht-paragraph>Paragraph in a spotlight section</utrecht-paragraph>
-          </utrecht-spotlight-section>
-          <utrecht-spotlight-section appearance="info">
-            <utrecht-paragraph>Paragraph in a info spotlight section</utrecht-paragraph>
-          </utrecht-spotlight-section>
-          <utrecht-spotlight-section appearance="warning">
-            <utrecht-paragraph>Paragraph in a warning spotlight section</utrecht-paragraph>
-          </utrecht-spotlight-section>
-          <utrecht-paragraph>
-            <utrecht-iban-data value="GO 00 BACK 1234 6789 9012">GO 00 BACK 1234 6789 9012</utrecht-iban-data>
-          </utrecht-paragraph>
-          <utrecht-paragraph>
-            <utrecht-url-data>https://example.fi/</utrecht-url-data>
-          </utrecht-paragraph>
-          <utrecht-paragraph> Hello <utrecht-mark>world</utrecht-mark> </utrecht-paragraph>
-          <utrecht-badge-list>
-            <utrecht-badge-data>foo</utrecht-badge-data>
-            <utrecht-badge-data>bar</utrecht-badge-data>
-            <utrecht-badge-data>quux</utrecht-badge-data>
-          </utrecht-badge-list>
+
+            <section class="space-demo">
+              <utrecht-heading-1>Heading 1</utrecht-heading-1>
+              <utrecht-paragraph lead>
+                Heading 1 + Lead Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum>
+              </utrecht-paragraph>
+              <utrecht-paragraph
+                >Lead Paragraph + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+              <utrecht-paragraph>Paragraph + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+              <utrecht-heading-2>Paragraph + Heading 2</utrecht-heading-2>
+              <utrecht-paragraph>Heading 2 + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+              <utrecht-heading-3>Paragraph + Heading 3</utrecht-heading-3>
+              <utrecht-paragraph>Heading 3 + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+              <utrecht-heading-4>Paragraph + Heading 4</utrecht-heading-4>
+              <utrecht-paragraph>Heading 4 + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+              <utrecht-heading-5>Paragraph + Heading 5</utrecht-heading-5>
+              <utrecht-paragraph>Heading 5 + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+              <utrecht-heading-6>Paragraph + Heading 6</utrecht-heading-6>
+              <utrecht-paragraph>Heading 6 + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+            </section>
+
+            <section class="space-demo">
+              <utrecht-paragraph
+                >Paragraph that has separator following it. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+              <utrecht-separator></utrecht-separator>
+              <utrecht-paragraph>Separator + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum></utrecht-paragraph>
+            </section>
+
+            <section class="space-demo">
+              <utrecht-paragraph
+                >Paragraph that has Button group following it. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+              <utrecht-button-group>
+                <utrecht-button appearance="primary-action">Paragraph + Button group</utrecht-button>
+              </utrecht-button-group>
+              <utrecht-paragraph
+                >Button group + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+            </section>
+
+            <section class="space-demo">
+              <utrecht-paragraph
+                >Paragraph that has Button group following it. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+              <utrecht-button-group>
+                <utrecht-button appearance="primary-action">Paragraph + Button group</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+                <utrecht-button appearance="secondary-action">Button + Button</utrecht-button>
+              </utrecht-button-group>
+              <utrecht-paragraph
+                >Button group + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+            </section>
+
+            <section class="space-demo">
+              <utrecht-paragraph
+                >Paragraph that has Ordered list following it. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+              <ol class="utrecht-ordered-list utrecht-ordered-list--html-ol">
+                <li class="utrecht-ordered-list__item utrecht-ordered-list__item--html-li">
+                  Paragraph + Ordered list. <utrecht-lorem-ipsum></utrecht-lorem-ipsum>
+                </li>
+                <li class="utrecht-ordered-list__item utrecht-ordered-list__item--html-li">
+                  Ordered list item + Ordered list item. <utrecht-lorem-ipsum></utrecht-lorem-ipsum>
+                </li>
+                <li class="utrecht-ordered-list__item utrecht-ordered-list__item--html-li">
+                  Ordered list item + Ordered list item. <utrecht-lorem-ipsum></utrecht-lorem-ipsum>
+                </li>
+              </ol>
+              <utrecht-paragraph
+                >Ordered list + Paragraph. <utrecht-lorem-ipsum></utrecht-lorem-ipsum
+              ></utrecht-paragraph>
+            </section>
+          </div>
         </utrecht-page-content>
       </utrecht-page>
     </utrecht-document>
