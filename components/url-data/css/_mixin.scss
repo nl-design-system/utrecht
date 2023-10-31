@@ -5,8 +5,32 @@
  */
 
 @mixin utrecht-url-data {
+  /**
+   * `break-inside`: avoid spreading the URL over two columns.
+   * The user might not realise an URL is incomplete, and continues in the next column.
+   * Better to have the entire URL in one column.
+   *
+   * `hyphens`: since hyphens are often part of a URL, the user cannot know if the hypen
+   * is part of the URL and it should be used to visit the page, or if it should be ignored.
+   * Better to avoid inserting any hyphens automatically.
+   *
+   * `overflow-wrap`: "To prevent overflow, an otherwise unbreakable string of
+   * characters — like a long word or URL — may be broken at any point if there
+   * are no otherwise-acceptable break points in the line."
+   *
+   * Source: https://developer.mozilla.org/en-US/docs/Web/CSS/overflow-wrap#anywhere
+   *
+   * Without `overflow-wrap`, some long URLs will not fit on a printed page.
+   *
+   * `page-break-inside`: The user might not realise an URL is incomplete,
+   * and continues on the next printed page.
+   *
+   * TODO: Perhaps `hyphens: none` can be removed, because `overflow-wrap: anywhere`
+   * has that effect already.
+   */
   break-inside: avoid;
   font-variant-ligatures: none;
   hyphens: none;
+  overflow-wrap: anywhere;
   page-break-inside: avoid;
 }
