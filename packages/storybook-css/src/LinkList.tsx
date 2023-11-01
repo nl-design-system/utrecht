@@ -4,8 +4,8 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import { Link } from '@utrecht/component-library-react';
 import type { LinkProps } from '@utrecht/component-library-react';
+import { Link } from '@utrecht/component-library-react';
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '@utrecht/components/link-list/css/index.scss';
@@ -19,9 +19,7 @@ export const LinkList = ({ links }: LinkListProps) => (
     {links.map((link) => (
       <li className="utrecht-link-list__item">
         <Link {...link}>
-          <span className="utrecht-link-list__marker">
-            <UtrechtIconArrow />
-          </span>
+          <UtrechtIconArrow />
           {link.children}
         </Link>
       </li>
