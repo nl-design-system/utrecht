@@ -12,10 +12,31 @@ import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 import '@utrecht/components/select/css/index.scss';
 
+const SelectStory = ({
+  focus,
+  focusVisible,
+  options,
+  ...props
+}: SelectProps & { focus?: boolean; focusVisible?: boolean; options: { value?: string; label: ReactNode }[] }) => {
+  return (
+    <Select
+      className={clsx({
+        'utrecht-select--focus': focus,
+        'utrecht-select--focus-visible': focusVisible,
+      })}
+      {...props}
+    >
+      {options.map(({ value, label }) => (
+        <SelectOption value={value}>{label}</SelectOption>
+      ))}
+    </Select>
+  );
+};
+
 const meta = {
   title: 'CSS Component/Select',
   id: 'css-select',
-  component: Select,
+  component: SelectStory,
   argTypes: {
     busy: {
       description: 'Busy',
@@ -61,26 +82,6 @@ const meta = {
     multiple: false,
     required: false,
   },
-  render: ({
-    focus,
-    focusVisible,
-    options,
-    ...props
-  }: SelectProps & { focus?: boolean; focusVisible?: boolean; options: { value?: string; label: ReactNode }[] }) => {
-    return (
-      <Select
-        className={clsx({
-          'utrecht-select--focus': focus,
-          'utrecht-select--focus-visible': focusVisible,
-        })}
-        {...props}
-      >
-        {options.map(({ value, label }) => (
-          <SelectOption value={value}>{label}</SelectOption>
-        ))}
-      </Select>
-    );
-  },
   tags: ['autodocs'],
   parameters: {
     status: {
@@ -95,7 +96,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Select>;
+} satisfies Meta<typeof SelectStory>;
 
 export default meta;
 

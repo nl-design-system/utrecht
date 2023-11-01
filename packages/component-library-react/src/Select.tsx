@@ -20,7 +20,7 @@ export const Select = forwardRef(
         aria-busy={busy || undefined}
         aria-invalid={invalid || undefined}
         required={noscript ? required : false}
-        aria-required={noscript ? undefined : required}
+        aria-required={noscript ? undefined : required || undefined}
         className={clsx(
           'utrecht-select',
           'utrecht-select--html-select',

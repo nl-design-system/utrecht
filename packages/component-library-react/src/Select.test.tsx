@@ -206,9 +206,15 @@ describe('Select', () => {
 
       const select = container.querySelector(':only-child');
 
-      expect(select).toHaveAttribute('aria-required', 'false');
-
       expect(select).not.toHaveAttribute('required');
+    });
+
+    it('omits non-essential aria-required attribute when not required', () => {
+      const { container } = render(<Select required={false} />);
+
+      const select = container.querySelector(':only-child');
+
+      expect(select).not.toHaveAttribute('aria-required');
     });
   });
 
