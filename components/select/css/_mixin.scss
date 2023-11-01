@@ -9,14 +9,7 @@
  * https://github.com/hudochenkov/stylelint-order/pull/162 */
 /* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-select {
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
   background-color: var(--utrecht-select-background-color, var(--utrecht-form-control-background-color));
-  background-image: var(--utrecht-select-background-image);
-  background-position: 100%;
-  background-repeat: no-repeat;
-  background-size: 1.4em;
   border-block-end-width: var(
     --utrecht-select-border-block-end-width,
     var(--utrecht-select-border-width, var(--utrecht-form-control-border-width))
@@ -36,6 +29,16 @@
   padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-control-padding-block-start));
   padding-inline-end: var(--utrecht-select-padding-inline-end, var(--utrecht-form-control-padding-inline-end));
   padding-inline-start: var(--utrecht-select-padding-inline-start, var(--utrecht-form-control-padding-inline-start));
+}
+
+@mixin utrecht-select--not-multiple {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: var(--utrecht-select-background-image);
+  background-position: 100%;
+  background-repeat: no-repeat;
+  background-size: 1.4em;
 }
 
 @mixin utrecht-select--disabled {

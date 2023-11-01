@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Select, SelectOption } from '@utrecht/component-library-react';
 import type { SelectProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/select/README.md?raw';
+import multipleDocs from '@utrecht/components/select/_multiple.md?raw';
 import tokensDefinition from '@utrecht/components/select/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
@@ -32,6 +33,10 @@ const meta = {
       description: 'Invalid',
       control: 'boolean',
     },
+    multiple: {
+      description: 'Multiple',
+      control: 'boolean',
+    },
     options: {
       description: 'Options',
       type: {
@@ -53,6 +58,7 @@ const meta = {
       { value: '2', label: 'Option #2', selected: true },
       { value: '3', label: 'Option #3' },
     ],
+    multiple: false,
     required: false,
   },
   render: ({
@@ -131,6 +137,19 @@ export const Focus: Story = {
 export const FocusVisible: Story = {
   args: {
     className: 'utrecht-select--focus utrecht-select--focus-visible',
+  },
+};
+
+export const Multiple: Story = {
+  args: {
+    multiple: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: multipleDocs,
+      },
+    },
   },
 };
 
