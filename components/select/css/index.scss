@@ -38,3 +38,7 @@
 .utrecht-select--html-select {
   @include utrecht-select--html-select;
 }
+
+.utrecht-select--html-select:not([multiple]) {
+  @include utrecht-select--not-multiple;
+}

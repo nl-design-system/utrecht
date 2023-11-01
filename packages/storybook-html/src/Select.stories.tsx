@@ -2,6 +2,7 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/select/README.md?raw';
+import multipleDocs from '@utrecht/components/select/_multiple.md?raw';
 import tokensDefinition from '@utrecht/components/select/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { SelectHTMLAttributes } from 'react';
@@ -49,6 +50,10 @@ const meta = {
     hidden,
     invalid: {
       description: 'Invalid',
+      control: 'boolean',
+    },
+    multiple: {
+      description: 'Multiple',
       control: 'boolean',
     },
     options: {
@@ -152,6 +157,21 @@ export const Required: Story = {
     docs: {
       description: {
         story: 'Markup using the `required` or `aria-required="true"` attribute.',
+      },
+    },
+  },
+};
+
+export const Multiple: Story = {
+  args: {
+    ...Default.args,
+    multiple: true,
+  },
+  name: 'Multiple',
+  parameters: {
+    docs: {
+      description: {
+        story: multipleDocs,
       },
     },
   },
