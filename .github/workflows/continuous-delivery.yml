@@ -8,6 +8,7 @@ on:
 
 env:
   CI: true
+  MAIN_BRANCH: "main"
 
 jobs:
   install:
@@ -251,7 +252,7 @@ jobs:
         uses: chromaui/action@v1
         if: github.event.pull_request.draft == false
         with:
-          autoAcceptChanges: main
+          autoAcceptChanges: ${{ env.MAIN_BRANCH }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook-css/dist/
 
@@ -279,7 +280,7 @@ jobs:
       - name: Continuous Deployment to designsystem.utrecht.nl
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
-          branch: main
+          branch: $${ env.MAIN_BRANCH }}
           folder: packages/design-system-website/dist/
           repository-name: nl-design-system/designsystem.utrecht.nl
           token: ${{ secrets.DOCS_GH_TOKEN }}
@@ -356,7 +357,7 @@ jobs:
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
           GIT_COMMITTER_NAME: "NL Design System"
         run: |
-          git push --set-upstream origin HEAD
+          git push --set-upstream "origin/${MAIN_BRANCH}" HEAD
           pnpm run release
 
       - name: "Continuous Deployment: publish to npm"
