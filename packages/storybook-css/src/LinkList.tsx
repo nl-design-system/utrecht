@@ -6,6 +6,7 @@
 
 import { Link } from '@utrecht/component-library-react';
 import type { LinkProps } from '@utrecht/component-library-react';
+import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '@utrecht/components/link-list/css/index.scss';
 
@@ -17,7 +18,12 @@ export const LinkList = ({ links }: LinkListProps) => (
   <ul className="utrecht-link-list utrecht-link-list--html-ul">
     {links.map((link) => (
       <li className="utrecht-link-list__item">
-        <Link {...link} />
+        <Link {...link}>
+          <span className="utrecht-link-list__marker">
+            <UtrechtIconArrow />
+          </span>
+          {link.children}
+        </Link>
       </li>
     ))}
   </ul>

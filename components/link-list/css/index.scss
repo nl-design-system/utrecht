@@ -40,12 +40,7 @@
 }
 
 .utrecht-link-list__marker {
-  background-image: var(--utrecht-link-list-marker-background-image);
-  background-position-x: left;
-  background-position-y: bottom;
-  background-repeat: no-repeat;
-  display: inline-block;
-  inline-size: var(--utrecht-link-list-marker-inline-size);
+  --utrecht-icon-size: var(--utrecht-link-list-marker-size);
 }
 
 .utrecht-link-list__item {
@@ -58,11 +53,6 @@
 }
 
 .utrecht-link-list__item > a {
-  display: block;
-}
-.utrecht-link-list__item > a::before {
-  block-size: 1em;
-  content: "";
-  display: inline-block;
-  @extend .utrecht-link-list__marker;
+  column-gap: var(--utrecht-link-list-item-column-gap);
+  display: inline-flex;
 }
