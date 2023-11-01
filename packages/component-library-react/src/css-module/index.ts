@@ -101,6 +101,8 @@ export { Link } from './Link';
 export type { LinkButtonProps } from '../LinkButton';
 export { LinkButton } from './LinkButton';
 export type { LinkSocialProps } from '../LinkSocial';
+export { LinkList } from './LinkList';
+export type { LinkListProps } from '../LinkList';
 export { LinkSocial } from './LinkSocial';
 export type { ListSocialProps, ListSocialItemProps } from '../ListSocial';
 export { ListSocial, ListSocialItem } from './ListSocial';

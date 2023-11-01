@@ -39,10 +39,6 @@
   --utrecht-space-around: 1;
 }
 
-.utrecht-link-list__marker {
-  --utrecht-icon-size: var(--utrecht-link-list-marker-size);
-}
-
 .utrecht-link-list__item {
   display: block;
   font-weight: var(--utrecht-link-list-item-font-weight);
@@ -54,5 +50,12 @@
 
 .utrecht-link-list__item > a {
   column-gap: var(--utrecht-link-list-item-column-gap);
+  display: inline-flex;
+}
+
+.utrecht-link-list__item > .utrecht-link {
+  --utrecht-icon-size: var(--utrecht-link-list-icon-size);
+
+  align-items: baseline;
   display: inline-flex;
 }

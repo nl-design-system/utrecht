@@ -45,7 +45,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     links: [
-      { href: '#', children: 'Link 1' },
+      { href: '#', children: 'Link 1 with so much content wow look how long!' },
       { href: '#', children: 'Link 2' },
       { href: '#', children: 'Link 3' },
     ],
