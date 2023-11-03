@@ -130,7 +130,6 @@ jobs:
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
-          STENCIL_BASE_URL: "/utrecht/stencil/"
         run: |
           pnpm run --if-present build
 
