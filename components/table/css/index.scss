@@ -17,6 +17,11 @@
   @include utrecht-table__caption;
 }
 
+.utrecht-table--html-table > figcaption,
+.utrecht-table__figcaption {
+  @include utrecht-table__figcaption;
+}
+
 .utrecht-table--html-table > thead,
 .utrecht-table__header {
   @include utrecht-table__header;

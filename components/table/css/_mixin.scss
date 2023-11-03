@@ -40,6 +40,10 @@
   text-align: var(--utrecht-table-caption-text-align, center);
 }
 
+@mixin utrecht-table__figcaption {
+  @include utrecht-table__caption;
+}
+
 @mixin utrecht-table__header {
   --_utrecht-table-header-cell-vertical-align: bottom;
   --_utrecht-table-header-cell-z-index: 8;
