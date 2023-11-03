@@ -1,5 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/src/css-module';
+import {
+  Alert,
+  Button,
+  ButtonGroup,
+  Heading1,
+  Link,
+  Paragraph,
+} from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/alert/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -64,6 +71,33 @@ export const Error: Story = {
   args: {
     ...Default.args,
     type: 'error',
+  },
+};
+
+export const ActionsWarning: Story = {
+  args: {
+    type: 'warning',
+    children: (
+      <Paragraph>
+        De sessie is afgelopen, omdat je 15 minuten niets hebt gedaan. Je kan weer opnieuw beginnen.
+      </Paragraph>
+    ),
+    actions: (
+      <ButtonGroup>
+        <Button appearance="primary-action-button">Opnieuw beginnen</Button>
+      </ButtonGroup>
+    ),
+  },
+};
+export const LinkActionsWarning: Story = {
+  args: {
+    type: 'warning',
+    children: <Paragraph>Uw sessie is verlopen.</Paragraph>,
+    actions: (
+      <Paragraph>
+        Gebruik deze link om <Link href="#">opnieuw te beginnen</Link>.
+      </Paragraph>
+    ),
   },
 };
 
