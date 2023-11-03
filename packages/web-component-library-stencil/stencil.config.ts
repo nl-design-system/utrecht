@@ -63,7 +63,6 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, // disable service workers
-      baseUrl: process.env.STENCIL_BASE_URL,
     },
     reactOutputTarget({
       componentCorePackage: '@utrecht/web-component-library-stencil',
