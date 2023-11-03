@@ -3,7 +3,7 @@
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
-export interface AlertProps extends PropsWithChildren {
+export interface AlertProps {
   actions?: ReactNode;
   icon?: ReactNode;
   type?: string;

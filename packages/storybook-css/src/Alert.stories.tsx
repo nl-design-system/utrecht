@@ -38,6 +38,15 @@ const AlertStory = ({ children, icon, ...props }: AlertStoryProps) => {
   );
 };
 
+interface AlertStoryProps extends Omit<AlertProps, 'icon'> {
+  icon: string;
+}
+
+const AlertStory = ({ icon, ...restProps }: PropsWithChildren<AlertStoryProps>) => {
+  const IconElement = icon;
+  return <Alert {...restProps} icon={icon ? <IconElement></IconElement> : undefined}></Alert>;
+};
+
 const meta = {
   title: 'CSS Component/Alert',
   id: 'css-alert',
@@ -45,6 +54,11 @@ const meta = {
   argTypes: {
     children: {
       description: 'HTML content of the alert',
+    },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
     },
     type: {
       description: 'Type',
@@ -68,6 +82,7 @@ const meta = {
         laborum.
       </Paragraph>,
     ],
+    icon: '',
   },
   tags: ['autodocs'],
   parameters: {
@@ -108,11 +123,47 @@ export const Info: Story = {
   },
 };
 
+export const InfoIcon: Story = {
+  args: {
+    icon: 'utrecht-icon-alleen',
+    type: 'info',
+  },
+  name: 'Info with icon',
+  parameters: {
+    docs: {
+      description: {
+        story: 'De gemeente Utrecht gebruikt zelf nog geen icoon bij de alert, het icoon is een voorbeeld.',
+      },
+    },
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
 export const OK: Story = {
   args: {
     type: 'ok',
   },
   parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
+export const OKIcon: Story = {
+  args: {
+    icon: 'utrecht-icon-checkmark',
+    type: 'ok',
+  },
+  name: 'OK with icon',
+  parameters: {
+    docs: {
+      description: {
+        story: 'De gemeente Utrecht gebruikt zelf nog geen icoon bij de alert, het icoon is een voorbeeld.',
+      },
+    },
     status: {
       type: 'ALPHA',
     },
@@ -130,11 +181,47 @@ export const Warning: Story = {
   },
 };
 
+export const WarningIcon: Story = {
+  args: {
+    icon: 'utrecht-icon-melding',
+    type: 'warning',
+  },
+  name: 'Warning with icon',
+  parameters: {
+    docs: {
+      description: {
+        story: 'De gemeente Utrecht gebruikt zelf nog geen icoon bij de alert, het icoon is een voorbeeld.',
+      },
+    },
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
 export const Error: Story = {
   args: {
     type: 'error',
   },
   parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
+export const ErrorIcon: Story = {
+  args: {
+    icon: 'utrecht-icon-melding',
+    type: 'error',
+  },
+  name: 'Error with icon',
+  parameters: {
+    docs: {
+      description: {
+        story: 'De gemeente Utrecht gebruikt zelf nog geen icoon bij de alert, het icoon is een voorbeeld.',
+      },
+    },
     status: {
       type: 'ALPHA',
     },
