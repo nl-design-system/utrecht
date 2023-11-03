@@ -1875,6 +1875,10 @@ export const TableHeaderCellSticky: Story = {
 export const FigureCaption: Story = {
   args: {
     descriptionId: '10acbe03-e737-494f-8f17-39c14132b9c1',
+    withCaption: {
+      enabled: true,
+      text: 'Bron: Gemeente Utrecht',
+    },
     children: (
       <>
         <TableHeader>
@@ -1907,12 +1911,23 @@ export const FigureCaption: Story = {
       type: 'WORK IN PROGRESS',
     },
   },
-  render: (({ descriptionId, children }: PropsWithChildren<{ descriptionId: string }>) => (
-    <figure>
-      <Table aria-describedby={descriptionId}>{children}</Table>
-      <figcaption id={descriptionId}>Bron: Gemeente Utrecht</figcaption>
-    </figure>
-  )) as any,
+  render: (({
+    descriptionId,
+    withCaption,
+    children,
+  }: PropsWithChildren<{ descriptionId: string; withCaption?: { enabled: boolean; text: string } }>) =>
+    withCaption?.enabled ? (
+      <figure>
+        <Table aria-describedby={descriptionId}>{children}</Table>
+        {withCaption.text && (
+          <figcaption className="utrecht-table__figcaption" id={descriptionId}>
+            {withCaption.text}
+          </figcaption>
+        )}
+      </figure>
+    ) : (
+      <Table>{children}</Table>
+    )) as any,
 };
 
 export const TableBodyEmpty: Story = {
