@@ -279,7 +279,7 @@ jobs:
       - name: Continuous Deployment to designsystem.utrecht.nl
         uses: JamesIves/github-pages-deploy-action@v4.4.3
         with:
-          branch: $${ env.MAIN_BRANCH }}
+          branch: ${{ env.MAIN_BRANCH }}
           folder: packages/design-system-website/dist/
           repository-name: nl-design-system/designsystem.utrecht.nl
           token: ${{ secrets.DOCS_GH_TOKEN }}
