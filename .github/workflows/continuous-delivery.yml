@@ -330,6 +330,18 @@ jobs:
         run: |
           pnpm run --if-present build
 
+      - name: "Continuous Deployment: publish to GitHub repository"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
+          GIT_AUTHOR_NAME: "NL Design System"
+          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
+          GIT_COMMITTER_NAME: "NL Design System"
+          MAIN_BRANCH:
+        run: |
+          git push --set-upstream origin HEAD
+          pnpm run release
+
       - name: "Continuous Deployment: publish changeset to GitHub repository"
         uses: changesets/action@v1
         id: changeset
@@ -345,20 +357,6 @@ jobs:
           setupGitUser: false
           title: "docs(release): design system packages"
           publish: "pnpm run publish:changeset"
-
-      - name: "Continuous Deployment: publish to GitHub repository"
-        # For the time being, always publish pre-release versions.
-        # if: steps.changeset.outputs.hasChangesets == 'false'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-          GIT_AUTHOR_EMAIL: ${{ secrets.GIT_AUTHOR_EMAIL }}
-          GIT_AUTHOR_NAME: "NL Design System"
-          GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
-          GIT_COMMITTER_NAME: "NL Design System"
-          MAIN_BRANCH:
-        run: |
-          git push --set-upstream origin HEAD
-          pnpm run release
 
       - name: "Continuous Deployment: publish to npm"
         env:
