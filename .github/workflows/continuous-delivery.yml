@@ -355,8 +355,9 @@ jobs:
           GIT_AUTHOR_NAME: "NL Design System"
           GIT_COMMITTER_EMAIL: ${{ secrets.GIT_COMMITTER_EMAIL }}
           GIT_COMMITTER_NAME: "NL Design System"
+          MAIN_BRANCH:
         run: |
-          git push --set-upstream "origin/${MAIN_BRANCH}" HEAD
+          git push --set-upstream "origin/main" HEAD
           pnpm run release
 
       - name: "Continuous Deployment: publish to npm"
