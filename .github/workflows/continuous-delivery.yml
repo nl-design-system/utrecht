@@ -357,7 +357,7 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
           MAIN_BRANCH:
         run: |
-          git push --set-upstream "origin/main" HEAD
+          git push --set-upstream origin HEAD
           pnpm run release
 
       - name: "Continuous Deployment: publish to npm"
