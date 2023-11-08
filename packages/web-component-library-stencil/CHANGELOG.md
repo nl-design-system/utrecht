@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 1.0.1
+
+### Patch Changes
+
+- 0e434e0a19: fix rendering glitch in Firefox when hovering over a button
+
 ## 1.0.0
 
 ### Patch Changes
