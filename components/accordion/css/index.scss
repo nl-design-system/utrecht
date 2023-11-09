@@ -16,24 +16,42 @@
 
 .utrecht-accordion__button {
   @include utrecht-accordion__button;
+}
 
-  &[aria-expanded]::after {
-    @include utrecht-accordion__button-icon;
-  }
+.utrecht-accordion__icon-box {
+  @include utrecht-accordion__icon-box;
+}
 
-  &[aria-expanded="false"]::after {
-    @include utrecht-accordion__button-icon-arrow-down;
-  }
+.utrecht-accordion__icon {
+  @include utrecht-accordion__icon;
+}
 
-  &[aria-expanded="true"]::after {
-    @include utrecht-accordion__button-icon-arrow-up;
-  }
+.utrecht-accordion__icon--expanded {
+  @include utrecht-accordion__icon--expanded;
+}
+
+.utrecht-accordion__panel--expanded {
+  @include utrecht-accordion__panel--expanded;
 }
 
 .utrecht-accordion__panel {
   @include utrecht-accordion__panel;
 }
 
+.utrecht-accordion__panel-content {
+  @include utrecht-accordion__panel-content;
+}
+
 .utrecht-accordion__header {
   @include utrecht-accordion__header;
+}
+
+@media (prefers-reduced-motion) {
+  .utrecht-accordion__panel {
+    @include utrecht-accordion--reduced-motion;
+  }
+
+  .utrecht-accordion__icon {
+    @include utrecht-accordion--reduced-motion;
+  }
 }

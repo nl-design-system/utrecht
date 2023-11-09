@@ -4,8 +4,8 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-accordion {
+  --_utrecht-accordion-panel-max-block-size: 0;
 }
 
 @mixin utrecht-accordion__section {
@@ -40,33 +40,28 @@
   position: relative;
 }
 
-@mixin utrecht-accordion__button-icon {
-  background-color: var(--utrecht-accordion-button-icon-background-color);
-  background-position: center;
-  background-repeat: no-repeat;
-  block-size: var(--utrecht-accordion-button-icon-size);
-  content: "";
-  inline-size: var(--utrecht-accordion-button-icon-size);
+@mixin utrecht-accordion__icon {
+  display: inline-block;
+  font-size: var(--utrecht-accordion-icon-size);
+  transition-duration: var(--utrecht-accordion-icon-transition-duration);
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin utrecht-accordion__icon--expanded {
+  transform: rotate(180deg);
+}
+
+@mixin utrecht-accordion__icon-box {
+  align-items: center;
+  background-color: var(--utrecht-accordion-icon-box-background-color);
+  block-size: var(--utrecht-accordion-icon-box-size);
+  display: flex;
+  inline-size: var(--utrecht-accordion-icon-box-size);
   inset-block-start: 0;
   inset-inline-end: 0;
+  justify-content: center;
   position: absolute;
-}
-
-@mixin utrecht-accordion__button-icon-arrow-down {
-  background-image: var(
-    --utrecht-accordion-icon-arrow-down,
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.39' height='14.39'%3E%3Cpath fill='none' stroke='%231D1D1D' stroke-width='3' stroke-miterlimit='10' d='M15.866 4.135l-5.32 5.322-5.322-5.322'/%3E%3C/svg%3E")
-  );
-}
-
-@mixin utrecht-accordion__button-icon-arrow-up {
-  background-image: var(
-    --utrecht-accordion-icon-arrow-up,
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.39' height='14.39'%3E%3Cpath fill='none' stroke='%231D1D1D' stroke-width='3' stroke-miterlimit='10' d='M5.223 9.457l5.32-5.322 5.322 5.322'/%3E%3C/svg%3E")
-  );
-  background-position: center;
-  background-repeat: no-repeat;
-  content: "";
 }
 
 @mixin utrecht-accordion__button--rtl {
@@ -74,16 +69,33 @@
 }
 
 @mixin utrecht-accordion__panel {
+  max-block-size: var(--_utrecht-accordion-panel-max-block-size);
+  overflow: hidden;
+  transition-duration: var(--utrecht-accordion-panel-transition-duration);
+  transition-property: max-block-size;
+  transition-timing-function: ease-in-out;
+}
+
+@mixin utrecht-accordion__panel-content {
   border-block-start: none;
-  border-color: var(--utrecht-accordion-panel-border-color);
+  border-color: var(--utrecht-accordion-panel-content-border-color);
   border-style: solid;
-  border-width: var(--utrecht-accordion-panel-border-width);
-  padding-block-end: var(--utrecht-accordion-panel-padding-block-end);
-  padding-block-start: var(--utrecht-accordion-panel-padding-block-start);
-  padding-inline-end: var(--utrecht-accordion-panel-padding-inline-end);
-  padding-inline-start: var(--utrecht-accordion-panel-padding-inline-start);
+  border-width: var(--utrecht-accordion-panel-content-border-width);
+  padding-block-end: var(--utrecht-accordion-panel-content-padding-block-end);
+  padding-block-start: var(--utrecht-accordion-panel-content-padding-block-start);
+  padding-inline-end: var(--utrecht-accordion-panel-content-padding-inline-end);
+  padding-inline-start: var(--utrecht-accordion-panel-content-padding-inline-start);
 }
 
 @mixin utrecht-accordion__header {
   --utrecht-space-around: 0;
+}
+
+@mixin utrecht-accordion__panel--expanded {
+  --_utrecht-accordion-panel-max-block-size: 100vh;
+}
+
+@mixin utrecht-accordion--reduced-motion {
+  --utrecht-accordion-icon-transition-duration: 0;
+  --utrecht-accordion-panel-transition-duration: 0;
 }
