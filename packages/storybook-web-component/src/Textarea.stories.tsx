@@ -10,32 +10,38 @@ import { designTokenStory } from './design-token-story';
 
 interface TextareaStoryProps {
   autocomplete?: string;
+  cols?: number;
   spellcheck?: boolean;
   disabled?: boolean;
   invalid?: boolean;
   placeholder?: string;
   readOnly?: boolean;
   required?: boolean;
+  rows?: number;
   value?: boolean;
 }
 
 const TextareaStory = ({
   autocomplete,
+  cols,
   disabled,
   invalid,
   placeholder,
   readOnly,
   required,
+  rows,
   spellcheck,
   value,
 }: TextareaStoryProps) => (
   <UtrechtTextarea
     autocomplete={autocomplete || null}
+    cols={cols || null}
     disabled={disabled || null}
     invalid={invalid || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
     required={required || null}
+    rows={rows || null}
     spellcheck={spellcheck}
     value={value}
   ></UtrechtTextarea>
@@ -50,6 +56,10 @@ const meta = {
       description: 'Autocomplete',
       control: 'select',
       options: ['', 'off', 'on', 'street-address'],
+    },
+    cols: {
+      description: 'Cols',
+      control: 'number',
     },
     disabled: {
       description: 'Disabled',
@@ -71,6 +81,10 @@ const meta = {
       description: 'Required',
       control: 'boolean',
     },
+    rows: {
+      description: 'Rows',
+      control: 'number',
+    },
     spellcheck: {
       description: 'Spellcheck',
       control: 'select',
@@ -86,11 +100,13 @@ const meta = {
     },
   },
   args: {
+    cols: 20,
     disabled: false,
     invalid: false,
     placeholder: '',
     readOnly: false,
     required: false,
+    rows: 2,
     value: '',
   },
   tags: ['autodocs'],
