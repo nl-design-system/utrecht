@@ -14,9 +14,11 @@ import clsx from 'clsx';
 })
 export class ButtonLink {
   @Prop() appearance: string;
+  @Prop() download?: string;
   @Prop() external: boolean;
   @Prop() href: string;
   @Prop() placeholder: boolean;
+  @Prop() target?: string;
   render() {
     return (
       <a
@@ -31,8 +33,10 @@ export class ButtonLink {
           this.appearance === 'subtle-button' && 'utrecht-button-link--subtle',
         )}
         aria-disabled={this.placeholder ? 'true' : undefined}
+        download={typeof this.download === 'string' ? this.download : undefined}
         rel={this.external ? 'external noopener noreferrer' : undefined}
         role={this.placeholder ? 'link' : undefined}
+        target={typeof this.target === 'string' ? this.target : undefined}
       >
         <slot></slot>
       </a>

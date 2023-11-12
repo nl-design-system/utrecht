@@ -12,23 +12,29 @@ import { designTokenStory } from './design-token-story';
 interface ButtonLinkStoryProps {
   appearance?: string;
   disabled?: boolean;
+  download?: string;
   external?: boolean;
   href: string;
   placeholder?: boolean;
+  target?: string;
 }
 
 const ButtonLinkStory = ({
   appearance,
   children,
+  download,
   href,
   external,
   placeholder,
+  target,
 }: PropsWithChildren<ButtonLinkStoryProps>) => (
   <UtrechtButtonLink
     appearance={appearance}
+    download={download || undefined}
     external={external || undefined}
     href={href}
     placeholder={placeholder || undefined}
+    target={target || undefined}
   >
     {children}
   </UtrechtButtonLink>
@@ -52,6 +58,13 @@ const meta = {
       description: 'Disabled',
       control: 'boolean',
     },
+    download: {
+      description: 'Filename for download target',
+      type: {
+        name: 'string',
+        required: false,
+      },
+    },
     external: {
       description: 'External',
       control: 'boolean',
@@ -63,6 +76,13 @@ const meta = {
     placeholder: {
       description: 'Placeholder',
       control: 'boolean',
+    },
+    target: {
+      description: 'Target window',
+      type: {
+        name: 'string',
+        required: false,
+      },
     },
   },
   args: {
@@ -138,6 +158,14 @@ export const Placeholder: Story = {
     placeholder: true,
     href: 'https://example.com/premium/',
     children: 'Premium feature (locked)',
+  },
+};
+
+export const Download: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    download: 'example.html',
+    href: './',
   },
 };
 
