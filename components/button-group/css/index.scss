@@ -13,12 +13,12 @@
   @include utrecht-button-group--distanced;
 }
 
-.utrecht-button-group__link-button--horizontal,
-.utrecht-button-group--horizontal .utrecht-link-button,
-.utrecht-button-group:not(.utrecht-button-group--vertical) .utrecht-link-button {
-  @include utrecht-button-group__link-button--horizontal;
+.utrecht-button-group__link-button--row,
+.utrecht-button-group--row .utrecht-link-button,
+.utrecht-button-group:not(.utrecht-button-group--column) .utrecht-link-button {
+  @include utrecht-button-group__link-button--row;
 }
 
-.utrecht-button-group--vertical {
-  @include utrecht-button-group--vertical;
+.utrecht-button-group--column {
+  @include utrecht-button-group--column;
 }

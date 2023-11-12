@@ -49,6 +49,7 @@ export namespace Components {
         "value": string;
     }
     interface UtrechtButtonGroup {
+        "direction": string | 'column' | 'row';
     }
     interface UtrechtButtonLink {
         "appearance": string;
@@ -2843,6 +2844,7 @@ declare namespace LocalJSX {
         "value"?: string;
     }
     interface UtrechtButtonGroup {
+        "direction"?: string | 'column' | 'row';
     }
     interface UtrechtButtonLink {
         "appearance"?: string;
