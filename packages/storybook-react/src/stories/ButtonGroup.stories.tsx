@@ -10,15 +10,18 @@ const meta = {
   title: 'React Component/Button group',
   id: 'react-button-group',
   component: ButtonGroup,
-  args: {
-    children: (
-      <>
-        <Button appearance="primary-action-button">Save and continue</Button>
-        <Button appearance="secondary-action-button">Back</Button>
-      </>
-    ),
+  args: {},
+  argTypes: {
+    direction: {
+      description: 'Layout of the button group',
+      control: 'select',
+      options: {
+        '': undefined,
+        column: 'column',
+        row: 'row',
+      },
+    },
   },
-  argTypes: {},
   parameters: {
     tokensPrefix: 'utrecht-button-group',
     tokens,
@@ -29,11 +32,26 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof ButtonGroup>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
-export const Default: Story = {};
+
+export const Default: Story = {
+  args: {
+    children: [
+      <Button appearance="primary-action-button">Save and continue</Button>,
+      <Button appearance="secondary-action-button">Back</Button>,
+    ],
+  },
+};
+
+export const DirectionColumn: Story = {
+  args: {
+    ...Default.args,
+    direction: 'column',
+  },
+};
 
 export const DesignTokens = designTokenStory(meta);

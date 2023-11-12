@@ -4,6 +4,7 @@
  */
 
 @mixin utrecht-button-group {
+  align-items: baseline;
   background-color: var(--utrecht-button-group-background-color);
   display: flex;
   flex-wrap: wrap;
@@ -19,12 +20,12 @@
   --utrecht-space-around: 1;
 }
 
-@mixin utrecht-button-group__link-button--horizontal {
+@mixin utrecht-button-group__link-button--row {
   --utrecht-button-padding-inline-end: 0;
   --utrecht-button-padding-inline-start: 0;
 }
 
-@mixin utrecht-button-group--vertical {
+@mixin utrecht-button-group--column {
   flex-direction: column;
   gap: var(--utrecht-button-group-block-gap, 1em);
 }

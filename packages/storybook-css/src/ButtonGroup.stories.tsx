@@ -3,17 +3,8 @@ import { Button, ButtonGroup } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/button-group/README.md?raw';
 import tokensDefinition from '@utrecht/components/button-group/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import clsx from 'clsx';
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 import { designTokenStory } from './design-token-story';
-
-interface ButtonGroupStoryProps {
-  vertical?: boolean;
-}
-
-const ButtonGroupStory = ({ vertical, ...props }: PropsWithChildren<ButtonGroupStoryProps>) => (
-  <ButtonGroup {...props} className={clsx(vertical && 'utrecht-button-group--vertical')} />
-);
 
 const meta = {
   title: 'CSS Component/Button Group',
@@ -26,15 +17,16 @@ const meta = {
     ],
   },
   argTypes: {
-    vertical: {
-      description: 'Set the vertical modifier',
-      control: 'boolean',
-      table: {
-        category: 'Demo',
+    direction: {
+      description: 'Layout of the button group',
+      control: 'select',
+      options: {
+        '': undefined,
+        column: 'column',
+        row: 'row',
       },
     },
   },
-  render: ButtonGroupStory,
   parameters: {
     tokensPrefix: 'utrecht-button-group',
     status: {
@@ -48,7 +40,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof ButtonGroupStory>;
+} satisfies Meta<typeof ButtonGroup>;
 
 export default meta;
 
@@ -66,16 +58,16 @@ Er moet lege ruimte zijn tussen de buttons, zodat de buttons duidelijk van elkaa
   },
 };
 
-export const DirectionVertical: Story = {
+export const DirectionColumn: Story = {
   args: {
     ...Default.args,
-    vertical: true,
+    direction: 'column',
   },
   parameters: {
     docs: {
       description: {
         story: `
-Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--vertical\` modifier class names.
+Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--column\` modifier class names.
 Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
       },
     },
