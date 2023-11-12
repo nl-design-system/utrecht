@@ -609,9 +609,19 @@ export namespace Components {
     }
     interface UtrechtLinkButton {
         "disabled": boolean;
+        "form": string;
+        "formAction": string;
+        "formEnctype": string;
+        "formMethod": string;
+        "formNoValidate": boolean;
+        "formTarget": string;
         "inline": boolean;
+        "name": string;
+        "popoverTarget": string;
+        "popoverTargetAction": string;
         "pressed": boolean;
         "type": string;
+        "value": string;
     }
     interface UtrechtLogo {
     }
@@ -3422,9 +3432,19 @@ declare namespace LocalJSX {
     }
     interface UtrechtLinkButton {
         "disabled"?: boolean;
+        "form"?: string;
+        "formAction"?: string;
+        "formEnctype"?: string;
+        "formMethod"?: string;
+        "formNoValidate"?: boolean;
+        "formTarget"?: string;
         "inline"?: boolean;
+        "name"?: string;
+        "popoverTarget"?: string;
+        "popoverTargetAction"?: string;
         "pressed"?: boolean;
         "type"?: string;
+        "value"?: string;
     }
     interface UtrechtLogo {
     }
