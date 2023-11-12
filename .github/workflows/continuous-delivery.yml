@@ -353,7 +353,7 @@ jobs:
           GIT_COMMITTER_NAME: "NL Design System"
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
         with:
-          commit: "docs(release): design system packages"
+          commit: "docs(release): design system packages [skip ci]"
           setupGitUser: false
           title: "docs(release): design system packages"
           publish: "pnpm run publish:changeset"
