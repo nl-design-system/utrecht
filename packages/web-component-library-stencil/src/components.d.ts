@@ -621,6 +621,10 @@ export namespace Components {
     interface UtrechtNumberData {
         "value": number | string;
     }
+    interface UtrechtOrderedList {
+    }
+    interface UtrechtOrderedListItem {
+    }
     /**
      * @license EUPL-1.2
      * Copyright (c) 2021 Gemeente Utrecht
@@ -724,6 +728,10 @@ export namespace Components {
         "required": boolean;
         "type": string;
         "value": string;
+    }
+    interface UtrechtUnorderedList {
+    }
+    interface UtrechtUnorderedListItem {
     }
     interface UtrechtUrlData {
     }
@@ -2327,6 +2335,18 @@ declare global {
         prototype: HTMLUtrechtNumberDataElement;
         new (): HTMLUtrechtNumberDataElement;
     };
+    interface HTMLUtrechtOrderedListElement extends Components.UtrechtOrderedList, HTMLStencilElement {
+    }
+    var HTMLUtrechtOrderedListElement: {
+        prototype: HTMLUtrechtOrderedListElement;
+        new (): HTMLUtrechtOrderedListElement;
+    };
+    interface HTMLUtrechtOrderedListItemElement extends Components.UtrechtOrderedListItem, HTMLStencilElement {
+    }
+    var HTMLUtrechtOrderedListItemElement: {
+        prototype: HTMLUtrechtOrderedListItemElement;
+        new (): HTMLUtrechtOrderedListItemElement;
+    };
     /**
      * @license EUPL-1.2
      * Copyright (c) 2021 Gemeente Utrecht
@@ -2492,6 +2512,18 @@ declare global {
     var HTMLUtrechtTextboxElement: {
         prototype: HTMLUtrechtTextboxElement;
         new (): HTMLUtrechtTextboxElement;
+    };
+    interface HTMLUtrechtUnorderedListElement extends Components.UtrechtUnorderedList, HTMLStencilElement {
+    }
+    var HTMLUtrechtUnorderedListElement: {
+        prototype: HTMLUtrechtUnorderedListElement;
+        new (): HTMLUtrechtUnorderedListElement;
+    };
+    interface HTMLUtrechtUnorderedListItemElement extends Components.UtrechtUnorderedListItem, HTMLStencilElement {
+    }
+    var HTMLUtrechtUnorderedListItemElement: {
+        prototype: HTMLUtrechtUnorderedListItemElement;
+        new (): HTMLUtrechtUnorderedListItemElement;
     };
     interface HTMLUtrechtUrlDataElement extends Components.UtrechtUrlData, HTMLStencilElement {
     }
@@ -2761,6 +2793,8 @@ declare global {
         "utrecht-mark": HTMLUtrechtMarkElement;
         "utrecht-multiline-data": HTMLUtrechtMultilineDataElement;
         "utrecht-number-data": HTMLUtrechtNumberDataElement;
+        "utrecht-ordered-list": HTMLUtrechtOrderedListElement;
+        "utrecht-ordered-list-item": HTMLUtrechtOrderedListItemElement;
         "utrecht-page": HTMLUtrechtPageElement;
         "utrecht-page-content": HTMLUtrechtPageContentElement;
         "utrecht-page-footer": HTMLUtrechtPageFooterElement;
@@ -2786,6 +2820,8 @@ declare global {
         "utrecht-table-row": HTMLUtrechtTableRowElement;
         "utrecht-textarea": HTMLUtrechtTextareaElement;
         "utrecht-textbox": HTMLUtrechtTextboxElement;
+        "utrecht-unordered-list": HTMLUtrechtUnorderedListElement;
+        "utrecht-unordered-list-item": HTMLUtrechtUnorderedListItemElement;
         "utrecht-url-data": HTMLUtrechtUrlDataElement;
     }
 }
@@ -3425,6 +3461,10 @@ declare namespace LocalJSX {
     interface UtrechtNumberData {
         "value"?: number | string;
     }
+    interface UtrechtOrderedList {
+    }
+    interface UtrechtOrderedListItem {
+    }
     /**
      * @license EUPL-1.2
      * Copyright (c) 2021 Gemeente Utrecht
@@ -3536,6 +3576,10 @@ declare namespace LocalJSX {
         "required"?: boolean;
         "type"?: string;
         "value"?: string;
+    }
+    interface UtrechtUnorderedList {
+    }
+    interface UtrechtUnorderedListItem {
     }
     interface UtrechtUrlData {
     }
@@ -3801,6 +3845,8 @@ declare namespace LocalJSX {
         "utrecht-mark": UtrechtMark;
         "utrecht-multiline-data": UtrechtMultilineData;
         "utrecht-number-data": UtrechtNumberData;
+        "utrecht-ordered-list": UtrechtOrderedList;
+        "utrecht-ordered-list-item": UtrechtOrderedListItem;
         "utrecht-page": UtrechtPage;
         "utrecht-page-content": UtrechtPageContent;
         "utrecht-page-footer": UtrechtPageFooter;
@@ -3826,6 +3872,8 @@ declare namespace LocalJSX {
         "utrecht-table-row": UtrechtTableRow;
         "utrecht-textarea": UtrechtTextarea;
         "utrecht-textbox": UtrechtTextbox;
+        "utrecht-unordered-list": UtrechtUnorderedList;
+        "utrecht-unordered-list-item": UtrechtUnorderedListItem;
         "utrecht-url-data": UtrechtUrlData;
     }
 }
@@ -4094,6 +4142,8 @@ declare module "@stencil/core" {
             "utrecht-mark": LocalJSX.UtrechtMark & JSXBase.HTMLAttributes<HTMLUtrechtMarkElement>;
             "utrecht-multiline-data": LocalJSX.UtrechtMultilineData & JSXBase.HTMLAttributes<HTMLUtrechtMultilineDataElement>;
             "utrecht-number-data": LocalJSX.UtrechtNumberData & JSXBase.HTMLAttributes<HTMLUtrechtNumberDataElement>;
+            "utrecht-ordered-list": LocalJSX.UtrechtOrderedList & JSXBase.HTMLAttributes<HTMLUtrechtOrderedListElement>;
+            "utrecht-ordered-list-item": LocalJSX.UtrechtOrderedListItem & JSXBase.HTMLAttributes<HTMLUtrechtOrderedListItemElement>;
             /**
              * @license EUPL-1.2
              * Copyright (c) 2021 Gemeente Utrecht
@@ -4135,6 +4185,8 @@ declare module "@stencil/core" {
             "utrecht-table-row": LocalJSX.UtrechtTableRow & JSXBase.HTMLAttributes<HTMLUtrechtTableRowElement>;
             "utrecht-textarea": LocalJSX.UtrechtTextarea & JSXBase.HTMLAttributes<HTMLUtrechtTextareaElement>;
             "utrecht-textbox": LocalJSX.UtrechtTextbox & JSXBase.HTMLAttributes<HTMLUtrechtTextboxElement>;
+            "utrecht-unordered-list": LocalJSX.UtrechtUnorderedList & JSXBase.HTMLAttributes<HTMLUtrechtUnorderedListElement>;
+            "utrecht-unordered-list-item": LocalJSX.UtrechtUnorderedListItem & JSXBase.HTMLAttributes<HTMLUtrechtUnorderedListItemElement>;
             "utrecht-url-data": LocalJSX.UtrechtUrlData & JSXBase.HTMLAttributes<HTMLUtrechtUrlDataElement>;
         }
     }
