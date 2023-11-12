@@ -136,6 +136,7 @@ export namespace Components {
     interface UtrechtFormFieldErrorMessage {
     }
     interface UtrechtFormFieldTextarea {
+        "cols": number;
         "disabled": boolean;
         "invalid": boolean;
         "label": string;
@@ -143,6 +144,7 @@ export namespace Components {
         "placeholder": string;
         "readOnly": boolean;
         "required": boolean;
+        "rows": number;
         "value": string;
     }
     interface UtrechtFormFieldTextbox {
@@ -704,11 +706,13 @@ export namespace Components {
     }
     interface UtrechtTextarea {
         "autocomplete": string;
+        "cols": number;
         "disabled": boolean;
         "invalid": boolean;
         "placeholder": string;
         "readOnly": boolean;
         "required": boolean;
+        "rows": number;
         "spellcheck": boolean;
         "value": string;
     }
@@ -2928,6 +2932,7 @@ declare namespace LocalJSX {
     interface UtrechtFormFieldErrorMessage {
     }
     interface UtrechtFormFieldTextarea {
+        "cols"?: number;
         "disabled"?: boolean;
         "invalid"?: boolean;
         "label"?: string;
@@ -2939,6 +2944,7 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "readOnly"?: boolean;
         "required"?: boolean;
+        "rows"?: number;
         "value"?: string;
     }
     interface UtrechtFormFieldTextbox {
@@ -3508,6 +3514,7 @@ declare namespace LocalJSX {
     }
     interface UtrechtTextarea {
         "autocomplete"?: string;
+        "cols"?: number;
         "disabled"?: boolean;
         "invalid"?: boolean;
         "onUtrechtBlur"?: (event: UtrechtTextareaCustomEvent<any>) => void;
@@ -3517,6 +3524,7 @@ declare namespace LocalJSX {
         "placeholder"?: string;
         "readOnly"?: boolean;
         "required"?: boolean;
+        "rows"?: number;
         "spellcheck"?: boolean;
         "value"?: string;
     }

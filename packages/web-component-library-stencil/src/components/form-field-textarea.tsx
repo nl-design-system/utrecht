@@ -6,6 +6,9 @@
 import { Component, Element, Event, EventEmitter, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
+const HTML_DEFAULT_COLS = 20;
+const HTML_DEFAULT_ROWS = 2;
+
 @Component({
   tag: 'utrecht-form-field-textarea',
   styleUrl: 'form-field-textarea.scss',
@@ -13,6 +16,7 @@ import clsx from 'clsx';
 })
 export class FormFieldTextarea {
   @Element() hostElement!: HTMLElement;
+  @Prop() cols: number = HTML_DEFAULT_COLS;
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
   @Prop() label: string = '';
@@ -20,6 +24,7 @@ export class FormFieldTextarea {
   @Prop({ attribute: 'readonly', reflect: true }) readOnly: boolean = false;
   @Prop() placeholder: string = '';
   @Prop({ reflect: true }) required: boolean = false;
+  @Prop() rows: number = HTML_DEFAULT_ROWS;
   @Prop() value: string = '';
   @Event() utrechtBlur: EventEmitter;
   @Event() utrechtChange: EventEmitter;
@@ -27,7 +32,7 @@ export class FormFieldTextarea {
   @Event() utrechtInput: EventEmitter;
 
   render() {
-    const { disabled, hostElement, invalid, label, name, placeholder, readOnly, required, value } = this;
+    const { cols, disabled, hostElement, invalid, label, name, placeholder, readOnly, required, rows, value } = this;
 
     let input = hostElement.querySelector('input[type="hidden"]') as HTMLInputElement | null;
 
@@ -77,10 +82,12 @@ export class FormFieldTextarea {
               readOnly && 'utrecht-textarea--readonly',
             )}
             aria-invalid={invalid}
+            cols={cols !== HTML_DEFAULT_COLS ? cols : null}
             disabled={disabled}
             placeholder={placeholder || null}
             readonly={readOnly}
             required={required}
+            rows={rows !== HTML_DEFAULT_ROWS ? rows : null}
             onBlur={(evt) => this.utrechtBlur.emit(evt)}
             onChange={(evt) => this.utrechtChange.emit(evt)}
             onFocus={(evt) => this.utrechtFocus.emit(evt)}
