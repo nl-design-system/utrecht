@@ -20,11 +20,25 @@ const meta = {
         required: true,
       },
     },
+    download: {
+      description: 'Filename for download target',
+      type: {
+        name: 'string',
+        required: false,
+      },
+    },
     href: {
       description: 'Target URL',
       type: {
         name: 'string',
         required: true,
+      },
+    },
+    target: {
+      description: 'Target window',
+      type: {
+        name: 'string',
+        required: false,
       },
     },
   },
@@ -54,6 +68,14 @@ export const Default: Story = {
   args: {
     children: 'Voorbeeldlink',
     href: 'https://example.com/',
+  },
+};
+
+export const Download: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    download: 'example.html',
+    href: './',
   },
 };
 

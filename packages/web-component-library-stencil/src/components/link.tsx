@@ -12,10 +12,17 @@ import { Component, h, Prop } from '@stencil/core';
   shadow: true,
 })
 export class Link {
+  @Prop() download?: string;
   @Prop() href: string;
+  @Prop() target?: string;
   render() {
     return (
-      <a href={typeof this.href === 'string' ? this.href : undefined} class="utrecht-link utrecht-link--html-a">
+      <a
+        download={typeof this.download === 'string' ? this.download : undefined}
+        href={typeof this.href === 'string' ? this.href : undefined}
+        target={typeof this.target === 'string' ? this.target : undefined}
+        class="utrecht-link utrecht-link--html-a"
+      >
         <slot></slot>
       </a>
     );

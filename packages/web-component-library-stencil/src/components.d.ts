@@ -52,9 +52,11 @@ export namespace Components {
     }
     interface UtrechtButtonLink {
         "appearance": string;
+        "download"?: string;
         "external": boolean;
         "href": string;
         "placeholder": boolean;
+        "target"?: string;
     }
     interface UtrechtCheckbox {
         "checked": boolean;
@@ -598,7 +600,9 @@ export namespace Components {
     interface UtrechtIconZwemmen {
     }
     interface UtrechtLink {
+        "download"?: string;
         "href": string;
+        "target"?: string;
     }
     interface UtrechtLinkButton {
         "disabled": boolean;
@@ -2838,9 +2842,11 @@ declare namespace LocalJSX {
     }
     interface UtrechtButtonLink {
         "appearance"?: string;
+        "download"?: string;
         "external"?: boolean;
         "href"?: string;
         "placeholder"?: boolean;
+        "target"?: string;
     }
     interface UtrechtCheckbox {
         "checked"?: boolean;
@@ -3402,7 +3408,9 @@ declare namespace LocalJSX {
     interface UtrechtIconZwemmen {
     }
     interface UtrechtLink {
+        "download"?: string;
         "href"?: string;
+        "target"?: string;
     }
     interface UtrechtLinkButton {
         "disabled"?: boolean;
