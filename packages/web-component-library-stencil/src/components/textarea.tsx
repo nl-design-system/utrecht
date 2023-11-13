@@ -55,6 +55,7 @@ export class Textarea {
         )}
         cols={cols !== HTML_DEFAULT_COLS ? cols : null}
         disabled={disabled}
+        dir="auto"
         placeholder={placeholder || null}
         readonly={readOnly}
         required={required}

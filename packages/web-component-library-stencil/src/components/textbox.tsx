@@ -43,6 +43,7 @@ export class Textbox {
         type={type || 'text'}
         autoComplete={autoComplete ? autoComplete : null}
         disabled={disabled}
+        dir="auto"
         min={typeof min === 'number' ? String(min) : typeof min === 'string' ? min : null}
         max={typeof max === 'number' ? String(max) : typeof max === 'string' ? max : null}
         pattern={pattern ? pattern : null}
