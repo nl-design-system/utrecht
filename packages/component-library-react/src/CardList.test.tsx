@@ -32,7 +32,7 @@ describe('Card list', () => {
   it('can contain a list item', () => {
     const { container } = render(
       <CardList>
-        <CardListItem />
+        <CardListItem headingLevel={2} />
       </CardList>,
     );
 
