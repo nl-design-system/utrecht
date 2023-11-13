@@ -39,8 +39,8 @@ const TextboxStory = ({
     autoComplete={autoComplete || null}
     disabled={disabled || null}
     invalid={invalid || null}
-    min={min || null}
-    max={max || null}
+    min={typeof min === 'number' ? min : min || null}
+    max={typeof max === 'number' ? max : max || null}
     pattern={pattern || null}
     placeholder={placeholder || null}
     readOnly={readOnly || null}
