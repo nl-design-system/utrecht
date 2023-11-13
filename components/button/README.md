@@ -29,6 +29,7 @@ Enkele voorbeelden waar je een link gebruikt:
 
 Enkele voorbeelden waar je een button gebruikt:
 
+- "Volgende stap" of "vorige stap" in een formulier. Gebruik een submit button wanneer gegevens tussendoor opgeslagen worden of verstuurd worden.
 - Uitloggen: button. Log niet uit met een link! Je navigatie moet het ondersteunen om zowel links als button dezelfde stijl te geven.
 - de voorkeurstaal aanpassen en dezelfde pagina in een andere taal bekijken: een button.
 
