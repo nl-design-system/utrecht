@@ -13,6 +13,10 @@ import { Component, h } from '@stencil/core';
 })
 export class HeadingGroup {
   render() {
-    return <slot></slot>;
+    return (
+      <hgroup>
+        <slot></slot>
+      </hgroup>
+    );
   }
 }
