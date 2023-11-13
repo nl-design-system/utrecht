@@ -14,6 +14,7 @@ import naamDocs from '@utrecht/components/textbox/_naam.md?raw';
 import organisationDocs from '@utrecht/components/textbox/_organisatie.md?raw';
 import postcodeDocs from '@utrecht/components/textbox/_postcode.md?raw';
 import requiredDocs from '@utrecht/components/textbox/_required.md?raw';
+import streetnameDocs from '@utrecht/components/textbox/_streetname.md?raw';
 import voornaamDocs from '@utrecht/components/textbox/_voornaam.md?raw';
 import namePrefixDocs from '@utrecht/components/textbox/_voorvoegsel.md?raw';
 import passwordForAuthentificationDocs from '@utrecht/components/textbox/_wachtwoordVoorAuthentificatie.md?raw';
@@ -496,6 +497,26 @@ export const AutocompleteWoonplaatsInNederland: Story = {
     docs: {
       description: {
         story: placeOfResidenceDocs,
+      },
+    },
+  },
+};
+
+export const StraatnaamInNederland: Story = {
+  name: 'Straatnaam (in Nederland)',
+  args: {
+    value: 'Laan van de landinrichtingscommissie Duiven-Westervoort',
+    minLength: 1,
+    maxLength: 200,
+  },
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: streetnameDocs,
       },
     },
   },
