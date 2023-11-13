@@ -155,8 +155,8 @@ export namespace Components {
         "disabled": boolean;
         "invalid": boolean;
         "label": string;
-        "max": string;
-        "min": string;
+        "max": number | string;
+        "min": number | string;
         "name": string;
         "pattern": string;
         "placeholder": string;
@@ -735,8 +735,8 @@ export namespace Components {
         "autoComplete": string;
         "disabled": boolean;
         "invalid": boolean;
-        "max": string;
-        "min": string;
+        "max": number | string;
+        "min": number | string;
         "pattern": string;
         "placeholder": string;
         "readOnly": boolean;
@@ -2970,8 +2970,8 @@ declare namespace LocalJSX {
         "disabled"?: boolean;
         "invalid"?: boolean;
         "label"?: string;
-        "max"?: string;
-        "min"?: string;
+        "max"?: number | string;
+        "min"?: number | string;
         "name"?: string;
         "onUtrechtBlur"?: (event: UtrechtFormFieldTextboxCustomEvent<any>) => void;
         "onUtrechtChange"?: (event: UtrechtFormFieldTextboxCustomEvent<any>) => void;
@@ -3562,8 +3562,8 @@ declare namespace LocalJSX {
         "autoComplete"?: string;
         "disabled"?: boolean;
         "invalid"?: boolean;
-        "max"?: string;
-        "min"?: string;
+        "max"?: number | string;
+        "min"?: number | string;
         "onUtrechtBlur"?: (event: UtrechtTextboxCustomEvent<any>) => void;
         "onUtrechtChange"?: (event: UtrechtTextboxCustomEvent<any>) => void;
         "onUtrechtFocus"?: (event: UtrechtTextboxCustomEvent<any>) => void;

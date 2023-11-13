@@ -18,8 +18,8 @@ export class FormFieldTextbox {
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
   @Prop() label: string = '';
-  @Prop() min: string = '';
-  @Prop() max: string = '';
+  @Prop() min: number | string = '';
+  @Prop() max: number | string = '';
   @Prop() name: string = '';
   @Prop() pattern: string = '';
   @Prop() placeholder: string = '';
@@ -104,8 +104,8 @@ export class FormFieldTextbox {
             aria-describedby={clsx('description', 'status', { 'error-message': invalid })}
             aria-invalid={invalid}
             disabled={disabled}
-            min={min ? min : null}
-            max={max ? max : null}
+            min={typeof min === 'number' ? String(min) : typeof min === 'string' ? min : null}
+            max={typeof max === 'number' ? String(max) : typeof max === 'string' ? max : null}
             pattern={pattern ? pattern : null}
             placeholder={placeholder || null}
             readonly={readOnly}

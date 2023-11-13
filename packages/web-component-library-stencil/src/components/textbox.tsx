@@ -15,8 +15,8 @@ export class Textbox {
   @Prop({ attribute: 'autocomplete', reflect: true }) autoComplete: string = '';
   @Prop({ reflect: true }) disabled: boolean = false;
   @Prop({ reflect: true }) invalid: boolean = false;
-  @Prop() min: string = '';
-  @Prop() max: string = '';
+  @Prop() min: number | string = '';
+  @Prop() max: number | string = '';
   @Prop() pattern: string = '';
   @Prop() placeholder: string = '';
   @Prop({ attribute: 'readonly', reflect: true }) readOnly: boolean = false;
@@ -43,8 +43,8 @@ export class Textbox {
         type={type || 'text'}
         autoComplete={autoComplete ? autoComplete : null}
         disabled={disabled}
-        min={min ? min : null}
-        max={max ? max : null}
+        min={typeof min === 'number' ? String(min) : typeof min === 'string' ? min : null}
+        max={typeof max === 'number' ? String(max) : typeof max === 'string' ? max : null}
         pattern={pattern ? pattern : null}
         placeholder={placeholder || null}
         readonly={readOnly}
