@@ -2,15 +2,12 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { CardList, CardListItem, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
-import readme from '@utrecht/components/unordered-list/README.md?raw';
-import tokensDefinition from '@utrecht/components/unordered-list/tokens.json';
-import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
-  title: 'React Component/Unordered List',
-  id: 'react-unordered-list',
+  title: 'React Component/Card List',
+  id: 'react-Card-list',
   component: CardList,
   argTypes: {},
   args: {
@@ -44,13 +41,6 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-card-list',
-    tokens,
-    tokensDefinition,
-    docs: {
-      description: {
-        component: readme,
-      },
-    },
   },
 } satisfies Meta<typeof CardList>;
 
