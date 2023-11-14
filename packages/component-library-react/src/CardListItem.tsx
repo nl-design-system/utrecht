@@ -44,12 +44,12 @@ export const CardListItem = ({
   }
 
   let card = (
-    <div className={'utrecht-card-list-item__content'}>
+    <div className={'utrecht-card-list__item-content'}>
       <hgroup>
-        <Heading level={headingLevel} className="utrecht-card-list-item__title">
+        <Heading level={headingLevel} className="utrecht-card-list__item-title">
           {headingContent}
         </Heading>
-        {preHeading && <p className="utrecht-card-list-item__pre-heading">{preHeading}</p>}
+        {preHeading && <p className="utrecht-card-list__item-pre-heading">{preHeading}</p>}
       </hgroup>
       {children}
     </div>
@@ -59,7 +59,7 @@ export const CardListItem = ({
     card = (
       <li
         {...props}
-        className={clsx('utrecht-card-list-item', props.className)}
+        className={clsx('utrecht-card-list__item', props.className)}
         onClick={() => linkRef.current?.click()}
       >
         {imageSrc && imageAlt && (
@@ -68,7 +68,7 @@ export const CardListItem = ({
             alt={imageAlt}
             height={imageHeight}
             width={imageWidth}
-            className={'utrecht-card-list-item__image'}
+            className={'utrecht-card-list__item-image'}
           />
         )}
         <article>{card}</article>
@@ -78,7 +78,7 @@ export const CardListItem = ({
     card = (
       <li
         {...props}
-        className={clsx('utrecht-card-list-item', props.className)}
+        className={clsx('utrecht-card-list__item', props.className)}
         onClick={() => linkRef.current?.click()}
       >
         {imageSrc && imageAlt && (
@@ -87,7 +87,7 @@ export const CardListItem = ({
             alt={imageAlt}
             height={imageHeight}
             width={imageWidth}
-            className={'utrecht-card-list-item__image'}
+            className={'utrecht-card-list__item-image'}
           />
         )}
         {card}
