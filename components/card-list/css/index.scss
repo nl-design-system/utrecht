@@ -29,10 +29,3 @@
 .utrecht-card-list__item {
   @include utrecht-card-list__item;
 }
-
-.utrecht-card-list--html-content > li::marker,
-.utrecht-card-list--html-content ul > li::marker,
-.utrecht-card-list__item::marker,
-.utrecht-card-list__marker {
-  @include utrecht-card-list__marker;
-}
