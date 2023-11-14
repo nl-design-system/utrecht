@@ -1,0 +1,44 @@
+@mixin utrecht-card-list {
+  /* Configure `box-sizing` and `text-align` for `--center` */
+  box-sizing: border-box;
+  font-family: var(--utrecht-document-font-family, inherit);
+  font-size: var(--utrecht-card-list-font-size, var(--utrecht-document-font-size, inherit));
+  line-height: var(--utrecht-card-list-line-height, var(--utrecht-document-line-height, inherit));
+  margin-block-end: calc(
+    var(--utrecht-space-around, 0) *
+      var(--utrecht-card-list-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
+  );
+  margin-block-start: calc(
+    var(--utrecht-space-around, 0) *
+      var(--utrecht-card-list-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
+  );
+  padding-inline-start: var(--utrecht-card-list-padding-inline-start, 2ch);
+  text-align: start;
+}
+
+@mixin utrecht-card-list--center {
+  inline-size: max-content;
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+  max-inline-size: 100%;
+}
+
+@mixin utrecht-card-list--distanced {
+  --utrecht-space-around: 1;
+}
+
+@mixin utrecht-card-list--nested {
+  margin-block-end: 0;
+  margin-inline-start: 2ch;
+}
+
+@mixin utrecht-card-list__item {
+  margin-block-end: var(--utrecht-card-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-card-list-item-margin-block-start);
+  padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, 1ch);
+}
+
+@mixin utrecht-card-list__marker {
+  color: var(--utrecht-card-list-marker-color);
+  content: "●";
+}
