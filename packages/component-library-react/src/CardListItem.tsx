@@ -8,7 +8,6 @@ import Image from 'next/image';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import { Heading } from './Heading';
 import { Link } from './Link';
-import './index.style.css';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headingLevel: number;
