@@ -33,12 +33,8 @@
 }
 
 @mixin utrecht-card-list__item {
+  list-style: none;
   margin-block-end: var(--utrecht-card-list-item-margin-block-end);
   margin-block-start: var(--utrecht-card-list-item-margin-block-start);
   padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, 1ch);
-}
-
-@mixin utrecht-card-list__marker {
-  color: var(--utrecht-card-list-marker-color);
-  content: "●";
 }
