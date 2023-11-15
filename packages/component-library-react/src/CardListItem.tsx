@@ -4,7 +4,6 @@
  */
 
 import clsx from 'clsx';
-import Image from 'next/image';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import { Heading } from './Heading';
 import { Link } from './Link';
@@ -62,7 +61,7 @@ export const CardListItem = ({
         onClick={() => linkRef.current?.click()}
       >
         {imageSrc && imageAlt && (
-          <Image
+          <img
             src={imageSrc}
             alt={imageAlt}
             height={imageHeight}
@@ -81,7 +80,7 @@ export const CardListItem = ({
         onClick={() => linkRef.current?.click()}
       >
         {imageSrc && imageAlt && (
-          <Image
+          <img
             src={imageSrc}
             alt={imageAlt}
             height={imageHeight}
