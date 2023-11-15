@@ -7,6 +7,10 @@
 @import "~@utrecht/components/pre-heading/css/mixin";
 
 :host {
+  display: contents;
+}
+
+p {
   @include utrecht-pre-heading;
 }
 
