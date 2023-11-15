@@ -11,21 +11,20 @@
   @include utrecht-card-list;
 }
 
-.utrecht-card-list--center {
-  @include utrecht-card-list--center;
-}
-
-.utrecht-card-list--distanced {
-  @include utrecht-card-list--distanced;
-}
-
-.utrecht-card-list--nested,
-.utrecht-card-list--html-content ul {
-  @include utrecht-card-list--nested;
-}
-
 .utrecht-card-list--html-content > li,
 .utrecht-card-list--html-content ul > li,
 .utrecht-card-list__item {
   @include utrecht-card-list__item;
+}
+
+.utrecht-card-list__item-hover {
+  @include utrecht-card-list__item-hover;
+}
+
+.utrecht-card-list__item-image {
+  @include utrecht-card-list__item-image;
+}
+
+.utrecht-card-list__item-content {
+  @include utrecht-card-list__item-content;
 }
