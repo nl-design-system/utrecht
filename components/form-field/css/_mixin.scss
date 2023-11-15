@@ -3,6 +3,11 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+@mixin reset-p {
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
 @mixin utrecht-form-field {
   break-inside: avoid;
   font-family: var(--utrecht-document-font-family, inherit);
@@ -55,6 +60,8 @@
 }
 
 @mixin utrecht-form-field__input {
+  @include reset-p;
+
   grid-area: input;
   order: 5;
 }
