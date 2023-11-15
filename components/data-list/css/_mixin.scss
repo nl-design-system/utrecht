@@ -74,6 +74,8 @@
   grid-auto-columns: 1fr;
   grid-template-columns: repeat(auto-fit, var(--_utrecht-auto-col));
   margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+  padding-block-end: var(--utrecht-data-list-rows-item-padding-block-end);
+  padding-block-start: var(--utrecht-data-list-rows-item-padding-block-start);
   row-gap: 0;
 }
 
