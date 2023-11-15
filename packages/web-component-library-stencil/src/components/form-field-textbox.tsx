@@ -88,6 +88,11 @@ export class FormFieldTextbox {
         <utrecht-form-field-description id="description">
           <slot name="description"></slot>
         </utrecht-form-field-description>
+        {invalid && (
+          <utrecht-form-field-description status="invalid" class="utrecht-form-field__error-message" id="error-message">
+            <slot name="error-message"></slot>
+          </utrecht-form-field-description>
+        )}
         <p class="utrecht-form-field__input">
           <input
             id="input"
@@ -121,11 +126,6 @@ export class FormFieldTextbox {
             }}
           />
         </p>
-        {invalid && (
-          <utrecht-form-field-description status="invalid" class="utrecht-form-field__error-message" id="error-message">
-            <slot name="error-message"></slot>
-          </utrecht-form-field-description>
-        )}
         <div class="utrecht-form-field__status" id="status">
           <div class="utrecht-form-field-description utrecht-form-field-description--status">
             <slot name="status"></slot>
