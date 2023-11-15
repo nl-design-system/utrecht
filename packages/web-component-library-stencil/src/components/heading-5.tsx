@@ -8,7 +8,7 @@ import { Component, h } from '@stencil/core';
 export class Heading5 {
   render() {
     return (
-      <h5 class="utrecht-heading-5">
+      <h5>
         <slot></slot>
       </h5>
     );

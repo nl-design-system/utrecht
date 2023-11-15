@@ -3,12 +3,16 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "~@utrecht/components/heading-5/css";
+@import "~@utrecht/components/heading-5/css/mixin";
 
 :host {
-  display: block;
+  display: contents;
 }
 
 :host([hidden]) {
   display: none !important;
+}
+
+h5 {
+  @include utrecht-heading-5;
 }

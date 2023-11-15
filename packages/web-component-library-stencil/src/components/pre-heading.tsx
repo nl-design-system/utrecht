@@ -14,7 +14,7 @@ import { Component, h } from '@stencil/core';
 export class PreHeading {
   render() {
     return (
-      <p class="utrecht-pre-heading">
+      <p>
         <slot></slot>
       </p>
     );

@@ -7,6 +7,10 @@
 @import "~@utrecht/components/heading-group/css/mixin";
 
 :host {
+  display: contents;
+}
+
+hgroup {
   @include utrecht-heading-group;
 }
 
