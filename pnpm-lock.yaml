@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.5.0':
     hash: vzq4a43m5dnyibev4zgaqm45y4
@@ -658,8 +662,8 @@ importers:
         specifier: 1.0.4
         version: 1.0.4
       prism-react-renderer:
-        specifier: 1.3.5
-        version: 1.3.5(react@18.2.0)
+        specifier: 2.2.0
+        version: 2.2.0(react@18.2.0)
       prop-types:
         specifier: 15.8.1
         version: 15.8.1
@@ -1661,10 +1665,10 @@ importers:
         version: 7.4.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/vue3':
         specifier: 7.4.6
-        version: 7.4.6(@vue/compiler-core@3.3.4)(vue@3.3.8)
+        version: 7.4.6(@vue/compiler-core@3.3.8)(vue@3.3.8)
       '@storybook/vue3-vite':
         specifier: 7.4.6
-        version: 7.4.6(@vue/compiler-core@3.3.4)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8)
+        version: 7.4.6(@vue/compiler-core@3.3.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8)
       '@types/node':
         specifier: 18.17.19
         version: 18.17.19
@@ -14609,7 +14613,7 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
-  /@storybook/vue3-vite@7.4.6(@vue/compiler-core@3.3.4)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8):
+  /@storybook/vue3-vite@7.4.6(@vue/compiler-core@3.3.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8):
     resolution: {integrity: sha512-r/mUDdCifpN99Cqmvm7IvPZGnur7lYiTxbQPhV8NdRBpQGxm3JC0life9yIvvHV9mYRCjn5MEzC65zWx03Nzig==}
     engines: {node: ^14.18 || >=16}
     peerDependencies:
@@ -14619,7 +14623,7 @@ packages:
     dependencies:
       '@storybook/builder-vite': 7.4.6(typescript@4.9.5)(vite@4.4.11)
       '@storybook/core-server': 7.4.6
-      '@storybook/vue3': 7.4.6(@vue/compiler-core@3.3.4)(vue@3.3.8)
+      '@storybook/vue3': 7.4.6(@vue/compiler-core@3.3.8)(vue@3.3.8)
       '@vitejs/plugin-vue': 4.3.4(vite@4.4.11)(vue@3.3.8)
       magic-string: 0.30.1
       react: 18.2.0
@@ -14638,7 +14642,7 @@ packages:
       - vue
     dev: true
 
-  /@storybook/vue3@7.4.6(@vue/compiler-core@3.3.4)(vue@3.3.8):
+  /@storybook/vue3@7.4.6(@vue/compiler-core@3.3.8)(vue@3.3.8):
     resolution: {integrity: sha512-Azv/GhmPlAUy8UbXZHKubrBlKhGimuJTT2O6zUvIzggR6sJdsRmdWaEv2S90ZpMBkVYyyM9oKS1fZ4eKi/Ds8g==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -14650,7 +14654,7 @@ packages:
       '@storybook/global': 5.0.0
       '@storybook/preview-api': 7.4.6
       '@storybook/types': 7.4.6
-      '@vue/compiler-core': 3.3.4
+      '@vue/compiler-core': 3.3.8
       lodash: 4.17.21
       ts-dedent: 2.2.0
       type-fest: 2.19.0
@@ -15608,6 +15612,10 @@ packages:
 
   /@types/pretty-hrtime@1.0.1:
     resolution: {integrity: sha512-VjID5MJb1eGKthz2qUerWT8+R4b9N+CHvGCzg9fn4kWZgaF9AhdYikQio3R7wV8YY1NsQKPaCwKz1Yff+aHNUQ==}
+    dev: true
+
+  /@types/prismjs@1.26.3:
+    resolution: {integrity: sha512-A0D0aTXvjlqJ5ZILMz3rNfDBOx9hHxLZYv2by47Sm/pqW35zzjusrZTryatjN/Rf8Us2gZrJD+KeHbUSTux1Cw==}
     dev: true
 
   /@types/prop-types@15.7.5:
@@ -17476,9 +17484,9 @@ packages:
       eslint: '>= 4.12.1'
     dependencies:
       '@babel/code-frame': 7.22.13
-      '@babel/parser': 7.22.16
-      '@babel/traverse': 7.22.17
-      '@babel/types': 7.22.17
+      '@babel/parser': 7.23.3
+      '@babel/traverse': 7.23.3
+      '@babel/types': 7.23.3
       eslint: 7.32.0
       eslint-visitor-keys: 1.3.0
       resolve: 1.22.1
@@ -32394,6 +32402,16 @@ packages:
       react: 18.2.0
     dev: true
 
+  /prism-react-renderer@2.2.0(react@18.2.0):
+    resolution: {integrity: sha512-j4AN0VkEr72598+47xDvpzeYyeh/wPPRNTt9nJFZqIZUxwGKwYqYgt7RVigZ3ZICJWJWN84KEuMKPNyypyhNIw==}
+    peerDependencies:
+      react: '>=16.0.0'
+    dependencies:
+      '@types/prismjs': 1.26.3
+      clsx: 1.2.1
+      react: 18.2.0
+    dev: true
+
   /prismjs@1.27.0:
     resolution: {integrity: sha512-t13BGPUlFDR7wRB5kQDG4jjl7XeuH6jbJGt11JHPL96qwsEHNX2+68tFXqc1/k+/jALsbSWJKUOT/hcYAZ5LkA==}
     engines: {node: '>=6'}
@@ -39700,7 +39718,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
