@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.5.0':
     hash: vzq4a43m5dnyibev4zgaqm45y4
@@ -246,8 +250,8 @@ importers:
         specifier: 15.2.10
         version: 15.2.10(rxjs@7.8.1)(zone.js@0.13.3)
       '@angular/forms':
-        specifier: 15.2.10
-        version: 15.2.10(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
+        specifier: 17.0.4
+        version: 17.0.4(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
       '@angular/platform-browser':
         specifier: 15.2.10
         version: 15.2.10(@angular/animations@15.2.10)(@angular/common@15.2.10)(@angular/core@15.2.10)
@@ -907,8 +911,8 @@ importers:
         specifier: 15.2.10
         version: 15.2.10(rxjs@7.8.1)(zone.js@0.13.3)
       '@angular/forms':
-        specifier: 15.2.10
-        version: 15.2.10(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
+        specifier: 17.0.4
+        version: 17.0.4(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
       '@angular/platform-browser':
         specifier: 15.2.10
         version: 15.2.10(@angular/animations@15.2.10)(@angular/common@15.2.10)(@angular/core@15.2.10)
@@ -977,7 +981,7 @@ importers:
         version: 7.4.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/angular':
         specifier: 7.4.6
-        version: 7.4.6(@angular-devkit/architect@0.1602.10)(@angular-devkit/build-angular@15.2.10)(@angular-devkit/core@15.2.10)(@angular/cli@15.2.10)(@angular/common@15.2.10)(@angular/compiler-cli@15.2.10)(@angular/compiler@15.2.10)(@angular/core@15.2.10)(@angular/forms@15.2.10)(@angular/platform-browser-dynamic@15.2.10)(@angular/platform-browser@15.2.10)(@babel/core@7.22.20)(@swc/core@1.3.79)(esbuild@0.18.20)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@4.8.4)(zone.js@0.13.3)
+        version: 7.4.6(@angular-devkit/architect@0.1602.10)(@angular-devkit/build-angular@15.2.10)(@angular-devkit/core@15.2.10)(@angular/cli@15.2.10)(@angular/common@15.2.10)(@angular/compiler-cli@15.2.10)(@angular/compiler@15.2.10)(@angular/core@15.2.10)(@angular/forms@17.0.4)(@angular/platform-browser-dynamic@15.2.10)(@angular/platform-browser@15.2.10)(@babel/core@7.22.20)(@swc/core@1.3.79)(esbuild@0.18.20)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@4.8.4)(zone.js@0.13.3)
       '@storybook/api':
         specifier: 7.4.6
         version: 7.4.6(react-dom@18.2.0)(react@18.2.0)
@@ -1661,10 +1665,10 @@ importers:
         version: 7.4.6(react-dom@18.2.0)(react@18.2.0)
       '@storybook/vue3':
         specifier: 7.4.6
-        version: 7.4.6(@vue/compiler-core@3.3.4)(vue@3.3.8)
+        version: 7.4.6(@vue/compiler-core@3.3.8)(vue@3.3.8)
       '@storybook/vue3-vite':
         specifier: 7.4.6
-        version: 7.4.6(@vue/compiler-core@3.3.4)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8)
+        version: 7.4.6(@vue/compiler-core@3.3.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8)
       '@types/node':
         specifier: 18.17.19
         version: 18.17.19
@@ -1952,8 +1956,8 @@ importers:
         specifier: 15.2.10
         version: 15.2.10(rxjs@7.8.1)(zone.js@0.13.3)
       '@angular/forms':
-        specifier: 15.2.10
-        version: 15.2.10(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
+        specifier: 17.0.4
+        version: 17.0.4(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
       '@angular/platform-browser':
         specifier: 15.2.10
         version: 15.2.10(@angular/animations@15.2.10)(@angular/common@15.2.10)(@angular/core@15.2.10)
@@ -2766,13 +2770,13 @@ packages:
       zone.js: 0.13.3
     dev: true
 
-  /@angular/forms@15.2.10(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1):
-    resolution: {integrity: sha512-NIntGsNcN6o8L1txsbWXOf6f3K/CUBizdKsxsYVYGJIXEW5qU6UnWmfAZffNNXsT/XvbgUCjgDwT0cAwcqZPuQ==}
-    engines: {node: ^14.20.0 || ^16.13.0 || >=18.10.0}
+  /@angular/forms@17.0.4(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1):
+    resolution: {integrity: sha512-R5J87dfJNWwi5SESD7tRkZnqG4u8KNAT4vImX4oG70/6vWioKUSWpLoSp1gpzy9UW51E85AKb8DNvIex7LclSg==}
+    engines: {node: ^18.13.0 || >=20.9.0}
     peerDependencies:
-      '@angular/common': 15.2.10
-      '@angular/core': 15.2.10
-      '@angular/platform-browser': 15.2.10
+      '@angular/common': 17.0.4
+      '@angular/core': 17.0.4
+      '@angular/platform-browser': 17.0.4
       rxjs: ^6.5.3 || ^7.4.0
     dependencies:
       '@angular/common': 15.2.10(@angular/core@15.2.10)(rxjs@7.8.1)
@@ -13228,7 +13232,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /@storybook/angular@7.4.6(@angular-devkit/architect@0.1602.10)(@angular-devkit/build-angular@15.2.10)(@angular-devkit/core@15.2.10)(@angular/cli@15.2.10)(@angular/common@15.2.10)(@angular/compiler-cli@15.2.10)(@angular/compiler@15.2.10)(@angular/core@15.2.10)(@angular/forms@15.2.10)(@angular/platform-browser-dynamic@15.2.10)(@angular/platform-browser@15.2.10)(@babel/core@7.22.20)(@swc/core@1.3.79)(esbuild@0.18.20)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@4.8.4)(zone.js@0.13.3):
+  /@storybook/angular@7.4.6(@angular-devkit/architect@0.1602.10)(@angular-devkit/build-angular@15.2.10)(@angular-devkit/core@15.2.10)(@angular/cli@15.2.10)(@angular/common@15.2.10)(@angular/compiler-cli@15.2.10)(@angular/compiler@15.2.10)(@angular/core@15.2.10)(@angular/forms@17.0.4)(@angular/platform-browser-dynamic@15.2.10)(@angular/platform-browser@15.2.10)(@babel/core@7.22.20)(@swc/core@1.3.79)(esbuild@0.18.20)(react-dom@18.2.0)(react@18.2.0)(rxjs@7.8.1)(typescript@4.8.4)(zone.js@0.13.3):
     resolution: {integrity: sha512-9dwhBwdPnFzMHiT5AhoRa1kpmnMJDi3fRsOJDMTchnt0q9w8DmJZCwyrwNSaYE9CSUoMJ8/V3cu5qCLkz9tGGg==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -13261,7 +13265,7 @@ packages:
       '@angular/compiler': 15.2.10(@angular/core@15.2.10)
       '@angular/compiler-cli': 15.2.10(@angular/compiler@15.2.10)(typescript@4.8.4)
       '@angular/core': 15.2.10(rxjs@7.8.1)(zone.js@0.13.3)
-      '@angular/forms': 15.2.10(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
+      '@angular/forms': 17.0.4(@angular/common@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)(rxjs@7.8.1)
       '@angular/platform-browser': 15.2.10(@angular/animations@15.2.10)(@angular/common@15.2.10)(@angular/core@15.2.10)
       '@angular/platform-browser-dynamic': 15.2.10(@angular/common@15.2.10)(@angular/compiler@15.2.10)(@angular/core@15.2.10)(@angular/platform-browser@15.2.10)
       '@babel/core': 7.22.20
@@ -14609,7 +14613,7 @@ packages:
       file-system-cache: 2.3.0
     dev: true
 
-  /@storybook/vue3-vite@7.4.6(@vue/compiler-core@3.3.4)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8):
+  /@storybook/vue3-vite@7.4.6(@vue/compiler-core@3.3.8)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)(vite@4.4.11)(vue@3.3.8):
     resolution: {integrity: sha512-r/mUDdCifpN99Cqmvm7IvPZGnur7lYiTxbQPhV8NdRBpQGxm3JC0life9yIvvHV9mYRCjn5MEzC65zWx03Nzig==}
     engines: {node: ^14.18 || >=16}
     peerDependencies:
@@ -14619,7 +14623,7 @@ packages:
     dependencies:
       '@storybook/builder-vite': 7.4.6(typescript@4.9.5)(vite@4.4.11)
       '@storybook/core-server': 7.4.6
-      '@storybook/vue3': 7.4.6(@vue/compiler-core@3.3.4)(vue@3.3.8)
+      '@storybook/vue3': 7.4.6(@vue/compiler-core@3.3.8)(vue@3.3.8)
       '@vitejs/plugin-vue': 4.3.4(vite@4.4.11)(vue@3.3.8)
       magic-string: 0.30.1
       react: 18.2.0
@@ -14638,7 +14642,7 @@ packages:
       - vue
     dev: true
 
-  /@storybook/vue3@7.4.6(@vue/compiler-core@3.3.4)(vue@3.3.8):
+  /@storybook/vue3@7.4.6(@vue/compiler-core@3.3.8)(vue@3.3.8):
     resolution: {integrity: sha512-Azv/GhmPlAUy8UbXZHKubrBlKhGimuJTT2O6zUvIzggR6sJdsRmdWaEv2S90ZpMBkVYyyM9oKS1fZ4eKi/Ds8g==}
     engines: {node: '>=16.0.0'}
     peerDependencies:
@@ -14650,7 +14654,7 @@ packages:
       '@storybook/global': 5.0.0
       '@storybook/preview-api': 7.4.6
       '@storybook/types': 7.4.6
-      '@vue/compiler-core': 3.3.4
+      '@vue/compiler-core': 3.3.8
       lodash: 4.17.21
       ts-dedent: 2.2.0
       type-fest: 2.19.0
@@ -17476,9 +17480,9 @@ packages:
       eslint: '>= 4.12.1'
     dependencies:
       '@babel/code-frame': 7.22.13
-      '@babel/parser': 7.22.16
-      '@babel/traverse': 7.22.17
-      '@babel/types': 7.22.17
+      '@babel/parser': 7.23.3
+      '@babel/traverse': 7.23.3
+      '@babel/types': 7.23.3
       eslint: 7.32.0
       eslint-visitor-keys: 1.3.0
       resolve: 1.22.1
@@ -39700,7 +39704,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
