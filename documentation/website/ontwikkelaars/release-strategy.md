@@ -133,5 +133,5 @@ The version in our package.json gets copied to the one we publish, and users nee
 
 ## Bron
 
-- <https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type>
-- <https://www.conventionalcommits.org/en/v1.0.0/>
+- [Contributing](https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#type)
+- [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)
