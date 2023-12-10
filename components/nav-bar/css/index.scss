@@ -1,0 +1,41 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+.utrecht-nav-bar {
+  background-color: var(--utrecht-nav-bar-background-color);
+  color: var(--utrecht-nav-bar-color);
+  display: flex;
+  justify-content: center;
+
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    border-block-end-color: currentColor;
+    border-block-end-style: solid;
+    border-block-end-width: 1px;
+
+    /* add `padding` in `forced-colors` mode to make room for contrasting focus ring */
+    border-block-start-color: currentColor;
+    border-block-start-style: solid;
+    border-block-start-width: 1px;
+    padding-block-end: calc(var(--utrecht-focus-outline-width) * 2);
+    padding-block-start: calc(var(--utrecht-focus-outline-width) * 2);
+  }
+}
+
+.utrecht-nav-bar__content {
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  inline-size: 100%;
+  justify-content: space-between;
+
+  /* Wrap content to accomodate:
+    * - 400% zoom
+    * - longer text due to automatic translation
+    * - longer text due to editorial content requirements
+    */
+  max-inline-size: var(--utrecht-nav-bar-content-max-inline-size);
+}

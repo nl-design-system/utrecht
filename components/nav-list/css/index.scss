@@ -1,0 +1,52 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@mixin reset-ul() {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+
+@mixin reset-li() {
+  list-style: none;
+}
+
+.utrecht-nav-list {
+  @include reset-ul;
+
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  inline-size: 100%;
+  justify-content: start;
+}
+
+.utrecht-nav-list--center {
+  & > * {
+    flex: 1 1 0;
+    justify-content: center;
+  }
+}
+
+.utrecht-nav-list__item {
+  @include reset-li;
+
+  display: inline-flex;
+}
+
+/* Style for the navigation links */
+.utrecht-nav-list__link {
+  font-weight: var(--utrecht-nav-list-link-font-weight);
+  max-inline-size: var(--utrecht-nav-bar-link-max-inline-size, 30ch);
+  padding-block-end: var(--utrecht-nav-bar-link-padding-block-end);
+  padding-block-start: var(--utrecht-nav-bar-link-padding-block-start);
+  padding-inline-end: var(--utrecht-nav-bar-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-nav-bar-link-padding-inline-start);
+  text-decoration: none;
+}
