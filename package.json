@@ -70,7 +70,7 @@
     "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "lint:css": "stylelint '**/*.{css,scss}'",
-    "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name .docusaurus -or -name component-library-angular \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
+    "lint:html": "find . -type d \\( -name coverage -or -name dist -or -name node_modules -or -name build -or -name .docusaurus -or -name component-library-angular -or -name www \\) -prune -false -o -name '*.html' -print0 | xargs -0 npx html-validate",
     "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --report-unused-disable-directives .",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint '**/package.json'",
