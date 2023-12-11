@@ -18,13 +18,6 @@
         "command": "npm run lint-fix:js"
       }
     },
-    "lint-html": {
-      "executor": "@nrwl/workspace:run-commands",
-      "inputs": ["{projectRoot}/**/*.html"],
-      "options": {
-        "command": "npm run lint:html"
-      }
-    },
     "lint-md": {
       "executor": "@nrwl/workspace:run-commands",
       "inputs": ["{projectRoot}/**/*.md"],
