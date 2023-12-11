@@ -53,8 +53,8 @@ importers:
         specifier: 2.28.1
         version: 2.28.1(@typescript-eslint/parser@5.62.0)(eslint@8.49.0)
       eslint-plugin-jest:
-        specifier: 27.2.3
-        version: 27.2.3(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.49.0)(typescript@4.9.5)
+        specifier: 27.6.0
+        version: 27.6.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.49.0)(typescript@4.9.5)
       eslint-plugin-json:
         specifier: 3.1.0
         version: 3.1.0
@@ -405,7 +405,7 @@ importers:
         version: 2.30.0
       gatsby:
         specifier: 5.12.11
-        version: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+        version: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.6.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       jest:
         specifier: 29.6.4
         version: 29.6.4(@types/node@20.5.1)(ts-node@10.9.1)
@@ -10538,14 +10538,14 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     dependencies:
       '@gar/promisify': 1.1.3
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /@npmcli/fs@3.1.0:
     resolution: {integrity: sha512-7kZUAaLscfgbwBQRbvdMYaZOWyMEcPTH/tJjnyAWJ/dvvs9Ef+CERx/qJb9GExJpl1qipaDGn7KqHnFGGixd0w==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /@npmcli/git@2.1.0:
@@ -10573,7 +10573,7 @@ packages:
       proc-log: 3.0.0
       promise-inflight: 1.0.1
       promise-retry: 2.0.1
-      semver: 7.5.3
+      semver: 7.5.4
       which: 3.0.1
     transitivePeerDependencies:
       - bluebird
@@ -19206,7 +19206,7 @@ packages:
       '@babel/core': 7.22.20
       '@babel/runtime': 7.22.15
       '@babel/types': 7.23.5
-      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.6.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       gatsby-core-utils: 4.12.1
     dev: true
 
@@ -21324,7 +21324,7 @@ packages:
       postcss-modules-scope: 3.0.0(postcss@8.4.32)
       postcss-modules-values: 4.0.0(postcss@8.4.32)
       postcss-value-parser: 4.2.0
-      semver: 7.5.3
+      semver: 7.5.4
       webpack: 5.76.1(esbuild@0.17.8)
     dev: true
 
@@ -23098,7 +23098,7 @@ packages:
       eslint: 8.49.0
     dev: true
 
-  /eslint-config-react-app@6.0.0(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(babel-eslint@10.1.0)(eslint-plugin-flowtype@5.10.0)(eslint-plugin-import@2.28.1)(eslint-plugin-jest@27.2.3)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@7.32.0)(typescript@4.9.5):
+  /eslint-config-react-app@6.0.0(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(babel-eslint@10.1.0)(eslint-plugin-flowtype@5.10.0)(eslint-plugin-import@2.28.1)(eslint-plugin-jest@27.6.0)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@7.32.0)(typescript@4.9.5):
     resolution: {integrity: sha512-bpoAAC+YRfzq0dsTk+6v9aHm/uqnDwayNAXleMypGl6CpxI9oXXscVHo4fk3eJPIn+rsbtNetB4r/ZIidFIE8A==}
     engines: {node: ^10.12.0 || >=12.0.0}
     peerDependencies:
@@ -23129,7 +23129,7 @@ packages:
       eslint: 7.32.0
       eslint-plugin-flowtype: 5.10.0(eslint@7.32.0)
       eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.62.0)(eslint@7.32.0)
-      eslint-plugin-jest: 27.2.3(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.49.0)(typescript@4.9.5)
+      eslint-plugin-jest: 27.6.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.49.0)(typescript@4.9.5)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@7.32.0)
       eslint-plugin-react: 7.33.2(eslint@7.32.0)
       eslint-plugin-react-hooks: 4.6.0(eslint@7.32.0)
@@ -23310,8 +23310,8 @@ packages:
       - supports-color
     dev: true
 
-  /eslint-plugin-jest@27.2.3(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.49.0)(typescript@4.9.5):
-    resolution: {integrity: sha512-sRLlSCpICzWuje66Gl9zvdF6mwD5X86I4u55hJyFBsxYOsBCmT5+kSUjf+fkFWVMMgpzNEupjW8WzUqi83hJAQ==}
+  /eslint-plugin-jest@27.6.0(@typescript-eslint/eslint-plugin@5.62.0)(eslint@8.49.0)(typescript@4.9.5):
+    resolution: {integrity: sha512-MTlusnnDMChbElsszJvrwD1dN3x6nZl//s4JD23BxB6MgR66TZlL064su24xEIS3VACfAoHV1vgyMgPw8nkdng==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
     peerDependencies:
       '@typescript-eslint/eslint-plugin': ^5.0.0 || ^6.0.0
@@ -25012,7 +25012,7 @@ packages:
       chokidar: 3.5.3
       fs-exists-cached: 1.0.0
       fs-extra: 11.2.0
-      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.6.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       gatsby-core-utils: 4.12.1
       gatsby-page-utils: 3.12.1
       gatsby-plugin-utils: 4.12.3(gatsby@5.12.11)(graphql@16.8.1)
@@ -25038,7 +25038,7 @@ packages:
       '@babel/preset-typescript': 7.22.15(@babel/core@7.22.20)
       '@babel/runtime': 7.22.15
       babel-plugin-remove-graphql-queries: 5.12.1(@babel/core@7.22.20)(gatsby@5.12.11)
-      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.6.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -25053,7 +25053,7 @@ packages:
       '@babel/runtime': 7.22.15
       fastq: 1.15.0
       fs-extra: 11.2.0
-      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
+      gatsby: 5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.6.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5)
       gatsby-core-utils: 4.12.1
       gatsby-sharp: 1.12.1
       graphql: 16.8.1
@@ -25131,7 +25131,7 @@ packages:
       - supports-color
     dev: true
 
-  /gatsby@5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.2.3)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
+  /gatsby@5.12.11(babel-eslint@10.1.0)(eslint-plugin-jest@27.6.0)(react-dom@18.2.0)(react@18.2.0)(typescript@4.9.5):
     resolution: {integrity: sha512-4XuN4bo6W6JnIYkvaCeV+5fKTzxv78aAgOTEW4doupP8/bD0bgLwuIHFwnvhEMHQiGdALoKukLkqhkgAShUK0w==}
     engines: {node: '>=18.0.0'}
     hasBin: true
@@ -25204,7 +25204,7 @@ packages:
       enhanced-resolve: 5.15.0
       error-stack-parser: 2.1.4
       eslint: 7.32.0
-      eslint-config-react-app: 6.0.0(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(babel-eslint@10.1.0)(eslint-plugin-flowtype@5.10.0)(eslint-plugin-import@2.28.1)(eslint-plugin-jest@27.2.3)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@7.32.0)(typescript@4.9.5)
+      eslint-config-react-app: 6.0.0(@typescript-eslint/eslint-plugin@5.62.0)(@typescript-eslint/parser@5.62.0)(babel-eslint@10.1.0)(eslint-plugin-flowtype@5.10.0)(eslint-plugin-import@2.28.1)(eslint-plugin-jest@27.6.0)(eslint-plugin-jsx-a11y@6.8.0)(eslint-plugin-react-hooks@4.6.0)(eslint-plugin-react@7.33.2)(eslint@7.32.0)(typescript@4.9.5)
       eslint-plugin-flowtype: 5.10.0(eslint@7.32.0)
       eslint-plugin-import: 2.28.1(@typescript-eslint/parser@5.62.0)(eslint@7.32.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@7.32.0)
@@ -32101,7 +32101,7 @@ packages:
       nopt: 6.0.0
       npmlog: 6.0.2
       rimraf: 3.0.2
-      semver: 7.5.3
+      semver: 7.5.4
       tar: 6.2.0
       which: 2.0.2
     transitivePeerDependencies:
@@ -32202,7 +32202,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       is-core-module: 2.13.1
-      semver: 7.5.3
+      semver: 7.5.4
       validate-npm-package-license: 3.0.4
     dev: true
 
@@ -32298,7 +32298,7 @@ packages:
     resolution: {integrity: sha512-W29RiK/xtpCGqn6f3ixfRYGk+zRyr+Ew9F2E20BfXxT5/euLdA/Nm7fO7OeTGuAmTs30cpgInyJ0cYe708YTZw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
     dependencies:
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /npm-normalize-package-bin@1.0.1:
@@ -32316,7 +32316,7 @@ packages:
     dependencies:
       hosted-git-info: 6.1.1
       proc-log: 3.0.0
-      semver: 7.5.3
+      semver: 7.5.4
       validate-npm-package-name: 5.0.0
     dev: true
 
@@ -32390,7 +32390,7 @@ packages:
       npm-install-checks: 6.3.0
       npm-normalize-package-bin: 3.0.1
       npm-package-arg: 10.1.0
-      semver: 7.5.3
+      semver: 7.5.4
     dev: true
 
   /npm-pick-manifest@8.0.2:
@@ -33775,7 +33775,7 @@ packages:
       cosmiconfig: 7.1.0
       klona: 2.0.6
       postcss: 8.4.31
-      semver: 7.5.3
+      semver: 7.5.4
       webpack: 5.76.1(esbuild@0.17.8)
     dev: true
 
