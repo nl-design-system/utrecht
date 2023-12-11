@@ -68,7 +68,6 @@ module.exports = {
         project: [
           'packages/component-library-angular/tsconfig.json',
           'packages/component-library-angular/tsconfig.spec.json',
-          'packages/component-library-formio/tsconfig.json',
           'packages/component-library-react/tsconfig.json',
           'packages/component-library-react/tsconfig.test.json',
           'packages/component-library-vue/tsconfig.jest.json',
