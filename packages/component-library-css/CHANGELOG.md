@@ -1,5 +1,15 @@
 # @utrecht/component-library-css
 
+## 3.0.0
+
+### Major Changes
+
+- af24025682: rename `utrecht-button-group--vertical` mixin and class name to `utrecht-button-group--column`'
+
+### Patch Changes
+
+- af24025682: inline button link component no longer automatically stretches to match size of button group
+
 ## 1.0.1
 
 ### Patch Changes

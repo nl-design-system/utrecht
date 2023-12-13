@@ -1,5 +1,11 @@
 # @utrecht/component-library-react
 
+## 3.0.0
+
+### Major Changes
+
+- af24025682: `ButtonGroup` boolean property `vertical` now is `direction="column"`'
+
 ## 1.0.1
 
 ### Patch Changes
