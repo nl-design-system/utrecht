@@ -1,14 +1,14 @@
 diff --git a/cli/index.cjs.map b/cli/index.cjs.map
 deleted file mode 100644
-index 603de2e0e51aa9eeb81b2ebe098c2b480f740074..0000000000000000000000000000000000000000
+index 84c5c6ad7118ca696f567e1ea87003427e2d9a57..0000000000000000000000000000000000000000
 diff --git a/cli/index.js.map b/cli/index.js.map
 deleted file mode 100644
-index a45451252edeb6ac13f2d001e544a040376bea2e..0000000000000000000000000000000000000000
+index bdd79c3d98731c4314ebd5473733f77ec84b9de4..0000000000000000000000000000000000000000
 diff --git a/compiler/stencil.js.map b/compiler/stencil.js.map
 deleted file mode 100644
-index 925c5354a36311abb8ca704638ba1fe538bc4e67..0000000000000000000000000000000000000000
+index 3694b42755c30956dda1adb82bbd124e81a09d65..0000000000000000000000000000000000000000
 diff --git a/internal/stencil-public-runtime.d.ts b/internal/stencil-public-runtime.d.ts
-index 56db768bac4f56914a7f7167591e419d0044bade..a251cd52dbb159fd9e0b0db4f686e5d900ed2a72 100644
+index 10015f906225a54736a7174349f4c8db3a3ab078..d9d615538e1e80b69e82f6dd2cfadc97c084893d 100644
 --- a/internal/stencil-public-runtime.d.ts
 +++ b/internal/stencil-public-runtime.d.ts
 @@ -610,7 +610,7 @@ export declare namespace JSXBase {
@@ -20,7 +20,7 @@ index 56db768bac4f56914a7f7167591e419d0044bade..a251cd52dbb159fd9e0b0db4f686e5d9
          datalist: JSXBase.HTMLAttributes<HTMLDataListElement>;
          dd: JSXBase.HTMLAttributes;
          del: JSXBase.DelHTMLAttributes<HTMLModElement>;
-@@ -821,6 +821,9 @@ export declare namespace JSXBase {
+@@ -824,6 +824,9 @@ export declare namespace JSXBase {
      interface ColgroupHTMLAttributes<T> extends HTMLAttributes<T> {
          span?: number;
      }
@@ -30,19 +30,11 @@ index 56db768bac4f56914a7f7167591e419d0044bade..a251cd52dbb159fd9e0b0db4f686e5d9
      interface DetailsHTMLAttributes<T> extends HTMLAttributes<T> {
          open?: boolean;
          onToggle?: (event: Event) => void;
-@@ -1221,6 +1224,7 @@ export declare namespace JSXBase {
-         draggable?: boolean;
-         hidden?: boolean;
-         id?: string;
-+        inert?: boolean;
-         lang?: string;
-         spellcheck?: 'true' | 'false' | any;
-         style?: {
-@@ -1229,6 +1233,7 @@ export declare namespace JSXBase {
+@@ -1238,6 +1241,7 @@ export declare namespace JSXBase {
          tabIndex?: number;
          tabindex?: number | string;
          title?: string;
 +        translate?: string;
+         popover?: string | null;
          inputMode?: string;
          inputmode?: string;
-         enterKeyHint?: string;
