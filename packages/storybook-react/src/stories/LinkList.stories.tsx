@@ -1,33 +1,21 @@
-/* @license CC0-1.0 */
-
 import { Meta, StoryObj } from '@storybook/react';
-import { LinkList } from '@utrecht/component-library-react';
+import { LinkList, LinkListLink } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/link-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/link-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import { UtrechtIconChevronRight, UtrechtIconHuisEnOmgeving } from '@utrecht/web-component-library-react';
 import React from 'react';
-import { designTokenStory } from './design-token-story';
+import { designTokenStory } from './util';
 
 const meta = {
-  title: 'CSS Component/Link list',
-  id: 'css-link-list',
+  title: 'React Component/Link list',
+  id: 'react-link-list',
   component: LinkList,
-  argTypes: {
-    children: {},
-    icon: {},
-    links: {
-      description: 'Links',
-    },
-  },
   args: {
-    links: [],
+    children: '',
   },
   parameters: {
     tokensPrefix: 'utrecht-link-list',
-    status: {
-      type: 'WORK IN PROGRESS',
-    },
     tokens,
     tokensDefinition,
     docs: {
@@ -39,42 +27,23 @@ const meta = {
 } satisfies Meta<typeof LinkList>;
 
 export default meta;
-
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    icon: () => <UtrechtIconChevronRight />,
-    links: [
-      { href: '#', children: 'Link 1 with so much content wow look how long!' },
-      { href: '#', children: 'Link 2' },
-      { href: '#', children: 'Link 3' },
-    ],
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: 'The CSS code is currently very specific to Utrecht, and has no white label design tokens yet.',
-      },
-    },
-  },
-};
-
-export const ColumnWidth: Story = {
-  args: {
-    icon: () => <UtrechtIconChevronRight />,
-    links: [
-      {
-        href: '#',
-        children: (
-          <>
-            Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
-          </>
-        ),
-      },
-      { href: '#', children: 'Link 2' },
-      { href: '#', children: 'Link 3' },
-    ],
+    children: (
+      <>
+        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+          Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+        </LinkListLink>
+        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+          Link 2
+        </LinkListLink>
+        <LinkListLink href="#" icon={<UtrechtIconChevronRight />}>
+          Link 3
+        </LinkListLink>
+      </>
+    ),
   },
   parameters: {
     docs: {
@@ -84,6 +53,32 @@ export const ColumnWidth: Story = {
     },
   },
   decorators: [(Story) => <div style={{ inlineSize: '20em' }}>{Story()}</div>],
+};
+
+export const LinksProperty: Story = {
+  args: {
+    icon: () => <UtrechtIconChevronRight />,
+    links: [
+      { href: '#', icon: <UtrechtIconHuisEnOmgeving />, children: 'Custom icon' },
+      {
+        href: '#',
+        children: (
+          <>
+            Learn about <i lang="fr">joi de vivre</i>, an essential foreign phrase!
+          </>
+        ),
+      },
+      { href: '#', children: 'Link 3' },
+    ],
+  },
+  name: 'Links property',
+  parameters: {
+    docs: {
+      description: {
+        story: 'The CSS code is currently very specific to Utrecht, and has no white label design tokens yet.',
+      },
+    },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
