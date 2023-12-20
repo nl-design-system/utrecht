@@ -1,6 +1,8 @@
 /* eslint-env node */
 
 const cloneDeepWith = require('lodash.clonedeepwith');
+const lightCodeTheme = require('prism-react-renderer').themes.github;
+const darkCodeTheme = require('prism-react-renderer').themes.vsDark;
 const { resolve } = require('url');
 
 const baseUrl = process.env['BASE_URL'] ? process.env['BASE_URL'] : '/';
@@ -77,7 +79,8 @@ module.exports = {
         },
       ],
       prism: {
-        theme: require('prism-react-renderer/themes/github'),
+        theme: lightCodeTheme,
+        darkTheme: darkCodeTheme,
       },
       navbar,
       tableOfContents: {
