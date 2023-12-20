@@ -828,7 +828,19 @@ declare global {
         prototype: HTMLUtrechtBreadcrumbNavElement;
         new (): HTMLUtrechtBreadcrumbNavElement;
     };
+    interface HTMLUtrechtButtonElementEventMap {
+        "utrechtRequestReset": any;
+        "utrechtRequestSubmit": any;
+    }
     interface HTMLUtrechtButtonElement extends Components.UtrechtButton, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtButtonElementEventMap>(type: K, listener: (this: HTMLUtrechtButtonElement, ev: UtrechtButtonCustomEvent<HTMLUtrechtButtonElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtButtonElementEventMap>(type: K, listener: (this: HTMLUtrechtButtonElement, ev: UtrechtButtonCustomEvent<HTMLUtrechtButtonElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtButtonElement: {
         prototype: HTMLUtrechtButtonElement;
@@ -846,7 +858,21 @@ declare global {
         prototype: HTMLUtrechtButtonLinkElement;
         new (): HTMLUtrechtButtonLinkElement;
     };
+    interface HTMLUtrechtCheckboxElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtCheckboxElement extends Components.UtrechtCheckbox, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtCheckboxElementEventMap>(type: K, listener: (this: HTMLUtrechtCheckboxElement, ev: UtrechtCheckboxCustomEvent<HTMLUtrechtCheckboxElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtCheckboxElementEventMap>(type: K, listener: (this: HTMLUtrechtCheckboxElement, ev: UtrechtCheckboxCustomEvent<HTMLUtrechtCheckboxElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtCheckboxElement: {
         prototype: HTMLUtrechtCheckboxElement;
@@ -972,7 +998,21 @@ declare global {
         prototype: HTMLUtrechtFormElement;
         new (): HTMLUtrechtFormElement;
     };
+    interface HTMLUtrechtFormFieldCheckboxElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtFormFieldCheckboxElement extends Components.UtrechtFormFieldCheckbox, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtFormFieldCheckboxElementEventMap>(type: K, listener: (this: HTMLUtrechtFormFieldCheckboxElement, ev: UtrechtFormFieldCheckboxCustomEvent<HTMLUtrechtFormFieldCheckboxElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtFormFieldCheckboxElementEventMap>(type: K, listener: (this: HTMLUtrechtFormFieldCheckboxElement, ev: UtrechtFormFieldCheckboxCustomEvent<HTMLUtrechtFormFieldCheckboxElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtFormFieldCheckboxElement: {
         prototype: HTMLUtrechtFormFieldCheckboxElement;
@@ -990,19 +1030,61 @@ declare global {
         prototype: HTMLUtrechtFormFieldErrorMessageElement;
         new (): HTMLUtrechtFormFieldErrorMessageElement;
     };
+    interface HTMLUtrechtFormFieldTextareaElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtFormFieldTextareaElement extends Components.UtrechtFormFieldTextarea, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtFormFieldTextareaElementEventMap>(type: K, listener: (this: HTMLUtrechtFormFieldTextareaElement, ev: UtrechtFormFieldTextareaCustomEvent<HTMLUtrechtFormFieldTextareaElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtFormFieldTextareaElementEventMap>(type: K, listener: (this: HTMLUtrechtFormFieldTextareaElement, ev: UtrechtFormFieldTextareaCustomEvent<HTMLUtrechtFormFieldTextareaElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtFormFieldTextareaElement: {
         prototype: HTMLUtrechtFormFieldTextareaElement;
         new (): HTMLUtrechtFormFieldTextareaElement;
     };
+    interface HTMLUtrechtFormFieldTextboxElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtFormFieldTextboxElement extends Components.UtrechtFormFieldTextbox, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtFormFieldTextboxElementEventMap>(type: K, listener: (this: HTMLUtrechtFormFieldTextboxElement, ev: UtrechtFormFieldTextboxCustomEvent<HTMLUtrechtFormFieldTextboxElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtFormFieldTextboxElementEventMap>(type: K, listener: (this: HTMLUtrechtFormFieldTextboxElement, ev: UtrechtFormFieldTextboxCustomEvent<HTMLUtrechtFormFieldTextboxElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtFormFieldTextboxElement: {
         prototype: HTMLUtrechtFormFieldTextboxElement;
         new (): HTMLUtrechtFormFieldTextboxElement;
     };
+    interface HTMLUtrechtFormToggleElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtFormToggleElement extends Components.UtrechtFormToggle, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtFormToggleElementEventMap>(type: K, listener: (this: HTMLUtrechtFormToggleElement, ev: UtrechtFormToggleCustomEvent<HTMLUtrechtFormToggleElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtFormToggleElementEventMap>(type: K, listener: (this: HTMLUtrechtFormToggleElement, ev: UtrechtFormToggleCustomEvent<HTMLUtrechtFormToggleElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtFormToggleElement: {
         prototype: HTMLUtrechtFormToggleElement;
@@ -2500,13 +2582,41 @@ declare global {
         prototype: HTMLUtrechtTableRowElement;
         new (): HTMLUtrechtTableRowElement;
     };
+    interface HTMLUtrechtTextareaElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtTextareaElement extends Components.UtrechtTextarea, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtTextareaElementEventMap>(type: K, listener: (this: HTMLUtrechtTextareaElement, ev: UtrechtTextareaCustomEvent<HTMLUtrechtTextareaElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtTextareaElementEventMap>(type: K, listener: (this: HTMLUtrechtTextareaElement, ev: UtrechtTextareaCustomEvent<HTMLUtrechtTextareaElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtTextareaElement: {
         prototype: HTMLUtrechtTextareaElement;
         new (): HTMLUtrechtTextareaElement;
     };
+    interface HTMLUtrechtTextboxElementEventMap {
+        "utrechtBlur": any;
+        "utrechtChange": any;
+        "utrechtFocus": any;
+        "utrechtInput": any;
+    }
     interface HTMLUtrechtTextboxElement extends Components.UtrechtTextbox, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLUtrechtTextboxElementEventMap>(type: K, listener: (this: HTMLUtrechtTextboxElement, ev: UtrechtTextboxCustomEvent<HTMLUtrechtTextboxElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLUtrechtTextboxElementEventMap>(type: K, listener: (this: HTMLUtrechtTextboxElement, ev: UtrechtTextboxCustomEvent<HTMLUtrechtTextboxElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
     }
     var HTMLUtrechtTextboxElement: {
         prototype: HTMLUtrechtTextboxElement;
