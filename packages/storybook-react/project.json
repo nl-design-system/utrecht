@@ -1,6 +1,6 @@
 {
+  "name": "storybook-react",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "{workspaceRoot}/packages/storybook-react",
   "sourceRoot": "{projectRoot}",
   "projectType": "application",
   "targets": {
@@ -15,7 +15,7 @@
       "dependsOn": ["^build"]
     },
     "serve": {
-      "executor": "@nrwl/web:file-server",
+      "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "packages-storybook-react:build",
         "port": 7008

@@ -29,10 +29,9 @@
     "@lerna-lite/cli": "3.1.0",
     "@nrwl/cli": "15.9.7",
     "@nrwl/nx-cloud": "15.3.5",
-    "@nrwl/web": "15.9.7",
     "@nrwl/workspace": "15.9.7",
-    "@typescript-eslint/eslint-plugin": "6.14.0",
-    "@typescript-eslint/parser": "6.14.0",
+    "@typescript-eslint/eslint-plugin": "6.15.0",
+    "@typescript-eslint/parser": "6.15.0",
     "eslint": "8.56.0",
     "eslint-config-prettier": "9.1.0",
     "eslint-plugin-import": "2.29.1",
@@ -55,7 +54,8 @@
     "stylelint": "16.0.2",
     "stylelint-config-standard-scss": "12.0.0",
     "stylelint-order": "6.0.4",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "@nx/web": "16.10.0"
   },
   "scripts": {
     "build": "npm run nx-build -- --skip-nx-cache",

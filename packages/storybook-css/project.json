@@ -1,6 +1,6 @@
 {
+  "name": "storybook-css",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "{workspaceRoot}/packages/storybook-css",
   "sourceRoot": "{projectRoot}",
   "projectType": "application",
   "targets": {
@@ -15,7 +15,7 @@
       "dependsOn": ["^build"]
     },
     "serve": {
-      "executor": "@nrwl/web:file-server",
+      "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "packages-storybook:build",
         "port": 7006

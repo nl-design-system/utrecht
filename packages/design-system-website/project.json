@@ -1,6 +1,6 @@
 {
+  "name": "design-system-website",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "root": "{workspaceRoot}/packages/design-system-website",
   "sourceRoot": "{projectRoot}",
   "projectType": "application",
   "targets": {
@@ -15,7 +15,7 @@
       "dependsOn": ["^build"]
     },
     "serve": {
-      "executor": "@nrwl/web:file-server",
+      "executor": "@nx/web:file-server",
       "options": {
         "buildTarget": "packages-design-system-website:build",
         "port": 8080
