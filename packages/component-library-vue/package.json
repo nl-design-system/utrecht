@@ -80,6 +80,7 @@
   "scripts": {
     "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
     "clean": "rimraf dist/",
+    "lint": "tsc --noEmit --lib ES2020,DOM",
     "lint:typescript": "tsc --noEmit --project tsconfig.json",
     "start": "npx http-server dist/",
     "storybook": "storybook dev --config-dir config/ --port 6011"
