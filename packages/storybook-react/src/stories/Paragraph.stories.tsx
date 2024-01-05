@@ -1,6 +1,6 @@
 import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
 import { Meta, StoryObj } from '@storybook/react';
-import { Paragraph } from '@utrecht/component-library-react/src/css-module/index';
+import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';

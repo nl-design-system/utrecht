@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { PreHeading } from '@utrecht/component-library-react/src/css-module/index';
+import { PreHeading } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/pre-heading/README.md?raw';
 import tokensDefinition from '@utrecht/components/pre-heading/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

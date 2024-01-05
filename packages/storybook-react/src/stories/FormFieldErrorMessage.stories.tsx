@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Code, FormFieldErrorMessage, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
+import { Code, FormFieldErrorMessage, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/form-field-error-message/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-field-error-message/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

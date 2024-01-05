@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
-import type { DrawerProps } from '@utrecht/component-library-react/src';
+import type { DrawerProps } from '@utrecht/component-library-react';
 import {
   Button,
   ButtonGroup,
   Drawer,
   Paragraph,
   PrimaryActionButton,
-} from '@utrecht/component-library-react/src/css-module';
+} from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/drawer/README.md?raw';
 import tokensDefinition from '@utrecht/components/drawer/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

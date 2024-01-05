@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Mark } from '@utrecht/component-library-react/src/css-module/index';
+import { Mark } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/mark/README.md?raw';
 import tokensDefinition from '@utrecht/components/mark/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

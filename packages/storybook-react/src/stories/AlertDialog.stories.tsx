@@ -1,12 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
-import type { AlertDialogProps } from '@utrecht/component-library-react/src';
+import type { AlertDialogProps } from '@utrecht/component-library-react';
 import {
   AlertDialog,
   Button,
   ButtonGroup,
   Paragraph,
   PrimaryActionButton,
-} from '@utrecht/component-library-react/src/css-module';
+} from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/alert-dialog/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

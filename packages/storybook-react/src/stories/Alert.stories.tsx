@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/src/css-module';
+import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/alert/README.md?raw';
 import tokensDefinition from '@utrecht/components/alert/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Separator } from '@utrecht/component-library-react/src/css-module/index';
+import { Separator } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/separator/README.md?raw';
 import tokensDefinition from '@utrecht/components/separator/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

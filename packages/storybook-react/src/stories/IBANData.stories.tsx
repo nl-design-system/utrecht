@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { IBANData, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
+import { IBANData, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/iban-data/README.md?raw';
 import tokensDefinition from '@utrecht/components/iban-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
