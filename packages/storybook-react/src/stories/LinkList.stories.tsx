@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { LinkList, LinkListLink } from '@utrecht/component-library-react/src/css-module/index';
+import { LinkList, LinkListLink } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/link-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/link-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

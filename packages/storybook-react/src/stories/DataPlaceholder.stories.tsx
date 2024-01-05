@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import { DataPlaceholder } from '@utrecht/component-library-react/src/css-module/DataPlaceholder';
+import { DataPlaceholder } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/data-placeholder/README.md?raw';
 import tokensDefinition from '@utrecht/components/data-placeholder/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

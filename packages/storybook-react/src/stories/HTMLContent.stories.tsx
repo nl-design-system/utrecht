@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { HTMLContent } from '@utrecht/component-library-react/src/css-module/index';
+import { HTMLContent } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/html-content/README.md?raw';
 
 const meta = {

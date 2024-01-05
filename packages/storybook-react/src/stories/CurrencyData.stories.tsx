@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { CurrencyData, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
+import { CurrencyData, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/currency-data/README.md?raw';
 import tokensDefinition from '@utrecht/components/currency-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

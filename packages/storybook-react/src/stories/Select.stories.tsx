@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Select, SelectOption } from '@utrecht/component-library-react/src/css-module/index';
+import { Select, SelectOption } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/select/README.md?raw';
 import tokensDefinition from '@utrecht/components/select/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

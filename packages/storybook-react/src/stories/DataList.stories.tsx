@@ -1,10 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import {
-  DataList,
-  DataListItem,
-  DataListKey,
-  DataListValue,
-} from '@utrecht/component-library-react/src/css-module/index';
+import { DataList, DataListItem, DataListKey, DataListValue } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/data-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/data-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';

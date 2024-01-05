@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { AccordionProvider } from '@utrecht/component-library-react/src/css-module/Accordion';
+import { AccordionProvider } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import tokensDefinition from '@utrecht/components/accordion/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
