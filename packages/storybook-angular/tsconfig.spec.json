@@ -1,0 +1,11 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "module": "CommonJs",
+    "types": ["jest", "@testing-library/jest-dom"],
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true
+  },
+  "include": ["./setup-jest.ts", "src/**/*.spec.ts", "src/**/*.d.ts"],
+  "exclude": ["**/node_modules/*"]
+}
