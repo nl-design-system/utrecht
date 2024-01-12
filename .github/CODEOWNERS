@@ -1,3 +1,5 @@
 # 3rd-party scripts must never be installed without security review
-package-lock.json @nl-design-system/sysadmin
-yarn.lock @nl-design-system/sysadmin
+
+pnpm.lock @nl-design-system/kernteam-maintainer
+package-lock.json @nl-design-system/kernteam-maintainer
+yarn.lock @nl-design-system/kernteam-maintainer
