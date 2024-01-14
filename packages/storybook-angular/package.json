@@ -55,7 +55,6 @@
     "@storybook/theming": "7.6.4",
     "@types/node": "18.19.3",
     "@types/react": "18.2.45",
-    "@utrecht/component-library-angular": "workspace:*",
     "@utrecht/component-library-css": "workspace:*",
     "@utrecht/components": "workspace:*",
     "@utrecht/design-tokens": "workspace:*",
@@ -75,5 +74,8 @@
     "clean": "rimraf .angular/ dist/ tmp/",
     "build": "ng run storybook-angular:build-storybook",
     "storybook": "ng run storybook-angular:storybook --port 6009"
+  },
+  "dependencies": {
+    "@utrecht/component-library-angular": "1.0.2-alpha.14"
   }
 }
