@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.8.2':
     hash: a5iuwt5l2qu5cukh7ozwyzp4ky
@@ -115,8 +119,8 @@ importers:
   components:
     dependencies:
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
     devDependencies:
       '@babel/core':
         specifier: 7.23.6
@@ -309,8 +313,8 @@ importers:
   packages/component-library-react:
     dependencies:
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       lodash.chunk:
         specifier: 4.2.0
         version: 4.2.0
@@ -610,8 +614,8 @@ importers:
         specifier: workspace:*
         version: link:../web-component-library-react
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -790,8 +794,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -1153,8 +1157,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -1354,8 +1358,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -1534,8 +1538,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.20)(webpack@5.89.0)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       css-loader:
         specifier: 6.8.1
         version: 6.8.1(webpack@5.89.0)
@@ -1834,8 +1838,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -2068,8 +2072,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.0
+        version: 2.1.0
       node-sass-package-importer:
         specifier: 5.3.3
         version: 5.3.3
@@ -7550,7 +7554,7 @@ packages:
       '@docusaurus/utils-common': 3.0.1(@docusaurus/types@3.0.1)
       '@docusaurus/utils-validation': 3.0.1(@docusaurus/types@3.0.1)
       '@mdx-js/react': 3.0.0(@types/react@18.2.45)(react@18.2.0)
-      clsx: 2.0.0
+      clsx: 2.1.0
       copy-text-to-clipboard: 3.2.0
       infima: 0.2.0-alpha.43
       lodash: 4.17.21
@@ -7600,7 +7604,7 @@ packages:
       '@types/history': 4.7.11
       '@types/react': 18.2.45
       '@types/react-router-config': 5.0.11
-      clsx: 2.0.0
+      clsx: 2.1.0
       parse-numeric-range: 1.3.0
       prism-react-renderer: 2.3.1(react@18.2.0)
       react: 18.2.0
@@ -7643,7 +7647,7 @@ packages:
       '@docusaurus/utils-validation': 3.0.1(@docusaurus/types@3.0.1)
       algoliasearch: 4.21.1
       algoliasearch-helper: 3.16.0(algoliasearch@4.21.1)
-      clsx: 2.0.0
+      clsx: 2.1.0
       eta: 2.2.0
       fs-extra: 11.2.0
       lodash: 4.17.21
@@ -15218,7 +15222,7 @@ packages:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 1.8.25
+      vue-component-type-helpers: 1.8.27
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -19584,11 +19588,11 @@ packages:
   /clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
-
-  /clsx@2.0.0:
-    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
-    engines: {node: '>=6'}
     dev: true
+
+  /clsx@2.1.0:
+    resolution: {integrity: sha512-m3iNNWpd9rl3jvvcBnu70ylMdrXt8Vlq4HYadnU5fwcOtvkSQWPmj7amUcDT2qYI7risszBjI5AUIUox9D16pg==}
+    engines: {node: '>=6'}
 
   /cmd-shim@6.0.2:
     resolution: {integrity: sha512-+FFYbB0YLaAkhkcrjkyNLYDiOsFSfRjwjY19LXk/psmMx1z00xlCv7hhQoTGXXIKi+YXHL/iiFo8NqMVQX9nOw==}
@@ -33284,7 +33288,7 @@ packages:
       react: '>=16.0.0'
     dependencies:
       '@types/prismjs': 1.26.3
-      clsx: 2.0.0
+      clsx: 2.1.0
       react: 18.2.0
     dev: true
 
@@ -39272,6 +39276,10 @@ packages:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
     dev: true
 
+  /vue-component-type-helpers@1.8.27:
+    resolution: {integrity: sha512-0vOfAtI67UjeO1G6UiX5Kd76CqaQ67wrRZiOe7UAb9Jm6GzlUr/fC7CV90XfwapJRjpCMaZFhv1V0ajWRmE9Dg==}
+    dev: true
+
   /vue-docgen-api@4.75.1(vue@3.3.11):
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
     peerDependencies:
@@ -40558,7 +40566,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
