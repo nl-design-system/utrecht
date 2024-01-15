@@ -432,6 +432,8 @@ export namespace Components {
     }
     interface UtrechtIconNieuwHuis {
     }
+    interface UtrechtIconNieuwsbrieven {
+    }
     interface UtrechtIconNummerbord {
     }
     interface UtrechtIconOmHetHuis {
@@ -1864,6 +1866,12 @@ declare global {
         prototype: HTMLUtrechtIconNieuwHuisElement;
         new (): HTMLUtrechtIconNieuwHuisElement;
     };
+    interface HTMLUtrechtIconNieuwsbrievenElement extends Components.UtrechtIconNieuwsbrieven, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconNieuwsbrievenElement: {
+        prototype: HTMLUtrechtIconNieuwsbrievenElement;
+        new (): HTMLUtrechtIconNieuwsbrievenElement;
+    };
     interface HTMLUtrechtIconNummerbordElement extends Components.UtrechtIconNummerbord, HTMLStencilElement {
     }
     var HTMLUtrechtIconNummerbordElement: {
@@ -2796,6 +2804,7 @@ declare global {
         "utrecht-icon-mobiliteit": HTMLUtrechtIconMobiliteitElement;
         "utrecht-icon-natuur": HTMLUtrechtIconNatuurElement;
         "utrecht-icon-nieuw-huis": HTMLUtrechtIconNieuwHuisElement;
+        "utrecht-icon-nieuwsbrieven": HTMLUtrechtIconNieuwsbrievenElement;
         "utrecht-icon-nummerbord": HTMLUtrechtIconNummerbordElement;
         "utrecht-icon-om-het-huis": HTMLUtrechtIconOmHetHuisElement;
         "utrecht-icon-omgeving": HTMLUtrechtIconOmgevingElement;
@@ -3365,6 +3374,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconNieuwHuis {
     }
+    interface UtrechtIconNieuwsbrieven {
+    }
     interface UtrechtIconNummerbord {
     }
     interface UtrechtIconOmHetHuis {
@@ -3855,6 +3866,7 @@ declare namespace LocalJSX {
         "utrecht-icon-mobiliteit": UtrechtIconMobiliteit;
         "utrecht-icon-natuur": UtrechtIconNatuur;
         "utrecht-icon-nieuw-huis": UtrechtIconNieuwHuis;
+        "utrecht-icon-nieuwsbrieven": UtrechtIconNieuwsbrieven;
         "utrecht-icon-nummerbord": UtrechtIconNummerbord;
         "utrecht-icon-om-het-huis": UtrechtIconOmHetHuis;
         "utrecht-icon-omgeving": UtrechtIconOmgeving;
@@ -4148,6 +4160,7 @@ declare module "@stencil/core" {
             "utrecht-icon-mobiliteit": LocalJSX.UtrechtIconMobiliteit & JSXBase.HTMLAttributes<HTMLUtrechtIconMobiliteitElement>;
             "utrecht-icon-natuur": LocalJSX.UtrechtIconNatuur & JSXBase.HTMLAttributes<HTMLUtrechtIconNatuurElement>;
             "utrecht-icon-nieuw-huis": LocalJSX.UtrechtIconNieuwHuis & JSXBase.HTMLAttributes<HTMLUtrechtIconNieuwHuisElement>;
+            "utrecht-icon-nieuwsbrieven": LocalJSX.UtrechtIconNieuwsbrieven & JSXBase.HTMLAttributes<HTMLUtrechtIconNieuwsbrievenElement>;
             "utrecht-icon-nummerbord": LocalJSX.UtrechtIconNummerbord & JSXBase.HTMLAttributes<HTMLUtrechtIconNummerbordElement>;
             "utrecht-icon-om-het-huis": LocalJSX.UtrechtIconOmHetHuis & JSXBase.HTMLAttributes<HTMLUtrechtIconOmHetHuisElement>;
             "utrecht-icon-omgeving": LocalJSX.UtrechtIconOmgeving & JSXBase.HTMLAttributes<HTMLUtrechtIconOmgevingElement>;
