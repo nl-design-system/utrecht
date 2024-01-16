@@ -1,5 +1,4 @@
-export default {
-  sourceType: 'module',
+module.exports = {
   presets: [
     [
       '@babel/preset-env',
