@@ -1,10 +1,11 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: '[utrecht-form-label]',
   templateUrl: 'index.html',
   styleUrls: ['index.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  encapsulation: ViewEncapsulation.None,
   inputs: ['disabled', 'checked', 'type'],
   host: {
     '[class.utrecht-form-label]': 'true',
