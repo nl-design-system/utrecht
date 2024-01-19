@@ -42,6 +42,7 @@
 .utrecht-link-list__item {
   --utrecht-icon-size: var(--utrecht-link-list-icon-size);
   --utrecht-link-icon-size: var(--utrecht-link-list-icon-size);
+  --utrecht-icon-inset-block-start: var(--utrecht-link-list-icon-inset-block-start);
 
   display: block;
   font-weight: var(--utrecht-link-list-item-font-weight);
