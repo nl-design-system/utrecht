@@ -21,7 +21,6 @@
     "sass": "1.69.5"
   },
   "scripts": {
-    "prebuild": "npm run clean",
     "build": "sass src/:dist/ --load-path=../../node_modules/ --no-source-map",
     "clean": "rimraf dist/"
   },

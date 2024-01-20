@@ -17,7 +17,6 @@
   },
   "sideEffects": false,
   "scripts": {
-    "prebuild": "npm run clean",
     "build": "pnpm run '/^build:.*/'",
     "build:rollup": "rollup --config rollup.config.mjs",
     "build:rollup-components": "rollup --config rollup-components.config.mjs",

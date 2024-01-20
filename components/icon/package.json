@@ -9,7 +9,6 @@
     "loader/"
   ],
   "scripts": {
-    "prebuild": "npm run clean",
     "build": "npm run build:svg && npm run build:components",
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../../packages/web-component-library-stencil/src/components/generated/",
     "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
