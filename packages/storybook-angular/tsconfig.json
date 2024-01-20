@@ -7,9 +7,11 @@
     "moduleResolution": "node",
     "paths": {
       "@utrecht/component-library-angular": ["../component-library-angular/src/public-api"]
-    }
+    },
+    "resolveJsonModule": true,
+    "target": "ES2022",
+    "useDefineForClassFields": false
   },
-  "exclude": ["**/node_modules/*", "src/test.ts", "src/**/*.spec.ts", "projects/**/*.spec.ts"],
-  "include": ["src/**/*", "../projects/**/*"],
-  "files": ["config/typings.d.ts"]
+  "exclude": ["**/node_modules/*", "src/test.ts", "src/**/*.spec.ts"],
+  "include": ["config/**/*", "config/**/*.ts", "src/**/*"]
 }
