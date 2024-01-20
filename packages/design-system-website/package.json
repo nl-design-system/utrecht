@@ -30,13 +30,13 @@
     "clean": "rimraf dist/",
     "build": "pnpm run clean && pnpm run '/^build:.*/'",
     "build:docusaurus": "cp -R ../docusaurus/build/ dist/",
-    "build:stencil": "rm -rf dist/stencil/ && cp -R ../web-component-library-stencil/www/ dist/stencil/",
-    "build:storybook": "rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/",
-    "build:storybook-angular": "rm -rf dist/storybook-angular/ && cp -R ../storybook-angular/dist/ dist/storybook-angular/",
-    "build:storybook-css": "rm -rf dist/storybook-css/ && cp -R ../storybook-css/dist/ dist/storybook-css/",
-    "build:storybook-html": "rm -rf dist/storybook-html/ && cp -R ../storybook-html/dist/ dist/storybook-html/",
-    "build:storybook-react": "rm -rf dist/storybook-react/ && cp -R ../storybook-react/dist/ dist/storybook-react/",
-    "build:storybook-vue": "rm -rf dist/storybook-vue/ && cp -R ../storybook-vue/dist/ dist/storybook-vue/",
-    "build:storybook-web-component": "rm -rf dist/storybook-web-component/ && cp -R ../storybook-web-component/dist/ dist/storybook-web-component/"
+    "build:stencil": "rimraf dist/stencil/ && cp -R ../web-component-library-stencil/www/ dist/stencil/",
+    "build:storybook": "rimraf dist/storybook/ && ls -la dist/ && cp -R ../storybook/dist dist/storybook/",
+    "build:storybook-angular": "rimraf dist/storybook-angular/ && cp -R ../storybook-angular/dist dist/storybook-angular/",
+    "build:storybook-css": "rimraf dist/storybook-css/ && cp -R ../storybook-css/dist dist/storybook-css/",
+    "build:storybook-html": "rimraf dist/storybook-html/ && cp -R ../storybook-html/dist dist/storybook-html/",
+    "build:storybook-react": "rimraf dist/storybook-react/ && cp -R ../storybook-react/dist dist/storybook-react/",
+    "build:storybook-vue": "rimraf dist/storybook-vue/ && cp -R ../storybook-vue/dist dist/storybook-vue/",
+    "build:storybook-web-component": "rimraf dist/storybook-web-component/ && cp -R ../storybook-web-component/dist dist/storybook-web-component/"
   }
 }
