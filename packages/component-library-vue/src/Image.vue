@@ -1,16 +1,16 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtImage",
-    props: {
-      photo: {
-        type: Boolean,
-        default: false,
-        required: false,
-      },
+export default defineComponent({
+  name: "UtrechtImage",
+  props: {
+    photo: {
+      type: Boolean,
+      default: false,
+      required: false,
     },
-  });
+  },
+});
 </script>
 
 <template>

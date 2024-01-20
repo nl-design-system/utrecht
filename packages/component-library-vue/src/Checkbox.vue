@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
-  import { useModelWrapper } from "./helpers/modelWrapper";
-  export default defineComponent({
-    name: "UtrechtCheckbox",
-    props: {
-      appearance: { type: String, required: false, default: "custom" },
-      invalid: { type: Boolean, required: false },
-      modelValue: { type: [String, Number, Boolean], required: false, default: "" },
-    },
-    setup(props, { emit }) {
-      return {
-        value: useModelWrapper(props, emit),
-      };
-    },
-  });
+import { defineComponent } from "vue";
+import { useModelWrapper } from "./helpers/modelWrapper";
+export default defineComponent({
+  name: "UtrechtCheckbox",
+  props: {
+    appearance: { type: String, required: false, default: "custom" },
+    invalid: { type: Boolean, required: false },
+    modelValue: { type: [String, Number, Boolean], required: false, default: "" },
+  },
+  setup(props, { emit }) {
+    return {
+      value: useModelWrapper(props, emit),
+    };
+  },
+});
 </script>
 
 <template>

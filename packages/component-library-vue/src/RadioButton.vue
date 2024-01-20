@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
-  import { useModelWrapper } from "./helpers/modelWrapper";
+import { defineComponent } from "vue";
+import { useModelWrapper } from "./helpers/modelWrapper";
 
-  export default defineComponent({
-    name: "UtrechtRadioButton",
-    props: {
-      invalid: { type: Boolean, required: false },
-      modelValue: { type: [String, Number, Boolean], required: false, default: "" },
-    },
-    setup(props, { emit }) {
-      return {
-        value: useModelWrapper(props, emit),
-      };
-    },
-  });
+export default defineComponent({
+  name: "UtrechtRadioButton",
+  props: {
+    invalid: { type: Boolean, required: false },
+    modelValue: { type: [String, Number, Boolean], required: false, default: "" },
+  },
+  setup(props, { emit }) {
+    return {
+      value: useModelWrapper(props, emit),
+    };
+  },
+});
 </script>
 
 <template>
@@ -21,11 +21,7 @@
     v-model="value"
     type="radio"
     :aria-invalid="invalid || undefined"
-    :class="[
-      'utrecht-radio-button',
-      'utrecht-radio-button--html-input',
-      { 'utrecht-radio-button--invalid': invalid }
-    ]"
+    :class="['utrecht-radio-button', 'utrecht-radio-button--html-input', { 'utrecht-radio-button--invalid': invalid }]"
   />
 </template>
 

@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtTable",
-  });
+export default defineComponent({
+  name: "UtrechtTable",
+});
 </script>
 
 <template>

@@ -1,12 +1,12 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtBadgeCounter",
-    props: {
-      value: { type: [Number, String], required: false, default: undefined },
-    },
-  });
+export default defineComponent({
+  name: "UtrechtBadgeCounter",
+  props: {
+    value: { type: [Number, String], required: false, default: undefined },
+  },
+});
 </script>
 
 <template>

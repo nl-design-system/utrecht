@@ -1,14 +1,14 @@
 <script lang="ts">
-  import { defineComponent, type PropType } from "vue";
+import { defineComponent, type PropType } from "vue";
 
-  type FormFieldTypes = "checkbox" | "radio" | "text" | undefined;
-  export default defineComponent({
-    name: "UtrechtFormField",
-    props: {
-      invalid: { type: Boolean, required: false, default: false },
-      type: { type: String as PropType<FormFieldTypes>, required: false, default: undefined },
-    },
-  });
+type FormFieldTypes = "checkbox" | "radio" | "text" | undefined;
+export default defineComponent({
+  name: "UtrechtFormField",
+  props: {
+    invalid: { type: Boolean, required: false, default: false },
+    type: { type: String as PropType<FormFieldTypes>, required: false, default: undefined },
+  },
+});
 </script>
 
 <template>

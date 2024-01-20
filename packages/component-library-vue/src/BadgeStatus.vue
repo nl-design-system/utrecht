@@ -1,33 +1,28 @@
 <script lang="ts">
-  import { defineComponent, type PropType } from "vue";
+import { defineComponent, type PropType } from "vue";
 
-  type StatusType =
-    | "danger"
-    | "warning"
-    | "safe"
-    | "neutral"
-    | "valid"
-    | "invalid"
-    | "error"
-    | "success"
-    | "active"
-    | "inactive"
-    | undefined;
-  export default defineComponent({
-    name: "UtrechtBadgeStatus",
-    props: {
-      status: { type: String as PropType<StatusType>, required: false, default: undefined },
-    },
-  });
+type StatusType =
+  | "danger"
+  | "warning"
+  | "safe"
+  | "neutral"
+  | "valid"
+  | "invalid"
+  | "error"
+  | "success"
+  | "active"
+  | "inactive"
+  | undefined;
+export default defineComponent({
+  name: "UtrechtBadgeStatus",
+  props: {
+    status: { type: String as PropType<StatusType>, required: false, default: undefined },
+  },
+});
 </script>
 
 <template>
-  <span
-    :class="[
-      {[`utrecht-badge-status--${status}`]: true},
-      'utrecht-badge-status'
-    ]"
-  >
+  <span :class="[{ [`utrecht-badge-status--${status}`]: true }, 'utrecht-badge-status']">
     <slot />
   </span>
 </template>

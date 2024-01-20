@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtOrderedList",
-  });
+export default defineComponent({
+  name: "UtrechtOrderedList",
+});
 </script>
 
 <template>

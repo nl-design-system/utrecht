@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtHeading5",
-  });
+export default defineComponent({
+  name: "UtrechtHeading5",
+});
 </script>
 
 <template>
