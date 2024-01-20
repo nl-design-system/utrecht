@@ -3,7 +3,6 @@
     {
       "files": ["*.js", "*.jsx", "*.mjs"],
       "options": {
-        "parser": "flow",
         "printWidth": 120,
         "trailingComma": "all",
         "tabWidth": 2,
@@ -13,7 +12,6 @@
     {
       "files": ["*.json"],
       "options": {
-        "parser": "json",
         "printWidth": 120,
         "tabWidth": 2
       }
@@ -29,7 +27,6 @@
     {
       "files": ["*.ts", "*.tsx"],
       "options": {
-        "parser": "typescript",
         "printWidth": 120,
         "trailingComma": "all",
         "tabWidth": 2,
@@ -39,14 +36,12 @@
     {
       "files": ["*.css", "*.scss"],
       "options": {
-        "parser": "css",
         "tabWidth": 2
       }
     },
     {
       "files": ["*.html", "*.vue"],
       "options": {
-        "parser": "html",
         "printWidth": 120,
         "tabWidth": 2
       }
