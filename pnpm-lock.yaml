@@ -81,9 +81,6 @@ importers:
       npm-package-json-lint:
         specifier: 6.4.0
         version: 6.4.0(typescript@4.9.5)
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       nx:
         specifier: 15.9.7
         version: 15.9.7
@@ -139,9 +136,6 @@ importers:
       html-react-parser:
         specifier: 3.0.16
         version: 3.0.16(react@18.2.0)
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -390,9 +384,6 @@ importers:
       next:
         specifier: 13.5.6
         version: 13.5.6(@babel/core@7.23.6)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.5)
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -504,9 +495,6 @@ importers:
       jsdom:
         specifier: 20.0.3
         version: 20.0.3
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       prettier:
         specifier: 2.8.8
         version: 2.8.8
@@ -1005,9 +993,6 @@ importers:
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -1683,9 +1668,6 @@ importers:
       '@vue/tsconfig':
         specifier: 0.1.3
         version: 0.1.3(@types/node@18.19.3)
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -2079,9 +2061,6 @@ importers:
       node-sass-package-importer:
         specifier: 5.3.3
         version: 5.3.3
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       rimraf:
         specifier: 3.0.2
         version: 3.0.2
@@ -2139,9 +2118,6 @@ importers:
       lodash.mergewith:
         specifier: 4.6.2
         version: 4.6.2
-      npm-run-all:
-        specifier: 4.1.5
-        version: 4.1.5
       regex-trie:
         specifier: 1.0.4
         version: 1.0.4
@@ -30671,11 +30647,6 @@ packages:
       map-or-similar: 1.5.0
     dev: true
 
-  /memorystream@0.3.1:
-    resolution: {integrity: sha512-S3UwM3yj5mtUSEfP41UZmt/0SCoVYUcU1rkXv+BQ5Ig8ndL4sPoJNBUJERafdPb5jjHJGuMgytgKvKIf58XNBw==}
-    engines: {node: '>= 0.10.0'}
-    dev: true
-
   /meow@6.1.1:
     resolution: {integrity: sha512-3YffViIt2QWgTy6Pale5QpopX/IvU3LPL03jOTqp6pGj3VjesdO/U8CuHMKpnQr4shCNCM5fd5XFFvIIl6JBHg==}
     engines: {node: '>=8'}
@@ -32681,22 +32652,6 @@ packages:
       - supports-color
     dev: true
 
-  /npm-run-all@4.1.5:
-    resolution: {integrity: sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ==}
-    engines: {node: '>= 4'}
-    hasBin: true
-    dependencies:
-      ansi-styles: 3.2.1
-      chalk: 2.4.2
-      cross-spawn: 6.0.5
-      memorystream: 0.3.1
-      minimatch: 3.1.2
-      pidtree: 0.3.1
-      read-pkg: 3.0.0
-      shell-quote: 1.8.1
-      string.prototype.padend: 3.1.5
-    dev: true
-
   /npm-run-path@2.0.2:
     resolution: {integrity: sha512-lJxZYlT4DW/bRUtFh1MQIWqmLwQfAxnqWG4HhEdjMlkrJYnJn0Jrr2u3mgxqaWsdiBc76TYkTG/mhrnYTuzfHw==}
     engines: {node: '>=4'}
@@ -33800,12 +33755,6 @@ packages:
   /picomatch@3.0.1:
     resolution: {integrity: sha512-I3EurrIQMlRc9IaAZnqRR044Phh2DXY+55o7uJ0V+hYZAcQYSuFWsc9q5PvyDHUSCe1Qxn/iBz+78s86zWnGag==}
     engines: {node: '>=10'}
-    dev: true
-
-  /pidtree@0.3.1:
-    resolution: {integrity: sha512-qQbW94hLHEqCg7nhby4yRC7G2+jYHY4Rguc2bjw7Uug4GIJuu1tvf2uHaZv5Q8zdt+WKJ6qK1FOI6amaWUo5FA==}
-    engines: {node: '>=0.10'}
-    hasBin: true
     dev: true
 
   /pidtree@0.6.0:
@@ -37914,15 +37863,6 @@ packages:
       regexp.prototype.flags: 1.5.1
       set-function-name: 2.0.1
       side-channel: 1.0.4
-    dev: true
-
-  /string.prototype.padend@3.1.5:
-    resolution: {integrity: sha512-DOB27b/2UTTD+4myKUFh+/fXWcu/UDyASIXfg+7VzoCNNGOfWvoyU/x5pvVHr++ztyt/oSYI1BcWBBG/hmlNjA==}
-    engines: {node: '>= 0.4'}
-    dependencies:
-      call-bind: 1.0.5
-      define-properties: 1.2.1
-      es-abstract: 1.22.3
     dev: true
 
   /string.prototype.trim@1.2.8:

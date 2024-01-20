@@ -28,7 +28,7 @@
   },
   "scripts": {
     "clean": "rimraf dist/",
-    "build": "npm-run-all clean build:**",
+    "build": "pnpm run clean && pnpm run '/^build:.*/'",
     "build:docusaurus": "cp -R ../docusaurus/build/ dist/",
     "build:stencil": "rm -rf dist/stencil/ && cp -R ../web-component-library-stencil/www/ dist/stencil/",
     "build:storybook": "rm -rf dist/storybook/ && cp -R ../storybook/dist/ dist/storybook/",
