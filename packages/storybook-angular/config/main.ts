@@ -1,5 +1,6 @@
-/* eslint-env node */
-module.exports = {
+import type { StorybookConfig } from '@storybook/angular';
+
+const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
   addons: [
     '@storybook/addon-a11y',
@@ -19,10 +20,7 @@ module.exports = {
     '@storybook/addon-jest',
   ],
   features: {
-    babelModeV7: true,
     buildStoriesJson: true,
-    previewMdx2: true,
-    storyStoreV7: false,
   },
   framework: {
     name: '@storybook/angular',
@@ -41,3 +39,5 @@ module.exports = {
     },
   }),
 };
+
+export default config;
