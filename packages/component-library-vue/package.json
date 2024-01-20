@@ -23,7 +23,7 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "build": "npm run build:vue && npm run build:test-results",
+    "build": "pnpm run build:vue && pnpm run build:test-results",
     "build:test-results": "jest --json --outputFile dist/.jest-test-results.json",
     "build:vue": "vue-tsc --noEmit && vite build",
     "lint": "pnpm run '/^lint:.*/'",

@@ -28,7 +28,7 @@
     "style-dictionary": "3.9.1"
   },
   "scripts": {
-    "build": "npm run build:style-dictionary && npm run build:scss",
+    "build": "pnpm run build:style-dictionary && pnpm run build:scss",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "pnpm run '/^build:style-dictionary:.*/'",
     "build:style-dictionary:default": "style-dictionary build --config src/style-dictionary-config.js",
