@@ -137,6 +137,10 @@ jobs:
         run: |
           pnpm run --if-present lint-build
 
+      - name: "Continuous Integration: test build"
+        run: |
+          pnpm run --if-present test-build
+
       - name: "Continuous Integration: Git status"
         shell: bash
         run: |
