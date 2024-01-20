@@ -1,9 +1,9 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtPageHeader",
-  });
+export default defineComponent({
+  name: "UtrechtPageHeader",
+});
 </script>
 
 <template>

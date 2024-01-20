@@ -1,51 +1,51 @@
 <script lang="ts">
-  import { defineComponent } from "vue";
+import { defineComponent } from "vue";
 
-  export default defineComponent({
-    name: "UtrechtFormFieldset",
-    props: {
-      describedby: {
-        type: String,
-        required: false,
-        default: undefined,
-      },
-      disabled: {
-        type: Boolean,
-        required: false,
-        default: false,
-      },
-      invalid: {
-        type: Boolean,
-        required: false,
-        default: false,
-      },
-      label: {
-        type: String,
-        required: false,
-        default: undefined,
-      },
-      labelledby: {
-        type: String,
-        required: false,
-        default: undefined,
-      },
-      role: {
-        type: String,
-        required: false,
-        default: null,
-      },
-      name: {
-        type: String,
-        required: false,
-        default: "",
-      },
-      form: {
-        type: String,
-        required: false,
-        default: null,
-      },
+export default defineComponent({
+  name: "UtrechtFormFieldset",
+  props: {
+    describedby: {
+      type: String,
+      required: false,
+      default: undefined,
     },
-  });
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    invalid: {
+      type: Boolean,
+      required: false,
+      default: false,
+    },
+    label: {
+      type: String,
+      required: false,
+      default: undefined,
+    },
+    labelledby: {
+      type: String,
+      required: false,
+      default: undefined,
+    },
+    role: {
+      type: String,
+      required: false,
+      default: null,
+    },
+    name: {
+      type: String,
+      required: false,
+      default: "",
+    },
+    form: {
+      type: String,
+      required: false,
+      default: null,
+    },
+  },
+});
 </script>
 
 <template>

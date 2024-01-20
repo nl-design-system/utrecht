@@ -1,27 +1,27 @@
 <script lang="ts">
-  import { defineComponent, ref } from "vue";
-  import type { PropType } from "vue";
+import { defineComponent, ref } from "vue";
+import type { PropType } from "vue";
 
-  export type AlertDialogType = "error" | "info" | "warning" | "ok";
+export type AlertDialogType = "error" | "info" | "warning" | "ok";
 
-  export default defineComponent({
-    name: "UtrechtAlertDialog",
-    props: {
-      icon: {
-        type: String,
-        default: null,
-      },
-      type: {
-        type: String as PropType<AlertDialogType>,
-        default: null,
-      },
+export default defineComponent({
+  name: "UtrechtAlertDialog",
+  props: {
+    icon: {
+      type: String,
+      default: null,
     },
-    setup(props): any {
-      // TODO: implement named slot for icon prop as soon as https://github.com/nl-design-system/utrecht/pull/1704 is merged
-      const dialogRef = ref<HTMLDialogElement | null>(null);
-      return { dialogRef, props };
+    type: {
+      type: String as PropType<AlertDialogType>,
+      default: null,
     },
-  });
+  },
+  setup(props): any {
+    // TODO: implement named slot for icon prop as soon as https://github.com/nl-design-system/utrecht/pull/1704 is merged
+    const dialogRef = ref<HTMLDialogElement | null>(null);
+    return { dialogRef, props };
+  },
+});
 </script>
 
 <template>

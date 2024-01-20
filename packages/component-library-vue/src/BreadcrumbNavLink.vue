@@ -1,19 +1,19 @@
 <script lang="ts">
-  import { defineComponent, getCurrentInstance, ref } from "vue";
-  import UtrechtLink from "./Link.vue";
-  import { useMicrodataItem, useMicrodataProp } from "./helpers/microdata";
+import { defineComponent, getCurrentInstance, ref } from "vue";
+import UtrechtLink from "./Link.vue";
+import { useMicrodataItem, useMicrodataProp } from "./helpers/microdata";
 
-  export default defineComponent({
-    name: "UtrechtBreadcrumbNavLink",
-    components: { UtrechtLink },
-    props: {
-      href: { type: String, required: true },
-      current: { type: Boolean, required: false, default: false },
-      rel: { type: String, required: false, default: "" },
-      index: { type: Number, required: false, default: undefined },
-    },
-    methods: { ref, useMicrodataProp, useMicrodataItem, getCurrentInstance },
-  });
+export default defineComponent({
+  name: "UtrechtBreadcrumbNavLink",
+  components: { UtrechtLink },
+  props: {
+    href: { type: String, required: true },
+    current: { type: Boolean, required: false, default: false },
+    rel: { type: String, required: false, default: "" },
+    index: { type: Number, required: false, default: undefined },
+  },
+  methods: { ref, useMicrodataProp, useMicrodataItem, getCurrentInstance },
+});
 </script>
 
 <template>
