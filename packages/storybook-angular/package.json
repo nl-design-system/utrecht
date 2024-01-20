@@ -74,6 +74,7 @@
   "scripts": {
     "clean": "rimraf .angular/ dist/ tmp/",
     "build": "ng run storybook-angular:build-storybook",
+    "lint-build": "tsc --noEmit --project tsconfig.json",
     "storybook": "ng run storybook-angular:storybook --port 6009"
   }
 }
