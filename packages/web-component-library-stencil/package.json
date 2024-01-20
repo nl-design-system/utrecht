@@ -39,7 +39,6 @@
     "chokidar-cli": "3.0.0",
     "clsx": "1.2.1",
     "node-sass-package-importer": "5.3.3",
-    "npm-run-all": "4.1.5",
     "rimraf": "3.0.2"
   },
   "dependencies": {
@@ -47,14 +46,14 @@
   },
   "scripts": {
     "prebuild": "npm run clean",
-    "build": "npm-run-all build:**",
+    "build": "pnpm run '/^build:.*/'",
     "build:stencil": "stencil build",
-    "clean": "npm-run-all clean:**",
+    "clean": "pnpm run '/^clean:.*/'",
     "clean:stencil": "rimraf dist/ loader/ www/",
     "clean:angular-output-target": "rimraf ../web-component-library-angular/src/directives/",
     "clean:react-output-target": "rimraf ../web-component-library-react/src/components.ts ../web-component-library-react/src/react-component-lib/",
     "clean:vue-output-target": "rimraf ../web-component-library-vue/src/components.ts ../web-component-library-vue/src/vue-component-lib/",
-    "lint": "npm-run-all lint:**",
+    "lint": "pnpm run '/^lint:.*/'",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
     "lint:jest": "tsc --noEmit --project tsconfig.jest.json",
     "start": "stencil build --dev --watch --serve",
