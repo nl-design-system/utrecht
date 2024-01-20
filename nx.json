@@ -41,7 +41,7 @@
       "inputs": ["**/*.{css,scss}"],
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm run lint:css"
+        "command": "pnpm run lint:css"
       }
     }
   }

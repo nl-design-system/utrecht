@@ -17,7 +17,7 @@
   },
   "sideEffects": false,
   "scripts": {
-    "build": "npm run build:web-components",
+    "build": "pnpm run '/^build:.*/'",
     "build:web-components": "ng build",
     "clean": "rimraf dist/"
   },
