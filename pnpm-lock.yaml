@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.8.2':
     hash: a5iuwt5l2qu5cukh7ozwyzp4ky
@@ -281,6 +285,12 @@ importers:
       jest-preset-angular:
         specifier: 13.1.4
         version: 13.1.4(@angular-devkit/build-angular@17.1.0)(@angular/compiler-cli@17.1.0)(@angular/core@17.1.0)(@angular/platform-browser-dynamic@17.1.0)(@babel/core@7.23.6)(jest@29.7.0)(typescript@5.3.3)
+      lodash.clonedeepwith:
+        specifier: 4.5.0
+        version: 4.5.0
+      lodash.isequal:
+        specifier: 4.5.0
+        version: 4.5.0
       ng-packagr:
         specifier: 17.0.3
         version: 17.0.3(@angular/compiler-cli@17.1.0)(tslib@2.6.2)(typescript@5.3.3)
@@ -42035,7 +42045,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false

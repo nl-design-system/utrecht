@@ -98,6 +98,7 @@
     "serve-storybook-vue": "nx serve storybook-vue",
     "test": "npm run nx-test -- --skip-nx-cache",
     "nx-test": "nx run-many --target=test --all --parallel",
+    "test-build": "pnpm run --recursive test-build",
     "test-update": "npm-run-all --sequential lint build test",
     "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",

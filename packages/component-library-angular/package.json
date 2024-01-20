@@ -26,6 +26,7 @@
     "watch:build": "ng build --watch",
     "build:test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
     "test": "jest --verbose",
+    "test-build": "node test-exports.mjs",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
   },
   "dependencies": {
@@ -51,6 +52,8 @@
     "chokidar-cli": "3.0.0",
     "jest": "29.7.0",
     "jest-preset-angular": "13.1.4",
+    "lodash.clonedeepwith": "4.5.0",
+    "lodash.isequal": "4.5.0",
     "ng-packagr": "17.0.3",
     "rxjs": "7.8.1",
     "typescript": "5.3.3",
