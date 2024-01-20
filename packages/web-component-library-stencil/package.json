@@ -45,7 +45,6 @@
     "@stencil/core": "4.8.2"
   },
   "scripts": {
-    "prebuild": "npm run clean",
     "build": "pnpm run '/^build:.*/'",
     "build:stencil": "stencil build",
     "clean": "pnpm run '/^clean:.*/'",

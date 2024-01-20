@@ -35,7 +35,6 @@
     "build:style-dictionary:dark": "style-dictionary build --config src/style-dictionary-config-dark.js",
     "build:stylelint": "node ./build-stylelint.mjs",
     "clean": "rimraf dist/",
-    "prebuild": "npm run clean",
     "watch": "pnpm run --parallel '/^watch:.*/'",
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'pnpm run build' 'src/**/*.tokens.json'"
   }
