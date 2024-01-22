@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.8.2':
     hash: a5iuwt5l2qu5cukh7ozwyzp4ky
@@ -715,8 +719,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/components':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.6.4
         version: 7.6.4
@@ -779,7 +783,7 @@ importers:
         version: link:../web-component-library-stencil
       '@whitespace/storybook-addon-html':
         specifier: 5.1.6
-        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
+        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
@@ -833,7 +837,7 @@ importers:
         version: 7.6.4
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
       storybook-addon-themes:
         specifier: 6.1.0
         version: 6.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -952,8 +956,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(esbuild@0.18.20)(typescript@5.3.3)
       '@storybook/components':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.6.4
         version: 7.6.4
@@ -1004,7 +1008,7 @@ importers:
         version: 7.8.1
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
       typescript:
         specifier: 5.3.3
         version: 5.3.3
@@ -1075,8 +1079,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/components':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.6.4
         version: 7.6.4
@@ -1139,7 +1143,7 @@ importers:
         version: link:../web-component-library-stencil
       '@whitespace/storybook-addon-html':
         specifier: 5.1.6
-        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
+        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
@@ -1193,7 +1197,7 @@ importers:
         version: 7.6.4
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
       storybook-addon-themes:
         specifier: 6.1.0
         version: 6.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -1276,8 +1280,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/components':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.6.4
         version: 7.6.4
@@ -1340,7 +1344,7 @@ importers:
         version: link:../web-component-library-stencil
       '@whitespace/storybook-addon-html':
         specifier: 5.1.6
-        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
+        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
@@ -1394,7 +1398,7 @@ importers:
         version: 7.6.4
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
       storybook-addon-themes:
         specifier: 6.1.0
         version: 6.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -1474,8 +1478,8 @@ importers:
         specifier: 7.4.6
         version: 7.4.6(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/components':
-        specifier: 7.4.6
-        version: 7.4.6(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.4.6
         version: 7.4.6
@@ -1553,7 +1557,7 @@ importers:
         version: 7.4.6
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.4.6)(@storybook/core-events@7.4.6)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.4.6)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.4.6)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.4.6)(react-dom@18.2.0)(react@18.2.0)
       storybook-addon-themes:
         specifier: 6.1.0
         version: 6.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -1612,8 +1616,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/components':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.6.4
         version: 7.6.4
@@ -1679,7 +1683,7 @@ importers:
         version: 7.6.4
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -1753,8 +1757,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/components':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.10
+        version: 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events':
         specifier: 7.6.4
         version: 7.6.4
@@ -1817,7 +1821,7 @@ importers:
         version: link:../web-component-library-stencil
       '@whitespace/storybook-addon-html':
         specifier: 5.1.6
-        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
+        version: 5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0)
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0)
@@ -1871,7 +1875,7 @@ importers:
         version: 7.6.4
       storybook-addon-pseudo-states:
         specifier: 2.1.2
-        version: 2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
+        version: 2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0)
       storybook-addon-themes:
         specifier: 6.1.0
         version: 6.1.0(react-dom@18.2.0)(react@18.2.0)
@@ -10028,7 +10032,7 @@ packages:
     dependencies:
       '@storybook/api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/client-logger': 7.6.4
-      '@storybook/components': 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.6.4
       '@storybook/manager-api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/theming': 7.6.4(react-dom@18.2.0)(react@18.2.0)
@@ -10045,7 +10049,7 @@ packages:
     dependencies:
       '@storybook/api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/client-logger': 7.6.4
-      '@storybook/components': 7.6.4(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.10(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.6.4
       '@storybook/manager-api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/theming': 7.6.4(react-dom@18.2.0)(react@18.2.0)
@@ -15188,7 +15192,7 @@ packages:
     dependencies:
       '@storybook/channels': 7.6.4
       '@storybook/client-logger': 7.6.4
-      '@storybook/components': 7.6.4(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.6.4
       '@storybook/csf': 0.1.2
       '@storybook/docs-tools': 7.6.4
@@ -15474,6 +15478,17 @@ packages:
       tiny-invariant: 1.3.1
     dev: true
 
+  /@storybook/channels@7.6.10:
+    resolution: {integrity: sha512-ITCLhFuDBKgxetuKnWwYqMUWlU7zsfH3gEKZltTb+9/2OAWR7ez0iqU7H6bXP1ridm0DCKkt2UMWj2mmr9iQqg==}
+    dependencies:
+      '@storybook/client-logger': 7.6.10
+      '@storybook/core-events': 7.6.10
+      '@storybook/global': 5.0.0
+      qs: 6.11.2
+      telejson: 7.2.0
+      tiny-invariant: 1.3.1
+    dev: true
+
   /@storybook/channels@7.6.4:
     resolution: {integrity: sha512-Z4PY09/Czl70ap4ObmZ4bgin+EQhPaA3HdrEDNwpnH7A9ttfEO5u5KThytIjMq6kApCCihmEPDaYltoVrfYJJA==}
     dependencies:
@@ -15613,6 +15628,12 @@ packages:
       '@storybook/global': 5.0.0
     dev: true
 
+  /@storybook/client-logger@7.6.10:
+    resolution: {integrity: sha512-U7bbpu21ntgePMz/mKM18qvCSWCUGCUlYru8mgVlXLCKqFqfTeP887+CsPEQf29aoE3cLgDrxqbRJ1wxX9kL9A==}
+    dependencies:
+      '@storybook/global': 5.0.0
+    dev: true
+
   /@storybook/client-logger@7.6.4:
     resolution: {integrity: sha512-vJwMShC98tcoFruRVQ4FphmFqvAZX1FqZqjFyk6IxtFumPKTVSnXJjlU1SnUIkSK2x97rgdUMqkdI+wAv/tugQ==}
     dependencies:
@@ -15708,6 +15729,52 @@ packages:
       - '@types/react-dom'
     dev: true
 
+  /@storybook/components@7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-H5hF8pxwtbt0LxV24KMMsPlbYG9Oiui3ObvAQkvGu6q62EYxRPeNSrq3GBI5XEbI33OJY9bT24cVaZx18dXqwQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@radix-ui/react-select': 1.2.2(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-toolbar': 1.0.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/client-logger': 7.6.10
+      '@storybook/csf': 0.1.2
+      '@storybook/global': 5.0.0
+      '@storybook/theming': 7.6.10(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.6.10
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      use-resize-observer: 9.1.0(react-dom@18.2.0)(react@18.2.0)
+      util-deprecate: 1.0.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+    dev: true
+
+  /@storybook/components@7.6.10(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-H5hF8pxwtbt0LxV24KMMsPlbYG9Oiui3ObvAQkvGu6q62EYxRPeNSrq3GBI5XEbI33OJY9bT24cVaZx18dXqwQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@radix-ui/react-select': 1.2.2(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-toolbar': 1.0.4(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/client-logger': 7.6.10
+      '@storybook/csf': 0.1.2
+      '@storybook/global': 5.0.0
+      '@storybook/theming': 7.6.10(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.6.10
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      use-resize-observer: 9.1.0(react-dom@18.2.0)(react@18.2.0)
+      util-deprecate: 1.0.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+    dev: true
+
   /@storybook/components@7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-K5RvEObJAnX+SbGJbkM1qrZEk+VR2cUhRCSrFnlfMwsn8/60T3qoH7U8bCXf8krDgbquhMwqev5WzDB+T1VV8g==}
     peerDependencies:
@@ -15731,7 +15798,7 @@ packages:
       - '@types/react-dom'
     dev: true
 
-  /@storybook/components@7.6.4(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0):
+  /@storybook/components@7.6.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-K5RvEObJAnX+SbGJbkM1qrZEk+VR2cUhRCSrFnlfMwsn8/60T3qoH7U8bCXf8krDgbquhMwqev5WzDB+T1VV8g==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -15838,6 +15905,12 @@ packages:
 
   /@storybook/core-events@7.4.6:
     resolution: {integrity: sha512-r5vrE+32lwrJh1NGFr1a0mWjvxo7q8FXYShylcwRWpacmL5NTtLkrXOoJSeGvJ4yKNYkvxQFtOPId4lzDxa32w==}
+    dependencies:
+      ts-dedent: 2.2.0
+    dev: true
+
+  /@storybook/core-events@7.6.10:
+    resolution: {integrity: sha512-yccDH67KoROrdZbRKwxgTswFMAco5nlCyxszCDASCLygGSV2Q2e+YuywrhchQl3U6joiWi3Ps1qWu56NeNafag==}
     dependencies:
       ts-dedent: 2.2.0
     dev: true
@@ -16610,6 +16683,20 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
+  /@storybook/theming@7.6.10(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-f5tuy7yV3TOP3fIboSqpgLHy0wKayAw/M8HxX0jVET4Z4fWlFK0BiHJabQ+XEdAfQM97XhPFHB2IPbwsqhCEcQ==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.2.0)
+      '@storybook/client-logger': 7.6.10
+      '@storybook/global': 5.0.0
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    dev: true
+
   /@storybook/theming@7.6.4(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-Z/dcC5EpkIXelYCkt9ojnX6D7qGOng8YHxV/OWlVE9TrEGYVGPOEfwQryR0RhmGpDha1TYESLYrsDb4A8nJ1EA==}
     peerDependencies:
@@ -16642,6 +16729,15 @@ packages:
     resolution: {integrity: sha512-6QLXtMVsFZFpzPkdGWsu/iuc8na9dnS67AMOBKm5qCLPwtUJOYkwhMdFRSSeJthLRpzV7JLAL8Kwvl7MFP3QSw==}
     dependencies:
       '@storybook/channels': 7.4.6
+      '@types/babel__core': 7.20.5
+      '@types/express': 4.17.21
+      file-system-cache: 2.3.0
+    dev: true
+
+  /@storybook/types@7.6.10:
+    resolution: {integrity: sha512-hcS2HloJblaMpCAj2axgGV+53kgSRYPT0a1PG1IHsZaYQILfHSMmBqM8XzXXYTsgf9250kz3dqFX1l0n3EqMlQ==}
+    dependencies:
+      '@storybook/channels': 7.6.10
       '@types/babel__core': 7.20.5
       '@types/express': 4.17.21
       file-system-cache: 2.3.0
@@ -18608,7 +18704,7 @@ packages:
       '@xtuc/long': 4.2.2
     dev: true
 
-  /@whitespace/storybook-addon-html@5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0):
+  /@whitespace/storybook-addon-html@5.1.6(@storybook/addons@7.6.4)(@storybook/api@7.6.4)(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4)(prettier@2.8.8)(react-dom@18.2.0)(react-syntax-highlighter@15.5.0)(react@18.2.0):
     resolution: {integrity: sha512-NWO8nsWScMZ6hdn5Br0htTP2qMDnvA22xy06i1EUB4f62jzqLGMy5WLEYK/A21QeikBY4mapeqoAg8KtE4dIUg==}
     peerDependencies:
       '@storybook/addons': ^6.5.8 || ^7.0.12
@@ -18628,7 +18724,7 @@ packages:
     dependencies:
       '@storybook/addons': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       '@storybook/api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/components': 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.6.4
       '@storybook/theming': 7.6.4(react-dom@18.2.0)(react@18.2.0)
       prettier: 2.8.8
@@ -37797,7 +37893,7 @@ packages:
     resolution: {integrity: sha512-siT1RiqlfQnGqgT/YzXVUNsom9S0H1OX+dpdGN1xkyYATo4I6sep5NmsRD/40s3IIOvlCq6akxkqG82urIZW1w==}
     dev: true
 
-  /storybook-addon-pseudo-states@2.1.2(@storybook/components@7.4.6)(@storybook/core-events@7.4.6)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.4.6)(react-dom@18.2.0)(react@18.2.0):
+  /storybook-addon-pseudo-states@2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.4.6)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.4.6)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-AHv6q1JiQEUnMyZE3729iV6cNmBW7bueeytc4Lga4+8W1En8YNea5VjqAdrDNJhXVU0QEEIGtxkD3EoC9aVWLw==}
     peerDependencies:
       '@storybook/components': ^7.4.6
@@ -37813,7 +37909,7 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@storybook/components': 7.4.6(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.10(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.4.6
       '@storybook/manager-api': 7.6.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/preview-api': 7.6.5
@@ -37822,7 +37918,7 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: true
 
-  /storybook-addon-pseudo-states@2.1.2(@storybook/components@7.6.4)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0):
+  /storybook-addon-pseudo-states@2.1.2(@storybook/components@7.6.10)(@storybook/core-events@7.6.4)(@storybook/manager-api@7.6.5)(@storybook/preview-api@7.6.5)(@storybook/theming@7.6.4)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-AHv6q1JiQEUnMyZE3729iV6cNmBW7bueeytc4Lga4+8W1En8YNea5VjqAdrDNJhXVU0QEEIGtxkD3EoC9aVWLw==}
     peerDependencies:
       '@storybook/components': ^7.4.6
@@ -37838,7 +37934,7 @@ packages:
       react-dom:
         optional: true
     dependencies:
-      '@storybook/components': 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.10(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.6.4
       '@storybook/manager-api': 7.6.5(react-dom@18.2.0)(react@18.2.0)
       '@storybook/preview-api': 7.6.5
@@ -42153,7 +42249,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
