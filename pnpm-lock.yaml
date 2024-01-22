@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.8.2':
     hash: a5iuwt5l2qu5cukh7ozwyzp4ky
@@ -616,8 +620,8 @@ importers:
         specifier: 1.1.0
         version: 1.1.0(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)
       joi:
-        specifier: 17.11.0
-        version: 17.11.0
+        specifier: 17.12.0
+        version: 17.12.0
       lodash.clonedeepwith:
         specifier: 4.5.0
         version: 4.5.0
@@ -9070,7 +9074,7 @@ packages:
       '@types/history': 4.7.11
       '@types/react': 18.2.45
       commander: 5.1.0
-      joi: 17.11.0
+      joi: 17.12.0
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-helmet-async: 1.3.0(react-dom@18.2.0)(react@18.2.0)
@@ -9103,7 +9107,7 @@ packages:
     dependencies:
       '@docusaurus/logger': 3.0.1
       '@docusaurus/utils': 3.0.1(@docusaurus/types@3.0.1)
-      joi: 17.11.0
+      joi: 17.12.0
       js-yaml: 4.1.0
       tslib: 2.6.2
     transitivePeerDependencies:
@@ -25477,7 +25481,7 @@ packages:
       gatsby-telemetry: 4.13.0
       hosted-git-info: 3.0.8
       is-valid-path: 0.1.1
-      joi: 17.11.0
+      joi: 17.12.0
       lodash: 4.17.21
       node-fetch: 2.7.0
       opentracing: 0.14.7
@@ -25642,7 +25646,7 @@ packages:
       graphql: 16.8.1
       graphql-compose: 9.0.10(graphql@16.8.1)
       import-from: 4.0.0
-      joi: 17.11.0
+      joi: 17.12.0
       mime: 3.0.0
     dev: true
 
@@ -28977,6 +28981,16 @@ packages:
 
   /joi@17.11.0:
     resolution: {integrity: sha512-NgB+lZLNoqISVy1rZocE9PZI36bL/77ie924Ri43yEvi9GUUMPeyVIr8KdFTMUlby1p0PBYMk9spIxEUQYqrJQ==}
+    dependencies:
+      '@hapi/hoek': 9.3.0
+      '@hapi/topo': 5.1.0
+      '@sideway/address': 4.1.4
+      '@sideway/formula': 3.0.1
+      '@sideway/pinpoint': 2.0.0
+    dev: true
+
+  /joi@17.12.0:
+    resolution: {integrity: sha512-HSLsmSmXz+PV9PYoi3p7cgIbj06WnEBNT28n+bbBNcPZXZFqCzzvGqpTBPujx/Z0nh1+KNQPDrNgdmQ8dq0qYw==}
     dependencies:
       '@hapi/hoek': 9.3.0
       '@hapi/topo': 5.1.0
@@ -42153,7 +42167,3 @@ packages:
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
