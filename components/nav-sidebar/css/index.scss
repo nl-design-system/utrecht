@@ -7,11 +7,8 @@
 @import "../../common/focus/mixin";
 
 .utrecht-sidenav {
-  --utrecht-sidenav-connection-color: var(--utrecht-sidenav-item-marker-color);
-  --utrecht-sidenav-connection-inline-size: 2px;
   --utrecht-sidenav-marker-current-color: var(--utrecht-sidenav-link-hover-color);
   --utrecht-sidenav-marker-offset: 26px;
-  --utrecht-sidenav-connection-block-size: 100%;
   --utrecht-sidenav-marker-height: 8px;
   --utrecht-sidenav-marker-outline-width: 2px;
 
@@ -88,31 +85,6 @@
 /* Remove bottom padding form first item in list with children */
 .utrecht-sidenav__link--parent {
   padding-block-end: 0;
-}
-
-/* Draw metro connection lines on sidenav link items */
-.utrecht-sidenav__connection {
-  // .utrecht-sidenav__item--last .utrecht-sidenav__link::after {
-  background: var(--utrecht-sidenav-connection-color);
-  block-size: calc(
-    var(--utrecht-sidenav-connection-block-size) - var(--utrecht-sidenav-marker-height) - 2 *
-      var(--utrecht-sidenav-marker-outline-width)
-  );
-  content: "";
-  display: block;
-  inline-size: var(--utrecht-sidenav-connection-inline-size);
-  inset-block-end: 0;
-  inset-block-start: calc(var(--utrecht-sidenav-marker-offset));
-  inset-inline-start: 3px;
-  overflow: hidden;
-  position: absolute;
-  z-index: 5;
-}
-
-.utrecht-sidenav__connection--last,
-.utrecht-sidenav__connection--parent,
-.utrecht-sidenav__connection--sibling {
-  display: none;
 }
 
 /* Dot for link with siblings */
@@ -194,40 +166,7 @@
   .utrecht-sidenav__link:hover::before {
     @extend .utrecht-sidenav__marker--hover;
   }
-
-  /* stylelint-disable selector-pseudo-class-parentheses-space-inside */
-  .utrecht-sidenav__link:not(
-      .utrecht-sidenav__link--sibling,
-      .utrecht-sidenav__link--parent,
-      .utrecht-sidenav__link--child
-    )::after {
-    @extend .utrecht-sidenav__connection;
-  }
-  /* stylelint-enable selector-pseudo-class-parentheses-space-inside */
-
   .utrecht-sidenav__link--child::after {
     display: none;
-  }
-}
-
-// The workaround for missing `:focus-visible` support makes the code quite complex,
-// keep the ideal version around to restore it easily when browser support improves.
-
-@if $utrecht-focus-visible-fallback {
-  .utrecht-sidenav__link:focus {
-    @extend .utrecht-sidenav__link--focus;
-    @extend .utrecht-sidenav__link--focus-visible;
-  }
-
-  .utrecht-sidenav__link:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset;
-  }
-} @else {
-  .utrecht-sidenav__link:focus {
-    @extend .utrecht-sidenav__link--focus;
-  }
-
-  .utrecht-sidenav__link:focus-visible {
-    @extend .utrecht-sidenav__link--focus-visible;
   }
 }
