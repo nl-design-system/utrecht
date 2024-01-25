@@ -38,6 +38,7 @@
 .utrecht-sidenav__item {
   list-style: none;
   margin-inline-start: 0;
+  padding-inline-start: var(--utrecht-sidenav-item-padding-inline-start);
   position: relative;
 }
 
@@ -52,10 +53,8 @@
 /* draw the li item box bottom line */
 
 .utrecht-sidenav__item-separator:not(.utrecht-sidenav__item--last .utrecht-sidenav__item-separator) {
-  /* .utrecht-sidenav__item--parent span */
   border-block-end: 1px solid var(--utrecht-color-grey-80);
   display: block;
-  margin-inline-start: var(--utrecht-space-inline-lg);
 }
 
 .utrecht-sidenav__link {
@@ -119,6 +118,7 @@
 .utrecht-sidenav__marker--current {
   background-color: var(--utrecht-sidenav-marker-current-color);
 }
+
 .utrecht-sidenav__link--child,
 .utrecht-sidenav__link--current-child {
   color: var(--utrecht-sidenav-link-color, var(--utrecht-link-color, blue));
@@ -130,6 +130,7 @@
   padding-inline-start: var(--utrecht-space-inline-lg);
   text-decoration: none;
 }
+
 .utrecht-sidenav__link--current,
 .utrecht-sidenav__link--current-child {
   font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
@@ -156,16 +157,20 @@
   .utrecht-sidenav__link::before {
     @extend .utrecht-sidenav__marker;
   }
+
   .utrecht-sidenav__link--child::before {
     @extend .utrecht-sidenav__marker--child;
   }
+
   .utrecht-sidenav__link--current::before,
   .utrecht-sidenav__link--current-child::before {
     @extend .utrecht-sidenav__marker--current;
   }
+
   .utrecht-sidenav__link:hover::before {
     @extend .utrecht-sidenav__marker--hover;
   }
+
   .utrecht-sidenav__link--child::after {
     display: none;
   }
