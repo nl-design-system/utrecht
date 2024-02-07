@@ -7,6 +7,11 @@ updates:
     directory: "/"
     schedule:
       interval: "monthly"
+    groups:
+      actions-upload-and-download-artifact:
+        patterns:
+          - "actions/upload-artifact"
+          - "actions/download-artifact"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
