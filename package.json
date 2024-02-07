@@ -20,7 +20,8 @@
     "url": "git@github.com:nl-design-system/utrecht.git"
   },
   "engines": {
-    "node": "^18.12.0"
+    "node": "^20",
+    "pnpm": "^8"
   },
   "devDependencies": {
     "@changesets/cli": "2.27.1",
