@@ -41,6 +41,7 @@ const previousItem = <T,>(items: T[], item: T): T | undefined => {
 
 export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel?: number;
+  className?: string;
   label: string;
   body: any;
   expanded?: boolean;
@@ -57,6 +58,7 @@ export const AccordionSection = forwardRef(
     {
       id,
       label,
+      className,
       headingLevel = 1,
       expanded = false,
       disabled,
@@ -66,6 +68,7 @@ export const AccordionSection = forwardRef(
       onActivate,
       onButtonBlur,
       onButtonFocus,
+      ...props
     }: AccordionSectionProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
@@ -91,7 +94,7 @@ export const AccordionSection = forwardRef(
     //   with the button that controls the region.
     // - we only want expanded sections to show up as landmarks
     return (
-      <div className={clsx('utrecht-accordion__section')} id={id} ref={ref}>
+      <div className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
         <Heading level={headingLevel} className={clsx('utrecht-accordion__header')}>
           <Button
             className={clsx('utrecht-accordion__button')}
