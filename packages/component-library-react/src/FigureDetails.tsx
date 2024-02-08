@@ -4,7 +4,7 @@
  * Copyright (c) 2024 Frameless B.V.
  */
 
-import { HTMLAttributes, PropsWithChildren, useEffect, useRef, useState } from 'react';
+import { forwardRef, HTMLAttributes, PropsWithChildren, useEffect, useRef, useState } from 'react';
 import { Button } from './Button';
 import { Drawer } from './Drawer';
 import { Figure } from './Figure';
@@ -20,56 +20,58 @@ interface FigureDetailsProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childr
   children?: any;
 }
 
-export const FigureDetails = ({
-  openButtonText,
-  openButtonAppearance,
-  openButtonClassName,
-  closeButtonText,
-  closeButtonAppearance,
-  closeButtonClassName,
-  drawerClassName,
-  children,
-  ...restProps
-}: PropsWithChildren<FigureDetailsProps>) => {
-  const [open, setOpen] = useState(false);
-  const drawer = useRef<HTMLDialogElement>(null);
-  const showModal = () => {
-    if (drawer.current) {
-      setOpen(true);
-      drawer.current.showModal();
-    }
-  };
-
-  const closeModal = () => {
-    setOpen(false);
-    drawer.current?.close();
-  };
-
-  useEffect(() => {
-    // close the dialog when someone clicked the backdrop
-    const handleBackdropClick = (event: MouseEvent) => {
-      if (event.target === drawer.current) {
-        closeModal();
+export const FigureDetails = forwardRef(
+  ({
+    openButtonText,
+    openButtonAppearance,
+    openButtonClassName,
+    closeButtonText,
+    closeButtonAppearance,
+    closeButtonClassName,
+    drawerClassName,
+    children,
+    ...restProps
+  }: PropsWithChildren<FigureDetailsProps>) => {
+    const [open, setOpen] = useState(false);
+    const drawer = useRef<HTMLDialogElement>(null);
+    const showModal = () => {
+      if (drawer.current) {
+        setOpen(true);
+        drawer.current.showModal();
       }
     };
-    document.addEventListener('click', handleBackdropClick);
-
-    return () => {
-      document.removeEventListener('click', handleBackdropClick);
+    const closeModal = () => {
+      setOpen(false);
+      drawer.current?.close();
     };
-  });
 
-  return (
-    <Figure {...restProps}>
-      <Button className={openButtonClassName} appearance={openButtonAppearance} onClick={showModal}>
-        {openButtonText}
-      </Button>
-      <Drawer className={drawerClassName} ref={drawer} open={open}>
-        <Button className={closeButtonClassName} appearance={closeButtonAppearance} onClick={closeModal}>
-          {closeButtonText}
+    useEffect(() => {
+      // close the dialog when someone clicked the backdrop
+      const handleBackdropClick = (event: MouseEvent) => {
+        if (event.target === drawer.current) {
+          closeModal();
+        }
+      };
+      document.addEventListener('click', handleBackdropClick);
+
+      return () => {
+        document.removeEventListener('click', handleBackdropClick);
+      };
+    });
+
+    return (
+      <Figure {...restProps}>
+        <Button className={openButtonClassName} appearance={openButtonAppearance} onClick={showModal}>
+          {openButtonText}
         </Button>
-        {children}
-      </Drawer>
-    </Figure>
-  );
-};
+        <Drawer className={drawerClassName} ref={drawer} open={open}>
+          <Button className={closeButtonClassName} appearance={closeButtonAppearance} onClick={closeModal}>
+            {closeButtonText}
+          </Button>
+          {children}
+        </Drawer>
+      </Figure>
+    );
+  },
+);
+FigureDetails.displayName = 'FigureDetails';
