@@ -41,7 +41,6 @@ const previousItem = <T,>(items: T[], item: T): T | undefined => {
 
 export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   headingLevel?: number;
-  className?: string;
   label: string;
   body: any;
   expanded?: boolean;
