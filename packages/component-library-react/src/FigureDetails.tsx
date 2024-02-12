@@ -12,11 +12,8 @@ import { Figure } from './Figure';
 interface FigureDetailsProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   openButtonText: string;
   openButtonAppearance?: string;
-  openButtonClassName?: string;
-  closeButtonText: string;
+  closeButtonText: any;
   closeButtonAppearance?: string;
-  closeButtonClassName?: string;
-  drawerClassName?: string;
   children?: any;
 }
 
@@ -25,11 +22,8 @@ export const FigureDetails = forwardRef(
     {
       openButtonText,
       openButtonAppearance,
-      openButtonClassName,
       closeButtonText,
       closeButtonAppearance,
-      closeButtonClassName,
-      drawerClassName,
       children,
       ...restProps
     }: PropsWithChildren<FigureDetailsProps>,
@@ -64,11 +58,11 @@ export const FigureDetails = forwardRef(
 
     return (
       <Figure ref={ref} {...restProps}>
-        <Button className={openButtonClassName} appearance={openButtonAppearance} onClick={showModal}>
+        <Button appearance={openButtonAppearance} onClick={showModal}>
           {openButtonText}
         </Button>
-        <Drawer className={drawerClassName} ref={drawer} open={open}>
-          <Button className={closeButtonClassName} appearance={closeButtonAppearance} onClick={closeModal}>
+        <Drawer ref={drawer} open={open}>
+          <Button appearance={closeButtonAppearance} onClick={closeModal}>
             {closeButtonText}
           </Button>
           {children}
