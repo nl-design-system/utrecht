@@ -69,24 +69,16 @@ describe('Figure details', () => {
     expect(ref.current).toBe(drawer);
   });
 
-  // describe('open dialog', () => {
-  //   it('can be opened with `open` attribute', () => {
-  //     const { container } = render(<FigureDetails open />);
-  //     const drawer = ;
+  describe('open dialog', () => {
+    it('can be opened with `open` attribute', () => {
+      const { container } = render(<FigureDetails open />);
+      const figure = container.querySelector('figure:only-child');
 
-  //     expect(drawer).toBeVisible();
-  //   });
+      expect(figure).toBeVisible();
+    });
 
-  //   it.skip('can be opened with the `showModal` method', () => {
-  //     /* this only applies to the web component */
-  //   });
-
-  //   it('can be hidden', () => {
-  //     const { container } = render(<FigureDetails open hidden />);
-
-  //     const drawer = container.querySelector(':only-child');
-
-  //     expect(drawer).not.toBeVisible();
-  //   });
-  // });
+    it.skip('can be opened with the `showModal` method', () => {
+      /* this only applies to the web component */
+    });
+  });
 });
