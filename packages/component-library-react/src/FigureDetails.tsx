@@ -4,7 +4,7 @@
  * Copyright (c) 2024 Frameless B.V.
  */
 
-import { forwardRef, HTMLAttributes, PropsWithChildren, useEffect, useRef, useState } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, useEffect, useRef, useState } from 'react';
 import { Button } from './Button';
 import { Drawer } from './Drawer';
 import { Figure } from './Figure';
@@ -21,17 +21,20 @@ interface FigureDetailsProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childr
 }
 
 export const FigureDetails = forwardRef(
-  ({
-    openButtonText,
-    openButtonAppearance,
-    openButtonClassName,
-    closeButtonText,
-    closeButtonAppearance,
-    closeButtonClassName,
-    drawerClassName,
-    children,
-    ...restProps
-  }: PropsWithChildren<FigureDetailsProps>) => {
+  (
+    {
+      openButtonText,
+      openButtonAppearance,
+      openButtonClassName,
+      closeButtonText,
+      closeButtonAppearance,
+      closeButtonClassName,
+      drawerClassName,
+      children,
+      ...restProps
+    }: PropsWithChildren<FigureDetailsProps>,
+    ref: ForwardedRef<HTMLElement>,
+  ) => {
     const [open, setOpen] = useState(false);
     const drawer = useRef<HTMLDialogElement>(null);
     const showModal = () => {
@@ -60,7 +63,7 @@ export const FigureDetails = forwardRef(
     });
 
     return (
-      <Figure {...restProps}>
+      <Figure ref={ref} {...restProps}>
         <Button className={openButtonClassName} appearance={openButtonAppearance} onClick={showModal}>
           {openButtonText}
         </Button>
