@@ -15,18 +15,18 @@ describe('Figure details', () => {
   it('renders a design system BEM class name', () => {
     const { container } = render(<FigureDetails />);
 
-    const drawer = container.querySelector(':only-child');
+    const figure = container.querySelector(':only-child');
 
-    expect(drawer).toHaveClass('utrecht-figure');
+    expect(figure).toHaveClass('utrecht-figure');
   });
 
   it('can have a additional class name', () => {
     const { container } = render(<FigureDetails className="large" />);
 
-    const drawer = container.querySelector(':only-child');
+    const figure = container.querySelector(':only-child');
 
-    expect(drawer).toHaveClass('large');
-    expect(drawer).toHaveClass('utrecht-figure');
+    expect(figure).toHaveClass('large');
+    expect(figure).toHaveClass('utrecht-figure');
   });
 
   it('renders rich text content', () => {
@@ -36,9 +36,9 @@ describe('Figure details', () => {
       </FigureDetails>,
     );
 
-    const drawer = container.querySelector(':only-child');
+    const figure = container.querySelector(':only-child');
 
-    const richText = drawer?.querySelector('h1');
+    const richText = figure?.querySelector('h1');
 
     expect(richText).toBeInTheDocument();
   });
@@ -46,17 +46,17 @@ describe('Figure details', () => {
   it('can be hidden', () => {
     const { container } = render(<FigureDetails hidden />);
 
-    const drawer = container.querySelector(':only-child');
+    const figure = container.querySelector(':only-child');
 
-    expect(drawer).not.toBeVisible();
+    expect(figure).not.toBeVisible();
   });
 
   it('can have a custom class name', () => {
     const { container } = render(<FigureDetails className="large" />);
 
-    const drawer = container.querySelector(':only-child');
+    const figure = container.querySelector(':only-child');
 
-    expect(drawer).toHaveClass('large');
+    expect(figure).toHaveClass('large');
   });
 
   it('supports ForwardRef in React', () => {
@@ -64,9 +64,9 @@ describe('Figure details', () => {
 
     const { container } = render(<FigureDetails ref={ref} />);
 
-    const drawer = container.querySelector(':only-child');
+    const figure = container.querySelector(':only-child');
 
-    expect(ref.current).toBe(drawer);
+    expect(ref.current).toBe(figure);
   });
 
   describe('open dialog', () => {
