@@ -1,13 +1,13 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { ScrollToTopButton } from './ScrollToTopButton';
+import { ScrollToStartButton } from './ScrollToStartButton';
 import '@testing-library/jest-dom';
 
 window.scrollTo = jest.fn();
 
-describe('Separator', () => {
+describe('Scroll to start button', () => {
   it('renders an button role element', () => {
-    render(<ScrollToTopButton />);
+    render(<ScrollToStartButton />);
 
     const button = screen.getByRole('button');
 
@@ -19,8 +19,8 @@ describe('Separator', () => {
     const scrollToTopMock = jest.fn();
     window.scrollTo = scrollToTopMock;
 
-    render(<ScrollToTopButton>Scroll to Top</ScrollToTopButton>);
-    const button = screen.getByText('Scroll to Top');
+    render(<ScrollToStartButton>Scroll to start</ScrollToStartButton>);
+    const button = screen.getByText('Scroll to start');
 
     fireEvent.click(button);
 
@@ -35,8 +35,8 @@ describe('Separator', () => {
     const scrollToTopMock = jest.fn();
     window.scrollTo = scrollToTopMock;
 
-    render(<ScrollToTopButton>Scroll to Top</ScrollToTopButton>);
-    const button = screen.getByText('Scroll to Top');
+    render(<ScrollToStartButton>Scroll to start</ScrollToStartButton>);
+    const button = screen.getByText('Scroll to start');
 
     fireEvent.click(button);
 
@@ -45,7 +45,7 @@ describe('Separator', () => {
   });
 
   it('renders an button HTML element', () => {
-    const { container } = render(<ScrollToTopButton />);
+    const { container } = render(<ScrollToStartButton />);
 
     const button = container.querySelector('button:only-child');
 
@@ -55,7 +55,7 @@ describe('Separator', () => {
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLButtonElement>();
 
-    const { container } = render(<ScrollToTopButton ref={ref} />);
+    const { container } = render(<ScrollToStartButton ref={ref} />);
 
     const button = container.querySelector(':only-child');
 
@@ -64,13 +64,13 @@ describe('Separator', () => {
 
   it('should render the button content with the provided children', () => {
     const { container } = render(
-      <ScrollToTopButton>
-        <span>Scroll to Top</span>
-      </ScrollToTopButton>,
+      <ScrollToStartButton>
+        <span>Scroll to start</span>
+      </ScrollToStartButton>,
     );
 
     const contentElement = container.querySelector('span');
 
-    expect(contentElement).toHaveTextContent('Scroll to Top');
+    expect(contentElement).toHaveTextContent('Scroll to start');
   });
 });

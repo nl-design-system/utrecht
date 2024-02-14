@@ -165,8 +165,8 @@ export type { RadioButtonProps } from './RadioButton';
 export { RadioButton } from './RadioButton';
 export type { RichTextProps } from './RichText';
 export { RichText } from './RichText';
-export type { ScrollToTopButtonProps } from './ScrollToTopButton';
-export { ScrollToTopButton } from './ScrollToTopButton';
+export type { ScrollToStartButtonProps } from './ScrollToStartButton';
+export { ScrollToStartButton } from './ScrollToStartButton';
 // export type { SearchBarProps } from './SearchBar';
 // export { SearchBar } from './SearchBar'; // TODO find a way to make the downshift compatible with nextjs 13 app/directory
 export type { SelectProps, SelectOptionProps } from './Select';

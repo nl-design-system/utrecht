@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ScrollToTopButton } from '@utrecht/component-library-react';
+import { ScrollToStartButton } from '@utrecht/component-library-react';
 import { Document, Heading, Page, PageContent, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
@@ -10,7 +10,7 @@ const DemoPage = ({ children }: { children: React.ReactNode }) => (
   <Document style={{ '--utrecht-space-around': 1 } as any}>
     <Page>
       <PageContent>
-        <Heading level={1}>Scroll To The Top Button</Heading>
+        <Heading level={1}>Scroll to start button</Heading>
         <Heading level={2}>What is Lorem Ipsum?</Heading>
         <Paragraph>
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -60,12 +60,12 @@ const DemoPage = ({ children }: { children: React.ReactNode }) => (
   </Document>
 );
 
-const meta: Meta<typeof ScrollToTopButton> = {
-  title: 'React Component/Scroll To The Top Button',
-  id: 'react-scroll-to-top-button',
-  component: ScrollToTopButton,
+const meta: Meta<typeof ScrollToStartButton> = {
+  title: 'React Component/Scroll to start button',
+  id: 'react-scroll-to-start-button',
+  component: ScrollToStartButton,
   parameters: {
-    tokensPrefix: 'utrecht-scroll-to-top-button',
+    tokensPrefix: 'utrecht-scroll-to-start-button',
     tokens,
   },
   argTypes: {
@@ -85,10 +85,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <DemoPage>
-      <ScrollToTopButton appearance="subtle-button" {...args}>
+      <ScrollToStartButton appearance="subtle-button" {...args}>
         Naar Boven
         <UtrechtIconChevronUp />
-      </ScrollToTopButton>
+      </ScrollToStartButton>
     </DemoPage>
   ),
 };

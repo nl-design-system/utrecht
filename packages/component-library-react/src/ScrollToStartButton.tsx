@@ -1,7 +1,7 @@
 import React, { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import { Button, ButtonProps } from './index';
 
-export interface ScrollToTopButtonProps extends ButtonProps {
+export interface ScrollToStartButtonProps extends ButtonProps {
   Icon?: React.ComponentType<HTMLAttributes<HTMLElement>>;
 }
 
@@ -17,12 +17,12 @@ export const scrollToTop = () => {
   }
 };
 
-export const ScrollToTopButton = forwardRef(
-  ({ children, ...restProps }: PropsWithChildren<ScrollToTopButtonProps>, ref: ForwardedRef<HTMLButtonElement>) => (
+export const ScrollToStartButton = forwardRef(
+  ({ children, ...restProps }: PropsWithChildren<ScrollToStartButtonProps>, ref: ForwardedRef<HTMLButtonElement>) => (
     <Button onClick={scrollToTop} ref={ref} {...restProps}>
       {children}
     </Button>
   ),
 );
 
-ScrollToTopButton.displayName = 'ScrollToTopButton';
+ScrollToStartButton.displayName = 'ScrollToStartButton';
