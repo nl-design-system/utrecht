@@ -7,9 +7,9 @@ const meta = {
   component: SingleFormioComponent,
   args: {
     type: 'textarea',
-    label: 'Textarea',
+    label: '',
     extraComponentProperties: {
-      description: 'Plaats hierboven uw handtekening',
+      description: '',
     },
   },
 } satisfies Meta<typeof SingleFormioComponent>;
@@ -18,5 +18,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    label: 'Textarea',
+    extraComponentProperties: {
+      description: 'Plaats hierboven uw handtekening',
+    },
+  },
 };

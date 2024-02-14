@@ -6,12 +6,9 @@ const meta = {
   title: 'Open Formulieren/PhoneNumber',
   component: SingleFormioComponent,
   args: {
-    key: 'phone-number',
+    key: '',
     type: 'phoneNumber',
-    label: 'Telefoonnummer',
-    extraComponentProperties: {
-      inputMask: null,
-    },
+    label: '',
   },
 } satisfies Meta<typeof SingleFormioComponent>;
 
@@ -19,5 +16,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    key: 'phone-number',
+    label: 'Telefoonnummer',
+    extraComponentProperties: {
+      inputMask: null,
+    },
+  },
 };

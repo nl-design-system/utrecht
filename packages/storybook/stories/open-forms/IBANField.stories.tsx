@@ -6,9 +6,9 @@ const meta = {
   title: 'Open Formulieren/IBANField',
   component: SingleFormioComponent,
   args: {
-    key: 'iban',
+    key: '',
     type: 'iban',
-    label: 'IBAN',
+    label: '',
   },
 } satisfies Meta<typeof SingleFormioComponent>;
 
@@ -16,5 +16,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    key: 'iban',
+    label: 'IBAN',
+  },
 };
