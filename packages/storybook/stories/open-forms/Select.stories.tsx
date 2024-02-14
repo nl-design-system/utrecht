@@ -1,13 +1,20 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-selectboxes',
   title: 'Open Formulieren/Selectboxes',
   component: SingleFormioComponent,
   args: {
     type: 'selectboxes',
+  },
+} satisfies Meta<typeof SingleFormioComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
+  args: {
     extraComponentProperties: {
       values: [
         {
@@ -29,7 +36,7 @@ const meta: Meta = {
 };
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = Meta<typeof SingleFormioComponent>;
 
 export const Default: Story = {
   render: (meta) => <SingleFormioComponent {...meta} />,

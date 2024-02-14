@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-date-field',
   title: 'Open Formulieren/DateField',
   component: SingleFormioComponent,
@@ -19,10 +18,10 @@ const meta: Meta = {
       placeholder: 'dd-mm-yyyy',
     },
   },
-};
+} satisfies Meta<typeof SingleFormioComponent>;
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => <SingleFormioComponent {...args} />,
