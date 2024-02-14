@@ -33,5 +33,5 @@ export default meta;
 type Story = StoryObj<typeof SingleFormioComponent>;
 
 export const Default: Story = {
-  render: (args) => <SingleFormioComponent {...args} />,
+  render: (meta) => <SingleFormioComponent {...meta} />,
 };

@@ -17,11 +17,11 @@ export default meta;
 type Story = StoryObj<typeof SingleFormioComponent>;
 
 export const Default: Story = {
-  render: (args) => <SingleFormioComponent {...args} />,
+  render: (meta) => <SingleFormioComponent {...meta} />,
 };
 
 export const WithPrefix: Story = {
-  render: (args) => <SingleFormioComponent {...args} />,
+  render: (meta) => <SingleFormioComponent {...meta} />,
   args: {
     ...meta.args,
     extraComponentProperties: {
@@ -31,7 +31,7 @@ export const WithPrefix: Story = {
 };
 
 export const WithSuffix: Story = {
-  render: (args) => <SingleFormioComponent {...args} />,
+  render: (meta) => <SingleFormioComponent {...meta} />,
   args: {
     ...meta.args,
     extraComponentProperties: {
