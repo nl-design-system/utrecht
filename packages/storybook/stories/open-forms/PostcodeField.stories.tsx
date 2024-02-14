@@ -6,12 +6,9 @@ const meta = {
   title: 'Open Formulieren/PostcodeField',
   component: SingleFormioComponent,
   args: {
-    key: 'postcode',
+    key: '',
     type: 'postcode',
-    label: 'Postcode',
-    extraComponentProperties: {
-      inputMask: null,
-    },
+    label: '',
   },
 } satisfies Meta<typeof SingleFormioComponent>;
 
@@ -19,5 +16,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    key: 'postcode',
+    label: 'Postcode',
+    extraComponentProperties: {
+      inputMask: null,
+    },
+  },
 };

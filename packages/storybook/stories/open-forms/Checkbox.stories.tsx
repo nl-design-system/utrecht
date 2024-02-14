@@ -6,15 +6,26 @@ const meta = {
   title: 'Open Formulieren/Checkbox',
   component: SingleFormioComponent,
   args: {
-    key: 'checkbox',
+    key: '',
     type: 'checkbox',
-    label: 'Ik heb de voorwaarden gelezen en ga hiermee akkoord.',
+    label: '',
   },
 } satisfies Meta<typeof SingleFormioComponent>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Default: Story = {
+  args: {
+    key: 'checkbox',
+    label: 'Ik heb de voorwaarden gelezen en ga hiermee akkoord.',
+  },
+};
 
-export const Required: Story = {};
+export const Required: Story = {
+  args: {
+    key: 'checkbox',
+    label: 'Ik heb de voorwaarden gelezen en ga hiermee akkoord.',
+    extraComponentProperties: { validate: { required: true } },
+  },
+};

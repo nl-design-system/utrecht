@@ -6,29 +6,29 @@ const meta = {
   title: 'Open Formulieren/Columns',
   component: SingleFormioComponent,
   args: {
-    key: 'cosign',
+    key: '',
     type: 'columns',
     extraComponentProperties: {
       columns: [
         {
-          size: 3,
-          sizeMobile: 6,
+          size: '',
+          sizeMobile: '',
           components: [
             {
-              key: 'postcode',
+              key: '',
               type: 'postcode',
-              label: 'Postcode',
+              label: '',
             },
           ],
         },
         {
-          size: 3,
-          sizeMobile: 6,
+          size: '',
+          sizeMobile: '',
           components: [
             {
-              key: 'number',
+              key: '',
               type: 'textfield',
-              label: 'Huisnummer',
+              label: '',
             },
           ],
         },
@@ -41,5 +41,31 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => <SingleFormioComponent {...args} />,
+  args: {
+    key: 'cosign',
+    extraComponentProperties: {
+      columns: [
+        {
+          size: 3,
+          sizeMobile: 6,
+          components: [
+            {
+              key: 'postcode',
+              label: 'Postcode',
+            },
+          ],
+        },
+        {
+          size: 3,
+          sizeMobile: 6,
+          components: [
+            {
+              key: 'number',
+              label: 'Huisnummer',
+            },
+          ],
+        },
+      ],
+    },
+  },
 };

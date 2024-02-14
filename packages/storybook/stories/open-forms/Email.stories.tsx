@@ -6,9 +6,9 @@ const meta = {
   title: 'Open Formulieren/Email',
   component: SingleFormioComponent,
   args: {
-    key: 'email',
+    key: '',
     type: 'email',
-    label: 'Email',
+    label: '',
   },
 } satisfies Meta<typeof SingleFormioComponent>;
 
@@ -16,5 +16,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    key: 'email',
+    label: 'Email',
+  },
 };

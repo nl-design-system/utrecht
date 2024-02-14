@@ -6,9 +6,9 @@ const meta = {
   title: 'Open Formulieren/Number',
   component: SingleFormioComponent,
   args: {
-    key: 'number',
+    key: '',
     type: 'number',
-    label: 'Nummer',
+    label: '',
   },
 } satisfies Meta<typeof SingleFormioComponent>;
 
@@ -16,13 +16,16 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    key: 'number',
+    label: 'Nummer',
+  },
 };
 
 export const WithPrefix: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
   args: {
-    ...meta.args,
+    key: 'number',
+    label: 'Nummer',
     extraComponentProperties: {
       prefix: '%',
     },
@@ -30,9 +33,9 @@ export const WithPrefix: Story = {
 };
 
 export const WithSuffix: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
   args: {
-    ...meta.args,
+    key: 'number',
+    label: 'Nummer',
     extraComponentProperties: {
       suffix: 'm<sup>3</sup>',
     },

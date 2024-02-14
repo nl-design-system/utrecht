@@ -7,9 +7,9 @@ const meta = {
   component: SingleFormioComponent,
   args: {
     type: 'time',
-    label: 'Tijd',
+    label: '',
     extraComponentProperties: {
-      inputType: 'text',
+      inputType: '',
     },
   },
 } satisfies Meta<typeof SingleFormioComponent>;
@@ -18,5 +18,10 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
+  args: {
+    label: 'Tijd',
+    extraComponentProperties: {
+      inputType: 'text',
+    },
+  },
 };

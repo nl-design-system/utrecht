@@ -35,10 +35,3 @@ export const Default: Story = {
     },
   },
 };
-
-export default meta;
-type Story = Meta<typeof SingleFormioComponent>;
-
-export const Default: Story = {
-  render: (meta) => <SingleFormioComponent {...meta} />,
-};
