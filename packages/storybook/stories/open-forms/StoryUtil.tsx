@@ -50,7 +50,7 @@ type SingleFormioComponentProps = {
   type: string;
   key: string;
   label: string;
-  extraComponentProperties?: unknown;
+  extraComponentProperties?: any;
 };
 
 export const SingleFormioComponent: React.FC<SingleFormioComponentProps> = ({

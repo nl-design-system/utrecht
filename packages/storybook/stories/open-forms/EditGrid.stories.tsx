@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
 const innerComponents = [
@@ -28,15 +27,16 @@ const innerComponents = [
   },
 ];
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-edit-grid',
   title: 'Open Formulieren/EditGrid',
   component: SingleFormioComponent,
   args: {
     type: 'editgrid',
-    groupLabel: '',
-    maxLength: null,
+
     extraComponentProperties: {
+      groupLabel: '',
+      maxLength: null,
       hideLabel: false,
       components: innerComponents,
       inlineEdit: false,
@@ -47,10 +47,10 @@ const meta: Meta = {
       removeRow: 'Remove',
     },
   },
-};
+} satisfies Meta<typeof SingleFormioComponent>;
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => <SingleFormioComponent {...args} />,

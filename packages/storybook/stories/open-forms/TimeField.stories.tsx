@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-timefield',
   title: 'Open Formulieren/TimeField',
   component: SingleFormioComponent,
@@ -13,10 +12,10 @@ const meta: Meta = {
       inputType: 'text',
     },
   },
-};
+} satisfies Meta<typeof SingleFormioComponent>;
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (meta) => <SingleFormioComponent {...meta} />,

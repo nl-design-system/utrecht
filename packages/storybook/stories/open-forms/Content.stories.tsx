@@ -1,11 +1,20 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-content',
   title: 'Open Formulieren/Content',
   component: SingleFormioComponent,
+  args: {
+    key: '',
+    type: 'content',
+  },
+} satisfies Meta<typeof SingleFormioComponent>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+export const Default: Story = {
   args: {
     key: 'content',
     type: 'content',
@@ -19,7 +28,7 @@ const meta: Meta = {
 };
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = Meta<typeof SingleFormioComponent>;
 
 export const Default: Story = {
   render: (args) => <SingleFormioComponent {...args} />,

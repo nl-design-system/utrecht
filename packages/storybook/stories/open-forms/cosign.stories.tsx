@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-cosign',
   title: 'Open Formulieren/Cosign',
   component: SingleFormioComponent,
@@ -13,11 +12,19 @@ const meta: Meta = {
     validateOn: 'blur',
     authPlugin: 'digid',
   },
-};
+} satisfies Meta<typeof SingleFormioComponent>;
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   render: (args) => <SingleFormioComponent {...args} />,
+  args: {
+    key: 'cosign',
+    label: 'Co-signer email address',
+    extraComponentProperties: {
+      validateOn: 'blur',
+      authPlugin: 'digid',
+    },
+  },
 };

@@ -1,8 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
 import { SingleFormioComponent } from './StoryUtil';
 
-const meta: Meta = {
+const meta = {
   id: 'open-forms-checkbox',
   title: 'Open Formulieren/Checkbox',
   component: SingleFormioComponent,
@@ -11,15 +10,11 @@ const meta: Meta = {
     type: 'checkbox',
     label: 'Ik heb de voorwaarden gelezen en ga hiermee akkoord.',
   },
-};
+} satisfies Meta<typeof SingleFormioComponent>;
 
 export default meta;
-type Story = StoryObj<typeof SingleFormioComponent>;
+type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
-  render: (args) => <SingleFormioComponent {...args} />,
-};
+export const Default: Story = {};
 
-export const Required: Story = {
-  render: (args) => <SingleFormioComponent extraComponentProperties={{ validate: { required: true } }} {...args} />,
-};
+export const Required: Story = {};
