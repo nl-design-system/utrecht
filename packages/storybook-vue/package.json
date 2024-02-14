@@ -46,6 +46,7 @@
     "@vitejs/plugin-vue-jsx": "3.1.0",
     "@vue/compiler-sfc": "3.3.11",
     "@vue/tsconfig": "0.1.3",
+    "http-server": "14.1.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "storybook": "7.6.4",
@@ -60,7 +61,7 @@
     "storybook-docs": "storybook dev --config-dir config/ --docs --no-manager-cache",
     "clean": "rimraf dist/",
     "lint:typescript": "tsc --noEmit --project tsconfig.json",
-    "start": "npx http-server dist/",
+    "start": "http-server dist/",
     "storybook": "storybook dev --config-dir config/ --port 6007"
   }
 }
