@@ -60,6 +60,7 @@
     "css-loader": "6.8.1",
     "firacode": "6.2.0",
     "html-react-parser": "3.0.16",
+    "http-server": "14.1.1",
     "lodash.defaultsdeep": "4.6.1",
     "lodash.groupby": "4.6.0",
     "prettier": "2.8.8",
@@ -81,7 +82,7 @@
     "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
     "clean": "rimraf dist/",
     "lint:typescript": "tsc --noEmit --project tsconfig.json",
-    "start": "npx http-server dist/",
+    "start": "http-server dist/",
     "storybook": "storybook dev --config-dir config/ --port 6012"
   }
 }
