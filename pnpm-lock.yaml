@@ -701,8 +701,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -935,8 +935,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addon-measure':
         specifier: 7.6.4
         version: 7.6.4
@@ -1064,8 +1064,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -1265,8 +1265,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -1472,8 +1472,8 @@ importers:
         specifier: 7.4.6
         version: 7.4.6(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
-        specifier: 7.4.6
-        version: 7.4.6(react-dom@18.2.0)(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addons':
         specifier: 7.4.6
         version: 7.4.6(react-dom@18.2.0)(react@18.2.0)
@@ -1613,8 +1613,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
@@ -1742,8 +1742,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.2.0)
+        specifier: 7.6.15
+        version: 7.6.15(react@18.2.0)
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -10360,7 +10360,7 @@ packages:
       formiojs: ^4.12.6
     dependencies:
       formiojs: 4.13.12
-      js-interpreter: github.com/formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git@github.com+formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
     dev: true
@@ -15105,33 +15105,8 @@ packages:
       upath: 2.0.1
     dev: true
 
-  /@storybook/addon-links@7.4.6(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-BPygElZKX+CPI9Se6GJNk1dYc5oxuhA+vHigO1tBqhiM6VkHyFP3cvezJNQvpNYhkUnu3cxnZXb3UJnlRbPY3g==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-    dependencies:
-      '@storybook/client-logger': 7.4.6
-      '@storybook/core-events': 7.4.6
-      '@storybook/csf': 0.1.2
-      '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.4.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/preview-api': 7.4.6
-      '@storybook/router': 7.4.6(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/types': 7.4.6
-      prop-types: 15.8.1
-      react: 18.2.0
-      react-dom: 18.2.0(react@18.2.0)
-      ts-dedent: 2.2.0
-    dev: true
-
-  /@storybook/addon-links@7.6.4(react@18.2.0):
-    resolution: {integrity: sha512-TEhxYdMhJO28gD84ej1FCwLv9oLuCPt77bRXip9ndaNPRTdHYdWv6IP94dhbuDi8eHux7Z4A/mllciFuDFrnCw==}
+  /@storybook/addon-links@7.6.15(react@18.2.0):
+    resolution: {integrity: sha512-DEBlut3ofpggbm8N7n3f/Xdi6KkjKps2hnL5blz5aQ7iSJJPT683GDP2CKjhtrlrL6+uJyEHWDLoECVq2kveaQ==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     peerDependenciesMeta:
@@ -37650,7 +37625,7 @@ packages:
     dependencies:
       neo-async: 2.6.2
       sass: 1.69.5
-      webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.18.20)
+      webpack: 5.89.0(esbuild@0.19.11)
     dev: true
 
   /sass-loader@13.3.2(webpack@5.89.0):
@@ -43140,8 +43115,8 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
 
-  github.com/formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  git@github.com+formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     name: js-interpreter
     version: 1.1.0-formio.2
     dependencies:
