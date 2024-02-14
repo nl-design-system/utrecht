@@ -1,6 +1,6 @@
 import { OFLibrary, OpenFormsModule } from '@open-formulieren/sdk';
 import { merge } from 'lodash';
-import React, { useEffect, useState } from 'react';
+import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
 import '@open-formulieren/sdk/styles.css';
 
@@ -20,7 +20,7 @@ const useOpenFormsConfiguration = () => {
   return isConfigured;
 };
 
-const RenderFormioForm: React.FC<{ form: FormConfiguration }> = ({ form }) => {
+const RenderFormioForm = ({ form }: PropsWithChildren<{ form: FormConfiguration }>) => {
   const isConfigured = useOpenFormsConfiguration();
 
   if (!isConfigured) {
@@ -50,15 +50,15 @@ type SingleFormioComponentProps = {
   type: string;
   key: string;
   label: string;
-  extraComponentProperties?: any;
+  extraComponentProperties?: { [index: string]: any };
 };
 
-export const SingleFormioComponent: React.FC<SingleFormioComponentProps> = ({
+export const SingleFormioComponent = ({
   type,
   key,
   label,
   extraComponentProperties = {},
-}) => {
+}: PropsWithChildren<SingleFormioComponentProps>) => {
   const component = merge({ type, key, label }, extraComponentProperties);
   return <RenderFormioForm form={{ type: 'form', components: [component] }} />;
 };
