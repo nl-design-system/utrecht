@@ -14,6 +14,7 @@ const customJestConfig = {
   testEnvironment: 'jest-environment-jsdom',
   testPathIgnorePatterns: ['/dist/'],
   // transformIgnorePatterns: ['node_modules/(?!@utrecht/web-component-library-react)'],
+  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
 };
 
 export default createJestConfig(customJestConfig);
