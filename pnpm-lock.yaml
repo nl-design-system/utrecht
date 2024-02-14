@@ -123,8 +123,8 @@ importers:
         specifier: 7.23.6
         version: 7.23.6
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/documentation':
         specifier: 0.0.2-alpha.94
         version: 0.0.2-alpha.94
@@ -133,7 +133,7 @@ importers:
         version: 2.22.3
       '@storybook/blocks':
         specifier: 7.6.4
-        version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
+        version: 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@utrecht/icon':
         specifier: workspace:*
         version: link:icon
@@ -183,11 +183,11 @@ importers:
         specifier: 7.23.3
         version: 7.23.3(@babel/core@7.23.6)
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@storybook/blocks':
         specifier: 7.6.4
-        version: 7.6.4(react-dom@18.2.0)(react@18.2.0)
+        version: 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       lodash.clonedeepwith:
         specifier: 4.5.0
         version: 4.5.0
@@ -584,8 +584,8 @@ importers:
         specifier: 3.0.1
         version: 3.0.1(@algolia/client-search@4.22.0)(@docusaurus/types@3.0.1)(@types/react@18.2.45)(eslint@8.55.0)(react-dom@18.2.0)(react@18.2.0)(search-insights@2.13.0)(typescript@4.9.5)
       '@mdx-js/react':
-        specifier: 3.0.0
-        version: 3.0.0(@types/react@18.2.45)(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/documentation':
         specifier: 0.0.2-alpha.94
         version: 0.0.2-alpha.94
@@ -680,8 +680,8 @@ importers:
         specifier: 0.2.3-alpha.359
         version: 0.2.3-alpha.359
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: 1.0.0-alpha.136
         version: 1.0.0-alpha.136
@@ -903,7 +903,7 @@ importers:
         version: 1.1.23(typescript@5.3.3)
       '@etchteam/storybook-addon-status':
         specifier: 4.2.4
-        version: 4.2.4(@types/react-dom@18.2.17)(@types/react@18.2.45)
+        version: 4.2.4(@types/react@18.2.45)
       '@gemeente-denhaag/design-tokens-components':
         specifier: 0.2.3-alpha.359
         version: 0.2.3-alpha.359
@@ -927,7 +927,7 @@ importers:
         version: 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-docs':
         specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        version: 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-interactions':
         specifier: 7.6.4
         version: 7.6.4
@@ -1046,8 +1046,8 @@ importers:
         specifier: 0.2.3-alpha.359
         version: 0.2.3-alpha.359
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: 1.0.0-alpha.136
         version: 1.0.0-alpha.136
@@ -1247,8 +1247,8 @@ importers:
         specifier: 0.2.3-alpha.359
         version: 0.2.3-alpha.359
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: 1.0.0-alpha.136
         version: 1.0.0-alpha.136
@@ -1442,8 +1442,8 @@ importers:
         specifier: 0.1.0-alpha.187
         version: 0.1.0-alpha.187(react@18.2.0)
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.42)(react@18.2.0)
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: 1.0.0-alpha.130
         version: 1.0.0-alpha.130
@@ -1581,13 +1581,13 @@ importers:
     devDependencies:
       '@etchteam/storybook-addon-status':
         specifier: 4.2.4
-        version: 4.2.4(@types/react-dom@18.2.17)(@types/react@18.2.45)
+        version: 4.2.4(@types/react@18.2.45)
       '@gemeente-denhaag/design-tokens-components':
         specifier: 0.2.3-alpha.359
         version: 0.2.3-alpha.359
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: 1.0.0-alpha.136
         version: 1.0.0-alpha.136
@@ -1605,7 +1605,7 @@ importers:
         version: 7.6.4
       '@storybook/addon-docs':
         specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+        version: 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-essentials':
         specifier: 7.6.4
         version: 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
@@ -1724,8 +1724,8 @@ importers:
         specifier: 0.2.3-alpha.359
         version: 0.2.3-alpha.359
       '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.2.0)
+        specifier: 3.0.1
+        version: 3.0.1(@types/react@18.2.45)(react@18.2.0)
       '@nl-design-system-unstable/amsterdam-design-tokens':
         specifier: 1.0.0-alpha.136
         version: 1.0.0-alpha.136
@@ -8977,7 +8977,7 @@ packages:
       '@docusaurus/utils': 3.0.1(@docusaurus/types@3.0.1)
       '@docusaurus/utils-common': 3.0.1(@docusaurus/types@3.0.1)
       '@docusaurus/utils-validation': 3.0.1(@docusaurus/types@3.0.1)
-      '@mdx-js/react': 3.0.0(@types/react@18.2.45)(react@18.2.0)
+      '@mdx-js/react': 3.0.1(@types/react@18.2.45)(react@18.2.0)
       clsx: 2.0.0
       copy-text-to-clipboard: 3.2.0
       infima: 0.2.0-alpha.43
@@ -10186,6 +10186,23 @@ packages:
       - '@types/react-dom'
     dev: true
 
+  /@etchteam/storybook-addon-status@4.2.4(@types/react@18.2.45):
+    resolution: {integrity: sha512-WkSz82WPqcqOBjB6MkLED4kIZU6jX61skBDh+/D8cedvSEQnPhQVMfxO0fnnzwhDsbqR7IXpPQPGx3hHPpi54A==}
+    dependencies:
+      '@storybook/api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/client-logger': 7.6.4
+      '@storybook/components': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/core-events': 7.6.4
+      '@storybook/manager-api': 7.6.4(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/theming': 7.6.4(react-dom@18.2.0)(react@18.2.0)
+      lodash: 4.17.21
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+    dev: true
+
   /@fal-works/esbuild-plugin-global-externals@2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
     dev: true
@@ -10360,7 +10377,7 @@ packages:
       formiojs: ^4.12.6
     dependencies:
       formiojs: 4.13.12
-      js-interpreter: github.com/formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git@github.com+formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
     dev: true
@@ -11483,8 +11500,19 @@ packages:
       react: 18.2.0
     dev: true
 
-  /@mdx-js/react@3.0.0(@types/react@18.2.45)(react@18.2.0):
-    resolution: {integrity: sha512-nDctevR9KyYFyV+m+/+S4cpzCWHqj+iHDHq3QrsWezcC+B17uZdIWgCguESUkwFhM3n/56KxWVE3V6EokrmONQ==}
+  /@mdx-js/react@3.0.1(@types/react@18.2.42)(react@18.2.0):
+    resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
+    peerDependencies:
+      '@types/react': '>=16'
+      react: '>=16'
+    dependencies:
+      '@types/mdx': 2.0.10
+      '@types/react': 18.2.42
+      react: 18.2.0
+    dev: true
+
+  /@mdx-js/react@3.0.1(@types/react@18.2.45)(react@18.2.0):
+    resolution: {integrity: sha512-9ZrPIU4MGf6et1m1ov3zKf+q9+deetI51zprKB1D/z3NOb+rUxxtEl3mCjW5wTGh6VhRdwPueh1oRzi6ezkA8A==}
     peerDependencies:
       '@types/react': '>=16'
       react: '>=16'
@@ -14873,7 +14901,7 @@ packages:
   /@storybook/addon-controls@7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-k4AtZfazmD/nL3JAtLGAB7raPhkhUo0jWnaZWrahd9h1Fm13mBU/RW+JzTRhCw3Mp2HPERD7NI5Qcd2fUP6WDA==}
     dependencies:
-      '@storybook/blocks': 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/blocks': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       lodash: 4.17.21
       ts-dedent: 2.2.0
     transitivePeerDependencies:
@@ -14953,6 +14981,40 @@ packages:
       - supports-color
     dev: true
 
+  /@storybook/addon-docs@7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-PbFMbvC9sK3sGdMhwmagXs9TqopTp9FySji+L8O7W9SHRC6wSmdwoWWPWybkOYxr/z/wXi7EM0azSAX7yQxLbw==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@jest/transform': 29.7.0
+      '@mdx-js/react': 2.3.0(react@18.2.0)
+      '@storybook/blocks': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/client-logger': 7.6.4
+      '@storybook/components': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/csf-plugin': 7.6.4
+      '@storybook/csf-tools': 7.6.4
+      '@storybook/global': 5.0.0
+      '@storybook/mdx2-csf': 1.1.0
+      '@storybook/node-logger': 7.6.4
+      '@storybook/postinstall': 7.6.4
+      '@storybook/preview-api': 7.6.4
+      '@storybook/react-dom-shim': 7.6.4(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/theming': 7.6.4(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.6.4
+      fs-extra: 11.2.0
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      remark-external-links: 8.0.0
+      remark-slug: 6.1.0
+      ts-dedent: 2.2.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+      - encoding
+      - supports-color
+    dev: true
+
   /@storybook/addon-essentials@7.4.6(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-dWodufrt71TK7ELkeIvVae/x4PzECUlbOm57Iqqt4yQCyR291CgvI4PjeB8un2HbpcXCGZ+N/Oj3YkytvzBi4A==}
     peerDependencies:
@@ -14991,7 +15053,7 @@ packages:
       '@storybook/addon-actions': 7.6.4
       '@storybook/addon-backgrounds': 7.6.4
       '@storybook/addon-controls': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
-      '@storybook/addon-docs': 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/addon-docs': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/addon-highlight': 7.6.4
       '@storybook/addon-measure': 7.6.4
       '@storybook/addon-outline': 7.6.4
@@ -15531,7 +15593,7 @@ packages:
       - supports-color
     dev: true
 
-  /@storybook/blocks@7.6.4(react-dom@18.2.0)(react@18.2.0):
+  /@storybook/blocks@7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-iXinXXhTUBtReREP1Jifpu35DnGg7FidehjvCM8sM4E4aymfb8czdg9DdvG46T2UFUPUct36nnjIdMLWOya8Bw==}
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
@@ -15539,7 +15601,7 @@ packages:
     dependencies:
       '@storybook/channels': 7.6.4
       '@storybook/client-logger': 7.6.4
-      '@storybook/components': 7.6.4(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/components': 7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/core-events': 7.6.4
       '@storybook/csf': 0.1.2
       '@storybook/docs-tools': 7.6.4
@@ -16090,6 +16152,29 @@ packages:
     dependencies:
       '@radix-ui/react-select': 1.2.2(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
       '@radix-ui/react-toolbar': 1.0.4(@types/react@18.2.42)(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/client-logger': 7.6.4
+      '@storybook/csf': 0.1.2
+      '@storybook/global': 5.0.0
+      '@storybook/theming': 7.6.4(react-dom@18.2.0)(react@18.2.0)
+      '@storybook/types': 7.6.4
+      memoizerific: 1.11.3
+      react: 18.2.0
+      react-dom: 18.2.0(react@18.2.0)
+      use-resize-observer: 9.1.0(react-dom@18.2.0)(react@18.2.0)
+      util-deprecate: 1.0.2
+    transitivePeerDependencies:
+      - '@types/react'
+      - '@types/react-dom'
+    dev: true
+
+  /@storybook/components@7.6.4(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-K5RvEObJAnX+SbGJbkM1qrZEk+VR2cUhRCSrFnlfMwsn8/60T3qoH7U8bCXf8krDgbquhMwqev5WzDB+T1VV8g==}
+    peerDependencies:
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    dependencies:
+      '@radix-ui/react-select': 1.2.2(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
+      '@radix-ui/react-toolbar': 1.0.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       '@storybook/client-logger': 7.6.4
       '@storybook/csf': 0.1.2
       '@storybook/global': 5.0.0
@@ -37650,7 +37735,7 @@ packages:
     dependencies:
       neo-async: 2.6.2
       sass: 1.69.5
-      webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.18.20)
+      webpack: 5.89.0(esbuild@0.19.11)
     dev: true
 
   /sass-loader@13.3.2(webpack@5.89.0):
@@ -43140,8 +43225,8 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
 
-  github.com/formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  git@github.com+formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     name: js-interpreter
     version: 1.1.0-formio.2
     dependencies:
