@@ -100,9 +100,9 @@
     "nx-test": "nx run-many --target=test --all --parallel",
     "test-build": "pnpm run --recursive test-build",
     "test-update": "pnpm run lint && pnpm run build && pnpm run test && pnpm run lint-build && pnpm run test-build",
-    "update-major": "npm-check-updates --configFileName .ncurc.major.js --deep --dep dev,prod --target latest --upgrade && pnpm install",
-    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js --deep --dep dev,prod --target minor --upgrade && pnpm install",
-    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js --deep --dep dev,prod --target patch --upgrade && pnpm install"
+    "update-major": "npm-check-updates --configFileName .ncurc.major.js",
+    "update-minor": "npm-check-updates --configFileName .ncurc.minor.js",
+    "update-patch": "npm-check-updates --configFileName .ncurc.patch.js"
   },
   "pnpm": {
     "patchedDependencies": {
