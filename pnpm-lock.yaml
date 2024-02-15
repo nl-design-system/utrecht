@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.8.2':
     hash: a5iuwt5l2qu5cukh7ozwyzp4ky
@@ -742,8 +746,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@tabler/icons-react':
-        specifier: 2.44.0
-        version: 2.44.0(react@18.2.0)
+        specifier: 2.47.0
+        version: 2.47.0(react@18.2.0)
       '@types/lodash':
         specifier: 4.14.202
         version: 4.14.202
@@ -1111,8 +1115,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@tabler/icons-react':
-        specifier: 2.44.0
-        version: 2.44.0(react@18.2.0)
+        specifier: 2.47.0
+        version: 2.47.0(react@18.2.0)
       '@types/lodash':
         specifier: 4.14.202
         version: 4.14.202
@@ -1318,8 +1322,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@tabler/icons-react':
-        specifier: 2.44.0
-        version: 2.44.0(react@18.2.0)
+        specifier: 2.47.0
+        version: 2.47.0(react@18.2.0)
       '@types/lodash':
         specifier: 4.14.202
         version: 4.14.202
@@ -1804,8 +1808,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@tabler/icons-react':
-        specifier: 2.44.0
-        version: 2.44.0(react@18.2.0)
+        specifier: 2.47.0
+        version: 2.47.0(react@18.2.0)
       '@types/lodash':
         specifier: 4.14.202
         version: 4.14.202
@@ -10383,7 +10387,7 @@ packages:
       formiojs: ^4.12.6
     dependencies:
       formiojs: 4.13.12
-      js-interpreter: github.com/formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git@github.com+formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
     dev: true
@@ -17386,18 +17390,18 @@ packages:
       defer-to-connect: 2.0.1
     dev: true
 
-  /@tabler/icons-react@2.44.0(react@18.2.0):
-    resolution: {integrity: sha512-10qwrqJ/QBNgY4YYer9PjWmCwm3wv9aVK8kGAkFKkwu6UJURVLZ2ea+oFh5j6vSXnA1zMtUG+X8anR5fZ67Isw==}
+  /@tabler/icons-react@2.47.0(react@18.2.0):
+    resolution: {integrity: sha512-iqly2FvCF/qUbgmvS8E40rVeYY7laltc5GUjRxQj59DuX0x/6CpKHTXt86YlI2whg4czvd/c8Ce8YR08uEku0g==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
-      '@tabler/icons': 2.44.0
+      '@tabler/icons': 2.47.0
       prop-types: 15.8.1
       react: 18.2.0
     dev: true
 
-  /@tabler/icons@2.44.0:
-    resolution: {integrity: sha512-WPPtihDcAwEm1QZM9MXQw6+r/R2/qx7KMU1eegsi9DsqBLAb0W2kbt6e/syvd6j9c+6XNpRVBW1ziGqSWQAWOg==}
+  /@tabler/icons@2.47.0:
+    resolution: {integrity: sha512-4w5evLh+7FUUiA1GucvGj2ReX2TvOjEr4ejXdwL/bsjoSkof6r1gQmzqI+VHrE2CpJpB3al7bCTulOkFa/RcyA==}
     dev: true
 
   /@testing-library/angular@13.4.0(@angular/common@17.1.0)(@angular/core@17.1.0)(@angular/platform-browser@17.1.0)(@angular/router@17.1.0):
@@ -37673,7 +37677,7 @@ packages:
     dependencies:
       neo-async: 2.6.2
       sass: 1.69.5
-      webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.18.20)
+      webpack: 5.89.0(esbuild@0.19.11)
     dev: true
 
   /sass-loader@13.3.2(webpack@5.89.0):
@@ -43163,14 +43167,10 @@ packages:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
     dev: true
 
-  github.com/formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  git@github.com+formio/JS-Interpreter/0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     name: js-interpreter
     version: 1.1.0-formio.2
     dependencies:
       acorn: 8.11.2
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
