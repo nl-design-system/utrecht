@@ -16,7 +16,7 @@ const meta = {
           components: [
             {
               key: '',
-              type: 'postcode',
+              type: '',
               label: '',
             },
           ],
@@ -27,7 +27,7 @@ const meta = {
           components: [
             {
               key: '',
-              type: 'textfield',
+              type: '',
               label: '',
             },
           ],
@@ -43,6 +43,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     key: 'cosign',
+    label: 'columns',
     extraComponentProperties: {
       columns: [
         {
@@ -51,6 +52,7 @@ export const Default: Story = {
           components: [
             {
               key: 'postcode',
+              type: 'postcode',
               label: 'Postcode',
             },
           ],
@@ -61,6 +63,7 @@ export const Default: Story = {
           components: [
             {
               key: 'number',
+              type: 'textfield',
               label: 'Huisnummer',
             },
           ],
