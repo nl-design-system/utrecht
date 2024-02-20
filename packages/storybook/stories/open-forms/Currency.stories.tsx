@@ -34,3 +34,47 @@ export const AllowNegative: Story = {
     },
   },
 };
+
+export const AmericanDollars: Story = {
+  args: {
+    extraComponentProperties: {
+      currency: 'USD',
+      decimalLimit: 2,
+      allowNegative: true,
+      defaultValue: 1000.0,
+    },
+  },
+};
+
+export const BritishPound: Story = {
+  args: {
+    extraComponentProperties: {
+      currency: 'GBP',
+      decimalLimit: 2,
+      allowNegative: true,
+      defaultValue: 1000.0,
+    },
+  },
+};
+
+export const JapaneseYen: Story = {
+  args: {
+    extraComponentProperties: {
+      currency: 'JPY',
+      decimalLimit: 2,
+      allowNegative: true,
+      defaultValue: 1000.0,
+    },
+  },
+};
+
+export const SurinaamseDollar: Story = {
+  args: {
+    extraComponentProperties: {
+      currency: 'SRD',
+      decimalLimit: 2,
+      allowNegative: true,
+      defaultValue: 1000.0,
+    },
+  },
+};
