@@ -35,3 +35,26 @@ export const Default: Story = {
     },
   },
 };
+
+export const checked: Story = {
+  args: {
+    type: 'radio',
+    extraComponentProperties: {
+      values: [
+        {
+          label: 'Optie A',
+          value: 'radioA',
+        },
+        {
+          label: 'Optie B',
+          value: 'radioB',
+        },
+        {
+          label: 'Optie C',
+          value: 'radioC',
+        },
+      ],
+      defaultValue: 'radioA',
+    },
+  },
+};
