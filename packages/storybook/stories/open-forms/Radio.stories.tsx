@@ -36,7 +36,7 @@ export const Default: Story = {
   },
 };
 
-export const checked: Story = {
+export const Checked: Story = {
   args: {
     type: 'radio',
     extraComponentProperties: {
