@@ -29,3 +29,13 @@ export const Required: Story = {
     extraComponentProperties: { validate: { required: true } },
   },
 };
+
+export const Checked: Story = {
+  args: {
+    key: 'checkbox',
+    label: 'Ik heb de voorwaarden gelezen en ga hiermee akkoord.',
+    extraComponentProperties: {
+      defaultValue: true,
+    },
+  },
+};
