@@ -1,5 +1,9 @@
 lockfileVersion: '6.0'
 
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
 patchedDependencies:
   '@stencil/core@4.8.2':
     hash: a5iuwt5l2qu5cukh7ozwyzp4ky
@@ -688,8 +692,8 @@ importers:
         specifier: 1.0.0-alpha.125
         version: 1.0.0-alpha.125
       '@open-formulieren/sdk':
-        specifier: 1.4.8
-        version: 1.4.8(@types/react@18.2.45)(prettier@2.8.8)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.5)(typescript@4.9.5)
+        specifier: 2.2.0-alpha.0
+        version: 2.2.0-alpha.0(@types/react@18.2.45)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.5)(typescript@4.9.5)
       '@storybook/addon-a11y':
         specifier: 7.6.4
         version: 7.6.4
@@ -3417,15 +3421,6 @@ packages:
       eslint: 7.32.0
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
-    dev: true
-
-  /@babel/generator@7.17.7:
-    resolution: {integrity: sha512-oLcVCTeIFadUoArDTwpluncplrYBmTCCZZgXCbgNGvOBBiSDDK3eWO4b/+eOTli5tKv1lg+a5/NAXg+nTcei1w==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/types': 7.23.6
-      jsesc: 2.5.2
-      source-map: 0.5.7
     dev: true
 
   /@babel/generator@7.20.14:
@@ -7828,24 +7823,6 @@ packages:
       '@babel/types': 7.23.6
     dev: true
 
-  /@babel/traverse@7.23.2:
-    resolution: {integrity: sha512-azpe59SQ48qG6nu2CzcMLbxUudtN+dOM9kDbUqGq3HXUJRlo7i8fvPoxQUzYgLZ4cMVmuZgm8vvBpNeRhd6XSw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/code-frame': 7.23.5
-      '@babel/generator': 7.23.6
-      '@babel/helper-environment-visitor': 7.22.20
-      '@babel/helper-function-name': 7.23.0
-      '@babel/helper-hoist-variables': 7.22.5
-      '@babel/helper-split-export-declaration': 7.22.6
-      '@babel/parser': 7.23.6
-      '@babel/types': 7.23.6
-      debug: 4.3.4
-      globals: 11.12.0
-    transitivePeerDependencies:
-      - supports-color
-    dev: true
-
   /@babel/traverse@7.23.6:
     resolution: {integrity: sha512-czastdK1e8YByZqezMPFiZ8ahwVMh/ESl9vPgvgdB9AmFMGP5jfpFax74AQgl5zj4XHzqeYAg2l8PuUeRS1MgQ==}
     engines: {node: '>=6.9.0'}
@@ -7880,14 +7857,6 @@ packages:
       globals: 11.12.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /@babel/types@7.17.0:
-    resolution: {integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      '@babel/helper-validator-identifier': 7.22.20
-      to-fast-properties: 2.0.0
     dev: true
 
   /@babel/types@7.23.6:
@@ -10550,6 +10519,14 @@ packages:
       react: 18.2.0
     dev: true
 
+  /@googlemaps/js-api-loader@1.16.6:
+    resolution: {integrity: sha512-V8p5W9DbPQx74jWUmyYJOerhiB4C+MHekaO0ZRmc6lrOYrvY7+syLhzOWpp55kqSPeNb+qbC2h8i69aLIX6krQ==}
+    requiresBuild: true
+    dependencies:
+      fast-deep-equal: 3.1.3
+    dev: true
+    optional: true
+
   /@graphql-codegen/add@3.2.3(graphql@16.8.1):
     resolution: {integrity: sha512-sQOnWpMko4JLeykwyjFTxnhqjd/3NOG2OyMuvK76Wnnwh8DRrNf2VEs2kmSvLl7MndMlOj7Kh5U154dVcvhmKQ==}
     peerDependencies:
@@ -12421,12 +12398,21 @@ packages:
     resolution: {integrity: sha512-XuySG1E38YScSJoMlqovLru4KTUNSjgVTIjyh7qMX6aNN5HY5Ct5LhRJdxO79JtTzKfzV/bnWpz+zquYrISsvw==}
     dev: true
 
-  /@open-formulieren/design-tokens@0.34.0:
-    resolution: {integrity: sha512-Uwh4g153NdFUwdr+MGD8I9amEmg6FHR0EbETUx/2569aGORgfFlKayhf8GoctlyGh5AJMQq84RoU5gO3ntamBw==}
+  /@open-formulieren/design-tokens@0.52.1:
+    resolution: {integrity: sha512-FaaAzV0pWF+fJFpCl7p+jkT3RsJeFfxaEvc88ci567lY7HFM+R/a/3TNnPW43YSEyCbhytCGP41oSib0wtdxlQ==}
     dev: true
 
-  /@open-formulieren/sdk@1.4.8(@types/react@18.2.45)(prettier@2.8.8)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.5)(typescript@4.9.5):
-    resolution: {integrity: sha512-XY44w907L3sLJCS3NmtACy08YVABX+57b/EtN4EnwljDJ6OQmKQ+DVnvdxa0f+KkjDt/VnkGMyItYiLzAJN/FQ==}
+  /@open-formulieren/leaflet-tools@1.0.0(leaflet@1.9.4):
+    resolution: {integrity: sha512-G2Sdh+Td5iYkVQ9cEIvAiQfpV3V7HdYfQOovLJp3RVJEaXEuOc37ScYaCags5amIjjQZwJpQ+UZtjfK0IBU8pQ==}
+    peerDependencies:
+      leaflet: ^1.7.1
+    dependencies:
+      leaflet: 1.9.4
+      proj4leaflet: 1.0.2
+    dev: true
+
+  /@open-formulieren/sdk@2.2.0-alpha.0(@types/react@18.2.45)(prop-types@15.8.1)(react-dom@18.2.0)(react@18.2.0)(sass@1.69.5)(typescript@4.9.5):
+    resolution: {integrity: sha512-I6E4x+l5e9DvXpNgdNDrJe3W+X3C6hDvHDAku9UmJknyPbdBc5lIn0YGlXkoFD7TvDLyI1T0gtLVLUvD+pRxaQ==}
     peerDependencies:
       prop-types: ^15.7.2
       react: ^18.0.0
@@ -12435,17 +12421,20 @@ packages:
       '@floating-ui/react': 0.24.8(react-dom@18.2.0)(react@18.2.0)
       '@formio/protected-eval': 1.2.2(formiojs@4.13.12)
       '@fortawesome/fontawesome-free': 6.5.1
-      '@open-formulieren/design-tokens': 0.34.0
+      '@open-formulieren/design-tokens': 0.52.1
+      '@open-formulieren/leaflet-tools': 1.0.0(leaflet@1.9.4)
       '@sentry/react': 6.19.7(react@18.2.0)
       '@sentry/tracing': 6.19.7
-      '@trivago/prettier-plugin-sort-imports': 4.3.0(prettier@2.8.8)
       classnames: 2.5.1
+      date-fns: 2.30.0
       flatpickr: 4.6.13
       formik: 2.4.5(react@18.2.0)
       formiojs: 4.13.12
       ibantools: 3.3.1
       immer: 9.0.21
       leaflet: 1.9.4
+      leaflet-geosearch: 3.11.1
+      leaflet-gesture-handling: 1.2.2
       microscope-sass: 2.0.0(sass@1.69.5)
       moment: 2.29.4
       proj4leaflet: 1.0.2
@@ -12455,20 +12444,19 @@ packages:
       react-formio: 4.3.0(react-dom@18.2.0)(react@18.2.0)
       react-intl: 6.6.2(react@18.2.0)(typescript@4.9.5)
       react-leaflet: 4.2.1(leaflet@1.9.4)(react-dom@18.2.0)(react@18.2.0)
-      react-modal: 3.14.3(react-dom@18.2.0)(react@18.2.0)
+      react-modal: 3.16.1(react-dom@18.2.0)(react@18.2.0)
       react-number-format: 5.3.1(react-dom@18.2.0)(react@18.2.0)
       react-router-dom: 6.22.0(react-dom@18.2.0)(react@18.2.0)
       react-select: 5.8.0(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
       react-use: 17.5.0(react-dom@18.2.0)(react@18.2.0)
       state-pool: 0.8.1(react@18.2.0)
-      use-immer: 0.5.2(immer@9.0.21)(react@18.2.0)
+      use-immer: 0.9.0(immer@9.0.21)(react@18.2.0)
+      zod: 3.22.4
+      zod-formik-adapter: 1.2.0(formik@2.4.5)(zod@3.22.4)
     transitivePeerDependencies:
       - '@types/react'
-      - '@vue/compiler-sfc'
       - encoding
-      - prettier
       - sass
-      - supports-color
       - typescript
     dev: true
 
@@ -17529,26 +17517,6 @@ packages:
   /@tootallnate/once@2.0.0:
     resolution: {integrity: sha512-XCuKFP5PS55gnMVu3dty8KPatLqUoy/ZYzDzAGCQ8JNFCkLXzmI7vNHCR+XpbZaMWQK/vQubr7PkYq8g470J/A==}
     engines: {node: '>= 10'}
-    dev: true
-
-  /@trivago/prettier-plugin-sort-imports@4.3.0(prettier@2.8.8):
-    resolution: {integrity: sha512-r3n0onD3BTOVUNPhR4lhVK4/pABGpbA7bW3eumZnYdKaHkf1qEC+Mag6DPbGNuuh0eG8AaYj+YqmVHSiGslaTQ==}
-    peerDependencies:
-      '@vue/compiler-sfc': 3.x
-      prettier: 2.x - 3.x
-    peerDependenciesMeta:
-      '@vue/compiler-sfc':
-        optional: true
-    dependencies:
-      '@babel/generator': 7.17.7
-      '@babel/parser': 7.23.6
-      '@babel/traverse': 7.23.2
-      '@babel/types': 7.17.0
-      javascript-natural-sort: 0.7.1
-      lodash: 4.17.21
-      prettier: 2.8.8
-    transitivePeerDependencies:
-      - supports-color
     dev: true
 
   /@trysound/sax@0.2.0:
@@ -29020,10 +28988,6 @@ packages:
       minimatch: 3.1.2
     dev: true
 
-  /javascript-natural-sort@0.7.1:
-    resolution: {integrity: sha512-nO6jcEfZWQXDhOiBtG2KvKyEptz7RVbpGP4vTD2hLBdmNQSsCiicO2Ioinv6UI4y9ukqnBpy+XZ9H6uLNgJTlw==}
-    dev: true
-
   /javascript-stringify@2.1.0:
     resolution: {integrity: sha512-JVAfqNPTvNq3sB/VHQJAFxN/sPgKnsKrCwyRt15zwNCdrMMJDdcEOdubuy+DuJYYdm0ox1J4uzEuYKkN+9yhVg==}
     dev: true
@@ -30064,6 +30028,17 @@ packages:
       dotenv-expand: 10.0.0
     dev: true
 
+  /leaflet-geosearch@3.11.1:
+    resolution: {integrity: sha512-cILLFLmn8C3MtGhaafGqY7CuhUG2+bGyUgfPHgNgW6fs4EvYyiIO88nO2ZqR7Hy6Ba089haLkhODpZR+/fRrPQ==}
+    optionalDependencies:
+      '@googlemaps/js-api-loader': 1.16.6
+      leaflet: 1.9.4
+    dev: true
+
+  /leaflet-gesture-handling@1.2.2:
+    resolution: {integrity: sha512-Blf5V4PoNphWkzL7Y1qge+Spkd4OCQ2atjwUNhMhLIcjKzPcBH++x/lwOinaR9jSqLWqJ6oKYO8d0XdTffy4hQ==}
+    dev: true
+
   /leaflet@1.9.4:
     resolution: {integrity: sha512-nxS1ynzJOmOlHp+iL3FyWqK89GtNL8U8rvlMOsQdTTssxZwCXh8N2NB3GDQOL+YR3XnWyZAxwQixURb+FA74PA==}
     dev: true
@@ -30182,6 +30157,8 @@ packages:
     peerDependenciesMeta:
       webpack:
         optional: true
+      webpack-sources:
+        optional: true
     dependencies:
       webpack: 5.76.1(esbuild@0.17.8)
       webpack-sources: 3.2.3
@@ -30193,6 +30170,8 @@ packages:
       webpack: '*'
     peerDependenciesMeta:
       webpack:
+        optional: true
+      webpack-sources:
         optional: true
     dependencies:
       webpack: 5.89.0(esbuild@0.19.11)
@@ -36232,12 +36211,12 @@ packages:
       webpack: 5.89.0(esbuild@0.19.11)
     dev: true
 
-  /react-modal@3.14.3(react-dom@18.2.0)(react@18.2.0):
-    resolution: {integrity: sha512-+C2KODVKyu20zHXPJxfOOcf571L1u/EpFlH+oS/3YDn8rgVE51QZuxuuIwabJ8ZFnOEHaD+r6XNjqwtxZnXO0g==}
+  /react-modal@3.16.1(react-dom@18.2.0)(react@18.2.0):
+    resolution: {integrity: sha512-VStHgI3BVcGo7OXczvnJN7yT2TWHJPDXZWyI/a0ssFNhGZWsPmB8cF0z33ewDXq4VfYMO1vXgiv/g8Nj9NDyWg==}
     engines: {node: '>=8'}
     peerDependencies:
-      react: ^0.14.0 || ^15.0.0 || ^16 || ^17
-      react-dom: ^0.14.0 || ^15.0.0 || ^16 || ^17
+      react: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18
+      react-dom: ^0.14.0 || ^15.0.0 || ^16 || ^17 || ^18
     dependencies:
       exenv: 1.2.2
       prop-types: 15.8.1
@@ -41032,11 +41011,11 @@ packages:
       tslib: 2.6.2
     dev: true
 
-  /use-immer@0.5.2(immer@9.0.21)(react@18.2.0):
-    resolution: {integrity: sha512-aHnLa85kftWo05lqJVOy3GLXrydqu6kl0MXvo5k5OW8IoLJixa9NY/48Xdy0LlcqdakBTFLbSDZaYVPMVhYy8Q==}
+  /use-immer@0.9.0(immer@9.0.21)(react@18.2.0):
+    resolution: {integrity: sha512-/L+enLi0nvuZ6j4WlyK0US9/ECUtV5v9RUbtxnn5+WbtaXYUaOBoKHDNL9I5AETdurQ4rIFIj/s+Z5X80ATyKw==}
     peerDependencies:
       immer: '>=2.0.0'
-      react: ^16.8.0 || ^17.0.1
+      react: ^16.8.0 || ^17.0.1 || ^18.0.0
     dependencies:
       immer: 9.0.21
       react: 18.2.0
@@ -43147,6 +43126,20 @@ packages:
     resolution: {integrity: sha512-C1x6lfvBICFTQIMgbt3JqMOno3VOtkWat/xEakLTOurskYIHPmzJrzd1e8BnmtdDVJlGuk5D+FxyCA8MPmkIyA==}
     dev: true
 
+  /zod-formik-adapter@1.2.0(formik@2.4.5)(zod@3.22.4):
+    resolution: {integrity: sha512-62U+Mf8U05pvLsIMUTC1H6d4K5SmsrXM+YgiZhCpPin5GNhnVuXCGySmJCs0FHuTJCBy7Et5Z1i8KF5ffuLttg==}
+    peerDependencies:
+      formik: ^2.2.9
+      zod: ^3.14.4
+    dependencies:
+      formik: 2.4.5(react@18.2.0)
+      zod: 3.22.4
+    dev: true
+
+  /zod@3.22.4:
+    resolution: {integrity: sha512-iC+8Io04lddc+mVqQ9AZ7OQ2MrUKGN+oIQyq1vemgt46jwCwLfhq7/pwnBnNXXXZb8VTVLKwp9EDkx+ryxIWmg==}
+    dev: true
+
   /zone.js@0.13.3:
     resolution: {integrity: sha512-MKPbmZie6fASC/ps4dkmIhaT5eonHkEt6eAy80K42tAm0G2W+AahLJjbfi6X9NPdciOE9GRFTTM8u2IiF6O3ww==}
     dependencies:
@@ -43170,7 +43163,3 @@ packages:
     dependencies:
       acorn: 8.11.2
     dev: true
-
-settings:
-  autoInstallPeers: true
-  excludeLinksFromLockfile: false
