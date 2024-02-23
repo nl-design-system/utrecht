@@ -6,12 +6,41 @@ import {
   KeyboardEvent,
   PropsWithChildren,
   RefObject,
+  SVGProps,
   useId,
   useRef,
   useState,
 } from 'react';
 import { Button } from './Button';
 import { Heading } from './Heading';
+
+interface AccordionIconProps extends SVGProps<SVGSVGElement> {
+  expanded: boolean;
+}
+
+const AccordionIcon = ({ expanded, ...restProps }: AccordionIconProps) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="1em"
+    className={clsx('utrecht-accordion__icon', {
+      'utrecht-accordion__icon--expanded': expanded,
+    })}
+    height="1em"
+    fill="currentColor"
+    viewBox="0 0 14 8"
+    {...restProps}
+  >
+    <defs>
+      <clipPath id="a">
+        <path strokeWidth={0} d="M0 0h14v8H0z" />
+      </clipPath>
+    </defs>
+    <g clipPath="url(#a)">
+      <path d="M7 8c-.26 0-.51-.1-.71-.29l-6-6C-.1 1.32-.1.68.29.29s1.03-.39 1.42 0L7 5.58 12.29.29A.996.996 0 1 1 13.7 1.7l-6 6c-.2.2-.45.29-.71.29Z" />
+    </g>
+  </svg>
+);
+export default AccordionIcon;
 
 /**
  * Find the first item in an array
@@ -75,8 +104,6 @@ export const AccordionSection = forwardRef(
       className: clsx('utrecht-accordion__panel', {
         'utrecht-accordion__panel--expanded': expanded,
       }),
-      // Use the `hidden` attribute so the toggle works even without CSS
-      hidden: !expanded,
       // Use the `aria-hidden` attribute too, so it even works when CSS
       // doesn't use `display: none` to make transitions.
       'aria-hidden': !expanded,
@@ -108,6 +135,9 @@ export const AccordionSection = forwardRef(
             ref={buttonRef}
           >
             {label}
+            <div className="utrecht-accordion__icon-box">
+              <AccordionIcon expanded={expanded} />
+            </div>
           </Button>
         </Heading>
         {section ? (
@@ -115,7 +145,9 @@ export const AccordionSection = forwardRef(
             {children}
           </section>
         ) : (
-          <div {...panelAttributes}>{children}</div>
+          <div {...panelAttributes}>
+            <div className={clsx('utrecht-accordion__panel-content')}>{children}</div>
+          </div>
         )}
       </div>
     );
