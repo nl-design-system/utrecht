@@ -18,6 +18,7 @@
   --utrecht-textbox-border-bottom-width: var(--utrecht-search-bar-input-border-bottom-width);
   --utrecht-textbox-max-inline-size: var(--utrecht-search-bar-input-max-inline-size);
 
+  box-sizing: border-box;
   display: flex;
 }
 
@@ -27,12 +28,15 @@
   background-position-y: var(--utrecht-search-bar-input-background-position-y);
   background-repeat: no-repeat;
   background-size: var(--utrecht-search-bar-input-background-size);
+  box-sizing: border-box;
 }
 
 @mixin utrecht-search-bar__dropdown {
+  background-color: var(--utrecht-search-bar-dropdown-background-color);
   border-color: var(--utrecht-search-bar-dropdown-border-color);
   border-style: solid;
   border-width: var(--utrecht-search-bar-dropdown-border-width);
+  box-sizing: border-box;
   inline-size: var(--utrecht-search-bar-dropdown-inline-size, var(--utrecht-form-input-max-inline-size));
   max-block-size: var(--utrecht-search-bar-dropdown-max-block-size);
   overflow: auto;

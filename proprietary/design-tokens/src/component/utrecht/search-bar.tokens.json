@@ -23,8 +23,15 @@
         }
       },
       "dropdown": {
-        "inline-size": {},
-        "z-index": {},
+        "inline-size": {
+          "value": "100%"
+        },
+        "background-color": {
+          "value": "{utrecht.color.white}"
+        },
+        "z-index": {
+          "value": "100"
+        },
         "border-width": {
           "value": "1px"
         },
@@ -37,8 +44,12 @@
         "padding-block-end": {
           "value": "{utrecht.space.block.xs}"
         },
-        "padding-inline-start": {},
-        "padding-inline-end": {},
+        "padding-inline-start": {
+          "value": "{utrecht.space.inline.md}"
+        },
+        "padding-inline-end": {
+          "value": "{utrecht.space.inline.md}"
+        },
         "max-block-size": {
           "value": "300px"
         }
@@ -66,8 +77,12 @@
       "list-item": {
         "padding-inline-start": {},
         "padding-inline-end": {},
-        "padding-block-start": {},
-        "padding-block-end": {},
+        "padding-block-start": {
+          "value": "{utrecht.space.block.2xs}"
+        },
+        "padding-block-end": {
+          "value": "{utrecht.space.block.2xs}"
+        },
         "is-active": {
           "color": {
             "value": "{utrecht.color.black}"
