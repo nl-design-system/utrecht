@@ -35,3 +35,27 @@ export const Default: Story = {
     },
   },
 };
+
+export const DefaultValue: Story = {
+  args: {
+    extraComponentProperties: {
+      data: {
+        values: [
+          {
+            label: 'Optie A',
+            value: 'radioA',
+          },
+          {
+            label: 'Optie B',
+            value: 'radioB',
+          },
+          {
+            label: 'Optie C',
+            value: 'radioC',
+          },
+        ],
+      },
+      defaultValue: 'radioA',
+    },
+  },
+};
