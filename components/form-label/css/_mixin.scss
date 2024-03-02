@@ -20,8 +20,8 @@
 }
 
 @mixin utrecht-form-label--disabled {
+  color: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
   cursor: var(--utrecht-action-disabled-cursor, revert);
-  font-weight: var(--utrecht-form-label-disabled-color, var(--utrecht-form-label-color));
 }
 
 @mixin utrecht-form-label--radio {
