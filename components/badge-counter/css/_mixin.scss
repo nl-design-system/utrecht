@@ -10,8 +10,11 @@
   border-radius: var(--utrecht-badge-counter-border-radius, var(--utrecht-badge-border-radius, 0.5ch));
   color: var(--utrecht-badge-counter-color, var(--utrecht-badge-color, hsl(0 0% 100%)));
   display: inline-block;
-  font-family: var(--utrecht-document-font-family, sans-serif);
-  font-size: var(--utrecht-badge-counter-font-size);
+  font-family: var(
+    --utrecht-badge-counter-font-family,
+    var(--utrecht-badge-font-family, var(--utrecht-document-font-family, sans-serif))
+  );
+  font-size: var(--utrecht-badge-counter-font-size, var(--utrecht-badge-font-size));
   font-style: var(--utrecht-badge-counter-font-style, normal); /* no inheritance */
   font-weight: var(--utrecht-badge-counter-font-weight, var(--utrecht-badge-font-weight, bold)); /* no inheritance */
   line-height: 1;
