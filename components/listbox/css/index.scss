@@ -1,0 +1,86 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2023 Frameless B.V.
+ */
+
+@import "./mixin";
+
+.utrecht-listbox {
+  @include utrecht-listbox;
+}
+
+.utrecht-listbox--focus {
+  @include utrecht-listbox--focus;
+}
+
+.utrecht-listbox--focus-visible {
+  @include utrecht-listbox--focus-visible;
+}
+
+.utrecht-listbox--invalid {
+  @include utrecht-listbox--invalid;
+}
+
+.utrecht-listbox--read-only {
+  @include utrecht-listbox--read-only;
+}
+
+.utrecht-listbox__list {
+  @include utrecht-listbox__list;
+}
+
+.utrecht-listbox__group {
+  @include utrecht-listbox__group;
+}
+
+.utrecht-listbox__group-label {
+  @include utrecht-listbox__group-label;
+}
+
+.utrecht-listbox__option {
+  @include utrecht-listbox__option;
+}
+
+.utrecht-listbox__option--disabled {
+  @include utrecht-listbox__option--disabled;
+}
+
+.utrecht-listbox__option--hover {
+  @include utrecht-listbox__option--hover;
+}
+
+.utrecht-listbox__option--focus {
+  @include utrecht-listbox__option--focus;
+}
+
+.utrecht-listbox__option--focus-visible {
+  @include utrecht-listbox__option--focus-visible;
+}
+
+.utrecht-listbox__option--active {
+  @include utrecht-listbox__option--active;
+}
+
+.utrecht-listbox__option--selected {
+  @include utrecht-listbox__option--selected;
+}
+
+.utrecht-listbox__option--html-li {
+  @include reset-li;
+
+  &:hover {
+    @include utrecht-listbox__option--hover;
+  }
+
+  &:focus {
+    @include utrecht-listbox__option--focus;
+  }
+}
+
+.utrecht-listbox--disabled {
+  @include utrecht-listbox--disabled;
+}
+
+.utrecht-listbox--html-div {
+  @include utrecht-listbox--html-div;
+}

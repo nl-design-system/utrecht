@@ -1,0 +1,182 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2023 Frameless B.V.
+ */
+
+@import "../../common/focus/mixin";
+
+@mixin reset-ul() {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  padding-inline-start: 0;
+}
+
+@mixin reset-li() {
+  list-style: none;
+}
+
+@mixin utrecht-listbox {
+  --utrecht-listbox-max-block-size: 300px;
+
+  background-color: var(--utrecht-listbox-background-color);
+  border-color: var(--utrecht-listbox-border-color);
+  border-radius: var(--utrecht-listbox-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-listbox-border-width);
+  box-sizing: border-box;
+  cursor: default;
+  display: flex;
+  flex-direction: column;
+  inline-size: var(--utrecht-listbox-inline-size, var(--utrecht-form-input-max-inline-size));
+  max-block-size: var(--utrecht-listbox-max-block-size);
+  min-block-size: 1em;
+  overflow-block: auto;
+  overflow-y: auto;
+  padding-block-end: var(--utrecht-listbox-padding-block-end);
+  padding-block-start: var(--utrecht-listbox-padding-block-start);
+  padding-inline-end: var(--utrecht-listbox-padding-inline-end);
+  padding-inline-start: var(--utrecht-listbox-padding-inline-start);
+  -webkit-user-select: none;
+  user-select: none;
+
+  @media (forced-colors: active) {
+    & {
+      /* Use inversed disabled colors for selected options */
+      --utrecht-listbox-option-selected-background-color: Highlight;
+      --utrecht-listbox-option-selected-color: HighlightText;
+      --utrecht-listbox-option-disabled-background-color: field;
+      --utrecht-listbox-option-disabled-color: GrayText;
+
+      background-color: field;
+      color: fieldtext;
+    }
+  }
+}
+
+@mixin utrecht-listbox--focus {
+  /* TODO: Implement CSS of focus listbox */
+}
+
+@mixin utrecht-listbox--focus-visible {
+  @include utrecht-focus-visible;
+}
+
+@mixin utrecht-listbox--invalid {
+  /* TODO: Implement CSS of invalid listbox */
+}
+
+@mixin utrecht-listbox__list {
+  @include reset-ul;
+}
+
+@mixin utrecht-listbox__group {
+  @include reset-ul;
+
+  margin-block-end: var(--utrecht-listbox-option-group-margin-block-end);
+}
+
+@mixin utrecht-listbox__group-label {
+  color: var(--utrecht-listbox-option-group-label-color);
+  font-size: var(--utrecht-listbox-option-group-label-font-size);
+  font-weight: var(--utrecht-listbox-option-group-label-font-weight);
+  line-height: var(--utrecht-listbox-option-group-label-line-height);
+  margin-inline-start: var(--utrecht-listbox-option-group-label-margin-inline-start);
+
+  @media (forced-colors: active) {
+    & {
+      background-color: field;
+      color: fieldtext;
+    }
+  }
+}
+
+@mixin utrecht-listbox__option {
+  @include reset-li;
+
+  --utrecht-icon-size: var(--utrecht-listbox-option-icon-size, 16px);
+
+  align-items: center;
+  background-color: var(--utrecht-listbox-option-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-listbox-option-color);
+  display: flex;
+  min-block-size: var(--utrecht-listbox-option-min-block-size, var(--utrecht-pointer-target-min-size, 24px));
+  padding-block-end: var(--utrecht-listbox-option-padding-block-end);
+  padding-block-start: var(--utrecht-listbox-option-padding-block-start);
+  padding-inline-end: var(--utrecht-listbox-option-padding-inline-end);
+  padding-inline-start: var(--utrecht-listbox-option-padding-inline-start);
+
+  @media (forced-colors: active) {
+    & {
+      /* Fix rendering glitch in Google Chrome, where the text became black on a black background */
+      forced-color-adjust: none;
+    }
+  }
+}
+
+@mixin utrecht-listbox__option--disabled {
+  background-color: var(--utrecht-listbox-option-disabled-background-color);
+  color: var(--utrecht-listbox-option-disabled-color);
+}
+
+@mixin utrecht-listbox__option--hover {
+  background-color: var(--utrecht-listbox-option-hover-background-color, var(--utrecht-listbox-option-color));
+  color: var(--utrecht-listbox-option-hover-color, var(--utrecht-listbox-option-color));
+}
+
+@mixin utrecht-listbox__option--focus {
+  background-color: var(--utrecht-listbox-option-focus-background-color, var(--utrecht-listbox-option-color));
+  color: var(--utrecht-listbox-option-focus-color, var(--utrecht-listbox-option-color));
+}
+
+@mixin utrecht-listbox__option--focus-visible {
+  @include utrecht-focus-visible;
+
+  /* ensure the focus outline is rendered inside the `overflow` container */
+  --utrecht-focus-outline-offset: calc(var(--utrecht-focus-outline-width) * -1);
+}
+
+@mixin utrecht-listbox__option--active {
+  background-color: var(--utrecht-listbox-option-is-active-background-color);
+  color: var(--utrecht-listbox-option-is-active-color);
+  font-weight: var(--utrecht-listbox-option-is-active-font-weight);
+}
+
+@mixin utrecht-listbox__option--selected {
+  background-color: var(--utrecht-listbox-option-selected-background-color);
+  color: var(--utrecht-listbox-option-selected-color);
+}
+
+/* order is after default option styling */
+@mixin utrecht-listbox--disabled {
+  /* TODO: Implement CSS of disabled listbox */
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+
+  @media (forced-colors: active) {
+    & {
+      /* Use inversed disabled colors for selected options */
+      --utrecht-listbox-option-selected-background-color: GrayText;
+      --utrecht-listbox-option-selected-color: field;
+      --utrecht-listbox-option-background-color: field;
+      --utrecht-listbox-option-color: GrayText;
+      --utrecht-listbox-background-color: field;
+      --utrecht-listbox-color: GrayText;
+    }
+  }
+}
+
+@mixin utrecht-listbox--read-only {
+  /* TODO: Implement CSS of read-only listbox */
+}
+
+@mixin utrecht-listbox--html-div {
+  &:focus {
+    @include utrecht-listbox--focus;
+  }
+
+  &:focus-visible {
+    @include utrecht-listbox--focus-visible;
+  }
+}
