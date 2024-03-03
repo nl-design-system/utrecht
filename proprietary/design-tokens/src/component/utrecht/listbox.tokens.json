@@ -1,0 +1,80 @@
+{
+  "utrecht": {
+    "listbox": {
+      "inline-size": {
+        "value": "448px"
+      },
+      "z-index": {},
+      "border-width": {
+        "value": "{utrecht.form-control.border-width}"
+      },
+      "border-color": {
+        "value": "{utrecht.form-control.border-color}"
+      },
+      "background-color": {
+        "value": "{utrecht.color.white}"
+      },
+      "max-block-size": {
+        "value": "300px"
+      },
+      "option-group": {
+        "margin-block-end": {
+          "value": "{utrecht.space.inline.xs}"
+        },
+        "title": {
+          "font-size": {
+            "value": "{utrecht.typography.scale.md.font-size}"
+          },
+          "font-weight": {
+            "value": "{utrecht.typography.weight-scale.bold.font-weight}"
+          },
+          "line-height": {},
+          "color": {
+            "value": "{utrecht.color.black}"
+          },
+          "margin-inline-start": {
+            "value": "{utrecht.space.inline.xs}"
+          }
+        }
+      },
+      "option": {
+        "padding-block-start": {
+          "value": "{utrecht.space.block.xs}"
+        },
+        "padding-block-end": {
+          "value": "{utrecht.space.block.xs}"
+        },
+        "padding-inline-start": { "value": "{utrecht.space.inline.xs}" },
+        "padding-inline-end": { "value": "{utrecht.space.inline.xs}" },
+        "min-block-size": { "value": "44px" },
+        "active": {
+          "color": {
+            "value": "{utrecht.color.black}"
+          },
+          "background-color": {
+            "value": "{utrecht.color.grey.95}"
+          },
+          "font-weight": {
+            "value": "{utrecht.typography.weight-scale.bold.font-weight}"
+          }
+        },
+        "hover": {
+          "color": {
+            "value": "{utrecht.color.black}"
+          },
+          "background-color": {
+            "value": "{utrecht.color.blue.90}"
+          }
+        },
+        "selected": {
+          "color": {
+            "value": "{utrecht.color.black}"
+          },
+          "background-color": {
+            "value": "{utrecht.color.grey.95}"
+          }
+        }
+      }
+    }
+  }
+}

@@ -104,6 +104,8 @@ export type { LinkSocialProps } from '../LinkSocial';
 export { LinkList, LinkListLink } from './LinkList';
 export type { LinkListProps, LinkListLinkProps } from './LinkList';
 export { LinkSocial } from './LinkSocial';
+export type { ListboxProps, ListboxOptionProps, ListboxOptionGroupProps } from './Listbox';
+export { Listbox, ListboxOption, ListboxOptionGroup } from './Listbox';
 export type { ListSocialProps, ListSocialItemProps } from '../ListSocial';
 export { ListSocial, ListSocialItem } from './ListSocial';
 export type { LogoProps } from '../Logo';
