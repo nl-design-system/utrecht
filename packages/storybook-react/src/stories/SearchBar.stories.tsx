@@ -1,9 +1,15 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { SearchBar } from '@utrecht/component-library-react/dist/css-module/index';
+import { SearchBarDownshift as SearchBar } from '@utrecht/component-library-react/src/SearchBarDownshift';
+import defaultDocs from '@utrecht/components/search-bar/_default.md?raw';
+import expandedDocs from '@utrecht/components/search-bar/_expanded.md?raw';
+import optionActiveDocs from '@utrecht/components/search-bar/_option-active.md?raw';
+import optionSelectedDocs from '@utrecht/components/search-bar/_option-selected.md?raw';
 import tokensDefinition from '@utrecht/components/search-bar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
+
+const spaceForPopover = (Story) => <div style={{ minBlockSize: '42em' }}>{Story()}</div>;
 
 const languages = [
   {
@@ -103,7 +109,7 @@ const itemToString = (item: any) => {
 };
 
 const meta: Meta<typeof SearchBar> = {
-  title: 'React Component/SearchBar',
+  title: 'React Component/Search bar combobox',
   id: 'react-search-bar',
   component: SearchBar,
   tags: ['autodocs'],
@@ -243,9 +249,44 @@ export const Default: Story = {
       </form>
     );
   },
+  decorators: [spaceForPopover],
+  parameters: {
+    docs: {
+      description: {
+        story: defaultDocs,
+      },
+    },
+  },
 };
 
-export const IsOpen: Story = {
+export const RightToLeft: Story = {
+  args: {
+    isOpen: true,
+    items: languages,
+    itemToString,
+    button: {
+      label: 'بحث',
+    },
+  },
+  decorators: [
+    spaceForPopover,
+    (Story) => (
+      <div dir="rtl" lang="ar">
+        {Story()}
+      </div>
+    ),
+  ],
+  name: 'Right-to-left',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Gebruik `dir="rtl"` om te testen of je goed CSS logical properties hebt gebruikt.',
+      },
+    },
+  },
+};
+
+export const Vertical: Story = {
   args: {
     isOpen: true,
     items: languages,
@@ -254,6 +295,46 @@ export const IsOpen: Story = {
       label: 'Search',
     },
   },
+  decorators: [
+    (Story) => (
+      <div
+        style={{
+          blockSize: '100%',
+          writingMode: 'vertical-rl',
+        }}
+      >
+        {Story()}
+      </div>
+    ),
+  ],
+  name: 'Vertical writing mode',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Gebruik `writing-mode: vertical-lr` om te testen of je goed CSS logical properties hebt gebruikt.',
+      },
+    },
+  },
+};
+
+export const Expanded: Story = {
+  args: {
+    isOpen: true,
+    items: languages,
+    itemToString,
+    button: {
+      label: 'Search',
+    },
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: expandedDocs,
+      },
+    },
+  },
+  name: 'Expanded combobox',
+  decorators: [spaceForPopover],
 };
 
 export const IsActiveElement: Story = {
@@ -266,6 +347,15 @@ export const IsActiveElement: Story = {
       label: 'Search',
     },
   },
+  name: 'Active option',
+  parameters: {
+    docs: {
+      description: {
+        story: optionActiveDocs,
+      },
+    },
+  },
+  decorators: [spaceForPopover],
 };
 
 export const IsSelectedElement: Story = {
@@ -278,6 +368,15 @@ export const IsSelectedElement: Story = {
       label: 'Search',
     },
   },
+  name: 'Selected option',
+  parameters: {
+    docs: {
+      description: {
+        story: optionSelectedDocs,
+      },
+    },
+  },
+  decorators: [spaceForPopover],
 };
 
 export const CustomRenderOptions: Story = {
@@ -291,6 +390,7 @@ export const CustomRenderOptions: Story = {
       label: 'Search',
     },
   },
+  decorators: [spaceForPopover],
 };
 
 export const DesignTokens = designTokenStory(meta as any);
