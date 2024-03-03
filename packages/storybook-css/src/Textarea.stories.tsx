@@ -74,6 +74,10 @@ const meta = {
       description: 'focusVisible',
       control: 'boolean',
     },
+    placeholder: {
+      description: 'Set the value of the placeholder text',
+      control: 'text',
+    },
     spellCheck: {
       description: 'Spellcheck',
       control: { type: 'select' },
