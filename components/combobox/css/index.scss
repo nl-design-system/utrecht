@@ -1,0 +1,22 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2023 Frameless B.V.
+ */
+
+@import "./mixin";
+
+.utrecht-combobox {
+  @include utrecht-combobox;
+}
+
+.utrecht-combobox__popover {
+  @include utrecht-combobox__popover;
+}
+
+.utrecht-combobox__popover--block-end {
+  @include utrecht-combobox__popover--block-end;
+}
+
+.utrecht-combobox__popover--hidden {
+  @include utrecht-combobox__popover--hidden;
+}
