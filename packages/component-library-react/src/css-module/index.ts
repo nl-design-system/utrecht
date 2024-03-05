@@ -24,6 +24,8 @@ export type { ButtonGroupProps } from '../ButtonGroup';
 export { ButtonGroup } from './ButtonGroup';
 export type { ButtonLinkProps } from '../ButtonLink';
 export { ButtonLink } from './ButtonLink';
+export { CardList } from './CardList';
+export { CardListItem } from './CardListItem';
 export type { CheckboxProps } from '../Checkbox';
 export { Checkbox } from './Checkbox';
 export type { CodeProps } from '../Code';
