@@ -4,18 +4,45 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-/* stylelint-disable-next-line block-no-empty */
+@import "./mixin";
+
 .utrecht-logo-image {
+  @include utrecht-logo-image;
 }
 
-.utrecht-logo-image__decoration-1 {
-  fill: var(--utrecht-logo-decoration-1-color, #fff);
+.utrecht-logo-image__shield--right {
+  @include utrecht-logo-image__shield--right;
 }
 
-.utrecht-logo-image__decoration-2 {
-  fill: var(--utrecht-logo-decoration-2-color, #c00);
+.utrecht-logo-image__shield--left {
+  @include utrecht-logo-image__shield--left;
 }
 
-.utrecht-logo-image__decoration-3 {
-  fill: var(--utrecht-logo-decoration-3-color, #ffb70b);
+.utrecht-logo-image__details {
+  @include utrecht-logo-image__details;
+}
+
+.utrecht-logo-image__text {
+  @include utrecht-logo-image__text;
+}
+
+.utrecht-logo-image__border {
+  @include utrecht-logo-image__border;
+}
+
+@media (min-width: 600px) {
+  .utrecht-logo-image {
+    --utrecht-logo-image-sm-inline-size: var(--utrecht-logo-image-md-inline-size);
+    --utrecht-logo-image-sm-block-size: var(--utrecht-logo-image-md-block-size);
+    --_utrecht-logo-image-border-display: inline-block;
+  }
+}
+
+@media (min-width: 960px) {
+  .utrecht-logo-image {
+    --utrecht-logo-image-md-inline-size: var(--utrecht-logo-image-inline-size);
+    --utrecht-logo-image-md-block-size: var(--utrecht-logo-image-block-size);
+    --_utrecht-logo-image-border-display: inline-block;
+    --_utrecht-logo-image-text-display: inline-block;
+  }
 }
