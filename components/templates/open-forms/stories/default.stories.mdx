@@ -1,0 +1,22 @@
+{/* @license CC0-1.0 */}
+
+import { Canvas, Meta, Story } from "@storybook/blocks";
+import { OpenFormStep1 } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-template-open-form"
+  title="Templates/Open forms"
+  component={OpenFormStep1}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Open Forms Formulier
+
+<Canvas>
+  <Story name="Default">{OpenFormStep1.bind({})}</Story>
+</Canvas>
