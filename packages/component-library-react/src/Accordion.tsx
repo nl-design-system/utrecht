@@ -115,7 +115,9 @@ export const AccordionSection = forwardRef(
             {children}
           </section>
         ) : (
-          <div {...panelAttributes}>{children}</div>
+          <div id={panelId} {...panelAttributes}>
+            {children}
+          </div>
         )}
       </div>
     );
