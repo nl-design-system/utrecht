@@ -61,6 +61,7 @@ export const RadioButton = ({
   invalid = defaultArgs.invalid,
   name = defaultArgs.name,
   id = defaultArgs.id,
+  ...restProps
 }) => (
   <input
     type="radio"
@@ -79,6 +80,7 @@ export const RadioButton = ({
     )}
     name={name || undefined}
     id={id || undefined}
+    {...restProps}
   />
 );
 
