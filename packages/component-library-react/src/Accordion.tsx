@@ -158,7 +158,6 @@ export const Accordion = forwardRef(
 Accordion.displayName = 'Accordion';
 
 export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | undefined>) => {
-  console.log('useAccordion');
   // const sections: AccordionSectionProviderProps[] = [];
   const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
   const buttonRefs = sections.map((_) => useRef<HTMLButtonElement>(null));
@@ -181,7 +180,6 @@ export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | 
     },
     focusFirstSection: () => {
       const firstSection = firstItem(buttonRefs);
-      console.log(refs);
       firstSection?.current?.focus();
     },
     focusPreviousSection: (activeElement: RefObject<HTMLDivElement>) => {
