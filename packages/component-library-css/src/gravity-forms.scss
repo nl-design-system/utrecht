@@ -802,8 +802,14 @@ body .gform_wrapper .validation_error {
   border: 1px solid red;
 }
 
+// @TODO: wrapper class that signifies that the field has an error
 body .gform_wrapper .gform_body .gform_fields .gfield_error {
   border: 1px solid red;
+
+  // Add your fields here
+  .ginput_container_textarea textarea {
+    @include utrecht-textarea--invalid;
+  }
 }
 
 body .gform_wrapper .gform_body .gform_fields .gform_validation_errors {
