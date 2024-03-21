@@ -402,93 +402,456 @@ body .gform_wrapper .gform_body .gform_fields #field_XX_X.gfield select option {
 */
 
 // https://docs.gravityforms.com/file-upload-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload input {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_drop_instructions {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .validation_message {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_button_select_files {color: red;}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload input {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_drop_instructions {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .validation_message {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_button_select_files {
+  color: red;
+}
 
 // https://docs.gravityforms.com/email-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email input {border: 1px solid red;}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email input {
+  border: 1px solid red;
+}
 
 // https://docs.gravityforms.com/website-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website input {border: 1px solid red;}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website input {
+  border: 1px solid red;
+}
 
 // https://docs.gravityforms.com/address-field-2/
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 label {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 label {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_city {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_city input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_city label {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_state {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_state input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_state label {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_zip {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_zip input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_zip label {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_country {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_country select {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .address_country label {color: red;}
+body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_city {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_city input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_city label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_state {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_state input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_state label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_zip {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_zip input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_zip label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_country {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_country select {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .address_country label {
+  color: red;
+}
 
 // https://docs.gravityforms.com/name-fields/
-body .gform_wrapper .gform_body .gform_fields .gfield .name_first {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .name_first input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .name_first label {color: red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .name_last {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .name_last input {border: 1px solid red;}
-body .gform_wrapper .gform_body .gform_fields .gfield .name_last label {color: red;}
+body .gform_wrapper .gform_body .gform_fields .gfield .name_first {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .name_first input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .name_first label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .name_last {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .name_last input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .name_last label {
+  color: red;
+}
 
 // https://docs.gravityforms.com/list-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_listbody .gform_wrapper .gform_body .gform_fields .gfield .ginput_list {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_listbody .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield div.ginput_container_list table.gfield_list thead th {color: red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list colgroup col.gfield_list_col_odd {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list colgroup col.gfield_list_col_even {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr.gfield_list_row_odd {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr.gfield_list_row_even {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr.gfield_list_group {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr td.gfield_list_cell {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr td.gfield_list_icons {border: 1px solid red}
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_listbody .gform_wrapper .gform_body .gform_fields .gfield .ginput_list {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_listbody .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield div.ginput_container_list table.gfield_list thead th {
+  color: red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list colgroup col.gfield_list_col_odd {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list colgroup col.gfield_list_col_even {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr.gfield_list_row_odd {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr.gfield_list_row_even {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr.gfield_list_group {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr td.gfield_list_cell {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_list table.gfield_list tbody tr td.gfield_list_icons {
+  border: 1px solid red
+}
 
 // https://docs.gravityforms.com/captcha-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .recaptcha_widget_div .recaptcha_area {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_captcha_container {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_captcha_container .gfield_captcha {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_captcha_container .gfield_captcha_input_container input {border: 1px solid red}
+body .gform_wrapper .gform_body .gform_fields .gfield .recaptcha_widget_div .recaptcha_area {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_captcha_container {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_captcha_container .gfield_captcha {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_captcha_container .gfield_captcha_input_container input {
+  border: 1px solid red
+}
 
 // https://docs.gravityforms.com/time-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour input {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour label {color: red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute input {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute label {color: red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select {border: 1px solid red}
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour input {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_hour label {
+  color: red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute input {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_minute label {
+  color: red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_time_ampm select {
+  border: 1px solid red
+}
 
 // https://docs.gravityforms.com/date-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .datepicker {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_input_datepicker_icon {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month input {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month label {color: red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day label {color: red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year input {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year label {color: red}
+body .gform_wrapper .gform_body .gform_fields .gfield .datepicker {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_input_datepicker_icon {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month input {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_month label {
+  color: red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day input {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_day label {
+  color: red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year input {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_date_year label {
+  color: red
+}
 
 // https://docs.gravityforms.com/consent-field-css-selectors/
-body .gform_body .gform_fields .ginput_container.ginput_container_consent {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_consent_label {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .ginput_container_consent input[type=checkbox] {border: 1px solid red}
-body .gform_wrapper .gform_body .gform_fields .gfield .gfield_consent_description {border: 1px solid red}
+body .gform_body .gform_fields .ginput_container.ginput_container_consent {
+  border: 1px solid red
+}
 
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_consent_label {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .ginput_container_consent input[type=checkbox] {
+  border: 1px solid red
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gfield_consent_description {
+  border: 1px solid red
+}
+
+/* --- Post fields */
+/* Post images */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_image {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_image input {
+  border: 1px solid red;
+}
+
+/* Post tags */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_tags {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_tags input {
+  border: 1px solid red;
+}
+
+/* Post excerpt */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_excerpt {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_excerpt input {
+  border: 1px solid red;
+}
+
+/* Post body */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_content {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_content input {
+  border: 1px solid red;
+}
+
+/* Post title */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_title {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_title input {
+  color: red;
+}
+
+/* Pricing fields */
+/* Total */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_total {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_total .ginput_total {
+  color: red;
+}
+
+/* Shipping */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleshipping {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield_shipping .gfield_label {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleshipping .ginput_shipping_price {
+  color: red;
+}
+
+/* Option */
+body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_select {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_select select {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_select select option {
+  border: 1px solid red;
+}
+
+/* Quantity */
+body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_number {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_number input {
+  border: 1px solid red;
+}
+
+/* Product */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price_label {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price {
+  color: red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity {
+  border: 1px solid red;
+}
+
+/* Credit card */
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .gform_card_icon_container {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .gform_card_icon_container .gform_card_icon_amex {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .gform_card_icon_container .gform_card_icon_discover {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .gform_card_icon_container .gform_card_icon_mastercard {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .gform_card_icon_container .gform_card_icon_visa {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_full input {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_expiration_container {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_expiration_container .ginput_card_expiration_month {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_expiration_container .ginput_card_expiration_year {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_cardinfo_right {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_cardinfo_right .ginput_card_security_code {
+  border: 1px solid red;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard .ginput_cardinfo_right .ginput_card_security_code_icon {
+  border: 1px solid red;
+}
