@@ -3,7 +3,13 @@
  * Copyright (c) 2024 Gemeente Utrecht
  */
 
+@import "../../../components/checkbox/css/mixin";
+@import "../../../components/form-label/css/mixin";
 @import "../../../components/link/css/mixin";
+@import "../../../components/radio-button/css/mixin";
+@import "../../../components/select/css/mixin";
+@import "../../../components/textarea/css/mixin";
+@import "../../../components/textbox/css/mixin";
 
 // https://docs.gravityforms.com/html-field/
 
@@ -98,13 +104,14 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li {
 // https://docs.gravityforms.com/checkboxes-field/#h-labels
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li label {
-  border: 1px solid red;
+  @include utrecht-form-label;
 }
 
 // https://docs.gravityforms.com/checkboxes-field/#h-inputs
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_checkbox li input[type="checkbox"] {
-  border: 1px solid red;
+  @include utrecht-checkbox;
+  @include utrecht-checkbox--html-input;
 }
 
 // https://docs.gravityforms.com/radio-buttons-field/#h-list
@@ -128,13 +135,15 @@ body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li label {
 // https://docs.gravityforms.com/radio-buttons-field/#h-inputs
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_radio li input[type="radio"] {
-  border: 1px solid red;
+  @include utrecht-radio-button;
+  @include utrecht-radio-button--html-input;
 }
 
 // https://docs.gravityforms.com/paragraph-text-field/
 
 body .gform_wrapper .gform_body .gform_fields .gfield textarea {
-  border: 1px solid red;
+  @include utrecht-textarea;
+  @include utrecht-textarea--html-textarea;
 }
 
 // https://docs.gravityforms.com/single-line-text-field/#h-container
@@ -146,7 +155,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_text {
 // https://docs.gravityforms.com/single-line-text-field/#h-input
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_text input[type="text"] {
-  border: 1px solid red;
+  @include utrecht-textbox;
+  @include utrecht-textbox--html-input;
 }
 
 // https://docs.gravityforms.com/single-line-text-field/#h-maximum-characters-counter
@@ -164,7 +174,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_select {
 // https://docs.gravityforms.com/drop-down-field/#h-select-box
 
 body .gform_wrapper .gform_body .gform_fields .gfield select {
-  border: 1px solid red;
+  @include utrecht-select;
+  @include utrecht-select--html-select;
 }
 
 // https://docs.gravityforms.com/drop-down-field/#h-items
