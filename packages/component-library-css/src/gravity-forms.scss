@@ -489,7 +489,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_ima
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_image input {
-  border: 1px solid red;
+  @include utrecht-textbox;
 }
 
 /* Post tags */
@@ -498,7 +498,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_tag
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_tags input {
-  border: 1px solid red;
+  @include utrecht-textbox;
 }
 
 /* Post excerpt */
@@ -506,8 +506,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_exc
   border: 1px solid red;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_excerpt input {
-  border: 1px solid red;
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_excerpt input, body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_excerpt textarea {
+  @include utrecht-textarea;
 }
 
 /* Post body */
@@ -515,8 +515,8 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_con
   border: 1px solid red;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_content input {
-  border: 1px solid red;
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_content input, body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_content textarea {
+  @include utrecht-textarea;
 }
 
 /* Post title */
@@ -525,7 +525,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_tit
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_post_title input {
-  color: red;
+  @include utrecht-textbox;
 }
 
 /* Pricing fields */
@@ -535,7 +535,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_total {
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_total .ginput_total {
-  color: red;
+  @include utrecht-textbox--read-only;
 }
 
 /* Shipping */
@@ -544,11 +544,11 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlesh
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield_shipping .gfield_label {
-  border: 1px solid red;
+  @include utrecht-form-label;
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleshipping .ginput_shipping_price {
-  color: red;
+  @include utrecht-form-label;
 }
 
 /* Option */
@@ -557,7 +557,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_se
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_select select {
-  border: 1px solid red;
+  @include utrecht-select;
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_select select option {
@@ -570,7 +570,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_nu
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield_price .ginput_container_number input {
-  border: 1px solid red;
+  @include utrecht-textbox--numeric;
 }
 
 /* Product */
@@ -579,18 +579,18 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singlepr
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price_label {
-  color: red;
+  @include utrecht-form-label;
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_product_price {
-  color: red;
+  @include utrecht-textbox;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity {
-  border: 1px solid red;
+body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_singleproduct .ginput_quantity_label {
+  @include utrecht-form-label;
 }
 
-/* Credit card */
+/* Credit card -- Not a field (?) */
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_creditcard {
   border: 1px solid red;
 }
