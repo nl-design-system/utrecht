@@ -3,13 +3,35 @@
  * Copyright (c) 2024 Gemeente Utrecht
  */
 
+@import "../../../components/button/css/mixin";
 @import "../../../components/checkbox/css/mixin";
 @import "../../../components/form-label/css/mixin";
+@import "../../../components/form-field-description/css/mixin";
 @import "../../../components/link/css/mixin";
 @import "../../../components/radio-button/css/mixin";
 @import "../../../components/select/css/mixin";
 @import "../../../components/textarea/css/mixin";
 @import "../../../components/textbox/css/mixin";
+@import "../../../components/common/focus/mixin";
+
+@import "../../../components/form-field-error-message/css/mixin";
+@import "../../../components/paragraph/css/mixin";
+
+/*
+* Global
+*/
+.gform_body .gfield_description {
+  @include utrecht-form-field-description;
+}
+
+.gform_body .validation_message {
+  // Shares selector with `.gfield_description`.
+  @include utrecht-form-field-error-message;
+}
+
+.gform_body .gform-field-label:not(.gform-field-label--type-sub,.screen-reader-text,.gform-field-label--type-inline) {
+  @include utrecht-form-label;
+}
 
 // https://docs.gravityforms.com/html-field/
 
@@ -189,145 +211,142 @@ body .gform_wrapper .gform_body .gform_fields .gfield select option {
 */
 
 // https://docs.gravityforms.com/file-upload-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {
-  border: 1px solid red;
+.gform-body .gform_drop_area {
+  @include utrecht-focus-ring;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload input {
-  color: red;
+.gform-body .gfield_fileupload_progressbar_progress {
+  background-color: var(--nlds-gform-progress-bar-background-color, var(--utrecht-color-blue-50));
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload {
-  border: 1px solid red;
+.gform-body .gfield_fileupload_filename {
+  @include utrecht-form-label;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_drop_instructions {
-  color: red;
+.gform-body .gfield_fileupload_percent,
+.gform-body .gfield_fileupload_filesize {
+ @include utrecht-paragraph--small;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .validation_message {
-  color: red;
+.gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_button_select_files {
+  @include utrecht-button;
 }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_fileupload .gform_button_select_files {
-  color: red;
-}
+// https://docs.gravityforms.com/email-field/ -- Inherit default input[type="text"]
+// body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email {
+//  border: 1px solid red;
+//}
 
-// https://docs.gravityforms.com/email-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email {
-  border: 1px solid red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email input {
+//  border: 1px solid red;
+// }
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_email input {
-  border: 1px solid red;
-}
+// https://docs.gravityforms.com/website-field/ -- Inherit default input[type="text"]
+// body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website {
+//  border: 1px solid red;
+//}
 
-// https://docs.gravityforms.com/website-field/
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website {
-  border: 1px solid red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website input {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container_website input {
-  border: 1px solid red;
-}
+// https://docs.gravityforms.com/address-field-2/ -- Inherit default input[type="text"]
+// body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 {
+//  border: 1px solid red;
+//}
 
-// https://docs.gravityforms.com/address-field-2/
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 input {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 input {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 label {
+//  color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_1 label {
-  color: red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 input {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 input {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 label {
+//  color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_line_2 label {
-  color: red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_city {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_city {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_city input {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_city input {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_city label {
+//  color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_city label {
-  color: red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_state {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_state {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_state input {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_state input {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_state label {
+//  color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_state label {
-  color: red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_zip {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_zip {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_zip input {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_zip input {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_zip label {
+//  color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_zip label {
-  color: red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_country {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_country {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_country select {
+//  border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_country select {
-  border: 1px solid red;
-}
+//body .gform_wrapper .gform_body .gform_fields .gfield .address_country label {
+//  color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .address_country label {
-  color: red;
-}
+// https://docs.gravityforms.com/name-fields/ -- Inherit default input[type="text"]
+// body .gform_wrapper .gform_body .gform_fields .gfield .name_first {
+// border: 1px solid red;
+//}
 
-// https://docs.gravityforms.com/name-fields/
-body .gform_wrapper .gform_body .gform_fields .gfield .name_first {
-  border: 1px solid red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .name_first input {
+// border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .name_first input {
-  border: 1px solid red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .name_first label {
+// color: red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .name_first label {
-  color: red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .name_last {
+// border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .name_last {
-  border: 1px solid red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .name_last input {
+// border: 1px solid red;
+//}
 
-body .gform_wrapper .gform_body .gform_fields .gfield .name_last input {
-  border: 1px solid red;
-}
-
-body .gform_wrapper .gform_body .gform_fields .gfield .name_last label {
-  color: red;
-}
+// body .gform_wrapper .gform_body .gform_fields .gfield .name_last label {
+// color: red;
+//}
 
 // https://docs.gravityforms.com/list-field/
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_listbody .gform_wrapper .gform_body .gform_fields .gfield .ginput_list {
