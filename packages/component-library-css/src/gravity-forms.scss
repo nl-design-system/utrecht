@@ -728,16 +728,16 @@ body
 
 // https://docs.gravityforms.com/save-and-continue-link-css/
 body .gform_wrapper .gform_footer .gform_save_link {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 // https://docs.gravityforms.com/submit-button-css-selectors/
 body .gform_wrapper .gform_footer input[type="submit"] {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 body .gform_wrapper .gform_footer input[type="image"] {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 // https://docs.gravityforms.com/multi-page-forms/
@@ -746,7 +746,7 @@ body .gform_wrapper .gf_progressbar_wrapper {
 }
 
 body .gform_wrapper .gf_progressbar_wrapper .gf_progressbar_title {
-  color: red;
+  @include utrecht-paragraph;
 }
 
 body .gform_wrapper .gf_progressbar_wrapper .gf_progressbar {
@@ -786,15 +786,15 @@ body .gform_wrapper .gform_body .gform_page_footer {
 }
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_next_button {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_previous_button {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 body .gform_wrapper .gform_body .gform_page_footer .gform_button {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 // https://docs.gravityforms.com/validation-errors/
@@ -806,13 +806,22 @@ body .gform_wrapper .gform_body .gform_fields .gfield_error {
   border: 1px solid red;
 }
 
+body .gform_wrapper .gform_body .gform_fields .gform_validation_errors {
+  @include utrecht-alert-type("error");
+}
+
+body .gform_wrapper .gform_body .gform_fields .gform_validation_error_link {
+  @include utrecht-link;
+  @include utrecht-link--html-a;
+}
+
 body .gform_wrapper .gform_body .gform_fields .gfield_error .validation_message {
-  border: 1px solid red;
+  @include utrecht-form-field-error-message;
 }
 
 // https://docs.gravityforms.com/form-confirmation/
 body .gform_confirmation_wrapper .gform_confirmation_message {
-  border: 1px solid red;
+  @include utrecht-alert-type("ok");
 }
 
 // https://docs.gravityforms.com/form-footer/
@@ -821,11 +830,11 @@ body .gform_wrapper .gform_footer {
 }
 
 body .gform_wrapper .gform_footer input[type="submit"] {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 body .gform_wrapper .gform_footer input[type="image"] {
-  border: 1px solid red;
+  border: 1px solid red; // @TODO Robbert - button
 }
 
 // https://docs.gravityforms.com/form-body/
@@ -846,7 +855,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_container {
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_description {
-  border: 1px solid red;
+  @include utrecht-form-field__description;
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required {
@@ -859,11 +868,11 @@ body .gform_wrapper .gform_heading {
 }
 
 body .gform_wrapper .gform_heading .gform_title {
-  color: red;
+  @include utrecht-heading-2;
 }
 
 body .gform_wrapper .gform_heading .gform_description {
-  border: 1px solid red;
+  @include utrecht-paragraph;
 }
 
 // https://docs.gravityforms.com/form-wrapper/
