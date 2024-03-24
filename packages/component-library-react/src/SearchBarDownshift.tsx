@@ -117,8 +117,8 @@ export const SearchBarDownshift = ({
 }: SearchBarProps) => {
   return (
     <Downshift itemToString={itemToString} {...rest}>
-      {({ getInputProps, getItemProps, getMenuProps, isOpen, selectedItem, highlightedIndex }) => (
-        <SearchBarFormField>
+      {({ getInputProps, getItemProps, getMenuProps, getRootProps, isOpen, selectedItem, highlightedIndex }) => (
+        <SearchBarFormField {...getRootProps()}>
           <Combobox>
             <Textbox name={name} type="search" className="utrecht-search-bar__input" {...getInputProps()} {...input} />
             <Listbox

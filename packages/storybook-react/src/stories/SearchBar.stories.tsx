@@ -1,9 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { SearchBarDownshift as SearchBar } from '@utrecht/component-library-react/src/SearchBarDownshift';
-import defaultDocs from '@utrecht/components/search-bar/_default.md?raw';
-import expandedDocs from '@utrecht/components/search-bar/_expanded.md?raw';
-import optionActiveDocs from '@utrecht/components/search-bar/_option-active.md?raw';
-import optionSelectedDocs from '@utrecht/components/search-bar/_option-selected.md?raw';
 import tokensDefinition from '@utrecht/components/search-bar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
@@ -108,7 +104,7 @@ const itemToString = (item: any) => {
   return item ? item.name : '';
 };
 
-const meta: Meta<typeof SearchBar> = {
+const meta = {
   title: 'React Component/Search bar combobox',
   id: 'react-search-bar',
   component: SearchBar,
@@ -178,11 +174,11 @@ const meta: Meta<typeof SearchBar> = {
       },
     },
   },
-};
+} satisfies Meta<typeof SearchBar>;
 
 export default meta;
 
-type Story = StoryObj<typeof SearchBar>;
+type Story = StoryObj<typeof meta>;
 
 /**
  * SearchBar Component
@@ -250,13 +246,6 @@ export const Default: Story = {
     );
   },
   decorators: [spaceForPopover],
-  parameters: {
-    docs: {
-      description: {
-        story: defaultDocs,
-      },
-    },
-  },
 };
 
 export const RightToLeft: Story = {
@@ -311,7 +300,9 @@ export const Vertical: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Gebruik `writing-mode: vertical-lr` om te testen of je goed CSS logical properties hebt gebruikt.',
+        story: `Gebruik \`writing-mode: vertical-lr\` om te testen of je goed CSS logical properties hebt gebruikt.
+
+[Safari 17.4 is de eerste versie](https://webkit.org/blog/15190/implementing-vertical-form-controls/) van Safari die verticale form controls ondersteunt.`,
       },
     },
   },
@@ -324,13 +315,6 @@ export const Expanded: Story = {
     itemToString,
     button: {
       label: 'Search',
-    },
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: expandedDocs,
-      },
     },
   },
   name: 'Expanded combobox',
@@ -348,13 +332,6 @@ export const IsActiveElement: Story = {
     },
   },
   name: 'Active option',
-  parameters: {
-    docs: {
-      description: {
-        story: optionActiveDocs,
-      },
-    },
-  },
   decorators: [spaceForPopover],
 };
 
@@ -369,13 +346,6 @@ export const IsSelectedElement: Story = {
     },
   },
   name: 'Selected option',
-  parameters: {
-    docs: {
-      description: {
-        story: optionSelectedDocs,
-      },
-    },
-  },
   decorators: [spaceForPopover],
 };
 
