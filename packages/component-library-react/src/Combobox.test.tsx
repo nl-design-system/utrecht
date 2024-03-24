@@ -1,5 +1,6 @@
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { createRef } from 'react';
 import { Combobox } from './Combobox';
 
 describe('Combobox', () => {
@@ -18,5 +19,15 @@ describe('Combobox', () => {
     const combobox = container.querySelector(':only-child');
 
     expect(combobox).toHaveClass('utrecht-combobox');
+  });
+
+  it('supports ForwardRef in React', () => {
+    const ref = createRef<HTMLDivElement>();
+
+    const { container } = render(<Combobox ref={ref} />);
+
+    const combobox = container.querySelector(':only-child');
+
+    expect(ref.current).toBe(combobox);
   });
 });

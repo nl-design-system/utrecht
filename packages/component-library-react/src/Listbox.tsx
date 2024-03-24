@@ -4,7 +4,7 @@
  */
 
 import clsx from 'clsx';
-import { HTMLAttributes, LiHTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, LiHTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 
 export interface ListboxProps extends HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
@@ -14,57 +14,69 @@ export interface ListboxProps extends HTMLAttributes<HTMLDivElement> {
   required?: boolean;
 }
 
-export const Listbox = ({
-  children,
-  className,
-  disabled,
-  invalid,
-  multiple,
-  readOnly,
-  required,
-  ...restProps
-}: PropsWithChildren<ListboxProps>) => (
-  <div
-    className={clsx(
-      'utrecht-listbox',
-      'utrecht-listbox--html-div',
-      {
-        'utrecht-listbox--disabled': disabled,
-        'utrecht-listbox--invalid': invalid,
-        'utrecht-listbox--read-only': readOnly,
-      },
+export const Listbox = forwardRef(
+  (
+    {
+      children,
       className,
-    )}
-    role="listbox"
-    aria-disabled={disabled || undefined}
-    aria-invalid={invalid || undefined}
-    aria-multiselectable={multiple || undefined}
-    aria-readonly={readOnly || undefined}
-    aria-required={required || undefined}
-    tabIndex={0}
-    {...restProps}
-  >
-    <ul className="utrecht-listbox__list">{children}</ul>
-  </div>
+      disabled,
+      invalid,
+      multiple,
+      readOnly,
+      required,
+      ...restProps
+    }: PropsWithChildren<ListboxProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => (
+    <div
+      className={clsx(
+        'utrecht-listbox',
+        'utrecht-listbox--html-div',
+        {
+          'utrecht-listbox--disabled': disabled,
+          'utrecht-listbox--invalid': invalid,
+          'utrecht-listbox--read-only': readOnly,
+        },
+        className,
+      )}
+      role="listbox"
+      aria-disabled={disabled || undefined}
+      aria-invalid={invalid || undefined}
+      aria-multiselectable={multiple || undefined}
+      aria-readonly={readOnly || undefined}
+      aria-required={required || undefined}
+      tabIndex={0}
+      {...restProps}
+      ref={ref}
+    >
+      <ul className="utrecht-listbox__list">{children}</ul>
+    </div>
+  ),
 );
+
+Listbox.displayName = 'Listbox';
 
 export interface ListboxOptionGroupProps extends LiHTMLAttributes<HTMLLIElement> {
   label?: ReactNode;
 }
 
-export const ListboxOptionGroup = ({ children, label, ...restProps }: PropsWithChildren<ListboxOptionGroupProps>) => {
-  const id = useId();
-  return (
-    <li className="utrecht-listbox__group" role="group" aria-labelledby={id} {...restProps}>
-      {label && (
-        <div id={id} className="utrecht-listbox__group-label">
-          {label}
-        </div>
-      )}
-      <ul>{children}</ul>
-    </li>
-  );
-};
+export const ListboxOptionGroup = forwardRef(
+  ({ children, label, ...restProps }: PropsWithChildren<ListboxOptionGroupProps>, ref: ForwardedRef<HTMLLIElement>) => {
+    const id = useId();
+    return (
+      <li className="utrecht-listbox__group" role="group" aria-labelledby={id} {...restProps} ref={ref}>
+        {label && (
+          <div id={id} className="utrecht-listbox__group-label">
+            {label}
+          </div>
+        )}
+        <ul>{children}</ul>
+      </li>
+    );
+  },
+);
+
+ListboxOptionGroup.displayName = 'ListboxOptionGroup';
 
 export interface ListboxOptionProps extends HTMLAttributes<HTMLLIElement> {
   active?: boolean;
@@ -72,28 +84,30 @@ export interface ListboxOptionProps extends HTMLAttributes<HTMLLIElement> {
   selected?: boolean;
 }
 
-export const ListboxOption = ({
-  active,
-  className,
-  disabled,
-  selected,
-  ...restProps
-}: PropsWithChildren<ListboxOptionProps>) => (
-  <li
-    className={clsx(
-      'utrecht-listbox__option',
-      'utrecht-listbox__option--html-li',
-      {
-        'utrecht-listbox__option--active': active,
-        'utrecht-listbox__option--disabled': disabled,
-        'utrecht-listbox__option--selected': selected,
-      },
-      className,
-    )}
-    aria-disabled={disabled || undefined}
-    aria-selected={selected ? 'true' : 'false'}
-    tabIndex={disabled ? undefined : -1}
-    role="option"
-    {...restProps}
-  />
+export const ListboxOption = forwardRef(
+  (
+    { active, className, disabled, selected, ...restProps }: PropsWithChildren<ListboxOptionProps>,
+    ref: ForwardedRef<HTMLLIElement>,
+  ) => (
+    <li
+      className={clsx(
+        'utrecht-listbox__option',
+        'utrecht-listbox__option--html-li',
+        {
+          'utrecht-listbox__option--active': active,
+          'utrecht-listbox__option--disabled': disabled,
+          'utrecht-listbox__option--selected': selected,
+        },
+        className,
+      )}
+      aria-disabled={disabled || undefined}
+      aria-selected={selected ? 'true' : 'false'}
+      tabIndex={disabled ? undefined : -1}
+      role="option"
+      {...restProps}
+      ref={ref}
+    />
+  ),
 );
+
+ListboxOption.displayName = 'ListboxOption';
