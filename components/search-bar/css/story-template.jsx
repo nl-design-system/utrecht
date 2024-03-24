@@ -7,13 +7,13 @@ import clsx from 'clsx';
 import React from 'react';
 
 export const SearchBarDropdown = ({ isSelected, isActive }) => (
-  <div className={clsx('utrecht-search-bar__dropdown')}>
-    <section className={clsx('utrecht-search-bar__section')}>
-      <span className={clsx('utrecht-search-bar__section-title')}>Section #1</span>
+  <div className={clsx('utrecht-search-bar__popover')}>
+    <section className={clsx('utrecht-listbox__group')}>
+      <span className={clsx('utrecht-listbox__group-label')}>Section #1</span>
       <ul className={clsx('utrecht-unordered-list')} role="listbox">
         <li
           role="option"
-          className={clsx('utrecht-search-bar__list-item', 'utrecht-unordered-list__item')}
+          className={clsx('utrecht-listbox__option', 'utrecht-unordered-list__item')}
           id="item-1-section-1"
           aria-selected={false}
         >
@@ -21,7 +21,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
         </li>
         <li
           role="option"
-          className={clsx('utrecht-search-bar__list-item', 'utrecht-unordered-list__item')}
+          className={clsx('utrecht-listbox__option', 'utrecht-unordered-list__item')}
           id="item-2-section-1"
           aria-selected={false}
         >
@@ -29,7 +29,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
         </li>
         <li
           role="option"
-          className={clsx('utrecht-search-bar__list-item', 'utrecht-unordered-list__item')}
+          className={clsx('utrecht-listbox__option', 'utrecht-unordered-list__item')}
           id="item-3-section-1"
           aria-selected={false}
         >
@@ -37,14 +37,14 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
         </li>
       </ul>
     </section>
-    <section className={clsx('utrecht-search-bar__section')}>
-      <span className={clsx('utrecht-search-bar__section-title')}>Section #2</span>
+    <section className={clsx('utrecht-listbox__group')}>
+      <span className={clsx('utrecht-listbox__group-label')}>Section #2</span>
       <ul className={clsx('utrecht-unordered-list')} role="listbox">
         <li
           role="option"
-          className={clsx('utrecht-search-bar__list-item', 'utrecht-unordered-list__item', {
-            'utrecht-search-bar__list-item--is-active': isActive,
-            'utrecht-search-bar__list-item--is-selected': isSelected,
+          className={clsx('utrecht-listbox__option', 'utrecht-unordered-list__item', {
+            'utrecht-listbox__option--active': isActive,
+            'utrecht-listbox__option--selected': isSelected,
           })}
           id="item-1-section-2"
           aria-selected={isSelected}
@@ -53,7 +53,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
         </li>
         <li
           role="option"
-          className={clsx('utrecht-search-bar__list-item', 'utrecht-unordered-list__item')}
+          className={clsx('utrecht-listbox__option', 'utrecht-unordered-list__item')}
           id="item-2-section-2"
           aria-selected={false}
         >
@@ -61,7 +61,7 @@ export const SearchBarDropdown = ({ isSelected, isActive }) => (
         </li>
         <li
           role="option"
-          className={clsx('utrecht-search-bar__list-item', 'utrecht-unordered-list__item')}
+          className={clsx('utrecht-listbox__option', 'utrecht-unordered-list__item')}
           id="item-3-section-2"
           aria-selected={false}
         >
