@@ -1,5 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import { createRef } from 'react';
 import { Listbox, ListboxOption, ListboxOptionGroup } from './Listbox';
 
 describe('Listbox', () => {
@@ -59,6 +60,16 @@ describe('Listbox', () => {
     });
   });
 
+  it('supports ForwardRef in React', () => {
+    const ref = createRef<HTMLDivElement>();
+
+    const { container } = render(<Listbox ref={ref} />);
+
+    const listbox = container.querySelector(':only-child');
+
+    expect(ref.current).toBe(listbox);
+  });
+
   describe('option', () => {
     it('renders a li HTML element', () => {
       const { container } = render(
@@ -87,6 +98,16 @@ describe('Listbox', () => {
       const option = screen.getByRole('option', { name: 'Option 1' });
 
       expect(option).toBeInTheDocument();
+    });
+
+    it('supports ForwardRef in React', () => {
+      const ref = createRef<HTMLLIElement>();
+
+      const { container } = render(<ListboxOption ref={ref} />);
+
+      const option = container.querySelector(':only-child');
+
+      expect(ref.current).toBe(option);
     });
   });
 
@@ -125,6 +146,16 @@ describe('Listbox', () => {
       const optionGroup = screen.getByRole('group', { name: 'Odd' });
 
       expect(optionGroup).toBeInTheDocument();
+    });
+
+    it('supports ForwardRef in React', () => {
+      const ref = createRef<HTMLLIElement>();
+
+      const { container } = render(<ListboxOptionGroup ref={ref} />);
+
+      const optionGroup = container.querySelector(':only-child');
+
+      expect(ref.current).toBe(optionGroup);
     });
   });
 });
