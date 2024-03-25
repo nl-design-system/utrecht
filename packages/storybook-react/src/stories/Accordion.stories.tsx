@@ -1,5 +1,14 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { AccordionProvider } from '@utrecht/component-library-react/dist/css-module';
+import {
+  AccordionProvider,
+  Table,
+  TableBody,
+  TableCell,
+  TableContainer,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+} from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/accordion/README.md?raw';
 import tokensDefinition from '@utrecht/components/accordion/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -127,6 +136,74 @@ export const RTL: Story = {
     ),
   ],
   name: 'Right-to-left',
+};
+
+export const tableInlineOverflow: Story = {
+  args: {
+    label: 'table',
+    body: (
+      <TableContainer overflowInline>
+        <Table>
+          <TableHeader>
+            <TableRow>
+              <TableHeaderCell scope="col">Column A</TableHeaderCell>
+              <TableHeaderCell scope="col">Column B</TableHeaderCell>
+              <TableHeaderCell scope="col">Column C</TableHeaderCell>
+              <TableHeaderCell scope="col">Column D</TableHeaderCell>
+              <TableHeaderCell scope="col">Column E</TableHeaderCell>
+              <TableHeaderCell scope="col">Column F</TableHeaderCell>
+              <TableHeaderCell scope="col">Column G</TableHeaderCell>
+              <TableHeaderCell scope="col">Column H</TableHeaderCell>
+              <TableHeaderCell scope="col">Column I</TableHeaderCell>
+              <TableHeaderCell scope="col">Column J</TableHeaderCell>
+              <TableHeaderCell scope="col">Column K</TableHeaderCell>
+              <TableHeaderCell scope="col">Column L</TableHeaderCell>
+              <TableHeaderCell scope="col">Column M</TableHeaderCell>
+              <TableHeaderCell scope="col">Column N</TableHeaderCell>
+              <TableHeaderCell scope="col">Column O</TableHeaderCell>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableHeaderCell scope="row">Item 1</TableHeaderCell>
+              <TableCell>Data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+            </TableRow>
+            <TableRow>
+              <TableHeaderCell scope="row">Item</TableHeaderCell>
+              <TableCell>Data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+              <TableCell>More data</TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </TableContainer>
+    ),
+  },
+  name: 'Table Inline Overflow',
 };
 
 export const DesignTokens = designTokenStory(meta);
