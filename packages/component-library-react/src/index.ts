@@ -169,6 +169,8 @@ export type { StrongProps } from './Strong';
 export { Strong } from './Strong';
 export type { SurfaceProps } from './Surface';
 export { Surface } from './Surface';
+export type { TableContainerProps } from './TableContainer';
+export { TableContainer } from './TableContainer';
 export type { TableProps } from './Table';
 export { Table } from './Table';
 export type { TableBodyProps } from './TableBody';
