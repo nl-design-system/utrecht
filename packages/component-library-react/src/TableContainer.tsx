@@ -10,7 +10,7 @@ export interface TableContainerProps extends HTMLAttributes<HTMLTableElement> {
   overflowInline?: boolean;
 }
 
-export const Table = forwardRef(
+export const TableContainer = forwardRef(
   (
     { overflowInline, children, className, ...restProps }: PropsWithChildren<TableContainerProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -31,4 +31,4 @@ export const Table = forwardRef(
   ),
 );
 
-Table.displayName = 'Table';
+TableContainer.displayName = 'TableContainer';
