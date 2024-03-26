@@ -1,0 +1,284 @@
+main.site-main.swp-rp-main,
+main.wp-block-group.swp-rp-main {
+  margin: 7% 6% 25px;
+}
+
+.swp-rp-page-header .searchwp-form {
+  margin-bottom: 35px;
+}
+
+.swp-rp-page-header .page-title {
+  margin-bottom: 40px;
+}
+
+.swp-search-results {
+  margin-bottom: 35px;
+}
+
+.swp-search-results .swp-result-item {
+  margin-top: 0;
+}
+
+.swp-flex .swp-result-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 10px 0 26px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e8e8eb;
+}
+
+.swp-flex .swp-result-item:first-child {
+  padding-top: 0;
+}
+
+.swp-flex .swp-result-item:last-child {
+  border-bottom: 0;
+}
+
+.swp-grid .swp-result-item {
+  margin-top: 0;
+}
+
+.swp-result-item--info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 12px;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+}
+
+.swp-result-item--info-container h2.entry-title {
+  text-align: left;
+}
+
+.swp-result-item--img--off .swp-result-item--img-container {
+  display: none !important;
+}
+
+.swp-result-item--img img,
+.swp-result-item--img svg {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.swp-result-item--info-container .entry-title a {
+  color: inherit;
+}
+
+.swp-result-item--desc {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  color: rgba(14, 33, 33, 0.8);
+  margin: 0;
+}
+
+.swp-result-item--desc--off .swp-result-item--desc {
+  display: none;
+}
+
+.swp-result-item--price {
+  color: rgba(14, 33, 33, 0.6);
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 1.6;
+  letter-spacing: -0.4px;
+  margin: 0;
+}
+
+.swp-result-item--price--off .swp-result-item--price {
+  display: none;
+}
+
+.swp-result-item .swp-result-item--button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -ms-flex-item-align: start;
+  align-self: flex-start;
+  text-decoration: none;
+  cursor: pointer;
+  line-height: 1.2;
+  font-weight: 700;
+  padding: 11px 16px;
+}
+
+.swp-result-item .swp-result-item--button:hover,
+.swp-result-item .swp-result-item--button:active,
+.swp-result-item .swp-result-item--button:focus {
+  opacity: 0.7;
+}
+
+/* --- Grid --- */
+
+.swp-grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: minmax(0, 1fr) 40px minmax(0, 1fr) 40px minmax(0, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-gap: 40px;
+}
+
+.swp-grid--cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.swp-grid--cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.swp-grid--cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.swp-grid--cols-5 {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.swp-grid--cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.swp-grid--cols-7 {
+  grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+/* --- Image --- */
+
+.swp-grid .swp-result-item--img {
+  margin-bottom: 18px;
+  width: 50%;
+}
+
+.swp-grid.swp-rp--img-none .swp-result-item--img {
+  display: none;
+}
+
+.swp-grid.swp-rp--img-sm .swp-result-item--img {
+  width: 33%;
+}
+
+.swp-grid.swp-rp--img-m .swp-result-item--img {
+  width: 50%;
+}
+
+.swp-grid.swp-rp--img-l .swp-result-item--img {
+  width: 100%;
+}
+
+.swp-flex .swp-result-item--img-container {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.swp-flex.swp-rp--img-none .swp-result-item--img-container {
+  display: none;
+}
+
+.swp-flex.swp-rp--img-sm .swp-result-item--img-container {
+  -ms-flex-preferred-size: 10%;
+  flex-basis: 10%;
+}
+
+.swp-flex.swp-rp--img-m .swp-result-item--img-container {
+  -ms-flex-preferred-size: 20%;
+  flex-basis: 20%;
+}
+
+.swp-flex.swp-rp--img-l .swp-result-item--img-container {
+  -ms-flex-preferred-size: 30%;
+  flex-basis: 30%;
+}
+
+/* --- Pagination --- */
+
+.navigation.pagination .swp-results-pagination.nav-links {
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  gap: 12px;
+}
+
+.navigation.pagination .swp-results-pagination .page-numbers {
+  cursor: pointer;
+}
+
+.navigation.pagination .swp-results-pagination .page-numbers.current,
+.navigation.pagination .swp-results-pagination .page-numbers.dots {
+  cursor: auto;
+  transform: none;
+}
+
+.navigation.pagination .swp-results-pagination a.prev,
+.navigation.pagination .swp-results-pagination a.next {
+  text-decoration: none;
+}
+
+.navigation.pagination .swp-results-pagination.nav-links {
+  gap: 15px;
+}
+
+.navigation.pagination .swp-results-pagination.nav-links .page-numbers {
+  margin: 0;
+  width: 33px;
+  min-width: 33px;
+  height: 32px;
+  min-height: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  border: 1px solid;
+  text-decoration: none;
+  padding: 0;
+}
+
+.navigation.pagination .swp-results-pagination--boxed a.next,
+.navigation.pagination .swp-results-pagination--boxed a.prev,
+.navigation.pagination .swp-results-pagination--boxed .page-numbers {
+  border-radius: 6px;
+}
+
+.navigation.pagination .swp-results-pagination.swp-results-pagination--circular a.next,
+.navigation.pagination .swp-results-pagination.swp-results-pagination--circular a.prev,
+.navigation.pagination .swp-results-pagination.swp-results-pagination--circular .page-numbers {
+  border-radius: 50%;
+}
