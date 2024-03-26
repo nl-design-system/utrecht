@@ -5,7 +5,7 @@ import { TableContainer } from './TableContainer';
 import '@testing-library/jest-dom';
 
 describe('Table container', () => {
-  it('renders an table container element', () => {
+  it('renders an div container element', () => {
     const { container } = render(<TableContainer />);
 
     const tableContainer = container.querySelector('div:only-child');
