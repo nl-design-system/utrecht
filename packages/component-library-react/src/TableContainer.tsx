@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export interface TableContainerProps extends HTMLAttributes<HTMLTableElement> {
+export interface TableContainerProps extends HTMLAttributes<HTMLDivElement> {
   overflowInline?: boolean;
 }
 
