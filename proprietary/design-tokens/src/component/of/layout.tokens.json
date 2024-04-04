@@ -3,6 +3,10 @@
     "layout": {
       "background": { "value": "{utrecht.document.background-color}" },
       "bg": { "value": "{of.layout.background}" }
+    },
+    "page-footer": {
+      "bg": { "value": "{utrecht.page-footer.background-color}" },
+      "fg": { "value": "{utrecht.page-footer.color}" }
     }
   }
 }
