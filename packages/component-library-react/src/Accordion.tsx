@@ -11,7 +11,17 @@ import {
   useState,
 } from 'react';
 import { Button } from './Button';
-import { Heading } from './Heading';
+
+export interface HTMLHeadingProps extends PropsWithChildren<HTMLAttributes<HTMLHeadingElement>> {
+  level: number;
+}
+
+export const HTMLHeading = ({ level, ...restProps }: HTMLHeadingProps) => {
+  const HeadingX =
+    level === 2 ? 'h2' : level === 3 ? 'h3' : level === 4 ? 'h4' : level === 5 ? 'h5' : level === 6 ? 'h6' : 'h1';
+
+  return <HeadingX {...restProps} />;
+};
 
 /**
  * Find the first item in an array
@@ -94,7 +104,7 @@ export const AccordionSection = forwardRef(
     // - we only want expanded sections to show up as landmarks
     return (
       <div className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
-        <Heading level={headingLevel} className={clsx('utrecht-accordion__header')}>
+        <HTMLHeading level={headingLevel} className={clsx('utrecht-accordion__header')}>
           <Button
             className={clsx('utrecht-accordion__button')}
             appearance="subtle-button"
@@ -109,7 +119,7 @@ export const AccordionSection = forwardRef(
           >
             {label}
           </Button>
-        </Heading>
+        </HTMLHeading>
         {section ? (
           <section id={panelId} aria-labelledby={buttonId} {...panelAttributes}>
             {children}
@@ -138,7 +148,7 @@ export const Accordion = forwardRef(
 
     return (
       <>
-        {!!heading && typeof headingLevel === 'number' && <Heading level={headingLevel}>{heading}</Heading>}
+        {!!heading && typeof headingLevel === 'number' && <HTMLHeading level={headingLevel}>{heading}</HTMLHeading>}
         <div
           className={clsx('utrecht-accordion')}
           role={group ? 'group' : undefined}
