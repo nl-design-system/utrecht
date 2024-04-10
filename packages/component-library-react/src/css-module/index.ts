@@ -4,6 +4,7 @@
  */
 
 export { Accordion, AccordionProvider, AccordionSection } from './Accordion';
+export { AccordionDetails, AccordionDetailsProvider, AccordionDetailsSection } from './AccordionDetails';
 export type { AlertProps, AlertType } from '../Alert';
 export { Alert } from './Alert';
 export type { AlertDialogProps } from '../AlertDialog';
