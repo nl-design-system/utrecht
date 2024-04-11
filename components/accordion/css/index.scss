@@ -37,3 +37,7 @@
 .utrecht-accordion__header {
   @include utrecht-accordion__header;
 }
+
+.utrecht-accordion__header--h1 {
+  @include utrecht-accordion__header--h1;
+}

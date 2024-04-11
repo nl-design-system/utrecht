@@ -88,3 +88,6 @@
 @mixin utrecht-accordion__header {
   --utrecht-space-around: 0;
 }
+@mixin utrecht-accordion__header--h1 {
+  margin-block: 0;
+}
