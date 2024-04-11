@@ -104,7 +104,10 @@ export const AccordionSection = forwardRef(
     // - we only want expanded sections to show up as landmarks
     return (
       <div className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
-        <HTMLHeading level={headingLevel} className={clsx('utrecht-accordion__header')}>
+        <HTMLHeading
+          level={headingLevel}
+          className={clsx('utrecht-accordion__header', 'utrecht-accordion__header--h1')}
+        >
           <Button
             className={clsx('utrecht-accordion__button')}
             appearance="subtle-button"
