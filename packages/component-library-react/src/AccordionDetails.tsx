@@ -107,7 +107,7 @@ export const AccordionDetailsSection = forwardRef(
             onBlur={() => typeof onButtonBlur === 'function' && onButtonBlur(ref)}
             ref={buttonRef}
           >
-            {label} 🤜
+            {label} 
           </Button>
         </Heading>
         {section ? (
