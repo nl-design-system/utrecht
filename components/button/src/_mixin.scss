@@ -313,30 +313,32 @@
   color: var(--_utrecht-button-pressed-color);
 }
 
+@mixin utrecht-button-appearance-properties($block, $modifier) {
+  --_utrecht-button-appearance-active-background-color: var(--utrecht-button-#{$modifier}-active-background-color);
+  --_utrecht-button-appearance-active-border-color: var(--utrecht-button-#{$modifier}-active-border-color);
+  --_utrecht-button-appearance-active-color: var(--utrecht-button-#{$modifier}-active-color);
+  --_utrecht-button-appearance-background-color: var(--utrecht-button-#{$modifier}-background-color);
+  --_utrecht-button-appearance-border-color: var(--utrecht-button-#{$modifier}-border-color);
+  --_utrecht-button-appearance-border-width: var(--utrecht-button-#{$modifier}-border-width);
+  --_utrecht-button-appearance-color: var(--utrecht-button-#{$modifier}-color);
+  --_utrecht-button-appearance-font-weight: var(--utrecht-button-#{$modifier}-font-weight);
+  --_utrecht-button-appearance-disabled-background-color: var(--utrecht-button-#{$modifier}-disabled-background-color);
+  --_utrecht-button-appearance-disabled-border-color: var(--utrecht-button-#{$modifier}-disabled-border-color);
+  --_utrecht-button-appearance-disabled-color: var(--utrecht-button-#{$modifier}-disabled-color);
+  --_utrecht-button-appearance-focus-background-color: var(--utrecht-button-#{$modifier}-focus-background-color);
+  --_utrecht-button-appearance-focus-border-color: var(--utrecht-button-#{$modifier}-focus-border-color);
+  --_utrecht-button-appearance-focus-color: var(--utrecht-button-#{$modifier}-focus-color);
+  --_utrecht-button-appearance-hover-background-color: var(--utrecht-button-#{$modifier}-hover-background-color);
+  --_utrecht-button-appearance-hover-border-color: var(--utrecht-button-#{$modifier}-hover-border-color);
+  --_utrecht-button-appearance-hover-color: var(--utrecht-button-#{$modifier}-hover-color);
+  --_utrecht-button-appearance-pressed-background-color: var(--utrecht-button-#{$modifier}-pressed-background-color);
+  --_utrecht-button-appearance-pressed-border-color: var(--utrecht-button-#{$modifier}-pressed-border-color);
+  --_utrecht-button-appearance-pressed-color: var(--utrecht-button-#{$modifier}-pressed-color);
+}
+
 @mixin utrecht-button-appearance($block, $modifier) {
   .#{$block}--#{$modifier} {
-    --_utrecht-button-appearance-active-background-color: var(--utrecht-button-#{$modifier}-active-background-color);
-    --_utrecht-button-appearance-active-border-color: var(--utrecht-button-#{$modifier}-active-border-color);
-    --_utrecht-button-appearance-active-color: var(--utrecht-button-#{$modifier}-active-color);
-    --_utrecht-button-appearance-background-color: var(--utrecht-button-#{$modifier}-background-color);
-    --_utrecht-button-appearance-border-color: var(--utrecht-button-#{$modifier}-border-color);
-    --_utrecht-button-appearance-border-width: var(--utrecht-button-#{$modifier}-border-width);
-    --_utrecht-button-appearance-color: var(--utrecht-button-#{$modifier}-color);
-    --_utrecht-button-appearance-font-weight: var(--utrecht-button-#{$modifier}-font-weight);
-    --_utrecht-button-appearance-disabled-background-color: var(
-      --utrecht-button-#{$modifier}-disabled-background-color
-    );
-    --_utrecht-button-appearance-disabled-border-color: var(--utrecht-button-#{$modifier}-disabled-border-color);
-    --_utrecht-button-appearance-disabled-color: var(--utrecht-button-#{$modifier}-disabled-color);
-    --_utrecht-button-appearance-focus-background-color: var(--utrecht-button-#{$modifier}-focus-background-color);
-    --_utrecht-button-appearance-focus-border-color: var(--utrecht-button-#{$modifier}-focus-border-color);
-    --_utrecht-button-appearance-focus-color: var(--utrecht-button-#{$modifier}-focus-color);
-    --_utrecht-button-appearance-hover-background-color: var(--utrecht-button-#{$modifier}-hover-background-color);
-    --_utrecht-button-appearance-hover-border-color: var(--utrecht-button-#{$modifier}-hover-border-color);
-    --_utrecht-button-appearance-hover-color: var(--utrecht-button-#{$modifier}-hover-color);
-    --_utrecht-button-appearance-pressed-background-color: var(--utrecht-button-#{$modifier}-pressed-background-color);
-    --_utrecht-button-appearance-pressed-border-color: var(--utrecht-button-#{$modifier}-pressed-border-color);
-    --_utrecht-button-appearance-pressed-color: var(--utrecht-button-#{$modifier}-pressed-color);
+    @include utrecht-button-appearance-properties($block, $modifier);
   }
 }
 
