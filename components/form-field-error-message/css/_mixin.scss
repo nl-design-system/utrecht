@@ -12,6 +12,7 @@
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-form-field-error-message-font-size, inherit);
   font-style: var(--utrecht-form-field-error-message-font-style);
+  font-weight: var(--utrecht-form-field-error-message-font-weight, inherit);
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-form-field-error-message-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
