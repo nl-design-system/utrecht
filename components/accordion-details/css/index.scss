@@ -17,17 +17,26 @@
 .utrecht-accordion__button {
   @include utrecht-accordion__button;
 
-  &[aria-expanded]::after {
+  // TODO: betere focus implementatie
+  &:focus {
+    @include utrecht-accordion__button--focus;
+  }
+
+  &::after {
     @include utrecht-accordion__button-icon;
   }
+}
 
-  &[aria-expanded="false"]::after {
-    @include utrecht-accordion__button-icon-arrow-down;
-  }
+.utrecht-accordion__section > .utrecht-accordion__button::after {
+  @include utrecht-accordion__button-icon;
+}
 
-  &[aria-expanded="true"]::after {
-    @include utrecht-accordion__button-icon-arrow-up;
-  }
+.utrecht-accordion__section:not([open]) > .utrecht-accordion__button::after {
+  @include utrecht-accordion__button-icon-arrow-down;
+}
+
+.utrecht-accordion__section[open] > .utrecht-accordion__button::after {
+  @include utrecht-accordion__button-icon-arrow-up;
 }
 
 .utrecht-accordion__panel {
