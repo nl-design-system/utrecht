@@ -10,7 +10,6 @@ import {
   useRef,
   useState,
 } from 'react';
-import { Button } from './Button';
 import { Heading } from './Heading';
 
 /**
@@ -49,7 +48,7 @@ export interface AccordionDetailsSectionProps extends HTMLAttributes<HTMLDivElem
   onActivate?: Function;
   onButtonFocus?: Function;
   onButtonBlur?: Function;
-  buttonRef?: RefObject<HTMLButtonElement>;
+  buttonRef?: RefObject<HTMLDivElement>;
 }
 
 export const AccordionDetailsSection = forwardRef(
@@ -76,10 +75,10 @@ export const AccordionDetailsSection = forwardRef(
         'utrecht-accordion__panel--expanded': expanded,
       }),
       // Use the `hidden` attribute so the toggle works even without CSS
-      hidden: !expanded,
+      // hidden: !expanded,
       // Use the `aria-hidden` attribute too, so it even works when CSS
       // doesn't use `display: none` to make transitions.
-      'aria-hidden': !expanded,
+      // 'aria-hidden': !expanded,
     };
 
     const idPrefix = 'utrecht-accordion';
@@ -87,29 +86,32 @@ export const AccordionDetailsSection = forwardRef(
     const buttonId = `${idPrefix}${idSuffix}-button`;
     const panelId = `${idPrefix}${idSuffix}-panel`;
 
+    console.log(onActivate, onButtonBlur, onButtonFocus);
     // We render `__section` as `div` for a specific reasons:
     // - when a user navigates to the `region` landmark we want the first
     //   content of the landmark to be the actual content, instead of starting
     //   with the button that controls the region.
     // - we only want expanded sections to show up as landmarks
     return (
-      <div className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
-        <Heading level={headingLevel} className={clsx('utrecht-accordion__header')}>
-          <Button
-            className={clsx('utrecht-accordion__button')}
-            appearance="subtle-button"
-            aria-expanded={expanded === true}
-            aria-controls={panelId}
-            disabled={disabled}
-            id={buttonId}
-            onClick={() => typeof onActivate === 'function' && onActivate(ref)}
-            onFocus={() => typeof onButtonFocus === 'function' && onButtonFocus(ref)}
-            onBlur={() => typeof onButtonBlur === 'function' && onButtonBlur(ref)}
-            ref={buttonRef}
-          >
-            {label} 
-          </Button>
-        </Heading>
+      <details className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
+        <summary
+          id={buttonId}
+          className={clsx('utrecht-accordion__button', {
+            'utrecht-accordion__button': disabled,
+            'utrecht-accordion__button--expanded': expanded,
+            'utrecht-accordion__button--not-expanded': !expanded,
+          })}
+          ref={buttonRef}
+
+          // onClick={() => typeof onActivate === 'function' && onActivate(ref)}
+          // onFocus={() => typeof onButtonFocus === 'function' && onButtonFocus(ref)}
+          // onBlur={() => typeof onButtonBlur === 'function' && onButtonBlur(ref)}
+        >
+          {/* TODO: Refactor naar `<h1>` - `<h6>` */}
+          <div role="heading" aria-level={headingLevel} className={clsx('utrecht-accordion__header')}>
+            {label}
+          </div>
+        </summary>
         {section ? (
           <section id={panelId} aria-labelledby={buttonId} {...panelAttributes}>
             {children}
@@ -117,7 +119,7 @@ export const AccordionDetailsSection = forwardRef(
         ) : (
           <div {...panelAttributes}>{children}</div>
         )}
-      </div>
+      </details>
     );
   },
 );
@@ -159,7 +161,7 @@ export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | 
   console.log('useAccordion');
   // const sections: AccordionDetailsSectionProviderProps[] = [];
   const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
-  const buttonRefs = sections.map((_) => useRef<HTMLButtonElement>(null));
+  const buttonRefs = sections.map((_) => useRef<HTMLDivElement>(null));
 
   return {
     ref,
