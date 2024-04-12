@@ -5,6 +5,7 @@
 
 @mixin utrecht-form-field-error-message {
   --utrecht-document-color: currentColor;
+  --utrecht-paragraph-font-weight: var(--utrecht-form-field-error-message-font-weight, initial);
 
   background-color: var(--utrecht-form-field-error-message-background-color);
   color: var(--utrecht-form-field-error-message-color);

@@ -1,5 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Code, FormFieldErrorMessage, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import {
+  Code,
+  FormFieldErrorMessage,
+  Paragraph,
+  UnorderedList,
+  UnorderedListItem,
+} from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/components/form-field-error-message/README.md?raw';
 import tokensDefinition from '@utrecht/components/form-field-error-message/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -35,6 +41,35 @@ export const Default: Story = {
     id: 'aee06f60-3496-44de-a177-72dea88b5362',
     children: <Paragraph>This is a required field and must not be left empty.</Paragraph>,
   },
+};
+
+export const PlainText: Story = {
+  args: {
+    id: 'f4f534ae-ed96-4af4-9cb0-3752194cde89',
+    children: 'Your password must contain at least 16 characters.',
+  },
+  name: 'Plain text',
+};
+
+export const PlainTextMultiline: Story = {
+  args: {
+    id: 'f4f534ae-ed96-4af4-9cb0-3752194cde89',
+    children: 'Your password must contain at least 16 characters. '.repeat(10),
+  },
+  name: 'Multiple lines of plain text',
+};
+
+export const UnorderedListStory: Story = {
+  args: {
+    id: 'f4f534ae-ed96-4af4-9cb0-3752194cde89',
+    children: (
+      <UnorderedList>
+        <UnorderedListItem>Your password must contain at least 16 characters.</UnorderedListItem>
+        <UnorderedListItem>Your password must contain at least 1 number.</UnorderedListItem>
+      </UnorderedList>
+    ),
+  },
+  name: 'Unordered list',
 };
 
 export const CodeError: Story = {

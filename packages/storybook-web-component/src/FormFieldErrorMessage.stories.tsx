@@ -59,6 +59,7 @@ export const Default: Story = {
     children: <utrecht-paragraph>This is a required field and must not be left empty.</utrecht-paragraph>,
   },
 };
+
 export const CodeError: Story = {
   args: {
     id: '709e0cf1-91f4-480e-ae03-34ffbb1386c8',
@@ -77,6 +78,22 @@ export const CodeError: Story = {
       },
     },
   },
+};
+
+export const PlainText: Story = {
+  args: {
+    id: '3f1eba94-9a3b-4f1e-810d-03e8b0adb1da',
+    children: 'Your password must contain at least 16 characters.',
+  },
+  name: 'Plain text',
+};
+
+export const PlainTextMultiline: Story = {
+  args: {
+    id: '47407e39-478b-48f1-95a7-2a9de61b08af',
+    children: 'Your password must contain at least 16 characters. '.repeat(10),
+  },
+  name: 'Multiple lines of plain text',
 };
 
 export const DesignTokens = designTokenStory(meta);
