@@ -21,3 +21,13 @@ export const Default: Story = {
     label: 'Voornaam',
   },
 };
+export const disabled: Story = {
+  args: {
+    key: 'textfield',
+    label: 'Voornaam',
+    extraComponentProperties: {
+      defaultValue: 'dit is de text in de text field',
+      disabled: true,
+    },
+  },
+};

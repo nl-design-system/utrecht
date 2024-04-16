@@ -25,3 +25,12 @@ export const Default: Story = {
     },
   },
 };
+export const disabled: Story = {
+  args: {
+    label: 'Textarea',
+    extraComponentProperties: {
+      defaultValue: 'dit is de text in de text area',
+      disabled: true,
+    },
+  },
+};

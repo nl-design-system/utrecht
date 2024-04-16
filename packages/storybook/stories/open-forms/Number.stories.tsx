@@ -41,3 +41,12 @@ export const WithSuffix: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    key: 'number',
+    label: 'Nummer',
+    extraComponentProperties: {
+      disabled: true,
+    },
+  },
+};

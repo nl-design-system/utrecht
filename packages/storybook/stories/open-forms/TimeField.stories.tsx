@@ -25,3 +25,12 @@ export const Default: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    label: 'Tijd',
+    extraComponentProperties: {
+      inputType: 'text',
+      disabled: true,
+    },
+  },
+};

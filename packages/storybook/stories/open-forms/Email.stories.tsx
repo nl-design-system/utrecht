@@ -21,3 +21,12 @@ export const Default: Story = {
     label: 'Email',
   },
 };
+export const Disabled: Story = {
+  args: {
+    key: 'email',
+    label: 'Email',
+    extraComponentProperties: {
+      disabled: true,
+    },
+  },
+};

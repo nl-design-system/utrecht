@@ -23,3 +23,14 @@ export const Default: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    key: 'cosign',
+    label: 'Co-signer email address',
+    extraComponentProperties: {
+      validateOn: 'blur',
+      authPlugin: 'digid',
+      disabled: true,
+    },
+  },
+};
