@@ -24,3 +24,13 @@ export const Default: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    key: 'phone-number',
+    label: 'Telefoonnummer',
+    extraComponentProperties: {
+      inputMask: null,
+      disabled: true,
+    },
+  },
+};

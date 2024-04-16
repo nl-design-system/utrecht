@@ -21,3 +21,12 @@ export const Default: Story = {
     label: 'Burgerservicenummer (BSN)',
   },
 };
+export const Disabled: Story = {
+  args: {
+    key: 'bsn',
+    label: 'Burgerservicenummer (BSN)',
+    extraComponentProperties: {
+      disabled: true,
+    },
+  },
+};

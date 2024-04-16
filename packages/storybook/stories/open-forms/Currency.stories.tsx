@@ -78,3 +78,14 @@ export const SurinaamseDollar: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    extraComponentProperties: {
+      currency: 'EUR',
+      decimalLimit: 2,
+      allowNegative: true,
+      defaultValue: 0,
+      disabled: true,
+    },
+  },
+};

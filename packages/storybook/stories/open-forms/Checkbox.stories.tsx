@@ -39,3 +39,12 @@ export const Checked: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    key: 'checkbox',
+    label: 'Ik heb de voorwaarden gelezen en ga hiermee akkoord.',
+    extraComponentProperties: {
+      disabled: true,
+    },
+  },
+};

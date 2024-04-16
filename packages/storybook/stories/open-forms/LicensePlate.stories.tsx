@@ -21,3 +21,13 @@ export const Default: Story = {
     label: 'Kentekennummer',
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    key: 'licenseplate',
+    label: 'Kentekennummer',
+    extraComponentProperties: {
+      disabled: true,
+    },
+  },
+};

@@ -21,3 +21,13 @@ export const Default: Story = {
     label: 'IBAN',
   },
 };
+
+export const Disabled: Story = {
+  args: {
+    key: 'iban',
+    label: 'IBAN',
+    extraComponentProperties: {
+      disabled: true,
+    },
+  },
+};

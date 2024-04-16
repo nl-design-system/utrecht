@@ -19,8 +19,14 @@ export const Default: Story = {
   args: {
     key: 'postcode',
     label: 'Postcode',
+  },
+};
+export const Disabled: Story = {
+  args: {
+    key: 'postcode',
+    label: 'Postcode',
     extraComponentProperties: {
-      inputMask: null,
+      disabled: true,
     },
   },
 };

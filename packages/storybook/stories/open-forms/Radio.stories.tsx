@@ -58,3 +58,25 @@ export const Checked: Story = {
     },
   },
 };
+export const Disabled: Story = {
+  args: {
+    extraComponentProperties: {
+      values: [
+        {
+          label: 'Optie A',
+          value: 'radioA',
+        },
+        {
+          label: 'Optie B',
+          value: 'radioB',
+        },
+        {
+          label: 'Optie C',
+          value: 'radioC',
+        },
+      ],
+      defaultValue: 'radioA',
+      disabled: true,
+    },
+  },
+};
