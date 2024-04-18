@@ -62,11 +62,11 @@ export const SingleFormioComponent = ({
   key,
   label,
   extraComponentProperties = {},
-}: PropsWithChildren<SingleFormioComponentProps>) => {
+}: SingleFormioComponentProps) => {
   const component = merge({ type, key, label }, extraComponentProperties);
   return <RenderFormioForm form={{ type: 'form', components: [component] }} />;
 };
 
-export const MultipleFormioComponents = ({ components }: PropsWithChildren<MultipleFormioComponentsProps>) => {
+export const MultipleFormioComponents = ({ components }: MultipleFormioComponentsProps) => {
   return <RenderFormioForm form={{ type: 'form', components: components }} />;
 };
