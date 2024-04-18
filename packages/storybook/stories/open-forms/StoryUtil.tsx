@@ -54,7 +54,12 @@ type SingleFormioComponentProps = {
 };
 
 type MultipleFormioComponentsProps = {
-  components?: any;
+  components: {
+    type: string;
+    key: string;
+    label: string;
+    [index: string]: any;
+  }[];
 };
 
 export const SingleFormioComponent = ({
