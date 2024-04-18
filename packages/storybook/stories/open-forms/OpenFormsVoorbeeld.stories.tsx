@@ -6,7 +6,13 @@ const meta = {
   title: 'Open Formulieren/Voorbeeld',
   component: MultipleFormioComponents,
   args: {
-    components: '',
+    components: [
+      {
+        type: '',
+        key: '',
+        label: '',
+      },
+    ],
   },
 } satisfies Meta<typeof MultipleFormioComponents>;
 
