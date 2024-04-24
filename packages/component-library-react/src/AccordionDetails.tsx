@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import {
+  DetailsHTMLAttributes,
   ForwardedRef,
   forwardRef,
   HTMLAttributes,
@@ -38,7 +39,7 @@ const previousItem = <T,>(items: T[], item: T): T | undefined => {
   return currentIndex >= 0 && currentIndex - 1 <= items.length - 1 ? items[currentIndex - 1] : undefined;
 };
 
-export interface AccordionDetailsSectionProps extends HTMLAttributes<HTMLDivElement> {
+export interface AccordionDetailsSectionProps extends DetailsHTMLAttributes<HTMLDetailsElement> {
   headingLevel?: number;
   label: string;
   body: any;
@@ -48,7 +49,7 @@ export interface AccordionDetailsSectionProps extends HTMLAttributes<HTMLDivElem
   onActivate?: Function;
   onButtonFocus?: Function;
   onButtonBlur?: Function;
-  buttonRef?: RefObject<HTMLDivElement>;
+  buttonRef?: RefObject<HTMLElement>;
 }
 
 export const AccordionDetailsSection = forwardRef(
@@ -68,7 +69,7 @@ export const AccordionDetailsSection = forwardRef(
       onButtonFocus,
       ...props
     }: AccordionDetailsSectionProps,
-    ref: ForwardedRef<HTMLDivElement>,
+    ref: ForwardedRef<HTMLDetailsElement>,
   ) => {
     const panelAttributes = {
       className: clsx('utrecht-accordion__panel', {
@@ -160,8 +161,8 @@ AccordionDetails.displayName = 'AccordionDetails';
 export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | undefined>) => {
   console.log('useAccordion');
   // const sections: AccordionDetailsSectionProviderProps[] = [];
-  const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
-  const buttonRefs = sections.map((_) => useRef<HTMLDivElement>(null));
+  const refs: RefObject<HTMLDetailsElement>[] = sections.map((_) => useRef<HTMLDetailsElement>(null));
+  const buttonRefs = sections.map((_) => useRef<HTMLElement>(null));
 
   return {
     ref,
@@ -173,7 +174,7 @@ export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | 
 
     /* ForwardedRef for each section, in document order */
     sections,
-    focusNextSection: (activeElement: RefObject<HTMLDivElement>) => {
+    focusNextSection: (activeElement: RefObject<HTMLDetailsElement>) => {
       const index = refs.indexOf(activeElement);
       const buttonRef = index >= 0 ? buttonRefs[index] : undefined;
       const nextSection = buttonRef ? nextItem(buttonRefs, buttonRef) : undefined;
@@ -184,7 +185,7 @@ export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | 
       console.log(refs);
       firstSection?.current?.focus();
     },
-    focusPreviousSection: (activeElement: RefObject<HTMLDivElement>) => {
+    focusPreviousSection: (activeElement: RefObject<HTMLDetailsElement>) => {
       const index = refs.indexOf(activeElement);
       const buttonRef = index >= 0 ? buttonRefs[index] : undefined;
       const previousSection = buttonRef ? previousItem(buttonRefs, buttonRef) : undefined;
@@ -204,7 +205,7 @@ export interface AccordionDetailsSectionProviderProps {
 
 export const useAccordionSection = (
   { defaultExpanded = false, expanded }: AccordionDetailsSectionProviderProps,
-  ref: ForwardedRef<HTMLDivElement>,
+  ref: ForwardedRef<HTMLDetailsElement>,
 ) => {
   return {
     ref,
@@ -224,11 +225,11 @@ export const AccordionDetailsProvider = ({ sections }: AccordionDetailsProviderP
   const [activeElement, setActiveElement] = useState<RefObject<HTMLDivElement> | null>(null);
   const [sectionsState, setSectionsState] = useState(sections);
 
-  const handleButtonFocus = (ref: RefObject<HTMLDivElement>) => {
+  const handleButtonFocus = (ref: RefObject<HTMLElement>) => {
     setActiveElement(ref);
   };
 
-  const handleButtonBlur = (_: RefObject<HTMLDivElement>) => {
+  const handleButtonBlur = (_: RefObject<HTMLElement>) => {
     setActiveElement(null);
   };
 
