@@ -71,6 +71,8 @@ export type { FigureCaptionProps } from './FigureCaption';
 export { FigureCaption } from './FigureCaption';
 export type { FormFieldProps } from './FormField';
 export { FormField } from './FormField';
+export type { FormFieldCheckboxProps } from './FormFieldCheckbox';
+export { FormFieldCheckbox } from './FormFieldCheckbox';
 export type { FormFieldDescriptionProps } from './FormFieldDescription';
 export { FormFieldDescription } from './FormFieldDescription';
 export type { FormFieldErrorMessageProps } from './FormFieldErrorMessage';
