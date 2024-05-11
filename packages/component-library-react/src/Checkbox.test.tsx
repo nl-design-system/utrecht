@@ -215,6 +215,34 @@ describe('Checkbox', () => {
     });
   });
 
+  describe('indeterminate state', () => {
+    it('renders a design system BEM modifier class name', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).toHaveClass('utrecht-checkbox--indeterminate');
+    });
+
+    // Testing Library does not support indeterminate state
+    it.skip('can have an indeterminate', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      // `toBeIndeterminate` does not exist, unfortunately.
+      expect(checkbox).toBeIndeterminate();
+    });
+
+    it('has an aria-checked="mixed" attribute', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).toHaveAttribute('aria-checked', 'mixed');
+    });
+  });
+
   it('can be hidden', () => {
     const { container } = render(<Checkbox hidden />);
 
