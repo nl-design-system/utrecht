@@ -9,6 +9,11 @@
  * https://github.com/hudochenkov/stylelint-order/pull/162 */
 /* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-textbox {
+  --_utrecht-textbox-max-inline-size: var(
+    --utrecht-textbox-max-inline-size,
+    var(--utrecht-form-control-max-inline-size)
+  );
+
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
   block-size: initial; /* harden */
   border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
@@ -28,7 +33,7 @@
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
   min-block-size: var(--utrecht-pointer-target-min-size, 44px);
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
-  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
+  max-inline-size: var(--_utrecht-textbox-max-inline-size);
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
   padding-inline-end: var(
