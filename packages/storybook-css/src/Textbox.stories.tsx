@@ -266,6 +266,7 @@ export const AutocompleteVoorvoegsel: Story = {
     autoComplete: 'name-prefix',
     spellCheck: 'false',
     value: 'van der',
+    className: 'utrecht-textbox--prefix-name-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -283,6 +284,7 @@ export const AutocompletePostcode: Story = {
     autoComplete: 'postal-code',
     spellCheck: 'false',
     value: '3521 AZ',
+    className: 'utrecht-textbox--postal-code-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -430,6 +432,7 @@ export const AutocompleteHuisnummerInNederland: Story = {
     max: 99999,
     pattern: '[0-9]+',
     value: '42',
+    className: 'utrecht-textbox--house-number-size',
   },
   parameters: {
     status: {
@@ -450,6 +453,7 @@ export const AutocompleteHuisletterInNederland: Story = {
     maxLength: 1,
     pattern: '[A-Za-z]+',
     value: 'Q',
+    className: 'utrecht-textbox--house-letter-size',
   },
   parameters: {
     status: {
@@ -470,6 +474,7 @@ export const AutocompleteHuistoevoegingInNederland: Story = {
     maxLength: 4,
     pattern: '[A-Za-z0-9]{0,4}',
     value: 'AA08',
+    className: 'utrecht-textbox--house-addition-size',
   },
   parameters: {
     status: {

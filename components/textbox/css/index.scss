@@ -43,6 +43,45 @@
   @include utrecht-textbox--password;
 }
 
+.utrecht-textbox--size {
+  --_utrecht-textbox-max-inline-size: calc(
+    calc(var(--utrecht-textbox-max-length) * 0.667em + 0.334ch) +
+      var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
+      var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
+      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0))
+  );
+}
+
+.utrecht-textbox--postal-code-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 7;
+}
+
+.utrecht-textbox--house-number-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 5;
+}
+
+.utrecht-textbox--house-letter-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 1;
+}
+
+.utrecht-textbox--house-addition-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 4;
+}
+
+.utrecht-textbox--prefix-name-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 12;
+}
+
 /**
  * This class name is experimental.
  */
