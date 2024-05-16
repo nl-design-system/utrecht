@@ -9,6 +9,7 @@ import emailDocs from '@utrecht/components/textbox/_email.md?raw';
 import houseletterDocs from '@utrecht/components/textbox/_huisletter.md?raw';
 import housenumberDocs from '@utrecht/components/textbox/_huisnummer.md?raw';
 import houseSuffixDocs from '@utrecht/components/textbox/_huistoevoeging.md?raw';
+import IbanDocs from '@utrecht/components/textbox/_iban.md?raw';
 import choosePasswordDocs from '@utrecht/components/textbox/_kiesWachtwoord.md?raw';
 import naamDocs from '@utrecht/components/textbox/_naam.md?raw';
 import organisationDocs from '@utrecht/components/textbox/_organisatie.md?raw';
@@ -303,6 +304,7 @@ export const AutocompleteTelefoonnummer: Story = {
     type: 'tel',
     spellCheck: 'false',
     value: '+31 30 286 00 00',
+    className: 'utrecht-textbox--phone-number-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -321,6 +323,7 @@ export const AutocompleteTelefoonnummerNational: Story = {
     type: 'tel-national',
     spellCheck: 'false',
     value: '030 286 00 00',
+    className: 'utrecht-textbox--phone-number-nl-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -522,6 +525,43 @@ export const StraatnaamInNederland: Story = {
     docs: {
       description: {
         story: streetnameDocs,
+      },
+    },
+  },
+};
+
+export const Iban: Story = {
+  name: 'Iban (Internationaal)',
+  args: {
+    value: 'NL02 ABNA 0123 4567 89',
+    className: 'utrecht-textbox--iban-size',
+  },
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: IbanDocs,
+      },
+    },
+  },
+};
+export const IbanNederland: Story = {
+  name: 'Iban (in Nederland)',
+  args: {
+    value: 'NL02 ABNA 0123 4567 89',
+    className: 'utrecht-textbox--iban-nl-size',
+  },
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: IbanDocs,
       },
     },
   },
