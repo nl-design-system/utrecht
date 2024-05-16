@@ -81,6 +81,27 @@
 
   --utrecht-textbox-max-length: 12;
 }
+.utrecht-textbox--phone-number-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 16;
+}
+
+.utrecht-textbox--phone-number-nl-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 13;
+}
+.utrecht-textbox--iban-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 41;
+}
+.utrecht-textbox--iban-nl-size {
+  @extend .utrecht-textbox--size;
+
+  --utrecht-textbox-max-length: 22;
+}
 
 /**
  * This class name is experimental.
