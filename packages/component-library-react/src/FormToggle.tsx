@@ -36,7 +36,7 @@ export const FormToggle = forwardRef(
         tabIndex={tabIndex}
         {...restProps}
       />
-      <label htmlFor={id} className="utrecht-form-toggle__track">
+      <label htmlFor={id} className={clsx('utrecht-form-toggle__track', 'utrecht-form-toggle__track--html-label')}>
         <div className="utrecht-form-toggle__thumb"></div>
       </label>
     </div>
