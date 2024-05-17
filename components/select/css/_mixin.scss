@@ -24,6 +24,8 @@
   font-family: var(--utrecht-select-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-select-font-size, var(--utrecht-form-control-font-size));
   inline-size: 100%;
+  min-block-size: var(--utrecht-select-min-block-size, var(--utrecht-pointer-target-min-size, 44px));
+  min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-control-max-inline-size));
   padding-block-end: var(--utrecht-select-padding-block-end, var(--utrecht-form-control-padding-block-end));
   padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-control-padding-block-start));
