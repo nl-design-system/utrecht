@@ -63,7 +63,9 @@
 @mixin utrecht-breadcrumb-nav__link--current {
   --utrecht-link-current-font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
 
-  cursor: var(--utrecht-action-inert-cursor, default);
+  /* configure the `current` `cursor` only when the current state is applied */
+  --_utrecht-breadcrumb-nav-link-current-cursor: var(--utrecht-action-inert-cursor, default);
+
   font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
 }
 
@@ -73,12 +75,16 @@
     var(--utrecht-breadcrumb-nav-link-color)
   );
 
+  /* configure the `disabled` `cursor` only when the current state is applied */
+  --_utrecht-breadcrumb-nav-link-disabled-cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+
   background-color: var(
     --utrecht-breadcrumb-nav-link-disabled-background-color,
     var(--utrecht-breadcrumb-nav-link-background-color)
   );
-  color: var(--utrecht-link-placeholder-color);
-  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+
+  /* Use the `current` cursor when available, otherwise use the `disabled` cursor */
+  cursor: var(--_utrecht-breadcrumb-nav-link-current-cursor, var(--_utrecht-breadcrumb-nav-link-disabled-cursor));
 }
 
 /* stylelint-disable-next-line block-no-empty */

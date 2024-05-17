@@ -45,16 +45,12 @@
   @include utrecht-breadcrumb-nav__link;
 }
 
-.utrecht-breadcrumb-nav__link--disabled {
-  @include utrecht-breadcrumb-nav__link--disabled;
+.utrecht-breadcrumb-nav__link--current {
+  @include utrecht-breadcrumb-nav__link--current;
 }
 
-.utrecht-breadcrumb-nav__link--current {
-  /*
-   * `current` should apply to `disabled` links too, and it should override `disabled`.
-   * The override is the reason why this selector is not ordered alphabetically.
-   */
-  @include utrecht-breadcrumb-nav__link--current;
+.utrecht-breadcrumb-nav__link--disabled {
+  @include utrecht-breadcrumb-nav__link--disabled;
 }
 
 /* stylelint-disable-next-line block-no-empty */
