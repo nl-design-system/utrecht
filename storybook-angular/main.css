@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Fri, 17 May 2024 10:03:53 GMT
+ * Generated on Fri, 17 May 2024 12:37:09 GMT
  */
 /**
  * Do not edit directly
- * Generated on Fri, 17 May 2024 10:03:52 GMT
+ * Generated on Fri, 17 May 2024 12:37:08 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -5277,6 +5277,10 @@ so do not apply these styles to an HTML `<dialog>` element without `open` attrib
   border-radius: var(--utrecht-form-toggle-track-border-radius, var(--utrecht-form-toggle-border-radius));
   display: flex;
   inline-size: 100%;
+}
+
+.utrecht-form-toggle__track--html-label {
+  cursor: inherit;
 }
 
 .utrecht-form-toggle__track--checked, .utrecht-form-toggle--html-checkbox .utrecht-form-toggle__checkbox:checked ~ .utrecht-form-toggle__track {
