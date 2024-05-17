@@ -46,6 +46,10 @@
   @include utrecht-form-toggle__track;
 }
 
+.utrecht-form-toggle__track--html-label {
+  @include utrecht-form-toggle__track--html-label;
+}
+
 .utrecht-form-toggle__track--checked {
   @include utrecht-form-toggle__track--checked;
 }

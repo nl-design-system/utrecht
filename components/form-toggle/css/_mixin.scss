@@ -93,6 +93,10 @@
   z-index: 20;
 }
 
+@mixin utrecht-form-toggle__track--html-label {
+  cursor: inherit;
+}
+
 @mixin utrecht-form-toggle__thumb--checked {
   margin-inline-start: auto;
 }
