@@ -200,6 +200,35 @@ export const Disabled: Story = {
   },
 };
 
+export const DisabledCurrent: Story = {
+  args: {
+    label: 'Kruimelpad:',
+    children: [
+      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
+        Home
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
+        Wonen en leven
+      </BreadcrumbNavLink>,
+      <BreadcrumbNavSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbNavSeparator>,
+      <BreadcrumbNavLink href="https://example.com/a/b/" current disabled index={2}>
+        Afval
+      </BreadcrumbNavLink>,
+    ],
+  },
+  name: 'Current page link is disabled',
+  parameters: {
+    status: {
+      type: 'ALPHA',
+    },
+  },
+};
+
 export const Home: Story = {
   args: {
     label: 'Home only',
@@ -314,35 +343,6 @@ export const CodeTitle: Story = {
     ],
   },
   name: 'Code in link text',
-  parameters: {
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
-
-export const DisabledCurrent: Story = {
-  args: {
-    label: 'Kruimelpad:',
-    children: [
-      <BreadcrumbNavLink href="https://example.com/" rel="home" index={0}>
-        Home
-      </BreadcrumbNavLink>,
-      <BreadcrumbNavSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbNavSeparator>,
-      <BreadcrumbNavLink href="https://example.com/a/" index={1}>
-        Wonen en leven
-      </BreadcrumbNavLink>,
-      <BreadcrumbNavSeparator>
-        <UtrechtIconChevronRight />
-      </BreadcrumbNavSeparator>,
-      <BreadcrumbNavLink href="https://example.com/a/b/" current disabled index={2}>
-        Afval
-      </BreadcrumbNavLink>,
-    ],
-  },
-  name: 'Current page link is disabled',
   parameters: {
     status: {
       type: 'ALPHA',
