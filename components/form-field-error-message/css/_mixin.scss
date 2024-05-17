@@ -5,13 +5,14 @@
 
 @mixin utrecht-form-field-error-message {
   --utrecht-document-color: currentColor;
+  --utrecht-paragraph-font-weight: var(--utrecht-form-field-error-message-font-weight, initial);
 
   background-color: var(--utrecht-form-field-error-message-background-color);
   color: var(--utrecht-form-field-error-message-color);
   display: block;
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-form-field-error-message-font-size, inherit);
-  font-style: var(--utrecht-form-field-error-message-font-style);
+  font-weight: var(--utrecht-form-field-error-message-font-weight, inherit);
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-form-field-error-message-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
