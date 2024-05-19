@@ -1,2 +1,0 @@
-import{r as o,h as r,H as s}from"./index.esm-c8316058.js";import"./clsx.m-c1fc4751.js";import"./getPrototypeOf-624f05c9.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./index-d3ea75b5.js";import"./iframe-c6f1f789.js";import"../sb-preview/runtime.js";const e=":host{break-inside:avoid;page-break-inside:avoid;display:table-row}",i=class{constructor(t){o(this,t)}render(){return r(s,{role:"row"},r("slot",null))}};i.style=e;export{i as utrecht_table_row};
-//# sourceMappingURL=utrecht-table-row.entry-c8f7f030.js.map
