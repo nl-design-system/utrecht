@@ -9,9 +9,28 @@
  * https://github.com/hudochenkov/stylelint-order/pull/162 */
 /* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-textbox {
-  --_utrecht-textbox-max-inline-size: var(
-    --utrecht-textbox-max-inline-size,
-    var(--utrecht-form-control-max-inline-size)
+  /* The average character inline-size is an approximation, with a default that works for Dutch text.
+   * The average might need to be configured specifically, for other scripts (CJK characters)
+   * and very wide or very narrow fonts.
+   * For monospace fonts it can be set to `1ch`.
+   */
+  --_utrecht-textbox-value-char: 0.667em + 0.334ch;
+
+  /* Because this element uses `border-box` box-sizing, we need to manually add up the
+    * border width, padding width and the content width.
+    * 
+    * Browsers and browser addons can add buttons inside the content box, for example
+    * for autocomplete. To avoid overlap between the UI and the text, we reserve
+    * some additional pixels to make space. We use 44px in accordance with the WCAG target size.
+    * 
+    * When you are certain an element has no such UI, you can set the `autocomplete-ui-size` to `0px` (not to `0`).
+    */
+  --_utrecht-textbox-max-inline-size: calc(
+    calc(var(--utrecht-textbox-value-max-length) * var(--_utrecht-textbox-value-char)) +
+      var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
+      var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
+      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
+      var(--utrecht-textbox-autocomplete-ui-size, 44px)
   );
 
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
@@ -33,7 +52,10 @@
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
   min-block-size: var(--utrecht-pointer-target-min-size, 44px);
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
-  max-inline-size: var(--_utrecht-textbox-max-inline-size);
+  max-inline-size: min(
+    var(--_utrecht-textbox-max-inline-size, 100%),
+    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
+  );
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
   padding-inline-end: var(
@@ -242,4 +264,51 @@
   &::placeholder {
     @include utrecht-textbox__placeholder;
   }
+}
+
+@mixin utrecht-textbox--postal-code-nl-size {
+  /* Dutch postal code: 4 numbers, 1 space and 2 letters */
+  --utrecht-textbox-value-max-length: 7;
+}
+
+@mixin utrecht-textbox--house-number-size {
+  /* Dutch house number is 99999 at most: 5 numbers */
+  --utrecht-textbox-value-max-length: 5;
+}
+
+@mixin utrecht-textbox--house-letter-size {
+  /* Dutch house letter is 1 letter */
+  --utrecht-textbox-value-max-length: 1;
+}
+
+@mixin utrecht-textbox--house-addition-size {
+  /* Dutch house addition is optional, between 1 and 4 alphanumeric characters */
+  --utrecht-textbox-value-max-length: 4;
+}
+
+@mixin utrecht-textbox--voorvoegsel-size {
+  /* "Tabel 36 Voorvoegselstabel" by "Rijksdienst voor Identiteitsgegevens" has a list
+   * of all allowed values. The longest value is 10 characters.
+   * The class name is in Dutch because it is a Dutch concept. */
+  --utrecht-textbox-value-max-length: 10;
+}
+
+@mixin utrecht-textbox--tel-size {
+  /* International telephone number standard E.164 allows 15 numbers, with optional space for 4 spaces */
+  --utrecht-textbox-value-max-length: 19;
+}
+
+@mixin utrecht-textbox--tel-nl-size {
+  /* Dutch telephone number: 10 number, typically with at most 3 spaces */
+  --utrecht-textbox-value-max-length: 13;
+}
+
+@mixin utrecht-textbox--iban-size {
+  /* Maximum IBAN: 33 characters, plus 8 spaces (one space after every 4 characters) */
+  --utrecht-textbox-value-max-length: 41;
+}
+
+@mixin utrecht-textbox--iban-nl-size {
+  /* Dutch IBAN: 18 characters, plus 4 spaces (one space after every 4 characters) */
+  --utrecht-textbox-value-max-length: 22;
 }

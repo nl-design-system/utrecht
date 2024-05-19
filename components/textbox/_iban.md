@@ -1,11 +1,10 @@
 <!-- @license CC0-1.0 -->
 <!-- markdownlint-disable MD041 -->
 
-In 2024 hebben we het opgezocht: Wat de langste iban is in de wereld en die is van Rusland, die is 33 tekens lang.
+In 2024 hebben we het opgezocht, de langste IBAN in de wereld is in Rusland: 33 tekens.
 
-Gebruik voor als maximumlengte 41 characters voor het invoer van de internationale iban. Dat is omdat als je een iban leesbaar invuld je na elke 4 tekens een spatie toevoegd.
+Gebruik daarom als maximumlengte 41 tekens voor de invoer van de internationale IBAN,r dan heb je genoeg ruimte voor de langste IBAN en spaties voor leesbaarheid, die helpen met de invoer controleren.
 
-Bij een Nederlandse iban invoer veld wil je 22 tekens gebruiken.
+Gebruik voor een Nederlandse IBAN invoer 22 tekens gebruiken: 18 tekens plus 4 spaties.
 
-- [Iban volgens iban.com](https://www.iban.com/structure).
-- [Iban volgens wikipedia](https://en.wikipedia.org/wiki/International_Bank_Account_Number).
+Zie ook: [IBAN op Wikipedia](https://en.wikipedia.org/wiki/International_Bank_Account_Number).
