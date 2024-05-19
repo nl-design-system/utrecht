@@ -13,6 +13,18 @@ describe('Article', () => {
     expect(article).toBeVisible();
   });
 
+  it('can render an article role with a name', () => {
+    render(
+      <Article aria-labelledby="heading">
+        <h1 id="heading">Heading</h1>
+      </Article>,
+    );
+
+    const article = screen.getByRole('article', { name: 'Heading' });
+
+    expect(article).toBeInTheDocument();
+  });
+
   it('renders an article HTML element', () => {
     const { container } = render(<Article />);
 
