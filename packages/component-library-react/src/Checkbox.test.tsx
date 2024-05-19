@@ -36,6 +36,7 @@ describe('Checkbox', () => {
 
     expect(link).toHaveClass('utrecht-checkbox');
   });
+
   it('can have a additional class name', () => {
     const { container } = render(<Checkbox className="large" />);
 
@@ -47,9 +48,9 @@ describe('Checkbox', () => {
   });
   describe('checked variant', () => {
     it('is not checked by default', () => {
-      const { container } = render(<Checkbox />);
+      render(<Checkbox />);
 
-      const checkbox = container.querySelector(':only-child');
+      const checkbox = screen.getByRole('checkbox');
 
       expect(checkbox).not.toBeChecked();
     });
@@ -67,9 +68,17 @@ describe('Checkbox', () => {
 
     it('can have a checked state', () => {
       const handleChange = () => {};
-      const { container } = render(<Checkbox checked onChange={handleChange} />);
+      render(<Checkbox checked onChange={handleChange} />);
 
-      const checkbox = container.querySelector(':only-child');
+      const checkbox = screen.getByRole('checkbox');
+
+      expect(checkbox).toBeChecked();
+    });
+
+    it('can have a defaultChecked state (in React)', () => {
+      render(<Checkbox defaultChecked />);
+
+      const checkbox = screen.getByRole('checkbox');
 
       expect(checkbox).toBeChecked();
     });

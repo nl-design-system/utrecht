@@ -27,7 +27,7 @@ export const IBANData = forwardRef(
   ({ children, value, className, ...restProps }: IBANDataProps, ref: ForwardedRef<HTMLDataElement>) => {
     const normalized = normalizeIBAN(value);
     const formatted = formatIBAN(normalized);
-    console.log({ value, normalized, formatted });
+
     return (
       <data {...restProps} ref={ref} value={normalized} className={clsx('utrecht-iban-data', className)} translate="no">
         {children || formatted}

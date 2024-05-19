@@ -3,7 +3,7 @@ import { createRef } from 'react';
 import { BadgeCounter } from './BadgeCounter';
 import '@testing-library/jest-dom';
 
-describe('Data badge', () => {
+describe('Badge counter', () => {
   it('renders an HTML span element', () => {
     const { container } = render(<BadgeCounter>{'42'}</BadgeCounter>);
 
@@ -29,6 +29,7 @@ describe('Data badge', () => {
 
     expect(badge).toHaveClass('utrecht-badge-counter');
   });
+
   it('can have a additional class name', () => {
     const { container } = render(<BadgeCounter className="large" />);
 

@@ -39,13 +39,17 @@ describe('Listbox', () => {
   });
 
   describe('disabled state', () => {
-    // `aria-disabled` is somehow not recognized as disabled state
-    it.skip('has a disabled listbox', () => {
+    // `aria-disabled` is somehow not recognized as disabled state on a listbox by Testing Library
+    it.todo('has a disabled listbox in the accessibility tree');
+
+    // Temporary alternative to the accessibility tree test
+    it('has a disabled listbox in the DOM', () => {
       render(<Listbox disabled />);
 
       const listbox = screen.getByRole('listbox');
 
-      expect(listbox).toBeDisabled();
+      // Look at the DOM instead of the accessibility tree
+      expect(listbox).toHaveAttribute('aria-disabled', 'true');
     });
   });
 
