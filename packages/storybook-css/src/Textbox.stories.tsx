@@ -267,7 +267,7 @@ export const AutocompleteVoorvoegsel: Story = {
     autoComplete: 'name-prefix',
     spellCheck: 'false',
     value: 'van der',
-    className: 'utrecht-textbox--prefix-name-size',
+    className: 'utrecht-textbox--voorvoegsel-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -285,7 +285,7 @@ export const AutocompletePostcode: Story = {
     autoComplete: 'postal-code',
     spellCheck: 'false',
     value: '3521 AZ',
-    className: 'utrecht-textbox--postal-code-size',
+    className: 'utrecht-textbox--postal-code-nl-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -304,7 +304,7 @@ export const AutocompleteTelefoonnummer: Story = {
     type: 'tel',
     spellCheck: 'false',
     value: '+31 30 286 00 00',
-    className: 'utrecht-textbox--phone-number-size',
+    className: 'utrecht-textbox--tel-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -319,11 +319,11 @@ export const AutocompleteTelefoonnummer: Story = {
 export const AutocompleteTelefoonnummerNational: Story = {
   name: 'Telefoonnummer (in Nederland)',
   args: {
-    autoComplete: 'tel',
-    type: 'tel-national',
+    autoComplete: 'tel-national',
+    type: 'tel',
     spellCheck: 'false',
     value: '030 286 00 00',
-    className: 'utrecht-textbox--phone-number-nl-size',
+    className: 'utrecht-textbox--tel-nl-size',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -531,7 +531,7 @@ export const StraatnaamInNederland: Story = {
 };
 
 export const Iban: Story = {
-  name: 'Iban (Internationaal)',
+  name: 'IBAN (Internationaal)',
   args: {
     value: 'NL02 ABNA 0123 4567 89',
     className: 'utrecht-textbox--iban-size',
@@ -549,7 +549,7 @@ export const Iban: Story = {
   },
 };
 export const IbanNederland: Story = {
-  name: 'Iban (in Nederland)',
+  name: 'IBAN (in Nederland)',
   args: {
     value: 'NL02 ABNA 0123 4567 89',
     className: 'utrecht-textbox--iban-nl-size',
