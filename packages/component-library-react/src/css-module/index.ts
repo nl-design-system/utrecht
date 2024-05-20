@@ -68,6 +68,8 @@ export type { FormFieldDescriptionProps } from '../FormFieldDescription';
 export { FormFieldDescription } from './FormFieldDescription';
 export type { FormFieldErrorMessageProps } from '../FormFieldErrorMessage';
 export { FormFieldErrorMessage } from './FormFieldErrorMessage';
+export type { FormFieldTextboxProps } from '../FormFieldTextbox';
+export { FormFieldTextbox } from './FormFieldTextbox';
 export type { FormLabelProps } from '../FormLabel';
 export { FormLabel } from './FormLabel';
 export type { FormToggleProps } from '../FormToggle';
