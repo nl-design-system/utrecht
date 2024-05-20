@@ -128,7 +128,7 @@ describe('Checkbox', () => {
 
     it('can have a invalid state in CSS', () => {
       const handleChange = () => {};
-      const { container } = render(<Checkbox required checked={false} onChange={handleChange} />);
+      const { container } = render(<Checkbox inputRequired checked={false} onChange={handleChange} />);
 
       const checkbox = container.querySelector(':invalid');
 
@@ -214,9 +214,44 @@ describe('Checkbox', () => {
 
       expect(checkbox).toBeRequired();
     });
+  });
+
+  describe('inputRequired variant', () => {
+    it('renders a design system BEM modifier class name: utrecht-checkbox--required', () => {
+      const { container } = render(<Checkbox inputRequired />);
+
+      const checkbox = container.querySelector('.utrecht-checkbox');
+
+      expect(checkbox).toHaveClass('utrecht-checkbox--required');
+    });
+
+    it('is not required by default', () => {
+      const { container } = render(<Checkbox />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).not.toBeRequired();
+    });
+
+    it('omits non-essential required attributes when not required', () => {
+      render(<Checkbox inputRequired={false} />);
+
+      const checkbox = screen.getByRole('checkbox');
+
+      expect(checkbox).not.toHaveAttribute('aria-required');
+      expect(checkbox).not.toHaveAttribute('required');
+    });
+
+    it('can have a required state', () => {
+      render(<Checkbox inputRequired />);
+
+      const checkbox = screen.getByRole('checkbox');
+
+      expect(checkbox).toBeRequired();
+    });
 
     it('can have a required state in CSS', () => {
-      const { container } = render(<Checkbox required />);
+      const { container } = render(<Checkbox inputRequired />);
 
       const checkbox = container.querySelector(':required');
 
