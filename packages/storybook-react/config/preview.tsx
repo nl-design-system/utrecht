@@ -11,7 +11,7 @@ import '@utrecht/storybook-helpers/src/storybook-docs.scss';
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
-console.log(results);
+
 const preview: Preview = {
   decorators: [
     (Story: any) => <div className="utrecht-document">{Story()}</div>,
@@ -42,6 +42,11 @@ const preview: Preview = {
             <Stories />
           </>
         );
+      },
+    },
+    options: {
+      storySort: {
+        order: ['React Component', ['Component Introduction', 'Developing components', 'Testing components']],
       },
     },
     ...addonStatus,
