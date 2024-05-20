@@ -182,17 +182,12 @@ describe("checked variant", () => {
 });
 ```
 
-Helaas ondersteunt Testing Library nog niet elke state in de accessibility tree. Maak alvast wel de test, maar sla de test over `skip`. Gebruik de DOM om de test op een alternative manier te doen.
+Helaas ondersteunt Testing Library nog niet elke state in de accessibility tree. Maak alvast wel de test, maar sla de test over `todo`. Gebruik de DOM om de test op een alternative manier te doen.
 
 ```jsx
-// `aria-disabled` is somehow not recognized as disabled state
-it.skip("has a disabled listbox", () => {
-  render(<Listbox disabled />);
-
-  const listbox = screen.getByRole("listbox");
-
-  expect(listbox).toBeDisabled();
-});
+// `aria-disabled` is somehow not recognized as disabled state on a listbox by Testing Library
+// https://github.com/testing-library/jest-dom/issues/144
+it.todo("has a disabled listbox in the accessibility tree", () => {});
 
 // Temporary alternative to the accessibility tree test
 it("has a disabled listbox", () => {
@@ -200,6 +195,7 @@ it("has a disabled listbox", () => {
 
   const listbox = screen.getByRole("listbox");
 
+  // Look at the DOM instead of the accessibility tree
   expect(listbox).toHaveAttribute("aria-disabled", "true");
 });
 ```
