@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Tue, 21 May 2024 09:40:56 GMT
+ * Generated on Tue, 21 May 2024 10:58:02 GMT
  */
 /**
  * Do not edit directly
- * Generated on Tue, 21 May 2024 09:40:54 GMT
+ * Generated on Tue, 21 May 2024 10:58:01 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -7740,6 +7740,8 @@ however browsers don't seem to have implemented great looking supixel tweening y
   font-family: var(--utrecht-select-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-select-font-size, var(--utrecht-form-control-font-size));
   inline-size: 100%;
+  min-block-size: var(--utrecht-select-min-block-size, var(--utrecht-pointer-target-min-size, 44px));
+  min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-control-max-inline-size));
   padding-block-end: var(--utrecht-select-padding-block-end, var(--utrecht-form-control-padding-block-end));
   padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-control-padding-block-start));
