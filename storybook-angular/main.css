@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Sun, 19 May 2024 15:41:01 GMT
+ * Generated on Tue, 21 May 2024 09:30:29 GMT
  */
 /**
  * Do not edit directly
- * Generated on Sun, 19 May 2024 15:41:00 GMT
+ * Generated on Tue, 21 May 2024 09:30:28 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -2792,24 +2792,23 @@ so do not apply these styles to an HTML `<dialog>` element without `open` attrib
   padding-inline-start: var(--utrecht-breadcrumb-nav-item-padding-inline-start, 8px);
 }
 
+.utrecht-breadcrumb-nav__link--current {
+  --utrecht-link-current-font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
+  /* configure the `current` `cursor` only when the current state is applied */
+  --_utrecht-breadcrumb-nav-link-current-cursor: var(--utrecht-action-inert-cursor, default);
+  font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
+}
+
 .utrecht-breadcrumb-nav__link--disabled {
   --utrecht-link-placeholder-color: var(
     --utrecht-breadcrumb-nav-link-disabled-color,
     var(--utrecht-breadcrumb-nav-link-color)
   );
+  /* configure the `disabled` `cursor` only when the current state is applied */
+  --_utrecht-breadcrumb-nav-link-disabled-cursor: var(--utrecht-action-disabled-cursor, not-allowed);
   background-color: var(--utrecht-breadcrumb-nav-link-disabled-background-color, var(--utrecht-breadcrumb-nav-link-background-color));
-  color: var(--utrecht-link-placeholder-color);
-  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
-}
-
-.utrecht-breadcrumb-nav__link--current {
-  /*
-   * `current` should apply to `disabled` links too, and it should override `disabled`.
-   * The override is the reason why this selector is not ordered alphabetically.
-   */
-  --utrecht-link-current-font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
-  cursor: var(--utrecht-action-inert-cursor, default);
-  font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
+  /* Use the `current` cursor when available, otherwise use the `disabled` cursor */
+  cursor: var(--_utrecht-breadcrumb-nav-link-current-cursor, var(--_utrecht-breadcrumb-nav-link-disabled-cursor));
 }
 
 /* stylelint-disable-next-line block-no-empty */
