@@ -229,8 +229,51 @@ describe('Textbox', () => {
       expect(textbox).not.toHaveAttribute('required');
     });
 
-    it('can have a required state in CSS', () => {
+    it('does not have a required state in CSS', () => {
       const { container } = render(<Textbox required />);
+
+      const textbox = container.querySelector(':required');
+
+      expect(textbox).not.toBeInTheDocument();
+    });
+  });
+
+  describe('inputRequired variant', () => {
+    it('can have a required state', () => {
+      render(<Textbox inputRequired />);
+
+      const textbox = screen.getByRole('textbox');
+
+      expect(textbox).toBeRequired();
+    });
+
+    it('is not required by default', () => {
+      render(<Textbox />);
+
+      const textbox = screen.getByRole('textbox');
+
+      expect(textbox).not.toBeRequired();
+    });
+
+    it('renders a design system BEM modifier class name', () => {
+      const { container } = render(<Textbox inputRequired />);
+
+      const textbox = container.querySelector('.utrecht-textbox');
+
+      expect(textbox).toHaveClass('utrecht-textbox--required');
+    });
+
+    it('omits non-essential required attributes when not required', () => {
+      render(<Textbox inputRequired={false} />);
+
+      const textbox = screen.getByRole('textbox');
+
+      expect(textbox).not.toHaveAttribute('aria-required');
+      expect(textbox).not.toHaveAttribute('required');
+    });
+
+    it('can have a required state in CSS', () => {
+      const { container } = render(<Textbox inputRequired />);
 
       const textbox = container.querySelector(':required');
 

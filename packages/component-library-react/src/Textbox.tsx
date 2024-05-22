@@ -15,6 +15,7 @@ export type TextboxTypes =
   | 'week';
 
 export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
+  inputRequired?: boolean;
   invalid?: boolean;
   type?: TextboxTypes;
 }
@@ -27,6 +28,7 @@ export const Textbox = forwardRef(
       invalid,
       readOnly,
       required,
+      inputRequired,
       className,
       type = 'text',
       maxLength,
@@ -45,14 +47,15 @@ export const Textbox = forwardRef(
         disabled && 'utrecht-textbox--disabled',
         invalid && 'utrecht-textbox--invalid',
         readOnly && 'utrecht-textbox--readonly',
-        required && 'utrecht-textbox--required',
+        (required || inputRequired) && 'utrecht-textbox--required',
         className,
       )}
       maxLength={maxLength}
       dir={dir ?? 'auto'}
       disabled={disabled}
       readOnly={readOnly}
-      required={required}
+      aria-required={required ? required : undefined}
+      required={inputRequired}
       aria-invalid={invalid || undefined}
       inputMode={inputMode || (type === 'number' ? 'numeric' : undefined)}
     />
