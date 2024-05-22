@@ -130,15 +130,6 @@ describe('Textarea', () => {
 
       expect(textarea).not.toHaveAttribute('aria-invalid');
     });
-
-    it('can have a invalid state in CSS', () => {
-      const handleChange = () => {};
-      const { container } = render(<Textarea required onChange={handleChange} />);
-
-      const textarea = container.querySelector(':invalid');
-
-      expect(textarea).toBeInTheDocument();
-    });
   });
 
   describe('read-only variant', () => {
@@ -222,10 +213,63 @@ describe('Textarea', () => {
       expect(textarea).not.toHaveAttribute('required');
     });
 
-    it('can have a required state in CSS', () => {
+    it('does not have a required state in CSS', () => {
       const { container } = render(<Textarea required />);
 
       const textarea = container.querySelector(':required');
+
+      expect(textarea).not.toBeInTheDocument();
+    });
+  });
+
+  describe('inputRequired state', () => {
+    it('can have a required state', () => {
+      const { container } = render(<Textarea inputRequired />);
+
+      const textarea = container.querySelector(':only-child');
+
+      expect(textarea).toBeRequired();
+    });
+
+    it('is not required by default', () => {
+      const { container } = render(<Textarea />);
+
+      const textarea = container.querySelector(':only-child');
+
+      expect(textarea).not.toBeRequired();
+    });
+
+    it('renders a design system BEM modifier class name', () => {
+      const { container } = render(<Textarea required />);
+
+      const textarea = container.querySelector(':only-child');
+
+      expect(textarea).toHaveClass('utrecht-textarea--required');
+    });
+
+    it('omits non-essential required attributes when not required', () => {
+      const { container } = render(<Textarea inputRequired={false} />);
+
+      const textarea = container.querySelector(':only-child');
+
+      expect(textarea).not.toHaveAttribute('aria-required');
+
+      expect(textarea).not.toHaveAttribute('required');
+    });
+
+    it('can have a required state in CSS', () => {
+      const { container } = render(<Textarea inputRequired />);
+
+      const textarea = container.querySelector(':required');
+
+      expect(textarea).toBeInTheDocument();
+    });
+
+    it('can have a invalid state in CSS', () => {
+      const handleChange = () => {};
+      const { container } = render(<Textarea inputRequired onChange={handleChange} />);
+
+      const textarea = container.querySelector(':invalid');
 
       expect(textarea).toBeInTheDocument();
     });
