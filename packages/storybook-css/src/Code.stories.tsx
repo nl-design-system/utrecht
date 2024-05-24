@@ -1,7 +1,17 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Code, Link, Paragraph } from '@utrecht/component-library-react';
+import {
+  Code,
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+  Link,
+  Paragraph,
+} from '@utrecht/component-library-react';
 import type { CodeProps } from '@utrecht/component-library-react';
 import readme from '@utrecht/components/code/README.md?raw';
 import ligaturesDocs from '@utrecht/components/code/_ligatures.md?raw';
@@ -139,6 +149,108 @@ export const CodeInParagraph: Story = {
       description: {
         story:
           'Lopende tekst met code moet goed leesbaar zijn, de code moet niet zo afleidend opgemaakt zijn dat de tekst slecht leesbaar wordt.',
+      },
+    },
+  },
+};
+
+const CodeInHeading1Story = ({ children }: CodeStoryProps) => <Heading1>{children}</Heading1>;
+
+export const CodeInHeading1: Story = {
+  args: {
+    children: ['Gebruik een ', <Code>line-height</Code>, ' die voldoende afstand heeft'],
+  },
+  name: 'Code in a heading 1',
+  render: CodeInHeading1Story,
+  parameters: {
+    docs: {
+      description: {
+        story: 'De lettergrootte van de code moet aanpassen aan de parent.',
+      },
+    },
+  },
+};
+
+const CodeInHeading2Story = ({ children }: CodeStoryProps) => <Heading2>{children}</Heading2>;
+
+export const CodeInHeading2: Story = {
+  args: {
+    children: ['Gebruik een ', <Code>line-height</Code>, ' die voldoende afstand heeft'],
+  },
+  name: 'Code in a heading 2',
+  render: CodeInHeading2Story,
+  parameters: {
+    docs: {
+      description: {
+        story: 'De lettergrootte van de code moet aanpassen aan de parent.',
+      },
+    },
+  },
+};
+
+const CodeInHeading3Story = ({ children }: CodeStoryProps) => <Heading3>{children}</Heading3>;
+
+export const CodeInHeading3: Story = {
+  args: {
+    children: ['Gebruik een ', <Code>line-height</Code>, ' die voldoende afstand heeft'],
+  },
+  name: 'Code in a heading 3',
+  render: CodeInHeading3Story,
+  parameters: {
+    docs: {
+      description: {
+        story: 'De lettergrootte van de code moet aanpassen aan de parent.',
+      },
+    },
+  },
+};
+
+const CodeInHeading4Story = ({ children }: CodeStoryProps) => <Heading4>{children}</Heading4>;
+
+export const CodeInHeading4: Story = {
+  args: {
+    children: ['Gebruik een ', <Code>line-height</Code>, ' die voldoende afstand heeft'],
+  },
+  name: 'Code in a heading 4',
+  render: CodeInHeading4Story,
+  parameters: {
+    docs: {
+      description: {
+        story: 'De lettergrootte van de code moet aanpassen aan de parent.',
+      },
+    },
+  },
+};
+
+const CodeInHeading5Story = ({ children }: CodeStoryProps) => <Heading5>{children}</Heading5>;
+
+export const CodeInHeading5: Story = {
+  args: {
+    children: ['Gebruik een ', <Code>line-height</Code>, ' die voldoende afstand heeft'],
+  },
+  name: 'Code in a heading 5',
+  render: CodeInHeading5Story,
+  parameters: {
+    docs: {
+      description: {
+        story: 'De lettergrootte van de code moet aanpassen aan de parent.',
+      },
+    },
+  },
+};
+
+const CodeInHeading6Story = ({ children }: CodeStoryProps) => <Heading6>{children}</Heading6>;
+
+export const CodeInHeading6: Story = {
+  args: {
+    children: ['Gebruik een ', <Code>line-height</Code>, ' die voldoende afstand heeft'],
+  },
+  name: 'Code in a heading 6',
+  render: CodeInHeading6Story,
+  parameters: {
+    docs: {
+      description: {
+        story: 'De lettergrootte van de code moet aanpassen aan de parent.',
       },
     },
   },
