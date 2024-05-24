@@ -6,10 +6,12 @@
 
 @mixin utrecht-code {
   /* Use `monospace` as fallback both when the custom property isn't set and when the font is not available */
+
+  /* Use `inherit` as font-size, to override interfering CSS such as: `code { font-size: 16px }` */
   background-color: var(--utrecht-code-background-color);
   color: var(--utrecht-code-color);
   font-family: var(--utrecht-code-font-family, monospace), monospace;
-  font-size: var(--utrecht-code-font-size);
+  font-size: var(--utrecht-code-font-size, inherit);
   font-variant-ligatures: none;
   line-height: var(--utrecht-code-line-height);
 }
