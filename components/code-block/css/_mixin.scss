@@ -17,7 +17,7 @@
 
   background-color: var(--utrecht-code-block-background-color);
   display: block;
-  font-size: var(--utrecht-code-block-font-size, var(--utrecht-code-font-size));
+  font-size: var(--utrecht-code-block-font-size, var(--utrecht-code-font-size, inherit));
   line-height: var(--utrecht-code-block-line-height, var(--utrecht-code-line-height));
   margin-block-end: var(--utrecht-code-block-margin-block-end);
   margin-block-start: var(--utrecht-code-block-margin-block-start);
