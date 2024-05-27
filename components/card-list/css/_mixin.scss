@@ -1,9 +1,5 @@
 @mixin utrecht-card-list {
-  /* Configure `box-sizing` and `text-align` for `--center` */
-  box-sizing: border-box;
-  font-family: var(--utrecht-document-font-family, inherit);
-  font-size: var(--utrecht-card-list-font-size, var(--utrecht-document-font-size, inherit));
-  line-height: var(--utrecht-card-list-line-height, var(--utrecht-document-line-height, inherit));
+  display: flex;
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-card-list-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
@@ -12,22 +8,24 @@
     var(--utrecht-space-around, 0) *
       var(--utrecht-card-list-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
-  padding-inline-start: var(--utrecht-card-list-padding-inline-start, 2ch);
-  text-align: start;
+  padding-inline-start: var(--utrecht-card-list-padding-inline-start, 0);
 }
 
 @mixin utrecht-card-list__item {
   background-color: var(--utrecht-card-list-background-color);
+  block-size: 100%;
+  inline-size: 100%;
   list-style: none;
   margin-block-end: var(--utrecht-card-list-item-margin-block-end);
   margin-block-start: var(--utrecht-card-list-item-margin-block-start);
-  padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, 1ch);
+  min-block-size: 312px;
+  padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, 1em);
 }
 
 @mixin utrecht-card-list__item-hover {
-  cursor: var(--utrecht-card-list-item-hover-cursor);
-  text-decoration: var(--utrecht-card-list-item-hover-text-decoration);
-  text-decoration-skip-ink: var(--utrecht-card-list-item-hover-text-decoration-skip-link);
+  cursor: var(--utrecht-card-list-item-hover-cursor, pointer);
+  text-decoration: var(--utrecht-card-list-item-hover-text-decoration, underline);
+  text-decoration-skip-ink: var(--utrecht-card-list-item-hover-text-decoration-skip-link, none);
   text-decoration-thickness: var(--utrecht-card-list-item-hover-text-decoration-thickness);
 }
 
@@ -36,8 +34,8 @@
 }
 
 @mixin utrecht-card-list__item-content {
-  padding-block-end: var(--utrecht-card-list-item-content-padding-block-end);
+  padding-block-end: var(--utrecht-card-list-item-content-padding-block-end, 1em);
   padding-block-start: var(--utrecht-card-list-item-content-padding-block-start);
-  padding-inline-end: var(--utrecht-card-list-item-content-padding-inline-end);
-  padding-inline-start: var(--utrecht-card-list-item-content-padding-inline-start);
+  padding-inline-end: var(--utrecht-card-list-item-content-padding-inline-end, 1em);
+  padding-inline-start: var(--utrecht-card-list-item-content-padding-inline-start, 1em);
 }
