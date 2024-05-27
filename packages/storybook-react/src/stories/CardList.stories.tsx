@@ -12,14 +12,31 @@ const meta = {
   argTypes: {},
   args: {
     children: [
-      <CardListItem headingLevel={2} title="item 1" preHeading="list item 1">
-        <Paragraph>item 1</Paragraph>
+      <CardListItem
+        headingLevel={2}
+        title="item 1"
+        imageAlt="card image"
+        imageSrc="example/photo-nijntje-vuelta.jpg"
+        imageWidth={300}
+        imageHeight={300}
+        cardRole="article"
+        preHeading="card 1"
+      >
+        <Paragraph>card 1</Paragraph>
       </CardListItem>,
-      <CardListItem headingLevel={3} title="item 2">
-        item 2
+      <CardListItem
+        headingLevel={3}
+        title="item 2"
+        imageAlt="card image"
+        imageSrc="example/photo-nijntje-vuelta.jpg"
+        imageWidth={300}
+        imageHeight={300}
+        href="https://www.example.com"
+      >
+        card 2
       </CardListItem>,
       <CardListItem headingLevel={1}>
-        <Paragraph>item 3</Paragraph>
+        <Paragraph>card 3</Paragraph>
       </CardListItem>,
     ],
   },
