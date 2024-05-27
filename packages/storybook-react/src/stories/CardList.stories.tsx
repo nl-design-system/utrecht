@@ -17,7 +17,7 @@ const meta = {
         title="item 1"
         imageAlt="card image"
         imageSrc="example/photo-nijntje-vuelta.jpg"
-        imageWidth={300}
+        imageWidth={303}
         imageHeight={300}
         cardRole="article"
         preHeading="card 1"
@@ -29,7 +29,7 @@ const meta = {
         title="item 2"
         imageAlt="card image"
         imageSrc="example/photo-nijntje-vuelta.jpg"
-        imageWidth={300}
+        imageWidth={303}
         imageHeight={300}
         href="https://www.example.com"
       >

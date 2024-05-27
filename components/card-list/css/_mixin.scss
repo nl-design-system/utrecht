@@ -30,10 +30,12 @@
 }
 
 @mixin utrecht-card-list__item-image {
+  display: block;
   object-fit: cover;
 }
 
 @mixin utrecht-card-list__item-content {
+  background-color: var(--utrecht-color-blue-90);
   padding-block-end: var(--utrecht-card-list-item-content-padding-block-end, 1em);
   padding-block-start: var(--utrecht-card-list-item-content-padding-block-start);
   padding-inline-end: var(--utrecht-card-list-item-content-padding-inline-end, 1em);
