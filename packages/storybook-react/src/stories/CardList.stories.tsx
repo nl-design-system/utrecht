@@ -2,6 +2,8 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { CardList, CardListItem, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
+import tokensDefinition from '@utrecht/components/card-list/tokens.json';
+import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
 
@@ -46,6 +48,8 @@ const meta = {
   },
   parameters: {
     tokensPrefix: 'utrecht-card-list',
+    tokens,
+    tokensDefinition,
   },
 } satisfies Meta<typeof CardList>;
 
