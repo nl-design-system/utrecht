@@ -29,7 +29,7 @@ const meta = {
         </Paragraph>
       </CardListItem>,
       <CardListItem
-        headingLevel={3}
+        headingLevel={2}
         title="title 2"
         imageAlt="card image"
         imageSrc="example/photo-nijntje-vuelta.jpg"
