@@ -1,5 +1,6 @@
 @mixin utrecht-card-list {
   display: flex;
+  flex-wrap: wrap;
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-card-list-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
@@ -12,17 +13,17 @@
 }
 
 @mixin utrecht-card-list__item {
-  background-color: var(--utrecht-card-list-background-color);
   block-size: 100%;
   inline-size: 100%;
   list-style: none;
-  margin-block-end: var(--utrecht-card-list-item-margin-block-end);
+  margin-block-end: var(--utrecht-card-list-item-margin-block-end, 1em);
   margin-block-start: var(--utrecht-card-list-item-margin-block-start);
+  max-inline-size: var(--utrecht-card-list-item-max-inline-size, 350px);
   min-block-size: 312px;
   padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, 1em);
 }
 
-@mixin utrecht-card-list__item-hover {
+@mixin utrecht-card-list__item--hover {
   cursor: var(--utrecht-card-list-item-hover-cursor, pointer);
   text-decoration: var(--utrecht-card-list-item-hover-text-decoration, underline);
   text-decoration-skip-ink: var(--utrecht-card-list-item-hover-text-decoration-skip-link, none);
@@ -34,10 +35,18 @@
   object-fit: cover;
 }
 
+@mixin utrecht-card-list__item-title {
+  margin-block-end: var(--utrecht-card-list-item-title-margin-block-end, 1em);
+}
+
+@mixin utrecht-card-list__item-title-link {
+  color: var(--utrecht-card-list-item-title-link-color, var(--utrecht-link-color));
+}
+
 @mixin utrecht-card-list__item-content {
-  background-color: var(--utrecht-color-blue-90);
+  background-color: var(--utrecht-card-list-item-content-background-color);
   padding-block-end: var(--utrecht-card-list-item-content-padding-block-end, 1em);
-  padding-block-start: var(--utrecht-card-list-item-content-padding-block-start);
+  padding-block-start: var(--utrecht-card-list-item-content-padding-block-start, 1em);
   padding-inline-end: var(--utrecht-card-list-item-content-padding-inline-end, 1em);
   padding-inline-start: var(--utrecht-card-list-item-content-padding-inline-start, 1em);
 }
