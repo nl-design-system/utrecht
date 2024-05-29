@@ -15,6 +15,7 @@
 }
 
 @mixin utrecht-accordion__button {
+  --_utrecht-accordion-button-justify-content: var(--_utrecht-accordion-button-reverse-justify-content, flex-start);
   --utrecht-button-focus-scale: 1;
   --utrecht-button-hover-scale: 1;
   --utrecht-button-inline-size: 100%;
@@ -36,34 +37,44 @@
   --utrecht-button-subtle-focus-color: var(--utrecht-accordion-button-focus-color);
   --utrecht-button-subtle-border-color: var(--utrecht-accordion-button-border-color);
   --utrecht-button-subtle-border-width: var(--utrecht-accordion-button-border-width);
+  --utrecht-button-icon-gap: var(--utrecht-accordion-button-gap, var(--utrecht-space-text-xs));
 
-  justify-content: start !important;
+  justify-content: var(--_utrecht-accordion-button-justify-content) !important;
   position: relative;
   text-align: start;
 }
 
+@mixin utrecht-accordion__button-icon--reverse {
+  --_utrecht-accordion-button-reverse-justify-content: space-between;
+
+  flex-direction: var(--_utrecht-accordion-button-icon-reverse-flex-direction, row-reverse);
+}
+
 @mixin utrecht-accordion__button-icon {
-  background-color: var(--utrecht-accordion-button-icon-background-color);
+  display: flex;
+}
+@mixin utrecht-accordion__button-icon--utrecht {
+  background-color: var(--utrecht-accordion-button-icon-utrecht-background-color);
   background-position: center;
   background-repeat: no-repeat;
-  block-size: var(--utrecht-accordion-button-icon-size);
+  block-size: var(--utrecht-accordion-button-icon-utrecht-size);
   content: "";
-  inline-size: var(--utrecht-accordion-button-icon-size);
+  inline-size: var(--utrecht-accordion-button-icon-utrecht-size);
   inset-block-start: 0;
   inset-inline-end: 0;
   position: absolute;
 }
 
-@mixin utrecht-accordion__button-icon-arrow-down {
+@mixin utrecht-accordion__button-icon--utrecht-arrow-down {
   background-image: var(
-    --utrecht-accordion-icon-arrow-down,
+    --utrecht-accordion-icon-utrecht-arrow-down,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.39' height='14.39'%3E%3Cpath fill='none' stroke='%231D1D1D' stroke-width='3' stroke-miterlimit='10' d='M15.866 4.135l-5.32 5.322-5.322-5.322'/%3E%3C/svg%3E")
   );
 }
 
-@mixin utrecht-accordion__button-icon-arrow-up {
+@mixin utrecht-accordion__button-icon--utrecht-arrow-up {
   background-image: var(
-    --utrecht-accordion-icon-arrow-up,
+    --utrecht-accordion-icon-utrecht-arrow-up,
     url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='21.39' height='14.39'%3E%3Cpath fill='none' stroke='%231D1D1D' stroke-width='3' stroke-miterlimit='10' d='M5.223 9.457l5.32-5.322 5.322 5.322'/%3E%3C/svg%3E")
   );
   background-position: center;

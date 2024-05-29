@@ -14,19 +14,35 @@
   @include utrecht-accordion__section;
 }
 
-.utrecht-accordion__button {
-  @include utrecht-accordion__button;
+.utrecht-accordion__button-icon {
+  @include utrecht-accordion__button-icon;
+}
 
+.utrecht-accordion__button-icon--reverse {
+  @include utrecht-accordion__button-icon--reverse;
+}
+
+.utrecht-accordion__button-icon--utrecht {
   &[aria-expanded]::after {
-    @include utrecht-accordion__button-icon;
+    @include utrecht-accordion__button-icon--utrecht;
   }
 
   &[aria-expanded="false"]::after {
-    @include utrecht-accordion__button-icon-arrow-down;
+    @include utrecht-accordion__button-icon--utrecht-arrow-down;
   }
 
   &[aria-expanded="true"]::after {
-    @include utrecht-accordion__button-icon-arrow-up;
+    @include utrecht-accordion__button-icon--utrecht-arrow-up;
+  }
+}
+
+.utrecht-accordion__button {
+  @include utrecht-accordion__button;
+
+  &[aria-expanded="true"] {
+    & .utrecht-accordion__button-icon {
+      transform: rotate(180deg);
+    }
   }
 }
 
