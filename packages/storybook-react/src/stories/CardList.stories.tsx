@@ -14,29 +14,33 @@ const meta = {
     children: [
       <CardListItem
         headingLevel={2}
-        title="item 1"
+        title="title 1"
         imageAlt="card image"
         imageSrc="example/photo-nijntje-vuelta.jpg"
-        imageWidth={303}
+        imageWidth={350}
         imageHeight={300}
         cardRole="article"
-        preHeading="card 1"
+        preHeading="preheading"
       >
-        <Paragraph>card 1</Paragraph>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum risus quis sem scelerisque rutrum.
+        </Paragraph>
       </CardListItem>,
       <CardListItem
         headingLevel={3}
-        title="item 2"
+        title="title 2"
         imageAlt="card image"
         imageSrc="example/photo-nijntje-vuelta.jpg"
-        imageWidth={303}
+        imageWidth={350}
         imageHeight={300}
         href="https://www.example.com"
       >
-        card 2
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum risus quis sem scelerisque rutrum.
       </CardListItem>,
       <CardListItem headingLevel={1}>
-        <Paragraph>card 3</Paragraph>
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum risus quis sem scelerisque rutrum.
+        </Paragraph>
       </CardListItem>,
     ],
   },
