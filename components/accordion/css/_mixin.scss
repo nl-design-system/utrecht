@@ -15,7 +15,6 @@
 }
 
 @mixin utrecht-accordion__button {
-  --_utrecht-accordion-button-justify-content: var(--_utrecht-accordion-button-reverse-justify-content, flex-start);
   --utrecht-button-focus-scale: 1;
   --utrecht-button-hover-scale: 1;
   --utrecht-button-inline-size: 100%;
@@ -39,15 +38,10 @@
   --utrecht-button-subtle-border-width: var(--utrecht-accordion-button-border-width);
   --utrecht-button-icon-gap: var(--utrecht-accordion-button-gap, var(--utrecht-space-text-xs));
 
-  justify-content: var(--_utrecht-accordion-button-justify-content) !important;
+  align-items: baseline;
+  justify-content: start !important;
   position: relative;
   text-align: start;
-}
-
-@mixin utrecht-accordion__button-icon--reverse {
-  --_utrecht-accordion-button-reverse-justify-content: space-between;
-
-  flex-direction: var(--_utrecht-accordion-button-icon-reverse-flex-direction, row-reverse);
 }
 
 @mixin utrecht-accordion__button-icon {
@@ -57,9 +51,9 @@
   background-color: var(--utrecht-accordion-button-icon-utrecht-background-color);
   background-position: center;
   background-repeat: no-repeat;
-  block-size: var(--utrecht-accordion-button-icon-utrecht-size);
+  block-size: var(--utrecht-accordion-button-icon-size);
   content: "";
-  inline-size: var(--utrecht-accordion-button-icon-utrecht-size);
+  inline-size: var(--utrecht-accordion-button-icon-size);
   inset-block-start: 0;
   inset-inline-end: 0;
   position: absolute;

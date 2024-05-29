@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
   AccordionProvider,
+  AccordionSectionProps,
   Table,
   TableBody,
   TableCell,
@@ -20,19 +21,18 @@ interface AccordionStoryProps {
   body: ReactNode;
   expanded?: boolean;
   expandedAccordion?: boolean;
-  reverseIcon?: boolean;
-  utrechtIcon?: boolean;
+  icon?: ReactNode;
+  iconEnd?: ReactNode;
+  appearance?: string;
+  sections?: AccordionSectionProps[];
 }
 
-const AccordionStoryUtrecht = ({ expanded, label, body, utrechtIcon }: AccordionStoryProps) => (
-  <AccordionProvider utrechtIcon={utrechtIcon} sections={[{ expanded, label, body }]} />
-);
-
-const AccordionStory = ({ expanded, label, body, reverseIcon }: AccordionStoryProps) => (
+const AccordionStory = ({ expanded, label, body, appearance, icon, iconEnd, sections }: AccordionStoryProps) => (
   <AccordionProvider
-    icon={<UtrechtIconChevronDown />}
-    reverseIcon={reverseIcon}
-    sections={[{ expanded, label, body }]}
+    icon={icon}
+    iconEnd={iconEnd}
+    appearance={appearance}
+    sections={sections || [{ expanded, label, body }]}
   />
 );
 
@@ -43,8 +43,9 @@ const meta = {
     label: '',
     body: '',
     expandedAccordion: false,
-    reverseIcon: false,
-    utrechtIcon: false,
+    appearance: '',
+    icon: <UtrechtIconChevronDown />,
+    iconEnd: false,
   },
   argTypes: {
     label: {
@@ -71,20 +72,27 @@ const meta = {
         category: 'API',
       },
     },
-    reverseIcon: {
-      name: 'reverseIcon',
-      type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: false },
-        category: 'API',
+    appearance: {
+      description: 'Appearance',
+      control: { type: 'select' },
+      options: ['', 'utrecht'],
+    },
+    icon: {
+      name: 'icon',
+      description: 'Icon at the start',
+      control: { type: 'select' },
+      options: {
+        '': undefined,
+        'utrecht-icon-chevron-down': <UtrechtIconChevronDown />,
       },
     },
-    utrechtIcon: {
-      name: 'utrechtIcon',
-      type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: false },
-        category: 'API',
+    iconEnd: {
+      name: 'iconEnd',
+      description: 'Icon at the end',
+      control: { type: 'select' },
+      options: {
+        '': undefined,
+        'utrecht-icon-chevron-down': <UtrechtIconChevronDown />,
       },
     },
   },
@@ -214,29 +222,42 @@ export const Default: Story = {
   args: accordionDefaultDataEn,
 };
 
-export const ReverseIcon: Story = {
-  args: accordionDefaultDataEn,
-  render: (args) => {
-    return <AccordionStory {...{ ...args, reverseIcon: !args.reverseIcon }} />;
+export const IconEnd: Story = {
+  args: {
+    ...accordionDefaultDataEn,
+    icon: undefined,
+    iconEnd: <UtrechtIconChevronDown />,
   },
 };
 
 export const DefaultUtrecht: Story = {
-  args: accordionDefaultDataEn,
-  render: (args) => <AccordionStoryUtrecht {...{ ...args, utrechtIcon: !args.utrechtIcon }} />,
+  args: {
+    ...accordionDefaultDataEn,
+    icon: undefined,
+    appearance: 'utrecht',
+  },
 };
 
 export const Multiple: Story = {
-  render: () => <AccordionProvider icon={<UtrechtIconChevronDown />} sections={accordionData} />,
+  args: {
+    sections: accordionData,
+  },
 };
 
 export const MultipleUtrecht: Story = {
-  render: () => <AccordionProvider utrechtIcon sections={accordionData} />,
+  args: {
+    appearance: 'utrecht',
+    icon: undefined,
+    sections: accordionData,
+  },
 };
 
 export const RTLUtrecht: Story = {
-  args: accordionDefaultDataAR,
-  render: (args) => <AccordionStoryUtrecht {...{ ...args, utrechtIcon: !args.utrechtIcon }} />,
+  args: {
+    ...accordionDefaultDataAR,
+    appearance: 'utrecht',
+    icon: undefined,
+  },
   decorators: [
     (Story) => (
       <div lang="ar" dir="rtl">
@@ -258,9 +279,12 @@ export const RTL: Story = {
   ],
   name: 'Right-to-left',
 };
-export const RTLReverseIcon: Story = {
-  args: accordionDefaultDataAR,
-  render: (args) => <AccordionStory {...{ ...args, reverseIcon: true }} />,
+export const RTLIconEnd: Story = {
+  args: {
+    ...accordionDefaultDataAR,
+    icon: undefined,
+    iconEnd: <UtrechtIconChevronDown />,
+  },
   decorators: [
     (Story) => (
       <div lang="ar" dir="rtl">
@@ -268,15 +292,16 @@ export const RTLReverseIcon: Story = {
       </div>
     ),
   ],
-  name: 'Right-to-left Reverse Icon',
+  name: 'Right-to-left Icon End',
 };
 
 export const tableInlineOverflowUtrecht: Story = {
   args: {
+    appearance: 'utrecht',
     label: 'table',
+    icon: undefined,
     body: <ExampleTable />,
   },
-  render: (args) => <AccordionStoryUtrecht {...{ ...args, utrechtIcon: !args.utrechtIcon }} />,
   name: 'Table Inline Overflow Utrecht',
 };
 

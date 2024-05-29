@@ -52,8 +52,8 @@ export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   onButtonBlur?: Function;
   buttonRef?: RefObject<HTMLButtonElement>;
   icon?: ReactNode;
-  utrechtIcon?: boolean;
-  reverseIcon?: boolean;
+  iconEnd?: ReactNode;
+  appearance?: string;
 }
 
 export const AccordionSection = forwardRef(
@@ -72,8 +72,8 @@ export const AccordionSection = forwardRef(
       onButtonBlur,
       onButtonFocus,
       icon,
-      reverseIcon,
-      utrechtIcon,
+      iconEnd,
+      appearance,
       ...props
     }: AccordionSectionProps,
     ref: ForwardedRef<HTMLDivElement>,
@@ -104,8 +104,7 @@ export const AccordionSection = forwardRef(
         <Heading level={headingLevel} className={clsx('utrecht-accordion__header')}>
           <Button
             className={clsx('utrecht-accordion__button', {
-              ['utrecht-accordion__button-icon--utrecht']: utrechtIcon,
-              ['utrecht-accordion__button-icon--reverse']: !utrechtIcon && reverseIcon,
+              ['utrecht-accordion__button--utrecht']: appearance === 'utrecht',
             })}
             appearance="subtle-button"
             aria-expanded={expanded === true}
@@ -117,8 +116,9 @@ export const AccordionSection = forwardRef(
             onBlur={() => typeof onButtonBlur === 'function' && onButtonBlur(ref)}
             ref={buttonRef}
           >
-            {icon && !utrechtIcon && <span className={clsx('utrecht-accordion__button-icon')}>{icon}</span>}
-            {label}
+            {icon && <span className="utrecht-accordion__button-icon">{icon}</span>}
+            <span className="utrecht-accordion__button-label">{label}</span>
+            {iconEnd && <span className="utrecht-accordion__button-icon">{iconEnd}</span>}
           </Button>
         </Heading>
         {section ? (
@@ -222,11 +222,11 @@ export const useAccordionSection = (
   };
 };
 
-export interface AccordionProviderProps extends Pick<AccordionSectionProps, 'icon' | 'reverseIcon' | 'utrechtIcon'> {
+export interface AccordionProviderProps extends Pick<AccordionSectionProps, 'icon' | 'iconEnd' | 'appearance'> {
   sections: AccordionSectionProps[];
 }
 
-export const AccordionProvider = ({ sections, icon, utrechtIcon, reverseIcon }: AccordionProviderProps) => {
+export const AccordionProvider = ({ sections, icon, iconEnd, appearance }: AccordionProviderProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { refs, buttonRefs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } =
     useAccordion(sections, ref);
@@ -287,8 +287,8 @@ export const AccordionProvider = ({ sections, icon, utrechtIcon, reverseIcon }: 
           <AccordionSection
             {...section}
             icon={icon}
-            reverseIcon={reverseIcon}
-            utrechtIcon={utrechtIcon}
+            iconEnd={iconEnd}
+            appearance={appearance}
             ref={refs[index]}
             buttonRef={buttonRefs[index]}
             key={index}

@@ -14,15 +14,11 @@
   @include utrecht-accordion__section;
 }
 
-.utrecht-accordion__button-icon {
-  @include utrecht-accordion__button-icon;
+.utrecht-accordion__button {
+  @include utrecht-accordion__button;
 }
 
-.utrecht-accordion__button-icon--reverse {
-  @include utrecht-accordion__button-icon--reverse;
-}
-
-.utrecht-accordion__button-icon--utrecht {
+.utrecht-accordion__button--utrecht {
   &[aria-expanded]::after {
     @include utrecht-accordion__button-icon--utrecht;
   }
@@ -36,13 +32,11 @@
   }
 }
 
-.utrecht-accordion__button {
-  @include utrecht-accordion__button;
+.utrecht-accordion__button-icon {
+  @include utrecht-accordion__button-icon;
 
-  &[aria-expanded="true"] {
-    & .utrecht-accordion__button-icon {
-      transform: rotate(180deg);
-    }
+  .utrecht-accordion__button[aria-expanded="true"] & {
+    transform: rotate(180deg);
   }
 }
 
