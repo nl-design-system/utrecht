@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Tue, 21 May 2024 11:08:36 GMT
+ * Generated on Wed, 29 May 2024 15:01:23 GMT
  */
 /**
  * Do not edit directly
- * Generated on Tue, 21 May 2024 11:08:35 GMT
+ * Generated on Wed, 29 May 2024 15:01:21 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -3774,10 +3774,11 @@ so do not apply these styles to an HTML `<dialog>` element without `open` attrib
  */
 .utrecht-code {
   /* Use `monospace` as fallback both when the custom property isn't set and when the font is not available */
+  /* Use `inherit` as font-size, to override interfering CSS such as: `code { font-size: 16px }` */
   background-color: var(--utrecht-code-background-color);
   color: var(--utrecht-code-color);
   font-family: var(--utrecht-code-font-family, monospace), monospace;
-  font-size: var(--utrecht-code-font-size);
+  font-size: var(--utrecht-code-font-size, inherit);
   font-variant-ligatures: none;
   line-height: var(--utrecht-code-line-height);
 }
@@ -3799,10 +3800,11 @@ so do not apply these styles to an HTML `<dialog>` element without `open` attrib
  */
 .utrecht-code-block {
   /* Use `monospace` as fallback both when the custom property isn't set and when the font is not available */
+  /* Use `inherit` as font-size, to override interfering CSS such as: `code { font-size: 16px }` */
   background-color: var(--utrecht-code-background-color);
   color: var(--utrecht-code-color);
   font-family: var(--utrecht-code-font-family, monospace), monospace;
-  font-size: var(--utrecht-code-font-size);
+  font-size: var(--utrecht-code-font-size, inherit);
   font-variant-ligatures: none;
   line-height: var(--utrecht-code-line-height);
   --utrecht-code-color: var(--utrecht-code-block-color, inherit);
@@ -3812,7 +3814,7 @@ so do not apply these styles to an HTML `<dialog>` element without `open` attrib
   --utrecht-code-font-family: var(--utrecht-code-block-font-family, monospace);
   background-color: var(--utrecht-code-block-background-color);
   display: block;
-  font-size: var(--utrecht-code-block-font-size, var(--utrecht-code-font-size));
+  font-size: var(--utrecht-code-block-font-size, var(--utrecht-code-font-size, inherit));
   line-height: var(--utrecht-code-block-line-height, var(--utrecht-code-line-height));
   margin-block-end: var(--utrecht-code-block-margin-block-end);
   margin-block-start: var(--utrecht-code-block-margin-block-start);
