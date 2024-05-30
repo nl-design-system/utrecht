@@ -14,6 +14,22 @@ import {
 import { Button } from './Button';
 import { Heading } from './Heading';
 
+const IconChevronDown = () => (
+  <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
+    <defs>
+      <clipPath id="clippath">
+        <rect width="14" height="8" style={{ fill: 'none', strokeWidth: '0px' }} />
+      </clipPath>
+    </defs>
+    <g style={{ clipPath: 'url(#clippath)' }}>
+      <path
+        d="m7,8c-.26,0-.51-.1-.71-.29L.29,1.71C-.1,1.32-.1.68.29.29S1.32-.1,1.71.29l5.29,5.29L12.29.29c.39-.39,1.02-.39,1.41,0s.39,1.02,0,1.41l-6,6c-.2.2-.45.29-.71.29Z"
+        style={{ strokeWidth: '0px;' }}
+      />
+    </g>
+  </svg>
+);
+
 /**
  * Find the first item in an array
  */
@@ -87,6 +103,12 @@ export const AccordionSection = forwardRef(
       'aria-hidden': !expanded,
     };
 
+    let iconStart = icon ? icon : icon === null ? null : <IconChevronDown />;
+
+    if (appearance === 'utrecht') {
+      iconStart = null;
+    }
+
     const idPrefix = 'utrecht-accordion';
     const idSuffix = id || useId();
     const buttonId = `${idPrefix}${idSuffix}-button`;
@@ -114,7 +136,7 @@ export const AccordionSection = forwardRef(
             onBlur={() => typeof onButtonBlur === 'function' && onButtonBlur(ref)}
             ref={buttonRef}
           >
-            {icon && <span className="utrecht-accordion__button-icon">{icon}</span>}
+            {iconStart && <span className="utrecht-accordion__button-icon">{iconStart}</span>}
             <span className="utrecht-accordion__button-label">{label}</span>
           </Button>
         </Heading>
