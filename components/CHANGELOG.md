@@ -1,5 +1,18 @@
 # @utrecht/components
 
+## 4.0.0
+
+### Major Changes
+
+- f9c23c6: Rename `utrecht-accordion__button-icon-arrow-down` to `utrecht-accordion__button-icon--utrecht-arrow-down`.
+  Rename `utrecht-accordion__button-icon-arrow-up` to `utrecht-accordion__button-icon--utrecht-arrow-up`.
+
+### Minor Changes
+
+- f9c23c6: Add `utrecht-accordion__button--utrecht` class name.
+  Add `utrecht-accordion__button-icon` class name.
+- f9c23c6: Add `utrecht.accordion.button.icon.gap` design token.
+
 ## 3.0.0
 
 ### Major Changes

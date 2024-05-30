@@ -1,5 +1,11 @@
 # @utrecht/component-library-vue
 
+## 1.1.0
+
+### Minor Changes
+
+- f9c23c6: Add `utrecht.accordion.button.icon.gap` design token.
+
 ## 1.0.1
 
 ### Patch Changes
