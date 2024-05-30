@@ -18,10 +18,15 @@ const meta = {
       <CardListItem
         headingLevel={2}
         title="title 1"
-        imageAlt="card image"
-        imageSrc="example/photo-nijntje-vuelta.jpg"
-        imageWidth={350}
-        imageHeight={300}
+        image={
+          <img
+            className="utrecht-card-list__item-image"
+            width={350}
+            height={300}
+            src="example/photo-nijntje-vuelta.jpg"
+            alt="card image"
+          />
+        }
         cardRole="article"
         preHeading="preheading"
       >
@@ -32,10 +37,15 @@ const meta = {
       <CardListItem
         headingLevel={2}
         title="title 2"
-        imageAlt="card image"
-        imageSrc="example/photo-nijntje-vuelta.jpg"
-        imageWidth={350}
-        imageHeight={300}
+        image={
+          <img
+            className="utrecht-card-list__item-image"
+            width={350}
+            height={300}
+            src="example/photo-nijntje-vuelta.jpg"
+            alt="card image"
+          />
+        }
         href="https://www.example.com"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum risus quis sem scelerisque rutrum.
