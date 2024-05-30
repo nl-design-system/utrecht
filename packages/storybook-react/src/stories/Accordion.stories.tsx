@@ -38,7 +38,7 @@ const meta = {
     body: '',
     expandedAccordion: false,
     appearance: '',
-    icon: <UtrechtIconChevronDown />,
+    icon: undefined,
   },
   argTypes: {
     label: {
@@ -76,6 +76,7 @@ const meta = {
       control: { type: 'select' },
       options: {
         '': undefined,
+        null: null,
         'utrecht-icon-chevron-down': <UtrechtIconChevronDown />,
       },
     },
