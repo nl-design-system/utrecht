@@ -81,7 +81,7 @@
     "prepare": "husky install",
     "prettier": "prettier --list-different --write .",
     "publish": "lerna publish from-package --yes",
-    "publish:changeset": "pnpm config set '//registry.npmjs.org/:_authToken' \"${NPM_TOKEN}\"; pnpm publish --recursive; pnpm config delete '//registry.npmjs.org/:_authToken';",
+    "publish:changeset": "changeset publish",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "storybook": "pnpm run storybook-css",
     "docusaurus": "nx start docusaurus",
