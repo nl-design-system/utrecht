@@ -22,18 +22,12 @@ interface AccordionStoryProps {
   expanded?: boolean;
   expandedAccordion?: boolean;
   icon?: ReactNode;
-  iconEnd?: ReactNode;
   appearance?: string;
   sections?: AccordionSectionProps[];
 }
 
-const AccordionStory = ({ expanded, label, body, appearance, icon, iconEnd, sections }: AccordionStoryProps) => (
-  <AccordionProvider
-    icon={icon}
-    iconEnd={iconEnd}
-    appearance={appearance}
-    sections={sections || [{ expanded, label, body }]}
-  />
+const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: AccordionStoryProps) => (
+  <AccordionProvider icon={icon} appearance={appearance} sections={sections || [{ expanded, label, body }]} />
 );
 
 const meta = {
@@ -45,7 +39,6 @@ const meta = {
     expandedAccordion: false,
     appearance: '',
     icon: <UtrechtIconChevronDown />,
-    iconEnd: false,
   },
   argTypes: {
     label: {
@@ -80,15 +73,6 @@ const meta = {
     icon: {
       name: 'icon',
       description: 'Icon at the start',
-      control: { type: 'select' },
-      options: {
-        '': undefined,
-        'utrecht-icon-chevron-down': <UtrechtIconChevronDown />,
-      },
-    },
-    iconEnd: {
-      name: 'iconEnd',
-      description: 'Icon at the end',
       control: { type: 'select' },
       options: {
         '': undefined,
@@ -222,14 +206,6 @@ export const Default: Story = {
   args: accordionDefaultDataEn,
 };
 
-export const IconEnd: Story = {
-  args: {
-    ...accordionDefaultDataEn,
-    icon: undefined,
-    iconEnd: <UtrechtIconChevronDown />,
-  },
-};
-
 export const DefaultUtrecht: Story = {
   args: {
     ...accordionDefaultDataEn,
@@ -278,21 +254,6 @@ export const RTL: Story = {
     ),
   ],
   name: 'Right-to-left',
-};
-export const RTLIconEnd: Story = {
-  args: {
-    ...accordionDefaultDataAR,
-    icon: undefined,
-    iconEnd: <UtrechtIconChevronDown />,
-  },
-  decorators: [
-    (Story) => (
-      <div lang="ar" dir="rtl">
-        {Story()}
-      </div>
-    ),
-  ],
-  name: 'Right-to-left Icon End',
 };
 
 export const tableInlineOverflowUtrecht: Story = {
