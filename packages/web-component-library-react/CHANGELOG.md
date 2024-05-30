@@ -1,5 +1,16 @@
 # @utrecht/web-component-library-react
 
+## 1.1.0
+
+### Minor Changes
+
+- f9c23c6: Add `utrecht.accordion.button.icon.gap` design token.
+
+### Patch Changes
+
+- Updated dependencies [f9c23c6]
+  - @utrecht/web-component-library-stencil@1.2.0
+
 ## 1.0.2
 
 ### Patch Changes

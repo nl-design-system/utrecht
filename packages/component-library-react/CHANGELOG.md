@@ -1,5 +1,13 @@
 # @utrecht/component-library-react
 
+## 3.1.0
+
+### Minor Changes
+
+- f9c23c6: Add `icon` and `appearance` properties to `<AccordionProvider>` and `<AccordionSection>`.
+- f9c23c6: Add `utrecht-accordion__button-icon--utrecht` mixin
+- f9c23c6: Add `utrecht.accordion.button.icon.gap` design token.
+
 ## 3.0.0
 
 ### Major Changes

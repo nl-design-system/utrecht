@@ -1,5 +1,13 @@
 # @utrecht/component-library-css
 
+## 3.1.0
+
+### Minor Changes
+
+- f9c23c6: Add `utrecht-accordion__button--utrecht` class name.
+  Add `utrecht-accordion__button-icon` class name.
+- f9c23c6: Add `utrecht.accordion.button.icon.gap` design token.
+
 ## 3.0.0
 
 ### Major Changes
