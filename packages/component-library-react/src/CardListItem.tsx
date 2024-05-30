@@ -13,10 +13,7 @@ interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'childre
   title?: string;
   preHeading?: string;
   children?: any;
-  imageHeight?: number;
-  imageWidth?: number;
-  imageSrc?: string;
-  imageAlt?: string;
+  image?: any;
   href?: string;
   cardRole?: 'article' | string;
 }
@@ -26,10 +23,7 @@ export const CardListItem = ({
   children,
   title,
   preHeading,
-  imageHeight,
-  imageWidth,
-  imageSrc,
-  imageAlt,
+  image,
   href,
   cardRole,
   ...props
@@ -60,15 +54,7 @@ export const CardListItem = ({
         className={clsx('utrecht-card-list__item', props.className)}
         onClick={() => linkRef.current?.click()}
       >
-        {imageSrc && imageAlt && (
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            height={imageHeight}
-            width={imageWidth}
-            className={'utrecht-card-list__item-image'}
-          />
-        )}
+        {image}
         <article>{card}</article>
       </li>
     );
@@ -79,15 +65,7 @@ export const CardListItem = ({
         className={clsx('utrecht-card-list__item', props.className)}
         onClick={() => linkRef.current?.click()}
       >
-        {imageSrc && imageAlt && (
-          <img
-            src={imageSrc}
-            alt={imageAlt}
-            height={imageHeight}
-            width={imageWidth}
-            className={'utrecht-card-list__item-image'}
-          />
-        )}
+        {image}
         {card}
       </li>
     );
