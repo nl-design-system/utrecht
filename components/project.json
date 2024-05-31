@@ -3,17 +3,5 @@
   "root": "{workspaceRoot}/components",
   "sourceRoot": "{projectRoot}",
   "projectType": "library",
-  "targets": {
-    "build": {
-      "executor": "@nrwl/workspace:run-commands",
-      "inputs": ["{projectRoot}/**/*.scss"],
-      "outputs": ["{projectRoot}/dist"],
-      "options": {
-        "command": "npm run build",
-        "cwd": "components",
-        "outputPath": "components/dist"
-      },
-      "dependsOn": ["^build"]
-    }
-  }
+  "targets": {}
 }
