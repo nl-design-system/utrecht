@@ -23,6 +23,8 @@ export type { BadgeCounterProps } from './BadgeCounter';
 export { BadgeCounter } from './BadgeCounter';
 export type { BadgeListProps } from './BadgeList';
 export { BadgeList } from './BadgeList';
+export type { BlockquoteProps } from './Blockquote';
+export { Blockquote } from './Blockquote';
 export type { BreadcrumbNavProps, BreadcrumbNavLinkProps, BreadcrumbNavSeparatorProps } from './BreadcrumbNav';
 export { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from './BreadcrumbNav';
 export type { ButtonProps } from './Button';
