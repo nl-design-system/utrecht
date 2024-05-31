@@ -134,12 +134,246 @@ importers:
       '@storybook/blocks':
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@utrecht/accordion-css':
+        specifier: workspace:*
+        version: link:accordion
+      '@utrecht/alert-dialog-css':
+        specifier: workspace:*
+        version: link:alert-dialog
+      '@utrecht/alternate-lang-nav-css':
+        specifier: workspace:*
+        version: link:alternate-lang-nav
+      '@utrecht/article-css':
+        specifier: workspace:*
+        version: link:article
+      '@utrecht/backdrop-css':
+        specifier: workspace:*
+        version: link:backdrop
+      '@utrecht/badge-counter-css':
+        specifier: workspace:*
+        version: link:badge-counter
+      '@utrecht/badge-data-css':
+        specifier: workspace:*
+        version: link:badge-data
+      '@utrecht/badge-list-css':
+        specifier: workspace:*
+        version: link:badge-list
+      '@utrecht/badge-status-css':
+        specifier: workspace:*
+        version: link:badge-status
+      '@utrecht/blockquote-css':
+        specifier: workspace:*
+        version: link:blockquote
+      '@utrecht/breadcrumb-nav-css':
+        specifier: workspace:*
+        version: link:breadcrumb-nav
+      '@utrecht/button-css':
+        specifier: workspace:*
+        version: link:button
+      '@utrecht/button-group-css':
+        specifier: workspace:*
+        version: link:button-group
+      '@utrecht/button-link-css':
+        specifier: workspace:*
+        version: link:button-link
+      '@utrecht/calendar-css':
+        specifier: workspace:*
+        version: link:calendar
+      '@utrecht/checkbox-css':
+        specifier: workspace:*
+        version: link:checkbox
+      '@utrecht/code-block-css':
+        specifier: workspace:*
+        version: link:code-block
+      '@utrecht/color-sample-css':
+        specifier: workspace:*
+        version: link:color-sample
+      '@utrecht/column-layout-css':
+        specifier: workspace:*
+        version: link:column-layout
+      '@utrecht/combobox-css':
+        specifier: workspace:*
+        version: link:combobox
+      '@utrecht/currency-data-css':
+        specifier: workspace:*
+        version: link:currency-data
+      '@utrecht/custom-checkbox-css':
+        specifier: workspace:*
+        version: link:custom-checkbox
+      '@utrecht/data-list-css':
+        specifier: workspace:*
+        version: link:data-list
+      '@utrecht/data-placeholder-css':
+        specifier: workspace:*
+        version: link:data-placeholder
+      '@utrecht/digid-button-css':
+        specifier: workspace:*
+        version: link:digid-button
+      '@utrecht/document-css':
+        specifier: workspace:*
+        version: link:document
+      '@utrecht/drawer-css':
+        specifier: workspace:*
+        version: link:drawer
+      '@utrecht/emphasis-css':
+        specifier: workspace:*
+        version: link:emphasis
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:form-field
+      '@utrecht/form-field-description-css':
+        specifier: workspace:*
+        version: link:form-field-description
+      '@utrecht/form-field-error-message-css':
+        specifier: workspace:*
+        version: link:form-field-error-message
+      '@utrecht/form-fieldset-css':
+        specifier: workspace:*
+        version: link:form-fieldset
+      '@utrecht/form-label-css':
+        specifier: workspace:*
+        version: link:form-label
+      '@utrecht/form-toggle-css':
+        specifier: workspace:*
+        version: link:form-toggle
+      '@utrecht/heading-1-css':
+        specifier: workspace:*
+        version: link:heading-1
+      '@utrecht/heading-2-css':
+        specifier: workspace:*
+        version: link:heading-2
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:heading-4
+      '@utrecht/heading-5-css':
+        specifier: workspace:*
+        version: link:heading-5
+      '@utrecht/heading-6-css':
+        specifier: workspace:*
+        version: link:heading-6
+      '@utrecht/heading-group-css':
+        specifier: workspace:*
+        version: link:heading-group
+      '@utrecht/html-content-css':
+        specifier: workspace:*
+        version: link:html-content
+      '@utrecht/iban-data-css':
+        specifier: workspace:*
+        version: link:iban-data
       '@utrecht/icon':
         specifier: workspace:*
         version: link:icon
+      '@utrecht/index-char-nav-css':
+        specifier: workspace:*
+        version: link:index-char-nav
+      '@utrecht/link-button-css':
+        specifier: workspace:*
+        version: link:link-button
+      '@utrecht/link-list-css':
+        specifier: workspace:*
+        version: link:link-list
+      '@utrecht/link-social-css':
+        specifier: workspace:*
+        version: link:link-social
+      '@utrecht/list-social-css':
+        specifier: workspace:*
+        version: link:list-social
+      '@utrecht/listbox-css':
+        specifier: workspace:*
+        version: link:listbox
+      '@utrecht/logo-button-css':
+        specifier: workspace:*
+        version: link:logo-button
+      '@utrecht/logo-image-css':
+        specifier: workspace:*
+        version: link:logo-image
+      '@utrecht/map-control-button-css':
+        specifier: workspace:*
+        version: link:mapcontrolbutton
+      '@utrecht/map-marker-css':
+        specifier: workspace:*
+        version: link:map-marker
+      '@utrecht/multiline-data-css':
+        specifier: workspace:*
+        version: link:multiline-data
+      '@utrecht/nav-bar-css':
+        specifier: workspace:*
+        version: link:nav-bar
+      '@utrecht/nav-list-css':
+        specifier: workspace:*
+        version: link:nav-list
+      '@utrecht/number-data-css':
+        specifier: workspace:*
+        version: link:number-data
+      '@utrecht/ordered-list-css':
+        specifier: workspace:*
+        version: link:ordered-list
+      '@utrecht/page-content-css':
+        specifier: workspace:*
+        version: link:page-content
+      '@utrecht/page-footer-css':
+        specifier: workspace:*
+        version: link:page-footer
+      '@utrecht/page-header-css':
+        specifier: workspace:*
+        version: link:page-header
+      '@utrecht/pagination-css':
+        specifier: workspace:*
+        version: link:pagination
+      '@utrecht/paragraph-css':
+        specifier: workspace:*
+        version: link:paragraph
+      '@utrecht/pre-heading-css':
+        specifier: workspace:*
+        version: link:pre-heading
+      '@utrecht/preserve-data-css':
+        specifier: workspace:*
+        version: link:preserve-data
+      '@utrecht/radio-button-css':
+        specifier: workspace:*
+        version: link:radio-button
+      '@utrecht/search-bar-css':
+        specifier: workspace:*
+        version: link:search-bar
+      '@utrecht/separator-css':
+        specifier: workspace:*
+        version: link:separator
+      '@utrecht/skip-link-css':
+        specifier: workspace:*
+        version: link:skip-link
+      '@utrecht/spotlight-section-css':
+        specifier: workspace:*
+        version: link:spotlight-section
+      '@utrecht/surface-css':
+        specifier: workspace:*
+        version: link:surface
+      '@utrecht/textarea-css':
+        specifier: workspace:*
+        version: link:textarea
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:textbox
+      '@utrecht/top-task-link-css':
+        specifier: workspace:*
+        version: link:toptask-link
+      '@utrecht/top-task-nav-css':
+        specifier: workspace:*
+        version: link:toptask-nav
+      '@utrecht/unordered-list-css':
+        specifier: workspace:*
+        version: link:unordered-list
+      '@utrecht/url-data-css':
+        specifier: workspace:*
+        version: link:url-data
       html-react-parser:
         specifier: 3.0.16
         version: 3.0.16(react@18.2.0)
+      postcss-discard-duplicates:
+        specifier: 7.0.0
+        version: 7.0.0(postcss@8.4.33)
       react:
         specifier: 18.2.0
         version: 18.2.0
@@ -149,6 +383,15 @@ importers:
       rimraf:
         specifier: 3.0.2
         version: 3.0.2
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
+      rollup-plugin-copy:
+        specifier: 3.5.0
+        version: 3.5.0
+      rollup-plugin-postcss:
+        specifier: 4.0.2
+        version: 4.0.2(postcss@8.4.33)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.5.1)(typescript@4.9.5))
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -159,9 +402,17 @@ importers:
         specifier: 5.89.0
         version: 5.89.0(@swc/core@1.3.100)(esbuild@0.18.20)
 
-  components/accordion: {}
+  components/accordion:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/alert: {}
+  components/alert:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/alert-dialog:
     devDependencies:
@@ -171,12 +422,27 @@ importers:
       '@utrecht/backdrop-css':
         specifier: workspace:*
         version: link:../backdrop
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/alternate-lang-nav: {}
+  components/alternate-lang-nav:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/article: {}
+  components/article:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/backdrop: {}
+  components/backdrop:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/badge: {}
 
@@ -185,90 +451,212 @@ importers:
       '@utrecht/badge-css':
         specifier: workspace:*
         version: link:../badge
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/badge-data:
     devDependencies:
       '@utrecht/badge-css':
         specifier: workspace:*
         version: link:../badge
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/badge-list: {}
+  components/badge-list:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/badge-status:
     devDependencies:
       '@utrecht/badge-css':
         specifier: workspace:*
         version: link:../badge
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/blockquote: {}
+  components/blockquote:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/breadcrumb-nav: {}
+  components/breadcrumb-nav:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/button: {}
+  components/button:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/button-group: {}
+  components/button-group:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/button-link:
     devDependencies:
-      '@utrecht/button-link-css':
+      '@utrecht/button-css':
         specifier: workspace:*
-        version: 'link:'
+        version: link:../button
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/calendar: {}
+  components/calendar:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/checkbox: {}
+  components/checkbox:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/code: {}
+  components/code:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/code-block:
     devDependencies:
       '@utrecht/code-css':
         specifier: workspace:*
         version: link:../code
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/color-sample: {}
+  components/color-sample:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/column-layout: {}
+  components/column-layout:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/combobox: {}
+  components/combobox:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/currency-data: {}
+  components/currency-data:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/custom-checkbox: {}
+  components/custom-checkbox:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/data-list: {}
+  components/data-list:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/data-placeholder: {}
+  components/data-placeholder:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/digid-button: {}
+  components/digid-button:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/document: {}
+  components/document:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/drawer:
     devDependencies:
       '@utrecht/backdrop-css':
         specifier: workspace:*
         version: link:../backdrop
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/emphasis: {}
+  components/emphasis:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/figure: {}
+  components/figure:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/flex-wrap-fallback: {}
 
-  components/form: {}
+  components/form:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/form-field: {}
+  components/form-field:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/form-field-description: {}
+  components/form-field-description:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/form-field-error-message: {}
+  components/form-field-error-message:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/form-fieldset: {}
+  components/form-fieldset:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/form-label: {}
+  components/form-label:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/form-toggle: {}
+  components/form-toggle:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/heading: {}
 
@@ -277,38 +665,60 @@ importers:
       '@utrecht/heading-css':
         specifier: workspace:*
         version: link:../heading
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/heading-2:
     devDependencies:
       '@utrecht/heading-css':
         specifier: workspace:*
         version: link:../heading
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/heading-3:
     devDependencies:
       '@utrecht/heading-css':
         specifier: workspace:*
         version: link:../heading
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/heading-4:
     devDependencies:
       '@utrecht/heading-css':
         specifier: workspace:*
         version: link:../heading
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/heading-5:
     devDependencies:
       '@utrecht/heading-css':
         specifier: workspace:*
         version: link:../heading
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/heading-6:
     devDependencies:
       '@utrecht/heading-css':
         specifier: workspace:*
         version: link:../heading
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/heading-group: {}
+  components/heading-group:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/html-content:
     devDependencies:
@@ -402,8 +812,15 @@ importers:
       '@utrecht/unordered-list-css':
         specifier: workspace:*
         version: link:../unordered-list
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/iban-data: {}
+  components/iban-data:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/icon:
     devDependencies:
@@ -413,95 +830,261 @@ importers:
       minimist:
         specifier: 1.2.8
         version: 1.2.8
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
       svgo:
         specifier: 3.1.0
         version: 3.1.0
 
-  components/img: {}
+  components/img:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/index-char-nav: {}
+  components/index-char-nav:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/link: {}
+  components/link:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   components/link-button:
     devDependencies:
       '@utrecht/link-css':
         specifier: workspace:*
         version: link:../link
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/link-list: {}
+  components/link-list:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/link-social: {}
+  components/link-social:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/list-social: {}
+  components/list-social:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/listbox: {}
+  components/listbox:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/logo: {}
+  components/logo:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/logo-button: {}
+  components/logo-button:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/logo-image: {}
+  components/logo-image:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/map-marker: {}
+  components/map-marker:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/mapcontrolbutton: {}
+  components/mapcontrolbutton:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/mark: {}
+  components/mark:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/multiline-data: {}
+  components/multiline-data:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/nav-bar: {}
+  components/nav-bar:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/nav-list: {}
+  components/nav-list:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/number-data: {}
+  components/number-data:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/ordered-list: {}
+  components/ordered-list:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/page: {}
+  components/page:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/page-content: {}
+  components/page-content:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/page-footer: {}
+  components/page-footer:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/page-header: {}
+  components/page-header:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/pagination: {}
+  components/pagination:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/paragraph: {}
+  components/paragraph:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/pre-heading: {}
+  components/pre-heading:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/preserve-data: {}
+  components/preserve-data:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/radio-button: {}
+  components/radio-button:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/search-bar: {}
+  components/search-bar:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/select: {}
+  components/select:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/separator: {}
+  components/separator:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/skip-link: {}
+  components/skip-link:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/spotlight-section: {}
+  components/spotlight-section:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/surface: {}
+  components/surface:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/table: {}
+  components/table:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/textarea: {}
+  components/textarea:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/textbox: {}
+  components/textbox:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/toptask-link: {}
+  components/toptask-link:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/toptask-nav: {}
+  components/toptask-nav:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/unordered-list: {}
+  components/unordered-list:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
-  components/url-data: {}
+  components/url-data:
+    devDependencies:
+      rollup:
+        specifier: 3.29.4
+        version: 3.29.4
 
   documentation:
     devDependencies:
@@ -7638,6 +8221,9 @@ packages:
   '@types/find-cache-dir@3.2.1':
     resolution: {integrity: sha512-frsJrz2t/CeGifcu/6uRo4b+SzAwT4NYCVPu1GN8IB9XTzrpPkGuV0tmh9mN+/L0PklAlsC3u5Fxt0ju00LXIw==}
 
+  '@types/fs-extra@8.1.5':
+    resolution: {integrity: sha512-0dzKcwO+S8s2kuF5Z9oUWatQJj5Uq/iqphEtE3GQJVRRYm/tD1LglU2UnXi2A8jLq5umkGouOXOR9y0n613ZwQ==}
+
   '@types/geojson@7946.0.4':
     resolution: {integrity: sha512-MHmwBtCb7OCv1DSivz2UNJXPGU/1btAWRKlqJ2saEhVJkpkvqHMMaOpKg0v4sAbDWSQekHGvPVMM8nQ+Jen03Q==}
 
@@ -11820,6 +12406,10 @@ packages:
     resolution: {integrity: sha512-sFdI5LyBiNTHjRd7cGPWapiHWMOXKyuBNX/cWJ3NfzrZQVa8GI/8cofCl74AOVqq9W5kNmguTIzJ/1s2gyI9wA==}
     engines: {node: '>= 0.4'}
 
+  globby@10.0.1:
+    resolution: {integrity: sha512-sSs4inE1FB2YQiymcmTv6NWENryABjUNPeWhOvmn4SjtKybglsyPZxFB3U1/+L1bYi0rNZDqCLlHyLYDl1Pq5A==}
+    engines: {node: '>=8'}
+
   globby@10.0.2:
     resolution: {integrity: sha512-7dUi7RvCoT/xast/o/dLN53oqND4yk0nsHkhRgn9w65C4PofCLOoJ39iSOg+qVDdWQPIEj+eszMHQ+aLVwwQSg==}
     engines: {node: '>=8'}
@@ -12745,6 +13335,10 @@ packages:
 
   is-plain-object@2.0.4:
     resolution: {integrity: sha512-h5PpgXkWitc38BBMYawTYMWJHFZJVnBquFE57xFpjB8pJFiF6gZ+bU+WyI/yqXiFR5mdLsgYNaPe8uao6Uv9Og==}
+    engines: {node: '>=0.10.0'}
+
+  is-plain-object@3.0.1:
+    resolution: {integrity: sha512-Xnpx182SBMrr/aBik8y+GuR4U1L9FqMSojwDQwPMmxyC6bvEqly9UBCxhauBF5vNh2gwWJNX6oDV7O+OM4z34g==}
     engines: {node: '>=0.10.0'}
 
   is-plain-object@5.0.0:
@@ -15499,6 +16093,12 @@ packages:
     peerDependencies:
       postcss: ^8.2.15
 
+  postcss-discard-duplicates@7.0.0:
+    resolution: {integrity: sha512-bAnSuBop5LpAIUmmOSsuvtKAAKREB6BBIYStWUTGq8oG5q9fClDMMuY8i4UPI/cEcDx2TN+7PMnXYIId20UVDw==}
+    engines: {node: ^18.12.0 || ^20.9.0 || >=22.0}
+    peerDependencies:
+      postcss: ^8.4.31
+
   postcss-discard-empty@5.1.1:
     resolution: {integrity: sha512-zPz4WljiSuLWsI0ir4Mcnr4qQQ5e1Ukc3i7UfE2XcrwKK2LIPIqE5jxMRxO6GbI3cv//ztXDsXwEWT3BHOGh3A==}
     engines: {node: ^10 || ^12 || >=14.0}
@@ -16738,6 +17338,10 @@ packages:
 
   robust-predicates@3.0.2:
     resolution: {integrity: sha512-IXgzBWvWQwE6PrDI05OvmXUIruQTcoMDzRsOd5CDvHCVLcLHMTSYvOK5Cm46kWqlV3yAbuSpBZdJ5oP5OUoStg==}
+
+  rollup-plugin-copy@3.5.0:
+    resolution: {integrity: sha512-wI8D5dvYovRMx/YYKtUNt3Yxaw4ORC9xo6Gt9t22kveWz1enG9QrhVlagzwrxSC455xD1dHMKhIJkbsQ7d48BA==}
+    engines: {node: '>=8.3'}
 
   rollup-plugin-delete@2.0.0:
     resolution: {integrity: sha512-/VpLMtDy+8wwRlDANuYmDa9ss/knGsAgrDhM+tEwB1npHwNu4DYNmDfUL55csse/GHs9Q+SMT/rw9uiaZ3pnzA==}
@@ -29556,6 +30160,10 @@ snapshots:
 
   '@types/find-cache-dir@3.2.1': {}
 
+  '@types/fs-extra@8.1.5':
+    dependencies:
+      '@types/node': 20.11.16
+
   '@types/geojson@7946.0.4': {}
 
   '@types/get-port@3.2.0': {}
@@ -32508,6 +33116,10 @@ snapshots:
     dependencies:
       postcss: 8.4.32
 
+  css-declaration-sorter@6.4.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+
   css-functions-list@3.2.1: {}
 
   css-in-js-utils@3.1.0:
@@ -32700,15 +33312,59 @@ snapshots:
       postcss-svgo: 5.1.0(postcss@8.4.32)
       postcss-unique-selectors: 5.1.1(postcss@8.4.32)
 
+  cssnano-preset-default@5.2.14(postcss@8.4.33):
+    dependencies:
+      css-declaration-sorter: 6.4.1(postcss@8.4.33)
+      cssnano-utils: 3.1.0(postcss@8.4.33)
+      postcss: 8.4.33
+      postcss-calc: 8.2.4(postcss@8.4.33)
+      postcss-colormin: 5.3.1(postcss@8.4.33)
+      postcss-convert-values: 5.1.3(postcss@8.4.33)
+      postcss-discard-comments: 5.1.2(postcss@8.4.33)
+      postcss-discard-duplicates: 5.1.0(postcss@8.4.33)
+      postcss-discard-empty: 5.1.1(postcss@8.4.33)
+      postcss-discard-overridden: 5.1.0(postcss@8.4.33)
+      postcss-merge-longhand: 5.1.7(postcss@8.4.33)
+      postcss-merge-rules: 5.1.4(postcss@8.4.33)
+      postcss-minify-font-values: 5.1.0(postcss@8.4.33)
+      postcss-minify-gradients: 5.1.1(postcss@8.4.33)
+      postcss-minify-params: 5.1.4(postcss@8.4.33)
+      postcss-minify-selectors: 5.2.1(postcss@8.4.33)
+      postcss-normalize-charset: 5.1.0(postcss@8.4.33)
+      postcss-normalize-display-values: 5.1.0(postcss@8.4.33)
+      postcss-normalize-positions: 5.1.1(postcss@8.4.33)
+      postcss-normalize-repeat-style: 5.1.1(postcss@8.4.33)
+      postcss-normalize-string: 5.1.0(postcss@8.4.33)
+      postcss-normalize-timing-functions: 5.1.0(postcss@8.4.33)
+      postcss-normalize-unicode: 5.1.1(postcss@8.4.33)
+      postcss-normalize-url: 5.1.0(postcss@8.4.33)
+      postcss-normalize-whitespace: 5.1.1(postcss@8.4.33)
+      postcss-ordered-values: 5.1.3(postcss@8.4.33)
+      postcss-reduce-initial: 5.1.2(postcss@8.4.33)
+      postcss-reduce-transforms: 5.1.0(postcss@8.4.33)
+      postcss-svgo: 5.1.0(postcss@8.4.33)
+      postcss-unique-selectors: 5.1.1(postcss@8.4.33)
+
   cssnano-utils@3.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+
+  cssnano-utils@3.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
 
   cssnano@5.1.15(postcss@8.4.32):
     dependencies:
       cssnano-preset-default: 5.2.14(postcss@8.4.32)
       lilconfig: 2.1.0
       postcss: 8.4.32
+      yaml: 1.10.2
+
+  cssnano@5.1.15(postcss@8.4.33):
+    dependencies:
+      cssnano-preset-default: 5.2.14(postcss@8.4.33)
+      lilconfig: 2.1.0
+      postcss: 8.4.33
       yaml: 1.10.2
 
   csso@4.2.0:
@@ -35494,6 +36150,17 @@ snapshots:
     dependencies:
       define-properties: 1.2.1
 
+  globby@10.0.1:
+    dependencies:
+      '@types/glob': 7.2.0
+      array-union: 2.1.0
+      dir-glob: 3.0.1
+      fast-glob: 3.3.2
+      glob: 7.2.3
+      ignore: 5.3.0
+      merge2: 1.4.1
+      slash: 3.0.0
+
   globby@10.0.2:
     dependencies:
       '@types/glob': 7.2.0
@@ -36132,6 +36799,10 @@ snapshots:
     dependencies:
       postcss: 8.4.32
 
+  icss-utils@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+
   idb@6.1.5: {}
 
   ieee754@1.2.1: {}
@@ -36575,6 +37246,8 @@ snapshots:
   is-plain-object@2.0.4:
     dependencies:
       isobject: 3.0.1
+
+  is-plain-object@3.0.1: {}
 
   is-plain-object@5.0.0: {}
 
@@ -40780,6 +41453,12 @@ snapshots:
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
 
+  postcss-calc@8.2.4(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-selector-parser: 6.0.13
+      postcss-value-parser: 4.2.0
+
   postcss-colormin@5.3.1(postcss@8.4.32):
     dependencies:
       browserslist: 4.22.2
@@ -40788,27 +41467,61 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-colormin@5.3.1(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      caniuse-api: 3.0.0
+      colord: 2.9.3
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-convert-values@5.1.3(postcss@8.4.32):
     dependencies:
       browserslist: 4.22.2
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-convert-values@5.1.3(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-discard-comments@5.1.2(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+
+  postcss-discard-comments@5.1.2(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
 
   postcss-discard-duplicates@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
 
+  postcss-discard-duplicates@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+
+  postcss-discard-duplicates@7.0.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+
   postcss-discard-empty@5.1.1(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
 
+  postcss-discard-empty@5.1.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+
   postcss-discard-overridden@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+
+  postcss-discard-overridden@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
 
   postcss-discard-unused@5.1.0(postcss@8.4.32):
     dependencies:
@@ -40826,6 +41539,14 @@ snapshots:
     optionalDependencies:
       postcss: 8.4.32
       ts-node: 10.9.1(@swc/core@1.3.100)(@types/node@20.11.16)(typescript@4.9.5)
+
+  postcss-load-config@3.1.4(postcss@8.4.33)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.5.1)(typescript@4.9.5)):
+    dependencies:
+      lilconfig: 2.1.0
+      yaml: 1.10.2
+    optionalDependencies:
+      postcss: 8.4.33
+      ts-node: 10.9.1(@swc/core@1.3.100)(@types/node@20.5.1)(typescript@4.9.5)
 
   postcss-loader@5.3.0(postcss@8.4.32)(webpack@5.89.0(@swc/core@1.3.100)):
     dependencies:
@@ -40887,6 +41608,12 @@ snapshots:
       postcss-value-parser: 4.2.0
       stylehacks: 5.1.1(postcss@8.4.32)
 
+  postcss-merge-longhand@5.1.7(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+      stylehacks: 5.1.1(postcss@8.4.33)
+
   postcss-merge-rules@5.1.4(postcss@8.4.32):
     dependencies:
       browserslist: 4.22.2
@@ -40895,9 +41622,22 @@ snapshots:
       postcss: 8.4.32
       postcss-selector-parser: 6.0.13
 
+  postcss-merge-rules@5.1.4(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      caniuse-api: 3.0.0
+      cssnano-utils: 3.1.0(postcss@8.4.33)
+      postcss: 8.4.33
+      postcss-selector-parser: 6.0.13
+
   postcss-minify-font-values@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-minify-font-values@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-minify-gradients@5.1.1(postcss@8.4.32):
@@ -40907,6 +41647,13 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-minify-gradients@5.1.1(postcss@8.4.33):
+    dependencies:
+      colord: 2.9.3
+      cssnano-utils: 3.1.0(postcss@8.4.33)
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-minify-params@5.1.4(postcss@8.4.32):
     dependencies:
       browserslist: 4.22.2
@@ -40914,14 +41661,30 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-minify-params@5.1.4(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      cssnano-utils: 3.1.0(postcss@8.4.33)
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-minify-selectors@5.2.1(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
       postcss-selector-parser: 6.0.13
 
+  postcss-minify-selectors@5.2.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-selector-parser: 6.0.13
+
   postcss-modules-extract-imports@3.0.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+
+  postcss-modules-extract-imports@3.0.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
 
   postcss-modules-local-by-default@4.0.3(postcss@8.4.32):
     dependencies:
@@ -40930,15 +41693,32 @@ snapshots:
       postcss-selector-parser: 6.0.13
       postcss-value-parser: 4.2.0
 
+  postcss-modules-local-by-default@4.0.3(postcss@8.4.33):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.4.33)
+      postcss: 8.4.33
+      postcss-selector-parser: 6.0.13
+      postcss-value-parser: 4.2.0
+
   postcss-modules-scope@3.0.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-selector-parser: 6.0.13
+
+  postcss-modules-scope@3.0.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-selector-parser: 6.0.13
 
   postcss-modules-values@4.0.0(postcss@8.4.32):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.32)
       postcss: 8.4.32
+
+  postcss-modules-values@4.0.0(postcss@8.4.33):
+    dependencies:
+      icss-utils: 5.1.0(postcss@8.4.33)
+      postcss: 8.4.33
 
   postcss-modules@4.3.1(postcss@8.4.32):
     dependencies:
@@ -40952,13 +41732,34 @@ snapshots:
       postcss-modules-values: 4.0.0(postcss@8.4.32)
       string-hash: 1.1.3
 
+  postcss-modules@4.3.1(postcss@8.4.33):
+    dependencies:
+      generic-names: 4.0.0
+      icss-replace-symbols: 1.1.0
+      lodash.camelcase: 4.3.0
+      postcss: 8.4.33
+      postcss-modules-extract-imports: 3.0.0(postcss@8.4.33)
+      postcss-modules-local-by-default: 4.0.3(postcss@8.4.33)
+      postcss-modules-scope: 3.0.0(postcss@8.4.33)
+      postcss-modules-values: 4.0.0(postcss@8.4.33)
+      string-hash: 1.1.3
+
   postcss-normalize-charset@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
 
+  postcss-normalize-charset@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+
   postcss-normalize-display-values@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-normalize-display-values@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-normalize-positions@5.1.1(postcss@8.4.32):
@@ -40966,9 +41767,19 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-positions@5.1.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-normalize-repeat-style@5.1.1(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-normalize-repeat-style@5.1.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-normalize-string@5.1.0(postcss@8.4.32):
@@ -40976,9 +41787,19 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-string@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-normalize-timing-functions@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-normalize-timing-functions@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-normalize-unicode@5.1.1(postcss@8.4.32):
@@ -40987,10 +41808,22 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-unicode@5.1.1(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-normalize-url@5.1.0(postcss@8.4.32):
     dependencies:
       normalize-url: 6.1.0
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-normalize-url@5.1.0(postcss@8.4.33):
+    dependencies:
+      normalize-url: 6.1.0
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-normalize-whitespace@5.1.1(postcss@8.4.32):
@@ -40998,10 +41831,21 @@ snapshots:
       postcss: 8.4.32
       postcss-value-parser: 4.2.0
 
+  postcss-normalize-whitespace@5.1.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+
   postcss-ordered-values@5.1.3(postcss@8.4.32):
     dependencies:
       cssnano-utils: 3.1.0(postcss@8.4.32)
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-ordered-values@5.1.3(postcss@8.4.33):
+    dependencies:
+      cssnano-utils: 3.1.0(postcss@8.4.33)
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-reduce-idents@5.2.0(postcss@8.4.32):
@@ -41015,9 +41859,20 @@ snapshots:
       caniuse-api: 3.0.0
       postcss: 8.4.32
 
+  postcss-reduce-initial@5.1.2(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      caniuse-api: 3.0.0
+      postcss: 8.4.33
+
   postcss-reduce-transforms@5.1.0(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-value-parser: 4.2.0
+
+  postcss-reduce-transforms@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-value-parser: 4.2.0
 
   postcss-resolve-nested-selector@0.1.1: {}
@@ -41054,9 +41909,20 @@ snapshots:
       postcss-value-parser: 4.2.0
       svgo: 2.8.0
 
+  postcss-svgo@5.1.0(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
+      postcss-value-parser: 4.2.0
+      svgo: 2.8.0
+
   postcss-unique-selectors@5.1.1(postcss@8.4.32):
     dependencies:
       postcss: 8.4.32
+      postcss-selector-parser: 6.0.13
+
+  postcss-unique-selectors@5.1.1(postcss@8.4.33):
+    dependencies:
+      postcss: 8.4.33
       postcss-selector-parser: 6.0.13
 
   postcss-url@10.1.3(postcss@8.4.32):
@@ -42387,6 +43253,14 @@ snapshots:
 
   robust-predicates@3.0.2: {}
 
+  rollup-plugin-copy@3.5.0:
+    dependencies:
+      '@types/fs-extra': 8.1.5
+      colorette: 1.4.0
+      fs-extra: 8.1.0
+      globby: 10.0.1
+      is-plain-object: 3.0.1
+
   rollup-plugin-delete@2.0.0:
     dependencies:
       del: 5.1.0
@@ -42434,6 +43308,25 @@ snapshots:
       postcss: 8.4.32
       postcss-load-config: 3.1.4(postcss@8.4.32)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.11.16)(typescript@4.9.5))
       postcss-modules: 4.3.1(postcss@8.4.32)
+      promise.series: 0.2.0
+      resolve: 1.22.8
+      rollup-pluginutils: 2.8.2
+      safe-identifier: 0.4.2
+      style-inject: 0.3.0
+    transitivePeerDependencies:
+      - ts-node
+
+  rollup-plugin-postcss@4.0.2(postcss@8.4.33)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.5.1)(typescript@4.9.5)):
+    dependencies:
+      chalk: 4.1.2
+      concat-with-sourcemaps: 1.1.0
+      cssnano: 5.1.15(postcss@8.4.33)
+      import-cwd: 3.0.0
+      p-queue: 6.6.2
+      pify: 5.0.0
+      postcss: 8.4.33
+      postcss-load-config: 3.1.4(postcss@8.4.33)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.5.1)(typescript@4.9.5))
+      postcss-modules: 4.3.1(postcss@8.4.33)
       promise.series: 0.2.0
       resolve: 1.22.8
       rollup-pluginutils: 2.8.2
@@ -43572,6 +44465,12 @@ snapshots:
     dependencies:
       browserslist: 4.22.2
       postcss: 8.4.32
+      postcss-selector-parser: 6.0.13
+
+  stylehacks@5.1.1(postcss@8.4.33):
+    dependencies:
+      browserslist: 4.22.2
+      postcss: 8.4.33
       postcss-selector-parser: 6.0.13
 
   stylelint-config-prettier@9.0.5(stylelint@14.16.1):
