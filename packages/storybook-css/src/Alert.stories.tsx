@@ -9,7 +9,6 @@ import { Alert } from './Alert';
 import { Heading2 } from './Heading2';
 import { Paragraph } from './Paragraph';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/alert/css/index.scss';
 
 const meta = {
   title: 'CSS Component/Alert',

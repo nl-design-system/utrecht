@@ -2,7 +2,6 @@
 
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
-import '@utrecht/components/alert/css/index.scss';
 
 export const Alert = ({ children, icon = null, type }: PropsWithChildren<{ icon?: ReactNode; type?: string }>) => (
   <div

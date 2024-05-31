@@ -8,7 +8,6 @@ import tokensDefinition from '@utrecht/components/index-char-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/index-char-nav/css/index.scss';
 
 const greekAlphabet = 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω';
 const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';

@@ -6,7 +6,6 @@ import readme from '@utrecht/components/data-placeholder/README.md?raw';
 import tokensDefinition from '@utrecht/components/data-placeholder/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';
-import '@utrecht/components/data-placeholder/css/index.scss';
 
 const meta = {
   title: 'React Component/Data placeholder',

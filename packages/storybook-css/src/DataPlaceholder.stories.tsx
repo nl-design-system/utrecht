@@ -20,7 +20,6 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/alert/css/index.scss';
 
 const meta = {
   title: 'CSS Component/Data placeholder',

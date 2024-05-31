@@ -8,7 +8,6 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 // import { Icon } from '@utrecht/component-library-react';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/icon/css/index.scss';
 
 const meta = {
   title: 'CSS Component/Icon',
