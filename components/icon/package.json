@@ -9,14 +9,16 @@
     "loader/"
   ],
   "scripts": {
-    "build": "pnpm run build:svg && pnpm run build:components",
+    "build": "pnpm run build:css && pnpm run build:svg && pnpm run build:components",
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../../packages/web-component-library-stencil/src/components/generated/",
+    "build:css": "rollup -c ../rollup.config.mjs",
     "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
     "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../../packages/web-component-library-stencil/src/components/generated/"
   },
   "devDependencies": {
     "lodash": "4.17.21",
     "minimist": "1.2.8",
+    "rollup": "3.29.4",
     "svgo": "3.1.0"
   },
   "keywords": [

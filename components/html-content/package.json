@@ -7,7 +7,10 @@
   "files": [
     "dist/"
   ],
-  "scripts": {},
+  "scripts": {
+    "build": "rollup -c ../rollup.config.mjs",
+    "clean": "rimraf dist"
+  },
   "devDependencies": {
     "@utrecht/article-css": "workspace:*",
     "@utrecht/blockquote-css": "workspace:*",
@@ -38,7 +41,8 @@
     "@utrecht/table-css": "workspace:*",
     "@utrecht/textarea-css": "workspace:*",
     "@utrecht/textbox-css": "workspace:*",
-    "@utrecht/unordered-list-css": "workspace:*"
+    "@utrecht/unordered-list-css": "workspace:*",
+    "rollup": "3.29.4"
   },
   "keywords": [
     "nl-design-system"

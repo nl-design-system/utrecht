@@ -7,8 +7,13 @@
   "files": [
     "dist/"
   ],
-  "scripts": {},
-  "devDependencies": {},
+  "scripts": {
+    "build": "rollup -c ../rollup.config.mjs",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "rollup": "3.29.4"
+  },
   "keywords": [
     "nl-design-system"
   ],
