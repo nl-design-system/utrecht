@@ -8,7 +8,10 @@
     "dist/"
   ],
   "scripts": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "@utrecht/alert-css": "workspace:*",
+    "@utrecht/backdrop-css": "workspace:*"
+  },
   "keywords": [
     "nl-design-system"
   ],
