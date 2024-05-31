@@ -50,7 +50,6 @@ import { ExampleInvisibleText } from './util/ExampleInvisibleText';
 import { ExampleMarkMatches } from './util/ExampleMarkMatches';
 import { ExampleTimeDuration } from './util/ExampleTimeDuration';
 import { useFullscreenButton } from './util/useFullscreenButton';
-import '@utrecht/components/table/css/index.scss';
 
 const meta = {
   title: 'CSS Component/Table',

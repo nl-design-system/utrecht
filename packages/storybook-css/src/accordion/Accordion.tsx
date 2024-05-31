@@ -10,7 +10,6 @@ import {
   AccordionSection as ReactAccordionSection,
 } from '@utrecht/component-library-react';
 import React from 'react';
-import '@utrecht/components/accordion/css/index.scss';
 
 export const argTypes = {
   label: {

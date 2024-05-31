@@ -5,7 +5,6 @@ import readme from '@utrecht/components/alternate-lang-nav/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
-import '@utrecht/components/alternate-lang-nav/css/index.scss';
 
 const meta = {
   title: 'React Component/Alternate language navigation',
