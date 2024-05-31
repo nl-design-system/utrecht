@@ -11,7 +11,7 @@
   "workspaces": [
     "./documentation/",
     "./components/",
-    "./components/icon/",
+    "./components/*/",
     "./packages/*",
     "./proprietary/*"
   ],
