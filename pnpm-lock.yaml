@@ -159,6 +159,106 @@ importers:
         specifier: 5.89.0
         version: 5.89.0(esbuild@0.18.20)
 
+  components/accordion: {}
+
+  components/alert: {}
+
+  components/alert-dialog: {}
+
+  components/alternate-lang-nav: {}
+
+  components/article: {}
+
+  components/backdrop: {}
+
+  components/badge: {}
+
+  components/badge-counter: {}
+
+  components/badge-data: {}
+
+  components/badge-list: {}
+
+  components/badge-status: {}
+
+  components/blockquote: {}
+
+  components/breadcrumb-nav: {}
+
+  components/button: {}
+
+  components/button-group: {}
+
+  components/button-link: {}
+
+  components/calendar: {}
+
+  components/checkbox: {}
+
+  components/code: {}
+
+  components/code-block: {}
+
+  components/color-sample: {}
+
+  components/column-layout: {}
+
+  components/combobox: {}
+
+  components/currency-data: {}
+
+  components/custom-checkbox: {}
+
+  components/data-list: {}
+
+  components/data-placeholder: {}
+
+  components/digid-button: {}
+
+  components/document: {}
+
+  components/drawer: {}
+
+  components/emphasis: {}
+
+  components/figure: {}
+
+  components/flex-wrap-fallback: {}
+
+  components/form: {}
+
+  components/form-field: {}
+
+  components/form-field-description: {}
+
+  components/form-field-error-message: {}
+
+  components/form-fieldset: {}
+
+  components/form-label: {}
+
+  components/form-toggle: {}
+
+  components/heading: {}
+
+  components/heading-1: {}
+
+  components/heading-2: {}
+
+  components/heading-3: {}
+
+  components/heading-4: {}
+
+  components/heading-5: {}
+
+  components/heading-6: {}
+
+  components/heading-group: {}
+
+  components/html-content: {}
+
+  components/iban-data: {}
+
   components/icon:
     devDependencies:
       lodash:
@@ -170,6 +270,88 @@ importers:
       svgo:
         specifier: 3.1.0
         version: 3.1.0
+
+  components/img: {}
+
+  components/index-char-nav: {}
+
+  components/link: {}
+
+  components/link-button: {}
+
+  components/link-list: {}
+
+  components/link-social: {}
+
+  components/list-social: {}
+
+  components/listbox: {}
+
+  components/logo: {}
+
+  components/logo-button: {}
+
+  components/logo-image: {}
+
+  components/map-marker: {}
+
+  components/mapcontrolbutton: {}
+
+  components/mark: {}
+
+  components/multiline-data: {}
+
+  components/nav-bar: {}
+
+  components/nav-list: {}
+
+  components/number-data: {}
+
+  components/ordered-list: {}
+
+  components/page: {}
+
+  components/page-content: {}
+
+  components/page-footer: {}
+
+  components/page-header: {}
+
+  components/pagination: {}
+
+  components/paragraph: {}
+
+  components/pre-heading: {}
+
+  components/preserve-data: {}
+
+  components/radio-button: {}
+
+  components/search-bar: {}
+
+  components/select: {}
+
+  components/separator: {}
+
+  components/skip-link: {}
+
+  components/spotlight-section: {}
+
+  components/surface: {}
+
+  components/table: {}
+
+  components/textarea: {}
+
+  components/textbox: {}
+
+  components/toptask-link: {}
+
+  components/toptask-nav: {}
+
+  components/unordered-list: {}
+
+  components/url-data: {}
 
   documentation:
     devDependencies:
