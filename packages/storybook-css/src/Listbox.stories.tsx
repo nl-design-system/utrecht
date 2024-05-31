@@ -8,7 +8,6 @@ import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { ListboxStory } from './Listbox';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/listbox/css/index.scss';
 
 const meta = {
   title: 'CSS Component/Listbox',

@@ -10,7 +10,6 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
-import '@utrecht/components/select/css/index.scss';
 
 const SelectStory = ({
   focus,
