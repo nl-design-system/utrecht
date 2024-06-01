@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2021 Robbert Broersma
  */
-@import "~@utrecht/components/icon/css";
+@import "~@utrecht/icon/css";
 
 @mixin utrecht-black-icon--media-query-forced-colors {
   /* A black icon can become invisible on a forced black background.

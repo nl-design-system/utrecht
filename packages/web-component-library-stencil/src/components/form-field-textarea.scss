@@ -3,10 +3,10 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "~@utrecht/components/form-field/css";
-@import "~@utrecht/components/form-label/css";
-@import "~@utrecht/components/form-field-description/css";
-@import "~@utrecht/components/textarea/css";
+@import "~@utrecht/form-field-css/css";
+@import "~@utrecht/form-label-css/css";
+@import "~@utrecht/form-field-description-css/css";
+@import "~@utrecht/textarea-css/css";
 
 :host {
   display: block;
