@@ -12,4 +12,4 @@ export default defineComponent({
   </legend>
 </template>
 
-<style src="@utrecht/components/form-fieldset/css/index.scss"></style>
+<style src="@utrecht/form-fieldset-css/css/index.scss"></style>

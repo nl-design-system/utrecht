@@ -19,4 +19,4 @@ export default defineComponent({
   </a>
 </template>
 
-<style src="@utrecht/components/skip-link/css/index.scss"></style>
+<style src="@utrecht/skip-link-css/css/index.scss"></style>

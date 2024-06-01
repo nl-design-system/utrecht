@@ -12,4 +12,4 @@ export default defineComponent({
   </th>
 </template>
 
-<style src="@utrecht/components/table/css/index.scss"></style>
+<style src="@utrecht/table-css/css/index.scss"></style>

@@ -16,4 +16,5 @@ export default defineComponent({
   <span v-else class="utrecht-badge-counter"><slot /></span>
 </template>
 
-<style src="@utrecht/components/badge-counter/css/index.scss"></style>
+<!-- TODO: use SCSS source instead of pre-built CSS -->
+<style src="@utrecht/badge-counter-css/dist/index.css"></style>
