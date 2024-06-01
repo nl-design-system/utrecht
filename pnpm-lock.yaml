@@ -2365,21 +2365,21 @@ importers:
       '@types/react':
         specifier: 18.2.45
         version: 18.2.45
+      '@utrecht/button-css':
+        specifier: workspace:*
+        version: link:../../components/button
       '@utrecht/component-library-angular':
         specifier: workspace:*
         version: link:../component-library-angular
-      '@utrecht/component-library-css':
-        specifier: workspace:*
-        version: link:../component-library-css
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
       '@utrecht/documentation':
         specifier: workspace:*
         version: link:../../documentation
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../../components/link
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
