@@ -1483,9 +1483,138 @@ importers:
       '@types/testing-library__jest-dom':
         specifier: 5.14.9
         version: 5.14.9
-      '@utrecht/components':
+      '@utrecht/alert-dialog-css':
         specifier: workspace:*
-        version: link:../../components
+        version: link:../../components/alert-dialog
+      '@utrecht/article-css':
+        specifier: workspace:*
+        version: link:../../components/article
+      '@utrecht/badge-counter-css':
+        specifier: workspace:*
+        version: link:../../components/badge-counter
+      '@utrecht/badge-status-css':
+        specifier: workspace:*
+        version: link:../../components/badge-status
+      '@utrecht/breadcrumb-nav-css':
+        specifier: workspace:*
+        version: link:../../components/breadcrumb-nav
+      '@utrecht/button-css':
+        specifier: workspace:*
+        version: link:../../components/button
+      '@utrecht/button-group-css':
+        specifier: workspace:*
+        version: link:../../components/button-group
+      '@utrecht/checkbox-css':
+        specifier: workspace:*
+        version: link:../../components/checkbox
+      '@utrecht/code-block-css':
+        specifier: workspace:*
+        version: link:../../components/code-block
+      '@utrecht/code-css':
+        specifier: workspace:*
+        version: link:../../components/code
+      '@utrecht/custom-checkbox-css':
+        specifier: workspace:*
+        version: link:../../components/custom-checkbox
+      '@utrecht/data-list-css':
+        specifier: workspace:*
+        version: link:../../components/data-list
+      '@utrecht/document-css':
+        specifier: workspace:*
+        version: link:../../components/document
+      '@utrecht/emphasis-css':
+        specifier: workspace:*
+        version: link:../../components/emphasis
+      '@utrecht/figure-css':
+        specifier: workspace:*
+        version: link:../../components/figure
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:../../components/form-field
+      '@utrecht/form-fieldset-css':
+        specifier: workspace:*
+        version: link:../../components/form-fieldset
+      '@utrecht/form-label-css':
+        specifier: workspace:*
+        version: link:../../components/form-label
+      '@utrecht/heading-1-css':
+        specifier: workspace:*
+        version: link:../../components/heading-1
+      '@utrecht/heading-2-css':
+        specifier: workspace:*
+        version: link:../../components/heading-2
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:../../components/heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:../../components/heading-4
+      '@utrecht/heading-5-css':
+        specifier: workspace:*
+        version: link:../../components/heading-5
+      '@utrecht/heading-6-css':
+        specifier: workspace:*
+        version: link:../../components/heading-6
+      '@utrecht/heading-css':
+        specifier: workspace:*
+        version: link:../../components/heading
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../../components/link
+      '@utrecht/link-social-css':
+        specifier: workspace:*
+        version: link:../../components/link-social
+      '@utrecht/list-social-css':
+        specifier: workspace:*
+        version: link:../../components/list-social
+      '@utrecht/number-data-css':
+        specifier: workspace:*
+        version: link:../../components/number-data
+      '@utrecht/ordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/ordered-list
+      '@utrecht/page-content-css':
+        specifier: workspace:*
+        version: link:../../components/page-content
+      '@utrecht/page-css':
+        specifier: workspace:*
+        version: link:../../components/page
+      '@utrecht/page-footer-css':
+        specifier: workspace:*
+        version: link:../../components/page-footer
+      '@utrecht/page-header-css':
+        specifier: workspace:*
+        version: link:../../components/page-header
+      '@utrecht/paragraph-css':
+        specifier: workspace:*
+        version: link:../../components/paragraph
+      '@utrecht/radio-button-css':
+        specifier: workspace:*
+        version: link:../../components/radio-button
+      '@utrecht/select-css':
+        specifier: workspace:*
+        version: link:../../components/select
+      '@utrecht/separator-css':
+        specifier: workspace:*
+        version: link:../../components/separator
+      '@utrecht/skip-link-css':
+        specifier: workspace:*
+        version: link:../../components/skip-link
+      '@utrecht/table-css':
+        specifier: workspace:*
+        version: link:../../components/table
+      '@utrecht/textarea-css':
+        specifier: workspace:*
+        version: link:../../components/textarea
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:../../components/textbox
+      '@utrecht/unordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/unordered-list
+      '@utrecht/url-data-css':
+        specifier: workspace:*
+        version: link:../../components/url-data
       '@vitejs/plugin-vue':
         specifier: 4.5.2
         version: 4.5.2(vite@4.5.1(@types/node@20.11.16)(less@4.2.0)(sass@1.69.5)(terser@5.26.0))(vue@3.3.11(typescript@4.9.5))

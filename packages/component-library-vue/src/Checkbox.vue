@@ -30,5 +30,5 @@ export default defineComponent({
   />
 </template>
 
-<style src="@utrecht/components/checkbox/css/index.scss"></style>
-<style src="@utrecht/components/custom-checkbox/css/index.scss"></style>
+<style src="@utrecht/checkbox-css/css/index.scss"></style>
+<style src="@utrecht/custom-checkbox-css/css/index.scss"></style>

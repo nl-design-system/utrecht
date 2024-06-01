@@ -41,4 +41,4 @@ export default defineComponent({
   </li>
 </template>
 
-<style src="@utrecht/components/breadcrumb-nav/css/index.scss"></style>
+<style src="@utrecht/breadcrumb-nav-css/css/index.scss"></style>

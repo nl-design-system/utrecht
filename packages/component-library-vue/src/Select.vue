@@ -43,4 +43,4 @@ export default defineComponent({
   </select>
 </template>
 
-<style src="@utrecht/components/select/css/index.scss"></style>
+<style src="@utrecht/select-css/css/index.scss"></style>

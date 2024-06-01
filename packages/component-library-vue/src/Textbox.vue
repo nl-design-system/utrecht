@@ -26,4 +26,4 @@ export default defineComponent({
   />
 </template>
 
-<style src="@utrecht/components/textbox/css/index.scss"></style>
+<style src="@utrecht/textbox-css/css/index.scss"></style>

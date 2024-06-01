@@ -25,4 +25,4 @@ export default defineComponent({
   />
 </template>
 
-<style src="@utrecht/components/radio-button/css/index.scss"></style>
+<style src="@utrecht/radio-button-css/css/index.scss"></style>
