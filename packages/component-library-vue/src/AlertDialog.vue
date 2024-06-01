@@ -41,4 +41,4 @@ export default defineComponent({
   </dialog>
 </template>
 
-<style src="@utrecht/alert-dialog-css/css/index.scss"></style>
+<style src="@utrecht/alert-dialog-css/dist/index.css"></style>

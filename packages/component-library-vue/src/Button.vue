@@ -32,4 +32,4 @@ export default defineComponent({
   </button>
 </template>
 
-<style src="@utrecht/button-css/css/index.scss"></style>
+<style src="@utrecht/button-css/dist/index.css"></style>

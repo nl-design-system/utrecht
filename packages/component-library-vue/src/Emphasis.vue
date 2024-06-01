@@ -12,4 +12,4 @@ export default defineComponent({
   </em>
 </template>
 
-<style src="@utrecht/emphasis-css/css/index.scss"></style>
+<style src="@utrecht/emphasis-css/dist/index.css"></style>

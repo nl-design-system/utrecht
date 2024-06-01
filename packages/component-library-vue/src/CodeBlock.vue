@@ -14,4 +14,4 @@ export default defineComponent({
   </pre>
 </template>
 
-<style src="@utrecht/code-block-css/css/index.scss"></style>
+<style src="@utrecht/code-block-css/dist/index.css"></style>

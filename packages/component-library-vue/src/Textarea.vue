@@ -26,4 +26,4 @@ export default defineComponent({
   />
 </template>
 
-<style src="@utrecht/textarea-css/css/index.scss"></style>
+<style src="@utrecht/textarea-css/dist/index.css"></style>

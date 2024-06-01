@@ -12,4 +12,4 @@ export default defineComponent({
   </bdi>
 </template>
 
-<style src="@utrecht/url-data-css/css/index.scss"></style>
+<style src="@utrecht/url-data-css/dist/index.css"></style>

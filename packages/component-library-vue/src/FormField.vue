@@ -25,4 +25,4 @@ export default defineComponent({
   </div>
 </template>
 
-<style src="@utrecht/form-field-css/css/index.scss"></style>
+<style src="@utrecht/form-field-css/dist/index.css"></style>
