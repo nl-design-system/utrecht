@@ -5,36 +5,36 @@
 
 /* Collection of all semantic HTML styles in the component library */
 
-@import "../../article/html/mixin";
-@import "../../blockquote/html/mixin";
-@import "../../button/html/mixin";
-@import "../../checkbox/html/mixin";
-@import "../../code/html/mixin";
-@import "../../code-block/html/mixin";
-@import "../../document/html/mixin";
-@import "../../emphasis/html/mixin";
-@import "../../figure/html/mixin";
-@import "../../form/html/mixin";
-@import "../../form-fieldset/html/mixin";
-@import "../../form-label/html/mixin";
-@import "../../heading-1/html/mixin";
-@import "../../heading-2/html/mixin";
-@import "../../heading-3/html/mixin";
-@import "../../heading-4/html/mixin";
-@import "../../heading-5/html/mixin";
-@import "../../heading-6/html/mixin";
-@import "../../heading-group/html/mixin";
-@import "../../link/html/mixin";
-@import "../../mark/html/mixin";
-@import "../../ordered-list/html/mixin";
-@import "../../paragraph/html/mixin";
-@import "../../radio-button/html/mixin";
-@import "../../select/html/mixin";
-@import "../../separator/html/mixin";
-@import "../../table/html/mixin";
-@import "../../textarea/html/mixin";
-@import "../../textbox/html/mixin";
-@import "../../unordered-list/html/mixin";
+@import "~@utrecht/article-css/html/mixin";
+@import "~@utrecht/blockquote-css/html/mixin";
+@import "~@utrecht/button-css/html/mixin";
+@import "~@utrecht/checkbox-css/html/mixin";
+@import "~@utrecht/code-css/html/mixin";
+@import "~@utrecht/code-block-css/html/mixin";
+@import "~@utrecht/document-css/html/mixin";
+@import "~@utrecht/emphasis-css/html/mixin";
+@import "~@utrecht/figure-css/html/mixin";
+@import "~@utrecht/form-css/html/mixin";
+@import "~@utrecht/form-fieldset-css/html/mixin";
+@import "~@utrecht/form-label-css/html/mixin";
+@import "~@utrecht/heading-1-css/html/mixin";
+@import "~@utrecht/heading-2-css/html/mixin";
+@import "~@utrecht/heading-3-css/html/mixin";
+@import "~@utrecht/heading-4-css/html/mixin";
+@import "~@utrecht/heading-5-css/html/mixin";
+@import "~@utrecht/heading-6-css/html/mixin";
+@import "~@utrecht/heading-group-css/html/mixin";
+@import "~@utrecht/link-css/html/mixin";
+@import "~@utrecht/mark-css/html/mixin";
+@import "~@utrecht/ordered-list-css/html/mixin";
+@import "~@utrecht/paragraph-css/html/mixin";
+@import "~@utrecht/radio-button-css/html/mixin";
+@import "~@utrecht/select-css/html/mixin";
+@import "~@utrecht/separator-css/html/mixin";
+@import "~@utrecht/table-css/html/mixin";
+@import "~@utrecht/textarea-css/html/mixin";
+@import "~@utrecht/textbox-css/html/mixin";
+@import "~@utrecht/unordered-list-css/html/mixin";
 
 @mixin utrecht-html-content {
   @include utrecht-html-article;

@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
-@import "../../link/css/mixin";
+@import "~@utrecht/link-css/css/mixin";
 @import "../../common/focus/mixin";
 
 @mixin utrecht-link-button {
