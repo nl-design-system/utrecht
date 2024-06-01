@@ -27,4 +27,5 @@ export default defineComponent({
   </span>
 </template>
 
-<style src="@utrecht/components/badge-status/css/index.scss"></style>
+<!-- TODO: use SCSS source instead of pre-built CSS -->
+<style src="@utrecht/badge-status-css/dist/index.css"></style>

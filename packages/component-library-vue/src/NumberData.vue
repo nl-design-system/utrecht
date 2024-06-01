@@ -18,4 +18,4 @@ export default defineComponent({
   </data>
 </template>
 
-<style src="@utrecht/components/number-data/css/index.scss"></style>
+<style src="@utrecht/number-data-css/css/index.scss"></style>

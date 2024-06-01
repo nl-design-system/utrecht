@@ -25,4 +25,4 @@ export default defineComponent({
   />
 </template>
 
-<style src="@utrecht/components/figure/css/index.scss"></style>
+<style src="@utrecht/figure-css/css/index.scss"></style>
