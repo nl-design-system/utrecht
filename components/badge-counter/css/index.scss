@@ -5,7 +5,7 @@
  */
 
 @import "./mixin";
-@import "../../badge/css/mixin";
+@import "~@utrecht/badge-css/css/mixin";
 
 .utrecht-badge-counter {
   @include utrecht-badge-counter;

@@ -5,7 +5,9 @@
   "license": "EUPL-1.2",
   "name": "@utrecht/search-bar-css",
   "files": [
-    "dist/"
+    "css/",
+    "dist/",
+    "html/"
   ],
   "scripts": {
     "build": "rollup -c ../rollup.config.mjs",
