@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "../../common/focus/mixin";
+@import "~@utrecht/focus-ring-css/src/mixin";
 
 @mixin utrecht-skip-link {
   /* Use `ButtonFace` as default `background-color`

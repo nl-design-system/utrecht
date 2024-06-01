@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "../../common/focus/mixin";
+@import "../../focus-ring/src/mixin";
 
 .utrecht-navhtml {
   font-family: var(--utrecht-document-font-family);
