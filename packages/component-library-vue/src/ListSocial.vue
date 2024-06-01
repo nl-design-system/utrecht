@@ -19,4 +19,4 @@ export default defineComponent({
   </ul>
 </template>
 
-<style src="@utrecht/list-social-css/css/index.scss"></style>
+<style src="@utrecht/list-social-css/dist/index.css"></style>

@@ -17,4 +17,4 @@ export default defineComponent({
   </p>
 </template>
 
-<style src="@utrecht/paragraph-css/css/index.scss"></style>
+<style src="@utrecht/paragraph-css/dist/index.css"></style>

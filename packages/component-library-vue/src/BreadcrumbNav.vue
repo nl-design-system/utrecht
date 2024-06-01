@@ -49,4 +49,4 @@ export default defineComponent({
   </nav>
 </template>
 
-<style src="@utrecht/breadcrumb-nav-css/css/index.scss"></style>
+<style src="@utrecht/breadcrumb-nav-css/dist/index.css"></style>

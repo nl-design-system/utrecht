@@ -24,4 +24,4 @@ export default defineComponent({
   </label>
 </template>
 
-<style src="@utrecht/form-label-css/css/index.scss"></style>
+<style src="@utrecht/form-label-css/dist/index.css"></style>

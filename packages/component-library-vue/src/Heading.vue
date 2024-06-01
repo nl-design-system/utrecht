@@ -30,9 +30,9 @@ export default defineComponent({
   </h6>
 </template>
 
-<style scoped src="@utrecht/heading-1-css/css/index.scss"></style>
-<style scoped src="@utrecht/heading-2-css/css/index.scss"></style>
-<style scoped src="@utrecht/heading-3-css/css/index.scss"></style>
-<style scoped src="@utrecht/heading-4-css/css/index.scss"></style>
-<style scoped src="@utrecht/heading-5-css/css/index.scss"></style>
-<style scoped src="@utrecht/heading-6-css/css/index.scss"></style>
+<style scoped src="@utrecht/heading-1-css/dist/index.css"></style>
+<style scoped src="@utrecht/heading-2-css/dist/index.css"></style>
+<style scoped src="@utrecht/heading-3-css/dist/index.css"></style>
+<style scoped src="@utrecht/heading-4-css/dist/index.css"></style>
+<style scoped src="@utrecht/heading-5-css/dist/index.css"></style>
+<style scoped src="@utrecht/heading-6-css/dist/index.css"></style>

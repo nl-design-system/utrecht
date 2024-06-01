@@ -10,4 +10,4 @@ export default defineComponent({
   <hr class="utrecht-separator" v-bind="$attrs" />
 </template>
 
-<style src="@utrecht/separator-css/css/index.scss"></style>
+<style src="@utrecht/separator-css/dist/index.css"></style>
