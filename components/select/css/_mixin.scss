@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../common/focus/mixin";
+@import "~@utrecht/focus-ring-css/src/mixin";
 
 /* TODO: Enable ordering properties when the plugin supports logical CSS properties
  * https://github.com/hudochenkov/stylelint-order/pull/162 */

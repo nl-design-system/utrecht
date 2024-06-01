@@ -7,7 +7,7 @@
 // Avoid false positive for new CSS function `max()`
 /* stylelint-disable scss/no-global-function-names */
 
-@import "../../common/focus/mixin";
+@import "~@utrecht/focus-ring-css/src/mixin";
 @import "./mixin";
 
 .utrecht-link {

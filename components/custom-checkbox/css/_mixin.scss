@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../common/focus/mixin";
+@import "~@utrecht/focus-ring-css/src/mixin";
 
 @mixin utrecht-custom-checkbox {
   /*

@@ -4,7 +4,7 @@
  */
 
 @import "~@utrecht/link-css/css/mixin";
-@import "../../common/focus/mixin";
+@import "~@utrecht/focus-ring-css/src/mixin";
 
 @mixin utrecht-link-button {
   @include utrecht-link;
