@@ -7,15 +7,13 @@
 import clsx from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import { Heading } from './Heading';
-import { Link } from './Link';
 
 interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headingLevel: number;
-  title?: string;
+  title?: any;
   preHeading?: string;
   children?: any;
   image?: any;
-  href?: string;
   cardRole?: 'article' | string;
 }
 
@@ -25,22 +23,16 @@ export const CardListItem = ({
   title,
   preHeading,
   image,
-  href,
   cardRole,
   ...props
 }: PropsWithChildren<CardListItemProps>) => {
   const linkRef = React.useRef<HTMLAnchorElement>(null);
 
-  let headingContent: any = title;
-  if (typeof href === 'string') {
-    headingContent = <Link href={href}>{title}</Link>;
-  }
-
   let card = (
     <div className={'utrecht-card-list__item-content'}>
       <hgroup>
         <Heading level={headingLevel} className="utrecht-card-list__item-title">
-          {headingContent}
+          {title}
         </Heading>
         {preHeading && <p className="utrecht-card-list__item-pre-heading">{preHeading}</p>}
       </hgroup>

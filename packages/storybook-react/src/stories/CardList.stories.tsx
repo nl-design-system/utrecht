@@ -1,6 +1,7 @@
 // performance optimizations are not relevant for story rendering, ignore ESLint
 
 import { Meta, StoryObj } from '@storybook/react';
+import { Link } from '@utrecht/component-library-react';
 import { CardList, CardListItem, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
 import readme from '@utrecht/components/card-list/README.md?raw';
 import tokensDefinition from '@utrecht/components/card-list/tokens.json';
@@ -36,7 +37,7 @@ const meta = {
       </CardListItem>,
       <CardListItem
         headingLevel={2}
-        title="title 2"
+        title={<Link href="#">title 2</Link>}
         image={
           <img
             className="utrecht-card-list__item-image"
@@ -46,7 +47,6 @@ const meta = {
             alt="card image"
           />
         }
-        href="https://www.example.com"
       >
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi rutrum risus quis sem scelerisque rutrum.
       </CardListItem>,
