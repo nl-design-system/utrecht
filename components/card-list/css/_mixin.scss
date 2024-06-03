@@ -16,11 +16,11 @@
   block-size: 100%;
   inline-size: 100%;
   list-style: none;
-  margin-block-end: var(--utrecht-card-list-item-margin-block-end, 1em);
+  margin-block-end: var(--utrecht-card-list-item-margin-block-end, var(--utrecht-space-block-md));
   margin-block-start: var(--utrecht-card-list-item-margin-block-start);
   max-inline-size: var(--utrecht-card-list-item-max-inline-size, 350px);
   min-block-size: 312px;
-  padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, 1em);
+  padding-inline-start: var(--utrecht-card-list-item-padding-inline-start, var(--utrecht-space-inline-md));
 }
 
 @mixin utrecht-card-list__item--hover {
@@ -36,7 +36,7 @@
 }
 
 @mixin utrecht-card-list__item-title {
-  margin-block-end: var(--utrecht-card-list-item-title-margin-block-end, 1em);
+  margin-block-end: var(--utrecht-card-list-item-title-margin-block-end, var(--utrecht-space-block-md));
 }
 
 @mixin utrecht-card-list__item-title-link {
@@ -45,8 +45,8 @@
 
 @mixin utrecht-card-list__item-content {
   background-color: var(--utrecht-card-list-item-content-background-color);
-  padding-block-end: var(--utrecht-card-list-item-content-padding-block-end, 1em);
-  padding-block-start: var(--utrecht-card-list-item-content-padding-block-start, 1em);
-  padding-inline-end: var(--utrecht-card-list-item-content-padding-inline-end, 1em);
-  padding-inline-start: var(--utrecht-card-list-item-content-padding-inline-start, 1em);
+  padding-block-end: var(--utrecht-card-list-item-content-padding-block-end, var(--utrecht-space-block-md));
+  padding-block-start: var(--utrecht-card-list-item-content-padding-block-start, var(--utrecht-space-block-md));
+  padding-inline-end: var(--utrecht-card-list-item-content-padding-inline-end, var(--utrecht-space-inline-md));
+  padding-inline-start: var(--utrecht-card-list-item-content-padding-inline-start, var(--utrecht-space-inline-md));
 }

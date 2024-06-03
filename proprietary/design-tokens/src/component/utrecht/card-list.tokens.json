@@ -2,13 +2,13 @@
   "utrecht": {
     "card-list": {
       "margin-block-start": {},
-      "margin-block-end": { "value": "1em" },
+      "margin-block-end": { "value": "{utrecht.space.block.md}" },
       "padding-inline-start": {},
       "item": {
         "max-inline-size": { "value": "350px" },
         "margin-block-start": {},
-        "margin-block-end": { "value": "1em" },
-        "padding-inline-start": { "value": "1em" },
+        "margin-block-end": { "value": "{utrecht.space.block.md}" },
+        "padding-inline-start": { "value": "{utrecht.space.inline.md}" },
         "hover": {
           "cursor": { "value": "pointer" },
           "text-decoration": { "value": "underline" },
@@ -16,17 +16,17 @@
           "text-decoration-thickness": { "value": "3px" }
         },
         "title": {
-          "margin-block-end": { "value": "1em" }
+          "margin-block-end": { "value": "{utrecht.space.block.md}" }
         },
         "link": {
           "color": { "value": "{utrecht.color.blue.90}" }
         },
         "content": {
           "background-color": { "value": "{utrecht.color.blue.90}" },
-          "padding-inline-start": { "value": "1em" },
-          "padding-inline-end": { "value": "1em" },
-          "padding-block-start": { "value": "1em" },
-          "padding-block-end": { "value": "1em" }
+          "padding-inline-start": { "value": "{utrecht.space.inline.md}" },
+          "padding-inline-end": { "value": "{utrecht.space.inline.md}" },
+          "padding-block-start": { "value": "{utrecht.space.block.md}" },
+          "padding-block-end": { "value": "{utrecht.space.block.md}" }
         }
       }
     }
