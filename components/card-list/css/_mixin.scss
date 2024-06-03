@@ -1,6 +1,6 @@
 @mixin utrecht-card-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--utrecht-card-list-item-max-inline-size, 350px), 1fr));
   margin-block-end: calc(
     var(--utrecht-space-around, 0) *
       var(--utrecht-card-list-margin-block-end, var(--utrecht-paragraph-margin-block-end, 0))
