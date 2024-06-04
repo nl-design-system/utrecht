@@ -42,9 +42,8 @@ export default [
         globals: outputGlobals,
       },
     ],
-    external: [/@babel\/runtime/, 'react-dom', 'react'],
     plugins: [
-      peerDepsExternal({ includeDependencies: true }),
+      peerDepsExternal({ includeDependencies: false }),
       nodeExternal(),
       resolve({ browser: true }),
       commonjs({
