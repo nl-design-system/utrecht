@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import path from 'path';
 
 const config: StorybookConfig = {
   core: {
@@ -29,18 +30,22 @@ const config: StorybookConfig = {
     autodocs: true,
   },
   async viteFinal(config) {
-    // Workaround for `@storybook/addon-jest` with Vite
-    // https://github.com/storybookjs/storybook/issues/14856#issuecomment-1262333250
-    if (config.resolve) {
-      config.resolve = {
-        ...config.resolve,
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(config, {
+      resolve: {
         alias: {
-          ...config.resolve.alias,
+          '~@utrecht': path.resolve(__dirname, '../node_modules/@utrecht'),
           path: require.resolve('path-browserify'),
         },
-      };
-    }
-    return config;
+      },
+      css: {
+        preprocessorOptions: {
+          scss: {
+            includePaths: [path.resolve(__dirname, '../node_modules/@utrecht')],
+          },
+        },
+      },
+    });
   },
 };
 
