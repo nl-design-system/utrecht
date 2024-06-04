@@ -1,15 +1,15 @@
-@import "../../../components/article/css/mixin";
-@import "../../../components/heading-1/css/mixin";
-@import "../../../components/heading-2/css/mixin";
-@import "../../../components/heading-3/css/mixin";
-@import "../../../components/heading-4/css/mixin";
-@import "../../../components/paragraph/css/mixin";
-@import "../../../components/code/css/mixin";
-@import "../../../components/code-block/css/mixin";
-@import "../../../components/ordered-list/css/mixin";
-@import "../../../components/unordered-list/css/mixin";
-@import "../../../components/table/css/mixin";
-@import "../../../components/link/css/mixin";
+@import "@utrecht/article-css/css/mixin";
+@import "@utrecht/heading-1-css/css/mixin";
+@import "@utrecht/heading-2-css/css/mixin";
+@import "@utrecht/heading-3-css/css/mixin";
+@import "@utrecht/heading-4-css/css/mixin";
+@import "@utrecht/paragraph-css/css/mixin";
+@import "@utrecht/code-css/css/mixin";
+@import "@utrecht/code-block-css/css/mixin";
+@import "@utrecht/ordered-list-css/css/mixin";
+@import "@utrecht/unordered-list-css/css/mixin";
+@import "@utrecht/table-css/css/mixin";
+@import "@utrecht/link-css/css/mixin";
 
 /* allow `sbdocs` prefix */
 /* stylelint-disable selector-class-pattern */
