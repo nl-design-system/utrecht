@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/angular';
+import path from 'path';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
@@ -31,13 +32,29 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
   staticDirs: ['../../../proprietary/assets'],
-  webpackFinal: async (config) => ({
-    ...config,
-    performance: {
-      // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
-      hints: false,
-    },
-  }),
+  webpackFinal: async (config) => {
+    config.resolve = {
+      ...config.resolve,
+      alias: {
+        ...config.resolve?.alias,
+        '~@utrecht': path.resolve(__dirname, '../node_modules/@utrecht'),
+      },
+    };
+
+    config.module?.rules?.push({
+      test: /\.scss$/,
+      use: ['style-loader', 'css-loader', 'sass-loader'],
+      include: path.resolve(__dirname, '../node_modules/@utrecht'),
+    });
+
+    return {
+      ...config,
+      performance: {
+        // Disable warning for: "asset size exceeds the recommended limit (244 KiB)"
+        hints: false,
+      },
+    };
+  },
 };
 
 export default config;
