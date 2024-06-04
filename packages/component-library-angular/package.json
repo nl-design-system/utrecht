@@ -18,13 +18,13 @@
   "sideEffects": false,
   "scripts": {
     "build": "pnpm run '/^build:.*/'",
-    "build:components": "ng build",
+    "build:components": "ng build && pnpm test-results",
     "clean": "rimraf dist/ .angular/",
     "lint": "pnpm run '/^lint:.*/'",
     "lint:ts": "tsc --noEmit --project tsconfig.json",
     "lint:spec": "tsc --noEmit --project tsconfig.spec.json",
     "watch:build": "ng build --watch",
-    "build:test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
+    "test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
     "test": "jest --verbose",
     "test-build": "node test-exports.mjs",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
