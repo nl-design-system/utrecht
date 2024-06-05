@@ -1,0 +1,25 @@
+{
+  "version": "1.0.0",
+  "author": "Community for NL Design System",
+  "description": "URL data component for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/vega-visualization-css",
+  "files": [
+    "css/",
+    "dist/",
+    "html/"
+  ],
+  "scripts": {
+    "build": "rollup -c ../rollup.config.mjs",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "rollup": "3.29.4"
+  },
+  "keywords": [
+    "nl-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
