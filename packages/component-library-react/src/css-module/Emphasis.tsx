@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/emphasis/css/index.scss';
+import '@utrecht/emphasis-css/css/index.scss';
 
 export * from '../Emphasis';

@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/nav-bar/css/index.scss';
+import '@utrecht/nav-bar-css/css/index.scss';
 
 export * from '../NavBar';

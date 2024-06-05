@@ -3,6 +3,6 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-import '../../../../components/logo/css/index.scss';
+import '@utrecht/logo-css/css/index.scss';
 
 export * from '../Logo';

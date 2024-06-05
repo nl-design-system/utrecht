@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/multiline-data/css/index.scss';
+import '@utrecht/multiline-data-css/css/index.scss';
 
 export * from '../MultilineData';

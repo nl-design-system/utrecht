@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/drawer/css/index.scss';
+import '@utrecht/drawer-css/css/index.scss';
 
 export * from '../Drawer';

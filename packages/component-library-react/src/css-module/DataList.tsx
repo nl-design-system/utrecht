@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/data-list/css/index.scss';
+import '@utrecht/data-list-css/css/index.scss';
 
 export * from '../DataList';

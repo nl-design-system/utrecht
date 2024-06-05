@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/spotlight-section/css/index.scss';
+import '@utrecht/spotlight-section-css/css/index.scss';
 
 export * from '../SpotlightSection';

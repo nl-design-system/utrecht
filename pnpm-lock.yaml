@@ -1585,12 +1585,18 @@ importers:
       '@utrecht/icon':
         specifier: workspace:*
         version: link:../../components/icon
+      '@utrecht/img-css':
+        specifier: workspace:*
+        version: link:../../components/img
       '@utrecht/index-char-nav-css':
         specifier: workspace:*
         version: link:../../components/index-char-nav
       '@utrecht/link-button-css':
         specifier: workspace:*
         version: link:../../components/link-button
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../../components/link
       '@utrecht/link-list-css':
         specifier: workspace:*
         version: link:../../components/link-list
@@ -1606,6 +1612,9 @@ importers:
       '@utrecht/logo-button-css':
         specifier: workspace:*
         version: link:../../components/logo-button
+      '@utrecht/logo-css':
+        specifier: workspace:*
+        version: link:../../components/logo
       '@utrecht/logo-image-css':
         specifier: workspace:*
         version: link:../../components/logo-image
@@ -1615,6 +1624,9 @@ importers:
       '@utrecht/map-marker-css':
         specifier: workspace:*
         version: link:../../components/map-marker
+      '@utrecht/mark-css':
+        specifier: workspace:*
+        version: link:../../components/mark
       '@utrecht/multiline-data-css':
         specifier: workspace:*
         version: link:../../components/multiline-data
@@ -1633,6 +1645,9 @@ importers:
       '@utrecht/page-content-css':
         specifier: workspace:*
         version: link:../../components/page-content
+      '@utrecht/page-css':
+        specifier: workspace:*
+        version: link:../../components/page
       '@utrecht/page-footer-css':
         specifier: workspace:*
         version: link:../../components/page-footer
@@ -1657,6 +1672,9 @@ importers:
       '@utrecht/search-bar-css':
         specifier: workspace:*
         version: link:../../components/search-bar
+      '@utrecht/select-css':
+        specifier: workspace:*
+        version: link:../../components/select
       '@utrecht/separator-css':
         specifier: workspace:*
         version: link:../../components/separator
@@ -1669,6 +1687,9 @@ importers:
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface
+      '@utrecht/table-css':
+        specifier: workspace:*
+        version: link:../../components/table
       '@utrecht/textarea-css':
         specifier: workspace:*
         version: link:../../components/textarea
@@ -1687,6 +1708,9 @@ importers:
       '@utrecht/url-data-css':
         specifier: workspace:*
         version: link:../../components/url-data
+      '@utrecht/vega-visualization-css':
+        specifier: workspace:*
+        version: link:../../components/vega-visualization
       date-fns:
         specifier: 2.30.0
         version: 2.30.0

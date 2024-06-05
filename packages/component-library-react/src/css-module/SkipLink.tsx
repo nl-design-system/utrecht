@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/skip-link/css/index.scss';
+import '@utrecht/skip-link-css/css/index.scss';
 
 export * from '../SkipLink';

@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/badge-data/css/index.scss';
+import '@utrecht/badge-data-css/css/index.scss';
 
 export * from '../DataBadge';

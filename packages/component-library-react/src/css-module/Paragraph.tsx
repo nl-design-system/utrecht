@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/paragraph/css/index.scss';
+import '@utrecht/paragraph-css/css/index.scss';
 
 export * from '../Paragraph';

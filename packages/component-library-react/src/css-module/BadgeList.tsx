@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/badge-list/css/index.scss';
+import '@utrecht/badge-list-css/css/index.scss';
 
 export * from '../BadgeList';

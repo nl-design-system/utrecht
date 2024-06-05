@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/form-fieldset/css/index.scss';
+import '@utrecht/form-fieldset-css/css/index.scss';
 
 export * from '../FieldsetLegend';

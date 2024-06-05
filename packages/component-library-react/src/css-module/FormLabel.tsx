@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/form-label/css/index.scss';
+import '@utrecht/form-label-css/css/index.scss';
 
 export * from '../FormLabel';
