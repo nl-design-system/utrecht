@@ -5,7 +5,7 @@
  * Copyright (c) 2021 The Knights Who Say NIH! B.V.
  */
 
-@import "../../heading/css/mixin";
+@import "~@utrecht/heading-css/css/mixin";
 
 @mixin utrecht-heading-3 {
   @include utrecht-heading;
