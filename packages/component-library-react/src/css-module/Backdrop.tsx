@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/backdrop/css/index.scss';
+import '@utrecht/backdrop-css/css/index.scss';
 
 export * from '../Backdrop';

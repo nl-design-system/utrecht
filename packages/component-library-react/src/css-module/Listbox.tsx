@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/listbox/css/index.scss';
+import '@utrecht/listbox-css/css/index.scss';
 
 export * from '../Listbox';

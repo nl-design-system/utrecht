@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/surface/css/index.scss';
+import '@utrecht/surface-css/css/index.scss';
 
 export * from '../Surface';

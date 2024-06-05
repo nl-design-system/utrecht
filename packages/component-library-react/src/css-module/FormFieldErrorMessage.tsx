@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/form-field-error-message/css/index.scss';
+import '@utrecht/form-field-error-message-css/css/index.scss';
 
 export * from '../FormFieldErrorMessage';

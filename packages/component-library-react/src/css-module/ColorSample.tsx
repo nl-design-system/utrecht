@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/color-sample/css/index.scss';
+import '@utrecht/color-sample-css/css/index.scss';
 
 export * from '../ColorSample';

@@ -3,6 +3,6 @@
  * Copyright (c) 2024 Frameless B.V.
  */
 
-import '../../../../components/table/css/index.scss';
+import '@utrecht/table-css/css/index.scss';
 
 export * from '../TableContainer';

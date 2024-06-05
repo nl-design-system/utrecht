@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/page/css/index.scss';
+import '@utrecht/page-css/css/index.scss';
 
 export * from '../Page';

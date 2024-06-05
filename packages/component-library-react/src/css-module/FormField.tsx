@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/form-field/css/index.scss';
+import '@utrecht/form-field-css/css/index.scss';
 
 export * from '../FormField';

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/checkbox/css/index.scss';
-import '../../../../components/custom-checkbox/css/index.scss';
+import '@utrecht/custom-checkbox-css/css/index.scss';
+import '@utrecht/checkbox-css/css/index.scss';
 
 export * from '../Checkbox';

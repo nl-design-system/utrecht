@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/select/css/index.scss';
+import '@utrecht/select-css/css/index.scss';
 
 export * from '../Select';

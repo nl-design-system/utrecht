@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/code-block/css/index.scss';
+import '@utrecht/code-block-css/css/index.scss';
 
 export * from '../CodeBlock';

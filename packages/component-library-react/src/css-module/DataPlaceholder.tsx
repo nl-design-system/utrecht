@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/data-placeholder/css/index.scss';
+import '@utrecht/data-placeholder-css/css/index.scss';
 
 export * from '../DataPlaceholder';

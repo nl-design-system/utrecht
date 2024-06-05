@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/breadcrumb-nav/css/index.scss';
+import '@utrecht/breadcrumb-nav-css/css/index.scss';
 
 export * from '../BreadcrumbNav';

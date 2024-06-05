@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/link-social/css/index.scss';
+import '@utrecht/link-social-css/css/index.scss';
 
 export * from '../LinkSocial';

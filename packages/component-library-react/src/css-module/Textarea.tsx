@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/textarea/css/index.scss';
+import '@utrecht/textarea-css/css/index.scss';
 
 export * from '../Textarea';

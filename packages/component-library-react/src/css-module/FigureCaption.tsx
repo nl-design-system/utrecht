@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/figure/css/index.scss';
+import '@utrecht/figure-css/css/index.scss';
 
 export * from '../FigureCaption';

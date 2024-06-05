@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/form-toggle/css/index.scss';
+import '@utrecht/form-toggle-css/css/index.scss';
 
 export * from '../FormToggle';

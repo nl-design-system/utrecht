@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/alert-dialog/css/index.scss';
+import '@utrecht/alert-dialog-css/css/index.scss';
 
 export * from '../AlertDialog';
