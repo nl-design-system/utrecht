@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "../../backdrop/css/mixin";
+@import "~@utrecht/backdrop-css/css/mixin";
 
 @mixin utrecht-drawer {
   /* minimum size for backdrop with light-dismiss is 44px x 44px to meet WCAG SC 2.5.5 */

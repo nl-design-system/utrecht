@@ -4,8 +4,8 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "../../alert/css/mixin";
-@import "../../backdrop/css/mixin";
+@import "~@utrecht/alert-css/css/mixin";
+@import "~@utrecht/backdrop-css/css/mixin";
 
 @mixin utrecht-alert-dialog {
   --utrecht-alert-dialog-margin-block-start: auto;
