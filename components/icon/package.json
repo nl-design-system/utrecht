@@ -8,6 +8,7 @@
     "dist/",
     "loader/"
   ],
+  "main": "dist/index.css",
   "scripts": {
     "build": "pnpm run build:css && pnpm run build:svg && pnpm run build:components",
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../../packages/web-component-library-stencil/src/components/generated/",
