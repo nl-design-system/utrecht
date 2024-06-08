@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/color-sample-css/README.md?raw';
+import tokensDefinition from '@utrecht/color-sample-css/src/tokens.json';
 import { ColorSample } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/color-sample/README.md?raw';
-import tokensDefinition from '@utrecht/components/color-sample/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';
 

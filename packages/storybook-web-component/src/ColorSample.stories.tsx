@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/color-sample/README.md?raw';
-import tokensDefinition from '@utrecht/components/color-sample/tokens.json';
+import readme from '@utrecht/color-sample-css/README.md?raw';
+import tokensDefinition from '@utrecht/color-sample-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtColorSample } from '@utrecht/web-component-library-react';
 import React from 'react';

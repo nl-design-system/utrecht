@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/map-marker/README.md?raw';
-import tokensDefinition from '@utrecht/components/map-marker/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import readme from '@utrecht/map-marker-css/README.md?raw';
+import tokensDefinition from '@utrecht/map-marker-css/src/tokens.json';
 import React, { PropsWithChildren } from 'react';
 import { MapMarker } from './MapMarker';
 import { designTokenStory } from './design-token-story';

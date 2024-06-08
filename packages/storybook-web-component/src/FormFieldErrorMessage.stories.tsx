@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/form-field-error-message/README.md?raw';
-import tokensDefinition from '@utrecht/components/form-field-error-message/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/form-field-error-message-css/README.md?raw';
+import tokensDefinition from '@utrecht/form-field-error-message-css/src/tokens.json';
 import { UtrechtFormFieldErrorMessage } from '@utrecht/web-component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';

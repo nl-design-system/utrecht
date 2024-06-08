@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import tokensDefinition from '@utrecht/badge-data-css/src/tokens.json';
+import readme from '@utrecht/badge-status-css/README.md?raw';
 import { Paragraph, StatusBadge } from '@utrecht/component-library-react/dist/css-module';
-import tokensDefinition from '@utrecht/components/badge-data/tokens.json';
-import readme from '@utrecht/components/badge-status/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';

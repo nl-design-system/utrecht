@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Page } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/page/README.md?raw';
-import tokensDefinition from '@utrecht/components/page/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/page-css/README.md?raw';
+import tokensDefinition from '@utrecht/page-css/src/tokens.json';
 import React from 'react';
 import { Default as PageContent } from './PageContent.stories';
 import { Default as PageHeader } from './PageContent.stories';

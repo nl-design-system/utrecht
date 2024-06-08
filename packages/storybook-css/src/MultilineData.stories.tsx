@@ -3,9 +3,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { MultilineData } from '@utrecht/component-library-react';
 import type { MultilineDataProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/multiline-data/README.md?raw';
-import tokensDefinition from '@utrecht/components/multiline-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/multiline-data-css/README.md?raw';
+import tokensDefinition from '@utrecht/multiline-data-css/src/tokens.json';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';

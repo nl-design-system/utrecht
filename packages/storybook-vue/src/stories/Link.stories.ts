@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Link } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/link/README.md?raw';
-import tokens from '@utrecht/components/link/tokens.json';
+import readme from '@utrecht/link-css/README.md?raw';
+import tokens from '@utrecht/link-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

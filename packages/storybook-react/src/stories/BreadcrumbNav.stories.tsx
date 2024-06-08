@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/breadcrumb-nav-css/README.md?raw';
+import tokensDefinition from '@utrecht/breadcrumb-nav-css/src/tokens.json';
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
 } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
-import tokensDefinition from '@utrecht/components/breadcrumb-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import clsx from 'clsx';

@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/button/README.md?raw';
-import tokensDefinition from '@utrecht/components/button/tokens.json';
+import readme from '@utrecht/button-css/README.md?raw';
+import tokensDefinition from '@utrecht/button-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import buttonDisabledTabindexMarkdown from './_button-disabled-tabindex.md?raw';

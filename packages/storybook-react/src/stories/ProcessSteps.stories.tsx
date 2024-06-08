@@ -1,7 +1,7 @@
 import Status from '@gemeente-denhaag/process-steps';
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/process-steps/README.md?raw';
-import tokensDefinition from '@utrecht/components/process-steps/tokens.json';
+import tokensDefinition from '@utrecht/components/process-steps/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';
 import '@gemeente-denhaag/process-steps/index.css';

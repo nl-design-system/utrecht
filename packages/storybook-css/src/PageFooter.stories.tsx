@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Heading2, Heading3, Link, PageFooter, Paragraph, Strong } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/page-footer/README.md?raw';
-import tokensDefinition from '@utrecht/components/page-footer/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/page-footer-css/README.md?raw';
+import tokensDefinition from '@utrecht/page-footer-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

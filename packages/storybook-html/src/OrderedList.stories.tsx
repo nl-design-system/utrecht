@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/ordered-list/README.md?raw';
-import tokensDefinition from '@utrecht/components/ordered-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/ordered-list-css/README.md?raw';
+import tokensDefinition from '@utrecht/ordered-list-css/src/tokens.json';
 import React, { LiHTMLAttributes, OlHTMLAttributes, PropsWithChildren } from 'react';
 import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';

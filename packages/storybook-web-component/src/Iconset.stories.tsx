@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/icon/iconset.md?raw';
-import tokensDefinition from '@utrecht/components/icon/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import readme from '@utrecht/icon/iconset.md?raw';
+import tokensDefinition from '@utrecht/icon/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

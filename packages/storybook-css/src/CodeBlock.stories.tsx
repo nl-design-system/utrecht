@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/code-block-css/README.md?raw';
+import tokensDefinition from '@utrecht/code-block-css/src/tokens.json';
 import { CodeBlock } from '@utrecht/component-library-react';
 import type { CodeBlockProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/code-block/README.md?raw';
-import tokensDefinition from '@utrecht/components/code-block/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';

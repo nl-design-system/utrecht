@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/logo-button/README.md?raw';
-import tokensDefinition from '@utrecht/components/logo-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/logo-button-css/README.md?raw';
+import tokensDefinition from '@utrecht/logo-button-css/src/tokens.json';
 import React from 'react';
 import { LogoButton } from './LogoButton';
 import type { LogoButtonProps } from './LogoButton';

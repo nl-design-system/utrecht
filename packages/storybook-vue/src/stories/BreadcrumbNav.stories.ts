@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
+import readme from '@utrecht/breadcrumb-nav-css/README.md?raw';
+import tokens from '@utrecht/breadcrumb-nav-css/src/tokens.json';
 import { BreadcrumbNav, BreadcrumbNavLink, Heading } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/breadcrumb-nav/README.md?raw';
-import tokens from '@utrecht/components/breadcrumb-nav/tokens.json';
 import { createStory } from './util';
 
 const meta = {

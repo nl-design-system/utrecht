@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { NumberData } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/number-data/README.md?raw';
-import tokensDefinition from '@utrecht/components/number-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/number-data-css/README.md?raw';
+import tokensDefinition from '@utrecht/number-data-css/src/tokens.json';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';

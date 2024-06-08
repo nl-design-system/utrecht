@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/radio-button/README.md?raw';
-import tokensDefinition from '@utrecht/components/radio-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/radio-button-css/README.md?raw';
+import tokensDefinition from '@utrecht/radio-button-css/src/tokens.json';
 import React, { InputHTMLAttributes } from 'react';
 import hiddenDocs from './_hidden.md?raw';
 import { htmlContentDecorator } from './decorator';

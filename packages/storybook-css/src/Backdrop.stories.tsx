@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/backdrop-css/README.md?raw';
+import tokensDefinition from '@utrecht/backdrop-css/src/tokens.json';
 import { Backdrop } from '@utrecht/component-library-react';
 import type { BackdropProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/backdrop/README.md?raw';
-import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React, { PropsWithChildren } from 'react';

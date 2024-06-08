@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/button-link/README.md?raw';
-import tokensDefinition from '@utrecht/components/button-link/tokens.json';
+import readme from '@utrecht/button-link-css/README.md?raw';
+import tokensDefinition from '@utrecht/button-link-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtButtonLink } from '@utrecht/web-component-library-react';
 import React from 'react';

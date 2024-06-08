@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Surface } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/surface/README.md?raw';
-import tokensDefinition from '@utrecht/components/surface/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/surface-css/README.md?raw';
+import tokensDefinition from '@utrecht/surface-css/src/tokens.json';
 import { designTokenStory } from './util';
 
 const meta = {

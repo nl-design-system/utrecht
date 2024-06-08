@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/article-css/README.md?raw';
+import tokensDefinition from '@utrecht/article-css/src/tokens.json';
 import { Article, Heading1, Paragraph } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/article/README.md?raw';
-import tokensDefinition from '@utrecht/components/article/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';

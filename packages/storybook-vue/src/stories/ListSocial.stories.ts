@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { LinkSocial, ListSocial, ListSocialItem } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/link-social/README.md?raw';
-import tokens from '@utrecht/components/link-social/tokens.json';
+import readme from '@utrecht/link-social-css/README.md?raw';
+import tokens from '@utrecht/link-social-css/src/tokens.json';
 import {
   UtrechtIconFacebook,
   UtrechtIconInstagram,

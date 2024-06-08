@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Separator } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/separator/README.md?raw';
-import tokens from '@utrecht/components/separator/tokens.json';
+import readme from '@utrecht/separator-css/README.md?raw';
+import tokens from '@utrecht/separator-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

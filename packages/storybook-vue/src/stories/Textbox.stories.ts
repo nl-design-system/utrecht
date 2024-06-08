@@ -1,8 +1,8 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Textbox } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/textbox/README.md?raw';
-import tokens from '@utrecht/components/textbox/tokens.json';
+import readme from '@utrecht/textbox-css/README.md?raw';
+import tokens from '@utrecht/textbox-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

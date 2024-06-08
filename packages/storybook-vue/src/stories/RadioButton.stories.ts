@@ -1,8 +1,8 @@
 import { action } from '@storybook/addon-actions';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { RadioButton } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/radio-button/README.md?raw';
-import tokens from '@utrecht/components/radio-button/tokens.json';
+import readme from '@utrecht/radio-button-css/README.md?raw';
+import tokens from '@utrecht/radio-button-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

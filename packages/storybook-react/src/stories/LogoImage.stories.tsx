@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { LogoImage } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/logo-image/README.md?raw';
-import tokensDefinition from '@utrecht/components/logo-image/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/logo-image-css/README.md?raw';
+import tokensDefinition from '@utrecht/logo-image-css/src/tokens.json';
 import { designTokenStory } from './util';
 
 const meta = {

@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
+import readme from '@utrecht/badge-status-css/README.md?raw';
+import tokens from '@utrecht/badge-status-css/src/tokens.json';
 import { BadgeStatus } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/badge-status/README.md?raw';
-import tokens from '@utrecht/components/badge-status/tokens.json';
 import { createStory } from './util';
 
 const meta = {

@@ -2,10 +2,10 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/paragraph/README.md?raw';
-import leadParagraphDocs from '@utrecht/components/paragraph/_lead.md?raw';
-import tokensDefinition from '@utrecht/components/paragraph/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/paragraph-css/README.md?raw';
+import leadParagraphDocs from '@utrecht/paragraph-css/_lead.md?raw';
+import tokensDefinition from '@utrecht/paragraph-css/src/tokens.json';
 import { designTokenStory } from './design-token-story';
 
 const meta = {

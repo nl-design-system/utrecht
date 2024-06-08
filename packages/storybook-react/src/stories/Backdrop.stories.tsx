@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/backdrop-css/README.md?raw';
+import tokensDefinition from '@utrecht/backdrop-css/src/tokens.json';
 import { AlertDialog, Backdrop, Button, Paragraph } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/backdrop/README.md?raw';
-import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';

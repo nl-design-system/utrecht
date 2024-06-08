@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Paragraph, PreserveData } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/preserve-data/README.md?raw';
-import tokensDefinition from '@utrecht/components/preserve-data/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/preserve-data-css/README.md?raw';
+import tokensDefinition from '@utrecht/preserve-data-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './util';
 

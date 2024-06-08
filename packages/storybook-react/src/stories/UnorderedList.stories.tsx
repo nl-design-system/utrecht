@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/unordered-list/README.md?raw';
-import tokensDefinition from '@utrecht/components/unordered-list/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/unordered-list-css/README.md?raw';
+import tokensDefinition from '@utrecht/unordered-list-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './util';
 

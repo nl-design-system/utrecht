@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/pagination/README.md?raw';
-import tokensDefinition from '@utrecht/components/pagination/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/pagination-css/README.md?raw';
+import tokensDefinition from '@utrecht/pagination-css/src/tokens.json';
 import { Pagination } from './Pagination';
 import { designTokenStory } from './design-token-story';
 

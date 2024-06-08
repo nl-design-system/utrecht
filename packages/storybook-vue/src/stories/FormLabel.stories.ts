@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { FormLabel } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/form-label/README.md?raw';
-import tokens from '@utrecht/components/form-label/tokens.json';
+import readme from '@utrecht/form-label-css/README.md?raw';
+import tokens from '@utrecht/form-label-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

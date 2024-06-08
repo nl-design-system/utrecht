@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/unordered-list/README.md?raw';
-import tokens from '@utrecht/components/unordered-list/tokens.json';
+import readme from '@utrecht/unordered-list-css/README.md?raw';
+import tokens from '@utrecht/unordered-list-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

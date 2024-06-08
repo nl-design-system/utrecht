@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
+import tokens from '@utrecht/button-css/src/tokens.json';
 import { Button } from '@utrecht/component-library-vue';
-import tokens from '@utrecht/components/button/tokens.json';
 import { createStory } from './util';
 
 const meta = {

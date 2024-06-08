@@ -1,5 +1,7 @@
 import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
 import { PartialStoryFn } from '@storybook/types';
+import readme from '@utrecht/alert-dialog-css/README.md?raw';
+import tokensDefinition from '@utrecht/alert-dialog-css/src/tokens.json';
 import {
   AlertDialog,
   Button,
@@ -10,8 +12,6 @@ import {
   SecondaryActionButton,
 } from '@utrecht/component-library-react';
 import type { AlertDialogProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/alert-dialog/README.md?raw';
-import tokensDefinition from '@utrecht/components/alert-dialog/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { createRef, useState } from 'react';
 import { designTokenStory } from './design-token-story';

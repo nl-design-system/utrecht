@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/backdrop/README.md?raw';
-import tokensDefinition from '@utrecht/components/backdrop/tokens.json';
+import readme from '@utrecht/backdrop-css/README.md?raw';
+import tokensDefinition from '@utrecht/backdrop-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtBackdrop } from '@utrecht/web-component-library-react';
 import React from 'react';

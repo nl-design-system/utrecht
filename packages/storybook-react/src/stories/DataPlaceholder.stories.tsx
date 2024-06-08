@@ -2,8 +2,8 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import { DataPlaceholder } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/data-placeholder/README.md?raw';
-import tokensDefinition from '@utrecht/components/data-placeholder/tokens.json';
+import readme from '@utrecht/data-placeholder-css/README.md?raw';
+import tokensDefinition from '@utrecht/data-placeholder-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';
 

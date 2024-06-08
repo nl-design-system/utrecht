@@ -2,12 +2,12 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Article, Heading2, Icon, Link, Paragraph, URLData } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/link/README.md?raw';
-import diacriticsDocs from '@utrecht/components/link/_diacritics.md?raw';
-import externalDocs from '@utrecht/components/link/_external.md?raw';
-import placeholderDocs from '@utrecht/components/link/_placeholder.md?raw';
-import tokensDefinition from '@utrecht/components/link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/link-css/README.md?raw';
+import diacriticsDocs from '@utrecht/link-css/_diacritics.md?raw';
+import externalDocs from '@utrecht/link-css/_external.md?raw';
+import placeholderDocs from '@utrecht/link-css/_placeholder.md?raw';
+import tokensDefinition from '@utrecht/link-css/src/tokens.json';
 import React from 'react';
 import { LinkStory } from './Link';
 import { designTokenStory } from './design-token-story';

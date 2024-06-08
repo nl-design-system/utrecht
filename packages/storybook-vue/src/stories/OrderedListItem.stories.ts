@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { OrderedList, OrderedListItem } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/ordered-list/README.md?raw';
-import tokens from '@utrecht/components/ordered-list/tokens.json';
+import readme from '@utrecht/ordered-list-css/README.md?raw';
+import tokens from '@utrecht/ordered-list-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

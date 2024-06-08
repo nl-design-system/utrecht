@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { FormFieldErrorMessage, Paragraph } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/form-field-error-message/README.md?raw';
-import tokensDefinition from '@utrecht/components/form-field-error-message/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/form-field-error-message-css/README.md?raw';
+import tokensDefinition from '@utrecht/form-field-error-message-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
