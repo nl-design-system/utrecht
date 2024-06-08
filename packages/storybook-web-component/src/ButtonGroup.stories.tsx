@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/button-group/README.md?raw';
-import tokensDefinition from '@utrecht/components/button-group/tokens.json';
+import readme from '@utrecht/button-group-css/README.md?raw';
+import tokensDefinition from '@utrecht/button-group-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import {
   UtrechtButton,

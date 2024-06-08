@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/badge-counter-css/README.md?raw';
+import tokensDefinition from '@utrecht/badge-counter-css/src/tokens.json';
 import type { BadgeCounterProps } from '@utrecht/component-library-react';
 import { BadgeCounter } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/badge-counter/README.md?raw';
-import tokensDefinition from '@utrecht/components/badge-counter/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';

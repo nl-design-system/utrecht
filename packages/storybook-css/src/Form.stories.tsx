@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/form/README.md?raw';
-import tokensDefinition from '@utrecht/components/form/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/form-css/README.md?raw';
+import tokensDefinition from '@utrecht/form-css/src/tokens.json';
 import React, { PropsWithChildren, ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 

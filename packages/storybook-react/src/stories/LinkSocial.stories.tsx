@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { LinkSocial } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/link-social/README.md?raw';
-import tokensDefinition from '@utrecht/components/link-social/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/link-social-css/README.md?raw';
+import tokensDefinition from '@utrecht/link-social-css/src/tokens.json';
 import { UtrechtIconFacebook } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './util';

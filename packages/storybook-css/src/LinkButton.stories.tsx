@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Icon, Paragraph } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/link-button/README.md?raw';
-import tokensDefinition from '@utrecht/components/link-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import readme from '@utrecht/link-button-css/README.md?raw';
+import tokensDefinition from '@utrecht/link-button-css/src/tokens.json';
 import React from 'react';
 import { LinkButtonStory } from './LinkButton';
 import { designTokenStory } from './design-token-story';

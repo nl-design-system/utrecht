@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Page, PageContent, PageFooter, PageHeader, Paragraph } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/page/README.md?raw';
-import tokens from '@utrecht/components/page/tokens.json';
+import readme from '@utrecht/page-css/README.md?raw';
+import tokens from '@utrecht/page-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

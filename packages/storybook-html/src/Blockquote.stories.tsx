@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/blockquote/README.md?raw';
-import tokensDefinition from '@utrecht/components/blockquote/tokens.json';
+import readme from '@utrecht/blockquote-css/README.md?raw';
+import tokensDefinition from '@utrecht/blockquote-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import hiddenDocs from './_hidden.md?raw';

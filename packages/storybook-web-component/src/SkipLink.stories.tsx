@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/skip-link/README.md?raw';
-import tokensDefinition from '@utrecht/components/skip-link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/skip-link-css/README.md?raw';
+import tokensDefinition from '@utrecht/skip-link-css/src/tokens.json';
 import { UtrechtSkipLink } from '@utrecht/web-component-library-react';
 import { designTokenStory } from './design-token-story';
 

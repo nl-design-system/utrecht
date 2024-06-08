@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import tokensDefinition from '@utrecht/components/logo-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokensDefinition from '@utrecht/logo-button-css/src/tokens.json';
 import {
   UtrechtButton,
   UtrechtDigidLogo,

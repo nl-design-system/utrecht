@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/components/navigatie topnav/README.md?raw';
-import tokensDefinition from '@utrecht/components/navigatie topnav/tokens.json';
+import tokensDefinition from '@utrecht/components/navigatie topnav/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';

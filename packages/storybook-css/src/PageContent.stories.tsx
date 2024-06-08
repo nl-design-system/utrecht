@@ -13,9 +13,9 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/page-content/README.md?raw';
-import tokensDefinition from '@utrecht/components/page-content/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/page-content-css/README.md?raw';
+import tokensDefinition from '@utrecht/page-content-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

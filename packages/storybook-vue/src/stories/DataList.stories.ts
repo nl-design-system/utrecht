@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { DataList, DataListItem, DataListKey, DataListValue } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/data-list/README.md?raw';
-import tokens from '@utrecht/components/data-list/tokens.json';
-import tokensDefinition from '@utrecht/components/data-list/tokens.json';
+import readme from '@utrecht/data-list-css/README.md?raw';
+import tokens from '@utrecht/data-list-css/src/tokens.json';
+import tokensDefinition from '@utrecht/data-list-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

@@ -3,10 +3,10 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { Select, SelectOption } from '@utrecht/component-library-react';
 import type { SelectProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/select/README.md?raw';
-import multipleDocs from '@utrecht/components/select/_multiple.md?raw';
-import tokensDefinition from '@utrecht/components/select/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/select-css/README.md?raw';
+import multipleDocs from '@utrecht/select-css/_multiple.md?raw';
+import tokensDefinition from '@utrecht/select-css/src/tokens.json';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';

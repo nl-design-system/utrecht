@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Article, Link, Paragraph } from '@utrecht/component-library-react';
-import articleDocs from '@utrecht/components/link/_article.md?raw';
+import articleDocs from '@utrecht/link-css/_article.md?raw';
 import React from 'react';
 import { LinkStory } from './Link';
 import './ArticleLink.scss';

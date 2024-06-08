@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { NavBar, NavList, NavListLink } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/nav-bar/README.md?raw';
-import tokensDefinition from '@utrecht/components/nav-bar/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/nav-bar-css/README.md?raw';
+import tokensDefinition from '@utrecht/nav-bar-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

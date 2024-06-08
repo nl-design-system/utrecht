@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { PageHeader } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/page-header/README.md?raw';
-import tokensDefinition from '@utrecht/components/page-header/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/page-header-css/README.md?raw';
+import tokensDefinition from '@utrecht/page-header-css/src/tokens.json';
 import { designTokenStory } from './design-token-story';
 
 const meta = {

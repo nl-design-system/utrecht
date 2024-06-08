@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Textarea } from '@utrecht/component-library-react/dist/css-module/index';
-import readme from '@utrecht/components/textarea/README.md?raw';
-import tokensDefinition from '@utrecht/components/textarea/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/textarea-css/README.md?raw';
+import tokensDefinition from '@utrecht/textarea-css/src/tokens.json';
 import { designTokenStory } from './util';
 
 const meta = {

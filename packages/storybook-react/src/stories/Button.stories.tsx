@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/button-css/README.md?raw';
+import tokensDefinition from '@utrecht/button-css/src/tokens.json';
 import { Button } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/button/README.md?raw';
-import tokensDefinition from '@utrecht/components/button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { designTokenStory } from './util';
 

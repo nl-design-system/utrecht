@@ -3,9 +3,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Mark } from '@utrecht/component-library-react';
 import type { MarkProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/mark/README.md?raw';
-import tokensDefinition from '@utrecht/components/mark/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/mark-css/README.md?raw';
+import tokensDefinition from '@utrecht/mark-css/src/tokens.json';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Link } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/link/README.md?raw';
-import tokensDefinition from '@utrecht/components/link/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/link-css/README.md?raw';
+import tokensDefinition from '@utrecht/link-css/src/tokens.json';
 import { designTokenStory } from './util';
 
 const meta = {

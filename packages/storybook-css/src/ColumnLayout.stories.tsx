@@ -1,4 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/column-layout-css/README.md?raw';
+import tokensDefinition from '@utrecht/column-layout-css/src/tokens.json';
 import {
   Article,
   Button,
@@ -13,8 +15,6 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/column-layout/README.md?raw';
-import tokensDefinition from '@utrecht/components/column-layout/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';

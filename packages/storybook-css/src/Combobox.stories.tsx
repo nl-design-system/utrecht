@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { PartialStoryFn } from '@storybook/types';
+import comboboxDocs from '@utrecht/combobox-css/README.md?raw';
+import defaultDocs from '@utrecht/combobox-css/_default.md?raw';
+import expandedDocs from '@utrecht/combobox-css/_expanded.md?raw';
+import optionActiveDocs from '@utrecht/combobox-css/_option-active.md?raw';
+import optionSelectedDocs from '@utrecht/combobox-css/_option-selected.md?raw';
 import { ColorSample } from '@utrecht/component-library-react';
-import comboboxDocs from '@utrecht/components/combobox/README.md?raw';
-import defaultDocs from '@utrecht/components/combobox/_default.md?raw';
-import expandedDocs from '@utrecht/components/combobox/_expanded.md?raw';
-import optionActiveDocs from '@utrecht/components/combobox/_option-active.md?raw';
-import optionSelectedDocs from '@utrecht/components/combobox/_option-selected.md?raw';
 import React, { ReactNode } from 'react';
 import { ComboboxStory } from './Combobox';
 import { FontSample } from './FontSample';

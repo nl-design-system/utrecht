@@ -9,8 +9,8 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/table/README.md?raw';
-import tokens from '@utrecht/components/table/tokens.json';
+import readme from '@utrecht/table-css/README.md?raw';
+import tokens from '@utrecht/table-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

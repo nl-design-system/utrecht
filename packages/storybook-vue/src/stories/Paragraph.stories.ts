@@ -1,7 +1,7 @@
 import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Paragraph } from '@utrecht/component-library-vue';
-import tokens from '@utrecht/components/paragraph/tokens.json';
+import tokens from '@utrecht/paragraph-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

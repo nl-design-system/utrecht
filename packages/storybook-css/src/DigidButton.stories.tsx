@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/digid-button/README.md?raw';
-import tokensDefinition from '@utrecht/components/digid-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/digid-button-css/README.md?raw';
+import tokensDefinition from '@utrecht/digid-button-css/src/tokens.json';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 

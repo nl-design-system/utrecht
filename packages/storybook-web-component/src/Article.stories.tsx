@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/article/README.md?raw';
-import tokensDefinition from '@utrecht/components/article/tokens.json';
+import readme from '@utrecht/article-css/README.md?raw';
+import tokensDefinition from '@utrecht/article-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtArticle, UtrechtHeading1, UtrechtParagraph } from '@utrecht/web-component-library-react';
 import React from 'react';

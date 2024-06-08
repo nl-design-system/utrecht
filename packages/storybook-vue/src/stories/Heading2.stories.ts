@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Heading2 } from '@utrecht/component-library-vue';
-import tokens from '@utrecht/components/heading-1/tokens.json';
+import tokens from '@utrecht/heading-1-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

@@ -1,8 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/badge-data/README.md?raw';
-import tokensDefinition from '@utrecht/components/badge-data/tokens.json';
+import readme from '@utrecht/badge-data-css/README.md?raw';
+import tokensDefinition from '@utrecht/badge-data-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtBadgeData } from '@utrecht/web-component-library-react';
 import { designTokenStory } from './design-token-story';

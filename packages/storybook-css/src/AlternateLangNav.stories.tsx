@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/alternate-lang-nav/README.md?raw';
+import readme from '@utrecht/alternate-lang-nav-css/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { AlternateLangNavStory } from './AlternateLangNav';

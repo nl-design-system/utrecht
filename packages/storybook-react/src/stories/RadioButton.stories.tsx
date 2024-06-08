@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { FormField, FormLabel, RadioButton } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/radio-button/README.md?raw';
-import tokensDefinition from '@utrecht/components/radio-button/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/radio-button-css/README.md?raw';
+import tokensDefinition from '@utrecht/radio-button-css/src/tokens.json';
 import { designTokenStory } from './util';
 
 const meta = {

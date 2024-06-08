@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/toptask-nav/README.md?raw';
-import tokensDefinition from '@utrecht/components/toptask-nav/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/top-task-nav-css/README.md?raw';
+import tokensDefinition from '@utrecht/top-task-nav-css/src/tokens.json';
 import React from 'react';
 import { ToptaskLink, ToptaskLinkProps } from './ToptaskLink';
 import { ToptaskNav, ToptaskNavProps } from './ToptaskNav';

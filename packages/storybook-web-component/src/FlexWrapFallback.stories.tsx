@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/flex-wrap-fallback/README.md?raw';
-import tokensDefinition from '@utrecht/components/flex-wrap-fallback/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/flex-wrap-fallback-css/README.md?raw';
+import tokensDefinition from '@utrecht/flex-wrap-fallback-css/src/tokens.json';
 import {
   UtrechtButton,
   UtrechtButtonGroup,

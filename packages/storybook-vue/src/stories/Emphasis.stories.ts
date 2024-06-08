@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
 import { Emphasis, Paragraph } from '@utrecht/component-library-vue';
-import readme from '@utrecht/components/emphasis/README.md?raw';
-import tokens from '@utrecht/components/emphasis/tokens.json';
+import readme from '@utrecht/emphasis-css/README.md?raw';
+import tokens from '@utrecht/emphasis-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {

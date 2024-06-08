@@ -3,10 +3,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Document, Heading1, Paragraph } from '@utrecht/component-library-react';
 import type { DocumentProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/document/README.md?raw';
-import langDocs from '@utrecht/components/document/_lang.md?raw';
-import tokensDefinition from '@utrecht/components/document/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/document-css/README.md?raw';
+import langDocs from '@utrecht/document-css/_lang.md?raw';
+import tokensDefinition from '@utrecht/document-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

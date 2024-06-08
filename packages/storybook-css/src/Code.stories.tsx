@@ -1,6 +1,10 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
+import readme from '@utrecht/code-css/README.md?raw';
+import ligaturesDocs from '@utrecht/code-css/_ligatures.md?raw';
+import tokensDefinition from '@utrecht/code-css/src/tokens.json';
+import type { CodeProps } from '@utrecht/component-library-react';
 import {
   Code,
   Heading1,
@@ -12,10 +16,6 @@ import {
   Link,
   Paragraph,
 } from '@utrecht/component-library-react';
-import type { CodeProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/code/README.md?raw';
-import ligaturesDocs from '@utrecht/components/code/_ligatures.md?raw';
-import tokensDefinition from '@utrecht/components/code/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';

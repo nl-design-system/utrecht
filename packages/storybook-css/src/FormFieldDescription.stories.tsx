@@ -3,9 +3,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { FormFieldDescription, Paragraph } from '@utrecht/component-library-react';
 import type { FormFieldDescriptionProps } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/form-field-description/README.md?raw';
-import tokensDefinition from '@utrecht/components/form-field-description/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/form-field-description-css/README.md?raw';
+import tokensDefinition from '@utrecht/form-field-description-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

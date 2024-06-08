@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { Emphasis, Strong as StrongComponent } from '@utrecht/component-library-react';
-import readme from '@utrecht/components/emphasis/README.md?raw';
-import tokensDefinition from '@utrecht/components/emphasis/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/emphasis-css/README.md?raw';
+import tokensDefinition from '@utrecht/emphasis-css/src/tokens.json';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 

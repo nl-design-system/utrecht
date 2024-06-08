@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/heading/README.md?raw';
-import tokensDefinition from '@utrecht/components/heading/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/heading-css/README.md?raw';
+import tokensDefinition from '@utrecht/heading-css/src/tokens.json';
 import { UtrechtHeading } from '@utrecht/web-component-library-react';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';

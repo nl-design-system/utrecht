@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/listbox/README.md?raw';
-import tokensDefinition from '@utrecht/components/listbox/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/listbox-css/README.md?raw';
+import tokensDefinition from '@utrecht/listbox-css/src/tokens.json';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { ListboxStory } from './Listbox';

@@ -7,9 +7,9 @@ import {
   Paragraph,
   PrimaryActionButton,
 } from '@utrecht/component-library-react/dist/css-module';
-import readme from '@utrecht/components/drawer/README.md?raw';
-import tokensDefinition from '@utrecht/components/drawer/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/drawer-css/README.md?raw';
+import tokensDefinition from '@utrecht/drawer-css/src/tokens.json';
 import React, { createRef, PropsWithChildren, useState } from 'react';
 import { designTokenStory } from './util';
 
