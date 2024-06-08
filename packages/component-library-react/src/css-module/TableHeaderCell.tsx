@@ -4,6 +4,6 @@
  */
 
 // CSS is already included by `Table` component
-// import '../../../../components/table/css/index.scss';
+// import '../../../../components/table/src/index.scss';
 
 export * from '../TableHeaderCell';

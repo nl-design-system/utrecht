@@ -13,7 +13,7 @@ import * as ReactDOMServer from 'react-dom/server';
 
 import 'firacode/distr/fira_code.css';
 import '@utrecht/components/index.scss';
-import '@utrecht/components/html-content/css/index.scss';
+import '@utrecht/components/html-content/src/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/property.css';
 import '@utrecht/design-tokens/dist/dark/index.css';

@@ -3,12 +3,12 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "~@utrecht/heading-1-css/css";
-@import "~@utrecht/heading-2-css/css";
-@import "~@utrecht/heading-3-css/css";
-@import "~@utrecht/heading-4-css/css";
-@import "~@utrecht/heading-5-css/css";
-@import "~@utrecht/heading-6-css/css";
+@import "~@utrecht/heading-1-css/src";
+@import "~@utrecht/heading-2-css/src";
+@import "~@utrecht/heading-3-css/src";
+@import "~@utrecht/heading-4-css/src";
+@import "~@utrecht/heading-5-css/src";
+@import "~@utrecht/heading-6-css/src";
 
 :host {
   display: block;

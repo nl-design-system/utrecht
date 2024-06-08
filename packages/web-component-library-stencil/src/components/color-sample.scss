@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "~@utrecht/color-sample-css/css/mixin";
+@import "~@utrecht/color-sample-css/src/mixin";
 
 :host {
   @include utrecht-color-sample;

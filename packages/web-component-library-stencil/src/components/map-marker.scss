@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2022 Frameless B.V.
  */
 
-@import "~@utrecht/map-marker-css/css/mixin";
+@import "~@utrecht/map-marker-css/src/mixin";
 
 :host {
   @include utrecht-map-marker;

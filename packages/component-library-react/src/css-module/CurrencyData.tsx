@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/currency-data-css/css/index.scss';
+import '@utrecht/currency-data-css/src/index.scss';
 
 export * from '../CurrencyData';

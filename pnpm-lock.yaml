@@ -1371,6 +1371,9 @@ importers:
       '@utrecht/components':
         specifier: workspace:*
         version: link:../../components
+      '@utrecht/html-content-css':
+        specifier: workspace:*
+        version: link:../../components/html-content
       postcss-discard-duplicates:
         specifier: 7.0.0
         version: 7.0.0(postcss@8.4.33)
@@ -3733,6 +3736,9 @@ importers:
       '@utrecht/heading-6-css':
         specifier: workspace:*
         version: link:../../components/heading-6
+      '@utrecht/heading-css':
+        specifier: workspace:*
+        version: link:../../components/heading
       '@utrecht/heading-group-css':
         specifier: workspace:*
         version: link:../../components/heading-group
@@ -20363,8 +20369,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.0.19:
-    resolution: {integrity: sha512-cN3f1aTxxKo4lzNeQAkVopswuImUrb5Iurll9Gaw5cqpnbTAxtEMM1mgi6ou4X79OCyqYv1U1mzBHJkzmiK82w==}
+  vue-component-type-helpers@2.0.20:
+    resolution: {integrity: sha512-Weol01CnbTkPrKHT4Gi5q+llB170X/q/oJ0AYrC1zRBm+OhEun1+j4mKr2Y1kXG1hgGnjvuBPshy+bRefGczTA==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -30562,7 +30568,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.0.19
+      vue-component-type-helpers: 2.0.20
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -46963,7 +46969,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.0.19: {}
+  vue-component-type-helpers@2.0.20: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:

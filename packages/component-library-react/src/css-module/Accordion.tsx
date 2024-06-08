@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/accordion-css/css/index.scss';
+import '@utrecht/accordion-css/src/index.scss';
 
 export * from '../Accordion';

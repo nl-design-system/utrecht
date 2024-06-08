@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/unordered-list-css/css/index.scss';
+import '@utrecht/unordered-list-css/src/index.scss';
 
 export * from '../UnorderedListItem';

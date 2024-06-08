@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/form-fieldset-css/css/index.scss';
+import '@utrecht/form-fieldset-css/src/index.scss';
 
 export * from '../Fieldset';

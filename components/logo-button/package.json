@@ -5,9 +5,8 @@
   "license": "EUPL-1.2",
   "name": "@utrecht/logo-button-css",
   "files": [
-    "css/",
     "dist/",
-    "html/"
+    "src/"
   ],
   "scripts": {
     "build": "rollup -c ../rollup.config.mjs",

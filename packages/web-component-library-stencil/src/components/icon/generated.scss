@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2022 Frameless B.V.
  */
 
-@import "~@utrecht/icon/css/mixin";
+@import "~@utrecht/icon/src/mixin";
 
 :host {
   @include utrecht-icon;

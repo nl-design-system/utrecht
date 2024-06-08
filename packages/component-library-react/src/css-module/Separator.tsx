@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/separator-css/css/index.scss';
+import '@utrecht/separator-css/src/index.scss';
 
 export * from '../Separator';

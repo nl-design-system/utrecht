@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "~@utrecht/multiline-data-css/css";
+@import "~@utrecht/multiline-data-css/src";
 
 :host {
   @include utrecht-multiline-data;

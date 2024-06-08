@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@import "~@utrecht/logo-css/css/mixin";
+@import "~@utrecht/logo-css/src/mixin";
 
 :host {
   @include utrecht-logo;

@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/list-social-css/css/index.scss';
+import '@utrecht/list-social-css/src/index.scss';
 
 export * from '../ListSocial';
