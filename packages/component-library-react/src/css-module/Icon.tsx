@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/icon/css/index.scss';
+import '@utrecht/icon/src/index.scss';
 
 export * from '../Icon';

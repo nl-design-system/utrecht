@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "~@utrecht/column-layout-css/css/mixin";
+@import "~@utrecht/column-layout-css/src/mixin";
 
 :host {
   @include utrecht-column-layout;

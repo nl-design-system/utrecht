@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "~@utrecht/form-css/css";
+@import "~@utrecht/form-css/src";
 
 :host {
   @include utrecht-form;

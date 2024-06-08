@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/number-data-css/css/index.scss';
+import '@utrecht/number-data-css/src/index.scss';
 
 export * from '../NumberData';

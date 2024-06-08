@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+/* Collection of all semantic HTML styles in the component library */
+
+@import "../mixin";
+
+:root {
+  @include utrecht-html-content-container;
+}
+
+@include utrecht-html-content;

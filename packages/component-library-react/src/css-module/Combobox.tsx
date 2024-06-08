@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/combobox-css/css/index.scss';
+import '@utrecht/combobox-css/src/index.scss';
 
 export * from '../Combobox';

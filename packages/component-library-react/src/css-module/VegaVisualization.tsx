@@ -3,6 +3,6 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-import '@utrecht/vega-visualization-css/css/index.scss';
+import '@utrecht/vega-visualization-css/src/index.scss';
 
 export * from '../VegaVisualization';

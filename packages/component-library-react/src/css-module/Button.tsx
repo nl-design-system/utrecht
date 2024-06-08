@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/button-css/css/index.scss';
+import '@utrecht/button-css/src/index.scss';
 
 export * from '../Button';

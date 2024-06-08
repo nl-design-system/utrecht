@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React from 'react';
-import '../../components/color-sample/css/index.scss';
+import '../../components/color-sample/src/index.scss';
 
 export const ColorExample = ({ color }) => (
   <data

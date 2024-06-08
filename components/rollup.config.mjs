@@ -5,7 +5,7 @@ import { cwd } from 'node:process';
 import { basename } from 'node:path';
 
 export default {
-  input: 'css/index.scss',
+  input: 'src/index.scss',
   output: {
     dir: './dist',
     sourcemap: false,

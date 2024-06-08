@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "~@utrecht/drawer-css/css";
+@import "~@utrecht/drawer-css/src";
 
 :host {
   /* Display `contents`: is necessary for the `<dialog>` element to render full height */

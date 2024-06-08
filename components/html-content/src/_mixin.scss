@@ -1,0 +1,77 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+/* Collection of all semantic HTML styles in the component library */
+
+@import "~@utrecht/article-css/src/html/mixin";
+@import "~@utrecht/blockquote-css/src/html/mixin";
+@import "~@utrecht/button-css/src/html/mixin";
+@import "~@utrecht/checkbox-css/src/html/mixin";
+@import "~@utrecht/code-css/src/html/mixin";
+@import "~@utrecht/code-block-css/src/html/mixin";
+@import "~@utrecht/document-css/src/html/mixin";
+@import "~@utrecht/emphasis-css/src/html/mixin";
+@import "~@utrecht/figure-css/src/html/mixin";
+@import "~@utrecht/form-css/src/html/mixin";
+@import "~@utrecht/form-fieldset-css/src/html/mixin";
+@import "~@utrecht/form-label-css/src/html/mixin";
+@import "~@utrecht/heading-1-css/src/html/mixin";
+@import "~@utrecht/heading-2-css/src/html/mixin";
+@import "~@utrecht/heading-3-css/src/html/mixin";
+@import "~@utrecht/heading-4-css/src/html/mixin";
+@import "~@utrecht/heading-5-css/src/html/mixin";
+@import "~@utrecht/heading-6-css/src/html/mixin";
+@import "~@utrecht/heading-group-css/src/html/mixin";
+@import "~@utrecht/link-css/src/html/mixin";
+@import "~@utrecht/mark-css/src/html/mixin";
+@import "~@utrecht/ordered-list-css/src/html/mixin";
+@import "~@utrecht/paragraph-css/src/html/mixin";
+@import "~@utrecht/radio-button-css/src/html/mixin";
+@import "~@utrecht/select-css/src/html/mixin";
+@import "~@utrecht/separator-css/src/html/mixin";
+@import "~@utrecht/table-css/src/html/mixin";
+@import "~@utrecht/textarea-css/src/html/mixin";
+@import "~@utrecht/textbox-css/src/html/mixin";
+@import "~@utrecht/unordered-list-css/src/html/mixin";
+
+@mixin utrecht-html-content {
+  @include utrecht-html-article;
+  @include utrecht-html-blockquote;
+  @include utrecht-html-button;
+  @include utrecht-html-input-checkbox;
+  @include utrecht-html-body;
+  @include utrecht-html-code;
+  @include utrecht-html-em;
+  @include utrecht-html-strong;
+  @include utrecht-html-fieldset;
+  @include utrecht-html-figure;
+  @include utrecht-html-figcaption;
+  @include utrecht-html-form;
+  @include utrecht-html-legend;
+  @include utrecht-html-label;
+  @include utrecht-html-mark;
+  @include utrecht-html-h1;
+  @include utrecht-html-h2;
+  @include utrecht-html-h3;
+  @include utrecht-html-h4;
+  @include utrecht-html-h5;
+  @include utrecht-html-h6;
+  @include utrecht-html-hgroup;
+  @include utrecht-html-a;
+  @include utrecht-html-ol;
+  @include utrecht-html-p;
+  @include utrecht-html-pre-code;
+  @include utrecht-html-input-radio;
+  @include utrecht-html-select;
+  @include utrecht-html-hr;
+  @include utrecht-html-table;
+  @include utrecht-html-textarea;
+  @include utrecht-html-input;
+  @include utrecht-html-ul;
+}
+
+@mixin utrecht-html-content-container {
+  --utrecht-space-around: 1;
+}

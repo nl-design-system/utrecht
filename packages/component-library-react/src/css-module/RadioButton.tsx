@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/radio-button-css/css/index.scss';
+import '@utrecht/radio-button-css/src/index.scss';
 
 export * from '../RadioButton';

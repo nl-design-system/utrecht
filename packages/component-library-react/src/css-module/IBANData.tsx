@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/iban-data-css/css/index.scss';
+import '@utrecht/iban-data-css/src/index.scss';
 
 export * from '../IBANData';

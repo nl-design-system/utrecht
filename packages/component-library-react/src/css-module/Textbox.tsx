@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/textbox-css/css/index.scss';
+import '@utrecht/textbox-css/src/index.scss';
 
 export * from '../Textbox';

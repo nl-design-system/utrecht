@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/calendar-css/css/index.scss';
+import '@utrecht/calendar-css/src/index.scss';
 
 export type { CalendarProps } from '../Calendar/index';
 export { Calendar } from '../Calendar/index';

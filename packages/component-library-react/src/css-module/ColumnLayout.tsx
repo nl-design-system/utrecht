@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/column-layout-css/css/index.scss';
+import '@utrecht/column-layout-css/src/index.scss';
 
 export * from '../ColumnLayout';
