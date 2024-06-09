@@ -1,5 +1,18 @@
 # @utrecht/component-library-css
 
+## 3.2.0
+
+### Minor Changes
+
+- 8d8babe: Add 5 missing CSS components to CSS component library bundle.
+
+  - `utrecht-combobox`
+  - `utrecht-currency-data`
+  - `utrecht-data-placeholder`
+  - `utrecht-listbox`
+  - `utrecht-logo-image`
+  - `utrecht-preserve-data`
+
 ## 3.1.0
 
 ### Minor Changes
