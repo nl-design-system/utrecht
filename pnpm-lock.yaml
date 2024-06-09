@@ -661,11 +661,10 @@ importers:
         version: 3.29.4
 
   components/form-toggle:
-    dependencies:
+    devDependencies:
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../focus-ring
-    devDependencies:
       rollup:
         specifier: 3.29.4
         version: 3.29.4
