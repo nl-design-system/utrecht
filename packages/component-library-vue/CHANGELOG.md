@@ -1,5 +1,11 @@
 # @utrecht/component-library-vue
 
+## 1.1.1
+
+### Patch Changes
+
+- 62f1157: Fix styling of list items of unordered lists in Vue.
+
 ## 1.1.0
 
 ### Minor Changes
