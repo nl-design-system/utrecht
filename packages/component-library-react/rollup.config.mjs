@@ -43,7 +43,7 @@ export default [
       },
     ],
     plugins: [
-      peerDepsExternal({ includeDependencies: false }),
+      peerDepsExternal(),
       nodeExternal(),
       resolve({ browser: true }),
       commonjs({
