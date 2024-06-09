@@ -1,9 +1,0 @@
-/**
- * @license EUPL-1.2
- * Copyright (c) 2021 The Knights Who Say NIH! B.V.
- * Copyright (c) 2021 Gemeente Utrecht
- *//**
- * @license EUPL-1.2
- * Copyright (c) 2021 Gemeente Utrecht
- * Copyright (c) 2021 Robbert Broersma
- */.utrecht-data-placeholder{background-color:var(--utrecht-data-placeholder-background-color, currentColor);block-size:1em;display:inline-block;inline-size:min(100%,var(--utrecht-data-placeholder-max-inline-size));max-inline-size:var(--utrecht-data-placeholder-max-inline-size);min-inline-size:var(--utrecht-data-placeholder-min-inline-size, 10ch);vertical-align:-.1em}@media print{.utrecht-data-placeholder{outline-color:currentColor;outline-style:dashed;outline-width:.1em}}@media screen and (prefers-contrast: more){.utrecht-data-placeholder{background-color:var(--utrecht-data-placeholder-high-contrast-background-color, var(--utrecht-data-placeholder-background-color, currentColor))}}@media screen and (forced-colors: active){.utrecht-data-placeholder{background-color:GrayText}}.utrecht-data-placeholder--loading{cursor:var(--utrecht-action-busy-cursor, busy)}.utrecht-data-placeholder--print{outline-color:currentColor;outline-style:dashed;outline-width:.1em}.utrecht-data-placeholder--forced-colors{background-color:GrayText}.utrecht-data-placeholder--high-contrast{cursor:var(--utrecht-action-busy-cursor, busy)}
