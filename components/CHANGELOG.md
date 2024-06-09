@@ -1,5 +1,11 @@
 # @utrecht/components
 
+## 5.0.1
+
+### Patch Changes
+
+- 3bf038d: Add missing `dist/` directory with the `.css` files.
+
 ## 5.0.0
 
 ### Major Changes
