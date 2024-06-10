@@ -13,10 +13,10 @@ describe('Card list', () => {
     expect(list).toBeInTheDocument();
   });
 
-  it('renders an HTML C element', () => {
+  it('renders an HTML Card list element', () => {
     const { container } = render(<CardList />);
 
-    const list = container.querySelector('ul:only-child');
+    const list = container.querySelector(':only-child');
 
     expect(list).toBeInTheDocument();
   });
@@ -24,7 +24,7 @@ describe('Card list', () => {
   it('renders a design system BEM class name', () => {
     const { container } = render(<CardList />);
 
-    const list = container.querySelector('ul:only-child');
+    const list = container.querySelector(':only-child');
 
     expect(list).toHaveClass('utrecht-card-list');
   });
