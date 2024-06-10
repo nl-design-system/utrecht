@@ -3,6 +3,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '../../../../components/card-list/css/index.scss';
+import '../../../../components/card-list/src/index.scss';
 
 export * from '../CardList';
