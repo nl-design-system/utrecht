@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 import { Heading } from './Heading';
 
-interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
+export interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, 'children'> {
   headingLevel: number;
   title?: any;
   preHeading?: string;
