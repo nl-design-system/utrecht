@@ -38,7 +38,12 @@ export const LinkList = forwardRef(
     { children, icon, links, className, ...restProps }: PropsWithChildren<LinkListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => (
-    <ul ref={ref} className={clsx('utrecht-link-list', 'utrecht-link-list--html-ul', className)} {...restProps}>
+    <ul
+      role="list"
+      ref={ref}
+      className={clsx('utrecht-link-list', 'utrecht-link-list--html-ul', className)}
+      {...restProps}
+    >
       {children}
       {Array.isArray(links) &&
         links.map((linkProps, index) => (
