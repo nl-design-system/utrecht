@@ -4,20 +4,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@mixin reset-ul() {
-  margin-block-end: 0;
-  margin-block-start: 0;
-  margin-inline-end: 0;
-  margin-inline-start: 0;
-  padding-inline-start: 0;
-}
-
-@mixin reset-li() {
-  list-style: none;
-}
+@import "./mixin";
 
 /* reset before other stylesheets */
-.utrecht-link-list,
 .utrecht-link-list--html-ul {
   @include reset-ul;
 
@@ -27,28 +16,13 @@
 }
 
 .utrecht-link-list {
-  --utrecht-link-text-decoration: none;
-  --utrecht-link-hover-text-decoration: underline;
-  --utrecht-link-focus-text-decoration: underline;
-
-  display: flex;
-  flex-direction: column;
-  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-link-list-margin-block-end, 0));
-  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-link-list-margin-block-start, 0));
-  row-gap: var(--utrecht-link-list-row-gap);
+  @include utrecht-link-list;
 }
 
 .utrecht-link-list__item {
-  --utrecht-icon-size: var(--utrecht-link-list-icon-size);
-  --utrecht-link-icon-size: var(--utrecht-link-list-icon-size);
-  --utrecht-icon-inset-block-start: var(--utrecht-link-list-icon-inset-block-start);
-
-  display: block;
-  font-weight: var(--utrecht-link-list-item-font-weight);
+  @include utrecht-link-list__item;
 }
 
 .utrecht-link-list__link {
-  align-items: baseline;
-  column-gap: var(--utrecht-link-list-item-column-gap);
-  display: inline-flex;
+  @include utrecht-link-list__link;
 }
