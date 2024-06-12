@@ -17,7 +17,7 @@ export type TextboxTypes =
 export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
   inputRequired?: boolean;
   invalid?: boolean;
-  type?: TextboxTypes;
+  type?: string | TextboxTypes;
 }
 
 export const Textbox = forwardRef(
