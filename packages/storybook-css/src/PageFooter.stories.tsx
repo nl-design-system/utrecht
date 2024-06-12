@@ -1,10 +1,20 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Heading2, Heading3, Link, PageFooter, Paragraph, Strong } from '@utrecht/component-library-react';
+import {
+  Heading2,
+  Heading3,
+  Link,
+  LinkList,
+  LinkListLink,
+  PageFooter,
+  Paragraph,
+  Strong,
+} from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/page-footer-css/README.md?raw';
 import tokensDefinition from '@utrecht/page-footer-css/src/tokens.json';
+import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -58,14 +68,14 @@ export const Default: Story = {
         </section>
       </address>,
       <div className="utrecht-page-footer__navigation">
-        <ul className="utrecht-link-list utrecht-link-list--chevron">
-          <li className="utrecht-link-list__item">
-            <Link href="/contact/">Meer contactinformatie</Link>
-          </li>
-          <li className="utrecht-link-list__item">
-            <Link href="/over-deze-website">Over deze website</Link>
-          </li>
-        </ul>
+        <LinkList>
+          <LinkListLink href="/contact/" icon={<UtrechtIconChevronRight />}>
+            Meer contactinformatie
+          </LinkListLink>
+          <LinkListLink href="/over-deze-website" icon={<UtrechtIconChevronRight />}>
+            Over deze website
+          </LinkListLink>
+        </LinkList>
       </div>,
     ],
   },
