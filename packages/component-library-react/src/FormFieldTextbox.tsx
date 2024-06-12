@@ -5,37 +5,39 @@ import { FormField } from './FormField';
 import { FormFieldDescription } from './FormFieldDescription';
 import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 import { FormLabel } from './FormLabel';
-import { Textbox } from './Textbox';
+import { Textbox, TextboxProps } from './Textbox';
 import { TextboxTypes } from './Textbox';
 
-export type DirType = 'auto' | 'ltr' | 'rtl';
-
-export interface FormFieldTextboxProps extends FormFieldProps {
-  name?: string;
-  invalid?: boolean;
-  disabled?: boolean;
-  label: ReactNode;
-  errorMessage?: ReactNode;
+export interface FormFieldTextboxProps
+  extends Omit<FormFieldProps, 'type'>,
+    Pick<
+      TextboxProps,
+      | 'autoComplete'
+      | 'defaultValue'
+      | 'disabled'
+      | 'inputRequired'
+      | 'invalid'
+      | 'list'
+      | 'max'
+      | 'maxLength'
+      | 'min'
+      | 'minLength'
+      | 'name'
+      | 'pattern'
+      | 'placeholder'
+      | 'readOnly'
+      | 'required'
+      | 'size'
+      | 'step'
+      | 'value'
+      | 'type'
+    > {
   description?: ReactNode;
-  status?: ReactNode;
-  readOnly?: boolean;
-  placeholder?: string;
-  min?: number | string;
-  max?: number | string;
-  maxLength?: number;
-  minLength?: number;
-  step?: number | string;
-  autoComplete?: string;
-  pattern?: string;
-  type?: string;
-  required?: boolean;
-  inputRequired?: boolean;
-  inputDir?: string | DirType;
-  value?: string | number;
-  defaultValue?: string;
-  list?: string;
-  size?: number;
+  errorMessage?: ReactNode;
+  inputDir?: TextboxProps['dir'];
   inputRef?: Ref<HTMLInputElement>;
+  label: ReactNode;
+  status?: ReactNode;
 }
 
 export const FormFieldTextbox = forwardRef(
