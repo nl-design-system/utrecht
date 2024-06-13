@@ -3351,6 +3351,9 @@ importers:
       '@utrecht/badge-counter-css':
         specifier: workspace:*
         version: link:../../components/badge-counter
+      '@utrecht/badge-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@utrecht/badge-data-css':
         specifier: workspace:*
         version: link:../../components/badge-data
@@ -3426,6 +3429,9 @@ importers:
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../../components/focus-ring
+      '@utrecht/form-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@utrecht/form-field-css':
         specifier: workspace:*
         version: link:../../components/form-field
@@ -3435,6 +3441,9 @@ importers:
       '@utrecht/form-field-error-message-css':
         specifier: workspace:*
         version: link:../../components/form-field-error-message
+      '@utrecht/form-fieldset-css':
+        specifier: 1.1.0
+        version: 1.1.0
       '@utrecht/form-label-css':
         specifier: workspace:*
         version: link:../../components/form-label
@@ -10625,6 +10634,12 @@ packages:
 
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
+
+  '@utrecht/badge-css@1.1.0':
+    resolution: {integrity: sha512-yzel+YtA2qRJSgYyMgWNVZhm5Pl0b3u34zv4tZVN7rHYGLlFlZrwx3TyCQHNEaejYnRp9f+emI3Xlk3JA0m15A==}
+
+  '@utrecht/blockquote-css@1.1.0':
+    resolution: {integrity: sha512-7KSf8zkyTslVqfeVhsn8jDt4/bgGT80VKH9XlbdXCVzc2dCw6C4ZgglkIgX6MR8z+WdDRjK6LhhvkSOOnxBK4g==}
 
   '@utrecht/components@1.0.0-alpha.563':
     resolution: {integrity: sha512-qpyo3G31i7p+UpezFrdi59iMtjZ8DX1jylaVyAYHeQ36ZFuKDsAXGYM6aCev4whSsf2tqL2VcCuzBzpu0/piLQ==}
@@ -32127,6 +32142,10 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@ungap/structured-clone@1.2.0': {}
+
+  '@utrecht/badge-css@1.1.0': {}
+
+  '@utrecht/blockquote-css@1.1.0': {}
 
   '@utrecht/components@1.0.0-alpha.563':
     dependencies:
