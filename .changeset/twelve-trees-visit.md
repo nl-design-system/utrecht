@@ -1,7 +1,7 @@
 ---
 "@utrecht/component-library-react": minor
 "@utrecht/components": minor
-"@utrecht/design-tokens": major
+"@utrecht/design-tokens": minor
 "@utrecht/card-list-css": major
 ---
 
