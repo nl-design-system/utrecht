@@ -30,8 +30,5 @@
 
 .utrecht-card-list__item-content .utrecht-card-list__item-title {
   @include utrecht-card-list__item-title;
-}
-
-.utrecht-card-list__item-content .utrecht-card-list__item-title .utrecht-link {
   @include utrecht-card-list__item-title-link;
 }

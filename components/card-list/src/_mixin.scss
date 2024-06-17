@@ -1,5 +1,5 @@
 @mixin utrecht-card-list {
-  column-gap: var(--utrecht-card-list--column-gap, 2em);
+  column-gap: var(--utrecht-card-list-column-gap, 2em);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(var(--utrecht-card-list-item-max-inline-size), 0fr));
   margin-block-end: calc(
@@ -11,7 +11,7 @@
       var(--utrecht-card-list-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
   padding-inline-start: var(--utrecht-card-list-padding-inline-start, 0);
-  row-gap: var(--utrecht-card-list--row-gap, 2em);
+  row-gap: var(--utrecht-card-list-row-gap, 2em);
 }
 
 @mixin utrecht-card-list__item {
@@ -38,7 +38,7 @@
 }
 
 @mixin utrecht-card-list__item-title-link {
-  color: var(--utrecht-card-list-item-title-link-color, var(--utrecht-link-color));
+  --utrecht-link-color: var(--utrecht-card-list-item-title-link-color);
 }
 
 @mixin utrecht-card-list__item-content {
