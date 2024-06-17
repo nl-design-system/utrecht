@@ -12,7 +12,6 @@ export interface CardListItemProps extends Omit<HTMLAttributes<HTMLLIElement>, '
   headingLevel: number;
   title?: any;
   preHeading?: string;
-  children?: any;
   image?: any;
   cardRole?: 'article' | string;
 }
