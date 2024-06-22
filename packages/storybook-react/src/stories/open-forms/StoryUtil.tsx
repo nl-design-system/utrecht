@@ -1,5 +1,5 @@
 import { OFLibrary, OpenFormsModule } from '@open-formulieren/sdk';
-import { merge } from 'lodash';
+import merge from 'lodash.merge';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
 import '@open-formulieren/sdk/styles.css';
