@@ -2163,9 +2163,6 @@ importers:
       '@nl-design-system-unstable/rotterdam-design-tokens':
         specifier: 1.0.0-alpha.125
         version: 1.0.0-alpha.125
-      '@open-formulieren/sdk':
-        specifier: 2.2.0-alpha.0
-        version: 2.2.0-alpha.0(@types/react@18.2.45)(encoding@0.1.13)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.69.5)(typescript@4.9.5)
       '@storybook/addon-a11y':
         specifier: 7.6.4
         version: 7.6.4
@@ -2220,9 +2217,6 @@ importers:
       '@tabler/icons-react':
         specifier: 2.44.0
         version: 2.44.0(react@18.2.0)
-      '@types/lodash':
-        specifier: 4.14.202
-        version: 4.14.202
       '@types/prettier':
         specifier: 2.7.3
         version: 2.7.3
@@ -2283,12 +2277,6 @@ importers:
       http-server:
         specifier: 14.1.1
         version: 14.1.1
-      lodash.defaultsdeep:
-        specifier: 4.6.1
-        version: 4.6.1
-      lodash.groupby:
-        specifier: 4.6.0
-        version: 4.6.0
       prettier:
         specifier: 2.8.8
         version: 2.8.8
@@ -2298,9 +2286,6 @@ importers:
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
-      react-formio:
-        specifier: 4.3.0
-        version: 4.3.0(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-syntax-highlighter:
         specifier: 15.5.0
         version: 15.5.0(react@18.2.0)
@@ -3270,6 +3255,9 @@ importers:
       '@nl-design-system-unstable/rotterdam-design-tokens':
         specifier: 1.0.0-alpha.123
         version: 1.0.0-alpha.123
+      '@open-formulieren/sdk':
+        specifier: 2.2.0-alpha.0
+        version: 2.2.0-alpha.0(@types/react@18.2.42)(encoding@0.1.13)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.69.7)(typescript@4.9.5)
       '@storybook/addon-a11y':
         specifier: 7.4.6
         version: 7.4.6(@types/react-dom@18.2.17)(@types/react@18.2.42)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
@@ -3324,6 +3312,9 @@ importers:
       '@storybook/theming':
         specifier: 7.4.6
         version: 7.4.6(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      '@types/lodash.merge':
+        specifier: 4.6.9
+        version: 4.6.9
       '@types/react':
         specifier: 18.2.42
         version: 18.2.42
@@ -3579,12 +3570,18 @@ importers:
       http-server:
         specifier: 14.1.1
         version: 14.1.1
+      lodash.merge:
+        specifier: 4.6.2
+        version: 4.6.2
       react:
         specifier: 18.2.0
         version: 18.2.0
       react-dom:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
+      react-formio:
+        specifier: 4.3.0
+        version: 4.3.0(encoding@0.1.13)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       require-from-string:
         specifier: 2.0.2
         version: 2.0.2
@@ -9902,6 +9899,9 @@ packages:
 
   '@types/lodash.chunk@4.2.9':
     resolution: {integrity: sha512-Z9VtFUSnmT0No/QymqfG9AGbfOA4O5qB/uyP89xeZBqDAsKsB4gQFTqt7d0pHjbsTwtQ4yZObQVHuKlSOhIJ5Q==}
+
+  '@types/lodash.merge@4.6.9':
+    resolution: {integrity: sha512-23sHDPmzd59kUgWyKGiOMO2Qb9YtqRO/x4IhkgNUiPQ1+5MUVqi6bCZeq9nBJ17msjIMbEIO5u+XW4Kz6aGUhQ==}
 
   '@types/lodash@4.14.202':
     resolution: {integrity: sha512-OvlIYQK9tNneDlS0VN54LLd5uiPCBOp7gS5Z0f1mjoJYBrtStzgmJBxONW3U6OZqdtNzZPmn9BS/7WI7BFFcFQ==}
@@ -21127,8 +21127,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.0.21:
-    resolution: {integrity: sha512-3NaicyZ7N4B6cft4bfb7dOnPbE9CjLcx+6wZWAg5zwszfO4qXRh+U52dN5r5ZZfc6iMaxKCEcoH9CmxxoFZHLg==}
+  vue-component-type-helpers@2.0.22:
+    resolution: {integrity: sha512-gPr2Ba7efUwy/Vfbuf735bHSVdN4ycoZUCHfypkI33M9DUH+ieRblLLVM2eImccFYaWNWwEzURx02EgoXDBmaQ==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -26243,7 +26243,7 @@ snapshots:
 
   '@emotion/memoize@0.8.1': {}
 
-  '@emotion/react@11.11.3(@types/react@18.2.45)(react@18.2.0)':
+  '@emotion/react@11.11.3(@types/react@18.2.42)(react@18.2.0)':
     dependencies:
       '@babel/runtime': 7.23.6
       '@emotion/babel-plugin': 11.11.0
@@ -26255,7 +26255,7 @@ snapshots:
       hoist-non-react-statics: 3.3.2
       react: 18.2.0
     optionalDependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.42
 
   '@emotion/serialize@1.1.3':
     dependencies:
@@ -28167,7 +28167,7 @@ snapshots:
       leaflet: 1.9.4
       proj4leaflet: 1.0.2
 
-  '@open-formulieren/sdk@2.2.0-alpha.0(@types/react@18.2.45)(encoding@0.1.13)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.69.5)(typescript@4.9.5)':
+  '@open-formulieren/sdk@2.2.0-alpha.0(@types/react@18.2.42)(encoding@0.1.13)(prop-types@15.8.1)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.69.7)(typescript@4.9.5)':
     dependencies:
       '@floating-ui/react': 0.24.8(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       '@formio/protected-eval': 1.2.2(formiojs@4.13.12(encoding@0.1.13))
@@ -28186,7 +28186,7 @@ snapshots:
       leaflet: 1.9.4
       leaflet-geosearch: 3.11.1
       leaflet-gesture-handling: 1.2.2
-      microscope-sass: 2.0.0(sass@1.69.5)
+      microscope-sass: 2.0.0(sass@1.69.7)
       moment: 2.29.4
       proj4leaflet: 1.0.2
       prop-types: 15.8.1
@@ -28198,7 +28198,7 @@ snapshots:
       react-modal: 3.16.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-number-format: 5.3.1(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-router-dom: 6.22.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      react-select: 5.8.0(@types/react@18.2.45)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
+      react-select: 5.8.0(@types/react@18.2.42)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       react-use: 17.5.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
       state-pool: 0.8.1(react@18.2.0)
       use-immer: 0.9.0(immer@9.0.21)(react@18.2.0)
@@ -31326,7 +31326,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.0.21
+      vue-component-type-helpers: 2.0.22
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -31830,6 +31830,10 @@ snapshots:
       '@types/node': 20.11.16
 
   '@types/lodash.chunk@4.2.9':
+    dependencies:
+      '@types/lodash': 4.14.202
+
+  '@types/lodash.merge@4.6.9':
     dependencies:
       '@types/lodash': 4.14.202
 
@@ -41459,9 +41463,9 @@ snapshots:
       braces: 3.0.2
       picomatch: 2.3.1
 
-  microscope-sass@2.0.0(sass@1.69.5):
+  microscope-sass@2.0.0(sass@1.69.7):
     dependencies:
-      sass: 1.69.5
+      sass: 1.69.7
 
   mime-db@1.33.0: {}
 
@@ -44217,11 +44221,11 @@ snapshots:
       '@remix-run/router': 1.15.0
       react: 18.2.0
 
-  react-select@5.8.0(@types/react@18.2.45)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
+  react-select@5.8.0(@types/react@18.2.42)(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
       '@babel/runtime': 7.23.6
       '@emotion/cache': 11.11.0
-      '@emotion/react': 11.11.3(@types/react@18.2.45)(react@18.2.0)
+      '@emotion/react': 11.11.3(@types/react@18.2.42)(react@18.2.0)
       '@floating-ui/dom': 1.5.3
       '@types/react-transition-group': 4.4.10
       memoize-one: 6.0.0
@@ -44229,7 +44233,7 @@ snapshots:
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
       react-transition-group: 4.4.5(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.45)(react@18.2.0)
+      use-isomorphic-layout-effect: 1.1.2(@types/react@18.2.42)(react@18.2.0)
     transitivePeerDependencies:
       - '@types/react'
 
@@ -47137,11 +47141,11 @@ snapshots:
       immer: 9.0.21
       react: 18.2.0
 
-  use-isomorphic-layout-effect@1.1.2(@types/react@18.2.45)(react@18.2.0):
+  use-isomorphic-layout-effect@1.1.2(@types/react@18.2.42)(react@18.2.0):
     dependencies:
       react: 18.2.0
     optionalDependencies:
-      '@types/react': 18.2.45
+      '@types/react': 18.2.42
 
   use-resize-observer@9.1.0(react-dom@18.2.0(react@18.2.0))(react@18.2.0):
     dependencies:
@@ -47702,7 +47706,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.0.21: {}
+  vue-component-type-helpers@2.0.22: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
