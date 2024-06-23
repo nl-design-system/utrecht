@@ -1,36 +1,64 @@
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
+import { ForwardedRef, forwardRef, InputHTMLAttributes, useEffect, useImperativeHandle, useRef } from 'react';
 
 export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement>, 'type' | 'readOnly'> {
   appearance?: string;
+  indeterminate?: boolean;
   invalid?: boolean;
 }
 
 export const Checkbox = forwardRef(
   (
-    { appearance = 'custom', disabled, invalid, required, className, ...restProps }: CheckboxProps,
+    {
+      appearance = 'custom',
+      disabled,
+      indeterminate = false,
+      invalid,
+      required,
+      className,
+      ...restProps
+    }: CheckboxProps,
     ref: ForwardedRef<HTMLInputElement>,
-  ) => (
-    <input
-      {...restProps}
-      ref={ref}
-      type="checkbox"
-      className={clsx(
-        'utrecht-checkbox',
-        'utrecht-checkbox--html-input',
-        {
-          'utrecht-checkbox--disabled': disabled,
-          'utrecht-checkbox--custom': appearance === 'custom',
-          'utrecht-checkbox--invalid': invalid,
-          'utrecht-checkbox--required': required,
-        },
-        className,
-      )}
-      aria-invalid={invalid || undefined}
-      disabled={disabled}
-      required={required}
-    />
-  ),
+  ) => {
+    // What's the correct way to use useRef and forwardRef together?
+    // https://stackoverflow.com/a/68163315
+
+    // `indeterminate` is has no TypeScript definition in React.
+    // `indeterminate` renders an attribute, not a property in React.
+    let internalRef = useRef<HTMLInputElement>(null);
+
+    useImperativeHandle(ref, () => internalRef.current!);
+
+    useEffect(() => {
+      if (internalRef.current) {
+        internalRef.current.indeterminate = indeterminate;
+      }
+    }, [indeterminate]);
+
+    return (
+      <input
+        {...restProps}
+        ref={internalRef}
+        type="checkbox"
+        className={clsx(
+          'utrecht-checkbox',
+          'utrecht-checkbox--html-input',
+          {
+            'utrecht-checkbox--disabled': disabled,
+            'utrecht-checkbox--custom': appearance === 'custom',
+            'utrecht-checkbox--invalid': invalid,
+            'utrecht-checkbox--indeterminate': indeterminate,
+            'utrecht-checkbox--required': required,
+          },
+          className,
+        )}
+        aria-checked={indeterminate ? 'mixed' : undefined}
+        aria-invalid={invalid || undefined}
+        disabled={disabled}
+        required={required}
+      />
+    );
+  },
 );
 
 Checkbox.displayName = 'Checkbox';
