@@ -57,7 +57,19 @@ const preview: Preview = {
 
     options: {
       storySort: {
-        order: ['Web Component', ['README', 'Angular', 'React', 'Vue.js']],
+        order: [
+          'Web Component',
+          [
+            'README',
+            'Changelog',
+            'Angular',
+            ['README', 'Changelog'],
+            'React',
+            ['README', 'Changelog'],
+            'Vue.js',
+            ['README', 'Changelog'],
+          ],
+        ],
       },
     },
 

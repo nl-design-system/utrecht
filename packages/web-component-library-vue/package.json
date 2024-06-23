@@ -31,7 +31,9 @@
     ".": {
       "import": "./dist/web-component-library-vue.es.js",
       "require": "./dist/web-component-library-vue.umd.js"
-    }
+    },
+    "./CHANGELOG.md": "./CHANGELOG.md",
+    "./CHANGELOG.md?raw": "./CHANGELOG.md"
   },
   "devDependencies": {
     "@types/node": "20.11.16",
