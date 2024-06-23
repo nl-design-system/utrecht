@@ -34,11 +34,11 @@
   --utrecht-icon-inset-block-start: var(--utrecht-link-list-icon-inset-block-start);
 
   display: block;
-  font-weight: var(--utrecht-link-list-item-font-weight);
 }
 
 @mixin utrecht-link-list__link {
   align-items: baseline;
-  column-gap: var(--utrecht-link-list-item-column-gap);
+  column-gap: var(--utrecht-link-list-link-column-gap);
   display: inline-flex;
+  font-weight: var(--utrecht-link-list-link-font-weight);
 }
