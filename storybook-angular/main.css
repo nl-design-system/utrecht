@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Sun, 23 Jun 2024 20:31:23 GMT
+ * Generated on Sun, 23 Jun 2024 21:58:20 GMT
  */
 /**
  * Do not edit directly
- * Generated on Sun, 23 Jun 2024 20:31:22 GMT
+ * Generated on Sun, 23 Jun 2024 21:58:19 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -230,6 +230,7 @@
   --utrecht-link-social-size: 40px;
   --utrecht-link-social-border-width: 2px;
   --utrecht-link-list-icon-size: 14px;
+  --utrecht-link-list-link-text-decoration: none;
   --utrecht-icon-baseline-inset-block-start: 0.125em;
   --utrecht-icon-size: 48px;
   --utrecht-heading-5-margin-block-start: 1rem;
@@ -645,9 +646,9 @@
   --utrecht-link-social-margin-inline-start: var(--utrecht-space-inline-sm);
   --utrecht-link-social-border-color: var(--utrecht-color-white);
   --utrecht-link-social-background-color: var(--utrecht-color-red-40);
-  --utrecht-link-list-item-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
-  --utrecht-link-list-item-column-gap: var(--utrecht-space-block-xs);
-  --utrecht-link-list-item-margin-block-start: var(--utrecht-space-block-xs);
+  --utrecht-link-list-link-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-link-list-link-column-gap: var(--utrecht-space-block-xs);
+  --utrecht-link-list-row-gap: var(--utrecht-space-block-xs);
   --utrecht-index-char-nav-link-current-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
   --utrecht-index-char-nav-gap: var(--utrecht-space-column-sm);
   --utrecht-index-char-nav-margin-block-end: var(--utrecht-space-block-md);
@@ -1235,6 +1236,7 @@
     --utrecht-link-social-size: 40px;
     --utrecht-link-social-border-width: 2px;
     --utrecht-link-list-icon-size: 14px;
+    --utrecht-link-list-link-text-decoration: none;
     --utrecht-icon-baseline-inset-block-start: 0.125em;
     --utrecht-icon-size: 48px;
     --utrecht-heading-5-margin-block-start: 1rem;
@@ -1655,9 +1657,9 @@
     --utrecht-link-social-margin-inline-start: var(--utrecht-space-inline-sm);
     --utrecht-link-social-border-color: var(--utrecht-color-white);
     --utrecht-link-social-background-color: var(--utrecht-color-red-40);
-    --utrecht-link-list-item-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
-    --utrecht-link-list-item-column-gap: var(--utrecht-space-block-xs);
-    --utrecht-link-list-item-margin-block-start: var(--utrecht-space-block-xs);
+    --utrecht-link-list-link-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+    --utrecht-link-list-link-column-gap: var(--utrecht-space-block-xs);
+    --utrecht-link-list-row-gap: var(--utrecht-space-block-xs);
     --utrecht-index-char-nav-link-current-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
     --utrecht-index-char-nav-gap: var(--utrecht-space-column-sm);
     --utrecht-index-char-nav-margin-block-end: var(--utrecht-space-block-md);
