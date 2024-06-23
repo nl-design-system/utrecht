@@ -46,7 +46,10 @@ const preview: Preview = {
     },
     options: {
       storySort: {
-        order: ['React Component', ['Component Introduction', 'Developing components', 'Testing components']],
+        order: [
+          'React Component',
+          ['README', 'Changelog', 'Component Introduction', 'Developing components', 'Testing components'],
+        ],
       },
     },
     ...addonStatus,

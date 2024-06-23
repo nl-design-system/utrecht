@@ -6,7 +6,7 @@ const config: StorybookConfig = {
     buildStoriesJson: true,
     storyStoreV7: true,
   },
-  stories: ['../src/stories/**/*.stories.ts'],
+  stories: ['../src/stories/**/*.stories.mdx', '../src/stories/**/*.stories.ts'],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',

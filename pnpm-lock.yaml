@@ -4152,12 +4152,18 @@ importers:
       '@utrecht/url-data-css':
         specifier: workspace:*
         version: link:../../components/url-data
+      '@utrecht/web-component-library-angular':
+        specifier: workspace:*
+        version: link:../web-component-library-angular
       '@utrecht/web-component-library-react':
         specifier: workspace:*
         version: link:../web-component-library-react
       '@utrecht/web-component-library-stencil':
         specifier: workspace:*
         version: link:../web-component-library-stencil
+      '@utrecht/web-component-library-vue':
+        specifier: workspace:*
+        version: link:../web-component-library-vue
       '@whitespace/storybook-addon-html':
         specifier: 5.1.6
         version: 5.1.6(@storybook/addons@7.6.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/api@7.6.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/components@7.6.4(@types/react-dom@18.2.17)(@types/react@18.2.45)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@storybook/core-events@7.6.4)(@storybook/theming@7.6.4(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(prettier@2.8.8)(react-dom@18.2.0(react@18.2.0))(react-syntax-highlighter@15.5.0(react@18.2.0))(react@18.2.0)

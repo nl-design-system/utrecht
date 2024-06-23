@@ -30,6 +30,11 @@ const preview: Preview = {
         state: 'open',
       },
     },
+    options: {
+      storySort: {
+        order: ['Angular Component', ['README', 'Changelog']],
+      },
+    },
     ...addonStatus,
     ...addonViewport,
   },

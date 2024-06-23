@@ -45,6 +45,11 @@ const preview: Preview = {
       //   </div>
       // ),
     },
+    options: {
+      storySort: {
+        order: ['Vue.js Component', ['README', 'Changelog']],
+      },
+    },
   },
 };
 
