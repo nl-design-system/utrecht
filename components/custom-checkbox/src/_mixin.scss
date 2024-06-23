@@ -122,7 +122,8 @@
     @include utrecht-custom-checkbox--checked;
   }
 
-  &:indeterminate {
+  &:indeterminate,
+  &:checked:indeterminate {
     @include utrecht-custom-checkbox--indeterminate;
   }
 }
