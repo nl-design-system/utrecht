@@ -224,6 +224,50 @@ describe('Checkbox', () => {
     });
   });
 
+  describe('indeterminate variant', () => {
+    it('renders a design system BEM modifier class name', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).toHaveClass('utrecht-checkbox--indeterminate');
+    });
+
+    it('is not indeterminate by default', () => {
+      const { container } = render(<Checkbox />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).not.toHaveAttribute('aria-checked', 'mixed');
+    });
+
+    it('can have a indeterminate state in the attribute `aria-checked` (for server side rendering)', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      const checkbox = container.querySelector(':only-child');
+
+      expect(checkbox).toHaveAttribute('aria-checked', 'mixed');
+    });
+
+    it('can have a indeterminate state in the DOM property `indeterminate` (for client side rendering)', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      type FixedHTMLInput = HTMLInputElement & { indeterminate: boolean };
+
+      const checkbox = container.querySelector(':only-child') as FixedHTMLInput;
+
+      expect(checkbox.indeterminate).toBe(true);
+    });
+
+    it('can have a indeterminate state in CSS', () => {
+      const { container } = render(<Checkbox indeterminate />);
+
+      const checkbox = container.querySelector(':indeterminate');
+
+      expect(checkbox).toBeInTheDocument();
+    });
+  });
+
   it('can be hidden', () => {
     const { container } = render(<Checkbox hidden />);
 
