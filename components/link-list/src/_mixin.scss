@@ -17,10 +17,6 @@
 }
 
 @mixin utrecht-link-list {
-  --utrecht-link-text-decoration: none;
-  --utrecht-link-hover-text-decoration: underline;
-  --utrecht-link-focus-text-decoration: underline;
-
   display: flex;
   flex-direction: column;
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-link-list-margin-block-end, 0));
@@ -37,6 +33,11 @@
 }
 
 @mixin utrecht-link-list__link {
+  /* TODO: I wish we could make it fall back to `var(--utrecht-link-text-decoration)`
+   * when `var(--utrecht-link-list-text-decoration)` is not set.
+   */
+  --utrecht-link-text-decoration: var(--utrecht-link-list-link-text-decoration, none);
+
   align-items: baseline;
   column-gap: var(--utrecht-link-list-link-column-gap);
   display: inline-flex;
