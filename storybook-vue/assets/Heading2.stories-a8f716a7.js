@@ -1,6 +1,0 @@
-import{F as a}from"./component-library-vue-76e39afc.js";import{t as s}from"./tokens-f8828094.js";import{c as n}from"./util-3bcba19d.js";import"./vue.esm-bundler-4be3a786.js";import"./jsx-runtime-0f287e42.js";import"./index-a743d8f6.js";import"./iframe-9b58ffcf.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-725317a4.js";import"./index-11d98b33.js";import"./index-4fb43917.js";import"./index-356e4a49.js";import"./chunk-HLWAVYOI-30c4a938.js";const m={id:"vue-heading-2",title:"Vue.js Component/Heading 2",component:a,tags:["autodocs"],argTypes:{},args:{},parameters:{status:{type:"ALPHA"},tokens:s,tokenPrefix:"utrecht-heading-2",docs:{source:{code:'<UtrechtHeading2 v-bind="$props"><slot></slot></UtrechtHeading2>'}}}},t=n(m,{name:"Heading 2",args:{textContent:"The Quick Brown Fox Jumps Over The Lazy Dog"}});var e,r,o;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`createStory(meta, {
-  name: 'Heading 2',
-  args: {
-    textContent: 'The Quick Brown Fox Jumps Over The Lazy Dog'
-  }
-})`,...(o=(r=t.parameters)==null?void 0:r.docs)==null?void 0:o.source}}};const k=["Default"];export{t as Default,k as __namedExportsOrder,m as default};
