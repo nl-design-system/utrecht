@@ -31,7 +31,6 @@ export const Textbox = forwardRef(
       inputRequired,
       className,
       type = 'text',
-      maxLength,
       inputMode,
       ...restProps
     }: TextboxProps,
@@ -50,7 +49,6 @@ export const Textbox = forwardRef(
         (required || inputRequired) && 'utrecht-textbox--required',
         className,
       )}
-      maxLength={maxLength}
       dir={dir ?? 'auto'}
       disabled={disabled}
       readOnly={readOnly}
