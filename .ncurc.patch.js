@@ -4,6 +4,6 @@ module.exports = {
   reject: [],
   root: true,
   target: 'patch',
-  upgrade: false,
+  upgrade: true,
   workspaces: true,
 };
