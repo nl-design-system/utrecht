@@ -1,14 +1,5 @@
-diff --git a/cli/index.cjs.map b/cli/index.cjs.map
-deleted file mode 100644
-index 84c5c6ad7118ca696f567e1ea87003427e2d9a57..0000000000000000000000000000000000000000
-diff --git a/cli/index.js.map b/cli/index.js.map
-deleted file mode 100644
-index bdd79c3d98731c4314ebd5473733f77ec84b9de4..0000000000000000000000000000000000000000
-diff --git a/compiler/stencil.js.map b/compiler/stencil.js.map
-deleted file mode 100644
-index 3694b42755c30956dda1adb82bbd124e81a09d65..0000000000000000000000000000000000000000
 diff --git a/internal/stencil-public-runtime.d.ts b/internal/stencil-public-runtime.d.ts
-index 10015f906225a54736a7174349f4c8db3a3ab078..d9d615538e1e80b69e82f6dd2cfadc97c084893d 100644
+index 4e79baa330f81eadad96a2433a5357a5d9979524..fff8939dc8fd5c5319f92f78b179b2a266336ce3 100644
 --- a/internal/stencil-public-runtime.d.ts
 +++ b/internal/stencil-public-runtime.d.ts
 @@ -610,7 +610,7 @@ export declare namespace JSXBase {
@@ -30,7 +21,7 @@ index 10015f906225a54736a7174349f4c8db3a3ab078..d9d615538e1e80b69e82f6dd2cfadc97
      interface DetailsHTMLAttributes<T> extends HTMLAttributes<T> {
          open?: boolean;
          onToggle?: (event: Event) => void;
-@@ -1238,6 +1241,7 @@ export declare namespace JSXBase {
+@@ -1233,6 +1236,7 @@ export declare namespace JSXBase {
          tabIndex?: number;
          tabindex?: number | string;
          title?: string;
