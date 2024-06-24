@@ -95,8 +95,8 @@ importers:
         specifier: 2.8.8
         version: 2.8.8
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       stylelint:
         specifier: 14.16.1
         version: 14.16.1
@@ -381,8 +381,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       rollup:
         specifier: 3.29.4
         version: 3.29.4
@@ -1374,8 +1374,8 @@ importers:
         specifier: 7.0.0
         version: 7.0.0(postcss@8.4.33)
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       rollup:
         specifier: 3.29.4
         version: 3.29.4
@@ -1741,8 +1741,8 @@ importers:
         specifier: 7.6.0
         version: 7.6.0(react@18.2.0)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       rollup:
         specifier: 3.29.4
         version: 3.29.4
@@ -1975,8 +1975,8 @@ importers:
         specifier: 2.8.8
         version: 2.8.8
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -2029,8 +2029,8 @@ importers:
         specifier: workspace:*
         version: link:../storybook-web-component
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
 
   packages/docusaurus:
     devDependencies:
@@ -2113,8 +2113,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -2293,8 +2293,8 @@ importers:
         specifier: 2.0.2
         version: 2.0.2
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -2908,8 +2908,8 @@ importers:
         specifier: 2.0.2
         version: 2.0.2
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -3196,8 +3196,8 @@ importers:
         specifier: 2.0.2
         version: 2.0.2
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -4213,8 +4213,8 @@ importers:
         specifier: 2.0.2
         version: 2.0.2
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -4341,8 +4341,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       rollup:
         specifier: 3.29.4
         version: 3.29.4
@@ -4630,8 +4630,8 @@ importers:
         specifier: 5.3.3
         version: 5.3.3
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
 
   packages/web-component-library-vue:
     dependencies:
@@ -4649,8 +4649,8 @@ importers:
         specifier: 0.1.3
         version: 0.1.3(@types/node@20.11.16)
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       typescript:
         specifier: 4.9.5
         version: 4.9.5
@@ -4693,8 +4693,8 @@ importers:
         specifier: 1.0.4
         version: 1.0.4
       rimraf:
-        specifier: 3.0.2
-        version: 3.0.2
+        specifier: 5.0.7
+        version: 5.0.7
       sass:
         specifier: 1.69.5
         version: 1.69.5
@@ -18958,19 +18958,22 @@ packages:
 
   rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@2.7.1:
     resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
-  rimraf@5.0.5:
-    resolution: {integrity: sha512-CqDakW+hMe/Bz202FPEymy68P+G50RfMQK+Qo5YUqc9SPipvbGjCGKd0RSKEelbsfQuw3g5NZDSrlZZAJurH1A==}
-    engines: {node: '>=14'}
+  rimraf@5.0.7:
+    resolution: {integrity: sha512-nV6YcJo5wbLW77m+8KjH8aB/7/rxQy9SZ0HY5shnwULfS+9nmTtVXAJET5NdZmCzA4fPI/Hm1wo/Po/4mopOdg==}
+    engines: {node: '>=14.18'}
     hasBin: true
 
   robust-predicates@3.0.2:
@@ -22093,7 +22096,7 @@ snapshots:
       watchpack: 2.4.0
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
       webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
       webpack-merge: 5.10.0
       webpack-subresource-integrity: 5.1.0(html-webpack-plugin@5.5.4(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)))(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
     optionalDependencies:
@@ -22143,7 +22146,7 @@ snapshots:
       '@angular-devkit/architect': 0.1701.0(chokidar@3.5.3)
       rxjs: 7.8.1
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
     transitivePeerDependencies:
       - chokidar
 
@@ -25696,7 +25699,7 @@ snapshots:
       url-loader: 4.1.1(file-loader@6.2.0(webpack@5.89.0(@swc/core@1.3.100)))(webpack@5.89.0(@swc/core@1.3.100))
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
       webpack-bundle-analyzer: 4.10.1
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
       webpack-merge: 5.10.0
       webpackbar: 5.0.2(webpack@5.89.0(@swc/core@1.3.100))
     transitivePeerDependencies:
@@ -27768,7 +27771,7 @@ snapshots:
       agent-base: 7.1.0
       http-proxy-agent: 7.0.0
       https-proxy-agent: 7.0.2
-      lru-cache: 10.1.0
+      lru-cache: 10.2.2
       socks-proxy-agent: 8.0.2
     transitivePeerDependencies:
       - supports-color
@@ -27791,7 +27794,7 @@ snapshots:
       hosted-git-info: 6.1.1
       json-parse-even-better-errors: 3.0.1
       json-stringify-nice: 1.1.4
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       nopt: 7.2.0
       npm-install-checks: 6.3.0
       npm-package-arg: 10.1.0
@@ -27890,7 +27893,7 @@ snapshots:
     dependencies:
       '@npmcli/name-from-folder': 2.0.0
       glob: 10.4.2
-      minimatch: 9.0.3
+      minimatch: 9.0.4
       read-package-json-fast: 3.0.2
 
   '@npmcli/metavuln-calculator@5.0.1':
@@ -28600,7 +28603,7 @@ snapshots:
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
     optionalDependencies:
       type-fest: 3.13.1
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
       webpack-hot-middleware: 2.25.4
 
   '@pnpm/config.env-replace@1.1.0': {}
@@ -31650,12 +31653,12 @@ snapshots:
   '@tufjs/models@1.0.4':
     dependencies:
       '@tufjs/canonical-json': 1.0.0
-      minimatch: 9.0.3
+      minimatch: 9.0.4
 
   '@tufjs/models@2.0.0':
     dependencies:
       '@tufjs/canonical-json': 2.0.0
-      minimatch: 9.0.3
+      minimatch: 9.0.4
 
   '@turist/fetch@7.2.0(node-fetch@2.7.0(encoding@0.1.13))':
     dependencies:
@@ -38454,7 +38457,7 @@ snapshots:
 
   ignore-walk@6.0.4:
     dependencies:
-      minimatch: 9.0.3
+      minimatch: 9.0.4
 
   ignore@4.0.6: {}
 
@@ -40395,7 +40398,7 @@ snapshots:
       cacache: 18.0.2
       http-cache-semantics: 4.1.1
       is-lambda: 1.0.1
-      minipass: 7.0.4
+      minipass: 7.1.2
       minipass-fetch: 3.0.4
       minipass-flush: 1.0.5
       minipass-pipeline: 1.2.4
@@ -41636,7 +41639,7 @@ snapshots:
 
   minipass-collect@2.0.1:
     dependencies:
-      minipass: 7.0.4
+      minipass: 7.1.2
 
   minipass-fetch@1.4.1:
     dependencies:
@@ -41656,7 +41659,7 @@ snapshots:
 
   minipass-fetch@3.0.4:
     dependencies:
-      minipass: 7.0.4
+      minipass: 7.1.2
       minipass-sized: 1.0.3
       minizlib: 2.1.2
     optionalDependencies:
@@ -42153,7 +42156,7 @@ snapshots:
       prompts-ncu: 3.0.0
       rc-config-loader: 4.1.3
       remote-git-tags: 3.0.0
-      rimraf: 5.0.5
+      rimraf: 5.0.7
       semver: 7.5.4
       semver-utils: 1.1.4
       source-map-support: 0.5.21
@@ -44897,7 +44900,7 @@ snapshots:
     dependencies:
       glob: 7.2.3
 
-  rimraf@5.0.5:
+  rimraf@5.0.7:
     dependencies:
       glob: 10.4.2
 
@@ -47923,7 +47926,7 @@ snapshots:
       schema-utils: 4.2.0
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20)
 
-  webpack-dev-middleware@5.3.3(webpack@5.89.0(@swc/core@1.3.100)):
+  webpack-dev-middleware@5.3.3(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
@@ -48049,7 +48052,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  webpack-dev-server@4.15.1(webpack@5.89.0(@swc/core@1.3.100)):
+  webpack-dev-server@4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -48079,7 +48082,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 5.3.3(webpack@5.89.0(@swc/core@1.3.100))
+      webpack-dev-middleware: 5.3.3(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
       ws: 8.15.1
     optionalDependencies:
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
