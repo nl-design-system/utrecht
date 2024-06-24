@@ -26,14 +26,14 @@
     "url": "git+ssh://git@github.com/nl-design-system/utrecht.git"
   },
   "devDependencies": {
-    "@gemeente-denhaag/process-steps": "0.1.0-alpha.188",
-    "@gemeente-denhaag/step-marker": "0.0.1-alpha.60",
-    "@stencil/angular-output-target": "0.8.3",
+    "@gemeente-denhaag/process-steps": "0.1.0-alpha.224",
+    "@gemeente-denhaag/step-marker": "0.0.1-alpha.96",
+    "@stencil/angular-output-target": "0.8.4",
     "@stencil/react-output-target": "0.5.3",
-    "@stencil/sass": "3.0.7",
-    "@stencil/vue-output-target": "0.8.7",
-    "@types/jest": "29.5.11",
-    "@types/node": "20.11.16",
+    "@stencil/sass": "3.0.12",
+    "@stencil/vue-output-target": "0.8.8",
+    "@types/jest": "29.5.12",
+    "@types/node": "20.14.8",
     "@utrecht/alert-css": "workspace:*",
     "@utrecht/article-css": "workspace:*",
     "@utrecht/backdrop-css": "workspace:*",
@@ -113,7 +113,7 @@
     "rimraf": "5.0.7"
   },
   "dependencies": {
-    "@stencil/core": "4.8.2"
+    "@stencil/core": "4.18.3"
   },
   "scripts": {
     "build": "pnpm run '/^build:.*/'",
