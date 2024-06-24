@@ -2,6 +2,21 @@ const minorConfig = require('./.ncurc.minor');
 
 module.exports = {
   ...minorConfig,
-  reject: [...minorConfig.reject, '@mdx-js/react'],
+  reject: [
+    ...minorConfig.reject,
+    // Docusaurus needs a migration
+    '@docusaurus/*',
+    '@mdx-js/react',
+    '@tsconfig/docusaurus',
+    'prism-react-renderer',
+
+    // Prettier 3 is async, needs a refactoring
+    '@mdx-js/react',
+    'prettier',
+
+    // Storybook v8 needs a refactoring
+    'storybook',
+    '@storybook/*',
+  ],
   target: 'latest',
 };
