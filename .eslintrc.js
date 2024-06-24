@@ -87,6 +87,7 @@ module.exports = {
           'packages/web-component-library-angular/tsconfig.json',
           'packages/web-component-library-react/tsconfig.json',
           'packages/web-component-library-stencil/tsconfig.json',
+          'packages/web-component-library-stencil/tsconfig.config.json',
           'packages/web-component-library-stencil/tsconfig.jest.json',
           'packages/web-component-library-vue/tsconfig.json',
           'packages/web-component-library-vue/tsconfig.app.json',
