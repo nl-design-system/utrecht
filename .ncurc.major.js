@@ -17,6 +17,13 @@ module.exports = {
     // Storybook v8 needs a refactoring
     'storybook',
     '@storybook/*',
+
+    // Avoid ESLint 9
+    'eslint',
+    'eslint-plugin-jest',
+    'eslint-plugin-mdx',
+    'eslint-plugin-react',
+    'eslint-plugin-vue',
   ],
   target: 'latest',
 };
