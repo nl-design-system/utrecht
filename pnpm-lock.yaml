@@ -116,8 +116,8 @@ importers:
   components:
     dependencies:
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
     devDependencies:
       '@babel/core':
         specifier: 7.23.6
@@ -1386,8 +1386,8 @@ importers:
   packages/component-library-react:
     dependencies:
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       lodash.chunk:
         specifier: 4.2.0
         version: 4.2.0
@@ -2080,8 +2080,8 @@ importers:
         specifier: workspace:*
         version: link:../web-component-library-react
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -2260,8 +2260,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20))
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -2869,8 +2869,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20))
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -3157,8 +3157,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20))
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -3565,8 +3565,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.22.20)(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.18.20))
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       css-loader:
         specifier: 6.8.1
         version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.18.20))
@@ -4174,8 +4174,8 @@ importers:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.23.6)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20))
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       cpx:
         specifier: 1.5.0
         version: 1.5.0
@@ -4624,8 +4624,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       clsx:
-        specifier: 1.2.1
-        version: 1.2.1
+        specifier: 2.1.1
+        version: 2.1.1
       node-sass-package-importer:
         specifier: 5.3.3
         version: 5.3.3
@@ -11604,8 +11604,8 @@ packages:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
 
-  clsx@2.0.0:
-    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+  clsx@2.1.1:
+    resolution: {integrity: sha512-eYm0QWBtUrBWZWG0d386OGAw16Z995PiOVo2B7bjWSbHedGl5e0ZWaq65kOGgUSNesEIDkB9ISbTg/JK9dhCZA==}
     engines: {node: '>=6'}
 
   cmd-shim@6.0.2:
@@ -22096,7 +22096,7 @@ snapshots:
       watchpack: 2.4.0
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
       webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
       webpack-merge: 5.10.0
       webpack-subresource-integrity: 5.1.0(html-webpack-plugin@5.5.4(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)))(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
     optionalDependencies:
@@ -22146,7 +22146,7 @@ snapshots:
       '@angular-devkit/architect': 0.1701.0(chokidar@3.5.3)
       rxjs: 7.8.1
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
     transitivePeerDependencies:
       - chokidar
 
@@ -25699,7 +25699,7 @@ snapshots:
       url-loader: 4.1.1(file-loader@6.2.0(webpack@5.89.0(@swc/core@1.3.100)))(webpack@5.89.0(@swc/core@1.3.100))
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
       webpack-bundle-analyzer: 4.10.1
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
       webpack-merge: 5.10.0
       webpackbar: 5.0.2(webpack@5.89.0(@swc/core@1.3.100))
     transitivePeerDependencies:
@@ -26082,7 +26082,7 @@ snapshots:
       '@docusaurus/utils-common': 3.0.1(@docusaurus/types@3.0.1(@swc/core@1.3.100)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))
       '@docusaurus/utils-validation': 3.0.1(@docusaurus/types@3.0.1(@swc/core@1.3.100)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/core@1.3.100)
       '@mdx-js/react': 3.0.0(@types/react@18.2.45)(react@18.2.0)
-      clsx: 2.0.0
+      clsx: 2.1.1
       copy-text-to-clipboard: 3.2.0
       infima: 0.2.0-alpha.43
       lodash: 4.17.21
@@ -26126,7 +26126,7 @@ snapshots:
       '@types/history': 4.7.11
       '@types/react': 18.2.45
       '@types/react-router-config': 5.0.11
-      clsx: 2.0.0
+      clsx: 2.1.1
       parse-numeric-range: 1.3.0
       prism-react-renderer: 2.3.1(react@18.2.0)
       react: 18.2.0
@@ -26163,7 +26163,7 @@ snapshots:
       '@docusaurus/utils-validation': 3.0.1(@docusaurus/types@3.0.1(@swc/core@1.3.100)(react-dom@18.2.0(react@18.2.0))(react@18.2.0))(@swc/core@1.3.100)
       algoliasearch: 4.21.1
       algoliasearch-helper: 3.16.0(algoliasearch@4.21.1)
-      clsx: 2.0.0
+      clsx: 2.1.1
       eta: 2.2.0
       fs-extra: 11.2.0
       lodash: 4.17.21
@@ -28603,7 +28603,7 @@ snapshots:
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
     optionalDependencies:
       type-fest: 3.13.1
-      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
+      webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100))
       webpack-hot-middleware: 2.25.4
 
   '@pnpm/config.env-replace@1.1.0': {}
@@ -34188,7 +34188,7 @@ snapshots:
 
   clsx@1.2.1: {}
 
-  clsx@2.0.0: {}
+  clsx@2.1.1: {}
 
   cmd-shim@6.0.2: {}
 
@@ -43681,7 +43681,7 @@ snapshots:
   prism-react-renderer@2.3.1(react@18.2.0):
     dependencies:
       '@types/prismjs': 1.26.3
-      clsx: 2.0.0
+      clsx: 2.1.1
       react: 18.2.0
 
   prismjs@1.27.0: {}
@@ -47926,7 +47926,7 @@ snapshots:
       schema-utils: 4.2.0
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20)
 
-  webpack-dev-middleware@5.3.3(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)):
+  webpack-dev-middleware@5.3.3(webpack@5.89.0(@swc/core@1.3.100)):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
@@ -48052,7 +48052,7 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  webpack-dev-server@4.15.1(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)):
+  webpack-dev-server@4.15.1(webpack@5.89.0(@swc/core@1.3.100)):
     dependencies:
       '@types/bonjour': 3.5.13
       '@types/connect-history-api-fallback': 1.5.4
@@ -48082,7 +48082,7 @@ snapshots:
       serve-index: 1.9.1
       sockjs: 0.3.24
       spdy: 4.0.2
-      webpack-dev-middleware: 5.3.3(webpack@5.89.0(@swc/core@1.3.100)(esbuild@0.19.11))
+      webpack-dev-middleware: 5.3.3(webpack@5.89.0(@swc/core@1.3.100))
       ws: 8.15.1
     optionalDependencies:
       webpack: 5.89.0(@swc/core@1.3.100)(esbuild@0.19.11)
