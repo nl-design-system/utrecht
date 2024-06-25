@@ -38,6 +38,7 @@ const meta = {
     icon: '',
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fmap-marker',
     tokensPrefix: 'utrecht-map-marker',
     status: {
       type: 'WORK IN PROGRESS',

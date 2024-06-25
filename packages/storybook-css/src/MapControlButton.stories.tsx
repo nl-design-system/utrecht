@@ -90,6 +90,7 @@ const meta = {
     labelVisible: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fmap-control-button',
     tokensPrefix: 'utrecht-mapcontrolbutton',
     status: {
       type: 'WORK IN PROGRESS',

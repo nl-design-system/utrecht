@@ -186,6 +186,12 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Ftextbox',
+    communityFigma:
+      'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=859-981&t=CiZrkiC5t6Bn59Hg-0',
+    figma:
+      'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=859-981&t=kJatlKfN59e8T0eA-0',
+    nldesignsystem: 'https://nldesignsystem.nl/text-input',
     status: {
       type: 'WORK IN PROGRESS',
     },

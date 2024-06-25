@@ -1,6 +1,8 @@
 /* eslint-env node */
+import { Controls, Description, Primary, Stories } from '@storybook/blocks';
 import type { Preview } from '@storybook/react';
 import type { StoryContext } from '@storybook/types';
+import { ButtonGroup } from '@utrecht/component-library-react/src/css-module';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonThemes } from '@utrecht/storybook-helpers/dist/addon-themes';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
@@ -10,7 +12,8 @@ import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import React, { ReactElement } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
-
+import { CommunityFigmaBlock, FigmaBlock } from './FigmaBlock';
+import { GitHubBlock } from './GitHubBlock';
 import 'firacode/distr/fira_code.css';
 import '@utrecht/components/index.scss';
 import '@utrecht/html-content-css/src/index.scss';
@@ -22,6 +25,7 @@ import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@utrecht/design-tokens/src/background-image-icon.scss';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
+import { NlDesignSystemBlock } from './NlDesignSystemBlock';
 
 defineCustomElements();
 
@@ -63,6 +67,21 @@ const preview: Preview = {
 
     // Configure @storybook/addon-docs
     docs: {
+      page: () => {
+        const buttons = [<FigmaBlock />, <CommunityFigmaBlock />, <GitHubBlock />, <NlDesignSystemBlock />].filter(
+          Boolean,
+        );
+        // Exclude `<Title>` because the title comes from the Markdown file
+        return (
+          <>
+            {buttons.length > 0 ? <ButtonGroup>{buttons}</ButtonGroup> : null}
+            <Description />
+            <Primary />
+            <Controls />
+            <Stories />
+          </>
+        );
+      },
       // Show code by default.
       // Stories without concise code snippets can hide the code at Story level.
       source: {

@@ -26,6 +26,8 @@ const meta = {
     children: [],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fpage-footer',
+    nldesignsystem: 'https://nldesignsystem.nl/page-footer',
     tokensPrefix: 'utrecht-page-footer',
     status: {
       type: 'WORK IN PROGRESS',

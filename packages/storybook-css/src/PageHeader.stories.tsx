@@ -20,6 +20,8 @@ const meta = {
     children: [],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fpage-header',
+    nldesignsystem: 'https://nldesignsystem.nl/page-header',
     tokensPrefix: 'utrecht-page-header',
     status: {
       type: 'WORK IN PROGRESS',

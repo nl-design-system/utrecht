@@ -270,6 +270,7 @@ const meta = {
   },
   decorators: [spaceForPopover as any],
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fcombobox',
     status: {
       type: 'WORK IN PROGRESS',
     },

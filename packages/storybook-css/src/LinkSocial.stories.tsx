@@ -79,6 +79,7 @@ const meta = {
     focusVisible: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Flink-social',
     tokensPrefix: 'utrecht-link-social',
     status: {
       type: 'WORK IN PROGRESS',

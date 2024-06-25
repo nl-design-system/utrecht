@@ -85,6 +85,8 @@ const meta = {
     section: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fform-fieldset',
+    nldesignsystem: 'https://nldesignsystem.nl/fieldset',
     tokensPrefix: 'utrecht-form-fieldset',
     status: {
       type: 'WORK IN PROGRESS',

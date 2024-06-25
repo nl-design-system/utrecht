@@ -128,6 +128,7 @@ const meta = {
     IconAfter: '',
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fbutton-link',
     tokensPrefix: 'utrecht-button-link',
     status: {
       type: 'WORK IN PROGRESS',

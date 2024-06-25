@@ -76,6 +76,7 @@ const meta = {
     },
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Flink-button',
     tokensPrefix: 'utrecht-link-button',
     status: {
       type: 'WORK IN PROGRESS',

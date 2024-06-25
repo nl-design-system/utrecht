@@ -25,6 +25,10 @@ const meta = {
     },
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fbreadcrumb-nav',
+    communityFigma:
+      'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=1862-9575&t=kJatlKfN59e8T0eA-0',
+    nldesignsystem: 'https://nldesignsystem.nl/breadcrumb',
     tokensPrefix: 'css-breadcrumb-nav',
     status: 'ALPHA',
     tokens,
