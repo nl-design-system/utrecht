@@ -52,6 +52,7 @@ const meta = {
     children: [],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Furl-data',
     tokensPrefix: 'utrecht-url-data',
     status: {
       type: 'WORK IN PROGRESS',

@@ -26,6 +26,8 @@ const meta = {
     items: [],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fside-nav',
+    nldesignsystem: 'https://nldesignsystem.nl/side-navigation',
     tokensPrefix: 'utrecht-sidenav',
     status: {
       type: 'WORK IN PROGRESS',

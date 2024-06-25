@@ -68,6 +68,10 @@ const meta = {
     items: [],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fdata-list',
+    communityFigma:
+      'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=1238-4478&t=CiZrkiC5t6Bn59Hg-0',
+    nldesignsystem: 'https://nldesignsystem.nl/summary-list',
     tokensPrefix: 'utrecht-data-list',
     status: {
       type: 'WORK IN PROGRESS',

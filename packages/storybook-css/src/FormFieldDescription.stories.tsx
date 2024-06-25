@@ -48,6 +48,11 @@ const meta = {
     distanced: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fform-field-description',
+    communityFigma:
+      'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=851-924&t=CiZrkiC5t6Bn59Hg-0',
+    figma:
+      'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=851-924&t=kJatlKfN59e8T0eA-0',
     tokensPrefix: 'utrecht-form-field-description',
     status: {
       type: 'WORK IN PROGRESS',

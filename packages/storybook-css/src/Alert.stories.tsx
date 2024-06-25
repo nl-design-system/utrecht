@@ -38,6 +38,12 @@ const meta = {
   },
   tags: ['autodocs'],
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Falert',
+    communityFigma:
+      'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=1179-3892&t=CiZrkiC5t6Bn59Hg-0',
+    figma:
+      'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=1194-3949&t=LeV3GnPMhhdI2rZ3-4',
+    nldesignsystem: 'https://nldesignsystem.nl/alert',
     status: {
       type: 'ALPHA',
     },

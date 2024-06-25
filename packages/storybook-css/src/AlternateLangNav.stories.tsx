@@ -32,6 +32,8 @@ const meta = {
     languages: [],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Falternate-lang-nav',
+    nldesignsystem: 'https://nldesignsystem.nl/language-nav',
     tokensPrefix: 'utrecht-alternate-lang-nav',
     status: {
       type: 'WORK IN PROGRESS',

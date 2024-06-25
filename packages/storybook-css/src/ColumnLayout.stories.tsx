@@ -33,6 +33,7 @@ const meta = {
     rule: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fcolumn-layout',
     tokensPrefix: 'utrecht-column-layout',
     status: {
       type: 'WORK IN PROGRESS',

@@ -44,6 +44,7 @@ const meta = {
     grid: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Ftop-task-nav',
     tokensPrefix: 'utrecht-toptask-nav',
     status: {
       type: 'WORK IN PROGRESS',

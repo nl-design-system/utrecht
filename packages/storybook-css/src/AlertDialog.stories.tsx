@@ -48,6 +48,8 @@ const meta = {
     ],
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Falert-dialog',
+    nldesignsystem: 'https://nldesignsystem.nl/alert-dialog',
     tokensPrefix: 'utrecht-alert-dialog',
     status: {
       type: 'WORK IN PROGRESS',

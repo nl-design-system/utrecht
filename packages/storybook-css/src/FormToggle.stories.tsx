@@ -50,6 +50,8 @@ const meta = {
     hover: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fform-toggle',
+    nldesignsystem: 'https://nldesignsystem.nl/switch',
     tokensPrefix: 'utrecht-form-toggle',
     status: {
       type: 'WORK IN PROGRESS',

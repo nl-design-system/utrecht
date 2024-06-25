@@ -73,6 +73,8 @@ const meta = {
     src: '',
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Ffigure',
+    nldesignsystem: 'https://nldesignsystem.nl/figure',
     tokensPrefix: 'utrecht-figure',
     status: {
       type: 'WORK IN PROGRESS',

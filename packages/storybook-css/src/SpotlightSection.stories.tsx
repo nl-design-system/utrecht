@@ -33,6 +33,7 @@ const meta = {
     type: '',
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fspotlight-section',
     tokensPrefix: 'utrecht-spotlight-section',
     status: {
       type: 'WORK IN PROGRESS',

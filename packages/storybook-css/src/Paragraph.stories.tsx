@@ -32,6 +32,12 @@ const meta = {
     small: false,
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fparagraph',
+    communityFigma:
+      'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=150-734&t=CiZrkiC5t6Bn59Hg-0',
+    figma:
+      'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=150-734&t=kJatlKfN59e8T0eA-0',
+    nldesignsystem: 'https://nldesignsystem.nl/paragraph',
     tokensPrefix: 'utrecht-paragraph',
     status: {
       type: 'ALPHA',

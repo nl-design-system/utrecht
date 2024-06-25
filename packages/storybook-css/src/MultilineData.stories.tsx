@@ -45,6 +45,7 @@ const meta = {
     Element: 'pre',
   },
   parameters: {
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fmultiline-data',
     tokensPrefix: 'utrecht-multiline-data',
     status: {
       type: 'ALPHA',

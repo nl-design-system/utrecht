@@ -87,6 +87,10 @@ const meta = {
     IconAfter: '',
   },
   parameters: {
+    communityFigma: 'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/?node-id=153-1138',
+    figma: 'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/?node-id=153-1138',
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fbutton',
+    nldesignsystem: 'https://nldesignsystem.nl/button',
     tokensPrefix: 'utrecht-button',
     status: {
       type: 'WORK IN PROGRESS',
