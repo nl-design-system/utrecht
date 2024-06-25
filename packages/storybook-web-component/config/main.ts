@@ -10,7 +10,6 @@ const config: StorybookConfig = {
     // postcss: false,
     buildStoriesJson: true,
     // previewMdx2: true,
-    storyStoreV7: true,
   },
   framework: {
     name: '@storybook/react-webpack5',

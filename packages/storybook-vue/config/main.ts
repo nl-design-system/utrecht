@@ -4,7 +4,6 @@ import path from 'path';
 const config: StorybookConfig = {
   features: {
     buildStoriesJson: true,
-    storyStoreV7: true,
   },
   stories: ['../src/stories/**/*.stories.mdx', '../src/stories/**/*.stories.ts'],
   addons: [

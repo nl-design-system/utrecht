@@ -45,6 +45,7 @@ const preview: Preview = {
       );
     },
   ],
+
   parameters: {
     // Make the "Docs" tab the default, instead of the "Canvas" tab
     viewMode: 'docs',
@@ -90,6 +91,8 @@ const preview: Preview = {
     ...addonThemes,
     ...addonViewport,
   },
+
+  tags: ['autodocs']
 };
 
 export default preview;
