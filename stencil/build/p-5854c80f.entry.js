@@ -1,2 +1,0 @@
-import{r as t,h as n}from"./p-64b05bb9.js";const s=":host{display:contents}dd{margin-inline-start:0;align-items:baseline;display:flex;grid-column:-1;grid-row:1;justify-content:flex-end}:host([hidden]){display:none !important}";const i=class{constructor(n){t(this,n)}render(){return n("dd",null,n("slot",null))}};i.style=s;export{i as utrecht_data_list_actions};
-//# sourceMappingURL=p-5854c80f.entry.js.map

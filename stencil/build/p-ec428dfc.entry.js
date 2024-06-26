@@ -1,0 +1,2 @@
+import{r as e,h as t,H as r}from"./p-5002d233.js";const o=":host{--_utrecht-table-header-cell-z-index:5;z-index:3;display:table-footer-group}";const c=o;const s=class{constructor(t){e(this,t)}render(){return t(r,{key:"0cc28ea65af92e75219add19cb62f7c72398f575",role:"rowgroup"},t("slot",{key:"687509c611164fdb85081b36360b909a0e637906"}))}};s.style=c;export{s as utrecht_table_footer};
+//# sourceMappingURL=p-ec428dfc.entry.js.map

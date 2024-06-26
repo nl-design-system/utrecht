@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Wed, 26 Jun 2024 05:27:26 GMT
+ * Generated on Wed, 26 Jun 2024 05:58:22 GMT
  */
 /**
  * Do not edit directly
- * Generated on Wed, 26 Jun 2024 05:27:25 GMT
+ * Generated on Wed, 26 Jun 2024 05:58:22 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -17,14 +17,14 @@
  * All rights reserved
  */
 /* stylelint-disable no-duplicate-selectors */
-@media (min-width: 35em) {
+@media (width >= 35em) {
   .utrecht-theme--media-query,
   .utrecht-theme--media-query-viewport {
     --utrecht-heading-1-font-size: 28px; /* 28px on tablet min-width-35e */
     --utrecht-paragraph-lead-font-size: 1.25em; /* 20px on tablet min-width-35e */
   }
 }
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .utrecht-theme--media-query,
   .utrecht-theme--media-query-viewport {
     --utrecht-heading-1-font-size: 32px; /* 32px on desktop min-width-60em */

@@ -1,0 +1,2 @@
+import{r as c,h as t}from"./p-5002d233.js";const e=".utrecht-icon-container{display:inline-block;color:var(--utrecht-icon-color);width:var(--utrecht-icon-size);height:var(--utrecht-icon-size)}";const r=e;const o=class{constructor(t){c(this,t)}render(){return t("div",{key:"5bb8e67569308ab7ba1fa93341fe7c89bce04f89",class:"utrecht-icon-container"},t("slot",{key:"2f86872c73ab432117078806c70470e9c4fe9dba"}))}};o.style=r;export{o as utrecht_icon_container};
+//# sourceMappingURL=p-fe1a93cb.entry.js.map

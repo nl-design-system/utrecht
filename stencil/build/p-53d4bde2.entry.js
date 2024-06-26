@@ -1,0 +1,2 @@
+import{r as t,h as e}from"./p-5002d233.js";const s=":host{display:contents}dd{margin-inline-start:0;align-items:baseline;display:flex;grid-column:-1;grid-row:1;justify-content:flex-end}:host([hidden]){display:none !important}";const n=s;const d=class{constructor(e){t(this,e)}render(){return e("dd",{key:"68f2211773e0d435b80554b1be3bcceda5d2eec8"},e("slot",{key:"ee0c986fa01377c3dd9f3b270d4c8af1f327e066"}))}};d.style=n;export{d as utrecht_data_list_actions};
+//# sourceMappingURL=p-53d4bde2.entry.js.map

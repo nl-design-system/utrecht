@@ -1,0 +1,2 @@
+import{r as e,h as a,H as r}from"./p-5002d233.js";const o=":host{break-inside:avoid;page-break-inside:avoid;display:table-row}";const s=o;const d=class{constructor(a){e(this,a)}render(){return a(r,{key:"f5619495813881f2ca2acf9d3f6d14bdcd223e5e",role:"row"},a("slot",{key:"bc55df4b147642e20768182f7bd3aac9bde01acd"}))}};d.style=s;export{d as utrecht_table_row};
+//# sourceMappingURL=p-7ca586d8.entry.js.map
