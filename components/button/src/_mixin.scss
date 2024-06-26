@@ -206,6 +206,8 @@
     --utrecht-button-border-bottom-width,
     var(--_utrecht-button-border-width, 0)
   );
+  --_utrecht-button-font-size: var(--_utrecht-button-appearance-font-size, var(--utrecht-button-font-size));
+  --_utrecht-button-line-height: var(--_utrecht-button-appearance-line-height, var(--utrecht-button-line-height));
   --utrecht-icon-size: var(--utrecht-button-icon-size, 1em);
 
   align-items: center;
@@ -221,13 +223,13 @@
   color: var(--_utrecht-button-color);
   cursor: var(--utrecht-action-activate-cursor, revert);
   display: inline-flex;
-  font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
-  font-size: var(--utrecht-button-font-size, var(--utrecht-document-font-family, inherit));
+  font-family: var(--_utrecht-button-font-family, var(--utrecht-document-font-family));
+  font-size: var(--_utrecht-button-font-size, var(--utrecht-document-font-family, inherit));
   font-weight: var(--_utrecht-button-appearance-font-weight, var(--utrecht-button-font-weight));
   gap: var(--utrecht-button-icon-gap);
   inline-size: var(--utrecht-button-inline-size, auto);
   justify-content: center;
-  line-height: var(--utrecht-button-line-height);
+  line-height: var(--_utrecht-button-line-height);
   max-inline-size: var(--utrecht-button-max-inline-size, fit-content);
   min-block-size: var(--utrecht-button-min-block-size, 44px);
   min-inline-size: var(--utrecht-button-min-inline-size, 44px);
@@ -321,7 +323,9 @@
   --_utrecht-button-appearance-border-color: var(--utrecht-button-#{$modifier}-border-color);
   --_utrecht-button-appearance-border-width: var(--utrecht-button-#{$modifier}-border-width);
   --_utrecht-button-appearance-color: var(--utrecht-button-#{$modifier}-color);
+  --_utrecht-button-appearance-font-size: var(--utrecht-button-#{$modifier}-font-size);
   --_utrecht-button-appearance-font-weight: var(--utrecht-button-#{$modifier}-font-weight);
+  --_utrecht-button-appearance-line-height: var(--utrecht-button-#{$modifier}-line-height);
   --_utrecht-button-appearance-disabled-background-color: var(--utrecht-button-#{$modifier}-disabled-background-color);
   --_utrecht-button-appearance-disabled-border-color: var(--utrecht-button-#{$modifier}-disabled-border-color);
   --_utrecht-button-appearance-disabled-color: var(--utrecht-button-#{$modifier}-disabled-color);
