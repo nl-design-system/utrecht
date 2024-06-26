@@ -20,8 +20,11 @@
   line-height: 1;
   max-block-size: max-content;
   max-inline-size: max-content;
-  min-block-size: var(--utrecht-badge-counter-min-size, 1em);
-  min-inline-size: var(--utrecht-badge-counter-min-size, 1em);
+  min-block-size: var(
+    --utrecht-badge-counter-min-block-size,
+    var(--utrecht-badge-counter-min-inline-size, var(--utrecht-badge-counter-min-size, 1em))
+  );
+  min-inline-size: var(--utrecht-badge-counter-min-inline-size, var(--utrecht-badge-counter-min-size, 1em));
   padding-block-end: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-block-start: var(--utrecht-badge-counter-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-inline-end: var(--utrecht-badge-counter-padding-inline, var(--utrecht-badge-padding-inline, 0.5ch));
