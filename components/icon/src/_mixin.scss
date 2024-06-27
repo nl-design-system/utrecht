@@ -12,6 +12,7 @@
   inline-size: var(--utrecht-icon-size);
   inset-block-start: var(--utrecht-icon-inset-block-start, 0);
   position: relative;
+  vertical-align: calc((var(--utrecht-icon-size) - 1ex) * -0.5);
 }
 
 @mixin utrecht-icon__svg {
