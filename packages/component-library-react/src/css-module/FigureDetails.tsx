@@ -3,6 +3,6 @@
  * Copyright (c) 2024 Frameless B.V.
  */
 
-import '../../../../components/figure-details/css/index.scss';
+import '@utrecht/figure-details-css/src/index.scss';
 
 export * from '../FigureDetails';
