@@ -13,7 +13,8 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/design-system-website"
   },
   "devDependencies": {
     "@utrecht/docusaurus": "workspace:*",

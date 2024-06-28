@@ -15,5 +15,10 @@
   ],
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "components/badge"
   }
 }

@@ -17,7 +17,8 @@
   ],
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "."
   },
   "engines": {
     "node": "^20",

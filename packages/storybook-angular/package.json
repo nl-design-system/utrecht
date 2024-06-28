@@ -11,7 +11,8 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/storybook-angular"
   },
   "devDependencies": {
     "@angular-devkit/architect": "0.1701.0",
