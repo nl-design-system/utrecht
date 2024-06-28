@@ -10,7 +10,8 @@
   "private": true,
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/storybook-html"
   },
   "devDependencies": {
     "@babel/core": "7.24.7",

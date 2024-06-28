@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "proprietary/design-tokens"
   },
   "devDependencies": {
     "@divriots/style-dictionary-to-figma": "0.4.0",

@@ -13,7 +13,8 @@
   },
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git"
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/component-library-css"
   },
   "devDependencies": {
     "@utrecht/components": "workspace:*",

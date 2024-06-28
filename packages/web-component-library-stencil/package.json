@@ -23,7 +23,8 @@
   ],
   "repository": {
     "type": "git+ssh",
-    "url": "git+ssh://git@github.com/nl-design-system/utrecht.git"
+    "url": "git+ssh://git@github.com/nl-design-system/utrecht.git",
+    "directory": "packages/web-component-library-stencil"
   },
   "devDependencies": {
     "@gemeente-denhaag/process-steps": "0.1.0-alpha.224",
