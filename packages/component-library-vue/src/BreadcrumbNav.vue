@@ -1,16 +1,16 @@
 <script lang="ts">
-import { defineComponent, getCurrentInstance } from "vue";
-import UtrechtHeading from "./Heading.vue";
-import { useMicrodataItem } from "./helpers/microdata";
-import { useModelWrapper } from "./helpers/modelWrapper";
+import { defineComponent, getCurrentInstance } from 'vue';
+import UtrechtHeading from './Heading.vue';
+import { useMicrodataItem } from './helpers/microdata';
+import { useModelWrapper } from './helpers/modelWrapper';
 
 export default defineComponent({
-  name: "UtrechtBreadcrumbNav",
+  name: 'UtrechtBreadcrumbNav',
   components: { UtrechtHeading },
   props: {
-    appearance: { type: String, required: false, default: "arrows" },
+    appearance: { type: String, required: false, default: 'arrows' },
     headingLevel: { type: Number, required: false, default: 2 },
-    label: { type: String, required: false, default: "" },
+    label: { type: String, required: false, default: '' },
   },
   setup(props, { emit }) {
     return {

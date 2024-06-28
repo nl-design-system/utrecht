@@ -1,8 +1,8 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "UtrechtParagraph",
+  name: 'UtrechtParagraph',
   props: {
     lead: { type: Boolean, required: false, default: false },
     small: { type: Boolean, required: false, default: false },

@@ -1,14 +1,14 @@
 <script lang="ts">
-import { defineComponent } from "vue";
-import { useModelWrapper } from "./helpers/modelWrapper";
+import { defineComponent } from 'vue';
+import { useModelWrapper } from './helpers/modelWrapper';
 
 export default defineComponent({
-  name: "UtrechtSelect",
+  name: 'UtrechtSelect',
   props: {
     invalid: { type: Boolean, required: false },
     readonly: { type: Boolean, required: false },
     options: { type: [Array, Object], required: true },
-    modelValue: { type: [String, Number, Boolean], required: false, default: "" },
+    modelValue: { type: [String, Number, Boolean], required: false, default: '' },
   },
   setup(props, { emit }) {
     return {

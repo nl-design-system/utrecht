@@ -1,8 +1,8 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "UtrechtHeading1",
+  name: 'UtrechtHeading1',
 });
 </script>
 

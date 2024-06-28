@@ -1,17 +1,17 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "UtrechtDataListValue",
+  name: 'UtrechtDataListValue',
   props: {
-    value: { type: [Number, String], required: false, default: "" },
-    emptyDescription: { type: String, required: false, default: "" },
+    value: { type: [Number, String], required: false, default: '' },
+    emptyDescription: { type: String, required: false, default: '' },
     multiline: { type: Boolean, required: false },
     notranslate: { type: Boolean, required: false },
   },
   data() {
     return {
-      empty: this.$props.value === "" || this.$props.value === undefined,
+      empty: this.$props.value === '' || this.$props.value === undefined,
     };
   },
 });

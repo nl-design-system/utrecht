@@ -1,11 +1,11 @@
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import type { PropType } from "vue";
+import { defineComponent, ref } from 'vue';
+import type { PropType } from 'vue';
 
-export type AlertDialogType = "error" | "info" | "warning" | "ok";
+export type AlertDialogType = 'error' | 'info' | 'warning' | 'ok';
 
 export default defineComponent({
-  name: "UtrechtAlertDialog",
+  name: 'UtrechtAlertDialog',
   props: {
     icon: {
       type: String,
