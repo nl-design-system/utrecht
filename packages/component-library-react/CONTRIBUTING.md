@@ -113,7 +113,7 @@ export const MyComponent = forwardRef(
     <div ref={ref} {...restProps}>
       {children}
     </div>
-  )
+  ),
 );
 ```
 

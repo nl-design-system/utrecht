@@ -1,8 +1,8 @@
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: "UtrechtLink",
+  name: 'UtrechtLink',
   props: {
     external: { type: Boolean, required: false, default: false },
   },

@@ -1,8 +1,8 @@
 <script lang="ts">
-import { defineComponent, type PropType } from "vue";
-type LabelTypes = "radio" | "checkbox" | undefined;
+import { defineComponent, type PropType } from 'vue';
+type LabelTypes = 'radio' | 'checkbox' | undefined;
 export default defineComponent({
-  name: "UtrechtFormLabel",
+  name: 'UtrechtFormLabel',
   props: {
     checked: { type: Boolean, required: false, default: false },
     disabled: { type: Boolean, required: false, default: false },

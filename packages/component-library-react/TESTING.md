@@ -29,7 +29,7 @@ it("renders rich text content", () => {
   const { container } = render(
     <Heading1 {...defaultProps}>
       The French national motto: <span lang="fr">Liberté, égalité, fraternité</span>
-    </Heading1>
+    </Heading1>,
   );
 
   const richText = container.querySelector("span");

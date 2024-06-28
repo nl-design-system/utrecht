@@ -1,12 +1,12 @@
 <script lang="ts">
-import { defineComponent, type PropType } from "vue";
-type AppearanceType = "primary-action-button" | "secondary-action-button" | "subtle-button" | undefined;
-type ButtonTypes = "button" | "reset" | "submit";
+import { defineComponent, type PropType } from 'vue';
+type AppearanceType = 'primary-action-button' | 'secondary-action-button' | 'subtle-button' | undefined;
+type ButtonTypes = 'button' | 'reset' | 'submit';
 export default defineComponent({
-  name: "UtrechtButton",
+  name: 'UtrechtButton',
   props: {
     appearance: { type: String as PropType<AppearanceType>, required: false, default: undefined },
-    type: { type: String as PropType<ButtonTypes>, required: false, default: "button" },
+    type: { type: String as PropType<ButtonTypes>, required: false, default: 'button' },
     busy: { type: Boolean, required: false, default: false },
     pressed: { type: Boolean, required: false, default: undefined },
   },

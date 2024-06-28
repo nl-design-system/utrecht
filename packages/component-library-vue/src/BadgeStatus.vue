@@ -1,20 +1,20 @@
 <script lang="ts">
-import { defineComponent, type PropType } from "vue";
+import { defineComponent, type PropType } from 'vue';
 
 type StatusType =
-  | "danger"
-  | "warning"
-  | "safe"
-  | "neutral"
-  | "valid"
-  | "invalid"
-  | "error"
-  | "success"
-  | "active"
-  | "inactive"
+  | 'danger'
+  | 'warning'
+  | 'safe'
+  | 'neutral'
+  | 'valid'
+  | 'invalid'
+  | 'error'
+  | 'success'
+  | 'active'
+  | 'inactive'
   | undefined;
 export default defineComponent({
-  name: "UtrechtBadgeStatus",
+  name: 'UtrechtBadgeStatus',
   props: {
     status: { type: String as PropType<StatusType>, required: false, default: undefined },
   },
