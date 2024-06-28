@@ -42,6 +42,7 @@
     "eslint-plugin-mdx": "2.3.4",
     "eslint-plugin-react": "7.34.3",
     "eslint-plugin-vue": "9.26.0",
+    "glob": "10.4.2",
     "html-validate": "8.20.1",
     "husky": "9.0.11",
     "lint-staged": "15.2.7",
@@ -58,6 +59,7 @@
     "typescript": "4.9.5"
   },
   "scripts": {
+    "add-repository-directory": "node ./add-repository-directory.mjs",
     "build": "pnpm run nx-build --skip-nx-cache",
     "nx-build": "nx run-many --target=build --all --parallel",
     "clean": "pnpm run --if-present --recursive clean",
