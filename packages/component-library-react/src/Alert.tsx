@@ -33,7 +33,11 @@ export const Alert = forwardRef(
       )}
     >
       {icon && <div className="utrecht-alert__icon">{icon}</div>}
-      <div className="utrecht-alert__message">{children}</div>
+      <div className="utrecht-alert__content">
+        <div className="utrecht-alert__message" role="alert">
+          {children}
+        </div>
+      </div>
     </div>
   ),
 );
