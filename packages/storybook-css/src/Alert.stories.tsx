@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/alert-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { UtrechtIconCross } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { Alert } from './Alert';
 import { Heading2 } from './Heading2';
@@ -78,12 +79,14 @@ export const OK: Story = {
 
 export const Warning: Story = {
   args: {
+    icon: <UtrechtIconCross />,
     type: 'warning',
   },
 };
 
 export const Error: Story = {
   args: {
+    icon: <UtrechtIconCross />,
     type: 'error',
   },
 };
