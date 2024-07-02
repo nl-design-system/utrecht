@@ -11,10 +11,9 @@
   border-style: solid;
   border-width: var(--_utrecht-alert-border-width, var(--utrecht-alert-border-width, 0));
   color: var(--_utrecht-alert-color, var(--utrecht-alert-color));
-  display: grid;
-  gap: var(--utrecht-alert-icon-gap);
-  grid-template-areas: "icon message";
-  grid-template-columns: 0fr 100fr;
+  column-gap: var(--utrecht-alert-column-gap);
+  display: flex;
+  flex-direction: row;
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-alert-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-alert-margin-block-start, 0));
   padding-block-end: var(--utrecht-alert-padding-block-end);
@@ -25,12 +24,17 @@
 
 @mixin utrecht-alert__icon {
   --utrecht-icon-color: var(--_utrecht-alert-icon-color, var(--utrecht-alert-icon-color));
-
-  grid-area: icon;
+  --utrecht-icon-size: var(--utrecht-alert-icon-size);
+  --utrecht-icon-inset-block-start: var(--utrecht-alert-icon-inset-block-start);
 }
 
+@mixin utrecht-alert__content {
+  row-gap: var(--utrecht-alert-content-row-gap);
+}
+
+/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-alert__message {
-  grid-area: message;
+  row-gap: var(--utrecht-alert-message-row-gap);
 }
 
 @mixin utrecht-alert-type($type) {
