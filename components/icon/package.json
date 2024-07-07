@@ -17,6 +17,8 @@
     "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../../packages/web-component-library-stencil/src/components/generated/"
   },
   "devDependencies": {
+    "@unicode/unicode-15.1.0": "1.5.2",
+    "jsdom": "20.0.3",
     "lodash": "4.17.21",
     "minimist": "1.2.8",
     "rollup": "4.18.0",
