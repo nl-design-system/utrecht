@@ -1,0 +1,30 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+
+@import "./generated";
+
+/* This is the ideal implementation: */
+
+/*
+:host([direction="inherit"]) {
+  --utrecht-icon-rtl-scale-x: -1;
+}
+
+svg:dir(rtl) {
+  transform: scaleX(var(--utrecht-icon-rtl-scale-x, 1));
+}
+*/
+
+/* This is a workaround for Safari not supporting :dir(rtl) in Shadow DOM.
+ * Match `:dir(rtl)` outside the shadow DOM.
+ */
+:host([direction="inherit"]:dir(rtl)) {
+  --utrecht-icon-scale-x: -1;
+}
+
+svg {
+  transform: scaleX(var(--utrecht-icon-scale-x, 1));
+}

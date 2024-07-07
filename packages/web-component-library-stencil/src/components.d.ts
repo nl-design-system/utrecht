@@ -241,8 +241,10 @@ export namespace Components {
     interface UtrechtIconChevronDown {
     }
     interface UtrechtIconChevronLeft {
+        "direction": string;
     }
     interface UtrechtIconChevronRight {
+        "direction": string;
     }
     interface UtrechtIconChevronUp {
     }
@@ -3183,8 +3185,10 @@ declare namespace LocalJSX {
     interface UtrechtIconChevronDown {
     }
     interface UtrechtIconChevronLeft {
+        "direction"?: string;
     }
     interface UtrechtIconChevronRight {
+        "direction"?: string;
     }
     interface UtrechtIconChevronUp {
     }

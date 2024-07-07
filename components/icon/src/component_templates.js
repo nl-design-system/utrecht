@@ -2,19 +2,21 @@
 const lodash = require('lodash');
 const { camelCase, kebabCase, upperFirst } = lodash;
 
-/* eslint-disable-next-line no-unused-vars */
-exports.component = (name, children, container) => {
+exports.component = (name, children, container, unicodeBidi) => {
   const ComponentName = upperFirst(camelCase(name));
   const webComponentName = kebabCase(name);
 
-  return `import { Component, h } from '@stencil/core';
+  return `import { Component,${unicodeBidi ? 'Prop, ' : ''} h } from '@stencil/core';
 
 @Component({
   tag: '${webComponentName}',
-  styleUrl: "../../icon/generated.scss",
+  styleUrl: ${JSON.stringify(
+    unicodeBidi ? '../../icon/generated-direction-inherit.scss' : '../../icon/generated.scss',
+  )},
   shadow: true,
 })
 export class ${ComponentName} {
+${unicodeBidi ? `  @Prop({ attribute: 'direction', reflect: true }) direction: string = 'inherit';` : ''}
   render() {
     return (
       ${children}
