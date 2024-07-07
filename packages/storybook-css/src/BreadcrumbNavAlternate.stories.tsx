@@ -5,11 +5,7 @@ import relDocs from '@utrecht/breadcrumb-nav-css/_rel.md?raw';
 import rtlSeparatorDocs from '@utrecht/breadcrumb-nav-css/_rtl-separator.md?raw';
 import tokensDefinition from '@utrecht/breadcrumb-nav-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import {
-  UtrechtIconChevronLeft,
-  UtrechtIconChevronRight,
-  UtrechtIconDakloos,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconChevronRight, UtrechtIconDakloos } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from './BreadcrumbNav';
 
@@ -362,19 +358,19 @@ export const RightToLeftSeparator: Story = {
         الصفحة الرئيسية
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronLeft />
+        <UtrechtIconChevronRight />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="https://example.com/a/" index={1}>
         المستوى 1
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronLeft />
+        <UtrechtIconChevronRight />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="https://example.com/a/b/" index={2}>
         المستوي 2
       </BreadcrumbNavLink>,
       <BreadcrumbNavSeparator>
-        <UtrechtIconChevronLeft />
+        <UtrechtIconChevronRight />
       </BreadcrumbNavSeparator>,
       <BreadcrumbNavLink href="https://example.com/a/b/c/" rel="up" index={3}>
         المستوي 3
