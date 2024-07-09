@@ -5,3 +5,30 @@
  */
 
 @import "./mixin";
+
+.utrecht-rich-text {
+  @include utrecht-rich-text;
+
+  .utrecht-paragraph:first-child {
+    @include utrecht-paragraph;
+  }
+  .utrecht-ordered-list:first-child {
+    @include utrecht-ordered-list;
+  }
+  .utrecht-unordered-list:first-child {
+    @include utrecht-unordered-list;
+  }
+  .utrecht-table-container:first-child {
+    @include utrecht-table-container;
+  }
+  :is(
+      .utrecht-heading-1,
+      .utrecht-heading-2,
+      .utrecht-heading-3,
+      .utrecht-heading-4,
+      .utrecht-heading-5,
+      .utrecht-heading-6
+    ):first-child {
+    @include utrecht-headings;
+  }
+}
