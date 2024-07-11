@@ -3,8 +3,15 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-@mixin utrecht-document {
+@mixin reset-font-smoothing {
   /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+}
+
+@mixin utrecht-document {
+  @include reset-font-smoothing;
+
   color: var(--utrecht-document-color, inherit);
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-document-font-size, inherit);
