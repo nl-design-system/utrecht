@@ -10,6 +10,7 @@
   ],
   "main": "dist/index.css",
   "scripts": {
+    "generate": "node src/getSpacing.js",
     "build": "rollup -c ../rollup.config.mjs",
     "clean": "rimraf dist"
   },
