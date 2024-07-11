@@ -1,5 +1,11 @@
 # @utrecht/component-library-react
 
+## 4.1.0
+
+### Minor Changes
+
+- a07687b: Add new component: RichText - a container component around components such as paragraph, table, list, accordion etcetera.
+
 ## 4.0.0
 
 ### Major Changes
