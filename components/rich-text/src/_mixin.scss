@@ -1,0 +1,1819 @@
+@mixin utrecht-heading-1 {
+  .utrecht-heading-1:first-child {
+    --utrecht-heading-1-margin-block-start: 0;
+  }
+  .utrecht-heading-1:has(+ .utrecht-heading-2) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-accordion) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-alert) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-badge-list) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-blockquote) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-button) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-button-group) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-data-list) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-form-field) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-img) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-link) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-ordered-list) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-pagination) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-paragraph) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-separator) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-badge-status) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-table) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-1:has(+ .utrecht-unordered-list) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+}
+@mixin utrecht-heading-2 {
+  .utrecht-heading-2:first-child {
+    --utrecht-heading-2-margin-block-start: 0;
+  }
+  .utrecht-heading-2:has(+ .utrecht-heading-3) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-accordion) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-alert) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-badge-list) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-blockquote) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-button) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-button-group) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-data-list) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-figure) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-form-field) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-img) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-link) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-ordered-list) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-pagination) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-paragraph) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-separator) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-sidenav) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-badge-status) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-table) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-unordered-list) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-heading-3 {
+  .utrecht-heading-3:first-child {
+    --utrecht-heading-3-margin-block-start: 0;
+  }
+  .utrecht-heading-3:has(+ .utrecht-heading-4) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-accordion) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-alert) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-badge-list) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-blockquote) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-button) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-button-group) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-data-list) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-figure) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-form-field) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-img) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-link) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-ordered-list) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-pagination) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-paragraph) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-separator) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-sidenav) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-badge-status) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-table) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-3:has(+ .utrecht-unordered-list) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-heading-4 {
+  .utrecht-heading-4:first-child {
+    --utrecht-heading-4-margin-block-start: 0;
+  }
+  .utrecht-heading-4:has(+ .utrecht-heading-5) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-accordion) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-alert) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-badge-list) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-blockquote) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-button) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-button-group) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-data-list) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-figure) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-form-field) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-img) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-link) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-ordered-list) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-pagination) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-paragraph) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-separator) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-sidenav) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-badge-status) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-table) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-unordered-list) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-heading-5 {
+  .utrecht-heading-5:first-child {
+    --utrecht-heading-5-margin-block-start: 0;
+  }
+  .utrecht-heading-5:has(+ .utrecht-heading-6) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-accordion) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-alert) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-badge-list) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-blockquote) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-button) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-button-group) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-data-list) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-figure) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-form-field) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-img) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-link) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-ordered-list) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-pagination) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-paragraph) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-separator) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-sidenav) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-badge-status) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-table) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-5:has(+ .utrecht-unordered-list) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-heading-6 {
+  .utrecht-heading-6:first-child {
+    --utrecht-heading-6-margin-block-start: 0;
+  }
+  .utrecht-heading-6:has(+ .utrecht-accordion) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-alert) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-badge-list) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-blockquote) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-button) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-button-group) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-data-list) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-figure) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-form-field) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-img) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-link) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-ordered-list) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-pagination) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-paragraph) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-separator) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-sidenav) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-badge-status) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-table) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-unordered-list) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-accordion {
+  .utrecht-accordion:first-child {
+    --utrecht-accordion-margin-block-start: 0;
+  }
+  .utrecht-accordion:has(+ .utrecht-heading-2) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-heading-3) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-heading-4) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-heading-5) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-heading-6) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-accordion) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-alert) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-badge-list) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-blockquote) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-button) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-button-group) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-data-list) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-figure) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-form-field) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-img) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-link) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-ordered-list) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-paragraph) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-separator) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-sidenav) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-table) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-accordion:has(+ .utrecht-unordered-list) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-alert {
+  .utrecht-alert:first-child {
+    --utrecht-alert-margin-block-start: 0;
+  }
+  .utrecht-alert:has(+ .utrecht-heading-1) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-heading-2) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-heading-3) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-heading-4) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-heading-5) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-heading-6) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-accordion) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-alert) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-badge-list) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-blockquote) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-button) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-button-group) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-data-list) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-figure) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-form-field) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-img) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-link) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-ordered-list) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-pagination) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-paragraph) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-separator) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-badge-status) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-table) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-unordered-list) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+}
+@mixin utrecht-badge-list {
+  .utrecht-badge-list:first-child {
+    --utrecht-badge-list-margin-block-start: 0;
+  }
+  .utrecht-badge-list:has(+ .utrecht-heading-1) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-heading-2) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-heading-3) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-heading-4) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-heading-5) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-heading-6) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-accordion) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-alert) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-blockquote) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-button) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-button-group) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-data-list) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-figure) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-form-field) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-img) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-link) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-ordered-list) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-paragraph) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-separator) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-table) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-badge-list:has(+ .utrecht-unordered-list) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-blockquote {
+  .utrecht-blockquote:first-child {
+    --utrecht-blockquote-margin-block-start: 0;
+  }
+  .utrecht-blockquote:has(+ .utrecht-heading-2) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-heading-3) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-heading-4) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-heading-5) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-heading-6) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-accordion) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-alert) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-badge-list) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-blockquote) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-button) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-button-group) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-data-list) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-figure) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-form-field) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-img) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-link) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-ordered-list) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-pagination) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-paragraph) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-separator) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-table) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-unordered-list) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+}
+@mixin utrecht-breadcrumb-nav {
+  .utrecht-breadcrumb-nav:first-child {
+    --utrecht-breadcrumb-nav-margin-block-start: 0;
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-1) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-2) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-3) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-4) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-5) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-heading-6) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-accordion) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-alert) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-badge-list) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-blockquote) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-button) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-button-group) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-data-list) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-figure) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-form-field) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-img) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-link) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-ordered-list) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-pagination) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-paragraph) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-separator) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-sidenav) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-badge-status) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-table) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-unordered-list) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+}
+@mixin utrecht-button {
+  .utrecht-button:first-child {
+    --utrecht-button-margin-block-start: 0;
+  }
+  .utrecht-button:has(+ .utrecht-heading-2) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-heading-3) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-heading-4) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-heading-5) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-heading-6) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-accordion) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-alert) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-badge-list) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-blockquote) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-button) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-button-group) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-data-list) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-figure) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-img) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-link) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-ordered-list) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-paragraph) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-separator) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-sidenav) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-table) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button:has(+ .utrecht-unordered-list) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-button-group {
+  .utrecht-button-group:first-child {
+    --utrecht-button-group-margin-block-start: 0;
+  }
+  .utrecht-button-group:has(+ .utrecht-heading-2) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-heading-3) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-heading-4) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-heading-5) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-heading-6) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-accordion) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-alert) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-badge-list) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-blockquote) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-button) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-button-group) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-data-list) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-figure) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-img) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-link) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-ordered-list) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-paragraph) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-separator) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-sidenav) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-table) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-button-group:has(+ .utrecht-unordered-list) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-data-list {
+  .utrecht-data-list:first-child {
+    --utrecht-data-list-margin-block-start: 0;
+  }
+  .utrecht-data-list:has(+ .utrecht-heading-2) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-heading-3) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-heading-4) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-heading-5) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-heading-6) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-accordion) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-alert) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-badge-list) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-blockquote) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-button) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-button-group) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-data-list) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-figure) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-form-field) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-img) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-link) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-ordered-list) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-pagination) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-paragraph) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-separator) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-table) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-unordered-list) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-figure {
+  .utrecht-figure:first-child {
+    --utrecht-figure-margin-block-start: 0;
+  }
+  .utrecht-figure:has(+ .utrecht-heading-2) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-heading-3) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-heading-4) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-heading-5) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-heading-6) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-accordion) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-alert) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-badge-list) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-blockquote) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-button) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-button-group) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-data-list) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-form-field) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-img) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-link) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-ordered-list) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-pagination) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-paragraph) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-separator) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-table) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-figure:has(+ .utrecht-unordered-list) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-form-field {
+  .utrecht-form-field:first-child {
+    --utrecht-form-field-margin-block-start: 0;
+  }
+  .utrecht-form-field:has(+ .utrecht-heading-2) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-heading-3) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-heading-4) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-heading-5) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-heading-6) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-accordion) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-alert) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-badge-list) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-blockquote) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-button) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-button-group) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-data-list) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-figure) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-form-field) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-img) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-link) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-ordered-list) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-paragraph) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-separator) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-table) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-unordered-list) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-form-field-description {
+  .utrecht-form-field-description:first-child {
+    --utrecht-form-field-description-margin-block-start: 0;
+  }
+  .utrecht-form-field-description:has(+ .utrecht-form-field-error-message) {
+    --utrecht-form-field-description-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-description:has(+ .utrecht-select) {
+    --utrecht-form-field-description-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-description:has(+ .utrecht-textarea) {
+    --utrecht-form-field-description-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-description:has(+ .utrecht-textbox) {
+    --utrecht-form-field-description-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-form-field-error-message {
+  .utrecht-form-field-error-message:first-child {
+    --utrecht-form-field-error-message-margin-block-start: 0;
+  }
+  .utrecht-form-field-error-message:has(+ .utrecht-form-field-description) {
+    --utrecht-form-field-error-message-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-error-message:has(+ .utrecht-form-field-error-message) {
+    --utrecht-form-field-error-message-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-error-message:has(+ .utrecht-select) {
+    --utrecht-form-field-error-message-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-error-message:has(+ .utrecht-textarea) {
+    --utrecht-form-field-error-message-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-field-error-message:has(+ .utrecht-textbox) {
+    --utrecht-form-field-error-message-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-form-label {
+  .utrecht-form-label:first-child {
+    --utrecht-form-label-margin-block-start: 0;
+  }
+  .utrecht-form-label:has(+ .utrecht-form-field-description) {
+    --utrecht-form-label-margin-block-end: var(--utrecht-rich-text-confidant-margin-block-end);
+  }
+  .utrecht-form-label:has(+ .utrecht-form-field-error-message) {
+    --utrecht-form-label-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-label:has(+ .utrecht-select) {
+    --utrecht-form-label-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-label:has(+ .utrecht-textarea) {
+    --utrecht-form-label-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-form-label:has(+ .utrecht-textbox) {
+    --utrecht-form-label-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-img {
+  .utrecht-img:first-child {
+    --utrecht-img-margin-block-start: 0;
+  }
+  .utrecht-img:has(+ .utrecht-heading-2) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-heading-3) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-heading-4) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-heading-5) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-heading-6) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-accordion) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-alert) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-badge-list) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-blockquote) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-button) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-button-group) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-data-list) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-form-field) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-img) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-link) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-ordered-list) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-pagination) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-paragraph) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-separator) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-table) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-img:has(+ .utrecht-unordered-list) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-link {
+  .utrecht-link:first-child {
+    --utrecht-link-margin-block-start: 0;
+  }
+  .utrecht-link:has(+ .utrecht-heading-2) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-heading-3) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-heading-4) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-heading-5) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-heading-6) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-accordion) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-alert) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-badge-list) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-blockquote) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-button) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-button-group) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-data-list) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-form-field) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-img) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-link) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-ordered-list) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-paragraph) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-separator) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-sidenav) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-table) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-unordered-list) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-ordered-list {
+  .utrecht-ordered-list:first-child {
+    --utrecht-ordered-list-margin-block-start: 0;
+  }
+  .utrecht-ordered-list:has(+ .utrecht-heading-2) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-heading-3) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-heading-4) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-heading-5) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-heading-6) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-accordion) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-alert) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-badge-list) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-blockquote) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-button) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-button-group) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-data-list) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-form-field) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-img) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-link) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-ordered-list) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-pagination) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-paragraph) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-separator) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-table) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-ordered-list:has(+ .utrecht-unordered-list) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-pagination {
+  .utrecht-pagination:first-child {
+    --utrecht-pagination-margin-block-start: 0;
+  }
+  .utrecht-pagination:has(+ .utrecht-heading-2) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-heading-3) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-heading-4) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-heading-5) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-heading-6) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-accordion) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-alert) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-badge-list) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-blockquote) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-button) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-button-group) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-data-list) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-form-field) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-img) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-link) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-ordered-list) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-paragraph) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-separator) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-table) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-pagination:has(+ .utrecht-unordered-list) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+}
+@mixin utrecht-paragraph {
+  .utrecht-paragraph:first-child {
+    --utrecht-paragraph-margin-block-start: 0;
+  }
+  .utrecht-paragraph:has(+ .utrecht-heading-2) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-heading-3) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-heading-4) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-heading-5) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-heading-6) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-accordion) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-alert) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-badge-list) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-blockquote) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-button) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-button-group) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-data-list) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-form-field) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-img) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-link) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-ordered-list) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-pagination) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-paragraph) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-separator) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-table) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-unordered-list) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-select {
+  .utrecht-select:first-child {
+    --utrecht-select-margin-block-start: 0;
+  }
+  .utrecht-select:has(+ .utrecht-form-field-description) {
+    --utrecht-select-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-select:has(+ .utrecht-form-field-error-message) {
+    --utrecht-select-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-separator {
+  .utrecht-separator:first-child {
+    --utrecht-separator-margin-block-start: 0;
+  }
+  .utrecht-separator:has(+ .utrecht-heading-1) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-heading-2) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-heading-3) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-heading-4) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-heading-5) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-heading-6) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-accordion) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-alert) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-badge-list) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-blockquote) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-button) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-button-group) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-data-list) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-form-field) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-img) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-link) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-ordered-list) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-pagination) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-paragraph) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-separator) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-sidenav) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-table) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-separator:has(+ .utrecht-unordered-list) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+}
+@mixin utrecht-sidenav {
+  .utrecht-sidenav:first-child {
+    --utrecht-sidenav-margin-block-start: 0;
+  }
+  .utrecht-sidenav:has(+ .utrecht-heading-1) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-heading-2) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-heading-3) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-heading-4) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-heading-5) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-heading-6) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-accordion) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-alert) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-badge-list) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-blockquote) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-button) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-button-group) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-data-list) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-form-field) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-img) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-link) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-ordered-list) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-pagination) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-separator) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-table) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-unordered-list) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+}
+@mixin utrecht-badge-status {
+  .utrecht-badge-status:first-child {
+    --utrecht-badge-status-margin-block-start: 0;
+  }
+  .utrecht-badge-status:has(+ .utrecht-heading-2) {
+    --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-status:has(+ .utrecht-heading-3) {
+    --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-status:has(+ .utrecht-heading-4) {
+    --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-status:has(+ .utrecht-heading-5) {
+    --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-status:has(+ .utrecht-heading-6) {
+    --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-badge-status:has(+ .utrecht-badge-status) {
+    --utrecht-badge-status-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-table {
+  .utrecht-table:first-child {
+    --utrecht-table-margin-block-start: 0;
+  }
+  .utrecht-table:has(+ .utrecht-heading-2) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-heading-3) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-heading-4) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-heading-5) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-heading-6) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-accordion) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-alert) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-badge-list) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-blockquote) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-button) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-button-group) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-data-list) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-form-field) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-img) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-link) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-ordered-list) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-pagination) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-paragraph) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-separator) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-table) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-table:has(+ .utrecht-unordered-list) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-textarea {
+  .utrecht-textarea:first-child {
+    --utrecht-textarea-margin-block-start: 0;
+  }
+  .utrecht-textarea:has(+ .utrecht-form-field-description) {
+    --utrecht-textarea-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-textarea:has(+ .utrecht-form-field-error-message) {
+    --utrecht-textarea-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-textbox {
+  .utrecht-textbox:first-child {
+    --utrecht-textbox-margin-block-start: 0;
+  }
+  .utrecht-textbox:has(+ .utrecht-form-field-description) {
+    --utrecht-textbox-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+  .utrecht-textbox:has(+ .utrecht-form-field-error-message) {
+    --utrecht-textbox-margin-block-end: var(--utrecht-rich-text-best-friend-margin-block-end);
+  }
+}
+@mixin utrecht-unordered-list {
+  .utrecht-unordered-list:first-child {
+    --utrecht-unordered-list-margin-block-start: 0;
+  }
+  .utrecht-unordered-list:has(+ .utrecht-heading-2) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-heading-3) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-heading-4) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-heading-5) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-heading-6) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-accordion) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-alert) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-badge-list) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-blockquote) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-button) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-button-group) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-data-list) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-form-field) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-img) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-link) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-ordered-list) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-pagination) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-paragraph) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-separator) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-table) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-unordered-list) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
