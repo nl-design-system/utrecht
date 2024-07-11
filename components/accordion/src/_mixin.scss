@@ -6,6 +6,8 @@
 
 /* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-accordion {
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-margin-block-start, 0));
 }
 
 @mixin utrecht-accordion__section {
