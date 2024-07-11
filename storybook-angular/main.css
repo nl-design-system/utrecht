@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2024 16:23:37 GMT
+ * Generated on Thu, 11 Jul 2024 12:12:47 GMT
  */
 /**
  * Do not edit directly
- * Generated on Mon, 08 Jul 2024 16:23:36 GMT
+ * Generated on Thu, 11 Jul 2024 12:12:46 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -152,6 +152,7 @@
   --utrecht-search-bar-input-background-position-x: .5em;
   --utrecht-search-bar-button-hover-scale: 1;
   --utrecht-search-bar-button-hover-background-color: hsl(359 65% 58%);
+  --utrecht-rich-text-confidant-margin-block-end: 0;
   --utrecht-radio-button-margin-inline-end: 12px;
   --utrecht-radio-button-border-radius: 0;
   --utrecht-radio-button-invalid-border-width: 2px;
@@ -522,6 +523,10 @@
   --utrecht-search-bar-button-color: var(--utrecht-color-white);
   --utrecht-search-bar-button-border-color: var(--utrecht-color-red-40);
   --utrecht-search-bar-button-background-color: var(--utrecht-color-red-40);
+  --utrecht-rich-text-best-friend-margin-block-end: var(--utrecht-space-block-2xs);
+  --utrecht-rich-text-friend-margin-block-end: var(--utrecht-space-block-xs);
+  --utrecht-rich-text-acquaintance-margin-block-end: var(--utrecht-space-block-md);
+  --utrecht-rich-text-stranger-margin-block-end: var(--utrecht-space-block-2xl);
   --utrecht-radio-button-color: var(--utrecht-color-white);
   --utrecht-radio-button-disabled-color: var(--utrecht-color-white);
   --utrecht-radio-button-disabled-background-color: var(--utrecht-color-grey-80);
@@ -1158,6 +1163,7 @@
     --utrecht-search-bar-input-background-position-x: .5em;
     --utrecht-search-bar-button-hover-scale: 1;
     --utrecht-search-bar-button-hover-background-color: hsl(359 65% 58%);
+    --utrecht-rich-text-confidant-margin-block-end: 0;
     --utrecht-radio-button-margin-inline-end: 12px;
     --utrecht-radio-button-border-radius: 0;
     --utrecht-radio-button-invalid-border-width: 2px;
@@ -1533,6 +1539,10 @@
     --utrecht-search-bar-button-color: var(--utrecht-color-white);
     --utrecht-search-bar-button-border-color: var(--utrecht-color-red-40);
     --utrecht-search-bar-button-background-color: var(--utrecht-color-red-40);
+    --utrecht-rich-text-best-friend-margin-block-end: var(--utrecht-space-block-2xs);
+    --utrecht-rich-text-friend-margin-block-end: var(--utrecht-space-block-xs);
+    --utrecht-rich-text-acquaintance-margin-block-end: var(--utrecht-space-block-md);
+    --utrecht-rich-text-stranger-margin-block-end: var(--utrecht-space-block-2xl);
     --utrecht-radio-button-color: var(--utrecht-color-white);
     --utrecht-radio-button-disabled-color: var(--utrecht-color-white);
     --utrecht-radio-button-disabled-background-color: var(--utrecht-color-grey-80);
