@@ -83,7 +83,8 @@ export const IndexCharNav = forwardRef(
             onClick={() => typeof onLinkClick === 'function' && onLinkClick(char)}
             pressed={current}
           >
-            {char}
+            {/* The character must not be translated, but any aria-label attributes should be translatable */}
+            <span translate="no">{char}</span>
           </Button>
         );
       });
@@ -118,7 +119,7 @@ export const IndexCharNav = forwardRef(
             onClick={() => typeof onLinkClick === 'function' && onLinkClick(char)}
             {...restProps}
           >
-            {char}
+            <span translate="no">{char}</span>
           </LinkComponent>
         );
       });

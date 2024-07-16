@@ -146,7 +146,7 @@ describe('Index character navigation', () => {
 
     render(<IndexCharNav characters={characters} currentChar="A" />);
 
-    const link = screen.queryByText('A');
+    const link = screen.getByRole('link', { name: 'A' });
 
     expect(link).toHaveClass('utrecht-button-link--primary-action');
   });
@@ -156,7 +156,7 @@ describe('Index character navigation', () => {
 
     render(<IndexCharNav characters={characters} currentChar="C" />);
 
-    const link = screen.queryByText('B');
+    const link = screen.getByRole('link', { name: 'B' });
     expect(link).toHaveClass('utrecht-button-link--secondary-action');
   });
 
@@ -165,7 +165,7 @@ describe('Index character navigation', () => {
 
     render(<IndexCharNav characters={characters} currentChar="A" />);
 
-    const link = screen.queryByText('A');
+    const link = screen.getByRole('link', { name: 'A' });
 
     expect(link).toHaveClass('utrecht-index-char-nav__link--current');
   });
@@ -175,7 +175,7 @@ describe('Index character navigation', () => {
 
     render(<IndexCharNav characters={characters} currentChar="A" component="button" />);
 
-    const link = screen.queryByText('A');
+    const link = screen.getByRole('button', { name: 'A' });
 
     expect(link).toHaveClass('utrecht-button--primary-action');
   });
@@ -185,7 +185,7 @@ describe('Index character navigation', () => {
 
     render(<IndexCharNav characters={characters} currentChar="C" component="button" />);
 
-    const link = screen.queryByText('B');
+    const link = screen.getByRole('button', { name: 'B' });
     expect(link).toHaveClass('utrecht-button--secondary-action');
   });
 
@@ -194,7 +194,7 @@ describe('Index character navigation', () => {
 
     render(<IndexCharNav characters={characters} currentChar="A" component="button" />);
 
-    const link = screen.queryByText('A');
+    const link = screen.getByRole('button', { name: 'A' });
 
     expect(link).toHaveClass('utrecht-index-char-nav__link--current');
   });
@@ -210,7 +210,7 @@ describe('Index character navigation', () => {
     const characters = [{ char: 'B', disabled: true, href: './b/' }];
     render(<IndexCharNav characters={characters} currentChar="A" Link={CustomLink} />);
 
-    const customLink = screen.getByText('B');
+    const customLink = screen.getByRole('link', { name: 'B' });
     expect(customLink).toHaveClass('utrecht-button-link--placeholder');
   });
 
@@ -218,7 +218,7 @@ describe('Index character navigation', () => {
     const characters = [{ char: 'B', disabled: true, href: './b/' }];
     render(<IndexCharNav characters={characters} />);
 
-    const customLink = screen.getByText('B');
+    const customLink = screen.getByRole('link', { name: 'B' });
     expect(customLink).toHaveClass('utrecht-button-link--placeholder');
   });
 
@@ -283,5 +283,25 @@ describe('Index character navigation', () => {
     fireEvent.click(letterA);
 
     expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
+  });
+
+  it('prevents translation of the letters in links', () => {
+    const characters = [{ char: 'A', href: './a/' }];
+
+    render(<IndexCharNav characters={characters} component="link" />);
+
+    const text = screen.queryByText('A');
+
+    expect(text?.closest('[translate]')).toHaveAttribute('translate', 'no');
+  });
+
+  it('prevents translation of the letters in buttons', () => {
+    const characters = [{ char: 'A', href: './a/' }];
+
+    render(<IndexCharNav characters={characters} component="button" />);
+
+    const text = screen.queryByText('A');
+
+    expect(text?.closest('[translate]')).toHaveAttribute('translate', 'no');
   });
 });
