@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 4.2.0
+
+### Minor Changes
+
+- c5a7e71: Add margin tokens to the Accordion component:
+
+  - `utrecht.accordion.margin-block-end`
+  - `utrecht.accordion.margin-block-start`
+
 ## 4.1.0
 
 ### Minor Changes
