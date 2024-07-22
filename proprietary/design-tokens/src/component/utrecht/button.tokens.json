@@ -6,6 +6,7 @@
       "border-radius": { "value": "0" },
       "border-width": { "value": "1px" },
       "color": { "value": "{utrecht.color.grey.40}" },
+      "column-gap": { "value": "{utrecht.space.text.xs}" },
       "font-family": { "value": "{utrecht.typography.sans-serif.font-family}" },
       "font-size": { "value": "{utrecht.typography.scale.md.font-size}" },
       "padding-inline-start": { "value": "{utrecht.space.inline.md}" },
@@ -16,9 +17,6 @@
       "margin-inline-end": { "value": "0" },
       "margin-block-start": { "value": "{utrecht.space.row.xs}" },
       "margin-block-end": { "value": "{utrecht.space.row.xs}" },
-      "icon": {
-        "gap": { "value": "{utrecht.space.text.xs}" }
-      },
       "active": {
         "background-color": { "value": "{utrecht.color.grey.40}" },
         "color": { "value": "{utrecht.color.white}" }
