@@ -221,12 +221,12 @@
   border-width: var(--_utrecht-button-border-width);
   box-sizing: border-box;
   color: var(--_utrecht-button-color);
+  column-gap: var(--utrecht-button-column-gap);
   cursor: var(--utrecht-action-activate-cursor, revert);
   display: inline-flex;
   font-family: var(--utrecht-button-font-family, var(--utrecht-document-font-family));
   font-size: var(--_utrecht-button-font-size, var(--utrecht-document-font-family, inherit));
   font-weight: var(--_utrecht-button-appearance-font-weight, var(--utrecht-button-font-weight));
-  gap: var(--utrecht-button-icon-gap);
   inline-size: var(--utrecht-button-inline-size, auto);
   justify-content: center;
   line-height: var(--_utrecht-button-line-height);
@@ -371,4 +371,8 @@
     --_utrecht-button-hint-pressed-border-color: var(--utrecht-button-#{$modifier}-#{$hint}-pressed-border-color);
     --_utrecht-button-hint-pressed-color: var(--utrecht-button-#{$modifier}-#{$hint}-pressed-color);
   }
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-button__label {
 }

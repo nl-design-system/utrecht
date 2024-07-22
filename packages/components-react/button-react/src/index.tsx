@@ -5,12 +5,14 @@
  */
 
 import clsx from 'clsx';
-import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: string;
   busy?: boolean;
   hint?: string;
+  icon?: ReactNode;
+  label?: ReactNode;
   pressed?: boolean;
 }
 
@@ -23,6 +25,8 @@ export const Button = forwardRef(
       children,
       className,
       hint,
+      icon,
+      label,
       pressed,
       type,
       ...restProps
@@ -52,6 +56,8 @@ export const Button = forwardRef(
         type={type || 'button'}
         {...restProps}
       >
+        {icon}
+        {label && <span className="utrecht-button__label">{label}</span>}
         {children}
       </button>
     );

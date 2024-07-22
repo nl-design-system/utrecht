@@ -1,8 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/src/tokens.json';
-import { Button } from '@utrecht/component-library-react/dist/css-module';
+import { Button } from '@utrecht/button-react/src/css';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import iconSet from '@utrecht/icon/dist/index.json';
 import { designTokenStory } from './util';
 
 const meta = {
@@ -30,6 +31,11 @@ const meta = {
     type: {
       control: { type: 'select' },
       options: [undefined, 'button', 'submit', 'reset'],
+    },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
     },
   },
 } satisfies Meta<typeof Button>;
