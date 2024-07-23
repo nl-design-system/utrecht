@@ -12,7 +12,7 @@ import {
   useState,
 } from 'react';
 import { Button } from './Button';
-import { Heading } from './Heading';
+import { HTMLHeading } from './HTMLHeading';
 
 const IconChevronDown = () => (
   <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
@@ -121,7 +121,7 @@ export const AccordionSection = forwardRef(
     // - we only want expanded sections to show up as landmarks
     return (
       <div className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
-        <Heading level={headingLevel} className={clsx('utrecht-accordion__header')}>
+        <HTMLHeading level={headingLevel} className={clsx('utrecht-accordion__header')}>
           <Button
             className={clsx('utrecht-accordion__button', {
               ['utrecht-accordion__button--utrecht']: appearance === 'utrecht',
@@ -139,7 +139,7 @@ export const AccordionSection = forwardRef(
             {iconStart && <span className="utrecht-accordion__button-icon">{iconStart}</span>}
             <span className="utrecht-accordion__button-label">{label}</span>
           </Button>
-        </Heading>
+        </HTMLHeading>
         {section ? (
           <section id={panelId} aria-labelledby={buttonId} {...panelAttributes}>
             {children}
@@ -171,7 +171,7 @@ export const Accordion = forwardRef(
 
     return (
       <>
-        {!!heading && typeof headingLevel === 'number' && <Heading level={headingLevel}>{heading}</Heading>}
+        {!!heading && typeof headingLevel === 'number' && <HTMLHeading level={headingLevel}>{heading}</HTMLHeading>}
         <div
           className={clsx('utrecht-accordion')}
           role={group ? 'group' : undefined}
