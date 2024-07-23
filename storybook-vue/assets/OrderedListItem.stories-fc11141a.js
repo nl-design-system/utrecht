@@ -1,7 +1,0 @@
-import{R as t,M as a}from"./component-library-vue-a6ae4a7f.js";import{t as i,r as d}from"./tokens-b3a94b94.js";import{c as p}from"./util-8b50983f.js";import"./vue.esm-bundler-4be3a786.js";import"./jsx-runtime-d2bbb2bc.js";import"./index-773e2fae.js";import"./iframe-88865016.js";import"../sb-preview/runtime.js";import"./_commonjsHelpers-725317a4.js";import"./index-11d98b33.js";import"./index-4fb43917.js";import"./index-356e4a49.js";import"./chunk-HLWAVYOI-a8858f1a.js";const n={id:"vue-ordered-list--item",title:"Vue.js Component/Ordered List/Item",component:t,tags:["autodocs"],argTypes:{slot:{name:"slot",control:{type:"text"},type:{required:!1},table:{defaultValue:{summary:""}}}},render:m=>({setup(){return{args:m}},components:{OrderedList:a,OrderedListItem:t},template:'<OrderedList><OrderedListItem v-bind="$props"><slot></slot></OrderedListItem></OrderedList>'}),parameters:{status:{type:"ALPHA"},tokens:i,tokenPrefix:"utrecht-ordered-list--item",docs:{description:{component:d}}}},e=p(n,{name:"Ordered List",component:t,args:{slot:"List item 1"}});var r,o,s;e.parameters={...e.parameters,docs:{...(r=e.parameters)==null?void 0:r.docs,source:{originalSource:`createStory(meta, {
-  name: 'Ordered List',
-  component: OrderedListItem,
-  args: {
-    slot: 'List item 1'
-  }
-})`,...(s=(o=e.parameters)==null?void 0:o.docs)==null?void 0:s.source}}};const v=["Default"];export{e as Default,v as __namedExportsOrder,n as default};
