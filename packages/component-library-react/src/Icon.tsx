@@ -10,8 +10,17 @@ import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'rea
 export type IconProps = HTMLAttributes<HTMLElement>;
 
 export const Icon = forwardRef(
-  ({ children, className, ...restProps }: PropsWithChildren<IconProps>, ref: ForwardedRef<HTMLElement>) => (
-    <span aria-hidden="true" ref={ref} className={clsx('utrecht-icon', className)} {...restProps}>
+  (
+    { children, className, role = 'presentation', ...restProps }: PropsWithChildren<IconProps>,
+    ref: ForwardedRef<HTMLElement>,
+  ) => (
+    <span
+      ref={ref}
+      className={clsx('utrecht-icon', className)}
+      role={role}
+      aria-hidden={role === 'presentation' ? 'true' : undefined}
+      {...restProps}
+    >
       {children}
     </span>
   ),
