@@ -8,6 +8,15 @@
 
 .utrecht-textarea {
   @include utrecht-textarea;
+
+  @media print {
+    & {
+      border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width)) !important;
+      border-block-end-width: auto !important;
+      border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color)) !important;
+      inline-size: 100%;
+    }
+  }
 }
 
 .utrecht-textarea--invalid {
