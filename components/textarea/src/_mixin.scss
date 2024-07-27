@@ -5,6 +5,8 @@
 
 @import "~@utrecht/focus-ring-css/src/mixin";
 
+$utrecht-support-prince-xml: false !default;
+
 /* TODO: Enable ordering properties when the plugin supports logical CSS properties
  * https://github.com/hudochenkov/stylelint-order/pull/162 */
 /* stylelint-disable order/properties-alphabetical-order */
@@ -42,6 +44,18 @@
   );
   resize: vertical;
   resize: block;
+
+  @if $utrecht-support-prince-xml {
+    @media print {
+      & {
+        -prince-pdf-form: enable;
+        border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width)) !important;
+        border-block-end-width: auto !important;
+        border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color)) !important;
+        inline-size: 100%;
+      }
+    }
+  }
 }
 
 @mixin utrecht-textarea--invalid {

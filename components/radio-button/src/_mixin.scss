@@ -5,6 +5,8 @@
 
 @import "~@utrecht/focus-ring-css/src/mixin";
 
+$utrecht-support-prince-xml: false !default;
+
 @mixin reset-input-type-radio {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -69,6 +71,16 @@
   -webkit-user-select: none;
   user-select: none;
   vertical-align: top;
+
+  @if $utrecht-support-prince-xml {
+    @media print {
+      & {
+        min-block-size: 1.5em;
+        min-inline-size: 1.5em;
+        -prince-pdf-form: enable;
+      }
+    }
+  }
 }
 
 @mixin utrecht-radio-button--checked {
