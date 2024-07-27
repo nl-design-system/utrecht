@@ -70,6 +70,20 @@
         }
       ]
     },
+    "css-theme-prince-xml": {
+      "transforms": ["attribute/cti", "name/cti/kebab", "color/hsl-4"],
+      "buildPath": "dist/",
+      "files": [
+        {
+          "destination": "theme-prince-xml.css",
+          "format": "css/variables",
+          "options": {
+            "selector": ".utrecht-theme",
+            "outputReferences": true
+          }
+        }
+      ]
+    },
     "scss": {
       "transforms": ["attribute/cti", "name/cti/kebab", "color/hsl-4"],
       "buildPath": "dist/",
