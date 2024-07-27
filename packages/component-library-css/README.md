@@ -42,3 +42,11 @@ export default class ExamplePage extends React.Component {
   }
 }
 ```
+
+## Files included in this distribution
+
+These files implement a white-label component library. You need to include a theme with CSS variables to make it look good.
+
+- `dist/html.css`: component library for opinionated styling of HTML elements. Add the `utrecht-html` class name to use it.
+- `dist/index.css`: component library for opinionated styling of HTML elements. Use the BEM class names to use the components.
+- `dist/prince-xml.css`: component library that works with [Prince XML](http://princexml.com), to generate accessible PDFs from HTML files.

@@ -1385,6 +1385,9 @@ importers:
       postcss-discard-duplicates:
         specifier: 7.0.0
         version: 7.0.0(postcss@8.4.38)
+      postcss-logical:
+        specifier: 7.0.1
+        version: 7.0.1(postcss@8.4.38)
       rimraf:
         specifier: 5.0.7
         version: 5.0.7
@@ -18142,6 +18145,12 @@ packages:
       postcss: ^7.0.0 || ^8.0.1
       webpack: ^5.0.0
 
+  postcss-logical@7.0.1:
+    resolution: {integrity: sha512-8GwUQZE0ri0K0HJHkDv87XOLC8DE0msc+HoWLeKdtjDZEwpZ5xuK3QdV6FhmHSQW40LPkg43QzvATRAI3LsRkg==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+
   postcss-media-query-parser@0.2.3:
     resolution: {integrity: sha512-3sOlxmbKcSHMjlUXQZKQ06jOswE7oVkXPxmZdoB1r5l0q6gTFTQSHxNxOrCccElbW7dxNytifNEo8qidX2Vsig==}
 
@@ -21507,8 +21516,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.0.26:
-    resolution: {integrity: sha512-sO9qQ8oC520SW6kqlls0iqDak53gsTVSrYylajgjmkt1c0vcgjsGSy1KzlDrbEx8pm02IEYhlUkU5hCYf8rwtg==}
+  vue-component-type-helpers@2.0.29:
+    resolution: {integrity: sha512-58i+ZhUAUpwQ+9h5Hck0D+jr1qbYl4voRt5KffBx8qzELViQ4XdT/Tuo+mzq8u63teAG8K0lLaOiL5ofqW38rg==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -31267,7 +31276,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.0.26
+      vue-component-type-helpers: 2.0.29
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -42815,6 +42824,11 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
+  postcss-logical@7.0.1(postcss@8.4.38):
+    dependencies:
+      postcss: 8.4.38
+      postcss-value-parser: 4.2.0
+
   postcss-media-query-parser@0.2.3: {}
 
   postcss-merge-idents@5.1.1(postcss@8.4.38):
@@ -47358,7 +47372,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.0.26: {}
+  vue-component-type-helpers@2.0.29: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
