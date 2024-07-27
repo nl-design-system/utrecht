@@ -6,11 +6,11 @@ import postcss from 'postcss';
 import postcssLogical from 'postcss-logical';
 import { readFile, writeFile } from 'node:fs/promises';
 
-const convertToPDF = async (htmlFile, cssFile, tempFile, outputFile, API_KEY) => {
+const convertToPDF = async (htmlFile, cssFiles, tempFile, outputFile, API_KEY) => {
   try {
     // Read HTML and CSS files
     const html = await readFile(htmlFile, 'utf8');
-    const css = await readFile(cssFile, 'utf8');
+    const css = Promise.all(cssFiles.map(async (path) => await readFile(path, 'utf8'))).join('\n');
 
     // Combine HTML and CSS
     const combinedHTML = `<!DOCTYPE html>
@@ -19,20 +19,10 @@ const convertToPDF = async (htmlFile, cssFile, tempFile, outputFile, API_KEY) =>
           <meta charset="utf-8" />
           <title>Hello world</title>
           <style>
-input, option, textarea {
--prince-pdf-form: enable;
-padding-left:1em;
-}
-.utrecht-textbox {
-  border-bottom-width: auto !important;
-}
 @page {
   size: A4;
   margin: 2.54cm;
 }
-  input[type="checkbox" i] {
-  width: 1.5em; height: 1.5em
-  }
 </style>
           <style>${css}</style>
           <style>
@@ -101,11 +91,14 @@ const init = async () => {
 
   // Usage
   const htmlFile = 'input.html';
-  const cssFile = 'styles-compat.css';
+  const cssFiles = [
+    '../component-library-css/dist/prince-xml.css',
+    '../../proprietary/design-tokens/dist/theme-prince-xml.css',
+  ];
   const tempFile = 'temp.html';
   const outputFile = 'output.pdf';
 
-  convertToPDF(htmlFile, cssFile, tempFile, outputFile, API_KEY);
+  convertToPDF(htmlFile, cssFiles, tempFile, outputFile, API_KEY);
 };
 
 init();

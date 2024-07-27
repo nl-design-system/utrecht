@@ -1,0 +1,13 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+/**
+ * Support Prince XML
+ * @see https://www.princexml.com
+ */
+$utrecht-support-prince-xml: true !default;
+
+@import "~@utrecht/components/index";
+@import "~@utrecht/html-content-css/src";

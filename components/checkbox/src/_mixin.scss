@@ -4,6 +4,8 @@
  */
 @import "~@utrecht/focus-ring-css/src/mixin";
 
+$utrecht-support-prince-xml: false !default;
+
 @mixin reset-input-checkbox {
   margin-block-end: 0; /* reset native margin for input[type="checkbox"] */
   margin-block-start: 0;
@@ -17,6 +19,16 @@
   cursor: var(--utrecht-action-activate-cursor, revert);
   -webkit-user-select: none;
   user-select: none;
+
+  @if $utrecht-support-prince-xml {
+    @media print {
+      & {
+        min-block-size: 1.5em;
+        min-inline-size: 1.5em;
+        -prince-pdf-form: enable;
+      }
+    }
+  }
 }
 
 /* stylelint-disable-next-line block-no-empty */

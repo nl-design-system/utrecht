@@ -8,13 +8,6 @@
 
 .utrecht-textbox {
   @include utrecht-textbox;
-  @media print {
-    & {
-      border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width)) !important;
-      border-block-end-width: auto !important;
-      border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color)) !important;
-    }
-  }
 }
 
 .utrecht-textbox--invalid {

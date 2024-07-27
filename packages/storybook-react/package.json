@@ -20,7 +20,7 @@
     "start": "http-server dist/",
     "storybook": "storybook dev --config-dir config/ --port 6008",
     "docraptor": "rm styles.css && cat ../component-library-css/dist/index.css >> styles.css && cat ../component-library-css/dist/html.css >> styles.css && cat ../../proprietary/design-tokens/dist/index.css >> styles.css && node prince.mjs",
-    "prince": "rm -f cli.pdf && rm styles.css && cat ../component-library-css/dist/index.css >> styles.css && cat ../component-library-css/dist/html.css >> styles.css && cat ../../proprietary/design-tokens/dist/index.css >> styles.css && node css.mjs && node prince.mjs && pnpm run prince2",
+    "prince": "rm -f cli.pdf && rm styles.css && cat ../component-library-css/dist/index.css >> styles.css && cat ../component-library-css/dist/html.css >> styles.css && cat ../../proprietary/design-tokens/dist/index.css >> styles.css && node prince.mjs && pnpm run prince2",
     "prince2": "rm -f cli.pdf && /Users/bobby/Downloads/prince-15.3-macos/lib/prince/bin/prince --pdf-profile 'PDF/UA-1' --output cli.pdf temp.html && open cli.pdf",
     "prince3": "rm -f cli.pdf && rm styles.css && cat ../../components/textbox/dist/index.css >> styles.css && cat ../../proprietary/design-tokens/dist/index.css >> styles.css && node prince.mjs && pnpm run prince2",
     "prince4": "rm -f cli.pdf && node prince.mjs && pnpm run prince2",

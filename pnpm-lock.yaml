@@ -1382,9 +1382,15 @@ importers:
       '@utrecht/html-content-css':
         specifier: workspace:*
         version: link:../../components/html-content
+      postcss:
+        specifier: 8.4.38
+        version: 8.4.38
       postcss-discard-duplicates:
         specifier: 7.0.0
         version: 7.0.0(postcss@8.4.38)
+      postcss-logical:
+        specifier: 7.0.1
+        version: 7.0.1(postcss@8.4.38)
       rimraf:
         specifier: 5.0.7
         version: 5.0.7

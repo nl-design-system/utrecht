@@ -5,6 +5,8 @@
 
 @import "~@utrecht/focus-ring-css/src/mixin";
 
+$utrecht-support-prince-xml: false !default;
+
 /* TODO: Enable ordering properties when the plugin supports logical CSS properties
  * https://github.com/hudochenkov/stylelint-order/pull/162 */
 /* stylelint-disable order/properties-alphabetical-order */
@@ -31,6 +33,14 @@
   padding-block-start: var(--utrecht-select-padding-block-start, var(--utrecht-form-control-padding-block-start));
   padding-inline-end: var(--utrecht-select-padding-inline-end, var(--utrecht-form-control-padding-inline-end));
   padding-inline-start: var(--utrecht-select-padding-inline-start, var(--utrecht-form-control-padding-inline-start));
+
+  @if $utrecht-support-prince-xml {
+    @media print {
+      & {
+        -prince-pdf-form: enable;
+      }
+    }
+  }
 }
 
 @mixin utrecht-select--not-multiple {
