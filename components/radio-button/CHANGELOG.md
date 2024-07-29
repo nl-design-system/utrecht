@@ -1,5 +1,11 @@
 # @utrecht/radio-button-css
 
+## 1.2.0
+
+### Minor Changes
+
+- a41bba4: Add option to include Prince XML support. Use `$utrecht-support-prince-xml: true !default;` to enable this option.
+
 ## 1.1.0
 
 ### Minor Changes

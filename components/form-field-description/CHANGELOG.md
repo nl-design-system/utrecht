@@ -1,5 +1,11 @@
 # @utrecht/form-field-description-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 76473a7: Add `line-height` token to Form Field Description.
+
 ## 1.1.0
 
 ### Minor Changes

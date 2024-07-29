@@ -1,5 +1,11 @@
 # @utrecht/form-field-error-message-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 76473a7: Add `line-height` token to Form Field Error Message.
+
 ## 1.1.0
 
 ### Minor Changes
