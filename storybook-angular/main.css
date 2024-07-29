@@ -5,11 +5,11 @@
  */
 /**
  * Do not edit directly
- * Generated on Mon, 29 Jul 2024 07:28:45 GMT
+ * Generated on Mon, 29 Jul 2024 07:29:34 GMT
  */
 /**
  * Do not edit directly
- * Generated on Mon, 29 Jul 2024 07:28:44 GMT
+ * Generated on Mon, 29 Jul 2024 07:29:33 GMT
  */
 /**
  * @license SEE LICENSE.md
@@ -407,7 +407,6 @@
   --utrecht-badge-border-radius: 0; /* Default corner radius for badge components */
   --utrecht-badge-counter-padding-inline: 1ex; /* Default inline padding color for badge components */
   --utrecht-badge-counter-padding-block: 1ex; /* Default block padding for badge components */
-  --utrecht-badge-counter-font-size: 16px;
   --utrecht-backdrop-reduced-transparency-opacity: 0.98;
   --utrecht-backdrop-fade-in-animation-duration: 0.4s;
   --utrecht-backdrop-opacity: 0.8;
@@ -897,9 +896,8 @@
   --utrecht-badge-background-color: var(--utrecht-color-grey-30); /* Default background color for badge components */
   --utrecht-badge-list-item-margin-inline: var(--utrecht-space-block-sm);
   --utrecht-badge-list-item-margin-block: var(--utrecht-space-block-xs);
-  --utrecht-badge-counter-font-style: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-badge-counter-font-size: var(--utrecht-typography-scale-md-font-size);
   --utrecht-badge-counter-color: var(--utrecht-color-white); /* Default text color for badge components */
-  --utrecht-badge-counter-border-radius: var(--utrecht-badge-counter-font-size); /* Default corner radius for badge components */
   --utrecht-badge-counter-background-color: var(--utrecht-color-red-40); /* Default background color for badge components */
   --utrecht-backdrop-color: var(--utrecht-color-black);
   --utrecht-backdrop-background-color: var(--utrecht-color-white);
@@ -1004,6 +1002,7 @@
   --utrecht-button-pressed-background-color: var(--utrecht-button-active-background-color);
   --utrecht-breadcrumb-nav-arrows-link-focus-background-color: var(--utrecht-focus-background-color);
   --utrecht-breadcrumb-nav-link-focus-background-color: var(--utrecht-focus-background-color);
+  --utrecht-badge-counter-border-radius: var(--utrecht-badge-counter-font-size); /* Default corner radius for badge components */
   --of-layout-bg: var(--of-layout-background);
   --utrecht-radio-button-invalid-border-color: var(--utrecht-form-control-invalid-border-color);
   --utrecht-form-field-invalid-border-inline-start-color: var(--utrecht-form-control-invalid-border-color);
@@ -1419,7 +1418,6 @@
     --utrecht-badge-border-radius: 0; /* Default corner radius for badge components */
     --utrecht-badge-counter-padding-inline: 1ex; /* Default inline padding color for badge components */
     --utrecht-badge-counter-padding-block: 1ex; /* Default block padding for badge components */
-    --utrecht-badge-counter-font-size: 16px;
     --utrecht-backdrop-reduced-transparency-opacity: 0.98;
     --utrecht-backdrop-fade-in-animation-duration: 0.4s;
     --utrecht-backdrop-opacity: 0.8;
@@ -1909,9 +1907,8 @@
     --utrecht-badge-background-color: var(--utrecht-color-grey-30); /* Default background color for badge components */
     --utrecht-badge-list-item-margin-inline: var(--utrecht-space-block-sm);
     --utrecht-badge-list-item-margin-block: var(--utrecht-space-block-xs);
-    --utrecht-badge-counter-font-style: var(--utrecht-typography-scale-md-font-size);
+    --utrecht-badge-counter-font-size: var(--utrecht-typography-scale-md-font-size);
     --utrecht-badge-counter-color: var(--utrecht-color-white); /* Default text color for badge components */
-    --utrecht-badge-counter-border-radius: var(--utrecht-badge-counter-font-size); /* Default corner radius for badge components */
     --utrecht-badge-counter-background-color: var(--utrecht-color-red-40); /* Default background color for badge components */
     --utrecht-backdrop-color: var(--utrecht-color-white);
     --utrecht-backdrop-background-color: var(--utrecht-color-black);
@@ -2026,6 +2023,7 @@
     --utrecht-button-pressed-background-color: var(--utrecht-button-active-background-color);
     --utrecht-breadcrumb-nav-arrows-link-focus-background-color: var(--utrecht-focus-background-color);
     --utrecht-breadcrumb-nav-link-focus-background-color: var(--utrecht-focus-background-color);
+    --utrecht-badge-counter-border-radius: var(--utrecht-badge-counter-font-size); /* Default corner radius for badge components */
     --of-layout-bg: var(--of-layout-background);
     --utrecht-radio-button-invalid-border-color: var(--utrecht-form-control-invalid-border-color);
     --utrecht-form-field-invalid-border-inline-start-color: var(--utrecht-form-control-invalid-border-color);
