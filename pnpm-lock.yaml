@@ -2197,8 +2197,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-viewport':
-        specifier: 7.6.4
-        version: 7.6.4
+        specifier: 8.2.6
+        version: 8.2.6(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2431,8 +2431,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-viewport':
-        specifier: 7.6.4
-        version: 7.6.4
+        specifier: 8.2.6
+        version: 8.2.6(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -2566,8 +2566,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-viewport':
-        specifier: 7.6.4
-        version: 7.6.4
+        specifier: 8.2.6
+        version: 8.2.6(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3013,8 +3013,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-viewport':
-        specifier: 7.6.4
-        version: 7.6.4
+        specifier: 8.2.6
+        version: 8.2.6(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -3946,8 +3946,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-viewport':
-        specifier: 7.6.4
-        version: 7.6.4
+        specifier: 8.2.6
+        version: 8.2.6(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -8195,9 +8195,11 @@ packages:
 
   '@nl-design-system-unstable/rotterdam-design-tokens@1.0.0-alpha.123':
     resolution: {integrity: sha512-T+/K0Imma331Tjvp+Wo7TqJyOR2ILrWtitEvv+meLWA+gkg7V4Gb0sShOX2wi7HUwl3AYfJ9m8HWRdWlYZOcXQ==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@nl-design-system-unstable/rotterdam-design-tokens@1.0.0-alpha.125':
     resolution: {integrity: sha512-MzCXnKbyfD9BumyhDyDRuOf4AQsEQPaQcIX3gWlZ4DYcsOqLpH9XXXkNgx3XmQM/il7aK1VSRJ0Nyl1TMr8Jbg==}
+    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -9469,6 +9471,11 @@ packages:
   '@storybook/addon-viewport@7.6.4':
     resolution: {integrity: sha512-SoTcHIoqybhYD28v7QExF1EZnl7FfxuP74VDhtze5LyMd2CbqmVnUfwewLCz/3IvCNce0GqdNyg1m6QJ7Eq1uw==}
 
+  '@storybook/addon-viewport@8.2.6':
+    resolution: {integrity: sha512-IAxH9H8tVFzSmZhKf5E+EALiAdkp19RzGqP/rWluD8LH7oW5HumQE/4oN0ZhVMy1RxYsCKFYjWyAp7AuxeMRSw==}
+    peerDependencies:
+      storybook: ^8.2.6
+
   '@storybook/addons@6.5.16':
     resolution: {integrity: sha512-p3DqQi+8QRL5k7jXhXmJZLsE/GqHqyY6PcoA1oNTJr0try48uhTGUOYkgzmqtDaa/qPFO5LP+xCPzZXckGtquQ==}
     peerDependencies:
@@ -9867,6 +9874,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@6.5.16':
     resolution: {integrity: sha512-hNLctkjaYLRdk1+xYTkC1mg4dYz2wSv6SqbLpcKMbkPHTE0ElhddGPHQqB362md/w9emYXNkt1LSMD8Xk9JzVQ==}
@@ -15038,6 +15046,7 @@ packages:
 
   inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
 
   inherits@2.0.3:
     resolution: {integrity: sha512-x00IRNXNy63jwGkJmzPigoySHbaqpNuzKbBOmzK+g2OdZpQ9w+sxCN+VSB3ja7IAge2OP2qpfxTjeNcyjmW1uw==}
@@ -15812,8 +15821,8 @@ packages:
   js-cookie@2.2.1:
     resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     version: 1.1.0-formio.2
 
   js-stringify@1.0.2:
@@ -18964,10 +18973,12 @@ packages:
   read-package-json@6.0.4:
     resolution: {integrity: sha512-AEtWXYfopBj2z5N5PbkAOeNHRPUg5q+Nen7QLxV8M2zJq1ym6/lCz3fYNTCXe19puu2d06jfHhrP7v/S2PtMMw==}
     engines: {node: ^14.17.0 || ^16.13.0 || >=18.0.0}
+    deprecated: This package is no longer supported. Please use @npmcli/package-json instead.
 
   read-package-json@7.0.0:
     resolution: {integrity: sha512-uL4Z10OKV4p6vbdvIXB+OzhInYtIozl/VxUBPgNkBuUi2DeRonnuspmaVAMcrkmfjKGNmRndyQAbE7/AmzGwFg==}
     engines: {node: ^16.14.0 || >=18.0.0}
+    deprecated: This package is no longer supported. Please use @npmcli/package-json instead.
 
   read-pkg-up@7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
@@ -26908,7 +26919,7 @@ snapshots:
   '@formio/protected-eval@1.2.2(formiojs@4.13.12(encoding@0.1.13))':
     dependencies:
       formiojs: 4.13.12(encoding@0.1.13)
-      js-interpreter: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
 
@@ -29848,6 +29859,11 @@ snapshots:
   '@storybook/addon-viewport@7.6.4':
     dependencies:
       memoizerific: 1.11.3
+
+  '@storybook/addon-viewport@8.2.6(storybook@7.6.4(encoding@0.1.13))':
+    dependencies:
+      memoizerific: 1.11.3
+      storybook: 7.6.4(encoding@0.1.13)
 
   '@storybook/addons@6.5.16(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -39403,7 +39419,7 @@ snapshots:
 
   js-cookie@2.2.1: {}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
     dependencies:
       acorn: 8.11.2
 
