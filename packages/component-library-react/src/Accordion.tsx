@@ -13,6 +13,7 @@ import {
   useState,
 } from 'react';
 import { HTMLHeading } from './HTMLHeading';
+import { Heading } from './Heading';
 
 const IconChevronDown = () => (
   <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8">
@@ -171,7 +172,7 @@ export const Accordion = forwardRef(
 
     return (
       <>
-        {!!heading && typeof headingLevel === 'number' && <HTMLHeading level={headingLevel}>{heading}</HTMLHeading>}
+        {!!heading && typeof headingLevel === 'number' && <Heading level={headingLevel}>{heading}</Heading>}
         <div
           className={clsx('utrecht-accordion')}
           role={group ? 'group' : undefined}
@@ -241,11 +242,13 @@ export const useAccordionSection = (
   };
 };
 
-export interface AccordionProviderProps extends Pick<AccordionSectionProps, 'icon' | 'appearance'> {
+export interface AccordionProviderProps
+  extends Pick<AccordionProps, 'heading' | 'headingLevel'>,
+    Pick<AccordionSectionProps, 'icon' | 'appearance'> {
   sections: AccordionSectionProps[];
 }
 
-export const AccordionProvider = ({ sections, icon, appearance }: AccordionProviderProps) => {
+export const AccordionProvider = ({ sections, icon, appearance, heading, headingLevel }: AccordionProviderProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { refs, buttonRefs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } =
     useAccordion(sections, ref);
@@ -283,8 +286,10 @@ export const AccordionProvider = ({ sections, icon, appearance }: AccordionProvi
     evt.preventDefault();
   };
 
+  const sectionHeadingLevel = typeof headingLevel === 'number' ? headingLevel + (heading ? 1 : 0) : undefined;
+
   return (
-    <Accordion onKeyDown={handleKeyDown} ref={ref}>
+    <Accordion heading={heading} headingLevel={headingLevel} onKeyDown={handleKeyDown} ref={ref}>
       {sectionsState.map((section, index) => {
         const handleActivate = (ref: RefObject<HTMLDivElement>) => {
           const activatedIndex = refs.indexOf(ref);
@@ -304,6 +309,7 @@ export const AccordionProvider = ({ sections, icon, appearance }: AccordionProvi
         };
         return (
           <AccordionSection
+            headingLevel={sectionHeadingLevel}
             {...section}
             icon={icon}
             appearance={appearance}
