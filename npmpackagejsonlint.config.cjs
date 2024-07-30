@@ -11,7 +11,7 @@ module.exports = {
     {
       patterns: ['proprietary/**/package.json'],
       rules: {
-        'valid-values-license': ['error', ['SEE LICENSE IN ../LICENSE.md']],
+        'valid-values-license': ['error', ['SEE LICENSE IN ./LICENSE.md']],
       },
     },
   ],
