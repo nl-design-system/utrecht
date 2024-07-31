@@ -83,6 +83,10 @@
   @include utrecht-button--active;
 }
 
+.utrecht-button__label {
+  @include utrecht-button__label;
+}
+
 @include utrecht-button-appearance("utrecht-button", "primary-action");
 @include utrecht-button-appearance("utrecht-button", "secondary-action");
 @include utrecht-button-appearance("utrecht-button", "subtle");
