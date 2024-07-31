@@ -6,6 +6,7 @@
 @mixin utrecht-form-field-description {
   --utrecht-document-color: currentColor;
 
+  background-color: var(--utrecht-form-field-description-background-color);
   color: var(--utrecht-form-field-description-color);
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-form-field-description-font-size, inherit);
