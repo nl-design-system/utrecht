@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, OptionHTMLAttributes, PropsWithChildren, SelectHTMLAttributes } from 'react';
 
 export interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {

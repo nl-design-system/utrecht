@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export type ArticleProps = HTMLAttributes<HTMLElement>;

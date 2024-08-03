@@ -5,7 +5,7 @@ import { NumberData } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/number-data-css/README.md?raw';
 import tokensDefinition from '@utrecht/number-data-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

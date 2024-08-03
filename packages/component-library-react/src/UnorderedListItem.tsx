@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, LiHTMLAttributes, PropsWithChildren } from 'react';
 
 export type UnorderedListItemProps = LiHTMLAttributes<HTMLLIElement>;

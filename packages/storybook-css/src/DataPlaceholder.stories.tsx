@@ -17,7 +17,7 @@ import {
 import readme from '@utrecht/data-placeholder-css/README.md?raw';
 import tokensDefinition from '@utrecht/data-placeholder-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

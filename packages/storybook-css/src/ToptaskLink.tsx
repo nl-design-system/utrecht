@@ -4,7 +4,7 @@
  * Copyright (c) 2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { AnchorHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 export interface ToptaskLinkProps extends PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>> {

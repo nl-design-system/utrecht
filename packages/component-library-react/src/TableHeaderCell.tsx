@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ThHTMLAttributes } from 'react';
 
 export interface TableHeaderCellProps extends ThHTMLAttributes<HTMLTableCellElement> {

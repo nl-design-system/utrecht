@@ -6,7 +6,7 @@ import type { LinkSocialProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/link-social-css/README.md?raw';
 import tokensDefinition from '@utrecht/link-social-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

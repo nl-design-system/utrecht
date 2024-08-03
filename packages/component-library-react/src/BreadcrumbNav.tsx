@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ComponentType, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 import { Heading } from './Heading';
 import { Link as UtrechtLink } from './Link';

@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ComponentType, ForwardedRef, forwardRef, PropsWithChildren, Ref } from 'react';
 import { Button } from './Button';
 import { ButtonLink } from './ButtonLink';

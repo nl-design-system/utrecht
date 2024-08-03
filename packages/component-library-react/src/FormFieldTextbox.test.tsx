@@ -641,7 +641,7 @@ describe('Form field with a textbox', () => {
 
       const textbox = screen.getByRole('textbox');
 
-      expect(textbox).not.toBeReadOnly();
+      expect(textbox).not['toBeReadOnly']();
     });
 
     it('omits non-essential disabled attributes when not read-only', () => {
@@ -659,7 +659,7 @@ describe('Form field with a textbox', () => {
 
       const textbox = screen.getByRole('textbox');
 
-      expect(textbox).toBeReadonly();
+      expect(textbox)['toBeReadonly']();
     });
 
     it('can have a read-only state in CSS', () => {

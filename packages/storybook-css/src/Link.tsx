@@ -1,6 +1,6 @@
 import { Link } from '@utrecht/component-library-react';
 import type { LinkProps } from '@utrecht/component-library-react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 
 export interface LinkStoryProps extends Omit<LinkProps, 'tabIndex'> {

@@ -2,7 +2,7 @@
  * @license EUPL-1.2
  * Copyright (c) 2024 Frameless
  */
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface HTMLHeadingProps extends PropsWithChildren<HTMLAttributes<HTMLHeadingElement>> {

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
 export const Alert = ({ children, icon = null, type }: PropsWithChildren<{ icon?: ReactNode; type?: string }>) => (

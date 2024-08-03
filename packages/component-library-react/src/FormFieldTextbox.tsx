@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 import type { FormFieldProps } from './FormField';
 import { FormField } from './FormField';

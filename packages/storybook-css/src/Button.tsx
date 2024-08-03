@@ -1,6 +1,6 @@
 import type { ButtonProps } from '@utrecht/component-library-react';
 import { Button } from '@utrecht/component-library-react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren } from 'react';
 
 export interface ButtonStoryProps extends ButtonProps {

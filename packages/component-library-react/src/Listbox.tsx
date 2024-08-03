@@ -3,7 +3,7 @@
  * Copyright (c) 2023 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, LiHTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 
 export interface ListboxProps extends HTMLAttributes<HTMLDivElement> {

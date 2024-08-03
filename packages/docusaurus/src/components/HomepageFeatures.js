@@ -1,7 +1,7 @@
 import Bicycles from '@site/static/img/bicycles.png';
 import Laptop from '@site/static/img/laptop.png';
 import Utrecht from '@site/static/img/utrecht.png';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import styles from './HomepageFeatures.module.css';
 

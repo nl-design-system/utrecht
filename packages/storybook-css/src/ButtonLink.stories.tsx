@@ -5,7 +5,7 @@ import { ButtonLink } from '@utrecht/component-library-react';
 import type { ButtonLinkProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 

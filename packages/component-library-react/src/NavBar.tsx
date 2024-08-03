@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface NavBarProps extends HTMLAttributes<HTMLDivElement> {

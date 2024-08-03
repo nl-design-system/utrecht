@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { CalendarButton, CalendarButtonProps } from './CalendarButton';
 export interface CalendarTableDaysItemDayProps extends CalendarButtonProps {

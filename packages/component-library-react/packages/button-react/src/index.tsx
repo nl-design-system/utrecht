@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {

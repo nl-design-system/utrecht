@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, ImgHTMLAttributes } from 'react';
 
 export interface ImageProps extends ImgHTMLAttributes<HTMLImageElement> {

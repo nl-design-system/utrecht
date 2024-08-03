@@ -4,7 +4,7 @@
  */
 
 import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 /**
  * I would prefer to set `rows` and `cols` only when the properties are actually set,

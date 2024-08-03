@@ -60,7 +60,7 @@ describe('Listbox', () => {
 
       const listbox = screen.getByRole('listbox');
 
-      expect(listbox).isReadOnly();
+      expect(listbox)['isReadOnly']();
     });
   });
 

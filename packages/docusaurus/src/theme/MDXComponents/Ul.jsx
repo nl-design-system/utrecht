@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Gemeente Utrecht
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import styles from './Ul.module.css';
 const containsClassListLocalClass = styles['contains-task-list'];

@@ -5,7 +5,7 @@ import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonThemes } from '@utrecht/storybook-helpers/dist/addon-themes';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import prettierBabel from 'prettier/parser-babel';
 import prettier from 'prettier/standalone';
 import React, { ReactElement } from 'react';

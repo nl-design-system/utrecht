@@ -4,7 +4,7 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface BadgeCounterProps extends HTMLAttributes<HTMLElement> {

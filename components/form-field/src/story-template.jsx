@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { Checkbox } from '../../checkbox/src/story-template';
 import { FormFieldDescription } from '../../form-field-description/src/story-template';

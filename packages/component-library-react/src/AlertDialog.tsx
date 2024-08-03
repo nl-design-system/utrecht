@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { DialogHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
 export type AlertDialogType = 'error' | 'info' | 'warning';

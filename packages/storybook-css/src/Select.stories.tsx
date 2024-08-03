@@ -7,7 +7,7 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/select-css/README.md?raw';
 import multipleDocs from '@utrecht/select-css/_multiple.md?raw';
 import tokensDefinition from '@utrecht/select-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 

@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 import './ExampleDialog.scss';
 

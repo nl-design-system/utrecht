@@ -5,7 +5,7 @@
  */
 
 import { Component, h, Prop, State } from '@stencil/core';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 @Component({
   tag: 'utrecht-progress-list-item',

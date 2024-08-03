@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, TextareaHTMLAttributes } from 'react';
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {

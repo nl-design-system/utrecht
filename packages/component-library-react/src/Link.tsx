@@ -4,7 +4,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 // Somehow `placeholder` incorrectly is a global HTML attribute in React, ignore that

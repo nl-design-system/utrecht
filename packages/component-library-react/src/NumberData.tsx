@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { DataHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface NumberDataProps extends DataHTMLAttributes<HTMLDataElement> {

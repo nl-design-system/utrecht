@@ -3,7 +3,7 @@
  * Copyright (c) 2023 Gemeente Utrecht
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 import type { LinkProps } from './Link';
 import { Link } from './Link';

@@ -62,8 +62,8 @@ describe('Index character navigation', () => {
     }));
 
     render(<IndexCharNav onLinkClick={mockHandleLetterClick} characters={characters} component="button" />);
-    const buttons = screen.getAllByRole('button');
-    fireEvent.click(buttons[0]);
+    const button = screen.getByRole('button');
+    fireEvent.click(button);
 
     expect(mockHandleLetterClick).toHaveBeenCalledWith('A');
   });

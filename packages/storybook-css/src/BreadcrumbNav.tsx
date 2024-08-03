@@ -4,7 +4,7 @@
  */
 
 import { Link as UtrechtLink } from '@utrecht/component-library-react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, {
   ComponentType,
   ForwardedRef,

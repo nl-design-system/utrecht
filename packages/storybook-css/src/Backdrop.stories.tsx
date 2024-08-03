@@ -4,7 +4,7 @@ import tokensDefinition from '@utrecht/backdrop-css/src/tokens.json';
 import { Backdrop } from '@utrecht/component-library-react';
 import type { BackdropProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 

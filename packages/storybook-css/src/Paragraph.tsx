@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Gemeente Utrecht
  * Copyright (c) 2022 Frameless B.V.
  */
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import parse from 'html-react-parser';
 import React, { PropsWithChildren } from 'react';
 

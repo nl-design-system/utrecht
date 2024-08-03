@@ -8,7 +8,7 @@ import {
   ListboxOptionGroup,
   Textbox,
 } from '@utrecht/component-library-react/dist/css-module/index';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
 export interface ComboboxStoryProps {

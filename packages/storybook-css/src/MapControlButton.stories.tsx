@@ -5,7 +5,7 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import readme from '@utrecht/map-control-button-css/README.md?raw';
 import tokensDefinition from '@utrecht/map-control-button-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { MapControlButton } from './MapControlButton';
 import type { MapControlButtonProps } from './MapControlButton';

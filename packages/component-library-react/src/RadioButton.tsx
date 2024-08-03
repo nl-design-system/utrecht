@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes, PropsWithChildren } from 'react';
 
 export type RadioButtonProps = InputHTMLAttributes<HTMLInputElement> & {

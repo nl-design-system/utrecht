@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Gemeente Utrecht
  * Copyright (c) 2022 Frameless B.V.
  */
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 
 export const SearchBarDropdown = ({ isSelected, isActive }) => (

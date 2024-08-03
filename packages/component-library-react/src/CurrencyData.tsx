@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
 
 export interface CurrencyDataProps extends HTMLAttributes<HTMLDataElement> {

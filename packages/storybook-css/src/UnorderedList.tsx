@@ -1,6 +1,6 @@
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react';
 import type { UnorderedListProps } from '@utrecht/component-library-react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { ReactNode } from 'react';
 
 interface UnorderedListItemData {

@@ -1,6 +1,6 @@
 import { LinkButton } from '@utrecht/component-library-react';
 import type { LinkButtonProps } from '@utrecht/component-library-react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren } from 'react';
 
 export interface LinkButtonStoryProps extends LinkButtonProps {

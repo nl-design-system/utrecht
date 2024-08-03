@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { AnchorHTMLAttributes, HTMLAttributes, LiHTMLAttributes, PropsWithChildren } from 'react';
 
 export interface TopNavLinkProps extends PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>> {

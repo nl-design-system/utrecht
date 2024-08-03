@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { PropsWithChildren } from 'react';
 
 export const Heading2 = ({

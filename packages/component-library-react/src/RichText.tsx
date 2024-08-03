@@ -3,7 +3,7 @@
  * Copyright (c) 2024 Yolijn van der Kolk
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes } from 'react';
 
 export type RichTextProps = HTMLAttributes<HTMLDivElement>;

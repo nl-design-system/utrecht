@@ -23,7 +23,7 @@ import passwordForAuthentificationDocs from '@utrecht/textbox-css/_wachtwoordVoo
 import websiteDocs from '@utrecht/textbox-css/_website.md?raw';
 import placeOfResidenceDocs from '@utrecht/textbox-css/_woonplaats.md?raw';
 import tokensDefinition from '@utrecht/textbox-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

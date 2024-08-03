@@ -4,7 +4,7 @@
  */
 
 import { Component, Element, Event, EventEmitter, h, Prop } from '@stencil/core';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 const HTML_DEFAULT_COLS = 20;
 const HTML_DEFAULT_ROWS = 2;

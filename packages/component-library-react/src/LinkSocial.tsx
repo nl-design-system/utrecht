@@ -3,7 +3,7 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 
 export interface LinkSocialProps extends AnchorHTMLAttributes<HTMLAnchorElement> {

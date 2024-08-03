@@ -1,5 +1,5 @@
 import { Component, h, Prop } from '@stencil/core';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 @Component({
   tag: 'utrecht-paragraph',

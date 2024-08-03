@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
 export type TextboxTypes =
   | 'date'

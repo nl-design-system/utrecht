@@ -5,7 +5,7 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import readme from '@utrecht/top-task-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/top-task-link-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { ToptaskLink } from './ToptaskLink';
 import type { ToptaskLinkProps } from './ToptaskLink';

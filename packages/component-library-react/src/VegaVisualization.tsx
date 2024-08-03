@@ -3,10 +3,10 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { Vega } from 'react-vega';
-import { VegaProps } from 'react-vega/lib/Vega';
-import { Config } from 'vega';
+import { type VegaProps } from 'react-vega/lib/Vega';
+import { type Config } from 'vega';
 
 export interface VegaVisualizationProps extends Omit<VegaProps, 'renderer'> {
   label?: string;

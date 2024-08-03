@@ -6,7 +6,7 @@ import tokensDefinition from '@utrecht/checkbox-css/src/tokens.json';
 import { Checkbox } from '@utrecht/component-library-react';
 import type { CheckboxProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

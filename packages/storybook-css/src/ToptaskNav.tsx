@@ -4,7 +4,7 @@
  * Copyright (c) 2022 Frameless B.V.
  */
 
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React, { HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface ToptaskNavProps extends PropsWithChildren<HTMLAttributes<HTMLElement>> {

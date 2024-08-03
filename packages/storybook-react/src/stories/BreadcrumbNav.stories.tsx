@@ -8,7 +8,7 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import React from 'react';
 import { designTokenStory } from './util';
 

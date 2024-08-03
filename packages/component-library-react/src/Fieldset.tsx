@@ -1,4 +1,4 @@
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import { FieldsetHTMLAttributes, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface FieldsetProps extends HTMLAttributes<HTMLDivElement> {

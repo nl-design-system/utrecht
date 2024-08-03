@@ -39,7 +39,7 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/table-css/README.md?raw';
 import actionReadme from '@utrecht/table-css/_table-row-action.md?raw';
 import tokensDefinition from '@utrecht/table-css/src/tokens.json';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 import groupBy from 'lodash.groupby';
 import React, { createRef, PropsWithChildren, ReactNode, useId, useState } from 'react';
 import { designTokenStory } from './design-token-story';

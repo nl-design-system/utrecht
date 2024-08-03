@@ -5,7 +5,7 @@
  */
 
 import { Component, h, Method, Prop } from '@stencil/core';
-import clsx from 'clsx';
+import { clsx } from 'clsx';
 
 @Component({
   tag: 'utrecht-drawer',
