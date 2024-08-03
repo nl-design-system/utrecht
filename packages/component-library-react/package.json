@@ -23,7 +23,7 @@
     "build:rollup-components": "rollup --config rollup-components.config.mjs",
     "build:test-results": "mkdir -p dist pages && NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=dist/.jest-test-results.json --silent",
     "clean": "rimraf dist/ pages/",
-    "lint": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
+    "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
     "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose",
     "watch:build": "rollup -c --watch",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
