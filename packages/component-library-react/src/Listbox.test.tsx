@@ -55,13 +55,7 @@ describe('Listbox', () => {
 
   describe('read-only state', () => {
     // `isReadOnly()` is not supported, unfortunately
-    it.skip('has a read-only listbox', () => {
-      render(<Listbox disabled />);
-
-      const listbox = screen.getByRole('listbox');
-
-      expect(listbox).isReadOnly();
-    });
+    it.skip('has a listbox that is read-only in the accessibility tree', () => {});
   });
 
   it('supports ForwardRef in React', () => {
