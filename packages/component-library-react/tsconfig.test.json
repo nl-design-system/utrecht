@@ -1,8 +1,8 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "./packages/**/*.ts", "./packages/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx", "./packages/**/*.ts", "./packages/**/*.tsx"],
   "exclude": ["**/node_modules/*"]
 }
