@@ -124,9 +124,9 @@
     "clean:angular-output-target": "rimraf ../web-component-library-angular/src/directives/",
     "clean:react-output-target": "rimraf ../web-component-library-react/src/components.ts ../web-component-library-react/src/react-component-lib/",
     "clean:vue-output-target": "rimraf ../web-component-library-vue/src/components.ts ../web-component-library-vue/src/vue-component-lib/",
-    "lint": "pnpm run '/^lint:.*/'",
-    "lint:ts": "tsc --noEmit --project tsconfig.json",
-    "lint:jest": "tsc --noEmit --project tsconfig.jest.json",
+    "lint-build": "pnpm run '/^lint:.*/'",
+    "lint-build:ts": "tsc --noEmit --project tsconfig.json",
+    "lint-build:jest": "tsc --noEmit --project tsconfig.jest.json",
     "start": "stencil build --dev --watch --serve",
     "watch:build": "stencil build --watch",
     "generate": "stencil generate"

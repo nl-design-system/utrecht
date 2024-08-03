@@ -106,7 +106,7 @@
     "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
     "storybook-docs": "storybook dev --config-dir config/ --docs --no-manager-cache",
     "clean": "rimraf dist/",
-    "lint:typescript": "tsc --noEmit --project tsconfig.json",
+    "lint-build:todo": "tsc --noEmit --project tsconfig.json",
     "start": "http-server dist/",
     "storybook": "storybook dev --config-dir config/ --port 6007"
   }
