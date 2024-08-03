@@ -5,6 +5,7 @@
     "allowUnreachableCode": false,
     "composite": true,
     "declaration": true,
+    "declarationMap": true,
     "esModuleInterop": true,
     "experimentalDecorators": true,
     "forceConsistentCasingInFileNames": true,
@@ -16,13 +17,20 @@
     "moduleResolution": "node",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "outDir": "dist",
+    "paths": {
+      "@utrecht/button-react/*": ["./packages/button-react/*"]
+    },
     "resolveJsonModule": true,
-    "rootDir": "./src/",
+    "outDir": "dist",
     "skipLibCheck": true,
     "strict": true,
     "target": "es2020"
   },
-  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx"],
-  "exclude": ["**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"]
+  "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", "./packages/**/*.ts", "./packages/**/*.tsx"],
+  "exclude": ["**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"],
+  "references": [
+    {
+      "path": "./packages/button-react"
+    }
+  ]
 }
