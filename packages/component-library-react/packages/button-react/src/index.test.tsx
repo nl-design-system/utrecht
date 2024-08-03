@@ -1,6 +1,12 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
 import { render, screen } from '@testing-library/react';
 import { createRef, FormEvent } from 'react';
-import { Button } from './Button';
+import { Button } from './index';
 import '@testing-library/jest-dom';
 
 describe('Button', () => {

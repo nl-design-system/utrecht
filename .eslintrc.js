@@ -70,6 +70,8 @@ module.exports = {
           'packages/component-library-angular/tsconfig.spec.json',
           'packages/component-library-react/tsconfig.json',
           'packages/component-library-react/tsconfig.test.json',
+          'packages/component-library-react/packages/button-react/tsconfig.json',
+          'packages/component-library-react/packages/button-react/tsconfig.test.json',
           'packages/component-library-vue/tsconfig.jest.json',
           'packages/component-library-vue/tsconfig.json',
           'packages/component-library-vue/tsconfig.lib.json',
