@@ -21,7 +21,7 @@ export interface IndexCharNavProps {
    * }
    *```
    */
-  // eslint-disable-next-line no-unused-vars
+
   onLinkClick?: (char: string) => void;
   /**
    * The current char.

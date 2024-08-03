@@ -44,13 +44,25 @@ module.exports = {
       plugins: ['import', 'jest'],
     },
     {
-      extends: ['plugin:react/recommended', 'eslint-config-prettier', './.eslintrc.js.json', './.eslintrc.react.json'],
+      extends: [
+        'plugin:react/recommended',
+        'eslint-config-prettier',
+        './.eslintrc.js.json',
+        './.eslintrc.react.json',
+        './.eslintrc.ts.json',
+      ],
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint', 'import', 'jest'],
     },
     {
-      extends: ['plugin:react/recommended', 'eslint-config-prettier', './.eslintrc.js.json', './.eslintrc.react.json'],
+      extends: [
+        'plugin:react/recommended',
+        'eslint-config-prettier',
+        './.eslintrc.js.json',
+        './.eslintrc.react.json',
+        './.eslintrc.ts.json',
+      ],
       files: ['**/stencil.tsx', '**/*.stencil.tsx'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
@@ -60,7 +72,7 @@ module.exports = {
     },
     {
       excludedFiles: ['**/stencil.tsx', '**/*.stencil.tsx'],
-      extends: ['plugin:react/recommended', 'eslint-config-prettier', './.eslintrc.js.json'],
+      extends: ['plugin:react/recommended', 'eslint-config-prettier', './.eslintrc.js.json', './.eslintrc.ts.json'],
       files: ['*.ts', '*.tsx'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
