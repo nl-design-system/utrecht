@@ -636,13 +636,7 @@ describe('Form field with a textbox', () => {
     });
 
     // Test doesn't work, Testing Library doesn't support testing read only state
-    it.skip('is not read-only by default', () => {
-      render(<FormFieldTextbox {...defaultProps} />);
-
-      const textbox = screen.getByRole('textbox');
-
-      expect(textbox).not.toBeReadOnly();
-    });
+    it.skip('is not read-only in the accessibility tree by default', () => {});
 
     it('omits non-essential disabled attributes when not read-only', () => {
       render(<FormFieldTextbox {...defaultProps} readOnly={false} />);
@@ -654,13 +648,7 @@ describe('Form field with a textbox', () => {
     });
 
     // Test doesn't work, Testing Library doesn't support testing read only state
-    it.skip('can have a read-only state', () => {
-      render(<FormFieldTextbox {...defaultProps} disabled />);
-
-      const textbox = screen.getByRole('textbox');
-
-      expect(textbox).toBeReadonly();
-    });
+    it.skip('can have a read-only state in the accessibility tree', () => {});
 
     it('can have a read-only state in CSS', () => {
       const { container } = render(<FormFieldTextbox {...defaultProps} readOnly />);
