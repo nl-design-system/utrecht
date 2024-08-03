@@ -9,6 +9,9 @@ tmp/
 *.tgz
 .angular
 *.tsbuildinfo
+.swc
+packages/component-library-react/pages
+packages/component-library-react/packages/*/pages
 
 # Ignore log files
 *.err
