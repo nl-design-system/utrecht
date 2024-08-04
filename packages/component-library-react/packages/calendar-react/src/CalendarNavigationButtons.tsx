@@ -1,24 +1,23 @@
-import React from 'react';
+import { MouseEventHandler, PropsWithChildren } from 'react';
 import { CalendarButton, CalendarButtonProps } from './CalendarButton';
 import { CalendarIcon } from './CalendarIcon';
 interface CalendarNavigationButtonsProps extends CalendarButtonProps {
-  onPreviousClick?: React.MouseEventHandler<HTMLButtonElement>;
-  onNextClick?: React.MouseEventHandler<HTMLButtonElement>;
+  onPreviousClick?: MouseEventHandler<HTMLButtonElement>;
+  onNextClick?: MouseEventHandler<HTMLButtonElement>;
   previousIcon?: any;
   nextIcon?: any;
   previousTitle?: string;
   nextTitle?: string;
-  children?: React.ReactNode;
 }
 
-export const CalendarNavigationButtons: React.FC<CalendarNavigationButtonsProps> = ({
+export const CalendarNavigationButtons = ({
   onPreviousClick,
   onNextClick,
   previousIcon,
   nextIcon,
   children,
   ...props
-}) => (
+}: PropsWithChildren<CalendarNavigationButtonsProps>) => (
   <div className="utrecht-calendar__navigation-buttons">
     <CalendarButton onClick={onPreviousClick} {...props}>
       <CalendarIcon>{previousIcon}</CalendarIcon>

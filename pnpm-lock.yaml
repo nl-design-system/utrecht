@@ -1406,6 +1406,9 @@ importers:
       clsx:
         specifier: 2.1.1
         version: 2.1.1
+      date-fns:
+        specifier: ^2.30.0
+        version: 2.30.0
       lodash.chunk:
         specifier: 4.2.0
         version: 4.2.0
@@ -1509,9 +1512,9 @@ importers:
       '@utrecht/button-react':
         specifier: workspace:*
         version: link:packages/button-react
-      '@utrecht/calendar-css':
+      '@utrecht/calendar-react':
         specifier: workspace:*
-        version: link:../../components/calendar
+        version: link:packages/calendar-react
       '@utrecht/checkbox-css':
         specifier: workspace:*
         version: link:../../components/checkbox
@@ -1737,9 +1740,6 @@ importers:
       '@utrecht/vega-visualization-css':
         specifier: workspace:*
         version: link:../../components/vega-visualization
-      date-fns:
-        specifier: 2.30.0
-        version: 2.30.0
       gatsby:
         specifier: 5.12.12
         version: 5.12.12(@swc/core@1.3.100)(babel-eslint@10.1.0(eslint@7.32.0))(encoding@0.1.13)(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.5))(eslint@8.57.0)(typescript@4.9.5))(eslint@8.57.0)(jest@29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0))(typescript@4.9.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@4.9.5)(vue-template-compiler@2.7.15)(webpack-dev-server@4.15.1(webpack@5.89.0(@swc/core@1.3.100)))(webpack-hot-middleware@2.25.4)
@@ -1822,6 +1822,34 @@ importers:
       '@utrecht/button-css':
         specifier: workspace:*
         version: link:../../../../components/button
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/calendar-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/button-react':
+        specifier: workspace:*
+        version: link:../button-react
+      '@utrecht/calendar-css':
+        specifier: workspace:*
+        version: link:../../../../components/calendar
+      date-fns:
+        specifier: 2.30.0
+        version: 2.30.0
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))

@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React from 'react';
+import { PropsWithChildren } from 'react';
 import { CalendarButton, CalendarButtonProps } from './CalendarButton';
 export interface CalendarTableDaysItemDayProps extends CalendarButtonProps {
   day: string;
@@ -10,7 +10,7 @@ export interface CalendarTableDaysItemDayProps extends CalendarButtonProps {
   disabled?: boolean;
 }
 
-export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> = ({
+export const CalendarTableDaysItemDay = ({
   day,
   dayOutOfTheMonth,
   isToday,
@@ -18,7 +18,7 @@ export const CalendarTableDaysItemDay: React.FC<CalendarTableDaysItemDayProps> =
   selected,
   disabled,
   ...props
-}) => (
+}: PropsWithChildren<CalendarTableDaysItemDayProps>) => (
   <td>
     <CalendarButton
       className={clsx(
