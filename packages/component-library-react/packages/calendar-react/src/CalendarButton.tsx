@@ -1,10 +1,10 @@
+import { Button, ButtonProps } from '@utrecht/button-react';
 import { clsx } from 'clsx';
-import React from 'react';
-import { Button, ButtonProps } from '../Button';
+import { PropsWithChildren } from 'react';
 
 export interface CalendarButtonProps extends ButtonProps {}
 
-export const CalendarButton: React.FC<CalendarButtonProps> = ({ children, className, ...props }) => (
+export const CalendarButton = ({ children, className, ...props }: PropsWithChildren<CalendarButtonProps>) => (
   <Button appearance="subtle-button" {...props} className={clsx('utrecht-calendar__button', className)}>
     {children}
   </Button>

@@ -1,2 +1,7 @@
-export type { CalendarProps } from './Calendar/index';
-export { Calendar } from './Calendar/index';
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+export type { CalendarProps } from '@utrecht/calendar-react';
+export { Calendar } from '@utrecht/calendar-react';

@@ -22,7 +22,7 @@ import {
 } from 'date-fns';
 import { enUS } from 'date-fns/locale';
 import chunk from 'lodash.chunk';
-import { FC, useState } from 'react';
+import { useState } from 'react';
 import { CalendarNavigation } from './CalendarNavigation';
 import { CalendarNavigationButtons } from './CalendarNavigationButtons';
 import { CalendarNavigationLabel } from './CalendarNavigationLabel';
@@ -88,7 +88,7 @@ export interface CalendarProps {
  * powered by date-fns, so that make it easy to use the `date-fns` date functions & locale
  * */
 
-export const Calendar: FC<CalendarProps> = ({
+export const Calendar = ({
   onCalendarClick,
   events,
   currentDate,
@@ -99,7 +99,7 @@ export const Calendar: FC<CalendarProps> = ({
   nextMonthButtonTitle = 'Next month',
   minDate,
   maxDate,
-}) => {
+}: CalendarProps) => {
   const [visibleMonth, setVisibleMonth] = useState(currentDate || new Date());
   const [selectedDate, setSelectedDate] = useState(currentDate);
   const calendar = createCalendar(visibleMonth);
