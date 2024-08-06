@@ -15,7 +15,7 @@
   "scripts": {
     "build": "rollup -c ./rollup.config.mjs",
     "clean": "rimraf dist",
-    "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --verbose"
+    "test": "mkdir -p pages && jest --verbose"
   },
   "devDependencies": {
     "@utrecht/button-react": "workspace:*",
