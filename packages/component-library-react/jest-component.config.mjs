@@ -16,6 +16,9 @@ export const createJestConfig = (path) => {
     testEnvironment: 'jest-environment-jsdom',
     testPathIgnorePatterns: ['/dist/'],
     // transformIgnorePatterns: ['node_modules/(?!@utrecht/web-component-library-react)'],
+    moduleNameMapper: {
+      '^@utrecht/(.*)$': '<rootDir>/../$1/src/',
+    },
   };
 
   return createJestConfig(customJestConfig);
