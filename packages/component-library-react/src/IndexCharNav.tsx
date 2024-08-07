@@ -3,9 +3,9 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+import { Button } from '@utrecht/button-react';
 import clsx from 'clsx';
 import { ComponentType, ForwardedRef, forwardRef, PropsWithChildren, Ref } from 'react';
-import { Button } from './Button';
 import { ButtonLink } from './ButtonLink';
 
 export interface IndexCharNavProps {
