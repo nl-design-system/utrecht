@@ -4,7 +4,7 @@ import { Icon } from './Icon';
 import '@testing-library/jest-dom';
 
 describe('Icon', () => {
-  it('is not available in the accessibility tree', () => {
+  it('is not available in the accessibility tree by default', () => {
     render(
       <div>
         <button>← Previous</button>
@@ -23,8 +23,19 @@ describe('Icon', () => {
     });
 
     expect(buttonWithoutIconComponent).toBeInTheDocument();
-
     expect(buttonWithIconComponent).toBeInTheDocument();
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+  });
+
+  it('can be included in the accessibility tree when specified', () => {
+    render(
+      <Icon role="img" aria-label="Trash can">
+        →
+      </Icon>,
+    );
+
+    const accessibleIcon = screen.getByRole('img', { name: 'Trash can' });
+    expect(accessibleIcon).toBeInTheDocument();
   });
 
   it('renders an HTML span element', () => {
@@ -43,13 +54,20 @@ describe('Icon', () => {
     expect(icon).toHaveClass('utrecht-icon');
   });
 
-  it.skip('displays as CSS inline-block element', () => {
+  it('has aria-hidden="true" by default', () => {
     const { container } = render(<Icon />);
 
     const icon = container.querySelector(':only-child');
 
-    expect(icon).toBeVisible();
-    expect(icon).toHaveStyle({ display: 'inline-block' });
+    expect(icon).toHaveAttribute('aria-hidden', 'true');
+  });
+
+  it('does not have aria-hidden when role is not "presentation"', () => {
+    const { container } = render(<Icon role="img" />);
+
+    const icon = container.querySelector(':only-child');
+
+    expect(icon).not.toHaveAttribute('aria-hidden');
   });
 
   it('renders rich text content', () => {
@@ -61,9 +79,9 @@ describe('Icon', () => {
 
     const icon = container.querySelector(':only-child');
 
-    const dialog = icon?.querySelector('svg');
+    const svg = icon?.querySelector('svg');
 
-    expect(dialog).toBeInTheDocument();
+    expect(svg).toBeInTheDocument();
   });
 
   it('can be hidden', () => {
