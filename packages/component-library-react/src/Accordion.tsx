@@ -1,3 +1,4 @@
+import { Button } from '@utrecht/button-react';
 import clsx from 'clsx';
 import {
   ForwardedRef,
@@ -11,7 +12,6 @@ import {
   useRef,
   useState,
 } from 'react';
-import { Button } from './Button';
 import { HTMLHeading } from './HTMLHeading';
 
 const IconChevronDown = () => (

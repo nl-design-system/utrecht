@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
+import { Button } from '@utrecht/button-react';
 import { createRef } from 'react';
-import { Button } from './Button';
 import { ButtonGroup } from './ButtonGroup';
 import '@testing-library/jest-dom';
 
