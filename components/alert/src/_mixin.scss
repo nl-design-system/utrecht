@@ -4,6 +4,8 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
+@import "~@utrecht/focus-ring-css/src/mixin";
+
 @mixin utrecht-alert {
   background-color: var(--_utrecht-alert-background-color, var(--utrecht-alert-background-color));
   border-color: var(--_utrecht-alert-border-color, var(--utrecht-alert-border-color));
@@ -21,6 +23,10 @@
   padding-block-start: var(--utrecht-alert-padding-block-start);
   padding-inline-end: var(--utrecht-alert-padding-inline-end);
   padding-inline-start: var(--utrecht-alert-padding-inline-start);
+}
+
+@mixin utrecht-alert__focus {
+  @include utrecht-focus-ring;
 }
 
 @mixin utrecht-alert__icon {
