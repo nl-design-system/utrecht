@@ -1,8 +1,16 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-css/README.md?raw';
+import anatomyDocs from '@utrecht/button-css/docs/anatomy.nl.md?raw';
+import failureDescriptionDocs from '@utrecht/button-css/docs/failure-description.nl.md?raw';
+import failureErrorMessageDocs from '@utrecht/button-css/docs/failure-error-message.nl.md?raw';
+import relatedComponentsDocs from '@utrecht/button-css/docs/related-components.nl.md?raw';
+import htmlDocs from '@utrecht/button-css/docs/technology-html.nl.md?raw';
+import visualDesignDocs from '@utrecht/button-css/docs/visual-design.nl.md?raw';
+import wcagDocs from '@utrecht/button-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/button-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { ButtonStory } from './Button';
 import { designTokenStory } from './design-token-story';
 
@@ -99,7 +107,16 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          readme,
+          relatedComponentsDocs,
+          anatomyDocs,
+          visualDesignDocs,
+          htmlDocs,
+          failureDescriptionDocs,
+          failureErrorMessageDocs,
+          wcagDocs,
+        ]),
       },
     },
   },

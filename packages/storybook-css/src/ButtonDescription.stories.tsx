@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import descriptionDocs from '@utrecht/button-css/_description.md?raw';
+import descriptionDocs from '@utrecht/button-css/docs/description.nl.md?raw';
 import React from 'react';
 import { ButtonWithDescription } from './ButtonDescription';
 
