@@ -26,7 +26,7 @@
     "lint-build:spec": "tsc --noEmit --project tsconfig.spec.json",
     "watch:build": "ng build --watch",
     "test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
-    "test": "jest --verbose",
+    "test": "jest --coverage --verbose",
     "test-build": "node test-exports.mjs",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
   },
