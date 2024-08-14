@@ -1,15 +1,32 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/alert-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-css/src/tokens.json';
-import { Alert, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Alert, AlertProps, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import iconSet from '@utrecht/icon/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './util';
+
+interface AlertStoryProps extends AlertProps {
+  icon?: string;
+}
+
+const AlertStory = ({ children, icon, ...props }: AlertStoryProps) => {
+  const IconElement = icon;
+  return <Alert icon={IconElement ? <IconElement /> : null}>{children}</Alert>;
+};
 
 const meta = {
   title: 'React Component/Alert',
   id: 'react-alert',
-  component: Alert,
+  component: AlertStory,
+  argTypes: {
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
+    },
+  },
   args: {
     children: [
       <Heading1>Lorem ipsum</Heading1>,
@@ -21,6 +38,7 @@ const meta = {
         laborum.
       </Paragraph>,
     ],
+    icon: '',
   },
   parameters: {
     tokensPrefix: 'utrecht-alert',
@@ -32,7 +50,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Alert>;
+} satisfies Meta<typeof AlertStory>;
 
 export default meta;
 
@@ -64,6 +82,14 @@ export const Error: Story = {
   args: {
     ...Default.args,
     type: 'error',
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    ...Default.args,
+    type: 'info',
+    icon: 'utrecht-icon-loupe',
   },
 };
 

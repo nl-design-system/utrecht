@@ -28,8 +28,10 @@ export class Alert {
         <div class="utrecht-alert__icon">
           <slot name="icon"></slot>
         </div>
-        <div class="utrecht-alert__message">
-          <slot></slot>
+        <div class="utrecht-alert__content">
+          <div class="utrecht-alert__message">
+            <slot></slot>
+          </div>
         </div>
       </div>
     );

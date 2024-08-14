@@ -33,11 +33,13 @@ Als je wel een button gebruikt (bijvoorbeeld om de alert te verbergen), plaats d
   <div class="utrecht-alert__icon">
     <!-- optioneel: een icon -->
   </div>
-  <div class="utrecht-alert__message" role="alert">
-    <!-- het bericht, bijvoorbeeld: -->
-    <p class="utrecht-paragraph">Let op: er is nu een storing waardoor...</p>
+  <div class="utrecht-alert__content">
+    <div class="utrecht-alert__message" role="alert">
+      <!-- het bericht, bijvoorbeeld: -->
+      <p class="utrecht-paragraph">Let op: er is nu een storing waardoor...</p>
+    </div>
+    <!-- optioneel en nog niet ondersteund: een button, buiten het bericht -->
   </div>
-  <!-- optioneel en nog niet ondersteund: een button, buiten het bericht -->
 </div>
 ```
 

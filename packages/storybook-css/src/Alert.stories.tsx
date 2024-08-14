@@ -4,17 +4,30 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/alert-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtIconCross } from '@utrecht/web-component-library-react';
+import iconSet from '@utrecht/icon/dist/index.json';
 import React from 'react';
-import { Alert } from './Alert';
+import { Alert, AlertProps } from './Alert';
 import { Heading2 } from './Heading2';
 import { Paragraph } from './Paragraph';
 import { designTokenStory } from './design-token-story';
 
+interface AlertStoryProps extends AlertProps {
+  icon?: string;
+}
+
+const AlertStory = ({ children, icon, ...props }: AlertStoryProps) => {
+  const IconElement = icon;
+  return (
+    <Alert icon={IconElement ? <IconElement /> : null} {...props}>
+      {children}
+    </Alert>
+  );
+};
+
 const meta = {
   title: 'CSS Component/Alert',
   id: 'css-alert',
-  component: Alert,
+  component: AlertStory,
   argTypes: {
     children: {
       description: 'HTML content of the alert',
@@ -23,6 +36,11 @@ const meta = {
       description: 'Type',
       control: { type: 'select' },
       options: ['', 'error', 'info', 'ok', 'warning'],
+    },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
     },
   },
   args: {
@@ -57,7 +75,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Alert>;
+} satisfies Meta<typeof AlertStory>;
 
 export default meta;
 
@@ -79,15 +97,21 @@ export const OK: Story = {
 
 export const Warning: Story = {
   args: {
-    icon: <UtrechtIconCross />,
     type: 'warning',
   },
 };
 
 export const Error: Story = {
   args: {
-    icon: <UtrechtIconCross />,
     type: 'error',
+  },
+};
+
+export const WithIcon: Story = {
+  args: {
+    ...Default.args,
+    type: 'info',
+    icon: 'utrecht-icon-loupe',
   },
 };
 
