@@ -19,4 +19,5 @@ Refactor the Alert component for more consistent token names and use flex instea
 - Add `utrecht.alert.content.row-gap` token
 - Add `utrecht.alert.icon.size` token
 - Add `utrecht.alert.icon.inset-block-start` token
+- Add `utrecht-alert__content` class
 - Change implementation of layout from grid to flex

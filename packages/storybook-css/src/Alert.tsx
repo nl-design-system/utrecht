@@ -3,7 +3,12 @@
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
-export const Alert = ({ children, icon = null, type }: PropsWithChildren<{ icon?: ReactNode; type?: string }>) => (
+export interface AlertProps extends PropsWithChildren {
+  icon?: ReactNode;
+  type?: string;
+}
+
+export const Alert = ({ children, icon = null, type }: PropsWithChildren<AlertProps>) => (
   <div
     className={clsx('utrecht-alert', {
       'utrecht-alert--error': type === 'error',
@@ -13,8 +18,10 @@ export const Alert = ({ children, icon = null, type }: PropsWithChildren<{ icon?
     })}
   >
     {icon && <div className="utrecht-alert__icon">{icon}</div>}
-    <div className="utrecht-alert__message" role="alert">
-      {children}
+    <div className="utrecht-alert__content">
+      <div className="utrecht-alert__message" role="alert">
+        {children}
+      </div>
     </div>
   </div>
 );
