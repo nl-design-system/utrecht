@@ -6,7 +6,9 @@
   "name": "@utrecht/vega-visualization-css",
   "files": [
     "dist/",
-    "src/"
+    "docs/",
+    "src/",
+    "*.md"
   ],
   "main": "dist/index.css",
   "scripts": {
