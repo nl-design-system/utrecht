@@ -4,10 +4,27 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Article, Heading2, Icon, Link, Paragraph, URLData } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/link-css/README.md?raw';
-import diacriticsDocs from '@utrecht/link-css/_diacritics.md?raw';
-import externalDocs from '@utrecht/link-css/_external.md?raw';
-import placeholderDocs from '@utrecht/link-css/_placeholder.md?raw';
+import anatomyDocs from '@utrecht/link-css/docs/anatomy.nl.md?raw';
+import contentDocs from '@utrecht/link-css/docs/content.nl.md?raw';
+import diacriticsDocs from '@utrecht/link-css/docs/diacritics.nl.md?raw';
+import externalDocs from '@utrecht/link-css/docs/external.en.md?raw';
+import failureNoAriaCurrentDocs from '@utrecht/link-css/docs/failure-no-aria-current.nl.md?raw';
+import failureNoContextGoalDocs from '@utrecht/link-css/docs/failure-no-context-goal.nl.md?raw';
+import failureNoHrefDocs from '@utrecht/link-css/docs/failure-no-href.nl.md?raw';
+import failureNoLangDocs from '@utrecht/link-css/docs/failure-no-lang.md?raw';
+import failurePerceivableFocusDocs from '@utrecht/link-css/docs/failure-perceivable-focus.nl.md?raw';
+import failureUnecessaryHomeLinkDocs from '@utrecht/link-css/docs/failure-unecessary-home-link.md?raw';
+import interactionDocs from '@utrecht/link-css/docs/interaction.nl.md?raw';
+import placeholderDocs from '@utrecht/link-css/docs/placeholder.nl.md?raw';
+import privacyDocs from '@utrecht/link-css/docs/privacy.md?raw';
+import referencesDocs from '@utrecht/link-css/docs/references.nl.md?raw';
+import relatedComponentsDocs from '@utrecht/link-css/docs/related-components.nl.md?raw';
+import technologyHtmlDocs from '@utrecht/link-css/docs/technology-html.nl.md?raw';
+import usageDocs from '@utrecht/link-css/docs/usage.nl.md?raw';
+import visualDesignDocs from '@utrecht/link-css/docs/visual-design.nl.md?raw';
+import wcagDocs from '@utrecht/link-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/link-css/src/tokens.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React from 'react';
 import { LinkStory } from './Link';
 import { designTokenStory } from './design-token-story';
@@ -140,7 +157,25 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          readme,
+          interactionDocs,
+          usageDocs,
+          relatedComponentsDocs,
+          visualDesignDocs,
+          contentDocs,
+          anatomyDocs,
+          technologyHtmlDocs,
+          privacyDocs,
+          failurePerceivableFocusDocs,
+          failureNoContextGoalDocs,
+          failureNoLangDocs,
+          failureNoAriaCurrentDocs,
+          failureUnecessaryHomeLinkDocs,
+          failureNoHrefDocs,
+          referencesDocs,
+          wcagDocs,
+        ]),
       },
     },
   },

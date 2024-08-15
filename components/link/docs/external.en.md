@@ -2,7 +2,7 @@
 
 <!-- markdownlint-disable MD041 -->
 
-Styling met de `.utrecht-link--external` class naam.
+Styling with the `.utrecht-link--external` class name.
 
 - `rel="external"` is old-school metadata without any particular effect, but it is a sementically valid way help identify external links with the `a[rel~="external"]`.
 - `rel="noopener"` helps security: disable JavaScript contact via `window.opener` between the current page and the page you link to.
