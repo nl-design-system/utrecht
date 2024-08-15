@@ -2,7 +2,10 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/unordered-list-css/README.md?raw';
+import anatomyDocs from '@utrecht/unordered-list-css/docs/anatomy.nl.md?raw';
+import htmlDocs from '@utrecht/unordered-list-css/docs/technology-html.nl.md?raw';
 import tokensDefinition from '@utrecht/unordered-list-css/src/tokens.json';
 import React from 'react';
 import { UnorderedListStory } from './UnorderedList';
@@ -40,7 +43,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, anatomyDocs, htmlDocs]),
       },
     },
   },
