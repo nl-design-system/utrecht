@@ -2,9 +2,15 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/alert-css/README.md?raw';
+import contentDocs from '@utrecht/alert-css/docs/content.nl.md?raw';
+import relatedComponentsDocs from '@utrecht/alert-css/docs/related-components.nl.md?raw';
+import technologyHtmlDocs from '@utrecht/alert-css/docs/technology-html.nl.md?raw';
+import usageDocs from '@utrecht/alert-css/docs/usage.nl.md?raw';
+import wcagDocs from '@utrecht/alert-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/alert-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React from 'react';
 import { Alert, AlertProps } from './Alert';
 import { Heading2 } from './Heading2';
@@ -71,7 +77,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, usageDocs, relatedComponentsDocs, contentDocs, technologyHtmlDocs, wcagDocs]),
       },
     },
   },
