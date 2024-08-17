@@ -20,7 +20,7 @@ Wel:
 <a href="/fr/" lang="fr">François</a>
 ```
 
-Niet:
+Niet, zonder `lang` attribuut:
 
 ```html
 <p>
@@ -31,6 +31,8 @@ Niet:
   vertelt Nicole Sullivan over een aanpak om CSS te schrijven.
 </p>
 ```
+
+Wel, met `lang` attribute op het `<a>` element:
 
 ```html
 <p>

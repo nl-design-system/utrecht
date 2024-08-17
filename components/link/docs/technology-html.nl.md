@@ -6,7 +6,6 @@
 - Gebuik niet het `title` attribuut. Sommige browsers gebruiken een tooltip om de tekst uit het `title` attribuut te tonen, die tooltip kan over de tekst heenstaan waardoor het niet leesbaar is.
 - Gebruik nooit een `<button>` of een ander element met een `click` event om zelf een link na te maken.
 - Gebruik `aria-current="page"` wanneer de link verwijst naar de huidige pagina. Voor consistente navigatie ([WCAG eis 3.2.3](https://www.w3.org/TR/WCAG21/#consistent-navigation)) is het beter om links in de navigatie te laten staan dan om geen `<a>` te gebruiken voor de huidige pagina.
-- Vermijd het gebruik van `href="#"`. Dit brengt de focus naar het begin van de pagina en dat is nooit wensbaar.
 - Gebruik nooit `tabindex="0"` bij het `<a>` element. Links kunnen al standaard focus ontvangen.
 - Vermijd onnodig gebruik van `tabindex="-1"`, er zijn weinig situaties waar het nodig is.
 - Gebruik `aria-label` en niet `title` voor het volledige label van de link. Soms is de inhoud van het `a` element niet een goed label, bijvoorbeeld wanneer er een icoon in staat of het zichtbare label een algemene tekst is zoals "Lees meer". Zie ook [WCAG Technique ARIA8](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA8)
