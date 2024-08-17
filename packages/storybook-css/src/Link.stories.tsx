@@ -11,7 +11,7 @@ import externalDocs from '@utrecht/link-css/docs/external.en.md?raw';
 import failureNoAriaCurrentDocs from '@utrecht/link-css/docs/failure-no-aria-current.nl.md?raw';
 import failureNoContextGoalDocs from '@utrecht/link-css/docs/failure-no-context-goal.nl.md?raw';
 import failureNoHrefDocs from '@utrecht/link-css/docs/failure-no-href.nl.md?raw';
-import failureNoLangDocs from '@utrecht/link-css/docs/failure-no-lang.md?raw';
+import failureNoLangDocs from '@utrecht/link-css/docs/failure-no-lang.nl.md?raw';
 import failurePerceivableFocusDocs from '@utrecht/link-css/docs/failure-perceivable-focus.nl.md?raw';
 import failureUnecessaryHomeLinkDocs from '@utrecht/link-css/docs/failure-unecessary-home-link.md?raw';
 import interactionDocs from '@utrecht/link-css/docs/interaction.nl.md?raw';

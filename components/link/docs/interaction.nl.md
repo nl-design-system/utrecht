@@ -24,6 +24,6 @@ Sommige gebruikers gebruiken een lijst van alle links op een pagina, en kiezen e
 
 Na het activeren van een link, moet een gebruiker weer terug kunnen naar de vorige pagina. Gebruikers doen dat met bijvoorbeeld de _back button_ van de browser, of met een _swipe gesture_ op een _touch screen_.
 
-Als je gewoon `<a href="...">` in HTML gebruikt dan werkt de back button zoals het hoort. Met extra code kun je de back button onbedoeld kapot maken. Als je het `target` attribuut gebruikt, dan werkt de _back button_ niet (bijvoorbeeld: `target="_blank"`).
+Als je gewoon `<a href="...">` in HTML gebruikt dan werkt de back button zoals het hoort. Met extra code kun je de back button onbedoeld kapot maken. Als je het `target` attribuut gebruikt en de pagina in een nieuwe tab of nieuw venster opent, dan werkt de _back button_ niet in alle browsers (bijvoorbeeld: `target="_blank"`). In sommige browsers werkt de _back button_ nog wel goed: iOS kan de met _back button_ het nieuwe tabje sluiten.
 
 Als je een _single page app_ maakt moet je goed testen dat de back button nog goed werkt. Wanneer je de `click` event van de link stopt met `event.preventDefault()` en met script een eigen navigatie maakt, dan moet je de [History API](https://developer.mozilla.org/en-US/docs/Web/API/History) gebruiken om een even goede ervaring te bieden als gewone links in HTML.
