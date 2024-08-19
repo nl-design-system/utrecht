@@ -2,4 +2,13 @@
 "@utrecht/backdrop-css": minor
 ---
 
-Added and fixed metadata for backdrop tokens.
+Fixed metadata for backdrop.
+
+[Available tokens in Token Studio](https://docs.tokens.studio/available-tokens/available-tokens)
+
+Not supported
+- `z-index`
+- `animation-duration`
+
+Supported
+- `opacity`
