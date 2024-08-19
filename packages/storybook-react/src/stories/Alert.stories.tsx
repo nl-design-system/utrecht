@@ -67,4 +67,14 @@ export const Error: Story = {
   },
 };
 
+export const Focus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    ...Default.args,
+    type: 'info',
+  },
+};
+
 export const DesignTokens = designTokenStory(meta);
