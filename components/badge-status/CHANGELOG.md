@@ -1,5 +1,11 @@
 # @utrecht/badge-status-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 8d0fa94: Added metadata for badge status.
+
 ## 1.1.0
 
 ### Minor Changes

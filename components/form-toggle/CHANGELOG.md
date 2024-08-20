@@ -1,5 +1,11 @@
 # @utrecht/form-toggle-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 9196935: Added metadata for form-toggle tokens.
+
 ## 1.1.0
 
 ### Minor Changes

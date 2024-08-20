@@ -1,5 +1,11 @@
 # @utrecht/calendar-css
 
+## 1.2.0
+
+### Minor Changes
+
+- ccea18a: Added metadata for calendar tokens.
+
 ## 1.1.0
 
 ### Minor Changes
