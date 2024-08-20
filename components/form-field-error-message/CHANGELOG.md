@@ -1,5 +1,11 @@
 # @utrecht/form-field-error-message-css
 
+## 1.3.0
+
+### Minor Changes
+
+- bd902eb: Added metadata for form-field-error-message tokens.
+
 ## 1.2.0
 
 ### Minor Changes

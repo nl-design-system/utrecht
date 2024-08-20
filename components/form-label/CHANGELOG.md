@@ -1,5 +1,11 @@
 # @utrecht/form-label-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 4c13489: Added metadata for form-label tokens.
+
 ## 1.1.0
 
 ### Minor Changes

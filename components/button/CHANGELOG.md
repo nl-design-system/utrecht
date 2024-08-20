@@ -1,5 +1,11 @@
 # @utrecht/button-css
 
+## 1.3.0
+
+### Minor Changes
+
+- fb371f4: Split the `README.md` for the button component into multiple Markdown documentation files.
+
 ## 1.2.0
 
 ### Minor Changes

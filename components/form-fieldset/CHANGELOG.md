@@ -1,5 +1,11 @@
 # @utrecht/form-fieldset-css
 
+## 1.2.0
+
+### Minor Changes
+
+- dae106c: Added metadata for form-fieldset tokens.
+
 ## 1.1.0
 
 ### Minor Changes

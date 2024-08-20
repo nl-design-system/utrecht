@@ -1,5 +1,24 @@
 # @utrecht/web-component-library-react
 
+## 2.0.0
+
+### Major Changes
+
+- ecf877a: Refactor the Alert component for more consistent token names and use flex instead of grid layout. Adding support for content and message sections.
+
+  - Rename `utrecht.alert.icon.gap` to `utrecht.alert.column-gap`
+  - Add `utrecht.alert.message.row-gap` token
+  - Add `utrecht.alert.content.row-gap` token
+  - Add `utrecht.alert.icon.size` token
+  - Add `utrecht.alert.icon.inset-block-start` token
+  - Add `utrecht-alert__content` class
+  - Change implementation of layout from grid to flex
+
+### Patch Changes
+
+- Updated dependencies [ecf877a]
+  - @utrecht/web-component-library-stencil@2.0.0
+
 ## 1.3.0
 
 ### Minor Changes
