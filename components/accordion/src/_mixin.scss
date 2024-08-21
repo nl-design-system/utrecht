@@ -95,4 +95,7 @@
 
 @mixin utrecht-accordion__header {
   --utrecht-space-around: 0;
+
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-header-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-header-margin-block-start, 0));
 }
