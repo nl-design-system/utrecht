@@ -216,6 +216,203 @@ const exampleIconOptions = [
   };
 });
 
+const exampleLongText = [
+  {
+    label: 'Al Amana Leidsche Rijn - Eerste Oosterparklaan 88A, 3544 AK Utrecht',
+    value: '1',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3318',
+  },
+  {
+    label: 'Al Amana Zuilen - Marnixlaan 362, 3552 HM Utrecht',
+    value: '2',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3319',
+  },
+  {
+    label: 'Al Hambra Aziëlaan - Aziëlaan 157, 3526 SG Utrecht',
+    value: '4',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3320',
+  },
+  {
+    label: 'Ariane de Ranitz College - Blauwe-Vogelweg 11, 3585 LK Utrecht',
+    value: '5',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3321',
+  },
+  {
+    label: 'Ariane de Ranitz SO - Blauwe-Vogelweg 11, 3585 LK Utrecht',
+    value: '6',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3322',
+  },
+  { label: 'Auris Fortaal - Agavedreef 92, 3563 EN Utrecht', value: '7', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3323' },
+  {
+    label: 'Auris Fortaal - Santa Cruzdreef 30, 3563 VJ Utrecht',
+    value: '8',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3324',
+  },
+  {
+    label: 'Axia College - Liendertseweg 101, 3815 BA Amersfoort',
+    value: '9',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3325',
+  },
+  {
+    label: 'Axia College - Utrechtseweg 266, 3818 EW Amersfoort',
+    value: '10',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3326',
+  },
+  {
+    label: 'Axia College - Vondellaan 28, 3818 WP Amersfoort',
+    value: '11',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3327',
+  },
+  {
+    label: 'Bartimeus - Oude Arnhemse Bovenweg 3, 3941 XM Doorn',
+    value: '12',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3328',
+  },
+  {
+    label: 'Bartimeus SO - Van Renesselaan 30A, 3703 AJ Zeist',
+    value: '13',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3329',
+  },
+  {
+    label: 'Bartimeus VSO - Van Renesselaan 30A, 3703 AJ Zeist',
+    value: '14',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3330',
+  },
+  {
+    label: 'Belle van Zuylen - Prof. H. Bavinckstraat 3, 3555 GS Utrecht',
+    value: '15',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3331',
+  },
+  {
+    label: 'Berg en Bosch SO Bilthoven - Prof. Bronkhorstlaan 22, 3723 MB Bilthoven',
+    value: '16',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3332',
+  },
+  {
+    label: 'Berg en Bosch SO Houten - Handboog 4, 3994 AD Houten',
+    value: '17',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3333',
+  },
+  {
+    label: 'Berg en Bosch VSO Bilthoven - Prof. Bronkhorstlaan 22, 3723 MB Bilthoven',
+    value: '18',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3334',
+  },
+  {
+    label: 'Berg en Bosch VSO Houten - Handboog 4, 3994 AD Houten',
+    value: '19',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3335',
+  },
+  { label: 'Beukenrode - Beukenrodelaan 2C, 3941ZP Doorn', value: '20', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3336' },
+  {
+    label: 'Beukenrode OZC Odijk - Zeisterweg 81 b, 3984NK Odijk',
+    value: '21',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3337',
+  },
+  { label: 'Binnentuin - Binnentuinlaan 6, 3452 RN Utrecht', value: '22', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3338' },
+  { label: 'De Schans - Orinocodreef 15, 3563 ST Utrecht', value: '23', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3339' },
+  {
+    label: 'De Trappenberg SO - Soestdijkerstraatweg 129 C, 1213 VX Hilversum',
+    value: '24',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3340',
+  },
+  {
+    label: 'De Trappenberg College - Soestdijkerstraatweg 129 C, 1213 VX Hilversum',
+    value: '25',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3341',
+  },
+  {
+    label: 'Fritz Redl SO - Heidelberglaan 100, 3584 CX Utrecht',
+    value: '26',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3342',
+  },
+  {
+    label: 'Fritz Redl VSO - Heidelberglaan 100, 3584 CX Utrecht',
+    value: '27',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3343',
+  },
+  { label: 'Heuvelrug College - Noordweg 12, 3704 GN Zeist', value: '28', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3344' },
+  { label: 'Kentalis College - Slotlaan 37, 3523 HB Utrecht', value: '29', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3345' },
+  {
+    label: 'Kentalis Compas College - Wielkamp 1, 5301 DB Zaltbommel',
+    value: '30',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3346',
+  },
+  {
+    label: 'Kentalis Signis SO - Jan Sluijtersstraat 9, 1062 CJ Amsterdam',
+    value: '31',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3347',
+  },
+  {
+    label: 'Kentalis Signis - Herman de Manstraat 1, 1064 BX Amsterdam',
+    value: '32',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3348',
+  },
+  { label: 'Kesper College - Nansenstraat 40, 2806 HM Gouda', value: '33', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3349' },
+  { label: 'Kolibrie - Hellingweg 1, 3762 CP Soest', value: '34', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3350' },
+  {
+    label: 'Kromme Rijn College - Kraneburgerweg 20, 3582 GR Utrecht',
+    value: '35',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3351',
+  },
+  {
+    label: 'Kromme Rijn College - Ramsesdreef 190, 3564 CL Utrecht',
+    value: '36',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3352',
+  },
+  { label: 'Lasenberg - Schrikslaan 20, 3762 TC Soest', value: '37', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3353' },
+  {
+    label: 'Leersumschool, C.P, van - Verlengde Slotlaan 113, 3707 CE Zeist',
+    value: '38',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3354',
+  },
+  {
+    label: 'Luc Stevens - Marco Pololaan 485, 3526 GH Utrecht',
+    value: '39',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3355',
+  },
+  { label: 'Lux SO - Boadreef 2, 3563 EP Utrecht', value: '40', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3356' },
+  {
+    label: 'Meerklank SO - Van Renesselaan 30A-1, 3703 AJ Zeist',
+    value: '41',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3357',
+  },
+  {
+    label: 'Meerklank VSO - Laan van Eikenstein 2, 3705 AR Zeist',
+    value: '42',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3358',
+  },
+  {
+    label: 'Mensura College - Achterom 152, 1211 PD Hilversum',
+    value: '43',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3359',
+  },
+  {
+    label: 'Mensura College - Notebomenlaan 400, 3582 CN Utrecht',
+    value: '44',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3360',
+  },
+  { label: 'Noorderlicht SO - Noordweg 8, 3704 GN Zeist', value: '45', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3361' },
+  { label: 'Plevier - Lageweg 4, 3815 VG Amersfoort', value: '46', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3362' },
+  { label: 'Rafael - Lanslaan 10, 3526 XH Utrecht', value: '47', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3363' },
+  { label: 'Rotsoord - Rotsoord 36, 3523 CL Utrecht', value: '48', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3364' },
+  { label: 'Sint Maarten - Neckardreef 20, 3562 CP Utrecht', value: '49', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3365' },
+  { label: 'SO Fier - Winklerlaan 79, 3571 KL Utrecht', value: '50', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3366' },
+  { label: 'Sprong - Valkenheide 41, 3953 MC Maarsbergen', value: '51', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3367' },
+  { label: 'Stip - Europalaan 89, 3526 KP Utrecht', value: '52', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3368' },
+  {
+    label: 'Taalschool Hart van Noord - Trumanlaan 60E, 3527 BR Utrecht',
+    value: '53',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3369',
+  },
+  {
+    label: 'Taalschool Leidsche Rijn - Operettelaan 655, 3543 BR Utrecht - Leidsche Rijn',
+    value: '54',
+    id: 'C9EA4BFE-60B8-478C-A20C-5192735F3370',
+  },
+  { label: 'Taalschool Ondiep - Ondiep 63, 3552 EB Utrecht', value: '55', id: 'C9EA4BFE-60B8-478C-A20C-5192735F3371' },
+];
+
 const meta = {
   title: 'CSS Component/Combobox',
   id: 'css-combobox',
@@ -434,4 +631,13 @@ export const RightToLeft: Story = {
     ),
   ],
   name: 'Right-to-left',
+};
+export const LongText: Story = {
+  args: {
+    label: 'Naam School',
+    name: 'school-name',
+    id: 'long-text',
+    options: exampleLongText,
+    expanded: true,
+  },
 };
