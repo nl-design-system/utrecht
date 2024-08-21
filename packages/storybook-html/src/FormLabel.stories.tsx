@@ -23,6 +23,17 @@ const FormLabelStory = ({ id, children, type, ...restProps }: PropsWithChildren<
   </p>
 );
 
+const FormLabelContainerStory = ({ id, type, children, ...restProps }: PropsWithChildren<FormLabelStoryProps>) => {
+  return (
+    <p>
+      <label htmlFor={id} {...restProps}>
+        <input type={type} id={id} />
+        {children}
+      </label>
+    </p>
+  );
+};
+
 const meta = {
   title: 'HTML Component/Form label',
   id: 'html-form-label',
@@ -99,6 +110,70 @@ export const Hidden: Story = {
       },
     },
   },
+};
+
+export const AfterRadioButton: Story = {
+  args: {
+    id: 'ab59e0fc-af67-4580-b295-98cf8997fc3c',
+    children: 'Option 1',
+    type: 'radio',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Markup using the `<label>` after an `<input type="radio">` element.',
+      },
+    },
+    render: FormLabelContainerStory,
+  },
+};
+
+export const AfterCheckbox: Story = {
+  args: {
+    id: '2de51925-94a7-40df-a433-e620038b3da7',
+    children: 'I agree',
+    type: 'checkbox',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Markup using the `<label>` after an `<input type="checkbox">` element.',
+      },
+    },
+    render: FormLabelContainerStory,
+  },
+};
+
+export const HasRadioButton: Story = {
+  args: {
+    id: 'ab59e0fc-af67-4580-b295-98cf8997fc3c',
+    children: 'Option 1',
+    type: 'radio',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Markup using a `<label>` that contains an `<input type="radio">` element.',
+      },
+    },
+    render: FormLabelContainerStory,
+  },
+};
+
+export const HasCheckbox: Story = {
+  args: {
+    id: '2de51925-94a7-40df-a433-e620038b3da7',
+    children: 'I agree',
+    type: 'checkbox',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Markup using a `<label>` that contains an `<input type="checkbox">` element.',
+      },
+    },
+  },
+  render: FormLabelContainerStory,
 };
 
 export const DesignTokens = designTokenStory(meta);
