@@ -33,6 +33,10 @@
   --utrecht-space-around: 1;
 }
 
+@mixin utrecht-unordered-list--forced-colors {
+  --utrecht-unordered-list-marker-color: CanvasText;
+}
+
 @mixin utrecht-unordered-list--nested {
   margin-block-end: 0;
   margin-inline-start: 2ch;
