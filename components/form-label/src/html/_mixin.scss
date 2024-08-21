@@ -10,11 +10,13 @@
     @include utrecht-form-label;
   }
 
-  input[type="checkbox" i] ~ label {
+  input[type="checkbox" i] ~ label,
+  label:has(input[type="checkbox" i]) {
     @include utrecht-form-label--checkbox;
   }
 
-  input[type="radio" i] ~ label {
+  input[type="radio" i] ~ label,
+  label:has(input[type="radio" i]) {
     @include utrecht-form-label--radio;
   }
 }
