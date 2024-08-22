@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import iconSet from '@utrecht/icon/dist/index.json';
 import { UtrechtButton, UtrechtParagraph } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { PropsWithChildren } from 'react';
@@ -14,6 +15,8 @@ interface ButtonStoryProps {
   busy?: boolean;
   disabled?: boolean;
   expanded?: boolean | string;
+  icon?: string;
+  label?: string;
   pressed?: boolean | string;
   type?: string;
 }
@@ -28,6 +31,8 @@ const ButtonStory = ({
   formMethod,
   formNoValidate,
   formTarget,
+  icon,
+  label,
   name,
   popoverTarget,
   popoverTargetAction,
@@ -35,28 +40,34 @@ const ButtonStory = ({
   type,
   value,
   ...restProps
-}: PropsWithChildren<ButtonStoryProps>) => (
-  <UtrechtButton
-    appearance={appearance}
-    busy={busy || null}
-    disabled={disabled || null}
-    form={form || undefined}
-    formAction={formAction || undefined}
-    formEnctype={formEnctype || undefined}
-    formMethod={formMethod || undefined}
-    formNoValidate={formNoValidate || undefined}
-    formTarget={formTarget || undefined}
-    name={name || undefined}
-    popoverTarget={popoverTarget || undefined}
-    popoverTargetAction={popoverTargetAction || undefined}
-    pressed={pressed || undefined}
-    type={type || null}
-    value={value || undefined}
-    {...restProps}
-  >
-    {children}
-  </UtrechtButton>
-);
+}: PropsWithChildren<ButtonStoryProps>) => {
+  const IconElement = icon;
+
+  return (
+    <UtrechtButton
+      appearance={appearance}
+      busy={busy || null}
+      disabled={disabled || null}
+      form={form || undefined}
+      formAction={formAction || undefined}
+      formEnctype={formEnctype || undefined}
+      formMethod={formMethod || undefined}
+      formNoValidate={formNoValidate || undefined}
+      formTarget={formTarget || undefined}
+      name={name || undefined}
+      popoverTarget={popoverTarget || undefined}
+      popoverTargetAction={popoverTargetAction || undefined}
+      pressed={pressed || undefined}
+      type={type || null}
+      value={value || undefined}
+      {...restProps}
+    >
+      {IconElement && React.cloneElement(<IconElement />, { slot: 'icon' })}
+      {label && <span slot="label">{label}</span>}
+      {children}
+    </UtrechtButton>
+  );
+};
 
 const meta = {
   title: 'Web Component/Button',
@@ -88,6 +99,11 @@ const meta = {
         false: 'false',
         true: 'true',
       },
+    },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
     },
     pressed: {
       description: 'Pressed',
@@ -138,6 +154,8 @@ const meta = {
     disabled: false,
     children: '',
     type: '',
+    label: 'Test',
+    icon: '',
     name: '',
     value: '',
     form: '',
@@ -170,7 +188,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    children: 'Read more...',
+    label: 'Read more...',
   },
 };
 
@@ -186,6 +204,13 @@ export const Busy: Story = {
     busy: true,
     children: 'Send',
     type: 'submit',
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    label: 'Read more...',
+    icon: 'utrecht-icon-bestemmingsplan',
   },
 };
 
