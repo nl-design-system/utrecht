@@ -3,4 +3,4 @@
 ---
 
 - Added metadata for button tokens.
-- Fixed wrong syntax for border-width.
+- Fixed wrong design token metadata syntax for border-width.
