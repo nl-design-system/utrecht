@@ -1,15 +1,29 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/src/tokens.json';
-import { Button } from '@utrecht/button-react/src/css';
+import { Button, ButtonProps } from '@utrecht/button-react/src/css';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
+import React from 'react';
 import { designTokenStory } from './util';
+
+interface ButtonStoryProps extends ButtonProps {
+  icon?: string;
+}
+
+const ButtonStory = ({ children, icon, ...props }: ButtonStoryProps) => {
+  const IconElement = icon;
+  return (
+    <Button icon={IconElement ? <IconElement /> : null} {...props}>
+      {children}
+    </Button>
+  );
+};
 
 const meta = {
   title: 'React Component/Button',
   id: 'react-button',
-  component: Button,
+  component: ButtonStory,
   args: {
     children: 'Read more...',
   },
@@ -38,7 +52,7 @@ const meta = {
       options: ['', ...iconSet.map(({ id }) => id)],
     },
   },
-} satisfies Meta<typeof Button>;
+} satisfies Meta<typeof ButtonStory>;
 
 export default meta;
 
@@ -106,6 +120,17 @@ export const DefaultFocusVisible: Story = {
   },
   args: {
     ...Default.args,
+  },
+};
+
+export const DefaultWithIcon: Story = {
+  args: {
+    label: (
+      <>
+        Read more <i>here</i>...
+      </>
+    ),
+    icon: 'utrecht-icon-loupe',
   },
 };
 
