@@ -74,15 +74,15 @@
 @mixin utrecht-listbox__group {
   @include reset-ul;
 
-  margin-block-end: var(--utrecht-listbox-option-group-margin-block-end);
+  margin-block-end: var(--utrecht-listbox-group-margin-block-end);
 }
 
 @mixin utrecht-listbox__group-label {
-  color: var(--utrecht-listbox-option-group-label-color);
-  font-size: var(--utrecht-listbox-option-group-label-font-size);
-  font-weight: var(--utrecht-listbox-option-group-label-font-weight);
-  line-height: var(--utrecht-listbox-option-group-label-line-height);
-  margin-inline-start: var(--utrecht-listbox-option-group-label-margin-inline-start);
+  color: var(--utrecht-listbox-group-label-color);
+  font-size: var(--utrecht-listbox-group-label-font-size);
+  font-weight: var(--utrecht-listbox-group-label-font-weight);
+  line-height: var(--utrecht-listbox-group-label-line-height);
+  margin-inline-start: var(--utrecht-listbox-group-label-margin-inline-start);
 
   @media (forced-colors: active) {
     & {
@@ -139,9 +139,9 @@
 }
 
 @mixin utrecht-listbox__option--active {
-  background-color: var(--utrecht-listbox-option-is-active-background-color);
-  color: var(--utrecht-listbox-option-is-active-color);
-  font-weight: var(--utrecht-listbox-option-is-active-font-weight);
+  background-color: var(--utrecht-listbox-option-active-background-color);
+  color: var(--utrecht-listbox-option-active-color);
+  font-weight: var(--utrecht-listbox-option-active-font-weight);
 }
 
 @mixin utrecht-listbox__option--selected {
