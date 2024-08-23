@@ -1,5 +1,5 @@
 ---
-"@utrecht/{naam-component}-css": minor
+"@utrecht/link-social-css": minor
 ---
 
 - Added metadata for link-social tokens.
