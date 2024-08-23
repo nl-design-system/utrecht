@@ -138,6 +138,21 @@ const NarrowContainerWithCenteredText = (Story) => (
   </div>
 );
 
+const ForceColorModeWrapper = (Story) => <div className="utrecht-unordered-list__marker--forced-colors">{Story()}</div>;
+
+const ForceColorModeDarkWrapper = (Story) => (
+  <div
+    style={{
+      backgroundColor: '#000',
+      color: '#fff',
+      padding: '1rem',
+    }}
+    className="utrecht-unordered-list__marker--forced-colors-dark"
+  >
+    {Story()}
+  </div>
+);
+
 export const NarrowContainerCenter: Story = {
   args: {
     center: true,
@@ -239,4 +254,59 @@ export const HTMLContent: Story = {
   },
 };
 
+export const ForceColorMode: Story = {
+  args: {
+    items: [
+      {
+        children: 'Lorem',
+      },
+      {
+        children: 'Ipsum',
+      },
+      {
+        children: 'Dolor',
+      },
+    ],
+  },
+  name: 'Force color mode',
+  decorators: [ForceColorModeWrapper],
+  parameters: {
+    docs: {
+      description: {
+        story: 'Use the `utrecht-unordered-list--forced-colors` modifier when you need to support forced color mode.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+export const ForceColorModeDark: Story = {
+  args: {
+    items: [
+      {
+        children: 'Lorem',
+      },
+      {
+        children: 'Ipsum',
+      },
+      {
+        children: 'Dolor',
+      },
+    ],
+  },
+  name: 'Force color mode dark',
+  decorators: [ForceColorModeDarkWrapper],
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Use the `utrecht-unordered-list--forced-colors-dark` modifier when you need to support forced color mode.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
 export const DesignTokens = designTokenStory(meta);
