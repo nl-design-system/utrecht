@@ -48,7 +48,7 @@
   --_utrecht-table-header-cell-vertical-align: bottom;
   --_utrecht-table-header-cell-z-index: 8;
 
-  background-color: var(--utrecht-table-header-background-color);
+  background-color: var(--utrecht-table-header-background-color, transparent);
   break-inside: avoid;
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
@@ -58,7 +58,7 @@
 
 @mixin utrecht-table__header--sticky {
   th {
-    background-color: var(--utrecht-table-header-sticky-background-color);
+    background-color: var(--utrecht-table-header-sticky-background-color, transparent);
     color: var(--utrecht-table-header-sticky-color);
     inset-block-start: 0;
     position: sticky;
@@ -78,7 +78,10 @@
 }
 
 @mixin utrecht-table__footer--sticky {
-  background-color: var(--utrecht-table-footer-sticky-background-color, var(--utrecht-table-footer-background-color));
+  background-color: var(
+    --utrecht-table-footer-sticky-background-color,
+    var(--utrecht-table-footer-background-color, transparent)
+  );
   color: var(--utrecht-table-footer-sticky-color, var(--utrecht-table-footer-color));
   inset-block-end: 0;
   position: sticky;
@@ -206,12 +209,12 @@
 }
 
 @mixin utrecht-table__row--alternate-odd {
-  background-color: var(--utrecht-table-row-alternate-odd-background-color);
+  background-color: var(--utrecht-table-row-alternate-odd-background-color, transparent);
   color: var(--utrecht-table-row-alternate-odd-color);
 }
 
 @mixin utrecht-table__row--alternate-even {
-  background-color: var(--utrecht-table-row-alternate-even-background-color);
+  background-color: var(--utrecht-table-row-alternate-even-background-color, transparent);
   color: var(--utrecht-table-row-alternate-even-color);
 }
 
