@@ -20,6 +20,10 @@ const meta = {
       description: 'Content of the list.',
       control: 'text',
     },
+    forcedColors: {
+      description: 'Simulate forced-colors mode.',
+      control: 'boolean',
+    },
     htmlContent: {
       description: 'Content of the list is HTML without BEM class names on each element.',
       control: 'boolean',
@@ -256,6 +260,7 @@ export const HTMLContent: Story = {
 
 export const ForceColorMode: Story = {
   args: {
+    forcedColors: true,
     items: [
       {
         children: 'Lorem',
@@ -269,7 +274,6 @@ export const ForceColorMode: Story = {
     ],
   },
   name: 'Force color mode',
-  decorators: [ForceColorModeWrapper],
   parameters: {
     docs: {
       description: {
@@ -281,32 +285,5 @@ export const ForceColorMode: Story = {
     },
   },
 };
-export const ForceColorModeDark: Story = {
-  args: {
-    items: [
-      {
-        children: 'Lorem',
-      },
-      {
-        children: 'Ipsum',
-      },
-      {
-        children: 'Dolor',
-      },
-    ],
-  },
-  name: 'Force color mode dark',
-  decorators: [ForceColorModeDarkWrapper],
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Use the `utrecht-unordered-list--forced-colors-dark` modifier when you need to support forced color mode.',
-      },
-    },
-    status: {
-      type: 'WORK IN PROGRESS',
-    },
-  },
-};
+
 export const DesignTokens = designTokenStory(meta);

@@ -9,10 +9,18 @@
 .utrecht-unordered-list,
 .utrecht-unordered-list--html-content ul {
   @include utrecht-unordered-list;
+
+  @media (forced-colors: active) {
+    @include utrecht-unordered-list--forced-colors;
+  }
 }
 
 .utrecht-unordered-list--center {
   @include utrecht-unordered-list--center;
+}
+
+.utrecht-unordered-list--forced-colors {
+  @include utrecht-unordered-list--forced-colors;
 }
 
 .utrecht-unordered-list--distanced {
@@ -35,19 +43,4 @@
 .utrecht-unordered-list__item::before,
 .utrecht-unordered-list__marker {
   @include utrecht-unordered-list__marker;
-
-  @media (forced-colors: active) {
-    @include utrecht-unordered-list__marker--forced-colors;
-  }
-  @media (forced-colors: active) and (prefers-color-scheme: dark) {
-    @include utrecht-unordered-list__marker--forced-colors-dark;
-  }
-}
-
-.utrecht-unordered-list__marker--forced-colors {
-  @include utrecht-unordered-list__marker--forced-colors;
-}
-
-.utrecht-unordered-list__marker--forced-colors-dark {
-  @include utrecht-unordered-list__marker--forced-colors-dark;
 }
