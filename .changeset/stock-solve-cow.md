@@ -2,4 +2,4 @@
 "@utrecht/page-header-css": minor
 ---
 
-Added metadata for page-heade} tokens.
+Added metadata for page-header tokens.
