@@ -4,15 +4,20 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-youtube-video {
-}
-
-@mixin utrecht-youtube-video--responsive {
-  block-size: auto;
-  max-inline-size: 100%;
+  aspect-ratio: 16 / 9;
 }
 
 @mixin utrecht-youtube-video--html-iframe {
   border-width: 0;
+
+  &:not([width]) {
+    /* stylelint-disable-next-line property-disallowed-list */
+    width: 100%;
+  }
+
+  &:not([height]) {
+    /* stylelint-disable-next-line property-disallowed-list */
+    height: auto;
+  }
 }
