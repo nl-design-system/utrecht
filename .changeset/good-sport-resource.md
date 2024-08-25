@@ -4,13 +4,7 @@
 
 Fixed metadata for backdrop tokens.
 
-[Available tokens in Token Studio](https://docs.tokens.studio/available-tokens/available-tokens)
-
-Not supported:
+Not supported [supported in Token Studio](https://docs.tokens.studio/available-tokens/available-tokens):
 
 - `z-index`
 - `animation-duration`
-
-Supported:
-
-`opacity`
