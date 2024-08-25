@@ -1,0 +1,19 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@import "./mixin";
+
+.utrecht-youtube-video {
+  @include utrecht-youtube-video;
+}
+
+.utrecht-youtube-video--responsive {
+  @include utrecht-youtube-video--responsive;
+}
+
+.utrecht-youtube-video--html-iframe {
+  @include utrecht-youtube-video--html-iframe;
+}
