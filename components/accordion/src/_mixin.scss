@@ -6,14 +6,14 @@
 
 /* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-accordion {
+  display: grid;
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-margin-block-start, 0));
+  row-gap: var(--utrecht-accordion-row-gap);
 }
 
 @mixin utrecht-accordion__section {
   break-inside: avoid;
-  margin-block-end: var(--utrecht-accordion-section-margin-block-end);
-  margin-block-start: var(--utrecht-accordion-section-margin-block-start);
 }
 
 @mixin utrecht-accordion__button {
@@ -94,8 +94,6 @@
 }
 
 @mixin utrecht-accordion__header {
-  --utrecht-space-around: 0;
-
-  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-header-margin-block-end, 0));
-  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-accordion-header-margin-block-start, 0));
+  margin-block-end: 0;
+  margin-block-start: 0;
 }
