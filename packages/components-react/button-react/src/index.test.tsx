@@ -43,12 +43,39 @@ describe('Button', () => {
     expect(richText).toBeInTheDocument();
   });
 
+  it('renders labels as a prop that contain HTML rich text content', () => {
+    const { container } = render(
+      <Button
+        label={
+          <>
+            Order <strong>now</strong>
+          </>
+        }
+      />,
+    );
+
+    const button = container.querySelector(':only-child');
+
+    const richText = button?.querySelector('strong');
+
+    expect(richText).toBeInTheDocument();
+  });
+
   it('renders a design system BEM class name', () => {
     const { container } = render(<Button />);
 
     const button = container.querySelector(':only-child');
 
     expect(button).toHaveClass('utrecht-button');
+  });
+
+  it('renders a span with a label design system BEM class name', () => {
+    const { container } = render(<Button label="Click me" />);
+
+    const button = container.querySelector(':only-child');
+    const label = button?.querySelector('.utrecht-button__label');
+
+    expect(label).toBeInTheDocument();
   });
 
   it('is not busy by default', () => {

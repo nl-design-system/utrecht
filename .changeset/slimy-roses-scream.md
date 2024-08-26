@@ -3,6 +3,7 @@
 "@utrecht/component-library-react": major
 "@utrecht/component-library-css": major
 "@utrecht/button-css": major
+"@utrecht/button-react": major
 ---
 
 - Refactor `utrecht-button-icon-gap` into `utrecht-button-column-gap`
