@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3';
-import readme from '@utrecht/badge-counter-css/README.md?raw';
-import tokens from '@utrecht/badge-counter-css/src/tokens.json';
-import { BadgeCounter } from '@utrecht/component-library-vue';
+import { NumberBadge } from '@utrecht/component-library-vue';
+import readme from '@utrecht/number-badge-css/README.md?raw';
+import tokens from '@utrecht/number-badge-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {
   id: 'vue-badge-counter',
-  title: 'Vue.js Component/Badge Counter',
-  component: BadgeCounter,
+  title: 'Vue.js Component/Number badge',
+  component: NumberBadge,
   tags: ['autodocs'],
   args: {
     value: '42',
@@ -23,7 +23,7 @@ const meta = {
     status: {
       type: 'ALPHA',
     },
-    tokenPrefix: 'utrecht-badge-counter',
+    tokenPrefix: 'utrecht-number-badge',
     tokens,
     docs: {
       description: {
@@ -33,18 +33,18 @@ const meta = {
   },
   render: (args) => ({
     components: {
-      BadgeCounter,
+      NumberBadge,
     },
     setup() {
       return { args };
     },
     template: `
-      <BadgeCounter v-bind="$props">
+      <NumberBadge v-bind="$props">
         <slot></slot>
-      </BadgeCounter>
+      </NumberBadge>
     `,
   }),
-} satisfies Meta<typeof BadgeCounter>;
+} satisfies Meta<typeof NumberBadge>;
 
 export default meta;
 

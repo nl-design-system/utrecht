@@ -133,6 +133,8 @@ export type { NavBarProps } from './NavBar';
 export { NavBar } from './NavBar';
 export type { NavListProps, NavListLinkProps, NavListLinkButtonProps } from './NavList';
 export { NavList, NavListLink, NavListLinkButton } from './NavList';
+export type { NumberBadgeProps } from './NumberBadge';
+export { NumberBadge } from './NumberBadge';
 export type { NumberDataProps } from './NumberData';
 export { NumberData } from './NumberData';
 export type { OrderedListProps } from './OrderedList';

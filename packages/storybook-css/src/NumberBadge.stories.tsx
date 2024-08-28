@@ -1,25 +1,25 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/badge-counter-css/README.md?raw';
-import tokensDefinition from '@utrecht/badge-counter-css/src/tokens.json';
-import type { BadgeCounterProps } from '@utrecht/component-library-react';
-import { BadgeCounter } from '@utrecht/component-library-react';
+import type { NumberBadgeProps } from '@utrecht/component-library-react';
+import { NumberBadge } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/number-badge-css/README.md?raw';
+import tokensDefinition from '@utrecht/number-badge-css/src/tokens.json';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 
-interface BadgeCounterStoryProps extends BadgeCounterProps {
+interface NumberBadgeStoryProps extends NumberBadgeProps {
   dir?: string;
   lang?: string;
 }
 
-const BadgeCounterStory = ({ children, dir, lang, value }: PropsWithChildren<BadgeCounterStoryProps>) => {
+const NumberBadgeStory = ({ children, dir, lang, value }: PropsWithChildren<NumberBadgeStoryProps>) => {
   let formattedChildren = children;
 
   if (typeof lang === 'string' && typeof value !== 'undefined') {
     formattedChildren = new Intl.NumberFormat(lang, { style: 'decimal' }).format(parseFloat(value));
   }
 
-  let content = <BadgeCounter value={value}>{formattedChildren}</BadgeCounter>;
+  let content = <NumberBadge value={value}>{formattedChildren}</NumberBadge>;
 
   if (typeof lang === 'string' || typeof dir === 'string') {
     content = (
@@ -35,7 +35,7 @@ const BadgeCounterStory = ({ children, dir, lang, value }: PropsWithChildren<Bad
 const meta = {
   title: 'CSS Component/Badge Counter',
   id: 'css-badge-counter',
-  component: BadgeCounterStory,
+  component: NumberBadgeStory,
   args: {
     children: '4',
     value: '4',
@@ -66,7 +66,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof BadgeCounterStory>;
+} satisfies Meta<typeof NumberBadgeStory>;
 
 export default meta;
 
@@ -211,7 +211,7 @@ export const EULanguages: Story = {
         <div>
           <dt>{label}:</dt>
           <dd>
-            <BadgeCounterStory lang={lang} value={String(value)} />
+            <NumberBadgeStory lang={lang} value={String(value)} />
           </dd>
         </div>
       ))}

@@ -36,6 +36,7 @@ export { default as ListSocial } from './ListSocial.vue';
 export { default as ListSocialItem } from './ListSocialItem.vue';
 export { default as OrderedList } from './OrderedList.vue';
 export { default as OrderedListItem } from './OrderedListItem.vue';
+export { default as NumberBadge } from './NumberBadge.vue';
 export { default as NumberData } from './NumberData.vue';
 export { default as Page } from './Page.vue';
 export { default as PageContent } from './PageContent.vue';
