@@ -14,6 +14,14 @@
   --utrecht-focus-background-color: var(--utrecht-breadcrumb-nav-link-focus-background-color);
   --utrecht-link-background-color: var(--utrecht-breadcrumb-nav-link-background-color);
   --utrecht-link-text-decoration: var(--utrecht-breadcrumb-nav-link-text-decoration);
+  --utrecht-link-active-color: var(
+    --utrecht-breadcrumb-nav-link-active-color,
+    var(--utrecht-breadcrumb-nav-link-color)
+  );
+  --utrecht-link-active-text-decoration: var(
+    --utrecht-breadcrumb-nav-link-focus-text-decoration,
+    var(--utrecht-breadcrumb-nav-link-text-decoration)
+  );
   --utrecht-link-focus-color: var(--utrecht-breadcrumb-nav-link-focus-color, var(--utrecht-breadcrumb-nav-link-color));
   --utrecht-link-focus-text-decoration: var(
     --utrecht-breadcrumb-nav-link-focus-text-decoration,
@@ -31,6 +39,7 @@
 
   font-family: var(--utrecht-document-font-family, inherit);
   font-size: var(--utrecht-breadcrumb-nav-font-size);
+  line-height: var(--utrecht-breadcrumb-nav-line-height);
   text-transform: var(--utrecht-document-text-transform, inherit);
 }
 
