@@ -305,6 +305,9 @@ importers:
       '@utrecht/nav-list-css':
         specifier: workspace:*
         version: link:nav-list
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:number-data
@@ -967,6 +970,15 @@ importers:
 
   components/nav-list:
     devDependencies:
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  components/number-badge:
+    devDependencies:
+      '@utrecht/badge-css':
+        specifier: workspace:*
+        version: link:../badge
       rollup:
         specifier: 4.18.0
         version: 4.18.0
@@ -1662,6 +1674,9 @@ importers:
       '@utrecht/nav-list-css':
         specifier: workspace:*
         version: link:../../components/nav-list
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data
@@ -1967,6 +1982,9 @@ importers:
       '@utrecht/list-social-css':
         specifier: workspace:*
         version: link:../../components/list-social
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data
@@ -2855,6 +2873,9 @@ importers:
       '@utrecht/nav-list-css':
         specifier: workspace:*
         version: link:../../components/nav-list
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data
@@ -3572,6 +3593,9 @@ importers:
       '@utrecht/mark-css':
         specifier: workspace:*
         version: link:../../components/mark
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data
@@ -3860,6 +3884,9 @@ importers:
       '@utrecht/list-social-css':
         specifier: workspace:*
         version: link:../../components/list-social
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data
@@ -4640,6 +4667,9 @@ importers:
       '@utrecht/multiline-data-css':
         specifier: workspace:*
         version: link:../../components/multiline-data
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data

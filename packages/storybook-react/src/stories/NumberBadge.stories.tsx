@@ -1,15 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/badge-counter-css/README.md?raw';
-import tokensDefinition from '@utrecht/badge-counter-css/src/tokens.json';
-import { BadgeCounter, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { NumberBadge, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/number-badge-css/README.md?raw';
+import tokensDefinition from '@utrecht/number-badge-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './util';
 
 const meta = {
   title: 'React Component/Badge counter',
   id: 'react-badge-counter',
-  component: BadgeCounter,
+  component: NumberBadge,
   args: {
     children: '42',
   },
@@ -31,7 +31,7 @@ const meta = {
     },
   },
   decorators: [(Story) => <Paragraph>{Story()}</Paragraph>],
-} satisfies Meta<typeof BadgeCounter>;
+} satisfies Meta<typeof NumberBadge>;
 
 export default meta;
 

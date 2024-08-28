@@ -639,6 +639,11 @@ export namespace Components {
     }
     interface UtrechtMultilineData {
     }
+    interface UtrechtNumberBadge {
+        "locale": string;
+        "max": number;
+        "value": number;
+    }
     interface UtrechtNumberData {
         "value": number | string;
     }
@@ -2432,6 +2437,12 @@ declare global {
         prototype: HTMLUtrechtMultilineDataElement;
         new (): HTMLUtrechtMultilineDataElement;
     };
+    interface HTMLUtrechtNumberBadgeElement extends Components.UtrechtNumberBadge, HTMLStencilElement {
+    }
+    var HTMLUtrechtNumberBadgeElement: {
+        prototype: HTMLUtrechtNumberBadgeElement;
+        new (): HTMLUtrechtNumberBadgeElement;
+    };
     interface HTMLUtrechtNumberDataElement extends Components.UtrechtNumberData, HTMLStencilElement {
     }
     var HTMLUtrechtNumberDataElement: {
@@ -2900,6 +2911,7 @@ declare global {
         "utrecht-map-marker": HTMLUtrechtMapMarkerElement;
         "utrecht-mark": HTMLUtrechtMarkElement;
         "utrecht-multiline-data": HTMLUtrechtMultilineDataElement;
+        "utrecht-number-badge": HTMLUtrechtNumberBadgeElement;
         "utrecht-number-data": HTMLUtrechtNumberDataElement;
         "utrecht-page": HTMLUtrechtPageElement;
         "utrecht-page-content": HTMLUtrechtPageContentElement;
@@ -3583,6 +3595,11 @@ declare namespace LocalJSX {
     }
     interface UtrechtMultilineData {
     }
+    interface UtrechtNumberBadge {
+        "locale"?: string;
+        "max"?: number;
+        "value"?: number;
+    }
     interface UtrechtNumberData {
         "value"?: number | string;
     }
@@ -3964,6 +3981,7 @@ declare namespace LocalJSX {
         "utrecht-map-marker": UtrechtMapMarker;
         "utrecht-mark": UtrechtMark;
         "utrecht-multiline-data": UtrechtMultilineData;
+        "utrecht-number-badge": UtrechtNumberBadge;
         "utrecht-number-data": UtrechtNumberData;
         "utrecht-page": UtrechtPage;
         "utrecht-page-content": UtrechtPageContent;
@@ -4258,6 +4276,7 @@ declare module "@stencil/core" {
             "utrecht-map-marker": LocalJSX.UtrechtMapMarker & JSXBase.HTMLAttributes<HTMLUtrechtMapMarkerElement>;
             "utrecht-mark": LocalJSX.UtrechtMark & JSXBase.HTMLAttributes<HTMLUtrechtMarkElement>;
             "utrecht-multiline-data": LocalJSX.UtrechtMultilineData & JSXBase.HTMLAttributes<HTMLUtrechtMultilineDataElement>;
+            "utrecht-number-badge": LocalJSX.UtrechtNumberBadge & JSXBase.HTMLAttributes<HTMLUtrechtNumberBadgeElement>;
             "utrecht-number-data": LocalJSX.UtrechtNumberData & JSXBase.HTMLAttributes<HTMLUtrechtNumberDataElement>;
             /**
              * @license EUPL-1.2
