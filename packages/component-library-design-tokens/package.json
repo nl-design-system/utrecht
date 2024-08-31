@@ -1,0 +1,35 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "Design tokens metadata for the component library for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/component-library-design-tokens",
+  "files": [
+    "dist/*.json"
+  ],
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": false,
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/component-library-design-tokens"
+  },
+  "devDependencies": {
+    "@nl-design-system-unstable/theme-toolkit": "link:/Users/bobby/Sites/github.com/nl-design-system/themes-bryan/packages/theme-toolkit",
+    "glob": "10.4.2",
+    "lodash.clonedeepwith": "4.5.0",
+    "lodash.isplainobject": "4.0.6",
+    "lodash.merge": "4.6.2",
+    "rimraf": "5.0.7"
+  },
+  "scripts": {
+    "build": "node src/build.mjs",
+    "lint-build": "node src/lint-build.mjs",
+    "clean": "rimraf dist"
+  }
+}
