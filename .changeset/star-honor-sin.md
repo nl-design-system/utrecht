@@ -1,5 +1,5 @@
 ---
-"@utrecht/search-bar-css": minor
+"@utrecht/search-bar-css": major
 ---
 
 - Added metadata for search bar tokens.
