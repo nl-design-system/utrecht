@@ -115,7 +115,7 @@
 }
 
 @mixin utrecht-form-toggle__track--disabled {
-  background-color: var(--utrecht-form-toggle-background-disabled-background-color, #ddd);
+  background-color: var(--utrecht-form-toggle-disabled-background-color, #ddd);
   color: var(--utrecht-form-toggle-disabled-color, black);
 }
 
