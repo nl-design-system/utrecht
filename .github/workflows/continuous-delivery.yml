@@ -109,14 +109,14 @@ jobs:
           fi
 
       - name: "Retain build artifact: website"
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: website
           path: packages/design-system-website/dist/
           retention-days: 1
 
       - name: "Retain build artifact: storybook"
-        uses: actions/upload-artifact@v4.3.3
+        uses: actions/upload-artifact@v4.4.0
         with:
           name: storybook
           path: packages/storybook/dist/
@@ -203,7 +203,7 @@ jobs:
         uses: actions/checkout@v4.1.6
 
       - name: "Restore build artifact: website"
-        uses: actions/download-artifact@v4.1.7
+        uses: actions/download-artifact@v4.1.8
         with:
           name: website
           path: packages/design-system-website/dist/
