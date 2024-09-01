@@ -266,7 +266,7 @@ jobs:
       #     pnpm run release
 
       - name: "Continuous Deployment: publish changeset to GitHub repository"
-        uses: changesets/action@v1.4.7
+        uses: changesets/action@v1.4.8
         id: changeset
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
