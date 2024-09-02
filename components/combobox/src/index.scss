@@ -20,3 +20,15 @@
 .utrecht-combobox__popover--hidden {
   @include utrecht-combobox__popover--hidden;
 }
+
+.utrecht-combobox__textbox-container {
+  @include utrecht-combobox__textbox-container;
+}
+
+.utrecht-combobox__toggle-button {
+  @include utrecht-combobox__toggle-button;
+}
+
+.utrecht-combobox__icon {
+  @include utrecht-combobox__icon;
+}
