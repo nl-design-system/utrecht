@@ -1,5 +1,5 @@
 ---
-"@utrecht/mapcontrolbutton}-css": major
+"@utrecht/map-control-button-css": major
 ---
 
 - Added metadata for `mapcontrolbutton` tokens.
