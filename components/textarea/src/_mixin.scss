@@ -80,12 +80,12 @@ $utrecht-support-prince-xml: false !default;
   );
   border-width: var(--_utrecht-textarea-border-width);
   border-block-end-width: var(
-    --utrecht-textarea-invalid-border-bottom-width,
+    --utrecht-textarea-invalid-border-block-end-width,
     var(
-      --utrecht-form-control-invalid-border-bottom-width,
+      --utrecht-form-control-invalid-border-block-end-width,
       var(
-        --utrecht-textarea-border-bottom-width,
-        var(--utrecht-form-control-border-bottom-width, var(--_utrecht-textarea-border-width))
+        --utrecht-textarea-border-block-end-width,
+        var(--utrecht-form-control-border-block-end-width, var(--_utrecht-textarea-border-width))
       )
     )
   );
