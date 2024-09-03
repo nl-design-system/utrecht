@@ -75,6 +75,8 @@ export type { FormFieldProps } from './FormField';
 export { FormField } from './FormField';
 export type { FormFieldCheckboxProps } from './FormFieldCheckbox';
 export { FormFieldCheckbox } from './FormFieldCheckbox';
+export type { FormFieldComboboxProps } from './FormFieldCombobox';
+export { FormFieldCombobox } from './FormFieldCombobox';
 export type { FormFieldDescriptionProps } from './FormFieldDescription';
 export { FormFieldDescription } from './FormFieldDescription';
 export type { FormFieldErrorMessageProps } from './FormFieldErrorMessage';
