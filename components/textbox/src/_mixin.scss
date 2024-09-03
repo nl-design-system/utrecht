@@ -39,7 +39,7 @@ $utrecht-support-prince-xml: false !default;
   block-size: initial; /* harden */
   border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
   border-block-end-width: var(
-    --utrecht-textbox-border-bottom-width,
+    --utrecht-textbox-border-block-end-width,
     var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width))
   );
   border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color));
