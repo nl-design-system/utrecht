@@ -1,0 +1,14 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+@import "./mixin";
+
+.utrecht-subscript {
+  @include utrecht-subscript;
+}
+
+.utrecht-subscript--open-type {
+  @include utrecht-subscript--open-type;
+}
