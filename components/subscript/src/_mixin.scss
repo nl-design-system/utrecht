@@ -1,0 +1,17 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-subscript {
+}
+
+/* Not all fonts support the OpenType `subs` characters, and fonts that support it don't suppor all characters.
+ * Use the optimized OpenType rendering only in situations where you know it will work.
+ */
+@mixin utrecht-subscript--open-type {
+  font-size: inherit;
+  font-variant-position: sub;
+  vertical-align: baseline;
+}

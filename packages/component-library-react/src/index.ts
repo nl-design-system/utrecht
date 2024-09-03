@@ -175,6 +175,8 @@ export type { StatusBadgeProps } from './StatusBadge';
 export { StatusBadge } from './StatusBadge';
 export type { StrongProps } from './Strong';
 export { Strong } from './Strong';
+export type { SubscriptProps } from './Subscript';
+export { Subscript } from './Subscript';
 export type { SuperscriptProps } from './Superscript';
 export { Superscript } from './Superscript';
 export type { SurfaceProps } from './Surface';
