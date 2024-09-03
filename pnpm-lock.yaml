@@ -1100,6 +1100,12 @@ importers:
         specifier: 4.18.0
         version: 4.18.0
 
+  components/superscript:
+    devDependencies:
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
   components/surface:
     devDependencies:
       rollup:
@@ -1728,6 +1734,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/superscript-css':
+        specifier: workspace:*
+        version: link:../../components/superscript
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface
@@ -2927,6 +2936,9 @@ importers:
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
+      '@utrecht/superscript-css':
+        specifier: workspace:*
+        version: link:../../components/superscript
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface
@@ -3641,6 +3653,9 @@ importers:
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
+      '@utrecht/superscript-css':
+        specifier: workspace:*
+        version: link:../../components/superscript
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface
@@ -21256,8 +21271,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.0.29:
-    resolution: {integrity: sha512-58i+ZhUAUpwQ+9h5Hck0D+jr1qbYl4voRt5KffBx8qzELViQ4XdT/Tuo+mzq8u63teAG8K0lLaOiL5ofqW38rg==}
+  vue-component-type-helpers@2.1.4:
+    resolution: {integrity: sha512-aVqB3KxwpM76cYRkpnezl1J62E/1omzHQfx1yuz7zcbxmzmP/PeSgI20NEmkdeGnjZPVzm0V9fB4ZyRu5BBj4A==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -31009,7 +31024,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.0.29
+      vue-component-type-helpers: 2.1.4
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -46869,7 +46884,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.0.29: {}
+  vue-component-type-helpers@2.1.4: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
