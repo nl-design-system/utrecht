@@ -2017,18 +2017,40 @@ importers:
       '@utrecht/combobox-css':
         specifier: workspace:*
         version: link:../../../../components/combobox
-      '@utrecht/form-field-react':
+      '@utrecht/form-field-combobox-react':
         specifier: workspace:*
-        version: link:../form-field-react
-      '@utrecht/form-label-react':
-        specifier: workspace:*
-        version: link:../form-label-react
+        version: link:../form-field-combobox-react
       '@utrecht/listbox-react':
         specifier: workspace:*
         version: link:../listbox-react
       '@utrecht/textbox-react':
         specifier: workspace:*
         version: link:../textbox-react
+      jest:
+        specifier: 29.7.0
+        version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
+  packages/component-library-react/packages/form-field-combobox-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: ^7.23.6
+        version: 7.24.7
+      react:
+        specifier: '18'
+        version: 18.3.1
+      react-dom:
+        specifier: '18'
+        version: 18.3.1(react@18.3.1)
+    devDependencies:
+      '@utrecht/form-field-react':
+        specifier: workspace:*
+        version: link:../form-field-react
+      '@utrecht/form-label-react':
+        specifier: workspace:*
+        version: link:../form-label-react
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100)(@types/node@20.14.8)(typescript@4.9.5))
