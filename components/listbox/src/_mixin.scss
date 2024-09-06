@@ -29,7 +29,7 @@
   cursor: default;
   display: flex;
   flex-direction: column;
-  inline-size: var(--utrecht-listbox-inline-size, var(--utrecht-form-input-max-inline-size));
+  font-weight: var(--utrecht-listbox-font-weight, var(--utrecht-form-control-font-weight, initial));
   max-block-size: var(--utrecht-listbox-max-block-size);
   min-block-size: 1em;
   overflow-block: auto;

@@ -26,7 +26,11 @@ $utrecht-support-prince-xml: false !default;
   color: var(--utrecht-textarea-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-textarea-font-size, var(--utrecht-form-control-font-size, inherit));
-  font-weight: initial; /* harden */
+  font-weight: var(
+    --utrecht-textarea-font-weight,
+    var(--utrecht-form-control-font-weight, initial)
+  ); /* harden with `initial` */
+
   inline-size: 100%;
   line-height: var(--utrecht-textarea-line-height, initial);
   max-inline-size: var(--utrecht-textarea-max-inline-size, var(--utrecht-form-control-max-inline-size));

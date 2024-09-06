@@ -49,7 +49,11 @@ $utrecht-support-prince-xml: false !default;
   color: var(--utrecht-textbox-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-control-font-size, inherit));
-  font-weight: initial; /* harden */
+  font-weight: var(
+    --utrecht-textbox-font-weight,
+    var(--utrecht-form-control-font-weight, initial)
+  ); /* harden with `initial` */
+
   inline-size: 100%;
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
   min-block-size: var(--utrecht-pointer-target-min-size, 44px);
