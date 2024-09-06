@@ -25,6 +25,11 @@ $utrecht-support-prince-xml: false !default;
   color: var(--utrecht-select-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-select-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-select-font-size, var(--utrecht-form-control-font-size));
+  font-weight: var(
+    --utrecht-select-font-size,
+    var(--utrecht-form-control-font-weight, initial)
+  ); /* harden with `initial` */
+
   inline-size: 100%;
   min-block-size: var(--utrecht-select-min-block-size, var(--utrecht-pointer-target-min-size, 44px));
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
