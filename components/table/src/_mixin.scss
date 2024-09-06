@@ -117,6 +117,10 @@
 @mixin utrecht-table__footer {
   --_utrecht-table-header-cell-z-index: 5;
 
+  background-color: var(--utrecht-table-footer-background-color, transparent);
+  break-inside: avoid;
+  color: var(--utrecht-table-footer-color);
+  page-break-inside: avoid;
   z-index: 3;
 }
 
