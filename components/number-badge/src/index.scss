@@ -9,5 +9,5 @@
 
 .utrecht-number-badge {
   @include utrecht-number-badge;
-  @include utrecht-badge--media-query-forced-colors;
+  @include utrecht-number-badge--media-query-forced-colors;
 }
