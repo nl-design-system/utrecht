@@ -30,6 +30,7 @@
   "scripts": {
     "build": "node src/build.mjs",
     "lint-build": "node src/lint-build.mjs",
+    "lint-theme": "node src/lint-theme.mjs",
     "clean": "rimraf dist"
   }
 }
