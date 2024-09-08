@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "composite": true,
+    "esModuleInterop": true,
+    "moduleResolution": "Node",
+    "jsx": "react-jsx",
+    "lib": ["dom", "esnext"],
+    "outDir": "./dist/",
+    "paths": {
+      "@utrecht/component-library-react/*": ["../component-library-react/*"]
+    },
+    "rootDir": "../",
+    "skipLibCheck": true
+  },
+  "extends": "../../tsconfig.json",
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
+  "exclude": ["**/node_modules/*"],
+  "references": [
+    {
+      "path": "../component-library-react"
+    }
+  ]
+}
