@@ -5,7 +5,8 @@
  */
 
 @mixin utrecht-badge-list {
+  column-gap: var(--utrecht-badge-list-column-gap);
   display: flex;
   flex-wrap: wrap;
-  gap: var(--utrecht-badge-list-item-margin-block) var(--utrecht-badge-list-item-margin-inline);
+  row-gap: var(--utrecht-badge-list-row-gap);
 }
