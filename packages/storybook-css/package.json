@@ -162,7 +162,7 @@
     "webpack": "5.89.0"
   },
   "scripts": {
-    "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
+    "build": "storybook build --output-dir dist/ --config-dir config/ --quiet --webpack-stats-json",
     "clean": "rimraf dist/",
     "lint-build:todo": "tsc --noEmit --project tsconfig.json",
     "start": "http-server dist/",
