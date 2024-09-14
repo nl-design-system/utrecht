@@ -19,6 +19,8 @@ import "../index.scss";
 
 ## Disabled
 
+Gebruik de `utrecht-textbox--disabled` classname.
+
 <Canvas>
   <Story
     name="disabled"
@@ -32,6 +34,12 @@ import "../index.scss";
 </Canvas>
 
 ## Invalid
+
+Gebruik de `utrecht-textbox--invalid` classname.
+
+Gebruik `aria-invalid="true"` wanneer je client-side of server-side validatie doet. Zie ook: [WCAG Technique: Using `aria-invalid` to Indicate An Error Field](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA21). Maak ook duidelijk hoe de gebruiker de fout kan verhelpen, door een _invalid form field description_ te koppelen aan de textbox.
+
+In CSS werkt `:invalid` niet voor `aria-invalid="true"`, gebruik daarom `.utrecht-textbox:invalid, .utrecht-textbox[aria-invalid="true"]` om beide varianten te herkennen.
 
 <Canvas>
   <Story
@@ -74,6 +82,8 @@ import "../index.scss";
 </Canvas>
 
 ## Focus
+
+Gebruik de `utrecht-textbox--focus` classname om het `:focus` design te testen.
 
 <Canvas>
   <Story
