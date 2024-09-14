@@ -1,0 +1,77 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { Link } from "../story-template";
+import { Heading2 } from "../../../heading-2/css/story-template";
+import "../index.scss";
+
+<Meta
+  id="css-link"
+  title="CSS Component/Link/Accessible name"
+  component={Link}
+  parameters={{
+    status: "WORK IN PROGRESS",
+  }}
+/>
+
+# Accessible name for the link
+
+Er zijn in HTML meerdere manieren om een duidelijke linktekst te maken:
+
+- gewoon de linktekst in het `<a>` element.
+- gewoon de linktekst in het `<a>` element, maar de tekst is met CSS onzichtbaar gemaakt zodat je een icoon of een algemene tekst kunt gebruiken.
+- de linktekst staat in `aria-label` terwijl visueel icoon of een algemene tekst zichtbaar is.
+- de linktekst wordt met `aria-labelledby` gehaald uit een ander element dat al een handige tekst bevat.
+
+Deze manier moet je niet gebruiken:
+
+- de tekst in het `title` attribuut zetten.
+
+Zie ook: [](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA7)
+
+## Link met algemene linktekst
+
+Als een duidelijke tekst voor de link al zichtbaar bij de link staat, dan kun je `aria-labelledby` gebruiken om die tekst te gebruiken als _accessible name_ van de link.
+
+Met `aria-labelledby` hoef je de tekst niet te herhalen in `aria-label`, maar moet je wel een uniek `id` maken. Als een `id` maken niet goed mogelijk is, dan is `aria-label` gebruiken ook goed.
+
+Voorbeelden:
+
+- "Lees meer..." link, de duidelijke tekst voor de link staat in de _heading_ er voor.
+- "Openen" link aan het eind van een _table row_ in een lijst met berichten, de duidelijke tekst staat in de _table cell_ in de kolom voor "Onderwerp".
+
+Soms is de tekst die al zichtbaar maar een gedeelte van een duidelijk label, dan is `aria-labelledby` niet het een goede oplossing. Een "Bewerken" link in een _data list item_ met "Voornaam", dan is alleen "Voornaam" niet duidelijk. Gebruik dan `aria-label="Bewerken: Voornaam"`. Op deze manier het zichtbare label "Bewerken" ook onderdeel van de _accessible name_ in `aria-label` ([WCAG eis 2.5.3: "label in name"](https://www.w3.org/TR/WCAG21/#label-in-name)).
+
+export const LinkLabelledbyHeading = ({ ...props }) => (
+  <div>
+    <Heading2 id="heading">Foo</Heading2>
+    <Link {...props} />
+  </div>
+);
+
+<Canvas>
+  <Story
+    name="Non-unique link"
+    component={LinkLabelledbyHeading}
+    args={{
+      "aria-labelledby": "heading",
+      textContent: "Lees meer...",
+    }}
+  >
+    {LinkLabelledbyHeading.bind({})}
+  </Story>
+</Canvas>
+
+## Link met icoon en zonder tekst
+
+<Canvas>
+  <Story
+    name="Icon and no text"
+    args={{
+      ariaLabel: "Zoeken",
+      textContent: [<utrecht-icon-loupe></utrecht-icon-loupe>],
+    }}
+  >
+    {Link.bind({})}
+  </Story>
+</Canvas>
