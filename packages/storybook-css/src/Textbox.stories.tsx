@@ -161,7 +161,7 @@ const meta = {
         '': null,
         email: 'email',
         number: 'number',
-        password: 'number',
+        password: 'password',
         search: 'search',
         tel: 'tel',
         text: 'text',
