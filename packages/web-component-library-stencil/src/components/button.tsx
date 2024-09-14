@@ -122,9 +122,6 @@ export class Button {
       button.value = value || '';
     }
 
-    const hasIconSlot = this.hostElement.querySelector('[slot="icon"]');
-    const hasLabelSlot = this.hostElement.querySelector('[slot="label"]');
-
     return (
       <button
         class={clsx(
@@ -148,13 +145,10 @@ export class Button {
         type={this.type || 'button'}
         onClick={handleClick}
       >
-        {hasIconSlot && <slot name="icon"></slot>}
-        {hasLabelSlot && (
-          <span class="utrecht-button__label">
-            <slot name="label"></slot>
-          </span>
-        )}
-        <slot></slot>
+        <slot name="icon"></slot>
+        <span class="utrecht-button__label">
+          <slot></slot>
+        </span>
       </button>
     );
   }

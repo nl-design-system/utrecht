@@ -5,7 +5,7 @@ import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
-import { UtrechtButton, UtrechtParagraph } from '@utrecht/web-component-library-react';
+import { UtrechtButton, UtrechtIconBestemmingsplan, UtrechtParagraph } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
@@ -16,7 +16,6 @@ interface ButtonStoryProps {
   disabled?: boolean;
   expanded?: boolean | string;
   icon?: string;
-  label?: string;
   pressed?: boolean | string;
   type?: string;
 }
@@ -32,7 +31,6 @@ const ButtonStory = ({
   formNoValidate,
   formTarget,
   icon,
-  label,
   name,
   popoverTarget,
   popoverTargetAction,
@@ -63,7 +61,6 @@ const ButtonStory = ({
       {...restProps}
     >
       {IconElement && React.cloneElement(<IconElement />, { slot: 'icon' })}
-      {label && <span slot="label">{label}</span>}
       {children}
     </UtrechtButton>
   );
@@ -154,7 +151,6 @@ const meta = {
     disabled: false,
     children: '',
     type: '',
-    label: 'Test',
     icon: '',
     name: '',
     value: '',
@@ -188,7 +184,14 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Read more...',
+    children: 'Read more...',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'This is the simplest variant, which is closest to the HTML `<button>` element.',
+      },
+    },
   },
 };
 
@@ -196,6 +199,13 @@ export const Submit: Story = {
   args: {
     children: 'Send',
     type: 'submit',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'The `type="submit"` attribute works the same way you expect from the HTML `<button>` element.',
+      },
+    },
   },
 };
 
@@ -209,8 +219,34 @@ export const Busy: Story = {
 
 export const Icon: Story = {
   args: {
-    label: 'Read more...',
+    children: 'Read more...',
     icon: 'utrecht-icon-bestemmingsplan',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Do this instead: use the `slot="icon"` attribute on your icon.',
+      },
+    },
+  },
+};
+
+export const DiscouragedIcon: Story = {
+  args: {
+    children: (
+      <>
+        <UtrechtIconBestemmingsplan /> Read <strong>more</strong>...
+      </>
+    ),
+  },
+  name: 'Discouraged method: no slot for the icon',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Do not do this! When you have an icon, it is better to use the `icon` slot for the label. It works fine when the label only contains plain text. You will have unexpected results when the label contains an element. Between each element a space will be greated because of the `column-gap` design token.',
+      },
+    },
   },
 };
 
