@@ -31,7 +31,7 @@ Use the `<nav>` with `<a>` element approach for hyperlinks to alternate language
   - maak duidelijk dat je kunt navigeren naar alternatieve versies door het plaatsen van deze links in een `navigation` landmark (`<nav>`)
 - [WCAG eis 2.4.4](https://www.w3.org/TR/WCAG21/#link-purpose-in-context): met alleen de naam van de taal als label ("English") is het doel van de link duidelijk in de context van een navigation landmark
 - [WCAG eis 2.4.6](https://www.w3.org/TR/WCAG21/#headings-and-labels): alle labels moeten duidelijk zijn:
-  - het label van de landmark (de heading in de `nav` of `section`)
+  - het label van de landmark (de heading in de `nav` of `section`). Zie ook: [WCAG Technique: Using `aria-labelledby` to name regions and landmarks](https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA13)
   - het zichtbare label van de links of buttons
   - het langere label van de link of button (in `aria-label` of `title`)
 - [WCAG eis 2.4.9](https://www.w3.org/TR/WCAG21/#link-purpose-link-only): gebruik een label als "This page in English" zodat het doel van de link ook duidelijk is zonder context.
