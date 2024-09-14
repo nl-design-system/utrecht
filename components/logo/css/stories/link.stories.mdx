@@ -1,0 +1,68 @@
+<!-- @license CC0-1.0 -->
+
+import { Canvas, Meta, Story } from "@storybook/addon-docs";
+import { LogoLink } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-logo"
+  title="CSS Component/Logo/Homepage link"
+  component={LogoLink}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Logo als link naar de homepage
+
+<Canvas>
+  <Story
+    name="Default"
+    args={{
+      title: "Naar de homepage",
+    }}
+  >
+    {LogoLink.bind({})}
+  </Story>
+</Canvas>
+
+## Focus
+
+Gebruik de `box-content` link, zodat de focus ring om het hele logo staat in plaats van over het logo heen.
+
+<Canvas>
+  <Story
+    name="Focus"
+    args={{
+      title: "Naar de homepage",
+    }}
+    parameters={{
+      pseudo: {
+        focus: true,
+        focusVisible: true,
+      },
+    }}
+  >
+    {LogoLink.bind({})}
+  </Story>
+</Canvas>
+
+## Hover
+
+<Canvas>
+  <Story
+    name="Hover"
+    args={{
+      title: "Naar de homepage",
+    }}
+    parameters={{
+      pseudo: {
+        hover: true,
+      },
+    }}
+  >
+    {LogoLink.bind({})}
+  </Story>
+</Canvas>
