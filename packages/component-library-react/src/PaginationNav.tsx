@@ -7,7 +7,7 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { Link } from './Link';
-
+/*
 export const LinkTemplate = ({ disabled = false, href = '', rel = null, textContent = '', title = '' }) => {
   const className = clsx(
     'utrecht-pagination__relative-link',
@@ -41,12 +41,8 @@ export const ItemTemplate = ({ current = false, href = '', rel = null, textConte
     {textContent}
   </a>
 );
-
-export interface PaginationNavProps {
-  heading?: React.Node;
-}
-
-const Heading = ({ children, level }) => {
+*/
+const Heading = ({ children, level, ...restProps }) => {
   const HeadingElement =
     level === 1
       ? 'h1'
@@ -62,51 +58,63 @@ const Heading = ({ children, level }) => {
       ? 'h6'
       : 'div';
 
-  return <HeadingElement>{children}</HeadingElement>;
+  return <HeadingElement {...restProps}>{children}</HeadingElement>;
 };
 
-export const PaginationNav = ({
-  heading,
-  headingId,
-  headingLevel,
-  currentIndex = defaultArgs.currentIndex,
-  distanced = defaultArgs.distanced,
-  links = defaultArgs.links,
-  next = defaultArgs.next,
-  prev = defaultArgs.prev,
-}) => (
-  <nav className={clsx('utrecht-pagination', distanced && 'utrecht-pagination--distanced')} aria-labelledby={headingId}>
-    {/* TODO: Use `h1`-`h6` element, depending on `headingLevel` */}
-    <Heading id={headingId} class="utrecht-pagination__heading" level={headingLevel}>
-      {label}
-    </Heading>
-    <span className="utrecht-pagination__before">
-      {prev ? LinkTemplate({ ...prev, rel: 'prev', textContent: 'Vorige' }) : ''}
-    </span>
-    <span role="group" className="utrecht-pagination__pages">
-      {links
-        .sort((a, b) => (a.index === b.index ? 0 : a.index > b.index ? 1 : -1))
-        .map((link, arrayIndex) => {
-          const index = typeof link.index === 'number' ? link.index : arrayIndex;
-          return {
-            index,
-            current: typeof currentIndex === 'number' && index === currentIndex,
-            rel:
-              typeof currentIndex === 'number'
-                ? index === currentIndex + 1
-                  ? 'next'
-                  : index === currentIndex - 1
-                  ? 'prev'
-                  : null
-                : null,
-            textContent: link.index || index,
-            ...link,
-          };
-        })
-        .map((link) => ItemTemplate(link))}
-    </span>
-    <span className="utrecht-pagination__before">
-      {next ? LinkTemplate({ ...next, rel: 'next', textContent: 'Volgende' }) : ''}
-    </span>
-  </nav>
+export interface PaginationNavProps {
+  heading?: React.Node;
+  headingId?: string;
+  headingLevel?: number;
+}
+
+export const PaginationNav = forwardRef(
+  (
+    {
+      heading,
+      headingId,
+      headingLevel,
+      currentIndex,
+      links,
+      next = defaultArgs.next,
+      prev = defaultArgs.prev,
+    }: PropsWithChildren<AlertDialogProps>,
+    ref: ForwardedRef<HTMLElement>,
+  ) => (
+    <nav className={clsx('utrecht-pagination')} aria-labelledby={headingId}>
+      {/* TODO: Use `h1`-`h6` element, depending on `headingLevel` */}
+      <Heading id={headingId} class="utrecht-pagination__heading" level={headingLevel}>
+        {heading}
+      </Heading>
+      <span className="utrecht-pagination__before">
+        {prev ? LinkTemplate({ ...prev, rel: 'prev', textContent: 'Vorige' }) : ''}
+      </span>
+      <span role="group" className="utrecht-pagination__pages">
+        {(links || [])
+          .sort((a, b) => (a.index === b.index ? 0 : a.index > b.index ? 1 : -1))
+          .map((link, arrayIndex) => {
+            const index = typeof link.index === 'number' ? link.index : arrayIndex;
+            return {
+              index,
+              current: typeof currentIndex === 'number' && index === currentIndex,
+              rel:
+                typeof currentIndex === 'number'
+                  ? index === currentIndex + 1
+                    ? 'next'
+                    : index === currentIndex - 1
+                    ? 'prev'
+                    : null
+                  : null,
+              textContent: link.index || index,
+              ...link,
+            };
+          })
+          .map((link) => ItemTemplate(link))}
+      </span>
+      <span className="utrecht-pagination__before">
+        {next ? LinkTemplate({ ...next, rel: 'next', textContent: 'Volgende' }) : ''}
+      </span>
+    </nav>
+  ),
 );
+
+PaginationNav.displayName = 'PaginationNav';
