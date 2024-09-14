@@ -6,5 +6,4 @@
 "@utrecht/button-react": major
 ---
 
-- Refactor `utrecht-button-icon-gap` into `utrecht-button-column-gap`
-- Add an optional element class `utrecht-button__label` to support other inline styling without a gap
+Rename design token `utrecht.button.icon.gap` to `utrecht.button.column-gap`
