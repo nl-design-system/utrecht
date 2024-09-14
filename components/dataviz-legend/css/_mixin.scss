@@ -1,0 +1,55 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021-2022 Gemeente Utrecht
+ * Copyright (c) 2021-2022 Frameless B.V.
+ */
+
+@mixin utrecht-dataviz-legend__list {
+  /* also set `margin-block` to reset browser styling of <dl> */
+  display: block;
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-data-list-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-data-list-margin-block-start, 0));
+}
+
+@mixin utrecht-dataviz-legend__item {
+  page-break-inside: avoid;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-dataviz-legend__item-key {
+}
+
+@mixin utrecht-dataviz-legend__item-value {
+  /* configure `min-block-size` in case the value is empty */
+  color: var(--utrecht-data-list-item-value-color);
+  font-size: var(--utrecht-data-list-item-value-font-size);
+  font-weight: var(--utrecht-data-list-item-value-font-weight);
+  line-height: var(--utrecht-data-list-item-value-line-height);
+  min-block-size: calc(var(--utrecht-data-list-item-value-line-height) * 1rem);
+}
+
+@mixin reset-html-dd {
+  /* reset browser styling of <dd> */
+  margin-inline-start: 0;
+}
+
+@mixin utrecht-data-list__item--rows {
+  --_utrecht-minmax: max(
+    var(--utrecht-data-list-rows-column-min-inline-size, 25ch),
+    var(--utrecht-data-list-rows-column-inline-size, 80%)
+  );
+  --_utrecht-auto-col: minmax(var(--_utrecht-minmax), max-content);
+
+  border-bottom-color: var(--utrecht-data-list-rows-border-bottom-color, transparent);
+  border-bottom-style: solid;
+  border-bottom-width: var(--utrecht-data-list-rows-border-bottom-width, 0);
+  display: grid;
+  gap: 0 var(--utrecht-data-list-rows-gap);
+  grid-auto-columns: 1fr;
+  grid-template-columns: repeat(auto-fit, var(--_utrecht-auto-col));
+  margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+}
+
+@mixin utrecht-data-list__item-value--rows {
+  margin-block-start: var(--utrecht-data-list-rows-item-value-margin-block-start);
+}

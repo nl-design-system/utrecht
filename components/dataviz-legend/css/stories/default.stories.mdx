@@ -1,0 +1,49 @@
+{/* @license CC0-1.0 */}
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import "../index.scss";
+import {
+  DatavizLegend,
+  DatavizLegendHeading,
+  DatavizLegendList,
+  DatavizLegendItem,
+  DatavizLegendItemKey,
+  DatavizLegendItemValue,
+} from "../story-template";
+
+export const DatavizLegendStory = () => (
+  <DatavizLegend>
+    <DatavizLegendHeading>Waterhoogte t.o.v. NAP (cm)</DatavizLegendHeading>
+    <DatavizLegendList>
+      <DatavizLegendItem>
+        <DatavizLegendItemKey>
+          <ColorSample value="#d52b1e"></ColorSample>
+        </DatavizLegendItemKey>
+        <DatavizLegendItemValue>Extreem hoogwater</DatavizLegendItemValue>
+      </DatavizLegendItem>
+    </DatavizLegendList>
+  </DatavizLegend>
+);
+
+<Meta
+  id="css-dataviz-legend"
+  title="CSS Component/Dataviz legend"
+  component={DatavizLegend}
+  argTypes={{}}
+  args={{}}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Dataviz legend
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {DatavizLegendStory.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
