@@ -3,6 +3,8 @@
 # Gebruik en toegankelijkheid van headings (koppen)
 
 - Gebruik altijd maar één H1 heading op een pagina met digitale content.
+- Gebruik een lager heading niveau voor inhoud die onderdeel is van de vorige heading, zodat gebruikers makkelijk die inhoud over kunnen slaan en door kunnen naar de volgende heading op hetzelfde niveau.
+- Weet je niet zeker welk heading niveau gebruikt moet worden? Gebruik dan _heading level_ 6. Zo kunnen gebruikers toch gemakkelijk de inhoud overslaan en verder gaan naar de volgende heading op een hoger niveau.
 - Gebruik alleen een heading als er content onder staat.
 - Gebruikers van screenreaders gebruiken headings vaak om een indruk te krijgen van de structuur van een pagina.
 - Gebruik headings niet voor de opmaak maar alleen voor tekstuele hiërarchie van de content.

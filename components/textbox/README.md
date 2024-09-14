@@ -41,6 +41,11 @@ _Let op:_
 
 - Straatnaam moet niet `autocomplete="street-address"` gebruiken, `street-address` is voor een textarea.
 
+## Foutmeldingen
+
+- Niet valide, invoer is te lang: maak duidelijk in de foutmelding hoeveel karakters je weg moet halen.
+  - Bijvoorbeeld: "Haal 23 tekens weg bij achternaam. Je hebt meer dan 200 tekens ingevuld, dat is het maximum."
+
 ## Terminologie
 
 - **textbox**: [`role="textbox"` in WAI-ARIA](https://www.w3.org/TR/wai-aria-1.2/#textbox), [Text box lemma op Wikipedia](https://en.wikipedia.org/wiki/Text_box). HTML noemt het "text control" en text edit control". [MDN noemt het](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/text) "text field" en "text input".

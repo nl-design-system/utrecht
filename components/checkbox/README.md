@@ -54,8 +54,9 @@ Screen readers automatically report the status of the check box.
 
 ### Keyboard support
 
+- `Space`: activate or deactivate checkboxes. For custom checkbox implementations, make sure to prevent scrolling the page using [`keypressEvent.preventDefault()`](https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault).
+- `Enter`: **do not use** the `Enter` key to toggle checkboxes, the `Enter` key is used to submit the form.
 - Move focus to each checkbox using the tab key (or shift + tab when tabbing backwards)
-- Activate or deactivate checkboxes with the space key
 
 ## Content guidelines
 
