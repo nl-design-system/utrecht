@@ -51,6 +51,15 @@ describe('Listbox', () => {
       // Look at the DOM instead of the accessibility tree
       expect(listbox).toHaveAttribute('aria-disabled', 'true');
     });
+
+    // Temporary alternative to the accessibility tree test
+    it('has a disabled listbox', () => {
+      render(<Listbox disabled />);
+
+      const listbox = screen.getByRole('listbox');
+
+      expect(listbox).toHaveAttribute('aria-disabled', 'true');
+    });
   });
 
   describe('read-only state', () => {
