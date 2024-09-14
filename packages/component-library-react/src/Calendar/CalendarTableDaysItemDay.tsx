@@ -23,12 +23,17 @@ export const CalendarTableDaysItemDay = ({
   buttonRef,
   ...props
 }: CalendarTableDaysItemDayProps) => (
-  <td role="gridcell" aria-current={isToday ? 'date' : undefined} aria-selected={selected}>
+  <td
+    role="gridcell"
+    aria-current={isToday ? 'date' : undefined}
+    aria-selected={selected}
+    aria-readonly={dayOutOfTheMonth}
+  >
     <CalendarButton
       className={clsx(
         'utrecht-calendar__table-days-item-day',
-        { 'utrecht-calendar__table-days-item-day--out-of-the-month': dayOutOfTheMonth },
-        { 'utrecht-calendar__table-days-item-day--is-today': isToday },
+        { 'utrecht-calendar__table-days-item-day--readonly': dayOutOfTheMonth },
+        { 'utrecht-calendar__table-days-item-day--current': isToday },
         { 'utrecht-calendar__table-days-item-day--emphasis': emphasis },
         { 'utrecht-calendar__table-days-item-day--selected': selected },
       )}

@@ -7,7 +7,9 @@
 
 .utrecht-table {
   @include utrecht-table;
+  @include utrecht-table--media-query-forced-colors;
 }
+
 .utrecht-table--distanced {
   @include utrecht-table--distanced;
 }

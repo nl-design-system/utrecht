@@ -163,6 +163,7 @@ export interface CalendarProps {
   nextMonthButtonTitle?: ReactNode;
   min?: string;
   max?: string;
+  autofocus?: boolean;
 
   /** @deprecated */
   onCalendarClick?: (dateTime: string) => void;
@@ -200,6 +201,7 @@ export const Calendar: FC<CalendarProps> = ({
   nextYearButtonTitle = 'Next year',
   previousMonthButtonTitle = 'Previous month',
   nextMonthButtonTitle = 'Next month',
+  autofocus,
   onCalendarClick,
   minDate,
   maxDate,
@@ -243,15 +245,21 @@ export const Calendar: FC<CalendarProps> = ({
 
   const [outputValue, setOutputValue] = useState(typeof value === 'string' ? parseISO(value) : null);
 
-  const [visibleMonth, setVisibleMonth] = useState(defaultDate || now);
-  const [focusDate, setFocusDate] = useState(defaultDate);
-  const [autofocusDate, setAutofocusDate] = useState(defaultDate);
+  const [visibleMonth, setVisibleMonth] = useState(outputValue || defaultDate || now);
+  const [focusDate, setFocusDate] = useState(outputValue || defaultDate);
+  const [autofocusDate, setAutofocusDate] = useState(autofocus ? outputValue || defaultDate : null);
 
   // if (defaultDate && !(focusDate && isEqual(focusDate, defaultDate))) {
   //   console.log('reset focus date');
   //   setFocusDate(defaultDate);
   //   setVisibleMonth(defaultDate);
   // }
+
+  if (typeof value === 'string') {
+    if (!(outputValue && isEqual(outputValue, parseISO(value)))) {
+      setOutputValue(parseISO(value));
+    }
+  }
 
   const calendar = createCalendar(visibleMonth);
   const start = startOfWeek(visibleMonth, { weekStartsOn: Day.MONDAY });
@@ -283,7 +291,7 @@ export const Calendar: FC<CalendarProps> = ({
     }),
   );
 
-  let focusValue: (date: Date) => void;
+  let focusValue: (_: Date) => void;
 
   const grid: Grid = {
     currentMonth: formatISOMonth(visibleMonth),
@@ -319,10 +327,13 @@ export const Calendar: FC<CalendarProps> = ({
           isToday: isSameDay(day.date, now),
           isCurrentMonth: isSameMonth(day.date, visibleMonth),
           onClick: () => {
+            console.log('onclick', formatISODate(day.date));
             setVisibleMonth(day.date);
             if (isSameMonth(day.date, visibleMonth)) {
               setFocusDate(day.date);
-              setOutputValue(day.date);
+              if (typeof value !== 'string') {
+                setOutputValue(day.date);
+              }
               focusValue(day.date);
               if (typeof onCalendarClick === 'function') {
                 onCalendarClick(formatISO(day.date));
@@ -344,7 +355,7 @@ export const Calendar: FC<CalendarProps> = ({
           dateObj: day.date,
           buttonRef,
           emphasis: day.emphasis || false,
-          selected: day.selected || (focusDate && isSameDay(day.date, focusDate)) || false,
+          selected: day.selected || (outputValue && isSameDay(day.date, new Date(outputValue))) || false,
           disabled:
             day.disabled || (_minDate && isBefore(day.date, _minDate)) || (_maxDate && isAfter(day.date, _maxDate)),
         };
@@ -361,14 +372,13 @@ export const Calendar: FC<CalendarProps> = ({
     return cells;
   };
 
-  focusValue = (date: Date) => {};
+  focusValue = (_: Date) => {};
 
   useEffect(() => {
-    if (focusDate) {
+    if (autofocusDate) {
       const cells = getCells();
-      const isoDate = formatISODate(focusDate);
+      const isoDate = formatISODate(autofocusDate);
       const cell = cells.find(({ date }) => date === isoDate);
-      console.log(`useEffect Focus ${isoDate}`, cell?.buttonRef.current);
       cell?.buttonRef.current?.focus();
     }
   }, [autofocusDate]);
@@ -383,7 +393,7 @@ export const Calendar: FC<CalendarProps> = ({
 
   // const move = setVisibleMonth;
   const move = (date: Date) => {
-    console.log(`-> move from ${formatISODate(focusDate)} to ${formatISODate(date)}`);
+    console.log(`-> move from ${focusDate ? formatISODate(focusDate) : '-'} to ${formatISODate(date)}`);
     setFocusDate(date);
     setAutofocusDate(date);
     setVisibleMonth(date);
@@ -492,7 +502,7 @@ export const Calendar: FC<CalendarProps> = ({
   };
 
   return (
-    <div className="utrecht-calendar" dir="auto">
+    <div className="utrecht-calendar" dir="ltr">
       <CalendarNavigation>
         <CalendarNavigationButtons
           previousIcon={<IconArrowLeftDouble title={grid.actions.showPreviousYear.label} />}

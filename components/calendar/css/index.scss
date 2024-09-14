@@ -28,27 +28,27 @@
 }
 
 .utrecht-calendar__table-days-item-day:hover {
-  @include utrecht-calendar__table-days-item-day-hover;
+  @include utrecht-calendar__table-days-item-day--hover;
 }
 
 .utrecht-calendar__table-days-item-day:focus {
-  @include utrecht-calendar__table-days-item-day-focus;
+  @include utrecht-calendar__table-days-item-day--focus;
 }
 
 .utrecht-calendar__table-days-item-day:active {
-  @include utrecht-calendar__table-days-item-day-active;
+  @include utrecht-calendar__table-days-item-day--active;
 }
 
 .utrecht-calendar__table-days-item-day:disabled {
-  @include utrecht-calendar__table-days-item-day-disabled;
+  @include utrecht-calendar__table-days-item-day--disabled;
 }
 
-.utrecht-calendar__table-days-item-day--out-of-the-month {
-  @include utrecht-calendar__table-days-item-day--out-of-the-month;
+.utrecht-calendar__table-days-item-day--readonly {
+  @include utrecht-calendar__table-days-item-day--readonly;
 }
 
-.utrecht-calendar__table-days-item-day--is-today {
-  @include utrecht-calendar__table-days-item-day--is-today;
+.utrecht-calendar__table-days-item-day--current {
+  @include utrecht-calendar__table-days-item-day--current;
 }
 
 .utrecht-calendar__table-days-item-day--emphasis {

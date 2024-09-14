@@ -16,6 +16,13 @@
   width: 100%;
 }
 
+@mixin utrecht-table--media-query-forced-colors {
+  @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
+    --utrecht-table-cell-selected-background-color: Highlight;
+    --utrecht-table-cell-selected-color: HighlightText;
+  }
+}
+
 @mixin utrecht-table--distanced {
   --utrecht-space-around: 1;
 }

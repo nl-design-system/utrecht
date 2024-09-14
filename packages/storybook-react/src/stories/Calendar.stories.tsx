@@ -155,6 +155,13 @@ export const Default: Story = {
   },
 };
 
+export const Autofocus: Story = {
+  args: {
+    defaultValue: addDays(new Date(), 3).toISOString(),
+    autofocus: true,
+  },
+};
+
 export const LimitedRangeCalendar: Story = {
   args: {
     defaultValue: new Date().toISOString(),
