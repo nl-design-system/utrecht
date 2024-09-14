@@ -1,0 +1,30 @@
+{/* @license CC0-1.0 */}
+
+import { ArgsTable, Canvas, Meta, Story } from "@storybook/addon-docs";
+import { argTypes, BadgeButton, defaultArgs, exampleArgs } from "../story-template";
+import "../index.scss";
+
+<Meta
+  id="css-badge-button"
+  title="CSS Component/Badge as button"
+  component={BadgeButton}
+  argTypes={argTypes}
+  args={defaultArgs}
+  parameters={{
+    status: {
+      type: "WORK IN PROGRESS",
+    },
+  }}
+/>
+
+# Badge button
+
+Styling via the `.utrecht-badge-button` class name:
+
+<Canvas>
+  <Story name="Default" args={exampleArgs}>
+    {BadgeButton.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable story="Default" />
