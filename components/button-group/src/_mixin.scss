@@ -6,6 +6,8 @@
 @mixin utrecht-button-group {
   align-items: baseline;
   background-color: var(--utrecht-button-group-background-color);
+  container-type: inline-size;
+  container-name: utrecht-button-group;
   display: flex;
   flex-wrap: wrap;
   gap: var(--utrecht-button-group-inline-gap, 1em);
@@ -28,4 +30,18 @@
 @mixin utrecht-button-group--column {
   flex-direction: column;
   gap: var(--utrecht-button-group-block-gap, 1em);
+}
+
+@mixin utrecht-button-group--max-inline-size {
+  --utrecht-button-inline-size: 100%;
+  --utrecht-button-max-inline-size: 100%;
+}
+
+@mixin utrecht-button-group--container {
+  @container utrecht-button-group (max-inline-size: 400px) {
+    * {
+      --utrecht-button-inline-size: 100%;
+      --utrecht-button-max-inline-size: 100%;
+    }
+  }
 }
