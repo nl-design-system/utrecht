@@ -108,6 +108,12 @@ jobs:
             exit 1
           fi
 
+      - name: Upload artifact for GitHub Pages
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1
+        if: github.ref == 'refs/heads/main'
+        with:
+          path: packages/design-system-website/dist/
+
       - name: "Retain build artifact: website"
         uses: actions/upload-artifact@v4.3.3
         with:
@@ -198,29 +204,18 @@ jobs:
     needs: build
     if: github.ref == 'refs/heads/main'
 
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy-pages.outputs.page_url }}
+
+    permissions:
+      pages: write
+      id-token: write
+
     steps:
-      - name: Checkout release branch
-        uses: actions/checkout@v4.1.6
-
-      - name: "Restore build artifact: website"
-        uses: actions/download-artifact@v4.1.7
-        with:
-          name: website
-          path: packages/design-system-website/dist/
-
-      - name: Continuous Deployment to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
-        with:
-          branch: gh-pages
-          folder: packages/design-system-website/dist/
-
-      - name: Continuous Deployment to designsystem.utrecht.nl
-        uses: JamesIves/github-pages-deploy-action@v4.6.0
-        with:
-          branch: ${{ env.MAIN_BRANCH }}
-          folder: packages/design-system-website/dist/
-          repository-name: nl-design-system/designsystem.utrecht.nl
-          token: ${{ secrets.DOCS_GH_TOKEN }}
+      - name: Deploy to GitHub Pages
+        id: deploy-pages
+        uses: actions/deploy-pages@d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e # v4.0.5
 
   publish-npm:
     runs-on: ubuntu-latest
