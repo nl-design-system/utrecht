@@ -1,5 +1,19 @@
 # @utrecht/textbox-css
 
+## 1.3.0
+
+### Minor Changes
+
+- 48ccd57: Support bold form controls.
+
+  Add the following design tokens:
+
+  - `utrecht.form-control.font-weight` (common token)
+  - `utrecht.listbox.font-weight`
+  - `utrecht.select.font-weight`
+  - `utrecht.textarea.font-weight`
+  - `utrecht.textbox.font-weight`
+
 ## 1.2.0
 
 ### Minor Changes

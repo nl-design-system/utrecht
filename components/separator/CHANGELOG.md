@@ -1,5 +1,11 @@
 # @utrecht/separator-css
 
+## 1.2.0
+
+### Minor Changes
+
+- b5dee01: Added metadata for separator tokens.
+
 ## 1.1.0
 
 ### Minor Changes

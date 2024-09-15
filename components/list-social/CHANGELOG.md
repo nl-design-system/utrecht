@@ -1,5 +1,11 @@
 # @utrecht/list-social-css
 
+## 1.2.0
+
+### Minor Changes
+
+- c5010be: Added metadata for list-social tokens.
+
 ## 1.1.0
 
 ### Minor Changes

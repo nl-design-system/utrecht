@@ -1,5 +1,11 @@
 # @utrecht/surface-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 76087d7: Added metadata for surface tokens.
+
 ## 1.1.0
 
 ### Minor Changes

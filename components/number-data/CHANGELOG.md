@@ -1,5 +1,11 @@
 # @utrecht/number-data-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 9ed7271: Added metadata for number-data tokens.
+
 ## 1.1.0
 
 ### Minor Changes

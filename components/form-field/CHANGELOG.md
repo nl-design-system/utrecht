@@ -1,5 +1,11 @@
 # @utrecht/form-field-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 1cd6556: Added metadata for form-field tokens.
+
 ## 1.1.0
 
 ### Minor Changes

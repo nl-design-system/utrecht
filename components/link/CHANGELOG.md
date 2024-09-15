@@ -1,5 +1,11 @@
 # @utrecht/link-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 01ce66c: Added metadata for link tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/figure-css
 
+## 1.2.0
+
+### Minor Changes
+
+- e3225a1: Added metadata for figure tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,12 @@
 # @utrecht/top-task-link-css
 
+## 1.2.0
+
+### Minor Changes
+
+- ce3737b: - Added metadata for toptask-link tokens.
+  - Added missing tokens that were available as CSS variants in the mixin.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/blockquote-css
 
+## 1.2.0
+
+### Minor Changes
+
+- ba76d08: Added metadata for blockquote tokens.
+
 ## 1.1.0
 
 ### Minor Changes

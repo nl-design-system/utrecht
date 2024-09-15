@@ -1,5 +1,11 @@
 # @utrecht/checkbox-css
 
+## 1.3.0
+
+### Minor Changes
+
+- c2402ef: Added metadata for checkbox tokens.
+
 ## 1.2.0
 
 ### Minor Changes

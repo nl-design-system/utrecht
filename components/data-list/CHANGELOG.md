@@ -1,5 +1,11 @@
 # @utrecht/data-list-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 5963706: Added metadata for data-list tokens.
+
 ## 1.1.0
 
 ### Minor Changes

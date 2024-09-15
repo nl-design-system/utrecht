@@ -1,5 +1,13 @@
 # @utrecht/radio-button-css
 
+## 1.3.0
+
+### Minor Changes
+
+- 228377c: - Added metadata for radio-button tokens.
+  - Added `margin-inline-end` token that was available in mixin.
+  - Reordered some tokens in json for better scanning of tokens.
+
 ## 1.2.0
 
 ### Minor Changes

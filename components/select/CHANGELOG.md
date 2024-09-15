@@ -1,5 +1,22 @@
 # @utrecht/select-css
 
+## 1.3.0
+
+### Minor Changes
+
+- 52364b1: - Added metadata for select
+  - Changed syntax for background-image token
+- 7967cee: Added token `select.invalid.border-block-end-width` that is available as CSS variable.
+- 48ccd57: Support bold form controls.
+
+  Add the following design tokens:
+
+  - `utrecht.form-control.font-weight` (common token)
+  - `utrecht.listbox.font-weight`
+  - `utrecht.select.font-weight`
+  - `utrecht.textarea.font-weight`
+  - `utrecht.textbox.font-weight`
+
 ## 1.2.0
 
 ### Minor Changes

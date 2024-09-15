@@ -1,5 +1,11 @@
 # @utrecht/logo-image-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 8295595: Added metadata for logo-image tokens.
+
 ## 1.1.0
 
 ### Minor Changes

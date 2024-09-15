@@ -1,5 +1,11 @@
 # @utrecht/document-css
 
+## 1.2.0
+
+### Minor Changes
+
+- a42a56a: Added metadata for document tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/link-list-css
 
+## 2.1.0
+
+### Minor Changes
+
+- ddf407e: Added metadata for link-list tokens.
+
 ## 2.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @utrecht/data-placeholder-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 4f24665: Added metadata for data-placeholder tokens.
+
 ## 1.1.0
 
 ### Minor Changes

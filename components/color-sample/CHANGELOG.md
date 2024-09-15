@@ -1,5 +1,11 @@
 # @utrecht/color-sample-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 6444541: Added metadata for color-sample tokens.
+
 ## 1.1.0
 
 ### Minor Changes

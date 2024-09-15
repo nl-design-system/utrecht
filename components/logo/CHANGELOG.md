@@ -1,5 +1,11 @@
 # @utrecht/logo-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 3853e3d: Added metadata for logo tokens.
+
 ## 1.1.0
 
 ### Minor Changes

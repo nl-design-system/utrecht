@@ -1,5 +1,11 @@
 # @utrecht/badge-data-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 691719c: Added metadata for badge-data tokens.
+
 ## 1.1.0
 
 ### Minor Changes

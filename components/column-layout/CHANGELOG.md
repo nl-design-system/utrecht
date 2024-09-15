@@ -1,5 +1,11 @@
 # @utrecht/column-layout-css
 
+## 1.2.0
+
+### Minor Changes
+
+- c4efa72: Added metadata for column-layout tokens.
+
 ## 1.1.0
 
 ### Minor Changes

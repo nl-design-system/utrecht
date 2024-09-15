@@ -1,5 +1,11 @@
 # @utrecht/drawer-css
 
+## 1.2.0
+
+### Minor Changes
+
+- b0b764f: Added metadata for drawer tokens.
+
 ## 1.1.0
 
 ### Minor Changes

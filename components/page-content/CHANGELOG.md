@@ -1,5 +1,11 @@
 # @utrecht/page-content-css
 
+## 1.2.0
+
+### Minor Changes
+
+- a74f8ea: Added metadata for page-content tokens.
+
 ## 1.1.0
 
 ### Minor Changes

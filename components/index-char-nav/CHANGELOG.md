@@ -1,5 +1,11 @@
 # @utrecht/index-char-nav-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 67d7bf1: Added metadata for index-char-nav tokens.
+
 ## 1.1.0
 
 ### Minor Changes

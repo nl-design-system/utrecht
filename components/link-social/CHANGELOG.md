@@ -1,5 +1,12 @@
 # @utrecht/link-social-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 738162f: - Added metadata for link-social tokens.
+  - Added missing token for --utrecht-link-social-icon-size variable which was found in the mixin.
+
 ## 1.1.0
 
 ### Minor Changes

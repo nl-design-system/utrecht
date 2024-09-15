@@ -1,5 +1,11 @@
 # @utrecht/ordered-list-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 301ae49: Added metadata for ordered-list tokens.
+
 ## 1.1.0
 
 ### Minor Changes

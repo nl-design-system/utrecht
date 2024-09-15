@@ -1,5 +1,11 @@
 # @utrecht/calendar-css
 
+## 1.2.1
+
+### Patch Changes
+
+- 5c7f3b2: - Changed figma-support value for calendar tokens.
+
 ## 1.2.0
 
 ### Minor Changes

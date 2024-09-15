@@ -1,5 +1,11 @@
 # @utrecht/unordered-list-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 7736378: Added metadata for unordered list tokens.
+
 ## 1.1.0
 
 ### Minor Changes

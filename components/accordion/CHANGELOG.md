@@ -1,5 +1,14 @@
 # @utrecht/accordion-css
 
+## 1.4.0
+
+### Minor Changes
+
+- a17c04f: - Fixed metadata for `border-radius` token of accordion.
+  - Added missing tokens and metadata for `accordion.section`
+- 3c1e66d: Removed white space between content and expand button.
+  Added row gap token to accordion for spacing.
+
 ## 1.3.0
 
 ### Minor Changes

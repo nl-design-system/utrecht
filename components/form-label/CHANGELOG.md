@@ -1,5 +1,11 @@
 # @utrecht/form-label-css
 
+## 1.3.0
+
+### Minor Changes
+
+- c8520fe: Support styling of a form field `<label>` element that contains a checkbox or radio button, within `class="utrecht-html"`.
+
 ## 1.2.0
 
 ### Minor Changes

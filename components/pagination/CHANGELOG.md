@@ -1,5 +1,11 @@
 # @utrecht/pagination-css
 
+## 1.2.0
+
+### Minor Changes
+
+- e5e0a4a: Added metadata for pagination tokens.
+
 ## 1.1.0
 
 ### Minor Changes

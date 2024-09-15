@@ -1,5 +1,31 @@
 # @utrecht/component-library-vue
 
+## 2.1.0
+
+### Minor Changes
+
+- 8431fb9: Add the following design tokens to breadcrumb navigation:
+
+  - `utrecht.breadcrumb-nav.line-height`
+  - `utrecht.breadcrumb-nav.link.active.color`
+  - `utrecht.breadcrumb-nav.link.active.text-decoration`
+
+- d6bb92d: Add Number badge component as replacement for Badge counter
+- 48ccd57: Support bold form controls.
+
+  Add the following design tokens:
+
+  - `utrecht.form-control.font-weight` (common token)
+  - `utrecht.listbox.font-weight`
+  - `utrecht.select.font-weight`
+  - `utrecht.textarea.font-weight`
+  - `utrecht.textbox.font-weight`
+
+### Patch Changes
+
+- 5695c6c: Improve table component CSS to explicitly fallback to `background-color: transparent` to have a valid CSS value. ([GitHub Issue nl-design-system/utrecht#2435](https://github.com/nl-design-system/utrecht/issues/2435))
+- 9aa2be4: Fix regression in `utrecht.button.font-family` support.
+
 ## 2.0.0
 
 ### Major Changes
