@@ -1,5 +1,5 @@
 ---
-"@utrecht/utrecht-badge-list-css": major
+"@utrecht/badge-list-css": major
 ---
 
 - Renamed `utrecht-badge-list-item-margin-block` to `utrecht-badge-list-row-gap`.
