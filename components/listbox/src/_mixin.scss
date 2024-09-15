@@ -139,9 +139,12 @@
 }
 
 @mixin utrecht-listbox__option--active {
-  background-color: var(--utrecht-listbox-option-active-background-color);
-  color: var(--utrecht-listbox-option-active-color);
-  font-weight: var(--utrecht-listbox-option-active-font-weight);
+  background-color: var(
+    --utrecht-listbox-option-active-background-color,
+    var(--utrecht-listbox-option-background-color)
+  );
+  color: var(--utrecht-listbox-option-active-color, var(--utrecht-listbox-option-color));
+  font-weight: var(--utrecht-listbox-option-active-font-weight), var(--utrecht-listbox-option-font-weight);
 }
 
 @mixin utrecht-listbox__option--selected {
