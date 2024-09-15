@@ -1,5 +1,11 @@
 # @utrecht/page-header-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 6558710: Added metadata for page-header tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/rich-text-css
 
+## 1.1.0
+
+### Minor Changes
+
+- fd80a67: Added metadata for rich text tokens.
+
 ## 1.0.0
 
 ### Major Changes

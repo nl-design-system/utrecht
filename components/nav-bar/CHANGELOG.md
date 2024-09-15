@@ -1,5 +1,11 @@
 # @utrecht/nav-bar-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 4e2a6dc: Added metadata for nav-bar tokens.
+
 ## 1.1.0
 
 ### Minor Changes

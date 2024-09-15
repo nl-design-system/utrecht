@@ -1,5 +1,11 @@
 # @utrecht/button-group-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 4bea661: Added metadata for buttongroup tokens.
+
 ## 1.1.0
 
 ### Minor Changes

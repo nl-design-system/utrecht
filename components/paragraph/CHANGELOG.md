@@ -1,5 +1,11 @@
 # @utrecht/paragraph-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 526ba87: Added metadata for paragraph tokens.
+
 ## 1.1.0
 
 ### Minor Changes

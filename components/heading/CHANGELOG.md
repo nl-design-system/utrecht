@@ -1,5 +1,11 @@
 # @utrecht/heading-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 595e000: Added metadata for heading tokens.
+
 ## 1.1.0
 
 ### Minor Changes

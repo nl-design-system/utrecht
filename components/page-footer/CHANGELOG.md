@@ -1,5 +1,11 @@
 # @utrecht/page-footer-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 5558822: Added metadata for page-footer tokens.
+
 ## 1.1.0
 
 ### Minor Changes

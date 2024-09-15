@@ -1,5 +1,11 @@
 # @utrecht/pre-heading-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 64c613c: Added metadata for pre-heading tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/heading-group-css
 
+## 1.2.0
+
+### Minor Changes
+
+- ff5fc91: Added metadata for heading-group tokens.
+
 ## 1.1.0
 
 ### Minor Changes

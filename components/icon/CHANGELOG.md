@@ -1,5 +1,11 @@
 # @utrecht/icon
 
+## 1.2.0
+
+### Minor Changes
+
+- 888bc9b: Added metadata for icon tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/code-block-css
 
+## 1.2.0
+
+### Minor Changes
+
+- c852de5: Added metadata for code-block tokens.
+
 ## 1.1.0
 
 ### Minor Changes

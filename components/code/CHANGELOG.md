@@ -1,5 +1,11 @@
 # @utrecht/code-css
 
+## 1.2.0
+
+### Minor Changes
+
+- f196a30: Added metadata for code tokens.
+
 ## 1.1.0
 
 ### Minor Changes

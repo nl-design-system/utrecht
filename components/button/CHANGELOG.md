@@ -1,5 +1,17 @@
 # @utrecht/button-css
 
+## 1.4.0
+
+### Minor Changes
+
+- 9ba581f: - Added metadata for button tokens.
+  - Fixed wrong design token metadata syntax for border-width.
+
+### Patch Changes
+
+- 9aa2be4: Fix regression in `utrecht.button.font-family` support.
+- 2b97820: Changed `utrecht.button. text-transform` setting `"nl.nldesignsystem.figma.supports-token"` from `true` to `false` as it's not used for the Figma component within the 'Voorbeeld' library.
+
 ## 1.3.0
 
 ### Minor Changes

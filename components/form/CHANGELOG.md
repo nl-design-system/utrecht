@@ -1,5 +1,11 @@
 # @utrecht/form-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 9059e98: Added metadata for form tokens.
+
 ## 1.1.0
 
 ### Minor Changes

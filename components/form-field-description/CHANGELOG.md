@@ -1,5 +1,11 @@
 # @utrecht/form-field-description-css
 
+## 1.3.0
+
+### Minor Changes
+
+- 5ab0a68: Added metadata for form-field-description tokens.
+
 ## 1.2.0
 
 ### Minor Changes

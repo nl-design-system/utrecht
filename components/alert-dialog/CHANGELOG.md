@@ -1,5 +1,11 @@
 # @utrecht/alert-dialog-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 89580da: Added metadata for alert-dialog tokens.
+
 ## 1.1.0
 
 ### Minor Changes

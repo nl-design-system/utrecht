@@ -1,5 +1,11 @@
 # @utrecht/map-marker-css
 
+## 1.2.0
+
+### Minor Changes
+
+- 3b10052: Added metadata for map-marker tokens.
+
 ## 1.1.0
 
 ### Minor Changes

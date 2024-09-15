@@ -1,5 +1,11 @@
 # @utrecht/heading-2-css
 
+## 1.2.0
+
+### Minor Changes
+
+- c022510: Added metadata for heading 1 to 6 tokens.
+
 ## 1.1.0
 
 ### Minor Changes

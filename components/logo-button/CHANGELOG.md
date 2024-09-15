@@ -1,5 +1,11 @@
 # @utrecht/logo-button-css
 
+## 1.2.0
+
+### Minor Changes
+
+- fc98af1: Added metadata for logo-button tokens.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @utrecht/form-toggle-css
 
+## 1.2.1
+
+### Patch Changes
+
+- 7814d98: Fixed form toggle token variable name to be in line with our naming convention.
+
+  `--utrecht-form-toggle-background-disabled-background-color` to `--utrecht-form-toggle-disabled-background-color`
+
 ## 1.2.0
 
 ### Minor Changes
