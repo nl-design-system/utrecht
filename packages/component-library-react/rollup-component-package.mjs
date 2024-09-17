@@ -61,7 +61,7 @@ export const createComponentPackageConfig = (path) => {
       ],
     },
     {
-      input: new URL('./src/index.tsx', path).pathname,
+      input: new URL('./src/css.tsx', path).pathname,
       output: [
         {
           file: 'dist/css.js',
