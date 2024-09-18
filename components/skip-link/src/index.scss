@@ -26,8 +26,14 @@
   @include utrecht-skip-link--visible;
 }
 
-.utrecht-skip-link--focus,
-.utrecht-skip-link:focus,
+/*
+ * @deprecated `utrecht-skip-link--focus` is deprecated, use `utrecht-skip-link--focus-visible` instead.
+ */
+.utrecht-skip-link--focus {
+  @include utrecht-skip-link--focus-visible;
+}
+
+.utrecht-skip-link--focus-visible,
 .utrecht-skip-link:focus-visible {
-  @include utrecht-skip-link--focus;
+  @include utrecht-skip-link--focus-visible;
 }

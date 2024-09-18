@@ -29,10 +29,18 @@
   text-decoration: var(--utrecht-skip-link-text-decoration);
 }
 
+/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-skip-link--focus {
+}
+
+@mixin utrecht-skip-link--focus-visible {
   @include utrecht-focus-ring;
 
-  text-decoration: var(--utrecht-skip-link-focus-text-decoration);
+  /* `var(--utrecht-skip-link-focus-text-decoration)` is deprecated, but for now we keep it for backwards compatibility */
+  text-decoration: var(
+    --utrecht-skip-link-focus-visible-text-decoration,
+    var(--utrecht-skip-link-focus-text-decoration)
+  );
 }
 
 @mixin utrecht-skip-link--hidden {
