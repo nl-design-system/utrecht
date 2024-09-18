@@ -50,15 +50,32 @@
 }
 
 @mixin utrecht-unordered-list__marker {
+  --utrecht-unordered-list-marker-icon: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' fill='currentColor' /%3E%3C/svg%3E");
+
   background-color: var(--utrecht-unordered-list-marker-color, currentColor);
   block-size: var(--utrecht-unordered-list-marker-size, 0.5em);
   content: "";
   display: inline-block;
   inline-size: var(--utrecht-unordered-list-marker-size, 0.5em);
-  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 8 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' r='4' fill='currentColor' /%3E%3C/svg%3E");
+  mask-image: var(--utrecht-unordered-list-marker-icon);
   mask-repeat: no-repeat;
   mask-size: contain;
   padding-inline-end: var(--utrecht-unordered-list-marker-padding-inline-end, 1ch);
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
+}
+
+@mixin utrecht-unordered-list__custom-item {
+  --utrecht-unordered-list-marker-icon: none;
+  --utrecht-unordered-list-marker-color: transparent;
+  --utrecht-unordered-list-marker-size: 0;
+  --utrecht-unordered-list-marker-padding-inline-end: 0;
+}
+
+@mixin utrecht-unordered-list__custom-marker {
+  block-size: var(--utrecht-unordered-list-custom-marker-size, 0.5em);
+  color: var(--utrecht-unordered-list-custom-marker-color);
+  display: inline-block;
+  inline-size: var(--utrecht-unordered-list-custom-marker-size, 0.5em);
+  margin-inline-end: var(--utrecht-unordered-list-custom-marker-margin-inline-end, 1ch);
 }

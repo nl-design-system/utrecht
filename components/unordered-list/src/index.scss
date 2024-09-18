@@ -44,3 +44,10 @@
 .utrecht-unordered-list__marker {
   @include utrecht-unordered-list__marker;
 }
+.utrecht-unordered-list__custom-item {
+  @include utrecht-unordered-list__custom-item;
+}
+
+.utrecht-unordered-list__custom-marker {
+  @include utrecht-unordered-list__custom-marker;
+}
