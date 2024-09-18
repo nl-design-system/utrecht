@@ -14,6 +14,7 @@
    */
   background-color: var(--utrecht-badge-background-color, hsl(0 0% 0%));
   border-radius: var(--utrecht-badge-border-radius, 0.5ch);
+  box-sizing: border-box;
   color: var(--utrecht-badge-color, hsl(0 0% 100%));
   display: inline-block;
   font-family: var(--utrecht-document-font-family, sans-serif);
