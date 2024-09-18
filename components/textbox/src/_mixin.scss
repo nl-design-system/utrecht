@@ -238,26 +238,12 @@ $utrecht-support-prince-xml: false !default;
 }
 
 @mixin utrecht-textbox--html-input {
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
+  &:focus {
+    @include utrecht-textbox--focus;
+  }
 
-  @if $utrecht-focus-visible-fallback {
-    &:focus {
-      @include utrecht-textbox--focus;
-      @include utrecht-textbox--focus-visible;
-    }
-
-    &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    &:focus {
-      @include utrecht-textbox--focus;
-    }
-
-    &:focus-visible {
-      @include utrecht-textbox--focus-visible;
-    }
+  &:focus-visible {
+    @include utrecht-textbox--focus-visible;
   }
 
   &:invalid,

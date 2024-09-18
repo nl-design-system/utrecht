@@ -43,29 +43,14 @@
   color: var(--utrecht-toptask-link-focus-color, var(--utrecht-toptask-link-color));
 }
 
-// The workaround for missing `:focus-visible` support makes the code quite complex,
-// keep the ideal version around to restore it easily when browser support improves.
-
-@if $utrecht-focus-visible-fallback {
-  .utrecht-toptask-link:focus {
-    @extend .utrecht-toptask-link--focus;
-    @extend .utrecht-toptask-link--focus-visible;
-  }
-
-  /* override the `:focus` selector above */
-  /* stylelint-disable-next-line no-descending-specificity */
-  .utrecht-toptask-link:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset;
-  }
-} @else {
-  .utrecht-toptask-link:focus-visible {
-    @extend .utrecht-toptask-link-containern--focus-visible;
-  }
-
-  .utrecht-toptask-link:focus {
-    @extend .utrecht-toptask-link--focus;
-  }
+.utrecht-toptask-link:focus-visible {
+  @extend .utrecht-toptask-link--focus-visible;
 }
+
+.utrecht-toptask-link:focus {
+  @extend .utrecht-toptask-link--focus;
+}
+
 .utrecht-toptask-link__title {
   display: block;
 }
