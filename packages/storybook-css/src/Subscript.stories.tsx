@@ -3,7 +3,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Paragraph, Subscript } from '@utrecht/component-library-react/dist/css-module';
+import { Paragraph, Subscript } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/subscript-css/README.md?raw';
 import tokensDefinition from '@utrecht/subscript-css/src/tokens.json';
