@@ -31,6 +31,7 @@ $utrecht-support-prince-xml: false !default;
   ); /* harden with `initial` */
 
   inline-size: 100%;
+  line-height: var(--utrecht-select-line-height, var(--utrecht-form-control-line-height, initial));
   min-block-size: var(--utrecht-select-min-block-size, var(--utrecht-pointer-target-min-size, 44px));
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-control-max-inline-size));
