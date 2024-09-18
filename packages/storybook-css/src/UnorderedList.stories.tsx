@@ -11,6 +11,12 @@ import React from 'react';
 import { UnorderedListStory } from './UnorderedList';
 import { designTokenStory } from './design-token-story';
 
+const CustomBulletIcon = () => (
+  <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="4" r="4" fill="currentColor" />
+  </svg>
+);
+
 const meta = {
   title: 'CSS Component/Unordered list',
   id: 'css-unordered-list',
@@ -278,6 +284,34 @@ export const ForceColorMode: Story = {
     docs: {
       description: {
         story: 'Use the `utrecht-unordered-list--forced-colors` modifier when you need to support forced color mode.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const WithCustomBulletIcon: Story = {
+  args: {
+    marker: <CustomBulletIcon />,
+    items: [
+      {
+        children: 'Lorem',
+      },
+      {
+        children: 'Ipsum',
+      },
+      {
+        children: 'Dolor',
+      },
+    ],
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Use the `utrecht-unordered-list__custom-marker`, `utrecht-unordered-list__custom-item` modifier to add a custom bullet icon.',
       },
     },
     status: {

@@ -15,6 +15,7 @@ interface UnorderedListStoryProps extends UnorderedListProps {
   items?: UnorderedListItemData[];
   htmlContent?: boolean;
   nested?: boolean;
+  marker?: ReactNode;
 }
 
 const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
@@ -35,6 +36,7 @@ export const UnorderedListStory = ({
   items,
   htmlContent,
   nested,
+  marker,
 }: UnorderedListStoryProps) => {
   return (
     <UnorderedList
@@ -54,7 +56,7 @@ export const UnorderedListStory = ({
             </li>
           ))
         : items?.map(({ children: subChildren, items: subItems }, index) => (
-            <UnorderedListItem key={index}>
+            <UnorderedListItem marker={marker} key={index}>
               {subChildren}
               {subItems && UnorderedListStory({ items: subItems, nested: true })}
             </UnorderedListItem>
