@@ -210,25 +210,11 @@ however browsers don't seem to have implemented great looking supixel tweening y
     @include utrecht-link--active;
   }
 
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
+  &:any-link:focus {
+    @include utrecht-link--focus;
+  }
 
-  @if $utrecht-focus-visible-fallback {
-    &:any-link:focus {
-      @include utrecht-link--focus;
-      @include utrecht-link--focus-visible;
-    }
-
-    &:any-link:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    &:any-link:focus {
-      @include utrecht-link--focus;
-    }
-
-    &:any-link:focus-visible {
-      @include utrecht-link--focus-visible;
-    }
+  &:any-link:focus-visible {
+    @include utrecht-link--focus-visible;
   }
 }

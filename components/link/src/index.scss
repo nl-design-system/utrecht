@@ -36,33 +36,16 @@
   @include utrecht-link--focus-visible;
 }
 
-// The workaround for missing `:focus-visible` support makes the code quite complex,
-// keep the ideal version around to restore it easily when browser support improves.
+/* The `:focus-visible` styling for the focus should apply disabled links too, in case of `tabindex="0"` */
+.utrecht-link--html-span:focus-visible,
+.utrecht-link--html-a:focus-visible {
+  @include utrecht-link--focus-visible;
+}
 
-@if $utrecht-focus-visible-fallback {
-  /* `:focus` should only apply to links with `href`, not on disabled links */
-  .utrecht-link--html-span:focus,
-  .utrecht-link--html-a:any-link:focus {
-    @include utrecht-link--focus;
-    @include utrecht-link--focus-visible;
-  }
-
-  .utrecht-link--html-span:focus:not(:focus-visible),
-  .utrecht-link--html-a:any-link:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset;
-  }
-} @else {
-  /* The `:focus-visible` styling for the focus should apply disabled links too, in case of `tabindex="0"` */
-  .utrecht-link--html-span:focus-visible,
-  .utrecht-link--html-a:focus-visible {
-    @include utrecht-link--focus-visible;
-  }
-
-  /* `:focus` should only apply to links with `href`, not on disabled links */
-  .utrecht-link--html-span:focus,
-  .utrecht-link--html-a:any-link:focus {
-    @include utrecht-link--focus;
-  }
+/* `:focus` should only apply to links with `href`, not on disabled links */
+.utrecht-link--html-span:focus,
+.utrecht-link--html-a:any-link:focus {
+  @include utrecht-link--focus;
 }
 
 .utrecht-link--html-span:active,
