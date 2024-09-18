@@ -4,8 +4,6 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-$utrecht-focus-visible-fallback: true !default;
-
 @mixin utrecht-focus-ring {
   /* - The browser default focus ring should apply when these CSS custom properties are not set.
    * - Make the `box-shadow` value available, so components that have their own `box-shadow`
@@ -19,12 +17,6 @@ $utrecht-focus-visible-fallback: true !default;
   outline-offset: var(--utrecht-focus-outline-offset, revert);
   outline-style: var(--utrecht-focus-outline-style, revert);
   outline-width: var(--utrecht-focus-outline-width, revert);
-}
-
-@mixin utrecht-focus-ring-reset {
-  /* undo focus ring */
-  box-shadow: none;
-  outline-style: revert;
 }
 
 /* stylelint-disable-next-line block-no-empty */
@@ -41,16 +33,5 @@ $utrecht-focus-visible-fallback: true !default;
   }
   :focus-visible {
     @include utrecht-focus-visible;
-  }
-}
-
-// When support is needed for Safari versions that do not support :focus-visible,
-// use this mixin instead of the `utrecht-focus-pseudo-classes` mixin.
-@mixin utrecht-focus-pseudo-classes-backwards-compatible {
-  &:focus {
-    @include utrecht-focus-ring;
-  }
-  &:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset;
   }
 }
