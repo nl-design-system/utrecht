@@ -4,7 +4,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Textarea } from '@utrecht/component-library-react';
 import type { TextareaProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/textarea-css/README.md?raw';
+import anatomyDocs from '@utrecht/textarea-css/docs/anatomy.nl.md?raw';
+import privacyDocs from '@utrecht/textarea-css/docs/privacy.nl.md?raw';
+import htmlDocs from '@utrecht/textarea-css/docs/technology-html.nl.md?raw';
 import tokensDefinition from '@utrecht/textarea-css/src/tokens.json';
 import clsx from 'clsx';
 import React from 'react';
@@ -116,7 +120,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, anatomyDocs, htmlDocs, privacyDocs]),
       },
     },
   },
