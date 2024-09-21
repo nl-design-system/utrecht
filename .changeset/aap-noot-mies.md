@@ -1,9 +1,9 @@
 ---
-"@utrecht/code-block-css": minor
-"@utrecht/code-css": minor
-"@utrecht/color-sample-css": minor
-"@utrecht/drawer-css": minor
-"@utrecht/pre-heading-css": minor
+"@utrecht/code-block-css": patch
+"@utrecht/code-css": patch
+"@utrecht/color-sample-css": patch
+"@utrecht/drawer-css": patch
+"@utrecht/pre-heading-css": patch
 ---
 
 Changed value for Figma support metadata:
