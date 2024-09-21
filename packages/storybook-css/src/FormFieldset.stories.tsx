@@ -5,7 +5,12 @@ import { Fieldset, FieldsetLegend, Paragraph } from '@utrecht/component-library-
 import type { FieldsetProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/form-fieldset-css/README.md?raw';
+import anatomyDocs from '@utrecht/form-fieldset-css/docs/anatomy.nl.md?raw';
+import cssDocs from '@utrecht/form-fieldset-css/docs/technology-css.nl.md?raw';
+import htmlDocs from '@utrecht/form-fieldset-css/docs/technology-html.nl.md?raw';
+import wcagDocs from '@utrecht/form-fieldset-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/form-fieldset-css/src/tokens.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { FormFieldsetDiv, FormFieldsetLegendDiv } from './FormFieldsetDiv';
@@ -95,7 +100,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, anatomyDocs, htmlDocs, cssDocs, wcagDocs]),
       },
     },
   },
