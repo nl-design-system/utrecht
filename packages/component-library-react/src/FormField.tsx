@@ -3,6 +3,7 @@ import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode 
 
 export interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
   description?: ReactNode;
+  errorMessage?: ReactNode;
   input?: ReactNode; // TODO: Should this be named `control` instead of `input`?
   invalid?: boolean;
   label?: ReactNode;
@@ -11,7 +12,17 @@ export interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
 
 export const FormField = forwardRef(
   (
-    { className, children, description, input, invalid, label, type, ...restProps }: PropsWithChildren<FormFieldProps>,
+    {
+      className,
+      children,
+      description,
+      errorMessage,
+      input,
+      invalid,
+      label,
+      type,
+      ...restProps
+    }: PropsWithChildren<FormFieldProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
     <div
@@ -29,8 +40,9 @@ export const FormField = forwardRef(
       )}
     >
       {label && <div className="utrecht-form-field__label">{label}</div>}
-      {input && <div className="utrecht-form-field__input">{input}</div>}
       {description && <div className="utrecht-form-field__description">{description}</div>}
+      {input && <div className="utrecht-form-field__input">{input}</div>}
+      {errorMessage && <div className="utrecht-form-field__error-message">{errorMessage}</div>}
       {children}
     </div>
   ),
