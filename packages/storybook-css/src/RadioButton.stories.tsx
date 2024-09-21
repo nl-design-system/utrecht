@@ -5,7 +5,10 @@ import { RadioButton } from '@utrecht/component-library-react';
 import type { RadioButtonProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/radio-button-css/README.md?raw';
+import anatomyDocs from '@utrecht/radio-button-css/docs/anatomy.nl.md?raw';
+import visualDesignDocs from '@utrecht/radio-button-css/docs/visual-design.nl.md?raw';
 import tokensDefinition from '@utrecht/radio-button-css/src/tokens.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -93,7 +96,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, anatomyDocs, visualDesignDocs]),
       },
     },
   },
