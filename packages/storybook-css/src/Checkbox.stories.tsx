@@ -2,10 +2,19 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/checkbox-css/README.md?raw';
+import anatomyDocs from '@utrecht/checkbox-css/docs/anatomy.en.md?raw';
+import bestPracticesDocs from '@utrecht/checkbox-css/docs/best-practices.en.md?raw';
+import contentDocs from '@utrecht/checkbox-css/docs/content.nl.md?raw';
+import keyboardDocs from '@utrecht/checkbox-css/docs/keyboard.en.md?raw';
+import referencesDocs from '@utrecht/checkbox-css/docs/references.nl.md?raw';
+import relatedComponentsDocs from '@utrecht/checkbox-css/docs/related-components.en.md?raw';
+import usageDocs from '@utrecht/checkbox-css/docs/usage.nl.md?raw';
+import wcagDocs from '@utrecht/checkbox-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/checkbox-css/src/tokens.json';
 import { Checkbox } from '@utrecht/component-library-react';
 import type { CheckboxProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -159,7 +168,17 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          readme,
+          anatomyDocs,
+          usageDocs,
+          relatedComponentsDocs,
+          keyboardDocs,
+          contentDocs,
+          bestPracticesDocs,
+          referencesDocs,
+          wcagDocs,
+        ]),
       },
     },
   },
