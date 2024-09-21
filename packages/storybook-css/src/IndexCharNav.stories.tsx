@@ -2,7 +2,7 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import type { IndexCharNavProps } from '@utrecht/component-library-react';
-import { IndexCharNav } from '@utrecht/component-library-react/dist/css-module';
+import { IndexCharNav } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/index-char-nav-css/README.md?raw';
 import tokensDefinition from '@utrecht/index-char-nav-css/src/tokens.json';
