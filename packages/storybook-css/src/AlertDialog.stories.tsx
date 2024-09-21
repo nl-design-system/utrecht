@@ -1,6 +1,7 @@
 import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
 import { PartialStoryFn } from '@storybook/types';
 import readme from '@utrecht/alert-dialog-css/README.md?raw';
+import usageDocs from '@utrecht/alert-dialog-css/docs/usage.nl.md?raw';
 import tokensDefinition from '@utrecht/alert-dialog-css/src/tokens.json';
 import {
   AlertDialog,
@@ -13,6 +14,7 @@ import {
 } from '@utrecht/component-library-react';
 import type { AlertDialogProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React, { createRef, useState } from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -58,7 +60,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, usageDocs]),
       },
     },
   },
