@@ -11,8 +11,16 @@ import {
   LinkButton,
 } from '@utrecht/component-library-react';
 import readme from '@utrecht/data-list-css/README.md?raw';
+import anatomyDocs from '@utrecht/data-list-css/docs/anatomy.nl.md?raw';
+import failureDocs from '@utrecht/data-list-css/docs/failure.nl.md?raw';
+import referencesDocs from '@utrecht/data-list-css/docs/references.nl.md?raw';
+import htmlDocs from '@utrecht/data-list-css/docs/technology-html.nl.md?raw';
+import translateDocs from '@utrecht/data-list-css/docs/translate.nl.md?raw';
+import usageDocs from '@utrecht/data-list-css/docs/usage.nl.md?raw';
+import wcagDocs from '@utrecht/data-list-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/data-list-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -80,7 +88,16 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          readme,
+          usageDocs,
+          anatomyDocs,
+          translateDocs,
+          htmlDocs,
+          failureDocs,
+          referencesDocs,
+          wcagDocs,
+        ]),
       },
     },
   },
