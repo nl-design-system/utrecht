@@ -85,6 +85,7 @@ jobs:
       - name: "Continuous Integration: build"
         env:
           BASE_URL: "/utrecht/"
+          STORYBOOK_PDF_FILES_BASE_URL: "https://raw.githubusercontent.com/nl-design-system/utrecht-pdf/refs/heads/main/"
         run: |
           pnpm run --if-present build
 
@@ -188,6 +189,7 @@ jobs:
       - name: "Continuous Integration: build Storybook with animation disabled"
         env:
           STORYBOOK_REDUCED_MOTION: 1
+
         run: |
           pnpm run --if-present build
 
