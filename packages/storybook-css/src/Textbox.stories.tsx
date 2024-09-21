@@ -4,6 +4,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Textbox } from '@utrecht/component-library-react';
 import type { TextboxProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/textbox-css/README.md?raw';
 import achternaamDocs from '@utrecht/textbox-css/_achternaam.md?raw';
 import emailDocs from '@utrecht/textbox-css/_email.md?raw';
@@ -22,6 +23,9 @@ import namePrefixDocs from '@utrecht/textbox-css/_voorvoegsel.md?raw';
 import passwordForAuthentificationDocs from '@utrecht/textbox-css/_wachtwoordVoorAuthentificatie.md?raw';
 import websiteDocs from '@utrecht/textbox-css/_website.md?raw';
 import placeOfResidenceDocs from '@utrecht/textbox-css/_woonplaats.md?raw';
+import anatomyDocs from '@utrecht/textbox-css/docs/anatomy.nl.md?raw';
+import inputPurposeDocs from '@utrecht/textbox-css/docs/input-purpose.nl.md?raw';
+import privacyDocs from '@utrecht/textbox-css/docs/privacy.nl.md?raw';
 import tokensDefinition from '@utrecht/textbox-css/src/tokens.json';
 import clsx from 'clsx';
 import React from 'react';
@@ -200,7 +204,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, inputPurposeDocs, anatomyDocs, privacyDocs]),
       },
     },
   },
