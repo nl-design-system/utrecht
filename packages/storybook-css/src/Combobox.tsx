@@ -7,7 +7,7 @@ import {
   ListboxOption,
   ListboxOptionGroup,
   Textbox,
-} from '@utrecht/component-library-react/dist/css-module/index';
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 

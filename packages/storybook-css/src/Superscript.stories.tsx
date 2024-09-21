@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Paragraph, Superscript } from '@utrecht/component-library-react/dist/css-module';
+import { Paragraph, Superscript } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/superscript-css/README.md?raw';
 import tokensDefinition from '@utrecht/superscript-css/src/tokens.json';

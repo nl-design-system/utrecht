@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { NavBar, NavList, NavListLink } from '@utrecht/component-library-react/dist/css-module';
+import { NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/nav-bar-css/README.md?raw';
 import tokensDefinition from '@utrecht/nav-bar-css/src/tokens.json';
