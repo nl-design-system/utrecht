@@ -1,8 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/badge-data-css/README.md?raw';
+import cssDocs from '@utrecht/badge-data-css/docs/technology-css.nl.md?raw';
+import htmlDocs from '@utrecht/badge-data-css/docs/technology-css.nl.md?raw';
 import tokensDefinition from '@utrecht/badge-data-css/src/tokens.json';
 import { DataBadge } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -29,7 +32,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, htmlDocs, cssDocs]),
       },
     },
   },
