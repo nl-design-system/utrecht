@@ -36,6 +36,7 @@ import {
   URLData,
 } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/table-css/README.md?raw';
 import actionReadme from '@utrecht/table-css/_table-row-action.md?raw';
 import tokensDefinition from '@utrecht/table-css/src/tokens.json';
@@ -71,7 +72,12 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([
+          readme,
+          `De _table_ component wordt nog aangewerkt. We doen met de NL Design System community onderzoek welke tabel varianten in omloop zijn, hoe we elke variant toegankelijk kunnen maken en wat het visueel ontwerp moet worden.
+
+De tabellen in Storybook hier zijn allemaal **WORK IN PROGRESS**, tenzij anders aangegeven.`,
+        ]),
       },
     },
   },
