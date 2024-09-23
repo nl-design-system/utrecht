@@ -32,6 +32,11 @@
 @mixin utrecht-skip-link--focus {
   @include utrecht-focus-ring;
 
+  background-color: var(
+    --utrecht-skip-link-focus-background-color,
+    var(--utrecht-skip-link-background-color, ButtonFace)
+  );
+  color: var(--utrecht-skip-link-focus-color, var(--utrecht-skip-link-color, ButtonText));
   text-decoration: var(--utrecht-skip-link-focus-text-decoration);
 }
 

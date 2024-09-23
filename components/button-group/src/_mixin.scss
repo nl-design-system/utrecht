@@ -4,11 +4,12 @@
  */
 
 @mixin utrecht-button-group {
+  /* var(--utrecht-button-group-inline-gap) is deprecated, but keep it as fallback for backwards compatibility */
   align-items: baseline;
   background-color: var(--utrecht-button-group-background-color);
   display: flex;
   flex-wrap: wrap;
-  gap: var(--utrecht-button-group-inline-gap, 1em);
+  gap: var(--utrecht-button-group-column-gap, var(--utrecht-button-group-inline-gap, 1em));
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-button-group-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-button-group-margin-block-start, 0));
   min-block-size: var(--utrecht-button-block-size);
@@ -26,6 +27,7 @@
 }
 
 @mixin utrecht-button-group--column {
+  /* var(--utrecht-button-group-block-gap) is deprecated, but keep it as fallback for backwards compatibility */
   flex-direction: column;
-  gap: var(--utrecht-button-group-block-gap, 1em);
+  gap: var(--utrecht-button-group-row-gap, var(--utrecht-button-group-block-gap, 1em));
 }
