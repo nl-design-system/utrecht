@@ -3,6 +3,4 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/textbox-css/src/index.scss';
-
-export * from '../Textbox';
+export * from '@utrecht/textbox-react/src/css';

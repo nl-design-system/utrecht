@@ -3,6 +3,4 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/form-field-css/src/index.scss';
-
-export * from '../FormField';
+export * from '@utrecht/form-field-react/src/css';

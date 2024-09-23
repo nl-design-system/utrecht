@@ -32,6 +32,7 @@
   font-weight: var(--utrecht-listbox-font-weight, var(--utrecht-form-control-font-weight, initial));
   inline-size: var(--utrecht-listbox-inline-size, var(--utrecht-form-control-max-inline-size));
   max-block-size: var(--utrecht-listbox-max-block-size);
+  max-inline-size: 100%;
   min-block-size: 1em;
   overflow-block: auto;
   overflow-y: auto;

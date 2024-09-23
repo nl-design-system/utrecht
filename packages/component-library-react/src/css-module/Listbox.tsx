@@ -3,6 +3,4 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-import '@utrecht/listbox-css/src/index.scss';
-
-export * from '../Listbox';
+export * from '@utrecht/listbox-react/src/css';

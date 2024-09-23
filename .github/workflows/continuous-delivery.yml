@@ -150,7 +150,9 @@ jobs:
       - name: Install dependencies
         run: |
           pnpm install
-
+      - name: "Continuous Integration: build"
+        run: |
+          pnpm run --if-present build
       - name: "Continuous Integration: test"
         run: |
           pnpm run --if-present test

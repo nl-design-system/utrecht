@@ -1,0 +1,41 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "Listbox component for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/listbox-react",
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "rollup -c ./rollup.config.mjs",
+    "clean": "rimraf dist",
+    "test": "mkdir -p pages && NODE_OPTIONS=--experimental-vm-modules jest --coverage --verbose"
+  },
+  "devDependencies": {
+    "@utrecht/listbox-css": "workspace:*",
+    "jest": "29.7.0",
+    "rollup": "4.18.0"
+  },
+  "keywords": [
+    "nl-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/component-library-react/packages/listbox-react"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "^7.23.6",
+    "react": "18",
+    "react-dom": "18"
+  }
+}

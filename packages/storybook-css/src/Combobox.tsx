@@ -1,6 +1,5 @@
 import {
   Combobox,
-  ComboboxPopoverProps,
   FormField,
   FormLabel,
   Listbox,
@@ -36,7 +35,10 @@ export interface ComboboxStoryProps {
     }[];
   }[];
 }
-
+interface ComboboxPopoverProps {
+  expanded?: boolean;
+  position?: string;
+}
 const ComboboxTextbox = ({ ...restProps }) => <Textbox className="utrecht-combobox__input" {...restProps} />;
 
 const ComboboxListboxPopover = ({

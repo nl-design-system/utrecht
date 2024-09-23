@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { createRef } from 'react';
-import { Listbox, ListboxOption, ListboxOptionGroup } from './Listbox';
+import { Listbox, ListboxOption, ListboxOptionGroup } from './index';
 
 describe('Listbox', () => {
   it('renders a div HTML element', () => {
