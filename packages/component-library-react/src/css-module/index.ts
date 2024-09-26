@@ -189,6 +189,13 @@ export { TableFooter } from './TableFooter';
 export type { TableHeaderProps } from '../TableHeader';
 export { TableHeader } from './TableHeader';
 export type { TableHeaderCellProps } from '../TableHeaderCell';
+export type {
+  TableOfContentsProps,
+  TableOfContentsListProps,
+  TableOfContentsListItemProps,
+  TableOfContentsLinkProps,
+} from '../TableOfContents';
+export { TableOfContents, TableOfContentsList, TableOfContentsListItem, TableOfContentsLink } from './TableOfContents';
 export { TableHeaderCell } from './TableHeaderCell';
 export type { TableRowProps } from '../TableRow';
 export { TableRow } from './TableRow';

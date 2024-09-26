@@ -1124,6 +1124,12 @@ importers:
         specifier: 4.18.0
         version: 4.18.0
 
+  components/table-of-contents:
+    devDependencies:
+      rollup:
+        specifier: 4.18.0
+        version: 4.18.0
+
   components/textarea:
     devDependencies:
       '@utrecht/focus-ring-css':
@@ -1818,6 +1824,9 @@ importers:
       '@utrecht/table-css':
         specifier: workspace:*
         version: link:../../components/table
+      '@utrecht/table-of-contents-css':
+        specifier: workspace:*
+        version: link:../../components/table-of-contents
       '@utrecht/textarea-css':
         specifier: workspace:*
         version: link:../../components/textarea
@@ -3491,12 +3500,72 @@ importers:
       '@types/react-dom':
         specifier: 18.3.0
         version: 18.3.0
+      '@utrecht/article-css':
+        specifier: workspace:*
+        version: link:../../components/article
+      '@utrecht/checkbox-css':
+        specifier: workspace:*
+        version: link:../../components/checkbox
+      '@utrecht/code-block-css':
+        specifier: workspace:*
+        version: link:../../components/code-block
+      '@utrecht/code-css':
+        specifier: workspace:*
+        version: link:../../components/code
       '@utrecht/component-library-pdf':
         specifier: workspace:*
         version: link:../component-library-pdf
+      '@utrecht/data-list-css':
+        specifier: workspace:*
+        version: link:../../components/data-list
+      '@utrecht/heading-1-css':
+        specifier: workspace:*
+        version: link:../../components/heading-1
+      '@utrecht/heading-2-css':
+        specifier: workspace:*
+        version: link:../../components/heading-2
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:../../components/heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:../../components/heading-4
+      '@utrecht/heading-5-css':
+        specifier: workspace:*
+        version: link:../../components/heading-5
+      '@utrecht/heading-6-css':
+        specifier: workspace:*
+        version: link:../../components/heading-6
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../../components/link
+      '@utrecht/ordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/ordered-list
+      '@utrecht/page-css':
+        specifier: workspace:*
+        version: link:../../components/page
+      '@utrecht/radio-button-css':
+        specifier: workspace:*
+        version: link:../../components/radio-button
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
+      '@utrecht/table-css':
+        specifier: workspace:*
+        version: link:../../components/table
+      '@utrecht/table-of-contents-css':
+        specifier: workspace:*
+        version: link:../../components/table-of-contents
+      '@utrecht/textarea-css':
+        specifier: workspace:*
+        version: link:../../components/textarea
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:../../components/textbox
+      '@utrecht/unordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/unordered-list
       babel-loader:
         specifier: 9.1.3
         version: 9.1.3(@babel/core@7.24.7)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.2))(esbuild@0.18.20))
