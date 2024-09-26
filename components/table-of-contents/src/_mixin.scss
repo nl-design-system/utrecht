@@ -1,0 +1,57 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Robbert Broersma
+ */
+
+$utrecht-support-prince-xml: false !default;
+
+/* stylelint-disable order/properties-alphabetical-order */
+@mixin utrecht-table-of-contents {
+  page-break-inside: avoid;
+}
+
+@mixin utrecht-table-of-contents__list {
+  list-style-type: none;
+  padding-inline-start: 0;
+  page-break-inside: avoid;
+
+  @if $utrecht-support-prince-xml {
+    -prince-pdf-tag-type: TOC;
+
+    /* reset Prince XML default styling of <ul> */
+    /* stylelint-disable-next-line property-disallowed-list */
+    margin-left: 0;
+    /* stylelint-disable-next-line property-disallowed-list */
+    margin-top: 0;
+    /* stylelint-disable-next-line property-disallowed-list */
+    margin-right: 0;
+  }
+}
+
+@mixin utrecht-table-of-contents__list-item {
+  margin-block-end: var(--utrecht-unordered-list-item-margin-block-end);
+  margin-block-start: var(--utrecht-unordered-list-item-margin-block-start);
+
+  @if $utrecht-support-prince-xml {
+    -prince-pdf-tag-type: TOCI;
+  }
+}
+
+@mixin utrecht-table-of-contents__list-item-body {
+  @if $utrecht-support-prince-xml {
+    -prince-pdf-tag-type: P;
+  }
+}
+
+@mixin utrecht-table-of-contents__list-item-label {
+  font-variant-numeric: lining-nums tabular-nums;
+  @if $utrecht-support-prince-xml {
+    -prince-pdf-tag-type: Lbl;
+  }
+}
+
+@mixin utrecht-table-of-contents__list-item-title {
+  @if $utrecht-support-prince-xml {
+    -prince-pdf-tag-type: Span;
+  }
+}
