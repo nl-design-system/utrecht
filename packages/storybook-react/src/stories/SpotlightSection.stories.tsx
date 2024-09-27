@@ -18,7 +18,7 @@ const meta = {
     type: {
       name: 'Type',
       control: { type: 'select' },
-      options: ['', 'info', 'warning'],
+      options: ['', 'info', 'warning', 'error', 'ok'],
     },
   },
   args: {
@@ -59,6 +59,18 @@ export const Info: Story = {
 export const Warning: Story = {
   args: {
     type: 'warning',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    type: 'error',
+  },
+};
+
+export const Ok: Story = {
+  args: {
+    type: 'ok',
   },
 };
 
