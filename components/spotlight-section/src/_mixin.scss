@@ -36,3 +36,11 @@
 @mixin utrecht-spotlight-section--warning {
   @include utrecht-spotlight-section-type("warning");
 }
+
+@mixin utrecht-spotlight-section--error {
+  @include utrecht-spotlight-section-type("error");
+}
+
+@mixin utrecht-spotlight-section--ok {
+  @include utrecht-spotlight-section-type("ok");
+}
