@@ -6,7 +6,7 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type SpotlightSectionType = 'info' | 'warning';
+export type SpotlightSectionType = 'info' | 'warning' | 'error' | 'ok';
 
 export interface SpotlightSectionProps extends HTMLAttributes<HTMLDivElement> {
   aside?: boolean;
@@ -24,8 +24,7 @@ export const SpotlightSection = forwardRef(
       className: clsx(
         'utrecht-spotlight-section',
         {
-          'utrecht-spotlight-section--info': type === 'info',
-          'utrecht-spotlight-section--warning': type === 'warning',
+          [`utrecht-spotlight-section--${type}`]: type,
         },
         className,
       ),
