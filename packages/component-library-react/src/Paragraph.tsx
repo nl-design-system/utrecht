@@ -7,34 +7,46 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
+  /**
+   * @deprecated Use `appearance="lead" instead
+   */
   lead?: boolean;
+  /**
+   * @deprecated Use `appearance="small" instead
+   */
   small?: boolean;
+  appearance?: 'default' | 'lead' | 'small';
 }
 
 export const Paragraph = forwardRef(
   (
-    { children, className, lead, small, ...restProps }: PropsWithChildren<ParagraphProps>,
+    { children, className, lead, small, appearance = 'default', ...restProps }: PropsWithChildren<ParagraphProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
-  ) => (
-    <p
-      {...restProps}
-      ref={ref}
-      className={clsx(
-        'utrecht-paragraph',
-        lead && 'utrecht-paragraph--lead',
-        small && 'utrecht-paragraph--small',
-        className,
-      )}
-    >
-      {lead ? (
-        <b className="utrecht-paragraph__b">{children}</b>
-      ) : small ? (
-        <small className="utrecht-paragraph__small">{children}</small>
-      ) : (
-        children
-      )}
-    </p>
-  ),
+  ) => {
+    const isLead = appearance === 'lead' || lead;
+    const isSmall = appearance === 'small' || small;
+
+    return (
+      <p
+        {...restProps}
+        ref={ref}
+        className={clsx(
+          'utrecht-paragraph',
+          isLead && 'utrecht-paragraph--lead',
+          isSmall && 'utrecht-paragraph--small',
+          className,
+        )}
+      >
+        {isLead ? (
+          <b className="utrecht-paragraph__b">{children}</b>
+        ) : isSmall ? (
+          <small className="utrecht-paragraph__small">{children}</small>
+        ) : (
+          children
+        )}
+      </p>
+    );
+  },
 );
 
 Paragraph.displayName = 'Paragraph';
