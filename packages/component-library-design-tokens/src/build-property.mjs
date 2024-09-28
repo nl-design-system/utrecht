@@ -43,7 +43,10 @@ const build = async () => {
 
   console.log(`${propertyTokens.length} tokens found with CSS property metadata`);
 
+  const formatSyntax = (arg) => (Array.isArray(arg) ? arg.join(' | ') : arg);
+
   const css = propertyTokens
+    .filter((token) => token['$extensions']['nl.nldesignsystem.css.property'].syntax !== '*')
     .map((token) => {
       const { path } = token;
       const { syntax, inherits, initialValue } = token['$extensions']['nl.nldesignsystem.css.property'];
@@ -57,7 +60,7 @@ const build = async () => {
         str += `initial-value: ${initialValue}; `;
       }
 
-      str += `syntax: '${syntax}'; `;
+      str += `syntax: '${formatSyntax(syntax)}'; `;
 
       str += `}`;
 
