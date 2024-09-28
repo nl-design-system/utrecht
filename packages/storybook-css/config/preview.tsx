@@ -18,7 +18,7 @@ import 'firacode/distr/fira_code.css';
 import '@utrecht/components/index.scss';
 import '@utrecht/html-content-css/src/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
-import '@utrecht/design-tokens/dist/property.css';
+import '@utrecht/component-library-design-tokens/dist/property.css';
 import '@utrecht/design-tokens/dist/dark/index.css';
 import '@nl-design-system-unstable/amsterdam-design-tokens/dist/index.css';
 import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';

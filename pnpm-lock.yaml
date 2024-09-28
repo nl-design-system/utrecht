@@ -2855,6 +2855,9 @@ importers:
       '@utrecht/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
+      '@utrecht/component-library-design-tokens':
+        specifier: workspace:*
+        version: link:../component-library-design-tokens
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
