@@ -28,7 +28,9 @@
     "rimraf": "5.0.7"
   },
   "scripts": {
-    "build": "node src/build.mjs",
+    "build": "pnpm run '/^build:.*/'",
+    "build:property": "node src/build-property.mjs",
+    "build:tokens": "node src/build-tokens.mjs",
     "lint-build": "node src/lint-build.mjs",
     "lint-theme": "node src/lint-theme.mjs",
     "clean": "rimraf dist"
