@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 2.1.0
+
+### Minor Changes
+
+- 7b8ebea: Add design tokens with styling for the new `ok` and `error` variants of the Spotlight Section component.
+
 ## 2.0.0
 
 ### Major Changes

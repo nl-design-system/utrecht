@@ -1,4 +1,4 @@
-# @utrecht/component-library-pdf
+# @utrecht/table-of-contents-css
 
 ## 0.1.0
 
