@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"],
+  "references": [{ "path": "../button-react/tsconfig.build.json" }],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  }
+}
