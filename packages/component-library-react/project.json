@@ -8,7 +8,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "outputs": ["{projectRoot}/dist"],
       "options": {
-        "command": "npm run build",
+        "command": "pnpm run build",
         "cwd": "packages/component-library-react",
         "outputPath": "packages/component-library-react/dist"
       },
@@ -18,7 +18,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "outputs": ["{projectRoot}/dist"],
       "options": {
-        "command": "npm run build:watch",
+        "command": "pnpm run build:watch",
         "cwd": "packages/component-library-react"
       },
       "dependsOn": ["^build"]
@@ -26,14 +26,14 @@
     "test": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm run test",
+        "command": "pnpm run test",
         "cwd": "packages/component-library-react"
       }
     },
     "watch-test": {
       "executor": "@nrwl/workspace:run-commands",
       "options": {
-        "command": "npm run watch:test",
+        "command": "pnpm run watch:test",
         "cwd": "packages/component-library-react"
       }
     }

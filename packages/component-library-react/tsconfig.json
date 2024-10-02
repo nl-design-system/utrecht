@@ -1,16 +1,15 @@
 {
-  "extends": "./tsconfig.base.json",
-  "compilerOptions": {
-    "paths": {
-      "@utrecht/button-react/*": ["./packages/button-react/*"]
-    },
-    "outDir": "dist"
-  },
-  "include": ["src/**/*.ts", "src/**/*.tsx", "./packages/**/*.ts", "./packages/**/*.tsx"],
-  "exclude": ["**/node_modules/*", "**/*.test.ts", "**/*.test.tsx"],
+  "extends": "../components-react/tsconfig.base.json",
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
+  "exclude": ["node_modules", "**/*.test.ts", "**/*.test.tsx"],
   "references": [
     {
-      "path": "./packages/button-react"
-    }
-  ]
+      "path": "../components-react/button-react/tsconfig.build.json"
+    },
+    { "path": "../components-react/calendar-react/tsconfig.build.json" }
+  ],
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src"
+  }
 }
