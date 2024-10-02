@@ -102,6 +102,9 @@ $utrecht-support-prince-xml: false !default;
       var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color))
     )
   );
+  box-shadow: inset 0 0 0
+    calc(var(--utrecht-textbox-invalid-border-width, 0px) - var(--utrecht-textbox-border-width, 0px))
+    var(--utrecht-textbox-invalid-border-color, var(--utrecht-textbox-border-color));
   border-width: var(--_utrecht-textbox-border-width);
   border-block-end-width: var(
     --utrecht-textbox-invalid-border-bottom-width,
@@ -148,6 +151,19 @@ $utrecht-support-prince-xml: false !default;
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
+@mixin utrecht-textbox--hover {
+  border-color: var(
+    --utrecht-textbox-hover-border-color,
+    var(
+      --utrecht-form-control-hover-border-color,
+      var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color))
+    )
+  );
+  box-shadow: inset 0 0 0
+    calc(var(--utrecht-textbox-hover-border-width, 0px) - var(--utrecht-textbox-border-width, 0px))
+    var(--utrecht-textbox-hover-border-color, var(--utrecht-textbox-border-color));
+}
+
 @mixin utrecht-textbox--focus {
   @include utrecht-focus;
 
@@ -173,6 +189,18 @@ $utrecht-support-prince-xml: false !default;
 
 @mixin utrecht-textbox--focus-visible {
   @include utrecht-focus-visible;
+
+  border-color: var(
+    --utrecht-textbox-focus-visible-border-color,
+    var(
+      --utrecht-form-control-focus-visible-border-color,
+      var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color))
+    )
+  );
+  box-shadow: inset 0 0 0
+      calc(var(--utrecht-textbox-focus-visible-border-width, 0px) - var(--utrecht-textbox-border-width, 0px))
+      var(--utrecht-textbox-focus-visible-border-color, var(--utrecht-textbox-border-color)),
+    var(--_utrecht-focus-ring-box-shadow);
 }
 
 @mixin utrecht-textbox--read-only {
@@ -240,6 +268,9 @@ $utrecht-support-prince-xml: false !default;
 @mixin utrecht-textbox--html-input {
   // The workaround for missing `:focus-visible` support makes the code quite complex,
   // keep the ideal version around to restore it easily when browser support improves.
+  &:hover {
+    @include utrecht-textbox--hover;
+  }
 
   @if $utrecht-focus-visible-fallback {
     &:focus {
