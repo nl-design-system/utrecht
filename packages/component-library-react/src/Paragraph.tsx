@@ -7,15 +7,18 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
+  appearance?: 'default' | 'lead' | 'small';
   /**
-   * @deprecated Use `appearance="lead" instead
+   *
+   * @deprecated Use `appearance="lead"` instead
    */
   lead?: boolean;
+
   /**
-   * @deprecated Use `appearance="small" instead
+   *
+   * @deprecated Use `appearance="small"` instead
    */
   small?: boolean;
-  appearance?: 'default' | 'lead' | 'small';
 }
 
 export const Paragraph = forwardRef(
@@ -23,8 +26,8 @@ export const Paragraph = forwardRef(
     { children, className, lead, small, appearance = 'default', ...restProps }: PropsWithChildren<ParagraphProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => {
-    const isLead = appearance === 'lead' || lead;
-    const isSmall = appearance === 'small' || small;
+    const isLead = appearance === 'lead' || (lead && appearance !== 'small');
+    const isSmall = appearance === 'small' || (small && appearance !== 'lead');
 
     return (
       <p
