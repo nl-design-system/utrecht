@@ -1,5 +1,21 @@
 # @utrecht/component-library-react
 
+## 6.2.0
+
+### Minor Changes
+
+- 6c0db88: Add Superscript React component.
+- 1227678: Add Table of Contents component for the PDF component library.
+- f3d47bb: Add `errorMessage` property to FormField.
+- a6a2187: Add Subscript React component.
+- a919a87: Add new `type` options to the `SpotlightSection` component: `error` and `ok`.
+- 38c31c8: - Support `...restProps`, `className` and `forwardRef` for `NavList` React component.
+  - Support `className` for `NavListLink` and `NavListButton` React components.
+
+### Patch Changes
+
+- f3d47bb: Fix FormField to render the description before the input.
+
 ## 6.1.0
 
 ### Minor Changes

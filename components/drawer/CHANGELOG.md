@@ -1,5 +1,17 @@
 # @utrecht/drawer-css
 
+## 1.2.1
+
+### Patch Changes
+
+- e0d6ca6: Changed value for Figma support metadata:
+
+  - Code block
+  - Code
+  - Color sample
+  - Drawer
+  - Pre heading
+
 ## 1.2.0
 
 ### Minor Changes

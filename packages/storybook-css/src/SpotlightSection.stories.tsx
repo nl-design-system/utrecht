@@ -24,7 +24,7 @@ const meta = {
     type: {
       description: 'Type',
       control: { type: 'select' },
-      options: ['', 'info', 'warning'],
+      options: ['', 'info', 'warning', 'error', 'ok'],
     },
   },
   args: {
@@ -96,6 +96,38 @@ export const Warning: Story = {
       </Paragraph>,
     ],
     type: 'warning',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    children: [
+      <Heading2>Lorem ipsum</Heading2>,
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </Paragraph>,
+    ],
+    type: 'error',
+  },
+};
+
+export const Ok: Story = {
+  args: {
+    children: [
+      <Heading2>Lorem ipsum</Heading2>,
+      <Paragraph>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </Paragraph>,
+    ],
+    type: 'ok',
   },
 };
 

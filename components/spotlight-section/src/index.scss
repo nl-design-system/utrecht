@@ -17,3 +17,11 @@
 .utrecht-spotlight-section--warning {
   @include utrecht-spotlight-section--warning;
 }
+
+.utrecht-spotlight-section--error {
+  @include utrecht-spotlight-section--error;
+}
+
+.utrecht-spotlight-section--ok {
+  @include utrecht-spotlight-section--ok;
+}
