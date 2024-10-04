@@ -1,5 +1,11 @@
 # @utrecht/code-css
 
+## 1.2.2
+
+### Patch Changes
+
+- b18aa3d: Update Figma support in the design token metadata for the Code component.
+
 ## 1.2.1
 
 ### Patch Changes

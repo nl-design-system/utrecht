@@ -1,5 +1,11 @@
 # @utrecht/link-css
 
+## 1.2.1
+
+### Patch Changes
+
+- c146b9a: Add missing metadata for `utrecht.link.focus.background-color`.
+
 ## 1.2.0
 
 ### Minor Changes

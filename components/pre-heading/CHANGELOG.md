@@ -1,5 +1,11 @@
 # @utrecht/pre-heading-css
 
+## 1.2.2
+
+### Patch Changes
+
+- 71dd085: Update Figma support in the design token metadata for the Pre-heading component.
+
 ## 1.2.1
 
 ### Patch Changes

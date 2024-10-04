@@ -1,5 +1,11 @@
 # @utrecht/blockquote-css
 
+## 1.2.1
+
+### Patch Changes
+
+- 5eb631b: Fixes to design token metadata.
+
 ## 1.2.0
 
 ### Minor Changes

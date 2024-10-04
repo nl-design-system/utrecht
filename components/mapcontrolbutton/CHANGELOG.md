@@ -1,5 +1,11 @@
 # @utrecht/map-control-button-css
 
+## 2.0.1
+
+### Patch Changes
+
+- 4c438e5: Remove design token metadata for map control button tokens that are not implemented.
+
 ## 2.0.0
 
 ### Major Changes

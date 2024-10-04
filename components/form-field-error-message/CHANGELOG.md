@@ -1,5 +1,11 @@
 # @utrecht/form-field-error-message-css
 
+## 1.3.1
+
+### Patch Changes
+
+- 5eb631b: Fixes to design token metadata.
+
 ## 1.3.0
 
 ### Minor Changes
