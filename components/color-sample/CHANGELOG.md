@@ -1,5 +1,11 @@
 # @utrecht/color-sample-css
 
+## 1.2.2
+
+### Patch Changes
+
+- b904906: Update Figma support in the design token metadata for the Color sample component.
+
 ## 1.2.1
 
 ### Patch Changes
