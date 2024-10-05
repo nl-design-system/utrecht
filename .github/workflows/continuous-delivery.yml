@@ -2,9 +2,6 @@ name: Continuous Delivery
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
 
 env:
   CI: true
@@ -198,6 +195,7 @@ jobs:
         if: github.event.pull_request.draft == false
         with:
           autoAcceptChanges: ${{ env.MAIN_BRANCH }}
+          onlyChanged: true
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
           storybookBuildDir: packages/storybook-css/dist/
 
