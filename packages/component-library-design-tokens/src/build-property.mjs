@@ -1,4 +1,4 @@
-import { writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
 import { getComponentTokens } from './lib.mjs';
 import cloneDeepWith from 'lodash.clonedeepwith';
 import isPlainObject from 'lodash.isplainobject';
@@ -50,7 +50,7 @@ const build = async () => {
     .map((token) => {
       const { path } = token;
       const { syntax, inherits, initialValue } = token['$extensions']['nl.nldesignsystem.css.property'];
-      console.log(token);
+
       const name = path.join('-');
       let str = `@property --${name} { `;
 
@@ -68,6 +68,7 @@ const build = async () => {
     })
     .join('\n');
 
+  await mkdir('./dist/', { recursive: true });
   await writeFile('./dist/property.css', css);
 };
 
