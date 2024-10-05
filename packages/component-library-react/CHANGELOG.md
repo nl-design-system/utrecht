@@ -1,5 +1,11 @@
 # @utrecht/component-library-react
 
+## 6.2.1
+
+### Patch Changes
+
+- 8622506: Fix errors for missing TypeScript definitions in `@utrecht/component-library-react`.
+
 ## 6.2.0
 
 ### Minor Changes
