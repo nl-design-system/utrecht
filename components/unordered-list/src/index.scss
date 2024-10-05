@@ -9,10 +9,18 @@
 .utrecht-unordered-list,
 .utrecht-unordered-list--html-content ul {
   @include utrecht-unordered-list;
+
+  @media (forced-colors: active) {
+    @include utrecht-unordered-list--forced-colors;
+  }
 }
 
 .utrecht-unordered-list--center {
   @include utrecht-unordered-list--center;
+}
+
+.utrecht-unordered-list--forced-colors {
+  @include utrecht-unordered-list--forced-colors;
 }
 
 .utrecht-unordered-list--distanced {

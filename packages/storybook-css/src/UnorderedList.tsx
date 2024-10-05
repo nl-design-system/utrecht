@@ -11,6 +11,7 @@ interface UnorderedListItemData {
 interface UnorderedListStoryProps extends UnorderedListProps {
   element?: string | 'div';
   center?: boolean;
+  forcedColors?: boolean;
   items?: UnorderedListItemData[];
   htmlContent?: boolean;
   nested?: boolean;
@@ -27,11 +28,19 @@ const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
   </ul>
 );
 
-export const UnorderedListStory = ({ children, center, items, htmlContent, nested }: UnorderedListStoryProps) => {
+export const UnorderedListStory = ({
+  children,
+  center,
+  forcedColors,
+  items,
+  htmlContent,
+  nested,
+}: UnorderedListStoryProps) => {
   return (
     <UnorderedList
       className={clsx({
         'utrecht-unordered-list--center': center,
+        'utrecht-unordered-list--forced-colors': forcedColors,
         'utrecht-unordered-list--html-content': htmlContent,
         'utrecht-unordered-list--nested': nested,
       })}
