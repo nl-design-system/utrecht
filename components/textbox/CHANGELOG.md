@@ -1,5 +1,11 @@
 # @utrecht/textbox-css
 
+## 1.3.1
+
+### Patch Changes
+
+- e177ced: Start using `:focus-visible`, Safari support has caught up.
+
 ## 1.3.0
 
 ### Minor Changes

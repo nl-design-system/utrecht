@@ -1,5 +1,11 @@
 # @utrecht/mark-css
 
+## 1.2.2
+
+### Patch Changes
+
+- 8edf86e: Changed value for Figma support metadata.
+
 ## 1.2.1
 
 ### Patch Changes

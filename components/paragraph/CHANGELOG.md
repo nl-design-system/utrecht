@@ -1,5 +1,13 @@
 # @utrecht/paragraph-css
 
+## 2.0.0
+
+### Major Changes
+
+- fe20468: Breaking change: Removed "lead" and "small" styling from HTML paragraph component. If "lead" or "small" are now used, there will be no styling.
+
+  Removed "lead" and "small" stories from html paragraph.
+
 ## 1.2.0
 
 ### Minor Changes

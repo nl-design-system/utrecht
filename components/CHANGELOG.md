@@ -1,5 +1,16 @@
 # @utrecht/components
 
+## 7.3.0
+
+### Minor Changes
+
+- 200e34b: Add `utrecht.number-badge.border-color` and `utrecht.number-badge.border-width` design tokens.
+
+### Patch Changes
+
+- e177ced: Start using `:focus-visible`, Safari support has caught up.
+- 95901d6: Add CSS variables fallback, so disabled radio button looks like normal radio button when no design tokens are set.
+
 ## 7.2.0
 
 ### Minor Changes

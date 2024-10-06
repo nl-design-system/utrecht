@@ -1,5 +1,11 @@
 # @utrecht/radio-button-css
 
+## 1.3.1
+
+### Patch Changes
+
+- 95901d6: Add CSS variables fallback, so disabled radio button looks like normal radio button when no design tokens are set.
+
 ## 1.3.0
 
 ### Minor Changes

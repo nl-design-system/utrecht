@@ -1,5 +1,27 @@
 # @utrecht/component-library-react
 
+## 7.0.0
+
+### Major Changes
+
+- c3660c1: Rename design token `utrecht.button.icon.gap` to `utrecht.button.column-gap`
+
+### Minor Changes
+
+- 200e34b: Add `utrecht.number-badge.border-color` and `utrecht.number-badge.border-width` design tokens.
+- 27f15a9: Add `required` state to the `Fieldset` component in React.'
+- c09705f: Add "heading" to the accordion provider.
+  Add "heading level" to the accordion provider.
+- 24b4813: Add an optional `label` property to React `Button` component, to support better styling of icons.
+
+### Patch Changes
+
+- 27f15a9: Fix `Fieldset` component in React to only render `aria-invalid` for `role="radiogroup"`.
+- 9e32a67: - Refactored Icon component: default role="presentation", conditional aria-hidden
+  - Added possibility for custom roles and ARIA labels
+  - edited unit tests for accessibility tree hidden or not
+  - tested in React Storybook
+
 ## 6.2.1
 
 ### Patch Changes

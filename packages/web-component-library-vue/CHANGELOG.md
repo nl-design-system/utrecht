@@ -1,5 +1,17 @@
 # @utrecht/web-component-library-vue
 
+## 2.1.0
+
+### Minor Changes
+
+- 24b4813: Add `slot="icon"` and `slot="label"` support to `utrecht-button` web component.
+
+### Patch Changes
+
+- Updated dependencies [200e34b]
+- Updated dependencies [24b4813]
+  - @utrecht/web-component-library-stencil@2.2.0
+
 ## 2.0.1
 
 ### Patch Changes
