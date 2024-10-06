@@ -8,10 +8,18 @@
    * Setting `margin-inline-end` is necessary for overriding the default stylesheet of `<figure>` */
   background-color: var(--utrecht-blockquote-background-color);
   border-color: var(--utrecht-blockquote-border-color);
-  border-inline-start-width: var(--utrecht-blockquote-border-inline-start-width, 0);
+  border-radius: var(--utrecht-blockquote-border-radius, 0);
   border-style: solid;
-  border-width: 0;
+  border-width: var(--utrecht-blockquote-border-width, 0);
+  /* stylelint-disable order/properties-alphabetical-order */
+  border-inline-start-width: var(
+    --utrecht-blockquote-border-inline-start-width,
+    var(--utrecht-blockquote-border-width, 0)
+  );
+  /* stylelint-enable order/properties-alphabetical-order */
   color: var(--utrecht-blockquote-color);
+  display: flex;
+  flex-direction: column;
   font-family: var(--utrecht-document-font-family);
   font-size: var(--utrecht-blockquote-font-size);
   font-style: var(--utrecht-blockquote-font-style);
@@ -23,6 +31,7 @@
   padding-block-start: var(--utrecht-blockquote-padding-block-start);
   padding-inline-end: var(--utrecht-blockquote-padding-inline-end);
   padding-inline-start: var(--utrecht-blockquote-padding-inline-start);
+  row-gap: var(--utrecht-blockquote-row-gap, 0);
 }
 
 @mixin utrecht-blockquote__caption {
@@ -31,12 +40,16 @@
 }
 
 @mixin utrecht-blockquote__figure {
+  display: flex;
+  flex-direction: column;
+
   /* `<figure>` is an optional semantic container, the CSS needs to reset the default stylesheet of `<figure>` */
 
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-end: 0;
   margin-inline-start: 0;
+  row-gap: var(--utrecht-blockquote-row-gap, 0);
 }
 
 @mixin utrecht-blockquote__quote {
