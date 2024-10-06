@@ -33,8 +33,8 @@ const NumberBadgeStory = ({ children, dir, lang, value }: PropsWithChildren<Numb
 };
 
 const meta = {
-  title: 'CSS Component/Badge Counter',
-  id: 'css-badge-counter',
+  title: 'CSS Component/Number Badge',
+  id: 'css-number-badge',
   component: NumberBadgeStory,
   args: {
     children: '4',
@@ -54,7 +54,7 @@ const meta = {
     figma:
       'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=1233-4271&t=kJatlKfN59e8T0eA-0',
     nldesignsystem: 'https://nldesignsystem.nl/number-badge',
-    tokensPrefix: 'utrecht-badge-counter',
+    tokensPrefix: 'utrecht-number-badge',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -263,7 +263,7 @@ export const Empty: Story = {
     docs: {
       ...Default.parameters?.['docs'],
       description: {
-        story: `Wanneer de counter badge leeg is, zoals in een UI designer interface, dan moet de component wel zichtbaar zijn. De gebruiker moet er een getal in kunnen typen.`,
+        story: `Wanneer de Number Badge leeg is, zoals in een UI designer interface, dan moet de component wel zichtbaar zijn. De gebruiker moet er een getal in kunnen typen.`,
       },
     },
   },
