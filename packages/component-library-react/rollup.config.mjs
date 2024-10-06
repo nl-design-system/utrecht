@@ -50,7 +50,6 @@ export default [
         include: /node_modules/,
       }),
       nodePolyfills(),
-      // del({ targets: ['dist/*', 'pages/*'] }),
       typescript({ includeDependencies: false }),
       json(),
       babel({
@@ -89,7 +88,6 @@ export default [
         include: /node_modules/,
       }),
       nodePolyfills(),
-      // del({ targets: ['dist/*', 'pages/*'] }),
       postcss({
         extensions: ['.css', '.scss'],
         minimize: true,
