@@ -1,5 +1,19 @@
 # @utrecht/button-css
 
+## 2.0.0
+
+### Major Changes
+
+- c3660c1: Rename design token `utrecht.button.icon.gap` to `utrecht.button.column-gap`
+
+### Minor Changes
+
+- 24b4813: Add an optional element class `utrecht-button__label` to support other inline styling without a gap
+
+### Patch Changes
+
+- e177ced: Start using `:focus-visible`, Safari support has caught up.
+
 ## 1.4.0
 
 ### Minor Changes

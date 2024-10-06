@@ -1,5 +1,12 @@
 # @utrecht/web-component-library-stencil
 
+## 2.2.0
+
+### Minor Changes
+
+- 200e34b: Add `utrecht.number-badge.border-color` and `utrecht.number-badge.border-width` design tokens.
+- 24b4813: Add `slot="icon"` and `slot="label"` support to `utrecht-button` web component.
+
 ## 2.1.0
 
 ### Minor Changes

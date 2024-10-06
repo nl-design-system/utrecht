@@ -1,5 +1,21 @@
 # @utrecht/web-component-library-react
 
+## 3.0.0
+
+### Major Changes
+
+- c3660c1: Rename design token `utrecht.button.icon.gap` to `utrecht.button.column-gap`
+
+### Minor Changes
+
+- 24b4813: Add `slot="icon"` and `slot="label"` support to `utrecht-button` web component.
+
+### Patch Changes
+
+- Updated dependencies [200e34b]
+- Updated dependencies [24b4813]
+  - @utrecht/web-component-library-stencil@2.2.0
+
 ## 2.0.1
 
 ### Patch Changes

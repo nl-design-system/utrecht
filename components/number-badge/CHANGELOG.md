@@ -1,5 +1,11 @@
 # @utrecht/number-badge-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 200e34b: Add `utrecht.number-badge.border-color` and `utrecht.number-badge.border-width` design tokens.
+
 ## 2.0.0
 
 ### Major Changes
