@@ -17,7 +17,7 @@
     "directory": "proprietary/design-tokens"
   },
   "devDependencies": {
-    "@divriots/style-dictionary-to-figma": "0.4.0",
+    "@tokens-studio/sd-transforms": "1.2.3",
     "chokidar-cli": "3.0.0",
     "glob": "10.4.2",
     "lodash.isplainobject": "4.0.6",
@@ -26,14 +26,14 @@
     "regex-trie": "1.0.4",
     "rimraf": "5.0.7",
     "sass": "1.69.5",
-    "style-dictionary": "4.0.0-prerelease.8"
+    "style-dictionary": "4.0.1"
   },
   "scripts": {
     "build": "pnpm run build:style-dictionary && pnpm run build:scss",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "pnpm run '/^build:style-dictionary:.*/'",
-    "build:style-dictionary:default": "style-dictionary build --config src/style-dictionary-config.js",
-    "build:style-dictionary:dark": "style-dictionary build --config src/style-dictionary-config-dark.js",
+    "build:style-dictionary:default": "node ./style-dictionary-build.mjs",
+    "build:style-dictionary:dark": "node ./style-dictionary-build-dark.mjs",
     "build:stylelint": "node ./build-stylelint.mjs",
     "clean": "rimraf dist/",
     "watch": "pnpm run --parallel '/^watch:.*/'",
