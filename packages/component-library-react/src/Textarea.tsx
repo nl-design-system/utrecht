@@ -2,12 +2,13 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, TextareaHTMLAttributes } from 'react';
 
 export interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
+  inputRequired?: boolean;
   invalid?: boolean;
 }
 
 export const Textarea = forwardRef(
   (
-    { dir, disabled, invalid, readOnly, required, className, ...restProps }: TextareaProps,
+    { dir, disabled, inputRequired, invalid, readOnly, required, className, ...restProps }: TextareaProps,
     ref: ForwardedRef<HTMLTextAreaElement>,
   ) => (
     <textarea
@@ -19,13 +20,14 @@ export const Textarea = forwardRef(
         disabled && 'utrecht-textarea--disabled',
         invalid && 'utrecht-textarea--invalid',
         readOnly && 'utrecht-textarea--readonly',
-        required && 'utrecht-textarea--required',
+        (required || inputRequired) && 'utrecht-textarea--required',
         className,
       )}
       dir={dir ?? 'auto'}
       disabled={disabled}
       readOnly={readOnly}
-      required={required}
+      aria-required={required ? required : undefined}
+      required={inputRequired}
       aria-invalid={invalid || undefined}
     />
   ),
