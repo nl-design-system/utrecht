@@ -1,21 +1,23 @@
 import { Meta, StoryObj } from '@storybook/react';
-import {
-  Checkbox,
-  FormField,
-  FormFieldDescription,
-  FormLabel,
-  Paragraph,
-} from '@utrecht/component-library-react/dist/css-module';
+import { FormFieldCheckbox } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
 import FormFieldMeta from './FormField.stories';
 
 const storyArgTypes = {
   ...FormFieldMeta.argTypes,
-  checked: {
+  defaultChecked: {
     description: 'Checked',
     control: 'boolean',
     table: {
-      category: 'Story',
+      category: 'API',
+      defaultValue: { summary: false },
+    },
+  },
+  indeterminate: {
+    description: 'Indeterminate',
+    control: 'boolean',
+    table: {
+      category: 'API',
       defaultValue: { summary: false },
     },
   },
@@ -23,7 +25,7 @@ const storyArgTypes = {
     description: 'Required',
     control: 'boolean',
     table: {
-      category: 'Story',
+      category: 'API',
       defaultValue: { summary: false },
     },
   },
@@ -31,7 +33,7 @@ const storyArgTypes = {
     description: 'ID',
     type: { name: 'text', required: true },
     table: {
-      category: 'Story',
+      category: 'DOM',
       defaultValue: { summary: '' },
     },
   },
@@ -39,7 +41,7 @@ const storyArgTypes = {
     description: 'Name',
     control: 'text',
     table: {
-      category: 'Story',
+      category: 'API',
       defaultValue: { summary: '' },
     },
   },
@@ -47,7 +49,7 @@ const storyArgTypes = {
     description: 'Value',
     control: 'text',
     table: {
-      category: 'Story',
+      category: 'API',
       defaultValue: { summary: '' },
     },
   },
@@ -56,85 +58,79 @@ const storyArgTypes = {
     type: { name: 'text', required: true },
     table: {
       defaultValue: { summary: false },
-      category: 'Story',
+      category: 'API',
     },
   },
-  invalidDescription: {
-    name: 'invalidDescription',
+  errorMessage: {
+    name: 'errorMessage',
     description: 'Description for invalid input',
     type: { name: 'text', required: false },
     table: {
       defaultValue: { summary: false },
-      category: 'Story',
+      category: 'API',
     },
   },
   description: {
     description: 'Description',
     type: { name: 'text', required: false },
     table: {
-      category: 'Story',
+      category: 'API',
       defaultValue: { summary: '' },
     },
   },
 };
 
 const meta = {
-  title: 'React Component/Form Field/Checkbox',
-  id: 'react-form-field--checkbox',
-  component: FormField,
+  title: 'React Component/Form Field with checkbox',
+  id: 'react-form-field-checkbox',
+  component: FormFieldCheckbox,
   argTypes: storyArgTypes,
   args: {
-    checked: false,
+    defaultChecked: false,
     description: 'U kunt ons echt vertrouwen!',
     disabled: false,
-    id: '43f471c8-c6f1-4867-bc53-9602c06b8a32',
+    id: '12157f39-9547-45b1-aa4b-e1c9d51fcf24',
+    indeterminate: false,
     invalid: true,
-    invalidDescription: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
+    errorMessage: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
     label: 'Ik ga akkoord met de algemene voorwaarden',
     name: 'consent',
     value: 'true',
     required: true,
-    type: 'checkbox',
   },
   render: (args) => {
-    const { checked, description, disabled, id, invalid, invalidDescription, label, name, required, value, type } =
-      args;
-    const descriptionId = description ? `${id}-description` : null;
-    const invalidDescriptionId = invalidDescription ? `${id}-invalid-description` : null;
+    const {
+      defaultChecked,
+      description,
+      disabled,
+      id,
+      indeterminate,
+      invalid,
+      errorMessage,
+      label,
+      name,
+      required,
+      value,
+    } = args;
     return (
-      <FormField invalid={invalid} type={type}>
-        <Paragraph className="utrecht-form-field__label utrecht-form-field__label--checkbox">
-          <FormLabel disabled={disabled} type="checkbox" htmlFor={id}>
-            <Checkbox
-              aria-describedby={[descriptionId, invalidDescriptionId].filter(Boolean).join(' ') || null}
-              className="utrecht-form-field__input"
-              defaultChecked={checked}
-              disabled={disabled}
-              id={id}
-              invalid={invalid}
-              required={required}
-              name={name}
-              value={value}
-            />
-            {label}
-          </FormLabel>
-        </Paragraph>
-        {description ? (
-          <FormFieldDescription id={descriptionId} className="utrecht-form-field__description">
-            {description}
-          </FormFieldDescription>
-        ) : undefined}
-        {invalidDescription ? (
-          <FormFieldDescription id={invalidDescriptionId} invalid className="utrecht-form-field__description">
-            {invalidDescription}
-          </FormFieldDescription>
-        ) : undefined}
-      </FormField>
+      <FormFieldCheckbox
+        id={id}
+        defaultChecked={defaultChecked}
+        description={description}
+        disabled={disabled}
+        errorMessage={errorMessage}
+        indeterminate={indeterminate}
+        invalid={invalid}
+        label={label}
+        name={name}
+        required={required}
+        value={value}
+      />
     );
   },
-} satisfies Meta<typeof FormField>;
+} satisfies Meta<typeof FormFieldCheckbox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const FormFieldCheckbox: Story = {};
+export const FormFieldCheckboxStory: Story = {};

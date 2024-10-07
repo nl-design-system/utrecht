@@ -5,6 +5,7 @@ export interface CheckboxProps extends Omit<InputHTMLAttributes<HTMLInputElement
   appearance?: string;
   indeterminate?: boolean;
   invalid?: boolean;
+  inputRequired?: boolean;
 }
 
 export const Checkbox = forwardRef(
@@ -13,6 +14,7 @@ export const Checkbox = forwardRef(
       appearance = 'custom',
       disabled,
       indeterminate = false,
+      inputRequired,
       invalid,
       required,
       className,
@@ -48,14 +50,15 @@ export const Checkbox = forwardRef(
             'utrecht-checkbox--custom': appearance === 'custom',
             'utrecht-checkbox--invalid': invalid,
             'utrecht-checkbox--indeterminate': indeterminate,
-            'utrecht-checkbox--required': required,
+            'utrecht-checkbox--required': required || inputRequired,
           },
           className,
         )}
         aria-checked={indeterminate ? 'mixed' : undefined}
         aria-invalid={invalid || undefined}
+        aria-required={required ? required : undefined}
         disabled={disabled}
-        required={required}
+        required={inputRequired}
       />
     );
   },
