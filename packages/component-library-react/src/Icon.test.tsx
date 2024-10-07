@@ -38,6 +38,71 @@ describe('Icon', () => {
     expect(accessibleIcon).toBeInTheDocument();
   });
 
+  it('with SVG is not available in the accessibility tree', () => {
+    render(
+      <div>
+        <button>← Previous</button>
+        <button>
+          Next{' '}
+          <Icon>
+            <svg role="presentation" width="8" height="14" viewBox="0 0 8 14">
+              <title>›</title>
+              <path
+                d="m7,14c-.26,0-.51-.1-.71-.29L.29,7.71c-.39-.39-.39-1.02,0-1.41L6.29.29c.39-.39,1.02-.39,1.41,0s.39,1.02,0,1.41L2.41,7l5.29,5.29c.39.39.39,1.02,0,1.41-.2.2-.45.29-.71.29Z"
+                strokeWidth="0"
+              />
+            </svg>
+          </Icon>
+        </button>
+      </div>,
+    );
+
+    const buttonWithoutIconComponent = screen.getByRole('button', {
+      name: '← Previous',
+    });
+
+    const buttonWithIconComponent = screen.getByRole('button', {
+      name: 'Next',
+    });
+
+    expect(buttonWithoutIconComponent).toBeInTheDocument();
+
+    expect(buttonWithIconComponent).toBeInTheDocument();
+  });
+
+  it('with SVG link is not available in the accessibility tree', () => {
+    render(
+      <div>
+        <button>← Previous</button>
+        <button>
+          Next{' '}
+          <Icon>
+            <svg role="presentation" width="8" height="14" viewBox="0 0 8 14" xmlns="http://www.w3.org/2000/svg">
+              <a href="https://www.example.com"></a>
+              <title>›</title>
+              <path
+                d="m7,14c-.26,0-.51-.1-.71-.29L.29,7.71c-.39-.39-.39-1.02,0-1.41L6.29.29c.39-.39,1.02-.39,1.41,0s.39,1.02,0,1.41L2.41,7l5.29,5.29c.39.39.39,1.02,0,1.41-.2.2-.45.29-.71.29Z"
+                strokeWidth="0"
+              />
+            </svg>
+          </Icon>
+        </button>
+      </div>,
+    );
+
+    const buttonWithoutIconComponent = screen.getByRole('button', {
+      name: '← Previous',
+    });
+
+    const buttonWithIconComponent = screen.getByRole('button', {
+      name: 'Next',
+    });
+
+    expect(buttonWithoutIconComponent).toBeInTheDocument();
+
+    expect(buttonWithIconComponent).toBeInTheDocument();
+  });
+
   it('renders an HTML span element', () => {
     const { container } = render(<Icon />);
 
