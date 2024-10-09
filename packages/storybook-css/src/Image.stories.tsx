@@ -4,7 +4,11 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Image } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/img-css/README.md?raw';
+import referencesDocs from '@utrecht/img-css/docs/references.nl.md?raw';
+import htmlDocs from '@utrecht/img-css/docs/technology-html.nl.md?raw';
+import wcagDocs from '@utrecht/img-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/img-css/src/tokens.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -72,7 +76,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, htmlDocs, referencesDocs, wcagDocs]),
       },
     },
   },

@@ -5,15 +5,19 @@
  */
 
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
+import type { ForwardedRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { forwardRef } from 'react';
 
-export type LogoProps = HTMLAttributes<HTMLDivElement>;
+export interface LogoProps extends HTMLAttributes<HTMLDivElement> {
+  caption?: ReactNode;
+}
 
 export const Logo = forwardRef(
-  ({ children, className, ...restProps }: PropsWithChildren<LogoProps>, ref: ForwardedRef<HTMLDivElement>) => (
-    <div ref={ref} className={clsx('utrecht-logo', className)} {...restProps}>
+  ({ children, className, caption, ...restProps }: PropsWithChildren<LogoProps>, ref: ForwardedRef<HTMLDivElement>) => (
+    <figure ref={ref} className={clsx('utrecht-logo', className)} {...restProps}>
       {children}
-    </div>
+      {caption && <figcaption className="utrecht-logo__caption">{caption}</figcaption>}
+    </figure>
   ),
 );
 
