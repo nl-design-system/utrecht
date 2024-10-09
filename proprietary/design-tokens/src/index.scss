@@ -11,8 +11,7 @@
 
 @import "./responsive";
 
-.utrecht-theme,
-.utrecht-theme ::backdrop {
+.utrecht-theme {
   @include utrecht-theme;
 
   utrecht-page-footer,
@@ -27,9 +26,7 @@
 
 @media (prefers-color-scheme: dark) {
   .utrecht-theme--media-query,
-  .utrecht-theme--media-query ::backdrop,
-  .utrecht-theme--media-query-color-scheme,
-  .utrecht-theme--media-query-color-scheme ::backdrop {
+  .utrecht-theme--media-query-color-scheme {
     @include utrecht-theme--dark;
   }
 }
