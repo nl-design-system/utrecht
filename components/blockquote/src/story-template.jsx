@@ -9,17 +9,21 @@ import React from 'react';
 import { Paragraph } from '../../paragraph/src/story-template';
 
 export const argTypes = {
+  aside: {
+    description: 'Aside',
+    control: { type: 'boolean' },
+  },
   textContent: {
     description: 'Content of the quote',
     control: 'text',
   },
-  attribution: {
-    description: 'Attribution of the quote',
+  caption: {
+    description: 'Caption of the quote',
     control: 'text',
   },
-  distanced: {
-    description: 'Distance the element from adjacent content',
-    control: 'boolean',
+  figure: {
+    description: 'Figure',
+    control: { type: 'boolean' },
   },
   lang: {
     description: 'Language of the quoted text',
@@ -28,9 +32,10 @@ export const argTypes = {
 };
 
 export const defaultArgs = {
+  aside: false,
+  figure: false,
   textContent: '',
-  attribution: '',
-  distanced: false,
+  caption: '',
   lang: '',
 };
 export const exampleArgs = {
@@ -38,20 +43,46 @@ export const exampleArgs = {
 };
 
 export const Blockquote = ({
+  aside = defaultArgs.aside,
+  children,
+  figure = defaultArgs.figure,
   textContent = defaultArgs.textContent,
-  attribution = defaultArgs.attribution,
-  distanced = defaultArgs.distanced,
+  caption = defaultArgs.caption,
   lang = defaultArgs.lang,
-}) => (
-  <blockquote
-    className={clsx('utrecht-blockquote', { 'utrecht-blockquote--distanced': distanced })}
-    lang={lang || undefined}
-  >
-    <div className="utrecht-blockquote__content">
-      <Paragraph>{textContent}</Paragraph>
-      {attribution && <div className="utrecht-blockquote__attribution">{attribution}</div>}
-    </div>
-  </blockquote>
-);
+}) => {
+  const quote = children || (textContent ? <Paragraph>{textContent}</Paragraph> : null);
+
+  const captionElement = caption ? <figcaption className="utrecht-blockquote__caption">{caption}</figcaption> : null;
+
+  const blockquoteAttrs = { lang };
+
+  return aside && (figure || captionElement) ? (
+    <aside className={clsx('utrecht-blockquote')}>
+      <figure className={clsx('utrecht-blockquote__figure')}>
+        <blockquote className="utrecht-blockquote__quote" {...blockquoteAttrs}>
+          {quote}
+        </blockquote>
+        {captionElement}
+      </figure>
+    </aside>
+  ) : aside ? (
+    <aside className={clsx('utrecht-blockquote')}>
+      <blockquote className="utrecht-blockquote__quote" {...blockquoteAttrs}>
+        {quote}
+      </blockquote>
+    </aside>
+  ) : figure || captionElement ? (
+    <figure className={clsx('utrecht-blockquote')}>
+      <blockquote className="utrecht-blockquote__quote" {...blockquoteAttrs}>
+        {quote}
+      </blockquote>
+      {captionElement}
+    </figure>
+  ) : (
+    <blockquote className={clsx('utrecht-blockquote', 'utrecht-blockquote--html-blockquote')} {...blockquoteAttrs}>
+      {quote}
+    </blockquote>
+  );
+};
 
 export default Blockquote;

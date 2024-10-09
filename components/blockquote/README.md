@@ -8,13 +8,13 @@ Quotes worden gebruikt om uitspraken te accentueren. De quote bestaat uit een ui
 
 - **blockquote**: van het [HTML element `<blockquote>`](https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element). MDN noemt het ["Block Quotation element"](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote), misschien zou dat nog wel beter zijn dan "Blockquote".
 - **content**: experimentele naam.
-- **attribution**: verwijzing naar de bron van het citaat. Experimentele naam.
+- **caption**: extra informatie over het citaat, zoals een verwijzing naar de bron. Genoemd naar het HTML element `figcaption`.
 
 ## Class names
 
 - `utrecht-blockquote`: container element.
-- `utrecht-blockquote__content`: gedeelte waar het citaat word genoemd.
-- `utrecht-blockquote__attribution`: gedeelte waar de bron van het citaat word genoemd.
+- `utrecht-blockquote__quote`: gedeelte waar het citaat word genoemd.
+- `utrecht-blockquote__caption`: gedeelte waar de bron van het citaat word genoemd.
 - `utrecht-blockquote--distanced`: modifier om afstand te creëren tot omliggende tekst.
 
 ## Design tokens

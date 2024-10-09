@@ -9,14 +9,26 @@
   @include utrecht-blockquote;
 }
 
-.utrecht-blockquote__attribution {
-  @include utrecht-blockquote__attribution;
+/* `utrecht-blockquote__attribution` is deprecated */
+.utrecht-blockquote__attribution,
+.utrecht-blockquote__caption {
+  @include utrecht-blockquote__caption;
 }
 
-.utrecht-blockquote__content {
-  @include utrecht-blockquote__content;
+.utrecht-blockquote__figure {
+  @include utrecht-blockquote__figure;
+}
+
+/* `utrecht-blockquote__content` is deprecated */
+.utrecht-blockquote__content,
+.utrecht-blockquote__quote {
+  @include utrecht-blockquote__quote;
 }
 
 .utrecht-blockquote--distanced {
   @include utrecht-blockquote--distanced;
+}
+
+.utrecht-blockquote--html-blockquote {
+  @include utrecht-blockquote__quote;
 }

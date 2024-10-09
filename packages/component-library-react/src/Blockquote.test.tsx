@@ -113,6 +113,176 @@ describe('Blockquote', () => {
     });
   });
 
+  it('can have the source URL in a cite attribute of the blockquote element', () => {
+    const url = 'https://example.com/';
+
+    const { container } = render(
+      <Blockquote cite={url}>
+        <p>
+          This domain is for use in illustrative examples in documents. You may use this domain in literature without
+          prior coordination or asking for permission.
+        </p>
+      </Blockquote>,
+    );
+
+    const blockquote = container.querySelector('blockquote');
+
+    expect(blockquote).toBeInTheDocument();
+
+    if (blockquote) {
+      expect(blockquote).toHaveAttribute('cite', url);
+    }
+  });
+
+  describe('with a caption', () => {
+    it('contains the blockquote inside a figure element', () => {
+      const { container } = render(<Blockquote caption="example.com" />);
+
+      const figure = container.querySelector('figure');
+
+      expect(figure).toBeInTheDocument();
+
+      if (figure) {
+        const blockquote = figure.querySelector('blockquote');
+
+        expect(blockquote).toBeInTheDocument();
+      }
+    });
+
+    it('contains the caption inside a figcaption element', () => {
+      const caption = 'example.com';
+      const { container } = render(<Blockquote caption={caption} />);
+
+      const figure = container.querySelector('figure');
+
+      expect(figure).toBeInTheDocument();
+
+      if (figure) {
+        const figcaption = figure.querySelector('figcaption');
+
+        expect(figcaption).toBeInTheDocument();
+        expect(figcaption).toHaveTextContent(caption);
+      }
+    });
+  });
+
+  describe('in aside', () => {
+    it('contains the blockquote inside the aside element', () => {
+      const { container } = render(<Blockquote aside />);
+
+      const aside = container.querySelector('aside');
+
+      expect(aside).toBeInTheDocument();
+
+      if (aside) {
+        const blockquote = aside.querySelector('blockquote');
+
+        expect(blockquote).toBeInTheDocument();
+      }
+    });
+
+    it('can have the source URL in a cite attribute of the blockquote element', () => {
+      const url = 'https://example.com/';
+
+      const { container } = render(
+        <Blockquote aside cite={url}>
+          <p>
+            This domain is for use in illustrative examples in documents. You may use this domain in literature without
+            prior coordination or asking for permission.
+          </p>
+        </Blockquote>,
+      );
+
+      const blockquote = container.querySelector('blockquote');
+
+      expect(blockquote).toBeInTheDocument();
+
+      if (blockquote) {
+        expect(blockquote).toHaveAttribute('cite', url);
+      }
+    });
+  });
+
+  describe('in figure', () => {
+    it('contains the blockquote inside the aside element', () => {
+      const { container } = render(<Blockquote figure />);
+
+      const figure = container.querySelector('figure');
+
+      expect(figure).toBeInTheDocument();
+
+      if (figure) {
+        const blockquote = figure.querySelector('blockquote');
+
+        expect(blockquote).toBeInTheDocument();
+      }
+    });
+
+    it('can have the source URL in a cite attribute of the blockquote element', () => {
+      const url = 'https://example.com/';
+
+      const { container } = render(
+        <Blockquote figure cite={url}>
+          <p>
+            This domain is for use in illustrative examples in documents. You may use this domain in literature without
+            prior coordination or asking for permission.
+          </p>
+        </Blockquote>,
+      );
+
+      const blockquote = container.querySelector('blockquote');
+
+      expect(blockquote).toBeInTheDocument();
+
+      if (blockquote) {
+        expect(blockquote).toHaveAttribute('cite', url);
+      }
+    });
+  });
+
+  describe('in figure and aside', () => {
+    it('contains the blockquote inside the aside element, inside the figure element', () => {
+      const { container } = render(<Blockquote aside figure />);
+
+      const figure = container.querySelector('figure');
+
+      expect(figure).toBeInTheDocument();
+
+      if (figure) {
+        const aside = container.querySelector('aside');
+
+        expect(aside).toBeInTheDocument();
+
+        if (aside) {
+          const blockquote = aside.querySelector('blockquote');
+
+          expect(blockquote).toBeInTheDocument();
+        }
+      }
+    });
+
+    it('can have the source URL in a cite attribute of the blockquote element', () => {
+      const url = 'https://example.com/';
+
+      const { container } = render(
+        <Blockquote aside figure cite={url}>
+          <p>
+            This domain is for use in illustrative examples in documents. You may use this domain in literature without
+            prior coordination or asking for permission.
+          </p>
+        </Blockquote>,
+      );
+
+      const blockquote = container.querySelector('blockquote');
+
+      expect(blockquote).toBeInTheDocument();
+
+      if (blockquote) {
+        expect(blockquote).toHaveAttribute('cite', url);
+      }
+    });
+  });
+
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLQuoteElement>();
 
