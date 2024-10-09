@@ -1,5 +1,11 @@
 # @utrecht/code-block-css
 
+## 1.2.2
+
+### Patch Changes
+
+- a73747f: Update Figma support in the design token metadata for the Code block component.
+
 ## 1.2.1
 
 ### Patch Changes

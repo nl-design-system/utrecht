@@ -46,30 +46,14 @@
   --utrecht-icon-color: var(--utrecht-mapcontrolbutton-focus-color, var(--utrecht-mapcontrolbutton-color));
 }
 
-// The workaround for missing `:focus-visible` support makes the code quite complex,
-// keep the ideal version around to restore it easily when browser support improves.
+.utrecht-mapcontrolbutton:focus:not(:disabled, [aria-disabled="true"], .utrecht-mapcontrolbutton--disabled) {
+  @extend .utrecht-mapcontrolbutton--focus;
+}
 
-@if $utrecht-focus-visible-fallback {
-  .utrecht-mapcontrolbutton:focus:not(:disabled, [aria-disabled="true"], .utrecht-mapcontrolbutton--disabled) {
-    @extend .utrecht-mapcontrolbutton--focus;
-    @extend .utrecht-mapcontrolbutton--focus-visible;
-  }
-
-  /* override the `:focus` selector above */
-  /* stylelint-disable-next-line no-descending-specificity */
-  .utrecht-mapcontrolbutton:focus:not(:focus-visible) {
-    @include utrecht-focus-ring-reset;
-  }
-} @else {
-  .utrecht-mapcontrolbutton:focus:not(:disabled, [aria-disabled="true"], .utrecht-mapcontrolbutton--disabled) {
-    @extend .utrecht-mapcontrolbutton--focus;
-  }
-
-  /* override the `:focus` selector above */
-  /* stylelint-disable-next-line no-descending-specificity */
-  .utrecht-mapcontrolbutton:focus-visible {
-    @extend .utrecht-mapcontrolbutton--focus-visible;
-  }
+/* override the `:focus` selector above */
+/* stylelint-disable-next-line no-descending-specificity */
+.utrecht-mapcontrolbutton:focus-visible {
+  @extend .utrecht-mapcontrolbutton--focus-visible;
 }
 
 .utrecht-mapcontrolbutton--hover:not(:disabled),

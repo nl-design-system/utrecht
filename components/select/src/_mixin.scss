@@ -31,6 +31,7 @@ $utrecht-support-prince-xml: false !default;
   ); /* harden with `initial` */
 
   inline-size: 100%;
+  line-height: var(--utrecht-select-line-height, var(--utrecht-form-control-line-height, initial));
   min-block-size: var(--utrecht-select-min-block-size, var(--utrecht-pointer-target-min-size, 44px));
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: var(--utrecht-select-max-inline-size, var(--utrecht-form-control-max-inline-size));
@@ -152,26 +153,12 @@ $utrecht-support-prince-xml: false !default;
 }
 
 @mixin utrecht-select--html-select {
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
+  &:focus {
+    @include utrecht-select--focus;
+  }
 
-  @if $utrecht-focus-visible-fallback {
-    &:focus {
-      @include utrecht-select--focus;
-      @include utrecht-select--focus-visible;
-    }
-
-    &:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    &:focus {
-      @include utrecht-select--focus;
-    }
-
-    &:focus-visible {
-      @include utrecht-select--focus-visible;
-    }
+  &:focus-visible {
+    @include utrecht-select--focus-visible;
   }
 
   /* <select> does not have a `readonly` attribute */

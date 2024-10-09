@@ -1,5 +1,24 @@
 # @utrecht/component-library-css
 
+## 6.0.0
+
+### Major Changes
+
+- fe20468: Breaking change: Removed "lead" and "small" styling from HTML paragraph component. If "lead" or "small" are now used, there will be no styling.
+
+  Removed "lead" and "small" stories from html paragraph.
+
+- c3660c1: Rename design token `utrecht.button.icon.gap` to `utrecht.button.column-gap`
+
+### Minor Changes
+
+- 200e34b: Add `utrecht.number-badge.border-color` and `utrecht.number-badge.border-width` design tokens.
+- 24b4813: Add an optional element class `utrecht-button__label` to support other inline styling without a gap
+
+### Patch Changes
+
+- 95901d6: Add CSS variables fallback, so disabled radio button looks like normal radio button when no design tokens are set.
+
 ## 5.2.0
 
 ### Minor Changes

@@ -1,5 +1,21 @@
 # @utrecht/skip-link-css
 
+## 1.3.0
+
+### Minor Changes
+
+- 9090352: Add new tokens for Skip Link, to replace deprecated tokens:
+
+  - `utrecht.skip-link.focus-visible.color`
+  - `utrecht.skip-link.focus-visible.background-color`
+  - `utrecht.skip-link.focus-visible.text-decoration`
+
+  The following Skip Link tokens are now deprecated:
+
+  - `utrecht.skip-link.focus.color`
+  - `utrecht.skip-link.focus.background-color`
+  - `utrecht.skip-link.focus.text-decoration`
+
 ## 1.2.0
 
 ### Minor Changes

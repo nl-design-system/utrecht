@@ -87,7 +87,6 @@ export const defaultArgs = {
   telephone: false,
   textContent: '',
   visited: false,
-  iconleft: false,
 };
 
 export const exampleArgs = {
@@ -112,7 +111,6 @@ export const Link = ({
   telephone = defaultArgs.telephone,
   textContent = defaultArgs.textContent,
   visited = defaultArgs.visited,
-  iconleft = defaultArgs.iconleft,
   ...restProps
 }) => (
   <a
@@ -129,7 +127,6 @@ export const Link = ({
       'utrecht-link--placeholder': placeholder,
       'utrecht-link--telephone': telephone,
       'utrecht-link--visited': visited,
-      'utrecht-link--icon-left': iconleft,
     })}
     rel={external ? 'external noopener noreferrer' : null}
     aria-label={ariaLabel || null}

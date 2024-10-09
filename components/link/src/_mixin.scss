@@ -90,16 +90,6 @@ however browsers don't seem to have implemented great looking supixel tweening y
   text-underline-offset: var(--utrecht-link-text-underline-offset);
 }
 
-@mixin utrecht-link--icon-left {
-  background-image: var(--utrecht-link-icon-left-background-image, none);
-  background-position: 0 0.25em;
-  background-repeat: no-repeat;
-  color: var(--utrecht-link-color, LinkText);
-  font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
-  padding-inline-start: var(--utrecht-space-block-md);
-  text-decoration-line: none;
-}
-
 @mixin utrecht-link--visited {
   --_utrecht-link-forced-colors-color: visitedtext;
   --_utrecht-link-state-color: var(--utrecht-link-visited-color);
@@ -122,8 +112,6 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
 @mixin utrecht-link--focus {
   --_utrecht-link-state-color: var(--utrecht-link-focus-color);
-  --_utrecht-link-state-text-decoration: var(--utrecht-link-focus-text-decoration);
-  --_utrecht-link-state-text-decoration-thickness: var(--utrecht-link-focus-text-decoration-thickness);
 
   background-color: var(--utrecht-link-focus-background-color, transparent);
   text-decoration-skip: none;
@@ -151,6 +139,21 @@ however browsers don't seem to have implemented great looking supixel tweening y
    * Use `z-index` to ensure the focus ring is stacked above adjecent elements with a `background`
    */
   @include utrecht-focus-visible;
+
+  /*
+   * The following tokens are deprecated, but we keep them for backwards compatibility for now:
+   * 
+   * `--utrecht-link-focus-text-decoration`
+   * `--utrecht-link-focus-text-decoration-thickness`
+   */
+  --_utrecht-link-state-text-decoration: var(
+    --utrecht-link-focus-visible-text-decoration,
+    var(--utrecht-link-focus-text-decoration)
+  );
+  --_utrecht-link-state-text-decoration-thickness: var(
+    --utrecht-link-focus-visible-text-decoration-thickness,
+    var(--utrecht-link-focus-text-decoration-thickness)
+  );
 
   z-index: var(--utrecht-stack-focus-z-index, 1);
 }
@@ -220,25 +223,11 @@ however browsers don't seem to have implemented great looking supixel tweening y
     @include utrecht-link--active;
   }
 
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
+  &:any-link:focus {
+    @include utrecht-link--focus;
+  }
 
-  @if $utrecht-focus-visible-fallback {
-    &:any-link:focus {
-      @include utrecht-link--focus;
-      @include utrecht-link--focus-visible;
-    }
-
-    &:any-link:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    &:any-link:focus {
-      @include utrecht-link--focus;
-    }
-
-    &:any-link:focus-visible {
-      @include utrecht-link--focus-visible;
-    }
+  &:any-link:focus-visible {
+    @include utrecht-link--focus-visible;
   }
 }

@@ -22,26 +22,12 @@
     @include utrecht-link--active;
   }
 
-  // The workaround for missing `:focus-visible` support makes the code quite complex,
-  // keep the ideal version around to restore it easily when browser support improves.
+  a:focus {
+    @include utrecht-link--focus;
+  }
 
-  @if $utrecht-focus-visible-fallback {
-    a:focus {
-      @include utrecht-link--focus;
-      @include utrecht-link--focus-visible;
-    }
-
-    a:focus:not(:focus-visible) {
-      @include utrecht-focus-ring-reset;
-    }
-  } @else {
-    a:focus {
-      @include utrecht-link--focus;
-    }
-
-    a:focus-visible {
-      @include utrecht-link--focus-visible;
-    }
+  a:focus-visible {
+    @include utrecht-link--focus-visible;
   }
 
   a[rel~="external" i] {

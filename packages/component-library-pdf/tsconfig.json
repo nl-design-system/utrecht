@@ -18,7 +18,7 @@
   "exclude": ["**/node_modules/*"],
   "references": [
     {
-      "path": "../component-library-react"
+      "path": "../component-library-react/tsconfig.build.json"
     }
   ]
 }

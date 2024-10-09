@@ -93,4 +93,62 @@ describe('Fieldset', () => {
 
     expect(ref.current).toBe(fieldset);
   });
+
+  describe('invalid state', () => {
+    it('has no aria-invalid="true" attribute', () => {
+      render(<Fieldset invalid />);
+
+      const group = screen.getByRole('group');
+
+      expect(group).not.toHaveAttribute('aria-invalid');
+    });
+  });
+
+  describe('required state', () => {
+    it('has no aria-required="true" attribute', () => {
+      render(<Fieldset required />);
+
+      const group = screen.getByRole('group');
+
+      expect(group).not.toHaveAttribute('aria-required');
+    });
+  });
+
+  describe('radio group', () => {
+    describe('required state', () => {
+      it('has an aria-invalid="true" attribute', () => {
+        render(<Fieldset role="radiogroup" invalid />);
+
+        const group = screen.getByRole('radiogroup');
+
+        expect(group).toHaveAttribute('aria-invalid', 'true');
+      });
+
+      it('has an invalid state in the accessibility tree', () => {
+        render(<Fieldset role="radiogroup" invalid />);
+
+        const group = screen.getByRole('radiogroup');
+
+        expect(group).toBeInvalid();
+      });
+    });
+
+    describe('required state', () => {
+      it('has an aria-required="true" attribute', () => {
+        render(<Fieldset role="radiogroup" required />);
+
+        const group = screen.getByRole('radiogroup');
+
+        expect(group).toHaveAttribute('aria-required', 'true');
+      });
+
+      it('has an required state in the accessibility tree', () => {
+        render(<Fieldset role="radiogroup" required />);
+
+        const group = screen.getByRole('radiogroup');
+
+        expect(group).toBeRequired();
+      });
+    });
+  });
 });

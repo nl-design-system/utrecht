@@ -1,5 +1,11 @@
 # @utrecht/drawer-css
 
+## 1.2.2
+
+### Patch Changes
+
+- 02f762b: Update Figma support in the design token metadata for the Drawer component.
+
 ## 1.2.1
 
 ### Patch Changes

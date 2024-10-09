@@ -10,8 +10,10 @@
       "text-decoration": { "value": "{utrecht.link.text-decoration}" },
       "focus": {
         "color": { "value": "{utrecht.topnav.link.focus.color}" },
-        "background-color": { "value": "{utrecht.topnav.link.focus.background-color}" },
-        "text-decoration": { "value": "{utrecht.link.focus.text-decoration}" }
+        "background-color": { "value": "{utrecht.topnav.link.focus.background-color}" }
+      },
+      "focus-visible": {
+        "text-decoration": { "value": "{utrecht.link.focus-visible.text-decoration}" }
       }
     }
   }

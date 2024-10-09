@@ -111,10 +111,19 @@ $utrecht-support-prince-xml: false !default;
    * - should have no hover effect
    * - should have a working focus-visible effect, in case someone sets `<input type="radio" disabled tabindex="0">`
    */
-  --_utrecht-radio-button-background-color: var(--utrecht-radio-button-disabled-background-color);
-  --_utrecht-radio-button-border-color: var(--utrecht-radio-button-disabled-border-color);
-  --_utrecht-radio-button-border-width: var(--utrecht-radio-button-disabled-border-width);
-  --_utrecht-radio-button-color: var(--utrecht-radio-button-disabled-color);
+  --_utrecht-radio-button-background-color: var(
+    --utrecht-radio-button-disabled-background-color,
+    var(--utrecht-radio-button-background-color)
+  );
+  --_utrecht-radio-button-border-color: var(
+    --utrecht-radio-button-disabled-border-color,
+    var(--utrecht-radio-button-border-color)
+  );
+  --_utrecht-radio-button-border-width: var(
+    --utrecht-radio-button-disabled-border-width,
+    var(--utrecht-radio-button-border-width)
+  );
+  --_utrecht-radio-button-color: var(--utrecht-radio-button-disabled-color, var(--utrecht-radio-button-color));
 
   /* no focus effect */
   --_utrecht-radio-button-focus-background-color: var(--_utrecht-radio-button-background-color);

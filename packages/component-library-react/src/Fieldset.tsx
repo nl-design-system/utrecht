@@ -8,6 +8,7 @@ export interface FieldsetProps extends HTMLAttributes<HTMLDivElement> {
   disabled?: boolean;
   form?: string;
   invalid?: boolean;
+  required?: boolean;
   name?: string;
 }
 
@@ -23,6 +24,7 @@ export const Fieldset = forwardRef(
       form,
       invalid,
       name,
+      required,
       role,
       ...restProps
     }: PropsWithChildren<FieldsetProps>,
@@ -42,7 +44,8 @@ export const Fieldset = forwardRef(
         aria-describedby={ariaDescribedby}
         aria-label={ariaLabel}
         aria-labelledby={ariaLabelledby}
-        aria-invalid={invalid || undefined}
+        aria-invalid={role === 'radiogroup' ? invalid || undefined : undefined}
+        aria-required={role === 'radiogroup' ? required || undefined : undefined}
         disabled={disabled}
         form={form}
         name={name}

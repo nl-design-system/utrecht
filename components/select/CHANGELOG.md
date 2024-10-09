@@ -1,5 +1,15 @@
 # @utrecht/select-css
 
+## 1.4.0
+
+### Minor Changes
+
+- bc27493: Add `utrecht.select.line-height` design token.
+
+### Patch Changes
+
+- e177ced: Start using `:focus-visible`, Safari support has caught up.
+
 ## 1.3.0
 
 ### Minor Changes

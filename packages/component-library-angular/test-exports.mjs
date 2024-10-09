@@ -1,6 +1,5 @@
-import packageJSON from './package.json' assert { type: 'json' };
-import distPackageJSON from './dist/package.json' assert { type: 'json' };
-import { dirname, resolve } from 'node:path';
+import { resolve } from 'node:path';
+import { readFile } from 'node:fs/promises';
 import { access, constants } from 'node:fs/promises';
 import isEqual from 'lodash.isequal';
 import cloneDeepWith from 'lodash.clonedeepwith';
@@ -39,12 +38,21 @@ const testPathExistence = (paths) =>
       }
     });
 
-const subset = getAbsoluteSubset('', packageJSON);
-const referenceSubset = getAbsoluteSubset('dist/', distPackageJSON);
+const init = async () => {
+  const packageJSON = JSON.parse(await readFile('./package.json', 'utf-8'));
+  const distPackageJSON = JSON.parse(await readFile('./dist/package.json', 'utf-8'));
 
-if (!isEqual(subset, referenceSubset)) {
-  console.log(`package.json:\n${JSON.stringify(subset, null, 2)}`);
-  console.log(`dist/package.json:\n${JSON.stringify(referenceSubset, null, 2)}`);
+  const subset = getAbsoluteSubset('', packageJSON);
+  const referenceSubset = getAbsoluteSubset('dist/', distPackageJSON);
 
-  throw new Error('Exports of package.json and dist/package.json are not in sync. See CONTRIBUTING.md for more info.');
-}
+  if (!isEqual(subset, referenceSubset)) {
+    console.log(`package.json:\n${JSON.stringify(subset, null, 2)}`);
+    console.log(`dist/package.json:\n${JSON.stringify(referenceSubset, null, 2)}`);
+
+    throw new Error(
+      'Exports of package.json and dist/package.json are not in sync. See CONTRIBUTING.md for more info.',
+    );
+  }
+};
+
+init();

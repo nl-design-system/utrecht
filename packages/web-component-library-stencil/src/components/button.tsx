@@ -145,7 +145,10 @@ export class Button {
         type={this.type || 'button'}
         onClick={handleClick}
       >
-        <slot></slot>
+        <slot name="icon"></slot>
+        <span class="utrecht-button__label">
+          <slot></slot>
+        </span>
       </button>
     );
   }

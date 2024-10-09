@@ -15,7 +15,7 @@ const customJestConfig = {
   testPathIgnorePatterns: ['/dist/'],
   // transformIgnorePatterns: ['node_modules/(?!@utrecht/web-component-library-react)'],
   moduleNameMapper: {
-    '^@utrecht/(.*)$': '<rootDir>/packages/$1/src/',
+    '^@utrecht/(.*)$': '<rootDir>/../components-react/$1/src/',
   },
 };
 

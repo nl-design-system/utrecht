@@ -17,10 +17,10 @@ interface SkipLinkStoryProps extends SkipLinkProps {
   visibleOnFocus?: boolean;
 }
 
-const SkipLinkStory = ({ focus, visibility, visibleOnFocus, ...restProps }: SkipLinkStoryProps) => (
+const SkipLinkStory = ({ focusVisible, visibility, visibleOnFocus, ...restProps }: SkipLinkStoryProps) => (
   <SkipLink
     className={clsx({
-      'utrecht-skip-link--focus': focus,
+      'utrecht-skip-link--focus-visible': focusVisible,
       'utrecht-skip-link--visible-on-focus': visibleOnFocus,
       'utrecht-skip-link--hidden': visibility === 'hidden',
       'utrecht-skip-link--visible': visibility === 'visible',
@@ -49,6 +49,12 @@ const meta = {
         required: true,
       },
     },
+    focusVisible: {
+      description: 'Simulate :focus-visible',
+      type: {
+        name: 'boolean',
+      },
+    },
     visibility: {
       description: 'Visibilty',
       type: 'select',
@@ -62,7 +68,7 @@ const meta = {
   args: {
     children: '',
     href: '',
-    focus: false,
+    focusVisible: false,
     visibility: '',
     visibleOnFocus: false,
   },
@@ -94,7 +100,7 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     href: '#main',
-    focus: true,
+    focusVisible: true,
     children: 'Skip to main content',
     visibility: 'visible',
   },
@@ -110,7 +116,7 @@ export const Default: Story = {
 export const VisibleOnFocus: Story = {
   args: {
     href: '#main',
-    focus: true,
+    focusVisible: true,
     children: 'Skip to main content',
     visibleOnFocus: true,
   },
@@ -129,7 +135,7 @@ export const VisibleOnFocus: Story = {
 export const RightToLeft: Story = {
   args: {
     href: '#main',
-    focus: true,
+    focusVisible: true,
     children: 'تخطي إلى المحتوى الرئيسي',
     visibility: 'visible',
   },

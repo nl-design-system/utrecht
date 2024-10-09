@@ -13,7 +13,7 @@
     "./components/",
     "./components/*/",
     "./packages/*",
-    "./packages/component-library-react/packages/*",
+    "./packages/components-react/*",
     "./proprietary/*"
   ],
   "repository": {
@@ -22,7 +22,7 @@
     "directory": "."
   },
   "engines": {
-    "node": "^20",
+    "node": "^22",
     "pnpm": "^9"
   },
   "devDependencies": {
@@ -64,7 +64,7 @@
     "add-repository-directory": "node ./add-repository-directory.mjs",
     "build": "pnpm run nx-build --skip-nx-cache",
     "nx-build": "nx run-many --target=build --all --parallel",
-    "clean": "pnpm run --if-present --recursive clean",
+    "clean": "pnpm run --recursive clean",
     "docs": "pnpm run --workspace packages/docusaurus start",
     "find-undocumented-tokens": "pnpm run --dir proprietary/design-tokens/ build:stylelint && pnpm run lint:css --config ./.tokens.stylelintrc.json",
     "lint": "pnpm run nx-lint --skip-nx-cache",
@@ -113,5 +113,5 @@
       "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch"
     }
   },
-  "packageManager": "pnpm@9.1.1+sha256.9551e803dcb7a1839fdf5416153a844060c7bce013218ce823410532504ac10b"
+  "packageManager": "pnpm@9.12.0"
 }

@@ -4,5 +4,5 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-export { type ButtonProps } from '@utrecht/button-react/src/index';
-export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from '@utrecht/button-react/src/index';
+export { type ButtonProps } from '@utrecht/button-react';
+export { Button, PrimaryActionButton, SecondaryActionButton, SubtleButton } from '@utrecht/button-react';

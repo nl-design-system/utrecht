@@ -7,7 +7,13 @@
 @mixin utrecht-number-badge {
   /* Limit size to `max-content`, so the badge will not be stretched out of proportion inside a flexbox */
   background-color: var(--utrecht-number-badge-background-color, var(--utrecht-badge-background-color, hsl(0 0% 0%)));
+  border-color: var(--utrecht-number-badge-border-color, var(--utrecht-badge-border-color));
   border-radius: var(--utrecht-number-badge-border-radius, var(--utrecht-badge-border-radius, 0.5ch));
+  border-style: solid;
+  border-width: max(
+    var(--utrecht-number-badge-border-width, var(--utrecht-badge-border-width, 0)),
+    var(--_utrecht-number-badge-min-border-width, 0)
+  );
   color: var(--utrecht-number-badge-color, var(--utrecht-badge-color, hsl(0 0% 100%)));
   display: inline-block;
   font-family: var(
@@ -32,4 +38,13 @@
   text-align: center;
   text-decoration: none; /* no inheritance */
   white-space: nowrap;
+}
+
+@mixin utrecht-number-badge--media-query-forced-colors {
+  @media screen and (forced-colors: active) {
+    /* Warning: there layout difference because of the added 1px border */
+    --_utrecht-number-badge-min-border-width: 1px;
+
+    border-color: currentColor;
+  }
 }

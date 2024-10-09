@@ -1,5 +1,17 @@
 # @utrecht/mark-css
 
+## 1.2.2
+
+### Patch Changes
+
+- 8edf86e: Changed value for Figma support metadata.
+
+## 1.2.1
+
+### Patch Changes
+
+- 5ea3af4: Update Figma support in the design token metadata for the Mark component.
+
 ## 1.2.0
 
 ### Minor Changes

@@ -11,8 +11,8 @@ tmp/
 .angular
 *.tsbuildinfo
 .swc
-packages/component-library-react/pages
-packages/component-library-react/packages/*/pages
+packages/component-library-react/pages/
+packages/components-react/*/pages/
 
 # Ignore log files
 *.err
@@ -32,3 +32,4 @@ packages/component-library-react/packages/*/pages
 yarn.lock
 package-lock.json
 .nx/cache/
+.rollup.cache/

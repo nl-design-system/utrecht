@@ -1,5 +1,11 @@
 # @utrecht/pagination-css
 
+## 1.2.1
+
+### Patch Changes
+
+- e177ced: Start using `:focus-visible`, Safari support has caught up.
+
 ## 1.2.0
 
 ### Minor Changes

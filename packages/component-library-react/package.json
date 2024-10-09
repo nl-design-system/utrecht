@@ -1,5 +1,5 @@
 {
-  "version": "6.2.0",
+  "version": "7.0.0",
   "author": "Community for NL Design System",
   "description": "React component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -21,12 +21,12 @@
     "build": "pnpm run '/^build:.*/'",
     "build:rollup": "rollup --config rollup.config.mjs",
     "build:rollup-components": "rollup --config rollup-components.config.mjs",
-    "build:test-results": "mkdir -p dist pages && NODE_OPTIONS=--experimental-vm-modules jest --json --outputFile=dist/.jest-test-results.json --silent",
-    "clean": "rimraf dist/ pages/",
-    "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --noEmit --project ./tsconfig.test.json",
+    "build:test-results": "mkdir -p dist pages && jest --json --outputFile=dist/.jest-test-results.json --silent",
+    "clean": "rimraf dist/ pages/ .rollup.cache/ .swc",
+    "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --project ./tsconfig.test.json",
     "test": "mkdir -p pages && jest --coverage --verbose",
     "watch:build": "rollup -c --watch",
-    "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
+    "watch:test": "jest --verbose --watch"
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
@@ -69,9 +69,9 @@
     "@utrecht/badge-status-css": "workspace:*",
     "@utrecht/blockquote-css": "workspace:*",
     "@utrecht/breadcrumb-nav-css": "workspace:*",
-    "@utrecht/button-react": "workspace:*",
     "@utrecht/button-group-css": "workspace:*",
     "@utrecht/button-link-css": "workspace:*",
+    "@utrecht/button-react": "workspace:*",
     "@utrecht/calendar-react": "workspace:*",
     "@utrecht/checkbox-css": "workspace:*",
     "@utrecht/code-block-css": "workspace:*",
@@ -170,7 +170,7 @@
     "rollup-plugin-typescript2": "0.36.0",
     "sass": "1.69.5",
     "tslib": "2.6.2",
-    "typescript": "4.9.5",
+    "typescript": "5.6.2",
     "vega": "5.26.1",
     "vega-embed": "6.23.0",
     "vega-lite": "5.16.3"
