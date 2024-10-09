@@ -4,7 +4,13 @@ import { Meta, StoryObj } from '@storybook/react';
 import { Logo, LogoImage } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/logo-css/README.md?raw';
+import accessibilityDocs from '@utrecht/logo-css/docs/accessibility.nl.md?raw';
+import referencesDocs from '@utrecht/logo-css/docs/references.nl.md?raw';
+import htmlDocs from '@utrecht/logo-css/docs/technology-html.nl.md?raw';
+import imgDocs from '@utrecht/logo-css/docs/technology-img.nl.md?raw';
+import wcagDocs from '@utrecht/logo-css/docs/wcag.nl.md?raw';
 import tokensDefinition from '@utrecht/logo-css/src/tokens.json';
+import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -24,7 +30,7 @@ const meta = {
     tokensDefinition,
     docs: {
       description: {
-        component: readme,
+        component: mergeMarkdown([readme, accessibilityDocs, htmlDocs, imgDocs, referencesDocs, wcagDocs]),
       },
     },
   },
