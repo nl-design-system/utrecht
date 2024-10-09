@@ -11,12 +11,34 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
         return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
       },
     },
+    transforms: {
+      'fontSize/pxToRem': {
+        name: 'fontSize/pxToRem',
+        type: 'value',
+        transitive: false,
+        transform: (token) => {
+          const isFontSize = (token) => token.path[token.path.length - 1] === 'font-size' || token.type === 'fontSize';
+          const isLineHeight = (token) => token.path[token.path.length - 1] === 'line-height';
+
+          if ((isFontSize(token) || isLineHeight(token)) && /px$/i.test(token.value)) {
+            const px = parseInt(token.value, 10);
+            const ratio = 1 / 16;
+            const rem = px * ratio;
+            const value = `${rem}rem`;
+
+            return value;
+          }
+
+          return token.value;
+        },
+      },
+    },
   },
   source,
   platforms: {
     js: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel'],
+      transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -31,7 +53,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     tokenTree: {
       transformGroups: 'tokens-studio',
-      transforms: ['color/hsl-4'],
+      transforms: ['fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -42,7 +64,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     json: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel'],
+      transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -61,7 +83,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     css: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -87,7 +109,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
       ],
     },
     'css-theme-prince-xml': {
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -102,7 +124,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     scss: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -115,7 +137,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
       ],
     },
     'scss-theme-mixin': {
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -130,7 +152,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     less: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -143,7 +165,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
       ],
     },
     typescript: {
-      transforms: ['name/camel'],
+      transforms: ['name/camel', 'fontSize/pxToRem'],
       transformGroup: 'js',
       buildPath: 'dist/',
       files: [
@@ -159,7 +181,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     'deprecated-js': {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel'],
+      transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -174,7 +196,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     'deprecated-json': {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel'],
+      transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -193,7 +215,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
     },
     'deprecated-css': {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -211,7 +233,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
       ],
     },
     'deprecated-scss-theme-mixin': {
-      transforms: ['name/kebab'],
+      transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
         {
@@ -225,7 +247,7 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
       ],
     },
     'deprecated-typescript': {
-      transforms: ['name/camel', 'color/hsl-4'],
+      transforms: ['name/camel', 'fontSize/pxToRem'],
       transformGroup: 'js',
       buildPath: 'dist/',
       files: [
