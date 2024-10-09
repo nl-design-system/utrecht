@@ -4,16 +4,41 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+$utrecht-support-prince-xml: false !default;
+
+@mixin reset-figure {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+}
+
 @mixin utrecht-logo {
+  @include reset-figure;
+
   display: block;
   max-block-size: var(--utrecht-logo-max-block-size, 192px);
   max-inline-size: var(--utrecht-logo-max-inline-size, 96px);
   min-block-size: var(--utrecht-logo-min-block-size);
   min-inline-size: var(--utrecht-logo-min-inline-size);
+
+  @if $utrecht-support-prince-xml {
+    svg[role="img"][aria-label] {
+      /* Prince XML does not automatically assign `aria-label` as alt image */
+
+      /* ...and we avoid <title> in SVG */
+      -prince-alt-text: attr(aria-label);
+      -prince-pdf-tag-type: figure;
+    }
+  }
 }
 
 @mixin utrecht-logo__image {
   block-size: 100%;
   display: inline-block;
   inline-size: auto;
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-logo__caption {
 }
