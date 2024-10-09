@@ -11,6 +11,12 @@
 }
 
 /* The element in side `<div class="utrecht-logo">` can be an `<img>`, `<svg>` or even a custom element. */
-.utrecht-logo > * {
+.utrecht-logo > img,
+.utrecht-logo > picture,
+.utrecht-logo > svg {
   @include utrecht-logo__image;
+}
+
+.utrecht-logo__caption {
+  @include utrecht-logo__caption;
 }
