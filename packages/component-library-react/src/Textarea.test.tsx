@@ -133,7 +133,7 @@ describe('Textarea', () => {
 
     it('can have a invalid state in CSS', () => {
       const handleChange = () => {};
-      const { container } = render(<Textarea required onChange={handleChange} />);
+      const { container } = render(<Textarea inputRequired onChange={handleChange} />);
 
       const textarea = container.querySelector(':invalid');
 
@@ -222,12 +222,41 @@ describe('Textarea', () => {
       expect(textarea).not.toHaveAttribute('required');
     });
 
-    it('can have a required state in CSS', () => {
+    it('does not have a required state in CSS', () => {
       const { container } = render(<Textarea required />);
 
       const textarea = container.querySelector(':required');
 
-      expect(textarea).toBeInTheDocument();
+      expect(textarea).not.toBeInTheDocument();
+    });
+  });
+
+  describe('inputRequired variant', () => {
+    it('can have a required state', () => {
+      render(<Textarea inputRequired />);
+      const textbox = screen.getByRole('textbox');
+      expect(textbox).toBeRequired();
+    });
+    it('is not required by default', () => {
+      render(<Textarea />);
+      const textbox = screen.getByRole('textbox');
+      expect(textbox).not.toBeRequired();
+    });
+    it('renders a design system BEM modifier class name', () => {
+      const { container } = render(<Textarea inputRequired />);
+      const textbox = container.querySelector('.utrecht-textarea');
+      expect(textbox).toHaveClass('utrecht-textarea--required');
+    });
+    it('omits non-essential required attributes when not required', () => {
+      render(<Textarea inputRequired={false} />);
+      const textbox = screen.getByRole('textbox');
+      expect(textbox).not.toHaveAttribute('aria-required');
+      expect(textbox).not.toHaveAttribute('required');
+    });
+    it('can have a required state in CSS', () => {
+      const { container } = render(<Textarea inputRequired />);
+      const textbox = container.querySelector(':required');
+      expect(textbox).toBeInTheDocument();
     });
   });
 
