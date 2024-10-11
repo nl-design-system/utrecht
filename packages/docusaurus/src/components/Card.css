@@ -1,0 +1,82 @@
+.utrecht-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  flex-direction: column;
+  column-gap: var(--utrecht-card-column-gap);
+  background-color: var(--utrecht-card-background-color);
+  padding-block-end: var(--utrecht-card-padding-block-end);
+  padding-block-start: var(--utrecht-card-padding-block-start);
+  padding-inline-end: var(--utrecht-card-padding-inline-end);
+  padding-inline-start: var(--utrecht-card-padding-inline-start);
+  position: relative;
+}
+
+.utrecht-card--link {
+  cursor: pointer;
+}
+
+.utrecht-card--link:hover {
+  border-color: LinkColor;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: var(--utrecht-link-text-decoration-color, var(--utrecht-link-color));
+}
+
+.utrecht-card--link:focus-within {
+  --_utrecht-focus-ring-box-shadow: 0 0 0 var(--utrecht-focus-outline-width, 0)
+    var(--utrecht-focus-inverse-outline-color, transparent);
+
+  box-shadow: var(--_utrecht-focus-ring-box-shadow);
+  outline-color: var(--utrecht-focus-outline-color, revert);
+  outline-offset: var(--utrecht-focus-outline-offset, revert);
+  outline-style: var(--utrecht-focus-outline-style, revert);
+  outline-width: var(--utrecht-focus-outline-width, revert);
+
+  background-color: var(--utrecht-focus-background-color);
+  color: var(--utrecht-focus-color);
+}
+
+.utrecht-card__content {
+  grid-column: 1;
+}
+.utrecht-card__image {
+  grid-column: 2;
+}
+
+.utrecht-card__hidden-link {
+  block-size: 1px !important;
+  border: 0 !important;
+  inline-size: 1px !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: -1px !important;
+  overflow: hidden !important;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0 !important;
+  white-space: nowrap !important;
+
+  outline: none !important;
+}
+.utrecht-card__hidden-link:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@media (forced-colors: active) {
+  .utrecht-card--link {
+    border-width: 1px;
+    border-color: linktext;
+    outline-width: 3px;
+    outline-color: linktext !important;
+  }
+  .utrecht-card--link:focus-within {
+    border-color: Highlight;
+    outline-color: Highlight !important;
+  }
+}
