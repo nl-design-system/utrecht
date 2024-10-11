@@ -33,7 +33,7 @@ module.exports = {
       label: 'Design Richtlijnen',
     },
     {
-      href: 'https://nl-design-system.github.io/gebruikersonderzoek/',
+      href: 'https://gebruikersonderzoeken.nl/',
       label: 'Onderzoek',
       position: 'left',
     },
