@@ -11,7 +11,7 @@
     "jsx": "react-jsx",
     "lib": ["DOM", "ES2022"],
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "noFallthroughCasesInSwitch": true,
     "noImplicitOverride": true,
     "noImplicitReturns": true,
