@@ -75,4 +75,48 @@ describe('Form field', () => {
 
     expect(ref.current).toBe(div);
   });
+
+  describe('error message position', () => {
+    it('is displayed after the input field by default', () => {
+      const errorMessage = 'Check this required field to continue.';
+
+      render(
+        <FormField invalid errorMessage={errorMessage}>
+          <input type="text" />
+        </FormField>,
+      );
+
+      const errorMessageElement = screen.getByText(errorMessage);
+
+      expect(errorMessageElement).toHaveClass('utrecht-form-field__error-message--after');
+    });
+
+    it('displays the error message after the input field with `errorMessagePosition="after"`', () => {
+      const errorMessage = 'Check this required field to continue.';
+
+      render(
+        <FormField invalid errorMessage={errorMessage} errorMessagePosition="after">
+          <input type="text" />
+        </FormField>,
+      );
+
+      const errorMessageElement = screen.getByText(errorMessage);
+
+      expect(errorMessageElement).toHaveClass('utrecht-form-field__error-message--after');
+    });
+
+    it('displays the error message before the input field with `errorMessagePosition="before"`', () => {
+      const errorMessage = 'Check this required field to continue.';
+
+      render(
+        <FormField invalid errorMessage={errorMessage} errorMessagePosition="before">
+          <input type="text" />
+        </FormField>,
+      );
+
+      const errorMessageElement = screen.getByText(errorMessage);
+
+      expect(errorMessageElement).toHaveClass('utrecht-form-field__error-message--before');
+    });
+  });
 });

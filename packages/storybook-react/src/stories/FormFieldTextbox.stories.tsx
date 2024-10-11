@@ -94,6 +94,17 @@ const storyArgTypes = {
       category: 'API',
     },
   },
+  errorMessagePosition: {
+    name: 'errorMessagePosition',
+    description: 'Position of the error message in regards to the form control',
+    type: { name: 'text', required: false },
+    control: 'select',
+    options: ['', 'after', 'before'],
+    table: {
+      defaultValue: { summary: '' },
+      category: 'API',
+    },
+  },
   description: {
     description: 'Description',
     type: { name: 'text', required: false },
@@ -274,6 +285,7 @@ const meta = {
     disabled: false,
     invalid: false,
     errorMessage: '',
+    errorMessagePosition: '',
     label: '',
     name: '',
     defaultValue: '',
@@ -295,6 +307,7 @@ const meta = {
       id,
       invalid,
       errorMessage,
+      errorMessagePosition,
       status,
       inputRequired,
       label,
@@ -318,6 +331,7 @@ const meta = {
         description={description || undefined}
         disabled={disabled}
         errorMessage={errorMessage || undefined}
+        errorMessagePosition={errorMessagePosition || undefined}
         status={status || undefined}
         invalid={invalid}
         label={label || undefined}
@@ -363,6 +377,26 @@ export const ErrorMessage: Story = {
     name: 'subject',
     label: 'Onderwerp',
     errorMessage: 'Vul een onderwerp in.',
+    invalid: true,
+  },
+};
+
+export const ErrorMessagePositionAfter: Story = {
+  args: {
+    name: 'subject',
+    label: 'Onderwerp',
+    errorMessage: 'Vul een onderwerp in.',
+    errorMessagePosition: 'after',
+    invalid: true,
+  },
+};
+
+export const ErrorMessagePositionBefore: Story = {
+  args: {
+    name: 'subject',
+    label: 'Onderwerp',
+    errorMessage: 'Vul een onderwerp in.',
+    errorMessagePosition: 'before',
     invalid: true,
   },
 };
