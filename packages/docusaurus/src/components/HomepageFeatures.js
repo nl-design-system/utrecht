@@ -38,11 +38,12 @@ const FeatureList = [
   },
 ];
 
-function Feature({ image, title, description }) {
+function Feature({ icon, image, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img src={image} className={styles.featureSvg} alt={title} />
+        {image ? <img src={image} className={styles.featureSvg} alt={title} /> : null}
+        {icon ? icon : null}
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
@@ -52,12 +53,12 @@ function Feature({ image, title, description }) {
   );
 }
 
-export default function HomepageFeatures() {
+export default function HomepageFeatures({ features = FeatureList }) {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
-          {FeatureList.map((props, idx) => (
+          {features.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
         </div>
