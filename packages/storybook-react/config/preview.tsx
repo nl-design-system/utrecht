@@ -48,7 +48,7 @@ const preview: Preview = {
       storySort: {
         order: [
           'React Component',
-          ['README', 'Changelog', 'Component Introduction', 'Developing components', 'Testing components'],
+          ['README', 'README (Nederlands)', 'Changelog', 'Developing components', 'Testing components'],
         ],
       },
     },
