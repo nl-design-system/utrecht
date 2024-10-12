@@ -38,28 +38,28 @@ describe('Table of Contents', () => {
   });
 
   it('renders a <TOC> tag', async () => {
-    expect(sha256).toBe('bd73ea7ffb47470d26b64dae2336118acc8b7448190b63c399de448bb09a14c2');
+    expect(sha256).toBe('720c5d0d1c951dcbb5b981f51dbed88f00bf0b5bc8565e95965ad8e8e382769f');
   });
 
   describe('list item', () => {
     it('renders a <TOCI> tag', async () => {
-      expect(sha256).toBe('bd73ea7ffb47470d26b64dae2336118acc8b7448190b63c399de448bb09a14c2');
+      expect(sha256).toBe('720c5d0d1c951dcbb5b981f51dbed88f00bf0b5bc8565e95965ad8e8e382769f');
     });
 
     it('renders a <Reference> tag', async () => {
-      expect(sha256).toBe('bd73ea7ffb47470d26b64dae2336118acc8b7448190b63c399de448bb09a14c2');
+      expect(sha256).toBe('720c5d0d1c951dcbb5b981f51dbed88f00bf0b5bc8565e95965ad8e8e382769f');
     });
 
     it('renders a <Link> tag', async () => {
-      expect(sha256).toBe('bd73ea7ffb47470d26b64dae2336118acc8b7448190b63c399de448bb09a14c2');
+      expect(sha256).toBe('720c5d0d1c951dcbb5b981f51dbed88f00bf0b5bc8565e95965ad8e8e382769f');
     });
 
     it('renders a <Lbl> tag with chapter number', async () => {
-      expect(sha256).toBe('bd73ea7ffb47470d26b64dae2336118acc8b7448190b63c399de448bb09a14c2');
+      expect(sha256).toBe('720c5d0d1c951dcbb5b981f51dbed88f00bf0b5bc8565e95965ad8e8e382769f');
     });
 
     it('renders a <Span> tag with the text content', async () => {
-      expect(sha256).toBe('bd73ea7ffb47470d26b64dae2336118acc8b7448190b63c399de448bb09a14c2');
+      expect(sha256).toBe('720c5d0d1c951dcbb5b981f51dbed88f00bf0b5bc8565e95965ad8e8e382769f');
     });
   });
 });
