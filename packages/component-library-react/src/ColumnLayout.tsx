@@ -11,8 +11,15 @@ export interface ColumnLayoutProps extends HTMLAttributes<HTMLDivElement> {
 }
 
 export const ColumnLayout = forwardRef(
-  ({ children, className, rule }: PropsWithChildren<ColumnLayoutProps>, ref: ForwardedRef<HTMLDivElement>) => (
-    <div className={clsx('utrecht-column-layout', { 'utrecht-column-layout--rule': rule }, className)} ref={ref}>
+  (
+    { children, className, rule, ...restProps }: PropsWithChildren<ColumnLayoutProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => (
+    <div
+      className={clsx('utrecht-column-layout', { 'utrecht-column-layout--rule': rule }, className)}
+      ref={ref}
+      {...restProps}
+    >
       {children}
     </div>
   ),
