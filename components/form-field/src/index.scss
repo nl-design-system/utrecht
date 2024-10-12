@@ -42,7 +42,7 @@
 }
 
 .utrecht-form-field .utrecht-form-field-description--invalid {
-  @include utrecht-form-field__description--invalid;
+  @include utrecht-form-field__error-message;
 }
 
 .utrecht-form-field__description {
@@ -51,4 +51,8 @@
 
 .utrecht-form-field__description--before {
   @include utrecht-form-field__description--before;
+}
+
+.utrecht-form-field__error-message {
+  @include utrecht-form-field__error-message;
 }
