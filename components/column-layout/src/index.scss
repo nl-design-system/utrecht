@@ -8,6 +8,10 @@
 
 .utrecht-column-layout {
   @include utrecht-column-layout;
+
+  @media print {
+    @include utrecht-column-layout--print;
+  }
 }
 
 .utrecht-column-layout--rule {
