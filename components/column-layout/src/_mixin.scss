@@ -4,10 +4,17 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
+$utrecht-support-prince-xml: false !default;
+
 @mixin utrecht-column-layout {
   column-gap: var(--utrecht-column-layout-gap, 2em);
   column-width: var(--utrecht-column-layout-column-width, 40ch);
   display: block;
+
+  @if $utrecht-support-prince-xml {
+    /* Prince does not support `ch` units */
+    column-width: var(--utrecht-column-layout-column-width, 25em);
+  }
 }
 
 @mixin utrecht-column-layout--rule {
