@@ -35,7 +35,7 @@
   --utrecht-space-around: 0;
 
   display: grid;
-  grid-template-areas: "label" "description" "description-before" "description-invalid" "input" "description-after";
+  grid-template-areas: "label" "description" "description-before" "error-message" "input" "description-after";
 }
 
 @mixin utrecht-form-field--option {
@@ -83,9 +83,14 @@
   order: 2;
 }
 
-@mixin utrecht-form-field__description--invalid {
-  grid-area: description-invalid;
+@mixin utrecht-form-field__error-message {
+  grid-area: error-message;
   order: 3;
+}
+
+/** @deprecated */
+@mixin utrecht-form-field__description--invalid {
+  @include utrecht-form-field__error-message;
 }
 
 @mixin utrecht-form-field__description--after {
@@ -101,7 +106,7 @@
 @mixin utrecht-form-field--checkbox {
   display: grid;
   gap: 0 var(--utrecht-checkbox-margin-inline-end, 12px);
-  grid-template-areas: "input label" "input description" "input description-invalid";
+  grid-template-areas: "input label" "input description" "input error-message";
   grid-template-columns: var(--utrecht-checkbox-size) 100fr;
 
   /*
@@ -123,7 +128,7 @@
 @mixin utrecht-form-field--radio {
   display: grid;
   gap: 0 var(--utrecht-radio-button-margin-inline-end, 12px);
-  grid-template-areas: "input label" "input description" "input description-invalid";
+  grid-template-areas: "input label" "input description" "input error-message";
   grid-template-columns: var(--utrecht-radio-button-size) 100fr;
 
   /*
