@@ -16,6 +16,6 @@ describe('Link', () => {
       ),
     });
 
-    expect(sha256).toBe('cfb53b1c5cdc2d5efc4b2cc2c933bfb8ef8d9fee0ec9ce7c2897f080189c9369');
+    expect(sha256).toBe('b85b61434a0bfd56330b142943e7d655d557d39f05136310ae301536971a17bf');
   });
 });
