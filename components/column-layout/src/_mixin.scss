@@ -17,6 +17,12 @@ $utrecht-support-prince-xml: false !default;
   }
 }
 
+@mixin utrecht-column-layout--print {
+  /* render two columns by default */
+  column-count: var(--utrecht-column-layout-print-column-count, 2);
+  column-width: var(--utrecht-column-layout-print-column-width, auto);
+}
+
 @mixin utrecht-column-layout--rule {
   column-rule-color: var(--utrecht-column-layout-column-rule-color);
   column-rule-style: solid;
