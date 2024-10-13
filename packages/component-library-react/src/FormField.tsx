@@ -4,6 +4,7 @@ import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode 
 export interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
   description?: ReactNode;
   errorMessage?: ReactNode;
+  errorMessagePosition?: 'before' | 'after';
   input?: ReactNode; // TODO: Should this be named `control` instead of `input`?
   invalid?: boolean;
   label?: ReactNode;
@@ -17,6 +18,7 @@ export const FormField = forwardRef(
       children,
       description,
       errorMessage,
+      errorMessagePosition,
       input,
       invalid,
       label,
@@ -41,8 +43,15 @@ export const FormField = forwardRef(
     >
       {label && <div className="utrecht-form-field__label">{label}</div>}
       {description && <div className="utrecht-form-field__description">{description}</div>}
+      {errorMessage && errorMessagePosition === 'before' && (
+        <div className="utrecht-form-field__error-message utrecht-form-field__error-message--before">
+          {errorMessage}
+        </div>
+      )}
       {input && <div className="utrecht-form-field__input">{input}</div>}
-      {errorMessage && <div className="utrecht-form-field__error-message">{errorMessage}</div>}
+      {errorMessage && (!errorMessagePosition || errorMessagePosition === 'after') && (
+        <div className="utrecht-form-field__error-message utrecht-form-field__error-message--after">{errorMessage}</div>
+      )}
       {children}
     </div>
   ),
