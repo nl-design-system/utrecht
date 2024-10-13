@@ -1,5 +1,18 @@
 # @utrecht/component-library-react
 
+## 7.1.0
+
+### Minor Changes
+
+- a26f139: Add `FormFieldTextarea` component to the React component library.
+- b520118: Support `restProps` for React `ColumnLayout` component.
+- 4c0f337: Add `inputRequired` property to React `Textarea`.
+- b8b8100: Add `<FormFieldCheckbox>` component.
+
+### Patch Changes
+
+- ecaf6a6: Fix missing CSS when loading `Button` from `dist/css-module/`.
+
 ## 7.0.0
 
 ### Major Changes

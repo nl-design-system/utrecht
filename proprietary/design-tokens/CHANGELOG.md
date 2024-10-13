@@ -1,5 +1,13 @@
 # @utrecht/design-tokens
 
+## 2.1.1
+
+### Patch Changes
+
+- 7fc1efc: Fix `propery.css` output. (The file was empty.)
+- 7fc1efc: No longer include `::backdrop` selectors, those are no longer needed in evergreen browsers.'
+- 3185cc0: Convert all `px` `font-size` design tokens to `rem`.
+
 ## 2.1.0
 
 ### Minor Changes

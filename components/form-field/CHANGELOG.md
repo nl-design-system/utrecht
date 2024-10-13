@@ -1,5 +1,13 @@
 # @utrecht/form-field-css
 
+## 1.3.0
+
+### Minor Changes
+
+- 9ba132c: Add `utrecht-form-field__error-message` class name and mixin.
+
+  Deprecate the `utrecht-form-field__description--invalid` mixin.
+
 ## 1.2.0
 
 ### Minor Changes
