@@ -7,7 +7,7 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
-  appearance?: 'lead' | 'small';
+  appearance?: string | 'lead' | 'small';
   /**
    *
    * @deprecated Use `appearance="lead"` instead
