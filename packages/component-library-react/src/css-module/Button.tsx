@@ -3,4 +3,4 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
-export * from '@utrecht/button-react';
+export * from '@utrecht/button-react/dist/css';

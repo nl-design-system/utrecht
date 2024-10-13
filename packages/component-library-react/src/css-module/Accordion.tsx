@@ -4,5 +4,6 @@
  */
 
 import '@utrecht/accordion-css/src/index.scss';
+import './Button';
 
 export * from '../Accordion';
