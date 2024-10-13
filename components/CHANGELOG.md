@@ -1,5 +1,14 @@
 # @utrecht/components
 
+## 7.4.0
+
+### Minor Changes
+
+- 275db34: Add design tokens to Blockquote:
+
+  - `utrecht.blockquote.border-width`
+  - `utrecht.blockquote.row-gap`
+
 ## 7.3.0
 
 ### Minor Changes
