@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { createRef } from 'react';
-import { Paragraph } from './Paragraph';
+import { isParagraphAppearance, Paragraph } from './Paragraph';
 import '@testing-library/jest-dom';
 
 describe('Paragraph', () => {
@@ -136,6 +136,19 @@ describe('Paragraph', () => {
 
       expect(leadParagraph).toHaveClass('utrecht-paragraph--small');
       expect(leadParagraph).not.toHaveClass('utrecht-paragraph--lead');
+    });
+  });
+
+  describe('appearance type guard', () => {
+    it('is allows "lead" variant', () => {
+      expect(isParagraphAppearance('lead')).toBe(true);
+    });
+
+    it('is allows "small" variant', () => {
+      expect(isParagraphAppearance('small')).toBe(true);
+    });
+    it('disallows any other variant', () => {
+      expect(isParagraphAppearance('')).toBe(false);
     });
   });
 });
