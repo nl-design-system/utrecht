@@ -11,17 +11,26 @@ const meta = {
   component: Paragraph,
   tags: ['autodocs'],
   args: {
-    lead: false,
-    small: false,
+    appearance: undefined,
     children:
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
   },
   argTypes: {
+    appearance: {
+      options: [undefined, 'lead', 'small'],
+      control: {
+        type: 'select',
+      },
+      table: {
+        category: 'API',
+        defaultValue: { summary: false },
+      },
+    },
     lead: {
       name: 'lead',
       type: { name: 'boolean', required: false },
       table: {
-        category: 'API',
+        category: 'DEPRECATED',
         defaultValue: { summary: false },
       },
     },
@@ -29,7 +38,7 @@ const meta = {
       name: 'small',
       type: { name: 'boolean', required: false },
       table: {
-        category: 'API',
+        category: 'DEPRECATED',
         defaultValue: { summary: false },
       },
     },
@@ -55,14 +64,14 @@ export const Lead: Story = {
   name: 'Lead',
   args: {
     ...Default.args,
-    lead: true,
+    appearance: 'lead',
   },
 };
 export const Small: Story = {
   name: 'Small',
   args: {
     ...Default.args,
-    small: true,
+    appearance: 'small',
   },
 };
 
