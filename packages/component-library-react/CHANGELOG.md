@@ -1,5 +1,16 @@
 # @utrecht/component-library-react
 
+## 7.2.0
+
+### Minor Changes
+
+- 94840f4: For the `Paragraph` component, introduce the `appearance` property. It replaces the `lead` and `small` boolean properties, which are now deprecated.
+
+  Perform the following migration steps:
+
+  - Use `<Paragraph appearance="lead">` instead of `<Paragraph lead>`
+  - Use `<Paragraph appearance="small">` instead of `<Paragraph small>`
+
 ## 7.1.0
 
 ### Minor Changes
