@@ -6,8 +6,19 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
+const enumGuard =
+  <T,>(values: readonly T[]) =>
+  <T,>(x: unknown): x is T =>
+    values.includes(x as never);
+
+const APPEARANCE_VALUES = ['lead', 'small'] as const;
+
+export type ParagraphAppearance = (typeof APPEARANCE_VALUES)[number];
+
+export const isParagraphAppearance = enumGuard(APPEARANCE_VALUES);
+
 export interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
-  appearance?: string | 'lead' | 'small';
+  appearance?: ParagraphAppearance;
   /**
    *
    * @deprecated Use `appearance="lead"` instead
@@ -26,8 +37,12 @@ export const Paragraph = forwardRef(
     { children, className, lead, small, appearance, ...restProps }: PropsWithChildren<ParagraphProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => {
-    const isLead = appearance === 'lead' || (lead && appearance !== 'small');
-    const isSmall = appearance === 'small' || (small && appearance !== 'lead');
+    let isLead = appearance === 'lead' || !!lead;
+    let isSmall = appearance === 'small' || !!small;
+
+    // Ignore combinations of `lead` and `small`
+    isLead = isLead !== isSmall ? isLead : false;
+    isSmall = isSmall !== isLead ? isSmall : false;
 
     return (
       <p
@@ -35,8 +50,8 @@ export const Paragraph = forwardRef(
         ref={ref}
         className={clsx(
           'utrecht-paragraph',
-          isLead && 'utrecht-paragraph--lead',
-          isSmall && 'utrecht-paragraph--small',
+          isLead && `utrecht-paragraph--lead`,
+          isSmall && `utrecht-paragraph--small`,
           className,
         )}
       >
