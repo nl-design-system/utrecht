@@ -38,8 +38,12 @@ export const Paragraph = forwardRef(
     { children, className, lead, small, appearance, ...restProps }: PropsWithChildren<ParagraphProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => {
-    const isLead = appearance === 'lead' || (lead && appearance !== 'small');
-    const isSmall = appearance === 'small' || (small && appearance !== 'lead');
+    let isLead = appearance === 'lead' || !!lead;
+    let isSmall = appearance === 'small' || !!small;
+
+    // Ignore combinations of `lead` and `small`
+    isLead = isLead !== isSmall ? isLead : false;
+    isSmall = isSmall !== isLead ? isSmall : false;
 
     return (
       <p
@@ -47,8 +51,8 @@ export const Paragraph = forwardRef(
         ref={ref}
         className={clsx(
           'utrecht-paragraph',
-          isLead && 'utrecht-paragraph--lead',
-          isSmall && 'utrecht-paragraph--small',
+          isLead && `utrecht-paragraph--lead`,
+          isSmall && `utrecht-paragraph--small`,
           className,
         )}
       >
