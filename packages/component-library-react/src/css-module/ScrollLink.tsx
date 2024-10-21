@@ -4,6 +4,6 @@
  */
 
 // Inject CSS from ButtonLink dependency
-import './ButtonlLink';
+import './ButtonLink';
 
 export * from '../ScrollLink';
