@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { createRef } from 'react';
-import { Textbox } from './Textbox';
+import { Textbox } from './index';
 import '@testing-library/jest-dom';
 
 describe('Textbox', () => {
