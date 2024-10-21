@@ -1692,9 +1692,9 @@ importers:
       '@utrecht/form-fieldset-css':
         specifier: workspace:*
         version: link:../../components/form-fieldset
-      '@utrecht/form-label-css':
+      '@utrecht/form-label-react':
         specifier: workspace:*
-        version: link:../../components/form-label
+        version: link:../components-react/form-label-react
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
