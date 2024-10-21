@@ -43,8 +43,6 @@ We gebruiken de volgende groottes voor onze fonts:
 
 | Beschrijving                     | Design Token                     | Opmerking                          |
 | -------------------------------- | -------------------------------- | ---------------------------------- |
-| 2 extra Small (8px of 0.5rem)    | `--utrecht-typography-scale-2xs` |                                    |
-| Extra Small (12px of 0.75rem)    | `--utrecht-typography-scale-xs`  |                                    |
 | Small (14px of 0.875rem)         | `--utrecht-typography-scale-sm`  |                                    |
 | Medium (16px of 1rem)            | `--utrecht-typography-scale-md`  | Standaard grootte voor paragrafen. |
 | Large (18px of 1.125rem)         | `--utrecht-typography-scale-lg`  |                                    |
