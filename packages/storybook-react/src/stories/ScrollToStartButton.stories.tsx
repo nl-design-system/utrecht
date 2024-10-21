@@ -1,12 +1,20 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { ScrollToStartButton } from '@utrecht/component-library-react';
-import { Document, Heading, Page, PageContent, Paragraph } from '@utrecht/component-library-react/src/css-module/index';
+import {
+  ButtonGroup,
+  Document,
+  Heading,
+  Page,
+  PageContent,
+  Paragraph,
+  ScrollToStartButton,
+} from '@utrecht/component-library-react/src/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
 import React from 'react';
+import type { PropsWithChildren } from 'react';
 import { designTokenStory } from './util';
 
-const DemoPage = ({ children }: { children: React.ReactNode }) => (
+const DemoPage = ({ children }: PropsWithChildren) => (
   <Document style={{ '--utrecht-space-around': 1 } as any}>
     <Page>
       <PageContent>
@@ -56,11 +64,11 @@ const DemoPage = ({ children }: { children: React.ReactNode }) => (
         </Paragraph>
       </PageContent>
     </Page>
-    <div style={{ display: 'flex', justifyContent: 'flex-end' }}>{children}</div>
+    <ButtonGroup>{children}</ButtonGroup>
   </Document>
 );
 
-const meta: Meta<typeof ScrollToStartButton> = {
+const meta = {
   title: 'React Component/Scroll to start button',
   id: 'react-scroll-to-start-button',
   component: ScrollToStartButton,
@@ -77,11 +85,12 @@ const meta: Meta<typeof ScrollToStartButton> = {
       },
     },
   },
-};
+} satisfies Meta<typeof ScrollToStartButton>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
+
 export const Default: Story = {
   render: (args) => (
     <DemoPage>
