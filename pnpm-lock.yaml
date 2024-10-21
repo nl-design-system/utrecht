@@ -1749,9 +1749,9 @@ importers:
       '@utrecht/list-social-css':
         specifier: workspace:*
         version: link:../../components/list-social
-      '@utrecht/listbox-css':
+      '@utrecht/listbox-react':
         specifier: workspace:*
-        version: link:../../components/listbox
+        version: link:../components-react/listbox-react
       '@utrecht/logo-button-css':
         specifier: workspace:*
         version: link:../../components/logo-button
