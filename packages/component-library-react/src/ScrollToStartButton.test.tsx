@@ -6,6 +6,26 @@ import '@testing-library/jest-dom';
 window.scrollTo = jest.fn();
 
 describe('Scroll to start button', () => {
+  const matchMedia = jest.fn().mockImplementation((query) => {
+    return {
+      matches: false, // Adjust this based on your test case
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+    };
+  });
+  let originalMatchMedia = window.matchMedia;
+
+  beforeAll(() => {
+    window.matchMedia = matchMedia;
+  });
+
+  afterAll(() => {
+    if (window.matchMedia === matchMedia) {
+      window.matchMedia = originalMatchMedia;
+    }
+  });
   it('renders an button role element', () => {
     render(<ScrollToStartButton />);
 
