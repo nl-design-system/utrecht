@@ -3,29 +3,31 @@ import { createRef } from 'react';
 import { ScrollToStartButton } from './ScrollToStartButton';
 import '@testing-library/jest-dom';
 
-window.scrollTo = jest.fn();
-
 describe('Scroll to start button', () => {
-  const matchMedia = jest.fn().mockImplementation((query) => {
-    return {
-      matches: false, // Adjust this based on your test case
-      media: query,
-      onchange: null,
-      addListener: jest.fn(),
-      removeListener: jest.fn(),
-    };
-  });
-  let originalMatchMedia = window.matchMedia;
+  let originalMatchMedia: any;
+  let originalScrollTo: any;
 
-  beforeAll(() => {
-    window.matchMedia = matchMedia;
+  beforeEach(() => {
+    originalMatchMedia = window.matchMedia;
+    originalScrollTo = window.scrollTo;
+
+    window.matchMedia = jest.fn().mockImplementation((query) => {
+      return {
+        matches: false, // Adjust this based on your test case
+        media: query,
+        onchange: null,
+        addListener: jest.fn(),
+        removeListener: jest.fn(),
+      };
+    });
+    window.scrollTo = jest.fn();
   });
 
-  afterAll(() => {
-    if (window.matchMedia === matchMedia) {
-      window.matchMedia = originalMatchMedia;
-    }
+  afterEach(() => {
+    window.matchMedia = originalMatchMedia;
+    window.scrollTo = originalScrollTo;
   });
+
   it('renders an button role element', () => {
     render(<ScrollToStartButton />);
 
@@ -35,33 +37,27 @@ describe('Scroll to start button', () => {
     expect(button).toBeVisible();
   });
 
-  it('it should scroll to the top when clicked', () => {
-    const scrollToTopMock = jest.fn();
-    window.scrollTo = scrollToTopMock;
-
+  it('it should scroll to the start when clicked', () => {
     render(<ScrollToStartButton>Scroll to start</ScrollToStartButton>);
     const button = screen.getByText('Scroll to start');
 
     fireEvent.click(button);
 
-    expect(scrollToTopMock).toHaveBeenCalled();
-    expect(scrollToTopMock).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+    expect(scrollTo).toHaveBeenCalled();
+    expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
   });
 
   it('it should instantly jump to the top with reduced motion', () => {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     Object.defineProperty(reducedMotionQuery, 'matches', { value: true });
 
-    const scrollToTopMock = jest.fn();
-    window.scrollTo = scrollToTopMock;
-
     render(<ScrollToStartButton>Scroll to start</ScrollToStartButton>);
     const button = screen.getByText('Scroll to start');
 
     fireEvent.click(button);
 
-    expect(scrollToTopMock).toHaveBeenCalled();
-    expect(scrollToTopMock).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
+    expect(scrollTo).toHaveBeenCalled();
+    expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
   });
 
   it('renders an button HTML element', () => {
