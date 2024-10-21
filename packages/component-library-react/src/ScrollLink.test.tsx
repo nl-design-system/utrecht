@@ -1,6 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { ScrollToStartButton } from './ScrollToStartButton';
+import { ScrollLink } from './ScrollLink';
 import '@testing-library/jest-dom';
 
 describe('Scroll to start button', () => {
@@ -28,20 +28,20 @@ describe('Scroll to start button', () => {
     window.scrollTo = originalScrollTo;
   });
 
-  it('renders an button role element', () => {
-    render(<ScrollToStartButton />);
+  it('renders an link role element', () => {
+    render(<ScrollLink />);
 
-    const button = screen.getByRole('button');
+    const link = screen.getByRole('link');
 
-    expect(button).toBeInTheDocument();
-    expect(button).toBeVisible();
+    expect(link).toBeInTheDocument();
+    expect(link).toBeVisible();
   });
 
   it('it should scroll to the start when clicked', () => {
-    render(<ScrollToStartButton>Scroll to start</ScrollToStartButton>);
-    const button = screen.getByText('Scroll to start');
+    render(<ScrollLink>Scroll to start</ScrollLink>);
+    const link = screen.getByText('Scroll to start');
 
-    fireEvent.click(button);
+    fireEvent.click(link);
 
     expect(scrollTo).toHaveBeenCalled();
     expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
@@ -51,38 +51,38 @@ describe('Scroll to start button', () => {
     const reducedMotionQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
     Object.defineProperty(reducedMotionQuery, 'matches', { value: true });
 
-    render(<ScrollToStartButton>Scroll to start</ScrollToStartButton>);
-    const button = screen.getByText('Scroll to start');
+    render(<ScrollLink>Scroll to start</ScrollLink>);
+    const link = screen.getByText('Scroll to start');
 
-    fireEvent.click(button);
+    fireEvent.click(link);
 
     expect(scrollTo).toHaveBeenCalled();
     expect(scrollTo).toHaveBeenCalledWith({ top: 0, behavior: 'smooth' });
   });
 
-  it('renders an button HTML element', () => {
-    const { container } = render(<ScrollToStartButton />);
+  it('renders an a HTML element', () => {
+    const { container } = render(<ScrollLink />);
 
-    const button = container.querySelector('button:only-child');
+    const link = container.querySelector('a:only-child');
 
-    expect(button).toBeInTheDocument();
+    expect(link).toBeInTheDocument();
   });
 
   it('supports ForwardRef in React', () => {
-    const ref = createRef<HTMLButtonElement>();
+    const ref = createRef<HTMLAnchorElement>();
 
-    const { container } = render(<ScrollToStartButton ref={ref} />);
+    const { container } = render(<ScrollLink ref={ref} />);
 
-    const button = container.querySelector(':only-child');
+    const link = container.querySelector(':only-child');
 
-    expect(ref.current).toBe(button);
+    expect(ref.current).toBe(link);
   });
 
-  it('should render the button content with the provided children', () => {
+  it('should render rich text content', () => {
     const { container } = render(
-      <ScrollToStartButton>
+      <ScrollLink>
         <span>Scroll to start</span>
-      </ScrollToStartButton>,
+      </ScrollLink>,
     );
 
     const contentElement = container.querySelector('span');

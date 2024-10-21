@@ -6,7 +6,7 @@ import {
   Page,
   PageContent,
   Paragraph,
-  ScrollToStartButton,
+  ScrollLink,
 } from '@utrecht/component-library-react/src/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
@@ -69,11 +69,11 @@ const DemoPage = ({ children }: PropsWithChildren) => (
 );
 
 const meta = {
-  title: 'React Component/Scroll to start button',
-  id: 'react-scroll-to-start-button',
-  component: ScrollToStartButton,
+  title: 'React Component/Scroll Link',
+  id: 'react-scroll-link',
+  component: ScrollLink,
   parameters: {
-    tokensPrefix: 'utrecht-scroll-to-start-button',
+    tokensPrefix: 'utrecht-scroll-link',
     tokens,
   },
   argTypes: {
@@ -85,7 +85,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof ScrollToStartButton>;
+} satisfies Meta<typeof ScrollLink>;
 
 export default meta;
 
@@ -94,10 +94,10 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   render: (args) => (
     <DemoPage>
-      <ScrollToStartButton appearance="subtle-button" {...args}>
+      <ScrollLink appearance="subtle-button" {...args}>
         Naar Boven
         <UtrechtIconChevronUp />
-      </ScrollToStartButton>
+      </ScrollLink>
     </DemoPage>
   ),
 };
