@@ -5,11 +5,15 @@
  */
 
 @mixin utrecht-img {
-  /* stylelint-disable-next-line property-disallowed-list */
-  height: auto;
+  &:not(img[height]) {
+    /* stylelint-disable-next-line property-disallowed-list */
+    height: auto;
+  }
 
-  /* stylelint-disable-next-line property-disallowed-list */
-  width: auto;
+  &:not(img[width]) {
+    /* stylelint-disable-next-line property-disallowed-list */
+    width: auto;
+  }
 }
 
 @mixin utrecht-img--scale-down {
