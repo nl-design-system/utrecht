@@ -40,3 +40,51 @@
 @mixin utrecht-combobox__popover--hidden {
   display: none !important;
 }
+
+@mixin utrecht-combobox__textbox-container {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+  inline-size: var(--utrecht-listbox-inline-size);
+  max-inline-size: 100%;
+  position: relative;
+}
+@mixin utrecht-combobox__toggle-button {
+  --utrecht-button-subtle-background-color: var(--utrecht-combobox-toggle-button-background-color, transparent);
+  --utrecht-button-subtle-color: var(--utrecht-combobox-toggle-button-color, currentColor);
+  --utrecht-button-subtle-hover-background-color: var(
+    --utrecht-combobox-toggle-button-hover-background-color,
+    transparent
+  );
+  --utrecht-button-subtle-hover-border-color: transparent;
+  --utrecht-button-subtle-hover-color: var(--utrecht-combobox-toggle-button-hover-color, currentColor);
+  --utrecht-button-hover-scale: none;
+  --utrecht-button-subtle-active-border-color: transparent;
+  --utrecht-button-subtle-active-background-color: var(
+    --utrecht-combobox-toggle-button-active-background-color,
+    transparent
+  );
+  --utrecht-button-subtle-active-color: var(--utrecht-combobox-toggle-button-active-color, currentColor);
+  --utrecht-button-subtle-focus-border-color: transparent;
+  --utrecht-button-subtle-focus-background-color: var(
+    --utrecht-combobox-toggle-button-focus-background-color,
+    transparent
+  );
+  --utrecht-button-subtle-focus-color: var(--utrecht-combobox-toggle-button-focus-color, currentColor);
+  --utrecht-button-subtle-pressed-background-color: var(
+    --utrecht-combobox-toggle-button-pressed-background-color,
+    transparent
+  );
+  --utrecht-button-subtle-pressed-border-color: transparent;
+  --utrecht-button-subtle-pressed-color: var(--utrecht-combobox-toggle-button-pressed-color, currentColor);
+
+  inset-block-start: 50%;
+  inset-inline-end: 0;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+@mixin utrecht-combobox__icon {
+  block-size: var(--utrecht-combobox-icon-size, 32px);
+  inline-size: var(--utrecht-combobox-icon-size, 32px);
+}
