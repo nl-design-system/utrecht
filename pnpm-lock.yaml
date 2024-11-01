@@ -3100,8 +3100,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-controls':
-        specifier: 7.6.4
-        version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addon-docs':
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -10146,6 +10146,11 @@ packages:
   '@storybook/addon-controls@7.6.4':
     resolution: {integrity: sha512-k4AtZfazmD/nL3JAtLGAB7raPhkhUo0jWnaZWrahd9h1Fm13mBU/RW+JzTRhCw3Mp2HPERD7NI5Qcd2fUP6WDA==}
 
+  '@storybook/addon-controls@8.4.0':
+    resolution: {integrity: sha512-KoqwWHi6cUv1WXcANH4l175kNkuFPVhexP/8F9tE9uhv2xHNx5cTefmB174dWpfOO2H3IdUk0RuMWjOZFpztqQ==}
+    peerDependencies:
+      storybook: ^8.4.0
+
   '@storybook/addon-docs@7.4.6':
     resolution: {integrity: sha512-dLaub+XWFq4hChw+xfuF9yYg0Txp77FUawKoAigccfjWXx+OOhRV3XTuAcknpXkYq94GWynHgUFXosXT9kbDNA==}
     peerDependencies:
@@ -10702,6 +10707,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@6.5.16':
     resolution: {integrity: sha512-hNLctkjaYLRdk1+xYTkC1mg4dYz2wSv6SqbLpcKMbkPHTE0ElhddGPHQqB362md/w9emYXNkt1LSMD8Xk9JzVQ==}
@@ -14523,11 +14529,13 @@ packages:
   eslint@7.32.0:
     resolution: {integrity: sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==}
     engines: {node: ^10.12.0 || >=12.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@7.3.1:
@@ -16788,8 +16796,8 @@ packages:
   js-cookie@2.2.1:
     resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     version: 1.1.0-formio.2
 
   js-stringify@1.0.2:
@@ -22602,8 +22610,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.1.6:
-    resolution: {integrity: sha512-ng11B8B/ZADUMMOsRbqv0arc442q7lifSubD0v8oDXIFoMg/mXwAPUunrroIDkY+mcD0dHKccdaznSVp8EoX3w==}
+  vue-component-type-helpers@2.1.10:
+    resolution: {integrity: sha512-lfgdSLQKrUmADiSV6PbBvYgQ33KF3Ztv6gP85MfGaGaSGMTXORVaHT1EHfsqCgzRNBstPKYDmvAV9Do5CmJ07A==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -27873,7 +27881,7 @@ snapshots:
   '@formio/protected-eval@1.2.2(formiojs@4.13.12(encoding@0.1.13))':
     dependencies:
       formiojs: 4.13.12(encoding@0.1.13)
-      js-interpreter: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
 
@@ -30770,6 +30778,13 @@ snapshots:
       - react-dom
       - supports-color
 
+  '@storybook/addon-controls@8.4.0(storybook@7.6.4(encoding@0.1.13))':
+    dependencies:
+      '@storybook/global': 5.0.0
+      dequal: 2.0.3
+      storybook: 7.6.4(encoding@0.1.13)
+      ts-dedent: 2.2.0
+
   '@storybook/addon-docs@7.4.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
       '@jest/transform': 29.7.0
@@ -32702,7 +32717,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.1.6
+      vue-component-type-helpers: 2.1.10
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -41123,7 +41138,7 @@ snapshots:
 
   js-cookie@2.2.1: {}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
     dependencies:
       acorn: 8.11.2
 
@@ -49029,7 +49044,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.1.6: {}
+  vue-component-type-helpers@2.1.10: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
