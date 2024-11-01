@@ -2884,8 +2884,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -3112,8 +3112,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addon-measure':
         specifier: 7.6.4
         version: 7.6.4
@@ -3253,8 +3253,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -3721,8 +3721,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -4210,8 +4210,8 @@ importers:
         specifier: 7.4.6
         version: 7.4.6(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-links':
-        specifier: 7.4.6
-        version: 7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.4.6(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.4.6
         version: 7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4591,8 +4591,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addons':
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4861,8 +4861,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(encoding@0.1.13)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/addon-links':
-        specifier: 7.6.4
-        version: 7.6.4(react@18.3.1)
+        specifier: 8.4.0
+        version: 8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))
       '@storybook/addon-mdx-gfm':
         specifier: 7.6.4
         version: 7.6.4
@@ -10204,21 +10204,11 @@ packages:
   '@storybook/addon-jest@7.6.4':
     resolution: {integrity: sha512-WiUazHIkDSbFa1WF5YNsvcOKXk7T+Vprw1UPnCx9o3BKUFIRaFZIwphd+Sg7nibXRN+JhidbUSQTCTzdZw24uQ==}
 
-  '@storybook/addon-links@7.4.6':
-    resolution: {integrity: sha512-BPygElZKX+CPI9Se6GJNk1dYc5oxuhA+vHigO1tBqhiM6VkHyFP3cvezJNQvpNYhkUnu3cxnZXb3UJnlRbPY3g==}
+  '@storybook/addon-links@8.4.0':
+    resolution: {integrity: sha512-6MxHHfeshQLA0q40/djK7LrDDLtYt/FnKbNWgH4fbj281IELn1BTYc8cihyN7CZEWyqRqusi6EFpGFgO3LWBgA==}
     peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-    peerDependenciesMeta:
-      react:
-        optional: true
-      react-dom:
-        optional: true
-
-  '@storybook/addon-links@7.6.4':
-    resolution: {integrity: sha512-TEhxYdMhJO28gD84ej1FCwLv9oLuCPt77bRXip9ndaNPRTdHYdWv6IP94dhbuDi8eHux7Z4A/mllciFuDFrnCw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
+      react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0-beta
+      storybook: ^8.4.0
     peerDependenciesMeta:
       react:
         optional: true
@@ -10702,6 +10692,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@6.5.16':
     resolution: {integrity: sha512-hNLctkjaYLRdk1+xYTkC1mg4dYz2wSv6SqbLpcKMbkPHTE0ElhddGPHQqB362md/w9emYXNkt1LSMD8Xk9JzVQ==}
@@ -14523,11 +14514,13 @@ packages:
   eslint@7.32.0:
     resolution: {integrity: sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==}
     engines: {node: ^10.12.0 || >=12.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@7.3.1:
@@ -16788,8 +16781,8 @@ packages:
   js-cookie@2.2.1:
     resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     version: 1.1.0-formio.2
 
   js-stringify@1.0.2:
@@ -22602,8 +22595,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.1.6:
-    resolution: {integrity: sha512-ng11B8B/ZADUMMOsRbqv0arc442q7lifSubD0v8oDXIFoMg/mXwAPUunrroIDkY+mcD0dHKccdaznSVp8EoX3w==}
+  vue-component-type-helpers@2.1.10:
+    resolution: {integrity: sha512-lfgdSLQKrUmADiSV6PbBvYgQ33KF3Ztv6gP85MfGaGaSGMTXORVaHT1EHfsqCgzRNBstPKYDmvAV9Do5CmJ07A==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -27873,7 +27866,7 @@ snapshots:
   '@formio/protected-eval@1.2.2(formiojs@4.13.12(encoding@0.1.13))':
     dependencies:
       formiojs: 4.13.12(encoding@0.1.13)
-      js-interpreter: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
 
@@ -30944,26 +30937,20 @@ snapshots:
       ts-dedent: 2.2.0
       upath: 2.0.1
 
-  '@storybook/addon-links@7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@storybook/addon-links@8.4.0(react@18.3.1)(storybook@7.4.6(encoding@0.1.13))':
     dependencies:
-      '@storybook/client-logger': 7.4.6
-      '@storybook/core-events': 7.4.6
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@storybook/preview-api': 7.4.6
-      '@storybook/router': 7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@storybook/types': 7.4.6
-      prop-types: 15.8.1
+      storybook: 7.4.6(encoding@0.1.13)
       ts-dedent: 2.2.0
     optionalDependencies:
       react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/addon-links@7.6.4(react@18.3.1)':
+  '@storybook/addon-links@8.4.0(react@18.3.1)(storybook@7.6.4(encoding@0.1.13))':
     dependencies:
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
+      storybook: 7.6.4(encoding@0.1.13)
       ts-dedent: 2.2.0
     optionalDependencies:
       react: 18.3.1
@@ -31709,7 +31696,7 @@ snapshots:
       '@babel/core': 7.24.7
       '@babel/preset-env': 7.24.7(@babel/core@7.24.7)
       '@babel/types': 7.24.7
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/csf-tools': 7.4.6
       '@storybook/node-logger': 7.4.6
       '@storybook/types': 7.4.6
@@ -31728,7 +31715,7 @@ snapshots:
       '@babel/core': 7.24.7
       '@babel/preset-env': 7.24.7(@babel/core@7.24.7)
       '@babel/types': 7.24.7
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/csf-tools': 7.6.4
       '@storybook/node-logger': 7.6.4
       '@storybook/types': 7.6.4
@@ -31919,7 +31906,7 @@ snapshots:
       '@storybook/channels': 7.4.6
       '@storybook/core-common': 7.4.6(encoding@0.1.13)
       '@storybook/core-events': 7.4.6
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/csf-tools': 7.4.6
       '@storybook/docs-mdx': 0.1.0
       '@storybook/global': 5.0.0
@@ -31968,7 +31955,7 @@ snapshots:
       '@storybook/channels': 7.6.4
       '@storybook/core-common': 7.6.4(encoding@0.1.13)
       '@storybook/core-events': 7.6.4
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/csf-tools': 7.6.4
       '@storybook/docs-mdx': 0.1.0
       '@storybook/global': 5.0.0
@@ -32040,7 +32027,7 @@ snapshots:
       '@babel/parser': 7.24.7
       '@babel/traverse': 7.24.7
       '@babel/types': 7.24.7
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/types': 7.4.6
       fs-extra: 11.2.0
       recast: 0.23.4
@@ -32054,7 +32041,7 @@ snapshots:
       '@babel/parser': 7.23.6
       '@babel/traverse': 7.23.6
       '@babel/types': 7.23.6
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/types': 7.6.4
       fs-extra: 11.2.0
       recast: 0.23.4
@@ -32121,7 +32108,7 @@ snapshots:
       '@storybook/channels': 7.4.6
       '@storybook/client-logger': 7.4.6
       '@storybook/core-events': 7.4.6
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/router': 7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/theming': 7.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -32141,7 +32128,7 @@ snapshots:
       '@storybook/channels': 7.6.4
       '@storybook/client-logger': 7.6.4
       '@storybook/core-events': 7.6.4
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/router': 7.6.4
       '@storybook/theming': 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.2.0)
@@ -32162,7 +32149,7 @@ snapshots:
       '@storybook/channels': 7.6.4
       '@storybook/client-logger': 7.6.4
       '@storybook/core-events': 7.6.4
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/router': 7.6.4
       '@storybook/theming': 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -32312,7 +32299,7 @@ snapshots:
       '@storybook/channels': 7.4.6
       '@storybook/client-logger': 7.4.6
       '@storybook/core-events': 7.4.6
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/types': 7.4.6
       '@types/qs': 6.9.10
@@ -32329,7 +32316,7 @@ snapshots:
       '@storybook/channels': 7.6.4
       '@storybook/client-logger': 7.6.4
       '@storybook/core-events': 7.6.4
-      '@storybook/csf': 0.1.2
+      '@storybook/csf': 0.1.11
       '@storybook/global': 5.0.0
       '@storybook/types': 7.6.4
       '@types/qs': 6.9.10
@@ -32702,7 +32689,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.1.6
+      vue-component-type-helpers: 2.1.10
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -41123,7 +41110,7 @@ snapshots:
 
   js-cookie@2.2.1: {}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
     dependencies:
       acorn: 8.11.2
 
@@ -49029,7 +49016,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.1.6: {}
+  vue-component-type-helpers@2.1.10: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
