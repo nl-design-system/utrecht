@@ -1,9 +1,9 @@
+import { FormFieldDescription } from '@utrecht/form-field-description-react';
+import { FormFieldErrorMessage } from '@utrecht/form-field-error-message-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, ReactNode, Ref, useId } from 'react';
 import type { FormFieldProps } from './FormField';
 import { FormField } from './FormField';
-import { FormFieldDescription } from './FormFieldDescription';
-import { FormFieldErrorMessage } from './FormFieldErrorMessage';
 import { FormLabel } from './FormLabel';
 import { Textarea } from './Textarea';
 import type { TextareaProps } from './Textarea';

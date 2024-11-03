@@ -5,8 +5,8 @@
 
 // Inject CSS from components used in `FormFieldTextarea`
 import './Textarea';
-import './FormField';
-import './FormFieldDescription';
-import './FormFieldErrorMessage';
+import '@utrecht/form-field-react';
+import '@utrecht/form-field-description-react';
+import '@utrecht/form-field-error-message-react';
 
 export * from '../FormFieldTextarea';
