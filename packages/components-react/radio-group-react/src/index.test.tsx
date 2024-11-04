@@ -194,58 +194,305 @@ describe('Radio Group', () => {
       }
     });
   });
-});
+  describe('error message', () => {
+    it('renders a radiogroup role with an accessible description', () => {
+      render(<RadioGroup label="Pizza toppings" invalid errorMessage="Remove one topping, three is the maximum." />);
 
-describe('error message', () => {
-  it('renders a radiogroup role with an accessible description', () => {
-    render(<RadioGroup label="Pizza toppings" invalid errorMessage="Remove one topping, three is the maximum." />);
+      const group = screen.getByRole('radiogroup', {
+        name: 'Pizza toppings',
+        description: 'Remove one topping, three is the maximum.',
+      });
+    });
 
-    const group = screen.getByRole('radiogroup', {
-      name: 'Pizza toppings',
-      description: 'Remove one topping, three is the maximum.',
+    it('renders an HTML div element inside the fieldset element', () => {
+      const { container } = render(
+        <RadioGroup label="Pizza toppings" errorMessage="Remove one topping, three is the maximum." />,
+      );
+
+      const fieldset = container.querySelector<HTMLFieldSetElement>('fieldset:only-child');
+      const legend = container.querySelector<HTMLLegendElement>('legend:only-child');
+
+      expect(fieldset).toBeInTheDocument();
+      expect(legend).toBeInTheDocument();
+
+      if (fieldset && legend) {
+        expect(fieldset).toContainElement(legend);
+      }
+    });
+
+    it('renders a div HTML-element with the description', () => {
+      render(<RadioGroup label="Pizza toppings" description="The first three toppings are free." />);
+
+      const description = screen.getByText('The first three toppings are free.');
+
+      expect(description.localName).toBe('div');
+    });
+
+    it('renders a design system BEM class name: utrecht-radio-group__description', () => {
+      render(<RadioGroup label="Pizza toppings" description="The first three toppings are free." />);
+
+      const description = screen.getByText('The first three toppings are free.');
+
+      expect(description).toHaveClass('utrecht-radio-group__description');
+    });
+
+    it('follows the the label in document order', () => {
+      render(<RadioGroup label="Pizza toppings" description="The first three toppings are free." />);
+
+      const label = screen.getByText('Pizza toppings');
+      const description = screen.getByText('The first three toppings are free.');
+
+      if (label && description) {
+        expect(description.compareDocumentPosition(label)).toBe(2);
+      }
     });
   });
 
-  it('renders an HTML div element inside the fieldset element', () => {
-    const { container } = render(
-      <RadioGroup label="Pizza toppings" errorMessage="Remove one topping, three is the maximum." />,
-    );
+  describe('radio option', () => {
+    it('is labelled by the radio group', () => {
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+          ]}
+        />,
+      );
 
-    const fieldset = container.querySelector<HTMLFieldSetElement>('fieldset:only-child');
-    const legend = container.querySelector<HTMLLegendElement>('legend:only-child');
+      const radio = screen.getByRole('radio', { name: 'Gorgonzola' });
 
-    expect(fieldset).toBeInTheDocument();
-    expect(legend).toBeInTheDocument();
-
-    if (fieldset && legend) {
-      expect(fieldset).toContainElement(legend);
-    }
+      expect(radio).toBeInTheDocument();
+    });
   });
 
-  it('renders a div HTML-element with the description', () => {
-    render(<RadioGroup label="Pizza toppings" description="The first three toppings are free." />);
+  describe('change event', () => {
+    it('can trigger a change event', () => {
+      const handleChange = jest.fn();
 
-    const description = screen.getByText('The first three toppings are free.');
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+            {
+              label: 'Olives',
+              value: '2',
+            },
+          ]}
+          onChange={handleChange}
+        />,
+      );
 
-    expect(description.localName).toBe('div');
+      const radio = screen.getByRole('radio', { name: 'Olives' });
+
+      radio?.click();
+
+      expect(handleChange).toHaveBeenCalled();
+    });
+
+    it('does not trigger a change event when disabled', () => {
+      const handleChange = jest.fn();
+
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          disabled
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+            {
+              label: 'Olives',
+              value: '2',
+            },
+          ]}
+          onChange={handleChange}
+        />,
+      );
+
+      const radio = screen.getByRole('radio', { name: 'Olives' });
+
+      radio?.click();
+
+      expect(handleChange).not.toHaveBeenCalled();
+    });
   });
 
-  it('renders a design system BEM class name: utrecht-radio-group__description', () => {
-    render(<RadioGroup label="Pizza toppings" description="The first three toppings are free." />);
+  describe('input event', () => {
+    it('can trigger a input event', () => {
+      const handleInput = jest.fn();
 
-    const description = screen.getByText('The first three toppings are free.');
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+            {
+              label: 'Olives',
+              value: '2',
+            },
+          ]}
+          onInput={handleInput}
+        />,
+      );
 
-    expect(description).toHaveClass('utrecht-radio-group__description');
+      const radio = screen.getByRole('radio', { name: 'Olives' });
+
+      radio?.click();
+
+      expect(handleInput).toHaveBeenCalled();
+    });
+
+    it('does not trigger a input event when disabled', () => {
+      const handleInput = jest.fn();
+
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          disabled
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+            {
+              label: 'Olives',
+              value: '2',
+            },
+          ]}
+          onInput={handleInput}
+        />,
+      );
+
+      const radio = screen.getByRole('radio', { name: 'Olives' });
+
+      radio?.click();
+
+      expect(handleInput).not.toHaveBeenCalled();
+    });
   });
 
-  it('follows the the label in document order', () => {
-    render(<RadioGroup label="Pizza toppings" description="The first three toppings are free." />);
+  describe('focus event', () => {
+    it('can trigger a focus event', async () => {
+      const handleFocus = jest.fn();
 
-    const label = screen.getByText('Pizza toppings');
-    const description = screen.getByText('The first three toppings are free.');
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+            {
+              label: 'Olives',
+              value: '2',
+            },
+          ]}
+          onFocus={handleFocus}
+        />,
+      );
 
-    if (label && description) {
-      expect(description.compareDocumentPosition(label)).toBe(2);
-    }
+      const radio = screen.getByRole('radio', { name: 'Olives' });
+
+      expect(handleFocus).not.toHaveBeenCalled();
+
+      radio?.focus();
+
+      expect(handleFocus).toHaveBeenCalled();
+    });
+
+    it('does not trigger a focus event when disabled', async () => {
+      const handleFocus = jest.fn();
+
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          disabled
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+            {
+              label: 'Olives',
+              value: '2',
+            },
+          ]}
+          onFocus={handleFocus}
+        />,
+      );
+
+      const radio = screen.getByRole('radio', { name: 'Olives' });
+
+      expect(handleFocus).not.toHaveBeenCalled();
+
+      radio?.focus();
+
+      expect(handleFocus).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('blur event', () => {
+    it('can trigger a blur event', async () => {
+      const handleBlur = jest.fn();
+
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+          ]}
+          onBlur={handleBlur}
+        />,
+      );
+
+      const radio = screen.getByRole('radio', { name: 'Gorgonzola' });
+
+      expect(handleBlur).not.toHaveBeenCalled();
+
+      radio?.focus();
+      radio?.blur();
+
+      expect(handleBlur).toHaveBeenCalled();
+    });
+
+    it('does not trigger a blur event when disabled', async () => {
+      const handleBlur = jest.fn();
+
+      render(
+        <RadioGroup
+          label="Pizza toppings"
+          disabled
+          options={[
+            {
+              label: 'Gorgonzola',
+              value: '1',
+            },
+          ]}
+          onBlur={handleBlur}
+        />,
+      );
+
+      const radio = screen.getByRole('radio', { name: 'Gorgonzola' });
+
+      radio?.focus();
+      radio?.blur();
+
+      expect(handleBlur).not.toHaveBeenCalled();
+    });
   });
 });
