@@ -81,6 +81,27 @@ $utrecht-support-prince-xml: false !default;
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
+@mixin utrecht-select--hover {
+  background-color: var(
+    --utrecht-select-hover-background-color,
+    var(
+      --utrecht-form-control-hover-background-color,
+      var(--utrecht-select-background-color, var(--utrecht-form-control-background-color))
+    )
+  );
+  border-color: var(
+    --utrecht-select-hover-border-color,
+    var(
+      --utrecht-form-control-hover-border-color,
+      var(--utrecht-select-border-color, var(--utrecht-form-control-border-color))
+    )
+  );
+  color: var(
+    --utrecht-select-hover-color,
+    var(--utrecht-form-control-hover-color, var(--utrecht-select-color, var(--utrecht-form-control-color)))
+  );
+}
+
 @mixin utrecht-select--focus {
   @include utrecht-focus;
 
@@ -153,6 +174,10 @@ $utrecht-support-prince-xml: false !default;
 }
 
 @mixin utrecht-select--html-select {
+  &:hover {
+    @include utrecht-select--hover;
+  }
+
   &:focus {
     @include utrecht-select--focus;
   }

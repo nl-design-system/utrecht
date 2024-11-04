@@ -14,6 +14,10 @@
   @include utrecht-select--disabled;
 }
 
+.utrecht-select--hover {
+  @include utrecht-select--hover;
+}
+
 .utrecht-select--focus {
   @include utrecht-select--focus;
 }
