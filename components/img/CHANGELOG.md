@@ -1,5 +1,11 @@
 # @utrecht/img-css
 
+## 1.1.1
+
+### Patch Changes
+
+- b0d9a1a: Fix CSS image component to support `img` attributes `width` and `height`.
+
 ## 1.1.0
 
 ### Minor Changes

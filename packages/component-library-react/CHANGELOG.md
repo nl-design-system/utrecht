@@ -1,5 +1,11 @@
 # @utrecht/component-library-react
 
+## 7.3.0
+
+### Minor Changes
+
+- 5d83fc4: Add new `ScrollLink` component.
+
 ## 7.2.0
 
 ### Minor Changes
