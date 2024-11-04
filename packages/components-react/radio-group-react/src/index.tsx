@@ -70,7 +70,7 @@ export const RadioGroup = forwardRef(
         className={clsx('utrecht-radio-group', className)}
         invalid={invalid}
         required={required}
-        aria-describedby={clsx(descriptionId, errorMessageId, statusId)}
+        aria-describedby={clsx(descriptionId, errorMessageId, statusId) || undefined}
         ref={ref}
         {...props}
       >
@@ -86,7 +86,18 @@ export const RadioGroup = forwardRef(
           </FormFieldErrorMessage>
         )}
         {Array.isArray(options)
-          ? options.map(({ ...props }, index) => <RadioOption key={index} name={name} disabled={disabled} {...props} />)
+          ? options.map(({ ...props }, index) => (
+              <RadioOption
+                key={index}
+                name={name}
+                disabled={disabled}
+                onChange={onChange}
+                onInput={onInput}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                {...props}
+              />
+            ))
           : null}
         {children}
         {status && (
