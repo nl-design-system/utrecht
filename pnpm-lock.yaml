@@ -1689,18 +1689,15 @@ importers:
       '@utrecht/form-field-combobox-react':
         specifier: workspace:*
         version: link:../components-react/form-field-combobox-react
-      '@utrecht/form-field-description-css':
+      '@utrecht/form-field-description-react':
         specifier: workspace:*
-        version: link:../../components/form-field-description
-      '@utrecht/form-field-error-message-css':
+        version: link:../components-react/form-field-description-react
+      '@utrecht/form-field-error-message-react':
         specifier: workspace:*
-        version: link:../../components/form-field-error-message
+        version: link:../components-react/form-field-error-message-react
       '@utrecht/form-field-react':
         specifier: workspace:*
         version: link:../components-react/form-field-react
-      '@utrecht/form-fieldset-css':
-        specifier: workspace:*
-        version: link:../../components/form-fieldset
       '@utrecht/form-label-react':
         specifier: workspace:*
         version: link:../components-react/form-label-react
