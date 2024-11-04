@@ -57,7 +57,6 @@ export const RadioOption = forwardRef(
   ) => {
     const inputId = useId();
     const descriptionId = useId();
-    const statusId = useId();
     const errorMessageId = useId();
 
     return (
@@ -69,7 +68,6 @@ export const RadioOption = forwardRef(
                 clsx({
                   [descriptionId]: description,
                   [errorMessageId]: invalid,
-                  [statusId]: status,
                 }) || undefined
               }
               checked={checked}
