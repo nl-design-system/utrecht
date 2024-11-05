@@ -11,6 +11,8 @@ const meta = {
   component: StoryTemplate,
   args: {},
   parameters: {
+    // cannot be tested using visual regression testing (exceeds 25,000,000px), ignore this story
+    chromatic: { disableSnapshot: true },
     bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Frich-text',
     tokensPrefix: 'utrecht-rich-text',
     status: {
