@@ -1,7 +1,7 @@
 import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
 import { createRef } from 'react';
-import { Combobox } from './Combobox';
+import { Combobox } from './index';
+import '@testing-library/jest-dom';
 
 describe('Combobox', () => {
   it('renders a div HTML element', () => {
