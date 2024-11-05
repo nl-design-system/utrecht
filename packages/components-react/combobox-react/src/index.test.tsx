@@ -1,7 +1,7 @@
-import { render } from '@testing-library/react';
-import '@testing-library/jest-dom';
+import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { Combobox } from './Combobox';
+import { Combobox } from './index';
+import '@testing-library/jest-dom';
 
 describe('Combobox', () => {
   it('renders a div HTML element', () => {
@@ -13,7 +13,21 @@ describe('Combobox', () => {
     expect(combobox).toBeVisible();
   });
 
-  it('renders a design system BEM block class name', () => {
+  it('does not render a combobox role element', () => {
+    render(<Combobox />);
+
+    let combobox;
+
+    try {
+      combobox = screen.getByRole('combobox');
+    } catch (e) {
+      expect(e).toBeDefined();
+    }
+
+    expect(combobox).toBeUndefined();
+  });
+
+  it('renders a design system BEM block class name: utrecht-combobox', () => {
     const { container } = render(<Combobox />);
 
     const combobox = container.querySelector(':only-child');
