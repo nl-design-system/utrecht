@@ -1,5 +1,15 @@
 # @utrecht/select-css
 
+## 1.5.0
+
+### Minor Changes
+
+- ec52086: Add `hover` tokens to the Select component:
+
+  - `utrecht.select.hover.background-color`
+  - `utrecht.select.hover.border-color`
+  - `utrecht.select.hover.color`
+
 ## 1.4.0
 
 ### Minor Changes
