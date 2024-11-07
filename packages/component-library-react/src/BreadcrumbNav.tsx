@@ -3,10 +3,10 @@
  * Copyright (c) 2021 Robbert Broersma
  */
 
+import { Link as UtrechtLink } from '@utrecht/link-react';
 import clsx from 'clsx';
 import { ComponentType, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode, useId } from 'react';
 import { Heading } from './Heading';
-import { Link as UtrechtLink } from './Link';
 
 export interface BreadcrumbNavProps extends HTMLAttributes<HTMLElement> {
   appearance?: string;

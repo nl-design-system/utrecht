@@ -1,6 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { Link } from './Link';
+import { Link } from './index';
 import '@testing-library/jest-dom';
 
 describe('Link', () => {
