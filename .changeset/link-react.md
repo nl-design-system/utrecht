@@ -2,4 +2,4 @@
 "@utrecht/link-react": major
 ---
 
-Create npm package for the Radio Button React component.
+Create npm package for the Link React component.
