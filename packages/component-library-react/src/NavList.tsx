@@ -1,7 +1,7 @@
+import type { LinkProps } from '@utrecht/link-react';
+import { Link } from '@utrecht/link-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
-import type { LinkProps } from './Link';
-import { Link } from './Link';
 import type { LinkButtonProps } from './LinkButton';
 import { LinkButton } from './LinkButton';
 

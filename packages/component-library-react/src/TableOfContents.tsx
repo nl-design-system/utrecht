@@ -3,9 +3,9 @@
  * Copyright (c) 2022 Robbert Broersma
  */
 
+import { Link, LinkProps } from '@utrecht/link-react';
 import { clsx } from 'clsx';
 import { HTMLAttributes, LiHTMLAttributes, type PropsWithChildren } from 'react';
-import { Link, LinkProps } from './Link';
 
 export type TableOfContentsProps = HTMLAttributes<HTMLElement>;
 

@@ -3,10 +3,10 @@
  * Copyright (c) 2023 Gemeente Utrecht
  */
 
+import type { LinkProps } from '@utrecht/link-react';
+import { Link } from '@utrecht/link-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
-import type { LinkProps } from './Link';
-import { Link } from './Link';
 
 export interface LinkListLinkProps extends LinkProps {
   icon?: ReactNode;
