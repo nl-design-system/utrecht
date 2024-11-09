@@ -17,15 +17,55 @@
   list-style: none;
 }
 
+@mixin utrecht-listbox__option--forced-colors {
+  --utrecht-listbox-option-background-color: field;
+  --utrecht-listbox-option-color: fieldtext;
+  --utrecht-listbox-option-hover-background-color: Highlight;
+  --utrecht-listbox-option-hover-color: HighlightText;
+  --utrecht-listbox-option-active-background-color: Highlight;
+  --utrecht-listbox-option-active-color: HighlightText;
+  --utrecht-listbox-option-disabled-background-color: field;
+  --utrecht-listbox-option-disabled-color: GrayText;
+  --utrecht-listbox-option-selected-background-color: Highlight;
+  --utrecht-listbox-option-selected-color: HighlightText;
+  --utrecht-listbox-option-selected-hover-background-color: Highlight;
+  --utrecht-listbox-option-selected-hover-color: HighlightText;
+  --utrecht-listbox-option-selected-disabled-background-color: GrayText;
+  --utrecht-listbox-option-selected-disabled-color: field;
+}
+
+@mixin utrecht-listbox--forced-colors {
+  /* Use inversed disabled colors for selected options */
+  --utrecht-listbox-background-color: field;
+  --utrecht-listbox-border-color: fieldtext;
+  --utrecht-listbox-hover-background-color: field;
+  --utrecht-listbox-hover-border-color: fieldtext;
+  --utrecht-listbox-hover-color: fieldtext;
+  --utrecht-listbox-focus-border-color: Highlight;
+  --utrecht-listbox-disabled-border-color: GrayText;
+
+  @include utrecht-listbox__option--forced-colors;
+}
+
 @mixin utrecht-listbox {
   --utrecht-listbox-max-block-size: 300px;
 
-  background-color: var(--utrecht-listbox-background-color);
-  border-color: var(--utrecht-listbox-border-color);
+  background-color: var(
+    --_utrecht-listbox-disabled-background-color,
+    var(--_utrecht-listbox-interactive-background-color, var(--utrecht-listbox-background-color))
+  );
+  border-color: var(
+    --_utrecht-listbox-disabled-border-color,
+    var(--_utrecht-listbox-interactive-border-color, var(--utrecht-listbox-border-color))
+  );
   border-radius: var(--utrecht-listbox-border-radius);
   border-style: solid;
   border-width: var(--utrecht-listbox-border-width);
   box-sizing: border-box;
+  color: var(
+    --_utrecht-listbox-disabled-color,
+    var(--_utrecht-listbox-interactive-color, var(--utrecht-listbox-color))
+  );
   cursor: default;
   display: flex;
   flex-direction: column;
@@ -44,20 +84,13 @@
 
   @media (forced-colors: active) {
     & {
-      /* Use inversed disabled colors for selected options */
-      --utrecht-listbox-option-selected-background-color: Highlight;
-      --utrecht-listbox-option-selected-color: HighlightText;
-      --utrecht-listbox-option-disabled-background-color: field;
-      --utrecht-listbox-option-disabled-color: GrayText;
-
-      background-color: field;
-      color: fieldtext;
+      @include utrecht-listbox--forced-colors;
     }
   }
 }
 
 @mixin utrecht-listbox--focus {
-  /* TODO: Implement CSS of focus listbox */
+  --_utrecht-listbox-interactive-border-color: var(--utrecht-listbox-focus-border-color);
 }
 
 @mixin utrecht-listbox--focus-visible {
@@ -96,12 +129,36 @@
 @mixin utrecht-listbox__option {
   @include reset-li;
 
-  --utrecht-icon-size: var(--utrecht-listbox-option-icon-size, 16px);
+  /*
+   * Order of precedence:
+   * 
+   * 1. disabled + selected
+   * 2. disabled
+   * 3. active + hover
+   * 4. active
+   * 5. selected + hover
+   * 6. selected
+   * 7. hover
+   */
+  --_utrecht-listbox-option-background-color: var(
+    --_utrecht-listbox-option-disabled-background-color,
+    var(
+      --_utrecht-listbox-option-interactive-background-color,
+      var(--_utrecht-listbox-option-state-background-color, var(--utrecht-listbox-option-background-color))
+    )
+  );
+  --_utrecht-listbox-option-color: var(
+    --_utrecht-listbox-option-disabled-color,
+    var(
+      --_utrecht-listbox-option-interactive-color,
+      var(--_utrecht-listbox-option-state-color, var(--utrecht-listbox-option-color))
+    )
+  );
 
   align-items: center;
-  background-color: var(--utrecht-listbox-option-background-color);
+  background-color: var(--_utrecht-listbox-option-background-color);
   box-sizing: border-box;
-  color: var(--utrecht-listbox-option-color);
+  color: var(--_utrecht-listbox-option-color);
   display: flex;
   min-block-size: var(--utrecht-listbox-option-min-block-size, var(--utrecht-pointer-target-min-size, 24px));
   padding-block-end: var(--utrecht-listbox-option-padding-block-end);
@@ -117,19 +174,14 @@
   }
 }
 
-@mixin utrecht-listbox__option--disabled {
-  background-color: var(--utrecht-listbox-option-disabled-background-color);
-  color: var(--utrecht-listbox-option-disabled-color);
-}
-
 @mixin utrecht-listbox__option--hover {
-  background-color: var(--utrecht-listbox-option-hover-background-color, var(--utrecht-listbox-option-color));
-  color: var(--utrecht-listbox-option-hover-color, var(--utrecht-listbox-option-color));
+  --_utrecht-listbox-option-interactive-background-color: var(--utrecht-listbox-option-hover-background-color);
+  --_utrecht-listbox-option-interactive-color: var(--utrecht-listbox-option-hover-color);
 }
 
 @mixin utrecht-listbox__option--focus {
-  background-color: var(--utrecht-listbox-option-focus-background-color, var(--utrecht-listbox-option-color));
-  color: var(--utrecht-listbox-option-focus-color, var(--utrecht-listbox-option-color));
+  --_utrecht-listbox-option-state-background-color: var(--utrecht-listbox-option-focus-background-color);
+  --_utrecht-listbox-option-state-color: var(--utrecht-listbox-option-focus-color);
 }
 
 @mixin utrecht-listbox__option--focus-visible {
@@ -140,36 +192,50 @@
 }
 
 @mixin utrecht-listbox__option--active {
-  background-color: var(--utrecht-listbox-option-is-active-background-color);
-  color: var(--utrecht-listbox-option-is-active-color);
+  --_utrecht-listbox-option-state-background-color: var(--utrecht-listbox-option-active-background-color);
+  --_utrecht-listbox-option-state-color: var(--utrecht-listbox-option-active-color);
+
   font-weight: var(--utrecht-listbox-option-is-active-font-weight);
 }
 
+@mixin utrecht-listbox__option--disabled {
+  /*
+   * The disabled listbox option:
+   * - should have no active effect
+   * - should have no hover effect
+   * - should have an selected effect, but it must appear disabled
+   */
+
+  /* disabled */
+  --utrecht-listbox-option-hover-background-color: var(--utrecht-listbox-option-disabled-background-color);
+  --utrecht-listbox-option-hover-color: var(--utrecht-listbox-option-disabled-color);
+
+  /* disabled + hover must appear no different than just disabled */
+  --_utrecht-listbox-option-interactive-background-color: var(--utrecht-listbox-option-disabled-background-color);
+  --_utrecht-listbox-option-interactive-color: var(--utrecht-listbox-option-disabled-color);
+
+  cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+}
+
 @mixin utrecht-listbox__option--selected {
-  background-color: var(--utrecht-listbox-option-selected-background-color);
-  color: var(--utrecht-listbox-option-selected-color);
+  --_utrecht-listbox-option-disabled-background-color: var(--utrecht-listbox-option-selected-disabled-background-color);
+  --_utrecht-listbox-option-disabled-color: var(--utrecht-listbox-option-selected-disabled-color);
+  --_utrecht-listbox-option-interactive-background-color: var(--utrecht-listbox-option-selected-hover-background-color);
+  --_utrecht-listbox-option-interactive-color: var(--utrecht-listbox-option-selected-hover-color);
+  --_utrecht-listbox-option-state-background-color: var(--utrecht-listbox-option-selected-background-color);
+  --_utrecht-listbox-option-state-color: var(--utrecht-listbox-option-selected-color);
 }
 
 /* order is after default option styling */
 @mixin utrecht-listbox--disabled {
+  --_utrecht-listbox-option-disabled-background-color: var(--utrecht-listbox-option-disabled-background-color);
+  --_utrecht-listbox-option-disabled-color: var(--utrecht-listbox-option-disabled-color);
+  --_utrecht-listbox-disabled-background-color: var(--utrecht-listbox-disabled-background-color);
+  --_utrecht-listbox-disabled-border-color: var(--utrecht-listbox-disabled-border-color);
+  --_utrecht-listbox-disabled-color: var(--utrecht-listbox-disabled-color);
+
   /* TODO: Implement CSS of disabled listbox */
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
-
-  @media (forced-colors: active) {
-    & {
-      /* Use inversed disabled colors for selected options */
-      --utrecht-listbox-option-selected-background-color: GrayText;
-      --utrecht-listbox-option-selected-color: field;
-      --utrecht-listbox-option-background-color: field;
-      --utrecht-listbox-option-color: GrayText;
-      --utrecht-listbox-background-color: field;
-      --utrecht-listbox-color: GrayText;
-    }
-  }
-}
-
-@mixin utrecht-listbox--read-only {
-  /* TODO: Implement CSS of read-only listbox */
 }
 
 @mixin utrecht-listbox--html-div {

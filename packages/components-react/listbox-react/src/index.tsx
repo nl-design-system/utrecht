@@ -102,7 +102,6 @@ export const ListboxOption = forwardRef(
       )}
       aria-disabled={disabled || undefined}
       aria-selected={selected ? 'true' : 'false'}
-      tabIndex={disabled ? undefined : -1}
       role="option"
       {...restProps}
       ref={ref}

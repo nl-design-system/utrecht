@@ -21,10 +21,6 @@
   @include utrecht-listbox--invalid;
 }
 
-.utrecht-listbox--read-only {
-  @include utrecht-listbox--read-only;
-}
-
 .utrecht-listbox__list {
   @include utrecht-listbox__list;
 }
@@ -39,10 +35,6 @@
 
 .utrecht-listbox__option {
   @include utrecht-listbox__option;
-}
-
-.utrecht-listbox__option--disabled {
-  @include utrecht-listbox__option--disabled;
 }
 
 .utrecht-listbox__option--hover {
@@ -77,10 +69,21 @@
   }
 }
 
+/* Disabled options must not appear interactive, so disabled styling
+ * must take precedence over interactive states such as hover.
+ */
+.utrecht-listbox__option--disabled {
+  @include utrecht-listbox__option--disabled;
+}
+
 .utrecht-listbox--disabled {
   @include utrecht-listbox--disabled;
 }
 
 .utrecht-listbox--html-div {
   @include utrecht-listbox--html-div;
+}
+
+.utrecht-listbox--forced-colors {
+  @include utrecht-listbox--forced-colors;
 }
