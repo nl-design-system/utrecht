@@ -5,9 +5,11 @@ import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 
 export interface ListboxOptionStoryProps {
+  active?: boolean;
   disabled?: boolean;
   focus?: boolean;
   focusVisible?: boolean;
+  hover?: boolean;
   label: ReactNode;
   selected?: boolean;
 }
@@ -17,6 +19,7 @@ export interface ListboxStoryProps {
   invalid?: boolean;
   focus?: boolean;
   focusVisible?: boolean;
+  forcedColors?: boolean;
   multiple?: boolean;
   readOnly?: boolean;
   required?: boolean;
@@ -27,6 +30,7 @@ export const ListboxStory = ({
   disabled,
   focus,
   focusVisible,
+  forcedColors,
   invalid,
   multiple,
   options,
@@ -37,6 +41,7 @@ export const ListboxStory = ({
     className={clsx({
       'utrecht-listbox--focus': focus,
       'utrecht-listbox--focus-visible': focusVisible,
+      'utrecht-listbox--forced-colors': forcedColors,
     })}
     disabled={disabled}
     invalid={invalid}
@@ -44,12 +49,14 @@ export const ListboxStory = ({
     required={required}
     readOnly={readOnly}
   >
-    {options.map(({ disabled, focus, focusVisible, label, selected }, index) => (
+    {options.map(({ active, disabled, focus, focusVisible, hover, label, selected }, index) => (
       <ListboxOption
         className={clsx({
+          'utrecht-listbox__option--hover': hover,
           'utrecht-listbox__option--focus': focus,
           'utrecht-listbox__option--focus-visible': focusVisible,
         })}
+        active={active}
         disabled={disabled}
         selected={selected}
         key={index}
