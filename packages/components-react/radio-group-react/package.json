@@ -36,12 +36,6 @@
     "@types/react": "18.3.3",
     "@types/testing-library__jest-dom": "5.14.9",
     "@utrecht/form-field-css": "workspace:*",
-    "@utrecht/fieldset-react": "workspace:*",
-    "@utrecht/form-field-react": "workspace:*",
-    "@utrecht/form-label-react": "workspace:*",
-    "@utrecht/form-field-description-react": "workspace:*",
-    "@utrecht/form-field-error-message-react": "workspace:*",
-    "@utrecht/radio-button-react": "workspace:*",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
@@ -69,6 +63,12 @@
     "react-dom": "18"
   },
   "dependencies": {
+    "@utrecht/fieldset-react": "workspace:*",
+    "@utrecht/form-field-react": "workspace:*",
+    "@utrecht/form-label-react": "workspace:*",
+    "@utrecht/form-field-description-react": "workspace:*",
+    "@utrecht/form-field-error-message-react": "workspace:*",
+    "@utrecht/radio-button-react": "workspace:*",
     "clsx": "2.1.1"
   }
 }

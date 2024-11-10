@@ -35,11 +35,6 @@
     "@types/jest": "29.5.13",
     "@types/react": "18.3.3",
     "@types/testing-library__jest-dom": "5.14.9",
-    "@utrecht/checkbox-react": "workspace:*",
-    "@utrecht/form-field-description-react": "workspace:*",
-    "@utrecht/form-field-error-message-react": "workspace:*",
-    "@utrecht/form-label-react": "workspace:*",
-    "@utrecht/form-field-react": "workspace:*",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
@@ -67,6 +62,11 @@
     "react-dom": "18"
   },
   "dependencies": {
+    "@utrecht/checkbox-react": "workspace:*",
+    "@utrecht/form-field-description-react": "workspace:*",
+    "@utrecht/form-field-error-message-react": "workspace:*",
+    "@utrecht/form-field-react": "workspace:*",
+    "@utrecht/form-label-react": "workspace:*",
     "clsx": "2.1.1"
   }
 }
