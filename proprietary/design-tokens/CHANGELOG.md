@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 2.2.0
+
+### Minor Changes
+
+- fb0a096: Add `utrecht-theme--viewport-scale` class name to `dist/index.css` for responsive scales.
+
 ## 2.1.1
 
 ### Patch Changes
