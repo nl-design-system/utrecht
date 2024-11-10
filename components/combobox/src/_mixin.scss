@@ -30,7 +30,7 @@
   inset: 0;
   overflow: auto;
   position: absolute;
-  z-index: var(--utrecht-combobox-popover-z-index);
+  z-index: var(--utrecht-combobox-popover-z-index, 1);
 }
 
 @mixin utrecht-combobox__popover--block-end {
