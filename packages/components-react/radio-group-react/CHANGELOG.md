@@ -1,5 +1,11 @@
 # @utrecht/radio-group-react
 
+## 1.0.2
+
+### Patch Changes
+
+- 64d9157: Fix missing TypeScript types for React components by using `dependencies` instead of `devDependencies`.
+
 ## 1.0.1
 
 ### Patch Changes

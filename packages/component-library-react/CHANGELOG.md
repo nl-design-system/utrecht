@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 7.3.1
+
+### Patch Changes
+
+- 64d9157: Fix missing TypeScript types for React components by using `dependencies` instead of `devDependencies`.
+- 8f12dce: Stack `z-index` of listbox in popover above other content.
+
 ## 7.3.0
 
 ### Minor Changes

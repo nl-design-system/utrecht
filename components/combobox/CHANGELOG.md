@@ -1,5 +1,11 @@
 # @utrecht/combobox-css
 
+## 1.2.1
+
+### Patch Changes
+
+- 8f12dce: Stack `z-index` of listbox in popover above other content.
+
 ## 1.2.0
 
 ### Minor Changes
