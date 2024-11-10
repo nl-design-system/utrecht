@@ -11,7 +11,7 @@ import {
   IconWorldWww,
 } from '@tabler/icons-react';
 import Layout from '@theme/Layout';
-import { Icon, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Icon, Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
 import styles from './index.module.css';

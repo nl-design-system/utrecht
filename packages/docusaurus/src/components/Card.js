@@ -1,4 +1,4 @@
-import { Heading } from '@utrecht/component-library-react/dist/css-module';
+import { Heading } from '@utrecht/component-library-react';
 import { clsx } from 'clsx';
 import React, { useId, useRef } from 'react';
 import './Card.css';
