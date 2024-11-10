@@ -68,7 +68,7 @@ export default [
     input: 'src/css-module/index.ts',
     output: [
       {
-        file: 'dist/css-module/index.js',
+        file: 'dist/css-module/index.cjs',
         format: 'cjs',
         sourcemap: true,
         globals: outputGlobals,

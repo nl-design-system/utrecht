@@ -4,8 +4,8 @@
   "author": "Community for NL Design System",
   "description": "Button component for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/",

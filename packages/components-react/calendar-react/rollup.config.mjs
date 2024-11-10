@@ -52,7 +52,7 @@ export default [
     input: './src/css.tsx',
     output: [
       {
-        file: './dist/css.js',
+        file: './dist/css.cjs',
         format: 'cjs',
         sourcemap: true,
       },
