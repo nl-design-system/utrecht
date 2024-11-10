@@ -1,5 +1,13 @@
 # @utrecht/calendar-react
 
+## 1.0.3
+
+### Patch Changes
+
+- 46e795c: Consistently use `dist/*.cjs` and `dist/*.mjs` files for React components'
+- Updated dependencies [46e795c]
+  - @utrecht/button-react@2.0.1
+
 ## 1.0.2
 
 ### Patch Changes
