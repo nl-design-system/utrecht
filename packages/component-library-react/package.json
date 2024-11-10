@@ -28,8 +28,8 @@
     "watch:build": "rollup -c --watch",
     "watch:test": "jest --verbose --watch"
   },
-  "main": "./dist/index.cjs.js",
-  "module": "./dist/index.esm.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "files": [
     "dist/",
