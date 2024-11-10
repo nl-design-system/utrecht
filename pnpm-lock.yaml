@@ -1520,6 +1520,48 @@ importers:
 
   packages/component-library-react:
     dependencies:
+      '@utrecht/button-react':
+        specifier: workspace:*
+        version: link:../components-react/button-react
+      '@utrecht/calendar-react':
+        specifier: workspace:*
+        version: link:../components-react/calendar-react
+      '@utrecht/checkbox-react':
+        specifier: workspace:*
+        version: link:../components-react/checkbox-react
+      '@utrecht/combobox-react':
+        specifier: workspace:*
+        version: link:../components-react/combobox-react
+      '@utrecht/fieldset-react':
+        specifier: workspace:*
+        version: link:../components-react/fieldset-react
+      '@utrecht/form-field-checkbox-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-checkbox-react
+      '@utrecht/form-field-description-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-description-react
+      '@utrecht/form-field-error-message-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-error-message-react
+      '@utrecht/form-field-react':
+        specifier: workspace:*
+        version: link:../components-react/form-field-react
+      '@utrecht/form-label-react':
+        specifier: workspace:*
+        version: link:../components-react/form-label-react
+      '@utrecht/link-react':
+        specifier: workspace:*
+        version: link:../components-react/link-react
+      '@utrecht/listbox-react':
+        specifier: workspace:*
+        version: link:../components-react/listbox-react
+      '@utrecht/radio-button-react':
+        specifier: workspace:*
+        version: link:../components-react/radio-button-react
+      '@utrecht/textbox-react':
+        specifier: workspace:*
+        version: link:../components-react/textbox-react
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1626,15 +1668,6 @@ importers:
       '@utrecht/button-link-css':
         specifier: workspace:*
         version: link:../../components/button-link
-      '@utrecht/button-react':
-        specifier: workspace:*
-        version: link:../components-react/button-react
-      '@utrecht/calendar-react':
-        specifier: workspace:*
-        version: link:../components-react/calendar-react
-      '@utrecht/checkbox-react':
-        specifier: workspace:*
-        version: link:../components-react/checkbox-react
       '@utrecht/code-block-css':
         specifier: workspace:*
         version: link:../../components/code-block
@@ -1647,9 +1680,6 @@ importers:
       '@utrecht/column-layout-css':
         specifier: workspace:*
         version: link:../../components/column-layout
-      '@utrecht/combobox-react':
-        specifier: workspace:*
-        version: link:../components-react/combobox-react
       '@utrecht/currency-data-css':
         specifier: workspace:*
         version: link:../../components/currency-data
@@ -1674,30 +1704,12 @@ importers:
       '@utrecht/emphasis-css':
         specifier: workspace:*
         version: link:../../components/emphasis
-      '@utrecht/fieldset-react':
-        specifier: workspace:*
-        version: link:../components-react/fieldset-react
       '@utrecht/figure-css':
         specifier: workspace:*
         version: link:../../components/figure
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../../components/focus-ring
-      '@utrecht/form-field-checkbox-react':
-        specifier: workspace:*
-        version: link:../components-react/form-field-checkbox-react
-      '@utrecht/form-field-description-react':
-        specifier: workspace:*
-        version: link:../components-react/form-field-description-react
-      '@utrecht/form-field-error-message-react':
-        specifier: workspace:*
-        version: link:../components-react/form-field-error-message-react
-      '@utrecht/form-field-react':
-        specifier: workspace:*
-        version: link:../components-react/form-field-react
-      '@utrecht/form-label-react':
-        specifier: workspace:*
-        version: link:../components-react/form-label-react
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
@@ -1743,18 +1755,12 @@ importers:
       '@utrecht/link-list-css':
         specifier: workspace:*
         version: link:../../components/link-list
-      '@utrecht/link-react':
-        specifier: workspace:*
-        version: link:../components-react/link-react
       '@utrecht/link-social-css':
         specifier: workspace:*
         version: link:../../components/link-social
       '@utrecht/list-social-css':
         specifier: workspace:*
         version: link:../../components/list-social
-      '@utrecht/listbox-react':
-        specifier: workspace:*
-        version: link:../components-react/listbox-react
       '@utrecht/logo-button-css':
         specifier: workspace:*
         version: link:../../components/logo-button
@@ -1815,9 +1821,6 @@ importers:
       '@utrecht/preserve-data-css':
         specifier: workspace:*
         version: link:../../components/preserve-data
-      '@utrecht/radio-button-react':
-        specifier: workspace:*
-        version: link:../components-react/radio-button-react
       '@utrecht/rich-text-css':
         specifier: workspace:*
         version: link:../../components/rich-text
@@ -1854,9 +1857,6 @@ importers:
       '@utrecht/textarea-css':
         specifier: workspace:*
         version: link:../../components/textarea
-      '@utrecht/textbox-react':
-        specifier: workspace:*
-        version: link:../components-react/textbox-react
       '@utrecht/top-task-link-css':
         specifier: workspace:*
         version: link:../../components/toptask-link
