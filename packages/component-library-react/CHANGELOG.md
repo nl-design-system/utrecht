@@ -1,5 +1,26 @@
 # @utrecht/component-library-react
 
+## 7.3.2
+
+### Patch Changes
+
+- 46e795c: Consistently use `dist/*.cjs` and `dist/*.mjs` files for React components'
+- Updated dependencies [46e795c]
+  - @utrecht/form-field-error-message-react@1.0.1
+  - @utrecht/form-field-description-react@1.0.1
+  - @utrecht/form-field-checkbox-react@1.0.2
+  - @utrecht/radio-button-react@1.0.1
+  - @utrecht/form-field-react@1.0.1
+  - @utrecht/form-label-react@1.0.1
+  - @utrecht/calendar-react@1.0.3
+  - @utrecht/checkbox-react@1.0.1
+  - @utrecht/combobox-react@0.0.2
+  - @utrecht/fieldset-react@1.0.1
+  - @utrecht/listbox-react@1.0.2
+  - @utrecht/textbox-react@1.0.1
+  - @utrecht/button-react@2.0.1
+  - @utrecht/link-react@1.0.1
+
 ## 7.3.1
 
 ### Patch Changes
