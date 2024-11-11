@@ -138,6 +138,28 @@ export default [
     ],
   },
   {
+    input: 'src/root.scss',
+    output: {
+      dir: './dist',
+      sourcemap: false,
+      format: 'esm',
+      compact: true,
+    },
+    plugins: [
+      postcss({
+        extensions: ['.css', '.scss'],
+        plugins: [
+          discardDuplicates(),
+          mergeLicenseComments(),
+          removeComments({
+            keepLicense: true,
+          }),
+        ],
+        extract: true,
+      }),
+    ],
+  },
+  {
     input: 'src/prince-xml.scss',
     output: {
       dir: './dist',

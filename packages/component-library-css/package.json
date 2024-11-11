@@ -10,6 +10,9 @@
   "keywords": [
     "nl-design-system"
   ],
+  "exports": {
+    "./dist/*.css": "./dist/*.css"
+  },
   "private": false,
   "publishConfig": {
     "access": "public"
