@@ -1,35 +1,31 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2020-2024 Frameless B.V.
- * Copyright (c) 2021-2024 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Gemeente Utrecht
+ * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "~@utrecht/badge-css/src/mixin";
-
-@mixin utrecht-badge-data {
+@mixin utrecht-data-badge {
   background-color: var(--utrecht-data-badge-background-color, var(--utrecht-badge-background-color, hsl(0 0% 0%)));
   border-radius: var(--utrecht-data-badge-border-radius, var(--utrecht-badge-border-radius, 0.5ch));
+  border-width: var(--utrecht-data-badge-border-width, 0);
   color: var(--utrecht-data-badge-color, var(--utrecht-badge-color, hsl(0 0% 100%)));
   display: inline-block;
   font-family: var(--utrecht-data-badge-font-family, var(--utrecht-document-font-family, sans-serif));
   font-size: var(--utrecht-data-badge-font-size, var(--utrecht-badge-font-size, inherit));
-  font-style: var(--utrecht-badge-font-style, normal); /* no inheritance */
   font-weight: var(--utrecht-data-badge-font-weight, var(--utrecht-badge-font-weight, bold)); /* no inheritance */
-  letter-spacing: var(--utrecht-badge-data-letter-spacing, inherit);
   line-height: var(--utrecht-data-badge-line-height, var(--utrecht-badge-line-height, 1em));
   max-block-size: max-content;
   max-inline-size: max-content;
-  min-block-size: 1em;
-  min-inline-size: 1em;
+  min-block-size: var(--utrecht-data-badge-min-block-size, 1em);
+  min-inline-size: var(--utrecht-data-badge-min-inline-size, 1em);
   padding-block-end: var(--utrecht-data-badge-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-block-start: var(--utrecht-data-badge-padding-block, var(--utrecht-badge-padding-block, 0.5ex));
   padding-inline-end: var(--utrecht-data-badge-padding-inline, var(--utrecht-badge-padding-inline, 0.5ch));
   padding-inline-start: var(--utrecht-data-badge-padding-inline, var(--utrecht-badge-padding-inline, 0.5ch));
   text-decoration: none; /* no inheritance */
-  text-transform: var(--utrecht-badge-data-text-transform, inherit);
 }
 
-@mixin utrecht-badge--media-query-forced-colors {
+@mixin utrecht-data-badge--media-query-forced-colors {
   @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
     border-color: currentColor;
     border-style: solid;
