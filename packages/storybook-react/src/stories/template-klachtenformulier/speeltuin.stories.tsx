@@ -48,7 +48,7 @@ import { SingleFormioComponent } from '../open-forms/StoryUtil';
 import './index.css';
 
 const meta = {
-  title: 'Template/Klachten form/Speeltuin',
+  title: 'Template/Klachtenformulier/Speeltuin',
   id: 'template-klachten-speeltuin',
   component: Page,
 } satisfies Meta<typeof Page>;
