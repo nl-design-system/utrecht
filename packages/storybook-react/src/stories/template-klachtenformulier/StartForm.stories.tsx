@@ -45,6 +45,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { SingleFormioComponent } from '../open-forms/StoryUtil';
+import './index.css';
 
 const meta = {
   title: 'Template/Klachten form/Start',
@@ -77,7 +78,7 @@ export const One: Story = {
         </BreadcrumbNav>
         <Heading1>
           <Paragraph lead></Paragraph>
-          Klacht over de gemeente
+          Speeltuin voor React componenten
         </Heading1>
         <section>
           <Heading2>Uw klacht</Heading2>
