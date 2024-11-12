@@ -41,6 +41,7 @@ import {
   UtrechtLogo,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import './index.css';
 
 const meta = {
   title: 'Template/Klachtenformulier/Stap 2',
