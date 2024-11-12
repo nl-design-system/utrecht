@@ -35,6 +35,7 @@ import {
   UtrechtDigidButton,
   UtrechtFormFieldDescription,
   UtrechtIconArrow,
+  UtrechtIconChevronLeft,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
   UtrechtIconLinkedin,
@@ -65,18 +66,22 @@ export const One: Story = {
           </Logo>
         </Link>
       </PageHeader>
+      <BreadcrumbNav>
+        <BreadcrumbNavLink href="#">
+          <BreadcrumbNavSeparator>
+            <UtrechtIconChevronLeft />
+          </BreadcrumbNavSeparator>
+          Terug
+        </BreadcrumbNavLink>
+      </BreadcrumbNav>
+
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <Heading1>Klacht</Heading1>
-        <Link>
-          <UtrechtIconArrow /> Terug
-        </Link>
         <section>
           <Paragraph appearance="lead">
             Bent u ontevreden over hoe de gemeente haar taken uitvoert? Bent u bijvoorbeeld niet goed geholpen? Of bent
             u niet netjes behandeld? De gemeente vindt dat vervelend en zoekt graag samen naar een oplossing.
-          </Paragraph>
-          <Paragraph>
-            U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
+            <br />U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
           </Paragraph>
         </section>
         <section>

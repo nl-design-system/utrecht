@@ -17,6 +17,7 @@ import {
   Heading2,
   Heading3,
   Link,
+  LinkButton,
   LinkList,
   LinkListLink,
   Logo,
@@ -34,6 +35,7 @@ import {
   UtrechtDigidButton,
   UtrechtFormFieldDescription,
   UtrechtIconArrow,
+  UtrechtIconChevronLeft,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
   UtrechtIconLinkedin,
@@ -65,17 +67,13 @@ export const One: Story = {
         </nav>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <BreadcrumbNav label="Kruimelpad">
-          <ul role="list" className="utrecht-link-list utrecht-link-list--html-ul">
-            <li className="utrecht-link-list__item">
-              <a href="#" className="utrecht-link utrecht-link--html-a utrecht-link-list__link">
-                <span className="utrecht-link-list__link-text">Terug link list</span>
-              </a>
-            </li>
-          </ul>
-          <BreadcrumbNavSeparator>
-            <i />
-          </BreadcrumbNavSeparator>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="#">
+            <BreadcrumbNavSeparator>
+              <UtrechtIconChevronLeft />
+            </BreadcrumbNavSeparator>
+            Terug
+          </BreadcrumbNavLink>
         </BreadcrumbNav>
         <Heading1>
           <Paragraph lead></Paragraph>
@@ -83,8 +81,11 @@ export const One: Story = {
         </Heading1>
         <section>
           <Heading2>Uw klacht</Heading2>
-          <Paragraph>Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.</Paragraph>
-          <Paragraph>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</Paragraph>
+          <Paragraph>
+            Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
+            <br />
+            Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+          </Paragraph>
         </section>
         <Heading2>Klachten formulier</Heading2>
         <section>
@@ -112,8 +113,7 @@ export const One: Story = {
               name="tijdstip"
               size={6}
             />
-
-            <FormFieldTextarea label="Locatie" name="locatie" />
+            <FormFieldTextarea label="Locatie" name="locatie" rows={6} />
 
             <FormField>
               <br />
@@ -122,9 +122,9 @@ export const One: Story = {
                 Vragen met een * zijn verplicht.
               </UtrechtFormFieldDescription>
             </FormField>
-            <Button appearance="primary-action-button" type="submit">
+            <ButtonLink appearance="primary-action-button" href="https://www.nu.nl">
               Volgende stap
-            </Button>
+            </ButtonLink>
           </form>
         </section>
       </PageContent>

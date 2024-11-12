@@ -72,7 +72,7 @@ export const One: Story = {
           <Heading2>Uw Klacht</Heading2>
           <Paragraph>Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.</Paragraph>
           <Paragraph>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</Paragraph>
-          <FormFieldTextarea label="Wat is uw klacht?" name="klacht" required />
+          <FormFieldTextarea label="Wat is uw klacht?" name="klacht" rows={5} required />
           <br />
           <FormFieldTextbox
             label="Datum (niet verplicht)"
@@ -82,8 +82,7 @@ export const One: Story = {
           <br />
           <FormFieldTextbox label="Tijdstip (niet verplicht)" name="tijdstip" description="Bijvoorbeeld: 13:15" />
           <br />
-          <FormFieldTextarea label="Locatie (niet verplicht)" name="locatie" />
-          <br />
+          <FormFieldTextarea label="Locatie (niet verplicht)" name="locatie" rows={5} />
           <FormLabel>Bestand toevoegen (niet verplicht)</FormLabel>
           <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
           <UnorderedList>
