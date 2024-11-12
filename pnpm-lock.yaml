@@ -191,15 +191,6 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
-  components/badge-data:
-    devDependencies:
-      '@utrecht/badge-css':
-        specifier: workspace:*
-        version: link:../badge
-      '@utrecht/build-utils-css':
-        specifier: workspace:*
-        version: link:../../packages/build-utils-css
-
   components/badge-list:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -6011,9 +6002,6 @@ importers:
       '@utrecht/badge-counter-css':
         specifier: workspace:*
         version: link:../../components/badge-counter
-      '@utrecht/badge-data-css':
-        specifier: workspace:*
-        version: link:../../components/badge-data
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
@@ -6056,6 +6044,9 @@ importers:
       '@utrecht/custom-checkbox-css':
         specifier: workspace:*
         version: link:../../components/custom-checkbox
+      '@utrecht/data-badge-css':
+        specifier: workspace:*
+        version: link:../../components/data-badge
       '@utrecht/data-list-css':
         specifier: workspace:*
         version: link:../../components/data-list
@@ -6437,9 +6428,6 @@ importers:
       '@utrecht/badge-css':
         specifier: workspace:*
         version: link:../../components/badge
-      '@utrecht/badge-data-css':
-        specifier: workspace:*
-        version: link:../../components/badge-data
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
@@ -6479,6 +6467,9 @@ importers:
       '@utrecht/custom-checkbox-css':
         specifier: workspace:*
         version: link:../../components/custom-checkbox
+      '@utrecht/data-badge-css':
+        specifier: workspace:*
+        version: link:../../components/data-badge
       '@utrecht/data-list-css':
         specifier: workspace:*
         version: link:../../components/data-list
