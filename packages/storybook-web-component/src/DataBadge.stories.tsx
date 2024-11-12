@@ -1,16 +1,16 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/badge-data-css/README.md?raw';
-import tokensDefinition from '@utrecht/badge-data-css/src/tokens.json';
+import readme from '@utrecht/data-badge-css/README.md?raw';
+import tokensDefinition from '@utrecht/data-badge-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtBadgeData } from '@utrecht/web-component-library-react';
+import { UtrechtDataBadge } from '@utrecht/web-component-library-react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'Web Component/Badge data',
-  id: 'web-component-badge-data',
-  component: UtrechtBadgeData,
+  title: 'Web Component/Data Badge',
+  id: 'web-component-data-badge',
+  component: UtrechtDataBadge,
   argTypes: {
     children: {
       description: 'Text content',
@@ -25,7 +25,7 @@ const meta = {
     status: {
       type: 'WORK IN PROGRESS',
     },
-    tokensPrefix: 'utrecht-badge-data',
+    tokensPrefix: 'utrecht-data-badge',
     tokens,
     tokensDefinition,
     docs: {
@@ -34,7 +34,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof UtrechtBadgeData>;
+} satisfies Meta<typeof UtrechtDataBadge>;
 
 export default meta;
 

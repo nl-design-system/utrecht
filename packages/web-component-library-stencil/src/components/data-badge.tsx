@@ -7,14 +7,14 @@
 import { Component, h } from '@stencil/core';
 
 @Component({
-  tag: 'utrecht-badge-data',
-  styleUrl: 'badge-data.scss',
+  tag: 'utrecht-data-badge',
+  styleUrl: 'data-badge.scss',
   shadow: true,
 })
-export class BadgeData {
+export class DataBadge {
   render() {
     return (
-      <div class="utrecht-badge-data">
+      <div class="utrecht-data-badge">
         <slot></slot>
       </div>
     );
