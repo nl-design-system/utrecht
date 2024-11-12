@@ -1,9 +1,9 @@
 import { render } from '@testing-library/react';
 import { createRef } from 'react';
-import { DataBadge } from './DataBadge';
+import { DataBadge } from './index';
 import '@testing-library/jest-dom';
 
-describe('Data badge', () => {
+describe('Data Badge', () => {
   it('renders an HTML span element', () => {
     const { container } = render(<DataBadge>{'Den Haag'}</DataBadge>);
 
@@ -37,7 +37,7 @@ describe('Data badge', () => {
 
     const badge = container.querySelector(':only-child');
 
-    expect(badge).toHaveClass('utrecht-badge-data');
+    expect(badge).toHaveClass('utrecht-data-badge');
   });
   it('can have a additional class name', () => {
     const { container } = render(<DataBadge className="large" />);
@@ -46,7 +46,7 @@ describe('Data badge', () => {
 
     expect(dataBadge).toHaveClass('large');
 
-    expect(dataBadge).toHaveClass('utrecht-badge-data');
+    expect(dataBadge).toHaveClass('utrecht-data-badge');
   });
   it('renders rich text content', () => {
     const { container } = render(
@@ -71,12 +71,12 @@ describe('Data badge', () => {
   });
 
   it('can have a custom class name', () => {
-    const { container } = render(<DataBadge className="utrecht-badge-data--example-dataviz-1">{'Utrecht'}</DataBadge>);
+    const { container } = render(<DataBadge className="utrecht-data-badge--example-dataviz-1">{'Utrecht'}</DataBadge>);
 
     const badge = container.querySelector(':only-child');
 
-    expect(badge).toHaveClass('utrecht-badge-data');
-    expect(badge).toHaveClass('utrecht-badge-data--example-dataviz-1');
+    expect(badge).toHaveClass('utrecht-data-badge');
+    expect(badge).toHaveClass('utrecht-data-badge--example-dataviz-1');
   });
 
   it('supports ForwardRef in React', () => {

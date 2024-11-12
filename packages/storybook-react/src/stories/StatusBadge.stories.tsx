@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
-import tokensDefinition from '@utrecht/badge-data-css/dist/tokens.mjs';
 import readme from '@utrecht/badge-status-css/README.md?raw';
+import tokensDefinition from '@utrecht/badge-status-css/dist/tokens.mjs';
 import { Paragraph, StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';

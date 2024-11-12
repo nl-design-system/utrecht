@@ -48,8 +48,8 @@ export type { ComboboxProps, ComboboxPopoverProps } from '@utrecht/combobox-reac
 export { Combobox, ComboboxPopover } from '@utrecht/combobox-react';
 export type { CurrencyDataProps } from './CurrencyData';
 export { CurrencyData } from './CurrencyData';
-export type { DataBadgeProps } from './DataBadge';
-export { DataBadge } from './DataBadge';
+export type { DataBadgeProps } from '@utrecht/data-badge-react';
+export { DataBadge } from '@utrecht/data-badge-react';
 export type { DocumentProps } from './Document';
 export { Document } from './Document';
 export type {

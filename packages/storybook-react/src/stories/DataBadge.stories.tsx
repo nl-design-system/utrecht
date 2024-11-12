@@ -1,13 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/badge-data-css/README.md?raw';
-import tokensDefinition from '@utrecht/badge-data-css/dist/tokens.mjs';
 import { DataBadge, Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import readme from '@utrecht/data-badge-css/README.md?raw';
+import tokensDefinition from '@utrecht/data-badge-css/dist/tokens.mjs';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
 
 const meta = {
-  title: 'React Component/Data badge',
+  title: 'React Component/Data Badge',
   id: 'react-data-badge',
   component: DataBadge,
   args: {
@@ -26,7 +26,7 @@ const meta = {
     },
   },
   parameters: {
-    tokensPrefix: 'utrecht-badge-data',
+    tokensPrefix: 'utrecht-data-badge',
     tokens,
     tokensDefinition,
     docs: {

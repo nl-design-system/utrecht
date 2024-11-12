@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/badge-data-css/README.md?raw';
-import cssDocs from '@utrecht/badge-data-css/docs/technology-css.nl.md?raw';
-import htmlDocs from '@utrecht/badge-data-css/docs/technology-css.nl.md?raw';
-import tokensDefinition from '@utrecht/badge-data-css/src/tokens.json';
 import { DataBadge } from '@utrecht/component-library-react';
+import readme from '@utrecht/data-badge-css/README.md?raw';
+import cssDocs from '@utrecht/data-badge-css/docs/technology-css.nl.md?raw';
+import htmlDocs from '@utrecht/data-badge-css/docs/technology-css.nl.md?raw';
+import tokensDefinition from '@utrecht/data-badge-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { designTokenStory } from './design-token-story';
@@ -22,9 +22,9 @@ const meta = {
     },
   },
   parameters: {
-    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fbadge-data',
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fdata-badge',
     nldesignsystem: 'https://nldesignsystem.nl/data-badge',
-    tokensPrefix: 'utrecht-badge-data',
+    tokensPrefix: 'utrecht-data-badge',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -49,7 +49,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Styling via the `.utrecht-badge-data` class name.',
+        story: 'Styling via the `.utrecht-data-badge` class name.',
       },
     },
   },
