@@ -1,5 +1,11 @@
 # @utrecht/form-field-checkbox-react
 
+## 1.0.3
+
+### Patch Changes
+
+- b1d3bd1: Fix types of `onBlur`, `onChange`, `onFocus` and `onInput` for `FormFieldCheckbox`. The event handler now is for `HTMLInputElement` instead of `HTMLDivElement`.
+
 ## 1.0.2
 
 ### Patch Changes
