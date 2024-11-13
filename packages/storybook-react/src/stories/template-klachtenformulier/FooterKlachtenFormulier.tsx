@@ -1,6 +1,7 @@
 import {
   Heading2,
   Heading3,
+  Heading4,
   Link,
   LinkList,
   LinkListLink,
@@ -17,20 +18,17 @@ import {
   UtrechtIconWhatsapp,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
-
 const FooterKlachten: React.FC = () => {
   return (
-    <PageFooter>
-      <Heading2>Gemeente Utrecht</Heading2>
-      <br />
-      <Heading3>Telefoon</Heading3>
-      <Link href="tel:14003">14030</Link>
-      <br />
-      <br />
-      <LinkList>
-        <React.Fragment key=".0">
+    <PageFooter className="footer-grid">
+      <Heading2 className="footer-title">Gemeente Utrecht</Heading2>
+
+      <div className="footer-column">
+        <Heading4>Telefoon</Heading4>
+        <Link href="tel:14003">14030</Link>
+        <LinkList>
           <LinkListLink href="#">
-            <UtrechtIconArrow /> Hoe werkt 14030?{' '}
+            <UtrechtIconArrow /> Hoe werkt 14030?
           </LinkListLink>
           <LinkListLink href="#">
             <UtrechtIconArrow /> Meer contactinformatie
@@ -38,19 +36,20 @@ const FooterKlachten: React.FC = () => {
           <LinkListLink href="#">
             <UtrechtIconArrow /> Over deze website
           </LinkListLink>
-        </React.Fragment>
-      </LinkList>
-      <br />
-      <Heading3>Adres</Heading3>
-      <Paragraph>
-        <Strong>Stadskantoor</Strong>
-        <br />
-        Stadsplateau 1<br />
-        3521 AZ Utrecht
-      </Paragraph>
-      <br />
-      <LinkList>
-        <React.Fragment key=".0">
+        </LinkList>
+      </div>
+
+      <div className="footer-column">
+        <Heading4>Adres</Heading4>
+        <Paragraph>
+          <Strong>Stadskantoor</Strong>
+          <br />
+          Stadsplateau 1<br />
+          3521 AZ Utrecht
+        </Paragraph>
+      </div>
+      <div className="footer-column social-media">
+        <LinkList>
           <LinkListLink href="#">
             <UtrechtIconInstagram /> Instagram
           </LinkListLink>
@@ -66,8 +65,8 @@ const FooterKlachten: React.FC = () => {
           <LinkListLink href="#">
             <UtrechtIconNieuwsbrief /> Nieuwsbrief
           </LinkListLink>
-        </React.Fragment>
-      </LinkList>
+        </LinkList>
+      </div>
     </PageFooter>
   );
 };
