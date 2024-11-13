@@ -92,11 +92,13 @@ export const One: Story = {
             </UnorderedListItem>
           </UnorderedList>
         </section>
-        <br />
-        <Button appearance="primary-action-button" type="submit">
-          Doorgaan
-          <UtrechtIconArrow />
-        </Button>
+        <section>
+          <br />
+          <ButtonLink appearance="primary-action-button" href="#">
+            Ga naar klachtenformulier&nbsp;
+            <UtrechtIconArrow />
+          </ButtonLink>
+        </section>
       </PageContent>
       <FooterKlachten />
     </Page>
