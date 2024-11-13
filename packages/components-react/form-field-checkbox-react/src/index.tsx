@@ -10,7 +10,7 @@ import type { ForwardedRef, PropsWithChildren, ReactNode, Ref } from 'react';
 import { forwardRef, useId } from 'react';
 
 export interface FormFieldCheckboxProps
-  extends Omit<FormFieldProps, 'type'>,
+  extends Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput' | 'type'>,
     Pick<
       CheckboxProps,
       | 'checked'
@@ -21,6 +21,10 @@ export interface FormFieldCheckboxProps
       | 'inputRequired'
       | 'invalid'
       | 'name'
+      | 'onBlur'
+      | 'onChange'
+      | 'onFocus'
+      | 'onInput'
       | 'required'
       | 'value'
     > {

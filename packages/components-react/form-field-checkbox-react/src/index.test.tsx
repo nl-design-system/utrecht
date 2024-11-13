@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { createRef } from 'react';
+import { ChangeEvent, createRef } from 'react';
 import { FormFieldCheckbox } from './index';
 import '@testing-library/jest-dom';
 
@@ -322,6 +322,19 @@ describe('Form field with a checkbox', () => {
       checkbox?.click();
 
       expect(handleChange).toHaveBeenCalled();
+    });
+
+    it.only('has an HTMLInputElement event target', () => {
+      const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {};
+      const handleChangeSpy = jest.fn(handleChange);
+
+      render(<FormFieldCheckbox {...defaultProps} onChange={handleChangeSpy} />);
+
+      const checkbox = screen.getByRole('checkbox');
+
+      checkbox?.click();
+
+      expect(handleChangeSpy.mock.lastCall[0].target).toBe(checkbox);
     });
 
     it('does not trigger a change event when disabled', () => {
