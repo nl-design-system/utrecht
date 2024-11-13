@@ -20,10 +20,10 @@ import {
 import React from 'react';
 const FooterKlachten: React.FC = () => {
   return (
-    <PageFooter className="footer-grid">
-      <Heading2 className="footer-title">Gemeente Utrecht</Heading2>
+    <PageFooter className="utrecht-footer-grid">
+      <Heading2 className="utrecht-footer-title">Gemeente Utrecht</Heading2>
 
-      <div className="footer-column">
+      <div className="utrecht-footer-column">
         <Heading4>Telefoon</Heading4>
         <Link href="tel:14003">14030</Link>
         <LinkList>
@@ -48,7 +48,7 @@ const FooterKlachten: React.FC = () => {
           3521 AZ Utrecht
         </Paragraph>
       </div>
-      <div className="footer-column social-media">
+      <div className="utrecht-footer-column utrecht-social-media">
         <LinkList>
           <LinkListLink href="#">
             <UtrechtIconInstagram /> Instagram
