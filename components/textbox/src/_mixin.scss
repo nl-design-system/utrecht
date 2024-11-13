@@ -290,6 +290,19 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 4;
 }
 
+@mixin utrecht-textbox--voorletters-size {
+  /* We have not found a good source for the size of "Voorletters" yet.
+     For now we use what the form builders suggested: 5 */
+  --utrecht-textbox-value-max-length: 5;
+}
+
+@mixin utrecht-textbox--voornamen-size {
+  /* We have not found a good source for the size of "Voornamen" yet.
+   * For now im testing: 22
+   */
+  --utrecht-textbox-value-max-length: 22;
+}
+
 @mixin utrecht-textbox--voorvoegsel-size {
   /* "Tabel 36 Voorvoegselstabel" by "Rijksdienst voor Identiteitsgegevens" has a list
    * of all allowed values. The longest value is 10 characters.
