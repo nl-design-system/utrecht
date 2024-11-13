@@ -34,7 +34,7 @@ type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
   render: (args) => {
-    const MAX_CHARACTERS = 100;
+    const MAX_CHARACTERS = 1000;
     const [characterCount, setCharacterCount] = useState(0);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -87,14 +87,15 @@ export const One: Story = {
               {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
               <FormFieldTextarea
                 label="Wat is uw klacht?"
-                name="subject"
+                name="klacht"
                 rows={5}
                 onChange={handleInputChange}
                 status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
               />
-              <FormFieldTextarea label="Locatie" name="locatie" rows={6} />
+              <br />
+              <FormFieldTextarea label="Wat was de locatie?" name="locatie" rows={4} />
+              <br />
               <FormField>
-                <br />
                 <Textbox required id="email" aria-labelledby="email-label" aria-describedby="email-desc" />
                 <UtrechtFormFieldDescription id="email-desc">
                   Vragen met een * zijn verplicht.
