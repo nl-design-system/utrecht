@@ -1,5 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
   Button,
   ButtonGroup,
   ButtonLink,
@@ -35,6 +38,7 @@ import {
   UtrechtDigidButton,
   UtrechtFormFieldDescription,
   UtrechtIconArrow,
+  UtrechtIconChevronLeft,
   UtrechtIconCross,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
@@ -61,13 +65,21 @@ export const One: Story = {
   render: (args) => (
     <Page {...args}>
       <PageHeader>
-        <Link href="/">
+        <nav>
           <Logo>
             <LogoImage />
           </Logo>
-        </Link>
+        </nav>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="#">
+            <BreadcrumbNavSeparator>
+              <UtrechtIconChevronLeft />
+            </BreadcrumbNavSeparator>
+            Terug
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
         <Heading1>Klacht over de gemeente</Heading1>
         <section>
           <Heading2>Uw Klacht</Heading2>
