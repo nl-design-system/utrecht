@@ -2,4 +2,15 @@
   .utrecht-breadcrumb-nav__separator--html-li {
     padding-inline-end: 4px;
   }
+  /* stylelint-disable selector-class-pattern, property-disallowed-list */
+  .sb-show-main {
+    padding: 0;
+  }
+  /* stylelint-enable selector-class-pattern, property-disallowed-list */
+  .utrecht-document {
+    background-color: var(--utrecht-document-background-color, inherit);
+  }
+  .utrecht-page {
+    background-color: var(--utrecht-document-background-color);
+  }
 }
