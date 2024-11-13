@@ -1,5 +1,12 @@
 # @utrecht/checkbox-group-react
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [b1d3bd1]
+  - @utrecht/form-field-checkbox-react@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
