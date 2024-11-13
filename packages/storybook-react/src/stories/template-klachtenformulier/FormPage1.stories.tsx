@@ -46,6 +46,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import './index.css';
+import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
   title: 'Template/Klachtenformulier/Stap 1',
@@ -85,14 +86,6 @@ export const One: Story = {
           </Paragraph>
         </section>
         <section>
-          <Heading2>Heading2</Heading2>
-          <Heading3>Heading3</Heading3>
-          <Paragraph>Paragraph text</Paragraph>
-          <Button>Buttontext</Button>
-          <Paragraph>Paragraph 2 text</Paragraph>
-        </section>
-
-        <section>
           {' '}
           <Button appearance="primary-action-button" type="submit">
             Ga naar klachtenformulier
@@ -114,55 +107,7 @@ export const One: Story = {
           </Paragraph>
         </section>
       </PageContent>
-      <PageFooter>
-        <Heading2>Gemeente Utrecht</Heading2>
-        <br />
-        <Heading3>Telefoon</Heading3>
-        <Link href="tel:14003">14030</Link>
-        <br />
-        <br />
-        <LinkList>
-          <React.Fragment key=".0">
-            <LinkListLink href="#">
-              <UtrechtIconArrow /> Hoe werkt 14030?{' '}
-            </LinkListLink>
-            <LinkListLink href="#">
-              <UtrechtIconArrow /> Meer contactinformatie
-            </LinkListLink>
-            <LinkListLink href="#">
-              <UtrechtIconArrow /> Over deze website
-            </LinkListLink>
-          </React.Fragment>
-        </LinkList>
-        <br />
-        <Heading3>Adres</Heading3>
-        <Paragraph>
-          <Strong>Stadskantoor</Strong>
-          <br />
-          Stadsplateau 1<br />
-          3521 AZ Utrecht
-        </Paragraph>
-        <br />
-        <LinkList>
-          <React.Fragment key=".0">
-            <LinkListLink href="#">
-              <UtrechtIconInstagram /> Instagram
-            </LinkListLink>
-            <LinkListLink href="#">
-              <UtrechtIconWhatsapp /> WhatsApp
-            </LinkListLink>
-            <LinkListLink href="#">
-              <UtrechtIconFacebook /> Facebook
-            </LinkListLink>
-            <LinkListLink href="#">
-              <UtrechtIconLinkedin /> LinkedIn
-            </LinkListLink>
-            <LinkListLink href="#">
-              <UtrechtIconNieuwsbrief /> Nieuwsbrief
-            </LinkListLink>
-          </React.Fragment>
-        </LinkList>
-      </PageFooter>
+      <FooterKlachten />
     </Page>
   ),
 };

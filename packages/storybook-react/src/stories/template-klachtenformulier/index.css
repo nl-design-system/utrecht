@@ -1,16 +1,25 @@
 .utrecht-theme {
-  .utrecht-breadcrumb-nav__separator--html-li {
-    padding-inline-end: 4px;
+  .utrecht-breadcrumb-nav__link {
+    padding-inline-start: 0; /* Gelijke uitlijning met linker kantlijn */
+  }
+  .utrecht-breadcrumb-nav__separator {
+    margin-inline-end: 4px; /* Voeg ruimte toe tussen het icoon en de tekst, gap werkte niet :( */
+    transform: translateY(2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
+  }
+  .utrecht-document {
+    background-color: var(--utrecht-color-grey-90);
+  }
+  .utrecht-page {
+    background-color: var(--utrecht-document-background-color, inherit);
+    padding-inline-end: 0; /* lijkt zonder padding beter op de echte (live) situatie */
+    padding-inline-start: 0;
+  }
+  .utrecht-form-field__status {
+    color: var(--utrecht-color-grey-20);
   }
   /* stylelint-disable selector-class-pattern, property-disallowed-list */
   .sb-show-main {
     padding: 0;
   }
   /* stylelint-enable selector-class-pattern, property-disallowed-list */
-  .utrecht-document {
-    background-color: var(--utrecht-document-background-color, inherit);
-  }
-  .utrecht-page {
-    background-color: var(--utrecht-document-background-color);
-  }
 }
