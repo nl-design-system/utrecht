@@ -1,0 +1,19 @@
+@import "~@utrecht/textbox-css/src/mixin";
+
+@mixin open-forms-utrecht-input-names {
+  .utrecht-textbox[name="data[voorletterSPZD]"],
+  .utrecht-textbox[name="data[voorletterSPMD]"],
+  .utrecht-textbox[name="data[voorletterSMEH]"],
+  .utrecht-textbox[name="data[voorletterSZEH]"] {
+    @include utrecht-textbox--voorletters-size;
+  }
+
+  .utrecht-textbox[name="data[voornamenPMD]"],
+  .utrecht-textbox[name="data[voornamenPZD]"] {
+    @include utrecht-textbox--voornamen-size;
+  }
+}
+
+.utrecht-open-forms-container {
+  @include open-forms-utrecht-input-names;
+}
