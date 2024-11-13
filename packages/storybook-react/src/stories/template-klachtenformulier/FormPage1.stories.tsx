@@ -61,22 +61,21 @@ export const One: Story = {
   render: (args) => (
     <Page {...args}>
       <PageHeader>
-        <Link href="/">
+        <nav>
           <Logo>
             <LogoImage />
           </Logo>
-        </Link>
+        </nav>
       </PageHeader>
-      <BreadcrumbNav>
-        <BreadcrumbNavLink href="#">
-          <BreadcrumbNavSeparator>
-            <UtrechtIconChevronLeft />
-          </BreadcrumbNavSeparator>
-          Terug
-        </BreadcrumbNavLink>
-      </BreadcrumbNav>
-
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="#">
+            <BreadcrumbNavSeparator>
+              <UtrechtIconChevronLeft />
+            </BreadcrumbNavSeparator>
+            Terug
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
         <Heading1>Klacht</Heading1>
         <section>
           <Paragraph appearance="lead">
