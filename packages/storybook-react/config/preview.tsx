@@ -14,7 +14,7 @@ import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 
 const preview: Preview = {
   decorators: [
-    (Story: any) => <div className="utrecht-document">{Story()}</div>,
+    (Story: any) => <div className="utrecht-document utrecht-theme">{Story()}</div>,
     ///
     withTests({ results }),
   ],
