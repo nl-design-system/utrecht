@@ -90,11 +90,19 @@ export const One: Story = {
             <Heading2>Uw Klacht</Heading2>
             <Paragraph>Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.</Paragraph>
             <Paragraph>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</Paragraph>
+            {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
             <FormFieldTextarea
               label="Wat is uw klacht?"
               name="klacht"
-              description="Beschrijf bijvoorbeeld; locatie, datum en tijd. Misschien ook afdeling of medewerker, als dit van toepassing is."
-              required
+              rows={5}
+              onChange={handleInputChange}
+              status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
+            />
+            <br />
+            <FormFieldTextbox
+              label="Datum (niet verplicht)"
+              name="datum"
+              description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
             />
             <br />
             <FormLabel>Bestand toevoegen (niet verplicht)</FormLabel>
