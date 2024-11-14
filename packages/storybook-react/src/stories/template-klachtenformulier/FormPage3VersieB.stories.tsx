@@ -113,7 +113,9 @@ export const One: Story = {
               status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
             />
             <br />
-            <FormLabel>Bestand toevoegen (niet verplicht)</FormLabel>
+            <Heading2>
+              Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
+            </Heading2>
             <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
             <UnorderedList>
               <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
