@@ -36,7 +36,7 @@ import {
   UtrechtIconWhatsapp,
   UtrechtLogo,
 } from '@utrecht/web-component-library-react';
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import './index.css';
 import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
@@ -55,9 +55,20 @@ export const One: Story = {
     const MAX_CHARACTERS = 1000;
     const [characterCount, setCharacterCount] = useState(0);
     const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+    // Maak een ref voor de div om de textarea heen
+    const complaintFieldContainerRef = useRef<HTMLDivElement>(null);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
-      setCharacterCount(event.target.value.length);
+      const value = event.target.value;
+      setCharacterCount(value.length);
+
+      if (value.trim() === '') {
+        setErrorMessage('Uw klacht mag niet leeg zijn. Vul een klacht in.');
+      } else {
+        setErrorMessage(null); // Verwijder foutmelding als invoer geldig is
+      }
     };
 
     const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -78,6 +89,20 @@ export const One: Story = {
         );
       }
       return `U heeft nog ${MAX_CHARACTERS - characterCount} tekens over.`;
+    };
+
+    const handleSubmit = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+      if (characterCount === 0 || characterCount > MAX_CHARACTERS) {
+        event.preventDefault(); // Navigatie voorkomen als er een fout is
+        if (characterCount === 0) {
+          setErrorMessage('Uw klacht mag niet leeg zijn. Vul een klacht in.');
+        } else if (characterCount > MAX_CHARACTERS) {
+          setErrorMessage(`Uw klacht is te lang. U heeft ${characterCount - MAX_CHARACTERS} tekens te veel.`);
+        }
+
+        // Scroll naar de div met de foutmelding
+        complaintFieldContainerRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
     };
 
     return (
@@ -104,14 +129,18 @@ export const One: Story = {
             <Paragraph>Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.</Paragraph>
             <Paragraph>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</Paragraph>
             {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
-            <FormFieldTextarea
-              label="Wat is uw klacht?"
-              name="klacht"
-              description="Beschrijf bijvoorbeeld; locatie, datum en tijd. Misschien ook afdeling of medewerker, als dit van toepassing is."
-              rows={5}
-              onChange={handleInputChange}
-              status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
-            />
+            {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
+            <div ref={complaintFieldContainerRef}>
+              <FormFieldTextarea
+                label="Wat is uw klacht?"
+                name="klacht"
+                rows={5}
+                onChange={handleInputChange}
+                status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
+                errorMessage={errorMessage}
+                invalid={Boolean(errorMessage)}
+              />
+            </div>
             <br />
             <Heading2>
               Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
@@ -141,10 +170,15 @@ export const One: Story = {
             )}
             <br />
             <br />
+            <ButtonLink
+              appearance="primary-action-button"
+              href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-4--one&viewMode=story"
+              onClick={handleSubmit}
+            >
+              Volgende stap
+            </ButtonLink>
             <ButtonGroup direction="column">
-              <Button appearance="primary-action-button">
-                Volgende stap <UtrechtIconArrow />
-              </Button>
+              {' '}
               <Button appearance="subtle-button">
                 <UtrechtIconArrow /> Opslaan en later verder
               </Button>
