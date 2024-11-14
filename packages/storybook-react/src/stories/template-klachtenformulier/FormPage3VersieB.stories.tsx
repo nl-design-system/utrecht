@@ -175,12 +175,22 @@ export const One: Story = {
               >
                 Volgende stap
               </ButtonLink>
-              <Button appearance="subtle-button">
-                <UtrechtIconArrow /> Opslaan en later verder
-              </Button>
-              <Button appearance="subtle-button">
-                <UtrechtIconCross /> Stoppen met formulier
-              </Button>
+              <a
+                href="#"
+                className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                rel="external noopener noreferrer"
+              >
+                <UtrechtIconArrow />
+                Opslaan en later verder gaan
+              </a>
+              <a
+                href="#"
+                className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                rel="external noopener noreferrer"
+              >
+                <UtrechtIconCross />
+                Stoppen met formulier
+              </a>
             </ButtonGroup>
           </section>
         </PageContent>
