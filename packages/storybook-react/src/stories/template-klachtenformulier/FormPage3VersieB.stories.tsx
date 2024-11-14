@@ -99,12 +99,6 @@ export const One: Story = {
               status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
             />
             <br />
-            <FormFieldTextbox
-              label="Datum (niet verplicht)"
-              name="datum"
-              description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
-            />
-            <br />
             <FormLabel>Bestand toevoegen (niet verplicht)</FormLabel>
             <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
             <UnorderedList>
