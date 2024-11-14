@@ -124,7 +124,6 @@ export const One: Story = {
                 Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
               </UnorderedListItem>
             </UnorderedList>
-            <br />
             <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} multiple />
             <Button appearance="secondary-action-button" type="button" onClick={triggerFileUpload}>
               Bestand toevoegen
