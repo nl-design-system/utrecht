@@ -107,6 +107,7 @@ export const One: Story = {
             <FormFieldTextarea
               label="Wat is uw klacht?"
               name="klacht"
+              description="Beschrijf bijvoorbeeld; locatie, datum en tijd. Misschien ook afdeling of medewerker, als dit van toepassing is."
               rows={5}
               onChange={handleInputChange}
               status={getStatusMessage()} // Gebruik de aangepaste statusfunctie

@@ -14,11 +14,21 @@
     padding-inline-end: 0; /* lijkt zonder padding beter op de echte (live) situatie */
     padding-inline-start: 0;
   }
-  .utrecht-form-field-description {
-    color: var(--utrecht-color-grey-30);
+  .utrecht-paragraph,
+  .utrecht-form-field__description {
+    display: flex;
+    flex-basis: 52ch;
+    flex-shrink: 1; /* Zorgt ervoor dat het element kan krimpen indien nodig */
   }
+  .utrecht-form-field__label {
+    margin-block-start: var(--utrecht-space-row-xl);
+  }
+  .utrecht-button-link--primary-action {
+    margin-block-start: var(--utrecht-space-row-xl);
+  }
+  .utrecht-form-field-description,
   .utrecht-form-field__status {
-    color: var(--utrecht-color-grey-30);
+    color: var(--utrecht-color-grey-40);
   }
   .utrecht-klachten-error-message {
     color: var(--utrecht-color-red-30);
