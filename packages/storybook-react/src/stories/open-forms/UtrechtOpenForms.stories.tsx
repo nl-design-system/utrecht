@@ -41,6 +41,30 @@ export const Voorletters: Story = {
   },
 };
 
+// Aantal markten //
+export const AantalMarkten: Story = {
+  args: {
+    key: 'textfield',
+    label: 'Aantalmarkten',
+    extraComponentProperties: {
+      defaultValue: '99',
+      key: 'aantalMarkten',
+    },
+  },
+};
+
+// Bedrag verlening //
+export const BedragVerlenging: Story = {
+  args: {
+    key: 'textfield',
+    label: 'BedragVerlenging',
+    extraComponentProperties: {
+      defaultValue: '99',
+      key: 'bedragVerlenging',
+    },
+  },
+};
+
 // Voorletters //
 export const VoorlettersSPZD: Story = {
   args: {
