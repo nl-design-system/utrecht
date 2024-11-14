@@ -24,10 +24,15 @@
     margin-block-end: var(--utrecht-space-row-xs);
   }
   .utrecht-form-field__label,
-  .utrecht-button-link--primary-action,
   .utrecht-form-label {
     margin-block-start: var(--utrecht-space-row-xl);
   }
+
+  .utrecht-button--secondary-action,
+  .utrecht-button-link--primary-action {
+    margin-block-start: var(--utrecht-space-row-md);
+  }
+
   .utrecht-form-field-description {
     margin-block-end: var(--utrecht-space-row-xs);
     margin-block-start: 0;

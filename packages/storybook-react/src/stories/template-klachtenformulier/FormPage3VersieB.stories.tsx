@@ -153,32 +153,28 @@ export const One: Story = {
                 Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
               </UnorderedListItem>
             </UnorderedList>
-            <br />
-            <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} multiple />
-            <Button appearance="secondary-action-button" type="button" onClick={triggerFileUpload}>
-              Bestand toevoegen
-            </Button>
-            {selectedFiles && (
-              <div>
-                <p>Geselecteerde bestanden:</p>
-                <ul>
-                  {Array.from(selectedFiles).map((file, index) => (
-                    <li key={index}>{file.name}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-            <br />
-            <br />
-            <ButtonLink
-              appearance="primary-action-button"
-              href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-4--one&viewMode=story"
-              onClick={handleSubmit}
-            >
-              Volgende stap
-            </ButtonLink>
             <ButtonGroup direction="column">
-              {' '}
+              <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} multiple />
+              <Button appearance="secondary-action-button" type="button" onClick={triggerFileUpload}>
+                Bestand toevoegen
+              </Button>
+              {selectedFiles && (
+                <div>
+                  <p>Geselecteerde bestanden:</p>
+                  <ul>
+                    {Array.from(selectedFiles).map((file, index) => (
+                      <li key={index}>{file.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+              <ButtonLink
+                appearance="primary-action-button"
+                href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-4--one&viewMode=story"
+                onClick={handleSubmit}
+              >
+                Volgende stap
+              </ButtonLink>
               <Button appearance="subtle-button">
                 <UtrechtIconArrow /> Opslaan en later verder
               </Button>
