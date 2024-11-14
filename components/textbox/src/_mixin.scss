@@ -296,6 +296,13 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 5;
 }
 
+@mixin utrecht-textbox--voorvoegsel-size {
+  /* "Tabel 36 Voorvoegselstabel" by "Rijksdienst voor Identiteitsgegevens" has a list
+   * of all allowed values. The longest value is 10 characters.
+   * The class name is in Dutch because it is a Dutch concept. */
+  --utrecht-textbox-value-max-length: 10;
+}
+
 @mixin utrecht-textbox--voornamen-size {
   /* We have not found a good source for the size of "Voornamen" yet.
    * For now im testing: 22
@@ -303,11 +310,29 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 22;
 }
 
-@mixin utrecht-textbox--voorvoegsel-size {
-  /* "Tabel 36 Voorvoegselstabel" by "Rijksdienst voor Identiteitsgegevens" has a list
-   * of all allowed values. The longest value is 10 characters.
-   * The class name is in Dutch because it is a Dutch concept. */
-  --utrecht-textbox-value-max-length: 10;
+@mixin utrecht-textbox--bsn-size {
+  /* BSN is 8 or 9 characters */
+  --utrecht-textbox-value-max-length: 9;
+}
+
+@mixin utrecht-textbox--email-size {
+  /* We have not found a good source for the size of "Voornamen" yet.
+   * For now im testing: 20
+   */
+  --utrecht-textbox-value-max-length: 20;
+}
+
+@mixin utrecht-textbox--geboortedatum-size {
+  /* 2 (for the day) + 1 (for the separator, usually a dash or slash) + 2 (for the month) + 1 (for the separator)
+   + 4 (for the year) = 9 characters (if you include separators). Or "DDMMYY" For now im testing: 9 */
+  --utrecht-textbox-value-max-length: 9;
+}
+
+@mixin utrecht-textbox--achternaam-size {
+  /* We have not found a good source for the size of "Voornamen" yet.
+   * For now im testing: 25
+   */
+  --utrecht-textbox-value-max-length: 25;
 }
 
 @mixin utrecht-textbox--tel-size {
