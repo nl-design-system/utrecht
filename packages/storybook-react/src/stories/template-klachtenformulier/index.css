@@ -14,17 +14,20 @@
     padding-inline-end: 0; /* lijkt zonder padding beter op de echte (live) situatie */
     padding-inline-start: 0;
   }
-  .utrecht-paragraph,
-  .utrecht-form-field__description {
-    display: flex;
-    flex-basis: 52ch;
-    flex-shrink: 1; /* Zorgt ervoor dat het element kan krimpen indien nodig */
+  .utrecht-spotlight-section h2 {
+    margin-block-start: 0;
   }
   .utrecht-form-field__label {
+    margin-block-end: var(--utrecht-space-row-xs);
+  }
+  .utrecht-form-field__label,
+  .utrecht-button-link--primary-action,
+  .utrecht-form-label {
     margin-block-start: var(--utrecht-space-row-xl);
   }
-  .utrecht-button-link--primary-action {
-    margin-block-start: var(--utrecht-space-row-xl);
+  .utrecht-form-field-description {
+    margin-block-end: var(--utrecht-space-row-xs);
+    margin-block-start: 0;
   }
   .utrecht-form-field-description,
   .utrecht-form-field__status {
@@ -72,6 +75,9 @@
   }
 
   /* stylelint-disable selector-class-pattern, property-disallowed-list */
+  section {
+    max-width: 74ch;
+  }
   .sb-show-main {
     padding: 0;
   }
