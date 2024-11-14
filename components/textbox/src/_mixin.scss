@@ -328,6 +328,11 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 9;
 }
 
+@mixin utrecht-textbox--geboorteplaats-size {
+  /* testing 23 */
+  --utrecht-textbox-value-max-length: 22;
+}
+
 @mixin utrecht-textbox--achternaam-size {
   /* We have not found a good source for the size of "Voornamen" yet.
    * For now im testing: 25
