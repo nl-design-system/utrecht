@@ -82,8 +82,23 @@
       margin-inline-start: auto; /* Uitgelijnd naar rechts */
     }
   }
-
   /* stylelint-disable selector-class-pattern, property-disallowed-list */
+  .utrecht-advanced-link--with-icon {
+    align-items: center;
+    display: flex;
+    gap: 8px;
+    text-decoration: none;
+    width: fit-content;
+  }
+  .utrecht-advanced-link {
+    --utrecht-link-icon-size: var(--utrecht-advanced-link-icon-size, var(--utrecht-document-font-size));
+  }
+  utrecht-icon-cross,
+  utrecht-icon-arrow {
+    height: 14px;
+    transform: translateY(-2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
+    width: 14px;
+  }
   input[name="tijdstip"] {
     max-width: 100px;
   }
