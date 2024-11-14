@@ -17,6 +17,9 @@
   .utrecht-form-field__status {
     color: var(--utrecht-color-grey-30);
   }
+  .utrecht-klachten-error-message {
+    color: var(--utrecht-color-red-30);
+  }
   .utrecht-footer-grid {
     display: grid;
     gap: 16px;

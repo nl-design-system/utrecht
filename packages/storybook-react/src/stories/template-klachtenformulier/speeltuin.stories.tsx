@@ -3,6 +3,8 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
+  Button,
+  ButtonGroup,
   ButtonLink,
   FormField,
   FormFieldTextarea,
@@ -18,7 +20,12 @@ import {
   Paragraph,
   Textbox,
 } from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtFormFieldDescription, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
+import {
+  UtrechtFormFieldDescription,
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconCross,
+} from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
 import FooterKlachten from './FooterKlachtenFormulier';
 
@@ -34,7 +41,7 @@ type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
   render: (args) => {
-    const MAX_CHARACTERS = 1000;
+    const MAX_CHARACTERS = 10;
     const [characterCount, setCharacterCount] = useState(0);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -44,7 +51,11 @@ export const One: Story = {
     // Statusbericht genereren op basis van karakteraantal
     const getStatusMessage = () => {
       if (characterCount > MAX_CHARACTERS) {
-        return `Let op, u heeft ${characterCount - MAX_CHARACTERS} tekens te veel ingevoerd.`;
+        return (
+          <span className="utrecht-klachten-error-message">
+            Let op, u heeft {characterCount - MAX_CHARACTERS} tekens te veel ingevoerd.
+          </span>
+        );
       }
       return `U heeft nog ${MAX_CHARACTERS - characterCount} tekens over.`;
     };
@@ -106,6 +117,17 @@ export const One: Story = {
               </ButtonLink>
             </form>
           </section>
+          <ButtonGroup direction="column">
+            <Button appearance="primary-action-button">
+              Volgende stap <UtrechtIconArrow />
+            </Button>
+            <Button appearance="subtle-button">
+              <UtrechtIconArrow /> Opslaan en later verder
+            </Button>
+            <Button appearance="subtle-button">
+              <UtrechtIconCross /> Stoppen met formulier
+            </Button>
+          </ButtonGroup>
         </PageContent>
         <FooterKlachten />
       </Page>
