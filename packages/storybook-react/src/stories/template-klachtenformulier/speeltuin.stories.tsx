@@ -106,6 +106,15 @@ export const One: Story = {
               <br />
               <FormFieldTextarea label="Wat was de locatie?" name="locatie" rows={4} />
               <br />
+              <FormFieldTextbox
+                label={
+                  <>
+                    Datum <span className="utrecht-notbold">(niet verplicht)</span>
+                  </>
+                }
+                name="datum"
+                description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
+              />
               <FormField>
                 <Textbox required id="email" aria-labelledby="email-label" aria-describedby="email-desc" />
                 <UtrechtFormFieldDescription id="email-desc">

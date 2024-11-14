@@ -39,6 +39,11 @@
   .utrecht-klachten-error-message {
     color: var(--utrecht-color-red-30);
   }
+
+  .utrecht-form-field-error-message {
+    margin-block-end: var(--utrecht-space-row-xs);
+  }
+
   .utrecht-footer-grid {
     display: grid;
     gap: 16px;
@@ -79,7 +84,7 @@
 
   /* stylelint-disable selector-class-pattern, property-disallowed-list */
   section {
-    max-width: 74ch;
+    max-width: 70ch;
   }
   .sb-show-main {
     padding: 0;
