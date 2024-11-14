@@ -94,8 +94,11 @@ export const One: Story = {
         </section>
         <section>
           <br />
-          <ButtonLink appearance="primary-action-button" href="#">
-            Ga naar klachtenformulier&nbsp;
+          <ButtonLink
+            appearance="primary-action-button"
+            href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-3a--one&viewMode=story"
+          >
+            Doorgaan&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>
         </section>
