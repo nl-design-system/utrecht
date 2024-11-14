@@ -12,6 +12,38 @@
   .utrecht-textbox[name="data[voornamenPZD]"] {
     @include utrecht-textbox--voornamen-size;
   }
+
+  .utrecht-textbox[name="data[achternaamPMD]"],
+  .utrecht-textbox[name="data[achternaamPZD]"],
+  .utrecht-textbox[name="data[achternaamZEH]"],
+  .utrecht-textbox[name="data[achternaamMEH]"] {
+    @include utrecht-textbox--achternaam-size;
+  }
+
+  .utrecht-textbox[name="data[BurgerservicenummerPZD]"],
+  .utrecht-textbox[name="data[BurgerservicenummerPMD]"] {
+    @include utrecht-textbox--bsn-size;
+  }
+
+  .utrecht-textbox[name="data[EmailadresPZD]"],
+  .utrecht-textbox[name="data[EmailadresPMD]"],
+  .utrecht-textbox[name="data[EmailadresZEH]"],
+  .utrecht-textbox[name="data[EmailadresMEH]"] {
+    @include utrecht-textbox--email-size;
+  }
+
+  .utrecht-textbox[name="data[GeboortedatumPZD]"],
+  .utrecht-textbox[name="data[GeboortedatumPMD]"] {
+    @include utrecht-textbox--geboortedatum-size;
+  }
+
+  .utrecht-textbox[name="data[HuisletterPZD]"],
+  .utrecht-textbox[name="data[HuisletterPMD]"],
+  .utrecht-textbox[name="data[HuisletterZEH]"],
+  .utrecht-textbox[name="data[HuisletterMEH]"],
+  .utrecht-textbox[name="data[HuisletterPA]"] {
+    @include utrecht-textbox--house-letter-size;
+  }
 }
 
 .utrecht-open-forms-container {
