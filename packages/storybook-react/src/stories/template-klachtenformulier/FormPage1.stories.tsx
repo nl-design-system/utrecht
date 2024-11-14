@@ -82,11 +82,12 @@ export const One: Story = {
           <Paragraph appearance="lead">
             Bent u ontevreden over hoe de gemeente haar taken uitvoert? Bent u bijvoorbeeld niet goed geholpen? Of bent
             u niet netjes behandeld? De gemeente vindt dat vervelend en zoekt graag samen naar een oplossing.
-            <br />U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
+          </Paragraph>
+          <Paragraph>
+            U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
           </Paragraph>
         </section>
         <section>
-          <br />
           <ButtonLink
             appearance="primary-action-button"
             href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-2--one&viewMode=story"
