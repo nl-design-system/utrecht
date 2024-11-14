@@ -108,15 +108,12 @@ export const One: Story = {
               onChange={handleInputChange}
               status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
             />
-            <br />
             <FormFieldTextbox
               label="Datum (niet verplicht)"
               name="datum"
               description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
             />
-            <br />
             <FormFieldTextbox label="Tijdstip (niet verplicht)" name="tijdstip" description="Bijvoorbeeld: 13:15" />
-            <br />
             <FormFieldTextarea label="Locatie (niet verplicht)" name="locatie" rows={3} />
             <FormLabel>Bestand toevoegen (niet verplicht)</FormLabel>
             <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
