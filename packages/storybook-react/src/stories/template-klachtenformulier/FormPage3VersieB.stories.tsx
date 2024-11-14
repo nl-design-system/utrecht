@@ -62,7 +62,11 @@ export const One: Story = {
     // Statusbericht genereren op basis van karakteraantal
     const getStatusMessage = () => {
       if (characterCount > MAX_CHARACTERS) {
-        return `Let op, u heeft ${characterCount - MAX_CHARACTERS} tekens te veel ingevoerd.`;
+        return (
+          <span className="utrecht-klachten-error-message">
+            Let op, u heeft {characterCount - MAX_CHARACTERS} tekens te veel ingevoerd.
+          </span>
+        );
       }
       return `U heeft nog ${MAX_CHARACTERS - characterCount} tekens over.`;
     };
