@@ -86,8 +86,7 @@ export const One: Story = {
           <Paragraph>
             U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
           </Paragraph>
-        </section>
-        <section>
+
           <ButtonLink
             appearance="primary-action-button"
             href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-2--one&viewMode=story"
