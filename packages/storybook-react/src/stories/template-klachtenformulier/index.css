@@ -27,12 +27,10 @@
   .utrecht-form-label {
     margin-block-start: var(--utrecht-space-row-xl);
   }
-
   .utrecht-button--secondary-action,
   .utrecht-button-link--primary-action {
     margin-block-start: var(--utrecht-space-row-md);
   }
-
   .utrecht-form-field-description {
     margin-block-end: var(--utrecht-space-row-xs);
     margin-block-start: 0;
@@ -44,11 +42,9 @@
   .utrecht-klachten-error-message {
     color: var(--utrecht-color-red-30);
   }
-
   .utrecht-form-field-error-message {
     margin-block-end: var(--utrecht-space-row-xs);
   }
-
   .utrecht-footer-grid {
     display: grid;
     gap: 16px;
@@ -88,6 +84,9 @@
   }
 
   /* stylelint-disable selector-class-pattern, property-disallowed-list */
+  input[name="tijdstip"] {
+    max-width: 100px;
+  }
   section {
     max-width: 70ch;
   }
