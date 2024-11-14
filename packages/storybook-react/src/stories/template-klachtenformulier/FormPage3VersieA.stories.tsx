@@ -138,12 +138,32 @@ export const One: Story = {
               />
             </div>
             <FormFieldTextbox
-              label="Datum (niet verplicht)"
+              label={
+                <>
+                  Datum <span className="utrecht-notbold">(niet verplicht)</span>
+                </>
+              }
               name="datum"
               description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
             />
-            <FormFieldTextbox label="Tijdstip (niet verplicht)" name="tijdstip" description="Bijvoorbeeld: 13:15" />
-            <FormFieldTextarea label="Locatie (niet verplicht)" name="locatie" rows={3} />
+            <FormFieldTextbox
+              label={
+                <>
+                  Tijdstip <span className="utrecht-notbold">(niet verplicht)</span>
+                </>
+              }
+              name="tijdstip"
+              description="Bijvoorbeeld: 13:15"
+            />
+            <FormFieldTextarea
+              label={
+                <>
+                  Locatie <span className="utrecht-notbold">(niet verplicht)</span>
+                </>
+              }
+              name="locatie"
+              rows={3}
+            />
             <Heading2>
               Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
             </Heading2>
