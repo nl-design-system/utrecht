@@ -37,12 +37,32 @@
     @include utrecht-textbox--geboortedatum-size;
   }
 
+  .utrecht-textbox[name="data[GeboorteplaatsPMD]"] {
+    @include utrecht-textbox--geboortedatum-size;
+  }
+
   .utrecht-textbox[name="data[HuisletterPZD]"],
   .utrecht-textbox[name="data[HuisletterPMD]"],
   .utrecht-textbox[name="data[HuisletterZEH]"],
   .utrecht-textbox[name="data[HuisletterMEH]"],
   .utrecht-textbox[name="data[HuisletterPA]"] {
     @include utrecht-textbox--house-letter-size;
+  }
+
+  .utrecht-textbox[name="data[HuisnummerPZD]"],
+  .utrecht-textbox[name="data[HuisnummerPMD]"],
+  .utrecht-textbox[name="data[HuisnummerZEH]"],
+  .utrecht-textbox[name="data[HuisnummerMEH]"],
+  .utrecht-textbox[name="data[HuisnummerPA]"] {
+    @include utrecht-textbox--house-number-size;
+  }
+
+  .utrecht-textbox[name="data[HuisnummertoevoegingPZD]"],
+  .utrecht-textbox[name="data[HuisnummertoevoegingPMD]"],
+  .utrecht-textbox[name="data[HuisnummertoevoegingZEH]"],
+  .utrecht-textbox[name="data[HuisnummertoevoegingMEH]"],
+  .utrecht-textbox[name="data[HuisnummertoevoegingPA]"] {
+    @include utrecht-textbox--house-addition-size;
   }
 }
 
