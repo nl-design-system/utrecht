@@ -48,9 +48,18 @@ export const One: Story = {
   render: (args) => {
     const MAX_CHARACTERS = 1000;
     const [characterCount, setCharacterCount] = useState(0);
+    const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
 
     const handleInputChange = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
       setCharacterCount(event.target.value.length);
+    };
+
+    const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+      setSelectedFiles(event.target.files);
+    };
+
+    const triggerFileUpload = () => {
+      document.getElementById('fileInput')?.click();
     };
 
     // Statusbericht genereren op basis van karakteraantal
@@ -119,9 +128,20 @@ export const One: Story = {
               </UnorderedListItem>
             </UnorderedList>
             <br />
-            <Button appearance="secondary-action-button" type="submit">
+            <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} multiple />
+            <Button appearance="secondary-action-button" type="button" onClick={triggerFileUpload}>
               Bestand toevoegen
             </Button>
+            {selectedFiles && (
+              <div>
+                <p>Geselecteerde bestanden:</p>
+                <ul>
+                  {Array.from(selectedFiles).map((file, index) => (
+                    <li key={index}>{file.name}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             <br />
             <br />
             <ButtonGroup direction="column">
