@@ -141,7 +141,6 @@ export const One: Story = {
                 invalid={Boolean(errorMessage)}
               />
             </div>
-            <br />
             <Heading2>
               Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
             </Heading2>
