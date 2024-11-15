@@ -27,7 +27,8 @@ import {
   UtrechtIconCross,
 } from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
-import FooterKlachten from './FooterKlachtenFormulier';
+import '../prototype-src/index.css'; // Importeer stylesheet
+import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Speeltuin',
