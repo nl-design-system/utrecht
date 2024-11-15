@@ -5,12 +5,6 @@ import {
   BreadcrumbNavSeparator,
   Button,
   ButtonLink,
-  DataList,
-  DataListItem,
-  DataListKey,
-  DataListValue,
-  FormField,
-  FormLabel,
   Heading1,
   Heading2,
   Heading3,
@@ -21,7 +15,6 @@ import {
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
   Paragraph,
   Separator,
@@ -31,20 +24,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtBreadcrumbNav,
-  UtrechtDigidButton,
-  UtrechtFormFieldDescription,
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwHuis,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtLogo,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
 import React from 'react';
 import './index.css';
 import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component

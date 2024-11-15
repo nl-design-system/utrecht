@@ -16,7 +16,6 @@ import {
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
   Paragraph,
   Separator,

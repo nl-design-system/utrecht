@@ -28,13 +28,6 @@ import {
   UtrechtIconArrow,
   UtrechtIconChevronLeft,
   UtrechtIconCross,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwHuis,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtLogo,
 } from '@utrecht/web-component-library-react';
 import React, { useRef, useState } from 'react';
 import './index.css';
