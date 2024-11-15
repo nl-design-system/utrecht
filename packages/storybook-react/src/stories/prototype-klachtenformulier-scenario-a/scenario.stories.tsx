@@ -65,20 +65,20 @@ export const One: Story = {
   render: (args) => (
     <Page {...args}>
       <PageHeader>
-        <nav>
-          <Logo>
-            <LogoImage />
-          </Logo>
-        </nav>
+        <Logo>
+          <LogoImage />
+        </Logo>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <ScenarioKlachten />
-        <section>
-          <ButtonLink appearance="primary-action-button" href={urls.scenarioAPage1}>
-            Naar de klachtenpagina&nbsp;
-            <UtrechtIconArrow />
-          </ButtonLink>
-        </section>
+        <main>
+          <ScenarioKlachten />
+          <section>
+            <ButtonLink appearance="primary-action-button" href={urls.scenarioAPage1}>
+              Naar de klachtenpagina&nbsp;
+              <UtrechtIconArrow />
+            </ButtonLink>
+          </section>
+        </main>
       </PageContent>
       <FooterKlachten />
     </Page>

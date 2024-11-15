@@ -64,11 +64,9 @@ export const One: Story = {
     return (
       <Page {...args}>
         <PageHeader>
-          <nav>
-            <Logo>
-              <LogoImage />
-            </Logo>
-          </nav>
+          <Logo>
+            <LogoImage />
+          </Logo>
         </PageHeader>
         <PageContent style={{ '--utrecht-space-around': 1 } as any}>
           <BreadcrumbNav>
@@ -90,9 +88,8 @@ export const One: Story = {
               <br />
               Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
             </Paragraph>
-          </section>
-          <Heading2>Klachten formulier</Heading2>
-          <section>
+
+            <Heading2>Klachten formulier</Heading2>
             <Heading2>Contact gegevens</Heading2>
 
             <form>
