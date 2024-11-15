@@ -34,8 +34,8 @@ import './index.css';
 import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
-  title: 'Template/Klachtenformulier/Stap 3B',
-  id: 'klachtenformulier-form-pages-stap-3b',
+  title: 'Prototypes/Klachtenformulier Scenario B/Stap 3',
+  id: 'klachtenformulier-form-pages-stap-3B',
   component: Page,
 } satisfies Meta<typeof Page>;
 

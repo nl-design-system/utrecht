@@ -50,8 +50,8 @@ import './index.css';
 import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
-  title: 'Template/Klachtenformulier/Scenario',
-  id: 'klachtenformulier-scenario',
+  title: 'Prototypes/Klachtenformulier Scenario A/Introductie ',
+  id: 'klachtenformulier-introductie-A',
   component: Page,
 } satisfies Meta<typeof Page>;
 
@@ -71,25 +71,27 @@ export const One: Story = {
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <section>
-          <Heading1>Het verhaal</Heading1>
+          <Heading1>Test invullen klacht</Heading1>
           <Paragraph>
-            Vorige week woensdag ging je naar het stadskantoor. Je had om 10:15 een afspraak om je paspoort op te halen.
-            Bij de balie ging er iets mis. De medewerker wist niet precies wat hij moest doen. Je vond dat lastig, want
-            je had nog een andere afspraak na deze. Je moest op tijd weg.
+            Dank je wel dat je ons wilt helpen met het testen van het klachtenformulier! In deze test vragen we je een
+            klacht in te voeren. Een paar belangrijke dingen voordat je begint:
           </Paragraph>
-          <Paragraph>
-            Je vertelde dat je haast had. Toen werd de man achter de balie ineens erg boos! Het leek zelfs of hij expres
-            heel traag ging werken. Dat was niet fijn. Je kwam te laat bij je volgende afspraak. Ook was de boze reactie
-            van de man veel te hevig.
-          </Paragraph>
-          <Paragraph>Je besluit een klacht in te dienen bij de gemeente.</Paragraph>
+          <UnorderedList>
+            <UnorderedListItem>Je kunt geen fouten maken. Wij testen het product werkt, niet jou.</UnorderedListItem>
+            <UnorderedListItem>
+              Vertel hardop wat je doet. Zeg wat je ziet, wat je denkt en wat je wilt doen.
+            </UnorderedListItem>
+            <UnorderedListItem>
+              Ik mag je niet helpen tijdens de test. We willen zien hoe jij het zelf doet.
+            </UnorderedListItem>
+          </UnorderedList>
         </section>
         <section>
           <ButtonLink
             appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-1--one&viewMode=story"
+            href="./iframe.html?args=&id=klachtenformulier-scenario--one&viewMode=story"
           >
-            Naar de klachtenpagina&nbsp;
+            Starten&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>
         </section>

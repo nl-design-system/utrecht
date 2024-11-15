@@ -3,20 +3,9 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
-  Button,
   ButtonLink,
-  DataList,
-  DataListItem,
-  DataListKey,
-  DataListValue,
-  FormField,
-  FormLabel,
   Heading1,
   Heading2,
-  Heading3,
-  Link,
-  LinkList,
-  LinkListLink,
   Logo,
   LogoImage,
   Page,
@@ -25,33 +14,19 @@ import {
   PageHeader,
   Paragraph,
   Separator,
-  SpotlightSection,
   Strong,
   Textbox,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtBreadcrumbNav,
-  UtrechtDigidButton,
-  UtrechtFormFieldDescription,
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwHuis,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtLogo,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
 import React from 'react';
 import './index.css';
 import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
-  title: 'Template/Klachtenformulier/Introductie ',
-  id: 'klachtenformulier-introductie',
+  title: 'Prototypes/Klachtenformulier Scenario A/Stap 2',
+  id: 'klachtenformulier-form-pages-stap-2A',
   component: Page,
 } satisfies Meta<typeof Page>;
 
@@ -70,28 +45,35 @@ export const One: Story = {
         </nav>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="#">
+            <BreadcrumbNavSeparator>
+              <UtrechtIconChevronLeft />
+            </BreadcrumbNavSeparator>
+            Terug
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>
+        <Heading1>Klacht over de gemeente</Heading1>
         <section>
-          <Heading1>Test invullen klacht</Heading1>
-          <Paragraph>
-            Dank je wel dat je ons wilt helpen met het testen van het klachtenformulier! In deze test vragen we je een
-            klacht in te voeren. Een paar belangrijke dingen voordat je begint:
-          </Paragraph>
           <UnorderedList>
-            <UnorderedListItem>Je kunt geen fouten maken. Wij testen het product werkt, niet jou.</UnorderedListItem>
             <UnorderedListItem>
-              Vertel hardop wat je doet. Zeg wat je ziet, wat je denkt en wat je wilt doen.
+              In dit formulier doorloopt u de volgende stappen: uw klacht, voorstel oplossing, uw gegevens en het
+              controleren van de ingevulde informatie.
             </UnorderedListItem>
+            <UnorderedListItem>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</UnorderedListItem>
+            <UnorderedListItem>U kunt het formulier tussentijds opslaan en later verder gaan.</UnorderedListItem>
             <UnorderedListItem>
-              Ik mag je niet helpen tijdens de test. We willen zien hoe jij het zelf doet.
+              Na het versturen ontvangt u een bevestigingsmail. Ook heeft u de mogelijkheid uw klacht te downloaden of
+              printen.
             </UnorderedListItem>
           </UnorderedList>
         </section>
         <section>
           <ButtonLink
             appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-scenario--one&viewMode=story"
+            href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-3a--one&viewMode=story"
           >
-            Starten&nbsp;
+            Doorgaan&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>
         </section>

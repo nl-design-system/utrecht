@@ -30,8 +30,8 @@ import React, { useState } from 'react';
 import FooterKlachten from './FooterKlachtenFormulier';
 
 const meta = {
-  title: 'Template/Klachtenformulier/Speeltuin',
-  id: 'template-klachten-speeltuin',
+  title: 'Prototypes/Klachtenformulier Scenario A/Speeltuin',
+  id: 'template-klachten-speeltuin-A',
   component: Page,
 } satisfies Meta<typeof Page>;
 
