@@ -58,8 +58,8 @@ export const One: Story = {
           </BreadcrumbNavLink>
         </BreadcrumbNav>
         <main>
-          <Heading1>Einde van het klachtenformulier</Heading1>
           <section>
+            <Heading1>Einde van het klachtenformulier</Heading1>
             <SpotlightSection type="ok">
               <Heading2>Dank je wel!</Heading2>
               <Paragraph>

@@ -55,8 +55,8 @@ export const One: Story = {
           </BreadcrumbNavLink>
         </BreadcrumbNav>
         <main>
-          <Heading1>Klacht</Heading1>
           <section>
+            <Heading1>Klacht</Heading1>
             <Paragraph appearance="lead">
               Bent u ontevreden over hoe de gemeente haar taken uitvoert? Bent u bijvoorbeeld niet goed geholpen? Of
               bent u niet netjes behandeld? De gemeente vindt dat vervelend en zoekt graag samen naar een oplossing.

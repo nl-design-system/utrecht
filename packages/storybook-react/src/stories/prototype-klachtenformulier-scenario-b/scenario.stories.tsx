@@ -71,8 +71,8 @@ export const One: Story = {
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <main>
-          <ScenarioKlachten />
           <section>
+            <ScenarioKlachten />
             <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage1}>
               Naar de klachtenpagina&nbsp;
               <UtrechtIconArrow />

@@ -78,11 +78,11 @@ export const One: Story = {
             </BreadcrumbNavLink>
           </BreadcrumbNav>
           <main>
-            <Heading1>
-              <Paragraph lead></Paragraph>
-              Speeltuin voor React componenten
-            </Heading1>
             <section>
+              <Heading1>
+                <Paragraph lead></Paragraph>
+                Speeltuin voor React componenten
+              </Heading1>
               <Heading2>Uw klacht</Heading2>
               <Paragraph>
                 Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
@@ -125,28 +125,29 @@ export const One: Story = {
                   Volgende stap
                 </ButtonLink>
               </form>
+
+              <ButtonGroup direction="column">
+                <Button appearance="primary-action-button">
+                  Volgende stap <UtrechtIconArrow />
+                </Button>
+                <a
+                  href="#"
+                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                  rel="external noopener noreferrer"
+                >
+                  <UtrechtIconArrow />
+                  Opslaan en later verder gaan
+                </a>
+                <a
+                  href="#"
+                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                  rel="external noopener noreferrer"
+                >
+                  <UtrechtIconCross />
+                  Stoppen met formulier
+                </a>
+              </ButtonGroup>
             </section>
-            <ButtonGroup direction="column">
-              <Button appearance="primary-action-button">
-                Volgende stap <UtrechtIconArrow />
-              </Button>
-              <a
-                href="#"
-                className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                rel="external noopener noreferrer"
-              >
-                <UtrechtIconArrow />
-                Opslaan en later verder gaan
-              </a>
-              <a
-                href="#"
-                className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                rel="external noopener noreferrer"
-              >
-                <UtrechtIconCross />
-                Stoppen met formulier
-              </a>
-            </ButtonGroup>
           </main>
         </PageContent>
         <FooterKlachten />

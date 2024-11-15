@@ -118,8 +118,8 @@ export const One: Story = {
             </BreadcrumbNavLink>
           </BreadcrumbNav>
           <main>
-            <Heading1>Klacht over de gemeente</Heading1>
             <section>
+              <Heading1>Klacht over de gemeente</Heading1>
               <form>
                 <Heading2>Uw Klacht</Heading2>
                 <Paragraph>
