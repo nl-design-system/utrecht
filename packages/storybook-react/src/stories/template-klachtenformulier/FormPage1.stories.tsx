@@ -68,7 +68,7 @@ export const One: Story = {
 
           <ButtonLink
             appearance="primary-action-button"
-            href="http://localhost:6008/iframe.html?args=&id=klachtenformulier-form-pages-stap-2--one&viewMode=story"
+            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-2--one&viewMode=story"
           >
             Ga naar klachtenformulier&nbsp;
             <UtrechtIconArrow />
