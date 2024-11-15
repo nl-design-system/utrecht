@@ -9,16 +9,14 @@ import {
   Heading2,
   Heading3,
   Link,
-  LinkList,
-  LinkListLink,
   Logo,
   LogoImage,
   Page,
   PageContent,
+  PageFooter,
   PageHeader,
   Paragraph,
   Separator,
-  SpotlightSection,
   Strong,
   Textbox,
   UnorderedList,
@@ -30,8 +28,8 @@ import './index.css';
 import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
-  title: 'Template/Klachtenformulier/Stap 4',
-  id: 'klachtenformulier-form-pages-stap-4',
+  title: 'Prototypes/Klachtenformulier Scenario B/Stap 1',
+  id: 'klachtenformulier-form-pages-stap-1B',
   component: Page,
 } satisfies Meta<typeof Page>;
 
@@ -51,32 +49,44 @@ export const One: Story = {
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <BreadcrumbNav>
-          <BreadcrumbNavLink href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-3a--one&viewMode=story">
+          <BreadcrumbNavLink href="#">
             <BreadcrumbNavSeparator>
               <UtrechtIconChevronLeft />
             </BreadcrumbNavSeparator>
             Terug
           </BreadcrumbNavLink>
         </BreadcrumbNav>
+        <Heading1>Klacht</Heading1>
         <section>
-          <Heading1>Einde van het klachtenformulier</Heading1>
-          <SpotlightSection type="ok">
-            <Heading2>Dank je wel!</Heading2>
-            <Paragraph>
-              In het echt zou je doorgaan naar de volgende stap. Maar voor deze test is dit nu het einde van het
-              formulier. We hebben nog een paar korte vragen, en dan zijn we klaar.
-            </Paragraph>
-          </SpotlightSection>
-          <br />
-        </section>
-        <section>
+          <Paragraph appearance="lead">
+            Bent u ontevreden over hoe de gemeente haar taken uitvoert? Bent u bijvoorbeeld niet goed geholpen? Of bent
+            u niet netjes behandeld? De gemeente vindt dat vervelend en zoekt graag samen naar een oplossing.
+          </Paragraph>
+          <Paragraph>
+            U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
+          </Paragraph>
+
           <ButtonLink
             appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-1--one&viewMode=story"
+            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-2--one&viewMode=story"
           >
-            Terug naar het begin&nbsp;
+            Ga naar klachtenformulier&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>
+        </section>
+        <section>
+          <Heading2>Bellen</Heading2>
+          <Paragraph>
+            U kunt bellen naar telefoonnummer 14030 (of vanuit het buitenland: +31 30 286 00 00). Dit kan van maandag
+            tot en met vrijdag tussen 9.00 en 17.00 uur.
+          </Paragraph>
+        </section>
+        <section>
+          <Heading2>Een brief sturen</Heading2>
+          <Paragraph>
+            U kunt een brief schrijven met uw klacht. Stuur uw brief naar: Gemeente Utrecht Klachtenbehandeling
+            Antwoordnummer 51066 3501 VC Utrecht (geen postzegel nodig)
+          </Paragraph>
         </section>
       </PageContent>
       <FooterKlachten />
