@@ -48,6 +48,7 @@ import {
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
+import ScenarioKlachten from '../prototype-src/ScenarioKlachtenFormulier'; // Importeer het scenario-component
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Scenario',
@@ -70,20 +71,7 @@ export const One: Story = {
         </nav>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <section>
-          <Heading1>Het verhaal</Heading1>
-          <Paragraph>
-            Vorige week woensdag ging je naar het stadskantoor. Je had om 10:15 een afspraak om je paspoort op te halen.
-            Bij de balie ging er iets mis. De medewerker wist niet precies wat hij moest doen. Je vond dat lastig, want
-            je had nog een andere afspraak na deze. Je moest op tijd weg.
-          </Paragraph>
-          <Paragraph>
-            Je vertelde dat je haast had. Toen werd de man achter de balie ineens erg boos! Het leek zelfs of hij expres
-            heel traag ging werken. Dat was niet fijn. Je kwam te laat bij je volgende afspraak. Ook was de boze reactie
-            van de man veel te hevig.
-          </Paragraph>
-          <Paragraph>Je besluit een klacht in te dienen bij de gemeente.</Paragraph>
-        </section>
+        <ScenarioKlachten />
         <section>
           <ButtonLink
             appearance="primary-action-button"
