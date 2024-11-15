@@ -6,12 +6,14 @@ import {
   Button,
   ButtonGroup,
   ButtonLink,
+  FormFieldErrorMessage,
   FormFieldTextarea,
   FormFieldTextbox,
   FormLabel,
   Heading1,
   Heading2,
   Heading3,
+  Link,
   Logo,
   LogoImage,
   Page,
@@ -77,9 +79,9 @@ export const One: Story = {
     const getStatusMessage = () => {
       if (characterCount > MAX_CHARACTERS) {
         return (
-          <span className="utrecht-klachten-error-message">
+          <FormFieldErrorMessage role="alert">
             Let op, u heeft {characterCount - MAX_CHARACTERS} tekens te veel ingevoerd.
-          </span>
+          </FormFieldErrorMessage>
         );
       }
       return `U heeft nog ${MAX_CHARACTERS - characterCount} tekens over.`;
@@ -102,11 +104,9 @@ export const One: Story = {
     return (
       <Page {...args}>
         <PageHeader>
-          <nav>
-            <Logo>
-              <LogoImage />
-            </Logo>
-          </nav>
+          <Logo>
+            <LogoImage />
+          </Logo>
         </PageHeader>
         <PageContent style={{ '--utrecht-space-around': 1 } as any}>
           <BreadcrumbNav>
@@ -117,101 +117,105 @@ export const One: Story = {
               Terug
             </BreadcrumbNavLink>
           </BreadcrumbNav>
-          <Heading1>Klacht over de gemeente</Heading1>
-          <section>
-            <Heading2>Uw Klacht</Heading2>
-            <Paragraph>
-              Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
-              <br />
-              Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
-            </Paragraph>
-            {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
-            <div ref={complaintFieldContainerRef}>
-              <FormFieldTextarea
-                label="Wat is uw klacht?"
-                name="klacht"
-                rows={5}
-                onChange={handleInputChange}
-                status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
-                errorMessage={errorMessage}
-                invalid={Boolean(errorMessage)}
-              />
-            </div>
-            <FormFieldTextbox
-              label={
-                <>
-                  Datum <span className="utrecht-notbold">(niet verplicht)</span>
-                </>
-              }
-              name="datum"
-              description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
-            />
-            <FormFieldTextbox
-              label={
-                <>
-                  Tijdstip <span className="utrecht-notbold">(niet verplicht)</span>
-                </>
-              }
-              name="tijdstip"
-              description="Bijvoorbeeld: 13:15"
-            />
-            <FormFieldTextarea
-              label={
-                <>
-                  Locatie <span className="utrecht-notbold">(niet verplicht)</span>
-                </>
-              }
-              name="locatie"
-              rows={3}
-            />
-            <Heading2>
-              Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
-            </Heading2>
-            <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
-            <UnorderedList>
-              <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
-              <UnorderedListItem>U mag maximaal 10 MB aan bestanden toevoegen.</UnorderedListItem>
-              <UnorderedListItem>
-                Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
-              </UnorderedListItem>
-            </UnorderedList>
-            <ButtonGroup direction="column">
-              <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} multiple />
-              <Button appearance="secondary-action-button" type="button" onClick={triggerFileUpload}>
-                Bestand toevoegen
-              </Button>
-              {selectedFiles && (
-                <div>
-                  <p>Geselecteerde bestanden:</p>
-                  <ul>
-                    {Array.from(selectedFiles).map((file, index) => (
-                      <li key={index}>{file.name}</li>
-                    ))}
-                  </ul>
+          <main>
+            <Heading1>Klacht over de gemeente</Heading1>
+            <section>
+              <form>
+                <Heading2>Uw Klacht</Heading2>
+                <Paragraph>
+                  Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
+                  <br />
+                  Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+                </Paragraph>
+                {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
+                <div ref={complaintFieldContainerRef}>
+                  <FormFieldTextarea
+                    label="Wat is uw klacht?"
+                    name="klacht"
+                    rows={5}
+                    onChange={handleInputChange}
+                    status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
+                    errorMessage={errorMessage}
+                    invalid={Boolean(errorMessage)}
+                  />
                 </div>
-              )}
+                <FormFieldTextbox
+                  label={
+                    <>
+                      Datum <span className="utrecht-notbold">(niet verplicht)</span>
+                    </>
+                  }
+                  name="datum"
+                  description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
+                />
+                <FormFieldTextbox
+                  label={
+                    <>
+                      Tijdstip <span className="utrecht-notbold">(niet verplicht)</span>
+                    </>
+                  }
+                  name="tijdstip"
+                  description="Bijvoorbeeld: 13:15"
+                />
+                <FormFieldTextarea
+                  label={
+                    <>
+                      Locatie <span className="utrecht-notbold">(niet verplicht)</span>
+                    </>
+                  }
+                  name="locatie"
+                  rows={3}
+                />
+                <Heading2>
+                  Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
+                </Heading2>
+                <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
+                  <UnorderedListItem>U mag maximaal 10 MB aan bestanden toevoegen.</UnorderedListItem>
+                  <UnorderedListItem>
+                    Toegestane bestandstypen: doc, docx, xslx, pdf, zip, jpg, png, bmp en gif.
+                  </UnorderedListItem>
+                </UnorderedList>
+                <ButtonGroup direction="column">
+                  <input type="file" id="fileInput" style={{ display: 'none' }} onChange={handleFileChange} multiple />
+                  <Button appearance="secondary-action-button" type="button" onClick={triggerFileUpload}>
+                    Bestand toevoegen
+                  </Button>
+                  {selectedFiles && (
+                    <div>
+                      <p>Geselecteerde bestanden:</p>
+                      <UnorderedList>
+                        {Array.from(selectedFiles).map((file, index) => (
+                          <UnorderedListItem key={index}>{file.name}</UnorderedListItem>
+                        ))}
+                      </UnorderedList>
+                    </div>
+                  )}
 
-              <ButtonLink appearance="primary-action-button" href={urls.scenarioAPage4} onClick={handleSubmit}>
-                Volgende stap
-              </ButtonLink>
-              <a
-                href="#"
-                className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                rel="external noopener noreferrer"
-              >
-                <UtrechtIconArrow />
-                Opslaan en later verder gaan
-              </a>
-              <a
-                href="#"
-                className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                rel="external noopener noreferrer"
-              >
-                <UtrechtIconCross />
-                Stoppen met formulier
-              </a>
-            </ButtonGroup>
-          </section>
+                  <ButtonLink appearance="primary-action-button" href={urls.scenarioAPage4} onClick={handleSubmit}>
+                    Volgende stap
+                  </ButtonLink>
+                  <Link
+                    href="#"
+                    className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                    rel="external noopener noreferrer"
+                  >
+                    <UtrechtIconArrow />
+                    Opslaan en later verder gaan
+                  </Link>
+                  <Link
+                    href="#"
+                    className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                    rel="external noopener noreferrer"
+                  >
+                    <UtrechtIconCross />
+                    Stoppen met formulier
+                  </Link>
+                </ButtonGroup>
+              </form>
+            </section>
+          </main>
         </PageContent>
         <FooterKlachten />
       </Page>

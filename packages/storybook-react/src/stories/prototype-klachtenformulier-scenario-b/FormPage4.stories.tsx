@@ -44,11 +44,9 @@ export const One: Story = {
   render: (args) => (
     <Page {...args}>
       <PageHeader>
-        <nav>
-          <Logo>
-            <LogoImage />
-          </Logo>
-        </nav>
+        <Logo>
+          <LogoImage />
+        </Logo>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <BreadcrumbNav>
@@ -59,23 +57,25 @@ export const One: Story = {
             Terug
           </BreadcrumbNavLink>
         </BreadcrumbNav>
-        <section>
-          <Heading1>Einde van het klachtenformulier</Heading1>
-          <SpotlightSection type="ok">
-            <Heading2>Dank je wel!</Heading2>
-            <Paragraph>
-              In het echt zou je doorgaan naar de volgende stap. Maar voor deze test is dit nu het einde van het
-              formulier. We hebben nog een paar korte vragen, en dan zijn we klaar.
-            </Paragraph>
-          </SpotlightSection>
-          <br />
-        </section>
-        <section>
-          <ButtonLink appearance="primary-action-button" href={urls.scenarioBintroductie}>
-            Terug naar het begin&nbsp;
-            <UtrechtIconArrow />
-          </ButtonLink>
-        </section>
+        <main>
+          <section>
+            <Heading1>Einde van het klachtenformulier</Heading1>
+            <SpotlightSection type="ok">
+              <Heading2>Dank je wel!</Heading2>
+              <Paragraph>
+                In het echt zou je doorgaan naar de volgende stap. Maar voor deze test is dit nu het einde van het
+                formulier. We hebben nog een paar korte vragen, en dan zijn we klaar.
+              </Paragraph>
+            </SpotlightSection>
+            <br />
+          </section>
+          <section>
+            <ButtonLink appearance="primary-action-button" href={urls.scenarioBintroductie}>
+              Terug naar het begin&nbsp;
+              <UtrechtIconArrow />
+            </ButtonLink>
+          </section>
+        </main>
       </PageContent>
       <FooterKlachten />
     </Page>

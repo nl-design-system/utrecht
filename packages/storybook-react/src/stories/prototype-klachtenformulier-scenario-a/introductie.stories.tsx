@@ -64,23 +64,23 @@ export const One: Story = {
   render: (args) => (
     <Page {...args}>
       <PageHeader>
-        <nav>
-          <Logo>
-            <LogoImage />
-          </Logo>
-        </nav>
+        <Logo>
+          <LogoImage />
+        </Logo>
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <IntroductieKlachten />
-        <section>
-          <ButtonLink
-            appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-scenario-a--one&viewMode=story"
-          >
-            Starten&nbsp;
-            <UtrechtIconArrow />
-          </ButtonLink>
-        </section>
+        <main>
+          <IntroductieKlachten />
+          <section>
+            <ButtonLink
+              appearance="primary-action-button"
+              href="./iframe.html?args=&id=klachtenformulier-scenario-a--one&viewMode=story"
+            >
+              Starten&nbsp;
+              <UtrechtIconArrow />
+            </ButtonLink>
+          </section>
+        </main>
       </PageContent>
       <FooterKlachten />
     </Page>
