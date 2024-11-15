@@ -1,11 +1,19 @@
 @import "~@utrecht/textbox-css/src/mixin";
 
+.utrecht-textbox {
+  @include utrecht-textbox;
+}
+
 @mixin open-forms-utrecht-input-names {
   .utrecht-textbox[name="data[voorletterSPZD]"],
   .utrecht-textbox[name="data[voorletterSPMD]"],
   .utrecht-textbox[name="data[voorletterSMEH]"],
   .utrecht-textbox[name="data[voorletterSZEH]"] {
     @include utrecht-textbox--voorletters-size;
+  }
+
+  .utrecht-textbox[name="data[aantalMarkten]"] {
+    @include utrecht-textbox--aantalmarkten-size;
   }
 
   .utrecht-textbox[name="data[voornamenPMD]"],
@@ -20,49 +28,120 @@
     @include utrecht-textbox--achternaam-size;
   }
 
-  .utrecht-textbox[name="data[BurgerservicenummerPZD]"],
-  .utrecht-textbox[name="data[BurgerservicenummerPMD]"] {
+  .utrecht-textbox[name="data[burgerservicenummerPZD]"],
+  .utrecht-textbox[name="data[burgerservicenummerPMD]"] {
     @include utrecht-textbox--bsn-size;
   }
 
-  .utrecht-textbox[name="data[EmailadresPZD]"],
-  .utrecht-textbox[name="data[EmailadresPMD]"],
-  .utrecht-textbox[name="data[EmailadresZEH]"],
-  .utrecht-textbox[name="data[EmailadresMEH]"] {
+  .utrecht-textbox[name="data[eMailadresPZD]"],
+  .utrecht-textbox[name="data[eMailadresPMD]"],
+  .utrecht-textbox[name="data[eMailadresZEH]"],
+  .utrecht-textbox[name="data[eMailadresMEH]"] {
     @include utrecht-textbox--email-size;
   }
 
-  .utrecht-textbox[name="data[GeboortedatumPZD]"],
-  .utrecht-textbox[name="data[GeboortedatumPMD]"] {
+  .utrecht-textbox[name="data[geboortedatumPZD]"],
+  .utrecht-textbox[name="data[geboortedatumPMD]"] {
     @include utrecht-textbox--geboortedatum-size;
   }
 
-  .utrecht-textbox[name="data[GeboorteplaatsPMD]"] {
-    @include utrecht-textbox--geboortedatum-size;
+  .utrecht-textbox[name="data[geboorteplaatsPMD]"] {
+    @include utrecht-textbox--geboorteplaats-size;
   }
 
-  .utrecht-textbox[name="data[HuisletterPZD]"],
-  .utrecht-textbox[name="data[HuisletterPMD]"],
-  .utrecht-textbox[name="data[HuisletterZEH]"],
-  .utrecht-textbox[name="data[HuisletterMEH]"],
-  .utrecht-textbox[name="data[HuisletterPA]"] {
+  .utrecht-textbox[name="data[huisletterPZD]"],
+  .utrecht-textbox[name="data[huisletterPMD]"],
+  .utrecht-textbox[name="data[huisletterZEH]"],
+  .utrecht-textbox[name="data[huisletterMEH]"],
+  .utrecht-textbox[name="data[huisletterPA]"] {
     @include utrecht-textbox--house-letter-size;
   }
 
-  .utrecht-textbox[name="data[HuisnummerPZD]"],
-  .utrecht-textbox[name="data[HuisnummerPMD]"],
-  .utrecht-textbox[name="data[HuisnummerZEH]"],
-  .utrecht-textbox[name="data[HuisnummerMEH]"],
-  .utrecht-textbox[name="data[HuisnummerPA]"] {
+  .utrecht-textbox[name="data[huisnummerPZD]"],
+  .utrecht-textbox[name="data[huisnummerPMD]"],
+  .utrecht-textbox[name="data[huisnummerZEH]"],
+  .utrecht-textbox[name="data[huisnummerMEH]"],
+  .utrecht-textbox[name="data[huisnummerPA]"] {
     @include utrecht-textbox--house-number-size;
   }
 
-  .utrecht-textbox[name="data[HuisnummertoevoegingPZD]"],
-  .utrecht-textbox[name="data[HuisnummertoevoegingPMD]"],
-  .utrecht-textbox[name="data[HuisnummertoevoegingZEH]"],
-  .utrecht-textbox[name="data[HuisnummertoevoegingMEH]"],
-  .utrecht-textbox[name="data[HuisnummertoevoegingPA]"] {
+  .utrecht-textbox[name="data[huisnummertoevoegingPZD]"],
+  .utrecht-textbox[name="data[huisnummertoevoegingPMD]"],
+  .utrecht-textbox[name="data[huisnummertoevoegingZEH]"],
+  .utrecht-textbox[name="data[huisnummertoevoegingMEH]"],
+  .utrecht-textbox[name="data[huisnummertoevoegingPA]"] {
     @include utrecht-textbox--house-addition-size;
+  }
+
+  .utrecht-textbox[name="data[kvKNummerMarktplaats]"] {
+    @include utrecht-textbox--kvk-size;
+  }
+
+  .utrecht-textbox[name="data[kvknummerZEH]"],
+  .utrecht-textbox[name="data[kvknummerMEH]"] {
+    @include utrecht-textbox--kvk-size;
+  }
+
+  .utrecht-textbox[name="data[naamBedrijfOrganisatieZEH]"],
+  .utrecht-textbox[name="data[naamBedrijfOrganisatieMEH]"] {
+    @include utrecht-textbox--naam-bedrijf-size;
+  }
+
+  .utrecht-textbox[name="data[plaatsZEH]"],
+  .utrecht-textbox[name="data[postbus_plaatsZE]"],
+  .utrecht-textbox[name="data[plaatsMEH]"],
+  .utrecht-textbox[name="data[plaatsPB]"],
+  .utrecht-textbox[name="data[plaatsPA]"] {
+    @include utrecht-textbox--plaats-size;
+  }
+
+  .utrecht-textbox[name="data[postbusnummerZEH]"],
+  .utrecht-textbox[name="data[postbusnummerPB]"] {
+    @include utrecht-textbox--postbus-nummer-size;
+  }
+
+  .utrecht-textbox[name="data[postcodePZD]"],
+  .utrecht-textbox[name="data[postcodePMD]"],
+  .utrecht-textbox[name="data[postcodeZEH]"],
+  .utrecht-textbox[name="data[postbus_postcodeZEH]"],
+  .utrecht-textbox[name="data[postcodeMEH]"],
+  .utrecht-textbox[name="data[postcodePB]"],
+  .utrecht-textbox[name="data[postcodePA]"] {
+    @include utrecht-textbox--postcode-size;
+  }
+
+  .utrecht-textbox[name="data[straatnaamPZD]"],
+  .utrecht-textbox[name="data[straatnaamPMD]"],
+  .utrecht-textbox[name="data[straatnaamZEH]"],
+  .utrecht-textbox[name="data[straatnaamMEH]"],
+  .utrecht-textbox[name="data[straatnaamPA]"] {
+    @include utrecht-textbox--straatnaam-size;
+  }
+
+  .utrecht-textbox[name="data[telefoonnummerPZD]"],
+  .utrecht-textbox[name="data[telefoonnummerPMD]"],
+  .utrecht-textbox[name="data[telefoonnummerZEH]"],
+  .utrecht-textbox[name="data[telefoonnummerMEH]"],
+  .utrecht-textbox[name="data[telefoonnummerMobielPZD]"],
+  .utrecht-textbox[name="data[telefoonnummerMobielPMD]"],
+  .utrecht-textbox[name="data[telefoonnummerWerkPZD]"],
+  .utrecht-textbox[name="data[telefoonnummerWerkPMD]"] {
+    @include utrecht-textbox--telefoon-nummer-size;
+  }
+
+  .utrecht-textbox[name="data[tussenvoegselSZEH]"],
+  .utrecht-textbox[name="data[tussenvoegselSMEH]"] {
+    @include utrecht-textbox--tussenvoegsel-size;
+  }
+
+  .utrecht-textbox[name="data[vestigingsnummerZEH]"],
+  .utrecht-textbox[name="data[vestigingsnummerMEH]"] {
+    @include utrecht-textbox--vestigingnummer-size;
+  }
+
+  .utrecht-textbox[name="data[woonplaatsPZD]"],
+  .utrecht-textbox[name="data[woonplaatsPMD]"] {
+    @include utrecht-textbox--woonplaats-size;
   }
 }
 
