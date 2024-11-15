@@ -21,7 +21,7 @@ import {
 import React from 'react';
 const ScenarioKlachten: React.FC = () => {
   return (
-    <section>
+    <>
       <Heading1>Het verhaal</Heading1>
       <Paragraph>
         Vorige week woensdag ging je naar het stadskantoor. Je had om 10:15 een afspraak om je paspoort op te halen. Bij
@@ -34,7 +34,7 @@ const ScenarioKlachten: React.FC = () => {
         de man veel te hevig.
       </Paragraph>
       <Paragraph>Je besluit een klacht in te dienen bij de gemeente.</Paragraph>
-    </section>
+    </>
   );
 };
 

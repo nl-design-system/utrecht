@@ -67,9 +67,6 @@ export const One: Story = {
                 formulier. We hebben nog een paar korte vragen, en dan zijn we klaar.
               </Paragraph>
             </SpotlightSection>
-            <br />
-          </section>
-          <section>
             <ButtonLink appearance="primary-action-button" href={urls.scenarioBintroductie}>
               Terug naar het begin&nbsp;
               <UtrechtIconArrow />

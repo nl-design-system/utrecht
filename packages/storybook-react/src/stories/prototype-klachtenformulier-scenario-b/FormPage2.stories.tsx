@@ -53,8 +53,8 @@ export const One: Story = {
           </BreadcrumbNavLink>
         </BreadcrumbNav>
         <main>
-          <Heading1>Klacht over de gemeente</Heading1>
           <section>
+            <Heading1>Klacht over de gemeente</Heading1>
             <UnorderedList>
               <UnorderedListItem>
                 In dit formulier doorloopt u de volgende stappen: uw klacht, voorstel oplossing, uw gegevens en het

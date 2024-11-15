@@ -71,10 +71,10 @@ export const One: Story = {
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <main>
-          <IntroductieKlachten />
           <section>
+            <IntroductieKlachten />
             <ButtonLink appearance="primary-action-button" href={urls.scenarioBscenario}>
-              Starten&nbsp;
+              Starten
               <UtrechtIconArrow />
             </ButtonLink>
           </section>

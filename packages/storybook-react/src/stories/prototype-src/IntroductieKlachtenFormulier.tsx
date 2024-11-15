@@ -23,7 +23,7 @@ import {
 import React from 'react';
 const IntroductieKlachten: React.FC = () => {
   return (
-    <section>
+    <>
       <Heading1>Test invullen klacht</Heading1>
       <Paragraph>
         Dank je wel dat je ons wilt helpen met het testen van het klachtenformulier! In deze test vragen we je een
@@ -38,7 +38,7 @@ const IntroductieKlachten: React.FC = () => {
           Ik mag je niet helpen tijdens de test. We willen zien hoe jij het zelf doet.
         </UnorderedListItem>
       </UnorderedList>
-    </section>
+    </>
   );
 };
 
