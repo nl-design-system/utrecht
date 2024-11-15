@@ -75,7 +75,7 @@ export const One: Story = {
         <section>
           <ButtonLink
             appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-scenario--one&viewMode=story"
+            href="./iframe.html?args=&id=klachtenformulier-scenario-a--one&viewMode=story"
           >
             Starten&nbsp;
             <UtrechtIconArrow />

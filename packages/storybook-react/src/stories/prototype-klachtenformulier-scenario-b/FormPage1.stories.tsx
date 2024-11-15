@@ -26,6 +26,7 @@ import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
+import urls from '../prototype-src/variables';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Stap 1',
@@ -49,7 +50,7 @@ export const One: Story = {
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <BreadcrumbNav>
-          <BreadcrumbNavLink href="#">
+          <BreadcrumbNavLink href={urls.scenarioBscenario}>
             <BreadcrumbNavSeparator>
               <UtrechtIconChevronLeft />
             </BreadcrumbNavSeparator>
@@ -66,10 +67,7 @@ export const One: Story = {
             U kunt uw klacht op 3 manieren indienen: met het klachtenformulier, bellen of een brief sturen.
           </Paragraph>
 
-          <ButtonLink
-            appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-2--one&viewMode=story"
-          >
+          <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage2}>
             Ga naar klachtenformulier&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>

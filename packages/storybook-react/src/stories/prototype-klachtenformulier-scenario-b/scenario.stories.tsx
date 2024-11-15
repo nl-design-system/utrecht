@@ -49,6 +49,7 @@ import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
 import ScenarioKlachten from '../prototype-src/ScenarioKlachtenFormulier'; // Importeer het scenario-component
+import urls from '../prototype-src/variables';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Scenario',
@@ -73,10 +74,7 @@ export const One: Story = {
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <ScenarioKlachten />
         <section>
-          <ButtonLink
-            appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-1--one&viewMode=story"
-          >
+          <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage1}>
             Naar de klachtenpagina&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>
