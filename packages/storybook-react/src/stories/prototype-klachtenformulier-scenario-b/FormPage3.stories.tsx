@@ -119,8 +119,11 @@ export const One: Story = {
           <Heading1>Klacht over de gemeente</Heading1>
           <section>
             <Heading2>Uw Klacht</Heading2>
-            <Paragraph>Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.</Paragraph>
-            <Paragraph>Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.</Paragraph>
+            <Paragraph>
+              Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
+              <br />
+              Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+            </Paragraph>
             {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
             {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
             <div ref={complaintFieldContainerRef}>
@@ -128,6 +131,7 @@ export const One: Story = {
                 label="Wat is uw klacht?"
                 name="klacht"
                 rows={5}
+                description="Beschrijf bijvoorbeeld; locatie, datum en tijd. Misschien ook afdeling of medewerker, als dit van toepassing is."
                 onChange={handleInputChange}
                 status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
                 errorMessage={errorMessage}
