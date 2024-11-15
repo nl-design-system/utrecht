@@ -28,6 +28,7 @@ import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
+import urls from '../prototype-src/variables';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario A/Stap 4',
@@ -51,7 +52,7 @@ export const One: Story = {
       </PageHeader>
       <PageContent style={{ '--utrecht-space-around': 1 } as any}>
         <BreadcrumbNav>
-          <BreadcrumbNavLink href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-3a--one&viewMode=story">
+          <BreadcrumbNavLink href={urls.scenarioAPage3}>
             <BreadcrumbNavSeparator>
               <UtrechtIconChevronLeft />
             </BreadcrumbNavSeparator>
@@ -70,10 +71,7 @@ export const One: Story = {
           <br />
         </section>
         <section>
-          <ButtonLink
-            appearance="primary-action-button"
-            href="./iframe.html?args=&id=klachtenformulier-form-pages-stap-1--one&viewMode=story"
-          >
+          <ButtonLink appearance="primary-action-button" href={urls.scenarioAintroductie}>
             Terug naar het begin&nbsp;
             <UtrechtIconArrow />
           </ButtonLink>
