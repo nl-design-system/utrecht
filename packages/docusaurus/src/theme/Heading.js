@@ -1,6 +1,7 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2022 Robbert Broersma
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
 import { Heading1, Heading2, Heading3, Heading4, Heading5, Heading6 } from '@utrecht/component-library-react';

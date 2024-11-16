@@ -649,25 +649,29 @@ export namespace Components {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPage {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageContent {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageFooter {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageHeader {
     }
@@ -2451,7 +2455,8 @@ declare global {
     };
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface HTMLUtrechtPageElement extends Components.UtrechtPage, HTMLStencilElement {
     }
@@ -2461,7 +2466,8 @@ declare global {
     };
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface HTMLUtrechtPageContentElement extends Components.UtrechtPageContent, HTMLStencilElement {
     }
@@ -2471,7 +2477,8 @@ declare global {
     };
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface HTMLUtrechtPageFooterElement extends Components.UtrechtPageFooter, HTMLStencilElement {
     }
@@ -2481,7 +2488,8 @@ declare global {
     };
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface HTMLUtrechtPageHeaderElement extends Components.UtrechtPageHeader, HTMLStencilElement {
     }
@@ -3605,25 +3613,29 @@ declare namespace LocalJSX {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPage {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageContent {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageFooter {
     }
     /**
      * @license EUPL-1.2
-     * Copyright (c) 2021 Gemeente Utrecht
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageHeader {
     }
@@ -4280,22 +4292,26 @@ declare module "@stencil/core" {
             "utrecht-number-data": LocalJSX.UtrechtNumberData & JSXBase.HTMLAttributes<HTMLUtrechtNumberDataElement>;
             /**
              * @license EUPL-1.2
-             * Copyright (c) 2021 Gemeente Utrecht
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-page": LocalJSX.UtrechtPage & JSXBase.HTMLAttributes<HTMLUtrechtPageElement>;
             /**
              * @license EUPL-1.2
-             * Copyright (c) 2021 Gemeente Utrecht
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-page-content": LocalJSX.UtrechtPageContent & JSXBase.HTMLAttributes<HTMLUtrechtPageContentElement>;
             /**
              * @license EUPL-1.2
-             * Copyright (c) 2021 Gemeente Utrecht
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-page-footer": LocalJSX.UtrechtPageFooter & JSXBase.HTMLAttributes<HTMLUtrechtPageFooterElement>;
             /**
              * @license EUPL-1.2
-             * Copyright (c) 2021 Gemeente Utrecht
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-page-header": LocalJSX.UtrechtPageHeader & JSXBase.HTMLAttributes<HTMLUtrechtPageHeaderElement>;
             "utrecht-pagination": LocalJSX.UtrechtPagination & JSXBase.HTMLAttributes<HTMLUtrechtPaginationElement>;
