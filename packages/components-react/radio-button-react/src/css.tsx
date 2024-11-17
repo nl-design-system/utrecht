@@ -4,7 +4,9 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import '@utrecht/radio-button-css/src/index.scss';
+import css from '@utrecht/radio-button-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+insertStyle(css);
 
 export type { RadioButtonProps } from './index';
 export { RadioButton } from './index';

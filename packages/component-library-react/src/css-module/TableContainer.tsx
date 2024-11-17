@@ -3,6 +3,8 @@
  * Copyright (c) 2024 Frameless B.V.
  */
 
-import '@utrecht/table-css/src/index.scss';
+import css from '@utrecht/table-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+insertStyle(css);
 
 export * from '../TableContainer';

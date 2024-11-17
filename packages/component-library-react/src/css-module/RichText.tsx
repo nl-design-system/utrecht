@@ -3,6 +3,8 @@
  * Copyright (c) 2024 Yolijn van der Kolk
  */
 
-import '@utrecht/rich-text-css/src/index.scss';
+import css from '@utrecht/rich-text-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+insertStyle(css);
 
 export * from '../RichText';
