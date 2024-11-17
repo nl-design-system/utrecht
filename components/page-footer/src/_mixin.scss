@@ -22,13 +22,28 @@
 
   background-color: var(--utrecht-page-footer-background-color);
   background-image: var(--utrecht-page-footer-background-image);
+  box-sizing: border-box;
   color: var(--utrecht-page-footer-color);
+  display: flex;
   font-family: var(--utrecht-document-font-family);
   font-size: var(--utrecht-document-font-size);
+  inline-size: 100%;
+  justify-content: center;
   padding-block-end: var(--utrecht-page-footer-padding-block-end);
   padding-block-start: var(--utrecht-page-footer-padding-block-start);
   padding-inline-end: var(--utrecht-page-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-page-footer-padding-inline-start);
+}
+
+@mixin utrecht-page-footer__content {
+  background-color: var(--utrecht-page-footer-content-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-page-footer-content-color);
+  inline-size: 100%;
+  max-inline-size: var(--utrecht-page-footer-content-max-inline-size);
+  padding-block-end: var(--utrecht-page-footer-content-padding-block-end);
+  padding-block-start: var(--utrecht-page-footer-content-padding-block-start);
+  padding-inline: var(--utrecht-page-footer-content-padding-inline);
 }
 
 @mixin utrecht-page-footer__address--reset-address {

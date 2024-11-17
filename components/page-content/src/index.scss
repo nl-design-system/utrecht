@@ -10,6 +10,10 @@
   @include utrecht-page-content;
 }
 
+.utrecht-page-content__content {
+  @include utrecht-page-content__content;
+}
+
 .utrecht-page-content__main {
   @include utrecht-page-content__main;
 }
