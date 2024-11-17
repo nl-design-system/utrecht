@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="utrecht-theme">
+  <head>
+    <meta charset="utf-8" />
+    <title>React component library</title>
+    <link rel="stylesheet" href="node_modules/@utrecht/design-tokens/dist/theme.css" />
+  </head>
+  <body>
+    <h1>React components rendered with Preact</h1>
+    <p>This example uses ES Modules and import maps.</p>
+    <div id="root"></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@utrecht/body-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/body-react/dist/index.mjs",
+          "@utrecht/body-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/body-react/dist/css.mjs",
+          "@utrecht/button-react": "./node_modules/@utrecht/button-react/dist/index.mjs",
+          "@utrecht/button-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/button-react/dist/index.mjs",
+          "@utrecht/button-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/button-react/dist/css.mjs",
+          "@utrecht/calendar-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/calendar-react/dist/index.mjs",
+          "@utrecht/calendar-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/calendar-react/dist/css.mjs",
+          "@utrecht/checkbox-group-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/checkbox-group-react/dist/index.mjs",
+          "@utrecht/checkbox-group-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/checkbox-group-react/dist/css.mjs",
+          "@utrecht/checkbox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/checkbox-react/dist/index.mjs",
+          "@utrecht/checkbox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/checkbox-react/dist/css.mjs",
+          "@utrecht/combobox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/combobox-react/dist/index.mjs",
+          "@utrecht/combobox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/combobox-react/dist/css.mjs",
+          "@utrecht/component-library-react/dist/css-module": "./node_modules/@utrecht/component-library-react/dist/css-module/index.mjs",
+          "@utrecht/fieldset-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/fieldset-react/dist/index.mjs",
+          "@utrecht/fieldset-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/fieldset-react/dist/css.mjs",
+          "@utrecht/form-field-checkbox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-checkbox-react/dist/index.mjs",
+          "@utrecht/form-field-checkbox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-checkbox-react/dist/css.mjs",
+          "@utrecht/form-field-description-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-description-react/dist/index.mjs",
+          "@utrecht/form-field-description-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-description-react/dist/css.mjs",
+          "@utrecht/form-field-error-message-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-error-message-react/dist/index.mjs",
+          "@utrecht/form-field-error-message-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-error-message-react/dist/css.mjs",
+          "@utrecht/form-field-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-react/dist/index.mjs",
+          "@utrecht/form-field-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-field-react/dist/css.mjs",
+          "@utrecht/form-label-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-label-react/dist/index.mjs",
+          "@utrecht/form-label-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/form-label-react/dist/css.mjs",
+          "@utrecht/link-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/link-react/dist/index.mjs",
+          "@utrecht/link-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/link-react/dist/index.mjs",
+          "@utrecht/link-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/link-react/dist/css.mjs",
+          "@utrecht/link-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/link-react/dist/css.mjs",
+          "@utrecht/listbox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/listbox-react/dist/index.mjs",
+          "@utrecht/listbox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/listbox-react/dist/css.mjs",
+          "@utrecht/nav-bar-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/nav-bar-react/dist/index.mjs",
+          "@utrecht/nav-bar-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/nav-bar-react/dist/css.mjs",
+          "@utrecht/page-content-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-content-react/dist/index.mjs",
+          "@utrecht/page-content-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-content-react/dist/css.mjs",
+          "@utrecht/page-footer-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-footer-react/dist/index.mjs",
+          "@utrecht/page-footer-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-footer-react/dist/css.mjs",
+          "@utrecht/page-header-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-header-react/dist/index.mjs",
+          "@utrecht/page-header-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-header-react/dist/css.mjs",
+          "@utrecht/page-layout-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-layout-react/dist/index.mjs",
+          "@utrecht/page-layout-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/page-layout-react/dist/css.mjs",
+          "@utrecht/radio-button-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/radio-button-react/dist/index.mjs",
+          "@utrecht/radio-button-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/radio-button-react/dist/css.mjs",
+          "@utrecht/radio-group-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/radio-group-react/dist/index.mjs",
+          "@utrecht/radio-group-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/radio-group-react/dist/css.mjs",
+          "@utrecht/root-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/root-react/dist/index.mjs",
+          "@utrecht/root-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/root-react/dist/css.mjs",
+          "@utrecht/select-combobox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/select-combobox-react/dist/index.mjs",
+          "@utrecht/select-combobox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/select-combobox-react/dist/css.mjs",
+          "@utrecht/textbox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/textbox-react/dist/index.mjs",
+          "@utrecht/textbox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/textbox-react/dist/css.mjs",
+          "clsx": "./node_modules/@utrecht/button-react/node_modules/clsx/dist/clsx.mjs",
+          "preact": "./node_modules/preact/dist/preact.mjs",
+          "preact/compat": "./node_modules/preact/compat/dist/compat.mjs",
+          "preact/hooks": "./node_modules/preact/hooks/dist/hooks.mjs",
+          "react": "./node_modules/preact/compat/dist/compat.mjs",
+          "react/jsx-runtime": "./node_modules/preact/jsx-runtime/dist/jsxRuntime.mjs"
+        }
+      }
+    </script>
+    <script type="module">
+      import { render, createElement } from 'preact';
+      import { Button } from '@utrecht/button-react/dist/css';
+      import { Separator } from '@utrecht/component-library-react/dist/css-module';
+      (async () => {
+        const root = document.getElementById('root');
+        if (root) {
+          render(createElement(Button, { children: 'Click me!', appearance: 'primary-action-button' }), root);
+        }
+      })();
+    </script>
+  </body>
+</html>
