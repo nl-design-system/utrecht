@@ -1,0 +1,35 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Utilities for React component npm packages",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/build-utils-react",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/build-utils-react"
+  },
+  "bin": {
+    "build-react-package": "./src/index.mjs"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "7.24.7",
+    "@babel/preset-react": "7.24.7",
+    "@rollup/plugin-babel": "6.0.4",
+    "@rollup/plugin-commonjs": "26.0.1",
+    "@rollup/plugin-json": "6.1.0",
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "12.1.0",
+    "rollup": "4.23.0",
+    "rollup-plugin-filesize": "10.0.0",
+    "rollup-plugin-node-externals": "7.1.2",
+    "rollup-plugin-peer-deps-external": "2.2.4",
+    "rollup-plugin-postcss": "4.0.2",
+    "rollup-plugin-typescript2": "0.36.0",
+    "typescript": "5.6.2"
+  }
+}
