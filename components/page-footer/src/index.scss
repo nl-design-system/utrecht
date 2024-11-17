@@ -10,6 +10,10 @@
   @include utrecht-page-footer;
 }
 
+.utrecht-page-footer__content {
+  @include utrecht-page-footer__content;
+}
+
 .utrecht-page-footer__address--reset-address {
   @include utrecht-page-footer__address--reset-address;
 }
