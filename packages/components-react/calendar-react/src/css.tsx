@@ -4,7 +4,10 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import '@utrecht/calendar-css/src/index.scss';
+import css from '@utrecht/calendar-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+
+insertStyle(css);
 
 export type { CalendarProps } from './index';
 export { Calendar } from './index';

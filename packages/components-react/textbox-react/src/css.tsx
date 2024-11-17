@@ -4,6 +4,8 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import '@utrecht/textbox-css/src/index.scss';
+import css from '@utrecht/textbox-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+insertStyle(css);
 
 export * from './index';

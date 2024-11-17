@@ -5,6 +5,6 @@
  */
 
 // CSS is already included by `Table` component
-// import '../../../../components/table/src/index.scss';
+// import '../../../../components/table/dist/index.mjs';import { insertStyle } from './insert-style'; insertStyle(css);
 
 export * from '../TableCaption';

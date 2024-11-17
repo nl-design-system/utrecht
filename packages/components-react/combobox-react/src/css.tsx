@@ -4,6 +4,8 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import '@utrecht/combobox-css/src/index.scss';
+import css from '@utrecht/combobox-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+insertStyle(css);
 
 export * from './index';
