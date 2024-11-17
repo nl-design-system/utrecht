@@ -17,6 +17,7 @@
   outline-offset: var(--utrecht-focus-outline-offset, revert);
   outline-style: var(--utrecht-focus-outline-style, revert);
   outline-width: var(--utrecht-focus-outline-width, revert);
+  z-index: 1;
 }
 
 /* stylelint-disable-next-line block-no-empty */
