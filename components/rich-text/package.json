@@ -13,11 +13,11 @@
   "main": "dist/index.css",
   "scripts": {
     "generate": "node src/getSpacing.js",
-    "build": "rollup -c ../rollup.config.mjs",
+    "build": "build-css-package",
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "rollup": "3.29.4"
+    "@utrecht/build-utils-css": "workspace:*"
   },
   "keywords": [
     "nl-design-system"
