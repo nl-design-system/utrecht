@@ -21,7 +21,7 @@ import {
   startOfWeek,
 } from 'date-fns';
 import { enUS } from 'date-fns/locale';
-import chunk from 'lodash.chunk';
+import chunk from 'lodash-es/chunk';
 import { useState } from 'react';
 import { CalendarNavigation } from './CalendarNavigation';
 import { CalendarNavigationButtons } from './CalendarNavigationButtons';
