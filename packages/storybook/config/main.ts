@@ -4,11 +4,7 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: [
-    '../stories/**/*stories.@(js|jsx|mdx|ts|tsx)',
-    '../../../components/**/*stories.@(js|jsx|mdx|ts|tsx)',
-    '../../../proprietary/**/*stories.@(js|jsx|mdx|ts|tsx)',
-  ],
+  stories: ['../stories/**/*stories.@(js|jsx|mdx|ts|tsx)'],
   features: {
     // babelModeV7: true,
     // postcss: false,

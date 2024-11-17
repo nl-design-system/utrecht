@@ -4,21 +4,25 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+import {
+  Checkbox,
+  Fieldset,
+  FieldsetLegend,
+  FormFieldDescription,
+  FormFieldErrorMessage,
+  FormLabel,
+  Heading1,
+  Heading2,
+  Heading3,
+  Heading4,
+  Heading5,
+  Heading6,
+  RadioButton,
+  Textarea,
+  Textbox,
+} from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
-import { Checkbox } from '../../checkbox/src/story-template';
-import { FormFieldDescription } from '../../form-field-description/src/story-template';
-import { FormFieldset, FormFieldsetLegend } from '../../form-fieldset/src/story-template';
-import { FormLabel } from '../../form-label/src/story-template';
-import { Heading1 } from '../../heading-1/src/story-template';
-import { Heading2 } from '../../heading-2/src/story-template';
-import { Heading3 } from '../../heading-3/src/story-template';
-import { Heading4 } from '../../heading-4/src/story-template';
-import { Heading5 } from '../../heading-5/src/story-template';
-import { Heading6 } from '../../heading-6/src/story-template';
-import { RadioButton } from '../../radio-button/src/story-template';
-import { Textarea } from '../../textarea/src/story-template';
-import { Textbox } from '../../textbox/src/story-template';
 
 export const argTypes = {
   invalid: {
@@ -122,9 +126,9 @@ export const FormFieldTextbox = ({
         </FormFieldDescription>
       ) : undefined}
       {invalidDescription ? (
-        <FormFieldDescription id={invalidDescriptionId} status="invalid" className="utrecht-form-field__description">
+        <FormFieldErrorMessage id={invalidDescriptionId} className="utrecht-form-field__description">
           {invalidDescription}
-        </FormFieldDescription>
+        </FormFieldErrorMessage>
       ) : undefined}
       <FormComponent
         className="utrecht-form-field__input"
@@ -185,9 +189,9 @@ export const FormFieldCheckbox = ({
         </FormFieldDescription>
       ) : undefined}
       {invalidDescription ? (
-        <FormFieldDescription id={invalidDescriptionId} status="invalid" className="utrecht-form-field__description">
+        <FormFieldErrorMessage id={invalidDescriptionId} className="utrecht-form-field__error-message">
           {invalidDescription}
-        </FormFieldDescription>
+        </FormFieldErrorMessage>
       ) : undefined}
       {!implicitLabel && checkbox}
     </FormField>
@@ -209,17 +213,15 @@ export const FormFieldCheckboxGroup = ({
   const groupInvalidDescriptionId = groupInvalidDescription ? `${groupId}-invalid-description` : null;
   const groupDescribedByIds = [groupDescriptionId, groupInvalidDescriptionId].filter(Boolean).join(' ');
   return (
-    <FormFieldset id={groupId} aria-describedby={groupDescribedByIds} invalid={invalid}>
-      <FormFieldsetLegend>
+    <Fieldset id={groupId} aria-describedby={groupDescribedByIds} invalid={invalid}>
+      <FieldsetLegend>
         {headingLevel ? <Heading level={headingLevel}>{groupLabel}</Heading> : groupLabel}
-      </FormFieldsetLegend>
+      </FieldsetLegend>
       {groupDescriptionId ? (
         <FormFieldDescription id={groupDescriptionId}>{groupDescription}</FormFieldDescription>
       ) : undefined}
       {groupInvalidDescriptionId ? (
-        <FormFieldDescription id={groupInvalidDescriptionId} status="invalid">
-          {groupInvalidDescription}
-        </FormFieldDescription>
+        <FormFieldErrorMessage id={groupInvalidDescriptionId}>{groupInvalidDescription}</FormFieldErrorMessage>
       ) : undefined}
       {options.map(({ description, checked, id, invalid, invalidDescription, label, name, value }) => {
         const descriptionId = `${id}-description`;
@@ -252,7 +254,7 @@ export const FormFieldCheckboxGroup = ({
               <FormFieldDescription
                 id={invalidDescriptionId}
                 status="invalid"
-                className="utrecht-form-field__description"
+                className="utrecht-form-field__error-message"
               >
                 {invalidDescription}
               </FormFieldDescription>
@@ -261,7 +263,7 @@ export const FormFieldCheckboxGroup = ({
           </FormField>
         );
       })}
-    </FormFieldset>
+    </Fieldset>
   );
 };
 
@@ -281,17 +283,15 @@ export const FormFieldRadioGroup = ({
   const groupDescribedByIds = [groupDescriptionId, groupInvalidDescriptionId].filter(Boolean);
   const groupDescribedBy = groupDescribedByIds.length ? groupDescribedByIds.join(' ') : undefined;
   return (
-    <FormFieldset role="radiogroup" id={groupId} aria-describedby={groupDescribedBy} invalid={invalid}>
-      <FormFieldsetLegend>
+    <Fieldset role="radiogroup" id={groupId} aria-describedby={groupDescribedBy} invalid={invalid}>
+      <FieldsetLegend>
         {headingLevel ? <Heading level={headingLevel}>{groupLabel}</Heading> : groupLabel}
-      </FormFieldsetLegend>
+      </FieldsetLegend>
       {groupDescription ? (
         <FormFieldDescription id={groupDescriptionId}>{groupDescription}</FormFieldDescription>
       ) : undefined}
       {groupInvalidDescription ? (
-        <FormFieldDescription status="invalid" id={groupInvalidDescriptionId}>
-          {groupInvalidDescription}
-        </FormFieldDescription>
+        <FormFieldErrorMessage id={groupInvalidDescriptionId}>{groupInvalidDescription}</FormFieldErrorMessage>
       ) : undefined}
       {options.map(({ id, label, description, invalidDescription, value }) => {
         const descriptionId = description ? `${id}-description` : null;
@@ -320,19 +320,15 @@ export const FormFieldRadioGroup = ({
               </FormFieldDescription>
             ) : undefined}
             {invalidDescription ? (
-              <FormFieldDescription
-                id={invalidDescriptionId}
-                status="invalid"
-                className="utrecht-form-field__description"
-              >
+              <FormFieldErrorMessage id={invalidDescriptionId} className="utrecht-form-field__error-message">
                 {invalidDescription}
-              </FormFieldDescription>
+              </FormFieldErrorMessage>
             ) : undefined}
             {!implicitLabel && input}
           </FormField>
         );
       })}
-    </FormFieldset>
+    </Fieldset>
   );
 };
 
