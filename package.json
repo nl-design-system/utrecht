@@ -36,6 +36,7 @@
     "@nrwl/workspace": "15.9.7",
     "@typescript-eslint/eslint-plugin": "5.62.0",
     "@typescript-eslint/parser": "5.62.0",
+    "@utrecht/design-system": "link:",
     "eslint": "8.57.0",
     "eslint-config-prettier": "8.10.0",
     "eslint-plugin-import": "2.29.1",
@@ -46,6 +47,7 @@
     "eslint-plugin-vue": "9.26.0",
     "glob": "10.4.2",
     "html-validate": "8.20.1",
+    "http-server": "14.1.1",
     "husky": "9.0.11",
     "lint-staged": "15.2.7",
     "markdownlint-cli": "0.41.0",
@@ -63,6 +65,7 @@
   "scripts": {
     "add-repository-directory": "node ./add-repository-directory.mjs",
     "build": "pnpm run nx-build --skip-nx-cache",
+    "build:css": "pnpm run --dir components/ --filter '@utrecht/*-css' build",
     "nx-build": "nx run-many --target=build --all --parallel",
     "clean": "pnpm run --recursive clean",
     "docs": "pnpm run --workspace packages/docusaurus start",

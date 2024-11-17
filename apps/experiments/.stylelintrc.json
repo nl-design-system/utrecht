@@ -1,0 +1,10 @@
+{
+  "extends": ["../../.stylelintrc.json"],
+  "rules": {
+    "scss/dollar-variable-pattern": "^(ams|basis|example|purmerend|rhc|rijkshuisstijl|rods|utrecht)-[a-z0-9-]+$",
+    "scss/percent-placeholder-pattern": "^(ams|basis|example|purmerend|rhc|rijkshuisstijl|rods|utrecht)-[a-z0-9-]+$",
+    "custom-property-pattern": "^_?(ams|basis|example|denhaag|purmerend|rhc|rijkshuisstijl|rods|utrecht)-[a-z0-9-]+$",
+    "selector-class-pattern": "^(ams|basis|example|denhaag|purmerend|rhc|rijkshuisstijl|rods|utrecht)-[a-z0-9_-]+$",
+    "keyframes-name-pattern": "^(ams|basis|example|purmerend|rhc|rijkshuisstijl|rods|utrecht)-[a-z0-9-]+$"
+  }
+}

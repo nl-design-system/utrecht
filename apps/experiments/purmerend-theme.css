@@ -1,0 +1,122 @@
+.purmerend-theme {
+  --basis-page-max-inline-size: 1140px;
+  --utrecht-nav-bar-content-background-color: white;
+  --utrecht-nav-bar-content-color: rgb(0 54 95);
+  --utrecht-nav-bar-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-content-content-background-color: white;
+  --utrecht-page-content-content-color: rgb(0 54 95);
+  --utrecht-page-content-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-content-content-padding-inline: 1em;
+  --utrecht-page-content-padding-inline: 1em;
+  --utrecht-page-footer-background-color: rgb(0 54 95);
+  --utrecht-page-footer-color: white;
+  --utrecht-page-footer-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-footer-content-padding-block-end: 1em;
+  --utrecht-page-footer-content-padding-block-start: 1em;
+  --utrecht-page-footer-content-padding-inline: 1em;
+  --utrecht-page-footer-padding-inline: 0;
+  --utrecht-page-header-content-background-color: white;
+  --utrecht-page-header-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-header-content-padding-block-end: 1em;
+  --utrecht-page-header-content-padding-block-start: 1em;
+  --utrecht-page-header-content-padding-inline: 1em;
+  --utrecht-page-header-padding-inline: 1em;
+  --utrecht-page-nav-bar-padding-inline: 1em;
+  --utrecht-root-background-color: white;
+  --utrecht-root-color: rgb(0 54 95);
+  --utrecht-page-header-border-block-end-width: 1px;
+  --utrecht-page-header-border-block-end-color: #c9c9c9;
+  --utrecht-root-font-family: "Cantarell", "Open Sans", sans-serif;
+  --utrecht-logo-min-block-size: 70px;
+  --utrecht-logo-min-inline-size: 150px;
+  --utrecht-logo-max-block-size: 70px;
+  --utrecht-logo-max-inline-size: 150px;
+}
+
+/* latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50LF7ZDq37KMUvlO015iZJnNKuwL4YeuHg.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+    U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: italic;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50LF7ZDq37KMUvlO015iZJpNKuwL4Ye.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50WF7ZDq37KMUvlO015iZrSEb6TDYs0gnHAA4E.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+    U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: italic;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50WF7ZDq37KMUvlO015iZrSEb6dDYs0gnHA.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50NF7ZDq37KMUvlO015gqJrPqySLbYf.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+    U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 400;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50NF7ZDq37KMUvlO015jKJrPqySLQ.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* latin-ext */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50IF7ZDq37KMUvlO01xN4d-HY6fB4wWgEHB.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF,
+    U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+  font-display: swap;
+  font-family: "Cantarell";
+  font-style: normal;
+  font-weight: 700;
+  src: url("https://fonts.gstatic.com/s/cantarell/v17/B50IF7ZDq37KMUvlO01xN4d-E46fB4wWgA.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329,
+    U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
