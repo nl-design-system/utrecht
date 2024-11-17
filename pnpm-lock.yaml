@@ -4052,8 +4052,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0
       html-react-parser:
-        specifier: 3.0.16
-        version: 3.0.16(react@18.3.1)
+        specifier: 5.1.18
+        version: 5.1.18(@types/react@18.3.3)(react@18.3.1)
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -4676,8 +4676,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0
       html-react-parser:
-        specifier: 3.0.16
-        version: 3.0.16(react@18.3.1)
+        specifier: 5.1.18
+        version: 5.1.18(@types/react@18.3.3)(react@18.3.1)
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -4967,8 +4967,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0
       html-react-parser:
-        specifier: 3.0.16
-        version: 3.0.16(react@18.3.1)
+        specifier: 5.1.18
+        version: 5.1.18(@types/react@18.3.3)(react@18.3.1)
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -6200,8 +6200,8 @@ importers:
         specifier: 6.2.0
         version: 6.2.0
       html-react-parser:
-        specifier: 3.0.16
-        version: 3.0.16(react@18.3.1)
+        specifier: 5.1.18
+        version: 5.1.18(@types/react@18.3.3)(react@18.3.1)
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -11763,6 +11763,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@6.5.16':
     resolution: {integrity: sha512-hNLctkjaYLRdk1+xYTkC1mg4dYz2wSv6SqbLpcKMbkPHTE0ElhddGPHQqB362md/w9emYXNkt1LSMD8Xk9JzVQ==}
@@ -12936,6 +12937,7 @@ packages:
 
   acorn-import-assertions@1.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
 
@@ -16823,8 +16825,8 @@ packages:
   hpack.js@2.1.6:
     resolution: {integrity: sha512-zJxVehUdMGIKsRaNt7apO2Gqp0BdqW5yaiGHXXmbpvxgBYVZnAql+BJb4RO5ad2MgpbZKn5G6nMnegrH1FcNYQ==}
 
-  html-dom-parser@3.1.7:
-    resolution: {integrity: sha512-cDgNF4YgF6J3H+d9mcldGL19p0GzVdS3iGuDNzYWQpU47q3+IRM85X3Xo07E+nntF4ek4s78A9V24EwxlPTjig==}
+  html-dom-parser@5.0.10:
+    resolution: {integrity: sha512-GwArYL3V3V8yU/mLKoFF7HlLBv80BZ2Ey1BzfVNRpAci0cEKhFHI/Qh8o8oyt3qlAMLlK250wsxLdYX4viedvg==}
 
   html-encoding-sniffer@3.0.0:
     resolution: {integrity: sha512-oWv4T4yJ52iKrufjnyZPkrN0CH3QnrUqdB6In1g5Fe1mia8GmF36gnfNySxoZtxD5+NmYw1EElVXiBk93UeskA==}
@@ -16846,10 +16848,14 @@ packages:
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
 
-  html-react-parser@3.0.16:
-    resolution: {integrity: sha512-ysQZtRFPcg+McVb4B05oNWSnqM14zagpvTgGcI5e1/BvCl38YwzWzKibrbBmXeemg70olN1bAoeixo7o06G5Eg==}
+  html-react-parser@5.1.18:
+    resolution: {integrity: sha512-65BwC0zzrdeW96jB2FRr5f1ovBhRMpLPJNvwkY5kA8Ay5xdL9t/RH2/uUTM7p+cl5iM88i6dDk4LXtfMnRmaJQ==}
     peerDependencies:
+      '@types/react': 0.14 || 15 || 16 || 17 || 18
       react: 0.14 || 15 || 16 || 17 || 18
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
 
   html-tags@3.3.1:
     resolution: {integrity: sha512-ztqyC3kLto0e9WbNp0aeP+M3kTt+nbaIveGmUxAtZa+8iFgKLUOD4YKM5j+f3QD89bra7UeumolZHKuOXnTmeQ==}
@@ -16888,6 +16894,9 @@ packages:
 
   htmlparser2@8.0.2:
     resolution: {integrity: sha512-GYdjWKDkbRLkZ5geuHs5NY1puJ+PXwP7+fHPRz06Eirsb9ugf6d8kkXav6ADhcODhFFPMIXyxkxSuMf3D6NCFA==}
+
+  htmlparser2@9.1.0:
+    resolution: {integrity: sha512-5zfg6mHUoaer/97TxnGpxmbR7zJtPwIYFMZ/H5ucTlPZhKvtum05yiPK3Mgai3a0DyVxv7qYqoweaEd2nrYQzQ==}
 
   http-auth-connect@1.0.6:
     resolution: {integrity: sha512-yaO0QSCPqGCjPrl3qEEHjJP+lwZ6gMpXLuCBE06eWwcXomkI5TARtu0kxf9teFuBj6iaV3Ybr15jaWUvbzNzHw==}
@@ -17151,8 +17160,8 @@ packages:
   inline-style-parser@0.1.1:
     resolution: {integrity: sha512-7NXolsK4CAS5+xvdj5OMMbI962hU/wvwoxk+LWR9Ek9bVtyuuYScDN6eS0rUm6TxApFpw7CX1o4uJzcd4AyD3Q==}
 
-  inline-style-parser@0.2.2:
-    resolution: {integrity: sha512-EcKzdTHVe8wFVOGEYXiW9WmJXPjqi1T+234YpJr98RiFYKHV3cdy1+3mkTE+KHTHxFFLH51SfaGOoUdW+v7ViQ==}
+  inline-style-parser@0.2.4:
+    resolution: {integrity: sha512-0aO8FkhNZlj/ZIbNi7Lxxr12obT7cL1moPfE4tg1LkX7LlLfC6DeX4l2ZEud1ukP9jNQyNnfzQVqwbwmAATY4Q==}
 
   inline-style-prefixer@7.0.0:
     resolution: {integrity: sha512-I7GEdScunP1dQ6IM2mQWh6v0mOYdYmH3Bp31UecKdrcUgcURTcctSe1IECdUznSHKSmsHtjrT3CwCPI1pyxfUQ==}
@@ -17898,8 +17907,8 @@ packages:
   js-cookie@2.2.1:
     resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     version: 1.1.0-formio.2
 
   js-stringify@1.0.2:
@@ -21114,8 +21123,8 @@ packages:
       react: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
       react-dom: ^0.14 || ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0
 
-  react-property@2.0.0:
-    resolution: {integrity: sha512-kzmNjIgU32mO4mmH5+iUyrqlpFQhF8K2k7eZ4fdLSOPFrD1XgEuSBv9LDEgxRXTMBqMd8ppT0x6TIzqE5pdGdw==}
+  react-property@2.0.2:
+    resolution: {integrity: sha512-+PbtI3VuDV0l6CleQMsx2gtK0JZbZKbpdu5ynr+lbsuvtmgbNcS3VM0tuY2QjFNOcWxvXeHjDpy42RO+4U2rug==}
 
   react-refresh@0.14.0:
     resolution: {integrity: sha512-wViHqhAd8OHeLS/IRMJjTSDHF3U9eWi62F/MledQGPdJGDhodXJ9PBLNGr6WWL7qlH12Mt3TyTpbS+hGXMjCzQ==}
@@ -22582,17 +22591,14 @@ packages:
     peerDependencies:
       webpack: ^5.0.0
 
-  style-to-js@1.1.3:
-    resolution: {integrity: sha512-zKI5gN/zb7LS/Vm0eUwjmjrXWw8IMtyA8aPBJZdYiQTXj4+wQ3IucOLIOnF7zCHxvW8UhIGh/uZh/t9zEHXNTQ==}
-
-  style-to-object@0.4.1:
-    resolution: {integrity: sha512-HFpbb5gr2ypci7Qw+IOhnP2zOU7e77b+rzM+wTzXzfi1PrtBCX0E7Pk4wL4iTLnhzZ+JgEGAhX81ebTg/aYjQw==}
+  style-to-js@1.1.16:
+    resolution: {integrity: sha512-/Q6ld50hKYPH3d/r6nr117TZkHR0w0kGGIVfpG9N6D8NymRPM9RqCUv4pRpJ62E5DqOYx2AFpbZMyCPnjQCnOw==}
 
   style-to-object@0.4.4:
     resolution: {integrity: sha512-HYNoHZa2GorYNyqiCaBgsxvcJIn7OHq6inEga+E6Ke3m5JkoqpQbnFssk4jwe+K7AhGa2fcha4wSOf1Kn01dMg==}
 
-  style-to-object@1.0.5:
-    resolution: {integrity: sha512-rDRwHtoDD3UMMrmZ6BzOW0naTjMsVZLIjsGleSKS/0Oz+cgCfAPRspaqJuE8rDzpKha/nEvnM0IF4seEAZUTKQ==}
+  style-to-object@1.0.8:
+    resolution: {integrity: sha512-xT47I/Eo0rwJmaXC4oilDGDWLohVhR6o/xAQcPQN8q6QBuZVL8qMYL85kLmST5cPjAorwvqIA4qXTRQoYHaL6g==}
 
   styled-jsx@5.1.1:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
@@ -29164,7 +29170,7 @@ snapshots:
   '@formio/protected-eval@1.2.2(formiojs@4.13.12(encoding@0.1.13))':
     dependencies:
       formiojs: 4.13.12(encoding@0.1.13)
-      js-interpreter: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
 
@@ -40840,7 +40846,7 @@ snapshots:
       mdast-util-mdxjs-esm: 2.0.1
       property-information: 6.4.0
       space-separated-tokens: 2.0.2
-      style-to-object: 1.0.5
+      style-to-object: 1.0.8
       unist-util-position: 5.0.0
       vfile-message: 4.0.2
     transitivePeerDependencies:
@@ -40944,10 +40950,10 @@ snapshots:
       readable-stream: 2.3.8
       wbuf: 1.7.3
 
-  html-dom-parser@3.1.7:
+  html-dom-parser@5.0.10:
     dependencies:
       domhandler: 5.0.3
-      htmlparser2: 8.0.2
+      htmlparser2: 9.1.0
 
   html-encoding-sniffer@3.0.0:
     dependencies:
@@ -40977,13 +40983,15 @@ snapshots:
       relateurl: 0.2.7
       terser: 5.26.0
 
-  html-react-parser@3.0.16(react@18.3.1):
+  html-react-parser@5.1.18(@types/react@18.3.3)(react@18.3.1):
     dependencies:
       domhandler: 5.0.3
-      html-dom-parser: 3.1.7
+      html-dom-parser: 5.0.10
       react: 18.3.1
-      react-property: 2.0.0
-      style-to-js: 1.1.3
+      react-property: 2.0.2
+      style-to-js: 1.1.16
+    optionalDependencies:
+      '@types/react': 18.3.3
 
   html-tags@3.3.1: {}
 
@@ -41043,6 +41051,13 @@ snapshots:
       entities: 2.2.0
 
   htmlparser2@8.0.2:
+    dependencies:
+      domelementtype: 2.3.0
+      domhandler: 5.0.3
+      domutils: 3.1.0
+      entities: 4.5.0
+
+  htmlparser2@9.1.0:
     dependencies:
       domelementtype: 2.3.0
       domhandler: 5.0.3
@@ -41302,7 +41317,7 @@ snapshots:
 
   inline-style-parser@0.1.1: {}
 
-  inline-style-parser@0.2.2: {}
+  inline-style-parser@0.2.4: {}
 
   inline-style-prefixer@7.0.0:
     dependencies:
@@ -42474,7 +42489,7 @@ snapshots:
 
   js-cookie@2.2.1: {}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
     dependencies:
       acorn: 8.11.2
 
@@ -46800,7 +46815,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  react-property@2.0.0: {}
+  react-property@2.0.2: {}
 
   react-refresh@0.14.0: {}
 
@@ -48746,21 +48761,17 @@ snapshots:
     dependencies:
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
 
-  style-to-js@1.1.3:
+  style-to-js@1.1.16:
     dependencies:
-      style-to-object: 0.4.1
-
-  style-to-object@0.4.1:
-    dependencies:
-      inline-style-parser: 0.1.1
+      style-to-object: 1.0.8
 
   style-to-object@0.4.4:
     dependencies:
       inline-style-parser: 0.1.1
 
-  style-to-object@1.0.5:
+  style-to-object@1.0.8:
     dependencies:
-      inline-style-parser: 0.2.2
+      inline-style-parser: 0.2.4
 
   styled-jsx@5.1.1(@babel/core@7.24.7)(babel-plugin-macros@3.1.0)(react@18.3.1):
     dependencies:
