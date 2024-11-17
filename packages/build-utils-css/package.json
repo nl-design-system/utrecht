@@ -1,0 +1,24 @@
+{
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Utilities for CSS component npm packages",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/build-utils-css",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/css-package"
+  },
+  "bin": {
+    "build-css-package": "./src/index.mjs"
+  },
+  "devDependencies": {
+    "cssnano": "7.0.6",
+    "postcss": "8.4.38",
+    "sass": "1.69.5"
+  }
+}
