@@ -4,7 +4,6 @@ import postcss from 'postcss';
 import * as sass from 'sass';
 import { mergeLicenseComments } from './remove-duplicate-license.mjs';
 import { removeComments } from './remove-comments.mjs';
-// import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 
 const webpackStyleImporter = {
@@ -48,9 +47,6 @@ const buildStyles = async (config) => {
       removeComments({
         keepLicense: true,
       }),
-      //   autoprefixer({
-      //     grid: 'autoplace',
-      //   }),
     ];
 
     // Add minification in production

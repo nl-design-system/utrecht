@@ -15,7 +15,7 @@ import * as ReactDOMServer from 'react-dom/server';
 import { CommunityFigmaBlock, FigmaBlock } from './FigmaBlock';
 import { GitHubBlock } from './GitHubBlock';
 import 'firacode/distr/fira_code.css';
-import '@utrecht/components/index.scss';
+import '@utrecht/component-library-css/src/index.scss';
 import '@utrecht/html-content-css/src/index.scss';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/component-library-design-tokens/dist/property.css';

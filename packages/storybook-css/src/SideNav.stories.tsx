@@ -1,11 +1,11 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/navigatie sidenav/README.md?raw';
-import tokensDefinition from '@utrecht/components/navigatie sidenav/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { SideNav } from './SideNav';
 import { designTokenStory } from './design-token-story';
+import readme from '../../../components/navigatie sidenav/README.md?raw';
+import tokensDefinition from '../../../components/navigatie sidenav/src/tokens.json';
 
 const meta = {
   title: 'CSS Component/Side navigation',

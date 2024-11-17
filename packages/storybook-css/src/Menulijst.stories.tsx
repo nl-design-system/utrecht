@@ -1,11 +1,11 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/menulijst/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { Menulijst } from './Menulijst';
 import { designTokenStory } from './design-token-story';
+import readme from '../../../components/menulijst/README.md?raw';
 
 const meta = {
   title: 'CSS Component/Menulijst',

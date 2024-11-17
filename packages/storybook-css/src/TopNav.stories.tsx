@@ -1,14 +1,14 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/navigatie topnav/README.md?raw';
-import tokensDefinition from '@utrecht/components/navigatie topnav/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import clsx from 'clsx';
 import React from 'react';
 import { TopNav, TopNavItem, TopNavLink } from './TopNav';
 import type { TopNavLinkProps, TopNavProps } from './TopNav';
 import { designTokenStory } from './design-token-story';
+import readme from '../../../components/navigatie topnav/README.md?raw';
+import tokensDefinition from '../../../components/navigatie topnav/src/tokens.json';
 
 interface TopNavStoryProps extends TopNavProps {
   links: (TopNavLinkProps & { focus?: boolean; focusVisible?: boolean; hover?: boolean })[];

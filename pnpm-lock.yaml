@@ -113,292 +113,6 @@ importers:
         specifier: 4.9.5
         version: 4.9.5
 
-  components:
-    dependencies:
-      clsx:
-        specifier: 2.1.1
-        version: 2.1.1
-    devDependencies:
-      '@babel/core':
-        specifier: 7.24.7
-        version: 7.24.7
-      '@mdx-js/react':
-        specifier: 2.3.0
-        version: 2.3.0(react@18.3.1)
-      '@nl-design-system-unstable/documentation':
-        specifier: 0.0.2-alpha.94
-        version: 0.0.2-alpha.94
-      '@stencil/core':
-        specifier: 2.22.3
-        version: 2.22.3
-      '@storybook/blocks':
-        specifier: 7.6.4
-        version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@utrecht/accordion-css':
-        specifier: workspace:*
-        version: link:accordion
-      '@utrecht/alert-dialog-css':
-        specifier: workspace:*
-        version: link:alert-dialog
-      '@utrecht/alternate-lang-nav-css':
-        specifier: workspace:*
-        version: link:alternate-lang-nav
-      '@utrecht/article-css':
-        specifier: workspace:*
-        version: link:article
-      '@utrecht/backdrop-css':
-        specifier: workspace:*
-        version: link:backdrop
-      '@utrecht/badge-counter-css':
-        specifier: workspace:*
-        version: link:badge-counter
-      '@utrecht/badge-data-css':
-        specifier: workspace:*
-        version: link:badge-data
-      '@utrecht/badge-list-css':
-        specifier: workspace:*
-        version: link:badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:badge-status
-      '@utrecht/blockquote-css':
-        specifier: workspace:*
-        version: link:blockquote
-      '@utrecht/breadcrumb-nav-css':
-        specifier: workspace:*
-        version: link:breadcrumb-nav
-      '@utrecht/build-utils-css':
-        specifier: workspace:*
-        version: link:../packages/build-utils-css
-      '@utrecht/button-css':
-        specifier: workspace:*
-        version: link:button
-      '@utrecht/button-group-css':
-        specifier: workspace:*
-        version: link:button-group
-      '@utrecht/button-link-css':
-        specifier: workspace:*
-        version: link:button-link
-      '@utrecht/calendar-css':
-        specifier: workspace:*
-        version: link:calendar
-      '@utrecht/checkbox-css':
-        specifier: workspace:*
-        version: link:checkbox
-      '@utrecht/code-block-css':
-        specifier: workspace:*
-        version: link:code-block
-      '@utrecht/color-sample-css':
-        specifier: workspace:*
-        version: link:color-sample
-      '@utrecht/column-layout-css':
-        specifier: workspace:*
-        version: link:column-layout
-      '@utrecht/combobox-css':
-        specifier: workspace:*
-        version: link:combobox
-      '@utrecht/currency-data-css':
-        specifier: workspace:*
-        version: link:currency-data
-      '@utrecht/custom-checkbox-css':
-        specifier: workspace:*
-        version: link:custom-checkbox
-      '@utrecht/data-list-css':
-        specifier: workspace:*
-        version: link:data-list
-      '@utrecht/data-placeholder-css':
-        specifier: workspace:*
-        version: link:data-placeholder
-      '@utrecht/digid-button-css':
-        specifier: workspace:*
-        version: link:digid-button
-      '@utrecht/document-css':
-        specifier: workspace:*
-        version: link:document
-      '@utrecht/drawer-css':
-        specifier: workspace:*
-        version: link:drawer
-      '@utrecht/emphasis-css':
-        specifier: workspace:*
-        version: link:emphasis
-      '@utrecht/form-field-css':
-        specifier: workspace:*
-        version: link:form-field
-      '@utrecht/form-field-description-css':
-        specifier: workspace:*
-        version: link:form-field-description
-      '@utrecht/form-field-error-message-css':
-        specifier: workspace:*
-        version: link:form-field-error-message
-      '@utrecht/form-fieldset-css':
-        specifier: workspace:*
-        version: link:form-fieldset
-      '@utrecht/form-label-css':
-        specifier: workspace:*
-        version: link:form-label
-      '@utrecht/form-toggle-css':
-        specifier: workspace:*
-        version: link:form-toggle
-      '@utrecht/heading-1-css':
-        specifier: workspace:*
-        version: link:heading-1
-      '@utrecht/heading-2-css':
-        specifier: workspace:*
-        version: link:heading-2
-      '@utrecht/heading-3-css':
-        specifier: workspace:*
-        version: link:heading-3
-      '@utrecht/heading-4-css':
-        specifier: workspace:*
-        version: link:heading-4
-      '@utrecht/heading-5-css':
-        specifier: workspace:*
-        version: link:heading-5
-      '@utrecht/heading-6-css':
-        specifier: workspace:*
-        version: link:heading-6
-      '@utrecht/heading-group-css':
-        specifier: workspace:*
-        version: link:heading-group
-      '@utrecht/html-content-css':
-        specifier: workspace:*
-        version: link:html-content
-      '@utrecht/iban-data-css':
-        specifier: workspace:*
-        version: link:iban-data
-      '@utrecht/icon':
-        specifier: workspace:*
-        version: link:icon
-      '@utrecht/index-char-nav-css':
-        specifier: workspace:*
-        version: link:index-char-nav
-      '@utrecht/link-button-css':
-        specifier: workspace:*
-        version: link:link-button
-      '@utrecht/link-list-css':
-        specifier: workspace:*
-        version: link:link-list
-      '@utrecht/link-social-css':
-        specifier: workspace:*
-        version: link:link-social
-      '@utrecht/list-social-css':
-        specifier: workspace:*
-        version: link:list-social
-      '@utrecht/listbox-css':
-        specifier: workspace:*
-        version: link:listbox
-      '@utrecht/logo-button-css':
-        specifier: workspace:*
-        version: link:logo-button
-      '@utrecht/logo-image-css':
-        specifier: workspace:*
-        version: link:logo-image
-      '@utrecht/map-control-button-css':
-        specifier: workspace:*
-        version: link:mapcontrolbutton
-      '@utrecht/map-marker-css':
-        specifier: workspace:*
-        version: link:map-marker
-      '@utrecht/multiline-data-css':
-        specifier: workspace:*
-        version: link:multiline-data
-      '@utrecht/nav-bar-css':
-        specifier: workspace:*
-        version: link:nav-bar
-      '@utrecht/nav-list-css':
-        specifier: workspace:*
-        version: link:nav-list
-      '@utrecht/number-badge-css':
-        specifier: workspace:*
-        version: link:number-badge
-      '@utrecht/number-data-css':
-        specifier: workspace:*
-        version: link:number-data
-      '@utrecht/ordered-list-css':
-        specifier: workspace:*
-        version: link:ordered-list
-      '@utrecht/page-content-css':
-        specifier: workspace:*
-        version: link:page-content
-      '@utrecht/page-footer-css':
-        specifier: workspace:*
-        version: link:page-footer
-      '@utrecht/page-header-css':
-        specifier: workspace:*
-        version: link:page-header
-      '@utrecht/pagination-css':
-        specifier: workspace:*
-        version: link:pagination
-      '@utrecht/paragraph-css':
-        specifier: workspace:*
-        version: link:paragraph
-      '@utrecht/pre-heading-css':
-        specifier: workspace:*
-        version: link:pre-heading
-      '@utrecht/preserve-data-css':
-        specifier: workspace:*
-        version: link:preserve-data
-      '@utrecht/radio-button-css':
-        specifier: workspace:*
-        version: link:radio-button
-      '@utrecht/search-bar-css':
-        specifier: workspace:*
-        version: link:search-bar
-      '@utrecht/separator-css':
-        specifier: workspace:*
-        version: link:separator
-      '@utrecht/skip-link-css':
-        specifier: workspace:*
-        version: link:skip-link
-      '@utrecht/spotlight-section-css':
-        specifier: workspace:*
-        version: link:spotlight-section
-      '@utrecht/surface-css':
-        specifier: workspace:*
-        version: link:surface
-      '@utrecht/textarea-css':
-        specifier: workspace:*
-        version: link:textarea
-      '@utrecht/textbox-css':
-        specifier: workspace:*
-        version: link:textbox
-      '@utrecht/top-task-link-css':
-        specifier: workspace:*
-        version: link:toptask-link
-      '@utrecht/top-task-nav-css':
-        specifier: workspace:*
-        version: link:toptask-nav
-      '@utrecht/unordered-list-css':
-        specifier: workspace:*
-        version: link:unordered-list
-      '@utrecht/url-data-css':
-        specifier: workspace:*
-        version: link:url-data
-      html-react-parser:
-        specifier: 3.0.16
-        version: 3.0.16(react@18.3.1)
-      postcss-discard-duplicates:
-        specifier: 7.0.0
-        version: 7.0.0(postcss@8.4.38)
-      react:
-        specifier: 18.3.1
-        version: 18.3.1
-      react-dom:
-        specifier: 18.3.1
-        version: 18.3.1(react@18.3.1)
-      rimraf:
-        specifier: 5.0.7
-        version: 5.0.7
-      rollup-plugin-postcss:
-        specifier: 4.0.2
-        version: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@4.9.5))
-      typescript:
-        specifier: 4.9.5
-        version: 4.9.5
-      webpack:
-        specifier: 5.89.0
-        version: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
-
   components/accordion:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -1427,15 +1141,282 @@ importers:
 
   packages/component-library-css:
     devDependencies:
+      '@utrecht/accordion-css':
+        specifier: workspace:*
+        version: link:../../components/accordion
+      '@utrecht/alert-css':
+        specifier: workspace:*
+        version: link:../../components/alert
+      '@utrecht/alert-dialog-css':
+        specifier: workspace:*
+        version: link:../../components/alert-dialog
+      '@utrecht/alternate-lang-nav-css':
+        specifier: workspace:*
+        version: link:../../components/alternate-lang-nav
+      '@utrecht/article-css':
+        specifier: workspace:*
+        version: link:../../components/article
+      '@utrecht/backdrop-css':
+        specifier: workspace:*
+        version: link:../../components/backdrop
+      '@utrecht/badge-counter-css':
+        specifier: workspace:*
+        version: link:../../components/badge-counter
+      '@utrecht/badge-data-css':
+        specifier: workspace:*
+        version: link:../../components/badge-data
+      '@utrecht/badge-list-css':
+        specifier: workspace:*
+        version: link:../../components/badge-list
+      '@utrecht/badge-status-css':
+        specifier: workspace:*
+        version: link:../../components/badge-status
+      '@utrecht/blockquote-css':
+        specifier: workspace:*
+        version: link:../../components/blockquote
+      '@utrecht/breadcrumb-nav-css':
+        specifier: workspace:*
+        version: link:../../components/breadcrumb-nav
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../build-utils-css
-      '@utrecht/components':
+      '@utrecht/button-css':
         specifier: workspace:*
-        version: link:../../components
+        version: link:../../components/button
+      '@utrecht/button-group-css':
+        specifier: workspace:*
+        version: link:../../components/button-group
+      '@utrecht/button-link-css':
+        specifier: workspace:*
+        version: link:../../components/button-link
+      '@utrecht/calendar-css':
+        specifier: workspace:*
+        version: link:../../components/calendar
+      '@utrecht/checkbox-css':
+        specifier: workspace:*
+        version: link:../../components/checkbox
+      '@utrecht/code-block-css':
+        specifier: workspace:*
+        version: link:../../components/code-block
+      '@utrecht/code-css':
+        specifier: workspace:*
+        version: link:../../components/code
+      '@utrecht/color-sample-css':
+        specifier: workspace:*
+        version: link:../../components/color-sample
+      '@utrecht/column-layout-css':
+        specifier: workspace:*
+        version: link:../../components/column-layout
+      '@utrecht/combobox-css':
+        specifier: workspace:*
+        version: link:../../components/combobox
+      '@utrecht/currency-data-css':
+        specifier: workspace:*
+        version: link:../../components/currency-data
+      '@utrecht/custom-checkbox-css':
+        specifier: workspace:*
+        version: link:../../components/custom-checkbox
+      '@utrecht/data-list-css':
+        specifier: workspace:*
+        version: link:../../components/data-list
+      '@utrecht/data-placeholder-css':
+        specifier: workspace:*
+        version: link:../../components/data-placeholder
+      '@utrecht/digid-button-css':
+        specifier: workspace:*
+        version: link:../../components/digid-button
+      '@utrecht/document-css':
+        specifier: workspace:*
+        version: link:../../components/document
+      '@utrecht/drawer-css':
+        specifier: workspace:*
+        version: link:../../components/drawer
+      '@utrecht/emphasis-css':
+        specifier: workspace:*
+        version: link:../../components/emphasis
+      '@utrecht/figure-css':
+        specifier: workspace:*
+        version: link:../../components/figure
+      '@utrecht/form-css':
+        specifier: workspace:*
+        version: link:../../components/form
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:../../components/form-field
+      '@utrecht/form-field-description-css':
+        specifier: workspace:*
+        version: link:../../components/form-field-description
+      '@utrecht/form-field-error-message-css':
+        specifier: workspace:*
+        version: link:../../components/form-field-error-message
+      '@utrecht/form-fieldset-css':
+        specifier: workspace:*
+        version: link:../../components/form-fieldset
+      '@utrecht/form-label-css':
+        specifier: workspace:*
+        version: link:../../components/form-label
+      '@utrecht/form-toggle-css':
+        specifier: workspace:*
+        version: link:../../components/form-toggle
+      '@utrecht/heading-1-css':
+        specifier: workspace:*
+        version: link:../../components/heading-1
+      '@utrecht/heading-2-css':
+        specifier: workspace:*
+        version: link:../../components/heading-2
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:../../components/heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:../../components/heading-4
+      '@utrecht/heading-5-css':
+        specifier: workspace:*
+        version: link:../../components/heading-5
+      '@utrecht/heading-6-css':
+        specifier: workspace:*
+        version: link:../../components/heading-6
+      '@utrecht/heading-group-css':
+        specifier: workspace:*
+        version: link:../../components/heading-group
       '@utrecht/html-content-css':
         specifier: workspace:*
         version: link:../../components/html-content
+      '@utrecht/iban-data-css':
+        specifier: workspace:*
+        version: link:../../components/iban-data
+      '@utrecht/icon':
+        specifier: workspace:*
+        version: link:../../components/icon
+      '@utrecht/img-css':
+        specifier: workspace:*
+        version: link:../../components/img
+      '@utrecht/index-char-nav-css':
+        specifier: workspace:*
+        version: link:../../components/index-char-nav
+      '@utrecht/link-button-css':
+        specifier: workspace:*
+        version: link:../../components/link-button
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../../components/link
+      '@utrecht/link-list-css':
+        specifier: workspace:*
+        version: link:../../components/link-list
+      '@utrecht/link-social-css':
+        specifier: workspace:*
+        version: link:../../components/link-social
+      '@utrecht/list-social-css':
+        specifier: workspace:*
+        version: link:../../components/list-social
+      '@utrecht/listbox-css':
+        specifier: workspace:*
+        version: link:../../components/listbox
+      '@utrecht/logo-button-css':
+        specifier: workspace:*
+        version: link:../../components/logo-button
+      '@utrecht/logo-css':
+        specifier: workspace:*
+        version: link:../../components/logo
+      '@utrecht/logo-image-css':
+        specifier: workspace:*
+        version: link:../../components/logo-image
+      '@utrecht/map-marker-css':
+        specifier: workspace:*
+        version: link:../../components/map-marker
+      '@utrecht/mark-css':
+        specifier: workspace:*
+        version: link:../../components/mark
+      '@utrecht/multiline-data-css':
+        specifier: workspace:*
+        version: link:../../components/multiline-data
+      '@utrecht/nav-bar-css':
+        specifier: workspace:*
+        version: link:../../components/nav-bar
+      '@utrecht/nav-list-css':
+        specifier: workspace:*
+        version: link:../../components/nav-list
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
+      '@utrecht/number-data-css':
+        specifier: workspace:*
+        version: link:../../components/number-data
+      '@utrecht/ordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/ordered-list
+      '@utrecht/page-content-css':
+        specifier: workspace:*
+        version: link:../../components/page-content
+      '@utrecht/page-css':
+        specifier: workspace:*
+        version: link:../../components/page
+      '@utrecht/page-footer-css':
+        specifier: workspace:*
+        version: link:../../components/page-footer
+      '@utrecht/page-header-css':
+        specifier: workspace:*
+        version: link:../../components/page-header
+      '@utrecht/pagination-css':
+        specifier: workspace:*
+        version: link:../../components/pagination
+      '@utrecht/paragraph-css':
+        specifier: workspace:*
+        version: link:../../components/paragraph
+      '@utrecht/pre-heading-css':
+        specifier: workspace:*
+        version: link:../../components/pre-heading
+      '@utrecht/preserve-data-css':
+        specifier: workspace:*
+        version: link:../../components/preserve-data
+      '@utrecht/radio-button-css':
+        specifier: workspace:*
+        version: link:../../components/radio-button
+      '@utrecht/rich-text-css':
+        specifier: workspace:*
+        version: link:../../components/rich-text
+      '@utrecht/search-bar-css':
+        specifier: workspace:*
+        version: link:../../components/search-bar
+      '@utrecht/select-css':
+        specifier: workspace:*
+        version: link:../../components/select
+      '@utrecht/separator-css':
+        specifier: workspace:*
+        version: link:../../components/separator
+      '@utrecht/skip-link-css':
+        specifier: workspace:*
+        version: link:../../components/skip-link
+      '@utrecht/spotlight-section-css':
+        specifier: workspace:*
+        version: link:../../components/spotlight-section
+      '@utrecht/surface-css':
+        specifier: workspace:*
+        version: link:../../components/surface
+      '@utrecht/table-css':
+        specifier: workspace:*
+        version: link:../../components/table
+      '@utrecht/table-of-contents-css':
+        specifier: workspace:*
+        version: link:../../components/table-of-contents
+      '@utrecht/textarea-css':
+        specifier: workspace:*
+        version: link:../../components/textarea
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:../../components/textbox
+      '@utrecht/top-task-link-css':
+        specifier: workspace:*
+        version: link:../../components/toptask-link
+      '@utrecht/top-task-nav-css':
+        specifier: workspace:*
+        version: link:../../components/toptask-nav
+      '@utrecht/unordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/unordered-list
+      '@utrecht/url-data-css':
+        specifier: workspace:*
+        version: link:../../components/url-data
       postcss:
         specifier: 8.4.38
         version: 8.4.38
@@ -3875,9 +3856,6 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -4037,9 +4015,6 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -4469,9 +4444,6 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/data-list-css':
         specifier: workspace:*
         version: link:../../components/data-list
@@ -4895,9 +4867,6 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
@@ -5414,9 +5383,6 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/currency-data-css':
         specifier: workspace:*
         version: link:../../components/currency-data
@@ -5768,9 +5734,6 @@ importers:
       '@utrecht/component-library-vue':
         specifier: workspace:*
         version: link:../component-library-vue
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/data-list-css':
         specifier: workspace:*
         version: link:../../components/data-list
@@ -6083,9 +6046,6 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/custom-checkbox-css':
         specifier: workspace:*
         version: link:../../components/custom-checkbox
@@ -6509,9 +6469,6 @@ importers:
       '@utrecht/column-layout-css':
         specifier: workspace:*
         version: link:../../components/column-layout
-      '@utrecht/components':
-        specifier: workspace:*
-        version: link:../../components
       '@utrecht/custom-checkbox-css':
         specifier: workspace:*
         version: link:../../components/custom-checkbox
@@ -11173,11 +11130,6 @@ packages:
     peerDependencies:
       '@stencil/core': '>=2.0.0 || >=3 || >= 4.0.0-beta.0 || >= 4.0.0'
 
-  '@stencil/core@2.22.3':
-    resolution: {integrity: sha512-kmVA0M/HojwsfkeHsifvHVIYe4l5tin7J5+DLgtl8h6WWfiMClND5K3ifCXXI2ETDNKiEk21p6jql3Fx9o2rng==}
-    engines: {node: '>=12.10.0', npm: '>=6.0.0'}
-    hasBin: true
-
   '@stencil/core@4.18.3':
     resolution: {integrity: sha512-8yoG5AFQYEPocVtuoc5kvRS0Hku0MoDWDUpADRaXPVHsOFLmxR16LJENj25ucCz5GEfeTGQ/tCE8JAypPmr/fQ==}
     engines: {node: '>=16.0.0', npm: '>=7.10.0'}
@@ -15679,11 +15631,13 @@ packages:
   eslint@7.32.0:
     resolution: {integrity: sha512-VHZ8gX+EDfz+97jGcgyGCyRia/dPOd6Xh9yPv8Bl1+SoaIwD+a/vlrOmGRUyOYu7MwUhc7CxqeaDZU13S4+EpA==}
     engines: {node: ^10.12.0 || >=12.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   eslint@8.57.0:
     resolution: {integrity: sha512-dZ6+mexnaTIbSBZWgou51U6OmzIhYM2VcNdtiTtI7qPNZm35Akpr0f6vtw3w1Kmn5PYo+tZVfh13WrhpS6oLqQ==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
 
   espree@7.3.1:
@@ -31969,8 +31923,6 @@ snapshots:
     dependencies:
       '@stencil/core': 4.18.3(patch_hash=2uvgqe4jn7qcxz7vmflpioblbi)
 
-  '@stencil/core@2.22.3': {}
-
   '@stencil/core@4.18.3(patch_hash=2uvgqe4jn7qcxz7vmflpioblbi)': {}
 
   '@stencil/react-output-target@0.5.3(@stencil/core@4.18.3(patch_hash=2uvgqe4jn7qcxz7vmflpioblbi))':
@@ -45843,14 +45795,6 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
-  postcss-load-config@3.1.4(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@4.9.5)):
-    dependencies:
-      lilconfig: 2.1.0
-      yaml: 1.10.2
-    optionalDependencies:
-      postcss: 8.4.38
-      ts-node: 10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@4.9.5)
-
   postcss-load-config@3.1.4(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2)):
     dependencies:
       lilconfig: 2.1.0
@@ -47593,25 +47537,6 @@ snapshots:
   rollup-plugin-peer-deps-external@2.2.4(rollup@4.23.0):
     dependencies:
       rollup: 4.23.0
-
-  rollup-plugin-postcss@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@4.9.5)):
-    dependencies:
-      chalk: 4.1.2
-      concat-with-sourcemaps: 1.1.0
-      cssnano: 5.1.15(postcss@8.4.38)
-      import-cwd: 3.0.0
-      p-queue: 6.6.2
-      pify: 5.0.0
-      postcss: 8.4.38
-      postcss-load-config: 3.1.4(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@4.9.5))
-      postcss-modules: 4.3.1(postcss@8.4.38)
-      promise.series: 0.2.0
-      resolve: 1.22.8
-      rollup-pluginutils: 2.8.2
-      safe-identifier: 0.4.2
-      style-inject: 0.3.0
-    transitivePeerDependencies:
-      - ts-node
 
   rollup-plugin-postcss@4.0.2(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2)):
     dependencies:
