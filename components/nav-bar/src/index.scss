@@ -8,6 +8,7 @@
   background-color: var(--utrecht-nav-bar-background-color);
   color: var(--utrecht-nav-bar-color);
   display: flex;
+  inline-size: 100%;
   justify-content: center;
 
   @media screen and (-ms-high-contrast: active), screen and (forced-colors: active) {
