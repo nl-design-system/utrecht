@@ -1,5 +1,11 @@
 # @utrecht/accordion-css
 
+## 1.5.0
+
+### Minor Changes
+
+- e497b08: Export CSS string as default export in `dist/index.mjs`.
+
 ## 1.4.0
 
 ### Minor Changes

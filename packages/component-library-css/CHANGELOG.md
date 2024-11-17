@@ -1,5 +1,11 @@
 # @utrecht/component-library-css
 
+## 7.0.0
+
+### Major Changes
+
+- 513cf8d: Remove the following (rarely used) components: map control button, menulijst, topnav.
+
 ## 6.1.0
 
 ### Minor Changes
