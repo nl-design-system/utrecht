@@ -1,5 +1,11 @@
 # @utrecht/alternate-lang-nav-css
 
+## 1.2.0
+
+### Minor Changes
+
+- e497b08: Export CSS string as default export in `dist/index.mjs`.
+
 ## 1.1.0
 
 ### Minor Changes

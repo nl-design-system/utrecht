@@ -1,5 +1,11 @@
 # @utrecht/form-field-error-message-css
 
+## 1.4.0
+
+### Minor Changes
+
+- e497b08: Export CSS string as default export in `dist/index.mjs`.
+
 ## 1.3.1
 
 ### Patch Changes

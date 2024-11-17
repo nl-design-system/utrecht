@@ -1,5 +1,11 @@
 # @utrecht/color-sample-css
 
+## 1.3.0
+
+### Minor Changes
+
+- e497b08: Export CSS string as default export in `dist/index.mjs`.
+
 ## 1.2.2
 
 ### Patch Changes
