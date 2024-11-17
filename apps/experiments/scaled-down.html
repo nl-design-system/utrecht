@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utrecht-theme.css" />
+    <link rel="stylesheet" href="purmerend-theme.css" />
+    <link rel="stylesheet" href="amsterdam-theme.css" />
+    <link rel="stylesheet" href="rijkshuisstijl-theme.css" />
+    <link rel="stylesheet" href="rods-theme.css" />
+    <link rel="stylesheet" href="slideshow.css" />
+    <!-- <link rel="stylesheet" href="dist/theme.css" /> -->
+    <link rel="stylesheet" href="../../components/index.css" />
+    <link rel="stylesheet" href="../../components/root/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@amsterdam/design-system-tokens@0.13.0/dist/index.css" />
+    <script type="module">
+      import { defineCustomElements } from '../../packages/web-component-library-stencil/loader/index.js';
+      defineCustomElements();
+    </script>
+  </head>
+  <body class="example-docs-page">
+    <h1>Voorbeelden</h1>
+    <h2>Interactief</h2>
+    <div class="example-small-root">
+      <div class="example-small-root__contents">
+        <render-template ref="foo" class="utrecht-theme theme-container"></render-template>
+      </div>
+    </div>
+    <h2>Utrecht</h2>
+    <div class="example-small-root">
+      <div class="example-small-root__contents" inert aria-hidden="true" role="image">
+        <render-template ref="foo" class="utrecht-theme theme-container"></render-template>
+      </div>
+    </div>
+    <h2>Purmerend</h2>
+    <div class="example-small-root">
+      <div class="example-small-root__contents" inert aria-hidden="true" role="image">
+        <render-template ref="foo" class="purmerend-theme theme-container"></render-template>
+      </div>
+    </div>
+    <h2>Rotterdam</h2>
+    <div class="example-small-root" inert aria-hidden="true" role="image">
+      <div class="example-small-root__contents">
+        <render-template ref="foo" class="rods-theme theme-container"></render-template>
+      </div>
+    </div>
+    <h2>Rijkshuisstijl</h2>
+    <div class="example-small-root" inert aria-hidden="true" role="image">
+      <div class="example-small-root__contents">
+        <render-template ref="foo" class="rijkshuisstijl-theme theme-container"></render-template>
+      </div>
+    </div>
+    <h2>Amsterdam</h2>
+    <div class="example-small-root" inert aria-hidden="true" role="image">
+      <div class="example-small-root__contents">
+        <render-template ref="foo" class="ams-theme theme-container"></render-template>
+      </div>
+    </div>
+    <script src="theme.mjs" type="module"></script>
+    <template id="foo">
+      <div class="utrecht-root">
+        <div class="utrecht-page-layout">
+          <div class="utrecht-page-header">
+            <div class="utrecht-page-header__content">
+              <div class="utrecht-logo">
+                <div class="example-image-slides">
+                  <div class="example-image-slides__slide utrecht-logo-image">
+                    <img src="utrecht-logo.svg" />
+                  </div>
+                  <div class="example-image-slides__slide purmerend-logo-image">
+                    <img src="purmerend-logo.svg" />
+                  </div>
+                  <div class="example-image-slides__slide ams-logo-image">
+                    <img src="ams-logo.svg" />
+                  </div>
+                  <div class="example-image-slides__slide rods-logo-image">
+                    <img src="rods-logo.svg" />
+                  </div>
+                  <div class="example-image-slides__slide rijkshuisstijl-logo-image">
+                    <img src="rijkshuisstijl-logo.svg" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="utrecht-nav-bar">
+            <div class="utrecht-nav-bar__content">nav bar</div>
+          </div>
+          <div class="utrecht-page-content">
+            <div class="utrecht-page-content__content">
+              <div class="utrecht-text-content">
+                <div class="utrecht-html">
+                  <h1>Wij doen mee met NL Design System</h1>
+                  <p>
+                    Met een actieve community van specialisten verzamelen we de beste richtlijnen, componenten en
+                    voorbeelden om robuuste websites en webapplicaties voor de digitale overheid te bouwen.
+                  </p>
+                  <p>
+                    NL Design System helpt om toegankelijk, inclusief en gebruiksvriendelijk ontwikkelen makkelijk te
+                    maken.
+                  </p>
+
+                  <ul>
+                    <li>Gebouwd en gebruikt door de community (voor en door de overheid).</li>
+                    <li>Platformonafhankelijk en voor iedere huisstijl.</li>
+                    <li>Uitbreidbaar en publiek beschikbaar.</li>
+                    <li>Lees de NL Design System introductie</li>
+                  </ul>
+                  <details>
+                    <summary>Lorem ipsum in al zijn glorie</summary>
+                    <utrecht-column-layout>
+                      <div>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                        <p>
+                          Nulla nulla quis qui cum nisi eum. Exercitationem laudantium dolores magnam unde sapiente. Et
+                          ut doloremque omnis eos impedit inventore dignissimos excepturi. Ut nihil deleniti non aut
+                          adipisci quisquam dolor et.
+                        </p>
+                        <p>
+                          Earum est neque doloremque eveniet et ipsum. Quia autem et laudantium nihil saepe sunt.
+                          Occaecati quia assumenda nostrum eligendi qui suscipit voluptatum magni. Rerum doloremque
+                          exercitationem non quae. Exercitationem et voluptas excepturi odit sed ut ratione.
+                        </p>
+                        <p>
+                          Et excepturi illum nisi. Officia harum rerum distinctio qui dolorem sequi quaerat dicta. Sunt
+                          at harum alias hic voluptatibus laborum ratione.
+                        </p>
+                        <p>
+                          Ut ipsam corporis aut reprehenderit voluptas. Commodi ex quisquam illum maiores recusandae.
+                          Iure rerum omnis eum. Excepturi in et impedit perferendis. Et aut sed nihil nulla nam in
+                          molestias.
+                        </p>
+                        <p>
+                          Nam eligendi sunt necessitatibus sed totam et. Aperiam maxime magni assumenda et incidunt
+                          explicabo fugit aut. Ipsa consequatur distinctio eaque vitae. Quo laudantium quis sed itaque
+                          velit nesciunt est optio. Ut cumque numquam mollitia quia ullam alias.
+                        </p>
+                      </div></utrecht-column-layout
+                    >
+                  </details>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="utrecht-page-footer">
+            <div class="utrecht-page-footer__content">
+              <utrecht-column-layout>
+                <!--
+            <ul class="utrecht-link-list">
+              <li class="utrecht-link-list__item">
+                <a href="utrecht.html?theme=utrecht-theme">Utrecht</a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a href="utrecht.html?theme=purmerend-theme">Purmerend</a>
+              </li>
+            </ul>
+            -->
+                <utrecht-button-group>
+                  <button type="button" rel="theme" onclick="setTheme('purmerend-theme', this)">
+                    Purmerend <utrecht-code>⌥1</utrecht-code>
+                  </button>
+                  <button type="button" rel="theme" onclick="setTheme('utrecht-theme', this)">
+                    Utrecht <utrecht-code>⌥2</utrecht-code>
+                  </button>
+                  <button type="button" rel="theme" onclick="setTheme('ams-theme', this)">
+                    Amsterdam <utrecht-code>⌥3</utrecht-code>
+                  </button>
+                  <button type="button" rel="theme" onclick="setTheme('rijkshuisstijl-theme', this)">
+                    Rijkshuisstijl <utrecht-code>⌥4</utrecht-code>
+                  </button>
+                  <button type="button" rel="theme" onclick="setTheme('rods-theme', this)">
+                    Rotterdam <utrecht-code>⌥5</utrecht-code>
+                  </button>
+                  <utrecht-button onclick="setTheme('utrecht-theme', this)">Utrecht</utrecht-button>
+                  <utrecht-button onclick="document.getElementById('drawer').showModal()"
+                    >Open drawer</utrecht-button
+                  ></utrecht-button-group
+                ></utrecht-column-layout
+              >
+            </div>
+          </div>
+          <!--
+        <utrecht-drawer align="inline-start" id="drawer">
+          <h2>Hello world</h2>
+          <form>
+            <utrecht-form-field-textbox label="Kleur"></utrecht-form-field-textbox>
+          </form>
+        </utrecht-drawer>
+        --></div>
+      </div>
+    </template>
+  </body>
+</html>

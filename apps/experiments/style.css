@@ -1,0 +1,185 @@
+* {
+  transition: 400ms ease-in-out all;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition-duration: 0ms;
+  }
+}
+
+.utrecht-body {
+  align-items: flex-start;
+  block-size: 100%;
+  margin-block-end: 0;
+  margin-block-start: 0;
+
+  /* reset `<body>` styles for `margin` and `padding` */
+
+  /*  display: flex; */
+
+  /*  flex-direction: column;
+  justify-content: flex-start; */
+  margin-inline-end: 0;
+  margin-inline-start: 0;
+  min-block-size: 100vb;
+  padding-block: 0;
+}
+
+.utrecht-page-layout {
+  align-items: flex-start;
+  block-size: 100%;
+  display: flex;
+  flex-direction: column;
+  inline-size: 100%;
+  justify-content: flex-start;
+}
+
+*[hidden] {
+  display: none !important;
+}
+
+.utrecht-page-header {
+  background-color: var(--utrecht-page-header-background-color);
+  border-block-end-color: var(--utrecht-page-header-border-block-end-color, currentColor);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-page-header-border-block-end-width, 0);
+  box-sizing: border-box;
+  color: var(--utrecht-page-header-color);
+  display: flex;
+  inline-size: 100%;
+  justify-content: center;
+}
+
+.utrecht-page-header__content {
+  background-color: var(--utrecht-page-header-content-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-page-header-content-color);
+  inline-size: 100%;
+  max-inline-size: var(--utrecht-page-header-content-max-inline-size);
+  padding-block-end: var(--utrecht-page-header-content-padding-block-end);
+  padding-block-start: var(--utrecht-page-header-content-padding-block-start);
+  padding-inline: var(--utrecht-page-header-content-padding-inline);
+}
+
+.utrecht-nav-bar {
+  background-color: var(--utrecht-nav-bar-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-nav-bar-color);
+  display: flex;
+  inline-size: 100%;
+  justify-content: center;
+  min-block-size: 44px;
+}
+
+.utrecht-nav-bar__content {
+  background-color: var(--utrecht-nav-bar-content-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-nav-bar-content-color);
+  inline-size: 100%;
+  max-inline-size: var(--utrecht-nav-bar-content-max-inline-size);
+}
+
+.utrecht-page-content {
+  background-color: var(--utrecht-page-content-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-page-content-color);
+  display: flex;
+  flex-grow: 1;
+  inline-size: 100%;
+  justify-content: center;
+}
+
+.utrecht-page-content__content {
+  background-color: var(--utrecht-page-content-content-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-page-content-content-color);
+  inline-size: 100%;
+  max-inline-size: var(--utrecht-page-content-content-max-inline-size);
+  padding-inline: var(--utrecht-page-content-content-padding-inline);
+}
+
+.utrecht-page-footer {
+  background-color: var(--utrecht-page-footer-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-page-footer-color);
+  display: flex;
+  inline-size: 100%;
+  justify-content: center;
+}
+
+.utrecht-page-footer__content {
+  background-color: var(--utrecht-page-footer-content-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-page-footer-content-color);
+  inline-size: 100%;
+  max-inline-size: var(--utrecht-page-footer-content-max-inline-size);
+  padding-block-end: var(--utrecht-page-footer-content-padding-block-end);
+  padding-block-start: var(--utrecht-page-footer-content-padding-block-start);
+  padding-inline: var(--utrecht-page-footer-content-padding-inline);
+}
+
+.utrecht-text-content {
+  /* TODO: calculate based on font-family and font-size */
+  max-inline-size: 60em;
+}
+
+/* 
+.utrecht-fade > * {
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0;
+} */
+
+.example-optional-logo {
+  display: none;
+}
+
+.utrecht-logo {
+  block-size: 100%;
+}
+
+.utrecht-theme .utrecht-logo-image,
+.purmerend-theme .purmerend-logo-image,
+.ams-theme .ams-logo-image,
+.rods-theme .rods-logo-image,
+.rijkshuisstijl-theme .rijkshuisstijl-logo-image {
+  opacity: 100%;
+}
+
+.rijkshuisstijl-theme .utrecht-logo {
+  margin-inline-end: auto;
+  margin-inline-start: auto;
+}
+
+.purmerend-theme .utrecht-logo {
+  margin-inline-end: 0;
+  margin-inline-start: auto;
+}
+
+.example-small-root {
+  --example-inline-size: 1280px;
+  --example-block-size: 1024px;
+  --example-scale: 0.5;
+
+  block-size: calc(var(--example-scale, 1) * var(--example-block-size));
+  inline-size: calc(var(--example-scale, 1) * var(--example-inline-size));
+  max-block-size: calc(var(--example-scale, 1) * var(--example-block-size));
+  max-inline-size: calc(var(--example-scale, 1) * var(--example-inline-size));
+  outline: 5px solid red;
+}
+
+.example-small-root__contents {
+  block-size: var(--example-block-size);
+  inline-size: var(--example-inline-size);
+  max-block-size: var(--example-block-size);
+  max-inline-size: var(--example-inline-size);
+  scale: var(--example-scale);
+  translate: calc(-0.5 * var(--example-scale, 1) * var(--example-inline-size))
+    calc(-0.5 * var(--example-scale, 1) * var(--example-block-size));
+}
+
+.example-docs-page {
+  margin-inline: auto;
+  max-inline-size: 40em;
+}

@@ -1,0 +1,31 @@
+.example-image-slides {
+  block-size: 100%;
+  box-sizing: border-box;
+  inline-size: 100%;
+  position: relative;
+}
+
+.example-image-slides__slide {
+  block-size: 100%;
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  opacity: 0%;
+  position: absolute;
+  transition: 500ms ease-in-out opacity;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .example-image-slides__slide {
+    transition-duration: 0ms;
+  }
+}
+
+.example-image-slides__slide--visible {
+  opacity: 100%;
+}
+
+.example-image-slides__slide > * {
+  block-size: 100%;
+  inline-size: 100%;
+}

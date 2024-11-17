@@ -1,0 +1,112 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2021 Gemeente Utrecht
+ */
+
+/* Collection of all BEM class names in the component library */
+
+/*
+ * TODO: Once every component is a separate npm package, these imports should
+ * be updated to use a package reference instead of a relative path.
+ *
+ * For example:
+ *     @import url("../../blockquote/index");
+ *
+ * Will become:
+ *     @import url("@utrecht/blockquote/index");
+ */
+
+@import "./accordion/dist/index.css";
+@import "./alert-dialog/dist/index.css";
+@import "./alert/dist/index.css";
+@import "./alternate-lang-nav/dist/index.css";
+@import "./article/dist/index.css";
+@import "./backdrop/dist/index.css";
+@import "./badge-counter/dist/index.css";
+@import "./badge-data/dist/index.css";
+@import "./badge-list/dist/index.css";
+@import "./badge-status/dist/index.css";
+@import "./blockquote/dist/index.css";
+@import "./breadcrumb-nav/dist/index.css";
+@import "./button-group/dist/index.css";
+@import "./button-link/dist/index.css";
+@import "./button/dist/index.css";
+@import "./calendar/dist/index.css";
+@import "./checkbox/dist/index.css";
+@import "./code-block/dist/index.css";
+@import "./code/dist/index.css";
+@import "./color-sample/dist/index.css";
+@import "./column-layout/dist/index.css";
+@import "./combobox/dist/index.css";
+@import "./currency-data/dist/index.css";
+@import "./custom-checkbox/dist/index.css";
+@import "./data-list/dist/index.css";
+@import "./data-placeholder/dist/index.css";
+@import "./digid-button/dist/index.css";
+@import "./document/dist/index.css";
+@import "./drawer/dist/index.css";
+@import "./emphasis/dist/index.css";
+@import "./figure/dist/index.css";
+@import "./form-field-description/dist/index.css";
+@import "./form-field-error-message/dist/index.css";
+@import "./form-field/dist/index.css";
+@import "./form-fieldset/dist/index.css";
+@import "./form-label/dist/index.css";
+@import "./form-toggle/dist/index.css";
+@import "./form/dist/index.css";
+@import "./heading-1/dist/index.css";
+@import "./heading-2/dist/index.css";
+@import "./heading-3/dist/index.css";
+@import "./heading-4/dist/index.css";
+@import "./heading-5/dist/index.css";
+@import "./heading-6/dist/index.css";
+@import "./heading-group/dist/index.css";
+@import "./iban-data/dist/index.css";
+@import "./icon/dist/index.css";
+@import "./img/dist/index.css";
+@import "./index-char-nav/dist/index.css";
+@import "./link-button/dist/index.css";
+@import "./link-list/dist/index.css";
+@import "./link-social/dist/index.css";
+@import "./link/dist/index.css";
+@import "./list-social/dist/index.css";
+@import "./listbox/dist/index.css";
+@import "./logo-button/dist/index.css";
+@import "./logo-image/dist/index.css";
+@import "./logo/dist/index.css";
+@import "./map-marker/dist/index.css";
+@import "./mapcontrolbutton/dist/index.css";
+@import "./mark/dist/index.css";
+@import "./menulijst/dist/index.css";
+@import "./multiline-data/dist/index.css";
+@import "./nav-bar/dist/index.css";
+@import "./nav-list/dist/index.css";
+@import "./navigatie sidenav/dist/index.css";
+@import "./navigatie topnav/dist/index.css";
+@import "./number-badge/dist/index.css";
+@import "./number-data/dist/index.css";
+@import "./ordered-list/dist/index.css";
+@import "./page-content/dist/index.css";
+@import "./page-footer/dist/index.css";
+@import "./page-header/dist/index.css";
+@import "./page/dist/index.css";
+@import "./pagination/dist/index.css";
+@import "./paragraph/dist/index.css";
+@import "./pre-heading/dist/index.css";
+@import "./preserve-data/dist/index.css";
+@import "./radio-button/dist/index.css";
+@import "./rich-text/dist/index.css";
+@import "./search-bar/dist/index.css";
+@import "./select/dist/index.css";
+@import "./separator/dist/index.css";
+@import "./skip-link/dist/index.css";
+@import "./spotlight-section/dist/index.css";
+@import "./surface/dist/index.css";
+@import "./table/dist/index.css";
+@import "./table-of-contents/dist/index.css";
+@import "./textarea/dist/index.css";
+@import "./textbox/dist/index.css";
+@import "./toptask-link/dist/index.css";
+@import "./toptask-nav/dist/index.css";
+@import "./unordered-list/dist/index.css";
+@import "./url-data/dist/index.css";
