@@ -5,7 +5,7 @@
  */
 
 import css from '@utrecht/button-css/dist/index.mjs';
-import { insertStyle } from './inject';
+import { insertStyle } from './insert-style';
 
 insertStyle(css);
 
