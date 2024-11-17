@@ -6,6 +6,7 @@
 @mixin utrecht-button-group {
   align-items: baseline;
   background-color: var(--utrecht-button-group-background-color);
+  break-inside: avoid;
   display: flex;
   flex-wrap: wrap;
   gap: var(--utrecht-button-group-inline-gap, 1em);
