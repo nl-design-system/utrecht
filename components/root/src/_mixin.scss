@@ -1,0 +1,27 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
+ */
+
+@mixin reset-font-smoothing {
+  /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
+  -webkit-font-smoothing: auto !important;
+  -moz-osx-font-smoothing: auto !important;
+}
+
+@mixin utrecht-root {
+  @include reset-font-smoothing;
+
+  background-color: var(--utrecht-root-background-color);
+  block-size: 100%;
+  color: var(--utrecht-root-color);
+  font-family: var(--utrecht-root-font-family);
+  inline-size: 100%;
+  overflow: auto;
+  position: relative;
+  text-rendering: optimizeLegibility;
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
