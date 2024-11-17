@@ -1,11 +1,11 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/components/favicon/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { htmlContentDecorator } from './decorator';
 import { designTokenStory } from './design-token-story';
+import readme from '../../../components/favicon/README.md?raw';
 
 const Favicon = ({ href }) => <link rel="icon" href={href} />;
 
