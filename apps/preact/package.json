@@ -1,0 +1,25 @@
+{
+  "name": "@utrecht/preact-app",
+  "version": "1.0.0",
+  "author": "Community for NL Design System",
+  "description": "Component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server ."
+  },
+  "dependencies": {
+    "@utrecht/button-react": "workspace:*",
+    "@utrecht/component-library-react": "workspace:*",
+    "@utrecht/design-tokens": "workspace:*",
+    "preact": "10.24.3"
+  },
+  "devDependencies": {
+    "http-server": "14.1.1"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "apps/preact"
+  }
+}
