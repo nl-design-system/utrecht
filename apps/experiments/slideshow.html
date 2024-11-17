@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Slideshow</title>
+    <link rel="stylesheet" href="slideshow.css" />
+  </head>
+  <body>
+    <div class="example-image-slides">
+      <div class="example-image-slides__slide example-image-slides__slide--visible">
+        <img src="utrecht-logo.svg" />
+      </div>
+      <div class="example-image-slides__slide">
+        <img src="purmerend-logo.svg" />
+      </div>
+      <div class="example-image-slides__slide">
+        <img src="purmerend-logo.svg" />
+      </div>
+      <div class="example-image-slides__slide">
+        <img src="purmerend-logo.svg" />
+      </div>
+      <div class="example-image-slides__slide">
+        <img src="purmerend-logo.svg" />
+      </div>
+    </div>
+    <p>
+      <button onclick="prev()">Next</button>
+      <button onclick="next()">Previous</button>
+    </p>
+    <script src="./slideshow.mjs" type="module"></script>
+  </body>
+</html>

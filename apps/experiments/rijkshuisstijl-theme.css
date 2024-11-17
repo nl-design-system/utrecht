@@ -1,0 +1,41 @@
+.rijkshuisstijl-theme {
+  --basis-page-padding: 16px;
+  --basis-page-max-inline-size: 1200px;
+  --utrecht-nav-bar-background-color: #01689b;
+  --utrecht-root-color: white;
+  --utrecht-nav-bar-content-max-inline-size: var(--basis-page-max-inline-size);
+
+  /* todo */
+  --utrecht-nav-bar-content-color: white;
+  --utrecht-page-content-content-background-color: white;
+  --utrecht-page-content-content-color: black;
+  --utrecht-page-content-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-content-content-padding-inline: var(--basis-page-padding);
+  --utrecht-page-footer-background-color: #01689b;
+  --utrecht-page-footer-color: white;
+  --utrecht-page-footer-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-footer-content-padding-inline: var(--basis-page-padding);
+  --utrecht-page-footer-content-padding-block-start: 1em;
+  --utrecht-page-footer-content-padding-block-end: 1em;
+  --utrecht-page-header-content-background-color: white;
+  --utrecht-page-header-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-header-content-padding-inline: var(--basis-page-padding);
+  --utrecht-page-header-content-padding-block-start: 1em;
+  --utrecht-page-header-content-padding-block-end: 1em;
+  --utrecht-root-background-color: var(--utrecht-color-grey-95, hsl(0 0% 95%));
+  --utrecht-page-header-padding-inline: var(--basis-page-padding);
+  --utrecht-page-nav-bar-padding-inline: var(--basis-page-padding);
+  --utrecht-page-content-padding-inline: var(--basis-page-padding);
+  --utrecht-page-footer-padding-inline: 0;
+  --utrecht-root-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Arial", sans-serif;
+  --utrecht-logo-min-block-size: 58.97px;
+  --utrecht-logo-min-inline-size: 110.57px;
+  --utrecht-logo-max-block-size: 103px;
+  --utrecht-logo-max-inline-size: 192px;
+}
+
+@media screen and (width <= 480px) {
+  :root {
+    --utrecht-body-padding-inline: 0;
+  }
+}
