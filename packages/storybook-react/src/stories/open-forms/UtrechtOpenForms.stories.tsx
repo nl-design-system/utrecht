@@ -35,7 +35,7 @@ export const Voorletters: Story = {
     key: 'textfield',
     label: 'Voorletter(s)',
     extraComponentProperties: {
-      defaultValue: 'Y',
+      defaultValue: 'Y.J.P.K',
       key: 'voorletterSPZD',
     },
   },
@@ -71,7 +71,7 @@ export const VoorlettersSPZD: Story = {
     key: 'textfield',
     label: 'Voorletter(s)',
     extraComponentProperties: {
-      defaultValue: 'Y',
+      defaultValue: 'Y.J.P.K',
       key: 'voorletterSPZD',
     },
   },
@@ -81,7 +81,7 @@ export const VoorletterSPMD: Story = {
     key: 'textfield',
     label: 'Voorletter(s)',
     extraComponentProperties: {
-      defaultValue: 'Y',
+      defaultValue: 'Y.J.P.K',
       key: 'voorletterSPMD',
     },
   },
@@ -91,7 +91,7 @@ export const VoorletterSMEH: Story = {
     key: 'textfield',
     label: 'Voorletter(s)',
     extraComponentProperties: {
-      defaultValue: 'Y',
+      defaultValue: 'Y.J.P.K',
       key: 'voorletterSMEH',
     },
   },
@@ -101,7 +101,7 @@ export const VoorletterSZEH: Story = {
     key: 'textfield',
     label: 'Voorletter(s)',
     extraComponentProperties: {
-      defaultValue: 'Y',
+      defaultValue: 'Y.J.P.K',
       key: 'voorletterSZEH',
     },
   },
@@ -113,7 +113,7 @@ export const VoornamenPZD: Story = {
     key: 'textfield',
     label: 'Voornamen',
     extraComponentProperties: {
-      defaultValue: 'Yolijn',
+      defaultValue: 'John',
       key: 'voornamenPZD',
     },
   },
@@ -123,7 +123,7 @@ export const VoornamenPMD: Story = {
     key: 'textfield',
     label: 'Voornamen',
     extraComponentProperties: {
-      defaultValue: 'Yolijn',
+      defaultValue: 'John',
       key: 'voornamenPMD',
     },
   },
@@ -561,7 +561,7 @@ export const PostcodePZD: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postcodePZD',
     },
   },
@@ -571,7 +571,7 @@ export const PostcodePMD: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postcodePMD',
     },
   },
@@ -581,7 +581,7 @@ export const PostcodeZEH: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postcodeZEH',
     },
   },
@@ -591,7 +591,7 @@ export const Postbus_postcodeZEH: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postbus_postcodeZEH',
     },
   },
@@ -601,7 +601,7 @@ export const PostcodeMEH: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postcodeMEH',
     },
   },
@@ -611,7 +611,7 @@ export const PostcodePB: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postcodePB',
     },
   },
@@ -621,7 +621,7 @@ export const PostcodePA: Story = {
     key: 'textfield',
     label: 'Postcode',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1366 AV',
       key: 'postcodePA',
     },
   },
@@ -633,7 +633,7 @@ export const StraatnaamPZD: Story = {
     key: 'textfield',
     label: 'Straatnaam',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Van der Doesstraat',
       key: 'straatnaamPZD',
     },
   },
@@ -643,7 +643,7 @@ export const StraatnaamPMD: Story = {
     key: 'textfield',
     label: 'Straatnaam',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Van der Doesstraat',
       key: 'straatnaamPMD',
     },
   },
@@ -653,7 +653,7 @@ export const StraatnaamZEH: Story = {
     key: 'textfield',
     label: 'Straatnaam',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Van der Doesstraat',
       key: 'straatnaamZEH',
     },
   },
@@ -663,7 +663,7 @@ export const StraatnaamMEH: Story = {
     key: 'textfield',
     label: 'Straatnaam',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Van der Doesstraat',
       key: 'straatnaamMEH',
     },
   },
@@ -673,7 +673,7 @@ export const StraatnaamPA: Story = {
     key: 'textfield',
     label: 'Straatnaam',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Van der Doesstraat',
       key: 'straatnaamPA',
     },
   },
@@ -685,7 +685,8 @@ export const TelefoonnummerPZD: Story = {
     key: 'textfield',
     label: 'Telefoonnummer',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
+
       key: 'telefoonnummerPZD',
     },
   },
@@ -695,7 +696,8 @@ export const TelefoonnummerPMD: Story = {
     key: 'textfield',
     label: 'Telefoonnummer',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
+
       key: 'telefoonnummerPMD',
     },
   },
@@ -705,7 +707,8 @@ export const TelefoonnummerZEH: Story = {
     key: 'textfield',
     label: 'Telefoonnummer',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
+
       key: 'telefoonnummerZEH',
     },
   },
@@ -715,7 +718,8 @@ export const TelefoonnummerMEH: Story = {
     key: 'textfield',
     label: 'Telefoonnummer',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
+
       key: 'telefoonnummerMEH',
     },
   },
@@ -727,7 +731,7 @@ export const TelefoonnummerMobielPZD: Story = {
     key: 'textfield',
     label: 'Telefoonnummer (mobiel)',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
       key: 'telefoonnummerMobielPZD',
     },
   },
@@ -737,7 +741,7 @@ export const TelefoonnummerMobielPMD: Story = {
     key: 'textfield',
     label: 'Telefoonnummer (mobiel)',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
       key: 'telefoonnummerMobielPMD',
     },
   },
@@ -749,7 +753,7 @@ export const TelefoonnummerWerkPZD: Story = {
     key: 'textfield',
     label: 'Telefoonnummer (werk)',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
       key: 'telefoonnummerWerkPZD',
     },
   },
@@ -759,7 +763,7 @@ export const TelefoonnummerWerkPMD: Story = {
     key: 'textfield',
     label: 'Telefoonnummer (werk)',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '06 123 45 6789',
       key: 'telefoonnummerWerkPMD',
     },
   },
@@ -771,7 +775,7 @@ export const TussenvoegselSZEH: Story = {
     key: 'textfield',
     label: 'Tussenvoegsel(s)',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'van der',
       key: 'tussenvoegselSZEH',
     },
   },
@@ -781,7 +785,7 @@ export const TussenvoegselSMEH: Story = {
     key: 'textfield',
     label: 'Tussenvoegsel(s)',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'van der',
       key: 'tussenvoegselSMEH',
     },
   },
@@ -875,7 +879,7 @@ export const WoonplaatsPZD: Story = {
     key: 'textfield',
     label: 'Woonplaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Groningen',
       key: 'woonplaatsPZD',
     },
   },
@@ -885,7 +889,7 @@ export const WoonplaatsPMD: Story = {
     key: 'textfield',
     label: 'Woonplaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 'Groningen',
       key: 'woonplaatsPMD',
     },
   },
