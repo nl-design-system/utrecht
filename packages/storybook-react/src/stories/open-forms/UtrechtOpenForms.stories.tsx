@@ -27,7 +27,6 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 //alfabetische volgorde is overzichtelijker
-//aanhef is met bulletpoint? is het uberhaupt een textfield?
 
 // Voorbeeld story //
 export const Voorletters: Story = {
@@ -481,6 +480,18 @@ export const NaamBedrijfOrganisatieMEH: Story = {
   },
 };
 
+// Omschrijf de producten die u verkoopt //
+export const HebtUNogOpmerkingenOfZijnErNogZakenDieVolgensUVanBelangZijnVoorDezeAanvraagVulDezeIn: Story = {
+  args: {
+    key: 'textfield',
+    label: 'Omschrijf de producten die u verkoopt. Of is er nog iets anders belangrijk voor deze aanvraag?',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'hebtUNogOpmerkingenOfZijnErNogZakenDieVolgensUVanBelangZijnVoorDezeAanvraagVulDezeIn',
+    },
+  },
+};
+
 // Plaats leeg //
 export const PlaatsZEH: Story = {
   args: {
@@ -623,6 +634,68 @@ export const PostcodePA: Story = {
     extraComponentProperties: {
       defaultValue: '1366 AV',
       key: 'postcodePA',
+    },
+  },
+};
+
+// SAP //
+export const SapArtikelnummer: Story = {
+  args: {
+    key: 'textfield',
+    label: 'SAP artikelnummer',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'sapArtikelnummer',
+    },
+  },
+};
+export const SapDistributiekanaal: Story = {
+  args: {
+    key: 'textfield',
+    label: 'SAP distributiekanaal',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'sapDistributiekanaal',
+    },
+  },
+};
+export const SapOmschrijving: Story = {
+  args: {
+    key: 'textfield',
+    label: 'SAP Omschrijving',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'sapOmschrijving',
+    },
+  },
+};
+export const SapOrdernummer: Story = {
+  args: {
+    key: 'textfield',
+    label: 'SAP ordernummer',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'sapOrdernummer',
+    },
+  },
+};
+export const SapProductgroep: Story = {
+  args: {
+    key: 'textfield',
+    label: 'SAP productgroep',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'sapProductgroep',
+    },
+  },
+};
+export const SapVerkooporganisatie: Story = {
+  args: {
+    key: 'textfield',
+    label: 'SAP verkooporganisatie',
+    extraComponentProperties: {
+      defaultValue: '',
+      key: 'sapVerkooporganisatie',
     },
   },
 };
