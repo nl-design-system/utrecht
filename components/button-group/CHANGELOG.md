@@ -1,5 +1,11 @@
 # @utrecht/button-group-css
 
+## 1.3.1
+
+### Patch Changes
+
+- 947a737: Avoid column breaks inside a Button Group.
+
 ## 1.3.0
 
 ### Minor Changes

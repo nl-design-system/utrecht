@@ -1,5 +1,11 @@
 # @utrecht/nav-bar-css
 
+## 1.3.1
+
+### Patch Changes
+
+- ffdde9d: Navigation Bar is now explicitly 100% wide, to work better in flexbox layouts.
+
 ## 1.3.0
 
 ### Minor Changes

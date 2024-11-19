@@ -1,5 +1,11 @@
 # @utrecht/focus-ring-css
 
+## 2.2.0
+
+### Minor Changes
+
+- 8cf4128: Ensure focus ring is visible by raising `z-index` of `focus-visible` elements.
+
 ## 2.1.0
 
 ### Minor Changes
