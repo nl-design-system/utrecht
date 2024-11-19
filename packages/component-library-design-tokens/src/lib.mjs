@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import merge from 'lodash.merge';
+import merge from 'lodash-es/merge.js';
 import { glob } from 'glob';
 import { resolve } from 'path';
 
