@@ -46,6 +46,14 @@
   .utrecht-form-field-error-message {
     margin-block-end: var(--utrecht-space-row-xs);
   }
+  .utrecht-html .utrecht-breadcrumb-nav ol,
+  footer ul,
+  footer li {
+    padding-inline-start: 0 !important;
+  }
+  .utrecht-button-link {
+    color: var(--utrecht-document-background-color);
+  }
   .utrecht-footer-grid {
     display: grid;
     gap: 16px;
@@ -84,6 +92,21 @@
     }
   }
   /* stylelint-disable selector-class-pattern, property-disallowed-list */
+  utrecht-icon-arrow,
+  utrecht-icon-cross {
+    block-size: 14px;
+    inline-size: 14px;
+  }
+  .utrecht-link utrecht-icon-arrow,
+  .utrecht-link utrecht-icon-cross {
+    transform: translateY(-4px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
+  }
+  .utrecht-button-link--primary-action utrecht-icon-arrow {
+    transform: translateY(-5px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
+  }
+  footer .utrecht-link utrecht-icon-arrow {
+    transform: translateY(1px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
+  }
   .utrecht-advanced-link--with-icon {
     align-items: center;
     display: flex;
@@ -94,17 +117,43 @@
   .utrecht-advanced-link {
     --utrecht-link-icon-size: var(--utrecht-advanced-link-icon-size, var(--utrecht-document-font-size));
   }
-  utrecht-icon-cross,
-  utrecht-icon-arrow {
-    block-size: 14px;
-    inline-size: 14px;
-    transform: translateY(-2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
-  }
-  input[name="tijdstip"] {
-    max-inline-size: 100px;
-  }
-  section {
-    max-inline-size: 65ch;
+  .utrecht-html .utrecht-button-link--primary-action:focus {
+    --_utrecht-button-appearance-active-background-color: var(--utrecht-button-primary-action-active-background-color);
+    --_utrecht-button-appearance-active-border-color: var(--utrecht-button-primary-action-active-border-color);
+    --_utrecht-button-appearance-active-color: var(--utrecht-button-primary-action-active-color);
+    --_utrecht-button-appearance-background-color: var(--utrecht-button-primary-action-background-color);
+    --_utrecht-button-appearance-border-color: var(--utrecht-button-primary-action-border-color);
+    --_utrecht-button-appearance-border-width: var(--utrecht-button-primary-action-border-width);
+    --_utrecht-button-appearance-color: var(--utrecht-button-primary-action-color);
+    --_utrecht-button-appearance-disabled-background-color: var(
+      --utrecht-button-primary-action-disabled-background-color
+    );
+    --_utrecht-button-appearance-disabled-border-color: var(--utrecht-button-primary-action-disabled-border-color);
+    --_utrecht-button-appearance-disabled-color: var(--utrecht-button-primary-action-disabled-color);
+    --_utrecht-button-appearance-focus-background-color: var(--utrecht-button-primary-action-focus-background-color);
+    --_utrecht-button-appearance-focus-border-color: var(--utrecht-button-primary-action-focus-border-color);
+    --_utrecht-button-appearance-focus-color: var(--utrecht-button-primary-action-focus-color);
+    --_utrecht-button-appearance-font-size: var(--utrecht-button-primary-action-font-size);
+    --_utrecht-button-appearance-font-weight: var(--utrecht-button-primary-action-font-weight);
+    --_utrecht-button-appearance-hover-background-color: var(--utrecht-button-primary-action-hover-background-color);
+    --_utrecht-button-appearance-hover-border-color: var(--utrecht-button-primary-action-hover-border-color);
+    --_utrecht-button-appearance-hover-color: var(--utrecht-button-primary-action-hover-color);
+    --_utrecht-button-appearance-line-height: var(--utrecht-button-primary-action-line-height);
+    --_utrecht-button-appearance-pressed-background-color: var(
+      --utrecht-button-primary-action-pressed-background-color
+    );
+    --_utrecht-button-appearance-pressed-border-color: var(--utrecht-button-primary-action-pressed-border-color);
+    --_utrecht-button-appearance-pressed-color: var(--utrecht-button-primary-action-pressed-color);
+    --_utrecht-link-state-color: var(--utrecht-link-focus-color);
   }
   /* stylelint-enable selector-class-pattern, property-disallowed-list */
 }
+/* stylelint-disable selector-class-pattern, property-disallowed-list */
+
+input[name="tijdstip"] {
+  max-inline-size: 100px !important;
+}
+section {
+  max-inline-size: 65ch;
+}
+/* stylelint-enable selector-class-pattern, property-disallowed-list */
