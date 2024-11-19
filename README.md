@@ -198,6 +198,15 @@ The scripts above use `nx` to automatically run all scripts that are a prerequis
 | `pnpm run publish`  | Publish each package to the npm registry                                  |
 | `pnpm run release`  | Determine new version number automatically and update each `package.json` |
 
+## Other scripts
+
+### `pnpm run build-vercel`
+
+Run the build processes, but excluding the following builds that do not currently work on Vercel:
+
+- The build for `storybook-angular` crashes randomly.
+- The `design-tokens-component-library` required Node.js 22, but last time we checked Vercel only supported Node 20.
+
 ## Code of Conduct
 
 We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community. Read [our Code of Conduct](CODE_OF_CONDUCT.md) if you haven't already.
