@@ -20,6 +20,7 @@ import {
   Separator,
   SpotlightSection,
   Strong,
+  Surface,
   Textbox,
   UnorderedList,
   UnorderedListItem,
@@ -34,6 +35,9 @@ const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Stap 4',
   id: 'klachtenformulier-form-pages-stap-4B',
   component: Page,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Page>;
 
 export default meta;
@@ -42,39 +46,41 @@ type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
   render: (args) => (
-    <Page {...args}>
-      <PageHeader>
-        <Logo>
-          <LogoImage />
-        </Logo>
-      </PageHeader>
-      <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <BreadcrumbNav>
-          <BreadcrumbNavLink href={urls.scenarioBPage3}>
-            <BreadcrumbNavSeparator>
-              <UtrechtIconChevronLeft />
-            </BreadcrumbNavSeparator>
-            Terug
-          </BreadcrumbNavLink>
-        </BreadcrumbNav>
-        <main>
-          <section>
-            <Heading1>Einde van het klachtenformulier</Heading1>
-            <SpotlightSection type="ok">
-              <Heading2>Dank je wel!</Heading2>
-              <Paragraph>
-                In het echt zou je doorgaan naar de volgende stap. Maar voor deze test is dit nu het einde van het
-                formulier. We hebben nog een paar korte vragen, en dan zijn we klaar.
-              </Paragraph>
-            </SpotlightSection>
-            <ButtonLink appearance="primary-action-button" href={urls.scenarioBintroductie}>
-              Terug naar het begin&nbsp;
-              <UtrechtIconArrow />
-            </ButtonLink>
-          </section>
-        </main>
-      </PageContent>
-      <FooterKlachten />
-    </Page>
+    <Surface className="utrecht-html">
+      <Page {...args}>
+        <PageHeader>
+          <Logo>
+            <LogoImage />
+          </Logo>
+        </PageHeader>
+        <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+          <BreadcrumbNav>
+            <BreadcrumbNavLink href={urls.scenarioBPage3}>
+              <BreadcrumbNavSeparator>
+                <UtrechtIconChevronLeft />
+              </BreadcrumbNavSeparator>
+              Terug
+            </BreadcrumbNavLink>
+          </BreadcrumbNav>
+          <main>
+            <section>
+              <Heading1>Einde van het klachtenformulier</Heading1>
+              <SpotlightSection type="ok">
+                <Heading2>Dank je wel!</Heading2>
+                <Paragraph>
+                  In het echt zou je doorgaan naar de volgende stap. Maar voor deze test is dit nu het einde van het
+                  formulier. We hebben nog een paar korte vragen, en dan zijn we klaar.
+                </Paragraph>
+              </SpotlightSection>
+              <ButtonLink appearance="primary-action-button" href={urls.scenarioBintroductie}>
+                Terug naar het begin&nbsp;
+                <UtrechtIconArrow />
+              </ButtonLink>
+            </section>
+          </main>
+        </PageContent>
+        <FooterKlachten />
+      </Page>
+    </Surface>
   ),
 };

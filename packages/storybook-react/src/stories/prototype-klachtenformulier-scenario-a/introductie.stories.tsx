@@ -27,6 +27,7 @@ import {
   Separator,
   SpotlightSection,
   Strong,
+  Surface,
   Textbox,
   UnorderedList,
   UnorderedListItem,
@@ -55,6 +56,9 @@ const meta = {
   title: 'Prototypes/Klachtenformulier Scenario A/Introductie ',
   id: 'klachtenformulier-introductie-A',
   component: Page,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Page>;
 
 export default meta;
@@ -63,24 +67,26 @@ type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
   render: (args) => (
-    <Page {...args}>
-      <PageHeader>
-        <Logo>
-          <LogoImage />
-        </Logo>
-      </PageHeader>
-      <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-        <main>
-          <section>
-            <IntroductieKlachten />
-            <ButtonLink appearance="primary-action-button" href={urls.scenarioAscenario}>
-              Starten
-              <UtrechtIconArrow />
-            </ButtonLink>
-          </section>
-        </main>
-      </PageContent>
-      <FooterKlachten />
-    </Page>
+    <Surface className="utrecht-html">
+      <Page {...args}>
+        <PageHeader>
+          <Logo>
+            <LogoImage />
+          </Logo>
+        </PageHeader>
+        <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+          <main>
+            <section>
+              <IntroductieKlachten />
+              <ButtonLink appearance="primary-action-button" href={urls.scenarioAscenario}>
+                Starten
+                <UtrechtIconArrow />
+              </ButtonLink>
+            </section>
+          </main>
+        </PageContent>
+        <FooterKlachten />
+      </Page>
+    </Surface>
   ),
 };
