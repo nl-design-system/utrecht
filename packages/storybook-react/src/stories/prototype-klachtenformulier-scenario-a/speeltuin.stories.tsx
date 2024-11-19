@@ -18,6 +18,7 @@ import {
   PageFooter,
   PageHeader,
   Paragraph,
+  Surface,
   Textbox,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
@@ -34,6 +35,9 @@ const meta = {
   title: 'Prototypes/Klachtenformulier Scenario A/Speeltuin',
   id: 'template-klachten-speeltuin-A',
   component: Page,
+  parameters: {
+    layout: 'fullscreen',
+  },
 } satisfies Meta<typeof Page>;
 
 export default meta;
@@ -62,96 +66,98 @@ export const One: Story = {
     };
 
     return (
-      <Page {...args}>
-        <PageHeader>
-          <Logo>
-            <LogoImage />
-          </Logo>
-        </PageHeader>
-        <PageContent style={{ '--utrecht-space-around': 1 } as any}>
-          <BreadcrumbNav>
-            <BreadcrumbNavLink href="#">
-              <BreadcrumbNavSeparator>
-                <UtrechtIconChevronLeft />
-              </BreadcrumbNavSeparator>
-              Terug
-            </BreadcrumbNavLink>
-          </BreadcrumbNav>
-          <main>
-            <section>
-              <Heading1>
-                <Paragraph lead></Paragraph>
-                Speeltuin voor React componenten
-              </Heading1>
-              <Heading2>Uw klacht</Heading2>
-              <Paragraph>
-                Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
-                <br />
-                Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
-              </Paragraph>
+      <Surface className="utrecht-html">
+        <Page {...args}>
+          <PageHeader>
+            <Logo>
+              <LogoImage />
+            </Logo>
+          </PageHeader>
+          <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+            <BreadcrumbNav>
+              <BreadcrumbNavLink href="#">
+                <BreadcrumbNavSeparator>
+                  <UtrechtIconChevronLeft />
+                </BreadcrumbNavSeparator>
+                Terug
+              </BreadcrumbNavLink>
+            </BreadcrumbNav>
+            <main>
+              <section>
+                <Heading1>
+                  <Paragraph lead></Paragraph>
+                  Speeltuin voor React componenten
+                </Heading1>
+                <Heading2>Uw klacht</Heading2>
+                <Paragraph>
+                  Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
+                  <br />
+                  Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+                </Paragraph>
 
-              <Heading2>Klachten formulier</Heading2>
+                <Heading2>Klachten formulier</Heading2>
 
-              <Heading2>Contact gegevens</Heading2>
+                <Heading2>Contact gegevens</Heading2>
 
-              <form>
-                {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
-                <FormFieldTextarea
-                  label="Wat is uw klacht?"
-                  name="klacht"
-                  rows={5}
-                  onChange={handleInputChange}
-                  status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
-                />
-                <br />
-                <FormFieldTextarea label="Wat was de locatie?" name="locatie" rows={4} />
-                <br />
-                <FormFieldTextbox
-                  label={
-                    <>
-                      Datum <span className="utrecht-notbold">(niet verplicht)</span>
-                    </>
-                  }
-                  name="datum"
-                  description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
-                />
-                <FormField>
-                  <Textbox required id="email" aria-labelledby="email-label" aria-describedby="email-desc" />
-                  <UtrechtFormFieldDescription id="email-desc">
-                    Vragen met een * zijn verplicht.
-                  </UtrechtFormFieldDescription>
-                </FormField>
-                <ButtonLink appearance="primary-action-button" href="https://www.nu.nl">
-                  Volgende stap
-                </ButtonLink>
-              </form>
+                <form>
+                  {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
+                  <FormFieldTextarea
+                    label="Wat is uw klacht?"
+                    name="klacht"
+                    rows={5}
+                    onChange={handleInputChange}
+                    status={getStatusMessage()} // Gebruik de aangepaste statusfunctie
+                  />
+                  <br />
+                  <FormFieldTextarea label="Wat was de locatie?" name="locatie" rows={4} />
+                  <br />
+                  <FormFieldTextbox
+                    label={
+                      <>
+                        Datum <span className="utrecht-notbold">(niet verplicht)</span>
+                      </>
+                    }
+                    name="datum"
+                    description="Bijvoorbeeld: 23 januari of 2 dagen geleden"
+                  />
+                  <FormField>
+                    <Textbox required id="email" aria-labelledby="email-label" aria-describedby="email-desc" />
+                    <UtrechtFormFieldDescription id="email-desc">
+                      Vragen met een * zijn verplicht.
+                    </UtrechtFormFieldDescription>
+                  </FormField>
+                  <ButtonLink appearance="primary-action-button" href="https://www.nu.nl">
+                    Volgende stap
+                  </ButtonLink>
+                </form>
 
-              <ButtonGroup direction="column">
-                <Button appearance="primary-action-button">
-                  Volgende stap <UtrechtIconArrow />
-                </Button>
-                <a
-                  href="#"
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  rel="external noopener noreferrer"
-                >
-                  <UtrechtIconArrow />
-                  Opslaan en later verder gaan
-                </a>
-                <a
-                  href="#"
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  rel="external noopener noreferrer"
-                >
-                  <UtrechtIconCross />
-                  Stoppen met formulier
-                </a>
-              </ButtonGroup>
-            </section>
-          </main>
-        </PageContent>
-        <FooterKlachten />
-      </Page>
+                <ButtonGroup direction="column">
+                  <Button appearance="primary-action-button">
+                    Volgende stap <UtrechtIconArrow />
+                  </Button>
+                  <a
+                    href="#"
+                    className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                    rel="external noopener noreferrer"
+                  >
+                    <UtrechtIconArrow />
+                    Opslaan en later verder gaan
+                  </a>
+                  <a
+                    href="#"
+                    className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                    rel="external noopener noreferrer"
+                  >
+                    <UtrechtIconCross />
+                    Stoppen met formulier
+                  </a>
+                </ButtonGroup>
+              </section>
+            </main>
+          </PageContent>
+          <FooterKlachten />
+        </Page>
+      </Surface>
     );
   },
 };
