@@ -736,6 +736,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/page-body:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/page-content:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -3594,7 +3600,7 @@ importers:
         specifier: 5.6.2
         version: 5.6.2
 
-  packages/components-react/page-content-react:
+  packages/components-react/page-body-react:
     dependencies:
       '@babel/runtime':
         specifier: '*'
@@ -3654,9 +3660,9 @@ importers:
       '@types/testing-library__jest-dom':
         specifier: 5.14.9
         version: 5.14.9
-      '@utrecht/page-content-css':
+      '@utrecht/page-body-css':
         specifier: workspace:*
-        version: link:../../../components/page-content
+        version: link:../../../components/page-body
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
