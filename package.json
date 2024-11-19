@@ -63,6 +63,7 @@
   "scripts": {
     "add-repository-directory": "node ./add-repository-directory.mjs",
     "build": "pnpm run nx-build --skip-nx-cache",
+    "build-vercel": "pnpm run --filter=\"\\!angular\" --recursive build",
     "nx-build": "nx run-many --target=build --all --parallel",
     "clean": "pnpm run --recursive clean",
     "docs": "pnpm run --workspace packages/docusaurus start",
