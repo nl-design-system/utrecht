@@ -1,0 +1,33 @@
+{
+  "name": "@utrecht/next",
+  "version": "0.0.0",
+  "private": true,
+  "license": "EUPL-1.2",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "19.0.0-rc-66855b96-20241106",
+    "react-dom": "19.0.0-rc-66855b96-20241106",
+    "next": "15.0.3",
+    "@utrecht/design-tokens": "workspace:*",
+    "@utrecht/component-library-css": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "5",
+    "@types/node": "20",
+    "@types/react": "18",
+    "@types/react-dom": "18",
+    "eslint": "8",
+    "eslint-config-next": "15.0.3",
+    "@utrecht/component-library-react": "workspace:*"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "apps/next"
+  }
+}

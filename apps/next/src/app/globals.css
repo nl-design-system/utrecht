@@ -1,0 +1,13 @@
+html,
+body {
+  max-inline-size: 100vw;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+  margin-block: 0;
+  margin-inline: 0;
+  padding-block: 0;
+  padding-inline: 0;
+}
