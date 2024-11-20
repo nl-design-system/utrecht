@@ -73,7 +73,7 @@ export const One: Story = {
                 </Paragraph>
               </SpotlightSection>
               <ButtonLink appearance="primary-action-button" href={urls.scenarioBintroductie}>
-                Terug naar het begin&nbsp;
+                Terug naar het begin
                 <UtrechtIconArrow />
               </ButtonLink>
             </section>

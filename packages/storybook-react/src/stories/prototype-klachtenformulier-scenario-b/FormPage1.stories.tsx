@@ -72,7 +72,7 @@ export const One: Story = {
               </Paragraph>
 
               <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage2}>
-                Ga naar klachtenformulier&nbsp;
+                Ga naar klachtenformulier
                 <UtrechtIconArrow />
               </ButtonLink>
               <Heading2>Bellen</Heading2>

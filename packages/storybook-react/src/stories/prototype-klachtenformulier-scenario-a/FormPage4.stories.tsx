@@ -28,7 +28,7 @@ import {
 import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
-import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
+import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-componentnt
 import urls from '../prototype-src/variables';
 
 const meta = {
@@ -73,7 +73,7 @@ export const One: Story = {
                 </Paragraph>
               </SpotlightSection>
               <ButtonLink appearance="primary-action-button" href={urls.scenarioAintroductie}>
-                Terug naar het begin&nbsp;
+                Terug naar het begin
                 <UtrechtIconArrow />
               </ButtonLink>
             </section>
