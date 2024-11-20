@@ -46,6 +46,14 @@
   .utrecht-form-field-error-message {
     margin-block-end: var(--utrecht-space-row-xs);
   }
+
+  /* invalid styling (border) op formfield-textarea niet wordt opgepakt via Github, dus deze toegevoegd als extraatje */
+  .utrecht-form-field--invalid {
+    border-inline-start-color: var(--utrecht-form-field-invalid-border-inline-start-color);
+    border-inline-start-style: solid;
+    border-inline-start-width: var(--utrecht-form-field-invalid-border-inline-start-width, 0);
+    padding-inline-start: var(--utrecht-form-field-invalid-padding-inline-start);
+  }
   .utrecht-html .utrecht-breadcrumb-nav ol,
   footer ul,
   footer li {
