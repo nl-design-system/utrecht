@@ -118,7 +118,7 @@
     --utrecht-link-icon-size: var(--utrecht-advanced-link-icon-size, var(--utrecht-document-font-size));
   }
   .utrecht-html .utrecht-button-link--primary-action:focus {
-    background-color: var(--utrecht-color-blue-30);
+    background-color: var(--utrecht-color-blue-30); /* Work arround */
   }
   /* stylelint-enable selector-class-pattern, property-disallowed-list */
 }
