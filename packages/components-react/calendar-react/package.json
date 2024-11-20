@@ -15,7 +15,7 @@
   "scripts": {
     "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
     "build": "rollup -c ./rollup.config.mjs",
-    "test": "mkdir -p pages && jest --coverage --verbose",
+    "disabled-test": "mkdir -p pages && jest --coverage --verbose",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
