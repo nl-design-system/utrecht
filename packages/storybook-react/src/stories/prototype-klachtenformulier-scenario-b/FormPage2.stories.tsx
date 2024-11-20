@@ -75,7 +75,7 @@ export const One: Story = {
                 </UnorderedListItem>
               </UnorderedList>
               <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage3}>
-                Doorgaan&nbsp;
+                Doorgaan
                 <UtrechtIconArrow />
               </ButtonLink>
             </section>

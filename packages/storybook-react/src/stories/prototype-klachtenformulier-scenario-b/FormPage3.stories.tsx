@@ -179,6 +179,7 @@ export const One: Story = {
                     )}
                     <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage4} onClick={handleSubmit}>
                       Volgende stap
+                      <UtrechtIconArrow />
                     </ButtonLink>
                     <Link
                       href="#"
