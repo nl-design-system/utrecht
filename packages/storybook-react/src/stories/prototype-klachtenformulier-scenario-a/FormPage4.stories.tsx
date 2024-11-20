@@ -4,13 +4,16 @@ import {
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
   Button,
+  ButtonGroup,
   ButtonLink,
+  FormFieldErrorMessage,
+  FormFieldTextarea,
+  FormFieldTextbox,
+  FormLabel,
   Heading1,
   Heading2,
   Heading3,
   Link,
-  LinkList,
-  LinkListLink,
   Logo,
   LogoImage,
   Page,
@@ -21,14 +24,18 @@ import {
   SpotlightSection,
   Strong,
   Surface,
-  Textbox,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
-import React from 'react';
+import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconCross,
+  UtrechtLogo,
+} from '@utrecht/web-component-library-react';
+import React, { useRef, useState } from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
-import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-componentnt
+import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
 import urls from '../prototype-src/variables';
 
 const meta = {
