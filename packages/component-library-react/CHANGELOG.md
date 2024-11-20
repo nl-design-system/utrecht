@@ -1,5 +1,26 @@
 # @utrecht/component-library-react
 
+## 7.3.5
+
+### Patch Changes
+
+- 6343055: Remove `@babel` runtime from `.mjs` files, use modern JavaScript syntax and use our own CSS injection script.
+- Updated dependencies [6343055]
+  - @utrecht/form-field-error-message-react@1.0.2
+  - @utrecht/form-field-description-react@1.0.2
+  - @utrecht/form-field-checkbox-react@1.0.4
+  - @utrecht/radio-button-react@1.0.2
+  - @utrecht/form-field-react@1.0.2
+  - @utrecht/form-label-react@1.0.2
+  - @utrecht/calendar-react@1.0.5
+  - @utrecht/checkbox-react@1.0.2
+  - @utrecht/combobox-react@0.0.3
+  - @utrecht/fieldset-react@1.0.2
+  - @utrecht/listbox-react@1.0.3
+  - @utrecht/textbox-react@1.0.2
+  - @utrecht/button-react@2.0.2
+  - @utrecht/link-react@1.0.2
+
 ## 7.3.4
 
 ### Patch Changes
