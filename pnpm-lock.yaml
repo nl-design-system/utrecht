@@ -4108,8 +4108,8 @@ importers:
         specifier: 7.6.4
         version: 7.6.4(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@storybook/builder-webpack5':
-        specifier: 7.6.4
-        version: 7.6.4(@swc/helpers@0.5.5)(encoding@0.1.13)(typescript@5.3.3)
+        specifier: 8.4.4
+        version: 8.4.4(@swc/core@1.3.100(@swc/helpers@0.5.5))(storybook@7.6.4(encoding@0.1.13))(typescript@5.3.3)
       '@storybook/components':
         specifier: 7.6.4
         version: 7.6.4(@types/react-dom@18.3.0)(@types/react@18.3.3)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -4157,7 +4157,7 @@ importers:
         version: 9.1.3(@babel/core@7.24.7)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -4577,7 +4577,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       firacode:
         specifier: 6.2.0
         version: 6.2.0
@@ -4868,7 +4868,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       firacode:
         specifier: 6.2.0
         version: 6.2.0
@@ -5081,7 +5081,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       firacode:
         specifier: 6.2.0
         version: 6.2.0
@@ -6101,7 +6101,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       firacode:
         specifier: 6.2.0
         version: 6.2.0
@@ -11375,6 +11375,15 @@ packages:
       typescript:
         optional: true
 
+  '@storybook/builder-webpack5@8.4.4':
+    resolution: {integrity: sha512-I7SmGngtGc/WA44UkG3sCyYtGXVjTpPe42umf70n5EVaHRvtmXCxfL41C1y3CIfEMAfF36gOFm7rEJROIO5NyA==}
+    peerDependencies:
+      storybook: ^8.4.4
+      typescript: '*'
+    peerDependenciesMeta:
+      typescript:
+        optional: true
+
   '@storybook/channels@6.5.16':
     resolution: {integrity: sha512-VylzaWQZaMozEwZPJdyJoz+0jpDa8GRyaqu9TGG6QGv+KU5POoZaGLDkRE7TzWkyyP0KQLo80K99MssZCpgSeg==}
 
@@ -11463,6 +11472,11 @@ packages:
 
   '@storybook/core-webpack@7.6.4':
     resolution: {integrity: sha512-+C2YddhOhO0Lp9KngzX9XYJZKzCzo4vjXA3IMXxSA7Vo7gFhaa8uQTAXnUx7xCrvFXM/iiHUY1SN+VppB0eBdA==}
+
+  '@storybook/core-webpack@8.4.4':
+    resolution: {integrity: sha512-JeODT64uRJDH0o/ZOAAZHJswBkTYd2u9AdGyAzjp16KRK2NcHM2iUMNT94lOlCYzshvRVqPFVxbNmaL16/K0Ag==}
+    peerDependencies:
+      storybook: ^8.4.4
 
   '@storybook/csf-plugin@7.4.6':
     resolution: {integrity: sha512-yi7Qa4NSqKOyiJTWCxlB0ih2ijXq6oY5qZKW6MuMMBP14xJNRGLbH5KabpfXgN2T7YECcOWG1uWaGj2veJb1KA==}
@@ -11669,6 +11683,7 @@ packages:
 
   '@storybook/testing-library@0.2.2':
     resolution: {integrity: sha512-L8sXFJUHmrlyU2BsWWZGuAjv39Jl1uAqUHdxmN42JY15M4+XCMjGlArdCCjDe1wpTSW6USYISA9axjZojgtvnw==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/theming@6.5.16':
     resolution: {integrity: sha512-hNLctkjaYLRdk1+xYTkC1mg4dYz2wSv6SqbLpcKMbkPHTE0ElhddGPHQqB362md/w9emYXNkt1LSMD8Xk9JzVQ==}
@@ -12845,6 +12860,7 @@ packages:
 
   acorn-import-assertions@1.9.0:
     resolution: {integrity: sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==}
+    deprecated: package has been renamed to acorn-import-attributes
     peerDependencies:
       acorn: ^8
 
@@ -15228,6 +15244,9 @@ packages:
   es-module-lexer@1.4.1:
     resolution: {integrity: sha512-cXLGjP0c4T3flZJKQSuziYoq7MlT+rnvfZjfp7h+I7K9BNX54kP9nyWvdbwjQ4u1iWbOL4u96fgeZLToQlZC7w==}
 
+  es-module-lexer@1.5.4:
+    resolution: {integrity: sha512-MVNK56NiMrOwitFB7cqDwq0CQutbw+0BvLshJSse0MUNU+y1FC3bUS/AQg7oUng+/wKrrki7JfmwtVHkVfPLlw==}
+
   es-object-atoms@1.0.0:
     resolution: {integrity: sha512-MZ4iQ6JwHOBQjahnjwaC1ZtIBH+2ohjamzAO3oaHcXYup7qxjF2fixyH+Q71voWHeOkI2q/TnJao/KfXYIZWbw==}
     engines: {node: '>= 0.4'}
@@ -17494,10 +17513,6 @@ packages:
     resolution: {integrity: sha512-+oDTluR6WEjdXEJMnC2z6A4FRwFoYuvShVVEGsS7ewc0UTi2QtAKMDJuL4BDEVt+5T7MjFo12RP8ghOM75oKJw==}
     engines: {node: '>=8'}
 
-  is-typed-array@1.1.12:
-    resolution: {integrity: sha512-Z14TF2JNG8Lss5/HMqt0//T9JeHXttXy5pH/DBU4vi98ozO2btxzq9MwYDZYnKwU8nRsz/+GVFVRDq3DkVuSPg==}
-    engines: {node: '>= 0.4'}
-
   is-typed-array@1.1.13:
     resolution: {integrity: sha512-uZ25/bUAlUY5fR4OKT4rZQEBrzQWYV9ZJYGGsUmEJ6thodVJ1HX64ePQ6Z0qPWP+m+Uq6e9UugrE38jeYsDSMw==}
     engines: {node: '>= 0.4'}
@@ -17807,8 +17822,8 @@ packages:
   js-cookie@2.2.1:
     resolution: {integrity: sha512-HvdH2LzI/EAZcUwA8+0nKNtWHqS+ZmijLA30RwZA0bo7ToCckjK5MkGhjED9KoRcXO6BaGI3I9UIzSA1FKFPOQ==}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
-    resolution: {tarball: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25}
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
+    resolution: {commit: 0ed5007ada500c12d797ab867a15cfab736e9b25, repo: git@github.com:formio/JS-Interpreter.git, type: git}
     version: 1.1.0-formio.2
 
   js-stringify@1.0.2:
@@ -23914,6 +23929,15 @@ packages:
       webpack:
         optional: true
 
+  webpack-dev-middleware@6.1.3:
+    resolution: {integrity: sha512-A4ChP0Qj8oGociTs6UdlRUGANIGrCDL3y+pmQMc+dSsraXHCatFpmMey4mYELA+juqwUqwQsUgJJISXl1KWmiw==}
+    engines: {node: '>= 14.15.0'}
+    peerDependencies:
+      webpack: ^5.0.0
+    peerDependenciesMeta:
+      webpack:
+        optional: true
+
   webpack-dev-server@4.11.1:
     resolution: {integrity: sha512-lILVz9tAUy1zGFwieuaQtYiadImb5M3d+H+L1zDYalYoDl0cksAB1UNyuE5MMWJrG6zR1tXkCP2fitl7yoUJiw==}
     engines: {node: '>= 12.13.0'}
@@ -24040,10 +24064,6 @@ packages:
   which-pm@2.0.0:
     resolution: {integrity: sha512-Lhs9Pmyph0p5n5Z3mVnN0yWcbQYUAD7rbQUiMsQxOJ3T57k7RFe35SUwWMf7dsbDZks1uOmw4AecB/JMDj3v/w==}
     engines: {node: '>=8.15'}
-
-  which-typed-array@1.1.13:
-    resolution: {integrity: sha512-P5Nra0qjSncduVPEAr7xhoF5guty49ArDTwzJ/yNuPIbZppyRxFQsRCWrocxIY+CnMVG+qfbU2FmDKyvSGClow==}
-    engines: {node: '>= 0.4'}
 
   which-typed-array@1.1.15:
     resolution: {integrity: sha512-oV0jmFtUky6CXfkqehVvBP/LSWJ2sy4vWMioiENyJLePrBO/yKyV9OyJySfAKosh+RYkIl5zJCNZ8/4JncrpdA==}
@@ -24605,7 +24625,7 @@ snapshots:
       browserslist: 4.23.1
       copy-webpack-plugin: 11.0.0(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
       critters: 0.0.20
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       esbuild-wasm: 0.19.11
       fast-glob: 3.3.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
@@ -24643,7 +24663,7 @@ snapshots:
       vite: 5.0.11(@types/node@22.7.4)(less@4.2.0)(sass@1.69.7)(terser@5.26.0)
       watchpack: 2.4.0
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
-      webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       webpack-dev-server: 4.15.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
       webpack-merge: 5.10.0
       webpack-subresource-integrity: 5.1.0(html-webpack-plugin@5.5.4(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)))(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
@@ -27884,7 +27904,7 @@ snapshots:
       commander: 5.1.0
       copy-webpack-plugin: 11.0.0(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
       core-js: 3.34.0
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       css-minimizer-webpack-plugin: 4.2.2(clean-css@5.3.3)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       cssnano: 5.1.15(postcss@8.4.38)
       del: 6.1.1
@@ -29076,7 +29096,7 @@ snapshots:
   '@formio/protected-eval@1.2.2(formiojs@4.13.12(encoding@0.1.13))':
     dependencies:
       formiojs: 4.13.12(encoding@0.1.13)
-      js-interpreter: https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25
+      js-interpreter: git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25
       lodash: 4.17.21
       vm-browserify: 1.1.2
 
@@ -32677,7 +32697,7 @@ snapshots:
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
       constants-browserify: 1.0.0
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       es-module-lexer: 1.4.1
       express: 4.18.2
       fork-ts-checker-webpack-plugin: 8.0.0(typescript@4.9.5)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
@@ -32695,7 +32715,7 @@ snapshots:
       util: 0.12.5
       util-deprecate: 1.0.2
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
-      webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       webpack-hot-middleware: 2.25.4
       webpack-virtual-modules: 0.5.0
     optionalDependencies:
@@ -32726,7 +32746,7 @@ snapshots:
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
       constants-browserify: 1.0.0
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       es-module-lexer: 1.4.1
       express: 4.18.2
       fork-ts-checker-webpack-plugin: 8.0.0(typescript@5.3.3)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
@@ -32744,7 +32764,7 @@ snapshots:
       util: 0.12.5
       util-deprecate: 1.0.2
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
-      webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      webpack-dev-middleware: 6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       webpack-hot-middleware: 2.25.4
       webpack-virtual-modules: 0.5.0
     optionalDependencies:
@@ -32754,6 +32774,42 @@ snapshots:
       - encoding
       - esbuild
       - supports-color
+      - uglify-js
+      - webpack-cli
+
+  '@storybook/builder-webpack5@8.4.4(@swc/core@1.3.100(@swc/helpers@0.5.5))(storybook@7.6.4(encoding@0.1.13))(typescript@5.3.3)':
+    dependencies:
+      '@storybook/core-webpack': 8.4.4(storybook@7.6.4(encoding@0.1.13))
+      '@types/node': 22.7.4
+      '@types/semver': 7.5.6
+      browser-assert: 1.2.1
+      case-sensitive-paths-webpack-plugin: 2.4.0
+      cjs-module-lexer: 1.2.3
+      constants-browserify: 1.0.0
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
+      es-module-lexer: 1.5.4
+      fork-ts-checker-webpack-plugin: 8.0.0(typescript@5.3.3)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
+      html-webpack-plugin: 5.5.4(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      magic-string: 0.30.5
+      path-browserify: 1.0.1
+      process: 0.11.10
+      semver: 7.6.2
+      storybook: 7.6.4(encoding@0.1.13)
+      style-loader: 3.3.3(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
+      terser-webpack-plugin: 5.3.9(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      ts-dedent: 2.2.0
+      url: 0.11.3
+      util: 0.12.5
+      util-deprecate: 1.0.2
+      webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
+      webpack-dev-middleware: 6.1.3(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
+      webpack-hot-middleware: 2.25.4
+      webpack-virtual-modules: 0.6.1
+    optionalDependencies:
+      typescript: 5.3.3
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
       - uglify-js
       - webpack-cli
 
@@ -33221,6 +33277,12 @@ snapshots:
       - encoding
       - supports-color
 
+  '@storybook/core-webpack@8.4.4(storybook@7.6.4(encoding@0.1.13))':
+    dependencies:
+      '@types/node': 22.7.4
+      storybook: 7.6.4(encoding@0.1.13)
+      ts-dedent: 2.2.0
+
   '@storybook/csf-plugin@7.4.6':
     dependencies:
       '@storybook/csf-tools': 7.4.6
@@ -33504,7 +33566,7 @@ snapshots:
 
   '@storybook/preset-scss@1.0.3(css-loader@6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))))(sass-loader@13.3.2(sass@1.69.5)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))))(style-loader@3.3.3(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))))':
     dependencies:
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       sass-loader: 13.3.2(sass@1.69.5)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
       style-loader: 3.3.3(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5)))
 
@@ -37377,7 +37439,7 @@ snapshots:
       semver: 7.6.2
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
-  css-loader@6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)):
+  css-loader@6.8.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.38)
       postcss: 8.4.38
@@ -38246,7 +38308,7 @@ snapshots:
       is-regex: 1.1.4
       is-shared-array-buffer: 1.0.3
       is-string: 1.0.7
-      is-typed-array: 1.1.12
+      is-typed-array: 1.1.13
       is-weakref: 1.0.2
       object-inspect: 1.13.1
       object-keys: 1.1.1
@@ -38369,6 +38431,8 @@ snapshots:
 
   es-module-lexer@1.4.1: {}
 
+  es-module-lexer@1.5.4: {}
+
   es-object-atoms@1.0.0:
     dependencies:
       es-errors: 1.3.0
@@ -38376,7 +38440,7 @@ snapshots:
   es-set-tostringtag@2.0.2:
     dependencies:
       get-intrinsic: 1.2.4
-      has-tostringtag: 1.0.0
+      has-tostringtag: 1.0.2
       hasown: 2.0.0
 
   es-set-tostringtag@2.0.3:
@@ -41357,8 +41421,8 @@ snapshots:
 
   is-arguments@1.1.1:
     dependencies:
-      call-bind: 1.0.5
-      has-tostringtag: 1.0.0
+      call-bind: 1.0.7
+      has-tostringtag: 1.0.2
 
   is-array-buffer@3.0.4:
     dependencies:
@@ -41485,7 +41549,7 @@ snapshots:
 
   is-generator-function@1.0.10:
     dependencies:
-      has-tostringtag: 1.0.0
+      has-tostringtag: 1.0.2
 
   is-glob@2.0.1:
     dependencies:
@@ -41639,10 +41703,6 @@ snapshots:
   is-text-path@2.0.0:
     dependencies:
       text-extensions: 2.4.0
-
-  is-typed-array@1.1.12:
-    dependencies:
-      which-typed-array: 1.1.13
 
   is-typed-array@1.1.13:
     dependencies:
@@ -42390,7 +42450,7 @@ snapshots:
 
   js-cookie@2.2.1: {}
 
-  js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
+  js-interpreter@git+https://git@github.com:formio/JS-Interpreter.git#0ed5007ada500c12d797ab867a15cfab736e9b25:
     dependencies:
       acorn: 8.11.2
 
@@ -46398,7 +46458,7 @@ snapshots:
 
   qs@6.11.2:
     dependencies:
-      side-channel: 1.0.4
+      side-channel: 1.0.6
 
   query-string@6.14.1:
     dependencies:
@@ -48994,7 +49054,7 @@ snapshots:
 
   terser-webpack-plugin@5.3.9(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.17.8)(webpack@5.76.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.17.8)):
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.1
@@ -49006,7 +49066,7 @@ snapshots:
 
   terser-webpack-plugin@5.3.9(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.18.20)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.1
@@ -49018,7 +49078,7 @@ snapshots:
 
   terser-webpack-plugin@5.3.9(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)):
     dependencies:
-      '@jridgewell/trace-mapping': 0.3.20
+      '@jridgewell/trace-mapping': 0.3.25
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.1
@@ -49452,7 +49512,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.7
       get-intrinsic: 1.2.4
-      is-typed-array: 1.1.12
+      is-typed-array: 1.1.13
 
   typed-array-buffer@1.0.2:
     dependencies:
@@ -49465,7 +49525,7 @@ snapshots:
       call-bind: 1.0.7
       for-each: 0.3.3
       has-proto: 1.0.3
-      is-typed-array: 1.1.12
+      is-typed-array: 1.1.13
 
   typed-array-byte-length@1.0.1:
     dependencies:
@@ -49481,7 +49541,7 @@ snapshots:
       call-bind: 1.0.7
       for-each: 0.3.3
       has-proto: 1.0.3
-      is-typed-array: 1.1.12
+      is-typed-array: 1.1.13
 
   typed-array-byte-offset@1.0.2:
     dependencies:
@@ -49496,7 +49556,7 @@ snapshots:
     dependencies:
       call-bind: 1.0.7
       for-each: 0.3.3
-      is-typed-array: 1.1.12
+      is-typed-array: 1.1.13
 
   typed-array-length@1.0.6:
     dependencies:
@@ -50604,7 +50664,17 @@ snapshots:
     optionalDependencies:
       webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
-  webpack-dev-middleware@6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)):
+  webpack-dev-middleware@6.1.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))):
+    dependencies:
+      colorette: 2.0.20
+      memfs: 3.5.3
+      mime-types: 2.1.35
+      range-parser: 1.2.1
+      schema-utils: 4.2.0
+    optionalDependencies:
+      webpack: 5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))(esbuild@0.19.11)
+
+  webpack-dev-middleware@6.1.3(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
@@ -50938,14 +51008,6 @@ snapshots:
     dependencies:
       load-yaml-file: 0.2.0
       path-exists: 4.0.0
-
-  which-typed-array@1.1.13:
-    dependencies:
-      available-typed-arrays: 1.0.5
-      call-bind: 1.0.5
-      for-each: 0.3.3
-      gopd: 1.0.1
-      has-tostringtag: 1.0.0
 
   which-typed-array@1.1.15:
     dependencies:
