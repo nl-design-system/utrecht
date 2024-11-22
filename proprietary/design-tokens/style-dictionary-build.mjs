@@ -20,7 +20,9 @@ const build = async () => {
     ...createStyleDictionaryConfig({
       themeName: `${themeConfig.prefix}-theme`,
     }),
-    log: 'warn',
+    log: {
+      verbosity: 'verbose',
+    },
     preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: [
       '../../components/**/tokens.json',
