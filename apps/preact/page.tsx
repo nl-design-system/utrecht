@@ -1,22 +1,67 @@
 /* eslint-disable react/react-in-jsx-scope */
 import { Body } from '@utrecht/body-react/dist/index.mjs';
-import { Heading, Paragraph } from '@utrecht/component-library-react';
+import {
+  Button,
+  Document,
+  Heading,
+  Link,
+  Paragraph,
+  UnorderedList,
+  UnorderedListItem,
+} from '@utrecht/component-library-react';
 import { PageBody } from '@utrecht/page-body-react/dist/index.mjs';
 import { PageFooter } from '@utrecht/page-footer-react/dist/index.mjs';
 import { PageHeader } from '@utrecht/page-header-react/dist/index.mjs';
 import { PageLayout } from '@utrecht/page-layout-react/dist/index.mjs';
 import { Root } from '@utrecht/root-react/dist/index.mjs';
+import cssnano from 'cssnano';
 import { readFileSync } from 'node:fs';
 import { readFile, writeFile } from 'node:fs/promises';
+import postcss from 'postcss';
 import { PropsWithChildren } from 'react';
 import { renderToString } from 'react-dom/server';
+import UglifyJS from 'uglify-js';
 import { compress } from 'wasm-brotli';
 
 const readImport = (path) => {
   return readFile(`node_modules/${path}`, 'utf-8');
 };
 
-const init = async () => {
+const minifyCss = async (code) => (await postcss([cssnano({ preset: ['default'] })]).process(code)).css;
+
+const minifyJs = (code) => UglifyJS.minify(code).code;
+
+const deferStylesheetScript = `
+customElements.define('defer-stylesheet', class DeferStylesheet extends HTMLElement {
+  constructor() {
+            super();
+            const link = this.ownerDocument.createElement('link');
+            const href = this.getAttribute('href');
+            if (href) {
+            link.href= this.getAttribute('href');
+            link.rel="preload";
+            link.as="style";
+            link.onload = () => { link.onload = null; link.rel = "stylesheet" };
+            this.ownerDocument.getElementsByTagName('head')[0].appendChild(link);
+}
+  }
+});`;
+
+export const getComponents = () => ({
+  Body,
+  Heading,
+  Paragraph,
+  PageBody,
+  PageFooter,
+  PageHeader,
+  PageLayout,
+  Root,
+  Link,
+  UnorderedList,
+  UnorderedListItem,
+});
+
+export const init = async ({ siteConfig, pageConfig, buildConfig, render, renderHead }) => {
   const locales = {
     nl: {
       titleSeparator: ' - ',
@@ -85,20 +130,35 @@ const init = async () => {
         private: await readImport('@utrecht/paragraph-css/dist/index.css'),
       },
     ],
+    [
+      UnorderedList,
+      {
+        publicURL: 'node_modules/@utrecht/unordered-list-css/dist/index.min.css',
+        private: await readImport('@utrecht/unordered-list-css/dist/index.css'),
+      },
+    ],
+    [
+      Link,
+      {
+        publicURL: 'node_modules/@utrecht/link-css/dist/index.min.css',
+        private: await readImport('@utrecht/link-css/dist/index.css'),
+      },
+    ],
+    [
+      Button,
+      {
+        publicURL: 'node_modules/@utrecht/button-css/dist/index.min.css',
+        private: await readImport('@utrecht/button-css/dist/index.css'),
+      },
+    ],
+    [
+      Document,
+      {
+        publicURL: 'node_modules/@utrecht/document-css/dist/index.min.css',
+        private: await readImport('@utrecht/document-css/dist/index.css'),
+      },
+    ],
   ]);
-
-  const siteConfig = {
-    encoding: 'utf-8',
-    themeClassName: 'utrecht-theme',
-    themeUrl: 'node_modules/@utrecht/design-tokens/dist/theme.css',
-  };
-  const pageConfig = {
-    lang: 'en',
-    dir: 'ltr',
-    author: 'gemeente Utrecht',
-    pageTitle: 'Home',
-    description: 'Demo van web components',
-  };
 
   const enableWebComponents = false;
   const ParagraphElement = ({ children }) => <utrecht-paragraph>{children}</utrecht-paragraph>;
@@ -106,19 +166,6 @@ const init = async () => {
   const AutoParagraph = ({ ...restProps }) =>
     enableWebComponents ? <ParagraphElement {...restProps} /> : <Paragraph {...restProps} />;
 
-  const DeferStylesheet2 = ({ href }) => {
-    const unknownProps = {
-      ['onload']: "this.onload=null;this.rel='stylesheet'",
-    };
-    return (
-      <>
-        <link rel="preload" href={href} as="style" {...(unknownProps as any)} />
-        <noscript>
-          <link rel="stylesheet" href={href} />
-        </noscript>
-      </>
-    );
-  };
   const DeferStylesheet = ({ href }) => {
     return (
       <>
@@ -130,41 +177,45 @@ const init = async () => {
     );
   };
 
-  const firstPaintComponents = new Set([Root, Body, PageLayout, PageHeader, PageBody, PageFooter]);
+  const MinifiedScript = ({ children, ...restProps }) => (
+    <script
+      {...restProps}
+      dangerouslySetInnerHTML={{
+        __html: minifyJs(String(children)),
+      }}
+    />
+  );
+
+  const firstPaintComponents = new Set([
+    Root,
+    Body,
+    PageLayout,
+    PageHeader,
+    PageBody,
+    PageFooter,
+    Paragraph,
+    UnorderedList,
+    Link,
+    Button,
+  ]);
 
   const reactPage = (
     <Root lang={pageConfig.lang} dir={pageConfig.dir} className={siteConfig.themeClassName}>
       <head>
         <meta charSet={siteConfig.encoding} />
         <PageTitle parts={[pageConfig.pageTitle, pageConfig.author]} />
-        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
-        <script
-          type="module"
-          dangerouslySetInnerHTML={{
-            __html: `
-customElements.define('defer-stylesheet', class DeferStylesheet extends HTMLElement {
-  constructor() {
-            super();
-            const link = this.ownerDocument.createElement('link');
-            link.href= this.getAttribute('href');
-            link.rel="preload";
-            link.as="style";
-            link.onload = () => { link.onload = null; link.rel = "stylesheet" };
-            this.ownerDocument.getElementsByTagName('head')[0].appendChild(link);
-  }
-});
-        `,
-          }}
-        ></script>
-        <style>{readFileSync(siteConfig.themeUrl, 'utf8')}</style>
-        {siteConfig.themeUrl ? <DeferStylesheet href={siteConfig.themeUrl} /> : null}
         {pageConfig.description ? <meta name="description" content={pageConfig.description} /> : null}
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1" />
+        <MinifiedScript>{deferStylesheetScript}</MinifiedScript>
+        <style nonce={buildConfig.nonce}>{await minifyCss(readFileSync(siteConfig.themeUrl, 'utf8'))}</style>
+        {renderHead ? renderHead() : null}
+        {siteConfig.themeUrl ? <DeferStylesheet href={siteConfig.themeUrl} /> : null}
         {Array.from(componentsToCss.entries())
           .filter(([comp]) => !firstPaintComponents.has(comp))
           .map(([, value], index) => (
             <DeferStylesheet key={index} href={value.publicURL} />
           ))}
-        <style>
+        <style nonce={buildConfig.nonce}>
           {Array.from(componentsToCss.entries())
             .filter(([comp]) => firstPaintComponents.has(comp))
             .map(([, value]) => readFileSync(value.publicURL, 'utf-8'))
@@ -172,26 +223,52 @@ customElements.define('defer-stylesheet', class DeferStylesheet extends HTMLElem
         </style>
       </head>
       <Body>
-        <PageLayout>
-          <PageHeader>Header</PageHeader>
-          <PageBody>
-            <Heading level={1}>Hello, world!</Heading>
-            <AutoParagraph>Lorem ipsum dolor</AutoParagraph>
-          </PageBody>
-          <PageFooter>Footer</PageFooter>
-        </PageLayout>
+        <Document>{render()}</Document>
       </Body>
     </Root>
   );
 
-  console.log(reactPage);
-
   const addDoctype = (html) => `<!DOCTYPE html>\n${html}`;
 
   const html = addDoctype(renderToString(reactPage));
-  writeFile('./server-side-rendering.html', html);
-  const brotli = await compress(Buffer.from(html, 'utf8'));
-  writeFile('./server-side-rendering.html.br', brotli);
+  writeFile(buildConfig.outputFile, html);
+
+  if (buildConfig.brotli) {
+    const brotli = await compress(Buffer.from(html, 'utf8'));
+    writeFile(`${buildConfig.outputFile}.br`, brotli);
+  }
 };
 
-init();
+// const siteConfig = {
+//   encoding: 'utf-8',
+//   themeClassName: 'utrecht-theme',
+//   themeUrl: 'node_modules/@utrecht/design-tokens/dist/theme.css',
+// };
+// const pageConfig = {
+//   lang: 'en',
+//   dir: 'ltr',
+//   author: 'gemeente Utrecht',
+//   pageTitle: 'Home',
+//   description: 'Demo van web components',
+// };
+
+// const buildConfig = {
+//   outputFile: './server-side-rendering.html',
+//   brotli: true,
+// };
+
+// init({
+//   siteConfig,
+//   pageConfig,
+//   buildConfig,
+//   render: () => (
+//     <PageLayout>
+//       <PageHeader>Header</PageHeader>
+//       <PageBody>
+//         <Heading level={1}>Hello, world!</Heading>
+//         <Paragraph>Lorem ipsum dolor</Paragraph>
+//       </PageBody>
+//       <PageFooter>Footer</PageFooter>
+//     </PageLayout>
+//   ),
+// });
