@@ -6,6 +6,8 @@
 
 @import "./mixin";
 
+utrecht-heading-1:not(:defined),
+utrecht-heading[level="1"]:not(:defined),
 .utrecht-heading-1 {
   @include utrecht-heading-1;
 }

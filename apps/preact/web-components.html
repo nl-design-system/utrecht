@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="utrecht-theme utrecht-root">
+  <head>
+    <meta charset="utf-8" />
+    <title>React component library</title>
+    <link rel="stylesheet" href="node_modules/@utrecht/design-tokens/dist/theme.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/page-layout-css/dist/index.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/page-header-css/dist/index.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/page-body-css/dist/index.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/page-footer-css/dist/index.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/root-css/dist/index.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/body-css/dist/index.css" />
+    <link rel="stylesheet" href="node_modules/@utrecht/paragraph-css/dist/index.css" />
+    <script type="importmap">
+      {
+        "imports": {
+          "@utrecht/paragraph-css/dist/index.mjs": "./node_modules/@utrecht/paragraph-css/dist/index.mjs",
+          "@utrecht/paragraph-element": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/body-react/dist/index.mjs"
+        }
+      }
+    </script>
+    <script type="module" async src="node_modules/@utrecht/paragraph-element/src/define.mjs"></script>
+  </head>
+  <body class="utrecht-body">
+    <div class="utrecht-page-layout">
+      <header class="utrecht-page-header">
+        <div class="utrecht-page-header__content">
+        </div>
+      </header>
+      <div class="utrecht-page-body">
+        <div class="utrecht-page-body__content">
+        <utrecht-heading level="1">React components rendered with Preact</utrecht-heading>
+        <utrecht-paragraph appearance="lead">This example uses ES Modules and import maps.</utrecht-paragraph>
+        <utrecht-paragraph>This example uses ES Modules and import maps.</utrecht-paragraph>
+      </div>
+      <div class="utrecht-page-footer">
+        <div class="utrecht-page-footer__content"></div>
+      </div>
+    </div>
+  </body>
+</html>

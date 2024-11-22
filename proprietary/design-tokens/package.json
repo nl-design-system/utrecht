@@ -23,13 +23,14 @@
     "lodash.isplainobject": "4.0.6",
     "lodash.merge": "4.6.2",
     "lodash.mergewith": "4.6.2",
+    "precompress": "12.0.5",
     "regex-trie": "1.0.4",
     "rimraf": "5.0.7",
     "sass": "1.69.5",
     "style-dictionary": "4.0.1"
   },
   "scripts": {
-    "build": "pnpm run build:style-dictionary && pnpm run build:scss",
+    "build": "pnpm run build:style-dictionary && pnpm run build:scss && precompress --types br --verbose dist/",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:style-dictionary": "pnpm run '/^build:style-dictionary:.*/'",
     "build:style-dictionary:default": "node ./style-dictionary-build.mjs",

@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="utrecht-root utrecht-theme"><head><meta charSet="utf-8"/><title>Home - gemeente Utrecht</title><meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1"/><script type="module">
+customElements.define('defer-stylesheet', class DeferStylesheet extends HTMLElement {
+  constructor() {
+            super();
+            const link = this.ownerDocument.createElement('link');
+            link.href= this.getAttribute('href');
+            link.rel="preload";
+            link.as="style";
+            link.onload = () => { link.onload = null; link.rel = "stylesheet" };
+            this.ownerDocument.getElementsByTagName('head')[0].appendChild(link);
+  }
+});
+        </script><style>/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+.utrecht-theme {
+  --utrecht-unordered-list-margin-block-end: 0;
+  --utrecht-unordered-list-item-margin-block-start: 0.25rem;
+  --utrecht-unordered-list-item-margin-block-end: 0.25rem;
+  --utrecht-typography-weight-scale-normal-font-weight: 400;
+  --utrecht-typography-weight-scale-bold-font-weight: 700;
+  --utrecht-typography-scale-xl-font-size: 1.25rem; /* 20px */
+  --utrecht-typography-scale-sm-font-size: 0.875rem; /* 14px */
+  --utrecht-typography-scale-md-font-size: 1rem; /* 16px */
+  --utrecht-typography-scale-lg-font-size: 1.125rem; /* 18px */
+  --utrecht-typography-scale-4xl-font-size: 2rem; /* 32px */
+  --utrecht-typography-scale-3xl-font-size: 1.5rem; /* 24px */
+  --utrecht-typography-scale-2xl-font-size: 1.375rem; /* 22px */
+  --utrecht-typography-sans-serif-font-family: &quot;Lucida Grande&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Sans&quot;, &quot;Arial&quot;, sans-serif;
+  --utrecht-typography-line-height-xs: 1;
+  --utrecht-typography-line-height-sm: 1.25;
+  --utrecht-typography-line-height-md: 1.5;
+  --utrecht-typography-line-height-lg: 2;
+  --utrecht-typography-font-style-normal: normal;
+  --utrecht-typography-font-style-inherit: inherit;
+  --utrecht-toptask-nav-link-grid-max-inline-size: 240px;
+  --utrecht-toptask-link-min-inline-size: 15rem;
+  --utrecht-toptask-link-min-block-size: 8.25rem;
+  --utrecht-toptask-link-line-height: 1.2;
+  --utrecht-toptask-link-icon-size: 2.25rem;
+  --utrecht-toptask-link-hover-transform-scale: 1.02;
+  --utrecht-topnav-link-focus-text-decoration: none;
+  --utrecht-topnav-link-focus-border-type: dotted;
+  --utrecht-textbox-border-bottom-width: 3px;
+  --utrecht-textarea-border-bottom-width: 3px;
+  --utrecht-textarea-border-block-end-width: 3px;
+  --utrecht-table-margin-block-end: 0;
+  --utrecht-table-header-sticky-border-block-end-width: 2px;
+  --utrecht-table-footer-sticky-border-block-start-width: 2px;
+  --utrecht-table-cell-padding-inline-start: 0.4em;
+  --utrecht-table-cell-padding-inline-end: 0.4em;
+  --utrecht-table-cell-padding-block-start: 0.5em;
+  --utrecht-table-cell-padding-block-end: 0.5em;
+  --utrecht-table-cell-line-height: 1.5rem;
+  --utrecht-table-cell-icon-size: 1em;
+  --utrecht-table-caption-text-align: start;
+  --utrecht-table-caption-margin-block-end: 1em;
+  --utrecht-stack-focus-z-index: 1;
+  --utrecht-space-text-xs: 0.5ch; /* Extra Small */
+  --utrecht-space-text-xl: 1.75ch; /* Extra Large */
+  --utrecht-space-text-sm: 0.75ch; /* Small */
+  --utrecht-space-text-md: 1ch; /* Medium */
+  --utrecht-space-text-lg: 1.5ch; /* Large */
+  --utrecht-space-text-3xs: 0.125ch; /* Extra Small 3 */
+  --utrecht-space-text-3xl: 3ch; /* Extra Large 3 */
+  --utrecht-space-text-2xs: 0.25ch; /* Extra Small 2 */
+  --utrecht-space-text-2xl: 2ch; /* Extra Large 2 */
+  --utrecht-space-row-xs: 8px; /* Extra Small */
+  --utrecht-space-row-xl: 24px; /* Extra Large */
+  --utrecht-space-row-sm: 12px; /* Small */
+  --utrecht-space-row-md: 16px; /* Medium */
+  --utrecht-space-row-lg: 20px; /* Large */
+  --utrecht-space-row-5xl: 64px; /* Extra Large 5 */
+  --utrecht-space-row-4xs: 1px; /* Extra Small 4 */
+  --utrecht-space-row-4xl: 48px; /* Extra Large 4 */
+  --utrecht-space-row-3xs: 2px; /* Extra Small 3 */
+  --utrecht-space-row-3xl: 32px; /* Extra Large 3 */
+  --utrecht-space-row-2xs: 4px; /* Extra Small 2 */
+  --utrecht-space-row-2xl: 28px; /* Extra Large 2 */
+  --utrecht-space-inline-xs: 8px; /* Extra Small */
+  --utrecht-space-inline-xl: 24px; /* Extra Large */
+  --utrecht-space-inline-sm: 12px; /* Small */
+  --utrecht-space-inline-md: 16px; /* Medium */
+  --utrecht-space-inline-lg: 20px; /* Large */
+  --utrecht-space-inline-4xl: 48px; /* Extra Large 4 */
+  --utrecht-space-inline-3xs: 2px; /* Extra Small 3 */
+  --utrecht-space-inline-3xl: 32px; /* Extra Large 3 */
+  --utrecht-space-inline-2xs: 4px; /* Extra Small 2 */
+  --utrecht-space-inline-2xl: 28px; /* Extra Large 2 */
+  --utrecht-space-column-xs: 8px; /* Extra Small */
+  --utrecht-space-column-xl: 24px; /* Extra Large */
+  --utrecht-space-column-sm: 12px; /* Small */
+  --utrecht-space-column-md: 16px; /* Medium */
+  --utrecht-space-column-lg: 20px; /* Large */
+  --utrecht-space-column-5xl: 64px; /* Extra Large 5 */
+  --utrecht-space-column-4xs: 1px; /* Extra Small 4 */
+  --utrecht-space-column-4xl: 48px; /* Extra Large 4 */
+  --utrecht-space-column-3xs: 2px; /* Extra Small 3 */
+  --utrecht-space-column-3xl: 32px; /* Extra Large 3 */
+  --utrecht-space-column-2xs: 4px; /* Extra Small 2 */
+  --utrecht-space-column-2xl: 28px; /* Extra Large 2 */
+  --utrecht-space-block-xs: 8px; /* Extra Small */
+  --utrecht-space-block-xl: 24px; /* Extra Large */
+  --utrecht-space-block-sm: 12px; /* Small */
+  --utrecht-space-block-md: 16px; /* Medium */
+  --utrecht-space-block-lg: 20px; /* Large */
+  --utrecht-space-block-4xs: 1px;
+  --utrecht-space-block-4xl: 64px; /* Extra Large 4 */
+  --utrecht-space-block-3xs: 2px; /* Extra Small 3 */
+  --utrecht-space-block-3xl: 48px; /* Extra Large 3 */
+  --utrecht-space-block-2xs: 4px; /* Extra Small 2 */
+  --utrecht-space-block-2xl: 32px; /* Extra Large 2 */
+  --utrecht-separator-block-size: 8px;
+  --utrecht-select-border-block-end-width: 3px;
+  --utrecht-search-bar-input-background-size: 1em;
+  --utrecht-search-bar-input-background-position-y: 50%;
+  --utrecht-search-bar-input-background-position-x: .5em;
+  --utrecht-search-bar-dropdown-max-block-size: 300px;
+  --utrecht-search-bar-dropdown-border-width: 1px;
+  --utrecht-search-bar-button-hover-scale: 1;
+  --utrecht-search-bar-button-hover-background-color: hsl(359 65% 58%);
+  --utrecht-rich-text-confidant-margin-block-end: 0;
+  --utrecht-radio-button-size: 24px;
+  --utrecht-radio-button-margin-inline-end: 12px;
+  --utrecht-radio-button-invalid-border-width: 2px;
+  --utrecht-radio-button-icon-size: 42%;
+  --utrecht-radio-button-border-width: 2px;
+  --utrecht-radio-button-border-radius: 0;
+  --utrecht-pointer-target-min-size: 44px;
+  --utrecht-paragraph-margin-block-end: 0;
+  --utrecht-pagination-relative-link-text-transform: uppercase;
+  --utrecht-pagination-relative-link-text-decoration: none;
+  --utrecht-pagination-relative-link-padding-inline-start: 0.5em;
+  --utrecht-pagination-relative-link-padding-inline-end: 0.5em;
+  --utrecht-pagination-relative-link-padding-block-start: 0.5em;
+  --utrecht-pagination-relative-link-padding-block-end: 0.5em;
+  --utrecht-pagination-relative-link-distanced-margin-inline-start: 0.5em;
+  --utrecht-pagination-relative-link-distanced-margin-inline-end: 0.5em;
+  --utrecht-pagination-relative-link-border-width: 2px;
+  --utrecht-pagination-page-link-text-decoration: none;
+  --utrecht-pagination-page-link-padding-inline-start: 0.5em;
+  --utrecht-pagination-page-link-padding-inline-end: 0.5em;
+  --utrecht-pagination-page-link-padding-block-start: 0.5em;
+  --utrecht-pagination-page-link-padding-block-end: 0.5em;
+  --utrecht-pagination-page-link-distanced-margin-inline-start: 0.5em;
+  --utrecht-pagination-page-link-border-width: 2px;
+  --utrecht-pagination-page-link-border-color: transparent;
+  --utrecht-pagination-page-link-background-color: transparent;
+  --utrecht-pagination-margin-block-start: 0;
+  --utrecht-pagination-margin-block-end: 1em;
+  --utrecht-page-padding-inline-start: 2em;
+  --utrecht-page-padding-inline-end: 2em;
+  --utrecht-page-padding-block-start: 1.8em;
+  --utrecht-page-padding-block-end: 1em;
+  --utrecht-page-max-inline-size: 1184px;
+  --utrecht-page-margin-inline-start: 2em;
+  --utrecht-page-margin-inline-end: 2em;
+  --utrecht-page-header-padding-inline-start: 2em;
+  --utrecht-page-header-padding-inline-end: 2em;
+  --utrecht-page-header-content-padding-inline-start: 2em;
+  --utrecht-page-header-content-padding-inline-end: 2.4em;
+  --utrecht-page-header-content-padding-block-start: 1.8em;
+  --utrecht-page-header-content-padding-block-end: 1em;
+  --utrecht-page-header-content-max-inline-size: 1184px;
+  --utrecht-page-footer-content-max-inline-size: 1184px;
+  --utrecht-page-content-padding-block-start: 2em;
+  --utrecht-page-content-padding-block-end: 2em;
+  --utrecht-page-body-padding-inline-start: 2em;
+  --utrecht-page-body-padding-inline-end: 2em;
+  --utrecht-page-body-content-padding-inline-start: 2em;
+  --utrecht-page-body-content-padding-inline-end: 2em;
+  --utrecht-page-body-content-padding-block-start: 1.8em;
+  --utrecht-page-body-content-padding-block-end: 1em;
+  --utrecht-page-body-content-max-inline-size: 1184px;
+  --utrecht-ordered-list-padding-inline-start: 28.8px;
+  --utrecht-ordered-list-margin-block-start: 0;
+  --utrecht-ordered-list-margin-block-end: 1em;
+  --utrecht-ordered-list-item-padding-inline-start: 0;
+  --utrecht-ordered-list-item-margin-block-start: 0.25em;
+  --utrecht-ordered-list-item-margin-block-end: 0.25em;
+  --utrecht-number-data-positive-color: green;
+  --utrecht-number-data-negative-color: red;
+  --utrecht-number-badge-padding-inline: 1ex; /* Default inline padding color for badge components */
+  --utrecht-number-badge-padding-block: 1ex; /* Default block padding for badge components */
+  --utrecht-mapcontrolbutton-margin-inline-start: 0;
+  --utrecht-mapcontrolbutton-margin-inline-end: 0;
+  --utrecht-mapcontrolbutton-focus-text-decoration: none;
+  --utrecht-mapcontrolbutton-border-radius: 2px;
+  --utrecht-map-marker-size: 48px;
+  --utrecht-map-marker-icon-size: 30px;
+  --utrecht-map-marker-box-shadow-color: rgb(0 0 0 / 20%);
+  --utrecht-map-marker-border-width: 3px;
+  --utrecht-logo-min-inline-size: 110.57px;
+  --utrecht-logo-min-block-size: 58.97px;
+  --utrecht-logo-max-inline-size: 192px;
+  --utrecht-logo-max-block-size: 103px;
+  --utrecht-listbox-option-min-block-size: 44px;
+  --utrecht-listbox-max-block-size: 300px;
+  --utrecht-listbox-inline-size: 448px;
+  --utrecht-list-social-item-margin-inline-end: 10px;
+  --utrecht-link-text-underline-offset: 3px;
+  --utrecht-link-text-decoration: underline;
+  --utrecht-link-social-size: 40px;
+  --utrecht-link-social-icon-size: 26px;
+  --utrecht-link-social-hover-transform-scale: 1.1;
+  --utrecht-link-social-border-width: 2px;
+  --utrecht-link-list-link-text-decoration: none;
+  --utrecht-link-list-icon-size: 14px;
+  --utrecht-link-icon-size: 1.2em;
+  --utrecht-link-hover-text-decoration-thickness: 3px;
+  --utrecht-link-hover-text-decoration: underline;
+  --utrecht-link-focus-visible-text-decoration: none;
+  --utrecht-icon-size: 48px;
+  --utrecht-icon-scale-xs: 8px;
+  --utrecht-icon-scale-xl: 26px; /* Formaat social media iconen */
+  --utrecht-icon-scale-sm: 12px;
+  --utrecht-icon-scale-md: 16px; /* Formaat voor radio button */
+  --utrecht-icon-scale-lg: 24px; /* Voor kalender iconen */
+  --utrecht-icon-scale-4xl: 48px;
+  --utrecht-icon-scale-3xs: 1px;
+  --utrecht-icon-scale-3xl: 36px; /* Formaat voor toptaks iconen */
+  --utrecht-icon-scale-2xs: 4px;
+  --utrecht-icon-scale-2xl: 30px; /* Formaat voor marker iconen */
+  --utrecht-icon-baseline-inset-block-start: 0.125em;
+  --utrecht-heading-5-margin-block-start: 1rem;
+  --utrecht-heading-5-margin-block-end: 0.2rem;
+  --utrecht-heading-4-margin-block-start: 1.2rem;
+  --utrecht-heading-4-margin-block-end: 0.3rem;
+  --utrecht-heading-3-margin-block-start: 1rem;
+  --utrecht-heading-3-margin-block-end: 0.2rem;
+  --utrecht-heading-2-margin-block-start: 1.5rem;
+  --utrecht-heading-2-margin-block-end: 0.3rem;
+  --utrecht-heading-1-margin-block-start: 0.67rem;
+  --utrecht-heading-1-margin-block-end: 0.67rem;
+  --utrecht-form-toggle-width: 48px;
+  --utrecht-form-toggle-thumb-min-inline-size: 18px;
+  --utrecht-form-toggle-thumb-margin-inline-start: .25em;
+  --utrecht-form-toggle-thumb-margin-inline-end: .25em;
+  --utrecht-form-toggle-thumb-disabled-box-shadow: 0;
+  --utrecht-form-toggle-padding-inline-start: 0;
+  --utrecht-form-toggle-padding-inline-end: 0;
+  --utrecht-form-toggle-padding-block-start: 0;
+  --utrecht-form-toggle-padding-block-end: 0;
+  --utrecht-form-toggle-height: 24px;
+  --utrecht-form-toggle-focus-border-width: 2px;
+  --utrecht-form-toggle-focus-border-style: dotted;
+  --utrecht-form-toggle-border-width: 2px;
+  --utrecht-form-toggle-border-style: solid;
+  --utrecht-form-toggle-border-radius: 10em;
+  --utrecht-form-toggle-border-color: transparent;
+  --utrecht-form-toggle-accent-color: hsla(0 0% 48% / 100%);
+  --utrecht-form-label-font-size: 1em;
+  --utrecht-form-field-invalid-border-inline-start-width: 3px;
+  --utrecht-form-control-read-only-border-color: transparent;
+  --utrecht-form-control-padding-inline-start: 12px;
+  --utrecht-form-control-padding-inline-end: 12px;
+  --utrecht-form-control-padding-block-start: 8px;
+  --utrecht-form-control-padding-block-end: 8px;
+  --utrecht-form-control-max-inline-size: 28em;
+  --utrecht-form-control-border-radius: 0;
+  --utrecht-form-control-block-size: 42px;
+  --utrecht-focus-outline-style: dotted;
+  --utrecht-figure-caption-color: #727272;
+  --utrecht-drawer-max-inline-size: 320px;
+  --utrecht-drawer-max-block-size: 240px;
+  --utrecht-drawer-border-width: 1px;
+  --utrecht-document-line-height: 1.4;
+  --utrecht-data-list-rows-column-min-inline-size: 25ch;
+  --utrecht-data-list-rows-column-inline-size: 80%;
+  --utrecht-column-layout-column-width: 350px;
+  --utrecht-column-layout-column-rule-width: 2px;
+  --utrecht-color-yellow-80: hsl(48 100% 80%); /* spotlight en uitgelicht */
+  --utrecht-color-yellow-60: hsl(48 100% 60%); /* selecteer geel */
+  --utrecht-color-yellow-50: hsl(48 100% 50%); /* basis geel #ffcc00 */
+  --utrecht-color-yellow-40: hsl(48 100% 40%); /* donker geel */
+  --utrecht-color-yellow-20: hsl(48 100% 20%); /* donker geel voor darkmode achtergrond */
+  --utrecht-color-white: hsl(0 0% 100%);
+  --utrecht-color-secondary-yellow: #ffcc00; /* Geel */
+  --utrecht-color-secondary-red: #cc0000; /* Red */
+  --utrecht-color-secondary-purple: #762cd1; /* Paars */
+  --utrecht-color-secondary-orange: #ff6e00; /* Oranje */
+  --utrecht-color-secondary-navy: #1c4181; /* Marineblauw */
+  --utrecht-color-secondary-magenta: #f02198; /* Magenta */
+  --utrecht-color-secondary-lime: #99d000; /* Lime */
+  --utrecht-color-secondary-grey: #757575; /* Grijs */
+  --utrecht-color-secondary-green: #32ab27; /* Groen */
+  --utrecht-color-secondary-cyan: #009ed4; /* Cyaan */
+  --utrecht-color-secondary-brown: #ad643b; /* Bruin */
+  --utrecht-color-secondary-blue: #006dff; /* Blauw */
+  --utrecht-color-red-95: hsl(0 100% 95%); /* Achtergrond rode kleur */
+  --utrecht-color-red-40: hsl(0 100% 40%); /* basis rood #cc0000 */
+  --utrecht-color-red-30: hsl(0 100% 30%); /* hover rood */
+  --utrecht-color-red-20: hsl(0 100% 20%); /* donker rood */
+  --utrecht-color-invalid: #990000;
+  --utrecht-color-grey-95: hsl(0 0% 95%); /* grijs variant voor achtergrond accordion #f2f2f2 */
+  --utrecht-color-grey-90: hsl(0 0% 90%); /* grijs variant voor achtergrond templates #e6e6e6 */
+  --utrecht-color-grey-80: hsl(0 0% 80%); /* grijs variant voor achtergrond content #e5e5e5 */
+  --utrecht-color-grey-40: hsl(0 0% 40%); /* basis grijs #727272 */
+  --utrecht-color-grey-30: hsl(0 0% 30%); /* border grijs #888 */
+  --utrecht-color-grey-20: hsl(0 0% 20%); /* experimenteel / beperkt gebruiken */
+  --utrecht-color-grey-15: hsl(0 0% 15%); /* experimenteel / achtergrond kleur voor darkmode */
+  --utrecht-color-grey-10: hsl(0 0% 10%); /* experimenteel / beperkt gebruiken */
+  --utrecht-color-green-90: hsl(90 30% 90%); /* Achtergrond licht groen */
+  --utrecht-color-green-80: hsl(90 30% 80%); /* Licht groen */
+  --utrecht-color-green-50: hsl(90 30% 50%); /* Standaard groen #80a659  */
+  --utrecht-color-green-40: hsl(90 30% 38%); /* donker groen */
+  --utrecht-color-green-30: hsl(90 30% 30%); /* donker groen voor darkmode achtergrond */
+  --utrecht-color-blue-90: hsl(211 60% 90%); /* ijsblauw variant achtergrond, spotlight en uitgelicht */
+  --utrecht-color-blue-80: hsl(211 60% 80%); /* licht blauw voor achtergrond */
+  --utrecht-color-blue-60: hsl(211 60% 60%); /* experimenteel / Drak mode link en button kleur */
+  --utrecht-color-blue-50: hsl(211 60% 50%); /* experimenteel / beperkt gebruiken */
+  --utrecht-color-blue-40: hsl(211 60% 40%); /* blauw variant bij hover/focus #3669a5 */
+  --utrecht-color-blue-35: hsl(211 60% 35%); /* basis link en knoppen CTA donkerblauw */
+  --utrecht-color-blue-30: hsl(211 60% 30%); /* Deze kleur gebruiken we niet (interaction active) */
+  --utrecht-color-blue-20: hsl(211 60% 20%); /* basis donkerblauw (OS focus) */
+  --utrecht-color-black: hsl(0 0% 0%);
+  --utrecht-code-block-padding-inline-start: 20px;
+  --utrecht-code-block-padding-inline-end: 20px;
+  --utrecht-code-block-padding-block-start: 20px;
+  --utrecht-code-block-padding-block-end: 20px;
+  --utrecht-checkbox-size: 24px;
+  --utrecht-checkbox-margin-block-start: 0;
+  --utrecht-checkbox-focus-border-width: 2px;
+  --utrecht-checkbox-border-width: 2px;
+  --utrecht-checkbox-border-radius: 0;
+  --utrecht-calendar-table-weeks-item-width: 44px;
+  --utrecht-calendar-table-weeks-item-padding-block-start: 4px;
+  --utrecht-calendar-table-weeks-item-padding-block-end: 10px;
+  --utrecht-calendar-table-weeks-item-line-height: 1.5rem;
+  --utrecht-calendar-table-days-item-day-size: 44px;
+  --utrecht-calendar-table-days-item-day-selected-border-color: transparent;
+  --utrecht-calendar-table-days-item-day-out-of-the-month-border-color: transparent;
+  --utrecht-calendar-table-days-item-day-is-today-font-weight: 700;
+  --utrecht-calendar-table-days-item-day-focus-border-color: transparent;
+  --utrecht-calendar-table-days-item-day-emphasis-border-color: transparent;
+  --utrecht-calendar-table-days-item-day-disabled-border-color: transparent;
+  --utrecht-calendar-table-days-item-day-border-width: 2px;
+  --utrecht-calendar-table-days-item-day-border-color: transparent;
+  --utrecht-calendar-table-days-item-day-active-border-color: transparent;
+  --utrecht-calendar-navigation-padding-block-start: 2px;
+  --utrecht-calendar-navigation-padding-block-end: 2px;
+  --utrecht-calendar-navigation-label-min-inline-size: 200px;
+  --utrecht-calendar-icon-size: 24px;
+  --utrecht-button-subtle-font-weight: 700;
+  --utrecht-button-subtle-disabled-background-color: transparent;
+  --utrecht-button-subtle-border-color: transparent;
+  --utrecht-button-subtle-background-color: transparent;
+  --utrecht-button-primary-action-warning-hover-border-color: transparent;
+  --utrecht-button-primary-action-warning-border-color: transparent;
+  --utrecht-button-primary-action-ready-hover-border-color: transparent;
+  --utrecht-button-primary-action-ready-border-color: transparent;
+  --utrecht-button-primary-action-hover-border-color: transparent;
+  --utrecht-button-primary-action-danger-hover-border-color: transparent;
+  --utrecht-button-primary-action-danger-border-color: transparent;
+  --utrecht-button-primary-action-border-color: transparent;
+  --utrecht-button-margin-inline-start: 0;
+  --utrecht-button-margin-inline-end: 0;
+  --utrecht-button-hover-scale: 1.02;
+  --utrecht-button-focus-scale: 1.02;
+  --utrecht-button-border-width: 1px;
+  --utrecht-button-border-radius: 0;
+  --utrecht-breadcrumb-nav-min-block-size: 34px;
+  --utrecht-breadcrumb-nav-link-text-decoration: none;
+  --utrecht-breadcrumb-nav-link-hover-text-decoration: underline;
+  --utrecht-breadcrumb-nav-link-focus-text-decoration: underline;
+  --utrecht-breadcrumb-nav-divider-inline-size: 1px;
+  --utrecht-border-width-sm: 1px;
+  --utrecht-border-width-md: 2px;
+  --utrecht-border-style-solid: solid;
+  --utrecht-border-style-dotted: dotted;
+  --utrecht-border-radius-sm: 2px;
+  --utrecht-border-radius-round: 999px;
+  --utrecht-border-radius-none: 0;
+  --utrecht-border-radius-md: 4px;
+  --utrecht-border-radius-lg: 8px;
+  --utrecht-blockquote-margin-inline-start: 1.6em;
+  --utrecht-blockquote-margin-inline-end: 1.6em;
+  --utrecht-blockquote-margin-block-start: 1.6em;
+  --utrecht-blockquote-margin-block-end: 1.6em;
+  --utrecht-badge-counter-padding-inline: 1ex; /* Default inline padding color for badge components */
+  --utrecht-badge-counter-padding-block: 1ex; /* Default block padding for badge components */
+  --utrecht-badge-border-radius: 0; /* Default corner radius for badge components */
+  --utrecht-backdrop-reduced-transparency-opacity: 0.98;
+  --utrecht-backdrop-opacity: 0.8;
+  --utrecht-backdrop-fade-in-animation-duration: 400ms;
+  --utrecht-article-max-inline-size: 780px;
+  --utrecht-alert-icon-size: 24px;
+  --utrecht-alert-icon-inset-block-start: 6px;
+  --utrecht-alert-dialog-min-inline-size: 320px;
+  --utrecht-alert-dialog-min-block-size: 100px;
+  --utrecht-alert-dialog-max-block-size: 80vh;
+  --utrecht-action-submit-cursor: pointer;
+  --utrecht-action-navigate-cursor: pointer;
+  --utrecht-action-inert-cursor: default;
+  --utrecht-action-disabled-cursor: not-allowed;
+  --utrecht-action-busy-cursor: wait;
+  --utrecht-action-activate-cursor: pointer;
+  --utrecht-accordion-panel-border-width: 2px;
+  --utrecht-accordion-button-icon-size: 24px;
+  --utrecht-accordion-button-hover-background-color: inherit;
+  --utrecht-accordion-button-border-width: 0;
+  --of-progress-indicator-mobile-box-shadow: 0px 0px 2px 0px rgba(0 0 0 / 20%);
+  --denhaag-process-steps-sub-step-marker-size: 12px;
+  --denhaag-process-steps-step-marker-size: 28px;
+  --utrecht-unordered-list-marker-color: var(--utrecht-color-red-40);
+  --utrecht-unordered-list-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-toptask-nav-gap: var(--utrecht-space-column-md);
+  --utrecht-toptask-link-padding-inline-start: var(--utrecht-space-inline-xl);
+  --utrecht-toptask-link-padding-inline-end: var(--utrecht-space-inline-xl);
+  --utrecht-toptask-link-padding-block-start: var(--utrecht-space-block-xl);
+  --utrecht-toptask-link-padding-block-end: var(--utrecht-space-block-xl);
+  --utrecht-toptask-link-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-topnav-list-border-color: var(--utrecht-color-grey-40);
+  --utrecht-topnav-list-background-color: var(--utrecht-color-grey-15);
+  --utrecht-topnav-link-hover-background-color: var(--utrecht-color-black);
+  --utrecht-topnav-link-focus-outline-color: var(--utrecht-color-black);
+  --utrecht-topnav-link-focus-color: var(--utrecht-color-black);
+  --utrecht-topnav-link-focus-box-shadow-color: var(--utrecht-color-yellow-80);
+  --utrecht-topnav-link-focus-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-topnav-link-color: var(--utrecht-color-white);
+  --utrecht-topnav-link-background-color: var(--utrecht-color-blue-40);
+  --utrecht-textarea-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-table-row-border-block-end-width: var(--utrecht-border-width-sm);
+  --utrecht-table-row-border-block-end-color: var(--utrecht-color-grey-90);
+  --utrecht-table-row-alternate-odd-color: var(--utrecht-color-black);
+  --utrecht-table-row-alternate-odd-background-color: var(--utrecht-color-white);
+  --utrecht-table-row-alternate-even-color: var(--utrecht-color-black);
+  --utrecht-table-row-alternate-even-background-color: var(--utrecht-color-grey-95);
+  --utrecht-table-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-table-header-sticky-color: var(--utrecht-color-black);
+  --utrecht-table-header-sticky-border-block-end-color: var(--utrecht-color-red-40);
+  --utrecht-table-header-sticky-background-color: var(--utrecht-color-white);
+  --utrecht-table-header-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-table-header-border-block-end-width: var(--utrecht-border-width-md);
+  --utrecht-table-header-border-block-end-color: var(--utrecht-color-red-40);
+  --utrecht-table-footer-sticky-color: var(--utrecht-color-black);
+  --utrecht-table-footer-sticky-border-block-start-color: var(--utrecht-color-red-40);
+  --utrecht-table-footer-sticky-background-color: var(--utrecht-color-white);
+  --utrecht-table-cell-selected-color: var(--utrecht-color-black);
+  --utrecht-table-cell-selected-background-color: var(--utrecht-color-blue-90);
+  --utrecht-table-caption-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-table-caption-font-size: var(--utrecht-typography-scale-lg-font-size);
+  --utrecht-surface-color: var(--utrecht-color-grey-10);
+  --utrecht-surface-background-color: var(--utrecht-color-grey-95);
+  --utrecht-spotlight-section-warning-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-spotlight-section-padding-inline-start: var(--utrecht-space-inline-md);
+  --utrecht-spotlight-section-padding-inline-end: var(--utrecht-space-inline-md);
+  --utrecht-spotlight-section-padding-block-start: var(--utrecht-space-block-md);
+  --utrecht-spotlight-section-padding-block-end: var(--utrecht-space-block-sm);
+  --utrecht-spotlight-section-ok-background-color: var(--utrecht-color-green-90);
+  --utrecht-spotlight-section-info-background-color: var(--utrecht-color-blue-90);
+  --utrecht-spotlight-section-error-background-color: var(--utrecht-color-red-95);
+  --utrecht-spotlight-section-color: var(--utrecht-color-black);
+  --utrecht-spotlight-section-background-color: var(--utrecht-color-grey-90);
+  --utrecht-skip-link-text-decoration: var(--utrecht-link-text-decoration);
+  --utrecht-skip-link-focus-visible-text-decoration: var(--utrecht-link-focus-visible-text-decoration);
+  --utrecht-sidenav-link-hover-color: var(--utrecht-color-blue-40);
+  --utrecht-sidenav-link-color: var(--utrecht-color-blue-40);
+  --utrecht-sidenav-item-marker-hover-color: var(--utrecht-color-blue-50);
+  --utrecht-sidenav-item-marker-color: var(--utrecht-color-grey-80);
+  --utrecht-sidenav-item-margin-inline-start: var(--utrecht-space-inline-3xs);
+  --utrecht-sidenav-item-margin-inline-end: var(--utrecht-space-inline-3xs);
+  --utrecht-sidenav-item-margin-block-start: var(--utrecht-space-block-xs);
+  --utrecht-sidenav-item-margin-block-end: var(--utrecht-space-block-xs);
+  --utrecht-sidenav-item-hover-color: var(--utrecht-color-blue-40);
+  --utrecht-separator-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-separator-margin-block-end: var(--utrecht-space-block-md);
+  --utrecht-separator-color: var(--utrecht-color-grey-90);
+  --utrecht-search-bar-section-title-margin-inline-start: var(--utrecht-space-inline-xs);
+  --utrecht-search-bar-section-title-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-search-bar-section-title-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-search-bar-section-title-color: var(--utrecht-color-black);
+  --utrecht-search-bar-section-margin-block-end: var(--utrecht-space-inline-xs);
+  --utrecht-search-bar-list-item-is-selected-color: var(--utrecht-color-black);
+  --utrecht-search-bar-list-item-is-selected-background-color: var(--utrecht-color-grey-95);
+  --utrecht-search-bar-list-item-is-active-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-search-bar-list-item-is-active-color: var(--utrecht-color-black);
+  --utrecht-search-bar-list-item-is-active-background-color: var(--utrecht-color-grey-95);
+  --utrecht-search-bar-input-padding-inline-start: var(--utrecht-space-inline-3xl);
+  --utrecht-search-bar-input-border-color: var(--utrecht-color-red-40);
+  --utrecht-search-bar-dropdown-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-search-bar-dropdown-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-search-bar-dropdown-border-color: var(--utrecht-color-red-40);
+  --utrecht-search-bar-button-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-search-bar-button-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-search-bar-button-color: var(--utrecht-color-white);
+  --utrecht-search-bar-button-border-color: var(--utrecht-color-red-40);
+  --utrecht-search-bar-button-background-color: var(--utrecht-color-red-40);
+  --utrecht-rich-text-stranger-margin-block-end: var(--utrecht-space-block-2xl);
+  --utrecht-rich-text-friend-margin-block-end: var(--utrecht-space-block-xs);
+  --utrecht-rich-text-best-friend-margin-block-end: var(--utrecht-space-block-2xs);
+  --utrecht-rich-text-acquaintance-margin-block-end: var(--utrecht-space-block-md);
+  --utrecht-radio-button-hover-background-color: var(--utrecht-color-blue-90);
+  --utrecht-radio-button-focus-border-color: var(--utrecht-color-blue-40);
+  --utrecht-radio-button-disabled-color: var(--utrecht-color-white);
+  --utrecht-radio-button-disabled-border-color: var(--utrecht-color-grey-80);
+  --utrecht-radio-button-disabled-background-color: var(--utrecht-color-grey-80);
+  --utrecht-radio-button-color: var(--utrecht-color-white);
+  --utrecht-radio-button-checked-hover-color: var(--utrecht-color-blue-90);
+  --utrecht-radio-button-checked-hover-background-color: var(--utrecht-color-blue-40);
+  --utrecht-radio-button-checked-focus-border-color: var(--utrecht-color-blue-20);
+  --utrecht-radio-button-checked-border-color: var(--utrecht-color-blue-40);
+  --utrecht-radio-button-checked-background-color: var(--utrecht-color-blue-40);
+  --utrecht-radio-button-checked-active-color: var(--utrecht-color-blue-80);
+  --utrecht-radio-button-checked-active-background-color: var(--utrecht-color-blue-40);
+  --utrecht-radio-button-active-background-color: var(--utrecht-color-blue-80);
+  --utrecht-pre-heading-margin-block-start: var(--utrecht-space-row-2xl);
+  --utrecht-pre-heading-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-paragraph-small-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-paragraph-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-paragraph-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-paragraph-lead-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-paragraph-lead-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-paragraph-lead-font-size: var(--utrecht-typography-scale-xl-font-size);
+  --utrecht-paragraph-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-paragraph-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-paragraph-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-pagination-relative-link-hover-color: var(--utrecht-color-white);
+  --utrecht-pagination-relative-link-hover-border-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-relative-link-hover-background-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-relative-link-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-pagination-relative-link-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-relative-link-border-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-relative-link-background-color: var(--utrecht-color-white);
+  --utrecht-pagination-page-link-hover-color: var(--utrecht-color-white);
+  --utrecht-pagination-page-link-hover-border-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-page-link-hover-background-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-page-link-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-pagination-page-link-current-color: var(--utrecht-color-white);
+  --utrecht-pagination-page-link-current-border-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-page-link-current-background-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-page-link-color: var(--utrecht-color-blue-35);
+  --utrecht-pagination-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-page-header-color: var(--utrecht-color-black);
+  --utrecht-page-header-background-color: var(--utrecht-color-white);
+  --utrecht-page-footer-content-padding-inline-start: var(--utrecht-space-inline-2xl);
+  --utrecht-page-footer-content-padding-inline-end: var(--utrecht-space-inline-2xl);
+  --utrecht-page-footer-content-padding-block-start: var(--utrecht-space-block-3xl);
+  --utrecht-page-footer-content-padding-block-end: var(--utrecht-space-block-3xl);
+  --utrecht-page-footer-color: var(--utrecht-color-white);
+  --utrecht-page-footer-background-image: linear-gradient(45deg, var(--utrecht-color-red-40), var(--utrecht-color-red-40) 50%, #d63433 50%);;
+  --utrecht-page-footer-background-color: var(--utrecht-color-red-40);
+  --utrecht-page-color: var(--utrecht-color-black);
+  --utrecht-page-body-color: var(--utrecht-color-black);
+  --utrecht-page-body-background-color: var(--utrecht-color-white);
+  --utrecht-page-background-color: var(--utrecht-color-white);
+  --utrecht-number-badge-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-number-badge-color: var(--utrecht-color-white); /* Default text color for badge components */
+  --utrecht-number-badge-background-color: var(--utrecht-color-red-40);
+  --utrecht-nav-bar-link-padding-inline-start: var(--utrecht-space-inline-md);
+  --utrecht-nav-bar-link-padding-inline-end: var(--utrecht-space-inline-md);
+  --utrecht-nav-bar-link-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-nav-bar-link-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-nav-bar-content-max-inline-size: var(--utrecht-page-max-inline-size);
+  --utrecht-nav-bar-color: var(--utrecht-color-black);
+  --utrecht-nav-bar-background-color: var(--utrecht-color-white);
+  --utrecht-menulijst-item-hover-color: var(--utrecht-color-blue-40);
+  --utrecht-menulijst-item-color: var(--utrecht-color-blue-35);
+  --utrecht-mark-color: var(--utrecht-color-black);
+  --utrecht-mark-background-color: var(--utrecht-color-yellow-60);
+  --utrecht-mapcontrolbutton-padding-inline-start: var(--utrecht-space-inline-2xs);
+  --utrecht-mapcontrolbutton-padding-inline-end: var(--utrecht-space-inline-2xs);
+  --utrecht-mapcontrolbutton-padding-block-start: var(--utrecht-space-block-2xs);
+  --utrecht-mapcontrolbutton-padding-block-end: var(--utrecht-space-block-2xs);
+  --utrecht-mapcontrolbutton-min-inline-size: var(--utrecht-space-block-2xl);
+  --utrecht-mapcontrolbutton-min-block-size: var(--utrecht-space-block-2xl);
+  --utrecht-mapcontrolbutton-margin-block-start: var(--utrecht-space-row-xs);
+  --utrecht-mapcontrolbutton-margin-block-end: var(--utrecht-space-row-xs);
+  --utrecht-mapcontrolbutton-label-margin-inline-start: var(--utrecht-space-inline-xs);
+  --utrecht-mapcontrolbutton-label-margin-inline-end: var(--utrecht-space-inline-xs);
+  --utrecht-mapcontrolbutton-hover-color: var(--utrecht-color-white);
+  --utrecht-mapcontrolbutton-hover-background-color: var(--utrecht-color-grey-90);
+  --utrecht-mapcontrolbutton-focus-color: var(--utrecht-color-black);
+  --utrecht-mapcontrolbutton-disabled-color: var(--utrecht-color-grey-80);
+  --utrecht-mapcontrolbutton-disabled-border-color: var(--utrecht-color-grey-80);
+  --utrecht-mapcontrolbutton-disabled-background-color: var(--utrecht-color-grey-90);
+  --utrecht-mapcontrolbutton-color: var(--utrecht-color-grey-40);
+  --utrecht-mapcontrolbutton-border-width: var(--utrecht-border-width-sm);
+  --utrecht-mapcontrolbutton-border-style: var(--utrecht-border-style-solid);
+  --utrecht-mapcontrolbutton-border-color: var(--utrecht-color-grey-40);
+  --utrecht-mapcontrolbutton-background-color: var(--utrecht-color-white);
+  --utrecht-map-marker-color: var(--utrecht-color-white);
+  --utrecht-map-marker-border-color: var(--utrecht-color-white);
+  --utrecht-map-marker-background-color: var(--utrecht-color-blue-30);
+  --utrecht-listbox-option-selected-color: var(--utrecht-color-black);
+  --utrecht-listbox-option-selected-background-color: var(--utrecht-color-grey-95);
+  --utrecht-listbox-option-padding-inline-start: var(--utrecht-space-inline-xs);
+  --utrecht-listbox-option-padding-inline-end: var(--utrecht-space-inline-xs);
+  --utrecht-listbox-option-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-listbox-option-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-listbox-option-hover-color: var(--utrecht-color-black);
+  --utrecht-listbox-option-hover-background-color: var(--utrecht-color-blue-90);
+  --utrecht-listbox-option-group-title-margin-inline-start: var(--utrecht-space-inline-xs);
+  --utrecht-listbox-option-group-title-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-listbox-option-group-title-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-listbox-option-group-title-color: var(--utrecht-color-black);
+  --utrecht-listbox-option-group-margin-block-end: var(--utrecht-space-inline-xs);
+  --utrecht-listbox-option-active-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-listbox-option-active-color: var(--utrecht-color-black);
+  --utrecht-listbox-option-active-background-color: var(--utrecht-color-grey-95);
+  --utrecht-listbox-background-color: var(--utrecht-color-white);
+  --utrecht-link-social-margin-inline-start: var(--utrecht-space-inline-sm);
+  --utrecht-link-social-color: var(--utrecht-color-white);
+  --utrecht-link-social-border-color: var(--utrecht-color-white);
+  --utrecht-link-social-background-color: var(--utrecht-color-red-40);
+  --utrecht-link-placeholder-color: var(--utrecht-color-grey-40);
+  --utrecht-link-list-row-gap: var(--utrecht-space-block-xs);
+  --utrecht-link-list-link-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-link-list-link-column-gap: var(--utrecht-space-block-xs);
+  --utrecht-link-focus-color: var(--utrecht-color-blue-40);
+  --utrecht-link-color: var(--utrecht-color-blue-35);
+  --utrecht-index-char-nav-margin-block-start: var(--utrecht-space-block-lg);
+  --utrecht-index-char-nav-margin-block-end: var(--utrecht-space-block-md);
+  --utrecht-index-char-nav-link-current-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-index-char-nav-gap: var(--utrecht-space-column-sm);
+  --utrecht-heading-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-heading-6-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-heading-6-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-heading-6-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-heading-6-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-heading-5-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-heading-5-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-heading-5-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-heading-5-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-heading-4-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-heading-4-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-heading-4-font-size: var(--utrecht-typography-scale-lg-font-size);
+  --utrecht-heading-4-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-heading-3-line-height: var(--utrecht-typography-line-height-sm);
+  --utrecht-heading-3-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-heading-3-font-size: var(--utrecht-typography-scale-xl-font-size);
+  --utrecht-heading-3-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-heading-2-line-height: var(--utrecht-typography-line-height-sm);
+  --utrecht-heading-2-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-heading-2-font-size: var(--utrecht-typography-scale-xl-font-size);
+  --utrecht-heading-2-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-heading-1-line-height: var(--utrecht-typography-line-height-sm);
+  --utrecht-heading-1-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-heading-1-font-size: var(--utrecht-typography-scale-4xl-font-size);
+  --utrecht-heading-1-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-form-toggle-track-disabled-background-color: var(--utrecht-color-grey-90);
+  --utrecht-form-toggle-track-border-radius: var(--utrecht-form-toggle-border-radius);
+  --utrecht-form-toggle-thumb-disabled-background-color: var(--utrecht-color-white);
+  --utrecht-form-toggle-thumb-background-color: var(--utrecht-color-white);
+  --utrecht-form-toggle-focus-border-color: var(--utrecht-color-black);
+  --utrecht-form-toggle-color: var(--utrecht-color-black);
+  --utrecht-form-toggle-checked-accent-color: var(--utrecht-color-blue-35);
+  --utrecht-form-toggle-background-color: var(--utrecht-color-white);
+  --utrecht-form-label-radio-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-form-label-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-form-label-checkbox-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-form-fieldset-section-color: var(--utrecht-color-black);
+  --utrecht-form-fieldset-section-background-color: var(--utrecht-color-grey-80);
+  --utrecht-form-fieldset-margin-block-start: var(--utrecht-space-block-2xs);
+  --utrecht-form-fieldset-margin-block-end: var(--utrecht-space-block-2xs);
+  --utrecht-form-fieldset-legend-margin-block-start: var(--utrecht-space-block-xl);
+  --utrecht-form-fieldset-legend-margin-block-end: var(--utrecht-space-block-sm);
+  --utrecht-form-fieldset-legend-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-form-fieldset-legend-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-form-fieldset-legend-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-form-fieldset-legend-disabled-color: var(--utrecht-color-grey-40);
+  --utrecht-form-field-margin-block-start: var(--utrecht-space-block-2xs);
+  --utrecht-form-field-margin-block-end: var(--utrecht-space-block-2xs);
+  --utrecht-form-field-label-margin-block-end: var(--utrecht-space-block-sm);
+  --utrecht-form-field-invalid-padding-inline-start: var(--utrecht-space-block-sm);
+  --utrecht-form-field-description-margin-block-start: var(--utrecht-space-block-sm);
+  --utrecht-form-field-description-margin-block-end: var(--utrecht-space-block-sm);
+  --utrecht-form-control-read-only-color: var(--utrecht-color-grey-20);
+  --utrecht-form-control-read-only-background-color: var(--utrecht-color-grey-90);
+  --utrecht-form-control-placeholder-font-style: var(--utrecht-typography-font-style-normal);
+  --utrecht-form-control-placeholder-color: var(--utrecht-color-grey-40);
+  --utrecht-form-control-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-form-control-focus-border-color: var(--utrecht-color-grey-80);
+  --utrecht-form-control-color: var(--utrecht-color-black);
+  --utrecht-form-control-border-width: var(--utrecht-border-width-sm);
+  --utrecht-form-control-border-color: var(--utrecht-color-grey-30);
+  --utrecht-form-control-background-color: var(--utrecht-color-white);
+  --utrecht-focus-outline-width: var(--utrecht-border-width-md);
+  --utrecht-focus-outline-color: var(--utrecht-color-black);
+  --utrecht-focus-inverse-outline-color: var(--utrecht-color-white);
+  --utrecht-focus-background-color: var(--utrecht-color-yellow-60);
+  --utrecht-figure-caption-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-figure-caption-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-feedback-warning-fill-color: var(--utrecht-color-black);
+  --utrecht-feedback-warning-color: var(--utrecht-color-yellow-50);
+  --utrecht-feedback-valid-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-success-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-safe-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-safe-color: var(--utrecht-color-green-50);
+  --utrecht-feedback-invalid-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-invalid-color: var(--utrecht-color-invalid);
+  --utrecht-feedback-invalid-border-color: var(--utrecht-color-invalid);
+  --utrecht-feedback-invalid-background-color: var(--utrecht-color-invalid);
+  --utrecht-feedback-inactive-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-error-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-danger-fill-color: var(--utrecht-color-white);
+  --utrecht-feedback-danger-color: var(--utrecht-color-red-40);
+  --utrecht-feedback-active-fill-color: var(--utrecht-color-white);
+  --utrecht-emphasis-strong-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-drawer-padding-inline-start: var(--utrecht-space-inline-md);
+  --utrecht-drawer-padding-inline-end: var(--utrecht-space-inline-md);
+  --utrecht-drawer-padding-block-start: var(--utrecht-space-block-md);
+  --utrecht-drawer-padding-block-end: var(--utrecht-space-block-md);
+  --utrecht-drawer-border-color: var(--utrecht-color-grey-90);
+  --utrecht-document-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-document-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-document-color: var(--utrecht-color-black);
+  --utrecht-document-background-color: var(--utrecht-color-white);
+  --utrecht-data-placeholder-background-color: var(--utrecht-color-grey-40);
+  --utrecht-data-list-rows-item-value-margin-block-start: var(--utrecht-space-block-xs);
+  --utrecht-data-list-rows-item-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-data-list-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-data-list-margin-block-end: var(--utrecht-space-block-md);
+  --utrecht-data-list-item-key-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-column-layout-gap: var(--utrecht-space-column-md);
+  --utrecht-column-layout-column-rule-color: var(--utrecht-color-grey-80);
+  --utrecht-code-block-margin-block-start: var(--utrecht-space-block-lg);
+  --utrecht-code-block-margin-block-end: var(--utrecht-space-block-lg);
+  --utrecht-code-block-line-height: var(--utrecht-typography-line-height-md);
+  --utrecht-code-block-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-code-block-color: var(--utrecht-color-black);
+  --utrecht-code-block-background-color: var(--utrecht-color-grey-95);
+  --utrecht-checkbox-indeterminate-background-color: var(--utrecht-color-blue-40);
+  --utrecht-checkbox-disabled-border-color: var(--utrecht-color-grey-80);
+  --utrecht-checkbox-disabled-background-color: var(--utrecht-color-grey-80);
+  --utrecht-checkbox-checked-border-color: var(--utrecht-color-blue-40);
+  --utrecht-checkbox-checked-background-color: var(--utrecht-color-blue-40);
+  --utrecht-calendar-table-days-item-day-selected-color: var(--utrecht-color-white);
+  --utrecht-calendar-table-days-item-day-selected-background-color: var(--utrecht-color-blue-30);
+  --utrecht-calendar-table-days-item-day-out-of-the-month-color: var(--utrecht-color-grey-80);
+  --utrecht-calendar-table-days-item-day-is-today-color: var(--utrecht-color-blue-30);
+  --utrecht-calendar-table-days-item-day-is-today-border-color: var(--utrecht-color-blue-35);
+  --utrecht-calendar-table-days-item-day-is-today-background-color: var(--utrecht-color-blue-90);
+  --utrecht-calendar-table-days-item-day-hover-color: var(--utrecht-color-blue-40);
+  --utrecht-calendar-table-days-item-day-hover-border-color: var(--utrecht-color-black);
+  --utrecht-calendar-table-days-item-day-disabled-color: var(--utrecht-color-grey-40);
+  --utrecht-calendar-table-days-item-day-color: var(--utrecht-color-black);
+  --utrecht-calendar-navigation-label-font-size: var(--utrecht-typography-scale-lg-font-size);
+  --utrecht-calendar-navigation-label-color: var(--utrecht-color-black);
+  --utrecht-calendar-navigation-color: var(--utrecht-color-blue-30);
+  --utrecht-button-subtle-ready-hover-color: var(--utrecht-color-green-40);
+  --utrecht-button-subtle-ready-focus-color: var(--utrecht-color-green-40);
+  --utrecht-button-subtle-ready-color: var(--utrecht-color-green-50);
+  --utrecht-button-subtle-hover-color: var(--utrecht-color-blue-35);
+  --utrecht-button-subtle-hover-border-color: var(--utrecht-color-blue-40);
+  --utrecht-button-subtle-hover-background-color: var(--utrecht-color-white);
+  --utrecht-button-subtle-focus-color: var(--utrecht-color-blue-35);
+  --utrecht-button-subtle-focus-border-color: var(--utrecht-color-blue-35);
+  --utrecht-button-subtle-focus-background-color: var(--utrecht-color-white);
+  --utrecht-button-subtle-disabled-color: var(--utrecht-color-grey-80);
+  --utrecht-button-subtle-danger-hover-color: var(--utrecht-color-red-30);
+  --utrecht-button-subtle-danger-focus-color: var(--utrecht-color-red-30);
+  --utrecht-button-subtle-danger-color: var(--utrecht-color-red-40);
+  --utrecht-button-subtle-color: var(--utrecht-color-blue-35);
+  --utrecht-button-subtle-border-width: var(--utrecht-border-width-md);
+  --utrecht-button-subtle-active-color: var(--utrecht-color-white);
+  --utrecht-button-subtle-active-background-color: var(--utrecht-color-blue-35);
+  --utrecht-button-secondary-action-warning-hover-color: var(--utrecht-color-yellow-40);
+  --utrecht-button-secondary-action-warning-hover-border-color: var(--utrecht-color-yellow-40);
+  --utrecht-button-secondary-action-warning-focus-border-color: var(--utrecht-color-yellow-40);
+  --utrecht-button-secondary-action-warning-color: var(--utrecht-color-grey-40);
+  --utrecht-button-secondary-action-warning-border-color: var(--utrecht-color-yellow-50);
+  --utrecht-button-secondary-action-ready-hover-color: var(--utrecht-color-green-40);
+  --utrecht-button-secondary-action-ready-hover-border-color: var(--utrecht-color-green-40);
+  --utrecht-button-secondary-action-ready-focus-border-color: var(--utrecht-color-green-40);
+  --utrecht-button-secondary-action-ready-color: var(--utrecht-color-grey-40);
+  --utrecht-button-secondary-action-ready-border-color: var(--utrecht-color-green-50);
+  --utrecht-button-secondary-action-hover-color: var(--utrecht-color-blue-35);
+  --utrecht-button-secondary-action-hover-border-color: var(--utrecht-color-blue-40);
+  --utrecht-button-secondary-action-hover-background-color: var(--utrecht-color-white);
+  --utrecht-button-secondary-action-disabled-color: var(--utrecht-color-grey-80);
+  --utrecht-button-secondary-action-disabled-border-color: var(--utrecht-color-grey-80);
+  --utrecht-button-secondary-action-disabled-background-color: var(--utrecht-color-white);
+  --utrecht-button-secondary-action-danger-hover-color: var(--utrecht-color-red-30);
+  --utrecht-button-secondary-action-danger-hover-border-color: var(--utrecht-color-red-30);
+  --utrecht-button-secondary-action-danger-focus-border-color: var(--utrecht-color-red-30);
+  --utrecht-button-secondary-action-danger-color: var(--utrecht-color-red-40);
+  --utrecht-button-secondary-action-danger-border-color: var(--utrecht-color-red-40);
+  --utrecht-button-secondary-action-color: var(--utrecht-color-blue-35);
+  --utrecht-button-secondary-action-border-width: var(--utrecht-border-width-md);
+  --utrecht-button-secondary-action-border-color: var(--utrecht-color-blue-35);
+  --utrecht-button-secondary-action-background-color: var(--utrecht-color-white);
+  --utrecht-button-secondary-action-active-color: var(--utrecht-color-blue-30);
+  --utrecht-button-secondary-action-active-border-color: var(--utrecht-color-blue-30);
+  --utrecht-button-secondary-action-active-background-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-warning-hover-color: var(--utrecht-color-black);
+  --utrecht-button-primary-action-warning-hover-background-color: var(--utrecht-color-yellow-40);
+  --utrecht-button-primary-action-warning-focus-border-color: var(--utrecht-color-yellow-40);
+  --utrecht-button-primary-action-warning-focus-background-color: var(--utrecht-color-yellow-40);
+  --utrecht-button-primary-action-warning-disabled-border-color: var(--utrecht-color-grey-90);
+  --utrecht-button-primary-action-warning-color: var(--utrecht-color-black);
+  --utrecht-button-primary-action-warning-background-color: var(--utrecht-color-yellow-50);
+  --utrecht-button-primary-action-ready-hover-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-ready-hover-background-color: var(--utrecht-color-green-40);
+  --utrecht-button-primary-action-ready-focus-border-color: var(--utrecht-color-green-40);
+  --utrecht-button-primary-action-ready-focus-background-color: var(--utrecht-color-green-40);
+  --utrecht-button-primary-action-ready-disabled-border-color: var(--utrecht-color-grey-90);
+  --utrecht-button-primary-action-ready-color: var(--utrecht-color-black);
+  --utrecht-button-primary-action-ready-background-color: var(--utrecht-color-green-50);
+  --utrecht-button-primary-action-hover-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-hover-background-color: var(--utrecht-color-blue-40);
+  --utrecht-button-primary-action-focus-border-width: var(--utrecht-border-width-md);
+  --utrecht-button-primary-action-focus-border-color: var(--utrecht-color-blue-40);
+  --utrecht-button-primary-action-focus-background-color: var(--utrecht-color-blue-40);
+  --utrecht-button-primary-action-disabled-color: var(--utrecht-color-grey-80);
+  --utrecht-button-primary-action-disabled-border-color: var(--utrecht-color-grey-80);
+  --utrecht-button-primary-action-disabled-background-color: var(--utrecht-color-grey-90);
+  --utrecht-button-primary-action-danger-hover-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-danger-hover-background-color: var(--utrecht-color-red-30);
+  --utrecht-button-primary-action-danger-focus-border-color: var(--utrecht-color-red-30);
+  --utrecht-button-primary-action-danger-focus-background-color: var(--utrecht-color-red-30);
+  --utrecht-button-primary-action-danger-disabled-border-color: var(--utrecht-color-grey-90);
+  --utrecht-button-primary-action-danger-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-danger-background-color: var(--utrecht-color-red-40);
+  --utrecht-button-primary-action-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-border-width: var(--utrecht-border-width-md); /* Although the border is not visible, it is needed to match the size of the secondary-action-button appearance */
+  --utrecht-button-primary-action-background-color: var(--utrecht-color-blue-35);
+  --utrecht-button-primary-action-active-color: var(--utrecht-color-white);
+  --utrecht-button-primary-action-active-border-color: var(--utrecht-color-blue-30);
+  --utrecht-button-primary-action-active-background-color: var(--utrecht-color-blue-30);
+  --utrecht-button-padding-inline-start: var(--utrecht-space-inline-md);
+  --utrecht-button-padding-inline-end: var(--utrecht-space-inline-md);
+  --utrecht-button-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-button-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-button-margin-block-start: var(--utrecht-space-row-xs);
+  --utrecht-button-margin-block-end: var(--utrecht-space-row-xs);
+  --utrecht-button-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-button-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-button-disabled-color: var(--utrecht-color-grey-80);
+  --utrecht-button-disabled-border-color: var(--utrecht-color-grey-80);
+  --utrecht-button-disabled-background-color: var(--utrecht-color-grey-90);
+  --utrecht-button-column-gap: var(--utrecht-space-text-xs);
+  --utrecht-button-color: var(--utrecht-color-grey-40);
+  --utrecht-button-border-color: var(--utrecht-color-grey-40);
+  --utrecht-button-background-color: var(--utrecht-color-white);
+  --utrecht-button-active-color: var(--utrecht-color-white);
+  --utrecht-button-active-background-color: var(--utrecht-color-grey-40);
+  --utrecht-breadcrumb-nav-separator-icon-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-breadcrumb-nav-separator-color: var(--utrecht-color-blue-35);
+  --utrecht-breadcrumb-nav-link-icon-size: var(--utrecht-icon-scale-md);
+  --utrecht-breadcrumb-nav-link-hover-color: var(--utrecht-color-blue-40);
+  --utrecht-breadcrumb-nav-link-focus-color: var(--utrecht-color-blue-40);
+  --utrecht-breadcrumb-nav-link-disabled-color: var(--utrecht-color-grey-40);
+  --utrecht-breadcrumb-nav-link-color: var(--utrecht-color-blue-35);
+  --utrecht-breadcrumb-nav-item-padding-inline-start: var(--utrecht-space-inline-xs);
+  --utrecht-breadcrumb-nav-item-padding-inline-end: var(--utrecht-space-inline-xs);
+  --utrecht-breadcrumb-nav-item-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-breadcrumb-nav-item-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-breadcrumb-nav-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-breadcrumb-nav-arrows-link-focus-color: var(--utrecht-color-black);
+  --utrecht-breadcrumb-nav-arrows-link-color: var(--utrecht-color-black);
+  --utrecht-breadcrumb-nav-arrows-link-background-color: var(--utrecht-color-grey-90);
+  --utrecht-blockquote-content-font-size: var(--utrecht-typography-scale-lg-font-size);
+  --utrecht-blockquote-content-color: var(--utrecht-color-red-40);
+  --utrecht-blockquote-caption-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --utrecht-badge-padding-inline: var(--utrecht-space-inline-sm); /* Default inline padding color for badge components */
+  --utrecht-badge-padding-block: var(--utrecht-space-block-xs); /* Default block padding for badge components */
+  --utrecht-badge-list-item-margin-inline: var(--utrecht-space-block-sm);
+  --utrecht-badge-list-item-margin-block: var(--utrecht-space-block-xs);
+  --utrecht-badge-font-style: var(--utrecht-typography-font-style-normal);
+  --utrecht-badge-counter-font-size: var(--utrecht-typography-scale-md-font-size);
+  --utrecht-badge-counter-color: var(--utrecht-color-white); /* Default text color for badge components */
+  --utrecht-badge-counter-background-color: var(--utrecht-color-red-40); /* Default background color for badge components */
+  --utrecht-badge-color: var(--utrecht-color-white); /* Default text color for badge components */
+  --utrecht-badge-background-color: var(--utrecht-color-grey-30); /* Default background color for badge components */
+  --utrecht-backdrop-color: var(--utrecht-color-black);
+  --utrecht-backdrop-background-color: var(--utrecht-color-white);
+  --utrecht-alert-warning-color: var(--utrecht-color-black);
+  --utrecht-alert-warning-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-alert-padding-inline-start: var(--utrecht-space-block-lg);
+  --utrecht-alert-padding-inline-end: var(--utrecht-space-block-lg);
+  --utrecht-alert-padding-block-start: var(--utrecht-space-block-lg);
+  --utrecht-alert-padding-block-end: var(--utrecht-space-block-lg);
+  --utrecht-alert-ok-color: var(--utrecht-color-black);
+  --utrecht-alert-ok-background-color: var(--utrecht-color-green-90);
+  --utrecht-alert-info-color: var(--utrecht-color-black);
+  --utrecht-alert-info-background-color: var(--utrecht-color-blue-90);
+  --utrecht-alert-icon-warning-color: var(--utrecht-color-yellow-40);
+  --utrecht-alert-icon-ok-color: var(--utrecht-color-green-40);
+  --utrecht-alert-icon-info-color: var(--utrecht-color-blue-35);
+  --utrecht-alert-icon-error-color: var(--utrecht-color-red-40);
+  --utrecht-alert-icon-color: var(--utrecht-color-blue-35);
+  --utrecht-alert-error-color: var(--utrecht-color-black);
+  --utrecht-alert-error-background-color: var(--utrecht-color-red-95);
+  --utrecht-alert-dialog-max-inline-size: var(--utrecht-article-max-inline-size);
+  --utrecht-alert-column-gap: var(--utrecht-space-column-md);
+  --utrecht-alert-color: var(--utrecht-color-black);
+  --utrecht-alert-background-color: var(--utrecht-color-blue-90);
+  --utrecht-accordion-section-margin-block-start: var(--utrecht-space-block-2xs);
+  --utrecht-accordion-row-gap: var(--utrecht-space-block-xs);
+  --utrecht-accordion-panel-padding-inline-start: var(--utrecht-space-block-md);
+  --utrecht-accordion-panel-padding-inline-end: var(--utrecht-space-block-md);
+  --utrecht-accordion-panel-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-accordion-panel-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-accordion-panel-border-color: var(--utrecht-color-grey-95);
+  --utrecht-accordion-button-padding-inline-start: var(--utrecht-space-block-md);
+  --utrecht-accordion-button-padding-inline-end: var(--utrecht-space-block-md);
+  --utrecht-accordion-button-padding-block-start: var(--utrecht-space-block-xs);
+  --utrecht-accordion-button-padding-block-end: var(--utrecht-space-block-xs);
+  --utrecht-accordion-button-icon-utrecht-background-color: var(--utrecht-color-yellow-50);
+  --utrecht-accordion-button-hover-color: var(--utrecht-color-grey-10);
+  --utrecht-accordion-button-hover-border-color: var(--utrecht-color-grey-95);
+  --utrecht-accordion-button-focus-color: var(--utrecht-color-grey-10);
+  --utrecht-accordion-button-focus-border-color: var(--utrecht-color-grey-95);
+  --utrecht-accordion-button-focus-background-color: var(--utrecht-color-grey-80);
+  --utrecht-accordion-button-color: var(--utrecht-color-grey-10);
+  --utrecht-accordion-button-border-color: var(--utrecht-color-grey-95);
+  --utrecht-accordion-button-background-color: var(--utrecht-color-grey-95);
+  --utrecht-accordion-button-active-color: var(--utrecht-color-grey-10);
+  --utrecht-accordion-button-active-border-color: var(--utrecht-color-grey-95);
+  --utrecht-accordion-button-active-background-color: var(--utrecht-color-grey-80);
+  --denhaag-process-steps-sub-step-marker-border-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-sub-step-marker-background-color: var(--utrecht-color-white);
+  --denhaag-process-steps-sub-step-heading-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --denhaag-process-steps-sub-step-heading-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --denhaag-process-steps-sub-step-heading-color: var(--utrecht-color-grey-15);
+  --denhaag-process-steps-step-metadata-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --denhaag-process-steps-step-metadata-color: var(--utrecht-color-grey-15);
+  --denhaag-process-steps-step-marker-warning-color: var(--utrecht-color-invalid);
+  --denhaag-process-steps-step-marker-warning-border-color: var(--utrecht-color-invalid);
+  --denhaag-process-steps-step-marker-warning-background-color: var(--utrecht-color-white);
+  --denhaag-process-steps-step-marker-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --denhaag-process-steps-step-marker-font-size: var(--utrecht-typography-scale-sm-font-size);
+  --denhaag-process-steps-step-marker-current-color: var(--utrecht-color-white);
+  --denhaag-process-steps-step-marker-current-border-width: var(--utrecht-border-width-md);
+  --denhaag-process-steps-step-marker-current-border-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-marker-current-background-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-marker-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-marker-checked-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-marker-checked-border-width: var(--utrecht-border-width-md);
+  --denhaag-process-steps-step-marker-checked-border-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-marker-checked-background-color: var(--utrecht-color-white);
+  --denhaag-process-steps-step-marker-border-width: var(--utrecht-border-width-md);
+  --denhaag-process-steps-step-marker-border-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-marker-background-color: var(--utrecht-color-white);
+  --denhaag-process-steps-step-line-warning-color: var(--utrecht-color-invalid);
+  --denhaag-process-steps-step-line-stroke-width: var(--utrecht-border-width-md);
+  --denhaag-process-steps-step-line-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-line-checked-color: var(--utrecht-color-green-30);
+  --denhaag-process-steps-step-heading-warning-color: var(--utrecht-color-black);
+  --denhaag-process-steps-step-heading-not-checked-color: var(--utrecht-color-black);
+  --denhaag-process-steps-step-heading-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --denhaag-process-steps-step-heading-font-size: var(--utrecht-typography-scale-lg-font-size);
+  --denhaag-process-steps-step-heading-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --denhaag-process-steps-step-heading-current-color: var(--utrecht-color-black);
+  --denhaag-process-steps-step-heading-color: var(--utrecht-color-black);
+  --denhaag-process-steps-step-heading-checked-color: var(--utrecht-color-black);
+  --denhaag-process-steps-step-heading-checked-background-color: var(--utrecht-color-white);
+  --denhaag-process-steps-step-description-font-size: var(--utrecht-typography-scale-md-font-size);
+  --denhaag-process-steps-step-description-color: var(--utrecht-color-black);
+  --denhaag-process-steps-font-family: var(--utrecht-typography-sans-serif-font-family);
+  --utrecht-toptask-link-hover-color: var(--utrecht-button-primary-action-hover-color);
+  --utrecht-toptask-link-hover-background-color: var(--utrecht-button-primary-action-hover-background-color);
+  --utrecht-toptask-link-color: var(--utrecht-button-primary-action-color);
+  --utrecht-toptask-link-background-color: var(--utrecht-button-primary-action-background-color);
+  --utrecht-skip-link-padding-inline-start: var(--utrecht-button-padding-inline-start);
+  --utrecht-skip-link-padding-inline-end: var(--utrecht-button-padding-inline-end);
+  --utrecht-skip-link-padding-block-start: var(--utrecht-button-padding-block-start);
+  --utrecht-skip-link-padding-block-end: var(--utrecht-button-padding-block-end);
+  --utrecht-skip-link-focus-color: var(--utrecht-topnav-link-focus-color);
+  --utrecht-skip-link-focus-background-color: var(--utrecht-topnav-link-focus-background-color);
+  --utrecht-skip-link-color: var(--utrecht-topnav-link-color);
+  --utrecht-skip-link-background-color: var(--utrecht-topnav-list-background-color);
+  --utrecht-radio-button-border-color: var(--utrecht-form-control-border-color);
+  --utrecht-radio-button-background-color: var(--utrecht-form-control-background-color);
+  --utrecht-paragraph-lead-color: var(--utrecht-document-color);
+  --utrecht-number-badge-border-radius: var(--utrecht-number-badge-font-size);
+  --utrecht-listbox-border-width: var(--utrecht-form-control-border-width);
+  --utrecht-listbox-border-color: var(--utrecht-form-control-border-color);
+  --utrecht-link-visited-color: var(--utrecht-link-color);
+  --utrecht-link-hover-color: var(--utrecht-link-focus-color);
+  --utrecht-link-active-color: var(--utrecht-link-color);
+  --utrecht-form-field-error-message-color: var(--utrecht-feedback-invalid-color);
+  --utrecht-form-field-description-warning-color: var(--utrecht-feedback-warning-color);
+  --utrecht-form-field-description-invalid-color: var(--utrecht-feedback-invalid-color);
+  --utrecht-form-control-invalid-border-color: var(--utrecht-feedback-invalid-border-color);
+  --utrecht-form-control-font-family: var(--utrecht-document-font-family);
+  --utrecht-feedback-warning-border-color: var(--utrecht-feedback-warning-color);
+  --utrecht-feedback-warning-background-color: var(--utrecht-feedback-warning-color);
+  --utrecht-feedback-valid-color: var(--utrecht-feedback-safe-color);
+  --utrecht-feedback-success-color: var(--utrecht-feedback-safe-color);
+  --utrecht-feedback-safe-border-color: var(--utrecht-feedback-safe-color);
+  --utrecht-feedback-safe-background-color: var(--utrecht-feedback-safe-color);
+  --utrecht-feedback-invalid-fill-background-color: var(--utrecht-feedback-invalid-background-color);
+  --utrecht-feedback-inactive-color: var(--utrecht-feedback-danger-color);
+  --utrecht-feedback-error-color: var(--utrecht-feedback-danger-color);
+  --utrecht-feedback-danger-border-color: var(--utrecht-feedback-danger-color);
+  --utrecht-feedback-danger-background-color: var(--utrecht-feedback-danger-color);
+  --utrecht-feedback-active-color: var(--utrecht-feedback-safe-color);
+  --utrecht-drawer-color: var(--utrecht-document-color);
+  --utrecht-drawer-background-color: var(--utrecht-document-background-color);
+  --utrecht-checkbox-color: var(--utrecht-form-control-color);
+  --utrecht-checkbox-border-color: var(--utrecht-form-control-border-color);
+  --utrecht-checkbox-background-color: var(--utrecht-form-control-background-color);
+  --utrecht-button-subtle-pressed-color: var(--utrecht-button-subtle-active-color);
+  --utrecht-button-subtle-pressed-background-color: var(--utrecht-button-subtle-active-background-color);
+  --utrecht-button-secondary-action-pressed-color: var(--utrecht-button-secondary-action-active-color);
+  --utrecht-button-secondary-action-pressed-background-color: var(--utrecht-button-secondary-action-active-background-color);
+  --utrecht-button-primary-action-pressed-color: var(--utrecht-button-primary-action-active-color);
+  --utrecht-button-primary-action-pressed-border-color: var(--utrecht-button-primary-action-active-border-color);
+  --utrecht-button-primary-action-pressed-background-color: var(--utrecht-button-primary-action-active-background-color);
+  --utrecht-button-pressed-color: var(--utrecht-button-active-color);
+  --utrecht-button-pressed-background-color: var(--utrecht-button-active-background-color);
+  --utrecht-breadcrumb-nav-link-focus-background-color: var(--utrecht-focus-background-color);
+  --utrecht-breadcrumb-nav-arrows-link-focus-background-color: var(--utrecht-focus-background-color);
+  --utrecht-badge-counter-border-radius: var(--utrecht-badge-counter-font-size); /* Default corner radius for badge components */
+  --of-progress-indicator-background-color: var(--utrecht-document-background-color);
+  --of-page-footer-fg: var(--utrecht-page-footer-color);
+  --of-page-footer-bg: var(--utrecht-page-footer-background-color);
+  --of-layout-background: var(--utrecht-document-background-color);
+  --denhaag-process-steps-sub-step-line-color: var(--denhaag-process-steps-step-line-color);
+  --utrecht-radio-button-invalid-border-color: var(--utrecht-form-control-invalid-border-color);
+  --utrecht-form-field-invalid-border-inline-start-color: var(--utrecht-form-control-invalid-border-color);
+  --utrecht-form-field-description-valid-color: var(--utrecht-feedback-valid-color);
+  --utrecht-feedback-warning-fill-background-color: var(--utrecht-feedback-warning-background-color);
+  --utrecht-feedback-valid-border-color: var(--utrecht-feedback-safe-border-color);
+  --utrecht-feedback-valid-background-color: var(--utrecht-feedback-safe-background-color);
+  --utrecht-feedback-success-border-color: var(--utrecht-feedback-safe-border-color);
+  --utrecht-feedback-success-background-color: var(--utrecht-feedback-safe-background-color);
+  --utrecht-feedback-safe-fill-background-color: var(--utrecht-feedback-safe-background-color);
+  --utrecht-feedback-inactive-border-color: var(--utrecht-feedback-danger-border-color);
+  --utrecht-feedback-inactive-background-color: var(--utrecht-feedback-danger-background-color);
+  --utrecht-feedback-error-border-color: var(--utrecht-feedback-danger-border-color);
+  --utrecht-feedback-error-background-color: var(--utrecht-feedback-danger-background-color);
+  --utrecht-feedback-danger-fill-background-color: var(--utrecht-feedback-danger-background-color);
+  --utrecht-feedback-active-border-color: var(--utrecht-feedback-safe-border-color);
+  --utrecht-feedback-active-background-color: var(--utrecht-feedback-safe-background-color);
+  --utrecht-checkbox-invalid-border-color: var(--utrecht-form-control-invalid-border-color);
+  --of-layout-bg: var(--of-layout-background);
+  --utrecht-feedback-valid-fill-background-color: var(--utrecht-feedback-valid-background-color);
+  --utrecht-feedback-success-fill-background-color: var(--utrecht-feedback-success-background-color);
+  --utrecht-feedback-inactive-fill-background-color: var(--utrecht-feedback-inactive-background-color);
+  --utrecht-feedback-error-fill-background-color: var(--utrecht-feedback-error-background-color);
+  --utrecht-feedback-active-fill-background-color: var(--utrecht-feedback-active-background-color);
+}
+</style><defer-stylesheet href="node_modules/@utrecht/design-tokens/dist/theme.css"></defer-stylesheet><noscript><link rel="stylesheet" href="node_modules/@utrecht/design-tokens/dist/theme.css"/></noscript><meta name="description" content="Demo van web components"/><defer-stylesheet href="node_modules/@utrecht/body-css/dist/index.min.css"></defer-stylesheet><noscript><link rel="stylesheet" href="node_modules/@utrecht/body-css/dist/index.min.css"/></noscript><defer-stylesheet href="node_modules/@utrecht/paragraph-css/dist/index.min.css"></defer-stylesheet><noscript><link rel="stylesheet" href="node_modules/@utrecht/paragraph-css/dist/index.min.css"/></noscript><style>.utrecht-page-layout{align-items:flex-start;block-size:100%;display:flex;flex-direction:column;inline-size:100%;justify-content:flex-start}.utrecht-page-header{background-color:var(--utrecht-page-header-background-color);border-block-end-color:var(--utrecht-page-header-border-block-end-color,currentColor);border-block-end-style:solid;border-block-end-width:var(--utrecht-page-header-border-block-end-width,0);box-sizing:border-box;color:var(--utrecht-page-header-color);display:grid;grid-area:&quot;utrecht-header&quot;;inline-size:100%;padding-block-end:var(--utrecht-page-header-padding-block-end);padding-block-start:var(--utrecht-page-header-padding-block-start);padding-inline-end:var(--utrecht-page-padding-inline-end);padding-inline-start:var(--utrecht-page-padding-inline-start)}.utrecht-page-header__content{background-color:var(--utrecht-page-header-content-background-color);box-sizing:border-box;color:var(--utrecht-page-header-content-color);inline-size:100%;justify-self:center;max-inline-size:var(--utrecht-page-header-content-max-inline-size);padding-block-end:var(--utrecht-page-header-content-padding-block-end);padding-block-start:var(--utrecht-page-header-content-padding-block-start);padding-inline:var(--utrecht-page-header-content-padding-inline)}.utrecht-page-body{background-color:var(--utrecht-page-body-background-color);box-sizing:border-box;color:var(--utrecht-page-body-color);display:grid;flex-grow:1;inline-size:100%}.utrecht-page-body__content{background-color:var(--utrecht-page-body-content-background-color);box-sizing:border-box;color:var(--utrecht-page-body-content-color);inline-size:100%;justify-self:center;max-inline-size:var(--utrecht-page-body-content-max-inline-size);padding-block-end:var(--utrecht-page-body-content-padding-block-end);padding-block-start:var(--utrecht-page-body-content-padding-block-start);padding-inline-end:var(--utrecht-page-body-content-padding-inline-end);padding-inline-start:var(--utrecht-page-body-content-padding-inline-start)}.utrecht-page-footer{--utrecht-document-color:currentColor;--utrecht-heading-color:currentColor;--utrecht-link-color:currentColor;--utrecht-link-focus-color:currentColor;--utrecht-link-hover-color:currentColor;--utrecht-link-active-color:currentColor;--utrecht-link-visited-color:currentColor;background-color:var(--utrecht-page-footer-background-color);background-image:var(--utrecht-page-footer-background-image);box-sizing:border-box;color:var(--utrecht-page-footer-color);display:grid;font-family:var(--utrecht-document-font-family);font-size:var(--utrecht-document-font-size);inline-size:100%;padding-block-end:var(--utrecht-page-footer-padding-block-end);padding-block-start:var(--utrecht-page-footer-padding-block-start);padding-inline-end:var(--utrecht-page-footer-padding-inline-end);padding-inline-start:var(--utrecht-page-footer-padding-inline-start)}.utrecht-page-footer__content{background-color:var(--utrecht-page-footer-content-background-color);box-sizing:border-box;color:var(--utrecht-page-footer-content-color);inline-size:100%;justify-self:center;max-inline-size:var(--utrecht-page-footer-content-max-inline-size);padding-block-end:var(--utrecht-page-footer-content-padding-block-end);padding-block-start:var(--utrecht-page-footer-content-padding-block-start);padding-inline:var(--utrecht-page-footer-content-padding-inline)}.utrecht-page-footer__address--reset-address{font-style:inherit;margin-block-end:0;margin-block-start:0}.utrecht-root{-webkit-font-smoothing:auto!important;-moz-osx-font-smoothing:auto!important;background-color:var(--utrecht-root-background-color);block-size:100%;color:var(--utrecht-root-color);font-family:var(--utrecht-root-font-family);inline-size:100%;overflow-block:auto;overflow-inline:auto;position:relative;text-rendering:optimizeLegibility;-moz-text-size-adjust:none;-webkit-text-size-adjust:none;text-size-adjust:none}.utrecht-body{block-size:100%;font-family:var(--utrecht-body-font-family,inherit);font-size:var(--utrecht-body-font-size,inherit);font-weight:var(--utrecht-body-font-weight,inherit);line-height:var(--utrecht-body-line-height,inherit);margin-block-end:0;margin-block-start:0;margin-inline-end:0;margin-inline-start:0;padding-block-end:0;padding-block-start:0;padding-inline-end:0;padding-inline-start:0}@media screen{.utrecht-body{min-block-size:100vh;min-block-size:100vb}}</style></head><body class="utrecht-body"><div class="utrecht-page-layout"><header class="utrecht-page-header"><div class="utrecht-page-header__content">Header</div></header><div class="utrecht-page-body"><div class="utrecht-page-body__content"><h1 class="utrecht-heading-1">Hello, world!</h1><p class="utrecht-paragraph">Lorem ipsum dolor</p></div></div><footer class="utrecht-page-footer"><div class="utrecht-page-footer__content">Footer</div></footer></div></body></html>
