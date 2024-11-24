@@ -1,5 +1,26 @@
 # @utrecht/component-library-react
 
+## 7.3.7
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+- Updated dependencies [5881339]
+  - @utrecht/button-react@2.0.4
+  - @utrecht/calendar-react@1.0.7
+  - @utrecht/checkbox-react@1.0.4
+  - @utrecht/combobox-react@0.0.5
+  - @utrecht/fieldset-react@1.0.4
+  - @utrecht/form-field-checkbox-react@1.0.6
+  - @utrecht/form-field-description-react@1.0.4
+  - @utrecht/form-field-error-message-react@1.0.4
+  - @utrecht/form-field-react@1.0.4
+  - @utrecht/form-label-react@1.0.4
+  - @utrecht/link-react@1.0.4
+  - @utrecht/listbox-react@1.0.5
+  - @utrecht/radio-button-react@1.0.4
+  - @utrecht/textbox-react@1.0.4
+
 ## 7.3.6
 
 ### Patch Changes

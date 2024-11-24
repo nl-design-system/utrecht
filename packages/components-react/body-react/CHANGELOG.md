@@ -1,5 +1,11 @@
 # @utrecht/body-react
 
+## 0.0.3
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+
 ## 0.0.2
 
 ### Patch Changes

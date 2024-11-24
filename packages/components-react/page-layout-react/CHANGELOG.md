@@ -1,5 +1,11 @@
 # @utrecht/page-layout-react
 
+## 1.0.3
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+
 ## 1.0.2
 
 ### Patch Changes

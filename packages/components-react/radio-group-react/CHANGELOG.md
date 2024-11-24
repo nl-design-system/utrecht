@@ -1,5 +1,18 @@
 # @utrecht/radio-group-react
 
+## 1.0.6
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+- Updated dependencies [5881339]
+  - @utrecht/fieldset-react@1.0.4
+  - @utrecht/form-field-description-react@1.0.4
+  - @utrecht/form-field-error-message-react@1.0.4
+  - @utrecht/form-field-react@1.0.4
+  - @utrecht/form-label-react@1.0.4
+  - @utrecht/radio-button-react@1.0.4
+
 ## 1.0.5
 
 ### Patch Changes
