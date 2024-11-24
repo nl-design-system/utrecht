@@ -10,6 +10,7 @@ import nodePolyfills from 'rollup-plugin-node-polyfills';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
+
 // `assert` is not yet supported by ESLint <https://github.com/eslint/eslint/discussions/15305>
 // import packageJson from './package.json' assert { type: 'json' };
 
@@ -50,7 +51,9 @@ const createComponentConfig = (name, { css }) => ({
       extensions: ['.css', '.scss'],
       minimize: true,
     }),
-    typescript({ includeDependencies: false }),
+    typescript({
+      tsconfig: css ? './tsconfig.build-css-module.json' : './tsconfig.build.json',
+    }),
     babel({
       presets: ['@babel/preset-react'],
       babelHelpers: 'runtime',

@@ -1,21 +1,11 @@
 import babel from '@rollup/plugin-babel';
 import commonjs from '@rollup/plugin-commonjs';
-import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
-// import del from 'rollup-plugin-delete';
-import { readFileSync } from 'fs';
+import typescript from 'rollup-plugin-typescript2';
 import filesize from 'rollup-plugin-filesize';
 import nodeExternal from 'rollup-plugin-node-externals';
-import nodePolyfills from 'rollup-plugin-node-polyfills';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
-import postcss from 'rollup-plugin-postcss';
-import typescript from 'rollup-plugin-typescript2';
-// `assert` is not yet supported by ESLint <https://github.com/eslint/eslint/discussions/15305>
-// import packageJson from './package.json' assert { type: 'json' };
 
-const packageJson = JSON.parse(readFileSync('./package.json', 'utf8'));
-
-// rollup.config.js
 /**
  * @type {import('rollup').RollupOptions}
  */
@@ -27,7 +17,7 @@ export const outputGlobals = {
 
 export default [
   {
-    input: 'src/index.ts',
+    input: './src/index.ts',
     output: [
       {
         file: './dist/index.mjs',
@@ -38,28 +28,30 @@ export default [
     ],
     plugins: [
       peerDepsExternal(),
-      nodeExternal(),
-      resolve({ browser: true }),
+
+      // Convert CommonJS modules to ES Modules
       commonjs({
         include: /node_modules/,
       }),
-      nodePolyfills(),
-      // del({ targets: ['dist/*', 'pages/*'] }),
-      typescript({ includeDependencies: false }),
-      json(),
+      // Inline imports from `devDependencies`
+      // Leave `dependencies` and `devDependencies` imports as is.
+      // See: https://www.npmjs.com/package/rollup-plugin-node-externals
+      nodeExternal(),
+      resolve(),
+      typescript({ tsconfig: './tsconfig.build.json' }),
       babel({
         presets: ['@babel/preset-react'],
         babelHelpers: 'runtime',
         exclude: ['node_modules/**', 'dist/**'],
         extensions: ['.ts', '.tsx'],
-        inputSourceMap: true,
+        // inputSourceMap: true,
         plugins: ['@babel/plugin-transform-runtime'],
       }),
       filesize(),
     ],
   },
   {
-    input: 'src/css-module/index.ts',
+    input: './src/css-module/index.ts',
     output: [
       {
         file: './dist/css-module/index.mjs',
@@ -68,28 +60,25 @@ export default [
         globals: outputGlobals,
       },
     ],
-    external: [/@babel\/runtime/, 'react-dom', 'react'],
     plugins: [
-      peerDepsExternal({ includeDependencies: true }),
-      nodeExternal(),
-      resolve({ browser: true }),
+      peerDepsExternal(),
+
+      // Convert CommonJS modules to ES Modules
       commonjs({
         include: /node_modules/,
       }),
-      nodePolyfills(),
-      // del({ targets: ['dist/*', 'pages/*'] }),
-      postcss({
-        extensions: ['.css', '.scss'],
-        minimize: true,
-      }),
-      typescript({ includeDependencies: false }),
-      json(),
+      // Inline imports from `devDependencies`
+      // Leave `dependencies` and `devDependencies` imports as is.
+      // See: https://www.npmjs.com/package/rollup-plugin-node-externals
+      nodeExternal(),
+      resolve(),
+      typescript({ tsconfig: './tsconfig.build-css-module.json' }),
       babel({
         presets: ['@babel/preset-react'],
         babelHelpers: 'runtime',
         exclude: ['node_modules/**', 'dist/**'],
         extensions: ['.ts', '.tsx'],
-        inputSourceMap: true,
+        // inputSourceMap: true,
         plugins: ['@babel/plugin-transform-runtime'],
       }),
       filesize(),

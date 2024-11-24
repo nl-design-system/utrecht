@@ -20,7 +20,14 @@
   "sideEffects": false,
   "type": "module",
   "exports": {
-    ".": "./dist/index.mjs",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
@@ -123,6 +130,7 @@
     "@rollup/plugin-commonjs": "26.0.1",
     "@rollup/plugin-json": "6.1.0",
     "@rollup/plugin-node-resolve": "15.2.3",
+    "@rollup/plugin-typescript": "12.1.0",
     "@testing-library/dom": "8.20.1",
     "@testing-library/jest-dom": "5.17.0",
     "@testing-library/react": "13.4.0",
@@ -222,7 +230,7 @@
     "react-dom": "18.3.1",
     "react-vega": "7.6.0",
     "rimraf": "5.0.7",
-    "rollup": "4.18.0",
+    "rollup": "4.23.0",
     "rollup-plugin-delete": "2.0.0",
     "rollup-plugin-filesize": "10.0.0",
     "rollup-plugin-node-externals": "7.1.2",
@@ -231,6 +239,7 @@
     "rollup-plugin-postcss": "4.0.2",
     "rollup-plugin-typescript2": "0.36.0",
     "sass": "1.69.5",
+    "sort-package-json": "2.11.0",
     "tslib": "2.6.2",
     "typescript": "5.6.2",
     "vega": "5.26.1",
