@@ -14,7 +14,7 @@
     "directory": "packages/build-utils-react"
   },
   "bin": {
-    "build-react-package": "./src/index.mjs"
+    "init-react-package": "./src/init.mjs"
   },
   "devDependencies": {
     "@babel/plugin-transform-runtime": "7.24.7",
@@ -24,12 +24,14 @@
     "@rollup/plugin-json": "6.1.0",
     "@rollup/plugin-node-resolve": "15.2.3",
     "@rollup/plugin-typescript": "12.1.0",
+    "glob": "10.4.2",
     "rollup": "4.23.0",
     "rollup-plugin-filesize": "10.0.0",
     "rollup-plugin-node-externals": "7.1.2",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-postcss": "4.0.2",
     "rollup-plugin-typescript2": "0.36.0",
+    "sort-package-json": "2.11.0",
     "typescript": "5.6.2"
   }
 }
