@@ -5,6 +5,7 @@
   "description": "Component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
   "main": "index.js",
+  "private": true,
   "scripts": {
     "start": "http-server ."
   },
