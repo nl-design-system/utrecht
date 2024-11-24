@@ -1,5 +1,16 @@
 # @utrecht/select-combobox-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+- Updated dependencies [5881339]
+  - @utrecht/button-react@2.0.4
+  - @utrecht/combobox-react@0.0.5
+  - @utrecht/listbox-react@1.0.5
+  - @utrecht/textbox-react@1.0.4
+
 ## 1.0.3
 
 ### Patch Changes

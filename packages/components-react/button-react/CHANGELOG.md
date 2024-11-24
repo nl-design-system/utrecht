@@ -1,5 +1,11 @@
 # @utrecht/button-react
 
+## 2.0.4
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @utrecht/calendar-react
 
+## 1.0.7
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+- Updated dependencies [5881339]
+  - @utrecht/button-react@2.0.4
+
 ## 1.0.6
 
 ### Patch Changes

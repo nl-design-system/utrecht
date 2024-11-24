@@ -1,5 +1,11 @@
 # @utrecht/listbox-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 5881339: Remove `"sideEffects": true` from `package.json` to prevent tree shaking CSS injection'
+
 ## 1.0.4
 
 ### Patch Changes
