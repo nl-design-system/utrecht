@@ -30,12 +30,6 @@ const createComponentConfig = (name, { css }) => ({
   input: css ? `src/css-module/${name}.tsx` : `src/${name}.tsx`,
   output: [
     {
-      file: css ? `dist/css-module/${name}.js` : `dist/${name}.js`,
-      format: 'cjs',
-      sourcemap: true,
-      globals: outputGlobals,
-    },
-    {
       file: css ? `dist/css-module/${name}.mjs` : `dist/${name}.mjs`,
       format: 'esm',
       sourcemap: true,
