@@ -1,22 +1,66 @@
 {
   "name": "@utrecht/link-react",
   "version": "1.0.2",
-  "author": "Community for NL Design System",
   "description": "Link component for the Municipality of Utrecht based on the NL Design System architecture",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "homepage": "https://github.com/nl-design-system/utrecht/tree/main/packages/components-react/link-react#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/utrecht/issues"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git+https://github.com/nl-design-system/utrecht.git",
+    "directory": "packages/components-react/link-react"
+  },
   "license": "EUPL-1.2",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "author": "Community for NL Design System",
+  "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./dist": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.mjs": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./dist/css.mjs": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    }
+  },
   "files": [
     "dist/",
     "src/"
   ],
-  "sideEffects": false,
   "scripts": {
-    "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
     "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
+    "init": "init-react-package",
     "test": "mkdir -p pages && jest --coverage --verbose",
     "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "clsx": "2.1.1"
   },
   "devDependencies": {
     "@testing-library/dom": "8.20.1",
@@ -34,23 +78,12 @@
     "rollup": "4.23.0",
     "typescript": "5.6.2"
   },
-  "keywords": [
-    "nl-design-system"
-  ],
-  "publishConfig": {
-    "access": "public"
-  },
-  "repository": {
-    "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git",
-    "directory": "packages/components-react/link-react"
-  },
   "peerDependencies": {
     "@babel/runtime": "*",
     "react": "18",
     "react-dom": "18"
   },
-  "dependencies": {
-    "clsx": "2.1.1"
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,40 +1,99 @@
 {
-  "version": "7.3.5",
-  "author": "Community for NL Design System",
-  "description": "React component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
-  "license": "EUPL-1.2",
   "name": "@utrecht/component-library-react",
+  "version": "7.3.5",
+  "private": false,
+  "description": "React component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "keywords": [
     "nl-design-system"
   ],
-  "private": false,
-  "publishConfig": {
-    "access": "public"
+  "homepage": "https://github.com/nl-design-system/utrecht/tree/main/packages/component-library-react#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/utrecht/issues"
   },
   "repository": {
     "type": "git+ssh",
-    "url": "git@github.com:nl-design-system/utrecht.git",
+    "url": "git+https://github.com/nl-design-system/utrecht.git",
     "directory": "packages/component-library-react"
   },
+  "license": "EUPL-1.2",
+  "author": "Community for NL Design System",
   "sideEffects": false,
+  "type": "module",
+  "exports": {
+    ".": "./dist/index.mjs",
+    "./dist": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.mjs": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/VegaVisualization": {
+      "types": "./dist/VegaVisualization.d.ts",
+      "import": "./dist/VegaVisualization.mjs"
+    },
+    "./dist/VegaVisualization.mjs": {
+      "types": "./dist/VegaVisualization.d.ts",
+      "import": "./dist/VegaVisualization.mjs"
+    },
+    "./dist/Calendar": {
+      "types": "./dist/Calendar.d.ts",
+      "import": "./dist/Calendar.mjs"
+    },
+    "./dist/Calendar.mjs": {
+      "types": "./dist/Calendar.d.ts",
+      "import": "./dist/Calendar.mjs"
+    },
+    "./dist/css-module": {
+      "types": "./dist/css-module/index.d.ts",
+      "import": "./dist/css-module/index.mjs"
+    },
+    "./dist/css-module/index": {
+      "types": "./dist/css-module/index.d.ts",
+      "import": "./dist/css-module/index.mjs"
+    },
+    "./dist/css-module/index.mjs": {
+      "types": "./dist/css-module/index.d.ts",
+      "import": "./dist/css-module/index.mjs"
+    },
+    "./dist/css-module/VegaVisualization": {
+      "types": "./dist/css-module/VegaVisualization.d.ts",
+      "import": "./dist/css-module/VegaVisualization.mjs"
+    },
+    "./dist/css-module/VegaVisualization.mjs": {
+      "types": "./dist/css-module/VegaVisualization.d.ts",
+      "import": "./dist/css-module/VegaVisualization.mjs"
+    },
+    "./dist/css-module/Calendar": {
+      "types": "./dist/css-module/Calendar.d.ts",
+      "import": "./dist/css-module/Calendar.mjs"
+    },
+    "./dist/css-module/Calendar.mjs": {
+      "types": "./dist/css-module/Calendar.d.ts",
+      "import": "./dist/css-module/Calendar.mjs"
+    }
+  },
+  "files": [
+    "dist/",
+    "*.md"
+  ],
   "scripts": {
     "build": "pnpm run '/^build:.*/'",
     "build:rollup": "rollup --config rollup.config.mjs",
     "build:rollup-components": "rollup --config rollup-components.config.mjs",
     "build:test-results": "mkdir -p dist pages && jest --json --outputFile=dist/.jest-test-results.json --silent",
     "clean": "rimraf dist/ pages/ .rollup.cache/ .swc",
+    "init": "init-react-package",
     "lint-build": "tsc --project ./tsconfig.json --noEmit && tsc --project ./tsconfig.test.json",
     "test": "mkdir -p pages && jest --coverage --verbose",
     "watch:build": "rollup -c --watch",
     "watch:test": "jest --verbose --watch"
   },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "files": [
-    "dist/",
-    "*.md"
-  ],
   "dependencies": {
     "@utrecht/button-react": "workspace:*",
     "@utrecht/calendar-react": "workspace:*",
@@ -84,6 +143,7 @@
     "@utrecht/badge-status-css": "workspace:*",
     "@utrecht/blockquote-css": "workspace:*",
     "@utrecht/breadcrumb-nav-css": "workspace:*",
+    "@utrecht/build-utils-react": "workspace:*",
     "@utrecht/button-group-css": "workspace:*",
     "@utrecht/button-link-css": "workspace:*",
     "@utrecht/code-block-css": "workspace:*",
@@ -195,5 +255,8 @@
     "vega": {
       "optional": true
     }
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
