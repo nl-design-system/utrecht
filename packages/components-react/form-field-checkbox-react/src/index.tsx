@@ -10,29 +10,26 @@ import type { ForwardedRef, PropsWithChildren, ReactNode, Ref } from 'react';
 import { forwardRef, useId } from 'react';
 
 export interface FormFieldCheckboxProps
-  extends Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput' | 'type'>,
-    Pick<
-      CheckboxProps,
-      | 'checked'
-      | 'defaultChecked'
-      | 'defaultValue'
-      | 'disabled'
-      | 'indeterminate'
-      | 'inputRequired'
-      | 'invalid'
-      | 'name'
-      | 'onBlur'
-      | 'onChange'
-      | 'onFocus'
-      | 'onInput'
-      | 'required'
-      | 'value'
-    > {
+  extends Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput' | 'type'> {
+  checked?: CheckboxProps['checked'];
+  defaultChecked?: CheckboxProps['defaultChecked'];
+  defaultValue?: CheckboxProps['defaultValue'];
   description?: ReactNode;
+  disabled?: CheckboxProps['disabled'];
   errorMessage?: ReactNode;
+  indeterminate?: CheckboxProps['indeterminate'];
   inputRef?: Ref<HTMLInputElement>;
+  inputRequired?: CheckboxProps['inputRequired'];
+  invalid?: CheckboxProps['invalid'];
   label: ReactNode;
+  name?: CheckboxProps['name'];
+  onBlur?: CheckboxProps['onBlur'];
+  onChange?: CheckboxProps['onChange'];
+  onFocus?: CheckboxProps['onFocus'];
+  onInput?: CheckboxProps['onInput'];
+  required?: CheckboxProps['required'];
   status?: ReactNode;
+  value?: CheckboxProps['value'];
 }
 
 export const FormFieldCheckbox = forwardRef(
