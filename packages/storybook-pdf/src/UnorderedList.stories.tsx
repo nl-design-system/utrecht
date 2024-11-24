@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { UnorderedList } from '@utrecht/component-library-react/src/UnorderedList';
+import { UnorderedList } from '@utrecht/component-library-react/dist/css-module';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/unordered-list-css/README.md?raw';
 import pdfDocs from '@utrecht/unordered-list-css/docs/technology-pdf.nl.md?raw';

@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { beforeAll, describe, expect, it } from '@jest/globals';
-import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/src/index';
+import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 

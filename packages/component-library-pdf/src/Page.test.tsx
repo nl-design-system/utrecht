@@ -2,7 +2,7 @@
 /* eslint-disable react/no-unescaped-entities */
 
 import { describe, expect, it } from '@jest/globals';
-import { Heading1 } from '@utrecht/component-library-react/src/index';
+import { Heading1 } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 

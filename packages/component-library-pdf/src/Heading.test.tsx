@@ -9,7 +9,7 @@ import {
   Heading5,
   Heading6,
   Paragraph,
-} from '@utrecht/component-library-react/src/index';
+} from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 

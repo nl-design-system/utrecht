@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { TableOfContents } from '@utrecht/component-library-react/src/TableOfContents';
+import { TableOfContents } from '@utrecht/component-library-react/dist/css-module';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/table-of-contents-css/README.md?raw';
 import pdfDocs from '@utrecht/table-of-contents-css/docs/technology-pdf.nl.md?raw';

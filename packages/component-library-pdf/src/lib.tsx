@@ -1,5 +1,5 @@
 /* eslint-env node */
-import { Document } from '@utrecht/component-library-react/src/index';
+import { Document } from '@utrecht/component-library-react/dist/index';
 import { exec, execFile } from 'node:child_process';
 import { createHmac } from 'node:crypto';
 import { mkdir, readFile, writeFile } from 'node:fs/promises';

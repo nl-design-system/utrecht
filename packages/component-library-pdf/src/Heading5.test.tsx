@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { describe, expect, it } from '@jest/globals';
-import { Heading1, Heading2, Heading3, Heading4, Heading5 } from '@utrecht/component-library-react/src/index';
+import { Heading1, Heading2, Heading3, Heading4, Heading5 } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 
