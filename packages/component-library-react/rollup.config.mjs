@@ -30,14 +30,8 @@ export default [
     input: 'src/index.ts',
     output: [
       {
-        file: packageJson.main,
-        format: 'cjs',
-        sourcemap: true,
-        globals: outputGlobals,
-      },
-      {
-        file: packageJson.module,
-        format: 'esm',
+        file: './dist/index.mjs',
+        format: 'es',
         sourcemap: true,
         globals: outputGlobals,
       },
@@ -68,14 +62,8 @@ export default [
     input: 'src/css-module/index.ts',
     output: [
       {
-        file: 'dist/css-module/index.cjs',
-        format: 'cjs',
-        sourcemap: true,
-        globals: outputGlobals,
-      },
-      {
-        file: 'dist/css-module/index.mjs',
-        format: 'esm',
+        file: './dist/css-module/index.mjs',
+        format: 'es',
         sourcemap: true,
         globals: outputGlobals,
       },
