@@ -324,7 +324,7 @@ describe('Form field with a checkbox', () => {
       expect(handleChange).toHaveBeenCalled();
     });
 
-    it.only('has an HTMLInputElement event target', () => {
+    it('has an HTMLInputElement event target', () => {
       const handleChange = (evt: ChangeEvent<HTMLInputElement>) => {};
       const handleChangeSpy = jest.fn(handleChange);
 
