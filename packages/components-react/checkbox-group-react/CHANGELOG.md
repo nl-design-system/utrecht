@@ -1,5 +1,22 @@
 # @utrecht/checkbox-group-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 709159c: Fix issue causing missing TypeScript `d.ts` files for React components.
+- 709159c: Specify `exports` in `package.jon` for `.mjs` files in React components.
+- 709159c: Remove CommonJS builds from React components, since in Developer Open Hour everyone assured me surely nobody uses `require()` anymore!
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+  - @utrecht/checkbox-react@1.0.3
+  - @utrecht/fieldset-react@1.0.3
+  - @utrecht/form-field-checkbox-react@1.0.5
+  - @utrecht/form-field-description-react@1.0.3
+  - @utrecht/form-field-error-message-react@1.0.3
+  - @utrecht/form-field-react@1.0.3
+
 ## 1.0.4
 
 ### Patch Changes

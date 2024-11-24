@@ -1,5 +1,30 @@
 # @utrecht/component-library-react
 
+## 7.3.6
+
+### Patch Changes
+
+- 709159c: Fix issue causing missing TypeScript `d.ts` files for React components.
+- 709159c: Specify `exports` in `package.jon` for `.mjs` files in React components.
+- 709159c: Remove CommonJS builds from React components, since in Developer Open Hour everyone assured me surely nobody uses `require()` anymore!
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+  - @utrecht/button-react@2.0.3
+  - @utrecht/calendar-react@1.0.6
+  - @utrecht/checkbox-react@1.0.3
+  - @utrecht/combobox-react@0.0.4
+  - @utrecht/fieldset-react@1.0.3
+  - @utrecht/form-field-checkbox-react@1.0.5
+  - @utrecht/form-field-description-react@1.0.3
+  - @utrecht/form-field-error-message-react@1.0.3
+  - @utrecht/form-field-react@1.0.3
+  - @utrecht/form-label-react@1.0.3
+  - @utrecht/link-react@1.0.3
+  - @utrecht/listbox-react@1.0.4
+  - @utrecht/radio-button-react@1.0.3
+  - @utrecht/textbox-react@1.0.3
+
 ## 7.3.5
 
 ### Patch Changes

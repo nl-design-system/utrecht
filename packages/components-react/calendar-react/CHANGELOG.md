@@ -1,5 +1,17 @@
 # @utrecht/calendar-react
 
+## 1.0.6
+
+### Patch Changes
+
+- 709159c: Fix issue causing missing TypeScript `d.ts` files for React components.
+- 709159c: Specify `exports` in `package.jon` for `.mjs` files in React components.
+- 709159c: Remove CommonJS builds from React components, since in Developer Open Hour everyone assured me surely nobody uses `require()` anymore!
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+  - @utrecht/button-react@2.0.3
+
 ## 1.0.5
 
 ### Patch Changes
