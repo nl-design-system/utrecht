@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { beforeAll, describe, expect, it } from '@jest/globals';
-import { Image } from '@utrecht/component-library-react/src/index';
+import { Image } from '@utrecht/component-library-react/dist/index';
 import { readFile } from 'fs/promises';
 import React from 'react';
 import { renderPdf } from './lib';

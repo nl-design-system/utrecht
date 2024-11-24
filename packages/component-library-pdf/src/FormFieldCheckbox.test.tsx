@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { beforeAll, describe, expect, it } from '@jest/globals';
-import { FormFieldCheckbox, Link, Paragraph } from '@utrecht/component-library-react/src/index';
+import { FormFieldCheckbox, Link, Paragraph } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 

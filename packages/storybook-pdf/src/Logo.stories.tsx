@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Logo } from '@utrecht/component-library-react/src/Logo';
+import { Logo } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/logo-css/README.md?raw';
 import pdfDocs from '@utrecht/logo-css/docs/technology-pdf.nl.md?raw';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';

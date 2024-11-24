@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Listbox, ListboxOption } from '@utrecht/component-library-react/src/Listbox';
+import { Listbox, ListboxOption } from '@utrecht/component-library-react/dist/index';
 import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 

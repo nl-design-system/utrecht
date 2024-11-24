@@ -7,7 +7,7 @@ import {
   PageContent,
   Paragraph,
   ScrollLink,
-} from '@utrecht/component-library-react/src/css-module/index';
+} from '@utrecht/component-library-react/dist/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
 import React from 'react';

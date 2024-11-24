@@ -2,7 +2,7 @@
 import { Controls, Description, Primary, Stories } from '@storybook/blocks';
 import type { Preview } from '@storybook/react';
 import type { StoryContext } from '@storybook/types';
-import { ButtonGroup } from '@utrecht/component-library-react/src/css-module';
+import { ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonThemes } from '@utrecht/storybook-helpers/dist/addon-themes';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';

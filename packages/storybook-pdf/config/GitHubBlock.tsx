@@ -5,7 +5,7 @@
 
 import { useOf } from '@storybook/blocks';
 import { StoryObj } from '@storybook/react';
-import { Icon } from '@utrecht/component-library-react/src/css-module';
+import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import React from 'react';
 

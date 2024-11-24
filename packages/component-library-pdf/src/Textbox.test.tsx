@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { describe, expect, it } from '@jest/globals';
-import { Textbox } from '@utrecht/component-library-react/src/index';
+import { Textbox } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 

@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { describe, expect, it } from '@jest/globals';
-import { Logo, LogoImage } from '@utrecht/component-library-react/src/index';
+import { Logo, LogoImage } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 

@@ -1,7 +1,7 @@
 /* eslint-env jest */
 
 import { describe, expect, it } from '@jest/globals';
-import { Checkbox } from '@utrecht/component-library-react/src/index';
+import { Checkbox } from '@utrecht/component-library-react/dist/index';
 import React from 'react';
 import { renderPdf } from './lib';
 
