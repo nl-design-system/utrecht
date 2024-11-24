@@ -9,7 +9,6 @@ const init = async () => {
     // Base `package.json` file
     {
       type: 'module',
-      sideEffects: false,
       publishConfig: {
         access: 'public',
       },
