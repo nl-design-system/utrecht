@@ -1,5 +1,20 @@
 # @utrecht/select-combobox-react
 
+## 1.0.3
+
+### Patch Changes
+
+- 709159c: Fix issue causing missing TypeScript `d.ts` files for React components.
+- 709159c: Specify `exports` in `package.jon` for `.mjs` files in React components.
+- 709159c: Remove CommonJS builds from React components, since in Developer Open Hour everyone assured me surely nobody uses `require()` anymore!
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+- Updated dependencies [709159c]
+  - @utrecht/button-react@2.0.3
+  - @utrecht/combobox-react@0.0.4
+  - @utrecht/listbox-react@1.0.4
+  - @utrecht/textbox-react@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
