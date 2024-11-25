@@ -16,6 +16,5 @@ export const addonViewport = {
         },
       },
     },
-    defaultViewport: 'responsive',
   },
 };
