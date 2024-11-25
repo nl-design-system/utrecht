@@ -93,7 +93,22 @@ writeComponentFile();
 const generateIconsNameFile = async () => {
   const data = await getIconData();
   await mkdir('dist', { recursive: true });
-  await writeFile(path.resolve(process.cwd(), 'dist/index.json'), generateIconsName(data), 'utf-8');
+  const json = generateIconsName(data);
+  await writeFile(path.resolve(process.cwd(), 'dist/index.json'), json, 'utf-8');
+  await writeFile(path.resolve(process.cwd(), 'dist/iconset.mjs'), `export default ${json};\n`, 'utf-8');
+  await writeFile(
+    path.resolve(process.cwd(), 'dist/iconset.d.mts'),
+    `export default iconset;
+
+declare interface Icon {
+  id: string;
+  src: string;
+  unicodeBidi?: boolean;
+}
+
+declare const iconset: Icon[];\n`,
+    'utf-8',
+  );
 };
 generateIconsNameFile();
 
