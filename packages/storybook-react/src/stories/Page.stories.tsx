@@ -4,10 +4,10 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/page-css/README.md?raw';
 import tokensDefinition from '@utrecht/page-css/dist/tokens.mjs';
 import React from 'react';
-import { Default as PageContent } from './PageContent.stories';
-import { Default as PageHeader } from './PageContent.stories';
-import { Default as PageFooter } from './PageFooter.stories';
-import { designTokenStory } from './util';
+import { Default as PageContent } from './PageContent.stories.js';
+import { Default as PageHeader } from './PageContent.stories.js';
+import { Default as PageFooter } from './PageFooter.stories.js';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Page',

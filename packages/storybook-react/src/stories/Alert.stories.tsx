@@ -5,7 +5,7 @@ import { Alert, AlertProps, Heading1, Paragraph } from '@utrecht/component-libra
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 interface AlertStoryProps extends AlertProps {
   icon?: string;

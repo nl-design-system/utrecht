@@ -5,7 +5,7 @@ import { DataPlaceholder } from '@utrecht/component-library-react/dist/css-modul
 import readme from '@utrecht/data-placeholder-css/README.md?raw';
 import tokensDefinition from '@utrecht/data-placeholder-css/dist/tokens.mjs';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Data placeholder',

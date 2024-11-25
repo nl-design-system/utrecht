@@ -4,7 +4,7 @@ import tokensDefinition from '@utrecht/badge-list-css/dist/tokens.mjs';
 import { BadgeList, DataBadge } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Badge list',

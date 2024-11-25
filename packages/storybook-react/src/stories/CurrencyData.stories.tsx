@@ -4,7 +4,7 @@ import readme from '@utrecht/currency-data-css/README.md?raw';
 import tokensDefinition from '@utrecht/currency-data-css/dist/tokens.mjs';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Currency data',

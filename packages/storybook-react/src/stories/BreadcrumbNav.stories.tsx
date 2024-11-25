@@ -10,7 +10,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import clsx from 'clsx';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 // custom link component for storybook
 const ExampleCustomLink = ({ children, className, ...rest }: any) => {

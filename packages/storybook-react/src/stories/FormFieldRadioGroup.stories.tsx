@@ -10,7 +10,7 @@ import {
   RadioButton,
 } from '@utrecht/component-library-react';
 import React from 'react';
-import FormFieldMeta from './FormField.stories';
+import FormFieldMeta from './FormField.stories.js';
 
 const storyArgTypes = {
   ...FormFieldMeta.argTypes,

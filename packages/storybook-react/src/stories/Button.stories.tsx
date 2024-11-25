@@ -5,7 +5,7 @@ import { Button, ButtonProps } from '@utrecht/button-react/dist/css';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 interface ButtonStoryProps extends ButtonProps {
   icon?: string;

@@ -4,7 +4,7 @@ import readme from '@utrecht/alternate-lang-nav-css/README.md?raw';
 import { ButtonGroup, Heading, Link, LinkButton } from '@utrecht/component-library-react/dist/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Alternate language navigation',

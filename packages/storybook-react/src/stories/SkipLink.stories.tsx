@@ -4,7 +4,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/skip-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/skip-link-css/dist/tokens.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 // `will-change: transform` will create a "containing block" that will contain `position: fixed` elements.
 const ExampleViewport = (Story: () => React.ReactElement<any, string | React.JSXElementConstructor<any>>) => (

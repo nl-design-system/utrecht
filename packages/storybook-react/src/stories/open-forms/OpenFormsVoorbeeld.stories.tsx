@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { MultipleFormioComponents } from './StoryUtil';
+import { MultipleFormioComponents } from './StoryUtil.js';
 
 const meta = {
   id: 'open-forms-voorbeeld',

@@ -3,7 +3,7 @@ import { FormField, FormLabel, RadioButton } from '@utrecht/component-library-re
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/radio-button-css/README.md?raw';
 import tokensDefinition from '@utrecht/radio-button-css/dist/tokens.mjs';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Radio Button',

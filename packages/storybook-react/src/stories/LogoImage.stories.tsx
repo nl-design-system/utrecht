@@ -3,7 +3,7 @@ import { LogoImage } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/logo-image-css/README.md?raw';
 import tokensDefinition from '@utrecht/logo-image-css/dist/tokens.mjs';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Logo image',

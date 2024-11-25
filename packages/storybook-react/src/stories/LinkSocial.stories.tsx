@@ -5,7 +5,7 @@ import readme from '@utrecht/link-social-css/README.md?raw';
 import tokensDefinition from '@utrecht/link-social-css/dist/tokens.mjs';
 import { UtrechtIconFacebook } from '@utrecht/web-component-library-react';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Link Social',
