@@ -26,8 +26,8 @@ import {
 import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
-import FooterKlachten from '../prototype-src/FooterKlachtenFormulier'; // Importeer het footer-component
-import urls from '../prototype-src/variables';
+import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
+import urls from '../prototype-src/variables.js';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Stap 1',

@@ -6,7 +6,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/index-char-nav-css/README.md?raw';
 import tokensDefinition from '@utrecht/index-char-nav-css/dist/tokens.mjs';
 import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
 const greekAlphabet = 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω';

@@ -4,7 +4,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/select-css/README.md?raw';
 import tokensDefinition from '@utrecht/select-css/dist/tokens.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 interface SelectOptions {
   value: string;

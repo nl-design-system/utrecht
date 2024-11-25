@@ -11,7 +11,7 @@ import {
   UtrechtIconWhatsapp,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/List Social',

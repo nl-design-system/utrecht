@@ -12,7 +12,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
 import React from 'react';
 import type { PropsWithChildren } from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const DemoPage = ({ children }: PropsWithChildren) => (
   <Document style={{ '--utrecht-space-around': 1 } as any}>

@@ -4,7 +4,7 @@ import { Calendar } from '@utrecht/component-library-react/dist/css-module/Calen
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { addDays, addWeeks, addYears } from 'date-fns';
 import { enUS, nl } from 'date-fns/locale';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const events = [
   { date: '2022-09-22T21:59:59.999Z', emphasis: true, selected: false, disabled: false },

@@ -30,7 +30,6 @@ import {
   UtrechtLogo,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
-import FooterKlachten from './FooterKlachtenFormulier'; // Importeer het footer-component
 
 const meta = {
   title: 'Template/Multistep form/Step 4',

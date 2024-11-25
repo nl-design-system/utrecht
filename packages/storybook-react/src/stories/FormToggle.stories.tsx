@@ -3,7 +3,7 @@ import { FormToggle } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/form-toggle-css/README.md?raw';
 import tokensDefinition from '@utrecht/form-toggle-css/dist/tokens.mjs';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Form toggle',

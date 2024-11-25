@@ -4,7 +4,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/document-css/README.md?raw';
 import tokensDefinition from '@utrecht/document-css/dist/tokens.mjs';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Document',

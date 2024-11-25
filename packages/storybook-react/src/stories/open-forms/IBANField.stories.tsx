@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { SingleFormioComponent } from './StoryUtil';
+import { SingleFormioComponent } from './StoryUtil.js';
 
 const meta = {
   id: 'open-forms-iban',

@@ -3,7 +3,7 @@ import readme from '@utrecht/button-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-link-css/dist/tokens.mjs';
 import { ButtonLink } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Link that looks like a button',

@@ -4,7 +4,7 @@ import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/icon/README.md?raw';
 import tokensDefinition from '@utrecht/icon/src/tokens.json';
 import React from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 
 const meta = {
   title: 'React Component/Icon',

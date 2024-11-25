@@ -15,7 +15,7 @@ import {
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import React, { ReactNode } from 'react';
-import { designTokenStory } from './util';
+import { designTokenStory } from './util.js';
 interface AccordionStoryProps {
   label: string;
   body: ReactNode;
