@@ -10,8 +10,13 @@
     "src/",
     "*.md"
   ],
-  "scripts": {},
-  "devDependencies": {},
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@utrecht/build-utils-css": "workspace:*"
+  },
   "keywords": [
     "nl-design-system"
   ],
