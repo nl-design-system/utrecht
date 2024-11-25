@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { PreHeading } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/pre-heading-css/README.md?raw';
-import tokensDefinition from '@utrecht/pre-heading-css/src/tokens.json';
+import tokensDefinition from '@utrecht/pre-heading-css/dist/tokens.mjs';
 import { designTokenStory } from './util';
 
 const meta = {

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Mark } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/mark-css/README.md?raw';
-import tokensDefinition from '@utrecht/mark-css/src/tokens.json';
+import tokensDefinition from '@utrecht/mark-css/dist/tokens.mjs';
 import { designTokenStory } from './util';
 
 const meta = {

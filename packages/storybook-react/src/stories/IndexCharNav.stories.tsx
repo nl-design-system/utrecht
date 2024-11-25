@@ -2,9 +2,9 @@
 
 import { Meta, StoryObj } from '@storybook/react';
 import { IndexCharNav } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/index-char-nav-css/README.md?raw';
-import tokensDefinition from '@utrecht/index-char-nav-css/src/tokens.json';
+import tokensDefinition from '@utrecht/index-char-nav-css/dist/tokens.mjs';
 import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { designTokenStory } from './util';
 

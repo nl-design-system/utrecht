@@ -8,9 +8,9 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/table-css/README.md?raw';
-import tokensDefinition from '@utrecht/table-css/src/tokens.json';
+import tokensDefinition from '@utrecht/table-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util';
 
