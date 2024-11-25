@@ -9,7 +9,7 @@ const meta = {
   id: 'react-vega-visualization',
   component: VegaVisualization,
   argTypes: {
-    'aria-label': {
+    label: {
       description: 'Accessible label to describe the visualization on screen readers.',
       control: {
         type: 'string',
@@ -35,7 +35,7 @@ type Story = StoryObj<typeof meta>;
 
 export const BarChart: Story = {
   args: {
-    'aria-label': 'Grafiek van data',
+    label: 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       description: 'A simple bar chart with embedded data.',
@@ -64,7 +64,7 @@ export const BarChart: Story = {
 
 export const GroupedBarChart: Story = {
   args: {
-    'aria-label': 'Grafiek van data',
+    label: 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       data: {
@@ -93,7 +93,7 @@ export const GroupedBarChart: Story = {
 
 export const LineChart: Story = {
   args: {
-    'aria-label': 'Grafiek van data',
+    label: 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       description: 'A simple line chart with embedded data.',
@@ -125,7 +125,7 @@ export const LineChart: Story = {
 
 export const PieChart: Story = {
   args: {
-    'aria-label': 'Grafiek van data',
+    label: 'Grafiek van data',
     spec: {
       $schema: 'https://vega.github.io/schema/vega-lite/v5.json',
       description: 'A simple pie chart with embedded data.',
