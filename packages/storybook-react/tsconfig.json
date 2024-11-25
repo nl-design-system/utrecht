@@ -3,7 +3,9 @@
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
     "jsx": "react-jsx",
-    "resolveJsonModule": true
+    "skipLibCheck": true,
+    "moduleResolution": "nodenext",
+    "module": "NodeNext"
   },
   "extends": "../../tsconfig.json",
   "include": ["config/**/*.ts", "config/**/*.tsx", "src/**/*.ts", "src/**/*.tsx"],
