@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from 'node:fs/promises';
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import path from 'node:path';
 import postcss from 'postcss';
 import * as sass from 'sass';
@@ -89,6 +89,21 @@ const buildStyles = async (config) => {
   }
 };
 
+const buildTokens = async ({ inputFile, outputFile }) => {
+  const json = JSON.parse(await readFile(inputFile, 'utf-8'));
+
+  await writeFile(outputFile, `export default ${JSON.stringify(json, null, 2)};\n`);
+
+  await writeFile(
+    outputFile.replace('.mjs', '.d.mts'),
+    `
+declare const tokens: any;
+
+export default tokens;
+`,
+  );
+};
+
 buildStyles({
   inputFile: 'src/index.scss',
   outputFile: 'dist/index.css',
@@ -110,4 +125,9 @@ buildStyles({
   minify: true,
   esm: true,
   dts: 'dist/index.mjs.d.ts',
+});
+
+buildTokens({
+  inputFile: 'src/tokens.json',
+  outputFile: 'dist/tokens.mjs',
 });
