@@ -10,6 +10,25 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
       'json/list': function ({ dictionary }) {
         return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
       },
+      'javascript/es6-list': function ({ dictionary }) {
+        return `export default ${JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ')};\n`;
+      },
+      'typescript/list-declarations': function ({ dictionary }) {
+        return `
+declare interface DesignToken {
+  value?: any;
+  type?: string;
+  comment?: string;
+  name?: string;
+  themeable?: boolean;
+  attributes?: Record<string, unknown>;
+  [key: string]: any;
+}
+
+export default tokens;
+
+declare const tokens: DesignToken[];`;
+      },
     },
     transforms: {
       'fontSize/pxToRem': {
@@ -74,6 +93,10 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
         {
           destination: 'list.json',
           format: 'json/list',
+        },
+        {
+          destination: 'list.mjs',
+          format: 'javascript/es6-list',
         },
         {
           destination: 'variables.json',
@@ -176,6 +199,10 @@ export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tok
         {
           format: 'typescript/module-declarations',
           destination: 'tokens.d.ts',
+        },
+        {
+          format: 'typescript/list-declarations',
+          destination: 'list.d.ts',
         },
       ],
     },
