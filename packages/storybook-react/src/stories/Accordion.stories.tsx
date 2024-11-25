@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/accordion-css/README.md?raw';
-import tokensDefinition from '@utrecht/accordion-css/src/tokens.json';
+import tokensDefinition from '@utrecht/accordion-css/dist/tokens.mjs';
 import {
   AccordionProvider,
   AccordionSectionProps,
@@ -12,7 +12,7 @@ import {
   TableHeaderCell,
   TableRow,
 } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './util';

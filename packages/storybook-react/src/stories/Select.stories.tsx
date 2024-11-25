@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Select, SelectOption } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/select-css/README.md?raw';
-import tokensDefinition from '@utrecht/select-css/src/tokens.json';
+import tokensDefinition from '@utrecht/select-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util';
 

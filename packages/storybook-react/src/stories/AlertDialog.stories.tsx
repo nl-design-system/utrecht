@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/alert-dialog-css/README.md?raw';
-import tokensDefinition from '@utrecht/alert-dialog-css/src/tokens.json';
+import tokensDefinition from '@utrecht/alert-dialog-css/dist/tokens.mjs';
 import type { AlertDialogProps } from '@utrecht/component-library-react';
 import {
   AlertDialog,
@@ -9,7 +9,7 @@ import {
   Paragraph,
   PrimaryActionButton,
 } from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React, { createRef, PropsWithChildren, useState } from 'react';
 import { designTokenStory } from './util';
 

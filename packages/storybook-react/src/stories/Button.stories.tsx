@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-css/README.md?raw';
-import tokensDefinition from '@utrecht/button-css/src/tokens.json';
+import tokensDefinition from '@utrecht/button-css/dist/tokens.mjs';
 import { Button, ButtonProps } from '@utrecht/button-react/dist/css';
-import tokens from '@utrecht/design-tokens/dist/index.json';
-import iconSet from '@utrecht/icon/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import React from 'react';
 import { designTokenStory } from './util';
 

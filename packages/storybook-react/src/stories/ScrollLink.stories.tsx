@@ -8,7 +8,7 @@ import {
   Paragraph,
   ScrollLink,
 } from '@utrecht/component-library-react/dist/css-module/index';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
 import React from 'react';
 import type { PropsWithChildren } from 'react';

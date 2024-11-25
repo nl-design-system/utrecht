@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
-import tokensDefinition from '@utrecht/calendar-css/src/tokens.json';
+import tokensDefinition from '@utrecht/calendar-css/dist/tokens.mjs';
 import { Calendar } from '@utrecht/component-library-react/dist/css-module/Calendar';
-import tokens from '@utrecht/design-tokens/dist/index.json';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { addDays, addWeeks, addYears } from 'date-fns';
 import { enUS, nl } from 'date-fns/locale';
 import { designTokenStory } from './util';
