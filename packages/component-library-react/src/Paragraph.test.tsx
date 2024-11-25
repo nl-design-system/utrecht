@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
 import { createRef } from 'react';
-import { Paragraph } from './Paragraph';
+import { isParagraphAppearance, Paragraph } from './Paragraph';
 import '@testing-library/jest-dom';
 
 describe('Paragraph', () => {
@@ -104,6 +104,22 @@ describe('Paragraph', () => {
   });
 
   describe('deprecated', () => {
+    it('ignores combinations of lead and small', () => {
+      const { container } = render(
+        <>
+          <Paragraph lead small />
+          <Paragraph appearance="lead" small />
+          <Paragraph appearance="small" lead />
+        </>,
+      );
+
+      const leadParagraph = container.querySelector('.utrecht-paragraph--lead');
+      const smallParagraph = container.querySelector('.utrecht-paragraph--lead');
+
+      expect(leadParagraph).not.toBeInTheDocument();
+      expect(smallParagraph).not.toBeInTheDocument();
+    });
+
     it('has a lead paragraph variant with a `lead` flag', () => {
       const { container } = render(<Paragraph lead />);
 
@@ -119,23 +135,18 @@ describe('Paragraph', () => {
 
       expect(leadParagraph).toHaveClass('utrecht-paragraph--small');
     });
+  });
 
-    it('favors `appearance="lead"` over deprecated equivalent API', () => {
-      const { container } = render(<Paragraph appearance="lead" small />);
-
-      const leadParagraph = container.querySelector(':only-child');
-
-      expect(leadParagraph).toHaveClass('utrecht-paragraph--lead');
-      expect(leadParagraph).not.toHaveClass('utrecht-paragraph--small');
+  describe('appearance type guard', () => {
+    it('is allows "lead" variant', () => {
+      expect(isParagraphAppearance('lead')).toBe(true);
     });
 
-    it('favors `appearance="small"` over deprecated equivalent API', () => {
-      const { container } = render(<Paragraph appearance="small" lead />);
-
-      const leadParagraph = container.querySelector(':only-child');
-
-      expect(leadParagraph).toHaveClass('utrecht-paragraph--small');
-      expect(leadParagraph).not.toHaveClass('utrecht-paragraph--lead');
+    it('is allows "small" variant', () => {
+      expect(isParagraphAppearance('small')).toBe(true);
+    });
+    it('disallows any other variant', () => {
+      expect(isParagraphAppearance('')).toBe(false);
     });
   });
 });
