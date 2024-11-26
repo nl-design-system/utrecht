@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 2.3.0
+
+### Minor Changes
+
+- b2cb0fa: Add `list.mjs` and `list.d.mts` to the design tokens package.
+
 ## 2.2.0
 
 ### Minor Changes
