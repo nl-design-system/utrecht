@@ -58,7 +58,7 @@ export const BedragVerlenging: Story = {
     key: 'textfield',
     label: 'BedragVerlenging',
     extraComponentProperties: {
-      defaultValue: '99',
+      defaultValue: '9999',
       key: 'bedragVerlenging',
     },
   },
@@ -378,7 +378,7 @@ export const HuisnummertoevoegingPZD: Story = {
     key: 'textfield',
     label: 'Huisnummertoevoeging',
     extraComponentProperties: {
-      defaultValue: '1c',
+      defaultValue: '1D',
       key: 'huisnummertoevoegingPZD',
     },
   },
@@ -388,7 +388,7 @@ export const HuisnummertoevoegingPMD: Story = {
     key: 'textfield',
     label: 'Huisnummertoevoeging',
     extraComponentProperties: {
-      defaultValue: '1c',
+      defaultValue: '1D',
       key: 'huisnummertoevoegingPMD',
     },
   },
@@ -398,7 +398,7 @@ export const HuisnummertoevoegingZEH: Story = {
     key: 'textfield',
     label: 'Huisnummertoevoeging',
     extraComponentProperties: {
-      defaultValue: '1c',
+      defaultValue: '1D',
       key: 'huisnummertoevoegingZEH',
     },
   },
@@ -408,7 +408,7 @@ export const HuisnummertoevoegingMEH: Story = {
     key: 'textfield',
     label: 'Huisnummertoevoeging',
     extraComponentProperties: {
-      defaultValue: '1c',
+      defaultValue: '1D',
       key: 'huisnummertoevoegingMEH',
     },
   },
@@ -418,7 +418,7 @@ export const HuisnummertoevoegingPA: Story = {
     key: 'textfield',
     label: 'Huisnummertoevoeging',
     extraComponentProperties: {
-      defaultValue: '1c',
+      defaultValue: '1D',
       key: 'huisnummertoevoegingPA',
     },
   },
@@ -430,7 +430,7 @@ export const KvKNummerMarktplaats: Story = {
     key: 'textfield',
     label: 'Inschrijfnummer Kamer van Koophandel',
     extraComponentProperties: {
-      defaultValue: '6584 2478 325',
+      defaultValue: '6584 2478',
       key: 'kvKNummerMarktplaats',
     },
   },
@@ -498,7 +498,7 @@ export const PlaatsZEH: Story = {
     key: 'textfield',
     label: 'Plaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 's-Gravenhage',
       key: 'plaatsZEH',
     },
   },
@@ -518,7 +518,7 @@ export const PlaatsMEH: Story = {
     key: 'textfield',
     label: 'Plaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 's-Gravenhage',
       key: 'plaatsMEH',
     },
   },
@@ -528,7 +528,7 @@ export const PlaatsPB: Story = {
     key: 'textfield',
     label: 'Plaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 's-Gravenhage',
       key: 'plaatsPB',
     },
   },
@@ -538,7 +538,7 @@ export const PlaatsPA: Story = {
     key: 'textfield',
     label: 'Plaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 's-Gravenhage',
       key: 'plaatsPA',
     },
   },
@@ -550,7 +550,7 @@ export const PostbusnummerZEH: Story = {
     key: 'textfield',
     label: 'Postbusnummer',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1234',
       key: 'postbusnummerZEH',
     },
   },
@@ -560,7 +560,7 @@ export const PostbusnummerPB: Story = {
     key: 'textfield',
     label: 'Postbusnummer',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: '1234',
       key: 'postbusnummerPB',
     },
   },
