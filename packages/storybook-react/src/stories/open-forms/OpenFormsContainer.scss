@@ -13,7 +13,11 @@
   }
 
   .utrecht-textbox[name="data[aantalMarkten]"] {
-    @include utrecht-textbox--aantalmarkten-size;
+    @include utrecht-textbox--postbus-nummer-size;
+  }
+
+  .utrecht-textbox[name="data[bedragVerlenging]"] {
+    @include utrecht-textbox--postbus-nummer-size;
   }
 
   .utrecht-textbox[name="data[voornamenPMD]"],
@@ -116,6 +120,10 @@
   .utrecht-textbox[name="data[straatnaamMEH]"],
   .utrecht-textbox[name="data[straatnaamPA]"] {
     @include utrecht-textbox--straatnaam-size;
+  }
+
+  .utrecht-textbox[name="data[sapArtikelnummer]"] {
+    @include utrecht-textbox--sapartikelnummer-size;
   }
 
   .utrecht-textbox[name="data[telefoonnummerPZD]"],
