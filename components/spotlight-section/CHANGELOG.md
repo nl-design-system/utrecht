@@ -1,5 +1,11 @@
 # @utrecht/spotlight-section-css
 
+## 1.5.0
+
+### Minor Changes
+
+- 725617a: Add `tokens.mjs` and `tokens.d.mts` files to CSS packages.
+
 ## 1.4.0
 
 ### Minor Changes
