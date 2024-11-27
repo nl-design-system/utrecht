@@ -23,9 +23,6 @@
     </style>
   </head>
   <body>
-    <h1>React components rendered with Preact</h1>
-    <p>This example uses ES Modules and import maps.</p>
-    <div id="root"></div>
     <script type="importmap">
       {
         "imports": {
@@ -94,37 +91,9 @@
         }
       }
     </script>
-    <script type="module">
-      import { render, createElement } from 'preact';
-      import { Button } from '@utrecht/button-react/dist/css';
-      import * as ButtonStories from '@utrecht/storybook-react/dist/src/stories/Button.stories.js';
-      // import { Separator } from '@utrecht/component-library-react/dist/css-module';
+    <script type="module" src="story-react.mjs"></script>
 
-      (async () => {
-        const root = document.getElementById('root');
-        const Component = ButtonStories.default.component;
-        const defaultArgs = ButtonStories.default.args;
-
-        if (root) {
-          render(
-            createElement('div', {
-              children: Object.entries(ButtonStories)
-                .filter(([name]) => name !== 'default')
-                .map(([name, storyObj]) => [
-                  createElement('h2', { children: name }),
-                  createElement('div', {
-                    className: 'example-story-canvas',
-                    children: createElement(Component, {
-                      ...defaultArgs,
-                      ...storyObj.args,
-                    }),
-                  }),
-                ]),
-            }),
-            root,
-          );
-        }
-      })();
-    </script>
+    <h1>Look no Storybook!</h1>
+    <story-list-react src="@utrecht/storybook-react/dist/src/stories/Button.stories.js"></story-react>
   </body>
 </html>
