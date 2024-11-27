@@ -50,6 +50,55 @@ https://stenciljs.com/docs/dev-server
           <utrecht-logo>
             <utrecht-link href="#"> <utrecht-logo-image></utrecht-logo-image></utrecht-link>
           </utrecht-logo>
+          <div>
+            <utrecht-heading-2>Popover button</utrecht-heading-2>
+            <utrecht-button popovertarget="popover-example-1">Toggle popover button</utrecht-button>
+            <utrecht-button popovertarget="popover-example-1" popovertargetaction="hide"
+              >Hide popover button</utrecht-button
+            >
+            <utrecht-button popovertarget="popover-example-1" popovertargetaction="show"
+              >Show popover button</utrecht-button
+            >
+            <div popover id="popover-example-1">
+              <utrecht-heading-3>Popover 1</utrecht-heading-3>
+              <utrecht-paragraph>Hello, world!</utrecht-paragraph>
+            </div>
+          </div>
+          <div>
+            <utrecht-heading-2>Popover link button</utrecht-heading-2>
+            <utrecht-link-button popovertarget="popover-example-2">Toggle popover link button</utrecht-link-button>
+            <utrecht-link-button popovertarget="popover-example-2" popovertargetaction="hide"
+              >Hide popover button</utrecht-link-button
+            >
+            <utrecht-link-button popovertarget="popover-example-2" popovertargetaction="show"
+              >Show popover button</utrecht-link-button
+            >
+            <div popover id="popover-example-2">
+              <utrecht-heading-3>Popover 2</utrecht-heading-3>
+              <utrecht-paragraph>Hello, world!</utrecht-paragraph>
+            </div>
+          </div>
+          <form>
+            <utrecht-button-group direction="column">
+              <utrecht-button type="submit" formaction="/" formmethod="delete">DELETE /delete/</utrecht-button>
+              <utrecht-button type="submit" formaction="/" formmethod="post">POST /post/</utrecht-button>
+              <utrecht-button type="submit" formaction="/" formmethod="get">GET /get/</utrecht-button>
+              <utrecht-button type="submit" formaction="/" formmethod="post" formtarget="_new"
+                >GET /get/ in new window</utrecht-button
+              ></utrecht-button-group
+            >
+            <utrecht-button-group direction="column">
+              <utrecht-link-button type="submit" formaction="/" formmethod="delete"
+                >DELETE /delete/</utrecht-link-button
+              >
+              <utrecht-link-button type="submit" formaction="/" formmethod="post">POST /post/</utrecht-link-button>
+              <utrecht-link-button type="submit" formaction="/" formmethod="get">GET /get/</utrecht-link-button>
+              <utrecht-link-button type="submit" formaction="/" formmethod="post" formtarget="_new"
+                >GET /get/ in new window</utrecht-link-button
+              ></utrecht-button-group
+            >
+          </form>
+
           <utrecht-flex-wrap-fallback flextarget="main-nav">
             <div class="menu" id="main-nav">
               <div><a href="">Home</a></div>
@@ -97,6 +146,9 @@ https://stenciljs.com/docs/dev-server
               label="Password"
             >
             </utrecht-form-field-textbox>
+            <utrecht-textarea cols="20"></utrecht-textarea>
+            <utrecht-textarea cols="20"></utrecht-textarea>
+            <utrecht-textarea cols="21"></utrecht-textarea>
             <utrecht-form-field-textbox
               type="password"
               name="password"
@@ -205,6 +257,27 @@ https://stenciljs.com/docs/dev-server
               <utrecht-heading-1>Heading 1: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-1>
               <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
             </utrecht-heading-group>
+            <utrecht-heading-group>
+              <utrecht-heading-2>Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
+              <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
+            </utrecht-heading-group>
+            <utrecht-heading-group>
+              <utrecht-heading-3>Heading 3: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-3>
+              <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
+            </utrecht-heading-group>
+            <utrecht-heading-group>
+              <utrecht-heading-4>Heading 4: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-4>
+              <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
+            </utrecht-heading-group>
+            <utrecht-heading-group>
+              <utrecht-heading-5>Heading 5: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-5>
+              <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
+            </utrecht-heading-group>
+            <utrecht-heading-group>
+              <utrecht-heading-6>Heading 6: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-6>
+              <utrecht-pre-heading>Pre-heading: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-pre-heading>
+            </utrecht-heading-group>
+            <utrecht-heading-1>Heading 1: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-1>
             <utrecht-heading-2>Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-2>
             <utrecht-heading level="2">Heading 2: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading>
             <utrecht-heading-3>Heading 3: The Quick Brown Fox Jumps Over The Lazy Dog</utrecht-heading-3>
