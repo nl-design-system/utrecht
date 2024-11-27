@@ -13,10 +13,10 @@
   --utrecht-nav-bar-content-max-inline-size: var(--basis-page-max-inline-size);
 
   /* todo */
-  --utrecht-page-content-content-background-color: white;
-  --utrecht-page-content-content-color: black;
-  --utrecht-page-content-content-max-inline-size: var(--basis-page-max-inline-size);
-  --utrecht-page-content-content-padding-inline: var(--basis-page-padding);
+  --utrecht-page-body-content-background-color: white;
+  --utrecht-page-body-content-color: black;
+  --utrecht-page-body-content-max-inline-size: var(--basis-page-max-inline-size);
+  --utrecht-page-body-content-padding-inline: var(--basis-page-padding);
   --utrecht-page-footer-background-color: #00811f;
   --utrecht-page-footer-color: white;
   --utrecht-page-footer-content-max-inline-size: var(--basis-page-max-inline-size);
@@ -32,7 +32,7 @@
   --utrecht-root-color: var(--utrecht-color-grey-10);
   --utrecht-page-header-padding-inline: var(--basis-page-padding);
   --utrecht-page-nav-bar-padding-inline: var(--basis-page-padding);
-  --utrecht-page-content-padding-inline: var(--basis-page-padding);
+  --utrecht-page-body-padding-inline: var(--basis-page-padding);
   --utrecht-page-footer-padding-inline: 0;
   --utrecht-root-font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Arial", sans-serif;
 }
