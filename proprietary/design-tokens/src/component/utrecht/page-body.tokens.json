@@ -1,6 +1,6 @@
 {
   "utrecht": {
-    "page-header": {
+    "page-body": {
       "padding-inline-end": { "value": "0" },
       "padding-inline-start": { "value": "0" },
       "padding-block-end": { "value": "0" },
@@ -9,11 +9,10 @@
         "background-color": { "value": "{utrecht.color.white}" },
         "color": { "value": "{utrecht.color.black}" },
         "max-inline-size": { "value": "1184px" },
-        "padding-inline-end": { "value": "2.4em", "$comment": "Legacy design token" },
-        "padding-inline-start": { "value": "2em", "$comment": "Legacy design token" },
-        "padding-inline": { "value": "2em" },
+        "padding-inline-end": { "value": "2.4em" },
+        "padding-inline-start": { "value": "2em" },
         "padding-block-end": { "value": "1em" },
-        "padding-block-start": { "value": "1.8em" }
+        "padding-block-start": { "value": "0" }
       }
     }
   }
