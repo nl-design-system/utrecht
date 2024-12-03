@@ -11,7 +11,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'page-content.scss',
   shadow: true,
 })
-export class Page {
+export class PageContent {
   render() {
     return (
       <div class="utrecht-page-content">

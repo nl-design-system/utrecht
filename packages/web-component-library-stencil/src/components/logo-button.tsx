@@ -12,7 +12,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'logo-button.scss',
   shadow: true,
 })
-export class DigidButton {
+export class LogoButton {
   render() {
     return (
       <div class="utrecht-logo-button">

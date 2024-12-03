@@ -11,7 +11,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'data-list-key.scss',
   shadow: true,
 })
-export class DataListValue {
+export class DataListKey {
   render() {
     return (
       <dt>
