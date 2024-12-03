@@ -11,7 +11,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'data-list-actions.scss',
   shadow: true,
 })
-export class DataListValue {
+export class DataListActions {
   render() {
     return (
       <dd>

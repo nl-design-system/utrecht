@@ -11,7 +11,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'surface.scss',
   shadow: true,
 })
-export class Code {
+export class Surface {
   render() {
     return (
       <div class="utrecht-surface">

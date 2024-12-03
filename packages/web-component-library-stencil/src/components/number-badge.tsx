@@ -11,7 +11,7 @@ import { Component, h, Prop } from '@stencil/core';
   styleUrl: 'number-badge.scss',
   shadow: true,
 })
-export class BadgeCounter {
+export class NumberBadge {
   @Prop() value: number;
   @Prop() max: number;
   @Prop() locale: string;
