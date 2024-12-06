@@ -1,5 +1,12 @@
 # @utrecht/web-component-library-vue
 
+## 2.1.1
+
+### Patch Changes
+
+- Updated dependencies [6dfa817]
+  - @utrecht/web-component-library-stencil@3.0.0
+
 ## 2.1.0
 
 ### Minor Changes
