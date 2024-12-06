@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 3.0.1
+
+### Patch Changes
+
+- b19733f: Use correct names for custom element classes, avoid duplicates.
+
 ## 3.0.0
 
 ### Major Changes
