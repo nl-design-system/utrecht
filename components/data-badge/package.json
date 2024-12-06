@@ -12,12 +12,11 @@
   ],
   "main": "dist/index.css",
   "scripts": {
-    "build": "rollup -c ../rollup.config.mjs",
+    "build": "build-css-package",
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@utrecht/badge-css": "workspace:*",
-    "rollup": "4.18.0"
+    "@utrecht/build-utils-css": "workspace:*"
   },
   "keywords": [
     "nl-design-system"
