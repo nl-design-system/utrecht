@@ -1,5 +1,15 @@
 # @utrecht/component-library-react
 
+## 8.0.0
+
+### Major Changes
+
+- f2c0a12: The `DataBadge` component now renders the `utrecht-data-badge` class name instead of the `utrecht-badge-data` class name.
+
+  The name of the class name is now in sync with the [NL Design System "Data Badge" component](https://nldesignsystem.nl/data-badge).
+
+  Migration: replace any `.utrecht-badge-data` selectors you might have, with `.utrecht-data-badge`.
+
 ## 7.3.8
 
 ### Patch Changes

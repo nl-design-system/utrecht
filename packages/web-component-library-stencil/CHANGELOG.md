@@ -1,5 +1,15 @@
 # @utrecht/web-component-library-stencil
 
+## 3.0.0
+
+### Major Changes
+
+- 6dfa817: Rename `<utrecht-badge-data>` to `<utrecht-data-badge>`.
+
+  The name of the class name is now in sync with the [NL Design System "Data Badge" component](https://nldesignsystem.nl/data-badge).
+
+  Migration: replace any `<utrecht-badge-data>` elements you might have, with `<utrecht-data-badge>`.
+
 ## 2.2.0
 
 ### Minor Changes
