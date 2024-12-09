@@ -10,9 +10,12 @@
     "start": "http-server ."
   },
   "dependencies": {
+    "@utrecht/storybook-react": "workspace:*",
+    "@utrecht/button-css": "workspace:*",
     "@utrecht/button-react": "workspace:*",
     "@utrecht/component-library-react": "workspace:*",
     "@utrecht/design-tokens": "workspace:*",
+    "@utrecht/icon": "workspace:*",
     "preact": "10.24.3"
   },
   "devDependencies": {
