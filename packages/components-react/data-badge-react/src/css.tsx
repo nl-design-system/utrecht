@@ -4,7 +4,6 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-import '@utrecht/data-badge-css/src/index.scss';
 import css from '@utrecht/data-badge-css/dist/index.mjs';
 import { insertStyle } from './insert-style';
 insertStyle(css);
