@@ -1,19 +1,19 @@
 {
   "utrecht": {
     "skip-link": {
-      "background-color": { "value": "{utrecht.topnav.list.background-color}" },
-      "color": { "value": "{utrecht.topnav.link.color}" },
-      "padding-block-end": { "value": "{utrecht.button.padding-block-end}" },
-      "padding-block-start": { "value": "{utrecht.button.padding-block-start}" },
-      "padding-inline-end": { "value": "{utrecht.button.padding-inline-end}" },
-      "padding-inline-start": { "value": "{utrecht.button.padding-inline-start}" },
-      "text-decoration": { "value": "{utrecht.link.text-decoration}" },
+      "background-color": { "value": "{nl.skip-link.background-color}" },
+      "color": { "value": "{nl.skip-link.color}" },
+      "padding-block-end": { "value": "{nl.skip-link.padding-block}" },
+      "padding-block-start": { "value": "{nl.skip-link.padding-block}" },
+      "padding-inline-end": { "value": "{nl.skip-link.padding-inline}" },
+      "padding-inline-start": { "value": "{nl.skip-link.padding-inline}" },
+      "text-decoration": { "value": "{nl.skip-link.text-decoration}" },
       "focus": {
-        "color": { "value": "{utrecht.topnav.link.focus.color}" },
-        "background-color": { "value": "{utrecht.topnav.link.focus.background-color}" }
+        "color": { "value": "{nl.skip-link.focus-visible.color}" },
+        "background-color": { "value": "{nl.skip-link.focus-visible.background-color}" }
       },
       "focus-visible": {
-        "text-decoration": { "value": "{utrecht.link.focus-visible.text-decoration}" }
+        "text-decoration": { "value": "{nl.skip-link.focus-visible.text-decoration}" }
       }
     }
   }
