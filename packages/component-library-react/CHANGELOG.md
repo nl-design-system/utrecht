@@ -1,5 +1,11 @@
 # @utrecht/component-library-react
 
+## 8.0.1
+
+### Patch Changes
+
+- 9bd83e5: Update dependencies.
+
 ## 8.0.0
 
 ### Major Changes

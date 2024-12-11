@@ -1,5 +1,11 @@
 # @utrecht/radio-group-react
 
+## 1.0.7
+
+### Patch Changes
+
+- 6d6c67d: pass required prop to radio group
+
 ## 1.0.6
 
 ### Patch Changes
