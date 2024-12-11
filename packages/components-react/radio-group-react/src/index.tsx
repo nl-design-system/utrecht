@@ -91,6 +91,7 @@ export const RadioGroup = forwardRef(
                 key={index}
                 name={name}
                 disabled={disabled}
+                required={required}
                 onChange={onChange}
                 onInput={onInput}
                 onFocus={onFocus}
