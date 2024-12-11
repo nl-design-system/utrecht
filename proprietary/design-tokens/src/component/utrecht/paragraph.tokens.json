@@ -2,17 +2,17 @@
   "utrecht": {
     "paragraph": {
       "color": {},
-      "font-family": { "value": "{utrecht.typography.sans-serif.font-family}" },
-      "font-size": { "value": "{utrecht.typography.scale.md.font-size}" },
-      "font-weight": { "value": "{utrecht.typography.weight-scale.normal.font-weight}" },
-      "line-height": { "value": "{utrecht.typography.line-height.md}" },
+      "font-family": { "value": "{nl.paragraph.font-family}" },
+      "font-size": { "value": "{nl.paragraph.font-size}" },
+      "font-weight": { "value": "{nl.paragraph.font-weight}" },
+      "line-height": { "value": "{nl.paragraph.line-height}" },
       "margin-block-start": { "value": "{utrecht.space.block.md}" },
       "margin-block-end": { "value": "0" },
       "lead": {
-        "color": { "value": "{utrecht.document.color}" },
-        "font-size": { "value": "{utrecht.typography.scale.xl.font-size}" },
-        "font-weight": { "value": "{utrecht.typography.weight-scale.normal.font-weight}" },
-        "line-height": { "value": "{utrecht.typography.line-height.md}" }
+        "color": {},
+        "font-size": { "value": "{nl.paragraph.lead.font-size}" },
+        "font-weight": { "value": "{nl.paragraph.lead.font-weight}" },
+        "line-height": { "value": "{nl.paragraph.lead.line-height}" }
       },
       "small": {
         "font-size": { "value": "{utrecht.typography.scale.sm.font-size}" }
