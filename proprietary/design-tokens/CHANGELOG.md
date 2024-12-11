@@ -1,5 +1,19 @@
 # @utrecht/design-tokens
 
+## 2.4.0
+
+### Minor Changes
+
+- 6ce885b: Add design tokens for NL Design System Candidate components:
+
+  - `nl-code-block…`
+  - `nl-data-badge`
+  - `nl-heading`
+  - `nl-mark`
+  - `nl-number-badge`
+  - `nl-paragraph`
+  - `nl-skip-link`
+
 ## 2.3.0
 
 ### Minor Changes
