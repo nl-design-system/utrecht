@@ -2,23 +2,23 @@
   "utrecht": {
     "badge": {
       "background-color": {
-        "value": "{utrecht.color.grey.30}"
+        "value": "{nl.data-badge.background-color}"
       },
       "border-radius": {
-        "value": "0"
+        "value": "{nl.data-badge.border-radius}"
       },
       "color": {
-        "value": "{utrecht.color.white}"
+        "value": "{nl.data-badge.color}"
       },
       "font-weight": {},
       "padding-block": {
-        "value": "{utrecht.space.block.xs}"
+        "value": "{nl.data-badge.padding-block}"
       },
       "font-style": {
         "value": "{utrecht.typography.font-style.normal}"
       },
       "padding-inline": {
-        "value": "{utrecht.space.inline.sm}"
+        "value": "{nl.data-badge.padding-inline}"
       }
     }
   }
