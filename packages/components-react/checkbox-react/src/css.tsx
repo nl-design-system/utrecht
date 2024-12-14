@@ -4,8 +4,12 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import '@utrecht/custom-checkbox-css/dist/index.mjs';
-import '@utrecht/checkbox-css/dist/index.mjs';
+import css from '@utrecht/checkbox-css/dist/index.mjs';
+import css2 from '@utrecht/custom-checkbox-css/dist/index.mjs';
+import { insertStyle } from './insert-style';
+
+insertStyle(css);
+insertStyle(css2);
 
 export type { CheckboxProps } from './index';
 export { Checkbox } from './index';
