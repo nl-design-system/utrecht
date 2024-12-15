@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { getComponentTokens } from './lib.mjs';
-import cloneDeepWith from 'lodash.clonedeepwith';
-import isPlainObject from 'lodash.isplainobject';
+import cloneDeepWith from 'lodash-es/clonedeepwith.js';
+import isPlainObject from 'lodash-es/isplainobject.js';
 import { isDesignTokenDefinition } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens.js';
 
 const traverseDeep = (root, parents, current, valueTest, callback) => {
