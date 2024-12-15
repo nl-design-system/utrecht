@@ -1,5 +1,11 @@
 # @utrecht/checkbox-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 890d7e7: Add missing CSS injection to Checkbox in React.
+
 ## 1.0.4
 
 ### Patch Changes
