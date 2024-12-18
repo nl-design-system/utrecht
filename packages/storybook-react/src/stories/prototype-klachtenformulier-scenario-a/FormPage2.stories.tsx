@@ -65,13 +65,10 @@ export const One: Story = {
                   In dit formulier doorloopt u de volgende stappen: uw klacht, voorstel oplossing, uw gegevens en het
                   controleren van de ingevulde informatie.
                 </UnorderedListItem>
-                <UnorderedListItem>
-                  Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
-                </UnorderedListItem>
+                <UnorderedListItem>Vul alles in. Als iets niet verplicht is, staat dat erbij.</UnorderedListItem>
                 <UnorderedListItem>U kunt het formulier tussentijds opslaan en later verder gaan.</UnorderedListItem>
                 <UnorderedListItem>
-                  Na het versturen ontvangt u een bevestigingsmail. Ook heeft u de mogelijkheid uw klacht te downloaden
-                  of printen.
+                  Na het versturen ontvangt u een bevestigingsmail. Ook kunt u uw klacht downloaden of printen.
                 </UnorderedListItem>
               </UnorderedList>
               <ButtonLink appearance="primary-action-button" href={urls.scenarioAPage3}>
