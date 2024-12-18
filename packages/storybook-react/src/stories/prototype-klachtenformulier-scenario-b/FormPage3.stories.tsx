@@ -130,7 +130,7 @@ export const One: Story = {
                   <Paragraph>
                     Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
                     <br />
-                    Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+                    Vul alles in. Als iets niet verplicht is, staat dat erbij.
                   </Paragraph>
                   {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
                   <div ref={complaintFieldContainerRef}>
