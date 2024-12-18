@@ -130,7 +130,7 @@ export const One: Story = {
                   <Paragraph>
                     Een duidelijke beschrijving helpt ons bij het behandelen van de klacht.
                     <br />
-                    Vul alle velden in. Als een veld niet verplicht is, staat dit erbij.
+                    Vul alles in. Als iets niet verplicht is, staat dat erbij.
                   </Paragraph>
                   {/* Dynamische FormFieldTextarea met aangepaste karaktertelling */}
                   <div ref={complaintFieldContainerRef}>
@@ -156,25 +156,25 @@ export const One: Story = {
                   <FormFieldTextbox
                     label={
                       <>
-                        Tijdstip <span className="utrecht-notbold">(niet verplicht)</span>
+                        Tijd <span className="utrecht-notbold">(niet verplicht)</span>
                       </>
                     }
-                    name="tijdstip"
-                    description="Bijvoorbeeld: 13:15"
+                    name="tijd"
+                    description="Bijvoorbeeld: 2 uur of 14:00"
                   />
                   <FormFieldTextarea
                     label={
                       <>
-                        Locatie <span className="utrecht-notbold">(niet verplicht)</span>
+                        Plek <span className="utrecht-notbold">(niet verplicht)</span>
                       </>
                     }
-                    name="locatie"
+                    name="plek"
                     rows={3}
                   />
                   <Heading2>
                     Bestand toevoegen <span className="utrecht-notbold">(niet verplicht)</span>
                   </Heading2>
-                  <Paragraph>Bijvoorbeeld: een foto van de situatie die de klacht duidelijker maakt</Paragraph>
+                  <Paragraph>Bijvoorbeeld: een foto van de situatie.</Paragraph>
                   <UnorderedList>
                     <UnorderedListItem>U kunt meerdere bestanden tegelijk toevoegen.</UnorderedListItem>
                     <UnorderedListItem>U mag maximaal 10 MB aan bestanden toevoegen.</UnorderedListItem>
