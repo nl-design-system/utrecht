@@ -30,6 +30,20 @@ describe('Listbox', () => {
     expect(listbox).toBeInTheDocument();
   });
 
+  it('renders no list role element', () => {
+    render(<Listbox />);
+
+    let list;
+
+    try {
+      list = screen.getByRole('list');
+    } catch (e) {
+      expect(e).toBeDefined();
+    }
+
+    expect(list).not.toBeDefined();
+  });
+
   it('renders a design system BEM block class name', () => {
     const { container } = render(<Listbox />);
 
