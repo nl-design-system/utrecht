@@ -1,5 +1,11 @@
 # @utrecht/custom-checkbox-css
 
+## 1.3.1
+
+### Patch Changes
+
+- 8c57d0c: Remove SVG checkmark background image from checkbox :focus and :active states.
+
 ## 1.3.0
 
 ### Minor Changes
