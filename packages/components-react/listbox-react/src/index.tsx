@@ -50,7 +50,9 @@ export const Listbox = forwardRef(
       {...restProps}
       ref={ref}
     >
-      <ul className="utrecht-listbox__list">{children}</ul>
+      <ul className="utrecht-listbox__list" role="none">
+        {children}
+      </ul>
     </div>
   ),
 );
