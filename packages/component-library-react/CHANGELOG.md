@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 8.0.3
+
+### Patch Changes
+
+- Updated dependencies [b987a9e]
+  - @utrecht/listbox-react@1.0.6
+
 ## 8.0.2
 
 ### Patch Changes

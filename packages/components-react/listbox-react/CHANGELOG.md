@@ -1,5 +1,11 @@
 # @utrecht/listbox-react
 
+## 1.0.6
+
+### Patch Changes
+
+- b987a9e: Fix Listbox to only render "listbox" and "option" roles, and no "list" role from the `<ul>`.
+
 ## 1.0.5
 
 ### Patch Changes
