@@ -13,15 +13,21 @@
 
   @include utrecht-alert;
 
+  align-self: center;
   border-color: var(--utrecht-alert-dialog-border-color);
   border-radius: var(--utrecht-alert-dialog-border-radius, 0);
   border-style: solid;
   border-width: var(--utrecht-alert-dialog-border-width, 0); /* reset HTML <dialog> border by default */
   box-shadow: var(--utrecht-alert-dialog-box-shadow);
-  max-block-size: var(--utrecht-alert-dialog-max-block-size);
-  max-inline-size: var(--utrecht-alert-dialog-max-inline-size);
+  justify-self: center;
+  max-block-size: min(var(--utrecht-alert-dialog-max-block-size), 100%);
+  max-inline-size: min(var(--utrecht-alert-dialog-max-inline-size), 100%);
   min-block-size: var(--utrecht-alert-dialog-min-block-size);
   min-inline-size: var(--utrecht-alert-dialog-min-inline-size);
+  /* stylelint-disable order/properties-alphabetical-order */
+  overflow-y: auto;
+  overflow-block: auto;
+  /* stylelint-enable order/properties-alphabetical-order */
 }
 
 @mixin utrecht-alert-dialog__backdrop {
