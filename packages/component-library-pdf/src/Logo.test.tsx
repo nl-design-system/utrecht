@@ -11,7 +11,7 @@ describe('Logo', () => {
       id: 'pdf-logo',
       render: () => (
         <Logo>
-          <LogoImage role="image" aria-label="logo gemeente Utrecht" />
+          <LogoImage role="img" aria-label="logo gemeente Utrecht" />
         </Logo>
       ),
     });
@@ -32,12 +32,12 @@ describe('Logo', () => {
     expect(sha256).toBe('TODO');
   });
 
-  it('renders a text alternative for `<svg role="image" aria-label="Text alternative">`', async () => {
+  it('renders a text alternative for `<svg role="img" aria-label="Text alternative">`', async () => {
     const { sha256 } = await renderPdf({
       id: 'pdf-logo-svg',
       render: () => (
         <Logo>
-          <LogoImage role="image" aria-label="logo gemeente Utrecht" />
+          <LogoImage role="img" aria-label="logo gemeente Utrecht" />
         </Logo>
       ),
     });
@@ -51,7 +51,7 @@ describe('Logo', () => {
         id: 'pdf-logo-caption',
         render: () => (
           <Logo caption="gemeente Utrecht">
-            <LogoImage role="image" aria-label="logo gemeente Utrecht" />
+            <LogoImage role="img" aria-label="logo gemeente Utrecht" />
           </Logo>
         ),
       });
