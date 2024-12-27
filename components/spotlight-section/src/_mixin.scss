@@ -10,6 +10,7 @@
     var(--utrecht-spotlight-section-background-color)
   );
   border-color: var(--_utrecht-spotlight-section-border-color, var(--utrecht-spotlight-section-border-color));
+  border-radius: var(--utrecht-spotlight-section-border-radius, 0);
   border-style: solid;
   border-width: var(--_utrecht-spotlight-section-border-width, var(--utrecht-spotlight-section-border-width, 0));
   color: var(--_utrecht-spotlight-section-color, var(--utrecht-spotlight-section-color));
