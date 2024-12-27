@@ -21,6 +21,7 @@
    * - the root must be a "positioned ancestor", so elements that are positioned
    *   outside the normal document flow (`absolute`, `fixed` and `sticky`)
    *   are positioned relative to the root component.
+   * - ensure text content fits at 400% zoom by enabling hypenation.
    */
   @include reset-font-smoothing;
 
@@ -28,6 +29,10 @@
   block-size: 100%;
   color: var(--utrecht-root-color);
   font-family: var(--utrecht-root-font-family);
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
   inline-size: 100%;
   overflow-block: auto;
   overflow-inline: auto;
@@ -36,4 +41,5 @@
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
+  word-break: break-word;
 }
