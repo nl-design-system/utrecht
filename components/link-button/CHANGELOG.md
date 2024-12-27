@@ -1,5 +1,11 @@
 # @utrecht/link-button-css
 
+## 1.4.0
+
+### Minor Changes
+
+- 98c5396: Support `utrecht.button.border-radius` for Link Button.
+
 ## 1.3.0
 
 ### Minor Changes

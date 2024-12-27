@@ -1,5 +1,11 @@
 # @utrecht/alert-dialog-css
 
+## 1.4.1
+
+### Patch Changes
+
+- d25537e: Scroll alert dialogs when viewport is too small for content.
+
 ## 1.4.0
 
 ### Minor Changes

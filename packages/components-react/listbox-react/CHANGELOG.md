@@ -1,5 +1,11 @@
 # @utrecht/listbox-react
 
+## 1.0.7
+
+### Patch Changes
+
+- 7a8910c: Fix Listbox size on very small screens.
+
 ## 1.0.6
 
 ### Patch Changes
