@@ -203,19 +203,19 @@ $utrecht-support-prince-xml: false !default;
   @include utrecht-focus;
 
   --_utrecht-radio-button-interactive-background-color: var(
-    --utrecht-radio-button-focus-background-color,
+    --_utrecht-radio-button-state-focus-background-color,
     var(--utrecht-radio-button-focus-background-color)
   );
   --_utrecht-radio-button-interactive-border-color: var(
-    --utrecht-radio-button-focus-border-color,
+    --_utrecht-radio-button-state-focus-border-color,
     var(--utrecht-radio-button-focus-border-color)
   );
   --_utrecht-radio-button-interactive-border-width: var(
-    --utrecht-radio-button-focus-border-width,
+    --_utrecht-radio-button-state-focus-border-width,
     var(--utrecht-radio-button-focus-border-width)
   );
   --_utrecht-radio-button-interactive-color: var(
-    --utrecht-radio-button-focus-color,
+    --_utrecht-radio-button-state-focus-color,
     var(--utrecht-radio-button-focus-color)
   );
 }
