@@ -1,5 +1,11 @@
 # @utrecht/root-css
 
+## 1.1.1
+
+### Patch Changes
+
+- 4c37eb9: Enable hypenation for the Root component.
+
 ## 1.1.0
 
 ### Minor Changes

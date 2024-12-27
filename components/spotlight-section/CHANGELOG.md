@@ -1,5 +1,11 @@
 # @utrecht/spotlight-section-css
 
+## 1.6.0
+
+### Minor Changes
+
+- a4fb52f: Add `utrecht.spotlight-section.border-radius` token.
+
 ## 1.5.0
 
 ### Minor Changes

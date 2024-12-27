@@ -1,5 +1,11 @@
 # @utrecht/radio-button-css
 
+## 1.5.1
+
+### Patch Changes
+
+- 3becef6: Fix focus state tokens for radio button
+
 ## 1.5.0
 
 ### Minor Changes

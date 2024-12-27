@@ -1,5 +1,11 @@
 # @utrecht/listbox-css
 
+## 1.5.1
+
+### Patch Changes
+
+- 7a8910c: Fix Listbox size on very small screens.
+
 ## 1.5.0
 
 ### Minor Changes

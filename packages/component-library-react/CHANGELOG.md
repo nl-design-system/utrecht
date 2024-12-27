@@ -1,5 +1,15 @@
 # @utrecht/component-library-react
 
+## 8.0.4
+
+### Patch Changes
+
+- 9bf9fe9: Fix `role="img"` for VegaVizualisation.
+- d25537e: Scroll alert dialogs when viewport is too small for content.
+- Updated dependencies [7a8910c]
+  - @utrecht/listbox-react@1.0.7
+  - @utrecht/radio-button-react@1.0.4
+
 ## 8.0.3
 
 ### Patch Changes
