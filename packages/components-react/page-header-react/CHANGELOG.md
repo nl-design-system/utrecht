@@ -1,5 +1,11 @@
 # @utrecht/page-header-react
 
+## 1.0.4
+
+### Patch Changes
+
+- 25f8ba5: Make CSS and React components a dependency, instead of a devDependency. This should fix some TypeScript errors about missing types.
+
 ## 1.0.3
 
 ### Patch Changes

@@ -1,5 +1,27 @@
 # @utrecht/component-library-react
 
+## 8.0.5
+
+### Patch Changes
+
+- 25f8ba5: Make CSS and React components a dependency, instead of a devDependency. This should fix some TypeScript errors about missing types.
+- Updated dependencies [25f8ba5]
+  - @utrecht/form-field-error-message-react@1.0.5
+  - @utrecht/form-field-description-react@1.0.5
+  - @utrecht/radio-button-react@1.0.5
+  - @utrecht/data-badge-react@1.0.2
+  - @utrecht/form-field-react@1.0.5
+  - @utrecht/form-label-react@1.0.5
+  - @utrecht/checkbox-react@1.0.6
+  - @utrecht/combobox-react@0.0.6
+  - @utrecht/fieldset-react@1.0.5
+  - @utrecht/listbox-react@1.0.8
+  - @utrecht/textbox-react@1.0.5
+  - @utrecht/button-react@2.0.5
+  - @utrecht/link-react@1.0.5
+  - @utrecht/form-field-checkbox-react@1.0.8
+  - @utrecht/calendar-react@1.0.9
+
 ## 8.0.4
 
 ### Patch Changes
