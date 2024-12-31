@@ -1,0 +1,42 @@
+{
+  "version": "1.3.0",
+  "author": "Community for NL Design System",
+  "description": "Icons for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/icon",
+  "files": [
+    "dist/",
+    "docs/",
+    "loader/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "pnpm run build:svg && pnpm run build:components",
+    "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../web-component-library-stencil/src/components/generated/",
+    "build:css": "build-css-package",
+    "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
+    "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../web-component-library-stencil/src/components/generated/"
+  },
+  "devependencies": {
+    "@utrecht/icon-css": "workspace:*"
+  },
+  "devDependencies": {
+    "@unicode/unicode-15.1.0": "1.5.2",
+    "jsdom": "20.0.3",
+    "lodash": "4.17.21",
+    "minimist": "1.2.8",
+    "svgo": "3.1.0"
+  },
+  "keywords": [
+    "nl-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/icon"
+  }
+}
