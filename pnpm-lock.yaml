@@ -1605,6 +1605,45 @@ importers:
 
   packages/component-library-react:
     dependencies:
+      '@utrecht/accordion-css':
+        specifier: workspace:*
+        version: link:../../components/accordion
+      '@utrecht/alert-css':
+        specifier: workspace:*
+        version: link:../../components/alert
+      '@utrecht/alert-dialog-css':
+        specifier: workspace:*
+        version: link:../../components/alert-dialog
+      '@utrecht/alternate-lang-nav-css':
+        specifier: workspace:*
+        version: link:../../components/alternate-lang-nav
+      '@utrecht/article-css':
+        specifier: workspace:*
+        version: link:../../components/article
+      '@utrecht/backdrop-css':
+        specifier: workspace:*
+        version: link:../../components/backdrop
+      '@utrecht/badge-counter-css':
+        specifier: workspace:*
+        version: link:../../components/badge-counter
+      '@utrecht/badge-list-css':
+        specifier: workspace:*
+        version: link:../../components/badge-list
+      '@utrecht/badge-status-css':
+        specifier: workspace:*
+        version: link:../../components/badge-status
+      '@utrecht/blockquote-css':
+        specifier: workspace:*
+        version: link:../../components/blockquote
+      '@utrecht/breadcrumb-nav-css':
+        specifier: workspace:*
+        version: link:../../components/breadcrumb-nav
+      '@utrecht/button-group-css':
+        specifier: workspace:*
+        version: link:../../components/button-group
+      '@utrecht/button-link-css':
+        specifier: workspace:*
+        version: link:../../components/button-link
       '@utrecht/button-react':
         specifier: workspace:*
         version: link:../components-react/button-react
@@ -1614,12 +1653,60 @@ importers:
       '@utrecht/checkbox-react':
         specifier: workspace:*
         version: link:../components-react/checkbox-react
+      '@utrecht/code-block-css':
+        specifier: workspace:*
+        version: link:../../components/code-block
+      '@utrecht/code-css':
+        specifier: workspace:*
+        version: link:../../components/code
+      '@utrecht/color-sample-css':
+        specifier: workspace:*
+        version: link:../../components/color-sample
+      '@utrecht/column-layout-css':
+        specifier: workspace:*
+        version: link:../../components/column-layout
       '@utrecht/combobox-react':
         specifier: workspace:*
         version: link:../components-react/combobox-react
+      '@utrecht/currency-data-css':
+        specifier: workspace:*
+        version: link:../../components/currency-data
+      '@utrecht/custom-checkbox-css':
+        specifier: workspace:*
+        version: link:../../components/custom-checkbox
+      '@utrecht/data-badge-css':
+        specifier: workspace:*
+        version: link:../../components/data-badge
+      '@utrecht/data-badge-react':
+        specifier: workspace:*
+        version: link:../components-react/data-badge-react
+      '@utrecht/data-list-css':
+        specifier: workspace:*
+        version: link:../../components/data-list
+      '@utrecht/data-placeholder-css':
+        specifier: workspace:*
+        version: link:../../components/data-placeholder
+      '@utrecht/digid-button-css':
+        specifier: workspace:*
+        version: link:../../components/digid-button
+      '@utrecht/document-css':
+        specifier: workspace:*
+        version: link:../../components/document
+      '@utrecht/drawer-css':
+        specifier: workspace:*
+        version: link:../../components/drawer
+      '@utrecht/emphasis-css':
+        specifier: workspace:*
+        version: link:../../components/emphasis
       '@utrecht/fieldset-react':
         specifier: workspace:*
         version: link:../components-react/fieldset-react
+      '@utrecht/figure-css':
+        specifier: workspace:*
+        version: link:../../components/figure
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../../components/focus-ring
       '@utrecht/form-field-checkbox-react':
         specifier: workspace:*
         version: link:../components-react/form-field-checkbox-react
@@ -1635,18 +1722,180 @@ importers:
       '@utrecht/form-label-react':
         specifier: workspace:*
         version: link:../components-react/form-label-react
+      '@utrecht/form-toggle-css':
+        specifier: workspace:*
+        version: link:../../components/form-toggle
+      '@utrecht/heading-1-css':
+        specifier: workspace:*
+        version: link:../../components/heading-1
+      '@utrecht/heading-2-css':
+        specifier: workspace:*
+        version: link:../../components/heading-2
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:../../components/heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:../../components/heading-4
+      '@utrecht/heading-5-css':
+        specifier: workspace:*
+        version: link:../../components/heading-5
+      '@utrecht/heading-6-css':
+        specifier: workspace:*
+        version: link:../../components/heading-6
+      '@utrecht/heading-group-css':
+        specifier: workspace:*
+        version: link:../../components/heading-group
+      '@utrecht/html-content-css':
+        specifier: workspace:*
+        version: link:../../components/html-content
+      '@utrecht/iban-data-css':
+        specifier: workspace:*
+        version: link:../../components/iban-data
+      '@utrecht/icon':
+        specifier: workspace:*
+        version: link:../../components/icon
+      '@utrecht/img-css':
+        specifier: workspace:*
+        version: link:../../components/img
+      '@utrecht/index-char-nav-css':
+        specifier: workspace:*
+        version: link:../../components/index-char-nav
+      '@utrecht/link-button-css':
+        specifier: workspace:*
+        version: link:../../components/link-button
+      '@utrecht/link-list-css':
+        specifier: workspace:*
+        version: link:../../components/link-list
       '@utrecht/link-react':
         specifier: workspace:*
         version: link:../components-react/link-react
+      '@utrecht/link-social-css':
+        specifier: workspace:*
+        version: link:../../components/link-social
+      '@utrecht/list-social-css':
+        specifier: workspace:*
+        version: link:../../components/list-social
       '@utrecht/listbox-react':
         specifier: workspace:*
         version: link:../components-react/listbox-react
+      '@utrecht/logo-button-css':
+        specifier: workspace:*
+        version: link:../../components/logo-button
+      '@utrecht/logo-css':
+        specifier: workspace:*
+        version: link:../../components/logo
+      '@utrecht/logo-image-css':
+        specifier: workspace:*
+        version: link:../../components/logo-image
+      '@utrecht/map-control-button-css':
+        specifier: workspace:*
+        version: link:../../components/mapcontrolbutton
+      '@utrecht/map-marker-css':
+        specifier: workspace:*
+        version: link:../../components/map-marker
+      '@utrecht/mark-css':
+        specifier: workspace:*
+        version: link:../../components/mark
+      '@utrecht/multiline-data-css':
+        specifier: workspace:*
+        version: link:../../components/multiline-data
+      '@utrecht/nav-bar-css':
+        specifier: workspace:*
+        version: link:../../components/nav-bar
+      '@utrecht/nav-list-css':
+        specifier: workspace:*
+        version: link:../../components/nav-list
+      '@utrecht/number-badge-css':
+        specifier: workspace:*
+        version: link:../../components/number-badge
+      '@utrecht/number-data-css':
+        specifier: workspace:*
+        version: link:../../components/number-data
+      '@utrecht/ordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/ordered-list
+      '@utrecht/page-content-css':
+        specifier: workspace:*
+        version: link:../../components/page-content
+      '@utrecht/page-css':
+        specifier: workspace:*
+        version: link:../../components/page
+      '@utrecht/page-footer-css':
+        specifier: workspace:*
+        version: link:../../components/page-footer
+      '@utrecht/page-header-css':
+        specifier: workspace:*
+        version: link:../../components/page-header
+      '@utrecht/pagination-css':
+        specifier: workspace:*
+        version: link:../../components/pagination
+      '@utrecht/paragraph-css':
+        specifier: workspace:*
+        version: link:../../components/paragraph
+      '@utrecht/pre-heading-css':
+        specifier: workspace:*
+        version: link:../../components/pre-heading
+      '@utrecht/preserve-data-css':
+        specifier: workspace:*
+        version: link:../../components/preserve-data
       '@utrecht/radio-button-react':
         specifier: workspace:*
         version: link:../components-react/radio-button-react
+      '@utrecht/rich-text-css':
+        specifier: workspace:*
+        version: link:../../components/rich-text
+      '@utrecht/search-bar-css':
+        specifier: workspace:*
+        version: link:../../components/search-bar
+      '@utrecht/select-css':
+        specifier: workspace:*
+        version: link:../../components/select
+      '@utrecht/separator-css':
+        specifier: workspace:*
+        version: link:../../components/separator
+      '@utrecht/skip-link-css':
+        specifier: workspace:*
+        version: link:../../components/skip-link
+      '@utrecht/spotlight-section-css':
+        specifier: workspace:*
+        version: link:../../components/spotlight-section
+      '@utrecht/subscript-css':
+        specifier: workspace:*
+        version: link:../../components/subscript
+      '@utrecht/superscript-css':
+        specifier: workspace:*
+        version: link:../../components/superscript
+      '@utrecht/surface-css':
+        specifier: workspace:*
+        version: link:../../components/surface
+      '@utrecht/table-css':
+        specifier: workspace:*
+        version: link:../../components/table
+      '@utrecht/table-of-contents-css':
+        specifier: workspace:*
+        version: link:../../components/table-of-contents
+      '@utrecht/textarea-css':
+        specifier: workspace:*
+        version: link:../../components/textarea
       '@utrecht/textbox-react':
         specifier: workspace:*
         version: link:../components-react/textbox-react
+      '@utrecht/top-task-link-css':
+        specifier: workspace:*
+        version: link:../../components/toptask-link
+      '@utrecht/top-task-nav-css':
+        specifier: workspace:*
+        version: link:../../components/toptask-nav
+      '@utrecht/unordered-list-css':
+        specifier: workspace:*
+        version: link:../../components/unordered-list
+      '@utrecht/url-data-css':
+        specifier: workspace:*
+        version: link:../../components/url-data
+      '@utrecht/vega-visualization-css':
+        specifier: workspace:*
+        version: link:../../components/vega-visualization
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -1714,258 +1963,9 @@ importers:
       '@types/testing-library__jest-dom':
         specifier: 5.14.9
         version: 5.14.9
-      '@utrecht/accordion-css':
-        specifier: workspace:*
-        version: link:../../components/accordion
-      '@utrecht/alert-css':
-        specifier: workspace:*
-        version: link:../../components/alert
-      '@utrecht/alert-dialog-css':
-        specifier: workspace:*
-        version: link:../../components/alert-dialog
-      '@utrecht/alternate-lang-nav-css':
-        specifier: workspace:*
-        version: link:../../components/alternate-lang-nav
-      '@utrecht/article-css':
-        specifier: workspace:*
-        version: link:../../components/article
-      '@utrecht/backdrop-css':
-        specifier: workspace:*
-        version: link:../../components/backdrop
-      '@utrecht/badge-counter-css':
-        specifier: workspace:*
-        version: link:../../components/badge-counter
-      '@utrecht/badge-list-css':
-        specifier: workspace:*
-        version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
-      '@utrecht/blockquote-css':
-        specifier: workspace:*
-        version: link:../../components/blockquote
-      '@utrecht/breadcrumb-nav-css':
-        specifier: workspace:*
-        version: link:../../components/breadcrumb-nav
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../build-utils-react
-      '@utrecht/button-group-css':
-        specifier: workspace:*
-        version: link:../../components/button-group
-      '@utrecht/button-link-css':
-        specifier: workspace:*
-        version: link:../../components/button-link
-      '@utrecht/code-block-css':
-        specifier: workspace:*
-        version: link:../../components/code-block
-      '@utrecht/code-css':
-        specifier: workspace:*
-        version: link:../../components/code
-      '@utrecht/color-sample-css':
-        specifier: workspace:*
-        version: link:../../components/color-sample
-      '@utrecht/column-layout-css':
-        specifier: workspace:*
-        version: link:../../components/column-layout
-      '@utrecht/currency-data-css':
-        specifier: workspace:*
-        version: link:../../components/currency-data
-      '@utrecht/custom-checkbox-css':
-        specifier: workspace:*
-        version: link:../../components/custom-checkbox
-      '@utrecht/data-badge-css':
-        specifier: workspace:*
-        version: link:../../components/data-badge
-      '@utrecht/data-badge-react':
-        specifier: workspace:*
-        version: link:../components-react/data-badge-react
-      '@utrecht/data-list-css':
-        specifier: workspace:*
-        version: link:../../components/data-list
-      '@utrecht/data-placeholder-css':
-        specifier: workspace:*
-        version: link:../../components/data-placeholder
-      '@utrecht/digid-button-css':
-        specifier: workspace:*
-        version: link:../../components/digid-button
-      '@utrecht/document-css':
-        specifier: workspace:*
-        version: link:../../components/document
-      '@utrecht/drawer-css':
-        specifier: workspace:*
-        version: link:../../components/drawer
-      '@utrecht/emphasis-css':
-        specifier: workspace:*
-        version: link:../../components/emphasis
-      '@utrecht/figure-css':
-        specifier: workspace:*
-        version: link:../../components/figure
-      '@utrecht/focus-ring-css':
-        specifier: workspace:*
-        version: link:../../components/focus-ring
-      '@utrecht/form-toggle-css':
-        specifier: workspace:*
-        version: link:../../components/form-toggle
-      '@utrecht/heading-1-css':
-        specifier: workspace:*
-        version: link:../../components/heading-1
-      '@utrecht/heading-2-css':
-        specifier: workspace:*
-        version: link:../../components/heading-2
-      '@utrecht/heading-3-css':
-        specifier: workspace:*
-        version: link:../../components/heading-3
-      '@utrecht/heading-4-css':
-        specifier: workspace:*
-        version: link:../../components/heading-4
-      '@utrecht/heading-5-css':
-        specifier: workspace:*
-        version: link:../../components/heading-5
-      '@utrecht/heading-6-css':
-        specifier: workspace:*
-        version: link:../../components/heading-6
-      '@utrecht/heading-group-css':
-        specifier: workspace:*
-        version: link:../../components/heading-group
-      '@utrecht/html-content-css':
-        specifier: workspace:*
-        version: link:../../components/html-content
-      '@utrecht/iban-data-css':
-        specifier: workspace:*
-        version: link:../../components/iban-data
-      '@utrecht/icon':
-        specifier: workspace:*
-        version: link:../../components/icon
-      '@utrecht/img-css':
-        specifier: workspace:*
-        version: link:../../components/img
-      '@utrecht/index-char-nav-css':
-        specifier: workspace:*
-        version: link:../../components/index-char-nav
-      '@utrecht/link-button-css':
-        specifier: workspace:*
-        version: link:../../components/link-button
-      '@utrecht/link-list-css':
-        specifier: workspace:*
-        version: link:../../components/link-list
-      '@utrecht/link-social-css':
-        specifier: workspace:*
-        version: link:../../components/link-social
-      '@utrecht/list-social-css':
-        specifier: workspace:*
-        version: link:../../components/list-social
-      '@utrecht/logo-button-css':
-        specifier: workspace:*
-        version: link:../../components/logo-button
-      '@utrecht/logo-css':
-        specifier: workspace:*
-        version: link:../../components/logo
-      '@utrecht/logo-image-css':
-        specifier: workspace:*
-        version: link:../../components/logo-image
-      '@utrecht/map-control-button-css':
-        specifier: workspace:*
-        version: link:../../components/mapcontrolbutton
-      '@utrecht/map-marker-css':
-        specifier: workspace:*
-        version: link:../../components/map-marker
-      '@utrecht/mark-css':
-        specifier: workspace:*
-        version: link:../../components/mark
-      '@utrecht/multiline-data-css':
-        specifier: workspace:*
-        version: link:../../components/multiline-data
-      '@utrecht/nav-bar-css':
-        specifier: workspace:*
-        version: link:../../components/nav-bar
-      '@utrecht/nav-list-css':
-        specifier: workspace:*
-        version: link:../../components/nav-list
-      '@utrecht/number-badge-css':
-        specifier: workspace:*
-        version: link:../../components/number-badge
-      '@utrecht/number-data-css':
-        specifier: workspace:*
-        version: link:../../components/number-data
-      '@utrecht/ordered-list-css':
-        specifier: workspace:*
-        version: link:../../components/ordered-list
-      '@utrecht/page-content-css':
-        specifier: workspace:*
-        version: link:../../components/page-content
-      '@utrecht/page-css':
-        specifier: workspace:*
-        version: link:../../components/page
-      '@utrecht/page-footer-css':
-        specifier: workspace:*
-        version: link:../../components/page-footer
-      '@utrecht/page-header-css':
-        specifier: workspace:*
-        version: link:../../components/page-header
-      '@utrecht/pagination-css':
-        specifier: workspace:*
-        version: link:../../components/pagination
-      '@utrecht/paragraph-css':
-        specifier: workspace:*
-        version: link:../../components/paragraph
-      '@utrecht/pre-heading-css':
-        specifier: workspace:*
-        version: link:../../components/pre-heading
-      '@utrecht/preserve-data-css':
-        specifier: workspace:*
-        version: link:../../components/preserve-data
-      '@utrecht/rich-text-css':
-        specifier: workspace:*
-        version: link:../../components/rich-text
-      '@utrecht/search-bar-css':
-        specifier: workspace:*
-        version: link:../../components/search-bar
-      '@utrecht/select-css':
-        specifier: workspace:*
-        version: link:../../components/select
-      '@utrecht/separator-css':
-        specifier: workspace:*
-        version: link:../../components/separator
-      '@utrecht/skip-link-css':
-        specifier: workspace:*
-        version: link:../../components/skip-link
-      '@utrecht/spotlight-section-css':
-        specifier: workspace:*
-        version: link:../../components/spotlight-section
-      '@utrecht/subscript-css':
-        specifier: workspace:*
-        version: link:../../components/subscript
-      '@utrecht/superscript-css':
-        specifier: workspace:*
-        version: link:../../components/superscript
-      '@utrecht/surface-css':
-        specifier: workspace:*
-        version: link:../../components/surface
-      '@utrecht/table-css':
-        specifier: workspace:*
-        version: link:../../components/table
-      '@utrecht/table-of-contents-css':
-        specifier: workspace:*
-        version: link:../../components/table-of-contents
-      '@utrecht/textarea-css':
-        specifier: workspace:*
-        version: link:../../components/textarea
-      '@utrecht/top-task-link-css':
-        specifier: workspace:*
-        version: link:../../components/toptask-link
-      '@utrecht/top-task-nav-css':
-        specifier: workspace:*
-        version: link:../../components/toptask-nav
-      '@utrecht/unordered-list-css':
-        specifier: workspace:*
-        version: link:../../components/unordered-list
-      '@utrecht/url-data-css':
-        specifier: workspace:*
-        version: link:../../components/url-data
-      '@utrecht/vega-visualization-css':
-        specifier: workspace:*
-        version: link:../../components/vega-visualization
       gatsby:
         specifier: 5.12.12
         version: 5.12.12(@swc/core@1.3.100(@swc/helpers@0.5.5))(babel-eslint@10.1.0(eslint@7.32.0))(encoding@0.1.13)(eslint-plugin-jest@27.9.0(@typescript-eslint/eslint-plugin@5.62.0(@typescript-eslint/parser@5.62.0(eslint@8.57.0)(typescript@4.9.5))(eslint@8.57.0)(typescript@4.9.5))(eslint@8.57.0)(jest@29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@4.9.5)))(typescript@4.9.5))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(type-fest@4.20.1)(typescript@5.6.2)(vue-template-compiler@2.7.15)(webpack-dev-server@4.15.1(webpack@5.89.0(@swc/core@1.3.100(@swc/helpers@0.5.5))))(webpack-hot-middleware@2.25.4)
@@ -2260,6 +2260,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/body-css':
+        specifier: workspace:*
+        version: link:../../../components/body
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2288,9 +2291,6 @@ importers:
       '@types/testing-library__jest-dom':
         specifier: 5.14.9
         version: 5.14.9
-      '@utrecht/body-css':
-        specifier: workspace:*
-        version: link:../../../components/body
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
@@ -2315,6 +2315,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/button-css':
+        specifier: workspace:*
+        version: link:../../../components/button
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2346,9 +2349,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/button-css':
-        specifier: workspace:*
-        version: link:../../../components/button
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2446,6 +2446,9 @@ importers:
       '@utrecht/form-field-checkbox-react':
         specifier: workspace:*
         version: link:../form-field-checkbox-react
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:../../../components/form-field
       '@utrecht/form-field-description-react':
         specifier: workspace:*
         version: link:../form-field-description-react
@@ -2486,9 +2489,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-field-css':
-        specifier: workspace:*
-        version: link:../../../components/form-field
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2510,6 +2510,12 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/checkbox-css':
+        specifier: workspace:*
+        version: link:../../../components/checkbox
+      '@utrecht/custom-checkbox-css':
+        specifier: workspace:*
+        version: link:../../../components/custom-checkbox
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2541,12 +2547,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/checkbox-css':
-        specifier: workspace:*
-        version: link:../../../components/checkbox
-      '@utrecht/custom-checkbox-css':
-        specifier: workspace:*
-        version: link:../../../components/custom-checkbox
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2568,6 +2568,9 @@ importers:
       '@babel/runtime':
         specifier: ^7.23.6
         version: 7.24.7
+      '@utrecht/combobox-css':
+        specifier: workspace:*
+        version: link:../../../components/combobox
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2599,9 +2602,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/combobox-css':
-        specifier: workspace:*
-        version: link:../../../components/combobox
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2623,6 +2623,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/data-badge-css':
+        specifier: workspace:*
+        version: link:../../../components/data-badge
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2654,9 +2657,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/data-badge-css':
-        specifier: workspace:*
-        version: link:../../../components/data-badge
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2678,6 +2678,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/form-fieldset-css':
+        specifier: workspace:*
+        version: link:../../../components/form-fieldset
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2709,9 +2712,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-fieldset-css':
-        specifier: workspace:*
-        version: link:../../../components/form-fieldset
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2800,6 +2800,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/form-field-description-css':
+        specifier: workspace:*
+        version: link:../../../components/form-field-description
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2831,9 +2834,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-field-description-css':
-        specifier: workspace:*
-        version: link:../../../components/form-field-description
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2855,6 +2855,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/form-field-error-message-css':
+        specifier: workspace:*
+        version: link:../../../components/form-field-error-message
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2886,9 +2889,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-field-error-message-css':
-        specifier: workspace:*
-        version: link:../../../components/form-field-error-message
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2910,6 +2910,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:../../../components/form-field
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2941,9 +2944,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-field-css':
-        specifier: workspace:*
-        version: link:../../../components/form-field
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -2965,6 +2965,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/form-label-css':
+        specifier: workspace:*
+        version: link:../../../components/form-label
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2996,9 +2999,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-label-css':
-        specifier: workspace:*
-        version: link:../../../components/form-label
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3020,6 +3020,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../../../components/link
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3051,9 +3054,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/link-css':
-        specifier: workspace:*
-        version: link:../../../components/link
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3075,6 +3075,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/listbox-css':
+        specifier: workspace:*
+        version: link:../../../components/listbox
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3106,9 +3109,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/listbox-css':
-        specifier: workspace:*
-        version: link:../../../components/listbox
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3130,6 +3130,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/nav-bar-css':
+        specifier: workspace:*
+        version: link:../../../components/nav-bar
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3161,9 +3164,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/nav-bar-css':
-        specifier: workspace:*
-        version: link:../../../components/nav-bar
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3185,6 +3185,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/page-body-css':
+        specifier: workspace:*
+        version: link:../../../components/page-body
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3216,9 +3219,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/page-body-css':
-        specifier: workspace:*
-        version: link:../../../components/page-body
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3240,6 +3240,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/page-footer-css':
+        specifier: workspace:*
+        version: link:../../../components/page-footer
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3271,9 +3274,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/page-footer-css':
-        specifier: workspace:*
-        version: link:../../../components/page-footer
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3295,6 +3295,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/page-header-css':
+        specifier: workspace:*
+        version: link:../../../components/page-header
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3326,9 +3329,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/page-header-css':
-        specifier: workspace:*
-        version: link:../../../components/page-header
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3350,6 +3350,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/page-layout-css':
+        specifier: workspace:*
+        version: link:../../../components/page-layout
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3381,9 +3384,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/page-layout-css':
-        specifier: workspace:*
-        version: link:../../../components/page-layout
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3405,6 +3405,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/radio-button-css':
+        specifier: workspace:*
+        version: link:../../../components/radio-button
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3436,9 +3439,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/radio-button-css':
-        specifier: workspace:*
-        version: link:../../../components/radio-button
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3463,6 +3463,9 @@ importers:
       '@utrecht/fieldset-react':
         specifier: workspace:*
         version: link:../fieldset-react
+      '@utrecht/form-field-css':
+        specifier: workspace:*
+        version: link:../../../components/form-field
       '@utrecht/form-field-description-react':
         specifier: workspace:*
         version: link:../form-field-description-react
@@ -3509,9 +3512,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/form-field-css':
-        specifier: workspace:*
-        version: link:../../../components/form-field
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3533,6 +3533,9 @@ importers:
       '@babel/runtime':
         specifier: '*'
         version: 7.24.7
+      '@utrecht/root-css':
+        specifier: workspace:*
+        version: link:../../../components/root
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3564,9 +3567,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/root-css':
-        specifier: workspace:*
-        version: link:../../../components/root
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -3691,6 +3691,9 @@ importers:
       '@babel/runtime':
         specifier: ^7.23.6
         version: 7.24.7
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:../../../components/textbox
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -3722,9 +3725,6 @@ importers:
       '@utrecht/build-utils-react':
         specifier: workspace:*
         version: link:../../build-utils-react
-      '@utrecht/textbox-css':
-        specifier: workspace:*
-        version: link:../../../components/textbox
       jest:
         specifier: 29.7.0
         version: 29.7.0(@types/node@22.7.4)(babel-plugin-macros@3.1.0)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
@@ -23877,8 +23877,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.1.10:
-    resolution: {integrity: sha512-lfgdSLQKrUmADiSV6PbBvYgQ33KF3Ztv6gP85MfGaGaSGMTXORVaHT1EHfsqCgzRNBstPKYDmvAV9Do5CmJ07A==}
+  vue-component-type-helpers@2.2.0:
+    resolution: {integrity: sha512-cYrAnv2me7bPDcg9kIcGwjJiSB6Qyi08+jLDo9yuvoFQjzHiPTzML7RnkJB1+3P6KMsX/KbCD4QE3Tv/knEllw==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -33965,7 +33965,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.1.10
+      vue-component-type-helpers: 2.2.0
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -50489,7 +50489,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.1.10: {}
+  vue-component-type-helpers@2.2.0: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
