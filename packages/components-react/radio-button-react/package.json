@@ -59,6 +59,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@utrecht/radio-button-css": "workspace:*",
     "clsx": "2.1.1"
   },
   "devDependencies": {
@@ -70,7 +71,6 @@
     "@types/react": "18.3.3",
     "@types/testing-library__jest-dom": "5.14.9",
     "@utrecht/build-utils-react": "workspace:*",
-    "@utrecht/radio-button-css": "workspace:*",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
     "react": "18.3.1",
