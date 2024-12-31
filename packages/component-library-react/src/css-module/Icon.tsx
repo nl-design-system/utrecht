@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import css from '@utrecht/icon/dist/index.mjs';
+import css from '@utrecht/icon-css/dist/index.mjs';
 import { insertStyle } from './insert-style';
 insertStyle(css);
 

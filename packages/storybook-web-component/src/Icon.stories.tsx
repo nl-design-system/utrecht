@@ -2,9 +2,9 @@
 
 import type { Meta, StoryObj } from '@storybook/react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import readme from '@utrecht/icon/README.md?raw';
 import iconSet from '@utrecht/icon/dist/index.json';
-import tokensDefinition from '@utrecht/icon/src/tokens.json';
+import readme from '@utrecht/icon-css/README.md?raw';
+import tokensDefinition from '@utrecht/icon-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 

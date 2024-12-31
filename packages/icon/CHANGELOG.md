@@ -1,4 +1,4 @@
-# @utrecht/icon-css
+# @utrecht/icon
 
 ## 1.3.0
 

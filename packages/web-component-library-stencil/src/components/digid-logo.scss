@@ -3,7 +3,7 @@
  * Copyright (c) 2020-2024 Frameless B.V.
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
-@import "~@utrecht/icon/src";
+@import "~@utrecht/icon-css/src";
 
 @mixin utrecht-black-icon--media-query-forced-colors {
   /* A black icon can become invisible on a forced black background.

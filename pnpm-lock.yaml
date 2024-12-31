@@ -587,24 +587,9 @@ importers:
 
   components/icon:
     devDependencies:
-      '@unicode/unicode-15.1.0':
-        specifier: 1.5.2
-        version: 1.5.2
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      jsdom:
-        specifier: 20.0.3
-        version: 20.0.3
-      lodash:
-        specifier: 4.17.21
-        version: 4.17.21
-      minimist:
-        specifier: 1.2.8
-        version: 1.2.8
-      svgo:
-        specifier: 3.1.0
-        version: 3.1.0
 
   components/img:
     devDependencies:
@@ -1362,7 +1347,7 @@ importers:
       '@utrecht/iban-data-css':
         specifier: workspace:*
         version: link:../../components/iban-data
-      '@utrecht/icon':
+      '@utrecht/icon-css':
         specifier: workspace:*
         version: link:../../components/icon
       '@utrecht/img-css':
@@ -2026,7 +2011,7 @@ importers:
       '@utrecht/iban-data-css':
         specifier: workspace:*
         version: link:../../components/iban-data
-      '@utrecht/icon':
+      '@utrecht/icon-css':
         specifier: workspace:*
         version: link:../../components/icon
       '@utrecht/img-css':
@@ -4147,6 +4132,24 @@ importers:
         specifier: 17.7.2
         version: 17.7.2
 
+  packages/icon:
+    devDependencies:
+      '@unicode/unicode-15.1.0':
+        specifier: 1.5.2
+        version: 1.5.2
+      jsdom:
+        specifier: 20.0.3
+        version: 20.0.3
+      lodash:
+        specifier: 4.17.21
+        version: 4.17.21
+      minimist:
+        specifier: 1.2.8
+        version: 1.2.8
+      svgo:
+        specifier: 3.1.0
+        version: 3.1.0
+
   packages/storybook:
     devDependencies:
       '@babel/core':
@@ -4256,7 +4259,7 @@ importers:
         version: link:../../documentation
       '@utrecht/icon':
         specifier: workspace:*
-        version: link:../../components/icon
+        version: link:../icon
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
@@ -4751,6 +4754,9 @@ importers:
         version: link:../../components/html-content
       '@utrecht/icon':
         specifier: workspace:*
+        version: link:../icon
+      '@utrecht/icon-css':
+        specifier: workspace:*
         version: link:../../components/icon
       '@utrecht/img-css':
         specifier: workspace:*
@@ -5138,7 +5144,7 @@ importers:
         version: link:../../components/heading-6
       '@utrecht/icon':
         specifier: workspace:*
-        version: link:../../components/icon
+        version: link:../icon
       '@utrecht/link-css':
         specifier: workspace:*
         version: link:../../components/link
@@ -5701,6 +5707,9 @@ importers:
         specifier: workspace:*
         version: link:../../components/iban-data
       '@utrecht/icon':
+        specifier: workspace:*
+        version: link:../icon
+      '@utrecht/icon-css':
         specifier: workspace:*
         version: link:../../components/icon
       '@utrecht/img-css':
@@ -6344,6 +6353,9 @@ importers:
         version: link:../../components/iban-data
       '@utrecht/icon':
         specifier: workspace:*
+        version: link:../icon
+      '@utrecht/icon-css':
+        specifier: workspace:*
         version: link:../../components/icon
       '@utrecht/link-button-css':
         specifier: workspace:*
@@ -6781,6 +6793,9 @@ importers:
         specifier: workspace:*
         version: link:../../components/iban-data
       '@utrecht/icon':
+        specifier: workspace:*
+        version: link:../icon
+      '@utrecht/icon-css':
         specifier: workspace:*
         version: link:../../components/icon
       '@utrecht/link-button-css':
@@ -20321,9 +20336,6 @@ packages:
 
   physical-cpu-count@2.0.0:
     resolution: {integrity: sha512-rxJOljMuWtYlvREBmd6TZYanfcPhNUKtGDZBjBBS8WG1dpN2iwPsRJZgQqN/OtJuiQckdRFOfzogqJClTrsi7g==}
-
-  picocolors@1.0.0:
-    resolution: {integrity: sha512-1fygroTLlHu66zi26VoTDv8yRgm0Fccecssto+MhsZ0D/DGW2sm8E8AjW7NU5VVTRt5GxbeZ5qBuJr+HyLYkjQ==}
 
   picocolors@1.0.1:
     resolution: {integrity: sha512-anP1Z8qwhkbmu7MFP5iTt+wQKXgwzf7zTyGlcdzabySa9vd0Xt392U0rVmz9poOaBj0uHJKyyo9/upk0HrEQew==}
@@ -41333,7 +41345,7 @@ snapshots:
     dependencies:
       '@tootallnate/once': 2.0.0
       agent-base: 6.0.2
-      debug: 4.3.4
+      debug: 4.3.7
     transitivePeerDependencies:
       - supports-color
 
@@ -45876,8 +45888,6 @@ snapshots:
 
   physical-cpu-count@2.0.0: {}
 
-  picocolors@1.0.0: {}
-
   picocolors@1.0.1: {}
 
   picocolors@1.1.1: {}
@@ -49167,7 +49177,7 @@ snapshots:
       css-tree: 2.3.1
       css-what: 6.1.0
       csso: 5.0.5
-      picocolors: 1.0.0
+      picocolors: 1.1.1
 
   svgo@3.3.2:
     dependencies:
