@@ -1,5 +1,11 @@
 # @utrecht/button-react
 
+## 2.0.5
+
+### Patch Changes
+
+- 25f8ba5: Make CSS and React components a dependency, instead of a devDependency. This should fix some TypeScript errors about missing types.
+
 ## 2.0.4
 
 ### Patch Changes

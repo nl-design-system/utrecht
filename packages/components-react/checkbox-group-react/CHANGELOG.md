@@ -1,5 +1,18 @@
 # @utrecht/checkbox-group-react
 
+## 1.0.8
+
+### Patch Changes
+
+- 25f8ba5: Make CSS and React components a dependency, instead of a devDependency. This should fix some TypeScript errors about missing types.
+- Updated dependencies [25f8ba5]
+  - @utrecht/form-field-error-message-react@1.0.5
+  - @utrecht/form-field-description-react@1.0.5
+  - @utrecht/form-field-react@1.0.5
+  - @utrecht/checkbox-react@1.0.6
+  - @utrecht/fieldset-react@1.0.5
+  - @utrecht/form-field-checkbox-react@1.0.8
+
 ## 1.0.7
 
 ### Patch Changes
