@@ -1,5 +1,16 @@
 # @utrecht/form-field-checkbox-react
 
+## 1.0.8
+
+### Patch Changes
+
+- Updated dependencies [25f8ba5]
+  - @utrecht/form-field-error-message-react@1.0.5
+  - @utrecht/form-field-description-react@1.0.5
+  - @utrecht/form-field-react@1.0.5
+  - @utrecht/form-label-react@1.0.5
+  - @utrecht/checkbox-react@1.0.6
+
 ## 1.0.7
 
 ### Patch Changes
