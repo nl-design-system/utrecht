@@ -40,6 +40,7 @@
     "build:storybook-pdf": "rimraf dist/storybook-pdf/ && cp -R ../storybook-pdf/dist dist/storybook-pdf/",
     "build:storybook-react": "rimraf dist/storybook-react/ && cp -R ../storybook-react/dist dist/storybook-react/",
     "build:storybook-vue": "rimraf dist/storybook-vue/ && cp -R ../storybook-vue/dist dist/storybook-vue/",
-    "build:storybook-web-component": "rimraf dist/storybook-web-component/ && cp -R ../storybook-web-component/dist dist/storybook-web-component/"
+    "build:storybook-web-component": "rimraf dist/storybook-web-component/ && cp -R ../storybook-web-component/dist dist/storybook-web-component/",
+    "start": "http-server dist/"
   }
 }
