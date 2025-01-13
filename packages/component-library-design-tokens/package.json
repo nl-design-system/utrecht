@@ -20,6 +20,14 @@
     "directory": "packages/component-library-design-tokens"
   },
   "devDependencies": {
+    "@nl-design-system-unstable/theme-toolkit": "1.0.0",
+    "glob": "10.4.2",
+    "lodash.clonedeepwith": "4.5.0",
+    "lodash.isplainobject": "4.0.6",
+    "lodash.merge": "4.6.2",
+    "rimraf": "5.0.7"
+  },
+  "dependencies": {
     "@utrecht/accordion-css": "workspace:*",
     "@utrecht/alert-css": "workspace:*",
     "@utrecht/alert-dialog-css": "workspace:*",
@@ -111,13 +119,7 @@
     "@utrecht/top-task-link-css": "workspace:*",
     "@utrecht/top-task-nav-css": "workspace:*",
     "@utrecht/unordered-list-css": "workspace:*",
-    "@utrecht/url-data-css": "workspace:*",
-    "@nl-design-system-unstable/theme-toolkit": "1.0.0",
-    "glob": "10.4.2",
-    "lodash.clonedeepwith": "4.5.0",
-    "lodash.isplainobject": "4.0.6",
-    "lodash.merge": "4.6.2",
-    "rimraf": "5.0.7"
+    "@utrecht/url-data-css": "workspace:*"
   },
   "scripts": {
     "build": "pnpm run '/^build:.*/'",
