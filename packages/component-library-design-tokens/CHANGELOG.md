@@ -1,5 +1,11 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.1
+
+### Patch Changes
+
+- 7ad6ca1: add utrecht dependencies
+
 ## 1.0.0
 
 ### Major Changes
