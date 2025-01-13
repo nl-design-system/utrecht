@@ -1517,10 +1517,7 @@ importers:
         version: 4.0.2(postcss@8.4.38)(ts-node@10.9.1(@swc/core@1.3.100(@swc/helpers@0.5.5))(@types/node@22.7.4)(typescript@5.6.2))
 
   packages/component-library-design-tokens:
-    devDependencies:
-      '@nl-design-system-unstable/theme-toolkit':
-        specifier: 1.0.0
-        version: 1.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@7.6.4)
+    dependencies:
       '@utrecht/accordion-css':
         specifier: workspace:*
         version: link:../../components/accordion
@@ -1797,6 +1794,10 @@ importers:
       '@utrecht/url-data-css':
         specifier: workspace:*
         version: link:../../components/url-data
+    devDependencies:
+      '@nl-design-system-unstable/theme-toolkit':
+        specifier: 1.0.0
+        version: 1.0.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@7.6.4)
       glob:
         specifier: 10.4.2
         version: 10.4.2
