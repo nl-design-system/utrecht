@@ -231,8 +231,10 @@
   justify-content: center;
   line-height: var(--_utrecht-button-line-height);
   max-inline-size: var(--utrecht-button-max-inline-size, fit-content);
-  min-block-size: var(--utrecht-button-min-block-size, 44px);
-  min-inline-size: var(--utrecht-button-min-inline-size, 44px);
+
+  /* Use SCSS escaping syntax so SCSS doesn't handle the `max` with `fit-content` */
+  min-block-size: max(var(--utrecht-button-min-block-size, 44px), #{fit-content});
+  min-inline-size: max(var(--utrecht-button-min-inline-size, 44px), #{fit-content});
   padding-block-end: var(--utrecht-button-padding-block-end);
   padding-block-start: var(--utrecht-button-padding-block-start);
   padding-inline-end: var(--utrecht-button-padding-inline-end);
