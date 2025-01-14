@@ -1,5 +1,14 @@
 # @utrecht/icon
 
+## 2.0.0
+
+### Major Changes
+
+- de1c443: Split `@utrecht/icon` into two packages:
+
+  - `@utrecht/icon-css` for the CSS and SCSS.
+  - `@utrecht/icon` for the Icon SVGs.
+
 ## 1.3.0
 
 ### Minor Changes
