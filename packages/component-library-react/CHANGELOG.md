@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 8.0.6
+
+### Patch Changes
+
+- Updated dependencies [de1c443]
+  - @utrecht/icon-css@2.0.0
+
 ## 8.0.5
 
 ### Patch Changes
