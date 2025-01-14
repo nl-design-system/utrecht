@@ -24,6 +24,8 @@ export namespace Components {
     interface UtrechtBadgeStatus {
         "status": string;
     }
+    interface UtrechtBody {
+    }
     interface UtrechtBreadcrumbNav {
         "json": string;
         "variant": string;
@@ -639,6 +641,13 @@ export namespace Components {
     }
     interface UtrechtMultilineData {
     }
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface UtrechtNavBar {
+    }
     interface UtrechtNumberBadge {
         "locale": string;
         "max": number;
@@ -653,6 +662,13 @@ export namespace Components {
      * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPage {
+    }
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface UtrechtPageBody {
     }
     /**
      * @license EUPL-1.2
@@ -674,6 +690,13 @@ export namespace Components {
      * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageHeader {
+    }
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface UtrechtPageLayout {
     }
     interface UtrechtPagination {
         "currentIndex": number;
@@ -701,6 +724,8 @@ export namespace Components {
     interface UtrechtProgressSublistItem {
         "appearance"?: string;
         "checked"?: boolean;
+    }
+    interface UtrechtRoot {
     }
     interface UtrechtSeparator {
     }
@@ -828,6 +853,12 @@ declare global {
     var HTMLUtrechtBadgeStatusElement: {
         prototype: HTMLUtrechtBadgeStatusElement;
         new (): HTMLUtrechtBadgeStatusElement;
+    };
+    interface HTMLUtrechtBodyElement extends Components.UtrechtBody, HTMLStencilElement {
+    }
+    var HTMLUtrechtBodyElement: {
+        prototype: HTMLUtrechtBodyElement;
+        new (): HTMLUtrechtBodyElement;
     };
     interface HTMLUtrechtBreadcrumbNavElement extends Components.UtrechtBreadcrumbNav, HTMLStencilElement {
     }
@@ -2441,6 +2472,17 @@ declare global {
         prototype: HTMLUtrechtMultilineDataElement;
         new (): HTMLUtrechtMultilineDataElement;
     };
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface HTMLUtrechtNavBarElement extends Components.UtrechtNavBar, HTMLStencilElement {
+    }
+    var HTMLUtrechtNavBarElement: {
+        prototype: HTMLUtrechtNavBarElement;
+        new (): HTMLUtrechtNavBarElement;
+    };
     interface HTMLUtrechtNumberBadgeElement extends Components.UtrechtNumberBadge, HTMLStencilElement {
     }
     var HTMLUtrechtNumberBadgeElement: {
@@ -2463,6 +2505,17 @@ declare global {
     var HTMLUtrechtPageElement: {
         prototype: HTMLUtrechtPageElement;
         new (): HTMLUtrechtPageElement;
+    };
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface HTMLUtrechtPageBodyElement extends Components.UtrechtPageBody, HTMLStencilElement {
+    }
+    var HTMLUtrechtPageBodyElement: {
+        prototype: HTMLUtrechtPageBodyElement;
+        new (): HTMLUtrechtPageBodyElement;
     };
     /**
      * @license EUPL-1.2
@@ -2496,6 +2549,17 @@ declare global {
     var HTMLUtrechtPageHeaderElement: {
         prototype: HTMLUtrechtPageHeaderElement;
         new (): HTMLUtrechtPageHeaderElement;
+    };
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface HTMLUtrechtPageLayoutElement extends Components.UtrechtPageLayout, HTMLStencilElement {
+    }
+    var HTMLUtrechtPageLayoutElement: {
+        prototype: HTMLUtrechtPageLayoutElement;
+        new (): HTMLUtrechtPageLayoutElement;
     };
     interface HTMLUtrechtPaginationElement extends Components.UtrechtPagination, HTMLStencilElement {
     }
@@ -2532,6 +2596,12 @@ declare global {
     var HTMLUtrechtProgressSublistItemElement: {
         prototype: HTMLUtrechtProgressSublistItemElement;
         new (): HTMLUtrechtProgressSublistItemElement;
+    };
+    interface HTMLUtrechtRootElement extends Components.UtrechtRoot, HTMLStencilElement {
+    }
+    var HTMLUtrechtRootElement: {
+        prototype: HTMLUtrechtRootElement;
+        new (): HTMLUtrechtRootElement;
     };
     interface HTMLUtrechtSeparatorElement extends Components.UtrechtSeparator, HTMLStencilElement {
     }
@@ -2664,6 +2734,7 @@ declare global {
         "utrecht-badge-counter": HTMLUtrechtBadgeCounterElement;
         "utrecht-badge-list": HTMLUtrechtBadgeListElement;
         "utrecht-badge-status": HTMLUtrechtBadgeStatusElement;
+        "utrecht-body": HTMLUtrechtBodyElement;
         "utrecht-breadcrumb-nav": HTMLUtrechtBreadcrumbNavElement;
         "utrecht-button": HTMLUtrechtButtonElement;
         "utrecht-button-group": HTMLUtrechtButtonGroupElement;
@@ -2919,18 +2990,22 @@ declare global {
         "utrecht-map-marker": HTMLUtrechtMapMarkerElement;
         "utrecht-mark": HTMLUtrechtMarkElement;
         "utrecht-multiline-data": HTMLUtrechtMultilineDataElement;
+        "utrecht-nav-bar": HTMLUtrechtNavBarElement;
         "utrecht-number-badge": HTMLUtrechtNumberBadgeElement;
         "utrecht-number-data": HTMLUtrechtNumberDataElement;
         "utrecht-page": HTMLUtrechtPageElement;
+        "utrecht-page-body": HTMLUtrechtPageBodyElement;
         "utrecht-page-content": HTMLUtrechtPageContentElement;
         "utrecht-page-footer": HTMLUtrechtPageFooterElement;
         "utrecht-page-header": HTMLUtrechtPageHeaderElement;
+        "utrecht-page-layout": HTMLUtrechtPageLayoutElement;
         "utrecht-pagination": HTMLUtrechtPaginationElement;
         "utrecht-paragraph": HTMLUtrechtParagraphElement;
         "utrecht-pre-heading": HTMLUtrechtPreHeadingElement;
         "utrecht-progress-list": HTMLUtrechtProgressListElement;
         "utrecht-progress-list-item": HTMLUtrechtProgressListItemElement;
         "utrecht-progress-sublist-item": HTMLUtrechtProgressSublistItemElement;
+        "utrecht-root": HTMLUtrechtRootElement;
         "utrecht-separator": HTMLUtrechtSeparatorElement;
         "utrecht-sidenav": HTMLUtrechtSidenavElement;
         "utrecht-skip-link": HTMLUtrechtSkipLinkElement;
@@ -2967,6 +3042,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtBadgeStatus {
         "status"?: string;
+    }
+    interface UtrechtBody {
     }
     interface UtrechtBreadcrumbNav {
         "json"?: string;
@@ -3603,6 +3680,13 @@ declare namespace LocalJSX {
     }
     interface UtrechtMultilineData {
     }
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface UtrechtNavBar {
+    }
     interface UtrechtNumberBadge {
         "locale"?: string;
         "max"?: number;
@@ -3617,6 +3701,13 @@ declare namespace LocalJSX {
      * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPage {
+    }
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface UtrechtPageBody {
     }
     /**
      * @license EUPL-1.2
@@ -3638,6 +3729,13 @@ declare namespace LocalJSX {
      * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtPageHeader {
+    }
+    /**
+     * @license EUPL-1.2
+     * Copyright (c) 2020-2024 Frameless B.V.
+     * Copyright (c) 2021-2024 Gemeente Utrecht
+     */
+    interface UtrechtPageLayout {
     }
     interface UtrechtPagination {
         "currentIndex"?: number;
@@ -3665,6 +3763,8 @@ declare namespace LocalJSX {
     interface UtrechtProgressSublistItem {
         "appearance"?: string;
         "checked"?: boolean;
+    }
+    interface UtrechtRoot {
     }
     interface UtrechtSeparator {
     }
@@ -3738,6 +3838,7 @@ declare namespace LocalJSX {
         "utrecht-badge-counter": UtrechtBadgeCounter;
         "utrecht-badge-list": UtrechtBadgeList;
         "utrecht-badge-status": UtrechtBadgeStatus;
+        "utrecht-body": UtrechtBody;
         "utrecht-breadcrumb-nav": UtrechtBreadcrumbNav;
         "utrecht-button": UtrechtButton;
         "utrecht-button-group": UtrechtButtonGroup;
@@ -3993,18 +4094,22 @@ declare namespace LocalJSX {
         "utrecht-map-marker": UtrechtMapMarker;
         "utrecht-mark": UtrechtMark;
         "utrecht-multiline-data": UtrechtMultilineData;
+        "utrecht-nav-bar": UtrechtNavBar;
         "utrecht-number-badge": UtrechtNumberBadge;
         "utrecht-number-data": UtrechtNumberData;
         "utrecht-page": UtrechtPage;
+        "utrecht-page-body": UtrechtPageBody;
         "utrecht-page-content": UtrechtPageContent;
         "utrecht-page-footer": UtrechtPageFooter;
         "utrecht-page-header": UtrechtPageHeader;
+        "utrecht-page-layout": UtrechtPageLayout;
         "utrecht-pagination": UtrechtPagination;
         "utrecht-paragraph": UtrechtParagraph;
         "utrecht-pre-heading": UtrechtPreHeading;
         "utrecht-progress-list": UtrechtProgressList;
         "utrecht-progress-list-item": UtrechtProgressListItem;
         "utrecht-progress-sublist-item": UtrechtProgressSublistItem;
+        "utrecht-root": UtrechtRoot;
         "utrecht-separator": UtrechtSeparator;
         "utrecht-sidenav": UtrechtSidenav;
         "utrecht-skip-link": UtrechtSkipLink;
@@ -4033,6 +4138,7 @@ declare module "@stencil/core" {
             "utrecht-badge-counter": LocalJSX.UtrechtBadgeCounter & JSXBase.HTMLAttributes<HTMLUtrechtBadgeCounterElement>;
             "utrecht-badge-list": LocalJSX.UtrechtBadgeList & JSXBase.HTMLAttributes<HTMLUtrechtBadgeListElement>;
             "utrecht-badge-status": LocalJSX.UtrechtBadgeStatus & JSXBase.HTMLAttributes<HTMLUtrechtBadgeStatusElement>;
+            "utrecht-body": LocalJSX.UtrechtBody & JSXBase.HTMLAttributes<HTMLUtrechtBodyElement>;
             "utrecht-breadcrumb-nav": LocalJSX.UtrechtBreadcrumbNav & JSXBase.HTMLAttributes<HTMLUtrechtBreadcrumbNavElement>;
             "utrecht-button": LocalJSX.UtrechtButton & JSXBase.HTMLAttributes<HTMLUtrechtButtonElement>;
             "utrecht-button-group": LocalJSX.UtrechtButtonGroup & JSXBase.HTMLAttributes<HTMLUtrechtButtonGroupElement>;
@@ -4288,6 +4394,12 @@ declare module "@stencil/core" {
             "utrecht-map-marker": LocalJSX.UtrechtMapMarker & JSXBase.HTMLAttributes<HTMLUtrechtMapMarkerElement>;
             "utrecht-mark": LocalJSX.UtrechtMark & JSXBase.HTMLAttributes<HTMLUtrechtMarkElement>;
             "utrecht-multiline-data": LocalJSX.UtrechtMultilineData & JSXBase.HTMLAttributes<HTMLUtrechtMultilineDataElement>;
+            /**
+             * @license EUPL-1.2
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
+             */
+            "utrecht-nav-bar": LocalJSX.UtrechtNavBar & JSXBase.HTMLAttributes<HTMLUtrechtNavBarElement>;
             "utrecht-number-badge": LocalJSX.UtrechtNumberBadge & JSXBase.HTMLAttributes<HTMLUtrechtNumberBadgeElement>;
             "utrecht-number-data": LocalJSX.UtrechtNumberData & JSXBase.HTMLAttributes<HTMLUtrechtNumberDataElement>;
             /**
@@ -4296,6 +4408,12 @@ declare module "@stencil/core" {
              * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-page": LocalJSX.UtrechtPage & JSXBase.HTMLAttributes<HTMLUtrechtPageElement>;
+            /**
+             * @license EUPL-1.2
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
+             */
+            "utrecht-page-body": LocalJSX.UtrechtPageBody & JSXBase.HTMLAttributes<HTMLUtrechtPageBodyElement>;
             /**
              * @license EUPL-1.2
              * Copyright (c) 2020-2024 Frameless B.V.
@@ -4314,12 +4432,19 @@ declare module "@stencil/core" {
              * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-page-header": LocalJSX.UtrechtPageHeader & JSXBase.HTMLAttributes<HTMLUtrechtPageHeaderElement>;
+            /**
+             * @license EUPL-1.2
+             * Copyright (c) 2020-2024 Frameless B.V.
+             * Copyright (c) 2021-2024 Gemeente Utrecht
+             */
+            "utrecht-page-layout": LocalJSX.UtrechtPageLayout & JSXBase.HTMLAttributes<HTMLUtrechtPageLayoutElement>;
             "utrecht-pagination": LocalJSX.UtrechtPagination & JSXBase.HTMLAttributes<HTMLUtrechtPaginationElement>;
             "utrecht-paragraph": LocalJSX.UtrechtParagraph & JSXBase.HTMLAttributes<HTMLUtrechtParagraphElement>;
             "utrecht-pre-heading": LocalJSX.UtrechtPreHeading & JSXBase.HTMLAttributes<HTMLUtrechtPreHeadingElement>;
             "utrecht-progress-list": LocalJSX.UtrechtProgressList & JSXBase.HTMLAttributes<HTMLUtrechtProgressListElement>;
             "utrecht-progress-list-item": LocalJSX.UtrechtProgressListItem & JSXBase.HTMLAttributes<HTMLUtrechtProgressListItemElement>;
             "utrecht-progress-sublist-item": LocalJSX.UtrechtProgressSublistItem & JSXBase.HTMLAttributes<HTMLUtrechtProgressSublistItemElement>;
+            "utrecht-root": LocalJSX.UtrechtRoot & JSXBase.HTMLAttributes<HTMLUtrechtRootElement>;
             "utrecht-separator": LocalJSX.UtrechtSeparator & JSXBase.HTMLAttributes<HTMLUtrechtSeparatorElement>;
             "utrecht-sidenav": LocalJSX.UtrechtSidenav & JSXBase.HTMLAttributes<HTMLUtrechtSidenavElement>;
             "utrecht-skip-link": LocalJSX.UtrechtSkipLink & JSXBase.HTMLAttributes<HTMLUtrechtSkipLinkElement>;

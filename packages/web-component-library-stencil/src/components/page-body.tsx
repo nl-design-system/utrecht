@@ -7,16 +7,16 @@ import { Component, h } from '@stencil/core';
  */
 
 @Component({
-  tag: 'utrecht-page-footer',
-  styleUrl: 'page-footer.scss',
+  tag: 'utrecht-page-body',
+  styleUrl: 'page-body.scss',
   shadow: true,
 })
-export class PageFooter {
+export class PageBody {
   render() {
     return (
-      <footer>
+      <div>
         <slot></slot>
-      </footer>
+      </div>
     );
   }
 }

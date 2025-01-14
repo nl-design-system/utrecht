@@ -14,10 +14,8 @@ import { Component, h } from '@stencil/core';
 export class PageHeader {
   render() {
     return (
-      <header class="utrecht-page-header">
-        <div class="utrecht-page-header__content">
-          <slot></slot>
-        </div>
+      <header>
+        <slot></slot>
       </header>
     );
   }
