@@ -153,6 +153,41 @@
   }
 }
 
+@mixin utrecht-textbox-char-size {
+  /* The average character inline-size is an approximation, with a default that works for Dutch text.
+   * The average might need to be configured specifically, for other scripts (CJK characters)
+   * and very wide or very narrow fonts.
+   * For monospace fonts it can be set to `1ch`.
+   */
+  --_utrecht-textbox-value-char: 0.667em + 0.334ch;
+
+  /* Because this element uses `border-box` box-sizing, we need to manually add up the
+    * border width, padding width and the content width.
+    * 
+    * Browsers and browser addons can add buttons inside the content box, for example
+    * for autocomplete. To avoid overlap between the UI and the text, we reserve
+    * some additional pixels to make space. We use 44px in accordance with the WCAG target size.
+    * 
+    * When you are certain an element has no such UI, you can set the `autocomplete-ui-size` to `0px` (not to `0`).
+    */
+  --_utrecht-textbox-max-inline-size: calc(
+    calc(var(--utrecht-textbox-value-max-length) * var(--_utrecht-textbox-value-char)) +
+      var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
+      var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
+      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
+      var(--utrecht-textbox-autocomplete-ui-size, 0px)
+  );
+
+  max-inline-size: min(
+    var(--_utrecht-textbox-max-inline-size, 100%),
+    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
+  );
+}
+
 .utrecht-open-forms-container {
+  .utrecht-textbox {
+    @include utrecht-textbox-char-size;
+  }
+
   @include open-forms-utrecht-input-names;
 }
