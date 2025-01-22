@@ -33,7 +33,7 @@ $utrecht-support-prince-xml: false !default;
       var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
       var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
       var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
-      var(--utrecht-textbox-autocomplete-ui-size, 0px)
+      var(--utrecht-textbox-autocomplete-ui-size, 44px)
   );
 
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
