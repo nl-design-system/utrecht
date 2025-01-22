@@ -48,8 +48,7 @@
   @include utrecht-textbox--postal-code-nl-size;
 }
 
-.utrecht-textbox--house-number-size,
-.utrecht-textbox[name="huisnummer"] {
+.utrecht-textbox--house-number-size {
   @include utrecht-textbox--house-number-size;
 }
 
