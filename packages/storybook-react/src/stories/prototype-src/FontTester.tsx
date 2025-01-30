@@ -6,6 +6,7 @@ const fontOptions = [
   { label: 'Inter', value: "'Inter', sans-serif" },
   { label: 'Helvetica Neue', value: "'Helvetica Neue', Arial, sans-serif" },
   { label: 'Roboto', value: "'Roboto', sans-serif" },
+  { label: 'Fira Sans', value: "'Fira Sans', sans-serif" },
   {
     label: 'System Font',
     value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
@@ -21,6 +22,7 @@ const fontOptions = [
 const fontUrls: { [key: string]: string } = {
   "'Inter', sans-serif": 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap',
   "'Roboto', sans-serif": 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',
+  "'Fira Sans', sans-serif": 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap',
   "'Ubuntu', sans-serif": 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap',
 };
 
