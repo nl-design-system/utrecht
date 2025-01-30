@@ -26,9 +26,9 @@ const IntroductieKlachten: React.FC = () => {
     <>
       <Heading1>Forcem Ipsum</Heading1>
       <Paragraph>
-        Echo Three to Echo Seven. Han, old buddy, do you read me? Loud and clear, kid. What&apos;s up? Well, I finished
-        my circle. I don&apos;t pick up any life readings. There isn&apos;t enough life on this ice cube to fill a space
-        cruiser. The sensors are placed. I&apos;m going back.
+        1234567890 Echo Three to Echo Seven. Han, old buddy, do you read me? Loud and clear, kid. What&apos;s up? Well,
+        I finished my circle. I don&apos;t pick up any life readings. There isn&apos;t enough life on this ice cube to
+        fill a space cruiser. The sensors are placed. I&apos;m going back.
       </Paragraph>
       <Paragraph>
         I&apos;ll get my people to work on it. Good. You know, that ship saved my life quite a few times. She&apos;s the

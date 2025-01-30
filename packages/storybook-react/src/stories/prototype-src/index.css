@@ -1,3 +1,24 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Inter-Regular.woff2") format("woff2"), url("/fonts/Inter-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Roboto-Regular.woff2") format("woff2"), url("/fonts/Roboto-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Ubuntu-Regular.woff2") format("woff2"), url("/fonts/Ubuntu-Regular.woff") format("woff");
+}
+
 .utrecht-theme {
   .utrecht-breadcrumb-nav__link {
     padding-inline-start: 0; /* Gelijke uitlijning met linker kantlijn */
