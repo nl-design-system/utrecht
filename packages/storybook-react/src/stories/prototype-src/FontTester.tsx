@@ -6,15 +6,13 @@ const fontOptions = [
   { label: 'Inter', value: "'Inter', sans-serif" },
   { label: 'Helvetica Neue', value: "'Helvetica Neue', Arial, sans-serif" },
   { label: 'Roboto', value: "'Roboto', sans-serif" },
-  { label: 'Fira Sans', value: "'Fira Sans', sans-serif" },
+  { label: 'Fira Sans 🧙🏼‍♂️', value: "'Fira Sans', sans-serif" },
+  { label: 'Mukta', value: "'Mukta', sans-serif" },
   {
     label: 'System Font',
     value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   },
   { label: 'Comic Sans', value: "'Comic Sans MS', cursive, sans-serif" },
-  { label: 'Courier New', value: "'Courier New', Courier, monospace" },
-  { label: 'Times New Roman', value: "'Times New Roman', Times, serif" },
-  { label: 'SF Mono (Mac)', value: "'SF Mono', Monaco, monospace" },
   { label: 'Ubuntu (Linux)', value: "'Ubuntu', sans-serif" },
 ];
 
@@ -23,7 +21,7 @@ const fontUrls: { [key: string]: string } = {
   "'Inter', sans-serif": 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap',
   "'Roboto', sans-serif": 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',
   "'Fira Sans', sans-serif": 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap',
-  "'Ubuntu', sans-serif": 'https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap',
+  "'Mukta', sans-serif": 'https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap',
 };
 
 const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -84,6 +82,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           top: '32px',
           right: isOpen ? '0px' : '-260px', // 🔥 Schuift in en uit
           background: '#282c34',
+          opacity: 0.85,
           color: '#eee',
           padding: '16px',
           borderRadius: '3px',
@@ -99,7 +98,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           onClick={() => setIsOpen(!isOpen)}
           style={{
             position: 'absolute',
-            top: '45%',
+            top: '26px',
             left: '-35px',
             transform: 'translateY(-50%)',
             background: '#282c34',
@@ -115,19 +114,23 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           {isOpen ? '▶' : '◀'}
         </button>
 
-        {/* 🔹 Font Selector */}
-        <label style={{ fontSize: '12px' }}>Font Family:</label>
-        <select
-          value={selectedFont}
-          onChange={(e) => setSelectedFont(e.target.value)}
-          style={{ padding: '3px', fontSize: '12px', width: '100%' }}
-        >
+        {/* 🔹 Font Selector als Radio Buttons */}
+        <label style={{ fontSize: '12px', display: 'block', marginBottom: '5px' }}>Font Family:</label>
+        <div style={{ maxHeight: '500px', overflowY: 'auto', padding: '5px', borderRadius: '3px' }}>
           {fontOptions.map((font) => (
-            <option key={font.value} value={font.value}>
+            <label key={font.value} style={{ display: 'block', fontSize: '12px', cursor: 'pointer', padding: '3px 0' }}>
+              <input
+                type="radio"
+                name="fontSelector"
+                value={font.value}
+                checked={selectedFont === font.value}
+                onChange={(e) => setSelectedFont(e.target.value)}
+                style={{ marginRight: '8px' }}
+              />
               {font.label}
-            </option>
+            </label>
           ))}
-        </select>
+        </div>
 
         {/* 🔹 Font Size Slider */}
         <div style={{ marginTop: '5px' }}>
