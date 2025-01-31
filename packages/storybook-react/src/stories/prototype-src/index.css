@@ -19,6 +19,13 @@
   src: url("/fonts/Ubuntu-Regular.woff2") format("woff2"), url("/fonts/Ubuntu-Regular.woff") format("woff");
 }
 
+@font-face {
+  font-family: "Mukta";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Mukta.woff2") format("woff2"), url("/fonts/Mukta.woff") format("woff");
+}
+
 .utrecht-theme {
   .utrecht-breadcrumb-nav__link {
     padding-inline-start: 0; /* Gelijke uitlijning met linker kantlijn */
