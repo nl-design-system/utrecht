@@ -2,29 +2,118 @@
 
 /* Helper classes voor de verschillende gewichten */
 
-.utrecht-font-thin {
+.utrecht-font-weight-200 {
   font-weight: 200;
 }
 
-.utrecht-font-light {
+.utrecht-font-weight-300 {
   font-weight: 300;
 }
 
 /* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
-.utrecht-font-regular {
+.utrecht-font-weight-400 {
   font-weight: 400;
 }
 
-.utrecht-font-semibold {
+/* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
+.utrecht-font-weight-500 {
+  font-weight: 500;
+}
+
+.utrecht-font-weight-600 {
   font-weight: 600;
 }
 
-.utrecht-font-bold {
+.utrecht-font-weight-700 {
   font-weight: 700;
 }
 
-.utrecht-font-extrabold {
+.utrecht-font-weight-800 {
   font-weight: 800;
+}
+
+.utrecht-font-tester-label {
+  color: #ddd; /* Optioneel: subtieler maken */
+  display: block;
+  font-size: 12px !important;
+  font-weight: 600;
+  margin-block-end: 5px;
+}
+.utrecht-font-tester-label input {
+  margin-inline-end: 8px !important;
+}
+
+/* 🔹 Wrapper voor de toggle-switch */
+.utrecht-font-tester-toggle-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+
+/* 🔹 Stijl voor het label naast de switch */
+.utrecht-font-tester-toggle-switch-label {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 10px;
+  margin-block-end: 8px;
+}
+
+/* 🔹 Input (verborgen, maar nog steeds interactief voor toegankelijkheid) */
+.utrecht-font-tester-toggle-switch input {
+  display: none;
+  position: absolute;
+}
+
+/* 🔹 Stijl voor de slider zelf */
+.utrecht-font-tester-toggle-slider {
+  background-color: #ccc;
+  block-size: 20px;
+  border-radius: 10px;
+  inline-size: 38px;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+}
+
+/* 🔹 Stijl voor de beweegbare schakelaar (de "knop" in de slider) */
+.utrecht-font-tester-toggle-slider::before {
+  background-color: white;
+  block-size: 14px;
+  border-radius: 50%;
+  content: "";
+  inline-size: 14px;
+  inset-block-end: 3px;
+  inset-inline-start: 3px;
+  position: absolute;
+  transition: transform 300ms ease-in-out;
+}
+
+/* 🔹 Beweegbare schakelaar verplaatsen naar rechts bij "aan" */
+input:checked + .utrecht-font-tester-toggle-slider::before {
+  transform: translateX(18px);
+}
+
+/* 🔹 Actieve staat wanneer de switch is ingeschakeld */
+input:checked + .utrecht-font-tester-toggle-slider {
+  background-color: #4caf50;
+}
+
+.utrecht-font-tester-toggle-switch:hover .utrecht-font-tester-toggle-slider {
+  background-color: #b3b3b3;
+}
+
+/* 🔹 Focus stijl voor toetsenbord-navigatie */
+.utrecht-font-tester-toggle-switch input:focus + .utrecht-font-tester-toggle-slider {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* 🔹 Optionele hover-effecten voor betere interactie */
+
+input:checked:hover + .utrecht-font-tester-toggle-slider {
+  background-color: #45a049;
 }
 
 .utrecht-theme {

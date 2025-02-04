@@ -1,5 +1,6 @@
 import {
   AccordionProvider,
+  Checkbox,
   Heading1,
   Heading2,
   Heading3,
@@ -9,6 +10,7 @@ import {
   LinkListLink,
   PageFooter,
   Paragraph,
+  RadioButton,
   Strong,
   UnorderedList,
   UnorderedListItem,
@@ -28,8 +30,8 @@ const ContentWebpage: React.FC = () => {
       <Heading1>Testtekst voor Font Vergelijking</Heading1>
       <Heading2>Leesbaarheid & Lettercombinaties</Heading2>
       <Paragraph>
-        Het is belangrijk om te zien hoe een lettertype omgaat met lettercombinaties die visueel op elkaar lijken.
-        Daarom testen we combinaties zoals:
+        Het is belangrijk om te zien hoe een <strong>lettertype omgaat met lettercombinaties</strong> die visueel op
+        elkaar lijken. Daarom testen we combinaties zoals:
         <br /> <br />
         nh rn mnnn mmnn nmnn nmmn <br />
         iIlL1 lL1I Il1l Li1I 1lIl <br />
@@ -79,12 +81,13 @@ const ContentWebpage: React.FC = () => {
       </Paragraph>
       <Heading2>Bold & Gewichtvergelijking</Heading2>
       <Paragraph>
-        <span className="utrecht-font-thin">Thin (200) Zeer dunne tekst, meestal decoratief</span> <br />
-        <span className="utrecht-font-light">Light (300 Dunne tekst, meestal decoratief)</span> <br />
-        <span className="utrecht-font-regular">Regular (400) Standaard regulier bodytekst</span> <br />
-        <span className="utrecht-font-semibold">Semibold (600) Tussenkoppen, lichte nadruk</span> <br />
-        <span className="utrecht-font-bold">Bold (700) Sterke nadruk, koppen, knoppen</span> <br />
-        <span className="utrecht-font-extrabold">Extrabold (800) Extreem vet, banners, accenten</span> <br />
+        <span className="utrecht-font-weight-200">Thin (200) Zeer dunne tekst, meestal decoratief</span> <br />
+        <span className="utrecht-font-weight-300">Light (300 Dunne tekst, meestal decoratief)</span> <br />
+        <span className="utrecht-font-weight-400">Regular (400) Standaard regulier bodytekst</span> <br />
+        <span className="utrecht-font-weight-500">Regular (500) Standaard regulier bodytekst</span> <br />
+        <span className="utrecht-font-weight-600">Semibold (600) Tussenkoppen, lichte nadruk</span> <br />
+        <span className="utrecht-font-weight-700">Bold (700) Sterke nadruk, koppen, knoppen</span> <br />
+        <span className="utrecht-font-weight-800">Extrabold (800) Extreem vet, banners, accenten</span> <br />
       </Paragraph>
 
       <Heading2>Fantasie tekst</Heading2>
