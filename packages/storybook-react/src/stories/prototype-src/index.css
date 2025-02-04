@@ -1,29 +1,30 @@
-@font-face {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Inter-Regular.woff2") format("woff2"), url("/fonts/Inter-Regular.woff") format("woff");
+/* fonts.css */
+
+/* Helper classes voor de verschillende gewichten */
+
+.utrecht-font-thin {
+  font-weight: 200;
 }
 
-@font-face {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Roboto-Regular.woff2") format("woff2"), url("/fonts/Roboto-Regular.woff") format("woff");
+.utrecht-font-light {
+  font-weight: 300;
 }
 
-@font-face {
-  font-family: "Ubuntu";
-  font-style: normal;
+/* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
+.utrecht-font-regular {
   font-weight: 400;
-  src: url("/fonts/Ubuntu-Regular.woff2") format("woff2"), url("/fonts/Ubuntu-Regular.woff") format("woff");
 }
 
-@font-face {
-  font-family: "Mukta";
-  font-style: normal;
-  font-weight: 400;
-  src: url("/fonts/Mukta.woff2") format("woff2"), url("/fonts/Mukta.woff") format("woff");
+.utrecht-font-semibold {
+  font-weight: 600;
+}
+
+.utrecht-font-bold {
+  font-weight: 700;
+}
+
+.utrecht-font-extrabold {
+  font-weight: 800;
 }
 
 .utrecht-theme {

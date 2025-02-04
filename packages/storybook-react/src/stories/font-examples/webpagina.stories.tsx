@@ -68,7 +68,7 @@ type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
   render: (args) => (
-    <Surface className="utrecht-html">
+    <Surface className="utrecht-html utrecht-theme">
       <Page {...args}>
         <PageHeader>
           <Logo>

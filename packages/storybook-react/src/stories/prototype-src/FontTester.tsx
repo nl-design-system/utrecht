@@ -3,30 +3,44 @@ import React, { useEffect, useState } from 'react';
 // 🔹 Beschikbare fonts
 const fontOptions = [
   { label: 'Lucidia family', value: "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, sans-serif" },
-  { label: 'Inter', value: "'Inter', sans-serif" },
   { label: 'Helvetica Neue', value: "'Helvetica Neue', Arial, sans-serif" },
+  { label: 'Inter', value: "'Inter', sans-serif" },
   { label: 'Roboto', value: "'Roboto', sans-serif" },
   { label: 'Fira Sans 🧙🏼‍♂️', value: "'Fira Sans', sans-serif" },
-  { label: 'Mukta', value: "'Mukta', sans-serif" },
+  { label: 'Source Sans 3', value: "'Source Sans 3', sans-serif" },
+  { label: 'Mukta 🦆', value: "'Mukta', sans-serif" },
+  { label: 'Work Sans', value: "'Work Sans', sans-serif" },
+  { label: 'Open Sans', value: "'Open Sans', sans-serif" },
+  { label: 'Public Sans', value: "'Public Sans', sans-serif" },
+  { label: 'Ubuntu (Linux)', value: "'Ubuntu', sans-serif" },
   {
     label: 'System Font',
     value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   },
   { label: 'Comic Sans', value: "'Comic Sans MS', cursive, sans-serif" },
-  { label: 'Ubuntu (Linux)', value: "'Ubuntu', sans-serif" },
 ];
 
 // 🔥 Google Fonts URLs (voor Inter, Roboto en Ubuntu)
 const fontUrls: { [key: string]: string } = {
-  "'Inter', sans-serif": 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap',
+  "'Inter', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
   "'Roboto', sans-serif": 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap',
-  "'Fira Sans', sans-serif": 'https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400;700&display=swap',
+  "'Fira Sans', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet',
   "'Mukta', sans-serif": 'https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;700&display=swap',
+  "'Source Sans 3', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap',
+  "'Work Sans, sans-serif":
+    'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
+  "'Open Sans', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',
+  "'Public Sans', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap',
 };
 
 const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [selectedFont, setSelectedFont] = useState(() => localStorage.getItem('selectedFont') || fontOptions[0].value);
-  const [fontSize, setFontSize] = useState(() => Number(localStorage.getItem('fontSize')) || 16);
+  const [fontSize, setFontSize] = useState(() => Number(localStorage.getItem('fontSize')) || 1);
   const [lineHeight, setLineHeight] = useState(() => Number(localStorage.getItem('lineHeight')) || 1.5);
   const [isOpen, setIsOpen] = useState(false); // 🔥 Toggle paneel
 
@@ -35,36 +49,29 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     localStorage.setItem('fontSize', fontSize.toString());
     localStorage.setItem('lineHeight', lineHeight.toString());
 
-    // 🔹 Dynamisch een link-tag toevoegen om fonts in te laden
+    // Dynamisch een link-tag toevoegen om fonts in te laden
     const fontLinkId = 'dynamic-font';
     let fontLink = document.getElementById(fontLinkId) as HTMLLinkElement;
-
     if (!fontLink) {
       fontLink = document.createElement('link');
       fontLink.id = fontLinkId;
       fontLink.rel = 'stylesheet';
       document.head.appendChild(fontLink);
     }
+    fontLink.href = fontUrls[selectedFont] || '';
 
-    if (fontUrls[selectedFont]) {
-      fontLink.href = fontUrls[selectedFont];
-    } else {
-      fontLink.href = ''; // Geen externe font nodig
-    }
-
-    // 🔹 Update de CSS-variabelen
+    // Update de CSS-variabelen met de font-size in REM (direct)
     let styleElement = document.getElementById('fontOverrideStyle') as HTMLStyleElement;
     if (!styleElement) {
       styleElement = document.createElement('style');
       styleElement.id = 'fontOverrideStyle';
       document.head.appendChild(styleElement);
     }
-
     styleElement.innerHTML = `
       .utrecht-theme {
         --utrecht-document-font-family: ${selectedFont} !important;
         --utrecht-typography-sans-serif-font-family: ${selectedFont} !important;
-        --utrecht-document-font-size: ${fontSize}px !important;
+        --utrecht-paragraph-font-size: ${fontSize}rem !important;
         --utrecht-document-line-height: ${lineHeight} !important;
         --utrecht-paragraph-line-height: ${lineHeight} !important;
       }
@@ -80,7 +87,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         style={{
           position: 'fixed',
           top: '32px',
-          right: isOpen ? '0px' : '-260px', // 🔥 Schuift in en uit
+          right: isOpen ? '0px' : '-300px', // 🔥 Schuift in en uit
           background: '#282c34',
           opacity: 0.85,
           color: '#eee',
@@ -134,11 +141,14 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* 🔹 Font Size Slider */}
         <div style={{ marginTop: '5px' }}>
-          <label style={{ fontSize: '12px' }}>Font Size: {fontSize}px</label>
+          <label style={{ fontSize: '12px' }}>
+            Font Size: {fontSize.toFixed(2)}rem ({(fontSize * 16).toFixed(0)}px)
+          </label>
           <input
             type="range"
-            min="12"
-            max="48"
+            min="0.8"
+            max="3"
+            step="0.1"
             value={fontSize}
             onChange={(e) => setFontSize(Number(e.target.value))}
             style={{ width: '100%' }}
