@@ -8,7 +8,7 @@ const fontOptions = [
   { label: 'Roboto', value: "'Roboto', sans-serif" },
   { label: 'Fira Sans 🧙🏼‍♂️', value: "'Fira Sans', sans-serif" },
   { label: 'Source Sans 3', value: "'Source Sans 3', sans-serif" },
-  { label: 'Noto Sans 3', value: "'Note Sans', sans-serif" },
+  { label: 'Noto Sans 3', value: "'Noto Sans', sans-serif" },
   { label: 'Mukta 🦆', value: "'Mukta', sans-serif" },
   { label: 'Work Sans', value: "'Work Sans', sans-serif" },
   { label: 'Open Sans', value: "'Open Sans', sans-serif" },
