@@ -1,5 +1,3 @@
-/* fonts.css */
-
 /* Helper classes voor de verschillende gewichten */
 
 .utrecht-font-weight-200 {
@@ -38,6 +36,7 @@
   font-size: 12px !important;
   font-weight: 600;
   margin-block-end: 5px;
+  margin-block-start: 10px;
 }
 .utrecht-font-tester-label input {
   margin-inline-end: 8px !important;
