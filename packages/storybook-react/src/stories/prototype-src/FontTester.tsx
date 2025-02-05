@@ -164,42 +164,44 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           ))}
         </div>
 
-        {/* 🔹 Heading Font-Weight Toggle */}
-
-        <div className="utrecht-font-tester-toggle-switch-label">
-          <label className="utrecht-font-tester-toggle-switch">
-            <input
-              type="checkbox"
-              checked={headingFontWeight === 600}
-              onChange={() => setHeadingFontWeight(headingFontWeight === 700 ? 600 : 700)}
-            />
-            <span className="utrecht-font-tester-toggle-slider"></span>
-          </label>
-          <span className="utrecht-toggle-label">Heading lichter</span>
+        {/* 🔹 Font Weight Sliders */}
+        <div>
+          <label className="utrecht-font-tester-label">Heading Font Weight: {headingFontWeight}</label>
+          <input
+            type="range"
+            min="300"
+            max="900"
+            step="100"
+            value={headingFontWeight}
+            onChange={(e) => setHeadingFontWeight(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
         </div>
 
-        <div className="utrecht-font-tester-toggle-switch-label">
-          <label className="utrecht-font-tester-toggle-switch">
-            <input
-              type="checkbox"
-              checked={strongFontWeight === 500}
-              onChange={() => setStrongFontWeight(strongFontWeight === 700 ? 500 : 700)}
-            />
-            <span className="utrecht-font-tester-toggle-slider"></span>
-          </label>
-          <span className="utrecht-toggle-label">Strong lichter</span>
+        <div>
+          <label className="utrecht-font-tester-label">Strong Font Weight: {strongFontWeight}</label>
+          <input
+            type="range"
+            min="300"
+            max="900"
+            step="100"
+            value={strongFontWeight}
+            onChange={(e) => setStrongFontWeight(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
         </div>
 
-        <div className="utrecht-font-tester-toggle-switch-label">
-          <label className="utrecht-font-tester-toggle-switch">
-            <input
-              type="checkbox"
-              checked={paragraphFontWeight === 300}
-              onChange={() => setParagraphFontWeight(paragraphFontWeight === 400 ? 300 : 400)}
-            />
-            <span className="utrecht-font-tester-toggle-slider"></span>
-          </label>
-          <span className="utrecht-toggle-label">Paragraaf lichter </span>
+        <div>
+          <label className="utrecht-font-tester-label">Paragraph Font Weight: {paragraphFontWeight}</label>
+          <input
+            type="range"
+            min="300"
+            max="900"
+            step="100"
+            value={paragraphFontWeight}
+            onChange={(e) => setParagraphFontWeight(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
         </div>
 
         {/* 🔹 Font Size Slider */}
