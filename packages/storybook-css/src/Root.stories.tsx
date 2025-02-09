@@ -1,29 +1,31 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import { Page, PageContent, PageFooter, PageHeader } from '@utrecht/component-library-react';
+import { Body } from '@utrecht/body-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import readme from '@utrecht/page-css/README.md?raw';
-import tokensDefinition from '@utrecht/page-css/src/tokens.json';
+import readme from '@utrecht/root-css/README.md?raw';
+import tokensDefinition from '@utrecht/root-css/src/tokens.json';
+import { Root } from '@utrecht/root-react';
 import React from 'react';
+import Paragraph from './Paragraph';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'CSS Component/Page',
-  id: 'css-page',
-  component: Page,
+  title: 'CSS Component/Root',
+  id: 'css-root',
+  component: Root,
   argTypes: {
     children: {
-      description: 'Page content',
+      description: 'Root content',
     },
   },
   args: {
     children: [],
   },
   parameters: {
-    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fpage',
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Froot',
     layout: 'fullscreen',
-    tokensPrefix: 'utrecht-page',
+    tokensPrefix: 'utrecht-root',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -35,7 +37,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Page>;
+} satisfies Meta<typeof Root>;
 
 export default meta;
 
@@ -44,11 +46,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     children: [
-      <PageHeader>Header area</PageHeader>,
-      <PageContent>
-        <main className="utrecht-page-content__main">Content area</main>
-      </PageContent>,
-      <PageFooter>Footer area</PageFooter>,
+      <Body>
+        <Paragraph>Root content</Paragraph>
+      </Body>,
     ],
   },
 };

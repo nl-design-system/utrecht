@@ -1,19 +1,11 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react';
-import {
-  Heading2,
-  Heading3,
-  Link,
-  LinkList,
-  LinkListLink,
-  PageFooter,
-  Paragraph,
-  Strong,
-} from '@utrecht/component-library-react';
+import { Heading2, Heading3, Link, LinkList, LinkListLink, Paragraph, Strong } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/page-footer-css/README.md?raw';
 import tokensDefinition from '@utrecht/page-footer-css/src/tokens.json';
+import { PageFooter } from '@utrecht/page-footer-react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
