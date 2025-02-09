@@ -1,5 +1,12 @@
 # @utrecht/design-tokens
 
+## 2.5.0
+
+### Minor Changes
+
+- 882e10d: Add design tokens for `body`, `nav-bar`, `page-body`, `page-footer`, `page-header` and `root`.
+- 3bc0dd6: Add some design tokens for the Signalen application.
+
 ## 2.4.0
 
 ### Minor Changes

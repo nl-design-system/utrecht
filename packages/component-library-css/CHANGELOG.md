@@ -1,5 +1,11 @@
 # @utrecht/component-library-css
 
+## 7.1.0
+
+### Minor Changes
+
+- 32b2d96: Add 4 new CSS components: `.utrecht-root`, `.utrecht-body`, `.utrecht-page-layout` and `.utrecht-page-body`.
+
 ## 7.0.0
 
 ### Major Changes

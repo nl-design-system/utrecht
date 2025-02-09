@@ -1,5 +1,17 @@
 # @utrecht/component-library-react
 
+## 9.0.0
+
+### Major Changes
+
+- 65f3cd5: Ignore combinations of `lead` and `small` appearances for paragraph via deprecated boolean properties.
+- 9796c79: Disallow any `string` as Paragraph `appearance`, require an enum. You can now use the new `isParagraphAppearance` to type cast to the enum.
+
+### Patch Changes
+
+- Updated dependencies [de1c443]
+  - @utrecht/icon-css@2.0.0
+
 ## 8.0.5
 
 ### Patch Changes

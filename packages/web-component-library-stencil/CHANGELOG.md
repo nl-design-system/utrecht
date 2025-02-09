@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 3.1.0
+
+### Minor Changes
+
+- 61b06bc: Add 4 new web components: `<utrecht-root>`, `<utrecht-body>`, `<utrecht-page-layout>`, `<utrecht-nav-bar>`. Support new layout structure in existing components: `<utrecht-page-header>`, `<utrecht-page-footer>` and `<utrecht-page-content>`.
+
 ## 3.0.1
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @utrecht/preact-app
 
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies [65f3cd5]
+- Updated dependencies [882e10d]
+- Updated dependencies [9796c79]
+- Updated dependencies [3bc0dd6]
+  - @utrecht/component-library-react@9.0.0
+  - @utrecht/design-tokens@2.5.0
+
 ## 1.0.10
 
 ### Patch Changes
