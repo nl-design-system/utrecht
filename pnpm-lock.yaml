@@ -1646,7 +1646,7 @@ importers:
         version: link:../../components/iban-data
       '@utrecht/icon':
         specifier: workspace:*
-        version: link:../../components/icon
+        version: link:../icon
       '@utrecht/img-css':
         specifier: workspace:*
         version: link:../../components/img
@@ -5586,6 +5586,12 @@ importers:
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
+      '@utrecht/body-css':
+        specifier: workspace:*
+        version: link:../../components/body
+      '@utrecht/body-react':
+        specifier: workspace:*
+        version: link:../components-react/body-react
       '@utrecht/breadcrumb-nav-css':
         specifier: workspace:*
         version: link:../../components/breadcrumb-nav
@@ -5748,6 +5754,12 @@ importers:
       '@utrecht/ordered-list-css':
         specifier: workspace:*
         version: link:../../components/ordered-list
+      '@utrecht/page-body-css':
+        specifier: workspace:*
+        version: link:../../components/page-body
+      '@utrecht/page-body-react':
+        specifier: workspace:*
+        version: link:../components-react/page-body-react
       '@utrecht/page-content-css':
         specifier: workspace:*
         version: link:../../components/page-content
@@ -5775,6 +5787,12 @@ importers:
       '@utrecht/radio-group-react':
         specifier: workspace:*
         version: link:../components-react/radio-group-react
+      '@utrecht/root-css':
+        specifier: workspace:*
+        version: link:../../components/root
+      '@utrecht/root-react':
+        specifier: workspace:*
+        version: link:../components-react/root-react
       '@utrecht/select-combobox-react':
         specifier: workspace:*
         version: link:../components-react/select-combobox-react
@@ -6255,6 +6273,9 @@ importers:
       '@utrecht/badge-status-css':
         specifier: workspace:*
         version: link:../../components/badge-status
+      '@utrecht/body-css':
+        specifier: workspace:*
+        version: link:../../components/body
       '@utrecht/breadcrumb-nav-css':
         specifier: workspace:*
         version: link:../../components/breadcrumb-nav
@@ -6372,6 +6393,9 @@ importers:
       '@utrecht/number-data-css':
         specifier: workspace:*
         version: link:../../components/number-data
+      '@utrecht/page-body-css':
+        specifier: workspace:*
+        version: link:../../components/page-body
       '@utrecht/page-content-css':
         specifier: workspace:*
         version: link:../../components/page-content
@@ -6390,6 +6414,9 @@ importers:
       '@utrecht/paragraph-css':
         specifier: workspace:*
         version: link:../../components/paragraph
+      '@utrecht/root-css':
+        specifier: workspace:*
+        version: link:../../components/root
       '@utrecht/separator-css':
         specifier: workspace:*
         version: link:../../components/separator
