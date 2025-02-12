@@ -1,5 +1,15 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [b5deff8]
+- Updated dependencies [2122fd7]
+  - @utrecht/form-toggle-css@1.5.0
+  - @utrecht/radio-button-css@1.5.2
+  - @utrecht/html-content-css@1.3.0
+
 ## 1.0.2
 
 ### Patch Changes
