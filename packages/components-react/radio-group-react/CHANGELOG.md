@@ -1,5 +1,11 @@
 # @utrecht/radio-group-react
 
+## 1.0.9
+
+### Patch Changes
+
+- @utrecht/radio-button-react@1.0.6
+
 ## 1.0.8
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/radio-button-css
 
+## 1.5.2
+
+### Patch Changes
+
+- 2122fd7: Add metadata for `utrecht.radio-button.color` token.
+
 ## 1.5.1
 
 ### Patch Changes

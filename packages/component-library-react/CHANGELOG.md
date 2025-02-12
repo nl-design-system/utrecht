@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 9.0.1
+
+### Patch Changes
+
+- Updated dependencies [b5deff8]
+  - @utrecht/form-toggle-css@1.5.0
+  - @utrecht/html-content-css@1.3.0
+  - @utrecht/radio-button-react@1.0.6
+
 ## 9.0.0
 
 ### Major Changes

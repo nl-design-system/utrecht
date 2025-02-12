@@ -1,5 +1,12 @@
 # @utrecht/radio-button-react
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [2122fd7]
+  - @utrecht/radio-button-css@1.5.2
+
 ## 1.0.5
 
 ### Patch Changes
