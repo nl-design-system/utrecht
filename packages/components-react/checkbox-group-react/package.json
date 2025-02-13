@@ -26,6 +26,7 @@
       "types": "./dist/css.d.ts",
       "import": "./dist/css.mjs"
     },
+    "./CHANGELOG.md": "./CHANGELOG.md",
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
@@ -37,6 +38,14 @@
     "./dist/index.mjs": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
+    },
+    "./dist/css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./dist/css.mjs": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
     }
   },
   "files": [
