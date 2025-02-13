@@ -102,26 +102,36 @@ async function updatePackageJson(projectPath, defaultConfig, customConfig = {}, 
   delete packageJson['module'];
   delete packageJson['types'];
 
-  const files = await glob('dist/**/*.mjs');
-  packageJson.exports = files.reduce((obj, file) => {
+  // Find compiled `.mjs` files and add them to the `package.json` `exports` section.
+  const requiredESModules = await glob(['dist/**/*.mjs']);
+  const requiredESModuleExports = requiredESModules.reduce((obj, file) => {
     // Convert `./dist/example.mjs` to the alias `"./example"`
-    const shorthand = file.replace(/\.\/dist\//gi, './').replace(/\.mjs/gi, '');
+    // Convert `./dist/index.mjs` to the alias `"."`
+    const shorthand = file
+      .replace(/^dist\//gi, './')
+      .replace(/\.mjs$/gi, '')
+      .replace(/\/index$/i, '');
+
+    const types = `./${file.replace(/\.mjs/gi, '.d.ts')}`;
+    const typesExist = existsSync(types);
+    console.log(shorthand, types, typesExist);
     obj[shorthand] = {
-      types: `${file}.dt.ts`,
-      import: file,
+      ...(typesExist ? { types } : {}),
+      import: `./${file}`,
     };
     return obj;
   }, {});
 
+  // Detect optional files that we can include in the `exports` as is.
+  const optionalExports = (await glob(['*.md', 'dist/.jest-test-results.json'])).reduce((obj, file) => {
+    const relativePath = `./${relative('.', file)}`;
+    obj[relativePath] = relativePath;
+    return obj;
+  }, {});
+
   packageJson.exports = {
-    '.': {
-      types: './dist/index.d.ts',
-      import: './dist/index.mjs',
-    },
-    './css': {
-      types: './dist/css.d.ts',
-      import: './dist/css.mjs',
-    },
+    ...requiredESModuleExports,
+    ...optionalExports,
   };
 
   if (config.legacyExports) {
