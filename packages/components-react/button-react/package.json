@@ -26,8 +26,18 @@
       "types": "./dist/css.d.ts",
       "import": "./dist/css.mjs"
     },
-    "./dist": "./dist/index.mjs",
-    "./dist/index": "./dist/index.mjs",
+    "./dist": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.mjs": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
     "./dist/css": {
       "types": "./dist/css.d.ts",
       "import": "./dist/css.mjs"
