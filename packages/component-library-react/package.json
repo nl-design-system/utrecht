@@ -23,12 +23,33 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
+    "./VegaVisualization": {
+      "types": "./dist/VegaVisualization.d.ts",
+      "import": "./dist/VegaVisualization.mjs"
+    },
+    "./Calendar": {
+      "types": "./dist/Calendar.d.ts",
+      "import": "./dist/Calendar.mjs"
+    },
+    "./css-module": {
+      "types": "./dist/css-module/index.d.ts",
+      "import": "./dist/css-module/index.mjs"
+    },
+    "./css-module/VegaVisualization": {
+      "types": "./dist/css-module/VegaVisualization.d.ts",
+      "import": "./dist/css-module/VegaVisualization.mjs"
+    },
+    "./css-module/Calendar": {
+      "types": "./dist/css-module/Calendar.d.ts",
+      "import": "./dist/css-module/Calendar.mjs"
+    },
     "./dist/.jest-test-results.json": "./dist/.jest-test-results.json",
+    "./tsconfig.md": "./tsconfig.md",
+    "./TESTING.md": "./TESTING.md",
+    "./README.nl.md": "./README.nl.md",
+    "./README.md": "./README.md",
     "./CONTRIBUTING.md": "./CONTRIBUTING.md",
     "./CHANGELOG.md": "./CHANGELOG.md",
-    "./README.md": "./README.md",
-    "./README.nl.md": "./README.nl.md",
-    "./TESTING.md": "./TESTING.md",
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
