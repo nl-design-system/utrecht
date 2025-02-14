@@ -90,6 +90,10 @@ const buildStyles = async (config) => {
 };
 
 const buildTokens = async ({ inputFile, outputFile }) => {
+  // Ensure output directory exists
+  const outputDir = path.dirname(outputFile);
+  await mkdir(outputDir, { recursive: true });
+
   const json = JSON.parse(await readFile(inputFile, 'utf-8'));
 
   await writeFile(outputFile, `export default ${JSON.stringify(json, null, 2)};\n`);
