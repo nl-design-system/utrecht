@@ -1,0 +1,23 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
+ */
+
+@import "../mixin";
+
+@mixin utrecht-html-html {
+  html {
+    @include utrecht-root;
+  }
+}
+
+/**
+ * Match `:root` instead of `html`, to avoid styling when a template
+ * accidentally renders an extraneous `html` element inside the `body`.
+ */
+@mixin utrecht-html-root {
+  :root {
+    @include utrecht-root;
+  }
+}
