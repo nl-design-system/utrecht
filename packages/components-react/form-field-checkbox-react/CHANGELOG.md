@@ -1,5 +1,18 @@
 # @utrecht/form-field-checkbox-react
 
+## 1.0.9
+
+### Patch Changes
+
+- c4b943b: Fix `exports` to include `.md` files and consistently support the main import.
+  Note: the `.md` files are for development purposes only, they are not supported as part of the public API.
+- Updated dependencies [c4b943b]
+  - @utrecht/form-field-error-message-react@1.0.6
+  - @utrecht/form-field-description-react@1.0.6
+  - @utrecht/form-field-react@1.0.6
+  - @utrecht/form-label-react@1.0.6
+  - @utrecht/checkbox-react@1.0.7
+
 ## 1.0.8
 
 ### Patch Changes

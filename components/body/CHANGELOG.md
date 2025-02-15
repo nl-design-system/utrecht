@@ -1,5 +1,11 @@
 # @utrecht/body-css
 
+## 1.2.0
+
+### Minor Changes
+
+- f54840f: Provide `.css` file for the `body` selector for styling vanilla HTML.
+
 ## 1.1.0
 
 ### Minor Changes

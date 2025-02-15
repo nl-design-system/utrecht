@@ -1,5 +1,15 @@
 # @utrecht/textarea-css
 
+## 2.3.0
+
+### Minor Changes
+
+- 729f698: Restore vanilla HTML implementations to the npm packages of CSS components, with the following files:
+
+  - `dist/html/index.css`
+  - `dist/html/index.min.css`
+  - `dist/html/index.mjs`
+
 ## 2.2.0
 
 ### Minor Changes

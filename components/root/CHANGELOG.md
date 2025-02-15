@@ -1,5 +1,11 @@
 # @utrecht/root-css
 
+## 1.2.0
+
+### Minor Changes
+
+- f54840f: Provide `.css` file for the `:root` selector for styling vanilla HTML.
+
 ## 1.1.1
 
 ### Patch Changes
