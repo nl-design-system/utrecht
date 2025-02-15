@@ -5,6 +5,7 @@ import * as sass from 'sass';
 import { mergeLicenseComments } from './remove-duplicate-license.mjs';
 import { removeComments } from './remove-comments.mjs';
 import cssnano from 'cssnano';
+import { existsSync } from 'node:fs';
 
 const webpackStyleImporter = {
   findFileUrl(url) {
@@ -26,6 +27,12 @@ const webpackStyleImporter = {
 };
 
 const buildStyles = async (config) => {
+  // Optional files exist only in some packages.
+  // Continue without action when the input file does not exist.
+  if (config.optional && !existsSync(config.inputFile)) {
+    return;
+  }
+
   try {
     // Ensure output directory exists
     const outputDir = path.dirname(config.outputFile);
@@ -129,6 +136,32 @@ buildStyles({
   minify: true,
   esm: true,
   dts: 'dist/index.mjs.d.ts',
+});
+
+buildStyles({
+  inputFile: 'src/html/index.scss',
+  outputFile: 'dist/html/index.css',
+  sourceMap: process.env.NODE_ENV === 'development',
+  minify: false,
+  optional: true,
+});
+
+buildStyles({
+  inputFile: 'src/html/index.scss',
+  outputFile: 'dist/html/index.min.css',
+  sourceMap: process.env.NODE_ENV === 'development',
+  minify: true,
+  optional: true,
+});
+
+buildStyles({
+  inputFile: 'src/html/index.scss',
+  outputFile: 'dist/html/index.mjs',
+  sourceMap: false,
+  minify: true,
+  esm: true,
+  dts: 'dist/html/index.mjs.d.ts',
+  optional: true,
 });
 
 buildTokens({
