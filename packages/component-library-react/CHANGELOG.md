@@ -1,5 +1,58 @@
 # @utrecht/component-library-react
 
+## 9.0.1
+
+### Patch Changes
+
+- c4b943b: Fix `exports` to include `.md` files and consistently support the main import.
+  Note: the `.md` files are for development purposes only, they are not supported as part of the public API.
+- Updated dependencies [b5deff8]
+- Updated dependencies [729f698]
+- Updated dependencies [c4b943b]
+  - @utrecht/form-toggle-css@1.5.0
+  - @utrecht/article-css@1.5.0
+  - @utrecht/blockquote-css@1.6.0
+  - @utrecht/code-block-css@1.5.0
+  - @utrecht/code-css@1.5.0
+  - @utrecht/document-css@1.5.0
+  - @utrecht/emphasis-css@1.5.0
+  - @utrecht/figure-css@1.5.0
+  - @utrecht/heading-1-css@1.5.0
+  - @utrecht/heading-2-css@1.5.0
+  - @utrecht/heading-3-css@1.5.0
+  - @utrecht/heading-4-css@1.5.0
+  - @utrecht/heading-5-css@1.5.0
+  - @utrecht/heading-6-css@1.5.0
+  - @utrecht/heading-group-css@1.5.0
+  - @utrecht/html-content-css@1.4.0
+  - @utrecht/mark-css@1.5.0
+  - @utrecht/ordered-list-css@1.5.0
+  - @utrecht/paragraph-css@2.3.0
+  - @utrecht/select-css@1.8.0
+  - @utrecht/separator-css@1.5.0
+  - @utrecht/subscript-css@1.3.0
+  - @utrecht/superscript-css@1.3.0
+  - @utrecht/table-css@1.5.0
+  - @utrecht/textarea-css@2.3.0
+  - @utrecht/unordered-list-css@1.5.0
+  - @utrecht/form-field-error-message-react@1.0.6
+  - @utrecht/form-field-description-react@1.0.6
+  - @utrecht/form-field-checkbox-react@1.0.9
+  - @utrecht/radio-button-react@1.0.6
+  - @utrecht/data-badge-react@1.0.3
+  - @utrecht/form-field-react@1.0.6
+  - @utrecht/form-label-react@1.0.6
+  - @utrecht/calendar-react@1.0.10
+  - @utrecht/checkbox-react@1.0.7
+  - @utrecht/combobox-react@0.0.7
+  - @utrecht/fieldset-react@1.0.6
+  - @utrecht/listbox-react@1.0.9
+  - @utrecht/textbox-react@1.0.6
+  - @utrecht/button-react@2.0.6
+  - @utrecht/link-react@1.0.6
+  - @utrecht/button-link-css@1.3.0
+  - @utrecht/link-button-css@1.4.0
+
 ## 9.0.0
 
 ### Major Changes

@@ -1,5 +1,17 @@
 # @utrecht/select-combobox-react
 
+## 1.0.8
+
+### Patch Changes
+
+- c4b943b: Fix `exports` to include `.md` files and consistently support the main import.
+  Note: the `.md` files are for development purposes only, they are not supported as part of the public API.
+- Updated dependencies [c4b943b]
+  - @utrecht/combobox-react@0.0.7
+  - @utrecht/listbox-react@1.0.9
+  - @utrecht/textbox-react@1.0.6
+  - @utrecht/button-react@2.0.6
+
 ## 1.0.7
 
 ### Patch Changes

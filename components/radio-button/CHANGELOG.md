@@ -1,5 +1,19 @@
 # @utrecht/radio-button-css
 
+## 1.6.0
+
+### Minor Changes
+
+- 729f698: Restore vanilla HTML implementations to the npm packages of CSS components, with the following files:
+
+  - `dist/html/index.css`
+  - `dist/html/index.min.css`
+  - `dist/html/index.mjs`
+
+### Patch Changes
+
+- 2122fd7: Add metadata for `utrecht.radio-button.color` token.
+
 ## 1.5.1
 
 ### Patch Changes

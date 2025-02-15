@@ -1,5 +1,15 @@
 # @utrecht/heading-4-css
 
+## 1.5.0
+
+### Minor Changes
+
+- 729f698: Restore vanilla HTML implementations to the npm packages of CSS components, with the following files:
+
+  - `dist/html/index.css`
+  - `dist/html/index.min.css`
+  - `dist/html/index.mjs`
+
 ## 1.4.0
 
 ### Minor Changes

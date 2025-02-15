@@ -1,5 +1,12 @@
 # @utrecht/page-footer-react
 
+## 1.0.5
+
+### Patch Changes
+
+- c4b943b: Fix `exports` to include `.md` files and consistently support the main import.
+  Note: the `.md` files are for development purposes only, they are not supported as part of the public API.
+
 ## 1.0.4
 
 ### Patch Changes

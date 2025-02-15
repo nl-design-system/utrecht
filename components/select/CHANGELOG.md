@@ -1,5 +1,15 @@
 # @utrecht/select-css
 
+## 1.8.0
+
+### Minor Changes
+
+- 729f698: Restore vanilla HTML implementations to the npm packages of CSS components, with the following files:
+
+  - `dist/html/index.css`
+  - `dist/html/index.min.css`
+  - `dist/html/index.mjs`
+
 ## 1.7.0
 
 ### Minor Changes

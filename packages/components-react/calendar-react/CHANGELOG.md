@@ -1,5 +1,14 @@
 # @utrecht/calendar-react
 
+## 1.0.10
+
+### Patch Changes
+
+- c4b943b: Fix `exports` to include `.md` files and consistently support the main import.
+  Note: the `.md` files are for development purposes only, they are not supported as part of the public API.
+- Updated dependencies [c4b943b]
+  - @utrecht/button-react@2.0.6
+
 ## 1.0.9
 
 ### Patch Changes

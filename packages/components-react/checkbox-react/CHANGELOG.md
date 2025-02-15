@@ -1,5 +1,14 @@
 # @utrecht/checkbox-react
 
+## 1.0.7
+
+### Patch Changes
+
+- c4b943b: Fix `exports` to include `.md` files and consistently support the main import.
+  Note: the `.md` files are for development purposes only, they are not supported as part of the public API.
+- Updated dependencies [729f698]
+  - @utrecht/checkbox-css@1.6.0
+
 ## 1.0.6
 
 ### Patch Changes
