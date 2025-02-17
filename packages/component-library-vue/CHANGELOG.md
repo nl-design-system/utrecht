@@ -1,5 +1,11 @@
 # @utrecht/component-library-vue
 
+## 2.3.0
+
+### Minor Changes
+
+- 7905eff: Add the `HtmlContent` container component for styling vanilla HTML.
+
 ## 2.2.0
 
 ### Minor Changes
