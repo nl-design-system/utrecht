@@ -2308,31 +2308,7 @@ importers:
         version: 5.16.3(vega@5.26.1(encoding@0.1.13))
 
   packages/component-library-vue:
-    devDependencies:
-      '@babel/core':
-        specifier: 7.24.7
-        version: 7.24.7
-      '@rushstack/eslint-patch':
-        specifier: 1.6.1
-        version: 1.6.1
-      '@testing-library/jest-dom':
-        specifier: 5.17.0
-        version: 5.17.0
-      '@testing-library/vue':
-        specifier: 6.6.1
-        version: 6.6.1(@vue/compiler-sfc@3.3.11)(@vue/server-renderer@3.3.11(vue@3.3.11(typescript@4.9.5)))(vue@3.3.11(typescript@4.9.5))
-      '@types/jest':
-        specifier: 29.5.11
-        version: 29.5.11
-      '@types/jsdom':
-        specifier: 20.0.1
-        version: 20.0.1
-      '@types/node':
-        specifier: 22.7.4
-        version: 22.7.4
-      '@types/testing-library__jest-dom':
-        specifier: 5.14.9
-        version: 5.14.9
+    dependencies:
       '@utrecht/alert-dialog-css':
         specifier: workspace:*
         version: link:../../components/alert-dialog
@@ -2471,6 +2447,31 @@ importers:
       '@utrecht/url-data-css':
         specifier: workspace:*
         version: link:../../components/url-data
+    devDependencies:
+      '@babel/core':
+        specifier: 7.24.7
+        version: 7.24.7
+      '@rushstack/eslint-patch':
+        specifier: 1.6.1
+        version: 1.6.1
+      '@testing-library/jest-dom':
+        specifier: 5.17.0
+        version: 5.17.0
+      '@testing-library/vue':
+        specifier: 6.6.1
+        version: 6.6.1(@vue/compiler-sfc@3.3.11)(@vue/server-renderer@3.3.11(vue@3.3.11(typescript@4.9.5)))(vue@3.3.11(typescript@4.9.5))
+      '@types/jest':
+        specifier: 29.5.11
+        version: 29.5.11
+      '@types/jsdom':
+        specifier: 20.0.1
+        version: 20.0.1
+      '@types/node':
+        specifier: 22.7.4
+        version: 22.7.4
+      '@types/testing-library__jest-dom':
+        specifier: 5.14.9
+        version: 5.14.9
       '@vitejs/plugin-vue':
         specifier: 4.5.2
         version: 4.5.2(vite@4.5.1(@types/node@22.7.4)(less@4.2.0)(sass@1.69.5)(terser@5.26.0))(vue@3.3.11(typescript@4.9.5))
