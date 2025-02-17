@@ -29,6 +29,7 @@ export { default as Heading3 } from './Heading3.vue';
 export { default as Heading4 } from './Heading4.vue';
 export { default as Heading5 } from './Heading5.vue';
 export { default as Heading6 } from './Heading6.vue';
+export { default as HtmlContent } from './HtmlContent.vue';
 export { default as Image } from './Image.vue';
 export { default as Link } from './Link.vue';
 export { default as LinkSocial } from './LinkSocial.vue';
