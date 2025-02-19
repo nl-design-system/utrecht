@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist/",
+    "strict": false,
+    "composite": true
+  },
+  "include": ["src/**/stories/Button.stories.tsx", "src/**/util.tsx"]
+}
