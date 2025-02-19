@@ -30,6 +30,38 @@
   font-weight: 800;
 }
 
+div.utrecht-font-tester-container {
+  background: hsl(223.64 22% 17.45%);
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+  color: rgba(243 243 243);
+  inset-block-start: 32px;
+  min-inline-size: 220px;
+  padding-block: 16px;
+  padding-inline: 16px;
+  position: fixed;
+  transition: inset-inline-end 500ms ease-in-out;
+  z-index: 1000;
+}
+
+.utrecht-font-tester-container button {
+  background: hsl(223.64 22% 17.45%);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+  color: rgb(243 243 243);
+  cursor: pointer;
+  font-size: 18px;
+  inset-block-start: 26px;
+  inset-inline-start: -35px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.utrecht-font-tester-container button:hover {
+  background: hsl(223.64 22% 17.45%) !important;
+}
+
 .utrecht-font-tester-label {
   color: #ddd; /* Optioneel: subtieler maken */
   display: block;

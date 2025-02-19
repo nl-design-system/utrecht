@@ -31,7 +31,7 @@ const fontUrls: { [key: string]: string } = {
   "'Mukta', sans-serif": 'https://fonts.googleapis.com/css2?family=Mukta:wght@300..700&display=swap',
   "'Source Sans 3', sans-serif":
     'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap',
-  "'Work Sans, sans-serif":
+  "'Work Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
   "'Open Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',
@@ -110,42 +110,13 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
       {/* 🔼 Inklapbare instellingen-box rechtsboven */}
       <div
+        className="utrecht-font-tester-container"
         style={{
-          position: 'fixed',
-          top: '32px',
-          right: isOpen ? '0px' : '-250px', // 🔥 Schuift in en uit
-          background: '#282c34',
-          opacity: 0.85,
-          color: '#eee',
-          padding: '16px',
-          borderRadius: '3px',
-          transition: 'right 0.3s ease-in-out',
-          boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
-          textAlign: 'left',
-          minWidth: '220px',
-          zIndex: 1000,
+          insetInlineEnd: isOpen ? '0px' : '-250px', // 🔥 Schuift in en uit
         }}
       >
         {/* ⚙️ Toggle-knop */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          style={{
-            position: 'absolute',
-            top: '26px',
-            left: '-35px',
-            transform: 'translateY(-50%)',
-            background: '#282c34',
-            color: '#eee',
-            border: 'none',
-            padding: '0px',
-            borderRadius: '3px',
-            cursor: 'pointer',
-            fontSize: '18px',
-            boxShadow: '0 2px 5px rgba(0,0,0,0.2)',
-          }}
-        >
-          {isOpen ? '▶' : '◀'}
-        </button>
+        <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? '▶' : '◀'}</button>
 
         {/* 🔹 Font Selector als Radio Buttons */}
         <label className="utrecht-font-tester-label">Font Family:</label>
