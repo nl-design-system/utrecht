@@ -216,3 +216,4 @@ export type { UnorderedListProps } from '../UnorderedList';
 export { UnorderedList } from './UnorderedList';
 export type { UnorderedListItemProps } from '../UnorderedListItem';
 export { UnorderedListItem } from './UnorderedListItem';
+export { FigureDetails } from './FigureDetails';
