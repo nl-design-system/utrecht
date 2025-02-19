@@ -271,18 +271,33 @@ $utrecht-support-prince-xml: false !default;
   }
 }
 
+@mixin utrecht-textbox--aantalmarkten-size {
+  /* Nummer onder 9999 */
+  --utrecht-textbox-value-max-length: 10;
+}
+
 @mixin utrecht-textbox--postal-code-nl-size {
   /* Dutch postal code: 4 numbers, 1 space and 2 letters */
   --utrecht-textbox-value-max-length: 7;
 }
 
+@mixin utrecht-textbox--postbus-nummer-size {
+  /* A postbusnummer consists of at least one and at most five digits. */
+  --utrecht-textbox-value-max-length: 2;
+}
+
+@mixin utrecht-textbox--postcode-size {
+  /* A postcode consists of four numbers and two letters. */
+  --utrecht-textbox-value-max-length: 2;
+}
+
 @mixin utrecht-textbox--house-number-size {
   /* Dutch house number is 99999 at most: 5 numbers */
-  --utrecht-textbox-value-max-length: 5;
+  --utrecht-textbox-value-max-length: 1;
 }
 
 @mixin utrecht-textbox--house-letter-size {
-  /* Dutch house letter is 1 letter */
+  /* Dutch house letter can be 1 or 2 letters */
   --utrecht-textbox-value-max-length: 1;
 }
 
@@ -291,11 +306,83 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 4;
 }
 
+@mixin utrecht-textbox--voorletters-size {
+  /* "Voorletters" depends on how long your name is and after research of the longest name in the Netherlands it can be about 8 to 9 characters.
+     For now im using the longest name source suggestion: 8 */
+  --utrecht-textbox-value-max-length: 8;
+}
+
 @mixin utrecht-textbox--voorvoegsel-size {
   /* "Tabel 36 Voorvoegselstabel" by "Rijksdienst voor Identiteitsgegevens" has a list
    * of all allowed values. The longest value is 10 characters.
    * The class name is in Dutch because it is a Dutch concept. */
   --utrecht-textbox-value-max-length: 10;
+}
+
+@mixin utrecht-textbox--voornamen-size {
+  /* Longest name in the Netherlands is 50 characters. Suggesting: 40 */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--vestigingnummer-size {
+  /* Typically 9 or lower digits */
+  --utrecht-textbox-value-max-length: 10;
+}
+
+@mixin utrecht-textbox--bsn-size {
+  /* BSN is 8 or 9 characters. Suggest: 5 */
+  --utrecht-textbox-value-max-length: 5;
+}
+
+@mixin utrecht-textbox--email-size {
+  /* Emails can very with how long they are. Suggesting max */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--geboortedatum-size {
+  /* 2 (for the day) + 1 (for the separator, usually a dash or slash) + 2 (for the month) + 1 (for the separator)
+   + 4 (for the year) = 9 characters (if you include separators). Or "DDMMYY" For now im testing: 5 */
+  --utrecht-textbox-value-max-length: 5;
+}
+
+@mixin utrecht-textbox--geboorteplaats-size {
+  /* testing 25 */
+  --utrecht-textbox-value-max-length: 25;
+}
+
+@mixin utrecht-textbox--achternaam-size {
+  /* Longest lastname in the Netherlands is 58 characters. Suggesting: 40 */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--kvk-size {
+  /* In the Netherlands a KVK number consists of 8 digits */
+  --utrecht-textbox-value-max-length: 4;
+}
+
+@mixin utrecht-textbox--straatnaam-size {
+  /* The longest street name in the Netherlands is 41 characters long */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--telefoon-nummer-size {
+  /* Dutch phone number consits of 9 digits, longest phone numer is 15 digits. */
+  --utrecht-textbox-value-max-length: 15;
+}
+
+@mixin utrecht-textbox--naam-bedrijf-size {
+  /* ... */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--plaats-size {
+  /* ... */
+  --utrecht-textbox-value-max-length: 10;
+}
+
+@mixin utrecht-textbox--tussenvoegsel-size {
+  /* Consits mostly of 6 or lower digits */
+  --utrecht-textbox-value-max-length: 8;
 }
 
 @mixin utrecht-textbox--tel-size {
@@ -316,4 +403,9 @@ $utrecht-support-prince-xml: false !default;
 @mixin utrecht-textbox--iban-nl-size {
   /* Dutch IBAN: 18 characters, plus 4 spaces (one space after every 4 characters) */
   --utrecht-textbox-value-max-length: 22;
+}
+
+@mixin utrecht-textbox--woonplaats-size {
+  /*  ... */
+  --utrecht-textbox-value-max-length: 40;
 }
