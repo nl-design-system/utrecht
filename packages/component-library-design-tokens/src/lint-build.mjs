@@ -1,6 +1,6 @@
 import { readFile } from 'node:fs/promises';
-import cloneDeepWith from 'lodash.clonedeepwith';
-import isPlainObject from 'lodash.isplainobject';
+import cloneDeepWith from 'lodash-es/clonedeepwith.js';
+import isPlainObject from 'lodash-es/isplainobject.js';
 import { glob } from 'glob';
 import { getComponentTokens } from './lib.mjs';
 import { isDesignTokenDefinition } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens.js';
