@@ -21,11 +21,11 @@ $utrecht-support-prince-xml: false !default;
 
   /* Because this element uses `border-box` box-sizing, we need to manually add up the
     * border width, padding width and the content width.
-    * 
+    *
     * Browsers and browser addons can add buttons inside the content box, for example
     * for autocomplete. To avoid overlap between the UI and the text, we reserve
     * some additional pixels to make space. We use 44px in accordance with the WCAG target size.
-    * 
+    *
     * When you are certain an element has no such UI, you can set the `autocomplete-ui-size` to `0px` (not to `0`).
     */
   --_utrecht-textbox-max-inline-size: calc(
@@ -40,7 +40,7 @@ $utrecht-support-prince-xml: false !default;
   block-size: initial; /* harden */
   border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
   border-block-end-width: var(
-    --utrecht-textbox-border-bottom-width,
+    --utrecht-textbox-border-block-end-width,
     var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width))
   );
   border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color));
@@ -57,7 +57,7 @@ $utrecht-support-prince-xml: false !default;
 
   inline-size: 100%;
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
-  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
+  min-block-size: var(--utrecht-textbox-min-block-size, var(--utrecht-pointer-target-min-size, 44px));
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: min(
     var(--_utrecht-textbox-max-inline-size, 100%),
@@ -105,12 +105,12 @@ $utrecht-support-prince-xml: false !default;
   );
   border-width: var(--_utrecht-textbox-border-width);
   border-block-end-width: var(
-    --utrecht-textbox-invalid-border-bottom-width,
+    --utrecht-textbox-invalid-border-block-end-width,
     var(
-      --utrecht-form-control-invalid-border-bottom-width,
+      --utrecht-form-control-invalid-border-block-end-width,
       var(
-        --utrecht-textbox-border-bottom-width,
-        var(--utrecht-form-control-border-bottom-width, var(--_utrecht-textbox-border-width))
+        --utrecht-textbox-border-block-end-width,
+        var(--utrecht-form-control-border-block-end-width, var(--_utrecht-textbox-border-width))
       )
     )
   );
