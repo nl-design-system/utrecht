@@ -1,5 +1,11 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.4
+
+### Patch Changes
+
+- 85a4d6a: fix: @utrecht/build-utils-css is now added to "devDependencies" because it is not published to the npm registry and only used in the mono repo
+
 ## 1.0.3
 
 ### Patch Changes
