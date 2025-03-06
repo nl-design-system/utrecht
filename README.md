@@ -70,7 +70,14 @@ https://unpkg.com/@utrecht/design-tokens@^1.0.0/dist/index.css
 | [@utrecht/web-component-library-stencil](https://www.npmjs.com/package/@utrecht/web-component-library-stencil) | [![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-stencil.svg)](https://www.npmjs.com/package/@utrecht/web-component-library-stencil) |     |
 | [@utrecht/web-component-library-vue](https://www.npmjs.com/package/@utrecht/web-component-library-vue)         | [![NPM version](https://img.shields.io/npm/v/@utrecht/web-component-library-vue.svg)](https://www.npmjs.com/package/@utrecht/web-component-library-vue)         |     |
 
-In addition to these npm packages, there are lots of packages for CSS components. These follow the following namingg convention: `@utrecht/{component}-css`, where you can replace `{component}` with the name of the component. For example: `@utrecht/button-css`.
+In addition to these npm packages, there are separate packages for each components.
+
+These follow the following naming conventions, for example: `@utrecht/{component}-css`, where you can replace `{component}` with the name of the component, resulting in `@utrecht/button-css`.
+
+| naming convention                                                                                             | version                         |     |
+| ------------------------------------------------------------------------------------------------------------- | ------------------------------- | --- |
+| [@utrecht/{component}-css](https://github.com/nl-design-system/utrecht/tree/main/components)                  | All components available        |     |
+| [@utrecht/{component}-react](https://github.com/nl-design-system/utrecht/tree/main/packages/components-react) | Handpicked components available |     |
 
 ## Contributing
 

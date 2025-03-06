@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from '@utrecht/button-react';
 import { createRef } from 'react';
-import { ButtonGroup } from './ButtonGroup';
+import { ButtonGroup } from './index';
 import '@testing-library/jest-dom';
 
 describe('Button group', () => {
