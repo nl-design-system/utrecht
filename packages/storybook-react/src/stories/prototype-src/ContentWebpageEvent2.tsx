@@ -138,7 +138,7 @@ const Events2: React.FC = () => {
       <UtrechtSeparator></UtrechtSeparator>
       <ButtonGroup direction="column">
         <ButtonLink appearance="primary-action-button" href={urls.fonttestStapForm}>
-          Naar volgende test pagina
+          Naar test formulier
           <UtrechtIconArrow />
         </ButtonLink>
         <Link
