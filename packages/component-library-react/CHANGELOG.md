@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 9.0.2
+
+### Patch Changes
+
+- Updated dependencies [e336858]
+  - @utrecht/button-group-react@1.0.0
+
 ## 9.0.1
 
 ### Patch Changes
