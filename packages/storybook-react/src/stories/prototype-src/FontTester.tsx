@@ -1,24 +1,24 @@
+import { Heading2 } from '@utrecht/component-library-react';
 import React, { useEffect, useState } from 'react';
 
 // 🔹 Beschikbare fonts
 const fontOptions = [
-  { label: 'Lucidia family', value: "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, sans-serif" },
-  { label: 'Helvetica Neue', value: "'Helvetica Neue', Arial, sans-serif" },
-  { label: 'Inter', value: "'Inter', sans-serif" },
-  { label: 'Roboto', value: "'Roboto', sans-serif" },
+  {
+    label: 'Lucida family (Hebben we nu)',
+    value: "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, sans-serif",
+  },
   { label: 'Fira Sans 🧙🏼‍♂️', value: "'Fira Sans', sans-serif" },
   { label: 'Source Sans 3', value: "'Source Sans 3', sans-serif" },
   { label: 'Noto Sans', value: "'Noto Sans', sans-serif" },
-  { label: 'Mukta 🦆', value: "'Mukta', sans-serif" },
   { label: 'Work Sans', value: "'Work Sans', sans-serif" },
   { label: 'Open Sans', value: "'Open Sans', sans-serif" },
   { label: 'Public Sans', value: "'Public Sans', sans-serif" },
-  { label: 'Ubuntu (Linux)', value: "'Ubuntu', sans-serif" },
+  { label: 'Helvetica family (Voorbeeld)', value: "'Helvetica Neue', sans-serif" },
   {
     label: 'System Font',
     value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
   },
-  { label: 'Comic Sans', value: "'Comic Sans MS', cursive, sans-serif" },
+  { label: 'Comic Sans 👀', value: "'Comic Sans MS', cursive, sans-serif" },
 ];
 
 // 🔥 Google Fonts URLs (voor Inter, Roboto en Ubuntu)
@@ -119,8 +119,8 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? '▶' : '◀'}</button>
 
         {/* 🔹 Font Selector als Radio Buttons */}
-        <label className="utrecht-font-tester-label">Font Family:</label>
-        <div style={{ maxHeight: '500px', overflowY: 'auto', padding: '5px', borderRadius: '3px' }}>
+        <Heading2 className="utrecht-font-tester-h2">Kies een lettertype</Heading2>
+        <div style={{ overflowY: 'auto' }}>
           {fontOptions.map((font) => (
             <label key={font.value} className="utrecht-font-tester-label">
               <input
@@ -136,6 +136,8 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
 
         {/* 🔹 Font Weight Sliders */}
+        <Heading2 className="utrecht-font-tester-h2">Shape het lettertype</Heading2>
+
         <div>
           <label className="utrecht-font-tester-label">Heading Font Weight: {headingFontWeight}</label>
           <input

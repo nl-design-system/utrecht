@@ -4,6 +4,7 @@ import {
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
   Button,
+  ButtonGroup,
   ButtonLink,
   DataList,
   DataListItem,
@@ -45,6 +46,7 @@ import {
   UtrechtIconNieuwsbrief,
   UtrechtIconWhatsapp,
   UtrechtLogo,
+  UtrechtSeparator,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
@@ -79,10 +81,14 @@ export const One: Story = {
           <main>
             <section>
               <ContentWebpage />
-              <ButtonLink appearance="primary-action-button" href={urls.scenarioAscenario}>
-                Starten
-                <UtrechtIconArrow />
-              </ButtonLink>
+
+              <UtrechtSeparator></UtrechtSeparator>
+              <ButtonGroup direction="column">
+                <ButtonLink appearance="primary-action-button" href={urls.fonttestStap1}>
+                  Volgende test pagina
+                  <UtrechtIconArrow />
+                </ButtonLink>
+              </ButtonGroup>
             </section>
           </main>
         </PageContent>

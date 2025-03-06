@@ -18,8 +18,14 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconCross } from '@utrecht/web-component-library-react';
+import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconCross,
+  UtrechtSeparator,
+} from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
+import urls from './variables.js';
 
 const Events3: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');
@@ -113,10 +119,6 @@ const Events3: React.FC = () => {
         </>
       )}
       <ButtonGroup direction="column">
-        <ButtonLink appearance="primary-action-button" href="#">
-          Volgende stap
-          <UtrechtIconArrow />
-        </ButtonLink>
         <Link
           href="#"
           className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
@@ -132,6 +134,22 @@ const Events3: React.FC = () => {
         >
           <UtrechtIconCross />
           Stoppen met formulier
+        </Link>
+      </ButtonGroup>
+
+      <UtrechtSeparator></UtrechtSeparator>
+      <ButtonGroup direction="column">
+        <ButtonLink appearance="primary-action-button" href={urls.fonttestWebpagina}>
+          Terug naar start
+          <UtrechtIconArrow />
+        </ButtonLink>
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          icon="UtrechtIconChevronLeft"
+          href={urls.fonttestStap2}
+        >
+          <UtrechtIconChevronLeft />
+          Pagina terug
         </Link>
       </ButtonGroup>
     </>

@@ -11,5 +11,9 @@ const urls = {
   scenarioBPage2: './iframe.html?args=&id=klachtenformulier-form-pages-stap-2b--one&viewMode=story',
   scenarioBPage3: './iframe.html?args=&id=klachtenformulier-form-pages-stap-3b--one&viewMode=story',
   scenarioBPage4: './iframe.html?args=&id=klachtenformulier-form-pages-stap-4b--one&viewMode=story',
+  fonttestWebpagina: './iframe.html?args=&id=webpagina-font1--one&viewMode=story',
+  fonttestStap1: './iframe.html?args=&id=webpagina-event1-font1--one&viewMode=story',
+  fonttestStap2: './iframe.html?args=&id=webpagina-event2-font--one&viewMode=story',
+  fonttestStapForm: './iframe.html?args=&id=webpagina-event3-font--one&viewMode=story',
 };
 export default urls;

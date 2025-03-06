@@ -1,4 +1,5 @@
 import {
+  ButtonGroup,
   ButtonLink,
   Heading1,
   Heading2,
@@ -15,7 +16,9 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
+  UtrechtButton,
   UtrechtIconArrow,
+  UtrechtIconChevronLeft,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
   UtrechtIconLinkedin,
@@ -25,6 +28,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import FooterKlachten from './FooterKlachtenFormulier.js';
+import urls from './variables.js';
 import { Separator } from '../BreadcrumbNav.stories.js';
 const Events1: React.FC = () => {
   return (
@@ -48,9 +52,8 @@ const Events1: React.FC = () => {
       <Heading2>Doe de vergunningcheck</Heading2>
       <Paragraph>
         Als u een evenement organiseert, dan moet u meestal een vergunning aanvragen. Soms hoeft u alleen een melding
-        doen. Vul het formulier{' '}
-        <Link href="https://www.utrecht.nl/vergunningcheckevenement/">Vergunningcheck buitenevenement</Link> in. U
-        krijgt dan meteen informatie over wat u moet doen voor het organiseren van uw evenement.
+        doen. Vul het formulier <Link href="#">Vergunningcheck buitenevenement</Link> in. U krijgt dan meteen informatie
+        over wat u moet doen voor het organiseren van uw evenement.
       </Paragraph>
       <Heading2>Locaties bekijken</Heading2>
       <Paragraph>
@@ -65,7 +68,7 @@ const Events1: React.FC = () => {
         Buitenlocaties met voorzieningen en regels
       </Link>
       <Heading2>Vergunning aanvragen</Heading2>
-      <ButtonLink appearance="primary-action-button" href="">
+      <ButtonLink appearance="primary-action-button" href={urls.fonttestStap2}>
         Vraag een evenementenvergunning aan
         <UtrechtIconArrow />
       </ButtonLink>
@@ -77,7 +80,7 @@ const Events1: React.FC = () => {
         Staat uw evenement op de reserveringskalender? Dan heeft uw vergunningaanvraag voorrang op andere aanvragen. U
         moet dan dus nog wel een vergunning aanvragen.
       </Paragraph>
-      <ButtonLink appearance="primary-action-button" href="">
+      <ButtonLink appearance="primary-action-button" href={urls.fonttestStap2}>
         Meld plek en datum aan voor reserveringskalender
         <UtrechtIconArrow />
       </ButtonLink>
@@ -90,7 +93,7 @@ const Events1: React.FC = () => {
       >
         <UtrechtIconArrow />
         Overzicht aanvragen evenementenvergunning (pdf, 196 kB)
-      </Link>{' '}
+      </Link>
       <Link
         href="#"
         className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
@@ -134,6 +137,21 @@ const Events1: React.FC = () => {
         <UtrechtIconArrow />
         Bezoek in Utrecht
       </Link>
+
+      <UtrechtSeparator></UtrechtSeparator>
+      <ButtonGroup direction="column">
+        <ButtonLink appearance="primary-action-button" href={urls.fonttestStap2}>
+          Naar volgende test pagina
+          <UtrechtIconArrow />
+        </ButtonLink>
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          href={urls.fonttestWebpagina}
+        >
+          <UtrechtIconChevronLeft />
+          Pagina terug
+        </Link>
+      </ButtonGroup>
     </>
   );
 };
