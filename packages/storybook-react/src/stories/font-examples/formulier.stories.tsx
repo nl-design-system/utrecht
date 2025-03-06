@@ -204,9 +204,8 @@ export const One: Story = {
                         </UnorderedList>
                       </div>
                     )}
-
-                    <ButtonLink appearance="primary-action-button" href={urls.scenarioAPage4} onClick={handleSubmit}>
-                      Volgende stap
+                    <ButtonLink appearance="primary-action-button" href={urls.fonttestStap2} onClick={handleSubmit}>
+                      Pagina terug
                       <UtrechtIconArrow />
                     </ButtonLink>
                     <Link

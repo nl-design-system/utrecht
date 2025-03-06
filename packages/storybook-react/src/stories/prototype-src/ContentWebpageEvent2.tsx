@@ -1,5 +1,6 @@
 import {
   AccordionProvider,
+  ButtonGroup,
   ButtonLink,
   Heading1,
   Heading2,
@@ -19,6 +20,7 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   UtrechtIconArrow,
+  UtrechtIconChevronLeft,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
   UtrechtIconLinkedin,
@@ -28,6 +30,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import FooterKlachten from './FooterKlachtenFormulier.js';
+import urls from './variables.js';
 import { Separator } from '../BreadcrumbNav.stories.js';
 const Events2: React.FC = () => {
   return (
@@ -116,7 +119,7 @@ const Events2: React.FC = () => {
       </UnorderedList>
       <Heading2>Aanvragen</Heading2>
       <Paragraph>U moet uw aanvraag voor een vergunning minimaal 12 weken voor uw evenement aanvragen.</Paragraph>
-      <ButtonLink appearance="primary-action-button" href="">
+      <ButtonLink appearance="primary-action-button" href={urls.fonttestStapForm}>
         Vraag vergunning aan
         <UtrechtIconArrow />
       </ButtonLink>
@@ -131,6 +134,22 @@ const Events2: React.FC = () => {
           <Link href="#">Bekijk welk evenement een evenementenvergunning heeft gekregen</Link>.
         </UnorderedListItem>
       </UnorderedList>
+
+      <UtrechtSeparator></UtrechtSeparator>
+      <ButtonGroup direction="column">
+        <ButtonLink appearance="primary-action-button" href={urls.fonttestStapForm}>
+          Naar volgende test pagina
+          <UtrechtIconArrow />
+        </ButtonLink>
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          icon="UtrechtIconChevronLeft"
+          href={urls.fonttestStap1}
+        >
+          <UtrechtIconChevronLeft />
+          Pagina terug
+        </Link>
+      </ButtonGroup>
     </>
   );
 };

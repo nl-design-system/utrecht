@@ -58,17 +58,33 @@ div.utrecht-font-tester-container {
   transform: translateY(-50%);
 }
 
+/* temp fix for strange padding margin fails in layout */
+.utrecht-accordion__section button,
+.utrecht-accordion__section h1,
+.utrecht-form-field--radio p {
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+}
+
 .utrecht-font-tester-container button:hover {
   background: hsl(223.64 22% 17.45%) !important;
 }
+.utrecht-font-tester-h2 {
+  color: #ddd !important; /* Optioneel: subtieler maken */
+  display: block;
+  font-size: 16px !important;
+  font-weight: 800;
+  margin-block-end: 8px;
+  margin-block-start: 12px !important;
+}
 
 .utrecht-font-tester-label {
-  color: #ddd; /* Optioneel: subtieler maken */
+  color: #ddd !important; /* Optioneel: subtieler maken */
   display: block;
-  font-size: 12px !important;
-  font-weight: 600;
+  font-size: 14px !important;
+  font-weight: 400 !important;
   margin-block-end: 5px;
-  margin-block-start: 10px;
+  margin-block-start: 5px !important;
 }
 .utrecht-font-tester-label input {
   margin-inline-end: 8px !important;
@@ -286,5 +302,8 @@ input[name="tijdstip"] {
 }
 section {
   max-inline-size: 65ch;
+}
+.utrecht-link {
+  text-decoration: underline;
 }
 /* stylelint-enable selector-class-pattern, property-disallowed-list */
