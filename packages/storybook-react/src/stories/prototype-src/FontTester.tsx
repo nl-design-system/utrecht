@@ -10,6 +10,7 @@ const fontOptions = [
   { label: 'Fira Sans 🧙🏼‍♂️', value: "'Fira Sans', sans-serif" },
   { label: 'Source Sans 3', value: "'Source Sans 3', sans-serif" },
   { label: 'Noto Sans', value: "'Noto Sans', sans-serif" },
+  { label: 'IBM Plex Sans 🤖', value: "'IBM Plex Sans', sans-serif" },
   { label: 'Work Sans', value: "'Work Sans', sans-serif" },
   { label: 'Open Sans', value: "'Open Sans', sans-serif" },
   { label: 'Public Sans', value: "'Public Sans', sans-serif" },
@@ -23,8 +24,8 @@ const fontOptions = [
 
 // 🔥 Google Fonts URLs (voor Inter, Roboto en Ubuntu)
 const fontUrls: { [key: string]: string } = {
-  "'Inter', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap',
+  "'IBM Plex Sans', sans-serif":
+    'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap',
   "'Roboto', sans-serif": 'https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap',
   "'Fira Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet',
@@ -54,6 +55,9 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [paragraphFontWeight, setParagraphFontWeight] = useState(
     () => Number(localStorage.getItem('paragraphFontWeight')) || 400,
   );
+  const [buttonFontWeight, setButtonFontWeight] = useState(
+    () => Number(localStorage.getItem('buttonFontWeight')) || 400,
+  );
 
   const [isOpen, setIsOpen] = useState(false); // 🔥 Toggle paneel
 
@@ -64,6 +68,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     localStorage.setItem('headingFontWeight', headingFontWeight.toString());
     localStorage.setItem('strongFontWeight', strongFontWeight.toString());
     localStorage.setItem('paragraphFontWeight', paragraphFontWeight.toString());
+    localStorage.setItem('buttonFontWeight', buttonFontWeight.toString());
 
     // Dynamisch een link-tag toevoegen om fonts in te laden
     const fontLinkId = 'dynamic-font';
@@ -76,7 +81,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     }
     fontLink.href = fontUrls[selectedFont] || '';
 
-    // Update de CSS-variabelen met de font-size in REM (direct)
+    // Update de CSS-variabelen en regels voor de verschillende elementen
     let styleElement = document.getElementById('fontOverrideStyle') as HTMLStyleElement;
     if (!styleElement) {
       styleElement = document.createElement('style');
@@ -91,18 +96,30 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         --utrecht-document-line-height: ${lineHeight} !important;
         --utrecht-paragraph-line-height: ${lineHeight} !important;
 
-        /* ✅ Dynamische heading font-weight */
+        /* Dynamische heading font-weight */
         --utrecht-heading-1-font-weight: ${headingFontWeight} !important;
         --utrecht-heading-2-font-weight: ${headingFontWeight} !important;
 
-        /* ✅ Dynamische strong font-weight */
+        /* Dynamische strong font-weight */
         --utrecht-emphasis-strong-font-weight: ${strongFontWeight} !important;
       
-        /* ✅ Dynamische paragraph font-weight */
+        /* Dynamische paragraph font-weight */
         --utrecht-paragraph-font-weight: ${paragraphFontWeight} !important;
-        }
+      }
+
+      /* ul, ol, li krijgen hetzelfde font-weight als de paragraaf */
+      .utrecht-theme ul,
+      .utrecht-theme ol,
+      .utrecht-theme li {
+        font-weight: ${paragraphFontWeight} !important;
+      }
+
+      /* Button krijgt een eigen font-weight */
+      .utrecht-theme button {
+        font-weight: ${buttonFontWeight} !important;
+      }
     `;
-  }, [selectedFont, fontSize, lineHeight, headingFontWeight, strongFontWeight, paragraphFontWeight]);
+  }, [selectedFont, fontSize, lineHeight, headingFontWeight, strongFontWeight, paragraphFontWeight, buttonFontWeight]);
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
@@ -112,7 +129,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div
         className="utrecht-font-tester-container"
         style={{
-          insetInlineEnd: isOpen ? '0px' : '-250px', // 🔥 Schuift in en uit
+          insetInlineEnd: isOpen ? '0px' : '-250px', // Paneel schuift in en uit
         }}
       >
         {/* ⚙️ Toggle-knop */}
@@ -152,19 +169,6 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         </div>
 
         <div>
-          <label className="utrecht-font-tester-label">Strong Font Weight: {strongFontWeight}</label>
-          <input
-            type="range"
-            min="300"
-            max="900"
-            step="100"
-            value={strongFontWeight}
-            onChange={(e) => setStrongFontWeight(Number(e.target.value))}
-            style={{ width: '100%' }}
-          />
-        </div>
-
-        <div>
           <label className="utrecht-font-tester-label">Paragraph Font Weight: {paragraphFontWeight}</label>
           <input
             type="range"
@@ -173,6 +177,32 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             step="100"
             value={paragraphFontWeight}
             onChange={(e) => setParagraphFontWeight(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
+        </div>
+
+        <div>
+          <label className="utrecht-font-tester-label">Button Font Weight: {buttonFontWeight}</label>
+          <input
+            type="range"
+            min="300"
+            max="900"
+            step="100"
+            value={buttonFontWeight}
+            onChange={(e) => setButtonFontWeight(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
+        </div>
+
+        <div>
+          <label className="utrecht-font-tester-label">Strong (Bold) Font Weight: {strongFontWeight}</label>
+          <input
+            type="range"
+            min="300"
+            max="900"
+            step="100"
+            value={strongFontWeight}
+            onChange={(e) => setStrongFontWeight(Number(e.target.value))}
             style={{ width: '100%' }}
           />
         </div>
@@ -195,7 +225,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
         {/* 🔹 Line Height Slider */}
         <div>
-          <label className="utrecht-font-tester-label">LineHeight: {lineHeight}</label>
+          <label className="utrecht-font-tester-label">LineHeight (regelafstand): {lineHeight}</label>
           <input
             type="range"
             min="1.0"
