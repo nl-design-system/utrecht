@@ -22,7 +22,7 @@ const fontOptions = [
   { label: 'Comic Sans 👀', value: "'Comic Sans MS', cursive, sans-serif" },
 ];
 
-// 🔥 Google Fonts URLs (voor Inter, Roboto en Ubuntu)
+// 🔥 Google Fonts URLs (voor IBM Plex Sans, Roboto, Fira Sans, etc.)
 const fontUrls: { [key: string]: string } = {
   "'IBM Plex Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap',
@@ -58,7 +58,7 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [buttonFontWeight, setButtonFontWeight] = useState(
     () => Number(localStorage.getItem('buttonFontWeight')) || 400,
   );
-
+  const [copySuccess, setCopySuccess] = useState('');
   const [isOpen, setIsOpen] = useState(false); // 🔥 Toggle paneel
 
   useEffect(() => {
@@ -115,11 +115,41 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       }
 
       /* Button krijgt een eigen font-weight */
-      .utrecht-theme button {
-        font-weight: ${buttonFontWeight} !important;
-      }
+        .utrecht-theme button,
+        .utrecht-theme .utrecht-button-link {
+          font-weight: ${buttonFontWeight} !important;
+          font-size: ${fontSize}rem !important;
+        }
     `;
   }, [selectedFont, fontSize, lineHeight, headingFontWeight, strongFontWeight, paragraphFontWeight, buttonFontWeight]);
+
+  // Genereert een overzicht met de huidige instellingen als tekst.
+  const generateSettingsSummary = () => {
+    // Verwijder quotes voor een nettere weergave van de fontnaam
+    const cleanFont = selectedFont.replace(/['"]/g, '');
+    const fontSizePx = (fontSize * 16).toFixed(0);
+    return `Font-family: ${cleanFont}
+Font-size: ${fontSizePx}px (${fontSize.toFixed(2)}rem)
+Line-height: ${lineHeight}
+Heading Font Weight: ${headingFontWeight}
+Strong Font Weight: ${strongFontWeight}
+Paragraph Font Weight: ${paragraphFontWeight}
+Button Font Weight: ${buttonFontWeight}`;
+  };
+
+  // Kopieert de gegenereerde instellingen-opsomming naar het klembord.
+  const handleCopySummary = () => {
+    const summary = generateSettingsSummary();
+    navigator.clipboard
+      .writeText(summary)
+      .then(() => {
+        setCopySuccess('Instellingen gekopieerd!');
+        setTimeout(() => setCopySuccess(''), 3000);
+      })
+      .catch((err) => {
+        console.error('Fout bij kopiëren:', err);
+      });
+  };
 
   return (
     <div style={{ position: 'relative', minHeight: '100vh' }}>
@@ -129,11 +159,39 @@ const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
       <div
         className="utrecht-font-tester-container"
         style={{
-          insetInlineEnd: isOpen ? '0px' : '-250px', // Paneel schuift in en uit
+          insetInlineEnd: isOpen ? '0px' : '-250px',
         }}
       >
         {/* ⚙️ Toggle-knop */}
         <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? '▶' : '◀'}</button>
+
+        {/* Extra link voor het kopiëren van de instellingenopsomming */}
+        <div className="utrecht-font-tester-copysettings">
+          <a
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              handleCopySummary();
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-copy"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z" />
+              <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1" />
+            </svg>
+            Kopieer instellingen
+          </a>
+          {copySuccess && <div style={{ fontSize: '12px', color: 'lime' }}>{copySuccess}</div>}
+        </div>
 
         {/* 🔹 Font Selector als Radio Buttons */}
         <Heading2 className="utrecht-font-tester-h2">Kies een lettertype</Heading2>

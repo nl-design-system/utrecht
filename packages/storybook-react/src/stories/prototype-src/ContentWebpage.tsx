@@ -1,5 +1,7 @@
 import {
   AccordionProvider,
+  ButtonGroup,
+  ButtonLink,
   Checkbox,
   Heading1,
   Heading2,
@@ -11,12 +13,15 @@ import {
   PageFooter,
   Paragraph,
   RadioButton,
+  SpotlightSection,
   Strong,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconChevronRight,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
   UtrechtIconLinkedin,
@@ -24,15 +29,17 @@ import {
   UtrechtIconWhatsapp,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import urls from './variables.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>
       <Heading1>Testtekst voor Font Vergelijking</Heading1>
       <Heading2>Leesbaarheid & Lettercombinaties</Heading2>
-      <Paragraph>
+      <Paragraph appearance="lead">
         Het is belangrijk om te zien hoe een <strong>lettertype omgaat met lettercombinaties</strong> die visueel op
         elkaar lijken. Daarom testen we combinaties zoals:
-        <br /> <br />
+      </Paragraph>
+      <Paragraph>
         nh rn mnnn mmnn nmnn nmmn <br />
         iIlL1 lL1I Il1l Li1I 1lIl <br />
         0oO0Oo00 <br />
@@ -42,21 +49,28 @@ const ContentWebpage: React.FC = () => {
         beïnvloedt. Ook letters zoals I (hoofdletter i), l (kleine letter L) en 1 (cijfer één) kunnen verwarrend zijn in
         sommige fonts.
       </Paragraph>
-      <Heading2>Cijfers & Getalnotatie</Heading2>
+      <br />
+      <SpotlightSection type="info">
+        <Heading2>Cijfers & Getalnotatie</Heading2>
+        <Paragraph>
+          Om te beoordelen hoe goed cijfers leesbaar zijn in een bepaald font, testen we verschillende notaties en
+          combinaties:
+          <br /> <br />
+          1234567890 <br />
+          3,14159 (Pi) <br />
+          2.718 (e) <br />
+          1.618 (Phi) <br />
+          123.456.789 (decimale notatie) <br />
+          ABC-123-xyz <br />
+          ID: A1B2C3D4E5
+        </Paragraph>
+      </SpotlightSection>
+
       <Paragraph>
-        Om te beoordelen hoe goed cijfers leesbaar zijn in een bepaald font, testen we verschillende notaties en
-        combinaties:
-        <br /> <br />
-        1234567890 <br />
-        3,14159 (Pi) <br />
-        2.718 (e) <br />
-        1.618 (Phi) <br />
-        123.456.789 (decimale notatie) <br />
-        ABC-123-xyz <br />
-        ID: A1B2C3D4E5 <br /> <br />
         Sommige fonts kunnen bijvoorbeeld 0 (nul) en O (hoofdletter O) verwarrend weergeven. Dit kan een probleem zijn
         bij het lezen van bankrekeningnummers, ID’s en andere kritieke data.
       </Paragraph>
+
       <Heading2>Woorden met potentiële verwarring</Heading2>
       <Paragraph>
         Hier is een set woorden die veelvoorkomende lettercombinaties testen: <br />
@@ -79,6 +93,37 @@ const ContentWebpage: React.FC = () => {
         Dit is vooral belangrijk voor overheids- en juridische documenten, waar correcte weergave van symbolen
         essentieel is.
       </Paragraph>
+      <Heading2>Knoppen en linkjes</Heading2>
+      <ButtonGroup direction="column">
+        <ButtonLink appearance="primary-action-button" href={urls.fonttestWebpagina}>
+          Voorbeeld knop
+          <UtrechtIconArrow />
+        </ButtonLink>
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          icon="UtrechtIconChevronLeft"
+          href={urls.fonttestStap2}
+        >
+          <UtrechtIconChevronRight />
+          Voorbeeld link naar evenement aanvragen
+        </Link>
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          icon="UtrechtIconChevronLeft"
+          href={urls.fonttestStap2}
+        >
+          <UtrechtIconChevronRight />
+          Voorbeeld link naar vergunning aanvragen
+        </Link>
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          icon="UtrechtIconChevronLeft"
+          href={urls.fonttestStap2}
+        >
+          <UtrechtIconChevronRight />
+          Evenement, vergunning aanvragen
+        </Link>
+      </ButtonGroup>
       <Heading2>Bold & Gewichtvergelijking</Heading2>
       <Paragraph>
         <span className="utrecht-font-weight-200">Thin (200) Zeer dunne tekst, meestal decoratief</span> <br />
