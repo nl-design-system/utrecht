@@ -1,3 +1,186 @@
+/* Helper classes voor de verschillende gewichten */
+
+.utrecht-font-weight-200 {
+  font-weight: 200;
+}
+
+.utrecht-font-weight-300 {
+  font-weight: 300;
+}
+
+/* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
+.utrecht-font-weight-400 {
+  font-weight: 400;
+}
+
+/* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
+.utrecht-font-weight-500 {
+  font-weight: 500;
+}
+
+.utrecht-font-weight-600 {
+  font-weight: 600;
+}
+
+.utrecht-font-weight-700 {
+  font-weight: 700;
+}
+
+.utrecht-font-weight-800 {
+  font-weight: 800;
+}
+
+.utrecht-font-tester-container a {
+  color: white !important;
+  text-decoration: underline !important;
+}
+
+.utrecht-font-tester-container {
+  background: hsl(223.64 22% 17.45%);
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
+  color: rgba(243 243 243);
+  inset-block-start: 32px;
+  min-inline-size: 220px;
+  padding-block: 16px;
+  padding-inline: 16px;
+  position: fixed;
+  transition: inset-inline-end 500ms ease-in-out;
+  z-index: 1000;
+}
+
+.utrecht-font-tester-container button {
+  background: hsl(223.64 22% 17.45%);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
+  color: rgb(243 243 243);
+  cursor: pointer;
+  font-size: 18px;
+  inset-block-start: 26px;
+  inset-inline-start: -35px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.utrecht-font-tester-copysettings {
+  font-size: 12px;
+  text-align: center;
+}
+
+.utrecht-font-tester-copysettings a {
+  align-items: center;
+  color: inherit;
+  display: inline-flex;
+  gap: 4px; /* Ruimte tussen icoon en tekst */
+  text-decoration: none;
+}
+
+/* temp fix for strange padding margin fails in layout */
+.utrecht-accordion__section button,
+.utrecht-accordion__section h1,
+.utrecht-form-field--radio p {
+  margin-block: 0 !important;
+  padding-block: 0 !important;
+}
+
+.utrecht-font-tester-container button:hover {
+  background: hsl(223.64 22% 17.45%) !important;
+}
+.utrecht-font-tester-h2 {
+  color: #ddd !important; /* Optioneel: subtieler maken */
+  display: block;
+  font-size: 16px !important;
+  font-weight: 800;
+  margin-block-end: 8px;
+  margin-block-start: 12px !important;
+}
+
+.utrecht-font-tester-label {
+  color: #ddd !important; /* Optioneel: subtieler maken */
+  display: block;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  margin-block-end: 5px;
+  margin-block-start: 5px !important;
+}
+.utrecht-font-tester-label input {
+  margin-inline-end: 8px !important;
+}
+
+/* 🔹 Wrapper voor de toggle-switch */
+.utrecht-font-tester-toggle-switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  position: relative;
+}
+
+/* 🔹 Stijl voor het label naast de switch */
+.utrecht-font-tester-toggle-switch-label {
+  align-items: center;
+  display: flex;
+  font-size: 12px;
+  font-weight: 600;
+  gap: 10px;
+  margin-block-end: 8px;
+}
+
+/* 🔹 Input (verborgen, maar nog steeds interactief voor toegankelijkheid) */
+.utrecht-font-tester-toggle-switch input {
+  display: none;
+  position: absolute;
+}
+
+/* 🔹 Stijl voor de slider zelf */
+.utrecht-font-tester-toggle-slider {
+  background-color: #ccc;
+  block-size: 20px;
+  border-radius: 10px;
+  inline-size: 38px;
+  position: relative;
+  transition: background-color 300ms ease-in-out;
+}
+
+/* 🔹 Stijl voor de beweegbare schakelaar (de "knop" in de slider) */
+.utrecht-font-tester-toggle-slider::before {
+  background-color: white;
+  block-size: 14px;
+  border-radius: 50%;
+  content: "";
+  inline-size: 14px;
+  inset-block-end: 3px;
+  inset-inline-start: 3px;
+  position: absolute;
+  transition: transform 300ms ease-in-out;
+}
+
+/* 🔹 Beweegbare schakelaar verplaatsen naar rechts bij "aan" */
+input:checked + .utrecht-font-tester-toggle-slider::before {
+  transform: translateX(18px);
+}
+
+/* 🔹 Actieve staat wanneer de switch is ingeschakeld */
+input:checked + .utrecht-font-tester-toggle-slider {
+  background-color: #4caf50;
+}
+
+.utrecht-font-tester-toggle-switch:hover .utrecht-font-tester-toggle-slider {
+  background-color: #b3b3b3;
+}
+
+/* 🔹 Focus stijl voor toetsenbord-navigatie */
+.utrecht-font-tester-toggle-switch input:focus + .utrecht-font-tester-toggle-slider {
+  outline: 2px solid #4caf50;
+  outline-offset: 3px;
+}
+
+/* 🔹 Optionele hover-effecten voor betere interactie */
+
+input:checked:hover + .utrecht-font-tester-toggle-slider {
+  background-color: #45a049;
+}
+
 .utrecht-theme {
   .utrecht-breadcrumb-nav__link {
     padding-inline-start: 0; /* Gelijke uitlijning met linker kantlijn */
@@ -137,5 +320,8 @@ input[name="tijdstip"] {
 }
 section {
   max-inline-size: 65ch;
+}
+.utrecht-link {
+  text-decoration: underline;
 }
 /* stylelint-enable selector-class-pattern, property-disallowed-list */
