@@ -3,6 +3,7 @@ import merge from 'lodash.merge';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
 import '@open-formulieren/sdk/styles.css';
+import { OpenFormsContainer } from './OpenFormsContainer';
 
 export type FormConfiguration = { type: string; components: { type: string; key: string; label: string }[] };
 
@@ -69,9 +70,17 @@ export const SingleFormioComponent = ({
   extraComponentProperties = {},
 }: SingleFormioComponentProps) => {
   const component = merge({ type, key, label }, extraComponentProperties);
-  return <RenderFormioForm form={{ type: 'form', components: [component] }} />;
+  return (
+    <OpenFormsContainer>
+      <RenderFormioForm form={{ type: 'form', components: [component] }} />
+    </OpenFormsContainer>
+  );
 };
 
 export const MultipleFormioComponents = ({ components }: MultipleFormioComponentsProps) => {
-  return <RenderFormioForm form={{ type: 'form', components: components }} />;
+  return (
+    <OpenFormsContainer>
+      <RenderFormioForm form={{ type: 'form', components: components }} />
+    </OpenFormsContainer>
+  );
 };
