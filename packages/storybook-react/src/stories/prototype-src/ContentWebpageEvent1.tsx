@@ -3,29 +3,13 @@ import {
   ButtonLink,
   Heading1,
   Heading2,
-  Heading3,
-  Heading4,
   Link,
-  LinkList,
-  LinkListLink,
-  PageFooter,
   Paragraph,
   SpotlightSection,
-  Strong,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtButton,
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtSeparator,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtSeparator } from '@utrecht/web-component-library-react';
 import React from 'react';
 import FooterKlachten from './FooterKlachtenFormulier.js';
 import urls from './variables.js';
