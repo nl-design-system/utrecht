@@ -1,6 +1,5 @@
 import {
   Heading2,
-  Heading3,
   Heading4,
   Link,
   LinkList,

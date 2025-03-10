@@ -2,32 +2,17 @@ import {
   AccordionProvider,
   ButtonGroup,
   ButtonLink,
-  Checkbox,
   Heading1,
   Heading2,
   Heading3,
-  Heading4,
   Link,
-  LinkList,
-  LinkListLink,
-  PageFooter,
   Paragraph,
-  RadioButton,
   SpotlightSection,
   Strong,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconChevronRight,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React from 'react';
 import urls from './variables.js';
 const ContentWebpage: React.FC = () => {
@@ -36,7 +21,7 @@ const ContentWebpage: React.FC = () => {
       <Heading1>Testtekst voor Font Vergelijking</Heading1>
       <Heading2>Leesbaarheid & Lettercombinaties</Heading2>
       <Paragraph appearance="lead">
-        Het is belangrijk om te zien hoe een <strong>lettertype omgaat met lettercombinaties</strong> die visueel op
+        Het is belangrijk om te zien hoe een <Strong>lettertype omgaat met lettercombinaties</Strong> die visueel op
         elkaar lijken. Daarom testen we combinaties zoals:
       </Paragraph>
       <Paragraph>
@@ -101,7 +86,6 @@ const ContentWebpage: React.FC = () => {
         </ButtonLink>
         <Link
           className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-          icon="UtrechtIconChevronLeft"
           href={urls.fonttestStap2}
         >
           <UtrechtIconChevronRight />
@@ -109,7 +93,6 @@ const ContentWebpage: React.FC = () => {
         </Link>
         <Link
           className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-          icon="UtrechtIconChevronLeft"
           href={urls.fonttestStap2}
         >
           <UtrechtIconChevronRight />
@@ -117,7 +100,6 @@ const ContentWebpage: React.FC = () => {
         </Link>
         <Link
           className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-          icon="UtrechtIconChevronLeft"
           href={urls.fonttestStap2}
         >
           <UtrechtIconChevronRight />
@@ -140,13 +122,13 @@ const ContentWebpage: React.FC = () => {
         AI alleen, ook wel de ai zegt: Op een kille ochtend, toen de mist langzaam over de straten trok, ontmoette ik
         een intrigerende figuur genaamd <em>Il1l</em>. Hij was een ware meester in het onthullen van verborgen patronen
         in de wereld van typografie. Terwijl we door een doolhof van letters en cijfers wandelden -denk aan{' '}
-        <strong>nh rn mnnn mmnn nmnn nmmn</strong> en de mysterieuze <strong>iIlL1 lL1I Il1l Li1I 1lIl</strong>{' '}
+        <Strong>nh rn mnnn mmnn nmnn nmmn</Strong> en de mysterieuze <Strong>iIlL1 lL1I Il1l Li1I 1lIl</Strong>{' '}
         -vertelde hij me dat elk teken een eigen verhaal heeft.
       </Paragraph>
       <Paragraph>
         “Kijk,” zei hij, “in sommige fonts vervagen de grenzen tussen 0 en O, of tussen 1 en I. En de combinatie{' '}
-        <strong>0oO0Oo00</strong> kan je soms doen afvragen of je nu cijfers of letters leest. Zelfs{' '}
-        <strong>8B 3E 5S 2Z 6G</strong> toont hoe getallen en letters samen een visueel patroon vormen. Het draait
+        <Strong>0oO0Oo00</Strong> kan je soms doen afvragen of je nu cijfers of letters leest. Zelfs{' '}
+        <Strong>8B 3E 5S 2Z 6G</Strong> toont hoe getallen en letters samen een visueel patroon vormen. Het draait
         allemaal om de juiste balans tussen stijl en functionaliteit.”
       </Paragraph>
 

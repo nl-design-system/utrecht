@@ -1,25 +1,9 @@
 import {
   Heading1,
-  Heading2,
-  Heading3,
-  Heading4,
-  Link,
-  LinkList,
-  LinkListLink,
-  PageFooter,
   Paragraph,
-  Strong,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-} from '@utrecht/web-component-library-react';
 import React from 'react';
 const IntroductieKlachten: React.FC = () => {
   return (

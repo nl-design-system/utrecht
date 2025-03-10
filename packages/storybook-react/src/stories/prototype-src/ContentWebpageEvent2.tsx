@@ -4,30 +4,14 @@ import {
   ButtonLink,
   Heading1,
   Heading2,
-  Heading3,
-  Heading4,
   Link,
-  LinkList,
-  LinkListLink,
   OrderedList,
   OrderedListItem,
-  PageFooter,
   Paragraph,
-  SpotlightSection,
-  Strong,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtSeparator,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtSeparator } from '@utrecht/web-component-library-react';
 import React from 'react';
 import FooterKlachten from './FooterKlachtenFormulier.js';
 import urls from './variables.js';
@@ -143,7 +127,6 @@ const Events2: React.FC = () => {
         </ButtonLink>
         <Link
           className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-          icon="UtrechtIconChevronLeft"
           href={urls.fonttestStap1}
         >
           <UtrechtIconChevronLeft />

@@ -1,6 +1,4 @@
 import {
-  AccordionProvider,
-  Button,
   ButtonGroup,
   ButtonLink,
   Fieldset,
@@ -14,9 +12,6 @@ import {
   Link,
   Paragraph,
   RadioButton,
-  SpotlightSection,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
   UtrechtIconArrow,
@@ -76,20 +71,20 @@ const Events3: React.FC = () => {
       {selectedOption === '1' && (
         <>
           <Heading3>Persoonsgegevens</Heading3>
-          <FormFieldTextbox label={<>Burgerservicenummer (BSN)</>} name="burgerservicenummer" />
-          <FormFieldTextbox label={<>Voorletter(s)</>} name="voorletters" />
-          <FormFieldTextbox label={<>Tussenvoegsel(s)</>} name="tussenvoegsels" />
-          <FormFieldTextbox label={<>Achternaam</>} name="achternaam" />
+          <FormFieldTextbox label="Burgerservicenummer (BSN)" name="burgerservicenummer" />
+          <FormFieldTextbox label="Voorletter(s)" name="voorletters" />
+          <FormFieldTextbox label="Tussenvoegsel(s)" name="tussenvoegsels" />
+          <FormFieldTextbox label="Achternaam" name="achternaam" />
           <Heading3>Adresgegevens</Heading3>
-          <FormFieldTextbox label={<>Postcode</>} name="Postcode" />
-          <FormFieldTextbox label={<>Huisnummer</>} name="Huisnummer" />
-          <FormFieldTextbox label={<>Huisletter</>} name="Huisletter" />
-          <FormFieldTextbox label={<>Huisnummertoevoeging</>} name="Huisnummertoevoeging" />
-          <FormFieldTextbox label={<>Straatnaam</>} name="Straatnaam" />
-          <FormFieldTextbox label={<>Woonplaats</>} name="Woonplaats" />
+          <FormFieldTextbox label="Postcode" name="Postcode" />
+          <FormFieldTextbox label="Huisnummer" name="Huisnummer" />
+          <FormFieldTextbox label="Huisletter" name="Huisletter" />
+          <FormFieldTextbox label="Huisnummertoevoeging" name="Huisnummertoevoeging" />
+          <FormFieldTextbox label="Straatnaam" name="Straatnaam" />
+          <FormFieldTextbox label="Woonplaats" name="Woonplaats" />
           <Heading3>Contactgegevens</Heading3>
-          <FormFieldTextbox label={<>Telefoonnummer</>} name="Telefoonnummer" />
-          <FormFieldTextbox label={<>E-mail</>} name="E-mail" />
+          <FormFieldTextbox label="Telefoonnummer" name="Telefoonnummer" />
+          <FormFieldTextbox label="E-mail" name="E-mail" />
         </>
       )}
 
@@ -99,23 +94,23 @@ const Events3: React.FC = () => {
             Vul het vestigingsnummer of het KvK-nummer in. Hebt u geen KvK-nummer? Vul dan het vestigingsnummer in.
           </Paragraph>
           <FormFieldTextbox
-            label={<>KvK-nummer</>}
+            label="KvK-nummer"
             name="kvknummer"
             description="Het KvK-nummer vindt u op het uittreksel van de Kamer van Koophandel"
           />
           <FormFieldTextbox
-            label={<>Vestigingsnummer</>}
+            label="Vestigingsnummer"
             name="Vestigingsnummer"
             description="Het vestigingsnummer vindt u op het uittreksel van de Kamer van Koophandel"
           />
-          <FormFieldTextbox label={<>Naam bedrijf/organisatie</>} name="naam" />
+          <FormFieldTextbox label="Naam bedrijf/organisatie" name="naam" />
           <Heading3>Contactpersoon</Heading3>
-          <FormFieldTextbox label={<>Burgerservicenummer (BSN)</>} name="burgerservicenummer" />
-          <FormFieldTextbox label={<>Voorletter(s)</>} name="voorletters" />
-          <FormFieldTextbox label={<>Tussenvoegsel(s)</>} name="tussenvoegsels" />
-          <FormFieldTextbox label={<>Achternaam</>} name="achternaam" /> <Heading3>Contactgegevens</Heading3>
-          <FormFieldTextbox label={<>Telefoonnummer</>} name="Telefoonnummer" />
-          <FormFieldTextbox label={<>E-mail</>} name="E-mail" />
+          <FormFieldTextbox label="Burgerservicenummer (BSN)" name="burgerservicenummer" />
+          <FormFieldTextbox label="Voorletter(s)" name="voorletters" />
+          <FormFieldTextbox label="Tussenvoegsel(s)" name="tussenvoegsels" />
+          <FormFieldTextbox label="Achternaam" name="achternaam" /> <Heading3>Contactgegevens</Heading3>
+          <FormFieldTextbox label="Telefoonnummer" name="Telefoonnummer" />
+          <FormFieldTextbox label="E-mail" name="E-mail" />
         </>
       )}
       <ButtonGroup direction="column">
@@ -145,7 +140,6 @@ const Events3: React.FC = () => {
         </ButtonLink>
         <Link
           className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-          icon="UtrechtIconChevronLeft"
           href={urls.fonttestStap2}
         >
           <UtrechtIconChevronLeft />
