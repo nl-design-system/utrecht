@@ -1,5 +1,13 @@
 # @utrecht/component-library-react
 
+## 9.0.3
+
+### Patch Changes
+
+- Updated dependencies [aaf75bf]
+  - @utrecht/ordered-list-css@1.5.1
+  - @utrecht/html-content-css@1.4.0
+
 ## 9.0.2
 
 ### Patch Changes
