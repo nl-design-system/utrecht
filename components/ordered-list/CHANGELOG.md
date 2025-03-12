@@ -1,5 +1,11 @@
 # @utrecht/ordered-list-css
 
+## 1.5.1
+
+### Patch Changes
+
+- aaf75bf: Add `list-style-type` CSS property to `utrecht-ordered-list`
+
 ## 1.5.0
 
 ### Minor Changes
