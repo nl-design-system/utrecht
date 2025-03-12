@@ -32,7 +32,6 @@
     "@utrecht/blockquote-css": "workspace:*",
     "@utrecht/body-css": "workspace:*",
     "@utrecht/breadcrumb-nav-css": "workspace:*",
-    "@utrecht/build-utils-css": "workspace:*",
     "@utrecht/button-css": "workspace:*",
     "@utrecht/button-group-css": "workspace:*",
     "@utrecht/button-link-css": "workspace:*",
@@ -123,7 +122,8 @@
     "postcss-logical": "7.0.1",
     "rimraf": "5.0.7",
     "rollup": "4.18.0",
-    "rollup-plugin-postcss": "4.0.2"
+    "rollup-plugin-postcss": "4.0.2",
+    "@utrecht/build-utils-css": "workspace:*"
   },
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs",

@@ -1239,9 +1239,6 @@ importers:
       '@utrecht/breadcrumb-nav-css':
         specifier: workspace:*
         version: link:../../components/breadcrumb-nav
-      '@utrecht/build-utils-css':
-        specifier: workspace:*
-        version: link:../build-utils-css
       '@utrecht/button-css':
         specifier: workspace:*
         version: link:../../components/button
@@ -1492,6 +1489,9 @@ importers:
         specifier: workspace:*
         version: link:../../components/url-data
     devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../build-utils-css
       postcss:
         specifier: 8.4.38
         version: 8.4.38
