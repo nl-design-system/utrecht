@@ -1,5 +1,11 @@
 # @utrecht/component-library-css
 
+## 7.1.1
+
+### Patch Changes
+
+- 4880767: Add `list-style-type` CSS property to `utrecht-ordered-list`
+
 ## 7.1.0
 
 ### Minor Changes
