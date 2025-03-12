@@ -3,32 +3,23 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
-  Button,
   ButtonLink,
   Heading1,
   Heading2,
-  Heading3,
-  Link,
   Logo,
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
   Paragraph,
-  Separator,
-  Strong,
   Surface,
-  Textbox,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
 import urls from '../prototype-src/variables.js';
-
+import '../styles.css';
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario A/Stap 1',
   id: 'klachtenformulier-form-pages-stap-1A',
@@ -43,15 +34,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => (
-    <Surface className="utrecht-html">
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
       <Page {...args}>
         <PageHeader>
           <Logo>
             <LogoImage />
           </Logo>
         </PageHeader>
-        <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+        <PageContent>
           <BreadcrumbNav>
             <BreadcrumbNavLink href={urls.scenarioAscenario}>
               <BreadcrumbNavSeparator>

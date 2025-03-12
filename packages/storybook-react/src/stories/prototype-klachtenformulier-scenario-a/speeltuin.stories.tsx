@@ -15,7 +15,6 @@ import {
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
   Paragraph,
   Surface,
@@ -30,6 +29,7 @@ import {
 import React, { useState } from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
+import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario A/Speeltuin',
@@ -45,7 +45,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => {
+  render: (args: any) => {
     const MAX_CHARACTERS = 10;
     const [characterCount, setCharacterCount] = useState(0);
 
@@ -66,7 +66,7 @@ export const One: Story = {
     };
 
     return (
-      <Surface className="utrecht-html">
+      <Surface className="utrecht-custom-theme">
         <Page {...args}>
           <PageHeader>
             <Logo>

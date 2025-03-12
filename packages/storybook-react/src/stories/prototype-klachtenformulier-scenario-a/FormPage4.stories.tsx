@@ -3,40 +3,24 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
-  Button,
-  ButtonGroup,
   ButtonLink,
-  FormFieldErrorMessage,
-  FormFieldTextarea,
-  FormFieldTextbox,
-  FormLabel,
   Heading1,
   Heading2,
-  Heading3,
-  Link,
   Logo,
   LogoImage,
   Page,
   PageContent,
   PageHeader,
   Paragraph,
-  Separator,
   SpotlightSection,
-  Strong,
   Surface,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconCross,
-  UtrechtLogo,
-} from '@utrecht/web-component-library-react';
-import React, { useRef, useState } from 'react';
+import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
+import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
 import urls from '../prototype-src/variables.js';
+import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario A/Stap 4',
@@ -52,8 +36,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => (
-    <Surface className="utrecht-html">
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
       <Page {...args}>
         <PageHeader>
           <Logo>

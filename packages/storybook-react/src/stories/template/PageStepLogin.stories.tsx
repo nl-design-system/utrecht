@@ -18,6 +18,7 @@ import {
   UtrechtLogo,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import '../styles.css';
 
 const meta = {
   title: 'Template/DigiD login page',
@@ -31,13 +32,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Login: Story = {
   render: () => (
-    <Page>
+    <Page className="utrecht-custom-theme">
       <PageHeader>
         <Link href="/">
           <UtrechtLogo />
         </Link>
       </PageHeader>
-      <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+      <PageContent>
         <UtrechtBreadcrumbNav
           json={JSON.stringify([
             { href: 'https://example/', title: 'Home', current: false },

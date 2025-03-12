@@ -11,9 +11,7 @@ import {
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtSeparator } from '@utrecht/web-component-library-react';
 import React from 'react';
-import FooterKlachten from './FooterKlachtenFormulier.js';
 import urls from './variables.js';
-import { Separator } from '../BreadcrumbNav.stories.js';
 const Events1: React.FC = () => {
   return (
     <>

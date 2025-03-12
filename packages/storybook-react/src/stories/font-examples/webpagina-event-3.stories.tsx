@@ -1,51 +1,12 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
-  Button,
-  ButtonLink,
-  DataList,
-  DataListItem,
-  DataListKey,
-  DataListValue,
-  FormField,
-  FormLabel,
-  Heading1,
-  Heading2,
-  Heading3,
-  Link,
-  LinkList,
-  LinkListLink,
   Logo,
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
-  Paragraph,
-  Separator,
-  SpotlightSection,
-  Strong,
   Surface,
-  Textbox,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtBreadcrumbNav,
-  UtrechtDigidButton,
-  UtrechtFormFieldDescription,
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwHuis,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtLogo,
-} from '@utrecht/web-component-library-react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import React from 'react';
 import ContentWebpageEvent3 from '../prototype-src/ContentWebpageEvent3.js';
@@ -66,15 +27,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => (
-    <Surface className="utrecht-html">
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
       <Page {...args}>
         <PageHeader>
           <Logo>
             <LogoImage />
           </Logo>
         </PageHeader>
-        <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+        <PageContent>
           <main>
             <section>
               <ContentWebpageEvent3 />
