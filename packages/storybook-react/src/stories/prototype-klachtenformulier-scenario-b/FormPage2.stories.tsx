@@ -5,18 +5,12 @@ import {
   BreadcrumbNavSeparator,
   ButtonLink,
   Heading1,
-  Heading2,
   Logo,
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
-  Paragraph,
-  Separator,
-  Strong,
   Surface,
-  Textbox,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
@@ -25,6 +19,7 @@ import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
 import urls from '../prototype-src/variables.js';
+import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Klachtenformulier Scenario B/Stap 2',
@@ -40,15 +35,15 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => (
-    <Surface className="utrecht-html">
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
       <Page {...args}>
         <PageHeader>
           <Logo>
             <LogoImage />
           </Logo>
         </PageHeader>
-        <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+        <PageContent>
           <BreadcrumbNav>
             <BreadcrumbNavLink href={urls.scenarioBPage1}>
               <BreadcrumbNavSeparator>

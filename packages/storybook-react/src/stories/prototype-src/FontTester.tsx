@@ -42,7 +42,7 @@ const fontUrls: { [key: string]: string } = {
     'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap',
 };
 
-const FontTester: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+const FontTester: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [selectedFont, setSelectedFont] = useState(() => localStorage.getItem('selectedFont') || fontOptions[0].value);
   const [fontSize, setFontSize] = useState(() => Number(localStorage.getItem('fontSize')) || 1);
   const [lineHeight, setLineHeight] = useState(() => Number(localStorage.getItem('lineHeight')) || 1.5);

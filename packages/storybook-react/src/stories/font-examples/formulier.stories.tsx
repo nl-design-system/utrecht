@@ -9,10 +9,8 @@ import {
   FormFieldErrorMessage,
   FormFieldTextarea,
   FormFieldTextbox,
-  FormLabel,
   Heading1,
   Heading2,
-  Heading3,
   Link,
   Logo,
   LogoImage,
@@ -20,23 +18,17 @@ import {
   PageContent,
   PageHeader,
   Paragraph,
-  Separator,
-  Strong,
   Surface,
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconCross,
-  UtrechtLogo,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtIconCross } from '@utrecht/web-component-library-react';
 import React, { useRef, useState } from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FontTester from '../prototype-src/FontTester.js';
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
 import urls from '../prototype-src/variables.js';
+import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Font voorbeeld/formulier',
@@ -52,7 +44,7 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => {
+  render: (args: any) => {
     const MAX_CHARACTERS = 1000;
     const [characterCount, setCharacterCount] = useState(0);
     const [selectedFiles, setSelectedFiles] = useState<FileList | null>(null);
@@ -107,14 +99,14 @@ export const One: Story = {
     };
 
     return (
-      <Surface className="utrecht-html">
+      <Surface className="utrecht-custom-theme">
         <Page {...args}>
           <PageHeader>
             <Logo>
               <LogoImage />
             </Logo>
           </PageHeader>
-          <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+          <PageContent>
             <BreadcrumbNav>
               <BreadcrumbNavLink href={urls.scenarioAPage2}>
                 <BreadcrumbNavSeparator>
@@ -231,7 +223,7 @@ export const One: Story = {
           </PageContent>
           <FooterKlachten />
         </Page>
-        <FontTester></FontTester>
+        <FontTester />
       </Surface>
     );
   },

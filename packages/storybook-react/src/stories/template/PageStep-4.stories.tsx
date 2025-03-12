@@ -42,14 +42,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Four: Story = {
-  render: (args) => (
-    <Page {...args}>
+  render: (args: any) => (
+    <Page className="utrecht-custom-theme" {...args}>
       <PageHeader>
         <Link href="/">
           <UtrechtLogo />
         </Link>
       </PageHeader>
-      <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+      <PageContent>
         <UtrechtBreadcrumbNav
           json={JSON.stringify([
             { href: 'https://example/', title: 'Home', current: false },

@@ -19,7 +19,7 @@ import {
   RadioButton,
   Separator,
   Textbox,
-} from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist/css-module';
 import {
   UtrechtBreadcrumbNav,
   UtrechtDigidButton,
@@ -28,6 +28,7 @@ import {
   UtrechtLogo,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import '../styles.css';
 
 const meta = {
   title: 'Template/Multistep form/Step 2',
@@ -40,14 +41,14 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Two: Story = {
-  render: (args) => (
-    <Page {...args}>
+  render: (args: any) => (
+    <Page className="utrecht-custom-theme" {...args}>
       <PageHeader>
         <Link href="/">
           <UtrechtLogo />
         </Link>
       </PageHeader>
-      <PageContent style={{ '--utrecht-space-around': 1 } as any}>
+      <PageContent>
         <UtrechtBreadcrumbNav
           json={JSON.stringify([
             { href: 'https://example/', title: 'Home', current: false },

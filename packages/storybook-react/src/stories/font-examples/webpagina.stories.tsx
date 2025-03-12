@@ -1,59 +1,22 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
-  Button,
   ButtonGroup,
   ButtonLink,
-  DataList,
-  DataListItem,
-  DataListKey,
-  DataListValue,
-  FormField,
-  FormLabel,
-  Heading1,
-  Heading2,
-  Heading3,
-  Link,
-  LinkList,
-  LinkListLink,
   Logo,
   LogoImage,
   Page,
   PageContent,
-  PageFooter,
   PageHeader,
-  Paragraph,
-  Separator,
-  SpotlightSection,
-  Strong,
   Surface,
-  Textbox,
-  UnorderedList,
-  UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtBreadcrumbNav,
-  UtrechtDigidButton,
-  UtrechtFormFieldDescription,
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconFacebook,
-  UtrechtIconInstagram,
-  UtrechtIconLinkedin,
-  UtrechtIconNieuwHuis,
-  UtrechtIconNieuwsbrief,
-  UtrechtIconWhatsapp,
-  UtrechtLogo,
-  UtrechtSeparator,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconArrow, UtrechtSeparator } from '@utrecht/web-component-library-react';
 import React from 'react';
-import '../prototype-src/index.css'; // Importeer stylesheet
-import ContentWebpage from '../prototype-src/ContentWebpage'; // Importeer het footer-component
-import FontTester from '../prototype-src/FontTester'; // ✅ Importeer de herbruikbare font-tester
-import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
+import '../prototype-src/index.css';
+import ContentWebpage from '../prototype-src/ContentWebpage.js';
+import FontTester from '../prototype-src/FontTester.js';
+import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js';
 import urls from '../prototype-src/variables.js';
+import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Font voorbeeld/webpagina',
@@ -69,8 +32,8 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
-  render: (args) => (
-    <Surface className="utrecht-html utrecht-theme">
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
       <Page {...args}>
         <PageHeader>
           <Logo>
@@ -94,7 +57,7 @@ export const One: Story = {
         </PageContent>
         <FooterKlachten />
       </Page>
-      <FontTester></FontTester>
+      <FontTester />
     </Surface>
   ),
 };
