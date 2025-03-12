@@ -11,7 +11,7 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git",
-    "directory": "packages/css-package"
+    "directory": "packages/build-utils-css"
   },
   "bin": {
     "build-css-package": "./src/index.mjs"
