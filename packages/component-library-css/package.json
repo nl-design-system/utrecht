@@ -19,7 +19,7 @@
     "url": "git@github.com:nl-design-system/utrecht.git",
     "directory": "packages/component-library-css"
   },
-  "devDependencies": {
+  "dependencies": {
     "@utrecht/accordion-css": "workspace:*",
     "@utrecht/alert-css": "workspace:*",
     "@utrecht/alert-dialog-css": "workspace:*",
@@ -115,7 +115,9 @@
     "@utrecht/top-task-link-css": "workspace:*",
     "@utrecht/top-task-nav-css": "workspace:*",
     "@utrecht/unordered-list-css": "workspace:*",
-    "@utrecht/url-data-css": "workspace:*",
+    "@utrecht/url-data-css": "workspace:*"
+  },
+  "devDependencies": {
     "postcss": "8.4.38",
     "postcss-discard-duplicates": "7.0.0",
     "postcss-logical": "7.0.1",
