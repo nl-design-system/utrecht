@@ -58,6 +58,7 @@ const FontTester: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
   const [buttonFontWeight, setButtonFontWeight] = useState(
     () => Number(localStorage.getItem('buttonFontWeight')) || 400,
   );
+  const [letterSpacing, setLetterSpacing] = useState(() => Number(localStorage.getItem('letterSpacing')) || 0);
   const [copySuccess, setCopySuccess] = useState('');
   const [isOpen, setIsOpen] = useState(false); // 🔥 Toggle paneel
 
@@ -69,6 +70,7 @@ const FontTester: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
     localStorage.setItem('strongFontWeight', strongFontWeight.toString());
     localStorage.setItem('paragraphFontWeight', paragraphFontWeight.toString());
     localStorage.setItem('buttonFontWeight', buttonFontWeight.toString());
+    localStorage.setItem('letterSpacing', letterSpacing.toString());
 
     // Dynamisch een link-tag toevoegen om fonts in te laden
     const fontLinkId = 'dynamic-font';
@@ -95,6 +97,7 @@ const FontTester: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
         --utrecht-paragraph-font-size: ${fontSize}rem !important;
         --utrecht-document-line-height: ${lineHeight} !important;
         --utrecht-paragraph-line-height: ${lineHeight} !important;
+        letter-spacing: ${letterSpacing}px !important;
 
         /* Dynamische heading font-weight */
         --utrecht-heading-1-font-weight: ${headingFontWeight} !important;
@@ -115,22 +118,31 @@ const FontTester: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
       }
 
       /* Button krijgt een eigen font-weight */
-        .utrecht-theme button,
-        .utrecht-theme .utrecht-button-link {
-          font-weight: ${buttonFontWeight} !important;
-          font-size: ${fontSize}rem !important;
-        }
+      .utrecht-theme button,
+      .utrecht-theme .utrecht-button-link {
+        font-weight: ${buttonFontWeight} !important;
+        font-size: ${fontSize}rem !important;
+      }
     `;
-  }, [selectedFont, fontSize, lineHeight, headingFontWeight, strongFontWeight, paragraphFontWeight, buttonFontWeight]);
+  }, [
+    selectedFont,
+    fontSize,
+    lineHeight,
+    headingFontWeight,
+    strongFontWeight,
+    paragraphFontWeight,
+    buttonFontWeight,
+    letterSpacing,
+  ]);
 
   // Genereert een overzicht met de huidige instellingen als tekst.
   const generateSettingsSummary = () => {
-    // Verwijder quotes voor een nettere weergave van de fontnaam
     const cleanFont = selectedFont.replace(/['"]/g, '');
     const fontSizePx = (fontSize * 16).toFixed(0);
     return `Font-family: ${cleanFont}
 Font-size: ${fontSizePx}px (${fontSize.toFixed(2)}rem)
 Line-height: ${lineHeight}
+Letter Spacing: ${letterSpacing}px
 Heading Font Weight: ${headingFontWeight}
 Strong Font Weight: ${strongFontWeight}
 Paragraph Font Weight: ${paragraphFontWeight}
@@ -293,6 +305,20 @@ Button Font Weight: ${buttonFontWeight}`;
             step="0.1"
             value={lineHeight}
             onChange={(e) => setLineHeight(Number(e.target.value))}
+            style={{ width: '100%' }}
+          />
+        </div>
+
+        {/* 🔹 Letter Spacing Slider */}
+        <div>
+          <label className="utrecht-font-tester-label">Letter Spacing: {letterSpacing}px</label>
+          <input
+            type="range"
+            min="-1"
+            max="2"
+            step="0.1"
+            value={letterSpacing}
+            onChange={(e) => setLetterSpacing(Number(e.target.value))}
             style={{ width: '100%' }}
           />
         </div>
