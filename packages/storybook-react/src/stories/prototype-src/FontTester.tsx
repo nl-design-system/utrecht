@@ -163,7 +163,9 @@ Button Font Weight: ${buttonFontWeight}`;
         }}
       >
         {/* ⚙️ Toggle-knop */}
-        <button onClick={() => setIsOpen(!isOpen)}>{isOpen ? '▶' : '◀'}</button>
+        <button className="utrecht-font-tester-toggle-button" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? '▶' : '◀'}
+        </button>
 
         {/* Extra link voor het kopiëren van de instellingenopsomming */}
         <div className="utrecht-font-tester-copysettings">

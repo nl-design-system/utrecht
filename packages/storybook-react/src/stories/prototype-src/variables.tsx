@@ -14,6 +14,6 @@ const urls = {
   fonttestWebpagina: './iframe.html?args=&id=webpagina-font1--one&viewMode=story',
   fonttestStap1: './iframe.html?args=&id=webpagina-event1-font1--one&viewMode=story',
   fonttestStap2: './iframe.html?args=&id=webpagina-event2-font--one&viewMode=story',
-  fonttestStapForm: './iframe.html?args=&id=webpagina-event3-font--one&viewMode=story',
+  fonttestStapForm: './iframe.html?args=&id=formulier-font1--one&viewMode=story',
 };
 export default urls;

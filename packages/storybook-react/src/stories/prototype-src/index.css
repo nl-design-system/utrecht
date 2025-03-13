@@ -49,14 +49,16 @@
   z-index: 1000;
 }
 
-.utrecht-font-tester-container button {
+.utrecht-font-tester-container button.utrecht-font-tester-toggle-button {
   background: hsl(223.64 22% 17.45%);
+  block-size: 2.5rem;
   border: none;
   border-radius: 3px;
   box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
   color: rgb(243 243 243);
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1rem !important;
+  inline-size: 2.3rem;
   inset-block-start: 26px;
   inset-inline-start: -35px;
   position: absolute;
@@ -74,14 +76,6 @@
   display: inline-flex;
   gap: 4px; /* Ruimte tussen icoon en tekst */
   text-decoration: none;
-}
-
-/* temp fix for strange padding margin fails in layout */
-.utrecht-accordion__section button,
-.utrecht-accordion__section h1,
-.utrecht-form-field--radio p {
-  margin-block: 0 !important;
-  padding-block: 0 !important;
 }
 
 .utrecht-font-tester-container button:hover {
@@ -106,6 +100,13 @@
 }
 .utrecht-font-tester-label input {
   margin-inline-end: 8px !important;
+}
+
+.utrecht-form-field--radio p.utrecht-paragraph {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-inline-end: 0;
+  margin-inline-start: 0;
 }
 
 /* 🔹 Wrapper voor de toggle-switch */
@@ -298,10 +299,7 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     transform: translateY(-4px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
   .utrecht-button-link--primary-action utrecht-icon-arrow {
-    transform: translateY(-5px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
-  }
-  footer .utrecht-link utrecht-icon-arrow {
-    transform: translateY(1px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
+    transform: translateY(-2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
   .utrecht-advanced-link--with-icon {
     align-items: center;

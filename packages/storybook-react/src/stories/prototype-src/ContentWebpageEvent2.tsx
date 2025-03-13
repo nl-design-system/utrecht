@@ -102,7 +102,7 @@ const Events2: React.FC = () => {
       <Heading2>Aanvragen</Heading2>
       <Paragraph>U moet uw aanvraag voor een vergunning minimaal 12 weken voor uw evenement aanvragen.</Paragraph>
       <ButtonLink appearance="primary-action-button" href={urls.fonttestStapForm}>
-        Vraag vergunning aan
+        Naar test formulier
         <UtrechtIconArrow />
       </ButtonLink>
       <Heading2>Toezicht en handhaving</Heading2>

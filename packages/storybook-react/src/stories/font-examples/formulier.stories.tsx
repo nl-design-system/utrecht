@@ -22,7 +22,12 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtIconCross } from '@utrecht/web-component-library-react';
+import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconCross,
+  UtrechtSeparator,
+} from '@utrecht/web-component-library-react';
 import React, { useRef, useState } from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FontTester from '../prototype-src/FontTester.js';
@@ -197,8 +202,7 @@ export const One: Story = {
                       </div>
                     )}
                     <ButtonLink appearance="primary-action-button" href={urls.fonttestStap2} onClick={handleSubmit}>
-                      Pagina terug
-                      <UtrechtIconArrow />
+                      Formulier versturen (DUMMY)
                     </ButtonLink>
                     <Link
                       href="#"
@@ -215,6 +219,21 @@ export const One: Story = {
                     >
                       <UtrechtIconCross />
                       Stoppen met formulier
+                    </Link>
+                  </ButtonGroup>
+
+                  <UtrechtSeparator></UtrechtSeparator>
+                  <ButtonGroup direction="column">
+                    <ButtonLink appearance="primary-action-button" href={urls.fonttestWebpagina}>
+                      Naar start pagina
+                      <UtrechtIconArrow />
+                    </ButtonLink>
+                    <Link
+                      className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+                      href={urls.fonttestStap2}
+                    >
+                      <UtrechtIconChevronLeft />
+                      Pagina terug
                     </Link>
                   </ButtonGroup>
                 </form>
