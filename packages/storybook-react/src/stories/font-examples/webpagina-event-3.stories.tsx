@@ -8,6 +8,7 @@ import {
   Surface,
 } from '@utrecht/component-library-react/dist/css-module';
 import '../prototype-src/index.css'; // Importeer stylesheet
+import '../styles.css';
 import React from 'react';
 import ContentWebpageEvent3 from '../prototype-src/ContentWebpageEvent3.js';
 import FontTester from '../prototype-src/FontTester.js'; // ✅ Importeer de herbruikbare font-tester
