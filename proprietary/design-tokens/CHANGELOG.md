@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 2.5.1
+
+### Patch Changes
+
+- 965bf7d: Update Backdrop background-color value
+
 ## 2.5.0
 
 ### Minor Changes
