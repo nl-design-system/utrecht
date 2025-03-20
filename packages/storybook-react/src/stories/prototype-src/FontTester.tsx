@@ -33,7 +33,7 @@ const fontUrls: { [key: string]: string } = {
   "'Source Sans 3', sans-serif":
     'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap',
   "'Work Sans', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
+    'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
   "'Open Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',
   "'Public Sans', sans-serif":
