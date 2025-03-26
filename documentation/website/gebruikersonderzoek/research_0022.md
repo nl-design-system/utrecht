@@ -26,4 +26,4 @@ keywords:
 
 # Onderzoek Status Component van MijnZaken
 
-De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/mijn-zaken/utrecht-status-component) staat op staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
+De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/mijn-zaken/utrecht-status-component) staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).

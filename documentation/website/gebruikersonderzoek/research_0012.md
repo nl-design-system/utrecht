@@ -25,4 +25,4 @@ keywords:
 
 # Onderzoek bevrijdingsdag, koningsdag en melding/klacht doorgeven iconen
 
-De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-bevrijdingsdag) staat op staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
+De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-bevrijdingsdag) staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
