@@ -24,4 +24,4 @@ keywords:
 
 # Onderzoek verscheidene iconen November
 
-De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-november-2022) staat op staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
+De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-november-2022) staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).

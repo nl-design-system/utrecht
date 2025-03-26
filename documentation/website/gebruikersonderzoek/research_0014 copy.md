@@ -24,4 +24,4 @@ keywords:
 
 # Onderzoek iconen Februari 2023
 
-De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-februari-2023) staat op staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
+De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-februari-2023) staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).

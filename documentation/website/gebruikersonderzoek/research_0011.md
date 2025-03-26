@@ -21,4 +21,4 @@ keywords:
 
 # Onderzoek parkeer icoon
 
-De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-parkeer-icoon) staat op staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
+De [laatste versie van dit onderzoek](https://gebruikersonderzoeken.nl/docs/onderzoek-bekijken/iconen/utrecht-parkeer-icoon) staat op [gebruikersonderzoeken.nl](https://gebruikersonderzoeken.nl/).
