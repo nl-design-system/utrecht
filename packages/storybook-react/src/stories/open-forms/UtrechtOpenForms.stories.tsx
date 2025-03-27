@@ -480,18 +480,6 @@ export const NaamBedrijfOrganisatieMEH: Story = {
   },
 };
 
-// Omschrijf de producten die u verkoopt //
-export const HebtUNogOpmerkingenOfZijnErNogZakenDieVolgensUVanBelangZijnVoorDezeAanvraagVulDezeIn: Story = {
-  args: {
-    key: 'textfield',
-    label: 'Omschrijf de producten die u verkoopt. Of is er nog iets anders belangrijk voor deze aanvraag?',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'hebtUNogOpmerkingenOfZijnErNogZakenDieVolgensUVanBelangZijnVoorDezeAanvraagVulDezeIn',
-    },
-  },
-};
-
 // Plaats leeg //
 export const PlaatsZEH: Story = {
   args: {
@@ -508,7 +496,7 @@ export const Postbus_plaatsZEH: Story = {
     key: 'textfield',
     label: 'Plaats',
     extraComponentProperties: {
-      defaultValue: '',
+      defaultValue: 's-Gravenhage',
       key: 'postbus_plaatsZE',
     },
   },
@@ -544,7 +532,6 @@ export const PlaatsPA: Story = {
   },
 };
 
-// Postbusnummer leeg //
 export const PostbusnummerZEH: Story = {
   args: {
     key: 'textfield',
@@ -649,16 +636,7 @@ export const SapArtikelnummer: Story = {
     },
   },
 };
-export const SapDistributiekanaal: Story = {
-  args: {
-    key: 'textfield',
-    label: 'SAP distributiekanaal',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'sapDistributiekanaal',
-    },
-  },
-};
+
 export const SapOmschrijving: Story = {
   args: {
     key: 'textfield',
@@ -669,16 +647,17 @@ export const SapOmschrijving: Story = {
     },
   },
 };
-export const SapOrdernummer: Story = {
-  args: {
-    key: 'textfield',
-    label: 'SAP ordernummer',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'sapOrdernummer',
-    },
-  },
-};
+// TODO: disable this story to check with the form creators if this field requires a specific size.
+// export const SapOrdernummer: Story = {
+//   args: {
+//     key: 'textfield',
+//     label: 'SAP ordernummer',
+//     extraComponentProperties: {
+//       defaultValue: '',
+//       key: 'sapOrdernummer',
+//     },
+//   },
+// };
 export const SapProductgroep: Story = {
   args: {
     key: 'textfield',
@@ -882,66 +861,6 @@ export const VestigingsnummerMEH: Story = {
     extraComponentProperties: {
       defaultValue: '',
       key: 'vestigingsnummerMEH',
-    },
-  },
-};
-
-// Voor welke markt(en) vraagt u een vergunning? //
-export const VoorWelkeMarktEnVraagtUEenVergunning: Story = {
-  args: {
-    key: 'textfield',
-    label: 'Voor welke markt(en) vraagt u een vergunning?',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'voorWelkeMarktEnVraagtUEenVergunning',
-    },
-  },
-};
-
-// Wat vraagt u aan? //
-export const UwAanvraagBetreft: Story = {
-  args: {
-    key: 'textfield',
-    label: 'Wat vraagt u aan?',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'uwAanvraagBetreft',
-    },
-  },
-};
-
-// Welke branche past het beste bij de producten die u wilt verkopen? //
-export const BrancheMarktplaats: Story = {
-  args: {
-    key: 'textfield',
-    label: 'Welke branche past het beste bij de producten die u wilt verkopen?',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'brancheMarktplaats',
-    },
-  },
-};
-
-// Wilt u een postadres gebruiken anders dan uw woonadres? //
-export const WiltUEenPostadresGebruikenAndersDanUwWoonadres: Story = {
-  args: {
-    key: 'textfield',
-    label: 'Wilt u een postadres gebruiken anders dan uw woonadres?',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'wiltUEenPostadresGebruikenAndersDanUwWoonadres',
-    },
-  },
-};
-
-// Wilt u een postbus gebruiken? //\
-export const PostbusGebruikenZEH: Story = {
-  args: {
-    key: 'textfield',
-    label: 'Wilt u een postbus gebruiken?',
-    extraComponentProperties: {
-      defaultValue: '',
-      key: 'postbusGebruikenZEH',
     },
   },
 };
