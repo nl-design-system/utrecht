@@ -33,11 +33,8 @@ const tokensToCSS = (tokens) => {
     }
     lines.push(
       `  /* --${path.join('-')}: ${
-        value &&
-        value['$extensions'] &&
-        value['$extensions']['nl.nldesignsystem.css.property'] &&
-        value['$extensions']['nl.nldesignsystem.css.property'].syntax
-          ? value['$extensions']['nl.nldesignsystem.css.property'].syntax
+        value && value['$extensions'] && value['$extensions']['nl.nldesignsystem.css.property-syntax']
+          ? value['$extensions']['nl.nldesignsystem.css.property-syntax']
           : '<value>'
       }; */`,
     );
