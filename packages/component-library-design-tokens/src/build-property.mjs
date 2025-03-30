@@ -34,11 +34,7 @@ const build = async () => {
   const tokens = treeToArray(addPath(await getComponentTokens()));
   console.log(`${tokens.length} tokens found`);
   const propertyTokens = tokens.filter(
-    (token) =>
-      !!token['$extensions'] &&
-      !!token['$extensions']['nl.nldesignsystem.css.property'] &&
-      !!token['$extensions']['nl.nldesignsystem.css.property'].syntax &&
-      typeof !!token['$extensions']['nl.nldesignsystem.css.property'].inherits === 'boolean',
+    (token) => !!token['$extensions'] && !!token['$extensions']['nl.nldesignsystem.css-property-syntax'],
   );
 
   console.log(`${propertyTokens.length} tokens found with CSS property metadata`);
@@ -46,19 +42,13 @@ const build = async () => {
   const formatSyntax = (arg) => (Array.isArray(arg) ? arg.join(' | ') : arg);
 
   const css = propertyTokens
-    .filter((token) => token['$extensions']['nl.nldesignsystem.css.property'].syntax !== '*')
+    .filter((token) => token['$extensions']['nl.nldesignsystem.css.property-syntax'] !== '*')
     .map((token) => {
       const { path } = token;
-      const { syntax, inherits, initialValue } = token['$extensions']['nl.nldesignsystem.css.property'];
+      const syntax = token['$extensions']['nl.nldesignsystem.css.property-syntax'];
 
       const name = path.join('-');
       let str = `@property --${name} { `;
-
-      str += `inherits: ${inherits}; `;
-
-      if (initialValue) {
-        str += `initial-value: ${initialValue}; `;
-      }
 
       str += `syntax: '${formatSyntax(syntax)}'; `;
 

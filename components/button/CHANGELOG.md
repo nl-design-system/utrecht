@@ -46,7 +46,7 @@
 ### Patch Changes
 
 - 9aa2be4: Fix regression in `utrecht.button.font-family` support.
-- 2b97820: Changed `utrecht.button. text-transform` setting `"nl.nldesignsystem.figma.supports-token"` from `true` to `false` as it's not used for the Figma component within the 'Voorbeeld' library.
+- 2b97820: Changed `utrecht.button. text-transform` setting `"nl.nldesignsystem.figma-implementation"` from `true` to `false` as it's not used for the Figma component within the 'Voorbeeld' library.
 
 ## 1.3.0
 
