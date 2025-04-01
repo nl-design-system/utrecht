@@ -1,0 +1,36 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "open-forms-container component for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/open-forms-container-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@utrecht/build-utils-css": "workspace:*"
+  },
+  "keywords": [
+    "nl-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@utrecht/textbox-css": "workspace:*",
+    "@utrecht/focus-ring-css": "workspace:*"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "components/open-forms-container"
+  }
+}

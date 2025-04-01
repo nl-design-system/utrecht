@@ -1,0 +1,9 @@
+@import "./mixin";
+
+.utrecht-open-forms-container {
+  .utrecht-textbox {
+    @include utrecht-textbox-char-size;
+  }
+
+  @include utrecht-open-forms-container;
+}
