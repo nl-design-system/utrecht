@@ -3,39 +3,22 @@ import React, { useEffect, useState } from 'react';
 
 // 🔹 Beschikbare fonts
 const fontOptions = [
-  {
-    label: 'Lucida family (Hebben we nu)',
-    value: "'Lucida Grande', 'Lucida Sans Unicode', 'Lucida Sans', Verdana, sans-serif",
-  },
-  { label: 'Fira Sans 🧙🏼‍♂️', value: "'Fira Sans', sans-serif" },
-  { label: 'Source Sans 3', value: "'Source Sans 3', sans-serif" },
-  { label: 'Noto Sans', value: "'Noto Sans', sans-serif" },
-  { label: 'IBM Plex Sans 🤖', value: "'IBM Plex Sans', sans-serif" },
-  { label: 'Work Sans', value: "'Work Sans', sans-serif" },
-  { label: 'Open Sans', value: "'Open Sans', sans-serif" },
+  { label: 'Noto Sans 🏆', value: "'Noto Sans', sans-serif" },
+  { label: 'Plus Jakarta Sans', value: "'Plus Jakarta Sans', sans-serif" },
+  { label: 'Geist', value: "'Geist', sans-serif" },
+  { label: 'Inclusive Sans', value: "'Inclusive Sans', sans-serif" },
   { label: 'Public Sans', value: "'Public Sans', sans-serif" },
-  { label: 'Helvetica family (Voorbeeld)', value: "'Helvetica Neue', sans-serif" },
-  {
-    label: 'System Font',
-    value: "-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif",
-  },
-  { label: 'Comic Sans 👀', value: "'Comic Sans MS', cursive, sans-serif" },
 ];
 
-// 🔥 Google Fonts URLs (voor IBM Plex Sans, Roboto, Fira Sans, etc.)
+// 🔥 Google Fonts URLs
 const fontUrls: { [key: string]: string } = {
-  "'IBM Plex Sans', sans-serif":
-    'https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap',
-  "'Roboto', sans-serif": 'https://fonts.googleapis.com/css2?family=Roboto:wght@300..700&display=swap',
-  "'Fira Sans', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet',
-  "'Mukta', sans-serif": 'https://fonts.googleapis.com/css2?family=Mukta:wght@300..700&display=swap',
-  "'Source Sans 3', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap',
+  "'Geist', sans-serif": 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap',
+  "'Plus Jakarta Sans', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet',
+  "'Inclusive Sans', sans-serif":
+    'https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap',
   "'Work Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap',
-  "'Open Sans', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap',
   "'Public Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap',
   "'Noto Sans', sans-serif":
