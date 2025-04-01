@@ -135,6 +135,8 @@ export type { NumberBadgeProps } from '../NumberBadge';
 export { NumberBadge } from './NumberBadge';
 export type { NumberDataProps } from '../NumberData';
 export { NumberData } from './NumberData';
+export type { OpenFormsContainerProps } from './OpenFormsContainer';
+export { OpenFormsContainer } from './OpenFormsContainer';
 export type { OrderedListProps } from '../OrderedList';
 export { OrderedList } from './OrderedList';
 export type { OrderedListItemProps } from '../OrderedListItem';
