@@ -276,6 +276,16 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 7;
 }
 
+@mixin utrecht-textbox--postbus-nummer-size {
+  /* A postbusnummer consists of four digits. */
+  --utrecht-textbox-value-max-length: 4;
+}
+
+@mixin utrecht-textbox--postal-code-size {
+  /* A postcode consists of four numbers and two letters. 7 characters with space bijv 1234 AA */
+  --utrecht-textbox-value-max-length: 7;
+}
+
 @mixin utrecht-textbox--house-number-size {
   /* Dutch house number is 99999 at most: 5 numbers */
   --utrecht-textbox-value-max-length: 5;
@@ -291,11 +301,88 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 4;
 }
 
+@mixin utrecht-textbox--voorletters-size {
+  /* "Voorletters" depends on how long your name is and after research of the longest name in the Netherlands it can be about 8 to 9 characters.
+     For now im using the longest name source suggestion: 9 */
+  --utrecht-textbox-value-max-length: 9;
+}
+
 @mixin utrecht-textbox--voorvoegsel-size {
   /* "Tabel 36 Voorvoegselstabel" by "Rijksdienst voor Identiteitsgegevens" has a list
    * of all allowed values. The longest value is 10 characters.
    * The class name is in Dutch because it is a Dutch concept. */
   --utrecht-textbox-value-max-length: 10;
+}
+
+@mixin utrecht-textbox--voornamen-size {
+  /* Longest name in the Netherlands is 50 characters. Suggesting: 40 */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--vestigingnummer-size {
+  /* Typically 9 or lower digits */
+  --utrecht-textbox-value-max-length: 9;
+}
+
+@mixin utrecht-textbox--bsn-size {
+  /* BSN is 8 or 9 characters. */
+  --utrecht-textbox-value-max-length: 9;
+}
+
+@mixin utrecht-textbox--email-size {
+  /* Emails can very with how long they are. Suggesting max */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--geboortedatum-size {
+  /* 2 (for the day) + 1 (for the separator, usually a dash or slash) + 2 (for the month) + 1 (for the separator)
+   + 4 (for the year) = 9 characters (if you include separators). Or "DDMMYY" without separators 6 characters */
+  --utrecht-textbox-value-max-length: 9;
+}
+
+@mixin utrecht-textbox--geboorteplaats-size {
+  /* Geboorteplaats ken een stad, dorp, of zelfs een buurtschap zijn. Langste buurtschap/dorp in Nederland bevat 21 karakters */
+  --utrecht-textbox-value-max-length: 21;
+}
+
+@mixin utrecht-textbox--achternaam-size {
+  /* Longest lastname in the Netherlands is 58 characters. Suggesting: 40 */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--kvk-size {
+  /* In the Netherlands a KVK number consists of 8 digits */
+  --utrecht-textbox-value-max-length: 8;
+}
+
+@mixin utrecht-textbox--straatnaam-size {
+  /* The longest street name in the Netherlands is 41 characters long */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--sapartikelnummer-size {
+  /* An SAP material number typically has between 8 and 18 characters */
+  --utrecht-textbox-value-max-length: 18;
+}
+
+@mixin utrecht-textbox--telefoon-nummer-size {
+  /* Dutch phone number consits of 10 digits, longest phone numer is 15 digits. */
+  --utrecht-textbox-value-max-length: 15;
+}
+
+@mixin utrecht-textbox--naam-organization-size {
+  /* The company name or organization may vary in the number of characters it contains */
+  --utrecht-textbox-value-max-length: 40;
+}
+
+@mixin utrecht-textbox--plaats-size {
+  /* Geboorteplaats ken een stad, dorp, of zelfs een buurtschap zijn. Langste buurtschap/dorp in Nederland bevat 21 karakters */
+  --utrecht-textbox-value-max-length: 28;
+}
+
+@mixin utrecht-textbox--tussenvoegsel-size {
+  /* Consits mostly of 6 or lower digits */
+  --utrecht-textbox-value-max-length: 6;
 }
 
 @mixin utrecht-textbox--tel-size {
