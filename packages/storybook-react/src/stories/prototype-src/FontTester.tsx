@@ -14,7 +14,7 @@ const fontOptions = [
 const fontUrls: { [key: string]: string } = {
   "'Geist', sans-serif": 'https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap',
   "'Plus Jakarta Sans', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet',
+    'https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap',
   "'Inclusive Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap',
   "'Work Sans', sans-serif":
@@ -22,7 +22,7 @@ const fontUrls: { [key: string]: string } = {
   "'Public Sans', sans-serif":
     'https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap',
   "'Noto Sans', sans-serif":
-    'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap',
+    'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap',
 };
 
 const FontTester: React.FC<{ children?: React.ReactNode }> = ({ children }) => {
