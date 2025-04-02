@@ -1,5 +1,17 @@
 # @utrecht/component-library-react
 
+## 9.0.4
+
+### Patch Changes
+
+- Updated dependencies [e0edcc9]
+- Updated dependencies [426f11c]
+- Updated dependencies [51c9249]
+  - @utrecht/open-forms-container-react@1.0.0
+  - @utrecht/open-forms-container-css@1.0.0
+  - @utrecht/html-content-css@1.4.0
+  - @utrecht/textbox-react@1.0.7
+
 ## 9.0.3
 
 ### Patch Changes

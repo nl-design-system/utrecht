@@ -1,5 +1,13 @@
 # @utrecht/component-library-css
 
+## 7.1.3
+
+### Patch Changes
+
+- Updated dependencies [730e2dd]
+  - @utrecht/textbox-css@1.7.0
+  - @utrecht/html-content-css@1.4.0
+
 ## 7.1.2
 
 ### Patch Changes
