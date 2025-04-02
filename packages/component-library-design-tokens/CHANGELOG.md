@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [730e2dd]
+  - @utrecht/textbox-css@1.7.0
+  - @utrecht/html-content-css@1.4.0
+
 ## 1.0.5
 
 ### Patch Changes
