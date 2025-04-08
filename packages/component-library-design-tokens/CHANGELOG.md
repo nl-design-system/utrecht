@@ -1,5 +1,12 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.7
+
+### Patch Changes
+
+- Updated dependencies [cfb7a9b]
+  - @utrecht/icon@2.1.0
+
 ## 1.0.6
 
 ### Patch Changes
