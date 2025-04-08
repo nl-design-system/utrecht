@@ -1,5 +1,17 @@
 # @utrecht/web-component-library-stencil
 
+## 3.2.0
+
+### Minor Changes
+
+- cfb7a9b: Add new social icons
+
+  - UtrechtIconBluesky
+  - UtrechtIconMastodon
+  - UtrechtIconThreads
+
+  Reference to the pull-request: [url](https://github.com/nl-design-system/utrecht/pull/2771/files)
+
 ## 3.1.0
 
 ### Minor Changes
