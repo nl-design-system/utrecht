@@ -754,6 +754,8 @@ export namespace Components {
     }
     interface UtrechtTableCell {
     }
+    interface UtrechtTableContainer {
+    }
     interface UtrechtTableFooter {
     }
     interface UtrechtTableHeader {
@@ -2681,6 +2683,12 @@ declare global {
         prototype: HTMLUtrechtTableCellElement;
         new (): HTMLUtrechtTableCellElement;
     };
+    interface HTMLUtrechtTableContainerElement extends Components.UtrechtTableContainer, HTMLStencilElement {
+    }
+    var HTMLUtrechtTableContainerElement: {
+        prototype: HTMLUtrechtTableContainerElement;
+        new (): HTMLUtrechtTableContainerElement;
+    };
     interface HTMLUtrechtTableFooterElement extends Components.UtrechtTableFooter, HTMLStencilElement {
     }
     var HTMLUtrechtTableFooterElement: {
@@ -3042,6 +3050,7 @@ declare global {
         "utrecht-table-body": HTMLUtrechtTableBodyElement;
         "utrecht-table-caption": HTMLUtrechtTableCaptionElement;
         "utrecht-table-cell": HTMLUtrechtTableCellElement;
+        "utrecht-table-container": HTMLUtrechtTableContainerElement;
         "utrecht-table-footer": HTMLUtrechtTableFooterElement;
         "utrecht-table-header": HTMLUtrechtTableHeaderElement;
         "utrecht-table-header-cell": HTMLUtrechtTableHeaderCellElement;
@@ -3820,6 +3829,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtTableCell {
     }
+    interface UtrechtTableContainer {
+    }
     interface UtrechtTableFooter {
     }
     interface UtrechtTableHeader {
@@ -4155,6 +4166,7 @@ declare namespace LocalJSX {
         "utrecht-table-body": UtrechtTableBody;
         "utrecht-table-caption": UtrechtTableCaption;
         "utrecht-table-cell": UtrechtTableCell;
+        "utrecht-table-container": UtrechtTableContainer;
         "utrecht-table-footer": UtrechtTableFooter;
         "utrecht-table-header": UtrechtTableHeader;
         "utrecht-table-header-cell": UtrechtTableHeaderCell;
@@ -4493,6 +4505,7 @@ declare module "@stencil/core" {
             "utrecht-table-body": LocalJSX.UtrechtTableBody & JSXBase.HTMLAttributes<HTMLUtrechtTableBodyElement>;
             "utrecht-table-caption": LocalJSX.UtrechtTableCaption & JSXBase.HTMLAttributes<HTMLUtrechtTableCaptionElement>;
             "utrecht-table-cell": LocalJSX.UtrechtTableCell & JSXBase.HTMLAttributes<HTMLUtrechtTableCellElement>;
+            "utrecht-table-container": LocalJSX.UtrechtTableContainer & JSXBase.HTMLAttributes<HTMLUtrechtTableContainerElement>;
             "utrecht-table-footer": LocalJSX.UtrechtTableFooter & JSXBase.HTMLAttributes<HTMLUtrechtTableFooterElement>;
             "utrecht-table-header": LocalJSX.UtrechtTableHeader & JSXBase.HTMLAttributes<HTMLUtrechtTableHeaderElement>;
             "utrecht-table-header-cell": LocalJSX.UtrechtTableHeaderCell & JSXBase.HTMLAttributes<HTMLUtrechtTableHeaderCellElement>;
