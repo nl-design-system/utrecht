@@ -718,6 +718,10 @@ export namespace Components {
     }
     interface UtrechtPreHeading {
     }
+    interface UtrechtPreserveData {
+        "dateTime"?: string;
+        "value"?: string;
+    }
     interface UtrechtProgressList {
     }
     interface UtrechtProgressListItem {
@@ -2605,6 +2609,12 @@ declare global {
         prototype: HTMLUtrechtPreHeadingElement;
         new (): HTMLUtrechtPreHeadingElement;
     };
+    interface HTMLUtrechtPreserveDataElement extends Components.UtrechtPreserveData, HTMLStencilElement {
+    }
+    var HTMLUtrechtPreserveDataElement: {
+        prototype: HTMLUtrechtPreserveDataElement;
+        new (): HTMLUtrechtPreserveDataElement;
+    };
     interface HTMLUtrechtProgressListElement extends Components.UtrechtProgressList, HTMLStencilElement {
     }
     var HTMLUtrechtProgressListElement: {
@@ -3037,6 +3047,7 @@ declare global {
         "utrecht-pagination": HTMLUtrechtPaginationElement;
         "utrecht-paragraph": HTMLUtrechtParagraphElement;
         "utrecht-pre-heading": HTMLUtrechtPreHeadingElement;
+        "utrecht-preserve-data": HTMLUtrechtPreserveDataElement;
         "utrecht-progress-list": HTMLUtrechtProgressListElement;
         "utrecht-progress-list-item": HTMLUtrechtProgressListItemElement;
         "utrecht-progress-sublist-item": HTMLUtrechtProgressSublistItemElement;
@@ -3793,6 +3804,10 @@ declare namespace LocalJSX {
     }
     interface UtrechtPreHeading {
     }
+    interface UtrechtPreserveData {
+        "dateTime"?: string;
+        "value"?: string;
+    }
     interface UtrechtProgressList {
     }
     interface UtrechtProgressListItem {
@@ -4153,6 +4168,7 @@ declare namespace LocalJSX {
         "utrecht-pagination": UtrechtPagination;
         "utrecht-paragraph": UtrechtParagraph;
         "utrecht-pre-heading": UtrechtPreHeading;
+        "utrecht-preserve-data": UtrechtPreserveData;
         "utrecht-progress-list": UtrechtProgressList;
         "utrecht-progress-list-item": UtrechtProgressListItem;
         "utrecht-progress-sublist-item": UtrechtProgressSublistItem;
@@ -4492,6 +4508,7 @@ declare module "@stencil/core" {
             "utrecht-pagination": LocalJSX.UtrechtPagination & JSXBase.HTMLAttributes<HTMLUtrechtPaginationElement>;
             "utrecht-paragraph": LocalJSX.UtrechtParagraph & JSXBase.HTMLAttributes<HTMLUtrechtParagraphElement>;
             "utrecht-pre-heading": LocalJSX.UtrechtPreHeading & JSXBase.HTMLAttributes<HTMLUtrechtPreHeadingElement>;
+            "utrecht-preserve-data": LocalJSX.UtrechtPreserveData & JSXBase.HTMLAttributes<HTMLUtrechtPreserveDataElement>;
             "utrecht-progress-list": LocalJSX.UtrechtProgressList & JSXBase.HTMLAttributes<HTMLUtrechtProgressListElement>;
             "utrecht-progress-list-item": LocalJSX.UtrechtProgressListItem & JSXBase.HTMLAttributes<HTMLUtrechtProgressListItemElement>;
             "utrecht-progress-sublist-item": LocalJSX.UtrechtProgressSublistItem & JSXBase.HTMLAttributes<HTMLUtrechtProgressSublistItemElement>;
