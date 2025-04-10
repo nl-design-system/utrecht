@@ -1,5 +1,16 @@
 # @utrecht/web-component-library-stencil
 
+## 3.3.0
+
+### Minor Changes
+
+- b5c8990: Add `utrecht-preserve-data` custom element.
+- 94ddb19: Add `utrecht-table-container` custom element.
+
+### Patch Changes
+
+- b2cb42d: Fix `utrecht-number-data` web component to include the necessary CSS.
+
 ## 3.2.0
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # @utrecht/component-library-css
 
+## 7.1.4
+
+### Patch Changes
+
+- Updated dependencies [94ddb19]
+- Updated dependencies [94ddb19]
+  - @utrecht/table-css@1.6.0
+  - @utrecht/html-content-css@1.4.0
+
 ## 7.1.3
 
 ### Patch Changes

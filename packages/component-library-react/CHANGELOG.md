@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 9.0.5
+
+### Patch Changes
+
+- Updated dependencies [94ddb19]
+- Updated dependencies [94ddb19]
+  - @utrecht/table-css@1.6.0
+  - @utrecht/html-content-css@1.4.0
+
 ## 9.0.4
 
 ### Patch Changes
