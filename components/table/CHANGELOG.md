@@ -1,5 +1,15 @@
 # @utrecht/table-css
 
+## 1.6.0
+
+### Minor Changes
+
+- 94ddb19: Add SCSS mixins: `utrecht-table-container` and `utrecht-table-container--overflow-inline`.
+
+### Patch Changes
+
+- 94ddb19: Fix `.table-container` to be `display: block` by default.
+
 ## 1.5.0
 
 ### Minor Changes
