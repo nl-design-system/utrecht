@@ -23,7 +23,10 @@ export class Link {
         target={typeof this.target === 'string' ? this.target : undefined}
         class="utrecht-link utrecht-link--html-a"
       >
-        <slot></slot>
+        <slot name="icon"></slot>
+        <span class="utrecht-link__label">
+          <slot></slot>
+        </span>
       </a>
     );
   }
