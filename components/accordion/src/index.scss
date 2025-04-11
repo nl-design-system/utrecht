@@ -16,6 +16,10 @@
 
 .utrecht-accordion__button {
   @include utrecht-accordion__button;
+
+  &:focus-visible {
+    @include utrecht-accordion__button--focus-visible;
+  }
 }
 
 .utrecht-accordion__button--utrecht {
