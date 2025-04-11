@@ -86,6 +86,10 @@
   @include utrecht-link--placeholder;
 }
 
+.utrecht-link__label {
+  @include utrecht-link__label;
+}
+
 /**
  * Simulate forced-colors mode.
  */

@@ -68,7 +68,11 @@ however browsers don't seem to have implemented great looking supixel tweening y
 @mixin utrecht-link {
   --utrecht-icon-size: var(--utrecht-link-icon-size, 1em);
 
+  align-items: center;
   color: var(--_utrecht-link-state-color, var(--utrecht-link-color, var(--_utrecht-link-forced-colors-color)));
+  column-gap: var(--utrecht-link-column-gap);
+  display: inline-flex;
+  justify-content: center;
 }
 
 @mixin utrecht-link--any-link {
@@ -142,7 +146,7 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
   /*
    * The following tokens are deprecated, but we keep them for backwards compatibility for now:
-   * 
+   *
    * `--utrecht-link-focus-text-decoration`
    * `--utrecht-link-focus-text-decoration-thickness`
    */
@@ -198,7 +202,7 @@ however browsers don't seem to have implemented great looking supixel tweening y
 
 /**
  * Link for elements such as `<img>` or `<article>`, that are not inline elements or plain text.
- * 
+ *
  * Changing `display: inline` to `inline-block` ensures the focus outline is rendered around the entire box.
  */
 @mixin utrecht-link--box-content {
@@ -230,4 +234,8 @@ however browsers don't seem to have implemented great looking supixel tweening y
   &:any-link:focus-visible {
     @include utrecht-link--focus-visible;
   }
+}
+
+/* stylelint-disable-next-line block-no-empty */
+@mixin utrecht-link__label {
 }
