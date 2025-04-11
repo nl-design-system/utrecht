@@ -13,7 +13,21 @@
 }
 
 @mixin utrecht-accordion__section {
+  border-block-start-color: var(--utrecht-accordion-section-border-color, currentColor);
+  border-block-start-style: solid;
+  border-block-start-width: var(--utrecht-accordion-section-border-width, 0);
   break-inside: avoid;
+  &:is(:last-child, :only-child) {
+    border-block-end-color: var(--utrecht-accordion-section-border-color, currentColor);
+    border-block-end-style: solid;
+    border-block-end-width: var(--utrecht-accordion-section-border-width, 0);
+  }
+  &:not(:last-child) {
+    border-block-end-color: transparent;
+  }
+  &:hover {
+    --utrecht-accordion-section-border-color: var(--utrecht-accordion-section-hover-border-color, currentColor);
+  }
 }
 
 @mixin utrecht-accordion__button {
@@ -26,6 +40,8 @@
   --utrecht-button-subtle-padding-inline-end: var(--utrecht-accordion-button-padding-inline-end);
   --utrecht-button-subtle-padding-block-start: var(--utrecht-accordion-button-padding-block-start);
   --utrecht-button-subtle-padding-block-end: var(--utrecht-accordion-button-padding-block-end);
+  --utrecht-button-padding-block-start: var(--utrecht-accordion-button-padding-block-start);
+  --utrecht-button-padding-block-end: var(--utrecht-accordion-button-padding-block-end);
   --utrecht-button-subtle-color: var(--utrecht-accordion-button-color);
   --utrecht-button-subtle-hover-background-color: var(--utrecht-accordion-button-hover-background-color);
   --utrecht-button-subtle-hover-border-color: var(--utrecht-accordion-button-hover-border-color);
@@ -44,6 +60,13 @@
   justify-content: start !important;
   position: relative;
   text-align: start;
+}
+
+@mixin utrecht-accordion__button--focus-visible {
+  --utrecht-accordion-button-background-color: var(--utrecht-accordion-button-focus-visible-background-color);
+  --utrecht-accordion-button-color: var(--utrecht-accordion-button-focus-visible-color);
+  --utrecht-button-subtle-border-color: var(--utrecht-accordion-button-focus-visible-border-color);
+  --utrecht-button-subtle-border-width: var(--utrecht-accordion-button-focus-visible-border-width);
 }
 
 @mixin utrecht-accordion__button-icon {
@@ -94,6 +117,8 @@
 }
 
 @mixin utrecht-accordion__header {
+  align-items: center;
+  display: flex;
   margin-block-end: 0;
   margin-block-start: 0;
 }
