@@ -11,9 +11,11 @@ interface UnorderedListItemData {
 interface UnorderedListStoryProps extends UnorderedListProps {
   element?: string | 'div';
   center?: boolean;
+  forcedColors?: boolean;
   items?: UnorderedListItemData[];
   htmlContent?: boolean;
   nested?: boolean;
+  marker?: ReactNode;
 }
 
 const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
@@ -27,11 +29,20 @@ const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
   </ul>
 );
 
-export const UnorderedListStory = ({ children, center, items, htmlContent, nested }: UnorderedListStoryProps) => {
+export const UnorderedListStory = ({
+  children,
+  center,
+  forcedColors,
+  items,
+  htmlContent,
+  nested,
+  marker,
+}: UnorderedListStoryProps) => {
   return (
     <UnorderedList
       className={clsx({
         'utrecht-unordered-list--center': center,
+        'utrecht-unordered-list--forced-colors': forcedColors,
         'utrecht-unordered-list--html-content': htmlContent,
         'utrecht-unordered-list--nested': nested,
       })}
@@ -45,7 +56,7 @@ export const UnorderedListStory = ({ children, center, items, htmlContent, neste
             </li>
           ))
         : items?.map(({ children: subChildren, items: subItems }, index) => (
-            <UnorderedListItem key={index}>
+            <UnorderedListItem marker={marker} key={index}>
               {subChildren}
               {subItems && UnorderedListStory({ items: subItems, nested: true })}
             </UnorderedListItem>

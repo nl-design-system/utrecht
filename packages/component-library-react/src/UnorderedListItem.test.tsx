@@ -3,6 +3,12 @@ import { createRef } from 'react';
 import { UnorderedListItem } from './UnorderedListItem';
 import '@testing-library/jest-dom';
 
+const CustomBulletIcon = () => (
+  <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="4" r="4" fill="currentColor" />
+  </svg>
+);
+
 describe('Unordered list item', () => {
   it('renders a listitem role element', () => {
     render(<UnorderedListItem />);
@@ -83,5 +89,25 @@ describe('Unordered list item', () => {
     const listItem = container.querySelector(':only-child');
 
     expect(ref.current).toBe(listItem);
+  });
+  it('should not render a custom marker by default', () => {
+    const { container } = render(<UnorderedListItem />);
+
+    const listItem = container.querySelector(':only-child');
+
+    const marker = listItem?.querySelector('.utrecht-unordered-list__custom-marker');
+
+    expect(marker).not.toBeInTheDocument();
+    expect(listItem).not.toHaveClass('utrecht-unordered-list__custom-item');
+  });
+  it('renders a custom marker', () => {
+    const { container } = render(<UnorderedListItem marker={<CustomBulletIcon />} />);
+
+    const listItem = container.querySelector(':only-child');
+
+    const marker = listItem?.querySelector('.utrecht-unordered-list__custom-marker');
+
+    expect(marker).toBeInTheDocument();
+    expect(listItem).toHaveClass('utrecht-unordered-list__custom-item');
   });
 });
