@@ -5,18 +5,31 @@
  */
 
 import clsx from 'clsx';
-import { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren } from 'react';
+import React, { AnchorHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
 // Somehow `placeholder` incorrectly is a global HTML attribute in React, ignore that
 export interface LinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'placeholder'> {
   boxContent?: boolean;
   external?: boolean;
   placeholder?: boolean;
+  icon?: ReactNode;
+  label?: ReactNode;
 }
 
 export const Link = forwardRef(
   (
-    { boxContent, children, className, external, href, placeholder, role, ...restProps }: PropsWithChildren<LinkProps>,
+    {
+      boxContent,
+      children,
+      className,
+      external,
+      href,
+      placeholder,
+      icon,
+      label,
+      role,
+      ...restProps
+    }: PropsWithChildren<LinkProps>,
     ref: ForwardedRef<HTMLAnchorElement>,
   ) => (
     // "utrecht-link--telephone" does not have a corresponding API,
@@ -41,6 +54,8 @@ export const Link = forwardRef(
       rel={external ? 'external noopener noreferrer' : undefined}
       {...restProps}
     >
+      {icon}
+      {label && <span className="utrecht-link__label">{label}</span>}
       {children}
     </a>
   ),
