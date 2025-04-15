@@ -154,6 +154,34 @@ describe('Link that looks like a button', () => {
     expect(richText).toBeInTheDocument();
   });
 
+  it('renders labels as a prop that contain HTML rich text content', () => {
+    const { container } = render(
+      <ButtonLink
+        label={
+          <>
+            <strong>https:</strong>
+            {'//example.com/'}
+          </>
+        }
+      />,
+    );
+
+    const link = container.querySelector(':only-child');
+
+    const richText = link?.querySelector('strong');
+
+    expect(richText).toBeInTheDocument();
+  });
+
+  it('renders a span with a label design system BEM class name', () => {
+    const { container } = render(<ButtonLink label="Home" />);
+
+    const link = container.querySelector(':only-child');
+    const label = link?.querySelector('.utrecht-button-link__label');
+
+    expect(label).toBeInTheDocument();
+  });
+
   it('can be hidden', () => {
     const { container } = render(<ButtonLink hidden />);
 
