@@ -38,6 +38,10 @@ export class ButtonLink {
         role={this.placeholder ? 'link' : undefined}
         target={typeof this.target === 'string' ? this.target : undefined}
       >
+        <slot name="icon"></slot>
+        <span class="utrecht-button-link__label">
+          <slot></slot>
+        </span>
         <slot></slot>
       </a>
     );
