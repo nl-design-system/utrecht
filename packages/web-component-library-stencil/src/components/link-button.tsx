@@ -115,6 +115,10 @@ export class LinkButton {
         type={this.type || 'button'}
         onClick={handleClick}
       >
+        <slot name="icon"></slot>
+        <span class="utrecht-link-button__label">
+          <slot></slot>
+        </span>
         <slot></slot>
       </button>
     );
