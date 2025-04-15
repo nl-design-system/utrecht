@@ -35,6 +35,10 @@
   @include utrecht-button-link--html-a;
 }
 
+.utrecht-button-link__label {
+  @include utrecht-button-link__label;
+}
+
 @include utrecht-button-appearance("utrecht-button-link", "primary-action");
 @include utrecht-button-appearance("utrecht-button-link", "secondary-action");
 @include utrecht-button-appearance("utrecht-button-link", "subtle");
