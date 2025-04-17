@@ -1,6 +1,6 @@
 ---
-"@utrecht/component-library-css": major
-"@utrecht/button-link-css": major
+"@utrecht/component-library-css": minor
+"@utrecht/button-link-css": minor
 ---
 
-Add class `utrecht-button-link__label` to match extended `utrecht-button__label`
+Add optional class `utrecht-button-link__label` to match extended optional class `utrecht-button__label`

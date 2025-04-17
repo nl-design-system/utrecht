@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  AfterContentInit,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+  ElementRef,
+  Input,
+  ViewEncapsulation,
+} from '@angular/core';
 
 @Component({
   selector:
@@ -26,9 +34,13 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
     '[class.utrecht-button]': 'true',
   },
 })
-export class UtrechtButtonAttr {
+export class UtrechtButtonAttr implements AfterContentInit {
   @Input() busy = false;
   @Input() pressed? = undefined;
   @Input() appearance?: string;
-  constructor() {}
+  @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
+  hasLabel = false;
+  ngAfterContentInit() {
+    this.hasLabel = !!this.labelSlot;
+  }
 }

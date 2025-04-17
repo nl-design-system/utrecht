@@ -1,4 +1,4 @@
-import { Component, Element, Event, EventEmitter, h, Prop } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, h, Prop, State } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -26,6 +26,12 @@ export class Button {
   @Event({ cancelable: true }) utrechtRequestSubmit: EventEmitter;
   @Element() hostElement: HTMLElement;
   @Prop() type: string;
+
+  @State() hasLabelSlot = false;
+  private onLabelSlotChange = (event: Event) => {
+    const slot = event.target as HTMLSlotElement;
+    this.hasLabelSlot = slot.assignedNodes({ flatten: true }).length > 0;
+  };
 
   render() {
     const handleReset = () => {
@@ -146,9 +152,12 @@ export class Button {
         onClick={handleClick}
       >
         <slot name="icon"></slot>
-        <span class="utrecht-button__label">
-          <slot></slot>
-        </span>
+        {this.hasLabelSlot && (
+          <span class="utrecht-button__label">
+            <slot name="label" onSlotchange={this.onLabelSlotChange}></slot>
+          </span>
+        )}
+        <slot></slot>
       </button>
     );
   }

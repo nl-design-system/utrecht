@@ -1,1 +1,7 @@
+<ng-content select="[slot=icon]"></ng-content>
+
+<span class="utrecht-link__label" *ngIf="hasLabel">
+  <ng-content select="[slot=label]"></ng-content>
+</span>
+
 <ng-content></ng-content>
