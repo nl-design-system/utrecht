@@ -3,6 +3,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Article, Heading2, Icon, Link, Paragraph, URLData } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import iconSet from '@utrecht/icon/dist/index.json';
 import readme from '@utrecht/link-css/README.md?raw';
 import anatomyDocs from '@utrecht/link-css/docs/anatomy.nl.md?raw';
 import contentDocs from '@utrecht/link-css/docs/content.nl.md?raw';
@@ -116,6 +117,13 @@ const meta = {
         required: true,
       },
     },
+    label: {
+      description: 'Link text in label',
+      type: {
+        name: 'string',
+        required: false,
+      },
+    },
     visited: {
       description: 'Visited',
       control: 'boolean',
@@ -123,6 +131,16 @@ const meta = {
     placeholder: {
       description: 'Placeholder for a link',
       control: 'boolean',
+    },
+    IconBefore: {
+      description: 'Icon before label',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
+    },
+    IconAfter: {
+      description: 'Icon after label',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
     },
   },
   args: {
@@ -141,6 +159,9 @@ const meta = {
     tabIndex: '',
     telephone: false,
     visited: false,
+    children: '',
+    IconBefore: '',
+    IconAfter: '',
   },
   parameters: {
     bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Flink',
@@ -194,6 +215,38 @@ export const Default: Story = {
       description: {
         story:
           'Styling via `utrecht-link` and `utrecht-link--html-a` class name. The `utrecht-link--html-a` enables pseudo-selector effects, like `:hover` and `:visited`.',
+      },
+    },
+  },
+};
+
+export const IconAfter: Story = {
+  args: {
+    children: 'Voorbeeldlink',
+    IconAfter: 'utrecht-icon-chevron-right',
+  },
+  name: 'Icon after label',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Om de juiste ruimte tussen het icoon en de tekst te garanderen, plaats de tekst in een span met de `.utrecht-link__label` class naam.',
+      },
+    },
+  },
+};
+
+export const IconBefore: Story = {
+  args: {
+    IconBefore: 'utrecht-icon-language',
+    children: 'Voorbeeldlink',
+  },
+  name: 'Icon before label',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Om de juiste ruimte tussen het icoon en de tekst te garanderen, plaats de tekst in een span met de `.utrecht-link__label` class naam.',
       },
     },
   },

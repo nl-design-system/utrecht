@@ -5,13 +5,22 @@
  */
 
 import clsx from 'clsx';
-import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren } from 'react';
+import React, {
+  AnchorHTMLAttributes,
+  ForwardedRef,
+  forwardRef,
+  KeyboardEvent,
+  PropsWithChildren,
+  ReactNode,
+} from 'react';
 
 // Somehow `placeholder` incorrectly is a global HTML attribute in React, ignore that
 export interface ButtonLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'placeholder'> {
   appearance?: string;
   external?: boolean;
   placeholder?: boolean;
+  icon?: ReactNode;
+  label?: ReactNode;
 }
 
 const onKeyDown = (evt: KeyboardEvent<HTMLAnchorElement>) => {
@@ -33,6 +42,8 @@ export const ButtonLink = forwardRef(
       external,
       href,
       placeholder,
+      icon,
+      label,
       role,
       ...restProps
     }: PropsWithChildren<ButtonLinkProps>,
@@ -72,6 +83,8 @@ export const ButtonLink = forwardRef(
         aria-disabled={placeholder ? 'true' : undefined}
         {...props}
       >
+        {icon}
+        {label && <span className="utrecht-button-link__label">{label}</span>}
         {children}
       </a>
     );

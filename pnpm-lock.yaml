@@ -5893,6 +5893,9 @@ importers:
       '@utrecht/link-list-css':
         specifier: workspace:*
         version: link:../../components/link-list
+      '@utrecht/link-react':
+        specifier: workspace:*
+        version: link:../components-react/link-react
       '@utrecht/link-social-css':
         specifier: workspace:*
         version: link:../../components/link-social
