@@ -92,7 +92,7 @@
     "storybook-all": "todo",
     "storybook-css": "pnpm run --filter @utrecht/storybook-css storybook",
     "storybook-angular": "pnpm run --filter @utrecht/storybook-angular storybook",
-    "storybook-react": "pnpm run --filter @utrecht/storybook-angular storybook",
+    "storybook-react": "pnpm run --filter @utrecht/storybook-react storybook",
     "storybook-vue": "pnpm run --filter @utrecht/storybook-vue storybook",
     "serve": "pnpm run --filter @utrecht/website start",
     "serve-docusaurus": "pnpm run --filter @utrecht/docusaurus serve",
