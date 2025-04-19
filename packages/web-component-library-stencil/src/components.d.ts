@@ -794,6 +794,13 @@ export namespace Components {
         "type": string;
         "value": string;
     }
+    interface UtrechtTopTaskLink {
+        "external"?: boolean;
+        "href": string;
+        "target"?: string;
+    }
+    interface UtrechtTopTaskNav {
+    }
     interface UtrechtUrlData {
     }
 }
@@ -2763,6 +2770,18 @@ declare global {
         prototype: HTMLUtrechtTextboxElement;
         new (): HTMLUtrechtTextboxElement;
     };
+    interface HTMLUtrechtTopTaskLinkElement extends Components.UtrechtTopTaskLink, HTMLStencilElement {
+    }
+    var HTMLUtrechtTopTaskLinkElement: {
+        prototype: HTMLUtrechtTopTaskLinkElement;
+        new (): HTMLUtrechtTopTaskLinkElement;
+    };
+    interface HTMLUtrechtTopTaskNavElement extends Components.UtrechtTopTaskNav, HTMLStencilElement {
+    }
+    var HTMLUtrechtTopTaskNavElement: {
+        prototype: HTMLUtrechtTopTaskNavElement;
+        new (): HTMLUtrechtTopTaskNavElement;
+    };
     interface HTMLUtrechtUrlDataElement extends Components.UtrechtUrlData, HTMLStencilElement {
     }
     var HTMLUtrechtUrlDataElement: {
@@ -3068,6 +3087,8 @@ declare global {
         "utrecht-table-row": HTMLUtrechtTableRowElement;
         "utrecht-textarea": HTMLUtrechtTextareaElement;
         "utrecht-textbox": HTMLUtrechtTextboxElement;
+        "utrecht-top-task-link": HTMLUtrechtTopTaskLinkElement;
+        "utrecht-top-task-nav": HTMLUtrechtTopTaskNavElement;
         "utrecht-url-data": HTMLUtrechtUrlDataElement;
     }
 }
@@ -3888,6 +3909,13 @@ declare namespace LocalJSX {
         "type"?: string;
         "value"?: string;
     }
+    interface UtrechtTopTaskLink {
+        "external"?: boolean;
+        "href"?: string;
+        "target"?: string;
+    }
+    interface UtrechtTopTaskNav {
+    }
     interface UtrechtUrlData {
     }
     interface IntrinsicElements {
@@ -4189,6 +4217,8 @@ declare namespace LocalJSX {
         "utrecht-table-row": UtrechtTableRow;
         "utrecht-textarea": UtrechtTextarea;
         "utrecht-textbox": UtrechtTextbox;
+        "utrecht-top-task-link": UtrechtTopTaskLink;
+        "utrecht-top-task-nav": UtrechtTopTaskNav;
         "utrecht-url-data": UtrechtUrlData;
     }
 }
@@ -4529,6 +4559,8 @@ declare module "@stencil/core" {
             "utrecht-table-row": LocalJSX.UtrechtTableRow & JSXBase.HTMLAttributes<HTMLUtrechtTableRowElement>;
             "utrecht-textarea": LocalJSX.UtrechtTextarea & JSXBase.HTMLAttributes<HTMLUtrechtTextareaElement>;
             "utrecht-textbox": LocalJSX.UtrechtTextbox & JSXBase.HTMLAttributes<HTMLUtrechtTextboxElement>;
+            "utrecht-top-task-link": LocalJSX.UtrechtTopTaskLink & JSXBase.HTMLAttributes<HTMLUtrechtTopTaskLinkElement>;
+            "utrecht-top-task-nav": LocalJSX.UtrechtTopTaskNav & JSXBase.HTMLAttributes<HTMLUtrechtTopTaskNavElement>;
             "utrecht-url-data": LocalJSX.UtrechtUrlData & JSXBase.HTMLAttributes<HTMLUtrechtUrlDataElement>;
         }
     }
