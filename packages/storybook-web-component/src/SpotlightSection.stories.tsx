@@ -63,10 +63,24 @@ export const Info: Story = {
   },
 };
 
+export const OK: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'ok',
+  },
+};
+
 export const Warning: Story = {
   args: {
     ...Default.args,
     appearance: 'warning',
+  },
+};
+
+export const Error: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'error',
   },
 };
 

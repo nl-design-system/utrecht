@@ -19,7 +19,9 @@ export class SpotlightSection {
       <div
         class={clsx(
           'utrecht-spotlight-section',
+          this.appearance === 'error' && 'utrecht-spotlight-section--error',
           this.appearance === 'info' && 'utrecht-spotlight-section--info',
+          this.appearance === 'ok' && 'utrecht-spotlight-section--ok',
           this.appearance === 'warning' && 'utrecht-spotlight-section--warning',
         )}
       >
