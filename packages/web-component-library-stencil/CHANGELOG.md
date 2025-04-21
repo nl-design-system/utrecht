@@ -1,5 +1,12 @@
 # @utrecht/web-component-library-stencil
 
+## 3.4.0
+
+### Minor Changes
+
+- e71766c: Add Top Task Navigation and Top Task Link web components.
+- 7ba40dd: Add `ok` and `error` appearances to Spotlight Section web component.
+
 ## 3.3.0
 
 ### Minor Changes
