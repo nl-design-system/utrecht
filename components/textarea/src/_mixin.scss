@@ -154,17 +154,17 @@ $utrecht-support-prince-xml: false !default;
 
 @mixin utrecht-textarea--read-only {
   background-color: var(
-    --utrecht-textarea-read-only-border,
+    --utrecht-textarea-read-only-background-color,
     var(
       --utrecht-form-control-read-only-background-color,
-      var(--utrecht-textarea-border, var(--utrecht-form-control-background-color))
+      var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color))
     )
   );
   border-color: var(
-    --utrecht-textarea-read-only-border,
+    --utrecht-textarea-read-only-border-color,
     var(
       --utrecht-form-control-read-only-border-color,
-      var(--utrecht-textarea-border, var(--utrecht-form-control-border-color))
+      var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color))
     )
   );
   color: var(
