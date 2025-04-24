@@ -1,8 +1,8 @@
 ---
-"@utrecht/design-tokens": major
-"@utrecht/component-library-css": major
-"@utrecht/link-css": major
-"@utrecht/button-link-css": major
+"@utrecht/design-tokens": minor
+"@utrecht/component-library-css": minor
+"@utrecht/link-css": minor
+"@utrecht/button-link-css": minor
 ---
 
 Add design token `utrecht.link.column-gap`
