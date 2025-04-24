@@ -22,12 +22,17 @@ export class TopTaskLink {
         href={this.href}
         rel={this.external ? 'external noopener noreferrer' : undefined}
         target={this.target}
+        aria-labelledby="label"
+        aria-describedby="description"
       >
         <span class="utrecht-toptask-link__icon">
           <slot name="icon"></slot>
         </span>
-        <span class="utrecht-toptask-link__title">
+        <span class="utrecht-toptask-link__label" id="label">
           <slot></slot>
+        </span>
+        <span class="utrecht-toptask-link__description" id="description">
+          <slot name="description"></slot>
         </span>
       </a>
     );
