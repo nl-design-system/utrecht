@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.9
+
+### Patch Changes
+
+- Updated dependencies [b74af00]
+  - @utrecht/textarea-css@2.3.1
+  - @utrecht/html-content-css@1.4.0
+
 ## 1.0.8
 
 ### Patch Changes
