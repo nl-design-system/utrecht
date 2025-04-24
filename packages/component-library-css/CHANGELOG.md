@@ -1,5 +1,13 @@
 # @utrecht/component-library-css
 
+## 7.1.5
+
+### Patch Changes
+
+- Updated dependencies [b74af00]
+  - @utrecht/textarea-css@2.3.1
+  - @utrecht/html-content-css@1.4.0
+
 ## 7.1.4
 
 ### Patch Changes

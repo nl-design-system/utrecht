@@ -1,5 +1,11 @@
 # @utrecht/textarea-css
 
+## 2.3.1
+
+### Patch Changes
+
+- b74af00: Fix incorrect CSS variable name for Textbox (read-only variant)
+
 ## 2.3.0
 
 ### Minor Changes
