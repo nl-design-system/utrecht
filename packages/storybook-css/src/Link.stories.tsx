@@ -222,7 +222,7 @@ export const Default: Story = {
 
 export const IconAfter: Story = {
   args: {
-    children: 'Voorbeeldlink',
+    label: 'Voorbeeldlink',
     IconAfter: 'utrecht-icon-chevron-right',
   },
   name: 'Icon after label',
@@ -239,7 +239,7 @@ export const IconAfter: Story = {
 export const IconBefore: Story = {
   args: {
     IconBefore: 'utrecht-icon-language',
-    children: 'Voorbeeldlink',
+    label: 'Voorbeeldlink',
   },
   name: 'Icon before label',
   parameters: {
