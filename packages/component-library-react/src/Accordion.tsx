@@ -69,7 +69,6 @@ export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   onButtonBlur?: Function;
   buttonRef?: RefObject<HTMLButtonElement>;
   icon?: ReactNode;
-  appearance?: string;
 }
 
 export const AccordionSection = forwardRef(
@@ -88,7 +87,6 @@ export const AccordionSection = forwardRef(
       onButtonBlur,
       onButtonFocus,
       icon,
-      appearance,
       ...props
     }: AccordionSectionProps,
     ref: ForwardedRef<HTMLDivElement>,
@@ -106,10 +104,6 @@ export const AccordionSection = forwardRef(
 
     let iconStart = icon ? icon : icon === null ? null : <IconChevronDown />;
 
-    if (appearance === 'utrecht') {
-      iconStart = null;
-    }
-
     const idPrefix = 'utrecht-accordion';
     const idSuffix = id || useId();
     const buttonId = `${idPrefix}${idSuffix}-button`;
@@ -124,9 +118,7 @@ export const AccordionSection = forwardRef(
       <div className={clsx('utrecht-accordion__section', className)} id={id} ref={ref} {...props}>
         <HTMLHeading level={headingLevel} className={clsx('utrecht-accordion__header')}>
           <Button
-            className={clsx('utrecht-accordion__button', {
-              ['utrecht-accordion__button--utrecht']: appearance === 'utrecht',
-            })}
+            className={clsx('utrecht-accordion__button')}
             appearance="subtle-button"
             aria-expanded={expanded === true}
             aria-controls={panelId}
@@ -244,11 +236,11 @@ export const useAccordionSection = (
 
 export interface AccordionProviderProps
   extends Pick<AccordionProps, 'heading' | 'headingLevel'>,
-    Pick<AccordionSectionProps, 'icon' | 'appearance'> {
+    Pick<AccordionSectionProps, 'icon'> {
   sections: AccordionSectionProps[];
 }
 
-export const AccordionProvider = ({ sections, icon, appearance, heading, headingLevel }: AccordionProviderProps) => {
+export const AccordionProvider = ({ sections, icon, heading, headingLevel }: AccordionProviderProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const { refs, buttonRefs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } =
     useAccordion(sections, ref);
@@ -312,7 +304,6 @@ export const AccordionProvider = ({ sections, icon, appearance, heading, heading
             headingLevel={sectionHeadingLevel}
             {...section}
             icon={icon}
-            appearance={appearance}
             ref={refs[index]}
             buttonRef={buttonRefs[index]}
             key={index}

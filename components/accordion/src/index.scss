@@ -22,20 +22,6 @@
   }
 }
 
-.utrecht-accordion__button--utrecht {
-  &[aria-expanded]::after {
-    @include utrecht-accordion__button-icon--utrecht;
-  }
-
-  &[aria-expanded="false"]::after {
-    @include utrecht-accordion__button-icon--utrecht-arrow-down;
-  }
-
-  &[aria-expanded="true"]::after {
-    @include utrecht-accordion__button-icon--utrecht-arrow-up;
-  }
-}
-
 .utrecht-accordion__button-icon {
   @include utrecht-accordion__button-icon;
 
