@@ -5,14 +5,7 @@
  */
 
 import clsx from 'clsx';
-import React, {
-  AnchorHTMLAttributes,
-  ForwardedRef,
-  forwardRef,
-  KeyboardEvent,
-  PropsWithChildren,
-  ReactNode,
-} from 'react';
+import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren, ReactNode } from 'react';
 
 // Somehow `placeholder` incorrectly is a global HTML attribute in React, ignore that
 export interface ButtonLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'placeholder'> {

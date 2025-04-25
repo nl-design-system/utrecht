@@ -1,14 +1,29 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-link-css/dist/tokens.mjs';
-import { ButtonLink } from '@utrecht/component-library-react/dist/css-module';
+import { ButtonLink, ButtonLinkProps } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import iconSet from '@utrecht/icon/dist/iconset.mjs';
+import React from 'react';
 import { designTokenStory } from './util.js';
+
+interface ButtonLinkStoryProps extends ButtonLinkProps {
+  icon?: string;
+}
+
+const ButtonLinkStory = ({ children, icon, ...props }: ButtonLinkStoryProps) => {
+  const IconElement = icon;
+  return (
+    <ButtonLink icon={IconElement ? <IconElement /> : null} {...props}>
+      {children}
+    </ButtonLink>
+  );
+};
 
 const meta = {
   title: 'React Component/Link that looks like a button',
   id: 'react-button-link',
-  component: ButtonLink,
+  component: ButtonLinkStory,
   parameters: {
     tokensPrefix: 'utrecht-button-link',
     tokens,
@@ -55,6 +70,11 @@ const meta = {
         defaultValue: { summary: '', required: true },
       },
     },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
+    },
   },
 } satisfies Meta<typeof ButtonLink>;
 
@@ -62,6 +82,18 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 export const Default: Story = {};
+
+export const DefaultWithIcon: Story = {
+  args: {
+    children: null,
+    label: (
+      <>
+        Read more <i>here</i>...
+      </>
+    ),
+    icon: 'utrecht-icon-loupe',
+  },
+};
 
 export const External: Story = {
   args: {
