@@ -1147,6 +1147,9 @@ importers:
       '@utrecht/html-content-css':
         specifier: workspace:*
         version: link:../../components/html-content
+      '@utrecht/link-button-css':
+        specifier: workspace:*
+        version: link:../../components/link-button
       '@utrecht/link-css':
         specifier: workspace:*
         version: link:../../components/link
@@ -24440,8 +24443,8 @@ packages:
   vue-component-type-helpers@1.8.25:
     resolution: {integrity: sha512-NCA6sekiJIMnMs4DdORxATXD+/NRkQpS32UC+I1KQJUasx+Z7MZUb3Y+MsKsFmX+PgyTYSteb73JW77AibaCCw==}
 
-  vue-component-type-helpers@2.2.8:
-    resolution: {integrity: sha512-4bjIsC284coDO9om4HPA62M7wfsTvcmZyzdfR0aUlFXqq4tXxM1APyXpNVxPC8QazKw9OhmZNHBVDA6ODaZsrA==}
+  vue-component-type-helpers@2.2.10:
+    resolution: {integrity: sha512-iDUO7uQK+Sab2tYuiP9D1oLujCWlhHELHMgV/cB13cuGbG4qwkLHvtfWb6FzvxrIOPDnU0oHsz2MlQjhYDeaHA==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -34593,7 +34596,7 @@ snapshots:
       ts-dedent: 2.2.0
       type-fest: 2.19.0
       vue: 3.3.11(typescript@4.9.5)
-      vue-component-type-helpers: 2.2.8
+      vue-component-type-helpers: 2.2.10
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -51137,7 +51140,7 @@ snapshots:
 
   vue-component-type-helpers@1.8.25: {}
 
-  vue-component-type-helpers@2.2.8: {}
+  vue-component-type-helpers@2.2.10: {}
 
   vue-docgen-api@4.75.1(vue@3.3.11(typescript@4.9.5)):
     dependencies:
