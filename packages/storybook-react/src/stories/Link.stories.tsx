@@ -104,14 +104,6 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
-    label: {
-      name: 'label',
-      type: { name: 'string', required: false },
-      table: {
-        category: 'API',
-        defaultValue: { summary: '' },
-      },
-    },
     icon: {
       description: 'Icon',
       control: { type: 'select' },
@@ -128,6 +120,18 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const DefaultWithIcon: Story = {
+  args: {
+    children: null,
+    label: (
+      <>
+        Read more <i>here</i>...
+      </>
+    ),
+    icon: 'utrecht-icon-loupe',
+  },
+};
 
 export const External: Story = {
   args: {
