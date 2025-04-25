@@ -22,12 +22,11 @@ interface AccordionStoryProps {
   expanded?: boolean;
   expandedAccordion?: boolean;
   icon?: ReactNode;
-  appearance?: string;
   sections?: AccordionSectionProps[];
 }
 
-const AccordionStory = ({ expanded, label, body, appearance, icon, sections }: AccordionStoryProps) => (
-  <AccordionProvider icon={icon} appearance={appearance} sections={sections || [{ expanded, label, body }]} />
+const AccordionStory = ({ expanded, label, body, icon, sections }: AccordionStoryProps) => (
+  <AccordionProvider icon={icon} sections={sections || [{ expanded, label, body }]} />
 );
 
 const meta = {
@@ -37,7 +36,6 @@ const meta = {
     label: '',
     body: '',
     expandedAccordion: false,
-    appearance: '',
     icon: undefined,
   },
   argTypes: {
@@ -64,11 +62,6 @@ const meta = {
         defaultValue: { summary: false },
         category: 'API',
       },
-    },
-    appearance: {
-      description: 'Appearance',
-      control: { type: 'select' },
-      options: ['', 'utrecht'],
     },
     icon: {
       name: 'icon',
@@ -207,42 +200,10 @@ export const Default: Story = {
   args: accordionDefaultDataEn,
 };
 
-export const DefaultUtrecht: Story = {
-  args: {
-    ...accordionDefaultDataEn,
-    icon: undefined,
-    appearance: 'utrecht',
-  },
-};
-
 export const Multiple: Story = {
   args: {
     sections: accordionData,
   },
-};
-
-export const MultipleUtrecht: Story = {
-  args: {
-    appearance: 'utrecht',
-    icon: undefined,
-    sections: accordionData,
-  },
-};
-
-export const RTLUtrecht: Story = {
-  args: {
-    ...accordionDefaultDataAR,
-    appearance: 'utrecht',
-    icon: undefined,
-  },
-  decorators: [
-    (Story) => (
-      <div lang="ar" dir="rtl">
-        {Story()}
-      </div>
-    ),
-  ],
-  name: 'Right-to-left Utrecht',
 };
 
 export const RTL: Story = {
@@ -255,16 +216,6 @@ export const RTL: Story = {
     ),
   ],
   name: 'Right-to-left',
-};
-
-export const tableInlineOverflowUtrecht: Story = {
-  args: {
-    appearance: 'utrecht',
-    label: 'table',
-    icon: undefined,
-    body: <ExampleTable />,
-  },
-  name: 'Table Inline Overflow Utrecht',
 };
 
 export const tableInlineOverflow: Story = {
