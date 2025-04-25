@@ -5890,6 +5890,9 @@ importers:
       '@utrecht/index-char-nav-css':
         specifier: workspace:*
         version: link:../../components/index-char-nav
+      '@utrecht/link-button-css':
+        specifier: workspace:*
+        version: link:../../components/link-button
       '@utrecht/link-css':
         specifier: workspace:*
         version: link:../../components/link

@@ -5,7 +5,7 @@
  */
 
 import clsx from 'clsx';
-import React, { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
+import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
 export interface LinkButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   inline?: boolean;
