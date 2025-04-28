@@ -14,7 +14,7 @@ const Template: Story<typeof UtrechtButtonLinkAttr> = (args) => ({
     <utrecht-button-link [external]="external" href="https://example.com/" [appearance]="appearance">Link</utrecht-button-link>
     <utrecht-button-link [external]="external" href="https://example.com/" [appearance]="appearance">
         <span slot="icon">icon</span>
-        <span slot="label">label</span>
+        <span #labelcontent slot="label">label</span>
         default
     </utrecht-button-link>
     `,

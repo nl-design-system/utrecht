@@ -3,6 +3,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   ContentChild,
+  ContentChildren,
   ElementRef,
   Input,
   ViewEncapsulation,
@@ -26,13 +27,8 @@ export type AppearanceType = 'primary-action-button' | 'secondary-action-button'
     '[class.utrecht-button-link]': 'true',
   },
 })
-export class UtrechtButtonLinkAttr implements AfterContentChecked {
+export class UtrechtButtonLinkAttr {
   @Input() appearance?: AppearanceType;
   @Input() external = false;
-  @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
-  hasLabel = false;
-  ngAfterContentChecked() {
-    console.log(this.labelSlot);
-    this.hasLabel = !!this.labelSlot;
-  }
+  @ContentChild('labelcontent', { descendants: true }) labelcontent?: ElementRef;
 }
