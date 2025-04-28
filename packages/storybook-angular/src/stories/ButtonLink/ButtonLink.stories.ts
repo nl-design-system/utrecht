@@ -10,8 +10,14 @@ export default {
 
 const Template: Story<typeof UtrechtButtonLinkAttr> = (args) => ({
   props: args,
-  template:
-    '<a [external]="external" href="https://example.com/" [appearance]="appearance" utrecht-button-link>Link</a>',
+  template: `
+    <utrecht-button-link [external]="external" href="https://example.com/" [appearance]="appearance">Link</utrecht-button-link>
+    <utrecht-button-link [external]="external" href="https://example.com/" [appearance]="appearance">
+        <span slot="icon">icon</span>
+        <span slot="label">label</span>
+        default
+    </utrecht-button-link>
+    `,
   component: UtrechtButtonLinkAttr,
 });
 

@@ -1,5 +1,5 @@
 import {
-  AfterContentInit,
+  AfterContentChecked,
   ChangeDetectionStrategy,
   Component,
   ContentChild,
@@ -11,7 +11,7 @@ import {
 export type AppearanceType = 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
 
 @Component({
-  selector: '[utrecht-button-link]',
+  selector: 'utrecht-button-link',
   templateUrl: 'index.html',
   styleUrls: ['index.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -26,12 +26,13 @@ export type AppearanceType = 'primary-action-button' | 'secondary-action-button'
     '[class.utrecht-button-link]': 'true',
   },
 })
-export class UtrechtButtonLinkAttr implements AfterContentInit {
+export class UtrechtButtonLinkAttr implements AfterContentChecked {
   @Input() appearance?: AppearanceType;
   @Input() external = false;
   @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
   hasLabel = false;
-  ngAfterContentInit() {
+  ngAfterContentChecked() {
+    console.log(this.labelSlot);
     this.hasLabel = !!this.labelSlot;
   }
 }

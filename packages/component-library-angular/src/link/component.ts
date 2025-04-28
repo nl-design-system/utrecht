@@ -1,5 +1,5 @@
 import {
-  AfterContentInit,
+  AfterContentChecked,
   ChangeDetectionStrategy,
   Component,
   ContentChild,
@@ -22,11 +22,11 @@ import {
     '[class.utrecht-link--external]': 'external',
   },
 })
-export class UtrechtLinkAttr implements AfterContentInit {
+export class UtrechtLinkAttr implements AfterContentChecked {
   @Input() external = false;
   @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
-  hasLabel = false;
-  ngAfterContentInit() {
+  hasLabel = true;
+  ngAfterContentChecked() {
     this.hasLabel = !!this.labelSlot;
   }
 }
