@@ -17,6 +17,10 @@ const Template: Story<typeof UtrechtLinkAttr> = (args) => ({
       <span slot="label">label</span>
       default
     </a>
+    <a [external]="external" href="https://example.com/" utrecht-link>
+      <span slot="icon">icon</span>
+      default
+    </a>
   `,
   component: UtrechtLinkAttr,
 });

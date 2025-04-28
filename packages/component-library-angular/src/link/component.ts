@@ -5,6 +5,7 @@ import {
   ContentChild,
   ElementRef,
   Input,
+  TemplateRef,
   ViewEncapsulation,
 } from '@angular/core';
 
@@ -22,11 +23,8 @@ import {
     '[class.utrecht-link--external]': 'external',
   },
 })
-export class UtrechtLinkAttr implements AfterContentChecked {
+export class UtrechtLinkAttr {
   @Input() external = false;
-  @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
-  hasLabel = true;
-  ngAfterContentChecked() {
-    this.hasLabel = !!this.labelSlot;
-  }
+
+  @ContentChild('label', { read: TemplateRef }) labelTemplate?: TemplateRef<any>;
 }

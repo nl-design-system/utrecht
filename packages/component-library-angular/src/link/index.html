@@ -1,8 +1,9 @@
 <ng-content select="[slot=icon]"></ng-content>
 
-<span class="utrecht-link__label" *ngIf="hasLabel">
-  <ng-content select="[slot=label]"></ng-content>
-  <ng-content select="label"></ng-content>
-</span>
+<ng-container *ngIf="labelTemplate">
+  <span class="utrecht-link__label">
+    <ng-container *ngTemplateOutlet="labelTemplate"></ng-container>
+  </span>
+</ng-container>
 
 <ng-content></ng-content>
