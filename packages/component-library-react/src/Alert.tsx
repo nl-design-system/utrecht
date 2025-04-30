@@ -10,13 +10,14 @@ import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode 
 export type AlertType = 'info' | 'ok' | 'warning' | 'error';
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
+  actions?: ReactNode;
   icon?: ReactNode;
   type?: string | AlertType;
 }
 
 export const Alert = forwardRef(
   (
-    { children, className, icon, type, ...restProps }: PropsWithChildren<AlertProps>,
+    { actions, children, className, icon, type, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => (
     <div
@@ -38,6 +39,7 @@ export const Alert = forwardRef(
         <div className="utrecht-alert__message" role="alert">
           {children}
         </div>
+        {actions && <div className="utrecht-alert__actions">{actions}</div>}
       </div>
     </div>
   ),

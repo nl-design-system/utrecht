@@ -37,6 +37,10 @@
   row-gap: var(--utrecht-alert-message-row-gap);
 }
 
+@mixin utrecht-alert__actions {
+  grid-area: actions;
+}
+
 @mixin utrecht-alert-type($type) {
   --_utrecht-alert-icon-color: var(--utrecht-alert-icon-#{$type}-color);
   --_utrecht-alert-background-color: var(--utrecht-alert-#{$type}-background-color);

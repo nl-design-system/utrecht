@@ -10,6 +10,10 @@
   @include utrecht-alert;
 }
 
+.utrecht-alert__actions {
+  @include utrecht-alert__actions;
+}
+
 .utrecht-alert__icon {
   @include utrecht-alert__icon;
 }
