@@ -16,54 +16,6 @@ import urls from './variables.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>
-      <AccordionProvider
-        appearance=""
-        sections={[
-          {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
-            label: 'Lorem ipsum 1',
-          },
-          {
-            body: (
-              <div className="utrecht-html">
-                <table summary="Overzicht van de stemmen voor en tegen het betaald parkeren.">
-                  <caption>Uitslag internetpeiling 8 juni tot en met 28 juni</caption>
-                  <thead>
-                    <tr>
-                      <th scope="col">Gebied</th>
-                      <th scope="col" className="numeric">
-                        Voor
-                      </th>
-                      <th scope="col" className="numeric">
-                        Tegen
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td>Locatie A</td>
-                      <td className="numeric">53</td>
-                      <td className="numeric">113</td>
-                    </tr>
-                    <tr>
-                      <td>Locatie B</td>
-                      <td className="numeric">58</td>
-                      <td className="numeric">42</td>
-                    </tr>
-                    <tr>
-                      <td>Locatie C</td>
-                      <td className="numeric">87</td>
-                      <td className="numeric">16</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            ),
-            label: 'Accordion met Table',
-          },
-        ]}
-      />
-
       <Heading1>Paspoort en identiteitskaart aanvragen</Heading1>
       <Paragraph appearance="lead">
         Maak een afspraak om een paspoort of identiteitskaart (ID-kaart) aan te vragen.
@@ -93,8 +45,8 @@ const ContentWebpage: React.FC = () => {
           Alle <Link href="#">reisdocumenten</Link> (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.
         </UnorderedListItem>
         <UnorderedListItem>
-          Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden
-          oud zijn op het moment van de aanvraag.
+          Een kleurenpasfoto die voldoet aan de <Link href="#">eisen voor pasfoto’s</Link>. De goedgelijkende pasfoto
+          mag maximaal 6 maanden oud zijn op het moment van de aanvraag.
         </UnorderedListItem>
         <UnorderedListItem>
           Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.
@@ -112,7 +64,9 @@ const ContentWebpage: React.FC = () => {
         <UnorderedListItem>Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen.</UnorderedListItem>
       </UnorderedList>
 
-      <Paragraph>Meer informatie vindt u onder het kopje Toestemming van ouder(s) of gezaghebber(s).</Paragraph>
+      <Paragraph>
+        Meer informatie vindt u onder het kopje <Link href="#">Toestemming van ouder(s) of gezaghebber(s)</Link>.
+      </Paragraph>
 
       <Heading2>Afspraak maken</Heading2>
       <Paragraph>
@@ -393,7 +347,7 @@ const ContentWebpage: React.FC = () => {
       </Link>
       <Paragraph>Lukt het niet om op tijd online een afspraak te maken? Bel dan naar 14 030.</Paragraph>
 
-      <Heading2>ophalen</Heading2>
+      <Heading3>Ophalen</Heading3>
       <Paragraph>Maak een afspraak voor het ophalen van uw paspoort of ID-kaart.</Paragraph>
 
       <UnorderedList>
@@ -408,7 +362,7 @@ const ContentWebpage: React.FC = () => {
       </UnorderedList>
       <Heading3>Kosten</Heading3>
       <Paragraph>Per paspoort of ID-kaart betaalt u € 59,10 extra voor een spoedaanvraag.</Paragraph>
-
+      <Heading2>Andere paspoorten</Heading2>
       <AccordionProvider
         appearance="default"
         sections={[
