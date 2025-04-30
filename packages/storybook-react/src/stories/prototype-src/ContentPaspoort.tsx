@@ -137,6 +137,8 @@ const ContentWebpage: React.FC = () => {
       <Paragraph>
         U kunt uw paspoort of ID-kaart ook laten bezorgen. Dit kost € 18,65. Geef dit aan tijdens uw aanvraag aan de
         balie.
+        <br />
+        <br />
       </Paragraph>
 
       <AccordionProvider
@@ -228,6 +230,8 @@ const ContentWebpage: React.FC = () => {
       <Paragraph>
         Maak een afspraak. Uw kind komt zelf mee naar de afspraak voor het aanvragen en ophalen. Lees hieronder hoe u
         toestemming geeft en wat u nodig hebt.
+        <br />
+        <br />
       </Paragraph>
 
       <AccordionProvider
