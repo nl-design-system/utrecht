@@ -16,6 +16,54 @@ import urls from './variables.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>
+      <AccordionProvider
+        appearance=""
+        sections={[
+          {
+            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            label: 'Lorem ipsum 1',
+          },
+          {
+            body: (
+              <div className="utrecht-html">
+                <table summary="Overzicht van de stemmen voor en tegen het betaald parkeren.">
+                  <caption>Uitslag internetpeiling 8 juni tot en met 28 juni</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Gebied</th>
+                      <th scope="col" className="numeric">
+                        Voor
+                      </th>
+                      <th scope="col" className="numeric">
+                        Tegen
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Locatie A</td>
+                      <td className="numeric">53</td>
+                      <td className="numeric">113</td>
+                    </tr>
+                    <tr>
+                      <td>Locatie B</td>
+                      <td className="numeric">58</td>
+                      <td className="numeric">42</td>
+                    </tr>
+                    <tr>
+                      <td>Locatie C</td>
+                      <td className="numeric">87</td>
+                      <td className="numeric">16</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            ),
+            label: 'Accordion met Table',
+          },
+        ]}
+      />
+
       <Heading1>Paspoort en identiteitskaart aanvragen</Heading1>
       <Paragraph appearance="lead">
         Maak een afspraak om een paspoort of identiteitskaart (ID-kaart) aan te vragen.
@@ -42,7 +90,7 @@ const ContentWebpage: React.FC = () => {
       <Paragraph>Dit neemt u mee naar de afspraak:</Paragraph>
       <UnorderedList>
         <UnorderedListItem>
-          Alle <a href="#">reisdocumenten</a> (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.
+          Alle <Link href="#">reisdocumenten</Link> (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.
         </UnorderedListItem>
         <UnorderedListItem>
           Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden
@@ -141,7 +189,36 @@ const ContentWebpage: React.FC = () => {
         appearance="default"
         sections={[
           {
-            body: 'We kunnen uw paspoort of ID-kaart bezorgen op een adres in Nederland (thuis, werkplek of een ander adres)We bezorgen niet op de Waddeneilanden. U betaalt € 18,65 per huishouden. Bezorgen kan niet bij een spoedaanvraag. Zo werkt het: Tijdens de aanvraag aan de balie geeft u aan dat u kiest voor het bezorgen van uw paspoort of ID-kaart. Binnen 5 werkdagen na de aanvraag krijgt u een e-mail of sms van onze bezorgpartij AMP Groep om een bezorgafspraak te maken. U kiest de datum, tijd en plaats van de bezorging. Bezorgen kan ook s avonds of op zaterdag. U bent zelf aanwezig bij de bezorging. Hebt u voor meerdere personen een paspoort of ID-kaart aangevraagd? Dan moeten zij ook zelf aanwezig zijn. Voor kinderen jonger dan 12 jaar geldt dat er altijd een volwassene bij moet zijn.',
+            body: (
+              <div className="utrecht-html">
+                <ul>
+                  <li>
+                    We kunnen uw paspoort of ID-kaart bezorgen op een adres in Nederland (thuis, werkplek of een ander
+                    adres).
+                  </li>
+                  <li>We bezorgen niet op de Waddeneilanden.</li>
+                  <li>U betaalt € 18,65 per huishouden.</li>
+                  <li>Bezorgen kan niet bij een spoedaanvraag.</li>
+                </ul>
+                <p>Zo werkt het:</p>
+                <ol>
+                  <li>
+                    Tijdens de aanvraag aan de balie geeft u aan dat u kiest voor het bezorgen van uw paspoort of
+                    ID-kaart.
+                  </li>
+                  <li>
+                    Binnen 5 werkdagen na de aanvraag krijgt u een e-mail of sms van onze bezorgpartij AMP Groep om een
+                    bezorgafspraak te maken.
+                  </li>
+                  <li>U kiest de datum, tijd en plaats van de bezorging. Bezorgen kan ook ’s avonds of op zaterdag.</li>
+                  <li>
+                    U bent zelf aanwezig bij de bezorging. Hebt u voor meerdere personen een paspoort of ID-kaart
+                    aangevraagd? Dan moeten zij ook zelf aanwezig zijn. Voor kinderen jonger dan 12 jaar geldt dat er
+                    altijd een volwassene bij moet zijn.
+                  </li>
+                </ol>
+              </div>
+            ),
             expanded: undefined,
             label: 'Zo werkt het bozorgen van uw paspoort of ID-kaart',
           },
@@ -149,7 +226,37 @@ const ContentWebpage: React.FC = () => {
       />
 
       <Heading2>Kosten</Heading2>
-      <Heading2>Kosten paspoort en ID-kaart</Heading2>
+      <div className="utrecht-html">
+        <table summary="Kosten paspoort en ID-kaart">
+          <caption>Kosten paspoort en ID-kaart</caption>
+          <thead>
+            <tr>
+              <th scope="col">Soort product</th>
+              <th scope="col" className="numeric">
+                Kosten
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Paspoort tot 18 jaar</td>
+              <td className="numeric">€ 65,70</td>
+            </tr>
+            <tr>
+              <td>Paspoort vanaf 18 jaar</td>
+              <td className="numeric">€ 86,85</td>
+            </tr>
+            <tr>
+              <td>ID-kaart tot 18 jaar</td>
+              <td className="numeric">€ 42,35</td>
+            </tr>
+            <tr>
+              <td>ID-kaart vanaf 18 jaar</td>
+              <td className="numeric">€ 78,50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <Heading2>Toestemming van ouder(s) of gezaghebber(s)</Heading2>
       <UnorderedList>
@@ -173,22 +280,82 @@ const ContentWebpage: React.FC = () => {
         appearance="default"
         sections={[
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                <ul>
+                  <li>Neem uw identiteitsbewijs mee.</li>
+                  <li>U geeft uw schriftelijke toestemming aan de balie.</li>
+                </ul>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Hebt u (beiden) het gezag? Komt u (samen) mee naar de afspraak?',
           },
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                <p>De ouder die niet meekomt naar de afspraak geeft online toestemming. Hiervoor is DigiD nodig.</p>
+
+                <Link href="#">Vul het toestemmingsformulier in</Link>
+
+                <p>
+                  Hebt u geen DigiD? Dan kunt u toestemming geven via het{' '}
+                  <Link href="#">toestemmingsformulier (pdf, 66 kB)</Link>. Ingevuld, uitgeprint en ondertekend? Geef
+                  het formulier mee aan de ouder die meekomt naar de afspraak.
+                  <br />
+                  <br />
+                  Voor de ouder die meekomt naar de afspraak:
+                </p>
+
+                <ul>
+                  <li>Neem uw identiteitsbewijs mee.</li>
+                  <li>U geeft uw schriftelijke toestemming aan de balie.</li>
+                </ul>
+                <p>De toestemmingsverklaring is 3 maanden geldig.</p>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Hebt u beiden het gezag? Komt er 1 ouder mee naar de afspraak?',
           },
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                <p>
+                  Vul dan beiden de digitale toestemmingsverklaring in. Wij ontvangen dan 2 verklaringen. U hebt
+                  hiervoor DigiD nodig.
+                </p>
+
+                <Link href="#">Vul het toestemmingsformulier in</Link>
+
+                <p>
+                  Hebt u geen DigiD? Dan kunt u toestemming geven via het{' '}
+                  <Link href="#">toestemmingsformulier (pdf, 66 kB)</Link>. Vul het samen in. Ingevuld, uitgeprint en
+                  ondertekend? Uw kind neemt het formulier mee naar de afspraak samen met uw identiteitsbewijzen of een
+                  kopie daarvan.
+                  <br />
+                  <br />
+                  De toestemmingsverklaring is 3 maanden geldig.
+                </p>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Komt uw kind alleen naar de afspraak? En hebt u beiden het gezag?',
           },
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                Geef online toestemming. U hebt hiervoor DigiD nodig.
+                <Link href="#">Vul het toestemmingsformulier in</Link>
+                <p>
+                  Hebt u geen DigiD? Dan kunt u toestemming geven via het toestemmingsformulier (pdf, 66 kB). Ingevuld,
+                  uitgeprint en ondertekend? Uw kind neemt het formulier mee naar de afspraak samen met uw
+                  identiteitsbewijs of een kopie daarvan.
+                  <br />
+                  <br />
+                  De toestemmingsverklaring is 3 maanden geldig.
+                </p>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Komt uw kind alleen naar de afspraak? En hebt u als enige het gezag?',
           },
@@ -246,34 +413,79 @@ const ContentWebpage: React.FC = () => {
         appearance="default"
         sections={[
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                <p>
+                  Is het voor de start van uw reis niet mogelijk om op tijd een nieuw reisdocument aan te vragen? Dan
+                  kunt u een noodpaspoort aanvragen. Dat doet u bij de Koninklijke Marechaussee.
+                  <br />
+                  <br />
+                  <Link href="">Lees meer over noodpaspoort aanvragen bij de Koninklijke Marechaussee</Link>
+                </p>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Noodpaspoort',
           },
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                <p>
+                  Reist u veel? Dan kunt u een zakenpaspoort aanvragen. Een zakenpaspoort is eigenlijk een gewoon
+                  paspoort, maar heeft extra bladzijden (66 in plaats van 34 pagina’s). Zo is er meer ruimte voor visa
+                  en douanestempels. Als u een zakenpaspoort aanvraagt, kunt u niet ook nog een normaal paspoort
+                  aanvragen. Een zakenpaspoort kost net zoveel als een normaal paspoort.
+                </p>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Zakenpaspoort',
           },
           {
-            body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.',
+            body: (
+              <div className="utrecht-html">
+                <p>
+                  U kunt een tweede paspoort hebben naast uw normale paspoort. Bijvoorbeeld als uw paspoort bij een
+                  buitenlands consulaat ligt voor een visumaanvraag terwijl u op hetzelfde moment moet reizen. U kunt
+                  dan reizen met uw andere paspoort. De voorwaarden voor aanvraag van een tweede paspoort zijn wel
+                  strenger. Voor een tweede paspoort gelden dezelfde prijzen als voor een eerste paspoort.
+                  <br />
+                  <br />
+                  <Link>Bekijk de voorwaarden voor een tweede paspoort op Rijksoverheid.nl</Link>
+                </p>
+              </div>
+            ),
             expandedAccordion: false,
             label: 'Tweede paspoort',
           },
           {
-            body: 'Voor informatie kunt u contact opnemen via telefoonnummer 14 030.',
+            body: (
+              <div className="utrecht-html">
+                <p>Voor informatie kunt u contact opnemen via telefoonnummer 14 030.</p>
+              </div>
+            ),
             expandedAccordion: false,
-            label: 'Vlichtilingenpaspoort of vreemdelingenpaspoort',
+            label: 'Vluchtelingenpaspoort of vreemdelingenpaspoort',
           },
         ]}
       />
       <Heading2>Meer informatie</Heading2>
       <UnorderedList>
-        <UnorderedListItem>Reizen met kinderen</UnorderedListItem>
-        <UnorderedListItem>Achternaam van uw partner op uw reisdocument</UnorderedListItem>
-        <UnorderedListItem>Geldigheid paspoort en ID-kaart</UnorderedListItem>
-        <UnorderedListItem>Identiteitsfraude voorkomen en melden</UnorderedListItem>
-        <UnorderedListItem>Vingerafdrukken afnemen voor uw paspoort of ID-kaart</UnorderedListItem>
+        <UnorderedListItem>
+          <Link href="#">Reizen met kinderen</Link>
+        </UnorderedListItem>
+        <UnorderedListItem>
+          <Link href="#">Achternaam van uw partner op uw reisdocument</Link>
+        </UnorderedListItem>
+        <UnorderedListItem>
+          <Link href="#">Geldigheid paspoort en ID-kaart</Link>
+        </UnorderedListItem>
+        <UnorderedListItem>
+          <Link href="#">Identiteitsfraude voorkomen en melden</Link>
+        </UnorderedListItem>
+        <UnorderedListItem>
+          <Link href="#">Vingerafdrukken afnemen voor uw paspoort of ID-kaart</Link>
+        </UnorderedListItem>
       </UnorderedList>
     </>
   );
