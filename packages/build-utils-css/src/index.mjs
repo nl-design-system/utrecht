@@ -135,7 +135,7 @@ buildStyles({
   sourceMap: false,
   minify: true,
   esm: true,
-  dts: 'dist/index.mjs.d.ts',
+  dts: 'dist/index.d.mts',
 });
 
 buildStyles({
@@ -160,7 +160,7 @@ buildStyles({
   sourceMap: false,
   minify: true,
   esm: true,
-  dts: 'dist/html/index.mjs.d.ts',
+  dts: 'dist/html/index.d.mts',
   optional: true,
 });
 
