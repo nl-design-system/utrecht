@@ -10,6 +10,7 @@ import {
 import { UtrechtIconArrow, UtrechtSeparator } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css';
+import '../prototype-src/NotoSwitcher.js';
 import ContentWebpage from '../prototype-src/ContentPaspoort.js';
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js';
 import urls from '../prototype-src/variables.js';

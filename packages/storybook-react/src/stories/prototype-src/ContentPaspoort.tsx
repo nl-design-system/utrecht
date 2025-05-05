@@ -1,5 +1,8 @@
 import {
   AccordionProvider,
+  BreadcrumbNav,
+  BreadcrumbNavLink,
+  BreadcrumbNavSeparator,
   ButtonGroup,
   ButtonLink,
   Heading1,
@@ -10,12 +13,33 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconChevronRight,
+} from '@utrecht/web-component-library-react';
 import React from 'react';
 import urls from './variables.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>
+      <BreadcrumbNav label="Kruimelpad">
+        <BreadcrumbNavLink href="/" index={0} rel="home">
+          Home
+        </BreadcrumbNavLink>
+        <BreadcrumbNavSeparator>
+          <UtrechtIconChevronRight />
+        </BreadcrumbNavSeparator>
+        <BreadcrumbNavLink href="/a/" index={1}>
+          Online loket
+        </BreadcrumbNavLink>
+        <BreadcrumbNavSeparator>
+          <UtrechtIconChevronRight />
+        </BreadcrumbNavSeparator>
+        <BreadcrumbNavLink current href="/a/b/" index={2}>
+          Producten
+        </BreadcrumbNavLink>
+      </BreadcrumbNav>
       <Heading1>Paspoort en identiteitskaart aanvragen</Heading1>
       <Paragraph appearance="lead">
         Maak een afspraak om een paspoort of identiteitskaart (ID-kaart) aan te vragen.
@@ -24,21 +48,22 @@ const ContentWebpage: React.FC = () => {
       <Paragraph>
         U kunt tegelijk een paspoort en een ID-kaart hebben. Met een paspoort kunt u naar alle landen reizen. Een
         ID-kaart is goedkoper, maar u kunt hiermee niet naar alle landen reizen.
+        <Link
+          className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
+          href="#"
+        >
+          <UtrechtIconChevronRight />
+          Bekijk de verschillen tussen een paspoort en een identiteitskaart
+        </Link>
       </Paragraph>
-      <Link
-        className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-        href="#"
-      >
-        <UtrechtIconChevronRight />
-        Bekijk de verschillen tussen een paspoort en een identiteitskaart
-      </Link>
+
       <Heading2>Voorwaarden</Heading2>
       <UnorderedList>
         <UnorderedListItem>U hebt de Nederlandse nationaliteit. </UnorderedListItem>
         <UnorderedListItem>U staat ingeschreven in de gemeente Utrecht.</UnorderedListItem>
       </UnorderedList>
 
-      <Heading2>Wat hebt u nodig?</Heading2>
+      <Heading2 className="utrecht-font-weight-600">Wat hebt u nodig?</Heading2>
       <Paragraph>Dit neemt u mee naar de afspraak:</Paragraph>
       <UnorderedList>
         <UnorderedListItem>

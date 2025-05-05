@@ -1,4 +1,54 @@
-/* Helper classes voor de verschillende gewichten */
+@import url "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap";
+
+.utrecht-custom-theme {
+  --utrecht-document-font-family: "Noto Sans", sans-serif !important;
+  --utrecht-font-family-base: "Noto Sans", sans-serif !important;
+  --utrecht-font-family-heading: "Noto Sans", sans-serif !important;
+
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+.utrecht-heading-1,
+.utrecht-heading-2,
+.utrecht-heading-3,
+.utrecht-heading-4,
+.utrecht-heading-5 {
+  font-weight: 600 !important;
+  margin-block-start: 24px !important;
+}
+
+.utrecht-html caption {
+  font-weight: 600 !important;
+  margin-block-end: 8px !important;
+  margin-block-start: 8px !important;
+}
+
+.utrecht-paragraph,
+.utrecht-unordered-list,
+.utrecht-ordered-list {
+  font-weight: 400 !important;
+  margin-block-start: 8px !important;
+}
+.utrecht-button-group {
+  margin-block-start: 8px !important;
+}
+
+.utrecht-accordion__button-label,
+.utrecht-accordion__button-icon {
+  color: var(--utrecht-link-hover-color);
+}
+
+.utrecht-button {
+  font-weight: 600 !important;
+}
+
+.utrecht-link utrecht-icon-chevron-right {
+  block-size: 14px;
+  font-weight: 400 !important;
+  inline-size: 14px;
+  margin-block-start: 8px !important;
+  transform: translateY(-3px);
+}
 
 .utrecht-font-weight-200 {
   font-weight: 200;
@@ -188,7 +238,6 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   }
   .utrecht-breadcrumb-nav__separator {
     margin-inline-end: 4px; /* Voeg ruimte toe tussen het icoon en de tekst, gap werkte niet :( */
-    transform: translateY(2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
   .utrecht-document {
     background-color: var(--utrecht-color-grey-90);
@@ -322,7 +371,7 @@ input[name="tijdstip"] {
   max-inline-size: 100px !important;
 }
 section {
-  max-inline-size: 65ch;
+  max-inline-size: 80ch;
 }
 .utrecht-link {
   text-decoration: underline;
