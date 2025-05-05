@@ -213,27 +213,25 @@ const ContentWebpage: React.FC = () => {
           <thead>
             <tr>
               <th scope="col">Soort product</th>
-              <th scope="col" className="numeric">
-                Kosten
-              </th>
+              <th scope="col">Kosten</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>Paspoort tot 18 jaar</td>
-              <td className="numeric">€ 65,70</td>
+              <td>€ 65,70</td>
             </tr>
             <tr>
               <td>Paspoort vanaf 18 jaar</td>
-              <td className="numeric">€ 86,85</td>
+              <td>€ 86,85</td>
             </tr>
             <tr>
               <td>ID-kaart tot 18 jaar</td>
-              <td className="numeric">€ 42,35</td>
+              <td>€ 42,35</td>
             </tr>
             <tr>
               <td>ID-kaart vanaf 18 jaar</td>
-              <td className="numeric">€ 78,50</td>
+              <td>€ 78,50</td>
             </tr>
           </tbody>
         </table>
