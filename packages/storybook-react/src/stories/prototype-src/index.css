@@ -80,6 +80,7 @@
 }
 
 .utrecht-accordion__button-icon {
+  color: var(--utrecht-link-hover-color);
   margin-inline-end: 0.4rem !important;
   transform: translateY(-1px);
 }
@@ -99,10 +100,6 @@
 .utrecht-advanced-link--with-icon {
   margin-block-start: 8px !important;
   text-decoration: none !important;
-}
-
-.utrecht-advanced-link--with-icon:hover {
-  text-decoration: 2px solid !important;
 }
 
 .utrecht-font-weight-200 {
@@ -412,9 +409,17 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     inline-size: fit-content;
     text-decoration: none;
   }
+
   .utrecht-advanced-link {
     --utrecht-link-icon-size: var(--utrecht-advanced-link-icon-size, var(--utrecht-document-font-size));
   }
+
+  .utrecht-advanced-link:hover,
+  .utrecht-breadcrumb-nav__link:hover {
+    text-decoration: underline !important;
+    text-decoration-thickness: 1px;
+  }
+
   .utrecht-html .utrecht-button-link--primary-action:focus {
     background-color: var(--utrecht-color-blue-30); /* Work arround */
   }
@@ -428,9 +433,7 @@ input[name="tijdstip"] {
 section {
   max-inline-size: 85ch;
 }
-.utrecht-link {
-  text-decoration: underline;
-}
+
 /* stylelint-enable selector-class-pattern, property-disallowed-list */
 
 .utrecht-navigation {
