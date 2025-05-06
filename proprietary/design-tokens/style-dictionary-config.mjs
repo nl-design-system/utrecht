@@ -1,4 +1,3 @@
-import { propertyFormatterHooksConfig } from './src/css-property-formatter.mjs';
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 const sortByName = (a, b) => stringSort(a.name, b.name);
@@ -6,7 +5,6 @@ const sortByName = (a, b) => stringSort(a.name, b.name);
 export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tokens.json'] }) => ({
   hooks: {
     formats: {
-      ...propertyFormatterHooksConfig,
       'json/list': function ({ dictionary }) {
         return JSON.stringify(dictionary.allTokens.sort(sortByName), null, '  ');
       },
@@ -124,10 +122,6 @@ declare const tokens: DesignToken[];`;
             selector: `:root`,
             outputReferences: true,
           },
-        },
-        {
-          destination: 'property.css',
-          format: 'css/property',
         },
       ],
     },
@@ -252,10 +246,6 @@ declare const tokens: DesignToken[];`;
             selector: `:root`,
             outputReferences: true,
           },
-        },
-        {
-          destination: 'property.css',
-          format: 'css/property',
         },
       ],
     },
