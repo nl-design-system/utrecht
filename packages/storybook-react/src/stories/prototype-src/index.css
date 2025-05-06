@@ -71,12 +71,17 @@
   margin-block-start: 8px !important;
 }
 .utrecht-button-group {
-  margin-block-start: 8px !important;
+  margin-block-end: 1rem !important;
+  margin-block-start: 1rem !important;
 }
 
-.utrecht-accordion__button-label,
-.utrecht-accordion__button-icon {
+.utrecht-accordion__button-label {
   color: var(--utrecht-link-hover-color);
+}
+
+.utrecht-accordion__button-icon {
+  margin-inline-end: 0.4rem !important;
+  transform: translateY(-1px);
 }
 
 .utrecht-button {
