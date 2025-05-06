@@ -29,6 +29,14 @@
   /* --- navigation tokens end --- */
 }
 
+/* Verberg de utrecht-navigation op schermen kleiner dan 768px */
+
+@media (width <= 768px) {
+  .utrecht-navigation {
+    display: none !important;
+  }
+}
+
 .utrecht-page-content {
   padding-block-start: 1rem;
 }
