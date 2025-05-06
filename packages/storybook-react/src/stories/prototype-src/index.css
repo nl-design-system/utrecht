@@ -80,6 +80,7 @@
 }
 
 .utrecht-accordion__button-icon {
+  color: var(--utrecht-link-hover-color);
   margin-inline-end: 0.4rem !important;
   transform: translateY(-1px);
 }
