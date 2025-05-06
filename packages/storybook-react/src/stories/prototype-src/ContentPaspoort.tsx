@@ -19,24 +19,23 @@ import {
   UtrechtIconChevronRight,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
-import urls from './variables.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>
       <BreadcrumbNav label="Kruimelpad">
-        <BreadcrumbNavLink href="/" index={0} rel="home">
+        <BreadcrumbNavLink href="#" index={0} rel="home">
           Home
         </BreadcrumbNavLink>
         <BreadcrumbNavSeparator>
           <UtrechtIconChevronRight />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink href="/a/" index={1}>
+        <BreadcrumbNavLink href="#" index={1}>
           Online loket
         </BreadcrumbNavLink>
         <BreadcrumbNavSeparator>
           <UtrechtIconChevronRight />
         </BreadcrumbNavSeparator>
-        <BreadcrumbNavLink current href="/a/b/" index={2}>
+        <BreadcrumbNavLink current href="#" index={2}>
           Producten
         </BreadcrumbNavLink>
       </BreadcrumbNav>
