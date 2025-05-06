@@ -1,4 +1,109 @@
-/* Helper classes voor de verschillende gewichten */
+@import url "https://fonts.googleapis.com/css2?family=Noto+Sans:wght@200;300;400;500;600;700;800&display=swap";
+
+:root {
+  /* --- navigation tokens start --- */
+
+  /* nav */
+  --utrecht-navigation-border-block-start-width: 0;
+  --utrecht-navigation-border-block-start-color: transparent;
+  --utrecht-navigation-border-block-end-width: 0;
+  --utrecht-navigation-border-block-end-color: transparent;
+
+  /* nav-list */
+
+  /* link */
+  --utrecht-navigation-link-background-color: #262626;
+  --utrecht-navigation-link-border-color: #666;
+  --utrecht-navigation-link-border-inline-end-width: 1px;
+  --utrecht-navigation-link-color: #fff;
+
+  /* link-active */
+  --utrecht-navigation-link-active-color: #fff;
+
+  /* link-hover  */
+  --utrecht-navigation-link-hover-color: #fff;
+  --utrecht-navigation-link-hover-background-color: #000;
+
+  /* active focus */
+
+  /* --- navigation tokens end --- */
+}
+
+/* Verberg de utrecht-navigation op schermen kleiner dan 768px */
+
+@media (width <= 768px) {
+  .utrecht-navigation {
+    display: none !important;
+  }
+}
+
+.utrecht-page-content {
+  padding-block-start: 1rem;
+}
+
+.utrecht-custom-theme {
+  --utrecht-document-font-family: "Noto Sans", sans-serif !important;
+  --utrecht-font-family-base: "Noto Sans", sans-serif !important;
+  --utrecht-font-family-heading: "Noto Sans", sans-serif !important;
+
+  font-family: "Noto Sans", sans-serif !important;
+}
+
+.utrecht-heading-1,
+.utrecht-heading-2,
+.utrecht-heading-3,
+.utrecht-heading-4,
+.utrecht-heading-5 {
+  font-weight: 600 !important;
+  margin-block-start: 24px !important;
+}
+
+.utrecht-html caption {
+  font-weight: 600 !important;
+  margin-block-end: 8px !important;
+  margin-block-start: 8px !important;
+}
+
+.utrecht-paragraph,
+.utrecht-unordered-list,
+.utrecht-ordered-list {
+  font-weight: 400 !important;
+  margin-block-start: 8px !important;
+}
+.utrecht-button-group {
+  margin-block-end: 1rem !important;
+  margin-block-start: 1rem !important;
+}
+
+.utrecht-accordion__button-label {
+  color: var(--utrecht-link-hover-color);
+}
+
+.utrecht-accordion__button-icon {
+  margin-inline-end: 0.4rem !important;
+  transform: translateY(-1px);
+}
+
+.utrecht-button {
+  font-weight: 600 !important;
+}
+
+.utrecht-advanced-link--with-icon utrecht-icon-chevron-right {
+  block-size: 14px;
+  font-weight: 400 !important;
+  inline-size: 14px;
+  margin-block-start: 8px !important;
+  transform: translateY(-7px);
+}
+
+.utrecht-advanced-link--with-icon {
+  margin-block-start: 8px !important;
+  text-decoration: none !important;
+}
+
+.utrecht-advanced-link--with-icon:hover {
+  text-decoration: 2px solid !important;
+}
 
 .utrecht-font-weight-200 {
   font-weight: 200;
@@ -188,7 +293,6 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   }
   .utrecht-breadcrumb-nav__separator {
     margin-inline-end: 4px; /* Voeg ruimte toe tussen het icoon en de tekst, gap werkte niet :( */
-    transform: translateY(2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
   .utrecht-document {
     background-color: var(--utrecht-color-grey-90);
@@ -322,9 +426,91 @@ input[name="tijdstip"] {
   max-inline-size: 100px !important;
 }
 section {
-  max-inline-size: 65ch;
+  max-inline-size: 85ch;
 }
 .utrecht-link {
   text-decoration: underline;
 }
 /* stylelint-enable selector-class-pattern, property-disallowed-list */
+
+.utrecht-navigation {
+  border-block-end-color: var(--utrecht-navigation-border-block-end-color);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-navigation-border-block-end-width);
+  border-block-start-color: var(--utrecht-navigation-border-block-start-color);
+  border-block-start-style: solid;
+  border-block-start-width: var(--utrecht-navigation-border-block-start-width);
+  margin-block-end: var(--utrecht-nav-margin-back-end);
+  margin-block-start: var(--utrecht-nav-margin-back-start);
+}
+.utrecht-navigation__list {
+  --utrecht-navigation-list-display: flex;
+  --utrecht-navigation-list-mobile-inline-size: 100%;
+
+  display: var(--utrecht-navigation-list-display);
+  inline-size: var(--utrecht-navigation-list-inline-size);
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-block-end: var(--utrecht-navigation-list-padding-block-end);
+  padding-block-start: var(--utrecht-navigation-list-padding-block-start);
+  padding-inline-end: var(--utrecht-navigation-list-padding-inline-end);
+  padding-inline-start: var(--utrecht-navigation-list-padding-inline-start);
+}
+
+.utrecht-navigation__item {
+  border-block-end-color: var(--utrecht-navigation-item-border-block-end-color, transparent);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-navigation-item-border-block-end-width, 0);
+  border-block-start-color: var(--utrecht-navigation-item-border-block-start-color, transparent);
+  border-block-start-style: solid;
+  border-block-start-width: var(--utrecht-navigation-item-border-block-start-width, 0);
+  flex: 1 1 auto;
+  padding-block-end: var(--utrecht-navigation-item-padding-block-end);
+  padding-block-start: var(--utrecht-navigation-item-padding-block-start);
+  padding-inline-end: var(--utrecht-navigation-item-padding-inline-end);
+  padding-inline-start: var(--utrecht-navigation-item-padding-inline-start);
+}
+
+.utrecht-navigation__link {
+  --utrecht-link-focus-text-decoration: underline;
+  --utrecht-link-focus-text-decoration-thickness: var(--utrecht-navigation-link-focus-text-decoration-thickness, 3px);
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-active-color: var(--utrecht-navigation-link-active-color);
+  --utrecht-link-hover-text-decoration-thickness: var(--utrecht-navigation-link-hover-decoration-thickness, 3px);
+  --utrecht-link-hover-color: var(--utrecht-navigation-link-hover-color);
+  --utrecht-link-color: var(--utrecht-navigation-link-color);
+  --utrecht-link-visited-color: var(--utrecht-navigation-link-color);
+
+  align-items: var(--_utrecht-navigation-link-align-items, center);
+  background-color: var(--utrecht-navigation-link-background-color);
+  border-inline-end-color: var(--utrecht-navigation-link-border-color);
+  border-inline-end-style: solid;
+  border-inline-end-width: var(--utrecht-navigation-link-border-inline-end-width);
+  display: flex;
+  font-weight: var(--utrecht-navigation-link-font-weight, var(--utrecht-typography-weight-scale-normal-font-weight));
+  gap: var(--utrecht-navigation-link-gap, 8px);
+  justify-content: var(--_utrecht-navigation-link-justify-content, center);
+  padding-block-end: var(--utrecht-navigation-link-padding-block-end, 1rem);
+  padding-block-start: var(--utrecht-navigation-link-padding-block-start, 1rem);
+  padding-inline-end: var(--utrecht-navigation-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-navigation-link-padding-inline-start);
+  text-align: var(--utrecht-navigation-link-text-align);
+}
+
+.utrecht-navigation__link:hover {
+  --utrecht-navigation-link-background-color: var(--utrecht-navigation-link-hover-background-color);
+  --utrecht-navigation-marker-color: currentColor;
+  --utrecht-navigation-marker-outline-hover-fill: currentColor;
+}
+
+.utrecht-navigation__link:focus {
+  --utrecht-link-focus-color: var(--utrecht-navigation-link-focus-color, var(--utrecht-color-black));
+  --utrecht-link-focus-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-navigation-marker-color: currentColor;
+  --utrecht-navigation-marker-outline-hover-fill: currentColor;
+}
+
+.utrecht-navigation__link:active:focus {
+  --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color, var(--utrecht-color-black));
+}
