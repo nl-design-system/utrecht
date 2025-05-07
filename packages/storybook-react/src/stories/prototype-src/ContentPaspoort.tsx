@@ -200,7 +200,7 @@ const ContentWebpage: React.FC = () => {
               </div>
             ),
             expanded: undefined,
-            label: 'Zo werkt het bozorgen van uw paspoort of ID-kaart',
+            label: 'Zo werkt het bezorgen van uw paspoort of ID-kaart',
           },
         ]}
       />
