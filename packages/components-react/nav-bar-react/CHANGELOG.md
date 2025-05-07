@@ -1,5 +1,12 @@
 # @utrecht/nav-bar-react
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/nav-bar-css@1.4.1
+
 ## 1.0.5
 
 ### Patch Changes

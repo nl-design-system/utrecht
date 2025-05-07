@@ -1,5 +1,11 @@
 # @utrecht/badge-list-css
 
+## 2.2.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 2.2.0
 
 ### Minor Changes

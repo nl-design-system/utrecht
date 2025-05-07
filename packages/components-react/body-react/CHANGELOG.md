@@ -1,5 +1,12 @@
 # @utrecht/body-react
 
+## 0.0.6
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/body-css@1.2.1
+
 ## 0.0.5
 
 ### Patch Changes

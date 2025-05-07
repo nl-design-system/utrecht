@@ -1,5 +1,12 @@
 # @utrecht/page-footer-react
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/page-footer-css@2.1.1
+
 ## 1.0.5
 
 ### Patch Changes

@@ -1,5 +1,19 @@
 # @utrecht/accordion-css
 
+## 2.0.0
+
+### Major Changes
+
+- 5902c57: Remove deprecated `utrecht-accordion__button--utrecht` class. It has been fully removed in this release.
+
+### Minor Changes
+
+- 7274362: Support the new accordion component style for the Municipality of Utrecht.
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 1.6.0
 
 ### Minor Changes

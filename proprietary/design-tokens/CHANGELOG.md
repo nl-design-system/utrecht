@@ -1,5 +1,15 @@
 # @utrecht/design-tokens
 
+## 3.0.0
+
+### Major Changes
+
+- 5902c57: Remove deprecated `utrecht-accordion__button--utrecht` class. It has been fully removed in this release.
+
+### Minor Changes
+
+- 7a3b28b: Add the new Accordion style design tokens
+
 ## 2.5.1
 
 ### Patch Changes

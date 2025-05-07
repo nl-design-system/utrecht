@@ -1,5 +1,12 @@
 # @utrecht/page-header-react
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/page-header-css@1.5.1
+
 ## 1.0.5
 
 ### Patch Changes

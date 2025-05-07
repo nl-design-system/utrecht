@@ -1,5 +1,13 @@
 # @utrecht/checkbox-react
 
+## 1.0.8
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/checkbox-css@1.6.1
+  - @utrecht/custom-checkbox-css@1.3.2
+
 ## 1.0.7
 
 ### Patch Changes
