@@ -1,5 +1,16 @@
 # @utrecht/component-library-css
 
+## 7.2.0
+
+### Minor Changes
+
+- 0a6d0fc: Add YouTube video CSS component.
+
+### Patch Changes
+
+- Updated dependencies [b6cd5bb]
+  - @utrecht/youtube-video-css@1.0.0
+
 ## 7.1.6
 
 ### Patch Changes
