@@ -1,5 +1,11 @@
 # @utrecht/data-badge-css
 
+## 1.0.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 1.0.0
 
 ### Major Changes

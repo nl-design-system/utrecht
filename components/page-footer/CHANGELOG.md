@@ -1,5 +1,11 @@
 # @utrecht/page-footer-css
 
+## 2.1.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 2.1.0
 
 ### Minor Changes

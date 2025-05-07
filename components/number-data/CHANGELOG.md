@@ -1,5 +1,11 @@
 # @utrecht/number-data-css
 
+## 1.4.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 1.4.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/table-css
 
+## 1.6.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 1.6.0
 
 ### Minor Changes

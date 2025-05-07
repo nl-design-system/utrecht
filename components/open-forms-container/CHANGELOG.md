@@ -1,5 +1,14 @@
 # @utrecht/open-forms-container-css
 
+## 1.0.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+- Updated dependencies [e20f33c]
+  - @utrecht/focus-ring-css@2.3.1
+  - @utrecht/textbox-css@1.7.1
+
 ## 1.0.0
 
 ### Major Changes

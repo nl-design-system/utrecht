@@ -1,5 +1,12 @@
 # @utrecht/fieldset-react
 
+## 1.0.7
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/form-fieldset-css@1.5.1
+
 ## 1.0.6
 
 ### Patch Changes

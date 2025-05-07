@@ -1,5 +1,11 @@
 # @utrecht/build-utils-css
 
+## 0.0.3
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 0.0.2
 
 ### Patch Changes

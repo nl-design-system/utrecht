@@ -1,5 +1,118 @@
 # @utrecht/component-library-react
 
+## 10.0.0
+
+### Major Changes
+
+- 5902c57: This release introduces a breaking change by removing the deprecated `appearance='utrecht'` property, which relied on the `utrecht-accordion__button--utrecht` CSS class. Applications using this property will need to update their code to ensure compatibility.
+- 5902c57: Remove deprecated `utrecht-accordion__button--utrecht` class. It has been fully removed in this release.
+
+### Patch Changes
+
+- e28abff: Add `currentColor` to the accordion icon component
+- Updated dependencies [5902c57]
+- Updated dependencies [e20f33c]
+- Updated dependencies [7274362]
+  - @utrecht/accordion-css@2.0.0
+  - @utrecht/alert-css@2.2.1
+  - @utrecht/alert-dialog-css@1.4.2
+  - @utrecht/alternate-lang-nav-css@1.3.1
+  - @utrecht/article-css@1.5.1
+  - @utrecht/backdrop-css@1.4.1
+  - @utrecht/badge-counter-css@1.4.1
+  - @utrecht/badge-list-css@2.2.1
+  - @utrecht/badge-status-css@1.4.1
+  - @utrecht/blockquote-css@1.6.1
+  - @utrecht/breadcrumb-nav-css@1.4.1
+  - @utrecht/button-link-css@1.3.1
+  - @utrecht/code-css@1.5.1
+  - @utrecht/code-block-css@1.5.1
+  - @utrecht/color-sample-css@1.4.1
+  - @utrecht/column-layout-css@1.5.1
+  - @utrecht/currency-data-css@1.3.1
+  - @utrecht/custom-checkbox-css@1.3.2
+  - @utrecht/data-badge-css@1.0.1
+  - @utrecht/data-list-css@1.4.1
+  - @utrecht/data-placeholder-css@1.4.1
+  - @utrecht/digid-button-css@1.4.1
+  - @utrecht/document-css@1.5.1
+  - @utrecht/drawer-css@1.4.1
+  - @utrecht/emphasis-css@1.5.1
+  - @utrecht/figure-css@1.5.1
+  - @utrecht/focus-ring-css@2.3.1
+  - @utrecht/form-toggle-css@1.5.1
+  - @utrecht/heading-1-css@1.5.1
+  - @utrecht/heading-2-css@1.5.1
+  - @utrecht/heading-3-css@1.5.1
+  - @utrecht/heading-4-css@1.5.1
+  - @utrecht/heading-5-css@1.5.1
+  - @utrecht/heading-6-css@1.5.1
+  - @utrecht/heading-group-css@1.5.1
+  - @utrecht/html-content-css@1.4.1
+  - @utrecht/iban-data-css@1.3.1
+  - @utrecht/icon-css@2.0.1
+  - @utrecht/img-css@1.3.1
+  - @utrecht/index-char-nav-css@1.4.1
+  - @utrecht/link-button-css@1.4.1
+  - @utrecht/link-list-css@2.3.1
+  - @utrecht/link-social-css@1.4.1
+  - @utrecht/list-social-css@1.4.1
+  - @utrecht/logo-css@1.4.1
+  - @utrecht/logo-button-css@1.4.1
+  - @utrecht/logo-image-css@1.4.1
+  - @utrecht/map-marker-css@1.4.1
+  - @utrecht/map-control-button-css@2.2.1
+  - @utrecht/mark-css@1.5.1
+  - @utrecht/multiline-data-css@1.3.1
+  - @utrecht/nav-bar-css@1.4.1
+  - @utrecht/nav-list-css@1.3.1
+  - @utrecht/number-badge-css@2.3.1
+  - @utrecht/number-data-css@1.4.1
+  - @utrecht/open-forms-container-css@1.0.1
+  - @utrecht/ordered-list-css@1.5.2
+  - @utrecht/page-css@1.4.1
+  - @utrecht/page-content-css@1.4.1
+  - @utrecht/page-footer-css@2.1.1
+  - @utrecht/page-header-css@1.5.1
+  - @utrecht/pagination-css@1.4.1
+  - @utrecht/paragraph-css@2.3.1
+  - @utrecht/pre-heading-css@1.4.1
+  - @utrecht/preserve-data-css@1.3.1
+  - @utrecht/rich-text-css@1.3.1
+  - @utrecht/search-bar-css@2.2.1
+  - @utrecht/select-css@1.8.1
+  - @utrecht/separator-css@1.5.1
+  - @utrecht/skip-link-css@1.5.1
+  - @utrecht/spotlight-section-css@1.6.1
+  - @utrecht/subscript-css@1.3.1
+  - @utrecht/superscript-css@1.3.1
+  - @utrecht/surface-css@1.4.1
+  - @utrecht/table-css@1.6.1
+  - @utrecht/table-of-contents-css@0.3.1
+  - @utrecht/textarea-css@2.3.2
+  - @utrecht/top-task-link-css@1.4.1
+  - @utrecht/top-task-nav-css@1.3.1
+  - @utrecht/unordered-list-css@1.5.1
+  - @utrecht/url-data-css@1.3.1
+  - @utrecht/vega-visualization-css@1.4.1
+  - @utrecht/button-react@2.0.7
+  - @utrecht/button-group-react@1.0.1
+  - @utrecht/calendar-react@1.0.11
+  - @utrecht/checkbox-react@1.0.8
+  - @utrecht/combobox-react@0.0.8
+  - @utrecht/data-badge-react@1.0.4
+  - @utrecht/form-field-react@1.0.7
+  - @utrecht/form-field-description-react@1.0.7
+  - @utrecht/form-field-error-message-react@1.0.7
+  - @utrecht/fieldset-react@1.0.7
+  - @utrecht/form-label-react@1.0.7
+  - @utrecht/link-react@1.0.7
+  - @utrecht/listbox-react@1.0.10
+  - @utrecht/open-forms-container-react@1.0.1
+  - @utrecht/radio-button-react@1.0.7
+  - @utrecht/textbox-react@1.0.8
+  - @utrecht/form-field-checkbox-react@1.0.10
+
 ## 9.0.6
 
 ### Patch Changes

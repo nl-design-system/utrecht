@@ -1,5 +1,11 @@
 # @utrecht/select-css
 
+## 1.8.1
+
+### Patch Changes
+
+- e20f33c: Provide `.d.mts` file for `.mjs` files in CSS components.
+
 ## 1.8.0
 
 ### Minor Changes

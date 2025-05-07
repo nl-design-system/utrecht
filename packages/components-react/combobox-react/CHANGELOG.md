@@ -1,5 +1,12 @@
 # @utrecht/combobox-react
 
+## 0.0.8
+
+### Patch Changes
+
+- Updated dependencies [e20f33c]
+  - @utrecht/combobox-css@1.4.1
+
 ## 0.0.7
 
 ### Patch Changes
