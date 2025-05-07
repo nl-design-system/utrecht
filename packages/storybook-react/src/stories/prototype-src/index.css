@@ -58,6 +58,14 @@
   margin-block-start: 24px !important;
 }
 
+.utrecht-heading-2 {
+  font-size: 1.375rem !important;
+}
+
+.utrecht-heading-3 {
+  font-size: 1.2rem !important;
+}
+
 .utrecht-html caption {
   font-weight: 600 !important;
   margin-block-end: 8px !important;
@@ -76,11 +84,11 @@
 }
 
 .utrecht-accordion__button-label {
-  color: var(--utrecht-link-hover-color);
+  color: #24578f;
 }
 
 .utrecht-accordion__button-icon {
-  color: var(--utrecht-link-hover-color);
+  color: #24578f;
   margin-inline-end: 0.4rem !important;
   transform: translateY(-1px);
 }
