@@ -1,4 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import {
+  AfterContentInit,
+  ChangeDetectionStrategy,
+  Component,
+  ContentChild,
+  ElementRef,
+  Input,
+  ViewEncapsulation,
+} from '@angular/core';
 
 export type AppearanceType = 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
 
@@ -18,8 +26,12 @@ export type AppearanceType = 'primary-action-button' | 'secondary-action-button'
     '[class.utrecht-button-link]': 'true',
   },
 })
-export class UtrechtButtonLinkAttr {
+export class UtrechtButtonLinkAttr implements AfterContentInit {
   @Input() appearance?: AppearanceType;
   @Input() external = false;
-  constructor() {}
+  @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
+  hasLabel = false;
+  ngAfterContentInit() {
+    this.hasLabel = !!this.labelSlot;
+  }
 }

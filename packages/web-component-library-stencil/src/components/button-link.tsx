@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Prop, State } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -19,6 +19,13 @@ export class ButtonLink {
   @Prop() href: string;
   @Prop() placeholder: boolean;
   @Prop() target?: string;
+  @State() hasLabelSlot = false;
+
+  private onLabelSlotChange = (event: Event) => {
+    const slot = event.target as HTMLSlotElement;
+    this.hasLabelSlot = slot.assignedNodes({ flatten: true }).length > 0;
+  };
+
   render() {
     return (
       <a
@@ -38,6 +45,12 @@ export class ButtonLink {
         role={this.placeholder ? 'link' : undefined}
         target={typeof this.target === 'string' ? this.target : undefined}
       >
+        <slot name="icon"></slot>
+        {this.hasLabelSlot && (
+          <span class="utrecht-button-link__label">
+            <slot name="label" onSlotchange={this.onLabelSlotChange}></slot>
+          </span>
+        )}
         <slot></slot>
       </a>
     );

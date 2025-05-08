@@ -4,7 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/button-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-link-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtButtonLink } from '@utrecht/web-component-library-react';
+import iconSet from '@utrecht/icon/dist/index.json';
+import { UtrechtButtonLink, UtrechtIconBestemmingsplan } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
@@ -17,6 +18,8 @@ interface ButtonLinkStoryProps {
   href: string;
   placeholder?: boolean;
   target?: string;
+  label?: string;
+  icon?: string;
 }
 
 const ButtonLinkStory = ({
@@ -27,18 +30,26 @@ const ButtonLinkStory = ({
   external,
   placeholder,
   target,
-}: PropsWithChildren<ButtonLinkStoryProps>) => (
-  <UtrechtButtonLink
-    appearance={appearance}
-    download={download || undefined}
-    external={external || undefined}
-    href={href}
-    placeholder={placeholder || undefined}
-    target={target || undefined}
-  >
-    {children}
-  </UtrechtButtonLink>
-);
+  icon,
+  label,
+}: PropsWithChildren<ButtonLinkStoryProps>) => {
+  const IconElement = icon;
+
+  return (
+    <UtrechtButtonLink
+      appearance={appearance}
+      download={download || undefined}
+      external={external || undefined}
+      href={href}
+      placeholder={placeholder || undefined}
+      target={target || undefined}
+    >
+      {IconElement && React.cloneElement(<IconElement />, { slot: 'icon' })}
+      {label && <span slot="label">{label}</span>}
+      {children}
+    </UtrechtButtonLink>
+  );
+};
 
 const meta = {
   title: 'Web Component/Button link',
@@ -53,6 +64,15 @@ const meta = {
     children: {
       description: 'Button text',
       control: 'text',
+    },
+    label: {
+      description: 'Button text in label',
+      control: 'text',
+    },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
     },
     disabled: {
       description: 'Disabled',
@@ -166,6 +186,40 @@ export const Download: Story = {
     children: 'Voorbeeldlink',
     download: 'example.html',
     href: './',
+  },
+};
+
+export const Icon: Story = {
+  args: {
+    label: 'Read more...',
+    icon: 'utrecht-icon-bestemmingsplan',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Do this instead: use the `slot="icon"` attribute on your icon and use the `slot="label"` attribute on your label.',
+      },
+    },
+  },
+};
+
+export const DiscouragedIcon: Story = {
+  args: {
+    children: (
+      <>
+        <UtrechtIconBestemmingsplan /> Read <strong>more</strong>...
+      </>
+    ),
+  },
+  name: 'Discouraged method: no slot for the icon',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Do not do this! When you have an icon, it is better to use the `icon` slot for the label. It works fine when the label only contains plain text. You will have unexpected results when the label contains an element. Between each element a space will be greated because of the `column-gap` design token.',
+      },
+    },
   },
 };
 
