@@ -1,0 +1,64 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@import "~@utrecht/img-css/src/mixin";
+
+@mixin utrecht-card {
+  background-color: var(--utrecht-card-background-color);
+  border-radius: var(--utrecht-card-border-radius);
+  box-shadow: var(--utrecht-card-box-shadow);
+  color: var(--utrecht-card-color);
+  display: flex;
+  flex-direction: column;
+  inline-size: var(--utrecht-card-inline-size, 100%);
+  max-inline-size: var(--utrecht-card-max-inline-size, 100%);
+  row-gap: var(--utrecht-card-row-gap);
+}
+@mixin utrecht-card--link {
+  cursor: pointer;
+  text-decoration-skip-ink: none;
+}
+@mixin utrecht-card--hover {
+  --utrecht-link-text-decoration: underline;
+  --utrecht-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
+}
+@mixin utrecht-card__heading {
+  --utrecht-heading-color: var(--utrecht-card-heading-color);
+
+  order: 2;
+  padding-inline-end: var(--utrecht-card-heading-padding-inline-end);
+  padding-inline-start: var(--utrecht-card-heading-padding-inline-start);
+}
+
+@mixin utrecht-card__image {
+  order: 1;
+  img:not(.utrecht-img) {
+    @include utrecht-img;
+  }
+  img:not(img[height]) {
+    @include utrecht-img--photo;
+  }
+
+  img:not(img[width]) {
+    @include utrecht-img--photo;
+  }
+}
+
+@mixin utrecht-card__content {
+  display: flex;
+  flex-direction: column;
+  padding-block-end: var(--utrecht-card-content-padding-block-end);
+  row-gap: var(--utrecht-card-content-row-gap);
+  &:not(:has(img)) {
+    padding-block-start: var(--utrecht-card-content-padding-block-start);
+  }
+}
+
+@mixin utrecht-card__body {
+  order: 3;
+  padding-inline-end: var(--utrecht-card-body-padding-inline-end);
+  padding-inline-start: var(--utrecht-card-body-padding-inline-start);
+}
