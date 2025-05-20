@@ -1,0 +1,90 @@
+{
+  "name": "@utrecht/card-react",
+  "version": "0.0.0",
+  "description": "Card component for the Municipality of Utrecht based on the NL Design System architecture",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "homepage": "https://github.com/nl-design-system/utrecht/tree/main/packages/components-react/card-react#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/utrecht/issues"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git+https://github.com/nl-design-system/utrecht.git",
+    "directory": "packages/components-react/card-react"
+  },
+  "license": "EUPL-1.2",
+  "author": "Community for NL Design System",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./CHANGELOG.md": "./CHANGELOG.md",
+    "./dist": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.mjs": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/css": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    },
+    "./dist/css.mjs": {
+      "types": "./dist/css.d.ts",
+      "import": "./dist/css.mjs"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "scripts": {
+    "build": "rollup --config ./rollup.config.mjs",
+    "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
+    "init": "init-react-package",
+    "test": "mkdir -p pages && jest --coverage --verbose",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@utrecht/card-css": "workspace:*",
+    "@utrecht/link-react": "workspace:*",
+    "clsx": "2.1.1"
+  },
+  "devDependencies": {
+    "@testing-library/dom": "8.20.1",
+    "@testing-library/jest-dom": "6.5.0",
+    "@testing-library/react": "16.0.1",
+    "@testing-library/user-event": "14.5.1",
+    "@types/jest": "29.5.13",
+    "@types/react": "18.3.3",
+    "@types/testing-library__jest-dom": "5.14.9",
+    "@utrecht/build-utils-react": "workspace:*",
+    "jest": "29.7.0",
+    "jest-environment-jsdom": "29.7.0",
+    "react": "18.3.1",
+    "rollup": "4.23.0",
+    "typescript": "5.6.2"
+  },
+  "peerDependencies": {
+    "@babel/runtime": "*",
+    "react": "18",
+    "react-dom": "18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
