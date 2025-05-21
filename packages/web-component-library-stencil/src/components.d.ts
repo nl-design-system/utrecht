@@ -7,7 +7,6 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface UtrechtAlert {
-        "role": string;
         "type": string;
     }
     interface UtrechtArticle {
@@ -3095,7 +3094,6 @@ declare global {
 }
 declare namespace LocalJSX {
     interface UtrechtAlert {
-        "role"?: string;
         "type"?: string;
     }
     interface UtrechtArticle {
