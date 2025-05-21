@@ -3,35 +3,42 @@
 import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
-export type AlertType = 'info' | 'ok' | 'warning' | 'error';
+const enumGuard =
+  <T,>(values: readonly T[]) =>
+  <T,>(x: unknown): x is T =>
+    values.includes(x as never);
+
+export const ROLES = ['status', 'alert', 'note'] as const;
+export type AlertRole = (typeof ROLES)[number];
+export const isAlertRole = enumGuard(ROLES);
+
+export const TYPES = ['error', 'warning', 'info', 'ok'] as const;
+export type AlertType = (typeof TYPES)[number];
+export const isAlertType = enumGuard(TYPES);
+
+const typeToRole: Record<AlertType, AlertRole> = {
+  info: 'note',
+  ok: 'status',
+  warning: 'alert',
+  error: 'alert',
+};
 
 export interface AlertProps extends PropsWithChildren {
   icon?: ReactNode;
   type?: string | AlertType;
-  role?: string;
+  role?: string | AlertRole;
 }
 
-export const Alert = ({ children, icon = null, type, role }: PropsWithChildren<AlertProps>) => {
-  let computedRole = role;
-  if (!computedRole) {
-    switch (type) {
-      case 'info':
-      case 'ok':
-        computedRole = 'status';
-        break;
-      case 'error':
-      case 'warning':
-        computedRole = 'alert';
-        break;
-    }
-  }
+export const Alert = ({ children, icon, type, role }: PropsWithChildren<AlertProps>) => {
+  const computedType = isAlertType(type) ? (type as AlertType) : 'info';
+  const computedRole = role || typeToRole[computedType];
   return (
     <div
       className={clsx('utrecht-alert', {
-        'utrecht-alert--error': type === 'error',
-        'utrecht-alert--info': type === 'info',
-        'utrecht-alert--ok': type === 'ok',
-        'utrecht-alert--warning': type === 'warning',
+        'utrecht-alert--error': computedType === 'error',
+        'utrecht-alert--info': computedType === 'info',
+        'utrecht-alert--ok': computedType === 'ok',
+        'utrecht-alert--warning': computedType === 'warning',
       })}
     >
       {icon && <div className="utrecht-alert__icon">{icon}</div>}
