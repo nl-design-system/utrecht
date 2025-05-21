@@ -7,6 +7,25 @@
 import { Component, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
+const enumGuard =
+  <T,>(values: readonly T[]) =>
+  <T,>(x: unknown): x is T =>
+    values.includes(x as never);
+
+const ROLES = ['status', 'alert', 'note'] as const;
+type AlertRole = (typeof ROLES)[number];
+
+const TYPES = ['error', 'warning', 'info', 'ok'] as const;
+type AlertType = (typeof TYPES)[number];
+const isAlertType = enumGuard(TYPES);
+
+const typeToRole: Record<AlertType, AlertRole> = {
+  info: 'note',
+  ok: 'status',
+  warning: 'alert',
+  error: 'alert',
+};
+
 @Component({
   tag: 'utrecht-alert',
   styleUrl: 'alert.scss',
@@ -14,29 +33,17 @@ import clsx from 'clsx';
 })
 export class Alert {
   @Prop() type: string;
-  @Prop() role: string;
 
   render() {
-    let computedRole = this.role;
-    if (!computedRole) {
-      switch (this.type) {
-        case 'info':
-        case 'ok':
-          computedRole = 'status';
-          break;
-        case 'error':
-        case 'warning':
-          computedRole = 'alert';
-          break;
-      }
-    }
+    const computedType = isAlertType(this.type) ? (this.type as AlertType) : 'info';
+    const computedRole = typeToRole[computedType];
     return (
       <div
         class={clsx('utrecht-alert', {
-          'utrecht-alert--error': this.type === 'error',
-          'utrecht-alert--info': this.type === 'info',
-          'utrecht-alert--ok': this.type === 'ok',
-          'utrecht-alert--warning': this.type === 'warning',
+          'utrecht-alert--error': computedType === 'error',
+          'utrecht-alert--info': computedType === 'info',
+          'utrecht-alert--ok': computedType === 'ok',
+          'utrecht-alert--warning': computedType === 'warning',
         })}
       >
         <div class="utrecht-alert__icon">
