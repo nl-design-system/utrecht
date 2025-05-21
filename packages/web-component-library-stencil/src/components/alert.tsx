@@ -12,7 +12,7 @@ const enumGuard =
   <T,>(x: unknown): x is T =>
     values.includes(x as never);
 
-const ROLES = ['status', 'alert', 'note'] as const;
+const ROLES = ['status', 'alert'] as const;
 type AlertRole = (typeof ROLES)[number];
 
 const TYPES = ['error', 'warning', 'info', 'ok'] as const;
@@ -20,7 +20,7 @@ type AlertType = (typeof TYPES)[number];
 const isAlertType = enumGuard(TYPES);
 
 const typeToRole: Record<AlertType, AlertRole> = {
-  info: 'note',
+  info: 'status',
   ok: 'status',
   warning: 'alert',
   error: 'alert',
