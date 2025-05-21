@@ -14,7 +14,7 @@ interface AlertStoryProps extends AlertProps {
 const AlertStory = ({ children, type, role, icon, ...props }: AlertStoryProps) => {
   const IconElement = icon;
   return (
-    <Alert icon={IconElement ? <IconElement /> : null} type={type} role={role}>
+    <Alert icon={IconElement ? <IconElement /> : null} type={type} role={role} {...props}>
       {children}
     </Alert>
   );
