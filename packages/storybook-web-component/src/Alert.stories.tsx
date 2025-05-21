@@ -21,6 +21,10 @@ const meta = {
       control: { type: 'select' },
       options: ['', 'error', 'info', 'ok', 'warning'],
     },
+    role: {
+      description: 'Role',
+      control: { type: 'string' },
+    },
   },
   args: {
     children: [

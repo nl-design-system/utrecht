@@ -14,8 +14,22 @@ import clsx from 'clsx';
 })
 export class Alert {
   @Prop() type: string;
+  @Prop() role: string;
 
   render() {
+    let computedRole = this.role;
+    if (!computedRole) {
+      switch (this.type) {
+        case 'info':
+        case 'ok':
+          computedRole = 'status';
+          break;
+        case 'error':
+        case 'warning':
+          computedRole = 'alert';
+          break;
+      }
+    }
     return (
       <div
         class={clsx('utrecht-alert', {
@@ -29,7 +43,7 @@ export class Alert {
           <slot name="icon"></slot>
         </div>
         <div class="utrecht-alert__content">
-          <div class="utrecht-alert__message">
+          <div class="utrecht-alert__message" role={computedRole}>
             <slot></slot>
           </div>
         </div>

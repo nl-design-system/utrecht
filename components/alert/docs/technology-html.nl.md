@@ -2,7 +2,10 @@
 
 # HTML
 
-Het belangrijkste onderdeel van de alert is het bericht, plaats die in een `<div role="alert">`.
+Het belangrijkste onderdeel van de alert is het bericht, plaats die in een `<div role="status">` of `<div role="alert">`.
+
+- Gebruik `role="alert"` om belangrijke en/of tijdgevoelige berichten aan gebruikers van hulptechnologie direct over te brengen. Deze rol onderbreekt de gebruiker bij wat die doet en geeft de melding onmiddellijk door.
+- Een live-region met de `role="status"` geeft de gebruiker informatie die niet belangrijk genoeg is om een 'alert' te zijn. Deze rol onderbreekt de gebruiker niet, maar de melding wordt pas doorgegeven als de gebruiker geen interactie met de hulptechnologie meer heeft.
 
 Gebruik bij voorkeur een _paragraph component_ voor de inhoud van het bericht, voor een goede `font-size` en `line-height` en zodat de alert `margin` heeft wanneer de CSS niet geladen kan worden.
 
