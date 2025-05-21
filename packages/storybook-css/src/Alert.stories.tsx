@@ -21,10 +21,10 @@ interface AlertStoryProps extends AlertProps {
   icon?: string;
 }
 
-const AlertStory = ({ children, icon, ...props }: AlertStoryProps) => {
+const AlertStory = ({ children, type, role, icon, ...props }: AlertStoryProps) => {
   const IconElement = icon;
   return (
-    <Alert icon={IconElement ? <IconElement /> : null} {...props}>
+    <Alert icon={IconElement ? <IconElement /> : null} type={type} role={role}>
       {children}
     </Alert>
   );
@@ -42,6 +42,10 @@ const meta = {
       description: 'Type',
       control: { type: 'select' },
       options: ['', 'error', 'info', 'ok', 'warning'],
+    },
+    role: {
+      description: 'Role',
+      control: { type: 'string' },
     },
     icon: {
       description: 'Icon',

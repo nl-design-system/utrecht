@@ -11,9 +11,13 @@ interface AlertStoryProps extends AlertProps {
   icon?: string;
 }
 
-const AlertStory = ({ children, icon, ...props }: AlertStoryProps) => {
+const AlertStory = ({ children, type, role, icon, ...props }: AlertStoryProps) => {
   const IconElement = icon;
-  return <Alert icon={IconElement ? <IconElement /> : null}>{children}</Alert>;
+  return (
+    <Alert icon={IconElement ? <IconElement /> : null} type={type} role={role}>
+      {children}
+    </Alert>
+  );
 };
 
 const meta = {
@@ -21,6 +25,15 @@ const meta = {
   id: 'react-alert',
   component: AlertStory,
   argTypes: {
+    type: {
+      description: 'Type',
+      control: { type: 'select' },
+      options: ['', 'error', 'info', 'ok', 'warning'],
+    },
+    role: {
+      description: 'Role',
+      control: { type: 'string' },
+    },
     icon: {
       description: 'Icon',
       control: { type: 'select' },

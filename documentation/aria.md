@@ -142,6 +142,7 @@
 
 ## `role="status"`
 
+- _Alert_ component
 - _Form field description_ component
 
 ## `role="switch"`
