@@ -7,12 +7,30 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
-export type AlertType = 'info' | 'ok' | 'warning' | 'error';
+const enumGuard =
+  <T,>(values: readonly T[]) =>
+  <T,>(x: unknown): x is T =>
+    values.includes(x as never);
+
+export const ROLES = ['status', 'alert', 'note'] as const;
+export type AlertRole = (typeof ROLES)[number];
+export const isAlertRole = enumGuard(ROLES);
+
+export const TYPES = ['error', 'warning', 'info', 'ok'] as const;
+export type AlertType = (typeof TYPES)[number];
+export const isAlertType = enumGuard(TYPES);
+
+const typeToRole: Record<AlertType, AlertRole> = {
+  info: 'note',
+  ok: 'status',
+  warning: 'alert',
+  error: 'alert',
+};
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactNode;
   type?: string | AlertType;
-  role?: string;
+  role?: string | AlertRole;
 }
 
 export const Alert = forwardRef(
@@ -20,19 +38,8 @@ export const Alert = forwardRef(
     { children, className, icon, type, role, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    let computedRole = role;
-    if (!computedRole) {
-      switch (type) {
-        case 'info':
-        case 'ok':
-          computedRole = 'status';
-          break;
-        case 'error':
-        case 'warning':
-          computedRole = 'alert';
-          break;
-      }
-    }
+    const computedType = isAlertType(type) ? (type as AlertType) : 'info';
+    const computedRole = role || typeToRole[computedType];
     return (
       <div
         {...restProps}
@@ -40,10 +47,10 @@ export const Alert = forwardRef(
         className={clsx(
           'utrecht-alert',
           {
-            'utrecht-alert--error': type === 'error',
-            'utrecht-alert--info': type === 'info',
-            'utrecht-alert--ok': type === 'ok',
-            'utrecht-alert--warning': type === 'warning',
+            'utrecht-alert--error': computedType === 'error',
+            'utrecht-alert--info': computedType === 'info',
+            'utrecht-alert--ok': computedType === 'ok',
+            'utrecht-alert--warning': computedType === 'warning',
           },
           className,
         )}
