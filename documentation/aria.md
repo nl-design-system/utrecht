@@ -112,6 +112,10 @@
 - _Alternate language navigation_
 - _Breadcrumb navigation_
 
+## `role="note"`
+
+- _Alert_ component
+
 ## `role="option"`
 
 - _option_ element van de _select_ component
