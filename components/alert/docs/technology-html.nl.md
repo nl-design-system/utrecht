@@ -6,7 +6,6 @@ Het belangrijkste onderdeel van de alert is het bericht, plaats die in een `<div
 
 - Gebruik `role="alert"` om belangrijke en/of tijdgevoelige berichten aan gebruikers van hulptechnologie direct over te brengen. Deze rol onderbreekt de gebruiker bij wat die doet en geeft de melding onmiddellijk door.
 - Gebruik `role="status"` om informatie die niet belangrijk genoeg is om een 'alert' te zijn over te brengen. Deze rol onderbreekt de gebruiker niet, maar de melding wordt pas doorgegeven als de gebruiker geen interactie met de hulptechnologie meer heeft.
-- Gebruik `role="note"` om informatie die minder belangrijk is over te brengen, waar de gebruiker op dat moment niet per se mee hoeft te interacteren. Ook waar de inhoud of het probleem niets verhindert om te gebeuren.
 
 Gebruik bij voorkeur een _paragraph component_ voor de inhoud van het bericht, voor een goede `font-size` en `line-height` en zodat de alert `margin` heeft wanneer de CSS niet geladen kan worden.
 
