@@ -1,5 +1,11 @@
 # @utrecht/alert-css
 
+## 2.3.0
+
+### Minor Changes
+
+- 85ed6c0: Add documentation on which `role` values to use and when to use them.
+
 ## 2.2.1
 
 ### Patch Changes

@@ -1,5 +1,22 @@
 # @utrecht/component-library-react
 
+## 10.1.0
+
+### Minor Changes
+
+- 85ed6c0: - Use fallback value `info` for optional `type` property in Alert component, when `type` is not given or does not match defined types.
+  - Make `role` attribute in Alert component configurable via `role` property (supports either `status` or `alert`).
+  - Ensure the `role` attribute in Alert component is always rendered.
+
+### Patch Changes
+
+- Updated dependencies [85ed6c0]
+- Updated dependencies [6b57525]
+  - @utrecht/alert-css@2.3.0
+  - @utrecht/card-css@0.1.0
+  - @utrecht/alert-dialog-css@1.4.2
+  - @utrecht/card-react@0.0.1
+
 ## 10.0.0
 
 ### Major Changes

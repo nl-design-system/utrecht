@@ -1,5 +1,12 @@
 # @utrecht/web-component-library-react
 
+## 3.0.7
+
+### Patch Changes
+
+- Updated dependencies [85ed6c0]
+  - @utrecht/web-component-library-stencil@3.5.0
+
 ## 3.0.6
 
 ### Patch Changes

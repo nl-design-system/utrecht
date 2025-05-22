@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies [85ed6c0]
+  - @utrecht/alert-css@2.3.0
+  - @utrecht/alert-dialog-css@1.4.2
+
 ## 1.0.10
 
 ### Patch Changes
