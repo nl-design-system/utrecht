@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 3.1.0
+
+### Minor Changes
+
+- c7fa442: Add the card design tokens
+
 ## 3.0.0
 
 ### Major Changes

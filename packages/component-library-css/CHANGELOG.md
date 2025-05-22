@@ -1,5 +1,13 @@
 # @utrecht/component-library-css
 
+## 7.2.1
+
+### Patch Changes
+
+- Updated dependencies [85ed6c0]
+  - @utrecht/alert-css@2.3.0
+  - @utrecht/alert-dialog-css@1.4.2
+
 ## 7.2.0
 
 ### Minor Changes
