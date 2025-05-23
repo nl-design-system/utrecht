@@ -60,7 +60,7 @@ const meta = {
     headingLevel: 2,
     image: (
       <img
-        src="/images/erfgoed-image-waterput-op-de-neude.png"
+        src="images/erfgoed-image-waterput-op-de-neude.png"
         alt="Zestiende-eeuwse stenen waterput ontdekt op de Neude in Utrecht."
         height="240"
         width="100%"
@@ -120,7 +120,7 @@ export const MultipleCard: Story = {
         href="#"
         image={
           <img
-            src="/images/erfgoed-veeartsenijroute.png"
+            src="images/erfgoed-veeartsenijroute.png"
             alt="Historische paardenstallen van de Rijksveeartsenijschool met pony’s en een vrouwelijke student, circa 1910."
             height="240"
             width="100%"
@@ -134,7 +134,7 @@ export const MultipleCard: Story = {
         href="#"
         image={
           <img
-            src="/images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"
+            src="images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"
             alt="Opgraving van een Romeinse weg met houten fundering in de Merwedekanaalzone in Utrecht."
             height="240"
             width="100%"
