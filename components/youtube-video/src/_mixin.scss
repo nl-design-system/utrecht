@@ -5,7 +5,17 @@
  */
 
 @mixin utrecht-youtube-video {
+  /*
+   * "We recommend 16:9 players be at least 480 pixels wide and 270 pixels tall."
+   * https://developers.google.com/youtube/iframe_api_reference#Events
+   */
   aspect-ratio: 16 / 9;
+
+  /* stylelint-disable-next-line property-disallowed-list */
+  min-height: 270px;
+
+  /* stylelint-disable-next-line property-disallowed-list */
+  min-width: 480px;
 }
 
 @mixin utrecht-youtube-video--html-iframe {
