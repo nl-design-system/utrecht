@@ -9,10 +9,10 @@ export default defineComponent({
     multiline: { type: Boolean, required: false },
     notranslate: { type: Boolean, required: false },
   },
-  data() {
-    return {
-      empty: this.$props.value === '' || this.$props.value === undefined,
-    };
+  computed: {
+    empty() {
+      return this.value === '' || this.value === undefined;
+    },
   },
 });
 </script>
