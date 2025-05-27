@@ -1,5 +1,12 @@
 # @utrecht/component-library-design-tokens
 
+## 1.0.12
+
+### Patch Changes
+
+- Updated dependencies [cbb98e9]
+  - @utrecht/breadcrumb-nav-css@1.5.0
+
 ## 1.0.11
 
 ### Patch Changes
