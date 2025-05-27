@@ -46,6 +46,10 @@
   @include utrecht-breadcrumb-nav__link;
 }
 
+.utrecht-breadcrumb-nav__link--first {
+  @include utrecht-breadcrumb-nav__link--first;
+}
+
 .utrecht-breadcrumb-nav__link--current {
   @include utrecht-breadcrumb-nav__link--current;
 }
