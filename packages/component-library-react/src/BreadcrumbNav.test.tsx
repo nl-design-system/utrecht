@@ -201,6 +201,27 @@ describe('Breadcrumb navigation', () => {
     });
   });
 
+  describe('first link, with index="0"', () => {
+    it('renders a BEM class name: utrecht-breadcrumb-nav__link--first', () => {
+      const { getByRole } = render(
+        <BreadcrumbNav>
+          <BreadcrumbNavLink href="/" index={0}>
+            Home
+          </BreadcrumbNavLink>
+          <BreadcrumbNavLink href="/current" index={1} current>
+            Current page
+          </BreadcrumbNavLink>
+        </BreadcrumbNav>,
+      );
+
+      const firstLink = getByRole('link', { name: 'Home' });
+      const secondLink = getByRole('link', { name: 'Current page' });
+
+      expect(firstLink).toHaveClass('utrecht-breadcrumb-nav__link--first');
+      expect(secondLink).not.toHaveClass('utrecht-breadcrumb-nav__link--first');
+    });
+  });
+
   describe('current page', () => {
     it('renders aria-current', () => {
       const { getByRole } = render(

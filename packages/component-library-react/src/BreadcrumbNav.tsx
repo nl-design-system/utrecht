@@ -147,6 +147,7 @@ export const BreadcrumbNavLink = forwardRef(
           className={clsx('utrecht-breadcrumb-nav__link', className, {
             'utrecht-breadcrumb-nav__link--current': current,
             'utrecht-breadcrumb-nav__link--disabled': disabled,
+            'utrecht-breadcrumb-nav__link--first': index === 0,
           })}
           href={disabled ? undefined : href}
           rel={rel}

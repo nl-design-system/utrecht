@@ -70,6 +70,13 @@
   padding-inline-start: var(--utrecht-breadcrumb-nav-item-padding-inline-start, 8px);
 }
 
+@mixin utrecht-breadcrumb-nav__link--first {
+  padding-inline-start: var(
+    --utrecht-breadcrumb-nav-item-first-padding-inline-start,
+    var(--utrecht-breadcrumb-nav-item-padding-inline-start, 8px)
+  );
+}
+
 @mixin utrecht-breadcrumb-nav__link--current {
   --utrecht-link-current-font-weight: var(--utrecht-breadcrumb-nav-link-current-font-weight, inherit);
 
