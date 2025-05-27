@@ -1,5 +1,13 @@
 # @utrecht/breadcrumb-nav-css
 
+## 1.5.0
+
+### Minor Changes
+
+- cbb98e9: Add `utrecht.breadcrumb-nav.item.first.padding-inline-start` token.
+
+  Use this token to align the content of the first link with the other content, by setting it to `0`.
+
 ## 1.4.1
 
 ### Patch Changes

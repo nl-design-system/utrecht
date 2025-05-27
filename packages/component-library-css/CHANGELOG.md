@@ -1,5 +1,12 @@
 # @utrecht/component-library-css
 
+## 7.2.2
+
+### Patch Changes
+
+- Updated dependencies [cbb98e9]
+  - @utrecht/breadcrumb-nav-css@1.5.0
+
 ## 7.2.1
 
 ### Patch Changes
