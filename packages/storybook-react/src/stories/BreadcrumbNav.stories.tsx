@@ -62,21 +62,6 @@ const meta = {
 
 export default meta;
 type Story = StoryObj<typeof meta>;
-export const Arrows: Story = {
-  args: {
-    appearance: 'arrows',
-  },
-  parameters: {
-    docs: {
-      description: {
-        story: `The "arrows appearance" is specific to the Municipality of Utrecht, we recommend to avoid this appearance for other organisations.`,
-      },
-    },
-    status: {
-      type: 'ALPHA',
-    },
-  },
-};
 
 export const Default: Story = {};
 
