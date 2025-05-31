@@ -1,0 +1,102 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
+ */
+
+@import "./mixin";
+
+.utrecht-tooltip-anchor {
+  @include utrecht-tooltip-anchor;
+}
+
+.utrecht-tooltip {
+  @include utrecht-tooltip;
+}
+
+.utrecht-tooltip--not-visible {
+  @include utrecht-tooltip--not-visible;
+}
+
+/* `visible` overrides `not-visible` */
+.utrecht-tooltip--visible {
+  @include utrecht-tooltip--visible;
+}
+
+.utrecht-tooltip--block-end {
+  @include utrecht-tooltip--block-end;
+}
+
+.utrecht-tooltip--block-start {
+  @include utrecht-tooltip--block-start;
+}
+
+.utrecht-tooltip--inline-end {
+  @include utrecht-tooltip--inline-end;
+}
+
+.utrecht-tooltip--inline-start {
+  @include utrecht-tooltip--inline-start;
+}
+
+.utrecht-tooltip--top {
+  @include utrecht-tooltip--top;
+}
+
+.utrecht-tooltip--right {
+  @include utrecht-tooltip--right;
+}
+
+.utrecht-tooltip--bottom {
+  @include utrecht-tooltip--bottom;
+}
+
+.utrecht-tooltip--left {
+  @include utrecht-tooltip--left;
+}
+
+.utrecht-tooltip__arrow {
+  @include utrecht-tooltip__arrow;
+}
+
+.utrecht-tooltip__arrow--block-end {
+  @include utrecht-tooltip__arrow--block-end;
+}
+
+.utrecht-tooltip__arrow--block-start {
+  @include utrecht-tooltip__arrow--block-start;
+}
+
+.utrecht-tooltip__arrow--inline-end {
+  @include utrecht-tooltip__arrow--inline-end;
+}
+
+.utrecht-tooltip__arrow--inline-start {
+  @include utrecht-tooltip__arrow--inline-start;
+}
+
+.utrecht-tooltip__arrow--top {
+  @include utrecht-tooltip__arrow--top;
+}
+
+.utrecht-tooltip__arrow--right {
+  @include utrecht-tooltip__arrow--right;
+}
+
+.utrecht-tooltip__arrow--bottom {
+  @include utrecht-tooltip__arrow--bottom;
+}
+
+.utrecht-tooltip__arrow--left {
+  @include utrecht-tooltip__arrow--left;
+}
+
+.utrecht-tooltip[hidden] {
+  display: none;
+}
+
+@media print {
+  .utrecht-tooltip {
+    display: none !important;
+  }
+}
