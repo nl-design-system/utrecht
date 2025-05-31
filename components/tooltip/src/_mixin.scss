@@ -1,0 +1,207 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
+ */
+
+@mixin utrecht-tooltip-anchor {
+  display: inline;
+  position: relative;
+}
+
+@mixin utrecht-tooltip--forced-colors-mode {
+  background-color: Canvas;
+  border: 1px solid CanvasText;
+  color: CanvasText;
+}
+
+@mixin utrecht-tooltip {
+  /* Private variable: default arrow size */
+  --_utrecht-tooltip-arrow-size: 8px;
+  --_utrecht-tooltip-arrow-border-color: var(--utrecht-tooltip-border-color, currentColor);
+
+  background-color: var(--utrecht-tooltip-background-color, Canvas);
+  border-color: var(--utrecht-tooltip-border-color, currentColor);
+  border-radius: var(--utrecht-tooltip-border-radius);
+  border-style: solid;
+  border-width: var(--utrecht-tooltip-border-width, 1px);
+  box-sizing: border-box;
+  color: var(--utrecht-tooltip-color, CanvasText);
+  font-family: var(--utrecht-tooltip-font-family, inherit);
+  font-size: var(--utrecht-tooltip-font-size, inherit);
+  font-weight: var(--utrecht-tooltip-font-weight, revert);
+  inline-size: max-content;
+  line-height: var(--utrecht-tooltip-line-height, 1.5);
+  max-inline-size: var(--utrecht-tooltip-max-inline-size, 320px);
+  opacity: 100%;
+  padding-block: var(--utrecht-tooltip-padding-block, 8px);
+  padding-inline: var(--utrecht-tooltip-padding-inline, 12px);
+  position: absolute;
+  transition: opacity var(--utrecht-tooltip-animation-duration, 200ms)
+    var(--utrecht-tooltip-animation-easing, ease-in-out);
+  z-index: var(--utrecht-tooltip-z-index, 1000);
+
+  &:dir(rtl) {
+    --_utrecht-tooltip-rtl: -1;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    & {
+      transition: none;
+    }
+  }
+
+  @media (forced-colors: active) {
+    & {
+      @include utrecht-tooltip--forced-colors-mode;
+    }
+  }
+}
+
+@mixin utrecht-tooltip--not-visible {
+  opacity: 0%;
+  pointer-events: none;
+}
+
+@mixin utrecht-tooltip--visible {
+  opacity: 100%;
+  pointer-events: initial;
+}
+
+@mixin utrecht-tooltip--block-start {
+  inset-block-end: 100%;
+  inset-inline-start: 50%;
+  margin-block-end: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  transform: translateX(calc(-50% * var(--_utrecht-tooltip-rtl, 1)));
+}
+
+@mixin utrecht-tooltip--block-end {
+  inset-block-start: 100%;
+  inset-inline-start: 50%;
+  margin-block-start: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  transform: translateX(calc(-50% * var(--_utrecht-tooltip-rtl, 1)));
+}
+
+@mixin utrecht-tooltip--inline-start {
+  inset-block-start: 50%;
+  inset-inline-end: 100%;
+  margin-inline-end: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  transform: translateY(-50%);
+}
+
+@mixin utrecht-tooltip--inline-end {
+  inset-block-start: 50%;
+  inset-inline-start: 100%;
+  margin-inline-start: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  transform: translateY(-50%);
+}
+
+/* stylelint-disable property-disallowed-list */
+@mixin utrecht-tooltip--top {
+  bottom: 100%;
+  left: 50%;
+  margin-bottom: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  transform: translateX(-50%);
+}
+
+@mixin utrecht-tooltip--bottom {
+  left: 50%;
+  margin-top: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  top: 100%;
+  transform: translateX(-50%);
+}
+
+@mixin utrecht-tooltip--left {
+  margin-right: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin utrecht-tooltip--right {
+  left: 100%;
+  margin-left: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* stylelint-enable property-disallowed-list */
+
+@mixin utrecht-tooltip__arrow {
+  block-size: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: var(--utrecht-tooltip-arrow-size, var(--_utrecht-tooltip-arrow-size));
+  box-sizing: content-box;
+  inline-size: 0;
+  position: absolute;
+
+  @media (forced-colors: active) {
+    & {
+      --_utrecht-tooltip-arrow-border-color: CanvasText;
+
+      /* Disable `forced-color-adjust`, because otherwise transparent is rendered as a solid color. */
+      border-color: transparent;
+      forced-color-adjust: none;
+    }
+  }
+}
+
+@mixin utrecht-tooltip__arrow--block-start {
+  border-block-end-width: 0;
+  border-block-start-color: var(--_utrecht-tooltip-arrow-border-color);
+  inset-block-start: 100%;
+  inset-inline-start: calc(50% - var(--_utrecht-tooltip-arrow-size));
+}
+
+@mixin utrecht-tooltip__arrow--block-end {
+  border-block-end-color: var(--_utrecht-tooltip-arrow-border-color);
+  border-block-start-width: 0;
+  inset-block-end: 100%;
+  inset-inline-start: calc(50% - var(--_utrecht-tooltip-arrow-size));
+}
+
+@mixin utrecht-tooltip__arrow--inline-end {
+  border-inline-end-color: var(--_utrecht-tooltip-arrow-border-color);
+  border-inline-start-width: 0;
+  inset-block-start: calc(50% - var(--_utrecht-tooltip-arrow-size));
+  inset-inline-end: 100%;
+}
+
+@mixin utrecht-tooltip__arrow--inline-start {
+  border-inline-end-width: 0;
+  border-inline-start-color: var(--_utrecht-tooltip-arrow-border-color);
+  inset-block-start: calc(50% - var(--_utrecht-tooltip-arrow-size));
+  inset-inline-start: 100%;
+}
+
+/* stylelint-disable property-disallowed-list */
+
+@mixin utrecht-tooltip__arrow--top {
+  border-bottom-width: 0;
+  border-top-color: var(--_utrecht-tooltip-arrow-border-color);
+  left: calc(50% - var(--_utrecht-tooltip-arrow-size));
+  top: 100%;
+}
+
+@mixin utrecht-tooltip__arrow--bottom {
+  border-bottom-color: var(--_utrecht-tooltip-arrow-border-color);
+  border-top-width: 0;
+  bottom: 100%;
+  left: calc(50% - var(--_utrecht-tooltip-arrow-size));
+}
+
+@mixin utrecht-tooltip__arrow--right {
+  border-left-width: 0;
+  border-right-color: var(--_utrecht-tooltip-arrow-border-color);
+  right: 100%;
+  top: calc(50% - var(--_utrecht-tooltip-arrow-size));
+}
+
+@mixin utrecht-tooltip__arrow--left {
+  border-left-color: var(--_utrecht-tooltip-arrow-border-color);
+  border-right-width: 0;
+  left: 100%;
+  top: calc(50% - var(--_utrecht-tooltip-arrow-size));
+}
+/* stylelint-enable property-disallowed-list */
