@@ -15,6 +15,7 @@ interface ButtonStoryProps {
   busy?: boolean;
   disabled?: boolean;
   expanded?: boolean | string;
+  label?: string;
   icon?: string;
   pressed?: boolean | string;
   type?: string;
@@ -30,6 +31,7 @@ const ButtonStory = ({
   formMethod,
   formNoValidate,
   formTarget,
+  label,
   icon,
   name,
   popoverTarget,
@@ -61,6 +63,7 @@ const ButtonStory = ({
       {...restProps}
     >
       {IconElement && React.cloneElement(<IconElement />, { slot: 'icon' })}
+      {label && <span slot="label">{label}</span>}
       {children}
     </UtrechtButton>
   );
@@ -96,6 +99,10 @@ const meta = {
         false: 'false',
         true: 'true',
       },
+    },
+    label: {
+      description: 'Button text in label',
+      control: 'text',
     },
     icon: {
       description: 'Icon',
@@ -219,13 +226,14 @@ export const Busy: Story = {
 
 export const Icon: Story = {
   args: {
-    children: 'Read more...',
+    label: 'Read more...',
     icon: 'utrecht-icon-bestemmingsplan',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Do this instead: use the `slot="icon"` attribute on your icon.',
+        story:
+          'Do this instead: use the `slot="icon"` attribute on your icon and use the `slot="label"` attribute on your label.',
       },
     },
   },

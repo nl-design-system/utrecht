@@ -28,6 +28,7 @@ export class LinkButton {
   @Prop() name: string;
   @Prop() value: string;
   @Element() hostElement: HTMLElement;
+
   render() {
     const {
       hostElement,
@@ -115,7 +116,11 @@ export class LinkButton {
         type={this.type || 'button'}
         onClick={handleClick}
       >
-        <slot></slot>
+        <slot name="icon"></slot>
+        <span class="utrecht-link-button__label">
+          <slot name="label"></slot>
+          <slot></slot>
+        </span>
       </button>
     );
   }

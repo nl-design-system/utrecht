@@ -19,6 +19,7 @@ export class ButtonLink {
   @Prop() href: string;
   @Prop() placeholder: boolean;
   @Prop() target?: string;
+
   render() {
     return (
       <a
@@ -38,7 +39,11 @@ export class ButtonLink {
         role={this.placeholder ? 'link' : undefined}
         target={typeof this.target === 'string' ? this.target : undefined}
       >
-        <slot></slot>
+        <slot name="icon"></slot>
+        <span class="utrecht-button-link__label">
+          <slot name="label"></slot>
+          <slot></slot>
+        </span>
       </a>
     );
   }

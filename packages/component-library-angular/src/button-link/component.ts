@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
 
 export type AppearanceType = 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
 
@@ -21,5 +21,5 @@ export type AppearanceType = 'primary-action-button' | 'secondary-action-button'
 export class UtrechtButtonLinkAttr {
   @Input() appearance?: AppearanceType;
   @Input() external = false;
-  constructor() {}
+  @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
 }

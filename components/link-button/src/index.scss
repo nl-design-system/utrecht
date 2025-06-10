@@ -57,3 +57,7 @@
     @extend .utrecht-link-button--active;
   }
 }
+
+.utrecht-link-button__label {
+  @include utrecht-link-button__label;
+}
