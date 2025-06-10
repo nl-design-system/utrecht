@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-import { Component, h, Prop, State } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-link',
@@ -16,13 +16,6 @@ export class Link {
   @Prop() href: string;
   @Prop() target?: string;
 
-  @State() hasLabelSlot = false;
-
-  private onLabelSlotChange = (event: Event) => {
-    const slot = event.target as HTMLSlotElement;
-    this.hasLabelSlot = slot.assignedNodes({ flatten: true }).length > 0;
-  };
-
   render() {
     return (
       <a
@@ -32,12 +25,10 @@ export class Link {
         class="utrecht-link utrecht-link--html-a"
       >
         <slot name="icon"></slot>
-        {this.hasLabelSlot && (
-          <span class="utrecht-link__label">
-            <slot name="label" onSlotchange={this.onLabelSlotChange}></slot>
-          </span>
-        )}
-        <slot></slot>
+        <span class="utrecht-link__label">
+          <slot name="label"></slot>
+          <slot></slot>
+        </span>
       </a>
     );
   }

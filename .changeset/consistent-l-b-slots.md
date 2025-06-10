@@ -6,4 +6,4 @@
 "@utrecht/web-component-library-vue": minor
 ---
 
-Align slot behavior across `button`, `link`, `button-link` and `link-button` in Angular components, React components and web components: the `__label` element is only rendered if the content for the `label` slot is provided.
+Align slot behavior across `button`, `link`, `button-link` and `link-button` in Angular components, React components and web components: the `__label` element is always rendered and wraps both the `label` slot and the default slot.
