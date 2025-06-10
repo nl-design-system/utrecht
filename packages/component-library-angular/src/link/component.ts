@@ -1,12 +1,4 @@
-import {
-  AfterContentInit,
-  ChangeDetectionStrategy,
-  Component,
-  ContentChild,
-  ElementRef,
-  Input,
-  ViewEncapsulation,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: '[utrecht-link]',
@@ -22,11 +14,7 @@ import {
     '[class.utrecht-link--external]': 'external',
   },
 })
-export class UtrechtLinkAttr implements AfterContentInit {
+export class UtrechtLinkAttr {
   @Input() external = false;
   @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
-  hasLabel = false;
-  ngAfterContentInit() {
-    this.hasLabel = !!this.labelSlot;
-  }
 }

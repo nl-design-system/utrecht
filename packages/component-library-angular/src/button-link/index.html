@@ -1,7 +1,7 @@
 <ng-content select="[slot=icon]"></ng-content>
 
-<span class="utrecht-button-link__label" *ngIf="hasLabel">
+<span class="utrecht-button-link__label">
   <ng-content select="[slot=label]"></ng-content>
+  <ng-content></ng-content>
 </span>
 
-<ng-content></ng-content>

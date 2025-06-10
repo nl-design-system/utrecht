@@ -1,12 +1,4 @@
-import {
-  AfterContentInit,
-  ChangeDetectionStrategy,
-  Component,
-  ContentChild,
-  ElementRef,
-  Input,
-  ViewEncapsulation,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector:
@@ -34,13 +26,9 @@ import {
     '[class.utrecht-link-button]': 'true',
   },
 })
-export class UtrechtLinkButtonAttr implements AfterContentInit {
+export class UtrechtLinkButtonAttr {
   @Input() busy = false;
   @Input() pressed? = undefined;
   @Input() appearance?: string;
   @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
-  hasLabel = false;
-  ngAfterContentInit() {
-    this.hasLabel = !!this.labelSlot;
-  }
 }
