@@ -37,8 +37,9 @@
   padding-block: var(--utrecht-tooltip-padding-block, 8px);
   padding-inline: var(--utrecht-tooltip-padding-inline, 12px);
   position: absolute;
-  transition: opacity var(--utrecht-tooltip-animation-duration, 200ms)
-    var(--utrecht-tooltip-animation-easing, ease-in-out);
+  transition-duration: (--utrecht-tooltip-transition-duration, 200ms);
+  transition-property: opacity;
+  transition-timing-function: (--utrecht-tooltip-transition-timing-function, ease-in-out);
   z-index: var(--utrecht-tooltip-z-index, 1000);
 
   &:dir(rtl) {
