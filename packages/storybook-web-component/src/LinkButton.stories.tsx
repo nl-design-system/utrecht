@@ -238,7 +238,7 @@ export const DiscouragedIcon: Story = {
     docs: {
       description: {
         story:
-          'Do not do this! When you have an icon, it is better to use the `icon` slot for the label. It works fine when the label only contains plain text. You will have unexpected results when the label contains an element. Between each element a space will be greated because of the `column-gap` design token.',
+          'Do not do this! When you have an icon, it is better to use the `icon` slot for the label. It works fine when the label only contains plain text. You will have unexpected results when the label contains an element. Between each element a space will be created because of the `column-gap` design token.',
       },
     },
   },
