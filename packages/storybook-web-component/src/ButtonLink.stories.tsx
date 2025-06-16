@@ -6,7 +6,7 @@ import tokensDefinition from '@utrecht/button-link-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import { UtrechtButtonLink, UtrechtIconBestemmingsplan } from '@utrecht/web-component-library-react';
-import React from 'react';
+import React, { createElement } from 'react';
 import { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -44,7 +44,7 @@ const ButtonLinkStory = ({
       placeholder={placeholder || undefined}
       target={target || undefined}
     >
-      {IconElement && React.cloneElement(<IconElement />, { slot: 'icon' })}
+      {IconElement && createElement(IconElement, { slot: 'icon' })}
       {label && <span slot="label">{label}</span>}
       {children}
     </UtrechtButtonLink>
