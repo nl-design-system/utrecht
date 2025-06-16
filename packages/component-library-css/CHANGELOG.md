@@ -1,5 +1,16 @@
 # @utrecht/component-library-css
 
+## 7.3.0
+
+### Minor Changes
+
+- f877f78: Initial version of the Tooltip component.
+
+### Patch Changes
+
+- Updated dependencies [f877f78]
+  - @utrecht/tooltip-css@1.0.0
+
 ## 7.2.2
 
 ### Patch Changes
