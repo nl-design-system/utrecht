@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 3.3.0
+
+### Minor Changes
+
+- f877f78: Initial version of the Tooltip component.
+
 ## 3.2.0
 
 ### Minor Changes
