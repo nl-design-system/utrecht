@@ -1,5 +1,11 @@
 # @utrecht/component-library-vue
 
+## 2.3.1
+
+### Patch Changes
+
+- ca024bf: Make the empty state reactive in DataListValue.vue
+
 ## 2.3.0
 
 ### Minor Changes
