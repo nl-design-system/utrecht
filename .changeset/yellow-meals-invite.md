@@ -1,5 +1,5 @@
 ---
-"@utrecht/component-library-angular": major
+"@utrecht/component-library-angular": minor
 ---
 
 Add `link-button` Angular component.
