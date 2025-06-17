@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ContentChild, ElementRef, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: '[utrecht-link]',
@@ -16,5 +16,5 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 })
 export class UtrechtLinkAttr {
   @Input() external = false;
-  constructor() {}
+  @ContentChild('[slot=label]', { static: false }) labelSlot?: ElementRef;
 }

@@ -1,1 +1,6 @@
-<ng-content></ng-content>
+<ng-content select="[slot=icon]"></ng-content>
+
+<span class="utrecht-link__label">
+  <ng-content select="[slot=label]"></ng-content>
+  <ng-content></ng-content>
+</span>

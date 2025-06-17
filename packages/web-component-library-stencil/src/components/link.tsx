@@ -15,6 +15,7 @@ export class Link {
   @Prop() download?: string;
   @Prop() href: string;
   @Prop() target?: string;
+
   render() {
     return (
       <a
@@ -23,7 +24,11 @@ export class Link {
         target={typeof this.target === 'string' ? this.target : undefined}
         class="utrecht-link utrecht-link--html-a"
       >
-        <slot></slot>
+        <slot name="icon"></slot>
+        <span class="utrecht-link__label">
+          <slot name="label"></slot>
+          <slot></slot>
+        </span>
       </a>
     );
   }

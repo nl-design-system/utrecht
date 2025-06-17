@@ -8,6 +8,7 @@ export interface LinkButtonStoryProps extends LinkButtonProps {
   focus?: boolean;
   focusVisible?: boolean;
   hover?: boolean;
+  label?: string;
   IconBefore?: string;
   IconAfter?: string;
 }
@@ -18,6 +19,7 @@ export const LinkButtonStory = ({
   focus,
   focusVisible,
   hover,
+  label,
   IconAfter,
   IconBefore,
   ...restProps
@@ -33,6 +35,7 @@ export const LinkButtonStory = ({
       {...restProps}
     >
       {IconBefore && <IconBefore />}
+      {label && <span className="utrecht-link-button__label">{label}</span>}
       {children}
       {IconAfter && <IconAfter />}
     </LinkButton>

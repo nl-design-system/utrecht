@@ -15,6 +15,7 @@ interface ButtonLinkStoryProps extends ButtonLinkProps {
   focus?: boolean;
   focusVisible?: boolean;
   keyboardSupport?: boolean;
+  label?: string;
   IconAfter?: string;
   IconBefore?: string;
 }
@@ -27,6 +28,7 @@ const ButtonLinkStory = ({
   focusVisible,
   keyboardSupport,
   placeholder,
+  label,
   IconBefore,
   IconAfter,
   ...restProps
@@ -44,6 +46,7 @@ const ButtonLinkStory = ({
       {...restProps}
     >
       {IconBefore && <IconBefore />}
+      {label && <span className="utrecht-button-link__label">{label}</span>}
       {children}
       {IconAfter && <IconAfter />}
     </ButtonLink>
@@ -69,7 +72,7 @@ const meta = {
       control: 'boolean',
     },
     children: {
-      description: 'Link text',
+      description: 'ButtonLink text',
       type: {
         name: 'string',
         required: true,
@@ -102,13 +105,20 @@ const meta = {
       description: 'Placeholder for a link',
       control: 'boolean',
     },
+    label: {
+      description: 'ButtonLink text in label',
+      type: {
+        name: 'string',
+        required: false,
+      },
+    },
     IconBefore: {
-      description: 'Icon before textContent',
+      description: 'Icon before label',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
     },
     IconAfter: {
-      description: 'Icon after textContent',
+      description: 'Icon after label',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
     },
@@ -124,6 +134,7 @@ const meta = {
     keyboardSupport: false,
     placeholder: false,
     children: '',
+    label: '',
     IconBefore: '',
     IconAfter: '',
   },
@@ -208,7 +219,7 @@ export const IconAfter: Story = {
     href: 'https://example.com/',
     IconAfter: 'utrecht-icon-chevron-right',
     rel: 'next',
-    children: 'Next',
+    label: 'Next',
   },
   name: 'Icon after label',
 };
@@ -217,7 +228,7 @@ export const IconBefore: Story = {
   args: {
     href: 'https://example.com/',
     IconBefore: 'utrecht-icon-language',
-    children: 'Taal kiezen',
+    label: 'Taal kiezen',
   },
   name: 'Icon before label',
 };
@@ -227,7 +238,7 @@ export const Next: Story = {
     href: 'https://example.com/',
     IconAfter: 'utrecht-icon-chevron-right',
     rel: 'next',
-    children: 'Next',
+    label: 'Next',
   },
   name: 'Next',
 };
@@ -237,7 +248,7 @@ export const Previous: Story = {
     href: 'https://example.com/',
     IconBefore: 'utrecht-icon-chevron-left',
     rel: 'prev',
-    children: 'Previous',
+    label: 'Previous',
   },
   name: 'Previous',
 };

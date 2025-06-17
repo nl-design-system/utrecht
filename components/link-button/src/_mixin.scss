@@ -83,3 +83,7 @@
   padding-inline-end: 0;
   padding-inline-start: 0;
 }
+
+@mixin utrecht-link-button__label {
+  @include utrecht-link__label;
+}
