@@ -7,10 +7,12 @@
 import clsx from 'clsx';
 import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
+type appearance = 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
+type hint = 'danger' | 'warning' | 'ready';
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  appearance?: string;
+  appearance?: appearance;
   busy?: boolean;
-  hint?: string;
+  hint?: hint;
   icon?: ReactNode;
   label?: ReactNode;
   pressed?: boolean;
@@ -53,7 +55,7 @@ export const Button = forwardRef(
         aria-busy={busy || undefined}
         aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
         disabled={disabled}
-        type={type || 'button'}
+        type={type ?? 'button'}
         {...restProps}
       >
         {icon}
@@ -66,19 +68,19 @@ export const Button = forwardRef(
 
 Button.displayName = 'Button';
 
-export const PrimaryActionButton = ({ ...args }) => {
+export const PrimaryActionButton = ({ ...args }: Omit<ButtonProps, 'appearance'>) => {
   return <Button {...args} appearance="primary-action-button" />;
 };
 
 PrimaryActionButton.displayName = 'PrimaryActionButton';
 
-export const SecondaryActionButton = ({ ...args }) => {
+export const SecondaryActionButton = ({ ...args }: Omit<ButtonProps, 'appearance'>) => {
   return <Button {...args} appearance="secondary-action-button" />;
 };
 
 SecondaryActionButton.displayName = 'SecondaryActionButton';
 
-export const SubtleButton = ({ ...args }) => {
+export const SubtleButton = ({ ...args }: Omit<ButtonProps, 'appearance'>) => {
   return <Button {...args} appearance="subtle-button" />;
 };
 
