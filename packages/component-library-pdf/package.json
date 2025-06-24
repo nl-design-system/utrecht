@@ -17,10 +17,9 @@
     "directory": "packages/component-library-pdf"
   },
   "scripts": {
-    "clean": "rimraf dist/ tmp/*",
+    "clean": "rimraf dist/",
     "install-prince": "( cd node_modules/prince && npm run install )",
     "lint-build": "tsc --noEmit --project tsconfig.json",
-    "clone": "git clone git@github.com:nl-design-system/utrecht-pdf.git tmp",
     "prince": "node_modules/prince/prince/lib/prince/bin/prince",
     "test-locally": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
     "test:watch": "jest --watch"
