@@ -14,7 +14,7 @@ const config: StorybookConfig = {
     options: {},
   },
   addons: ['@storybook/addon-docs', '@storybook/preset-scss'],
-  staticDirs: ['../../../proprietary/assets', '../src/script/', '../../component-library-pdf/tmp/'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/', '../../component-library-pdf/screenshots/'],
   docs: {
     autodocs: true,
   },
