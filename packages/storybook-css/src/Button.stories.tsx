@@ -68,13 +68,20 @@ const meta = {
       control: { type: 'select' },
       options: ['', 'danger', 'warning', 'ready'],
     },
+    label: {
+      description: 'Button text in label',
+      type: {
+        name: 'string',
+        required: false,
+      },
+    },
     IconBefore: {
-      description: 'Icon before textContent',
+      description: 'Icon before label',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
     },
     IconAfter: {
-      description: 'Icon after textContent',
+      description: 'Icon after label',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
     },
@@ -91,6 +98,7 @@ const meta = {
     pressed: '',
     textContent: '',
     type: 'button',
+    label: '',
     IconBefore: '',
     IconAfter: '',
   },
@@ -294,7 +302,7 @@ export const IconAfter: Story = {
   args: {
     IconAfter: 'utrecht-icon-chevron-right',
     rel: 'next',
-    children: 'Next',
+    label: 'Next',
   },
   name: 'Icon after label',
 };
@@ -302,7 +310,7 @@ export const IconAfter: Story = {
 export const IconBefore: Story = {
   args: {
     IconBefore: 'utrecht-icon-chevron-left',
-    children: 'Previous',
+    label: 'Previous',
   },
   name: 'Icon before label',
 };

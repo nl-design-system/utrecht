@@ -6,7 +6,7 @@ import tokensDefinition from '@utrecht/button-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import { UtrechtButton, UtrechtIconBestemmingsplan, UtrechtParagraph } from '@utrecht/web-component-library-react';
-import React from 'react';
+import React, { createElement } from 'react';
 import { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -15,6 +15,7 @@ interface ButtonStoryProps {
   busy?: boolean;
   disabled?: boolean;
   expanded?: boolean | string;
+  label?: string;
   icon?: string;
   pressed?: boolean | string;
   type?: string;
@@ -30,6 +31,7 @@ const ButtonStory = ({
   formMethod,
   formNoValidate,
   formTarget,
+  label,
   icon,
   name,
   popoverTarget,
@@ -60,7 +62,8 @@ const ButtonStory = ({
       value={value || undefined}
       {...restProps}
     >
-      {IconElement && React.cloneElement(<IconElement />, { slot: 'icon' })}
+      {IconElement && createElement(IconElement, { slot: 'icon' })}
+      {label && <span slot="label">{label}</span>}
       {children}
     </UtrechtButton>
   );
@@ -96,6 +99,10 @@ const meta = {
         false: 'false',
         true: 'true',
       },
+    },
+    label: {
+      description: 'Button text in label',
+      control: 'text',
     },
     icon: {
       description: 'Icon',
@@ -219,13 +226,14 @@ export const Busy: Story = {
 
 export const Icon: Story = {
   args: {
-    children: 'Read more...',
+    label: 'Read more...',
     icon: 'utrecht-icon-bestemmingsplan',
   },
   parameters: {
     docs: {
       description: {
-        story: 'Do this instead: use the `slot="icon"` attribute on your icon.',
+        story:
+          'Do this instead: use the `slot="icon"` attribute on your icon and use the `slot="label"` attribute on your label.',
       },
     },
   },
@@ -244,7 +252,7 @@ export const DiscouragedIcon: Story = {
     docs: {
       description: {
         story:
-          'Do not do this! When you have an icon, it is better to use the `icon` slot for the label. It works fine when the label only contains plain text. You will have unexpected results when the label contains an element. Between each element a space will be greated because of the `column-gap` design token.',
+          'Do not do this! When you have an icon, it is better to use the `icon` slot for the label. It works fine when the label only contains plain text. You will have unexpected results when the label contains an element. Between each element a space will be created because of the `column-gap` design token.',
       },
     },
   },

@@ -12,6 +12,9 @@ export interface LinkStoryProps extends Omit<LinkProps, 'tabIndex'> {
   telephone?: boolean;
   visited?: boolean;
   tabIndex?: string | number;
+  label?: string;
+  IconAfter?: string;
+  IconBefore?: string;
 }
 
 export const LinkStory = ({
@@ -30,6 +33,10 @@ export const LinkStory = ({
   tabIndex,
   telephone,
   visited,
+  label,
+  children,
+  IconBefore,
+  IconAfter,
   ...restProps
 }: LinkStoryProps) => (
   <Link
@@ -55,5 +62,10 @@ export const LinkStory = ({
     placeholder={placeholder}
     tabIndex={tabIndex ? parseInt(String(tabIndex), 10) : undefined}
     {...restProps}
-  />
+  >
+    {IconBefore && <IconBefore />}
+    {label && <span className="utrecht-link__label">{label}</span>}
+    {children}
+    {IconAfter && <IconAfter />}
+  </Link>
 );
