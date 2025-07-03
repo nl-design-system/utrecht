@@ -99,6 +99,11 @@
             "type": "fontWeights",
             "description": "Vetgedrukt"
           },
+          "semibold": {
+            "value": "SemiBold",
+            "type": "fontWeights",
+            "description": "Vetgedrukt"
+          },
           "normal": {
             "value": "Regular",
             "type": "fontWeights",
@@ -782,7 +787,7 @@
           "type": "fontFamilies"
         },
         "font-weight": {
-          "value": "{utrecht.typography.weight-scale.bold}",
+          "value": "{utrecht.typography.weight-scale.semibold}",
           "type": "fontWeights"
         }
       },
