@@ -6,21 +6,30 @@
         "font-family": {
           "default": {
             "$type": "fontFamilies",
-            "$value": "IBM Plex Sans, sans-serif"
+            "$value": "Noto Sans, sans-serif"
           },
           "monospace": {
             "$type": "fontFamilies",
-            "$value": "IBM Plex Mono, monospace"
+            "$value": "Noto Sans, monospace"
           }
         },
         "font-weight": {
           "default": {
             "$type": "fontWeights",
-            "$value": "Regular"
+            "$value": "400"
+          },
+          "medium": {
+            "$type": "fontWeights",
+            "$value": "500",
+            "$description": "500, tussen waarde"
+          },
+          "semibold": {
+            "$type": "fontWeights",
+            "$value": "600"
           },
           "bold": {
             "$type": "fontWeights",
-            "$value": "Bold"
+            "$value": "700"
           }
         },
         "font-size": {
@@ -2575,7 +2584,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
+          "$value": "{basis.text.font-weight.semibold}"
         }
       },
       "page": {
