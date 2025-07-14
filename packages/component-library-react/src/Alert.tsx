@@ -47,10 +47,7 @@ export const Alert = forwardRef(
         className={clsx(
           'utrecht-alert',
           {
-            'utrecht-alert--error': computedType === 'error',
-            'utrecht-alert--info': computedType === 'info',
-            'utrecht-alert--ok': computedType === 'ok',
-            'utrecht-alert--warning': computedType === 'warning',
+            [`utrecht-alert--${type}`]: isAlertType(type),
           },
           className,
         )}
