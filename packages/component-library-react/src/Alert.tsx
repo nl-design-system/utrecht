@@ -41,17 +41,7 @@ export const Alert = forwardRef(
     const computedType = isAlertType(type) ? (type as AlertType) : 'info';
     const computedRole = role || typeToRole[computedType];
     return (
-      <div
-        {...restProps}
-        ref={ref}
-        className={clsx(
-          'utrecht-alert',
-          {
-            [`utrecht-alert--${type}`]: isAlertType(type),
-          },
-          className,
-        )}
-      >
+      <div {...restProps} ref={ref} className={clsx('utrecht-alert', `utrecht-alert--${computedType}`, className)}>
         {icon && <div className="utrecht-alert__icon">{icon}</div>}
         <div className="utrecht-alert__content">
           <div className="utrecht-alert__message" role={computedRole}>
