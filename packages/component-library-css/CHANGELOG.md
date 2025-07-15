@@ -1,5 +1,17 @@
 # @utrecht/component-library-css
 
+## 7.4.0
+
+### Minor Changes
+
+- 8921e2b: Alert text color now follows design - uses utrecht-alert-color for headings and paragraphs
+
+### Patch Changes
+
+- Updated dependencies [8921e2b]
+  - @utrecht/alert-css@2.4.0
+  - @utrecht/alert-dialog-css@1.4.2
+
 ## 7.3.0
 
 ### Minor Changes

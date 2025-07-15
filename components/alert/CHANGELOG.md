@@ -1,5 +1,11 @@
 # @utrecht/alert-css
 
+## 2.4.0
+
+### Minor Changes
+
+- 8921e2b: Alert text color now follows design - uses utrecht-alert-color for headings and paragraphs
+
 ## 2.3.0
 
 ### Minor Changes
