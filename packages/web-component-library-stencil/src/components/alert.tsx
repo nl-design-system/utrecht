@@ -38,14 +38,7 @@ export class Alert {
     const computedType = isAlertType(this.type) ? (this.type as AlertType) : 'info';
     const computedRole = typeToRole[computedType];
     return (
-      <div
-        class={clsx('utrecht-alert', {
-          'utrecht-alert--error': computedType === 'error',
-          'utrecht-alert--info': computedType === 'info',
-          'utrecht-alert--ok': computedType === 'ok',
-          'utrecht-alert--warning': computedType === 'warning',
-        })}
-      >
+      <div class={clsx('utrecht-alert', `utrecht-alert--${computedType}`)}>
         <div class="utrecht-alert__icon">
           <slot name="icon"></slot>
         </div>

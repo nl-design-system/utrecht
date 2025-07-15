@@ -34,6 +34,9 @@
 
 /* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-alert__message {
+  --utrecht-heading-color: var(--utrecht-alert-color);
+  --utrecht-paragraph-color: var(--utrecht-alert-color);
+
   row-gap: var(--utrecht-alert-message-row-gap);
 }
 

@@ -33,14 +33,7 @@ export const Alert = ({ children, icon, type, role }: PropsWithChildren<AlertPro
   const computedType = isAlertType(type) ? (type as AlertType) : 'info';
   const computedRole = role || typeToRole[computedType];
   return (
-    <div
-      className={clsx('utrecht-alert', {
-        'utrecht-alert--error': computedType === 'error',
-        'utrecht-alert--info': computedType === 'info',
-        'utrecht-alert--ok': computedType === 'ok',
-        'utrecht-alert--warning': computedType === 'warning',
-      })}
-    >
+    <div className={clsx('utrecht-alert', `utrecht-alert--${computedType}`)}>
       {icon && <div className="utrecht-alert__icon">{icon}</div>}
       <div className="utrecht-alert__content">
         <div className="utrecht-alert__message" role={computedRole}>
