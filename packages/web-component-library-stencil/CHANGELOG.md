@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 3.5.1
+
+### Patch Changes
+
+- 8921e2b: Refactor how classnames for Alert are computed
+
 ## 3.5.0
 
 ### Minor Changes

@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 10.2.1
+
+### Patch Changes
+
+- 8921e2b: Refactor how classnames for Alert are computed
+- Updated dependencies [8921e2b]
+  - @utrecht/alert-css@2.4.0
+  - @utrecht/alert-dialog-css@1.4.2
+
 ## 10.2.0
 
 ### Minor Changes
