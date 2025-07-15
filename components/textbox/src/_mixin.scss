@@ -247,7 +247,6 @@ $utrecht-support-prince-xml: false !default;
     @include utrecht-textbox--focus-visible;
   }
 
-  &:invalid,
   &[aria-invalid="true"] {
     @include utrecht-textbox--invalid;
   }
