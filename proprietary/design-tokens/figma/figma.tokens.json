@@ -283,11 +283,11 @@
             "type": "color"
           },
           "bg-subtle": {
-            "value": "#F6F6F6",
+            "value": "{utrecht.color.grey.95}",
             "type": "color"
           },
           "bg-default": {
-            "value": "#F1F1F1",
+            "value": "{utrecht.color.grey.90}",
             "type": "color"
           },
           "bg-hover": {
@@ -389,7 +389,7 @@
             "type": "color"
           },
           "color-document": {
-            "value": "#001B3C",
+            "value": "{utrecht.color.neutral.black}",
             "type": "color"
           }
         },
@@ -1093,19 +1093,19 @@
         },
         "accent-1-inverse": {
           "bg-document": {
-            "value": "#00234D",
+            "value": "{utrecht.color.neutral.black}",
             "type": "color"
           },
           "bg-subtle": {
-            "value": "#001B3C",
+            "value": "{utrecht.color.blue.35}",
             "type": "color"
           },
           "bg-default": {
-            "value": "#1B59A4",
+            "value": "{utrecht.color.blue.30}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "#04499A",
+            "value": "{utrecht.color.blue.40}",
             "type": "color"
           },
           "bg-active": {
@@ -2776,11 +2776,11 @@
       },
       "pointer-target": {
         "min-block-size": {
-          "value": "3rem",
+          "value": "2.75rem",
           "type": "dimension"
         },
         "min-inline-size": {
-          "value": "3rem",
+          "value": "2.75rem",
           "type": "dimension"
         }
       }
@@ -3567,7 +3567,7 @@
           "type": "color"
         },
         "border-radius": {
-          "value": "{basis.border-radius.md}",
+          "value": "{basis.form-control.border-radius}",
           "type": "dimension"
         },
         "border-width": {
@@ -3607,11 +3607,11 @@
           "type": "dimension"
         },
         "padding-block-end": {
-          "value": "{basis.space.block.lg}",
+          "value": "{basis.space.block.md}",
           "type": "dimension"
         },
         "padding-block-start": {
-          "value": "{basis.space.block.lg}",
+          "value": "{basis.space.block.md}",
           "type": "dimension"
         },
         "padding-inline-end": {
