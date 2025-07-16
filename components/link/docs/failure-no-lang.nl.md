@@ -9,7 +9,7 @@ Niet:
 ```html
 <a href="/nl/">Nederlands</a>
 <a href="/en/">English</a>
-<a href="/fr/">François</a>
+<a href="/fr/">Français</a>
 ```
 
 Wel:
@@ -17,7 +17,7 @@ Wel:
 ```html
 <a href="/nl/">Nederlands</a>
 <a href="/en/" lang="en">English</a>
-<a href="/fr/" lang="fr">François</a>
+<a href="/fr/" lang="fr">Français</a>
 ```
 
 Niet, zonder `lang` attribuut:
