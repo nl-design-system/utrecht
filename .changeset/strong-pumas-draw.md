@@ -2,4 +2,4 @@
 "@utrecht/textbox-css": major
 ---
 
-No longer applies utrecht-textbox--invalid based on HTML input validation
+Apply utrecht-textbox--invalid on user-invalid instead of invalid
