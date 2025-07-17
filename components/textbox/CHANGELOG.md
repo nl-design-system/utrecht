@@ -1,5 +1,11 @@
 # @utrecht/textbox-css
 
+## 2.0.0
+
+### Major Changes
+
+- 33eaccf: Apply utrecht-textbox--invalid on user-invalid instead of invalid
+
 ## 1.7.1
 
 ### Patch Changes
