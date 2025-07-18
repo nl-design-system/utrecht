@@ -12,13 +12,13 @@ import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
-import ScenarioKlachten from '../prototype-src/ScenarioKlachtenFormulier.js'; // Importeer het scenario-component
+import ScenarioContact from '../prototype-src/contactformulier/ScenarioContactFormulier.js'; // Importeer het scenario-component
 import urls from '../prototype-src/variables.js';
 import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Contactformulier/Scenario',
-  id: 'contactformulie-scenario-B',
+  id: 'contactformulier-scenario',
   component: Page,
   parameters: {
     layout: 'fullscreen',
@@ -41,9 +41,11 @@ export const One: Story = {
         <PageContent>
           <main>
             <section>
-              <ScenarioKlachten />
+              <ScenarioContact />
+              <br />
+
               <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage1}>
-                Naar de klachtenpagina
+                Start
                 <UtrechtIconArrow />
               </ButtonLink>
             </section>
