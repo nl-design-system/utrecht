@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 10.2.2
+
+### Patch Changes
+
+- @utrecht/html-content-css@1.4.1
+- @utrecht/open-forms-container-css@1.0.2
+- @utrecht/textbox-react@1.0.9
+- @utrecht/open-forms-container-react@1.0.2
+
 ## 10.2.1
 
 ### Patch Changes
