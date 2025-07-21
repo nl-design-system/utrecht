@@ -125,6 +125,7 @@ export const DefaultFocusVisible: Story = {
 
 export const DefaultWithIcon: Story = {
   args: {
+    children: null,
     label: (
       <>
         Read more <i>here</i>...

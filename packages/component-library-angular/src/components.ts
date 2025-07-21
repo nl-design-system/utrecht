@@ -18,6 +18,7 @@ export * from './heading-5/component';
 export * from './heading-6/component';
 export * from './html-content/component';
 export * from './link/component';
+export * from './link-button/component';
 export * from './ordered-list/component';
 export * from './ordered-list/item.component';
 export * from './page-content/component';

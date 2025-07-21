@@ -9,6 +9,7 @@ export interface ButtonStoryProps extends ButtonProps {
   focus?: boolean;
   focusVisible?: boolean;
   keyboardSupport?: boolean;
+  label?: string;
   IconAfter?: string;
   IconBefore?: string;
 }
@@ -19,6 +20,7 @@ export const ButtonStory = ({
   hover,
   focus,
   focusVisible,
+  label,
   IconBefore,
   IconAfter,
   ...restProps
@@ -34,6 +36,7 @@ export const ButtonStory = ({
       {...restProps}
     >
       {IconBefore && <IconBefore />}
+      {label && <span className="utrecht-button__label">{label}</span>}
       {children}
       {IconAfter && <IconAfter />}
     </Button>

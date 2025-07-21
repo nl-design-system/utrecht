@@ -1,14 +1,29 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Link } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import readme from '@utrecht/link-css/README.md?raw';
 import tokensDefinition from '@utrecht/link-css/dist/tokens.mjs';
+import { Link, LinkProps } from '@utrecht/link-react/dist/css';
+import React from 'react';
 import { designTokenStory } from './util.js';
+
+interface LinkStoryProps extends LinkProps {
+  icon?: string;
+}
+
+const LinkStory = ({ children, icon, ...props }: LinkStoryProps) => {
+  const IconElement = icon;
+  return (
+    <Link icon={IconElement ? <IconElement /> : null} {...props}>
+      {children}
+    </Link>
+  );
+};
 
 const meta = {
   title: 'React Component/Link',
   id: 'react-link',
-  component: Link,
+  component: LinkStory,
   args: {
     children: 'Read more',
     href: 'https://www.example.com',
@@ -89,13 +104,34 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
+      table: {
+        category: 'API',
+        defaultValue: { summary: '' },
+      },
+    },
   },
-} satisfies Meta<typeof Link>;
+} satisfies Meta<typeof LinkStory>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const DefaultWithIcon: Story = {
+  args: {
+    children: null,
+    label: (
+      <>
+        Read more <i>here</i>...
+      </>
+    ),
+    icon: 'utrecht-icon-loupe',
+  },
+};
 
 export const External: Story = {
   args: {

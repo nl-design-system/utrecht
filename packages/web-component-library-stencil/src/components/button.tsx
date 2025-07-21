@@ -147,6 +147,7 @@ export class Button {
       >
         <slot name="icon"></slot>
         <span class="utrecht-button__label">
+          <slot name="label"></slot>
           <slot></slot>
         </span>
       </button>
