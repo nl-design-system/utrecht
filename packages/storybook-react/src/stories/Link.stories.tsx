@@ -1,5 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Link } from '@utrecht/component-library-react/dist/css-module';
+import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
+import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/link-css/README.md?raw';
 import tokensDefinition from '@utrecht/link-css/dist/tokens.mjs';
@@ -192,6 +194,26 @@ export const Visited: Story = {
   parameters: {
     pseudo: { visited: true },
   },
+};
+
+export const InParagraph: Story = {
+  args: {
+    ...Default.args,
+  },
+  render: () => (
+    <Paragraph>
+      Het was in het voorjaar 1345, dat een talrijk aantal van naburen en vreemdelingen naar Haarlem was toegestroomd,
+      ter bijwoning van een plechtig feest, hetwelk binnen zijn muren door Graaf Willem den Vierden stond gegeven te
+      worden. In deze paragraaf staat een <Link href="http://example.com">link naar een voorbeeldsite</Link> en een
+      <Link href="http://example.com">
+        <Icon icon="pijl-naar-rechts" />
+        link met een icoon
+      </Link>
+      . Onder die steden, welke vanouds aan de grafelijke kroon van Holland gelijk zoovele edelgesteenten flonkerden, en
+      wier macht en rijkdom tot een hechten steun verstrekten aan des Landsheer gezag, was Haarlem, gelijk genoeg bekend
+      is, een der voornaamste.
+    </Paragraph>
+  ),
 };
 
 export const DesignTokens = designTokenStory(meta);
