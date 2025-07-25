@@ -182,7 +182,7 @@ export const One: Story = {
                 alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
                 height={1536}
                 photo
-                src="../prototype-src/prototype-contactformulier__amsterdamsestraatweg.jpg"
+                src="prototype-contactformulier__amsterdamsestraatweg.jpg"
                 width={2048}
               />
               <Heading2>Op de hoogte blijven</Heading2>
@@ -234,7 +234,7 @@ export const One: Story = {
                   Bekijk de kaart
                 </a>
               </iframe>
-              {/* TODO: Hulp en contact blok toevoegen 
+              {/* TODO: Hulp en contact blok toevoegen
               TODO: Contactformulier toevoegen */}
               <HulpEnContact />
               <KTO />
