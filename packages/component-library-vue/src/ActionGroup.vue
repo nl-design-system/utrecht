@@ -2,14 +2,14 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'UtrechtButtonGroup',
+  name: 'UtrechtActionGroup',
 });
 </script>
 
 <template>
-  <div class="utrecht-button-group">
+  <div class="utrecht-action-group">
     <slot />
   </div>
 </template>
 
-<style src="@utrecht/button-group-css/dist/index.css"></style>
+<style src="@utrecht/action-group-css/dist/index.css"></style>

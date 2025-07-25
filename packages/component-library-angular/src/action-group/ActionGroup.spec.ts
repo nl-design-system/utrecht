@@ -1,34 +1,34 @@
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { render, screen } from '@testing-library/angular';
-import { UtrechtButtonGroup } from './component';
+import { UtrechtActionGroup } from './component';
 import { clearElements } from '../utils';
 
-const buttonGroupWithChildren = `<utrecht-button-group>
+const actionGroupWithChildren = `<utrecht-action-group>
 <button utrecht-button>Save and continue</button>
 <button utrecht-button>Back</button>
-</utrecht-button-group>`;
+</utrecht-action-group>`;
 
 afterEach(() => {
   clearElements();
 });
 
-describe('Button Group', () => {
+describe('Action Group', () => {
   it('renders a group role element', async () => {
-    const { fixture } = await render(buttonGroupWithChildren, { declarations: [UtrechtButtonGroup] });
+    const { fixture } = await render(actionGroupWithChildren, { declarations: [UtrechtActionGroup] });
     fixture.detectChanges();
 
-    const buttonGroup = screen.getByRole('group', {
+    const actionGroup = screen.getByRole('group', {
       hidden: true,
     });
 
-    expect(buttonGroup).toBeInTheDocument();
-    expect(buttonGroup).toBeVisible();
+    expect(actionGroup).toBeInTheDocument();
+    expect(actionGroup).toBeVisible();
   });
 
   it('renders an HTML p element', async () => {
-    const { container } = await render(buttonGroupWithChildren, {
-      declarations: [UtrechtButtonGroup],
+    const { container } = await render(actionGroupWithChildren, {
+      declarations: [UtrechtActionGroup],
     });
 
     const paragaph = container.querySelector('p:only-child');
@@ -37,23 +37,23 @@ describe('Button Group', () => {
   });
 
   it('renders a design system BEM class name', async () => {
-    const { fixture } = await render(buttonGroupWithChildren, { declarations: [UtrechtButtonGroup] });
-    const el = fixture.debugElement.query(By.css('.utrecht-button-group'));
+    const { fixture } = await render(actionGroupWithChildren, { declarations: [UtrechtActionGroup] });
+    const el = fixture.debugElement.query(By.css('.utrecht-action-group'));
 
-    expect(el.nativeElement.classList.contains('utrecht-button-group')).toBe(true);
+    expect(el.nativeElement.classList.contains('utrecht-action-group')).toBe(true);
   });
 
-  it('renders Button Group that contain buttons as children', async () => {
-    const { fixture } = await render(buttonGroupWithChildren, { declarations: [UtrechtButtonGroup] });
-    const debugElement = fixture.debugElement.query(By.css('.utrecht-button-group'))!;
+  it('renders Action Group that contain buttons as children', async () => {
+    const { fixture } = await render(actionGroupWithChildren, { declarations: [UtrechtActionGroup] });
+    const debugElement = fixture.debugElement.query(By.css('.utrecht-action-group'))!;
     fixture.detectChanges();
 
     expect(debugElement.nativeElement).toContainHTML('button');
   });
 
   it('can have a custom class name', async () => {
-    const fixture = TestBed.createComponent(UtrechtButtonGroup);
-    const debugElement = fixture.debugElement.query(By.css('.utrecht-button-group'))!;
+    const fixture = TestBed.createComponent(UtrechtActionGroup);
+    const debugElement = fixture.debugElement.query(By.css('.utrecht-action-group'))!;
     debugElement.nativeElement.classList.add('custom-class');
     fixture.detectChanges();
 

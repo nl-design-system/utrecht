@@ -1,21 +1,21 @@
 import { render, screen } from '@testing-library/react';
 import { Button } from '@utrecht/button-react';
 import { createRef } from 'react';
-import { ButtonGroup } from './index';
+import { ActionGroup } from './index';
 import '@testing-library/jest-dom';
 
 describe('Button group', () => {
   it('renders a visible element', () => {
-    const { container } = render(<ButtonGroup />);
+    const { container } = render(<ActionGroup />);
 
-    const buttonGroup = container.querySelector(':only-child');
+    const actionGroup = container.querySelector(':only-child');
 
-    expect(buttonGroup).toBeInTheDocument();
-    expect(buttonGroup).toBeVisible();
+    expect(actionGroup).toBeInTheDocument();
+    expect(actionGroup).toBeVisible();
   });
 
   it('renders no group role element', () => {
-    render(<ButtonGroup />);
+    render(<ActionGroup />);
 
     expect(() => {
       screen.getByRole('group');
@@ -23,51 +23,51 @@ describe('Button group', () => {
   });
 
   it('renders an HTML p element', () => {
-    const { container } = render(<ButtonGroup />);
+    const { container } = render(<ActionGroup />);
 
-    const buttonGroup = container.querySelector('p:only-child');
+    const actionGroup = container.querySelector('p:only-child');
 
-    expect(buttonGroup).toBeInTheDocument();
+    expect(actionGroup).toBeInTheDocument();
   });
 
   it('renders rich text content', () => {
     // Rich text content is not recommended for this component,
     // but changing this behavior should be a breaking change.
     const { container } = render(
-      <ButtonGroup>
+      <ActionGroup>
         Currently <strong>unavailable</strong>
-      </ButtonGroup>,
+      </ActionGroup>,
     );
 
-    const buttonGroup = container.querySelector(':only-child');
+    const actionGroup = container.querySelector(':only-child');
 
-    const strong = buttonGroup?.querySelector('strong');
+    const strong = actionGroup?.querySelector('strong');
 
     expect(strong).toBeInTheDocument();
   });
 
   it('renders a design system BEM class name', () => {
-    const { container } = render(<ButtonGroup />);
+    const { container } = render(<ActionGroup />);
 
-    const buttonGroup = container.querySelector(':only-child');
+    const actionGroup = container.querySelector(':only-child');
 
-    expect(buttonGroup).toHaveClass('utrecht-button-group');
+    expect(actionGroup).toHaveClass('utrecht-action-group');
   });
 
   it('can be hidden', () => {
-    const { container } = render(<ButtonGroup hidden />);
+    const { container } = render(<ActionGroup hidden />);
 
-    const buttonGroup = container.querySelector(':only-child');
+    const actionGroup = container.querySelector(':only-child');
 
-    expect(buttonGroup).not.toBeVisible();
+    expect(actionGroup).not.toBeVisible();
   });
 
   describe('one button', () => {
     it('renders no group role element', () => {
       render(
-        <ButtonGroup>
+        <ActionGroup>
           <Button>Button 1</Button>
-        </ButtonGroup>,
+        </ActionGroup>,
       );
 
       expect(() => {
@@ -79,44 +79,44 @@ describe('Button group', () => {
   describe('many buttons', () => {
     it('renders a group role element', () => {
       render(
-        <ButtonGroup>
+        <ActionGroup>
           <Button>Button 1</Button>
           <Button>Button 2</Button>
-        </ButtonGroup>,
+        </ActionGroup>,
       );
 
-      const buttonGroup = screen.getByRole('group');
+      const actionGroup = screen.getByRole('group');
 
-      expect(buttonGroup).toBeInTheDocument();
-      expect(buttonGroup).toBeVisible();
+      expect(actionGroup).toBeInTheDocument();
+      expect(actionGroup).toBeVisible();
     });
   });
 
   describe('fragment with many buttons', () => {
     it.skip('renders a group role element', () => {
       render(
-        <ButtonGroup>
+        <ActionGroup>
           <>
             <Button>Button 1</Button>
             <Button>Button 2</Button>
           </>
-        </ButtonGroup>,
+        </ActionGroup>,
       );
 
-      const buttonGroup = screen.getByRole('group');
+      const actionGroup = screen.getByRole('group');
 
-      expect(buttonGroup).toBeInTheDocument();
-      expect(buttonGroup).toBeVisible();
+      expect(actionGroup).toBeInTheDocument();
+      expect(actionGroup).toBeVisible();
     });
   });
 
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLParagraphElement>();
 
-    const { container } = render(<ButtonGroup ref={ref} />);
+    const { container } = render(<ActionGroup ref={ref} />);
 
-    const buttonGroup = container.querySelector(':only-child');
+    const actionGroup = container.querySelector(':only-child');
 
-    expect(ref.current).toBe(buttonGroup);
+    expect(ref.current).toBe(actionGroup);
   });
 });

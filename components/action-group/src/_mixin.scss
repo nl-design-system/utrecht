@@ -3,30 +3,30 @@
  * Copyright (c) 2022 Frameless B.V.
  */
 
-@mixin utrecht-button-group {
+@mixin utrecht-action-group {
   align-items: baseline;
-  background-color: var(--utrecht-button-group-background-color);
+  background-color: var(--utrecht-action-group-background-color);
   break-inside: avoid;
   display: flex;
   flex-wrap: wrap;
-  gap: var(--utrecht-button-group-inline-gap, 1em);
-  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-button-group-margin-block-end, 0));
-  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-button-group-margin-block-start, 0));
+  gap: var(--utrecht-action-group-inline-gap, 1em);
+  margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-action-group-margin-block-end, 0));
+  margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-action-group-margin-block-start, 0));
   min-block-size: var(--utrecht-button-block-size);
-  padding-block-end: var(--utrecht-button-group-padding-block-end);
-  padding-block-start: var(--utrecht-button-group-padding-block-start);
+  padding-block-end: var(--utrecht-action-group-padding-block-end);
+  padding-block-start: var(--utrecht-action-group-padding-block-start);
 }
 
-@mixin utrecht-button-group--distanced {
+@mixin utrecht-action-group--distanced {
   --utrecht-space-around: 1;
 }
 
-@mixin utrecht-button-group__link-button--row {
+@mixin utrecht-action-group__link-button--row {
   --utrecht-button-padding-inline-end: 0;
   --utrecht-button-padding-inline-start: 0;
 }
 
-@mixin utrecht-button-group--column {
+@mixin utrecht-action-group--column {
   flex-direction: column;
-  gap: var(--utrecht-button-group-block-gap, 1em);
+  gap: var(--utrecht-action-group-block-gap, 1em);
 }

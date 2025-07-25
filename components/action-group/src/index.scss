@@ -5,20 +5,20 @@
 
 @import "./mixin";
 
-.utrecht-button-group {
-  @include utrecht-button-group;
+.utrecht-action-group {
+  @include utrecht-action-group;
 }
 
-.utrecht-button-group--distanced {
-  @include utrecht-button-group--distanced;
+.utrecht-action-group--distanced {
+  @include utrecht-action-group--distanced;
 }
 
-.utrecht-button-group__link-button--row,
-.utrecht-button-group--row .utrecht-link-button,
-.utrecht-button-group:not(.utrecht-button-group--column) .utrecht-link-button {
-  @include utrecht-button-group__link-button--row;
+.utrecht-action-group__link-button--row,
+.utrecht-action-group--row .utrecht-link-button,
+.utrecht-action-group:not(.utrecht-action-group--column) .utrecht-link-button {
+  @include utrecht-action-group__link-button--row;
 }
 
-.utrecht-button-group--column {
-  @include utrecht-button-group--column;
+.utrecht-action-group--column {
+  @include utrecht-action-group--column;
 }

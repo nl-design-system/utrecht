@@ -4,4 +4,4 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-export * from '@utrecht/button-group-react/dist/css';
+export * from '@utrecht/action-group-react/dist/css';

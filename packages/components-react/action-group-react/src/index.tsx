@@ -11,13 +11,13 @@ const hasManyElements = (children: ReactNode | ReactNode[]) =>
   Array.isArray(children) &&
   children.reduce((count: number, item): number => (isValidElement(item) ? count + 1 : count), 0) >= 2;
 
-export interface ButtonGroupProps extends HTMLAttributes<HTMLParagraphElement> {
+export interface ActionGroupProps extends HTMLAttributes<HTMLParagraphElement> {
   direction?: string | 'column' | 'row';
 }
 
-export const ButtonGroup = forwardRef(
+export const ActionGroup = forwardRef(
   (
-    { children, className, direction, ...restProps }: PropsWithChildren<ButtonGroupProps>,
+    { children, className, direction, ...restProps }: PropsWithChildren<ActionGroupProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => (
     <p
@@ -25,10 +25,10 @@ export const ButtonGroup = forwardRef(
       {...restProps}
       ref={ref}
       className={clsx(
-        'utrecht-button-group',
+        'utrecht-action-group',
         {
-          'utrecht-button-group--column': direction === 'column',
-          'utrecht-button-group--row': direction === 'row',
+          'utrecht-action-group--column': direction === 'column',
+          'utrecht-action-group--row': direction === 'row',
         },
         className,
       )}
@@ -38,4 +38,4 @@ export const ButtonGroup = forwardRef(
   ),
 );
 
-ButtonGroup.displayName = 'ButtonGroup';
+ActionGroup.displayName = 'ActionGroup';

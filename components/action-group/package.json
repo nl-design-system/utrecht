@@ -1,9 +1,9 @@
 {
   "version": "1.4.1",
   "author": "Community for NL Design System",
-  "description": "Button group component for the Municipality of Utrecht based on the NL Design System architecture",
+  "description": "Action group component for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@utrecht/button-group-css",
+  "name": "@utrecht/action-group-css",
   "files": [
     "dist/",
     "docs/",
@@ -27,6 +27,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git",
-    "directory": "components/button-group"
+    "directory": "components/action-group"
   }
 }

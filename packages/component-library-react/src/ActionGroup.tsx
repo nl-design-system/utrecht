@@ -4,5 +4,5 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-export { type ButtonGroupProps } from '@utrecht/button-group-react';
-export { ButtonGroup } from '@utrecht/button-group-react';
+export { type ActionGroupProps } from '@utrecht/action-group-react';
+export { ActionGroup } from '@utrecht/action-group-react';

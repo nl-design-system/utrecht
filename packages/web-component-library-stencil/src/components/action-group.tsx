@@ -8,19 +8,19 @@ import { Component, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
-  tag: 'utrecht-button-group',
-  styleUrl: 'button-group.scss',
+  tag: 'utrecht-action-group',
+  styleUrl: 'action-group.scss',
   shadow: true,
 })
-export class ButtonGroup {
+export class actionGroup {
   @Prop() direction: string | 'column' | 'row';
   render() {
     const { direction } = this;
     return (
       <div
-        class={clsx('utrecht-button-group', {
-          'utrecht-button-group--column': direction === 'column',
-          'utrecht-button-group--row': direction === 'row',
+        class={clsx('utrecht-action-group', {
+          'utrecht-action-group--column': direction === 'column',
+          'utrecht-action-group--row': direction === 'row',
         })}
       >
         <slot></slot>
