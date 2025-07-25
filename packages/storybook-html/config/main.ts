@@ -29,7 +29,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@chromatic-com/storybook'),
   ],
-  staticDirs: ['../../../proprietary/assets', '../src/script/'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/', '../static'],
 
   docs: {},
   webpackFinal: async (config: any) => {

@@ -29,7 +29,7 @@ const config: StorybookConfig = {
     builder: '@storybook/builder-webpack5',
     disableTelemetry: true,
   },
-  staticDirs: ['../../../proprietary/assets'],
+  staticDirs: ['../../../proprietary/assets', '../static'],
   webpackFinal: async (config) => {
     config.resolve = {
       ...config.resolve,

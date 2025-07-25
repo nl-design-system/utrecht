@@ -31,6 +31,7 @@ const config: StorybookConfig = {
     '../../../proprietary/assets',
     '../src/script/',
     '../node_modules/@utrecht/flo-legal-decision-tree-client/dist/assets',
+    '../static'
   ],
   docs: {},
   async viteFinal(config) {
