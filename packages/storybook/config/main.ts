@@ -28,7 +28,7 @@ const config: StorybookConfig = {
     'storybook-addon-themes',
     //'@storybook/addon-mdx-gfm',
   ],
-  staticDirs: ['../../../proprietary/assets', '../src/script/'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/', '../static'],
   refs: (_, { configType }) => {
     // https://storybook.js.org/docs/react/sharing/storybook-composition#compose-storybooks-per-environment
     let config = {};

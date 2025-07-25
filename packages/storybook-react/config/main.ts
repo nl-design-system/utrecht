@@ -25,7 +25,7 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-  staticDirs: ['../../../proprietary/assets'],
+  staticDirs: ['../../../proprietary/assets', '../static'],
   docs: {
     autodocs: true,
   },
