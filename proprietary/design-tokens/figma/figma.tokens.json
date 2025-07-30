@@ -1101,15 +1101,15 @@
             "type": "color"
           },
           "bg-default": {
-            "value": "{utrecht.color.blue.30}",
+            "value": "{basis.color.accent-1.color-default}",
             "type": "color"
           },
           "bg-hover": {
-            "value": "{utrecht.color.blue.40}",
+            "value": "{basis.color.accent-3.color-hover}",
             "type": "color"
           },
           "bg-active": {
-            "value": "#003B81",
+            "value": "{basis.color.accent-1.color-active}",
             "type": "color"
           },
           "border-subtle": {
@@ -2548,11 +2548,11 @@
           "type": "color"
         },
         "color": {
-          "value": "#0b0c0c",
+          "value": "{basis.color.default.color-document}",
           "type": "color"
         },
         "outline-color": {
-          "value": "#ffffff",
+          "value": "{basis.color.default.bg-document}",
           "type": "color"
         },
         "inverse": {
