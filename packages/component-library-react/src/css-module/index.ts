@@ -5,6 +5,8 @@
  */
 
 export { Accordion, AccordionProvider, AccordionSection } from './Accordion';
+export type { ActionGroupProps } from '../ActionGroup';
+export { ActionGroup } from './ActionGroup';
 export type { AlertProps, AlertType } from '../Alert';
 export { Alert } from './Alert';
 export type { AlertDialogProps } from '../AlertDialog';
