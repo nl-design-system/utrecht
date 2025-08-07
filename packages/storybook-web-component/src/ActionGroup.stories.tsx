@@ -1,12 +1,12 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/button-group-css/README.md?raw';
-import tokensDefinition from '@utrecht/button-group-css/src/tokens.json';
+import readme from '@utrecht/action-group-css/README.md?raw';
+import tokensDefinition from '@utrecht/action-group-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import {
+  UtrechtActionGroup,
   UtrechtButton,
-  UtrechtButtonGroup,
   UtrechtButtonLink,
   UtrechtLinkButton,
 } from '@utrecht/web-component-library-react';
@@ -14,15 +14,15 @@ import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'Web Component/Button group',
-  id: 'web-component-button-group',
-  component: UtrechtButtonGroup,
+  title: 'Web Component/Action group',
+  id: 'web-component-action-group',
+  component: UtrechtActionGroup,
   argTypes: {
     children: {
-      description: 'Content of the button group',
+      description: 'Content of the action group',
     },
     direction: {
-      description: 'Layout of the button group',
+      description: 'Layout of the action group',
       options: {
         '': undefined,
         column: 'column',
@@ -38,7 +38,7 @@ const meta = {
     status: {
       type: 'WORK IN PROGRESS',
     },
-    tokensPrefix: 'utrecht-button-group',
+    tokensPrefix: 'utrecht-action-group',
     tokens,
     tokensDefinition,
     docs: {
@@ -47,7 +47,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof UtrechtButtonGroup>;
+} satisfies Meta<typeof UtrechtActionGroup>;
 
 export default meta;
 
