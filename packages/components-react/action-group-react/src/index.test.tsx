@@ -4,7 +4,7 @@ import { createRef } from 'react';
 import { ActionGroup } from './index';
 import '@testing-library/jest-dom';
 
-describe('Button group', () => {
+describe('Action group', () => {
   it('renders a visible element', () => {
     const { container } = render(<ActionGroup />);
 
