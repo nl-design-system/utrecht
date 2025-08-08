@@ -7,6 +7,7 @@
 "@utrecht/component-library-vue": minor
 "@utrecht/button-group-css": minor
 "@utrecht/button-group-react": minor
+"@utrecht/rich-text-css": minor
 ---
 
 Add Action Group component as replacement for deprecated Button Group according to NL Design System naming convention.
