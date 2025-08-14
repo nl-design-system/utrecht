@@ -1235,6 +1235,7 @@ importers:
       zone.js:
         specifier: 0.14.3
         version: 0.14.3
+    publishDirectory: dist
 
   packages/component-library-css:
     dependencies:
@@ -4813,7 +4814,7 @@ importers:
         version: link:../../components/button
       '@utrecht/component-library-angular':
         specifier: workspace:*
-        version: link:../component-library-angular
+        version: link:../component-library-angular/dist
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens

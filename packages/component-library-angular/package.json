@@ -9,7 +9,9 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "directory": "dist",
+    "linkDirectory": true
   },
   "repository": {
     "type": "git+ssh",
@@ -27,7 +29,6 @@
     "watch:build": "ng build --watch",
     "test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
     "test": "jest --coverage --verbose",
-    "test-build": "node test-exports.mjs",
     "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
   },
   "dependencies": {
@@ -94,15 +95,5 @@
   },
   "module": "dist/fesm2022/utrecht-component-library-angular.mjs",
   "typings": "dist/index.d.ts",
-  "exports": {
-    "./package.json": {
-      "default": "./dist/package.json"
-    },
-    ".": {
-      "types": "./dist/index.d.ts",
-      "esm2022": "./dist/esm2022/utrecht-component-library-angular.mjs",
-      "esm": "./dist/esm2022/utrecht-component-library-angular.mjs",
-      "default": "./dist/fesm2022/utrecht-component-library-angular.mjs"
-    }
-  }
+  "exports": {}
 }
