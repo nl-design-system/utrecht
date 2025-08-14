@@ -11,3 +11,6 @@ packages/web-component-library-stencil/src/components/generated
 
 # Ignore all docusaurus files
 docusaurus/
+
+# Ignore selectors from Gravity Forms we cannot avoid
+packages/component-library-css/src/gravity-forms.scss

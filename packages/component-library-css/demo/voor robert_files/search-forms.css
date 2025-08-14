@@ -1,0 +1,165 @@
+.swp-flex--col {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+form.searchwp-form .swp-flex--row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  flex-grow: 1;
+}
+form.searchwp-form .swp-flex--wrap {
+  flex-wrap: wrap;
+}
+form.searchwp-form .swp-flex--gap-sm {
+  gap: 0.25em;
+}
+form.searchwp-form .swp-flex--gap-md {
+  gap: 0.5em;
+}
+form.searchwp-form .swp-items-stretch {
+  align-items: stretch;
+}
+form.searchwp-form .swp-margin-l-auto {
+  margin-left: auto;
+}
+form.searchwp-form input.swp-input,
+form.searchwp-form select.swp-select {
+  color: rgba(14, 33, 33, 0.8);
+}
+form.searchwp-form select.swp-select {
+  min-width: fit-content;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg width='17' height='11' viewBox='0 0 17 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.2915 0.814362L8.09717 6.95819L1.90283 0.814362L0 2.7058L8.09717 10.7545L16.1943 2.7058L14.2915 0.814362Z' fill='%230E2121' fill-opacity='0.8'/%3E%3C/svg%3E%0A");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 12px auto;
+  padding: 0 33px 0 0.7em;
+  min-height: 2em;
+}
+form.searchwp-form input.swp-input--search {
+  background-image: url("data:image/svg+xml,%3Csvg width='15' height='15' viewBox='0 0 15 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.06786 12.1357C7.3777 12.1357 8.60074 11.7096 9.59495 10.9995L13.3351 14.7396C13.5087 14.9132 13.7375 15 13.9742 15C14.4871 15 14.858 14.6055 14.858 14.1005C14.858 13.8638 14.7791 13.6428 14.6055 13.4692L10.889 9.74487C11.6702 8.7191 12.1357 7.44871 12.1357 6.06786C12.1357 2.73014 9.40558 0 6.06786 0C2.72225 0 0 2.73014 0 6.06786C0 9.40558 2.72225 12.1357 6.06786 12.1357ZM6.06786 10.8259C3.45608 10.8259 1.30984 8.67175 1.30984 6.06786C1.30984 3.46397 3.45608 1.30984 6.06786 1.30984C8.67175 1.30984 10.8259 3.46397 10.8259 6.06786C10.8259 8.67175 8.67175 10.8259 6.06786 10.8259Z' fill='%23CFCFCF'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px top 50%;
+  background-size: 15px auto;
+  padding-right: 38px;
+  padding-left: 0.7em;
+}
+form.searchwp-form .searchwp-form-input-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  flex-grow: 1;
+}
+form.searchwp-form .searchwp-form-input-container .swp-input {
+  margin: 0;
+  width: 100%;
+}
+
+form.searchwp-form .searchwp-form-input-container .swp-select {
+  border-right: 0;
+}
+form.searchwp-form .searchwp-form-input-container .swp-select + .swp-input {
+  flex-grow: 1;
+}
+form.searchwp-form .searchwp-form-advanced-filters-toggle {
+  text-align: right;
+}
+form.searchwp-form .searchwp-form-advanced-filters select {
+  flex: 1;
+}
+form.searchwp-form .swp-toggle {
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+form.searchwp-form .swp-toggle-switch {
+  background-color: rgba(14, 33, 33, 0.14);
+  border-radius: 20px;
+  width: 40px;
+  height: 22px;
+  position: relative;
+  transition: background-color 0.25s;
+}
+
+form.searchwp-form .swp-toggle-switch:not(.swp-toggle-switch--mini):hover {
+  background-color: rgba(14, 33, 33, 0.2);
+}
+
+form.searchwp-form .swp-toggle-switch--mini {
+  width: 25px;
+  height: 15px;
+}
+
+form.searchwp-form .swp-toggle-switch:before,
+form.searchwp-form .swp-toggle-switch:after {
+  content: "";
+}
+
+form.searchwp-form .swp-toggle-switch:before {
+  display: block;
+  background: #ffffff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  -webkit-transition: left 0.25s;
+  -o-transition: left 0.25s;
+  transition: left 0.25s;
+}
+
+form.searchwp-form .swp-toggle-switch--mini:before {
+  width: 11px;
+  height: 11px;
+  top: 2px;
+  left: 2px;
+}
+
+form.searchwp-form .swp-toggle-checkbox:checked + .swp-toggle-switch,
+form.searchwp-form .swp-toggle-switch--checked {
+  background: currentcolor;
+}
+
+form.searchwp-form .swp-toggle-checkbox:checked + .swp-toggle-switch:before {
+  left: 20px;
+}
+
+form.searchwp-form .swp-toggle-checkbox:checked + .swp-toggle-switch--mini:before,
+form.searchwp-form .swp-toggle-switch--checked.swp-toggle-switch--mini:before {
+  left: 12px;
+}
+
+form.searchwp-form input.swp-toggle-checkbox {
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  position: absolute;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+}
+
+form.searchwp-form input.swp-toggle-checkbox:focus {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+form.searchwp-form .swp-toggle .swp-label {
+  display: block;
+  margin-top: 21px;
+}
+
+form.searchwp-form input.swp-toggle-checkbox:focus + .swp-toggle-switch,
+form.searchwp-form input.swp-toggle-checkbox:active + .swp-toggle-switch {
+  -webkit-box-shadow: 0 0 1px 1px rgba(14, 33, 33, 0.14);
+  box-shadow: 0 0 1px 1px rgba(14, 33, 33, 0.14);
+  border: none;
+}
