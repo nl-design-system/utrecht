@@ -10,4 +10,6 @@
 "@utrecht/rich-text-css": minor
 ---
 
-Add Action Group component as replacement for deprecated Button Group according to NL Design System naming convention.
+Button Group has component is now deprecated, because it has a new name: Action Group. Please migrate to the new Action Group component, which apart from the name is identical.
+
+The Button Group component remains available for some time to give you opportunity to migrate your code, but it will be removed in an upcoming major release.

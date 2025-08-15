@@ -3,4 +3,4 @@
 "@utrecht/action-group-react": major
 ---
 
-Rename Button Group to Action Group according to NL Design System naming convention.
+Button Group component is now deprecated, because it has a new name: Action Group, which apart from the name is identical.
