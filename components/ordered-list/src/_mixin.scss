@@ -13,7 +13,7 @@
     var(--utrecht-unordered-list-font-size, var(--utrecht-document-font-size, inherit))
   );
   line-height: var(
-    --utrecht-ordered-list-font-size,
+    --utrecht-ordered-list-line-height,
     var(--utrecht-unordered-list-line-height, var(--utrecht-document-line-height, inherit))
   );
   list-style-type: decimal; /* harden */
