@@ -1,5 +1,5 @@
 ---
-"@utrecht/ordered-list-css": patch
+"@utrecht/ordered-list-css": major
 ---
 
-Fixed the usage of the line height token
+--utrecht-ordered-list-font-size was used to determine the ordered list line height. This has now been changed to --utrecht-ordered-list-line-height.
