@@ -285,3 +285,12 @@ jobs:
       #     pnpm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
       #     pnpm run publish
       #     pnpm config delete "//registry.npmjs.org/:_authToken"
+
+  publish-sbom:
+    runs-on: ubuntu-latest
+    needs: install
+    steps:
+      - name: Anchore SBOM Action
+        uses: anchore/sbom-action@v0.20.5
+        with:
+          format: cyclonecyclonedx-json
