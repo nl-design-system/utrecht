@@ -250,6 +250,14 @@ jobs:
         run: |
           pnpm run --if-present build
 
+      - name: Software Bill of Materials (SBoM)
+        uses: anchore/sbom-action@da167eac915b4e86f08b264dbdbc867b61be6f0c # v0.20.5
+        # Permissions to add the SBoM to the GitHub Release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          format: cyclonedx-json
+
       # - name: "Continuous Deployment: publish to GitHub repository"
       #   env:
       #     GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
