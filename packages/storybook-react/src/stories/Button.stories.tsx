@@ -1,17 +1,18 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/button-css/README.md?raw';
+// import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/dist/tokens.mjs';
-import { Button, ButtonProps } from '@utrecht/button-react/dist/css';
+import { Button, ButtonProps } from '@utrecht/button-react';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import iconSet from '@utrecht/icon/dist/iconset.mjs';
-import React from 'react';
-import { designTokenStory } from './util.js';
+import type { PropsWithChildren } from 'react';
+// import { designTokenStory } from './util.js';
+const readme = '';
 
 interface ButtonStoryProps extends ButtonProps {
   icon?: string;
 }
 
-const ButtonStory = ({ children, icon, ...props }: ButtonStoryProps) => {
+const ButtonStory = ({ children, icon, ...props }: PropsWithChildren<ButtonStoryProps>) => {
   const IconElement = icon;
   return (
     <Button icon={IconElement ? <IconElement /> : null} {...props}>
@@ -356,4 +357,4 @@ export const SubtleFocusVisible: Story = {
   },
 };
 
-export const DesignTokens = designTokenStory(meta);
+// export const DesignTokens = designTokenStory(meta);

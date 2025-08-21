@@ -5,9 +5,10 @@
     "jsx": "react-jsx",
     "skipLibCheck": true,
     "moduleResolution": "nodenext",
-    "module": "NodeNext"
+    "module": "NodeNext",
+    "outDir": "dist"
   },
   "extends": "../../tsconfig.json",
-  "include": ["config/**/*.ts", "config/**/*.tsx", "src/**/*.ts", "src/**/*.tsx"],
+  "include": ["src/**/*.ts", "src/**/*.tsx"],
   "exclude": ["**/node_modules/*"]
 }

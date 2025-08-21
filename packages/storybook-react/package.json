@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
+    "build:ts": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist/",
     "lint-build:todo": "tsc --noEmit --project tsconfig.json",
     "start": "http-server dist/",

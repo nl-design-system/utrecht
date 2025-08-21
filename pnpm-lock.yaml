@@ -118,6 +118,9 @@ importers:
 
   apps/preact:
     dependencies:
+      '@utrecht/button-css':
+        specifier: workspace:*
+        version: link:../../components/button
       '@utrecht/button-react':
         specifier: workspace:*
         version: link:../../packages/components-react/button-react
@@ -127,6 +130,12 @@ importers:
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
+      '@utrecht/icon':
+        specifier: workspace:*
+        version: link:../../components/icon
+      '@utrecht/storybook-react':
+        specifier: workspace:*
+        version: link:../../packages/storybook-react
       preact:
         specifier: 10.24.3
         version: 10.24.3

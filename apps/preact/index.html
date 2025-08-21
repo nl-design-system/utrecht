@@ -4,11 +4,25 @@
     <meta charset="utf-8" />
     <title>React component library</title>
     <link rel="stylesheet" href="node_modules/@utrecht/design-tokens/dist/theme.css" />
+    <style>
+      .example-story-canvas {
+        background-color: white;
+        border-radius: 4px;
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(0, 0, 0, 0.1);
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px;
+        margin-block-end: 40px;
+        margin-block-start: 25px;
+        padding-block-end: 30px;
+        padding-block-start: 30px;
+        padding-inline-end: 20px;
+        padding-inline-start: 20px;
+        position: relative;
+      }
+    </style>
   </head>
   <body>
-    <h1>React components rendered with Preact</h1>
-    <p>This example uses ES Modules and import maps.</p>
-    <div id="root"></div>
     <script type="importmap">
       {
         "imports": {
@@ -64,6 +78,10 @@
           "@utrecht/select-combobox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/select-combobox-react/dist/css.mjs",
           "@utrecht/textbox-react": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/textbox-react/dist/index.mjs",
           "@utrecht/textbox-react/dist/css": "./node_modules/@utrecht/component-library-react/node_modules/@utrecht/textbox-react/dist/css.mjs",
+          "@utrecht/storybook-react/": "./node_modules/@utrecht/storybook-react/",
+          "@utrecht/button-css/": "./node_modules/@utrecht/button-css/",
+          "@utrecht/design-tokens/": "./node_modules/@utrecht/design-tokens/",
+          "@utrecht/icon/": "./node_modules/@utrecht/icon/",
           "clsx": "./node_modules/@utrecht/button-react/node_modules/clsx/dist/clsx.mjs",
           "preact": "./node_modules/preact/dist/preact.mjs",
           "preact/compat": "./node_modules/preact/compat/dist/compat.mjs",
@@ -73,16 +91,9 @@
         }
       }
     </script>
-    <script type="module">
-      import { render, createElement } from 'preact';
-      import { Button } from '@utrecht/button-react/dist/css';
-      import { Separator } from '@utrecht/component-library-react/dist/css-module';
-      (async () => {
-        const root = document.getElementById('root');
-        if (root) {
-          render(createElement(Button, { children: 'Click me!', appearance: 'primary-action-button' }), root);
-        }
-      })();
-    </script>
+    <script type="module" src="story-react.mjs"></script>
+
+    <h1>Look no Storybook!</h1>
+    <story-list-react src="@utrecht/storybook-react/dist/src/stories/Button.stories.js"></story-react>
   </body>
 </html>
