@@ -62,9 +62,9 @@ https://stenciljs.com/docs/dev-server
               <div><a href="">Home</a></div>
               <div><a href="">Home</a></div>
             </div>
-            <utrecht-button-group slot="fallback">
+            <utrecht-action-group slot="fallback">
               <utrecht-button appearance="subtle" expanded="false">Open menu</utrecht-button>
-            </utrecht-button-group>
+            </utrecht-action-group>
             <utrecht-drawer open="true" slot="fallback">
               <ul>
                 <li><utrecht-link href="#">Link 1</utrecht-link></li>
@@ -145,20 +145,20 @@ https://stenciljs.com/docs/dev-server
             <utrecht-form-field-textbox name="q" value="My query" invalid>
               <span slot="label">Hello world</span>
             </utrecht-form-field-textbox>
-            <utrecht-button-group>
+            <utrecht-action-group>
               <utrecht-link-button>⃪ Previous</utrecht-link-button>
               <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
-            </utrecht-button-group>
+            </utrecht-action-group>
           </utrecht-form>
           <utrecht-button appearance="primary-action-button" type="submit">Search</utrecht-button>
-          <utrecht-button-group>
+          <utrecht-action-group>
             <button type="button" popovertarget="mypopover" popovertargetaction="show">Show popover</button>
             <button type="button" popovertarget="mypopover" popovertargetaction="hide">Hide popover</button>
-          </utrecht-button-group>
-          <utrecht-button-group
+          </utrecht-action-group>
+          <utrecht-action-group
             ><utrecht-button popovertarget="mypopover" popovertargetaction="show">Show popover</utrecht-button>
             <utrecht-button popovertarget="mypopover" popovertargetaction="hide">Hide popover</utrecht-button>
-          </utrecht-button-group>
+          </utrecht-action-group>
           <div id="mypopover" popover>Popover content</div>
           <utrecht-article id="main" style="--utrecht-space-around: 1">
             <utrecht-color-sample color="#007dad"></utrecht-color-sample>
@@ -256,50 +256,50 @@ https://stenciljs.com/docs/dev-server
             <div>
               <utrecht-badge-status>disabled</utrecht-badge-status>
             </div>
-            <utrecht-button-group>
+            <utrecht-action-group>
               <utrecht-button>foo</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-button-group>
+            </utrecht-action-group>
+            <utrecht-action-group>
               <utrecht-button appearance="primary-action-button">foo</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-button-group>
+            </utrecht-action-group>
+            <utrecht-action-group>
               <utrecht-button appearance="secondary-action-button">foo</utrecht-button>
-            </utrecht-button-group>
-            <utrecht-button-group>
+            </utrecht-action-group>
+            <utrecht-action-group>
               <utrecht-button appearance="subtle-button">foo</utrecht-button>
-            </utrecht-button-group>
+            </utrecht-action-group>
             <section>
               <utrecht-heading-2>Button link</utrecht-heading-2>
-              <utrecht-button-group>
+              <utrecht-action-group>
                 <utrecht-button-link href="#">foo</utrecht-button-link>
                 <utrecht-button-link href="#" placeholder>foo</utrecht-button-link>
-              </utrecht-button-group>
-              <utrecht-button-group>
+              </utrecht-action-group>
+              <utrecht-action-group>
                 <utrecht-button-link href="#" appearance="primary-action-button">Primary action</utrecht-button-link>
                 <utrecht-button-link href="#" appearance="primary-action-button" placeholder
                   >Primary action</utrecht-button-link
                 >
-              </utrecht-button-group>
-              <utrecht-button-group>
+              </utrecht-action-group>
+              <utrecht-action-group>
                 <utrecht-button-link href="#" appearance="secondary-action-button"
                   >Secondary action</utrecht-button-link
                 >
                 <utrecht-button-link href="#" appearance="secondary-action-button" placeholder
                   >Secondary action</utrecht-button-link
                 >
-              </utrecht-button-group>
-              <utrecht-button-group>
+              </utrecht-action-group>
+              <utrecht-action-group>
                 <utrecht-button-link href="#" appearance="subtle-button">Subtle button</utrecht-button-link>
                 <utrecht-button-link href="#" appearance="subtle-button" placeholder>Subtle button</utrecht-button-link>
-              </utrecht-button-group>
+              </utrecht-action-group>
             </section>
             <section>
               <utrecht-heading-2>Link button</utrecht-heading-2>
-              <utrecht-button-group>
+              <utrecht-action-group>
                 <utrecht-link-button>Link button</utrecht-link-button>
                 <utrecht-link-button disabled>Disabled link button</utrecht-link-button>
                 <utrecht-link-button pressed>Pressed link button</utrecht-link-button>
-              </utrecht-button-group>
+              </utrecht-action-group>
             </section>
           </utrecht-article>
           <utrecht-spotlight-section>

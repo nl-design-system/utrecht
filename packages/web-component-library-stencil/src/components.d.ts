@@ -6,6 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface UtrechtActionGroup {
+        "direction": string | 'column' | 'row';
+    }
     interface UtrechtAlert {
         "type": string;
     }
@@ -837,6 +840,12 @@ export interface UtrechtTextboxCustomEvent<T> extends CustomEvent<T> {
     target: HTMLUtrechtTextboxElement;
 }
 declare global {
+    interface HTMLUtrechtActionGroupElement extends Components.UtrechtActionGroup, HTMLStencilElement {
+    }
+    var HTMLUtrechtActionGroupElement: {
+        prototype: HTMLUtrechtActionGroupElement;
+        new (): HTMLUtrechtActionGroupElement;
+    };
     interface HTMLUtrechtAlertElement extends Components.UtrechtAlert, HTMLStencilElement {
     }
     var HTMLUtrechtAlertElement: {
@@ -2789,6 +2798,7 @@ declare global {
         new (): HTMLUtrechtUrlDataElement;
     };
     interface HTMLElementTagNameMap {
+        "utrecht-action-group": HTMLUtrechtActionGroupElement;
         "utrecht-alert": HTMLUtrechtAlertElement;
         "utrecht-article": HTMLUtrechtArticleElement;
         "utrecht-backdrop": HTMLUtrechtBackdropElement;
@@ -3093,6 +3103,9 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface UtrechtActionGroup {
+        "direction"?: string | 'column' | 'row';
+    }
     interface UtrechtAlert {
         "type"?: string;
     }
@@ -3919,6 +3932,7 @@ declare namespace LocalJSX {
     interface UtrechtUrlData {
     }
     interface IntrinsicElements {
+        "utrecht-action-group": UtrechtActionGroup;
         "utrecht-alert": UtrechtAlert;
         "utrecht-article": UtrechtArticle;
         "utrecht-backdrop": UtrechtBackdrop;
@@ -4226,6 +4240,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "utrecht-action-group": LocalJSX.UtrechtActionGroup & JSXBase.HTMLAttributes<HTMLUtrechtActionGroupElement>;
             "utrecht-alert": LocalJSX.UtrechtAlert & JSXBase.HTMLAttributes<HTMLUtrechtAlertElement>;
             "utrecht-article": LocalJSX.UtrechtArticle & JSXBase.HTMLAttributes<HTMLUtrechtArticleElement>;
             "utrecht-backdrop": LocalJSX.UtrechtBackdrop & JSXBase.HTMLAttributes<HTMLUtrechtBackdropElement>;

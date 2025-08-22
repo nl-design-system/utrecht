@@ -1,15 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/button-group-css/README.md?raw';
-import tokensDefinition from '@utrecht/button-group-css/src/tokens.json';
-import { Button, ButtonGroup } from '@utrecht/component-library-react';
+import readme from '@utrecht/action-group-css/README.md?raw';
+import tokensDefinition from '@utrecht/action-group-css/src/tokens.json';
+import { ActionGroup, Button } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'CSS Component/Button Group',
-  id: 'css-button-group',
-  component: ButtonGroup,
+  title: 'CSS Component/Action Group',
+  id: 'css-action-group',
+  component: ActionGroup,
   args: {
     children: [
       <Button appearance="primary-action-button">Save and continue</Button>,
@@ -18,7 +18,7 @@ const meta = {
   },
   argTypes: {
     direction: {
-      description: 'Layout of the button group',
+      description: 'Layout of the action group',
       control: 'select',
       options: {
         '': undefined,
@@ -28,13 +28,13 @@ const meta = {
     },
   },
   parameters: {
-    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fbutton-group',
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Faction-group',
     communityFigma:
       'https://www.figma.com/design/shhwGcqPLi2CapK0P1zz8O/NLDS---Voorbeeld---Bibliotheek?node-id=4626-10492&t=CiZrkiC5t6Bn59Hg-0',
     figma:
       'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=2969-32386&t=kJatlKfN59e8T0eA-0',
-    nldesignsystem: 'https://nldesignsystem.nl/button-group',
-    tokensPrefix: 'utrecht-button-group',
+    nldesignsystem: 'https://nldesignsystem.nl/action-group',
+    tokensPrefix: 'utrecht-action-group',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -46,7 +46,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof ButtonGroup>;
+} satisfies Meta<typeof ActionGroup>;
 
 export default meta;
 
@@ -57,8 +57,8 @@ export const Default: Story = {
     docs: {
       description: {
         story: `
-Styling via the \`.utrecht-button-group\` class name.
-Er moet lege ruimte zijn tussen de buttons, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
+Styling via the \`.utrecht-action-group\` class name.
+Er moet lege ruimte zijn tussen de actions, zodat de actions duidelijk van elkaar te onderscheiden zijn, en het niet één grote action lijkt.`,
       },
     },
   },
@@ -73,8 +73,8 @@ export const DirectionColumn: Story = {
     docs: {
       description: {
         story: `
-Styling via the \`.utrecht-button-group\` and \`.utrecht-button-group--column\` modifier class names.
-Er moet lege ruimte zijn tussen de rijen, zodat de buttons duidelijk van elkaar te onderscheiden zijn, en het niet één grote button lijkt.`,
+Styling via the \`.utrecht-action-group\` and \`.utrecht-action-group--column\` modifier class names.
+Er moet lege ruimte zijn tussen de rijen, zodat de actions duidelijk van elkaar te onderscheiden zijn, en het niet één grote action lijkt.`,
       },
     },
   },

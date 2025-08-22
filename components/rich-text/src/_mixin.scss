@@ -23,6 +23,9 @@
   .utrecht-heading-1:has(+ .utrecht-button-group) {
     --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
+  .utrecht-heading-1:has(+ .utrecht-action-group) {
+    --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
   .utrecht-heading-1:has(+ .utrecht-data-list) {
     --utrecht-heading-1-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
@@ -80,6 +83,9 @@
     --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-heading-2:has(+ .utrecht-button-group) {
+    --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-2:has(+ .utrecht-action-group) {
     --utrecht-heading-2-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-heading-2:has(+ .utrecht-data-list) {
@@ -147,6 +153,9 @@
   .utrecht-heading-3:has(+ .utrecht-button-group) {
     --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-heading-3:has(+ .utrecht-action-group) {
+    --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-heading-3:has(+ .utrecht-data-list) {
     --utrecht-heading-3-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -210,6 +219,9 @@
     --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-heading-4:has(+ .utrecht-button-group) {
+    --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-4:has(+ .utrecht-action-group) {
     --utrecht-heading-4-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-heading-4:has(+ .utrecht-data-list) {
@@ -277,6 +289,9 @@
   .utrecht-heading-5:has(+ .utrecht-button-group) {
     --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-heading-5:has(+ .utrecht-action-group) {
+    --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-heading-5:has(+ .utrecht-data-list) {
     --utrecht-heading-5-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -337,6 +352,9 @@
     --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-heading-6:has(+ .utrecht-button-group) {
+    --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-heading-6:has(+ .utrecht-action-group) {
     --utrecht-heading-6-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-heading-6:has(+ .utrecht-data-list) {
@@ -416,6 +434,9 @@
   .utrecht-accordion:has(+ .utrecht-button-group) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-accordion:has(+ .utrecht-action-group) {
+    --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-accordion:has(+ .utrecht-data-list) {
     --utrecht-accordion-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -488,6 +509,9 @@
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-alert:has(+ .utrecht-button-group) {
+    --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-alert:has(+ .utrecht-action-group) {
     --utrecht-alert-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-alert:has(+ .utrecht-data-list) {
@@ -564,6 +588,9 @@
   .utrecht-badge-list:has(+ .utrecht-button-group) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-badge-list:has(+ .utrecht-action-group) {
+    --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-badge-list:has(+ .utrecht-data-list) {
     --utrecht-badge-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -630,6 +657,9 @@
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-blockquote:has(+ .utrecht-button-group) {
+    --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-blockquote:has(+ .utrecht-action-group) {
     --utrecht-blockquote-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-blockquote:has(+ .utrecht-data-list) {
@@ -704,6 +734,9 @@
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-breadcrumb-nav:has(+ .utrecht-button-group) {
+    --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-breadcrumb-nav:has(+ .utrecht-action-group) {
     --utrecht-breadcrumb-nav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-breadcrumb-nav:has(+ .utrecht-data-list) {
@@ -783,6 +816,9 @@
   .utrecht-button:has(+ .utrecht-button-group) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-button:has(+ .utrecht-action-group) {
+    --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-button:has(+ .utrecht-data-list) {
     --utrecht-button-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -851,6 +887,9 @@
   .utrecht-button-group:has(+ .utrecht-button-group) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
+  .utrecht-button-group:has(+ .utrecht-action-group) {
+    --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
   .utrecht-button-group:has(+ .utrecht-data-list) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -880,6 +919,77 @@
   }
   .utrecht-button-group:has(+ .utrecht-unordered-list) {
     --utrecht-button-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+}
+@mixin utrecht-action-group {
+  .utrecht-action-group:first-child {
+    --utrecht-action-group-margin-block-start: 0;
+  }
+  .utrecht-action-group:has(+ .utrecht-heading-2) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-heading-3) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-heading-4) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-heading-5) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-heading-6) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-accordion) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-alert) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-badge-list) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-blockquote) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-button) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-button-group) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-action-group) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-data-list) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-figure) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-img) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-link) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-ordered-list) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-paragraph) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-separator) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-sidenav) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-table) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-action-group:has(+ .utrecht-unordered-list) {
+    --utrecht-action-group-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
 }
 @mixin utrecht-data-list {
@@ -917,6 +1027,9 @@
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-data-list:has(+ .utrecht-button-group) {
+    --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-data-list:has(+ .utrecht-action-group) {
     --utrecht-data-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-data-list:has(+ .utrecht-data-list) {
@@ -990,6 +1103,9 @@
   .utrecht-figure:has(+ .utrecht-button-group) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-figure:has(+ .utrecht-action-group) {
+    --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-figure:has(+ .utrecht-data-list) {
     --utrecht-figure-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -1056,6 +1172,9 @@
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-form-field:has(+ .utrecht-button-group) {
+    --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
+  .utrecht-form-field:has(+ .utrecht-action-group) {
     --utrecht-form-field-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
   .utrecht-form-field:has(+ .utrecht-data-list) {
@@ -1183,6 +1302,9 @@
   .utrecht-img:has(+ .utrecht-button-group) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-img:has(+ .utrecht-action-group) {
+    --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-img:has(+ .utrecht-data-list) {
     --utrecht-img-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -1249,6 +1371,9 @@
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-button-group) {
+    --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-link:has(+ .utrecht-action-group) {
     --utrecht-link-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-link:has(+ .utrecht-data-list) {
@@ -1319,6 +1444,9 @@
   .utrecht-ordered-list:has(+ .utrecht-button-group) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-ordered-list:has(+ .utrecht-action-group) {
+    --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-ordered-list:has(+ .utrecht-data-list) {
     --utrecht-ordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
@@ -1387,6 +1515,9 @@
   .utrecht-pagination:has(+ .utrecht-button-group) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
+  .utrecht-pagination:has(+ .utrecht-action-group) {
+    --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
+  }
   .utrecht-pagination:has(+ .utrecht-data-list) {
     --utrecht-pagination-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
@@ -1450,6 +1581,9 @@
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-button-group) {
+    --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-paragraph:has(+ .utrecht-action-group) {
     --utrecht-paragraph-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-paragraph:has(+ .utrecht-data-list) {
@@ -1534,6 +1668,9 @@
   .utrecht-separator:has(+ .utrecht-button-group) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
+  .utrecht-separator:has(+ .utrecht-action-group) {
+    --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
   .utrecht-separator:has(+ .utrecht-data-list) {
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
@@ -1606,6 +1743,9 @@
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-sidenav:has(+ .utrecht-button-group) {
+    --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-sidenav:has(+ .utrecht-action-group) {
     --utrecht-sidenav-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
   .utrecht-sidenav:has(+ .utrecht-data-list) {
@@ -1696,6 +1836,9 @@
   .utrecht-table:has(+ .utrecht-button-group) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
+  .utrecht-table:has(+ .utrecht-action-group) {
+    --utrecht-table-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
   .utrecht-table:has(+ .utrecht-data-list) {
     --utrecht-table-margin-block-end: var(--utrecht-rich-text-acquaintance-margin-block-end);
   }
@@ -1784,6 +1927,9 @@
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-button-group) {
+    --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
+  }
+  .utrecht-unordered-list:has(+ .utrecht-action-group) {
     --utrecht-unordered-list-margin-block-end: var(--utrecht-rich-text-friend-margin-block-end);
   }
   .utrecht-unordered-list:has(+ .utrecht-data-list) {

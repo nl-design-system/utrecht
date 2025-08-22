@@ -1,19 +1,19 @@
 import { Meta, StoryObj } from '@storybook/react';
-import readme from '@utrecht/button-group-css/README.md?raw';
-import tokensDefinition from '@utrecht/button-group-css/dist/tokens.mjs';
-import { Button, ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
+import readme from '@utrecht/action-group-css/README.md?raw';
+import tokensDefinition from '@utrecht/action-group-css/dist/tokens.mjs';
+import { ActionGroup, Button } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
 
 const meta = {
-  title: 'React Component/Button group',
-  id: 'react-button-group',
-  component: ButtonGroup,
+  title: 'React Component/Action group',
+  id: 'react-action-group',
+  component: ActionGroup,
   args: {},
   argTypes: {
     direction: {
-      description: 'Layout of the button group',
+      description: 'Layout of the action group',
       control: 'select',
       options: {
         '': undefined,
@@ -23,7 +23,7 @@ const meta = {
     },
   },
   parameters: {
-    tokensPrefix: 'utrecht-button-group',
+    tokensPrefix: 'utrecht-action-group',
     tokens,
     tokensDefinition,
     docs: {
@@ -32,7 +32,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof ButtonGroup>;
+} satisfies Meta<typeof ActionGroup>;
 
 export default meta;
 

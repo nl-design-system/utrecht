@@ -1,26 +1,26 @@
 import { CommonModule } from '@angular/common';
 import { Meta, moduleMetadata, Story } from '@storybook/angular';
-import { UtrechtButtonAttr, UtrechtButtonGroup } from '@utrecht/component-library-angular';
+import { UtrechtActionGroup, UtrechtButtonAttr } from '@utrecht/component-library-angular';
 
 export default {
   title: 'Angular Component/Button Group',
-  id: 'angular-component-button-group',
+  id: 'angular-component-action-group',
   decorators: [
     moduleMetadata({
-      declarations: [UtrechtButtonGroup, UtrechtButtonAttr],
+      declarations: [UtrechtActionGroup, UtrechtButtonAttr],
       imports: [CommonModule],
     }),
   ],
-  component: UtrechtButtonGroup,
+  component: UtrechtActionGroup,
 } as Meta;
 
 const Template: Story = (args) => ({
   props: args,
-  template: `<utrecht-button-group>
+  template: `<utrecht-action-group>
   <button appearance="primary-action-button" utrecht-button>Save and continue</button>
   <button appearance="secondary-action-button" utrecht-button>Back</button>
-  </utrecht-button-group>`,
-  component: UtrechtButtonGroup,
+  </utrecht-action-group>`,
+  component: UtrechtActionGroup,
 });
 
 export const Default = Template.bind({});
