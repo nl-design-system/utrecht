@@ -1,5 +1,23 @@
 # @utrecht/component-library-css
 
+## 7.5.0
+
+### Minor Changes
+
+- 7fc678f: Button Group has component is now deprecated, because it has a new name: Action Group. Please migrate to the new Action Group component, which apart from the name is identical.
+
+  The Button Group component remains available for some time to give you opportunity to migrate your code, but it will be removed in an upcoming major release.
+
+### Patch Changes
+
+- Updated dependencies [7fc678f]
+- Updated dependencies [7fc678f]
+- Updated dependencies [81cf760]
+  - @utrecht/button-group-css@1.5.0
+  - @utrecht/rich-text-css@1.4.0
+  - @utrecht/action-group-css@1.0.0
+  - @utrecht/breadcrumb-nav-css@1.5.1
+
 ## 7.4.2
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/breadcrumb-nav-css
 
+## 1.5.1
+
+### Patch Changes
+
+- 81cf760: Add utrecht-breadcrumb-nav-link-icon-size to known tokens
+
 ## 1.5.0
 
 ### Minor Changes
