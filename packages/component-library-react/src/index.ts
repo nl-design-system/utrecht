@@ -13,6 +13,8 @@ export type {
 
 export { Accordion, AccordionProvider, AccordionSection } from './Accordion';
 export type { AlertProps, AlertType } from './Alert';
+export type { ActionGroupProps } from './ActionGroup';
+export { ActionGroup } from './ActionGroup';
 export { Alert } from './Alert';
 export type { AlertDialogProps } from './AlertDialog';
 export { AlertDialog } from './AlertDialog';

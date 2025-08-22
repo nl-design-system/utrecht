@@ -1,3 +1,4 @@
+export { default as ActionGroup } from './ActionGroup.vue';
 export { default as AlertDialog } from './AlertDialog.vue';
 export { default as Article } from './Article.vue';
 export { default as BadgeCounter } from './BadgeCounter.vue';

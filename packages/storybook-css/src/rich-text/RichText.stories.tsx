@@ -43,6 +43,11 @@ export const Accordion: Story = {
     component: 'utrecht-accordion',
   },
 };
+export const ActionGroupo: Story = {
+  args: {
+    component: 'utrecht-action-group',
+  },
+};
 export const Alert: Story = {
   args: {
     component: 'utrecht-alert',

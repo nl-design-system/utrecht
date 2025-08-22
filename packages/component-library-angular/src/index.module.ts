@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { UtrechtActionGroup } from './action-group/component';
 import { UtrechtArticle } from './article/component';
 import { UtrechtBadgeStatus } from './badge-status/component';
 import { UtrechtButtonAttr } from './button/component';
@@ -42,6 +43,7 @@ import { UtrechtUnorderedListAttr } from './unordered-list/component';
 import { UtrechtUnorderedListItemAttr } from './unordered-list/item.component';
 
 const components = [
+  UtrechtActionGroup,
   UtrechtArticle,
   UtrechtBadgeStatus,
   UtrechtButtonAttr,
