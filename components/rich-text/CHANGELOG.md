@@ -1,5 +1,13 @@
 # @utrecht/rich-text-css
 
+## 1.4.0
+
+### Minor Changes
+
+- 7fc678f: Button Group has component is now deprecated, because it has a new name: Action Group. Please migrate to the new Action Group component, which apart from the name is identical.
+
+  The Button Group component remains available for some time to give you opportunity to migrate your code, but it will be removed in an upcoming major release.
+
 ## 1.3.1
 
 ### Patch Changes
