@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/action-group-css/README.md?raw';
 import tokensDefinition from '@utrecht/action-group-css/src/tokens.json';
-import { ActionGroup, Button } from '@utrecht/component-library-react';
+import { ActionGroup, Button, LinkButton } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -52,7 +52,7 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Row: Story = {
   parameters: {
     docs: {
       description: {
@@ -64,9 +64,13 @@ Er moet lege ruimte zijn tussen de actions, zodat de actions duidelijk van elkaa
   },
 };
 
-export const DirectionColumn: Story = {
+export const Column: Story = {
   args: {
-    ...Default.args,
+    children: [
+      <Button appearance="primary-action-button">Next step</Button>,
+      <LinkButton inline>Save and continue an other time</LinkButton>,
+      <LinkButton inline>Stop with this form</LinkButton>,
+    ],
     direction: 'column',
   },
   parameters: {
@@ -74,6 +78,22 @@ export const DirectionColumn: Story = {
       description: {
         story: `
 Styling via the \`.utrecht-action-group\` and \`.utrecht-action-group--column\` modifier class names.
+Er moet lege ruimte zijn tussen de rijen, zodat de actions duidelijk van elkaar te onderscheiden zijn, en het niet één grote action lijkt.`,
+      },
+    },
+  },
+};
+
+export const ColumnStretch: Story = {
+  args: {
+    ...Row.args,
+    direction: 'column-stretch',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `
+Styling via the \`.utrecht-action-group\` and \`.utrecht-action-group--column-stretch\` modifier class names.
 Er moet lege ruimte zijn tussen de rijen, zodat de actions duidelijk van elkaar te onderscheiden zijn, en het niet één grote action lijkt.`,
       },
     },

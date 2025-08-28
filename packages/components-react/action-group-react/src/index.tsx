@@ -12,7 +12,7 @@ const hasManyElements = (children: ReactNode | ReactNode[]) =>
   children.reduce((count: number, item): number => (isValidElement(item) ? count + 1 : count), 0) >= 2;
 
 export interface ActionGroupProps extends HTMLAttributes<HTMLParagraphElement> {
-  direction?: string | 'column' | 'row';
+  direction?: string | 'column' | 'row' | 'column-stretch';
 }
 
 export const ActionGroup = forwardRef(
@@ -29,6 +29,7 @@ export const ActionGroup = forwardRef(
         {
           'utrecht-action-group--column': direction === 'column',
           'utrecht-action-group--row': direction === 'row',
+          'utrecht-action-group--column-stretch': direction === 'column-stretch',
         },
         className,
       )}
