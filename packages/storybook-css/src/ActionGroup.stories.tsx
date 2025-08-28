@@ -68,7 +68,7 @@ export const Column: Story = {
   args: {
     children: [
       <Button appearance="primary-action-button">Next step</Button>,
-      <LinkButton inline>Save and continue an other time</LinkButton>,
+      <LinkButton inline>Save and continue another time</LinkButton>,
       <LinkButton inline>Stop with this form</LinkButton>,
     ],
     direction: 'column',
