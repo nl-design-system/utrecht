@@ -32,6 +32,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: ['Angular Component', ['README', 'Changelog']],
       },
     },

@@ -47,6 +47,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: ['Vue.js Component', ['README', 'Changelog']],
       },
     },

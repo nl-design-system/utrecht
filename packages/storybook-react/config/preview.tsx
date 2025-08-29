@@ -46,6 +46,7 @@ const preview: Preview = {
     },
     options: {
       storySort: {
+        method: 'alphabetical',
         order: [
           'React Component',
           ['README', 'README (Nederlands)', 'Changelog', 'Developing components', 'Testing components'],
