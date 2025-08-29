@@ -3,7 +3,7 @@ import { Meta, moduleMetadata, Story } from '@storybook/angular';
 import { UtrechtActionGroup, UtrechtButtonAttr } from '@utrecht/component-library-angular';
 
 export default {
-  title: 'Angular Component/Button Group',
+  title: 'Angular Component/Action Group',
   id: 'angular-component-action-group',
   decorators: [
     moduleMetadata({
