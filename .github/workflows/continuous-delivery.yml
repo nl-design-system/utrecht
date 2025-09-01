@@ -116,14 +116,14 @@ jobs:
           path: packages/design-system-website/dist/
 
       - name: "Retain build artifact: website"
-        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: website
           path: packages/design-system-website/dist/
           retention-days: 1
 
       - name: "Retain build artifact: storybook"
-        uses: actions/upload-artifact@65c4c4a1ddee5b72f698fdd19549f0f0fb45cf08 # v4.6.0
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: storybook
           path: packages/storybook/dist/
