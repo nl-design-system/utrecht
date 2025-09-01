@@ -61,6 +61,7 @@ const preview: Preview = {
 
     options: {
       storySort: {
+        method: 'alphabetical',
         order: ['CSS Component', ['README', 'Changelog']],
       },
     },
