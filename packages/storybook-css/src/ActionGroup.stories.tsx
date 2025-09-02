@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react';
 import readme from '@utrecht/action-group-css/README.md?raw';
 import tokensDefinition from '@utrecht/action-group-css/src/tokens.json';
-import { ActionGroup, Button } from '@utrecht/component-library-react';
+import { ActionGroup, Button, LinkButton } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -13,7 +13,7 @@ const meta = {
   args: {
     children: [
       <Button appearance="primary-action-button">Save and continue</Button>,
-      <Button appearance="secondary-action-button">Back</Button>,
+      <LinkButton inline>Back</LinkButton>,
     ],
   },
   argTypes: {
@@ -21,9 +21,9 @@ const meta = {
       description: 'Layout of the action group',
       control: 'select',
       options: {
-        '': undefined,
-        column: 'column',
         row: 'row',
+        column: 'column',
+        ['column-stretched']: 'column-stretched',
       },
     },
   },
@@ -52,7 +52,10 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Row: Story = {
+  args: {
+    direction: 'row',
+  },
   parameters: {
     docs: {
       description: {
@@ -64,9 +67,13 @@ Er moet lege ruimte zijn tussen de actions, zodat de actions duidelijk van elkaa
   },
 };
 
-export const DirectionColumn: Story = {
+export const Column: Story = {
   args: {
-    ...Default.args,
+    children: [
+      <Button appearance="primary-action-button">Next step</Button>,
+      <LinkButton inline>Save and continue another time</LinkButton>,
+      <LinkButton inline>Stop with this form</LinkButton>,
+    ],
     direction: 'column',
   },
   parameters: {
@@ -74,6 +81,21 @@ export const DirectionColumn: Story = {
       description: {
         story: `
 Styling via the \`.utrecht-action-group\` and \`.utrecht-action-group--column\` modifier class names.
+Er moet lege ruimte zijn tussen de rijen, zodat de actions duidelijk van elkaar te onderscheiden zijn, en het niet één grote action lijkt.`,
+      },
+    },
+  },
+};
+
+export const ColumnStretch: Story = {
+  args: {
+    direction: 'column-stretch',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: `
+Styling via the \`.utrecht-action-group\` and \`.utrecht-action-group--column-stretch\` modifier class names.
 Er moet lege ruimte zijn tussen de rijen, zodat de actions duidelijk van elkaar te onderscheiden zijn, en het niet één grote action lijkt.`,
       },
     },

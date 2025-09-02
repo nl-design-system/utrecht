@@ -28,5 +28,14 @@
 
 @mixin utrecht-action-group--column {
   flex-direction: column;
-  gap: var(--utrecht-action-group-block-gap, 1em);
+  gap: var(--utrecht-button-group-block-gap, 1em);
+}
+
+@mixin utrecht-action-group--column-stretch {
+  @include utrecht-action-group--column;
+
+  --utrecht-button-max-inline-size: none;
+
+  align-items: stretch;
+  inline-size: fit-content;
 }
