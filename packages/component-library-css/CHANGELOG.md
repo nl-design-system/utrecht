@@ -1,5 +1,12 @@
 # @utrecht/component-library-css
 
+## 7.5.1
+
+### Patch Changes
+
+- Updated dependencies [41a5171]
+  - @utrecht/action-group-css@1.1.0
+
 ## 7.5.0
 
 ### Minor Changes

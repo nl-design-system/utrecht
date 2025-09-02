@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 10.3.1
+
+### Patch Changes
+
+- Updated dependencies [41a5171]
+  - @utrecht/action-group-react@1.1.0
+
 ## 10.3.0
 
 ### Minor Changes
