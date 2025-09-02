@@ -1,5 +1,17 @@
 # @utrecht/action-group-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 41a5171: Add `column-stretch` value for `direction` property for vertically stacked buttons.
+  Set default value for `direction` property to `row`.
+
+### Patch Changes
+
+- Updated dependencies [41a5171]
+  - @utrecht/action-group-css@1.1.0
+
 ## 1.0.0
 
 ### Major Changes
