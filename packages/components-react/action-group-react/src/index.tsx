@@ -17,7 +17,7 @@ export interface ActionGroupProps extends HTMLAttributes<HTMLParagraphElement> {
 
 export const ActionGroup = forwardRef(
   (
-    { children, className, direction, ...restProps }: PropsWithChildren<ActionGroupProps>,
+    { children, className, direction = 'row', ...restProps }: PropsWithChildren<ActionGroupProps>,
     ref: ForwardedRef<HTMLParagraphElement>,
   ) => (
     <p

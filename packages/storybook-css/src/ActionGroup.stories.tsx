@@ -13,7 +13,7 @@ const meta = {
   args: {
     children: [
       <Button appearance="primary-action-button">Save and continue</Button>,
-      <Button appearance="secondary-action-button">Back</Button>,
+      <LinkButton inline>Back</LinkButton>,
     ],
   },
   argTypes: {
@@ -21,9 +21,9 @@ const meta = {
       description: 'Layout of the action group',
       control: 'select',
       options: {
-        '': undefined,
-        column: 'column',
         row: 'row',
+        column: 'column',
+        ['column-stretched']: 'column-stretched',
       },
     },
   },
@@ -53,6 +53,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Row: Story = {
+  args: {
+    direction: 'row',
+  },
   parameters: {
     docs: {
       description: {
@@ -86,7 +89,6 @@ Er moet lege ruimte zijn tussen de rijen, zodat de actions duidelijk van elkaar 
 
 export const ColumnStretch: Story = {
   args: {
-    ...Row.args,
     direction: 'column-stretch',
   },
   parameters: {
