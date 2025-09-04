@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { LinkSocial, ListSocial, ListSocialItem } from '@utrecht/component-library-vue';
 import readme from '@utrecht/link-social-css/README.md?raw';
 import tokens from '@utrecht/link-social-css/src/tokens.json';

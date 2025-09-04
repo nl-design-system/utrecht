@@ -1,8 +1,8 @@
-import { action } from '@storybook/addon-actions';
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { Select } from '@utrecht/component-library-vue';
 import readme from '@utrecht/select-css/README.md?raw';
 import tokens from '@utrecht/select-css/src/tokens.json';
+import { action } from 'storybook/actions';
 import { createStory } from './util';
 
 const meta = {

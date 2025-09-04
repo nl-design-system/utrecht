@@ -1,6 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import tokens from '@utrecht/button-css/src/tokens.json';
 import { Button } from '@utrecht/component-library-vue';
+import { fn } from 'storybook/test';
 import { createStory } from './util';
 
 const meta = {
@@ -17,9 +18,10 @@ const meta = {
       type: 'string',
       options: ['button', 'submit', 'reset'],
     },
-    onClick: { action: 'clicked' },
   },
-  args: {},
+  args: {
+    onClick: fn(),
+  },
   parameters: {
     status: {
       type: 'ALPHA',

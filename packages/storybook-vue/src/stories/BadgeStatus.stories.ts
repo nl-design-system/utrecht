@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import readme from '@utrecht/badge-status-css/README.md?raw';
 import tokens from '@utrecht/badge-status-css/src/tokens.json';
 import { BadgeStatus } from '@utrecht/component-library-vue';

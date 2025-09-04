@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { FormLabel } from '@utrecht/component-library-vue';
 import readme from '@utrecht/form-label-css/README.md?raw';
 import tokens from '@utrecht/form-label-css/src/tokens.json';

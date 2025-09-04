@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { Image } from '@utrecht/component-library-vue';
 import readme from '@utrecht/form-field-css/README.md?raw';
 import tokens from '@utrecht/form-field-css/src/tokens.json';

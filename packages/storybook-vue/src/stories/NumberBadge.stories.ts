@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { NumberBadge } from '@utrecht/component-library-vue';
 import readme from '@utrecht/number-badge-css/README.md?raw';
 import tokens from '@utrecht/number-badge-css/src/tokens.json';

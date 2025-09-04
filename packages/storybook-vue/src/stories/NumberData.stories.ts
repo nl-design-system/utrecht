@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { NumberData } from '@utrecht/component-library-vue';
 import readme from '@utrecht/number-data-css/README.md?raw';
 import tokens from '@utrecht/number-data-css/src/tokens.json';

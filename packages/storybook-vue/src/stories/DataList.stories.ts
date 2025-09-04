@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { DataList, DataListItem, DataListKey, DataListValue } from '@utrecht/component-library-vue';
 import readme from '@utrecht/data-list-css/README.md?raw';
 import tokens from '@utrecht/data-list-css/src/tokens.json';

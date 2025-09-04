@@ -1,4 +1,4 @@
-import { ArgsTable, Description, Primary, Stories, Subtitle, Title } from '@storybook/addon-docs';
+import { Controls, Description, Primary, Stories, Subtitle, Title } from '@storybook/addon-docs/blocks';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { ComponentTokensSection } from '@utrecht/documentation/components/ComponentTokensSection.jsx';
 import React from 'react';
@@ -65,7 +65,7 @@ export const createStory = (meta, story) => {
             <Subtitle />
             <Description />
             <Primary />
-            <ArgsTable />
+            <Controls />
             <Stories />
             {meta.parameters?.tokenPrefix && meta.parameters?.tokens ? (
               <ComponentTokensSection

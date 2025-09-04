@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { Separator } from '@utrecht/component-library-vue';
 import readme from '@utrecht/separator-css/README.md?raw';
 import tokens from '@utrecht/separator-css/src/tokens.json';

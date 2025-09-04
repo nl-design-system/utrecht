@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import readme from '@utrecht/breadcrumb-nav-css/README.md?raw';
 import tokens from '@utrecht/breadcrumb-nav-css/src/tokens.json';
 import { BreadcrumbNav, BreadcrumbNavLink, Heading } from '@utrecht/component-library-vue';
