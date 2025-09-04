@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import readme from '@utrecht/code-block-css/README.md?raw';
 import tokens from '@utrecht/code-block-css/src/tokens.json';
 import { CodeBlock } from '@utrecht/component-library-vue';

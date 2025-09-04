@@ -1,23 +1,25 @@
-import { action } from '@storybook/addon-actions';
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { Textbox } from '@utrecht/component-library-vue';
 import readme from '@utrecht/textbox-css/README.md?raw';
 import tokens from '@utrecht/textbox-css/src/tokens.json';
+import { action } from 'storybook/actions';
 import { createStory } from './util';
 
-const meta = {
+// FIXME: the following disabled props are not supported in the Textbox component yet
+// FIXME also, this story was not working on the live site, because of that
+const meta: Meta<typeof Textbox> = {
   id: 'vue-textbox',
   title: 'Vue.js Component/Textbox',
   component: Textbox,
   tags: ['autodocs'],
   argTypes: {
-    disabled: {
-      name: 'disabled',
-      type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: false },
-      },
-    },
+    // disabled: {
+    //   name: 'disabled',
+    //   type: { name: 'boolean', required: false },
+    //   table: {
+    //     defaultValue: { summary: false },
+    //   },
+    // },
     invalid: {
       name: 'invalid',
       type: { name: 'boolean', required: false },
@@ -25,20 +27,20 @@ const meta = {
         defaultValue: { summary: false },
       },
     },
-    required: {
-      name: 'required',
-      type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: false },
-      },
-    },
-    readonly: {
-      name: 'readonly',
-      type: { name: 'boolean', required: false },
-      table: {
-        defaultValue: { summary: false },
-      },
-    },
+    // required: {
+    //   name: 'required',
+    //   type: { name: 'boolean', required: false },
+    //   table: {
+    //     defaultValue: { summary: false },
+    //   },
+    // },
+    // readonly: {
+    //   name: 'readonly',
+    //   type: { name: 'boolean', required: false },
+    //   table: {
+    //     defaultValue: { summary: false },
+    //   },
+    // },
     modelValue: {
       name: 'modelValue',
       type: { name: 'string', required: false },
@@ -46,20 +48,20 @@ const meta = {
         defaultValue: { summary: '' },
       },
     },
-    type: {
-      name: 'type',
-      type: { name: 'select', required: false },
-      options: ['text', 'email', 'password', 'number', 'tel', 'url'],
-      table: {
-        defaultValue: { summary: 'text' },
-      },
-    },
-    updateModelValue: {
-      action: 'updateModelValue',
-    },
-    updateInput: {
-      action: 'updateInput',
-    },
+    // type: {
+    //   name: 'type',
+    //   type: { name: 'select', required: false },
+    //   options: ['text', 'email', 'password', 'number', 'tel', 'url'],
+    //   table: {
+    //     defaultValue: { summary: 'text' },
+    //   },
+    // },
+    // updateModelValue: {
+    //   action: 'updateModelValue',
+    // },
+    // updateInput: {
+    //   action: 'updateInput',
+    // },
   },
   args: {},
   render: () => ({
@@ -83,7 +85,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Textbox>;
+};
 
 export default meta;
 

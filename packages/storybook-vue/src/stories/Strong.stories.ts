@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { Paragraph, Strong } from '@utrecht/component-library-vue';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/emphasis-css/README.md?raw';

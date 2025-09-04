@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { SkipLink } from '@utrecht/component-library-vue';
 import readme from '@utrecht/skip-link-css/README.md?raw';
 import tokens from '@utrecht/skip-link-css/src/tokens.json';

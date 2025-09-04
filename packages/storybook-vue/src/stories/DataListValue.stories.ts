@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/vue3';
+import { Meta, StoryObj } from '@storybook/vue3-vite';
 import { DataList, DataListItem, DataListValue } from '@utrecht/component-library-vue';
 import { URLData } from '@utrecht/component-library-vue';
 import { createStory } from './util';

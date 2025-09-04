@@ -1,8 +1,8 @@
-import { action } from '@storybook/addon-actions';
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import readme from '@utrecht/checkbox-css/README.md?raw';
 import tokens from '@utrecht/checkbox-css/src/tokens.json';
 import { Checkbox } from '@utrecht/component-library-vue';
+import { action } from 'storybook/actions';
 import { createStory } from './util';
 
 const meta = {

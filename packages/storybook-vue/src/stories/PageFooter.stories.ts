@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { PageFooter, Paragraph } from '@utrecht/component-library-vue';
 import readme from '@utrecht/page-footer-css/README.md?raw';
 import tokens from '@utrecht/page-footer-css/src/tokens.json';

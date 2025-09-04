@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/vue3';
+import { Meta, StoryObj } from '@storybook/vue3-vite';
 import { AlertDialog, Button, ButtonGroup, Paragraph } from '@utrecht/component-library-vue';
 import { ref } from 'vue';
 import { createStory } from './util';

@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import { Heading6 } from '@utrecht/component-library-vue';
 import tokens from '@utrecht/heading-6-css/src/tokens.json';
 import { createStory } from './util';

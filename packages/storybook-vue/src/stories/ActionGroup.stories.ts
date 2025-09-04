@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/vue3';
+import type { Meta, StoryObj } from '@storybook/vue3-vite';
 import readme from '@utrecht/action-group-css/README.md?raw';
 import tokens from '@utrecht/action-group-css/src/tokens.json';
 import { ActionGroup, Button } from '@utrecht/component-library-vue';

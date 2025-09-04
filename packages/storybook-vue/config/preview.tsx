@@ -1,5 +1,5 @@
 import { withTests } from '@storybook/addon-jest';
-import { Preview } from '@storybook/vue3';
+import { Preview } from '@storybook/vue3-vite';
 import { Document } from '@utrecht/component-library-vue';
 import results from '@utrecht/component-library-vue/dist/.jest-test-results.json';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
@@ -25,7 +25,6 @@ const preview: Preview = {
   parameters: {
     ...addonStatus,
     ...addonViewport,
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -33,6 +32,8 @@ const preview: Preview = {
       },
     },
     docs: {
+      // Use our custom document component for docs
+      codePanel: true,
       // Show code by default.
       // Stories without concise code snippets can hide the code at Story level.
       source: {
