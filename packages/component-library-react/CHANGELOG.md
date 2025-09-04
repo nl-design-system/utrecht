@@ -1,5 +1,11 @@
 # @utrecht/component-library-react
 
+## 10.3.2
+
+### Patch Changes
+
+- @utrecht/action-group-react@1.1.1
+
 ## 10.3.1
 
 ### Patch Changes
