@@ -7,8 +7,8 @@ Breaking changes:
 
 The Action Group `inline-gap` and `block-gap` tokens have been renamed to follow NL Design System naming conventions:
 
-- `inline-gap` to `column-gap`
-- `block-gap` to `row-gap`
+- `inline-gap` to `row-gap`
+- `block-gap` to `column-gap`
 
 These new names are consistent with the existing design tokens.
 
