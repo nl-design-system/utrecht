@@ -1,5 +1,12 @@
 # @utrecht/component-library-design-tokens
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies [4ddecce]
+  - @utrecht/action-group-css@2.0.0
+
 ## 1.1.1
 
 ### Patch Changes
