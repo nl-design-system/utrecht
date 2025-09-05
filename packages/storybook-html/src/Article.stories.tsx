@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import readme from '@utrecht/article-css/README.md?raw';
 import tokensDefinition from '@utrecht/article-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
