@@ -1,10 +1,10 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import readme from '@utrecht/badge-list-css/README.md?raw';
 import tokensDefinition from '@utrecht/badge-list-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtBadgeData, UtrechtBadgeList } from '@utrecht/web-component-library-react';
+import { UtrechtBadgeList, UtrechtDataBadge } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -46,7 +46,7 @@ export const Default: Story = {
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua'
         .split(/[\s.,()&;]+/g)
         .filter(Boolean)
-        .map((item, index) => <UtrechtBadgeData key={index}>{item}</UtrechtBadgeData>),
+        .map((item, index) => <UtrechtDataBadge key={index}>{item}</UtrechtDataBadge>),
   },
 };
 

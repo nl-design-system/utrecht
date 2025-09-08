@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/form-field-description-css/README.md?raw';
 import tokensDefinition from '@utrecht/form-field-description-css/src/tokens.json';

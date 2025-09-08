@@ -1,11 +1,11 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/textarea-css/README.md?raw';
 import tokensDefinition from '@utrecht/textarea-css/src/tokens.json';
 import { UtrechtTextarea } from '@utrecht/web-component-library-react';
-import { React } from 'react';
+import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 interface TextareaStoryProps {
