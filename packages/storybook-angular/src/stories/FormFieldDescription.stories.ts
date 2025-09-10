@@ -6,7 +6,11 @@ import {
   UtrechtFormLabelAttr,
 } from '@utrecht/component-library-angular';
 
-export default {
+interface UtrechtFormFieldDescriptionProps extends UtrechtFormFieldDescription {
+  textContent?: string;
+}
+
+const meta: Meta<UtrechtFormFieldDescriptionProps> = {
   title: 'Angular Component/Form field description',
   id: 'angular-component-form-field-description',
   argTypes: {
@@ -15,7 +19,6 @@ export default {
       description: 'indicates if the related form field is invalid',
       defaultValue: false,
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -24,7 +27,6 @@ export default {
       description: 'indicates if the related form field is valid',
       defaultValue: false,
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -33,7 +35,6 @@ export default {
       description: 'indicates if the description contains a warning',
       defaultValue: false,
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -42,7 +43,6 @@ export default {
       description: 'Description',
       defaultValue: '',
       table: {
-        defaultValue: { summary: '' },
         category: 'Story',
       },
     },
@@ -54,13 +54,11 @@ export default {
     }),
   ],
   component: UtrechtFormFieldDescription,
-} as Meta;
+};
 
-interface StoryArgs {
-  textContent: string;
-}
+export default meta;
 
-type Story = StoryObj<UtrechtFormFieldDescription & StoryArgs>;
+type Story = StoryObj<UtrechtFormFieldDescriptionProps>;
 
 const Template: Story = {
   render: (args) => ({

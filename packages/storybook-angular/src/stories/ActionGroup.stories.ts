@@ -1,8 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Meta, moduleMetadata, Story } from '@storybook/angular';
+import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { UtrechtActionGroup, UtrechtButtonAttr } from '@utrecht/component-library-angular';
 
-export default {
+const meta: Meta<UtrechtActionGroup> = {
   title: 'Angular Component/Action Group',
   id: 'angular-component-action-group',
   decorators: [
@@ -12,17 +12,18 @@ export default {
     }),
   ],
   component: UtrechtActionGroup,
-} as Meta;
+};
 
-const Template: Story = (args) => ({
-  props: args,
-  template: `<utrecht-action-group>
-  <button appearance="primary-action-button" utrecht-button>Save and continue</button>
-  <button appearance="secondary-action-button" utrecht-button>Back</button>
-  </utrecht-action-group>`,
-  component: UtrechtActionGroup,
-});
+export default meta;
 
-export const Default = Template.bind({});
-Default.parameters = { angularLegacyRendering: true };
-Default.args = {};
+type Story = StoryObj<UtrechtActionGroup>;
+
+export const Default: Story = {
+  render: (args) => ({
+    props: args,
+    template: `<utrecht-action-group>
+    <button appearance="primary-action-button" utrecht-button>Save and continue</button>
+    <button appearance="secondary-action-button" utrecht-button>Back</button>
+    </utrecht-action-group>`,
+  }),
+};

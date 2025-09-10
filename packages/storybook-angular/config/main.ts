@@ -1,30 +1,28 @@
 import type { StorybookConfig } from '@storybook/angular';
-import path from 'path';
+import { dirname, join, resolve } from 'node:path';
+
+// Utility to resolve the absolute path of a package
+// https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
 const config: StorybookConfig = {
-  stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
-  addons: [
-    '@storybook/addon-a11y',
-    '@storybook/addon-actions',
-    '@storybook/addon-controls',
-    '@storybook/addon-docs',
-    '@storybook/addon-interactions',
-    '@storybook/addon-links',
-    '@storybook/addon-measure',
-    '@storybook/addon-outline',
-    'storybook-addon-pseudo-states',
-    '@storybook/addon-toolbars',
-    '@storybook/addon-viewport',
-    '@storybook/preset-scss',
-    // Somehow `storybook-addon-status` breaks the Angular Storybook, need to investigate further
-    // '@etchteam/storybook-addon-status/register',
-    '@storybook/addon-jest',
-  ],
-  features: {
-    buildStoriesJson: true,
+  stories: ['../src/**/*.@(mdx|stories.@(js|jsx|ts|tsx))'],
+  docs: {
+    autodocs: true,
   },
+  addons: [
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@etchteam/storybook-addon-status'),
+    getAbsolutePath('@storybook/preset-scss'),
+    getAbsolutePath('@storybook/addon-jest'),
+  ],
+
+  features: {},
+
   framework: {
-    name: '@storybook/angular',
+    name: getAbsolutePath('@storybook/angular'),
     options: {},
   },
   core: {
@@ -37,14 +35,14 @@ const config: StorybookConfig = {
       ...config.resolve,
       alias: {
         ...config.resolve?.alias,
-        '~@utrecht': path.resolve(__dirname, '../node_modules/@utrecht'),
+        '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
       },
     };
 
     config.module?.rules?.push({
       test: /\.scss$/,
       use: ['style-loader', 'css-loader', 'sass-loader'],
-      include: path.resolve(__dirname, '../node_modules/@utrecht'),
+      include: resolve(__dirname, '../node_modules/@utrecht'),
     });
 
     return {

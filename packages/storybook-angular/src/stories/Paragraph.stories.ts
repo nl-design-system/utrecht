@@ -11,7 +11,6 @@ const paragraphMeta: Meta<UtrechtParagraph> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
     small: {
@@ -19,7 +18,6 @@ const paragraphMeta: Meta<UtrechtParagraph> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
   },

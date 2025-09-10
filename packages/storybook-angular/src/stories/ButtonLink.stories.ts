@@ -17,7 +17,6 @@ const buttonLinkMeta: Meta<ButtonLinkType> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
     href: {
@@ -25,7 +24,6 @@ const buttonLinkMeta: Meta<ButtonLinkType> = {
       type: { name: 'string', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: '' },
       },
     },
     rel: {
@@ -33,7 +31,6 @@ const buttonLinkMeta: Meta<ButtonLinkType> = {
       type: { name: 'string', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: '' },
       },
     },
     appearance: {
@@ -41,7 +38,6 @@ const buttonLinkMeta: Meta<ButtonLinkType> = {
       control: { type: 'select' },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
   },

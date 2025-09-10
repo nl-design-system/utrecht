@@ -16,7 +16,6 @@ const preview: Preview = {
     withTests({ results }),
   ],
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,

@@ -1,7 +1,13 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { UtrechtRadioButtonAttr } from '@utrecht/component-library-angular';
 
-const radioMeta: Meta<UtrechtRadioButtonAttr & { checked?: boolean; value?: string; required?: boolean }> = {
+interface UtrechtRadioButtonProps extends UtrechtRadioButtonAttr {
+  checked?: boolean;
+  value?: string;
+  required?: boolean;
+}
+
+const radioMeta: Meta<UtrechtRadioButtonProps> = {
   title: 'Angular Component/Radio Button',
   id: 'angular-radio-button',
   component: UtrechtRadioButtonAttr,
@@ -11,7 +17,6 @@ const radioMeta: Meta<UtrechtRadioButtonAttr & { checked?: boolean; value?: stri
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     disabled: {
@@ -19,7 +24,6 @@ const radioMeta: Meta<UtrechtRadioButtonAttr & { checked?: boolean; value?: stri
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     value: {
@@ -27,7 +31,6 @@ const radioMeta: Meta<UtrechtRadioButtonAttr & { checked?: boolean; value?: stri
       type: { name: 'string', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     invalid: {
@@ -35,7 +38,6 @@ const radioMeta: Meta<UtrechtRadioButtonAttr & { checked?: boolean; value?: stri
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
   },
@@ -43,7 +45,7 @@ const radioMeta: Meta<UtrechtRadioButtonAttr & { checked?: boolean; value?: stri
 
 export default radioMeta;
 
-type Story = StoryObj<UtrechtRadioButtonAttr & { checked?: boolean; value?: string; required: boolean }>;
+type Story = StoryObj<UtrechtRadioButtonProps>;
 
 const Template: Story = {
   render: (args) => ({
