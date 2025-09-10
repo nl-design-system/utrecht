@@ -1,13 +1,11 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { UtrechtTextareaAttr } from '@utrecht/component-library-angular';
 
-interface RelevantHTMLAttributes {
-  dir?: string;
-  required?: boolean;
+interface UtrechtTextareaProps extends UtrechtTextareaAttr {
   value?: string;
 }
 
-const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
+const radioMeta: Meta<UtrechtTextareaProps> = {
   title: 'Angular Component/Textarea',
   id: 'angular-textarea',
   component: UtrechtTextareaAttr,
@@ -19,7 +17,6 @@ const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
       options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     disabled: {
@@ -27,7 +24,6 @@ const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     invalid: {
@@ -35,7 +31,6 @@ const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
     required: {
@@ -43,7 +38,6 @@ const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     value: {
@@ -51,7 +45,6 @@ const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
       type: { name: 'string', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
   },
@@ -59,7 +52,7 @@ const radioMeta: Meta<UtrechtTextareaAttr & RelevantHTMLAttributes> = {
 
 export default radioMeta;
 
-type Story = StoryObj<UtrechtTextareaAttr & RelevantHTMLAttributes>;
+type Story = StoryObj<UtrechtTextareaProps>;
 
 const Template: Story = {
   render: (args) => ({

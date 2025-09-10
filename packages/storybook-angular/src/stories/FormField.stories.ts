@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { UtrechtCheckboxAttr, UtrechtFormField, UtrechtFormLabelAttr } from '@utrecht/component-library-angular';
 
-export default {
+const meta: Meta<UtrechtFormField> = {
   title: 'Angular Component/Form Field',
   id: 'angular-component-form-field',
   argTypes: {
@@ -10,7 +10,6 @@ export default {
       type: { name: 'string', required: false },
       description: 'a modifier CSS class',
       table: {
-        defaultValue: { summary: false },
         category: 'DOM API',
       },
     },
@@ -18,7 +17,6 @@ export default {
       type: { name: 'boolean', required: false },
       description: 'a modifier CSS class',
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -27,7 +25,6 @@ export default {
       control: { type: 'select' },
       options: ['checkbox', 'radio', 'text'],
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -39,7 +36,8 @@ export default {
     }),
   ],
   component: UtrechtFormField,
-} as Meta;
+};
+export default meta;
 type Story = StoryObj<UtrechtFormField>;
 
 const Template: Story = {

@@ -2,7 +2,11 @@ import { CommonModule } from '@angular/common';
 import { Meta, moduleMetadata, StoryObj } from '@storybook/angular';
 import { UtrechtFieldsetAttr, UtrechtFormLabelAttr } from '@utrecht/component-library-angular';
 
-export default {
+interface UtrechtFieldsetProps extends UtrechtFieldsetAttr {
+  textContent: string;
+}
+
+const meta: Meta<UtrechtFieldsetProps> = {
   title: 'Angular Component/Form Fieldset',
   id: 'angular-component-form-fieldset',
   args: {
@@ -16,7 +20,6 @@ export default {
       description: 'indicates if the fieldset is invalid',
       defaultValue: false,
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -24,7 +27,6 @@ export default {
       type: { name: 'boolean', required: false },
       description: 'indicates if the fieldset is disabled',
       table: {
-        defaultValue: { summary: false },
         category: 'Component API',
       },
     },
@@ -36,12 +38,10 @@ export default {
     }),
   ],
   component: UtrechtFieldsetAttr,
-} as Meta;
+};
+export default meta;
 
-interface StoryArgs {
-  textContent: string;
-}
-type Story = StoryObj<UtrechtFieldsetAttr & StoryArgs>;
+type Story = StoryObj<UtrechtFieldsetProps>;
 
 const Template: Story = {
   render: (args) => ({

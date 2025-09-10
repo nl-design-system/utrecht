@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/angular';
 import { UtrechtCheckboxAttr } from '@utrecht/component-library-angular';
 
-const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
+const meta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
   title: 'Angular Component/Checkbox',
   id: 'angular-checkbox',
   component: UtrechtCheckboxAttr,
@@ -11,7 +11,6 @@ const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     noValidate: {
@@ -19,7 +18,6 @@ const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
     disabled: {
@@ -27,7 +25,6 @@ const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     required: {
@@ -35,7 +32,6 @@ const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     invalid: {
@@ -43,7 +39,6 @@ const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
     value: {
@@ -51,13 +46,12 @@ const checkboxMeta: Meta<UtrechtCheckboxAttr & { value?: string }> = {
       type: { name: 'string', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
   },
 };
 
-export default checkboxMeta;
+export default meta;
 
 export type Story = StoryObj<UtrechtCheckboxAttr & { value?: string }>;
 

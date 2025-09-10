@@ -19,7 +19,6 @@ const radioMeta: Meta<UtrechtTextboxAttr & RelevantHTMLAttributes> = {
       options: ['', 'auto', 'ltr', 'rtl'],
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     disabled: {
@@ -27,7 +26,6 @@ const radioMeta: Meta<UtrechtTextboxAttr & RelevantHTMLAttributes> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     invalid: {
@@ -35,7 +33,6 @@ const radioMeta: Meta<UtrechtTextboxAttr & RelevantHTMLAttributes> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component API',
-        defaultValue: { summary: false },
       },
     },
     required: {
@@ -43,7 +40,6 @@ const radioMeta: Meta<UtrechtTextboxAttr & RelevantHTMLAttributes> = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
     value: {
@@ -51,7 +47,6 @@ const radioMeta: Meta<UtrechtTextboxAttr & RelevantHTMLAttributes> = {
       type: { name: 'string', required: false },
       table: {
         category: 'DOM API',
-        defaultValue: { summary: false },
       },
     },
   },
