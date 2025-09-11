@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import type { DrawerProps } from '@utrecht/component-library-react';
 import {
   Button,

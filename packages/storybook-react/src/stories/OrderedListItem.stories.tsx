@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
 

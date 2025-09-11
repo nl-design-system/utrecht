@@ -1,5 +1,5 @@
 import Status from '@gemeente-denhaag/process-steps';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { designTokenStory } from './util.js';
 import readme from '../../../../components/process-steps/README.md?raw';

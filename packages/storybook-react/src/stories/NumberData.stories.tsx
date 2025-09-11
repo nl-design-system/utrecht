@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { NumberData } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/number-data-css/README.md?raw';
 

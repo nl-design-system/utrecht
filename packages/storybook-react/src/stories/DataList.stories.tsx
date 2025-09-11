@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { DataList, DataListItem, DataListKey, DataListValue } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/data-list-css/README.md?raw';
 import tokensDefinition from '@utrecht/data-list-css/dist/tokens.mjs';

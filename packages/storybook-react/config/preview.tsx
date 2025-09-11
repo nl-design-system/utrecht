@@ -1,6 +1,6 @@
+import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
 import { withTests } from '@storybook/addon-jest';
-import { Controls, Description, Primary, Stories } from '@storybook/blocks';
-import { Preview } from '@storybook/react';
+import { Preview } from '@storybook/react-vite';
 import results from '@utrecht/component-library-react/dist/.jest-test-results.json';
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 import { addonThemes } from '@utrecht/storybook-helpers/src/addon-themes';
@@ -18,8 +18,8 @@ const preview: Preview = {
     ///
     withTests({ results }),
   ],
+
   parameters: {
-    actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {
         color: /(background|color)$/i,
@@ -57,6 +57,8 @@ const preview: Preview = {
     ...addonThemes,
     ...addonViewport,
   },
+
+  tags: ['autodocs'],
 };
 
 export default preview;

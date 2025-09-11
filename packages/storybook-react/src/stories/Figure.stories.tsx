@@ -1,4 +1,4 @@
-import { Args, Meta, StoryObj } from '@storybook/react';
+import { Args, Meta, StoryObj } from '@storybook/react-vite';
 import { Figure, FigureCaption, Image, Link } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/figure-css/README.md?raw';

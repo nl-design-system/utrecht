@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { VegaVisualization } from '@utrecht/component-library-react/dist/css-module/VegaVisualization';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import tokensDefinition from '@utrecht/vega-visualization-css/dist/tokens.mjs';

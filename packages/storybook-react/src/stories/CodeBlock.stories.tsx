@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/code-block-css/README.md?raw';
 import tokensDefinition from '@utrecht/code-block-css/dist/tokens.mjs';
 import { CodeBlock } from '@utrecht/component-library-react/dist/css-module';

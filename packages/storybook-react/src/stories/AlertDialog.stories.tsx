@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alert-dialog-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-dialog-css/dist/tokens.mjs';
 import type { AlertDialogProps } from '@utrecht/component-library-react';
