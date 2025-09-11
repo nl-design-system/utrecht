@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { CurrencyData, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/currency-data-css/README.md?raw';
 import tokensDefinition from '@utrecht/currency-data-css/dist/tokens.mjs';

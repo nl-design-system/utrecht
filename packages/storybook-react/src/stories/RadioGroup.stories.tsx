@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Heading } from '@utrecht/component-library-react/dist/css-module';
 import { RadioGroup } from '@utrecht/radio-group-react';
 import React from 'react';

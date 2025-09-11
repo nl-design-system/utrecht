@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
 

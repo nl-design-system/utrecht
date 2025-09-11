@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { DataBadge, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/data-badge-css/README.md?raw';
 import tokensDefinition from '@utrecht/data-badge-css/dist/tokens.mjs';

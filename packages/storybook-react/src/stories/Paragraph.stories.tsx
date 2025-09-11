@@ -1,5 +1,5 @@
 import readme from '@nl-design-system-unstable/documentation/componenten/_paragraph.md?raw';
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import tokensDefinition from '@utrecht/paragraph-css/dist/tokens.mjs';

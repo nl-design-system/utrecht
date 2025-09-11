@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alert-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-css/dist/tokens.mjs';
 import { Alert, AlertProps, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';

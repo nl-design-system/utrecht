@@ -1,51 +1,61 @@
 import type { StorybookConfig } from '@storybook/react-vite';
-import path from 'path';
+import { dirname, join, resolve } from 'path';
+
+// Utility to resolve the absolute path of a package
+// https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
+
   stories: ['../src/stories/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
+
   addons: [
-    '@storybook/addon-links',
-    '@storybook/addon-essentials',
-    '@storybook/addon-interactions',
-    '@storybook/addon-a11y',
-    'storybook-addon-pseudo-states',
-    '@storybook/preset-scss',
-    '@storybook/addon-jest',
-    '@etchteam/storybook-addon-status/register',
-    'storybook-addon-themes',
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
+    getAbsolutePath('@storybook/addon-jest'),
+    getAbsolutePath('@etchteam/storybook-addon-status'),
+    getAbsolutePath('@storybook/addon-docs'),
   ],
-  features: {
-    buildStoriesJson: true,
-    storyStoreV7: true,
-  },
+
+  features: {},
+
   framework: {
-    name: '@storybook/react-vite',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
+
   staticDirs: ['../../../proprietary/assets'],
-  docs: {
-    autodocs: true,
-  },
+
+  docs: {},
+
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
     return mergeConfig(config, {
       resolve: {
         alias: {
-          '~@utrecht': path.resolve(__dirname, '../node_modules/@utrecht'),
+          '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
           path: require.resolve('path-browserify'),
         },
       },
       css: {
         preprocessorOptions: {
           scss: {
-            includePaths: [path.resolve(__dirname, '../node_modules/@utrecht')],
+            // Temporary fix for the SCSS @import deprecation in Storybook 9
+            // Remove once all @utrecht packages have been migrated to @use
+            silenceDeprecations: ['import'],
+            includePaths: [resolve(__dirname, '../node_modules/@utrecht')],
           },
         },
       },
     });
+  },
+
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
 };
 

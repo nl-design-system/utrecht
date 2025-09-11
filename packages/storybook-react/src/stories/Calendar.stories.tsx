@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import tokensDefinition from '@utrecht/calendar-css/dist/tokens.mjs';
 import { Calendar } from '@utrecht/component-library-react/dist/css-module/Calendar';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';

@@ -1,6 +1,6 @@
 // performance optimizations are not relevant for story rendering, ignore ESLint
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/unordered-list-css/README.md?raw';

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import { Button } from '@utrecht/component-library-react/dist/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/tooltip-css/README.md?raw';

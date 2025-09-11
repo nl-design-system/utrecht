@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/blockquote-css/README.md?raw';
 import tokensDefinition from '@utrecht/blockquote-css/dist/tokens.mjs';
 import { Blockquote, Paragraph } from '@utrecht/component-library-react/dist/css-module';

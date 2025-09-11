@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import tokensDefinition from '@utrecht/youtube-video-css/dist/tokens.mjs';
 import readme from '@utrecht/youtube-video-react/README.md?raw';

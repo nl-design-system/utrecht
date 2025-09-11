@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/dist/tokens.mjs';
 import { Button, ButtonProps } from '@utrecht/button-react/dist/css';
