@@ -1,5 +1,15 @@
 {
-  "extends": "astro/tsconfigs/strict",
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": ["astro/tsconfigs/base", "@nl-design-system/tsconfig"],
   "include": [".astro/types.d.ts", "**/*"],
-  "exclude": ["dist"]
+  "exclude": ["dist", "node_modules"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "plugins": [{ "name": "@astrojs/ts-plugin" }],
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "checkJs": true,
+    "moduleResolution": "bundler",
+    "skipLibCheck": true
+  }
 }
