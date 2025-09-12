@@ -1,0 +1,22 @@
+{
+  "name": "@utrecht/astro",
+  "version": "0.0.1",
+  "author": "Community for NL Design System",
+  "description": "Documentation website for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "packages/astro"
+  },
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "5.13.7"
+  }
+}
