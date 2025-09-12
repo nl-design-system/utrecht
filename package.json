@@ -88,6 +88,7 @@
     "publish:changeset": "changeset publish",
     "release": "lerna version prerelease --conventional-prerelease --no-changelog --no-private --yes",
     "storybook": "pnpm run storybook-css",
+    "astro": "pnpm run --filter @utrecht/astro dev",
     "docusaurus": "pnpm run --filter @utrecht/docusaurus start",
     "storybook-all": "todo",
     "storybook-css": "pnpm run --filter @utrecht/storybook-css storybook",
