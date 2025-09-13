@@ -12,7 +12,7 @@ import React from 'react';
 const KTO: React.FC = () => {
   return (
     <>
-      <Separator />
+      <Separator style={{ borderColor: '#D6E5F5', borderWidth: '2px' }} />
       <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
         <FieldsetLegend>Hebt u gevonden wat u zocht op deze pagina?</FieldsetLegend>
         <FormField type="radio">
@@ -42,7 +42,7 @@ const KTO: React.FC = () => {
           </Paragraph>
         </FormField>
       </Fieldset>
-      <Separator />
+      <Separator style={{ borderColor: '#D6E5F5', borderWidth: '2px' }} />
     </>
   );
 };
