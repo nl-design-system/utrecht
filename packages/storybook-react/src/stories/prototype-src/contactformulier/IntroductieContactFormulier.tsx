@@ -8,10 +8,10 @@ import React from 'react';
 const IntroductieContact: React.FC = () => {
   return (
     <>
-      <Heading1>Test invullen Contactformulier</Heading1>
+      <Heading1>Test vraag stellen aan de gemeente</Heading1>
       <Paragraph>
-        Dank je wel dat je ons wilt helpen met het testen van het contactformulier! In deze test vragen we je een vraag
-        te stellen aan de gemeente via de website. Een paar belangrijke dingen voordat je begint:
+        Dank je wel dat je ons wilt helpen met onze test! In deze test vragen we je een vraag te stellen aan de gemeente
+        via de website. Een paar belangrijke dingen voordat je begint:
       </Paragraph>
       <UnorderedList>
         <UnorderedListItem>Je kunt geen fouten maken. Wij testen het product werkt, niet jou.</UnorderedListItem>

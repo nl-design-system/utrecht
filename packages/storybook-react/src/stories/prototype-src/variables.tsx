@@ -15,5 +15,9 @@ const urls = {
   fonttestStap1: './iframe.html?args=&id=webpagina-event1-font1--one&viewMode=story',
   fonttestStap2: './iframe.html?args=&id=webpagina-event2-font--one&viewMode=story',
   fonttestStapForm: './iframe.html?args=&id=formulier-font1--one&viewMode=story',
+  contactformIntroductie: './iframe.html?args=&id=contactformulier-introductie--one&viewMode=story',
+  contactformScenario: './iframe.html?args=&id=contactformulier-scenario--one&viewMode=story',
+  contactformStap1: './iframe.html?args=&id=contactformulier-stap-1--one&viewMode=story',
+  contactformStap2: './iframe.html?args=&id=contactformulier-stap-2--one&viewMode=story',
 };
 export default urls;

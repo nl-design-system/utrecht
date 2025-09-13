@@ -43,8 +43,7 @@ export const One: Story = {
             <section>
               <ScenarioContact />
               <br />
-
-              <ButtonLink appearance="primary-action-button" href={urls.scenarioBPage1}>
+              <ButtonLink appearance="primary-action-button" href={urls.contactformStap1}>
                 Start
                 <UtrechtIconArrow />
               </ButtonLink>
