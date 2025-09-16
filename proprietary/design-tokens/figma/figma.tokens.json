@@ -15,6 +15,16 @@
           }
         },
         "red": {
+          "10": {
+            "value": "hsl(0, 100%, 10%)",
+            "type": "color",
+            "description": "donker rood"
+          },
+          "15": {
+            "value": "hsl(0, 100%, 15%)",
+            "type": "color",
+            "description": "donker rood"
+          },
           "20": {
             "value": "hsl(0, 100%, 20%)",
             "type": "color",
@@ -25,10 +35,38 @@
             "type": "color",
             "description": "hover rood"
           },
+          "35": {
+            "value": "hsl(0, 100%, 35%)",
+            "type": "color"
+          },
           "40": {
             "value": "hsl(0, 100%, 40%)",
             "type": "color",
             "description": "basis rood #cc0000"
+          },
+          "50": {
+            "value": "hsl(0, 100%, 50%)",
+            "type": "color"
+          },
+          "60": {
+            "value": "hsl(0, 100%, 60%)",
+            "type": "color"
+          },
+          "70": {
+            "value": "hsl(0, 100%, 70%)",
+            "type": "color"
+          },
+          "75": {
+            "value": "hsl(0, 100%, 75%)",
+            "type": "color"
+          },
+          "80": {
+            "value": "hsl(0, 100%, 80%)",
+            "type": "color"
+          },
+          "90": {
+            "value": "hsl(0, 100%, 90%)",
+            "type": "color"
           },
           "95": {
             "value": "hsl(0, 100%, 95%)",
@@ -37,6 +75,16 @@
           }
         },
         "blue": {
+          "10": {
+            "value": "hsl(211, 60%, 10%)",
+            "type": "color",
+            "description": "donkerblauw"
+          },
+          "15": {
+            "value": "hsl(211, 60%, 15%)",
+            "type": "color",
+            "description": "donkerblauw"
+          },
           "20": {
             "value": "hsl(211, 60%, 20%)",
             "type": "color",
@@ -57,8 +105,28 @@
             "description": "blauw variant bij hover/focus #3669a5",
             "type": "color"
           },
+          "45": {
+            "value": "hsl(211, 60%, 45%)",
+            "type": "color",
+            "description": "blauw variant bij hover/focus #3669a5"
+          },
+          "50": {
+            "value": "hsl(211, 60%, 50%)",
+            "type": "color",
+            "description": "licht blauw links en buttons in DrakMode"
+          },
           "60": {
             "value": "hsl(211, 60%, 60%)",
+            "type": "color",
+            "description": "licht blauw links en buttons in DrakMode"
+          },
+          "70": {
+            "value": "hsl(211, 60%, 70%)",
+            "type": "color",
+            "description": "licht blauw links en buttons in DrakMode"
+          },
+          "75": {
+            "value": "hsl(211, 60%, 75%)",
             "type": "color",
             "description": "licht blauw links en buttons in DrakMode"
           },
@@ -94,10 +162,35 @@
             "description": "order grijs #888",
             "type": "color"
           },
+          "35": {
+            "value": "hsl(0, 0%, 35%)",
+            "type": "color",
+            "description": "basis grijs #727272"
+          },
           "40": {
             "value": "hsl(0, 0%, 40%)",
             "description": "basis grijs #727272",
             "type": "color"
+          },
+          "50": {
+            "value": "hsl(0, 0%, 50%)",
+            "type": "color",
+            "description": "basis grijs #727272"
+          },
+          "60": {
+            "value": "hsl(0, 0%, 60%)",
+            "type": "color",
+            "description": "basis grijs #727272"
+          },
+          "70": {
+            "value": "hsl(0, 0%, 70%)",
+            "type": "color",
+            "description": "basis grijs #727272"
+          },
+          "75": {
+            "value": "hsl(0, 0%, 75%)",
+            "type": "color",
+            "description": "basis grijs #727272"
           },
           "80": {
             "value": "hsl(0, 0%, 80%)",
@@ -116,8 +209,28 @@
           }
         },
         "yellow": {
+          "10": {
+            "value": "hsl(48, 100%, 10%)",
+            "type": "color",
+            "description": "donker geel voor darkmode"
+          },
+          "15": {
+            "value": "hsl(48, 100%, 15%)",
+            "type": "color",
+            "description": "donker geel voor darkmode"
+          },
           "20": {
             "value": "hsl(48, 100%, 20%)",
+            "type": "color",
+            "description": "donker geel voor darkmode"
+          },
+          "30": {
+            "value": "hsl(48, 100%, 30%)",
+            "type": "color",
+            "description": "donker geel voor darkmode"
+          },
+          "35": {
+            "value": "hsl(48, 100%, 35%)",
             "type": "color",
             "description": "donker geel voor darkmode"
           },
@@ -136,10 +249,30 @@
             "description": "selecteer geel",
             "type": "color"
           },
+          "70": {
+            "value": "hsl(48, 100%, 70%)",
+            "type": "color",
+            "description": "selecteer geel"
+          },
+          "75": {
+            "value": "hsl(48, 100%, 75%)",
+            "type": "color",
+            "description": "selecteer geel"
+          },
           "80": {
             "value": "hsl(48, 100%, 80%)",
             "description": "spotlight en uitgelicht",
             "type": "color"
+          },
+          "85": {
+            "value": "hsl(48, 100%, 85%)",
+            "type": "color",
+            "description": "spotlight en uitgelicht"
+          },
+          "90": {
+            "value": "hsl(48, 100%, 90%)",
+            "type": "color",
+            "description": "spotlight en uitgelicht"
           }
         },
         "fresh-green": {
@@ -150,10 +283,30 @@
           }
         },
         "green": {
+          "10": {
+            "value": "hsl(90, 30%, 10%)",
+            "type": "color",
+            "description": "Donker groen voor darkmode"
+          },
+          "15": {
+            "value": "hsl(90, 30%, 15%)",
+            "type": "color",
+            "description": "Donker groen voor darkmode"
+          },
+          "20": {
+            "value": "hsl(90, 30%, 20%)",
+            "type": "color",
+            "description": "Donker groen voor darkmode"
+          },
           "30": {
             "value": "hsl(90, 30%, 30%)",
-            "description": "Donker groen voor darkmode",
-            "type": "color"
+            "type": "color",
+            "description": "Donker groen"
+          },
+          "35": {
+            "value": "hsl(90, 30%, 35%)",
+            "type": "color",
+            "description": "Donker groen"
           },
           "40": {
             "value": "hsl(90, 30%, 40%)",
@@ -165,10 +318,30 @@
             "description": "Button groen",
             "type": "color"
           },
+          "60": {
+            "value": "hsl(90, 30%, 60%)",
+            "type": "color",
+            "description": "Button groen"
+          },
+          "70": {
+            "value": "hsl(90, 30%, 70%)",
+            "type": "color",
+            "description": "Button groen"
+          },
+          "75": {
+            "value": "hsl(90, 30%, 75%)",
+            "type": "color",
+            "description": "Button groen"
+          },
           "80": {
             "value": "hsl(90, 30%, 80%)",
             "description": "Achtergrond groen",
             "type": "color"
+          },
+          "85": {
+            "value": "hsl(90, 30%, 85%)",
+            "type": "color",
+            "description": "Achtergrond groen"
           },
           "90": {
             "value": "hsl(90, 30%, 90%)",
