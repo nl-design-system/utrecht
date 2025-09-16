@@ -64,6 +64,10 @@
             "value": "hsl(0, 100%, 80%)",
             "type": "color"
           },
+          "85": {
+            "value": "hsl(0, 100%, 85%)",
+            "type": "color"
+          },
           "90": {
             "value": "hsl(0, 100%, 90%)",
             "type": "color"
@@ -135,6 +139,11 @@
             "description": "licht blauw voor achtergrond",
             "type": "color"
           },
+          "85": {
+            "value": "hsl(211, 60%, 85%)",
+            "type": "color",
+            "description": "licht blauw voor achtergrond"
+          },
           "90": {
             "value": "hsl(211, 60%, 90%)",
             "description": "ijsblauw variant achtergrond, spotlight en uitgelicht",
@@ -196,6 +205,10 @@
             "value": "hsl(0, 0%, 80%)",
             "type": "color",
             "description": "grijs variant voor achtergrond content is #CCCCCC niet #e5e5e5"
+          },
+          "85": {
+            "value": "hsl(0, 0%, 85%)",
+            "type": "color"
           },
           "90": {
             "value": "hsl(0, 0%, 90%)",
@@ -273,13 +286,26 @@
             "value": "hsl(48, 100%, 90%)",
             "type": "color",
             "description": "spotlight en uitgelicht"
+          },
+          "95": {
+            "value": "hsl(48, 100%, 95%)",
+            "type": "color",
+            "description": "spotlight en uitgelicht"
           }
         },
         "fresh-green": {
+          "10": {
+            "value": "hsl(119, 80%, 10%)",
+            "type": "color"
+          },
           "30": {
             "value": "hsl(119, 80%, 30%)",
             "type": "color",
             "description": "tijdlijn fris groen #118A0F"
+          },
+          "70": {
+            "value": "hsl(119, 80%, 70%)",
+            "type": "color"
           }
         },
         "green": {
@@ -509,12 +535,12 @@
           }
         },
         "accent-1": {
-          "bg-document": {
-            "value": "{utrecht.color.neutral.white}",
-            "type": "color"
-          },
           "bg-subtle": {
             "value": "#F4F7FA",
+            "type": "color"
+          },
+          "bg-document": {
+            "value": "{utrecht.color.neutral.white}",
             "type": "color"
           },
           "bg-default": {
