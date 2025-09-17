@@ -1,7 +1,7 @@
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import { nldsComponentsPlugin } from './plugins/rehype-nlds-components';
+import { nldsComponentsPlugin } from './plugins/rehype-nlds-components/index.js';
 
 // https://astro.build/config
 export default defineConfig({
