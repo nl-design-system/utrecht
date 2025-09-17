@@ -1,5 +1,6 @@
 ---
 import '@assets/styles.css';
+import { Page, PageFooter, PageHeader, PageContent } from '@utrecht/component-library-react';
 ---
 
 <!doctype html>
@@ -12,6 +13,56 @@ import '@assets/styles.css';
 		<title>Utrecht Design System</title>
 	</head>
 	<body class="utrecht-body">
-		<slot />
+    <Page className="utrecht-custom-page">
+      <PageHeader>
+        <div class="utrecht-page-header__content">
+          <a href="/astro" class="utrecht-custom-logo"><img src="logo-md.svg" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+        </div>
+      </PageHeader>
+      <div class="utrecht-page-body">
+        <div class="utrecht-page-body__content">
+          <slot />
+        </div>
+      </div>
+    </Page>
+    <PageFooter>
+      <div class="utrecht-page-footer__content">Footer content</div>
+    </PageFooter>
 	</body>
 </html>
+
+
+<style>
+  .utrecht-custom-logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  .utrecht-custom-page {
+    background-color: var(--utrecht-document-background-color);
+    display: flex;
+    flex-direction: column;
+    min-block-size: 100vh;
+    padding-inline: 0 !important;
+  }
+
+  .utrecht-custom-logo:hover {
+    color: var(--utrecht-link-hover-color);
+  }
+
+  .utrecht-custom-logo img {
+    flex: 0 0 auto;
+    block-size: 3rem;
+  }
+
+  .utrecht-custom-logo__caption {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>
