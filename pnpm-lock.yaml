@@ -4483,6 +4483,9 @@ importers:
 
   packages/design-system-website:
     devDependencies:
+      '@utrecht/astro':
+        specifier: workspace:*
+        version: link:../astro
       '@utrecht/docusaurus':
         specifier: workspace:*
         version: link:../docusaurus
