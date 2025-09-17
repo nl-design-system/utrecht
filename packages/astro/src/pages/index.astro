@@ -1,8 +1,39 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { PageHeader, Link } from "@utrecht/component-library-react/dist/css-module"
+import { PageHeader, PageFooter } from "@utrecht/component-library-react"
 ---
 
 <Layout>
-  <PageHeader>Hello world <Link href="#">Click me</Link></PageHeader>
+  <PageHeader><a href="/astro" class="utrecht-custom-logo"><img src="logo-md.svg" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a></PageHeader>
+  <div class="utrecht-page-body">Content</div>
+  <PageFooter>
+    <div class="utrecht-page-footer__content">Footer content</div>
+  </PageFooter>
 </Layout>
+
+<style>
+  .utrecht-custom-logo {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    column-gap: .5rem;
+    text-decoration: none;
+    color: black;
+  }
+
+  .utrecht-custom-logo:hover {
+    color: var(--utrecht-link-hover-color);
+  }
+
+  .utrecht-custom-logo img {
+    flex: 0 0 auto;
+    block-size: 3rem;
+  }
+
+  .utrecht-custom-logo__caption {
+    flex: 1 1 auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+</style>
