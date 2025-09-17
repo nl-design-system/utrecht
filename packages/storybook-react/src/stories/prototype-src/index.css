@@ -321,10 +321,10 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     margin-block-start: var(--utrecht-space-row-xl);
   }
 
-  /* TODO: Create a custom CSS class for the button instead of overwriting the button style directly.  
+  /* TODO: Create a custom CSS class for the button instead of overwriting the button style directly.
    This causes a style issue in different places. */
 
-  /* 
+  /*
   .utrecht-button--secondary-action,
   .utrecht-button-link--primary-action {
     margin-block-start: var(--utrecht-space-row-md);
@@ -414,6 +414,8 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   }
 
   .utrecht-social-media-icon {
+    --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+
     align-items: center;
     background-color: #c00; /* Verkort van #cc0000 */
     block-size: 44px; /* Gebruik block-size ipv height */
