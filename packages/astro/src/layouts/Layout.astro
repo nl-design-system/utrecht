@@ -16,7 +16,7 @@ import { Page, PageFooter, PageHeader, PageContent } from '@utrecht/component-li
     <Page className="utrecht-custom-page">
       <PageHeader>
         <div class="utrecht-page-header__content">
-          <a href="/astro" class="utrecht-custom-logo"><img src="logo-md.svg" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+          <a href="/astro" class="utrecht-custom-logo"><img src=`${import.meta.env.BASE_URL}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
         </div>
       </PageHeader>
       <div class="utrecht-page-body">
