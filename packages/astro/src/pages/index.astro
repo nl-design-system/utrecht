@@ -1,12 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 
-import { getEntry, getCollection, render } from 'astro:content';
-
-
-const all = await getCollection('basis');
-// Inspect what's actually there
-console.log('basis IDs:', all.map(e => e.id));
+import { getEntry, render } from 'astro:content';
 
 const entry = await getEntry('basis', 'introductie');
 
