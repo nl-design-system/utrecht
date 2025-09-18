@@ -124,9 +124,9 @@ You can use any editor you'd like, but in case you use [Visual Studio Code](http
 1. Open Terminal
 2. Ensure your current directory is `utrecht`
 3. Run `pnpm install` to ensure the latest and greatest of all dependencies
-5. 4. Run `pnpm run docs`
-6. The local version of docusaurus will be running on [`localhost:3000/utrecht`](http://localhost:3000/utrecht)
-7. Press `Control+C` in your terminal to stop Docusaurus
+4. Run `pnpm run docs`
+5. The local version of docusaurus will be running on [`localhost:3000/utrecht`](http://localhost:3000/utrecht)
+6. Press `Control+C` in your terminal to stop Docusaurus
 
 Read the `packages/docusaurus/README.md` for docusaurus details
 
