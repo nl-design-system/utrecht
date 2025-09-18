@@ -3,8 +3,8 @@
  * Copyright (c) Frameless B.V.
  */
 
-import { useOf } from '@storybook/blocks';
-import { StoryObj } from '@storybook/react';
+import { useOf } from '@storybook/addon-docs/blocks';
+import { StoryObj } from '@storybook/react-vite';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import React from 'react';
@@ -17,7 +17,15 @@ const OcticonBook = () => (
 
 export const NlDesignSystemLink = ({ children, href }: PropsWithChildren<{ href?: string }>) => (
   <a href={href || '#'} target="_blank" rel="noreferrer">
-    <Icon style={{ '--utrecht-icon-size': '1em', verticalAlign: 'middle', marginBlockStart: 'calc(1ex - 1cap)' }}>
+    <Icon
+      style={
+        {
+          '--utrecht-icon-size': '1em',
+          verticalAlign: 'middle',
+          marginBlockStart: 'calc(1ex - 1cap)',
+        } as React.CSSProperties
+      }
+    >
       <OcticonBook />
     </Icon>{' '}
     {children || 'Component in NL Design System'}

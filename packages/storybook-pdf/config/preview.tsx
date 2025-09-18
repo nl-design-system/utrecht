@@ -1,13 +1,13 @@
-/* eslint-env node */
-import { Controls, Description, Primary, Stories } from '@storybook/blocks';
-import type { Preview } from '@storybook/react';
-import { ButtonGroup } from '@utrecht/component-library-react';
+import { Controls, Description, Primary, Stories } from '@storybook/addon-docs/blocks';
+import type { Preview } from '@storybook/react-vite';
+import { ButtonGroup } from '@utrecht/button-group-react';
 import React from 'react';
 import { CommunityFigmaBlock, FigmaBlock } from './FigmaBlock';
 import { GitHubBlock } from './GitHubBlock';
 import { NlDesignSystemBlock } from './NlDesignSystemBlock';
 
 const preview: Preview = {
+  tags: ['autodocs'],
   parameters: {
     options: {
       storySort: {

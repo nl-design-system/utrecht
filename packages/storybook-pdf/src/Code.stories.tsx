@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/code-css/README.md?raw';
 import pdfDocs from '@utrecht/code-css/docs/technology-pdf.nl.md?raw';
 import { Code } from '@utrecht/component-library-react';
