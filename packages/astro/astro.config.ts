@@ -6,6 +6,7 @@ import { nldsComponentsPlugin } from './plugins/rehype-nlds-components/index.js'
 // https://astro.build/config
 export default defineConfig({
   base: '/astro',
+  trailingSlash: 'always',
   build: {
     inlineStylesheets: 'never',
   },

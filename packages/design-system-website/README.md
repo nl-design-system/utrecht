@@ -5,7 +5,7 @@
 The Utrecht Design System website is composed of multiple parts:
 
 - `./` for Docusaurus
-- `./astro` for the new Astro documentation website
+- `./astro/` for the new Astro documentation website
 - `./storybook/` for Storybook (with the [Storybook Composition](https://storybook.js.org/docs/react/sharing/storybook-composition) to include framework specific Storybooks)
 - `./storybook-vue/` for Vue.js Component Storybook
 
