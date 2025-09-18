@@ -136,7 +136,7 @@ Read the `packages/docusaurus/README.md` for docusaurus details
 2. Ensure your current directory is `utrecht`
 3. Run `pnpm install` to ensure the latest and greatest of all dependencies
 4. Run `pnpm build` to build files referenced from dist
-5. 4. Run `pnpm run storybook` to start Storybook
+5. Run `pnpm run storybook` to start Storybook
 6. Your main browser opens automatically with your local storybook.
 7. Press `Control+C` in your terminal to stop Storybook.
 
