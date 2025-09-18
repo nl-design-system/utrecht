@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/article-css/README.md?raw';
 import pdfDocs from '@utrecht/article-css/docs/technology-pdf.nl.md?raw';
 import { Article, Paragraph } from '@utrecht/component-library-react';
