@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/color-sample-css/README.md?raw';
 import tokensDefinition from '@utrecht/color-sample-css/src/tokens.json';
 import { ColorSample } from '@utrecht/component-library-react';

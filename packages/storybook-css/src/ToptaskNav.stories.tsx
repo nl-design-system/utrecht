@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/top-task-nav-css/README.md?raw';
 import tokensDefinition from '@utrecht/top-task-nav-css/src/tokens.json';
@@ -16,7 +16,7 @@ interface ToptaskNavStoryProps extends ToptaskNavProps {
 const ToptaskNavStory = ({ links, ...restProps }: ToptaskNavStoryProps) => (
   <ToptaskNav {...restProps}>
     {links.map(({ icon, ...restProps }) => {
-      const IconElement = icon;
+      const IconElement = icon as React.ElementType;
       return <ToptaskLink icon={IconElement && <IconElement></IconElement>} {...restProps} />;
     })}
   </ToptaskNav>
@@ -31,6 +31,14 @@ const meta = {
       description: 'Links',
       type: {
         name: 'array',
+        value: {
+          name: 'object',
+          value: {
+            href: { name: 'string', required: true },
+            icon: { name: 'string', required: true },
+            children: { name: 'string', required: true },
+          },
+        },
         required: true,
       },
     },

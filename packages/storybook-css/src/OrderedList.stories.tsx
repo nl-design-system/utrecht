@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { OrderedList, OrderedListItem } from '@utrecht/component-library-react';
 import type { OrderedListProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -117,7 +117,7 @@ export const Default: Story = {
   },
 };
 
-const ContainerWithCenteredText = (Story) => <div style={{ textAlign: 'center' }}>{Story()}</div>;
+const ContainerWithCenteredText: Decorator = (Story) => <div style={{ textAlign: 'center' }}>{Story()}</div>;
 
 export const Center: Story = {
   args: {
@@ -149,13 +149,13 @@ export const Center: Story = {
   },
 };
 
-const NarrowContainerWithCenteredText = (Story) => (
+const NarrowContainerWithCenteredText: Decorator = (Story) => (
   <div
     style={{
       textAlign: 'center',
       inlineSize: '50%',
-      'border-inline-start': '1px solid currentColor',
-      'border-inline-end': '1px solid currentColor',
+      borderInlineStart: '1px solid currentColor',
+      borderInlineEnd: '1px solid currentColor',
     }}
   >
     {Story()}

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import {
   DataList,
   DataListActions,
@@ -24,7 +24,7 @@ import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React, { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 
-const arabicDecorator = (Story) => (
+const arabicDecorator: Decorator = (Story) => (
   <div dir="rtl" lang="ar">
     {Story()}
   </div>
@@ -62,7 +62,13 @@ const meta = {
       description: 'Data list items',
       type: {
         name: 'array',
+        value: { name: 'string' },
         required: true,
+      },
+      control: { type: 'object' },
+      table: {
+        type: { summary: 'string[]' },
+        defaultValue: { summary: '[]' },
       },
     },
     appearance: {

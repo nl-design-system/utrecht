@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Heading2, Paragraph, Surface } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { utrechtSurfaceBackgroundColor } from '@utrecht/design-tokens/dist/index.mjs';
@@ -10,7 +10,7 @@ import tokensDefinition from '@utrecht/surface-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
-const MetaThemeColor = ({ color }) => <meta name="theme-color" content={color} />;
+const MetaThemeColor = ({ color }: { color: string }) => <meta name="theme-color" content={color} />;
 
 const meta = {
   title: 'CSS Component/Surface',

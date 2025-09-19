@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FormLabel } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/form-label-css/README.md?raw';
@@ -26,7 +26,7 @@ const meta = {
     checked: false,
     disabled: false,
     children: '',
-    type: '',
+    type: undefined,
   },
   parameters: {
     bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fform-label',

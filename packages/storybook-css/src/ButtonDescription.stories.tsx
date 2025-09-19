@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import descriptionDocs from '@utrecht/button-css/docs/description.nl.md?raw';
 import React from 'react';
 import { ButtonWithDescription } from './ButtonDescription';

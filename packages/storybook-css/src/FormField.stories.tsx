@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FormField, FormFieldErrorMessage, FormLabel, Textbox } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/form-field-css/README.md?raw';
@@ -22,7 +22,7 @@ const meta = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'Component',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     type: {
@@ -32,7 +32,7 @@ const meta = {
       options: ['', 'checkbox', 'radio', 'text'],
       table: {
         category: 'Component',
-        defaultValue: { summary: false },
+        defaultValue: { summary: '[]' },
       },
     },
   },

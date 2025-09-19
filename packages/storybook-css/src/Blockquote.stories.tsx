@@ -1,5 +1,5 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/blockquote-css/README.md?raw';
 import tokensDefinition from '@utrecht/blockquote-css/src/tokens.json';
 import { Blockquote, Paragraph } from '@utrecht/component-library-react';
@@ -18,10 +18,6 @@ const meta = {
     aside: {
       description: 'Aside',
       control: { type: 'boolean' },
-    },
-    textContent: {
-      description: 'Content of the quote',
-      control: 'text',
     },
     caption: {
       description: 'Caption of the quote',

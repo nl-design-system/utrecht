@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { Icon, Paragraph } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
@@ -8,7 +8,7 @@ import React from 'react';
 import { LinkButtonStory } from './LinkButton';
 import { designTokenStory } from './design-token-story';
 
-const paragraphDecorator = (Story) => (
+const paragraphDecorator: Decorator = (Story) => (
   <Paragraph>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
     aliqua. {Story()} Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -61,6 +61,7 @@ const meta = {
       control: { type: 'select' },
       options: ['', false, true],
       type: {
+        name: 'boolean',
         required: false,
       },
     },

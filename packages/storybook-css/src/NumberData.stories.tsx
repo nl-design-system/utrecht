@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { NumberData } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/number-data-css/README.md?raw';
@@ -37,11 +37,12 @@ const meta = {
       control: { type: 'select' },
       type: {
         required: false,
+        name: 'string',
       },
     },
     value: {
       description: 'Value as programmatically determinable information',
-      type: 'text',
+      type: 'string',
     },
   },
   args: {

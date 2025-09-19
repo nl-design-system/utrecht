@@ -1,5 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { PartialStoryFn } from '@storybook/types';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import comboboxDocs from '@utrecht/combobox-css/README.md?raw';
 import defaultDocs from '@utrecht/combobox-css/_default.md?raw';
 import expandedDocs from '@utrecht/combobox-css/_expanded.md?raw';
@@ -7,6 +6,7 @@ import optionActiveDocs from '@utrecht/combobox-css/_option-active.md?raw';
 import optionSelectedDocs from '@utrecht/combobox-css/_option-selected.md?raw';
 import { ColorSample } from '@utrecht/component-library-react';
 import React, { ReactNode } from 'react';
+import { PartialStoryFn } from 'storybook/internal/types';
 import { ComboboxStory } from './Combobox';
 import { FontSample } from './FontSample';
 
@@ -430,13 +430,13 @@ const meta = {
     options: {
       description: 'Options',
       control: 'select',
-      options: {
-        '': undefined,
-        empty: [],
-        Colors: exampleColorOptions,
-        Provinces: exampleOptions,
-        'Font families': exampleFontFamilyOptions,
-      },
+      options: [
+        { '': undefined },
+        { empty: [] },
+        { Colors: exampleColorOptions },
+        { Provinces: exampleOptions },
+        { 'Font families': exampleFontFamilyOptions },
+      ],
     },
     activeId: {
       description: 'Active option',
@@ -453,10 +453,7 @@ const meta = {
     position: {
       description: 'Listbox position',
       control: 'select',
-      options: {
-        '': undefined,
-        'block-end': 'block-end',
-      },
+      options: [{ '': undefined }, { 'block-end': 'block-end' }],
     },
   },
   args: {

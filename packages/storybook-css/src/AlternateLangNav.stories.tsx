@@ -1,13 +1,17 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alternate-lang-nav-css/README.md?raw';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { AlternateLangNavStory } from './AlternateLangNav';
 import { designTokenStory } from './design-token-story';
 
-const noStyleDecorator = (Story) => <div className="no-style-decorator">{Story()}</div>;
+const noStyleDecorator: Decorator = (Story) => (
+  <div className="no-style-decorator">
+    <Story />
+  </div>
+);
 
 const meta = {
   title: 'CSS Component/Alternate language navigation',

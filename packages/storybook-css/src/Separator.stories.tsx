@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Separator } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/separator-css/README.md?raw';
@@ -10,7 +10,7 @@ import { designTokenStory } from './design-token-story';
 
 const SeparatorDiv = () => <div role="separator" aria-orientation="horizontal" className="utrecht-separator"></div>;
 
-const SeparatorStory = ({ element }) => (element === 'div' ? <SeparatorDiv /> : <Separator />);
+const SeparatorStory = ({ element }: { element?: 'div' }) => (element === 'div' ? <SeparatorDiv /> : <Separator />);
 
 const meta = {
   title: 'CSS Component/Separator',
@@ -43,6 +43,9 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  args: {
+    element: undefined,
+  },
   parameters: {
     docs: {
       description: {

@@ -1,4 +1,4 @@
-import type { StoryObj } from '@storybook/react';
+import type { StoryObj } from '@storybook/react-vite';
 import { ComponentTokensSection } from '@utrecht/documentation/components/ComponentTokensSection.jsx';
 import React from 'react';
 

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { SideNav } from './SideNav';
 import { designTokenStory } from './design-token-story';
@@ -14,7 +14,7 @@ const meta = {
   argTypes: {
     items: {
       description: 'Menu items',
-      control: 'array',
+      control: 'object',
     },
     pseudoElements: {
       description: 'Render using CSS pseudo elements',

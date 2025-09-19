@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Body } from '@utrecht/body-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/root-css/README.md?raw';

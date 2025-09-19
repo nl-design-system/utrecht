@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Figure, FigureCaption, Image, Link } from '@utrecht/component-library-react';
 import type { FigureProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -33,7 +33,7 @@ const meta = {
     alt: {
       description: 'Text alternative',
       type: {
-        name: 'text',
+        name: 'string',
         required: true,
       },
     },
@@ -58,7 +58,7 @@ const meta = {
     src: {
       description: 'URL of image',
       type: {
-        name: 'text',
+        name: 'string',
         required: true,
       },
     },

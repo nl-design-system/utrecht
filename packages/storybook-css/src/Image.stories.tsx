@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Image } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/img-css/README.md?raw';
@@ -19,13 +19,13 @@ const meta = {
     alt: {
       description: 'Text alternative',
       type: {
-        name: 'text',
+        name: 'string',
         required: true,
       },
     },
     lang: {
       description: 'Language of text alternative',
-      type: 'text',
+      type: 'string',
     },
     height: {
       description: 'Height (in pixels)',
@@ -44,7 +44,7 @@ const meta = {
     src: {
       description: 'URL of image',
       type: {
-        name: 'text',
+        name: 'string',
         required: true,
       },
     },
