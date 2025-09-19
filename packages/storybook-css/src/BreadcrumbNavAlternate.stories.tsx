@@ -1,5 +1,4 @@
-import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
-import { PartialStoryFn } from '@storybook/types';
+import type { Meta, ReactRenderer, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/breadcrumb-nav-css/README.md?raw';
 import relDocs from '@utrecht/breadcrumb-nav-css/_rel.md?raw';
 import rtlSeparatorDocs from '@utrecht/breadcrumb-nav-css/_rtl-separator.md?raw';
@@ -7,6 +6,7 @@ import tokensDefinition from '@utrecht/breadcrumb-nav-css/src/tokens.json';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtIconChevronRight, UtrechtIconDakloos } from '@utrecht/web-component-library-react';
 import React from 'react';
+import { PartialStoryFn } from 'storybook/internal/types';
 import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from './BreadcrumbNav';
 
 const meta = {

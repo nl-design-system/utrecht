@@ -1,5 +1,5 @@
-import { useOf } from '@storybook/blocks';
-import { StoryObj } from '@storybook/react';
+import { useOf } from '@storybook/addon-docs/blocks';
+import { StoryObj } from '@storybook/react-vite';
 import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import { PropsWithChildren } from 'react';
 import React from 'react';

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/card-css/README.md?raw';
 import tokensDefinition from '@utrecht/card-css/src/tokens.json';
 import { Card } from '@utrecht/card-react/dist/css';

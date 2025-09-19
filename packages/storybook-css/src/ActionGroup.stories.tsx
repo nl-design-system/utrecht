@@ -1,7 +1,7 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/action-group-css/README.md?raw';
 import tokensDefinition from '@utrecht/action-group-css/src/tokens.json';
-import { ActionGroup, Button, LinkButton } from '@utrecht/component-library-react';
+import { ActionGroup, Button, LinkButton } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -20,11 +20,7 @@ const meta = {
     direction: {
       description: 'Layout of the action group',
       control: 'select',
-      options: {
-        row: 'row',
-        column: 'column',
-        ['column-stretched']: 'column-stretched',
-      },
+      options: ['row', 'column', 'column-stretched'],
     },
   },
   parameters: {

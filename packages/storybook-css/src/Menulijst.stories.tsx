@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
 import { Menulijst } from './Menulijst';
@@ -16,12 +16,24 @@ const meta = {
       description: 'Items of the menu',
       type: {
         name: 'array',
+        value: {
+          name: 'object',
+          value: {
+            id: { name: 'number' },
+            label: { name: 'string' },
+          },
+        },
         required: true,
+      },
+      control: { type: 'object' },
+      table: {
+        type: { summary: 'Array<{ id: number; label: string }>' },
+        defaultValue: { summary: '[]' },
       },
     },
   },
   decorators: [
-    (story) => <div style={{ 'max-inline-size': 'var(--utrecht-sidebar-max-inline-size, 20rem)' }}>{story()}</div>,
+    (story) => <div style={{ maxInlineSize: 'var(--utrecht-sidebar-max-inline-size, 20rem)' }}>{story()}</div>,
   ],
   args: {
     items: [],

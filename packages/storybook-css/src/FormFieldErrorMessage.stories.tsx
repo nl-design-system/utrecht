@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { FormFieldErrorMessage, Paragraph } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/form-field-error-message-css/README.md?raw';
@@ -23,9 +23,8 @@ const meta = {
     },
   },
   args: {
-    id: null,
+    id: undefined,
     children: '',
-    distanced: false,
   },
   parameters: {
     bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fform-field-error-message',

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconArrowsSort, IconLock, IconSortAscending, IconSortDescending } from '@tabler/icons-react';
 import {
   Alert,

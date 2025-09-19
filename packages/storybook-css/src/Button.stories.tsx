@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/button-css/README.md?raw';
 import anatomyDocs from '@utrecht/button-css/docs/anatomy.nl.md?raw';
 import failureDescriptionDocs from '@utrecht/button-css/docs/failure-description.nl.md?raw';
@@ -52,11 +52,9 @@ const meta = {
       description: 'Pressed',
       control: { type: 'select' },
       options: ['', false, true],
-      type: {
-        required: false,
-      },
+      type: 'boolean',
     },
-    textContent: {
+    children: {
       description: 'Button text',
       control: 'text',
     },
@@ -69,12 +67,12 @@ const meta = {
       options: ['', 'danger', 'warning', 'ready'],
     },
     IconBefore: {
-      description: 'Icon before textContent',
+      description: 'Icon before children',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
     },
     IconAfter: {
-      description: 'Icon after textContent',
+      description: 'Icon after children',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
     },
@@ -86,10 +84,10 @@ const meta = {
     disabled: false,
     focus: false,
     focusVisible: false,
-    hint: false,
+    hint: 'false',
     hover: false,
-    pressed: '',
-    textContent: '',
+    pressed: false,
+    children: '',
     type: 'button',
     IconBefore: '',
     IconAfter: '',
@@ -128,7 +126,6 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    href: 'https://example.com/',
     children: 'Start je aanvraag',
   },
   parameters: {
@@ -293,8 +290,8 @@ export const Busy: Story = {
 export const IconAfter: Story = {
   args: {
     IconAfter: 'utrecht-icon-chevron-right',
-    rel: 'next',
     children: 'Next',
+    rel: 'next',
   },
   name: 'Icon after label',
 };

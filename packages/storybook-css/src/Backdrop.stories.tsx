@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/backdrop-css/README.md?raw';
 import tokensDefinition from '@utrecht/backdrop-css/src/tokens.json';
 import { Backdrop } from '@utrecht/component-library-react';

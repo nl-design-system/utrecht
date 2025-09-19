@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { Textarea } from '@utrecht/component-library-react';
 import type { TextareaProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -21,7 +21,7 @@ interface TextareaStoryProps extends TextareaProps {
   children?: string;
 }
 
-const arabicDecorator = (Story) => (
+const arabicDecorator: Decorator = (Story) => (
   <div dir="rtl" lang="ar">
     {Story()}
   </div>

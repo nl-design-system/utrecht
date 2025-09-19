@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/body-css/README.md?raw';
 import tokensDefinition from '@utrecht/body-css/src/tokens.json';
 import { Body } from '@utrecht/body-react';
@@ -16,6 +16,8 @@ const meta = {
   argTypes: {
     children: {
       description: 'Body content',
+      control: 'object',
+      table: { type: { summary: 'ReactNode' } },
     },
   },
   args: {

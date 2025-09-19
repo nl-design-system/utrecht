@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Article, Link, Paragraph } from '@utrecht/component-library-react';
 import articleDocs from '@utrecht/link-css/docs/article.nl.md?raw';
 import React from 'react';

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { NumberBadgeProps } from '@utrecht/component-library-react';
 import { NumberBadge } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -106,7 +106,7 @@ export const Arabic: Story = {
     ...Default.args,
     lang: 'ar',
     dir: 'rtl',
-    value: 2148,
+    value: '2148',
   },
   name: 'Arabic',
   parameters: {

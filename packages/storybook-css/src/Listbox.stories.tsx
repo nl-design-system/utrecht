@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/listbox-css/README.md?raw';
 import tokensDefinition from '@utrecht/listbox-css/src/tokens.json';
@@ -18,7 +18,13 @@ const meta = {
       description: 'Options',
       type: {
         name: 'array',
+        value: { name: 'string' },
         required: true,
+      },
+      control: { type: 'object' },
+      table: {
+        type: { summary: 'string[]' },
+        defaultValue: { summary: '[]' },
       },
     },
   },

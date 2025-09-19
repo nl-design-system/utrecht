@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import { Article, Heading2, Icon, Link, Paragraph, URLData } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/link-css/README.md?raw';
@@ -29,7 +29,7 @@ import React from 'react';
 import { LinkStory } from './Link';
 import { designTokenStory } from './design-token-story';
 
-const arabicDecorator = (Story) => (
+const arabicDecorator: Decorator = (Story) => (
   <div dir="rtl" lang="ar">
     {Story()}
   </div>
@@ -47,16 +47,16 @@ const meta = {
     'aria-current': {
       name: 'aria-current',
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        page: 'page',
-        step: 'step',
-        location: 'location',
-        date: 'date',
-        time: 'time',
-        true: 'true',
-        false: 'false',
-      },
+      options: [
+        { '': undefined },
+        { page: 'page' },
+        { step: 'step' },
+        { location: 'location' },
+        { date: 'date' },
+        { time: 'time' },
+        { true: 'true' },
+        { false: 'false' },
+      ],
       table: {
         defaultValue: { summary: 'false' },
       },
@@ -99,11 +99,7 @@ const meta = {
         required: false,
       },
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        '0: included in tab order': '0',
-        '-1: excluded from tab order': '-1',
-      },
+      options: [{ '': undefined }, { '0: included in tab order': '0' }, { '-1: excluded from tab order': '-1' }],
     },
     telephone: {
       description: 'Link to telephone number',

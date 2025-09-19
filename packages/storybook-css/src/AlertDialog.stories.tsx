@@ -1,8 +1,8 @@
-import { Meta, ReactRenderer, StoryObj } from '@storybook/react';
-import { PartialStoryFn } from '@storybook/types';
+import type { Meta, ReactRenderer, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alert-dialog-css/README.md?raw';
 import usageDocs from '@utrecht/alert-dialog-css/docs/usage.nl.md?raw';
 import tokensDefinition from '@utrecht/alert-dialog-css/src/tokens.json';
+import type { AlertDialogProps } from '@utrecht/component-library-react';
 import {
   AlertDialog,
   Button,
@@ -11,11 +11,11 @@ import {
   Paragraph,
   PrimaryActionButton,
   SecondaryActionButton,
-} from '@utrecht/component-library-react';
-import type { AlertDialogProps } from '@utrecht/component-library-react';
+} from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import React, { createRef, useState } from 'react';
+import { PartialStoryFn } from 'storybook/internal/types';
 import { designTokenStory } from './design-token-story';
 
 const meta = {

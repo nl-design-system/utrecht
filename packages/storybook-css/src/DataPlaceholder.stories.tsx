@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { DataPlaceholderProps } from '@utrecht/component-library-react';
 import { DataPlaceholder } from '@utrecht/component-library-react';
 import {
@@ -21,6 +21,12 @@ import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
+interface ExtendedDataPlaceholderProps extends DataPlaceholderProps {
+  loading?: boolean;
+  forcedColors?: boolean;
+  highContrast?: boolean;
+}
+
 const meta = {
   title: 'CSS Component/Data placeholder',
   id: 'css-data-placeholder',
@@ -39,12 +45,7 @@ const meta = {
     },
   },
   args: {},
-  render: ({
-    loading,
-    forcedColors,
-    highContrast,
-    ...props
-  }: DataPlaceholderProps & { loading?: boolean; forcedColors?: boolean; highContrast?: boolean }) => {
+  render: ({ loading, forcedColors, highContrast, ...props }: ExtendedDataPlaceholderProps) => {
     return (
       <Paragraph>
         <DataPlaceholder
@@ -74,7 +75,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof DataPlaceholder>;
+} satisfies Meta<ExtendedDataPlaceholderProps>;
 
 export default meta;
 

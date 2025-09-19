@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import type { IndexCharNavProps } from '@utrecht/component-library-react';
 import { IndexCharNav } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -13,9 +13,9 @@ const greekAlphabet = 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ 
 const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
 const ukranianAlphabet = 'А	Б	В	Г	Ґ	Д	Е	Є	Ж	З	И І	Ї	Й	К	Л	М	Н	О	П	Р	С Т	У	Ф	Х	Ц	Ч	Ш	Щ	Ь	Ю	Я';
 
-interface IndexCharNavStoryProps extends IndexCharNavProps {
-  characters: any[] | string;
-  availability?: string | 'none' | 'mixed' | 'all';
+interface IndexCharNavStoryProps extends Omit<IndexCharNavProps, 'characters'> {
+  characters: { char: string; disabled?: boolean; href?: string }[] | string;
+  availability?: 'none' | 'mixed' | 'all';
 }
 
 const IndexCharNavStory = ({ characters, availability, ...restProps }: IndexCharNavStoryProps) => {
@@ -52,11 +52,7 @@ const meta = {
   argTypes: {
     availability: {
       control: { type: 'radio' },
-      options: {
-        all: 'all',
-        none: 'none',
-        mixed: 'mixed',
-      },
+      options: [{ all: 'all' }, { none: 'none' }, { mixed: 'mixed' }],
     },
     currentChar: {
       control: 'text',

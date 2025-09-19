@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/code-css/README.md?raw';
 import ligaturesDocs from '@utrecht/code-css/_ligatures.md?raw';
 import tokensDefinition from '@utrecht/code-css/src/tokens.json';
@@ -79,7 +79,9 @@ export const Default: Story = {
   },
 };
 
-const ContainerWithLigatures = (Story) => <div style={{ 'font-variant-ligatures': 'common-ligatures' }}>{Story()}</div>;
+const ContainerWithLigatures: Decorator = (Story) => (
+  <div style={{ fontVariantLigatures: 'common-ligatures' }}>{Story()}</div>
+);
 
 export const Ligatures: Story = {
   args: {
@@ -98,7 +100,7 @@ export const Ligatures: Story = {
 };
 
 interface CodeInLinkStoryProps extends CodeStoryProps {
-  href: string;
+  href?: string;
 }
 
 const CodeInLinkStory = ({ children, href }: CodeInLinkStoryProps) => (
@@ -107,7 +109,7 @@ const CodeInLinkStory = ({ children, href }: CodeInLinkStoryProps) => (
   </Link>
 );
 
-export const CodeInLink: Story = {
+export const CodeInLink: Story & { args: CodeInLinkStoryProps } = {
   args: {
     href: 'https://w3c.github.io/csswg-drafts/mediaqueries-5/#prefers-color-scheme',
     children: '@media (prefers-color-scheme: dark) {}',

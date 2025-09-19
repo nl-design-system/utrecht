@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/column-layout-css/README.md?raw';
 import tokensDefinition from '@utrecht/column-layout-css/src/tokens.json';
 import {
@@ -161,7 +161,7 @@ export const ButtonColumns: Story = {
           <FieldsetLegend>Met DigiD</FieldsetLegend>
           <ButtonGroup>
             <div className="utrecht-digid-button">
-              <utrecht-digid-logo class="utrecht-digid-button__logo"></utrecht-digid-logo>
+              <utrecht-digid-logo class="utrecht-digid-button__logo" />
               <Button appearance="primary-action-button">Vraag adresonderzoek aan</Button>
             </div>
           </ButtonGroup>

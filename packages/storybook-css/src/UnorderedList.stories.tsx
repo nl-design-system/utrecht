@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import readme from '@utrecht/unordered-list-css/README.md?raw';
@@ -93,7 +93,7 @@ export const Nested: Story = {
   },
 };
 
-const ContainerWithCenteredText = (Story) => <div style={{ textAlign: 'center' }}>{Story()}</div>;
+const ContainerWithCenteredText: Decorator = (Story) => <div style={{ textAlign: 'center' }}>{Story()}</div>;
 
 export const Center: Story = {
   args: {
@@ -125,14 +125,16 @@ export const Center: Story = {
   },
 };
 
-const NarrowContainerWithCenteredText = (Story) => (
+const NarrowContainerWithCenteredText: Decorator = (Story) => (
   <div
-    style={{
-      textAlign: 'center',
-      inlineSize: '50%',
-      'border-inline-start': '1px solid currentColor',
-      'border-inline-end': '1px solid currentColor',
-    }}
+    style={
+      {
+        textAlign: 'center',
+        inlineSize: '50%',
+        'border-inline-start': '1px solid currentColor',
+        'border-inline-end': '1px solid currentColor',
+      } as React.CSSProperties
+    }
   >
     {Story()}
   </div>

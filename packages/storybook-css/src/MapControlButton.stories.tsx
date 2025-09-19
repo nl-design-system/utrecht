@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import readme from '@utrecht/map-control-button-css/README.md?raw';
@@ -11,7 +11,7 @@ import { MapControlButton } from './MapControlButton';
 import type { MapControlButtonProps } from './MapControlButton';
 import { designTokenStory } from './design-token-story';
 
-interface MapControlButtonStoryProps extends Omit<MapControlButtonProps, 'focus'> {
+interface MapControlButtonStoryProps extends Omit<MapControlButtonProps, 'focus' | 'icon' | 'label'> {
   hover?: boolean;
   focus?: boolean;
   focusVisible?: boolean;

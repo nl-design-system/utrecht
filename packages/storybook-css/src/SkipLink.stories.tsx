@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { SkipLink } from '@utrecht/component-library-react';
 import type { SkipLinkProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -57,7 +57,7 @@ const meta = {
     },
     visibility: {
       description: 'Visibilty',
-      type: 'select',
+      control: { type: 'select' },
       options: ['', 'hidden', 'visible'],
     },
     visibleOnFocus: {

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/code-block-css/README.md?raw';
 import tokensDefinition from '@utrecht/code-block-css/src/tokens.json';
 import { CodeBlock } from '@utrecht/component-library-react';

@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/checkbox-css/README.md?raw';
 import anatomyDocs from '@utrecht/checkbox-css/docs/anatomy.en.md?raw';
 import bestPracticesDocs from '@utrecht/checkbox-css/docs/best-practices.en.md?raw';
@@ -61,7 +61,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'HTML attribute',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     disabled: {
@@ -69,7 +69,7 @@ const meta = {
       control: 'boolean',
       table: {
         category: 'HTML attribute',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     id: {
@@ -85,7 +85,7 @@ const meta = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'HTML attribute',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     invalid: {
@@ -93,7 +93,7 @@ const meta = {
       type: { name: 'boolean', required: false },
       table: {
         category: 'API',
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
       },
     },
     name: {
@@ -108,7 +108,7 @@ const meta = {
       name: 'required',
       type: { name: 'boolean', required: false },
       table: {
-        defaultValue: { summary: false },
+        defaultValue: { summary: 'false' },
         category: 'HTML attribute',
       },
     },

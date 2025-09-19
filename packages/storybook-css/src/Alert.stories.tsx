@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alert-css/README.md?raw';
 import contentDocs from '@utrecht/alert-css/docs/content.nl.md?raw';
 import relatedComponentsDocs from '@utrecht/alert-css/docs/related-components.nl.md?raw';

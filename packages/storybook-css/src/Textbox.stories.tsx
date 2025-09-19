@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Textbox } from '@utrecht/component-library-react';
 import type { TextboxProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -161,16 +161,16 @@ const meta = {
     type: {
       description: 'Type',
       control: 'select',
-      options: {
-        '': null,
-        email: 'email',
-        number: 'number',
-        password: 'password',
-        search: 'search',
-        tel: 'tel',
-        text: 'text',
-        url: 'url',
-      },
+      options: [
+        { '': null },
+        { email: 'email' },
+        { number: 'number' },
+        { password: 'password' },
+        { search: 'search' },
+        { tel: 'tel' },
+        { text: 'text' },
+        { url: 'url' },
+      ],
     },
     value: {
       description: 'Set the value of the text box',
@@ -186,7 +186,7 @@ const meta = {
     readOnly: false,
     required: false,
     value: '',
-    type: null,
+    type: undefined,
   },
   tags: ['autodocs'],
   parameters: {

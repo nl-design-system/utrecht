@@ -1,13 +1,13 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/digid-button-css/README.md?raw';
 import tokensDefinition from '@utrecht/digid-button-css/src/tokens.json';
 import React, { PropsWithChildren } from 'react';
 import { designTokenStory } from './design-token-story';
 
-const arabicDecorator = (Story) => (
+const arabicDecorator: Decorator = (Story) => (
   <div dir="rtl" lang="ar">
     {Story()}
   </div>
@@ -19,7 +19,7 @@ interface DigidButtonProps {
 
 const DigidButton = ({ label, children }: PropsWithChildren<DigidButtonProps>) => (
   <div className="utrecht-digid-button">
-    <utrecht-digid-logo class="utrecht-digid-button__logo"></utrecht-digid-logo>
+    <utrecht-digid-logo class="utrecht-digid-button__logo" />
     <button
       className="utrecht-digid-button__button utrecht-button utrecht-button--primary-action"
       type="button"

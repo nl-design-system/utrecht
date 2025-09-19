@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Link, Paragraph, URLData } from '@utrecht/component-library-react';
 import type { URLDataProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
@@ -73,12 +73,16 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    paragraph: '',
+    href: 'https://example.com/',
     children: 'https://example.com/',
   },
 };
 
 export const Ligatures: Story = {
   args: {
+    paragraph: '',
+    href: 'https://example.fi/',
     children: 'https://example.fi/',
   },
   name: 'Ligatures',
@@ -95,6 +99,8 @@ export const Ligatures: Story = {
 
 export const RightToLeftPath: Story = {
   args: {
+    href: 'https://example.com/الأمثلة/',
+    paragraph: '',
     children: 'https://example.com/الأمثلة/',
   },
   name: 'URL with right-to-left path',
@@ -110,6 +116,8 @@ export const RightToLeftPath: Story = {
 
 export const RightToLeftTopLevelDomain: Story = {
   args: {
+    href: 'https://example.شبكة/',
+    paragraph: '',
     children: 'https://example.شبكة/',
   },
   name: 'URL with right-to-left top-level domain',

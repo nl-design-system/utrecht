@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj } from '@storybook/react-vite';
 import { NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/nav-bar-css/README.md?raw';
@@ -15,10 +15,7 @@ const meta = {
   argTypes: {
     appearance: {
       control: { type: 'select' },
-      options: {
-        '': undefined,
-        center: 'center',
-      },
+      options: [{ '': undefined }, { center: 'center' }],
     },
     children: {
       description: 'Content',

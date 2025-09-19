@@ -1,6 +1,6 @@
 /* @license CC0-1.0 */
 
-import { Meta, StoryObj } from '@storybook/react';
+import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/logo-button-css/README.md?raw';
 import tokensDefinition from '@utrecht/logo-button-css/src/tokens.json';
@@ -9,7 +9,7 @@ import { LogoButton } from './LogoButton';
 import type { LogoButtonProps } from './LogoButton';
 import { designTokenStory } from './design-token-story';
 
-const arabicDecorator = (Story) => (
+const arabicDecorator: Decorator = (Story) => (
   <div dir="rtl" lang="ar">
     {Story()}
   </div>
@@ -37,11 +37,7 @@ const meta = {
     logo: {
       description: 'Type logo',
       control: { type: 'select' },
-      options: {
-        DigiD: 'digid',
-        eIDAS: 'eidas',
-        eHerkenning: 'eherkenning',
-      },
+      options: [{ DigiD: 'digid' }, { eIDAS: 'eidas' }, { eHerkenning: 'eherkenning' }],
     },
   },
   args: {
