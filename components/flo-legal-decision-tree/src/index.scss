@@ -1,0 +1,33 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@import "./mixin";
+
+@import "~@utrecht/custom-checkbox-css/src/mixin";
+
+/**
+ * The nesting is intended to make the CSS specificity higher than the CSS in
+ * /packages/flolegal-decision-tree-client/assets/flo-client-styles.1.13.2.css
+ * This allows Utrecht Design System styles to override the default Flo client styles.
+ */
+.utrecht-flolegal-decision-tree-container {
+  .flo-question-container {
+    @include utrecht-flo-question-container;
+  }
+  .flo-question-description-container {
+    @include utrecht-flo-question-description-container;
+  }
+  .flo-question-description {
+    @include utrecht-flo-question-description;
+  }
+  .flo-explanation-button {
+    @include utrecht-flo-explanation-button;
+  }
+  .flo-question-answers input[type="checkbox" i] {
+    @include utrecht-custom-checkbox;
+    @include utrecht-custom-checkbox--html-input;
+  }
+}
