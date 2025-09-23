@@ -101,13 +101,13 @@ const HulpEnContact: React.FC<HulpEnContactProps> = ({ onSubmit }) => {
 
   return (
     <div className="utrecht-help-contact-block">
-      <Heading2 style={{ textTransform: 'uppercase' }}>
+      <Heading2 class="utrecht-heading-3" style={{ textTransform: 'uppercase' }}>
         Hulp en Contact <span style={{ fontWeight: 'normal' }}>Amsterdamsestraatweg</span>
       </Heading2>
 
       <div className="utrecht-help-contact-content">
         <div className="utrecht-help-contact-left">
-          <Heading3>Telefoon</Heading3>
+          <Heading3 style={{ fontWeight: 'normal' }}>Telefoon</Heading3>
           <br />
           <a href="tel:14030" className="utrecht-help-contact-phone">
             14 030
@@ -115,7 +115,7 @@ const HulpEnContact: React.FC<HulpEnContactProps> = ({ onSubmit }) => {
         </div>
 
         <div className="utrecht-help-contact-right">
-          <Heading3>Volg ons</Heading3>
+          <Heading3 style={{ fontWeight: 'normal' }}>Volg ons</Heading3>
           <div className="utrecht-social-media-icons">
             <a href="#" className="utrecht-social-media-icon" aria-label="Facebook">
               <UtrechtIconFacebook />
