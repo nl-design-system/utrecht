@@ -28,7 +28,11 @@ const config: StorybookConfig = {
     'storybook-addon-themes',
     //'@storybook/addon-mdx-gfm',
   ],
-  staticDirs: ['../../../proprietary/assets', '../src/script/'],
+  staticDirs: [
+    '../../../proprietary/assets',
+    '../src/script/',
+    '../node_modules/@utrecht/flo-legal-decision-tree-client/assets',
+  ],
   docs: {
     autodocs: true,
   },

@@ -1,0 +1,429 @@
+{
+  "type": "CHECK",
+  "identifier": "HqD4bk27e4W4rGDNY",
+  "name": "Afval beslisboom Regelhulp",
+  "version": 1,
+  "modifiedDate": "2025-06-20T07:17:15.014Z",
+  "content": {
+    "identifier": "HqD4bk27e4W4rGDNY",
+    "type": "CHECK",
+    "rows": [
+      {
+        "type": "Question",
+        "referencedId": "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_052154ad-3233-41f8-8fcc-5d73dc405285"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_d9f1588d-f300-4d6c-b30f-141d906d9541"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_4064fed5-d425-4ad2-bad9-19432a607056"
+      }
+    ],
+    "questions": [
+      {
+        "id": "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d",
+        "type": "LIST_SINGLE",
+        "questionText": "Bent u het eens met de boete voor het verkeerd aangeboden afval?",
+        "displayType": "List",
+        "canBeReUsed": false,
+        "options": [
+          {
+            "id": 1,
+            "value": "ja"
+          },
+          {
+            "id": 2,
+            "value": "ja, maar ik vind het bedrag van de boete te hoog"
+          },
+          {
+            "id": 3,
+            "value": "nee"
+          }
+        ]
+      },
+      {
+        "id": "_052154ad-3233-41f8-8fcc-5d73dc405285",
+        "type": "LIST_SINGLE",
+        "questionText": "Is het aangetroffen afval afkomstig van uw huishouden?",
+        "displayType": "List",
+        "canBeReUsed": false,
+        "options": [
+          {
+            "id": 1,
+            "value": "ja"
+          },
+          {
+            "id": 2,
+            "value": "nee"
+          }
+        ]
+      },
+      {
+        "id": "_d9f1588d-f300-4d6c-b30f-141d906d9541",
+        "type": "BOOLEAN",
+        "questionText": "Heeft u documenten waarmee u kunt aantonen dat het afval niet van uw huishouden afkomstig is?",
+        "canBeReUsed": false
+      },
+      {
+        "id": "_4064fed5-d425-4ad2-bad9-19432a607056",
+        "type": "LIST_SINGLE",
+        "questionText": "Waarom bent u het niet eens met de boete?",
+        "displayType": "Dropdown",
+        "canBeReUsed": false,
+        "options": [
+          {
+            "id": 1,
+            "value": "Het is mijn afval niet"
+          },
+          {
+            "id": 2,
+            "value": "De container was vol, verstopt of kapot"
+          },
+          {
+            "id": 3,
+            "value": "Iemand anders heeft mijn afval weggegooid"
+          },
+          {
+            "id": 4,
+            "value": "Ik weet de afvalregels niet"
+          },
+          {
+            "id": 5,
+            "value": "Mijn afval is uit de container gehaald door iemand anders, gevallen of weggewaaid"
+          },
+          {
+            "id": 6,
+            "value": "De container is te ver lopen en/of het afval is te zwaar"
+          },
+          {
+            "id": 7,
+            "value": "Ik was niet thuis toen het afval verkeerd werd aangeboden"
+          },
+          {
+            "id": 8,
+            "value": "Ik ken de naam op het poststuk dat jullie vonden in het afval niet"
+          },
+          {
+            "id": 9,
+            "value": "Mijn buren hebben ook hun afval naast de container geplaatst en geen boete gekregen"
+          },
+          {
+            "id": 10,
+            "value": "Ik heb het afval op de juiste manier aangeboden, maar het is niet opgehaald"
+          },
+          {
+            "id": 11,
+            "value": "Andere reden"
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "2ed33037-fc8f-4007-bf65-82948a501617",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Geen bezwaar",
+        "type": "check",
+        "content": "<p>Wij gaan er van uit dat u geen bezwaar wenst te maken.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 1
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "3fd86ec3-4a34-4c1b-ba69-323a4e1326af",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Informatie over totstandkoming bedrag",
+        "type": "check",
+        "content": "<p>De kosten van de boete bestaan uit:</p>\n<ul>\n<li>het verwijderen van het verkeerd aangeboden afval</li>\n<li>de tijd van het onderzoek en het maken van een verslag.</li>\n</ul>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 2
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "5794ee6d-1406-4a3b-991a-7bc3382e9098",
+        "title": "Uw bezwaar maakt mogelijk wel kans",
+        "name": "Wel bezwaar",
+        "type": "check",
+        "content": "<p>Beschrijf in uw bezwaar duidelijk waarom de boete volgens u niet terecht is. Lees eerst de informatie in deze beslisboom en op deze webpagina. Zo kunt u beter inschatten of uw bezwaar kans maakt.</p>\n<p>Doe er de volgende bewijsstukken bij:</p>\n<ul>\n<li>bewijs dat het afval niet van uw huishouden komt</li>\n<li>en/of bewijs dat u niet verantwoordelijk bent voor het verkeerd aanbieden van het afval</li>\n</ul>\n<p><a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien hier uw bezwaar in</a>.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 2,
+              "_d9f1588d-f300-4d6c-b30f-141d906d9541": true
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "81bce998-ccfe-4f08-a085-ef7a9228b4d8",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Bezwaar maakt geen kans",
+        "type": "check",
+        "content": "<p><strong>Wie zien wij als overtreder?</strong> <br>\nUit vaste rechtsspraak volgt dat wij er van uit mogen gaan dat u de overtreder bent als wij afvalstoffen aantreffen die tot u te herleiden zijn. Tenzij u voldoende aannemelijk heeft gemaakt dat u niet de overtreder bent.</p>\n<p>Kunt u voldoende aannemelijk maken dat u niet de overtreder bent? <a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien hier uw bezwaar in</a>.</p>\n<p>Kunt u dat niet, dan maakt uw bezwaar geen kans.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 2,
+              "_d9f1588d-f300-4d6c-b30f-141d906d9541": false
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "fe9abc54-3404-48a4-9c3b-b661b77fd849",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Het is mijn afval niet",
+        "type": "check",
+        "content": "<p>Wij kijken in het afval om te zien van wie het is. Daar komen we bijna altijd achter. U moet dan zelf bewijzen dat het niet van u is. Kunt u dat niet bewijzen? Dan maakt uw bezwaar geen kans.</p>\n<p>Kunt u dat wel bewijzen? <a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien hier uw bezwaar in</a>. <br>\nDoe er de volgende bewijsstukken bij:</p>\n<ul>\n<li>bewijs dat het afval niet van uw huishouden komt</li>\n<li>en/of bewijs dat u niet verantwoordelijk bent voor het verkeerd aanbieden van het afval</li>\n</ul>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 1
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "54e4cdc7-c746-40c5-81df-29037ffe1d6a",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "De container was vol, verstopt of kapot",
+        "type": "check",
+        "content": "<p>Het is altijd verboden om afval naast de container te plaatsen.</p>\n<p>Is de container vol, verstopt of kapot?</p>\n<ul>\n<li>Zoek dan een andere container en <a href=\"https://www.utrecht.nl/melding/\" target=\"_blank\" rel=\"noopener noreferrer\">doe een melding</a>.</li>\n<li>U kunt uw afval ook thuis bewaren totdat de container weer leeg is.</li>\n<li>U kunt uw afval ook brengen naar de 3 <a href=\"https://www.utrecht.nl/wonen-en-leven/afval/afvalscheidingsstations/\" target=\"_blank\" rel=\"noopener noreferrer\">afvalscheidingsstations</a>.</li>\n<li>Is uw afvalzak te groot voor de opening van de container? Gebruik dan kleinere zakken of doe de zak minder vol.</li>\n</ul>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 2
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "1a616697-db63-4cbd-837e-23a2edfd6c05",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Iemand anders heeft mijn afval weggegooid",
+        "type": "check",
+        "content": "<p>U bent zelf verantwoordelijk voor het juist weggooien van uw afval. Ook als iemand anders namens u, of zonder dat u het wist, het afval verkeerd aanbiedt.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 3
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "006d4ec3-9201-400d-a10f-e854ef845478",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Ik weet de afvalregels niet",
+        "type": "check",
+        "content": "<p>Elke bewoner moet de regels kennen voor het aanbieden van afval.</p>\n<p><a href=\"https://www.utrecht.nl/wonen-en-leven/afval/\" target=\"_blank\" rel=\"noopener noreferrer\">Bekijk de regels voor afval</a></p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 4
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "be4d13e2-ccd8-46fc-8c08-e92b90483651",
+        "title": "Uw bezwaar maakt mogelijk kans",
+        "name": "Mijn afval is uit de container gehaald door iemand anders, gevallen of weggewaaid",
+        "type": "check",
+        "content": "<p>Doet u uw afval goed in de container? Dan is het vaak niet mogelijk dat het valt, wegwaait of door iemand anders verwijderd wordt. U moet kunnen bewijzen dat u het afval in de container hebt gestopt en de container goed hebt afgesloten. Kunt u dat bewijzen? <a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien hier uw bezwaar in</a>.</p>\n<p>Kunt u dat niet bewijzen, dan maakt uw bezwaar geen kans.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 5
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "e43070a3-058a-4916-ba25-f8cd798ed182",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "De container is te ver lopen en/of het afval is te zwaar",
+        "type": "check",
+        "content": "<p>De afvalcontainers hebben geen trappen of drempels. U kunt uw afval 7 dagen in de week op elk moment zo vaak wegbrengen als u wilt. Dit kan ook in kleinere hoeveelheden en kleinere zakken. Veel andere bewoners gebruiken hun scootmobiel of rollator om de vuilniszak op te zetten. Dan hoeven ze die niet te tillen.</p>\n<p>Iedereen kan de containers openen. Zo kan bijvoorbeeld de thuishulp, thuiszorg of uw bezoek het afval ook voor u weggooien.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 6
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "22a11a55-1f67-42e5-a89b-65f8f07675ce",
+        "title": "U bezwaar maakt mogelijk kans",
+        "name": "Ik was niet thuis toen het afval verkeerd werd aangeboden",
+        "type": "check",
+        "content": "<p>U moet kunnen bewijzen dat u al een tijd weg was toen wij het afval op straat zagen staan. Dat kan door bijvoorbeeld vliegtickets of hotelboekingen te laten zien. Maar het moet dan ook duidelijk zijn dat niemand van het huishouden aanwezig was. Ook moet het duidelijk zijn dat uw woning niet werd verhuurd. Kunt u dat bewijzen? <a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien hier uw bezwaar in</a>.</p>\n<p>Kunt u dat niet? Dan maakt uw bezwaar geen kans.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 7
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "5c2b367e-2f24-4d8c-91ec-3ab6743ecfdc",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Ik ken de naam van het poststuk dat jullie vonden in het afval niet",
+        "type": "check",
+        "content": "<p>Voor de bezorging van post is het adres belangrijk, niet de naam. Het poststuk is verzonden naar uw adres. Dus bent u degene van wie het afval is.</p>\n<p>Er is een uitzondering waarmee u wel kans maakt. Hebt u een afhaalwinkel of bezorgpunt van bijvoorbeeld DHL/PostNL? Waar andere mensen hun post kunnen laten bezorgen? <a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien dan uw bezwaar in</a>. U moet wel kunnen bewijzen dat u een afhaalpunt hebt. Stuur bewijsstukken mee met uw bezwaar.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 8
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "1d76df71-a0e6-4329-bdb2-e03822a81606",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Mijn buren hebben ook hun afval naast de container geplaats en geen boete gekregen",
+        "type": "check",
+        "content": "<p>Uw boete staat los van wat uw buren hebben gedaan.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 9
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "1c18927c-a291-4097-9176-73f351446bb3",
+        "title": "Uw bezwaar maakt geen kans",
+        "name": "Ik heb het afval op de juiste manier aangeboden, maar het is niet opgehaald",
+        "type": "check",
+        "content": "<p>U zet uw afval op tijd aan de weg. Nemen we het niet mee? Dan moet u uw afval weer van de weg halen. Dit doet u vóór 00.00 uur op de dag van inzameling. Hebt u dat niet gedaan? Dan maakt uw bezwaar geen kans.</p>\n<p>Had u een afspraak om grofvuil te laten ophalen? En is dit niet opgehaald, omdat u zich niet aan de voorwaarden hield? Dan maakt uw bezwaar ook geen kans.</p>\n<p><a href=\"https://www.utrecht.nl/grofvuil/\" target=\"_blank\" rel=\"noopener noreferrer\">Bekijk de regels voor het ophalen van grofvuil</a></p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 10
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "e6744dac-619b-48a4-b9c2-44af62018be7",
+        "title": "Wij kunnen de slaagkans op uw bezwaar niet inschatten",
+        "name": "Andere reden",
+        "type": "check",
+        "content": "<p>Beschrijf in uw bezwaar duidelijk waarom de boete volgens u niet terecht is. Doe er de volgende bewijsstukken bij:</p>\n<ul>\n<li>bewijs dat het afval niet van uw huishouden komt</li>\n<li>en/of bewijs dat u niet verantwoordelijk bent voor het verkeerd aanbieden van het afval</li>\n</ul>\n<p><a href=\"https://www.utrecht.nl/bezwaar/\" target=\"_blank\" rel=\"noopener noreferrer\">Dien hier uw bezwaar in</a>.</p>\n",
+        "extraContent": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_9d6aed7b-068b-4a08-927c-a3f4b8708f8d": 3,
+              "_052154ad-3233-41f8-8fcc-5d73dc405285": 1,
+              "_4064fed5-d425-4ad2-bad9-19432a607056": 11
+            }
+          }
+        ],
+        "makesEndToRegelhulp": true,
+        "canBeUsedAsCondition": false
+      }
+    ],
+    "subTables": [],
+    "trueLabel": "ja",
+    "falseLabel": "nee"
+  }
+}
