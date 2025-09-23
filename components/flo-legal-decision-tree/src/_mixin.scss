@@ -1,0 +1,25 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@mixin utrecht-flo-question-description-container {
+  align-items: baseline;
+  display: flex;
+}
+
+@mixin utrecht-flo-question-description {
+  inline-size: fit-content;
+}
+
+@mixin utrecht-flo-explanation-button {
+  --utrecht-button-border-color: transparent;
+  --utrecht-button-margin-block-start: 0;
+  --utrecht-button-margin-block-end: 0;
+  --utrecht-button-background-color: transparent;
+}
+@mixin utrecht-flo-question-container {
+  align-items: baseline;
+  display: flex;
+}
