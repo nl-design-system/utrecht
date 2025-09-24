@@ -1,0 +1,24 @@
+import { Markdown, Meta } from "@storybook/addon-docs/blocks";
+import designTokens from "@utrecht/design-tokens/dist/index.json";
+import { DesignTokensTable } from "../../../../documentation/components/DesignTokensTable";
+import document from "../../../../documentation/design-tokens.md?raw";
+
+<Meta title="Utrecht/Design Tokens/Design Tokens" />
+
+<Markdown>{document}</Markdown>
+
+<p>There currently are {designTokens.length} design tokens in total.</p>
+
+## Brand tokens
+
+<DesignTokensTable tokens={designTokens.filter(({ filePath }) => filePath.includes("src/brand/"))}></DesignTokensTable>
+
+## Common tokens
+
+<DesignTokensTable tokens={designTokens.filter(({ filePath }) => filePath.includes("src/common/"))}></DesignTokensTable>
+
+## Component tokens
+
+<DesignTokensTable
+  tokens={designTokens.filter(({ filePath }) => filePath.includes("src/component/"))}
+></DesignTokensTable>

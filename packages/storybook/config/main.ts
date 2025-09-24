@@ -1,32 +1,30 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
+import type { StorybookConfig } from '@storybook/react-vite';
+import { dirname, join, resolve } from 'path';
+// Utility to resolve the absolute path of a package
+// https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-  stories: ['../stories/**/*stories.@(js|jsx|mdx|ts|tsx)'],
-  features: {
-    // babelModeV7: true,
-    // postcss: false,
-    buildStoriesJson: true,
-    // previewMdx2: true,
-    storyStoreV7: true,
-  },
+  stories: ['../stories/**/*.stories.@(js|jsx|ts|tsx)', '../stories/**/*.mdx'],
+  features: {},
   framework: {
-    name: '@storybook/react-webpack5',
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
   },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
+  },
   addons: [
-    '@storybook/addon-docs',
-    '@storybook/addon-a11y',
-    '@storybook/addon-viewport',
-    '@storybook/preset-scss',
-    '@etchteam/storybook-addon-status/register',
-    '@whitespace/storybook-addon-html',
-    '@storybook/addon-links',
-    'storybook-addon-pseudo-states',
-    'storybook-addon-themes',
-    //'@storybook/addon-mdx-gfm',
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-a11y'),
+    getAbsolutePath('@etchteam/storybook-addon-status'),
+    '@whitespace/storybook-addon-html', // Cannot use getAbsolutePath() - package structure incompatible
+    getAbsolutePath('@storybook/addon-links'),
+    getAbsolutePath('storybook-addon-pseudo-states'),
+    getAbsolutePath('storybook-addon-themes'),
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (_, { configType }) => {
@@ -92,7 +90,32 @@ const config: StorybookConfig = {
     return config;
   },
   docs: {
-    autodocs: true,
+    autodocs: 'tag',
+  },
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(config, {
+      define: {
+        global: 'globalThis',
+        'process.env': {},
+      },
+      resolve: {
+        alias: {
+          '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
+          path: require.resolve('path-browserify'),
+        },
+      },
+      assetsInclude: ['**/*.md'],
+      css: {
+        preprocessorOptions: {
+          scss: {
+            // Temporary fix for the SCSS @import deprecation in Storybook 9
+            silenceDeprecations: ['import'],
+            includePaths: [resolve(__dirname, '../node_modules/@utrecht')],
+          },
+        },
+      },
+    });
   },
 };
 
