@@ -1,0 +1,40 @@
+{/* @license CC0-1.0 */}
+
+import { Markdown, Meta } from "@storybook/addon-docs/blocks";
+import iconSet from "@utrecht/icon/dist/index.json";
+import document from "@utrecht/icon/unicode-bidi.nl.md?raw";
+import { CustomIconGallery, CustomIconGalleryItem } from "./CustomIconGallery";
+
+<Meta title="Utrecht/Iconen/Bi-directionele iconen" />
+
+<Markdown>{document}</Markdown>
+
+## Overzicht van bi-directionele iconen
+
+### Left-to-right (LTR)
+
+<div dir="ltr">
+  <CustomIconGallery>
+    {iconSet
+      .filter(({ unicodeBidi }) => unicodeBidi)
+      .map(({ id: Icon }, index) => (
+        <CustomIconGalleryItem name={Icon} key={index}>
+          <Icon />
+        </CustomIconGalleryItem>
+      ))}
+  </CustomIconGallery>
+</div>
+
+### Right-to-left (RTL)
+
+<div dir="rtl">
+  <CustomIconGallery>
+    {iconSet
+      .filter(({ unicodeBidi }) => unicodeBidi)
+      .map(({ id: Icon }, index) => (
+        <CustomIconGalleryItem name={Icon} key={index}>
+          <Icon />
+        </CustomIconGalleryItem>
+      ))}
+  </CustomIconGallery>
+</div>
