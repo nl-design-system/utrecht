@@ -51,19 +51,17 @@ const HulpEnContact2: React.FC = () => {
       </div>
 
       <Separator style={{ borderColor: '#ADCBEB', opacity: '0.4' }} />
-      <Heading2>Uw vraag of opmerking</Heading2>
       <SpotlightSection style={{ backgroundColor: '#fff' }}>
-        <Heading3> Uw vraag of opmerking is met succes verstuurd</Heading3>
-        <Heading4>
-          <utrecht-icon-checkmark></utrecht-icon-checkmark>
-          Wat gaat er nu gebeuren?
-        </Heading4>
+        <Heading3>
+          <utrecht-icon-checkmark></utrecht-icon-checkmark>Bedankt voor uw vraag of opmerking
+        </Heading3>
+        <Heading4>Wat gaat er nu gebeuren?</Heading4>
         <UnorderedList>
-          <UnorderedListItem>Als u een e-mail adres heeft ingevuld ontvangt u een bevestigingsmail</UnorderedListItem>
-          <UnorderedListItem>De afdeling Projecten gaat met uw verstuurde bericht aan de slag</UnorderedListItem>
           <UnorderedListItem>
-            Als u een e-mail adres heeft ingevuld wordt u per email op de hoogte gehouden
+            U krijgt direct een e-mail van ons. Daarin staat dat we uw bericht goed hebben ontvangen.
           </UnorderedListItem>
+          <UnorderedListItem>Wij gaan met uw vraag of opmerking aan het werk.</UnorderedListItem>
+          <UnorderedListItem>Wij laten u daarna per e-mail weten hoe het verder gaat.</UnorderedListItem>
         </UnorderedList>
       </SpotlightSection>
     </div>
