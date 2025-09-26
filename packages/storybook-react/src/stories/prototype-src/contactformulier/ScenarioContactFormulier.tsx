@@ -16,9 +16,9 @@ const ScenarioContact: React.FC = () => {
         werkzaamheden lopen van juli 2024 tot mei 2026. Nou, dat heb je gemerkt!
       </Paragraph>
       <Paragraph>
-        De laatste weken heb je veel overlast ervaren van de werkzaamheden. Het verkeer staat regelmatig vast, de
-        aangegeven omleiding lijkt niet goed te kloppen met je navigatie, en door al het bouwverkeer is er veel
-        geluidshinder - vooral &apos;s morgens vroeg en &apos;s avonds laat.
+        De laatste weken heb je veel overlast gehad van de werkzaamheden. Het verkeer staat regelmatig vast, de
+        aangegeven omleiding klopt niet met je navigatie, en door al het bouwverkeer is er veel geluidshinder - vooral
+        &apos;s morgens vroeg en &apos;s avonds laat.
       </Paragraph>
       <Paragraph>
         Je wilt graag meer duidelijkheid over:
@@ -26,7 +26,10 @@ const ScenarioContact: React.FC = () => {
           <UnorderedListItem>Hoe lang de overlast nog gaat duren</UnorderedListItem>
           <UnorderedListItem>Of er iets gedaan kan worden aan de geluidshinder in de avonduren</UnorderedListItem>
         </UnorderedList>
-        Je hebt besloten om de gemeente te contacteren om deze vragen te stellen.
+      </Paragraph>
+      <Paragraph>
+        Je vindt op de website van de gemeente niet direct een antwoord op je vragen. Dus heb je besloten om de gemeente
+        een vraag te stellen.
       </Paragraph>
       <Heading2>Instructie</Heading2>
       <Paragraph>
