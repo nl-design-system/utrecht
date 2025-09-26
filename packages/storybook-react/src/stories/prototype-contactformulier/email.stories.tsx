@@ -11,14 +11,13 @@ import {
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
-import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
-import IntroductieContact from '../prototype-src/contactformulier/IntroductieContactFormulier.js'; // Importeer het footer-component
-import urls from '../prototype-src/variables.js';
+import EmailContact from '../prototype-src/contactformulier/EmailContactFormulier.js'; // Importeer het email-component
 import '../styles.css';
+import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
 
 const meta = {
-  title: 'Prototypes/Contactformulier/Introductie ',
-  id: 'contactformulier-introductie',
+  title: 'Prototypes/Contactformulier/E-mail',
+  id: 'contactformulier-email',
   component: Page,
   parameters: {
     layout: 'fullscreen',
@@ -41,12 +40,7 @@ export const One: Story = {
         <PageContent>
           <main>
             <section>
-              <IntroductieContact />
-              <br />
-              <ButtonLink appearance="primary-action-button" href={urls.contactformScenario}>
-                Starten
-                <UtrechtIconArrow />
-              </ButtonLink>
+              <EmailContact />
             </section>
           </main>
         </PageContent>

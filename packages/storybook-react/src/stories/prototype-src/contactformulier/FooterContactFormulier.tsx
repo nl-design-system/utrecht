@@ -17,6 +17,7 @@ import {
   UtrechtIconWhatsapp,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import urls from '../variables.js';
 const FooterContact: React.FC = () => {
   return (
     <PageFooter className="utrecht-footer-grid">
@@ -35,7 +36,7 @@ const FooterContact: React.FC = () => {
           <LinkListLink href="#">
             <UtrechtIconArrow /> Over deze website
           </LinkListLink>
-          <LinkListLink href="#">
+          <LinkListLink href={urls.contactformEmail}>
             <UtrechtIconArrow /> Naar het e-mail bericht
           </LinkListLink>
         </LinkList>
