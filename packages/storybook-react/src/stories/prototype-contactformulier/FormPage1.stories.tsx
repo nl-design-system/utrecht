@@ -85,7 +85,7 @@ export const One: Story = {
                   </div>
                   <div className="utrecht-project-info-block">
                     <div className="utrecht-project-info-block__label">Werkzaamheden klaar:</div>
-                    <div className="utrecht-project-info-block__value">Eind zomer 2025</div>
+                    <div className="utrecht-project-info-block__value">Voorjaar 2026</div>
                   </div>
                 </div>
 

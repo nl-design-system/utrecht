@@ -13,7 +13,7 @@ const ScenarioContact: React.FC = () => {
       <Paragraph>
         Stel je voor: je woont in de buurt van de Amsterdamsestraatweg. Je hebt via de gemeente website gelezen dat er
         werkzaamheden plaatsvinden aan de Amsterdamsestraatweg tussen de Weerdsingel en de Marnixlaan. Deze
-        werkzaamheden lopen van juli 2024 tot augustus 2025. Nou, dat heb je gemerkt!
+        werkzaamheden lopen van juli 2024 tot mei 2026. Nou, dat heb je gemerkt!
       </Paragraph>
       <Paragraph>
         De laatste weken heb je veel overlast ervaren van de werkzaamheden. Het verkeer staat regelmatig vast, de
