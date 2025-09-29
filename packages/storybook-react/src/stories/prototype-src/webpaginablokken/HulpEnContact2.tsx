@@ -53,7 +53,10 @@ const HulpEnContact2: React.FC = () => {
       <Separator style={{ borderColor: '#ADCBEB', opacity: '0.4' }} />
       <SpotlightSection style={{ backgroundColor: '#fff' }}>
         <Heading3>
-          <utrecht-icon-checkmark></utrecht-icon-checkmark>Bedankt voor uw vraag of opmerking
+          <span className="utrecht-icon-outline">
+            <utrecht-icon-checkmark></utrecht-icon-checkmark>
+          </span>
+          Bedankt voor uw vraag of opmerking
         </Heading3>
         <Heading4>Wat gaat er nu gebeuren?</Heading4>
         <UnorderedList>

@@ -26,6 +26,10 @@
 
   /* active focus */
 
+  /* input breedtes */
+  --utrecht-textarea-max-inline-size: 400px;
+  --utrecht-textbox-max-inline-size: 328px;
+
   /* --- navigation tokens end --- */
 }
 
@@ -314,7 +318,7 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     font-weight: 400; /* Zorgt ervoor dat de tekst niet vetgedrukt is */
   }
   .utrecht-form-field__label {
-    margin-block-end: var(--utrecht-space-row-sm);
+    margin-block-end: var(--utrecht-space-row-xs);
   }
   .utrecht-form-field__label,
   .utrecht-form-label {
@@ -388,7 +392,8 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     background-color: #d4e4f1;
     border-radius: 4px;
     margin-block: 3rem;
-    padding-block: 1rem;
+    padding-block-end: 3rem;
+    padding-block-start: 1rem;
     padding-inline: 1rem;
   }
 
@@ -511,9 +516,32 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   .utrecht-link utrecht-icon-cross {
     transform: translateY(-4px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
+  .utrecht-button utrecht-icon-arrow,
   .utrecht-button-link--primary-action utrecht-icon-arrow {
     transform: translateY(-2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
+
+  .utrecht-button utrecht-icon-arrow {
+    margin-left: 4px;
+  }
+
+  .utrecht-icon-outline {
+    block-size: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    inline-size: 16px;
+    line-height: 16px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .utrecht-icon-outline utrecht-icon-checkmark {
+    font-size: 0;
+    height: 16px;
+    inline-size: 8px;
+  }
+
   .utrecht-advanced-link--with-icon {
     align-items: center;
     display: flex;
