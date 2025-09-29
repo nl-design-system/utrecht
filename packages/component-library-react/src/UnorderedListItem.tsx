@@ -5,17 +5,26 @@
  */
 
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, LiHTMLAttributes, PropsWithChildren } from 'react';
+import type { ForwardedRef, LiHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import { forwardRef } from 'react';
 
-export type UnorderedListItemProps = LiHTMLAttributes<HTMLLIElement>;
+export interface UnorderedListItemProps extends LiHTMLAttributes<HTMLLIElement> {
+  marker?: ReactNode;
+}
 
 export const UnorderedListItem = forwardRef(
   (
-    { children, className, ...restProps }: PropsWithChildren<UnorderedListItemProps>,
+    { children, className, marker, ...restProps }: PropsWithChildren<UnorderedListItemProps>,
     ref: ForwardedRef<HTMLLIElement>,
   ) => (
-    <li {...restProps} ref={ref} className={clsx('utrecht-unordered-list__item', className)}>
-      {children}
+    <li
+      ref={ref}
+      className={clsx('utrecht-unordered-list__item', className, {
+        ['utrecht-unordered-list__custom-item']: marker,
+      })}
+      {...restProps}
+    >
+      {marker && <span className={clsx('utrecht-unordered-list__custom-marker')}>{marker}</span>} {children}
     </li>
   ),
 );
