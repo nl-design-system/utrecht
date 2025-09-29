@@ -4628,6 +4628,15 @@ importers:
         specifier: 17.7.2
         version: 17.7.2
 
+  packages/flolegal-decision-tree-client:
+    devDependencies:
+      '@types/node':
+        specifier: '22'
+        version: 22.18.1
+      typescript:
+        specifier: 4.9.5
+        version: 4.9.5
+
   packages/icon:
     devDependencies:
       '@unicode/unicode-15.1.0':
@@ -5176,6 +5185,12 @@ importers:
       '@utrecht/figure-css':
         specifier: workspace:*
         version: link:../../components/figure
+      '@utrecht/flo-legal-decision-tree-client':
+        specifier: workspace:*
+        version: link:../flolegal-decision-tree-client
+      '@utrecht/flolegal-decision-tree-css':
+        specifier: workspace:*
+        version: link:../../components/flo-legal-decision-tree
       '@utrecht/form-css':
         specifier: workspace:*
         version: link:../../components/form

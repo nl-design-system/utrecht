@@ -1,6 +1,8 @@
 # Ignore 3rd party files
 node_modules/
-packages/storybook-css/lib/flo-client-styles.1.9.0.css
+
+packages/flolegal-decision-tree-client/assets/flo-client-styles.css
+packages/flolegal-decision-tree-client/assets/flo-client-plugin.js
 
 # Ignore generated files
 coverage/
