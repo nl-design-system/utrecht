@@ -1,6 +1,6 @@
 ---
 import '@assets/styles.css';
-import { Page, PageFooter, PageHeader } from '@utrecht/component-library-react';
+import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 ---
 
@@ -9,7 +9,7 @@ import { base } from 'astro:config/client';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/svg+xml" href=`${base}/favicon.svg` />
 		<meta name="generator" content={Astro.generator} />
 		<title>Utrecht Design System</title>
 	</head>
@@ -17,8 +17,21 @@ import { base } from 'astro:config/client';
     <Page className="utrecht-custom-page">
       <PageHeader>
         <div class="utrecht-page-header__content">
-          <a href="/astro" class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+          <a href=`${base}` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
         </div>
+        <nav>
+          <NavBar>
+              <NavList>
+                <NavListLink href={base}>Home</NavListLink>
+                <NavListLink href={base}>Utrecht Design System</NavListLink>
+                <NavListLink href={base}>Voor designers</NavListLink>
+                <NavListLink href={base}>Voor developers</NavListLink>
+                <NavListLink href={base}>Richtlijnen</NavListLink>
+                <NavListLink href="https://github.com/nl-design-system/utrecht">Componenten</NavListLink>
+                <NavListLink href={base}>Vragen</NavListLink>
+              </NavList>
+          </NavBar>
+        </nav>
       </PageHeader>
       <div class="utrecht-page-body">
         <div class="utrecht-page-body__content">
