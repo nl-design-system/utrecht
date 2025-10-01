@@ -1,2 +1,25 @@
 @import "@utrecht/component-library-css/dist/index.css";
 @import "@utrecht/design-tokens/dist/theme.css";
+
+.utrecht-page-header__content {
+  --utrecht-page-header-content-padding-block-end: 2rem;
+}
+
+.utrecht-nav-bar {
+  border-block-end: 1px solid #ccc;
+  border-block-start: 1px solid #ccc;
+}
+
+.utrecht-nav-list__item {
+  --utrecht-nav-bar-link-padding-block-start: 1rem;
+  --utrecht-nav-bar-link-padding-block-end: 1rem;
+
+  flex: 1 1 auto;
+}
+
+.utrecht-nav-list__link {
+  display: flex;
+  inline-size: 100%;
+  justify-content: center;
+  max-inline-size: none;
+}
