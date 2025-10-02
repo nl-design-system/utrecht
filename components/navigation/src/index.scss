@@ -1,0 +1,108 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@import "./mixin";
+
+.utrecht-navigation {
+  @include utrecht-navigation;
+}
+
+.utrecht-navigation--mobile {
+  @include utrecht-navigation--mobile;
+}
+
+.utrecht-navigation-drawer {
+  @include utrecht-navigation-drawer;
+}
+
+.utrecht-navigation-drawer::backdrop {
+  @include utrecht-navigation-drawer--backdrop;
+}
+.utrecht-navigation__item {
+  @include utrecht-navigation__item;
+}
+.utrecht-navigation__item--mobile {
+  @include utrecht-navigation__item--mobile;
+}
+
+.utrecht-navigation__link {
+  @include utrecht-navigation__link;
+}
+
+.utrecht-navigation__link:hover {
+  @include utrecht-navigation__link-hover;
+}
+.utrecht-navigation__link:focus {
+  @include utrecht-navigation__link-focus;
+}
+
+.utrecht-navigation__link:active:focus {
+  @include utrecht-navigation__link-active-focus;
+}
+.utrecht-navigation__link--mobile {
+  @include utrecht-navigation__link--mobile;
+}
+.utrecht-navigation__link--mobile:hover {
+  @include utrecht-navigation__link--mobile-hover;
+}
+
+.utrecht-navigation__link--is-current {
+  @include utrecht-navigation__link--is-current;
+}
+
+.utrecht-navigation__list {
+  @include utrecht-navigation__list;
+}
+
+.utrecht-navigation__list:focus {
+  @include utrecht-navigation__list-focus;
+}
+
+.utrecht-navigation__list--mobile {
+  @include utrecht-navigation__list--mobile;
+}
+
+.utrecht-navigation__list--side-nav {
+  @include utrecht-navigation__list--side-nav;
+}
+
+.utrecht-navigation__list--sub-list {
+  @include utrecht-navigation__list--sub-list;
+}
+
+.utrecht-navigation__list--sub-list-item {
+  @include utrecht-navigation__list--sub-list-item;
+}
+
+.utrecht-navigation__marker {
+  @include utrecht-navigation__marker;
+}
+.utrecht-navigation__marker--current {
+  @include utrecht-navigation__marker--current;
+}
+
+.utrecht-navigation__marker--outline {
+  @include utrecht-navigation__marker--outline;
+}
+
+.utrecht-navigation__toggle-button {
+  @include utrecht-navigation__toggle-button;
+}
+.utrecht-icon-custom {
+  @include utrecht-icon-custom;
+}
+.utrecht-navigation__toggle-button--start-end {
+  @include utrecht-navigation__toggle-button--start-end;
+}
+.utrecht-navigation__toggle-button-close {
+  @include utrecht-navigation__toggle-button-close;
+}
+
+@media (width >= 600px) {
+  .utrecht-navigation-drawer {
+    @include utrecht-navigation-drawer--mobile;
+  }
+}
