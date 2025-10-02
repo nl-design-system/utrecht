@@ -739,6 +739,12 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/navigation:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/number-badge:
     devDependencies:
       '@utrecht/badge-css':
@@ -5521,6 +5527,9 @@ importers:
       '@utrecht/link-list-css':
         specifier: workspace:*
         version: link:../../components/link-list
+      '@utrecht/link-react':
+        specifier: workspace:*
+        version: link:../components-react/link-react
       '@utrecht/link-social-css':
         specifier: workspace:*
         version: link:../../components/link-social
@@ -5557,6 +5566,9 @@ importers:
       '@utrecht/nav-list-css':
         specifier: workspace:*
         version: link:../../components/nav-list
+      '@utrecht/navigation-css':
+        specifier: workspace:*
+        version: link:../../components/navigation
       '@utrecht/number-badge-css':
         specifier: workspace:*
         version: link:../../components/number-badge
