@@ -1,0 +1,253 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@mixin utrecht-navigation {
+  border-block-end-color: var(--utrecht-navigation-border-block-end-color);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-navigation-border-block-end-width);
+  border-block-start-color: var(--utrecht-navigation-border-block-start-color);
+  border-block-start-style: solid;
+  border-block-start-width: var(--utrecht-navigation-border-block-start-width);
+  margin-block-end: var(--utrecht-nav-margin-back-end);
+  margin-block-start: var(--utrecht-nav-margin-back-start);
+}
+
+@mixin utrecht-navigation--mobile {
+  align-items: flex-end;
+  block-size: 100%;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  inline-size: 100%;
+  justify-content: var(--utrecht-navigation-mobile-justify-content, flex-start);
+}
+
+@mixin utrecht-navigation-drawer {
+  --utrecht-drawer-padding-block-start: 0;
+  --utrecht-drawer-padding-inline-start: 0;
+  --utrecht-drawer-padding-inline-end: 0;
+  --utrecht-drawer-min-inline-size: var(--utrecht-navigation-drawer-min-inline-size);
+}
+
+@mixin utrecht-navigation-drawer--backdrop {
+  --utrecht-backdrop-background-color: var(--utrecht-navigation-drawer-backdrop-background-color);
+}
+
+@mixin utrecht-navigation-drawer--mobile {
+  --utrecht-navigation-drawer-min-inline-size: var(--utrecht-navigation-drawer-mobile-min-inline-size);
+}
+
+/* The default focus outline is disabled because we use a custom nav-list 
+   implementation with tabindex="-1". In Safari on small screens, this 
+   causes an unwanted blue outline when the menu is opened. 
+   https://github.com/frameless/strapi/pull/1223#discussion_r2341006350
+*/
+@mixin utrecht-navigation__list-focus {
+  outline: none;
+}
+
+@mixin utrecht-navigation__item {
+  border-block-end-color: var(--utrecht-navigation-item-border-block-end-color);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-navigation-item-border-block-end-width);
+  border-block-start-color: var(--utrecht-navigation-item-border-block-start-color);
+  border-block-start-style: solid;
+  border-block-start-width: var(--utrecht-navigation-item-border-block-start-width);
+  flex: 1 1 auto;
+  padding-block-end: var(--utrecht-navigation-item-padding-block-end);
+  padding-block-start: var(--utrecht-navigation-item-padding-block-start);
+  padding-inline-end: var(--utrecht-navigation-item-padding-inline-end);
+  padding-inline-start: var(--utrecht-navigation-item-padding-inline-start);
+
+  &:last-child .utrecht-navigation__link {
+    border-inline-end: none;
+  }
+}
+
+@mixin utrecht-navigation__item--mobile {
+  --utrecht-navigation-item-padding-block-start: var(--utrecht-navigation-item-mobile-padding-block-start);
+  --utrecht-navigation-item-padding-block-end: var(--utrecht-navigation-item-mobile-padding-block-end);
+  --utrecht-navigation-item-padding-inline-start: var(--utrecht-navigation-item-mobile-padding-inline-start);
+  --utrecht-navigation-item-padding-inline-end: var(--utrecht-navigation-item-mobile-padding-inline-end);
+  --utrecht-navigation-item-border-block-end-color: var(--utrecht-navigation-item-mobile-border-block-end-color);
+  --utrecht-navigation-item-border-block-end-width: var(--utrecht-navigation-item-mobile-border-block-end-width);
+
+  &:first-of-type {
+    --utrecht-navigation-item-border-block-start-color: var(--utrecht-navigation-item-mobile-border-block-start-color);
+    --utrecht-navigation-item-border-block-start-width: var(--utrecht-navigation-item-mobile-border-block-start-width);
+  }
+}
+
+@mixin utrecht-navigation__link {
+  --utrecht-link-focus-text-decoration: underline;
+  --utrecht-link-focus-text-decoration-thickness: var(--utrecht-navigation-link-focus-text-decoration-thickness);
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-active-color: var(--utrecht-navigation-link-active-color);
+  --utrecht-link-hover-text-decoration-thickness: var(--utrecht-navigation-link-hover-decoration-thickness);
+  --utrecht-link-hover-color: var(--utrecht-navigation-link-hover-color);
+  --utrecht-link-color: var(--utrecht-navigation-link-color);
+  --utrecht-link-visited-color: var(--utrecht-navigation-link-color);
+
+  align-items: var(--_utrecht-navigation-link-align-items, center);
+  background-color: var(--utrecht-navigation-link-background-color);
+  border-inline-end-color: var(--utrecht-navigation-link-border-color);
+  border-inline-end-style: solid;
+  border-inline-end-width: var(--utrecht-navigation-link-border-inline-end-width);
+  display: flex;
+  font-weight: var(--utrecht-navigation-link-font-weight);
+  gap: var(--utrecht-navigation-link-gap, 8px);
+  justify-content: var(--_utrecht-navigation-link-justify-content, center);
+  padding-block-end: var(--utrecht-navigation-link-padding-block-end);
+  padding-block-start: var(--utrecht-navigation-link-padding-block-start);
+  padding-inline-end: var(--utrecht-navigation-link-padding-inline-end);
+  padding-inline-start: var(--utrecht-navigation-link-padding-inline-start);
+  text-align: var(--utrecht-navigation-link-text-align);
+}
+
+@mixin utrecht-navigation__link-hover {
+  --utrecht-navigation-link-background-color: var(--utrecht-navigation-link-hover-background-color);
+  --utrecht-navigation-marker-color: currentColor;
+  --utrecht-navigation-marker-outline-hover-fill: currentColor;
+}
+
+@mixin utrecht-navigation__link-focus {
+  --utrecht-link-focus-color: var(--utrecht-navigation-link-focus-color);
+  --utrecht-link-focus-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-navigation-marker-color: currentColor;
+  --utrecht-navigation-marker-outline-hover-fill: currentColor;
+}
+
+@mixin utrecht-navigation__link-active-focus {
+  --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color);
+}
+
+@mixin utrecht-navigation__link--mobile {
+  --_utrecht-navigation-link-align-items: center;
+  --_utrecht-navigation-link-justify-content: normal;
+  --utrecht-navigation-link-padding-inline-start: var(--utrecht-navigation-link-mobile-padding-inline-start);
+  --utrecht-navigation-link-padding-inline-end: var(--utrecht-navigation-link-mobile-padding-inline-end);
+  --utrecht-navigation-link-padding-block-start: var(--utrecht-navigation-link-mobile-padding-block-start);
+  --utrecht-navigation-link-padding-block-end: var(--utrecht-navigation-link-mobile-padding-block-end);
+  --utrecht-navigation-link-border-inline-end-width: 0;
+  --utrecht-navigation-link-border-color: transparent;
+  --utrecht-navigation-link-background-color: var(--utrecht-navigation-link-mobile-background-color);
+  --utrecht-navigation-link-color: var(--utrecht-navigation-link-mobile-color);
+  --utrecht-navigation-link-justify-content: var(--utrecht-navigation-link-mobile-justify-content, flex-start);
+
+  flex: 1 1 auto;
+  min-block-size: var(--utrecht-navigation-link-mobile-min-block-size);
+  transition-duration: var(--utrecht-navigation-link-mobile-transition-duration);
+  transition-property: font-weight;
+  transition-timing-function: var(--utrecht-navigation-link-mobile-transition-timing-function);
+}
+
+@mixin utrecht-navigation__link--mobile-hover {
+  --utrecht-navigation-link-background-color: var(--utrecht-navigation-link-mobile-hover-background-color);
+  --utrecht-link-hover-color: var(--utrecht-navigation-link-mobile-hover-color);
+  --utrecht-navigation-link-font-weight: var(--utrecht-navigation-link-mobile-hover-font-weight);
+}
+
+@mixin utrecht-navigation__link--is-current {
+  --utrecht-navigation-link-font-weight: var(--utrecht-navigation-link-is-current-font-weight);
+}
+
+@mixin utrecht-navigation__list {
+  display: var(--utrecht-navigation-list-display, flex);
+  inline-size: var(--utrecht-navigation-list-inline-size);
+  list-style: none;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  padding-block-end: var(--utrecht-navigation-list-padding-block-end);
+  padding-block-start: var(--utrecht-navigation-list-padding-block-start);
+  padding-inline-end: var(--utrecht-navigation-list-padding-inline-end);
+  padding-inline-start: var(--utrecht-navigation-list-padding-inline-start);
+}
+
+@mixin utrecht-navigation__list--mobile {
+  --utrecht-navigation-list-display: block;
+  --utrecht-navigation-list-padding-block-start: var(--utrecht-navigation-list-mobile-padding-block-start);
+  --utrecht-navigation-list-padding-block-end: var(--utrecht-navigation-list-mobile-padding-block-end);
+  --utrecht-navigation-list-padding-inline-start: var(--utrecht-navigation-list-mobile-padding-inline-start);
+  --utrecht-navigation-list-padding-inline-end: var(--utrecht-navigation-list-mobile-padding-inline-end);
+  --utrecht-navigation-list-inline-size: var(--utrecht-navigation-list-mobile-inline-size);
+
+  background-color: var(--utrecht-navigation-list-mobile-background-color);
+  block-size: 100%;
+  box-sizing: border-box;
+  flex: 1;
+  overflow-y: auto;
+}
+
+@mixin utrecht-navigation__list--side-nav {
+  --utrecht-navigation-list-inline-size: var(--utrecht-navigation-list-side-nav-inline-size);
+}
+
+@mixin utrecht-navigation__list--sub-list {
+  @include utrecht-navigation__list;
+  @include utrecht-navigation__list--mobile;
+
+  inline-size: 100%;
+  padding-block-end: 0;
+  padding-block-start: 0;
+  padding-inline-end: 0;
+}
+
+@mixin utrecht-navigation__list--sub-list-item {
+  --utrecht-navigation-item-border-block-start-width: 0;
+  --utrecht-navigation-item-border-block-end-width: 0;
+  --utrecht-navigation-item-mobile-border-block-start-width: 0;
+  --utrecht-navigation-item-mobile-border-block-end-width: 0;
+  --utrecht-navigation-list-mobile-padding-inline-end: 0;
+}
+
+@mixin utrecht-navigation__marker {
+  color: var(--utrecht-navigation-marker-color);
+  flex-shrink: 0;
+}
+
+@mixin utrecht-navigation__marker--current {
+  --utrecht-navigation-marker-color: currentColor;
+}
+
+@mixin utrecht-navigation__marker--outline {
+  fill: var(--utrecht-navigation-marker-outline-hover-fill, none);
+}
+
+@mixin utrecht-navigation__toggle-button {
+  --utrecht-button-subtle-color: currentColor;
+  --utrecht-button-subtle-hover-color: currentColor;
+  --utrecht-button-subtle-hover-border-color: transparent;
+  --utrecht-button-subtle-active-background-color: transparent;
+  --utrecht-button-subtle-active-border-color: transparent;
+  --utrecht-button-subtle-active-color: currentColor;
+  --utrecht-button-subtle-focus-background-color: transparent;
+  --utrecht-button-subtle-focus-border-color: transparent;
+  --utrecht-button-subtle-focus-color: currentColor;
+  --utrecht-button-subtle-hover-border-width: 0;
+  --utrecht-button-hover-scale: 1;
+  --utrecht-button-focus-scale: 1;
+  --utrecht-button-group-margin-block-start: var(--utrecht-navigation-toggle-button-margin-block-start);
+  --utrecht-button-group-margin-block-end: var(--utrecht-navigation-toggle-button-margin-block-end);
+
+  justify-content: flex-end;
+  padding-inline-end: var(--utrecht-navigation-toggle-button-padding-inline-end);
+}
+
+@mixin utrecht-icon-custom {
+  margin-inline-end: var(--utrecht-icon-custom-margin-inline-end);
+}
+
+@mixin utrecht-navigation__toggle-button--start-end {
+  --utrecht-button-group-margin-block-start: calc(-1 * var(--utrecht-navigation-toggle-button-offset-start));
+
+  margin-inline-end: calc(-1 * var(--utrecht-navigation-toggle-button-offset-end));
+}
+
+@mixin utrecht-navigation__toggle-button-close {
+  margin-block-end: var(--utrecht-navigation-toggle-button-close, 32px);
+  margin-inline-end: calc(-1 * var(--utrecht-navigation-toggle-button-offset-end, 16px));
+  margin-inline-start: auto;
+}
