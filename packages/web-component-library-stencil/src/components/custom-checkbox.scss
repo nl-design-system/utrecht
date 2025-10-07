@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/custom-checkbox-css/src";
+@use "~@utrecht/custom-checkbox-css/src" as *;
 
 :host {
   display: block;

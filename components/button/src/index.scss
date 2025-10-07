@@ -4,8 +4,8 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/focus-ring-css/src/mixin";
-@import "./mixin";
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+@use "./mixin" as *;
 
 .utrecht-button {
   @include utrecht-button;
@@ -36,7 +36,7 @@
 
 .utrecht-button--focus-visible {
   /* the pseudo-class for `:focus-visible` is implemented via the mixin */
-  @include utrecht-focus-visible;
+  @include focus-ring.utrecht-focus-visible;
 }
 
 .utrecht-button--focus:not(.utrecht-button--disabled) {

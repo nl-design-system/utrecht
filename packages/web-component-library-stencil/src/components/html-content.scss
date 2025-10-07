@@ -4,9 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-// TODO: Use npm package import
-// @import "~@utrecht/html-content-css/src";
-@import "../../../../components/html-content/src";
+@use "~@utrecht/html-content-css/src" as *;
 
 :host {
   display: block;

@@ -3,7 +3,7 @@
  * Copyright (c) 2022 Frameless B.V.
  */
 
-@import "./mixin";
+@use "./mixin" as *;
 
 .utrecht-button-group {
   @include utrecht-button-group;

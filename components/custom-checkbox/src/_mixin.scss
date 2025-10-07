@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/focus-ring-css/src/mixin";
+@use "~@utrecht/focus-ring-css/src/mixin" as *;
 
 @mixin utrecht-custom-checkbox {
   /*

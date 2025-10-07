@@ -6,7 +6,7 @@
 
 /* Collection of all semantic HTML styles in the component library */
 
-@import "../mixin";
+@use "../mixin" as *;
 
 :root {
   @include utrecht-html-content-container;

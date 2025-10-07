@@ -4,7 +4,7 @@
  * Copyright (c) 2024-2025 Frameless B.V.
  */
 
-@import "./mixin";
+@use "./mixin" as *;
 
 .utrecht-rich-text {
   --utrecht-space-around: 1;

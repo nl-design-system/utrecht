@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/drawer-css/src";
+@use "~@utrecht/drawer-css/src" as *;
 
 :host {
   /* Display `contents`: is necessary for the `<dialog>` element to render full height */

@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/number-badge-css/src";
+@use "~@utrecht/number-badge-css/src" as *;
 
 :host {
   display: inline-block;

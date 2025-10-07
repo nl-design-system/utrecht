@@ -6,8 +6,8 @@
 
 /* stylelint-disable scss/no-global-function-names */
 
-@import "~@utrecht/focus-ring-css/src/mixin";
-@import "./mixin";
+@use "~@utrecht/focus-ring-css/src/mixin" as *;
+@use "./mixin" as *;
 
 .utrecht-link-social {
   @include utrecht-link-social;
