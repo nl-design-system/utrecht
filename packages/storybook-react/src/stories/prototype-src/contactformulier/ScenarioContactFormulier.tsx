@@ -29,7 +29,7 @@ const ScenarioContact: React.FC = () => {
       </Paragraph>
       <Paragraph>
         Je vindt op de website van de gemeente niet direct een antwoord op je vragen. Dus heb je besloten om de gemeente
-        een vraag te stellen.
+        een vraag te stellen, omdat je een antwoord wilt op je vragen.
       </Paragraph>
       <Heading2>Instructie</Heading2>
       <Paragraph>
