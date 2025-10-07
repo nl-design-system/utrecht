@@ -34,6 +34,7 @@ import HulpEnContact from '../prototype-src/webpaginablokken/HulpEnContact.js';
 import HulpEnContact2 from '../prototype-src/webpaginablokken/HulpEnContact2.js';
 import KTO from '../prototype-src/webpaginablokken/KTO.js';
 import '../styles.css';
+import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
   title: 'Prototypes/Contactformulier/Stap 1',
@@ -56,15 +57,11 @@ export const One: Story = {
     return (
       <Surface className="utrecht-custom-theme">
         <Page {...args}>
-          <PageHeader>
-            <Logo>
-              <LogoImage />
-            </Logo>
-          </PageHeader>
+          <PageHeaderWithSearch />
           <HoofdNavigatie />
           <PageContent>
             <BreadcrumbNav>
-              <BreadcrumbNavLink href={urls.scenarioBscenario}>
+              <BreadcrumbNavLink href={urls.contactformScenario}>
                 <BreadcrumbNavSeparator>
                   <UtrechtIconChevronLeft />
                 </BreadcrumbNavSeparator>
