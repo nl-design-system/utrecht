@@ -4,7 +4,7 @@
  * Copyright (c) 2020-2022 Frameless B.V.
  */
 
-@import "./mixin";
+@use "./mixin" as *;
 
 /* `.utrecht-badge-data` is deprecated, but we'll keep supporting it for a while before we remove it */
 .utrecht-badge-data,

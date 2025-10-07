@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/alert-css/src";
+@use "~@utrecht/alert-css/src" as *;
 
 :host {
   display: block;

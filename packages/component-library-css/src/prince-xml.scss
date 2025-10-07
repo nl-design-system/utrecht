@@ -10,5 +10,5 @@
  */
 $utrecht-support-prince-xml: true !default;
 
-@import "./index";
-@import "~@utrecht/html-content-css/src";
+@use "./index";
+@use "~@utrecht/html-content-css/src/index" as *;

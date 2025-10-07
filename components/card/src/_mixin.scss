@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-@import "~@utrecht/img-css/src/mixin";
+@use "~@utrecht/img-css/src/mixin" as *;
 
 @mixin utrecht-card {
   background-color: var(--utrecht-card-background-color);

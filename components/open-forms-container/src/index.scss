@@ -1,4 +1,4 @@
-@import "./mixin";
+@use "./mixin" as *;
 
 .utrecht-open-forms-container {
   .utrecht-textbox {

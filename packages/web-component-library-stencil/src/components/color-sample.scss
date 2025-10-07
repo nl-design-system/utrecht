@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/color-sample-css/src/mixin";
+@use "~@utrecht/color-sample-css/src/mixin" as *;
 
 :host {
   @include utrecht-color-sample;

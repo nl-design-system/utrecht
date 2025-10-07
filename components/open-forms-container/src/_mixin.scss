@@ -1,4 +1,4 @@
-@import "~@utrecht/textbox-css/src/mixin";
+@use "~@utrecht/textbox-css/src/mixin" as *;
 
 @mixin utrecht-open-forms-container {
   .utrecht-textbox[name="data[voorletterSPZD]"],

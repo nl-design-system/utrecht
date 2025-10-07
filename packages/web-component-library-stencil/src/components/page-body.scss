@@ -4,7 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/page-body-css/src/mixin";
+@use "~@utrecht/page-body-css/src/mixin" as *;
 
 :host {
   @include utrecht-page-body;

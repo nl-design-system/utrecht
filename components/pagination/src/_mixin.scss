@@ -4,6 +4,8 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+
 @mixin utrecht-pagination {
   font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-pagination-font-size, var(--utrecht-document-font-family));
@@ -100,10 +102,10 @@
 
 .utrecht-pagination__page-link:focus,
 .utrecht-pagination__relative-link:focus {
-  @include utrecht-focus;
+  @include focus-ring.utrecht-focus;
 }
 
 .utrecht-pagination__page-link:focus-visible,
 .utrecht-pagination__relative-link:focus-visible {
-  @include utrecht-focus-visible;
+  @include focus-ring.utrecht-focus-visible;
 }

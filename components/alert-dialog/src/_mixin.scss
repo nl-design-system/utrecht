@@ -4,8 +4,8 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@import "~@utrecht/alert-css/src/mixin";
-@import "~@utrecht/backdrop-css/src/mixin";
+@use "~@utrecht/alert-css/src/mixin" as *;
+@use "~@utrecht/backdrop-css/src/mixin" as *;
 
 @mixin utrecht-alert-dialog {
   --utrecht-alert-dialog-margin-block-start: auto;

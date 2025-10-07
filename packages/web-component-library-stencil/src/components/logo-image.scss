@@ -3,7 +3,7 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-@import "~@utrecht/logo-image-css/src";
+@use "~@utrecht/logo-image-css/src" as *;
 
 :host {
   display: inline;

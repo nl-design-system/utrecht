@@ -28,19 +28,43 @@ Adding all new imports at the end of the list is a method that will result in a 
 Don't:
 
 ```scss
-@import "component-y";
-@import "component-b";
-@import "component-p";
-@import "component-new";
+@use "component-y";
+@use "component-b";
+@use "component-p";
+@use "component-new";
 ```
 
 Do:
 
 ```scss
-@import "component-b";
-@import "component-new";
-@import "component-p";
-@import "component-y";
+@use "component-b";
+@use "component-new";
+@use "component-p";
+@use "component-y";
+```
+
+## Use @use and @forward instead of @import
+
+Use modern SCSS module system with `@use` and `@forward` instead of `@import`:
+
+**For importing CSS classes:**
+
+```scss
+@use "~@utrecht/button-css/src/index";
+```
+
+**For importing mixins:**
+
+```scss
+@use "~@utrecht/button-css/src/forward" as *;
+@include utrecht-button;
+```
+
+**For exposing mixins in your component:**
+
+```scss
+// _forward.scss
+@forward "./mixin";
 ```
 
 ## Define `margin` and `padding` in the modern way
@@ -112,7 +136,7 @@ If you need to style HTML elements without class names, define those selectors i
 `html.scss`:
 
 ```scss
-@import "../css";
+@use "../css";
 
 a {
   @extend .nl-link;
