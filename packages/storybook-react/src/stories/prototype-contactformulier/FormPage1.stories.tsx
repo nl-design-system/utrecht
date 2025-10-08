@@ -27,6 +27,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
 import '../prototype-src/index.css';
+import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
 import urls from '../prototype-src/variables.js';
 import HoofdNavigatie from '../prototype-src/webpaginablokken/HoofdNavigatie.js';
@@ -258,6 +259,7 @@ export const One: Story = {
             </main>
           </PageContent>
           <FooterContact />
+          <Chatbot />
         </Page>
       </Surface>
     );

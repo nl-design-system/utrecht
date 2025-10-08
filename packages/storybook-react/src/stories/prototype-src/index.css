@@ -657,3 +657,30 @@ section {
 .utrecht-navigation__link:active:focus {
   --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color, var(--utrecht-color-black));
 }
+
+/* ChatbotKnop */
+
+.utrecht-chatbot {
+  align-items: center;
+  background-color: #2a5587;
+  block-size: 60px;
+  border: 2px solid #2a5587;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 1px #b5b5b5;
+  cursor: pointer;
+  display: flex;
+  inline-size: 60px;
+  inset-block-end: 20px;
+  inset-inline-end: 20px;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.utrecht-chatbot__icon {
+  inline-size: 50%;
+}
+
+.utrecht-chatbot:hover {
+  border: 2px solid #3669a5;
+}
