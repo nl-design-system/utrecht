@@ -29,7 +29,7 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-addon-themes'),
   ],
 
-  staticDirs: ['../../../proprietary/assets', '../src/script/', '../static'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/'],
 
   docs: {},
 
