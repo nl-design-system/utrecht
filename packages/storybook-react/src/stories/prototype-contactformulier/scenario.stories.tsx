@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { Meta, StoryObj } from '@storybook/react';
 import {
   ButtonLink,
   Logo,
@@ -12,13 +12,13 @@ import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
-import IntroductieContact from '../prototype-src/contactformulier/IntroductieContactFormulier.js'; // Importeer het footer-component
+import ScenarioContact from '../prototype-src/contactformulier/ScenarioContactFormulier.js'; // Importeer het scenario-component
 import urls from '../prototype-src/variables.js';
 import '../styles.css';
 
 const meta = {
-  title: 'Prototypes/Klachtenformulier Scenario B/Introductie ',
-  id: 'klachtenformulier-introductie-B',
+  title: 'Prototypes/Contactformulier/Scenario',
+  id: 'contactformulier-scenario',
   component: Page,
   parameters: {
     layout: 'fullscreen',
@@ -41,9 +41,10 @@ export const One: Story = {
         <PageContent>
           <main>
             <section>
-              <IntroductieContact />
-              <ButtonLink appearance="primary-action-button" href={urls.scenarioBscenario}>
-                Starten
+              <ScenarioContact />
+              <br />
+              <ButtonLink appearance="primary-action-button" href={urls.contactformStap1}>
+                Start
                 <UtrechtIconArrow />
               </ButtonLink>
             </section>

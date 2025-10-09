@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react-vite';
+import { Meta, StoryObj } from '@storybook/react';
 import {
   ButtonLink,
   Logo,
@@ -11,14 +11,13 @@ import {
 import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
-import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
-import IntroductieContact from '../prototype-src/contactformulier/IntroductieContactFormulier.js'; // Importeer het footer-component
-import urls from '../prototype-src/variables.js';
+import EmailContact from '../prototype-src/contactformulier/EmailContactFormulier.js'; // Importeer het email-component
 import '../styles.css';
+import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
 
 const meta = {
-  title: 'Prototypes/Klachtenformulier Scenario B/Introductie ',
-  id: 'klachtenformulier-introductie-B',
+  title: 'Prototypes/Contactformulier/E-mail',
+  id: 'contactformulier-email',
   component: Page,
   parameters: {
     layout: 'fullscreen',
@@ -41,15 +40,11 @@ export const One: Story = {
         <PageContent>
           <main>
             <section>
-              <IntroductieContact />
-              <ButtonLink appearance="primary-action-button" href={urls.scenarioBscenario}>
-                Starten
-                <UtrechtIconArrow />
-              </ButtonLink>
+              <EmailContact />
             </section>
           </main>
         </PageContent>
-        <FooterKlachten />
+        <FooterContact />
       </Page>
     </Surface>
   ),

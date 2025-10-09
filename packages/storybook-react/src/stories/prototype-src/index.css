@@ -26,6 +26,10 @@
 
   /* active focus */
 
+  /* input breedtes */
+  --utrecht-textarea-max-inline-size: 400px;
+  --utrecht-textbox-max-inline-size: 328px;
+
   /* --- navigation tokens end --- */
 }
 
@@ -54,7 +58,7 @@
 .utrecht-heading-3,
 .utrecht-heading-4,
 .utrecht-heading-5 {
-  font-weight: 600 !important;
+  font-weight: 600;
   margin-block-start: 24px !important;
 }
 
@@ -314,17 +318,17 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     font-weight: 400; /* Zorgt ervoor dat de tekst niet vetgedrukt is */
   }
   .utrecht-form-field__label {
-    margin-block-end: var(--utrecht-space-row-sm);
+    margin-block-end: var(--utrecht-space-row-xs);
   }
   .utrecht-form-field__label,
   .utrecht-form-label {
     margin-block-start: var(--utrecht-space-row-xl);
   }
 
-  /* TODO: Create a custom CSS class for the button instead of overwriting the button style directly.  
+  /* TODO: Create a custom CSS class for the button instead of overwriting the button style directly.
    This causes a style issue in different places. */
 
-  /* 
+  /*
   .utrecht-button--secondary-action,
   .utrecht-button-link--primary-action {
     margin-block-start: var(--utrecht-space-row-md);
@@ -343,6 +347,111 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   }
   .utrecht-form-field-error-message {
     margin-block-end: var(--utrecht-space-row-xs);
+  }
+
+  /* Project info blocks styling - FIXED */
+  .utrecht-project-info-blocks {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 2rem;
+    max-inline-size: 100%;
+  }
+
+  .utrecht-project-info-block {
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    padding-block: 1.5rem;
+    padding-inline: 1.5rem;
+  }
+
+  .utrecht-project-info-block__label {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-block-end: 0.5rem;
+  }
+
+  .utrecht-project-info-block__value {
+    color: #333;
+    font-size: 1rem;
+    margin-block: 0;
+  }
+
+  /* Contactformulier styling - FIXED */
+  .utrecht-contact-form {
+    background-color: #d4e4f1;
+    border-radius: 4px;
+    margin-block: 3rem;
+    padding-block: 1rem;
+    padding-inline: 1rem;
+  }
+
+  /* Hulp en contact blok styling - FIXED */
+  .utrecht-help-contact-block {
+    background-color: #d4e4f1;
+    border-radius: 4px;
+    margin-block: 3rem;
+    padding-block-end: 3rem;
+    padding-block-start: 1rem;
+    padding-inline: 1rem;
+  }
+
+  .utrecht-help-contact-content {
+    align-items: start;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .utrecht-help-contact-phone {
+    color: #000;
+    display: inline-block;
+    font-size: 1.5rem;
+    margin-block-end: 2rem;
+    text-decoration: underline;
+  }
+
+  .utrecht-social-media-icons {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+  }
+
+  .utrecht-social-media-icon {
+    --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+
+    align-items: center;
+    background-color: #c00; /* Verkort van #cc0000 */
+    block-size: 44px; /* Gebruik block-size ipv height */
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    inline-size: 44px; /* Gebruik inline-size ipv width */
+    justify-content: center;
+    text-decoration: none;
+    transition: background-color 300ms ease; /* Geen 's' unit */
+  }
+
+  /* Responsive design - FIXED */
+  @media (width <= 768px) {
+    /* Moderne syntax */
+    .utrecht-help-contact-content {
+      gap: 2rem;
+      grid-template-columns: 1fr;
+    }
+
+    .utrecht-help-contact-phone {
+      font-size: 2rem;
+    }
+  }
+
+  /* Responsive design voor kleinere schermen - FIXED */
+  @media (width <= 768px) {
+    /* Moderne syntax */
+    .utrecht-project-info-blocks {
+      grid-template-columns: 1fr;
+    }
   }
 
   /* invalid styling (border) op formfield-textarea niet wordt opgepakt via Github, dus deze toegevoegd als extraatje */
@@ -407,9 +516,32 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   .utrecht-link utrecht-icon-cross {
     transform: translateY(-4px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
+  .utrecht-button utrecht-icon-arrow,
   .utrecht-button-link--primary-action utrecht-icon-arrow {
     transform: translateY(-2px); /* Verschuift het icoon 2px naar beneden zodat ik lekker smoelt in het midden */
   }
+
+  .utrecht-button utrecht-icon-arrow {
+    margin-left: 4px;
+  }
+
+  .utrecht-icon-outline {
+    block-size: 16px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: inline-block;
+    inline-size: 16px;
+    line-height: 16px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .utrecht-icon-outline utrecht-icon-checkmark {
+    font-size: 0;
+    height: 16px;
+    inline-size: 8px;
+  }
+
   .utrecht-advanced-link--with-icon {
     align-items: center;
     display: flex;
@@ -524,4 +656,31 @@ section {
 
 .utrecht-navigation__link:active:focus {
   --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color, var(--utrecht-color-black));
+}
+
+/* ChatbotKnop */
+
+.utrecht-chatbot {
+  align-items: center;
+  background-color: #2a5587;
+  block-size: 60px;
+  border: 2px solid #2a5587;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px 1px #b5b5b5;
+  cursor: pointer;
+  display: flex;
+  inline-size: 60px;
+  inset-block-end: 20px;
+  inset-inline-end: 20px;
+  justify-content: center;
+  position: fixed;
+  z-index: 100;
+}
+
+.utrecht-chatbot__icon {
+  inline-size: 50%;
+}
+
+.utrecht-chatbot:hover {
+  border: 2px solid #3669a5;
 }
