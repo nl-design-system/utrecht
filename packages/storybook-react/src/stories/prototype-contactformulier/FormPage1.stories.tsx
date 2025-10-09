@@ -75,7 +75,7 @@ export const One: Story = {
                 <Image
                   alt="Amsterdamsestraatweg tijdens herinrichting"
                   photo
-                  src="prototype-contactformulier__amsterdamsestraatweg-headerimage.jpg"
+                  src="images/prototype-contactformulier__amsterdamsestraatweg-headerimage.jpg"
                 />
 
                 <div className="utrecht-project-info-blocks">
@@ -193,7 +193,7 @@ export const One: Story = {
                 <Image
                   alt="Amsterdamsestraatweg na herinrichting"
                   photo
-                  src="prototype-contactformulier__amsterdamsestraatweg.jpg"
+                  src="images/prototype-contactformulier__amsterdamsestraatweg.jpg"
                 />
                 <Heading2>Op de hoogte blijven</Heading2>
                 <Paragraph>
