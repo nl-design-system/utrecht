@@ -18,7 +18,7 @@ const config: StorybookConfig = {
     name: getAbsolutePath('@storybook/vue3-vite'),
     options: {},
   },
-  staticDirs: ['../../../proprietary/assets', '../static'],
+  staticDirs: ['../../../proprietary/assets'],
   docs: {},
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
