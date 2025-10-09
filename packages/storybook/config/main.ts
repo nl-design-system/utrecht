@@ -26,7 +26,7 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-addon-pseudo-states'),
     getAbsolutePath('storybook-addon-themes'),
   ],
-  staticDirs: ['../../../proprietary/assets', '../src/script/', '../static'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (_, { configType }) => {
     // https://storybook.js.org/docs/react/sharing/storybook-composition#compose-storybooks-per-environment
     let config = {};

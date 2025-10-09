@@ -28,7 +28,7 @@ const config: StorybookConfig = {
     options: {},
   },
 
-  staticDirs: ['../../../proprietary/assets', '../static'],
+  staticDirs: ['../../../proprietary/assets'],
 
   docs: {},
 

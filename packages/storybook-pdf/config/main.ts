@@ -17,7 +17,7 @@ const config: StorybookConfig = {
 
   addons: [getAbsolutePath('@storybook/addon-docs'), getAbsolutePath('@chromatic-com/storybook')],
 
-  staticDirs: ['../../../proprietary/assets', '../src/script/', '../../component-library-pdf/screenshots/', '../static'],
+  staticDirs: ['../../../proprietary/assets', '../src/script/', '../../component-library-pdf/screenshots/'],
 
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
