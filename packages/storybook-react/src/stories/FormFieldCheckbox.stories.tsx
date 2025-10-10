@@ -5,6 +5,14 @@ import FormFieldMeta from './FormField.stories.js';
 
 const storyArgTypes = {
   ...FormFieldMeta.argTypes,
+  checkboxInvalid: {
+    description: 'Sets invalid on the checkbox only',
+    control: 'boolean',
+    table: {
+      category: 'API',
+      defaultValue: { summary: true },
+    },
+  },
   defaultChecked: {
     description: 'Checked',
     control: 'boolean',
@@ -86,12 +94,13 @@ const meta = {
   component: FormFieldCheckbox,
   argTypes: storyArgTypes,
   args: {
+    checkboxInvalid: true,
     defaultChecked: false,
     description: 'U kunt ons echt vertrouwen!',
     disabled: false,
     id: '12157f39-9547-45b1-aa4b-e1c9d51fcf24',
     indeterminate: false,
-    invalid: true,
+    invalid: false,
     errorMessage: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
     label: 'Ik ga akkoord met de algemene voorwaarden',
     name: 'consent',
@@ -100,6 +109,7 @@ const meta = {
   },
   render: (args) => {
     const {
+      checkboxInvalid,
       defaultChecked,
       description,
       disabled,
@@ -114,6 +124,7 @@ const meta = {
     } = args;
     return (
       <FormFieldCheckbox
+        checkboxInvalid={checkboxInvalid}
         id={id}
         defaultChecked={defaultChecked}
         description={description}

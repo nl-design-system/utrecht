@@ -11,6 +11,7 @@ import { forwardRef, useId } from 'react';
 
 export interface FormFieldCheckboxProps
   extends Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput' | 'type'> {
+  checkboxInvalid?: CheckboxProps['invalid'];
   checked?: CheckboxProps['checked'];
   defaultChecked?: CheckboxProps['defaultChecked'];
   defaultValue?: CheckboxProps['defaultValue'];
@@ -35,6 +36,7 @@ export interface FormFieldCheckboxProps
 export const FormFieldCheckbox = forwardRef(
   (
     {
+      checkboxInvalid,
       checked,
       children,
       defaultChecked,
@@ -85,7 +87,7 @@ export const FormFieldCheckbox = forwardRef(
               indeterminate={indeterminate}
               ref={inputRef}
               inputRequired={inputRequired}
-              invalid={invalid}
+              invalid={checkboxInvalid || invalid}
               name={name}
               onBlur={onBlur}
               onChange={onChange}
