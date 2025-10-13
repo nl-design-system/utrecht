@@ -1,8 +1,10 @@
 @import "@utrecht/component-library-css/dist/index.css";
 @import "@utrecht/design-tokens/dist/theme.css";
 
-.utrecht-page-header__content {
+.utrecht-theme.utrecht-theme--documentation-website {
   --utrecht-page-header-content-padding-block-end: 2rem;
+  --utrecht-nav-bar-link-padding-block-start: 1rem;
+  --utrecht-nav-bar-link-padding-block-end: 1rem;
 }
 
 .utrecht-nav-bar {
@@ -11,13 +13,14 @@
 }
 
 .utrecht-nav-list__item {
-  --utrecht-nav-bar-link-padding-block-start: 1rem;
-  --utrecht-nav-bar-link-padding-block-end: 1rem;
-
   flex: 1 1 auto;
 }
 
 .utrecht-nav-list__link {
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-color: var(--utrecht-color-black);
+  --utrecht-link-hover-text-decoration-thickness: 1px;
+
   display: flex;
   inline-size: 100%;
   justify-content: center;
