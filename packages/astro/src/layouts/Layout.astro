@@ -17,12 +17,12 @@ import { base } from 'astro:config/client';
     <Page className="utrecht-custom-page">
       <PageHeader>
         <div class="utrecht-page-header__content">
-          <a href=`${base}` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+          <a href=`${base}/` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
         </div>
         <nav>
           <NavBar>
               <NavList>
-                <NavListLink href={base}>Utrecht Design System</NavListLink>
+                <NavListLink href={`${base}/design-system`}>Utrecht Design System</NavListLink>
                 <NavListLink href={base}>Voor designers</NavListLink>
                 <NavListLink href={base}>Voor developers</NavListLink>
                 <NavListLink href={base}>Richtlijnen</NavListLink>

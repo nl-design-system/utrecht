@@ -11,7 +11,7 @@ const baseUrl = path.posix.join(deploymentBaseUrl, 'astro');
 // https://astro.build/config
 export default defineConfig({
   base: baseUrl,
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
   build: {
     inlineStylesheets: 'never',
   },
