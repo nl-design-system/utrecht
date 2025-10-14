@@ -1,5 +1,11 @@
 # @utrecht/figure-css
 
+## 1.6.0
+
+### Minor Changes
+
+- d0e3ca8: Design Tokens toegevoegd voor `margin-inline-*`
+
 ## 1.5.1
 
 ### Patch Changes

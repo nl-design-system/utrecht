@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 3.4.0
+
+### Minor Changes
+
+- f7e5550: Add Navigation-css component with mobile drawer support
+
 ## 3.3.0
 
 ### Minor Changes

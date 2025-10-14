@@ -1,5 +1,13 @@
 # @utrecht/component-library-react
 
+## 10.3.3
+
+### Patch Changes
+
+- Updated dependencies [d0e3ca8]
+  - @utrecht/figure-css@1.6.0
+  - @utrecht/html-content-css@1.4.1
+
 ## 10.3.2
 
 ### Patch Changes
