@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 1.1.3
+
+### Patch Changes
+
+- Updated dependencies [d0e3ca8]
+  - @utrecht/figure-css@1.6.0
+  - @utrecht/html-content-css@1.4.1
+
 ## 1.1.2
 
 ### Patch Changes

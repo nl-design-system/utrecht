@@ -1,5 +1,19 @@
 # @utrecht/component-library-css
 
+## 8.1.0
+
+### Minor Changes
+
+- f7e5550: Add Navigation-css component with mobile drawer support
+
+### Patch Changes
+
+- Updated dependencies [d0e3ca8]
+- Updated dependencies [f7e5550]
+  - @utrecht/figure-css@1.6.0
+  - @utrecht/navigation-css@1.0.0
+  - @utrecht/html-content-css@1.4.1
+
 ## 8.0.0
 
 ### Major Changes
