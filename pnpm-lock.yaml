@@ -439,6 +439,12 @@ importers:
         specifier: workspace:*
         version: link:../focus-ring
 
+  components/grid:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/heading:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -1443,6 +1449,9 @@ importers:
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
+      '@utrecht/grid-css':
+        specifier: workspace:*
+        version: link:../../components/grid
       '@utrecht/heading-1-css':
         specifier: workspace:*
         version: link:../../components/heading-1
@@ -5482,6 +5491,9 @@ importers:
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
+      '@utrecht/grid-css':
+        specifier: workspace:*
+        version: link:../../components/grid
       '@utrecht/heading-1-css':
         specifier: workspace:*
         version: link:../../components/heading-1
@@ -46252,7 +46264,7 @@ snapshots:
 
   jest-worker@27.5.1:
     dependencies:
-      '@types/node': 22.18.1
+      '@types/node': 24.3.1
       merge-stream: 2.0.0
       supports-color: 8.1.1
 
@@ -46616,7 +46628,7 @@ snapshots:
     dependencies:
       copy-anything: 2.0.6
       parse-node-version: 1.0.1
-      tslib: 2.6.2
+      tslib: 2.8.1
     optionalDependencies:
       errno: 0.1.8
       graceful-fs: 4.2.11
