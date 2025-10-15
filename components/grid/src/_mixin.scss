@@ -1,0 +1,110 @@
+@mixin utrecht-grid-breakpoint($name, $breakpoints) {
+  @if $name == "sm" {
+    @media screen and (min-width: var(--utrecht-grid-breakpoint-sm)) {
+      @content;
+    }
+  } @else if $name == "md" {
+    @media screen and (min-width: var(--utrecht-grid-breakpoint-md)) {
+      @content;
+    }
+  } @else if $name == "lg" {
+    @media screen and (min-width: var(--utrecht-grid-breakpoint-lg)) {
+      @content;
+    }
+  }
+}
+
+@mixin utrecht-grid-columns($breakpoint: null) {
+  @for $i from 1 through 12 {
+    @if $breakpoint {
+      &--#{$breakpoint}-#{$i} {
+        --_utrecht-columns: #{$i};
+      }
+    } @else {
+      &--xs-#{$i} {
+        --_utrecht-columns: #{$i};
+      }
+    }
+  }
+}
+
+@mixin utrecht-grid-order($breakpoint: null) {
+  @for $i from 1 through 12 {
+    @if $breakpoint {
+      &--order-#{$breakpoint}-#{$i} {
+        --_utrecht-grid-order: #{$i};
+      }
+    } @else {
+      &--order-#{$i} {
+        --_utrecht-grid-order: #{$i};
+      }
+    }
+  }
+}
+
+@mixin utrecht-grid-justify-content(
+  $breakpoint: null,
+  $values: (
+    flex-start,
+    flex-end,
+    center,
+    space-between,
+  )
+) {
+  @each $value in $values {
+    @if $breakpoint {
+      &--justify-content-#{$breakpoint}-#{$value} {
+        --_utrecht-grid-justify-content: #{$value};
+        --_utrecht-grid-display: flex;
+      }
+    } @else {
+      &--justify-content-#{$value} {
+        --_utrecht-grid-justify-content: #{$value};
+        --_utrecht-grid-display: flex;
+      }
+    }
+  }
+}
+
+@mixin utrecht-grid-align-items(
+  $breakpoint: null,
+  $values: (
+    flex-start,
+    flex-end,
+    center,
+  )
+) {
+  @each $value in $values {
+    @if $breakpoint {
+      &--align-items-#{$breakpoint}-#{$value} {
+        --_utrecht-grid-align-items: #{$value};
+        --_utrecht-grid-display: flex;
+      }
+    } @else {
+      &--align-items-#{$value} {
+        --_utrecht-grid-align-items: #{$value};
+        --_utrecht-grid-display: flex;
+      }
+    }
+  }
+}
+
+@mixin utrecht-grid-spacing(
+  $spacings: (
+    "sm": 8px,
+    "md": 16px,
+    "lg": 24px,
+  )
+) {
+  @each $name, $value in $spacings {
+    &--spacing-#{$name} {
+      margin-block: calc(-1 * var(--utrecht-grid-spacing-#{$name}, #{$value}));
+      margin-inline: calc(-1 * var(--utrecht-grid-spacing-#{$name}, #{$value}));
+    }
+
+    &--spacing-#{$name} > .utrecht-grid__cell {
+      padding-block: var(--utrecht-grid-spacing-#{$name}, #{$value});
+      padding-inline: var(--utrecht-grid-spacing-#{$name}, #{$value});
+    }
+  }
+}
