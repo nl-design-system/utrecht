@@ -1,5 +1,12 @@
 # @utrecht/action-group-react
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies [77438bb]
+  - @utrecht/action-group-css@3.0.0
+
 ## 1.1.1
 
 ### Patch Changes

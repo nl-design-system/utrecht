@@ -1,5 +1,13 @@
 # @utrecht/calendar-react
 
+## 1.0.12
+
+### Patch Changes
+
+- Updated dependencies [77438bb]
+  - @utrecht/calendar-css@2.0.0
+  - @utrecht/button-react@2.0.8
+
 ## 1.0.11
 
 ### Patch Changes

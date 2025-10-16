@@ -1,5 +1,12 @@
 # @utrecht/button-react
 
+## 2.0.8
+
+### Patch Changes
+
+- Updated dependencies [77438bb]
+  - @utrecht/button-css@3.0.0
+
 ## 2.0.7
 
 ### Patch Changes
