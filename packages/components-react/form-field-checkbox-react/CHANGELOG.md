@@ -1,5 +1,11 @@
 # @utrecht/form-field-checkbox-react
 
+## 1.1.0
+
+### Minor Changes
+
+- bd5ea21: Added a new prop to set invalid on the Checkbox itself only, instead of on the whole formfield.
+
 ## 1.0.10
 
 ### Patch Changes
