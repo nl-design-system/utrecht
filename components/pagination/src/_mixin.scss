@@ -100,12 +100,10 @@
   color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
 }
 
-.utrecht-pagination__page-link:focus,
-.utrecht-pagination__relative-link:focus {
+@mixin utrecht-pagination__link--focus {
   @include focus-ring.utrecht-focus;
 }
 
-.utrecht-pagination__page-link:focus-visible,
-.utrecht-pagination__relative-link:focus-visible {
+@mixin utrecht-pagination__link--focus-visible {
   @include focus-ring.utrecht-focus-visible;
 }
