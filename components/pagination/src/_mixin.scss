@@ -107,9 +107,15 @@
 }
 
 @mixin utrecht-pagination__link--focus {
+  background-color: var(--utrecht-pagination-relative-link-focus-background-color, transparent);
+  color: var(--utrecht-pagination-relative-link-focus-color);
+
   @include focus-ring.utrecht-focus;
 }
 
 @mixin utrecht-pagination__link--focus-visible {
+  background-color: var(--utrecht-pagination-relative-link-focus-visible-background-color, transparent);
+  color: var(--utrecht-pagination-relative-link-focus-visible-color);
+
   @include focus-ring.utrecht-focus-visible;
 }
