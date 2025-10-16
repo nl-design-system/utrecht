@@ -100,7 +100,7 @@ const meta = {
     disabled: false,
     id: '12157f39-9547-45b1-aa4b-e1c9d51fcf24',
     indeterminate: false,
-    invalid: false,
+    invalid: true,
     errorMessage: 'U moet akkoord gaan met de algemene voorwaarden, anders kunt u niet verder.',
     label: 'Ik ga akkoord met de algemene voorwaarden',
     name: 'consent',
