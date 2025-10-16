@@ -5,8 +5,8 @@ import FormFieldMeta from './FormField.stories.js';
 
 const storyArgTypes = {
   ...FormFieldMeta.argTypes,
-  checkboxInvalid: {
-    description: 'Sets invalid on the checkbox only',
+  inputInvalid: {
+    description: 'Sets invalid on the input element only',
     control: 'boolean',
     table: {
       category: 'API',
@@ -94,7 +94,7 @@ const meta = {
   component: FormFieldCheckbox,
   argTypes: storyArgTypes,
   args: {
-    checkboxInvalid: true,
+    inputInvalid: false,
     defaultChecked: false,
     description: 'U kunt ons echt vertrouwen!',
     disabled: false,
@@ -109,7 +109,7 @@ const meta = {
   },
   render: (args) => {
     const {
-      checkboxInvalid,
+      inputInvalid,
       defaultChecked,
       description,
       disabled,
@@ -124,7 +124,7 @@ const meta = {
     } = args;
     return (
       <FormFieldCheckbox
-        checkboxInvalid={checkboxInvalid}
+        inputInvalid={inputInvalid}
         id={id}
         defaultChecked={defaultChecked}
         description={description}
