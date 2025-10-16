@@ -1,4 +1,16 @@
-# Astro Starter Kit: Basics
+# Astro Documentatie
+
+## Waarom Astro?
+
+Er is gekozen om over te stappen op Astro voor de documentatie website van de Gemeente Utrecht. Dit brengt enkele voordelen met zich mee ten opzichte van de vorige Docusaurus variant.
+
+1. Gebruik van eigen componenten is eenvoudig
+2. Aansluiten bij ontwikkelingen binnen de NL Design System Community, hierdoor kunnen we bijvoorbeeld bestaande plugins gebruiken om NL Design System componeten in te zetten voor markdown rendering
+3. Meer vrijheid met de navigatie structuur
+4. Kleine builds, geen grote (react) javascript bundel nodig op de client
+5. Framework agnostisch: we kunnen gebruik maken van React, Vue, Svelte en nog meer component frameworks voor het bouwen van de statische website.
+
+## Astro Starter Kit: Basics
 
 ```sh
 pnpm create astro@latest -- --template basics
