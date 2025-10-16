@@ -48,6 +48,10 @@
     var(--utrecht-pagination-relative-link-background-color)
   );
   color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
+  text-decoration: var(
+    --utrecht-pagination-relative-link-disabled-text-decoration,
+    var(--utrecht-pagination-relative-link-text-decoration)
+  );
 }
 
 @mixin utrecht-pagination__relative-link--hover {
