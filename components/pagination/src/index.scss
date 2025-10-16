@@ -49,16 +49,16 @@
 }
 
 .utrecht-pagination__page-link--hover,
-.utrecht-pagination__page-link:hover {
+.utrecht-pagination__page-link:any-link:hover {
   @include utrecht-pagination__page-link--hover;
 }
 
-.utrecht-pagination__page-link:focus,
-.utrecht-pagination__relative-link:focus {
+.utrecht-pagination__page-link:any-link:focus,
+.utrecht-pagination__relative-link:any-link:focus {
   @include utrecht-pagination__link--focus;
 }
 
-.utrecht-pagination__page-link:focus-visible,
-.utrecht-pagination__relative-link:focus-visible {
+.utrecht-pagination__page-link:any-link:focus-visible,
+.utrecht-pagination__relative-link:any-link:focus-visible {
   @include utrecht-pagination__link--focus-visible;
 }
