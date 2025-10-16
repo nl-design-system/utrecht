@@ -1,5 +1,12 @@
 # @utrecht/preact-app
 
+## 1.0.31
+
+### Patch Changes
+
+- @utrecht/component-library-react@10.3.5
+- @utrecht/button-react@2.0.8
+
 ## 1.0.30
 
 ### Patch Changes

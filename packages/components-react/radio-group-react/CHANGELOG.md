@@ -1,5 +1,18 @@
 # @utrecht/radio-group-react
 
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies [77438bb]
+  - @utrecht/form-field-css@2.0.0
+  - @utrecht/form-field-error-message-react@1.0.8
+  - @utrecht/form-field-description-react@1.0.8
+  - @utrecht/fieldset-react@1.0.8
+  - @utrecht/radio-button-react@1.0.8
+  - @utrecht/form-field-react@1.0.8
+  - @utrecht/form-label-react@1.0.8
+
 ## 1.0.10
 
 ### Patch Changes
