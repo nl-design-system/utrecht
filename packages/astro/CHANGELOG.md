@@ -1,5 +1,11 @@
 # @utrecht/astro
 
+## 0.0.3
+
+### Patch Changes
+
+- @utrecht/component-library-react@10.3.4
+
 ## 0.0.2
 
 ### Patch Changes

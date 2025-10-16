@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 10.3.4
+
+### Patch Changes
+
+- Updated dependencies [bd5ea21]
+  - @utrecht/form-field-checkbox-react@1.1.0
+
 ## 10.3.3
 
 ### Patch Changes
