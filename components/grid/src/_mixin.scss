@@ -1,17 +1,56 @@
-@mixin utrecht-grid-breakpoint($name, $breakpoints) {
-  @if $name == "sm" {
-    @media screen and (min-width: var(--utrecht-grid-breakpoint-sm)) {
-      @content;
-    }
-  } @else if $name == "md" {
-    @media screen and (min-width: var(--utrecht-grid-breakpoint-md)) {
-      @content;
-    }
-  } @else if $name == "lg" {
-    @media screen and (min-width: var(--utrecht-grid-breakpoint-lg)) {
-      @content;
+@use "sass:map";
+
+// Container query mixin for configurable breakpoints
+@mixin utrecht-grid-breakpoint($name) {
+  @container (min-width: var(--utrecht-grid-breakpoint-#{$name})) {
+    @content;
+  }
+}
+
+// Fallback media query mixin for browsers without container query support
+@mixin utrecht-grid-breakpoint-fallback($name, $breakpoints: ("sm": 600px, "md": 960px, "lg": 1280px)) {
+  @media screen and (min-width: map.get($breakpoints, $name)) {
+    @content;
+  }
+}
+
+// Combined mixin with progressive enhancement
+@mixin utrecht-grid-responsive-breakpoint($name, $fallback-size: 600px) {
+  // Fallback for browsers without container query support
+  @media screen and (min-width: #{$fallback-size}) {
+    @content;
+  }
+
+  // Progressive enhancement with container queries
+  @supports (container-type: inline-size) {
+    @media screen and (width >= 0) {
+      @container (min-width: var(--utrecht-grid-breakpoint-#{$name}, #{$fallback-size})) {
+        @content;
+      }
     }
   }
+}
+
+// Container styles mixin
+@mixin utrecht-grid-container {
+  align-items: var(--_utrecht-grid-align-items, initial);
+  display: var(--_utrecht-grid-display, flex);
+  flex-direction: var(--_utrecht-grid-flex-direction, row);
+  flex-wrap: var(--_utrecht-grid-flex-wrap, wrap);
+  justify-content: var(--_utrecht-grid-justify-content, initial);
+}
+
+// Cell styles mixin
+@mixin utrecht-grid-cell {
+  align-items: var(--_utrecht-grid-align-items, initial);
+  box-sizing: var(--_utrecht-grid-box-sizing, border-box);
+  display: var(--_utrecht-grid-display, block);
+  flex: var(--_utrecht-grid-flex, 0 0 auto);
+  inline-size: calc(
+    var(--_utrecht-columns, var(--_utrecht-grid-columns-default, 4)) / var(--_utrecht-grid-columns-total, 12) * 100%
+  );
+  justify-content: var(--_utrecht-grid-justify-content, initial);
+  order: var(--_utrecht-grid-order, initial);
 }
 
 @mixin utrecht-grid-columns($breakpoint: null) {
@@ -102,9 +141,46 @@
       margin-inline: calc(-1 * var(--utrecht-grid-spacing-#{$name}, #{$value}));
     }
 
-    &--spacing-#{$name} > .utrecht-grid__cell {
+    &--spacing-#{$name} .utrecht-grid__cell {
       padding-block: var(--utrecht-grid-spacing-#{$name}, #{$value});
       padding-inline: var(--utrecht-grid-spacing-#{$name}, #{$value});
+    }
+  }
+}
+
+// Flex direction mixin
+@mixin utrecht-grid-flex-direction(
+  $values: (
+    column,
+    column-reverse,
+    row,
+    row-reverse,
+  )
+) {
+  @each $value in $values {
+    &--flex-direction-#{$value} {
+      --_utrecht-grid-flex-direction: #{$value};
+    }
+  }
+}
+
+// Generate all responsive classes with configurable breakpoints
+@mixin utrecht-grid-responsive-classes(
+  $breakpoints: (
+    "sm": 600px,
+    "md": 960px,
+    "lg": 1280px,
+  )
+) {
+  // Base classes (xs)
+  @include utrecht-grid-columns;
+  @include utrecht-grid-order;
+
+  // Responsive classes with configurable breakpoints
+  @each $breakpoint, $fallback-size in $breakpoints {
+    @include utrecht-grid-responsive-breakpoint($breakpoint, $fallback-size) {
+      @include utrecht-grid-columns($breakpoint);
+      @include utrecht-grid-order($breakpoint);
     }
   }
 }

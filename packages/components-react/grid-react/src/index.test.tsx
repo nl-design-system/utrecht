@@ -6,7 +6,7 @@ describe('Grid', () => {
   it('renders a grid container', () => {
     const { container } = render(<Grid />);
 
-    const grid = container.querySelector('.utrecht-grid__container');
+    const grid = container.querySelector('.utrecht-grid');
 
     expect(grid).toBeInTheDocument();
   });
@@ -30,7 +30,7 @@ describe('Grid', () => {
   it('applies custom className', () => {
     const { container } = render(<Grid className="custom" />);
 
-    expect(container.firstChild).toHaveClass('utrecht-grid__container');
+    expect(container.firstChild).toHaveClass('utrecht-grid');
     expect(container.firstChild).toHaveClass('custom');
   });
 });
