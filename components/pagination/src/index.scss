@@ -55,10 +55,10 @@
 
 .utrecht-pagination__page-link:focus,
 .utrecht-pagination__relative-link:focus {
-  @include focus-ring.utrecht-focus;
+  @include utrecht-pagination__link--focus;
 }
 
 .utrecht-pagination__page-link:focus-visible,
 .utrecht-pagination__relative-link:focus-visible {
-  @include focus-ring.utrecht-focus-visible;
+  @include utrecht-pagination__link--focus-visible;
 }

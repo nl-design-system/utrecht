@@ -9,6 +9,7 @@
 @mixin utrecht-pagination {
   font-family: var(--utrecht-pagination-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-pagination-font-size, var(--utrecht-document-font-family));
+  line-height: var(--utrecht-pagination-line-height, var(--utrecht-document-line-height));
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-pagination-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-pagination-margin-block-start, 0));
 }
@@ -48,6 +49,10 @@
     var(--utrecht-pagination-relative-link-background-color)
   );
   color: var(--utrecht-pagination-relative-link-disabled-color, var(--utrecht-pagination-relative-link-color));
+  text-decoration: var(
+    --utrecht-pagination-relative-link-disabled-text-decoration,
+    var(--utrecht-pagination-relative-link-text-decoration)
+  );
 }
 
 @mixin utrecht-pagination__relative-link--hover {
@@ -82,6 +87,7 @@
   --utrecht-pagination-page-link-background-color: var(--utrecht-pagination-page-link-current-background-color);
   --utrecht-pagination-page-link-border-color: var(--utrecht-pagination-page-link-current-border-color);
   --utrecht-pagination-page-link-color: var(--utrecht-pagination-page-link-current-color);
+  --utrecht-pagination-page-link-text-decoration: var(--utrecht-pagination-page-link-current-text-decoration);
 }
 
 @mixin utrecht-pagination__page-link--distanced {
@@ -100,12 +106,16 @@
   color: var(--utrecht-pagination-page-link-hover-color, var(--utrecht-pagination-page-link-color));
 }
 
-.utrecht-pagination__page-link:focus,
-.utrecht-pagination__relative-link:focus {
+@mixin utrecht-pagination__link--focus {
+  background-color: var(--utrecht-pagination-relative-link-focus-background-color, transparent);
+  color: var(--utrecht-pagination-relative-link-focus-color);
+
   @include focus-ring.utrecht-focus;
 }
 
-.utrecht-pagination__page-link:focus-visible,
-.utrecht-pagination__relative-link:focus-visible {
+@mixin utrecht-pagination__link--focus-visible {
+  background-color: var(--utrecht-pagination-relative-link-focus-visible-background-color, transparent);
+  color: var(--utrecht-pagination-relative-link-focus-visible-color);
+
   @include focus-ring.utrecht-focus-visible;
 }
