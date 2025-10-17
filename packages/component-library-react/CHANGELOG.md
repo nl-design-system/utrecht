@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 10.3.6
+
+### Patch Changes
+
+- Updated dependencies [2af8480]
+  - @utrecht/pagination-css@2.0.1
+
 ## 10.3.5
 
 ### Patch Changes

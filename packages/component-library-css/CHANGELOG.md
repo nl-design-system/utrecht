@@ -1,5 +1,12 @@
 # @utrecht/component-library-css
 
+## 8.1.2
+
+### Patch Changes
+
+- Updated dependencies [2af8480]
+  - @utrecht/pagination-css@2.0.1
+
 ## 8.1.1
 
 ### Patch Changes
