@@ -1,5 +1,11 @@
 # @utrecht/pagination-css
 
+## 2.0.2
+
+### Patch Changes
+
+- a22338a: Hover styles worden nu enkel op daadwerkelijke links toegepast
+
 ## 2.0.1
 
 ### Patch Changes
