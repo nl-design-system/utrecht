@@ -12,6 +12,11 @@ const baseUrl = path.posix.join(deploymentBaseUrl, 'astro');
 export default defineConfig({
   base: baseUrl,
   trailingSlash: 'ignore',
+  vite: {
+    resolve: {
+      alias: [{ find: /^@babel\/runtime\/helpers\/(.*)$/, replacement: '@babel/runtime/helpers/esm/$1' }],
+    },
+  },
   build: {
     inlineStylesheets: 'never',
   },
