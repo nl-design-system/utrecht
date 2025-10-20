@@ -1,5 +1,12 @@
 # @utrecht/component-library-design-tokens
 
+## 1.1.6
+
+### Patch Changes
+
+- Updated dependencies [a22338a]
+  - @utrecht/pagination-css@2.0.2
+
 ## 1.1.5
 
 ### Patch Changes
