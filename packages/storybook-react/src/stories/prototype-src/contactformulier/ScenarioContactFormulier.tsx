@@ -20,21 +20,10 @@ const ScenarioContact: React.FC = () => {
         aangegeven omleiding klopt niet met je navigatie, en door al het bouwverkeer is er veel geluidshinder - vooral
         &apos;s morgens vroeg en &apos;s avonds laat.
       </Paragraph>
-      <Paragraph>
-        Je wilt graag meer duidelijkheid over:
-        <UnorderedList>
-          <UnorderedListItem>Hoe lang de overlast nog gaat duren</UnorderedListItem>
-          <UnorderedListItem>Of er iets gedaan kan worden aan de geluidshinder in de avonduren</UnorderedListItem>
-        </UnorderedList>
-      </Paragraph>
-      <Paragraph>
-        Je vindt op de website van de gemeente niet direct een antwoord op je vragen. Dus heb je besloten om de gemeente
-        een vraag te stellen, omdat je een antwoord wilt op je vragen.
-      </Paragraph>
       <Heading2>Instructie</Heading2>
       <Paragraph>
-        Ga nu naar de informatie-pagina over de werkzaamheden op de Amsterdamsestraatweg en gebruik het contactformulier
-        om je vragen in te dienen. Doe dit zoals je dat in het echte leven zou doen.
+        Klik op de knop Start. Bekijk de informatie-pagina over de werkzaamheden op de Amsterdamsestraatweg. Daarna
+        vertellen we je de volgende stap.
       </Paragraph>
     </>
   );
