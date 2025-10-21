@@ -4,6 +4,7 @@ import {
   FormFieldTextbox,
   Heading2,
   Heading3,
+  LinkSocial,
   Separator,
 } from '@utrecht/component-library-react/dist/css-module';
 import {
@@ -116,17 +117,29 @@ const HulpEnContact: React.FC<HulpEnContactProps> = ({ onSubmit }) => {
 
         <div className="utrecht-help-contact-right">
           <Heading3 style={{ fontWeight: 'normal' }}>Volg ons</Heading3>
-          <div className="utrecht-social-media-icons">
-            <a href="#" className="utrecht-social-media-icon" aria-label="Facebook">
-              <UtrechtIconFacebook />
-            </a>
-            <a href="#" className="utrecht-social-media-icon" aria-label="X">
-              <UtrechtIconX />
-            </a>
-            <a href="#" className="utrecht-social-media-icon" aria-label="YouTube">
-              <UtrechtIconYoutube />
-            </a>
-          </div>
+          <LinkSocial
+            external
+            href="https://www.facebook.com/GemeenteUtrecht"
+            title="facebook"
+            style={{ marginRight: '0.5em' }}
+          >
+            <UtrechtIconFacebook />
+          </LinkSocial>
+          <LinkSocial
+            external
+            href="https://x.com/Straatweg"
+            title="Amsterdamsestraatweg op Twitter"
+            style={{ marginRight: '0.5em' }}
+          >
+            <UtrechtIconX />
+          </LinkSocial>
+          <LinkSocial
+            external
+            href="https://www.youtube.com/channel/UCel6O4Zyizeg9rAW94QNAhQ/videos"
+            title="Amsterdamsestraatweg op Youtube"
+          >
+            <UtrechtIconYoutube />
+          </LinkSocial>
         </div>
       </div>
 
