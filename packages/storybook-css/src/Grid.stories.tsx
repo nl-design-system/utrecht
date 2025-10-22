@@ -83,26 +83,27 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => (
-    <Grid {...args}>
-      <GridColumn xs={12} sm={6}>
-        Column 1
-      </GridColumn>
-      <GridColumn xs={12} sm={6}>
-        Column 2
-      </GridColumn>
-    </Grid>
-  ),
+  args: {
+    spacing: 'md',
+    children: (
+      <>
+        <GridColumn xs={12} sm={6}>
+          Column 1
+        </GridColumn>
+        <GridColumn xs={12} sm={6}>
+          Column 2
+        </GridColumn>
+      </>
+    ),
+  },
 };
 
 export const ResponsiveColumns: Story = {
   name: 'Responsive Columns',
-  render: (args) => (
-    <div>
-      <p style={{ marginBottom: '1rem', fontSize: '0.875rem', color: '#666' }}>
-        Resize browser window to test responsiveness: Mobile (1 col) → Tablet (2 cols) → Desktop (3-4 cols)
-      </p>
-      <Grid {...args}>
+  args: {
+    spacing: 'md',
+    children: (
+      <>
         <GridColumn xs={12} sm={6} md={4} lg={3} color="#ffcccb">
           xs=12 sm=6 md=4 lg=3
         </GridColumn>
@@ -115,186 +116,222 @@ export const ResponsiveColumns: Story = {
         <GridColumn xs={12} sm={6} md={4} lg={3} color="#ffd700">
           xs=12 sm=6 md=4 lg=3
         </GridColumn>
-      </Grid>
-    </div>
-  ),
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Resize browser window to test responsiveness: Mobile (1 col) → Tablet (2 cols) → Desktop (3-4 cols)',
+      },
+    },
+  },
 };
 
 export const EqualColumns: Story = {
   name: 'Equal Width Columns',
-  render: (args) => (
-    <Grid {...args}>
-      {Array.from({ length: 6 }, (_, i) => (
-        <GridColumn key={i} xs={2}>
-          Col {i + 1}
-        </GridColumn>
-      ))}
-    </Grid>
-  ),
+  args: {
+    spacing: 'md',
+    children: Array.from({ length: 6 }, (_, i) => (
+      <GridColumn key={i} xs={2}>
+        Col {i + 1}
+      </GridColumn>
+    )),
+  },
 };
 
 export const VariableWidths: Story = {
   name: 'Variable Column Widths',
-  render: (args) => (
-    <Grid {...args}>
-      <GridColumn xs={3}>3 cols</GridColumn>
-      <GridColumn xs={6}>6 cols</GridColumn>
-      <GridColumn xs={3}>3 cols</GridColumn>
-      <GridColumn xs={4}>4 cols</GridColumn>
-      <GridColumn xs={8}>8 cols</GridColumn>
-    </Grid>
-  ),
+  args: {
+    spacing: 'md',
+    children: (
+      <>
+        <GridColumn xs={3}>3 cols</GridColumn>
+        <GridColumn xs={6}>6 cols</GridColumn>
+        <GridColumn xs={3}>3 cols</GridColumn>
+        <GridColumn xs={4}>4 cols</GridColumn>
+        <GridColumn xs={8}>8 cols</GridColumn>
+      </>
+    ),
+  },
 };
 
-export const WithSpacing: Story = {
-  name: 'Different Spacing',
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-      <div>
-        <h3>Small Spacing</h3>
-        <Grid spacing="sm">
-          <GridColumn xs={4} color="#ffcccb">
-            Small
-          </GridColumn>
-          <GridColumn xs={4} color="#add8e6">
-            Small
-          </GridColumn>
-          <GridColumn xs={4} color="#90ee90">
-            Small
-          </GridColumn>
-        </Grid>
-      </div>
-      <div>
-        <h3>Medium Spacing</h3>
-        <Grid spacing="md">
-          <GridColumn xs={4} color="#ffcccb">
-            Medium
-          </GridColumn>
-          <GridColumn xs={4} color="#add8e6">
-            Medium
-          </GridColumn>
-          <GridColumn xs={4} color="#90ee90">
-            Medium
-          </GridColumn>
-        </Grid>
-      </div>
-      <div>
-        <h3>Large Spacing</h3>
-        <Grid spacing="lg">
-          <GridColumn xs={4} color="#ffcccb">
-            Large
-          </GridColumn>
-          <GridColumn xs={4} color="#add8e6">
-            Large
-          </GridColumn>
-          <GridColumn xs={4} color="#90ee90">
-            Large
-          </GridColumn>
-        </Grid>
-      </div>
-    </div>
-  ),
+export const SpacingSmall: Story = {
+  name: 'Spacing - Small',
+  args: {
+    spacing: 'sm',
+    children: (
+      <>
+        <GridColumn xs={4} color="#ffcccb">
+          Small
+        </GridColumn>
+        <GridColumn xs={4} color="#add8e6">
+          Small
+        </GridColumn>
+        <GridColumn xs={4} color="#90ee90">
+          Small
+        </GridColumn>
+      </>
+    ),
+  },
 };
 
-export const WithAlignment: Story = {
-  name: 'Alignment Options',
-  render: () => (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '3rem' }}>
-      <div>
-        <h3 style={{ marginBottom: '1rem', color: '#333' }}>Horizontal Alignment - Center</h3>
-        <div style={{ border: '2px dashed #ddd', padding: '1rem', borderRadius: '8px' }}>
-          <Grid justifyContent="center">
-            <GridColumn xs={3} color="#e8f4fd">
-              🎯 Centered
-            </GridColumn>
-            <GridColumn xs={3} color="#e8f4fd">
-              🎯 Centered
-            </GridColumn>
-          </Grid>
-        </div>
-      </div>
+export const SpacingMedium: Story = {
+  name: 'Spacing - Medium',
+  args: {
+    spacing: 'md',
+    children: (
+      <>
+        <GridColumn xs={4} color="#ffcccb">
+          Medium
+        </GridColumn>
+        <GridColumn xs={4} color="#add8e6">
+          Medium
+        </GridColumn>
+        <GridColumn xs={4} color="#90ee90">
+          Medium
+        </GridColumn>
+      </>
+    ),
+  },
+};
 
-      <div>
-        <h3 style={{ marginBottom: '1rem', color: '#333' }}>Horizontal Alignment - Space Between</h3>
-        <div style={{ border: '2px dashed #ddd', padding: '1rem', borderRadius: '8px' }}>
-          <Grid justifyContent="space-between">
-            <GridColumn xs={3} color="#fff2e8">
-              ⬅️ Left
-            </GridColumn>
-            <GridColumn xs={3} color="#fff2e8">
-              Right ➡️
-            </GridColumn>
-          </Grid>
-        </div>
-      </div>
+export const SpacingLarge: Story = {
+  name: 'Spacing - Large',
+  args: {
+    spacing: 'lg',
+    children: (
+      <>
+        <GridColumn xs={4} color="#ffcccb">
+          Large
+        </GridColumn>
+        <GridColumn xs={4} color="#add8e6">
+          Large
+        </GridColumn>
+        <GridColumn xs={4} color="#90ee90">
+          Large
+        </GridColumn>
+      </>
+    ),
+  },
+};
 
-      <div>
-        <h3 style={{ marginBottom: '1rem', color: '#333' }}>Horizontal Alignment - Flex End</h3>
-        <div style={{ border: '2px dashed #ddd', padding: '1rem', borderRadius: '8px' }}>
-          <Grid justifyContent="flex-end">
-            <GridColumn xs={3} color="#f0e8ff">
-              Right ➡️
-            </GridColumn>
-            <GridColumn xs={3} color="#f0e8ff">
-              Right ➡️
-            </GridColumn>
-          </Grid>
-        </div>
-      </div>
+export const AlignmentCenter: Story = {
+  name: 'Alignment - Horizontal Center',
+  args: {
+    spacing: 'md',
+    justifyContent: 'center',
+    children: (
+      <>
+        <GridColumn xs={3} color="#e8f4fd">
+          🎯 Centered
+        </GridColumn>
+        <GridColumn xs={3} color="#e8f4fd">
+          🎯 Centered
+        </GridColumn>
+      </>
+    ),
+  },
+};
 
-      <div>
-        <h3 style={{ marginBottom: '1rem', color: '#333' }}>Vertical Alignment - Center</h3>
-        <div style={{ border: '2px dashed #ddd', padding: '1rem', borderRadius: '8px', minHeight: '120px' }}>
-          <Grid alignItems="center">
-            <GridColumn xs={4} minHeight="80px" color="#e8f5e8">
-              📏 Tall content
-              <br />
-              Multiple lines
-              <br />
-              More height
-            </GridColumn>
-            <GridColumn xs={4} color="#ffe8e8">
-              🔄 Centered
-            </GridColumn>
-            <GridColumn xs={4} color="#fff8e8">
-              ⚖️ Aligned
-            </GridColumn>
-          </Grid>
-        </div>
-      </div>
+export const AlignmentSpaceBetween: Story = {
+  name: 'Alignment - Space Between',
+  args: {
+    spacing: 'md',
+    justifyContent: 'space-between',
+    children: (
+      <>
+        <GridColumn xs={3} color="#fff2e8">
+          ⬅️ Left
+        </GridColumn>
+        <GridColumn xs={3} color="#fff2e8">
+          Right ➡️
+        </GridColumn>
+      </>
+    ),
+  },
+};
 
-      <div>
-        <h3 style={{ marginBottom: '1rem', color: '#333' }}>Combined: Center + Vertical Center</h3>
-        <div style={{ border: '2px dashed #ddd', padding: '1rem', borderRadius: '8px', minHeight: '120px' }}>
-          <Grid justifyContent="center" alignItems="center">
-            <GridColumn xs={3} color="#f8e8ff">
-              ✨ Perfect
-            </GridColumn>
-            <GridColumn xs={3} color="#f8e8ff">
-              ✨ Center
-            </GridColumn>
-          </Grid>
-        </div>
-      </div>
-    </div>
-  ),
+export const AlignmentFlexEnd: Story = {
+  name: 'Alignment - Flex End',
+  args: {
+    spacing: 'md',
+    justifyContent: 'flex-end',
+    children: (
+      <>
+        <GridColumn xs={3} color="#f0e8ff">
+          Right ➡️
+        </GridColumn>
+        <GridColumn xs={3} color="#f0e8ff">
+          Right ➡️
+        </GridColumn>
+      </>
+    ),
+  },
+};
+
+export const AlignmentVerticalCenter: Story = {
+  name: 'Alignment - Vertical Center',
+  args: {
+    spacing: 'md',
+    alignItems: 'center',
+    children: (
+      <>
+        <GridColumn xs={4} minHeight="80px" color="#e8f5e8">
+          📏 Tall content
+          <br />
+          Multiple lines
+          <br />
+          More height
+        </GridColumn>
+        <GridColumn xs={4} color="#ffe8e8">
+          🔄 Centered
+        </GridColumn>
+        <GridColumn xs={4} color="#fff8e8">
+          ⚖️ Aligned
+        </GridColumn>
+      </>
+    ),
+  },
+};
+
+export const AlignmentCombined: Story = {
+  name: 'Alignment - Combined Center',
+  args: {
+    spacing: 'md',
+    justifyContent: 'center',
+    alignItems: 'center',
+    children: (
+      <>
+        <GridColumn xs={3} color="#f8e8ff">
+          ✨ Perfect
+        </GridColumn>
+        <GridColumn xs={3} color="#f8e8ff">
+          ✨ Center
+        </GridColumn>
+      </>
+    ),
+  },
 };
 
 export const WithOrder: Story = {
   name: 'Column Ordering',
-  render: (args) => (
-    <Grid {...args}>
-      <GridColumn xs={4} order={3} color="#ffcccb">
-        First in DOM (order: 3)
-      </GridColumn>
-      <GridColumn xs={4} order={1} color="#add8e6">
-        Second in DOM (order: 1)
-      </GridColumn>
-      <GridColumn xs={4} order={2} color="#90ee90">
-        Third in DOM (order: 2)
-      </GridColumn>
-    </Grid>
-  ),
+  args: {
+    spacing: 'md',
+    children: (
+      <>
+        <GridColumn xs={4} order={3} color="#ffcccb">
+          First in DOM (order: 3)
+        </GridColumn>
+        <GridColumn xs={4} order={1} color="#add8e6">
+          Second in DOM (order: 1)
+        </GridColumn>
+        <GridColumn xs={4} order={2} color="#90ee90">
+          Third in DOM (order: 2)
+        </GridColumn>
+      </>
+    ),
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
