@@ -420,9 +420,11 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
 
   .utrecht-social-media-icon {
     --utrecht-icon-size: var(--utrecht-link-social-icon-size);
+    --utrecht-button-primary-action-background-color: #24578f;
+    --_utrecht-button-hover-background-color: #2964a3;
 
     align-items: center;
-    background-color: #c00; /* Verkort van #cc0000 */
+    background-color: var(--utrecht-button-primary-action-background-color);
     block-size: 44px; /* Gebruik block-size ipv height */
     border-radius: 50%;
     color: white;
@@ -431,6 +433,10 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     justify-content: center;
     text-decoration: none;
     transition: background-color 300ms ease; /* Geen 's' unit */
+  }
+
+  .utrecht-social-media-icon:hover {
+    background-color: var(--_utrecht-button-hover-background-color);
   }
 
   /* Responsive design - FIXED */
