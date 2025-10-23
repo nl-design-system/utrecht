@@ -20,7 +20,7 @@ export const theme: ThemeVars = {
   buttonBorder: '#24578F',
   colorPrimary: '#2964a3',
   colorSecondary: '#1b4050',
-  fontBase: '"Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Verdana, sans-serif',
+  fontBase: '"Noto Sans Variable", Arial, sans-serif',
   fontCode: 'monospace',
   inputBg: '#ffffff',
   inputBorder: '#4D4D4D',

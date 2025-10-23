@@ -2,7 +2,7 @@
   "utrecht": {
     "typography": {
       "sans-serif": {
-        "font-family": { "value": "\"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", \"Arial\", sans-serif" }
+        "font-family": { "value": "\"Noto Sans Variable\", \"Arial\", sans-serif" }
       },
       "scale": {
         "sm": { "font-size": { "value": "14px", "comment": "14px" } },
@@ -15,7 +15,8 @@
       },
       "weight-scale": {
         "bold": { "font-weight": { "value": "700" } },
-        "normal": { "font-weight": { "value": "400" } }
+        "normal": { "font-weight": { "value": "400" } },
+        "semibold": { "font-weight": { "value": "600" } }
       },
       "font-style": {
         "normal": { "value": "normal" },

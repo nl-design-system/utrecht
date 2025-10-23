@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 
 // 🔹 Beschikbare fonts
 const fontOptions = [
-  { label: 'Noto Sans 🏆', value: "'Noto Sans', sans-serif" },
+  { label: 'Noto Sans Variable 🏆', value: "'Noto Sans Variable', sans-serif" },
   { label: 'Plus Jakarta Sans', value: "'Plus Jakarta Sans', sans-serif" },
   { label: 'Geist', value: "'Geist', sans-serif" },
   { label: 'Inclusive Sans', value: "'Inclusive Sans', sans-serif" },

@@ -20,9 +20,9 @@ keywords:
 
 We gebruiken de Lucida font family omdat het een font is dat goed leesbaar is op digitale applicaties. We gebruiken een sans-serif font vanwege de leesbaarheid op digitale applicaties.
 
-| Beschrijving                                                 | Design Token                                  | Opmerking                   |
-| ------------------------------------------------------------ | --------------------------------------------- | --------------------------- |
-| Font family: Lucida Grande, Lucida Sans Unicode, Lucida Sans | `--utrecht-typography-sans-serif-font-family` | Font voor alle componenten. |
+| Beschrijving                                       | Design Token                                  | Opmerking                   |
+| -------------------------------------------------- | --------------------------------------------- | --------------------------- |
+| Font family: Noto Sans Variable, Arial, sans-serif | `--utrecht-typography-sans-serif-font-family` | Font voor alle componenten. |
 
 ### Fallback fonts
 

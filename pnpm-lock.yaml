@@ -5769,6 +5769,10 @@ importers:
         version: 5.0.11(@types/node@24.3.1)(less@4.2.0)(sass@1.69.5)(terser@5.44.0)
 
   packages/storybook-helpers:
+    dependencies:
+      '@utrecht/design-tokens':
+        specifier: workspace:*
+        version: link:../../proprietary/design-tokens
     devDependencies:
       '@storybook/theming':
         specifier: 7.6.4
@@ -7695,6 +7699,10 @@ importers:
   proprietary/assets: {}
 
   proprietary/design-tokens:
+    dependencies:
+      '@fontsource-variable/noto-sans':
+        specifier: 5.2.10
+        version: 5.2.10
     devDependencies:
       '@tokens-studio/sd-transforms':
         specifier: 1.2.3
@@ -7726,6 +7734,9 @@ importers:
       style-dictionary:
         specifier: 4.0.1
         version: 4.0.1
+      typescript:
+        specifier: 5.0.4
+        version: 5.0.4
 
 packages:
 
@@ -10461,6 +10472,9 @@ packages:
 
   '@foliojs-fork/restructure@2.0.2':
     resolution: {integrity: sha512-59SgoZ3EXbkfSX7b63tsou/SDGzwUEK6MuB5sKqgVK1/XE0fxmpsOb9DQI8LXW3KfGnAjImCGhhEb7uPPAUVNA==}
+
+  '@fontsource-variable/noto-sans@5.2.10':
+    resolution: {integrity: sha512-wyFgKkFu7jki5kEL8qv7avjQ8rxHX0J/nhLWvbR9T0hOH1HRKZEvb9EW9lMjZfWHHfEzKkYf5J+NadwgCS7TXA==}
 
   '@formatjs/ecma402-abstract@1.18.2':
     resolution: {integrity: sha512-+QoPW4csYALsQIl8GbN14igZzDbuwzcpWrku9nyMXlaqAlwRBgl5V+p0vWMGFqHOw37czNXaP/lEk4wbLgcmtA==}
@@ -26150,8 +26164,8 @@ packages:
   vue-component-type-helpers@2.2.12:
     resolution: {integrity: sha512-YbGqHZ5/eW4SnkPNR44mKVc6ZKQoRs/Rux1sxC6rdwXb4qpbOSYfDr9DsTHolOTGmIKgM9j141mZbBeg05R1pw==}
 
-  vue-component-type-helpers@3.1.1:
-    resolution: {integrity: sha512-B0kHv7qX6E7+kdc5nsaqjdGZ1KwNKSUQDWGy7XkTYT7wFsOpkEyaJ1Vq79TjwrrtuLRgizrTV7PPuC4rRQo+vw==}
+  vue-component-type-helpers@3.1.2:
+    resolution: {integrity: sha512-ch3/SKBtxdZq18vsEntiGCdSszCRNfhX5QaTxjSacCAXLlNQRXfXo+ANjoQEYJMsJOJy1/vHF6Tkc4s85MS+zw==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -32385,6 +32399,8 @@ snapshots:
 
   '@foliojs-fork/restructure@2.0.2': {}
 
+  '@fontsource-variable/noto-sans@5.2.10': {}
+
   '@formatjs/ecma402-abstract@1.18.2':
     dependencies:
       '@formatjs/intl-localematcher': 0.5.4
@@ -36705,7 +36721,7 @@ snapshots:
       storybook: 9.1.4(@testing-library/dom@10.4.0)(prettier@3.6.2)(vite@7.1.4(@types/node@22.7.4)(jiti@1.21.0)(less@4.2.0)(sass@1.92.0)(terser@5.44.0)(tsx@4.19.0)(yaml@2.8.1))
       type-fest: 2.19.0
       vue: 3.5.21(typescript@4.9.5)
-      vue-component-type-helpers: 3.1.1
+      vue-component-type-helpers: 3.1.2
 
   '@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.24.7)':
     dependencies:
@@ -55281,7 +55297,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.12: {}
 
-  vue-component-type-helpers@3.1.1: {}
+  vue-component-type-helpers@3.1.2: {}
 
   vue-docgen-api@4.75.1(vue@3.5.21(typescript@4.9.5)):
     dependencies:

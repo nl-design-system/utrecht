@@ -10,14 +10,14 @@
   const overrideStyle = document.createElement('style');
   overrideStyle.id = 'noto-switcher-style';
   overrideStyle.textContent = `
-      /* Zorg dat alles Noto Sans pakt */
+      /* Zorg dat alles Noto Sans Variable pakt */
       html, body, * {
-        font-family: 'Noto Sans', sans-serif !important;
+        font-family: 'Noto Sans Variable', sans-serif !important;
       }
       /* Eventueel kun je hier nog specifieke weights of variabelen toevoegen */
     `;
   document.head.appendChild(overrideStyle);
 
   // 3️⃣ Optioneel: console-melding voor debug
-  console.log('[Noto-Switcher] Alle fonts zijn omgezet naar Noto Sans.');
+  console.log('[Noto-Switcher] Alle fonts zijn omgezet naar Noto Sans Variable.');
 })();
