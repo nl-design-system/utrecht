@@ -1,11 +1,8 @@
 ---
-"@utrecht/grid-react": minor
+"@utrecht/grid-react": major
 "@utrecht/component-library-css": minor
 "@utrecht/design-tokens": minor
-"@utrecht/storybook-react": minor
-"@utrecht/storybook-css": minor
-"@utrecht/storybook": minor
-"@utrecht/grid-css": minor
+"@utrecht/grid-css": major
 ---
 
 Add **Grid** component (CSS and React) to NL Design Systeem.
