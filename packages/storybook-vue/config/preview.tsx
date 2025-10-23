@@ -4,6 +4,7 @@ import { Document } from '@utrecht/component-library-vue';
 import results from '@utrecht/component-library-vue/dist/.jest-test-results.json';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
+import '@utrecht/storybook-helpers/dist/font-family.js';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import '@utrecht/component-library-vue/dist/style.css';
 import '@utrecht/design-tokens/dist/index.css';

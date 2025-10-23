@@ -2,6 +2,7 @@ import type { StoryContext } from '@storybook/react-webpack5';
 import type { Preview } from '@storybook/react-webpack5';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
+import '@utrecht/storybook-helpers/dist/font-family.js';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import clsx from 'clsx';
 import prettierHtml from 'prettier/parser-html';
