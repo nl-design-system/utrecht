@@ -5,6 +5,7 @@ import { ButtonGroup } from '@utrecht/component-library-react/dist/css-module';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonThemes } from '@utrecht/storybook-helpers/dist/addon-themes';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
+import '@utrecht/storybook-helpers/dist/font-family.js';
 import { defineCustomElements } from '@utrecht/web-component-library-stencil/loader';
 import clsx from 'clsx';
 import prettierHtml from 'prettier/parser-html';

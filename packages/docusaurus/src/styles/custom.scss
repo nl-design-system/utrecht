@@ -11,7 +11,7 @@
   -webkit-font-smoothing: auto !important;
 
   /* Workaround, because `.utrecht-theme` CSS variables are not available on `:root` */
-  --ifm-font-family-base: "Lucida Grande";
+  --ifm-font-family-base: "Noto Sans Variable", Arial, sans-serif;
 }
 
 /* You can override the default Infima variables here. */

@@ -26,11 +26,13 @@
     "regex-trie": "1.0.4",
     "rimraf": "5.0.7",
     "sass": "1.69.5",
-    "style-dictionary": "4.0.1"
+    "style-dictionary": "4.0.1",
+    "typescript": "5.0.4"
   },
   "scripts": {
-    "build": "pnpm run build:style-dictionary && pnpm run build:scss",
+    "build": "pnpm run build:style-dictionary && pnpm run build:scss && pnpm run build:ts",
     "build:scss": "sass --no-source-map src/:dist/",
+    "build:ts": "tsc src/font-family.ts --outDir dist --target es2020 --module esnext --moduleResolution node",
     "build:style-dictionary": "pnpm run '/^build:style-dictionary:.*/'",
     "build:style-dictionary:default": "node ./style-dictionary-build.mjs",
     "build:style-dictionary:dark": "node ./style-dictionary-build-dark.mjs",
@@ -39,5 +41,8 @@
     "clean": "rimraf dist/",
     "watch": "pnpm run --parallel '/^watch:.*/'",
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'pnpm run build' 'src/**/*.tokens.json'"
+  },
+  "dependencies": {
+    "@fontsource-variable/noto-sans": "5.2.10"
   }
 }

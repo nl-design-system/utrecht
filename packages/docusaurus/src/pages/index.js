@@ -14,6 +14,7 @@ import Layout from '@theme/Layout';
 import { Icon, Paragraph } from '@utrecht/component-library-react';
 import clsx from 'clsx';
 import React from 'react';
+import '@utrecht/design-tokens/dist/font-family';
 import styles from './index.module.css';
 import { Card } from '../components/Card';
 import { CardList } from '../components/CardList';
