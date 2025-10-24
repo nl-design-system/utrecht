@@ -1,5 +1,16 @@
 # @utrecht/select-combobox-react
 
+## 1.0.13
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+- Updated dependencies [6a1dc0e]
+  - @utrecht/combobox-react@0.0.10
+  - @utrecht/listbox-react@1.0.12
+  - @utrecht/textbox-react@1.0.11
+  - @utrecht/button-react@2.0.9
+
 ## 1.0.12
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/combobox-react
 
+## 0.0.10
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+
 ## 0.0.9
 
 ### Patch Changes

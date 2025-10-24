@@ -1,5 +1,18 @@
 # @utrecht/radio-group-react
 
+## 1.0.12
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+- Updated dependencies [6a1dc0e]
+  - @utrecht/form-field-error-message-react@1.0.9
+  - @utrecht/form-field-description-react@1.0.9
+  - @utrecht/radio-button-react@1.0.9
+  - @utrecht/form-field-react@1.0.9
+  - @utrecht/form-label-react@1.0.9
+  - @utrecht/fieldset-react@1.0.9
+
 ## 1.0.11
 
 ### Patch Changes

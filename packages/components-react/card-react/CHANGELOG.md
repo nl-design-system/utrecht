@@ -1,5 +1,13 @@
 # @utrecht/card-react
 
+## 0.0.3
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+- Updated dependencies [6a1dc0e]
+  - @utrecht/link-react@1.0.9
+
 ## 0.0.2
 
 ### Patch Changes

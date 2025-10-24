@@ -1,5 +1,31 @@
 # @utrecht/component-library-react
 
+## 10.3.8
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+- Updated dependencies [6a1dc0e]
+  - @utrecht/form-field-error-message-react@1.0.9
+  - @utrecht/form-field-description-react@1.0.9
+  - @utrecht/open-forms-container-react@1.0.4
+  - @utrecht/form-field-checkbox-react@1.1.2
+  - @utrecht/action-group-react@1.1.3
+  - @utrecht/button-group-react@1.1.2
+  - @utrecht/radio-button-react@1.0.9
+  - @utrecht/data-badge-react@1.0.6
+  - @utrecht/form-field-react@1.0.9
+  - @utrecht/form-label-react@1.0.9
+  - @utrecht/calendar-react@1.0.13
+  - @utrecht/checkbox-react@1.0.10
+  - @utrecht/combobox-react@0.0.10
+  - @utrecht/fieldset-react@1.0.9
+  - @utrecht/listbox-react@1.0.12
+  - @utrecht/textbox-react@1.0.11
+  - @utrecht/button-react@2.0.9
+  - @utrecht/card-react@0.0.3
+  - @utrecht/link-react@1.0.9
+
 ## 10.3.7
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-react
 
+## 3.0.10
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+
 ## 3.0.9
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/youtube-video-react
 
+## 1.0.2
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+
 ## 1.0.1
 
 ### Patch Changes

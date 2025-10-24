@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 3.4.1
+
+### Patch Changes
+
+- 4783080: Changed the background-color of the `link-social` component from `utrecht.color.red.40` to `utrecht.color.blue.35`
+
 ## 3.4.0
 
 ### Minor Changes
