@@ -27,11 +27,7 @@ const config: StorybookConfig = {
     getAbsolutePath('storybook-addon-pseudo-states'),
     getAbsolutePath('storybook-addon-themes'),
   ],
-  staticDirs: [
-    '../../../proprietary/assets',
-    '../src/script/',
-    '../node_modules/@utrecht/flo-legal-decision-tree-client/dist/assets',
-  ],
+  staticDirs: ['../../../proprietary/assets', '../src/script/', '../../flolegal-decision-tree-client/dist/assets'],
   docs: {},
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
