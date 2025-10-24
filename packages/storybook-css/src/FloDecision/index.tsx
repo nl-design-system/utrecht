@@ -32,7 +32,8 @@ export const FloDecision = ({
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    loadFloClientScript().then(() => setReady(true));
+    const basePath = window.location.hostname === 'nl-design-system.github.io' ? '/utrecht/' : undefined;
+    loadFloClientScript(basePath).then(() => setReady(true));
   }, []);
 
   if (!ready) return loadingText && <div>{loadingText}</div>;
