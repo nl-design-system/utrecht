@@ -10,9 +10,10 @@ import {
   Separator,
 } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
-const KTO: React.FC = () => {
+const KTOvervolg: React.FC = () => {
   return (
     <>
+      <Heading2>Klanttevredenheidsonderzoek</Heading2>
       <Separator style={{ borderColor: '#D6E5F5', borderWidth: '2px' }} />
       <Fieldset id="df861ef1-844a-42df-8365-b54f59474fb8" role="radiogroup">
         <FieldsetLegend>Hebt u gevonden wat u zocht op deze pagina?</FieldsetLegend>
@@ -48,4 +49,4 @@ const KTO: React.FC = () => {
   );
 };
 
-export default KTO;
+export default KTOvervolg;
