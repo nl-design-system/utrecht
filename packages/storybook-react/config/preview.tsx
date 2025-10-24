@@ -5,6 +5,7 @@ import results from '@utrecht/component-library-react/dist/.jest-test-results.js
 import { addonStatus } from '@utrecht/storybook-helpers/src/addon-status';
 import { addonThemes } from '@utrecht/storybook-helpers/src/addon-themes';
 import { addonViewport } from '@utrecht/storybook-helpers/src/addon-viewport';
+import '@utrecht/storybook-helpers/dist/font-family.js';
 import React from 'react';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
