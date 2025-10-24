@@ -1,5 +1,18 @@
 # @utrecht/checkbox-group-react
 
+## 1.0.13
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+- Updated dependencies [6a1dc0e]
+  - @utrecht/form-field-error-message-react@1.0.9
+  - @utrecht/form-field-description-react@1.0.9
+  - @utrecht/form-field-checkbox-react@1.1.2
+  - @utrecht/form-field-react@1.0.9
+  - @utrecht/checkbox-react@1.0.10
+  - @utrecht/fieldset-react@1.0.9
+
 ## 1.0.12
 
 ### Patch Changes

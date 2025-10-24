@@ -1,5 +1,11 @@
 # @utrecht/nav-bar-react
 
+## 1.0.8
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+
 ## 1.0.7
 
 ### Patch Changes

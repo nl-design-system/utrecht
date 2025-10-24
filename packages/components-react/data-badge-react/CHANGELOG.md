@@ -1,5 +1,11 @@
 # @utrecht/data-badge-react
 
+## 1.0.6
+
+### Patch Changes
+
+- 6a1dc0e: Updated peer dependencies for React 19 compatibility.
+
 ## 1.0.5
 
 ### Patch Changes

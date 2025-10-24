@@ -1,5 +1,14 @@
 # @utrecht/astro
 
+## 0.0.7
+
+### Patch Changes
+
+- Updated dependencies [6a1dc0e]
+- Updated dependencies [4783080]
+  - @utrecht/component-library-react@10.3.8
+  - @utrecht/design-tokens@3.4.1
+
 ## 0.0.6
 
 ### Patch Changes
