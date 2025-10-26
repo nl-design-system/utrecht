@@ -1,5 +1,12 @@
 # @utrecht/page-body-react
 
+## 1.0.9
+
+### Patch Changes
+
+- Updated dependencies [e6211fa]
+  - @utrecht/page-body-css@1.0.1
+
 ## 1.0.8
 
 ### Patch Changes
