@@ -227,6 +227,9 @@ jobs:
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
 
+    permissions:
+      id-token: write
+
     steps:
       - name: Checkout release branch
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
