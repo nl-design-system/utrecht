@@ -1,5 +1,11 @@
 # @utrecht/astro
 
+## 0.0.8
+
+### Patch Changes
+
+- @utrecht/component-library-css@8.1.4
+
 ## 0.0.7
 
 ### Patch Changes

@@ -1,5 +1,12 @@
 # @utrecht/component-library-css
 
+## 8.1.4
+
+### Patch Changes
+
+- Updated dependencies [e6211fa]
+  - @utrecht/page-body-css@1.0.1
+
 ## 8.1.3
 
 ### Patch Changes

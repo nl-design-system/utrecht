@@ -1,5 +1,11 @@
 # @utrecht/page-body-css
 
+## 1.0.1
+
+### Patch Changes
+
+- e6211fa: Fix typo in `padding-inline-end` token in `tokens.json`.
+
 ## 1.0.0
 
 ### Major Changes
