@@ -223,6 +223,7 @@ jobs:
     runs-on: ubuntu-latest
     needs: [lint, test]
     if: github.ref == 'refs/heads/main'
+    environment: publish
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
 
@@ -257,6 +258,11 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
           format: cyclonedx-json
+
+      - name: Set up Node.js that is compatible with OIDC
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: 24
 
       # - name: "Continuous Deployment: publish to GitHub repository"
       #   env:

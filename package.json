@@ -23,8 +23,8 @@
     "directory": "."
   },
   "engines": {
-    "node": "^22",
-    "pnpm": "^9"
+    "node": ">=20 <=24",
+    "pnpm": ">=9 <=10 "
   },
   "devDependencies": {
     "@changesets/cli": "2.27.6",
