@@ -4,9 +4,9 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-@use "./mixin" as *;
-
+@use "~@utrecht/form-label-css/src/mixin" as *;
 @use "~@utrecht/custom-checkbox-css/src/mixin" as *;
+@use "./mixin" as *;
 
 /**
  * The nesting is intended to make the CSS specificity higher than the CSS in
@@ -15,19 +15,77 @@
  */
 .utrecht-flolegal-decision-tree-container {
   .flo-question-container {
-    @include utrecht-flo-question-container;
+    @include utrecht-flo-decision-question-container;
   }
   .flo-question-description-container {
-    @include utrecht-flo-question-description-container;
+    @include utrecht-flo-decision-question-description-container;
   }
-  .flo-question-description {
-    @include utrecht-flo-question-description;
+  .flo-question-description-container .flo-question-description {
+    @include utrecht-flo-decision-question-description;
   }
   .flo-explanation-button {
-    @include utrecht-flo-explanation-button;
+    @include utrecht-flo-decision-explanation-button;
   }
   .flo-question-answers input[type="checkbox" i] {
     @include utrecht-custom-checkbox;
     @include utrecht-custom-checkbox--html-input;
+  }
+  .flo-question-answers .flo-question-answers-option {
+    @include utrecht-flo-decision-question-answers-option;
+  }
+  .flo-question-answers {
+    @include utrecht-flo-decision-question-answers;
+  }
+
+  label.flo-boolean-false {
+    @include utrecht-flo-decision-boolean-false;
+  }
+  .flo-decision-list .flo-question-section {
+    @include utrecht-flo-decision-question-section;
+  }
+
+  .flo-decision-list > :last-child .flo-question-section {
+    border: none;
+  }
+
+  label:has(input[type="radio"]) {
+    @include utrecht-form-label--radio;
+  }
+
+  label:has(input[type="checkbox"]) {
+    @include utrecht-form-label--checkbox;
+    @include utrecht-flo-decision-label--checkbox;
+  }
+
+  .flo-decision-list .flo-question-section .flo-explanation-container {
+    @include utrecht-flo-decision-explanation-container;
+  }
+
+  .flo-embed-container form.flo-decision .flo-outcomes-container {
+    @include utrecht-flo-decision-outcomes-container;
+  }
+
+  form.flo-decision {
+    @include utrecht-flo-decision-form;
+  }
+
+  .flo-question-section .flo-explanation-container > * {
+    @include utrecht-flo-decision-explanation-wrapper;
+  }
+
+  .flo-explanation-container.flo-option-explanation {
+    @include utrecht-flo-decision-explanation;
+  }
+
+  button.flo-explanation-hide.flo-explanation-button {
+    @include utrecht-flo-decision-explanation-button--close;
+  }
+
+  .flo-explanation-content {
+    @include utrecht-flo-decision-explanation-content;
+  }
+
+  .flo-question-answers .flo-question-answers-option label {
+    @include utrecht-flo-decision-label;
   }
 }
