@@ -30,5 +30,8 @@
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git",
     "directory": "components/flo-legal-decision-tree"
+  },
+  "dependencies": {
+    "@utrecht/form-label-css": "workspace:*"
   }
 }
