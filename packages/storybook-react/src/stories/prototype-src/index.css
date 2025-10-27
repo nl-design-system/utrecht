@@ -420,7 +420,7 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
 
   .utrecht-social-media-icon {
     --utrecht-icon-size: var(--utrecht-link-social-icon-size);
-    --utrecht-button-primary-action-background-color: #24578f;
+    --utrecht-button-primary-action-background-color: var(--utrecht-color-blue-35);
     --_utrecht-button-hover-background-color: #2964a3;
 
     align-items: center;
