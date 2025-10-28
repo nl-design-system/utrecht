@@ -1,5 +1,10 @@
 @import "@utrecht/component-library-css/dist/index.css";
 @import "@utrecht/design-tokens/dist/theme.css";
+@import "@nl-design-system-candidate/code-css/code.css";
+@import "@nl-design-system-candidate/code-block-css/code-block.css";
+@import "@nl-design-system-candidate/heading-css/heading.css";
+@import "@nl-design-system-candidate/link-css/link.css";
+@import "@nl-design-system-candidate/paragraph-css/paragraph.css";
 
 .utrecht-theme.utrecht-theme--documentation-website {
   --utrecht-page-header-content-padding-block-end: 2rem;
