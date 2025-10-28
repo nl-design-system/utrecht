@@ -1057,6 +1057,21 @@ importers:
       '@astrojs/ts-plugin':
         specifier: 1.10.5
         version: 1.10.5
+      '@nl-design-system-candidate/code-block-css':
+        specifier: 1.1.3
+        version: 1.1.3
+      '@nl-design-system-candidate/code-css':
+        specifier: 2.0.3
+        version: 2.0.3
+      '@nl-design-system-candidate/heading-css':
+        specifier: 1.1.1
+        version: 1.1.1
+      '@nl-design-system-candidate/link-css':
+        specifier: 2.0.1
+        version: 2.0.1
+      '@nl-design-system-candidate/paragraph-css':
+        specifier: 2.1.1
+        version: 2.1.1
       '@utrecht/component-library-css':
         specifier: workspace:*
         version: link:../component-library-css
@@ -5785,7 +5800,7 @@ importers:
         version: 8.0.2(storybook@9.1.6(@testing-library/dom@10.4.0)(prettier@2.8.8)(vite@5.0.11(@types/node@24.3.1)(less@4.2.0)(sass@1.69.5)(terser@5.44.0)))
       babel-loader:
         specifier: 9.1.3
-        version: 9.1.3(@babel/core@7.24.7)(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
+        version: 9.1.3(@babel/core@7.24.7)(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -5794,7 +5809,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
+        version: 6.8.1(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       firacode:
         specifier: 6.2.0
         version: 6.2.0
@@ -5839,7 +5854,7 @@ importers:
         version: 9.1.6(storybook@9.1.6(@testing-library/dom@10.4.0)(prettier@2.8.8)(vite@5.0.11(@types/node@24.3.1)(less@4.2.0)(sass@1.69.5)(terser@5.44.0)))
       style-loader:
         specifier: 3.3.3
-        version: 3.3.3(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
+        version: 3.3.3(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       typescript:
         specifier: 5.9.2
         version: 5.9.2
@@ -11359,6 +11374,21 @@ packages:
 
   '@nicolo-ribaudo/eslint-scope-5-internals@5.1.1-v1':
     resolution: {integrity: sha512-54/JRvkLIzzDWshCWfuhadfrfZVPiElY8Fcgmg1HroEly/EDSszzhBAsarCux+D/kOslTRquNzuyGSmUSTTHGg==}
+
+  '@nl-design-system-candidate/code-block-css@1.1.3':
+    resolution: {integrity: sha512-uVRaqv8nXoQ/6IElHoHF9iCjqdGYTjXbBhYnzzbKZQtYp1hbogKOHzotKgaL7jFUaARVswKEzxTXoerSbvjFFw==}
+
+  '@nl-design-system-candidate/code-css@2.0.3':
+    resolution: {integrity: sha512-7cuwem+GDRBGT4/4h4QFZesr6l2ruRG4AAULhvPuyvmvftTMzb7Q8G5O2cmNzBt/VuQKO789Qe3w79UcXRjxNw==}
+
+  '@nl-design-system-candidate/heading-css@1.1.1':
+    resolution: {integrity: sha512-DcIIHvbFnjuJ/iC+zNnjI0oaTLF7NiLJDEuxWMHXfZNNDTGnBvcKJxWRuDDMswkWyX9C3lSnwMxfQqjMh0jglQ==}
+
+  '@nl-design-system-candidate/link-css@2.0.1':
+    resolution: {integrity: sha512-ZCVeyjLVksGEoJmIvXiPPtKNkDzGIB68v73J/hHku2pN2s5WX7ZJwNl4Rvpx6zPBQpD6xNW4JZMMAwc2TXa1Aw==}
+
+  '@nl-design-system-candidate/paragraph-css@2.1.1':
+    resolution: {integrity: sha512-Ig5TAMA6nol5pWC8KjzQ9gMemHKAZAGNqso65CdMeGdBT3Q6YGYWg42XopWhIQ/iWh/cKiwZHht1X41SKctRHQ==}
 
   '@nl-design-system-unstable/amsterdam-design-tokens@1.0.0-alpha.130':
     resolution: {integrity: sha512-IpkKZOTK2HEAjVyogHcFPKJJlldfp6zOx+Z/7Mv8mED20Vpeng6WSFpKPW/B0JPoO0Cb0SzbWyQA5DqeWC+7Cw==}
@@ -18107,7 +18137,7 @@ packages:
     resolution: {integrity: sha512-oWb1Z6mkHIskLzEJ/XWX0srkpkTQ7vaopMQkyaEIoq0fmtFVxOthb8cCxeT+p3ynTdkk/RZwbgG4brR5BeWECw==}
     engines: {node: '>= 4.0'}
     os: [darwin]
-    deprecated: Upgrade to fsevents v2 to mitigate potential security issues
+    deprecated: The v1 package contains DANGEROUS / INSECURE binaries. Upgrade to safe fsevents v2
 
   fsevents@2.3.3:
     resolution: {integrity: sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==}
@@ -33649,6 +33679,16 @@ snapshots:
     dependencies:
       eslint-scope: 5.1.1
 
+  '@nl-design-system-candidate/code-block-css@1.1.3': {}
+
+  '@nl-design-system-candidate/code-css@2.0.3': {}
+
+  '@nl-design-system-candidate/heading-css@1.1.1': {}
+
+  '@nl-design-system-candidate/link-css@2.0.1': {}
+
+  '@nl-design-system-candidate/paragraph-css@2.1.1': {}
+
   '@nl-design-system-unstable/amsterdam-design-tokens@1.0.0-alpha.130': {}
 
   '@nl-design-system-unstable/amsterdam-design-tokens@1.0.0-alpha.136': {}
@@ -39326,6 +39366,13 @@ snapshots:
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)
+
+  babel-loader@9.1.3(@babel/core@7.24.7)(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))):
+    dependencies:
+      '@babel/core': 7.24.7
+      find-cache-dir: 4.0.0
+      schema-utils: 4.2.0
+      webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
 
   babel-loader@9.1.3(@babel/core@7.24.7)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)):
     dependencies:
