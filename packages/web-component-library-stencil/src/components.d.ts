@@ -237,11 +237,15 @@ export namespace Components {
     }
     interface UtrechtIconBluesky {
     }
+    interface UtrechtIconBouwProjecten {
+    }
     interface UtrechtIconBouwproject {
     }
     interface UtrechtIconBrandgevaar {
     }
     interface UtrechtIconBriefBetalen {
+    }
+    interface UtrechtIconBuurtcentra {
     }
     interface UtrechtIconCheckmark {
     }
@@ -256,6 +260,8 @@ export namespace Components {
     interface UtrechtIconChevronUp {
     }
     interface UtrechtIconClose {
+    }
+    interface UtrechtIconCoffee {
     }
     interface UtrechtIconCollegeBW {
     }
@@ -293,6 +299,8 @@ export namespace Components {
     }
     interface UtrechtIconElektrischRijden {
     }
+    interface UtrechtIconEnergieProjecten {
+    }
     interface UtrechtIconEnergieVergoeding {
     }
     interface UtrechtIconEnergietransitie {
@@ -306,6 +314,8 @@ export namespace Components {
     interface UtrechtIconFiets {
     }
     interface UtrechtIconFilter {
+    }
+    interface UtrechtIconFlickr {
     }
     interface UtrechtIconGeboorte {
     }
@@ -332,6 +342,8 @@ export namespace Components {
     interface UtrechtIconGlijbaan {
     }
     interface UtrechtIconGrafiek {
+    }
+    interface UtrechtIconGroenProjecten {
     }
     interface UtrechtIconGrofvuil {
     }
@@ -406,6 +418,8 @@ export namespace Components {
     interface UtrechtIconListNumber {
     }
     interface UtrechtIconLoupe {
+    }
+    interface UtrechtIconMail {
     }
     interface UtrechtIconMarkt {
     }
@@ -491,11 +505,17 @@ export namespace Components {
     }
     interface UtrechtIconPaspoort {
     }
+    interface UtrechtIconPhone {
+    }
+    interface UtrechtIconPinterest {
+    }
     interface UtrechtIconPresentatie {
     }
     interface UtrechtIconPrijskaartje {
     }
     interface UtrechtIconReadAloud {
+    }
+    interface UtrechtIconReport {
     }
     interface UtrechtIconRijbewijs {
     }
@@ -518,6 +538,8 @@ export namespace Components {
     interface UtrechtIconSportEnCultuur {
     }
     interface UtrechtIconSportVoetbal {
+    }
+    interface UtrechtIconStandaardProjecten {
     }
     interface UtrechtIconStookverbod {
     }
@@ -559,6 +581,8 @@ export namespace Components {
     }
     interface UtrechtIconVerhuizen {
     }
+    interface UtrechtIconVerkeersProjecten {
+    }
     interface UtrechtIconVerkeerslicht {
     }
     interface UtrechtIconVerkiezingen {
@@ -592,6 +616,20 @@ export namespace Components {
     interface UtrechtIconWerkzaamheden {
     }
     interface UtrechtIconWhatsapp {
+    }
+    interface UtrechtIconWijkDenkmee {
+    }
+    interface UtrechtIconWijkOverlast {
+    }
+    interface UtrechtIconWijkPark {
+    }
+    interface UtrechtIconWijkProjecten {
+    }
+    interface UtrechtIconWijkSpeelplaats {
+    }
+    interface UtrechtIconWijkSport {
+    }
+    interface UtrechtIconWijkZwemmen {
     }
     interface UtrechtIconWonenKosten {
     }
@@ -1336,6 +1374,12 @@ declare global {
         prototype: HTMLUtrechtIconBlueskyElement;
         new (): HTMLUtrechtIconBlueskyElement;
     };
+    interface HTMLUtrechtIconBouwProjectenElement extends Components.UtrechtIconBouwProjecten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBouwProjectenElement: {
+        prototype: HTMLUtrechtIconBouwProjectenElement;
+        new (): HTMLUtrechtIconBouwProjectenElement;
+    };
     interface HTMLUtrechtIconBouwprojectElement extends Components.UtrechtIconBouwproject, HTMLStencilElement {
     }
     var HTMLUtrechtIconBouwprojectElement: {
@@ -1353,6 +1397,12 @@ declare global {
     var HTMLUtrechtIconBriefBetalenElement: {
         prototype: HTMLUtrechtIconBriefBetalenElement;
         new (): HTMLUtrechtIconBriefBetalenElement;
+    };
+    interface HTMLUtrechtIconBuurtcentraElement extends Components.UtrechtIconBuurtcentra, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconBuurtcentraElement: {
+        prototype: HTMLUtrechtIconBuurtcentraElement;
+        new (): HTMLUtrechtIconBuurtcentraElement;
     };
     interface HTMLUtrechtIconCheckmarkElement extends Components.UtrechtIconCheckmark, HTMLStencilElement {
     }
@@ -1389,6 +1439,12 @@ declare global {
     var HTMLUtrechtIconCloseElement: {
         prototype: HTMLUtrechtIconCloseElement;
         new (): HTMLUtrechtIconCloseElement;
+    };
+    interface HTMLUtrechtIconCoffeeElement extends Components.UtrechtIconCoffee, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconCoffeeElement: {
+        prototype: HTMLUtrechtIconCoffeeElement;
+        new (): HTMLUtrechtIconCoffeeElement;
     };
     interface HTMLUtrechtIconCollegeBWElement extends Components.UtrechtIconCollegeBW, HTMLStencilElement {
     }
@@ -1498,6 +1554,12 @@ declare global {
         prototype: HTMLUtrechtIconElektrischRijdenElement;
         new (): HTMLUtrechtIconElektrischRijdenElement;
     };
+    interface HTMLUtrechtIconEnergieProjectenElement extends Components.UtrechtIconEnergieProjecten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconEnergieProjectenElement: {
+        prototype: HTMLUtrechtIconEnergieProjectenElement;
+        new (): HTMLUtrechtIconEnergieProjectenElement;
+    };
     interface HTMLUtrechtIconEnergieVergoedingElement extends Components.UtrechtIconEnergieVergoeding, HTMLStencilElement {
     }
     var HTMLUtrechtIconEnergieVergoedingElement: {
@@ -1539,6 +1601,12 @@ declare global {
     var HTMLUtrechtIconFilterElement: {
         prototype: HTMLUtrechtIconFilterElement;
         new (): HTMLUtrechtIconFilterElement;
+    };
+    interface HTMLUtrechtIconFlickrElement extends Components.UtrechtIconFlickr, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconFlickrElement: {
+        prototype: HTMLUtrechtIconFlickrElement;
+        new (): HTMLUtrechtIconFlickrElement;
     };
     interface HTMLUtrechtIconGeboorteElement extends Components.UtrechtIconGeboorte, HTMLStencilElement {
     }
@@ -1617,6 +1685,12 @@ declare global {
     var HTMLUtrechtIconGrafiekElement: {
         prototype: HTMLUtrechtIconGrafiekElement;
         new (): HTMLUtrechtIconGrafiekElement;
+    };
+    interface HTMLUtrechtIconGroenProjectenElement extends Components.UtrechtIconGroenProjecten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconGroenProjectenElement: {
+        prototype: HTMLUtrechtIconGroenProjectenElement;
+        new (): HTMLUtrechtIconGroenProjectenElement;
     };
     interface HTMLUtrechtIconGrofvuilElement extends Components.UtrechtIconGrofvuil, HTMLStencilElement {
     }
@@ -1839,6 +1913,12 @@ declare global {
     var HTMLUtrechtIconLoupeElement: {
         prototype: HTMLUtrechtIconLoupeElement;
         new (): HTMLUtrechtIconLoupeElement;
+    };
+    interface HTMLUtrechtIconMailElement extends Components.UtrechtIconMail, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconMailElement: {
+        prototype: HTMLUtrechtIconMailElement;
+        new (): HTMLUtrechtIconMailElement;
     };
     interface HTMLUtrechtIconMarktElement extends Components.UtrechtIconMarkt, HTMLStencilElement {
     }
@@ -2092,6 +2172,18 @@ declare global {
         prototype: HTMLUtrechtIconPaspoortElement;
         new (): HTMLUtrechtIconPaspoortElement;
     };
+    interface HTMLUtrechtIconPhoneElement extends Components.UtrechtIconPhone, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconPhoneElement: {
+        prototype: HTMLUtrechtIconPhoneElement;
+        new (): HTMLUtrechtIconPhoneElement;
+    };
+    interface HTMLUtrechtIconPinterestElement extends Components.UtrechtIconPinterest, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconPinterestElement: {
+        prototype: HTMLUtrechtIconPinterestElement;
+        new (): HTMLUtrechtIconPinterestElement;
+    };
     interface HTMLUtrechtIconPresentatieElement extends Components.UtrechtIconPresentatie, HTMLStencilElement {
     }
     var HTMLUtrechtIconPresentatieElement: {
@@ -2109,6 +2201,12 @@ declare global {
     var HTMLUtrechtIconReadAloudElement: {
         prototype: HTMLUtrechtIconReadAloudElement;
         new (): HTMLUtrechtIconReadAloudElement;
+    };
+    interface HTMLUtrechtIconReportElement extends Components.UtrechtIconReport, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconReportElement: {
+        prototype: HTMLUtrechtIconReportElement;
+        new (): HTMLUtrechtIconReportElement;
     };
     interface HTMLUtrechtIconRijbewijsElement extends Components.UtrechtIconRijbewijs, HTMLStencilElement {
     }
@@ -2175,6 +2273,12 @@ declare global {
     var HTMLUtrechtIconSportVoetbalElement: {
         prototype: HTMLUtrechtIconSportVoetbalElement;
         new (): HTMLUtrechtIconSportVoetbalElement;
+    };
+    interface HTMLUtrechtIconStandaardProjectenElement extends Components.UtrechtIconStandaardProjecten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconStandaardProjectenElement: {
+        prototype: HTMLUtrechtIconStandaardProjectenElement;
+        new (): HTMLUtrechtIconStandaardProjectenElement;
     };
     interface HTMLUtrechtIconStookverbodElement extends Components.UtrechtIconStookverbod, HTMLStencilElement {
     }
@@ -2296,6 +2400,12 @@ declare global {
         prototype: HTMLUtrechtIconVerhuizenElement;
         new (): HTMLUtrechtIconVerhuizenElement;
     };
+    interface HTMLUtrechtIconVerkeersProjectenElement extends Components.UtrechtIconVerkeersProjecten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconVerkeersProjectenElement: {
+        prototype: HTMLUtrechtIconVerkeersProjectenElement;
+        new (): HTMLUtrechtIconVerkeersProjectenElement;
+    };
     interface HTMLUtrechtIconVerkeerslichtElement extends Components.UtrechtIconVerkeerslicht, HTMLStencilElement {
     }
     var HTMLUtrechtIconVerkeerslichtElement: {
@@ -2397,6 +2507,48 @@ declare global {
     var HTMLUtrechtIconWhatsappElement: {
         prototype: HTMLUtrechtIconWhatsappElement;
         new (): HTMLUtrechtIconWhatsappElement;
+    };
+    interface HTMLUtrechtIconWijkDenkmeeElement extends Components.UtrechtIconWijkDenkmee, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkDenkmeeElement: {
+        prototype: HTMLUtrechtIconWijkDenkmeeElement;
+        new (): HTMLUtrechtIconWijkDenkmeeElement;
+    };
+    interface HTMLUtrechtIconWijkOverlastElement extends Components.UtrechtIconWijkOverlast, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkOverlastElement: {
+        prototype: HTMLUtrechtIconWijkOverlastElement;
+        new (): HTMLUtrechtIconWijkOverlastElement;
+    };
+    interface HTMLUtrechtIconWijkParkElement extends Components.UtrechtIconWijkPark, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkParkElement: {
+        prototype: HTMLUtrechtIconWijkParkElement;
+        new (): HTMLUtrechtIconWijkParkElement;
+    };
+    interface HTMLUtrechtIconWijkProjectenElement extends Components.UtrechtIconWijkProjecten, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkProjectenElement: {
+        prototype: HTMLUtrechtIconWijkProjectenElement;
+        new (): HTMLUtrechtIconWijkProjectenElement;
+    };
+    interface HTMLUtrechtIconWijkSpeelplaatsElement extends Components.UtrechtIconWijkSpeelplaats, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkSpeelplaatsElement: {
+        prototype: HTMLUtrechtIconWijkSpeelplaatsElement;
+        new (): HTMLUtrechtIconWijkSpeelplaatsElement;
+    };
+    interface HTMLUtrechtIconWijkSportElement extends Components.UtrechtIconWijkSport, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkSportElement: {
+        prototype: HTMLUtrechtIconWijkSportElement;
+        new (): HTMLUtrechtIconWijkSportElement;
+    };
+    interface HTMLUtrechtIconWijkZwemmenElement extends Components.UtrechtIconWijkZwemmen, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkZwemmenElement: {
+        prototype: HTMLUtrechtIconWijkZwemmenElement;
+        new (): HTMLUtrechtIconWijkZwemmenElement;
     };
     interface HTMLUtrechtIconWonenKostenElement extends Components.UtrechtIconWonenKosten, HTMLStencilElement {
     }
@@ -2867,15 +3019,18 @@ declare global {
         "utrecht-icon-bijstand": HTMLUtrechtIconBijstandElement;
         "utrecht-icon-blad": HTMLUtrechtIconBladElement;
         "utrecht-icon-bluesky": HTMLUtrechtIconBlueskyElement;
+        "utrecht-icon-bouw-projecten": HTMLUtrechtIconBouwProjectenElement;
         "utrecht-icon-bouwproject": HTMLUtrechtIconBouwprojectElement;
         "utrecht-icon-brandgevaar": HTMLUtrechtIconBrandgevaarElement;
         "utrecht-icon-brief-betalen": HTMLUtrechtIconBriefBetalenElement;
+        "utrecht-icon-buurtcentra": HTMLUtrechtIconBuurtcentraElement;
         "utrecht-icon-checkmark": HTMLUtrechtIconCheckmarkElement;
         "utrecht-icon-chevron-down": HTMLUtrechtIconChevronDownElement;
         "utrecht-icon-chevron-left": HTMLUtrechtIconChevronLeftElement;
         "utrecht-icon-chevron-right": HTMLUtrechtIconChevronRightElement;
         "utrecht-icon-chevron-up": HTMLUtrechtIconChevronUpElement;
         "utrecht-icon-close": HTMLUtrechtIconCloseElement;
+        "utrecht-icon-coffee": HTMLUtrechtIconCoffeeElement;
         "utrecht-icon-college-b-w": HTMLUtrechtIconCollegeBWElement;
         "utrecht-icon-container": HTMLUtrechtIconContainerElement;
         "utrecht-icon-container-bio": HTMLUtrechtIconContainerBioElement;
@@ -2894,6 +3049,7 @@ declare global {
         "utrecht-icon-eenzaamheid": HTMLUtrechtIconEenzaamheidElement;
         "utrecht-icon-eikenprocessie": HTMLUtrechtIconEikenprocessieElement;
         "utrecht-icon-elektrisch-rijden": HTMLUtrechtIconElektrischRijdenElement;
+        "utrecht-icon-energie-projecten": HTMLUtrechtIconEnergieProjectenElement;
         "utrecht-icon-energie-vergoeding": HTMLUtrechtIconEnergieVergoedingElement;
         "utrecht-icon-energietransitie": HTMLUtrechtIconEnergietransitieElement;
         "utrecht-icon-error": HTMLUtrechtIconErrorElement;
@@ -2901,6 +3057,7 @@ declare global {
         "utrecht-icon-facebook": HTMLUtrechtIconFacebookElement;
         "utrecht-icon-fiets": HTMLUtrechtIconFietsElement;
         "utrecht-icon-filter": HTMLUtrechtIconFilterElement;
+        "utrecht-icon-flickr": HTMLUtrechtIconFlickrElement;
         "utrecht-icon-geboorte": HTMLUtrechtIconGeboorteElement;
         "utrecht-icon-gebruiker-centraal": HTMLUtrechtIconGebruikerCentraalElement;
         "utrecht-icon-gebruiker-ingelogd": HTMLUtrechtIconGebruikerIngelogdElement;
@@ -2914,6 +3071,7 @@ declare global {
         "utrecht-icon-glas-afval": HTMLUtrechtIconGlasAfvalElement;
         "utrecht-icon-glijbaan": HTMLUtrechtIconGlijbaanElement;
         "utrecht-icon-grafiek": HTMLUtrechtIconGrafiekElement;
+        "utrecht-icon-groen-projecten": HTMLUtrechtIconGroenProjectenElement;
         "utrecht-icon-grofvuil": HTMLUtrechtIconGrofvuilElement;
         "utrecht-icon-grofvuil-ophalen": HTMLUtrechtIconGrofvuilOphalenElement;
         "utrecht-icon-hamburger-menu": HTMLUtrechtIconHamburgerMenuElement;
@@ -2951,6 +3109,7 @@ declare global {
         "utrecht-icon-list-check": HTMLUtrechtIconListCheckElement;
         "utrecht-icon-list-number": HTMLUtrechtIconListNumberElement;
         "utrecht-icon-loupe": HTMLUtrechtIconLoupeElement;
+        "utrecht-icon-mail": HTMLUtrechtIconMailElement;
         "utrecht-icon-markt": HTMLUtrechtIconMarktElement;
         "utrecht-icon-mastodon": HTMLUtrechtIconMastodonElement;
         "utrecht-icon-melding": HTMLUtrechtIconMeldingElement;
@@ -2993,9 +3152,12 @@ declare global {
         "utrecht-icon-participatie-like": HTMLUtrechtIconParticipatieLikeElement;
         "utrecht-icon-participatie-pitch": HTMLUtrechtIconParticipatiePitchElement;
         "utrecht-icon-paspoort": HTMLUtrechtIconPaspoortElement;
+        "utrecht-icon-phone": HTMLUtrechtIconPhoneElement;
+        "utrecht-icon-pinterest": HTMLUtrechtIconPinterestElement;
         "utrecht-icon-presentatie": HTMLUtrechtIconPresentatieElement;
         "utrecht-icon-prijskaartje": HTMLUtrechtIconPrijskaartjeElement;
         "utrecht-icon-read-aloud": HTMLUtrechtIconReadAloudElement;
+        "utrecht-icon-report": HTMLUtrechtIconReportElement;
         "utrecht-icon-rijbewijs": HTMLUtrechtIconRijbewijsElement;
         "utrecht-icon-rioolheffing": HTMLUtrechtIconRioolheffingElement;
         "utrecht-icon-rolstoel": HTMLUtrechtIconRolstoelElement;
@@ -3007,6 +3169,7 @@ declare global {
         "utrecht-icon-sport": HTMLUtrechtIconSportElement;
         "utrecht-icon-sport-en-cultuur": HTMLUtrechtIconSportEnCultuurElement;
         "utrecht-icon-sport-voetbal": HTMLUtrechtIconSportVoetbalElement;
+        "utrecht-icon-standaard-projecten": HTMLUtrechtIconStandaardProjectenElement;
         "utrecht-icon-stookverbod": HTMLUtrechtIconStookverbodElement;
         "utrecht-icon-strand": HTMLUtrechtIconStrandElement;
         "utrecht-icon-strooien": HTMLUtrechtIconStrooienElement;
@@ -3027,6 +3190,7 @@ declare global {
         "utrecht-icon-vergaderendigitaal": HTMLUtrechtIconVergaderendigitaalElement;
         "utrecht-icon-vergoeding": HTMLUtrechtIconVergoedingElement;
         "utrecht-icon-verhuizen": HTMLUtrechtIconVerhuizenElement;
+        "utrecht-icon-verkeers-projecten": HTMLUtrechtIconVerkeersProjectenElement;
         "utrecht-icon-verkeerslicht": HTMLUtrechtIconVerkeerslichtElement;
         "utrecht-icon-verkiezingen": HTMLUtrechtIconVerkiezingenElement;
         "utrecht-icon-verslaving": HTMLUtrechtIconVerslavingElement;
@@ -3044,6 +3208,13 @@ declare global {
         "utrecht-icon-werken": HTMLUtrechtIconWerkenElement;
         "utrecht-icon-werkzaamheden": HTMLUtrechtIconWerkzaamhedenElement;
         "utrecht-icon-whatsapp": HTMLUtrechtIconWhatsappElement;
+        "utrecht-icon-wijk-denkmee": HTMLUtrechtIconWijkDenkmeeElement;
+        "utrecht-icon-wijk-overlast": HTMLUtrechtIconWijkOverlastElement;
+        "utrecht-icon-wijk-park": HTMLUtrechtIconWijkParkElement;
+        "utrecht-icon-wijk-projecten": HTMLUtrechtIconWijkProjectenElement;
+        "utrecht-icon-wijk-speelplaats": HTMLUtrechtIconWijkSpeelplaatsElement;
+        "utrecht-icon-wijk-sport": HTMLUtrechtIconWijkSportElement;
+        "utrecht-icon-wijk-zwemmen": HTMLUtrechtIconWijkZwemmenElement;
         "utrecht-icon-wonen-kosten": HTMLUtrechtIconWonenKostenElement;
         "utrecht-icon-woning-zoeken": HTMLUtrechtIconWoningZoekenElement;
         "utrecht-icon-x": HTMLUtrechtIconXElement;
@@ -3354,11 +3525,15 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconBluesky {
     }
+    interface UtrechtIconBouwProjecten {
+    }
     interface UtrechtIconBouwproject {
     }
     interface UtrechtIconBrandgevaar {
     }
     interface UtrechtIconBriefBetalen {
+    }
+    interface UtrechtIconBuurtcentra {
     }
     interface UtrechtIconCheckmark {
     }
@@ -3373,6 +3548,8 @@ declare namespace LocalJSX {
     interface UtrechtIconChevronUp {
     }
     interface UtrechtIconClose {
+    }
+    interface UtrechtIconCoffee {
     }
     interface UtrechtIconCollegeBW {
     }
@@ -3410,6 +3587,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconElektrischRijden {
     }
+    interface UtrechtIconEnergieProjecten {
+    }
     interface UtrechtIconEnergieVergoeding {
     }
     interface UtrechtIconEnergietransitie {
@@ -3423,6 +3602,8 @@ declare namespace LocalJSX {
     interface UtrechtIconFiets {
     }
     interface UtrechtIconFilter {
+    }
+    interface UtrechtIconFlickr {
     }
     interface UtrechtIconGeboorte {
     }
@@ -3449,6 +3630,8 @@ declare namespace LocalJSX {
     interface UtrechtIconGlijbaan {
     }
     interface UtrechtIconGrafiek {
+    }
+    interface UtrechtIconGroenProjecten {
     }
     interface UtrechtIconGrofvuil {
     }
@@ -3523,6 +3706,8 @@ declare namespace LocalJSX {
     interface UtrechtIconListNumber {
     }
     interface UtrechtIconLoupe {
+    }
+    interface UtrechtIconMail {
     }
     interface UtrechtIconMarkt {
     }
@@ -3608,11 +3793,17 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconPaspoort {
     }
+    interface UtrechtIconPhone {
+    }
+    interface UtrechtIconPinterest {
+    }
     interface UtrechtIconPresentatie {
     }
     interface UtrechtIconPrijskaartje {
     }
     interface UtrechtIconReadAloud {
+    }
+    interface UtrechtIconReport {
     }
     interface UtrechtIconRijbewijs {
     }
@@ -3635,6 +3826,8 @@ declare namespace LocalJSX {
     interface UtrechtIconSportEnCultuur {
     }
     interface UtrechtIconSportVoetbal {
+    }
+    interface UtrechtIconStandaardProjecten {
     }
     interface UtrechtIconStookverbod {
     }
@@ -3676,6 +3869,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconVerhuizen {
     }
+    interface UtrechtIconVerkeersProjecten {
+    }
     interface UtrechtIconVerkeerslicht {
     }
     interface UtrechtIconVerkiezingen {
@@ -3709,6 +3904,20 @@ declare namespace LocalJSX {
     interface UtrechtIconWerkzaamheden {
     }
     interface UtrechtIconWhatsapp {
+    }
+    interface UtrechtIconWijkDenkmee {
+    }
+    interface UtrechtIconWijkOverlast {
+    }
+    interface UtrechtIconWijkPark {
+    }
+    interface UtrechtIconWijkProjecten {
+    }
+    interface UtrechtIconWijkSpeelplaats {
+    }
+    interface UtrechtIconWijkSport {
+    }
+    interface UtrechtIconWijkZwemmen {
     }
     interface UtrechtIconWonenKosten {
     }
@@ -4001,15 +4210,18 @@ declare namespace LocalJSX {
         "utrecht-icon-bijstand": UtrechtIconBijstand;
         "utrecht-icon-blad": UtrechtIconBlad;
         "utrecht-icon-bluesky": UtrechtIconBluesky;
+        "utrecht-icon-bouw-projecten": UtrechtIconBouwProjecten;
         "utrecht-icon-bouwproject": UtrechtIconBouwproject;
         "utrecht-icon-brandgevaar": UtrechtIconBrandgevaar;
         "utrecht-icon-brief-betalen": UtrechtIconBriefBetalen;
+        "utrecht-icon-buurtcentra": UtrechtIconBuurtcentra;
         "utrecht-icon-checkmark": UtrechtIconCheckmark;
         "utrecht-icon-chevron-down": UtrechtIconChevronDown;
         "utrecht-icon-chevron-left": UtrechtIconChevronLeft;
         "utrecht-icon-chevron-right": UtrechtIconChevronRight;
         "utrecht-icon-chevron-up": UtrechtIconChevronUp;
         "utrecht-icon-close": UtrechtIconClose;
+        "utrecht-icon-coffee": UtrechtIconCoffee;
         "utrecht-icon-college-b-w": UtrechtIconCollegeBW;
         "utrecht-icon-container": UtrechtIconContainer;
         "utrecht-icon-container-bio": UtrechtIconContainerBio;
@@ -4028,6 +4240,7 @@ declare namespace LocalJSX {
         "utrecht-icon-eenzaamheid": UtrechtIconEenzaamheid;
         "utrecht-icon-eikenprocessie": UtrechtIconEikenprocessie;
         "utrecht-icon-elektrisch-rijden": UtrechtIconElektrischRijden;
+        "utrecht-icon-energie-projecten": UtrechtIconEnergieProjecten;
         "utrecht-icon-energie-vergoeding": UtrechtIconEnergieVergoeding;
         "utrecht-icon-energietransitie": UtrechtIconEnergietransitie;
         "utrecht-icon-error": UtrechtIconError;
@@ -4035,6 +4248,7 @@ declare namespace LocalJSX {
         "utrecht-icon-facebook": UtrechtIconFacebook;
         "utrecht-icon-fiets": UtrechtIconFiets;
         "utrecht-icon-filter": UtrechtIconFilter;
+        "utrecht-icon-flickr": UtrechtIconFlickr;
         "utrecht-icon-geboorte": UtrechtIconGeboorte;
         "utrecht-icon-gebruiker-centraal": UtrechtIconGebruikerCentraal;
         "utrecht-icon-gebruiker-ingelogd": UtrechtIconGebruikerIngelogd;
@@ -4048,6 +4262,7 @@ declare namespace LocalJSX {
         "utrecht-icon-glas-afval": UtrechtIconGlasAfval;
         "utrecht-icon-glijbaan": UtrechtIconGlijbaan;
         "utrecht-icon-grafiek": UtrechtIconGrafiek;
+        "utrecht-icon-groen-projecten": UtrechtIconGroenProjecten;
         "utrecht-icon-grofvuil": UtrechtIconGrofvuil;
         "utrecht-icon-grofvuil-ophalen": UtrechtIconGrofvuilOphalen;
         "utrecht-icon-hamburger-menu": UtrechtIconHamburgerMenu;
@@ -4085,6 +4300,7 @@ declare namespace LocalJSX {
         "utrecht-icon-list-check": UtrechtIconListCheck;
         "utrecht-icon-list-number": UtrechtIconListNumber;
         "utrecht-icon-loupe": UtrechtIconLoupe;
+        "utrecht-icon-mail": UtrechtIconMail;
         "utrecht-icon-markt": UtrechtIconMarkt;
         "utrecht-icon-mastodon": UtrechtIconMastodon;
         "utrecht-icon-melding": UtrechtIconMelding;
@@ -4127,9 +4343,12 @@ declare namespace LocalJSX {
         "utrecht-icon-participatie-like": UtrechtIconParticipatieLike;
         "utrecht-icon-participatie-pitch": UtrechtIconParticipatiePitch;
         "utrecht-icon-paspoort": UtrechtIconPaspoort;
+        "utrecht-icon-phone": UtrechtIconPhone;
+        "utrecht-icon-pinterest": UtrechtIconPinterest;
         "utrecht-icon-presentatie": UtrechtIconPresentatie;
         "utrecht-icon-prijskaartje": UtrechtIconPrijskaartje;
         "utrecht-icon-read-aloud": UtrechtIconReadAloud;
+        "utrecht-icon-report": UtrechtIconReport;
         "utrecht-icon-rijbewijs": UtrechtIconRijbewijs;
         "utrecht-icon-rioolheffing": UtrechtIconRioolheffing;
         "utrecht-icon-rolstoel": UtrechtIconRolstoel;
@@ -4141,6 +4360,7 @@ declare namespace LocalJSX {
         "utrecht-icon-sport": UtrechtIconSport;
         "utrecht-icon-sport-en-cultuur": UtrechtIconSportEnCultuur;
         "utrecht-icon-sport-voetbal": UtrechtIconSportVoetbal;
+        "utrecht-icon-standaard-projecten": UtrechtIconStandaardProjecten;
         "utrecht-icon-stookverbod": UtrechtIconStookverbod;
         "utrecht-icon-strand": UtrechtIconStrand;
         "utrecht-icon-strooien": UtrechtIconStrooien;
@@ -4161,6 +4381,7 @@ declare namespace LocalJSX {
         "utrecht-icon-vergaderendigitaal": UtrechtIconVergaderendigitaal;
         "utrecht-icon-vergoeding": UtrechtIconVergoeding;
         "utrecht-icon-verhuizen": UtrechtIconVerhuizen;
+        "utrecht-icon-verkeers-projecten": UtrechtIconVerkeersProjecten;
         "utrecht-icon-verkeerslicht": UtrechtIconVerkeerslicht;
         "utrecht-icon-verkiezingen": UtrechtIconVerkiezingen;
         "utrecht-icon-verslaving": UtrechtIconVerslaving;
@@ -4178,6 +4399,13 @@ declare namespace LocalJSX {
         "utrecht-icon-werken": UtrechtIconWerken;
         "utrecht-icon-werkzaamheden": UtrechtIconWerkzaamheden;
         "utrecht-icon-whatsapp": UtrechtIconWhatsapp;
+        "utrecht-icon-wijk-denkmee": UtrechtIconWijkDenkmee;
+        "utrecht-icon-wijk-overlast": UtrechtIconWijkOverlast;
+        "utrecht-icon-wijk-park": UtrechtIconWijkPark;
+        "utrecht-icon-wijk-projecten": UtrechtIconWijkProjecten;
+        "utrecht-icon-wijk-speelplaats": UtrechtIconWijkSpeelplaats;
+        "utrecht-icon-wijk-sport": UtrechtIconWijkSport;
+        "utrecht-icon-wijk-zwemmen": UtrechtIconWijkZwemmen;
         "utrecht-icon-wonen-kosten": UtrechtIconWonenKosten;
         "utrecht-icon-woning-zoeken": UtrechtIconWoningZoeken;
         "utrecht-icon-x": UtrechtIconX;
@@ -4309,15 +4537,18 @@ declare module "@stencil/core" {
             "utrecht-icon-bijstand": LocalJSX.UtrechtIconBijstand & JSXBase.HTMLAttributes<HTMLUtrechtIconBijstandElement>;
             "utrecht-icon-blad": LocalJSX.UtrechtIconBlad & JSXBase.HTMLAttributes<HTMLUtrechtIconBladElement>;
             "utrecht-icon-bluesky": LocalJSX.UtrechtIconBluesky & JSXBase.HTMLAttributes<HTMLUtrechtIconBlueskyElement>;
+            "utrecht-icon-bouw-projecten": LocalJSX.UtrechtIconBouwProjecten & JSXBase.HTMLAttributes<HTMLUtrechtIconBouwProjectenElement>;
             "utrecht-icon-bouwproject": LocalJSX.UtrechtIconBouwproject & JSXBase.HTMLAttributes<HTMLUtrechtIconBouwprojectElement>;
             "utrecht-icon-brandgevaar": LocalJSX.UtrechtIconBrandgevaar & JSXBase.HTMLAttributes<HTMLUtrechtIconBrandgevaarElement>;
             "utrecht-icon-brief-betalen": LocalJSX.UtrechtIconBriefBetalen & JSXBase.HTMLAttributes<HTMLUtrechtIconBriefBetalenElement>;
+            "utrecht-icon-buurtcentra": LocalJSX.UtrechtIconBuurtcentra & JSXBase.HTMLAttributes<HTMLUtrechtIconBuurtcentraElement>;
             "utrecht-icon-checkmark": LocalJSX.UtrechtIconCheckmark & JSXBase.HTMLAttributes<HTMLUtrechtIconCheckmarkElement>;
             "utrecht-icon-chevron-down": LocalJSX.UtrechtIconChevronDown & JSXBase.HTMLAttributes<HTMLUtrechtIconChevronDownElement>;
             "utrecht-icon-chevron-left": LocalJSX.UtrechtIconChevronLeft & JSXBase.HTMLAttributes<HTMLUtrechtIconChevronLeftElement>;
             "utrecht-icon-chevron-right": LocalJSX.UtrechtIconChevronRight & JSXBase.HTMLAttributes<HTMLUtrechtIconChevronRightElement>;
             "utrecht-icon-chevron-up": LocalJSX.UtrechtIconChevronUp & JSXBase.HTMLAttributes<HTMLUtrechtIconChevronUpElement>;
             "utrecht-icon-close": LocalJSX.UtrechtIconClose & JSXBase.HTMLAttributes<HTMLUtrechtIconCloseElement>;
+            "utrecht-icon-coffee": LocalJSX.UtrechtIconCoffee & JSXBase.HTMLAttributes<HTMLUtrechtIconCoffeeElement>;
             "utrecht-icon-college-b-w": LocalJSX.UtrechtIconCollegeBW & JSXBase.HTMLAttributes<HTMLUtrechtIconCollegeBWElement>;
             "utrecht-icon-container": LocalJSX.UtrechtIconContainer & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerElement>;
             "utrecht-icon-container-bio": LocalJSX.UtrechtIconContainerBio & JSXBase.HTMLAttributes<HTMLUtrechtIconContainerBioElement>;
@@ -4336,6 +4567,7 @@ declare module "@stencil/core" {
             "utrecht-icon-eenzaamheid": LocalJSX.UtrechtIconEenzaamheid & JSXBase.HTMLAttributes<HTMLUtrechtIconEenzaamheidElement>;
             "utrecht-icon-eikenprocessie": LocalJSX.UtrechtIconEikenprocessie & JSXBase.HTMLAttributes<HTMLUtrechtIconEikenprocessieElement>;
             "utrecht-icon-elektrisch-rijden": LocalJSX.UtrechtIconElektrischRijden & JSXBase.HTMLAttributes<HTMLUtrechtIconElektrischRijdenElement>;
+            "utrecht-icon-energie-projecten": LocalJSX.UtrechtIconEnergieProjecten & JSXBase.HTMLAttributes<HTMLUtrechtIconEnergieProjectenElement>;
             "utrecht-icon-energie-vergoeding": LocalJSX.UtrechtIconEnergieVergoeding & JSXBase.HTMLAttributes<HTMLUtrechtIconEnergieVergoedingElement>;
             "utrecht-icon-energietransitie": LocalJSX.UtrechtIconEnergietransitie & JSXBase.HTMLAttributes<HTMLUtrechtIconEnergietransitieElement>;
             "utrecht-icon-error": LocalJSX.UtrechtIconError & JSXBase.HTMLAttributes<HTMLUtrechtIconErrorElement>;
@@ -4343,6 +4575,7 @@ declare module "@stencil/core" {
             "utrecht-icon-facebook": LocalJSX.UtrechtIconFacebook & JSXBase.HTMLAttributes<HTMLUtrechtIconFacebookElement>;
             "utrecht-icon-fiets": LocalJSX.UtrechtIconFiets & JSXBase.HTMLAttributes<HTMLUtrechtIconFietsElement>;
             "utrecht-icon-filter": LocalJSX.UtrechtIconFilter & JSXBase.HTMLAttributes<HTMLUtrechtIconFilterElement>;
+            "utrecht-icon-flickr": LocalJSX.UtrechtIconFlickr & JSXBase.HTMLAttributes<HTMLUtrechtIconFlickrElement>;
             "utrecht-icon-geboorte": LocalJSX.UtrechtIconGeboorte & JSXBase.HTMLAttributes<HTMLUtrechtIconGeboorteElement>;
             "utrecht-icon-gebruiker-centraal": LocalJSX.UtrechtIconGebruikerCentraal & JSXBase.HTMLAttributes<HTMLUtrechtIconGebruikerCentraalElement>;
             "utrecht-icon-gebruiker-ingelogd": LocalJSX.UtrechtIconGebruikerIngelogd & JSXBase.HTMLAttributes<HTMLUtrechtIconGebruikerIngelogdElement>;
@@ -4356,6 +4589,7 @@ declare module "@stencil/core" {
             "utrecht-icon-glas-afval": LocalJSX.UtrechtIconGlasAfval & JSXBase.HTMLAttributes<HTMLUtrechtIconGlasAfvalElement>;
             "utrecht-icon-glijbaan": LocalJSX.UtrechtIconGlijbaan & JSXBase.HTMLAttributes<HTMLUtrechtIconGlijbaanElement>;
             "utrecht-icon-grafiek": LocalJSX.UtrechtIconGrafiek & JSXBase.HTMLAttributes<HTMLUtrechtIconGrafiekElement>;
+            "utrecht-icon-groen-projecten": LocalJSX.UtrechtIconGroenProjecten & JSXBase.HTMLAttributes<HTMLUtrechtIconGroenProjectenElement>;
             "utrecht-icon-grofvuil": LocalJSX.UtrechtIconGrofvuil & JSXBase.HTMLAttributes<HTMLUtrechtIconGrofvuilElement>;
             "utrecht-icon-grofvuil-ophalen": LocalJSX.UtrechtIconGrofvuilOphalen & JSXBase.HTMLAttributes<HTMLUtrechtIconGrofvuilOphalenElement>;
             "utrecht-icon-hamburger-menu": LocalJSX.UtrechtIconHamburgerMenu & JSXBase.HTMLAttributes<HTMLUtrechtIconHamburgerMenuElement>;
@@ -4393,6 +4627,7 @@ declare module "@stencil/core" {
             "utrecht-icon-list-check": LocalJSX.UtrechtIconListCheck & JSXBase.HTMLAttributes<HTMLUtrechtIconListCheckElement>;
             "utrecht-icon-list-number": LocalJSX.UtrechtIconListNumber & JSXBase.HTMLAttributes<HTMLUtrechtIconListNumberElement>;
             "utrecht-icon-loupe": LocalJSX.UtrechtIconLoupe & JSXBase.HTMLAttributes<HTMLUtrechtIconLoupeElement>;
+            "utrecht-icon-mail": LocalJSX.UtrechtIconMail & JSXBase.HTMLAttributes<HTMLUtrechtIconMailElement>;
             "utrecht-icon-markt": LocalJSX.UtrechtIconMarkt & JSXBase.HTMLAttributes<HTMLUtrechtIconMarktElement>;
             "utrecht-icon-mastodon": LocalJSX.UtrechtIconMastodon & JSXBase.HTMLAttributes<HTMLUtrechtIconMastodonElement>;
             "utrecht-icon-melding": LocalJSX.UtrechtIconMelding & JSXBase.HTMLAttributes<HTMLUtrechtIconMeldingElement>;
@@ -4435,9 +4670,12 @@ declare module "@stencil/core" {
             "utrecht-icon-participatie-like": LocalJSX.UtrechtIconParticipatieLike & JSXBase.HTMLAttributes<HTMLUtrechtIconParticipatieLikeElement>;
             "utrecht-icon-participatie-pitch": LocalJSX.UtrechtIconParticipatiePitch & JSXBase.HTMLAttributes<HTMLUtrechtIconParticipatiePitchElement>;
             "utrecht-icon-paspoort": LocalJSX.UtrechtIconPaspoort & JSXBase.HTMLAttributes<HTMLUtrechtIconPaspoortElement>;
+            "utrecht-icon-phone": LocalJSX.UtrechtIconPhone & JSXBase.HTMLAttributes<HTMLUtrechtIconPhoneElement>;
+            "utrecht-icon-pinterest": LocalJSX.UtrechtIconPinterest & JSXBase.HTMLAttributes<HTMLUtrechtIconPinterestElement>;
             "utrecht-icon-presentatie": LocalJSX.UtrechtIconPresentatie & JSXBase.HTMLAttributes<HTMLUtrechtIconPresentatieElement>;
             "utrecht-icon-prijskaartje": LocalJSX.UtrechtIconPrijskaartje & JSXBase.HTMLAttributes<HTMLUtrechtIconPrijskaartjeElement>;
             "utrecht-icon-read-aloud": LocalJSX.UtrechtIconReadAloud & JSXBase.HTMLAttributes<HTMLUtrechtIconReadAloudElement>;
+            "utrecht-icon-report": LocalJSX.UtrechtIconReport & JSXBase.HTMLAttributes<HTMLUtrechtIconReportElement>;
             "utrecht-icon-rijbewijs": LocalJSX.UtrechtIconRijbewijs & JSXBase.HTMLAttributes<HTMLUtrechtIconRijbewijsElement>;
             "utrecht-icon-rioolheffing": LocalJSX.UtrechtIconRioolheffing & JSXBase.HTMLAttributes<HTMLUtrechtIconRioolheffingElement>;
             "utrecht-icon-rolstoel": LocalJSX.UtrechtIconRolstoel & JSXBase.HTMLAttributes<HTMLUtrechtIconRolstoelElement>;
@@ -4449,6 +4687,7 @@ declare module "@stencil/core" {
             "utrecht-icon-sport": LocalJSX.UtrechtIconSport & JSXBase.HTMLAttributes<HTMLUtrechtIconSportElement>;
             "utrecht-icon-sport-en-cultuur": LocalJSX.UtrechtIconSportEnCultuur & JSXBase.HTMLAttributes<HTMLUtrechtIconSportEnCultuurElement>;
             "utrecht-icon-sport-voetbal": LocalJSX.UtrechtIconSportVoetbal & JSXBase.HTMLAttributes<HTMLUtrechtIconSportVoetbalElement>;
+            "utrecht-icon-standaard-projecten": LocalJSX.UtrechtIconStandaardProjecten & JSXBase.HTMLAttributes<HTMLUtrechtIconStandaardProjectenElement>;
             "utrecht-icon-stookverbod": LocalJSX.UtrechtIconStookverbod & JSXBase.HTMLAttributes<HTMLUtrechtIconStookverbodElement>;
             "utrecht-icon-strand": LocalJSX.UtrechtIconStrand & JSXBase.HTMLAttributes<HTMLUtrechtIconStrandElement>;
             "utrecht-icon-strooien": LocalJSX.UtrechtIconStrooien & JSXBase.HTMLAttributes<HTMLUtrechtIconStrooienElement>;
@@ -4469,6 +4708,7 @@ declare module "@stencil/core" {
             "utrecht-icon-vergaderendigitaal": LocalJSX.UtrechtIconVergaderendigitaal & JSXBase.HTMLAttributes<HTMLUtrechtIconVergaderendigitaalElement>;
             "utrecht-icon-vergoeding": LocalJSX.UtrechtIconVergoeding & JSXBase.HTMLAttributes<HTMLUtrechtIconVergoedingElement>;
             "utrecht-icon-verhuizen": LocalJSX.UtrechtIconVerhuizen & JSXBase.HTMLAttributes<HTMLUtrechtIconVerhuizenElement>;
+            "utrecht-icon-verkeers-projecten": LocalJSX.UtrechtIconVerkeersProjecten & JSXBase.HTMLAttributes<HTMLUtrechtIconVerkeersProjectenElement>;
             "utrecht-icon-verkeerslicht": LocalJSX.UtrechtIconVerkeerslicht & JSXBase.HTMLAttributes<HTMLUtrechtIconVerkeerslichtElement>;
             "utrecht-icon-verkiezingen": LocalJSX.UtrechtIconVerkiezingen & JSXBase.HTMLAttributes<HTMLUtrechtIconVerkiezingenElement>;
             "utrecht-icon-verslaving": LocalJSX.UtrechtIconVerslaving & JSXBase.HTMLAttributes<HTMLUtrechtIconVerslavingElement>;
@@ -4486,6 +4726,13 @@ declare module "@stencil/core" {
             "utrecht-icon-werken": LocalJSX.UtrechtIconWerken & JSXBase.HTMLAttributes<HTMLUtrechtIconWerkenElement>;
             "utrecht-icon-werkzaamheden": LocalJSX.UtrechtIconWerkzaamheden & JSXBase.HTMLAttributes<HTMLUtrechtIconWerkzaamhedenElement>;
             "utrecht-icon-whatsapp": LocalJSX.UtrechtIconWhatsapp & JSXBase.HTMLAttributes<HTMLUtrechtIconWhatsappElement>;
+            "utrecht-icon-wijk-denkmee": LocalJSX.UtrechtIconWijkDenkmee & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkDenkmeeElement>;
+            "utrecht-icon-wijk-overlast": LocalJSX.UtrechtIconWijkOverlast & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkOverlastElement>;
+            "utrecht-icon-wijk-park": LocalJSX.UtrechtIconWijkPark & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkParkElement>;
+            "utrecht-icon-wijk-projecten": LocalJSX.UtrechtIconWijkProjecten & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkProjectenElement>;
+            "utrecht-icon-wijk-speelplaats": LocalJSX.UtrechtIconWijkSpeelplaats & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkSpeelplaatsElement>;
+            "utrecht-icon-wijk-sport": LocalJSX.UtrechtIconWijkSport & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkSportElement>;
+            "utrecht-icon-wijk-zwemmen": LocalJSX.UtrechtIconWijkZwemmen & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkZwemmenElement>;
             "utrecht-icon-wonen-kosten": LocalJSX.UtrechtIconWonenKosten & JSXBase.HTMLAttributes<HTMLUtrechtIconWonenKostenElement>;
             "utrecht-icon-woning-zoeken": LocalJSX.UtrechtIconWoningZoeken & JSXBase.HTMLAttributes<HTMLUtrechtIconWoningZoekenElement>;
             "utrecht-icon-x": LocalJSX.UtrechtIconX & JSXBase.HTMLAttributes<HTMLUtrechtIconXElement>;
