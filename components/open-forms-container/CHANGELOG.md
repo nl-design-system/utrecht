@@ -1,5 +1,14 @@
 # @utrecht/open-forms-container-css
 
+## 2.0.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/focus-ring-css@3.0.1
+  - @utrecht/textbox-css@3.0.1
+
 ## 2.0.0
 
 ### Major Changes

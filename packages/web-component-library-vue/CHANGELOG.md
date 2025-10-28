@@ -1,5 +1,13 @@
 # @utrecht/web-component-library-vue
 
+## 2.1.10
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/web-component-library-stencil@3.6.1
+
 ## 2.1.9
 
 ### Patch Changes

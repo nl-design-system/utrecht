@@ -1,5 +1,12 @@
 # @utrecht/page-body-react
 
+## 1.0.10
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+  - @utrecht/page-body-css@1.0.1
+
 ## 1.0.9
 
 ### Patch Changes

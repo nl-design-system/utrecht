@@ -1,5 +1,19 @@
 # @utrecht/checkbox-group-react
 
+## 1.0.14
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/form-field-css@2.0.1
+  - @utrecht/checkbox-react@1.0.11
+  - @utrecht/fieldset-react@1.0.10
+  - @utrecht/form-field-checkbox-react@1.1.3
+  - @utrecht/form-field-description-react@1.0.10
+  - @utrecht/form-field-error-message-react@1.0.10
+  - @utrecht/form-field-react@1.0.10
+
 ## 1.0.13
 
 ### Patch Changes

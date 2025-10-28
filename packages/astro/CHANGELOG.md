@@ -1,5 +1,16 @@
 # @utrecht/astro
 
+## 0.0.9
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [cce8496]
+- Updated dependencies [9b3cb1e]
+  - @utrecht/design-tokens@4.0.0
+  - @utrecht/component-library-css@8.1.5
+  - @utrecht/component-library-react@10.3.9
+
 ## 0.0.8
 
 ### Patch Changes

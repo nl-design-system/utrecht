@@ -1,5 +1,13 @@
 # @utrecht/data-badge-react
 
+## 1.0.7
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/data-badge-css@2.0.1
+
 ## 1.0.6
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @utrecht/preact-app
 
+## 1.0.35
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [cce8496]
+- Updated dependencies [9b3cb1e]
+  - @utrecht/design-tokens@4.0.0
+  - @utrecht/component-library-react@10.3.9
+  - @utrecht/button-react@2.0.10
+
 ## 1.0.34
 
 ### Patch Changes

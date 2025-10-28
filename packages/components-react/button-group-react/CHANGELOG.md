@@ -1,5 +1,13 @@
 # @utrecht/button-group-react
 
+## 1.1.3
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/button-group-css@2.0.1
+
 ## 1.1.2
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @utrecht/card-css
 
+## 1.0.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/img-css@2.0.1
+
 ## 1.0.0
 
 ### Major Changes

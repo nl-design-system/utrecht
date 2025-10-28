@@ -1,5 +1,11 @@
 # @utrecht/component-library-angular
 
+## 2.2.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 2.2.0
 
 ### Minor Changes

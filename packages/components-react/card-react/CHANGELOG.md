@@ -1,5 +1,14 @@
 # @utrecht/card-react
 
+## 0.0.4
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/card-css@1.0.1
+  - @utrecht/link-react@1.0.10
+
 ## 0.0.3
 
 ### Patch Changes

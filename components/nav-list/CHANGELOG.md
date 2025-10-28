@@ -1,5 +1,11 @@
 # @utrecht/nav-list-css
 
+## 1.3.2
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 1.3.1
 
 ### Patch Changes

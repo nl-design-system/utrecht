@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 3.6.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 3.6.0
 
 ### Minor Changes

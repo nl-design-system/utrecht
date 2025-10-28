@@ -1,5 +1,11 @@
 # @utrecht/component-library-vue
 
+## 2.4.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 2.4.0
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @utrecht/web-component-library-react
 
+## 3.0.11
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/web-component-library-stencil@3.6.1
+
 ## 3.0.10
 
 ### Patch Changes

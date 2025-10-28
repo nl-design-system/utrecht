@@ -1,5 +1,11 @@
 # @utrecht/logo-button-css
 
+## 1.4.2
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 1.4.1
 
 ### Patch Changes
