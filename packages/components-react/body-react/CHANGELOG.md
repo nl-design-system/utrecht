@@ -1,5 +1,13 @@
 # @utrecht/body-react
 
+## 0.0.9
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/body-css@2.0.1
+
 ## 0.0.8
 
 ### Patch Changes

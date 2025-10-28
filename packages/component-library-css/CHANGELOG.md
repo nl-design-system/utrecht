@@ -1,5 +1,111 @@
 # @utrecht/component-library-css
 
+## 8.1.5
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/accordion-css@3.0.1
+  - @utrecht/action-group-css@3.0.1
+  - @utrecht/alert-css@3.0.1
+  - @utrecht/alert-dialog-css@2.0.1
+  - @utrecht/alternate-lang-nav-css@2.0.1
+  - @utrecht/article-css@2.0.1
+  - @utrecht/backdrop-css@2.0.1
+  - @utrecht/badge-counter-css@2.0.1
+  - @utrecht/badge-list-css@3.0.1
+  - @utrecht/badge-status-css@2.0.1
+  - @utrecht/blockquote-css@2.0.1
+  - @utrecht/body-css@2.0.1
+  - @utrecht/breadcrumb-nav-css@2.0.1
+  - @utrecht/button-css@3.0.1
+  - @utrecht/button-group-css@2.0.1
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/calendar-css@2.0.1
+  - @utrecht/checkbox-css@2.0.1
+  - @utrecht/code-css@2.0.1
+  - @utrecht/code-block-css@2.0.1
+  - @utrecht/color-sample-css@2.0.1
+  - @utrecht/column-layout-css@2.0.1
+  - @utrecht/combobox-css@2.0.1
+  - @utrecht/currency-data-css@2.0.1
+  - @utrecht/custom-checkbox-css@2.0.1
+  - @utrecht/data-badge-css@2.0.1
+  - @utrecht/data-list-css@2.0.1
+  - @utrecht/data-placeholder-css@2.0.1
+  - @utrecht/digid-button-css@1.4.2
+  - @utrecht/document-css@2.0.1
+  - @utrecht/drawer-css@2.0.1
+  - @utrecht/emphasis-css@2.0.1
+  - @utrecht/figure-css@2.0.1
+  - @utrecht/form-css@2.0.1
+  - @utrecht/form-field-css@2.0.1
+  - @utrecht/form-field-description-css@2.0.1
+  - @utrecht/form-field-error-message-css@2.0.1
+  - @utrecht/form-fieldset-css@2.0.1
+  - @utrecht/form-label-css@2.0.1
+  - @utrecht/form-toggle-css@2.0.1
+  - @utrecht/heading-1-css@2.0.1
+  - @utrecht/heading-2-css@2.0.1
+  - @utrecht/heading-3-css@2.0.1
+  - @utrecht/heading-4-css@2.0.1
+  - @utrecht/heading-5-css@2.0.1
+  - @utrecht/heading-6-css@2.0.1
+  - @utrecht/heading-group-css@2.0.1
+  - @utrecht/html-content-css@2.0.1
+  - @utrecht/iban-data-css@2.0.1
+  - @utrecht/icon-css@3.0.1
+  - @utrecht/img-css@2.0.1
+  - @utrecht/index-char-nav-css@2.0.1
+  - @utrecht/link-css@2.0.1
+  - @utrecht/link-button-css@2.0.1
+  - @utrecht/link-list-css@3.0.1
+  - @utrecht/link-social-css@2.0.1
+  - @utrecht/list-social-css@2.0.1
+  - @utrecht/listbox-css@2.0.1
+  - @utrecht/logo-css@2.0.1
+  - @utrecht/logo-button-css@1.4.2
+  - @utrecht/logo-image-css@1.4.2
+  - @utrecht/map-marker-css@2.0.1
+  - @utrecht/mark-css@2.0.1
+  - @utrecht/multiline-data-css@2.0.1
+  - @utrecht/nav-bar-css@2.0.1
+  - @utrecht/nav-list-css@1.3.2
+  - @utrecht/navigation-css@1.0.1
+  - @utrecht/number-badge-css@3.0.1
+  - @utrecht/number-data-css@2.0.1
+  - @utrecht/ordered-list-css@3.0.1
+  - @utrecht/page-css@2.0.1
+  - @utrecht/page-content-css@2.0.1
+  - @utrecht/page-footer-css@3.0.1
+  - @utrecht/page-header-css@2.0.1
+  - @utrecht/page-layout-css@2.0.1
+  - @utrecht/pagination-css@2.0.3
+  - @utrecht/paragraph-css@3.0.1
+  - @utrecht/pre-heading-css@2.0.1
+  - @utrecht/preserve-data-css@2.0.1
+  - @utrecht/radio-button-css@2.0.1
+  - @utrecht/rich-text-css@2.0.1
+  - @utrecht/root-css@2.0.1
+  - @utrecht/search-bar-css@3.0.1
+  - @utrecht/select-css@2.0.1
+  - @utrecht/separator-css@2.0.1
+  - @utrecht/skip-link-css@2.0.1
+  - @utrecht/spotlight-section-css@2.0.1
+  - @utrecht/surface-css@2.0.1
+  - @utrecht/table-css@2.0.1
+  - @utrecht/table-of-contents-css@1.0.1
+  - @utrecht/textarea-css@3.0.1
+  - @utrecht/textbox-css@3.0.1
+  - @utrecht/tooltip-css@2.0.1
+  - @utrecht/top-task-link-css@2.0.1
+  - @utrecht/top-task-nav-css@1.3.2
+  - @utrecht/unordered-list-css@2.0.1
+  - @utrecht/url-data-css@2.0.1
+  - @utrecht/youtube-video-css@2.0.1
+  - @utrecht/page-body-css@1.0.1
+
 ## 8.1.4
 
 ### Patch Changes

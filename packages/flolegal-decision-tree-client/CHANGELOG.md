@@ -1,5 +1,11 @@
 # @utrecht/flo-legal-decision-tree-client
 
+## 1.0.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 1.0.0
 
 ### Major Changes

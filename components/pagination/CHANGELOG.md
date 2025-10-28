@@ -1,5 +1,11 @@
 # @utrecht/pagination-css
 
+## 2.0.3
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 2.0.2
 
 ### Patch Changes

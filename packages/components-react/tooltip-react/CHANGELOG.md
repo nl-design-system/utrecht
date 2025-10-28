@@ -1,5 +1,13 @@
 # @utrecht/tooltip-react
 
+## 1.0.3
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/tooltip-css@2.0.1
+
 ## 1.0.2
 
 ### Patch Changes

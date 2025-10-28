@@ -1,5 +1,11 @@
 # @utrecht/icon
 
+## 2.1.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 2.1.0
 
 ### Minor Changes

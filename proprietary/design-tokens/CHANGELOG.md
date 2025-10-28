@@ -1,5 +1,19 @@
 # @utrecht/design-tokens
 
+## 4.0.0
+
+### Major Changes
+
+- cce8496: Major update to typography:
+
+  - Replace font family with Noto Sans Variable
+  - Add font-weight: 600 (semi-bold) variant
+  - Update design token documentation
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 3.4.1
 
 ### Patch Changes

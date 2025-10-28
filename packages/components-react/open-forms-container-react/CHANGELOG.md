@@ -1,5 +1,13 @@
 # @utrecht/open-forms-container-react
 
+## 1.0.5
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/open-forms-container-css@2.0.1
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @utrecht/page-header-react
 
+## 1.0.9
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/page-header-css@2.0.1
+
 ## 1.0.8
 
 ### Patch Changes

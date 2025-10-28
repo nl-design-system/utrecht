@@ -1,5 +1,13 @@
 # @utrecht/combobox-react
 
+## 0.0.11
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+- Updated dependencies [9b3cb1e]
+  - @utrecht/combobox-css@2.0.1
+
 ## 0.0.10
 
 ### Patch Changes

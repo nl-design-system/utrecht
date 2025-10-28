@@ -1,5 +1,11 @@
 # @utrecht/table-of-contents-css
 
+## 1.0.1
+
+### Patch Changes
+
+- 9b3cb1e: Release with npm provenance.
+
 ## 1.0.0
 
 ### Major Changes
