@@ -16,7 +16,7 @@ A flexible, responsive grid layout component for the Utrecht Design System with 
 ### Basic Grid
 
 ```html
-<div class="utrecht-grid__container">
+<div class="utrecht-grid">
   <div class="utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--sm-6">Column 1</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--sm-6">Column 2</div>
 </div>
@@ -25,7 +25,7 @@ A flexible, responsive grid layout component for the Utrecht Design System with 
 ### Responsive Columns
 
 ```html
-<div class="utrecht-grid__container">
+<div class="utrecht-grid">
   <div class="utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--sm-6 utrecht-grid--md-4 utrecht-grid--lg-3">
     Responsive column
   </div>
@@ -35,7 +35,7 @@ A flexible, responsive grid layout component for the Utrecht Design System with 
 ### With Spacing
 
 ```html
-<div class="utrecht-grid__container utrecht-grid--spacing-md">
+<div class="utrecht-grid utrecht-grid--spacing-md">
   <div class="utrecht-grid__cell utrecht-grid--xs-4">Column 1</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-4">Column 2</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-4">Column 3</div>
@@ -46,7 +46,7 @@ A flexible, responsive grid layout component for the Utrecht Design System with 
 
 ### Container Classes
 
-- `utrecht-grid__container` - Grid container
+- `utrecht-grid` - Grid container
 - `utrecht-grid--spacing-{sm|md|lg}` - Spacing between cells
 - `utrecht-grid--justify-content-{flex-start|center|flex-end|space-between}` - Horizontal alignment
 - `utrecht-grid--align-items-{flex-start|center|flex-end}` - Vertical alignment
@@ -75,15 +75,42 @@ A flexible, responsive grid layout component for the Utrecht Design System with 
 
 ## Configuration
 
-### CSS Variables
+### Custom Breakpoints (Compile-time)
+
+You can configure custom breakpoints by creating a wrapper class with custom breakpoint values:
+
+```scss
+@use "@utrecht/grid-css/src/mixin" as *;
+
+$custom-breakpoints: (
+  "sm": 768px,
+  "md": 1024px,
+  "lg": 1440px,
+);
+
+.my-custom-grid {
+  .utrecht-grid {
+    @include utrecht-grid-responsive-classes($custom-breakpoints);
+  }
+}
+```
+
+Then wrap your grid in the custom class:
+
+```html
+<div class="my-custom-grid">
+  <div class="utrecht-grid utrecht-grid--spacing-md">
+    <div class="utrecht-grid__cell utrecht-grid--sm-6">Uses 768px breakpoint</div>
+  </div>
+</div>
+```
+
+**Note**: Breakpoints must be configured at compile-time using SCSS. They cannot be changed at runtime via CSS variables due to browser limitations with container queries and media queries.
+
+### CSS Variables (Runtime)
 
 ```css
 .utrecht-grid {
-  /* Breakpoints */
-  --utrecht-grid-breakpoint-sm: 768px;
-  --utrecht-grid-breakpoint-md: 1024px;
-  --utrecht-grid-breakpoint-lg: 1440px;
-
   /* Spacing */
   --utrecht-grid-spacing-sm: 8px;
   --utrecht-grid-spacing-md: 16px;
@@ -103,11 +130,6 @@ Integrate with Style Dictionary:
 {
   "utrecht": {
     "grid": {
-      "breakpoint": {
-        "sm": { "value": "768px" },
-        "md": { "value": "1024px" },
-        "lg": { "value": "1440px" }
-      },
       "spacing": {
         "sm": { "value": "8px" },
         "md": { "value": "16px" },
@@ -129,7 +151,7 @@ Integrate with Style Dictionary:
 ### Equal Width Columns
 
 ```html
-<div class="utrecht-grid__container">
+<div class="utrecht-grid">
   <div class="utrecht-grid__cell utrecht-grid--xs-3">25%</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-3">25%</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-3">25%</div>
@@ -140,7 +162,7 @@ Integrate with Style Dictionary:
 ### Centered Content
 
 ```html
-<div class="utrecht-grid__container utrecht-grid--justify-content-center">
+<div class="utrecht-grid utrecht-grid--justify-content-center">
   <div class="utrecht-grid__cell utrecht-grid--xs-6">Centered</div>
 </div>
 ```
@@ -148,7 +170,7 @@ Integrate with Style Dictionary:
 ### Column Reordering
 
 ```html
-<div class="utrecht-grid__container">
+<div class="utrecht-grid">
   <div class="utrecht-grid__cell utrecht-grid--xs-4 utrecht-grid--order-3">Third</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-4 utrecht-grid--order-1">First</div>
   <div class="utrecht-grid__cell utrecht-grid--xs-4 utrecht-grid--order-2">Second</div>

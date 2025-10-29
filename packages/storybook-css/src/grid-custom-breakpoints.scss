@@ -1,0 +1,16 @@
+@use "~@utrecht/grid-css/src/mixin" as *;
+
+// Custom breakpoint configuration example
+$utrecht-custom-breakpoints: (
+  "sm": 400px,
+  "md": 1024px,
+  "lg": 1440px,
+) !default;
+
+// Override default utrecht-grid with custom breakpoints
+.utrecht-grid-custom {
+  .utrecht-grid {
+    // Generate responsive classes with custom breakpoints
+    @include utrecht-grid-responsive-classes($utrecht-custom-breakpoints);
+  }
+}
