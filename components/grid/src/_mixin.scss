@@ -1,32 +1,14 @@
 @use "sass:map";
 
-// Container query mixin for configurable breakpoints
-@mixin utrecht-grid-breakpoint($name) {
-  @container (min-width: var(--utrecht-grid-breakpoint-#{$name})) {
-    @content;
-  }
-}
-
-// Fallback media query mixin for browsers without container query support
-@mixin utrecht-grid-breakpoint-fallback($name, $breakpoints: ("sm": 600px, "md": 960px, "lg": 1280px)) {
-  @media screen and (min-width: map.get($breakpoints, $name)) {
-    @content;
-  }
-}
-
-// Combined mixin with progressive enhancement
+// Responsive breakpoint mixin with container query support
 @mixin utrecht-grid-responsive-breakpoint($name, $fallback-size: 600px) {
-  // Fallback for browsers without container query support
   @media screen and (min-width: #{$fallback-size}) {
     @content;
   }
 
-  // Progressive enhancement with container queries
   @supports (container-type: inline-size) {
-    @media screen and (width >= 0) {
-      @container (min-width: var(--utrecht-grid-breakpoint-#{$name}, #{$fallback-size})) {
-        @content;
-      }
+    @container (min-width: #{$fallback-size}) {
+      @content;
     }
   }
 }

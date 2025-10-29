@@ -18,27 +18,18 @@ $utrecht-breakpoints: (
   --_utrecht-grid-box-sizing: border-box;
   --_utrecht-grid-flex: 0 0 auto;
 
-  // Enable container queries for responsive behavior
+  @include utrecht-grid-container;
+
   container-type: inline-size;
 
-  &__container {
-    @include utrecht-grid-container;
-  }
-
-  &__cell {
-    @include utrecht-grid-cell;
-  }
-
-  // Generate responsive column and order classes
+  // Modifier classes
   @include utrecht-grid-responsive-classes($utrecht-breakpoints);
-
-  // Alignment classes
   @include utrecht-grid-justify-content(null, $utrecht-justify-content);
   @include utrecht-grid-align-items(null, $utrecht-align-items);
-
-  // Flex direction classes
   @include utrecht-grid-flex-direction($utrecht-flex-direction);
-
-  // Spacing classes
   @include utrecht-grid-spacing;
+}
+
+.utrecht-grid__cell {
+  @include utrecht-grid-cell;
 }
