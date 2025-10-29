@@ -84,9 +84,9 @@ const KTOvervolg: React.FC = () => {
                 <FormFieldTextarea
                   label="Hebt u tips voor verbetering van deze pagina?"
                   name="feedback"
+                  a
                   description="Laat hier geen persoonsgegevens (bijvoorbeeld naam, telefoonnummer of e-mailadres) achter."
                   rows={5}
-                  value={feedbackText}
                 />
               </div>
               {/* Tevredenheidschaal */}
