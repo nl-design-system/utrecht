@@ -13,30 +13,27 @@ keywords:
   - design system
 ---
 
-# Wat is het Utrecht Design System
+# Utrecht Design System
 
 ## Eenvoudig herkenbare en kwalitatieve presentatielagen maken
 
-Met het Utrecht Design system hebben we één open bron met design keuzes en code die een community onderhoudt.
-Dit ontzorgt door de presentatielaag van alle gekoppelde systemen toegankelijk en robuust te houden.
+Met het Utrecht Design system hebben we één open bron met design keuzes en code die een community onderhoudt. Dit ontzorgt door de presentatielaag van alle gekoppelde systemen toegankelijk en robuust te houden.
 
-De dienstverlening van de Gemeente Utrecht moet toegankelijk en begrijpelijk zijn voor iedereen. Hiervoor zijn consistent ontworpen diensten, websites en (web)apps nodig.
-Daarom gaan we tussen organisatieonderdelen en afdelingen principes, interactiepatronen en code delen via een gezamenlijk design system.
+De dienstverlening van de Gemeente Utrecht moet toegankelijk en begrijpelijk zijn voor iedereen. Hiervoor zijn consistent ontworpen diensten, websites en (web)apps nodig. Daarom gaan we tussen organisatieonderdelen en afdelingen principes, interactiepatronen en code delen via een gezamenlijk design system.
 
 Dit Design System draagt bij aan gebruiksvriendelijkere diensten van een betere kwaliteit en toegankelijkheid en het helpt ook dubbel werk te voorkomen.
 
-<!-- markdownlint-disable no-inline-html -->
+## Basisprincipes Design System
 
-<div class="utrecht-spotlight-section utrecht-spotlight-section--warning">
+Dankzij het Utrecht Design System kunnen de gemeente en alle leveranciers samenwerken aan een begrijpelijke, gebruiksvriendelijke én toegankelijke online dienstverlening.
 
-⚠️ **LET OP**: Het Utrecht Design System bevindt zich momenteel nog in de pilotfase.
+### Een solide basis
 
-Hierdoor kunnen er zaken veranderen. Houdt hier dus rekening mee voor je aan de slag gaat.
+Een solide basis voor ontwerpers en ontwikkelaars. Doordat zij het wiel niet steeds opnieuw hoeven uit te vinden, kunnen ze snel en effectief nieuwe digitale producten bouwen.
 
-We zouden het op prijs stellen als je wilt bijdragen om het Design System tot een succes te maken.
-Dit kan in onze gitlab of met een mailtje aan: [r.olling@utrecht.nl](mailto:r.olling@utrecht.nl) of [j.du.chatinier@utrecht.nl](mailto:j.du.chatinier@utrecht.nl)
+### Samen met NL Design System
 
-</div>
+Een betrokken, actieve community waarmee meerdere overheidsorganisaties van elkaar kunnen leren en elkaars werk kunnen hergebruiken.
 
 ## Wat is een Design System
 
