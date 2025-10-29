@@ -7,6 +7,7 @@ import tokensDefinition from '@utrecht/grid-css/src/tokens.json';
 import { Grid, GridCell, GridCellProps } from '@utrecht/grid-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
+import './grid-custom-breakpoints.scss';
 
 const GridColumn: React.FC<
   GridCellProps & {
@@ -28,6 +29,7 @@ const GridColumn: React.FC<
         borderRadius: '4px',
         fontSize: '0.875rem',
         fontWeight: '500',
+        inlineSize: '100%',
       }}
     >
       {children}
@@ -331,6 +333,36 @@ export const WithOrder: Story = {
         </GridColumn>
       </>
     ),
+  },
+};
+
+export const CustomBreakpoints: Story = {
+  name: 'Custom Breakpoints (SCSS Configuration)',
+  render: () => (
+    <div className="utrecht-grid-custom">
+      <Grid spacing="md">
+        <GridColumn xs={12} sm={6} md={3} color="#e8f4fd">
+          sm: 400px (custom)
+        </GridColumn>
+        <GridColumn xs={12} sm={6} md={3} color="#ffe8e8">
+          md: 1024px (custom)
+        </GridColumn>
+        <GridColumn xs={12} sm={6} md={3} color="#e8f5e8">
+          lg: 1440px (custom)
+        </GridColumn>
+        <GridColumn xs={12} sm={6} md={3} color="#fff8e8">
+          Resize to test
+        </GridColumn>
+      </Grid>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'This story uses custom breakpoints: sm=400px, md=1024px, lg=1440px (vs defaults: sm=600px, md=960px, lg=1280px). Resize browser to see the difference.',
+      },
+    },
   },
 };
 

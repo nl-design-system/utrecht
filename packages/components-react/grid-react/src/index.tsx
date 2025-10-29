@@ -70,7 +70,7 @@ export const Grid = forwardRef<HTMLDivElement, GridProps>(
   ) => (
     <div
       ref={ref}
-      className={clsx('utrecht-grid__container', className, {
+      className={clsx('utrecht-grid', className, {
         [`utrecht-grid--spacing-${spacing}`]: spacing,
         [`utrecht-grid--justify-content-${justifyContent}`]: justifyContent,
         [`utrecht-grid--justify-content-sm-${justifyContentSm}`]: justifyContentSm,
