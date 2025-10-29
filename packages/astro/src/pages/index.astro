@@ -1,8 +1,76 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import { base } from 'astro:config/client';
+import {PrimaryActionButton, SecondaryActionButton} from '@utrecht/component-library-react/css-module'
 ---
 
 <Layout>
-  <h1>Utrecht Design System</h1>
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo. Phasellus tincidunt risus in purus faucibus, sit amet dictum justo sollicitudin. Integer non velit id sem posuere facilisis. Curabitur fringilla, nibh vel sodales sagittis, turpis mi convallis magna, in cursus justo est et mauris. Fusce blandit mi vel arcu ultricies, vitae bibendum lectus convallis. Nam luctus mi vitae nisl faucibus, sit amet dapibus mauris aliquet. Suspendisse potenti.</p>
+  <section>
+    <div class="utrecht-hero">
+      <h1 class="utrecht-heading-1">Utrecht Design System</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo. Phasellus tincidunt risus in purus faucibus, sit amet dictum justo sollicitudin. Integer non velit id sem posuere facilisis. Curabitur fringilla, nibh vel sodales sagittis, turpis mi convallis magna, in cursus justo est et mauris. Fusce blandit mi vel arcu ultricies, vitae bibendum lectus convallis. Nam luctus mi vitae nisl faucibus, sit amet dapibus mauris aliquet. Suspendisse potenti.</p>
+      <div class="utrecht-hero__action-group">
+        <PrimaryActionButton>Button A</PrimaryActionButton>
+        <SecondaryActionButton>Button B</SecondaryActionButton>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h2>Onderwerpen</h2>
+    <div class="utrecht-tile-list">
+      <div class="utrecht-tile-navigation">
+        <a class="utrecht-link" href=`${base}/design-system`><h3>Utrecht Design System</h3></a>
+        <p class="utrecht-paragraph">Meer weten over het Utrecht Design System? Voor wie is het design system bedoeld?</p>
+      </div>
+      <div class="utrecht-tile-navigation">
+        <a class="utrecht-link" href=`${base}/design-system`><h3>Ontwikkelaars</h3></a>
+        <p class="utrecht-paragraph">Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?</p>
+      </div>
+      <div class="utrecht-tile-navigation">
+        <a class="utrecht-link" href=`${base}/design-system`><h3>Designers</h3></a>
+        <p class="utrecht-paragraph">Hoe ga ik als designer aan de slag met Utrecht Design System?</p>
+      </div>
+    </div>
+  </section>
 </Layout>
+
+<style>
+  .utrecht-hero {
+    background-color: #e6e6e6;
+    margin-inline-start: calc(-1 * var(--utrecht-page-body-content-padding-inline-start));
+    margin-inline-end: calc(-1 * var(--utrecht-page-body-content-padding-inline-end));
+    padding-block-start: 64px;
+    padding-block-end: 64px;
+    padding-inline-start: var(--utrecht-page-body-content-padding-inline-start);
+    padding-inline-end: var(--utrecht-page-body-content-padding-inline-end);
+  }
+
+  .utrecht-hero__action-group {
+    display: flex;
+    flex-direction: row;
+    column-gap: 16px;
+  }
+
+  .utrecht-tile-list {
+    gap: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: 0;
+    padding-inline: 0;
+  }
+
+  .utrecht-tile-navigation {
+    --utrecht-link-text-decoration: none;
+
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    padding-block-start: 16px;
+    padding-block-end: 24px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+  }
+</style>
