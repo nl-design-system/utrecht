@@ -1,8 +1,9 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import { PrimaryActionButton, SecondaryActionButton, SubtleButton, Button, Link } from '@utrecht/component-library-react';
 import CustomIconGallery from '../../components/CustomIconGallery.astro';
 import { iconCategories } from '../../data/icon-categories';
+import { Link } from '@utrecht/component-library-react';
+import { base } from 'astro:config/client';
 ---
 
 <Layout>
@@ -18,16 +19,14 @@ import { iconCategories } from '../../data/icon-categories';
       <CustomIconGallery icons={category.icons} />
     </div>
   ))}
-
   <h2>Overzicht</h2>
   <div>
-    <h3>Button</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo.</p>
-    <div class="utrecht-component-canvas">
-      <Button>Default</Button>
-      <PrimaryActionButton>Primary Action</PrimaryActionButton>
-      <SecondaryActionButton>Secondary Action</SecondaryActionButton>
-      <SubtleButton>Subtle</SubtleButton>
+    <a class="utrecht-link" href=`${base}/componenten/button`><h3>Button</h3></a>
+    <div>
+      <div class="utrecht-data-badge">HTML</div>
+      <div class="utrecht-data-badge">CSS</div>
+      <div class="utrecht-data-badge">React</div>
+      <div class="utrecht-data-badge">Angular</div>
     </div>
   </div>
   <div>
