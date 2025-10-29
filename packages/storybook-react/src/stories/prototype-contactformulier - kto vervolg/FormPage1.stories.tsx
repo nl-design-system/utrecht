@@ -62,7 +62,7 @@ export const One: Story = {
           <HoofdNavigatie />
           <PageContent>
             <BreadcrumbNav>
-              <BreadcrumbNavLink href={urls.contactformScenario}>
+              <BreadcrumbNavLink href={urls.contactformScenarioKTO}>
                 <BreadcrumbNavSeparator>
                   <UtrechtIconChevronLeft />
                 </BreadcrumbNavSeparator>
