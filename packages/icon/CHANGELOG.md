@@ -1,5 +1,30 @@
 # @utrecht/icon
 
+## 2.2.0
+
+### Minor Changes
+
+- a89b9af: wijk iconen update
+
+  - Changed and added header groups
+  - Added discription for icon groups
+  - UtrechtIconFlickr
+  - UtrechtIconPinteresrt
+  - UtrechtIconBouwProjecten
+  - UtrechtIconStandaardProjecten
+  - UtrechtIconVerkeersProjecten
+  - UtrechtIconCoffee
+  - UtrechtIconEnergieProjecten
+  - UtrechtIconGroenProjecten
+  - UtrechtIconMail
+  - UtrechtIconPhone
+  - UtrechtIconWijkDenkmee
+  - UtrechtIconWijkOverlast
+  - UtrechtIconWijkPark
+  - UtrechtIconWijkProjecten
+  - UtrechtIconWijkSport
+  - UtrechtIconWijkZwemmen
+
 ## 2.1.1
 
 ### Patch Changes

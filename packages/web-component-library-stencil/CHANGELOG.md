@@ -1,5 +1,30 @@
 # @utrecht/web-component-library-stencil
 
+## 3.7.0
+
+### Minor Changes
+
+- a89b9af: wijk iconen update
+
+  - Changed and added header groups
+  - Added discription for icon groups
+  - UtrechtIconFlickr
+  - UtrechtIconPinteresrt
+  - UtrechtIconBouwProjecten
+  - UtrechtIconStandaardProjecten
+  - UtrechtIconVerkeersProjecten
+  - UtrechtIconCoffee
+  - UtrechtIconEnergieProjecten
+  - UtrechtIconGroenProjecten
+  - UtrechtIconMail
+  - UtrechtIconPhone
+  - UtrechtIconWijkDenkmee
+  - UtrechtIconWijkOverlast
+  - UtrechtIconWijkPark
+  - UtrechtIconWijkProjecten
+  - UtrechtIconWijkSport
+  - UtrechtIconWijkZwemmen
+
 ## 3.6.1
 
 ### Patch Changes
