@@ -9,6 +9,8 @@ Er is gekozen om over te stappen op Astro voor de documentatie website van de Ge
 3. Meer vrijheid met de navigatie structuur
 4. Kleine builds, geen grote (react) javascript bundel nodig op de client
 5. Framework agnostisch: we kunnen gebruik maken van React, Vue, Svelte en nog meer component frameworks voor het bouwen van de statische website.
+6. Er zijn geen iframes meer nodig om componenten te tonen in de documentatie website. Hierdoor laden we niet nog een hele pagina in per component
+   en ziet het er op mobiel beter uit.
 
 ## Astro Starter Kit: Basics
 
