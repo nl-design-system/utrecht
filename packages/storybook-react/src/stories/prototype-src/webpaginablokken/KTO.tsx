@@ -4,6 +4,7 @@ import {
   FormField,
   FormLabel,
   Heading1,
+  Heading2,
   Paragraph,
   RadioButton,
   Separator,
