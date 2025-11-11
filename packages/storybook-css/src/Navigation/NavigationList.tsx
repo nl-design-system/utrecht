@@ -1,7 +1,8 @@
 import clsx from 'clsx';
 import React from 'react';
-import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren, useRef } from 'react';
+import { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 import { NavigationListType } from '.';
+import { NavigationIconLink } from './NavigationIconLink';
 import { NavigationItem } from './NavigationItem';
 import { NavigationLink } from './NavigationLink';
 import { NavigationMarker } from './NavigationMarker';
@@ -12,6 +13,7 @@ export interface NavigationListProps extends DetailedHTMLProps<HTMLAttributes<HT
   sideNav?: boolean;
   subList?: boolean;
   targetId?: string;
+  languageSwitcher?: boolean;
 }
 
 const NavSubList = ({ list }: { list: NavigationListType[] }) => (
@@ -38,6 +40,7 @@ export const NavigationList = ({
   children,
   subList,
   targetId,
+  languageSwitcher,
   ...restProps
 }: PropsWithChildren<NavigationListProps>) => (
   <ul
@@ -68,6 +71,13 @@ export const NavigationList = ({
           </NavigationItem>
         );
       })}
+    {languageSwitcher && (
+      <NavigationItem>
+        <NavigationIconLink href="#" icon={<utrecht-icon-language />}>
+          English
+        </NavigationIconLink>
+      </NavigationItem>
+    )}
   </ul>
 );
 
