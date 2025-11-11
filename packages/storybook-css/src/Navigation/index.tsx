@@ -2,6 +2,7 @@ import { Drawer } from '@utrecht/component-library-react/dist/css-module';
 import clsx from 'clsx';
 import React, { type ForwardedRef, type HTMLAttributes, type PropsWithChildren } from 'react';
 import { forwardRef, useLayoutEffect, useRef, useState } from 'react';
+import { NavigationIconLink } from './NavigationIconLink';
 import { NavigationList } from './NavigationList';
 import { NavToggleButton } from './NavigationToggleButton';
 import { useClickOutside } from './useClickOutside';
@@ -249,15 +250,26 @@ export const Navigation = forwardRef(
           {!visible ? (
             <NavigationList id={targetId} list={list} mobile={visible} />
           ) : (
-            <NavToggleButton
-              id={targetId}
-              text={toggleButton?.openText}
-              icon="hamburger"
-              ref={hamburgerButtonRef}
-              className={clsx({ 'utrecht-navigation__toggle-button--start-end': !drawerVisible })}
-              aria-expanded={drawerVisible}
-              onClick={showModal}
-            />
+            <div
+              style={{
+                display: 'grid',
+                rowGap: '8px',
+                justifyItems: 'flex-end',
+              }}
+            >
+              <NavToggleButton
+                id={targetId}
+                text={toggleButton?.openText}
+                icon="hamburger"
+                ref={hamburgerButtonRef}
+                className={clsx({ 'utrecht-navigation__toggle-button--start-end': !drawerVisible })}
+                aria-expanded={drawerVisible}
+                onClick={showModal}
+              />
+              <NavigationIconLink href="#" icon={<utrecht-icon-geluid />} appearance="secondary">
+                Lees voor
+              </NavigationIconLink>
+            </div>
           )}
         </nav>
         <>
@@ -269,7 +281,7 @@ export const Navigation = forwardRef(
               ref={ref}
               {...restProps}
             >
-              <NavigationList list={list} mobile={visible} ref={navigationListRef}>
+              <NavigationList languageSwitcher list={list} mobile={visible} ref={navigationListRef}>
                 <NavToggleButton
                   text={toggleButton?.closeText}
                   id="nav-toggle-button-close"

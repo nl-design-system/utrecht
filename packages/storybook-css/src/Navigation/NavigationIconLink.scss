@@ -1,0 +1,25 @@
+.utrecht-navigation-icon-link {
+  --utrecht-navigation-icon-link-font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  --utrecht-navigation-icon-link-column-gap: var(--utrecht-space-inline-xs);
+  --utrecht-navigation-icon-link-compact-font-weight: var(--utrecht-typography-weight-scale-bold-font-weight);
+  --utrecht-navigation-icon-link-default-margin-block-start: var(--utrecht-space-block-md);
+  --utrecht-navigation-icon-link-default-padding-inline-start: var(--utrecht-space-inline-md);
+
+  align-items: center;
+  column-gap: var(--utrecht-navigation-icon-link-column-gap);
+  display: inline-flex;
+  font-weight: var(--utrecht-navigation-icon-link-font-weight);
+  min-block-size: 44px;
+
+  &--primary {
+    margin-block-start: var(--utrecht-navigation-icon-link-default-margin-block-start);
+    padding-inline-start: var(--utrecht-navigation-icon-link-default-padding-inline-start);
+  }
+
+  &--secondary {
+    --utrecht-link-text-decoration: none;
+    --utrecht-navigation-icon-link-font-weight: var(--utrecht-navigation-icon-link-compact-font-weight);
+
+    color: currentColor;
+  }
+}
