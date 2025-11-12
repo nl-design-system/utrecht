@@ -1,0 +1,17 @@
+---
+import {
+  CustomIconGallery as ReactIconGallery,
+  CustomIconGalleryItem as ReactIconGalleryItem } from '@utrecht/storybook/stories/icon/CustomIconGallery';
+
+interface Props {
+  icons: string[];
+}
+
+const { icons } = Astro.props;
+---
+
+<ReactIconGallery>
+  {icons.map((iconName) => (
+    <ReactIconGalleryItem name={iconName} set:html={`<${iconName}></${iconName}>`}></ReactIconGalleryItem>
+  ))}
+</ReactIconGallery>
