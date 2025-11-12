@@ -1,60 +1,381 @@
 ---
-title: ((Naam van het component))
+title: Button
 ---
 
-# ((Naam van het component))
+# Button
 
-((Beschrijving van het component))
-((Visuele weergave van het component))
+Biedt de mogelijkheid om een actie uit te voeren.
 
 ## Waar kan ik het component vinden?
 
+_(opmerking Jeroen deze komt uit <https://nldesignsystem.nl/button/> vond het wel een compleet lijstje)_
+
 ### Design
 
-- ((Link naar component in Figma))
+- Button in Figma (link naar Figma)
 
-### ((Framework - component beschikbaar))
+### HTML/CSS
 
-- ((link naar component in storybook))
-- ((link naar component in npm))
-- ((link naar component in github))
+- [Button (html/css) in Storybook](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/css_css-button--docs)
+- [Button (html/css) in NPM](https://www.npmjs.com/package/@utrecht/button-css)
+- [Button (html/css) in Github](https://github.com/nl-design-system/utrecht/tree/main/components/button)
 
-### ((Framework - component niet beschikbaar))
+### React
+
+- lorum ipsum (link naar storybook)
+- lorum ipsum (link naar npm)
+- lorum ipsum (link naar github)
+
+### Webcomponent
+
+- lorum ipsum (link naar storybook)
+- lorum ipsum (link naar npm)
+- lorum ipsum (link naar github)
+
+### Vue
 
 Component is niet beschikbaar in Vue.
+_(opmerking Jeroen & Joram: We laten weten dat het component niet beschikbaar is. Met deze opmerking laten weten dat het geen slordigheid of fout is, maar dat we ons daar bewust van zijn)_
 
-## Onderdelen
+## Anatomie
 
 ### Design Tokens
 
+_(opmerking Jeroen deze komt uit Storybook, [Button Design tokens](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/react_react-button--docs#design-tokens))_
+
 Hieronder staan de Design Tokens die gebruikt worden door het Button component. Wil je meer weten over het gebruik van Design Tokens, bekijk dan de Storybook pagina van het component.
 
-((Alle gebruikte design tokens))
+```json
+{
+  "utrecht": {
+    "button": {
+      "background-color": {},
+      "border-color": {},
+      "border-radius": {},
+      "border-width": {},
+      "color": {},
+      "column-gap": {},
+      "font-family": {},
+      "font-size": {},
+      "font-weight": {},
+      "inline-size": {},
+      "line-height": {},
+      "min-block-size": {},
+      "min-inline-size": {},
+      "padding-block-start": {},
+      "padding-block-end": {},
+      "padding-inline-start": {},
+      "padding-inline-end": {},
+      "text-transform": {},
+      "active": {
+        "background-color": {},
+        "border-color": {},
+        "color": {}
+      },
+      "icon": {
+        "size": {}
+      },
+      "disabled": {
+        "background-color": {},
+        "border-color": {},
+        "color": {}
+      },
+      "focus": {
+        "background-color": {},
+        "border-color": {},
+        "color": {},
+        "scale": {}
+      },
+      "hover": {
+        "background-color": {},
+        "border-color": {},
+        "color": {},
+        "scale": {}
+      },
+      "pressed": {
+        "background-color": {},
+        "border-color": {},
+        "color": {}
+      },
+      "primary-action": {
+        "background-color": {},
+        "border-color": {},
+        "border-width": {},
+        "color": {},
+        "font-size": {},
+        "font-weight": {},
+        "line-height": {},
+        "active": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "disabled": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "hover": {
+          "background-color": {},
+          "border-color": {},
+          "color": {},
+          "scale": {}
+        },
+        "focus": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "pressed": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        }
+      },
+      "secondary-action": {
+        "background-color": {},
+        "border-color": {},
+        "border-width": {},
+        "color": {},
+        "font-size": {},
+        "font-weight": {},
+        "line-height": {},
+        "active": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "disabled": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "hover": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "focus": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "pressed": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        }
+      },
+      "subtle": {
+        "background-color": {},
+        "border-color": {},
+        "border-width": {},
+        "color": {},
+        "font-size": {},
+        "font-weight": {},
+        "line-height": {},
+        "active": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "disabled": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "hover": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "focus": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "pressed": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        }
+      }
+    }
+  }
+}
+```
 
 #### Design Token variabelen
 
 Hieronder staan alle design token CSS-variabelen die gebruikt worden door dit component.
 
-((Alle gebruikte design tokens CSS-variabeleb))
+```json
+.your-theme {
+  /* Uncomment each custom property you need */
+  /* --utrecht-button-background-color: <color>; */
+  /* --utrecht-button-border-color: <color>; */
+  /* --utrecht-button-border-radius: <length-percentage>; */
+  /* --utrecht-button-border-width: <length>; */
+  /* --utrecht-button-color: <color>; */
+  /* --utrecht-button-column-gap: <length>; */
+  /* --utrecht-button-font-family: *; */
+  /* --utrecht-button-font-size: <length>; */
+  /* --utrecht-button-font-weight: <number>; */
+  /* --utrecht-button-inline-size: <length>; */
+  /* --utrecht-button-line-height: <length>,<number>; */
+  /* --utrecht-button-min-block-size: <length>; */
+  /* --utrecht-button-min-inline-size: <length>; */
+  /* --utrecht-button-padding-block-start: <length>; */
+  /* --utrecht-button-padding-block-end: <length>; */
+  /* --utrecht-button-padding-inline-start: <length>; */
+  /* --utrecht-button-padding-inline-end: <length>; */
+  /* --utrecht-button-text-transform: inherit,uppercase; */
+  /* --utrecht-button-active-background-color: <color>; */
+  /* --utrecht-button-active-border-color: <color>; */
+  /* --utrecht-button-active-color: <color>; */
+  /* --utrecht-button-icon-size: <length>; */
+  /* --utrecht-button-disabled-background-color: <color>; */
+  /* --utrecht-button-disabled-border-color: <color>; */
+  /* --utrecht-button-disabled-color: <color>; */
+  /* --utrecht-button-focus-background-color: <color>; */
+  /* --utrecht-button-focus-border-color: <color>; */
+  /* --utrecht-button-focus-color: <color>; */
+  /* --utrecht-button-focus-scale: <number>; */
+  /* --utrecht-button-hover-background-color: <color>; */
+  /* --utrecht-button-hover-border-color: <color>; */
+  /* --utrecht-button-hover-color: <color>; */
+  /* --utrecht-button-hover-scale: <number>; */
+  /* --utrecht-button-pressed-background-color: <color>; */
+  /* --utrecht-button-pressed-border-color: <color>; */
+  /* --utrecht-button-pressed-color: <color>; */
+  /* --utrecht-button-primary-action-background-color: <color>; */
+  /* --utrecht-button-primary-action-border-color: <color>; */
+  /* --utrecht-button-primary-action-border-width: <length>; */
+  /* --utrecht-button-primary-action-color: <color>; */
+  /* --utrecht-button-primary-action-font-size: <length>; */
+  /* --utrecht-button-primary-action-font-weight: <number>; */
+  /* --utrecht-button-primary-action-line-height: <length>,<number>; */
+  /* --utrecht-button-primary-action-active-background-color: <color>; */
+  /* --utrecht-button-primary-action-active-border-color: <color>; */
+  /* --utrecht-button-primary-action-active-color: <color>; */
+  /* --utrecht-button-primary-action-disabled-background-color: <color>; */
+  /* --utrecht-button-primary-action-disabled-border-color: <color>; */
+  /* --utrecht-button-primary-action-disabled-color: <color>; */
+  /* --utrecht-button-primary-action-hover-background-color: <color>; */
+  /* --utrecht-button-primary-action-hover-border-color: <color>; */
+  /* --utrecht-button-primary-action-hover-color: <color>; */
+  /* --utrecht-button-primary-action-hover-scale: <number>; */
+  /* --utrecht-button-primary-action-focus-background-color: <color>; */
+  /* --utrecht-button-primary-action-focus-border-color: <color>; */
+  /* --utrecht-button-primary-action-focus-color: <color>; */
+  /* --utrecht-button-primary-action-pressed-background-color: <color>; */
+  /* --utrecht-button-primary-action-pressed-border-color: <color>; */
+  /* --utrecht-button-primary-action-pressed-color: <color>; */
+  /* --utrecht-button-secondary-action-background-color: <color>; */
+  /* --utrecht-button-secondary-action-border-color: <color>; */
+  /* --utrecht-button-secondary-action-border-width: <length>; */
+  /* --utrecht-button-secondary-action-color: <color>; */
+  /* --utrecht-button-secondary-action-font-size: <length>; */
+  /* --utrecht-button-secondary-action-font-weight: <number>; */
+  /* --utrecht-button-secondary-action-line-height: <length>,<number>; */
+  /* --utrecht-button-secondary-action-active-background-color: <color>; */
+  /* --utrecht-button-secondary-action-active-border-color: <color>; */
+  /* --utrecht-button-secondary-action-active-color: <color>; */
+  /* --utrecht-button-secondary-action-disabled-background-color: <color>; */
+  /* --utrecht-button-secondary-action-disabled-border-color: <color>; */
+  /* --utrecht-button-secondary-action-disabled-color: <color>; */
+  /* --utrecht-button-secondary-action-hover-background-color: <color>; */
+  /* --utrecht-button-secondary-action-hover-border-color: <color>; */
+  /* --utrecht-button-secondary-action-hover-color: <color>; */
+  /* --utrecht-button-secondary-action-focus-background-color: <color>; */
+  /* --utrecht-button-secondary-action-focus-border-color: <color>; */
+  /* --utrecht-button-secondary-action-focus-color: <color>; */
+  /* --utrecht-button-secondary-action-pressed-background-color: <color>; */
+  /* --utrecht-button-secondary-action-pressed-border-color: <color>; */
+  /* --utrecht-button-secondary-action-pressed-color: <color>; */
+  /* --utrecht-button-subtle-background-color: <color>; */
+  /* --utrecht-button-subtle-border-color: <color>; */
+  /* --utrecht-button-subtle-border-width: <length>; */
+  /* --utrecht-button-subtle-color: <color>; */
+  /* --utrecht-button-subtle-font-size: <length>; */
+  /* --utrecht-button-subtle-font-weight: <number>; */
+  /* --utrecht-button-subtle-line-height: <length>,<number>; */
+  /* --utrecht-button-subtle-active-background-color: <color>; */
+  /* --utrecht-button-subtle-active-border-color: <color>; */
+  /* --utrecht-button-subtle-active-color: <color>; */
+  /* --utrecht-button-subtle-disabled-background-color: <color>; */
+  /* --utrecht-button-subtle-disabled-border-color: <color>; */
+  /* --utrecht-button-subtle-disabled-color: <color>; */
+  /* --utrecht-button-subtle-hover-background-color: <color>; */
+  /* --utrecht-button-subtle-hover-border-color: <color>; */
+  /* --utrecht-button-subtle-hover-color: <color>; */
+  /* --utrecht-button-subtle-focus-background-color: <color>; */
+  /* --utrecht-button-subtle-focus-border-color: <color>; */
+  /* --utrecht-button-subtle-focus-color: <color>; */
+  /* --utrecht-button-subtle-pressed-background-color: <color>; */
+  /* --utrecht-button-subtle-pressed-border-color: <color>; */
+  /* --utrecht-button-subtle-pressed-color: <color>; */
+}
+```
 
-### ((Component specifieke onderdelen))
+### States
 
-((Als er specifieke anatomie beschreven staat voor het component, plaatsen we dat hier. Voorbeeld: de states van een button))
+- normal
+- active: de gebruiker activeert de button op dit moment. Bijvoorbeeld door er op te klikken. De active state duurt maar heel kort.
+- pressed: een ingedrukte button, bijvoorbeeld de bold button in een toolbar van een rich text editor, of de button van een date picker popup. Een button kan lange tijd pressed zijn, in tegenstelling tot active.
+- hover: de gebruiker heeft de aanwijzer boven de button. Bijvoorbeeld door met de muiscursor er over te 'zweven'.
+- focus
+- focus en focus-visible: de link heeft de focus door de Tab knop van het keyboard.
+- disabled
+- disabled en focus-visible: als een button disabled is (zeker een primary action button), dan moet wel duidelijk zijn dat de button er is en wat je kunt doen om verder te komen. Screen reader gebruikers moeten daarom focus kunnen hebben op een disabled button, om de bijbehorende uitleg te horen.
 
 ## Richtlijnen
 
-### ((Component specifieke richtlijnen))
+### Gebruik je een button of link?
 
-((Als er specifieke richtlijnen beschreven staan voor het component in Storybook, plaatsen we dat hier. Voorbeeld: de states van een button))
+Sommige ontwerpen hebben een button om naar een andere pagina te gaan. Sommige ontwerpen hebben link in een formulier om naar de vorige pagina te gaan, terwijl de gegevens wel tussentijds verstuurd en opgeslagen worden. Het is belangrijk dat je het goede HTML-element gebruikt dat past bij de actie, in plaats van het HTML-element kiest dat past bij het ontwerp.
+
+Om deze patronen te gebruiken zijn er vier componenten nodig:
+
+- link
+- link die eruit ziet als button
+- button
+- button die eruit ziet als link
+
+Gebruik alleen een \<a> element wanneer er geen gevolgen zijn. Gebruik een \<button> element als je niet de browser back button kan gebruiken om het effect ongedaan te maken.
+
+Enkele voorbeelden waar je een link gebruikt:
+
+- een call to action om te registreren: een link.
+- een knop om naar het loginformulier te gaan: een link
+- dezelfde pagina in een andere taal bekijken: een link.
+- Enkele voorbeelden waar je een button gebruikt:
+
+"Volgende stap" of "vorige stap" in een formulier. Gebruik een submit button wanneer gegevens tussendoor opgeslagen worden of verstuurd worden.
+Uitloggen: button. Log niet uit met een link! Je navigatie moet het ondersteunen om zowel links als button dezelfde stijl te geven.
+de voorkeurstaal aanpassen en dezelfde pagina in een andere taal bekijken: een button.
 
 ### Externe richtlijnen
 
-((Als we verwijzingen hebben naar component specifieke richtlijnen buiten ons design system, plaatsen we die hier. Bijvoorbeeld de formulier-specifieke richtlijnen van het NL Design System))
+- [Richtlijnen over buttons van het NL-Design System](https://nldesignsystem.nl/richtlijnen/formulieren/buttons/)
 
 ## Relevante WCAG-succescriteria
 
-((Als er specifieke WCAG-succescriteria beschreven staan voor het component in Storybook, plaatsen we dat hier. Voorbeeld: de WCAG-succescriteria van een button))
+_(opmerking Jeroen: bron <https://nl-design-system.github.io/utrecht/storybook/?path=/docs/css_css-button--docs#relevante-wcag-succescriteria>)_
+_(opmerking Jeroen Deze moeten met linkjes)_
+
+- WCAG-succescriterium 2.1.2 Geen toetsenbordval: Het is mogelijk met Tab en Shift+Tab de button focus uit de button te verplaatsen.
+- WCAG-succescriterium 2.1.3 Toetsenbord (geen uitzondering):
+  - Je kan de button activeren met Enter of Space.
+  - Het is mogelijk met Tab de button te focussen.
+  - Space gebruiken heeft dan niet het effect dat de pagina scrollt.
+- WCAG-succescriterium 2.4.6 Koppen en labels: de label van de button moet duidelijk zijn
+- WCAG-succescriterium 2.5.2 Aanwijzerannulering:
+  - gebruik niet de mousedown event om de button te activeren, gebruik liever de click event
+  - mousedown mag alleen gebruikt worden als mouseup het effect weer ongedaan maakt, bijvoorbeeld een "fast foward" button om audio of video door te spoelen.
+- WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid): de button moet groot genoeg zijn om aan te klikken, en kleine buttons moeten niet te dicht op een andere button staan.
 
 ## Vragen of verbeteringen?
 
-Heb je een vraag over dit component, of wil je het verbeteren? Mail dan naar <teamux@utrecht.nl>.
+_(opmerking Jeroen: welk e-mail adres zetten we hier neer? <teamux@utrecht.nl> weer nieuw leven in blazen?)_
+Heb je een vraag over dit component, of wil je het verbeteren? Mail dan naar <PLACEHOLDER@utrecht.nl>.
