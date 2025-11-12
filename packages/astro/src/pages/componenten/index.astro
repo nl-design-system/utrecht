@@ -4,6 +4,7 @@ import { Link } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 import TileList from '@components/TileList.astro';
 import TileNavigation from '@components/TileNavigation.astro';
+import ComponentCard from '@components/ComponentCard.astro';
 ---
 
 <Layout>
@@ -25,44 +26,23 @@ import TileNavigation from '@components/TileNavigation.astro';
   </TileList>
 
   <h2>Componenten overzicht</h2>
-  <div>
-    <a class="utrecht-link" href=`${base}/componenten/button`><h3>Button</h3></a>
-    <div>
-      <div class="utrecht-data-badge">HTML</div>
-      <div class="utrecht-data-badge">CSS</div>
-      <div class="utrecht-data-badge">React</div>
-      <div class="utrecht-data-badge">Angular</div>
-    </div>
-  </div>
-  <div>
-    <h3>Link</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo.</p>
-    <div class="utrecht-component-canvas">
-      <Link href="#">Click me</Link>
-    </div>
-  </div>
-  <div>
-    <h3>Alert</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo.</p>
-    <div class="utrecht-component-canvas">
-      <div class="utrecht-alert utrecht-alert--info">
-        <div class="utrecht-alert__content">
-          <div class="utrecht-alert__message" role="status">
-            <h2 class="utrecht-heading-2">Lorem ipsum</h2>
-            <p class="utrecht-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <TileList>
+    <ComponentCard
+      href={`${base}/componenten/button`}
+      title="Button"
+      frameworks={['HTML', 'CSS', 'React', 'Angular']}
+    />
+    <ComponentCard
+      href={`${base}/componenten/link`}
+      title="Link"
+      frameworks={['HTML', 'CSS', 'React', 'Angular', 'Vue']}
+    />
+    <ComponentCard
+      href={`${base}/componenten/alert`}
+      title="Alert"
+      frameworks={['HTML', 'CSS', 'React']}
+    />
+  </TileList>
 </Layout>
 
 <style>
