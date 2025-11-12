@@ -2,13 +2,29 @@
 import Layout from '../../layouts/Layout.astro';
 import { Link } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import TileList from '@components/TileList.astro';
+import TileNavigation from '@components/TileNavigation.astro';
 ---
 
 <Layout>
   <h1>Componenten en iconen</h1>
   Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
 
-  <h2>Overzicht</h2>
+  <h2>Meer weten</h2>
+  <TileList>
+    <TileNavigation
+      href={`${base}/componenten/iconen`}
+      title="Iconen"
+      description="Meer weten over de iconen in het Utrecht Design System?"
+    />
+    <TileNavigation
+      href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs"
+      title="Storybook"
+      description="Bekijk alle componenten in de Storybook."
+    />
+  </TileList>
+
+  <h2>Componenten overzicht</h2>
   <div>
     <a class="utrecht-link" href=`${base}/componenten/button`><h3>Button</h3></a>
     <div>
