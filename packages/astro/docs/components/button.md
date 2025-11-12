@@ -8,8 +8,6 @@ Biedt de mogelijkheid om een actie uit te voeren.
 
 ## Waar kan ik het component vinden?
 
-_(opmerking Jeroen deze komt uit <https://nldesignsystem.nl/button/> vond het wel een compleet lijstje)_
-
 ### Design
 
 - Button in Figma (link naar Figma)
@@ -35,7 +33,6 @@ _(opmerking Jeroen deze komt uit <https://nldesignsystem.nl/button/> vond het we
 ### Vue
 
 Component is niet beschikbaar in Vue.
-_(opmerking Jeroen & Joram: We laten weten dat het component niet beschikbaar is. Met deze opmerking laten weten dat het geen slordigheid of fout is, maar dat we ons daar bewust van zijn)_
 
 ## Anatomie
 
