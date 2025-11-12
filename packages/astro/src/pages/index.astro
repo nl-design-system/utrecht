@@ -2,6 +2,8 @@
 import Layout from '../layouts/Layout.astro';
 import { base } from 'astro:config/client';
 import {PrimaryActionButton, SecondaryActionButton} from '@utrecht/component-library-react/css-module'
+import TileNavigation from '../components/TileNavigation.astro';
+import TileList from '../components/TileList.astro';
 ---
 
 <Layout>
@@ -17,32 +19,38 @@ import {PrimaryActionButton, SecondaryActionButton} from '@utrecht/component-lib
   </section>
   <section>
     <h2>Onderwerpen</h2>
-    <div class="utrecht-tile-list">
-      <div class="utrecht-tile-navigation">
-        <a class="utrecht-link" href=`${base}/design-system`><h3 class="nl-heading nl-heading--level-3">Utrecht Design System</h3></a>
-        <p class="nl-paragraph">Meer weten over het Utrecht Design System? Voor wie is het design system bedoeld?</p>
-      </div>
-      <div class="utrecht-tile-navigation">
-        <a class="utrecht-link" href=`${base}/richtlijnen`><h3 class="nl-heading nl-heading--level-3">Richtlijnen</h3></a>
-        <p class="nl-paragraph">Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?</p>
-      </div>
-      <div class="utrecht-tile-navigation">
-        <a class="utrecht-link" href=`${base}/developers`><h3 class="nl-heading nl-heading--level-3">Ontwikkelaars</h3></a>
-        <p class="nl-paragraph">Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?</p>
-      </div>
-      <div class="utrecht-tile-navigation">
-        <a class="utrecht-link" href=`${base}/designers`><h3 class="nl-heading nl-heading--level-3">Designers</h3></a>
-        <p class="nl-paragraph">Hoe ga ik als designer aan de slag met Utrecht Design System?</p>
-      </div>
-      <div class="utrecht-tile-navigation">
-        <a class="utrecht-link" href=`${base}/componenten`><h3 class="nl-heading nl-heading--level-3">Components</h3></a>
-        <p class="nl-paragraph">Hoe ga ik als designer aan de slag met Utrecht Design System?</p>
-      </div>
-      <div class="utrecht-tile-navigation">
-        <a class="utrecht-link" href=`${base}/tokens`><h3 class="nl-heading nl-heading--level-3">Tokens</h3></a>
-        <p class="nl-paragraph">Hoe ga ik als designer aan de slag met Utrecht Design System?</p>
-      </div>
-    </div>
+    <TileList>
+      <TileNavigation
+        href={`${base}/design-system`}
+        title="Utrecht Design System"
+        description="Meer weten over het Utrecht Design System? Voor wie is het design system bedoeld?"
+      />
+      <TileNavigation
+        href={`${base}/richtlijnen`}
+        title="Richtlijnen"
+        description="Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?"
+      />
+      <TileNavigation
+        href={`${base}/developers`}
+        title="Ontwikkelaars"
+        description="Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?"
+      />
+      <TileNavigation
+        href={`${base}/designers`}
+        title="Designers"
+        description="Hoe ga ik als designer aan de slag met Utrecht Design System?"
+      />
+      <TileNavigation
+        href={`${base}/componenten`}
+        title="Components"
+        description="Hoe ga ik als designer aan de slag met Utrecht Design System?"
+      />
+      <TileNavigation
+        href={`${base}/tokens`}
+        title="Tokens"
+        description="Hoe ga ik als designer aan de slag met Utrecht Design System?"
+      />
+    </TileList>
   </section>
 </Layout>
 
@@ -66,29 +74,3 @@ import {PrimaryActionButton, SecondaryActionButton} from '@utrecht/component-lib
     flex-direction: row;
     column-gap: 16px;
   }
-
-  .utrecht-tile-list {
-    gap: 24px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-block: 0;
-    margin-inline: 0;
-    padding-block: 0;
-    padding-inline: 0;
-  }
-
-  .utrecht-tile-navigation {
-    --utrecht-link-text-decoration: none;
-    --nl-heading-level-3-margin-block-start: 0;
-    --nl-heading-level-3-margin-block-end: 0;
-
-    border: 1px solid #ccc;
-    display: flex;
-    flex-direction: column;
-    column-gap: 8px;
-    padding-block-start: 24px;
-    padding-block-end: 24px;
-    padding-inline-start: 16px;
-    padding-inline-end: 16px;
-  }
-</style>
