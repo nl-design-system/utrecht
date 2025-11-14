@@ -9,10 +9,15 @@ export interface LoadScriptOptions {
   integrity?: string;
 }
 
-export const loadFloClientScript = (basePath = '', options: LoadScriptOptions = {}): Promise<void> => {
+export const loadFloClientScript = (basePath?: string, options: LoadScriptOptions = {}): Promise<void> => {
   return new Promise((resolve, reject) => {
-    const src = basePath.endsWith('/') ? `${basePath}${FLO_CLIENT_SCRIPT}` : `${basePath}/${FLO_CLIENT_SCRIPT}`;
+    if (typeof window === 'undefined') {
+      reject(new Error('loadFloClientScript can only be used in browser environment'));
+      return;
+    }
 
+    const base = basePath ? new URL(basePath, window.location.origin).href : window.location.origin;
+    const src = new URL(FLO_CLIENT_SCRIPT, base).href;
     if (document.querySelector(`script[src="${src}"]`)) {
       resolve();
       return;

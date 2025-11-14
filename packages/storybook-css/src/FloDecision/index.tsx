@@ -32,7 +32,12 @@ export const FloDecision = ({
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    loadFloClientScript().then(() => setReady(true));
+    const basePath = window.location.pathname.startsWith('/utrecht/storybook-css/')
+      ? '/utrecht/storybook-css/'
+      : window.location.pathname.startsWith('/storybook-css/')
+      ? '/storybook-css/'
+      : undefined;
+    loadFloClientScript(basePath).then(() => setReady(true));
   }, []);
 
   if (!ready) return loadingText && <div>{loadingText}</div>;
