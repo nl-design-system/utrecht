@@ -46,7 +46,7 @@ export interface MyLandmarkComponentProps {
 }
 
 export const MyLandmarkComponent = ({ children, label }: PropsWithChildren<MyComponentProps>) => {
-  const headingId = useId();
+  const labelId = useId();
   return (
     <div role="region" aria-labelledby={label ? labelId : undefined}>
       {label && <div id={labelId}>{label}</div>}
@@ -158,7 +158,7 @@ Generate `id` attributes with [`useId()` from React](https://react.dev/reference
 
 ```jsx
 export const MyLandmarkComponent = ({ children, label }) => {
-  const headingId = useId();
+  const labelId = useId();
   return (
     <div role="region" aria-labelledby={label ? labelId : undefined}>
       {label && <div id={labelId}>{label}</div>}
