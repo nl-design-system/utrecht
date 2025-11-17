@@ -1,5 +1,15 @@
 # @utrecht/flo-legal-decision-tree-client
 
+## 1.0.2
+
+### Patch Changes
+
+- 207d205: fix(storybook): resolve flo-client-plugin.js 404 in deployed version
+
+  - Fix static assets path in storybook-css config to use correct workspace path
+  - Replace manual URL construction with URL constructor for robust path resolution
+  - Ensures FloDecision component works in both development and production builds
+
 ## 1.0.1
 
 ### Patch Changes
