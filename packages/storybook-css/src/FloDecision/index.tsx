@@ -48,11 +48,15 @@ export const FloDecision = ({
     data-show-outcomes="${showOutcomes}"
     data-outcomes-header="${outcomesHeader}"
     data-outcomes-header-level="${outcomesHeaderLevel ?? 2}"
+    data-question-display-type="one-by-one-manually"
+    data-unanswered-alert-message="Geef antwoord op deze vraag."
+    data-use-restart-button="true"
+    data-previous-button-text="Terug"
   ></flo-decision>`;
 
   return (
     <div
-      className="utrecht-html utrecht-flolegal-decision-tree-container"
+      className="utrecht-html utrecht-flolegal-decision-tree-container utrecht-richtext"
       dangerouslySetInnerHTML={{ __html: floDecisionContent }}
     />
   );
