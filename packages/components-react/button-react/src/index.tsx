@@ -7,12 +7,21 @@
 import clsx from 'clsx';
 import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
-type appearance = 'primary-action-button' | 'secondary-action-button' | 'subtle-button';
-type hint = 'danger' | 'warning' | 'ready';
+const APPEARANCE = {
+  'primary-action-button': 'utrecht-button--primary-action',
+  'secondary-action-button': 'utrecht-button--secondary-action',
+  'subtle-button': 'utrecht-button--subtle',
+};
+const HINT = {
+  danger: 'utrecht-button--danger',
+  warning: 'utrecht-button--warning',
+  ready: 'utrecht-button--ready',
+};
+
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  appearance?: appearance;
+  appearance?: keyof typeof APPEARANCE;
   busy?: boolean;
-  hint?: hint;
+  hint?: keyof typeof HINT;
   icon?: ReactNode;
   label?: ReactNode;
   pressed?: boolean;
@@ -43,12 +52,8 @@ export const Button = forwardRef(
           busy && 'utrecht-button--busy',
           disabled && 'utrecht-button--disabled',
           type === 'submit' && 'utrecht-button--submit',
-          appearance === 'primary-action-button' && 'utrecht-button--primary-action',
-          appearance === 'secondary-action-button' && 'utrecht-button--secondary-action',
-          appearance === 'subtle-button' && 'utrecht-button--subtle',
-          hint === 'danger' && 'utrecht-button--danger',
-          hint === 'warning' && 'utrecht-button--warning',
-          hint === 'ready' && 'utrecht-button--ready',
+          appearance && APPEARANCE[appearance],
+          hint && HINT[hint],
           pressed === true && 'utrecht-button--pressed',
           className,
         )}
