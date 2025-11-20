@@ -5,6 +5,10 @@ import { base } from 'astro:config/client';
 import TileList from '@components/TileList.astro';
 import TileNavigation from '@components/TileNavigation.astro';
 import ComponentCard from '@components/ComponentCard.astro';
+import {
+  PrimaryActionButton,
+  SecondaryActionButton
+} from "@utrecht/component-library-react/css-module";
 ---
 
 <Layout>
@@ -31,7 +35,12 @@ import ComponentCard from '@components/ComponentCard.astro';
       href={`${base}/componenten/button`}
       title="Button"
       frameworks={['HTML', 'CSS', 'React', 'Angular']}
-    />
+    >
+      <div>
+        <PrimaryActionButton>Primary Action</PrimaryActionButton>
+        <SecondaryActionButton>Secondary Action</SecondaryActionButton>
+      </div>
+    </ComponentCard>
     <ComponentCard
       href={`${base}/componenten/link`}
       title="Link"
