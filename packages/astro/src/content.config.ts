@@ -16,4 +16,11 @@ const components = defineCollection({
   }),
 });
 
-export const collections = { basis, components };
+const developer = defineCollection({
+  loader: glob({ base: 'docs/developer', pattern: ['**/*.{md,mdx}', '!**/_*.{md,mdx}'] }),
+  schema: z.object({
+    title: z.string(),
+  }),
+});
+
+export const collections = { basis, components, developer };
