@@ -12,6 +12,23 @@ Er is gekozen om over te stappen op Astro voor de documentatie website van de Ge
 6. Er zijn geen iframes meer nodig om componenten te tonen in de documentatie website. Hierdoor laden we niet nog een hele pagina in per component
    en ziet het er op mobiel beter uit.
 
+## Hoe voeg ik een icoon toe aan het iconen overzicht?
+
+1. Voeg de SVG toe aan [packages/icons/svg](../icon/src/svg/)
+2. Voeg de icon naam toe aan [./src/pages/componenten/iconen/icon-categories.ts](./src/pages/componenten/iconen/icon-categories.ts)
+3. Om de wijziging te zien:
+   1. Bouw [packages/icon](../icon/)
+   2. Bouw [packages/web-component-library-stencil](../web-component-library-stencil/)
+   3. `pnpm astro dev`
+
+## Hoe voeg ik documentatie voor een nieuw component toe?
+
+1. Voeg de gewenste documentatie toe aan [./docs/components](./docs/components)
+   1. Tip: maak een kopie van een bekend component zoals `button.mdx`
+2. Voer `pnpm astro` uit om de documentatie website lokaal te draaien
+   1. De component documentatie is nu te zien op de astro documentatie website onder /componenten/jouw-component
+3. Voeg de component navigatie kaart toe aan src/pages/componenten/index.astro
+
 ## Astro Starter Kit: Basics
 
 ```sh
