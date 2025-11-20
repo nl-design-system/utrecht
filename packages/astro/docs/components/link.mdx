@@ -1,10 +1,24 @@
 ---
 title: Link
+description: Biedt de mogelijkheid om een actie uit te voeren
 ---
+
+import { Link } from "@utrecht/component-library-react/css-module";
 
 # Link
 
 Gebruik de link om te navigeren naar een andere pagina of een andere plek op dezelfde pagina.
+
+## Voorbeeld
+
+<div
+  className="utrecht-component-canvas"
+  style={{ borderRadius: "3px", border: "1px solid grey", padding: "16px", backgroundColor: "#fafafa" }}
+>
+  <Link client:load href="#">
+    Click me
+  </Link>
+</div>
 
 ## Waar kan ik het component vinden?
 
@@ -73,9 +87,6 @@ de voorkeurstaal aanpassen en dezelfde pagina in een andere taal bekijken: een b
 
 ## Relevante WCAG-succescriteria
 
-_(opmerking Jeroen: bron <https://nl-design-system.github.io/utrecht/storybook/?path=/docs/css_css-button--docs#relevante-wcag-succescriteria>)_
-_(opmerking Jeroen Deze moeten met linkjes)_
-
 - WCAG-succescriterium 2.1.2 Geen toetsenbordval: Het is mogelijk met Tab en Shift+Tab de button focus uit de button te verplaatsen.
 - WCAG-succescriterium 2.1.3 Toetsenbord (geen uitzondering):
   - Je kan de button activeren met Enter of Space.
@@ -88,6 +99,3 @@ _(opmerking Jeroen Deze moeten met linkjes)_
 - WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid): de button moet groot genoeg zijn om aan te klikken, en kleine buttons moeten niet te dicht op een andere button staan.
 
 ## Vragen of verbeteringen?
-
-_(opmerking Jeroen: welk e-mail adres zetten we hier neer? <teamux@utrecht.nl> weer nieuw leven in blazen?)_
-Heb je een vraag over dit component, of wil je het verbeteren? Mail dan naar <PLACEHOLDER@utrecht.nl>.
