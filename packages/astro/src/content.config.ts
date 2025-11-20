@@ -1,5 +1,5 @@
 import { glob } from 'astro/loaders'; // Not available with legacy API
-import { defineCollection, reference, z } from 'astro:content';
+import { defineCollection, z } from 'astro:content';
 
 const basis = defineCollection({
   loader: glob({ base: '../../documentation/website/basis', pattern: ['**/*.md', '!**/_*.md'] }),
@@ -10,7 +10,7 @@ const basis = defineCollection({
 });
 
 const components = defineCollection({
-  loader: glob({ base: 'docs/components', pattern: ['**/*.md', '!**/_*.md'] }),
+  loader: glob({ base: 'docs/components', pattern: ['**/*.{md,mdx}', '!**/_*.{md,mdx}'] }),
   schema: z.object({
     title: z.string(),
   }),

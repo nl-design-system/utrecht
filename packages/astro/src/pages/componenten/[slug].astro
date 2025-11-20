@@ -1,0 +1,36 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getCollection, getEntry, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const components = await getCollection('components');
+  return components.map((component) => ({
+    params: { slug: component.id.replace(/\.(md|mdx)$/, '') },
+    props: { component },
+  }));
+}
+
+const { slug } = Astro.params;
+const entry = await getEntry('components', slug);
+
+if (!entry) {
+  return Astro.redirect('/404');
+}
+
+const { Content } = await render(entry);
+---
+
+<Layout>
+  <h1>{entry.data.title} component</h1>
+  <Content />
+</Layout>
+
+<style>
+  .utrecht-component-canvas {
+    border-radius: 3px;
+    border: 1px solid grey;
+    padding: 16px;
+    background-color: #fafafa;
+  }
+</style>
+
