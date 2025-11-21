@@ -11,6 +11,12 @@ import React from 'react';
 import { UnorderedListStory } from './UnorderedList';
 import { designTokenStory } from './design-token-story';
 
+const CustomBulletIcon = () => (
+  <svg viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <circle cx="4" cy="4" r="4" fill="currentColor" />
+  </svg>
+);
+
 const meta = {
   title: 'CSS Component/Unordered list',
   id: 'css-unordered-list',
@@ -19,6 +25,10 @@ const meta = {
     children: {
       description: 'Content of the list.',
       control: 'text',
+    },
+    forcedColors: {
+      description: 'Simulate forced-colors mode.',
+      control: 'boolean',
     },
     htmlContent: {
       description: 'Content of the list is HTML without BEM class names on each element.',
@@ -140,6 +150,21 @@ const NarrowContainerWithCenteredText: Decorator = (Story) => (
   </div>
 );
 
+const ForceColorModeWrapper = (Story) => <div className="utrecht-unordered-list__marker--forced-colors">{Story()}</div>;
+
+const ForceColorModeDarkWrapper = (Story) => (
+  <div
+    style={{
+      backgroundColor: '#000',
+      color: '#fff',
+      padding: '1rem',
+    }}
+    className="utrecht-unordered-list__marker--forced-colors-dark"
+  >
+    {Story()}
+  </div>
+);
+
 export const NarrowContainerCenter: Story = {
   args: {
     center: true,
@@ -233,6 +258,62 @@ export const HTMLContent: Story = {
       description: {
         story:
           'Use the `utrecht-unordered-list--html-content` modifier when you only have control over the template for the outer `<ul>` and cannot add BEM class names to the `<li>` elements.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const ForceColorMode: Story = {
+  args: {
+    forcedColors: true,
+    items: [
+      {
+        children: 'Lorem',
+      },
+      {
+        children: 'Ipsum',
+      },
+      {
+        children: 'Dolor',
+      },
+    ],
+  },
+  name: 'Force color mode',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Use the `utrecht-unordered-list--forced-colors` modifier when you need to support forced color mode.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const WithCustomBulletIcon: Story = {
+  args: {
+    marker: <CustomBulletIcon />,
+    items: [
+      {
+        children: 'Lorem',
+      },
+      {
+        children: 'Ipsum',
+      },
+      {
+        children: 'Dolor',
+      },
+    ],
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Use the `utrecht-unordered-list__custom-marker`, `utrecht-unordered-list__custom-item` modifier to add a custom bullet icon.',
       },
     },
     status: {
