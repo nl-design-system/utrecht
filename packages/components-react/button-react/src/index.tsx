@@ -60,7 +60,7 @@ export const Button = forwardRef(
         aria-busy={busy || undefined}
         aria-pressed={typeof pressed === 'boolean' ? pressed : undefined}
         disabled={disabled}
-        type={type ?? 'button'}
+        type={type || 'button'}
         {...restProps}
       >
         {icon}
