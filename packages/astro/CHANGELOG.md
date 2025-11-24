@@ -1,5 +1,15 @@
 # @utrecht/astro
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies [e7b59b3]
+- Updated dependencies [951bb2c]
+- Updated dependencies [fd2db7b]
+  - @utrecht/design-tokens@4.1.1
+  - @utrecht/storybook@0.0.2
+
 ## 0.0.10
 
 ### Patch Changes
