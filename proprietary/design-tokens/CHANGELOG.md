@@ -1,5 +1,13 @@
 # @utrecht/design-tokens
 
+## 4.1.1
+
+### Patch Changes
+
+- e7b59b3: Color changed hr
+- 951bb2c: Align the flo-legal style with Figma
+- fd2db7b: Update the button `font-weight` from 700 to 600 (semibold)
+
 ## 4.1.0
 
 ### Minor Changes
