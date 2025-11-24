@@ -11,12 +11,12 @@ const APPEARANCE = {
   'primary-action-button': 'utrecht-button--primary-action',
   'secondary-action-button': 'utrecht-button--secondary-action',
   'subtle-button': 'utrecht-button--subtle',
-};
+} as const;
 const HINT = {
   danger: 'utrecht-button--danger',
   warning: 'utrecht-button--warning',
   ready: 'utrecht-button--ready',
-};
+} as const;
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: keyof typeof APPEARANCE;
