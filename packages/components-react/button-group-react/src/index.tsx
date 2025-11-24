@@ -11,8 +11,13 @@ const hasManyElements = (children: ReactNode | ReactNode[]) =>
   Array.isArray(children) &&
   children.reduce((count: number, item): number => (isValidElement(item) ? count + 1 : count), 0) >= 2;
 
+const DIRECTIONS = {
+  column: 'utrecht-button-group--column',
+  row: 'utrecht-button-group--row',
+} as const;
+
 export interface ButtonGroupProps extends HTMLAttributes<HTMLParagraphElement> {
-  direction?: string | 'column' | 'row';
+  direction?: keyof typeof DIRECTIONS;
 }
 
 export const ButtonGroup = forwardRef(
@@ -24,14 +29,7 @@ export const ButtonGroup = forwardRef(
       role={hasManyElements(children) ? 'group' : undefined}
       {...restProps}
       ref={ref}
-      className={clsx(
-        'utrecht-button-group',
-        {
-          'utrecht-button-group--column': direction === 'column',
-          'utrecht-button-group--row': direction === 'row',
-        },
-        className,
-      )}
+      className={clsx('utrecht-button-group', direction && DIRECTIONS[direction], className)}
     >
       {children}
     </p>
