@@ -236,6 +236,11 @@
   padding-inline-end: var(--utrecht-navigation-toggle-button-padding-inline-end);
 }
 
+@mixin utrecht-navigation__toggle-button--hover {
+  --utrecht-button-subtle-hover-color: var(--utrecht-navigation-toggle-button-hover-color);
+  --utrecht-button-subtle-hover-border-color: var(--utrecht-navigation-toggle-button-hover-border-color);
+}
+
 @mixin utrecht-icon-custom {
   margin-inline-end: var(--utrecht-icon-custom-margin-inline-end);
 }
