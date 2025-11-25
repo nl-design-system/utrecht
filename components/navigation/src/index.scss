@@ -90,7 +90,11 @@
 
 .utrecht-navigation__toggle-button {
   @include utrecht-navigation__toggle-button;
+  & button:hover {
+    @include utrecht-navigation__toggle-button--hover;
+  }
 }
+
 .utrecht-icon-custom {
   @include utrecht-icon-custom;
 }
