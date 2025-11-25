@@ -1,5 +1,12 @@
 # @utrecht/design-tokens
 
+## 4.2.0
+
+### Minor Changes
+
+- f02b554: Corrected several spacing token values and metadata in the Breadcrumb Navigation and Rich Text components.
+- 55988ac: Add hover, focus, and active state tokens for Utrecht navigation toggle button
+
 ## 4.1.1
 
 ### Patch Changes

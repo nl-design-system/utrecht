@@ -1,5 +1,11 @@
 # @utrecht/navigation-css
 
+## 1.1.0
+
+### Minor Changes
+
+- 55988ac: Add hover, focus, and active state tokens for Utrecht navigation toggle button
+
 ## 1.0.1
 
 ### Patch Changes

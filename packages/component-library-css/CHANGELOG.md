@@ -1,5 +1,14 @@
 # @utrecht/component-library-css
 
+## 8.2.1
+
+### Patch Changes
+
+- Updated dependencies [f02b554]
+- Updated dependencies [55988ac]
+  - @utrecht/breadcrumb-nav-css@2.1.0
+  - @utrecht/navigation-css@1.1.0
+
 ## 8.2.0
 
 ### Minor Changes
