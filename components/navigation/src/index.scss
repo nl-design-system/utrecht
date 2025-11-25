@@ -96,6 +96,9 @@
   & button:focus {
     @include utrecht-navigation__toggle-button--focus;
   }
+  & button:active {
+    @include utrecht-navigation__toggle-button--active;
+  }
 }
 
 .utrecht-icon-custom {
