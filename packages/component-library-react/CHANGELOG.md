@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 10.3.10
+
+### Patch Changes
+
+- Updated dependencies [f02b554]
+  - @utrecht/breadcrumb-nav-css@2.1.0
+
 ## 10.3.9
 
 ### Patch Changes
