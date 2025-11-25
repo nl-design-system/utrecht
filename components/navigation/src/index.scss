@@ -93,6 +93,9 @@
   & button:hover {
     @include utrecht-navigation__toggle-button--hover;
   }
+  & button:focus {
+    @include utrecht-navigation__toggle-button--focus;
+  }
 }
 
 .utrecht-icon-custom {

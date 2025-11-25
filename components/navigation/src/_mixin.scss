@@ -241,6 +241,12 @@
   --utrecht-button-subtle-hover-border-color: var(--utrecht-navigation-toggle-button-hover-border-color);
 }
 
+@mixin utrecht-navigation__toggle-button--focus {
+  --utrecht-button-subtle-focus-color: var(--utrecht-navigation-toggle-button-focus-color);
+  --utrecht-button-subtle-focus-border-color: var(--utrecht-navigation-toggle-button-focus-border-color);
+  --utrecht-button-subtle-focus-background-color: var(--utrecht-navigation-toggle-button-focus-background-color);
+}
+
 @mixin utrecht-icon-custom {
   margin-inline-end: var(--utrecht-icon-custom-margin-inline-end);
 }
