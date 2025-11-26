@@ -1,8 +1,9 @@
 ---
 import '@assets/styles.css';
 import '@utrecht/design-tokens/dist/font-family';
-import { SubtleButton, Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
+import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import MobileNavDrawer from '../components/MobileNavDrawer';
 ---
 
 <!doctype html>
@@ -36,9 +37,7 @@ import { base } from 'astro:config/client';
           <div slot="fallback">
             <div class="utrecht-page-header__content utrecht-page-header__content--fallback">
               <a href=`${base}/` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
-              <SubtleButton>
-                <utrecht-icon-hamburger-menu/>Menu
-              </SubtleButton>
+              <MobileNavDrawer client:load base={base} />
             </div>
           </div>
         </utrecht-flex-wrap-fallback>

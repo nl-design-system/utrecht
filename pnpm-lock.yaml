@@ -1100,6 +1100,9 @@ importers:
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
+      '@utrecht/navigation-css':
+        specifier: workspace:*
+        version: link:../../components/navigation
       '@utrecht/storybook':
         specifier: workspace:*
         version: link:../storybook
