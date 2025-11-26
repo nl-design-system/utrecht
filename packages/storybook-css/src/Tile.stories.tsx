@@ -2,14 +2,45 @@
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import iconSet from '@utrecht/icon/dist/index.json';
 import readme from '@utrecht/tile-css/README.md?raw';
 import tokensDefinition from '@utrecht/tile-css/src/tokens.json';
 import React, { type ComponentProps, type CSSProperties } from 'react';
+import { Tile, TileProps } from './Tile';
 import { designTokenStory } from './design-token-story';
+
+interface TileStoryProps extends TileProps {
+  icon?: string;
+}
+
+const TileStory = ({ children, icon, ...props }: TileStoryProps) => {
+  const IconElement = icon;
+  return (
+    <Tile icon={IconElement ? <IconElement /> : null} {...props}>
+      {children}
+    </Tile>
+  );
+};
 
 const meta = {
   title: 'CSS Component/Tile',
   id: 'css-tile',
+  component: TileStory,
+  argTypes: {
+    children: {
+      description: 'Text of the tile',
+    },
+    icon: {
+      description: 'Icon',
+      control: { type: 'select' },
+      options: ['', ...iconSet.map(({ id }) => id)],
+    },
+    color: {
+      description: 'Color variant of the tile',
+      control: { type: 'select' },
+      options: ['default', 'red', 'green', 'blue'],
+    },
+  },
   parameters: {
     bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Ftile',
     layout: 'fullscreen',
@@ -25,18 +56,25 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof HTMLDivElement>;
+} satisfies Meta<typeof Tile>;
 
 export default meta;
 
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  render: (args) => (
-    <div className="utrecht-tile" {...args}>
-      Hellooooo
-    </div>
-  ),
+  args: {
+    href: '#',
+    children: 'Tile nummer 1',
+    icon: 'utrecht-icon-facebook',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Test',
+      },
+    },
+  },
 };
 
 export const DesignTokens = designTokenStory(meta);
