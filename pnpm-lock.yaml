@@ -1097,12 +1097,12 @@ importers:
       '@utrecht/design-tokens':
         specifier: workspace:*
         version: link:../../proprietary/design-tokens
+      '@utrecht/navigation-css':
+        specifier: workspace:*
+        version: link:../../components/navigation
       '@utrecht/storybook':
         specifier: workspace:*
         version: link:../storybook
-      '@utrecht/web-component-library-react':
-        specifier: workspace:*
-        version: link:../web-component-library-react
       '@utrecht/web-component-library-stencil':
         specifier: workspace:*
         version: link:../web-component-library-stencil
