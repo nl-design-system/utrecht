@@ -1,7 +1,7 @@
 ---
 import '@assets/styles.css';
 import '@utrecht/design-tokens/dist/font-family';
-import { SubtleButton, Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
+import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 import { Image } from 'astro:assets';
 import MobileNavDrawer from '../components/MobileNavDrawer';
@@ -26,7 +26,6 @@ import MobileNavDrawer from '../components/MobileNavDrawer';
           </div>
           <nav>
             <NavBar>
-
               <NavList id="main-navigation-list">
                 <NavListLink href={`${base}/design-system`}>Utrecht Design System</NavListLink>
                 <NavListLink href={`${base}/designers`}>Voor designers</NavListLink>
