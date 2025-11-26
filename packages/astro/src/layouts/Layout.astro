@@ -1,7 +1,7 @@
 ---
 import '@assets/styles.css';
 import '@utrecht/design-tokens/dist/font-family';
-import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
+import { SubtleButton, Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 ---
 
@@ -17,12 +17,13 @@ import { base } from 'astro:config/client';
 	<body class="utrecht-body">
     <Page className="utrecht-custom-page">
       <PageHeader>
+        <utrecht-flex-wrap-fallback flextarget="main-navigation-list">
         <div class="utrecht-page-header__content">
           <a href=`${base}/` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
         </div>
         <nav>
           <NavBar>
-              <NavList>
+              <NavList id="main-navigation-list">
                 <NavListLink href={`${base}/design-system`}>Utrecht Design System</NavListLink>
                 <NavListLink href={`${base}/designers`}>Voor designers</NavListLink>
                 <NavListLink href={`${base}/developers`}>Voor developers</NavListLink>
@@ -32,6 +33,15 @@ import { base } from 'astro:config/client';
               </NavList>
           </NavBar>
         </nav>
+          <div slot="fallback">
+            <div class="utrecht-page-header__content utrecht-page-header__content--fallback">
+              <a href=`${base}/` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+              <SubtleButton>
+                <utrecht-icon-hamburger-menu/>Menu
+              </SubtleButton>
+            </div>
+          </div>
+        </utrecht-flex-wrap-fallback>
       </PageHeader>
       <div class="utrecht-page-body">
         <div class="utrecht-page-body__content">
@@ -82,5 +92,10 @@ import { base } from 'astro:config/client';
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+  }
+
+  .utrecht-page-header__content--fallback {
+    display: flex;
+    justify-content: space-between;
   }
 </style>
