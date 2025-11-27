@@ -1,0 +1,60 @@
+import {
+  Heading3,
+  Heading4,
+  Link,
+  Paragraph,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+  UnorderedList,
+  UnorderedListItem,
+} from '@utrecht/component-library-react/dist/css-module';
+import React from 'react';
+
+const BelangrijkGemeenschapGoederenContent = () => (
+  <>
+    <Paragraph>
+      U trouwt standaard in beperkte gemeenschap van goederen. Wilt u dit aanpassen? Dan regelt u dit bij een notaris. U
+      hoeft ons niet door te geven of u gaat trouwen in (beperkte) gemeenschap van goederen of onder huwelijkse
+      voorwaarden.
+    </Paragraph>
+    <Paragraph>
+      Meer informatie hierover staat op <Link href="https://www.rijksoverheid.nl/">rijksoverheid.nl</Link> en op{' '}
+      <Link href="https://www.notaris.nl/">notaris.nl</Link>
+    </Paragraph>
+    <Heading4>Trouwen in stadhuis</Heading4>
+    <Paragraph>
+      Wilt u in het stadhuis of wijkservicecentrum Vleuten-De Meern trouwen? Bel ons dan op via 14 030 om een datum en
+      tijd vast te leggen.
+    </Paragraph>
+    <Heading4>Trouwen op een andere locatie die door de gemeente is goedgekeurd</Heading4>
+    <Paragraph>
+      Wilt u trouwen op een andere locatie die door ons is{' '}
+      <Link href="https://loket.digitaal.utrecht.nl/nl/producten/trouwlocaties-in-utrecht">goedgekeurd?</Link> Bespreek
+      met deze locatie uw gewenste trouwdatum en -tijd. Daarna kunt u een afspraak maken met ons. Dit kan telefonisch
+      via 14 030.
+    </Paragraph>
+    <Heading4>Trouwen op een locatie die u zelf kiest</Heading4>
+    <Paragraph>
+      Wilt u trouwen op een locatie die uzelf kiest? Bespreek dit dan eerst met de trouwlocatie, samen met datum en
+      tijd. Daarna vraagt u aan ons of u op die locatie mag trouwen. Deze aanvraag is minimaal 6 weken voor de
+      trouwdatum bij ons binnen.
+    </Paragraph>
+    <Heading4>Plan uw trouwdatum en trouwlocatie op tijd</Heading4>
+    <Paragraph>
+      Gaat u trouwen? Leg uw trouwdatum en huwelijkslocatie dan op tijd vast. Doe dit het liefst minimaal 3 maanden van
+      tevoren. Wilt u trouwen in mei, juni, september of op een bijzondere datum? Regel dit dan nog eerder, zodat u
+      zeker weet dat uw gewenste datum en locatie beschikbaar zijn.
+    </Paragraph>
+    <Paragraph>
+      Gaat u trouwen? Leg uw trouwdatum en huwelijkslocatie dan op tijd vast. Doe dit het liefst minimaal 3 maanden van
+      tevoren. Wilt u trouwen in mei, juni, september of op een bijzondere datum? Regel dit dan nog eerder, zodat u
+      zeker weet dat uw gewenste datum en locatie beschikbaar zijn.
+    </Paragraph>
+  </>
+);
+
+export default BelangrijkGemeenschapGoederenContent;

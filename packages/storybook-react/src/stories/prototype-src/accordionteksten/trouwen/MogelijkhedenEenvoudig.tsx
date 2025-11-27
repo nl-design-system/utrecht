@@ -1,0 +1,60 @@
+import {
+  Heading3,
+  Link,
+  Table,
+  TableBody,
+  TableCell,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+  UnorderedList,
+  UnorderedListItem,
+} from '@utrecht/component-library-react/dist/css-module';
+import React from 'react';
+
+const MogelijkhedenEenvoudigContent = () => (
+  <>
+    <Heading3>Dagen, tijden en kosten</Heading3>
+    <Table>
+      <TableHeader>
+        <TableRow>
+          <TableHeaderCell scope="col">Dagen</TableHeaderCell>
+          <TableHeaderCell scope="col">Tijden</TableHeaderCell>
+          <TableHeaderCell scope="col">Kosten</TableHeaderCell>
+        </TableRow>
+      </TableHeader>
+      <TableBody>
+        <TableRow>
+          <TableHeaderCell scope="row">Maandag</TableHeaderCell>
+          <TableCell>11.00 – 11.30 uur</TableCell>
+          <TableCell>€ 310,30</TableCell>
+        </TableRow>
+        <TableRow>
+          <TableHeaderCell scope="row">Dinsdag, woensdag en vrijdag</TableHeaderCell>
+          <TableCell>10.00, 10.30 of 11.30 uur</TableCell>
+          <TableCell>€ 310,30</TableCell>
+        </TableRow>
+      </TableBody>
+    </Table>
+    <UnorderedList>
+      <UnorderedListItem>U trouwt in de trouwzaal van het stadskantoor</UnorderedListItem>
+      <UnorderedListItem>U betaalt na het maken van een afspraak voor een eenvoudig huwelijk</UnorderedListItem>
+      <UnorderedListItem>De trouwambtenaar houdt geen toespraak en heeft vooraf geen contact met u</UnorderedListItem>
+      <UnorderedListItem>Een eenvoudig huwelijk duurt maximaal 5-10 minuten</UnorderedListItem>
+      <UnorderedListItem>
+        U bent welkom met maximaal 10 personen, dit is inclusief het bruidspaar, de getuigen en een fotograaf.
+      </UnorderedListItem>
+      <UnorderedListItem>De wachtlijst voor eenvoudig trouwen is ongeveer 3 maanden</UnorderedListItem>
+      <UnorderedListItem>
+        Hebt u uw voorgenomen huwelijk al gemeld (kijk onder kopje &apos;Wat moet ik regelen/2. Meld uw voorgenomen
+        huwelijk&apos;) en is deze goedgekeurd? Dan kunt u pas een afspraak maken voor een flitshuwelijk.
+      </UnorderedListItem>
+    </UnorderedList>
+    <br />
+    <Link href="https://loket.digitaal.utrecht.nl/nl/products/trouwlocaties-in-utrecht">
+      Lees meer over deze locatie en bekijk de foto
+    </Link>
+  </>
+);
+
+export default MogelijkhedenEenvoudigContent;

@@ -4,17 +4,12 @@ import {
   BreadcrumbNav,
   BreadcrumbNavLink,
   BreadcrumbNavSeparator,
-  ButtonLink,
   Heading1,
   Heading2,
   Heading3,
-  Image,
   Link,
-  Logo,
-  LogoImage,
   Page,
   PageContent,
-  PageHeader,
   Paragraph,
   Surface,
   UnorderedList,
@@ -27,6 +22,18 @@ import {
 } from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
 import '../prototype-src/index.css';
+import BelangrijkAchternaamContent from '../prototype-src/accordionteksten/trouwen/BelangrijkAchternaam.js';
+import BelangrijkAnnulerenContent from '../prototype-src/accordionteksten/trouwen/BelangrijkAnnuleren.js';
+import BelangrijkGemeenschapGoederenContent from '../prototype-src/accordionteksten/trouwen/BelangrijkGemeenschapGoederen.js';
+import BelangrijkNietNederlandsContent from '../prototype-src/accordionteksten/trouwen/BelangrijkNietNederlands.js';
+import MogelijkhedenCeremonieContent from '../prototype-src/accordionteksten/trouwen/MogelijkhedenCeremonie.js';
+import MogelijkhedenEenvoudigContent from '../prototype-src/accordionteksten/trouwen/MogelijkhedenEenvoudig.js';
+import MogelijkhedenFlitshuwelijkContent from '../prototype-src/accordionteksten/trouwen/MogelijkhedenFlits.js';
+import MogelijkhedenGratisContent from '../prototype-src/accordionteksten/trouwen/MogelijkhedenGratis.js';
+import RegelenGetuigenContent from '../prototype-src/accordionteksten/trouwen/RegelenGetuigen.js';
+import RegelenMeldenContent from '../prototype-src/accordionteksten/trouwen/RegelenMelden.js';
+import RegelenTrouwambtenaarContent from '../prototype-src/accordionteksten/trouwen/RegelenTrouwambtenaar.js';
+import RegelenTrouwdatumContent from '../prototype-src/accordionteksten/trouwen/RegelenTrouwdatum.js';
 import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
 import urls from '../prototype-src/variables.js';
@@ -88,17 +95,25 @@ export const One: Story = {
                   verschillen. Denk bijvoorbeeld aan wel of geen ja-woord geven. Maar ook of het in het buitenland
                   geldig is.
                 </Paragraph>
-                <Link href="#">Bekijk de verschillen tussen huwelijk, partnerschap en samenlevingscontract</Link>
+                <Link href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/wat-is-het-verschil-tussen-een-huwelijk-geregistreerd-partnerschap-en-samenlevingscontract">
+                  Bekijk de verschillen tussen huwelijk, partnerschap en samenlevingscontract
+                </Link>
                 <Paragraph>Lees meer over:</Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>
-                    <Link href="#">geregistreerd partnerschap</Link>
+                    <Link href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap">
+                      geregistreerd partnerschap
+                    </Link>
                   </UnorderedListItem>
                   <UnorderedListItem>
-                    <Link href="#">omzetten geregistreerd partnerschap in huwelijk</Link>
+                    <Link href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap#geregistreerd-partnerschap-omzetten-in-huwelijk">
+                      omzetten geregistreerd partnerschap in huwelijk
+                    </Link>
                   </UnorderedListItem>
                   <UnorderedListItem>
-                    <Link href="#">Samenlevingscontract</Link>
+                    <Link href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/samenlevingscontract-afsluiten">
+                      Samenlevingscontract
+                    </Link>
                   </UnorderedListItem>
                 </UnorderedList>
 
@@ -106,9 +121,24 @@ export const One: Story = {
                 <AccordionProvider
                   sections={[
                     {
-                      body: 'Lijn 3 rijdt vanaf donderdag 13 februari 2025 niet meer over de Amsterdamsestraatweg. Richting het centrum en Zuilen rijdt die via Royaards van den Hamkade. Hiervoor zijn tijdelijke bushaltes ter hoogte van Ondiep-Zuidzijde. U kunt ook via de haltes aan Oudenoord of Nijenoord met lijn 3 reizen.',
+                      body: <MogelijkhedenFlitshuwelijkContent />,
                       expanded: undefined,
-                      label: 'Openbaar Vervoer',
+                      label: 'Flitshuwelijk in het stadskantoor',
+                    },
+                    {
+                      body: <MogelijkhedenEenvoudigContent />,
+                      expanded: undefined,
+                      label: 'Eenvoudig trouwen in het stadskantoor',
+                    },
+                    {
+                      body: <MogelijkhedenGratisContent />,
+                      expanded: undefined,
+                      label: 'Gratis trouwen in het stadskantoor',
+                    },
+                    {
+                      body: <MogelijkhedenCeremonieContent />,
+                      expanded: undefined,
+                      label: 'Trouwen met een ceremonie',
                     },
                   ]}
                 />
@@ -120,34 +150,24 @@ export const One: Story = {
                 <AccordionProvider
                   sections={[
                     {
-                      body: 'De straat wordt veiliger voor iedereen. Automobilisten, fietsers en voetgangers kunnen straks makkelijker en veiliger oversteken. Hiervoor nemen we verschillende maatregelen:',
+                      body: <RegelenGetuigenContent />,
                       expanded: undefined,
-                      label: 'Makkelijk en veilig oversteken',
+                      label: 'Getuigen',
                     },
                     {
-                      body: 'Het verkeer op straat gaat door verschillende maatregelen langzamer rijden. Ook wordt de straat meer overzichtelijk. Dit gaan we doen:',
+                      body: <RegelenMeldenContent />,
                       expanded: undefined,
-                      label: 'Langzamer rijden, beter zicht op zijstraten',
+                      label: 'Meld uw voorgenomen huwelijk',
                     },
                     {
-                      body: 'We maken de Amsterdamsestraatweg groener en gezonder. Er komt 5 keer zoveel groen als er nu is. Totaal komt er 2.500 m2 meer groen bij. Dit gaan we doen:',
+                      body: <RegelenTrouwdatumContent />,
                       expanded: undefined,
-                      label: 'Meer groen',
+                      label: 'Plan trouwdatum en locatie',
                     },
                     {
-                      body: 'We willen dat de Amsterdamsestraatweg een fijne plek is om te winkelen, wonen en wandelen. Zo krijgen fietsers en voetgangers meer ruimte:',
+                      body: <RegelenTrouwambtenaarContent />,
                       expanded: undefined,
-                      label: 'Meer ruimte voor fietsers voetgangers en terrassen',
-                    },
-                    {
-                      body: 'We zorgen dat fietsers, automobilisten, pakketbezorgers en leveranciers voor winkels genoeg ruimte hebben om te parkeren. We gaan slim om met de ruimte die we hebben. Zo doen we dat:',
-                      expanded: undefined,
-                      label: 'Slimmer parkeren',
-                    },
-                    {
-                      body: 'We vernieuwen het riool. Er komt een rioolbuis voor vuil water en een rioolbuis voor regenwater.',
-                      expanded: undefined,
-                      label: 'Vervangen riool',
+                      label: 'Trouwambtenaar',
                     },
                   ]}
                 />
@@ -155,34 +175,24 @@ export const One: Story = {
                 <AccordionProvider
                   sections={[
                     {
-                      body: 'De straat wordt veiliger voor iedereen. Automobilisten, fietsers en voetgangers kunnen straks makkelijker en veiliger oversteken. Hiervoor nemen we verschillende maatregelen:',
+                      body: <BelangrijkAchternaamContent />,
                       expanded: undefined,
-                      label: 'Makkelijk en veilig oversteken',
+                      label: 'Achternaam kinderen kiezen',
                     },
                     {
-                      body: 'Het verkeer op straat gaat door verschillende maatregelen langzamer rijden. Ook wordt de straat meer overzichtelijk. Dit gaan we doen:',
+                      body: <BelangrijkNietNederlandsContent />,
                       expanded: undefined,
-                      label: 'Langzamer rijden, beter zicht op zijstraten',
+                      label: 'Niet Nederlandse nationaliteit',
                     },
                     {
-                      body: 'We maken de Amsterdamsestraatweg groener en gezonder. Er komt 5 keer zoveel groen als er nu is. Totaal komt er 2.500 m2 meer groen bij. Dit gaan we doen:',
+                      body: <BelangrijkGemeenschapGoederenContent />,
                       expanded: undefined,
-                      label: 'Meer groen',
+                      label: 'Trouwen in gemeenschap van goederen of op huwelijkse voorwaarden',
                     },
                     {
-                      body: 'We willen dat de Amsterdamsestraatweg een fijne plek is om te winkelen, wonen en wandelen. Zo krijgen fietsers en voetgangers meer ruimte:',
+                      body: <BelangrijkAnnulerenContent />,
                       expanded: undefined,
-                      label: 'Meer ruimte voor fietsers voetgangers en terrassen',
-                    },
-                    {
-                      body: 'We zorgen dat fietsers, automobilisten, pakketbezorgers en leveranciers voor winkels genoeg ruimte hebben om te parkeren. We gaan slim om met de ruimte die we hebben. Zo doen we dat:',
-                      expanded: undefined,
-                      label: 'Slimmer parkeren',
-                    },
-                    {
-                      body: 'We vernieuwen het riool. Er komt een rioolbuis voor vuil water en een rioolbuis voor regenwater.',
-                      expanded: undefined,
-                      label: 'Vervangen riool',
+                      label: 'Annuleren of wijzigen',
                     },
                   ]}
                 />
