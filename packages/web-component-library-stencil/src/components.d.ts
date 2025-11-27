@@ -631,6 +631,8 @@ export namespace Components {
     }
     interface UtrechtIconWijkZwemmen {
     }
+    interface UtrechtIconWijkZwemmenAlternatief {
+    }
     interface UtrechtIconWonenKosten {
     }
     interface UtrechtIconWoningZoeken {
@@ -2550,6 +2552,12 @@ declare global {
         prototype: HTMLUtrechtIconWijkZwemmenElement;
         new (): HTMLUtrechtIconWijkZwemmenElement;
     };
+    interface HTMLUtrechtIconWijkZwemmenAlternatiefElement extends Components.UtrechtIconWijkZwemmenAlternatief, HTMLStencilElement {
+    }
+    var HTMLUtrechtIconWijkZwemmenAlternatiefElement: {
+        prototype: HTMLUtrechtIconWijkZwemmenAlternatiefElement;
+        new (): HTMLUtrechtIconWijkZwemmenAlternatiefElement;
+    };
     interface HTMLUtrechtIconWonenKostenElement extends Components.UtrechtIconWonenKosten, HTMLStencilElement {
     }
     var HTMLUtrechtIconWonenKostenElement: {
@@ -3215,6 +3223,7 @@ declare global {
         "utrecht-icon-wijk-speelplaats": HTMLUtrechtIconWijkSpeelplaatsElement;
         "utrecht-icon-wijk-sport": HTMLUtrechtIconWijkSportElement;
         "utrecht-icon-wijk-zwemmen": HTMLUtrechtIconWijkZwemmenElement;
+        "utrecht-icon-wijk-zwemmen-alternatief": HTMLUtrechtIconWijkZwemmenAlternatiefElement;
         "utrecht-icon-wonen-kosten": HTMLUtrechtIconWonenKostenElement;
         "utrecht-icon-woning-zoeken": HTMLUtrechtIconWoningZoekenElement;
         "utrecht-icon-x": HTMLUtrechtIconXElement;
@@ -3919,6 +3928,8 @@ declare namespace LocalJSX {
     }
     interface UtrechtIconWijkZwemmen {
     }
+    interface UtrechtIconWijkZwemmenAlternatief {
+    }
     interface UtrechtIconWonenKosten {
     }
     interface UtrechtIconWoningZoeken {
@@ -4406,6 +4417,7 @@ declare namespace LocalJSX {
         "utrecht-icon-wijk-speelplaats": UtrechtIconWijkSpeelplaats;
         "utrecht-icon-wijk-sport": UtrechtIconWijkSport;
         "utrecht-icon-wijk-zwemmen": UtrechtIconWijkZwemmen;
+        "utrecht-icon-wijk-zwemmen-alternatief": UtrechtIconWijkZwemmenAlternatief;
         "utrecht-icon-wonen-kosten": UtrechtIconWonenKosten;
         "utrecht-icon-woning-zoeken": UtrechtIconWoningZoeken;
         "utrecht-icon-x": UtrechtIconX;
@@ -4733,6 +4745,7 @@ declare module "@stencil/core" {
             "utrecht-icon-wijk-speelplaats": LocalJSX.UtrechtIconWijkSpeelplaats & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkSpeelplaatsElement>;
             "utrecht-icon-wijk-sport": LocalJSX.UtrechtIconWijkSport & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkSportElement>;
             "utrecht-icon-wijk-zwemmen": LocalJSX.UtrechtIconWijkZwemmen & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkZwemmenElement>;
+            "utrecht-icon-wijk-zwemmen-alternatief": LocalJSX.UtrechtIconWijkZwemmenAlternatief & JSXBase.HTMLAttributes<HTMLUtrechtIconWijkZwemmenAlternatiefElement>;
             "utrecht-icon-wonen-kosten": LocalJSX.UtrechtIconWonenKosten & JSXBase.HTMLAttributes<HTMLUtrechtIconWonenKostenElement>;
             "utrecht-icon-woning-zoeken": LocalJSX.UtrechtIconWoningZoeken & JSXBase.HTMLAttributes<HTMLUtrechtIconWoningZoekenElement>;
             "utrecht-icon-x": LocalJSX.UtrechtIconX & JSXBase.HTMLAttributes<HTMLUtrechtIconXElement>;
