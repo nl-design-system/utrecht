@@ -8,9 +8,6 @@ packages:
   - "packages/components-react/*"
   - "proprietary/*"
 
-# Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
-autoInstallPeers: false
-
 # Configure pnpm so that it will not install any package that claims to not be compatible with the current Node.js
 # version.
 engineStrict: true
