@@ -114,17 +114,18 @@
 }
 
 @mixin utrecht-navigation__link-focus {
-  --utrecht-link-focus-color: var(--utrecht-navigation-link-focus-color);
-  --utrecht-link-focus-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-navigation-link-color: var(--utrecht-navigation-link-focus-color);
+  --utrecht-link-focus-background-color: var(--utrecht-navigation-link-focus-background-color);
   --utrecht-navigation-marker-color: currentColor;
   --utrecht-navigation-marker-outline-hover-fill: currentColor;
 }
 
 @mixin utrecht-navigation__link-active-focus {
-  --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color);
+  --utrecht-navigation-link-color: var(--utrecht-navigation-link-active-focus-color);
 }
 
 @mixin utrecht-navigation__link--mobile {
+  --utrecht-link-active-color: var(--utrecht-navigation-link-mobile-active-color);
   --_utrecht-navigation-link-align-items: center;
   --_utrecht-navigation-link-justify-content: normal;
   --utrecht-navigation-link-padding-inline-start: var(--utrecht-navigation-link-mobile-padding-inline-start);
@@ -151,6 +152,7 @@
 }
 
 @mixin utrecht-navigation__link--is-current {
+  --utrecht-navigation-link-mobile-hover-font-weight: var(--utrecht-navigation-link-is-current-font-weight);
   --utrecht-navigation-link-font-weight: var(--utrecht-navigation-link-is-current-font-weight);
 }
 

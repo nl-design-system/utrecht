@@ -35,13 +35,15 @@
 .utrecht-navigation__link:hover {
   @include utrecht-navigation__link-hover;
 }
-.utrecht-navigation__link:focus {
+
+.utrecht-navigation__link:focus-visible {
   @include utrecht-navigation__link-focus;
 }
 
-.utrecht-navigation__link:active:focus {
+.utrecht-navigation__link:active:focus-visible {
   @include utrecht-navigation__link-active-focus;
 }
+
 .utrecht-navigation__link--mobile {
   @include utrecht-navigation__link--mobile;
 }

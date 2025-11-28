@@ -69,7 +69,7 @@
       "link": {
         "active": {
           "color": {
-            "value": "{utrecht.color.white}"
+            "value": "{utrecht.color.black}"
           },
           "focus": {
             "color": {
@@ -137,7 +137,20 @@
               "value": "{utrecht.color.blue.35}"
             },
             "font-weight": {
-              "value": "{utrecht.typography.weight-scale.bold.font-weight}"
+              "value": "{utrecht.typography.weight-scale.normal.font-weight}"
+            }
+          },
+          "active": {
+            "color": {
+              "value": "{utrecht.color.blue.35}"
+            }
+          },
+          "focus": {
+            "background-color": {
+              "value": "{utrecht.color.yellow.80}"
+            },
+            "color": {
+              "value": "{utrecht.color.blue.35}"
             }
           },
           "justify-content": {},
