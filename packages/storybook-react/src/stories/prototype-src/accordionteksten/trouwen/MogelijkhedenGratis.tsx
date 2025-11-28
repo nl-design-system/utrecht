@@ -25,7 +25,7 @@ const MogelijkhedenGratisContent = () => (
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableHeaderCell scope="row">Maandag</TableHeaderCell>
+          <TableCell scope="row">Maandag</TableCell>
           <TableCell>10.00 of 10.30 uur</TableCell>
           <TableCell>Gratis</TableCell>
         </TableRow>

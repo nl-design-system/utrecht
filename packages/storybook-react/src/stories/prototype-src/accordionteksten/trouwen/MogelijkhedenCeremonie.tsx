@@ -27,22 +27,22 @@ const MogelijkhedenCeremonieContent = () => (
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableHeaderCell scope="row">Maandag – vrijdag</TableHeaderCell>
+          <TableCell scope="row">Maandag – vrijdag</TableCell>
           <TableCell>8.00 – 18.00 uur</TableCell>
           <TableCell>€ 1.043,30</TableCell>
         </TableRow>
         <TableRow>
-          <TableHeaderCell scope="row">Maandag – vrijdag</TableHeaderCell>
+          <TableCell scope="row">Maandag – vrijdag</TableCell>
           <TableCell>na 18.00 uur</TableCell>
           <TableCell>€ 1.554,60</TableCell>
         </TableRow>
         <TableRow>
-          <TableHeaderCell scope="row">Zaterdag en zondag</TableHeaderCell>
+          <TableCell scope="row">Zaterdag en zondag</TableCell>
           <TableCell></TableCell>
           <TableCell>€ 1.554,60</TableCell>
         </TableRow>
         <TableRow>
-          <TableHeaderCell scope="row">Feestdagen</TableHeaderCell>
+          <TableCell scope="row">Feestdagen</TableCell>
           <TableCell></TableCell>
           <TableCell>€ 2.095,15</TableCell>
         </TableRow>

@@ -25,12 +25,12 @@ const MogelijkhedenEenvoudigContent = () => (
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableHeaderCell scope="row">Maandag</TableHeaderCell>
+          <TableCell scope="row">Maandag</TableCell>
           <TableCell>11.00 – 11.30 uur</TableCell>
           <TableCell>€ 310,30</TableCell>
         </TableRow>
         <TableRow>
-          <TableHeaderCell scope="row">Dinsdag, woensdag en vrijdag</TableHeaderCell>
+          <TableCell scope="row">Dinsdag, woensdag en vrijdag</TableCell>
           <TableCell>10.00, 10.30 of 11.30 uur</TableCell>
           <TableCell>€ 310,30</TableCell>
         </TableRow>

@@ -25,7 +25,7 @@ const MogelijkhedenFlitshuwelijkContent = () => (
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableHeaderCell scope="row">Woensdag en vrijdag</TableHeaderCell>
+          <TableCell scope="row">Woensdag en vrijdag</TableCell>
           <TableCell>9.00 – 10.00 uur</TableCell>
           <TableCell>€ 270,20</TableCell>
         </TableRow>

@@ -39,7 +39,7 @@ const RegelenTrouwambtenaarContent = () => (
       </TableHeader>
       <TableBody>
         <TableRow>
-          <TableHeaderCell scope="row">Trouwambtenaar voor 1 dag</TableHeaderCell>
+          <TableCell scope="row">Trouwambtenaar voor 1 dag</TableCell>
           <TableCell>€ 306,75</TableCell>
         </TableRow>
       </TableBody>
