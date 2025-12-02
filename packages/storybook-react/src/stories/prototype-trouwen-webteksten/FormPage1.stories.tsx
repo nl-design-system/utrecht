@@ -15,11 +15,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconChevronRight,
-} from '@utrecht/web-component-library-react';
+import { UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
 import '../prototype-src/index.css';
 import BelangrijkAchternaamContent from '../prototype-src/accordionteksten/trouwen/BelangrijkAchternaam.js';
