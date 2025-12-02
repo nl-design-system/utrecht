@@ -46,11 +46,7 @@ const RegelenTrouwdatumContent = () => (
       tevoren. Wilt u trouwen in mei, juni, september of op een bijzondere datum? Regel dit dan nog eerder, zodat u
       zeker weet dat uw gewenste datum en locatie beschikbaar zijn.
     </Paragraph>
-    <Paragraph>
-      Gaat u trouwen? Leg uw trouwdatum en huwelijkslocatie dan op tijd vast. Doe dit het liefst minimaal 3 maanden van
-      tevoren. Wilt u trouwen in mei, juni, september of op een bijzondere datum? Regel dit dan nog eerder, zodat u
-      zeker weet dat uw gewenste datum en locatie beschikbaar zijn.
-    </Paragraph>
+    <Paragraph>U kunt uiterlijk 18 maanden van tevoren een afspraak met ons maken voor uw trouwdatum .</Paragraph>
   </>
 );
 

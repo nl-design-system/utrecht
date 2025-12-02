@@ -95,6 +95,7 @@ export const One: Story = {
                   verschillen. Denk bijvoorbeeld aan wel of geen ja-woord geven. Maar ook of het in het buitenland
                   geldig is.
                 </Paragraph>
+                <br />
                 <Link href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/wat-is-het-verschil-tussen-een-huwelijk-geregistreerd-partnerschap-en-samenlevingscontract">
                   Bekijk de verschillen tussen huwelijk, partnerschap en samenlevingscontract
                 </Link>
@@ -146,7 +147,7 @@ export const One: Story = {
                 <Paragraph>
                   Hieronder leest u wat u moet regelen voor uw huwelijk of geregistreerd partnerschap.
                 </Paragraph>
-                <Heading3>Regelen</Heading3>
+                <Heading3 id="regelen">Regelen</Heading3>
                 <AccordionProvider
                   sections={[
                     {

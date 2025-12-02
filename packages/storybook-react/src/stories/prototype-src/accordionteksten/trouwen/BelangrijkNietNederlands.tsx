@@ -20,6 +20,7 @@ const BelangrijkNietNederlandsContent = () => (
       Hebt u niet de Nederlandse nationaliteit? Vraag dan aan uw eigen land (bijvoorbeeld de ambassade) welke zaken u
       bij hen voor en na het huwelijk moet regelen.
     </Paragraph>
+    <br />
   </>
 );
 

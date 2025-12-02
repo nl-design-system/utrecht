@@ -3,6 +3,7 @@ import {
   Link,
   Table,
   TableBody,
+  TableCaption,
   TableCell,
   TableHeader,
   TableHeaderCell,
@@ -14,9 +15,9 @@ import React from 'react';
 
 const MogelijkhedenFlitshuwelijkContent = () => (
   <>
-    <Heading3>Dagen, tijden en kosten</Heading3>
     <Table>
-      <TableHeader>
+      <TableCaption>Dagen, tijden en kosten</TableCaption>
+      <TableHeader className="utrecht-table__header--sticky">
         <TableRow>
           <TableHeaderCell scope="col">Dagen</TableHeaderCell>
           <TableHeaderCell scope="col">Tijden</TableHeaderCell>
@@ -43,14 +44,16 @@ const MogelijkhedenFlitshuwelijkContent = () => (
       </UnorderedListItem>
       <UnorderedListItem>De wachtlijst voor een flitshuwelijk is ongeveer 3 maanden</UnorderedListItem>
       <UnorderedListItem>
-        Hebt u uw voorgenomen huwelijk al gemeld (kijk onder kopje &apos;Wat moet ik regelen/2. Meld uw voorgenomen
-        huwelijk&apos;) en is deze goedgekeurd? Dan kunt u pas een afspraak maken voor een flitshuwelijk.
+        Hebt u uw <Link href="#regelen">voorgenomen huwelijk al gemeld</Link> en is deze goedgekeurd? Dan kunt u pas een
+        afspraak maken voor een flitshuwelijk.
       </UnorderedListItem>
     </UnorderedList>
     <br />
     <Link href="https://loket.digitaal.utrecht.nl/nl/products/trouwlocaties-in-utrecht">
       Lees meer over deze locatie en bekijk de foto
     </Link>
+    <br />
+    <br />
   </>
 );
 

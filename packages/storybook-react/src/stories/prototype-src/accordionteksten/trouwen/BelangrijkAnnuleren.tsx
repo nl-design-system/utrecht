@@ -22,6 +22,7 @@ const BelangrijkAnnulerenContent = () => (
       Wilt u uw afspraak wijzigen of annuleren? Neem dan contact met ons op via{' '}
       <Link href="mailto:huwelijkszaken@utrecht.nl">huwelijkszaken@utrecht.nl</Link> of bel 14 030.
     </Paragraph>
+    <br />
   </>
 );
 

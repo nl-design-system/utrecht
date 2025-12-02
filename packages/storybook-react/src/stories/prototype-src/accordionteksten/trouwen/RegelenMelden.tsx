@@ -22,7 +22,9 @@ const RegelenMeldenContent = () => (
       neem eerder contact op met de gemeente.
     </Paragraph>
     <Paragraph>De melding is gratis en is maximaal 1 jaar geldig.</Paragraph>
+    <br />
     <Link href="https://www.utrecht.nl/trouwenmeldenvoorgenomenhuwelijk">Meld uw voorgenomen huwelijk</Link>
+    <br />
     <Paragraph>Vooraf over nadenken</Paragraph>
     <UnorderedList>
       <UnorderedListItem>
@@ -41,10 +43,13 @@ const RegelenMeldenContent = () => (
       </UnorderedListItem>
       <UnorderedListItem>Woont een van u in het buitenland: bel ons via 14 030</UnorderedListItem>
       <UnorderedListItem>
-        Woont u beiden in het buitenland: doe uw melding dan via gemeente Den Haag. Bekijk de voorwaarden en welke
-        documenten u nodig hebt
+        Woont u beiden in het buitenland: doe uw melding dan via gemeente Den Haag.{' '}
+        <Link href="https://www.denhaag.nl/nl/trouwen-en-geregistreerd-partnerschap/huwelijk-en-partnerschap-voor-nederlanders-die-in-het-buitenland-wonen-melden/">
+          Bekijk de voorwaarden en welke documenten u nodig hebt
+        </Link>
       </UnorderedListItem>
     </UnorderedList>
+    <br />
   </>
 );
 

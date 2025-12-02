@@ -1,8 +1,10 @@
 import {
   Heading3,
+  Heading4,
   Link,
   Table,
   TableBody,
+  TableCaption,
   TableCell,
   TableHeader,
   TableHeaderCell,
@@ -14,9 +16,10 @@ import React from 'react';
 
 const MogelijkhedenGratisContent = () => (
   <>
-    <Heading3>Dagen, tijden en kosten</Heading3>
     <Table>
-      <TableHeader>
+      <TableCaption>Dagen, tijden en kosten</TableCaption>
+
+      <TableHeader className="utrecht-table__header--sticky">
         <TableRow>
           <TableHeaderCell scope="col">Dagen</TableHeaderCell>
           <TableHeaderCell scope="col">Tijden</TableHeaderCell>
@@ -39,6 +42,8 @@ const MogelijkhedenGratisContent = () => (
     <Link href="https://loket.digitaal.utrecht.nl/nl/products/trouwlocaties-in-utrecht">
       Lees meer over deze locatie en bekijk de foto
     </Link>
+    <br />
+    <br />
   </>
 );
 

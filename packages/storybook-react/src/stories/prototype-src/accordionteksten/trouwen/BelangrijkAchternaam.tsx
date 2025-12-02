@@ -23,6 +23,7 @@ const BelangrijkAchternaamContent = () => (
       achternamen. Voor de verandering van de achternaam moet uw kind wel de Nederlandse nationaliteit hebben. Wilt u
       dit? Laat ons dit zo snel mogelijk weten. U kunt hiervoor bellen naar 14 030.
     </Paragraph>
+    <br />
   </>
 );
 
