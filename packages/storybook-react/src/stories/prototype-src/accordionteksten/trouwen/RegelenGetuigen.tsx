@@ -1,16 +1,4 @@
-import {
-  Heading3,
-  Link,
-  Paragraph,
-  Table,
-  TableBody,
-  TableCell,
-  TableHeader,
-  TableHeaderCell,
-  TableRow,
-  UnorderedList,
-  UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
+import { Link, Paragraph, UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
 
 const RegelenGetuigenContent = () => (

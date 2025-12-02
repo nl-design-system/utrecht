@@ -58,9 +58,6 @@ type Story = StoryObj<typeof meta>;
 
 export const One: Story = {
   render: (args: any) => {
-    // State om te bepalen welke HulpEnContact component getoond wordt
-    const [showHulpEnContact2, setShowHulpEnContact2] = useState(false);
-
     return (
       <Surface className="utrecht-custom-theme">
         <Page {...args}>

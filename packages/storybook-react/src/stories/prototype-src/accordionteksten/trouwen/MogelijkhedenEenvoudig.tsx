@@ -1,5 +1,4 @@
 import {
-  Heading3,
   Link,
   Table,
   TableBody,

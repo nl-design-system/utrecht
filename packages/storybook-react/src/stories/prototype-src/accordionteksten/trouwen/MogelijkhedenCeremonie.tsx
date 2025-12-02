@@ -1,7 +1,5 @@
 import {
-  Heading3,
   Heading4,
-  Heading5,
   Link,
   Paragraph,
   Table,
