@@ -38,8 +38,7 @@ import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
 import urls from '../prototype-src/variables.js';
 import HoofdNavigatie from '../prototype-src/webpaginablokken/HoofdNavigatie.js';
-import HulpEnContact from '../prototype-src/webpaginablokken/HulpEnContact.js';
-import HulpEnContact2 from '../prototype-src/webpaginablokken/HulpEnContact2.js';
+import HulpEnContactTrouwen from '../prototype-src/webpaginablokken/HulpEnContactTrouwen.js';
 import KTOvervolg from '../prototype-src/webpaginablokken/KTO-vervolg.js';
 import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
@@ -201,6 +200,7 @@ export const One: Story = {
               </section>
             </main>
           </PageContent>
+          <HulpEnContactTrouwen></HulpEnContactTrouwen>
           <FooterContact />
           <Chatbot />
         </Page>
