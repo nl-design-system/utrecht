@@ -1705,6 +1705,83 @@
     --utrecht-separator-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
   }
 }
+@mixin utrecht-spotlight-section {
+  .utrecht-spotlight-section:first-child {
+    --utrecht-spotlight-section-margin-block-start: 0;
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-heading-1) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-heading-2) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-heading-3) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-heading-4) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-heading-5) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-heading-6) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-accordion) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-alert) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-badge-list) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-blockquote) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-button) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-button-group) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-action-group) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-data-list) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-form-field) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-img) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-link) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-ordered-list) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-pagination) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-paragraph) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-spotlight-section) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-sidenav) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-table) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+  .utrecht-spotlight-section:has(+ .utrecht-unordered-list) {
+    --utrecht-spotlight-section-margin-block-end: var(--utrecht-rich-text-stranger-margin-block-end);
+  }
+}
 @mixin utrecht-sidenav {
   .utrecht-sidenav:first-child {
     --utrecht-sidenav-margin-block-start: 0;

@@ -178,6 +178,11 @@ export const Separator: Story = {
     component: 'utrecht-separator',
   },
 };
+export const SpotlightSection: Story = {
+  args: {
+    component: 'utrecht-spotlight-section',
+  },
+};
 
 export const Table: Story = {
   args: {
