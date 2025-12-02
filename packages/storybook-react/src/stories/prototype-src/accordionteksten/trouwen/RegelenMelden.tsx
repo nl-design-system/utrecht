@@ -23,15 +23,15 @@ const RegelenMeldenContent = () => (
         Zorg ervoor dat u bij uw melding een kopie van het identiteitsbewijs van uw getuigen hebt
       </UnorderedListItem>
       <UnorderedListItem>
-        Controleer of u de{' '}
+        Controleer of u de
         <Link href="https://loket.digitaal.utrecht.nl/nl/products/voorgenomen-huwelijk-of-geregistreerd-partnerschap-melden#verklaring-schijnhuwelijk-afleggen">
           verklaring schijnhuwelijk
-        </Link>{' '}
+        </Link>
         moet afleggen
       </UnorderedListItem>
       <UnorderedListItem>Woont een van u in het buitenland: bel ons via 14 030</UnorderedListItem>
       <UnorderedListItem>
-        Woont u beiden in het buitenland: doe uw melding dan via gemeente Den Haag.{' '}
+        Woont u beiden in het buitenland: doe uw melding dan via gemeente Den Haag.
         <Link href="https://www.denhaag.nl/nl/trouwen-en-geregistreerd-partnerschap/huwelijk-en-partnerschap-voor-nederlanders-die-in-het-buitenland-wonen-melden/">
           Bekijk de voorwaarden en welke documenten u nodig hebt
         </Link>
