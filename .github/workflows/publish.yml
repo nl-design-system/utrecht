@@ -34,7 +34,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pnpm install
+          pnpm install --frozen-lockfile
           pnpm ls --recursive
 
   lint:
@@ -63,7 +63,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pnpm install
+          pnpm install --frozen-lockfile
 
       - name: "Continuous Integration: lint"
         run: |
@@ -170,7 +170,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pnpm install
+          pnpm install --frozen-lockfile
 
       - name: "Continuous Integration: test"
         run: |
@@ -209,7 +209,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pnpm install
+          pnpm install --frozen-lockfile
 
       - name: "Continuous Integration: build Storybook with animation disabled"
         env:
@@ -272,7 +272,7 @@ jobs:
 
       - name: "Continuous Deployment: install"
         run: |
-          pnpm install
+          pnpm install --frozen-lockfile
           pnpm ls --recursive
 
       - name: "Continuous Deployment: build"
