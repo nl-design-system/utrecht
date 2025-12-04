@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 4.3.0
+
+### Minor Changes
+
+- edac79f: badge-status is no longer styled through common badge tokens but has its own set of tokens
+
 ## 4.2.0
 
 ### Minor Changes

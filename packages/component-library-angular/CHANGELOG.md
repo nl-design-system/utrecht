@@ -1,5 +1,11 @@
 # @utrecht/component-library-angular
 
+## 3.0.0
+
+### Major Changes
+
+- edac79f: badge-status is no longer styled through common badge tokens but has its own set of tokens
+
 ## 2.2.1
 
 ### Patch Changes
