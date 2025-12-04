@@ -1,5 +1,11 @@
 # @utrecht/badge-status-css
 
+## 3.0.0
+
+### Major Changes
+
+- edac79f: badge-status is no longer styled through common badge tokens but has its own set of tokens
+
 ## 2.0.1
 
 ### Patch Changes
