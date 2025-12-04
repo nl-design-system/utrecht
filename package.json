@@ -68,7 +68,7 @@
     "build:css": "pnpm run --dir components/ --filter '@utrecht/*-css' build",
     "build-vercel": "pnpm run --recursive build-vercel && pnpm run --filter=\"!{packages/storybook-angular}\" --filter=\"!{packages/component-library-angular}\" --recursive build",
     "clean": "pnpm run --recursive clean",
-    "docs": "pnpm run --workspace packages/docusaurus start",
+    "docs": "pnpm run --filter @utrecht/docusaurus docusaurus start",
     "find-undocumented-tokens": "pnpm run --dir proprietary/design-tokens/ build:stylelint && pnpm run lint:css --config ./.tokens.stylelintrc.json",
     "lint": "pnpm run  --aggregate-output \"/^lint:.*/\" && pnpm run --recursive lint",
     "lint-fix": "pnpm run --aggregate-output \"/^lint-fix:.*/\"",
