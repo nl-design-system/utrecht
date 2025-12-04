@@ -29,5 +29,8 @@ packages/web-component-library-stencil/src/components.d.ts
 packages/web-component-library-vue/src/components.ts
 packages/web-component-library-vue/src/vue-component-lib/
 
+# Ignore generated files from Astro
+packages/astro/.astro
+
 packages/flolegal-decision-tree-client/assets/flo-client-styles.css
 packages/flolegal-decision-tree-client/assets/flo-client-plugin.js

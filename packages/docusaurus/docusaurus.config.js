@@ -31,7 +31,6 @@ module.exports = {
   tagline: 'Principes, interactiepatronen, basiselementen en componenten',
   url: 'https://nl-design-system.github.io/',
   onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'nl-design-system/utrecht',
   projectName: 'utrecht', // Usually your repo name.
