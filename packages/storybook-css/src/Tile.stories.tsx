@@ -5,7 +5,7 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import iconSet from '@utrecht/icon/dist/index.json';
 import readme from '@utrecht/tile-css/README.md?raw';
 import tokensDefinition from '@utrecht/tile-css/src/tokens.json';
-import React, { type ComponentProps, type CSSProperties } from 'react';
+import React from 'react';
 import { Tile, TileProps } from './Tile';
 import { designTokenStory } from './design-token-story';
 
