@@ -1,7 +1,27 @@
 {
   "utrecht": {
     "tile": {
-      "background-color": { "value": "{utrecht.color.blue.90}" }
+      "background-color": { "value": "{utrecht.color.grey.30}" },
+      "border-color": { "value": "{utrecht.color.grey.40}" },
+      "color": { "value": "{utrecht.color.grey.80}" },
+      "link": {},
+      "arrow": {
+        "color": { "value": "{utrecht.color.white.default}" }
+      },
+      "icon": {},
+      "text": {},
+      "red": {
+        "background-color": { "value": "{utrecht.color.red.30}" },
+        "color": { "value": "{utrecht.color.red.80}" }
+      },
+      "green": {
+        "background-color": { "value": "{utrecht.color.green.30}" },
+        "color": { "value": "{utrecht.color.green.80}" }
+      },
+      "blue": {
+        "background-color": { "value": "{utrecht.color.blue.30}" },
+        "color": { "value": "{utrecht.color.blue.80}" }
+      }
     }
   }
 }
