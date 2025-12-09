@@ -1,0 +1,61 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@mixin utrecht-tile {
+  align-content: end;
+  background-color: var(--utrecht-tile-color-grey-90);
+  color: var(--utrecht-tile-color-grey-10);
+  display: flex;
+  justify-content: space-between;
+  min-block-size: 6.25rem;
+  padding-block-end: var(--utrecht-tile-padding-block-end);
+  padding-block-start: var(--utrecht-tile-padding-block-start);
+  padding-inline-end: var(--utrecht-tile-padding-inline-end);
+  padding-inline-start: var(--utrecht-tile-padding-inline-start);
+  position: relative;
+  text-decoration: none;
+}
+
+@mixin utrecht-tile__link {
+  align-self: end;
+  color: var(--utrecht-tile-link-color);
+}
+
+@mixin utrecht-tile__icon {
+  display: block;
+}
+
+@mixin utrecht-tile__text {
+  font-size: 1rem;
+}
+
+@mixin utrecht-tile__arrow-container {
+  align-self: end;
+  block-size: var(--utrecht-tile-space-inline-md);
+  inline-size: var(--utrecht-tile-space-inline-md);
+}
+
+@mixin utrecht-tile__arrow {
+  block-size: var(--utrecht-tile-typography-scale-sm);
+  display: block;
+  inline-size: var(--utrecht-tile-typography-scale-sm);
+  line-height: 0;
+}
+
+@mixin utrecht-tile--green {
+  background-color: var(--utrecht-tile-color-green-90);
+  color: var(--utrecht-tile-color-green-40);
+}
+
+@mixin utrecht-tile--red {
+  background-color: var(--utrecht-tile-color-red-95);
+  color: var(--utrecht-tile-color-red-20);
+}
+
+@mixin utrecht-tile--blue {
+  background-color: var(--utrecht-tile-color-blue-90);
+  color: var(--utrecht-tile-color-blue-20);
+}
