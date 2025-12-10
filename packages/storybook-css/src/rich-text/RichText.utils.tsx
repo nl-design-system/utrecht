@@ -75,6 +75,7 @@ const AccordionStory = () => (
     ]}
   />
 );
+
 const ActionGroupStory = () => (
   <ActionGroup>
     <Button appearance="primary-action-button">Save and continue</Button>
@@ -92,17 +93,7 @@ const AlertStory = () => (
     </Paragraph>
   </Alert>
 );
-const SpotlightSectionStory = () => (
-  <SpotlightSection>
-    <Heading1>Lorem ipsum</Heading1>
-    <Paragraph>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </Paragraph>
-  </SpotlightSection>
-);
+
 const BadgeListStory = () => (
   <BadgeList>
     <DataBadge>Badge A</DataBadge>
@@ -223,6 +214,19 @@ const UnorderedListStory = () => (
     <UnorderedListItem>List item 3</UnorderedListItem>
   </UnorderedList>
 );
+
+const SpotlightSectionStory = () => (
+  <SpotlightSection>
+    <Heading1>Lorem ipsum</Heading1>
+    <Paragraph>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Paragraph>
+  </SpotlightSection>
+);
+
 const TableStory = () => (
   <TableContainer>
     <Table>
@@ -331,6 +335,11 @@ export const StoryTemplate = ({ component }: { component?: keyof typeof componen
             amet, vestibulum nec, tellus. Mauris vel dolor et purus fermentum ultrices. Donec scelerisque lectus at
             orci.
           </Paragraph>
+
+          <SpotlightSection>
+            <Paragraph>Pas op! Het is niet de bedoeling om uitzonderingen te maken</Paragraph>
+          </SpotlightSection>
+
           <Heading4>Goede dingen om op te zitten</Heading4>
           <UnorderedList>
             <UnorderedListItem>Stoel</UnorderedListItem>
@@ -347,9 +356,6 @@ export const StoryTemplate = ({ component }: { component?: keyof typeof componen
           <Alert type="error">
             <Paragraph>Pas op! Het is niet de bedoeling om uitzonderingen te maken</Paragraph>
           </Alert>
-          <SpotlightSection>
-            <Paragraph>Pas op! Het is niet de bedoeling om uitzonderingen te maken</Paragraph>
-          </SpotlightSection>
           <Heading6>Quotes van mensen die uitzonderlijk hebben gezeten</Heading6>
           <Blockquote>
             <Paragraph>Ik zat ooit op een emmer, dat hou je niet lang vol!</Paragraph>
@@ -375,7 +381,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-2',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -388,6 +393,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -399,7 +405,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-3',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -413,6 +418,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -424,7 +430,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-4',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -438,6 +443,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -449,7 +455,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-5',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -463,6 +468,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -474,7 +480,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -488,6 +493,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -498,7 +504,6 @@ export const componentPairs: ComponentPairs[] = [
     siblings: [
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -512,6 +517,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -527,7 +533,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -541,6 +546,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -556,37 +562,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
-      'utrecht-badge-list',
-      'utrecht-blockquote',
-      'utrecht-button',
-      'utrecht-button-group',
-      'utrecht-action-group',
-      'utrecht-data-list',
-      'utrecht-figure',
-      'utrecht-form-field',
-      'utrecht-img',
-      'utrecht-link',
-      'utrecht-ordered-list',
-      'utrecht-paragraph',
-      'utrecht-separator',
-      'utrecht-badge-status',
-      'utrecht-table',
-      'utrecht-unordered-list',
-    ],
-  },
-  {
-    component: 'utrecht-spotlight-section',
-    siblings: [
-      'utrecht-heading-1',
-      'utrecht-heading-2',
-      'utrecht-heading-3',
-      'utrecht-heading-4',
-      'utrecht-heading-5',
-      'utrecht-heading-6',
-      'utrecht-accordion',
-      'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -616,7 +591,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-blockquote',
       'utrecht-button',
       'utrecht-button-group',
@@ -629,6 +603,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -643,7 +618,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -657,6 +631,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -672,7 +647,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -686,6 +660,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
@@ -701,8 +676,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
-
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -715,6 +688,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -729,7 +703,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -742,6 +715,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -756,7 +730,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -769,6 +742,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -796,6 +770,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -849,6 +824,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -887,7 +863,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -900,6 +875,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -914,7 +890,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -927,6 +902,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -941,7 +917,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -954,6 +929,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -968,7 +944,6 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-heading-6',
       'utrecht-accordion',
       'utrecht-alert',
-      'utrecht-spotlight-section',
       'utrecht-badge-list',
       'utrecht-blockquote',
       'utrecht-button',
@@ -981,6 +956,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -1012,6 +988,35 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
+      'utrecht-table',
+      'utrecht-unordered-list',
+    ],
+  },
+  {
+    component: 'utrecht-spotlight-section',
+    siblings: [
+      'utrecht-heading-1',
+      'utrecht-heading-2',
+      'utrecht-heading-3',
+      'utrecht-heading-4',
+      'utrecht-heading-5',
+      'utrecht-heading-6',
+      'utrecht-accordion',
+      'utrecht-badge-list',
+      'utrecht-blockquote',
+      'utrecht-button',
+      'utrecht-button-group',
+      'utrecht-action-group',
+      'utrecht-data-list',
+      'utrecht-form-field',
+      'utrecht-img',
+      'utrecht-link',
+      'utrecht-ordered-list',
+      'utrecht-paragraph',
+      'utrecht-separator',
+      'utrecht-spotlight-section',
+      'utrecht-badge-status',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -1049,6 +1054,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
@@ -1083,6 +1089,7 @@ export const componentPairs: ComponentPairs[] = [
       'utrecht-ordered-list',
       'utrecht-paragraph',
       'utrecht-separator',
+      'utrecht-spotlight-section',
       'utrecht-table',
       'utrecht-unordered-list',
     ],
