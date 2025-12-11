@@ -7,16 +7,16 @@
 import { Component, h, Prop } from '@stencil/core';
 
 @Component({
-  tag: 'utrecht-badge-status',
-  styleUrl: 'badge-status.scss',
+  tag: 'utrecht-status-badge',
+  styleUrl: 'status-badge.scss',
   shadow: true,
 })
-export class BadgeStatus {
+export class StatusBadge {
   @Prop() status: string;
 
   render() {
     return (
-      <div class={`utrecht-badge-status utrecht-badge-status--${this.status || 'neutral'}`}>
+      <div class={`utrecht-status-badge utrecht-status-badge--${this.status || 'neutral'}`}>
         <slot></slot>
       </div>
     );

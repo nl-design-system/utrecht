@@ -14,7 +14,7 @@ type StatusType =
   | 'inactive'
   | undefined;
 export default defineComponent({
-  name: 'UtrechtBadgeStatus',
+  name: 'UtrechtStatusBadge',
   props: {
     status: { type: String as PropType<StatusType>, required: false, default: undefined },
   },
@@ -22,10 +22,10 @@ export default defineComponent({
 </script>
 
 <template>
-  <span :class="[{ [`utrecht-badge-status--${status}`]: true }, 'utrecht-badge-status']">
+  <span :class="[{ [`utrecht-status-badge--${status}`]: true }, 'utrecht-status-badge']">
     <slot />
   </span>
 </template>
 
 <!-- TODO: use SCSS source instead of pre-built CSS -->
-<style src="@utrecht/badge-status-css/dist/index.css"></style>
+<style src="@utrecht/status-badge-css/dist/index.css"></style>

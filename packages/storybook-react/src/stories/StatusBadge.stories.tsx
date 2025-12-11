@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import readme from '@utrecht/badge-status-css/README.md?raw';
-import tokensDefinition from '@utrecht/badge-status-css/dist/tokens.mjs';
 import { Paragraph, StatusBadge } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import readme from '@utrecht/status-badge-css/README.md?raw';
+import tokensDefinition from '@utrecht/status-badge-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
 
@@ -21,7 +21,7 @@ const meta = {
     },
   },
   parameters: {
-    tokensPrefix: 'utrecht-badge-status',
+    tokensPrefix: 'utrecht-status-badge',
     tokens,
     tokensDefinition,
     docs: {
