@@ -875,6 +875,15 @@ importers:
 
   components/rich-text:
     devDependencies:
+      '@babel/core':
+        specifier: 7.24.7
+        version: 7.24.7
+      '@babel/eslint-parser':
+        specifier: 7.28.5
+        version: 7.28.5(@babel/core@7.24.7)(eslint@8.57.0)
+      '@babel/plugin-syntax-import-assertions':
+        specifier: 7.27.1
+        version: 7.27.1(@babel/core@7.24.7)
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
@@ -8351,12 +8360,12 @@ packages:
     resolution: {integrity: sha512-yDBHV9kQNcr2/sUr9jghVyz9C3Y5G2zUM2H2lo+9mKv4sFgbA8s8Z9t8D1jiTkGoO/NoIfKMyKWr4s6CN23ZwQ==}
     engines: {node: '>=6.9.0'}
 
-  '@babel/eslint-parser@7.23.3':
-    resolution: {integrity: sha512-9bTuNlyx7oSstodm1cR1bECj4fkiknsDa1YniISkJemMY3DGhJNYBECbe6QD/q54mp2J8VO66jW3/7uP//iFCw==}
+  '@babel/eslint-parser@7.28.5':
+    resolution: {integrity: sha512-fcdRcWahONYo+JRnJg1/AekOacGvKx12Gu0qXJXFi2WBqQA1i7+O5PaxRB7kxE/Op94dExnCiiar6T09pvdHpA==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': ^7.11.0
-      eslint: ^7.5.0 || ^8.0.0
+      eslint: ^7.5.0 || ^8.0.0 || ^9.0.0
 
   '@babel/generator@7.20.14':
     resolution: {integrity: sha512-AEmuXHdcD3A52HHXxaTmYlb8q/xMEhoRP67B3T4Oq7lbmSoqroMZzjnGj3+i1io3pdnF8iBYVu4Ilj+c4hBxYg==}
@@ -8709,8 +8718,8 @@ packages:
     peerDependencies:
       '@babel/core': ^7.0.0-0
 
-  '@babel/plugin-syntax-import-assertions@7.24.7':
-    resolution: {integrity: sha512-Ec3NRUMoi8gskrkBe3fNmEQfxDvY8bgfQpz6jlk/41kX9eUjvpyqWU7PBP/pLAvMaSQjbMNKJmvX57jP+M6bPg==}
+  '@babel/plugin-syntax-import-assertions@7.27.1':
+    resolution: {integrity: sha512-UT/Jrhw57xg4ILHLFnzFpPDlMbcdEicaAtjPQpbj9wa8T4r5KVWCimHcL/460g8Ht0DMxDyjsLgiWSkVjnwPFg==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0-0
@@ -28014,11 +28023,19 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@babel/eslint-parser@7.23.3(@babel/core@7.24.7)(eslint@7.32.0)':
+  '@babel/eslint-parser@7.28.5(@babel/core@7.24.7)(eslint@7.32.0)':
     dependencies:
       '@babel/core': 7.24.7
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
       eslint: 7.32.0
+      eslint-visitor-keys: 2.1.0
+      semver: 6.3.1
+
+  '@babel/eslint-parser@7.28.5(@babel/core@7.24.7)(eslint@8.57.0)':
+    dependencies:
+      '@babel/core': 7.24.7
+      '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
+      eslint: 8.57.0
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
 
@@ -28818,22 +28835,22 @@ snapshots:
       '@babel/core': 7.24.7
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/plugin-syntax-import-assertions@7.24.7(@babel/core@7.20.12)':
+  '@babel/plugin-syntax-import-assertions@7.27.1(@babel/core@7.20.12)':
     dependencies:
       '@babel/core': 7.20.12
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/plugin-syntax-import-assertions@7.24.7(@babel/core@7.23.7)':
+  '@babel/plugin-syntax-import-assertions@7.27.1(@babel/core@7.23.7)':
     dependencies:
       '@babel/core': 7.23.7
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/plugin-syntax-import-assertions@7.24.7(@babel/core@7.24.7)':
+  '@babel/plugin-syntax-import-assertions@7.27.1(@babel/core@7.24.7)':
     dependencies:
       '@babel/core': 7.24.7
       '@babel/helper-plugin-utils': 7.27.1
 
-  '@babel/plugin-syntax-import-assertions@7.24.7(@babel/core@7.28.3)':
+  '@babel/plugin-syntax-import-assertions@7.27.1(@babel/core@7.28.3)':
     dependencies:
       '@babel/core': 7.28.3
       '@babel/helper-plugin-utils': 7.27.1
@@ -30477,7 +30494,7 @@ snapshots:
       '@babel/plugin-syntax-class-static-block': 7.14.5(@babel/core@7.20.12)
       '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.20.12)
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.20.12)
-      '@babel/plugin-syntax-import-assertions': 7.24.7(@babel/core@7.20.12)
+      '@babel/plugin-syntax-import-assertions': 7.27.1(@babel/core@7.20.12)
       '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.20.12)
       '@babel/plugin-syntax-logical-assignment-operators': 7.10.4(@babel/core@7.20.12)
       '@babel/plugin-syntax-nullish-coalescing-operator': 7.8.3(@babel/core@7.20.12)
@@ -30545,7 +30562,7 @@ snapshots:
       '@babel/plugin-syntax-class-static-block': 7.14.5(@babel/core@7.23.7)
       '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.23.7)
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.23.7)
-      '@babel/plugin-syntax-import-assertions': 7.24.7(@babel/core@7.23.7)
+      '@babel/plugin-syntax-import-assertions': 7.27.1(@babel/core@7.23.7)
       '@babel/plugin-syntax-import-attributes': 7.24.7(@babel/core@7.23.7)
       '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.23.7)
       '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.23.7)
@@ -30632,7 +30649,7 @@ snapshots:
       '@babel/plugin-syntax-class-static-block': 7.14.5(@babel/core@7.24.7)
       '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.24.7)
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.24.7)
-      '@babel/plugin-syntax-import-assertions': 7.24.7(@babel/core@7.24.7)
+      '@babel/plugin-syntax-import-assertions': 7.27.1(@babel/core@7.24.7)
       '@babel/plugin-syntax-import-attributes': 7.24.7(@babel/core@7.24.7)
       '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.24.7)
       '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.24.7)
@@ -30719,7 +30736,7 @@ snapshots:
       '@babel/plugin-syntax-class-static-block': 7.14.5(@babel/core@7.28.3)
       '@babel/plugin-syntax-dynamic-import': 7.8.3(@babel/core@7.28.3)
       '@babel/plugin-syntax-export-namespace-from': 7.8.3(@babel/core@7.28.3)
-      '@babel/plugin-syntax-import-assertions': 7.24.7(@babel/core@7.28.3)
+      '@babel/plugin-syntax-import-assertions': 7.27.1(@babel/core@7.28.3)
       '@babel/plugin-syntax-import-attributes': 7.24.7(@babel/core@7.28.3)
       '@babel/plugin-syntax-import-meta': 7.10.4(@babel/core@7.28.3)
       '@babel/plugin-syntax-json-strings': 7.8.3(@babel/core@7.28.3)
@@ -32960,7 +32977,7 @@ snapshots:
   '@graphql-tools/graphql-tag-pluck@7.5.2(@babel/core@7.24.7)(graphql@16.8.1)':
     dependencies:
       '@babel/parser': 7.28.3
-      '@babel/plugin-syntax-import-assertions': 7.24.7(@babel/core@7.24.7)
+      '@babel/plugin-syntax-import-assertions': 7.27.1(@babel/core@7.24.7)
       '@babel/traverse': 7.28.3
       '@babel/types': 7.28.2
       '@graphql-tools/utils': 9.2.1(graphql@16.8.1)
@@ -43976,7 +43993,7 @@ snapshots:
     dependencies:
       '@babel/code-frame': 7.27.1
       '@babel/core': 7.24.7
-      '@babel/eslint-parser': 7.23.3(@babel/core@7.24.7)(eslint@7.32.0)
+      '@babel/eslint-parser': 7.28.5(@babel/core@7.24.7)(eslint@7.32.0)
       '@babel/helper-plugin-utils': 7.27.1
       '@babel/parser': 7.28.3
       '@babel/runtime': 7.24.7
