@@ -12,7 +12,7 @@
   ],
   "main": "dist/index.css",
   "scripts": {
-    "generate": "node src/getSpacing.js",
+    "generate": "node src/getSpacingCSS.mjs",
     "build": "build-css-package",
     "clean": "rimraf dist"
   },
