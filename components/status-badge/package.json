@@ -1,9 +1,9 @@
 {
-  "version": "2.0.1",
+  "version": "0.0.1",
   "author": "Community for NL Design System",
-  "description": "Badge status component for the Municipality of Utrecht based on the NL Design System architecture",
+  "description": "Status badge component for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@utrecht/badge-status-css",
+  "name": "@utrecht/status-badge-css",
   "files": [
     "dist/",
     "docs/",
@@ -28,6 +28,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git",
-    "directory": "components/badge-status"
+    "directory": "components/status-badge"
   }
 }

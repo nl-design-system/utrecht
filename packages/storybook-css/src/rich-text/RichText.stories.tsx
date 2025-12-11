@@ -60,7 +60,7 @@ export const BadgeList: Story = {
 };
 export const StatusBadge: Story = {
   args: {
-    component: 'utrecht-badge-status',
+    component: 'utrecht-status-badge',
   },
 };
 export const Blockquote: Story = {

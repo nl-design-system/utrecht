@@ -1,13 +1,13 @@
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'utrecht-badge-status',
+  selector: 'utrecht-status-badge',
   templateUrl: 'index.html',
   styleUrls: ['index.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
   encapsulation: ViewEncapsulation.None,
 })
-export class UtrechtBadgeStatus {
+export class UtrechtStatusBadge {
   @Input() status?: string;
   constructor() {}
 }

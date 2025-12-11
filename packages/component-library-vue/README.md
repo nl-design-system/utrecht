@@ -54,7 +54,7 @@ Currently the following components are available:
 ```js
 import {
   Article,
-  BadgeStatus,
+  StatusBadge,
   Button,
   ButtonGroup,
   Checkbox,

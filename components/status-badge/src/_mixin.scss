@@ -1,0 +1,107 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
+ */
+
+@use "~@utrecht/badge-css/src/mixin" as *;
+
+@mixin utrecht-status-badge {
+  @include utrecht-badge;
+  @include utrecht-badge--media-query-forced-colors;
+
+  --utrecht-badge-background-color: var(--utrecht-status-badge-background-color);
+  --utrecht-badge-border-radius: var(--utrecht-status-badge-border-radius);
+  --utrecht-badge-color: var(--utrecht-status-badge-color);
+  --utrecht-badge-font-size: var(--utrecht-status-badge-font-size, inherit);
+  --utrecht-badge-font-style: var(--utrecht-status-badge-font-style);
+  --utrecht-badge-font-weight: var(--utrecht-status-badge-font-weight);
+  --utrecht-badge-line-height: var(--utrecht-status-badge-line-height);
+  --utrecht-badge-padding-block: var(--utrecht-status-badge-padding-block);
+  --utrecht-badge-padding-inline: var(--utrecht-status-badge-padding-inline);
+
+  border-color: var(--utrecht-status-badge-border-color, transparent);
+  border-width: var(--utrecht-status-badge-border-width);
+  font-family: var(--utrecht-status-badge-font-family, inherit);
+  letter-spacing: var(--utrecht-status-badge-letter-spacing, inherit);
+  min-block-size: var(--utrecht-status-badge-min-block-size, 1em);
+  min-inline-size: var(--utrecht-status-badge-min-inline-size, 1em);
+  text-transform: var(--utrecht-status-badge-text-transform, inherit);
+}
+
+@mixin utrecht-status-badge--danger {
+  background-color: var(--utrecht-status-badge-danger-background-color, hsl(0 100% 40%));
+  border-color: var(--utrecht-status-badge-danger-border-color);
+  color: var(--utrecht-status-badge-danger-color, white);
+}
+
+@mixin utrecht-status-badge--warning {
+  background-color: var(--utrecht-status-badge-warning-background-color, hsl(48 100% 50%));
+  border-color: var(--utrecht-status-badge-warning-border-color);
+  color: var(--utrecht-status-badge-warning-color, white);
+}
+
+@mixin utrecht-status-badge--safe {
+  background-color: var(--utrecht-status-badge-safe-background-color, hsl(90 30% 50%));
+  border-color: var(--utrecht-status-badge-safe-border-color);
+  color: var(--utrecht-status-badge-safe-color, white);
+}
+
+@mixin utrecht-status-badge--neutral {
+  background-color: var(--utrecht-status-badge-neutral-background-color, black);
+  border-color: var(--utrecht-status-badge-neutral-border-color);
+  color: var(--utrecht-status-badge-neutral-color, white);
+}
+
+@mixin utrecht-status-badge--valid {
+  background-color: var(
+    --utrecht-status-badge-valid-background-color,
+    var(--utrecht-status-badge-safe-background-color, hsl(90 30% 50%))
+  );
+  border-color: var(--utrecht-status-badge-valid-border-color);
+  color: var(--utrecht-status-badge-valid-color, var(--utrecht-status-badge-safe-color, white));
+}
+
+@mixin utrecht-status-badge--invalid {
+  background-color: var(
+    --utrecht-status-badge-invalid-background-color,
+    var(--utrecht-status-badge-danger-background-color, hsl(39 100% 50%))
+  );
+  border-color: var(--utrecht-status-badge-invalid-border-color);
+  color: var(--utrecht-status-badge-invalid-color, var(--utrecht-status-badge-danger-color, white));
+}
+
+@mixin utrecht-status-badge--error {
+  background-color: var(
+    --utrecht-status-badge-error-background-color,
+    var(--utrecht-status-badge-danger-background-color, hsl(0 100% 30%))
+  );
+  color: var(--utrecht-status-badge-error-color, var(--utrecht-status-badge-danger-color, white));
+}
+
+@mixin utrecht-status-badge--success {
+  background-color: var(
+    --utrecht-status-badge-success-background-color,
+    var(--utrecht-status-badge-safe-background-color, hsl(90 30% 50%))
+  );
+  border-color: var(--utrecht-status-badge-success-border-color);
+  color: var(--utrecht-status-badge-success-color, var(--utrecht-status-badge-safe-color, white));
+}
+
+@mixin utrecht-status-badge--active {
+  background-color: var(
+    --utrecht-status-badge-active-background-color,
+    var(--utrecht-status-badge-safe-background-color, hsl(90 30% 50%))
+  );
+  border-color: var(--utrecht-status-badge-active-border-color);
+  color: var(--utrecht-status-badge-active-color, var(--utrecht-status-badge-safe-color, white));
+}
+
+@mixin utrecht-status-badge--inactive {
+  background-color: var(
+    --utrecht-status-badge-inactive-background-color,
+    var(--utrecht-status-badge-danger-background-color, hsl(0 100% 40%))
+  );
+  border-color: var(--utrecht-status-badge-inactive-border-color);
+  color: var(--utrecht-status-badge-inactive-color, var(--utrecht-status-badge-danger-color, white));
+}

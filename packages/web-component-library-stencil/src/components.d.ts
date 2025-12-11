@@ -24,9 +24,6 @@ export namespace Components {
     }
     interface UtrechtBadgeList {
     }
-    interface UtrechtBadgeStatus {
-        "status": string;
-    }
     interface UtrechtBody {
     }
     interface UtrechtBreadcrumbNav {
@@ -789,6 +786,9 @@ export namespace Components {
     interface UtrechtSpotlightSection {
         "appearance": string;
     }
+    interface UtrechtStatusBadge {
+        "status": string;
+    }
     interface UtrechtSurface {
     }
     interface UtrechtTable {
@@ -913,12 +913,6 @@ declare global {
     var HTMLUtrechtBadgeListElement: {
         prototype: HTMLUtrechtBadgeListElement;
         new (): HTMLUtrechtBadgeListElement;
-    };
-    interface HTMLUtrechtBadgeStatusElement extends Components.UtrechtBadgeStatus, HTMLStencilElement {
-    }
-    var HTMLUtrechtBadgeStatusElement: {
-        prototype: HTMLUtrechtBadgeStatusElement;
-        new (): HTMLUtrechtBadgeStatusElement;
     };
     interface HTMLUtrechtBodyElement extends Components.UtrechtBody, HTMLStencilElement {
     }
@@ -2831,6 +2825,12 @@ declare global {
         prototype: HTMLUtrechtSpotlightSectionElement;
         new (): HTMLUtrechtSpotlightSectionElement;
     };
+    interface HTMLUtrechtStatusBadgeElement extends Components.UtrechtStatusBadge, HTMLStencilElement {
+    }
+    var HTMLUtrechtStatusBadgeElement: {
+        prototype: HTMLUtrechtStatusBadgeElement;
+        new (): HTMLUtrechtStatusBadgeElement;
+    };
     interface HTMLUtrechtSurfaceElement extends Components.UtrechtSurface, HTMLStencilElement {
     }
     var HTMLUtrechtSurfaceElement: {
@@ -2956,7 +2956,6 @@ declare global {
         "utrecht-backdrop": HTMLUtrechtBackdropElement;
         "utrecht-badge-counter": HTMLUtrechtBadgeCounterElement;
         "utrecht-badge-list": HTMLUtrechtBadgeListElement;
-        "utrecht-badge-status": HTMLUtrechtBadgeStatusElement;
         "utrecht-body": HTMLUtrechtBodyElement;
         "utrecht-breadcrumb-nav": HTMLUtrechtBreadcrumbNavElement;
         "utrecht-button": HTMLUtrechtButtonElement;
@@ -3256,6 +3255,7 @@ declare global {
         "utrecht-sidenav": HTMLUtrechtSidenavElement;
         "utrecht-skip-link": HTMLUtrechtSkipLinkElement;
         "utrecht-spotlight-section": HTMLUtrechtSpotlightSectionElement;
+        "utrecht-status-badge": HTMLUtrechtStatusBadgeElement;
         "utrecht-surface": HTMLUtrechtSurfaceElement;
         "utrecht-table": HTMLUtrechtTableElement;
         "utrecht-table-body": HTMLUtrechtTableBodyElement;
@@ -3291,9 +3291,6 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface UtrechtBadgeList {
-    }
-    interface UtrechtBadgeStatus {
-        "status"?: string;
     }
     interface UtrechtBody {
     }
@@ -4077,6 +4074,9 @@ declare namespace LocalJSX {
     interface UtrechtSpotlightSection {
         "appearance"?: string;
     }
+    interface UtrechtStatusBadge {
+        "status"?: string;
+    }
     interface UtrechtSurface {
     }
     interface UtrechtTable {
@@ -4147,7 +4147,6 @@ declare namespace LocalJSX {
         "utrecht-backdrop": UtrechtBackdrop;
         "utrecht-badge-counter": UtrechtBadgeCounter;
         "utrecht-badge-list": UtrechtBadgeList;
-        "utrecht-badge-status": UtrechtBadgeStatus;
         "utrecht-body": UtrechtBody;
         "utrecht-breadcrumb-nav": UtrechtBreadcrumbNav;
         "utrecht-button": UtrechtButton;
@@ -4447,6 +4446,7 @@ declare namespace LocalJSX {
         "utrecht-sidenav": UtrechtSidenav;
         "utrecht-skip-link": UtrechtSkipLink;
         "utrecht-spotlight-section": UtrechtSpotlightSection;
+        "utrecht-status-badge": UtrechtStatusBadge;
         "utrecht-surface": UtrechtSurface;
         "utrecht-table": UtrechtTable;
         "utrecht-table-body": UtrechtTableBody;
@@ -4474,7 +4474,6 @@ declare module "@stencil/core" {
             "utrecht-backdrop": LocalJSX.UtrechtBackdrop & JSXBase.HTMLAttributes<HTMLUtrechtBackdropElement>;
             "utrecht-badge-counter": LocalJSX.UtrechtBadgeCounter & JSXBase.HTMLAttributes<HTMLUtrechtBadgeCounterElement>;
             "utrecht-badge-list": LocalJSX.UtrechtBadgeList & JSXBase.HTMLAttributes<HTMLUtrechtBadgeListElement>;
-            "utrecht-badge-status": LocalJSX.UtrechtBadgeStatus & JSXBase.HTMLAttributes<HTMLUtrechtBadgeStatusElement>;
             "utrecht-body": LocalJSX.UtrechtBody & JSXBase.HTMLAttributes<HTMLUtrechtBodyElement>;
             "utrecht-breadcrumb-nav": LocalJSX.UtrechtBreadcrumbNav & JSXBase.HTMLAttributes<HTMLUtrechtBreadcrumbNavElement>;
             "utrecht-button": LocalJSX.UtrechtButton & JSXBase.HTMLAttributes<HTMLUtrechtButtonElement>;
@@ -4809,6 +4808,7 @@ declare module "@stencil/core" {
             "utrecht-sidenav": LocalJSX.UtrechtSidenav & JSXBase.HTMLAttributes<HTMLUtrechtSidenavElement>;
             "utrecht-skip-link": LocalJSX.UtrechtSkipLink & JSXBase.HTMLAttributes<HTMLUtrechtSkipLinkElement>;
             "utrecht-spotlight-section": LocalJSX.UtrechtSpotlightSection & JSXBase.HTMLAttributes<HTMLUtrechtSpotlightSectionElement>;
+            "utrecht-status-badge": LocalJSX.UtrechtStatusBadge & JSXBase.HTMLAttributes<HTMLUtrechtStatusBadgeElement>;
             "utrecht-surface": LocalJSX.UtrechtSurface & JSXBase.HTMLAttributes<HTMLUtrechtSurfaceElement>;
             "utrecht-table": LocalJSX.UtrechtTable & JSXBase.HTMLAttributes<HTMLUtrechtTableElement>;
             "utrecht-table-body": LocalJSX.UtrechtTableBody & JSXBase.HTMLAttributes<HTMLUtrechtTableBodyElement>;
