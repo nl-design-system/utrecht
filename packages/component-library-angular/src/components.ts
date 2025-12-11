@@ -1,6 +1,6 @@
 export * from './action-group/component';
 export * from './article/component';
-export * from './badge-status/component';
+export * from './status-badge/component';
 export * from './button-group/component';
 export * from './button-link/component';
 export * from './button/component';

@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import readme from '@utrecht/badge-status-css/README.md?raw';
-import tokensDefinition from '@utrecht/badge-status-css/src/tokens.json';
 import { StatusBadge } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import readme from '@utrecht/status-badge-css/README.md?raw';
+import tokensDefinition from '@utrecht/status-badge-css/src/tokens.json';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -31,7 +31,7 @@ const meta = {
     figma:
       'https://www.figma.com/design/UXIHcIurAD8hyoBWx4hDBV/NLDS---Gemeente-Utrecht---Bibliotheek?node-id=1354-6672&t=kJatlKfN59e8T0eA-0',
     nldesignsystem: 'https://nldesignsystem.nl/status-badge',
-    tokensPrefix: 'utrecht-badge-status',
+    tokensPrefix: 'utrecht-status-badge',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -57,7 +57,7 @@ export const Default: Story = {
   parameters: {
     docs: {
       description: {
-        story: 'Styling via the `.utrecht-badge-status` class name.',
+        story: 'Styling via the `.utrecht-status-badge` class name.',
       },
     },
   },

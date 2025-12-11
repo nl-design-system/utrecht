@@ -17,7 +17,7 @@ describe('Status Badge', () => {
 
     const badge = container.querySelector(':only-child');
 
-    expect(badge).toHaveClass('utrecht-badge-status');
+    expect(badge).toHaveClass('utrecht-status-badge');
   });
   it('can have a additional class name', () => {
     const { container } = render(<StatusBadge className="large" />);
@@ -26,7 +26,7 @@ describe('Status Badge', () => {
 
     expect(dataBadge).toHaveClass('large');
 
-    expect(dataBadge).toHaveClass('utrecht-badge-status');
+    expect(dataBadge).toHaveClass('utrecht-status-badge');
   });
   it('renders rich text content', () => {
     const { container } = render(
@@ -54,8 +54,8 @@ describe('Status Badge', () => {
 
     const badge = container.querySelector('span:only-child');
 
-    expect(badge).toHaveClass('utrecht-badge-status');
-    expect(badge).toHaveClass('utrecht-badge-status--neutral');
+    expect(badge).toHaveClass('utrecht-status-badge');
+    expect(badge).toHaveClass('utrecht-status-badge--neutral');
   });
 
   it('supports ForwardRef in React', () => {

@@ -1,15 +1,15 @@
 import { componentWrapperDecorator, Meta, StoryObj } from '@storybook/angular';
-import { UtrechtBadgeStatus } from '@utrecht/component-library-angular';
+import { UtrechtStatusBadge } from '@utrecht/component-library-angular';
 
-interface UtrechtBadgeStatusProps extends UtrechtBadgeStatus {
-  badgeStatusContent: string;
+interface UtrechtStatusBadgeProps extends UtrechtStatusBadge {
+  statusBadgeContent: string;
 }
 
-const meta: Meta<UtrechtBadgeStatusProps> = {
-  title: 'Angular Component/Badge Status',
+const meta: Meta<UtrechtStatusBadgeProps> = {
+  title: 'Angular Component/Status Badge',
   decorators: [componentWrapperDecorator((story) => `<div class="utrecht-document utrecht-theme">${story}</div>`)],
-  id: 'angular-badge-status',
-  component: UtrechtBadgeStatus,
+  id: 'angular-status-badge',
+  component: UtrechtStatusBadge,
   argTypes: {
     status: {
       control: { type: 'select' },
@@ -19,7 +19,7 @@ const meta: Meta<UtrechtBadgeStatusProps> = {
         defaultValue: { summary: '' },
       },
     },
-    badgeStatusContent: {
+    statusBadgeContent: {
       control: 'text',
       table: {
         category: 'DEMO Property',
@@ -29,25 +29,25 @@ const meta: Meta<UtrechtBadgeStatusProps> = {
   },
 };
 export default meta;
-type Story = StoryObj<UtrechtBadgeStatusProps>;
+type Story = StoryObj<UtrechtStatusBadgeProps>;
 
 export const Default: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Default',
+    statusBadgeContent: 'Default',
   },
 };
 
 export const Error: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Error',
+    statusBadgeContent: 'Error',
     status: 'error',
   },
 };
@@ -55,10 +55,10 @@ export const Error: Story = {
 export const Neutral: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Neutral',
+    statusBadgeContent: 'Neutral',
     status: 'neutral',
   },
 };
@@ -66,10 +66,10 @@ export const Neutral: Story = {
 export const Danger: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Danger',
+    statusBadgeContent: 'Danger',
     status: 'danger',
   },
 };
@@ -77,10 +77,10 @@ export const Danger: Story = {
 export const Safe: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Safe',
+    statusBadgeContent: 'Safe',
     status: 'safe',
   },
 };
@@ -88,10 +88,10 @@ export const Safe: Story = {
 export const Invalid: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Invalid',
+    statusBadgeContent: 'Invalid',
     status: 'invalid',
   },
 };
@@ -99,10 +99,10 @@ export const Invalid: Story = {
 export const Valid: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Valid',
+    statusBadgeContent: 'Valid',
     status: 'valid',
   },
 };
@@ -110,10 +110,10 @@ export const Valid: Story = {
 export const Warning: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Warning',
+    statusBadgeContent: 'Warning',
     status: 'warning',
   },
 };
@@ -121,10 +121,10 @@ export const Warning: Story = {
 export const Success: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Success',
+    statusBadgeContent: 'Success',
     status: 'success',
   },
 };
@@ -132,10 +132,10 @@ export const Success: Story = {
 export const Inactive: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Inactive',
+    statusBadgeContent: 'Inactive',
     status: 'inactive',
   },
 };
@@ -143,10 +143,10 @@ export const Inactive: Story = {
 export const Active: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{statusBadgeContent}}</utrecht-status-badge>`,
   }),
   args: {
-    badgeStatusContent: 'Active',
+    statusBadgeContent: 'Active',
     status: 'active',
   },
 };

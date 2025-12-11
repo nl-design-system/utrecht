@@ -1,13 +1,13 @@
 import type { Meta, StoryObj } from '@storybook/vue3-vite';
-import readme from '@utrecht/badge-status-css/README.md?raw';
-import tokens from '@utrecht/badge-status-css/src/tokens.json';
-import { BadgeStatus } from '@utrecht/component-library-vue';
+import { StatusBadge } from '@utrecht/component-library-vue';
+import readme from '@utrecht/status-badge-css/README.md?raw';
+import tokens from '@utrecht/status-badge-css/src/tokens.json';
 import { createStory } from './util';
 
 const meta = {
-  id: 'vue-badge-status',
+  id: 'vue-status-badge',
   title: 'Vue.js Component/Status badge',
-  component: BadgeStatus,
+  component: StatusBadge,
   tags: ['autodocs'],
   argTypes: {
     textContent: {
@@ -30,17 +30,17 @@ const meta = {
       type: 'ALPHA',
     },
     tokens,
-    tokenPrefix: 'utrecht-badge-status',
+    tokenPrefix: 'utrecht-status-badge',
     docs: {
       description: {
         component: readme,
       },
       source: {
-        code: '<UtrechtBadgeStatus v-bind="$props"><slot></slot></UtrechtBadgeStatus>',
+        code: '<UtrechtStatusBadge v-bind="$props"><slot></slot></UtrechtStatusBadge>',
       },
     },
   },
-} satisfies Meta<typeof BadgeStatus>;
+} satisfies Meta<typeof StatusBadge>;
 
 export default meta;
 
