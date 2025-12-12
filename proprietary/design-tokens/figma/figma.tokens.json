@@ -2393,16 +2393,16 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.default.color-document}"
+          "$value": "{utrecht.color.neutral.black}"
         },
         "outline-color": {
           "$type": "color",
-          "$value": "{basis.color.default.color-document}"
+          "$value": "{utrecht.color.neutral.black}"
         },
         "inverse": {
           "outline-color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-document}"
+            "$value": "{utrecht.color.neutral.white}"
           }
         },
         "outline-offset": {
@@ -12584,7 +12584,7 @@
       "focus": {
         "background-color": {
           "$type": "color",
-          "$value": "{utrecht.color.yellow}"
+          "$value": "hsl(45, 100%, 84%)"
         },
         "color": {
           "$type": "color",
