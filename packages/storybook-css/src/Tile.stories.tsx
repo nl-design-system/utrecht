@@ -38,7 +38,7 @@ const meta = {
     color: {
       description: 'Color variant of the tile',
       control: { type: 'select' },
-      options: ['default', 'red', 'green', 'blue'],
+      options: ['default', 'primary', 'secondary', 'tertiary'],
     },
   },
   parameters: {

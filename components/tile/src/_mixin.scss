@@ -6,8 +6,8 @@
 
 @mixin utrecht-tile {
   align-content: end;
-  background-color: var(--utrecht-tile-color-grey-90);
-  color: var(--utrecht-tile-color-grey-10);
+  background-color: var(--utrecht-tile-background-color);
+  color: var(--utrecht-tile-color);
   display: flex;
   justify-content: space-between;
   min-block-size: 6.25rem;
@@ -21,7 +21,6 @@
 
 @mixin utrecht-tile__link {
   align-self: end;
-  color: var(--utrecht-tile-link-color);
 }
 
 @mixin utrecht-tile__icon {
@@ -34,28 +33,28 @@
 
 @mixin utrecht-tile__arrow-container {
   align-self: end;
-  block-size: var(--utrecht-tile-space-inline-md);
-  inline-size: var(--utrecht-tile-space-inline-md);
+  block-size: var(--utrecht-tile-arrow-container-block-size);
+  inline-size: var(--utrecht-tile-arrow-container-inline-size);
 }
 
 @mixin utrecht-tile__arrow {
-  block-size: var(--utrecht-tile-typography-scale-sm);
+  block-size: var(--utrecht-tile-arrow-block-size);
   display: block;
-  inline-size: var(--utrecht-tile-typography-scale-sm);
+  inline-size: var(--utrecht-tile-arrow-inline-size);
   line-height: 0;
 }
 
-@mixin utrecht-tile--green {
-  background-color: var(--utrecht-tile-color-green-90);
-  color: var(--utrecht-tile-color-green-40);
+@mixin utrecht-tile--primary {
+  background-color: var(--utrecht-tile-primary-background-color);
+  color: var(--utrecht-tile-primary-color);
 }
 
-@mixin utrecht-tile--red {
-  background-color: var(--utrecht-tile-color-red-95);
-  color: var(--utrecht-tile-color-red-20);
+@mixin utrecht-tile--secondary {
+  background-color: var(--utrecht-tile-secondary-background-color);
+  color: var(--utrecht-tile-secondary-color);
 }
 
-@mixin utrecht-tile--blue {
-  background-color: var(--utrecht-tile-color-blue-90);
-  color: var(--utrecht-tile-color-blue-20);
+@mixin utrecht-tile--tertiary {
+  background-color: var(--utrecht-tile-tertiary-background-color);
+  color: var(--utrecht-tile-tertiary-color);
 }
