@@ -1,6 +1,7 @@
 ---
 import Layout from './Layout.astro';
 import TileNavigation from '../components/TileNavigation.astro';
+import TileList from '../components/TileList.astro';
 import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 
@@ -95,11 +96,11 @@ const tiles = childPages.map((child) => {
     </div>
 
     {tiles.length > 0 && (
-      <div class="navigation-page__tiles">
+      <TileList>
         {tiles.map((tile) => (
           <TileNavigation href={tile.href} title={tile.title} description={tile.description} />
         ))}
-      </div>
+      </TileList>
     )}
   </article>
 </Layout>
@@ -111,15 +112,5 @@ const tiles = childPages.map((child) => {
 
   .navigation-page__content {
     margin-block-end: 2rem;
-  }
-
-  .navigation-page__content:empty {
-    display: none;
-  }
-
-  .navigation-page__tiles {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 1.5rem;
   }
 </style>
