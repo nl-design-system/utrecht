@@ -29,13 +29,14 @@
   @include utrecht-tile__arrow-container;
 }
 
-.utrecht-tile--green {
-  @include utrecht-tile--green;
+.utrecht-tile--primary {
+  @include utrecht-tile--primary;
 }
 
-.utrecht-tile--blue {
-  @include utrecht-tile--blue;
+.utrecht-tile--secondary {
+  @include utrecht-tile--secondary;
 }
-.utrecht-tile--red {
-  @include utrecht-tile--red;
+
+.utrecht-tile--tertiary {
+  @include utrecht-tile--tertiary;
 }

@@ -8,7 +8,7 @@ export interface TileProps extends PropsWithChildren {
   focusVisible?: boolean;
   keyboardSupport?: boolean;
   icon?: ReactNode;
-  color?: 'default' | 'red' | 'green' | 'blue';
+  color?: 'default' | 'primary' | 'secondary' | 'tertiary';
 }
 
 export const Tile = ({
@@ -29,9 +29,9 @@ export const Tile = ({
           'utrecht-tile--hover': hover,
           'utrecht-tile--focus': focus,
           'utrecht-tile--focus-visible': focusVisible,
-          'utrecht-tile--red': color === 'red',
-          'utrecht-tile--green': color === 'green',
-          'utrecht-tile--blue': color === 'blue',
+          'utrecht-tile--primary': color === 'primary',
+          'utrecht-tile--secondary': color === 'secondary',
+          'utrecht-tile--tertiary': color === 'tertiary',
         })}
         {...restProps}
       >
