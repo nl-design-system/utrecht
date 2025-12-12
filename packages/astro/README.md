@@ -15,7 +15,7 @@ Er is gekozen om over te stappen op Astro voor de documentatie website van de Ge
 ## Hoe voeg ik een icoon toe aan het iconen overzicht?
 
 1. Voeg de SVG toe aan [packages/icons/svg](../icon/src/svg/)
-2. Voeg de icon naam toe aan [./src/pages/componenten/iconen/icon-categories.ts](./src/pages/componenten/iconen/icon-categories.ts)
+2. Voeg de icon naam toe aan [./src/pages/componenten/iconen/icon-categories.ts](src/pages/componenten/iconen/icon-categories.ts)
 3. Om de wijziging te zien:
    1. Bouw [packages/icon](../icon/)
    2. Bouw [packages/web-component-library-stencil](../web-component-library-stencil/)

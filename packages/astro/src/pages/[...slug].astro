@@ -1,0 +1,84 @@
+---
+import { getCollection, render } from 'astro:content';
+import NavigationPage from '../layouts/NavigationPage.astro';
+import ContentPage from '../layouts/ContentPage.astro';
+
+export async function getStaticPaths() {
+  const allPages = await getCollection('pages');
+
+  return allPages.map((page) => {
+    const isIndex = page.id.endsWith('_index');
+
+    let slug = page.id;
+    if (isIndex) {
+      slug = slug.replace(/\/_index$/, '').replace(/^_index$/, '');
+    }
+
+
+    return {
+      params: { slug: slug || undefined },
+      props: { page, allPages, isIndex },
+    };
+  });
+}
+
+interface Props {
+  page: any;
+  allPages: any[];
+  isIndex: boolean;
+}
+
+const { page, allPages, isIndex } = Astro.props;
+
+/**
+ * Get direct child pages of a navigation page
+ * Filters pages where slug starts with parentSlug + '/'
+ * Excludes _index files
+ * Ensures only direct children (no nested paths)
+ */
+function getChildPages(parentSlug: string, pages: any[]) {
+  const parentPrefix = parentSlug ? `${parentSlug}/` : '';
+
+  return pages
+    .filter((p) => {
+      const pageSlug = p.id;
+
+      // Skip _index files
+      if (pageSlug.endsWith('_index')) {
+        return false;
+      }
+
+      // Must start with parent prefix
+      if (!pageSlug.startsWith(parentPrefix)) {
+        return false;
+      }
+
+      // Get the remaining path after parent prefix
+      const remainingPath = pageSlug.slice(parentPrefix.length);
+
+      // Direct children only - no additional slashes
+      return remainingPath && !remainingPath.includes('/');
+    })
+    .sort((a, b) => (a.data.order || 0) - (b.data.order || 0));
+}
+
+// Calculate parent slug for finding children
+let parentSlug = page.id;
+if (isIndex) {
+  parentSlug = parentSlug.replace(/\/_index$/, '').replace(/^_index$/, '');
+}
+
+const childPages = isIndex ? getChildPages(parentSlug, allPages) : [];
+const { Content } = await render(page);
+---
+
+{isIndex ? (
+  <NavigationPage page={page} childPages={childPages} allPages={allPages}>
+    <Content />
+  </NavigationPage>
+) : (
+  <ContentPage page={page} allPages={allPages}>
+    <Content />
+  </ContentPage>
+)}
+
