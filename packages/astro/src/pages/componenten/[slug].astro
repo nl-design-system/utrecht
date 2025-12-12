@@ -1,36 +1,71 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { getCollection, getEntry, render } from 'astro:content';
+import { Heading1, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
+import { base } from 'astro:config/client';
 
 export async function getStaticPaths() {
   const components = await getCollection('components');
-  return components.map((component) => ({
-    params: { slug: component.id.replace(/\.(md|mdx)$/, '') },
-    props: { component },
-  }));
+
+  return components.map((component) => {
+    const slug = component.id.replace(/\.mdx?$/, '');
+    return {
+      params: { slug },
+      props: { component },
+    };
+  });
 }
 
-const { slug } = Astro.params;
-const entry = await getEntry('components', slug);
-
-if (!entry) {
-  return Astro.redirect('/404');
+interface Props {
+  component: {
+    id: string;
+    data: {
+      title: string;
+      description?: string;
+    };
+  };
 }
 
-const { Content } = await render(entry);
+const { component } = Astro.props;
+const { Content } = await render(component);
 ---
 
 <Layout>
-  <h1>{entry.data.title} component</h1>
-  <Content />
+  <article class="component-page">
+    <BreadcrumbNav>
+      <BreadcrumbNavLink href={`${base}/`} index={0}>Home</BreadcrumbNavLink>
+      <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
+      <BreadcrumbNavLink href={`${base}/componenten`} index={1}>Componenten</BreadcrumbNavLink>
+      <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
+      <BreadcrumbNavLink href={`${base}/componenten/${component.id.replace(/\.mdx?$/, '')}`} current index={2}>{component.data.title}</BreadcrumbNavLink>
+    </BreadcrumbNav>
+
+    <header class="component-page__header">
+      <Heading1>{component.data.title}</Heading1>
+      {component.data.description && (
+        <p class="component-page__description">{component.data.description}</p>
+      )}
+    </header>
+
+    <div class="component-page__content">
+      <Content />
+    </div>
+  </article>
 </Layout>
 
 <style>
-  .utrecht-component-canvas {
-    border-radius: 3px;
-    border: 1px solid grey;
-    padding: 16px;
-    background-color: #fafafa;
+  .component-page {
+    padding-block-start: 2rem;
+  }
+
+  .component-page__header {
+    margin-block-end: 2rem;
+  }
+
+  .component-page__description {
+    margin-block-start: 0.5rem;
+    color: var(--utrecht-document-color, #666);
+    font-size: 1.125rem;
   }
 </style>
 

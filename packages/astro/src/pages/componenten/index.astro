@@ -1,19 +1,32 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import { Link } from '@utrecht/component-library-react';
+import { Link, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 import TileList from '@components/TileList.astro';
 import TileNavigation from '@components/TileNavigation.astro';
 import ComponentCard from '@components/ComponentCard.astro';
-import {
-  PrimaryActionButton,
-  SecondaryActionButton
-} from "@utrecht/component-library-react/css-module";
+
+const components = await getCollection('components');
+
+// Sort components alphabetically by title
+const sortedComponents = components.sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
 ---
 
 <Layout>
-  <h1>Componenten en iconen</h1>
-  Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
+  <article class="componenten-page">
+    <BreadcrumbNav>
+      <BreadcrumbNavLink href={`${base}/`} index={0}>Home</BreadcrumbNavLink>
+      <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
+      <BreadcrumbNavLink href={`${base}/componenten`} current index={1}>Componenten</BreadcrumbNavLink>
+    </BreadcrumbNav>
+
+    <h1>Componenten en iconen</h1>
+  <p>
+    Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
+  </p>
 
   <h2>Meer weten</h2>
   <TileList>
@@ -31,25 +44,26 @@ import {
 
   <h2>Componenten overzicht</h2>
   <TileList>
-    <ComponentCard
-      href={`${base}/componenten/button`}
-      title="Button"
-      frameworks={['HTML', 'CSS', 'React', 'Angular']}
-    >
-      <div>
-        <PrimaryActionButton>Primary Action</PrimaryActionButton>
-        <SecondaryActionButton>Secondary Action</SecondaryActionButton>
-      </div>
-    </ComponentCard>
-    <ComponentCard
-      href={`${base}/componenten/link`}
-      title="Link"
-      frameworks={['HTML', 'CSS', 'React', 'Angular', 'Vue']}
-    />
+    {sortedComponents.map((component) => (
+      <ComponentCard
+        href={`${base}/componenten/${component.id.replace(/\.mdx?$/, '')}`}
+        title={component.data.title}
+        frameworks={component.data.frameworks}
+      >
+        {component.data.description && (
+          <p>{component.data.description}</p>
+        )}
+      </ComponentCard>
+    ))}
   </TileList>
+  </article>
 </Layout>
 
 <style>
+  .componenten-page {
+    padding-block-start: 2rem;
+  }
+
   .utrecht-component-canvas {
     border-radius: 3px;
     border: 1px solid grey;

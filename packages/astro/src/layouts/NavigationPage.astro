@@ -1,0 +1,88 @@
+---
+import Layout from './Layout.astro';
+import TileNavigation from '../components/TileNavigation.astro';
+import { Heading1, Paragraph } from '@utrecht/component-library-react';
+import { base } from 'astro:config/client';
+
+interface Props {
+  page: {
+    data: {
+      title: string;
+      description: string;
+      icon?: string;
+    };
+  };
+  childPages: Array<{
+    id: string;
+    data: {
+      title: string;
+      description: string;
+      icon?: string;
+      thumbnail?: string;
+    };
+  }>;
+}
+
+const { page, childPages } = Astro.props;
+
+const tiles = childPages.map((child) => {
+  // child.id from glob loader doesn't include extension
+  let href = `${base}/${child.id}`;
+
+  return {
+    title: child.data.title,
+    description: child.data.description || '',
+    href,
+    icon: child.data.icon,
+    thumbnail: child.data.thumbnail,
+  };
+});
+---
+
+<Layout>
+  <article class="navigation-page">
+    <header class="navigation-page__header">
+      <Heading1>{page.data.title}</Heading1>
+      {page.data.description && (
+        <Paragraph>{page.data.description}</Paragraph>
+      )}
+    </header>
+
+    <div class="navigation-page__content">
+      <slot />
+    </div>
+
+    {tiles.length > 0 && (
+      <div class="navigation-page__tiles">
+        {tiles.map((tile) => (
+          <TileNavigation href={tile.href} title={tile.title} description={tile.description} />
+        ))}
+      </div>
+    )}
+  </article>
+</Layout>
+
+<style>
+  .navigation-page {
+    padding-block: 2rem;
+  }
+
+  .navigation-page__header {
+    margin-block-end: 2rem;
+  }
+
+  .navigation-page__content {
+    margin-block-end: 2rem;
+  }
+
+  .navigation-page__content:empty {
+    display: none;
+  }
+
+  .navigation-page__tiles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+</style>
+
