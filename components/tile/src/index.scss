@@ -9,54 +9,54 @@
 
 .utrecht-tile {
   @include utrecht-tile;
-}
 
-.utrecht-tile__text {
-  @include utrecht-tile__text;
-}
+  &__text {
+    @include utrecht-tile__text;
+  }
 
-.utrecht-tile__link {
-  @include utrecht-tile__link;
-}
+  &__link {
+    @include utrecht-tile__link;
+  }
 
-.utrecht-tile__icon {
-  @include utrecht-tile__icon;
-}
+  &__icon {
+    @include utrecht-tile__icon;
+  }
 
-.utrecht-tile__arrow {
-  @include utrecht-tile__arrow;
-}
-.utrecht-tile__arrow-container {
-  @include utrecht-tile__arrow-container;
-}
+  &__arrow {
+    @include utrecht-tile__arrow;
+  }
+  &__arrow-container {
+    @include utrecht-tile__arrow-container;
+  }
 
-.utrecht-tile--primary {
-  @include utrecht-tile--primary;
-}
+  &--primary {
+    @include utrecht-tile--primary;
+  }
 
-.utrecht-tile--secondary {
-  @include utrecht-tile--secondary;
-}
+  &--secondary {
+    @include utrecht-tile--secondary;
+  }
 
-.utrecht-tile--tertiary {
-  @include utrecht-tile--tertiary;
-}
+  &--tertiary {
+    @include utrecht-tile--tertiary;
+  }
 
-.utrecht-tile--focus-visible {
-  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
-  @include focus-ring.utrecht-focus-visible;
-}
+  &--focus-visible {
+    /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+    @include focus-ring.utrecht-focus-visible;
+  }
 
-.utrecht-tile--focus,
-.utrecht-tile:focus {
-  @include utrecht-tile--focus;
-}
+  &--focus,
+  &:focus {
+    @include utrecht-tile--focus;
+  }
 
-.utrecht-tile:focus-visible {
-  @include utrecht-tile--focus-visible;
-}
+  &:focus-visible {
+    @include utrecht-tile--focus-visible;
+  }
 
-.utrecht-tile--hover,
-.utrecht-tile:hover {
-  @include utrecht-tile--hover;
+  &--hover,
+  &:hover {
+    @include utrecht-tile--hover;
+  }
 }
