@@ -2,7 +2,6 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { UtrechtActionGroup } from './action-group/component';
 import { UtrechtArticle } from './article/component';
-import { UtrechtBadgeStatus } from './badge-status/component';
 import { UtrechtButtonAttr } from './button/component';
 import { UtrechtButtonGroup } from './button-group/component';
 import { UtrechtCheckboxAttr } from './checkbox/component';
@@ -29,6 +28,7 @@ import { UtrechtPageHeader } from './page-header/component';
 import { UtrechtParagraph } from './paragraph/component';
 import { UtrechtRadioButtonAttr } from './radio-button/component';
 import { UtrechtSeparator } from './separator/component';
+import { UtrechtStatusBadge } from './status-badge/component';
 import { UtrechtTableAttr } from './table/component';
 import { UtrechtTableBodyAttr } from './table-body/component';
 import { UtrechtTableCaptionAttr } from './table-caption/component';
@@ -45,7 +45,6 @@ import { UtrechtUnorderedListItemAttr } from './unordered-list/item.component';
 const components = [
   UtrechtActionGroup,
   UtrechtArticle,
-  UtrechtBadgeStatus,
   UtrechtButtonAttr,
   UtrechtButtonGroup,
   UtrechtCheckboxAttr,
@@ -72,6 +71,7 @@ const components = [
   UtrechtParagraph,
   UtrechtRadioButtonAttr,
   UtrechtSeparator,
+  UtrechtStatusBadge,
   UtrechtTableAttr,
   UtrechtTableBodyAttr,
   UtrechtTableCaptionAttr,

@@ -203,15 +203,6 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
-  components/badge-status:
-    devDependencies:
-      '@utrecht/badge-css':
-        specifier: workspace:*
-        version: link:../badge
-      '@utrecht/build-utils-css':
-        specifier: workspace:*
-        version: link:../../packages/build-utils-css
-
   components/blockquote:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -924,6 +915,15 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/status-badge:
+    devDependencies:
+      '@utrecht/badge-css':
+        specifier: workspace:*
+        version: link:../badge
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+
   components/subscript:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -1243,9 +1243,6 @@ importers:
       '@utrecht/article-css':
         specifier: workspace:*
         version: link:../../components/article
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/button-css':
         specifier: workspace:*
         version: link:../../components/button
@@ -1327,6 +1324,9 @@ importers:
       '@utrecht/separator-css':
         specifier: workspace:*
         version: link:../../components/separator
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/table-css':
         specifier: workspace:*
         version: link:../../components/table
@@ -1396,9 +1396,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -1636,6 +1633,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface
@@ -1721,9 +1721,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -1943,6 +1940,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface
@@ -2088,9 +2088,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -2331,6 +2328,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/subscript-css':
         specifier: workspace:*
         version: link:../../components/subscript
@@ -2545,9 +2545,6 @@ importers:
       '@utrecht/badge-counter-css':
         specifier: workspace:*
         version: link:../../components/badge-counter
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/breadcrumb-nav-css':
         specifier: workspace:*
         version: link:../../components/breadcrumb-nav
@@ -2659,6 +2656,9 @@ importers:
       '@utrecht/skip-link-css':
         specifier: workspace:*
         version: link:../../components/skip-link
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/table-css':
         specifier: workspace:*
         version: link:../../components/table
@@ -4860,9 +4860,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -5121,6 +5118,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
@@ -5463,9 +5463,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -5766,6 +5763,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
@@ -6418,9 +6418,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -6652,6 +6649,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
@@ -6805,9 +6805,6 @@ importers:
       '@utrecht/badge-counter-css':
         specifier: workspace:*
         version: link:../../components/badge-counter
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/breadcrumb-nav-css':
         specifier: workspace:*
         version: link:../../components/breadcrumb-nav
@@ -6925,6 +6922,9 @@ importers:
       '@utrecht/skip-link-css':
         specifier: workspace:*
         version: link:../../components/skip-link
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
@@ -7084,9 +7084,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/body-css':
         specifier: workspace:*
         version: link:../../components/body
@@ -7237,6 +7234,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/storybook-helpers':
         specifier: workspace:*
         version: link:../storybook-helpers
@@ -7534,9 +7534,6 @@ importers:
       '@utrecht/badge-list-css':
         specifier: workspace:*
         version: link:../../components/badge-list
-      '@utrecht/badge-status-css':
-        specifier: workspace:*
-        version: link:../../components/badge-status
       '@utrecht/blockquote-css':
         specifier: workspace:*
         version: link:../../components/blockquote
@@ -7738,6 +7735,9 @@ importers:
       '@utrecht/spotlight-section-css':
         specifier: workspace:*
         version: link:../../components/spotlight-section
+      '@utrecht/status-badge-css':
+        specifier: workspace:*
+        version: link:../../components/status-badge
       '@utrecht/surface-css':
         specifier: workspace:*
         version: link:../../components/surface

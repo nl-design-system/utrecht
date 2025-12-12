@@ -14,7 +14,7 @@ export interface StatusBadgeProps extends HTMLAttributes<HTMLElement> {
 export const StatusBadge = forwardRef(
   ({ className, status, ...restProps }: PropsWithChildren<StatusBadgeProps>, ref: ForwardedRef<HTMLElement>) => (
     <span
-      className={clsx('utrecht-badge-status', `utrecht-badge-status--${status ? status : 'neutral'}`, className)}
+      className={clsx('utrecht-status-badge', `utrecht-status-badge--${status ? status : 'neutral'}`, className)}
       {...restProps}
       ref={ref as ForwardedRef<HTMLElement>}
     />

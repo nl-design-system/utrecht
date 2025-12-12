@@ -4,7 +4,7 @@
  * Copyright (c) 2023 Frameless B.V.
  */
 
-import css from '@utrecht/badge-status-css/dist/index.mjs';
+import css from '@utrecht/status-badge-css/dist/index.mjs';
 import { insertStyle } from './insert-style';
 insertStyle(css);
 

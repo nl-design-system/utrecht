@@ -1,15 +1,15 @@
 import { componentWrapperDecorator, Meta, StoryObj } from '@storybook/angular';
-import { UtrechtBadgeStatus } from '@utrecht/component-library-angular';
+import { UtrechtStatusBadge } from '@utrecht/component-library-angular';
 
-interface UtrechtBadgeStatusProps extends UtrechtBadgeStatus {
+interface UtrechtStatusBadgeProps extends UtrechtStatusBadge {
   badgeStatusContent: string;
 }
 
-const meta: Meta<UtrechtBadgeStatusProps> = {
+const meta: Meta<UtrechtStatusBadgeProps> = {
   title: 'Angular Component/Badge Status',
   decorators: [componentWrapperDecorator((story) => `<div class="utrecht-document utrecht-theme">${story}</div>`)],
-  id: 'angular-badge-status',
-  component: UtrechtBadgeStatus,
+  id: 'angular-status-badge',
+  component: UtrechtStatusBadge,
   argTypes: {
     status: {
       control: { type: 'select' },
@@ -29,12 +29,12 @@ const meta: Meta<UtrechtBadgeStatusProps> = {
   },
 };
 export default meta;
-type Story = StoryObj<UtrechtBadgeStatusProps>;
+type Story = StoryObj<UtrechtStatusBadgeProps>;
 
 export const Default: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Default',
@@ -44,7 +44,7 @@ export const Default: Story = {
 export const Error: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Error',
@@ -55,7 +55,7 @@ export const Error: Story = {
 export const Neutral: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Neutral',
@@ -66,7 +66,7 @@ export const Neutral: Story = {
 export const Danger: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Danger',
@@ -77,7 +77,7 @@ export const Danger: Story = {
 export const Safe: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Safe',
@@ -88,7 +88,7 @@ export const Safe: Story = {
 export const Invalid: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Invalid',
@@ -99,7 +99,7 @@ export const Invalid: Story = {
 export const Valid: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Valid',
@@ -110,7 +110,7 @@ export const Valid: Story = {
 export const Warning: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Warning',
@@ -121,7 +121,7 @@ export const Warning: Story = {
 export const Success: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Success',
@@ -132,7 +132,7 @@ export const Success: Story = {
 export const Inactive: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Inactive',
@@ -143,7 +143,7 @@ export const Inactive: Story = {
 export const Active: Story = {
   render: (args) => ({
     props: args,
-    template: `<utrecht-badge-status [status]="status">{{badgeStatusContent}}</utrecht-badge-status>`,
+    template: `<utrecht-status-badge [status]="status">{{badgeStatusContent}}</utrecht-status-badge>`,
   }),
   args: {
     badgeStatusContent: 'Active',
