@@ -1,11 +1,12 @@
 ---
 import Layout from './Layout.astro';
 import TileNavigation from '../components/TileNavigation.astro';
-import { Heading1, Paragraph } from '@utrecht/component-library-react';
+import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 
 interface Props {
   page: {
+    id: string;
     data: {
       title: string;
       description: string;
@@ -21,12 +22,43 @@ interface Props {
       thumbnail?: string;
     };
   }>;
+  allPages: Array<{
+    id: string;
+    data: {
+      title: string;
+    };
+  }>;
 }
 
-const { page, childPages } = Astro.props;
+const { page, childPages, allPages } = Astro.props;
+
+function generateBreadcrumbs(pageId: string, pages: any[]) {
+  // Remove _index suffix to get the actual path
+  const slug = pageId.replace(/\/_index$/, '').replace(/^_index$/, '');
+  const parts = slug ? slug.split('/') : [];
+  const breadcrumbs: Array<{ label: string; href: string }> = [];
+
+  breadcrumbs.push({ label: 'Home', href: `${base}/` });
+
+  let currentPath = '';
+  for (let i = 0; i < parts.length; i++) {
+    currentPath += (currentPath ? '/' : '') + parts[i];
+
+    const indexPage = pages.find(p => p.id === `${currentPath}/_index`);
+    const label = indexPage?.data?.title || parts[i]
+      .split('-')
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
+    breadcrumbs.push({ label, href: `${base}/${currentPath}` });
+  }
+
+  return breadcrumbs;
+}
+
+const breadcrumbs = generateBreadcrumbs(page.id, allPages);
 
 const tiles = childPages.map((child) => {
-  // child.id from glob loader doesn't include extension
   let href = `${base}/${child.id}`;
 
   return {
@@ -41,12 +73,22 @@ const tiles = childPages.map((child) => {
 
 <Layout>
   <article class="navigation-page">
-    <header class="navigation-page__header">
-      <Heading1>{page.data.title}</Heading1>
-      {page.data.description && (
-        <Paragraph>{page.data.description}</Paragraph>
-      )}
-    </header>
+    {breadcrumbs.length > 1 && (
+      <BreadcrumbNav>
+        {breadcrumbs.map((crumb, index) => (
+          <>
+            {index > 0 && <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>}
+            <BreadcrumbNavLink
+              href={crumb.href}
+              index={index}
+              current={index === breadcrumbs.length - 1}
+            >
+              {crumb.label}
+            </BreadcrumbNavLink>
+          </>
+        ))}
+      </BreadcrumbNav>
+    )}
 
     <div class="navigation-page__content">
       <slot />
@@ -64,11 +106,7 @@ const tiles = childPages.map((child) => {
 
 <style>
   .navigation-page {
-    padding-block: 2rem;
-  }
-
-  .navigation-page__header {
-    margin-block-end: 2rem;
+    padding-block-start: 2rem;
   }
 
   .navigation-page__content {
@@ -85,4 +123,3 @@ const tiles = childPages.map((child) => {
     gap: 1.5rem;
   }
 </style>
-
