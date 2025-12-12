@@ -88,7 +88,7 @@ export const Hover: Story = {
   },
 };
 
-export const DefaultFocus: Story = {
+export const Focus: Story = {
   parameters: {
     pseudo: { focus: true },
   },
