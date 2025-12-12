@@ -1,5 +1,18 @@
 # @utrecht/component-library-css
 
+## 9.0.0
+
+### Major Changes
+
+- edac79f: badge-status is no longer styled through common badge tokens but has its own set of tokens
+
+### Patch Changes
+
+- Updated dependencies [edac79f]
+- Updated dependencies [0fcdfbf]
+  - @utrecht/badge-status-css@3.0.0
+  - @utrecht/navigation-css@1.1.1
+
 ## 8.2.1
 
 ### Patch Changes
