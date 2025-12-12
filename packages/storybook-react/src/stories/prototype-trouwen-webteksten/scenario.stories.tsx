@@ -12,7 +12,7 @@ import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
 import React from 'react';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
-import ScenarioContactKTO from '../prototype-src/contactformulier/ScenarioContactFormulier-KTO.js'; // Importeer het scenario-component
+import ScenarioTrouwen from '../prototype-src/trouwen/ScenarioTrouwen.js';
 import urls from '../prototype-src/variables.js';
 import '../styles.css';
 
@@ -41,9 +41,9 @@ export const One: Story = {
         <PageContent>
           <main>
             <section>
-              <ScenarioContactKTO />
+              <ScenarioTrouwen />
               <br />
-              <ButtonLink appearance="primary-action-button" href={urls.contactformStap1KTO}>
+              <ButtonLink appearance="primary-action-button" href={urls.trouwenStap1}>
                 Start
                 <UtrechtIconArrow />
               </ButtonLink>

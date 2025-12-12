@@ -2,6 +2,7 @@ import {
   Heading4,
   Link,
   Paragraph,
+  Separator,
   Table,
   TableBody,
   TableCaption,
@@ -13,14 +14,12 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
-import { Separator } from 'storybook/internal/components';
 
 const MogelijkhedenCeremonieContent = () => (
   <>
     <Heading4>Locatie van de gemeente: stadhuis of wijkservicecentrum Vleuten-De Meern</Heading4>
     <Table>
       <TableCaption>Dagen, tijden en kosten</TableCaption>
-
       <TableHeader className="utrecht-table__header--sticky">
         <TableRow>
           <TableHeaderCell scope="col">Dagen</TableHeaderCell>
@@ -59,6 +58,7 @@ const MogelijkhedenCeremonieContent = () => (
     <Link href="https://loket.digitaal.utrecht.nl/nl/products/trouwlocaties-in-utrecht">
       Lees meer over deze locatie en bekijk de foto
     </Link>
+    <Separator />
     <Heading4>Andere locaties die door de gemeente zijn goedgekeurd</Heading4>
     <Table>
       <TableCaption>Dagen, tijden en kosten</TableCaption>
@@ -98,6 +98,7 @@ const MogelijkhedenCeremonieContent = () => (
     <Link href="https://loket.digitaal.utrecht.nl/nl/products/trouwlocaties-in-utrecht">
       Bekijk welke locaties dit zijn
     </Link>
+    <Separator />
 
     <Heading4>Locatie die u zelf kiest</Heading4>
     <Paragraph>

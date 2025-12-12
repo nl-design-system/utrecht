@@ -34,6 +34,7 @@ const RegelenTrouwdatumContent = () => (
       zeker weet dat uw gewenste datum en locatie beschikbaar zijn.
     </Paragraph>
     <Paragraph>U kunt uiterlijk 18 maanden van tevoren een afspraak met ons maken voor uw trouwdatum .</Paragraph>
+    <br />
   </>
 );
 

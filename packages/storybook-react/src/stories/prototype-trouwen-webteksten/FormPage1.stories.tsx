@@ -189,11 +189,11 @@ export const One: Story = {
                     },
                   ]}
                 />
+                <HulpEnContactTrouwen />
                 <KTOvervolg />
               </section>
             </main>
           </PageContent>
-          <HulpEnContactTrouwen></HulpEnContactTrouwen>
           <FooterContact />
           <Chatbot />
         </Page>

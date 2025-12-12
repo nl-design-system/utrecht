@@ -24,13 +24,12 @@ const RegelenTrouwambtenaarContent = () => (
       Wilt u liever dat een trouwambtenaar uit een andere gemeente of een familielid of vriend(in) uw huwelijk voltrekt?
       Dat kan.{' '}
       <Link href="https://loket.digitaal.utrecht.nl/nl/producten/trouwambtenaar-voor-1-dag">
-        Lees meer over het aanvragen van trouwambtenaar voor 1 dag
+        Lees meer over het aanvragen van trouwambtenaar voor 1 dag.
       </Link>
     </Paragraph>
 
     <Table>
       <TableCaption>Kosten trouwambtenaar voor 1 dag</TableCaption>
-
       <TableHeader className="utrecht-table__header--sticky">
         <TableRow>
           <TableHeaderCell scope="col">Wat</TableHeaderCell>
@@ -48,11 +47,11 @@ const RegelenTrouwambtenaarContent = () => (
 
     <UnorderedList>
       <UnorderedListItem>
-        {' '}
         Toeslag eigen trouwambtenaar, dit is zonder kosten voor de documenten die nodig zijn en zonder de
         huwelijkskosten die u aan ons betaalt.
-      </UnorderedListItem>{' '}
+      </UnorderedListItem>
     </UnorderedList>
+    <br />
   </>
 );
 
