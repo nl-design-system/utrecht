@@ -977,6 +977,9 @@ importers:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
 
   components/tooltip:
     devDependencies:
@@ -26417,8 +26420,8 @@ packages:
   vue-component-type-helpers@2.2.12:
     resolution: {integrity: sha512-YbGqHZ5/eW4SnkPNR44mKVc6ZKQoRs/Rux1sxC6rdwXb4qpbOSYfDr9DsTHolOTGmIKgM9j141mZbBeg05R1pw==}
 
-  vue-component-type-helpers@3.1.7:
-    resolution: {integrity: sha512-SxZOijzRU0LiTYARVZNYf//21bZRLJ26P2prcA6a+FfDQxJtan4tEnsryIY7aiLh2LVoet0ci2G+6RrArQ+7tA==}
+  vue-component-type-helpers@3.1.8:
+    resolution: {integrity: sha512-oaowlmEM6BaYY+8o+9D9cuzxpWQWHqHTMKakMxXu0E+UCIOMTljyIPO15jcnaCwJtZu/zWDotK7mOIHvWD9mcw==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -37088,7 +37091,7 @@ snapshots:
       storybook: 9.1.4(@testing-library/dom@10.4.0)(prettier@3.6.2)(vite@7.1.4(@types/node@22.7.4)(jiti@1.21.0)(less@4.2.0)(sass@1.92.0)(terser@5.44.0)(tsx@4.19.0)(yaml@2.8.1))
       type-fest: 2.19.0
       vue: 3.5.21(typescript@4.9.5)
-      vue-component-type-helpers: 3.1.7
+      vue-component-type-helpers: 3.1.8
 
   '@svgr/babel-plugin-add-jsx-attribute@6.5.1(@babel/core@7.24.7)':
     dependencies:
@@ -55654,7 +55657,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.12: {}
 
-  vue-component-type-helpers@3.1.7: {}
+  vue-component-type-helpers@3.1.8: {}
 
   vue-docgen-api@4.75.1(vue@3.5.21(typescript@4.9.5)):
     dependencies:

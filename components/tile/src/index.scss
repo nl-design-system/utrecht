@@ -4,7 +4,8 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
-@import "./mixin";
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+@use "./mixin" as *;
 
 .utrecht-tile {
   @include utrecht-tile;
@@ -39,4 +40,23 @@
 
 .utrecht-tile--tertiary {
   @include utrecht-tile--tertiary;
+}
+
+.utrecht-tile--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+}
+
+.utrecht-tile--focus,
+.utrecht-tile:focus {
+  @include utrecht-tile--focus;
+}
+
+.utrecht-tile:focus-visible {
+  @include utrecht-tile--focus-visible;
+}
+
+.utrecht-tile--hover,
+.utrecht-tile:hover {
+  @include utrecht-tile--hover;
 }

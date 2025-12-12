@@ -4,6 +4,8 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+
 @mixin utrecht-tile {
   align-content: end;
   background-color: var(--utrecht-tile-background-color);
@@ -57,4 +59,17 @@
 @mixin utrecht-tile--tertiary {
   background-color: var(--utrecht-tile-tertiary-background-color);
   color: var(--utrecht-tile-tertiary-color);
+}
+
+@mixin utrecht-tile--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+}
+
+@mixin utrecht-tile--focus {
+  scale: var(--utrecht-tile-focus-scale, 1);
+}
+
+@mixin utrecht-tile--hover {
+  scale: var(--utrecht-tile-hover-scale, 1);
 }
