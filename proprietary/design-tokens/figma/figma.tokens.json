@@ -2389,7 +2389,7 @@
       "focus": {
         "background-color": {
           "$type": "color",
-          "$value": "{utrecht.color.yellow}"
+          "$value": "hsl(45, 100%, 84%)"
         },
         "color": {
           "$type": "color",
@@ -3476,7 +3476,7 @@
         },
         "font-weight": {
           "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
+          "$value": "{basis.text.font-weight.semibold}"
         },
         "line-height": {
           "$type": "lineHeights",
@@ -3500,11 +3500,11 @@
         },
         "padding-inline-end": {
           "$type": "dimension",
-          "$value": "{basis.space.inline.xl}"
+          "$value": "{basis.space.inline.2xl}"
         },
         "padding-inline-start": {
           "$type": "dimension",
-          "$value": "{basis.space.inline.xl}"
+          "$value": "{basis.space.inline.2xl}"
         },
         "icon": {
           "size": {
@@ -3601,7 +3601,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.bold}"
+            "$value": "{basis.text.font-weight.semibold}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -3697,7 +3697,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.bold}"
+            "$value": "{basis.text.font-weight.semibold}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -3793,7 +3793,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.bold}"
+            "$value": "{basis.text.font-weight.semibold}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -3802,7 +3802,7 @@
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
+              "$value": "{basis.color.transparent}"
             },
             "border-color": {
               "$type": "color",
@@ -3844,7 +3844,7 @@
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-hover}"
+              "$value": "{basis.color.transparent}"
             },
             "border-color": {
               "$type": "color",
@@ -4790,11 +4790,11 @@
       "data-badge": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-default}"
+          "$value": "{basis.color.transparent}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.transparent}"
+          "$value": "{basis.color.default.border-default}"
         },
         "border-radius": {
           "$type": "dimension",
@@ -4848,11 +4848,11 @@
       "data-badge": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-default}"
+          "$value": "{basis.color.transparent}"
         },
         "border-color": {
           "$type": "color",
-          "$value": "{basis.color.transparent}"
+          "$value": "{basis.color.default.border-default}"
         },
         "border-radius": {
           "$type": "dimension",
