@@ -147,7 +147,7 @@ export const Calendar = ({
             onNextClick={() => setVisibleMonth(addMonths(visibleMonth, 1))}
           >
             <CalendarNavigationLabel dateTime={format(visibleMonth, 'yyyy-mm')}>
-              {format(visibleMonth, 'LLLL Y', { locale })}
+              {format(visibleMonth, 'LLLL y', { locale })}
             </CalendarNavigationLabel>
           </CalendarNavigationButtons>
         </CalendarNavigationButtons>

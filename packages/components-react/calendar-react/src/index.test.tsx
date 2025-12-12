@@ -142,4 +142,13 @@ describe('Calendar', () => {
     if (nextMonthButton) fireEvent.click(nextMonthButton);
     expect(currentDateLabel).toContainHTML('april 2023');
   });
+
+  it('shows correct year in navigation label', () => {
+    const currentDate = new Date(2025, 11, 29);
+    const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+
+    let currentDateLabel = container.querySelector('.utrecht-calendar__navigation-label');
+
+    expect(currentDateLabel).toContainHTML('december 2025');
+  });
 });
