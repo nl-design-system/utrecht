@@ -16,9 +16,11 @@ interface TileStoryProps extends TileProps {
 const TileStory = ({ children, icon, ...props }: TileStoryProps) => {
   const IconElement = icon;
   return (
-    <Tile icon={IconElement ? <IconElement /> : null} {...props}>
-      {children}
-    </Tile>
+    <div style={{ inlineSize: '400px', paddingBlock: '16px', paddingInline: '16px' }}>
+      <Tile icon={IconElement ? <IconElement /> : null} {...props}>
+        {children}
+      </Tile>
+    </div>
   );
 };
 
@@ -74,6 +76,42 @@ export const Default: Story = {
         story: 'Test',
       },
     },
+  },
+};
+
+export const Hover: Story = {
+  parameters: {
+    pseudo: { hover: true },
+  },
+  args: {
+    ...Default.args,
+  },
+};
+
+export const DefaultFocus: Story = {
+  parameters: {
+    pseudo: { focus: true },
+  },
+  args: {
+    ...Default.args,
+  },
+};
+
+export const Active: Story = {
+  parameters: {
+    pseudo: { active: true },
+  },
+  args: {
+    ...Default.args,
+  },
+};
+
+export const FocusVisible: Story = {
+  parameters: {
+    pseudo: { focusVisible: true, focus: true },
+  },
+  args: {
+    ...Default.args,
   },
 };
 

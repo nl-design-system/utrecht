@@ -30,6 +30,7 @@ Een HTML `a` element wordt standaard niet geactiveerd met `Space`, daarvoor is o
 ## States
 
 - hover
+- active
 - focus
 - focus-visible
 
