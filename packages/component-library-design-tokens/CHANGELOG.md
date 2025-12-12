@@ -1,5 +1,12 @@
 # @utrecht/component-library-design-tokens
 
+## 1.1.10
+
+### Patch Changes
+
+- Updated dependencies [edac79f]
+  - @utrecht/badge-status-css@3.0.0
+
 ## 1.1.9
 
 ### Patch Changes

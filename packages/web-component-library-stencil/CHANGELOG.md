@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 4.0.0
+
+### Major Changes
+
+- edac79f: badge-status is no longer styled through common badge tokens but has its own set of tokens
+
 ## 3.7.0
 
 ### Minor Changes
