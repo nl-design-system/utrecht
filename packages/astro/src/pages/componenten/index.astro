@@ -43,31 +43,43 @@ const sortedComponents = components.sort((a, b) =>
   </TileList>
 
   <h2>Componenten overzicht</h2>
-  <TileList>
+  <div class="component-grid">
     {sortedComponents.map((component) => (
       <ComponentCard
         href={`${base}/componenten/${component.id.replace(/\.mdx?$/, '')}`}
         title={component.data.title}
         frameworks={component.data.frameworks}
+        previewImage={component.data.previewImage}
       >
         {component.data.description && (
           <p>{component.data.description}</p>
         )}
       </ComponentCard>
     ))}
-  </TileList>
+  </div>
   </article>
 </Layout>
 
-<style>
+<style is:global>
   .componenten-page {
     padding-block-start: 2rem;
   }
 
-  .utrecht-component-canvas {
-    border-radius: 3px;
-    border: 1px solid grey;
-    padding: 16px;
-    background-color: #fafafa;
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
   }
-</style>
+
+  @media (max-width: 900px) {
+    .component-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .component-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style is:global>

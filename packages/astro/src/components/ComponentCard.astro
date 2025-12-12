@@ -1,14 +1,26 @@
 ---
+import { base } from 'astro:config/client';
+
 interface Props {
   href: string;
   title: string;
   frameworks: string[];
+  previewImage?: string;
 }
 
-const { href, title, frameworks } = Astro.props;
+const { href, title, frameworks, previewImage } = Astro.props;
+
+const fullPreviewImage = previewImage
+  ? (previewImage.startsWith('/') ? `${base}${previewImage}` : previewImage)
+  : undefined;
 ---
 
 <div class="utrecht-component-card">
+  {fullPreviewImage && (
+    <div class="utrecht-component-card__preview">
+      <img src={fullPreviewImage} alt="" class="utrecht-component-card__preview-image" />
+    </div>
+  )}
   <a class="utrecht-link utrecht-component-card__link" href={href}>
     <h3 class="nl-heading nl-heading--level-3">{title}</h3>
   </a>
@@ -34,6 +46,25 @@ const { href, title, frameworks } = Astro.props;
     padding-block-end: 24px;
     padding-inline-start: 16px;
     padding-inline-end: 16px;
+  }
+
+  .utrecht-component-card__preview {
+    margin-block-end: 8px;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+  }
+
+  .utrecht-component-card__preview-image {
+    display: block;
+    max-width: 100%;
+    max-height: 80px;
+    height: auto;
+    object-fit: contain;
   }
 
   .utrecht-component-card__link {
