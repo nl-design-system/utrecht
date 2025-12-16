@@ -1347,7 +1347,7 @@ importers:
         version: 29.7.0(@types/node@22.18.1)(babel-plugin-macros@3.1.0)
       jest-preset-angular:
         specifier: 13.1.4
-        version: 13.1.4(1e2d27b3b790b41cab04db7d8ca39760)
+        version: 13.1.4(8ab48d316dcb1bb011823b23b1f9999d)
       lodash.clonedeepwith:
         specifier: 4.5.0
         version: 4.5.0
@@ -28096,7 +28096,7 @@ snapshots:
       '@babel/core': 7.20.12
       '@babel/helper-compilation-targets': 7.27.2
       '@babel/helper-plugin-utils': 7.27.1
-      debug: 4.4.1
+      debug: 4.4.3
       lodash.debounce: 4.0.8
       resolve: 1.22.8
       semver: 6.3.1
@@ -28108,7 +28108,7 @@ snapshots:
       '@babel/core': 7.23.7
       '@babel/helper-compilation-targets': 7.27.2
       '@babel/helper-plugin-utils': 7.27.1
-      debug: 4.4.1
+      debug: 4.4.3
       lodash.debounce: 4.0.8
       resolve: 1.22.8
     transitivePeerDependencies:
@@ -35794,7 +35794,7 @@ snapshots:
       magic-string: 0.30.18
       storybook: 9.1.5(@testing-library/dom@10.4.0)(prettier@2.8.8)(vite@7.1.7(@types/node@22.18.1)(jiti@1.21.0)(less@4.2.0)(sass@1.69.5)(terser@5.44.0)(tsx@4.19.0)(yaml@2.8.1))
       style-loader: 3.3.3(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
-      terser-webpack-plugin: 5.3.9(@swc/core@1.13.5(@swc/helpers@0.5.17))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+      terser-webpack-plugin: 5.3.14(@swc/core@1.13.5(@swc/helpers@0.5.17))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       ts-dedent: 2.2.0
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
       webpack-dev-middleware: 6.1.3(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
@@ -36345,6 +36345,12 @@ snapshots:
       sass-loader: 13.3.2(sass@1.69.5)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
       style-loader: 3.3.3(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
 
+  '@storybook/preset-scss@1.0.3(css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(sass-loader@13.3.2(sass@1.69.5)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(style-loader@3.3.3(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))':
+    dependencies:
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+      sass-loader: 13.3.2(sass@1.69.5)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+      style-loader: 3.3.3(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+
   '@storybook/preview-api@7.6.4':
     dependencies:
       '@storybook/channels': 7.6.4
@@ -36368,7 +36374,7 @@ snapshots:
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@4.9.5)(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))':
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       endent: 2.1.0
       find-cache-dir: 3.3.2
       flat-cache: 3.2.0
@@ -36382,7 +36388,7 @@ snapshots:
 
   '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.9.2)(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))':
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       endent: 2.1.0
       find-cache-dir: 3.3.2
       flat-cache: 3.2.0
@@ -37624,7 +37630,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.42.0(typescript@4.9.5)
       '@typescript-eslint/types': 8.42.0
-      debug: 4.4.1
+      debug: 4.4.3
       typescript: 4.9.5
     transitivePeerDependencies:
       - supports-color
@@ -37633,7 +37639,7 @@ snapshots:
     dependencies:
       '@typescript-eslint/tsconfig-utils': 8.42.0(typescript@5.9.2)
       '@typescript-eslint/types': 8.42.0
-      debug: 4.4.1
+      debug: 4.4.3
       typescript: 5.9.2
     transitivePeerDependencies:
       - supports-color
@@ -39190,9 +39196,9 @@ snapshots:
   babel-eslint@10.1.0(eslint@7.32.0):
     dependencies:
       '@babel/code-frame': 7.27.1
-      '@babel/parser': 7.28.3
+      '@babel/parser': 7.28.5
       '@babel/traverse': 7.28.3
-      '@babel/types': 7.28.2
+      '@babel/types': 7.28.5
       eslint: 7.32.0
       eslint-visitor-keys: 1.3.0
       resolve: 1.22.8
@@ -44706,7 +44712,7 @@ snapshots:
   http-proxy-agent@7.0.0:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.4.1
+      debug: 4.4.3
     transitivePeerDependencies:
       - supports-color
 
@@ -45434,7 +45440,7 @@ snapshots:
 
   istanbul-lib-source-maps@4.0.1:
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       istanbul-lib-coverage: 3.2.2
       source-map: 0.6.1
     transitivePeerDependencies:
@@ -45797,7 +45803,7 @@ snapshots:
     optionalDependencies:
       jest-resolve: 29.7.0
 
-  jest-preset-angular@13.1.4(1e2d27b3b790b41cab04db7d8ca39760):
+  jest-preset-angular@13.1.4(8ab48d316dcb1bb011823b23b1f9999d):
     dependencies:
       '@angular-devkit/build-angular': 17.1.0(@angular/compiler-cli@17.1.0(@angular/compiler@17.1.0(@angular/core@17.1.0(rxjs@7.8.1)(zone.js@0.14.3)))(typescript@5.3.3))(@swc/core@1.13.5(@swc/helpers@0.5.17))(@types/express@4.17.21)(@types/node@22.18.1)(chokidar@3.5.3)(html-webpack-plugin@5.5.4(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11)))(jest-environment-jsdom@29.7.0)(jest@29.7.0(@types/node@22.18.1)(babel-plugin-macros@3.1.0))(ng-packagr@17.0.3(@angular/compiler-cli@17.1.0(@angular/compiler@17.1.0(@angular/core@17.1.0(rxjs@7.8.1)(zone.js@0.14.3)))(typescript@5.3.3))(tslib@2.6.2)(typescript@5.3.3))(typescript@5.3.3)
       '@angular/compiler-cli': 17.1.0(@angular/compiler@17.1.0(@angular/core@17.1.0(rxjs@7.8.1)(zone.js@0.14.3)))(typescript@5.3.3)
@@ -45809,7 +45815,7 @@ snapshots:
       jest-environment-jsdom: 29.7.0
       jest-util: 29.7.0
       pretty-format: 29.7.0
-      ts-jest: 29.2.4(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.25.9)(jest@29.7.0(@types/node@22.18.1)(babel-plugin-macros@3.1.0))(typescript@5.3.3)
+      ts-jest: 29.2.4(@babel/core@7.28.3)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.28.3))(esbuild@0.25.9)(jest@29.7.0(@types/node@22.18.1)(babel-plugin-macros@3.1.0))(typescript@5.3.3)
       typescript: 5.3.3
     optionalDependencies:
       esbuild: 0.25.9
@@ -47583,7 +47589,7 @@ snapshots:
 
   micromark@2.11.4:
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       parse-entities: 2.0.0
     transitivePeerDependencies:
       - supports-color
@@ -47591,7 +47597,7 @@ snapshots:
   micromark@3.2.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.1
+      debug: 4.4.3
       decode-named-character-reference: 1.0.2
       micromark-core-commonmark: 1.1.0
       micromark-factory-space: 1.1.0
@@ -47613,7 +47619,7 @@ snapshots:
   micromark@4.0.0:
     dependencies:
       '@types/debug': 4.1.12
-      debug: 4.4.1
+      debug: 4.4.3
       decode-named-character-reference: 1.0.2
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.0
@@ -51614,7 +51620,7 @@ snapshots:
 
   send@1.2.0:
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       encodeurl: 2.0.0
       escape-html: 1.0.3
       etag: 1.8.1
@@ -51984,7 +51990,7 @@ snapshots:
   socks-proxy-agent@7.0.0:
     dependencies:
       agent-base: 6.0.2
-      debug: 4.4.1
+      debug: 4.4.3
       socks: 2.7.1
     transitivePeerDependencies:
       - supports-color
@@ -51992,7 +51998,7 @@ snapshots:
   socks-proxy-agent@8.0.2:
     dependencies:
       agent-base: 7.1.0
-      debug: 4.4.1
+      debug: 4.4.3
       socks: 2.7.1
     transitivePeerDependencies:
       - supports-color
@@ -52105,7 +52111,7 @@ snapshots:
 
   spdy-transport@3.0.0:
     dependencies:
-      debug: 4.4.1
+      debug: 4.4.3
       detect-node: 2.1.0
       hpack.js: 2.1.6
       obuf: 1.1.2
@@ -52743,6 +52749,10 @@ snapshots:
     dependencies:
       webpack: 5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)
 
+  style-loader@3.3.3(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
+    dependencies:
+      webpack: 5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11)
+
   style-to-js@1.1.17:
     dependencies:
       style-to-object: 1.0.9
@@ -53360,7 +53370,7 @@ snapshots:
       '@jest/types': 29.6.3
       babel-jest: 29.7.0(@babel/core@7.24.7)
 
-  ts-jest@29.2.4(@babel/core@7.24.7)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.24.7))(esbuild@0.25.9)(jest@29.7.0(@types/node@22.18.1)(babel-plugin-macros@3.1.0))(typescript@5.3.3):
+  ts-jest@29.2.4(@babel/core@7.28.3)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.28.3))(esbuild@0.25.9)(jest@29.7.0(@types/node@22.18.1)(babel-plugin-macros@3.1.0))(typescript@5.3.3):
     dependencies:
       bs-logger: 0.2.6
       ejs: 3.1.10
@@ -53374,10 +53384,10 @@ snapshots:
       typescript: 5.3.3
       yargs-parser: 21.1.1
     optionalDependencies:
-      '@babel/core': 7.24.7
+      '@babel/core': 7.28.3
       '@jest/transform': 29.7.0
       '@jest/types': 29.6.3
-      babel-jest: 29.7.0(@babel/core@7.24.7)
+      babel-jest: 29.7.0(@babel/core@7.28.3)
       esbuild: 0.25.9
 
   ts-jest@29.2.4(@babel/core@7.28.3)(@jest/transform@29.7.0)(@jest/types@29.6.3)(babel-jest@29.7.0(@babel/core@7.28.3))(jest@29.7.0(@types/node@20.14.8)(babel-plugin-macros@3.1.0))(typescript@5.5.4):
@@ -53486,7 +53496,7 @@ snapshots:
   tuf-js@1.1.7:
     dependencies:
       '@tufjs/models': 1.0.4
-      debug: 4.4.1
+      debug: 4.4.3
       make-fetch-happen: 11.1.1
     transitivePeerDependencies:
       - supports-color
@@ -53494,7 +53504,7 @@ snapshots:
   tuf-js@2.2.0:
     dependencies:
       '@tufjs/models': 2.0.0
-      debug: 4.4.1
+      debug: 4.4.3
       make-fetch-happen: 13.0.0
     transitivePeerDependencies:
       - supports-color
@@ -53671,7 +53681,7 @@ snapshots:
       '@types/node': 18.19.3
       '@types/unist': 2.0.10
       concat-stream: 2.0.0
-      debug: 4.4.1
+      debug: 4.4.3
       fault: 2.0.1
       glob: 8.1.0
       ignore: 5.3.1
