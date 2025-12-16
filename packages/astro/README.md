@@ -12,6 +12,39 @@ Er is gekozen om over te stappen op Astro voor de documentatie website van de Ge
 6. Er zijn geen iframes meer nodig om componenten te tonen in de documentatie website. Hierdoor laden we niet nog een hele pagina in per component
    en ziet het er op mobiel beter uit.
 
+## Waar kan ik de documentatie in Astro aanpassen?
+
+De documentatie is te vinden onder [pages/](./pages) en en [docs/components](./docs/components).
+
+### Structuur
+
+#### Documentatie paginas
+
+Onder [pages/](./pages) vind je de hoofdnavigatie pagina's van de documentatie website.
+De navigatie structuur van de website staat op dit moment nog vast. Er zijn 6 hoofdnavigatie thema's
+
+- Design System
+- Designers
+- Developers
+- Richtlijnen
+- Componenten
+- Vragen
+
+Componenten is een uitzondering en is niet te vinden onder [pages/](./pages) maar onder [docs/components](./docs/components).
+
+Elk hoofdnavigatie thema heeft een eigen map onder [pages/](./pages). De `_index.md` bevatten de inhoud van de hoofdnavigatie pagina.
+Door een nieuw markdown bestand (`.md` of `.mdx`) toe te voegen aan de map, wordt er automatisch een nieuwe subpagina aangemaakt in de navigatie structuur.
+
+Voeg de volgende front-matter toe bovenaan het markdown bestand
+
+```markdown
+---
+title: Pagina titel
+description: Pagina beschrijving, dit komt terug in de navigatietegel.
+order: 1 # Bepaalt de volgorde in de tegelnavigatie, lager is hoger in de lijst
+---
+```
+
 ## Hoe voeg ik een icoon toe aan het iconen overzicht?
 
 1. Voeg de SVG toe aan [packages/icons/svg](../icon/src/svg/)
