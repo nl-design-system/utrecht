@@ -2,7 +2,7 @@ import { glob } from 'astro/loaders'; // Not available with legacy API
 import { defineCollection, z } from 'astro:content';
 
 const pages = defineCollection({
-  loader: glob({ base: './pages', pattern: '**/*.{md,mdx}' }),
+  loader: glob({ base: 'docs/pages', pattern: '**/*.{md,mdx}' }),
   schema: z.object({
     title: z.string(),
     description: z.string(),
