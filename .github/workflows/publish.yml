@@ -219,7 +219,9 @@ jobs:
 
       - name: Publish to Chromatic
         uses: chromaui/action@bc2d84ad2b60813a67d995c5582d696104a19383 # v13.3.2
-        if: github.event.pull_request.draft == false
+        if: |
+          github.event.pull_request.draft == false &&
+          github.actor != 'dependabot[bot]'
         with:
           autoAcceptChanges: ${{ env.MAIN_BRANCH }}
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
