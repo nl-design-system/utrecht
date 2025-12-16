@@ -1,6 +1,9 @@
 import fs from 'fs';
 import path from 'path';
-import spacingMatrix from './src/spacing-matrix.json';
+import { fileURLToPath } from 'node:url';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const spacingMatrix = JSON.parse(fs.readFileSync(path.join(__dirname, 'spacing-matrix.json'), 'utf-8'));
 
 const spaceMap = {
   NVT: undefined,
@@ -51,7 +54,7 @@ const getRichTextStyles = (components) => `
  * Copyright (c) 2024-2025 Frameless B.V.
  */
 
-@import "./mixin";
+@use "./mixin" as *;
 
 .utrecht-rich-text {
   --utrecht-space-around: 1;
@@ -60,10 +63,6 @@ const getRichTextStyles = (components) => `
 
 const spacings = getSpacings(spacingMatrix);
 
-fs.writeFileSync(path.resolve('./components/rich-text/src/_mixin.scss'), getSpacingMixins(spacings).join('\n'), {
-  override: true,
-});
+fs.writeFileSync(path.resolve('./src/_mixin.scss'), getSpacingMixins(spacings).join('\n'));
 
-fs.writeFileSync(path.resolve('./components/rich-text/src/index.scss'), getRichTextStyles(spacings), {
-  override: true,
-});
+fs.writeFileSync(path.resolve('./src/index.scss'), getRichTextStyles(spacings));

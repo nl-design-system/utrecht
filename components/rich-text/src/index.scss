@@ -8,7 +8,6 @@
 
 .utrecht-rich-text {
   --utrecht-space-around: 1;
-
   @include utrecht-heading-1;
   @include utrecht-heading-2;
   @include utrecht-heading-3;
@@ -36,6 +35,7 @@
   @include utrecht-paragraph;
   @include utrecht-select;
   @include utrecht-separator;
+  @include utrecht-spotlight-section;
   @include utrecht-sidenav;
   @include utrecht-badge-status;
   @include utrecht-table;
