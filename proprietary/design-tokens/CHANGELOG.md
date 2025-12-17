@@ -1,5 +1,16 @@
 # @utrecht/design-tokens
 
+## 5.0.0
+
+### Major Changes
+
+- edac79f: - badge-status is no longer styled through common badge tokens but has its own set of tokens
+  - badge-status has been renamed to status-badge, use @utrecht/status-badge-css instead of @utrecht/badge-status-css
+
+### Patch Changes
+
+- 0fcdfbf: Fix the mixins for link focus and focus-visible states in the navigation component to correctly reference the design tokens for background colors and text decorations.
+
 ## 4.2.0
 
 ### Minor Changes

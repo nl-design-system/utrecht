@@ -1,5 +1,17 @@
 # @utrecht/web-component-library-react
 
+## 4.0.0
+
+### Major Changes
+
+- edac79f: - badge-status is no longer styled through common badge tokens but has its own set of tokens
+  - badge-status has been renamed to status-badge, use @utrecht/status-badge-css instead of @utrecht/badge-status-css
+
+### Patch Changes
+
+- Updated dependencies [edac79f]
+  - @utrecht/web-component-library-stencil@4.0.0
+
 ## 3.0.12
 
 ### Patch Changes
