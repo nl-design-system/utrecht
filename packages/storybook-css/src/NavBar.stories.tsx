@@ -5,7 +5,7 @@ import { Button, NavBar, NavList, NavListLink } from '@utrecht/component-library
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/nav-bar-css/README.md?raw';
 import tokensDefinition from '@utrecht/nav-bar-css/src/tokens.json';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -46,6 +46,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    label: 'Hoofdmenu',
     children: (
       <NavList>
         <NavListLink href="#">Wonen en leven</NavListLink>
@@ -139,7 +140,7 @@ export const WithCurrentItem: Story = {
   name: 'Navigation list with current item',
 };
 
-const alignStyles: React.CSSProperties = {
+const alignStyles: CSSProperties = {
   display: 'flex',
   alignItems: 'center',
   gap: '0.5rem',
@@ -149,7 +150,7 @@ export const WithSearchWidget: Story = {
   args: {
     children: (
       <>
-        <NavList inline>
+        <NavList inlineSizeAuto>
           <NavListLink href="#">Wonen en leven</NavListLink>
           <NavListLink href="#">Werk en inkomen</NavListLink>
           <NavListLink href="#">Ondernemen</NavListLink>
