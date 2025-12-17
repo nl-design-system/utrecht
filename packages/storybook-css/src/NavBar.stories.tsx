@@ -129,31 +129,6 @@ const alignStyles: React.CSSProperties = {
   gap: '0.5rem',
 };
 
-export const WithActionGroup: Story = {
-  args: {
-    children: (
-      <>
-        <NavList inline>
-          <NavListLink href="#">Wonen en leven</NavListLink>
-          <NavListLink href="#">Werk en inkomen</NavListLink>
-          <NavListLink href="#">Ondernemen</NavListLink>
-        </NavList>
-
-        <div style={alignStyles}>
-          <Button type="button" appearance="primary-action">
-            Aanvragen
-          </Button>
-
-          <Button type="button" appearance="secondary-action">
-            Meer informatie
-          </Button>
-        </div>
-      </>
-    ),
-  },
-  name: 'Navigation list with action group',
-};
-
 export const WithSearchWidget: Story = {
   args: {
     children: (
