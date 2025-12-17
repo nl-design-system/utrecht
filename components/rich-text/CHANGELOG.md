@@ -1,5 +1,12 @@
 # @utrecht/rich-text-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 3be2632: - Added spotlight-section to Richtext component
+  - Updated generate spacing-matrix voor Richtext component
+
 ## 2.0.1
 
 ### Patch Changes
