@@ -7,11 +7,12 @@ import { LinkButton } from './LinkButton';
 
 export interface NavListProps extends HTMLAttributes<HTMLUListElement> {
   appearance?: undefined | string | 'center';
+  inline?: boolean;
 }
 
 export const NavList = forwardRef(
   (
-    { appearance, children, className, ...restProps }: PropsWithChildren<NavListProps>,
+    { appearance, children, className, inline, ...restProps }: PropsWithChildren<NavListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => (
     <ul
@@ -20,6 +21,7 @@ export const NavList = forwardRef(
         'utrecht-nav-list',
         {
           'utrecht-nav-list--center': appearance === 'center',
+          'utrecht-nav-list--inline': inline,
         },
         className,
       )}
@@ -35,34 +37,49 @@ NavList.displayName = 'NavList';
 
 export interface NavListLinkProps extends LinkProps {
   center?: boolean;
+  current?: 'page' | 'true';
 }
 
-export const NavListLink = ({ center, children, className, ...restProps }: PropsWithChildren<NavListLinkProps>) => (
-  <li
-    className={clsx(
-      'utrecht-nav-list__item',
-      {
-        'utrecht-nav-list__item--center': center,
-      },
-      className,
-    )}
-  >
-    <Link className="utrecht-nav-list__link" {...restProps}>
-      {children}
-    </Link>
-  </li>
-);
+export const NavListLink = ({
+  center,
+  children,
+  className,
+  current,
+  'aria-current': ariaCurrent,
+  ...restProps
+}: PropsWithChildren<NavListLinkProps>) => {
+  const _current = current ?? ariaCurrent;
+
+  return (
+    <li
+      className={clsx(
+        'utrecht-nav-list__item',
+        {
+          'utrecht-nav-list__item--center': center,
+        },
+        className,
+      )}
+    >
+      <Link className="utrecht-nav-list__link" aria-current={_current || undefined} {...restProps}>
+        {children}
+      </Link>
+    </li>
+  );
+};
 
 NavListLink.displayName = 'NavListLink';
 
 export interface NavListLinkButtonProps extends LinkButtonProps {
   center?: boolean;
+  current?: 'page' | 'true';
 }
 
 export const NavListLinkButton = ({
   center,
   children,
   className,
+  current,
+  'aria-current': ariaCurrent,
   ...restProps
 }: PropsWithChildren<NavListLinkButtonProps>) => (
   <li
@@ -74,7 +91,7 @@ export const NavListLinkButton = ({
       className,
     )}
   >
-    <LinkButton className="utrecht-nav-list__link" {...restProps}>
+    <LinkButton className="utrecht-nav-list__link" aria-current={current ?? ariaCurrent ?? undefined} {...restProps}>
       {children}
     </LinkButton>
   </li>

@@ -27,6 +27,10 @@
   justify-content: start;
 }
 
+.utrecht-nav-list--inline {
+  inline-size: auto;
+}
+
 .utrecht-nav-list--center {
   & > * {
     flex: 1 1 0;
