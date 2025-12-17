@@ -123,6 +123,22 @@ export const WrapText: Story = {
   name: 'Wrap long text in items',
 };
 
+export const WithCurrentItem: Story = {
+  args: {
+    children: (
+      <NavList>
+        <NavListLink href="#">Wonen en leven</NavListLink>
+        <NavListLink href="#" current="page">
+          Werk en inkomen
+        </NavListLink>
+        <NavListLink href="#">Ondernemen</NavListLink>
+        <NavListLink href="#">Bestuur en organisatie</NavListLink>
+      </NavList>
+    ),
+  },
+  name: 'Navigation list with current item',
+};
+
 const alignStyles: React.CSSProperties = {
   display: 'flex',
   alignItems: 'center',

@@ -54,3 +54,8 @@
   padding-inline-start: var(--utrecht-nav-bar-link-padding-inline-start);
   text-decoration: none;
 }
+
+.utrecht-nav-list__link--current {
+  background-color: var(--utrecht-navigation-link-is-current-background-color, transparent);
+  font-weight: var(--utrecht-navigation-link-is-current-font-weight);
+}

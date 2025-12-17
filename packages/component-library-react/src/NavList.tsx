@@ -60,7 +60,13 @@ export const NavListLink = ({
         className,
       )}
     >
-      <Link className="utrecht-nav-list__link" aria-current={_current || undefined} {...restProps}>
+      <Link
+        className={clsx('utrecht-nav-list__link', {
+          'utrecht-nav-list__link--current': !!_current,
+        })}
+        aria-current={_current || undefined}
+        {...restProps}
+      >
         {children}
       </Link>
     </li>
@@ -91,7 +97,13 @@ export const NavListLinkButton = ({
       className,
     )}
   >
-    <LinkButton className="utrecht-nav-list__link" aria-current={current ?? ariaCurrent ?? undefined} {...restProps}>
+    <LinkButton
+      className={clsx('utrecht-nav-list__link', {
+        'utrecht-nav-list__link--current': !!(current ?? ariaCurrent),
+      })}
+      aria-current={current ?? ariaCurrent ?? undefined}
+      {...restProps}
+    >
       {children}
     </LinkButton>
   </li>
