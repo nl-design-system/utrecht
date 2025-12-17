@@ -7,12 +7,12 @@ import { LinkButton } from './LinkButton';
 
 export interface NavListProps extends HTMLAttributes<HTMLUListElement> {
   appearance?: undefined | string | 'center';
-  inline?: boolean;
+  inlineSizeAuto?: boolean;
 }
 
 export const NavList = forwardRef(
   (
-    { appearance, children, className, inline, ...restProps }: PropsWithChildren<NavListProps>,
+    { appearance, children, className, inlineSizeAuto, ...restProps }: PropsWithChildren<NavListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => (
     <ul
@@ -21,7 +21,7 @@ export const NavList = forwardRef(
         'utrecht-nav-list',
         {
           'utrecht-nav-list--center': appearance === 'center',
-          'utrecht-nav-list--inline': inline,
+          'utrecht-nav-list--inline-size-auto': inlineSizeAuto,
         },
         className,
       )}

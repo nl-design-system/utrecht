@@ -87,12 +87,12 @@ describe('Navigation bar link list', () => {
     expect(ref.current).toBe(list);
   });
 
-  it('renders inline modifier class when inline prop is true', () => {
-    const { container } = render(<NavList inline />);
+  it('renders inline-size-auto modifier class when inlineSizeAuto prop is true', () => {
+    const { container } = render(<NavList inlineSizeAuto />);
 
     const list = container.querySelector(':only-child');
 
-    expect(list).toHaveClass('utrecht-nav-list--inline');
+    expect(list).toHaveClass('utrecht-nav-list--inline-size-auto');
   });
 
   it('renders center modifier class when appearance is center', () => {
