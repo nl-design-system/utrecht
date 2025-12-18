@@ -37,19 +37,16 @@ NavList.displayName = 'NavList';
 
 export interface NavListLinkProps extends LinkProps {
   center?: boolean;
-  current?: 'page' | 'true';
+  isCurrent?: 'page' | 'true';
 }
 
 export const NavListLink = ({
   center,
   children,
   className,
-  current,
-  'aria-current': ariaCurrent,
+  isCurrent,
   ...restProps
 }: PropsWithChildren<NavListLinkProps>) => {
-  const _current = current ?? ariaCurrent;
-
   return (
     <li
       className={clsx(
@@ -62,9 +59,8 @@ export const NavListLink = ({
     >
       <Link
         className={clsx('utrecht-nav-list__link', {
-          'utrecht-nav-list__link--current': !!_current,
+          'utrecht-nav-list__link--is-current': !!isCurrent,
         })}
-        aria-current={_current || undefined}
         {...restProps}
       >
         {children}
@@ -77,36 +73,36 @@ NavListLink.displayName = 'NavListLink';
 
 export interface NavListLinkButtonProps extends LinkButtonProps {
   center?: boolean;
-  current?: 'page' | 'true';
+  isCurrent?: 'page' | 'true';
 }
 
 export const NavListLinkButton = ({
   center,
   children,
   className,
-  current,
-  'aria-current': ariaCurrent,
+  isCurrent,
   ...restProps
-}: PropsWithChildren<NavListLinkButtonProps>) => (
-  <li
-    className={clsx(
-      'utrecht-nav-list__item',
-      {
-        'utrecht-nav-list__item--center': center,
-      },
-      className,
-    )}
-  >
-    <LinkButton
-      className={clsx('utrecht-nav-list__link', {
-        'utrecht-nav-list__link--current': !!(current ?? ariaCurrent),
-      })}
-      aria-current={current ?? ariaCurrent ?? undefined}
-      {...restProps}
+}: PropsWithChildren<NavListLinkButtonProps>) => {
+  return (
+    <li
+      className={clsx(
+        'utrecht-nav-list__item',
+        {
+          'utrecht-nav-list__item--center': center,
+        },
+        className,
+      )}
     >
-      {children}
-    </LinkButton>
-  </li>
-);
+      <LinkButton
+        className={clsx('utrecht-nav-list__link', {
+          'utrecht-nav-list__link--current': !!isCurrent,
+        })}
+        {...restProps}
+      >
+        {children}
+      </LinkButton>
+    </li>
+  );
+};
 
 NavListLinkButton.displayName = 'NavListLinkButton';
