@@ -15,7 +15,7 @@ export const NavBar = forwardRef(
   ) => {
     const headingId = label ? useId() : undefined;
     return (
-      <nav {...restProps} ref={ref} className={clsx('utrecht-nav-bar', className)} aria-labelledby={headingId}>
+      <nav ref={ref} className={clsx('utrecht-nav-bar', className)} aria-labelledby={headingId} {...restProps}>
         {label && (
           <Heading id={headingId} className="utrecht-nav-bar__heading" level={headingLevel} aria-hidden="true">
             {label}
