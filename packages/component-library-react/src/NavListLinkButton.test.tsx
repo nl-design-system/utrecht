@@ -118,4 +118,18 @@ describe('Navigation bar link list button', () => {
   });
 
   it.todo('supports ForwardRef in React');
+
+  it('renders current modifier class when isCurrent prop is set', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLinkButton formAction="/logout" formMethod="post" isCurrent="page">
+          Logout
+        </NavListLinkButton>
+      </NavList>,
+    );
+
+    const button = container.querySelector('button:only-child');
+
+    expect(button).toHaveClass('utrecht-nav-list__link--is-current');
+  });
 });
