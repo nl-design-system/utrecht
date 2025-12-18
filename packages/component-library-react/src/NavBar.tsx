@@ -13,7 +13,8 @@ export const NavBar = forwardRef(
     { appearance = '', children, className, headingLevel = 2, label, ...restProps }: PropsWithChildren<NavBarProps>,
     ref: ForwardedRef<HTMLElement>,
   ) => {
-    const headingId = label ? useId() : undefined;
+    const generatedId = useId();
+    const headingId = label ? generatedId : undefined;
     return (
       <nav ref={ref} className={clsx('utrecht-nav-bar', className)} aria-labelledby={headingId} {...restProps}>
         {label && (
