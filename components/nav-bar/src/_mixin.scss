@@ -24,6 +24,10 @@
   padding-block-start: calc(var(--utrecht-focus-outline-width) * 2);
 }
 
+@mixin utrecht-nav-bar__heading {
+  display: none;
+}
+
 @mixin utrecht-nav-bar__content {
   align-items: stretch;
   background-color: var(--utrecht-nav-bar-content-background-color);
