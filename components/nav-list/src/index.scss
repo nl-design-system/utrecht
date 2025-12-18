@@ -31,7 +31,8 @@
   inline-size: auto;
 }
 
-.utrecht-nav-list__link[aria-current] {
+.utrecht-nav-list__link[aria-current="page"],
+.utrecht-nav-list__link[aria-current="true"] {
   background-color: var(--utrecht-navigation-link-is-current-background-color, transparent);
   font-weight: var(--utrecht-navigation-link-is-current-font-weight);
 }
