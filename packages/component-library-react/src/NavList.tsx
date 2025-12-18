@@ -95,7 +95,7 @@ export const NavListLinkButton = ({
     >
       <LinkButton
         className={clsx('utrecht-nav-list__link', {
-          'utrecht-nav-list__link--current': !!isCurrent,
+          'utrecht-nav-list__link--is-current': !!isCurrent,
         })}
         {...restProps}
       >
