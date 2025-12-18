@@ -76,6 +76,7 @@
     --utrecht-status-badge-error-background-color,
     var(--utrecht-status-badge-danger-background-color, hsl(0 100% 30%))
   );
+  border-color: var(--utrecht-status-badge-error-border-color);
   color: var(--utrecht-status-badge-error-color, var(--utrecht-status-badge-danger-color, white));
 }
 

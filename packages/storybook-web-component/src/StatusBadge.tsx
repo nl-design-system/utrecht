@@ -8,7 +8,7 @@ import { UtrechtStatusBadge } from '@utrecht/web-component-library-react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'Web Component/Badge status',
+  title: 'Web Component/Status badge',
   id: 'web-component-status-badge',
   component: UtrechtStatusBadge,
   argTypes: {
