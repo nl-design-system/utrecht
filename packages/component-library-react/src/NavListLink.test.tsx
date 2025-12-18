@@ -139,10 +139,10 @@ describe('Navigation bar link list link', () => {
     expect(listItem).toHaveClass('utrecht-nav-list__item--center');
   });
 
-  it('renders current modifier class when isCurrent prop is set', () => {
+  it('supports aria-current attribute', () => {
     const { container } = render(
       <NavList>
-        <NavListLink href="#" isCurrent="page">
+        <NavListLink href="#" aria-current="page">
           Home
         </NavListLink>
       </NavList>,
@@ -150,6 +150,21 @@ describe('Navigation bar link list link', () => {
 
     const link = container.querySelector('a:only-child');
 
-    expect(link).toHaveClass('utrecht-nav-list__link--is-current');
+    expect(link).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('supports extra AnchorHTMLAttributes via restProps', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLink href="#" aria-current="page" title="Navigate to home page">
+          Home
+        </NavListLink>
+      </NavList>,
+    );
+
+    const link = container.querySelector('a:only-child');
+
+    expect(link).toHaveAttribute('aria-current', 'page');
+    expect(link).toHaveAttribute('title', 'Navigate to home page');
   });
 });

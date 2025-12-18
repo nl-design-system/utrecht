@@ -129,7 +129,7 @@ export const WithCurrentItem: Story = {
     children: (
       <NavList>
         <NavListLink href="#">Wonen en leven</NavListLink>
-        <NavListLink href="#" current="page">
+        <NavListLink href="#" aria-current="page">
           Werk en inkomen
         </NavListLink>
         <NavListLink href="#">Ondernemen</NavListLink>

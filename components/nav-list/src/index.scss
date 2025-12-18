@@ -31,6 +31,11 @@
   inline-size: auto;
 }
 
+.utrecht-nav-list__link[aria-current] {
+  background-color: var(--utrecht-navigation-link-is-current-background-color, transparent);
+  font-weight: var(--utrecht-navigation-link-is-current-font-weight);
+}
+
 .utrecht-nav-list--center {
   & > * {
     flex: 1 1 0;
@@ -53,9 +58,4 @@
   padding-inline-end: var(--utrecht-nav-bar-link-padding-inline-end);
   padding-inline-start: var(--utrecht-nav-bar-link-padding-inline-start);
   text-decoration: none;
-}
-
-.utrecht-nav-list__link--current {
-  background-color: var(--utrecht-navigation-link-is-current-background-color, transparent);
-  font-weight: var(--utrecht-navigation-link-is-current-font-weight);
 }
