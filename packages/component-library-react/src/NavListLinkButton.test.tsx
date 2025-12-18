@@ -119,10 +119,10 @@ describe('Navigation bar link list button', () => {
 
   it.todo('supports ForwardRef in React');
 
-  it('renders current modifier class when isCurrent prop is set', () => {
+  it('supports aria-current attribute', () => {
     const { container } = render(
       <NavList>
-        <NavListLinkButton formAction="/logout" formMethod="post" isCurrent="page">
+        <NavListLinkButton formAction="/logout" formMethod="post" aria-current="page">
           Logout
         </NavListLinkButton>
       </NavList>,
@@ -130,6 +130,23 @@ describe('Navigation bar link list button', () => {
 
     const button = container.querySelector('button:only-child');
 
-    expect(button).toHaveClass('utrecht-nav-list__link--is-current');
+    expect(button).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('supports extra ButtonHTMLAttributes via restProps', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLinkButton formAction="/logout" formMethod="post" aria-current="page" title="Log out">
+          Logout
+        </NavListLinkButton>
+      </NavList>,
+    );
+
+    const button = container.querySelector('button:only-child');
+
+    expect(button).toHaveAttribute('aria-current', 'page');
+    expect(button).toHaveAttribute('title', 'Log out');
+    expect(button).toHaveAttribute('formMethod', 'post');
+    expect(button).toHaveAttribute('formAction', '/logout');
   });
 });

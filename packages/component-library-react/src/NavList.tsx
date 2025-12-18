@@ -37,16 +37,9 @@ NavList.displayName = 'NavList';
 
 export interface NavListLinkProps extends LinkProps {
   center?: boolean;
-  isCurrent?: 'page' | 'true';
 }
 
-export const NavListLink = ({
-  center,
-  children,
-  className,
-  isCurrent,
-  ...restProps
-}: PropsWithChildren<NavListLinkProps>) => {
+export const NavListLink = ({ center, children, className, ...restProps }: PropsWithChildren<NavListLinkProps>) => {
   return (
     <li
       className={clsx(
@@ -57,12 +50,7 @@ export const NavListLink = ({
         className,
       )}
     >
-      <Link
-        className={clsx('utrecht-nav-list__link', {
-          'utrecht-nav-list__link--is-current': !!isCurrent,
-        })}
-        {...restProps}
-      >
+      <Link className="utrecht-nav-list__link" {...restProps}>
         {children}
       </Link>
     </li>
@@ -73,14 +61,12 @@ NavListLink.displayName = 'NavListLink';
 
 export interface NavListLinkButtonProps extends LinkButtonProps {
   center?: boolean;
-  isCurrent?: 'page' | 'true';
 }
 
 export const NavListLinkButton = ({
   center,
   children,
   className,
-  isCurrent,
   ...restProps
 }: PropsWithChildren<NavListLinkButtonProps>) => {
   return (
@@ -93,12 +79,7 @@ export const NavListLinkButton = ({
         className,
       )}
     >
-      <LinkButton
-        className={clsx('utrecht-nav-list__link', {
-          'utrecht-nav-list__link--is-current': !!isCurrent,
-        })}
-        {...restProps}
-      >
+      <LinkButton className="utrecht-nav-list__link" {...restProps}>
         {children}
       </LinkButton>
     </li>
