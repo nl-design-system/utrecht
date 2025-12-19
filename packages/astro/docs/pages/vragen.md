@@ -4,7 +4,7 @@ description: Veelgestelde vragen voor designers.
 order: 4
 ---
 
-# Vragen? Vragen
+# Vragen
 
 Heb je vragen over het gebruik van het Utrecht Design System als designer? Hier vind je antwoorden op veelgestelde vragen.
 
@@ -12,7 +12,7 @@ Heb je vragen over het gebruik van het Utrecht Design System als designer? Hier 
 
 ### Waar vind ik de Figma library?
 
-De Figma library is beschikbaar via [link naar Figma].
+De Figma library is beschikbaar via [deze link](https://www.figma.com/design/xV2HiqedQ8M43ifBYj3B4D/%F0%9F%86%95-NL-Design-System---Bibliotheek---Utrecht?m=auto&t=Z2fEQJskMB14KcJ9-6).
 
 ### Hoe kan ik feedback geven?
 
