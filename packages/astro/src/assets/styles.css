@@ -31,3 +31,11 @@
   justify-content: center;
   max-inline-size: none;
 }
+
+.utrecht-drawer .utrecht-nav-list {
+  flex-direction: column;
+}
+
+.utrecht-drawer .utrecht-link {
+  justify-content: start;
+}
