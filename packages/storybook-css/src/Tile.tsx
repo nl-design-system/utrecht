@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import React, { AnchorHTMLAttributes, PropsWithChildren, ReactNode } from 'react';
+import React, { PropsWithChildren, ReactNode } from 'react';
 
 export interface TileProps extends PropsWithChildren {
   active?: boolean;
@@ -8,7 +8,7 @@ export interface TileProps extends PropsWithChildren {
   focusVisible?: boolean;
   keyboardSupport?: boolean;
   icon?: ReactNode;
-  color?: 'default' | 'primary' | 'secondary' | 'tertiary';
+  appearance?: '' | 'primary' | 'secondary' | 'tertiary';
 }
 
 export const Tile = ({
@@ -18,7 +18,7 @@ export const Tile = ({
   focus,
   focusVisible,
   icon,
-  color,
+  appearance,
   ...restProps
 }: PropsWithChildren<TileProps>) => {
   return (
@@ -29,9 +29,9 @@ export const Tile = ({
           'utrecht-tile--hover': hover,
           'utrecht-tile--focus': focus,
           'utrecht-tile--focus-visible': focusVisible,
-          'utrecht-tile--primary': color === 'primary',
-          'utrecht-tile--secondary': color === 'secondary',
-          'utrecht-tile--tertiary': color === 'tertiary',
+          'utrecht-tile--primary': appearance === 'primary',
+          'utrecht-tile--secondary': appearance === 'secondary',
+          'utrecht-tile--tertiary': appearance === 'tertiary',
         })}
         {...restProps}
       >
