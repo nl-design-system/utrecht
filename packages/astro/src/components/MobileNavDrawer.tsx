@@ -46,6 +46,10 @@ const MobileNavDrawer = () => {
       </SubtleButton>
 
       <Drawer align="inline-end" ref={drawerRef} id="mobile-navigation-drawer">
+        <SubtleButton onClick={toggle}>
+          <utrecht-icon-cross />
+          Sluiten
+        </SubtleButton>
         <nav aria-label="Hoofdmenu">
           <NavList>
             <NavListLink href={`${base}/design-system`}>Utrecht Design System</NavListLink>
