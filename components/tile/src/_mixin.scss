@@ -10,6 +10,7 @@
   align-content: end;
   background-color: var(--utrecht-tile-background-color);
   color: var(--utrecht-tile-color);
+  cursor: var(--utrecht-action-activate-cursor, revert);
   display: flex;
   justify-content: space-between;
   min-block-size: 6.25rem;

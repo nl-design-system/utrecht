@@ -29,18 +29,34 @@ const meta = {
   id: 'css-tile',
   component: TileStory,
   argTypes: {
+    active: {
+      description: 'Active',
+      control: 'boolean',
+    },
+    appearance: {
+      description: 'Color variant of the tile',
+      control: { type: 'select' },
+      options: ['', 'primary', 'secondary', 'tertiary'],
+    },
     children: {
       description: 'Text of the tile',
+    },
+    focus: {
+      description: 'Focus',
+      control: 'boolean',
+    },
+    focusVisible: {
+      description: 'Focus visible',
+      control: 'boolean',
+    },
+    hover: {
+      description: 'Hover',
+      control: 'boolean',
     },
     icon: {
       description: 'Icon',
       control: { type: 'select' },
       options: ['', ...iconSet.map(({ id }) => id)],
-    },
-    color: {
-      description: 'Color variant of the tile',
-      control: { type: 'select' },
-      options: ['default', 'primary', 'secondary', 'tertiary'],
     },
   },
   parameters: {
@@ -66,9 +82,13 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    href: '#',
-    children: 'Tile nummer 1',
-    icon: 'utrecht-icon-facebook',
+    active: false,
+    appearance: '',
+    hover: false,
+    focus: false,
+    focusVisible: false,
+    children: 'Over de stad',
+    icon: 'utrecht-icon-over-de-stad',
   },
   parameters: {
     docs: {
@@ -79,39 +99,102 @@ export const Default: Story = {
   },
 };
 
-export const Hover: Story = {
-  parameters: {
-    pseudo: { hover: true },
-  },
+export const Primary: Story = {
   args: {
     ...Default.args,
+    appearance: 'primary',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--primary` class name',
+      },
+    },
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'secondary',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--secondary` class name',
+      },
+    },
+  },
+};
+
+export const Tertiary: Story = {
+  args: {
+    ...Default.args,
+    appearance: 'tertiary',
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--tertiary` class name',
+      },
+    },
+  },
+};
+
+export const Hover: Story = {
+  args: {
+    ...Default.args,
+    hover: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--hover` class name',
+      },
+    },
   },
 };
 
 export const Focus: Story = {
-  parameters: {
-    pseudo: { focus: true },
-  },
   args: {
     ...Default.args,
+    focus: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--focus` class name',
+      },
+    },
   },
 };
 
 export const Active: Story = {
-  parameters: {
-    pseudo: { active: true },
-  },
   args: {
     ...Default.args,
+    active: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--active` class name',
+      },
+    },
   },
 };
 
 export const FocusVisible: Story = {
-  parameters: {
-    pseudo: { focusVisible: true, focus: true },
-  },
   args: {
     ...Default.args,
+    focus: true,
+    focusVisible: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: 'Styling met de `.utrecht-tile--focus` en `.utrecht-tile--focus-visible` class name',
+      },
+    },
   },
 };
 
