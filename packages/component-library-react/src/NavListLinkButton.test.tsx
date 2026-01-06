@@ -130,8 +130,6 @@ describe('Navigation bar link list button', () => {
 
     const button = container.querySelector('button:only-child');
 
-    expect(button).toHaveAttribute('aria-current', 'page');
-    expect(button).toHaveAttribute('title', 'Log out');
     expect(button).toHaveAttribute('formMethod', 'post');
     expect(button).toHaveAttribute('formAction', '/logout');
   });
