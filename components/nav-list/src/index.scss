@@ -19,7 +19,7 @@
 .utrecht-nav-list {
   @include reset-ul;
 
-  align-items: stretch;
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
