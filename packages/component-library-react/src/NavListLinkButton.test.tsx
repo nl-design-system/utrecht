@@ -122,7 +122,7 @@ describe('Navigation bar link list button', () => {
   it('supports extra ButtonHTMLAttributes via restProps', () => {
     const { container } = render(
       <NavList>
-        <NavListLinkButton formAction="/logout" formMethod="post" aria-current="page" title="Log out">
+        <NavListLinkButton formAction="/logout" formMethod="post">
           Logout
         </NavListLinkButton>
       </NavList>,
