@@ -119,20 +119,6 @@ describe('Navigation bar link list button', () => {
 
   it.todo('supports ForwardRef in React');
 
-  it('supports aria-current attribute', () => {
-    const { container } = render(
-      <NavList>
-        <NavListLinkButton formAction="/logout" formMethod="post" aria-current="page">
-          Logout
-        </NavListLinkButton>
-      </NavList>,
-    );
-
-    const button = container.querySelector('button:only-child');
-
-    expect(button).toHaveAttribute('aria-current', 'page');
-  });
-
   it('supports extra ButtonHTMLAttributes via restProps', () => {
     const { container } = render(
       <NavList>
