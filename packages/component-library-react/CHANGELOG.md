@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 12.0.0
+
+### Major Changes
+
+- d1f8749: NavBar: Changed from div to nav element, added label prop with heading and aria-labelledby for accessibility, fixed useId hook usage.
+  NavList: Added inlineSizeAuto prop, refactored to CSS-only aria-current styling for active items.
+
 ## 11.0.0
 
 ### Major Changes
