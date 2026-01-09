@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 5.0.1
+
+### Patch Changes
+
+- 341a0b7: Aligned the `margin-block-start` of flo-decision widget with the Figame design
+
 ## 5.0.0
 
 ### Major Changes

@@ -1,5 +1,11 @@
 # @utrecht/flolegal-decision-tree-css
 
+## 2.1.2
+
+### Patch Changes
+
+- e09112a: Update de Flo Legal Decision Tree client en CSS naar versie 1.17.0 om bugfixes en verbeteringen door te voeren.
+
 ## 2.1.1
 
 ### Patch Changes
