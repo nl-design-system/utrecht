@@ -44,10 +44,24 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    * Body content to be displayed inside the card
    */
   body?: ReactNode;
+  /**
+   * Appearance variant of the card
+   */
+  appearance?: '' | 'primary' | 'secondary' | 'tertiary';
 }
 export const Card = forwardRef(
   (
-    { image, heading, headingLevel, href, Link, className, body, ...restProps }: PropsWithChildren<CardProps>,
+    {
+      image,
+      heading,
+      headingLevel,
+      href,
+      Link,
+      className,
+      body,
+      appearance,
+      ...restProps
+    }: PropsWithChildren<CardProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const linkRef = useRef<HTMLAnchorElement>(null);
@@ -79,6 +93,9 @@ export const Card = forwardRef(
         ref={ref}
         className={clsx('utrecht-card', className, {
           'utrecht-card--link': href,
+          'utrecht-card--primary': appearance === 'primary',
+          'utrecht-card--secondary': appearance === 'secondary',
+          'utrecht-card--tertiary': appearance === 'tertiary',
         })}
         {...linkProps}
         {...restProps}
