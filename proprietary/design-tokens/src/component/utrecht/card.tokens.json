@@ -7,6 +7,12 @@
       "color": {
         "value": "{utrecht.color.black}"
       },
+      "hover": {
+        "scale": { "value": "1.02" }
+      },
+      "focus": {
+        "scale": { "value": "1.02" }
+      },
       "border-radius": {},
       "box-shadow": {},
       "inline-size": {},
@@ -57,6 +63,14 @@
           "value": "{utrecht.space.inline.md}"
         },
         "padding-inline-end": {
+          "value": "{utrecht.space.inline.md}"
+        }
+      },
+      "arrow": {
+        "inline-size": {
+          "value": "{utrecht.space.inline.md}"
+        },
+        "block-size": {
           "value": "{utrecht.space.inline.md}"
         }
       }
