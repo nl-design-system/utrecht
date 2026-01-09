@@ -21,6 +21,10 @@
   @include utrecht-card__arrow-container;
 }
 
+.utrecht-card__arrow {
+  @include utrecht-card__arrow;
+}
+
 .utrecht-card__heading {
   @include utrecht-card__heading;
 }
@@ -34,4 +38,18 @@
 }
 .utrecht-card__body {
   @include utrecht-card__body;
+}
+
+.utrecht-card--focus,
+.utrecht-card:focus {
+  @include utrecht-card--focus;
+}
+
+.utrecht-card:focus-visible {
+  @include utrecht-card--focus-visible;
+}
+
+.utrecht-card--hover,
+.utrecht-card:hover {
+  @include utrecht-card--hover;
 }
