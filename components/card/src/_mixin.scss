@@ -17,14 +17,25 @@
   max-inline-size: var(--utrecht-card-max-inline-size, 100%);
   row-gap: var(--utrecht-card-row-gap);
 }
+
 @mixin utrecht-card--link {
   cursor: pointer;
   text-decoration-skip-ink: none;
 }
+
 @mixin utrecht-card--hover {
   --utrecht-link-text-decoration: underline;
   --utrecht-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
 }
+
+@mixin utrecht-card__arrow-container {
+  align-self: end;
+  block-size: var(--utrecht-card-arrow-container-block-size);
+  inline-size: var(--utrecht-card-arrow-container-inline-size);
+  order: 4;
+  padding-inline-end: var(--utrecht-card-arrow-container-padding-inline-end);
+}
+
 @mixin utrecht-card__heading {
   --utrecht-heading-color: var(--utrecht-card-heading-color);
 
