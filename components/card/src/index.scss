@@ -53,3 +53,15 @@
 .utrecht-card:hover {
   @include utrecht-card--hover;
 }
+
+.utrecht-card--primary {
+  @include utrecht-card--primary;
+}
+
+.utrecht-card--secondary {
+  @include utrecht-card--secondary;
+}
+
+.utrecht-card--tertiary {
+  @include utrecht-card--tertiary;
+}

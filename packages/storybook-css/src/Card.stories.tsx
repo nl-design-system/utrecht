@@ -54,6 +54,11 @@ const meta = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    appearance: {
+      description: 'Color variant of the card',
+      control: { type: 'select' },
+      options: ['', 'primary', 'secondary', 'tertiary'],
+    },
   },
   args: {
     heading: 'Waterput op de Neude',
