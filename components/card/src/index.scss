@@ -17,6 +17,10 @@
   @include utrecht-card--hover;
 }
 
+.utrecht-card__arrow-container {
+  @include utrecht-card__arrow-container;
+}
+
 .utrecht-card__heading {
   @include utrecht-card__heading;
 }
