@@ -53,6 +53,21 @@
   padding-inline-start: var(--utrecht-card-heading-padding-inline-start);
 }
 
+@mixin utrecht-card--primary {
+  background-color: var(--utrecht-card-primary-background-color);
+  color: var(--utrecht-card-primary-color);
+}
+
+@mixin utrecht-card--secondary {
+  background-color: var(--utrecht-card-secondary-background-color);
+  color: var(--utrecht-card-secondary-color);
+}
+
+@mixin utrecht-card--tertiary {
+  background-color: var(--utrecht-card-tertiary-background-color);
+  color: var(--utrecht-card-tertiary-color);
+}
+
 @mixin utrecht-card__image {
   order: 1;
   img:not(.utrecht-img) {
