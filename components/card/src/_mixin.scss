@@ -5,6 +5,7 @@
  */
 
 @use "~@utrecht/img-css/src/mixin" as *;
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
 
 @mixin utrecht-card {
   background-color: var(--utrecht-card-background-color);
@@ -26,6 +27,8 @@
 @mixin utrecht-card--hover {
   --utrecht-link-text-decoration: underline;
   --utrecht-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
+
+  scale: var(--utrecht-card-hover-scale, 1);
 }
 
 @mixin utrecht-card__arrow-container {
@@ -34,6 +37,12 @@
   inline-size: var(--utrecht-card-arrow-container-inline-size);
   order: 4;
   padding-inline-end: var(--utrecht-card-arrow-container-padding-inline-end);
+}
+
+@mixin utrecht-card__arrow {
+  block-size: var(--utrecht-card-arrow-block-size);
+  inline-size: var(--utrecht-card-arrow-inline-size);
+  line-height: 0;
 }
 
 @mixin utrecht-card__heading {
@@ -72,4 +81,13 @@
   order: 3;
   padding-inline-end: var(--utrecht-card-body-padding-inline-end);
   padding-inline-start: var(--utrecht-card-body-padding-inline-start);
+}
+
+@mixin utrecht-card--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+}
+
+@mixin utrecht-card--focus {
+  scale: var(--utrecht-card-focus-scale, 1);
 }
