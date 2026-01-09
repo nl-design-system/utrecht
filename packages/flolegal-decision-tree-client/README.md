@@ -1,7 +1,7 @@
 # @utrecht/flolegal-decision-tree-client
 
 Flo client assets and utilities for the Utrecht Design System.
-**Compatible with Flo Client Plugin v1.13.2**
+**Compatible with Flo Client Plugin v1.17.0**
 
 ## Installation
 
@@ -15,7 +15,7 @@ npm install @utrecht/flolegal-decision-tree-client
 
 ```tsx
 import { loadFloClientScript } from "@utrecht/flolegal-decision-tree-client";
-import "@utrecht/flolegal-decision-tree-client/dist/assets/flo-client-styles.1.13.2.css";
+import "@utrecht/flo-legal-decision-tree-client/dist/assets/flo-client-styles.css";
 
 // Load the script
 await loadFloClientScript("./");
@@ -79,7 +79,7 @@ For Next.js applications, copy the script to your public directory and use the `
 ```json
 {
   "scripts": {
-    "copy:flo-plugin": "cp node_modules/@utrecht/flolegal-decision-tree-client/assets/flo-client-plugin.1.13.2.js ./public",
+    "copy-flo-legal-decision-tree-client-script": "cp ../../node_modules/@utrecht/flo-legal-decision-tree-client/dist/assets/flo-client-plugin.js ../../node_modules/@utrecht/flo-legal-decision-tree-client/dist/assets/flo-client-plugin-polyfills.js ./public",
     "postinstall": "yarn copy:flo-plugin"
   }
 }
@@ -101,7 +101,8 @@ import Script from "next/script";
 export default function MyPage() {
   return (
     <>
-      <Script src="/flo-client-plugin.1.23.2.js" nonce={nonce} />
+      <Script src="/flo-client-plugin-polyfills.js" type="module" nonce={nonce} />
+      <Script src="/flo-client-plugin.js" type="module" nonce={nonce} />
       {/* Your component content */}
     </>
   );
