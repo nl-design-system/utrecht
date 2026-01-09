@@ -13,7 +13,7 @@
 
 /**
  * The nesting is intended to make the CSS specificity higher than the CSS in
- * /packages/flolegal-decision-tree-client/assets/flo-client-styles.1.13.2.css
+ * /packages/flolegal-decision-tree-client/assets/flo-client-styles.1.17.0.css
  * This allows Utrecht Design System styles to override the default Flo client styles.
  */
 .utrecht-flolegal-decision-tree-container {
@@ -57,6 +57,19 @@
     // disabled hover style based on Rene feedback
     @media (forced-colors: active) {
       @include utrecht-button-icon--forced-colors;
+    }
+  }
+
+  .flo-nav .flo-form-button.flo-form-button-restart {
+    @include utrecht-button;
+    @include utrecht-button-appearance-properties("utrecht-button", "primary-action");
+
+    &:hover {
+      @include utrecht-button--hover;
+    }
+
+    &:disabled:hover {
+      @include utrecht-button--disabled;
     }
   }
 
