@@ -37,7 +37,7 @@ const KTOvervolg: React.FC = () => {
 
   return (
     <>
-      <Heading2>Geef je mening</Heading2>
+      <Heading2>Geef uw mening</Heading2>
       <Separator style={{ borderColor: '#D6E5F5', borderWidth: '2px' }} />
 
       {!isSubmitted ? (
