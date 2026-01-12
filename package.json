@@ -82,7 +82,7 @@
     "lint:package-lock": "pnpm ls --recursive",
     "lint:prettier": "prettier --check .",
     "lint-build": "pnpm run --recursive lint-build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier": "prettier --list-different --write .",
     "publish": "lerna publish from-package --yes",
     "publish:changeset": "changeset publish",
