@@ -1,6 +1,8 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 
+type Numberish = string | number;
+
 export default defineComponent({
   name: 'UtrechtImage',
   props: {
@@ -20,8 +22,8 @@ export default defineComponent({
     :class="{ 'utrecht-img--photo': photo }"
     :alt="$attrs?.alt as string"
     :src="$attrs.src as string"
-    :height="$attrs?.height as CSSNumberish"
-    :width="$attrs?.width as CSSNumberish"
+    :height="$attrs?.height as Numberish"
+    :width="$attrs?.width as Numberish"
   />
 </template>
 
