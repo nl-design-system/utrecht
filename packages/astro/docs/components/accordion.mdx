@@ -1,0 +1,226 @@
+---
+title: Accordion
+description: Lange pagina's korter te maken zodat de gebruiker niet lang moet scrollen om de relevante informatie te vinden.
+frameworks:
+  - HTML
+  - CSS
+  - React
+  - Angular
+  - Vue
+  - Web Component
+previewImage: /component-previews/accordion.png
+---
+
+import { AccordionProvider } from "@utrecht/component-library-react/css-module";
+
+# Accordion
+
+Je kunt een accordion gebruiken om lange pagina's korter te maken zodat de gebruiker niet lang moet scrollen om de relevante informatie te vinden.
+
+## Voorbeeld
+
+<div
+  className="utrecht-component-canvas"
+  style={{
+    borderRadius: "3px",
+    border: "1px solid grey",
+    padding: "16px",
+    backgroundColor: "#fafafa",
+    display: "flex",
+    gap: "8px",
+    flexWrap: "wrap",
+  }}
+>
+  <AccordionProvider
+    sections={[
+      {
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.",
+        expandedAccordion: true,
+        label: "Lorem ipsum 1",
+      },
+      {
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.",
+        expandedAccordion: false,
+        label: "Lorem ipsum 2",
+      },
+      {
+        body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore\n      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo\n      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\n      pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est\n      laborum.",
+        expandedAccordion: false,
+        label: "Lorem ipsum 3",
+      },
+    ]}
+  />
+</div>
+
+## Waar kan ik het component vinden?
+
+### Design
+
+- Accordion in Figma (link naar Figma)
+
+### Angular
+
+Component is niet beschikbaar als Angular.
+
+### HTML/CSS
+
+- [Accordion (html/css) in Storybook](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/css_css-button--docs)
+- [Accordion (html/css) in NPM](https://www.npmjs.com/package/@utrecht/button-css)
+- [Accordion (html/css) in Github](https://github.com/nl-design-system/utrecht/tree/main/components/button)
+
+### React
+
+- [Accordion (React) in Storybook ](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/react_react-accordion--docs)
+- [Accordion (React) in NPM](link naar npm)
+- [Accordion (React) in Github](https://github.com/nl-design-system/utrecht/tree/main/components/accordion)
+
+### Webcomponent
+
+Component is niet beschikbaar als Webcomponent.
+
+### Vue
+
+Component is niet beschikbaar in Vue.
+
+## Anatomie
+
+### Design Tokens
+
+Hieronder staan de Design Tokens die gebruikt worden door het Button component. Wil je meer weten over het gebruik van Design Tokens, bekijk dan de Storybook pagina van het component.
+
+```json
+{
+  "utrecht": {
+    "accordion": {
+      "margin-block-start": {},
+      "margin-block-end": {},
+      "row-gap": {},
+      "button": {
+        "padding-inline-end": {},
+        "padding-inline-start": {},
+        "padding-block-end": {},
+        "padding-block-start": {},
+        "background-color": {},
+        "color": {},
+        "border-color": {},
+        "border-radius": {},
+        "border-width": {},
+        "gap": {},
+        "hover": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "active": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "focus": {
+          "background-color": {},
+          "border-color": {},
+          "color": {}
+        },
+        "focus-visible": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        },
+        "icon": {
+          "size": {}
+        }
+      },
+      "panel": {
+        "border-color": {},
+        "border-width": {},
+        "padding-block-start": {},
+        "padding-block-end": {},
+        "padding-inline-start": {},
+        "padding-inline-end": {}
+      },
+      "section": {
+        "margin-block-start": {},
+        "margin-block-end": {},
+        "border-color": {},
+        "border-width": {},
+        "hover": {
+          "border-color": {}
+        }
+      }
+    }
+  }
+}
+```
+
+#### Design Token variabelen
+
+Hieronder staan alle design token CSS-variabelen die gebruikt worden door dit component.
+
+```css
+.your-theme {
+  /* Uncomment each custom property you need */
+  /* --utrecht-accordion-margin-block-start: <length>; */
+  /* --utrecht-accordion-margin-block-end: <length>; */
+  /* --utrecht-accordion-row-gap: <length>; */
+  /* --utrecht-accordion-button-padding-inline-end: <length>; */
+  /* --utrecht-accordion-button-padding-inline-start: <length>; */
+  /* --utrecht-accordion-button-padding-block-end: <length>; */
+  /* --utrecht-accordion-button-padding-block-start: <length>; */
+  /* --utrecht-accordion-button-background-color: <color>; */
+  /* --utrecht-accordion-button-color: <color>; */
+  /* --utrecht-accordion-button-border-color: <color>; */
+  /* --utrecht-accordion-button-border-radius: <length-percentage>; */
+  /* --utrecht-accordion-button-border-width: <length>; */
+  /* --utrecht-accordion-button-gap: <length>; */
+  /* --utrecht-accordion-button-hover-background-color: <color>; */
+  /* --utrecht-accordion-button-hover-border-color: <color>; */
+  /* --utrecht-accordion-button-hover-color: <color>; */
+  /* --utrecht-accordion-button-active-background-color: <color>; */
+  /* --utrecht-accordion-button-active-border-color: <color>; */
+  /* --utrecht-accordion-button-active-color: <color>; */
+  /* --utrecht-accordion-button-focus-background-color: <color>; */
+  /* --utrecht-accordion-button-focus-border-color: <color>; */
+  /* --utrecht-accordion-button-focus-color: <color>; */
+  /* --utrecht-accordion-button-focus-visible-border-color: <color>; */
+  /* --utrecht-accordion-button-focus-visible-border-width: <length>; */
+  /* --utrecht-accordion-button-focus-visible-background-color: <color>; */
+  /* --utrecht-accordion-button-focus-visible-color: <color>; */
+  /* --utrecht-accordion-button-icon-size: <length>; */
+  /* --utrecht-accordion-panel-border-color: <color>; */
+  /* --utrecht-accordion-panel-border-width: <length>; */
+  /* --utrecht-accordion-panel-padding-block-start: <length>; */
+  /* --utrecht-accordion-panel-padding-block-end: <length>; */
+  /* --utrecht-accordion-panel-padding-inline-start: <length>; */
+  /* --utrecht-accordion-panel-padding-inline-end: <length>; */
+  /* --utrecht-accordion-section-margin-block-start: <length>; */
+  /* --utrecht-accordion-section-margin-block-end: <length>; */
+  /* --utrecht-accordion-section-border-color: <color>; */
+  /* --utrecht-accordion-section-border-width: <length>; */
+  /* --utrecht-accordion-section-hover-border-color: <color>; */
+}
+```
+
+## Richtlijnen
+
+### Externe richtlijnen
+
+- [Accordion (Sections With Show/Hide Functionality) - W3C ARIA Authoring Practices Guide](https://www.w3.org/WAI/ARIA/apg/patterns/accordion/)
+
+## Relevante WCAG-succescriteria
+
+De WCAG eisen voor de button component en de heading component gelden ook voor de accordion header.
+
+Let extra op voor deze onderdelen:
+
+- WCAG eis 1.3.1: de heading level van de accordion sections is afhankelijk van waar in de pagina de accordion is geplaatst, dit kan per pagina verschillen.
+- WCAG eis 1.3.6: gebruik aria-controls voor de button, en gebruik een region landmark voor de expandable region (gebruik daarvoor het HTML-element &lt;section&gt;)
+- WCAG eis 1.4.3: contrast tussen tekst en achtergrond en tussen icoon en achtergrond is voldoende in alle varianten, alle interactieve statussen en alle mogelijke combinaties.
+- WCAG eis 3.2.1: maak de accordion niet automatisch expanded als de button focus krijgt.
+- WCAG eis 2.1.3: ondersteun ook de optionele toetsen: Down Arrow, Up Arrow, Home en End. Space moet de button activeren, niet de pagina scrollen (gebruik keypressEvt.preventDefault()).
+- WCAG eis 2.4.6: de tekst die zowel wordt gebruikt als heading en als label voor de button moet duidelijk zijn, omdat de inhoud niet altijd zichtbaar is.
+- WCAG eis 2.4.10: accordions die onderdeel vormen van de lopende tekst moeten section headings gebruiken.
+
+## Vragen of verbeteringen?
+
+Heb je een vraag over dit component, of wil je het verbeteren? Mail dan naar PLACEHOLDER@utrecht.nl.
