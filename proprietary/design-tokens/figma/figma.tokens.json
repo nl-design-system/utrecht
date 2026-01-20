@@ -3327,6 +3327,82 @@
       }
     }
   },
+  "components/breadcrumb-nav/amsterdam": {
+    "ams": {
+      "breadcrumb": {
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.text.font-size.md}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.text.font-weight.default}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.text.line-height.md}"
+        },
+        "separator": {
+          "background-image": {
+            "$type": "other",
+            "$value": "url(\"data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path fill='%23000000' fill-rule='evenodd' d='m9.757 32-2.9-2.91L19.937 16 6.857 2.91 9.757 0l16 16z'/></svg>\")",
+            "$description": "[code-only]"
+          },
+          "block-size": {
+            "$type": "dimension",
+            "$value": "0.750rem"
+          },
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "0.750rem"
+          },
+          "margin-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.lg}"
+          }
+        },
+        "link": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.color-default}"
+          },
+          "outline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-decoration-line": {
+            "$type": "textDecoration",
+            "$value": "underline"
+          },
+          "text-underline-offset": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "text-decoration-thickness": {
+            "$type": "other",
+            "$value": "auto",
+            "$description": "[code-only]"
+          },
+          "hover": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-hover}"
+            },
+            "text-decoration-line": {
+              "$type": "textDecoration",
+              "$value": "None"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/breadcrumb-nav/todo": {
     "todo": {
       "breadcrumb-nav": {
@@ -13395,6 +13471,7 @@
       "components/backdrop",
       "components/blockquote",
       "components/breadcrumb-nav/utrecht",
+      "components/breadcrumb-nav/amsterdam",
       "components/breadcrumb-nav/todo",
       "components/button",
       "components/card-as-link",
