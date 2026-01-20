@@ -3017,19 +3017,25 @@
     }
   },
   "components/avatar": {
-    "todo": {
+    "ams": {
       "avatar": {
+        "aspect-ratio": {
+          "$type": "other",
+          "$value": "1 / 1",
+          "$description": "[code-only]"
+        },
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.action-1-inverse.bg-default}"
+          "$value": "{basis.color.accent-1-inverse.bg-default}"
         },
         "border-color": {
           "$type": "color",
           "$value": "{basis.color.transparent}"
         },
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{basis.border-radius.round}"
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
         },
         "border-width": {
           "$type": "dimension",
@@ -3037,17 +3043,7 @@
         },
         "color": {
           "$type": "color",
-          "$value": "{basis.color.action-1-inverse.color-default}"
-        },
-        "size": {
-          "$type": "dimension",
-          "$value": "{basis.pointer-target.min-block-size}"
-        },
-        "icon": {
-          "icon-size": {
-            "$type": "dimension",
-            "$value": "{basis.size.icon.md}"
-          }
+          "$value": "{basis.color.accent-1-inverse.color-default}"
         },
         "font-family": {
           "$type": "fontFamilies",
@@ -3057,17 +3053,27 @@
           "$type": "fontSizes",
           "$value": "{basis.text.font-size.md}"
         },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.pointer-target.min-inline-size}"
         },
         "line-height": {
           "$type": "lineHeights",
           "$value": "{basis.text.line-height.md}"
         },
-        "text-transform": {
-          "$type": "textCase",
-          "$value": "uppercase"
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
+        "has-image": {
+          "inline-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-inline-size}"
+          }
         }
       }
     }
