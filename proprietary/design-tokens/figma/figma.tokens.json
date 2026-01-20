@@ -8225,8 +8225,8 @@
     }
   },
   "components/modal-dialog": {
-    "todo": {
-      "modal-dialog": {
+    "ams": {
+      "dialog": {
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.default.bg-document}"
@@ -8235,121 +8235,120 @@
           "$type": "color",
           "$value": "{basis.color.default.border-subtle}"
         },
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{basis.border-radius.lg}"
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
         },
         "border-width": {
           "$type": "dimension",
           "$value": "{basis.border-width.sm}"
         },
-        "box-shadow": {
-          "$type": "boxShadow",
-          "$value": "{basis.box-shadow.lg}"
+        "gap": {
+          "$type": "dimension",
+          "$value": "0px"
         },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
+        "inline-size": {
+          "$type": "dimension",
+          "$value": "328px"
         },
-        "content": {
-          "padding-block-end": {
+        "max-block-size": {
+          "$type": "dimension",
+          "$value": "80vh",
+          "$description": "[code-only]"
+        },
+        "max-inline-size": {
+          "$type": "dimension",
+          "$value": "640px"
+        },
+        "medium": {
+          "inline-size": {
             "$type": "dimension",
-            "$value": "{basis.space.block.3xl}"
+            "$value": "640px"
           },
-          "padding-block-start": {
+          "max-block-size": {
+            "$type": "dimension",
+            "$value": "80vh",
+            "$description": "[code-only]"
+          }
+        },
+        "backdrop": {
+          "background-color": {
+            "$type": "color",
+            "$value": "rgba(36,36,36,0.2)"
+          }
+        },
+        "header": {
+          "gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.column.xl}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.xl}"
+            },
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        },
+        "body": {
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          },
+          "medium": {
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
+            }
+          }
+        },
+        "footer": {
+          "padding-block": {
             "$type": "dimension",
             "$value": "{basis.space.block.3xl}"
           },
           "padding-inline": {
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "footer": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
           },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.xl}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          }
-        },
-        "header": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-subtle}"
-          },
-          "border-width": {
-            "$type": "dimension",
-            "$value": "{basis.border-width.sm}"
-          },
-          "column-gap": {
-            "$type": "dimension",
-            "$value": "{basis.space.column.md}"
-          },
-          "padding-block-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-block-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.block.md}"
-          },
-          "padding-inline-end": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.md}"
-          },
-          "padding-inline-start": {
-            "$type": "dimension",
-            "$value": "{basis.space.inline.xl}"
-          },
-          "label": {
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.default.color-document}"
+          "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.block.3xl}"
             },
-            "font-family": {
-              "$type": "fontFamilies",
-              "$value": "{basis.text.font-family.default}"
-            },
-            "font-size": {
-              "$type": "fontSizes",
-              "$value": "{basis.text.font-size.md}"
-            },
-            "font-weight": {
-              "$type": "fontWeights",
-              "$value": "{basis.text.font-weight.bold}"
-            },
-            "line-height": {
-              "$type": "lineHeights",
-              "$value": "{basis.text.line-height.md}"
+            "padding-inline": {
+              "$type": "dimension",
+              "$value": "{basis.space.inline.xl}"
             }
           }
+        }
+      }
+    },
+    "todo": {
+      "dialog": {
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.lg}"
+        },
+        "box-shadow": {
+          "$type": "boxShadow",
+          "$value": "{basis.box-shadow.lg}"
         }
       }
     }
