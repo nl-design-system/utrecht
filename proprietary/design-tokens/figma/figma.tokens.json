@@ -9732,7 +9732,7 @@
     }
   },
   "components/status-badge": {
-    "todo": {
+    "utrecht": {
       "status-badge": {
         "background-color": {
           "$type": "color",
@@ -9770,18 +9770,34 @@
           "$type": "lineHeights",
           "$value": "{basis.text.line-height.md}"
         },
+        "letter-spacing": {
+          "$type": "letterSpacing",
+          "$value": "0px"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.xs}"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "{basis.size.sm}"
+        },
         "padding-block": {
           "$type": "dimension",
-          "$value": "{basis.space.block.xs}"
+          "$value": "0px"
         },
         "padding-inline": {
           "$type": "dimension",
           "$value": "{basis.space.inline.sm}"
         },
-        "informative": {
+        "text-transform": {
+          "$type": "textCase",
+          "$value": "None"
+        },
+        "active": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.info.bg-default}"
+            "$value": "{basis.color.positive.bg-default}"
           },
           "border-color": {
             "$type": "color",
@@ -9789,10 +9805,10 @@
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.info.color-default}"
+            "$value": "{basis.color.positive.color-default}"
           }
         },
-        "negative": {
+        "danger": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.negative.bg-default}"
@@ -9806,7 +9822,91 @@
             "$value": "{basis.color.negative.color-default}"
           }
         },
-        "positive": {
+        "error": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.color-default}"
+          }
+        },
+        "inactive": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-default}"
+          }
+        },
+        "invalid": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.color-default}"
+          }
+        },
+        "neutral": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.info.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.info.color-default}"
+          }
+        },
+        "safe": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.color-default}"
+          }
+        },
+        "success": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.bg-default}"
+          },
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.positive.color-default}"
+          }
+        },
+        "valid": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.color.positive.bg-default}"
