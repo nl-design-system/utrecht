@@ -7498,9 +7498,11 @@
           "$type": "fontWeights",
           "$value": "{basis.heading.font-weight}"
         },
-        "inverse-color": {
-          "$type": "color",
-          "$value": "{basis.color.default-inverse.color-document}"
+        "inverse": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default-inverse.color-document}"
+          }
         },
         "level": {
           "1": {
