@@ -1,7 +1,7 @@
 ---
 title: Prototypen met Figma
 description: Leer hoe je prototypes maakt met Figma en templates.
-order: 3
+order: 6
 ---
 
 # Prototypen met Figma en templates

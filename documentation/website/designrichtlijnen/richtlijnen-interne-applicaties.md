@@ -48,7 +48,7 @@ Dit betekent o.a. dat Agile werken de norm is. Korte cycli van ontwikkelen, revi
 
 Niet voor niets staat in het [Agile Manifesto](https://agilemanifesto.org/principles.html) als eerste vuistregel: “Mensen en hun onderlinge interactie boven processen en hulpmiddelen”. Alleen op deze manier ontwerp je vanuit de behoefte en context van mensen, en niet vanuit de techniek of de organisatie.
 
-![UX-ontwikkelcyclus](../../../static/img/richtlijnen/cyclus.png)
+![UX-ontwikkelcyclus](/img/richtlijnen/cyclus.png)
 
 Illustratie: _UX-ontwikkelcyclus_
 
@@ -85,7 +85,7 @@ Omdat we niet weten met welk apparaat onze collega’s gebruik gaan maken van de
 
 Dit noemen we _responsive design_. Het design verandert mee met de schermbreedte. Begin te ontwikkelen voor het smalste scherm en werk vervolgens naar de breedste variant.
 
-![Weergave op een smartphone, tablet en desktop](../../../static/img/richtlijnen/responsive.png)
+![Weergave op een smartphone, tablet en desktop](/img/richtlijnen/responsive.png)
 
 Illustratie: _Weergave op een smartphone, tablet en desktop_
 
@@ -109,11 +109,11 @@ Als de inwoner ingedeeld is bij de groep “Allenstaanden” hoef je geen velden
 
 Toon bijvoorbeeld ook alleen gegevens over een onderneming als de inwoner een onderneming heeft.
 
-![Informatie die niet van toepassing is wordt getoond](../../../static/img/richtlijnen/overbodig.png)
+![Informatie die niet van toepassing is wordt getoond](/img/richtlijnen/overbodig.png)
 
 Illustratie: _Informatie die niet van toepassing is wordt getoond_
 
-![Partnerblok en Ondernemingsblok zijn weggelaten, want niet van toepassing voor deze inwoner](../../../static/img/richtlijnen/overbodig-bewerkt.png)
+![Partnerblok en Ondernemingsblok zijn weggelaten, want niet van toepassing voor deze inwoner](/img/richtlijnen/overbodig-bewerkt.png)
 
 Illustratie: _Partnerblok en Ondernemingsblok zijn weggelaten, want niet van toepassing voor deze inwoner_
 
@@ -121,7 +121,7 @@ Illustratie: _Partnerblok en Ondernemingsblok zijn weggelaten, want niet van toe
 
 Uit onderzoek blijkt dat laaggeletterde mensen schrikken van de kleur rood. Gebruik deze kleur daarom niet bij iets waar op geklikt kan worden. De tekst wordt namelijk niet gelezen, de laaggeletterde acteert op kleur.
 
-![Attentie](../../../static/img/richtlijnen/rood.png)
+![Attentie](/img/richtlijnen/rood.png)
 
 Illustratie: _Attentie_
 
@@ -131,7 +131,7 @@ Daarbij is het een patroon dat rood gevaar of waarschuwing betekent. Wijk niet a
 
 Een button valt op, maar meerdere buttons op één scherm leidt af.
 
-![Te veel buttons op één scherm](../../../static/img/richtlijnen/alles-button.png)
+![Te veel buttons op één scherm](/img/richtlijnen/alles-button.png)
 
 Illustratie: _Te veel buttons op één scherm_
 
@@ -141,7 +141,7 @@ Links worden vooral gebruikt om te navigeren en verschijnen dan ook in of direct
 
 Maak duidelijk onderscheid tussen de belangrijkste actie die _moet_ gebeuren en een mogelijke actie die je óók kunt uitvoeren op de pagina.
 
-![Primaire en secundaire actie](../../../static/img/richtlijnen/primair-secundair.png)
+![Primaire en secundaire actie](/img/richtlijnen/primair-secundair.png)
 
 Illustratie: _Primaire en secundaire actie_
 
@@ -149,7 +149,7 @@ _Let op:_ In vrijwel alle gevallen is het niet nodig om bij een formulier een an
 
 Je kunt de visuele weergave van een button ook zó aanpassen dat het onderscheid nog duidelijker is tussen de primaire en de secundaire actie: de button er uit laten zien als een link.
 
-![Button die er uit ziet als link](../../../static/img/richtlijnen/button-als-link.png)
+![Button die er uit ziet als link](/img/richtlijnen/button-als-link.png)
 
 Illustratie: _Button die er uit ziet als link_
 
@@ -159,19 +159,19 @@ Lees meer over links en buttons: [https://nl-design-system.github.io/utrecht/doc
 
 Hou je aan de conventies voor zoekvelden. Plaats het zoekveld rechtsboven in het scherm als de zoekfunctie altijd alle informatie doorzoekt.
 
-![Zoek door hele applicatie](../../../static/img/richtlijnen/zoek-algemeen.png)
+![Zoek door hele applicatie](/img/richtlijnen/zoek-algemeen.png)
 
 Illustratie: _Zoek door hele applicatie_
 
 Zoek je in detail-informatie, plaats het zoekveld dan niet in de header, maar bij de content.
 
-![Zoek alleen binnen dossiers](../../../static/img/richtlijnen/zoek-detail.png)
+![Zoek alleen binnen dossiers](/img/richtlijnen/zoek-detail.png)
 
 Illustratie: _Zoek alleen binnen dossiers_
 
 Plaats nooit twee zoekvelden (voor ‘alles doorzoeken’ en ‘een gedeelte doorzoeken’) in één scherm. Dat roept alleen verwarring op.
 
-![Meerdere zoekvelden, verwarring](../../../static/img/richtlijnen/zoek-nooit.png)
+![Meerdere zoekvelden, verwarring](/img/richtlijnen/zoek-nooit.png)
 
 Illustratie: _Meerdere zoekvelden, verwarring_
 
@@ -183,11 +183,11 @@ Help je gebruiker bij het invullen van een formulier, bijvoorbeeld door de lengt
 
 Vaak nemen inputvelden de breedte van het hele scherm in. Terwijl je er bijvoorbeeld alleen een e-mailadres of telefoonnummer in kwijt hoeft.
 
-![Breedte inputvelden: mix van wel en geen voorspellende waarde](../../../static/img/richtlijnen/input.png)
+![Breedte inputvelden: mix van wel en geen voorspellende waarde](/img/richtlijnen/input.png)
 
 Illustratie: _Breedte inputvelden: mix van wel en geen voorspellende waarde_
 
-![Breedte inputvelden: Alle velden hebben voorspellende waarde](../../../static/img/richtlijnen/input-maatvoering.png)
+![Breedte inputvelden: Alle velden hebben voorspellende waarde](/img/richtlijnen/input-maatvoering.png)
 
 Illustratie: _Breedte inputvelden: Alle velden hebben voorspellende waarde_
 
@@ -203,7 +203,7 @@ Snel controleren of de invoer juist is kan heel handig zijn, maar helaas gaat he
 
 Of zoals in onderstaand screenshot: direct bij invoer komt er al een foutmelding, terwijl je net begint met typen.
 
-![Foutmelding direct bij invoer](../../../static/img/richtlijnen/inline-validatie.png)
+![Foutmelding direct bij invoer](/img/richtlijnen/inline-validatie.png)
 
 Illustratie: _Foutmelding direct bij invoer_
 
@@ -213,11 +213,11 @@ Gebruik de snelle controle op invoer pas na invoer van het inputveld. Daarmee he
 
 Gebruik selectievelden (dropdowns) spaarzaam en alleen bij meer dan 5 keuzes. Dit geeft meer overzicht en werkt hierdoor sneller.
 
-![Selectieveld](../../../static/img/richtlijnen/selectie.png)
+![Selectieveld](/img/richtlijnen/selectie.png)
 
 Illustratie: _Selectieveld_
 
-![Groep radiobuttons](../../../static/img/richtlijnen/selectie-zichtbaar.png)
+![Groep radiobuttons](/img/richtlijnen/selectie-zichtbaar.png)
 
 Illustratie: _Groep radiobuttons_
 
@@ -225,13 +225,13 @@ Illustratie: _Groep radiobuttons_
 
 Kadering van gegevens zorgt voor overzicht. Pas wel op met de hoeveelheid kaders en de nesting ervan. Bij (te) veel lijnen wordt het al snel onoverzichtelijk, zeker bij smalle schermen.
 
-![Nesting door lijnen](../../../static/img/richtlijnen/nesting-lijnen.png)
+![Nesting door lijnen](/img/richtlijnen/nesting-lijnen.png)
 
 Illustratie: _Nesting door lijnen_
 
 Gebruik liever een nesting door de hoofdtabel als kader te gebruiken.
 
-![Nesting door kader](../../../static/img/richtlijnen/nesting-kader.png)
+![Nesting door kader](/img/richtlijnen/nesting-kader.png)
 
 Illustratie: _Nesting door kader_
 
