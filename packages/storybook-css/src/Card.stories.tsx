@@ -149,18 +149,17 @@ export const FocusVisible: Story = {
 export const MultipleCard: Story = {
   render: (args: ComponentProps<typeof Card>) => (
     <div style={demoGridStyle}>
-      <Card {...args} />
+      <Card aspect="16by9" {...args} />
       <Card
         headingLevel={2}
         heading="Veeartsenijroute"
         body="De Veeartsenijroute brengt u langs 9 verschillende plekken die een belangrijke rol spelen in de geschiedenis van het veterinair onderwijs."
         href="#"
+        aspect="16by9"
         image={
           <img
             src="images/erfgoed-veeartsenijroute.png"
             alt="Historische paardenstallen van de Rijksveeartsenijschool met pony’s en een vrouwelijke student, circa 1910."
-            height="240"
-            width="100%"
           />
         }
       />
@@ -169,12 +168,11 @@ export const MultipleCard: Story = {
         heading="Merwedekanaalzone: archeologische ontdekkingen Romeins Utrecht"
         body="Bij opgravingen is bewijs gevonden van een overstroming die flinke schade toebracht aan de infrastructuur van Romeins Nederland."
         href="#"
+        aspect="16by9"
         image={
           <img
             src="images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"
             alt="Opgraving van een Romeinse weg met houten fundering in de Merwedekanaalzone in Utrecht."
-            height="240"
-            width="100%"
           />
         }
       />
