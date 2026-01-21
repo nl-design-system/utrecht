@@ -47,7 +47,11 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
   /**
    * Appearance variant of the card
    */
-  appearance?: '' | 'primary' | 'secondary' | 'tertiary';
+  appearance?: '' | 'neutral' | 'warm' | 'cool' | 'soft' | 'bright';
+  /**
+   * Aspect ratio of the image
+   */
+  aspect?: '16by9' | '4by3' | '1by1';
 }
 export const Card = forwardRef(
   (
@@ -60,6 +64,7 @@ export const Card = forwardRef(
       className,
       body,
       appearance,
+      aspect,
       ...restProps
     }: PropsWithChildren<CardProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -93,9 +98,14 @@ export const Card = forwardRef(
         ref={ref}
         className={clsx('utrecht-card', className, {
           'utrecht-card--link': href,
-          'utrecht-card--primary': appearance === 'primary',
-          'utrecht-card--secondary': appearance === 'secondary',
-          'utrecht-card--tertiary': appearance === 'tertiary',
+          'utrecht-card--neutral': appearance === 'neutral',
+          'utrecht-card--warm': appearance === 'warm',
+          'utrecht-card--cool': appearance === 'cool',
+          'utrecht-card--soft': appearance === 'soft',
+          'utrecht-card--bright': appearance === 'bright',
+          'utrecht-card--16by9': aspect === '16by9',
+          'utrecht-card--4by3': aspect === '4by3',
+          'utrecht-card--1by1': aspect === '1by1',
         })}
         {...linkProps}
         {...restProps}

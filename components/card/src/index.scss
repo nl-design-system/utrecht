@@ -9,6 +9,7 @@
 .utrecht-card {
   @include utrecht-card;
 }
+
 .utrecht-card--link {
   @include utrecht-card--link;
 }
@@ -40,11 +41,48 @@
   @include utrecht-card__body;
 }
 
-.utrecht-card--focus,
-.utrecht-card:focus {
-  @include utrecht-card--focus;
+.utrecht-card__link {
+  @include utrecht-card__link;
 }
 
+.utrecht-card--neutral {
+  @include utrecht-card--neutral;
+}
+
+.utrecht-card--warm {
+  @include utrecht-card--warm;
+}
+
+.utrecht-card--cool {
+  @include utrecht-card--cool;
+}
+
+.utrecht-card--soft {
+  @include utrecht-card--soft;
+}
+
+.utrecht-card--bright {
+  @include utrecht-card--bright;
+}
+
+.utrecht-card--16by9 {
+  @include utrecht-card--16by9;
+}
+
+.utrecht-card--4by3 {
+  @include utrecht-card--4by3;
+}
+
+.utrecht-card--1by1 {
+  @include utrecht-card--1by1;
+}
+
+.utrecht-card--active,
+.utrecht-card:active {
+  @include utrecht-card--active;
+}
+
+.utrecht-card--focus-visible,
 .utrecht-card:focus-visible {
   @include utrecht-card--focus-visible;
 }
@@ -52,16 +90,4 @@
 .utrecht-card--hover,
 .utrecht-card:hover {
   @include utrecht-card--hover;
-}
-
-.utrecht-card--primary {
-  @include utrecht-card--primary;
-}
-
-.utrecht-card--secondary {
-  @include utrecht-card--secondary;
-}
-
-.utrecht-card--tertiary {
-  @include utrecht-card--tertiary;
 }
