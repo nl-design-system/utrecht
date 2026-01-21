@@ -11,7 +11,10 @@
         "scale": { "value": "1.02" }
       },
       "focus": {
-        "scale": { "value": "1.02" }
+        "background-color": { "value": "{utrecht.color.blue.80}" }
+      },
+      "active": {
+        "scale": { "value": "1" }
       },
       "border-radius": {},
       "box-shadow": {},
@@ -74,14 +77,20 @@
           "value": "{utrecht.space.inline.md}"
         }
       },
-      "primary": {
+      "neutral": {
         "background-color": { "value": "{utrecht.color.blue.90}" }
       },
-      "secondary": {
+      "warm": {
         "background-color": { "value": "{utrecht.color.yellow.80}" }
       },
-      "tertiary": {
-        "background-color": { "value": "{utrecht.color.grey.90}" }
+      "cool": {
+        "background-color": { "value": "{utrecht.color.blue.80}" }
+      },
+      "soft": {
+        "background-color": { "value": "{utrecht.color.grey.80}" }
+      },
+      "bright": {
+        "background-color": { "value": "{utrecht.color.white}" }
       }
     }
   }
