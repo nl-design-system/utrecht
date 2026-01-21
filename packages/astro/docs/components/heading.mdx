@@ -1,0 +1,36 @@
+---
+title: Heading
+description: Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.
+frameworks:
+  - HTML
+  - CSS
+  - React
+  - Angular
+  - Vue
+  - Web Component
+previewImage: /component-previews/heading.png
+---
+
+import { Heading } from "@utrecht/component-library-react/dist/css-module";
+
+# Heading
+
+Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.
+
+## Voorbeeld
+
+<div
+  className="utrecht-component-canvas"
+  style={{
+    borderRadius: "3px",
+    border: "1px solid grey",
+    padding: "16px",
+    backgroundColor: "#fafafa",
+    gap: "8px",
+    flexWrap: "wrap",
+  }}
+>
+  <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>
+  <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>
+  <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>
+</div>
