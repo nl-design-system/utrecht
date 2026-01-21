@@ -181,7 +181,7 @@ export const MultipleCard: Story = {
 };
 export const WithoutImage: Story = {
   render: () => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card
         href="#"
         headingLevel={2}
@@ -193,14 +193,14 @@ export const WithoutImage: Story = {
 };
 export const WithCustomLinkComponent: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} Link="a" />
     </div>
   ),
 };
 export const WithoutLink: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} href={undefined} />
     </div>
   ),
