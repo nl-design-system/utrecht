@@ -126,9 +126,9 @@ export const Card = forwardRef(
           </div>
           {image && <div className={clsx('utrecht-card__image')}>{image}</div>}
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
-          <div className="utrecht-card__arrow-container">
-            <utrecht-icon-arrow class="utrecht-card__arrow"></utrecht-icon-arrow>
-          </div>
+        </div>
+        <div className="utrecht-card__arrow-container">
+          <utrecht-icon-arrow class="utrecht-card__arrow"></utrecht-icon-arrow>
         </div>
       </div>
     );
