@@ -12,13 +12,13 @@
 }
 
 @mixin utrecht-page-footer {
-  --utrecht-document-color: currentColor;
-  --utrecht-heading-color: currentColor;
-  --utrecht-link-color: currentColor;
-  --utrecht-link-focus-color: currentColor;
-  --utrecht-link-hover-color: currentColor;
-  --utrecht-link-active-color: currentColor;
-  --utrecht-link-visited-color: currentColor;
+  --utrecht-document-color: var(--utrecht-footer-document-color, currentColor);
+  --utrecht-heading-color: var(--utrecht-footer-heading-color, currentColor);
+  --utrecht-link-color: var(--utrecht-footer-link-color, currentColor);
+  --utrecht-link-focus-color: var(--utrecht-footer-link-focus-color, currentColor);
+  --utrecht-link-hover-color: var(--utrecht-footer-link-hover-color, currentColor);
+  --utrecht-link-active-color: var(--utrecht-footer-link-active-color, currentColor);
+  --utrecht-link-visited-color: var(--utrecht-footer-link-visited-color, currentColor);
 
   background-color: var(--utrecht-page-footer-background-color);
   background-image: var(--utrecht-page-footer-background-image);
