@@ -5051,6 +5051,227 @@
       }
     }
   },
+  "components/calendar": {
+    "utrecht": {
+      "calendar": {
+        "background-color": {
+          "value": "{basis.color.default.bg-document}",
+          "type": "color"
+        },
+        "width": {
+          "value": "fit-content",
+          "type": "dimension",
+          "description": "[code-only]"
+        },
+        "icon": {
+          "size": {
+            "value": "{basis.size.icon.md}",
+            "type": "dimension"
+          }
+        },
+        "navigation": {
+          "background-color": {
+            "value": "{basis.color.transparent}",
+            "type": "color"
+          },
+          "color": {
+            "value": "{basis.color.action-1.color-default}",
+            "type": "color"
+          },
+          "padding-block-end": {
+            "value": "0px",
+            "type": "dimension"
+          },
+          "padding-block-start": {
+            "value": "{basis.space.block.lg}",
+            "type": "dimension"
+          },
+          "label": {
+            "color": {
+              "value": "{basis.color.default.color-document}",
+              "type": "color"
+            },
+            "font-size": {
+              "value": "{basis.text.font-size.md}",
+              "type": "fontSizes"
+            }
+          }
+        },
+        "table": {
+          "padding-block-end": {
+            "value": "{basis.space.block.lg}",
+            "type": "dimension"
+          },
+          "padding-block-start": {
+            "value": "{basis.space.block.lg}",
+            "type": "dimension"
+          },
+          "days-item-day": {
+            "border-color": {
+              "value": "{basis.color.transparent}",
+              "type": "color"
+            },
+            "border-width": {
+              "value": "{basis.border-width.sm}",
+              "type": "dimension"
+            },
+            "color": {
+              "value": "{basis.color.action-1.color-default}",
+              "type": "color"
+            },
+            "size": {
+              "value": "{basis.pointer-target.min-inline-size}",
+              "type": "dimension"
+            },
+            "active": {
+              "background-color": {
+                "value": "{basis.color.action-1.bg-active}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.action-1.color-active}",
+                "type": "color"
+              }
+            },
+            "disabled": {
+              "background-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.disabled.color-default}",
+                "type": "color"
+              }
+            },
+            "emphasis": {
+              "background-color": {
+                "value": "{basis.color.highlight.bg-default}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.highlight.color-default}",
+                "type": "color"
+              },
+              "font-weight": {
+                "value": "{basis.text.font-weight.bold}",
+                "type": "fontWeights"
+              }
+            },
+            "focus": {
+              "background-color": {
+                "value": "{basis.focus.background-color}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.focus.color}",
+                "type": "color"
+              }
+            },
+            "hover": {
+              "background-color": {
+                "value": "{basis.color.action-1.bg-hover}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.action-1.color-hover}",
+                "type": "color"
+              }
+            },
+            "is-today": {
+              "background-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.action-1.border-default}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.action-1.color-default}",
+                "type": "color"
+              },
+              "font-weight": {
+                "value": "{basis.text.font-weight.bold}",
+                "type": "fontWeights"
+              }
+            },
+            "out-of-the-month": {
+              "background-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.disabled.color-subtle}",
+                "type": "color"
+              }
+            },
+            "selected": {
+              "background-color": {
+                "value": "{basis.color.action-1-inverse.bg-default}",
+                "type": "color"
+              },
+              "border-color": {
+                "value": "{basis.color.transparent}",
+                "type": "color"
+              },
+              "color": {
+                "value": "{basis.color.action-1-inverse.color-default}",
+                "type": "color"
+              },
+              "font-weight": {
+                "value": "{basis.text.font-weight.bold}",
+                "type": "fontWeights"
+              }
+            }
+          },
+          "weeks-item": {
+            "width": {
+              "value": "{basis.pointer-target.min-inline-size}",
+              "type": "dimension"
+            }
+          }
+        }
+      }
+    },
+    "todo": {
+      "calendar": {
+        "table": {
+          "days-item-day": {
+            "disabled": {
+              "font-weight": {
+                "value": "{basis.text.font-weight.default}",
+                "type": "fontWeights"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components/card-as-link": {
     "ams": {
       "card": {
@@ -14883,6 +15104,7 @@
       "components/breadcrumb-nav/todo",
       "components/button/utrecht",
       "components/button/nl",
+      "components/calendar",
       "components/card-as-link",
       "components/case-card",
       "components/checkbox",
