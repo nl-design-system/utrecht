@@ -32,8 +32,8 @@
   "scripts": {
     "clean": "rimraf dist/",
     "build": "pnpm run clean && pnpm run '/^build:.*/'",
-    "build:docusaurus": "cp -R ../docusaurus/build/ dist/",
-    "build:astro": "rimraf dist/astro/ && cp -R ../astro/dist/ dist/astro/",
+    "build:astro": "cp -R ../astro/dist/ dist/",
+    "build:docusaurus": "rimraf dist/docusaurus/ && cp -R ../docusaurus/build/ dist/docusaurus/",
     "build:stencil": "rimraf dist/stencil/ && cp -R ../web-component-library-stencil/www/ dist/stencil/",
     "build:storybook": "rimraf dist/storybook/ && ls -la dist/ && cp -R ../storybook/dist dist/storybook/",
     "build:storybook-angular": "rimraf dist/storybook-angular/ && cp -R ../storybook-angular/dist dist/storybook-angular/",

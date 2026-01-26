@@ -3,6 +3,7 @@ import '@assets/styles.css';
 import '@utrecht/design-tokens/dist/font-family';
 import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import { joinUrl } from '../utils/url';
 import { Image } from 'astro:assets';
 import MobileNavDrawer from '../components/MobileNavDrawer';
 ---
@@ -12,7 +13,7 @@ import MobileNavDrawer from '../components/MobileNavDrawer';
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href=`${base}/favicon.ico` />
+		<link rel="icon" type="image/svg+xml" href={joinUrl(base, '/favicon.ico')} />
 		<meta name="generator" content={Astro.generator} />
 		<title>Utrecht Design System</title>
 	</head>
@@ -22,17 +23,17 @@ import MobileNavDrawer from '../components/MobileNavDrawer';
         {/* Desktop navigation */}
         <div class="desktop-nav">
           <div class="utrecht-page-header__content">
-            <a href=`${base}/` class="utrecht-custom-logo"><Image src=`${base}/logo-md.svg` width="160" height="77" alt="" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"><Image src={joinUrl(base, '/logo-md.svg')} width="160" height="77" alt="" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
           </div>
           <nav>
             <NavBar>
               <NavList id="main-navigation-list">
-                <NavListLink href={`${base}/design-system`}>Utrecht Design System</NavListLink>
-                <NavListLink href={`${base}/designers`}>Voor designers</NavListLink>
-                <NavListLink href={`${base}/developer`}>Voor developers</NavListLink>
-                <NavListLink href={`${base}/richtlijnen`}>Richtlijnen</NavListLink>
-                <NavListLink href={`${base}/componenten`}>Componenten</NavListLink>
-                <NavListLink href={`${base}/vragen`}>Vragen</NavListLink>
+                <NavListLink href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
+                <NavListLink href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
+                <NavListLink href={joinUrl(base, '/developer')}>Voor developers</NavListLink>
+                <NavListLink href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
+                <NavListLink href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
+                <NavListLink href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
               </NavList>
             </NavBar>
           </nav>
@@ -40,7 +41,7 @@ import MobileNavDrawer from '../components/MobileNavDrawer';
         {/* Mobile navigation */}
         <div class="mobile-nav">
           <div class="utrecht-page-header__content utrecht-page-header__content--mobile">
-            <a href=`${base}/` class="utrecht-custom-logo"><img src=`${base}/logo-md.svg` alt="" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"><img src={joinUrl(base, '/logo-md.svg')} alt="" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
             <MobileNavDrawer client:load />
           </div>
         </div>

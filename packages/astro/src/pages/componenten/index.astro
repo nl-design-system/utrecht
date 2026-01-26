@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { Link, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import { joinUrl } from '../../utils/url';
 import TileList from '@components/TileList.astro';
 import TileNavigation from '@components/TileNavigation.astro';
 import ComponentCard from '@components/ComponentCard.astro';
@@ -18,9 +19,9 @@ const sortedComponents = components.sort((a, b) =>
 <Layout>
   <article class="componenten-page">
     <BreadcrumbNav>
-      <BreadcrumbNavLink href={`${base}/`} index={0}>Home</BreadcrumbNavLink>
+      <BreadcrumbNavLink href={joinUrl(base, '/')} index={0}>Home</BreadcrumbNavLink>
       <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
-      <BreadcrumbNavLink href={`${base}/componenten`} current index={1}>Componenten</BreadcrumbNavLink>
+      <BreadcrumbNavLink href={joinUrl(base, '/componenten')} current index={1}>Componenten</BreadcrumbNavLink>
     </BreadcrumbNav>
 
     <h1>Componenten en iconen</h1>
@@ -31,7 +32,7 @@ const sortedComponents = components.sort((a, b) =>
   <h2>Meer weten</h2>
   <TileList>
     <TileNavigation
-      href={`${base}/componenten/iconen`}
+      href={joinUrl(base, '/componenten/iconen')}
       title="Iconen"
       description="Meer weten over de iconen in het Utrecht Design System?"
     />
@@ -46,7 +47,7 @@ const sortedComponents = components.sort((a, b) =>
   <div class="component-grid">
     {sortedComponents.map((component) => (
       <ComponentCard
-        href={`${base}/componenten/${component.id.replace(/\.mdx?$/, '')}`}
+        href={joinUrl(base, `/componenten/${component.id.replace(/\.mdx?$/, '')}`)}
         title={component.data.title}
         frameworks={component.data.frameworks}
         previewImage={component.data.previewImage}

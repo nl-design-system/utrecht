@@ -3,6 +3,7 @@ import { getCollection, render } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { Heading1, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import { joinUrl } from '../../utils/url';
 
 export async function getStaticPaths() {
   const components = await getCollection('components');
@@ -33,11 +34,11 @@ const { Content } = await render(component);
 <Layout>
   <article class="component-page">
     <BreadcrumbNav>
-      <BreadcrumbNavLink href={`${base}/`} index={0}>Home</BreadcrumbNavLink>
+      <BreadcrumbNavLink href={joinUrl(base, '/')} index={0}>Home</BreadcrumbNavLink>
       <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
-      <BreadcrumbNavLink href={`${base}/componenten`} index={1}>Componenten</BreadcrumbNavLink>
+      <BreadcrumbNavLink href={joinUrl(base, '/componenten')} index={1}>Componenten</BreadcrumbNavLink>
       <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
-      <BreadcrumbNavLink href={`${base}/componenten/${component.id.replace(/\.mdx?$/, '')}`} current index={2}>{component.data.title}</BreadcrumbNavLink>
+      <BreadcrumbNavLink href={joinUrl(base, `/componenten/${component.id.replace(/\.mdx?$/, '')}`)} current index={2}>{component.data.title}</BreadcrumbNavLink>
     </BreadcrumbNav>
 
     <header class="component-page__header">

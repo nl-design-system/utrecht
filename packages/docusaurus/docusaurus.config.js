@@ -1,9 +1,11 @@
 /* eslint-env node */
 
 const cloneDeepWith = require('lodash.clonedeepwith');
+const path = require('path');
 const { resolve } = require('url');
 
-const baseUrl = process.env['BASE_URL'] ? process.env['BASE_URL'] : '/';
+const deploymentBaseUrl = process.env['BASE_URL'] ? process.env['BASE_URL'] : '/';
+const baseUrl = path.posix.join(deploymentBaseUrl, 'docusaurus');
 
 // Resolve all relative URLs in the navigation against the baseUrl
 // so they will work consistently from every page in Docusaurus
