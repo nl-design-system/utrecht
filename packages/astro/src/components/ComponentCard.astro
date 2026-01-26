@@ -1,5 +1,6 @@
 ---
 import { base } from 'astro:config/client';
+import { joinUrl } from '../utils/url';
 
 interface Props {
   href: string;
@@ -11,7 +12,7 @@ interface Props {
 const { href, title, frameworks, previewImage } = Astro.props;
 
 const fullPreviewImage = previewImage
-  ? (previewImage.startsWith('/') ? `${base}${previewImage}` : previewImage)
+  ? (previewImage.startsWith('/') ? joinUrl(base, previewImage) : previewImage)
   : undefined;
 ---
 

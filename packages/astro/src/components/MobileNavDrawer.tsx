@@ -1,6 +1,7 @@
 import { Drawer, NavList, NavListLink, SubtleButton } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
 import React, { useEffect, useRef, useState } from 'react';
+import { joinUrl } from '../utils/url.js';
 
 const MobileNavDrawer = () => {
   const [open, setOpen] = useState(false);
@@ -52,12 +53,12 @@ const MobileNavDrawer = () => {
         </SubtleButton>
         <nav aria-label="Hoofdmenu">
           <NavList>
-            <NavListLink href={`${base}/design-system`}>Utrecht Design System</NavListLink>
-            <NavListLink href={`${base}/designers`}>Voor designers</NavListLink>
-            <NavListLink href={`${base}/developers`}>Voor developers</NavListLink>
-            <NavListLink href={`${base}/richtlijnen`}>Richtlijnen</NavListLink>
-            <NavListLink href={`${base}/componenten`}>Componenten</NavListLink>
-            <NavListLink href={`${base}/vragen`}>Vragen</NavListLink>
+            <NavListLink href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
+            <NavListLink href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
+            <NavListLink href={joinUrl(base, '/developers')}>Voor developers</NavListLink>
+            <NavListLink href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
+            <NavListLink href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
+            <NavListLink href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
           </NavList>
         </nav>
       </Drawer>
