@@ -10,6 +10,10 @@
   ul {
     @include utrecht-unordered-list;
     @include utrecht-unordered-list--distanced;
+
+    @media (forced-colors: active) {
+      @include utrecht-unordered-list--forced-colors;
+    }
   }
 
   ul > li {

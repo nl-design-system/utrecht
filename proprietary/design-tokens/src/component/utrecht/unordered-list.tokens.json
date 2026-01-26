@@ -3,12 +3,14 @@
     "unordered-list": {
       "margin-block-start": { "value": "{utrecht.space.block.md}" },
       "margin-block-end": { "value": "0" },
+      "padding-inline-start": { "value": "{utrecht.space.inline.xl}" },
       "item": {
         "margin-block-start": { "value": "0.25rem" },
         "margin-block-end": { "value": "0.25rem" }
       },
       "marker": {
-        "color": { "value": "{utrecht.color.red.40}" }
+        "color": { "value": "{utrecht.color.red.40}" },
+        "padding-inline-end": { "value": "{utrecht.space.inline.sm}" }
       }
     }
   }
