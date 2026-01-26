@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import { base } from 'astro:config/client';
+import { joinUrl } from '../utils/url';
 import { ButtonLink } from '@utrecht/component-library-react/css-module'
 import TileNavigation from '../components/TileNavigation.astro';
 import TileList from '../components/TileList.astro';
@@ -12,8 +13,8 @@ import TileList from '../components/TileList.astro';
       <h1 class="utrecht-heading-1">Utrecht Design System</h1>
       <p class="nl-paragraph">Principes, interactiepatronen, basiselementen en componenten</p>
       <div class="utrecht-hero__action-group">
-        <ButtonLink appearance="primary-action-button" href={`${base}/design-system`}>Getting started</ButtonLink>
-        <ButtonLink appearance="secondary-action-button" href={`${base}/componenten`}>Naar de componenten</ButtonLink>
+        <ButtonLink appearance="primary-action-button" href={joinUrl(base, '/design-system')}>Getting started</ButtonLink>
+        <ButtonLink appearance="secondary-action-button" href={joinUrl(base, '/componenten')}>Naar de componenten</ButtonLink>
       </div>
     </div>
   </section>
@@ -21,32 +22,32 @@ import TileList from '../components/TileList.astro';
     <h2>Onderwerpen</h2>
     <TileList>
       <TileNavigation
-        href={`${base}/design-system`}
+        href={joinUrl(base, '/design-system')}
         title="Utrecht Design System"
         description="Meer weten over het Utrecht Design System? Voor wie is het design system bedoeld?"
       />
       <TileNavigation
-        href={`${base}/richtlijnen`}
+        href={joinUrl(base, '/richtlijnen')}
         title="Richtlijnen"
         description="Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?"
       />
       <TileNavigation
-        href={`${base}/developers`}
+        href={joinUrl(base, '/developers')}
         title="Ontwikkelaars"
         description="Hoe ga ik als ontwikkelaar aan de slag gaan met Utrecht Design System?"
       />
       <TileNavigation
-        href={`${base}/designers`}
+        href={joinUrl(base, '/designers')}
         title="Designers"
         description="Hoe ga ik als designer aan de slag met Utrecht Design System?"
       />
       <TileNavigation
-        href={`${base}/componenten`}
+        href={joinUrl(base, '/componenten')}
         title="Components"
         description="Hoe ga ik als designer aan de slag met Utrecht Design System?"
       />
       <TileNavigation
-        href={`${base}/tokens`}
+        href={joinUrl(base, '/tokens')}
         title="Tokens"
         description="Hoe ga ik als designer aan de slag met Utrecht Design System?"
       />

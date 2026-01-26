@@ -4,6 +4,7 @@ import TileNavigation from '../components/TileNavigation.astro';
 import TileList from '../components/TileList.astro';
 import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import { joinUrl } from '../utils/url';
 
 interface Props {
   page: {
@@ -39,7 +40,7 @@ function generateBreadcrumbs(pageId: string, pages: any[]) {
   const parts = slug ? slug.split('/') : [];
   const breadcrumbs: Array<{ label: string; href: string }> = [];
 
-  breadcrumbs.push({ label: 'Home', href: `${base}/` });
+  breadcrumbs.push({ label: 'Home', href: joinUrl(base, '/') });
 
   let currentPath = '';
   for (let i = 0; i < parts.length; i++) {
@@ -51,7 +52,7 @@ function generateBreadcrumbs(pageId: string, pages: any[]) {
       .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
       .join(' ');
 
-    breadcrumbs.push({ label, href: `${base}/${currentPath}` });
+    breadcrumbs.push({ label, href: joinUrl(base, `/${currentPath}`) });
   }
 
   return breadcrumbs;
@@ -60,7 +61,7 @@ function generateBreadcrumbs(pageId: string, pages: any[]) {
 const breadcrumbs = generateBreadcrumbs(page.id, allPages);
 
 const tiles = childPages.map((child) => {
-  let href = `${base}/${child.id}`;
+  let href = joinUrl(base, `/${child.id}`);
 
   return {
     title: child.data.title,
