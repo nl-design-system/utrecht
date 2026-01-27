@@ -8715,19 +8715,27 @@
           "$value": "{basis.color.default.color-document}"
         },
         "content": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.default.bg-subtle}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
           "max-inline-size": {
             "$type": "dimension",
-            "$value": "1184px"
+            "$value": "{basis.page.max-inline-size}"
           }
         },
         "link": {
           "padding-block-end": {
             "$type": "dimension",
-            "$value": "{basis.space.block.md}"
+            "$value": "{basis.space.block.lg}"
           },
           "padding-block-start": {
             "$type": "dimension",
-            "$value": "{basis.space.block.md}"
+            "$value": "{basis.space.block.lg}"
           },
           "padding-inline-end": {
             "$type": "dimension",
