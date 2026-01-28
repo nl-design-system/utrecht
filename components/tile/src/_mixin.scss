@@ -20,6 +20,7 @@
   padding-inline-start: var(--utrecht-tile-padding-inline-start);
   position: relative;
   text-decoration: none;
+  transition: 200ms scale ease-in-out;
 }
 
 @mixin utrecht-tile__link {
@@ -38,6 +39,7 @@
   align-self: end;
   block-size: var(--utrecht-tile-arrow-container-block-size);
   inline-size: var(--utrecht-tile-arrow-container-inline-size);
+  min-inline-size: var(--utrecht-tile-arrow-container-inline-size);
 }
 
 @mixin utrecht-tile__arrow {
