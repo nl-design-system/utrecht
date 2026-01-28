@@ -219,10 +219,6 @@
 }
 
 @mixin utrecht-listbox__option--selected {
-  --_utrecht-listbox-option-disabled-background-color: var(--utrecht-listbox-option-selected-disabled-background-color);
-  --_utrecht-listbox-option-disabled-color: var(--utrecht-listbox-option-selected-disabled-color);
-  --_utrecht-listbox-option-interactive-background-color: var(--utrecht-listbox-option-selected-hover-background-color);
-  --_utrecht-listbox-option-interactive-color: var(--utrecht-listbox-option-selected-hover-color);
   --_utrecht-listbox-option-state-background-color: var(--utrecht-listbox-option-selected-background-color);
   --_utrecht-listbox-option-state-color: var(--utrecht-listbox-option-selected-color);
 }
