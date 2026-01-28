@@ -9821,6 +9821,115 @@
       }
     }
   },
+  "components/password-input": {
+    "ams": {
+      "password-input": {
+        "background-color": {
+          "$type": "color",
+          "$value": "{basis.form-control.background-color}"
+        },
+        "border-color": {
+          "$type": "color",
+          "$value": "{basis.form-control.border-color}"
+        },
+        "border-style": {
+          "$type": "other",
+          "$value": "solid",
+          "$description": "[code-only]"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.border-width}"
+        },
+        "color": {
+          "$type": "color",
+          "$value": "{basis.form-control.color}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.form-control.font-family}"
+        },
+        "font-size": {
+          "$type": "fontSizes",
+          "$value": "{basis.form-control.font-size}"
+        },
+        "font-weight": {
+          "$type": "fontWeights",
+          "$value": "{basis.form-control.font-weight}"
+        },
+        "line-height": {
+          "$type": "lineHeights",
+          "$value": "{basis.form-control.line-height}"
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "auto",
+          "$description": "[code-only]"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.padding-block-start}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.form-control.padding-inline-start}"
+        },
+        "placeholder": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.placeholder.color}"
+          }
+        },
+        "disabled": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.form-control.disabled.color}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "disabled",
+            "$description": "[code-only]"
+          }
+        },
+        "hover": {
+          "box-shadow": {
+            "$type": "boxShadow",
+            "$value": {
+              "x": "0",
+              "y": "0",
+              "blur": "0",
+              "color": "{basis.form-control.hover.border-color}",
+              "spread": "{basis.form-control.hover.border-width}",
+              "type": "innerShadow"
+            }
+          }
+        },
+        "invalid": {
+          "border-color": {
+            "$type": "color",
+            "$value": "{basis.form-control.invalid.border-color}"
+          },
+          "hover": {
+            "border-color": {
+              "$type": "color",
+              "$value": "{basis.color.negative.border-hover}"
+            },
+            "box-shadow": {
+              "$type": "boxShadow",
+              "$value": {
+                "x": "0",
+                "y": "0",
+                "blur": "0",
+                "color": "{basis.color.negative.border-hover}",
+                "spread": "{basis.form-control.hover.border-width}",
+                "type": "innerShadow"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
   "components/progress-list/den-haag": {
     "denhaag": {
       "process-steps": {
@@ -15175,6 +15284,7 @@
       "components/paragraph/nl",
       "components/paragraph/utrecht",
       "components/pre-heading",
+      "components/password-input",
       "components/progress-list/den-haag",
       "components/progress-list/todo",
       "components/radio-button",
