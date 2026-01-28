@@ -1,0 +1,76 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+
+@mixin utrecht-tile {
+  align-content: end;
+  background-color: var(--utrecht-tile-background-color);
+  color: var(--utrecht-tile-color);
+  cursor: var(--utrecht-action-activate-cursor, revert);
+  display: flex;
+  justify-content: space-between;
+  min-block-size: 6.25rem;
+  padding-block-end: var(--utrecht-tile-padding-block-end);
+  padding-block-start: var(--utrecht-tile-padding-block-start);
+  padding-inline-end: var(--utrecht-tile-padding-inline-end);
+  padding-inline-start: var(--utrecht-tile-padding-inline-start);
+  position: relative;
+  text-decoration: none;
+}
+
+@mixin utrecht-tile__link {
+  align-self: end;
+}
+
+@mixin utrecht-tile__icon {
+  display: block;
+}
+
+@mixin utrecht-tile__text {
+  font-size: 1rem;
+}
+
+@mixin utrecht-tile__arrow-container {
+  align-self: end;
+  block-size: var(--utrecht-tile-arrow-container-block-size);
+  inline-size: var(--utrecht-tile-arrow-container-inline-size);
+}
+
+@mixin utrecht-tile__arrow {
+  block-size: var(--utrecht-tile-arrow-block-size);
+  display: block;
+  inline-size: var(--utrecht-tile-arrow-inline-size);
+  line-height: 0;
+}
+
+@mixin utrecht-tile--primary {
+  background-color: var(--utrecht-tile-primary-background-color);
+  color: var(--utrecht-tile-primary-color);
+}
+
+@mixin utrecht-tile--secondary {
+  background-color: var(--utrecht-tile-secondary-background-color);
+  color: var(--utrecht-tile-secondary-color);
+}
+
+@mixin utrecht-tile--tertiary {
+  background-color: var(--utrecht-tile-tertiary-background-color);
+  color: var(--utrecht-tile-tertiary-color);
+}
+
+@mixin utrecht-tile--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+}
+
+@mixin utrecht-tile--focus {
+  scale: var(--utrecht-tile-focus-scale, 1);
+}
+
+@mixin utrecht-tile--hover {
+  scale: var(--utrecht-tile-hover-scale, 1);
+}
