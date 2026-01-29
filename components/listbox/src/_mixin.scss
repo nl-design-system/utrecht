@@ -216,6 +216,14 @@
   --_utrecht-listbox-option-interactive-color: var(--utrecht-listbox-option-disabled-color);
 
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+
+  &.utrecht-listbox__option--selected {
+    /* disabled + selected */
+    --_utrecht-listbox-option-disabled-background-color: var(
+      --utrecht-listbox-option-selected-disabled-background-color
+    );
+    --_utrecht-listbox-option-disabled-color: var(--utrecht-listbox-option-selected-disabled-color);
+  }
 }
 
 @mixin utrecht-listbox__option--selected {
