@@ -1,0 +1,72 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import { Heading1, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
+import { base } from 'astro:config/client';
+import { joinUrl } from '../../utils/url';
+
+export async function getStaticPaths() {
+  const components = await getCollection('components');
+
+  return components.map((component) => {
+    const slug = component.id.replace(/\.mdx?$/, '');
+    return {
+      params: { slug },
+      props: { component },
+    };
+  });
+}
+
+interface Props {
+  component: {
+    id: string;
+    data: {
+      title: string;
+      description?: string;
+    };
+  };
+}
+
+const { component } = Astro.props;
+const { Content } = await render(component);
+---
+
+<Layout>
+  <article class="component-page">
+    <BreadcrumbNav>
+      <BreadcrumbNavLink href={joinUrl(base, '/')} index={0}>Home</BreadcrumbNavLink>
+      <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
+      <BreadcrumbNavLink href={joinUrl(base, '/componenten')} index={1}>Componenten</BreadcrumbNavLink>
+      <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
+      <BreadcrumbNavLink href={joinUrl(base, `/componenten/${component.id.replace(/\.mdx?$/, '')}`)} current index={2}>{component.data.title}</BreadcrumbNavLink>
+    </BreadcrumbNav>
+
+    <header class="component-page__header">
+      <Heading1>{component.data.title}</Heading1>
+      {component.data.description && (
+        <p class="component-page__description">{component.data.description}</p>
+      )}
+    </header>
+
+    <div class="component-page__content">
+      <Content />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .component-page {
+    padding-block-start: 2rem;
+  }
+
+  .component-page__header {
+    margin-block-end: 2rem;
+  }
+
+  .component-page__description {
+    margin-block-start: 0.5rem;
+    color: var(--utrecht-document-color, #666);
+    font-size: 1.125rem;
+  }
+</style>
+

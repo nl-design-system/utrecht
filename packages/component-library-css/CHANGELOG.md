@@ -1,5 +1,30 @@
 # @utrecht/component-library-css
 
+## 9.0.0
+
+### Major Changes
+
+- edac79f: - badge-status is no longer styled through common badge tokens but has its own set of tokens
+  - badge-status has been renamed to status-badge, use @utrecht/status-badge-css instead of @utrecht/badge-status-css
+
+### Patch Changes
+
+- Updated dependencies [edac79f]
+- Updated dependencies [3be2632]
+- Updated dependencies [0fcdfbf]
+  - @utrecht/status-badge-css@1.0.0
+  - @utrecht/rich-text-css@2.1.0
+  - @utrecht/navigation-css@1.1.1
+
+## 8.2.1
+
+### Patch Changes
+
+- Updated dependencies [f02b554]
+- Updated dependencies [55988ac]
+  - @utrecht/breadcrumb-nav-css@2.1.0
+  - @utrecht/navigation-css@1.1.0
+
 ## 8.2.0
 
 ### Minor Changes

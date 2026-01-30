@@ -44,7 +44,7 @@ module.exports = {
     },
     {
       prependBaseUrlToHref: true,
-      href: './storybook/',
+      href: '../storybook/',
       label: 'Storybook',
       position: 'right',
     },

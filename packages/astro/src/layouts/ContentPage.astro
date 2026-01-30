@@ -1,0 +1,81 @@
+---
+import Layout from './Layout.astro';
+import { BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
+import { base } from 'astro:config/client';
+import { joinUrl } from '../utils/url';
+
+interface Props {
+  page: {
+    id: string;
+    data: {
+      title: string;
+      description?: string;
+    };
+  };
+  allPages: Array<{
+    id: string;
+    data: {
+      title: string;
+    };
+  }>;
+}
+
+const { page, allPages } = Astro.props;
+
+function generateBreadcrumbs(pageId: string, pages: any[], currentPageTitle: string) {
+  const parts = pageId.split('/');
+  const breadcrumbs: Array<{ label: string; href: string }> = [];
+
+  breadcrumbs.push({ label: 'Home', href: joinUrl(base, '/') });
+
+  let currentPath = '';
+  for (let i = 0; i < parts.length - 1; i++) {
+    currentPath += (currentPath ? '/' : '') + parts[i];
+
+    const indexPage = pages.find(p => p.id === `${currentPath}/_index`);
+    const label = indexPage?.data?.title || parts[i]
+      .split('-')
+      .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+
+    breadcrumbs.push({ label, href: joinUrl(base, `/${currentPath}`) });
+  }
+
+  breadcrumbs.push({ label: currentPageTitle, href: joinUrl(base, `/${pageId}`) });
+
+  return breadcrumbs;
+}
+
+const breadcrumbs = generateBreadcrumbs(page.id, allPages, page.data.title);
+---
+
+<Layout>
+  <article class="content-page">
+    {breadcrumbs.length > 1 && (
+      <BreadcrumbNav>
+        {breadcrumbs.map((crumb, index) => (
+          <>
+            {index > 0 && <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>}
+            <BreadcrumbNavLink
+              href={crumb.href}
+              index={index}
+              current={index === breadcrumbs.length - 1}
+            >
+              {crumb.label}
+            </BreadcrumbNavLink>
+          </>
+        ))}
+      </BreadcrumbNav>
+    )}
+
+    <div class="content-page__body">
+      <slot />
+    </div>
+  </article>
+</Layout>
+
+<style>
+  .content-page {
+    padding-block-start: 2rem;
+  }
+</style>

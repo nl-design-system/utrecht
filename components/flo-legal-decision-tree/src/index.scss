@@ -4,19 +4,90 @@
  * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
+@use "~@utrecht/button-css/src/mixin" as *;
 @use "~@utrecht/form-label-css/src/mixin" as *;
 @use "~@utrecht/custom-checkbox-css/src/mixin" as *;
+@use "~@utrecht/select-css/src/mixin" as *;
+@use "~@utrecht/link-css/src/mixin" as *;
 @use "./mixin" as *;
 
 /**
  * The nesting is intended to make the CSS specificity higher than the CSS in
- * /packages/flolegal-decision-tree-client/assets/flo-client-styles.1.13.2.css
+ * /packages/flolegal-decision-tree-client/assets/flo-client-styles.1.17.0.css
  * This allows Utrecht Design System styles to override the default Flo client styles.
  */
 .utrecht-flolegal-decision-tree-container {
+  .flo-nav .flo-form-button.flo-inner-visibility-hidden {
+    display: none !important;
+  }
+
+  .flo-nav .flo-form-button.flo-form-button-next {
+    @include utrecht-button;
+    @include utrecht-button-appearance-properties("utrecht-button", "primary-action");
+
+    --utrecht-button-icon: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%208%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1%2014c-.26%200-.51-.1-.71-.29a.996.996%200%200%201%200-1.41l5.29-5.29-5.29-5.3C-.1%201.32-.1.68.29.29s1.03-.39%201.42%200l6%206c.39.39.39%201.02%200%201.41l-6%206.01c-.2.2-.45.29-.71.29%22%2F%3E%3C%2Fsvg%3E");
+
+    &::after {
+      @include utrecht-button-icon;
+    }
+
+    &:hover {
+      @include utrecht-button--hover;
+    }
+
+    &:disabled:hover {
+      @include utrecht-button--disabled;
+    }
+
+    @media (forced-colors: active) {
+      @include utrecht-button-icon--forced-colors;
+    }
+  }
+
+  .flo-nav .flo-form-button.flo-form-button-previous {
+    @include utrecht-button;
+    @include utrecht-button-appearance-properties("utrecht-button", "subtle");
+
+    --utrecht-button-icon: url("data:image/svg+xml,%3Csvg%20viewBox%3D%220%200%208%2014%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M7%2014c-.26%200-.51-.1-.71-.29l-6-6a.996.996%200%200%201%200-1.41l6-6.01A.996.996%200%201%201%207.7%201.7L2.41%207l5.29%205.29a.996.996%200%200%201-.71%201.7Z%22%2F%3E%3C%2Fsvg%3E");
+
+    &::before {
+      @include utrecht-button-icon;
+    }
+
+    // disabled hover style based on Rene feedback
+    @media (forced-colors: active) {
+      @include utrecht-button-icon--forced-colors;
+    }
+  }
+
+  .flo-nav .flo-form-button.flo-form-button-restart {
+    @include utrecht-button;
+    @include utrecht-button-appearance-properties("utrecht-button", "primary-action");
+
+    &:hover {
+      @include utrecht-button--hover;
+    }
+
+    &:disabled:hover {
+      @include utrecht-button--disabled;
+    }
+  }
+
+  .flo-nav .flo-form-button:disabled {
+    @include utrecht-button--disabled;
+    @include utrecht-flo-decision-form-button;
+  }
+
+  .flo-nav {
+    @include utrecht-flo-decision-form-nav;
+  }
+
   .flo-question-container {
     @include utrecht-flo-decision-question-container;
+
+    background-color: var(--utrecht-flo-decision-form-background-color);
   }
+
   .flo-question-description-container {
     @include utrecht-flo-decision-question-description-container;
   }
@@ -36,15 +107,25 @@
   .flo-question-answers {
     @include utrecht-flo-decision-question-answers;
   }
-
+  .flo-question-answers select {
+    @include utrecht-select;
+    @include utrecht-select--html-select;
+    @include utrecht-select--not-multiple;
+  }
   label.flo-boolean-false {
     @include utrecht-flo-decision-boolean-false;
   }
-  .flo-decision-list .flo-question-section {
+  .flo-embed-container .flo-question-section {
     @include utrecht-flo-decision-question-section;
   }
 
+  .flo-decision-list > :first-child {
+    --utrecht-flo-decision-question-section-padding-block-start: 0;
+  }
+
   .flo-decision-list > :last-child .flo-question-section {
+    --utrecht-flo-decision-question-section-padding-block-end: 0;
+
     border: none;
   }
 
@@ -57,7 +138,7 @@
     @include utrecht-flo-decision-label--checkbox;
   }
 
-  .flo-decision-list .flo-question-section .flo-explanation-container {
+  .flo-explanation-container {
     @include utrecht-flo-decision-explanation-container;
   }
 
@@ -87,5 +168,10 @@
 
   .flo-question-answers .flo-question-answers-option label {
     @include utrecht-flo-decision-label;
+  }
+
+  .flo-embed-container a {
+    @include utrecht-link;
+    @include utrecht-link--html-a;
   }
 }

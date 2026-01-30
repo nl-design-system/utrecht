@@ -35,13 +35,19 @@
 .utrecht-navigation__link:hover {
   @include utrecht-navigation__link-hover;
 }
-.utrecht-navigation__link:focus {
+
+.utrecht-link.utrecht-link--html-a.utrecht-navigation__link:focus-visible {
+  @include utrecht-navigation__link-focus-visible;
+}
+
+.utrecht-link.utrecht-link--html-a.utrecht-navigation__link:focus {
   @include utrecht-navigation__link-focus;
 }
 
-.utrecht-navigation__link:active:focus {
-  @include utrecht-navigation__link-active-focus;
+.utrecht-navigation__link:active {
+  @include utrecht-navigation__link-active;
 }
+
 .utrecht-navigation__link--mobile {
   @include utrecht-navigation__link--mobile;
 }
@@ -90,7 +96,17 @@
 
 .utrecht-navigation__toggle-button {
   @include utrecht-navigation__toggle-button;
+  & button:hover {
+    @include utrecht-navigation__toggle-button--hover;
+  }
+  & button:focus {
+    @include utrecht-navigation__toggle-button--focus;
+  }
+  & button:active {
+    @include utrecht-navigation__toggle-button--active;
+  }
 }
+
 .utrecht-icon-custom {
   @include utrecht-icon-custom;
 }

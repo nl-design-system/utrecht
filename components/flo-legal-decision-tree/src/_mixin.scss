@@ -11,20 +11,29 @@
 }
 
 @mixin utrecht-flo-decision-question-description {
+  --utrecht-form-fieldset-legend-margin-block-start: 0;
+
   align-items: center;
+  column-gap: var(--utrecht-flo-decision-question-description-column-gap);
   display: flex;
-  gap: var(--utrecht-flo-decision-question-description-gap, 12px);
   inline-size: fit-content;
+}
+@mixin utrecht-flo-decision-form-button {
+  --utrecht-button-primary-action-disabled-color: var(--utrecht-flo-decision-form-button-disabled-color);
+}
+
+@mixin utrecht-flo-decision-form-nav {
+  background-color: var(--utrecht-flo-decision-form-nav-background-color, inherit);
+  display: grid;
+  padding-block: var(--utrecht-flo-decision-form-nav-padding-block);
+  padding-inline: 0;
 }
 
 @mixin utrecht-flo-decision-explanation-button {
-  --utrecht-button-border-color: var(
-    --utrecht-flo-decision-explanation-button-border-color,
-    var(--utrecht-color-black)
-  );
+  --utrecht-button-border-color: var(--utrecht-flo-decision-explanation-button-border-color);
   --utrecht-button-margin-block-start: 0;
   --utrecht-button-margin-block-end: 0;
-  --utrecht-button-background-color: var(--utrecht-flo-decision-explanation-button-background-color, transparent);
+  --utrecht-button-background-color: var(--utrecht-flo-decision-explanation-button-background-color);
 }
 @mixin utrecht-flo-decision-question-container {
   align-items: baseline;
@@ -33,13 +42,15 @@
 }
 
 @mixin utrecht-flo-decision-question-answers-option {
+  column-gap: var(--utrecht-flo-decision-question-answers-option-column-gap);
+  display: inline-flex;
   padding-inline-start: 0;
 }
 
 @mixin utrecht-flo-decision-question-answers {
   display: grid;
-  gap: var(--utrecht-flo-decision-question-answer-gap, 8px);
   inline-size: 100%;
+  row-gap: var(--utrecht-flo-decision-question-answer-row-gap);
 }
 
 @mixin utrecht-flo-decision-boolean-false {
@@ -47,38 +58,39 @@
 }
 
 @mixin utrecht-flo-decision-question-section {
-  background-color: var(--utrecht-flo-decision-question-section-background-color, var(--utrecht-color-green-90));
-  border-block-end-color: var(
-    --utrecht-flo-decision-question-section-border-block-end-color,
-    var(--utrecht-color-green-50)
-  );
-  border-block-end-style: solid;
-  border-block-end-width: var(--utrecht-flo-decision-question-section-border-block-end-width, 3px);
-  padding-block-end: var(--utrecht-flo-decision-question-section-padding-block-end, 24px);
+  background-color: var(--utrecht-flo-decision-question-section-background-color);
+  border-block-color: var(--utrecht-flo-decision-question-section-border-block-color);
+  border-block-style: solid;
+  border-block-width: var(--utrecht-flo-decision-question-section-border-block-width);
+  padding-block-end: var(--utrecht-flo-decision-question-section-padding-block-end);
+  padding-block-start: var(--utrecht-flo-decision-question-section-padding-block-start);
 }
 
 @mixin utrecht-flo-decision-explanation-container {
-  background-color: var(--utrecht-flo-decision-explanation-container-background-color, #fff);
-  inline-size: 100%;
+  background-color: var(--utrecht-flo-decision-explanation-container-background-color, inherit);
   margin-block-end: 0;
+  margin-block-start: var(--utrecht-flo-decision-explanation-container-margin-block-start);
+  max-inline-size: 100%;
 }
 
 @mixin utrecht-flo-decision-outcomes-container {
-  background-color: var(--utrecht-flo-decision-outcomes-container-background-color, #fff);
-  margin-block-start: var(--utrecht-flo-decision-outcomes-container-margin-block-start, 24px);
+  background-color: var(--utrecht-flo-decision-outcomes-container-background-color);
+  margin-block-start: var(--utrecht-flo-decision-outcomes-container-margin-block-start);
+  padding-block: var(--utrecht-flo-decision-outcomes-container-padding-block);
+  padding-inline: var(--utrecht-flo-decision-outcomes-container-padding-inline);
 }
 
 @mixin utrecht-flo-decision-form {
-  background-color: var(--utrecht-flo-decision-background-color, #e6edde);
-  margin-block-end: var(--utrecht-flo-decision-margin-block-end, 8px);
-  margin-block-start: var(--utrecht-flo-decision-margin-block-start, 8px);
-  padding-block: var(--utrecht-flo-decision-padding-block, 12px);
-  padding-inline: var(--utrecht-flo-decision-padding-inline, 16px);
+  background-color: var(--utrecht-flo-decision-form-background-color);
+  margin-block-end: var(--utrecht-flo-decision-form-margin-block-end);
+  margin-block-start: var(--utrecht-flo-decision-form-margin-block-start);
+  padding-block: var(--utrecht-flo-decision-form-padding-block);
+  padding-inline: var(--utrecht-flo-decision-form-padding-inline);
 }
 
 @mixin utrecht-flo-decision-explanation {
-  margin-block-start: var(--utrecht-flo-decision-explanation-margin-block-start, 24px);
-  margin-inline-start: var(--utrecht-flo-decision-explanation-margin-inline-start, 0);
+  margin-block-start: var(--utrecht-flo-decision-explanation-margin-block-start);
+  margin-inline-start: var(--utrecht-flo-decision-explanation-margin-inline-start);
 }
 
 @mixin utrecht-flo-decision-explanation-wrapper {
@@ -86,7 +98,7 @@
 }
 
 @mixin utrecht-flo-decision-explanation-button--close {
-  margin-block-end: var(--utrecht-flo-decision-explanation-button-close-margin-block-end, 12px);
+  margin-block-end: var(--utrecht-flo-decision-explanation-button-close-margin-block-end);
   margin-inline-start: auto;
   position: relative;
 }
@@ -96,10 +108,26 @@
 }
 
 @mixin utrecht-flo-decision-label {
-  display: flex;
+  display: inline-flex;
 }
 
 @mixin utrecht-flo-decision-label--checkbox {
-  gap: var(--utrecht-flo-decision-label-checkbox-gap, 8px);
-  margin-block-start: var(--utrecht-flo-decision-label-checkbox-margin-block-start, 12px);
+  column-gap: var(--utrecht-flo-decision-label-checkbox-column-gap);
+  margin-block-start: var(--utrecht-flo-decision-label-checkbox-margin-block-start);
+}
+
+@mixin utrecht-button-icon {
+  background-color: var(--utrecht-button-icon-color, currentColor);
+  block-size: 1em;
+  content: "";
+  display: inline-block;
+  inline-size: 1em;
+  mask-image: var(--utrecht-button-icon);
+  mask-position: center;
+  mask-repeat: no-repeat;
+  mask-size: contain;
+}
+
+@mixin utrecht-button-icon--forced-colors {
+  --utrecht-button-icon-color: CanvasText;
 }

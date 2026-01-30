@@ -19,12 +19,22 @@
 .utrecht-nav-list {
   @include reset-ul;
 
-  align-items: stretch;
+  align-items: baseline;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   inline-size: 100%;
   justify-content: start;
+}
+
+.utrecht-nav-list--inline-size-auto {
+  inline-size: auto;
+}
+
+.utrecht-nav-list__link[aria-current="page"],
+.utrecht-nav-list__link[aria-current="true"] {
+  background-color: var(--utrecht-navigation-link-current-background-color, transparent);
+  font-weight: var(--utrecht-navigation-link-current-font-weight);
 }
 
 .utrecht-nav-list--center {

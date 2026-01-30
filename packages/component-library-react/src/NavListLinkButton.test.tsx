@@ -118,4 +118,19 @@ describe('Navigation bar link list button', () => {
   });
 
   it.todo('supports ForwardRef in React');
+
+  it('supports extra ButtonHTMLAttributes via restProps', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLinkButton formAction="/logout" formMethod="post">
+          Logout
+        </NavListLinkButton>
+      </NavList>,
+    );
+
+    const button = container.querySelector('button:only-child');
+
+    expect(button).toHaveAttribute('formMethod', 'post');
+    expect(button).toHaveAttribute('formAction', '/logout');
+  });
 });

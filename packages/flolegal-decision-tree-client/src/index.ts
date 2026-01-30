@@ -1,8 +1,9 @@
 /**
  * Flo Client Plugin Version
- * This package is compatible with flo-client-plugin version 1.13.2
+ * This package is compatible with flo-client-plugin version 1.17.0
  */
 const FLO_CLIENT_SCRIPT = `flo-client-plugin.js`;
+const FLO_CLIENT_POLYFILLS_SCRIPT = `flo-client-plugin-polyfills.js`;
 
 export interface LoadScriptOptions {
   nonce?: string;
@@ -17,19 +18,32 @@ export const loadFloClientScript = (basePath?: string, options: LoadScriptOption
     }
 
     const base = basePath ? new URL(basePath, window.location.origin).href : window.location.origin;
-    const src = new URL(FLO_CLIENT_SCRIPT, base).href;
-    if (document.querySelector(`script[src="${src}"]`)) {
+    const polyfillsSrc = new URL(FLO_CLIENT_POLYFILLS_SCRIPT, base).href;
+    const mainSrc = new URL(FLO_CLIENT_SCRIPT, base).href;
+
+    if (document.querySelector(`script[src="${mainSrc}"]`)) {
       resolve();
       return;
     }
 
-    const script = document.createElement('script');
-    script.src = src;
-    if (options.nonce) script.nonce = options.nonce;
-    if (options.integrity) script.integrity = options.integrity;
-    script.onload = () => resolve();
-    script.onerror = () =>
-      reject(new Error(`Failed to load ${src}. Make sure the file is available in your static assets.`));
-    document.head.appendChild(script);
+    const polyfillsScript = document.createElement('script');
+    polyfillsScript.src = polyfillsSrc;
+    polyfillsScript.type = 'module';
+    if (options.nonce) polyfillsScript.nonce = options.nonce;
+    if (options.integrity) polyfillsScript.integrity = options.integrity;
+    polyfillsScript.onerror = () =>
+      reject(new Error(`Failed to load ${polyfillsSrc}. Make sure the file is available in your static assets.`));
+
+    const mainScript = document.createElement('script');
+    mainScript.src = mainSrc;
+    mainScript.type = 'module';
+    if (options.nonce) mainScript.nonce = options.nonce;
+    if (options.integrity) mainScript.integrity = options.integrity;
+    mainScript.onload = () => resolve();
+    mainScript.onerror = () =>
+      reject(new Error(`Failed to load ${mainSrc}. Make sure the file is available in your static assets.`));
+
+    document.head.appendChild(polyfillsScript);
+    document.head.appendChild(mainScript);
   });
 };

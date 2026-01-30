@@ -86,4 +86,20 @@ describe('Navigation bar link list', () => {
 
     expect(ref.current).toBe(list);
   });
+
+  it('renders inline-size-auto modifier class when inlineSizeAuto prop is true', () => {
+    const { container } = render(<NavList inlineSizeAuto />);
+
+    const list = container.querySelector(':only-child');
+
+    expect(list).toHaveClass('utrecht-nav-list--inline-size-auto');
+  });
+
+  it('renders center modifier class when appearance is center', () => {
+    const { container } = render(<NavList appearance="center" />);
+
+    const list = container.querySelector(':only-child');
+
+    expect(list).toHaveClass('utrecht-nav-list--center');
+  });
 });

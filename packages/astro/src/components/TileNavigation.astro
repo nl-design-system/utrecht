@@ -1,0 +1,34 @@
+---
+interface Props {
+  href: string;
+  title: string;
+  description: string;
+}
+
+const { href, title, description } = Astro.props;
+---
+
+<div class="utrecht-tile-navigation">
+  <a class="utrecht-link" href={href}>
+    <h3 class="nl-heading nl-heading--level-3">{title}</h3>
+  </a>
+  <p class="nl-paragraph">{description}</p>
+</div>
+
+<style>
+  .utrecht-tile-navigation {
+    --utrecht-link-text-decoration: none;
+    --nl-heading-level-3-margin-block-start: 0;
+    --nl-heading-level-3-margin-block-end: 0;
+
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    column-gap: 8px;
+    padding-block-start: 24px;
+    padding-block-end: 24px;
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+  }
+</style>
+

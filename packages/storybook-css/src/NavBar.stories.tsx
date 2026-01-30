@@ -1,11 +1,11 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
+import { Button, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/nav-bar-css/README.md?raw';
 import tokensDefinition from '@utrecht/nav-bar-css/src/tokens.json';
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -46,6 +46,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    label: 'Hoofdmenu',
     children: (
       <NavList>
         <NavListLink href="#">Wonen en leven</NavListLink>
@@ -121,6 +122,52 @@ export const WrapText: Story = {
     ),
   },
   name: 'Wrap long text in items',
+};
+
+export const WithCurrentItem: Story = {
+  args: {
+    children: (
+      <NavList>
+        <NavListLink href="#">Wonen en leven</NavListLink>
+        <NavListLink href="#" aria-current="page">
+          Werk en inkomen
+        </NavListLink>
+        <NavListLink href="#">Ondernemen</NavListLink>
+        <NavListLink href="#">Bestuur en organisatie</NavListLink>
+      </NavList>
+    ),
+  },
+  name: 'Navigation list with current item',
+};
+
+const alignStyles: CSSProperties = {
+  display: 'flex',
+  alignItems: 'center',
+  gap: '0.5rem',
+};
+
+export const WithSearchWidget: Story = {
+  args: {
+    children: (
+      <>
+        <NavList inlineSizeAuto>
+          <NavListLink href="#">Wonen en leven</NavListLink>
+          <NavListLink href="#">Werk en inkomen</NavListLink>
+          <NavListLink href="#">Ondernemen</NavListLink>
+        </NavList>
+
+        <form role="search" aria-label="Zoeken op de website" style={alignStyles}>
+          <label htmlFor="nav-bar-search-input">Zoeken</label>
+          <input id="nav-bar-search-input" className="utrecht-textbox" type="search" placeholder="Trefwoord" />
+
+          <Button type="submit" appearance="primary-action">
+            Zoeken
+          </Button>
+        </form>
+      </>
+    ),
+  },
+  name: 'Navigation list with search widget',
 };
 
 export const DesignTokens = designTokenStory(meta);

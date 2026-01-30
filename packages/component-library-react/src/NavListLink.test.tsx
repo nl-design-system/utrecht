@@ -124,4 +124,47 @@ describe('Navigation bar link list link', () => {
   });
 
   it.todo('supports ForwardRef in React');
+
+  it('renders center modifier class when center prop is true', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLink href="#" center>
+          Home
+        </NavListLink>
+      </NavList>,
+    );
+
+    const listItem = container.querySelector('li:only-child');
+
+    expect(listItem).toHaveClass('utrecht-nav-list__item--center');
+  });
+
+  it('supports aria-current attribute', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLink href="#" aria-current="page">
+          Home
+        </NavListLink>
+      </NavList>,
+    );
+
+    const link = container.querySelector('a:only-child');
+
+    expect(link).toHaveAttribute('aria-current', 'page');
+  });
+
+  it('supports extra AnchorHTMLAttributes via restProps', () => {
+    const { container } = render(
+      <NavList>
+        <NavListLink href="#" aria-current="page" title="Navigate to home page">
+          Home
+        </NavListLink>
+      </NavList>,
+    );
+
+    const link = container.querySelector('a:only-child');
+
+    expect(link).toHaveAttribute('aria-current', 'page');
+    expect(link).toHaveAttribute('title', 'Navigate to home page');
+  });
 });

@@ -1,5 +1,37 @@
 # @utrecht/design-tokens
 
+## 5.0.1
+
+### Patch Changes
+
+- 341a0b7: Aligned the `margin-block-start` of flo-decision widget with the Figame design
+
+## 5.0.0
+
+### Major Changes
+
+- edac79f: - badge-status is no longer styled through common badge tokens but has its own set of tokens
+  - badge-status has been renamed to status-badge, use @utrecht/status-badge-css instead of @utrecht/badge-status-css
+
+### Patch Changes
+
+- 0fcdfbf: Fix the mixins for link focus and focus-visible states in the navigation component to correctly reference the design tokens for background colors and text decorations.
+
+## 4.2.0
+
+### Minor Changes
+
+- f02b554: Corrected several spacing token values and metadata in the Breadcrumb Navigation and Rich Text components.
+- 55988ac: Add hover, focus, and active state tokens for Utrecht navigation toggle button
+
+## 4.1.1
+
+### Patch Changes
+
+- e7b59b3: Color changed hr
+- 951bb2c: Align the flo-legal style with Figma
+- fd2db7b: Update the button `font-weight` from 700 to 600 (semibold)
+
 ## 4.1.0
 
 ### Minor Changes

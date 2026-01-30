@@ -1,5 +1,36 @@
 # @utrecht/component-library-react
 
+## 12.0.0
+
+### Major Changes
+
+- d1f8749: NavBar: Changed from div to nav element, added label prop with heading and aria-labelledby for accessibility, fixed useId hook usage.
+  NavList: Added inlineSizeAuto prop, refactored to CSS-only aria-current styling for active items.
+
+## 11.0.0
+
+### Major Changes
+
+- edac79f: - badge-status is no longer styled through common badge tokens but has its own set of tokens
+  - badge-status has been renamed to status-badge, use @utrecht/status-badge-css instead of @utrecht/badge-status-css
+
+### Patch Changes
+
+- b912501: Changed the calendar navigation label to use the calendar year instead of the local week-numbering year
+- Updated dependencies [edac79f]
+- Updated dependencies [b912501]
+- Updated dependencies [3be2632]
+  - @utrecht/status-badge-css@1.0.0
+  - @utrecht/calendar-react@1.0.15
+  - @utrecht/rich-text-css@2.1.0
+
+## 10.3.10
+
+### Patch Changes
+
+- Updated dependencies [f02b554]
+  - @utrecht/breadcrumb-nav-css@2.1.0
+
 ## 10.3.9
 
 ### Patch Changes

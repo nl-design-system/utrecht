@@ -1,5 +1,11 @@
 # @utrecht/calendar-react
 
+## 1.0.15
+
+### Patch Changes
+
+- b912501: Changed the calendar navigation label to use the calendar year instead of the local week-numbering year
+
 ## 1.0.14
 
 ### Patch Changes

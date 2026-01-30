@@ -1,12 +1,11 @@
+import mdx from '@astrojs/mdx';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
-import path from 'node:path';
 import process from 'node:process';
 import { nldsComponentsPlugin } from './plugins/rehype-nlds-components/index.js';
 
-const deploymentBaseUrl = process.env.BASE_URL ?? '/';
-const baseUrl = path.posix.join(deploymentBaseUrl, 'astro');
+const baseUrl = process.env.BASE_URL ?? '/';
 
 // https://astro.build/config
 export default defineConfig({
@@ -24,6 +23,7 @@ export default defineConfig({
     enabled: false,
   },
   integrations: [
+    mdx(),
     react(),
     sitemap({
       changefreq: 'weekly',

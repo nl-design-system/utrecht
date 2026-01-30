@@ -8,9 +8,6 @@ packages:
   - "packages/components-react/*"
   - "proprietary/*"
 
-# Configure pnpm so peer dependencies must be explicitly added instead of being automatically installed.
-autoInstallPeers: false
-
 # Configure pnpm so that it will not install any package that claims to not be compatible with the current Node.js
 # version.
 engineStrict: true
@@ -22,10 +19,19 @@ minimumReleaseAge: 1440
 
 # Make an exception for trusted packages, notably our own
 minimumReleaseAgeExclude:
+  - "@amsterdam/*"
+  - "@gemeente-denhaag/*"
+  - "@gemeente-rotterdam/*"
   - "@nl-design-system/*"
   - "@nl-design-system-candidate/*"
   - "@nl-design-system-community/*"
   - "@nl-design-system-unstable/*"
+  - "@nl-rvo/*"
+  - "@rijkshuisstijl-community/*"
+  - "@utrecht/*"
+
+overrides:
+  form-data@>=4.0.0 <4.0.4: ">=4.0.4"
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.

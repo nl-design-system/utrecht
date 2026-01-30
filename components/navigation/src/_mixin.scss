@@ -82,8 +82,6 @@
 }
 
 @mixin utrecht-navigation__link {
-  --utrecht-link-focus-text-decoration: underline;
-  --utrecht-link-focus-text-decoration-thickness: var(--utrecht-navigation-link-focus-text-decoration-thickness);
   --utrecht-link-text-decoration: none;
   --utrecht-link-active-color: var(--utrecht-navigation-link-active-color);
   --utrecht-link-hover-text-decoration-thickness: var(--utrecht-navigation-link-hover-decoration-thickness);
@@ -115,16 +113,35 @@
 
 @mixin utrecht-navigation__link-focus {
   --utrecht-link-focus-color: var(--utrecht-navigation-link-focus-color);
-  --utrecht-link-focus-background-color: var(--utrecht-color-yellow-80);
+  --utrecht-link-focus-background-color: var(--utrecht-navigation-link-focus-background-color);
+  --utrecht-navigation-marker-color: currentColor;
+  --utrecht-navigation-marker-outline-hover-fill: currentColor;
+  --utrecht-link-text-decoration-thickness: var(--utrecht-navigation-link-focus-text-decoration-thickness);
+  --utrecht-link-text-decoration: underline;
+}
+
+@mixin utrecht-navigation__link-focus-visible {
+  --utrecht-navigation-link-active-focus-color: var(--utrecht-navigation-link-focus-visible-color);
+  --utrecht-link-focus-color: var(--utrecht-navigation-link-focus-visible-color);
+  --utrecht-link-focus-background-color: var(--utrecht-navigation-link-focus-visible-background-color);
+  --utrecht-navigation-link-focus-color: var(--utrecht-navigation-link-focus-visible-color);
+  --utrecht-navigation-link-focus-background-color: var(--utrecht-navigation-link-focus-visible-background-color);
+  --utrecht-link-focus-visible-text-decoration-thickness: var(
+    --utrecht-navigation-link-focus-visible-text-decoration-thickness
+  );
+  --utrecht-link-focus-visible-text-decoration: underline;
   --utrecht-navigation-marker-color: currentColor;
   --utrecht-navigation-marker-outline-hover-fill: currentColor;
 }
 
-@mixin utrecht-navigation__link-active-focus {
-  --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color);
+@mixin utrecht-navigation__link-active {
+  --utrecht-link-active-color: var(--utrecht-navigation-link-active-focus-color);
 }
 
 @mixin utrecht-navigation__link--mobile {
+  --utrecht-navigation-link-focus-color: var(--utrecht-navigation-link-mobile-focus-color);
+  --utrecht-navigation-link-focus-background-color: var(--utrecht-navigation-link-mobile-focus-background-color);
+  --utrecht-link-active-color: var(--utrecht-navigation-link-mobile-active-color);
   --_utrecht-navigation-link-align-items: center;
   --_utrecht-navigation-link-justify-content: normal;
   --utrecht-navigation-link-padding-inline-start: var(--utrecht-navigation-link-mobile-padding-inline-start);
@@ -151,6 +168,7 @@
 }
 
 @mixin utrecht-navigation__link--is-current {
+  --utrecht-navigation-link-mobile-hover-font-weight: var(--utrecht-navigation-link-is-current-font-weight);
   --utrecht-navigation-link-font-weight: var(--utrecht-navigation-link-is-current-font-weight);
 }
 
@@ -234,6 +252,24 @@
 
   justify-content: flex-end;
   padding-inline-end: var(--utrecht-navigation-toggle-button-padding-inline-end);
+}
+
+@mixin utrecht-navigation__toggle-button--hover {
+  --utrecht-button-subtle-hover-color: var(--utrecht-navigation-toggle-button-hover-color);
+  --utrecht-button-subtle-hover-border-color: var(--utrecht-navigation-toggle-button-hover-border-color);
+  --utrecht-button-subtle-hover-background-color: var(--utrecht-navigation-toggle-button-hover-background-color);
+}
+
+@mixin utrecht-navigation__toggle-button--focus {
+  --utrecht-button-subtle-focus-color: var(--utrecht-navigation-toggle-button-focus-color);
+  --utrecht-button-subtle-focus-border-color: var(--utrecht-navigation-toggle-button-focus-border-color);
+  --utrecht-button-subtle-focus-background-color: var(--utrecht-navigation-toggle-button-focus-background-color);
+}
+
+@mixin utrecht-navigation__toggle-button--active {
+  --utrecht-button-subtle-active-color: var(--utrecht-navigation-toggle-button-active-color);
+  --utrecht-button-subtle-active-border-color: var(--utrecht-navigation-toggle-button-active-border-color);
+  --utrecht-button-subtle-active-background-color: var(--utrecht-navigation-toggle-button-active-background-color);
 }
 
 @mixin utrecht-icon-custom {

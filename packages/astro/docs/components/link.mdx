@@ -1,0 +1,109 @@
+---
+title: Link
+description: Gebruik de link om te navigeren naar een andere pagina of een andere plek op dezelfde pagina.
+frameworks:
+  - HTML
+  - CSS
+  - React
+  - Angular
+  - Vue
+  - Web Component
+previewImage: /component-previews/link.png
+---
+
+import { Link } from "@utrecht/component-library-react/css-module";
+
+# Link
+
+Gebruik de link om te navigeren naar een andere pagina of een andere plek op dezelfde pagina.
+
+## Voorbeeld
+
+<div
+  className="utrecht-component-canvas"
+  style={{ borderRadius: "3px", border: "1px solid grey", padding: "16px", backgroundColor: "#fafafa" }}
+>
+  <Link client:load href="#">
+    Click me
+  </Link>
+</div>
+
+## Waar kan ik het component vinden?
+
+### Design
+
+- Button in Figma (link naar Figma)
+
+### HTML/CSS
+
+- [Button (html/css) in Storybook](https://nl-design-system.github.io/utrecht/storybook/?path=/docs/css_css-button--docs)
+- [Button (html/css) in NPM](https://www.npmjs.com/package/@utrecht/button-css)
+- [Button (html/css) in Github](https://github.com/nl-design-system/utrecht/tree/main/components/button)
+
+TODO Bryan: frameworks automatiseren??
+
+## Anatomie
+
+### Design Tokens
+
+TODO Bryan: AUTOMATISEREN
+
+#### Design Token variabelen
+
+TODO Bryan: AUTOMATISEREN
+
+### States
+
+- normal
+- active: de gebruiker activeert de button op dit moment. Bijvoorbeeld door er op te klikken. De active state duurt maar heel kort.
+- pressed: een ingedrukte button, bijvoorbeeld de bold button in een toolbar van een rich text editor, of de button van een date picker popup. Een button kan lange tijd pressed zijn, in tegenstelling tot active.
+- hover: de gebruiker heeft de aanwijzer boven de button. Bijvoorbeeld door met de muiscursor er over te 'zweven'.
+- focus
+- focus en focus-visible: de link heeft de focus door de Tab knop van het keyboard.
+- disabled
+- disabled en focus-visible: als een button disabled is (zeker een primary action button), dan moet wel duidelijk zijn dat de button er is en wat je kunt doen om verder te komen. Screen reader gebruikers moeten daarom focus kunnen hebben op een disabled button, om de bijbehorende uitleg te horen.
+
+## Richtlijnen
+
+### Gebruik je een button of link?
+
+Sommige ontwerpen hebben een button om naar een andere pagina te gaan. Sommige ontwerpen hebben link in een formulier om naar de vorige pagina te gaan, terwijl de gegevens wel tussentijds verstuurd en opgeslagen worden. Het is belangrijk dat je het goede HTML-element gebruikt dat past bij de actie, in plaats van het HTML-element kiest dat past bij het ontwerp.
+
+Om deze patronen te gebruiken zijn er vier componenten nodig:
+
+- link
+- link die eruit ziet als button
+- button
+- button die eruit ziet als link
+
+Gebruik alleen een \<a> element wanneer er geen gevolgen zijn. Gebruik een \<button> element als je niet de browser back button kan gebruiken om het effect ongedaan te maken.
+
+Enkele voorbeelden waar je een link gebruikt:
+
+- een call to action om te registreren: een link.
+- een knop om naar het loginformulier te gaan: een link
+- dezelfde pagina in een andere taal bekijken: een link.
+- Enkele voorbeelden waar je een button gebruikt:
+
+"Volgende stap" of "vorige stap" in een formulier. Gebruik een submit button wanneer gegevens tussendoor opgeslagen worden of verstuurd worden.
+Uitloggen: button. Log niet uit met een link! Je navigatie moet het ondersteunen om zowel links als button dezelfde stijl te geven.
+de voorkeurstaal aanpassen en dezelfde pagina in een andere taal bekijken: een button.
+
+### Externe richtlijnen
+
+- [Richtlijnen over buttons van het NL-Design System](https://nldesignsystem.nl/richtlijnen/formulieren/buttons/)
+
+## Relevante WCAG-succescriteria
+
+- WCAG-succescriterium 2.1.2 Geen toetsenbordval: Het is mogelijk met Tab en Shift+Tab de button focus uit de button te verplaatsen.
+- WCAG-succescriterium 2.1.3 Toetsenbord (geen uitzondering):
+  - Je kan de button activeren met Enter of Space.
+  - Het is mogelijk met Tab de button te focussen.
+  - Space gebruiken heeft dan niet het effect dat de pagina scrollt.
+- WCAG-succescriterium 2.4.6 Koppen en labels: de label van de button moet duidelijk zijn
+- WCAG-succescriterium 2.5.2 Aanwijzerannulering:
+  - gebruik niet de mousedown event om de button te activeren, gebruik liever de click event
+  - mousedown mag alleen gebruikt worden als mouseup het effect weer ongedaan maakt, bijvoorbeeld een "fast foward" button om audio of video door te spoelen.
+- WCAG-succescriterium 2.5.5 Grootte van het aanwijsgebied (uitgebreid): de button moet groot genoeg zijn om aan te klikken, en kleine buttons moeten niet te dicht op een andere button staan.
+
+## Vragen of verbeteringen?

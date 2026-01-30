@@ -1,0 +1,30 @@
+---
+import Layout from '../../../layouts/Layout.astro';
+import CustomIconGallery from '@components/CustomIconGallery.astro';
+import { iconCategories } from './icon-categories.ts';
+import { Link } from '@utrecht/component-library-react';
+---
+
+<Layout>
+  <h1>Iconen</h1>
+  Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
+
+  <h2>Iconen</h2>
+
+  {Object.entries(iconCategories).map(([key, category]) => (
+    <div>
+      <h3>{category.title}</h3>
+      {category.description && <p>{category.description}</p>}
+      <CustomIconGallery icons={category.icons} />
+    </div>
+  ))}
+</Layout>
+
+<style>
+  .utrecht-component-canvas {
+    border-radius: 3px;
+    border: 1px solid grey;
+    padding: 16px;
+    background-color: #fafafa;
+  }
+</style>

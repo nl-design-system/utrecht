@@ -1,6 +1,6 @@
 {
   "name": "@utrecht/component-library-react",
-  "version": "10.3.9",
+  "version": "12.0.0",
   "private": false,
   "description": "React component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "keywords": [
@@ -133,7 +133,6 @@
     "@utrecht/backdrop-css": "workspace:*",
     "@utrecht/badge-counter-css": "workspace:*",
     "@utrecht/badge-list-css": "workspace:*",
-    "@utrecht/badge-status-css": "workspace:*",
     "@utrecht/blockquote-css": "workspace:*",
     "@utrecht/breadcrumb-nav-css": "workspace:*",
     "@utrecht/button-group-react": "workspace:*",
@@ -214,6 +213,7 @@
     "@utrecht/separator-css": "workspace:*",
     "@utrecht/skip-link-css": "workspace:*",
     "@utrecht/spotlight-section-css": "workspace:*",
+    "@utrecht/status-badge-css": "workspace:*",
     "@utrecht/subscript-css": "workspace:*",
     "@utrecht/superscript-css": "workspace:*",
     "@utrecht/surface-css": "workspace:*",
@@ -253,7 +253,7 @@
     "gatsby": "5.12.12",
     "jest": "29.7.0",
     "jest-environment-jsdom": "29.7.0",
-    "next": "13.5.6",
+    "next": "13.5.11",
     "react": "18.3.1",
     "react-dom": "18.3.1",
     "react-vega": "7.6.0",

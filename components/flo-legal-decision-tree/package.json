@@ -1,5 +1,5 @@
 {
-  "version": "2.1.0",
+  "version": "2.1.2",
   "author": "Community for NL Design System",
   "description": "Flo Legal Decision Tree component for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -17,8 +17,11 @@
   },
   "devDependencies": {
     "@utrecht/build-utils-css": "workspace:*",
+    "@utrecht/button-css": "workspace:*",
     "@utrecht/custom-checkbox-css": "workspace:*",
-    "@utrecht/focus-ring-css": "workspace:*"
+    "@utrecht/focus-ring-css": "workspace:*",
+    "@utrecht/link-css": "workspace:*",
+    "@utrecht/select-css": "workspace:*"
   },
   "keywords": [
     "nl-design-system"

@@ -7,11 +7,12 @@ import { LinkButton } from './LinkButton';
 
 export interface NavListProps extends HTMLAttributes<HTMLUListElement> {
   appearance?: undefined | string | 'center';
+  inlineSizeAuto?: boolean;
 }
 
 export const NavList = forwardRef(
   (
-    { appearance, children, className, ...restProps }: PropsWithChildren<NavListProps>,
+    { appearance, children, className, inlineSizeAuto, ...restProps }: PropsWithChildren<NavListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => (
     <ul
@@ -20,6 +21,7 @@ export const NavList = forwardRef(
         'utrecht-nav-list',
         {
           'utrecht-nav-list--center': appearance === 'center',
+          'utrecht-nav-list--inline-size-auto': inlineSizeAuto,
         },
         className,
       )}
@@ -37,21 +39,23 @@ export interface NavListLinkProps extends LinkProps {
   center?: boolean;
 }
 
-export const NavListLink = ({ center, children, className, ...restProps }: PropsWithChildren<NavListLinkProps>) => (
-  <li
-    className={clsx(
-      'utrecht-nav-list__item',
-      {
-        'utrecht-nav-list__item--center': center,
-      },
-      className,
-    )}
-  >
-    <Link className="utrecht-nav-list__link" {...restProps}>
-      {children}
-    </Link>
-  </li>
-);
+export const NavListLink = ({ center, children, className, ...restProps }: PropsWithChildren<NavListLinkProps>) => {
+  return (
+    <li
+      className={clsx(
+        'utrecht-nav-list__item',
+        {
+          'utrecht-nav-list__item--center': center,
+        },
+        className,
+      )}
+    >
+      <Link className="utrecht-nav-list__link" {...restProps}>
+        {children}
+      </Link>
+    </li>
+  );
+};
 
 NavListLink.displayName = 'NavListLink';
 
@@ -64,20 +68,22 @@ export const NavListLinkButton = ({
   children,
   className,
   ...restProps
-}: PropsWithChildren<NavListLinkButtonProps>) => (
-  <li
-    className={clsx(
-      'utrecht-nav-list__item',
-      {
-        'utrecht-nav-list__item--center': center,
-      },
-      className,
-    )}
-  >
-    <LinkButton className="utrecht-nav-list__link" {...restProps}>
-      {children}
-    </LinkButton>
-  </li>
-);
+}: PropsWithChildren<NavListLinkButtonProps>) => {
+  return (
+    <li
+      className={clsx(
+        'utrecht-nav-list__item',
+        {
+          'utrecht-nav-list__item--center': center,
+        },
+        className,
+      )}
+    >
+      <LinkButton className="utrecht-nav-list__link" {...restProps}>
+        {children}
+      </LinkButton>
+    </li>
+  );
+};
 
 NavListLinkButton.displayName = 'NavListLinkButton';

@@ -1,0 +1,75 @@
+{
+  "utrecht": {
+    "status-badge": {
+      "background-color": {
+        "value": "{utrecht.badge.background-color}"
+      },
+      "border-color": {},
+      "border-radius": {
+        "value": "{utrecht.badge.border-radius}"
+      },
+      "border-width": {
+        "value": "0px"
+      },
+      "color": {
+        "value": "{utrecht.badge.color}"
+      },
+      "font-family": {
+        "value": "{utrecht.typography.sans-serif.font-family}"
+      },
+      "font-size": {},
+      "font-weight": {},
+      "line-height": {},
+      "letter-spacing": {},
+      "min-block-size": {},
+      "min-inline-size": {},
+      "padding-block": {
+        "value": "{utrecht.badge.padding-block}"
+      },
+      "padding-inline": {
+        "value": "{utrecht.badge.padding-inline}"
+      },
+      "text-transform": {},
+      "active": {
+        "background-color": { "value": "{utrecht.feedback.active.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.active.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.active.fill.color}" }
+      },
+      "danger": {
+        "background-color": { "value": "{utrecht.feedback.danger.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.danger.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.danger.fill.color}" }
+      },
+      "error": {
+        "background-color": { "value": "{utrecht.feedback.error.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.error.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.error.fill.color}" }
+      },
+      "inactive": {
+        "background-color": { "value": "{utrecht.feedback.inactive.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.inactive.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.inactive.fill.color}" }
+      },
+      "invalid": {
+        "background-color": { "value": "{utrecht.feedback.invalid.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.invalid.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.invalid.fill.color}" }
+      },
+      "safe": {
+        "background-color": { "value": "{utrecht.feedback.safe.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.safe.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.safe.fill.color}" }
+      },
+      "valid": {
+        "background-color": { "value": "{utrecht.feedback.valid.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.valid.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.valid.fill.color}" }
+      },
+      "warning": {
+        "background-color": { "value": "{utrecht.feedback.warning.fill.background-color}" },
+        "border-color": { "value": "{utrecht.feedback.warning.fill.background-color}" },
+        "color": { "value": "{utrecht.feedback.warning.fill.color}" }
+      }
+    }
+  }
+}

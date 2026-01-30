@@ -1,70 +1,86 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
-import CustomIconGallery from '../../components/CustomIconGallery.astro';
-import { iconCategories } from '../../data/icon-categories';
-import { Link } from '@utrecht/component-library-react';
+import { Link, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
+import { joinUrl } from '../../utils/url';
+import TileList from '@components/TileList.astro';
+import TileNavigation from '@components/TileNavigation.astro';
+import ComponentCard from '@components/ComponentCard.astro';
+
+const components = await getCollection('components');
+
+// Sort components alphabetically by title
+const sortedComponents = components.sort((a, b) =>
+  a.data.title.localeCompare(b.data.title)
+);
 ---
 
 <Layout>
-  <h1>Componenten en iconen</h1>
-  Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
+  <article class="componenten-page">
+    <BreadcrumbNav>
+      <BreadcrumbNavLink href={joinUrl(base, '/')} index={0}>Home</BreadcrumbNavLink>
+      <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
+      <BreadcrumbNavLink href={joinUrl(base, '/componenten')} current index={1}>Componenten</BreadcrumbNavLink>
+    </BreadcrumbNav>
 
-  <h2>Iconen</h2>
+    <h1>Componenten en iconen</h1>
+  <p>
+    Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
+  </p>
 
-  {Object.entries(iconCategories).map(([key, category]) => (
-    <div>
-      <h3>{category.title}</h3>
-      {category.description && <p>{category.description}</p>}
-      <CustomIconGallery icons={category.icons} />
-    </div>
-  ))}
-  <h2>Overzicht</h2>
-  <div>
-    <a class="utrecht-link" href=`${base}/componenten/button`><h3>Button</h3></a>
-    <div>
-      <div class="utrecht-data-badge">HTML</div>
-      <div class="utrecht-data-badge">CSS</div>
-      <div class="utrecht-data-badge">React</div>
-      <div class="utrecht-data-badge">Angular</div>
-    </div>
+  <h2>Meer weten</h2>
+  <TileList>
+    <TileNavigation
+      href={joinUrl(base, '/componenten/iconen')}
+      title="Iconen"
+      description="Meer weten over de iconen in het Utrecht Design System?"
+    />
+    <TileNavigation
+      href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs"
+      title="Storybook"
+      description="Bekijk alle componenten in de Storybook."
+    />
+  </TileList>
+
+  <h2>Componenten overzicht</h2>
+  <div class="component-grid">
+    {sortedComponents.map((component) => (
+      <ComponentCard
+        href={joinUrl(base, `/componenten/${component.id.replace(/\.mdx?$/, '')}`)}
+        title={component.data.title}
+        frameworks={component.data.frameworks}
+        previewImage={component.data.previewImage}
+      >
+        {component.data.description && (
+          <p>{component.data.description}</p>
+        )}
+      </ComponentCard>
+    ))}
   </div>
-  <div>
-    <h3>Link</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo.</p>
-    <div class="utrecht-component-canvas">
-      <Link href="#">Click me</Link>
-    </div>
-  </div>
-  <div>
-    <h3>Alert</h3>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nisl ut aliquam viverra, libero lacus convallis magna, eget posuere eros magna ut justo.</p>
-    <div class="utrecht-component-canvas">
-      <div class="utrecht-alert utrecht-alert--info">
-        <div class="utrecht-alert__content">
-          <div class="utrecht-alert__message" role="status">
-            <h2 class="utrecht-heading-2">Lorem ipsum</h2>
-            <p class="utrecht-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-              veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-              commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  </article>
 </Layout>
 
-<style>
-  .utrecht-component-canvas {
-    border-radius: 3px;
-    border: 1px solid grey;
-    padding: 16px;
-    background-color: #fafafa;
+<style is:global>
+  .componenten-page {
+    padding-block-start: 2rem;
   }
-</style>
+
+  .component-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 900px) {
+    .component-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 600px) {
+    .component-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style is:global>

@@ -4,6 +4,9 @@
       "background-color": { "value": "{utrecht.color.white}" },
       "border-color": { "value": "{utrecht.color.grey.40}" },
       "border-radius": { "value": "0" },
+      "font-weight": {
+        "value": "{utrecht.typography.weight-scale.semibold.font-weight}"
+      },
       "border-width": { "value": "1px" },
       "color": { "value": "{utrecht.color.grey.40}" },
       "column-gap": { "value": "{utrecht.space.text.xs}" },
@@ -202,7 +205,6 @@
         "border-color": { "value": "transparent" },
         "border-width": { "value": "{utrecht.border-width.md}" },
         "color": { "value": "{utrecht.color.blue.35}" },
-        "font-weight": { "value": "700" },
         "active": {
           "background-color": { "value": "{utrecht.color.blue.35}" },
           "color": { "value": "{utrecht.color.white}" }

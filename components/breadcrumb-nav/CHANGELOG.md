@@ -1,5 +1,11 @@
 # @utrecht/breadcrumb-nav-css
 
+## 2.1.0
+
+### Minor Changes
+
+- f02b554: Corrected several spacing token values and metadata in the Breadcrumb Navigation and Rich Text components.
+
 ## 2.0.1
 
 ### Patch Changes
