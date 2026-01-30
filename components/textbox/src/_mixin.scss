@@ -21,11 +21,11 @@ $utrecht-support-prince-xml: false !default;
 
   /* Because this element uses `border-box` box-sizing, we need to manually add up the
     * border width, padding width and the content width.
-    * 
+    *
     * Browsers and browser addons can add buttons inside the content box, for example
     * for autocomplete. To avoid overlap between the UI and the text, we reserve
     * some additional pixels to make space. We use 44px in accordance with the WCAG target size.
-    * 
+    *
     * When you are certain an element has no such UI, you can set the `autocomplete-ui-size` to `0px` (not to `0`).
     */
   --_utrecht-textbox-max-inline-size: calc(
@@ -48,6 +48,7 @@ $utrecht-support-prince-xml: false !default;
   border-style: solid;
   box-sizing: border-box;
   color: var(--utrecht-textbox-color, var(--utrecht-form-control-color));
+  display: block;
   font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-control-font-size, inherit));
   font-weight: var(
@@ -63,6 +64,7 @@ $utrecht-support-prince-xml: false !default;
     var(--_utrecht-textbox-max-inline-size, 100%),
     var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
   );
+  overflow: hidden;
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
   padding-inline-end: var(
@@ -73,6 +75,7 @@ $utrecht-support-prince-xml: false !default;
     --utrecht-textbox-padding-inline-start,
     var(--utrecht-form-control-padding-inline-start, initial)
   );
+  white-space: nowrap;
 
   @if $utrecht-support-prince-xml {
     @media print {
