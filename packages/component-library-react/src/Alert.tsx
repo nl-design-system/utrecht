@@ -9,7 +9,7 @@ import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode 
 
 const enumGuard =
   <T,>(values: readonly T[]) =>
-  <T,>(x: unknown): x is T =>
+  (x: unknown): x is T =>
     values.includes(x as never);
 
 export const ROLES = ['status', 'alert'] as const;
@@ -29,8 +29,8 @@ const typeToRole: Record<AlertType, AlertRole> = {
 
 export interface AlertProps extends HTMLAttributes<HTMLDivElement> {
   icon?: ReactNode;
-  type?: string | AlertType;
-  role?: string | AlertRole;
+  type?: AlertType;
+  role?: AlertRole | (string & {});
 }
 
 export const Alert = forwardRef(
@@ -38,7 +38,7 @@ export const Alert = forwardRef(
     { children, className, icon, type, role, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const computedType = isAlertType(type) ? (type as AlertType) : 'info';
+    const computedType = isAlertType(type) ? type : 'info';
     const computedRole = role || typeToRole[computedType];
     return (
       <div {...restProps} ref={ref} className={clsx('utrecht-alert', `utrecht-alert--${computedType}`, className)}>
