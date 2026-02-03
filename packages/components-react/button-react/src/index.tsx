@@ -7,6 +7,11 @@
 import clsx from 'clsx';
 import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
+const enumGuard =
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
+
 const APPEARANCE = {
   'primary-action-button': 'utrecht-button--primary-action',
   'secondary-action-button': 'utrecht-button--secondary-action',
@@ -17,6 +22,12 @@ const HINT = {
   warning: 'utrecht-button--warning',
   ready: 'utrecht-button--ready',
 } as const;
+
+const appearanceKeys = Object.keys(APPEARANCE) as (keyof typeof APPEARANCE)[];
+const hintKeys = Object.keys(HINT) as (keyof typeof HINT)[];
+
+export const isButtonAppearance = enumGuard(appearanceKeys);
+export const isButtonHint = enumGuard(hintKeys);
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   appearance?: keyof typeof APPEARANCE;
