@@ -5,6 +5,7 @@
  */
 
 @use "~@utrecht/img-css/src/mixin" as *;
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
 
 @mixin utrecht-card {
   background-color: var(--utrecht-card-background-color);
@@ -14,27 +15,80 @@
   display: flex;
   flex-direction: column;
   inline-size: var(--utrecht-card-inline-size, 100%);
+  justify-content: space-between;
   max-inline-size: var(--utrecht-card-max-inline-size, 100%);
   row-gap: var(--utrecht-card-row-gap);
+  transition: 150ms scale ease-in-out;
 }
+
 @mixin utrecht-card--link {
   cursor: pointer;
   text-decoration-skip-ink: none;
 }
-@mixin utrecht-card--hover {
-  --utrecht-link-text-decoration: underline;
-  --utrecht-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
+
+@mixin utrecht-card__arrow-container {
+  align-self: end;
+  block-size: var(--utrecht-card-arrow-container-block-size);
+  inline-size: var(--utrecht-card-arrow-container-inline-size);
+  order: 4;
+  padding-inline-end: var(--utrecht-card-arrow-container-padding-inline-end);
 }
+
+@mixin utrecht-card__arrow {
+  block-size: var(--utrecht-card-arrow-block-size);
+  inline-size: var(--utrecht-card-arrow-inline-size);
+  line-height: 0;
+}
+
 @mixin utrecht-card__heading {
-  --utrecht-heading-color: var(--utrecht-card-heading-color);
+  --utrecht-heading-color: var(--utrecht-card-color);
 
   order: 2;
   padding-inline-end: var(--utrecht-card-heading-padding-inline-end);
   padding-inline-start: var(--utrecht-card-heading-padding-inline-start);
 }
 
+@mixin utrecht-card--neutral {
+  background-color: var(--utrecht-card-neutral-background-color);
+  color: var(--utrecht-card-neutral-color);
+}
+
+@mixin utrecht-card--warm {
+  background-color: var(--utrecht-card-warm-background-color);
+  color: var(--utrecht-card-warm-color);
+}
+
+@mixin utrecht-card--cool {
+  background-color: var(--utrecht-card-cool-background-color);
+  color: var(--utrecht-card-cool-color);
+}
+
+@mixin utrecht-card--soft {
+  background-color: var(--utrecht-card-soft-background-color);
+  color: var(--utrecht-card-soft-color);
+}
+
+@mixin utrecht-card--bright {
+  background-color: var(--utrecht-card-bright-background-color);
+  border-color: var(--utrecht-card-bright-border-color);
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
+  color: var(--utrecht-card-bright-color);
+
+  .utrecht-card__image {
+    margin-block: -1px;
+    margin-inline: -1px;
+  }
+}
+
 @mixin utrecht-card__image {
   order: 1;
+
+  img {
+    display: block;
+  }
+
   img:not(.utrecht-img) {
     @include utrecht-img;
   }
@@ -44,6 +98,22 @@
 
   img:not(img[width]) {
     @include utrecht-img--photo;
+  }
+}
+
+@mixin utrecht-card--16by9 {
+  img {
+    aspect-ratio: 16 / 9;
+  }
+}
+@mixin utrecht-card--4by3 {
+  img {
+    aspect-ratio: 4 / 3;
+  }
+}
+@mixin utrecht-card--1by1 {
+  img {
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -61,4 +131,28 @@
   order: 3;
   padding-inline-end: var(--utrecht-card-body-padding-inline-end);
   padding-inline-start: var(--utrecht-card-body-padding-inline-start);
+}
+
+@mixin utrecht-card__link {
+  color: var(--utrecht-card-color);
+}
+
+@mixin utrecht-card--hover {
+  --utrecht-link-text-decoration: underline;
+  --utrecht-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
+
+  scale: var(--utrecht-card-hover-scale, 1);
+}
+
+@mixin utrecht-card--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+}
+
+@mixin utrecht-card--focus {
+  background-color: var(--utrecht-card-focus-background-color, var(--utrecht-card-background-color));
+}
+
+@mixin utrecht-card--active {
+  scale: var(--utrecht-card-active-scale, 1);
 }

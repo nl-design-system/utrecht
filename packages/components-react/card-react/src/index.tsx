@@ -44,10 +44,29 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    * Body content to be displayed inside the card
    */
   body?: ReactNode;
+  /**
+   * Appearance variant of the card
+   */
+  appearance?: '' | 'neutral' | 'warm' | 'cool' | 'soft' | 'bright';
+  /**
+   * Aspect ratio of the image
+   */
+  aspect?: '16by9' | '4by3' | '1by1';
 }
 export const Card = forwardRef(
   (
-    { image, heading, headingLevel, href, Link, className, body, ...restProps }: PropsWithChildren<CardProps>,
+    {
+      image,
+      heading,
+      headingLevel,
+      href,
+      Link,
+      className,
+      body,
+      appearance,
+      aspect,
+      ...restProps
+    }: PropsWithChildren<CardProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const linkRef = useRef<HTMLAnchorElement>(null);
@@ -79,6 +98,14 @@ export const Card = forwardRef(
         ref={ref}
         className={clsx('utrecht-card', className, {
           'utrecht-card--link': href,
+          'utrecht-card--neutral': appearance === 'neutral',
+          'utrecht-card--warm': appearance === 'warm',
+          'utrecht-card--cool': appearance === 'cool',
+          'utrecht-card--soft': appearance === 'soft',
+          'utrecht-card--bright': appearance === 'bright',
+          'utrecht-card--16by9': aspect === '16by9',
+          'utrecht-card--4by3': aspect === '4by3',
+          'utrecht-card--1by1': aspect === '1by1',
         })}
         {...linkProps}
         {...restProps}
@@ -99,6 +126,9 @@ export const Card = forwardRef(
           </div>
           {image && <div className={clsx('utrecht-card__image')}>{image}</div>}
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
+        </div>
+        <div className="utrecht-card__arrow-container">
+          <utrecht-icon-arrow class="utrecht-card__arrow"></utrecht-icon-arrow>
         </div>
       </div>
     );

@@ -263,6 +263,9 @@ importers:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
 
   components/checkbox:
     devDependencies:

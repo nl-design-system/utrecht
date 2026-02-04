@@ -54,6 +54,16 @@ const meta = {
         defaultValue: { summary: 'undefined' },
       },
     },
+    appearance: {
+      description: 'Color variant of the card',
+      control: { type: 'select' },
+      options: ['', 'neutral', 'warm', 'cool', 'soft', 'bright'],
+    },
+    aspect: {
+      description: 'Aspect ratio of the image',
+      control: { type: 'select' },
+      options: ['', '16by9', '4by3', '1by1'],
+    },
   },
   args: {
     heading: 'Waterput op de Neude',
@@ -62,8 +72,6 @@ const meta = {
       <img
         src="images/erfgoed-image-waterput-op-de-neude.png"
         alt="Zestiende-eeuwse stenen waterput ontdekt op de Neude in Utrecht."
-        height="240"
-        width="100%"
       />
     ),
     body: 'Bij het opnieuw inrichten van de Neude zijn er bijzondere vondsten gedaan. De opvallendste was een waterput uit uit de 16e eeuw.',
@@ -101,10 +109,39 @@ const demoGridStyle: CSSProperties = {
   padding: '16px',
 };
 
+const componentContainerStyle: CSSProperties = {
+  inlineSize: '400px',
+  padding: '24px',
+};
+
 export const Default: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} />
+    </div>
+  ),
+};
+
+export const Hover: Story = {
+  render: (args: ComponentProps<typeof Card>) => (
+    <div style={componentContainerStyle}>
+      <Card {...args} className="utrecht-card--hover" />
+    </div>
+  ),
+};
+
+export const Focus: Story = {
+  render: (args: ComponentProps<typeof Card>) => (
+    <div style={componentContainerStyle}>
+      <Card {...args} className="utrecht-card--focus" />
+    </div>
+  ),
+};
+
+export const FocusVisible: Story = {
+  render: (args: ComponentProps<typeof Card>) => (
+    <div style={componentContainerStyle}>
+      <Card {...args} className="utrecht-card--focus-visible" />
     </div>
   ),
 };
@@ -112,18 +149,17 @@ export const Default: Story = {
 export const MultipleCard: Story = {
   render: (args: ComponentProps<typeof Card>) => (
     <div style={demoGridStyle}>
-      <Card {...args} />
+      <Card aspect="16by9" {...args} />
       <Card
         headingLevel={2}
         heading="Veeartsenijroute"
         body="De Veeartsenijroute brengt u langs 9 verschillende plekken die een belangrijke rol spelen in de geschiedenis van het veterinair onderwijs."
         href="#"
+        aspect="16by9"
         image={
           <img
             src="images/erfgoed-veeartsenijroute.png"
             alt="Historische paardenstallen van de Rijksveeartsenijschool met pony’s en een vrouwelijke student, circa 1910."
-            height="240"
-            width="100%"
           />
         }
       />
@@ -132,12 +168,11 @@ export const MultipleCard: Story = {
         heading="Merwedekanaalzone: archeologische ontdekkingen Romeins Utrecht"
         body="Bij opgravingen is bewijs gevonden van een overstroming die flinke schade toebracht aan de infrastructuur van Romeins Nederland."
         href="#"
+        aspect="16by9"
         image={
           <img
             src="images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"
             alt="Opgraving van een Romeinse weg met houten fundering in de Merwedekanaalzone in Utrecht."
-            height="240"
-            width="100%"
           />
         }
       />
@@ -146,7 +181,7 @@ export const MultipleCard: Story = {
 };
 export const WithoutImage: Story = {
   render: () => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card
         href="#"
         headingLevel={2}
@@ -158,14 +193,14 @@ export const WithoutImage: Story = {
 };
 export const WithCustomLinkComponent: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} Link="a" />
     </div>
   ),
 };
 export const WithoutLink: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} href={undefined} />
     </div>
   ),
