@@ -26,13 +26,16 @@ const HINT = {
 const appearanceKeys = Object.keys(APPEARANCE) as (keyof typeof APPEARANCE)[];
 const hintKeys = Object.keys(HINT) as (keyof typeof HINT)[];
 
+export type ButtonAppearance = keyof typeof APPEARANCE;
+export type ButtonHint = keyof typeof HINT;
+
 export const isButtonAppearance = enumGuard(appearanceKeys);
 export const isButtonHint = enumGuard(hintKeys);
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  appearance?: keyof typeof APPEARANCE;
+  appearance?: ButtonAppearance;
   busy?: boolean;
-  hint?: keyof typeof HINT;
+  hint?: ButtonHint;
   icon?: ReactNode;
   label?: ReactNode;
   pressed?: boolean;
