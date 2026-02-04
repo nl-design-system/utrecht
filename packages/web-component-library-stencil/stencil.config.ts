@@ -58,6 +58,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      externalRuntime: false,
       customElementsExportBehavior: 'bundle',
     },
     {
@@ -65,9 +66,7 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: '@utrecht/web-component-library-stencil',
-      proxiesFile: '../web-component-library-react/src/components.ts',
-      includeDefineCustomElements: true,
+      outDir: '../web-component-library-react/src/stencil-generated/',
     }),
     angularOutputTarget({
       componentCorePackage: '@utrecht/web-component-library-stencil',
