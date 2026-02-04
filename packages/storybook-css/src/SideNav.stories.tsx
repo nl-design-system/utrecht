@@ -4,8 +4,8 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { SideNav } from './SideNav';
 import { designTokenStory } from './design-token-story';
-import readme from '../../../components/navigatie sidenav/README.md?raw';
-import tokensDefinition from '../../../components/navigatie sidenav/src/tokens.json';
+import readme from '../../../components/navigatie-sidenav/README.md?raw';
+import tokensDefinition from '../../../components/navigatie-sidenav/src/tokens.json';
 
 const meta = {
   title: 'CSS Component/Side navigation',

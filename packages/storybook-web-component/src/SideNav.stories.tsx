@@ -5,7 +5,7 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtSidenav } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
-import readme from '../../../components/navigatie sidenav/README.md?raw';
+import readme from '../../../components/navigatie-sidenav/README.md?raw';
 
 interface SideNavStoryProps {
   json: string;

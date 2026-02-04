@@ -7,8 +7,8 @@ import React from 'react';
 import { TopNav, TopNavItem, TopNavLink } from './TopNav';
 import type { TopNavLinkProps, TopNavProps } from './TopNav';
 import { designTokenStory } from './design-token-story';
-import readme from '../../../components/navigatie topnav/README.md?raw';
-import tokensDefinition from '../../../components/navigatie topnav/src/tokens.json';
+import readme from '../../../components/navigatie-topnav/README.md?raw';
+import tokensDefinition from '../../../components/navigatie-topnav/src/tokens.json';
 
 interface TopNavStoryProps extends TopNavProps {
   links: (TopNavLinkProps & { focus?: boolean; focusVisible?: boolean; hover?: boolean })[];
