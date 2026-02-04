@@ -1,9 +1,10 @@
 import { componentWrapperDecorator, Meta, StoryObj } from '@storybook/angular';
 import { UtrechtButtonAttr } from '@utrecht/component-library-angular';
 
-interface UtrechtButtonProps extends UtrechtButtonAttr {
+interface UtrechtButtonProps extends Omit<UtrechtButtonAttr, 'pressed'> {
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  pressed?: boolean;
 }
 
 const meta: Meta<UtrechtButtonProps> = {
