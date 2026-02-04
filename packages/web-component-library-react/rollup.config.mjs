@@ -47,7 +47,12 @@ export default {
     }),
     nodePolyfills(),
     del({ targets: ['dist/*', 'pages/*'] }),
-    typescript({ includeDependencies: false }),
+    typescript({
+      includeDependencies: false,
+      tsconfigOverride: {
+        compilerOptions: { moduleResolution: 'node' },
+      },
+    }),
     babel({
       presets: ['@babel/preset-react'],
       babelHelpers: 'runtime',
