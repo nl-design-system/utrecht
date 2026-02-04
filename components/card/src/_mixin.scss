@@ -70,7 +70,10 @@
 
 @mixin utrecht-card--bright {
   background-color: var(--utrecht-card-bright-background-color);
-  border: 1px solid var(--utrecht-card-bright-border-color, #f00);
+  border-color: var(--utrecht-card-bright-border-color);
+  border-style: solid;
+  border-width: 1px;
+  box-sizing: border-box;
   color: var(--utrecht-card-bright-color);
 
   .utrecht-card__image {
