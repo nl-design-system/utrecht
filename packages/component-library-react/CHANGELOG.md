@@ -1,5 +1,26 @@
 # @utrecht/component-library-react
 
+## 13.0.0
+
+### Major Changes
+
+- 0873069: Updated typescript props to give an error when using non valid strings for the Hint and Appearance property.
+
+  Property guards properly narrowed to property options.
+
+### Patch Changes
+
+- a98c3cc: Upgrade tslib dependency to 2.6.3
+- Updated dependencies [a98c3cc]
+- Updated dependencies [0873069]
+  - @utrecht/calendar-react@1.0.16
+  - @utrecht/button-react@3.0.0
+  - @utrecht/html-content-css@2.0.1
+  - @utrecht/open-forms-container-css@2.0.2
+  - @utrecht/textbox-react@1.0.13
+  - @utrecht/listbox-react@1.0.14
+  - @utrecht/open-forms-container-react@1.0.6
+
 ## 12.0.0
 
 ### Major Changes
