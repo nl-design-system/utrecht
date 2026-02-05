@@ -1,5 +1,13 @@
 # @utrecht/calendar-react
 
+## 1.0.16
+
+### Patch Changes
+
+- a98c3cc: Upgrade lodash-es dependency to 4.17.23
+- Updated dependencies [0873069]
+  - @utrecht/button-react@3.0.0
+
 ## 1.0.15
 
 ### Patch Changes

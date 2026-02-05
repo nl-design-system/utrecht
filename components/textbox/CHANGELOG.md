@@ -1,5 +1,11 @@
 # @utrecht/textbox-css
 
+## 3.1.0
+
+### Minor Changes
+
+- a6680b7: Support `<span class="utrecht-textbox">`.
+
 ## 3.0.1
 
 ### Patch Changes
