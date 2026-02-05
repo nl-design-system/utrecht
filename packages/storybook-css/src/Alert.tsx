@@ -4,9 +4,9 @@ import clsx from 'clsx';
 import React, { PropsWithChildren, ReactNode } from 'react';
 
 const enumGuard =
-  <T,>(values: readonly T[]) =>
-  <T,>(x: unknown): x is T =>
-    values.includes(x as never);
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
 
 export const ROLES = ['status', 'alert'] as const;
 export type AlertRole = (typeof ROLES)[number];
@@ -30,7 +30,7 @@ export interface AlertProps extends PropsWithChildren {
 }
 
 export const Alert = ({ children, icon, type, role }: PropsWithChildren<AlertProps>) => {
-  const computedType = isAlertType(type) ? (type as AlertType) : 'info';
+  const computedType = isAlertType(type) ? type : 'info';
   const computedRole = role || typeToRole[computedType];
   return (
     <div className={clsx('utrecht-alert', `utrecht-alert--${computedType}`)}>
