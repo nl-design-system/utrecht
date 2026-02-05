@@ -74,6 +74,10 @@
  */
 .utrecht-listbox__option--disabled {
   @include utrecht-listbox__option--disabled;
+
+  &.utrecht-listbox__option--selected {
+    @include utrecht-listbox__option--disabled-selected;
+  }
 }
 
 .utrecht-listbox--disabled {
