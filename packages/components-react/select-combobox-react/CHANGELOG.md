@@ -1,5 +1,14 @@
 # @utrecht/select-combobox-react
 
+## 1.0.15
+
+### Patch Changes
+
+- Updated dependencies [0873069]
+  - @utrecht/button-react@3.0.0
+  - @utrecht/textbox-react@1.0.13
+  - @utrecht/listbox-react@1.0.14
+
 ## 1.0.14
 
 ### Patch Changes

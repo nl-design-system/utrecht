@@ -1,5 +1,13 @@
 # @utrecht/web-component-library-stencil
 
+## 4.1.0
+
+### Minor Changes
+
+- 0873069: Updated typescript props to give an error when using non valid strings for the Hint and Appearance property.
+
+  Property guards properly narrowed to property options.
+
 ## 4.0.0
 
 ### Major Changes
