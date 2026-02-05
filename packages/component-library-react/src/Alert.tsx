@@ -8,9 +8,9 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, ReactNode } from 'react';
 
 const enumGuard =
-  <T,>(values: readonly T[]) =>
-  <T,>(x: unknown): x is T =>
-    values.includes(x as never);
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
 
 export const ROLES = ['status', 'alert'] as const;
 export type AlertRole = (typeof ROLES)[number];
@@ -38,7 +38,7 @@ export const Alert = forwardRef(
     { children, className, icon, type, role, ...restProps }: PropsWithChildren<AlertProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const computedType = isAlertType(type) ? (type as AlertType) : 'info';
+    const computedType = isAlertType(type) ? type : 'info';
     const computedRole = role || typeToRole[computedType];
     return (
       <div {...restProps} ref={ref} className={clsx('utrecht-alert', `utrecht-alert--${computedType}`, className)}>

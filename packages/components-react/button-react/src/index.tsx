@@ -7,10 +7,35 @@
 import clsx from 'clsx';
 import { ButtonHTMLAttributes, ForwardedRef, forwardRef, PropsWithChildren, ReactNode } from 'react';
 
+const enumGuard =
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
+
+const APPEARANCE = {
+  'primary-action-button': 'utrecht-button--primary-action',
+  'secondary-action-button': 'utrecht-button--secondary-action',
+  'subtle-button': 'utrecht-button--subtle',
+} as const;
+const HINT = {
+  danger: 'utrecht-button--danger',
+  warning: 'utrecht-button--warning',
+  ready: 'utrecht-button--ready',
+} as const;
+
+const appearanceKeys = Object.keys(APPEARANCE) as (keyof typeof APPEARANCE)[];
+const hintKeys = Object.keys(HINT) as (keyof typeof HINT)[];
+
+export type ButtonAppearance = keyof typeof APPEARANCE;
+export type ButtonHint = keyof typeof HINT;
+
+export const isButtonAppearance = enumGuard(appearanceKeys);
+export const isButtonHint = enumGuard(hintKeys);
+
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  appearance?: string;
+  appearance?: ButtonAppearance;
   busy?: boolean;
-  hint?: string;
+  hint?: ButtonHint;
   icon?: ReactNode;
   label?: ReactNode;
   pressed?: boolean;
@@ -41,12 +66,8 @@ export const Button = forwardRef(
           busy && 'utrecht-button--busy',
           disabled && 'utrecht-button--disabled',
           type === 'submit' && 'utrecht-button--submit',
-          appearance === 'primary-action-button' && 'utrecht-button--primary-action',
-          appearance === 'secondary-action-button' && 'utrecht-button--secondary-action',
-          appearance === 'subtle-button' && 'utrecht-button--subtle',
-          hint === 'danger' && 'utrecht-button--danger',
-          hint === 'warning' && 'utrecht-button--warning',
-          hint === 'ready' && 'utrecht-button--ready',
+          appearance && APPEARANCE[appearance],
+          hint && HINT[hint],
           pressed === true && 'utrecht-button--pressed',
           className,
         )}
@@ -66,19 +87,19 @@ export const Button = forwardRef(
 
 Button.displayName = 'Button';
 
-export const PrimaryActionButton = ({ ...args }) => {
+export const PrimaryActionButton = ({ ...args }: Omit<ButtonProps, 'appearance'>) => {
   return <Button {...args} appearance="primary-action-button" />;
 };
 
 PrimaryActionButton.displayName = 'PrimaryActionButton';
 
-export const SecondaryActionButton = ({ ...args }) => {
+export const SecondaryActionButton = ({ ...args }: Omit<ButtonProps, 'appearance'>) => {
   return <Button {...args} appearance="secondary-action-button" />;
 };
 
 SecondaryActionButton.displayName = 'SecondaryActionButton';
 
-export const SubtleButton = ({ ...args }) => {
+export const SubtleButton = ({ ...args }: Omit<ButtonProps, 'appearance'>) => {
   return <Button {...args} appearance="subtle-button" />;
 };
 

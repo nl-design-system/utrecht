@@ -8,9 +8,9 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
 const enumGuard =
-  <T,>(values: readonly T[]) =>
-  <T,>(x: unknown): x is T =>
-    values.includes(x as never);
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
 
 const APPEARANCE_VALUES = ['lead', 'small'] as const;
 

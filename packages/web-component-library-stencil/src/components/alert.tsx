@@ -8,9 +8,9 @@ import { Component, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
 const enumGuard =
-  <T,>(values: readonly T[]) =>
-  <T,>(x: unknown): x is T =>
-    values.includes(x as never);
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
 
 const ROLES = ['status', 'alert'] as const;
 type AlertRole = (typeof ROLES)[number];
@@ -35,7 +35,7 @@ export class Alert {
   @Prop() type: string;
 
   render() {
-    const computedType = isAlertType(this.type) ? (this.type as AlertType) : 'info';
+    const computedType = isAlertType(this.type) ? this.type : 'info';
     const computedRole = typeToRole[computedType];
     return (
       <div class={clsx('utrecht-alert', `utrecht-alert--${computedType}`)}>
