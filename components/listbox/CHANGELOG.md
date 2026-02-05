@@ -1,5 +1,11 @@
 # @utrecht/listbox-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 045bfde: bugfix: updated tokens to properly apply the listbox option selected pseudo states.
+
 ## 2.0.1
 
 ### Patch Changes

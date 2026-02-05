@@ -1,5 +1,15 @@
 # @utrecht/component-library-css
 
+## 9.0.1
+
+### Patch Changes
+
+- Updated dependencies [a6680b7]
+- Updated dependencies [045bfde]
+  - @utrecht/textbox-css@3.1.0
+  - @utrecht/listbox-css@2.1.0
+  - @utrecht/html-content-css@2.0.1
+
 ## 9.0.0
 
 ### Major Changes
