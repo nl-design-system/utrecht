@@ -196,6 +196,64 @@
               "$type": "color",
               "$value": "#1F1A1E"
             }
+          },
+          "red": {
+            "bg-document": {
+              "$type": "color",
+              "$value": "hsl(0, 60%, 99%)"
+            },
+            "bg-subtle": {
+              "$type": "color",
+              "$value": "hsl(0, 69%, 97%)"
+            },
+            "bg-default": {
+              "$type": "color",
+              "$value": "hsl(0, 70%, 96%)"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "hsl(0, 66%, 94%)"
+            },
+            "bg-active": {
+              "$type": "color",
+              "$value": "hsl(0, 68%, 93%)"
+            },
+            "border-subtle": {
+              "$type": "color",
+              "$value": "hsl(0, 66%, 83%)"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 36%)"
+            },
+            "border-hover": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 31%)"
+            },
+            "border-active": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 25%)"
+            },
+            "color-default": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 36%)"
+            },
+            "color-hover": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 31%)"
+            },
+            "color-active": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 25%)"
+            },
+            "color-subtle": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 40%)"
+            },
+            "color-document": {
+              "$type": "color",
+              "$value": "hsl(0, 100%, 13%)"
+            }
           }
         }
       }
