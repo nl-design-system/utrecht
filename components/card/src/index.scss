@@ -87,8 +87,3 @@
 .utrecht-card--has-link:hover {
   @include utrecht-card--hover;
 }
-
-.utrecht-card--hover .utrecht-card__link:any-link,
-.utrecht-card--has-link:hover .utrecht-card__link:any-link {
-  @include utrecht-card__link-hover;
-}
