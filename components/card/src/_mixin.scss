@@ -8,6 +8,9 @@
 @use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
 
 @mixin utrecht-card {
+  --utrecht-link-text-decoration: none;
+  --_utrecht-link-state-text-decoration-thickness: var(--utrecht-link-hover-text-decoration-thickness, 3px);
+
   background-color: var(--utrecht-card-background-color);
   border-radius: var(--utrecht-card-border-radius);
   box-shadow: var(--utrecht-card-box-shadow);
@@ -25,20 +28,16 @@
   align-self: end;
   block-size: var(--utrecht-card-arrow-container-block-size);
   inline-size: var(--utrecht-card-arrow-container-inline-size);
-  order: 4;
   padding-inline-end: var(--utrecht-card-arrow-container-padding-inline-end);
 }
 
 @mixin utrecht-card--has-link {
   cursor: var(--utrecht-card-has-link-cursor, pointer);
-  text-decoration-skip-ink: none;
+  text-decoration-skip-ink: all;
 }
 
 @mixin utrecht-card__link {
   color: var(--utrecht-card-link-color);
-  text-decoration: var(--utrecht-card-link-text-decoration, none);
-  text-decoration-thickness: var(--utrecht-card-link-text-decoration-thickness, auto);
-  text-underline-offset: var(--utrecht-card-link-text-underline-offset, auto);
 }
 
 @mixin utrecht-card__arrow {
@@ -141,23 +140,9 @@
 }
 
 @mixin utrecht-card--hover {
-  --utrecht-card-link-text-decoration: underline;
-  --utrecht-card-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
+  --utrecht-link-text-decoration: underline;
 
   scale: var(--utrecht-card-hover-scale, 1);
-}
-
-@mixin utrecht-card__link-hover {
-  color: var(--utrecht-card-link-hover-color, var(--utrecht-card-link-color));
-  text-decoration: var(--utrecht-card-link-hover-text-decoration);
-  text-decoration-thickness: var(
-    --utrecht-card-link-hover-text-decoration-thickness,
-    var(--utrecht-card-link-text-decoration-thickness, auto)
-  );
-  text-underline-offset: var(
-    --utrecht-card-link-hover-text-underline-offset,
-    var(--utrecht-card-link-text-underline-offset, auto)
-  );
 }
 
 @mixin utrecht-card--focus-visible {
