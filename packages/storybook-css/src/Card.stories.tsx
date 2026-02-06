@@ -156,6 +156,7 @@ export const MultipleCard: Story = {
         body="De Veeartsenijroute brengt u langs 9 verschillende plekken die een belangrijke rol spelen in de geschiedenis van het veterinair onderwijs."
         href="#"
         aspect="16by9"
+        appearance="warm"
         image={
           <img
             src="images/erfgoed-veeartsenijroute.png"
@@ -169,6 +170,21 @@ export const MultipleCard: Story = {
         body="Bij opgravingen is bewijs gevonden van een overstroming die flinke schade toebracht aan de infrastructuur van Romeins Nederland."
         href="#"
         aspect="16by9"
+        appearance="cool"
+        image={
+          <img
+            src="images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"
+            alt="Opgraving van een Romeinse weg met houten fundering in de Merwedekanaalzone in Utrecht."
+          />
+        }
+      />
+      <Card
+        headingLevel={2}
+        heading="Damsluisbrug"
+        body="De Damsluisbrug werd in 1875 aangelegd over het verbindingskanaal tussen de fortgrachten van Lunet I en Lunet II. Eind 2025 opende de nieuwe brug op de plek van de oude damsluisbrug."
+        href="#"
+        aspect="16by9"
+        appearance="bright"
         image={
           <img
             src="images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"

@@ -115,7 +115,7 @@ export const Card = forwardRef(
             {headingLevel && heading && (
               <HTMLHeading
                 id={linkId}
-                className={clsx(`utrecht-heading-${headingLevel}`, 'utrecht-card__header')}
+                className={clsx(`utrecht-heading-2`, 'utrecht-card__header')}
                 level={headingLevel}
               >
                 {href ? (
