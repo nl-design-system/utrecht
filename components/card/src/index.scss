@@ -10,12 +10,8 @@
   @include utrecht-card;
 }
 
-.utrecht-card--link {
-  @include utrecht-card--link;
-}
-
-.utrecht-card--link:hover {
-  @include utrecht-card--hover;
+.utrecht-card--has-link {
+  @include utrecht-card--has-link;
 }
 
 .utrecht-card__arrow-container {
@@ -88,6 +84,11 @@
 }
 
 .utrecht-card--hover,
-.utrecht-card:hover {
+.utrecht-card--has-link:hover {
   @include utrecht-card--hover;
+}
+
+.utrecht-card--hover .utrecht-card__link:any-link,
+.utrecht-card--has-link:hover .utrecht-card__link:any-link {
+  @include utrecht-card__link-hover;
 }
