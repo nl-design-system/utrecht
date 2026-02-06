@@ -97,7 +97,7 @@ export const Card = forwardRef(
       <div
         ref={ref}
         className={clsx('utrecht-card', className, {
-          'utrecht-card--link': href,
+          'utrecht-card--has-link': href,
           'utrecht-card--neutral': appearance === 'neutral',
           'utrecht-card--warm': appearance === 'warm',
           'utrecht-card--cool': appearance === 'cool',
@@ -118,18 +118,24 @@ export const Card = forwardRef(
                 className={clsx(`utrecht-heading-${headingLevel}`, 'utrecht-card__header')}
                 level={headingLevel}
               >
-                <LinkComponent ref={linkRef} href={href} className={clsx('utrecht-card__link')}>
-                  {heading}
-                </LinkComponent>
+                {href ? (
+                  <LinkComponent ref={linkRef} href={href} className={clsx('utrecht-card__link')}>
+                    {heading}
+                  </LinkComponent>
+                ) : (
+                  heading
+                )}
               </HTMLHeading>
             )}
           </div>
           {image && <div className={clsx('utrecht-card__image')}>{image}</div>}
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
         </div>
-        <div className="utrecht-card__arrow-container">
-          <utrecht-icon-arrow class="utrecht-card__arrow"></utrecht-icon-arrow>
-        </div>
+        {href && (
+          <div className="utrecht-card__arrow-container">
+            <utrecht-icon-arrow class="utrecht-card__arrow"></utrecht-icon-arrow>
+          </div>
+        )}
       </div>
     );
   },
