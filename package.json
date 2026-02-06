@@ -66,7 +66,7 @@
     "add-repository-directory": "node ./add-repository-directory.mjs",
     "build": "pnpm run --aggregate-output --recursive build",
     "build:css": "pnpm run --dir components/ --filter '@utrecht/*-css' build",
-    "build-vercel": "pnpm run --recursive build-vercel && pnpm run --filter=\"!{packages/storybook-angular}\" --filter=\"!{packages/component-library-angular}\" --recursive build",
+    "build-vercel": "pnpm run --recursive build-vercel && pnpm run --filter=\"!{packages/storybook-angular}\" --filter=\"!{packages/component-library-angular}\" --filter=\"!{packages/storybook-css}\" --recursive build",
     "clean": "pnpm run --recursive clean",
     "docs": "pnpm run --filter @utrecht/docusaurus docusaurus start",
     "find-undocumented-tokens": "pnpm run --dir proprietary/design-tokens/ build:stylelint && pnpm run lint:css --config ./.tokens.stylelintrc.json",
