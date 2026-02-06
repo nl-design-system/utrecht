@@ -197,6 +197,64 @@
               "$value": "#1F1A1E"
             }
           },
+          "yellow": {
+            "bg-document": {
+              "$type": "color",
+              "$value": "hsl(44, 100%, 98%)"
+            },
+            "bg-subtle": {
+              "$type": "color",
+              "$value": "hsl(44, 100%, 93%)"
+            },
+            "bg-default": {
+              "$type": "color",
+              "$value": "hsl(45, 100%, 89%)"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "hsl(45, 100%, 84%)"
+            },
+            "bg-active": {
+              "$type": "color",
+              "$value": "hsl(45, 100%, 78%)"
+            },
+            "border-subtle": {
+              "$type": "color",
+              "$value": "hsl(48, 93%, 48%)"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "hsl(45, 65%, 26%)"
+            },
+            "border-hover": {
+              "$type": "color",
+              "$value": "hsl(45, 63%, 22%)"
+            },
+            "border-active": {
+              "$type": "color",
+              "$value": "hsl(44, 57%, 18%)"
+            },
+            "color-default": {
+              "$type": "color",
+              "$value": "hsl(45, 65%, 26%)"
+            },
+            "color-hover": {
+              "$type": "color",
+              "$value": "hsl(45, 63%, 22%)"
+            },
+            "color-active": {
+              "$type": "color",
+              "$value": "hsl(44, 57%, 18%)"
+            },
+            "color-subtle": {
+              "$type": "color",
+              "$value": "hsl(45, 68%, 28%)"
+            },
+            "color-document": {
+              "$type": "color",
+              "$value": "hsl(43, 47%, 9%)"
+            }
+          },
           "red": {
             "bg-document": {
               "$type": "color",
