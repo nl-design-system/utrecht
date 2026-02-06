@@ -23,7 +23,7 @@
       "row-gap": {},
       "heading": {
         "color": {
-          "value": "{utrecht.color.blue.35}"
+          "value": "{utrecht.color.black}"
         },
         "padding-inline-start": {
           "value": "{utrecht.space.inline.md}"
@@ -32,8 +32,31 @@
           "value": "{utrecht.space.inline.md}"
         }
       },
+      "has-link": {
+        "color": {
+          "value": "{utrecht.color.black}"
+        },
+        "cursor": {
+          "value": "pointer"
+        }
+      },
       "link": {
+        "color": {
+          "value": "{utrecht.color.black}"
+        },
+        "text-decoration": {
+          "value": "none"
+        },
+        "text-decoration-thickness": {
+          "value": "auto"
+        },
         "hover": {
+          "color": {
+            "value": "{utrecht.color.black}"
+          },
+          "text-decoration": {
+            "value": "underline"
+          },
           "text-decoration-thickness": {
             "value": "3px"
           }
