@@ -6136,24 +6136,6 @@
       }
     }
   },
-  "components/checkbox-group": {
-    "todo": {
-      "checkbox-group": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.xl}"
-        }
-      }
-    }
-  },
   "components/code/nl": {
     "nl": {
       "code": {
@@ -7529,16 +7511,6 @@
       }
     }
   },
-  "components/form-field-checkbox-option": {
-    "todo": {
-      "form-field-checkbox-option": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.column.md}"
-        }
-      }
-    }
-  },
   "components/form-field-description": {
     "utrecht": {
       "form-field-description": {
@@ -7641,7 +7613,7 @@
       }
     }
   },
-  "components/form-field-label/utrecht": {
+  "components/form-field-label": {
     "utrecht": {
       "form-label": {
         "color": {
@@ -7691,36 +7663,6 @@
       }
     }
   },
-  "components/form-field-label/todo": {
-    "todo": {
-      "form-field-label": {
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.text.md}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.bold}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
-        }
-      }
-    }
-  },
   "components/form-field-label-suffix": {
     "todo": {
       "form-field-label-suffix": {
@@ -7731,48 +7673,6 @@
         "font-weight": {
           "$type": "fontWeights",
           "$value": "{basis.text.font-weight.default}"
-        }
-      }
-    }
-  },
-  "components/form-field-option-label": {
-    "todo": {
-      "form-field-option-label": {
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-document}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.default}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
-        },
-        "disabled": {
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.color-subtle}"
-          }
-        }
-      }
-    }
-  },
-  "components/form-field-radio-option": {
-    "todo": {
-      "form-field-radio-option": {
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.column.md}"
         }
       }
     }
@@ -11251,24 +11151,6 @@
               "$value": "{basis.form-control.disabled.color}"
             }
           }
-        }
-      }
-    }
-  },
-  "components/radio-group": {
-    "todo": {
-      "radio-group": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
-        },
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.xl}"
         }
       }
     }
@@ -15516,7 +15398,6 @@
       "components/card-as-link",
       "components/case-card",
       "components/checkbox",
-      "components/checkbox-group",
       "components/code/nl",
       "components/code/utrecht",
       "components/code-block/nl",
@@ -15537,14 +15418,10 @@
       "components/file",
       "components/file-input",
       "components/form-field",
-      "components/form-field-checkbox-option",
       "components/form-field-description",
       "components/form-field-error-message",
-      "components/form-field-label/utrecht",
-      "components/form-field-label/todo",
+      "components/form-field-label",
       "components/form-field-label-suffix",
-      "components/form-field-option-label",
-      "components/form-field-radio-option",
       "components/form-summary",
       "components/heading/nl",
       "components/heading/amsterdam",
@@ -15580,7 +15457,6 @@
       "components/progress-list/den-haag",
       "components/progress-list/todo",
       "components/radio-button",
-      "components/radio-group",
       "components/select",
       "components/separator",
       "components/side-navigation",
