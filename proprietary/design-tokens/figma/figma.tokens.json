@@ -5877,6 +5877,10 @@
           "$type": "dimension",
           "$value": "{basis.border-width.md}"
         },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
+        },
         "size": {
           "$type": "dimension",
           "$value": "{basis.size.xs}"
@@ -7186,6 +7190,82 @@
           "padding-inline-start": {
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
+          }
+        }
+      }
+    }
+  },
+  "components/Fieldset": {
+    "utrecht": {
+      "form-fieldset": {
+        "margin-block-end": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "margin-block-start": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "[code-only]"
+        },
+        "invalid": {
+          "border-inline-start-color": {
+            "$type": "color",
+            "$value": "{basis.color.negative.border-default}"
+          },
+          "border-inline-start-width": {
+            "$type": "dimension",
+            "$value": "{basis.border-width.md}"
+          },
+          "padding-inline-start": {
+            "$type": "dimension",
+            "$value": "{basis.space.inline.xl}"
+          }
+        },
+        "legend": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.bold}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          },
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.lg}"
+          },
+          "margin-block-start": {
+            "$type": "dimension",
+            "$value": "0px"
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            }
+          }
+        },
+        "section": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
           }
         }
       }
@@ -10992,6 +11072,10 @@
           "$type": "dimension",
           "$value": "0px",
           "$description": "[code-only]"
+        },
+        "margin-inline-end": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.md}"
         },
         "size": {
           "$type": "dimension",
@@ -15442,6 +15526,7 @@
       "components/dot-badge",
       "components/drawer/utrecht",
       "components/drawer/todo",
+      "components/Fieldset",
       "components/figure/utrecht",
       "components/figure/amsterdam",
       "components/file",
