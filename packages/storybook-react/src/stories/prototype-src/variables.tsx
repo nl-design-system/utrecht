@@ -27,5 +27,8 @@ const urls = {
     'https://www.figma.com/proto/J8GosPQdIRzYgXiwB79gks/Formulieren-prototypes--openForms-?page-id=2161%3A44997&node-id=2162-50715&viewport=-3757%2C978%2C0.59&t=SkZGMPwW1sc23wwv-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=2162%3A50715',
   contactformEmailDesktop:
     'https://www.figma.com/proto/J8GosPQdIRzYgXiwB79gks/Formulieren-prototypes--openForms-?page-id=2161%3A44997&node-id=4084-5696&viewport=-3757%2C978%2C0.59&t=IOqHaEt7ON9DGEUb-8&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=4084%3A5696&hide-ui=1',
+  trouwenIntroductie: './iframe.html?args=&id=trouwen-trouwen-webteksten-introductie--one&viewMode=story',
+  trouwenScenario: './iframe.html?args=&id=trouwen-webteksten-scenario--one&viewMode=story',
+  trouwenStap1: './iframe.html?args=&id=trouwen-webteksten-stap-1--one&viewMode=story',
 };
 export default urls;
