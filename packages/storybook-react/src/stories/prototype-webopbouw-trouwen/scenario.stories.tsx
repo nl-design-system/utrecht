@@ -17,7 +17,7 @@ import urls from '../prototype-src/variables.js';
 import '../styles.css';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Scenario',
+  title: 'Prototypes/Trouwen/Testpaginas/Scenario',
   id: 'trouwen-scenario',
   component: Page,
   parameters: {

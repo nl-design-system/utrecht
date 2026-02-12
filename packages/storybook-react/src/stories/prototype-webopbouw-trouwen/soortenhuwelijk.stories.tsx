@@ -80,7 +80,7 @@ export const One: Story = {
             </BreadcrumbNav>
             <main>
               <section>
-                <Heading1>Soorten trouwen</Heading1>
+                <Heading1>Informatie over trouwen</Heading1>
                 <Paragraph appearance="lead">
                   Wat voor soorten trouwen zijn er? En wat zijn de verschillen? Hieronder vindt u een overzicht van de
                   verschillende soorten trouwen en wat u daarvoor moet regelen.
@@ -90,7 +90,7 @@ export const One: Story = {
                   href="#"
                 >
                   <UtrechtIconChevronRight />
-                  Overzicht van soorten
+                  Verschillen tussen Ceremonieel en Eenvoudig trouwen
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
@@ -106,87 +106,129 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Ceremonieel trouwen
                 </Link>
-                <Heading2>Soorten trouwen</Heading2>
-                <Paragraph>Verschillen tussen soorten huwelijk. PLACEHOLDER TABEL</Paragraph>
-                <Heading3>Eenvoudig trouwen</Heading3>
+                <Heading2>Verschillen tussen Ceremonieel en Eenvoudig trouwen</Heading2>
+                <Paragraph>
+                  Bj de gemeente Utrecht zijn er twee soorten van trouwen mogelijk: Eenvoudig trouwen en Ceremonieel
+                  trouwen. De verschillen in tijdsduur en prijzen staan in de tabel hieronder. Daarnaast zijn de
+                  belangrijkste verschillen:
+                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>
+                    Bij eenvoudig trouwen is er geen toespraak, de locatie is altijd op het Stadskantoor en de gemeente
+                    kiest de trouwambtenaar.
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    Bij ceremonieel trouwen is er een toespraak, heeft u de keuze voor een trouwlocatie en kunt u zelf
+                    een trouwambtenaar kiezen.
+                  </UnorderedListItem>
+                </UnorderedList>
                 <Table>
                   <React.Fragment key=".0">
                     <TableHeader>
                       <TableRow>
-                        <TableHeaderCell scope="col">Soort</TableHeaderCell>
-                        <TableHeaderCell scope="col">Toespraak</TableHeaderCell>
+                        <TableHeaderCell scope="col"></TableHeaderCell>
                         <TableHeaderCell scope="col">Tijdsduur </TableHeaderCell>
-                        <TableHeaderCell scope="col">Uitwisseling ringen of foto’s maken </TableHeaderCell>
+                        <TableHeaderCell scope="col">Ringen en/of Foto&apos;s?</TableHeaderCell>
                         <TableHeaderCell scope="col">Gemiddelde wachttijd</TableHeaderCell>
-                        <TableHeaderCell scope="col">Keuze locatie</TableHeaderCell>
-                        <TableHeaderCell scope="col">Keuze trouwambtenaar</TableHeaderCell>
                         <TableHeaderCell scope="col">Kosten afnemen huwelijk</TableHeaderCell>
                       </TableRow>
                     </TableHeader>
                     <TableBody></TableBody>
                     <TableFooter>
                       <TableRow>
-                        <TableCell>Flitshuwelijk</TableCell>
-                        <TableCell>More data</TableCell>
-                        <TableCell>More data</TableCell>
+                        <TableCell>Eenvoudig trouwen - Flits</TableCell>
+                        <TableCell>5 minuten</TableCell>
+                        <TableCell>Nee</TableCell>
+                        <TableCell>3 maanden</TableCell>
+                        <TableCell>€270,20</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Eenvoudig trouwen - Standaard</TableCell>
+                        <TableCell>10 minuten</TableCell>
+                        <TableCell>Ja</TableCell>
+                        <TableCell>3 maanden</TableCell>
+                        <TableCell>€310,30</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Eenvoudig trouwen - Gratis</TableCell>
+                        <TableCell>10 minuten</TableCell>
+                        <TableCell>Ja</TableCell>
+                        <TableCell>10 maanden</TableCell>
+                        <TableCell>€0 </TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Ceremonieel trouwen</TableCell>
+                        <TableCell>60 minuten</TableCell>
+                        <TableCell>Ja</TableCell>
+                        <TableCell>Afhankelijk van locatie</TableCell>
+                        <TableCell>€1.043,30 - €2.095,15</TableCell>
                       </TableRow>
                     </TableFooter>
                   </React.Fragment>
                 </Table>
-
-                <Paragraph></Paragraph>
-                <Heading3>Snel trouwen</Heading3>
-                <Paragraph>
-                  Een snelle manier om te trouwen. Ook wel bekend als het flitshuwelijk. Geen toespraak, wel het
-                  uitwisselen van ringen, en foto&apos;s maken. Duurt maximaal 5 minuten.
-                </Paragraph>
-                <UnorderedList>
-                  <UnorderedListItem>Geen toespraak </UnorderedListItem>
-                  <UnorderedListItem>Duurt maximaal 5 minuten </UnorderedListItem>
-                  <UnorderedListItem>Geen uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
-                </UnorderedList>
-                <br />
-                <AccordionProvider
-                  sections={[
-                    {
-                      body: 'Het kost 270,20 euro.',
-                      expanded: undefined,
-                      label: 'Kosten van snel trouwen',
-                    },
-                    {
-                      body: 'U moet minimaal 2 weken van tevoren een afspraak maken. U heeft een geldig identiteitsbewijs nodig en u mag niet al getrouwd zijn. U kunt alleen op het stadhuis trouwen.',
-                      expanded: undefined,
-                      label: 'Regels rondom snel trouwen',
-                    },
-                  ]}
-                />
-
                 <Heading2>Eenvoudig trouwen</Heading2>
+                Eenvoudig trouwen is trouwen op het stadskantoor, zonder toespraak en met een ambtenaar die de gemeente
+                gekozen heeft. Er zijn drie soorten van Eenvoudig trouwen beschikbaar: Standaard, Flits en Gratis.
+                <Heading3>Eenvoudig trouwen - Standaard</Heading3>
                 <Paragraph>
                   Een simpele manier om te trouwen. Geen toespraak, geen ringen, geen foto&apos;s maken. Duurt maximaal
                   10 minuten.
                 </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Geen toespraak </UnorderedListItem>
+                  <UnorderedListItem>Locatie: Op het Stadskantoor </UnorderedListItem>
+                  <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
                   <UnorderedListItem>Duurt maximaal 10 minuten </UnorderedListItem>
                   <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
                   <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Kosten: €270,20 </UnorderedListItem>
                 </UnorderedList>
-                <AccordionProvider
-                  sections={[
-                    {
-                      body: 'Het kost 310,30 euro.',
-                      expanded: undefined,
-                      label: 'Kosten van snel trouwen',
-                    },
-                    {
-                      body: 'U moet minimaal 2 weken van tevoren een afspraak maken. U heeft een geldig identiteitsbewijs nodig en u mag niet al getrouwd zijn. U kunt alleen op het stadhuis trouwen.',
-                      expanded: undefined,
-                      label: 'Regels rondom snel trouwen',
-                    },
-                  ]}
-                />
+                <Heading3>Eenvoudig trouwen - Flits</Heading3>
+                <Paragraph>
+                  Een snelle manier om te trouwen. Ook wel bekend als het flitshuwelijk. Geen toespraak, wel het
+                  uitwisselen van ringen, en foto&apos;s maken. Duurt maximaal 5 minuten.
+                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>Geen toespraak </UnorderedListItem>
+                  <UnorderedListItem>Locatie: Op het Stadskantoor </UnorderedListItem>
+                  <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
+                  <UnorderedListItem>Duurt maximaal 5 minuten </UnorderedListItem>
+                  <UnorderedListItem>Geen uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
+                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Kosten: €310,30 </UnorderedListItem>
+                </UnorderedList>
+                <br />
+                <Heading3>Eenvoudig trouwen - Gratis</Heading3>
+                <Paragraph>
+                  Een simpele manier om te trouwen. Geen toespraak, geen ringen, geen foto&apos;s maken. Duurt maximaal
+                  10 minuten.
+                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>Geen toespraak </UnorderedListItem>
+                  <UnorderedListItem>Locatie: Op het Stadskantoor </UnorderedListItem>
+                  <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
+                  <UnorderedListItem>Duurt maximaal 10 minuten </UnorderedListItem>
+                  <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
+                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Kosten: €0 </UnorderedListItem>
+                </UnorderedList>
+                <Heading2>Ceremonieel trouwen</Heading2>
+                <Paragraph>
+                  Ceremonieel trouwen is trouwen op een locatie die u zelf uitkoest, met een toespraak en met een
+                  ambtenaar die u zelf kiest.
+                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>Wel een toespraak </UnorderedListItem>
+                  <UnorderedListItem>Locatie: Vrije keuze </UnorderedListItem>
+                  <UnorderedListItem>Trouwambtenaar: Vrije keuze </UnorderedListItem>
+                  <UnorderedListItem>Duurt maximaal 60 minuten </UnorderedListItem>
+                  <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
+                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>
+                    Kosten: €1.043,30 - €2.095,15 afhankelijk van tijdstip. Hier komen waarschijnlijk nog extra kosten
+                    bij, zie onder{' '}
+                  </UnorderedListItem>
+                </UnorderedList>
                 <Heading2>Nuttig om te weten</Heading2>
                 <Paragraph>
                   Op de pagina van de Rijksoverheid staat

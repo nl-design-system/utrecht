@@ -17,7 +17,7 @@ import urls from '../prototype-src/variables.js';
 import '../styles.css';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Introductie ',
+  title: 'Prototypes/Trouwen/Testpaginas/Introductie ',
   id: 'trouwen-introductie',
   component: Page,
   parameters: {
