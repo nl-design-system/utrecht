@@ -40,7 +40,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Regelen',
+  title: 'Prototypes/Trouwen/Pagina indeling/Regelen',
   id: 'trouwen-regelen',
   component: Page,
   parameters: {
@@ -102,15 +102,21 @@ export const One: Story = {
                 <Heading2>Trouwen: wat moet ik regelen?</Heading2>
                 <Paragraph>U gaat trouwen. Hoe regelt u uw huwelijk bij de gemeente?</Paragraph>
                 <OrderedList>
+                  <OrderedListItem>Eenvoudig of ceremonieel trouwen?</OrderedListItem>
                   <OrderedListItem>Regel getuigen</OrderedListItem>
                   <OrderedListItem>Meld uw voorgenomen huwelijk (minimaal 2 weken van te voren)</OrderedListItem>
-                  <OrderedListItem>Wij bellen u om trouwdatum en -locatie in te plannen </OrderedListItem>
+                  <OrderedListItem>Plan uw trouwdatum en -locatie</OrderedListItem>
                   <OrderedListItem>Kies een trouwambtenaar</OrderedListItem>
                   <OrderedListItem>Kies de achternaam van uw kinderen</OrderedListItem>
                   <OrderedListItem>Optioneel: kies uw eigen achternaam</OrderedListItem>
                 </OrderedList>
                 <Paragraph>Hieronder beschrijven we stap voor stap wat u moet doen:</Paragraph>
-                <Heading3>Stap 1: Regel getuigen</Heading3>
+                <Heading3>Stap 1: Eenvoudig of ceremonieel trouwen?</Heading3>
+                <Paragraph>
+                  Wilt u een eenvoudig huwelijk op het stadskantoor, of liever een uitgebreid ceremonieel huwelijk? Op
+                  de soorten trouwen pagina kunt u de verschillende soorten trouwen vergelijken.
+                </Paragraph>
+                <Heading3>Stap 2: Regel getuigen</Heading3>
                 <Paragraph>Om te kunnen trouwen hebt u getuigen nodig. </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Vraag minimaal 2 en maximaal 4 getuigen </UnorderedListItem>
@@ -122,7 +128,7 @@ export const One: Story = {
                 <Paragraph>
                   Wij bieden geen ambtenaren als getuigen aan. In de volgende stap geeft u aan wie uw getuigen zijn.
                 </Paragraph>
-                <Heading3>Stap 2: Meld uw voorgenomen huwelijk</Heading3>
+                <Heading3>Stap 3: Meld uw voorgenomen huwelijk</Heading3>
                 <Paragraph>
                   U moet uw voorgenomen huwelijk melden bij de gemeente. Dat doet u met een online formulier op de
                   website van de gemeente.
@@ -134,11 +140,13 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Meld uw voorgenomen huwelijk
                 </Link>
-                <Heading3>Stap 3: Kies een trouwambtenaar</Heading3>
+                <Heading3>Stap 4: Plan uw trouwdatum en -locatie</Heading3>
+                <Paragraph>Wij bellen u om samen met u een trouwdatum en -locatie in te plannen.</Paragraph>
+                <Heading3>Stap 5: Kies een trouwambtenaar</Heading3>
                 <Paragraph>Kies een trouwambtenaar.</Paragraph>
-                <Heading3>Stap 4: Kies een trouwambtenaar</Heading3>
-                <Paragraph>Kies een trouwambtenaar.</Paragraph>
-                <Heading3>Stap 5: (Optioneel:)kies uw eigen achternaam</Heading3>
+                <Heading3>Stap 6: Kies de achternaam van uw kinderen</Heading3>
+                <Paragraph>Kies de achternaam van uw kinderen.</Paragraph>
+                <Heading3>Stap 7: (Optioneel:)kies uw eigen achternaam</Heading3>
                 <Paragraph>Optioneel: kies uw eigen achternaam.</Paragraph>
 
                 {/* Conditioneel renderen van HulpEnContact of HulpEnContact2 */}

@@ -47,7 +47,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Soorten',
+  title: 'Prototypes/Trouwen/Pagina indeling/Soorten',
   id: 'trouwen-soorten',
   component: Page,
   parameters: {
@@ -80,7 +80,7 @@ export const One: Story = {
             </BreadcrumbNav>
             <main>
               <section>
-                <Heading1>Informatie over trouwen</Heading1>
+                <Heading1>Soorten trouwen</Heading1>
                 <Paragraph appearance="lead">
                   Wat voor soorten trouwen zijn er? En wat zijn de verschillen? Hieronder vindt u een overzicht van de
                   verschillende soorten trouwen en wat u daarvoor moet regelen.
@@ -97,14 +97,14 @@ export const One: Story = {
                   href="#"
                 >
                   <UtrechtIconChevronRight />
-                  Eenvoudig trouwen
+                  Alles over Eenvoudig trouwen
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
                   href="#"
                 >
                   <UtrechtIconChevronRight />
-                  Ceremonieel trouwen
+                  Alles over Ceremonieel trouwen
                 </Link>
                 <Heading2>Verschillen tussen Ceremonieel en Eenvoudig trouwen</Heading2>
                 <Paragraph>
@@ -136,18 +136,18 @@ export const One: Story = {
                     <TableBody></TableBody>
                     <TableFooter>
                       <TableRow>
-                        <TableCell>Eenvoudig trouwen - Flits</TableCell>
-                        <TableCell>5 minuten</TableCell>
-                        <TableCell>Nee</TableCell>
-                        <TableCell>3 maanden</TableCell>
-                        <TableCell>€270,20</TableCell>
-                      </TableRow>
-                      <TableRow>
                         <TableCell>Eenvoudig trouwen - Standaard</TableCell>
                         <TableCell>10 minuten</TableCell>
                         <TableCell>Ja</TableCell>
                         <TableCell>3 maanden</TableCell>
                         <TableCell>€310,30</TableCell>
+                      </TableRow>
+                      <TableRow>
+                        <TableCell>Eenvoudig trouwen - Flits</TableCell>
+                        <TableCell>5 minuten</TableCell>
+                        <TableCell>Nee</TableCell>
+                        <TableCell>3 maanden</TableCell>
+                        <TableCell>€270,20</TableCell>
                       </TableRow>
                       <TableRow>
                         <TableCell>Eenvoudig trouwen - Gratis</TableCell>
@@ -166,13 +166,12 @@ export const One: Story = {
                     </TableFooter>
                   </React.Fragment>
                 </Table>
-                <Heading2>Eenvoudig trouwen</Heading2>
+                <Heading2>Alles over Eenvoudig trouwen</Heading2>
                 Eenvoudig trouwen is trouwen op het stadskantoor, zonder toespraak en met een ambtenaar die de gemeente
                 gekozen heeft. Er zijn drie soorten van Eenvoudig trouwen beschikbaar: Standaard, Flits en Gratis.
                 <Heading3>Eenvoudig trouwen - Standaard</Heading3>
                 <Paragraph>
-                  Een simpele manier om te trouwen. Geen toespraak, geen ringen, geen foto&apos;s maken. Duurt maximaal
-                  10 minuten.
+                  Geen toespraak, wel ringen uitwisselen en foto&apos;s maken. Duurt maximaal 10 minuten.
                 </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Geen toespraak </UnorderedListItem>
@@ -180,13 +179,14 @@ export const One: Story = {
                   <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
                   <UnorderedListItem>Duurt maximaal 10 minuten </UnorderedListItem>
                   <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
-                  <UnorderedListItem>Kosten: €270,20 </UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Kosten: €310,30 </UnorderedListItem>
                 </UnorderedList>
                 <Heading3>Eenvoudig trouwen - Flits</Heading3>
                 <Paragraph>
-                  Een snelle manier om te trouwen. Ook wel bekend als het flitshuwelijk. Geen toespraak, wel het
-                  uitwisselen van ringen, en foto&apos;s maken. Duurt maximaal 5 minuten.
+                  Een versie van standaard eenvoudig trouwen, korter en goedkoper dan het standaard eenvoudig trouwen.
+                  Ook wel bekend als het flitshuwelijk. Geen toespraak, geen ringen uitwisselen en geen foto&apos;s
+                  maken. Duurt maximaal 5 minuten.
                 </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Geen toespraak </UnorderedListItem>
@@ -194,14 +194,13 @@ export const One: Story = {
                   <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
                   <UnorderedListItem>Duurt maximaal 5 minuten </UnorderedListItem>
                   <UnorderedListItem>Geen uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
-                  <UnorderedListItem>Kosten: €310,30 </UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Kosten: €270,20 </UnorderedListItem>
                 </UnorderedList>
-                <br />
                 <Heading3>Eenvoudig trouwen - Gratis</Heading3>
                 <Paragraph>
-                  Een simpele manier om te trouwen. Geen toespraak, geen ringen, geen foto&apos;s maken. Duurt maximaal
-                  10 minuten.
+                  Gratis versie van standaard trouwen, met een langere wachttijd. Geen toespraak, wel ringen uitwisselen
+                  en foto&apos;s maken. Duurt maximaal 10 minuten.
                 </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Geen toespraak </UnorderedListItem>
@@ -209,10 +208,10 @@ export const One: Story = {
                   <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
                   <UnorderedListItem>Duurt maximaal 10 minuten </UnorderedListItem>
                   <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: 10 maanden </UnorderedListItem>
                   <UnorderedListItem>Kosten: €0 </UnorderedListItem>
                 </UnorderedList>
-                <Heading2>Ceremonieel trouwen</Heading2>
+                <Heading2>Alles over Ceremonieel trouwen</Heading2>
                 <Paragraph>
                   Ceremonieel trouwen is trouwen op een locatie die u zelf uitkoest, met een toespraak en met een
                   ambtenaar die u zelf kiest.
@@ -223,7 +222,7 @@ export const One: Story = {
                   <UnorderedListItem>Trouwambtenaar: Vrije keuze </UnorderedListItem>
                   <UnorderedListItem>Duurt maximaal 60 minuten </UnorderedListItem>
                   <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachtlijst: 3 maanden </UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: Afhankelijk van de gekozen trouwlocatie </UnorderedListItem>
                   <UnorderedListItem>
                     Kosten: €1.043,30 - €2.095,15 afhankelijk van tijdstip. Hier komen waarschijnlijk nog extra kosten
                     bij, zie onder{' '}

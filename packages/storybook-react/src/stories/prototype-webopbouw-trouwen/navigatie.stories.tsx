@@ -38,7 +38,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Navigeren',
+  title: 'Prototypes/Trouwen/Pagina indeling/Navigeren',
   id: 'trouwen-navigeren',
   component: Page,
   parameters: {
