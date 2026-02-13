@@ -110,7 +110,7 @@ const demoGridStyle: CSSProperties = {
 };
 
 const componentContainerStyle: CSSProperties = {
-  inlineSize: '400px',
+  inlineSize: '420px',
   padding: '24px',
 };
 

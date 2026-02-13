@@ -52,6 +52,10 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    * Aspect ratio of the image
    */
   aspect?: '16by9' | '4by3' | '1by1';
+  /**
+   * Arrow icon to indicate the card is clickable
+   */
+  arrowIcon?: boolean;
 }
 export const Card = forwardRef(
   (
@@ -65,6 +69,7 @@ export const Card = forwardRef(
       body,
       appearance,
       aspect,
+      arrowIcon,
       ...restProps
     }: PropsWithChildren<CardProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -132,8 +137,8 @@ export const Card = forwardRef(
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
         </div>
         {href && (
-          <div className="utrecht-card__arrow-container">
-            <utrecht-icon-arrow class="utrecht-card__arrow"></utrecht-icon-arrow>
+          <div className="utrecht-card__arrow">
+            <utrecht-icon-arrow></utrecht-icon-arrow>
           </div>
         )}
       </div>
