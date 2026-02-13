@@ -3,27 +3,31 @@ import '@assets/styles.css';
 import '@utrecht/design-tokens/dist/font-family';
 import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
-import { joinUrl } from '../utils/url';
 import { Image } from 'astro:assets';
 import MobileNavDrawer from '../components/MobileNavDrawer';
+import { joinUrl } from '../utils/url.ts';
 ---
 
 <!doctype html>
 <html lang="en" class="utrecht-theme utrecht-theme--documentation-website utrecht-root">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href={joinUrl(base, '/favicon.ico')} />
-		<meta name="generator" content={Astro.generator} />
-		<title>Utrecht Design System</title>
-	</head>
-	<body class="utrecht-body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href={joinUrl(base, '/favicon.svg')} />
+    <meta name="generator" content={Astro.generator} />
+    <title>Utrecht Design System</title>
+  </head>
+  <body class="utrecht-body">
     <Page className="utrecht-custom-page">
       <PageHeader>
         {/* Desktop navigation */}
         <div class="desktop-nav">
           <div class="utrecht-page-header__content">
-            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"><Image src={joinUrl(base, '/logo-md.svg')} width="160" height="77" alt="" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"
+              ><Image src={joinUrl(base, '/logo-md.svg')} width="160" height="77" alt="" /><b
+                class="utrecht-custom-logo__caption">Utrecht Design System</b
+              ></a
+            >
           </div>
           <nav>
             <NavBar>
@@ -41,7 +45,11 @@ import MobileNavDrawer from '../components/MobileNavDrawer';
         {/* Mobile navigation */}
         <div class="mobile-nav">
           <div class="utrecht-page-header__content utrecht-page-header__content--mobile">
-            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"><img src={joinUrl(base, '/logo-md.svg')} alt="" /><b class="utrecht-custom-logo__caption">Utrecht Design System</b></a>
+            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"
+              ><img src={joinUrl(base, '/logo-md.svg')} alt="" /><b class="utrecht-custom-logo__caption"
+                >Utrecht Design System</b
+              ></a
+            >
             <MobileNavDrawer client:load />
           </div>
         </div>
@@ -53,66 +61,152 @@ import MobileNavDrawer from '../components/MobileNavDrawer';
       </div>
     </Page>
     <PageFooter>
-      <div class="utrecht-page-footer__content">Footer content</div>
+      <div class="utrecht-page-footer__content">
+        <h2 class="utrecht-heading-2 utrecht-heading-2--reset-h2">Gemeente Utrecht</h2>
+        <br />
+        <section>
+          <div class="utrecht-page-footer__navigation">
+            <ul role="list" class="utrecht-link-list utrecht-link-list--html-ul">
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook/?path=/docs/utrecht-readme--docs')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook </span>
+                </a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook-angular/index.html?path=/')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook Angular</span>
+                </a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook-css/index.html?path=/')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook CSS</span>
+                </a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook-html/index.html?path=/')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook HTML</span>
+                </a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook-react/index.html?path=/')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook React.Js</span>
+                </a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook-vue/index.html?path=/')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook Vue.Js</span>
+                </a>
+              </li>
+              <li class="utrecht-link-list__item">
+                <a
+                  href={joinUrl(base, '/storybook-web-component/index.html?path=/')}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="utrecht-link utrecht-link--html-a utrecht-link-list__link"
+                >
+                  <utrecht-icon-chevron-right></utrecht-icon-chevron-right>
+                  <span class="utrecht-link-list__link-text"> Storybook Web Components</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </div>
     </PageFooter>
-	</body>
-</html>
+  </body>
 
-<style>
-  .desktop-nav {
-    display: block;
-  }
-
-  .mobile-nav {
-    display: none;
-  }
-
-  @media (max-width: 860px) {
+  <style>
     .desktop-nav {
-      display: none;
+      display: block;
     }
 
     .mobile-nav {
-      display: block;
+      display: none;
     }
-  }
 
-  .utrecht-custom-logo {
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    column-gap: .5rem;
-    text-decoration: none;
-    color: black;
-  }
+    @media (max-width: 860px) {
+      .desktop-nav {
+        display: none;
+      }
 
-  .utrecht-custom-page {
-    background-color: var(--utrecht-document-background-color);
-    display: flex;
-    flex-direction: column;
-    min-block-size: 100vh;
-    padding-inline: 0 !important;
-  }
+      .mobile-nav {
+        display: block;
+      }
+    }
 
-  .utrecht-custom-logo:hover {
-    color: var(--utrecht-link-hover-color);
-  }
+    .utrecht-custom-logo {
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      column-gap: 0.5rem;
+      text-decoration: none;
+      color: black;
+    }
 
-  .utrecht-custom-logo img {
-    flex: 0 0 auto;
-    block-size: 3rem;
-  }
+    .utrecht-custom-page {
+      background-color: var(--utrecht-document-background-color);
+      display: flex;
+      flex-direction: column;
+      min-block-size: 100vh;
+      padding-inline: 0 !important;
+    }
 
-  .utrecht-custom-logo__caption {
-    flex: 1 1 auto;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
+    .utrecht-custom-logo:hover {
+      color: var(--utrecht-link-hover-color);
+    }
 
-  .utrecht-page-header__content--mobile {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-</style>
+    .utrecht-custom-logo img {
+      flex: 0 0 auto;
+      block-size: 3rem;
+    }
+
+    .utrecht-custom-logo__caption {
+      flex: 1 1 auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .utrecht-page-header__content--mobile {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  </style>
+</html>
