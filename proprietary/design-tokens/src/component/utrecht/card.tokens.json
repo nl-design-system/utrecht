@@ -10,11 +10,15 @@
       "hover": {
         "scale": { "value": "1.02" }
       },
+      "transition-duration": { "value": "150ms" },
       "focus": {
         "background-color": { "value": "{utrecht.color.blue.80}" }
       },
       "active": {
         "scale": { "value": "1" }
+      },
+      "text-decoration-thickness": {
+        "value": "2px"
       },
       "border-radius": {},
       "box-shadow": {},
@@ -64,23 +68,15 @@
           "value": "{utrecht.space.inline.md}"
         }
       },
-      "arrow-container": {
-        "inline-size": {
-          "value": "{utrecht.space.inline.md}"
-        },
-        "block-size": {
-          "value": "{utrecht.space.block.2xl}"
+      "arrow": {
+        "font-size": {
+          "value": "{utrecht.icon-scale.2xl}"
         },
         "padding-inline-end": {
           "value": "{utrecht.space.inline.md}"
-        }
-      },
-      "arrow": {
-        "inline-size": {
-          "value": "{utrecht.space.inline.md}"
         },
-        "block-size": {
-          "value": "{utrecht.space.inline.md}"
+        "padding-block-end": {
+          "value": "{utrecht.space.block.md}"
         }
       },
       "neutral": {
