@@ -62,11 +62,15 @@ export const One: Story = {
           <HoofdNavigatie />
           <PageContent>
             <BreadcrumbNav>
-              <BreadcrumbNavLink href={urls.contactformScenario}>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/">
+                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
+                Home
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/wonen-en-leven">
                 <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronLeft />
+                  <UtrechtIconChevronRight />
                 </BreadcrumbNavSeparator>
-                Terug
+                Wonen en leven
               </BreadcrumbNavLink>
             </BreadcrumbNav>
             <main>
@@ -79,7 +83,7 @@ export const One: Story = {
                 <Heading2>Veel bekeken</Heading2>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href={urls.trouwenRegelenChecklist}
                 >
                   <UtrechtIconChevronRight />
                   Trouwen: wat moet ik regelen?
@@ -100,7 +104,7 @@ export const One: Story = {
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href={urls.trouwenVeelgesteldeVragen}
                 >
                   <UtrechtIconChevronRight />
                   Een niet-nederlandse partner, wat moeten we regelen?
@@ -113,7 +117,7 @@ export const One: Story = {
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href={urls.trouwenRegelen}
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over trouwen en wat u hiervoor moet regelen

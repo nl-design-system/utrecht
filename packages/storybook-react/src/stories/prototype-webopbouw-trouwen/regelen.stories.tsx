@@ -64,11 +64,21 @@ export const One: Story = {
           <HoofdNavigatie />
           <PageContent>
             <BreadcrumbNav>
-              <BreadcrumbNavLink href={urls.contactformScenario}>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/">
+                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
+                Home
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/wonen-en-leven">
                 <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronLeft />
+                  <UtrechtIconChevronRight />
                 </BreadcrumbNavSeparator>
-                Terug
+                Wonen en leven
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href={urls.trouwenNavigatie}>
+                <BreadcrumbNavSeparator>
+                  <UtrechtIconChevronRight />
+                </BreadcrumbNavSeparator>
+                Trouwen, partnerschap en samenlevingscontract
               </BreadcrumbNavLink>
             </BreadcrumbNav>
             <main>
@@ -79,27 +89,27 @@ export const One: Story = {
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="#regelwerk"
                 >
                   <UtrechtIconChevronRight />
                   Trouwen: wat moet ik regelen?
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href={urls.trouwenSoortenTrouwen}
                 >
                   <UtrechtIconChevronRight />
                   Soorten trouwen
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href={urls.trouwenVeelgesteldeVragen}
                 >
                   <UtrechtIconChevronRight />
-                  Nuttig om te weten
+                  Vragen en antwoorden
                 </Link>
 
-                <Heading2>Trouwen: wat moet ik regelen?</Heading2>
+                <Heading2 id="regelwerk">Trouwen: wat moet ik regelen?</Heading2>
                 <Paragraph>U gaat trouwen. Hoe regelt u uw huwelijk bij de gemeente?</Paragraph>
                 <OrderedList>
                   <OrderedListItem>Eenvoudig of ceremonieel trouwen?</OrderedListItem>

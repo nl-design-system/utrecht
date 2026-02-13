@@ -71,23 +71,33 @@ export const One: Story = {
           <HoofdNavigatie />
           <PageContent>
             <BreadcrumbNav>
-              <BreadcrumbNavLink href={urls.contactformScenario}>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/">
+                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
+                Home
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/wonen-en-leven">
                 <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronLeft />
+                  <UtrechtIconChevronRight />
                 </BreadcrumbNavSeparator>
-                Terug
+                Wonen en leven
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href={urls.trouwenNavigatie}>
+                <BreadcrumbNavSeparator>
+                  <UtrechtIconChevronRight />
+                </BreadcrumbNavSeparator>
+                Trouwen, partnerschap en samenlevingscontract
               </BreadcrumbNavLink>
             </BreadcrumbNav>
             <main>
               <section>
                 <Heading1>
-                  Vragen en antwoorden over Trouwen, samenlevingscontract en geregistreerd partnerschap
+                  Vragen en antwoorden over trouwen, samenlevingscontract en geregistreerd partnerschap
                 </Heading1>
 
                 <Heading2>Wat moet ik regelen?</Heading2>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href={urls.trouwenRegelenChecklist}
                 >
                   <UtrechtIconChevronRight />
                   Trouwen: wat moet ik regelen?

@@ -48,7 +48,7 @@ import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWi
 
 const meta = {
   title: 'Prototypes/Trouwen/Pagina indeling/Soorten',
-  id: 'trouwen-soorten',
+  id: 'trouwen-soorten-trouwen',
   component: Page,
   parameters: {
     layout: 'fullscreen',
@@ -71,11 +71,21 @@ export const One: Story = {
           <HoofdNavigatie />
           <PageContent>
             <BreadcrumbNav>
-              <BreadcrumbNavLink href={urls.contactformScenario}>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/">
+                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
+                Home
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href="https://www.utrecht.nl/wonen-en-leven">
                 <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronLeft />
+                  <UtrechtIconChevronRight />
                 </BreadcrumbNavSeparator>
-                Terug
+                Wonen en leven
+              </BreadcrumbNavLink>
+              <BreadcrumbNavLink href={urls.trouwenNavigatie}>
+                <BreadcrumbNavSeparator>
+                  <UtrechtIconChevronRight />
+                </BreadcrumbNavSeparator>
+                Trouwen, partnerschap en samenlevingscontract
               </BreadcrumbNavLink>
             </BreadcrumbNav>
             <main>
@@ -87,26 +97,26 @@ export const One: Story = {
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="#verschillen"
                 >
                   <UtrechtIconChevronRight />
                   Verschillen tussen Ceremonieel en Eenvoudig trouwen
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="#eenvoudig"
                 >
                   <UtrechtIconChevronRight />
                   Alles over Eenvoudig trouwen
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="#ceremonieel"
                 >
                   <UtrechtIconChevronRight />
                   Alles over Ceremonieel trouwen
                 </Link>
-                <Heading2>Verschillen tussen Ceremonieel en Eenvoudig trouwen</Heading2>
+                <Heading2 id="verschillen">Verschillen tussen Ceremonieel en Eenvoudig trouwen</Heading2>
                 <Paragraph>
                   Bj de gemeente Utrecht zijn er twee soorten van trouwen mogelijk: Eenvoudig trouwen en Ceremonieel
                   trouwen. De verschillen in tijdsduur en prijzen staan in de tabel hieronder. Daarnaast zijn de
@@ -166,7 +176,7 @@ export const One: Story = {
                     </TableFooter>
                   </React.Fragment>
                 </Table>
-                <Heading2>Alles over Eenvoudig trouwen</Heading2>
+                <Heading2 id="eenvoudig">Alles over Eenvoudig trouwen</Heading2>
                 Eenvoudig trouwen is trouwen op het stadskantoor, zonder toespraak en met een ambtenaar die de gemeente
                 gekozen heeft. Er zijn drie soorten van Eenvoudig trouwen beschikbaar: Standaard, Flits en Gratis.
                 <Heading3>Eenvoudig trouwen - Standaard</Heading3>
@@ -211,7 +221,7 @@ export const One: Story = {
                   <UnorderedListItem>Wachttijd: 10 maanden </UnorderedListItem>
                   <UnorderedListItem>Kosten: €0 </UnorderedListItem>
                 </UnorderedList>
-                <Heading2>Alles over Ceremonieel trouwen</Heading2>
+                <Heading2 id="ceremonieel">Alles over Ceremonieel trouwen</Heading2>
                 <Paragraph>
                   Ceremonieel trouwen is trouwen op een locatie die u zelf uitkoest, met een toespraak en met een
                   ambtenaar die u zelf kiest.
@@ -228,69 +238,6 @@ export const One: Story = {
                     bij, zie onder{' '}
                   </UnorderedListItem>
                 </UnorderedList>
-                <Heading2>Nuttig om te weten</Heading2>
-                <Paragraph>
-                  Op de pagina van de Rijksoverheid staat
-                  <Link href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord">
-                    veel informatie over trouwen
-                  </Link>
-                  . Hier vindt u ook informatie over trouwen bij de Gemeente.
-                </Paragraph>
-                <Heading3>Buitenland</Heading3>
-                <AccordionProvider
-                  sections={[
-                    {
-                      body: 'Regels regels regels.',
-                      expanded: undefined,
-                      label: 'Trouwen met iemand die in het buitenland woont',
-                    },
-                    {
-                      body: 'Regels regels regels.',
-                      expanded: undefined,
-                      label: 'Trouwen in het buitenland',
-                    },
-                  ]}
-                />
-                <Heading3>Verschillen</Heading3>
-                <AccordionProvider
-                  sections={[
-                    {
-                      body: 'Regels regels regels.',
-                      expanded: undefined,
-                      label: 'Wat is het verschil tussen trouwen en een geregistreerd partnerschap?',
-                    },
-                    {
-                      body: 'Regels regels regels',
-                      expanded: undefined,
-                      label: 'Wat is het verschil tussen trouwen en een samenlevingscontract?',
-                    },
-                  ]}
-                />
-                <Heading3>Regels rondom Trouwen</Heading3>
-                <AccordionProvider
-                  sections={[
-                    {
-                      body: 'Regels regels regels.',
-                      expanded: undefined,
-                      label: 'Onder welke voorwaarden kan ik trouwen of een geregistreerd partnerschap sluiten?',
-                    },
-                    {
-                      body: 'Regels regels regels',
-                      expanded: undefined,
-                      label: 'Waar heb ik recht op als ik trouw in gemeenschap van goederen?',
-                    },
-                    {
-                      body: 'Regels regels regels',
-                      expanded: undefined,
-                      label: 'Wanneer is een Verklaring geen schijnhuwelijk nodig?',
-                    },
-                    {
-                      body: 'Regels regels regels',
-                      expanded: undefined,
-                      label: 'Waar heb ik recht op als ik trouw in gemeenschap van goederen?',
-                    },
-                  ]}
-                />
                 {/* Conditioneel renderen van HulpEnContact of HulpEnContact2 */}
                 {!showHulpEnContact2 ? (
                   <HulpEnContact onSubmit={() => setShowHulpEnContact2(true)} />
