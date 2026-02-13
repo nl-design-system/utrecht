@@ -6,10 +6,12 @@
 
 @use "~@utrecht/img-css/src/mixin" as *;
 @use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+@use "~@utrecht/link-css/src/mixin" as link-css;
 
 @mixin utrecht-card {
   --utrecht-link-text-decoration: none;
-  --_utrecht-link-state-text-decoration-thickness: var(--utrecht-link-hover-text-decoration-thickness, 3px);
+  --utrecht-link-text-decoration-thickness: var(--utrecht-card-text-decoration-thickness, 2px);
+  --_utrecht-card-transition-duration: var(--utrecht-card-transition-duration, 0);
 
   background-color: var(--utrecht-card-background-color);
   border-radius: var(--utrecht-card-border-radius);
@@ -21,14 +23,23 @@
   justify-content: space-between;
   max-inline-size: var(--utrecht-card-max-inline-size, 100%);
   row-gap: var(--utrecht-card-row-gap);
-  transition: 150ms scale ease-in-out;
+  transition-duration: var(--_utrecht-card-transition-duration);
+  transition-property: scale;
+  transition-timing-function: ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    & {
+      @include utrecht-card--reduced-motion;
+    }
+  }
 }
 
-@mixin utrecht-card__arrow-container {
+@mixin utrecht-card__arrow {
+  --utrecht-icon-size: 18px;
+
   align-self: end;
-  block-size: var(--utrecht-card-arrow-container-block-size);
-  inline-size: var(--utrecht-card-arrow-container-inline-size);
-  padding-inline-end: var(--utrecht-card-arrow-container-padding-inline-end);
+  padding-block-end: var(--utrecht-card-arrow-padding-block-end);
+  padding-inline-end: var(--utrecht-card-arrow-padding-inline-end);
 }
 
 @mixin utrecht-card--has-link {
@@ -38,12 +49,8 @@
 
 @mixin utrecht-card__link {
   color: var(--utrecht-card-link-color);
-}
 
-@mixin utrecht-card__arrow {
-  block-size: var(--utrecht-card-arrow-block-size);
-  inline-size: var(--utrecht-card-arrow-inline-size);
-  line-height: 0;
+  @include link-css.utrecht-link--any-link;
 }
 
 @mixin utrecht-card__heading {
@@ -156,4 +163,8 @@
 
 @mixin utrecht-card--active {
   scale: var(--utrecht-card-active-scale, 1);
+}
+
+@mixin utrecht-card--reduced-motion {
+  --_utrecht-card-scale-animation-duration: 0;
 }
