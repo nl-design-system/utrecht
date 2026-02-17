@@ -9018,6 +9018,274 @@
       }
     }
   },
+  "components/navigation-tile": {
+    "utrecht": {
+      "navigation-tile": {
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.sm}"
+        },
+        "min-block-size": {
+          "$type": "dimension",
+          "$value": "192px"
+        },
+        "min-inline-size": {
+          "$type": "dimension",
+          "$value": "328px"
+        },
+        "padding-block": {
+          "$type": "dimension",
+          "$value": "{basis.space.block.2xl}"
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.inline.3xl}"
+        },
+        "row-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.row.lg}"
+        },
+        "description": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          }
+        },
+        "icon": {
+          "size": {
+            "$type": "dimension",
+            "$value": "{basis.size.icon.md}"
+          }
+        },
+        "focus": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.focus.background-color}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.focus.color}"
+          }
+        },
+        "default": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.action-2.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.default.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.bg-hover}"
+            }
+          }
+        },
+        "red": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.red.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.red.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.red.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.red.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.red.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.red.bg-hover}"
+            }
+          }
+        },
+        "yellow": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.yellow.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.yellow.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.yellow.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.yellow.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.yellow.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.yellow.bg-hover}"
+            }
+          }
+        },
+        "purple": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.purple.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.purple.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.purple.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.purple.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.purple.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.purple.bg-hover}"
+            }
+          }
+        },
+        "light-blue": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.light-blue.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.light-blue.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.bg-hover}"
+            }
+          }
+        },
+        "light-green": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.green.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.green.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.bg-hover}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/note": {
     "utrecht": {
       "spotlight-section": {
@@ -15392,6 +15660,7 @@
       "components/modal-dialog",
       "components/navigation-bar",
       "components/navigation-list",
+      "components/navigation-tile",
       "components/note",
       "components/number-badge/nl",
       "components/number-badge/utrecht",
