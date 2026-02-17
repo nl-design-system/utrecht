@@ -9114,7 +9114,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
+            "$value": "{basis.text.font-weight.semibold}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -9140,34 +9140,34 @@
         "default": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.action-2.bg-default}"
+            "$value": "{utrecht.color.dataset.default.bg-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-document}"
+            "$value": "{utrecht.color.dataset.default.color-document}"
           },
           "description": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.default.color-document}"
+              "$value": "{utrecht.color.dataset.default.color-document}"
             }
           },
           "icon": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-2.color-default}"
+              "$value": "{utrecht.color.dataset.default.color-document}"
             }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-2.bg-active}"
+              "$value": "{utrecht.color.dataset.default.color-default}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-2.bg-hover}"
+              "$value": "{utrecht.color.dataset.default.bg-hover}"
             }
           }
         },
