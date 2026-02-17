@@ -116,9 +116,9 @@ export const One: Story = {
                   <OrderedListItem>Regel getuigen</OrderedListItem>
                   <OrderedListItem>Meld uw voorgenomen huwelijk (minimaal 2 weken van te voren)</OrderedListItem>
                   <OrderedListItem>Plan uw trouwdatum en -locatie</OrderedListItem>
-                  <OrderedListItem>Kies een trouwambtenaar</OrderedListItem>
+                  <OrderedListItem>Kies een trouwambtenaar (bij Ceremonieel trouwen)</OrderedListItem>
                   <OrderedListItem>Kies de achternaam van uw kinderen</OrderedListItem>
-                  <OrderedListItem>Optioneel: kies uw eigen achternaam</OrderedListItem>
+                  <OrderedListItem>Regel juiste documenten (bij buitenlandse partner)</OrderedListItem>
                 </OrderedList>
                 <Paragraph>Hieronder beschrijven we stap voor stap wat u moet doen:</Paragraph>
                 <Heading3>Stap 1: Eenvoudig of ceremonieel trouwen?</Heading3>
@@ -151,13 +151,23 @@ export const One: Story = {
                   Meld uw voorgenomen huwelijk
                 </Link>
                 <Heading3>Stap 4: Plan uw trouwdatum en -locatie</Heading3>
-                <Paragraph>Wij bellen u om samen met u een trouwdatum en -locatie in te plannen.</Paragraph>
+                <Paragraph>
+                  Deze stap verschilt tussen ceremonieel en eenvoudig trouwen. Bij eenvoudig trouwen bellen wij u om
+                  samen met u een trouwdatum en -locatie in te plannen. Bij ceremonieel trouwen kiest u zelf een
+                  trouwdatum en -locatie.{' '}
+                </Paragraph>
                 <Heading3>Stap 5: Kies een trouwambtenaar</Heading3>
-                <Paragraph>Kies een trouwambtenaar.</Paragraph>
+                <Paragraph>
+                  Bij Ceremonieel trouwen kunt u zelf een trouwambtenaar kiezen. Bij Eenvoudig trouwen wijst de gemeente
+                  u een trouwambtenaar toe.
+                </Paragraph>
                 <Heading3>Stap 6: Kies de achternaam van uw kinderen</Heading3>
                 <Paragraph>Kies de achternaam van uw kinderen.</Paragraph>
-                <Heading3>Stap 7: (Optioneel:)kies uw eigen achternaam</Heading3>
-                <Paragraph>Optioneel: kies uw eigen achternaam.</Paragraph>
+                <Heading3>Stap 7: Regel juiste documenten (bij buitenlandse partner)</Heading3>
+                <Paragraph>
+                  Als u trouwt met een partner die niet in Nederland woont, dan hebben wij een aantal documenten van u
+                  nodig.
+                </Paragraph>
 
                 {/* Conditioneel renderen van HulpEnContact of HulpEnContact2 */}
                 {!showHulpEnContact2 ? (
