@@ -103,7 +103,7 @@ const HulpEnContact: React.FC<HulpEnContactProps> = ({ onSubmit }) => {
   return (
     <div className="utrecht-help-contact-block">
       <Heading2 class="utrecht-heading-3" style={{ textTransform: 'uppercase' }}>
-        Hulp en Contact <span style={{ fontWeight: 'normal' }}>Amsterdamsestraatweg</span>
+        Hulp en Contact <span style={{ fontWeight: 'normal' }}>Trouwen</span>
       </Heading2>
 
       <div className="utrecht-help-contact-content">
