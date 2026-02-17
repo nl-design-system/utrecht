@@ -112,22 +112,36 @@ export const One: Story = {
                 <Heading2 id="regelwerk">Trouwen: wat moet ik regelen?</Heading2>
                 <Paragraph>U gaat trouwen. Hoe regelt u uw huwelijk bij de gemeente?</Paragraph>
                 <OrderedList>
-                  <OrderedListItem>Eenvoudig of ceremonieel trouwen?</OrderedListItem>
-                  <OrderedListItem>Regel getuigen</OrderedListItem>
-                  <OrderedListItem>Meld uw voorgenomen huwelijk</OrderedListItem>
-                  <OrderedListItem>Trouwdatum en -locatie</OrderedListItem>
-                  <OrderedListItem>Trouwambtenaar</OrderedListItem>
-                  <OrderedListItem>Kies de achternaam van uw kinderen</OrderedListItem>
-                  <OrderedListItem>Regel juiste documenten (bij buitenlandse partner)</OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-1">Eenvoudig of ceremonieel trouwen?</Link>
+                  </OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-2">Regel getuigen</Link>
+                  </OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-3">Meld uw voorgenomen huwelijk</Link>
+                  </OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-4">Trouwdatum en -locatie</Link>
+                  </OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-5">Trouwambtenaar</Link>
+                  </OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-6">Kies de achternaam van uw kinderen</Link>
+                  </OrderedListItem>
+                  <OrderedListItem>
+                    <Link href="#stap-7">Regel juiste documenten (bij buitenlandse partner)</Link>
+                  </OrderedListItem>
                 </OrderedList>
                 <Paragraph>Hieronder beschrijven we stap voor stap wat u moet doen:</Paragraph>
-                <Heading3>Stap 1: Eenvoudig of ceremonieel trouwen?</Heading3>
+                <Heading3 id="stap-1">Stap 1: Eenvoudig of ceremonieel trouwen?</Heading3>
                 <Paragraph>
                   Wilt u een eenvoudig huwelijk op het stadskantoor, of liever een uitgebreid ceremonieel huwelijk? Op
                   de <Link href={urls.trouwenSoortenTrouwen}>soorten trouwen pagina</Link> kunt u de verschillende
                   soorten trouwen vergelijken.
                 </Paragraph>
-                <Heading3>Stap 2: Regel getuigen</Heading3>
+                <Heading3 id="stap-2">Stap 2: Regel getuigen</Heading3>
                 <Paragraph>Om te kunnen trouwen hebt u getuigen nodig. </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>Vraag minimaal 2 en maximaal 4 getuigen </UnorderedListItem>
@@ -139,7 +153,7 @@ export const One: Story = {
                 <Paragraph>
                   Wij bieden geen ambtenaren als getuigen aan. In de volgende stap geeft u aan wie uw getuigen zijn.
                 </Paragraph>
-                <Heading3>Stap 3: Meld uw voorgenomen huwelijk</Heading3>
+                <Heading3 id="stap-3">Stap 3: Meld uw voorgenomen huwelijk</Heading3>
                 <Paragraph>
                   U moet minimaal 2 weken van te voren uw voorgenomen huwelijk melden bij de gemeente. Dat doet u met
                   een online formulier op de website van de gemeente. De melding doen is gratis.
@@ -151,18 +165,18 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Meld uw voorgenomen huwelijk
                 </Link>
-                <Heading3>Stap 4: Trouwdatum en -locatie</Heading3>
+                <Heading3 id="stap-4">Stap 4: Trouwdatum en -locatie</Heading3>
                 <Paragraph>
                   Deze stap verschilt tussen ceremonieel en eenvoudig trouwen. Bij eenvoudig trouwen bellen wij u om
                   samen met u een trouwdatum en -locatie in te plannen. Bij ceremonieel trouwen kiest u zelf een
                   trouwdatum en -locatie.{' '}
                 </Paragraph>
-                <Heading3>Stap 5: Trouwambtenaar</Heading3>
+                <Heading3 id="stap-5">Stap 5: Trouwambtenaar</Heading3>
                 <Paragraph>
                   Bij Ceremonieel trouwen kunt u zelf een trouwambtenaar kiezen. Bij Eenvoudig trouwen wijst de gemeente
                   u een trouwambtenaar toe.
                 </Paragraph>
-                <Heading3>Stap 6: Kies de achternaam van uw kinderen</Heading3>
+                <Heading3 id="stap-6">Stap 6: Kies de achternaam van uw kinderen</Heading3>
                 <Paragraph>
                   Kies de{' '}
                   <Link href="https://loket.digitaal.utrecht.nl/nl/producten/trouwen-in-utrecht#achternaam-kinderen-veranderen">
@@ -170,7 +184,7 @@ export const One: Story = {
                   </Link>
                   .
                 </Paragraph>
-                <Heading3>Stap 7: Regel juiste documenten (bij buitenlandse partner)</Heading3>
+                <Heading3 id="stap-7">Stap 7: Regel juiste documenten (bij buitenlandse partner)</Heading3>
                 <Paragraph>
                   Als u trouwt met een partner die niet in Nederland woont, dan hebben wij een aantal documenten van u
                   nodig.
