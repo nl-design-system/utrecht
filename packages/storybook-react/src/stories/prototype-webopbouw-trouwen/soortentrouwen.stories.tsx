@@ -100,7 +100,7 @@ export const One: Story = {
                   href="#verschillen"
                 >
                   <UtrechtIconChevronRight />
-                  Verschillen tussen Ceremonieel en Eenvoudig trouwen
+                  Verschillen tussen Eenvoudig en Ceremonieel trouwen
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
@@ -116,7 +116,7 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Alles over Ceremonieel trouwen
                 </Link>
-                <Heading2 id="verschillen">Verschillen tussen Ceremonieel en Eenvoudig trouwen</Heading2>
+                <Heading2 id="verschillen">Verschillen tussen Eenvoudig en Ceremonieel trouwen</Heading2>
                 <Paragraph>
                   Bj de gemeente Utrecht zijn er twee soorten van trouwen mogelijk: Eenvoudig trouwen en Ceremonieel
                   trouwen. De verschillen in tijdsduur en prijzen staan in de tabel hieronder. Daarnaast zijn de

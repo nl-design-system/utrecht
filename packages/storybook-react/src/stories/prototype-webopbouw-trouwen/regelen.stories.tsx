@@ -114,9 +114,9 @@ export const One: Story = {
                 <OrderedList>
                   <OrderedListItem>Eenvoudig of ceremonieel trouwen?</OrderedListItem>
                   <OrderedListItem>Regel getuigen</OrderedListItem>
-                  <OrderedListItem>Meld uw voorgenomen huwelijk (minimaal 2 weken van te voren)</OrderedListItem>
-                  <OrderedListItem>Plan uw trouwdatum en -locatie</OrderedListItem>
-                  <OrderedListItem>Kies een trouwambtenaar (bij Ceremonieel trouwen)</OrderedListItem>
+                  <OrderedListItem>Meld uw voorgenomen huwelijk</OrderedListItem>
+                  <OrderedListItem>Trouwdatum en -locatie</OrderedListItem>
+                  <OrderedListItem>Trouwambtenaar</OrderedListItem>
                   <OrderedListItem>Kies de achternaam van uw kinderen</OrderedListItem>
                   <OrderedListItem>Regel juiste documenten (bij buitenlandse partner)</OrderedListItem>
                 </OrderedList>
@@ -124,7 +124,8 @@ export const One: Story = {
                 <Heading3>Stap 1: Eenvoudig of ceremonieel trouwen?</Heading3>
                 <Paragraph>
                   Wilt u een eenvoudig huwelijk op het stadskantoor, of liever een uitgebreid ceremonieel huwelijk? Op
-                  de soorten trouwen pagina kunt u de verschillende soorten trouwen vergelijken.
+                  de <Link href={urls.trouwenSoortenTrouwen}>soorten trouwen pagina</Link> kunt u de verschillende
+                  soorten trouwen vergelijken.
                 </Paragraph>
                 <Heading3>Stap 2: Regel getuigen</Heading3>
                 <Paragraph>Om te kunnen trouwen hebt u getuigen nodig. </Paragraph>
@@ -140,8 +141,8 @@ export const One: Story = {
                 </Paragraph>
                 <Heading3>Stap 3: Meld uw voorgenomen huwelijk</Heading3>
                 <Paragraph>
-                  U moet uw voorgenomen huwelijk melden bij de gemeente. Dat doet u met een online formulier op de
-                  website van de gemeente.
+                  U moet minimaal 2 weken van te voren uw voorgenomen huwelijk melden bij de gemeente. Dat doet u met
+                  een online formulier op de website van de gemeente. De melding doen is gratis.
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
@@ -150,19 +151,25 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Meld uw voorgenomen huwelijk
                 </Link>
-                <Heading3>Stap 4: Plan uw trouwdatum en -locatie</Heading3>
+                <Heading3>Stap 4: Trouwdatum en -locatie</Heading3>
                 <Paragraph>
                   Deze stap verschilt tussen ceremonieel en eenvoudig trouwen. Bij eenvoudig trouwen bellen wij u om
                   samen met u een trouwdatum en -locatie in te plannen. Bij ceremonieel trouwen kiest u zelf een
                   trouwdatum en -locatie.{' '}
                 </Paragraph>
-                <Heading3>Stap 5: Kies een trouwambtenaar</Heading3>
+                <Heading3>Stap 5: Trouwambtenaar</Heading3>
                 <Paragraph>
                   Bij Ceremonieel trouwen kunt u zelf een trouwambtenaar kiezen. Bij Eenvoudig trouwen wijst de gemeente
                   u een trouwambtenaar toe.
                 </Paragraph>
                 <Heading3>Stap 6: Kies de achternaam van uw kinderen</Heading3>
-                <Paragraph>Kies de achternaam van uw kinderen.</Paragraph>
+                <Paragraph>
+                  Kies de{' '}
+                  <Link href="https://loket.digitaal.utrecht.nl/nl/producten/trouwen-in-utrecht#achternaam-kinderen-veranderen">
+                    achternaam van uw kinderen
+                  </Link>
+                  .
+                </Paragraph>
                 <Heading3>Stap 7: Regel juiste documenten (bij buitenlandse partner)</Heading3>
                 <Paragraph>
                   Als u trouwt met een partner die niet in Nederland woont, dan hebben wij een aantal documenten van u

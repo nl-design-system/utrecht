@@ -80,36 +80,6 @@ export const One: Story = {
                   U wilt trouwen of een geregistreerd partnerschap aangaan. Gefeliciteerd! Bekijk hieronder welke
                   mogelijkheden er zijn en wat u daarvoor moeten regelen.{' '}
                 </Paragraph>
-                <Heading2>Veel bekeken</Heading2>
-                <Link
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href={urls.trouwenRegelenChecklist}
-                >
-                  <UtrechtIconChevronRight />
-                  Trouwen: wat moet ik regelen?
-                </Link>
-                <Link
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
-                >
-                  <UtrechtIconChevronRight />
-                  Geregistreerd partnerschap: wat moet ik regelen?
-                </Link>
-                <Link
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
-                >
-                  <UtrechtIconChevronRight />
-                  Samenlevingscontract afsluiten: wat moet ik regelen?
-                </Link>
-                <Link
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href={urls.trouwenVeelgesteldeVragen}
-                >
-                  <UtrechtIconChevronRight />
-                  Een niet-nederlandse partner, wat moeten we regelen?
-                </Link>
-
                 <Heading2>Trouwen</Heading2>
                 <Paragraph>
                   U kunt uw relatie officieel maken door te trouwen. U geeft elkaar dan het ja-woord. Huwelijk wordt in
@@ -130,7 +100,7 @@ export const One: Story = {
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap"
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over het geregistreerd partnerschap en wat u hiervoor moet regelen
@@ -143,7 +113,7 @@ export const One: Story = {
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap#geregistreerd-partnerschap-omzetten-in-huwelijk"
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over het omzetten van een partnerschap in een huwelijk
@@ -156,7 +126,7 @@ export const One: Story = {
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
+                  href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/checklist-samenlevingscontract"
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over het samenlevingscontract
