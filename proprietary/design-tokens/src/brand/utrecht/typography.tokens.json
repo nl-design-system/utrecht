@@ -5,28 +5,33 @@
         "font-family": { "value": "\"Noto Sans Variable\", \"Arial\", sans-serif" }
       },
       "scale": {
-        "sm": { "font-size": { "value": "14px", "comment": "14px" } },
-        "md": { "font-size": { "value": "16px", "comment": "16px" } },
-        "lg": { "font-size": { "value": "18px", "comment": "18px" } },
-        "xl": { "font-size": { "value": "20px", "comment": "20px" } },
-        "2xl": { "font-size": { "value": "22px", "comment": "22px" } },
-        "3xl": { "font-size": { "value": "24px", "comment": "24px" } },
-        "4xl": { "font-size": { "value": "32px", "comment": "32px" } }
+        "sm": { "font-size": { "value": "0.875rem", "comment": "14px" } },
+        "md": { "font-size": { "value": "1rem", "comment": "16px" } },
+        "lg": { "font-size": { "value": "1.125rem", "comment": "18px" } },
+        "xl": { "font-size": { "value": "1.25rem", "comment": "20px" } },
+        "2xl": { "font-size": { "value": "1.5rem", "comment": "24px" } },
+        "3xl": { "font-size": { "value": "2rem", "comment": "32px" } },
+        "4xl": { "font-size": { "value": "2.5rem", "comment": "40px" } }
       },
       "weight-scale": {
-        "bold": { "font-weight": { "value": "700" } },
         "normal": { "font-weight": { "value": "400" } },
-        "semibold": { "font-weight": { "value": "600" } }
+        "medium": { "font-weight": { "value": "500" } },
+        "semibold": { "font-weight": { "value": "600" } },
+        "bold": { "font-weight": { "value": "700" } }
       },
       "font-style": {
         "normal": { "value": "normal" },
         "inherit": { "value": "inherit" }
       },
       "line-height": {
-        "xs": { "value": "1" },
-        "sm": { "value": "1.25" },
+        "xs": { "value": "1.5" },
+        "sm": { "value": "1.5" },
         "md": { "value": "1.5" },
-        "lg": { "value": "2" }
+        "lg": { "value": "1.25" },
+        "xl": { "value": "1.25" },
+        "2xl": { "value": "1.25" },
+        "3xl": { "value": "1.25" },
+        "4xl": { "value": "1.1" }
       }
     }
   }
