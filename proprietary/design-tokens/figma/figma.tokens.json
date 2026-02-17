@@ -312,6 +312,64 @@
               "$type": "color",
               "$value": "#410000"
             }
+          },
+          "default": {
+            "bg-document": {
+              "$type": "color",
+              "$value": "hsl(211, 60%, 25%)"
+            },
+            "bg-subtle": {
+              "$type": "color",
+              "$value": "hsl(213, 59%, 12%)"
+            },
+            "bg-default": {
+              "$type": "color",
+              "$value": "hsl(212, 55%, 37%)"
+            },
+            "bg-hover": {
+              "$type": "color",
+              "$value": "hsl(211, 59%, 31%)"
+            },
+            "bg-active": {
+              "$type": "color",
+              "$value": "hsl(211, 60%, 25%)"
+            },
+            "border-subtle": {
+              "$type": "color",
+              "$value": "hsl(211, 47%, 41%)"
+            },
+            "border-default": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            },
+            "border-hover": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            },
+            "border-active": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            },
+            "color-default": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            },
+            "color-hover": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            },
+            "color-active": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            },
+            "color-subtle": {
+              "$type": "color",
+              "$value": "hsl(211, 33%, 78%)"
+            },
+            "color-document": {
+              "$type": "color",
+              "$value": "{utrecht.color.neutral.white}"
+            }
           }
         }
       }
