@@ -23,7 +23,7 @@
   justify-content: space-between;
   max-inline-size: var(--utrecht-card-max-inline-size, 100%);
   row-gap: var(--utrecht-card-row-gap);
-  transition-duration: var(--_utrecht-card-transition-duration);
+  transition-duration: var(--utrecht-card-transition-duration);
   transition-property: scale;
   transition-timing-function: ease-in-out;
 
@@ -85,13 +85,13 @@
   background-color: var(--utrecht-card-bright-background-color);
   border-color: var(--utrecht-card-bright-border-color);
   border-style: solid;
-  border-width: 1px;
+  border-width: var(--utrecht-card-bright-border-width);
   box-sizing: border-box;
   color: var(--utrecht-card-bright-color);
 
   .utrecht-card__image {
-    margin-block: -1px;
-    margin-inline: -1px;
+    margin-block: calc(var(--utrecht-card-bright-border-width) * -1);
+    margin-inline: calc(var(--utrecht-card-bright-border-width) * -1);
   }
 }
 
@@ -104,6 +104,8 @@
 
   img:not(.utrecht-img) {
     @include utrecht-img;
+
+    object-fit: cover;
   }
   img:not(img[height]) {
     @include utrecht-img--photo;
