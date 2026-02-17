@@ -3822,23 +3822,23 @@
         },
         "min-block-size": {
           "$type": "dimension",
-          "$value": "192px"
+          "$value": "104px"
         },
         "min-inline-size": {
           "$type": "dimension",
-          "$value": "328px"
+          "$value": "192px"
         },
         "padding-block": {
           "$type": "dimension",
-          "$value": "{basis.space.block.2xl}"
+          "$value": "{basis.space.block.xl}"
         },
         "padding-inline": {
           "$type": "dimension",
-          "$value": "{basis.space.inline.3xl}"
+          "$value": "{basis.space.inline.xl}"
         },
         "row-gap": {
           "$type": "dimension",
-          "$value": "{basis.space.row.lg}"
+          "$value": "{basis.space.row.md}"
         },
         "description": {
           "font-family": {
@@ -3851,7 +3851,7 @@
           },
           "font-weight": {
             "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.default}"
+            "$value": "{basis.text.font-weight.semibold}"
           },
           "line-height": {
             "$type": "lineHeights",
@@ -3892,7 +3892,7 @@
           "icon": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-2.color-default}"
+              "$value": "{basis.color.action-2.bg-default}"
             }
           },
           "active": {
