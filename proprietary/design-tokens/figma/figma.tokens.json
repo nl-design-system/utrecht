@@ -3815,70 +3815,48 @@
   },
   "components/button/utrecht": {
     "utrecht": {
-      "button": {
-        "background-color": {
-          "$type": "color",
-          "$value": "{basis.color.transparent}"
-        },
-        "border-color": {
-          "$type": "color",
-          "$value": "{basis.color.default.border-default}"
-        },
+      "navigation-tile": {
         "border-radius": {
           "$type": "dimension",
-          "$value": "0px"
-        },
-        "border-width": {
-          "$type": "dimension",
-          "$value": "{basis.border-width.md}"
-        },
-        "color": {
-          "$type": "color",
-          "$value": "{basis.color.default.color-default}"
-        },
-        "column-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.text.md}"
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
-        },
-        "font-size": {
-          "$type": "fontSizes",
-          "$value": "{basis.text.font-size.md}"
-        },
-        "font-weight": {
-          "$type": "fontWeights",
-          "$value": "{basis.text.font-weight.semibold}"
-        },
-        "line-height": {
-          "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
+          "$value": "{basis.border-radius.sm}"
         },
         "min-block-size": {
           "$type": "dimension",
-          "$value": "{basis.pointer-target.min-block-size}"
+          "$value": "192px"
         },
         "min-inline-size": {
           "$type": "dimension",
-          "$value": "{basis.pointer-target.min-inline-size}"
+          "$value": "328px"
         },
-        "padding-block-end": {
+        "padding-block": {
           "$type": "dimension",
-          "$value": "{basis.space.block.md}"
+          "$value": "{basis.space.block.2xl}"
         },
-        "padding-block-start": {
+        "padding-inline": {
           "$type": "dimension",
-          "$value": "{basis.space.block.md}"
+          "$value": "{basis.space.inline.3xl}"
         },
-        "padding-inline-end": {
+        "row-gap": {
           "$type": "dimension",
-          "$value": "{basis.space.inline.2xl}"
+          "$value": "{basis.space.row.lg}"
         },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.2xl}"
+        "description": {
+          "font-family": {
+            "$type": "fontFamilies",
+            "$value": "{basis.text.font-family.default}"
+          },
+          "font-size": {
+            "$type": "fontSizes",
+            "$value": "{basis.text.font-size.md}"
+          },
+          "font-weight": {
+            "$type": "fontWeights",
+            "$value": "{basis.text.font-weight.default}"
+          },
+          "line-height": {
+            "$type": "lineHeights",
+            "$value": "{basis.text.line-height.md}"
+          }
         },
         "icon": {
           "size": {
@@ -3886,361 +3864,217 @@
             "$value": "{basis.size.icon.md}"
           }
         },
-        "active": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.bg-active}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-active}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.default.color-active}"
-          }
-        },
-        "disabled": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.bg-default}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.border-subtle}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.disabled.color-subtle}"
-          }
-        },
         "focus": {
           "background-color": {
             "$type": "color",
             "$value": "{basis.focus.background-color}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
           },
           "color": {
             "$type": "color",
             "$value": "{basis.focus.color}"
           }
         },
-        "hover": {
+        "default": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.default.bg-hover}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-hover}"
+            "$value": "{basis.color.action-2.bg-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.default.color-hover}"
-          }
-        },
-        "pressed": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.bg-active}"
+            "$value": "{basis.color.default.color-document}"
           },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.default.border-active}"
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.default.color-document}"
+            }
           },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.default.color-active}"
-          }
-        },
-        "primary-action": {
-          "background-color": {
-            "$type": "color",
-            "$value": "{basis.color.action-1-inverse.bg-default}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "color": {
-            "$type": "color",
-            "$value": "{basis.color.action-1-inverse.color-default}"
-          },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.text.font-size.md}"
-          },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.semibold}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{basis.text.line-height.md}"
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-2.color-default}"
+            }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-active}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.bg-default}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.border-subtle}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.color-subtle}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.focus.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.focus.color}"
+              "$value": "{basis.color.action-2.bg-active}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-hover}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-hover}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1-inverse.bg-active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1-inverse.color-active}"
+              "$value": "{basis.color.action-2.bg-hover}"
             }
           }
         },
-        "secondary-action": {
+        "red": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.action-1.border-default}"
+            "$value": "{utrecht.color.dataset.red.bg-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-1.color-default}"
+            "$value": "{utrecht.color.dataset.red.color-document}"
           },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.text.font-size.md}"
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.red.color-document}"
+            }
           },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.semibold}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{basis.text.line-height.md}"
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.red.color-default}"
+            }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.border-active}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.color-active}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.bg-default}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.border-subtle}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.color-subtle}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.focus.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.focus.color}"
+              "$value": "{utrecht.color.dataset.red.bg-active}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.bg-hover}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.border-hover}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.color-hover}"
-            }
-          },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.border-active}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.color-active}"
+              "$value": "{utrecht.color.dataset.red.bg-hover}"
             }
           }
         },
-        "subtle": {
+        "yellow": {
           "background-color": {
             "$type": "color",
-            "$value": "{basis.color.transparent}"
-          },
-          "border-color": {
-            "$type": "color",
-            "$value": "{basis.color.transparent}"
+            "$value": "{utrecht.color.dataset.yellow.bg-default}"
           },
           "color": {
             "$type": "color",
-            "$value": "{basis.color.action-1.color-default}"
+            "$value": "{utrecht.color.dataset.yellow.color-document}"
           },
-          "font-size": {
-            "$type": "fontSizes",
-            "$value": "{basis.text.font-size.md}"
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.yellow.color-document}"
+            }
           },
-          "font-weight": {
-            "$type": "fontWeights",
-            "$value": "{basis.text.font-weight.semibold}"
-          },
-          "line-height": {
-            "$type": "lineHeights",
-            "$value": "{basis.text.line-height.md}"
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.yellow.color-default}"
+            }
           },
           "active": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.color-active}"
-            }
-          },
-          "disabled": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.color.disabled.color-subtle}"
-            }
-          },
-          "focus": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.focus.background-color}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "color": {
-              "$type": "color",
-              "$value": "{basis.focus.color}"
+              "$value": "{utrecht.color.dataset.yellow.bg-active}"
             }
           },
           "hover": {
             "background-color": {
               "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
+              "$value": "{utrecht.color.dataset.yellow.bg-hover}"
+            }
+          }
+        },
+        "purple": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.purple.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.purple.color-document}"
+          },
+          "description": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.color-hover}"
+              "$value": "{utrecht.color.dataset.purple.color-document}"
             }
           },
-          "pressed": {
-            "background-color": {
-              "$type": "color",
-              "$value": "{basis.color.action-1.bg-active}"
-            },
-            "border-color": {
-              "$type": "color",
-              "$value": "{basis.color.transparent}"
-            },
+          "icon": {
             "color": {
               "$type": "color",
-              "$value": "{basis.color.action-1.color-active}"
+              "$value": "{utrecht.color.dataset.purple.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.purple.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.purple.bg-hover}"
+            }
+          }
+        },
+        "light-blue": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.light-blue.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.light-blue.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.light-blue.bg-hover}"
+            }
+          }
+        },
+        "light-green": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.green.bg-default}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{utrecht.color.dataset.green.color-document}"
+          },
+          "description": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.color-document}"
+            }
+          },
+          "icon": {
+            "color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.color-default}"
+            }
+          },
+          "active": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.bg-active}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{utrecht.color.dataset.green.bg-hover}"
             }
           }
         }
