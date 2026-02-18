@@ -88,16 +88,20 @@
         }
       },
       "neutral": {
-        "background-color": { "value": "{utrecht.color.blue.90}" }
+        "background-color": { "value": "{utrecht.color.blue.90}" },
+        "color": { "value": "{utrecht.color.black}" }
       },
       "warm": {
-        "background-color": { "value": "{utrecht.color.yellow.80}" }
+        "background-color": { "value": "{utrecht.color.yellow.80}" },
+        "color": { "value": "{utrecht.color.black}" }
       },
       "cool": {
-        "background-color": { "value": "{utrecht.color.blue.80}" }
+        "background-color": { "value": "{utrecht.color.blue.80}" },
+        "color": { "value": "{utrecht.color.black}" }
       },
       "soft": {
-        "background-color": { "value": "{utrecht.color.grey.80}" }
+        "background-color": { "value": "{utrecht.color.grey.80}" },
+        "color": { "value": "{utrecht.color.black}" }
       },
       "bright": {
         "image": {
