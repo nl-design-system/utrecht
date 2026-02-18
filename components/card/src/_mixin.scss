@@ -62,32 +62,33 @@
 }
 
 @mixin utrecht-card--neutral {
-  background-color: var(--utrecht-card-neutral-background-color);
-  color: var(--utrecht-card-neutral-color);
+  --utrecht-card-background-color: var(--utrecht-card-neutral-background-color);
+  --utrecht-card-color: var(--utrecht-card-neutral-color);
 }
 
 @mixin utrecht-card--warm {
-  background-color: var(--utrecht-card-warm-background-color);
-  color: var(--utrecht-card-warm-color);
+  --utrecht-card-background-color: var(--utrecht-card-warm-background-color);
+  --utrecht-card-color: var(--utrecht-card-warm-color);
 }
 
 @mixin utrecht-card--cool {
-  background-color: var(--utrecht-card-cool-background-color);
-  color: var(--utrecht-card-cool-color);
+  --utrecht-card-background-color: var(--utrecht-card-cool-background-color);
+  --utrecht-card-color: var(--utrecht-card-cool-color);
 }
 
 @mixin utrecht-card--soft {
-  background-color: var(--utrecht-card-soft-background-color);
-  color: var(--utrecht-card-soft-color);
+  --utrecht-card-background-color: var(--utrecht-card-soft-background-color);
+  --utrecht-card-color: var(--utrecht-card-soft-color);
 }
 
 @mixin utrecht-card--bright {
-  background-color: var(--utrecht-card-bright-background-color);
+  --utrecht-card-background-color: var(--utrecht-card-bright-background-color);
+  --utrecht-card-color: var(--utrecht-card-bright-color);
+
   border-color: var(--utrecht-card-bright-border-color);
   border-style: solid;
   border-width: var(--utrecht-card-bright-border-width);
   box-sizing: border-box;
-  color: var(--utrecht-card-bright-color);
 
   .utrecht-card__image {
     margin-block: var(--utrecht-card-bright-image-margin-block);
