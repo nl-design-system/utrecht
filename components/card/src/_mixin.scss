@@ -90,8 +90,8 @@
   color: var(--utrecht-card-bright-color);
 
   .utrecht-card__image {
-    margin-block: calc(var(--utrecht-card-bright-border-width) * -1);
-    margin-inline: calc(var(--utrecht-card-bright-border-width) * -1);
+    margin-block: var(--utrecht-card-bright-image-margin-block);
+    margin-inline: var(--utrecht-card-bright-image-margin-inline);
   }
 }
 

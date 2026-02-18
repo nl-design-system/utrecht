@@ -100,6 +100,14 @@
         "background-color": { "value": "{utrecht.color.grey.80}" }
       },
       "bright": {
+        "image": {
+          "margin-block": {
+            "value": "-1px"
+          },
+          "margin-inline": {
+            "value": "-1px"
+          }
+        },
         "background-color": { "value": "{utrecht.color.white}" },
         "border-color": { "value": "{utrecht.color.grey.80}" },
         "border-width": { "value": "1px" }
