@@ -168,7 +168,7 @@
 }
 
 @mixin utrecht-card--focus {
-  background-color: var(--utrecht-card-focus-background-color, var(--utrecht-card-background-color));
+  --utrecht-card-background-color: var(--utrecht-card-focus-background-color, var(--utrecht-card-background-color));
 }
 
 @mixin utrecht-card--active {
