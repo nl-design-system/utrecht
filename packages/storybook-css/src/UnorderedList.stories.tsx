@@ -83,6 +83,30 @@ export const Nested: Story = {
           },
           {
             children: 'Ipsum',
+            items: [
+              {
+                children: 'Lorem',
+              },
+              {
+                children: 'Ipsum',
+                items: [
+                  {
+                    children: 'Lorem',
+                  },
+                  {
+                    children: 'Ipsum',
+                    items: [
+                      {
+                        children: 'Lorem',
+                      },
+                      {
+                        children: 'Ipsum',
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         ],
       },
@@ -220,6 +244,38 @@ export const HTMLContent: Story = {
           },
           {
             children: 'Ipsum',
+            items: [
+              {
+                children: 'Lorem',
+              },
+              {
+                children: 'Ipsum',
+                items: [
+                  {
+                    children: 'Lorem',
+                  },
+                  {
+                    children: 'Ipsum',
+                    items: [
+                      {
+                        children: 'Lorem',
+                      },
+                      {
+                        children: 'Ipsum',
+                        items: [
+                          {
+                            children: 'Lorem',
+                          },
+                          {
+                            children: 'Ipsum',
+                          },
+                        ],
+                      },
+                    ],
+                  },
+                ],
+              },
+            ],
           },
         ],
       },

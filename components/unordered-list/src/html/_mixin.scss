@@ -17,6 +17,6 @@
   }
 
   ul > li::marker {
-    @include utrecht-unordered-list__marker;
+    @include utrecht-unordered-list__marker-level-1;
   }
 }

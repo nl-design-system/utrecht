@@ -31,8 +31,44 @@
 }
 
 .utrecht-unordered-list--html-content > li::marker,
-.utrecht-unordered-list--html-content ul > li::marker,
 .utrecht-unordered-list__item::marker,
 .utrecht-unordered-list__marker {
-  @include utrecht-unordered-list__marker;
+  @include utrecht-unordered-list__marker-level-1;
 }
+.utrecht-unordered-list--html-content ul > li::marker {
+  @include utrecht-unordered-list__marker-level-2;
+}
+
+.utrecht-unordered-list--html-content ul ul > li::marker {
+  @include utrecht-unordered-list__marker-level-3;
+}
+
+.utrecht-unordered-list--html-content ul ul ul > li::marker {
+  @include utrecht-unordered-list__marker-level-4;
+}
+
+.utrecht-unordered-list--html-content ul ul ul ul > li::marker {
+  @include utrecht-unordered-list__marker-level-5;
+}
+
+.utrecht-unordered-list--html-content ul ul ul ul ul > li::marker {
+  @include utrecht-unordered-list__marker-level-6;
+}
+
+/*
+.utrecht-unordered-list--html-content ul ul ul ul ul > li::marker {
+    content: "â– ";
+  }
+
+.utrecht-unordered-list--html-content ul ul ul ul ul ul > li::marker {
+    content: "â–¡";
+  }
+
+.utrecht-unordered-list--html-content ul ul ul ul ul ul ul > li::marker {
+    content: "â–²";
+  }
+
+.utrecht-unordered-list--html-content ul ul ul ul ul ul ul ul > li::marker {
+    content: "â–³";
+  }
+*/

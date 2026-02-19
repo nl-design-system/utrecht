@@ -44,7 +44,27 @@
   padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start, 1ch);
 }
 
-@mixin utrecht-unordered-list__marker {
+@mixin utrecht-unordered-list__marker-level-1 {
   color: var(--utrecht-unordered-list-marker-color);
   content: "●";
+}
+
+@mixin utrecht-unordered-list__marker-level-2 {
+  content: "○";
+}
+
+@mixin utrecht-unordered-list__marker-level-3 {
+  content: "◼︎";
+}
+
+@mixin utrecht-unordered-list__marker-level-4 {
+  content: "◻︎";
+}
+
+@mixin utrecht-unordered-list__marker-level-5 {
+  content: "▲";
+}
+
+@mixin utrecht-unordered-list__marker-level-6 {
+  content: "△";
 }
