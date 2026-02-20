@@ -5,6 +5,8 @@
  */
 
 @mixin utrecht-unordered-list {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker, "●");
+
   /* Configure `box-sizing` and `text-align` for `--center` */
   box-sizing: border-box;
   font-family: var(--utrecht-document-font-family, inherit);
@@ -35,7 +37,7 @@
 
 @mixin utrecht-unordered-list--nested {
   margin-block-end: 0;
-  margin-inline-start: 2ch;
+  margin-inline-start: var(--utrecht-unordered-list-nested-margin-inline-start, 2ch);
 }
 
 @mixin utrecht-unordered-list__item {
@@ -44,27 +46,39 @@
   padding-inline-start: var(--utrecht-unordered-list-item-padding-inline-start, 1ch);
 }
 
-@mixin utrecht-unordered-list__marker-level-1 {
+@mixin utrecht-unordered-list__marker {
   color: var(--utrecht-unordered-list-marker-color);
-  content: "●";
+  content: var(--_utrecht-unordered-list-marker, "●");
 }
 
-@mixin utrecht-unordered-list__marker-level-2 {
-  content: "○";
+@mixin utrecht-unordered-list--level-1 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-1-content, "●");
 }
 
-@mixin utrecht-unordered-list__marker-level-3 {
-  content: "◼︎";
+@mixin utrecht-unordered-list--level-2 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-2-content, "○");
 }
 
-@mixin utrecht-unordered-list__marker-level-4 {
-  content: "◻︎";
+@mixin utrecht-unordered-list--level-3 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-3-content, "◆");
 }
 
-@mixin utrecht-unordered-list__marker-level-5 {
-  content: "▲";
+@mixin utrecht-unordered-list--level-4 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-4-content, "◇");
 }
 
-@mixin utrecht-unordered-list__marker-level-6 {
-  content: "△";
+@mixin utrecht-unordered-list--level-5 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-5-content, "■");
+}
+
+@mixin utrecht-unordered-list--level-6 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-6-content, "□");
+}
+
+@mixin utrecht-unordered-list--level-7 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-7-content, "▲");
+}
+
+@mixin utrecht-unordered-list--level-8 {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-8-content, "△");
 }

@@ -8,7 +8,31 @@
         "margin-block-end": { "value": "0.25rem" }
       },
       "marker": {
-        "color": { "value": "{utrecht.color.red.40}" }
+        "color": { "value": "{utrecht.color.red.40}" },
+        "level-1": {
+          "content": { "value": "\"\u25CF\"" }
+        },
+        "level-2": {
+          "content": { "value": "\"\u25CB\"" }
+        },
+        "level-3": {
+          "content": { "value": "\"\u25C6\"" }
+        },
+        "level-4": {
+          "content": { "value": "\"\u25C7\"" }
+        },
+        "level-5": {
+          "content": { "value": "\"\u25A0\"" }
+        },
+        "level-6": {
+          "content": { "value": "\"\u25A1\"" }
+        },
+        "level-7": {
+          "content": { "value": "\"\u25B2\"" }
+        },
+        "level-8": {
+          "content": { "value": "\"\u25B3\"" }
+        }
       }
     }
   }
