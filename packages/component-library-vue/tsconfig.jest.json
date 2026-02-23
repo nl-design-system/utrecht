@@ -1,12 +1,10 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "extends": "./tsconfig.lib.json",
   "include": ["src/**/*.d.ts", "src/**/*.test.ts", "src/**/*.vue"],
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,
     "rootDir": "./src/",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
+    "verbatimModuleSyntax": false
   }
 }
