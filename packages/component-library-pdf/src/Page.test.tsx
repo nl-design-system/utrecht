@@ -1,5 +1,4 @@
 /* eslint-env jest */
-/* eslint-disable react/no-unescaped-entities */
 
 import { describe, expect, it } from '@jest/globals';
 import { Heading1 } from '@utrecht/component-library-react/dist/index';
