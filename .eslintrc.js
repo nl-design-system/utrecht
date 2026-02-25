@@ -52,6 +52,7 @@ module.exports = {
         './.eslintrc.ts.json',
       ],
       files: ['*.ts', '*.tsx'],
+      excludedFiles: ['**/stencil.tsx', '**/*.stencil.tsx'],
       parser: '@typescript-eslint/parser',
       plugins: ['@typescript-eslint', 'import', 'jest'],
     },
@@ -67,16 +68,6 @@ module.exports = {
       parser: '@typescript-eslint/parser',
       parserOptions: {
         project: ['packages/web-component-library-stencil/tsconfig.json'],
-      },
-      plugins: ['@typescript-eslint', 'import'],
-    },
-    {
-      excludedFiles: ['**/stencil.tsx', '**/*.stencil.tsx'],
-      extends: ['plugin:react/recommended', 'eslint-config-prettier', './.eslintrc.js.json', './.eslintrc.ts.json'],
-      files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        projectService: true,
       },
       plugins: ['@typescript-eslint', 'import'],
     },
