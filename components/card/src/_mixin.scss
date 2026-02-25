@@ -5,8 +5,14 @@
  */
 
 @use "~@utrecht/img-css/src/mixin" as *;
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+@use "~@utrecht/link-css/src/mixin" as link-css;
 
 @mixin utrecht-card {
+  --utrecht-link-text-decoration: none;
+  --utrecht-link-text-decoration-thickness: var(--utrecht-card-text-decoration-thickness, 2px);
+  --_utrecht-card-transition-duration: var(--utrecht-card-transition-duration, 0);
+
   background-color: var(--utrecht-card-background-color);
   border-radius: var(--utrecht-card-border-radius);
   box-shadow: var(--utrecht-card-box-shadow);
@@ -14,29 +20,93 @@
   display: flex;
   flex-direction: column;
   inline-size: var(--utrecht-card-inline-size, 100%);
+  justify-content: space-between;
   max-inline-size: var(--utrecht-card-max-inline-size, 100%);
   row-gap: var(--utrecht-card-row-gap);
+  transition-duration: var(--utrecht-card-transition-duration);
+  transition-property: scale;
+  transition-timing-function: ease-in-out;
+
+  @media (prefers-reduced-motion: reduce) {
+    & {
+      @include utrecht-card--reduced-motion;
+    }
+  }
 }
-@mixin utrecht-card--link {
-  cursor: pointer;
-  text-decoration-skip-ink: none;
+
+@mixin utrecht-card__arrow {
+  --utrecht-icon-size: 18px;
+
+  align-self: end;
+  padding-block-end: var(--utrecht-card-arrow-padding-block-end);
+  padding-inline-end: var(--utrecht-card-arrow-padding-inline-end);
 }
-@mixin utrecht-card--hover {
-  --utrecht-link-text-decoration: underline;
-  --utrecht-link-text-decoration-thickness: var(--utrecht-card-link-hover-text-decoration-thickness);
+
+@mixin utrecht-card--has-link {
+  cursor: var(--utrecht-card-has-link-cursor, pointer);
+  text-decoration-skip-ink: all;
 }
+
+@mixin utrecht-card__link {
+  color: var(--utrecht-card-link-color);
+
+  @include link-css.utrecht-link--any-link;
+}
+
 @mixin utrecht-card__heading {
-  --utrecht-heading-color: var(--utrecht-card-heading-color);
+  --utrecht-heading-color: var(--utrecht-card-color);
 
   order: 2;
   padding-inline-end: var(--utrecht-card-heading-padding-inline-end);
   padding-inline-start: var(--utrecht-card-heading-padding-inline-start);
 }
 
+@mixin utrecht-card--neutral {
+  --utrecht-card-background-color: var(--utrecht-card-neutral-background-color);
+  --utrecht-card-color: var(--utrecht-card-neutral-color);
+}
+
+@mixin utrecht-card--warm {
+  --utrecht-card-background-color: var(--utrecht-card-warm-background-color);
+  --utrecht-card-color: var(--utrecht-card-warm-color);
+}
+
+@mixin utrecht-card--cool {
+  --utrecht-card-background-color: var(--utrecht-card-cool-background-color);
+  --utrecht-card-color: var(--utrecht-card-cool-color);
+}
+
+@mixin utrecht-card--soft {
+  --utrecht-card-background-color: var(--utrecht-card-soft-background-color);
+  --utrecht-card-color: var(--utrecht-card-soft-color);
+}
+
+@mixin utrecht-card--bright {
+  --utrecht-card-background-color: var(--utrecht-card-bright-background-color);
+  --utrecht-card-color: var(--utrecht-card-bright-color);
+
+  border-color: var(--utrecht-card-bright-border-color);
+  border-style: solid;
+  border-width: var(--utrecht-card-bright-border-width);
+  box-sizing: border-box;
+
+  .utrecht-card__image {
+    margin-block: var(--utrecht-card-bright-image-margin-block);
+    margin-inline: var(--utrecht-card-bright-image-margin-inline);
+  }
+}
+
 @mixin utrecht-card__image {
   order: 1;
+
+  img {
+    display: block;
+  }
+
   img:not(.utrecht-img) {
     @include utrecht-img;
+
+    object-fit: cover;
   }
   img:not(img[height]) {
     @include utrecht-img--photo;
@@ -44,6 +114,22 @@
 
   img:not(img[width]) {
     @include utrecht-img--photo;
+  }
+}
+
+@mixin utrecht-card--16by9 {
+  img {
+    aspect-ratio: 16 / 9;
+  }
+}
+@mixin utrecht-card--4by3 {
+  img {
+    aspect-ratio: 4 / 3;
+  }
+}
+@mixin utrecht-card--1by1 {
+  img {
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -61,4 +147,34 @@
   order: 3;
   padding-inline-end: var(--utrecht-card-body-padding-inline-end);
   padding-inline-start: var(--utrecht-card-body-padding-inline-start);
+}
+
+@mixin utrecht-card--hover {
+  --utrecht-link-text-decoration: underline;
+
+  scale: var(--utrecht-card-hover-scale, 1);
+}
+
+@mixin utrecht-card--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+
+  --utrecht-card-background-color: var(
+    --utrecht-card-focus-visible-background-color,
+    var(--utrecht-card-background-color)
+  );
+  --utrecht-card-color: var(--utrecht-card-focus-visible-color, var(--utrecht-card-color));
+  --utrecht-card-link-color: var(--utrecht-card-focus-visible-color, var(--utrecht-card-link-color));
+}
+
+@mixin utrecht-card--focus {
+  --utrecht-card-background-color: var(--utrecht-card-focus-background-color, var(--utrecht-card-background-color));
+}
+
+@mixin utrecht-card--active {
+  scale: var(--utrecht-card-active-scale, 1);
+}
+
+@mixin utrecht-card--reduced-motion {
+  --_utrecht-card-scale-animation-duration: 0;
 }
