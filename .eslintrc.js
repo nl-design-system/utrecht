@@ -71,16 +71,6 @@ module.exports = {
       plugins: ['@typescript-eslint', 'import'],
     },
     {
-      excludedFiles: ['**/stencil.tsx', '**/*.stencil.tsx'],
-      extends: ['plugin:react/recommended', 'eslint-config-prettier', './.eslintrc.js.json', './.eslintrc.ts.json'],
-      files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        projectService: true,
-      },
-      plugins: ['@typescript-eslint', 'import'],
-    },
-    {
       extends: [
         'plugin:vue/vue3-recommended',
         'plugin:@typescript-eslint/eslint-recommended',
