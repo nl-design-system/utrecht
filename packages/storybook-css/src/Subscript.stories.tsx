@@ -1,7 +1,5 @@
 /* @license CC0-1.0 */
 
-/* eslint-disable react/no-unescaped-entities */
-
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Paragraph, Subscript } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
