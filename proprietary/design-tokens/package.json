@@ -27,7 +27,7 @@
     "rimraf": "5.0.10",
     "sass": "1.69.7",
     "style-dictionary": "4.0.1",
-    "typescript": "5.0.4"
+    "typescript": "5.9.3"
   },
   "scripts": {
     "build": "pnpm run build:style-dictionary && pnpm run build:scss && pnpm run build:ts",
