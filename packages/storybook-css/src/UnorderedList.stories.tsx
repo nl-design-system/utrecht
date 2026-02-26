@@ -51,6 +51,25 @@ const meta = {
 
 export default meta;
 
+type Item = {
+  children: string;
+  items?: Item[];
+};
+
+function createNestedItems(depth: number, maxDepth: number): Item[] {
+  if (depth > maxDepth) return [];
+
+  return [
+    {
+      children: 'Lorem',
+    },
+    {
+      children: 'Ipsum',
+      items: createNestedItems(depth + 1, maxDepth),
+    },
+  ];
+}
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
@@ -77,62 +96,7 @@ export const Nested: Story = {
       },
       {
         children: 'Ipsum',
-        items: [
-          {
-            children: 'Lorem',
-          },
-          {
-            children: 'Ipsum',
-            items: [
-              {
-                children: 'Lorem',
-              },
-              {
-                children: 'Ipsum',
-                items: [
-                  {
-                    children: 'Lorem',
-                  },
-                  {
-                    children: 'Ipsum',
-                    items: [
-                      {
-                        children: 'Lorem',
-                      },
-                      {
-                        children: 'Ipsum',
-                        items: [
-                          {
-                            children: 'Lorem',
-                          },
-                          {
-                            children: 'Ipsum',
-                            items: [
-                              {
-                                children: 'Lorem',
-                              },
-                              {
-                                children: 'Ipsum',
-                                items: [
-                                  {
-                                    children: 'Lorem',
-                                  },
-                                  {
-                                    children: 'Ipsum',
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+        items: createNestedItems(1, 6),
       },
       {
         children: 'Dolor',
@@ -262,62 +226,7 @@ export const HTMLContent: Story = {
       },
       {
         children: 'Ipsum',
-        items: [
-          {
-            children: 'Lorem',
-          },
-          {
-            children: 'Ipsum',
-            items: [
-              {
-                children: 'Lorem',
-              },
-              {
-                children: 'Ipsum',
-                items: [
-                  {
-                    children: 'Lorem',
-                  },
-                  {
-                    children: 'Ipsum',
-                    items: [
-                      {
-                        children: 'Lorem',
-                      },
-                      {
-                        children: 'Ipsum',
-                        items: [
-                          {
-                            children: 'Lorem',
-                          },
-                          {
-                            children: 'Ipsum',
-                            items: [
-                              {
-                                children: 'Lorem',
-                              },
-                              {
-                                children: 'Ipsum',
-                                items: [
-                                  {
-                                    children: 'Lorem',
-                                  },
-                                  {
-                                    children: 'Ipsum',
-                                  },
-                                ],
-                              },
-                            ],
-                          },
-                        ],
-                      },
-                    ],
-                  },
-                ],
-              },
-            ],
-          },
-        ],
+        items: createNestedItems(1, 6),
       },
       {
         children: 'Dolor',
