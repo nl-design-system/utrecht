@@ -65,7 +65,7 @@
 
 .utrecht-form-toggle--html-checkbox {
   .utrecht-form-toggle__checkbox {
-    @include invisible-but-focusable;
+    @include invisible-but-accessible;
 
     &:focus-visible ~ .utrecht-form-toggle__track {
       @include utrecht-form-toggle__track--focus-visible;

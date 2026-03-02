@@ -6,12 +6,14 @@
 
 @use "~@utrecht/focus-ring-css/src/mixin" as *;
 
-@mixin invisible-but-focusable {
+/**
+ * Source:
+ * https://github.com/nl-design-system/candidate/blob/a0246970175883a874aacc9431a1596c429e6319/packages/components-css/number-badge-css/src/_mixin.scss#L5-L16
+ */
+@mixin invisible-but-accessible {
   /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
   block-size: 1px !important;
   border: 0 !important;
-  clip: rect(1px, 1px, 1px, 1px) !important;
-  -webkit-clip-path: inset(50%) !important;
   clip-path: inset(50%) !important;
   inline-size: 1px !important;
   /* stylelint-disable-next-line property-disallowed-list */
