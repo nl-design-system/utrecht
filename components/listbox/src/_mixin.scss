@@ -84,9 +84,7 @@
   user-select: none;
 
   @media (forced-colors: active) {
-    & {
-      @include utrecht-listbox--forced-colors;
-    }
+    @include utrecht-listbox--forced-colors;
   }
 }
 
@@ -120,10 +118,8 @@
   margin-inline-start: var(--utrecht-listbox-option-group-label-margin-inline-start);
 
   @media (forced-colors: active) {
-    & {
-      background-color: field;
-      color: fieldtext;
-    }
+    background-color: field;
+    color: fieldtext;
   }
 }
 
@@ -168,10 +164,8 @@
   padding-inline-start: var(--utrecht-listbox-option-padding-inline-start);
 
   @media (forced-colors: active) {
-    & {
-      /* Fix rendering glitch in Google Chrome, where the text became black on a black background */
-      forced-color-adjust: none;
-    }
+    /* Fix rendering glitch in Google Chrome, where the text became black on a black background */
+    forced-color-adjust: none;
   }
 }
 

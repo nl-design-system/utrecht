@@ -75,11 +75,9 @@ $utrecht-support-prince-xml: false !default;
 
   @if $utrecht-support-prince-xml {
     @media print {
-      & {
-        min-block-size: 1.5em;
-        min-inline-size: 1.5em;
-        -prince-pdf-form: enable;
-      }
+      min-block-size: 1.5em;
+      min-inline-size: 1.5em;
+      -prince-pdf-form: enable;
     }
   }
 }

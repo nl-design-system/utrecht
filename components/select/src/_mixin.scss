@@ -43,9 +43,7 @@ $utrecht-support-prince-xml: false !default;
 
   @if $utrecht-support-prince-xml {
     @media print {
-      & {
-        -prince-pdf-form: enable;
-      }
+      -prince-pdf-form: enable;
     }
   }
 }
