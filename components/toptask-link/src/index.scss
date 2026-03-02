@@ -11,6 +11,9 @@
   --utrecht-icon-size: var(--utrecht-toptask-link-icon-size);
 
   background-color: var(--utrecht-toptask-link-background-color);
+  border-color: var(--utrecht-toptask-link-border-color, currentColor);
+  border-width: var(--utrecht-toptask-link-border-width, 0);
+  box-sizing: border-box;
   color: var(--utrecht-toptask-link-color);
   display: flex;
   flex-direction: column;
@@ -29,6 +32,7 @@
 .utrecht-toptask-link--hover,
 .utrecht-toptask-link:hover {
   background-color: var(--utrecht-toptask-link-hover-background-color, var(--utrecht-toptask-link-background-color));
+  border-color: var(--utrecht-toptask-link-hover-border-color, var(--utrecht-toptask-link-border-color));
   color: var(--utrecht-toptask-link-hover-color, var(--utrecht-toptask-link-color));
   transform: var(--utrecht-toptask-link-hover-transform-scale, 1);
 }
@@ -40,6 +44,7 @@
 
 .utrecht-toptask-link--focus {
   background-color: var(--utrecht-toptask-link-focus-background-color, var(--utrecht-toptask-link-background-color));
+  border-color: var(--utrecht-toptask-link-focus-border-color, var(--utrecht-toptask-link-border-color));
   color: var(--utrecht-toptask-link-focus-color, var(--utrecht-toptask-link-color));
 }
 
@@ -51,8 +56,34 @@
   @extend .utrecht-toptask-link--focus;
 }
 
+/* `utrecht-toptask-link__title` is deprecated */
+.utrecht-toptask-link__label,
 .utrecht-toptask-link__title {
   display: block;
+  font-size: var(--utrecht-toptask-link-label-font-size);
+  font-weight: var(--utrecht-toptask-link-label-font-weight);
+  line-height: var(--utrecht-toptask-link-label-line-height);
+  text-decoration-line: var(--utrecht-toptask-link-label-text-decoration-line);
+  text-decoration-thickness: var(--utrecht-toptask-link-label-text-decoration-thickness);
+}
+
+.utrecht-toptask-link__label--hover,
+.utrecht-toptask-link:hover .utrecht-toptask-link__label {
+  text-decoration-line: var(
+    --utrecht-toptask-link-label-hover-text-decoration-line,
+    var(--utrecht-toptask-link-label-text-decoration-line)
+  );
+  text-decoration-thickness: var(
+    --utrecht-toptask-link-label-hover-text-decoration-thickness,
+    var(--utrecht-toptask-link-label-text-decoration-thickness)
+  );
+}
+
+.utrecht-toptask-link__description {
+  display: block;
+  font-size: var(--utrecht-toptask-link-description-font-size);
+  font-weight: var(--utrecht-toptask-link-description-font-weight);
+  line-height: var(--utrecht-toptask-link-description-line-height);
 }
 
 .utrecht-toptask-link__icon {
