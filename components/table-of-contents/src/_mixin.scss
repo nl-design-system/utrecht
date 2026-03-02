@@ -8,13 +8,13 @@ $utrecht-support-prince-xml: false !default;
 
 /* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-table-of-contents {
-  page-break-inside: avoid;
+  break-inside: avoid;
 }
 
 @mixin utrecht-table-of-contents__list {
   list-style-type: none;
   padding-inline-start: 0;
-  page-break-inside: avoid;
+  break-inside: avoid;
 
   @if $utrecht-support-prince-xml {
     -prince-pdf-tag-type: TOC;

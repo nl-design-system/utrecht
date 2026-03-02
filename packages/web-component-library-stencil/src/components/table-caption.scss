@@ -9,7 +9,7 @@
 :host {
   @include utrecht-table__caption;
 
+  break-after: avoid;
+  break-inside: avoid;
   display: table-caption;
-  page-break-after: avoid;
-  page-break-inside: avoid;
 }

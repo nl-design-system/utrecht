@@ -47,15 +47,11 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    & {
-      transition: none;
-    }
+    transition: none;
   }
 
   @media (forced-colors: active) {
-    & {
-      @include utrecht-tooltip--forced-colors-mode;
-    }
+    @include utrecht-tooltip--forced-colors-mode;
   }
 }
 
@@ -138,13 +134,11 @@
   position: absolute;
 
   @media (forced-colors: active) {
-    & {
-      --_utrecht-tooltip-arrow-border-color: CanvasText;
+    --_utrecht-tooltip-arrow-border-color: CanvasText;
 
-      /* Disable `forced-color-adjust`, because otherwise transparent is rendered as a solid color. */
-      border-color: transparent;
-      forced-color-adjust: none;
-    }
+    /* Disable `forced-color-adjust`, because otherwise transparent is rendered as a solid color. */
+    border-color: transparent;
+    forced-color-adjust: none;
   }
 }
 
