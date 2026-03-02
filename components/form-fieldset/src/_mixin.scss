@@ -45,14 +45,13 @@
 }
 
 @mixin utrecht-form-fieldset__legend {
+  break-after: avoid;
   break-inside: avoid;
   color: var(--utrecht-form-fieldset-legend-color, var(--utrecht-document-color, inherit));
   font-family: var(--utrecht-form-fieldset-legend-font-family, var(--utrecht-document-font-family));
   font-size: var(--utrecht-form-fieldset-legend-font-size);
   font-weight: var(--utrecht-form-fieldset-legend-font-weight);
   line-height: var(--utrecht-form-fieldset-legend-line-height);
-  page-break-after: avoid;
-  page-break-inside: avoid;
 }
 
 @mixin utrecht-form-fieldset__legend--disabled {
