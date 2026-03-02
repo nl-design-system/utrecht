@@ -31,15 +31,11 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    & {
-      @include utrecht-backdrop--reduced-motion;
-    }
+    @include utrecht-backdrop--reduced-motion;
   }
 
   @media (prefers-reduced-transparency: reduce) {
-    & {
-      @include utrecht-backdrop--reduced-transparency;
-    }
+    @include utrecht-backdrop--reduced-transparency;
   }
 }
 
