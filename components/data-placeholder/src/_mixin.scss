@@ -35,20 +35,14 @@
   vertical-align: -0.1em;
 
   @media print {
-    & {
-      @include utrecht-data-placeholder--print;
-    }
+    @include utrecht-data-placeholder--print;
   }
 
   @media screen and (prefers-contrast: more) {
-    & {
-      @include utrecht-data-placeholder--high-contrast;
-    }
+    @include utrecht-data-placeholder--high-contrast;
   }
 
   @media screen and (forced-colors: active) {
-    & {
-      @include utrecht-data-placeholder--forced-colors;
-    }
+    @include utrecht-data-placeholder--forced-colors;
   }
 }
