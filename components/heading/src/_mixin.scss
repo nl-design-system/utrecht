@@ -5,7 +5,7 @@
  */
 
 @mixin utrecht-heading {
+  break-after: avoid;
   break-inside: avoid-column;
-  page-break-after: avoid;
-  page-break-inside: avoid;
+  break-inside: avoid;
 }
