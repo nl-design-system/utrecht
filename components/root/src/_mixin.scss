@@ -42,12 +42,12 @@
   inline-size: 100%;
   overflow-block: auto;
   overflow-inline: auto;
+  overflow-wrap: break-word;
   position: relative;
   text-rendering: optimizeLegibility;
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  word-break: break-word;
 
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
