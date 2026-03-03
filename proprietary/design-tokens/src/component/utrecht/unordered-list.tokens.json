@@ -1,6 +1,7 @@
 {
   "utrecht": {
     "unordered-list": {
+      "padding-inline-start": { "value": "{utrecht.space.text.md}" },
       "margin-block-start": { "value": "{utrecht.space.block.md}" },
       "margin-block-end": { "value": "0" },
       "item": {
@@ -10,28 +11,28 @@
       "marker": {
         "color": { "value": "{utrecht.color.red.40}" },
         "level-1": {
-          "content": { "value": "\"\u25CF\"" }
+          "content": { "value": "\"●\"" }
         },
         "level-2": {
-          "content": { "value": "\"\u25CB\"" }
+          "content": { "value": "\"○\"" }
         },
         "level-3": {
-          "content": { "value": "\"\u25C6\"" }
+          "content": { "value": "\"◆\"" }
         },
         "level-4": {
-          "content": { "value": "\"\u25C7\"" }
+          "content": { "value": "\"◇\"" }
         },
         "level-5": {
-          "content": { "value": "\"\u25A0\"" }
+          "content": { "value": "\"■\"" }
         },
         "level-6": {
-          "content": { "value": "\"\u25A1\"" }
+          "content": { "value": "\"□\"" }
         },
         "level-7": {
-          "content": { "value": "\"\u25B2\"" }
+          "content": { "value": "\"▲\"" }
         },
         "level-8": {
-          "content": { "value": "\"\u25B3\"" }
+          "content": { "value": "\"△\"" }
         }
       }
     }
