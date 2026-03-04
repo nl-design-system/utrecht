@@ -139,6 +139,7 @@ const NarrowContainerWithCenteredText: Decorator = (Story) => (
         inlineSize: '50%',
         'border-inline-start': '1px solid currentColor',
         'border-inline-end': '1px solid currentColor',
+        'padding-inline': '1em',
       } as React.CSSProperties
     }
   >
