@@ -61,10 +61,7 @@ function createNestedItems(depth: number, maxDepth: number): Item[] {
 
   return [
     {
-      children: 'The Quick Brown Fox Jumps Over The Lazy Dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    },
-    {
-      children: 'Deze list heeft sub-items op niveau ' + depth,
+      children: 'Dit is diepteniveau ' + depth + ' van de list.',
       items: createNestedItems(depth + 1, maxDepth),
     },
   ];
@@ -89,6 +86,14 @@ export const Default: Story = {
 };
 
 export const Nested: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een genestelde lijst met maximaal 8 niveaus. In de praktijk zullen er waarschijnlijk niet zoveel niveaus zijn, maar het is goed om te weten dat het component hierop voorbereid is.',
+      },
+    },
+  },
   args: {
     items: createNestedItems(1, 8),
   },
