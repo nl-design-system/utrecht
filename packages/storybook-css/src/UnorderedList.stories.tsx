@@ -61,10 +61,10 @@ function createNestedItems(depth: number, maxDepth: number): Item[] {
 
   return [
     {
-      children: 'Lorem',
+      children: 'The Quick Brown Fox Jumps Over The Lazy Dog. Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     },
     {
-      children: 'Ipsum',
+      children: 'Deze list heeft sub-items op niveau ' + depth,
       items: createNestedItems(depth + 1, maxDepth),
     },
   ];
@@ -76,13 +76,13 @@ export const Default: Story = {
   args: {
     items: [
       {
-        children: 'Lorem',
+        children: 'The Quick Brown Fox',
       },
       {
-        children: 'Ipsum',
+        children: 'Jumps',
       },
       {
-        children: 'Dolor',
+        children: 'Over The Lazy Dog',
       },
     ],
   },
@@ -90,18 +90,7 @@ export const Default: Story = {
 
 export const Nested: Story = {
   args: {
-    items: [
-      {
-        children: 'Lorem',
-      },
-      {
-        children: 'Ipsum',
-        items: createNestedItems(1, 6),
-      },
-      {
-        children: 'Dolor',
-      },
-    ],
+    items: createNestedItems(1, 8),
   },
 };
 
