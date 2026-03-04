@@ -98,7 +98,7 @@ describe('Calendar', () => {
   it('hides weekends', () => {
     const currentDate = new Date(2023, 5, 15); // 15 June 2023 (Thu)
 
-    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} showWeekends={false} />);
 
     const currentDayButton = screen.getByRole('button', {
       name: 'donderdag 15 juni 2023',
@@ -144,7 +144,7 @@ describe('Calendar', () => {
   it('does not render year navigation buttons', () => {
     const currentDate = new Date(2023, 5, 15);
 
-    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} hideYearControls />);
 
     expect(screen.queryByRole('button', { name: 'vorig jaar' })).not.toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'volgend jaar' })).not.toBeInTheDocument();
