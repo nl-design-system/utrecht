@@ -4,6 +4,9 @@
       "padding-inline-start": { "value": "{utrecht.space.text.md}" },
       "margin-block-start": { "value": "{utrecht.space.block.md}" },
       "margin-block-end": { "value": "0" },
+      "nested": {
+        "margin-inline-start": { "value": "0" }
+      },
       "item": {
         "margin-block-start": { "value": "0.25rem" },
         "margin-block-end": { "value": "0.25rem" }
@@ -11,28 +14,36 @@
       "marker": {
         "color": { "value": "{utrecht.color.red.40}" },
         "level-1": {
-          "content": { "value": "\"●\"" }
+          "content": { "value": "\"●\"" },
+          "font-size": { "value": "1em" }
         },
         "level-2": {
-          "content": { "value": "\"○\"" }
+          "content": { "value": "\"○\"" },
+          "font-size": { "value": "1em" }
         },
         "level-3": {
-          "content": { "value": "\"◆\"" }
+          "content": { "value": "\"◆\"" },
+          "font-size": { "value": "1em" }
         },
         "level-4": {
-          "content": { "value": "\"◇\"" }
+          "content": { "value": "\"◇\"" },
+          "font-size": { "value": "1em" }
         },
         "level-5": {
-          "content": { "value": "\"■\"" }
+          "content": { "value": "\"■\"" },
+          "font-size": { "value": "1em" }
         },
         "level-6": {
-          "content": { "value": "\"□\"" }
+          "content": { "value": "\"□\"" },
+          "font-size": { "value": "1em" }
         },
         "level-7": {
-          "content": { "value": "\"▲\"" }
+          "content": { "value": "\"▲\"" },
+          "font-size": { "value": "0.75em" }
         },
         "level-8": {
-          "content": { "value": "\"△\"" }
+          "content": { "value": "\"△\"" },
+          "font-size": { "value": "0.75em" }
         }
       }
     }
