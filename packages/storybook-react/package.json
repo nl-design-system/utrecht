@@ -41,7 +41,7 @@
     "@storybook/mdx2-csf": "1.1.0",
     "@storybook/react-vite": "9.1.17",
     "@types/lodash.merge": "4.6.9",
-    "@types/react": "18.3.27",
+    "@types/react": "19.2.14",
     "@utrecht/accordion-css": "workspace:*",
     "@utrecht/action-group-css": "workspace:*",
     "@utrecht/alert-css": "workspace:*",
@@ -151,9 +151,10 @@
     "date-fns": "2.30.0",
     "http-server": "14.1.1",
     "lodash.merge": "4.6.2",
-    "react": "18.3.1",
-    "react-dom": "18.3.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
     "react-formio": "4.3.0",
+    "react-vega": "8.0.0",
     "require-from-string": "2.0.2",
     "sass": "1.92.1",
     "sass-loader": "13.3.3",
@@ -161,6 +162,9 @@
     "storybook-addon-pseudo-states": "9.1.17",
     "style-loader": "3.3.4",
     "typescript": "5.9.3",
+    "vega": "6.2.0",
+    "vega-embed": "7.1.0",
+    "vega-lite": "6.4.2",
     "vite": "7.1.12"
   }
 }
