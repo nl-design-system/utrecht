@@ -217,14 +217,14 @@ export const HTMLContent: Story = {
     htmlContent: true,
     items: [
       {
-        children: 'Lorem',
+        children: 'The Quick Brown Fox',
       },
       {
-        children: 'Ipsum',
-        items: createNestedItems(1, 6),
+        children: 'Dit is diepteniveau 1 van de list.',
+        items: createNestedItems(2, 8),
       },
       {
-        children: 'Dolor',
+        children: 'Over The Lazy Dog',
       },
     ],
   },
