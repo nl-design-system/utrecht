@@ -32,8 +32,8 @@ const meta = {
     nextYearButtonTitle: 'volgend jaar',
     previousMonthButtonTitle: 'Vorige maand',
     nextMonthButtonTitle: 'volgende maand',
-    showWeekends: true,
-    hideYearControls: false,
+    displayWeekend: true,
+    displayYearNavigation: true,
     minDate: new Date(),
     maxDate: addYears(new Date(), 1),
   },
@@ -95,18 +95,18 @@ const meta = {
         defaultValue: { summary: 'Next month' },
       },
     },
-    showWeekends: {
-      name: 'showWeekends',
+    displayWeekend: {
+      name: 'displayWeekend',
       table: {
         category: 'API',
-        defaultValue: { summary: 'Show weekends' },
+        defaultValue: { summary: 'Show weekend' },
       },
     },
-    hideYearControls: {
-      name: 'hideYearControls',
+    displayYearNavigation: {
+      name: 'displayYearNavigation',
       table: {
         category: 'API',
-        defaultValue: { summary: 'Hide year controls' },
+        defaultValue: { summary: 'Hide year navigation' },
       },
     },
     minDate: {
@@ -161,7 +161,7 @@ export const WithoutWeekends: Story = {
     },
     currentDate: new Date(),
     events,
-    showWeekends: false,
+    displayWeekend: false,
   },
 };
 
@@ -172,7 +172,7 @@ export const HideYearControls: Story = {
     },
     currentDate: new Date(),
     events,
-    hideYearControls: true,
+    displayYearNavigation: false,
   },
 };
 

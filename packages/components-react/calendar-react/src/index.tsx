@@ -37,14 +37,14 @@ import { IconArrowLeftDouble } from './IconArrowLeftDouble';
 import { IconArrowRight } from './IconArrowRight';
 import { IconArrowRightDouble } from './IconArrowRightDouble';
 
-function createCalendar(today: Date, showWeekends: boolean): Date[] {
+function createCalendar(today: Date, displayWeekend: boolean): Date[] {
   const start = startOfWeek(startOfMonth(today), {
     weekStartsOn: 1 /* Monday */,
   });
   const end = endOfWeek(addWeeks(start, 5), {
     weekStartsOn: 1 /* Monday */,
   });
-  return eachDayOfInterval({ start, end }).filter((date) => showWeekends || !isWeekend(date));
+  return eachDayOfInterval({ start, end }).filter((date) => displayWeekend || !isWeekend(date));
 }
 
 export type Events = {
@@ -82,8 +82,8 @@ export interface CalendarProps {
   nextMonthButtonTitle?: string;
   minDate?: Date;
   maxDate?: Date;
-  showWeekends: boolean;
-  hideYearControls: boolean;
+  displayWeekend?: boolean;
+  displayYearNavigation?: boolean;
 }
 
 /**
@@ -100,18 +100,18 @@ export const Calendar = ({
   nextYearButtonTitle = 'Next year',
   previousMonthButtonTitle = 'Previous month',
   nextMonthButtonTitle = 'Next month',
-  showWeekends = true,
-  hideYearControls = false,
+  displayWeekend = true,
+  displayYearNavigation = true,
   minDate,
   maxDate,
 }: CalendarProps) => {
   const [visibleMonth, setVisibleMonth] = useState(currentDate || new Date());
   const [selectedDate, setSelectedDate] = useState(currentDate);
-  const calendar = createCalendar(visibleMonth, showWeekends);
+  const calendar = createCalendar(visibleMonth, displayWeekend);
   const start = startOfWeek(visibleMonth, { weekStartsOn: 1 });
   const end = endOfWeek(visibleMonth, { weekStartsOn: 1 });
 
-  const currentWeek = eachDayOfInterval({ start, end }).filter((day) => showWeekends || !isWeekend(day));
+  const currentWeek = eachDayOfInterval({ start, end }).filter((day) => displayWeekend || !isWeekend(day));
   const chunksWeeks = chunk(calendar, calendar.length / 6);
 
   const weeks = chunksWeeks.map((week) =>
@@ -152,7 +152,7 @@ export const Calendar = ({
   return (
     <div className="utrecht-calendar">
       <CalendarNavigation>
-        {hideYearControls ? (
+        {!displayYearNavigation ? (
           monthNavigation
         ) : (
           <CalendarNavigationButtons
