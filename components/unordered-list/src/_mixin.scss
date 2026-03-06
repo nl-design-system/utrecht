@@ -5,7 +5,7 @@
  */
 
 @mixin utrecht-unordered-list {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker, "●");
+  --_utrecht-unordered-list-marker-content: var(--utrecht-unordered-list-marker-content, "●");
   --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-font-size, "1rem");
 
   /* Configure `box-sizing` and `text-align` for `--center` */
@@ -49,16 +49,19 @@
 
 @mixin utrecht-unordered-list__marker {
   color: var(--utrecht-unordered-list-marker-color);
-  content: var(--_utrecht-unordered-list-marker, "●");
+  content: var(--_utrecht-unordered-list-marker-content, "●");
   font-size: var(--_utrecht-unordered-list-marker-font-size, 1em);
 }
 
 // Helper mixin to generate level styles
 @mixin utrecht-unordered-list--level($level, $marker-content, $marker-font-size) {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-#{$level}-content, #{$marker-content});
+  --_utrecht-unordered-list-marker-content: var(
+    --utrecht-unordered-list-marker-level-#{$level}-content,
+    var(--utrecht-unordered-list-marker-content, #{$marker-content})
+  );
   --_utrecht-unordered-list-marker-font-size: var(
     --utrecht-unordered-list-marker-level-#{$level}-font-size,
-    #{$marker-font-size}
+    var(--utrecht-unordered-list-marker-font-size, #{$marker-font-size})
   );
 }
 
