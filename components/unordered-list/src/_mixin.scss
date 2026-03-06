@@ -53,42 +53,44 @@
   font-size: var(--_utrecht-unordered-list-marker-font-size, 1em);
 }
 
+// Helper mixin to generate level styles
+@mixin utrecht-unordered-list--level($level, $marker-content, $marker-font-size) {
+  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-#{$level}-content, #{$marker-content});
+  --_utrecht-unordered-list-marker-font-size: var(
+    --utrecht-unordered-list-marker-level-#{$level}-font-size,
+    #{$marker-font-size}
+  );
+}
+
+// Individual level mixins
 @mixin utrecht-unordered-list--level-1 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-1-content, "●");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-1-font-size, 1em);
+  @include utrecht-unordered-list--level(1, "●", 1em);
 }
 
 @mixin utrecht-unordered-list--level-2 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-2-content, "○");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-2-font-size, 1em);
+  @include utrecht-unordered-list--level(2, "○", 1em);
 }
 
 @mixin utrecht-unordered-list--level-3 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-3-content, "◆");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-3-font-size, 1em);
+  @include utrecht-unordered-list--level(3, "◆", 1em);
 }
 
 @mixin utrecht-unordered-list--level-4 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-4-content, "◇");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-4-font-size, 1em);
+  @include utrecht-unordered-list--level(4, "◇", 1em);
 }
 
 @mixin utrecht-unordered-list--level-5 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-5-content, "■");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-5-font-size, 1em);
+  @include utrecht-unordered-list--level(5, "■", 1em);
 }
 
 @mixin utrecht-unordered-list--level-6 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-6-content, "□");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-6-font-size, 1em);
+  @include utrecht-unordered-list--level(6, "□", 1em);
 }
 
 @mixin utrecht-unordered-list--level-7 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-7-content, "▲");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-7-font-size, 1em);
+  @include utrecht-unordered-list--level(7, "▲", 1em);
 }
 
 @mixin utrecht-unordered-list--level-8 {
-  --_utrecht-unordered-list-marker: var(--utrecht-unordered-list-marker-level-8-content, "△");
-  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-level-8-font-size, 1em);
+  @include utrecht-unordered-list--level(8, "△", 1em);
 }
