@@ -70,6 +70,14 @@ function createNestedItems(depth: number, maxDepth: number): Item[] {
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De standaard ongeordende lijst toont een eenvoudige lijst met opsommingstekens. Elk lijstitem wordt weergegeven met de juiste marker en spacing. Deze component volgt de Utrecht design system richtlijnen voor typografie, spacing en toegankelijkheid.',
+      },
+    },
+  },
   args: {
     items: [
       {
