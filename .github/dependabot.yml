@@ -8,10 +8,8 @@ updates:
     schedule:
       interval: "monthly"
     groups:
-      actions-upload-and-download-artifact:
-        patterns:
-          - "actions/upload-artifact"
-          - "actions/download-artifact"
+      github-actions:
+        applies-to: "version-updates"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
