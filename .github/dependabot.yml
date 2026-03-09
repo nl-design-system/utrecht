@@ -10,11 +10,11 @@ updates:
     groups:
       github-actions:
         applies-to: "version-updates"
+        patterns:
+          - "*"
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "monthly"
     versioning-strategy: "increase-if-necessary"
     open-pull-requests-limit: 20
-    reviewers:
-      - "nl-design-system/kernteam-dependabot"
