@@ -173,7 +173,7 @@
 }
 
 .utrecht-table__header-cell-button {
-  justify-content: var(--_utrecht-table-cell-text-align, start);
+  --utrecht-button-justify-content: var(--_utrecht-table-cell-text-align, start);
 
   // border: 1px solid transparent;
 }
