@@ -95,6 +95,28 @@ describe('Calendar', () => {
     expect(selectedEventButton).toHaveClass('utrecht-calendar__table-days-item-day--selected');
   });
 
+  it('hides weekends', () => {
+    const currentDate = new Date(2023, 5, 15); // 15 June 2023 (Thu)
+
+    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} displayWeekend={false} />);
+
+    const currentDayButton = screen.getByRole('button', {
+      name: 'donderdag 15 juni 2023',
+    });
+
+    expect(currentDayButton).not.toBeDisabled();
+
+    expect(screen.queryByRole('button', { name: 'zaterdag 03 juni 2023' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'zaterdag 10 juni 2023' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'zaterdag 17 juni 2023' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'zaterdag 24 juni 2023' })).not.toBeInTheDocument();
+
+    expect(screen.queryByRole('button', { name: 'zondag 04 juni 2023' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'zondag 11 juni 2023' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'zondag 18 juni 2023' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'zondag 25 juni 2023' })).not.toBeInTheDocument();
+  });
+
   it('navigates to previous year', () => {
     const currentDate = new Date(2023, 2, 1);
     const { container } = render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
@@ -117,6 +139,24 @@ describe('Calendar', () => {
     expect(currentDateLabel).toContainHTML('maart 2023');
     if (nextYearButton) fireEvent.click(nextYearButton);
     expect(currentDateLabel).toContainHTML('maart 2024');
+  });
+
+  it('renders year navigation buttons by default', () => {
+    const currentDate = new Date(2023, 5, 15);
+
+    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+
+    expect(screen.queryByRole('button', { name: 'vorig jaar' })).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'volgend jaar' })).toBeInTheDocument();
+  });
+
+  it('does not render year navigation buttons', () => {
+    const currentDate = new Date(2023, 5, 15);
+
+    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} displayYearNavigation={false} />);
+
+    expect(screen.queryByRole('button', { name: 'vorig jaar' })).not.toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'volgend jaar' })).not.toBeInTheDocument();
   });
 
   it('navigates to previous month', () => {
