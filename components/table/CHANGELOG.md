@@ -1,5 +1,11 @@
 # @utrecht/table-css
 
+## 2.0.2
+
+### Patch Changes
+
+- 7c6f825: Table header sort button specificity issue verholpen door de justify content token van de button te gebruiken ipv direct de justify content proberen aan te passen van de button.
+
 ## 2.0.1
 
 ### Patch Changes

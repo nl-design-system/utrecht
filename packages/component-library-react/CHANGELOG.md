@@ -1,5 +1,16 @@
 # @utrecht/component-library-react
 
+## 13.0.1
+
+### Patch Changes
+
+- Updated dependencies [7c6f825]
+  - @utrecht/table-css@2.0.2
+  - @utrecht/html-content-css@2.0.1
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/button-react@3.0.1
+  - @utrecht/calendar-react@1.0.17
+
 ## 13.0.0
 
 ### Major Changes

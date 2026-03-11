@@ -1,5 +1,14 @@
 # @utrecht/preact-app
 
+## 1.0.43
+
+### Patch Changes
+
+- Updated dependencies [157d561]
+  - @utrecht/design-tokens@5.0.2
+  - @utrecht/component-library-react@13.0.1
+  - @utrecht/button-react@3.0.1
+
 ## 1.0.42
 
 ### Patch Changes

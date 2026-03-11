@@ -1,5 +1,11 @@
 # @utrecht/select-combobox-react
 
+## 1.0.16
+
+### Patch Changes
+
+- @utrecht/button-react@3.0.1
+
 ## 1.0.15
 
 ### Patch Changes
