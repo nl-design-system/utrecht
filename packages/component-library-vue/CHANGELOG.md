@@ -1,5 +1,11 @@
 # @utrecht/component-library-vue
 
+## 3.0.1
+
+### Patch Changes
+
+- e80b151: Resolve type errors on dependencies update for Image component by aligning `<img>` `width` and `height` attribute typings with Vue’s `Numberish` type (`string | number`) instead of `CSSNumberish`.
+
 ## 3.0.0
 
 ### Major Changes

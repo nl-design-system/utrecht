@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 5.0.2
+
+### Patch Changes
+
+- 157d561: Corrected the typography token values and the heading token values to make the headings visually distinctive.
+
 ## 5.0.1
 
 ### Patch Changes
