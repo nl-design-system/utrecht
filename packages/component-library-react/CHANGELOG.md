@@ -1,5 +1,12 @@
 # @utrecht/component-library-react
 
+## 13.0.2
+
+### Patch Changes
+
+- Updated dependencies [526168e]
+  - @utrecht/calendar-react@1.1.0
+
 ## 13.0.1
 
 ### Patch Changes
