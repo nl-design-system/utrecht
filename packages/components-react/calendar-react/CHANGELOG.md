@@ -1,5 +1,11 @@
 # @utrecht/calendar-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 526168e: Functionaliteit toegevoegd om weekenden en knoppen voor jaarnavigatie al dan niet weer te geven.
+
 ## 1.0.17
 
 ### Patch Changes

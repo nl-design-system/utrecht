@@ -1,5 +1,12 @@
 # @utrecht/astro
 
+## 0.0.18
+
+### Patch Changes
+
+- @utrecht/component-library-react@13.0.2
+- @utrecht/storybook@0.0.2
+
 ## 0.0.17
 
 ### Patch Changes
