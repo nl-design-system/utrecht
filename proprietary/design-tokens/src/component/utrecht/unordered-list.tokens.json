@@ -5,8 +5,10 @@
       "margin-block-start": { "value": "{utrecht.space.block.md}" },
       "margin-inline-start": { "value": "{utrecht.space.text.md}" },
       "margin-block-end": { "value": "0" },
+      "font-size": { "value": "{utrecht.space.text.md}" },
+      "line-height": { "value": "{utrecht.space.block.md}" },
       "nested": {
-        "padding-inline-start": { "value": "0" }
+        "padding-inline-start": { "value": "{utrecht.space.text.md}" }
       },
       "item": {
         "margin-block-start": { "value": "{utrecht.space.block.2xs}" },

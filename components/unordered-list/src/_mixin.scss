@@ -38,7 +38,10 @@
 }
 
 @mixin utrecht-unordered-list--nested {
-  padding-inline-start: var(--utrecht-unordered-list-nested-padding-inline-start, 1ch);
+  padding-inline-start: var(
+    --utrecht-unordered-list-nested-padding-inline-start,
+    var(--utrecht-unordered-list-padding-inline-start, 1ch)
+  );
 }
 
 @mixin utrecht-unordered-list__item {
