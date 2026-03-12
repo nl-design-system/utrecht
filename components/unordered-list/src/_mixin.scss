@@ -22,7 +22,7 @@
       var(--utrecht-unordered-list-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
   margin-inline-start: var(--utrecht-unordered-list-margin-inline-start, 1ch);
-  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start, 1ch);
+  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start, 0);
   text-align: start;
 }
 
