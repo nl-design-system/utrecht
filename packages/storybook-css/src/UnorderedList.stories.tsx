@@ -81,13 +81,14 @@ export const Default: Story = {
   args: {
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
@@ -114,13 +115,14 @@ export const Center: Story = {
     center: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
@@ -160,13 +162,14 @@ export const NarrowContainerCenter: Story = {
     center: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
@@ -189,13 +192,14 @@ export const NarrowContainerCenterLongText: Story = {
     center: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
       {
         children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -225,14 +229,18 @@ export const HTMLContent: Story = {
     htmlContent: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
+      },
+      {
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
+      },
+      {
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
       {
         children: 'Dit is diepteniveau 1 van de list.',
         items: createNestedItems(2, 8),
-      },
-      {
-        children: 'Over The Lazy Dog',
       },
     ],
   },
