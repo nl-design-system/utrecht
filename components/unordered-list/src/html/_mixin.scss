@@ -10,13 +10,42 @@
   ul {
     @include utrecht-unordered-list;
     @include utrecht-unordered-list--distanced;
+    @include utrecht-unordered-list--level-1;
   }
 
   ul > li {
     @include utrecht-unordered-list__item;
   }
 
-  ul > li::marker {
+  ul li::marker {
     @include utrecht-unordered-list__marker;
+  }
+
+  ul ul {
+    @include utrecht-unordered-list--level-2;
+  }
+
+  ul ul ul {
+    @include utrecht-unordered-list--level-3;
+  }
+
+  ul ul ul ul {
+    @include utrecht-unordered-list--level-4;
+  }
+
+  ul ul ul ul ul {
+    @include utrecht-unordered-list--level-5;
+  }
+
+  ul ul ul ul ul ul {
+    @include utrecht-unordered-list--level-6;
+  }
+
+  ul ul ul ul ul ul ul {
+    @include utrecht-unordered-list--level-7;
+  }
+
+  ul ul ul ul ul ul ul ul {
+    @include utrecht-unordered-list--level-8;
   }
 }

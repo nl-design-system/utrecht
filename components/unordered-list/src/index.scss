@@ -30,9 +30,48 @@
   @include utrecht-unordered-list__item;
 }
 
-.utrecht-unordered-list--html-content > li::marker,
-.utrecht-unordered-list--html-content ul > li::marker,
+.utrecht-unordered-list--html-content li::marker,
 .utrecht-unordered-list__item::marker,
 .utrecht-unordered-list__marker {
   @include utrecht-unordered-list__marker;
+}
+
+.utrecht-unordered-list--html-content,
+.utrecht-unordered-list--level-1 {
+  @include utrecht-unordered-list--level-1;
+}
+
+.utrecht-unordered-list--html-content ul,
+.utrecht-unordered-list--level-2 {
+  @include utrecht-unordered-list--level-2;
+}
+
+.utrecht-unordered-list--html-content ul ul,
+.utrecht-unordered-list--level-3 {
+  @include utrecht-unordered-list--level-3;
+}
+
+.utrecht-unordered-list--html-content ul ul ul,
+.utrecht-unordered-list--level-4 {
+  @include utrecht-unordered-list--level-4;
+}
+
+.utrecht-unordered-list--html-content ul ul ul ul,
+.utrecht-unordered-list--level-5 {
+  @include utrecht-unordered-list--level-5;
+}
+
+.utrecht-unordered-list--html-content ul ul ul ul ul,
+.utrecht-unordered-list--level-6 {
+  @include utrecht-unordered-list--level-6;
+}
+
+.utrecht-unordered-list--html-content ul ul ul ul ul ul,
+.utrecht-unordered-list--level-7 {
+  @include utrecht-unordered-list--level-7;
+}
+
+.utrecht-unordered-list--html-content ul ul ul ul ul ul ul,
+.utrecht-unordered-list--level-8 {
+  @include utrecht-unordered-list--level-8;
 }

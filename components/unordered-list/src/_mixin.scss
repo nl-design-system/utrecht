@@ -5,6 +5,9 @@
  */
 
 @mixin utrecht-unordered-list {
+  --_utrecht-unordered-list-marker-content: var(--utrecht-unordered-list-marker-content, "●");
+  --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-font-size, "1rem");
+
   /* Configure `box-sizing` and `text-align` for `--center` */
   box-sizing: border-box;
   font-family: var(--utrecht-document-font-family, inherit);
@@ -18,7 +21,8 @@
     var(--utrecht-space-around, 0) *
       var(--utrecht-unordered-list-margin-block-start, var(--utrecht-paragraph-margin-block-start, 0))
   );
-  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start, 2ch);
+  margin-inline-start: var(--utrecht-unordered-list-margin-inline-start, 1ch);
+  padding-inline-start: var(--utrecht-unordered-list-padding-inline-start, 0);
   text-align: start;
 }
 
@@ -34,8 +38,10 @@
 }
 
 @mixin utrecht-unordered-list--nested {
-  margin-block-end: 0;
-  margin-inline-start: 2ch;
+  padding-inline-start: var(
+    --utrecht-unordered-list-nested-padding-inline-start,
+    var(--utrecht-unordered-list-padding-inline-start, 1ch)
+  );
 }
 
 @mixin utrecht-unordered-list__item {
@@ -46,5 +52,51 @@
 
 @mixin utrecht-unordered-list__marker {
   color: var(--utrecht-unordered-list-marker-color);
-  content: "●";
+  content: var(--_utrecht-unordered-list-marker-content, "●");
+  font-size: var(--_utrecht-unordered-list-marker-font-size, 1em);
+}
+
+// Helper mixin to generate level styles
+@mixin utrecht-unordered-list--level($level, $marker-content, $marker-font-size) {
+  --_utrecht-unordered-list-marker-content: var(
+    --utrecht-unordered-list-marker-level-#{$level}-content,
+    var(--utrecht-unordered-list-marker-content, #{$marker-content})
+  );
+  --_utrecht-unordered-list-marker-font-size: var(
+    --utrecht-unordered-list-marker-level-#{$level}-font-size,
+    var(--utrecht-unordered-list-marker-font-size, #{$marker-font-size})
+  );
+}
+
+// Individual level mixins
+@mixin utrecht-unordered-list--level-1 {
+  @include utrecht-unordered-list--level(1, "●", 1em);
+}
+
+@mixin utrecht-unordered-list--level-2 {
+  @include utrecht-unordered-list--level(2, "○", 1em);
+}
+
+@mixin utrecht-unordered-list--level-3 {
+  @include utrecht-unordered-list--level(3, "◆", 1em);
+}
+
+@mixin utrecht-unordered-list--level-4 {
+  @include utrecht-unordered-list--level(4, "◇", 1em);
+}
+
+@mixin utrecht-unordered-list--level-5 {
+  @include utrecht-unordered-list--level(5, "■", 1em);
+}
+
+@mixin utrecht-unordered-list--level-6 {
+  @include utrecht-unordered-list--level(6, "□", 1em);
+}
+
+@mixin utrecht-unordered-list--level-7 {
+  @include utrecht-unordered-list--level(7, "▲", 1em);
+}
+
+@mixin utrecht-unordered-list--level-8 {
+  @include utrecht-unordered-list--level(8, "△", 1em);
 }

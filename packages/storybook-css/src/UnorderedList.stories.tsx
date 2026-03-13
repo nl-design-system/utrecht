@@ -51,45 +51,60 @@ const meta = {
 
 export default meta;
 
+type Item = {
+  children: string;
+  items?: Item[];
+};
+
+function createNestedItems(depth: number, maxDepth: number): Item[] {
+  if (depth > maxDepth) return [];
+
+  return [
+    {
+      children: 'Dit is diepteniveau ' + depth + ' van de list.',
+      items: createNestedItems(depth + 1, maxDepth),
+    },
+  ];
+}
+
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'De standaard ongeordende lijst toont een eenvoudige lijst met opsommingstekens. Elk lijstitem wordt weergegeven met de juiste marker en spacing. Deze component volgt de Utrecht design system richtlijnen voor typografie, spacing en toegankelijkheid.',
+      },
+    },
+  },
   args: {
     items: [
       {
-        children: 'Lorem',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Ipsum',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Dolor',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
 };
 
 export const Nested: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een genestelde lijst met maximaal 8 niveaus. In de praktijk zullen er waarschijnlijk niet zoveel niveaus zijn, maar het is goed om te weten dat het component hierop voorbereid is.',
+      },
+    },
+  },
   args: {
-    items: [
-      {
-        children: 'Lorem',
-      },
-      {
-        children: 'Ipsum',
-        items: [
-          {
-            children: 'Lorem',
-          },
-          {
-            children: 'Ipsum',
-          },
-        ],
-      },
-      {
-        children: 'Dolor',
-      },
-    ],
+    items: createNestedItems(1, 8),
   },
 };
 
@@ -100,13 +115,14 @@ export const Center: Story = {
     center: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
@@ -133,6 +149,7 @@ const NarrowContainerWithCenteredText: Decorator = (Story) => (
         inlineSize: '50%',
         'border-inline-start': '1px solid currentColor',
         'border-inline-end': '1px solid currentColor',
+        'padding-inline': '1em',
       } as React.CSSProperties
     }
   >
@@ -145,13 +162,14 @@ export const NarrowContainerCenter: Story = {
     center: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
@@ -174,13 +192,14 @@ export const NarrowContainerCenterLongText: Story = {
     center: true,
     items: [
       {
-        children: 'The Quick Brown Fox',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Jumps',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Over The Lazy Dog',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
       {
         children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
@@ -210,21 +229,18 @@ export const HTMLContent: Story = {
     htmlContent: true,
     items: [
       {
-        children: 'Lorem',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Ipsum',
-        items: [
-          {
-            children: 'Lorem',
-          },
-          {
-            children: 'Ipsum',
-          },
-        ],
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Dolor',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
+      },
+      {
+        children: 'Dit is diepteniveau 1 van de list.',
+        items: createNestedItems(2, 8),
       },
     ],
   },
