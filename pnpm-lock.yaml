@@ -2972,8 +2972,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1
       date-fns:
-        specifier: 2.30.0
-        version: 2.30.0
+        specifier: 4.1.0
+        version: 4.1.0
       lodash-es:
         specifier: 4.17.23
         version: 4.17.23
@@ -6353,7 +6353,7 @@ importers:
         version: 0.2.4
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@18.3.1)
@@ -6712,8 +6712,8 @@ importers:
         specifier: 6.8.1
         version: 6.8.1(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       date-fns:
-        specifier: 2.30.0
-        version: 2.30.0
+        specifier: 4.1.0
+        version: 4.1.0
       http-server:
         specifier: 14.1.1
         version: 14.1.1
@@ -7499,7 +7499,7 @@ importers:
     devDependencies:
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       '@gemeente-denhaag/step-marker':
         specifier: 0.0.1-alpha.123
         version: 0.0.1-alpha.123(react@18.3.1)
@@ -17156,6 +17156,9 @@ packages:
   date-fns@2.30.0:
     resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
     engines: {node: '>=0.11'}
+
+  date-fns@4.1.0:
+    resolution: {integrity: sha512-Ukq0owbQXxa/U3EGtsdVBkR1w7KOQ5gIBqdH2hkvknzZPYvBxb/aa6E8L7tmjFtkwZBu3UXBbjIgPo/Ez4xaNg==}
 
   de-indent@1.0.2:
     resolution: {integrity: sha512-e/1zu3xH5MQryN2zdVaF0OrdNLUbvWxzMbi+iNA6Bky7l1RoP8a2fIbRocyHclXt/arDrrR6lL3TqFD9pMQTsg==}
@@ -35155,12 +35158,12 @@ snapshots:
       '@gemeente-denhaag/typography': 0.2.3-alpha.398(react@18.3.1)
       react: 18.3.1
 
-  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
+  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@gemeente-denhaag/button': 0.2.3(react@18.3.1)
       '@gemeente-denhaag/icons': 1.0.0(react@18.3.1)
       '@gemeente-denhaag/step-marker': 0.0.1-alpha.123(react@18.3.1)
-      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       react: 18.3.1
     transitivePeerDependencies:
       - '@babel/runtime'
@@ -35184,11 +35187,11 @@ snapshots:
       '@utrecht/components': 4.0.0
       react: 18.3.1
 
-  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
+  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@gemeente-denhaag/design-tokens-common': 0.2.3-alpha.424
       '@gemeente-denhaag/design-tokens-components': 0.2.4
-      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       '@utrecht/components': 7.0.0
       react: 18.3.1
     transitivePeerDependencies:
@@ -40052,7 +40055,7 @@ snapshots:
 
   '@unicode/unicode-15.1.0@1.5.2': {}
 
-  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.28.4)(date-fns@2.30.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
+  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@babel/runtime': 7.28.4
       clsx: 2.1.1
@@ -40060,7 +40063,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
     optionalDependencies:
-      date-fns: 2.30.0
+      date-fns: 4.1.0
       react-vega: 7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
       vega: 5.26.1(encoding@0.1.13)
 
@@ -43676,6 +43679,8 @@ snapshots:
   date-fns@2.30.0:
     dependencies:
       '@babel/runtime': 7.24.8
+
+  date-fns@4.1.0: {}
 
   de-indent@1.0.2: {}
 
