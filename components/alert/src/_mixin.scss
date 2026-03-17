@@ -29,6 +29,8 @@
 }
 
 @mixin utrecht-alert__content {
+  display: flex;
+  flex-direction: column;
   row-gap: var(--utrecht-alert-content-row-gap);
 }
 
@@ -37,6 +39,8 @@
   --utrecht-heading-color: var(--utrecht-alert-color);
   --utrecht-paragraph-color: var(--utrecht-alert-color);
 
+  display: flex;
+  flex-direction: column;
   row-gap: var(--utrecht-alert-message-row-gap);
 }
 
