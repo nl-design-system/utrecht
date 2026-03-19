@@ -9,8 +9,11 @@ import {
   Heading2,
   Heading3,
   Link,
+  Logo,
+  LogoImage,
   Page,
   PageContent,
+  PageHeader,
   Paragraph,
   Surface,
   UnorderedList,
@@ -19,8 +22,11 @@ import {
 import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
 import '../prototype-src/index.css';
+import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js';
 import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
+import IntroductieContact from '../prototype-src/contactformulier/IntroductieContactFormulier.js';
+import urls from '../prototype-src/variables.js';
 import HoofdNavigatie from '../prototype-src/webpaginablokken/HoofdNavigatie.js';
 import KTO from '../prototype-src/webpaginablokken/KTO.js';
 import '../styles.css';
@@ -39,7 +45,61 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const One: Story = {
+export const Introductie: Story = {
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
+      <Page {...args}>
+        <PageHeader>
+          <Logo>
+            <LogoImage />
+          </Logo>
+        </PageHeader>
+        <PageContent>
+          <main>
+            <section>
+              <IntroductieContact />
+              <br />
+              <ButtonLink appearance="primary-action-button" href={urls.volgordeScenario}>
+                Starten
+                <UtrechtIconArrow />
+              </ButtonLink>
+            </section>
+          </main>
+        </PageContent>
+        <FooterContact />
+      </Page>
+    </Surface>
+  ),
+};
+
+export const Scenario: Story = {
+  render: (args: any) => (
+    <Surface className="utrecht-custom-theme">
+      <Page {...args}>
+        <PageHeader>
+          <Logo>
+            <LogoImage />
+          </Logo>
+        </PageHeader>
+        <PageContent>
+          <main>
+            <section>
+              <Heading1>Bijstand aanvragen</Heading1>
+              <br />
+              <ButtonLink appearance="primary-action-button" href={urls.volgordeNavigeren}>
+                Start
+                <UtrechtIconArrow />
+              </ButtonLink>
+            </section>
+          </main>
+        </PageContent>
+        <FooterKlachten />
+      </Page>
+    </Surface>
+  ),
+};
+
+export const Volgorde: Story = {
   render: (args: any) => {
     return (
       <Surface className="utrecht-custom-theme">
