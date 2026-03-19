@@ -32,7 +32,7 @@ const urls = {
   trouwenRegelenChecklist: './iframe.html?args=&id=trouwen-regelen--one&viewMode=story#regelwerk',
   trouwenVeelgesteldeVragen: './iframe.html?args=&id=trouwen-veelgesteldevragen--one&viewMode=story',
   trouwenSoortenTrouwen: './iframe.html?args=&id=trouwen-soorten-trouwen--one&viewMode=story',
-  volgordeScenario: './iframe.html?globals=&args=&id=volgorde-scenario--one&viewMode=story',
+  volgordeScenario: './iframe.html?globals=&args=&id=volgorde-bijstand--scenario&viewMode=story',
   volgordeNavigeren: './iframe.html?globals=&args=&id=volgorde-bijstand--one&viewMode=story',
 };
 export default urls;
