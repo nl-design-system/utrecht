@@ -44,7 +44,7 @@ export const One: Story = {
             <section>
               <Heading1>Bijstand aanvragen</Heading1>
               <br />
-              <ButtonLink appearance="primary-action-button" href="#">
+              <ButtonLink appearance="primary-action-button" href={urls.volgordeNavigeren}>
                 Start
                 <UtrechtIconArrow />
               </ButtonLink>
