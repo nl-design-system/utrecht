@@ -33,6 +33,7 @@ const urls = {
   trouwenVeelgesteldeVragen: './iframe.html?args=&id=trouwen-veelgesteldevragen--one&viewMode=story',
   trouwenSoortenTrouwen: './iframe.html?args=&id=trouwen-soorten-trouwen--one&viewMode=story',
   volgordeScenario: './iframe.html?globals=&args=&id=volgorde-bijstand--scenario&viewMode=story',
-  volgordeNavigeren: './iframe.html?globals=&args=&id=volgorde-bijstand--one&viewMode=story',
+  volgorde1: './iframe.html?globals=&args=&id=volgorde-bijstand--volgorde-1&viewMode=story',
+  volgorde2: './iframe.html?globals=&args=&id=volgorde-bijstand--volgorde-2&viewMode=story',
 };
 export default urls;

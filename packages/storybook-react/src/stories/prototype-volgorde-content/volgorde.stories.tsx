@@ -59,7 +59,7 @@ export const Introductie: Story = {
             <section>
               <IntroductieContact />
               <br />
-              <ButtonLink appearance="primary-action-button" href={urls.volgordeScenario1}>
+              <ButtonLink appearance="primary-action-button" href={urls.volgordeScenario}>
                 Starten
                 <UtrechtIconArrow />
               </ButtonLink>
@@ -86,7 +86,7 @@ export const Scenario: Story = {
             <section>
               <Heading1>Bijstand aanvragen</Heading1>
               <br />
-              <ButtonLink appearance="primary-action-button" href={urls.volgordeNavigeren}>
+              <ButtonLink appearance="primary-action-button" href={urls.volgorde1}>
                 Start
                 <UtrechtIconArrow />
               </ButtonLink>
