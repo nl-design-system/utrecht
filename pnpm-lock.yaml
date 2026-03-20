@@ -5307,8 +5307,8 @@ importers:
         specifier: 1.0.3
         version: 1.0.3(css-loader@6.8.1(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)))(sass-loader@13.3.3(sass-embedded@1.97.3)(sass@1.97.3)(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)))(style-loader@3.3.4(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)))
       '@storybook/theming':
-        specifier: 8.6.15
-        version: 8.6.15(storybook@8.6.15(prettier@3.6.2))
+        specifier: 8.6.18
+        version: 8.6.18(storybook@8.6.15(prettier@3.6.2))
       '@types/node':
         specifier: 24.10.4
         version: 24.10.4
@@ -5893,8 +5893,8 @@ importers:
         version: link:../../proprietary/design-tokens
     devDependencies:
       '@storybook/theming':
-        specifier: 7.6.21
-        version: 7.6.21(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        specifier: 8.6.18
+        version: 8.6.18(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))
       remark:
         specifier: 15.0.1
         version: 15.0.1
@@ -6098,7 +6098,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       eslint-plugin-storybook:
         specifier: 9.1.17
         version: 9.1.17(eslint@8.57.1)(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.69.7)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))(typescript@5.9.3)
@@ -6353,7 +6353,7 @@ importers:
         version: 0.2.4
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+        version: 0.1.2(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@18.3.1)
@@ -7292,7 +7292,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       eslint-plugin-storybook:
         specifier: 9.1.17
         version: 9.1.17(eslint@8.57.1)(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.69.7)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))(typescript@5.9.3)
@@ -7499,7 +7499,7 @@ importers:
     devDependencies:
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+        version: 0.1.2(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       '@gemeente-denhaag/step-marker':
         specifier: 0.0.1-alpha.123
         version: 0.0.1-alpha.123(react@18.3.1)
@@ -8695,6 +8695,11 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
 
+  '@babel/parser@7.29.2':
+    resolution: {integrity: sha512-4GgRzy/+fsBa72/RZVJmGKPmZu9Byn8o4MoLpmNe1m8ZfYnz5emHLQz3U4gLud6Zwl0RZIcgiLD7Uq7ySFuDLA==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
+
   '@babel/plugin-bugfix-firefox-class-in-computed-class-key@7.28.5':
     resolution: {integrity: sha512-87GDMS3tsmMSi/3bWOte1UblL+YUTFMV8SZPZ2eSEL17s74Cw/l63rR6NmGVKMYW2GYi85nE+/d6Hw5N0bEk2Q==}
     engines: {node: '>=6.9.0'}
@@ -9515,6 +9520,10 @@ packages:
 
   '@babel/runtime@7.28.4':
     resolution: {integrity: sha512-Q/N6JNWvIvPnLDvjlE1OUBLPQHH6l3CltCEsHIujp45zQUSSh8K+gHnaEX45yAT1nyngnINhvWtzN+Nb9D8RAQ==}
+    engines: {node: '>=6.9.0'}
+
+  '@babel/runtime@7.29.2':
+    resolution: {integrity: sha512-JiDShH45zKHWyGe4ZNVRrCjBz8Nh9TMmZG1kh4QTK8hCBTWBi8Da+i7s1fJw7/lYpM4ccepSNfqzZ/QvABBi5g==}
     engines: {node: '>=6.9.0'}
 
   '@babel/template@7.20.7':
@@ -13777,6 +13786,11 @@ packages:
     peerDependencies:
       storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
 
+  '@storybook/theming@8.6.18':
+    resolution: {integrity: sha512-n6OEjEtHupa2PdTwWzRepr7cO8NkDd4rgF6BKLitRbujOspLxzMBEqdphs+QLcuiCIgf33SqmEA64QWnbSMhPw==}
+    peerDependencies:
+      storybook: ^8.2.0 || ^8.3.0-0 || ^8.4.0-0 || ^8.5.0-0 || ^8.6.0-0
+
   '@storybook/types@7.6.21':
     resolution: {integrity: sha512-rJaBMxzXZOsJpqZGhebFJxOguZQBw5j+MVpqbFBA6vLZPx9wEbDBeVsPUxCxj+V1XkVcrNXf9qfThyJ8ETmLBw==}
 
@@ -15233,6 +15247,11 @@ packages:
 
   acorn@8.15.0:
     resolution: {integrity: sha512-NZyJarBfL7nWwIq+FDL6Zp/yHEhePMNnnJ0y3qfieCrmNvYct8uvtiV41UvlSe6apAfk0fY1FbWx+NwfmpvtTg==}
+    engines: {node: '>=0.4.0'}
+    hasBin: true
+
+  acorn@8.16.0:
+    resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
 
@@ -23509,6 +23528,7 @@ packages:
   prebuild-install@7.1.1:
     resolution: {integrity: sha512-jAXscXWMcCK8GgCoHOfIr0ODh5ai8mj63L2nWrjuAgXE6tDyYGnx4/8o/rCgU+B4JSyZBKbeZqzhtwtC3ovxjw==}
     engines: {node: '>=10'}
+    deprecated: No longer maintained. Please contact the author of the relevant native addon; alternatives are available.
     hasBin: true
 
   prelude-ls@1.2.1:
@@ -27247,8 +27267,8 @@ packages:
   vue-component-type-helpers@2.2.12:
     resolution: {integrity: sha512-YbGqHZ5/eW4SnkPNR44mKVc6ZKQoRs/Rux1sxC6rdwXb4qpbOSYfDr9DsTHolOTGmIKgM9j141mZbBeg05R1pw==}
 
-  vue-component-type-helpers@3.2.5:
-    resolution: {integrity: sha512-tkvNr+bU8+xD/onAThIe7CHFvOJ/BO6XCOrxMzeytJq40nTfpGDJuVjyCM8ccGZKfAbGk2YfuZyDMXM56qheZQ==}
+  vue-component-type-helpers@3.2.6:
+    resolution: {integrity: sha512-O02tnvIfOQVmnvoWwuSydwRoHjZVt8UEBR+2p4rT35p8GAy5VTlWP8o5qXfJR/GWCN0nVZoYWsVUvx2jwgdBmQ==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -28275,7 +28295,7 @@ snapshots:
       browserslist: 4.28.1
       copy-webpack-plugin: 11.0.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
       critters: 0.0.20
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       esbuild-wasm: 0.19.11
       fast-glob: 3.3.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
@@ -28367,7 +28387,7 @@ snapshots:
       browserslist: 4.28.1
       copy-webpack-plugin: 11.0.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
       critters: 0.0.20
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       esbuild-wasm: 0.19.11
       fast-glob: 3.3.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
@@ -29752,6 +29772,10 @@ snapshots:
       '@babel/types': 7.28.5
 
   '@babel/parser@7.29.0':
+    dependencies:
+      '@babel/types': 7.29.0
+
+  '@babel/parser@7.29.2':
     dependencies:
       '@babel/types': 7.29.0
 
@@ -32898,6 +32922,8 @@ snapshots:
 
   '@babel/runtime@7.28.4': {}
 
+  '@babel/runtime@7.29.2': {}
+
   '@babel/template@7.20.7':
     dependencies:
       '@babel/code-frame': 7.29.0
@@ -35158,12 +35184,12 @@ snapshots:
       '@gemeente-denhaag/typography': 0.2.3-alpha.398(react@18.3.1)
       react: 18.3.1
 
-  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
+  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@gemeente-denhaag/button': 0.2.3(react@18.3.1)
       '@gemeente-denhaag/icons': 1.0.0(react@18.3.1)
       '@gemeente-denhaag/step-marker': 0.0.1-alpha.123(react@18.3.1)
-      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       react: 18.3.1
     transitivePeerDependencies:
       - '@babel/runtime'
@@ -35187,11 +35213,11 @@ snapshots:
       '@utrecht/components': 4.0.0
       react: 18.3.1
 
-  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
+  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@gemeente-denhaag/design-tokens-common': 0.2.3-alpha.424
       '@gemeente-denhaag/design-tokens-components': 0.2.4
-      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
+      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))
       '@utrecht/components': 7.0.0
       react: 18.3.1
     transitivePeerDependencies:
@@ -38667,7 +38693,7 @@ snapshots:
 
   '@storybook/preset-scss@1.0.3(css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(sass-loader@13.3.3(sass-embedded@1.97.3)(sass@1.69.7)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(style-loader@3.3.4(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))':
     dependencies:
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       sass-loader: 13.3.3(sass-embedded@1.97.3)(sass@1.69.7)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       style-loader: 3.3.4(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
 
@@ -38955,6 +38981,14 @@ snapshots:
     dependencies:
       storybook: 8.6.15(prettier@3.6.2)
 
+  '@storybook/theming@8.6.18(storybook@8.6.15(prettier@3.6.2))':
+    dependencies:
+      storybook: 8.6.15(prettier@3.6.2)
+
+  '@storybook/theming@8.6.18(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))':
+    dependencies:
+      storybook: 9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
+
   '@storybook/types@7.6.21':
     dependencies:
       '@storybook/channels': 7.6.21
@@ -38982,7 +39016,7 @@ snapshots:
       storybook: 9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
       type-fest: 2.19.0
       vue: 3.5.27(typescript@5.9.3)
-      vue-component-type-helpers: 3.2.5
+      vue-component-type-helpers: 3.2.6
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.24.9)':
     dependencies:
@@ -40055,9 +40089,9 @@ snapshots:
 
   '@unicode/unicode-15.1.0@1.5.2': {}
 
-  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
+  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.29.2)(date-fns@4.1.0)(react-dom@18.3.1(react@18.3.1))(react-vega@7.6.0(react@18.3.1)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@18.3.1)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
-      '@babel/runtime': 7.28.4
+      '@babel/runtime': 7.29.2
       clsx: 2.1.1
       lodash.chunk: 4.2.0
       react: 18.3.1
@@ -40870,6 +40904,8 @@ snapshots:
 
   acorn@8.15.0: {}
 
+  acorn@8.16.0: {}
+
   address@1.2.2: {}
 
   adjust-sourcemap-loader@4.0.0:
@@ -41445,7 +41481,7 @@ snapshots:
   babel-eslint@10.1.0(eslint@7.32.0):
     dependencies:
       '@babel/code-frame': 7.29.0
-      '@babel/parser': 7.29.0
+      '@babel/parser': 7.29.2
       '@babel/traverse': 7.29.0
       '@babel/types': 7.29.0
       eslint: 7.32.0
@@ -43224,7 +43260,7 @@ snapshots:
       semver: 7.6.2
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
 
-  css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11)):
+  css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.49)
       postcss: 8.4.49
@@ -44374,7 +44410,7 @@ snapshots:
   esast-util-from-js@2.0.1:
     dependencies:
       '@types/estree-jsx': 1.0.3
-      acorn: 8.15.0
+      acorn: 8.16.0
       esast-util-from-estree: 2.0.0
       vfile-message: 4.0.2
 
@@ -48281,7 +48317,7 @@ snapshots:
 
   js-interpreter@https://codeload.github.com/formio/JS-Interpreter/tar.gz/0ed5007ada500c12d797ab867a15cfab736e9b25:
     dependencies:
-      acorn: 8.15.0
+      acorn: 8.16.0
 
   js-stringify@1.0.2: {}
 
@@ -56754,7 +56790,7 @@ snapshots:
       schema-utils: 3.3.0
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
     optionalDependencies:
-      file-loader: 6.2.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+      file-loader: 6.2.0(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
 
   url-loader@4.1.1(file-loader@6.2.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
     dependencies:
@@ -57559,7 +57595,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.12: {}
 
-  vue-component-type-helpers@3.2.5: {}
+  vue-component-type-helpers@3.2.6: {}
 
   vue-docgen-api@4.75.1(vue@3.5.27(typescript@5.9.3)):
     dependencies:
