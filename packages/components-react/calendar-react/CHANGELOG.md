@@ -1,5 +1,11 @@
 # @utrecht/calendar-react
 
+## 1.1.1
+
+### Patch Changes
+
+- 555aa6a: Updated date-fns from v2.30.0 to v4.1.0.
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-react
 
+## 4.0.2
+
+### Patch Changes
+
+- 233b065: fix transitive dependency error `failed to resolve import "@babel/runtime/helpers/defineProperty"` in downstream builds.
+
 ## 4.0.1
 
 ### Patch Changes

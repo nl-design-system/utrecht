@@ -1,5 +1,14 @@
 # @utrecht/astro
 
+## 0.0.19
+
+### Patch Changes
+
+- Updated dependencies [8946412]
+- Updated dependencies [4d1339f]
+  - @utrecht/component-library-react@13.0.3
+  - @utrecht/storybook@0.0.2
+
 ## 0.0.18
 
 ### Patch Changes
