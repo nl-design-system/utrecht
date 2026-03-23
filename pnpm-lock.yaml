@@ -7414,6 +7414,9 @@ importers:
 
   packages/web-component-library-react:
     dependencies:
+      '@babel/runtime':
+        specifier: 7.24.8
+        version: 7.24.8
       '@utrecht/web-component-library-stencil':
         specifier: workspace:*
         version: link:../web-component-library-stencil
@@ -7430,9 +7433,6 @@ importers:
       '@babel/preset-react':
         specifier: 7.24.7
         version: 7.24.7(@babel/core@7.24.9)
-      '@babel/runtime':
-        specifier: 7.24.8
-        version: 7.24.8
       '@rollup/plugin-babel':
         specifier: 6.0.4
         version: 6.0.4(@babel/core@7.24.9)(@types/babel__core@7.20.5)(rollup@4.18.1)
@@ -27247,8 +27247,8 @@ packages:
   vue-component-type-helpers@2.2.12:
     resolution: {integrity: sha512-YbGqHZ5/eW4SnkPNR44mKVc6ZKQoRs/Rux1sxC6rdwXb4qpbOSYfDr9DsTHolOTGmIKgM9j141mZbBeg05R1pw==}
 
-  vue-component-type-helpers@3.2.5:
-    resolution: {integrity: sha512-tkvNr+bU8+xD/onAThIe7CHFvOJ/BO6XCOrxMzeytJq40nTfpGDJuVjyCM8ccGZKfAbGk2YfuZyDMXM56qheZQ==}
+  vue-component-type-helpers@3.2.6:
+    resolution: {integrity: sha512-O02tnvIfOQVmnvoWwuSydwRoHjZVt8UEBR+2p4rT35p8GAy5VTlWP8o5qXfJR/GWCN0nVZoYWsVUvx2jwgdBmQ==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -38982,7 +38982,7 @@ snapshots:
       storybook: 9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
       type-fest: 2.19.0
       vue: 3.5.27(typescript@5.9.3)
-      vue-component-type-helpers: 3.2.5
+      vue-component-type-helpers: 3.2.6
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.24.9)':
     dependencies:
@@ -39816,7 +39816,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/type-utils': 5.62.0(eslint@7.32.0)(typescript@5.9.3)
       '@typescript-eslint/utils': 5.62.0(eslint@7.32.0)(typescript@5.9.3)
-      debug: 4.3.7
+      debug: 4.4.3
       eslint: 7.32.0
       graphemer: 1.4.0
       ignore: 5.3.1
@@ -39849,7 +39849,7 @@ snapshots:
       '@typescript-eslint/scope-manager': 5.62.0
       '@typescript-eslint/types': 5.62.0
       '@typescript-eslint/typescript-estree': 5.62.0(typescript@5.9.3)
-      debug: 4.3.7
+      debug: 4.4.3
       eslint: 7.32.0
     optionalDependencies:
       typescript: 5.9.3
@@ -56754,7 +56754,7 @@ snapshots:
       schema-utils: 3.3.0
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
     optionalDependencies:
-      file-loader: 6.2.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+      file-loader: 6.2.0(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
 
   url-loader@4.1.1(file-loader@6.2.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
     dependencies:
@@ -57559,7 +57559,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.12: {}
 
-  vue-component-type-helpers@3.2.5: {}
+  vue-component-type-helpers@3.2.6: {}
 
   vue-docgen-api@4.75.1(vue@3.5.27(typescript@5.9.3)):
     dependencies:
