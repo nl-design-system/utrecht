@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 13.0.3
+
+### Patch Changes
+
+- 8946412: chore: svg inline styles van het icon verplaatst naar individuele attributes als mitigatie van CSP errors
+- 4d1339f: Removed date-fns from the (optional) peer dependencies as it's not directly used.
+- Updated dependencies [555aa6a]
+  - @utrecht/calendar-react@1.1.1
+
 ## 13.0.2
 
 ### Patch Changes
