@@ -1,0 +1,195 @@
+{
+  "type": "CHECK",
+  "identifier": "tGriDwHSMX797FLDd",
+  "name": "Voorbeeld toelichtingen",
+  "version": 1,
+  "modifiedDate": "2024-09-05T08:34:04.474Z",
+  "content": {
+    "identifier": "tGriDwHSMX797FLDd",
+    "type": "CHECK",
+    "rows": [
+      {
+        "type": "Question",
+        "referencedId": "_73f5234c-da5f-4b4f-9725-7974d72113de"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_20536468-c96d-41b3-a391-27eba8ddac65"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_396c8ee8-c798-4b3a-8162-894910a1aabe"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_b665cb4f-aa4c-4a4b-b5af-b073787992a6"
+      },
+      {
+        "type": "Question",
+        "referencedId": "_5819a0b9-3eec-4897-baca-84412097ba85"
+      }
+    ],
+    "questions": [
+      {
+        "id": "_73f5234c-da5f-4b4f-9725-7974d72113de",
+        "type": "BOOLEAN",
+        "questionText": "Vraag met toelichting",
+        "canBeReUsed": false,
+        "explanation": {
+          "content": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n",
+          "position": "bottom",
+          "showImmediately": false,
+          "extraContent": ""
+        }
+      },
+      {
+        "id": "_20536468-c96d-41b3-a391-27eba8ddac65",
+        "type": "BOOLEAN",
+        "questionText": "Vraag met toelichting, direct getoond.",
+        "canBeReUsed": false,
+        "explanation": {
+          "content": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n",
+          "position": "bottom",
+          "showImmediately": true,
+          "extraContent": ""
+        }
+      },
+      {
+        "id": "_396c8ee8-c798-4b3a-8162-894910a1aabe",
+        "type": "BOOLEAN",
+        "questionText": "Vraag met toelichting direct getoond + gebruik 'lees meer'",
+        "canBeReUsed": false,
+        "explanation": {
+          "content": "<p><strong>Lorem Ipsum</strong> is simply dummy text of the printing and typesetting industry.</p>\n",
+          "position": "bottom",
+          "showImmediately": true,
+          "extraContent": "<p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>\n"
+        }
+      },
+      {
+        "id": "_b665cb4f-aa4c-4a4b-b5af-b073787992a6",
+        "type": "LIST_MULTIPLE",
+        "questionText": "Lijstvraag met toelichtingen bij antwoordopties, direct tonen",
+        "canBeReUsed": false,
+        "options": [
+          {
+            "id": 1,
+            "value": "Amsterdam",
+            "explanation": {
+              "content": "<p>Amsterdam is de hoofdstad van Amsterdam</p>\n",
+              "position": "bottom",
+              "showImmediately": true,
+              "extraContent": ""
+            }
+          },
+          {
+            "id": 2,
+            "value": "Den Haag",
+            "explanation": {
+              "content": "<p>In Den Haag zetelt de regering.</p>\n",
+              "position": "bottom",
+              "showImmediately": true,
+              "extraContent": ""
+            }
+          },
+          {
+            "id": 3,
+            "value": "Rotterdam",
+            "explanation": {
+              "content": "<p>Rotterdam heeft de grootste haven van Europa.</p>\n",
+              "position": "bottom",
+              "showImmediately": true,
+              "extraContent": ""
+            }
+          }
+        ]
+      },
+      {
+        "id": "_5819a0b9-3eec-4897-baca-84412097ba85",
+        "type": "LIST_SINGLE",
+        "questionText": "Lijstvraag met een antwoordoptie met toelichting, niet direct getoond",
+        "displayType": "List",
+        "canBeReUsed": false,
+        "options": [
+          {
+            "id": 1,
+            "value": "blauw"
+          },
+          {
+            "id": 2,
+            "value": "rood"
+          },
+          {
+            "id": 3,
+            "value": "groen"
+          },
+          {
+            "id": 4,
+            "value": "anders",
+            "explanation": {
+              "content": "<p>Kies anders wanneer een andere kleur je lievelingskleur is.</p>\n",
+              "position": "bottom",
+              "showImmediately": false,
+              "extraContent": ""
+            }
+          }
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "id": "6570c1a1-1f28-4ebd-90f2-69a0bf6922e8",
+        "title": "ja",
+        "name": "Ja",
+        "type": "check",
+        "content": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_73f5234c-da5f-4b4f-9725-7974d72113de": true,
+              "_20536468-c96d-41b3-a391-27eba8ddac65": true,
+              "_396c8ee8-c798-4b3a-8162-894910a1aabe": true,
+              "_b665cb4f-aa4c-4a4b-b5af-b073787992a6": 1,
+              "_5819a0b9-3eec-4897-baca-84412097ba85": 1
+            }
+          }
+        ],
+        "makesEndToRegelhulp": false,
+        "canBeUsedAsCondition": false
+      },
+      {
+        "id": "8638c02d-17a1-498a-9d4f-95ae27b510fe",
+        "title": "nee",
+        "name": "nee",
+        "type": "check",
+        "content": "",
+        "answercombinations": [
+          {
+            "id": 1,
+            "answers": {
+              "_73f5234c-da5f-4b4f-9725-7974d72113de": false
+            }
+          },
+          {
+            "id": 2,
+            "answers": {
+              "_20536468-c96d-41b3-a391-27eba8ddac65": false
+            }
+          },
+          {
+            "id": 3,
+            "answers": {
+              "_396c8ee8-c798-4b3a-8162-894910a1aabe": false
+            }
+          }
+        ],
+        "makesEndToRegelhulp": false,
+        "canBeUsedAsCondition": false
+      }
+    ],
+    "subTables": [],
+    "trueLabel": "ja",
+    "falseLabel": "nee"
+  }
+}
