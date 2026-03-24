@@ -28,7 +28,7 @@ import FooterContact from '../prototype-src/contactformulier/FooterContactFormul
 import IntroductieContact from '../prototype-src/contactformulier/IntroductieContactFormulier.js';
 import urls from '../prototype-src/variables.js';
 import HoofdNavigatie from '../prototype-src/webpaginablokken/HoofdNavigatie.js';
-import KTO from '../prototype-src/webpaginablokken/KTO.js';
+import KlantTevredenheidsOnderzoek from '../prototype-src/webpaginablokken/KTO.js';
 import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
@@ -296,7 +296,7 @@ export const Volgorde1: Story = {
                     },
                   ]}
                 />
-                <KTO />
+                <KlantTevredenheidsOnderzoek />
               </section>
             </main>
           </PageContent>
@@ -347,7 +347,7 @@ export const Volgorde2: Story = {
                 <UnorderedList>
                   <UnorderedListItem>PLACEHOLDER</UnorderedListItem>
                 </UnorderedList>
-                <KTO />
+                <KlantTevredenheidsOnderzoek />
               </section>
             </main>
           </PageContent>
