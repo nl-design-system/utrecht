@@ -32,6 +32,36 @@ import KlantTevredenheidsOnderzoek from '../prototype-src/webpaginablokken/KTO.j
 import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
+// Reusable BreadcrumbNav component
+const CommonBreadcrumbNav = () => (
+  <BreadcrumbNav>
+    <BreadcrumbNavLink href="https://www.utrecht.nl/">
+      <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
+      Home
+    </BreadcrumbNavLink>
+    <BreadcrumbNavLink href="https://loket.digitaal.utrecht.nl/nl">
+      <BreadcrumbNavSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbNavSeparator>
+      Online Loket
+    </BreadcrumbNavLink>
+    <BreadcrumbNavLink href="https://loket.digitaal.utrecht.nl/nl/producten">
+      <BreadcrumbNavSeparator>
+        <UtrechtIconChevronRight />
+      </BreadcrumbNavSeparator>
+      Producten
+    </BreadcrumbNavLink>
+  </BreadcrumbNav>
+);
+
+// Reusable Footer with Chatbot component
+const FooterWithChatbot = () => (
+  <>
+    <FooterContact />
+    <Chatbot />
+  </>
+);
+
 const meta = {
   title: 'Prototypes/Volgorde/Navigeren',
   id: 'volgorde-bijstand',
@@ -107,24 +137,7 @@ export const Volgorde1: Story = {
           <PageHeaderWithSearch />
           <HoofdNavigatie />
           <PageContent>
-            <BreadcrumbNav>
-              <BreadcrumbNavLink href="https://www.utrecht.nl/">
-                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
-                Home
-              </BreadcrumbNavLink>
-              <BreadcrumbNavLink href="https://loket.digitaal.utrecht.nl/nl">
-                <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronRight />
-                </BreadcrumbNavSeparator>
-                Online Loket
-              </BreadcrumbNavLink>
-              <BreadcrumbNavLink href="https://loket.digitaal.utrecht.nl/nl/producten">
-                <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronRight />
-                </BreadcrumbNavSeparator>
-                Producten
-              </BreadcrumbNavLink>
-            </BreadcrumbNav>
+            <CommonBreadcrumbNav />
             <main>
               <section>
                 <Heading1>Bijstand aanvragen</Heading1>
@@ -300,8 +313,7 @@ export const Volgorde1: Story = {
               </section>
             </main>
           </PageContent>
-          <FooterContact />
-          <Chatbot />
+          <FooterWithChatbot />
         </Page>
       </Surface>
     );
@@ -316,24 +328,7 @@ export const Volgorde2: Story = {
           <PageHeaderWithSearch />
           <HoofdNavigatie />
           <PageContent>
-            <BreadcrumbNav>
-              <BreadcrumbNavLink href="https://www.utrecht.nl/">
-                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
-                Home
-              </BreadcrumbNavLink>
-              <BreadcrumbNavLink href="https://loket.digitaal.utrecht.nl/nl">
-                <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronRight />
-                </BreadcrumbNavSeparator>
-                Online Loket
-              </BreadcrumbNavLink>
-              <BreadcrumbNavLink href="https://loket.digitaal.utrecht.nl/nl/producten">
-                <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronRight />
-                </BreadcrumbNavSeparator>
-                Producten
-              </BreadcrumbNavLink>
-            </BreadcrumbNav>
+            <CommonBreadcrumbNav />
             <main>
               <section>
                 <Heading1>PLACEHOLDER Bijstand aanvragen</Heading1>
@@ -351,8 +346,7 @@ export const Volgorde2: Story = {
               </section>
             </main>
           </PageContent>
-          <FooterContact />
-          <Chatbot />
+          <FooterWithChatbot />
         </Page>
       </Surface>
     );
