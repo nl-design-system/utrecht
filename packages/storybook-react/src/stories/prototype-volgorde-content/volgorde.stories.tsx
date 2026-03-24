@@ -20,7 +20,7 @@ import {
   UnorderedListItem,
 } from '@utrecht/component-library-react/dist/css-module';
 import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import React, { useState } from 'react';
+import React from 'react';
 import '../prototype-src/index.css';
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js';
 import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
