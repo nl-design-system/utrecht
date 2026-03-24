@@ -6501,6 +6501,12 @@ importers:
       '@utrecht/figure-css':
         specifier: workspace:*
         version: link:../../components/figure
+      '@utrecht/flo-legal-decision-tree-client':
+        specifier: workspace:*
+        version: link:../flolegal-decision-tree-client
+      '@utrecht/flolegal-decision-tree-css':
+        specifier: workspace:*
+        version: link:../../components/flo-legal-decision-tree
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../../components/focus-ring
