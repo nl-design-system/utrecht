@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 // import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
-import afvalBeslisboomRegelhulpData from './FloDecision/afval-beslisboom-regelhulp.json';
-import { DataSourceContent, FloDecision } from './FloDecision/index.js';
-import voorbeeldToelichtingenData from './FloDecision/voorbeeld-toelichtingen-data.json';
+import afvalBeslisboomRegelhulpData from '../../../storybook-css/src/FloDecision/afval-beslisboom-regelhulp.json';
+import { DataSourceContent, FloDecision } from '../../../storybook-css/src/FloDecision/index.js';
+import voorbeeldToelichtingenData from '../../../storybook-css/src/FloDecision/voorbeeld-toelichtingen-data.json';
 interface FloDecisionStoryProps extends React.ComponentProps<typeof FloDecision> {
   dataSource: {
     content: DataSourceContent;
