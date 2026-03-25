@@ -75,12 +75,9 @@ Het toepassen van de gemeentelijke huisstijl in samenwerking met partners wordt 
 
 [![Voorbeeld logo bij samenwerking](https://huisstijl.utrecht.nl/fileadmin/_processed_/9/4/csm_logo-bij-samenwerking-gemeente-utrecht_e5415498e6.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/logo/logo-bij-samenwerking-gemeente-utrecht.jpg)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

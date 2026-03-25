@@ -61,12 +61,9 @@ In onze beeldbank staan foto's die aan de eisen van de huisstijl voldoen en bove
 
 [![Voorbeelden van fotografie in de huisstijl](https://huisstijl.utrecht.nl/fileadmin/_processed_/6/d/csm_huisstijl-voorbeeld-fotos_bdfe95bc07.png)](https://huisstijl.utrecht.nl/fileadmin/_processed_/6/d/csm_huisstijl-voorbeeld-fotos_6e22686872.png)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

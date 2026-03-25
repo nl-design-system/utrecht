@@ -332,12 +332,9 @@ Alle kleuren, behalve geel, zwart en wit mogen worden gebruikt voor een [kleurba
 
 Kleuren kunnen in gradaties van 10% gebruikt worden in illustraties en achtergronden.
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

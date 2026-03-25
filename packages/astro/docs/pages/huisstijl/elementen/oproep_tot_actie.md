@@ -23,12 +23,9 @@ Om je communicatieboodschap kracht bij te zetten, kun je een oproep tot actie-el
 
 [![Voorbeelden van oproep tot actie](https://huisstijl.utrecht.nl/fileadmin/_processed_/0/7/csm_huisstijl-voorbeeld-oproep-tot-actie_4987835589.png)](https://huisstijl.utrecht.nl/fileadmin/_processed_/0/7/csm_huisstijl-voorbeeld-oproep-tot-actie_2ab4a71953.png)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

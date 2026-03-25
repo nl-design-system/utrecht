@@ -34,12 +34,9 @@ In Word-documenten gebruiken we het lettertype Arial.
 
 [![Meer voorbeelden van grafieken en diagrammen](https://huisstijl.utrecht.nl/fileadmin/_processed_/e/e/csm_huisstijl-voorbeeld-grafieken-en-diagrammen2_042145decc.png)](https://huisstijl.utrecht.nl/fileadmin/_processed_/e/e/csm_huisstijl-voorbeeld-grafieken-en-diagrammen2_04da70e29e.png)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

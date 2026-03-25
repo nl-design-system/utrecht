@@ -32,12 +32,9 @@ Als de infographic een zelfstandig document is:
 
 [![Voorbeelden van infographics gemeente Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/3/d/csm_infographics-gemeente-utrecht_539e39bd4a.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/infographic/infographics-gemeente-utrecht.jpg)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

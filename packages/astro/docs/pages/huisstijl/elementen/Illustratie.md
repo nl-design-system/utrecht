@@ -45,12 +45,9 @@ Mist u een element in de skyline? Neem contact op via [huisstijl@utrecht.nl](mai
 
 [![Voorbeelden skyline gemeente Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/5/6/csm_skyline-gemeente-utrecht_113c25ba09.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/middelen/skyline-gemeente-utrecht.jpg)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

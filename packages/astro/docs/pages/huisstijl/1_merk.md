@@ -92,12 +92,9 @@ Met partners in de stad is er voor de stad de 'stadsstijl' ontwikkeld. Kijk voor
 
 Uitzondering: bij langdurige of permanente samenwerking kan gekozen worden voor een nieuw merk. Bijvoorbeeld wanneer de identiteit afwijkend is van de gemeentelijke missie en waarden of de doelgroep vraagt om een andere benadering. Dit gebeurt altijd in overleg met huisstijl.
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

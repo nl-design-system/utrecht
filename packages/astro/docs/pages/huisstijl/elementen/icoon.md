@@ -26,12 +26,9 @@ Gebruik deze iconen uitsluitend voor communicatiemiddelen van de gemeente.
 
 [![Voorbeelden van iconen gemeente Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/0/4/csm_iconen-gemeente-utrecht_e2621b9225.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/icoon/iconen-gemeente-utrecht.jpg)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)

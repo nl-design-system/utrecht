@@ -96,12 +96,9 @@ Er zijn 4 voorbeeldfilmpjes: met introscherm, naambalk, titel en eindscherm.
 
 [Download voorbeeldfilmpjes (.zip, 6,8 MB)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/film/Voorbeeld.zip)
 
----
+## Hulp en contact Huijsstijl
 
-## Hulp en contact – Huisstijl
-
-**Telefoon:** [14 030](tel:14030)
-Maandag, dinsdag en donderdag 9.00 – 17.00 uur
-Woensdag en vrijdag 9.00 – 13.00 uur
-
-**E-mail:** [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
+- Telefonisch: [14 030](tel:14030)
+  - Maandag, dinsdag en donderdag: 9.00 – 17.00 uur
+  - Woensdag en vrijdag: 9.00 – 13.00 uur
+- E-mail: [huisstijl@utrecht.nl](mailto:huisstijl@utrecht.nl)
