@@ -195,47 +195,63 @@ const UlOlUlNestingHtmlContentComponent = () => (
     htmlContent={true}
     items={[
       {
-        children: 'Dit is een ongeordend lijstitem op het hoofdniveau.',
-      },
-      {
         children: (
           <>
             Dit ongeordende lijstitem bevat een geordende lijst:
             <ol>
-              <li>Dit is een geordend lijstitem.</li>
               <li>
-                Dit geordende lijstitem bevat weer een ongeordende lijst:
+                Dit is een geordend lijstitem.
                 <ul>
-                  <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
-                  <li>Nog een ongeordend lijstitem in de geneste lijst.</li>
+                  <li>
+                    Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.
+                    <ul>
+                      <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
+                    </ul>
+                  </li>
                 </ul>
               </li>
               <li>
-                Nog een geordend lijstitem.
-                <ol>
-                  <li>Dit is een geordend lijstitem.</li>
+                Dit geordende lijstitem bevat weer een ongeordende lijst:
+                <ul>
                   <li>
-                    Dit geordende lijstitem bevat weer een ongeordende lijst:
-                    <ul>
-                      <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
-                      <li>Nog een ongeordend lijstitem in de geneste lijst.</li>
-                    </ul>
-                  </li>
-                  <li>
-                    Nog een geordend lijstitem.
+                    Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.
                     <ol>
-                      <li>Dit is een geordend lijstitem.</li>
                       <li>
                         Dit geordende lijstitem bevat weer een ongeordende lijst:
                         <ul>
                           <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
-                          <li>Nog een ongeordend lijstitem in de geneste lijst.</li>
                         </ul>
                       </li>
-                      <li>Nog een geordend lijstitem.</li>
+                      <li>
+                        Nog een geordend lijstitem.
+                        <ul>
+                          <li>Dit is een geordend lijstitem.</li>
+                          <li>
+                            Dit geordende lijstitem bevat weer een ongeordende lijst:
+                            <ul>
+                              <li>
+                                Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.
+                                <ul>
+                                  <li>
+                                    Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.
+                                    <ul>
+                                      <li>
+                                        Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.
+                                        <ul>
+                                          <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
+                                        </ul>
+                                      </li>
+                                    </ul>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
                     </ol>
                   </li>
-                </ol>
+                </ul>
               </li>
             </ol>
           </>
