@@ -8,6 +8,7 @@ import anatomyDocs from '@utrecht/unordered-list-css/docs/anatomy.nl.md?raw';
 import htmlDocs from '@utrecht/unordered-list-css/docs/technology-html.nl.md?raw';
 import tokensDefinition from '@utrecht/unordered-list-css/src/tokens.json';
 import React from 'react';
+import { OrderedListStory } from './OrderedList';
 import { UnorderedListStory } from './UnorderedList';
 import { designTokenStory } from './design-token-story';
 
@@ -106,6 +107,157 @@ export const Nested: Story = {
   args: {
     items: createNestedItems(1, 8),
   },
+};
+
+// Custom component for UL > OL > UL nesting
+const UlOlUlOlNestingComponent = () => (
+  <UnorderedListStory
+    items={[
+      {
+        children: 'Dit is een ongeordend lijstitem op het hoofdniveau.',
+      },
+      {
+        children: (
+          <>
+            Dit ongeordende lijstitem bevat een geordende lijst:
+            <OrderedListStory
+              items={[
+                {
+                  children: 'Dit is een geordend lijstitem.',
+                },
+                {
+                  children: (
+                    <>
+                      Dit geordende lijstitem bevat weer een ongeordende lijst:
+                      <UnorderedListStory
+                        items={[
+                          {
+                            children: 'Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.',
+                          },
+                          {
+                            children: (
+                              <>
+                                Dit ongeordende lijstitem bevat een geordende lijst:
+                                <OrderedListStory
+                                  items={[
+                                    {
+                                      children: 'Dit is een geordend lijstitem.',
+                                    },
+                                    {
+                                      children: (
+                                        <>
+                                          Dit geordende lijstitem bevat weer een ongeordende lijst:
+                                          <UnorderedListStory
+                                            items={[
+                                              {
+                                                children:
+                                                  'Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.',
+                                              },
+                                            ]}
+                                          />
+                                        </>
+                                      ),
+                                    },
+                                  ]}
+                                />
+                              </>
+                            ),
+                          },
+                        ]}
+                      />
+                    </>
+                  ),
+                },
+              ]}
+            />
+          </>
+        ),
+      },
+    ]}
+  />
+);
+
+export const NestingOrderedAndUnorderedLists: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Geneste lijsten kunnen ook van verschillende types zijn, zoals een ongeordende lijst binnen een geordende lijst binnen een ongeordende lijst. Zolang de juiste HTML-structuur wordt gevolgd, zal het component de juiste styling toepassen op elk niveau.',
+      },
+    },
+  },
+  render: () => <UlOlUlOlNestingComponent />,
+};
+
+// HTML Content version for mixed nesting
+const UlOlUlNestingHtmlContentComponent = () => (
+  <UnorderedListStory
+    htmlContent={true}
+    items={[
+      {
+        children: 'Dit is een ongeordend lijstitem op het hoofdniveau.',
+      },
+      {
+        children: (
+          <>
+            Dit ongeordende lijstitem bevat een geordende lijst:
+            <ol>
+              <li>Dit is een geordend lijstitem.</li>
+              <li>
+                Dit geordende lijstitem bevat weer een ongeordende lijst:
+                <ul>
+                  <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
+                  <li>Nog een ongeordend lijstitem in de geneste lijst.</li>
+                </ul>
+              </li>
+              <li>
+                Nog een geordend lijstitem.
+                <ol>
+                  <li>Dit is een geordend lijstitem.</li>
+                  <li>
+                    Dit geordende lijstitem bevat weer een ongeordende lijst:
+                    <ul>
+                      <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
+                      <li>Nog een ongeordend lijstitem in de geneste lijst.</li>
+                    </ul>
+                  </li>
+                  <li>
+                    Nog een geordend lijstitem.
+                    <ol>
+                      <li>Dit is een geordend lijstitem.</li>
+                      <li>
+                        Dit geordende lijstitem bevat weer een ongeordende lijst:
+                        <ul>
+                          <li>Dit is weer een ongeordend lijstitem binnen het geordende lijstitem.</li>
+                          <li>Nog een ongeordend lijstitem in de geneste lijst.</li>
+                        </ul>
+                      </li>
+                      <li>Nog een geordend lijstitem.</li>
+                    </ol>
+                  </li>
+                </ol>
+              </li>
+            </ol>
+          </>
+        ),
+      },
+    ]}
+  ></UnorderedListStory>
+);
+
+export const NestingOrderedAndUnorderedListsWithHtmlContent: Story = {
+  args: {
+    htmlContent: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Geneste lijsten met verschillende types kunnen ook worden weergegeven met de htmlContent modifier. Dit is handig wanneer u alleen controle heeft over de buitenste `<ul>` template en geen BEM class names kunt toevoegen aan de geneste elementen.',
+      },
+    },
+  },
+  render: () => <UlOlUlNestingHtmlContentComponent />,
 };
 
 const ContainerWithCenteredText: Decorator = (Story) => <div style={{ textAlign: 'center' }}>{Story()}</div>;
