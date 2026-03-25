@@ -10,18 +10,7 @@ order: 2
 
 De huisstijlelementen zijn de belangrijkste visuele vertegenwoordigers van onze huisstijl. De juiste inzet van deze elementen bij alle communicatiemiddelen zorgt voor herkenbaarheid én duidelijkheid.
 
-De huisstijlementen vindt u in het menu van deze pagina:
-
-- [Film](https://huisstijl.utrecht.nl/basiselementen/film)
-- [Foto](https://huisstijl.utrecht.nl/basiselementen/foto)
-- [Grafiek, diagram en tabel](https://huisstijl.utrecht.nl/huisstijlelementen/grafiek-diagram-en-tabel)
-- [Icoon](https://huisstijl.utrecht.nl/huisstijlelementen/icoon)
-- [Illustratie](https://huisstijl.utrecht.nl/huisstijlelementen/illustratie)
-- [Infographic](https://huisstijl.utrecht.nl/basiselementen/infographic)
-- [Kleur](https://huisstijl.utrecht.nl/basiselementen/kleur)
-- [Lettertype](https://huisstijl.utrecht.nl/basiselementen/lettertype)
-- [Logo](https://huisstijl.utrecht.nl/basiselementen/logo)
-- [Oproep tot actie](https://huisstijl.utrecht.nl/huisstijlelementen/oproep-tot-actie)
+De huisstijlementen vindt u op onze [elementen pagina](./elementen):
 
 ## Aanvullende stijlen
 

@@ -1,6 +1,6 @@
 ---
 title: Kleur
-description: De basiskleuren van Utrecht zijn: rood, wit, zwart, geel en blauw.
+description: De basiskleuren van Utrecht zijn rood, wit, zwart, geel en blauw.
 order: 1
 ---
 
