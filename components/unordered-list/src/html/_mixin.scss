@@ -17,7 +17,8 @@
     @include utrecht-unordered-list__item;
   }
 
-  ul li::marker {
+  /* Child combinator (>) to prevent styling nested ordered lists */
+  ul > li::marker {
     @include utrecht-unordered-list__marker;
   }
 
