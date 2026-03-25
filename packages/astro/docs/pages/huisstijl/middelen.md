@@ -18,8 +18,6 @@ Op onderstaande middelen is de gemeentelijke huisstijl van toepassing.
 - [Posters, flyers, folders en brochures](#posters-flyers-folders-en-brochures)
 - [Social media](#social-media)
 
----
-
 ## Advertenties (print)
 
 Voor advertenties in kranten en huis-aan-huisbladen is er een vaste opmaak binnen de huisstijl.
@@ -31,8 +29,6 @@ Kenmerken:
 - Het logolint wordt altijd toegepast, gescheiden door een dunne lijn van 0,5 pt in 30% zwart.
 
 [![Voorbeelden advertenties gemeente Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/7/9/csm_voorbeelden-advertenties-gemeente-utrecht_1b3d9fd14d.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/middelen/voorbeelden-advertenties-gemeente-utrecht.jpg)
-
----
 
 ## Binnenbewegwijzering
 
@@ -53,8 +49,6 @@ De borden voor binnenbewegwijzering worden vervaardigd door een vaste leverancie
 
 [![Voorbeelden van binnenbewegwijzering](https://huisstijl.utrecht.nl/fileadmin/_processed_/7/9/csm_binnenbewegwijzering-gemeente-utrecht_05365294a6.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/middelen/binnenbewegwijzering-gemeente-utrecht.jpg)
 
----
-
 ## Bouwborden
 
 Voor het ontwerp van bouwborden gelden de principes van:
@@ -70,8 +64,6 @@ Specifieke richtlijnen voor bouwborden:
 - Rechtsonder kan een directe URL worden geplaatst.
 
 [![Voorbeeld van bouwbord gemeente Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/9/2/csm_voorbeeld-bouwbord-gemeente-utrecht_1c95df621a.jpg)](https://huisstijl.utrecht.nl/fileadmin/_processed_/9/2/csm_voorbeeld-bouwbord-gemeente-utrecht_00dffb233d.jpg)
-
----
 
 ## Campagnes
 
@@ -100,8 +92,6 @@ Communicatieadviseur en campagneadviseur van de gemeente bepalen samen of een ca
 
 [![Voorbeeld campagne Toekomstgesprekken](https://huisstijl.utrecht.nl/fileadmin/_processed_/1/e/csm_huisstijl-voorbeeld-campagne-toekomstgesprekken_c514aa16e6.png)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/huisstijl-voorbeeld-campagne-toekomstgesprekken.png)
 
----
-
 ## Documenten, brieven, presentaties
 
 ### Correspondentiemiddelen
@@ -111,8 +101,6 @@ Alle correspondentiemiddelen zoals brieven, memo's, rapporten, agenda's en wijkb
 ### Presentaties in PowerPoint
 
 Voor PowerPointpresentaties zijn er sjablonen beschikbaar met opmaak in de huisstijl. Binnen de gemeente Utrecht zijn de sjablonen automatisch zichtbaar bij het opstarten van PowerPoint.
-
----
 
 ## Posters, flyers, folders en brochures
 
@@ -153,8 +141,6 @@ Bij brochureomslagen worden de bovenste 3 banen van de verticale verdeling wit g
 [![Voorbeeld poster Welkom bij Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/0/c/csm_huisstijl-voorbeeld-poster-welkom-bij-utrecht_d3f3d1b319.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/huisstijl-voorbeeld-poster-welkom-bij-utrecht.jpg)
 
 [![Voorbeelden posters gemeente Utrecht](https://huisstijl.utrecht.nl/fileadmin/_processed_/8/b/csm_posters-gemeente-utrecht_fea109d70c.jpg)](https://huisstijl.utrecht.nl/fileadmin/uploads/documenten/zz-huisstijl/poster/posters-gemeente-utrecht.jpg)
-
----
 
 ## Social media
 

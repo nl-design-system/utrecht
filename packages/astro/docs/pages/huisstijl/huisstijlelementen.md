@@ -10,7 +10,7 @@ order: 2
 
 De huisstijlelementen zijn de belangrijkste visuele vertegenwoordigers van onze huisstijl. De juiste inzet van deze elementen bij alle communicatiemiddelen zorgt voor herkenbaarheid én duidelijkheid.
 
-De huisstijlementen vindt u op onze [elementen pagina](./elementen):
+De huisstijlementen vindt u op onze [elementen pagina](./elementen).
 
 ## Aanvullende stijlen
 
