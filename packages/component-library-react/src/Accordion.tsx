@@ -67,7 +67,7 @@ export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   onActivate?: Function;
   onButtonFocus?: Function;
   onButtonBlur?: Function;
-  buttonRef?: RefObject<HTMLButtonElement>;
+  buttonRef?: RefObject<HTMLButtonElement | null>;
   icon?: ReactNode;
 }
 
@@ -181,9 +181,9 @@ export const Accordion = forwardRef(
 
 Accordion.displayName = 'Accordion';
 
-export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | undefined>) => {
+export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | null>) => {
   // const sections: AccordionSectionProviderProps[] = [];
-  const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
+  const refs: RefObject<HTMLDivElement | null>[] = sections.map((_) => useRef<HTMLDivElement>(null));
   const buttonRefs = sections.map((_) => useRef<HTMLButtonElement>(null));
 
   return {
@@ -241,7 +241,7 @@ export interface AccordionProviderProps
 }
 
 export const AccordionProvider = ({ sections, icon, heading, headingLevel }: AccordionProviderProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const { refs, buttonRefs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } =
     useAccordion(sections, ref);
 
