@@ -5896,8 +5896,8 @@ importers:
         version: link:../../proprietary/design-tokens
     devDependencies:
       '@storybook/theming':
-        specifier: 7.6.21
-        version: 7.6.21(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+        specifier: 8.6.15
+        version: 8.6.15(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))
       remark:
         specifier: 15.0.1
         version: 15.0.1
@@ -6356,7 +6356,7 @@ importers:
         version: 0.2.4
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
+        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@19.2.4)
@@ -7508,7 +7508,7 @@ importers:
     devDependencies:
       '@gemeente-denhaag/process-steps':
         specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
+        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
       '@gemeente-denhaag/step-marker':
         specifier: 0.0.1-alpha.123
         version: 0.0.1-alpha.123(react@19.2.4)
@@ -16391,6 +16391,10 @@ packages:
     resolution: {integrity: sha512-BSeNnyus75C4//NQ9gQt1/csTXyo/8Sb+afLAkzAptFuMsod9HFokGNudZpi/oQV73hnVK+sR+5PVRMd+Dr7YQ==}
     engines: {node: '>=12'}
 
+  cliui@9.0.1:
+    resolution: {integrity: sha512-k7ndgKhwoQveBL+/1tqGJYNz097I7WOvwbmmU2AR5+magtbjPWQTS1C5vzGkBC8Ym8UWRzfKUzUUqFLypY4Q+w==}
+    engines: {node: '>=20'}
+
   clone-deep@4.0.1:
     resolution: {integrity: sha512-neHB9xuzh/wk0dIHweyAXv2aPGZIVk3pLMe+/RNzINf17fe0OG96QroktYAUm7SM1PBnzTabaLboqqxDyMU+SQ==}
     engines: {node: '>=6'}
@@ -17104,8 +17108,8 @@ packages:
     engines: {node: '>=12'}
     hasBin: true
 
-  d3-geo@3.1.0:
-    resolution: {integrity: sha512-JEo5HxXDdDYXCaWdwLRt79y7giK8SbhZJbFWXqbRTolCHFI5jRqteLzCsq51NKbUoX0PjBVSohxrx+NoOUujYA==}
+  d3-geo@3.1.1:
+    resolution: {integrity: sha512-637ln3gXKXOwhalDzinUgY83KzNWZRKbYubaG+fGVuc/dxO64RRljtCTnf5ecMyE1RIdtqpkVcq0IbtU2S8j2Q==}
     engines: {node: '>=12'}
 
   d3-hierarchy@3.1.2:
@@ -18828,10 +18832,6 @@ packages:
     resolution: {integrity: sha512-DyFP3BM/3YHTQOCUL/w0OZHR0lpKeGrxotcHWcqNEdnltqFwXVfhEBQ94eIo34AfQpo0rGki4cyIiftY06h2Fg==}
     engines: {node: 6.* || 8.* || >= 10.*}
 
-  get-east-asian-width@1.2.0:
-    resolution: {integrity: sha512-2nk+7SIVb14QrgXFHcm84tD4bKQz0RxPuMT8Ag5KPOq7J5fEmAg0UbXdTOSHqNuHSU28k55qnceesxXRZGzKWA==}
-    engines: {node: '>=18'}
-
   get-east-asian-width@1.4.0:
     resolution: {integrity: sha512-QZjmEOC+IT1uk6Rx0sX22V6uHWVwbdbxf1faPqJ1QhLdGgsRGCZoyaQBm/piRdJy/D2um6hM1UP7ZEeQ4EkP+Q==}
     engines: {node: '>=18'}
@@ -20487,6 +20487,9 @@ packages:
 
   json-stringify-pretty-compact@3.0.0:
     resolution: {integrity: sha512-Rc2suX5meI0S3bfdZuA7JMFBGkJ875ApfVyq2WHELjBiiG22My/l7/8zPpH/CfFVQHuVLd8NLR0nv6vi0BYYKA==}
+
+  json-stringify-pretty-compact@4.0.0:
+    resolution: {integrity: sha512-3CNZ2DnrpByG9Nqj6Xo8vqbjT4F6N+tb4Gb28ESAZjYZ5yqvmc56J+/kuIwkaAMOyblTQhUW7PxMkUb8Q36N3Q==}
 
   json5@1.0.2:
     resolution: {integrity: sha512-g1MWMLBiz8FKi1e4w0UyVL3w+iJceWAFBAaBnnGKOpNa5f8TLktkbre1+s6oICydWAm+HRUGTmI+//xv2hvXYA==}
@@ -26837,8 +26840,14 @@ packages:
   vega-event-selector@3.0.1:
     resolution: {integrity: sha512-K5zd7s5tjr1LiOOkjGpcVls8GsH/f2CWCrWcpKy74gTCp+llCdwz0Enqo013ZlGaRNjfgD/o1caJRt3GSaec4A==}
 
+  vega-event-selector@4.0.0:
+    resolution: {integrity: sha512-CcWF4m4KL/al1Oa5qSzZ5R776q8lRxCj3IafCHs5xipoEHrkgu1BWa7F/IH5HrDNXeIDnqOpSV1pFsAWRak4gQ==}
+
   vega-expression@5.1.0:
     resolution: {integrity: sha512-u8Rzja/cn2PEUkhQN3zUj3REwNewTA92ExrcASNKUJPCciMkHJEjESwFYuI6DWMCq4hQElQ92iosOAtwzsSTqA==}
+
+  vega-expression@6.1.0:
+    resolution: {integrity: sha512-hHgNx/fQ1Vn1u6vHSamH7lRMsOa/yQeHGGcWVmh8fZafLdwdhCM91kZD9p7+AleNpgwiwzfGogtpATFaMmDFYg==}
 
   vega-force@4.2.0:
     resolution: {integrity: sha512-aE2TlP264HXM1r3fl58AvZdKUWBNOGkIvn4EWyqeJdgO2vz46zSU7x7TzPG4ZLuo44cDRU5Ng3I1eQk23Asz6A==}
@@ -26855,8 +26864,8 @@ packages:
   vega-hierarchy@4.1.1:
     resolution: {integrity: sha512-h5mbrDtPKHBBQ9TYbvEb/bCqmGTlUX97+4CENkyH21tJs7naza319B15KRK0NWOHuhbGhFmF8T0696tg+2c8XQ==}
 
-  vega-interpreter@1.0.5:
-    resolution: {integrity: sha512-po6oTOmeQqr1tzTCdD15tYxAQLeUnOVirAysgVEemzl+vfmvcEP7jQmlc51jz0jMA+WsbmE6oJywisQPu/H0Bg==}
+  vega-interpreter@1.2.1:
+    resolution: {integrity: sha512-EMHLGxJ+SWfh1K/fHDRlHEZtLA/2ZNAXItYb5e8CxuAIm/Ha/3DHX/8VlvbTGIciUpuwmcKx4tVhJWlKreQ/Yw==}
 
   vega-label@1.2.1:
     resolution: {integrity: sha512-n/ackJ5lc0Xs9PInCaGumYn2awomPjJ87EMVT47xNgk2bHmJoZV1Ve/1PUM6Eh/KauY211wPMrNp/9Im+7Ripg==}
@@ -26867,6 +26876,13 @@ packages:
     hasBin: true
     peerDependencies:
       vega: ^5.24.0
+
+  vega-lite@6.4.2:
+    resolution: {integrity: sha512-Mv2PaRIpijz256LM0NdOJd9Md8cqyrXina54xW6Qp865YfY502zlXGUst+W/XznVwISGfatt0yLZuDqCUbBDuw==}
+    engines: {node: '>=20'}
+    hasBin: true
+    peerDependencies:
+      vega: ^6.0.0
 
   vega-loader@4.5.1:
     resolution: {integrity: sha512-qy5x32SaT0YkEujQM2yKqvLGV9XWQ2aEDSugBFTdYzu/1u4bxdUSRDREOlrJ9Km3RWIOgFiCkobPmFxo47SKuA==}
@@ -26898,8 +26914,8 @@ packages:
   vega-statistics@1.9.0:
     resolution: {integrity: sha512-GAqS7mkatpXcMCQKWtFu1eMUKLUymjInU0O8kXshWaQrVWjPIO2lllZ1VNhdgE0qGj4oOIRRS11kzuijLshGXQ==}
 
-  vega-themes@2.14.0:
-    resolution: {integrity: sha512-9dLmsUER7gJrDp8SEYKxBFmXmpyzLlToKIjxq3HCvYjz8cnNrRGyAhvIlKWOB3ZnGvfYV+vnv3ZRElSNL31nkA==}
+  vega-themes@2.15.0:
+    resolution: {integrity: sha512-DicRAKG9z+23A+rH/3w3QjJvKnlGhSbbUXGjBvYGseZ1lvj9KQ0BXZ2NS/+MKns59LNpFNHGi9us/wMlci4TOA==}
     peerDependencies:
       vega: '*'
       vega-lite: '*'
@@ -26918,6 +26934,12 @@ packages:
 
   vega-util@1.17.2:
     resolution: {integrity: sha512-omNmGiZBdjm/jnHjZlywyYqafscDdHaELHx1q96n5UOz/FlO9JO99P4B3jZg391EFG8dqhWjQilSf2JH6F1mIw==}
+
+  vega-util@1.17.4:
+    resolution: {integrity: sha512-+y3ZW7dEqM8Ck+KRsd+jkMfxfE7MrQxUyIpNjkfhIpGEreym+aTn7XUw1DKXqclr8mqTQvbilPo16B3lnBr0wA==}
+
+  vega-util@2.1.0:
+    resolution: {integrity: sha512-PGfp0m0QCufDmcxKJCWQy4Ov23FoF8DSXmoJwSezi3itQaa2hbxK0+xwsTMP2vy4PR16Pu25HMzgMwXVW1+33w==}
 
   vega-view-transforms@4.5.9:
     resolution: {integrity: sha512-NxEq4ZD4QwWGRrl2yDLnBRXM9FgCI+vvYb3ZC2+nVDtkUxOlEIKZsMMw31op5GZpfClWLbjCT3mVvzO2xaTF+g==}
@@ -27836,6 +27858,10 @@ packages:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
     engines: {node: '>=12'}
 
+  yargs-parser@22.0.0:
+    resolution: {integrity: sha512-rwu/ClNdSMpkSrUb+d6BRsSkLUq1fmfsY6TOpYzTwvwkg1/NRG85KBy3kq++A8LKQwX6lsu+aWad+2khvuXrqw==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=23}
+
   yargs@13.3.2:
     resolution: {integrity: sha512-AX3Zw5iPruN5ie6xGRIDgqkT+ZhnRlZMLMHAs8tg7nRruy2Nb+i5o9bwghAogtM08q1dpr2LVoS8KSTMYpWXUw==}
 
@@ -27850,6 +27876,10 @@ packages:
   yargs@17.7.2:
     resolution: {integrity: sha512-7dSzzRQ++CKnNI/krKnYRV7JKKPUXMEh61soaHKg9mrWEhzFWhFnxPxGl+69cD1Ou63C13NUPCnmIcrvqCuM6w==}
     engines: {node: '>=12'}
+
+  yargs@18.0.0:
+    resolution: {integrity: sha512-4UEqdc2RYGHZc7Doyqkrqiln3p9X2DZVxaGbwhn2pi7MrRagKaOcIKe8L3OxYcbhXLgLFUS3zAYuQjKBQgmuNg==}
+    engines: {node: ^20.19.0 || ^22.12.0 || >=23}
 
   yocto-queue@0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
@@ -35186,12 +35216,12 @@ snapshots:
       '@gemeente-denhaag/typography': 0.2.3-alpha.398(react@19.2.4)
       react: 19.2.4
 
-  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))':
+  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@gemeente-denhaag/button': 0.2.3(react@19.2.4)
       '@gemeente-denhaag/icons': 1.0.0(react@19.2.4)
       '@gemeente-denhaag/step-marker': 0.0.1-alpha.123(react@19.2.4)
-      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
+      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
       react: 19.2.4
     transitivePeerDependencies:
       - '@babel/runtime'
@@ -35215,11 +35245,11 @@ snapshots:
       '@utrecht/components': 4.0.0
       react: 19.2.4
 
-  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))':
+  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@gemeente-denhaag/design-tokens-common': 0.2.3-alpha.424
       '@gemeente-denhaag/design-tokens-components': 0.2.4
-      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
+      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))
       '@utrecht/components': 7.0.0
       react: 19.2.4
     transitivePeerDependencies:
@@ -38983,6 +39013,10 @@ snapshots:
     dependencies:
       storybook: 8.6.15(prettier@3.6.2)
 
+  '@storybook/theming@8.6.15(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))':
+    dependencies:
+      storybook: 9.1.17(@testing-library/dom@10.4.1)(prettier@3.6.2)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.97.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
+
   '@storybook/types@7.6.21':
     dependencies:
       '@storybook/channels': 7.6.21
@@ -39866,7 +39900,7 @@ snapshots:
       graphemer: 1.4.0
       ignore: 5.3.1
       natural-compare-lite: 1.4.0
-      semver: 7.6.2
+      semver: 7.7.3
       tsutils: 3.21.0(typescript@5.9.3)
     optionalDependencies:
       typescript: 5.9.3
@@ -40100,7 +40134,7 @@ snapshots:
 
   '@unicode/unicode-15.1.0@1.5.2': {}
 
-  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))':
+  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)))(react@19.2.4)(vega@5.26.1(encoding@0.1.13))':
     dependencies:
       '@babel/runtime': 7.28.4
       clsx: 2.1.1
@@ -40109,7 +40143,7 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
     optionalDependencies:
       date-fns: 4.1.0
-      react-vega: 7.6.0(react@19.2.4)(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
+      react-vega: 7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
       vega: 5.26.1(encoding@0.1.13)
 
   '@utrecht/components@4.0.0':
@@ -42686,6 +42720,13 @@ snapshots:
       strip-ansi: 6.0.1
       wrap-ansi: 7.0.0
 
+  cliui@9.0.1:
+    dependencies:
+      string-width: 7.2.0
+      strip-ansi: 7.1.0
+      wrap-ansi: 9.0.0
+    optional: true
+
   clone-deep@4.0.1:
     dependencies:
       is-plain-object: 2.0.4
@@ -43650,9 +43691,9 @@ snapshots:
     dependencies:
       commander: 7.2.0
       d3-array: 3.2.4
-      d3-geo: 3.1.0
+      d3-geo: 3.1.1
 
-  d3-geo@3.1.0:
+  d3-geo@3.1.1:
     dependencies:
       d3-array: 3.2.4
 
@@ -46308,8 +46349,6 @@ snapshots:
 
   get-caller-file@2.0.5: {}
 
-  get-east-asian-width@1.2.0: {}
-
   get-east-asian-width@1.4.0: {}
 
   get-intrinsic@1.3.0:
@@ -47620,7 +47659,7 @@ snapshots:
 
   is-fullwidth-code-point@5.0.0:
     dependencies:
-      get-east-asian-width: 1.2.0
+      get-east-asian-width: 1.4.0
 
   is-function@1.0.2: {}
 
@@ -48439,6 +48478,9 @@ snapshots:
       object-keys: 1.1.1
 
   json-stringify-pretty-compact@3.0.0: {}
+
+  json-stringify-pretty-compact@4.0.0:
+    optional: true
 
   json5@1.0.2:
     dependencies:
@@ -53406,6 +53448,17 @@ snapshots:
       vega-embed: 6.23.0(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
       vega-lite: 5.16.3(vega@5.26.1(encoding@0.1.13))
 
+  react-vega@7.6.0(react@19.2.4)(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)):
+    dependencies:
+      '@types/react': 19.2.14
+      fast-deep-equal: 3.1.3
+      prop-types: 15.8.1
+      react: 19.2.4
+      vega: 5.26.1(encoding@0.1.13)
+      vega-embed: 6.23.0(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
+      vega-lite: 6.4.2(vega@5.26.1(encoding@0.1.13))
+    optional: true
+
   react@19.2.4: {}
 
   read-package-json-fast@3.0.2:
@@ -55461,7 +55514,7 @@ snapshots:
   string-width@7.2.0:
     dependencies:
       emoji-regex: 10.3.0
-      get-east-asian-width: 1.2.0
+      get-east-asian-width: 1.4.0
       strip-ansi: 7.1.0
 
   string-width@8.1.1:
@@ -56947,14 +57000,28 @@ snapshots:
     dependencies:
       fast-json-patch: 3.1.1
       json-stringify-pretty-compact: 3.0.0
-      semver: 7.6.2
+      semver: 7.7.3
       tslib: 2.6.3
       vega: 5.26.1(encoding@0.1.13)
-      vega-interpreter: 1.0.5
+      vega-interpreter: 1.2.1
       vega-lite: 5.16.3(vega@5.26.1(encoding@0.1.13))
       vega-schema-url-parser: 2.2.0
-      vega-themes: 2.14.0(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
+      vega-themes: 2.15.0(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
       vega-tooltip: 0.33.0
+
+  vega-embed@6.23.0(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)):
+    dependencies:
+      fast-json-patch: 3.1.1
+      json-stringify-pretty-compact: 3.0.0
+      semver: 7.7.3
+      tslib: 2.6.3
+      vega: 5.26.1(encoding@0.1.13)
+      vega-interpreter: 1.2.1
+      vega-lite: 6.4.2(vega@5.26.1(encoding@0.1.13))
+      vega-schema-url-parser: 2.2.0
+      vega-themes: 2.15.0(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13))
+      vega-tooltip: 0.33.0
+    optional: true
 
   vega-encode@4.9.2(encoding@0.1.13):
     dependencies:
@@ -56968,10 +57035,19 @@ snapshots:
 
   vega-event-selector@3.0.1: {}
 
+  vega-event-selector@4.0.0:
+    optional: true
+
   vega-expression@5.1.0:
     dependencies:
       '@types/estree': 1.0.8
       vega-util: 1.17.2
+
+  vega-expression@6.1.0:
+    dependencies:
+      '@types/estree': 1.0.8
+      vega-util: 2.1.0
+    optional: true
 
   vega-force@4.2.0(encoding@0.1.13):
     dependencies:
@@ -56993,7 +57069,7 @@ snapshots:
     dependencies:
       d3-array: 3.2.4
       d3-color: 3.1.0
-      d3-geo: 3.1.0
+      d3-geo: 3.1.1
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-expression: 5.1.0
       vega-scale: 7.3.1
@@ -57009,7 +57085,7 @@ snapshots:
     dependencies:
       d3-array: 3.2.4
       d3-color: 3.1.0
-      d3-geo: 3.1.0
+      d3-geo: 3.1.1
       vega-canvas: 1.2.7
       vega-dataflow: 5.7.5(encoding@0.1.13)
       vega-projection: 1.6.0
@@ -57026,7 +57102,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  vega-interpreter@1.0.5: {}
+  vega-interpreter@1.2.1:
+    dependencies:
+      vega-util: 1.17.4
 
   vega-label@1.2.1(encoding@0.1.13):
     dependencies:
@@ -57046,6 +57124,17 @@ snapshots:
       vega-expression: 5.1.0
       vega-util: 1.17.2
       yargs: 17.7.2
+
+  vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)):
+    dependencies:
+      json-stringify-pretty-compact: 4.0.0
+      tslib: 2.8.1
+      vega: 5.26.1(encoding@0.1.13)
+      vega-event-selector: 4.0.0
+      vega-expression: 6.1.0
+      vega-util: 2.1.0
+      yargs: 18.0.0
+    optional: true
 
   vega-loader@4.5.1(encoding@0.1.13):
     dependencies:
@@ -57069,7 +57158,7 @@ snapshots:
 
   vega-projection@1.6.0:
     dependencies:
-      d3-geo: 3.1.0
+      d3-geo: 3.1.1
       d3-geo-projection: 4.0.0
       vega-scale: 7.3.1
 
@@ -57120,10 +57209,16 @@ snapshots:
     dependencies:
       d3-array: 3.2.4
 
-  vega-themes@2.14.0(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)):
+  vega-themes@2.15.0(vega-lite@5.16.3(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)):
     dependencies:
       vega: 5.26.1(encoding@0.1.13)
       vega-lite: 5.16.3(vega@5.26.1(encoding@0.1.13))
+
+  vega-themes@2.15.0(vega-lite@6.4.2(vega@5.26.1(encoding@0.1.13)))(vega@5.26.1(encoding@0.1.13)):
+    dependencies:
+      vega: 5.26.1(encoding@0.1.13)
+      vega-lite: 6.4.2(vega@5.26.1(encoding@0.1.13))
+    optional: true
 
   vega-time@2.1.1:
     dependencies:
@@ -57153,6 +57248,11 @@ snapshots:
       vega-util: 1.17.2
 
   vega-util@1.17.2: {}
+
+  vega-util@1.17.4: {}
+
+  vega-util@2.1.0:
+    optional: true
 
   vega-view-transforms@4.5.9(encoding@0.1.13):
     dependencies:
@@ -58455,6 +58555,9 @@ snapshots:
 
   yargs-parser@21.1.1: {}
 
+  yargs-parser@22.0.0:
+    optional: true
+
   yargs@13.3.2:
     dependencies:
       cliui: 5.0.0
@@ -58501,6 +58604,16 @@ snapshots:
       string-width: 4.2.3
       y18n: 5.0.8
       yargs-parser: 21.1.1
+
+  yargs@18.0.0:
+    dependencies:
+      cliui: 9.0.1
+      escalade: 3.2.0
+      get-caller-file: 2.0.5
+      string-width: 7.2.0
+      y18n: 5.0.8
+      yargs-parser: 22.0.0
+    optional: true
 
   yocto-queue@0.1.0: {}
 
