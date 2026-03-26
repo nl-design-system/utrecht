@@ -26,7 +26,6 @@ const config: StorybookConfig = {
     getAbsolutePath('@whitespace/storybook-addon-html'),
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('storybook-addon-pseudo-states'),
-    getAbsolutePath('storybook-addon-themes'),
   ],
 
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
