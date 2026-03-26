@@ -16,7 +16,8 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@utrecht/build-utils-css": "workspace:*"
+    "@utrecht/build-utils-css": "workspace:*",
+    "@utrecht/focus-ring-css": "workspace:*"
   },
   "keywords": [
     "nl-design-system"

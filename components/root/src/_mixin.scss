@@ -4,6 +4,8 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+@use "~@utrecht/focus-ring-css/src/mixin" as *;
+
 @mixin reset-font-smoothing {
   /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
   -webkit-font-smoothing: auto !important;
@@ -13,7 +15,7 @@
 @mixin utrecht-root {
   /*
    * Goals:
-   * 
+   *
    * - take up 100% of the space, both horizontally and vertically.
    * - create a scrollable viewport experience both on `<html>` in the root,
    *   as well as on a `<div>` somewhere in a document.
@@ -42,4 +44,8 @@
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   word-break: break-word;
+}
+
+@mixin utrecht-root__focus-indicator {
+  @include utrecht-focus-ring;
 }
