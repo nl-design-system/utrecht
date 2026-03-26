@@ -5,13 +5,19 @@
  */
 
 import clsx from 'clsx';
-import { Vega } from 'react-vega';
-import { VegaProps } from 'react-vega/lib/Vega';
+import { VegaEmbed, VegaEmbedProps } from 'react-vega';
 import { Config } from 'vega';
 
-export interface VegaVisualizationProps extends Omit<VegaProps, 'renderer'> {
+export interface VegaVisualizationProps extends Omit<VegaEmbedProps, 'options'> {
   label?: string;
   config?: Config;
+  /**
+   * Whether to show the export/source/editor actions. Passed into embed options.
+   *
+   * @deprecated Use options.actions instead.
+   */
+  actions?: boolean;
+  options?: VegaEmbedProps['options'];
 }
 
 const defaultConfig = {
@@ -87,12 +93,20 @@ export const VegaVisualization = ({
   className,
   config,
   label,
+  options,
   ...restProps
 }: VegaVisualizationProps) => {
+  const embedOptions: VegaEmbedProps['options'] = {
+    ...options,
+    actions,
+    renderer: 'svg',
+    config: { ...defaultConfig, ...config },
+  };
+
   return (
     <div className={clsx('utrecht-vega-visualization', className)} role="img" aria-label={label}>
       <div aria-hidden={true}>
-        <Vega {...restProps} actions={actions} renderer={'svg'} config={{ ...defaultConfig, ...config }} />
+        <VegaEmbed {...restProps} options={embedOptions} />
       </div>
     </div>
   );
