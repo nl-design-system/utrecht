@@ -6454,8 +6454,8 @@ importers:
         specifier: 0.2.4
         version: 0.2.4
       '@gemeente-denhaag/process-steps':
-        specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)
+        specifier: 4.2.3
+        version: 4.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@mdx-js/react':
         specifier: 2.3.0
         version: 2.3.0(react@19.2.4)
@@ -7618,11 +7618,11 @@ importers:
         version: 4.18.3(patch_hash=2eee889b1115e452390633b95e27d00485eac5df140e7200f7ce8de67fc79aff)
     devDependencies:
       '@gemeente-denhaag/process-steps':
-        specifier: 0.1.2
-        version: 0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)
+        specifier: 4.2.3
+        version: 4.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@gemeente-denhaag/step-marker':
-        specifier: 0.0.1-alpha.123
-        version: 0.0.1-alpha.123(react@19.2.4)
+        specifier: 3.0.1
+        version: 3.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@stencil/angular-output-target':
         specifier: 0.8.4
         version: 0.8.4(@stencil/core@4.18.3(patch_hash=2eee889b1115e452390633b95e27d00485eac5df140e7200f7ce8de67fc79aff))
@@ -11294,22 +11294,19 @@ packages:
   '@gatsbyjs/webpack-hot-middleware@2.25.3':
     resolution: {integrity: sha512-ul17OZ8Dlw+ATRbnuU+kwxuAlq9lKbYz/2uBS1FLCdgoPTF1H2heP7HbUbgfMZbfRQNcCG2rMscMnr32ritCDw==}
 
-  '@gemeente-denhaag/button@0.2.3':
-    resolution: {integrity: sha512-2DWmo5zECa7EQddHKkf8u/Wx14MybEqLG06jQWjIJkXVhXrsym+sylzy0AHtmDFsuIU/ypUUBCOyurH3TeZh2w==}
-    peerDependencies:
-      react: ^18.0.0
-
   '@gemeente-denhaag/button@0.2.3-alpha.398':
     resolution: {integrity: sha512-cCG5UQhCxnbykAn8Jo1s3CsRWPRMiGNn9O9f4fj5GRK1GJrV6XKqFdKY/piM87NBA4THghz5OoSem1EF6fsgJw==}
     peerDependencies:
       react: ^18.0.0
 
+  '@gemeente-denhaag/button@3.0.2':
+    resolution: {integrity: sha512-nybKK0rD3z/MtEC6zF604aNrblxNHsKrVLVntI3lB2Sj4/kjlPXvQdc5cuHUtkb1hGhA6q+d3lZ3fSubpWN1bA==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
   '@gemeente-denhaag/design-tokens-common@0.2.3-alpha.400':
     resolution: {integrity: sha512-ptmBqqn2NeerkyGFnp+QSgE7gkY1oIN4tiiRjTG6kwgcNQ/WakB9N+p49W/a2rcF+Fz0XsqWAd5CzBCFH+aZIA==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-
-  '@gemeente-denhaag/design-tokens-common@0.2.3-alpha.424':
-    resolution: {integrity: sha512-jc4hfscetqE2lzdGxOGfshfZayNWN2TQKOKdrzVDY0ztVfE3B9sasmVgoTKbYoaoZ/TRQ5d7Fe02VWEcq7hmDw==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
 
   '@gemeente-denhaag/design-tokens-components@0.2.3-alpha.400':
@@ -11325,39 +11322,36 @@ packages:
     peerDependencies:
       react: ^18.0.0
 
-  '@gemeente-denhaag/icons@1.0.0':
-    resolution: {integrity: sha512-JiYnISVVn++G6p18TlxV+u4z+vAbA1IInGaCa/8aOrgGsroAwyKcqJ/TvZvoMjRs+sLWkhM9keQRtE4UDlcWOA==}
+  '@gemeente-denhaag/icons@4.0.1':
+    resolution: {integrity: sha512-SX+o0S1SvdPDaCXCdha+2dQaOkyiHdYIqLhR80FblBrkxaS45K/zY2vahlI15NdKY8kQ3onEZv26i/6TPh1gyg==}
     peerDependencies:
-      react: ^18.0.0
+      react: 18 || 19
+      react-dom: 18 || 19
 
   '@gemeente-denhaag/process-steps@0.1.0-alpha.227':
     resolution: {integrity: sha512-zBcjU/zTrhT+Oquw3EZIPUo6nM3JQKQhXGk25ZSYC6B5i7rZrhMqeoMnIXIFQzMeeU4fBWlJuYlfJ27Y/DU2jQ==}
     peerDependencies:
       react: ^18.0.0
 
-  '@gemeente-denhaag/process-steps@0.1.2':
-    resolution: {integrity: sha512-oGsN2Xm1T2v7h0b07zr2pMHj5h8ddLLlo/ymEOCTz4yw2XnW1HHOc3sCLhZY8Hz2iU0kfrZGvV0iUFz3fK3pfg==}
+  '@gemeente-denhaag/process-steps@4.2.3':
+    resolution: {integrity: sha512-Q/b4nt3gVp36dilRN22kx3KQeBY4lqY9DXlE7Dg0dFZMKM3DecLjv8HZJ4PmwRQc1wzqJsdVGQr05JE4bE7YUg==}
     peerDependencies:
-      react: ^18.0.0
-
-  '@gemeente-denhaag/step-marker@0.0.1-alpha.123':
-    resolution: {integrity: sha512-jrWreR6UeVGKVS7gv/VJrvqRuJGjVYqYD0NkunKGqng9TRQhWxxz/KU8ej3wYyPeI2Ta8w5cyLQ4QPMKmjf9qw==}
-    peerDependencies:
-      react: ^18.0.0
+      react: 18 || 19
+      react-dom: 18 || 19
 
   '@gemeente-denhaag/step-marker@0.0.1-alpha.99':
     resolution: {integrity: sha512-TQXbieNdpAbFI3sKjHdRJqFXNdhQIzzuhvJEFbcbjNfFi97IdklTs2bHntLIEYuUVRBzvqiEPyqkU9a3zTcoLw==}
     peerDependencies:
       react: ^18.0.0
 
+  '@gemeente-denhaag/step-marker@3.0.1':
+    resolution: {integrity: sha512-UL3HD9lRv1akJSCRhNd/Uf6pH8LBZ1DlbnythF4AC9u9EQ3fM28eIHhjdW9Qp4mCDmBGqFWq2wbooYVGVTK0Iw==}
+    peerDependencies:
+      react: 18 || 19
+      react-dom: 18 || 19
+
   '@gemeente-denhaag/typography@0.2.3-alpha.398':
     resolution: {integrity: sha512-LN0HNjXOzZbpv5KJHWf305h+nAtCBqlSM33C+Tuv3y04+xJ+ZWYFz4uul9TMLI35DYnd03sZV9YHtWV1vyOS8w==}
-    deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
-    peerDependencies:
-      react: ^18.0.0
-
-  '@gemeente-denhaag/typography@0.2.4':
-    resolution: {integrity: sha512-8J7H4J/vFTcFTIqTCgPn6JfKF/UvmucezCtHNty6IElIDyVHlllTtXyNPoY51wC/Bs66lfNifkyAUDlFn4x8CQ==}
     deprecated: Package no longer supported. Contact Support at https://www.npmjs.com/support for more info.
     peerDependencies:
       react: ^18.0.0
@@ -14769,29 +14763,8 @@ packages:
   '@unicode/unicode-15.1.0@1.5.2':
     resolution: {integrity: sha512-7PAgnShDr8ziK6XeHB/TUVFboDFEhaQKKyrw55/Kx9o6AQDy1s7dJ9KRpRerW9nrR5qMGUQvOqTXOAek6ZIXkg==}
 
-  '@utrecht/component-library-react@6.0.0':
-    resolution: {integrity: sha512-GSPZS5JBTadLE/L3EQ/ZTy7zi9pTcntslvuId7e7ZGCsOlzT06GhzVRvAaCJ5l7FF1zExz9eOYf/NiUSFTrk5g==}
-    peerDependencies:
-      '@babel/runtime': ^7.23.6
-      date-fns: ^2.30.0
-      react: '18'
-      react-dom: '18'
-      react-vega: ^7.6.0
-      vega: ^5.25.0
-    peerDependenciesMeta:
-      date-fns:
-        optional: true
-      react-vega:
-        optional: true
-      vega:
-        optional: true
-
   '@utrecht/components@4.0.0':
     resolution: {integrity: sha512-vpw8p5FEU/yrSGL5JU+x6bDXIreEPU6WPEagOkcdqbFGMovWS8uUHNWmv+PY1xJIOjOb98RebSsbFDoA4zllVQ==}
-    deprecated: 'Deprecated. Replaced by a separate package for each component, following the pattern: @utrecht/*-css. For example: @utrecht/button-css.'
-
-  '@utrecht/components@7.0.0':
-    resolution: {integrity: sha512-5Yq9xjWQt5A6zM8Q7HqSyHnuyf/UO4l+jnNxTEtRfj46lAqN4E44Vp4oZdi+mESE+g/fAnVDUbJVhjQChG9jlA==}
     deprecated: 'Deprecated. Replaced by a separate package for each component, following the pattern: @utrecht/*-css. For example: @utrecht/button-css.'
 
   '@vercel/oidc@3.0.5':
@@ -35060,19 +35033,19 @@ snapshots:
       html-entities: 2.6.0
       strip-ansi: 6.0.1
 
-  '@gemeente-denhaag/button@0.2.3(react@19.2.4)':
-    dependencies:
-      '@gemeente-denhaag/icons': 1.0.0(react@19.2.4)
-      react: 19.2.4
-
   '@gemeente-denhaag/button@0.2.3-alpha.398(react@19.2.4)':
     dependencies:
       '@gemeente-denhaag/icons': 0.2.3-alpha.398(react@19.2.4)
       react: 19.2.4
 
-  '@gemeente-denhaag/design-tokens-common@0.2.3-alpha.400': {}
+  '@gemeente-denhaag/button@3.0.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
-  '@gemeente-denhaag/design-tokens-common@0.2.3-alpha.424': {}
+  '@gemeente-denhaag/design-tokens-common@0.2.3-alpha.400': {}
 
   '@gemeente-denhaag/design-tokens-components@0.2.3-alpha.400': {}
 
@@ -35082,9 +35055,11 @@ snapshots:
     dependencies:
       react: 19.2.4
 
-  '@gemeente-denhaag/icons@1.0.0(react@19.2.4)':
+  '@gemeente-denhaag/icons@4.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
+      clsx: 2.1.1
       react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@gemeente-denhaag/process-steps@0.1.0-alpha.227(react@19.2.4)':
     dependencies:
@@ -35094,27 +35069,25 @@ snapshots:
       '@gemeente-denhaag/typography': 0.2.3-alpha.398(react@19.2.4)
       react: 19.2.4
 
-  '@gemeente-denhaag/process-steps@0.1.2(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)':
+  '@gemeente-denhaag/process-steps@4.2.3(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
     dependencies:
-      '@gemeente-denhaag/button': 0.2.3(react@19.2.4)
-      '@gemeente-denhaag/icons': 1.0.0(react@19.2.4)
-      '@gemeente-denhaag/step-marker': 0.0.1-alpha.123(react@19.2.4)
-      '@gemeente-denhaag/typography': 0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)
+      '@gemeente-denhaag/button': 3.0.2(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@gemeente-denhaag/step-marker': 3.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      clsx: 2.1.1
       react: 19.2.4
-    transitivePeerDependencies:
-      - '@babel/runtime'
-      - date-fns
-      - react-dom
-      - react-vega
-      - vega
-
-  '@gemeente-denhaag/step-marker@0.0.1-alpha.123(react@19.2.4)':
-    dependencies:
-      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@gemeente-denhaag/step-marker@0.0.1-alpha.99(react@19.2.4)':
     dependencies:
       react: 19.2.4
+
+  '@gemeente-denhaag/step-marker@3.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@gemeente-denhaag/icons': 4.0.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
 
   '@gemeente-denhaag/typography@0.2.3-alpha.398(react@19.2.4)':
     dependencies:
@@ -35122,20 +35095,6 @@ snapshots:
       '@gemeente-denhaag/design-tokens-components': 0.2.3-alpha.400
       '@utrecht/components': 4.0.0
       react: 19.2.4
-
-  '@gemeente-denhaag/typography@0.2.4(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)':
-    dependencies:
-      '@gemeente-denhaag/design-tokens-common': 0.2.3-alpha.424
-      '@gemeente-denhaag/design-tokens-components': 0.2.4
-      '@utrecht/component-library-react': 6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)
-      '@utrecht/components': 7.0.0
-      react: 19.2.4
-    transitivePeerDependencies:
-      - '@babel/runtime'
-      - date-fns
-      - react-dom
-      - react-vega
-      - vega
 
   '@googlemaps/js-api-loader@1.16.6':
     dependencies:
@@ -39946,25 +39905,9 @@ snapshots:
 
   '@unicode/unicode-15.1.0@1.5.2': {}
 
-  '@utrecht/component-library-react@6.0.0(@babel/runtime@7.28.4)(date-fns@4.1.0)(react-dom@19.2.4(react@19.2.4))(react-vega@8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)))(react@19.2.4)(vega@6.2.0)':
-    dependencies:
-      '@babel/runtime': 7.28.4
-      clsx: 2.1.1
-      lodash.chunk: 4.2.0
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-    optionalDependencies:
-      date-fns: 4.1.0
-      react-vega: 8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0))
-      vega: 6.2.0
-
   '@utrecht/components@4.0.0':
     dependencies:
       clsx: 1.2.1
-
-  '@utrecht/components@7.0.0':
-    dependencies:
-      clsx: 2.1.1
 
   '@vercel/oidc@3.0.5': {}
 
