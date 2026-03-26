@@ -1,21 +1,16 @@
 /* eslint-env node */
 import { setCompodocJson } from '@storybook/addon-docs/angular';
-import { withTests } from '@storybook/addon-jest';
 import { componentWrapperDecorator } from '@storybook/angular';
 import type { Preview } from '@storybook/angular';
 import { addonStatus } from '@utrecht/storybook-helpers/dist/addon-status';
 import { addonViewport } from '@utrecht/storybook-helpers/dist/addon-viewport';
 import '@utrecht/storybook-helpers/src/font-family';
-import results from '../../component-library-angular/dist/.jest-test-results.json';
 import docJson from '../tmp/documentation.json';
 
 setCompodocJson(docJson);
 
 const preview: Preview = {
-  decorators: [
-    componentWrapperDecorator((story) => `<div class="utrecht-root utrecht-theme">${story}</div>`),
-    withTests({ results }),
-  ],
+  decorators: [componentWrapperDecorator((story) => `<div class="utrecht-root utrecht-theme">${story}</div>`)],
   parameters: {
     controls: {
       matchers: {
