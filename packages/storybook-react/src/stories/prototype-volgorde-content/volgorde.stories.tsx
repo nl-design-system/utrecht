@@ -62,6 +62,69 @@ const FooterWithChatbot = () => (
   </>
 );
 
+const AccordionText1 = () => (
+  <>
+    <Paragraph>U komt in aanmerking voor een IOAW-uitkering als u:</Paragraph>
+    <UnorderedList>
+      <UnorderedListItem>
+        <Paragraph>bent geboren voor 1 januari 1965, en</Paragraph>
+      </UnorderedListItem>
+      <UnorderedListItem>
+        <Paragraph>
+          onvoldoende inkomen heeft om van te leven. Wij kijken naar uw inkomsten, niet naar uw vermogen. Het inkomen
+          van uw partner telt mee, het inkomen van eventuele minderjarige kinderen niet.
+        </Paragraph>
+      </UnorderedListItem>
+    </UnorderedList>
+    <Paragraph>Daarnaast voldoet u aan ten minste 1 van de volgende voorwaarden:</Paragraph>
+    <UnorderedList>
+      <UnorderedListItem>
+        <Paragraph>
+          U bent op of na uw 50ᵉ jaar werkloos geworden, maar u hebt nog niet de AOW-leeftijd. U kreeg langer dan 3
+          maanden een WW-uitkering.
+        </Paragraph>
+      </UnorderedListItem>
+      <UnorderedListItem>
+        <Paragraph>
+          U hebt eerder IOAW ontvangen van de gemeente Utrecht of een andere gemeente. Vul dan bij de vraag of u langer
+          dan 3 maanden WW of WGA hebt ontvangen 'ja' in.
+        </Paragraph>
+      </UnorderedListItem>
+      <UnorderedListItem>
+        <Paragraph>
+          U hebt op of na uw 50ᵉ recht gekregen op een WGA-uitkering. (Regeling werkhervatting gedeeltelijk
+          arbeidsgeschikten). Deze WGA-uitkering is gestopt omdat u bij uw herkeuring voor minder dan 35%
+          arbeidsongeschikt was.
+        </Paragraph>
+      </UnorderedListItem>
+      <UnorderedListItem>
+        <Paragraph>
+          U bent gedeeltelijk arbeidsongeschikt (minder dan 80%). En u had op 28 december 2005, voor de komst van de
+          WIA, een IOAW-uitkering.
+        </Paragraph>
+      </UnorderedListItem>
+    </UnorderedList>
+    <Paragraph>Ook hiervoor vraagt u een bijstandsuitkering aan (zie hierboven).</Paragraph>
+  </>
+);
+
+const AccordionText2 = () => (
+  <>
+    <Paragraph>
+      Krijgt u een bijstandsuitkering? Dan kunnen wij een deel of de hele bijstandsuitkering terugeisen bij iemand die
+      een onderhoudsplicht voor u of uw kinderen heeft. Meer hierover leest u op{' '}
+      <a
+        href="https://www.utrecht.nl/bijstandonderhoudsplicht"
+        className="utrecht-link utrecht-link--html-a utrecht-link--external"
+        rel="external noopener noreferrer"
+      >
+        Bijstand en onderhoudsplicht voor ex-partner
+      </a>
+      .
+    </Paragraph>
+  </>
+);
+
 const meta = {
   title: 'Prototypes/Volgorde/Navigeren',
   id: 'volgorde-bijstand',
@@ -296,13 +359,12 @@ export const Volgorde1: Story = {
                 <AccordionProvider
                   sections={[
                     {
-                      body: 'Amorem ipsum dolor sit amet, consectetur heartbeat elit. Sed do eiusmod tempor kiss incididunt ut labore et dolore magna passion. Ut enim ad minim veniam, quis nostrud embrace ullam corporis suscipit amoroso, nisi ut aliquip ex ea commodo tender caress. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla',
-
+                      body: <AccordionText1 />,
                       expanded: undefined,
                       label: 'Geboren voor 1965: mogelijk recht op een IOAW-uitkering',
                     },
                     {
-                      body: 'Amorem ipsum dolor sit amet, consectetur heartbeat elit. Sed do eiusmod tempor kiss incididunt ut labore et dolore magna passion. Ut enim ad minim veniam, quis nostrud embrace ullam corporis suscipit amoroso, nisi ut aliquip ex ea commodo tender caress. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla',
+                      body: <AccordionText2 />,
 
                       expanded: undefined,
                       label: 'Bijstand en onderhoudsplicht voor ex-partner',
