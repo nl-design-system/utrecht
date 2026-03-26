@@ -5,7 +5,9 @@
  */
 
 @use "./mixin" as *;
+@use "~@utrecht/focus-ring-css/src/mixin" as *;
 
 .utrecht-root {
   @include utrecht-root;
+  @include utrecht-focus-ring-default-container;
 }
