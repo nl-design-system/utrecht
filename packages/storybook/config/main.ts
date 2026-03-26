@@ -24,7 +24,6 @@ const config: StorybookConfig = {
     '@whitespace/storybook-addon-html', // Cannot use getAbsolutePath() - package structure incompatible
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('storybook-addon-pseudo-states'),
-    getAbsolutePath('storybook-addon-themes'),
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
   refs: (_, { configType }) => {
