@@ -56,7 +56,7 @@ declare const tokens: DesignToken[];`;
   source,
   platforms: {
     js: {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -71,7 +71,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     tokenTree: {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -82,7 +82,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     json: {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -105,7 +105,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     css: {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -146,7 +146,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     scss: {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -174,7 +174,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     less: {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -207,7 +207,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'deprecated-js': {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -222,7 +222,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'deprecated-json': {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/camel', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
@@ -241,7 +241,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'deprecated-css': {
-      transformGroups: 'tokens-studio',
+      transformGroup: 'tokens-studio',
       transforms: ['name/kebab', 'fontSize/pxToRem'],
       buildPath: 'dist/',
       files: [
