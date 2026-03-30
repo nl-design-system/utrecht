@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 5.0.3
+
+### Patch Changes
+
+- e89c1d2: Use `font-size-adjust: 0.54` for Root.
+
 ## 5.0.2
 
 ### Patch Changes

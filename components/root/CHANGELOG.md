@@ -1,5 +1,15 @@
 # @utrecht/root-css
 
+## 3.0.0
+
+### Major Changes
+
+- e89c1d2: Use `font-size-adjust: 0.5` as default. Add `utrecht.root.font-size-adjust` design token to make this behavior configurable.
+
+### Minor Changes
+
+- 4d4079c: Add default focus indicator to all focusable elements inside the Root component.
+
 ## 2.0.1
 
 ### Patch Changes

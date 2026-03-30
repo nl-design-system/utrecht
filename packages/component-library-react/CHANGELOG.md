@@ -1,5 +1,28 @@
 # @utrecht/component-library-react
 
+## 13.0.4
+
+### Patch Changes
+
+- Updated dependencies [4d4079c]
+- Updated dependencies [4d4079c]
+  - @utrecht/focus-ring-css@3.1.0
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/custom-checkbox-css@2.0.1
+  - @utrecht/form-toggle-css@2.0.1
+  - @utrecht/link-button-css@2.0.1
+  - @utrecht/link-social-css@2.0.1
+  - @utrecht/map-control-button-css@3.0.1
+  - @utrecht/open-forms-container-css@2.0.3
+  - @utrecht/pagination-css@2.0.3
+  - @utrecht/search-bar-css@3.0.1
+  - @utrecht/select-css@2.0.1
+  - @utrecht/skip-link-css@2.0.1
+  - @utrecht/textarea-css@3.0.1
+  - @utrecht/top-task-link-css@2.0.1
+  - @utrecht/open-forms-container-react@1.0.7
+
 ## 13.0.3
 
 ### Patch Changes
