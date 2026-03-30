@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 overrides:
-  form-data@>=4.0.0 <4.0.4: '>=4.0.4'
+  handlebars@>=4.6.0 <=4.7.8: '>=4.7.9'
 
 packageExtensionsChecksum: sha256-DyTONDcwuNBL+rN8AjnH/wxMB5hrUymzWhDnSpd567I=
 
@@ -6098,7 +6098,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       eslint-plugin-storybook:
         specifier: 9.1.17
         version: 9.1.17(eslint@8.57.1)(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.69.7)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))(typescript@5.9.3)
@@ -7298,7 +7298,7 @@ importers:
         version: 1.5.0
       css-loader:
         specifier: 6.8.1
-        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+        version: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       eslint-plugin-storybook:
         specifier: 9.1.17
         version: 9.1.17(eslint@8.57.1)(storybook@9.1.17(@testing-library/dom@10.4.1)(prettier@2.8.8)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.97.3)(sass@1.69.7)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1)))(typescript@5.9.3)
@@ -19076,8 +19076,8 @@ packages:
   handle-thing@2.0.1:
     resolution: {integrity: sha512-9Qn4yBxelxoh2Ow62nP+Ka/kMnOXRi8BXnRaUwezLNhqelnN49xKz4F/dPP8OYLxLxq6JDtZb2i9XznUQbNPTg==}
 
-  handlebars@4.7.8:
-    resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
+  handlebars@4.7.9:
+    resolution: {integrity: sha512-4E71E0rpOaQuJR2A3xDZ+GM1HyWYv1clR58tC8emQNeQe3RH7MAzSbat+V0wG78LQBo6m6bzSG/L4pBuCsgnUQ==}
     engines: {node: '>=0.4.7'}
     hasBin: true
 
@@ -28281,7 +28281,7 @@ snapshots:
       browserslist: 4.28.1
       copy-webpack-plugin: 11.0.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
       critters: 0.0.20
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       esbuild-wasm: 0.19.11
       fast-glob: 3.3.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
@@ -28373,7 +28373,7 @@ snapshots:
       browserslist: 4.28.1
       copy-webpack-plugin: 11.0.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
       critters: 0.0.20
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       esbuild-wasm: 0.19.11
       fast-glob: 3.3.2
       http-proxy-middleware: 2.0.6(@types/express@4.17.21)
@@ -33316,7 +33316,7 @@ snapshots:
       fast-glob: 3.3.3
       fs-extra: 11.3.3
       glob: 11.1.0
-      handlebars: 4.7.8
+      handlebars: 4.7.9
       html-entities: 2.6.0
       i18next: 25.5.3(typescript@5.9.3)
       json5: 2.2.3
@@ -38488,7 +38488,7 @@ snapshots:
       find-up: 5.0.0
       fs-extra: 11.3.3
       glob: 10.4.5
-      handlebars: 4.7.8
+      handlebars: 4.7.9
       lazy-universal-dotenv: 4.0.0
       node-fetch: 2.7.0(encoding@0.1.13)
       picomatch: 2.3.1
@@ -38673,7 +38673,7 @@ snapshots:
 
   '@storybook/preset-scss@1.0.3(css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(sass-loader@13.3.3(sass-embedded@1.97.3)(sass@1.69.7)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(style-loader@3.3.4(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))':
     dependencies:
-      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11))
+      css-loader: 6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       sass-loader: 13.3.3(sass-embedded@1.97.3)(sass@1.69.7)(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
       style-loader: 3.3.4(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
 
@@ -43230,7 +43230,7 @@ snapshots:
       semver: 7.6.2
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
 
-  css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11)):
+  css-loader@6.8.1(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.49)
       postcss: 8.4.49
@@ -46601,7 +46601,7 @@ snapshots:
 
   handle-thing@2.0.1: {}
 
-  handlebars@4.7.8:
+  handlebars@4.7.9:
     dependencies:
       minimist: 1.2.8
       neo-async: 2.6.2
