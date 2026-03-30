@@ -31,6 +31,7 @@
   block-size: 100%;
   color: var(--utrecht-root-color);
   font-family: var(--utrecht-root-font-family);
+  font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
