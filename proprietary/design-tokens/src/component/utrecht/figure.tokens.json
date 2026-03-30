@@ -4,9 +4,9 @@
       "margin-block-end": {},
       "margin-block-start": {},
       "caption": {
-        "color": { "value": "#727272" },
-        "font-size": { "value": "{utrecht.typography.scale.sm.font-size}" },
-        "line-height": { "value": "{utrecht.typography.line-height.md}" }
+        "color": { "$value": "#727272" },
+        "font-size": { "$value": "{utrecht.typography.scale.sm.font-size}" },
+        "line-height": { "$value": "{utrecht.typography.line-height.md}" }
       }
     }
   }

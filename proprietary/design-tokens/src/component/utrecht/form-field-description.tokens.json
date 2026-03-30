@@ -9,13 +9,13 @@
       "margin-block-end": {},
       "invalid": {
         "font-weight": {},
-        "color": { "value": "{utrecht.feedback.invalid.color}" }
+        "color": { "$value": "{utrecht.feedback.invalid.color}" }
       },
       "valid": {
-        "color": { "value": "{utrecht.feedback.valid.color}" }
+        "color": { "$value": "{utrecht.feedback.valid.color}" }
       },
       "warning": {
-        "color": { "value": "{utrecht.feedback.warning.color}" }
+        "color": { "$value": "{utrecht.feedback.warning.color}" }
       }
     }
   }

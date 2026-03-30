@@ -1,19 +1,19 @@
 {
   "utrecht": {
     "code-block": {
-      "background-color": { "value": "{nl.code-block.background-color}" },
-      "color": { "value": "{nl.code-block.color}" },
-      "font-family": { "value": "{nl.code-block.font-family}" },
-      "font-size": { "value": "{nl.code-block.font-size}" },
-      "line-height": { "value": "{nl.code-block.line-height}" },
-      "margin-block-end": { "value": "{utrecht.space.block.lg}" },
-      "margin-block-start": { "value": "{utrecht.space.block.lg}" },
+      "background-color": { "$value": "{nl.code-block.background-color}" },
+      "color": { "$value": "{nl.code-block.color}" },
+      "font-family": { "$value": "{nl.code-block.font-family}" },
+      "font-size": { "$value": "{nl.code-block.font-size}" },
+      "line-height": { "$value": "{nl.code-block.line-height}" },
+      "margin-block-end": { "$value": "{utrecht.space.block.lg}" },
+      "margin-block-start": { "$value": "{utrecht.space.block.lg}" },
       "margin-inline-end": {},
       "margin-inline-start": {},
-      "padding-block-end": { "value": "{nl.code-block.padding-block}" },
-      "padding-block-start": { "value": "{nl.code-block.padding-block}" },
-      "padding-inline-end": { "value": "{nl.code-block.padding-inline}" },
-      "padding-inline-start": { "value": "{nl.code-block.padding-inline}" }
+      "padding-block-end": { "$value": "{nl.code-block.padding-block}" },
+      "padding-block-start": { "$value": "{nl.code-block.padding-block}" },
+      "padding-inline-end": { "$value": "{nl.code-block.padding-inline}" },
+      "padding-inline-start": { "$value": "{nl.code-block.padding-inline}" }
     }
   }
 }
