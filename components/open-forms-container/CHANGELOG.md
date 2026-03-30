@@ -1,5 +1,13 @@
 # @utrecht/open-forms-container-css
 
+## 2.0.3
+
+### Patch Changes
+
+- Updated dependencies [4d4079c]
+  - @utrecht/focus-ring-css@3.1.0
+  - @utrecht/textbox-css@3.1.0
+
 ## 2.0.2
 
 ### Patch Changes

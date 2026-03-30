@@ -1,5 +1,11 @@
 # @utrecht/focus-ring-css
 
+## 3.1.0
+
+### Minor Changes
+
+- 4d4079c: Add mixins for default focus indicator for all focusable elements:
+
 ## 3.0.1
 
 ### Patch Changes

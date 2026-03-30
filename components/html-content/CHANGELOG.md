@@ -1,5 +1,11 @@
 # @utrecht/html-content-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 4d4079c: Add default focus indicator to all focusable elements inside the HTML Content component.
+
 ## 2.0.1
 
 ### Patch Changes

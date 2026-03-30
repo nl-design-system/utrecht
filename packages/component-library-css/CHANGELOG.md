@@ -1,5 +1,32 @@
 # @utrecht/component-library-css
 
+## 9.0.3
+
+### Patch Changes
+
+- Updated dependencies [4d4079c]
+- Updated dependencies [4d4079c]
+- Updated dependencies [e89c1d2]
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/root-css@3.0.0
+  - @utrecht/button-css@3.1.0
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/checkbox-css@2.0.1
+  - @utrecht/custom-checkbox-css@2.0.1
+  - @utrecht/form-toggle-css@2.0.1
+  - @utrecht/link-css@2.0.1
+  - @utrecht/link-button-css@2.0.1
+  - @utrecht/link-social-css@2.0.1
+  - @utrecht/listbox-css@2.1.0
+  - @utrecht/pagination-css@2.0.3
+  - @utrecht/radio-button-css@2.0.1
+  - @utrecht/search-bar-css@3.0.1
+  - @utrecht/select-css@2.0.1
+  - @utrecht/skip-link-css@2.0.1
+  - @utrecht/textarea-css@3.0.1
+  - @utrecht/textbox-css@3.1.0
+  - @utrecht/top-task-link-css@2.0.1
+
 ## 9.0.2
 
 ### Patch Changes
