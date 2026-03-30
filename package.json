@@ -111,6 +111,9 @@
   "pnpm": {
     "patchedDependencies": {
       "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch"
+    },
+    "overrides": {
+      "handlebars@>=4.6.0 <=4.7.8": ">=4.7.9"
     }
   },
   "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
