@@ -1,101 +1,101 @@
 {
   "utrecht": {
     "breadcrumb-nav": {
-      "min-block-size": { "value": "34px" },
+      "min-block-size": { "$value": "34px" },
       "font-family": {},
       "font-size": {
-        "value": "{utrecht.typography.scale.md.font-size}"
+        "$value": "{utrecht.typography.scale.md.font-size}"
       },
       "margin-block-end": {
-        "value": "{utrecht.space.block.2xl}"
+        "$value": "{utrecht.space.block.2xl}"
       },
       "text-transform": {},
       "divider": {
         "inline-size": {
-          "value": "1px"
+          "$value": "1px"
         }
       },
       "item": {
         "first": {
           "padding-inline-start": {
-            "value": "0"
+            "$value": "0"
           }
         },
         "padding-block-start": {
-          "value": "{utrecht.space.block.xs}"
+          "$value": "{utrecht.space.block.xs}"
         },
         "padding-block-end": {
-          "value": "{utrecht.space.block.xs}"
+          "$value": "{utrecht.space.block.xs}"
         },
         "padding-inline-end": {
-          "value": "{utrecht.space.inline.xs}"
+          "$value": "{utrecht.space.inline.xs}"
         },
         "padding-inline-start": {
-          "value": "{utrecht.space.inline.xs}"
+          "$value": "{utrecht.space.inline.xs}"
         }
       },
       "separator": {
         "color": {
-          "value": "{utrecht.color.blue.35}"
+          "$value": "{utrecht.color.blue.35}"
         },
         "icon": {
           "size": {
-            "value": "{utrecht.typography.scale.sm.font-size}"
+            "$value": "{utrecht.typography.scale.sm.font-size}"
           }
         }
       },
       "link": {
         "background-color": {},
         "color": {
-          "value": "{utrecht.color.blue.35}"
+          "$value": "{utrecht.color.blue.35}"
         },
         "text-decoration": {
-          "value": "none"
+          "$value": "none"
         },
         "focus": {
           "background-color": {
-            "value": "{utrecht.focus.background-color}"
+            "$value": "{utrecht.focus.background-color}"
           },
           "color": {
-            "value": "{utrecht.color.blue.40}"
+            "$value": "{utrecht.color.blue.40}"
           },
           "text-decoration": {
-            "value": "underline"
+            "$value": "underline"
           }
         },
         "hover": {
           "color": {
-            "value": "{utrecht.color.blue.40}"
+            "$value": "{utrecht.color.blue.40}"
           },
           "text-decoration": {
-            "value": "underline"
+            "$value": "underline"
           }
         },
         "disabled": {
           "color": {
-            "value": "{utrecht.color.grey.40}"
+            "$value": "{utrecht.color.grey.40}"
           }
         },
         "icon": {
           "size": {
-            "value": "{utrecht.icon-scale.md}"
+            "$value": "{utrecht.icon-scale.md}"
           }
         }
       },
       "arrows": {
         "link": {
           "background-color": {
-            "value": "{utrecht.color.grey.90}"
+            "$value": "{utrecht.color.grey.90}"
           },
           "color": {
-            "value": "{utrecht.color.black}"
+            "$value": "{utrecht.color.black}"
           },
           "focus": {
             "background-color": {
-              "value": "{utrecht.focus.background-color}"
+              "$value": "{utrecht.focus.background-color}"
             },
             "color": {
-              "value": "{utrecht.color.black}"
+              "$value": "{utrecht.color.black}"
             }
           }
         }

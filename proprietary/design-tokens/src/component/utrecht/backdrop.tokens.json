@@ -2,22 +2,22 @@
   "utrecht": {
     "backdrop": {
       "background-color": {
-        "value": "rgb(0 0 0 / 30%)"
+        "$value": "rgb(0 0 0 / 30%)"
       },
       "color": {
-        "value": "{utrecht.color.black}"
+        "$value": "{utrecht.color.black}"
       },
       "opacity": {
-        "value": "0.8"
+        "$value": "0.8"
       },
       "fade-in": {
         "animation-duration": {
-          "value": "400ms"
+          "$value": "400ms"
         }
       },
       "reduced-transparency": {
         "opacity": {
-          "value": "0.98"
+          "$value": "0.98"
         }
       }
     }

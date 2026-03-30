@@ -7,18 +7,18 @@
       "padding-inline-end": {},
       "padding-block-start": {},
       "padding-block-end": {},
-      "margin-inline-start": { "value": "1.6em" },
-      "margin-inline-end": { "value": "1.6em" },
-      "margin-block-start": { "value": "1.6em" },
-      "margin-block-end": { "value": "1.6em" },
+      "margin-inline-start": { "$value": "1.6em" },
+      "margin-inline-end": { "$value": "1.6em" },
+      "margin-block-start": { "$value": "1.6em" },
+      "margin-block-end": { "$value": "1.6em" },
       "font-size": {},
       "caption": {
         "color": {},
-        "font-size": { "value": "{utrecht.typography.scale.sm.font-size}" }
+        "font-size": { "$value": "{utrecht.typography.scale.sm.font-size}" }
       },
       "content": {
-        "color": { "value": "{utrecht.color.red.40}" },
-        "font-size": { "value": "{utrecht.typography.scale.lg.font-size}" }
+        "color": { "$value": "{utrecht.color.red.40}" },
+        "font-size": { "$value": "{utrecht.typography.scale.lg.font-size}" }
       }
     }
   }

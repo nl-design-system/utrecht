@@ -2,26 +2,26 @@
   "utrecht": {
     "map-marker": {
       "background-color": {
-        "value": "{utrecht.color.blue.30}"
+        "$value": "{utrecht.color.blue.30}"
       },
       "color": {
-        "value": "{utrecht.color.white}"
+        "$value": "{utrecht.color.white}"
       },
       "size": {
-        "value": "48px"
+        "$value": "48px"
       },
       "border-width": {
-        "value": "3px"
+        "$value": "3px"
       },
       "border-color": {
-        "value": "{utrecht.color.white}"
+        "$value": "{utrecht.color.white}"
       },
       "box-shadow-color": {
-        "value": "rgb(0 0 0 / 20%)"
+        "$value": "rgb(0 0 0 / 20%)"
       },
       "icon": {
         "size": {
-          "value": "30px"
+          "$value": "30px"
         }
       }
     }
