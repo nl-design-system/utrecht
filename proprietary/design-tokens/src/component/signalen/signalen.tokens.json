@@ -2,15 +2,15 @@
   "signalen": {
     "modal-dialog": {
       "background-color": {
-        "value": "{utrecht.body.background-color}"
+        "$value": "{utrecht.body.background-color}"
       },
       "color": {
-        "value": "{utrecht.body.color}"
+        "$value": "{utrecht.body.color}"
       }
     },
     "progress-bar": {
       "border-radius": {
-        "value": "4px"
+        "$value": "4px"
       }
     }
   }
