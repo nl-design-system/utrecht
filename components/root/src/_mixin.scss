@@ -13,7 +13,7 @@
 @mixin utrecht-root {
   /*
    * Goals:
-   * 
+   *
    * - take up 100% of the space, both horizontally and vertically.
    * - create a scrollable viewport experience both on `<html>` in the root,
    *   as well as on a `<div>` somewhere in a document.
@@ -29,6 +29,7 @@
   block-size: 100%;
   color: var(--utrecht-root-color);
   font-family: var(--utrecht-root-font-family);
+  font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
