@@ -1,5 +1,6 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
+import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
 import { createStyleDictionaryConfig } from './style-dictionary-config.mjs';
 
@@ -16,7 +17,6 @@ const build = async () => {
       themeName: `${themeConfig.prefix}-theme--dark`,
     }),
     log: 'warn',
-    preprocessors: ['tokens-studio'],
     source: [
       '../../components/**/tokens.json',
       '../../components/**/*.tokens.json',
