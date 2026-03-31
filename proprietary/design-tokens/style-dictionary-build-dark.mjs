@@ -1,7 +1,7 @@
 import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { readFile } from 'node:fs/promises';
-import { createStyleDictionaryConfig } from './style-dictionary-config.mjs';
+import { createStyleDictionaryConfig, registerCustomHooks, getTransforms } from './style-dictionary-config.mjs';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./config.json', 'utf-8'));
@@ -11,11 +11,22 @@ const build = async () => {
     // excludeParentKeys: true,
   });
 
+  registerCustomHooks(StyleDictionary);
+
   const config = {
     ...createStyleDictionaryConfig({
       themeName: `${themeConfig.prefix}-theme--dark`,
+      transforms: {
+        kebab: getTransforms(StyleDictionary, 'name/kebab'),
+        camel: getTransforms(StyleDictionary, 'name/camel'),
+      },
     }),
-    log: 'warn',
+    log: {
+      verbosity: 'warn',
+      errors: {
+        brokenReferences: 'console',
+      },
+    },
     preprocessors: ['tokens-studio'],
     source: [
       '../../components/**/tokens.json',
