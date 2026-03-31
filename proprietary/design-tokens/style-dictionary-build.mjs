@@ -18,7 +18,6 @@ const build = async () => {
     log: {
       verbosity: 'verbose',
     },
-    preprocessors: ['tokens-studio'],
     source: [
       '../../components/**/tokens.json',
       '../../components/**/*.tokens.json',
