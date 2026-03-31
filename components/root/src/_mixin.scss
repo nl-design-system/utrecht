@@ -28,9 +28,9 @@
   @include reset-font-smoothing;
 
   /* For some new properties, use the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
-  background-color: var(--utrecht-root-background-color);
+  background-color: var(--utrecht-root-background-color, Canvas);
   block-size: 100%;
-  color: var(--utrecht-root-color);
+  color: var(--utrecht-root-color, CanvasText);
   font-family: var(--utrecht-root-font-family);
   font-size: var(--utrecht-root-font-size, var(--utrecht-body-font-size));
   font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
