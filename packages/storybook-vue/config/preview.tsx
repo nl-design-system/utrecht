@@ -19,7 +19,7 @@ const preview: Preview = {
   decorators: [
     (story: any) => ({
       components: { Document, story },
-      template: '<Document class="utrecht-theme"><story /></Document>',
+      template: '<div class="utrecht-root utrecht-theme"><story /></Document>',
     }),
     withTests({ results }),
   ],
@@ -33,7 +33,7 @@ const preview: Preview = {
       },
     },
     docs: {
-      // Use our custom document component for docs
+      // Use our custom Root component for docs
       codePanel: true,
       // Show code by default.
       // Stories without concise code snippets can hide the code at Story level.
@@ -42,7 +42,7 @@ const preview: Preview = {
       },
 
       // container: ({ children }) => (
-      //   <div className="utrecht-document utrecht-theme">
+      //   <div className="utrecht-root utrecht-theme">
       //     <div className="utrecht-article">{children}</div>
       //   </div>
       // ),
