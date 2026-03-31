@@ -27,16 +27,20 @@
    */
   @include reset-font-smoothing;
 
+  /* For some new properties, use the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
   background-color: var(--utrecht-root-background-color);
   block-size: 100%;
   color: var(--utrecht-root-color);
   font-family: var(--utrecht-root-font-family);
+  font-size: var(--utrecht-root-font-size, var(--utrecht-body-font-size));
   font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
+  font-weight: var(--utrecht-root-font-weight, var(--utrecht-body-font-weight));
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   inline-size: 100%;
+  line-height: var(--utrecht-root-line-height, var(--utrecht-body-line-height));
   overflow-block: auto;
   overflow-inline: auto;
   position: relative;
