@@ -13,7 +13,7 @@ setCompodocJson(docJson);
 
 const preview: Preview = {
   decorators: [
-    componentWrapperDecorator((story) => `<div class="utrecht-document utrecht-theme">${story}</div>`),
+    componentWrapperDecorator((story) => `<div class="utrecht-root utrecht-theme">${story}</div>`),
     withTests({ results }),
   ],
   parameters: {

@@ -53,7 +53,7 @@ const transformSource = (code: string, storyContext: StoryContext<any>): string 
 };
 const preview: Preview = {
   decorators: [
-    // Enable `utrecht-document` component as backdrop
+    // Enable `utrecht-root` component as backdrop
     // Enable `utrecht-theme` to configure the design tokens
     // Ensure old html templates will be rendered as react component
     (Story: any, storyContext: any): ReactElement => {
@@ -62,7 +62,7 @@ const preview: Preview = {
 
       return (
         <div
-          className={clsx('utrecht-document', 'utrecht-document--surface', {
+          className={clsx('utrecht-root', {
             'utrecht-reduced-motion': isStorybookReducedMotion,
           })}
         >
