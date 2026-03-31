@@ -1,9 +1,12 @@
 {
   "utrecht": {
     "root": {
-      "background-color": { "value": "{utrecht.color.grey.95}" },
-      "color": { "value": "{utrecht.color.grey.10}" },
-      "font-size-adjust": { "value": "0.54" }
+      "background-color": { "value": "{utrecht.color.white}" },
+      "color": { "value": "{utrecht.color.black}" },
+      "font-family": { "value": "{utrecht.typography.sans-serif.font-family}" },
+      "font-size": { "value": "{utrecht.typography.scale.md.font-size}" },
+      "font-size-adjust": { "value": "0.54" },
+      "line-height": { "value": "1.4" }
     }
   }
 }
