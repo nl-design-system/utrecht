@@ -49,6 +49,10 @@
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
   word-break: break-word;
+
+  @media (prefers-reduced-motion: no-preference) {
+    scroll-behavior: smooth;
+  }
 }
 
 @mixin utrecht-root__focus-indicator {
