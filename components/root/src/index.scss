@@ -10,4 +10,5 @@
 .utrecht-root {
   @include utrecht-root;
   @include utrecht-focus-ring-default-container;
+  @include utrecht-root__fullscreen-backdrop;
 }
