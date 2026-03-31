@@ -58,3 +58,9 @@
 @mixin utrecht-root__focus-indicator {
   @include utrecht-focus-ring;
 }
+
+@mixin utrecht-root__fullscreen-backdrop {
+  :where(&) :where(:not(:root):fullscreen)::backdrop {
+    background-color: var(--utrecht-root-background-color, Canvas);
+  }
+}
