@@ -1,5 +1,17 @@
 # @utrecht/component-library-css
 
+## 9.0.4
+
+### Patch Changes
+
+- Updated dependencies [9a2eeb4]
+- Updated dependencies [3b655ff]
+- Updated dependencies [9c456ab]
+- Updated dependencies [80c3369]
+- Updated dependencies [9a2eeb4]
+  - @utrecht/body-css@3.0.0
+  - @utrecht/root-css@3.1.0
+
 ## 9.0.3
 
 ### Patch Changes

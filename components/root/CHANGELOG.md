@@ -1,5 +1,14 @@
 # @utrecht/root-css
 
+## 3.1.0
+
+### Minor Changes
+
+- 3b655ff: Add system colors as fallback for Root color and background-color, to guarantee contrast.
+- 9c456ab: Make `scroll-behavior: smooth` the default for Root component, except when `prefers-reduced-motion` is enabled.
+- 80c3369: Root component now specifies a default background color for fullscreen elements, to avoid contrast issues.
+- 9a2eeb4: Add `font-weight`, `font-size` and `line-height` tokens to Root, add `utrecht.body` tokens as fallback.
+
 ## 3.0.0
 
 ### Major Changes
