@@ -1,5 +1,12 @@
 # @utrecht/preact-app
 
+## 1.0.47
+
+### Patch Changes
+
+- Updated dependencies [cd0d8e6]
+  - @utrecht/design-tokens@5.1.0
+
 ## 1.0.46
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 5.1.0
+
+### Minor Changes
+
+- cd0d8e6: Add design tokens for Root component, copied from Body component.
+
 ## 5.0.3
 
 ### Patch Changes
