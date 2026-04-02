@@ -1,5 +1,12 @@
 # @utrecht/root-react
 
+## 1.0.12
+
+### Patch Changes
+
+- Updated dependencies [2ad7d66]
+  - @utrecht/root-css@3.1.1
+
 ## 1.0.11
 
 ### Patch Changes

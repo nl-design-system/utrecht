@@ -1,5 +1,11 @@
 # @utrecht/root-css
 
+## 3.1.1
+
+### Patch Changes
+
+- 2ad7d66: Fix regression in fluid font-size: never set `font-size` on `:root`.
+
 ## 3.1.0
 
 ### Minor Changes
