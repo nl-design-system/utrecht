@@ -12,6 +12,11 @@
     @include utrecht-root;
   }
 
+  body,
+  head {
+    @include utrecht-root__font-size-container;
+  }
+
   @include utrecht-focus-ring-default;
 }
 
@@ -22,6 +27,10 @@
 @mixin utrecht-html-root {
   :root {
     @include utrecht-root;
+  }
+
+  :root > :where(*) {
+    @include utrecht-root__font-size-container;
   }
 
   @include utrecht-focus-ring-default;

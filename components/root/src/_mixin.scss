@@ -24,6 +24,7 @@
    *   outside the normal document flow (`absolute`, `fixed` and `sticky`)
    *   are positioned relative to the root component.
    * - ensure text content fits at 400% zoom by enabling hypenation.
+   * - do not influence the `rem` unit by avoiding `font-size` on the root element.
    */
   @include reset-font-smoothing;
 
@@ -32,7 +33,6 @@
   block-size: 100%;
   color: var(--utrecht-root-color, CanvasText);
   font-family: var(--utrecht-root-font-family);
-  font-size: var(--utrecht-root-font-size, var(--utrecht-body-font-size));
   font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
   font-weight: var(--utrecht-root-font-weight, var(--utrecht-body-font-weight));
   -webkit-hyphens: auto;
@@ -40,7 +40,6 @@
   -ms-hyphens: auto;
   hyphens: auto;
   inline-size: 100%;
-  line-height: var(--utrecht-root-line-height, var(--utrecht-body-line-height));
   overflow-block: auto;
   overflow-inline: auto;
   position: relative;
@@ -55,10 +54,38 @@
   }
 }
 
+/**
+ * The focus indicator should be applied to all elements that have the `:focus-visible` state.
+ */
 @mixin utrecht-root__focus-indicator {
   @include utrecht-focus-ring;
 }
 
+/**
+ * Avoid setting `font-size` on `:root` if you want to keep `1rem` at `16px` for most users.
+ * Set `line-height` on the same element as `font-size`, to support font-relative line heights,
+ * even though they are discouraged.
+ */
+@mixin utrecht-root__font-size-container {
+  font-size: var(--utrecht-root-font-size, var(--utrecht-body-font-size));
+  line-height: var(--utrecht-root-line-height, var(--utrecht-body-line-height));
+}
+
+/**
+ * Ensure enough contrast with `var(--utrecht-root-color)`, by overriding the
+ * browser black default background color of full screen elements.
+ *
+ * You can test this by opening any element inside the Root component with the
+ * following JavaScript, for example the Heading 1:
+ *
+ *     document.querySelector('h1').requestFullscreen()
+ *
+ * In dark mode there might be enough contrast, but dark text on a black background
+ * would become unreadable in full screen.
+ *
+ * Use `:where()` so this background color can be overriden by a CSS selector
+ * with a higher specificity than (0,0,1).
+ */
 @mixin utrecht-root__fullscreen-backdrop {
   :where(&) :where(:not(:root):fullscreen)::backdrop {
     background-color: var(--utrecht-root-background-color, Canvas);
