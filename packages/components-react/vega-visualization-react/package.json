@@ -60,8 +60,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@utrecht/vega-visualization-css": "workspace:*",
-    "clsx": "2.1.1"
+    "@utrecht/vega-visualization-css": "workspace:*"
   },
   "devDependencies": {
     "@testing-library/dom": "10.4.1",
@@ -77,14 +76,18 @@
     "jest-environment-jsdom": "29.7.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
+    "react-vega": "8.0.0",
     "rollup": "4.23.0",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "vega": "6.2.0",
+    "vega-embed": "7.1.0",
+    "vega-lite": "6.4.2"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.23.6",
     "react": "^18.0.0 || ^19.0.0",
     "react-dom": "^18.0.0 || ^19.0.0",
-    "react-vega": "^7.6.0",
+    "react-vega": "^8.0.0",
     "vega": "^5.25.0"
   },
   "publishConfig": {
