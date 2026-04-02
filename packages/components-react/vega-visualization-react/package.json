@@ -1,0 +1,43 @@
+{
+  "name": "@utrecht/vega-visualization-react",
+  "version": "1.0.0",
+  "description": "VegaVisualization component for the Municipality of Utrecht based on the NL Design System architecture",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "homepage": "https://github.com/nl-design-system/utrecht/tree/main/packages/components-react/vega-visualization-react#readme",
+  "bugs": {
+    "url": "https://github.com/nl-design-system/utrecht/issues"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git+https://github.com/nl-design-system/utrecht.git",
+    "directory": "packages/components-react/vega-visualization-react"
+  },
+  "license": "EUPL-1.2",
+  "author": "Community for NL Design System",
+  "type": "module",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist/",
+    "src/"
+  ],
+  "dependencies": {
+    "clsx": "2.1.1"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0",
+    "react-vega": "^7.6.0",
+    "vega": "^5.25.0"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
