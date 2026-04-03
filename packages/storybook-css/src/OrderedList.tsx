@@ -9,7 +9,6 @@ interface OrderedListItemData {
 }
 
 interface OrderedListStoryProps extends OrderedListProps {
-  element?: string | 'div';
   center?: boolean;
   items?: OrderedListItemData[];
   htmlContent?: boolean;
