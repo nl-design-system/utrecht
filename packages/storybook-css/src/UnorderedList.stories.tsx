@@ -20,6 +20,10 @@ const meta = {
       description: 'Content of the list.',
       control: 'text',
     },
+    forcedColors: {
+      description: 'Simulate forced-colors mode.',
+      control: 'boolean',
+    },
     htmlContent: {
       description: 'Content of the list is HTML without BEM class names on each element.',
       control: 'boolean',
@@ -140,6 +144,21 @@ const NarrowContainerWithCenteredText: Decorator = (Story) => (
   </div>
 );
 
+const ForceColorModeWrapper = (Story) => <div className="utrecht-unordered-list__marker--forced-colors">{Story()}</div>;
+
+const ForceColorModeDarkWrapper = (Story) => (
+  <div
+    style={{
+      backgroundColor: '#000',
+      color: '#fff',
+      padding: '1rem',
+    }}
+    className="utrecht-unordered-list__marker--forced-colors-dark"
+  >
+    {Story()}
+  </div>
+);
+
 export const NarrowContainerCenter: Story = {
   args: {
     center: true,
@@ -233,6 +252,34 @@ export const HTMLContent: Story = {
       description: {
         story:
           'Use the `utrecht-unordered-list--html-content` modifier when you only have control over the template for the outer `<ul>` and cannot add BEM class names to the `<li>` elements.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const ForceColorMode: Story = {
+  args: {
+    forcedColors: true,
+    items: [
+      {
+        children: 'Lorem',
+      },
+      {
+        children: 'Ipsum',
+      },
+      {
+        children: 'Dolor',
+      },
+    ],
+  },
+  name: 'Force color mode',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Use the `utrecht-unordered-list--forced-colors` modifier when you need to support forced color mode.',
       },
     },
     status: {
