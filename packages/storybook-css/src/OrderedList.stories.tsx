@@ -1,12 +1,10 @@
 /* @license CC0-1.0 */
 
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
-import { OrderedList, OrderedListItem } from '@utrecht/component-library-react';
 import type { OrderedListProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/ordered-list-css/README.md?raw';
 import tokensDefinition from '@utrecht/ordered-list-css/src/tokens.json';
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
 import { OrderedListStory } from './OrderedList';
 import { designTokenStory } from './design-token-story';
