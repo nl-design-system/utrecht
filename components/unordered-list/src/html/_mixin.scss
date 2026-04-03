@@ -10,13 +10,17 @@
   ul {
     @include utrecht-unordered-list;
     @include utrecht-unordered-list--distanced;
+
+    @media (forced-colors: active) {
+      @include utrecht-unordered-list--forced-colors;
+    }
   }
 
   ul > li {
     @include utrecht-unordered-list__item;
   }
 
-  ul > li::marker {
+  ul > li::before {
     @include utrecht-unordered-list__marker;
   }
 }
