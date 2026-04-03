@@ -19,10 +19,10 @@ interface UnorderedListStoryProps extends UnorderedListProps {
 
 const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
   <ul>
-    {items?.map(({ children: subChildren, items: subItems }, index) => (
-      <li key={index}>
+    {items?.map(({ children: subChildren, items: subItems }) => (
+      <li key={`${subChildren}`}>
         {subChildren}
-        {subItems && HTMLList({ items: subItems })}
+        {subItems && <HTMLList items={subItems} />}
       </li>
     ))}
   </ul>
@@ -46,14 +46,14 @@ export const UnorderedListStory = ({
     >
       {children}
       {htmlContent
-        ? items?.map(({ children: subChildren, items: subItems }, index) => (
-            <li key={index}>
+        ? items?.map(({ children: subChildren, items: subItems }) => (
+            <li key={`${subChildren}`}>
               {subChildren}
               {subItems && HTMLList({ items: subItems })}
             </li>
           ))
-        : items?.map(({ children: subChildren, items: subItems }, index) => (
-            <UnorderedListItem key={index}>
+        : items?.map(({ children: subChildren, items: subItems }) => (
+            <UnorderedListItem key={`${subChildren}`}>
               {subChildren}
               {subItems && UnorderedListStory({ items: subItems, nested: true, level: level + 1 })}
             </UnorderedListItem>

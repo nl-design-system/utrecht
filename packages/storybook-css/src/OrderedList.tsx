@@ -16,8 +16,8 @@ interface OrderedListStoryProps extends OrderedListProps {
 
 const HTMLList = ({ items }: { items: OrderedListItemData[] }) => (
   <ol>
-    {items?.map(({ children: subChildren, items: subItems }, index) => (
-      <li key={index}>
+    {items?.map(({ children: subChildren, items: subItems }) => (
+      <li key={`${subChildren}`}>
         {subChildren}
         {subItems && HTMLList({ items: subItems })}
       </li>
@@ -35,14 +35,14 @@ export const OrderedListStory = ({ children, center, items, htmlContent }: Order
     >
       {children}
       {htmlContent
-        ? items?.map(({ children: subChildren, items: subItems }, index) => (
-            <li key={index}>
+        ? items?.map(({ children: subChildren, items: subItems }) => (
+            <li key={`${subChildren}`}>
               {subChildren}
               {subItems && HTMLList({ items: subItems })}
             </li>
           ))
-        : items?.map(({ children: subChildren, items: subItems }, index) => (
-            <OrderedListItem key={index}>
+        : items?.map(({ children: subChildren, items: subItems }) => (
+            <OrderedListItem key={`${subChildren}`}>
               {subChildren}
               {subItems && OrderedListStory({ items: subItems })}
             </OrderedListItem>
