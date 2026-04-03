@@ -110,7 +110,7 @@ export const Nested: Story = {
 };
 
 // Custom component for UL > OL > UL nesting
-const UlOlUlOlNestingComponent = () => (
+const UlOlNestingComponent = () => (
   <UnorderedListStory
     items={[
       {
@@ -186,11 +186,11 @@ export const NestingOrderedAndUnorderedLists: Story = {
       },
     },
   },
-  render: () => <UlOlUlOlNestingComponent />,
+  render: () => <UlOlNestingComponent />,
 };
 
 // HTML Content version for mixed nesting
-const UlOlUlNestingHtmlContentComponent = () => (
+const UlOlNestingHtmlContentComponent = () => (
   <UnorderedListStory
     htmlContent={true}
     items={[
@@ -273,7 +273,7 @@ export const NestingOrderedAndUnorderedListsWithHtmlContent: Story = {
       },
     },
   },
-  render: () => <UlOlUlNestingHtmlContentComponent />,
+  render: () => <UlOlNestingHtmlContentComponent />,
 };
 
 const ContainerWithCenteredText: Decorator = (Story) => <div style={{ textAlign: 'center' }}>{Story()}</div>;
