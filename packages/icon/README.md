@@ -44,7 +44,7 @@ Deze manier is handig als je een klein verschil wilt aanbrengen tussen de tekst 
 
 <style>
   button {
-    --utrecht-icon-color: rgba(255, 255, 255, 0.75);
+    --utrecht-icon-color: rgb(255 255 255 / 0.75);
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
   }
