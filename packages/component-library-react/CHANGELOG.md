@@ -1,5 +1,50 @@
 # @utrecht/component-library-react
 
+## 13.1.0
+
+### Minor Changes
+
+- 31d20da: - Upgraded react-vega, vega, vega-lite.
+  - `VegaVisualization` was updated to handle the changed API.
+  - `VegaVisualization` now has an `options` prop which is passed into the underlying `VegaEmbed` component. The `actions` prop, which can also be controlled through `options`, has been deprecated.
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+- Updated dependencies [95f6807]
+- Updated dependencies [257488d]
+  - @utrecht/table-of-contents-css@1.0.2
+  - @utrecht/color-sample-css@2.0.2
+  - @utrecht/number-data-css@2.0.2
+  - @utrecht/data-list-css@2.0.2
+  - @utrecht/heading-1-css@2.0.2
+  - @utrecht/heading-2-css@2.0.2
+  - @utrecht/heading-3-css@2.0.2
+  - @utrecht/heading-4-css@2.0.2
+  - @utrecht/heading-5-css@2.0.2
+  - @utrecht/heading-6-css@2.0.2
+  - @utrecht/backdrop-css@2.0.2
+  - @utrecht/textarea-css@3.0.2
+  - @utrecht/url-data-css@2.0.2
+  - @utrecht/select-css@2.0.2
+  - @utrecht/table-css@2.0.3
+  - @utrecht/mark-css@2.0.2
+  - @utrecht/page-footer-css@3.0.2
+  - @utrecht/search-bar-css@3.0.2
+  - @utrecht/calendar-react@1.1.2
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/fieldset-react@1.0.11
+  - @utrecht/radio-button-react@1.0.11
+  - @utrecht/form-field-react@1.0.11
+  - @utrecht/alert-dialog-css@2.0.1
+  - @utrecht/drawer-css@2.0.1
+  - @utrecht/checkbox-react@1.0.12
+  - @utrecht/listbox-react@1.0.15
+  - @utrecht/open-forms-container-css@2.0.4
+  - @utrecht/textbox-react@1.0.14
+  - @utrecht/form-field-checkbox-react@1.1.4
+  - @utrecht/open-forms-container-react@1.0.8
+
 ## 13.0.4
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 5.1.1
+
+### Patch Changes
+
+- 7e89444: Switch from `hsla()` and `rgba()` to modern syntax to include alpha in `hsl()` and `rgb()`.
+
 ## 5.1.0
 
 ### Minor Changes

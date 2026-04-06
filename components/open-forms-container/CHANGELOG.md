@@ -1,5 +1,12 @@
 # @utrecht/open-forms-container-css
 
+## 2.0.4
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+  - @utrecht/textbox-css@3.1.1
+
 ## 2.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/calendar-react
 
+## 1.1.2
+
+### Patch Changes
+
+- 257488d: Upgrade lodash-es dependency. Resolves [CVE-2026-2950](https://www.cve.org/CVERecord?id=CVE-2026-2950).
+
 ## 1.1.1
 
 ### Patch Changes
