@@ -1,5 +1,16 @@
 # @utrecht/table-css
 
+## 2.0.3
+
+### Patch Changes
+
+- 982448a: Switch from deprecated CSS properties to ones that are newly Baseline supported:
+
+  - `clip` now iw `clip-path`.
+  - `word-break` is now `overflow-wrap`
+  - `page-break-inside` now is `break-inside`.
+  - `page-break-after` now is `break-after`.
+
 ## 2.0.2
 
 ### Patch Changes

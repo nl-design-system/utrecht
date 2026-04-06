@@ -1,5 +1,12 @@
 # @utrecht/storybook-helpers
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies [7e89444]
+  - @utrecht/design-tokens@5.1.1
+
 ## 0.0.10
 
 ### Patch Changes

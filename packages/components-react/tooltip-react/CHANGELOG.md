@@ -1,5 +1,12 @@
 # @utrecht/tooltip-react
 
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+  - @utrecht/tooltip-css@2.0.2
+
 ## 1.1.0
 
 ### Minor Changes

@@ -1,5 +1,41 @@
 # @utrecht/component-library-css
 
+## 9.0.6
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+- Updated dependencies [95f6807]
+  - @utrecht/table-of-contents-css@1.0.2
+  - @utrecht/form-fieldset-css@2.0.2
+  - @utrecht/color-sample-css@2.0.2
+  - @utrecht/radio-button-css@2.0.2
+  - @utrecht/number-data-css@2.0.2
+  - @utrecht/form-field-css@2.0.2
+  - @utrecht/data-list-css@2.0.2
+  - @utrecht/heading-1-css@2.0.2
+  - @utrecht/heading-2-css@2.0.2
+  - @utrecht/heading-3-css@2.0.2
+  - @utrecht/heading-4-css@2.0.2
+  - @utrecht/heading-5-css@2.0.2
+  - @utrecht/heading-6-css@2.0.2
+  - @utrecht/backdrop-css@2.0.2
+  - @utrecht/checkbox-css@2.0.2
+  - @utrecht/textarea-css@3.0.2
+  - @utrecht/url-data-css@2.0.2
+  - @utrecht/listbox-css@2.1.1
+  - @utrecht/textbox-css@3.1.1
+  - @utrecht/tooltip-css@2.0.2
+  - @utrecht/select-css@2.0.2
+  - @utrecht/table-css@2.0.3
+  - @utrecht/mark-css@2.0.2
+  - @utrecht/root-css@3.1.2
+  - @utrecht/page-footer-css@3.0.2
+  - @utrecht/search-bar-css@3.0.2
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/alert-dialog-css@2.0.1
+  - @utrecht/drawer-css@2.0.1
+
 ## 9.0.5
 
 ### Patch Changes
