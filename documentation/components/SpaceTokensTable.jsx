@@ -69,24 +69,24 @@ export const SpaceTokensTable = ({ tokens, orientation }) => (
       </tr>
     </thead>
     <tbody>
-      {tokens.map(({ comment, name, path, value }) => (
+      {tokens.map(({ $description, name, path, $value }) => (
         <tr key={name}>
-          <td>{comment}</td>
+          <td>{$description}</td>
           <td>
             <code>{path2css(path)}</code>
           </td>
-          <td>{value}</td>
+          <td>{$value}</td>
           <td>
             {orientation === 'horizontal' ? (
-              <HorizontalSpaceExample size={value} />
+              <HorizontalSpaceExample size={$value} />
             ) : orientation === 'vertical' ? (
-              <VerticalSpaceExample size={value} />
+              <VerticalSpaceExample size={$value} />
             ) : orientation === 'block' ? (
-              <BlockSpaceExample size={value} />
+              <BlockSpaceExample size={$value} />
             ) : orientation === 'inline' ? (
-              <InlineSpaceExample size={value} />
+              <InlineSpaceExample size={$value} />
             ) : (
-              <HorizontalSpaceExample size={value} />
+              <HorizontalSpaceExample size={$value} />
             )}
           </td>
         </tr>
