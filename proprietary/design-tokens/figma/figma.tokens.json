@@ -1983,6 +1983,10 @@
         }
       },
       "space": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
         "inline": {
           "2xs": {
             "$type": "dimension",
@@ -2656,6 +2660,11 @@
         }
       },
       "border-radius": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0px",
+          "$description": "Square"
+        },
         "sm": {
           "$type": "dimension",
           "$value": "4px"
@@ -2674,6 +2683,10 @@
         }
       },
       "border-width": {
+        "none": {
+          "$type": "dimension",
+          "$value": "0px"
+        },
         "sm": {
           "$type": "dimension",
           "$value": "0.0625rem"
@@ -2688,6 +2701,10 @@
         }
       },
       "box-shadow": {
+        "none": {
+          "$type": "boxShadow",
+          "$value": "none"
+        },
         "sm": {
           "$type": "boxShadow",
           "$value": {
