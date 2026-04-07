@@ -5,7 +5,7 @@ import { ColorExample } from './ColorExample';
 
 const visualizeToken = (token) => {
   if (token['$extensions'] && token['$extensions']['nl.nldesignsystem.css-property-syntax'] === '<color>') {
-    return <ColorExample color={token.value}></ColorExample>;
+    return <ColorExample color={token['$value']}></ColorExample>;
   } else {
     return '';
   }
@@ -25,13 +25,13 @@ export const DesignTokensTable = ({ tokens }) => (
       </thead>
       <tbody>
         {tokens.map((token) => {
-          const { name, path, value } = token;
+          const { name, path, $value } = token;
           return (
             <tr key={name}>
               <td>
                 <code>{path.join('.')}</code>
               </td>
-              <td>{value}</td>
+              <td>{$value}</td>
               <td>{visualizeToken(token)}</td>
               <td>
                 {token['$extensions'] && token['$extensions']['nl.nldesignsystem.figma-implementation'] === false ? (
