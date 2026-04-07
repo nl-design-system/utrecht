@@ -1,5 +1,17 @@
 # @utrecht/open-forms-container-css
 
+## 3.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/focus-ring-css@4.0.0
+  - @utrecht/textbox-css@4.0.0
+
 ## 2.0.4
 
 ### Patch Changes

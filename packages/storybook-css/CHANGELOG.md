@@ -1,5 +1,11 @@
 # @utrecht/storybook-css
 
+## 1.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
 ## 0.1.0
 
 ### Minor Changes

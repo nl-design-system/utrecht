@@ -1,5 +1,11 @@
 # @utrecht/data-placeholder-css
 
+## 3.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
 ## 2.0.1
 
 ### Patch Changes

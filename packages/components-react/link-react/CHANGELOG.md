@@ -1,5 +1,12 @@
 # @utrecht/link-react
 
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/link-css@3.0.0
+
 ## 1.0.10
 
 ### Patch Changes
