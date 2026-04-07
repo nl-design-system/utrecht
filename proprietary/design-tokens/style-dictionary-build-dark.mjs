@@ -6,10 +6,6 @@ import { createStyleDictionaryConfig } from './style-dictionary-config.mjs';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./config.json', 'utf-8'));
-  StyleDictionary.registerPreprocessor({
-    name: 'dtcg-delegate',
-    preprocessor: typeDtcgDelegate,
-  });
 
   register(StyleDictionary, {
     // TODO: Enable `excludeParentKeys` when Figma is the source of design tokens
@@ -21,7 +17,6 @@ const build = async () => {
       themeName: `${themeConfig.prefix}-theme--dark`,
     }),
     log: 'warn',
-    preprocessors: ['tokens-studio', 'dtcg-delegate'],
     source: [
       '../../components/**/tokens.json',
       '../../components/**/*.tokens.json',

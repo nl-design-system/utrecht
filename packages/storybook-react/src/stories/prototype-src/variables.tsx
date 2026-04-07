@@ -32,5 +32,8 @@ const urls = {
   trouwenRegelenChecklist: './iframe.html?args=&id=trouwen-regelen--one&viewMode=story#regelwerk',
   trouwenVeelgesteldeVragen: './iframe.html?args=&id=trouwen-veelgesteldevragen--one&viewMode=story',
   trouwenSoortenTrouwen: './iframe.html?args=&id=trouwen-soorten-trouwen--one&viewMode=story',
+  volgordeScenario: './iframe.html?globals=&args=&id=volgorde-bijstand--scenario&viewMode=story',
+  volgorde1: './iframe.html?globals=&args=&id=volgorde-bijstand--volgorde-1&viewMode=story',
+  volgorde2: './iframe.html?globals=&args=&id=volgorde-bijstand--volgorde-2&viewMode=story',
 };
 export default urls;

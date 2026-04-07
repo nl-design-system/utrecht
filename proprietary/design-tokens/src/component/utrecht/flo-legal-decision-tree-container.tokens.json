@@ -3,116 +3,116 @@
     "flo-decision": {
       "explanation": {
         "margin-inline-start": {
-          "value": "{utrecht.space.block.xl}"
+          "$value": "{utrecht.space.block.xl}"
         },
         "margin-block-start": {
-          "value": "0"
+          "$value": "0"
         },
         "button": {
           "border-color": {
-            "value": "{utrecht.color.black}"
+            "$value": "{utrecht.color.black}"
           },
           "background-color": {
-            "value": "transparent"
+            "$value": "transparent"
           },
           "close": {
             "margin-block-end": {
-              "value": "{utrecht.space.block.sm}"
+              "$value": "{utrecht.space.block.sm}"
             }
           }
         },
         "container": {
           "background-color": {},
           "margin-block-start": {
-            "value": "{utrecht.space.block.sm}"
+            "$value": "{utrecht.space.block.sm}"
           }
         }
       },
       "label": {
         "checkbox": {
           "column-gap": {
-            "value": "{utrecht.space.inline.xs}"
+            "$value": "{utrecht.space.inline.xs}"
           },
           "margin-block-start": {
-            "value": "{utrecht.space.block.sm}"
+            "$value": "{utrecht.space.block.sm}"
           }
         }
       },
       "form": {
         "padding-block": {
-          "value": "{utrecht.space.block.md}"
+          "$value": "{utrecht.space.block.md}"
         },
         "padding-inline": {
-          "value": "{utrecht.space.inline.3xl}"
+          "$value": "{utrecht.space.inline.3xl}"
         },
         "background-color": {
-          "value": "{utrecht.color.green.90}"
+          "$value": "{utrecht.color.green.90}"
         },
         "margin-block-start": {
-          "value": "{utrecht.space.block.xl}"
+          "$value": "{utrecht.space.block.xl}"
         },
         "margin-block-end": {
-          "value": "{utrecht.space.block.xs}"
+          "$value": "{utrecht.space.block.xs}"
         },
         "button": {
           "disabled": {
             "color": {
-              "value": "{utrecht.color.grey.40}"
+              "$value": "{utrecht.color.grey.40}"
             }
           }
         },
         "nav": {
           "padding-block": {
-            "value": "{utrecht.space.block.xl}"
+            "$value": "{utrecht.space.block.xl}"
           }
         }
       },
       "question": {
         "description": {
           "column-gap": {
-            "value": "{utrecht.space.inline.sm}"
+            "$value": "{utrecht.space.inline.sm}"
           }
         },
         "answers": {
           "row-gap": {
-            "value": "{utrecht.space.block.xs}"
+            "$value": "{utrecht.space.block.xs}"
           },
           "option": {
             "column-gap": {
-              "value": "{utrecht.space.inline.sm}"
+              "$value": "{utrecht.space.inline.sm}"
             }
           }
         },
         "section": {
           "padding-block-end": {
-            "value": "{utrecht.space.block.xl}"
+            "$value": "{utrecht.space.block.xl}"
           },
           "padding-block-start": {
-            "value": "{utrecht.space.block.xl}"
+            "$value": "{utrecht.space.block.xl}"
           },
           "background-color": {
-            "value": "{utrecht.color.green.90}"
+            "$value": "{utrecht.color.green.90}"
           },
           "border-block-color": {
-            "value": "{utrecht.color.green.50}"
+            "$value": "{utrecht.color.green.50}"
           },
           "border-block-width": {
-            "value": "3px"
+            "$value": "3px"
           }
         }
       },
       "outcomes-container": {
         "background-color": {
-          "value": "{utrecht.color.white}"
+          "$value": "{utrecht.color.white}"
         },
         "margin-block-start": {
-          "value": "{utrecht.space.block.xl}"
+          "$value": "{utrecht.space.block.xl}"
         },
         "padding-inline": {
-          "value": "{utrecht.space.inline.2xl}"
+          "$value": "{utrecht.space.inline.2xl}"
         },
         "padding-block": {
-          "value": "{utrecht.space.block.2xl}"
+          "$value": "{utrecht.space.block.2xl}"
         }
       }
     }

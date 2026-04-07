@@ -1,6 +1,7 @@
-import type { Config } from 'jest';
-
-const config: Config = {
+/**
+ * @type {import('jest').Config}
+ */
+const config = {
   coverageProvider: 'v8',
   extensionsToTreatAsEsm: ['.ts', '.tsx'],
   rootDir: './src/',

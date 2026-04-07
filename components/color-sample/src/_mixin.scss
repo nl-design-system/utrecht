@@ -18,18 +18,12 @@
   print-color-adjust: exact;
 
   @media (forced-colors: active) {
-    & {
-      forced-color-adjust: none;
-    }
+    forced-color-adjust: none;
   }
   @media (forced-colors: active) and (prefers-color-scheme: dark) {
-    & {
-      --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-dark-border-color, #000);
-    }
+    --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-dark-border-color, #000);
   }
   @media (forced-colors: active) and (prefers-color-scheme: light) {
-    & {
-      --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-light-border-color, #fff);
-    }
+    --utrecht-color-sample-default-border-color: var(--utrecht-color-sample-light-border-color, #fff);
   }
 }

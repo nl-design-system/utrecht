@@ -20,14 +20,10 @@
   color: var(--utrecht-mark-color, revert);
 
   @media print {
-    & {
-      @include utrecht-mark--print;
-    }
+    @include utrecht-mark--print;
   }
 
   @media screen and (-ms-high-contrast: active) {
-    & {
-      @include utrecht-mark--windows-high-contrast;
-    }
+    @include utrecht-mark--windows-high-contrast;
   }
 }

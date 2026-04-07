@@ -1,5 +1,75 @@
 # @utrecht/astro
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+- Updated dependencies [7e89444]
+- Updated dependencies [31d20da]
+  - @utrecht/web-component-library-stencil@4.1.1
+  - @utrecht/design-tokens@5.1.1
+  - @utrecht/component-library-react@13.1.0
+  - @utrecht/storybook@0.0.2
+  - @utrecht/component-library-css@9.0.6
+
+## 0.0.22
+
+### Patch Changes
+
+- @utrecht/component-library-css@9.0.5
+- @utrecht/storybook@0.0.2
+- @utrecht/web-component-library-stencil@4.1.0
+
+## 0.0.21
+
+### Patch Changes
+
+- Updated dependencies [cd0d8e6]
+  - @utrecht/design-tokens@5.1.0
+  - @utrecht/component-library-css@9.0.4
+  - @utrecht/body-react@0.0.10
+  - @utrecht/storybook@0.0.2
+  - @utrecht/web-component-library-stencil@4.1.0
+
+## 0.0.20
+
+### Patch Changes
+
+- Updated dependencies [e89c1d2]
+  - @utrecht/design-tokens@5.0.3
+  - @utrecht/component-library-react@13.0.4
+  - @utrecht/storybook@0.0.2
+  - @utrecht/web-component-library-stencil@4.1.0
+  - @utrecht/component-library-css@9.0.3
+
+## 0.0.19
+
+### Patch Changes
+
+- Updated dependencies [8946412]
+- Updated dependencies [4d1339f]
+  - @utrecht/component-library-react@13.0.3
+  - @utrecht/storybook@0.0.2
+
+## 0.0.18
+
+### Patch Changes
+
+- @utrecht/component-library-react@13.0.2
+- @utrecht/storybook@0.0.2
+
+## 0.0.17
+
+### Patch Changes
+
+- Updated dependencies [157d561]
+  - @utrecht/design-tokens@5.0.2
+  - @utrecht/component-library-css@9.0.2
+  - @utrecht/component-library-react@13.0.1
+  - @utrecht/storybook@0.0.2
+  - @utrecht/web-component-library-stencil@4.1.0
+
 ## 0.0.16
 
 ### Patch Changes

@@ -14,6 +14,7 @@ const enumGuard =
 
 const ROLES = ['status', 'alert'] as const;
 type AlertRole = (typeof ROLES)[number];
+const isAlertRole = enumGuard(ROLES);
 
 const TYPES = ['error', 'warning', 'info', 'ok'] as const;
 type AlertType = (typeof TYPES)[number];
@@ -36,7 +37,7 @@ export class Alert {
 
   render() {
     const computedType = isAlertType(this.type) ? this.type : 'info';
-    const computedRole = typeToRole[computedType];
+    const computedRole = isAlertRole(typeToRole[computedType]) ? typeToRole[computedType] : 'status';
     return (
       <div class={clsx('utrecht-alert', `utrecht-alert--${computedType}`)}>
         <div class="utrecht-alert__icon">

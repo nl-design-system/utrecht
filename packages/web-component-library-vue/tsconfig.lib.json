@@ -1,13 +1,15 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue"],
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["src/**/*", "src/**/*.vue"],
   "exclude": ["**/node_modules/*", "src/**/__tests__/*"],
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
+    "isolatedModules": true,
     "paths": {
       "@/*": ["./src/*"]
     },
-    "rootDir": "./src/"
+    "rootDir": "./src/",
+    "strict": true
   }
 }

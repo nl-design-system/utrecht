@@ -15,6 +15,7 @@
 @use "~@utrecht/document-css/src/html/mixin" as *;
 @use "~@utrecht/emphasis-css/src/html/mixin" as *;
 @use "~@utrecht/figure-css/src/html/mixin" as *;
+@use "~@utrecht/focus-ring-css/src/mixin" as *;
 @use "~@utrecht/form-css/src/html/mixin" as *;
 @use "~@utrecht/form-fieldset-css/src/html/mixin" as *;
 @use "~@utrecht/form-label-css/src/html/mixin" as *;
@@ -74,5 +75,7 @@
 }
 
 @mixin utrecht-html-content-container {
+  @include utrecht-focus-ring-default-container;
+
   --utrecht-space-around: 1;
 }

@@ -1,5 +1,100 @@
 # @utrecht/component-library-react
 
+## 13.1.0
+
+### Minor Changes
+
+- 31d20da: - Upgraded react-vega, vega, vega-lite.
+  - `VegaVisualization` was updated to handle the changed API.
+  - `VegaVisualization` now has an `options` prop which is passed into the underlying `VegaEmbed` component. The `actions` prop, which can also be controlled through `options`, has been deprecated.
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+- Updated dependencies [95f6807]
+- Updated dependencies [257488d]
+  - @utrecht/table-of-contents-css@1.0.2
+  - @utrecht/color-sample-css@2.0.2
+  - @utrecht/number-data-css@2.0.2
+  - @utrecht/data-list-css@2.0.2
+  - @utrecht/heading-1-css@2.0.2
+  - @utrecht/heading-2-css@2.0.2
+  - @utrecht/heading-3-css@2.0.2
+  - @utrecht/heading-4-css@2.0.2
+  - @utrecht/heading-5-css@2.0.2
+  - @utrecht/heading-6-css@2.0.2
+  - @utrecht/backdrop-css@2.0.2
+  - @utrecht/textarea-css@3.0.2
+  - @utrecht/url-data-css@2.0.2
+  - @utrecht/select-css@2.0.2
+  - @utrecht/table-css@2.0.3
+  - @utrecht/mark-css@2.0.2
+  - @utrecht/page-footer-css@3.0.2
+  - @utrecht/search-bar-css@3.0.2
+  - @utrecht/calendar-react@1.1.2
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/fieldset-react@1.0.11
+  - @utrecht/radio-button-react@1.0.11
+  - @utrecht/form-field-react@1.0.11
+  - @utrecht/alert-dialog-css@2.0.1
+  - @utrecht/drawer-css@2.0.1
+  - @utrecht/checkbox-react@1.0.12
+  - @utrecht/listbox-react@1.0.15
+  - @utrecht/open-forms-container-css@2.0.4
+  - @utrecht/textbox-react@1.0.14
+  - @utrecht/form-field-checkbox-react@1.1.4
+  - @utrecht/open-forms-container-react@1.0.8
+
+## 13.0.4
+
+### Patch Changes
+
+- Updated dependencies [4d4079c]
+- Updated dependencies [4d4079c]
+  - @utrecht/focus-ring-css@3.1.0
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/custom-checkbox-css@2.0.1
+  - @utrecht/form-toggle-css@2.0.1
+  - @utrecht/link-button-css@2.0.1
+  - @utrecht/link-social-css@2.0.1
+  - @utrecht/map-control-button-css@3.0.1
+  - @utrecht/open-forms-container-css@2.0.3
+  - @utrecht/pagination-css@2.0.3
+  - @utrecht/search-bar-css@3.0.1
+  - @utrecht/select-css@2.0.1
+  - @utrecht/skip-link-css@2.0.1
+  - @utrecht/textarea-css@3.0.1
+  - @utrecht/top-task-link-css@2.0.1
+  - @utrecht/open-forms-container-react@1.0.7
+
+## 13.0.3
+
+### Patch Changes
+
+- 8946412: chore: svg inline styles van het icon verplaatst naar individuele attributes als mitigatie van CSP errors
+- 4d1339f: Removed date-fns from the (optional) peer dependencies as it's not directly used.
+- Updated dependencies [555aa6a]
+  - @utrecht/calendar-react@1.1.1
+
+## 13.0.2
+
+### Patch Changes
+
+- Updated dependencies [526168e]
+  - @utrecht/calendar-react@1.1.0
+
+## 13.0.1
+
+### Patch Changes
+
+- Updated dependencies [7c6f825]
+  - @utrecht/table-css@2.0.2
+  - @utrecht/html-content-css@2.0.1
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/button-react@3.0.1
+  - @utrecht/calendar-react@1.0.17
+
 ## 13.0.0
 
 ### Major Changes

@@ -1,5 +1,98 @@
 # @utrecht/component-library-css
 
+## 9.0.6
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+- Updated dependencies [95f6807]
+  - @utrecht/table-of-contents-css@1.0.2
+  - @utrecht/form-fieldset-css@2.0.2
+  - @utrecht/color-sample-css@2.0.2
+  - @utrecht/radio-button-css@2.0.2
+  - @utrecht/number-data-css@2.0.2
+  - @utrecht/form-field-css@2.0.2
+  - @utrecht/data-list-css@2.0.2
+  - @utrecht/heading-1-css@2.0.2
+  - @utrecht/heading-2-css@2.0.2
+  - @utrecht/heading-3-css@2.0.2
+  - @utrecht/heading-4-css@2.0.2
+  - @utrecht/heading-5-css@2.0.2
+  - @utrecht/heading-6-css@2.0.2
+  - @utrecht/backdrop-css@2.0.2
+  - @utrecht/checkbox-css@2.0.2
+  - @utrecht/textarea-css@3.0.2
+  - @utrecht/url-data-css@2.0.2
+  - @utrecht/listbox-css@2.1.1
+  - @utrecht/textbox-css@3.1.1
+  - @utrecht/tooltip-css@2.0.2
+  - @utrecht/select-css@2.0.2
+  - @utrecht/table-css@2.0.3
+  - @utrecht/mark-css@2.0.2
+  - @utrecht/root-css@3.1.2
+  - @utrecht/page-footer-css@3.0.2
+  - @utrecht/search-bar-css@3.0.2
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/alert-dialog-css@2.0.1
+  - @utrecht/drawer-css@2.0.1
+
+## 9.0.5
+
+### Patch Changes
+
+- Updated dependencies [2ad7d66]
+  - @utrecht/root-css@3.1.1
+
+## 9.0.4
+
+### Patch Changes
+
+- Updated dependencies [9a2eeb4]
+- Updated dependencies [3b655ff]
+- Updated dependencies [9c456ab]
+- Updated dependencies [80c3369]
+- Updated dependencies [9a2eeb4]
+  - @utrecht/body-css@3.0.0
+  - @utrecht/root-css@3.1.0
+
+## 9.0.3
+
+### Patch Changes
+
+- Updated dependencies [4d4079c]
+- Updated dependencies [4d4079c]
+- Updated dependencies [e89c1d2]
+  - @utrecht/html-content-css@2.1.0
+  - @utrecht/root-css@3.0.0
+  - @utrecht/button-css@3.1.0
+  - @utrecht/button-link-css@2.0.1
+  - @utrecht/checkbox-css@2.0.1
+  - @utrecht/custom-checkbox-css@2.0.1
+  - @utrecht/form-toggle-css@2.0.1
+  - @utrecht/link-css@2.0.1
+  - @utrecht/link-button-css@2.0.1
+  - @utrecht/link-social-css@2.0.1
+  - @utrecht/listbox-css@2.1.0
+  - @utrecht/pagination-css@2.0.3
+  - @utrecht/radio-button-css@2.0.1
+  - @utrecht/search-bar-css@3.0.1
+  - @utrecht/select-css@2.0.1
+  - @utrecht/skip-link-css@2.0.1
+  - @utrecht/textarea-css@3.0.1
+  - @utrecht/textbox-css@3.1.0
+  - @utrecht/top-task-link-css@2.0.1
+
+## 9.0.2
+
+### Patch Changes
+
+- Updated dependencies [7c6f825]
+- Updated dependencies [7c6f825]
+  - @utrecht/table-css@2.0.2
+  - @utrecht/button-css@3.1.0
+  - @utrecht/html-content-css@2.0.1
+  - @utrecht/button-link-css@2.0.1
+
 ## 9.0.1
 
 ### Patch Changes

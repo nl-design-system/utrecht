@@ -1,27 +1,27 @@
 {
   "utrecht": {
     "toptask-link": {
-      "background-color": { "value": "{utrecht.button.primary-action.background-color}" },
-      "color": { "value": "{utrecht.button.primary-action.color}" },
-      "font-size": { "value": "{utrecht.typography.scale.md.font-size}" },
-      "line-height": { "value": "1.2" },
-      "min-block-size": { "value": "8.25rem" },
-      "min-inline-size": { "value": "15rem" },
-      "padding-block-end": { "value": "{utrecht.space.block.xl}" },
-      "padding-block-start": { "value": "{utrecht.space.block.xl}" },
-      "padding-inline-end": { "value": "{utrecht.space.inline.xl}" },
-      "padding-inline-start": { "value": "{utrecht.space.inline.xl}" },
+      "background-color": { "$value": "{utrecht.button.primary-action.background-color}" },
+      "color": { "$value": "{utrecht.button.primary-action.color}" },
+      "font-size": { "$value": "{utrecht.typography.scale.md.font-size}" },
+      "line-height": { "$value": "1.2" },
+      "min-block-size": { "$value": "8.25rem" },
+      "min-inline-size": { "$value": "15rem" },
+      "padding-block-end": { "$value": "{utrecht.space.block.xl}" },
+      "padding-block-start": { "$value": "{utrecht.space.block.xl}" },
+      "padding-inline-end": { "$value": "{utrecht.space.inline.xl}" },
+      "padding-inline-start": { "$value": "{utrecht.space.inline.xl}" },
       "hover": {
-        "background-color": { "value": "{utrecht.button.primary-action.hover.background-color}" },
-        "color": { "value": "{utrecht.button.primary-action.hover.color}" },
-        "transform-scale": { "value": "1.02" }
+        "background-color": { "$value": "{utrecht.button.primary-action.hover.background-color}" },
+        "color": { "$value": "{utrecht.button.primary-action.hover.color}" },
+        "transform-scale": { "$value": "1.02" }
       },
       "focus": {
         "background-color": {},
         "color": {}
       },
       "icon": {
-        "size": { "value": "2.25rem" }
+        "size": { "$value": "2.25rem" }
       }
     }
   }

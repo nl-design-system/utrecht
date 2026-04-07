@@ -28,7 +28,7 @@ const config: StorybookConfig = {
     options: {},
   },
 
-  staticDirs: ['../../../proprietary/assets'],
+  staticDirs: ['../../../proprietary/assets', '../../flolegal-decision-tree-client/dist/assets'],
 
   docs: {},
 

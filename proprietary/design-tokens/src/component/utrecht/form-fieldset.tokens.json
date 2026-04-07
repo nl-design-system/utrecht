@@ -1,22 +1,22 @@
 {
   "utrecht": {
     "form-fieldset": {
-      "margin-block-start": { "value": "{utrecht.space.block.2xs}" },
-      "margin-block-end": { "value": "{utrecht.space.block.2xs}" },
+      "margin-block-start": { "$value": "{utrecht.space.block.2xs}" },
+      "margin-block-end": { "$value": "{utrecht.space.block.2xs}" },
       "section": {
-        "background-color": { "value": "{utrecht.color.grey.80}" },
-        "color": { "value": "{utrecht.color.black}" }
+        "background-color": { "$value": "{utrecht.color.grey.80}" },
+        "color": { "$value": "{utrecht.color.black}" }
       },
       "legend": {
         "color": {},
         "font-family": {},
-        "font-size": { "value": "{utrecht.typography.scale.md.font-size}" },
-        "font-weight": { "value": "{utrecht.typography.weight-scale.bold.font-weight}" },
-        "line-height": { "value": "{utrecht.typography.line-height.md}" },
-        "margin-block-end": { "value": "{utrecht.space.block.sm}" },
-        "margin-block-start": { "value": "{utrecht.space.block.xl}" },
+        "font-size": { "$value": "{utrecht.typography.scale.md.font-size}" },
+        "font-weight": { "$value": "{utrecht.typography.weight-scale.bold.font-weight}" },
+        "line-height": { "$value": "{utrecht.typography.line-height.md}" },
+        "margin-block-end": { "$value": "{utrecht.space.block.sm}" },
+        "margin-block-start": { "$value": "{utrecht.space.block.xl}" },
         "disabled": {
-          "color": { "value": "{utrecht.color.grey.40}" }
+          "color": { "$value": "{utrecht.color.grey.40}" }
         }
       }
     }

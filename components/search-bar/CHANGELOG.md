@@ -1,5 +1,11 @@
 # @utrecht/search-bar-css
 
+## 3.0.2
+
+### Patch Changes
+
+- 95f6807: Fix to use valid CSS syntax in `tokens.json` definition.
+
 ## 3.0.1
 
 ### Patch Changes

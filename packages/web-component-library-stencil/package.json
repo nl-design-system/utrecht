@@ -1,5 +1,5 @@
 {
-  "version": "4.1.0",
+  "version": "4.1.1",
   "author": "Community for NL Design System",
   "description": "Stencil component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -27,14 +27,14 @@
     "directory": "packages/web-component-library-stencil"
   },
   "devDependencies": {
-    "@gemeente-denhaag/process-steps": "0.1.2",
-    "@gemeente-denhaag/step-marker": "0.0.1-alpha.123",
+    "@gemeente-denhaag/process-steps": "4.2.3",
+    "@gemeente-denhaag/step-marker": "3.0.1",
     "@stencil/angular-output-target": "0.8.4",
     "@stencil/react-output-target": "1.4.0",
     "@stencil/sass": "3.2.3",
     "@stencil/vue-output-target": "0.8.9",
     "@types/jest": "29.5.14",
-    "@types/node": "22.7.9",
+    "@types/node": "24.10.4",
     "@utrecht/action-group-css": "workspace:*",
     "@utrecht/alert-css": "workspace:*",
     "@utrecht/article-css": "workspace:*",

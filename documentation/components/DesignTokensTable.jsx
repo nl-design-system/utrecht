@@ -4,12 +4,8 @@ export const path2css = (path) => `var(--${path.join('-')})`;
 import { ColorExample } from './ColorExample';
 
 const visualizeToken = (token) => {
-  if (
-    token['$extensions'] &&
-    token['$extensions']['nl.nldesignsystem.css.property'] &&
-    token['$extensions']['nl.nldesignsystem.css.property'].syntax === '<color>'
-  ) {
-    return <ColorExample color={token.value}></ColorExample>;
+  if (token['$extensions'] && token['$extensions']['nl.nldesignsystem.css-property-syntax'] === '<color>') {
+    return <ColorExample color={token['$value']}></ColorExample>;
   } else {
     return '';
   }
@@ -29,18 +25,18 @@ export const DesignTokensTable = ({ tokens }) => (
       </thead>
       <tbody>
         {tokens.map((token) => {
-          const { name, path, value } = token;
+          const { name, path, $value } = token;
           return (
             <tr key={name}>
               <td>
                 <code>{path.join('.')}</code>
               </td>
-              <td>{value}</td>
+              <td>{$value}</td>
               <td>{visualizeToken(token)}</td>
               <td>
-                {token['$extensions'] && token['$extensions']['nl.nldesignsystem.figma.supports-token'] === false ? (
+                {token['$extensions'] && token['$extensions']['nl.nldesignsystem.figma-implementation'] === false ? (
                   <span className="utrecht-data-badge">CSS</span>
-                ) : typeof token['type'] === 'string' ? (
+                ) : typeof token['$type'] === 'string' ? (
                   <div className="utrecht-badge-list">
                     <span className="utrecht-data-badge">CSS</span>
                     <span className="utrecht-data-badge">Figma</span>

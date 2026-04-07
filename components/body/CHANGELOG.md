@@ -1,5 +1,11 @@
 # @utrecht/body-css
 
+## 3.0.0
+
+### Major Changes
+
+- 9a2eeb4: Remove font and line-height design tokens, move those to the Root component.
+
 ## 2.0.1
 
 ### Patch Changes

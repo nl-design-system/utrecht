@@ -21,11 +21,12 @@ De documentatie is te vinden onder [docs/pages/](docs/pages) en en [docs/compone
 #### Documentatie paginas
 
 Onder [docs/pages/](docs/pages) vind je de hoofdnavigatie pagina's van de documentatie website.
-De navigatie structuur van de website staat op dit moment nog vast. Er zijn 6 hoofdnavigatie thema's
+De navigatie structuur van de website staat op dit moment nog vast. Er zijn 7 hoofdnavigatie thema's
 
 - Design System
 - Designers
 - Developers
+- Onderzoekers
 - Richtlijnen
 - Componenten
 - Vragen
@@ -34,6 +35,8 @@ Componenten is een uitzondering en is niet te vinden onder [pages/](docs/pages) 
 
 Elk hoofdnavigatie thema heeft een eigen map onder [docs/pages/](docs/pages). De `_index.md` bevatten de inhoud van de hoofdnavigatie pagina.
 Door een nieuw markdown bestand (`.md` of `.mdx`) toe te voegen aan de map, wordt er automatisch een nieuwe subpagina aangemaakt in de navigatie structuur.
+
+Als je een nieuw hoofdnavigatie thema wil toevoegen, kan je een bestaand hoofdnavigatie Layout.astro
 
 Voeg de volgende front-matter toe bovenaan het markdown bestand
 

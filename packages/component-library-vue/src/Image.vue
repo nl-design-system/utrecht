@@ -20,8 +20,8 @@ export default defineComponent({
     :class="{ 'utrecht-img--photo': photo }"
     :alt="$attrs?.alt as string"
     :src="$attrs.src as string"
-    :height="$attrs?.height as CSSNumberish"
-    :width="$attrs?.width as CSSNumberish"
+    :height="$attrs?.height as (string | number)"
+    :width="$attrs?.width as (string | number)"
   />
 </template>
 

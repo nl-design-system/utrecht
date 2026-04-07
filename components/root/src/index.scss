@@ -5,7 +5,25 @@
  */
 
 @use "./mixin" as *;
+@use "~@utrecht/focus-ring-css/src/mixin" as *;
 
 .utrecht-root {
   @include utrecht-root;
+  @include utrecht-focus-ring-default-container;
+  @include utrecht-root__fullscreen-backdrop;
+}
+
+/**
+ * Avoid influencing the `rem` unit. We do this by specifically excluding
+ * `font-size` on the `:root` element, which is typically the `html` element.
+ * Instead apply the `font-size` on the children of the `html` element: `head` and `body`.
+ * Any other element that has this class name can have `font-size` directly,
+ * that wouldn't cause the undesired side effect.
+ *
+ * Use the `:where` selector so any CSS selector with a specificity higher than (0,1,0)
+ * can override this `font-size`.
+ */
+.utrecht-root:where(:root) > *,
+.utrecht-root:where(:not(:root)) {
+  @include utrecht-root__font-size-container;
 }

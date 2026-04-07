@@ -1,5 +1,29 @@
 # @utrecht/calendar-react
 
+## 1.1.2
+
+### Patch Changes
+
+- 257488d: Upgrade lodash-es dependency. Resolves [CVE-2026-2950](https://www.cve.org/CVERecord?id=CVE-2026-2950).
+
+## 1.1.1
+
+### Patch Changes
+
+- 555aa6a: Updated date-fns from v2.30.0 to v4.1.0.
+
+## 1.1.0
+
+### Minor Changes
+
+- 526168e: Functionaliteit toegevoegd om weekenden en knoppen voor jaarnavigatie al dan niet weer te geven.
+
+## 1.0.17
+
+### Patch Changes
+
+- @utrecht/button-react@3.0.1
+
 ## 1.0.16
 
 ### Patch Changes

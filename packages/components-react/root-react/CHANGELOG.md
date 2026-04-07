@@ -1,5 +1,37 @@
 # @utrecht/root-react
 
+## 1.0.13
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+  - @utrecht/root-css@3.1.2
+
+## 1.0.12
+
+### Patch Changes
+
+- Updated dependencies [2ad7d66]
+  - @utrecht/root-css@3.1.1
+
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies [3b655ff]
+- Updated dependencies [9c456ab]
+- Updated dependencies [80c3369]
+- Updated dependencies [9a2eeb4]
+  - @utrecht/root-css@3.1.0
+
+## 1.0.10
+
+### Patch Changes
+
+- Updated dependencies [4d4079c]
+- Updated dependencies [e89c1d2]
+  - @utrecht/root-css@3.0.0
+
 ## 1.0.9
 
 ### Patch Changes

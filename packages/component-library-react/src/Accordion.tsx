@@ -19,13 +19,13 @@ const IconChevronDown = () => (
   <svg id="Layer_1" xmlns="http://www.w3.org/2000/svg" width="14" height="8" viewBox="0 0 14 8" fill="currentColor">
     <defs>
       <clipPath id="clippath">
-        <rect width="14" height="8" style={{ fill: 'none', strokeWidth: '0px' }} />
+        <rect width="14" height="8" fill="none" strokeWidth="0px" />
       </clipPath>
     </defs>
-    <g style={{ clipPath: 'url(#clippath)' }}>
+    <g clipPath="url(#clippath)">
       <path
         d="m7,8c-.26,0-.51-.1-.71-.29L.29,1.71C-.1,1.32-.1.68.29.29S1.32-.1,1.71.29l5.29,5.29L12.29.29c.39-.39,1.02-.39,1.41,0s.39,1.02,0,1.41l-6,6c-.2.2-.45.29-.71.29Z"
-        style={{ strokeWidth: '0px' }}
+        strokeWidth="0px"
       />
     </g>
   </svg>
@@ -67,7 +67,7 @@ export interface AccordionSectionProps extends HTMLAttributes<HTMLDivElement> {
   onActivate?: Function;
   onButtonFocus?: Function;
   onButtonBlur?: Function;
-  buttonRef?: RefObject<HTMLButtonElement>;
+  buttonRef?: RefObject<HTMLButtonElement | null>;
   icon?: ReactNode;
 }
 
@@ -181,9 +181,9 @@ export const Accordion = forwardRef(
 
 Accordion.displayName = 'Accordion';
 
-export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | undefined>) => {
+export const useAccordion = <T,>(sections: T[], ref: RefObject<HTMLDivElement | null>) => {
   // const sections: AccordionSectionProviderProps[] = [];
-  const refs: RefObject<HTMLDivElement>[] = sections.map((_) => useRef<HTMLDivElement>(null));
+  const refs: RefObject<HTMLDivElement | null>[] = sections.map((_) => useRef<HTMLDivElement>(null));
   const buttonRefs = sections.map((_) => useRef<HTMLButtonElement>(null));
 
   return {
@@ -241,7 +241,7 @@ export interface AccordionProviderProps
 }
 
 export const AccordionProvider = ({ sections, icon, heading, headingLevel }: AccordionProviderProps) => {
-  const ref = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement | null>(null);
   const { refs, buttonRefs, focusNextSection, focusFirstSection, focusLastSection, focusPreviousSection } =
     useAccordion(sections, ref);
 

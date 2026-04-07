@@ -1,5 +1,29 @@
 # @utrecht/design-tokens
 
+## 5.1.1
+
+### Patch Changes
+
+- 7e89444: Switch from `hsla()` and `rgba()` to modern syntax to include alpha in `hsl()` and `rgb()`.
+
+## 5.1.0
+
+### Minor Changes
+
+- cd0d8e6: Add design tokens for Root component, copied from Body component.
+
+## 5.0.3
+
+### Patch Changes
+
+- e89c1d2: Use `font-size-adjust: 0.54` for Root.
+
+## 5.0.2
+
+### Patch Changes
+
+- 157d561: Corrected the typography token values and the heading token values to make the headings visually distinctive.
+
 ## 5.0.1
 
 ### Patch Changes

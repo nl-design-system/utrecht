@@ -46,6 +46,7 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    Component: 'div', // React 19 can no longer render html/body tags without erroring
     children: [<Paragraph>Body content</Paragraph>],
   },
 };

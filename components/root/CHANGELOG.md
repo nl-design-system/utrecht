@@ -1,5 +1,41 @@
 # @utrecht/root-css
 
+## 3.1.2
+
+### Patch Changes
+
+- 982448a: Switch from deprecated CSS properties to ones that are newly Baseline supported:
+
+  - `clip` now iw `clip-path`.
+  - `word-break` is now `overflow-wrap`
+  - `page-break-inside` now is `break-inside`.
+  - `page-break-after` now is `break-after`.
+
+## 3.1.1
+
+### Patch Changes
+
+- 2ad7d66: Fix regression in fluid font-size: never set `font-size` on `:root`.
+
+## 3.1.0
+
+### Minor Changes
+
+- 3b655ff: Add system colors as fallback for Root color and background-color, to guarantee contrast.
+- 9c456ab: Make `scroll-behavior: smooth` the default for Root component, except when `prefers-reduced-motion` is enabled.
+- 80c3369: Root component now specifies a default background color for fullscreen elements, to avoid contrast issues.
+- 9a2eeb4: Add `font-weight`, `font-size` and `line-height` tokens to Root, add `utrecht.body` tokens as fallback.
+
+## 3.0.0
+
+### Major Changes
+
+- e89c1d2: Use `font-size-adjust: 0.5` as default. Add `utrecht.root.font-size-adjust` design token to make this behavior configurable.
+
+### Minor Changes
+
+- 4d4079c: Add default focus indicator to all focusable elements inside the Root component.
+
 ## 2.0.1
 
 ### Patch Changes

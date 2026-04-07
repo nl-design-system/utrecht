@@ -11,7 +11,7 @@ import { Component, h } from '@stencil/core';
   styleUrl: 'body.scss',
   shadow: true,
 })
-export class Root {
+export class Body {
   render() {
     return <slot></slot>;
   }

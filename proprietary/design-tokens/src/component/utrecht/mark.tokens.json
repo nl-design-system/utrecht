@@ -1,8 +1,8 @@
 {
   "utrecht": {
     "mark": {
-      "background-color": { "value": "{nl.mark.background-color}" },
-      "color": { "value": "{nl.mark.color}" }
+      "background-color": { "$value": "{nl.mark.background-color}" },
+      "color": { "$value": "{nl.mark.color}" }
     }
   }
 }
