@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 6.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
 ## 5.1.1
 
 ### Patch Changes

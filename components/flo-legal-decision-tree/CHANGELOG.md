@@ -1,5 +1,16 @@
 # @utrecht/flolegal-decision-tree-css
 
+## 3.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/form-label-css@3.0.0
+
 ## 2.1.2
 
 ### Patch Changes

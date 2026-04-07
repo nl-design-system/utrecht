@@ -1,5 +1,13 @@
 # @utrecht/card-react
 
+## 0.0.5
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/card-css@2.0.0
+  - @utrecht/link-react@1.0.11
+
 ## 0.0.4
 
 ### Patch Changes

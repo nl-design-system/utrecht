@@ -1,5 +1,17 @@
 # @utrecht/astro
 
+## 0.0.24
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/design-tokens@6.0.0
+  - @utrecht/component-library-css@9.0.7
+  - @utrecht/component-library-react@13.1.1
+  - @utrecht/storybook@0.0.2
+  - @utrecht/web-component-library-stencil@4.1.1
+  - @utrecht/body-react@0.0.11
+
 ## 0.0.23
 
 ### Patch Changes

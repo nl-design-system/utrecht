@@ -1,5 +1,11 @@
 # @utrecht/digid-button-css
 
+## 2.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
 ## 1.4.2
 
 ### Patch Changes
