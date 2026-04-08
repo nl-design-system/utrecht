@@ -57,13 +57,20 @@ type Item = {
   items?: Item[];
 };
 
-function createNestedItems(depth: number, maxDepth: number): Item[] {
+function createNestedItems(depth: number, maxDepth: number, multiline: boolean = false): Item[] {
   if (depth > maxDepth) return [];
+
+  const baseText = 'Dit is diepteniveau ' + depth + ' van de list. ';
+  const multilineText =
+    'Dit is diepteniveau ' +
+    depth +
+    ' van de list. Deze tekst is langer gemaakt om te testen hoe de component omgaat met meerdere regels tekst op elk niveau. Op deze manier kunnen we zien of de spacing en marker nog steeds correct worden weergegeven, zelfs als de tekst meerdere regels beslaat. ';
+  const text = multiline ? multilineText : baseText;
 
   return [
     {
-      children: 'Dit is diepteniveau ' + depth + ' van de list.',
-      items: createNestedItems(depth + 1, maxDepth),
+      children: text,
+      items: createNestedItems(depth + 1, maxDepth, multiline),
     },
   ];
 }
@@ -105,7 +112,7 @@ export const Nested: Story = {
     },
   },
   args: {
-    items: createNestedItems(1, 8),
+    items: createNestedItems(1, 8, false),
   },
 };
 
@@ -283,14 +290,13 @@ export const Center: Story = {
     center: true,
     items: [
       {
-        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
+        children: 'The Quick Brown Fox',
       },
       {
-        children:
-          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
+        children: 'Jumps',
       },
       {
-        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
+        children: 'Over The Lazy Dog',
       },
     ],
   },
@@ -301,6 +307,60 @@ export const Center: Story = {
       description: {
         story:
           '_Unordered list_ moet niet als gecentreerde tekst gebruikt worden worden. Wanneer het niet te vermijden is, dan moeten marker dicht naast de tekst staan, niet in de marge.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const CenterMultiline: Story = {
+  args: {
+    center: true,
+    items: [
+      {
+        children:
+          'Centered unordered list with multiline text to test how markers are displayed when text wraps to multiple lines. This is needed to ensure that the spacing and marker alignment remains correct even when the text spans multiple lines.',
+      },
+      {
+        children:
+          'Centered unordered list with multiline text to test how markers are displayed when text wraps to multiple lines. This is needed to ensure that the spacing and marker alignment remains correct even when the text spans multiple lines.',
+      },
+      {
+        children:
+          'Centered unordered list with multiline text to test how markers are displayed when text wraps to multiple lines. This is needed to ensure that the spacing and marker alignment remains correct even when the text spans multiple lines.',
+      },
+    ],
+  },
+  name: 'Center (multiline)',
+  decorators: [ContainerWithCenteredText],
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Centered unordered list with multiline text to test how markers are displayed when text wraps to multiple lines.',
+      },
+    },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+export const CenterMultilineNested: Story = {
+  args: {
+    center: true,
+    multiline: true,
+    items: createNestedItems(1, 4, true),
+  },
+  name: 'Center (multiline, nested 4 levels)',
+  decorators: [ContainerWithCenteredText],
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Centered unordered list with multiline text and nested items (4 levels deep) to test how markers and spacing are displayed when text wraps to multiple lines in a nested structure.',
       },
     },
     status: {
@@ -330,14 +390,13 @@ export const NarrowContainerCenter: Story = {
     center: true,
     items: [
       {
-        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
+        children: 'The Quick Brown Fox',
       },
       {
-        children:
-          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
+        children: 'Jumps',
       },
       {
-        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
+        children: 'Over The Lazy Dog',
       },
     ],
   },
@@ -358,23 +417,22 @@ export const NarrowContainerCenter: Story = {
 export const NarrowContainerCenterLongText: Story = {
   args: {
     center: true,
+    multiline: true,
     items: [
       {
-        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
+        children:
+          'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen. Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen. Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
         children:
-          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag. Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag. Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s.',
       },
       {
-        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
+        children:
+          'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie. Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie. Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
       {
-        children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
-        laborum.`,
+        children: `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`,
       },
     ],
   },
@@ -408,7 +466,7 @@ export const HTMLContent: Story = {
       },
       {
         children: 'Dit is diepteniveau 1 van de list.',
-        items: createNestedItems(2, 8),
+        items: createNestedItems(2, 8, false),
       },
     ],
   },
@@ -422,6 +480,20 @@ export const HTMLContent: Story = {
     status: {
       type: 'WORK IN PROGRESS',
     },
+  },
+};
+
+export const NestedMultiline: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Een genestelde lijst met langere tekst (multiline) om te testen hoe de component omgaat met meerdere regels tekst op elk niveau.',
+      },
+    },
+  },
+  args: {
+    items: createNestedItems(1, 4, true),
   },
 };
 

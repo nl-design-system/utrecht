@@ -34,6 +34,7 @@
   margin-inline-end: auto;
   margin-inline-start: auto;
   max-inline-size: 100%;
+  padding-inline-start: var(--utrecht-unordered-list-center-padding-inline-start, 1ch);
 }
 
 @mixin utrecht-unordered-list--distanced {
