@@ -69,13 +69,13 @@ const AccordionTextPerPost = () => (
     <UnorderedList>
       <UnorderedListItem>
         <Paragraph>
-          Het ingevulde formulier{' '}
+          Het ingevulde formulier
           <a
             href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Aangifte-adreswijziging.pdf"
             className="utrecht-link utrecht-link--html-a"
           >
             Adreswijziging
-          </a>{' '}
+          </a>
           (pdf, 225 kB).
         </Paragraph>
       </UnorderedListItem>
@@ -103,13 +103,13 @@ const AccordionTextPerPost = () => (
         <UnorderedList>
           <UnorderedListItem>
             <Paragraph>
-              het ingevulde en met pen ondertekende formulier{' '}
+              het ingevulde en met pen ondertekende formulier
               <a
                 href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/2024-05-formulier-verklaring-bewoning-adres.pdf"
                 className="utrecht-link utrecht-link--html-a"
               >
                 Verklaring van inwoning
-              </a>{' '}
+              </a>
               (pdf, 697 kB).
             </Paragraph>
           </UnorderedListItem>
@@ -150,13 +150,13 @@ const AccordionTextAanDeBalie = () => (
         <UnorderedList>
           <UnorderedListItem>
             <Paragraph>
-              het ingevulde en met pen ondertekende formulier{' '}
+              het ingevulde en met pen ondertekende formulier
               <a
                 href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/2024-05-formulier-verklaring-bewoning-adres.pdf"
                 className="utrecht-link utrecht-link--html-a"
               >
                 Verklaring van inwoning
-              </a>{' '}
+              </a>
               (pdf, 697 kB).
             </Paragraph>
           </UnorderedListItem>
