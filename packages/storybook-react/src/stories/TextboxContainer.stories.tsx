@@ -2,8 +2,8 @@ import { Meta, StoryObj } from '@storybook/react-vite';
 // import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/textbox-css/README.md?raw';
 import tokensDefinition from '@utrecht/textbox-css/dist/tokens.mjs';
-import { TextboxContainer, TextboxInput } from '@utrecht/textbox-react/dist/index.mjs';
 import { designTokenStory } from './util.js';
+import { TextboxContainer, TextboxInput } from '../../../components-react/textbox-react/src/index.js';
 
 const meta = {
   title: 'React Component/TextboxContainer',

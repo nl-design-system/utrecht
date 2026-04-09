@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, InputHTMLAttributes } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, InputHTMLAttributes, ReactNode } from 'react';
 export type TextboxTypes =
   | 'date'
   | 'datetime-local'
@@ -62,11 +62,15 @@ export const Textbox = forwardRef(
 
 Textbox.displayName = 'Textbox';
 
-export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement> {}
+export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement> {
+  leading?: ReactNode;
+}
 
 export const TextboxContainer = forwardRef(
-  ({ className, ...restProps }: TextboxProps, ref: ForwardedRef<HTMLSpanElement>) => (
-    <span {...restProps} ref={ref} className={clsx('utrecht-textbox-container', className)} />
+  ({ className, leading, ...restProps }: TextboxContainerProps, ref: ForwardedRef<HTMLSpanElement>) => (
+    <span {...restProps} ref={ref} className={clsx('utrecht-textbox-container', className)}>
+      {leading ? <span className="utrecht-textbox-container__leading">{leading}</span> : null}
+    </span>
   ),
 );
 
@@ -113,3 +117,30 @@ export const TextboxInput = forwardRef(
 );
 
 TextboxInput.displayName = 'TextboxInput';
+
+// TODO: if leading or trailing icons are present, wrap the input. If not render the OG textbox
+
+export interface TextboxSpanProps extends TextboxContainerProps {
+  leading?: ReactNode;
+}
+
+export interface TextboxInputProps extends TextboxProps {
+  // TODO: shouldnt be here
+  leading?: ReactNode;
+}
+
+export const Textbox2 = forwardRef(
+  ({ leading, ...restProps }: TextboxSpanProps | TextboxInputProps, ref: ForwardedRef<HTMLElement>) => {
+    if (leading) {
+      return (
+        <TextboxContainer {...restProps} leading={leading}>
+          <TextboxInput {...restProps} ref={ref as any} />
+        </TextboxContainer>
+      );
+    }
+
+    return <TextboxInput {...restProps} ref={ref as any} />;
+  },
+);
+
+Textbox2.displayName = 'Textbox2';
