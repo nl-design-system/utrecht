@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, InputHTMLAttributes } from 'react';
+import { ForwardedRef, forwardRef, HTMLAttributes, InputHTMLAttributes } from 'react';
 export type TextboxTypes =
   | 'date'
   | 'datetime-local'
@@ -61,3 +61,55 @@ export const Textbox = forwardRef(
 );
 
 Textbox.displayName = 'Textbox';
+
+export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement> {}
+
+export const TextboxContainer = forwardRef(
+  ({ className, ...restProps }: TextboxProps, ref: ForwardedRef<HTMLSpanElement>) => (
+    <span {...restProps} ref={ref} className={clsx('utrecht-textbox-container', className)} />
+  ),
+);
+
+TextboxContainer.displayName = 'TextboxContainer';
+
+export const TextboxInput = forwardRef(
+  (
+    {
+      dir,
+      disabled,
+      invalid,
+      readOnly,
+      required,
+      inputRequired,
+      className,
+      type = 'text',
+      inputMode,
+      ...restProps
+    }: TextboxProps,
+    ref: ForwardedRef<HTMLInputElement>,
+  ) => (
+    <input
+      {...restProps}
+      ref={ref}
+      type={type}
+      className={clsx(
+        'utrecht-textbox-container__input',
+        // 'utrecht-textbox--html-input',
+        disabled && 'utrecht-textbox-container__input--disabled',
+        invalid && 'utrecht-textbox-container__input--invalid',
+        readOnly && 'utrecht-textbox-container__input--readonly',
+        (required || inputRequired) && 'utrecht-textbox-container__input--required',
+        className,
+      )}
+      dir={dir ?? 'auto'}
+      disabled={disabled}
+      readOnly={readOnly}
+      aria-required={required ? required : undefined}
+      required={inputRequired}
+      aria-invalid={invalid || undefined}
+      inputMode={inputMode || (type === 'number' ? 'numeric' : undefined)}
+    />
+  ),
+);
+
+TextboxInput.displayName = 'TextboxInput';
