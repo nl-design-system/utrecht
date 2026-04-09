@@ -250,8 +250,13 @@ $utrecht-support-prince-xml: false !default;
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
+/* TODO: remove utrecht-textbox--focus with next mayor release */
+/* stylelint-disable-next-line block-no-empty */
 @mixin utrecht-textbox--focus {
-  @include utrecht-focus;
+}
+
+@mixin utrecht-textbox--focus-visible {
+  @include utrecht-focus-visible;
 
   background-color: var(
     --utrecht-textbox-focus-background-color,
@@ -271,10 +276,6 @@ $utrecht-support-prince-xml: false !default;
     --utrecht-textbox-focus-color,
     var(--utrecht-form-control-focus-color, var(--utrecht-textbox-color, var(--utrecht-form-control-color)))
   );
-}
-
-@mixin utrecht-textbox--focus-visible {
-  @include utrecht-focus-visible;
 }
 
 @mixin utrecht-textbox--read-only {
