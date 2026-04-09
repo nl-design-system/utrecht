@@ -25,7 +25,8 @@ import '../prototype-src/index.css';
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js';
 import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
-import IntroductieContact from '../prototype-src/contactformulier/IntroductieContactFormulier.js';
+import IntroductieVolgorde from '../prototype-src/introductie_scenarios/IntroductieVolgorde.js';
+import ScenarioVolgorde from '../prototype-src/introductie_scenarios/ScenarioVolgorde.js';
 import urls from '../prototype-src/variables.js';
 import HoofdNavigatie from '../prototype-src/webpaginablokken/HoofdNavigatie.js';
 import KlantTevredenheidsOnderzoek from '../prototype-src/webpaginablokken/KTO.js';
@@ -69,9 +70,12 @@ const AccordionTextPerPost = () => (
       <UnorderedListItem>
         <Paragraph>
           Het ingevulde formulier{' '}
-          <a href="#" className="utrecht-link utrecht-link--html-a">
-            Adreswijziging{' '}
-          </a>
+          <a
+            href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/Formulier-Aangifte-adreswijziging.pdf"
+            className="utrecht-link utrecht-link--html-a"
+          >
+            Adreswijziging
+          </a>{' '}
           (pdf, 225 kB).
         </Paragraph>
       </UnorderedListItem>
@@ -100,9 +104,12 @@ const AccordionTextPerPost = () => (
           <UnorderedListItem>
             <Paragraph>
               het ingevulde en met pen ondertekende formulier{' '}
-              <a href="#" className="utrecht-link utrecht-link--html-a">
-                Verklaring van inwoning{' '}
-              </a>
+              <a
+                href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/2024-05-formulier-verklaring-bewoning-adres.pdf"
+                className="utrecht-link utrecht-link--html-a"
+              >
+                Verklaring van inwoning
+              </a>{' '}
               (pdf, 697 kB).
             </Paragraph>
           </UnorderedListItem>
@@ -143,10 +150,13 @@ const AccordionTextAanDeBalie = () => (
         <UnorderedList>
           <UnorderedListItem>
             <Paragraph>
-              Het ingevulde en met pen ondertekende formulier{' '}
-              <a href="#" className="utrecht-link utrecht-link--html-a">
-                Verklaring van inwoning{' '}
-              </a>
+              het ingevulde en met pen ondertekende formulier{' '}
+              <a
+                href="https://www.utrecht.nl/fileadmin/uploads/documenten/9.digitaalloket/Burgerzaken/2024-05-formulier-verklaring-bewoning-adres.pdf"
+                className="utrecht-link utrecht-link--html-a"
+              >
+                Verklaring van inwoning
+              </a>{' '}
               (pdf, 697 kB).
             </Paragraph>
           </UnorderedListItem>
@@ -184,7 +194,7 @@ export const Introductie: Story = {
         <PageContent>
           <main>
             <section>
-              <IntroductieContact />
+              <IntroductieVolgorde />
               <br />
               <ButtonLink appearance="primary-action-button" href={urls.volgordeScenario}>
                 Starten
@@ -211,7 +221,7 @@ export const Scenario: Story = {
         <PageContent>
           <main>
             <section>
-              <Heading1>Bijstand aanvragen</Heading1>
+              <ScenarioVolgorde />
               <br />
               <ButtonLink appearance="primary-action-button" href={urls.volgorde1}>
                 Start
@@ -318,7 +328,7 @@ export const Verhuizen: Story = {
                     {
                       body: <AccordionTextPerPost />,
                       expanded: undefined,
-                      label: 'Per Post',
+                      label: 'Per post',
                     },
                     {
                       body: <AccordionTextAanDeBalie />,
