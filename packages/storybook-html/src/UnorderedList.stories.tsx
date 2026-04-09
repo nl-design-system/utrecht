@@ -80,13 +80,14 @@ export const Default: Story = {
   args: {
     items: [
       {
-        children: 'Lorem',
+        children: 'Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.',
       },
       {
-        children: 'Ipsum',
+        children:
+          'Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud zijn op het moment van de aanvraag.',
       },
       {
-        children: 'Dolor',
+        children: 'Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.',
       },
     ],
   },
@@ -102,15 +103,39 @@ export const Default: Story = {
 export const Nested: Story = {
   render: () => (
     <ul>
-      <li>Lorem</li>
+      <li>Uw DigiD</li>
       <li>
-        Ipsum
+        Als u verhuist naar een huurwoning of koopwoning:
         <ul>
-          <li>Lorem</li>
-          <li>Ipsum</li>
+          <li>kopie van uw huurcontract of eigendomsbewijs</li>
         </ul>
       </li>
-      <li>Dolor</li>
+      <li>
+        Als u verhuist naar een instelling:
+        <ul>
+          <li>uw overeenkomst met de instelling of een verklaring van de instelling</li>
+        </ul>
+      </li>
+      <li>
+        Als u bij iemand anders gaat wonen:
+        <ul>
+          <li>
+            de verklaring van inwoning. Een meerderjarige bewoner van het adres waar u gaat inwonen vult dit formulier
+            in. Dit kan op 2 manieren:
+            <ul>
+              <li>
+                De bewoner vult het online formulier Verklaring van inwoning in. En downloadt de verklaring als pdf. U
+                kunt deze pdf toevoegen als u online uw verhuizing doorgeeft.
+              </li>
+              <li>
+                De bewoner vult het formulier Verklaring van inwoning (pdf, 697 kB) in en ondertekent het met pen. U
+                scant de ondertekende verklaring en slaat die op als pdf. U kunt deze pdf toevoegen als u online uw
+                verhuizing doorgeeft. Mét een kopie van een geldig identiteitsbewijs van de bewoner.
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
     </ul>
   ),
   name: 'Nested',

@@ -14,23 +14,31 @@ interface UnorderedListStoryProps extends UnorderedListProps {
   items?: UnorderedListItemData[];
   htmlContent?: boolean;
   nested?: boolean;
+  level?: number;
 }
 
 const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
   <ul>
-    {items?.map(({ children: subChildren, items: subItems }, index) => (
-      <li key={index}>
+    {items?.map(({ children: subChildren, items: subItems }) => (
+      <li key={`${subChildren}`}>
         {subChildren}
-        {subItems && HTMLList({ items: subItems })}
+        {subItems && <HTMLList items={subItems} />}
       </li>
     ))}
   </ul>
 );
 
-export const UnorderedListStory = ({ children, center, items, htmlContent, nested }: UnorderedListStoryProps) => {
+export const UnorderedListStory = ({
+  children,
+  center,
+  items,
+  htmlContent,
+  nested,
+  level = 1,
+}: UnorderedListStoryProps) => {
   return (
     <UnorderedList
-      className={clsx({
+      className={clsx(`utrecht-unordered-list--level-${level}`, {
         'utrecht-unordered-list--center': center,
         'utrecht-unordered-list--html-content': htmlContent,
         'utrecht-unordered-list--nested': nested,
@@ -38,16 +46,16 @@ export const UnorderedListStory = ({ children, center, items, htmlContent, neste
     >
       {children}
       {htmlContent
-        ? items?.map(({ children: subChildren, items: subItems }, index) => (
-            <li key={index}>
+        ? items?.map(({ children: subChildren, items: subItems }) => (
+            <li key={`${subChildren}`}>
               {subChildren}
               {subItems && HTMLList({ items: subItems })}
             </li>
           ))
-        : items?.map(({ children: subChildren, items: subItems }, index) => (
-            <UnorderedListItem key={index}>
+        : items?.map(({ children: subChildren, items: subItems }) => (
+            <UnorderedListItem key={`${subChildren}`}>
               {subChildren}
-              {subItems && UnorderedListStory({ items: subItems, nested: true })}
+              {subItems && UnorderedListStory({ items: subItems, nested: true, level: level + 1 })}
             </UnorderedListItem>
           ))}
     </UnorderedList>

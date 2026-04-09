@@ -86,4 +86,32 @@ describe('Unordered list', () => {
 
     expect(ref.current).toBe(list);
   });
+
+  it('can contain nested unordered lists', () => {
+    const { container } = render(
+      <UnorderedList>
+        <UnorderedListItem>Parent item 1</UnorderedListItem>
+        <UnorderedListItem>
+          Parent item 2
+          <UnorderedList>
+            <UnorderedListItem>Child item 1</UnorderedListItem>
+            <UnorderedListItem>Child item 2</UnorderedListItem>
+          </UnorderedList>
+        </UnorderedListItem>
+        <UnorderedListItem>Parent item 3</UnorderedListItem>
+      </UnorderedList>,
+    );
+
+    const parentList = container.querySelector(':only-child');
+    const nestedLists = container.querySelectorAll('ul');
+    const allListItems = container.querySelectorAll('li');
+
+    expect(parentList).toBeInTheDocument();
+    expect(nestedLists).toHaveLength(2); // parent list + 1 nested list
+    expect(allListItems).toHaveLength(5); // 3 parent items + 2 child items
+
+    // Check that nested list has the correct class
+    const nestedList = nestedLists[1];
+    expect(nestedList).toHaveClass('utrecht-unordered-list');
+  });
 });

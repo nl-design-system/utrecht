@@ -15,9 +15,16 @@ const meta = {
   argTypes: {},
   args: {
     children: [
-      <UnorderedListItem>List item 1</UnorderedListItem>,
-      <UnorderedListItem>List item 2</UnorderedListItem>,
-      <UnorderedListItem>List item 3</UnorderedListItem>,
+      <UnorderedListItem>
+        Alle reisdocumenten (paspoort en ID-kaart) die u nu hebt, ook als ze zijn verlopen.
+      </UnorderedListItem>,
+      <UnorderedListItem>
+        Een kleurenpasfoto die voldoet aan de eisen voor pasfoto’s. De goedgelijkende pasfoto mag maximaal 6 maanden oud
+        zijn op het moment van de aanvraag.
+      </UnorderedListItem>,
+      <UnorderedListItem>
+        Een bankpas of contant geld. U betaalt direct bij de aanvraag aan de balie.
+      </UnorderedListItem>,
     ],
   },
   parameters: {
