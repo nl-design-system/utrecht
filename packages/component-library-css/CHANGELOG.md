@@ -1,5 +1,13 @@
 # @utrecht/component-library-css
 
+## 9.0.8
+
+### Patch Changes
+
+- Updated dependencies [ef2fc90]
+  - @utrecht/unordered-list-css@3.1.0
+  - @utrecht/html-content-css@3.0.0
+
 ## 9.0.7
 
 ### Patch Changes

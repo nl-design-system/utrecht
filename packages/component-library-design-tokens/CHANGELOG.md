@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.1
+
+### Patch Changes
+
+- Updated dependencies [ef2fc90]
+  - @utrecht/unordered-list-css@3.1.0
+  - @utrecht/html-content-css@3.0.0
+
 ## 2.0.0
 
 ### Major Changes

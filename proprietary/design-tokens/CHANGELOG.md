@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 6.1.0
+
+### Minor Changes
+
+- ef2fc90: Added ability to change markers of nested unordered lists. Refactored spacing on unordered lists (including nested).
+
 ## 6.0.0
 
 ### Major Changes
