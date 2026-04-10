@@ -1,5 +1,22 @@
 # @utrecht/icon
 
+## 2.3.0
+
+### Minor Changes
+
+- 8c243b3: New icons
+
+  - Changed and added header icon groups
+  - UtrechtIconMensenhandel
+  - UtrechtIconPolarisatie
+  - UtrechtIconDigitaleWeerbaarheid
+  - UtrechtIconWeerbaarheidStraatintimidatie
+  - UtrechtIconWijkDialoog
+  - UtrechtIconWijkGesprek
+  - UtrechtIconWijkInspraak
+  - UtrechtIconWijkGroepsgesprek
+
+
 ## 2.2.0
 
 ### Minor Changes
