@@ -1,13 +1,12 @@
 /* @license CC0-1.0 */
 
 import type { Decorator, Meta, StoryObj } from '@storybook/react-vite';
-import { OrderedList, OrderedListItem } from '@utrecht/component-library-react';
 import type { OrderedListProps } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import readme from '@utrecht/ordered-list-css/README.md?raw';
 import tokensDefinition from '@utrecht/ordered-list-css/src/tokens.json';
-import clsx from 'clsx';
 import React, { ReactNode } from 'react';
+import { OrderedListStory } from './OrderedList';
 import { designTokenStory } from './design-token-story';
 
 interface OrderedListItemData {
@@ -21,43 +20,6 @@ interface OrderedListStoryProps extends OrderedListProps {
   items?: OrderedListItemData[];
   htmlContent?: boolean;
 }
-
-const HTMLList = ({ items }: { items: OrderedListItemData[] }) => (
-  <ol>
-    {items?.map(({ children: subChildren, items: subItems }, index) => (
-      <li key={index}>
-        {subChildren}
-        {subItems && HTMLList({ items: subItems })}
-      </li>
-    ))}
-  </ol>
-);
-
-const OrderedListStory = ({ children, center, items, htmlContent }: OrderedListStoryProps) => {
-  return (
-    <OrderedList
-      className={clsx({
-        'utrecht-ordered-list--center': center,
-        'utrecht-ordered-list--html-content': htmlContent,
-      })}
-    >
-      {children}
-      {htmlContent
-        ? items?.map(({ children: subChildren, items: subItems }, index) => (
-            <li key={index}>
-              {subChildren}
-              {subItems && HTMLList({ items: subItems })}
-            </li>
-          ))
-        : items?.map(({ children: subChildren, items: subItems }, index) => (
-            <OrderedListItem key={index}>
-              {subChildren}
-              {subItems && OrderedListStory({ items: subItems })}
-            </OrderedListItem>
-          ))}
-    </OrderedList>
-  );
-};
 
 const meta = {
   title: 'CSS Component/Ordered list',

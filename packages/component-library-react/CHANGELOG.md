@@ -1,5 +1,17 @@
 # @utrecht/component-library-react
 
+## 13.2.0
+
+### Minor Changes
+
+- ef2fc90: Added ability to change markers of nested unordered lists. Refactored spacing on unordered lists (including nested).
+
+### Patch Changes
+
+- Updated dependencies [ef2fc90]
+  - @utrecht/unordered-list-css@3.1.0
+  - @utrecht/html-content-css@3.0.0
+
 ## 13.1.1
 
 ### Patch Changes
