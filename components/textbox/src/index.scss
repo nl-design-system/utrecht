@@ -127,13 +127,27 @@
 .utrecht-textbox-container {
   @include utrecht-textbox-container;
 
-  &:focus-within {
+  &:where(:has(:user-invalid), :has(.utrecht-textbox-container__input--invalid)) {
+    @include utrecht-textbox--invalid;
+  }
+
+  &:where(:has(:disabled)) {
+    @include utrecht-textbox--disabled;
+  }
+
+  &:where(:has(:focus-visible)) {
     @include utrecht-textbox--focus-visible;
   }
 
-  &:where(:has(.utrecht-textbox-container__input--disabled)) {
-    @include utrecht-textbox--disabled;
+  &:where(:has(:read-only)) {
+    @include utrecht-textbox--read-only;
   }
+}
+
+.utrecht-textbox-container__leading,
+.utrecht-textbox-container__trailing {
+  align-items: center;
+  display: flex;
 }
 
 .utrecht-textbox-container__input {

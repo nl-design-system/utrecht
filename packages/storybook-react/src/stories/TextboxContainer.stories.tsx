@@ -1,14 +1,15 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 // import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import { Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/textbox-css/README.md?raw';
 import tokensDefinition from '@utrecht/textbox-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
-import { TextboxContainer, TextboxInput } from '../../../components-react/textbox-react/src/index.js';
+import { Textbox } from '../../../components-react/textbox-react/src/index.js';
 
 const meta = {
   title: 'React Component/TextboxContainer',
   id: 'react-textbox-container',
-  component: TextboxContainer,
+  component: Textbox,
   argTypes: {
     autoComplete: {
       description: 'Autocomplete',
@@ -171,22 +172,17 @@ const meta = {
     required: false,
     defaultValue: '',
   },
-  // parameters: {
-  //   tokensPrefix: 'utrecht-textbox',
-  //   tokens,
-  //   tokensDefinition,
-  //   // docs: {
-  //   //   description: {
-  //   //     component: readme,
-  //   //   },
-  //   // },
-  // },
-  render: (args) => (
-    <TextboxContainer {...args}>
-      <TextboxInput />
-    </TextboxContainer>
-  ),
-} satisfies Meta<typeof TextboxContainer>;
+  parameters: {
+    // tokensPrefix: 'utrecht-textbox',
+    // tokens,
+    // tokensDefinition,
+    docs: {
+      description: {
+        component: readme,
+      },
+    },
+  },
+} satisfies Meta<typeof Textbox>;
 
 export default meta;
 
@@ -195,6 +191,14 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+  },
+};
+
+export const WithLeadingAndTrailing: Story = {
+  args: {
+    defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    leading: <Icon>→</Icon>,
+    trailing: <Icon>📅</Icon>,
   },
 };
 

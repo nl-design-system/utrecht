@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { ForwardedRef, forwardRef, HTMLAttributes, InputHTMLAttributes, ReactNode } from 'react';
+import { forwardRef, HTMLAttributes, InputHTMLAttributes, ReactNode, useImperativeHandle, useRef } from 'react';
 export type TextboxTypes =
   | 'date'
   | 'datetime-local'
@@ -14,69 +14,39 @@ export type TextboxTypes =
   | 'url'
   | 'week';
 
-export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement> {
-  inputRequired?: boolean;
-  invalid?: boolean;
-  type?: string | TextboxTypes;
-}
-
-export const Textbox = forwardRef(
-  (
-    {
-      dir,
-      disabled,
-      invalid,
-      readOnly,
-      required,
-      inputRequired,
-      className,
-      type = 'text',
-      inputMode,
-      ...restProps
-    }: TextboxProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => (
-    <input
-      {...restProps}
-      ref={ref}
-      type={type}
-      className={clsx(
-        'utrecht-textbox',
-        'utrecht-textbox--html-input',
-        disabled && 'utrecht-textbox--disabled',
-        invalid && 'utrecht-textbox--invalid',
-        readOnly && 'utrecht-textbox--readonly',
-        (required || inputRequired) && 'utrecht-textbox--required',
-        className,
-      )}
-      dir={dir ?? 'auto'}
-      disabled={disabled}
-      readOnly={readOnly}
-      aria-required={required ? required : undefined}
-      required={inputRequired}
-      aria-invalid={invalid || undefined}
-      inputMode={inputMode || (type === 'number' ? 'numeric' : undefined)}
-    />
-  ),
-);
-
-Textbox.displayName = 'Textbox';
-
-export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement> {
+/**
+ * TextboxContainer
+ * Wrapper around a textbox input with optional leading and trailing elements.
+ */
+interface TextboxContainerOwnProps {
   leading?: ReactNode;
+  trailing?: ReactNode;
 }
 
-export const TextboxContainer = forwardRef(
-  ({ className, leading, ...restProps }: TextboxContainerProps, ref: ForwardedRef<HTMLSpanElement>) => (
+export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement>, TextboxContainerOwnProps {}
+
+export const TextboxContainer = forwardRef<HTMLSpanElement, TextboxContainerProps>(
+  ({ children, className, leading, trailing, ...restProps }: TextboxContainerProps, ref) => (
     <span {...restProps} ref={ref} className={clsx('utrecht-textbox-container', className)}>
       {leading ? <span className="utrecht-textbox-container__leading">{leading}</span> : null}
+      {children}
+      {trailing ? <span className="utrecht-textbox-container__trailing">{trailing}</span> : null}
     </span>
   ),
 );
 
 TextboxContainer.displayName = 'TextboxContainer';
 
-export const TextboxInput = forwardRef(
+/**
+ * Textbox
+ */
+export interface TextboxProps extends InputHTMLAttributes<HTMLInputElement>, TextboxContainerOwnProps {
+  inputRequired?: boolean;
+  invalid?: boolean;
+  type?: string | TextboxTypes;
+}
+
+export const Textbox = forwardRef<HTMLInputElement, TextboxProps>(
   (
     {
       dir,
@@ -88,59 +58,62 @@ export const TextboxInput = forwardRef(
       className,
       type = 'text',
       inputMode,
+      leading,
+      trailing,
       ...restProps
     }: TextboxProps,
-    ref: ForwardedRef<HTMLInputElement>,
-  ) => (
-    <input
-      {...restProps}
-      ref={ref}
-      type={type}
-      className={clsx(
-        'utrecht-textbox-container__input',
-        // 'utrecht-textbox--html-input',
-        disabled && 'utrecht-textbox-container__input--disabled',
-        invalid && 'utrecht-textbox-container__input--invalid',
-        readOnly && 'utrecht-textbox-container__input--readonly',
-        (required || inputRequired) && 'utrecht-textbox-container__input--required',
-        className,
-      )}
-      dir={dir ?? 'auto'}
-      disabled={disabled}
-      readOnly={readOnly}
-      aria-required={required ? required : undefined}
-      required={inputRequired}
-      aria-invalid={invalid || undefined}
-      inputMode={inputMode || (type === 'number' ? 'numeric' : undefined)}
-    />
-  ),
-);
+    ref,
+  ) => {
+    const inputRef = useRef<HTMLInputElement>(null);
+    const containerRef = useRef<HTMLSpanElement>(null);
 
-TextboxInput.displayName = 'TextboxInput';
+    // Default ref behavior: point to the input element (backwards compatibility)
+    useImperativeHandle(ref, () => inputRef.current!, []);
 
-// TODO: if leading or trailing icons are present, wrap the input. If not render the OG textbox
+    const renderContainer = leading || trailing;
 
-export interface TextboxSpanProps extends TextboxContainerProps {
-  leading?: ReactNode;
-}
+    const inputClasses = clsx(
+      'utrecht-textbox',
+      'utrecht-textbox--html-input',
+      disabled && 'utrecht-textbox--disabled',
+      invalid && 'utrecht-textbox--invalid',
+      readOnly && 'utrecht-textbox--readonly',
+      (required || inputRequired) && 'utrecht-textbox--required',
+      className,
+    );
 
-export interface TextboxInputProps extends TextboxProps {
-  // TODO: shouldnt be here
-  leading?: ReactNode;
-}
+    const inputClassesInContainer = clsx(
+      'utrecht-textbox-container__input',
+      (required || inputRequired) && 'utrecht-textbox-container__input--required',
+      className,
+    );
 
-export const Textbox2 = forwardRef(
-  ({ leading, ...restProps }: TextboxSpanProps | TextboxInputProps, ref: ForwardedRef<HTMLElement>) => {
-    if (leading) {
+    const Input = (
+      <input
+        {...restProps}
+        ref={inputRef}
+        type={type}
+        className={renderContainer ? inputClassesInContainer : inputClasses}
+        dir={dir ?? 'auto'}
+        disabled={disabled}
+        readOnly={readOnly}
+        aria-required={required ? required : undefined}
+        required={inputRequired}
+        aria-invalid={invalid || undefined}
+        inputMode={inputMode || (type === 'number' ? 'numeric' : undefined)}
+      />
+    );
+
+    if (renderContainer) {
       return (
-        <TextboxContainer {...restProps} leading={leading}>
-          <TextboxInput {...restProps} ref={ref as any} />
+        <TextboxContainer ref={containerRef} leading={leading} trailing={trailing}>
+          {Input}
         </TextboxContainer>
       );
     }
 
-    return <TextboxInput {...restProps} ref={ref as any} />;
+    return Input;
   },
 );
 
-Textbox2.displayName = 'Textbox2';
+Textbox.displayName = 'Textbox';
