@@ -15,23 +15,18 @@ export const propertyFormatter = function ({ dictionary }) {
     .filter(
       (token) =>
         token['$extensions'] &&
-        token['$extensions']['nl.nldesignsystem.css.property'] &&
-        token['$extensions']['nl.nldesignsystem.css.property'].syntax !== '*' &&
-        typeof token['$extensions']['nl.nldesignsystem.css.property'].inherits === 'boolean',
+        token['$extensions']['nl.nldesignsystem.css-property-syntax'] &&
+        token['$extensions']['nl.nldesignsystem.css-property-syntax'] !== '*',
     )
     .map((token) => {
       let str = `@property --${token.name} { `;
-      const cssProperty = token['$extensions']['nl.nldesignsystem.css.property'];
+      const syntaxValue = token['$extensions']['nl.nldesignsystem.css-property-syntax'];
 
-      const syntax = Array.isArray(cssProperty.syntax) ? cssProperty.syntax.join(' | ') : cssProperty.syntax;
+      const syntax = Array.isArray(syntaxValue) ? syntaxValue.join(' | ') : syntaxValue;
 
       str += `syntax: '${syntax}'; `;
 
-      str += `inherits: ${cssProperty.inherits}; `;
-
-      if (cssProperty.initialValue) {
-        str += `initial-value: ${cssProperty.initialValue}; `;
-      }
+      str += `inherits: true; `;
 
       str += `}`;
 

@@ -1,5 +1,27 @@
 # @utrecht/tooltip-react
 
+## 1.1.2
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/tooltip-css@3.0.0
+
+## 1.1.1
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+  - @utrecht/tooltip-css@2.0.2
+
+## 1.1.0
+
+### Minor Changes
+
+- 0873069: Updated typescript props to give an error when using non valid strings for the Hint and Appearance property.
+
+  Property guards properly narrowed to property options.
+
 ## 1.0.3
 
 ### Patch Changes

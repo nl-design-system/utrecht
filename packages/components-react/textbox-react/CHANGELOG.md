@@ -1,5 +1,26 @@
 # @utrecht/textbox-react
 
+## 1.0.15
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/textbox-css@4.0.0
+
+## 1.0.14
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+  - @utrecht/textbox-css@3.1.1
+
+## 1.0.13
+
+### Patch Changes
+
+- Updated dependencies [a6680b7]
+  - @utrecht/textbox-css@3.1.0
+
 ## 1.0.12
 
 ### Patch Changes

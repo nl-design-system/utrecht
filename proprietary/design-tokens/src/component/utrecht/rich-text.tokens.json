@@ -2,19 +2,19 @@
   "utrecht": {
     "rich-text": {
       "stranger": {
-        "margin-block-end": { "value": "{utrecht.space.block.2xl}" }
+        "margin-block-end": { "$value": "{utrecht.space.block.2xl}" }
       },
       "acquaintance": {
-        "margin-block-end": { "value": "{utrecht.space.block.xl}" }
+        "margin-block-end": { "$value": "{utrecht.space.block.xl}" }
       },
       "friend": {
-        "margin-block-end": { "value": "{utrecht.space.block.md}" }
+        "margin-block-end": { "$value": "{utrecht.space.block.md}" }
       },
       "best-friend": {
-        "margin-block-end": { "value": "{utrecht.space.block.xs}" }
+        "margin-block-end": { "$value": "{utrecht.space.block.xs}" }
       },
       "confidant": {
-        "margin-block-end": { "value": 0 }
+        "margin-block-end": { "$value": 0 }
       }
     }
   }

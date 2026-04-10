@@ -2,12 +2,12 @@
   "utrecht": {
     "heading-1": {
       "color": {},
-      "font-family": { "value": "{nl.heading.level-1.font-family}" },
-      "font-size": { "value": "{nl.heading.level-1.font-size}" },
-      "font-weight": { "value": "{nl.heading.level-1.font-weight}" },
-      "line-height": { "value": "{nl.heading.level-1.line-height}" },
-      "margin-block-end": { "value": "0.67rem" },
-      "margin-block-start": { "value": "0.67rem" },
+      "font-family": { "$value": "{nl.heading.level-1.font-family}" },
+      "font-size": { "$value": "{nl.heading.level-1.font-size}" },
+      "font-weight": { "$value": "{nl.heading.level-1.font-weight}" },
+      "line-height": { "$value": "{nl.heading.level-1.line-height}" },
+      "margin-block-end": { "$value": "0.67rem" },
+      "margin-block-start": { "$value": "0.67rem" },
       "text-transform": {}
     }
   }

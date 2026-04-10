@@ -1,5 +1,19 @@
 # @utrecht/body-react
 
+## 0.0.11
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/body-css@4.0.0
+
+## 0.0.10
+
+### Patch Changes
+
+- Updated dependencies [9a2eeb4]
+  - @utrecht/body-css@3.0.0
+
 ## 0.0.9
 
 ### Patch Changes

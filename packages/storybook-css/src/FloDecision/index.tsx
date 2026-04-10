@@ -32,10 +32,12 @@ export const FloDecision = ({
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const basePath = window.location.pathname.startsWith('/utrecht/storybook-css/')
+    const basePath = globalThis.location.pathname.startsWith('/utrecht/storybook-css/')
       ? '/utrecht/storybook-css/'
-      : window.location.pathname.startsWith('/storybook-css/')
+      : globalThis.location.pathname.startsWith('/storybook-css/')
       ? '/storybook-css/'
+      : globalThis.location.pathname.startsWith('/storybook-react/')
+      ? '/storybook-react/'
       : undefined;
     loadFloClientScript(basePath).then(() => setReady(true));
   }, []);
@@ -43,7 +45,7 @@ export const FloDecision = ({
   if (!ready) return loadingText && <div>{loadingText}</div>;
 
   const encodedData = checkData ? encodeHtmlEntities(JSON.stringify(checkData)) : undefined;
-  const floDecisionContent = `<flo-decision 
+  const floDecisionContent = `<flo-decision
   data-check-data="${encodedData}"
     data-show-outcomes="${showOutcomes}"
     data-outcomes-header="${outcomesHeader}"

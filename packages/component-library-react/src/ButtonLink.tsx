@@ -7,9 +7,24 @@
 import clsx from 'clsx';
 import { AnchorHTMLAttributes, ForwardedRef, forwardRef, KeyboardEvent, PropsWithChildren } from 'react';
 
+const enumGuard =
+  <T extends unknown>(values: readonly T[]) =>
+  (x: unknown): x is T =>
+    values.includes(x as T);
+
+const APPEARANCE = {
+  'primary-action-button': 'utrecht-button-link--primary-action',
+  'secondary-action-button': 'utrecht-button-link--secondary-action',
+  'subtle-button': 'utrecht-button-link--subtle',
+} as const;
+const appearanceKeys = Object.keys(APPEARANCE) as (keyof typeof APPEARANCE)[];
+
+export type ButtonLinkAppearance = keyof typeof APPEARANCE;
+
+export const isButtonLinkAppearance = enumGuard(appearanceKeys);
 // Somehow `placeholder` incorrectly is a global HTML attribute in React, ignore that
 export interface ButtonLinkProps extends Omit<AnchorHTMLAttributes<HTMLAnchorElement>, 'placeholder'> {
-  appearance?: string;
+  appearance?: ButtonLinkAppearance;
   external?: boolean;
   placeholder?: boolean;
 }
@@ -61,11 +76,9 @@ export const ButtonLink = forwardRef(
           'utrecht-button-link--html-a',
           {
             'utrecht-button-link--external': external,
-            'utrecht-button-link--primary-action': appearance === 'primary-action-button',
-            'utrecht-button-link--secondary-action': appearance === 'secondary-action-button',
-            'utrecht-button-link--subtle': appearance === 'subtle-button',
             'utrecht-button-link--placeholder': placeholder,
           },
+          appearance && APPEARANCE[appearance],
           className,
         )}
         rel={external ? 'external noopener noreferrer' : undefined}

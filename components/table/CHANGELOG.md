@@ -1,5 +1,28 @@
 # @utrecht/table-css
 
+## 3.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
+## 2.0.3
+
+### Patch Changes
+
+- 982448a: Switch from deprecated CSS properties to ones that are newly Baseline supported:
+
+  - `clip` now iw `clip-path`.
+  - `word-break` is now `overflow-wrap`
+  - `page-break-inside` now is `break-inside`.
+  - `page-break-after` now is `break-after`.
+
+## 2.0.2
+
+### Patch Changes
+
+- 7c6f825: Table header sort button specificity issue verholpen door de justify content token van de button te gebruiken ipv direct de justify content proberen aan te passen van de button.
+
 ## 2.0.1
 
 ### Patch Changes

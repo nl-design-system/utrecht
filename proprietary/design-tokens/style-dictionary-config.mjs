@@ -36,11 +36,11 @@ declare const tokens: DesignToken[];`;
         type: 'value',
         transitive: false,
         transform: (token) => {
-          const isFontSize = (token) => token.path[token.path.length - 1] === 'font-size' || token.type === 'fontSize';
+          const isFontSize = (token) => token.path[token.path.length - 1] === 'font-size';
           const isLineHeight = (token) => token.path[token.path.length - 1] === 'line-height';
 
-          if ((isFontSize(token) || isLineHeight(token)) && /px$/i.test(token.value)) {
-            const px = parseInt(token.value, 10);
+          if ((isFontSize(token) || isLineHeight(token)) && /px$/i.test(token['$value'])) {
+            const px = parseInt(token['$value'], 10);
             const ratio = 1 / 16;
             const rem = px * ratio;
             const value = `${rem}rem`;
@@ -48,7 +48,7 @@ declare const tokens: DesignToken[];`;
             return value;
           }
 
-          return token.value;
+          return token['$value'];
         },
       },
     },

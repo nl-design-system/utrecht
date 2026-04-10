@@ -44,7 +44,7 @@ export const ExampleTokensJSON = ({ definition }) => {
       <p>
         Copy the JSON template below if you want to reuse this component, and replace the empty placeholder object with
         your own code:
-        <code>{`{ "value": "#123456", "comment": "my design choice" }`}</code>.
+        <code>{`{ "$value": "#123456", "$description": "my design choice" }`}</code>.
       </p>
       <p>
         When you have a collection of design token JSON files, you can use{' '}

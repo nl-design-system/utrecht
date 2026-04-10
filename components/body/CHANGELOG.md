@@ -1,5 +1,17 @@
 # @utrecht/body-css
 
+## 4.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
+## 3.0.0
+
+### Major Changes
+
+- 9a2eeb4: Remove font and line-height design tokens, move those to the Root component.
+
 ## 2.0.1
 
 ### Patch Changes

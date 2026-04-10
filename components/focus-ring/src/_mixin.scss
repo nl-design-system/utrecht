@@ -36,3 +36,21 @@
     @include utrecht-focus-visible;
   }
 }
+
+/* Override the browser focus ring with our own focus ring.
+ * Use `:where()` so the CSS selector specificity is `0,0,0`.
+ */
+@mixin utrecht-focus-ring-default {
+  :where(:focus-visible) {
+    @include utrecht-focus-ring;
+  }
+}
+
+/* Override the browser focus ring with our own focus ring.
+ * Use `:where()` so the CSS selector specificity is `0,0,0`.
+ */
+@mixin utrecht-focus-ring-default-container {
+  :where(&) :where(:focus-visible) {
+    @include utrecht-focus-ring;
+  }
+}

@@ -1,5 +1,12 @@
 # @utrecht/youtube-video-react
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/youtube-video-css@3.0.0
+
 ## 1.0.3
 
 ### Patch Changes

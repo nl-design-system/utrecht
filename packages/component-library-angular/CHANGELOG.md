@@ -1,5 +1,11 @@
 # @utrecht/component-library-angular
 
+## 3.0.1
+
+### Patch Changes
+
+- a98c3cc: Upgrade tslib dependency to 2.6.3
+
 ## 3.0.0
 
 ### Major Changes

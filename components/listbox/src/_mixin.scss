@@ -84,9 +84,7 @@
   user-select: none;
 
   @media (forced-colors: active) {
-    & {
-      @include utrecht-listbox--forced-colors;
-    }
+    @include utrecht-listbox--forced-colors;
   }
 }
 
@@ -120,10 +118,8 @@
   margin-inline-start: var(--utrecht-listbox-option-group-label-margin-inline-start);
 
   @media (forced-colors: active) {
-    & {
-      background-color: field;
-      color: fieldtext;
-    }
+    background-color: field;
+    color: fieldtext;
   }
 }
 
@@ -132,7 +128,7 @@
 
   /*
    * Order of precedence:
-   * 
+   *
    * 1. disabled + selected
    * 2. disabled
    * 3. active + hover
@@ -168,10 +164,8 @@
   padding-inline-start: var(--utrecht-listbox-option-padding-inline-start);
 
   @media (forced-colors: active) {
-    & {
-      /* Fix rendering glitch in Google Chrome, where the text became black on a black background */
-      forced-color-adjust: none;
-    }
+    /* Fix rendering glitch in Google Chrome, where the text became black on a black background */
+    forced-color-adjust: none;
   }
 }
 
@@ -218,11 +212,13 @@
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
 }
 
-@mixin utrecht-listbox__option--selected {
+@mixin utrecht-listbox__option--disabled-selected {
+  /* disabled + selected */
   --_utrecht-listbox-option-disabled-background-color: var(--utrecht-listbox-option-selected-disabled-background-color);
   --_utrecht-listbox-option-disabled-color: var(--utrecht-listbox-option-selected-disabled-color);
-  --_utrecht-listbox-option-interactive-background-color: var(--utrecht-listbox-option-selected-hover-background-color);
-  --_utrecht-listbox-option-interactive-color: var(--utrecht-listbox-option-selected-hover-color);
+}
+
+@mixin utrecht-listbox__option--selected {
   --_utrecht-listbox-option-state-background-color: var(--utrecht-listbox-option-selected-background-color);
   --_utrecht-listbox-option-state-color: var(--utrecht-listbox-option-selected-color);
 }

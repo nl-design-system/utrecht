@@ -96,7 +96,7 @@ export const Default: Story = {
 export const Language: Story = {
   args: {
     children: 'English',
-    element: 'html',
+    element: 'div',
     lang: 'en',
   },
   name: 'Language',
@@ -112,7 +112,7 @@ export const Language: Story = {
 export const Nederlands: Story = {
   args: {
     children: 'Nederlands',
-    element: 'html',
+    element: 'div',
     lang: 'nl',
   },
   name: 'Nederlands',
@@ -128,7 +128,7 @@ export const Nederlands: Story = {
 export const Fries: Story = {
   args: {
     children: 'Frysk',
-    element: 'html',
+    element: 'div',
     lang: 'fy',
   },
   name: 'Fries',
@@ -144,7 +144,7 @@ export const Fries: Story = {
 export const Drents: Story = {
   args: {
     children: 'Drèents',
-    element: 'html',
+    element: 'div',
     lang: 'drt',
   },
   name: 'Drents',
@@ -160,7 +160,7 @@ export const Drents: Story = {
 export const Limburgs: Story = {
   args: {
     children: 'Limburgs (ouch waal: Lèmburgs)',
-    element: 'html',
+    element: 'div',
     lang: 'li',
   },
   name: 'Limburgs',
@@ -176,7 +176,7 @@ export const Limburgs: Story = {
 export const Zeeuws: Story = {
   args: {
     children: 'Zeêuws',
-    element: 'html',
+    element: 'div',
     lang: 'zea',
   },
   name: 'Zeeuws',
@@ -192,7 +192,7 @@ export const Zeeuws: Story = {
 export const Twents: Story = {
   args: {
     children: 'Twents',
-    element: 'html',
+    element: 'div',
     lang: 'twd',
   },
   name: 'Twents',
@@ -208,7 +208,7 @@ export const Twents: Story = {
 export const Papiamento: Story = {
   args: {
     children: 'Papiamento',
-    element: 'html',
+    element: 'div',
     lang: 'pap',
   },
   name: 'Papiamento',

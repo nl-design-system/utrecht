@@ -1,5 +1,17 @@
 # @utrecht/search-bar-css
 
+## 4.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
+## 3.0.2
+
+### Patch Changes
+
+- 95f6807: Fix to use valid CSS syntax in `tokens.json` definition.
+
 ## 3.0.1
 
 ### Patch Changes

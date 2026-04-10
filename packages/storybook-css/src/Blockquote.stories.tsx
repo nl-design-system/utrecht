@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/blockquote-css/README.md?raw';
 import tokensDefinition from '@utrecht/blockquote-css/src/tokens.json';

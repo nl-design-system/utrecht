@@ -1,5 +1,5 @@
 {
-  "version": "4.0.0",
+  "version": "4.1.1",
   "author": "Community for NL Design System",
   "description": "Stencil component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -27,14 +27,14 @@
     "directory": "packages/web-component-library-stencil"
   },
   "devDependencies": {
-    "@gemeente-denhaag/process-steps": "0.1.0-alpha.224",
-    "@gemeente-denhaag/step-marker": "0.0.1-alpha.96",
+    "@gemeente-denhaag/process-steps": "4.2.3",
+    "@gemeente-denhaag/step-marker": "3.0.1",
     "@stencil/angular-output-target": "0.8.4",
-    "@stencil/react-output-target": "0.5.3",
-    "@stencil/sass": "3.0.12",
-    "@stencil/vue-output-target": "0.8.8",
-    "@types/jest": "29.5.12",
-    "@types/node": "22.7.4",
+    "@stencil/react-output-target": "1.4.0",
+    "@stencil/sass": "3.2.3",
+    "@stencil/vue-output-target": "0.8.9",
+    "@types/jest": "29.5.14",
+    "@types/node": "24.10.4",
     "@utrecht/action-group-css": "workspace:*",
     "@utrecht/alert-css": "workspace:*",
     "@utrecht/article-css": "workspace:*",
@@ -121,7 +121,7 @@
     "chokidar-cli": "3.0.0",
     "clsx": "2.1.1",
     "node-sass-package-importer": "5.3.3",
-    "rimraf": "5.0.7"
+    "rimraf": "5.0.10"
   },
   "dependencies": {
     "@stencil/core": "4.18.3"

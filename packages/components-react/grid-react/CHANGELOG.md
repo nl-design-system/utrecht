@@ -1,5 +1,12 @@
 # @utrecht/grid-react
 
+## 1.0.1
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/grid-css@2.0.0
+
 ## 1.0.0
 
 ### Major Changes

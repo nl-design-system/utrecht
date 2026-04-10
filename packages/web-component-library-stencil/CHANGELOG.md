@@ -1,5 +1,24 @@
 # @utrecht/web-component-library-stencil
 
+## 4.1.1
+
+### Patch Changes
+
+- 982448a: Switch from deprecated CSS properties to ones that are newly Baseline supported:
+
+  - `clip` now iw `clip-path`.
+  - `word-break` is now `overflow-wrap`
+  - `page-break-inside` now is `break-inside`.
+  - `page-break-after` now is `break-after`.
+
+## 4.1.0
+
+### Minor Changes
+
+- 0873069: Updated typescript props to give an error when using non valid strings for the Hint and Appearance property.
+
+  Property guards properly narrowed to property options.
+
 ## 4.0.0
 
 ### Major Changes

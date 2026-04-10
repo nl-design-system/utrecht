@@ -9,6 +9,7 @@
 @mixin utrecht-heading-4 {
   @include utrecht-heading;
 
+  break-after: avoid-page;
   color: var(--utrecht-heading-4-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
   font-family: var(
     --utrecht-heading-4-font-family,
@@ -19,7 +20,6 @@
   line-height: var(--utrecht-heading-4-line-height);
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-heading-4-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-heading-4-margin-block-start, 0));
-  page-break-after: avoid;
 }
 
 @mixin utrecht-heading-4--distanced {

@@ -1,5 +1,5 @@
 {
-  "version": "5.0.1",
+  "version": "6.1.0",
   "author": "Community for NL Design System",
   "description": "Design Tokens for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "SEE LICENSE IN ./LICENSE.md",
@@ -17,23 +17,22 @@
     "directory": "proprietary/design-tokens"
   },
   "devDependencies": {
-    "@tokens-studio/sd-transforms": "1.2.3",
+    "@tokens-studio/sd-transforms": "2.0.3",
     "chokidar-cli": "3.0.0",
-    "glob": "10.4.2",
+    "glob": "10.4.5",
     "lodash.isplainobject": "4.0.6",
     "lodash.merge": "4.6.2",
     "lodash.mergewith": "4.6.2",
     "regex-trie": "1.0.4",
-    "rimraf": "5.0.7",
-    "sass": "1.69.5",
-    "style-dictionary": "4.0.1",
-    "typescript": "5.0.4"
+    "rimraf": "5.0.10",
+    "sass": "1.69.7",
+    "style-dictionary": "5.4.0",
+    "typescript": "5.9.3"
   },
   "scripts": {
-    "build": "pnpm run build:style-dictionary && pnpm run build:scss && pnpm run build:ts",
+    "build": "pnpm run build:style-dictionary:default && pnpm run build:style-dictionary:dark && pnpm run build:scss && pnpm run build:ts",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:ts": "tsc src/font-family.ts --outDir dist --target es2020 --module esnext --moduleResolution node",
-    "build:style-dictionary": "pnpm run '/^build:style-dictionary:.*/'",
     "build:style-dictionary:default": "node ./style-dictionary-build.mjs",
     "build:style-dictionary:dark": "node ./style-dictionary-build-dark.mjs",
     "build:stylelint": "node ./build-stylelint.mjs",

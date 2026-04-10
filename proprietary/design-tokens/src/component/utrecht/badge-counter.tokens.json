@@ -2,21 +2,21 @@
   "utrecht": {
     "badge-counter": {
       "background-color": {
-        "value": "{utrecht.color.red.40}"
+        "$value": "{utrecht.color.red.40}"
       },
       "border-radius": {
-        "value": "{utrecht.badge-counter.font-size}"
+        "$value": "{utrecht.badge-counter.font-size}"
       },
       "color": {
-        "value": "{utrecht.color.white}"
+        "$value": "{utrecht.color.white}"
       },
-      "font-size": { "value": "{utrecht.typography.scale.md.font-size}" },
+      "font-size": { "$value": "{utrecht.typography.scale.md.font-size}" },
       "font-weight": {},
       "padding-block": {
-        "value": "1ex"
+        "$value": "1ex"
       },
       "padding-inline": {
-        "value": "1ex"
+        "$value": "1ex"
       }
     }
   }

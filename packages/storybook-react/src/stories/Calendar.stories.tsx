@@ -32,6 +32,8 @@ const meta = {
     nextYearButtonTitle: 'volgend jaar',
     previousMonthButtonTitle: 'Vorige maand',
     nextMonthButtonTitle: 'volgende maand',
+    displayWeekend: true,
+    displayYearNavigation: true,
     minDate: new Date(),
     maxDate: addYears(new Date(), 1),
   },
@@ -93,6 +95,20 @@ const meta = {
         defaultValue: { summary: 'Next month' },
       },
     },
+    displayWeekend: {
+      name: 'displayWeekend',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'Show weekend' },
+      },
+    },
+    displayYearNavigation: {
+      name: 'displayYearNavigation',
+      table: {
+        category: 'API',
+        defaultValue: { summary: 'Hide year navigation' },
+      },
+    },
     minDate: {
       name: 'minDate',
       table: {
@@ -135,6 +151,28 @@ export const EnglishCalendar: Story = {
     currentDate: new Date(),
     events,
     locale: enUS,
+  },
+};
+
+export const WithoutWeekends: Story = {
+  args: {
+    onCalendarClick: (date) => {
+      console.log(date);
+    },
+    currentDate: new Date(),
+    events,
+    displayWeekend: false,
+  },
+};
+
+export const HideYearControls: Story = {
+  args: {
+    onCalendarClick: (date) => {
+      console.log(date);
+    },
+    currentDate: new Date(),
+    events,
+    displayYearNavigation: false,
   },
 };
 

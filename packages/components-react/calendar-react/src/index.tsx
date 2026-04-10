@@ -12,6 +12,7 @@ import {
   isBefore,
   isSameDay,
   isSameMonth,
+  isWeekend,
   Locale,
   parseISO,
   setMonth,
@@ -36,14 +37,14 @@ import { IconArrowLeftDouble } from './IconArrowLeftDouble';
 import { IconArrowRight } from './IconArrowRight';
 import { IconArrowRightDouble } from './IconArrowRightDouble';
 
-function createCalendar(today: Date): Date[] {
+function createCalendar(today: Date, displayWeekend: boolean): Date[] {
   const start = startOfWeek(startOfMonth(today), {
     weekStartsOn: 1 /* Monday */,
   });
   const end = endOfWeek(addWeeks(start, 5), {
     weekStartsOn: 1 /* Monday */,
   });
-  return eachDayOfInterval({ start, end });
+  return eachDayOfInterval({ start, end }).filter((date) => displayWeekend || !isWeekend(date));
 }
 
 export type Events = {
@@ -81,6 +82,8 @@ export interface CalendarProps {
   nextMonthButtonTitle?: string;
   minDate?: Date;
   maxDate?: Date;
+  displayWeekend?: boolean;
+  displayYearNavigation?: boolean;
 }
 
 /**
@@ -97,16 +100,18 @@ export const Calendar = ({
   nextYearButtonTitle = 'Next year',
   previousMonthButtonTitle = 'Previous month',
   nextMonthButtonTitle = 'Next month',
+  displayWeekend = true,
+  displayYearNavigation = true,
   minDate,
   maxDate,
 }: CalendarProps) => {
   const [visibleMonth, setVisibleMonth] = useState(currentDate || new Date());
   const [selectedDate, setSelectedDate] = useState(currentDate);
-  const calendar = createCalendar(visibleMonth);
+  const calendar = createCalendar(visibleMonth, displayWeekend);
   const start = startOfWeek(visibleMonth, { weekStartsOn: 1 });
   const end = endOfWeek(visibleMonth, { weekStartsOn: 1 });
 
-  const currentWeek = eachDayOfInterval({ start, end }).map((day) => day);
+  const currentWeek = eachDayOfInterval({ start, end }).filter((day) => displayWeekend || !isWeekend(day));
   const chunksWeeks = chunk(calendar, calendar.length / 6);
 
   const weeks = chunksWeeks.map((week) =>
@@ -131,26 +136,34 @@ export const Calendar = ({
     }),
   );
 
+  const monthNavigation = (
+    <CalendarNavigationButtons
+      previousIcon={<IconArrowLeft title={previousMonthButtonTitle} />}
+      nextIcon={<IconArrowRight title={nextMonthButtonTitle} />}
+      onPreviousClick={() => setVisibleMonth(setMonth(visibleMonth, visibleMonth.getMonth() - 1))}
+      onNextClick={() => setVisibleMonth(addMonths(visibleMonth, 1))}
+    >
+      <CalendarNavigationLabel dateTime={format(visibleMonth, 'yyyy-mm')}>
+        {format(visibleMonth, 'LLLL y', { locale })}
+      </CalendarNavigationLabel>
+    </CalendarNavigationButtons>
+  );
+
   return (
     <div className="utrecht-calendar">
       <CalendarNavigation>
-        <CalendarNavigationButtons
-          previousIcon={<IconArrowLeftDouble title={previousYearButtonTitle} />}
-          nextIcon={<IconArrowRightDouble title={nextYearButtonTitle} />}
-          onPreviousClick={() => setVisibleMonth(setYear(visibleMonth, getYear(visibleMonth) - 1))}
-          onNextClick={() => setVisibleMonth(addYears(visibleMonth, 1))}
-        >
+        {!displayYearNavigation ? (
+          monthNavigation
+        ) : (
           <CalendarNavigationButtons
-            previousIcon={<IconArrowLeft title={previousMonthButtonTitle} />}
-            nextIcon={<IconArrowRight title={nextMonthButtonTitle} />}
-            onPreviousClick={() => setVisibleMonth(setMonth(visibleMonth, visibleMonth.getMonth() - 1))}
-            onNextClick={() => setVisibleMonth(addMonths(visibleMonth, 1))}
+            previousIcon={<IconArrowLeftDouble title={previousYearButtonTitle} />}
+            nextIcon={<IconArrowRightDouble title={nextYearButtonTitle} />}
+            onPreviousClick={() => setVisibleMonth(setYear(visibleMonth, getYear(visibleMonth) - 1))}
+            onNextClick={() => setVisibleMonth(addYears(visibleMonth, 1))}
           >
-            <CalendarNavigationLabel dateTime={format(visibleMonth, 'yyyy-mm')}>
-              {format(visibleMonth, 'LLLL y', { locale })}
-            </CalendarNavigationLabel>
+            {monthNavigation}
           </CalendarNavigationButtons>
-        </CalendarNavigationButtons>
+        )}
       </CalendarNavigation>
       <table className="utrecht-calendar__table" role="grid">
         <CalendarTableWeeksContainer>

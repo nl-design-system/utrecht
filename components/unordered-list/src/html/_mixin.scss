@@ -10,13 +10,43 @@
   ul {
     @include utrecht-unordered-list;
     @include utrecht-unordered-list--distanced;
+    @include utrecht-unordered-list--level-1;
   }
 
   ul > li {
     @include utrecht-unordered-list__item;
   }
 
+  /* Child combinator (>) to prevent styling nested ordered lists */
   ul > li::marker {
     @include utrecht-unordered-list__marker;
+  }
+
+  ul > li > ul {
+    @include utrecht-unordered-list--level-2;
+  }
+
+  ul > li > ul > li > ul {
+    @include utrecht-unordered-list--level-3;
+  }
+
+  ul > li > ul > li > ul > li > ul {
+    @include utrecht-unordered-list--level-4;
+  }
+
+  ul > li > ul > li > ul > li > ul > li > ul {
+    @include utrecht-unordered-list--level-5;
+  }
+
+  ul > li > ul > li > ul > li > ul > li > ul > li > ul {
+    @include utrecht-unordered-list--level-6;
+  }
+
+  ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {
+    @include utrecht-unordered-list--level-7;
+  }
+
+  ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {
+    @include utrecht-unordered-list--level-8;
   }
 }

@@ -16,7 +16,6 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('@etchteam/storybook-addon-status'),
     getAbsolutePath('@storybook/preset-scss'),
-    getAbsolutePath('@storybook/addon-jest'),
   ],
 
   features: {},

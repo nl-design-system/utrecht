@@ -131,9 +131,9 @@ Integrate with Style Dictionary:
   "utrecht": {
     "grid": {
       "spacing": {
-        "sm": { "value": "8px" },
-        "md": { "value": "16px" },
-        "lg": { "value": "24px" }
+        "sm": { "$value": "8px" },
+        "md": { "$value": "16px" },
+        "lg": { "$value": "24px" }
       }
     }
   }

@@ -1,32 +1,32 @@
 {
   "utrecht": {
     "link": {
-      "color": { "value": "{utrecht.color.blue.35}" },
+      "color": { "$value": "{utrecht.color.blue.35}" },
       "icon": {
-        "size": { "value": "1.2em" }
+        "size": { "$value": "1.2em" }
       },
-      "text-decoration": { "value": "underline" },
+      "text-decoration": { "$value": "underline" },
       "text-decoration-color": {},
-      "text-underline-offset": { "value": "3px" },
+      "text-underline-offset": { "$value": "3px" },
       "active": {
-        "color": { "value": "{utrecht.link.color}" }
+        "color": { "$value": "{utrecht.link.color}" }
       },
       "focus": {
-        "color": { "value": "{utrecht.color.blue.40}" }
+        "color": { "$value": "{utrecht.color.blue.40}" }
       },
       "focus-visible": {
-        "text-decoration": { "value": "none" }
+        "text-decoration": { "$value": "none" }
       },
       "hover": {
-        "color": { "value": "{utrecht.link.focus.color}" },
-        "text-decoration": { "value": "underline" },
-        "text-decoration-thickness": { "value": "3px" }
+        "color": { "$value": "{utrecht.link.focus.color}" },
+        "text-decoration": { "$value": "underline" },
+        "text-decoration-thickness": { "$value": "3px" }
       },
       "placeholder": {
-        "color": { "value": "{utrecht.color.grey.40}" }
+        "color": { "$value": "{utrecht.color.grey.40}" }
       },
       "visited": {
-        "color": { "value": "{utrecht.link.color}" }
+        "color": { "$value": "{utrecht.link.color}" }
       },
       "current": {
         "font-weight": {}

@@ -1,5 +1,12 @@
 # @utrecht/data-badge-react
 
+## 1.0.8
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/data-badge-css@3.0.0
+
 ## 1.0.7
 
 ### Patch Changes

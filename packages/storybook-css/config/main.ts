@@ -25,7 +25,6 @@ const config: StorybookConfig = {
     '@whitespace/storybook-addon-html', // Cannot use getAbsolutePath() - package structure incompatible with dirname(require.resolve())
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('storybook-addon-pseudo-states'),
-    getAbsolutePath('storybook-addon-themes'),
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/', '../../flolegal-decision-tree-client/dist/assets'],
   docs: {},

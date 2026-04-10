@@ -2,25 +2,25 @@
   "utrecht": {
     "link-list": {
       "row-gap": {
-        "value": "{utrecht.space.block.xs}"
+        "$value": "{utrecht.space.block.xs}"
       },
       "link": {
         "font-weight": {
-          "value": "{utrecht.typography.weight-scale.bold.font-weight}"
+          "$value": "{utrecht.typography.weight-scale.bold.font-weight}"
         },
         "column-gap": {
-          "value": "{utrecht.space.block.xs}"
+          "$value": "{utrecht.space.block.xs}"
         },
         "text-decoration": {
-          "value": "none"
+          "$value": "none"
         }
       },
       "icon": {
         "inset-block-start": {
-          "value": "0.15em"
+          "$value": "0.15em"
         },
         "size": {
-          "value": "14px"
+          "$value": "14px"
         }
       }
     }

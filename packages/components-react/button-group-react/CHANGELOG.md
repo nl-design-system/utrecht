@@ -1,5 +1,12 @@
 # @utrecht/button-group-react
 
+## 1.1.4
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/button-group-css@3.0.0
+
 ## 1.1.3
 
 ### Patch Changes

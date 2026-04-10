@@ -23,11 +23,11 @@
     "directory": "."
   },
   "engines": {
-    "node": ">=20 <=24",
+    "node": ">=24 <=25",
     "pnpm": "^10.17.0"
   },
   "devDependencies": {
-    "@changesets/cli": "2.27.6",
+    "@changesets/cli": "2.27.12",
     "@commitlint/cli": "19.3.0",
     "@commitlint/config-conventional": "19.2.2",
     "@lerna-lite/cli": "3.5.1",
@@ -35,32 +35,32 @@
     "@nrwl/nx-cloud": "15.3.5",
     "@nrwl/web": "15.9.7",
     "@nrwl/workspace": "15.9.7",
-    "@typescript-eslint/eslint-plugin": "5.62.0",
-    "@typescript-eslint/parser": "5.62.0",
+    "@typescript-eslint/eslint-plugin": "8.56.1",
+    "@typescript-eslint/parser": "8.56.1",
     "@utrecht/design-system": "link:",
-    "eslint": "8.57.0",
-    "eslint-config-prettier": "8.10.0",
+    "eslint": "8.57.1",
+    "eslint-config-prettier": "8.10.2",
     "eslint-plugin-import": "2.29.1",
     "eslint-plugin-jest": "27.9.0",
     "eslint-plugin-json": "3.1.0",
     "eslint-plugin-mdx": "2.3.4",
-    "eslint-plugin-react": "7.34.3",
+    "eslint-plugin-react": "7.34.4",
     "eslint-plugin-vue": "9.26.0",
-    "glob": "10.4.2",
+    "glob": "10.4.5",
     "html-validate": "8.20.1",
     "http-server": "14.1.1",
     "husky": "9.0.11",
-    "lint-staged": "15.2.7",
+    "lint-staged": "16.2.7",
     "markdownlint-cli": "0.41.0",
     "npm-check-updates": "19.0.0",
     "npm-package-json-lint": "8.0.0",
-    "postcss": "8.4.38",
+    "postcss": "8.4.49",
     "prettier": "2.8.8",
-    "rimraf": "5.0.7",
-    "stylelint": "16.6.1",
-    "stylelint-config-standard-scss": "13.1.0",
-    "stylelint-order": "6.0.4",
-    "typescript": "4.9.5"
+    "rimraf": "5.0.10",
+    "stylelint": "17.4.0",
+    "stylelint-config-standard-scss": "17.0.0",
+    "stylelint-order": "7.0.1",
+    "typescript": "5.9.3"
   },
   "scripts": {
     "add-repository-directory": "node ./add-repository-directory.mjs",
@@ -73,16 +73,16 @@
     "lint": "pnpm run  --aggregate-output \"/^lint:.*/\" && pnpm run --recursive lint",
     "lint-fix": "pnpm run --aggregate-output \"/^lint-fix:.*/\"",
     "lint-fix:css": "stylelint --fix '**/*.{css,scss}'",
-    "lint-fix:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --fix --report-unused-disable-directives .",
+    "lint-fix:js": "eslint --fix --report-unused-disable-directives .",
     "lint-fix:md": "markdownlint --fix '**/*.md'",
     "lint:css": "stylelint '**/*.{css,scss}'",
-    "lint:js": "eslint --ext '.js,.json,.jsx,.mdx,.ts,.tsx,.vue' --report-unused-disable-directives .",
+    "lint:js": "eslint --report-unused-disable-directives .",
     "lint:md": "markdownlint '**/*.md'",
     "lint:package-json": "npmPkgJsonLint .",
     "lint:package-lock": "pnpm ls --recursive",
     "lint:prettier": "prettier --check .",
     "lint-build": "pnpm run --recursive lint-build",
-    "prepare": "husky install",
+    "prepare": "husky",
     "prettier": "prettier --list-different --write .",
     "publish": "lerna publish from-package --yes",
     "publish:changeset": "changeset publish",
@@ -111,7 +111,10 @@
   "pnpm": {
     "patchedDependencies": {
       "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch"
+    },
+    "overrides": {
+      "handlebars@>=4.6.0 <=4.7.8": ">=4.7.9"
     }
   },
-  "packageManager": "pnpm@10.28.1+sha512.7d7dbbca9e99447b7c3bf7a73286afaaf6be99251eb9498baefa7d406892f67b879adb3a1d7e687fc4ccc1a388c7175fbaae567a26ab44d1067b54fcb0d6a316"
+  "packageManager": "pnpm@10.30.1+sha512.3590e550d5384caa39bd5c7c739f72270234b2f6059e13018f975c313b1eb9fefcc09714048765d4d9efe961382c312e624572c0420762bdc5d5940cdf9be73a"
 }

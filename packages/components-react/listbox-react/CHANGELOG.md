@@ -1,5 +1,26 @@
 # @utrecht/listbox-react
 
+## 1.0.16
+
+### Patch Changes
+
+- Updated dependencies [eabbf23]
+  - @utrecht/listbox-css@3.0.0
+
+## 1.0.15
+
+### Patch Changes
+
+- Updated dependencies [982448a]
+  - @utrecht/listbox-css@2.1.1
+
+## 1.0.14
+
+### Patch Changes
+
+- Updated dependencies [045bfde]
+  - @utrecht/listbox-css@2.1.0
+
 ## 1.0.13
 
 ### Patch Changes

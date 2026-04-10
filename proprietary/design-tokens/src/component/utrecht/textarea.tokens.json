@@ -1,9 +1,9 @@
 {
   "utrecht": {
     "textarea": {
-      "border-bottom-width": { "value": "3px" },
-      "border-block-end-width": { "value": "3px" },
-      "line-height": { "value": "{utrecht.typography.line-height.md}" },
+      "border-bottom-width": { "$value": "3px" },
+      "border-block-end-width": { "$value": "3px" },
+      "line-height": { "$value": "{utrecht.typography.line-height.md}" },
       "disabled": {
         "border-color": {},
         "color": {}

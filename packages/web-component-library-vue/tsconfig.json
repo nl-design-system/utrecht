@@ -1,11 +1,12 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "files": [],
   "references": [
     {
       "path": "./tsconfig.vite-config.json"
     },
     {
-      "path": "./tsconfig.app.json"
+      "path": "./tsconfig.lib.json"
     }
   ]
 }

@@ -33,6 +33,11 @@ minimumReleaseAgeExclude:
 overrides:
   form-data@>=4.0.0 <4.0.4: ">=4.0.4"
 
+packageExtensions:
+  "@vue/test-utils":
+    dependencies:
+      "@vue/server-renderer": "3.3.13" # fix build issue on Vercel
+
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
 saveExact: true

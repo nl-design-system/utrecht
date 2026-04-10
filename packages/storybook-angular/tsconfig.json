@@ -5,6 +5,7 @@
     "types": ["node"],
     "allowSyntheticDefaultImports": true,
     "moduleResolution": "node",
+    "skipLibCheck": true,
     "paths": {
       "@utrecht/component-library-angular": ["../component-library-angular/src/public-api"]
     },

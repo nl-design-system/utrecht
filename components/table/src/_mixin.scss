@@ -30,6 +30,7 @@
 }
 
 @mixin utrecht-table__caption {
+  break-after: avoid;
   break-inside: avoid;
   color: var(--utrecht-table-caption-color);
   font-family: var(--utrecht-table-caption-font-family);
@@ -37,7 +38,6 @@
   font-weight: var(--utrecht-table-caption-font-weight);
   line-height: var(--utrecht-table-caption-line-height);
   margin-block-end: var(--utrecht-table-caption-margin-block-end);
-  page-break-after: avoid;
   text-align: var(--utrecht-table-caption-text-align, center);
 }
 
@@ -53,7 +53,6 @@
   break-inside: avoid;
   color: var(--utrecht-table-header-color);
   font-weight: var(--utrecht-table-header-font-weight);
-  page-break-inside: avoid;
   text-transform: var(--utrecht-table-header-text-transform);
 }
 
@@ -206,7 +205,6 @@
 
 @mixin utrecht-table__row {
   break-inside: avoid;
-  page-break-inside: avoid;
 }
 
 @mixin utrecht-table__row--alternate-odd {
@@ -232,8 +230,8 @@
   background-attachment: local, local, scroll, scroll;
   background-image:
     /* Shadows */ linear-gradient(to right, white, white), linear-gradient(to right, white, white),
-    /* Shadow covers */ linear-gradient(to right, rgba(0 0 0 / 25%), rgba(255 255 255 / 0%)),
-    linear-gradient(to left, rgba(0 0 0 / 25%), rgba(255 255 255 / 0%));
+    /* Shadow covers */ linear-gradient(to right, rgb(0 0 0 / 25%), rgb(255 255 255 / 0%)),
+    linear-gradient(to left, rgb(0 0 0 / 25%), rgb(255 255 255 / 0%));
   background-position: left center, right center, left center, right center;
   background-repeat: no-repeat;
   background-size:

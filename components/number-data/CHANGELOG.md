@@ -1,5 +1,22 @@
 # @utrecht/number-data-css
 
+## 3.0.0
+
+### Major Changes
+
+- eabbf23: Publish `tokens.json` in DTCG format: `$value` instead of `value`, standard `$type`, etcetera.
+
+## 2.0.2
+
+### Patch Changes
+
+- 982448a: Switch from deprecated CSS properties to ones that are newly Baseline supported:
+
+  - `clip` now iw `clip-path`.
+  - `word-break` is now `overflow-wrap`
+  - `page-break-inside` now is `break-inside`.
+  - `page-break-after` now is `break-after`.
+
 ## 2.0.1
 
 ### Patch Changes
