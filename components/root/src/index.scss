@@ -13,6 +13,14 @@
   @include utrecht-root__fullscreen-backdrop;
 }
 
+.utrecht-root:where(:root) {
+  @include utrecht-root--html;
+}
+
+.utrecht-root:where(body) {
+  @include utrecht-root--body-element;
+}
+
 /**
  * Avoid influencing the `rem` unit. We do this by specifically excluding
  * `font-size` on the `:root` element, which is typically the `html` element.
@@ -26,4 +34,8 @@
 .utrecht-root:where(:root) > *,
 .utrecht-root:where(:not(:root)) {
   @include utrecht-root__font-size-container;
+}
+
+.utrecht-root:where(:root) > :where(body) {
+  @include utrecht-root__body;
 }

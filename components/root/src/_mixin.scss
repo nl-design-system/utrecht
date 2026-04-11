@@ -12,6 +12,11 @@
   -moz-osx-font-smoothing: auto !important;
 }
 
+@mixin reset-body {
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: 0;
+}
+
 @mixin utrecht-root {
   /*
    * Goals:
@@ -25,12 +30,16 @@
    *   are positioned relative to the root component.
    * - ensure text content fits at 400% zoom by enabling hypenation.
    * - do not influence the `rem` unit by avoiding `font-size` on the root element.
+   * - reset `body` element styles for `margin`
+   * - reset `dialog` element styles for `border`, `margin` and `padding`
    */
   @include reset-font-smoothing;
 
   /* For some new properties, use the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
   background-color: var(--utrecht-root-background-color, Canvas);
   block-size: 100%;
+  border: 0;
+  box-sizing: border-box;
   color: var(--utrecht-root-color, CanvasText);
   font-family: var(--utrecht-root-font-family);
   font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
@@ -40,9 +49,13 @@
   -ms-hyphens: auto;
   hyphens: auto;
   inline-size: 100%;
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: 0;
   overflow-block: auto;
   overflow-inline: auto;
   overflow-wrap: break-word;
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0;
   position: relative;
   text-rendering: optimizeLegibility;
   -moz-text-size-adjust: none;
@@ -52,6 +65,38 @@
   @media (prefers-reduced-motion: no-preference) {
     scroll-behavior: smooth;
   }
+}
+
+@mixin utrecht-root--html {
+  /* Only use `display: flex` when the children are `<head>` and `<body>`. */
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin utrecht-root--body-element {
+  /*
+   * Goals:
+   *
+   * - reset `<body>` styles for `margin`
+   * - take up 100% of the space, both horizontally and vertically,
+   *   when the `<html>` element does not have `inline-size: 100%` or `display: flex`.
+   */
+  @include reset-body;
+
+  min-block-size: 100vb;
+}
+
+@mixin utrecht-root__body {
+  /*
+   * Goals:
+   *
+   * - reset `<body>` styles for `margin`
+   * - take up 100% of the space, both horizontally and vertically,
+   *   when the `<html>` element has `display: flex`.
+   */
+  @include reset-body;
+
+  flex-grow: 1;
 }
 
 /**
