@@ -1,0 +1,50 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "End-to-end tests for CSS, HTML and Web Components",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/e2e-test",
+  "keywords": [
+    "nl-design-system"
+  ],
+  "private": true,
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "apps/e2e-test"
+  },
+  "scripts": {
+    "build": "rimraf dist && vite build --outDir ../dist/ src/ && cp dist/assets/*.js dist/index.js",
+    "clean": "rimraf dist/",
+    "dev": "vite",
+    "lint": "tsc --noEmit",
+    "start": "cp test-dist.html dist/index.html && http-server dist/",
+    "test-locally": "pnpm run test:unit && pnpm run test:e2e && pnpm run test:e2e-mobile",
+    "test:unit": "vitest --coverage",
+    "test:e2e": "vitest --coverage --config vitest.e2e.config.ts",
+    "test:e2e-mobile": "vitest --coverage --config vitest.e2e-mobile.config.ts"
+  },
+  "devDependencies": {
+    "@nl-design-system/tsconfig": "1.0.5",
+    "@testing-library/react": "16.3.0",
+    "@testing-library/user-event": "14.6.1",
+    "@utrecht/root-css": "workspace:*",
+    "@utrecht/page-layout-css": "workspace:*",
+    "@utrecht/page-body-css": "workspace:*",
+    "@utrecht/page-footer-css": "workspace:*",
+    "@utrecht/page-header-css": "workspace:*",
+    "@utrecht/nav-bar-css": "workspace:*",
+    "@utrecht/nav-list-css": "workspace:*",
+    "@utrecht/design-tokens": "workspace:*",
+    "@vitest/browser-playwright": "4.0.12",
+    "@vitest/coverage-v8": "4.0.12",
+    "@vitest/ui": "4.0.12",
+    "http-server": "14.1.1",
+    "playwright": "1.56.1",
+    "rimraf": "6.0.1",
+    "tslib": "2.8.1",
+    "typescript": "5.9.3",
+    "vite": "7.1.12",
+    "vitest": "4.0.12"
+  }
+}
