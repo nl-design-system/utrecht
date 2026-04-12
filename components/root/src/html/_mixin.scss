@@ -10,6 +10,10 @@
 @mixin utrecht-html-html {
   html {
     @include utrecht-root;
+    @include utrecht-root--html;
+    @include utrecht-root--scroll;
+    @include utrecht-root__lang-ar;
+    @include utrecht-root__lang-nl;
   }
 
   body,
@@ -27,6 +31,10 @@
 @mixin utrecht-html-root {
   :root {
     @include utrecht-root;
+    @include utrecht-root--html;
+    @include utrecht-root--scroll;
+    @include utrecht-root__lang-ar;
+    @include utrecht-root__lang-nl;
   }
 
   :root > :where(*) {
