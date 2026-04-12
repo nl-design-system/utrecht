@@ -17,6 +17,9 @@ const meta = {
       control: { type: 'select' },
       options: [{ '': undefined }, { center: 'center' }],
     },
+    sticky: {
+      control: { type: 'boolean' },
+    },
     children: {
       description: 'Content',
     },

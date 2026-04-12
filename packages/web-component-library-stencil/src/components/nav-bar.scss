@@ -17,3 +17,7 @@ div {
 :host([hidden]) {
   display: none !important;
 }
+
+:host([sticky]) {
+  @include utrecht-nav-bar--sticky;
+}
