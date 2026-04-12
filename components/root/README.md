@@ -96,6 +96,23 @@ Er is een design token `font-size-adjust` om twee dingen mogelijk mogelijk te ma
 - De font-size van het belangrijkste lettertype gelijk te houden, door een waarde te gebruiken waarbij die font-size gelijk blijft.
 - Visuele regressies voorkomen door geen gebruik te maken van `font-size-adjust`, door waarde voor CSS in te stellen op `auto`.
 
+### Richtlijnen voor design tokens
+
+De `background-color` en `color` moeten tenminste 4,5:1 kleurcontrast hebben.
+
+De `font-size` moet voldoen aan het de richtlijn van minimum font-size van NL Design System .
+
+De `font-size` moet gebruik maken van relatieve font-size units, bij voorkeur `rem`.
+
+De `line-height` moet tenminste `1` zijn, en gebruik maken van relatieven units. Bij voorkeur een unitless waarde.
+
+De `font-size-adjust` moet zijn ingesteld op een waarde waarbij de font-size nog voldoende leesbaar is. De minimum x-hoogte is 8px. Voorbeelden:
+
+- `font-size: 16px` met `font-size-adjust: 0.42;` is onvoldoende
+- `font-size: 24px` met `font-size-adjust: 0.42;` is voldoende
+
+Gebruik als `font-family` bij voorkeur een lettertype dat voldoet aan de richtlijnen van NL Design System.
+
 ## Varianten
 
 Er zijn alleen varianten in code, niet in design.
@@ -262,3 +279,32 @@ Gebruik de `body` variant alleen wanneer je eigenlijk de `html` variant wilt geb
 - [4.1.2 Naam, rol, waarde](https://nldesignsystem.nl/wcag/4.1.2/):
   - naam en rol zijn van toepassing, wanneer je `role="dialog"`, `role="group"`, `role="application"` of `role="document"` gebruikt.
 - [4.1.3 Statusberichten](https://nldesignsystem.nl/wcag/4.1.3/): Niet van toepassing.
+
+## Privacy en security
+
+Je de privacy en security van je pagina kunt verbeteren, door metadata in de `<head>` van je pagina.
+
+In de `<head>` van de pagina kun je een `Content-Security-Policy` element toevoegen, waarmee je de veiligheid van je pagina kan verbeteren.
+
+## Veelvoorkomende fouten
+
+Toegankelijkheid:
+
+- Kleurcontrast van tekst wordt lager gemaakt door `font-smoothing` in te stellen op `antialiased` of `grayscale`.
+- `scroll-behavior: smooth` wordt ingesteld zonder een uitzondering te maken op basis van `prefers-reduced-motion`.
+- CSS Logical Properties worden nog niet gebruikt.
+- Taal van de pagina is niet ingesteld.
+- De paginatitel is niet duidelijk.
+- De `font-size` van het `html` element wordt ingesteld, waardoor `1rem` niet meer de user preference volgt.
+- De `font-size` van het `html` element is ingesteld met een absolute waarde, waardoor de gebruiker niet meer de tekst kan vergroten.
+- Er is wel een tekstkleur ingesteld, maar geen achtergrondkleur, waardoor de tekst onleesbaar wordt wanneer de gebruiker dark mode gebruikt.
+- Lange woorden hebben geen woordafbreking, waardoor op kleinere schermen de tekst niet volledig leesbaar is zonder heen en weer te scrollen.
+- Default focus ring wordt gebruikt, waardoor de focus indicator niet zichtbaar is op alle achtergronden.
+
+Kwaliteit:
+
+- `body { padding: 0; }` wordt nog vaak gebruikt, terwijl dat in moderne browsers niet nodig is.
+- De `html` en `body` elementen op een pagina worden niet ingesteld om de maximale beschikbare ruimte te gebruiken, waardoor de footer niet onderaan het scherm staat.
+- De `font-size` van het `html` element is ingesteld op `62.5%`, waardoor de pagina niet goed samenwerkt met componenten uitgaan van `1rem` = `16px`.
+- De leesbaarheid van de tekst is niet optimaal doordat meerdere lettertypes door elkaar gebruikt worden, waarvan de x-hoogte niet overeenkomt.
+- Er moet complexe CSS gemaakt worden om een `position: sticky` elementen op de juiste plek te krijgen.
