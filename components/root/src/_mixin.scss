@@ -7,9 +7,15 @@
 @use "~@utrecht/focus-ring-css/src/mixin" as *;
 
 @mixin reset-font-smoothing {
-  /* reset `font-smoothing: antialiasing`, prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens */
+  /* Prevent a less accessible page with lower text contrast, because other CSS is downgrading from `subpixel-antialiased` to `antialiased`.
+   * Reset `font-smoothing: antialiasing` to `auto`, and prefer automatic (`subpixel-antialiasing`) behavior for high-dpi screens. */
   -webkit-font-smoothing: auto !important;
   -moz-osx-font-smoothing: auto !important;
+}
+
+@mixin reset-body {
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: 0;
 }
 
 @mixin utrecht-root {
@@ -25,33 +31,179 @@
    *   are positioned relative to the root component.
    * - ensure text content fits at 400% zoom by enabling hypenation.
    * - do not influence the `rem` unit by avoiding `font-size` on the root element.
+   * - reset `body` element styles for `margin`
+   * - reset `dialog` element styles for `border`, `margin` and `padding`
    */
   @include reset-font-smoothing;
 
-  /* For some new properties, use the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
-  background-color: var(--utrecht-root-background-color, Canvas);
-  block-size: 100%;
+  /* For some new properties, temporarily provide the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
+
+  /**
+   * When the Root component is positioned above another content,
+   * the text must remain legible. Avoid a transparent background,
+   * causing underlying content to interfere with contents of Root.
+   *
+   * When no `background-color` design token is specified, fallback
+   * to the system `Canvas` color.
+   */
+  background-color: var(--utrecht-root-background-color, Canvas); /* ✅ */
+
+  /* Avoid `border` on a `dialog` element. */
+  border: 0;
+
+  /*
+   * Avoid overflowing scroll container because of a `border` or `padding`,
+   * by configuring `box-sizing: border-box`.
+   */
+  box-sizing: border-box; /* ✅ */
+
+  /**
+   * Prevent there is insufficient color contrast for text, when no design tokens
+   * for `color` and `background-color` are specified. In that case use
+   * the system default colors `Canvas` and `CanvasText`.
+   */
   color: var(--utrecht-root-color, CanvasText);
+  container-name: root;
+
+  /*
+   * Allow container scroll-state queries to reference the Root component, by including `scroll-state` in `container-type`.
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Conditional_rules/Container_scroll-state_queries
+   *
+   * Allow container query units to size relative to the size of the Root component, by including `size` in `container-type`.
+   * This enables users to implement fluid design based on the actual viewport with a Root component on the html-element,
+   * as well as a simulated viewport with the Root component on some other element inside the `body`.
+   */
+  container-type: size scroll-state;
   font-family: var(--utrecht-root-font-family);
   font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
   font-weight: var(--utrecht-root-font-weight, var(--utrecht-body-font-weight));
+
+  /* Avoid changing the meaning of text by adding word-breaks without hyphenation,
+   * in languages where this is appropriate. Browsers will hyphenate based on the language of the text
+   * as specified in the `lang` HTML-attribute.
+   */
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   -ms-hyphens: auto;
   hyphens: auto;
   inline-size: 100%;
+
+  /* Avoid `margin` on the `body` and `dialog` element. */
+  /* stylelint-disable-next-line property-disallowed-list */
+  margin: 0;
+  min-block-size: 100%;
   overflow-block: auto;
   overflow-inline: auto;
   overflow-wrap: break-word;
+
+  /* Avoid `padding` on the `dialog` element. */
+  /* stylelint-disable-next-line property-disallowed-list */
+  padding: 0;
+
+  /* Position fixed and sticky elements relative to the Root component,
+   * such as the Skip Link or a Sticky Navigation Bar.
+   *
+   * While the `html` element supports this out-of-the-box,
+   * adding `position: relative` adds support for elements such as `div` and `dialog`.
+   */
   position: relative;
+
+  /* Prefer legibility over rendering speed, for all font-sizes.
+   *
+   * When user tests and metrics indicate slow performance, we should reconsider this choice.
+   *
+   * For specific parts of the page that require high performance, this setting should
+   * be disabled locally using `text-rendering: auto`.
+   *
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-rendering
+   */
   text-rendering: optimizeLegibility;
+
+  /* Ensure the font-size is rendered predictably on mobile screens,
+   * by disabling the `text-size-adjust` text inflation algorithm.
+   *
+   * The responsibility now shifts to configuring the design tokens with
+   * sufficiently large font-sizes.
+   *
+   * https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/text-size-adjust
+   */
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
 
+  /* Provide a built-in name for page transitions. */
+  view-transition-name: root;
+
   @media (prefers-reduced-motion: no-preference) {
+    /* Provide a better user experience for keyboard users, by enabling smooth scrolling.
+     * With smooth scrolling it is easier to track where the next focusable item is in relation
+     * to the previous position.
+     *
+     * Avoid this extra motion for users with specific motion preferences, by only enabling this feature
+     * when no preference is specified.
+     *
+     * https://developer.mozilla.org/en-US/docs/Web/CSS/Reference/Properties/scroll-behavior
+     */
     scroll-behavior: smooth;
   }
+}
+
+/**
+ * Use this mixin for `<html class="utrecht-root">`.
+ */
+@mixin utrecht-root--html {
+  /* Only use `display: flex` when the children are `<head>` and `<body>`. */
+  display: flex;
+  flex-direction: column;
+}
+
+/**
+ * Use this mixin for `<body class="utrecht-root">`.
+ */
+@mixin utrecht-root--body-element {
+  /*
+   * Goals:
+   *
+   * - reset `<body>` styles for `margin`
+   * - take up 100% of the space, both horizontally and vertically,
+   *   when the `<html>` element does not have `inline-size: 100%` or `display: flex`.
+   */
+  @include reset-body;
+
+  @media screen {
+    /* Configuring `min-block-size` or similar properties causes issues with
+     * `position: sticky` inside the Root component. Avoid this approach when possible.
+     */
+    min-block-size: 100vh;
+    min-block-size: 100vb;
+  }
+}
+
+@mixin utrecht-root__body {
+  /*
+   * Goals:
+   *
+   * - reset `<body>` styles for `margin`
+   * - take up 100% of the space, both horizontally and vertically,
+   *   when the `<html>` element has `display: flex`.
+   */
+  @include reset-body;
+
+  /*
+   * Stretch to `body` element to take up all free space in the viewport.
+   *
+   * Prefer `flex-grow` or a similar approach over `min-block-size: 100%` or similar approaches,
+   * to allow displaying components outside the `body`, with CSS like:
+   *
+   *     head,
+   *     title {
+   *       display: block;
+   *     }
+   *
+   * Only configure the height explicitly when your situation does not allow configuring CSS
+   * on the `html` element.
+   */
+  flex-grow: 1;
 }
 
 /**
@@ -67,6 +219,7 @@
  * even though they are discouraged.
  */
 @mixin utrecht-root__font-size-container {
+  /* For some new properties, temporarily provide the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
   font-size: var(--utrecht-root-font-size, var(--utrecht-body-font-size));
   line-height: var(--utrecht-root-line-height, var(--utrecht-body-line-height));
 }
@@ -87,7 +240,25 @@
  * with a higher specificity than (0,0,1).
  */
 @mixin utrecht-root__fullscreen-backdrop {
-  :where(&) :where(:not(:root):fullscreen)::backdrop {
+  :where(&) :where(:fullscreen)::backdrop {
     background-color: var(--utrecht-root-background-color, Canvas);
+  }
+}
+
+@mixin utrecht-root__lang-ar {
+  :where(&):lang(ar),
+  :where(&) :lang(ar) {
+    /* `letter-spacing` design tokens break Arabic text rendering, avoid that */
+    letter-spacing: 0;
+  }
+}
+
+@mixin utrecht-root__lang-nl {
+  :where(&):lang(nl),
+  :where(&) :lang(nl) {
+    /* Avoid breaking short words, looks awkward and unnecessary in Dutch. */
+
+    /* Components that use extremely large font-sizes should make adjustments. */
+    hyphenate-limit-chars: 12 8 4;
   }
 }

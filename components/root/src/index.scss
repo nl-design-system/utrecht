@@ -11,6 +11,16 @@
   @include utrecht-root;
   @include utrecht-focus-ring-default-container;
   @include utrecht-root__fullscreen-backdrop;
+  @include utrecht-root__lang-ar;
+  @include utrecht-root__lang-nl;
+}
+
+.utrecht-root:where(:root) {
+  @include utrecht-root--html;
+}
+
+.utrecht-root:where(body) {
+  @include utrecht-root--body-element;
 }
 
 /**
@@ -26,4 +36,8 @@
 .utrecht-root:where(:root) > *,
 .utrecht-root:where(:not(:root)) {
   @include utrecht-root__font-size-container;
+}
+
+.utrecht-root:where(:root) > :where(body) {
+  @include utrecht-root__body;
 }
