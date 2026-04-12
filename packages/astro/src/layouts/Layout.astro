@@ -1,70 +1,71 @@
 ---
-import '@assets/styles.css';
-import '@utrecht/design-tokens/dist/font-family';
-import { Page, PageFooter, PageHeader, NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
+import { NavBar, NavList, NavListLink } from '@utrecht/component-library-react';
+import { PageLayout } from '@utrecht/page-layout-react';
+import { PageBody } from '@utrecht/page-body-react';
+import { PageHeader } from '@utrecht/page-header-react';
+import { PageFooter } from '@utrecht/page-footer-react';
+import { Root } from '@utrecht/root-react';
 import { base } from 'astro:config/client';
 import { Image } from 'astro:assets';
 import MobileNavDrawer from '../components/MobileNavDrawer';
 import { joinUrl } from '../utils/url.ts';
+import '@assets/styles.css';
+import '@utrecht/design-tokens/dist/font-family';
+import '@utrecht/root-css';
+import '@utrecht/page-layout-css';
+import '@utrecht/page-header-css';
+import '@utrecht/page-body-css';
+import '@utrecht/page-footer-css';
+import '@utrecht/nav-bar-css';
+import '@utrecht/nav-list-css';
+import '@utrecht/link-css';
+import '@utrecht/breadcrumb-nav-css';
+import '@utrecht/link-list-css';
+import '@utrecht/button-link-css';
+import '@utrecht/drawer-css';
+import '@utrecht/button-css';
+import '@utrecht/color-sample-css';
+import '@utrecht/img-css';
 ---
 
 <!doctype html>
-<html lang="en" class="utrecht-theme utrecht-theme--documentation-website utrecht-root">
+<Root lang="en" className="utrecht-theme utrecht-theme--documentation-website">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
+    <meta name="text-scale" content="scale" />
     <link rel="icon" type="image/svg+xml" href={joinUrl(base, '/favicon.svg')} />
     <meta name="generator" content={Astro.generator} />
     <title>Utrecht Design System</title>
   </head>
-  <body class="utrecht-body">
-    <Page className="utrecht-custom-page">
+  <body>
+    <PageLayout className="utrecht-custom-page">
       <PageHeader>
-        {/* Desktop navigation */}
-        <div class="desktop-nav">
-          <div class="utrecht-page-header__content">
-            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"
-              ><Image src={joinUrl(base, '/logo-md.svg')} width="160" height="77" alt="" /><b
-                class="utrecht-custom-logo__caption">Utrecht Design System</b
-              ></a
-            >
-          </div>
-          <nav>
-            <NavBar>
-              <NavList id="main-navigation-list">
-                <NavListLink href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
-                <NavListLink href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
-                <NavListLink href={joinUrl(base, '/developer')}>Voor developers</NavListLink>
-                <NavListLink href={joinUrl(base, '/onderzoekers')}>Voor onderzoekers</NavListLink>
-                <NavListLink href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
-                <NavListLink href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
-                <NavListLink href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
-              </NavList>
-            </NavBar>
-          </nav>
-        </div>
-        {/* Mobile navigation */}
-        <div class="mobile-nav">
-          <div class="utrecht-page-header__content utrecht-page-header__content--mobile">
-            <a href={joinUrl(base, '/')} class="utrecht-custom-logo"
-              ><img src={joinUrl(base, '/logo-md.svg')} alt="" /><b class="utrecht-custom-logo__caption"
-                >Utrecht Design System</b
-              ></a
-            >
-            <MobileNavDrawer client:load />
-          </div>
+        <div class="utrecht-page-header-layout">
+          <a href={joinUrl(base, '/')} class="utrecht-custom-logo"
+            ><Image src={joinUrl(base, '/logo-md.svg')} width="160" height="77" alt="" /><b
+              class="utrecht-custom-logo__caption">Utrecht Design System</b
+            ></a
+          >
+          <div class="mobile-nav"><MobileNavDrawer client:load /></div>
         </div>
       </PageHeader>
-      <div class="utrecht-page-body">
-        <div class="utrecht-page-body__content">
-          <slot />
-        </div>
-      </div>
-    </Page>
-    <PageFooter>
-      <div class="utrecht-page-footer__content">
+      <NavBar sticky>
+        <NavList id="main-navigation-list">
+          <NavListLink href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
+          <NavListLink href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
+          <NavListLink href={joinUrl(base, '/developer')}>Voor developers</NavListLink>
+          <NavListLink href={joinUrl(base, '/onderzoekers')}>Voor onderzoekers</NavListLink>
+          <NavListLink href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
+          <NavListLink href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
+          <NavListLink href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
+        </NavList>
+      </NavBar>
+      <PageBody>
+        <slot />
+      </PageBody>
+      <PageFooter>
         <h2 class="utrecht-heading-2 utrecht-heading-2--reset-h2">Gemeente Utrecht</h2>
-        <br />
         <section>
           <div class="utrecht-page-footer__navigation">
             <ul role="list" class="utrecht-link-list utrecht-link-list--html-ul">
@@ -148,13 +149,13 @@ import { joinUrl } from '../utils/url.ts';
             </ul>
           </div>
         </section>
-      </div>
-    </PageFooter>
+      </PageFooter>
+    </PageLayout>
   </body>
 
   <style>
-    .desktop-nav {
-      display: block;
+    .utrecht-nav-bar {
+      display: grid;
     }
 
     .mobile-nav {
@@ -162,7 +163,8 @@ import { joinUrl } from '../utils/url.ts';
     }
 
     @media (max-width: 860px) {
-      .desktop-nav {
+      .desktop-nav,
+      .utrecht-nav-bar {
         display: none;
       }
 
@@ -180,12 +182,9 @@ import { joinUrl } from '../utils/url.ts';
       color: black;
     }
 
-    .utrecht-custom-page {
-      background-color: var(--utrecht-document-background-color);
-      display: flex;
-      flex-direction: column;
-      min-block-size: 100vh;
-      padding-inline: 0 !important;
+    :root {
+      --utrecht-root-background-color: var(--utrecht-surface-background-color);
+      --utrecht-root-color: var(--utrecht-surface-color);
     }
 
     .utrecht-custom-logo:hover {
@@ -204,10 +203,10 @@ import { joinUrl } from '../utils/url.ts';
       white-space: nowrap;
     }
 
-    .utrecht-page-header__content--mobile {
+    .utrecht-page-header-layout {
       display: flex;
       justify-content: space-between;
       align-items: center;
     }
   </style>
-</html>
+</Root>
