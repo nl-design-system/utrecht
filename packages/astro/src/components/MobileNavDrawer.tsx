@@ -55,7 +55,7 @@ const MobileNavDrawer = () => {
           <NavList>
             <NavListLink href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
             <NavListLink href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
-            <NavListLink href={joinUrl(base, '/developers')}>Voor developers</NavListLink>
+            <NavListLink href={joinUrl(base, '/developer')}>Voor developers</NavListLink>
             <NavListLink href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
             <NavListLink href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
             <NavListLink href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
