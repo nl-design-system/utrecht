@@ -38,6 +38,25 @@ De naamgeving van het Body onderdeel is gebaseerd op `body` in HTML.
 
 ## HTML
 
+### `meta` element
+
+Gebruik altijd een `<meta name="viewport">` element met tenminste de volgende instellingen:
+
+- `width=device-width`
+- `initial-scale=1`
+
+Je kunt deze instellingen combineren met eigen voorkeuren.
+
+Bijvoorbeeld:
+
+```html
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+```
+
+### `title` element
+
+Gebruik altijd een `<title>` element om de paginatitel in te stellen, voor de HTML en Body varianten.
+
 ### `html` variant
 
 ```html
@@ -119,23 +138,127 @@ Gebruik de `body` variant alleen wanneer je eigenlijk de `html` variant wilt geb
 </html>
 ```
 
-## Acceptatiecriteria voor toegankelijkheid
+## WCAG
 
-...
-
-- 1.1.1: niet van toepassing. Misschien: doe geen watermerk als achtergrond-afbeelding, zoals "Concept" of "Specimen"?-
-- 1.2.1: niet van toepassing
-- 1.2.2: niet van toepassing
-- 1.2.3: niet van toepassing
-- 1.2.4: niet van toepassing
-- 1.2.5: niet van toepassing
-- 1.2.6: niet van toepassing
-- 1.2.7: niet van toepassing
-- 1.2.8: niet van toepassing
-- 1.2.9: niet van toepassing
-- 1.3.1: misschien `role="group"`, `role="document"` of `role="application"` wanneer er nog content buiten de root staat?
-- 1.3.2:
-  - stel `dir="ltr"` of `dir="rtl"` in
-  - werkt met CSS logical properties
-- als je de root uitzoomt, dan moet de focus ring nog steeds voldoende duidelijk zijn
-- 2.4.7 Focus zichtbaar: wanneer de Root component een scroll container is, dan moet je `scroll-padding` properties in kunnen stellen als je sticky components hebt.
+- [1.1.1 Niet-tekstuele content](https://nldesignsystem.nl/wcag/1.1.1/)
+  - Niet van toepassing, in het algemeen.
+  - Misschien: doe geen watermerk als achtergrond-afbeelding, zoals "Concept" of "Specimen"?
+- [1.2.1 Louter-geluid en louter-videobeeld (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.1/): Niet van toepassing.
+- [1.2.2 Ondertitels voor doven en slechthorenden (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.2/): Niet van toepassing.
+- [1.2.3 Audiodescriptie of media-alternatief (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.3/): Niet van toepassing.
+- [1.2.4 Ondertitels voor doven en slechthorenden (live)](https://nldesignsystem.nl/wcag/1.2.4/): Niet van toepassing.
+- [1.2.5 Audiodescriptie (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.5/): Niet van toepassing.
+- [1.2.6 Gebarentaal (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.6/): Niet van toepassing.
+- [1.2.7 Verlengde audiodescriptie (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.7/): Niet van toepassing.
+- [1.2.8 Media-alternatief (vooraf opgenomen)](https://nldesignsystem.nl/wcag/1.2.8/): Niet van toepassing.
+- [1.2.9 Louter-geluid (live)](https://nldesignsystem.nl/wcag/1.2.9/): Niet van toepassing.
+- [1.3.1 Info en relaties](https://nldesignsystem.nl/wcag/1.3.1/)
+  - Misschien: `role="group"`, `role="document"` of `role="application"` wanneer er nog content buiten de root staat?
+- [1.3.2 Betekenisvolle volgorde](https://nldesignsystem.nl/wcag/1.3.2/)
+  - Stel `dir="ltr"` of `dir="rtl"` attribuut in op het `html` element, wanneer de Root component daarop wordt toegepast.
+  - Gebruik CSS logical properties voor de implementatie van de component.
+- [1.3.3 Zintuiglijke eigenschappen](https://nldesignsystem.nl/wcag/1.3.3/)
+- [1.3.4 Weergavestand](https://nldesignsystem.nl/wcag/1.3.4/)
+  - Gebruik niet de [`screen.orientation.lock` API](https://developer.mozilla.org/en-US/docs/Web/API/ScreenOrientation/lock) om te voorkomen dat de weergavestand wordt aangepast.
+  - Gebruik geen [media query om de pagina 90 graden te kantelen](https://css-tricks.com/snippets/css/orientation-lock/) om het aanpassen van de weergavestand ongedaan te maken.
+- [1.3.5 Identificeer het doel van de input](https://nldesignsystem.nl/wcag/1.3.5/): Niet van toepassing.
+- [1.3.6 Identificeer het doel](https://nldesignsystem.nl/wcag/1.3.6/): Niet van toepassing.
+- [1.4.1 Gebruik van kleur](https://nldesignsystem.nl/wcag/1.4.1/)
+  - Mensen kunnen altijd gekke dingen doen: waarschuwing door een rode border?
+- [1.4.2 Geluidsbediening](https://nldesignsystem.nl/wcag/1.4.2/): Niet van toepassing.
+- [1.4.3 Contrast (minimum)](https://nldesignsystem.nl/wcag/1.4.3/)
+  - TODO: Van toepassing
+- [1.4.4 Herschalen van tekst](https://nldesignsystem.nl/wcag/1.4.4/)
+  - TODO: Van toepassing
+- [1.4.5 Afbeeldingen van tekst](https://nldesignsystem.nl/wcag/1.4.5/): Niet van toepassing.
+- [1.4.6 Contrast (versterkt)](https://nldesignsystem.nl/wcag/1.4.6/)
+  - TODO: Van toepassing
+- [1.4.7 Weinig of geen achtergrondgeluid](https://nldesignsystem.nl/wcag/1.4.7/): Niet van toepassing.
+- [1.4.8 Visuele presentatie](https://nldesignsystem.nl/wcag/1.4.8/):
+  - TODO: Onderzoeken
+- [1.4.9 Afbeeldingen van tekst (geen uitzondering)](https://nldesignsystem.nl/wcag/1.4.9/): Niet van toepassing.
+- [1.4.10 Reflow](https://nldesignsystem.nl/wcag/1.4.10/)
+  - TODO: van toepassing
+- [1.4.11 Contrast van niet-tekstuele content](https://nldesignsystem.nl/wcag/1.4.11/): Niet van toepassing.
+- [1.4.12 Tekstafstand](https://nldesignsystem.nl/wcag/1.4.12/)
+  - TODO: van toepassing
+- [1.4.13 Content bij hover of focus](https://nldesignsystem.nl/wcag/1.4.13/): Niet van toepassing.
+- [2.1.1 Toetsenbord](https://nldesignsystem.nl/wcag/2.1.1/)
+  - Wanneer de Root een scrollbar heeft, dan moet het scrollen met de gebruikelijke toetsen bediend kunnen worden. Mogelijk moet de Root dan ook focusbaar zijn.
+- [2.1.2 Geen toetsenbordval](https://nldesignsystem.nl/wcag/2.1.2/): Niet van toepassing.
+- [2.1.3 Toetsenbord (geen uitzondering)](https://nldesignsystem.nl/wcag/2.1.3/): Niet van toepassing.
+- [2.1.4 Enkel teken sneltoetsen](https://nldesignsystem.nl/wcag/2.1.4/): Niet van toepassing.
+- [2.2.1 Timing aanpasbaar](https://nldesignsystem.nl/wcag/2.2.1/): Niet van toepassing.
+- [2.2.2 Pauzeren, stoppen, verbergen](https://nldesignsystem.nl/wcag/2.2.2/): Niet van toepassing.
+- [2.2.3 Geen timing](https://nldesignsystem.nl/wcag/2.2.3/): Niet van toepassing.
+- [2.2.4 Onderbrekingen](https://nldesignsystem.nl/wcag/2.2.4/): Niet van toepassing.
+- [2.2.5 Herauthentisering](https://nldesignsystem.nl/wcag/2.2.5/): Niet van toepassing.
+- [2.2.6 Time-outs](https://nldesignsystem.nl/wcag/2.2.6/): Niet van toepassing.
+- [2.3.1 Drie flitsen of beneden drempelwaarde](https://nldesignsystem.nl/wcag/2.3.1/): Niet van toepassing.
+- [2.3.2 Drie flitsen](https://nldesignsystem.nl/wcag/2.3.2/): Niet van toepassing.
+- [2.3.3 Animatie uit interacties](https://nldesignsystem.nl/wcag/2.3.3/):
+  - van toepassing bij scrollen
+- [2.4.1 Blokken omzeilen](https://nldesignsystem.nl/wcag/2.4.1/)
+  - Misschien een goed idee om `<html id="top">` te gebruiken?
+- [2.4.2 Paginatitel](https://nldesignsystem.nl/wcag/2.4.2/): stel altijd een paginatitel in voor de HTML en Body varianten.
+- [2.4.3 Focus volgorde](https://nldesignsystem.nl/wcag/2.4.3/)
+  - focus-volgorde misschien ook van toepassing door scroll-to-top link
+- [2.4.4 Linkdoel (in context)](https://nldesignsystem.nl/wcag/2.4.4/): Niet van toepassing.
+- [2.4.5 Meerdere manieren](https://nldesignsystem.nl/wcag/2.4.5/): Niet van toepassing.
+- [2.4.6 Koppen en labels](https://nldesignsystem.nl/wcag/2.4.6/): Niet van toepassing.
+- [2.4.7 Focus zichtbaar](https://nldesignsystem.nl/wcag/2.4.7/)
+  - wanneer de Root component een scroll container is, dan moet je `scroll-padding` properties in kunnen stellen als je sticky components hebt.
+  - misschien: zou een root element een inset focus ring moeten hebben?
+- [2.4.8 Locatie](https://nldesignsystem.nl/wcag/2.4.8/)
+  - Mogelijk van toepassing door de inhoud van de paginatitel. Bijvoorbeeld: als er een onjuiste locatie in de paginatitel staat. Bijvoorbeeld: `<title>Homepage - Enter Your Site Name Here</title>`
+- [2.4.9 Linkdoel (alleen link)](https://nldesignsystem.nl/wcag/2.4.9/): Niet van toepassing.
+- [2.4.10 Paragraafkoppen](https://nldesignsystem.nl/wcag/2.4.10/): Niet van toepassing.
+- [2.4.11 Focus niet bedekt (minimum)](https://nldesignsystem.nl/wcag/2.4.11/)
+  - door een default focus ring met `z-index: 1` draagt de Root component hier aan bij
+  - van toepassing doordat op de Root component `scroll-padding` ingesteld moet worden
+- [2.4.12 Focus niet bedekt (uitgebreid)](https://nldesignsystem.nl/wcag/2.4.12/)
+  - van toepassing doordat op de Root component `scroll-padding` ingesteld moet worden
+- [2.4.13 Focusweergave](https://nldesignsystem.nl/wcag/2.4.13/)
+  - als je de root uitzoomt, dan moet de focus ring nog steeds voldoende duidelijk zijn
+- [2.5.1 Aanwijzergebaren](https://nldesignsystem.nl/wcag/2.5.1/): Niet van toepassing.
+- [2.5.2 Aanwijzerannulering](https://nldesignsystem.nl/wcag/2.5.2/): Niet van toepassing.
+- [2.5.3 Label in Naam](https://nldesignsystem.nl/wcag/2.5.3/)
+  - Van toepassing op dialogs, etc.
+- [2.5.4 Bewegingsactivering](https://nldesignsystem.nl/wcag/2.5.4/): Niet van toepassing.
+- [2.5.5 Grootte van het aanwijsgebied (uitgebreid)](https://nldesignsystem.nl/wcag/2.5.5/): Niet van toepassing.
+- [2.5.6 Input gelijktijdige invoermechanismen](https://nldesignsystem.nl/wcag/2.5.6/): Niet van toepassing.
+- [2.5.7 Sleepbewegingen](https://nldesignsystem.nl/wcag/2.5.7/): Niet van toepassing.
+- [2.5.8 Grootte van het aanwijsgebied (minimum)](https://nldesignsystem.nl/wcag/2.5.8/): Niet van toepassing.
+- [3.1.1 Taal van de pagina](https://nldesignsystem.nl/wcag/3.1.1/)
+  - Stel het `lang` attribuut in op het `html` element, wanneer de Root component daarop wordt toegepast. Daarnaast wordt de leesbaarheid van de tekst beter wanneer de browser een passend woordenboek kan gebruiken voor woordafbreking.
+- [3.1.2 Taal van onderdelen](https://nldesignsystem.nl/wcag/3.1.2/)
+  - Stel het `lang` attribut in op het `html` element, zodat de `<title>` ook de juiste language heeft.
+  - Todo: Wat als de paginatitel Engelstalig is, en de paginatitel bevat ook een andere taal? Bijvoorbeeld: `<title>To be, or not to be — gemeente Voorbeeld</title>`. Wil je dan `<title lang="en">To be, or not to be — gemeente Voorbeeld</title>`? Wordt dat uberhaupt ondersteund door voorleessoftware?
+- [3.1.3 Ongebruikelijke woorden](https://nldesignsystem.nl/wcag/3.1.3/)
+- [3.1.4 Afkortingen](https://nldesignsystem.nl/wcag/3.1.4/)
+  - Van toepassing op de paginatitel.
+- [3.1.5 Leesniveau](https://nldesignsystem.nl/wcag/3.1.5/)
+  - Van toepassing op de paginatitel.
+- [3.1.6 Uitspraak](https://nldesignsystem.nl/wcag/3.1.6/): Niet van toepassing.
+- [3.2.1 Bij focus](https://nldesignsystem.nl/wcag/3.2.1/): Niet van toepassing.
+- [3.2.2 Bij input](https://nldesignsystem.nl/wcag/3.2.2/): Niet van toepassing.
+- [3.2.3 Consistente navigatie](https://nldesignsystem.nl/wcag/3.2.3/)
+- [3.2.4 Consistente identificatie](https://nldesignsystem.nl/wcag/3.2.4/)
+  - Paginatitel moet consistent werken.
+- [3.2.5 Verandering op verzoek](https://nldesignsystem.nl/wcag/3.2.5/): Niet van toepassing.
+- [3.2.6 Consistente hulp](https://nldesignsystem.nl/wcag/3.2.6/): Niet van toepassing.
+- [3.3.1 Foutidentificatie](https://nldesignsystem.nl/wcag/3.3.1/)
+  - Je kunt in de paginatitel weergeven dat er een fout is, bijvoorbeeld: `<title>Fout! - Contactformulier - gemeente Voorbeeld</title>`
+  - Wanneer `Fout!` in de paginatitel blijft staan wanneer de fout is opgelost, dan voldoet dit ook niet.
+- [3.3.2 Labels of instructies](https://nldesignsystem.nl/wcag/3.3.2/): Niet van toepassing.
+- [3.3.3 Foutsuggestie](https://nldesignsystem.nl/wcag/3.3.3/): Niet van toepassing.
+- [3.3.4 Foutpreventie (wettelijk, financieel, gegevens)](https://nldesignsystem.nl/wcag/3.3.4/): Niet van toepassing.
+- [3.3.5 Hulp](https://nldesignsystem.nl/wcag/3.3.5/): Niet van toepassing.
+- [3.3.6 Foutpreventie (alle)](https://nldesignsystem.nl/wcag/3.3.6/): Niet van toepassing.
+- [3.3.7 Overbodige invoer](https://nldesignsystem.nl/wcag/3.3.7/): Niet van toepassing.
+- [3.3.8 Toegankelijke authenticatie (minimum)](https://nldesignsystem.nl/wcag/3.3.8/): Niet van toepassing.
+- [3.3.9 Toegankelijke authenticatie (uitgebreid)](https://nldesignsystem.nl/wcag/3.3.9/): Niet van toepassing.
+- [4.1.1 Parsen](https://nldesignsystem.nl/wcag/4.1.1/): Niet van toepassing.
+- [4.1.2 Naam, rol, waarde](https://nldesignsystem.nl/wcag/4.1.2/):
+  - naam en rol zijn van toepassing, wanneer je `role="dialog"`, `role="group"`, `role="application"` of `role="document"` gebruikt.
+- [4.1.3 Statusberichten](https://nldesignsystem.nl/wcag/4.1.3/): Niet van toepassing.
