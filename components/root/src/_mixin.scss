@@ -37,10 +37,11 @@
 
   /* For some new properties, use the `utrecht.body.*` design tokens as fallback for backwards compatibility. */
   background-color: var(--utrecht-root-background-color, Canvas);
-  block-size: 100%;
   border: 0;
   box-sizing: border-box;
   color: var(--utrecht-root-color, CanvasText);
+  container-name: root;
+  container-type: size scroll-state;
   font-family: var(--utrecht-root-font-family);
   font-size-adjust: var(--utrecht-root-font-size-adjust, 0.5);
   font-weight: var(--utrecht-root-font-weight, var(--utrecht-body-font-weight));
@@ -51,6 +52,7 @@
   inline-size: 100%;
   /* stylelint-disable-next-line property-disallowed-list */
   margin: 0;
+  min-block-size: 100%;
   overflow-block: auto;
   overflow-inline: auto;
   overflow-wrap: break-word;
@@ -83,7 +85,10 @@
    */
   @include reset-body;
 
-  min-block-size: 100vb;
+  @media screen {
+    min-block-size: 100vh;
+    min-block-size: 100vb;
+  }
 }
 
 @mixin utrecht-root__body {
