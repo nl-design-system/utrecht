@@ -6,9 +6,16 @@
 
 @mixin utrecht-page-layout {
   align-items: flex-start;
-  block-size: 100%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   inline-size: 100%;
   justify-content: flex-start;
+}
+
+@mixin utrecht-page-layout--stretch {
+  min-block-size: 100%;
+  min-block-size: -moz-available; /* WebKit-based browsers will ignore this. */
+  min-block-size: -webkit-fill-available; /* Mozilla-based browsers below 146 will ignore this. */
+  min-block-size: stretch;
 }
