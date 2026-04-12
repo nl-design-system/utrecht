@@ -9,3 +9,7 @@
 .utrecht-page-layout {
   @include utrecht-page-layout;
 }
+
+.utrecht-page-layout--stretch {
+  @include utrecht-page-layout--stretch;
+}
