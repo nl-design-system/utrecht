@@ -691,6 +691,7 @@ export namespace Components {
      * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtNavBar {
+        "sticky": boolean;
     }
     interface UtrechtNumberBadge {
         "locale": string;
@@ -3979,6 +3980,7 @@ declare namespace LocalJSX {
      * Copyright (c) 2021-2024 Gemeente Utrecht
      */
     interface UtrechtNavBar {
+        "sticky"?: boolean;
     }
     interface UtrechtNumberBadge {
         "locale"?: string;

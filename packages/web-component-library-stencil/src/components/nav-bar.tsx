@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 /**
  * @license EUPL-1.2
@@ -12,6 +12,8 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class NavBar {
+  @Prop() sticky: boolean = false;
+
   render() {
     return (
       <div>

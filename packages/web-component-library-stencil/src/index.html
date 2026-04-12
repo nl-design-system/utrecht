@@ -19,6 +19,15 @@ https://stenciljs.com/docs/dev-server
     <script nomodule src="./build/utrecht.js"></script>
     <link rel="stylesheet" type="text/css" href="https://unpkg.com/@utrecht/design-tokens/dist/index.css" />
     <style>
+      html {
+        display: flex;
+        block-size: 100%;
+      }
+      body {
+        margin: 0;
+        display: flex;
+        flex-grow: 1;
+      }
       .menu {
         display: flex;
         flex-wrap: wrap;
@@ -43,9 +52,9 @@ https://stenciljs.com/docs/dev-server
     </style>
   </head>
   <body>
-    <utrecht-document>
+    <utrecht-root>
       <utrecht-skip-link href="#main">Naar de inhoud</utrecht-skip-link>
-      <utrecht-page>
+      <utrecht-page-layout>
         <utrecht-page-header>
           <utrecht-logo>
             <utrecht-link href="#"> <utrecht-logo-image></utrecht-logo-image></utrecht-link>
@@ -80,7 +89,8 @@ https://stenciljs.com/docs/dev-server
             </utrecht-drawer>
           </utrecht-flex-wrap-fallback>
         </utrecht-page-header>
-        <utrecht-page-content>
+        <utrecht-nav-bar> Navigation bar </utrecht-nav-bar>
+        <utrecht-page-body>
           <utrecht-form action="/search" method="get">
             <utrecht-heading-2 slot="heading">Form!</utrecht-heading-2>
             <utrecht-form-field-textbox name="q" value="Value here">
@@ -323,8 +333,9 @@ https://stenciljs.com/docs/dev-server
             <utrecht-data-badge>bar</utrecht-data-badge>
             <utrecht-data-badge>quux</utrecht-data-badge>
           </utrecht-badge-list>
-        </utrecht-page-content>
-      </utrecht-page>
-    </utrecht-document>
+        </utrecht-page-body>
+        <utrecht-page-footer>Footer</utrecht-page-footer>
+      </utrecht-page-layout>
+    </utrecht-root>
   </body>
 </html>
