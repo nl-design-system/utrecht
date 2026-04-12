@@ -1,4 +1,4 @@
-@import "@utrecht/component-library-css/dist/index.css";
+/* @import "@utrecht/component-library-css/dist/index.css"; */
 @import "@utrecht/design-tokens/dist/theme.css";
 @import "@nl-design-system-candidate/code-css/code.css";
 @import "@nl-design-system-candidate/code-block-css/code-block.css";
@@ -12,7 +12,7 @@
   --utrecht-nav-bar-link-padding-block-end: 1rem;
 }
 
-.utrecht-nav-bar {
+.utrecht-nav-bar__content {
   border-block-end: 1px solid #ccc;
   border-block-start: 1px solid #ccc;
 }
