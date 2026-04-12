@@ -25,3 +25,7 @@
 @mixin utrecht-heading-1--distanced {
   --utrecht-space-around: 1;
 }
+
+@mixin utrecht-heading-1--visible {
+  display: block;
+}
