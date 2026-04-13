@@ -22,11 +22,11 @@ Onderlaag waarin basiskeuzes worden gemaakt voor alle componenten die in de webs
 
 ## Richtlijnen voor contentmakers
 
-Wanneer je een pagina bij het maken van een pagina de taal van de pagina goed in.
+Via `lang="nl"` wordt aangegeven dat de tekst op de pagina in het Nederlands is geschreven. Screenreaders gebruiken dit attribuut om de juiste uitspraak en taalinstellingen te selecteren voor gebruikers met een visuele beperking. Is de tekst op de pagina in een andere taal geschreven? Wissel `nl` dan in voor de juiste taal. Bijvoorbeeld `fr` voor Frans of `es` voor Spaans.
 
 ## Doelen
 
-- Deze afmeting van deze component is de maximaal beschikbare ruimte.
+- De afmeting van deze component is de maximaal beschikbare ruimte.
 - De achtergrondkleur is de basis voor content.
 - De kleur van de tekst is leesbaar op de achtergrond.
 - Het lettertype is het standaard neutrale lettertype voor componenten.
@@ -34,13 +34,13 @@ Wanneer je een pagina bij het maken van een pagina de taal van de pagina goed in
 
 Edge cases:
 
-- Moet niet in de breedte scrollen wanneer een border op `:root` wordt gezet (WCAG 1.4.10)
+- Mag niet horizontaal scrollen wanneer een border op `:root` wordt gezet (WCAG 1.4.10)
 
-Door het aanbieden van goee root component kunnen anti-patterns voorkomen of genezen worden.
+Door het aanbieden van goed root component kunnen 'anti-patterns' voorkomen of genezen worden.
 
 - Anti-aliasing wordt vaak aangepast door ongewenste `font-smoothing: antialiased;`.
-- Overschrijven van de root font-size, waardoor de `rem` waarde wordt aangepast
-- De `<body>` element scrollbaar maken in plaats van het `<html>` element
+- Overschrijven van de root font-size, waardoor de `rem` waarde wordt aangepast.
+- De `<body>` element scrollbaar maken in plaats van het `<html>` element.
 
 ## Anatomie
 
@@ -107,11 +107,11 @@ Wanneer je de Dialog variant gebruikt, gebruik het `<dialog>` element die de imp
 
 Er zijn design tokens om de `color` en `background-color` in te stellen, die basis-kleuren zijn voor de hele pagina.
 
-Vrijwel alle gebruiker maken eigen keuzes voor `color`, `background-color`, `font-family`, `font-weight`, `font-size` en `line-height`.
+Vrijwel alle gebruikers maken eigen keuzes voor `color`, `background-color`, `font-family`, `font-weight`, `font-size` en `line-height`.
 
-De meeste gebruikers maken eigen keuzes voor `color`, `background-color` en `font-family`. De meeste gebruikers gebruiken `font-weight` `400`, maar met de opkomst van variable fonts zal daar meer variatie in komen. De meeste gebruikers stellen `font-size` in om garantie te hebben dat de font-size is wat ze verwachten, zelfs wanneer de `font-size` `1rem` is. De `line-height` wordt meestal ingesteld om voor een grotere line-height dan wat browsers standaard hebben.
+De meeste gebruikers maken eigen keuzes voor `color`, `background-color` en `font-family`. De meeste gebruikers gebruiken `font-weight` `400`, maar met de opkomst van variable fonts zal daar meer variatie in komen. De meeste gebruikers stellen `font-size` in om garantie te hebben dat de font-size is wat ze verwachten, zelfs wanneer de `font-size` `1rem` is. De `line-height` wordt meestal ingesteld op een grotere waarde dan wat browsers standaard hebben.
 
-Er is een design token `font-size-adjust` om twee dingen mogelijk mogelijk te maken:
+Er is een design token `font-size-adjust` om twee dingen mogelijk te maken:
 
 - De font-size van het belangrijkste lettertype gelijk te houden, door een waarde te gebruiken waarbij die font-size gelijk blijft.
 - Visuele regressies voorkomen door geen gebruik te maken van `font-size-adjust`, door waarde voor CSS in te stellen op `auto`.
@@ -302,9 +302,9 @@ Gebruik de `body` variant alleen wanneer je eigenlijk de `html` variant wilt geb
 
 ## Privacy en security
 
-Je de privacy en security van je pagina kunt verbeteren, door metadata in de `<head>` van je pagina.
+Je kunt de privacy en security van je pagina verbeteren door metadata toe te voegen in de `<head>` van je pagina.
 
-In de `<head>` van de pagina kun je een `Content-Security-Policy` element toevoegen, waarmee je de veiligheid van je pagina kan verbeteren.
+In de `<head>` van de pagina kun je een `Content-Security-Policy` element toevoegen, waarmee je de veiligheid van je pagina kunt verbeteren.
 
 ## Veelvoorkomende fouten
 
@@ -330,7 +330,7 @@ Kwaliteit:
 
 - `body { padding: 0; }` wordt nog vaak gebruikt, terwijl dat in moderne browsers niet nodig is.
 - De `html` en `body` elementen op een pagina worden niet ingesteld om de maximale beschikbare ruimte te gebruiken, waardoor de footer niet onderaan het scherm staat.
-- De `font-size` van het `html` element is ingesteld op `62.5%`, waardoor de pagina niet goed samenwerkt met componenten uitgaan van `1rem` = `16px`.
+- De `font-size` van het `html` element is ingesteld op `62.5%`, waardoor de pagina niet goed samenwerkt met componenten die uitgaan van `1rem` = `16px`.
 - De leesbaarheid van de tekst is niet optimaal doordat meerdere lettertypes door elkaar gebruikt worden, waarvan de x-hoogte niet overeenkomt.
 - Er moet complexe CSS gemaakt worden om een `position: sticky` elementen op de juiste plek te krijgen.
 
