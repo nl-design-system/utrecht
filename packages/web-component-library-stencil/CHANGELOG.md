@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 4.2.0
+
+### Minor Changes
+
+- ffc9357: Add `sticky` property to NavBar.
+
 ## 4.1.1
 
 ### Patch Changes

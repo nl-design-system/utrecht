@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 6.1.1
+
+### Patch Changes
+
+- 57dee78: Specify background color for Navigation Bar to support sticky positioning.
+
 ## 6.1.0
 
 ### Minor Changes

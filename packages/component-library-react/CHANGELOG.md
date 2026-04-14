@@ -1,5 +1,20 @@
 # @utrecht/component-library-react
 
+## 13.3.0
+
+### Minor Changes
+
+- ffc9357: Add `sticky` property to NavBar.
+
+### Patch Changes
+
+- Updated dependencies [43072e7]
+- Updated dependencies [57dee78]
+  - @utrecht/spotlight-section-css@3.0.1
+  - @utrecht/alert-css@4.0.1
+  - @utrecht/nav-bar-css@3.1.0
+  - @utrecht/alert-dialog-css@3.0.0
+
 ## 13.2.0
 
 ### Minor Changes

@@ -1,5 +1,25 @@
 # @utrecht/component-library-css
 
+## 9.0.9
+
+### Patch Changes
+
+- Updated dependencies [43072e7]
+- Updated dependencies [262383c]
+- Updated dependencies [e29ada0]
+- Updated dependencies [e29ada0]
+- Updated dependencies [57dee78]
+- Updated dependencies [e29ada0]
+- Updated dependencies [262383c]
+- Updated dependencies [e29ada0]
+- Updated dependencies [e29ada0]
+  - @utrecht/spotlight-section-css@3.0.1
+  - @utrecht/alert-css@4.0.1
+  - @utrecht/page-layout-css@4.0.0
+  - @utrecht/root-css@4.1.0
+  - @utrecht/nav-bar-css@3.1.0
+  - @utrecht/alert-dialog-css@3.0.0
+
 ## 9.0.8
 
 ### Patch Changes

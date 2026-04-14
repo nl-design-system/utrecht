@@ -1,5 +1,15 @@
 # @utrecht/page-layout-css
 
+## 4.0.0
+
+### Major Changes
+
+- 262383c: Page Layout no longer stretches to have least 100% hight, by default.
+
+### Minor Changes
+
+- 262383c: Add `utrecht-page-layout--stretch` mixin and class name.
+
 ## 3.0.0
 
 ### Major Changes
