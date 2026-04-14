@@ -4,12 +4,12 @@ import { Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/textbox-css/README.md?raw';
 import tokensDefinition from '@utrecht/textbox-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
-import { Textbox } from '../../../components-react/textbox-react/src/index.js';
+import { Textbox2 } from '../../../components-react/textbox-react/src/index.js';
 
 const meta = {
   title: 'React Component/TextboxContainer',
   id: 'react-textbox-container',
-  component: Textbox,
+  component: Textbox2,
   argTypes: {
     autoComplete: {
       description: 'Autocomplete',
@@ -182,7 +182,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof Textbox>;
+} satisfies Meta<typeof Textbox2>;
 
 export default meta;
 

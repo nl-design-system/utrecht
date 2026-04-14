@@ -127,19 +127,19 @@
 .utrecht-textbox-container {
   @include utrecht-textbox-container;
 
-  &:where(:has(:user-invalid), :has(.utrecht-textbox-container__input--invalid)) {
+  &:where(:has(input:user-invalid), :has(input.utrecht-textbox-container__input--invalid)) {
     @include utrecht-textbox--invalid;
   }
 
-  &:where(:has(:disabled)) {
+  &:where(:has(input:disabled)) {
     @include utrecht-textbox--disabled;
   }
 
-  &:where(:has(:focus-visible)) {
+  &:where(:has(input:focus-visible)) {
     @include utrecht-textbox--focus-visible;
   }
 
-  &:where(:has(:read-only)) {
+  &:where(:has(input:read-only)) {
     @include utrecht-textbox--read-only;
   }
 }
