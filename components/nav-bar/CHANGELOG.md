@@ -1,5 +1,11 @@
 # @utrecht/nav-bar-css
 
+## 3.1.0
+
+### Minor Changes
+
+- 57dee78: Add `utrecht-nav-bar--sticky` class name and mixin.
+
 ## 3.0.0
 
 ### Major Changes

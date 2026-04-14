@@ -1,5 +1,18 @@
 # @utrecht/root-css
 
+## 4.1.0
+
+### Minor Changes
+
+- e29ada0: Add hyphenation hints for Dutch.
+- e29ada0: Improve support for `<body class="utrecht-root">`.
+- e29ada0: Root component now provides a `view-transition-name` and a `container-name`: `root`.
+
+### Patch Changes
+
+- e29ada0: Prevent any `letter-spacing` in Arabic language, to keep the text legible.
+- e29ada0: Improve Root component support for `position: sticky` content, by avoiding `block-size: 100%` when possible.
+
 ## 4.0.0
 
 ### Major Changes

@@ -1,5 +1,13 @@
 # @utrecht/page-layout-react
 
+## 1.0.11
+
+### Patch Changes
+
+- Updated dependencies [262383c]
+- Updated dependencies [262383c]
+  - @utrecht/page-layout-css@4.0.0
+
 ## 1.0.10
 
 ### Patch Changes

@@ -1,5 +1,16 @@
 # @utrecht/nav-bar-react
 
+## 1.1.0
+
+### Minor Changes
+
+- ffc9357: Add `sticky` property to NavBar.
+
+### Patch Changes
+
+- Updated dependencies [57dee78]
+  - @utrecht/nav-bar-css@3.1.0
+
 ## 1.0.10
 
 ### Patch Changes

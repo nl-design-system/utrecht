@@ -1,5 +1,11 @@
 # @utrecht/spotlight-section-css
 
+## 3.0.1
+
+### Patch Changes
+
+- 43072e7: Add flex column layout to Alert and Spotlight for row-gap support, add row-gap token to spotlight-section
+
 ## 3.0.0
 
 ### Major Changes
