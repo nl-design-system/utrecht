@@ -1,5 +1,16 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.2
+
+### Patch Changes
+
+- Updated dependencies [43072e7]
+- Updated dependencies [57dee78]
+  - @utrecht/spotlight-section-css@3.0.1
+  - @utrecht/alert-css@4.0.1
+  - @utrecht/nav-bar-css@3.1.0
+  - @utrecht/alert-dialog-css@3.0.0
+
 ## 2.0.1
 
 ### Patch Changes

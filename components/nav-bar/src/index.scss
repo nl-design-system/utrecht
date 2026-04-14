@@ -14,6 +14,10 @@
   }
 }
 
+.utrecht-nav-bar--sticky {
+  @include utrecht-nav-bar--sticky;
+}
+
 .utrecht-nav-bar__heading {
   @include utrecht-nav-bar__heading;
 }

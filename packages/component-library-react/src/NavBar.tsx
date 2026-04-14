@@ -6,17 +6,37 @@ export interface NavBarProps extends HTMLAttributes<HTMLElement> {
   appearance?: string;
   headingLevel?: number;
   label?: ReactNode;
+  sticky?: Boolean;
 }
 
 export const NavBar = forwardRef(
   (
-    { appearance = '', children, className, headingLevel = 2, label, ...restProps }: PropsWithChildren<NavBarProps>,
+    {
+      appearance = '',
+      children,
+      className,
+      headingLevel = 2,
+      label,
+      sticky,
+      ...restProps
+    }: PropsWithChildren<NavBarProps>,
     ref: ForwardedRef<HTMLElement>,
   ) => {
     const generatedId = useId();
     const headingId = label ? generatedId : undefined;
     return (
-      <nav ref={ref} className={clsx('utrecht-nav-bar', className)} aria-labelledby={headingId} {...restProps}>
+      <nav
+        ref={ref}
+        className={clsx(
+          'utrecht-nav-bar',
+          {
+            'utrecht-nav-bar--sticky': sticky,
+          },
+          className,
+        )}
+        aria-labelledby={headingId}
+        {...restProps}
+      >
         {label && (
           <Heading id={headingId} className="utrecht-nav-bar__heading" level={headingLevel} aria-hidden="true">
             {label}

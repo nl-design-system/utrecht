@@ -10,6 +10,12 @@
   display: grid;
   inline-size: 100%;
 }
+@mixin utrecht-nav-bar--sticky {
+  background-color: var(--utrecht-nav-bar-background-color, Canvas);
+  color: var(--utrecht-nav-bar-color, CanvasText);
+  inset-block-start: 0;
+  position: sticky;
+}
 
 @mixin utrecht-nav-bar--forced-colors {
   border-block-end-color: currentColor;

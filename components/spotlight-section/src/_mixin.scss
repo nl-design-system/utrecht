@@ -14,12 +14,15 @@
   border-style: solid;
   border-width: var(--_utrecht-spotlight-section-border-width, var(--utrecht-spotlight-section-border-width, 0));
   color: var(--_utrecht-spotlight-section-color, var(--utrecht-spotlight-section-color));
+  display: flex;
+  flex-direction: column;
   margin-block-end: calc(var(--utrecht-space-around, 0) * var(--utrecht-spotlight-section-margin-block-end, 0));
   margin-block-start: calc(var(--utrecht-space-around, 0) * var(--utrecht-spotlight-section-margin-block-start, 0));
   padding-block-end: var(--utrecht-spotlight-section-padding-block-end);
   padding-block-start: var(--utrecht-spotlight-section-padding-block-start);
   padding-inline-end: var(--utrecht-spotlight-section-padding-inline-end);
   padding-inline-start: var(--utrecht-spotlight-section-padding-inline-start);
+  row-gap: var(--utrecht-spotlight-section-row-gap);
 }
 
 @mixin utrecht-spotlight-section-type($type) {
