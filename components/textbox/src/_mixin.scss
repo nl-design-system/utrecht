@@ -407,11 +407,14 @@ $utrecht-support-prince-xml: false !default;
   --utrecht-textbox-value-max-length: 22;
 }
 
+/**
+ * NEw textbox container
+ */
 @mixin utrecht-textbox-container {
   --utrecht-icon-size: 1lh;
 
-  display: inline-flex;
-  align-items: center;
+  display: inline-grid;
+  grid-template-columns: max-content 1fr max-content;
   gap: var(
     --utrecht-textbox-gap,
     var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, initial))
@@ -434,14 +437,6 @@ $utrecht-support-prince-xml: false !default;
   max-inline-size: min(
     var(--_utrecht-textbox-max-inline-size, 100%),
     var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  );
-  padding-inline-end: var(
-    --utrecht-textbox-padding-inline-end,
-    var(--utrecht-form-control-padding-inline-end, initial)
-  );
-  padding-inline-start: var(
-    --utrecht-textbox-padding-inline-start,
-    var(--utrecht-form-control-padding-inline-start, initial)
   );
   overflow: hidden;
 
@@ -480,6 +475,7 @@ $utrecht-support-prince-xml: false !default;
       var(--utrecht-textbox-autocomplete-ui-size, 44px)
   );
 
+  grid-area: 1 / 1 / 2 / 4;
   block-size: initial; /* harden */
   box-sizing: border-box;
   border: none;
@@ -496,7 +492,6 @@ $utrecht-support-prince-xml: false !default;
 
   inline-size: 100%;
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
-  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
   min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: min(
     var(--_utrecht-textbox-max-inline-size, 100%),
@@ -505,6 +500,14 @@ $utrecht-support-prince-xml: false !default;
   overflow: hidden;
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
+  padding-inline-end: var(
+    --utrecht-textbox-padding-inline-end,
+    var(--utrecht-form-control-padding-inline-end, initial)
+  );
+  padding-inline-start: var(
+    --utrecht-textbox-padding-inline-start,
+    var(--utrecht-form-control-padding-inline-start, initial)
+  );
   white-space: nowrap;
 
   @if $utrecht-support-prince-xml {

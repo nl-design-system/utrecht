@@ -148,6 +148,19 @@
 .utrecht-textbox-container__trailing {
   align-items: center;
   display: flex;
+
+  // TODO: update list of interactive elements
+  &:not(:has(button, a)) {
+    pointer-events: none;
+  }
+}
+
+.utrecht-textbox-container__leading {
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.utrecht-textbox-container__trailing {
+  grid-area: 1 / 3 / 2 / 4;
 }
 
 .utrecht-textbox-container__input {

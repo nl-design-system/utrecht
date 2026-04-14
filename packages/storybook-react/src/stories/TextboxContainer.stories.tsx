@@ -202,4 +202,11 @@ export const WithLeadingAndTrailing: Story = {
   },
 };
 
+export const WithTrailingButton: Story = {
+  args: {
+    defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    trailing: <button>Calendar</button>,
+  },
+};
+
 // export const DesignTokens = designTokenStory(meta);
