@@ -30,7 +30,7 @@
     "typescript": "5.9.3"
   },
   "scripts": {
-    "build": "pnpm run build:style-dictionary:default && pnpm run build:style-dictionary:dark && pnpm run build:scss && pnpm run build:ts",
+    "build": "pnpm run clean && pnpm run build:style-dictionary:default && pnpm run build:style-dictionary:dark && pnpm run build:scss && pnpm run build:ts",
     "build:scss": "sass --no-source-map src/:dist/",
     "build:ts": "tsc src/font-family.ts --outDir dist --target es2020 --module esnext --moduleResolution node",
     "build:style-dictionary:default": "node ./style-dictionary-build.mjs",
