@@ -265,9 +265,10 @@
 @mixin utrecht-root__lang-nl {
   :where(&):lang(nl),
   :where(&) :lang(nl) {
-    /* Avoid breaking short words, looks awkward and unnecessary in Dutch. */
-
-    /* Components that use extremely large font-sizes should make adjustments. */
+    /* Avoid breaking short words, looks awkward and unnecessary in Dutch.
+     * Components that use extremely large font-sizes should make adjustments. */
+    -webkit-hyphenate-limit-after: 4;
+    -webkit-hyphenate-limit-before: 8;
     hyphenate-limit-chars: 12 8 4;
   }
 }
