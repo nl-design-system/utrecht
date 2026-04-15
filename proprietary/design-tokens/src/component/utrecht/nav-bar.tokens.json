@@ -2,12 +2,18 @@
   "utrecht": {
     "nav-bar": {
       "background-color": {
-        "$value": "{utrecht.color.white}"
+        "$value": "transparent"
       },
       "color": {
-        "$value": "{utrecht.color.black}"
+        "$value": "transparent"
       },
       "content": {
+        "background-color": {
+          "$value": "{utrecht.color.white}"
+        },
+        "color": {
+          "$value": "{utrecht.color.black}"
+        },
         "max-inline-size": { "$value": "{utrecht.page.max-inline-size}" }
       },
       "link": {
