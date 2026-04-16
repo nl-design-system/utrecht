@@ -147,7 +147,11 @@
 .utrecht-textbox-container__leading,
 .utrecht-textbox-container__trailing {
   align-items: center;
+  background-color: rgb(255 0 0 / 10%);
   display: flex;
+  justify-content: center;
+  min-inline-size: var(--utrecht-textbox-container-slot-min-inline-size, 44px);
+  white-space: nowrap;
 
   // TODO: update list of interactive elements
   &:not(:has(button, a)) {

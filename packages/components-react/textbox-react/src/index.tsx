@@ -1,12 +1,15 @@
 import clsx from 'clsx';
 import {
+  CSSProperties,
   ForwardedRef,
   forwardRef,
   HTMLAttributes,
   InputHTMLAttributes,
   ReactNode,
+  useEffect,
   useImperativeHandle,
   useRef,
+  useState,
 } from 'react';
 export type TextboxTypes =
   | 'date'
@@ -82,13 +85,81 @@ interface TextboxContainerOwnProps {
 export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement>, TextboxContainerOwnProps {}
 
 export const TextboxContainer = forwardRef<HTMLSpanElement, TextboxContainerProps>(
-  ({ children, className, leading, trailing, ...restProps }: TextboxContainerProps, ref) => (
-    <span {...restProps} ref={ref} className={clsx('utrecht-textbox-container', className)}>
-      {leading ? <span className="utrecht-textbox-container__leading">{leading}</span> : null}
-      {children}
-      {trailing ? <span className="utrecht-textbox-container__trailing">{trailing}</span> : null}
-    </span>
-  ),
+  ({ children, className, leading, trailing, ...restProps }: TextboxContainerProps, ref) => {
+    const leadingRef = useRef<HTMLSpanElement>(null);
+    const trailingRef = useRef<HTMLSpanElement>(null);
+    const containerRef = useRef<HTMLSpanElement>(null);
+    const resizeTimeoutRef = useRef<number | null>(null);
+    const [leadingInlineSize, setLeadingInlineSize] = useState<string>('0px');
+    const [trailingInlineSize, setTrailingInlineSize] = useState<string>('0px');
+
+    const updateInlineSizes = () => {
+      if (leadingRef.current) {
+        const width = leadingRef.current.getBoundingClientRect().width;
+        setLeadingInlineSize(`${width}px`);
+      }
+      if (trailingRef.current) {
+        const width = trailingRef.current.getBoundingClientRect().width;
+        setTrailingInlineSize(`${width}px`);
+      }
+    };
+
+    const deBouncedOnResize = () => {
+      if (resizeTimeoutRef.current) {
+        clearTimeout(resizeTimeoutRef.current);
+      }
+      resizeTimeoutRef.current = window?.setTimeout(updateInlineSizes, 100);
+    };
+
+    useEffect(() => {
+      updateInlineSizes();
+
+      const resizeObserver = new ResizeObserver(deBouncedOnResize);
+
+      if (containerRef.current) {
+        resizeObserver.observe(containerRef.current);
+      }
+
+      // Cleanup
+      return () => {
+        resizeObserver.disconnect();
+        if (resizeTimeoutRef.current) {
+          clearTimeout(resizeTimeoutRef.current);
+        }
+      };
+    }, [leading, trailing]);
+
+    return (
+      <span
+        {...restProps}
+        ref={(node) => {
+          if (typeof ref === 'function') {
+            ref(node);
+          } else if (ref) {
+            ref.current = node;
+          }
+          containerRef.current = node;
+        }}
+        className={clsx('utrecht-textbox-container', className)}
+        style={{
+          ['--_utrecht-textbox-leading-inline-size-calculated' as keyof CSSProperties]: leadingInlineSize,
+          ['--_utrecht-textbox-trailing-inline-size-calculated' as keyof CSSProperties]: trailingInlineSize,
+        }}
+      >
+        {leading ? (
+          <span ref={leadingRef} className="utrecht-textbox-container__leading">
+            {leading}
+          </span>
+        ) : null}
+        {children}
+        {trailing ? (
+          <span ref={trailingRef} className="utrecht-textbox-container__trailing">
+            {trailing}
+          </span>
+        ) : null}
+      </span>
+    );
+  },
 );
 
 TextboxContainer.displayName = 'TextboxContainer';
@@ -123,7 +194,7 @@ export const Textbox2 = forwardRef<HTMLInputElement, Textbox2Props>(
     const inputRef = useRef<HTMLInputElement>(null);
     const containerRef = useRef<HTMLSpanElement>(null);
 
-    // Default ref behavior: point to the input element (backwards compatibility)
+    // Default ref behavior: point to the input element
     useImperativeHandle(ref, () => inputRef.current!, []);
 
     const renderContainer = leading || trailing;
@@ -141,7 +212,6 @@ export const Textbox2 = forwardRef<HTMLInputElement, Textbox2Props>(
     const inputClassesInContainer = clsx(
       'utrecht-textbox-container__input',
       (required || inputRequired) && 'utrecht-textbox-container__input--required',
-      className,
     );
 
     const Input = (
@@ -162,7 +232,7 @@ export const Textbox2 = forwardRef<HTMLInputElement, Textbox2Props>(
 
     if (renderContainer) {
       return (
-        <TextboxContainer ref={containerRef} leading={leading} trailing={trailing}>
+        <TextboxContainer className={className} ref={containerRef} leading={leading} trailing={trailing}>
           {Input}
         </TextboxContainer>
       );

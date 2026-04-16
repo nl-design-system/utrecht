@@ -408,10 +408,51 @@ $utrecht-support-prince-xml: false !default;
 }
 
 /**
- * NEw textbox container
+ * New textbox container
  */
 @mixin utrecht-textbox-container {
   --utrecht-icon-size: 1lh;
+  --utrecht-textbox-container-slot-min-inline-size: 44px;
+  --utrecht-textbox-leading-inline-size: max(
+    var(--_utrecht-textbox-leading-inline-size-calculated, 0px),
+    var(--utrecht-textbox-container-slot-min-inline-size)
+  );
+  --utrecht-textbox-trailing-inline-size: max(
+    var(--_utrecht-textbox-trailing-inline-size-calculated, 0px),
+    var(--utrecht-textbox-container-slot-min-inline-size)
+  );
+
+  /* The average character inline-size is an approximation, with a default that works for Dutch text.
+   * The average might need to be configured specifically, for other scripts (CJK characters)
+   * and very wide or very narrow fonts.
+   * For monospace fonts it can be set to `1ch`.
+   */
+  --_utrecht-textbox-value-char: 0.667em + 0.334ch;
+
+  /* Because this element uses `border-box` box-sizing, we need to manually add up the
+    * border width, padding width and the content width.
+    *
+    * Browsers and browser addons can add buttons inside the content box, for example
+    * for autocomplete. To avoid overlap between the UI and the text, we reserve
+    * some additional pixels to make space. We use 44px in accordance with the WCAG target size.
+    *
+    * When you are certain an element has no such UI, you can set the `autocomplete-ui-size` to `0px` (not to `0`).
+    */
+  --_utrecht-textbox-max-inline-size: calc(
+    calc(var(--utrecht-textbox-value-max-length) * var(--_utrecht-textbox-value-char)) +
+      var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
+      var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
+      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
+      var(--utrecht-textbox-leading-inline-size, 0) + var(--utrecht-textbox-trailing-inline-size, 0) +
+      var(--utrecht-textbox-autocomplete-ui-size, 44px)
+  );
+
+  &:where(:not(:has(.utrecht-textbox-container__leading))) {
+    --utrecht-textbox-leading-inline-size: 0px;
+  }
+  &:where(:not(:has(.utrecht-textbox-container__trailing))) {
+    --utrecht-textbox-trailing-inline-size: 0px;
+  }
 
   display: inline-grid;
   grid-template-columns: max-content 1fr max-content;
@@ -451,30 +492,6 @@ $utrecht-support-prince-xml: false !default;
 }
 
 @mixin utrecht-textbox-container__input {
-  /* The average character inline-size is an approximation, with a default that works for Dutch text.
-   * The average might need to be configured specifically, for other scripts (CJK characters)
-   * and very wide or very narrow fonts.
-   * For monospace fonts it can be set to `1ch`.
-   */
-  --_utrecht-textbox-value-char: 0.667em + 0.334ch;
-
-  /* Because this element uses `border-box` box-sizing, we need to manually add up the
-    * border width, padding width and the content width.
-    *
-    * Browsers and browser addons can add buttons inside the content box, for example
-    * for autocomplete. To avoid overlap between the UI and the text, we reserve
-    * some additional pixels to make space. We use 44px in accordance with the WCAG target size.
-    *
-    * When you are certain an element has no such UI, you can set the `autocomplete-ui-size` to `0px` (not to `0`).
-    */
-  --_utrecht-textbox-max-inline-size: calc(
-    calc(var(--utrecht-textbox-value-max-length) * var(--_utrecht-textbox-value-char)) +
-      var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
-      var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
-      var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
-      var(--utrecht-textbox-autocomplete-ui-size, 44px)
-  );
-
   grid-area: 1 / 1 / 2 / 4;
   block-size: initial; /* harden */
   box-sizing: border-box;
@@ -490,23 +507,24 @@ $utrecht-support-prince-xml: false !default;
     var(--utrecht-form-control-font-weight, initial)
   ); /* harden with `initial` */
 
-  inline-size: 100%;
+  /* inline-size: 100%; */
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
-  min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
+
+  /* min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: min(
     var(--_utrecht-textbox-max-inline-size, 100%),
     var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  );
+  ); */
   overflow: hidden;
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
-  padding-inline-end: var(
-    --utrecht-textbox-padding-inline-end,
-    var(--utrecht-form-control-padding-inline-end, initial)
+  padding-inline-end: calc(
+    var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, initial)) +
+      var(--utrecht-textbox-trailing-inline-size, 0)
   );
-  padding-inline-start: var(
-    --utrecht-textbox-padding-inline-start,
-    var(--utrecht-form-control-padding-inline-start, initial)
+  padding-inline-start: calc(
+    var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, initial)) +
+      var(--utrecht-textbox-leading-inline-size)
   );
   white-space: nowrap;
 

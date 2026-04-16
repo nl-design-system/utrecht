@@ -209,4 +209,26 @@ export const WithTrailingButton: Story = {
   },
 };
 
+export const WithLeadingButton: Story = {
+  args: {
+    defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    leading: <button>Calendar</button>,
+  },
+};
+
+export const WithJustText: Story = {
+  args: {
+    defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    trailing: 'mL per hour',
+  },
+};
+
+export const WithMaxLength: Story = {
+  args: {
+    defaultValue: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    leading: 'NL (+31)',
+    className: 'utrecht-textbox--house-number-size',
+  },
+};
+
 // export const DesignTokens = designTokenStory(meta);
