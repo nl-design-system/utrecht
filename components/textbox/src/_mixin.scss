@@ -507,14 +507,7 @@ $utrecht-support-prince-xml: false !default;
     var(--utrecht-form-control-font-weight, initial)
   ); /* harden with `initial` */
 
-  /* inline-size: 100%; */
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
-
-  /* min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
-  max-inline-size: min(
-    var(--_utrecht-textbox-max-inline-size, 100%),
-    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  ); */
   overflow: hidden;
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
@@ -527,6 +520,10 @@ $utrecht-support-prince-xml: false !default;
       var(--utrecht-textbox-leading-inline-size)
   );
   white-space: nowrap;
+
+  &::placeholder {
+    @include utrecht-textbox__placeholder;
+  }
 
   @if $utrecht-support-prince-xml {
     @media print {

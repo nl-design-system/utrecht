@@ -151,6 +151,7 @@
   display: flex;
   justify-content: center;
   min-inline-size: var(--utrecht-textbox-container-slot-min-inline-size, 44px);
+  position: relative;
   white-space: nowrap;
 
   // TODO: update list of interactive elements
