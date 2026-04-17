@@ -1,5 +1,22 @@
 # @utrecht/astro
 
+## 0.0.27
+
+### Patch Changes
+
+- Updated dependencies [4140e7c]
+- Updated dependencies [c3f360c]
+- Updated dependencies [c3f360c]
+- Updated dependencies [6edb1a8]
+  - @utrecht/design-tokens@6.2.0
+  - @utrecht/nav-bar-css@3.2.0
+  - @utrecht/root-css@4.1.1
+  - @utrecht/storybook@0.0.2
+  - @utrecht/component-library-react@13.3.1
+  - @utrecht/nav-bar-react@1.1.1
+  - @utrecht/web-component-library-stencil@4.2.0
+  - @utrecht/root-react@1.0.16
+
 ## 0.0.26
 
 ### Patch Changes

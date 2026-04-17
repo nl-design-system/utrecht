@@ -1,5 +1,15 @@
 # @utrecht/component-library-css
 
+## 9.0.10
+
+### Patch Changes
+
+- Updated dependencies [c3f360c]
+- Updated dependencies [c3f360c]
+- Updated dependencies [6edb1a8]
+  - @utrecht/nav-bar-css@3.2.0
+  - @utrecht/root-css@4.1.1
+
 ## 9.0.9
 
 ### Patch Changes

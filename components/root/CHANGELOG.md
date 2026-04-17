@@ -1,5 +1,11 @@
 # @utrecht/root-css
 
+## 4.1.1
+
+### Patch Changes
+
+- 6edb1a8: Add Safari support for improved Dutch hyphenation.
+
 ## 4.1.0
 
 ### Minor Changes

@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.3
+
+### Patch Changes
+
+- Updated dependencies [c3f360c]
+- Updated dependencies [c3f360c]
+  - @utrecht/nav-bar-css@3.2.0
+
 ## 2.0.2
 
 ### Patch Changes
