@@ -124,35 +124,30 @@
 /*
  * Textbox container
  */
+.utrecht-textbox-sizing {
+  @include utrecht-textbox-sizing;
+}
+
 .utrecht-textbox-container {
-  @include utrecht-textbox-container;
+  background-color: rgb(0 255 0 / 20%);
+  container: utrecht-textbox-container / inline-size;
+  display: block;
+}
 
-  &:where(:has(input:user-invalid), :has(input.utrecht-textbox-container__input--invalid)) {
-    @include utrecht-textbox--invalid;
-  }
-
-  &:where(:has(input:disabled)) {
-    @include utrecht-textbox--disabled;
-  }
-
-  &:where(:has(input:focus-visible)) {
-    @include utrecht-textbox--focus-visible;
-  }
-
-  &:where(:has(input:read-only)) {
-    @include utrecht-textbox--read-only;
-  }
+.utrecht-textbox-container__inner {
+  @include utrecht-textbox-container__inner;
 }
 
 .utrecht-textbox-container__leading,
 .utrecht-textbox-container__trailing {
   align-items: center;
-  background-color: rgb(255 0 0 / 10%);
+  background-color: rgb(255 0 0 / 20%);
   display: flex;
   justify-content: center;
   min-inline-size: var(--utrecht-textbox-container-slot-min-inline-size, 44px);
   position: relative;
   white-space: nowrap;
+  z-index: 2;
 
   // TODO: update list of interactive elements
   &:not(:has(button, a)) {
