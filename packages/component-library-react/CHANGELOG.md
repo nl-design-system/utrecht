@@ -1,5 +1,13 @@
 # @utrecht/component-library-react
 
+## 13.3.1
+
+### Patch Changes
+
+- Updated dependencies [c3f360c]
+- Updated dependencies [c3f360c]
+  - @utrecht/nav-bar-css@3.2.0
+
 ## 13.3.0
 
 ### Minor Changes

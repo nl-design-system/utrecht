@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 6.2.0
+
+### Minor Changes
+
+- 4140e7c: Specify Nav Bar background color.
+
 ## 6.1.1
 
 ### Patch Changes

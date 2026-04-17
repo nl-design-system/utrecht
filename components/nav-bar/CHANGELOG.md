@@ -1,5 +1,15 @@
 # @utrecht/nav-bar-css
 
+## 3.2.0
+
+### Minor Changes
+
+- c3f360c: Add `utrecht.nav-bar.sticky.z-index` token.
+
+### Patch Changes
+
+- c3f360c: Sticky Nav Bar now overlaps content using default `z-index: 1`.
+
 ## 3.1.0
 
 ### Minor Changes
