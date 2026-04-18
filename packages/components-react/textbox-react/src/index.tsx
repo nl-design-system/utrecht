@@ -1,15 +1,13 @@
 import clsx from 'clsx';
 import {
-  CSSProperties,
   ForwardedRef,
   forwardRef,
   HTMLAttributes,
   InputHTMLAttributes,
+  PropsWithChildren,
   ReactNode,
-  useEffect,
   useImperativeHandle,
   useRef,
-  useState,
 } from 'react';
 export type TextboxTypes =
   | 'date'
@@ -78,80 +76,80 @@ Textbox.displayName = 'Textbox';
  * Wrapper around a textbox input with optional leading and trailing elements.
  */
 interface TextboxContainerOwnProps {
-  leading?: ReactNode;
-  trailing?: ReactNode;
+  iconStart?: ReactNode;
+  labelStart?: ReactNode;
+  descriptionStart?: ReactNode;
+  actionsStart?: ReactNode;
+  iconEnd?: ReactNode;
+  actionsEnd?: ReactNode;
+  labelEnd?: ReactNode;
+  descriptionEnd?: ReactNode;
+  inputId?: string;
 }
 
 export interface TextboxContainerProps extends HTMLAttributes<HTMLSpanElement>, TextboxContainerOwnProps {}
 
 export const TextboxContainer = forwardRef<HTMLSpanElement, TextboxContainerProps>(
-  ({ children, className, leading, trailing, ...restProps }: TextboxContainerProps, ref) => {
-    const leadingRef = useRef<HTMLSpanElement>(null);
-    const trailingRef = useRef<HTMLSpanElement>(null);
-    const containerInnerRef = useRef<HTMLSpanElement>(null);
-    const resizeTimeoutRef = useRef<number | null>(null);
-    const [leadingInlineSize, setLeadingInlineSize] = useState<string>('0px');
-    const [trailingInlineSize, setTrailingInlineSize] = useState<string>('0px');
-
-    const updateInlineSizes = () => {
-      if (leadingRef.current) {
-        const width = leadingRef.current.getBoundingClientRect().width;
-        setLeadingInlineSize(`${width}px`);
-      }
-      if (trailingRef.current) {
-        const width = trailingRef.current.getBoundingClientRect().width;
-        setTrailingInlineSize(`${width}px`);
-      }
-    };
-
-    const deBouncedOnResize = () => {
-      if (resizeTimeoutRef.current) {
-        clearTimeout(resizeTimeoutRef.current);
-      }
-      resizeTimeoutRef.current = window?.setTimeout(updateInlineSizes, 100);
-    };
-
-    useEffect(() => {
-      updateInlineSizes();
-
-      const resizeObserver = new ResizeObserver(deBouncedOnResize);
-
-      if (containerInnerRef.current) {
-        resizeObserver.observe(containerInnerRef.current);
-      }
-
-      // Cleanup
-      return () => {
-        resizeObserver.disconnect();
-        if (resizeTimeoutRef.current) {
-          clearTimeout(resizeTimeoutRef.current);
-        }
-      };
-    }, [leading, trailing]);
+  (
+    {
+      actionsEnd,
+      actionsStart,
+      children,
+      className,
+      iconStart,
+      iconEnd,
+      labelStart,
+      labelEnd,
+      descriptionStart,
+      descriptionEnd,
+      inputId,
+      ...restProps
+    }: TextboxContainerProps,
+    ref,
+  ) => {
+    /** Use a `<label>` element to make the icons clickable, and clicking them focuses the `<input>`.
+     * Use `<label aria-hidden="true">` to avoid associating the text content of the icon a label.
+     */
+    const ClickableWrapper = ({ children, ...restProps }: PropsWithChildren<{}>) =>
+      inputId ? (
+        <label htmlFor={inputId} {...restProps} aria-hidden="true">
+          {children}
+        </label>
+      ) : (
+        <span {...restProps}>{children}</span>
+      );
+    const LabelWrapper = ({ children, ...restProps }: PropsWithChildren<{}>) =>
+      inputId ? (
+        <label htmlFor={inputId} {...restProps}>
+          {children}
+        </label>
+      ) : (
+        <span {...restProps}>{children}</span>
+      );
 
     return (
-      <span
-        {...restProps}
-        className={clsx('utrecht-textbox-container', className)}
-        style={{
-          ['--_utrecht-textbox-leading-inline-size-calculated' as keyof CSSProperties]: leadingInlineSize,
-          ['--_utrecht-textbox-trailing-inline-size-calculated' as keyof CSSProperties]: trailingInlineSize,
-        }}
-        ref={ref}
-      >
-        <span className="utrecht-textbox-container__inner" ref={containerInnerRef}>
-          {leading ? (
-            <span ref={leadingRef} className="utrecht-textbox-container__leading">
-              {leading}
-            </span>
-          ) : null}
-          {children}
-          {trailing ? (
-            <span ref={trailingRef} className="utrecht-textbox-container__trailing">
-              {trailing}
-            </span>
-          ) : null}
-        </span>
+      <span {...restProps} className={clsx('utrecht-textbox-container', className)} ref={ref}>
+        {iconStart ? (
+          <ClickableWrapper className="utrecht-textbox-container__icon-start">{iconStart}</ClickableWrapper>
+        ) : null}
+        {labelStart ? (
+          <LabelWrapper className="utrecht-textbox-container__label-start">{labelStart}</LabelWrapper>
+        ) : null}
+        {descriptionStart ? (
+          <ClickableWrapper className="utrecht-textbox-container__description-start">
+            {descriptionStart}
+          </ClickableWrapper>
+        ) : null}
+        {actionsStart ? <span className="utrecht-textbox-container__actions-start">{actionsStart}</span> : null}
+        {children}
+        {actionsEnd ? <span className="utrecht-textbox-container__actions-end">{actionsEnd}</span> : null}
+        {labelEnd ? <LabelWrapper className="utrecht-textbox-container__label-end">{labelEnd}</LabelWrapper> : null}
+        {descriptionEnd ? (
+          <ClickableWrapper className="utrecht-textbox-container__description-end">{descriptionEnd}</ClickableWrapper>
+        ) : null}
+        {iconEnd ? (
+          <ClickableWrapper className="utrecht-textbox-container__icon-end">{iconEnd}</ClickableWrapper>
+        ) : null}
       </span>
     );
   },
@@ -169,15 +167,37 @@ export interface Textbox2Props extends InputHTMLAttributes<HTMLInputElement>, Te
 }
 
 export const Textbox2 = forwardRef<HTMLInputElement, Textbox2Props>(
-  ({ className, leading, trailing, ...restProps }: Textbox2Props, ref) => {
+  (
+    {
+      className,
+      actionsEnd,
+      actionsStart,
+      iconStart,
+      iconEnd,
+      labelStart,
+      labelEnd,
+      descriptionStart,
+      descriptionEnd,
+      ...restProps
+    }: Textbox2Props,
+    ref,
+  ) => {
     const inputRef = useRef<HTMLInputElement>(null);
     const containerInnerRef = useRef<HTMLSpanElement>(null);
 
     // Default ref behavior: point to the input element
     useImperativeHandle(ref, () => inputRef.current!, []);
 
-    const renderContainer = leading || trailing;
-
+    const renderContainer = !!(
+      actionsEnd ||
+      actionsStart ||
+      iconStart ||
+      iconEnd ||
+      labelStart ||
+      labelEnd ||
+      descriptionStart ||
+      descriptionEnd
+    );
     // const inputClasses = clsx(
     //   'utrecht-textbox',
     //   'utrecht-textbox--html-input',
@@ -214,7 +234,11 @@ export const Textbox2 = forwardRef<HTMLInputElement, Textbox2Props>(
 
     if (renderContainer) {
       return (
-        <TextboxContainer ref={containerInnerRef} leading={leading} trailing={trailing}>
+        <TextboxContainer
+          ref={containerInnerRef}
+          inputId={restProps.id}
+          {...{ actionsEnd, actionsStart, iconStart, iconEnd, labelStart, labelEnd, descriptionStart, descriptionEnd }}
+        >
           <Textbox {...restProps} className={inputClassesInContainer} ref={inputRef} />
         </TextboxContainer>
       );

@@ -10,7 +10,7 @@ const config: StorybookConfig = {
     disableTelemetry: true,
   },
 
-  stories: ['../src/stories/**/*.stories.@(js|jsx|mdx|ts|tsx)'],
+  stories: ['../src/stories/**/Textbox*.stories.@(js|jsx|mdx|ts|tsx)'],
 
   addons: [
     getAbsolutePath('@storybook/addon-links'),

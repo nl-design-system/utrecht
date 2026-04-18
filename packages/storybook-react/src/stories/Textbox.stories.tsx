@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Textbox } from '@utrecht/component-library-react/dist/css-module/index';
+import { Textbox } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/textbox-css/README.md?raw';
 import tokensDefinition from '@utrecht/textbox-css/dist/tokens.mjs';

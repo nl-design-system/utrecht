@@ -30,33 +30,20 @@ $utrecht-support-prince-xml: false !default;
       var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 0)) +
       var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, 0)) +
       var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
-      var(--utrecht-textbox-leading-inline-size, 0) + var(--utrecht-textbox-trailing-inline-size, 0) +
       var(--utrecht-textbox-autocomplete-ui-size, 44px)
   );
 
-  inline-size: max(
-    var(--utrecht-pointer-target-min-size, 44px),
-    min(
-      var(--_utrecht-textbox-max-inline-size, 100cqi),
-      var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-    )
-  );
+  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
+  inline-size: var(--utrecht-pointer-target-min-size, 44px);
 
-  /* min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
   max-inline-size: min(
     var(--_utrecht-textbox-max-inline-size, 100%),
     var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  ); */
+  );
 }
 
-/* TODO: Enable ordering properties when the plugin supports logical CSS properties
- * https://github.com/hudochenkov/stylelint-order/pull/162 */
-/* stylelint-disable order/properties-alphabetical-order */
-@mixin utrecht-textbox {
-  @include utrecht-textbox-sizing;
-
+@mixin utrecht-textbox__border {
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
-  block-size: initial; /* harden */
   border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
   border-block-end-width: var(
     --utrecht-textbox-border-bottom-width,
@@ -65,20 +52,56 @@ $utrecht-support-prince-xml: false !default;
   border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color));
   border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-control-border-radius, 0));
   border-style: solid;
-  box-sizing: border-box;
-  color: var(--utrecht-textbox-color, var(--utrecht-form-control-color));
-  display: block;
+}
+
+@mixin utrecht-textbox__border--disabled {
+  @media screen and (forced-colors: active) {
+    border-color: GrayText;
+  }
+}
+@mixin utrecht-textbox__border--focus-visible {
+  @media screen and (forced-colors: active) {
+    border-color: Highlight;
+    outline-color: Highlight;
+  }
+}
+
+@mixin utrecht-textbox__text {
   font-family: var(--utrecht-textbox-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-textbox-font-size, var(--utrecht-form-control-font-size, inherit));
   font-weight: var(
     --utrecht-textbox-font-weight,
     var(--utrecht-form-control-font-weight, initial)
   ); /* harden with `initial` */
+  line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
+}
+
+@mixin utrecht-textbox__input {
+  block-size: initial; /* harden */
+
+  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
+
+  /* The `<input>` element does not have text wrapping, and overflowing text is available with scrolling.
+   * Avoid text wrapping too, when rendering using other elements such as `<span>`.
+   * Configure `overflow` and `white-space` to achieve this.
+   */
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+/* TODO: Enable ordering properties when the plugin supports logical CSS properties
+ * https://github.com/hudochenkov/stylelint-order/pull/162 */
+/* stylelint-disable order/properties-alphabetical-order */
+@mixin utrecht-textbox {
+  @include utrecht-textbox__border;
+  @include utrecht-textbox__text;
+  @include utrecht-textbox-sizing;
+
+  box-sizing: border-box;
+  color: var(--utrecht-textbox-color, var(--utrecht-form-control-color));
+  display: block;
 
   /* inline-size: 100%; */
-  line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
-  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
-  overflow: hidden;
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
   padding-inline-start: calc(
@@ -89,7 +112,6 @@ $utrecht-support-prince-xml: false !default;
     var(--utrecht-textbox-padding-inline-end, var(--utrecht-form-control-padding-inline-end, initial)) +
       var(--utrecht-textbox-trailing-inline-size, 0px)
   );
-  white-space: nowrap;
 
   @if $utrecht-support-prince-xml {
     @media print {
@@ -419,41 +441,6 @@ $utrecht-support-prince-xml: false !default;
 @mixin utrecht-textbox--iban-nl-size {
   /* Dutch IBAN: 18 characters, plus 4 spaces (one space after every 4 characters) */
   --utrecht-textbox-value-max-length: 22;
-}
-
-/**
- * New textbox container
- */
-@mixin utrecht-textbox-container__inner {
-  /* @include utrecht-textbox-sizing; */
-
-  --utrecht-icon-size: 1lh;
-  --utrecht-textbox-container-slot-min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
-  --utrecht-textbox-leading-inline-size: max(
-    var(--_utrecht-textbox-leading-inline-size-calculated, 0px),
-    var(--utrecht-textbox-container-slot-min-inline-size)
-  );
-  --utrecht-textbox-trailing-inline-size: max(
-    var(--_utrecht-textbox-trailing-inline-size-calculated, 0px),
-    var(--utrecht-textbox-container-slot-min-inline-size)
-  );
-
-  &:where(:not(:has(.utrecht-textbox-container__leading))) {
-    --utrecht-textbox-leading-inline-size: 0px;
-  }
-  &:where(:not(:has(.utrecht-textbox-container__trailing))) {
-    --utrecht-textbox-trailing-inline-size: 0px;
-  }
-
-  display: inline-grid;
-  grid-template-columns: max-content 1fr max-content;
-  gap: var(
-    --utrecht-textbox-gap,
-    var(--utrecht-textbox-padding-inline-start, var(--utrecht-form-control-padding-inline-start, initial))
-  );
-  block-size: initial; /* harden */
-  box-sizing: border-box;
-  inline-size: fit-content;
 }
 
 @mixin utrecht-textbox-container__input {
