@@ -87,10 +87,12 @@
   .utrecht-breadcrumb-nav__link::after,
   .utrecht-breadcrumb-nav__link::before {
     block-size: 0;
-    border-block-end-width: var(--utrecht-breadcrumb-nav-min-block-size);
-    border-block-start-width: var(--utrecht-breadcrumb-nav-min-block-size);
     border-color: transparent;
     border-style: solid;
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-end-width: var(--utrecht-breadcrumb-nav-min-block-size);
+    /* stylelint-disable-next-line order/properties-alphabetical-order */
+    border-block-start-width: var(--utrecht-breadcrumb-nav-min-block-size);
     content: " ";
     display: block;
     inline-size: 0;

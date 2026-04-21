@@ -78,10 +78,11 @@
 }
 
 @mixin utrecht-accordion__panel {
-  border-block-start: none;
   border-color: var(--utrecht-accordion-panel-border-color);
   border-style: solid;
   border-width: var(--utrecht-accordion-panel-border-width);
+  /* stylelint-disable-next-line order/properties-alphabetical-order */
+  border-block-start: none;
   padding-block-end: var(--utrecht-accordion-panel-padding-block-end);
   padding-block-start: var(--utrecht-accordion-panel-padding-block-start);
   padding-inline-end: var(--utrecht-accordion-panel-padding-inline-end);
