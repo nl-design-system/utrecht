@@ -23,10 +23,6 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
-    "./VegaVisualization": {
-      "types": "./dist/VegaVisualization.d.ts",
-      "import": "./dist/VegaVisualization.mjs"
-    },
     "./Calendar": {
       "types": "./dist/Calendar.d.ts",
       "import": "./dist/Calendar.mjs"
@@ -34,10 +30,6 @@
     "./css-module": {
       "types": "./dist/css-module/index.d.ts",
       "import": "./dist/css-module/index.mjs"
-    },
-    "./css-module/VegaVisualization": {
-      "types": "./dist/css-module/VegaVisualization.d.ts",
-      "import": "./dist/css-module/VegaVisualization.mjs"
     },
     "./css-module/Calendar": {
       "types": "./dist/css-module/Calendar.d.ts",
@@ -62,14 +54,6 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
     },
-    "./dist/VegaVisualization": {
-      "types": "./dist/VegaVisualization.d.ts",
-      "import": "./dist/VegaVisualization.mjs"
-    },
-    "./dist/VegaVisualization.mjs": {
-      "types": "./dist/VegaVisualization.d.ts",
-      "import": "./dist/VegaVisualization.mjs"
-    },
     "./dist/Calendar": {
       "types": "./dist/Calendar.d.ts",
       "import": "./dist/Calendar.mjs"
@@ -89,14 +73,6 @@
     "./dist/css-module/index.mjs": {
       "types": "./dist/css-module/index.d.ts",
       "import": "./dist/css-module/index.mjs"
-    },
-    "./dist/css-module/VegaVisualization": {
-      "types": "./dist/css-module/VegaVisualization.d.ts",
-      "import": "./dist/css-module/VegaVisualization.mjs"
-    },
-    "./dist/css-module/VegaVisualization.mjs": {
-      "types": "./dist/css-module/VegaVisualization.d.ts",
-      "import": "./dist/css-module/VegaVisualization.mjs"
     },
     "./dist/css-module/Calendar": {
       "types": "./dist/css-module/Calendar.d.ts",
@@ -225,7 +201,6 @@
     "@utrecht/top-task-nav-css": "workspace:*",
     "@utrecht/unordered-list-css": "workspace:*",
     "@utrecht/url-data-css": "workspace:*",
-    "@utrecht/vega-visualization-css": "workspace:*",
     "clsx": "2.1.1",
     "lodash.chunk": "4.2.0"
   },
@@ -256,7 +231,6 @@
     "next": "13.5.11",
     "react": "19.2.4",
     "react-dom": "19.2.4",
-    "react-vega": "8.0.0",
     "rimraf": "5.0.10",
     "rollup": "4.23.0",
     "rollup-plugin-delete": "2.0.0",
@@ -269,25 +243,12 @@
     "sass": "1.69.7",
     "sort-package-json": "2.11.0",
     "tslib": "2.6.3",
-    "typescript": "5.9.3",
-    "vega": "6.2.0",
-    "vega-embed": "7.1.0",
-    "vega-lite": "6.4.2"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "@babel/runtime": "^7.23.6",
     "react": "^18.0.0 || ^19.0.0",
-    "react-dom": "^18.0.0 || ^19.0.0",
-    "react-vega": "^7.6.0",
-    "vega": "^5.25.0"
-  },
-  "peerDependenciesMeta": {
-    "react-vega": {
-      "optional": true
-    },
-    "vega": {
-      "optional": true
-    }
+    "react-dom": "^18.0.0 || ^19.0.0"
   },
   "publishConfig": {
     "access": "public"

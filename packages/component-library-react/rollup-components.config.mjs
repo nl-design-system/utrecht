@@ -25,7 +25,7 @@ export const outputGlobals = {
   'react-dom': 'ReactDOM',
 };
 
-let components = ['Calendar', 'VegaVisualization'];
+let components = ['Calendar'];
 
 const createComponentConfig = (name, { css }) => ({
   input: css ? `src/css-module/${name}.tsx` : `src/${name}.tsx`,

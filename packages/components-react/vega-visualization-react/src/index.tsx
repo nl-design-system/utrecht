@@ -1,11 +1,11 @@
 /**
  * @license EUPL-1.2
- * Copyright (c) 2020-2024 Frameless B.V.
- * Copyright (c) 2021-2024 Gemeente Utrecht
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
  */
 
 import clsx from 'clsx';
-import { VegaEmbed, VegaEmbedProps } from 'react-vega';
+import { VegaEmbed, type VegaEmbedProps } from 'react-vega';
 import { Config } from 'vega';
 
 export interface VegaVisualizationProps extends Omit<VegaEmbedProps, 'options'> {
@@ -17,7 +17,7 @@ export interface VegaVisualizationProps extends Omit<VegaEmbedProps, 'options'> 
    * @deprecated Use options.actions instead.
    */
   actions?: boolean;
-  options?: VegaEmbedProps['options'];
+  options?: Partial<VegaEmbedProps>;
 }
 
 const defaultConfig = {
@@ -96,7 +96,7 @@ export const VegaVisualization = ({
   options,
   ...restProps
 }: VegaVisualizationProps) => {
-  const embedOptions: VegaEmbedProps['options'] = {
+  const embedOptions: Partial<VegaEmbedProps> = {
     ...options,
     actions,
     renderer: 'svg',
@@ -106,7 +106,7 @@ export const VegaVisualization = ({
   return (
     <div className={clsx('utrecht-vega-visualization', className)} role="img" aria-label={label}>
       <div aria-hidden={true}>
-        <VegaEmbed {...restProps} options={embedOptions} />
+        <VegaEmbed {...restProps} {...embedOptions} />
       </div>
     </div>
   );
