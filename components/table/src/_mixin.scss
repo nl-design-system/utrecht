@@ -5,10 +5,11 @@
  */
 
 @mixin utrecht-table {
+  border-collapse: separate;
+
   /* `border-collapse: collapse` results in a broken border for sticky header and sticky footer.
    * Therefore we need to use `border-collapse: separate` instead.
    */
-  border-collapse: separate;
   border-color: var(--utrecht-table-border-color, 0);
   border-spacing: 0;
   border-style: solid;

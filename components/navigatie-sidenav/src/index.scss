@@ -136,7 +136,9 @@
 .utrecht-sidenav__marker--child {
   background-color: transparent;
   block-size: 4px;
-  border: 2px solid var(--utrecht-sidenav-link-color);
+  border-color: var(--utrecht-sidenav-link-color);
+  border-style: solid;
+  border-width: 2px;
   inline-size: 4px;
   inset-block-start: 16px;
   inset-inline-start: 1.2rem;
@@ -173,7 +175,9 @@
 /* Hover layout for mousover on child__link */
 .utrecht-sidenav__marker--child.utrecht-sidenav__marker--hover {
   background-color: var(--utrecht-sidenav-link-hover-color);
-  border: 2px solid var(--utrecht-sidenav-link-hover-color);
+  border-color: var(--utrecht-sidenav-link-hover-color);
+  border-style: solid;
+  border-width: 2px;
 }
 
 .utrecht-sidenav__link:hover .utrecht-sidenav__marker {

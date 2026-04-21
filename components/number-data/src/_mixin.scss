@@ -23,7 +23,7 @@
 @mixin invisible-but-accessible {
   /* Source: https://kittygiraudel.com/snippets/sr-only-class/ */
   block-size: 1px !important;
-  border: 0 !important;
+  border-width: 0 !important;
   clip-path: inset(50%) !important;
   inline-size: 1px !important;
   /* stylelint-disable-next-line property-disallowed-list */

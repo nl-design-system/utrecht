@@ -164,8 +164,8 @@
 .utrecht-font-tester-container button.utrecht-font-tester-toggle-button {
   background: hsl(223.64 22% 17.45%);
   block-size: 2.5rem;
-  border: none;
   border-radius: 3px;
+  border-width: 0;
   box-shadow: 0 2px 5px rgb(0 0 0 / 20%);
   color: rgb(243 243 243);
   cursor: pointer;
@@ -524,8 +524,10 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
 
   .utrecht-icon-outline {
     block-size: 16px;
-    border: 2px solid #000;
+    border-color: #000;
     border-radius: 50%;
+    border-style: solid;
+    border-width: 2px;
     display: inline-block;
     inline-size: 16px;
     line-height: 16px;
@@ -661,8 +663,10 @@ section {
   align-items: center;
   background-color: #2a5587;
   block-size: 60px;
-  border: 2px solid #2a5587;
+  border-color: #2a5587;
   border-radius: 50%;
+  border-style: solid;
+  border-width: 2px;
   box-shadow: 0 2px 10px 1px #b5b5b5;
   cursor: pointer;
   display: flex;
@@ -679,5 +683,7 @@ section {
 }
 
 .utrecht-chatbot:hover {
-  border: 2px solid #3669a5;
+  border-color: #3669a5;
+  border-style: solid;
+  border-width: 2px;
 }

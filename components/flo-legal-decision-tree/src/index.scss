@@ -126,7 +126,7 @@
   .flo-decision-list > :last-child .flo-question-section {
     --utrecht-flo-decision-question-section-padding-block-end: 0;
 
-    border: none;
+    border-style: none;
   }
 
   label:has(input[type="radio"]) {
