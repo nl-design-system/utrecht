@@ -95,7 +95,7 @@
   transform: translateY(-50%);
 }
 
-/* stylelint-disable property-disallowed-list */
+/* stylelint-disable csstools/use-logical */
 @mixin utrecht-tooltip--top {
   bottom: 100%;
   left: 50%;
@@ -124,7 +124,7 @@
   transform: translateY(-50%);
 }
 
-/* stylelint-enable property-disallowed-list */
+/* stylelint-enable csstools/use-logical */
 
 @mixin utrecht-tooltip__arrow {
   block-size: 0;
@@ -172,7 +172,7 @@
   inset-inline-start: 100%;
 }
 
-/* stylelint-disable property-disallowed-list */
+/* stylelint-disable csstools/use-logical */
 
 @mixin utrecht-tooltip__arrow--top {
   border-bottom-width: 0;
@@ -201,4 +201,5 @@
   left: 100%;
   top: calc(50% - var(--_utrecht-tooltip-arrow-size));
 }
-/* stylelint-enable property-disallowed-list */
+
+/* stylelint-enable csstools/use-logical */

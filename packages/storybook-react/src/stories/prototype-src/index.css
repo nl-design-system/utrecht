@@ -519,7 +519,7 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   }
 
   .utrecht-button utrecht-icon-arrow {
-    margin-left: 4px;
+    margin-inline-start: 4px;
   }
 
   .utrecht-icon-outline {
@@ -531,13 +531,13 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
     display: inline-block;
     inline-size: 16px;
     line-height: 16px;
-    margin-right: 10px;
+    margin-inline-end: 10px;
     text-align: center;
   }
 
   .utrecht-icon-outline utrecht-icon-checkmark {
+    block-size: 16px;
     font-size: 0;
-    height: 16px;
     inline-size: 8px;
   }
 

@@ -20,11 +20,11 @@ $utrecht-support-prince-xml: false !default;
     -prince-pdf-tag-type: TOC;
 
     /* reset Prince XML default styling of <ul> */
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     margin-left: 0;
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     margin-top: 0;
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     margin-right: 0;
   }
 }
