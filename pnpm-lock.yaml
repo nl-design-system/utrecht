@@ -2532,12 +2532,6 @@ importers:
       '@utrecht/url-data-css':
         specifier: workspace:*
         version: link:../../components/url-data
-      '@utrecht/vega-visualization-css':
-        specifier: workspace:*
-        version: link:../../components/vega-visualization
-      '@utrecht/vega-visualization-react':
-        specifier: workspace:*
-        version: link:../components-react/vega-visualization-react
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -2623,9 +2617,6 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
-      react-vega:
-        specifier: 8.0.0
-        version: 8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0))
       rimraf:
         specifier: 5.0.10
         version: 5.0.10
@@ -2665,15 +2656,6 @@ importers:
       typescript:
         specifier: 5.9.3
         version: 5.9.3
-      vega:
-        specifier: 6.2.0
-        version: 6.2.0
-      vega-embed:
-        specifier: 7.1.0
-        version: 7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0)
-      vega-lite:
-        specifier: 6.4.2
-        version: 6.4.2(vega@6.2.0)
 
   packages/component-library-vue:
     devDependencies:
@@ -4823,6 +4805,9 @@ importers:
       '@utrecht/vega-visualization-css':
         specifier: workspace:*
         version: link:../../../components/vega-visualization
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
     devDependencies:
       '@testing-library/dom':
         specifier: 10.4.1
@@ -7013,6 +6998,9 @@ importers:
       '@utrecht/vega-visualization-css':
         specifier: workspace:*
         version: link:../../components/vega-visualization
+      '@utrecht/vega-visualization-react':
+        specifier: workspace:*
+        version: link:../components-react/vega-visualization-react
       '@utrecht/web-component-library-react':
         specifier: workspace:*
         version: link:../web-component-library-react

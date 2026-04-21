@@ -5,7 +5,7 @@
  */
 
 import clsx from 'clsx';
-import VegaEmbed, { type VegaEmbedProps } from 'react-vega/lib/VegaEmbed';
+import { VegaEmbed, type VegaEmbedProps } from 'react-vega';
 import { Config } from 'vega';
 
 export interface VegaVisualizationProps extends Omit<VegaEmbedProps, 'options'> {

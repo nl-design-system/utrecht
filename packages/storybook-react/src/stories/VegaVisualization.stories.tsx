@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { VegaVisualization } from '@utrecht/component-library-react/dist/css-module/VegaVisualization';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import tokensDefinition from '@utrecht/vega-visualization-css/dist/tokens.mjs';
+import { VegaVisualization } from '@utrecht/vega-visualization-react/dist/css';
 import { designTokenStory } from './util.js';
 
 const meta = {
