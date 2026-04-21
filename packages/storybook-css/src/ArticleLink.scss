@@ -5,8 +5,10 @@
  */
 
 .example-article {
-  border: 1px solid silver;
+  border-color: silver;
   border-radius: 0.5em;
+  border-style: solid;
+  border-width: 1px;
   padding-block-end: 1em;
   padding-block-start: 1em;
   padding-inline-end: 1em;

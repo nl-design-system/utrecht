@@ -13,16 +13,16 @@ $utrecht-support-prince-xml: false !default;
 /* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-textarea {
   /* Fall back to `resize: vertical` for browsers that don't support `resize: block` */
-  background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color));
-  block-size: initial; /* harden */
+  border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color));
+  border-radius: var(--utrecht-textarea-border-radius, var(--utrecht-form-control-border-radius, 0));
+  border-style: solid;
   border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width));
   border-block-end-width: var(
     --utrecht-textarea-border-block-end-width,
     var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width))
   );
-  border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color));
-  border-radius: var(--utrecht-textarea-border-radius, var(--utrecht-form-control-border-radius, 0));
-  border-style: solid;
+  background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color));
+  block-size: initial; /* harden */
   box-sizing: border-box;
   color: var(--utrecht-textarea-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-textarea-font-family, var(--utrecht-form-control-font-family));
@@ -52,10 +52,10 @@ $utrecht-support-prince-xml: false !default;
 
   @if $utrecht-support-prince-xml {
     @media print {
-      -prince-pdf-form: enable;
+      border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color)) !important;
       border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width)) !important;
       border-block-end-width: auto !important;
-      border-color: var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color)) !important;
+      -prince-pdf-form: enable;
       inline-size: 100%;
     }
   }
@@ -70,11 +70,11 @@ $utrecht-support-prince-xml: false !default;
     )
   );
 
-  background-color: var(
-    --utrecht-textarea-invalid-background-color,
+  border-color: var(
+    --utrecht-textarea-invalid-border-color,
     var(
-      --utrecht-form-control-invalid-background-color,
-      var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color))
+      --utrecht-form-control-invalid-border-color,
+      var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color))
     )
   );
   border-width: var(--_utrecht-textarea-border-width);
@@ -88,11 +88,11 @@ $utrecht-support-prince-xml: false !default;
       )
     )
   );
-  border-color: var(
-    --utrecht-textarea-invalid-border-color,
+  background-color: var(
+    --utrecht-textarea-invalid-background-color,
     var(
-      --utrecht-form-control-invalid-border-color,
-      var(--utrecht-textarea-border-color, var(--utrecht-form-control-border-color))
+      --utrecht-form-control-invalid-background-color,
+      var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color))
     )
   );
   color: var(

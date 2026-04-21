@@ -213,12 +213,14 @@
   align-items: center;
   background-color: var(--_utrecht-button-background-color);
   block-size: fit-content;
-  border-block-end-color: var(--_utrecht-button-border-bottom-color);
-  border-block-end-width: var(--_utrecht-button-border-block-end-width);
   border-color: var(--_utrecht-button-border-color);
   border-radius: var(--utrecht-button-border-radius);
   border-style: solid;
   border-width: var(--_utrecht-button-border-width);
+  /* stylelint-disable-next-line order/properties-alphabetical-order */
+  border-block-end-color: var(--_utrecht-button-border-bottom-color);
+  /* stylelint-disable-next-line order/properties-alphabetical-order */
+  border-block-end-width: var(--_utrecht-button-border-block-end-width);
   box-sizing: border-box;
   color: var(--_utrecht-button-color);
   column-gap: var(--utrecht-button-column-gap);
