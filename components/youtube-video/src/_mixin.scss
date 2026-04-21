@@ -12,12 +12,12 @@
   border-width: 0;
 
   &:not([width]) {
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     width: 100%;
   }
 
   &:not([height]) {
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     height: auto;
   }
 }

@@ -1,6 +1,6 @@
 export default {
   extends: ['stylelint-config-standard-scss'],
-  plugins: ['stylelint-order'],
+  plugins: ['stylelint-order', 'stylelint-use-logical'],
   rules: {
     'order/order': ['custom-properties', 'declarations'],
     'order/properties-alphabetical-order': true,
@@ -164,5 +164,6 @@ export default {
     'rule-empty-line-before': null,
     'property-no-vendor-prefix': null,
     'no-invalid-position-declaration': [true, { ignoreAtRules: ['mixin'] }],
+    'csstools/use-logical': 'always',
   },
 };
