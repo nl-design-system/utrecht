@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { TextboxAddon } from '@utrecht/component-library-react/dist/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import readme from '@utrecht/textbox-css/README.md?raw';
-import tokensDefinition from '@utrecht/textbox-css/dist/tokens.mjs';
+import readme from '@utrecht/textbox-addon-css/README.md?raw';
+import tokensDefinition from '@utrecht/textbox-addon-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
 
 const meta = {
@@ -172,7 +172,7 @@ const meta = {
     defaultValue: '',
   },
   parameters: {
-    tokensPrefix: 'utrecht-textbox',
+    tokensPrefix: 'utrecht-textbox-addon',
     tokens,
     tokensDefinition,
     docs: {

@@ -978,6 +978,15 @@ importers:
         specifier: workspace:*
         version: link:../focus-ring
 
+  components/textbox-addon:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
+
   components/tooltip:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -4689,9 +4698,9 @@ importers:
       '@babel/runtime':
         specifier: ^7.23.6
         version: 7.24.8
-      '@utrecht/textbox-css':
+      '@utrecht/textbox-addon-css':
         specifier: workspace:*
-        version: link:../../../components/textbox
+        version: link:../../../components/textbox-addon
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -7044,6 +7053,9 @@ importers:
       '@utrecht/textarea-css':
         specifier: workspace:*
         version: link:../../components/textarea
+      '@utrecht/textbox-addon-css':
+        specifier: workspace:*
+        version: link:../../components/textbox-addon
       '@utrecht/textbox-css':
         specifier: workspace:*
         version: link:../../components/textbox
