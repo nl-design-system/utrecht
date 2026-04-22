@@ -1,4 +1,4 @@
-# @utrecht/textbox-addon-css
+# @utrecht/customizable-text-input-css
 
 ## 1.0.0
 

@@ -214,8 +214,6 @@ export type { TextareaProps } from '../Textarea';
 export { Textarea } from './Textarea';
 export type { TextboxProps } from '../Textbox';
 export { Textbox } from './Textbox';
-export type { TextboxAddonProps } from '../TextboxAddon';
-export { TextboxAddon } from './TextboxAddon';
 export type { URLDataProps } from '../URLData';
 export { URLData } from './URLData';
 export type { UnorderedListProps } from '../UnorderedList';

@@ -1,9 +1,9 @@
 {
   "version": "1.0.0",
   "author": "Community for NL Design System",
-  "description": "Textbox addon component for the Municipality of Utrecht based on the NL Design System architecture",
+  "description": "Customizable text input component for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
-  "name": "@utrecht/textbox-addon-css",
+  "name": "@utrecht/customizable-text-input-css",
   "files": [
     "dist/",
     "docs/",
@@ -28,6 +28,6 @@
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git",
-    "directory": "components/textbox-addon"
+    "directory": "components/customizable-text-input"
   }
 }
