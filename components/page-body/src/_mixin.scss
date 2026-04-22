@@ -11,6 +11,10 @@
   display: grid;
   flex-grow: 1;
   inline-size: 100%;
+  padding-block-end: var(--utrecht-page-body-padding-block-end);
+  padding-block-start: var(--utrecht-page-body-padding-block-start);
+  padding-inline-end: var(--utrecht-page-body-padding-inline-end);
+  padding-inline-start: var(--utrecht-page-body-padding-inline-start);
 }
 
 @mixin utrecht-page-body__content {
