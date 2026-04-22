@@ -1,5 +1,15 @@
 # @utrecht/component-library-css
 
+## 9.0.11
+
+### Patch Changes
+
+- Updated dependencies [65d4fa4]
+- Updated dependencies [cdcf151]
+  - @utrecht/page-body-css@2.1.0
+  - @utrecht/page-footer-css@4.0.1
+  - @utrecht/page-header-css@3.0.1
+
 ## 9.0.10
 
 ### Patch Changes

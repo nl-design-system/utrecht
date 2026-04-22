@@ -1,5 +1,12 @@
 # @utrecht/preact-app
 
+## 1.0.53
+
+### Patch Changes
+
+- Updated dependencies [0dfc3f9]
+  - @utrecht/component-library-react@14.0.0
+
 ## 1.0.52
 
 ### Patch Changes
