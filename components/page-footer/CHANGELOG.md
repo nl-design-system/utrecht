@@ -1,5 +1,11 @@
 # @utrecht/page-footer-css
 
+## 4.0.1
+
+### Patch Changes
+
+- cdcf151: Fix `tokens.json` definitions for Page Header and Page Footer, to have `padding-inline` instead of two separate properties for `start` and `end`. The definition is now in sync with the existing CSS implementation.
+
 ## 4.0.0
 
 ### Major Changes

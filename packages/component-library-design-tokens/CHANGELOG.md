@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.4
+
+### Patch Changes
+
+- Updated dependencies [cdcf151]
+  - @utrecht/page-footer-css@4.0.1
+  - @utrecht/page-header-css@3.0.1
+
 ## 2.0.3
 
 ### Patch Changes
