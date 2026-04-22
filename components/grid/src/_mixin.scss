@@ -36,9 +36,6 @@
 }
 
 @mixin utrecht-grid-columns($breakpoint: null) {
-  // Special case for 2.4 (converted to 2-4 in class name)
-  $utrecht-grid-columns-special-value: 2.4 !default;
-
   @for $i from 1 through 12 {
     @if $breakpoint {
       &--#{$breakpoint}-#{$i} {
@@ -48,16 +45,6 @@
       &--xs-#{$i} {
         --_utrecht-columns: #{$i};
       }
-    }
-  }
-
-  @if $breakpoint {
-    &--#{$breakpoint}-2-4 {
-      --_utrecht-columns: #{$utrecht-grid-columns-special-value};
-    }
-  } @else {
-    &--xs-2-4 {
-      --_utrecht-columns: #{$utrecht-grid-columns-special-value};
     }
   }
 }

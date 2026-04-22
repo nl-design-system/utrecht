@@ -7,7 +7,7 @@
 import clsx from 'clsx';
 import { forwardRef, HTMLAttributes, ReactNode } from 'react';
 
-type Cols = 1 | 2 | 2.4 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+type Cols = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 type Order = 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
 type Spacing = 'sm' | 'md' | 'lg';
 
@@ -119,10 +119,10 @@ export const GridCell = forwardRef<HTMLDivElement, GridCellProps>(
     <div
       ref={ref}
       className={clsx('utrecht-grid__cell', className, {
-        [`utrecht-grid--xs-${xs === 2.4 ? '2-4' : xs}`]: xs,
-        [`utrecht-grid--sm-${sm === 2.4 ? '2-4' : sm}`]: sm,
-        [`utrecht-grid--md-${md === 2.4 ? '2-4' : md}`]: md,
-        [`utrecht-grid--lg-${lg === 2.4 ? '2-4' : lg}`]: lg,
+        [`utrecht-grid--xs-${xs}`]: xs,
+        [`utrecht-grid--sm-${sm}`]: sm,
+        [`utrecht-grid--md-${md}`]: md,
+        [`utrecht-grid--lg-${lg}`]: lg,
         [`utrecht-grid--justify-content-${justifyContent}`]: justifyContent,
         [`utrecht-grid--justify-content-sm-${justifyContentSm}`]: justifyContentSm,
         [`utrecht-grid--justify-content-md-${justifyContentMd}`]: justifyContentMd,
