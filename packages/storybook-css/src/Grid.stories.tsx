@@ -366,4 +366,59 @@ export const CustomBreakpoints: Story = {
   },
 };
 
+const specialCase2Point4Description = `
+## Special Use Case: 2.4 Column Width
+
+The **2.4 column width** is a special case designed specifically for creating **5-column layouts** where each column takes up exactly 20% of the total width (2.4/12 = 20%).
+
+### Important Limitations:
+- **Cannot be combined** with other column widths in the same row
+- **Only works** when you have exactly 5 columns of 2.4 each (5 × 2.4 = 12)
+- **Not responsive** - should not be mixed with different breakpoint sizes
+- **Mathematical constraint**: 2.4 × 5 = 12 (perfect 12-column grid)
+
+### Use Cases:
+- Dashboard layouts with 5 equal items
+- Data visualization grids requiring 5 columns
+- Special design requirements for quintuple arrangements
+
+### Why Not Other Combinations?
+Mixing 2.4 with other widths would break the 12-column system:
+- Wrong: 2.4 + 3 + 6.6 = 12 (6.6 doesn't exist)
+- Right: 2.4 × 5 = 12 (only valid combination)
+`;
+
+export const SpecialCase2Point4Columns: Story = {
+  name: 'Special Case: 2.4 Column Width (5-column layout)',
+  args: {
+    spacing: 'md',
+    children: (
+      <>
+        <GridColumn xs={2.4} color="#ffcccb">
+          2.4 cols (20%)
+        </GridColumn>
+        <GridColumn xs={2.4} color="#add8e6">
+          2.4 cols (20%)
+        </GridColumn>
+        <GridColumn xs={2.4} color="#90ee90">
+          2.4 cols (20%)
+        </GridColumn>
+        <GridColumn xs={2.4} color="#ffd700">
+          2.4 cols (20%)
+        </GridColumn>
+        <GridColumn xs={2.4} color="#d8bfd8">
+          2.4 cols (20%)
+        </GridColumn>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story: specialCase2Point4Description,
+      },
+    },
+  },
+};
+
 export const DesignTokens = designTokenStory(meta);
