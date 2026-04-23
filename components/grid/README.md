@@ -51,6 +51,7 @@ A flexible, responsive grid layout component for the Utrecht Design System with 
 - `utrecht-grid--justify-content-{flex-start|center|flex-end|space-between}` - Horizontal alignment
 - `utrecht-grid--align-items-{flex-start|center|flex-end}` - Vertical alignment
 - `utrecht-grid--flex-direction-{row|column|row-reverse|column-reverse}` - Flex direction
+- `utrecht-grid--cols-{3|4|5|6|7|8|9|10|11|12}` - Set the total column count (3-12 columns)
 
 ### Cell Classes
 
@@ -176,3 +177,25 @@ Integrate with Style Dictionary:
   <div class="utrecht-grid__cell utrecht-grid--xs-4 utrecht-grid--order-2">Second</div>
 </div>
 ```
+
+### Total Column Count
+
+```html
+<div class="utrecht-grid utrecht-grid--cols-5">
+  <div class="utrecht-grid__cell">Column 1 (20%)</div>
+  <div class="utrecht-grid__cell">Column 2 (20%)</div>
+  <div class="utrecht-grid__cell">Column 3 (20%)</div>
+  <div class="utrecht-grid__cell">Column 4 (20%)</div>
+  <div class="utrecht-grid__cell">Column 5 (20%)</div>
+</div>
+```
+
+The total column count feature allows you to create grids with any column count between 3 and 12. Each column will have equal width (100% / column count).
+
+**Available column counts:** 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
+
+**Use cases:**
+
+- Dashboard layouts with equal-width items
+- Data visualization grids
+- Simple content sections with consistent column widths
