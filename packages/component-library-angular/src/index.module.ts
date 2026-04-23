@@ -18,6 +18,7 @@ import { UtrechtHeading4 } from './heading-4/component';
 import { UtrechtHeading5 } from './heading-5/component';
 import { UtrechtHeading6 } from './heading-6/component';
 import { UtrechtHtmlContent } from './html-content/component';
+import { UtrechtIcon } from './icon/component';
 import { UtrechtLinkAttr } from './link/component';
 import { UtrechtOrderedListAttr } from './ordered-list/component';
 import { UtrechtOrderedListItemAttr } from './ordered-list/item.component';
@@ -61,6 +62,7 @@ const components = [
   UtrechtHeading5,
   UtrechtHeading6,
   UtrechtHtmlContent,
+  UtrechtIcon,
   UtrechtLinkAttr,
   UtrechtOrderedListAttr,
   UtrechtOrderedListItemAttr,
