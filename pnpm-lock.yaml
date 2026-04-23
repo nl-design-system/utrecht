@@ -6176,6 +6176,9 @@ importers:
       '@utrecht/textbox-css':
         specifier: workspace:*
         version: link:../../components/textbox
+      '@utrecht/textbox-react':
+        specifier: workspace:*
+        version: link:../components-react/textbox-react
       '@utrecht/tooltip-css':
         specifier: workspace:*
         version: link:../../components/tooltip

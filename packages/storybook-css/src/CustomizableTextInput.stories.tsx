@@ -4,9 +4,10 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
 import anatomyDocs from '@utrecht/customizable-text-input-css/docs/anatomy.nl.md?raw';
 import tokensDefinition from '@utrecht/customizable-text-input-css/src/tokens.json';
-import { CustomizableTextInput, CustomizableTextInputProps } from '@utrecht/customizable-text-input-react';
+import { CustomizableTextInput } from '@utrecht/customizable-text-input-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
+import { Textbox } from '@utrecht/textbox-react';
 import clsx from 'clsx';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
@@ -17,7 +18,9 @@ const meta = {
   component: CustomizableTextInput,
   argTypes: {},
   args: {
-    children: 'The Quick Brown Fox Jumps Over The Lazy Dog',
+    start: '+31',
+    children: <Textbox defaultValue="The quick brown fox jumps over the lazy dog" />,
+    end: 'kWh',
   },
   tags: ['autodocs'],
   parameters: {

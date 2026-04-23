@@ -8,5 +8,21 @@
 @use "./mixin" as *;
 
 .utrecht-customizable-text-input {
+  background-color: rgb(0 255 0 / 20%);
   display: inline-flex;
+}
+
+.utrecht-customizable-text-input__slot {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.utrecht-customizable-text-input__slot--start {
+  background-color: rgb(255 0 0 / 20%);
+}
+
+.utrecht-customizable-text-input__slot--end {
+  background-color: rgb(0 0 255 / 20%);
 }
