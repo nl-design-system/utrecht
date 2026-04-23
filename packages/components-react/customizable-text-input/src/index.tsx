@@ -18,12 +18,12 @@ export const CustomizableTextInput = forwardRef(
           {start}
         </SlotRenderer>
       ) : null}
-      {children}
       {end ? (
         <SlotRenderer inputId={inputId} className="utrecht-customizable-text-input__slot--end">
           {end}
         </SlotRenderer>
       ) : null}
+      {children}
     </span>
   ),
 );

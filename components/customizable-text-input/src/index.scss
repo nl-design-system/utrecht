@@ -10,6 +10,10 @@
 .utrecht-customizable-text-input {
   background-color: rgb(0 255 0 / 20%);
   display: inline-flex;
+
+  :where(input) {
+    order: 2;
+  }
 }
 
 .utrecht-customizable-text-input__slot {
@@ -21,8 +25,10 @@
 
 .utrecht-customizable-text-input__slot--start {
   background-color: rgb(255 0 0 / 20%);
+  order: 1;
 }
 
 .utrecht-customizable-text-input__slot--end {
   background-color: rgb(0 0 255 / 20%);
+  order: 3;
 }
