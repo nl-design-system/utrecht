@@ -8,27 +8,37 @@
 @use "./mixin" as *;
 
 .utrecht-customizable-text-input {
-  background-color: rgb(0 255 0 / 20%);
-  display: inline-flex;
+  cursor: text;
+  display: inline-grid;
+  grid-template-areas: "start input end";
 
-  :where(input) {
-    order: 2;
+  // @TODO: replace 1fr with input sizing
+  grid-template-columns: auto 1fr auto;
+
+  &:where(& > *) {
+    grid-area: input;
   }
 }
 
 .utrecht-customizable-text-input__slot {
+  --utrecht-icon-size: var(--utrecht-customizable-text-input-icon-size, 1em);
+
   align-items: center;
   display: flex;
   justify-content: center;
   white-space: nowrap;
 }
 
+.utrecht-customizable-text-input__slot--label {
+  cursor: inherit;
+}
+
 .utrecht-customizable-text-input__slot--start {
   background-color: rgb(255 0 0 / 20%);
-  order: 1;
+  grid-area: start;
 }
 
 .utrecht-customizable-text-input__slot--end {
   background-color: rgb(0 0 255 / 20%);
-  order: 3;
+  grid-area: end;
 }

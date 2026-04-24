@@ -1,6 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
 import anatomyDocs from '@utrecht/customizable-text-input-css/docs/anatomy.nl.md?raw';
 import tokensDefinition from '@utrecht/customizable-text-input-css/src/tokens.json';
@@ -8,8 +9,6 @@ import { CustomizableTextInput } from '@utrecht/customizable-text-input-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { Textbox } from '@utrecht/textbox-react';
-import clsx from 'clsx';
-import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
@@ -19,8 +18,9 @@ const meta = {
   argTypes: {},
   args: {
     start: '+31',
-    children: <Textbox defaultValue="The quick brown fox jumps over the lazy dog" />,
+    children: <Textbox id="textbox" defaultValue="The quick brown fox jumps over the lazy dog" />,
     end: 'kWh',
+    inputId: 'textbox',
   },
   tags: ['autodocs'],
   parameters: {
@@ -49,5 +49,29 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const IconStart: Story = {
+  args: {
+    start: <Icon>→</Icon>,
+    end: undefined,
+    inputId: 'textbox-with-external-label',
+  },
+};
+
+export const WithExternalLabel: Story = {
+  args: {
+    inputId: 'textbox-with-external-label',
+  },
+  render: (args) => {
+    return (
+      <div>
+        <label htmlFor={args.inputId}>External label</label>
+        <CustomizableTextInput {...args}>
+          <Textbox id={args.inputId} />
+        </CustomizableTextInput>
+      </div>
+    );
+  },
+};
 
 export const DesignTokens = designTokenStory(meta);
