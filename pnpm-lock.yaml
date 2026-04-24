@@ -332,6 +332,9 @@ importers:
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../focus-ring
+      '@utrecht/textbox-css':
+        specifier: workspace:*
+        version: link:../textbox
 
   components/data-badge:
     devDependencies:
