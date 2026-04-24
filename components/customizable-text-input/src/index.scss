@@ -5,21 +5,42 @@
  */
 
 @use "~@utrecht/focus-ring-css/src/mixin" as *;
+@use "~@utrecht/textbox-css/src/mixin" as *;
 @use "./mixin" as *;
 
 .utrecht-customizable-text-input {
+  @include utrecht-textbox-sizing-props;
+  @include utrecht-textbox-box;
+
   cursor: text;
   display: inline-grid;
   grid-template-areas: "start input end";
-
-  // @TODO: replace 1fr with input sizing
   grid-template-columns: auto 1fr auto;
-
-  &:where(& > *) {
-    grid-area: input;
-  }
+  inline-size: 100%;
+  max-inline-size: min(
+    var(--_utrecht-textbox-max-inline-size, 100%),
+    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
+  );
+  min-block-size: calc(var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) * 2);
 }
 
+/**
+ * Textbox overrides, since we're moving all the box styling to the customizable text input component
+ * 1. Pull the the input over the border of the parent to maintain the ideal target size
+ */
+.utrecht-customizable-text-input .utrecht-textbox {
+  background-color: transparent;
+  border: none;
+  grid-area: input;
+  margin-block: calc(var(--_utrecht-textbox-border-width) * -1); /* [1] */
+  max-inline-size: none;
+  min-block-size: 0;
+  min-inline-size: 0;
+}
+
+/**
+ * Customizable text input slot styles
+ */
 .utrecht-customizable-text-input__slot {
   --utrecht-icon-size: var(--utrecht-customizable-text-input-icon-size, 1em);
 
