@@ -8,10 +8,7 @@
 
 $utrecht-support-prince-xml: false !default;
 
-/* TODO: Enable ordering properties when the plugin supports logical CSS properties
- * https://github.com/hudochenkov/stylelint-order/pull/162 */
-/* stylelint-disable order/properties-alphabetical-order */
-@mixin utrecht-textbox {
+@mixin utrecht-textbox-sizing-props {
   /* The average character inline-size is an approximation, with a default that works for Dutch text.
    * The average might need to be configured specifically, for other scripts (CJK characters)
    * and very wide or very narrow fonts.
@@ -35,10 +32,23 @@ $utrecht-support-prince-xml: false !default;
       var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width, 0)) +
       var(--utrecht-textbox-autocomplete-ui-size, 44px)
   );
+}
+
+@mixin utrecht-textbox-sizing {
+  @include utrecht-textbox-sizing-props;
+
+  max-inline-size: min(
+    var(--_utrecht-textbox-max-inline-size, 100%),
+    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
+  );
+  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
+  min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
+}
+
+@mixin utrecht-textbox-box {
+  --_utrecht-textbox-border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
 
   background-color: var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color));
-  block-size: initial; /* harden */
-  border-width: var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width));
   border-block-end-width: var(
     --utrecht-textbox-border-bottom-width,
     var(--utrecht-textbox-border-width, var(--utrecht-form-control-border-width))
@@ -46,6 +56,17 @@ $utrecht-support-prince-xml: false !default;
   border-color: var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color));
   border-radius: var(--utrecht-textbox-border-radius, var(--utrecht-form-control-border-radius, 0));
   border-style: solid;
+  border-width: var(--_utrecht-textbox-border-width);
+}
+
+/* TODO: Enable ordering properties when the plugin supports logical CSS properties
+ * https://github.com/hudochenkov/stylelint-order/pull/162 */
+/* stylelint-disable order/properties-alphabetical-order */
+@mixin utrecht-textbox {
+  @include utrecht-textbox-sizing;
+  @include utrecht-textbox-box;
+
+  block-size: initial; /* harden */
   box-sizing: border-box;
   color: var(--utrecht-textbox-color, var(--utrecht-form-control-color));
   display: block;
@@ -58,12 +79,6 @@ $utrecht-support-prince-xml: false !default;
 
   inline-size: 100%;
   line-height: var(--utrecht-textbox-line-height, var(--utrecht-form-control-line-height, initial));
-  min-block-size: var(--utrecht-pointer-target-min-size, 44px);
-  min-inline-size: var(--utrecht-pointer-target-min-size, 44px);
-  max-inline-size: min(
-    var(--_utrecht-textbox-max-inline-size, 100%),
-    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  );
   overflow: hidden;
   padding-block-end: var(--utrecht-textbox-padding-block-end, var(--utrecht-form-control-padding-block-end, 0));
   padding-block-start: var(--utrecht-textbox-padding-block-start, var(--utrecht-form-control-padding-block-start, 0));
