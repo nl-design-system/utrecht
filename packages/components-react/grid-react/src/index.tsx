@@ -27,7 +27,7 @@ export interface GridProps extends HTMLAttributes<HTMLDivElement> {
   alignItemsMd?: AlignItems;
   alignItemsLg?: AlignItems;
   flexDirection?: FlexDirection;
-  cols?: 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12;
+  cols?: Cols;
 }
 
 export interface GridCellProps extends HTMLAttributes<HTMLDivElement> {
@@ -83,16 +83,7 @@ export const Grid = forwardRef<HTMLDivElement, GridProps>(
         [`utrecht-grid--align-items-md-${alignItemsMd}`]: alignItemsMd,
         [`utrecht-grid--align-items-lg-${alignItemsLg}`]: alignItemsLg,
         [`utrecht-grid--flex-direction-${flexDirection}`]: flexDirection,
-        'utrecht-grid--cols-3': cols === 3,
-        'utrecht-grid--cols-4': cols === 4,
-        'utrecht-grid--cols-5': cols === 5,
-        'utrecht-grid--cols-6': cols === 6,
-        'utrecht-grid--cols-7': cols === 7,
-        'utrecht-grid--cols-8': cols === 8,
-        'utrecht-grid--cols-9': cols === 9,
-        'utrecht-grid--cols-10': cols === 10,
-        'utrecht-grid--cols-11': cols === 11,
-        'utrecht-grid--cols-12': cols === 12,
+        [`utrecht-grid--cols-${cols}`]: cols,
       })}
       {...props}
     >
