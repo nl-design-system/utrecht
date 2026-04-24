@@ -21,9 +21,9 @@
   flex-wrap: var(--_utrecht-grid-flex-wrap, wrap);
   justify-content: var(--_utrecht-grid-justify-content, initial);
 
-  // Generate CSS modifiers for column counts (3-12)
+  // Generate CSS modifiers for column counts (1-12)
   // Each modifier sets the total columns and default column width
-  @for $i from 3 through 12 {
+  @for $i from 1 through 12 {
     &--cols-#{$i} {
       --_utrecht-grid-columns-total: #{$i};
       --_utrecht-grid-columns-default: 1;
