@@ -58,17 +58,15 @@ const meta = {
       description: 'Vertical alignment of grid cells',
     },
     cols: {
-      control: {
-        type: 'select',
-        options: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-      },
+      control: 'select',
+      options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
       description:
-        'Sets the total number of columns in the grid (3-12). Each column will have equal width (100% / cols). Creates a flexible grid where all columns have the same width.',
+        'Sets the total number of columns in the grid (1-12). Each column will have equal width (100% / cols). Creates a flexible grid where all columns have the same width.',
     },
   },
   args: {
     spacing: 'md',
-    cols: 5,
+    cols: 12,
   },
   tags: ['autodocs'],
   parameters: {
