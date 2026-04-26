@@ -469,54 +469,36 @@ importers:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
 
   components/heading-2:
     devDependencies:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
 
   components/heading-3:
     devDependencies:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
 
   components/heading-4:
     devDependencies:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
 
   components/heading-5:
     devDependencies:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
 
   components/heading-6:
     devDependencies:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
 
   components/heading-group:
     devDependencies:
@@ -586,9 +568,6 @@ importers:
       '@utrecht/heading-6-css':
         specifier: workspace:*
         version: link:../heading-6
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../heading
       '@utrecht/heading-group-css':
         specifier: workspace:*
         version: link:../heading-group
@@ -2758,9 +2737,6 @@ importers:
       '@utrecht/heading-6-css':
         specifier: workspace:*
         version: link:../../components/heading-6
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../../components/heading
       '@utrecht/html-content-css':
         specifier: workspace:*
         version: link:../../components/html-content
@@ -5308,9 +5284,6 @@ importers:
       '@utrecht/heading-6-css':
         specifier: workspace:*
         version: link:../../components/heading-6
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../../components/heading
       '@utrecht/heading-group-css':
         specifier: workspace:*
         version: link:../../components/heading-group
@@ -5929,9 +5902,6 @@ importers:
       '@utrecht/heading-6-css':
         specifier: workspace:*
         version: link:../../components/heading-6
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../../components/heading
       '@utrecht/heading-group-css':
         specifier: workspace:*
         version: link:../../components/heading-group
@@ -7973,9 +7943,6 @@ importers:
       '@utrecht/heading-6-css':
         specifier: workspace:*
         version: link:../../components/heading-6
-      '@utrecht/heading-css':
-        specifier: workspace:*
-        version: link:../../components/heading
       '@utrecht/heading-group-css':
         specifier: workspace:*
         version: link:../../components/heading-group
