@@ -1,7 +1,14 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'path';
 // Utility to resolve the absolute path of a package
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
+
 const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
 const config: StorybookConfig = {
