@@ -1,9 +1,10 @@
-import { ThemeVars } from '@storybook/theming';
+import { ThemeVars } from 'storybook/dist/theming';
 
 export const theme: ThemeVars = {
   appBg: '#e6e6e6',
   appBorderColor: '#666666',
   appBorderRadius: 0,
+  appHoverBg: '#ffffff',
   appContentBg: '#ffffff',
   appPreviewBg: '',
   barBg: '#D0D0D0',
