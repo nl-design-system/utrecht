@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: '[utrecht-form-label]',
@@ -16,5 +16,9 @@ import { ChangeDetectionStrategy, Component, ViewEncapsulation } from '@angular/
   },
 })
 export class UtrechtFormLabelAttr {
+  @Input() checked = false;
+  @Input() disabled = false;
+  @Input() name = '';
+  @Input() type = '';
   constructor() {}
 }

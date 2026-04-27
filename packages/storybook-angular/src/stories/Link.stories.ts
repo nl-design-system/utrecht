@@ -9,7 +9,7 @@ interface UtrechtLinkProps extends UtrechtLinkAttr {
   hrefLang?: string;
   lang?: string;
   placeholder?: boolean;
-  rel?: string;
+  rel: string;
   target?: string;
 }
 
