@@ -49,8 +49,7 @@ const meta: Meta<UtrechtFormFieldDescriptionProps> = {
   },
   decorators: [
     moduleMetadata({
-      declarations: [UtrechtFormFieldDescription, UtrechtCheckboxAttr, UtrechtFormLabelAttr],
-      imports: [CommonModule],
+      imports: [CommonModule, UtrechtFormFieldDescription, UtrechtCheckboxAttr, UtrechtFormLabelAttr],
     }),
   ],
   component: UtrechtFormFieldDescription,

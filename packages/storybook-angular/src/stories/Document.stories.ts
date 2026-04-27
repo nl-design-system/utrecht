@@ -8,8 +8,7 @@ const documentMeta: Meta<UtrechtDocument> = {
   id: 'angular-document',
   decorators: [
     moduleMetadata({
-      declarations: [UtrechtDocument, UtrechtHeading1, UtrechtParagraph],
-      imports: [CommonModule],
+      imports: [CommonModule, UtrechtDocument, UtrechtHeading1, UtrechtParagraph],
     }),
   ],
 };

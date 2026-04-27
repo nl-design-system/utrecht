@@ -16,14 +16,14 @@ export default {
   argTypes: checkboxMeta.argTypes,
   decorators: [
     moduleMetadata({
-      declarations: [
+      imports: [
+        CommonModule,
         UtrechtCheckboxAttr,
         UtrechtFieldsetAttr,
         UtrechtFieldsetLegendAttr,
         UtrechtFormField,
         UtrechtFormLabelAttr,
       ],
-      imports: [CommonModule],
     }),
   ],
 } as Meta<UtrechtCheckboxAttr>;
@@ -36,7 +36,7 @@ const Template: Story = {
       <div utrecht-fieldset>
         <div utrecht-fieldset-legend>Filter op:</div>
         <utrecht-form-field>
-         
+
           <label for="1" type="checkbox" utrecht-form-label>
           <input [checked]="checked" [disabled]="disabled" [value]="value" id="1" name="gratis-trouwen" type="checkbox" utrecht-checkbox />
           Gratis trouwen

@@ -1,6 +1,8 @@
+import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@angular/core';
 
 @Component({
+  imports: [CommonModule],
   selector: 'utrecht-form-field-description',
   templateUrl: 'index.html',
   styleUrls: ['index.scss'],

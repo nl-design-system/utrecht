@@ -232,7 +232,7 @@ export const Email: Story = {
   }),
   args: {
     href: 'mailto:info@example.com',
-    linkContent: 'info@example.com',
+    linkContent: 'info&#64;example.com',
   },
 };
 

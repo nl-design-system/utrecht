@@ -7,8 +7,7 @@ const meta: Meta<UtrechtActionGroup> = {
   id: 'angular-component-action-group',
   decorators: [
     moduleMetadata({
-      declarations: [UtrechtActionGroup, UtrechtButtonAttr],
-      imports: [CommonModule],
+      imports: [CommonModule, UtrechtActionGroup, UtrechtButtonAttr],
     }),
   ],
   component: UtrechtActionGroup,
