@@ -1,6 +1,11 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
-import { dirname, join } from 'node:path';
-import * as webpack from 'webpack';
+import type { StorybookConfig } from '@storybook/react-vite';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import { dirname, join, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
 // Utility to resolve the absolute path of a package
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
@@ -12,10 +17,12 @@ const config: StorybookConfig = {
   },
   stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)', '../src/**/*.mdx'],
   features: {},
-
   framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
 
   addons: [
@@ -23,27 +30,50 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/preset-scss'),
     getAbsolutePath('@etchteam/storybook-addon-status'),
-    getAbsolutePath('@whitespace/storybook-addon-html'),
+    // getAbsolutePath('@whitespace/storybook-addon-html'),
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('storybook-addon-pseudo-states'),
-    getAbsolutePath('@storybook/addon-webpack5-compiler-swc'),
     getAbsolutePath('@chromatic-com/storybook'),
   ],
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
-
   docs: {},
-  webpackFinal: async (config: any) => {
-    // Provide process polyfill for browser environment to fix Node.js compatibility issues
-    // Required for packages that reference process.env in browser context
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        process: 'process/browser',
-      }),
-    );
-    return config;
-  },
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(config, {
+      define: {
+        global: 'globalThis',
+        'process.env': {},
+      },
+      plugins: [
+        {
+          name: 'fix-mdx-react-shim',
+          enforce: 'pre',
+          resolveId(source) {
+            if (source.startsWith('file://') && source.includes('mdx-react-shim.js')) {
+              return new URL(source).pathname;
+            }
+            return null;
+          },
+        },
+      ],
+      resolve: {
+        alias: {
+          '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
+          path: require.resolve('path-browserify'),
+        },
+      },
+      assetsInclude: ['**/*.md'],
+      css: {
+        preprocessorOptions: {
+          scss: {
+            // Temporary fix for the SCSS @import deprecation in Storybook 9
+            // Remove once all @utrecht packages have been migrated to @use
+            silenceDeprecations: ['import'],
+            includePaths: [resolve(__dirname, '../node_modules/@utrecht')],
+          },
+        },
+      },
+    });
   },
 };
 
