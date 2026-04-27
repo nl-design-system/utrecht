@@ -11,7 +11,7 @@ import React, { ReactElement } from 'react';
 import * as ReactDOMServer from 'react-dom/server';
 
 import 'firacode/distr/fira_code.css';
-import '@utrecht/component-library-css/src/index.scss';
+// import '@utrecht/component-library-css/src/index.scss';
 import '@utrecht/component-library-css/src/html.scss';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/design-tokens/dist/property.css';
