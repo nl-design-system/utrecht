@@ -132,6 +132,7 @@ async function updatePackageJson(projectPath, defaultConfig, customConfig = {}, 
   packageJson.exports = {
     ...requiredESModuleExports,
     ...optionalExports,
+    './src/*': './src/*',
   };
 
   if (config.legacyExports) {

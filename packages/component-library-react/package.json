@@ -38,10 +38,12 @@
     "./dist/.jest-test-results.json": "./dist/.jest-test-results.json",
     "./tsconfig.md": "./tsconfig.md",
     "./TESTING.md": "./TESTING.md",
+    "./SEMVER.md": "./SEMVER.md",
     "./README.nl.md": "./README.nl.md",
     "./README.md": "./README.md",
     "./CONTRIBUTING.md": "./CONTRIBUTING.md",
     "./CHANGELOG.md": "./CHANGELOG.md",
+    "./src/*": "./src/*",
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
