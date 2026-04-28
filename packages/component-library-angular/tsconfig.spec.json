@@ -1,11 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "module": "CommonJs",
-    "types": ["jest", "@testing-library/jest-dom"],
+    "module": "es2022",
+    "moduleResolution": "bundler",
+    "types": ["vitest/globals"],
     "esModuleInterop": true,
     "emitDecoratorMetadata": true
   },
-  "include": ["./setup-jest.ts", "src/**/*.spec.ts", "src/**/*.d.ts"],
+  "include": ["src/**/*.ts", "src/**/*.d.ts"],
   "exclude": ["**/node_modules/*"]
 }

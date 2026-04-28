@@ -25,10 +25,8 @@
     "lint-build:ts": "tsc --noEmit --project tsconfig.json",
     "lint-build:spec": "tsc --noEmit --project tsconfig.spec.json",
     "watch:build": "ng build --watch",
-    "test-results": "jest --json --outputFile=dist/.jest-test-results.json --silent",
-    "test": "jest --coverage --verbose",
-    "test-build": "node test-exports.mjs",
-    "watch:test": "NODE_OPTIONS=--experimental-vm-modules jest --verbose --watch"
+    "test": "ng test",
+    "test-build": "node test-exports.mjs"
   },
   "dependencies": {
     "tslib": "2.6.3"
@@ -85,6 +83,7 @@
     "ng-packagr": "21.2.3",
     "rxjs": "7.8.2",
     "typescript": "5.9.3",
+    "vitest": "4.1.5",
     "zone.js": "0.15.1"
   },
   "module": "dist/fesm2022/utrecht-component-library-angular.mjs",

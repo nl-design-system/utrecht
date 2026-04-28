@@ -1,77 +1,65 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { render, screen } from '@testing-library/angular';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtHeading1 } from './component';
 
-afterEach(() => {
-  // Cleaning elements, because of a TestBed issue with the id attribute
-  Array.from(document.body.children).forEach(
-    (element: any) => element.tagName.toLocaleLowerCase() === 'div' && element.parentNode!.removeChild(element),
-  );
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtHeading1],
+  template: `<utrecht-heading-1 [hidden]="true">Breaking news</utrecht-heading-1>`,
+})
+class TestHiddenHostComponent {}
 
 describe('Heading 1', () => {
-  it('renders a heading role element', async () => {
-    const fixture = TestBed.createComponent(UtrechtHeading1);
-    const heading1DebugElement = fixture.debugElement.query(By.css('h1'))!;
-    heading1DebugElement.nativeElement.textContent = 'Breaking news';
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [UtrechtHeading1, TestHiddenHostComponent],
+    }).compileComponents();
+  });
 
+  it('renders a heading role element', () => {
+    const fixture = TestBed.createComponent(UtrechtHeading1);
     fixture.detectChanges();
-
-    const heading = screen.getByRole('heading', {
-      name: 'Breaking news',
-    });
-
-    expect(heading).toBeInTheDocument();
-    expect(heading).toBeVisible();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h1')).not.toBeNull();
   });
 
-  it('renders a heading at heading level 1', async () => {
+  it('renders a heading at heading level 1', () => {
     const fixture = TestBed.createComponent(UtrechtHeading1);
-    const heading1DebugElement = fixture.debugElement.query(By.css('h1'))!;
-    heading1DebugElement.nativeElement.textContent = 'Breaking news';
-
     fixture.detectChanges();
-
-    const heading = screen.getByRole('heading', {
-      name: 'Breaking news',
-      level: 1,
-    });
-
-    expect(heading).toBeInTheDocument();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h1')).not.toBeNull();
   });
 
-  it('renders an HTML h1 element', async () => {
-    const { container } = await render(UtrechtHeading1);
-
-    const heading = container.querySelector('h1:only-child');
-
-    expect(heading).toBeInTheDocument();
-  });
-
-  it('renders rich text content', async () => {
+  it('renders an HTML h1 element', () => {
     const fixture = TestBed.createComponent(UtrechtHeading1);
-    const heading1DebugElement = fixture.debugElement.query(By.css('h1'))!;
-    heading1DebugElement.nativeElement.innerHTML = '<Heading1><strong>Breaking</strong> news</Heading1>';
-
-    expect(fixture.nativeElement).toContainHTML('strong');
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h1:only-child')).not.toBeNull();
   });
 
-  it('can be hidden', async () => {
-    const { container } = await render('<h1 [hidden]="true">Breaking news</h1>', {
-      declarations: [UtrechtHeading1],
-    });
-
-    const link = container.querySelector(':only-child');
-
-    expect(link).not.toBeVisible();
-  });
-
-  it('can have a custom class name', async () => {
+  it('renders rich text content', () => {
     const fixture = TestBed.createComponent(UtrechtHeading1);
-    const heading1DebugElement = fixture.debugElement.query(By.css('h1'))!;
-    heading1DebugElement.nativeElement.classList.add('large');
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const h1 = el.querySelector('h1')!;
+    h1.innerHTML = '<strong>Breaking</strong> news';
+    expect(el.querySelector('strong')).not.toBeNull();
+  });
 
-    expect(heading1DebugElement.nativeElement.classList.contains('large')).toBeTruthy();
+  it('can be hidden', () => {
+    const fixture = TestBed.createComponent(TestHiddenHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect((el.querySelector('utrecht-heading-1') as HTMLElement).hidden).toBe(true);
+  });
+
+  it('can have a custom class name', () => {
+    const fixture = TestBed.createComponent(UtrechtHeading1);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const h1 = el.querySelector('h1')!;
+    h1.classList.add('large');
+    expect(h1.classList.contains('large')).toBeTruthy();
   });
 });

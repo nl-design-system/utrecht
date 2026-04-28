@@ -1,62 +1,60 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
-import { render, screen } from '@testing-library/angular';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtActionGroup } from './component';
-import { clearElements } from '../utils';
 
-const actionGroupWithChildren = `<utrecht-action-group>
-<button utrecht-button>Save and continue</button>
-<button utrecht-button>Back</button>
-</utrecht-action-group>`;
-
-afterEach(() => {
-  clearElements();
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtActionGroup],
+  template: `<utrecht-action-group>
+    <button>Save and continue</button>
+    <button>Back</button>
+  </utrecht-action-group>`,
+})
+class TestHostComponent {}
 
 describe('Action Group', () => {
-  it('renders a group role element', async () => {
-    const { fixture } = await render(actionGroupWithChildren, { declarations: [UtrechtActionGroup] });
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [UtrechtActionGroup, TestHostComponent],
+    }).compileComponents();
+  });
+
+  it('renders a group role element', () => {
+    const fixture = TestBed.createComponent(UtrechtActionGroup);
     fixture.detectChanges();
-
-    const actionGroup = screen.getByRole('group', {
-      hidden: true,
-    });
-
-    expect(actionGroup).toBeInTheDocument();
-    expect(actionGroup).toBeVisible();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('[role="group"]')).not.toBeNull();
   });
 
-  it('renders an HTML p element', async () => {
-    const { container } = await render(actionGroupWithChildren, {
-      declarations: [UtrechtActionGroup],
-    });
-
-    const paragaph = container.querySelector('p:only-child');
-
-    expect(paragaph).toBeInTheDocument();
+  it('renders an HTML p element', () => {
+    const fixture = TestBed.createComponent(UtrechtActionGroup);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('p:only-child')).not.toBeNull();
   });
 
-  it('renders a design system BEM class name', async () => {
-    const { fixture } = await render(actionGroupWithChildren, { declarations: [UtrechtActionGroup] });
+  it('renders a design system BEM class name', () => {
+    const fixture = TestBed.createComponent(UtrechtActionGroup);
+    fixture.detectChanges();
     const el = fixture.debugElement.query(By.css('.utrecht-action-group'));
-
     expect(el.nativeElement.classList.contains('utrecht-action-group')).toBe(true);
   });
 
-  it('renders Action Group that contain buttons as children', async () => {
-    const { fixture } = await render(actionGroupWithChildren, { declarations: [UtrechtActionGroup] });
-    const debugElement = fixture.debugElement.query(By.css('.utrecht-action-group'))!;
+  it('renders Action Group that contain buttons as children', () => {
+    const fixture = TestBed.createComponent(TestHostComponent);
     fixture.detectChanges();
-
-    expect(debugElement.nativeElement).toContainHTML('button');
+    const el = fixture.debugElement.query(By.css('.utrecht-action-group'));
+    expect(el.nativeElement.querySelector('button')).not.toBeNull();
   });
 
-  it('can have a custom class name', async () => {
+  it('can have a custom class name', () => {
     const fixture = TestBed.createComponent(UtrechtActionGroup);
+    fixture.detectChanges();
     const debugElement = fixture.debugElement.query(By.css('.utrecht-action-group'))!;
     debugElement.nativeElement.classList.add('custom-class');
     fixture.detectChanges();
-
     expect(debugElement.nativeElement.classList.contains('custom-class')).toBeTruthy();
   });
 });

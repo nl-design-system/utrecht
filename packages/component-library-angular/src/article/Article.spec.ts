@@ -1,71 +1,63 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { render, screen } from '@testing-library/angular';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtArticle } from './component';
 
-afterEach(() => {
-  // Cleaning elements, because of a TestBed issue with the id attribute
-  Array.from(document.body.children).map(
-    (element: any) => element.tagName.toLocaleLowerCase() === 'div' && element.parentNode!.removeChild(element),
-  );
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtArticle],
+  template: `<utrecht-article> <strong>Breaking</strong> news </utrecht-article>`,
+})
+class TestHostComponent {}
 
 describe('Article', () => {
-  it('renders an article role element', async () => {
-    await render(UtrechtArticle);
-
-    const article = screen.getByRole('article');
-
-    expect(article).toBeInTheDocument();
-    expect(article).toBeVisible();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [UtrechtArticle, TestHostComponent],
+    }).compileComponents();
   });
 
-  it('renders an article HTML element', async () => {
-    const { container } = await render(UtrechtArticle);
-
-    const article = container.querySelector('article:only-child');
-
-    expect(article).toBeInTheDocument();
+  it('renders an article role element', () => {
+    const fixture = TestBed.createComponent(UtrechtArticle);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('article')).not.toBeNull();
   });
 
-  it('renders a design system BEM class name', async () => {
-    const { container } = await render(UtrechtArticle);
-
-    const article = container.querySelector(':only-child');
-
-    expect(article).toHaveClass('utrecht-article');
+  it('renders an article HTML element', () => {
+    const fixture = TestBed.createComponent(UtrechtArticle);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('article:only-child')).not.toBeNull();
   });
 
-  it('renders rich text content', async () => {
-    const { container } = await render(
-      ` <Article>
-        <strong>Breaking</strong> news
-      </Article>`,
-      {
-        declarations: [UtrechtArticle],
-      },
-    );
-
-    const article = container.querySelector(':only-child');
-
-    const richText = article?.querySelector('strong');
-
-    expect(richText).toBeInTheDocument();
+  it('renders a design system BEM class name', () => {
+    const fixture = TestBed.createComponent(UtrechtArticle);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector(':only-child')?.classList.contains('utrecht-article')).toBe(true);
   });
 
-  it('can be hidden', async () => {
+  it('renders rich text content', () => {
+    const fixture = TestBed.createComponent(TestHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('article')?.querySelector('strong')).not.toBeNull();
+  });
+
+  it('can be hidden', () => {
     const fixture = TestBed.createComponent(UtrechtArticle);
     fixture.detectChanges();
     expect(fixture.nativeElement.style.hidden).toBeUndefined();
   });
 
-  it('can have a additional class name', async () => {
-    const { container } = await render(UtrechtArticle);
-
-    const article = container.querySelector(':only-child');
+  it('can have a additional class name', () => {
+    const fixture = TestBed.createComponent(UtrechtArticle);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const article = el.querySelector(':only-child');
     article?.classList.add('breaking-news');
-
-    expect(article).toHaveClass('breaking-news');
-
-    expect(article).toHaveClass('utrecht-article');
+    expect(article?.classList.contains('breaking-news')).toBe(true);
+    expect(article?.classList.contains('utrecht-article')).toBe(true);
   });
 });

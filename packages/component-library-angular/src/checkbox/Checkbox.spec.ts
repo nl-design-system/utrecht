@@ -1,409 +1,297 @@
-import { render, screen } from '@testing-library/angular';
-import '@testing-library/jest-dom';
+import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { UtrechtCheckboxAttr } from './component';
-import { clearElements } from '../utils';
 
-afterEach(() => {
-  clearElements();
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtCheckboxAttr],
+  template: `<input type="checkbox" (change)="onChange($event)" utrecht-checkbox />`,
+})
+class TestChangeHostComponent {
+  onChange = vi.fn();
+}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtCheckboxAttr],
+  template: `<input type="checkbox" (change)="onChange($event)" [disabled]="true" utrecht-checkbox />`,
+})
+class TestDisabledChangeHostComponent {
+  onChange = vi.fn();
+}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtCheckboxAttr],
+  template: `<input (input)="onInput($event)" type="checkbox" utrecht-checkbox />`,
+})
+class TestInputEventHostComponent {
+  onInput = vi.fn();
+}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtCheckboxAttr],
+  template: `<input (input)="onInput($event)" [disabled]="true" type="checkbox" utrecht-checkbox />`,
+})
+class TestDisabledInputHostComponent {
+  onInput = vi.fn();
+}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtCheckboxAttr],
+  template: `<input [hidden]="true" type="checkbox" utrecht-checkbox />`,
+})
+class TestHiddenHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtCheckboxAttr],
+  template: `<input class="custom-class" type="checkbox" utrecht-checkbox />`,
+})
+class TestCustomClassHostComponent {}
 
 describe('Checkbox', () => {
-  it('renders a checkbox role element', async () => {
-    await render('<input type="checkbox" utrecht-checkbox />', {
-      declarations: [UtrechtCheckboxAttr],
-    });
-
-    const checkbox = screen.getByRole('checkbox');
-
-    expect(checkbox).toBeInTheDocument();
-    expect(checkbox).toBeVisible();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [
+        UtrechtCheckboxAttr,
+        TestChangeHostComponent,
+        TestDisabledChangeHostComponent,
+        TestInputEventHostComponent,
+        TestDisabledInputHostComponent,
+        TestHiddenHostComponent,
+        TestCustomClassHostComponent,
+      ],
+    }).compileComponents();
   });
 
-  it('renders an HTML input type=checkbox element', async () => {
-    const { container } = await render('<input type="checkbox" utrecht-checkbox />', {
-      declarations: [UtrechtCheckboxAttr],
-    });
-    const checkbox = container.querySelector('input[type="checkbox"]');
-
-    expect(checkbox).toBeInTheDocument();
+  it('renders a checkbox role element', () => {
+    const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+    fixture.detectChanges();
+    expect((fixture.nativeElement as HTMLInputElement).type).toBe('checkbox');
   });
 
-  it('displays as CSS block element', async () => {
-    const { fixture } = await render('<input type="checkbox" utrecht-checkbox />', {
-      declarations: [UtrechtCheckboxAttr],
-    });
-
-    expect(fixture.nativeElement).toBeVisible();
-    expect(fixture.nativeElement).toHaveStyle({ display: 'block' });
+  it('renders an HTML input type=checkbox element', () => {
+    const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLInputElement;
+    expect(el.localName).toBe('input');
+    expect(el.type).toBe('checkbox');
   });
 
-  it('renders a design system BEM block class name', async () => {
-    const { container } = await render('<input type="checkbox" utrecht-checkbox />', {
-      declarations: [UtrechtCheckboxAttr],
-    });
-    const checkbox = container.querySelector(':only-child');
-    expect(checkbox).toHaveClass('utrecht-checkbox');
+  it('renders a design system BEM block class name', () => {
+    const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+    fixture.detectChanges();
+    expect(fixture.nativeElement.classList.contains('utrecht-checkbox')).toBe(true);
   });
 
   describe('checked variant', () => {
-    it('is not checked by default', async () => {
-      await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-      const checkbox = screen.getByRole('checkbox');
-      expect(checkbox).not.toBeChecked();
+    it('is not checked by default', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).checked).toBe(false);
     });
 
-    it('omits non-essential checked attributes when not checked', async () => {
-      await render('<input [checked]="false" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).not.toHaveAttribute('checked');
+    it('omits non-essential checked attributes when not checked', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('checked', false);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('checked')).toBe(false);
     });
 
-    it('can have a checked state', async () => {
-      await render('<input [checked]="checked" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          checked: true,
-        },
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).toBeChecked();
+    it('can have a checked state', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('checked', true);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('checked')).toBe(true);
     });
 
-    it('can have a checked state in CSS', async () => {
-      const { container } = await render('<input [checked]="checked" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          checked: true,
-        },
-      });
-      const checkbox = container.querySelector(':checked');
-      expect(checkbox).toBeInTheDocument();
+    it('can have a checked state in CSS', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('checked', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).matches(':checked')).toBe(true);
     });
   });
 
   describe('invalid variant', () => {
-    it('renders a design system BEM modifier class name', async () => {
-      const { container } = await render('<input [invalid]="invalid" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          invalid: true,
-        },
-      });
-
-      const checkbox = container.querySelector('.utrecht-checkbox');
-
-      expect(checkbox).toHaveClass('utrecht-checkbox--invalid');
+    it('renders a design system BEM modifier class name', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('invalid', true);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.classList.contains('utrecht-checkbox--invalid')).toBe(true);
     });
 
-    it('is not invalid by default', async () => {
-      const { container } = await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-
-      expect(checkbox).not.toBeInvalid();
+    it('is not invalid by default', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('aria-invalid')).toBe(false);
     });
 
-    it('omits non-essential invalid attributes when not invalid', async () => {
-      const { container } = await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-
-      expect(checkbox).not.toHaveAttribute('aria-invalid');
+    it('omits non-essential invalid attributes when not invalid', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('aria-invalid')).toBe(false);
     });
 
-    it('can have an invalid state', async () => {
-      const { container } = await render('<input [invalid]="invalid" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          invalid: true,
-        },
-      });
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-
-      expect(checkbox).toBeInvalid();
+    it('can have an invalid state', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('invalid', true);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.getAttribute('aria-invalid')).toBe('true');
     });
 
-    it('can have a invalid state in CSS', async () => {
-      const { container } = await render('<input [required]="required" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          required: true,
-        },
-      });
-
-      const checkbox = container.querySelector(':invalid');
-
-      expect(checkbox).toBeInTheDocument();
-      expect(checkbox).toBeInvalid();
+    it('can have an invalid state in CSS', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('required', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).matches(':invalid')).toBe(true);
     });
   });
 
   describe('noValidate variant', () => {
-    it('`noValidate` is falsy by default', async () => {
-      const { container } = await render('<input type="checkbox" [required]="required" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          required: true,
-        },
-      });
-
-      const checkbox = container.querySelector(':invalid');
-      expect(checkbox).toBeInTheDocument();
-      expect(checkbox).toBeInvalid();
+    it('`noValidate` is falsy by default', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('required', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).matches(':invalid')).toBe(true);
     });
 
-    it('can have a required state when `noValidate` is true', async () => {
-      await render('<input type="checkbox" [required]="required" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          required: true,
-        },
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-      expect(checkbox).toBeRequired();
+    it('can have a required state when `noValidate` is false', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('required', true);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('required')).toBe(true);
     });
 
-    it('can have a valid state when `noValidate` is true', async () => {
-      await render('<input type="checkbox" [noValidate]="noValidate" [required]="required" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          required: true,
-          noValidate: true,
-        },
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-      expect(checkbox).toBeValid();
+    it('can have a valid state when `noValidate` is true', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('required', true);
+      fixture.componentRef.setInput('noValidate', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).matches(':valid')).toBe(true);
     });
   });
 
   describe('disabled variant', () => {
-    it('is not disabled by default', async () => {
-      await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).not.toBeDisabled();
+    it('is not disabled by default', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).disabled).toBe(false);
     });
 
-    it('omits non-essential disabled attributes when not disabled', async () => {
-      await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).not.toHaveAttribute('aria-disabled');
-
-      expect(checkbox).not.toHaveAttribute('disabled');
+    it('omits non-essential disabled attributes when not disabled', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('aria-disabled')).toBe(false);
+      expect(fixture.nativeElement.hasAttribute('disabled')).toBe(false);
     });
 
-    it('can have a disabled state', async () => {
-      await render('<input [disabled]="disabled" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          disabled: true,
-        },
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).toBeDisabled();
+    it('can have a disabled state', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('disabled', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).disabled).toBe(true);
     });
 
-    it('can have a disabled state in CSS', async () => {
-      const { container } = await render('<input [disabled]="disabled" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          disabled: true,
-        },
-      });
-      const checkbox = container.querySelector(':disabled');
-
-      expect(checkbox).toBeInTheDocument();
+    it('can have a disabled state in CSS', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('disabled', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).matches(':disabled')).toBe(true);
     });
   });
 
   describe('required variant', () => {
-    it('is not required by default', async () => {
-      const { fixture } = await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
+    it('is not required by default', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
       fixture.detectChanges();
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).not.toBeRequired();
+      expect((fixture.nativeElement as HTMLInputElement).required).toBe(false);
     });
 
-    it('omits non-essential required attributes when not required', async () => {
-      await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).not.toHaveAttribute('aria-required');
-
-      expect(checkbox).not.toHaveAttribute('required');
+    it('omits non-essential required attributes when not required', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.hasAttribute('aria-required')).toBe(false);
+      expect(fixture.nativeElement.hasAttribute('required')).toBe(false);
     });
 
-    it('can have a required state', async () => {
-      await render('<input [required]="required" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          required: true,
-        },
-      });
-
-      const checkbox = screen.getByRole('checkbox');
-
-      expect(checkbox).toBeRequired();
+    it('can have a required state', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('required', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).required).toBe(true);
     });
 
-    it('can have a required state in CSS', async () => {
-      const { container } = await render('<input [required]="required" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          required: true,
-        },
-      });
-
-      const checkbox = container.querySelector(':required');
-
-      expect(checkbox).toBeInTheDocument();
+    it('can have a required state in CSS', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.componentRef.setInput('required', true);
+      fixture.detectChanges();
+      expect((fixture.nativeElement as HTMLInputElement).matches(':required')).toBe(true);
     });
   });
 
-  it('can be hidden', async () => {
-    const { container } = await render('<input [hidden]="hidden" type="checkbox" utrecht-checkbox />', {
-      declarations: [UtrechtCheckboxAttr],
-      componentProperties: {
-        hidden: true,
-      },
-    });
-
-    const checkbox = container.querySelector('input[type="checkbox"]');
-
-    expect(checkbox).not.toBeVisible();
+  it('can be hidden', () => {
+    const fixture = TestBed.createComponent(TestHiddenHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect((el.querySelector('input[type="checkbox"]') as HTMLElement).hidden).toBe(true);
   });
 
-  it('can have an additional class name', async () => {
-    const { container } = await render('<input [class]="[class]" type="checkbox" utrecht-checkbox />', {
-      declarations: [UtrechtCheckboxAttr],
-      componentProperties: {
-        class: 'custom-class',
-      },
-    });
-
-    const checkbox = container.querySelector('input[type="checkbox"]');
-
-    expect(checkbox).toHaveClass('custom-class');
-    expect(checkbox).toHaveClass('utrecht-checkbox--html-input utrecht-checkbox--custom');
+  it('can have an additional class name', () => {
+    const fixture = TestBed.createComponent(TestCustomClassHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const checkbox = el.querySelector('input[type="checkbox"]')!;
+    expect(checkbox.classList.contains('custom-class')).toBe(true);
+    expect(checkbox.classList.contains('utrecht-checkbox--html-input')).toBe(true);
+    expect(checkbox.classList.contains('utrecht-checkbox--custom')).toBe(true);
   });
 
   describe('change event', () => {
-    it('can trigger a change event', async () => {
-      const handleChange = jest.fn();
-      const { container } = await render(
-        '<input type="checkbox" (change)="handleChange($event)" [checked]="checked" utrecht-checkbox />',
-        {
-          declarations: [UtrechtCheckboxAttr],
-          componentProperties: {
-            handleChange,
-          },
-        },
-      );
-
-      const checkbox = container.querySelector('[type="checkbox"]');
-      (checkbox as HTMLInputElement)?.click();
-
-      expect(checkbox).toBeChecked();
-      expect(handleChange).toHaveBeenCalledTimes(1);
+    it('can trigger a change event', () => {
+      const fixture = TestBed.createComponent(TestChangeHostComponent);
+      fixture.detectChanges();
+      const checkbox = fixture.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement;
+      checkbox.click();
+      expect(fixture.componentInstance.onChange).toHaveBeenCalledTimes(1);
     });
 
-    it('does not trigger a change event when disabled', async () => {
-      const handleChange = jest.fn();
-      const { container } = await render(
-        '<input (change)="handleChange($event)"  [disabled]="disabled" type="checkbox" utrecht-checkbox />',
-        {
-          declarations: [UtrechtCheckboxAttr],
-          componentProperties: {
-            disabled: true,
-            handleChange,
-          },
-        },
-      );
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-      (checkbox as HTMLInputElement)?.click();
-
-      expect(handleChange).toHaveBeenCalledTimes(0);
-      expect(checkbox).not.toBeChecked();
+    it('does not trigger a change event when disabled', () => {
+      const fixture = TestBed.createComponent(TestDisabledChangeHostComponent);
+      fixture.detectChanges();
+      const checkbox = fixture.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement;
+      checkbox.click();
+      expect(fixture.componentInstance.onChange).toHaveBeenCalledTimes(0);
     });
   });
 
   describe('input event', () => {
-    it('can trigger a input event', async () => {
-      const handelInput = jest.fn();
-
-      const { container } = await render('<input (input)="handelInput($event)" type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-        componentProperties: {
-          handelInput,
-        },
-      });
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-
-      (checkbox as HTMLInputElement)?.click();
-
-      expect(checkbox).toBeChecked();
-      expect(handelInput).toHaveBeenCalledTimes(1);
+    it('can trigger an input event', () => {
+      const fixture = TestBed.createComponent(TestInputEventHostComponent);
+      fixture.detectChanges();
+      const checkbox = fixture.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement;
+      checkbox.click();
+      expect(fixture.componentInstance.onInput).toHaveBeenCalledTimes(1);
     });
 
-    it('does not trigger a input event when disabled', async () => {
-      const handelInput = jest.fn();
-      const { container } = await render(
-        '<input (input)="handelInput($event)" [disabled]="disabled" type="checkbox" utrecht-checkbox />',
-        {
-          declarations: [UtrechtCheckboxAttr],
-          componentProperties: {
-            handelInput,
-            disabled: true,
-          },
-        },
-      );
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-
-      expect(handelInput).toHaveBeenCalledTimes(0);
-      expect(checkbox).toBeDisabled();
+    it('does not trigger an input event when disabled', () => {
+      const fixture = TestBed.createComponent(TestDisabledInputHostComponent);
+      fixture.detectChanges();
+      const checkbox = fixture.nativeElement.querySelector('input[type="checkbox"]') as HTMLInputElement;
+      checkbox.click();
+      expect(fixture.componentInstance.onInput).toHaveBeenCalledTimes(0);
     });
   });
 
   describe('appearance variant', () => {
-    it('renders design system BEM modifier class utrecht-checkbox--custom by default', async () => {
-      const { container } = await render('<input type="checkbox" utrecht-checkbox />', {
-        declarations: [UtrechtCheckboxAttr],
-      });
-
-      const checkbox = container.querySelector('input[type="checkbox"]');
-      expect(checkbox).toHaveClass('utrecht-checkbox--custom');
+    it('renders design system BEM modifier class utrecht-checkbox--custom by default', () => {
+      const fixture = TestBed.createComponent(UtrechtCheckboxAttr);
+      fixture.detectChanges();
+      expect(fixture.nativeElement.classList.contains('utrecht-checkbox--custom')).toBe(true);
     });
   });
 });

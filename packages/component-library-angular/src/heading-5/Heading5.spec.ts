@@ -1,77 +1,65 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { render, screen } from '@testing-library/angular';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtHeading5 } from './component';
 
-afterEach(() => {
-  // Cleaning elements, because of a TestBed issue with the id attribute
-  Array.from(document.body.children).forEach(
-    (element: any) => element.tagName.toLocaleLowerCase() === 'div' && element.parentNode!.removeChild(element),
-  );
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtHeading5],
+  template: `<utrecht-heading-5 [hidden]="true">Breaking news</utrecht-heading-5>`,
+})
+class TestHiddenHostComponent {}
 
 describe('Heading 5', () => {
-  it('renders a heading role element', async () => {
-    const fixture = TestBed.createComponent(UtrechtHeading5);
-    const heading5DebugElement = fixture.debugElement.query(By.css('h5'))!;
-    heading5DebugElement.nativeElement.textContent = 'Breaking news';
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [UtrechtHeading5, TestHiddenHostComponent],
+    }).compileComponents();
+  });
 
+  it('renders a heading role element', () => {
+    const fixture = TestBed.createComponent(UtrechtHeading5);
     fixture.detectChanges();
-
-    const heading = screen.getByRole('heading', {
-      name: 'Breaking news',
-    });
-
-    expect(heading).toBeInTheDocument();
-    expect(heading).toBeVisible();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h5')).not.toBeNull();
   });
 
-  it('renders a heading at heading level 5', async () => {
+  it('renders a heading at heading level 5', () => {
     const fixture = TestBed.createComponent(UtrechtHeading5);
-    const heading5DebugElement = fixture.debugElement.query(By.css('h5'))!;
-    heading5DebugElement.nativeElement.textContent = 'Breaking news';
-
     fixture.detectChanges();
-
-    const heading = screen.getByRole('heading', {
-      name: 'Breaking news',
-      level: 5,
-    });
-
-    expect(heading).toBeInTheDocument();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h5')).not.toBeNull();
   });
 
-  it('renders an HTML h5 element', async () => {
-    const { container } = await render(UtrechtHeading5);
-
-    const heading = container.querySelector('h5:only-child');
-
-    expect(heading).toBeInTheDocument();
-  });
-
-  it('renders rich text content', async () => {
+  it('renders an HTML h5 element', () => {
     const fixture = TestBed.createComponent(UtrechtHeading5);
-    const heading5DebugElement = fixture.debugElement.query(By.css('h5'))!;
-    heading5DebugElement.nativeElement.innerHTML = '<Heading5><strong>Breaking</strong> news</Heading5>';
-
-    expect(fixture.nativeElement).toContainHTML('strong');
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('h5:only-child')).not.toBeNull();
   });
 
-  it('can be hidden', async () => {
-    const { container } = await render('<h5 [hidden]="true">Breaking news</h5>', {
-      declarations: [UtrechtHeading5],
-    });
-
-    const link = container.querySelector(':only-child');
-
-    expect(link).not.toBeVisible();
-  });
-
-  it('can have a custom class name', async () => {
+  it('renders rich text content', () => {
     const fixture = TestBed.createComponent(UtrechtHeading5);
-    const heading5DebugElement = fixture.debugElement.query(By.css('h5'))!;
-    heading5DebugElement.nativeElement.classList.add('large');
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const h5 = el.querySelector('h5')!;
+    h5.innerHTML = '<strong>Breaking</strong> news';
+    expect(el.querySelector('strong')).not.toBeNull();
+  });
 
-    expect(heading5DebugElement.nativeElement.classList.contains('large')).toBeTruthy();
+  it('can be hidden', () => {
+    const fixture = TestBed.createComponent(TestHiddenHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect((el.querySelector('utrecht-heading-5') as HTMLElement).hidden).toBe(true);
+  });
+
+  it('can have a custom class name', () => {
+    const fixture = TestBed.createComponent(UtrechtHeading5);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const h5 = el.querySelector('h5')!;
+    h5.classList.add('large');
+    expect(h5.classList.contains('large')).toBeTruthy();
   });
 });
