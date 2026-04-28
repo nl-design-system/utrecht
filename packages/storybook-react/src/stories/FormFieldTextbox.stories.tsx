@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { FormFieldTextbox } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
 import FormFieldMeta from './FormField.stories.js';
+import { FormFieldTextbox } from '../../../component-library-react/src/index.js';
 
 const storyArgTypes = {
   ...FormFieldMeta.argTypes,

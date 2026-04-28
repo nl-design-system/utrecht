@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { DataList, DataListItem, DataListKey, DataListValue } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/data-list-css/README.md?raw';
 import tokensDefinition from '@utrecht/data-list-css/dist/tokens.mjs';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { DataList, DataListItem, DataListKey, DataListValue } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Data List',

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Surface } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/surface-css/README.md?raw';
 import tokensDefinition from '@utrecht/surface-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
+import { Surface } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Surface',

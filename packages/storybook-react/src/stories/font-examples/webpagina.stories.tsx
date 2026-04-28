@@ -1,4 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+import { UtrechtIconArrow, UtrechtSeparator } from '@utrecht/web-component-library-react';
+import React from 'react';
 import {
   ButtonGroup,
   ButtonLink,
@@ -8,9 +10,7 @@ import {
   PageContent,
   PageHeader,
   Surface,
-} from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtSeparator } from '@utrecht/web-component-library-react';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 import '../prototype-src/index.css';
 import ContentWebpage from '../prototype-src/ContentWebpage.js';
 import FontTester from '../prototype-src/FontTester.js';

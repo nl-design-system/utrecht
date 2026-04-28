@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { DataBadge, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/data-badge-css/README.md?raw';
 import tokensDefinition from '@utrecht/data-badge-css/dist/tokens.mjs';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { DataBadge, Paragraph } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Data Badge',

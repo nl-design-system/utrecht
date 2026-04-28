@@ -1,11 +1,11 @@
+import React from 'react';
 import {
   Heading1,
   Heading2,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import React from 'react';
+} from '../../../../../component-library-react/src/index.js';
 const ScenarioContact: React.FC = () => {
   return (
     <>

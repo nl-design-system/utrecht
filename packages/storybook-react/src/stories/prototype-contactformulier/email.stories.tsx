@@ -1,4 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
+import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
+import React from 'react';
 import {
   ButtonLink,
   Logo,
@@ -7,9 +9,7 @@ import {
   PageContent,
   PageHeader,
   Surface,
-} from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow } from '@utrecht/web-component-library-react';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import EmailContact from '../prototype-src/contactformulier/EmailContactFormulier.js'; // Importeer het email-component
 import '../styles.css';

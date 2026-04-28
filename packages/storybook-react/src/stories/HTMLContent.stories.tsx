@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { HTMLContent } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/html-content-css/README.md?raw';
+import { HTMLContent } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/HTML Content',

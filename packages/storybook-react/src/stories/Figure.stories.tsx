@@ -1,10 +1,10 @@
 import { Args, Meta, StoryObj } from '@storybook/react-vite';
-import { Figure, FigureCaption, Image, Link } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/figure-css/README.md?raw';
 import tokensDefinition from '@utrecht/figure-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Figure, FigureCaption, Image, Link } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Figure',

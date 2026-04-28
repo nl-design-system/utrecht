@@ -1,14 +1,4 @@
 import {
-  Heading2,
-  Heading4,
-  Link,
-  LinkList,
-  LinkListLink,
-  PageFooter,
-  Paragraph,
-  Strong,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
   UtrechtIconArrow,
   UtrechtIconFacebook,
   UtrechtIconInstagram,
@@ -17,6 +7,16 @@ import {
   UtrechtIconWhatsapp,
 } from '@utrecht/web-component-library-react';
 import React from 'react';
+import {
+  Heading2,
+  Heading4,
+  Link,
+  LinkList,
+  LinkListLink,
+  PageFooter,
+  Paragraph,
+  Strong,
+} from '../../../../component-library-react/src/index.js';
 const FooterKlachten: React.FC = () => {
   return (
     <PageFooter className="utrecht-footer-grid">

@@ -1,6 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/accordion-css/README.md?raw';
 import tokensDefinition from '@utrecht/accordion-css/dist/tokens.mjs';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
+import React, { ReactNode } from 'react';
+import { designTokenStory } from './util.js';
 import {
   AccordionProvider,
   AccordionSectionProps,
@@ -11,11 +15,7 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-} from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
-import React, { ReactNode } from 'react';
-import { designTokenStory } from './util.js';
+} from '../../../component-library-react/src/index.js';
 interface AccordionStoryProps {
   label: string;
   body: ReactNode;
@@ -32,6 +32,7 @@ const AccordionStory = ({ expanded, label, body, icon, sections }: AccordionStor
 const meta = {
   title: 'React Component/Accordion',
   id: 'react-accordion',
+  component: AccordionProvider,
   args: {
     label: '',
     body: '',

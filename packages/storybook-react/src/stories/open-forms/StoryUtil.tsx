@@ -1,8 +1,8 @@
 import { OFLibrary, OpenFormsModule } from '@open-formulieren/sdk';
-import { Button, ButtonGroup, Icon, Link, OpenFormsContainer } from '@utrecht/component-library-react/dist/css-module';
 import merge from 'lodash.merge';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
+import { Button, ButtonGroup, Icon, Link, OpenFormsContainer } from '../../../../component-library-react/src/index.js';
 import '@open-formulieren/sdk/styles.css';
 export type FormConfiguration = { type: string; components: { type: string; key: string; label: string }[] };
 const FormButton = () => (

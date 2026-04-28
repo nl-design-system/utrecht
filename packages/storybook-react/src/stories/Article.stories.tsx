@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/article-css/README.md?raw';
 import tokensDefinition from '@utrecht/article-css/dist/tokens.mjs';
-import { Article, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Article, Heading1, Paragraph } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Article',

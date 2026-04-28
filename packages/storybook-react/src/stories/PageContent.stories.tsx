@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { PageContent, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/page-content-css/README.md?raw';
 import tokensDefinition from '@utrecht/page-content-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { PageContent, Paragraph } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Page Content',

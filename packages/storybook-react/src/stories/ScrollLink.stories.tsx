@@ -1,4 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
+import React from 'react';
+import type { PropsWithChildren } from 'react';
+import { designTokenStory } from './util.js';
 import {
   ButtonGroup,
   Document,
@@ -7,12 +12,7 @@ import {
   PageContent,
   Paragraph,
   ScrollLink,
-} from '@utrecht/component-library-react/dist/css-module/index';
-import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import { UtrechtIconChevronUp } from '@utrecht/web-component-library-react';
-import React from 'react';
-import type { PropsWithChildren } from 'react';
-import { designTokenStory } from './util.js';
+} from '../../../component-library-react/src/index.js';
 
 const DemoPage = ({ children }: PropsWithChildren) => (
   <Document style={{ '--utrecht-space-around': 1 } as any}>

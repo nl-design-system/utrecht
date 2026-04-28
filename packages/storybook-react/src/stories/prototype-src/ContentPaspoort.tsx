@@ -1,4 +1,10 @@
 import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconChevronRight,
+} from '@utrecht/web-component-library-react';
+import React from 'react';
+import {
   AccordionProvider,
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -12,13 +18,7 @@ import {
   Paragraph,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconChevronRight,
-} from '@utrecht/web-component-library-react';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>

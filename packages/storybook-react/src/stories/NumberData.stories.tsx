@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { NumberData } from '@utrecht/component-library-react/dist/css-module';
 import readme from '@utrecht/number-data-css/README.md?raw';
+import { NumberData } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Number data',
