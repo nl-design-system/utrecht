@@ -26,8 +26,20 @@
       "types": "./dist/css.d.ts",
       "import": "./dist/css.mjs"
     },
-    "./dist": "./dist/index.mjs",
-    "./dist/index": "./dist/index.mjs",
+    "./CHANGELOG.md": "./CHANGELOG.md",
+    "./src/*": "./src/*",
+    "./dist": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
+    "./dist/index.mjs": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs"
+    },
     "./dist/css": {
       "types": "./dist/css.d.ts",
       "import": "./dist/css.mjs"
@@ -42,10 +54,9 @@
     "src/"
   ],
   "scripts": {
-    "build": "rollup --config ./rollup.config.mjs",
+    "build": "rollup --config ./rollup.config.mjs && pnpm run init",
     "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
     "init": "init-react-package",
-    "init2": "init-react-package",
     "test": "mkdir -p pages && jest --coverage --verbose",
     "typecheck": "tsc --noEmit"
   },
