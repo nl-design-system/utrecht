@@ -64,12 +64,12 @@ export const WithExternalLabel: Story = {
   },
   render: (args) => {
     return (
-      <div>
+      <>
         <label htmlFor={args.inputId}>External label</label>
         <CustomizableTextInput {...args}>
           <Textbox id={args.inputId} />
         </CustomizableTextInput>
-      </div>
+      </>
     );
   },
 };
