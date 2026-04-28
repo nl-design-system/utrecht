@@ -1,4 +1,5 @@
 import type { StorybookConfig } from '@storybook/react-vite';
+import { defineMain } from '@storybook/react-vite/node';
 import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'path';
@@ -65,4 +66,4 @@ const config: StorybookConfig = {
   },
 };
 
-export default config;
+export default defineMain(config);
