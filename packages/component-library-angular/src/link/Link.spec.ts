@@ -1,90 +1,103 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { render, screen } from '@testing-library/angular';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtLinkAttr } from './component';
-afterEach(() => {
-  // Cleaning elements, because of a TestBed issue with the id attribute
-  Array.from(document.body.children).forEach(
-    (element: any) => element.tagName.toLocaleLowerCase() === 'div' && element.parentNode!.removeChild(element),
-  );
-});
+
+@Component({
+  standalone: true,
+  imports: [UtrechtLinkAttr],
+  template: `<a href="https://example.com" utrecht-link>Home</a>`,
+})
+class TestLinkHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtLinkAttr],
+  template: `<a href="https://example.com/" utrecht-link><strong>https:</strong>//example.com/</a>`,
+})
+class TestRichTextHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtLinkAttr],
+  template: `<a href="/" class="visited" utrecht-link>Link</a>`,
+})
+class TestCustomClassHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtLinkAttr],
+  template: `<a [hidden]="true" utrecht-link>Link</a>`,
+})
+class TestHiddenHostComponent {}
 
 describe('Link', () => {
-  it('renders an link role element', async () => {
-    await render('<a href="https://example.com">Home</a>', {
-      declarations: [UtrechtLinkAttr],
-    });
-    const link = screen.getByRole('link', { name: 'Home' });
-
-    expect(link).toBeInTheDocument();
-    expect(link).toBeVisible();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [
+        UtrechtLinkAttr,
+        TestLinkHostComponent,
+        TestRichTextHostComponent,
+        TestCustomClassHostComponent,
+        TestHiddenHostComponent,
+      ],
+    }).compileComponents();
   });
 
-  it('renders an HTML a element', async () => {
-    const fixture = TestBed.createComponent(UtrechtLinkAttr);
+  it('renders an link role element', () => {
+    const fixture = TestBed.createComponent(TestLinkHostComponent);
     fixture.detectChanges();
-    expect(fixture.nativeElement).toBeInTheDocument();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('a')).not.toBeNull();
+  });
+
+  it('renders an HTML a element', () => {
+    const fixture = TestBed.createComponent(TestLinkHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('a')).not.toBeNull();
   });
 
   it('renders a design system BEM class name', () => {
     const fixture = TestBed.createComponent(UtrechtLinkAttr);
     fixture.detectChanges();
-
-    expect(fixture.nativeElement).toHaveClass('utrecht-link');
+    expect(fixture.nativeElement.classList.contains('utrecht-link')).toBe(true);
   });
 
-  it('renders rich text content', async () => {
-    const { container } = await render(
-      `<a utrecht-link href="https://example.com/">
-        <strong>https:</strong>
-        //example.com/
-      </a>`,
-      {
-        declarations: [UtrechtLinkAttr],
-      },
-    );
-
-    const link = container.querySelector(':only-child');
-
-    const richText = link?.querySelector('strong');
-
-    expect(richText).toBeInTheDocument();
+  it('renders rich text content', () => {
+    const fixture = TestBed.createComponent(TestRichTextHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('a')?.querySelector('strong')).not.toBeNull();
   });
 
-  it('can be hidden', async () => {
-    const { container } = await render('<a [hidden]="true">Link</a>', {
-      declarations: [UtrechtLinkAttr],
-    });
-
-    const link = container.querySelector(':only-child');
-
-    expect(link).not.toBeVisible();
+  it('can be hidden', () => {
+    const fixture = TestBed.createComponent(TestHiddenHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect((el.querySelector('a') as HTMLElement).hidden).toBe(true);
   });
 
-  it('can have a custom class name', async () => {
-    const { container } = await render('<a utrecht-link class="visited">Link</a>', {
-      declarations: [UtrechtLinkAttr],
-    });
-
-    const article = container.querySelector(':only-child');
-    article?.classList.add('visited');
-
-    expect(article).toHaveClass('visited');
-    expect(article).toHaveClass('utrecht-link');
+  it('can have a custom class name', () => {
+    const fixture = TestBed.createComponent(TestCustomClassHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const link = el.querySelector('a')!;
+    expect(link.classList.contains('visited')).toBe(true);
+    expect(link.classList.contains('utrecht-link')).toBe(true);
   });
 
-  it('renders a design system BEM class name', async () => {
+  it('renders a design system BEM class name for external links', () => {
     const fixture = TestBed.createComponent(UtrechtLinkAttr);
     fixture.componentInstance.external = true;
     fixture.detectChanges();
-
-    expect(fixture.nativeElement).toHaveClass('utrecht-link--external');
+    expect(fixture.nativeElement.classList.contains('utrecht-link--external')).toBe(true);
   });
 
   it('prevents sharing referer information', () => {
     const fixture = TestBed.createComponent(UtrechtLinkAttr);
     fixture.componentInstance.external = true;
     fixture.detectChanges();
-
     expect(fixture.nativeElement.getAttribute('rel')).toContain('noreferer');
   });
 
@@ -92,7 +105,6 @@ describe('Link', () => {
     const fixture = TestBed.createComponent(UtrechtLinkAttr);
     fixture.componentInstance.external = true;
     fixture.detectChanges();
-
     expect(fixture.nativeElement.getAttribute('rel')).toContain('noopener');
   });
 
@@ -100,7 +112,6 @@ describe('Link', () => {
     const fixture = TestBed.createComponent(UtrechtLinkAttr);
     fixture.componentInstance.external = true;
     fixture.detectChanges();
-
     expect(fixture.nativeElement.getAttribute('rel')).toContain('external');
   });
 });

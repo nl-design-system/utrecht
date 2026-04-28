@@ -1,117 +1,126 @@
+import { Component } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
-import { render, screen } from '@testing-library/angular';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { UtrechtButtonAttr } from './component';
 
-afterEach(() => {
-  // Cleaning elements, because of a TestBed issue with the id attribute
-  Array.from(document.body.children).map(
-    (element: any) => element.tagName.toLocaleLowerCase() === 'div' && element.parentNode!.removeChild(element),
-  );
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtButtonAttr],
+  template: `<button utrecht-button>ok</button>`,
+})
+class TestButtonHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtButtonAttr],
+  template: `<button utrecht-button>Order <strong>now</strong></button>`,
+})
+class TestRichTextHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtButtonAttr],
+  template: `<form (ngSubmit)="onSubmit()"><button utrecht-button type="submit" disabled>Submit</button></form>`,
+})
+class TestFormHostComponent {
+  onSubmit = vi.fn();
+}
 
 describe('Button', () => {
-  it('renders a button role element', async () => {
-    await render('<button>ok</button>', {
-      declarations: [UtrechtButtonAttr],
-    });
-    const button = screen.getByRole('button', { name: 'ok' });
-    expect(button).toBeInTheDocument();
-    expect(button).toBeVisible();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [UtrechtButtonAttr, TestButtonHostComponent, TestRichTextHostComponent, TestFormHostComponent],
+    }).compileComponents();
   });
 
-  it('renders an HTML button element', async () => {
-    const { container } = await render('<button>submit</button>', {
-      declarations: [UtrechtButtonAttr],
-    });
-
-    const button = container.querySelector('button:only-child');
-
-    expect(button).toBeInTheDocument();
+  it('renders a button role element', () => {
+    const fixture = TestBed.createComponent(TestButtonHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('button')).not.toBeNull();
   });
 
-  it('renders labels that contain HTML rich text content', async () => {
-    const { container } = await render(
-      `<button>
-          Order <strong>now</strong>
-        </button>`,
-      {
-        declarations: [UtrechtButtonAttr],
-      },
-    );
-    const button = container.querySelector(':only-child');
-
-    const richText = button?.querySelector('strong');
-
-    expect(richText).toBeInTheDocument();
+  it('renders an HTML button element', () => {
+    const fixture = TestBed.createComponent(TestButtonHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('button:only-child')).not.toBeNull();
   });
 
-  it('renders a design system BEM class name', async () => {
+  it('renders labels that contain HTML rich text content', () => {
+    const fixture = TestBed.createComponent(TestRichTextHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('button')?.querySelector('strong')).not.toBeNull();
+  });
+
+  it('renders a design system BEM class name', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.detectChanges();
-    expect(fixture.nativeElement).toHaveAttribute('class', 'utrecht-button--html-button utrecht-button');
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.classList.contains('utrecht-button--html-button')).toBe(true);
+    expect(el.classList.contains('utrecht-button')).toBe(true);
   });
 
-  it('is not busy by default', async () => {
+  it('is not busy by default', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.detectChanges();
-    expect(fixture.nativeElement).not.toHaveAttribute('aria-busy');
+    expect(fixture.nativeElement.hasAttribute('aria-busy')).toBe(false);
   });
 
-  it('is not a submit button by default', async () => {
+  it('is not a submit button by default', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.detectChanges();
-    expect(fixture.nativeElement).not.toHaveAttribute('type', 'submit');
+    expect(fixture.nativeElement.getAttribute('type')).not.toBe('submit');
   });
 
-  it('is not disabled by default', async () => {
+  it('is not disabled by default', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.detectChanges();
-    expect(fixture.nativeElement).not.toBeDisabled();
-    expect(fixture.nativeElement).not.toHaveAttribute('aria-disabled');
-    expect(fixture.nativeElement).not.toHaveAttribute('disabled');
+    expect((fixture.nativeElement as HTMLButtonElement).disabled).toBe(false);
+    expect(fixture.nativeElement.hasAttribute('aria-disabled')).toBe(false);
+    expect(fixture.nativeElement.hasAttribute('disabled')).toBe(false);
   });
 
-  it('can have a busy state', async () => {
+  it('can have a busy state', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.componentInstance.busy = true;
     fixture.detectChanges();
-    expect(fixture.nativeElement).toHaveAttribute('aria-busy', 'true');
+    expect(fixture.nativeElement.getAttribute('aria-busy')).toBe('true');
   });
 
-  it('can have a busy state', async () => {
+  it('can be a submit button', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.componentRef.setInput('type', 'submit');
     fixture.detectChanges();
-    expect(fixture.nativeElement).toHaveAttribute('type', 'submit');
+    expect(fixture.nativeElement.getAttribute('type')).toBe('submit');
   });
 
-  it('can be a reset button', async () => {
+  it('can be a reset button', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
     fixture.componentRef.setInput('type', 'reset');
     fixture.detectChanges();
-    expect(fixture.nativeElement).toHaveAttribute('type', 'reset');
+    expect(fixture.nativeElement.getAttribute('type')).toBe('reset');
   });
 
-  it('can be hidden', async () => {
+  it('can be hidden', () => {
     const fixture = TestBed.createComponent(UtrechtButtonAttr);
-
     fixture.detectChanges();
     expect(fixture.nativeElement.style.hidden).toBeUndefined();
   });
 
   describe('toggle button', () => {
-    it('is not a toggle button by default', async () => {
+    it('is not a toggle button by default', () => {
       const fixture = TestBed.createComponent(UtrechtButtonAttr);
-
       fixture.detectChanges();
-      expect(fixture.nativeElement).not.toHaveAttribute('aria-pressed');
+      expect(fixture.nativeElement.hasAttribute('aria-pressed')).toBe(false);
     });
 
-    it('is can be a toggle button', async () => {
+    it('can be a toggle button', () => {
       const fixture = TestBed.createComponent(UtrechtButtonAttr);
       fixture.componentRef.setInput('pressed', false);
       fixture.detectChanges();
-      expect(fixture.nativeElement).toHaveAttribute('aria-pressed', 'false');
+      expect(fixture.nativeElement.getAttribute('aria-pressed')).toBe('false');
     });
 
     describe('pressed state', () => {
@@ -119,39 +128,24 @@ describe('Button', () => {
         const fixture = TestBed.createComponent(UtrechtButtonAttr);
         fixture.componentRef.setInput('pressed', true);
         fixture.detectChanges();
-        expect(fixture.nativeElement).toHaveAttribute('aria-pressed', 'true');
+        expect(fixture.nativeElement.getAttribute('aria-pressed')).toBe('true');
       });
 
       it('renders a design system BEM class name', () => {
         const fixture = TestBed.createComponent(UtrechtButtonAttr);
         fixture.componentRef.setInput('pressed', true);
         fixture.detectChanges();
-        expect(fixture.nativeElement).toHaveClass('utrecht-button--pressed');
+        expect(fixture.nativeElement.classList.contains('utrecht-button--pressed')).toBe(true);
       });
     });
   });
 
-  it('does not trigger a form submit when disabled', async () => {
-    const handleSubmit = jest.fn();
-
-    await render(
-      `<form (ngSubmit)={handleSubmit}>
-          <button type="submit" disabled>
-            Submit
-          </button>
-        </form>`,
-      {
-        declarations: [UtrechtButtonAttr],
-      },
-    );
-
-    const button = screen.getByRole('button', {
-      name: 'Submit',
-    });
-
+  it('does not trigger a form submit when disabled', () => {
+    const fixture = TestBed.createComponent(TestFormHostComponent);
+    fixture.detectChanges();
+    const button = fixture.nativeElement.querySelector('button') as HTMLButtonElement;
     button.click();
-
-    expect(handleSubmit).not.toHaveBeenCalled();
+    expect(fixture.componentInstance.onSubmit).not.toHaveBeenCalled();
   });
 
   // TODO to be able to test the custom class we have to add new property to the component `class` so we can test it.

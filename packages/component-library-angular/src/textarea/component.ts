@@ -26,7 +26,9 @@ export class UtrechtTextareaAttr {
   @Input() dir = '';
   @Input() disabled = false;
   @Input() invalid = false;
-  @Input() required = false;
+  @Input() name = '';
   @Input() readonly = false;
+  @Input() required = false;
+  @Input() type = '';
   constructor() {}
 }

@@ -33,8 +33,7 @@ const meta: Meta<UtrechtFieldsetProps> = {
   },
   decorators: [
     moduleMetadata({
-      declarations: [UtrechtFieldsetAttr, UtrechtFormLabelAttr],
-      imports: [CommonModule],
+      imports: [CommonModule, UtrechtFieldsetAttr, UtrechtFormLabelAttr],
     }),
   ],
   component: UtrechtFieldsetAttr,

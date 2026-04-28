@@ -1,6 +1,5 @@
 export * from './action-group/component';
 export * from './article/component';
-export * from './status-badge/component';
 export * from './button-group/component';
 export * from './button-link/component';
 export * from './button/component';
@@ -28,6 +27,7 @@ export * from './page/component';
 export * from './paragraph/component';
 export * from './radio-button/component';
 export * from './separator/component';
+export * from './status-badge/component';
 export * from './table-body/component';
 export * from './table-caption/component';
 export * from './table-cell/component';

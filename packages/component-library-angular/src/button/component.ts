@@ -27,8 +27,12 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   },
 })
 export class UtrechtButtonAttr {
-  @Input() busy = false;
-  @Input() pressed? = undefined;
   @Input() appearance?: string;
+  @Input() busy = false;
+  @Input() disabled = false;
+  @Input() invalid = false;
+  @Input() pressed? = undefined;
+  @Input() required = false;
+  @Input() type = '';
   constructor() {}
 }

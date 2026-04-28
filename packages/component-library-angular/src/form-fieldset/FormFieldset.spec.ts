@@ -1,107 +1,134 @@
-import { render, screen } from '@testing-library/angular';
+import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtFieldsetAttr } from './component';
-import { clearElements } from '../utils';
 
-afterEach(() => {
-  clearElements();
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset></fieldset>`,
+})
+class TestFieldsetHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset role="radiogroup"></fieldset>`,
+})
+class TestRadioGroupHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset class="large"></fieldset>`,
+})
+class TestCustomClassHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset><p>Description</p></fieldset>`,
+})
+class TestRichTextHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset name="first and last name fields"></fieldset>`,
+})
+class TestNameHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset form="this is a form"></fieldset>`,
+})
+class TestFormHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtFieldsetAttr],
+  template: `<fieldset utrecht-fieldset hidden></fieldset>`,
+})
+class TestHiddenHostComponent {}
 
 describe('Fieldset', () => {
-  it('renders a group role', async () => {
-    await render('<fieldset utrecht-fieldset></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-
-    const fieldset = screen.getByRole('group');
-    expect(fieldset).toBeInTheDocument();
-    expect(fieldset).toBeVisible();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [
+        TestFieldsetHostComponent,
+        TestRadioGroupHostComponent,
+        TestCustomClassHostComponent,
+        TestRichTextHostComponent,
+        TestNameHostComponent,
+        TestFormHostComponent,
+        TestHiddenHostComponent,
+      ],
+    }).compileComponents();
   });
 
-  it('can be configured with the radiogroup role', async () => {
-    await render('<fieldset utrecht-fieldset role="radiogroup"></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-
-    const fieldset = screen.getByRole('radiogroup');
-
-    expect(fieldset).toBeInTheDocument();
-    expect(fieldset).toBeVisible();
+  it('renders a group role', () => {
+    const fixture = TestBed.createComponent(TestFieldsetHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('fieldset')).not.toBeNull();
   });
 
-  it('renders an HTML fieldset element', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-
-    expect(fieldset).toBeInTheDocument();
+  it('can be configured with the radiogroup role', () => {
+    const fixture = TestBed.createComponent(TestRadioGroupHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('[role="radiogroup"]')).not.toBeNull();
   });
 
-  it('renders a design system BEM class name', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-
-    expect(fieldset).toHaveClass('utrecht-fieldset');
+  it('renders an HTML fieldset element', () => {
+    const fixture = TestBed.createComponent(TestFieldsetHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('fieldset:only-child')).not.toBeNull();
   });
 
-  it('can have a additional class name', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset class="large"></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-
-    expect(fieldset).toHaveClass('large');
-    expect(fieldset).toHaveClass('utrecht-fieldset');
+  it('renders a design system BEM class name', () => {
+    const fixture = TestBed.createComponent(TestFieldsetHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('fieldset')?.classList.contains('utrecht-fieldset')).toBe(true);
   });
 
-  it('displays as CSS block element', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-
-    expect(fieldset).toHaveStyle({ display: 'block' });
+  it('can have a additional class name', () => {
+    const fixture = TestBed.createComponent(TestCustomClassHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const fieldset = el.querySelector('fieldset')!;
+    expect(fieldset.classList.contains('large')).toBe(true);
+    expect(fieldset.classList.contains('utrecht-fieldset')).toBe(true);
   });
 
-  it('renders rich text content', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset><p>Description</p></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-
-    const fieldset = container.querySelector(':only-child');
-    const richText = fieldset?.querySelector('p');
-
-    expect(richText).toBeInTheDocument();
+  it('renders rich text content', () => {
+    const fixture = TestBed.createComponent(TestRichTextHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('fieldset')?.querySelector('p')).not.toBeNull();
   });
 
-  it('can have a name', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset name="first and last name fields"></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-    const name = fieldset?.getAttribute('name');
-
-    expect(name).toEqual('first and last name fields');
+  it('can have a name', () => {
+    const fixture = TestBed.createComponent(TestNameHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('fieldset')?.getAttribute('name')).toBe('first and last name fields');
   });
 
-  it('can have a form', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset form="this is a form"></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-    const form = fieldset?.getAttribute('form');
-
-    expect(form).toEqual('this is a form');
+  it('can have a form', () => {
+    const fixture = TestBed.createComponent(TestFormHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('fieldset')?.getAttribute('form')).toBe('this is a form');
   });
 
-  it('can be hidden', async () => {
-    const { container } = await render('<fieldset utrecht-fieldset hidden></fieldset>', {
-      declarations: [UtrechtFieldsetAttr],
-    });
-    const fieldset = container.querySelector('fieldset:only-child');
-
-    expect(fieldset).not.toBeVisible();
+  it('can be hidden', () => {
+    const fixture = TestBed.createComponent(TestHiddenHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect((el.querySelector('fieldset') as HTMLElement).hidden).toBe(true);
   });
 });

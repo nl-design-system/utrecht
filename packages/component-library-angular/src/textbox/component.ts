@@ -27,9 +27,13 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
   },
 })
 export class UtrechtTextboxAttr {
+  @Input() dir = '';
   @Input() disabled = false;
+  @Input() inputMode = '';
   @Input() invalid = false;
-  @Input() required = false;
+  @Input() name = '';
   @Input() readonly = false;
+  @Input() required = false;
+  @Input() type = '';
   constructor() {}
 }

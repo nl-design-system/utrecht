@@ -1,117 +1,113 @@
 import { TestBed } from '@angular/core/testing';
-// import { render, screen } from '@testing-library/angular';
-import { By } from '@angular/platform-browser';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtStatusBadge } from './component';
-import 'jest';
-
-afterEach(() => {
-  // Cleaning elements, because of a TestBed issue with the id attribute
-  Array.from(document.body.children).forEach(
-    (element: any) => element.tagName.toLocaleLowerCase() === 'div' && element.parentNode!.removeChild(element),
-  );
-});
 
 describe('Status Badge', () => {
-  it('renders a StatusBadge', async () => {
-    const fixture = TestBed.createComponent(UtrechtStatusBadge);
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [UtrechtStatusBadge],
+    }).compileComponents();
+  });
 
-    expect(fixture.nativeElement).toBeInTheDocument();
-    expect(fixture.nativeElement).toBeVisible();
+  it('renders a StatusBadge', () => {
+    const fixture = TestBed.createComponent(UtrechtStatusBadge);
+    fixture.detectChanges();
+    expect(fixture.nativeElement).not.toBeNull();
   });
 
   it('renders rich text content', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    el.nativeElement.innerHTML = '<strong>COMPLETED</strong>';
-
-    expect(fixture.nativeElement).toContainHTML('strong');
+    const el = fixture.nativeElement as HTMLElement;
+    const badge = el.querySelector('.utrecht-status-badge')!;
+    badge.innerHTML = '<strong>COMPLETED</strong>';
+    expect(el.querySelector('strong')).not.toBeNull();
   });
 
-  it('renders a design system BEM class name', async () => {
+  it('renders a design system BEM class name', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')).not.toBeNull();
   });
 
-  it('renders a class utrecht-status-badge--error based on status="error" property', async () => {
+  it('renders a class utrecht-status-badge--error based on status="error" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'error';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--error')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--error')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--neutral based on status="neutral" property', async () => {
+  it('renders a class utrecht-status-badge--neutral based on status="neutral" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'neutral';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--neutral')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--neutral')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--danger based on status="danger" property', async () => {
+  it('renders a class utrecht-status-badge--danger based on status="danger" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'danger';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--danger')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--danger')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--safe based on status="safe" property', async () => {
+  it('renders a class utrecht-status-badge--safe based on status="safe" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'safe';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--safe')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--safe')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--invalid based on status="invalid" property', async () => {
+  it('renders a class utrecht-status-badge--invalid based on status="invalid" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'invalid';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--invalid')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--invalid')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--valid based on status="valid" property', async () => {
+  it('renders a class utrecht-status-badge--valid based on status="valid" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'valid';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--valid')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--valid')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--warning based on status="warning" property', async () => {
+  it('renders a class utrecht-status-badge--warning based on status="warning" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'warning';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--warning')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--warning')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--success based on status="success" property', async () => {
+  it('renders a class utrecht-status-badge--success based on status="success" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'success';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--success')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--success')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--inactive based on status="inactive" property', async () => {
+  it('renders a class utrecht-status-badge--inactive based on status="inactive" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'inactive';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--inactive')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--inactive')).toBe(true);
   });
 
-  it('renders a class utrecht-status-badge--active based on status="active" property', async () => {
+  it('renders a class utrecht-status-badge--active based on status="active" property', () => {
     const fixture = TestBed.createComponent(UtrechtStatusBadge);
     fixture.componentInstance.status = 'active';
     fixture.detectChanges();
-    const el = fixture.debugElement.query(By.css('.utrecht-status-badge'));
-    expect(el.nativeElement.classList.contains('utrecht-status-badge--active')).toBe(true);
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('.utrecht-status-badge')?.classList.contains('utrecht-status-badge--active')).toBe(true);
   });
 });

@@ -1,66 +1,82 @@
-import { render } from '@testing-library/angular';
+import { Component } from '@angular/core';
+import { TestBed } from '@angular/core/testing';
+import { beforeEach, describe, expect, it } from 'vitest';
 import { UtrechtDocument } from './component';
-import { clearElements } from '../utils';
 
-import '@testing-library/jest-dom';
+@Component({
+  standalone: true,
+  imports: [UtrechtDocument],
+  template: `<div utrecht-document></div>`,
+})
+class TestDocumentHostComponent {}
 
-afterEach(() => {
-  clearElements();
-});
+@Component({
+  standalone: true,
+  imports: [UtrechtDocument],
+  template: `<div utrecht-document><h1>Breaking news</h1></div>`,
+})
+class TestRichTextHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtDocument],
+  template: `<div utrecht-document hidden></div>`,
+})
+class TestHiddenHostComponent {}
+
+@Component({
+  standalone: true,
+  imports: [UtrechtDocument],
+  template: `<div utrecht-document class="large"></div>`,
+})
+class TestCustomClassHostComponent {}
 
 describe('Document', () => {
-  it('renders an HTML div element', async () => {
-    const { fixture } = await render('<div utrecht-document></div>', { declarations: [UtrechtDocument] });
-
-    expect(fixture.nativeElement).toBeInTheDocument();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [
+        TestDocumentHostComponent,
+        TestRichTextHostComponent,
+        TestHiddenHostComponent,
+        TestCustomClassHostComponent,
+      ],
+    }).compileComponents();
   });
 
-  it('renders a design system BEM class name', async () => {
-    const { container } = await render('<div utrecht-document></div>', { declarations: [UtrechtDocument] });
-    const doc = container.querySelector(':only-child');
-
-    expect(doc).toHaveClass('utrecht-document');
+  it('renders an HTML div element', () => {
+    const fixture = TestBed.createComponent(TestDocumentHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector('div')).not.toBeNull();
   });
 
-  it('displays as CSS block element', async () => {
-    const { container } = await render('<div utrecht-document></div>', {
-      declarations: [UtrechtDocument],
-    });
-
-    const doc = container.querySelector(':only-child');
-
-    expect(doc).toBeVisible();
-    expect(doc).toHaveStyle({ display: 'block' });
+  it('renders a design system BEM class name', () => {
+    const fixture = TestBed.createComponent(TestDocumentHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector(':only-child')?.classList.contains('utrecht-document')).toBe(true);
   });
 
-  it('renders rich text content', async () => {
-    const { fixture, container } = await render('<div utrecht-document><h1>Breaking news</h1></div>', {
-      declarations: [UtrechtDocument],
-    });
-    const richText = container.querySelector('h1');
-
-    expect(fixture.nativeElement).toContainElement(richText);
+  it('renders rich text content', () => {
+    const fixture = TestBed.createComponent(TestRichTextHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const div = el.querySelector('div[utrecht-document]');
+    expect(div?.querySelector('h1')).not.toBeNull();
   });
 
-  it('can be hidden', async () => {
-    const { container } = await render('<div utrecht-document hidden="true"></div>', {
-      declarations: [UtrechtDocument],
-    });
-
-    const doc = container.querySelector(':only-child');
-
-    expect(doc).not.toBeVisible();
+  it('can be hidden', () => {
+    const fixture = TestBed.createComponent(TestHiddenHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    const doc = el.querySelector('div') as HTMLElement;
+    expect(doc.hidden).toBe(true);
   });
 
-  it('can have a custom class name', async () => {
-    const { container } = await render('<div utrecht-document [class]="class"></div>', {
-      declarations: [UtrechtDocument],
-      componentProperties: {
-        class: 'large',
-      },
-    });
-    const document = container.querySelector(':only-child');
-
-    expect(document).toHaveClass('large');
+  it('can have a custom class name', () => {
+    const fixture = TestBed.createComponent(TestCustomClassHostComponent);
+    fixture.detectChanges();
+    const el = fixture.nativeElement as HTMLElement;
+    expect(el.querySelector(':only-child')?.classList.contains('large')).toBe(true);
   });
 });

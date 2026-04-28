@@ -16,5 +16,6 @@ import { ChangeDetectionStrategy, Component, Input, ViewEncapsulation } from '@a
 })
 export class UtrechtLinkAttr {
   @Input() external = false;
+  @Input() rel = '';
   constructor() {}
 }

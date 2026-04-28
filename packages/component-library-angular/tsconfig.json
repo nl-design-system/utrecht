@@ -1,10 +1,11 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "baseUrl": ".",
     "outDir": "dist",
     "declaration": true,
+    "esModuleInterop": true,
     "declarationMap": true,
+    "moduleResolution": "bundler",
     "inlineSources": true,
     "types": []
   },

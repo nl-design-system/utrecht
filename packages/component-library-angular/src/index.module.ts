@@ -4,6 +4,7 @@ import { UtrechtActionGroup } from './action-group/component';
 import { UtrechtArticle } from './article/component';
 import { UtrechtButtonAttr } from './button/component';
 import { UtrechtButtonGroup } from './button-group/component';
+import { UtrechtButtonLinkAttr } from './button-link/component';
 import { UtrechtCheckboxAttr } from './checkbox/component';
 import { UtrechtDocument } from './document/component';
 import { UtrechtFormField } from './form-field/component';
@@ -47,6 +48,7 @@ const components = [
   UtrechtArticle,
   UtrechtButtonAttr,
   UtrechtButtonGroup,
+  UtrechtButtonLinkAttr,
   UtrechtCheckboxAttr,
   UtrechtDocument,
   UtrechtFieldsetAttr,
@@ -87,9 +89,8 @@ const components = [
 ];
 
 @NgModule({
-  declarations: [...components],
   exports: [...components],
-  imports: [CommonModule],
+  imports: [...components, CommonModule],
   providers: [],
 })
 export class UtrechtComponentsModule {}

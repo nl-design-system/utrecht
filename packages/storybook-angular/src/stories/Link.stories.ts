@@ -9,7 +9,7 @@ interface UtrechtLinkProps extends UtrechtLinkAttr {
   hrefLang?: string;
   lang?: string;
   placeholder?: boolean;
-  rel?: string;
+  rel: string;
   target?: string;
 }
 
@@ -232,7 +232,7 @@ export const Email: Story = {
   }),
   args: {
     href: 'mailto:info@example.com',
-    linkContent: 'info@example.com',
+    linkContent: 'info&#64;example.com',
   },
 };
 
