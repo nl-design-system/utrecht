@@ -9,33 +9,39 @@
 @use "./mixin" as *;
 
 .utrecht-customizable-text-input {
-  @include utrecht-textbox-sizing-props;
   @include utrecht-textbox-box;
 
   cursor: text;
-  display: inline-grid;
-  grid-template-areas: "start input end";
-  grid-template-columns: auto 1fr auto;
-  inline-size: 100%;
-  max-inline-size: min(
-    var(--_utrecht-textbox-max-inline-size, 100%),
-    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  );
+  display: inline-flex;
+  max-inline-size: 100%;
   min-block-size: calc(var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) * 2);
 }
 
 /**
- * Textbox overrides, since we're moving all the box styling to the customizable text input component
+ * Textbox overrides, since we're moving all the box styling to the customizable-text-input component
  * 1. Pull the the input over the border of the parent to maintain the ideal target size
+ * 2. We use clamp() to ensure the textbox never exceeds the max-inline-size but still grows to the preferred size.
+ *    This fixes the browser defaulting the inline-size to the default size=20 on an input in combination
+ *    with the display: inline-flex on the parent.
  */
 .utrecht-customizable-text-input .utrecht-textbox {
   background-color: transparent;
   border: none;
   grid-area: input;
+  inline-size: clamp(
+    var(--utrecht-pointer-target-min-size, 44px),
+    var(
+      --_utrecht-textbox-max-inline-size,
+      var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
+    ),
+    var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
+  ); /* [2] */
+
   margin-block: calc(var(--_utrecht-textbox-border-width) * -1); /* [1] */
   max-inline-size: none;
   min-block-size: 0;
   min-inline-size: 0;
+  order: 2;
 }
 
 /**
@@ -57,9 +63,11 @@
 .utrecht-customizable-text-input__slot--start {
   background-color: rgb(255 0 0 / 20%);
   grid-area: start;
+  order: 1;
 }
 
 .utrecht-customizable-text-input__slot--end {
   background-color: rgb(0 0 255 / 20%);
   grid-area: end;
+  order: 3;
 }
