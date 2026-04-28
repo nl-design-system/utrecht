@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Icon } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/icon-css/README.md?raw';
 import tokensDefinition from '@utrecht/icon-css/src/tokens.json';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Icon } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Icon',

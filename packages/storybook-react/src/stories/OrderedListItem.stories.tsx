@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { OrderedList, OrderedListItem } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
+import { OrderedList, OrderedListItem } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Ordered List/Item',

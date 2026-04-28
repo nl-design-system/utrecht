@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Heading6 } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/heading-6-css/README.md?raw';
 import tokensDefinition from '@utrecht/heading-6-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
+import { Heading6 } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Heading 6',

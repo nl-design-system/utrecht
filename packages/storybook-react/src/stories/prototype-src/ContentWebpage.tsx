@@ -1,3 +1,6 @@
+import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import React from 'react';
+import urls from './variables.js';
 import {
   AccordionProvider,
   ButtonGroup,
@@ -11,10 +14,7 @@ import {
   Strong,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import React from 'react';
-import urls from './variables.js';
+} from '../../../../component-library-react/src/index.js';
 const ContentWebpage: React.FC = () => {
   return (
     <>

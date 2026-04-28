@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Button } from '@utrecht/component-library-react/dist/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/tooltip-css/README.md?raw';
 import tokensDefinition from '@utrecht/tooltip-css/dist/tokens.mjs';
-import { Tooltip, TooltipAnchor } from '@utrecht/tooltip-react/dist/css.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Button } from '../../../component-library-react/src/index.js';
+import { Tooltip, TooltipAnchor } from '../../../components-react/tooltip-react/src/index.js';
 
 const meta = {
   title: 'React Component/Tooltip',

@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import type { DrawerProps } from '@utrecht/component-library-react';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import readme from '@utrecht/drawer-css/README.md?raw';
+import tokensDefinition from '@utrecht/drawer-css/dist/tokens.mjs';
+import React, { createRef, PropsWithChildren, useState } from 'react';
+import { designTokenStory } from './util.js';
 import {
   Button,
   ButtonGroup,
   Drawer,
   Paragraph,
   PrimaryActionButton,
-} from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import readme from '@utrecht/drawer-css/README.md?raw';
-import tokensDefinition from '@utrecht/drawer-css/dist/tokens.mjs';
-import React, { createRef, PropsWithChildren, useState } from 'react';
-import { designTokenStory } from './util.js';
+} from '../../../component-library-react/src/index.js';
+import type { DrawerProps } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Drawer',

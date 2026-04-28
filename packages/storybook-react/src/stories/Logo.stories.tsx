@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Logo, LogoImage } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/logo-css/README.md?raw';
 import tokensDefinition from '@utrecht/logo-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Logo, LogoImage } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Logo',

@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Heading } from '@utrecht/component-library-react/dist/css-module';
 import { RadioGroup } from '@utrecht/radio-group-react';
 import React from 'react';
+import { Heading } from '../../../component-library-react/src/index.js';
 
 const storyArgTypes = {
   invalid: {

@@ -1,4 +1,12 @@
 import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconCross,
+  UtrechtSeparator,
+} from '@utrecht/web-component-library-react';
+import React, { useState } from 'react';
+import urls from './variables.js';
+import {
   ButtonGroup,
   ButtonLink,
   Fieldset,
@@ -12,15 +20,7 @@ import {
   Link,
   Paragraph,
   RadioButton,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconCross,
-  UtrechtSeparator,
-} from '@utrecht/web-component-library-react';
-import React, { useState } from 'react';
-import urls from './variables.js';
+} from '../../../../component-library-react/src/index.js';
 
 const Events3: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');

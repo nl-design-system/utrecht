@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { FormField, FormLabel, RadioButton } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/radio-button-css/README.md?raw';
 import tokensDefinition from '@utrecht/radio-button-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
+import { FormField, FormLabel, RadioButton } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Radio Button',

@@ -1,4 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import readme from '@utrecht/table-css/README.md?raw';
+import tokensDefinition from '@utrecht/table-css/dist/tokens.mjs';
+import React from 'react';
+import { designTokenStory } from './util.js';
 import {
   Table,
   TableBody,
@@ -7,12 +12,7 @@ import {
   TableHeader,
   TableHeaderCell,
   TableRow,
-} from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import readme from '@utrecht/table-css/README.md?raw';
-import tokensDefinition from '@utrecht/table-css/dist/tokens.mjs';
-import React from 'react';
-import { designTokenStory } from './util.js';
+} from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Table',
