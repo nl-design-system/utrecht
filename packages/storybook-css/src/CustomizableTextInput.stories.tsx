@@ -15,12 +15,28 @@ const meta = {
   title: 'CSS Component/CustomizableTextInput',
   id: 'css-customizable-text-input',
   component: CustomizableTextInput,
-  argTypes: {},
+  argTypes: {
+    inputId: {
+      description: 'Koppelt start en end aan de text input en zorgt dat deze klikbaar zijn',
+      control: 'text',
+    },
+    children: {
+      description: 'Hier plaats je de text input',
+    },
+    start: {
+      description: 'Tekst, element of icoon dat wordt weergegeven aan het begin van de text input',
+      control: 'object',
+    },
+    end: {
+      description: 'Tekst, element of icoon dat wordt weergegeven aan het einde van de text input',
+      control: 'object',
+    },
+  },
   args: {
     start: 'start',
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
     end: 'end',
-    inputId: 'textbox',
+    inputId: 'textbox-default',
   },
   tags: ['autodocs'],
   parameters: {
@@ -81,9 +97,10 @@ export const SizingClasses: Story = {
   },
 };
 
-export const IconStart: Story = {
+export const WithIcon: Story = {
+  name: 'Met icoon',
   args: {
-    start: <Icon>→</Icon>,
+    start: <utrecht-icon-chevron-right />,
     end: undefined,
     inputId: 'textbox-icon-start',
     children: <Textbox id="textbox-icon-start" defaultValue="The quick brown fox jumps over the lazy dog" />,
@@ -91,6 +108,7 @@ export const IconStart: Story = {
 };
 
 export const WithExternalLabel: Story = {
+  name: 'Met extern label',
   args: {
     inputId: 'textbox-with-external-label',
   },
@@ -100,6 +118,43 @@ export const WithExternalLabel: Story = {
         <label htmlFor={args.inputId}>External label</label>
         <CustomizableTextInput {...args}>
           <Textbox id={args.inputId} />
+        </CustomizableTextInput>
+      </>
+    );
+  },
+};
+
+export const WithDescription: Story = {
+  name: 'Slot als beschrijving',
+  args: {
+    inputId: 'textbox-with-description',
+    end: <span id="textbox-with-description-description">mL per hour</span>,
+    start: undefined,
+  },
+  render: (args) => {
+    return (
+      <>
+        <CustomizableTextInput {...args}>
+          <Textbox id={args.inputId} aria-describedby="textbox-with-description-description" />
+        </CustomizableTextInput>
+      </>
+    );
+  },
+};
+
+export const WithInteractiveElement: Story = {
+  name: 'Slot met interactief element',
+  description: '',
+  args: {
+    inputId: undefined,
+    end: undefined,
+    start: <button>Button</button>,
+  },
+  render: (args) => {
+    return (
+      <>
+        <CustomizableTextInput {...args}>
+          <Textbox />
         </CustomizableTextInput>
       </>
     );

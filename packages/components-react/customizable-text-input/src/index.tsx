@@ -2,6 +2,8 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, ReactNode } from 'react';
 
 export interface CustomizableTextInputProps extends HTMLAttributes<HTMLSpanElement> {
+  iconStart?: ReactNode;
+  iconEnd?: ReactNode;
   start?: ReactNode;
   end?: ReactNode;
   inputId?: string;
@@ -15,16 +17,15 @@ export const CustomizableTextInput = forwardRef(
     return (
       <span {...restProps} className={clsx('utrecht-customizable-text-input', className)} ref={ref}>
         {start ? (
-          <SlotRenderer inputId={inputId} position="start">
+          <SlotRenderer inputId={inputId} position="start" hideFromAT>
             {start}
           </SlotRenderer>
         ) : null}
         {end ? (
-          <SlotRenderer inputId={inputId} position="end">
+          <SlotRenderer inputId={inputId} position="end" hideFromAT>
             {end}
           </SlotRenderer>
         ) : null}
-
         {children}
       </span>
     );
@@ -40,22 +41,19 @@ interface SlotRendererProps extends HTMLAttributes<HTMLElement> {
 }
 
 const SlotRenderer = ({ inputId, hideFromAT, className, position, ...restProps }: SlotRendererProps) => {
+  const classNames = clsx(
+    'utrecht-customizable-text-input__slot',
+    {
+      'utrecht-customizable-text-input__slot--start': position === 'start',
+      'utrecht-customizable-text-input__slot--end': position === 'end',
+    },
+    className,
+  );
+
   return inputId ? (
-    <label
-      {...restProps}
-      htmlFor={inputId}
-      className={clsx(
-        'utrecht-customizable-text-input__slot  utrecht-customizable-text-input__slot--label',
-        {
-          'utrecht-customizable-text-input__slot--start': position === 'start',
-          'utrecht-customizable-text-input__slot--end': position === 'end',
-        },
-        className,
-      )}
-      aria-hidden={hideFromAT ? true : undefined}
-    />
+    <label {...restProps} htmlFor={inputId} className={clsx(classNames)} aria-hidden={hideFromAT ? true : undefined} />
   ) : (
-    <span {...restProps} className={clsx('utrecht-customizable-text-input__slot', className)} />
+    <span {...restProps} className={clsx(classNames)} />
   );
 };
 

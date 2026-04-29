@@ -23,8 +23,6 @@
   &:has(> input:focus-visible, > .utrecht-textbox--focus-visible) {
     @include utrecht-textbox--focus-visible;
     @include utrecht-textbox--focus;
-
-    // TODO: high contrast
   }
 
   // Invalid
@@ -40,8 +38,6 @@
   // Disabled
   &:has(> input:disabled, > .utrecht-textbox--disabled) {
     @include utrecht-textbox--disabled;
-
-    // TODO: high contrast
   }
 }
 
@@ -103,10 +99,10 @@
   display: flex;
   justify-content: center;
   white-space: nowrap;
-}
 
-.utrecht-customizable-text-input__slot--label {
-  cursor: inherit;
+  &:is(label) {
+    cursor: inherit;
+  }
 }
 
 .utrecht-customizable-text-input__slot--start {
