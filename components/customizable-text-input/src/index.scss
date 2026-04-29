@@ -14,8 +14,12 @@
   cursor: text;
   display: inline-flex;
   max-inline-size: 100%;
-  min-block-size: calc(var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) * 2);
+  min-block-size: calc(
+    var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) -
+      var(--_utrecht-textbox-border-block-end-width)
+  );
 
+  /* States */
   &:has(> input:focus-visible, > .utrecht-textbox--focus-visible) {
     @include utrecht-textbox--focus-visible;
     @include utrecht-textbox--focus;
@@ -44,7 +48,9 @@
 /**
  * Utrecht Textbox overrides, since we're moving all the box styling to the customizable-text-input component
  * 1. Pull the the input over the border of the parent to maintain the ideal target size
- * 2. We use clamp() to ensure the textbox never exceeds the max-inline-size but still grows to the preferred size.
+ * 2. Because we pull the input over the border of the parent [1], we need to add padding to the textbox to keep the
+ *    content properly aligned in case of in-equal border widths.
+ * 3. We use clamp() to ensure the textbox never exceeds the max-inline-size but still grows to the preferred size.
  *    This fixes the browser defaulting the inline-size to the default size=20 on an input in combination
  *    with the display: inline-flex on the parent.
  */
@@ -57,13 +63,21 @@
       var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
     ),
     var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
-  ); /* [2] */
+  ); /* [3] */
 
-  margin-block: calc(var(--_utrecht-textbox-border-width) * -1); /* [1] */
+  margin-block-end: calc(var(--_utrecht-textbox-border-block-end-width) * -1); /* [1] */
+  margin-block-start: calc(var(--_utrecht-textbox-border-width) * -1); /* [1] */
   max-inline-size: none;
   min-block-size: 0;
   min-inline-size: 0;
   order: 2;
+  padding-block-end: calc(
+    var(--_utrecht-textbox-padding-block-end) + var(--_utrecht-textbox-border-block-end-width)
+  ); /* [2] */
+
+  padding-block-start: calc(
+    var(--_utrecht-textbox-padding-block-start) + var(--_utrecht-textbox-border-width)
+  ); /* [2] */
 
   &,
   &:focus,
@@ -74,8 +88,6 @@
     background-color: transparent;
     border: none;
     box-shadow: none;
-
-    /* background-color: rgba(255, 255, 255, 1); */
     color: currentColor;
     outline: none;
   }
@@ -98,13 +110,11 @@
 }
 
 .utrecht-customizable-text-input__slot--start {
-  /* background-color: rgb(255 0 0 / 20%); */
   grid-area: start;
   order: 1;
 }
 
 .utrecht-customizable-text-input__slot--end {
-  /* background-color: rgb(0 0 255 / 20%); */
   grid-area: end;
   order: 3;
 }
