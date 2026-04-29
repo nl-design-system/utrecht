@@ -13,7 +13,7 @@
 
   cursor: text;
   display: inline-flex;
-  max-inline-size: 100%;
+  max-inline-size: min(100%, var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size)));
   min-block-size: calc(
     var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) -
       var(--_utrecht-textbox-border-block-end-width)
