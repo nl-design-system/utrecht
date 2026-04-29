@@ -18,7 +18,7 @@ const meta = {
   argTypes: {},
   args: {
     start: '+31',
-    children: <Textbox id="textbox" defaultValue="The quick brown fox jumps over the lazy dog" />,
+    children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
     end: 'kWh',
     inputId: 'textbox',
   },
@@ -50,11 +50,33 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
 
+export const Invalid: Story = {
+  args: {
+    children: <Textbox id="textbox-invalid" defaultValue="The quick brown fox jumps over the lazy dog" invalid />,
+    inputId: 'textbox-invalid',
+  },
+};
+
+export const ReadOnly: Story = {
+  args: {
+    children: <Textbox id="textbox-read-only" defaultValue="The quick brown fox jumps over the lazy dog" readOnly />,
+    inputId: 'textbox-read-only',
+  },
+};
+
+export const Disabled: Story = {
+  args: {
+    children: <Textbox id="textbox-disabled" defaultValue="The quick brown fox jumps over the lazy dog" disabled />,
+    inputId: 'textbox-disabled',
+  },
+};
+
 export const IconStart: Story = {
   args: {
     start: <Icon>→</Icon>,
     end: undefined,
-    inputId: 'textbox-with-external-label',
+    inputId: 'textbox-icon-start',
+    children: <Textbox id="textbox-icon-start" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
 };
 

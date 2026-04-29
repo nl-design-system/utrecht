@@ -15,18 +15,40 @@
   display: inline-flex;
   max-inline-size: 100%;
   min-block-size: calc(var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) * 2);
+
+  &:has(> input:focus-visible, > .utrecht-textbox--focus-visible) {
+    @include utrecht-textbox--focus-visible;
+    @include utrecht-textbox--focus;
+
+    // TODO: high contrast
+  }
+
+  // Invalid
+  &:has(> input[aria-invalid="true"], > .utrecht-textbox--invalid) {
+    @include utrecht-textbox--invalid;
+  }
+
+  // Readonly
+  &:has(> input:read-only, > .utrecht-textbox--read-only) {
+    @include utrecht-textbox--read-only;
+  }
+
+  // Disabled
+  &:has(> input:disabled, > .utrecht-textbox--disabled) {
+    @include utrecht-textbox--disabled;
+
+    // TODO: high contrast
+  }
 }
 
 /**
- * Textbox overrides, since we're moving all the box styling to the customizable-text-input component
+ * Utrecht Textbox overrides, since we're moving all the box styling to the customizable-text-input component
  * 1. Pull the the input over the border of the parent to maintain the ideal target size
  * 2. We use clamp() to ensure the textbox never exceeds the max-inline-size but still grows to the preferred size.
  *    This fixes the browser defaulting the inline-size to the default size=20 on an input in combination
  *    with the display: inline-flex on the parent.
  */
 .utrecht-customizable-text-input .utrecht-textbox {
-  background-color: transparent;
-  border: none;
   grid-area: input;
   inline-size: clamp(
     var(--utrecht-pointer-target-min-size, 44px),
@@ -42,6 +64,21 @@
   min-block-size: 0;
   min-inline-size: 0;
   order: 2;
+
+  &,
+  &:focus,
+  &:focus-visible,
+  &.utrecht-textbox--focus-visible,
+  &.utrecht-textbox--invalid,
+  &.utrecht-textbox--disabled {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+
+    /* background-color: rgba(255, 255, 255, 1); */
+    color: currentColor;
+    outline: none;
+  }
 }
 
 /**
@@ -61,13 +98,13 @@
 }
 
 .utrecht-customizable-text-input__slot--start {
-  background-color: rgb(255 0 0 / 20%);
+  /* background-color: rgb(255 0 0 / 20%); */
   grid-area: start;
   order: 1;
 }
 
 .utrecht-customizable-text-input__slot--end {
-  background-color: rgb(0 0 255 / 20%);
+  /* background-color: rgb(0 0 255 / 20%); */
   grid-area: end;
   order: 3;
 }
