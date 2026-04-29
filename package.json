@@ -111,7 +111,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch"
+      "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch",
+      "@joshwooding/vite-plugin-react-docgen-typescript": "patches/@joshwooding__vite-plugin-react-docgen-typescript.patch"
     },
     "overrides": {
       "handlebars@>=4.6.0 <=4.7.8": ">=4.7.9",
