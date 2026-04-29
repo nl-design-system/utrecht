@@ -11,6 +11,9 @@ overrides:
 packageExtensionsChecksum: sha256-DyTONDcwuNBL+rN8AjnH/wxMB5hrUymzWhDnSpd567I=
 
 patchedDependencies:
+  '@joshwooding/vite-plugin-react-docgen-typescript':
+    hash: aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d
+    path: patches/@joshwooding__vite-plugin-react-docgen-typescript.patch
   '@stencil/core@4.18.3':
     hash: 2eee889b1115e452390633b95e27d00485eac5df140e7200f7ce8de67fc79aff
     path: patches/@stencil__core@4.18.3.patch
@@ -35439,7 +35442,7 @@ snapshots:
       '@types/yargs': 17.0.32
       chalk: 4.1.2
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.69.7)(terser@5.44.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.69.7)(terser@5.44.0))':
     dependencies:
       glob: 13.0.6
       react-docgen-typescript: 2.4.0(typescript@5.9.3)
@@ -35447,7 +35450,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.77.8)(terser@5.44.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.77.8)(terser@5.44.0))':
     dependencies:
       glob: 13.0.6
       react-docgen-typescript: 2.4.0(typescript@5.9.3)
@@ -35455,7 +35458,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))':
     dependencies:
       glob: 13.0.6
       react-docgen-typescript: 2.4.0(typescript@5.9.3)
@@ -35463,7 +35466,7 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.93.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.93.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))':
     dependencies:
       glob: 13.0.6
       react-docgen-typescript: 2.4.0(typescript@5.9.3)
@@ -37735,7 +37738,7 @@ snapshots:
 
   '@storybook/react-vite@10.3.5(esbuild@0.25.9)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.69.7)(terser@5.44.0))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.69.7)(terser@5.44.0))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.69.7)(terser@5.44.0))
       '@rollup/pluginutils': 5.3.0(rollup@4.50.0)
       '@storybook/builder-vite': 10.3.5(esbuild@0.25.9)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.69.7)(terser@5.44.0))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
       '@storybook/react': 10.3.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
@@ -37757,7 +37760,7 @@ snapshots:
 
   '@storybook/react-vite@10.3.5(esbuild@0.25.9)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.93.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.93.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.93.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
       '@rollup/pluginutils': 5.3.0(rollup@4.50.0)
       '@storybook/builder-vite': 10.3.5(esbuild@0.25.9)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.93.3)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
       '@storybook/react': 10.3.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@2.8.8)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
@@ -37779,7 +37782,7 @@ snapshots:
 
   '@storybook/react-vite@10.3.5(esbuild@0.25.9)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.77.8)(terser@5.44.0))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.77.8)(terser@5.44.0))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.77.8)(terser@5.44.0))
       '@rollup/pluginutils': 5.3.0(rollup@4.50.0)
       '@storybook/builder-vite': 10.3.5(esbuild@0.25.9)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@5.0.13(@types/node@24.10.4)(less@4.2.0)(sass@1.77.8)(terser@5.44.0))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
       '@storybook/react': 10.3.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)
@@ -37801,7 +37804,7 @@ snapshots:
 
   '@storybook/react-vite@10.3.5(esbuild@0.25.9)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.7.0(patch_hash=aba21812c68c0ee4c53c49e18b2089441b9ec1e8c30cc16a7a4787cffb740b7d)(typescript@5.9.3)(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))
       '@rollup/pluginutils': 5.3.0(rollup@4.50.0)
       '@storybook/builder-vite': 10.3.5(esbuild@0.25.9)(rollup@4.50.0)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(vite@7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.8.1))(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9))
       '@storybook/react': 10.3.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(storybook@10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(typescript@5.9.3)

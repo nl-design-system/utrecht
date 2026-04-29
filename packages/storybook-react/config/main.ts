@@ -26,6 +26,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-jest'),
     getAbsolutePath('@etchteam/storybook-addon-status'),
     getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath('@storybook/addon-mcp'),
   ],
 
   features: {},
