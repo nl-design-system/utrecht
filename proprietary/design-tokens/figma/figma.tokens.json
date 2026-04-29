@@ -8534,6 +8534,99 @@
       }
     }
   },
+  "components/icon_button": {
+    "ams": {
+      "icon-button": {
+        "color": {
+          "$type": "color",
+          "$value": "{basis.color.action-1.color-default}"
+        },
+        "cursor": {
+          "$type": "other",
+          "$value": "default",
+          "$description": "[code-only]"
+        },
+        "outline-offset": {
+          "$type": "other",
+          "$value": "auto",
+          "$description": "[code-only]"
+        },
+        "disabled": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.disabled.color-subtle}"
+          },
+          "cursor": {
+            "$type": "other",
+            "$value": "disabled",
+            "$description": "[code-only]"
+          }
+        },
+        "hover": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.bg-hover}"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-hover}"
+          }
+        },
+        "contrast": {
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1.color-default}"
+          },
+          "disabled": {
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled.color-subtle}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.bg-hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1.color-hover}"
+            }
+          }
+        },
+        "inverse": {
+          "background-color": {
+            "$type": "color",
+            "$value": "transparent"
+          },
+          "color": {
+            "$type": "color",
+            "$value": "{basis.color.action-1-inverse.color-default}"
+          },
+          "disabled": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled-inverse.bg-subtle}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.disabled-inverse.color-subtle}"
+            }
+          },
+          "hover": {
+            "background-color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.bg-hover}"
+            },
+            "color": {
+              "$type": "color",
+              "$value": "{basis.color.action-1-inverse.color-hover}"
+            }
+          }
+        }
+      }
+    }
+  },
   "components/icon-only-button": {
     "todo": {
       "icon-only-button": {
@@ -15917,6 +16010,7 @@
       "components/heading-5",
       "components/heading-6",
       "components/icon",
+      "components/icon_button",
       "components/icon-only-button",
       "components/image",
       "components/link/nl",
