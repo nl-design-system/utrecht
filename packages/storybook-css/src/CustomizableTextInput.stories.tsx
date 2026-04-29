@@ -17,9 +17,9 @@ const meta = {
   component: CustomizableTextInput,
   argTypes: {},
   args: {
-    start: '+31',
+    start: 'start',
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
-    end: 'kWh',
+    end: 'end',
     inputId: 'textbox',
   },
   tags: ['autodocs'],
@@ -58,6 +58,7 @@ export const Invalid: Story = {
 };
 
 export const ReadOnly: Story = {
+  name: 'Read-only',
   args: {
     children: <Textbox id="textbox-read-only" defaultValue="The quick brown fox jumps over the lazy dog" readOnly />,
     inputId: 'textbox-read-only',
@@ -68,6 +69,15 @@ export const Disabled: Story = {
   args: {
     children: <Textbox id="textbox-disabled" defaultValue="The quick brown fox jumps over the lazy dog" disabled />,
     inputId: 'textbox-disabled',
+  },
+};
+
+export const SizingClasses: Story = {
+  args: {
+    start: '+31',
+    end: undefined,
+    children: <Textbox id="textbox-sizing-classes" className="utrecht-textbox--tel-nl-size" defaultValue="612345678" />,
+    inputId: 'textbox-sizing-classes',
   },
 };
 
