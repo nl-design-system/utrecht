@@ -1,0 +1,27 @@
+{
+  "common": {
+    "basis": {
+      "text": {
+        "font-weight": {
+          "default": {
+            "$type": "fontWeights",
+            "$value": "400"
+          },
+          "medium": {
+            "$type": "fontWeights",
+            "$value": "500",
+            "$description": "500, tussen waarde"
+          },
+          "semibold": {
+            "$type": "fontWeights",
+            "$value": "600"
+          },
+          "bold": {
+            "$type": "fontWeights",
+            "$value": "700"
+          }
+        }
+      }
+    }
+  }
+}
