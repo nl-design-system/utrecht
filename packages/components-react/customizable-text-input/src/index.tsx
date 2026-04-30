@@ -14,17 +14,19 @@ export const CustomizableTextInput = forwardRef(
   ) => {
     return (
       <span {...restProps} className={clsx('utrecht-customizable-text-input', className)} ref={ref}>
-        {start ? (
-          <SlotRenderer inputId={inputId} position="start" hideFromAT>
-            {start}
-          </SlotRenderer>
-        ) : null}
-        {end ? (
-          <SlotRenderer inputId={inputId} position="end" hideFromAT>
-            {end}
-          </SlotRenderer>
-        ) : null}
-        {children}
+        <span className="utrecht-customizable-text-input__inner">
+          {start ? (
+            <SlotRenderer inputId={inputId} position="start" hideFromAT>
+              {start}
+            </SlotRenderer>
+          ) : null}
+          {end ? (
+            <SlotRenderer inputId={inputId} position="end" hideFromAT>
+              {end}
+            </SlotRenderer>
+          ) : null}
+          <span className="utrecht-customizable-text-input__wrap-input">{children}</span>
+        </span>
       </span>
     );
   },
