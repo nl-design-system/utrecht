@@ -19,9 +19,8 @@
   @include utrecht-unordered-list--distanced;
 }
 
-.utrecht-unordered-list--nested,
 .utrecht-unordered-list--html-content ul {
-  @include utrecht-unordered-list--nested;
+  @include utrecht-unordered-list--html-content-ul;
 }
 
 .utrecht-unordered-list--html-content > li,

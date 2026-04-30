@@ -41,7 +41,7 @@
   --utrecht-space-around: 1;
 }
 
-@mixin utrecht-unordered-list--nested {
+@mixin utrecht-unordered-list--html-content-ul {
   padding-inline-start: var(
     --utrecht-unordered-list-nested-padding-inline-start,
     var(--utrecht-unordered-list-padding-inline-start, 1ch)
