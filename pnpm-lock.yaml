@@ -7031,6 +7031,9 @@ importers:
       lodash.merge:
         specifier: 4.6.2
         version: 4.6.2
+      mcp-add:
+        specifier: 0.2.4
+        version: 0.2.4
       react:
         specifier: 19.2.4
         version: 19.2.4
@@ -9986,6 +9989,12 @@ packages:
     engines: {node: '>=20.0.0', yarn: '>=1.22.18'}
     peerDependencies:
       storybook: ^0.0.0-0 || ^10.1.0 || ^10.1.0-0 || ^10.2.0-0 || ^10.3.0-0 || ^10.4.0-0
+
+  '@clack/core@1.0.0-alpha.8':
+    resolution: {integrity: sha512-WeffZaeeljmQRESBshhrlA3iQZuUYZg72FFoZMtWhhKiNkK6iVpa1RR5YBb7BJetPD/cl4XFMz/FWxTvETHRig==}
+
+  '@clack/prompts@1.0.0-alpha.10':
+    resolution: {integrity: sha512-RpwjRBA1cNlwFWlON1eZ630ErRZTzF6EyDbSWnxPmRDHeA+DL3cwliaBDRBr35ngdIbhu1PvZrxjZNbsG/aYwQ==}
 
   '@colors/colors@1.5.0':
     resolution: {integrity: sha512-ooWCrlZP11i8GImSjTHYHLkvFDP48nS4+204nGb1RiX/WXYHmJA2III9/e2DWVabCESdW7hBAEzHRqUn9OUVvQ==}
@@ -20722,6 +20731,10 @@ packages:
   mathml-tag-names@4.0.0:
     resolution: {integrity: sha512-aa6AU2Pcx0VP/XWnh8IGL0SYSgQHDT6Ucror2j2mXeFAlN3ahaNs8EZtG1YiticMkSLj3Gt6VPFfZogt7G5iFQ==}
 
+  mcp-add@0.2.4:
+    resolution: {integrity: sha512-c1P1grIabxFUfRJcXm8gQzhGqaFV+eDQlw1AJJwx5X0wzkfVU6NYQRAijXLl/147YH+/m7Q+JneEGlyxVuzSmg==}
+    hasBin: true
+
   mdast-normalize-headings@4.0.0:
     resolution: {integrity: sha512-PlUAiR4x49XGYLoyEoQYbqJfO6MdcGt5Uq/0ivZvAUv55YABk8psT6177lhng6hAwTF64P6CjXrE8Aew8oqSAQ==}
 
@@ -24836,10 +24849,6 @@ packages:
     resolution: {integrity: sha512-OtZKrVrGIT+m++lxyF0z5n68nkwdgZotPhy89bfA4T7nSWe0xeQtfbjM1z5VLTilJdWXH46g8i0oAcpQNkzZTg==}
     engines: {node: '>= 18', pnpm: '>= 9'}
 
-  smol-toml@1.5.2:
-    resolution: {integrity: sha512-QlaZEqcAH3/RtNyet1IPIYPsEWAaYyXXv1Krsi+1L/QHppjX4Ifm8MQsBISz9vE8cHicIq3clogsheili5vhaQ==}
-    engines: {node: '>= 18'}
-
   smol-toml@1.6.0:
     resolution: {integrity: sha512-4zemZi0HvTnYwLfrpk/CF9LOd9Lt87kAt50GnqhMpyF9U3poDAP2+iukq2bZsO/ufegbYehBkqINbsWxj4l4cw==}
     engines: {node: '>= 18'}
@@ -28598,7 +28607,7 @@ snapshots:
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       shiki: 3.20.0
-      smol-toml: 1.5.2
+      smol-toml: 1.6.0
       unified: 11.0.5
       unist-util-remove-position: 5.0.0
       unist-util-visit: 5.0.0
@@ -32948,6 +32957,17 @@ snapshots:
     transitivePeerDependencies:
       - '@chromatic-com/cypress'
       - '@chromatic-com/playwright'
+
+  '@clack/core@1.0.0-alpha.8':
+    dependencies:
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
+
+  '@clack/prompts@1.0.0-alpha.10':
+    dependencies:
+      '@clack/core': 1.0.0-alpha.8
+      picocolors: 1.1.1
+      sisteransi: 1.0.5
 
   '@colors/colors@1.5.0':
     optional: true
@@ -47524,6 +47544,14 @@ snapshots:
 
   mathml-tag-names@4.0.0: {}
 
+  mcp-add@0.2.4:
+    dependencies:
+      '@clack/prompts': 1.0.0-alpha.10
+      jsonc-parser: 3.3.1
+      smol-toml: 1.6.0
+      yaml: 2.8.1
+      yargs: 17.7.2
+
   mdast-normalize-headings@4.0.0:
     dependencies:
       '@types/mdast': 4.0.3
@@ -53249,8 +53277,6 @@ snapshots:
   smart-buffer@4.2.0: {}
 
   smol-toml@1.2.1: {}
-
-  smol-toml@1.5.2: {}
 
   smol-toml@1.6.0: {}
 

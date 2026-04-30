@@ -18,6 +18,7 @@
     "build": "storybook build --output-dir dist/ --config-dir config/ --quiet",
     "clean": "rimraf dist/",
     "lint-build:todo": "tsc --noEmit --project tsconfig.json",
+    "mcp-add": "mcp-add --type http --url 'http://localhost:6008/mcp' --scope project --name local-utrecht-storybook-react",
     "start": "http-server dist/",
     "storybook": "storybook dev --config-dir config/ --port 6008"
   },
@@ -153,6 +154,7 @@
     "date-fns": "4.1.0",
     "http-server": "14.1.1",
     "lodash.merge": "4.6.2",
+    "mcp-add": "0.2.4",
     "react": "19.2.4",
     "react-docgen-typescript": "2.4.0",
     "react-dom": "19.2.4",

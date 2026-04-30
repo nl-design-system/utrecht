@@ -204,6 +204,28 @@ The scripts above use `nx` to automatically run all scripts that are a prerequis
 | `pnpm run publish`  | Publish each package to the npm registry                                  |
 | `pnpm run release`  | Determine new version number automatically and update each `package.json` |
 
+## MCP server
+
+The Storybook for React components provides an [MCP server](https://storybook.js.org/docs/ai/mcp/overview), when running it locally:
+
+```shell
+pnpm run storybook-react
+```
+
+The information needed to connect to the MCP server is specified in `.mcp.json`. You can also try your luck with configuring it using this tool:
+
+```shell
+pnpm run mcp-add
+```
+
+Once the MCP server is available, instruct the LLM to use it, for example like so:
+
+> Use the MCP server `local-utrecht-storybook-react` for all knowledge of existing design system components.
+
+With the MCP server an LLM can use the information about the components to generate code, for example:
+
+> Create a form that asks for a persons name and address, using design system components.
+
 ## Other scripts
 
 ### `pnpm run build-vercel`
