@@ -1,5 +1,17 @@
 # @utrecht/form-field-checkbox-react
 
+## 1.1.6
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/form-field-error-message-react@1.0.12
+  - @utrecht/form-field-description-react@1.0.12
+  - @utrecht/form-field-react@1.0.13
+  - @utrecht/form-label-react@1.0.12
+  - @utrecht/checkbox-react@1.0.14
+
 ## 1.1.5
 
 ### Patch Changes

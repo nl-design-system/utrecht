@@ -1,5 +1,16 @@
 # @utrecht/select-combobox-react
 
+## 1.0.19
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/combobox-react@0.0.13
+  - @utrecht/listbox-react@1.0.17
+  - @utrecht/textbox-react@1.0.16
+  - @utrecht/button-react@3.0.3
+
 ## 1.0.18
 
 ### Patch Changes

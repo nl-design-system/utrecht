@@ -1,5 +1,11 @@
 # @utrecht/page-footer-css
 
+## 4.0.2
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 4.0.1
 
 ### Patch Changes

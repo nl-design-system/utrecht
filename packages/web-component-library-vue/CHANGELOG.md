@@ -1,5 +1,13 @@
 # @utrecht/web-component-library-vue
 
+## 3.0.4
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/web-component-library-stencil@4.2.1
+
 ## 3.0.3
 
 ### Patch Changes

@@ -1,5 +1,11 @@
 # @utrecht/web-component-library-stencil
 
+## 4.2.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 4.2.0
 
 ### Minor Changes

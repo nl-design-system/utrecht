@@ -4,6 +4,16 @@
 
 ### Minor Changes
 
+- 7e568ef: wijk iconen update
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
+## 2.3.0
+
+### Minor Changes
+
 - 8c243b3: New icons
 
   - Changed and added header icon groups
@@ -15,7 +25,6 @@
   - UtrechtIconWijkGesprek
   - UtrechtIconWijkInspraak
   - UtrechtIconWijkGroepsgesprek
-
 
 ## 2.2.0
 

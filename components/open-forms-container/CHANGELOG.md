@@ -1,5 +1,14 @@
 # @utrecht/open-forms-container-css
 
+## 3.0.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/focus-ring-css@4.0.1
+  - @utrecht/textbox-css@4.0.1
+
 ## 3.0.0
 
 ### Major Changes

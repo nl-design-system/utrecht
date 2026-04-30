@@ -1,5 +1,11 @@
 # @utrecht/root-css
 
+## 4.1.2
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 4.1.1
 
 ### Patch Changes

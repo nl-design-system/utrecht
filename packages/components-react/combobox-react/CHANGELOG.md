@@ -1,5 +1,13 @@
 # @utrecht/combobox-react
 
+## 0.0.13
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/combobox-css@3.0.1
+
 ## 0.0.12
 
 ### Patch Changes

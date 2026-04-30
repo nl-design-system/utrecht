@@ -1,5 +1,11 @@
 # @utrecht/assets
 
+## 1.0.2
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 1.0.1
 
 ### Patch Changes
