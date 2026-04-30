@@ -115,6 +115,7 @@ declare const tokens: DesignToken[];`;
           format: 'css/variables',
           options: {
             selector: `.${themeName}`,
+            sort: 'name',
             outputReferences: true,
           },
         },
@@ -123,6 +124,7 @@ declare const tokens: DesignToken[];`;
           format: 'css/variables',
           options: {
             selector: `:root`,
+            sort: 'name',
             outputReferences: true,
           },
         },
@@ -141,6 +143,7 @@ declare const tokens: DesignToken[];`;
           format: 'css/variables',
           options: {
             selector: '.utrecht-theme',
+            sort: 'name',
             outputReferences: true,
           },
         },
@@ -252,6 +255,7 @@ declare const tokens: DesignToken[];`;
           options: {
             selector: `:root`,
             outputReferences: true,
+            sort: 'name',
           },
         },
         {
