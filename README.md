@@ -2,8 +2,6 @@
 
 # Utrecht Design System
 
-**This project is very much WORK IN PROGRESS and all components are released as _alpha_ version. Always define the exact version you want to use, and test for breaking changes before upgrading to a newer alpha release.**
-
 Applying design elements from this project is strictly prohibited for organisations that are not part of the Municipality of Utrecht.
 
 This project is part of a community iniative to use NL Design System components for projects that need to adhere to the Utrecht Design System. Teams from the central Municipality of Utrecht, as well as those who are contracted by them to develop websites and apps, are able to collaborate via this project.
