@@ -1,7 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Icon } from '@utrecht/component-library-react';
+import { Combobox, ComboboxPopover } from '@utrecht/combobox-react';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
 import anatomyDocs from '@utrecht/customizable-text-input-css/docs/anatomy.nl.md?raw';
 import tokensDefinition from '@utrecht/customizable-text-input-css/src/tokens.json';
@@ -150,11 +150,35 @@ export const WithInteractiveElement: Story = {
     end: undefined,
     start: <button>Button</button>,
   },
+};
+
+export const WithCombobox: Story = {
+  name: 'Slot met combobox',
+  args: {
+    inputId: 'combobox',
+  },
   render: (args) => {
     return (
       <>
         <CustomizableTextInput {...args}>
-          <Textbox />
+          <Combobox>
+            <Textbox
+              className="utrecht-combobox__input"
+              id={args.inputId}
+              autoComplete="off"
+              aria-autocomplete="list"
+              aria-haspopup="listbox"
+              aria-controls={'combobox-popover'}
+            />
+            <ComboboxPopover
+              className="utrecht-listbox utrecht-listbox--html-div utrecht-combobox__popover utrecht-combobox__popover--block-end"
+              id="combobox-popover"
+              role="listbox"
+              tabIndex={-1}
+            >
+              Combobox list
+            </ComboboxPopover>
+          </Combobox>
         </CustomizableTextInput>
       </>
     );
