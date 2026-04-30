@@ -3,6 +3,9 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Combobox, ComboboxPopover } from '@utrecht/combobox-react';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
+import clickableDocs from '@utrecht/customizable-text-input-css/_clickable.md?raw';
+import describedByDocs from '@utrecht/customizable-text-input-css/_described-by.md?raw';
+import sizingClassesDocs from '@utrecht/customizable-text-input-css/_sizing-classes.md?raw';
 import anatomyDocs from '@utrecht/customizable-text-input-css/docs/anatomy.nl.md?raw';
 import tokensDefinition from '@utrecht/customizable-text-input-css/src/tokens.json';
 import { CustomizableTextInput } from '@utrecht/customizable-text-input-react';
@@ -36,7 +39,6 @@ const meta = {
     start: undefined,
     end: <utrecht-icon-search />,
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
-    inputId: 'textbox-default',
   },
   tags: ['autodocs'],
   parameters: {
@@ -88,23 +90,56 @@ export const Disabled: Story = {
   },
 };
 
-export const SizingClasses: Story = {
-  // TODO: add description
+export const ClickableSlots: Story = {
+  name: 'Klikbare slots',
   args: {
-    start: '+31',
+    children: <Textbox id="textbox-clickable" defaultValue="The quick brown fox jumps over the lazy dog" />,
+    inputId: 'textbox-clickable',
+    start: <utrecht-icon-user />,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: clickableDocs,
+      },
+    },
+  },
+};
+
+export const SizingClasses: Story = {
+  args: {
+    start: <utrecht-icon-phone />,
     end: undefined,
-    children: <Textbox id="textbox-sizing-classes" className="utrecht-textbox--tel-nl-size" defaultValue="612345678" />,
+    children: (
+      <Textbox id="textbox-sizing-classes" className="utrecht-textbox--tel-nl-size" defaultValue="0612345678" />
+    ),
     inputId: 'textbox-sizing-classes',
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: sizingClassesDocs,
+      },
+    },
   },
 };
 
 export const WithDescription: Story = {
-  // TODO: add description
   name: 'Slot als beschrijving',
   args: {
     inputId: 'textbox-with-description',
     end: <span id="textbox-with-description-description">mL per hour</span>,
     start: undefined,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: describedByDocs,
+      },
+    },
   },
   render: (args) => {
     return (
@@ -121,14 +156,13 @@ export const WithInteractiveElement: Story = {
   // TODO: add description
   name: 'Slot met interactief element',
   args: {
-    inputId: undefined,
     end: undefined,
     start: <button>Button</button>,
   },
 };
 
 export const WithCombobox: Story = {
-  name: 'Slot met combobox',
+  name: 'Met combobox',
   args: {
     inputId: 'combobox',
   },
@@ -143,11 +177,11 @@ export const WithCombobox: Story = {
               autoComplete="off"
               aria-autocomplete="list"
               aria-haspopup="listbox"
-              aria-controls={'combobox-popover'}
+              aria-controls={`${args.inputId}-popover`}
             />
             <ComboboxPopover
               className="utrecht-listbox utrecht-listbox--html-div utrecht-combobox__popover utrecht-combobox__popover--block-end"
-              id="combobox-popover"
+              id={`${args.inputId}-popover`}
               role="listbox"
               tabIndex={-1}
             >
