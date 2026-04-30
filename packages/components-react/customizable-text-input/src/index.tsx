@@ -2,8 +2,6 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, ReactNode } from 'react';
 
 export interface CustomizableTextInputProps extends HTMLAttributes<HTMLSpanElement> {
-  iconStart?: ReactNode;
-  iconEnd?: ReactNode;
   start?: ReactNode;
   end?: ReactNode;
   inputId?: string;
