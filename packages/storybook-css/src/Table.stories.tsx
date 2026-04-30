@@ -41,7 +41,7 @@ import readme from '@utrecht/table-css/README.md?raw';
 import actionReadme from '@utrecht/table-css/_table-row-action.md?raw';
 import tokensDefinition from '@utrecht/table-css/src/tokens.json';
 import clsx from 'clsx';
-import groupBy from 'lodash.groupby';
+import { groupBy } from 'es-toolkit/compat';
 import React, { createRef, PropsWithChildren, ReactNode, useId, useState } from 'react';
 import { designTokenStory } from './design-token-story';
 import { ExampleDateValue } from './util/ExampleDateValue';
@@ -1331,7 +1331,7 @@ export const TableFootnote: Story = {
   parameters: {
     docs: {
       description: {
-        story: `Een verwijzing naar een voetnoet in een tekst kan onduidelijk en moeilijk te gebruiken zijn. De \`font-size\` van een voetnoot is vaak kleiner dan omliggende tekst, daarom is een voetnoot soms niet groot genoeg. Als de voetnoot-verwijzing een link is, dan kan die te klein zijn om aan te klikken.  
+        story: `Een verwijzing naar een voetnoet in een tekst kan onduidelijk en moeilijk te gebruiken zijn. De \`font-size\` van een voetnoot is vaak kleiner dan omliggende tekst, daarom is een voetnoot soms niet groot genoeg. Als de voetnoot-verwijzing een link is, dan kan die te klein zijn om aan te klikken.
 
 Zorg dat voetnoot links minimaal 24x24 pixels groot zijn (WCAG 2.2 eis 2.5.8), bijvoorbeeld door niet alleen "1" te gebruiken als tekst, maar "voetnoot 1".
 

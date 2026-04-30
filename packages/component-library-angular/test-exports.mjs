@@ -1,8 +1,7 @@
 import { resolve } from 'node:path';
 import { readFile } from 'node:fs/promises';
 import { access, constants } from 'node:fs/promises';
-import isEqual from 'lodash.isequal';
-import cloneDeepWith from 'lodash.clonedeepwith';
+import { isEqual, cloneDeepWith } from 'es-toolkit/compat';
 
 const getSubset = (pkg) => ({
   module: pkg.module,

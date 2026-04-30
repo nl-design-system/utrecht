@@ -1,7 +1,7 @@
 /* eslint-env node */
 const bidiGlyphs = require('@unicode/unicode-15.1.0/Bidi_Mirroring_Glyph');
+const { kebabCase } = require('es-toolkit/compat');
 const { JSDOM } = require('jsdom');
-const lodash = require('lodash');
 const argv = require('minimist')(process.argv.slice(2), {
   string: ['prefix', 'path'],
 });
@@ -9,7 +9,6 @@ const { readdir, readFile, writeFile, mkdir } = require('node:fs/promises');
 const path = require('path');
 const { component, test, generateIconsName, style, iconContainerComponent } = require('./component_templates.js');
 
-const { kebabCase } = lodash;
 const componentPrefix = `${argv.prefix}-`;
 const componentsPath = argv.path;
 const iconRapperComponent = `${componentPrefix}container`;
