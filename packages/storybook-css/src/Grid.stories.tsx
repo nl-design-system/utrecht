@@ -57,9 +57,16 @@ const meta = {
       options: ['flex-start', 'center', 'flex-end'],
       description: 'Vertical alignment of grid cells',
     },
+    cols: {
+      control: 'select',
+      options: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+      description:
+        'Sets the total number of columns in the grid (1-12). Each column will have equal width (100% / cols). Creates a flexible grid where all columns have the same width.',
+    },
   },
   args: {
     spacing: 'md',
+    cols: 12,
   },
   tags: ['autodocs'],
   parameters: {
@@ -361,6 +368,56 @@ export const CustomBreakpoints: Story = {
       description: {
         story:
           'This story uses custom breakpoints: sm=400px, md=1024px, lg=1440px (vs defaults: sm=600px, md=960px, lg=1280px). Resize browser to see the difference.',
+      },
+    },
+  },
+};
+
+export const FiveColumns: Story = {
+  name: '5-Column Layout',
+  args: {
+    spacing: 'md',
+    cols: 5,
+    children: (
+      <>
+        <GridColumn color="#ffcccb">Column 1 (20%)</GridColumn>
+        <GridColumn color="#add8e6">Column 2 (20%)</GridColumn>
+        <GridColumn color="#90ee90">Column 3 (20%)</GridColumn>
+        <GridColumn color="#ffd700">Column 4 (20%)</GridColumn>
+        <GridColumn color="#d8bfd8">Column 5 (20%)</GridColumn>
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'This story demonstrates a 5-column layout using the simple cols prop. Each column takes up exactly 20% of the width (100% / 5).',
+      },
+    },
+  },
+};
+
+export const SevenColumns: Story = {
+  name: '7-Column Layout',
+  args: {
+    spacing: 'md',
+    cols: 7,
+    children: (
+      <>
+        {Array.from({ length: 7 }, (_, i) => (
+          <GridColumn key={i} color={['#ffcccb', '#add8e6', '#90ee90', '#ffd700', '#d8bfd8', '#e8f4fd', '#ffe8e8'][i]}>
+            Column {i + 1}
+          </GridColumn>
+        ))}
+      </>
+    ),
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'This example shows a 7-column layout. Each column takes up approximately 14.29% of the width (100% / 7).',
       },
     },
   },
