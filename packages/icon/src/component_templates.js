@@ -1,6 +1,5 @@
 /* eslint-disable no-undef */
-const lodash = require('lodash');
-const { camelCase, kebabCase, upperFirst } = lodash;
+const { camelCase, kebabCase, upperFirst } = require('es-toolkit/compat');
 
 exports.component = (name, children, container, unicodeBidi) => {
   const ComponentName = upperFirst(camelCase(name));
