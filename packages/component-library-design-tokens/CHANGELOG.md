@@ -1,5 +1,106 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.5
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [ed56958]
+- Updated dependencies [0f759fc]
+- Updated dependencies [7e568ef]
+  - @utrecht/heading-1-css@3.0.1
+  - @utrecht/heading-2-css@3.0.1
+  - @utrecht/heading-3-css@3.0.1
+  - @utrecht/heading-4-css@3.0.1
+  - @utrecht/heading-5-css@3.0.1
+  - @utrecht/heading-6-css@3.0.1
+  - @utrecht/form-field-error-message-css@3.0.1
+  - @utrecht/form-field-description-css@3.0.1
+  - @utrecht/alternate-lang-nav-css@3.0.1
+  - @utrecht/spotlight-section-css@3.0.2
+  - @utrecht/table-of-contents-css@2.0.1
+  - @utrecht/data-placeholder-css@3.0.1
+  - @utrecht/custom-checkbox-css@3.0.1
+  - @utrecht/breadcrumb-nav-css@3.0.1
+  - @utrecht/index-char-nav-css@3.0.1
+  - @utrecht/multiline-data-css@3.0.1
+  - @utrecht/unordered-list-css@3.1.1
+  - @utrecht/badge-counter-css@3.0.1
+  - @utrecht/column-layout-css@3.0.1
+  - @utrecht/currency-data-css@3.0.1
+  - @utrecht/form-fieldset-css@3.0.1
+  - @utrecht/heading-group-css@3.0.1
+  - @utrecht/preserve-data-css@3.0.1
+  - @utrecht/action-group-css@4.0.1
+  - @utrecht/alert-dialog-css@3.0.1
+  - @utrecht/button-group-css@3.0.1
+  - @utrecht/color-sample-css@3.0.1
+  - @utrecht/digid-button-css@2.0.1
+  - @utrecht/html-content-css@3.0.1
+  - @utrecht/number-badge-css@4.0.1
+  - @utrecht/ordered-list-css@4.0.1
+  - @utrecht/page-content-css@3.0.1
+  - @utrecht/radio-button-css@3.0.1
+  - @utrecht/status-badge-css@2.0.1
+  - @utrecht/top-task-link-css@3.0.1
+  - @utrecht/button-link-css@3.0.1
+  - @utrecht/form-toggle-css@3.0.1
+  - @utrecht/link-button-css@3.0.1
+  - @utrecht/link-social-css@3.0.1
+  - @utrecht/list-social-css@3.0.1
+  - @utrecht/logo-button-css@2.0.1
+  - @utrecht/number-data-css@3.0.1
+  - @utrecht/page-footer-css@4.0.2
+  - @utrecht/page-header-css@3.0.2
+  - @utrecht/pre-heading-css@3.0.1
+  - @utrecht/top-task-nav-css@2.0.1
+  - @utrecht/badge-list-css@4.0.1
+  - @utrecht/blockquote-css@3.0.1
+  - @utrecht/code-block-css@3.0.1
+  - @utrecht/data-badge-css@3.0.1
+  - @utrecht/form-field-css@3.0.1
+  - @utrecht/form-label-css@3.0.1
+  - @utrecht/logo-image-css@2.0.1
+  - @utrecht/map-marker-css@3.0.1
+  - @utrecht/pagination-css@3.0.1
+  - @utrecht/search-bar-css@4.0.1
+  - @utrecht/accordion-css@4.0.1
+  - @utrecht/data-list-css@3.0.1
+  - @utrecht/iban-data-css@3.0.1
+  - @utrecht/link-list-css@4.0.1
+  - @utrecht/paragraph-css@4.0.1
+  - @utrecht/rich-text-css@3.0.1
+  - @utrecht/separator-css@3.0.1
+  - @utrecht/skip-link-css@3.0.1
+  - @utrecht/backdrop-css@3.0.1
+  - @utrecht/calendar-css@3.0.1
+  - @utrecht/checkbox-css@3.0.1
+  - @utrecht/combobox-css@3.0.1
+  - @utrecht/document-css@3.0.1
+  - @utrecht/emphasis-css@3.0.1
+  - @utrecht/nav-list-css@2.0.1
+  - @utrecht/textarea-css@4.0.1
+  - @utrecht/url-data-css@3.0.1
+  - @utrecht/article-css@3.0.1
+  - @utrecht/listbox-css@3.0.1
+  - @utrecht/nav-bar-css@3.2.1
+  - @utrecht/surface-css@3.0.1
+  - @utrecht/textbox-css@4.0.1
+  - @utrecht/button-css@4.0.1
+  - @utrecht/drawer-css@3.0.1
+  - @utrecht/figure-css@3.0.1
+  - @utrecht/select-css@3.0.1
+  - @utrecht/alert-css@4.0.2
+  - @utrecht/table-css@3.0.1
+  - @utrecht/code-css@3.0.1
+  - @utrecht/form-css@3.0.1
+  - @utrecht/link-css@3.0.1
+  - @utrecht/logo-css@3.0.1
+  - @utrecht/mark-css@3.0.1
+  - @utrecht/page-css@3.0.1
+  - @utrecht/img-css@3.0.1
+  - @utrecht/icon@2.3.0
+
 ## 2.0.4
 
 ### Patch Changes

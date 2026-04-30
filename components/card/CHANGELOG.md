@@ -1,5 +1,13 @@
 # @utrecht/card-css
 
+## 2.0.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/img-css@3.0.1
+
 ## 2.0.0
 
 ### Major Changes

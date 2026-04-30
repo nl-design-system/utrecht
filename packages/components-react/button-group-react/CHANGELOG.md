@@ -1,5 +1,13 @@
 # @utrecht/button-group-react
 
+## 1.1.5
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/button-group-css@3.0.1
+
 ## 1.1.4
 
 ### Patch Changes

@@ -1,5 +1,13 @@
 # @utrecht/body-react
 
+## 0.0.12
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/body-css@4.0.1
+
 ## 0.0.11
 
 ### Patch Changes

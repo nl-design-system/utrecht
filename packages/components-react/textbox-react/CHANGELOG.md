@@ -1,5 +1,13 @@
 # @utrecht/textbox-react
 
+## 1.0.16
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/textbox-css@4.0.1
+
 ## 1.0.15
 
 ### Patch Changes

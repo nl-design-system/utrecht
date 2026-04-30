@@ -1,5 +1,11 @@
 # @utrecht/link-button-css
 
+## 3.0.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 3.0.0
 
 ### Major Changes

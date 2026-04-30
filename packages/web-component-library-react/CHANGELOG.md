@@ -1,5 +1,13 @@
 # @utrecht/web-component-library-react
 
+## 4.0.5
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/web-component-library-stencil@4.2.1
+
 ## 4.0.4
 
 ### Patch Changes

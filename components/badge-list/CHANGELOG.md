@@ -1,5 +1,11 @@
 # @utrecht/badge-list-css
 
+## 4.0.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 4.0.0
 
 ### Major Changes

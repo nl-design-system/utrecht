@@ -1,5 +1,13 @@
 # @utrecht/page-header-react
 
+## 1.0.12
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/page-header-css@3.0.2
+
 ## 1.0.11
 
 ### Patch Changes
