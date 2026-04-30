@@ -13,6 +13,7 @@
   max-inline-size: min(100%, var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size)));
   position: relative;
 }
+
 .utrecht-customizable-text-input__inner {
   @include utrecht-textbox-box;
 

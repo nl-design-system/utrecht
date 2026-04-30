@@ -144,7 +144,6 @@ export const WithDescription: Story = {
 
 export const WithInteractiveElement: Story = {
   name: 'Slot met interactief element',
-  description: '',
   args: {
     inputId: undefined,
     end: undefined,
