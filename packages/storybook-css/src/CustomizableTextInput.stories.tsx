@@ -33,9 +33,9 @@ const meta = {
     },
   },
   args: {
-    start: 'start',
+    start: undefined,
+    end: <utrecht-icon-search />,
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
-    end: 'end',
     inputId: 'textbox-default',
   },
   tags: ['autodocs'],
@@ -89,6 +89,7 @@ export const Disabled: Story = {
 };
 
 export const SizingClasses: Story = {
+  // TODO: add description
   args: {
     start: '+31',
     end: undefined,
@@ -97,34 +98,8 @@ export const SizingClasses: Story = {
   },
 };
 
-export const WithIcon: Story = {
-  name: 'Met icoon',
-  args: {
-    start: <utrecht-icon-chevron-right />,
-    end: undefined,
-    inputId: 'textbox-icon-start',
-    children: <Textbox id="textbox-icon-start" defaultValue="The quick brown fox jumps over the lazy dog" />,
-  },
-};
-
-export const WithExternalLabel: Story = {
-  name: 'Met extern label',
-  args: {
-    inputId: 'textbox-with-external-label',
-  },
-  render: (args) => {
-    return (
-      <>
-        <label htmlFor={args.inputId}>External label</label>
-        <CustomizableTextInput {...args}>
-          <Textbox id={args.inputId} />
-        </CustomizableTextInput>
-      </>
-    );
-  },
-};
-
 export const WithDescription: Story = {
+  // TODO: add description
   name: 'Slot als beschrijving',
   args: {
     inputId: 'textbox-with-description',
@@ -143,6 +118,7 @@ export const WithDescription: Story = {
 };
 
 export const WithInteractiveElement: Story = {
+  // TODO: add description
   name: 'Slot met interactief element',
   args: {
     inputId: undefined,
