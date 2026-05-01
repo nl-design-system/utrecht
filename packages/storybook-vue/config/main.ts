@@ -1,5 +1,12 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
 import type { StorybookConfig } from '@storybook/vue3-vite';
+import { createRequire } from 'node:module';
 import path, { dirname, join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
 // Utility to resolve the absolute path of a package
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments

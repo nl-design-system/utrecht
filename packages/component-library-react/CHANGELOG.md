@@ -1,5 +1,17 @@
 # @utrecht/component-library-react
 
+## 14.0.0
+
+### Major Changes
+
+- 0dfc3f9: Remove `VegaVisualisation` from component library bundle.
+
+### Patch Changes
+
+- Updated dependencies [cdcf151]
+  - @utrecht/page-footer-css@4.0.1
+  - @utrecht/page-header-css@3.0.1
+
 ## 13.3.1
 
 ### Patch Changes

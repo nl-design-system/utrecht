@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { UnorderedList, UnorderedListItem } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
+import { UnorderedList, UnorderedListItem } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Unordered List/Item',

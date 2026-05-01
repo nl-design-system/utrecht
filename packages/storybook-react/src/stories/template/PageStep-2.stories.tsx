@@ -1,5 +1,13 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import {
+  UtrechtBreadcrumbNav,
+  UtrechtDigidButton,
+  UtrechtFormFieldDescription,
+  UtrechtIconArrow,
+  UtrechtLogo,
+} from '@utrecht/web-component-library-react';
+import React from 'react';
+import {
   Button,
   ButtonLink,
   Fieldset,
@@ -19,15 +27,7 @@ import {
   RadioButton,
   Separator,
   Textbox,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtBreadcrumbNav,
-  UtrechtDigidButton,
-  UtrechtFormFieldDescription,
-  UtrechtIconArrow,
-  UtrechtLogo,
-} from '@utrecht/web-component-library-react';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 import '../styles.css';
 
 const meta = {

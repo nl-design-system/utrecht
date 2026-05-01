@@ -20,7 +20,8 @@
     "directory": "packages/flolegal-decision-tree-client"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "files": [
     "dist"

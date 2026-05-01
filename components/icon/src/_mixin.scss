@@ -18,16 +18,16 @@
   /*
    * Override the width of SVGs when they are hardcoded, and avoid oversized SVG icons.
    * For example:
-   * 
+   *
    *   <svg width="128px" height="128px">
    */
 
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   height: 100%;
 
   /* Remove tooltip from SVG `<title>` element using `pointer-events: none` */
   pointer-events: none;
 
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   width: 100%;
 }

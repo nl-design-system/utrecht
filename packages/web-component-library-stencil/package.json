@@ -9,7 +9,8 @@
   ],
   "private": false,
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.js",
@@ -69,7 +70,6 @@
     "@utrecht/form-fieldset-css": "workspace:*",
     "@utrecht/form-label-css": "workspace:*",
     "@utrecht/form-toggle-css": "workspace:*",
-    "@utrecht/heading-css": "workspace:*",
     "@utrecht/heading-1-css": "workspace:*",
     "@utrecht/heading-2-css": "workspace:*",
     "@utrecht/heading-3-css": "workspace:*",

@@ -1,5 +1,11 @@
 # @utrecht/page-body-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 65d4fa4: Add `utrecht.page-body.padding*` tokens for consistency with Page Header and Page Footer.
+
 ## 2.0.0
 
 ### Major Changes

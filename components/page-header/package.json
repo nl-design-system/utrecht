@@ -1,5 +1,5 @@
 {
-  "version": "3.0.0",
+  "version": "3.0.1",
   "author": "Community for NL Design System",
   "description": "Page header component for the Municipality of Utrecht based on the NL Design System architecture",
   "license": "EUPL-1.2",
@@ -22,7 +22,8 @@
     "nl-design-system"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git+ssh",

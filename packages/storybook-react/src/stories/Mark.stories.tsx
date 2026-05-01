@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Mark } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/mark-css/README.md?raw';
 import tokensDefinition from '@utrecht/mark-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
+import { Mark } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Mark',

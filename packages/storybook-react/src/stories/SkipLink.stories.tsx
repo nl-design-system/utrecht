@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { SkipLink } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/skip-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/skip-link-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { SkipLink } from '../../../component-library-react/src/index.js';
 
 // `will-change: transform` will create a "containing block" that will contain `position: fixed` elements.
 const ExampleViewport = (Story: () => React.ReactElement<any, string | React.JSXElementConstructor<any>>) => (

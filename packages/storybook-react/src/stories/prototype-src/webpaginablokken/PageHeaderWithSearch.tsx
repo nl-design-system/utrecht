@@ -1,5 +1,5 @@
-import { Button, Logo, LogoImage, PageHeader, Textbox } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
+import { Button, Logo, LogoImage, PageHeader, Textbox } from '../../../../../component-library-react/src/index.js';
 
 const PageHeaderWithSearch = () => {
   return (

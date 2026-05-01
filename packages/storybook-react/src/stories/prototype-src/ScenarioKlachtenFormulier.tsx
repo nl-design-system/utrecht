@@ -1,5 +1,5 @@
-import { Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
+import { Heading1, Paragraph } from '../../../../component-library-react/src/index.js';
 const ScenarioKlachten: React.FC = () => {
   return (
     <>

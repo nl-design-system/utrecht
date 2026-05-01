@@ -19,9 +19,10 @@
     "lint-build": "tsc --noEmit --project tsconfig.json"
   },
   "devDependencies": {
-    "@storybook/theming": "8.6.15",
+    "@storybook/theming": "8.6.14",
     "remark": "15.0.1",
     "remark-normalize-headings": "4.0.0",
+    "storybook": "10.3.5",
     "typescript": "5.9.3"
   },
   "dependencies": {

@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/button-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-css/dist/tokens.mjs';
-import { Button, ButtonProps } from '@utrecht/button-react/dist/css';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Button, type ButtonProps } from '../../../components-react/button-react/src/index.js';
 
 interface ButtonStoryProps extends ButtonProps {
   icon?: string;

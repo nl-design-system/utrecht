@@ -4,12 +4,10 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
-@use "~@utrecht/heading-css/src/mixin" as *;
-
 @mixin utrecht-heading-2 {
-  @include utrecht-heading;
-
-  break-after: avoid-page;
+  break-after: avoid;
+  break-inside: avoid-column;
+  break-inside: avoid;
   color: var(--utrecht-heading-2-color, var(--utrecht-heading-color, var(--utrecht-document-color, inherit)));
   font-family: var(
     --utrecht-heading-2-font-family,

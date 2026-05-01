@@ -1,6 +1,5 @@
 import glob from 'glob';
-import merge from 'lodash.merge';
-import isPlainObject from 'lodash.isplainobject';
+import { merge, isPlainObject } from 'es-toolkit/compat';
 import { resolve } from 'path';
 import { readFileSync, writeFileSync } from 'fs';
 import RegexTrie from 'regex-trie';

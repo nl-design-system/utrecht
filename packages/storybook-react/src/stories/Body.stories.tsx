@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/body-css/README.md?raw';
 import tokensDefinition from '@utrecht/body-css/dist/tokens.mjs';
-import { Body } from '@utrecht/body-react/dist/css';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Body } from '../../../components-react/body-react/src/index.js';
 
 const meta = {
   title: 'React Component/Body',

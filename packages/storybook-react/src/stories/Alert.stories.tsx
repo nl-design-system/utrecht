@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alert-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-css/dist/tokens.mjs';
-import { Alert, AlertProps, Heading1, Paragraph } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import iconSet from '@utrecht/icon/dist/iconset.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Alert, AlertProps, Heading1, Paragraph } from '../../../component-library-react/src/index.js';
 
 interface AlertStoryProps extends AlertProps {
   icon?: string;

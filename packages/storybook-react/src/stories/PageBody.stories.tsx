@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Heading1 } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/page-body-css/README.md?raw';
 import tokensDefinition from '@utrecht/page-body-css/dist/tokens.mjs';
-import { PageBody } from '@utrecht/page-body-react/dist/css';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Heading1 } from '../../../component-library-react/src/index.js';
+import { PageBody } from '../../../components-react/page-body-react/src/index.js';
 
 const meta = {
   title: 'React Component/Page Body',

@@ -13,7 +13,8 @@
     "@vue/shared": "^3.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git+ssh",
@@ -73,7 +74,6 @@
     "@utrecht/heading-4-css": "workspace:*",
     "@utrecht/heading-5-css": "workspace:*",
     "@utrecht/heading-6-css": "workspace:*",
-    "@utrecht/heading-css": "workspace:*",
     "@utrecht/html-content-css": "workspace:*",
     "@utrecht/link-css": "workspace:*",
     "@utrecht/link-social-css": "workspace:*",

@@ -1,6 +1,6 @@
 {
   "name": "@utrecht/page-footer-react",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "Page Footer component for the Municipality of Utrecht based on the NL Design System architecture",
   "keywords": [
     "nl-design-system"
@@ -27,6 +27,7 @@
       "import": "./dist/css.mjs"
     },
     "./CHANGELOG.md": "./CHANGELOG.md",
+    "./src/*": "./src/*",
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
@@ -53,7 +54,7 @@
     "src/"
   ],
   "scripts": {
-    "build": "rollup --config ./rollup.config.mjs",
+    "build": "rollup --config ./rollup.config.mjs && pnpm run init",
     "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
     "init": "init-react-package",
     "test": "mkdir -p pages && jest --coverage --verbose",
@@ -86,6 +87,7 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/button-link-css/README.md?raw';
 import tokensDefinition from '@utrecht/button-link-css/dist/tokens.mjs';
-import { ButtonLink } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { designTokenStory } from './util.js';
+import { ButtonLink } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Link that looks like a button',

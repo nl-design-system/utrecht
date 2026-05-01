@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/badge-list-css/README.md?raw';
 import tokensDefinition from '@utrecht/badge-list-css/dist/tokens.mjs';
-import { BadgeList, DataBadge } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { BadgeList, DataBadge } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Badge list',

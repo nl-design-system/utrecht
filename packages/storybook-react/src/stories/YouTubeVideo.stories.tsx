@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import tokensDefinition from '@utrecht/youtube-video-css/dist/tokens.mjs';
-import readme from '@utrecht/youtube-video-react/README.md?raw';
-import { YouTubeVideo } from '@utrecht/youtube-video-react/dist/css.mjs';
 import { designTokenStory } from './util.js';
+import readme from '../../../components-react/youtube-video-react/README.md?raw';
+import { YouTubeVideo } from '../../../components-react/youtube-video-react/src/index.js';
 
 const meta = {
   title: 'React Component/YouTube Video',

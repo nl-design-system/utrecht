@@ -1,6 +1,6 @@
 /* eslint-env node */
 
-const cloneDeepWith = require('lodash.clonedeepwith');
+const { cloneDeepWith } = require('es-toolkit/compat');
 const path = require('path');
 const { resolve } = require('url');
 

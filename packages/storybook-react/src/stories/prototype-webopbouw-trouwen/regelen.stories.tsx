@@ -1,5 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react';
 import {
+  UtrechtIconArrow,
+  UtrechtIconChevronLeft,
+  UtrechtIconChevronRight,
+} from '@utrecht/web-component-library-react';
+import React, { useState } from 'react';
+import {
   AccordionProvider,
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -21,13 +27,7 @@ import {
   Surface,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconChevronLeft,
-  UtrechtIconChevronRight,
-} from '@utrecht/web-component-library-react';
-import React, { useState } from 'react';
+} from '../../../../component-library-react/src/index.js';
 import '../prototype-src/index.css';
 import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';

@@ -1,4 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+import React from 'react';
 import {
   Logo,
   LogoImage,
@@ -6,13 +7,12 @@ import {
   PageContent,
   PageHeader,
   Surface,
-} from '@utrecht/component-library-react/dist/css-module';
-import '../prototype-src/index.css'; // Importeer stylesheet
-import '../styles.css';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 import ContentWebpageEvent3 from '../prototype-src/ContentWebpageEvent3.js';
 import FontTester from '../prototype-src/FontTester.js'; // ✅ Importeer de herbruikbare font-tester
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
+import '../prototype-src/index.css'; // Importeer stylesheet
+import '../styles.css';
 
 const meta = {
   title: 'Prototypes/Font voorbeeld/Events - 3',

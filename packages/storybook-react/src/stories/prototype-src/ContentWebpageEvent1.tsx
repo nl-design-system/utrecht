@@ -1,3 +1,6 @@
+import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtSeparator } from '@utrecht/web-component-library-react';
+import React from 'react';
+import urls from './variables.js';
 import {
   ButtonGroup,
   ButtonLink,
@@ -8,10 +11,7 @@ import {
   SpotlightSection,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronLeft, UtrechtSeparator } from '@utrecht/web-component-library-react';
-import React from 'react';
-import urls from './variables.js';
+} from '../../../../component-library-react/src/index.js';
 const Events1: React.FC = () => {
   return (
     <>

@@ -43,6 +43,7 @@ export const designTokenStory = (meta: any): any => {
     render: (({ tokens, definition, component }: Props) => (
       <ComponentTokensSection tokens={tokens} definition={definition} component={component} />
     )) as any,
+    tags: ['!manifest'],
   };
 
   return DesignTokensStory;

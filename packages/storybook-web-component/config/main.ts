@@ -1,6 +1,11 @@
-import type { StorybookConfig } from '@storybook/react-webpack5';
-import { dirname, join } from 'node:path';
-import * as webpack from 'webpack';
+import type { StorybookConfig } from '@storybook/react-vite';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
+import { dirname, join, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
 // Utility to resolve the absolute path of a package
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
@@ -10,12 +15,14 @@ const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
   },
-
-  stories: ['../src/**/*.stories.tsx', '../src/**/*.mdx'],
+  stories: ['../src/**/*.stories.@(js|jsx|mdx|ts|tsx)', '../src/**/*.mdx'],
   features: {},
   framework: {
-    name: getAbsolutePath('@storybook/react-webpack5'),
+    name: getAbsolutePath('@storybook/react-vite'),
     options: {},
+  },
+  typescript: {
+    reactDocgen: 'react-docgen-typescript',
   },
 
   addons: [
@@ -23,45 +30,32 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@storybook/preset-scss'),
     getAbsolutePath('@etchteam/storybook-addon-status'),
-    getAbsolutePath('@whitespace/storybook-addon-html'),
+    // getAbsolutePath('@whitespace/storybook-addon-html'),
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('storybook-addon-pseudo-states'),
   ],
-
   staticDirs: ['../../../proprietary/assets', '../src/script/'],
-
   docs: {},
-
-  webpackFinal: async (config: any) => {
-    // Add babel-loader to handle TypeScript and JSX compilation for Storybook 9
-    // This ensures proper transpilation of React components and TypeScript files
-    config.module.rules.push({
-      test: /\.(js|jsx|ts|tsx)$/,
-      exclude: /node_modules/,
-      use: [
+  async viteFinal(config) {
+    const { mergeConfig } = await import('vite');
+    return mergeConfig(config, {
+      define: {
+        global: 'globalThis',
+        'process.env': {},
+      },
+      plugins: [
         {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-typescript'],
+          name: 'fix-mdx-react-shim',
+          enforce: 'pre',
+          resolveId(source) {
+            if (source.startsWith('file://') && source.includes('mdx-react-shim.js')) {
+              return new URL(source).pathname;
+            }
+            return null;
           },
         },
       ],
     });
-
-    // Provide process polyfill for browser environment to fix Node.js compatibility issues
-    // Required for packages that reference process.env in browser context
-    config.plugins.push(
-      new webpack.ProvidePlugin({
-        process: 'process/browser',
-      }),
-    );
-    return config;
-  },
-
-  typescript: {
-    reactDocgen: 'react-docgen-typescript',
-    check: false,
-    checkOptions: {},
   },
 };
 

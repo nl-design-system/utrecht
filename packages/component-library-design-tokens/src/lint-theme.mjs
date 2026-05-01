@@ -1,7 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import merge from 'lodash.merge';
-import cloneDeepWith from 'lodash.clonedeepwith';
-import isPlainObject from 'lodash.isplainobject';
+import { cloneDeepWith, merge, isPlainObject } from 'es-toolkit/compat';
 import { glob } from 'glob';
 import { getComponentTokens } from './lib.mjs';
 import { isDesignToken, isDesignTokenDefinition } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens.js';

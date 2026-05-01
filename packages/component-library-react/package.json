@@ -1,6 +1,6 @@
 {
   "name": "@utrecht/component-library-react",
-  "version": "13.3.1",
+  "version": "14.0.0",
   "private": false,
   "description": "React component library bundle for the Municipality of Utrecht based on the NL Design System architecture",
   "keywords": [
@@ -38,10 +38,12 @@
     "./dist/.jest-test-results.json": "./dist/.jest-test-results.json",
     "./tsconfig.md": "./tsconfig.md",
     "./TESTING.md": "./TESTING.md",
+    "./SEMVER.md": "./SEMVER.md",
     "./README.nl.md": "./README.nl.md",
     "./README.md": "./README.md",
     "./CONTRIBUTING.md": "./CONTRIBUTING.md",
     "./CHANGELOG.md": "./CHANGELOG.md",
+    "./src/*": "./src/*",
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
@@ -251,6 +253,7 @@
     "react-dom": "^18.0.0 || ^19.0.0"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   }
 }

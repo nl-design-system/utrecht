@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { FormField, Paragraph, Textbox } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/form-field-css/README.md?raw';
 import tokensDefinition from '@utrecht/form-field-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { FormField, Paragraph, Textbox } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Form Field/Textbox',

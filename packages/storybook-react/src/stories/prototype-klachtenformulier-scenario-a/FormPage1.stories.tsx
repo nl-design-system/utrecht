@@ -1,4 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
+import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
+import React from 'react';
 import {
   BreadcrumbNav,
   BreadcrumbNavLink,
@@ -13,9 +15,7 @@ import {
   PageHeader,
   Paragraph,
   Surface,
-} from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronLeft } from '@utrecht/web-component-library-react';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 import '../prototype-src/index.css'; // Importeer stylesheet
 import FooterKlachten from '../prototype-src/FooterKlachtenFormulier.js'; // Importeer het footer-component
 import urls from '../prototype-src/variables.js';

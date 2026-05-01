@@ -16,14 +16,14 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
-    "@utrecht/heading-css": "workspace:*",
     "@utrecht/build-utils-css": "workspace:*"
   },
   "keywords": [
     "nl-design-system"
   ],
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "repository": {
     "type": "git+ssh",

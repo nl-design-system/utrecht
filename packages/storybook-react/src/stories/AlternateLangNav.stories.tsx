@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import tokensDefinition from '@utrecht/alert-dialog-css/dist/tokens.mjs';
 import readme from '@utrecht/alternate-lang-nav-css/README.md?raw';
-import { ButtonGroup, Heading, Link, LinkButton } from '@utrecht/component-library-react/dist/css-module/index';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { ButtonGroup, Heading, Link, LinkButton } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Alternate language navigation',

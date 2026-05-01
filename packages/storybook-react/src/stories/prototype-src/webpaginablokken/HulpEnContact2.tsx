@@ -1,4 +1,11 @@
 import {
+  UtrechtIconArrow,
+  UtrechtIconFacebook,
+  UtrechtIconX,
+  UtrechtIconYoutube,
+} from '@utrecht/web-component-library-react';
+import React, { useRef, useState } from 'react';
+import {
   AlertStory,
   Heading2,
   Heading3,
@@ -10,14 +17,7 @@ import {
   Strong,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconFacebook,
-  UtrechtIconX,
-  UtrechtIconYoutube,
-} from '@utrecht/web-component-library-react';
-import React, { useRef, useState } from 'react';
+} from '../../../../../component-library-react/src/index.js';
 
 const HulpEnContact2: React.FC = () => {
   return (

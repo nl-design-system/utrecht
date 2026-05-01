@@ -1,4 +1,11 @@
 import {
+  UtrechtIconArrow,
+  UtrechtIconFacebook,
+  UtrechtIconX,
+  UtrechtIconYoutube,
+} from '@utrecht/web-component-library-react';
+import React, { useRef, useState } from 'react';
+import {
   Button,
   FormFieldTextarea,
   FormFieldTextbox,
@@ -6,14 +13,7 @@ import {
   Heading3,
   LinkSocial,
   Separator,
-} from '@utrecht/component-library-react/dist/css-module';
-import {
-  UtrechtIconArrow,
-  UtrechtIconFacebook,
-  UtrechtIconX,
-  UtrechtIconYoutube,
-} from '@utrecht/web-component-library-react';
-import React, { useRef, useState } from 'react';
+} from '../../../../../component-library-react/src/index.js';
 
 // Props interface
 interface HulpEnContactProps {

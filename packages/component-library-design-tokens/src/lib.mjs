@@ -1,5 +1,5 @@
 import { readFile } from 'node:fs/promises';
-import merge from 'lodash.merge';
+import { merge } from 'es-toolkit/compat';
 import { glob } from 'glob';
 import { resolve } from 'path';
 
@@ -15,7 +15,7 @@ export const getComponentTokens = async () => {
   const tokens = await Promise.all(
     tokenFiles.map(async (tokensPath) => {
       try {
-        return JSON.parse(await readFile(tokensPath, 'utf-8'));
+        return JSON.parse(await readFile(tokensPath, 'utf8'));
       } catch (e) {
         return {};
       }

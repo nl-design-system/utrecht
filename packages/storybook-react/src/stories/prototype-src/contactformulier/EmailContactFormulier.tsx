@@ -1,3 +1,5 @@
+import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import React from 'react';
 import {
   ButtonLink,
   Heading1,
@@ -7,9 +9,7 @@ import {
   Paragraph,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import { UtrechtIconArrow, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
-import React from 'react';
+} from '../../../../../component-library-react/src/index.js';
 import urls from '../variables.js';
 const EmailContact: React.FC = () => {
   return (

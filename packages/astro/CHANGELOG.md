@@ -1,5 +1,22 @@
 # @utrecht/astro
 
+## 0.0.28
+
+### Patch Changes
+
+- Updated dependencies [0dfc3f9]
+- Updated dependencies [65d4fa4]
+- Updated dependencies [cdcf151]
+  - @utrecht/component-library-react@14.0.0
+  - @utrecht/page-body-css@2.1.0
+  - @utrecht/page-footer-css@4.0.1
+  - @utrecht/page-header-css@3.0.1
+  - @utrecht/storybook@0.0.2
+  - @utrecht/page-body-react@1.0.12
+  - @utrecht/web-component-library-stencil@4.2.0
+  - @utrecht/page-footer-react@1.0.12
+  - @utrecht/page-header-react@1.0.11
+
 ## 0.0.27
 
 ### Patch Changes

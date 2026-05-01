@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import readme from '@utrecht/select-combobox-react/README.md?raw';
-import { SelectCombobox } from '@utrecht/select-combobox-react/dist/css';
 import React, { ReactNode } from 'react';
 import { PartialStoryFn } from 'storybook/internal/types';
+import readme from '../../../components-react/select-combobox-react/README.md?raw';
+import { SelectCombobox } from '../../../components-react/select-combobox-react/src/index.js';
 
 const spaceForPopover = (Story: PartialStoryFn): ReactNode => (
   <div style={{ minBlockSize: '42em' }}>{Story() as ReactNode}</div>

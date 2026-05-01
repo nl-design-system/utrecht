@@ -1,5 +1,12 @@
+// This file has been automatically migrated to valid ESM format by Storybook.
 import type { StorybookConfig } from '@storybook/react-vite';
+import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const require = createRequire(import.meta.url);
 
 // Utility to resolve the absolute path of a package
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
@@ -22,7 +29,7 @@ const config: StorybookConfig = {
     getAbsolutePath('@storybook/addon-docs'),
     getAbsolutePath('@storybook/addon-a11y'),
     getAbsolutePath('@etchteam/storybook-addon-status'),
-    '@whitespace/storybook-addon-html', // Cannot use getAbsolutePath() - package structure incompatible with dirname(require.resolve())
+    // getAbsolutePath('@whitespace/storybook-addon-html'),
     getAbsolutePath('@storybook/addon-links'),
     getAbsolutePath('storybook-addon-pseudo-states'),
   ],
@@ -35,6 +42,18 @@ const config: StorybookConfig = {
         global: 'globalThis',
         'process.env': {},
       },
+      plugins: [
+        {
+          name: 'fix-mdx-react-shim',
+          enforce: 'pre',
+          resolveId(source) {
+            if (source.startsWith('file://') && source.includes('mdx-react-shim.js')) {
+              return new URL(source).pathname;
+            }
+            return null;
+          },
+        },
+      ],
       resolve: {
         alias: {
           '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),

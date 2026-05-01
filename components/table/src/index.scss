@@ -199,7 +199,9 @@
 
 .utrecht-table__header--hidden {
   block-size: 1px;
-  border: 0 solid silver;
+  border-color: silver;
+  border-style: solid;
+  border-width: 0;
   clip-path: inset(50%);
   inline-size: 1px;
   outline: 1px solid red;

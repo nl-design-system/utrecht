@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Page } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/page-css/README.md?raw';
 import tokensDefinition from '@utrecht/page-css/dist/tokens.mjs';
@@ -8,6 +7,7 @@ import { Default as PageContent } from './PageContent.stories.js';
 import { Default as PageHeader } from './PageContent.stories.js';
 import { Default as PageFooter } from './PageFooter.stories.js';
 import { designTokenStory } from './util.js';
+import { Page } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Page',

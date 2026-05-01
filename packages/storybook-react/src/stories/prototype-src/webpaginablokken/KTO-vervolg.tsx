@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import {
   Button,
   Fieldset,
@@ -9,8 +10,7 @@ import {
   Paragraph,
   RadioButton,
   Separator,
-} from '@utrecht/component-library-react/dist/css-module';
-import React, { useState } from 'react';
+} from '../../../../../component-library-react/src/index.js';
 
 const KTOvervolg: React.FC = () => {
   const [selectedOption, setSelectedOption] = useState<string>('');

@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/checkbox-css/README.md?raw';
 import tokensDefinition from '@utrecht/checkbox-css/dist/tokens.mjs';
-import { Checkbox } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { designTokenStory } from './util.js';
+import { Checkbox } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Checkbox',

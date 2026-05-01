@@ -2,8 +2,6 @@
 
 # Utrecht Design System
 
-**This project is very much WORK IN PROGRESS and all components are released as _alpha_ version. Always define the exact version you want to use, and test for breaking changes before upgrading to a newer alpha release.**
-
 Applying design elements from this project is strictly prohibited for organisations that are not part of the Municipality of Utrecht.
 
 This project is part of a community iniative to use NL Design System components for projects that need to adhere to the Utrecht Design System. Teams from the central Municipality of Utrecht, as well as those who are contracted by them to develop websites and apps, are able to collaborate via this project.
@@ -205,6 +203,28 @@ The scripts above use `nx` to automatically run all scripts that are a prerequis
 | `pnpm run nx-build` | Build each package (but faster, using cache)                              |
 | `pnpm run publish`  | Publish each package to the npm registry                                  |
 | `pnpm run release`  | Determine new version number automatically and update each `package.json` |
+
+## MCP server
+
+The Storybook for React components provides an [MCP server](https://storybook.js.org/docs/ai/mcp/overview), when running it locally:
+
+```shell
+pnpm run storybook-react
+```
+
+The information needed to connect to the MCP server is specified in `.mcp.json`. You can also try your luck with configuring it using this tool:
+
+```shell
+pnpm run mcp-add
+```
+
+Once the MCP server is available, instruct the LLM to use it, for example like so:
+
+> Use the MCP server `local-utrecht-storybook-react` for all knowledge of existing design system components.
+
+With the MCP server an LLM can use the information about the components to generate code, for example:
+
+> Create a form that asks for a persons name and address, using design system components.
 
 ## Other scripts
 

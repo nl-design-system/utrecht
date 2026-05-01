@@ -12,17 +12,17 @@ $utrecht-support-prince-xml: false !default;
  * https://github.com/hudochenkov/stylelint-order/pull/162 */
 /* stylelint-disable order/properties-alphabetical-order */
 @mixin utrecht-select {
-  background-color: var(--utrecht-select-background-color, var(--utrecht-form-control-background-color));
+  border-color: var(--utrecht-select-border-color, var(--utrecht-form-control-border-color));
+  border-radius: var(--utrecht-select-border-radius, var(--utrecht-form-control-border-radius, 0));
+  border-style: solid;
   border-block-end-width: var(
     --utrecht-select-border-block-end-width,
     var(--utrecht-select-border-width, var(--utrecht-form-control-border-width))
   );
   border-block-start-width: var(--utrecht-select-border-width, var(--utrecht-form-control-border-width));
-  border-color: var(--utrecht-select-border-color, var(--utrecht-form-control-border-color));
   border-inline-end-width: var(--utrecht-select-border-width, var(--utrecht-form-control-border-width));
   border-inline-start-width: var(--utrecht-select-border-width, var(--utrecht-form-control-border-width));
-  border-radius: var(--utrecht-select-border-radius, var(--utrecht-form-control-border-radius, 0));
-  border-style: solid;
+  background-color: var(--utrecht-select-background-color, var(--utrecht-form-control-background-color));
   color: var(--utrecht-select-color, var(--utrecht-form-control-color));
   font-family: var(--utrecht-select-font-family, var(--utrecht-form-control-font-family));
   font-size: var(--utrecht-select-font-size, var(--utrecht-form-control-font-size));
@@ -141,11 +141,11 @@ $utrecht-support-prince-xml: false !default;
     )
   );
 
-  background-color: var(
-    --utrecht-select-invalid-background-color,
+  border-color: var(
+    --utrecht-select-invalid-border-color,
     var(
-      --utrecht-form-control-invalid-background-color,
-      var(--utrecht-select-background-color, var(--utrecht-form-control-background-color))
+      --utrecht-form-control-invalid-border-color,
+      var(--utrecht-select-border-color, var(--utrecht-form-control-border-color))
     )
   );
   border-width: var(--_utrecht-select-border-width);
@@ -159,11 +159,11 @@ $utrecht-support-prince-xml: false !default;
       )
     )
   );
-  border-color: var(
-    --utrecht-select-invalid-border-color,
+  background-color: var(
+    --utrecht-select-invalid-background-color,
     var(
-      --utrecht-form-control-invalid-border-color,
-      var(--utrecht-select-border-color, var(--utrecht-form-control-border-color))
+      --utrecht-form-control-invalid-background-color,
+      var(--utrecht-select-background-color, var(--utrecht-form-control-background-color))
     )
   );
 }

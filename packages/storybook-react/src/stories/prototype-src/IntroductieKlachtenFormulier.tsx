@@ -1,10 +1,10 @@
+import React from 'react';
 import {
   Heading1,
   Paragraph,
   UnorderedList,
   UnorderedListItem,
-} from '@utrecht/component-library-react/dist/css-module';
-import React from 'react';
+} from '../../../../component-library-react/src/index.js';
 const IntroductieKlachten: React.FC = () => {
   return (
     <>

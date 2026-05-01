@@ -1,10 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { Select, SelectOption } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/select-css/README.md?raw';
 import tokensDefinition from '@utrecht/select-css/dist/tokens.mjs';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { Select, SelectOption } from '../../../component-library-react/src/index.js';
 
 interface SelectOptions {
   value: string;

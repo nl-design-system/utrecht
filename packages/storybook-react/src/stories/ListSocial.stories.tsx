@@ -1,5 +1,4 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { LinkSocial, ListSocial, ListSocialItem } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/list-social-css/README.md?raw';
 import tokensDefinition from '@utrecht/list-social-css/dist/tokens.mjs';
@@ -12,6 +11,7 @@ import {
 } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './util.js';
+import { LinkSocial, ListSocial, ListSocialItem } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/List Social',

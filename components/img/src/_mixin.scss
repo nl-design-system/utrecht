@@ -6,21 +6,21 @@
 
 @mixin utrecht-img {
   &:not(img[height]) {
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     height: auto;
   }
 
   &:not(img[width]) {
-    /* stylelint-disable-next-line property-disallowed-list */
+    /* stylelint-disable-next-line csstools/use-logical */
     width: auto;
   }
 }
 
 @mixin utrecht-img--scale-down {
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   max-height: 100%;
 
-  /* stylelint-disable-next-line property-disallowed-list */
+  /* stylelint-disable-next-line csstools/use-logical */
   max-width: 100%;
 }
 

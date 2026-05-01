@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { FormLabel } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/form-label-css/README.md?raw';
 import tokensDefinition from '@utrecht/form-label-css/dist/tokens.mjs';
 import { designTokenStory } from './util.js';
+import { FormLabel } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Form Label',

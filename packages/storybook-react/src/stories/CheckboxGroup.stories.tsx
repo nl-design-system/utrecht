@@ -1,7 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import { CheckboxGroup } from '@utrecht/checkbox-group-react';
-import { Heading } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
+import { Heading } from '../../../component-library-react/src/index.js';
 
 const storyArgTypes = {
   invalid: {

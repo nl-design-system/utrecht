@@ -1,17 +1,17 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/alert-dialog-css/README.md?raw';
 import tokensDefinition from '@utrecht/alert-dialog-css/dist/tokens.mjs';
-import type { AlertDialogProps } from '@utrecht/component-library-react';
+import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import React, { createRef, PropsWithChildren, useState } from 'react';
+import { designTokenStory } from './util.js';
+import type { AlertDialogProps } from '../../../component-library-react/src/index.js';
 import {
   AlertDialog,
   Button,
   ButtonGroup,
   Paragraph,
   PrimaryActionButton,
-} from '@utrecht/component-library-react/dist/css-module';
-import tokens from '@utrecht/design-tokens/dist/list.mjs';
-import React, { createRef, PropsWithChildren, useState } from 'react';
-import { designTokenStory } from './util.js';
+} from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Alert dialog',

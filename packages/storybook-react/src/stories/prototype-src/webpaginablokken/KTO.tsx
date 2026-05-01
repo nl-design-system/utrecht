@@ -1,3 +1,4 @@
+import React from 'react';
 import {
   Fieldset,
   FieldsetLegend,
@@ -8,8 +9,7 @@ import {
   Paragraph,
   RadioButton,
   Separator,
-} from '@utrecht/component-library-react/dist/css-module';
-import React from 'react';
+} from '../../../../../component-library-react/src/index.js';
 const KTO: React.FC = () => {
   return (
     <>

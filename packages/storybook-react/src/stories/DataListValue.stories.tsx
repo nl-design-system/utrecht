@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { DataList, DataListItem, DataListValue, URLData } from '@utrecht/component-library-react/dist/css-module';
 import React from 'react';
+import { DataList, DataListItem, DataListValue, URLData } from '../../../component-library-react/src/index.js';
 
 const meta = {
   title: 'React Component/Data List/Value',

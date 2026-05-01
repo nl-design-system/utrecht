@@ -1,12 +1,12 @@
 /* @license CC0-1.0 */
 
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { IndexCharNav } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import readme from '@utrecht/index-char-nav-css/README.md?raw';
 import tokensDefinition from '@utrecht/index-char-nav-css/dist/tokens.mjs';
 import React, { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import { designTokenStory } from './util.js';
+import { IndexCharNav } from '../../../component-library-react/src/index.js';
 
 const latinAlphabet = 'A B C D E F G H I J K L M N O P Q R S T U V W X Y Z';
 const greekAlphabet = 'Α Β Γ Δ Ε Ζ Η Θ Ι Κ Λ Μ Ν Ξ Ο Π Ρ Σ Τ Υ Φ Χ Ψ Ω';

@@ -60,6 +60,7 @@
     "stylelint": "17.4.0",
     "stylelint-config-standard-scss": "17.0.0",
     "stylelint-order": "7.0.1",
+    "stylelint-use-logical": "2.1.3",
     "typescript": "5.9.3"
   },
   "scripts": {
@@ -82,6 +83,7 @@
     "lint:package-lock": "pnpm ls --recursive",
     "lint:prettier": "prettier --check .",
     "lint-build": "pnpm run --recursive lint-build",
+    "mcp-add": "pnpm run --recursive --sequential mcp-add",
     "prepare": "husky",
     "prettier": "prettier --list-different --write .",
     "publish": "lerna publish from-package --yes",
@@ -110,7 +112,8 @@
   },
   "pnpm": {
     "patchedDependencies": {
-      "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch"
+      "@stencil/core@4.18.3": "patches/@stencil__core@4.18.3.patch",
+      "@joshwooding/vite-plugin-react-docgen-typescript": "patches/@joshwooding__vite-plugin-react-docgen-typescript.patch"
     },
     "overrides": {
       "handlebars@>=4.6.0 <=4.7.8": ">=4.7.9",

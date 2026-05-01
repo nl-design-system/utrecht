@@ -1,11 +1,11 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/card-css/README.md?raw';
 import tokensDefinition from '@utrecht/card-css/dist/tokens.mjs';
-import { Card } from '@utrecht/card-react/dist/css';
-import { Image } from '@utrecht/component-library-react/dist/css-module';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import React, { type ComponentProps, type CSSProperties } from 'react';
 import { designTokenStory } from './util.js';
+import { Image } from '../../../component-library-react/src/index.js';
+import { Card } from '../../../components-react/card-react/src/index.js';
 
 const meta = {
   title: 'React Component/Card',
