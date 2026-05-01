@@ -1558,6 +1558,9 @@ importers:
       '@utrecht/custom-checkbox-css':
         specifier: workspace:*
         version: link:../../components/custom-checkbox
+      '@utrecht/customizable-text-input-css':
+        specifier: workspace:*
+        version: link:../../components/customizable-text-input
       '@utrecht/data-badge-css':
         specifier: workspace:*
         version: link:../../components/data-badge
@@ -6837,6 +6840,12 @@ importers:
       '@utrecht/currency-data-css':
         specifier: workspace:*
         version: link:../../components/currency-data
+      '@utrecht/customizable-text-input-css':
+        specifier: workspace:*
+        version: link:../../components/customizable-text-input
+      '@utrecht/customizable-text-input-react':
+        specifier: workspace:*
+        version: link:../components-react/customizable-text-input
       '@utrecht/data-badge-css':
         specifier: workspace:*
         version: link:../../components/data-badge
@@ -7047,6 +7056,9 @@ importers:
       '@utrecht/textbox-css':
         specifier: workspace:*
         version: link:../../components/textbox
+      '@utrecht/textbox-react':
+        specifier: workspace:*
+        version: link:../components-react/textbox-react
       '@utrecht/tooltip-css':
         specifier: workspace:*
         version: link:../../components/tooltip
@@ -44123,6 +44135,13 @@ snapshots:
       schema-utils: 3.3.0
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
 
+  file-loader@6.2.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
+    dependencies:
+      loader-utils: 2.0.4
+      schema-utils: 3.3.0
+      webpack: 5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.19.11)
+    optional: true
+
   file-loader@6.2.0(webpack@5.98.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
     dependencies:
       loader-utils: 2.0.4
@@ -55084,7 +55103,7 @@ snapshots:
       schema-utils: 3.3.0
       webpack: 5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17))
     optionalDependencies:
-      file-loader: 6.2.0(webpack@5.101.3(@swc/core@1.13.5(@swc/helpers@0.5.17)))
+      file-loader: 6.2.0(webpack@5.89.0(@swc/core@1.13.5(@swc/helpers@0.5.17)))
 
   url-loader@4.1.1(file-loader@6.2.0(webpack@5.98.0(@swc/core@1.13.5(@swc/helpers@0.5.17))))(webpack@5.98.0(@swc/core@1.13.5(@swc/helpers@0.5.17))):
     dependencies:
