@@ -11,9 +11,11 @@
   --utrecht-icon-size: var(--utrecht-toptask-link-icon-size);
 
   background-color: var(--utrecht-toptask-link-background-color);
+  border-radius: var(--utrecht-toptask-link-border-radius);
   color: var(--utrecht-toptask-link-color);
   display: flex;
   flex-direction: column;
+  font-family: var(--utrecht-toptask-link-font-family);
   font-size: var(--utrecht-toptask-link-font-size);
   font-weight: var(--utrecht-toptask-link-font-weight);
   line-height: var(--utrecht-toptask-link-line-height);
