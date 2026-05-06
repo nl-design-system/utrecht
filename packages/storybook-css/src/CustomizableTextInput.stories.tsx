@@ -143,17 +143,14 @@ export const WithDescription: Story = {
   },
   render: (args) => {
     return (
-      <>
-        <CustomizableTextInput {...args}>
-          <Textbox id={args.inputId} aria-describedby="textbox-with-description-description" />
-        </CustomizableTextInput>
-      </>
+      <CustomizableTextInput {...args}>
+        <Textbox id={args.inputId} aria-describedby="textbox-with-description-description" />
+      </CustomizableTextInput>
     );
   },
 };
 
 export const WithInteractiveElement: Story = {
-  // TODO: add description
   name: 'Slot met interactief element',
   args: {
     end: undefined,
@@ -168,28 +165,26 @@ export const WithCombobox: Story = {
   },
   render: (args) => {
     return (
-      <>
-        <CustomizableTextInput {...args}>
-          <Combobox>
-            <Textbox
-              className="utrecht-combobox__input"
-              id={args.inputId}
-              autoComplete="off"
-              aria-autocomplete="list"
-              aria-haspopup="listbox"
-              aria-controls={`${args.inputId}-popover`}
-            />
-            <ComboboxPopover
-              className="utrecht-listbox utrecht-listbox--html-div utrecht-combobox__popover utrecht-combobox__popover--block-end"
-              id={`${args.inputId}-popover`}
-              role="listbox"
-              tabIndex={-1}
-            >
-              Combobox list
-            </ComboboxPopover>
-          </Combobox>
-        </CustomizableTextInput>
-      </>
+      <CustomizableTextInput {...args}>
+        <Combobox>
+          <Textbox
+            className="utrecht-combobox__input"
+            id={args.inputId}
+            autoComplete="off"
+            aria-autocomplete="list"
+            aria-haspopup="listbox"
+            aria-controls={`${args.inputId}-popover`}
+          />
+          <ComboboxPopover
+            className="utrecht-listbox utrecht-listbox--html-div utrecht-combobox__popover utrecht-combobox__popover--block-end"
+            id={`${args.inputId}-popover`}
+            role="listbox"
+            tabIndex={-1}
+          >
+            Combobox list
+          </ComboboxPopover>
+        </Combobox>
+      </CustomizableTextInput>
     );
   },
 };
