@@ -8,4 +8,5 @@
 
 ## Toepassing
 
-De **customizable-text-input** component gebruikt het `span` element voor de `start` en `end` slots. Dat betekent dat een klik op een van de slots de focus niet verlegd naar het `input` veld.
+Standaard gebruikt de **customizable-text-input** component het `span` element voor de `start` en `end` slots. Dat betekent dat een klik op een van de slots de focus niet verlegd naar het `input` veld.
+Door de span te vervangen door een `label` met `for` en `aria-hidden` attributen kan de focus verlegt worden naar het `input` veld. Dit gebeurt automatisch wanneer je het React component gebruikt en een `inputId` meegeeft.
