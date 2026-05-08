@@ -2,19 +2,45 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, ReactNode } from 'react';
 
 export interface CustomizableTextInputProps extends HTMLAttributes<HTMLSpanElement> {
+  labelStart?: ReactNode;
+  labelEnd?: ReactNode;
   start?: ReactNode;
   end?: ReactNode;
+  actionStart?: ReactNode;
+  actionEnd?: ReactNode;
   inputId?: string;
 }
 
 export const CustomizableTextInput = forwardRef(
   (
-    { inputId, start, end, className, children, ...restProps }: CustomizableTextInputProps,
+    {
+      inputId,
+      labelStart,
+      labelEnd,
+      start,
+      end,
+      actionStart,
+      actionEnd,
+      className,
+      children,
+      ...restProps
+    }: CustomizableTextInputProps,
     ref: ForwardedRef<HTMLSpanElement>,
   ) => {
     return (
       <span {...restProps} className={clsx('utrecht-customizable-text-input', className)} ref={ref}>
         <span className="utrecht-customizable-text-input__inner">
+          {labelStart ? (
+            <SlotRenderer inputId={inputId} position="start">
+              {labelStart}
+            </SlotRenderer>
+          ) : null}
+          {labelEnd ? (
+            <SlotRenderer inputId={inputId} position="end">
+              {labelEnd}
+            </SlotRenderer>
+          ) : null}
+
           {start ? (
             <SlotRenderer inputId={inputId} position="start" hideFromAT>
               {start}
@@ -25,7 +51,20 @@ export const CustomizableTextInput = forwardRef(
               {end}
             </SlotRenderer>
           ) : null}
+
+          {actionStart ? (
+            <SlotRenderer position="start" className="utrecht-customizable-text-input__action">
+              {actionStart}
+            </SlotRenderer>
+          ) : null}
+
           <span className="utrecht-customizable-text-input__wrap-input">{children}</span>
+
+          {actionEnd ? (
+            <SlotRenderer position="end" className="utrecht-customizable-text-input__action">
+              {actionEnd}
+            </SlotRenderer>
+          ) : null}
         </span>
       </span>
     );
@@ -51,7 +90,12 @@ const SlotRenderer = ({ inputId, hideFromAT, className, position, ...restProps }
   );
 
   return inputId ? (
-    <label {...restProps} htmlFor={inputId} className={clsx(classNames)} aria-hidden={hideFromAT ? true : undefined} />
+    <label
+      {...restProps}
+      htmlFor={inputId}
+      className={clsx('utrecht-customizable-text-input__slot--label', classNames)}
+      aria-hidden={hideFromAT ? true : undefined}
+    />
   ) : (
     <span {...restProps} className={clsx(classNames)} />
   );

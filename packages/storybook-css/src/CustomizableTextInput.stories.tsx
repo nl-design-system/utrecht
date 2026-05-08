@@ -1,10 +1,13 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { IconCalendar } from '@tabler/icons-react';
 import { Combobox, ComboboxPopover } from '@utrecht/combobox-react';
+import { Button, ColorSample, DataBadge, Icon, Select, SelectOption } from '@utrecht/component-library-react';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
 import clickableDocs from '@utrecht/customizable-text-input-css/_clickable.md?raw';
 import describedByDocs from '@utrecht/customizable-text-input-css/_described-by.md?raw';
+import labelDocs from '@utrecht/customizable-text-input-css/_label.md?raw';
 import sizingClassesDocs from '@utrecht/customizable-text-input-css/_sizing-classes.md?raw';
 import anatomyDocs from '@utrecht/customizable-text-input-css/docs/anatomy.nl.md?raw';
 import tokensDefinition from '@utrecht/customizable-text-input-css/src/tokens.json';
@@ -12,10 +15,15 @@ import { CustomizableTextInput } from '@utrecht/customizable-text-input-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { Textbox } from '@utrecht/textbox-react';
+import { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 
+const TextWrapper = ({ children }: { children: ReactNode }) => (
+  <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs)' }}>{children}</span>
+);
+
 const meta = {
-  title: 'CSS Component/CustomizableTextInput',
+  title: 'CSS Component/Customizable Text Input',
   id: 'css-customizable-text-input',
   component: CustomizableTextInput,
   argTypes: {
@@ -34,10 +42,32 @@ const meta = {
       description: 'Tekst, element of icoon dat wordt weergegeven aan het einde van de text input',
       control: 'object',
     },
+
+    labelStart: {
+      description: 'Tekst aan het begin van de text input, doet mee aan de label functionaliteit',
+      control: 'object',
+    },
+    labelEnd: {
+      description: 'Tekst aan het einde van de text input, doet mee aan de label functionaliteit',
+      control: 'object',
+    },
+
+    actionStart: {
+      description: 'Interactief element aan het begin van de text input, zoals een knop of input',
+      control: 'object',
+    },
+    actionEnd: {
+      description: 'Interactief element aan het eind van de text input, zoals een knop of input',
+      control: 'object',
+    },
   },
   args: {
     start: undefined,
-    end: <utrecht-icon-search />,
+    end: (
+      <TextWrapper>
+        <utrecht-icon-search />
+      </TextWrapper>
+    ),
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
   tags: ['autodocs'],
@@ -90,31 +120,17 @@ export const Disabled: Story = {
   },
 };
 
-export const ClickableSlots: Story = {
-  name: 'Klikbare slots',
-  args: {
-    children: <Textbox id="textbox-clickable" defaultValue="The quick brown fox jumps over the lazy dog" />,
-    inputId: 'textbox-clickable',
-    start: <utrecht-icon-user />,
-  },
-  parameters: {
-    chromatic: { disableSnapshot: true },
-    docs: {
-      description: {
-        story: clickableDocs,
-      },
-    },
-  },
-};
-
 export const SizingClasses: Story = {
   args: {
-    start: <utrecht-icon-phone />,
+    start: (
+      <TextWrapper>
+        <utrecht-icon-phone />
+      </TextWrapper>
+    ),
     end: undefined,
     children: (
       <Textbox id="textbox-sizing-classes" className="utrecht-textbox--tel-nl-size" defaultValue="0612345678" />
     ),
-    inputId: 'textbox-sizing-classes',
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -126,11 +142,51 @@ export const SizingClasses: Story = {
   },
 };
 
+export const WithLabelEnd: Story = {
+  name: 'Met label',
+  args: {
+    children: <Textbox id="textbox-label" defaultValue="23400" />,
+    inputId: 'textbox-label',
+    end: null,
+    labelEnd: <TextWrapper>kWh</TextWrapper>,
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: labelDocs,
+      },
+    },
+  },
+};
+
+export const ClickableSlots: Story = {
+  name: 'Focus op input field',
+  args: {
+    children: <Textbox id="textbox-clickable" defaultValue="The quick brown fox jumps over the lazy dog" />,
+    inputId: 'textbox-clickable',
+    end: <TextWrapper>kWh</TextWrapper>,
+    start: (
+      <TextWrapper>
+        <utrecht-icon-laadpaal />
+      </TextWrapper>
+    ),
+  },
+  parameters: {
+    chromatic: { disableSnapshot: true },
+    docs: {
+      description: {
+        story: clickableDocs,
+      },
+    },
+  },
+};
+
 export const WithDescription: Story = {
   name: 'Slot als beschrijving',
   args: {
     inputId: 'textbox-with-description',
-    end: <span id="textbox-with-description-description">mL per hour</span>,
+    end: <TextWrapper id="textbox-with-description-description">mL per hour</TextWrapper>,
     start: undefined,
   },
   parameters: {
@@ -150,11 +206,17 @@ export const WithDescription: Story = {
   },
 };
 
-export const WithInteractiveElement: Story = {
-  name: 'Slot met interactief element',
+export const WithSubtleButton: Story = {
+  name: 'Action slot met subtle button',
   args: {
     end: undefined,
-    start: <button>Button</button>,
+    actionEnd: (
+      <Button appearance="subtle-button" aria-haspopup="dialog" aria-label="Open/sluit kalender">
+        <Icon>
+          <IconCalendar />
+        </Icon>
+      </Button>
+    ),
   },
 };
 
@@ -162,6 +224,12 @@ export const WithCombobox: Story = {
   name: 'Met combobox',
   args: {
     inputId: 'combobox',
+    start: (
+      <TextWrapper>
+        <utrecht-icon-search />
+      </TextWrapper>
+    ),
+    end: null,
   },
   render: (args) => {
     return (
