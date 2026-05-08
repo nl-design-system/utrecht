@@ -8,7 +8,12 @@ import { CustomizableTextInput } from '@utrecht/customizable-text-input-react';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { mergeMarkdown } from '@utrecht/storybook-helpers/src/markdown';
 import { Textbox } from '@utrecht/textbox-react';
+import { ReactNode } from 'react';
 import { designTokenStory } from './util.js';
+
+const TextWrapper = ({ children }: { children: ReactNode }) => (
+  <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs)' }}>{children}</span>
+);
 
 const meta = {
   title: 'React Component/CustomizableTextInput',
@@ -30,10 +35,32 @@ const meta = {
       description: 'Tekst, element of icoon dat wordt weergegeven aan het einde van de text input',
       control: 'object',
     },
+
+    labelStart: {
+      description: 'Tekst aan het begin van de text input, doet mee aan de label functionaliteit',
+      control: 'object',
+    },
+    labelEnd: {
+      description: 'Tekst aan het einde van de text input, doet mee aan de label functionaliteit',
+      control: 'object',
+    },
+
+    actionStart: {
+      description: 'Interactief element aan het begin van de text input, zoals een knop of input',
+      control: 'object',
+    },
+    actionEnd: {
+      description: 'Interactief element aan het eind van de text input, zoals een knop of input',
+      control: 'object',
+    },
   },
   args: {
     start: undefined,
-    end: <utrecht-icon-search />,
+    end: (
+      <TextWrapper>
+        <utrecht-icon-search />
+      </TextWrapper>
+    ),
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
   tags: ['autodocs'],

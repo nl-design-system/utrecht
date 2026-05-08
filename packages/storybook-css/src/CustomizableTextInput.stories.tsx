@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { IconCalendar } from '@tabler/icons-react';
 import { Combobox, ComboboxPopover } from '@utrecht/combobox-react';
-import { Button, ColorSample, DataBadge, Icon, Select, SelectOption } from '@utrecht/component-library-react';
+import { Button, Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
 import clickableDocs from '@utrecht/customizable-text-input-css/_clickable.md?raw';
 import describedByDocs from '@utrecht/customizable-text-input-css/_described-by.md?raw';
