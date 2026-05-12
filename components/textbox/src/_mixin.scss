@@ -44,8 +44,8 @@ $utrecht-support-prince-xml: false !default;
     var(--_utrecht-textbox-max-inline-size, 100%),
     var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
   );
-  min-block-size: var(--utrecht-pointer-target-min-size, var(basis-pointer-target-min-block-size));
-  min-inline-size: var(--utrecht-pointer-target-min-size, var(basis-pointer-target-min-inline-size));
+  min-block-size: var(--utrecht-pointer-target-min-size, var(--basis-pointer-target-min-block-size, 44px));
+  min-inline-size: var(--utrecht-pointer-target-min-size, var(--basis-pointer-target-min-inline-size, 44px));
 }
 
 @mixin utrecht-textbox-box {
