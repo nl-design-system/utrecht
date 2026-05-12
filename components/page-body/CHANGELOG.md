@@ -1,5 +1,11 @@
 # @utrecht/page-body-css
 
+## 2.1.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 2.1.0
 
 ### Minor Changes

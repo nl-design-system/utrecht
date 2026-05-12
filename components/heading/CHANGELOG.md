@@ -1,5 +1,15 @@
 # @utrecht/heading-css
 
+## 4.0.0
+
+### Major Changes
+
+- ed56958: Remove SCSS implementation from `heading-css`, only leave the `tokens.json` definition.
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 3.0.0
 
 ### Major Changes

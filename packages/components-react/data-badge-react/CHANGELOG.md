@@ -1,5 +1,13 @@
 # @utrecht/data-badge-react
 
+## 1.0.9
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/data-badge-css@3.0.1
+
 ## 1.0.8
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @utrecht/checkbox-react
 
+## 1.0.14
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/custom-checkbox-css@3.0.1
+  - @utrecht/checkbox-css@3.0.1
+
 ## 1.0.13
 
 ### Patch Changes

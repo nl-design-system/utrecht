@@ -1,5 +1,12 @@
 # @utrecht/heading-1-css
 
+## 3.0.1
+
+### Patch Changes
+
+- ed56958: Remove dependency on `@utrecht/heading-css` SCSS, copy the CSS to each heading implementation.
+- 0f759fc: Ensure package is published with provenance
+
 ## 3.0.0
 
 ### Major Changes

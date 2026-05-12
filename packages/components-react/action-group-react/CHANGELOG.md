@@ -1,5 +1,13 @@
 # @utrecht/action-group-react
 
+## 1.1.6
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/action-group-css@4.0.1
+
 ## 1.1.5
 
 ### Patch Changes

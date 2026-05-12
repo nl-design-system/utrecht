@@ -1,5 +1,13 @@
 # @utrecht/vega-visualization-react
 
+## 1.0.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/vega-visualization-css@2.0.1
+
 ## 1.0.0
 
 ### Major Changes
