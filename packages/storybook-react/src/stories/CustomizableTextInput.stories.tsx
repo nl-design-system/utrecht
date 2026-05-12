@@ -1,6 +1,8 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { IconCalendar, IconSearch } from '@tabler/icons-react';
+import { Button, Icon } from '@utrecht/component-library-react';
 import readme from '@utrecht/customizable-text-input-css/README.md?raw';
 import anatomyDocs from '@utrecht/customizable-text-input-css/docs/anatomy.nl.md?raw';
 import tokensDefinition from '@utrecht/customizable-text-input-css/src/tokens.json';
@@ -55,12 +57,6 @@ const meta = {
     },
   },
   args: {
-    start: undefined,
-    end: (
-      <TextWrapper>
-        <utrecht-icon-search />
-      </TextWrapper>
-    ),
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
   tags: ['autodocs'],
@@ -85,5 +81,115 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {};
+
+export const WithStart: Story = {
+  name: 'Icon in start',
+  args: {
+    start: (
+      <TextWrapper>
+        <Icon>
+          <IconSearch />
+        </Icon>
+      </TextWrapper>
+    ),
+  },
+};
+
+export const WithEnd: Story = {
+  name: 'Icon in end',
+  args: {
+    end: (
+      <TextWrapper>
+        <Icon>
+          <IconSearch />
+        </Icon>
+      </TextWrapper>
+    ),
+  },
+};
+
+export const WithStartAndEnd: Story = {
+  name: 'Icon in start and end',
+  args: {
+    start: (
+      <TextWrapper>
+        <Icon>
+          <IconSearch />
+        </Icon>
+      </TextWrapper>
+    ),
+    end: (
+      <TextWrapper>
+        <Icon>
+          <IconSearch />
+        </Icon>
+      </TextWrapper>
+    ),
+  },
+};
+
+export const WithClickableSlots: Story = {
+  name: 'Clickable slots',
+  args: {
+    start: (
+      <TextWrapper>
+        <Icon>
+          <IconSearch />
+        </Icon>
+      </TextWrapper>
+    ),
+    end: (
+      <TextWrapper>
+        <Icon>
+          <IconSearch />
+        </Icon>
+      </TextWrapper>
+    ),
+    inputId: 'linked-slots-input',
+    children: <Textbox id="linked-slots-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
+  },
+};
+
+export const WithLabelStart: Story = {
+  name: 'Label start',
+  args: {
+    labelStart: <TextWrapper>kWh</TextWrapper>,
+    inputId: 'label-start-input',
+    children: <Textbox id="label-start-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
+  },
+};
+
+export const WithLabelEnd: Story = {
+  name: 'Label end',
+  args: {
+    labelEnd: <TextWrapper>kWh</TextWrapper>,
+    inputId: 'label-end-input',
+    children: <Textbox id="label-end-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
+  },
+};
+
+export const WithLabelStartEnd: Story = {
+  name: 'Label start & end',
+  args: {
+    labelStart: <TextWrapper>Verbruik</TextWrapper>,
+    labelEnd: <TextWrapper>kWh</TextWrapper>,
+    inputId: 'label-start-end-input',
+    children: <Textbox id="label-start-end-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
+  },
+};
+
+export const WithSubtleButton: Story = {
+  name: 'Action slot met subtle button',
+  args: {
+    end: undefined,
+    actionEnd: (
+      <Button appearance="subtle-button" aria-haspopup="dialog" aria-label="Open/sluit kalender">
+        <Icon>
+          <IconCalendar />
+        </Icon>
+      </Button>
+    ),
+  },
+};
 
 export const DesignTokens = designTokenStory(meta);
