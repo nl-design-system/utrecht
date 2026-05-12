@@ -115,7 +115,7 @@
  * Customizable text input slot styles
  */
 @mixin utrecht-customizable-text-input-slot {
-  --utrecht-icon-size: var(--utrecht-customizable-text-input-icon-size, 1em);
+  --utrecht-icon-size: var(--utrecht-textbox-icon-size, 1em);
 
   align-items: center;
   display: flex;
