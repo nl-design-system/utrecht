@@ -53,7 +53,7 @@ export const CustomizableTextInput = forwardRef(
           ) : null}
 
           {actionStart ? (
-            <SlotRenderer position="start" className="utrecht-customizable-text-input__action">
+            <SlotRenderer position="start" className="utrecht-customizable-text-input__slot--action">
               {actionStart}
             </SlotRenderer>
           ) : null}
@@ -61,7 +61,7 @@ export const CustomizableTextInput = forwardRef(
           <span className="utrecht-customizable-text-input__wrap-input">{children}</span>
 
           {actionEnd ? (
-            <SlotRenderer position="end" className="utrecht-customizable-text-input__action">
+            <SlotRenderer position="end" className="utrecht-customizable-text-input__slot--action">
               {actionEnd}
             </SlotRenderer>
           ) : null}
