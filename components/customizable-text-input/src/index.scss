@@ -1,0 +1,49 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2024 Frameless B.V.
+ * Copyright (c) 2021-2024 Gemeente Utrecht
+ */
+
+@use "./mixin" as *;
+
+.utrecht-customizable-text-input {
+  @include utrecht-customizable-text-input;
+}
+
+.utrecht-customizable-text-input__inner {
+  @include utrecht-customizable-text-input__inner;
+}
+
+.utrecht-customizable-text-input__wrap-input {
+  @include utrecht-customizable-text-input__wrap-input;
+}
+
+.utrecht-customizable-text-input__wrap-input .utrecht-textbox,
+.utrecht-customizable-text-input__slot {
+  @include utrecht-customizable-text-input-border-block-correction;
+}
+
+.utrecht-customizable-text-input__wrap-input .utrecht-textbox {
+  @include utrecht-customizable-text-input-textbox;
+}
+
+.utrecht-customizable-text-input__wrap-input .utrecht-combobox {
+  @include utrecht-customizable-text-input-combobox;
+}
+
+.utrecht-customizable-text-input__slot {
+  @include utrecht-customizable-text-input-slot;
+}
+
+.utrecht-customizable-text-input__slot:is(label),
+.utrecht-customizable-text-input__slot--label {
+  @include utrecht-customizable-text-input-slot-label;
+}
+
+.utrecht-customizable-text-input__slot--start {
+  @include utrecht-customizable-text-input-slot-start;
+}
+
+.utrecht-customizable-text-input__slot--end {
+  @include utrecht-customizable-text-input-slot-end;
+}
