@@ -1,5 +1,11 @@
 # @utrecht/unordered-list-css
 
+## 3.1.1
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 3.1.0
 
 ### Minor Changes

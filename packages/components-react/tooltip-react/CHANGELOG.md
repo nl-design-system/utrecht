@@ -1,5 +1,13 @@
 # @utrecht/tooltip-react
 
+## 1.1.3
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/tooltip-css@3.0.1
+
 ## 1.1.2
 
 ### Patch Changes

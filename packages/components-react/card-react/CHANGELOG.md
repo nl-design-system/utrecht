@@ -1,5 +1,14 @@
 # @utrecht/card-react
 
+## 0.0.6
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/link-react@1.0.12
+  - @utrecht/card-css@2.0.1
+
 ## 0.0.5
 
 ### Patch Changes

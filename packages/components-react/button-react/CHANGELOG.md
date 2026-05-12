@@ -1,5 +1,13 @@
 # @utrecht/button-react
 
+## 3.0.3
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/button-css@4.0.1
+
 ## 3.0.2
 
 ### Patch Changes

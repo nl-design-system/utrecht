@@ -1,5 +1,15 @@
 # @utrecht/top-task-link-css
 
+## 3.1.0
+
+### Minor Changes
+
+- 16ac346: Add design tokens for `border-radius`, `font-family` and `font-weight`.
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+
 ## 3.0.0
 
 ### Major Changes

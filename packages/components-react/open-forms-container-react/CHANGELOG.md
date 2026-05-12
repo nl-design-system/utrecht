@@ -1,5 +1,13 @@
 # @utrecht/open-forms-container-react
 
+## 1.0.10
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/open-forms-container-css@3.0.1
+
 ## 1.0.9
 
 ### Patch Changes

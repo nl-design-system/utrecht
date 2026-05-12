@@ -1,5 +1,13 @@
 # @utrecht/grid-react
 
+## 1.0.2
+
+### Patch Changes
+
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/grid-css@2.0.1
+
 ## 1.0.1
 
 ### Patch Changes

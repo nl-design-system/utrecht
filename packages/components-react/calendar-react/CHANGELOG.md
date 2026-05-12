@@ -1,5 +1,15 @@
 # @utrecht/calendar-react
 
+## 1.1.4
+
+### Patch Changes
+
+- 301dd84: Switch from `lodash` to `es-toolkit`
+- 0f759fc: Ensure package is published with provenance
+- Updated dependencies [0f759fc]
+  - @utrecht/button-react@3.0.3
+  - @utrecht/calendar-css@3.0.1
+
 ## 1.1.3
 
 ### Patch Changes
