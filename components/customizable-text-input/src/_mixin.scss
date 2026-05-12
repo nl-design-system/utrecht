@@ -70,7 +70,7 @@
  */
 @mixin utrecht-customizable-text-input-textbox {
   inline-size: clamp(
-    var(--utrecht-pointer-target-min-size, 44px),
+    var(--utrecht-pointer-target-min-size, var(--basis-pointer-target-min-inline-size, 44px)),
     var(
       --_utrecht-textbox-max-inline-size,
       var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size))
