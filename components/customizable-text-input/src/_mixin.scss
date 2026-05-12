@@ -13,7 +13,7 @@
   position: relative;
 }
 
-@mixin utrecht-customizable-text-input-inner {
+@mixin utrecht-customizable-text-input__inner {
   @include utrecht-textbox-box;
 
   cursor: text;
@@ -45,7 +45,7 @@
   }
 }
 
-@mixin utrecht-customizable-text-input-wrap-input {
+@mixin utrecht-customizable-text-input__wrap-input {
   display: flex;
   min-inline-size: 0;
   order: 2;

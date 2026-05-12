@@ -18,7 +18,7 @@ import { Textbox } from '@utrecht/textbox-react';
 import { ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 
-const TextWrapper = ({ children }: { children: ReactNode }) => (
+const ExampleTextWrapper = ({ children }: { children: ReactNode }) => (
   <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs)' }}>{children}</span>
 );
 
@@ -64,9 +64,9 @@ const meta = {
   args: {
     start: undefined,
     end: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <utrecht-icon-search />
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
     children: <Textbox id="textbox-default" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
@@ -118,9 +118,9 @@ export const Disabled: Story = {
 export const SizingClasses: Story = {
   args: {
     start: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <utrecht-icon-phone />
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
     end: undefined,
     children: (
@@ -143,7 +143,7 @@ export const WithLabelEnd: Story = {
     children: <Textbox id="textbox-label" defaultValue="23400" />,
     inputId: 'textbox-label',
     end: null,
-    labelEnd: <TextWrapper>kWh</TextWrapper>,
+    labelEnd: <ExampleTextWrapper>kWh</ExampleTextWrapper>,
   },
   parameters: {
     chromatic: { disableSnapshot: true },
@@ -160,11 +160,11 @@ export const ClickableSlots: Story = {
   args: {
     children: <Textbox id="textbox-clickable" defaultValue="The quick brown fox jumps over the lazy dog" />,
     inputId: 'textbox-clickable',
-    end: <TextWrapper>kWh</TextWrapper>,
+    end: <ExampleTextWrapper>kWh</ExampleTextWrapper>,
     start: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <utrecht-icon-laadpaal />
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
   },
   parameters: {
@@ -181,7 +181,7 @@ export const WithDescription: Story = {
   name: 'Slot als beschrijving',
   args: {
     inputId: 'textbox-with-description',
-    end: <TextWrapper id="textbox-with-description-description">mL per hour</TextWrapper>,
+    end: <ExampleTextWrapper id="textbox-with-description-description">mL per hour</ExampleTextWrapper>,
     start: undefined,
   },
   parameters: {
@@ -220,9 +220,9 @@ export const WithCombobox: Story = {
   args: {
     inputId: 'combobox',
     start: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <utrecht-icon-search />
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
     end: null,
   },

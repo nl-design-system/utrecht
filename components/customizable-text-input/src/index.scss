@@ -11,11 +11,11 @@
 }
 
 .utrecht-customizable-text-input__inner {
-  @include utrecht-customizable-text-input-inner;
+  @include utrecht-customizable-text-input__inner;
 }
 
 .utrecht-customizable-text-input__wrap-input {
-  @include utrecht-customizable-text-input-wrap-input;
+  @include utrecht-customizable-text-input__wrap-input;
 }
 
 .utrecht-customizable-text-input__wrap-input .utrecht-textbox,

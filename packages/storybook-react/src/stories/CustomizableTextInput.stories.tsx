@@ -13,7 +13,7 @@ import { Textbox } from '@utrecht/textbox-react';
 import { ReactNode } from 'react';
 import { designTokenStory } from './util.js';
 
-const TextWrapper = ({ children }: { children: ReactNode }) => (
+const ExampleTextWrapper = ({ children }: { children: ReactNode }) => (
   <span style={{ display: 'block', paddingInline: 'var(--utrecht-space-inline-xs)' }}>{children}</span>
 );
 
@@ -86,11 +86,11 @@ export const WithStart: Story = {
   name: 'Icon in start',
   args: {
     start: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <Icon>
           <IconSearch />
         </Icon>
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
   },
 };
@@ -99,11 +99,11 @@ export const WithEnd: Story = {
   name: 'Icon in end',
   args: {
     end: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <Icon>
           <IconSearch />
         </Icon>
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
   },
 };
@@ -112,18 +112,18 @@ export const WithStartAndEnd: Story = {
   name: 'Icon in start and end',
   args: {
     start: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <Icon>
           <IconSearch />
         </Icon>
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
     end: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <Icon>
           <IconSearch />
         </Icon>
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
   },
 };
@@ -132,18 +132,18 @@ export const WithClickableSlots: Story = {
   name: 'Clickable slots',
   args: {
     start: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <Icon>
           <IconSearch />
         </Icon>
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
     end: (
-      <TextWrapper>
+      <ExampleTextWrapper>
         <Icon>
           <IconSearch />
         </Icon>
-      </TextWrapper>
+      </ExampleTextWrapper>
     ),
     inputId: 'linked-slots-input',
     children: <Textbox id="linked-slots-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
@@ -153,7 +153,7 @@ export const WithClickableSlots: Story = {
 export const WithLabelStart: Story = {
   name: 'Label start',
   args: {
-    labelStart: <TextWrapper>kWh</TextWrapper>,
+    labelStart: <ExampleTextWrapper>kWh</ExampleTextWrapper>,
     inputId: 'label-start-input',
     children: <Textbox id="label-start-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
@@ -162,7 +162,7 @@ export const WithLabelStart: Story = {
 export const WithLabelEnd: Story = {
   name: 'Label end',
   args: {
-    labelEnd: <TextWrapper>kWh</TextWrapper>,
+    labelEnd: <ExampleTextWrapper>kWh</ExampleTextWrapper>,
     inputId: 'label-end-input',
     children: <Textbox id="label-end-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
@@ -171,8 +171,8 @@ export const WithLabelEnd: Story = {
 export const WithLabelStartEnd: Story = {
   name: 'Label start & end',
   args: {
-    labelStart: <TextWrapper>Verbruik</TextWrapper>,
-    labelEnd: <TextWrapper>kWh</TextWrapper>,
+    labelStart: <ExampleTextWrapper>Verbruik</ExampleTextWrapper>,
+    labelEnd: <ExampleTextWrapper>kWh</ExampleTextWrapper>,
     inputId: 'label-start-end-input',
     children: <Textbox id="label-start-end-input" defaultValue="The quick brown fox jumps over the lazy dog" />,
   },
