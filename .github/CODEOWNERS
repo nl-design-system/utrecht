@@ -1,10 +1,4 @@
 # See: https://nldesignsystem.nl/codeowners
 
-# 3rd-party scripts must never be installed without security review
-
-pnpm.lock @nl-design-system/kernteam-maintainer
-package-lock.json @nl-design-system/kernteam-maintainer
-yarn.lock @nl-design-system/kernteam-maintainer
-
 # Protect this file itself (order matters, keep this line last):
 .github/CODEOWNERS @nl-design-system/gemeente-utrecht-maintainer @nl-design-system/kernteam-maintainer
