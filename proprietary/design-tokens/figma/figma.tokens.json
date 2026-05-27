@@ -448,7 +448,7 @@
           },
           "lg": {
             "$type": "lineHeights",
-            "$value": "125%"
+            "$value": "175%"
           },
           "xl": {
             "$type": "lineHeights",
@@ -2830,7 +2830,7 @@
         },
         "line-height": {
           "$type": "lineHeights",
-          "$value": "{basis.text.line-height.md}"
+          "$value": "{basis.text.line-height.lg}"
         },
         "padding-block-end": {
           "$type": "dimension",
