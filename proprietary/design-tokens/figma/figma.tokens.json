@@ -7429,13 +7429,18 @@
           "$type": "color",
           "$value": "{basis.color.default.border-subtle}"
         },
-        "border-width": {
+        "border-radius": {
           "$type": "dimension",
-          "$value": "{basis.border-width.sm}"
+          "$value": "{basis.border-radius.none}"
         },
         "border-style": {
           "$type": "other",
-          "$value": "solid"
+          "$value": "solid",
+          "$description": "[code-only]"
+        },
+        "border-width": {
+          "$type": "dimension",
+          "$value": "{basis.border-width.sm}"
         },
         "left": {
           "background-color": {
