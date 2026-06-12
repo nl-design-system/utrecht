@@ -34,12 +34,12 @@
   padding-inline-start: var(--utrecht-space-inline-xl);
 }
 
-.utrecht-contact-card__content {
+.utrecht-contact-card__grid {
   display: flex;
   flex-direction: row;
 }
 
-.utrecht-contact-card__section {
+.utrecht-contact-card__grid-cell {
   inline-size: 100%;
   margin-block-start: var(--utrecht-space-row-lg);
 }

@@ -76,6 +76,8 @@ export namespace Components {
         "rule": boolean;
     }
     interface UtrechtContactCardTemplate {
+        "heading": string;
+        "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
         "checked"?: boolean;
@@ -3432,6 +3434,8 @@ declare namespace LocalJSX {
         "rule"?: boolean;
     }
     interface UtrechtContactCardTemplate {
+        "heading"?: string;
+        "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
         "checked"?: boolean;
