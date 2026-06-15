@@ -29,6 +29,14 @@ describe('Unordered list', () => {
     expect(list).toHaveClass('utrecht-unordered-list');
   });
 
+  it('renders a level-1 class name', () => {
+    const { container } = render(<UnorderedList />);
+
+    const list = container.querySelector(':only-child');
+
+    expect(list).toHaveClass('utrecht-unordered-list--level-1');
+  });
+
   it('can contain a list item', () => {
     const { container } = render(
       <UnorderedList>
@@ -113,5 +121,50 @@ describe('Unordered list', () => {
     // Check that nested list has the correct class
     const nestedList = nestedLists[1];
     expect(nestedList).toHaveClass('utrecht-unordered-list');
+  });
+
+  it('assigns increasing level classes to nested unordered lists', () => {
+    const { container } = render(
+      <UnorderedList>
+        <UnorderedListItem>
+          Level 1
+          <UnorderedList>
+            <UnorderedListItem>
+              Level 2
+              <UnorderedList>
+                <UnorderedListItem>Level 3</UnorderedListItem>
+              </UnorderedList>
+            </UnorderedListItem>
+          </UnorderedList>
+        </UnorderedListItem>
+      </UnorderedList>,
+    );
+
+    const lists = container.querySelectorAll('ul');
+
+    expect(lists[0]).toHaveClass('utrecht-unordered-list--level-1');
+    expect(lists[1]).toHaveClass('utrecht-unordered-list--level-2');
+    expect(lists[2]).toHaveClass('utrecht-unordered-list--level-3');
+  });
+
+  it('clamps the level class at 8 for deeply nested unordered lists', () => {
+    let tree = <UnorderedListItem>Deepest level</UnorderedListItem>;
+
+    for (let level = 9; level >= 1; level--) {
+      tree = (
+        <UnorderedListItem>
+          <UnorderedList>{tree}</UnorderedList>
+        </UnorderedListItem>
+      );
+    }
+
+    const { container } = render(<UnorderedList>{tree}</UnorderedList>);
+
+    const lists = container.querySelectorAll('ul');
+
+    expect(lists).toHaveLength(10);
+    expect(lists[7]).toHaveClass('utrecht-unordered-list--level-8');
+    expect(lists[8]).toHaveClass('utrecht-unordered-list--level-8');
+    expect(lists[9]).toHaveClass('utrecht-unordered-list--level-8');
   });
 });
