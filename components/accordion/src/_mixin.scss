@@ -70,7 +70,10 @@
 }
 
 @mixin utrecht-accordion__button-icon {
+  --utrecht-icon-size: var(--utrecht-accordion-button-icon-size);
+
   display: flex;
+  inline-size: var(--utrecht-accordion-button-icon-size);
 }
 
 @mixin utrecht-accordion__button--rtl {
