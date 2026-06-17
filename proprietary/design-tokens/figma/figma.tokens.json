@@ -476,7 +476,7 @@
         "default": {
           "bg-document": {
             "$type": "color",
-            "$value": "hsl(0, 0%, 95%)"
+            "$value": "hsl(0, 0%, 99%)"
           },
           "bg-subtle": {
             "$type": "color",
@@ -11754,7 +11754,7 @@
       "root": {
         "background-color": {
           "$type": "color",
-          "$value": "{basis.color.default.bg-document}"
+          "$value": "{basis.color.default.bg-default}"
         },
         "color": {
           "$type": "color",
