@@ -22,7 +22,7 @@
     "build": "pnpm run '/^build:.*/'",
     "build:components": "ng build && pnpm test-results",
     "clean": "rimraf dist/ .angular/",
-    "lint-build": "pnpm run '/^lint:.*/'",
+    "lint-build": "pnpm run '/^lint-build:.*/'",
     "lint-build:ts": "tsc --noEmit --project tsconfig.json",
     "lint-build:spec": "tsc --noEmit --project tsconfig.spec.json",
     "watch:build": "ng build --watch",
