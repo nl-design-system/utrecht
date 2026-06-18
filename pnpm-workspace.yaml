@@ -35,6 +35,7 @@ overrides:
   handlebars@>=4.6.0 <=4.7.8: ">=4.7.9"
   axios@<1.15.0: ">=1.15.0"
   shell-quote@<1.8.4: ">=1.8.4"
+  "@vitest/browser@>=4.0.0 <=4.1.7": ^4.1.8
 
 packageExtensions:
   "@vue/test-utils":
