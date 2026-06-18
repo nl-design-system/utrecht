@@ -7,7 +7,14 @@
 import clsx from 'clsx';
 import { createContext, ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren, useContext } from 'react';
 
-export type UnorderedListProps = HTMLAttributes<HTMLUListElement>;
+export interface UnorderedListProps extends HTMLAttributes<HTMLUListElement> {
+  /**
+   * Overrides the automatically detected nesting level. Use this when a list is nested inside
+   * markup that isn't rendered by this component (e.g. raw HTML or another framework), since the
+   * automatic detection can only count `UnorderedList` ancestors in the React tree.
+   */
+  level?: number;
+}
 
 /** The deepest nesting level for which the design system defines `--level-*` styles */
 const maxUnorderedListLevel = 8;
@@ -16,10 +23,11 @@ export const UnorderedListLevelContext = createContext(1);
 
 export const UnorderedList = forwardRef(
   (
-    { children, className, ...restProps }: PropsWithChildren<UnorderedListProps>,
+    { children, className, level: levelProp, ...restProps }: PropsWithChildren<UnorderedListProps>,
     ref: ForwardedRef<HTMLUListElement>,
   ) => {
-    const level = useContext(UnorderedListLevelContext);
+    const contextLevel = useContext(UnorderedListLevelContext);
+    const level = levelProp ?? contextLevel;
 
     return (
       <ul

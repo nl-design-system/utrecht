@@ -374,4 +374,30 @@ export const CustomMarkers: Story = {
   },
 };
 
+export const LevelOverride: Story = {
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Use the `level` prop to correct the nesting level when a list is nested inside markup that this component did not render (e.g. raw HTML or another framework), since the automatic detection can only count `UnorderedList` ancestors in the React tree. Without the override, the inner `UnorderedList` below would incorrectly render as level 2 instead of level 3, colliding with the raw HTML list in between.',
+      },
+    },
+  },
+  render: () => (
+    <UnorderedList>
+      <UnorderedListItem>
+        Level 1 (React)
+        <ul className="utrecht-unordered-list utrecht-unordered-list--level-2">
+          <li className="utrecht-unordered-list__item">
+            Level 2 (raw HTML, not rendered by this component)
+            <UnorderedList level={3}>
+              <UnorderedListItem>Level 3 (React, with an explicit level override)</UnorderedListItem>
+            </UnorderedList>
+          </li>
+        </ul>
+      </UnorderedListItem>
+    </UnorderedList>
+  ),
+};
+
 export const DesignTokens = designTokenStory(meta);
