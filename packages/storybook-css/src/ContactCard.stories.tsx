@@ -425,7 +425,9 @@ export const WithBackgroundImage: Story = {
           '--utrecht-contact-card-background-color': 'hsl(207 60% 91%)',
           '--utrecht-contact-card-background-color-2': 'hsl(207 60% 96%)',
           '--utrecht-contact-card-background-image':
-            'linear-gradient(45deg,var(--utrecht-contact-card-background-color),var(--utrecht-contact-card-background-color) 25%,var(--utrecht-contact-card-background-color-2) 25%,var(--utrecht-contact-card-background-color-2))',
+            'linear-gradient(45deg,var(--utrecht-contact-card-background-color),var(--utrecht-contact-card-background-color) 50%,var(--utrecht-contact-card-background-color-2) 50%,var(--utrecht-contact-card-background-color-2))',
+          '--utrecht-contact-card-background-position': '66% center',
+          '--utrecht-contact-card-background-size': '200%',
         } as React.CSSProperties
       }
     >
