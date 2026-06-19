@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { HTMLHeadingLevel } from "./components/contact-card-template";
+export { HTMLHeadingLevel } from "./components/contact-card-template";
 export namespace Components {
     interface UtrechtActionGroup {
         "direction": string | 'column' | 'row';
@@ -77,6 +79,7 @@ export namespace Components {
     }
     interface UtrechtContactCardTemplate {
         "heading": string;
+        "headingLevel": HTMLHeadingLevel;
         "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
@@ -3434,7 +3437,8 @@ declare namespace LocalJSX {
         "rule"?: boolean;
     }
     interface UtrechtContactCardTemplate {
-        "heading"?: string;
+        "heading": string;
+        "headingLevel"?: HTMLHeadingLevel;
         "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
