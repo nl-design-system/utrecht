@@ -31,19 +31,17 @@
 
 @mixin utrecht-contact-card__grid-cell {
   --_utrecht-grid-display: block;
+}
 
-  @include utrecht-contact-card__phone-number;
+@mixin utrecht-contact-card__grid-cell--phone-number {
+  a[href^="tel:"] {
+    font-size: var(--utrecht-contact-card-phone-number-font-size, inherit);
+  }
 }
 
 @mixin utrecht-contact-card__subtitle {
   font-weight: var(--utrecht-contact-card-subtitle-font-weight);
   &::before {
     content: " " var(--utrecht-contact-card-subtitle-separator) " ";
-  }
-}
-
-@mixin utrecht-contact-card__phone-number {
-  a[href^="tel:"] {
-    font-size: var(--utrecht-contact-card-phone-number-font-size, 1.5rem);
   }
 }

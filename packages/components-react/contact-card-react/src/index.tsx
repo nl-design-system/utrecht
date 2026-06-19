@@ -47,7 +47,15 @@ export const ContactCard = forwardRef(
         {sections && sections.length > 0 && (
           <Grid spacing="md" className="utrecht-contact-card__grid">
             {sections.map((section, i) => (
-              <GridCell key={i} className="utrecht-contact-card__grid-cell" sm={6} md={mdCols}>
+              <GridCell
+                key={i}
+                className={clsx(
+                  'utrecht-contact-card__grid-cell',
+                  i === 0 && 'utrecht-contact-card__grid-cell--phone-number',
+                )}
+                sm={6}
+                md={mdCols}
+              >
                 {section}
               </GridCell>
             ))}
