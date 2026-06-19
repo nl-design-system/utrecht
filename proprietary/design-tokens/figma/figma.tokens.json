@@ -13170,6 +13170,10 @@
           "$type": "color",
           "$value": "{basis.color.default.border-subtle}"
         },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.none}"
+        },
         "border-style": {
           "$type": "other",
           "$value": "solid",
@@ -13179,13 +13183,13 @@
           "$type": "dimension",
           "$value": "{basis.border-width.sm}"
         },
-        "border-radius": {
-          "$type": "dimension",
-          "$value": "{basis.border-radius.none}"
-        },
         "color": {
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
         },
         "gap": {
           "$type": "dimension",
@@ -13306,10 +13310,6 @@
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
           }
-        },
-        "font-family": {
-          "$type": "fontFamilies",
-          "$value": "{basis.text.font-family.default}"
         }
       }
     }
