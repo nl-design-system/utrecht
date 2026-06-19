@@ -13,6 +13,15 @@
       "background-size": {
         "$value": "auto"
       },
+      "color": {
+        "$value": "{utrecht.color.black}"
+      },
+      "border-radius": {
+        "$value": "{utrecht.border-radius.none}"
+      },
+      "box-shadow": {
+        "$value": 0
+      },
       "phone-number": {
         "font-size": {
           "$value": "{utrecht.typography.scale.2xl.font-size}"
