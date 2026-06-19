@@ -44,6 +44,8 @@
   margin-block-start: var(--utrecht-space-row-lg);
 }
 
-.utrecht-contact-card__telephone {
-  --utrecht-paragraph-font-size: var(--utrecht-typography-scale-2xl-font-size);
+.utrecht-contact-card__grid-cell--phone-number {
+  a[href^="tel:"] {
+    font-size: var(--utrecht-contact-card-phone-number-font-size, inherit);
+  }
 }
