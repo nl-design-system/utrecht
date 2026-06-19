@@ -60,6 +60,7 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
+    "@utrecht/component-library-react": "workspace:*",
     "@utrecht/contact-card-css": "workspace:*",
     "@utrecht/grid-react": "workspace:*",
     "clsx": "2.1.1"

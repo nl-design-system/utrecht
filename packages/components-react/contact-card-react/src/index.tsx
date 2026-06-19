@@ -4,10 +4,11 @@
  * Copyright (c) 2021-2026 Gemeente Utrecht
  */
 
+import { Heading } from '@utrecht/component-library-react';
 import { Grid, GridCell } from '@utrecht/grid-react';
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
-import type { CSSProperties, HTMLAttributes, ReactNode } from 'react';
+import type { HTMLAttributes, ReactNode } from 'react';
 
 export type HTMLHeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
 
@@ -31,26 +32,27 @@ export const ContactCard = forwardRef(
     }: PropsWithChildren<ContactCardProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const HeadingTag = `h${headingLevel}` as 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
     const mdCols = sections?.length === 2 ? 6 : 4;
 
     return (
       <div ref={ref} className={clsx('utrecht-contact-card', className)} {...restProps}>
         {(heading || subtitle) && (
           <div className="utrecht-contact-card__title">
-            <HeadingTag className={`utrecht-heading-${headingLevel}`}>
+            <Heading level={headingLevel} appearance="utrecht-heading-2">
               {heading}
               {subtitle && <span className="utrecht-contact-card__subtitle">{subtitle}</span>}
-            </HeadingTag>
+            </Heading>
           </div>
         )}
-        <Grid spacing="md" className="utrecht-contact-card__grid">
-          {sections?.map((section, i) => (
-            <GridCell key={i} className="utrecht-contact-card__grid-cell" sm={6} md={mdCols}>
-              {section}
-            </GridCell>
-          ))}
-        </Grid>
+        {sections && sections.length > 0 && (
+          <Grid spacing="md" className="utrecht-contact-card__grid">
+            {sections.map((section, i) => (
+              <GridCell key={i} className="utrecht-contact-card__grid-cell" sm={6} md={mdCols}>
+                {section}
+              </GridCell>
+            ))}
+          </Grid>
+        )}
         {children && <div className="utrecht-contact-card__content">{children}</div>}
       </div>
     );
