@@ -13179,6 +13179,10 @@
           "$type": "dimension",
           "$value": "{basis.border-width.sm}"
         },
+        "border-radius": {
+          "$type": "dimension",
+          "$value": "{basis.border-radius.none}"
+        },
         "color": {
           "$type": "color",
           "$value": "{basis.color.default.color-document}"
@@ -13302,6 +13306,10 @@
             "$type": "dimension",
             "$value": "{basis.size.icon.md}"
           }
+        },
+        "font-family": {
+          "$type": "fontFamilies",
+          "$value": "{basis.text.font-family.default}"
         }
       }
     }
