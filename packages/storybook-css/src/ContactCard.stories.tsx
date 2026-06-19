@@ -314,7 +314,7 @@ export const WithSubtitle: Story = {
             <p className="utrecht-paragraph">Afbeelding naam</p>
           </div>
           <div>
-            <img alt="Afbeelding naam" src="/example/photo-nijntje-vuelta.jpg" width="100" height="100" />
+            <img alt="Afbeelding naam" src="example/photo-nijntje-vuelta.jpg" width="100" height="100" />
           </div>
         </div>
         <h3 className="utrecht-heading-3">Wijkspreekuur</h3>
