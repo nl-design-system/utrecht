@@ -154,10 +154,8 @@ export const HeaderBodyFooter: Story = {
     children: [
       <header className="utrecht-drawer__header" key="header">
         <Heading1>Drawer title</Heading1>
-        <form className="utrecht-drawer__close" method="dialog">
-          <button aria-label="Sluiten" type="submit">
-            &times;
-          </button>
+        <form className="utrecht-drawer__header-actions" method="dialog">
+          <button type="submit">Sluiten</button>
         </form>
       </header>,
       <div className="utrecht-drawer__body" key="body">

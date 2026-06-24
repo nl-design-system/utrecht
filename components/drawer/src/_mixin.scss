@@ -15,6 +15,8 @@
   border-width: var(--utrecht-drawer-border-width, 0);
   box-sizing: border-box;
   color: var(--utrecht-drawer-color, CanvasText);
+  display: flex;
+  flex-direction: column;
   overflow: auto;
   padding-block-end: var(--utrecht-drawer-padding-block-end);
   padding-block-start: var(--utrecht-drawer-padding-block-start);
@@ -110,6 +112,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding-block-end: var(--utrecht-drawer-body-padding-block-end);
   padding-block-start: var(--utrecht-drawer-body-padding-block-start);
   padding-inline-end: var(--utrecht-drawer-body-padding-inline-end);
@@ -128,8 +131,8 @@
   padding-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
 }
 
-@mixin utrecht-drawer__close {
-  /* Align the close button to the inline-end of the header and keep it at its own size. */
+@mixin utrecht-drawer__header-actions {
+  /* Align the header actions (for example a close button) to the inline-end of the header and keep them at their own size. */
   flex-shrink: 0;
   margin-inline-start: auto;
 }

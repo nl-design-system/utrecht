@@ -16,15 +16,15 @@ Geef je de Drawer een header, body of footer, zet dan de eigen padding van de Dr
 
 ## Sluitknop
 
-De header bevat doorgaans een sluitknop. Geef de knop, of het `<form method="dialog">` eromheen, de class `utrecht-drawer__close` om hem naar de inline-end van de header uit te lijnen.
+De header bevat doorgaans een sluitknop. Geef de knop, of het `<form method="dialog">` eromheen, de class `utrecht-drawer__header-actions` om hem naar de inline-end van de header uit te lijnen.
 
 Sluit de Drawer met de standaard `<dialog>`-mogelijkheden: een knop in een `<form method="dialog">` sluit de dialog zonder JavaScript, of gebruik `HTMLDialogElement.close()`.
 
 ```html
 <header class="utrecht-drawer__header">
   <h2>Titel</h2>
-  <form class="utrecht-drawer__close" method="dialog">
-    <button type="submit" aria-label="Sluiten">…</button>
+  <form class="utrecht-drawer__header-actions" method="dialog">
+    <button type="submit">Sluiten</button>
   </form>
 </header>
 ```
