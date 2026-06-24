@@ -127,3 +127,9 @@
   padding-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
   padding-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
 }
+
+@mixin utrecht-drawer__close {
+  /* Align the close button to the inline-end of the header and keep it at its own size. */
+  flex-shrink: 0;
+  margin-inline-start: auto;
+}

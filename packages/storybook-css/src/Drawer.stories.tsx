@@ -152,11 +152,13 @@ export const HeaderBodyFooter: Story = {
       '--utrecht-drawer-footer-padding-inline-start': '24px',
     } as React.CSSProperties,
     children: [
-      <header className="utrecht-drawer__header" key="header" style={{ justifyContent: 'space-between' }}>
+      <header className="utrecht-drawer__header" key="header">
         <Heading1>Drawer title</Heading1>
-        <button aria-label="Sluiten" type="button">
-          &times;
-        </button>
+        <form className="utrecht-drawer__close" method="dialog">
+          <button aria-label="Sluiten" type="submit">
+            &times;
+          </button>
+        </form>
       </header>,
       <div className="utrecht-drawer__body" key="body">
         <Paragraph>
