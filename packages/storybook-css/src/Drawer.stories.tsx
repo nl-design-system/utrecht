@@ -123,4 +123,54 @@ export const OverflowY: Story = {
   name: 'Overflow Y',
 };
 
+export const HeaderBodyFooter: Story = {
+  args: {
+    align: 'inline-start',
+    open: true,
+    // The Utrecht theme has no values for the new slot tokens yet, so the demo sets them inline.
+    style: {
+      '--utrecht-drawer-padding-block-end': '0',
+      '--utrecht-drawer-padding-block-start': '0',
+      '--utrecht-drawer-padding-inline-end': '0',
+      '--utrecht-drawer-padding-inline-start': '0',
+      '--utrecht-drawer-header-border-block-end-width': '1px',
+      '--utrecht-drawer-header-border-color': '#bcbcbc',
+      '--utrecht-drawer-header-padding-block-end': '0',
+      '--utrecht-drawer-header-padding-block-start': '24px',
+      '--utrecht-drawer-header-padding-inline-end': '24px',
+      '--utrecht-drawer-header-padding-inline-start': '24px',
+      '--utrecht-drawer-body-padding-block-end': '24px',
+      '--utrecht-drawer-body-padding-block-start': '16px',
+      '--utrecht-drawer-body-padding-inline-end': '24px',
+      '--utrecht-drawer-body-padding-inline-start': '24px',
+      '--utrecht-drawer-body-row-gap': '16px',
+      '--utrecht-drawer-footer-border-block-start-width': '1px',
+      '--utrecht-drawer-footer-border-color': '#bcbcbc',
+      '--utrecht-drawer-footer-padding-block-end': '24px',
+      '--utrecht-drawer-footer-padding-block-start': '0',
+      '--utrecht-drawer-footer-padding-inline-end': '24px',
+      '--utrecht-drawer-footer-padding-inline-start': '24px',
+    } as React.CSSProperties,
+    children: [
+      <header className="utrecht-drawer__header" key="header" style={{ justifyContent: 'space-between' }}>
+        <Heading1>Drawer title</Heading1>
+        <button aria-label="Sluiten" type="button">
+          &times;
+        </button>
+      </header>,
+      <div className="utrecht-drawer__body" key="body">
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua.
+        </Paragraph>
+        <Paragraph>Een tweede alinea om de row-gap tussen de onderdelen van de body te tonen.</Paragraph>
+      </div>,
+      <footer className="utrecht-drawer__footer" key="footer">
+        <button type="button">Actie</button>
+      </footer>,
+    ],
+  },
+  name: 'Header, body and footer',
+};
+
 export const DesignTokens = designTokenStory(meta);
