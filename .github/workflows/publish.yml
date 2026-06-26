@@ -1,6 +1,4 @@
 name: Continuous Delivery
-# Triggers the following workflows:
-# - .github/workflows/codecov.yml
 
 on:
   push:
@@ -201,6 +199,15 @@ jobs:
           name: coverage-report
           path: "**/coverage/"
           retention-days: 1
+
+  codecov:
+    needs: test
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    uses: ./.github/workflows/codecov.yml
+    secrets:
+      CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
   visual-regression-test:
     name: UI Tests
