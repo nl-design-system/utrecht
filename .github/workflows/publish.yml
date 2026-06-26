@@ -12,9 +12,13 @@ env:
   CI: true
   MAIN_BRANCH: "main"
 
+permissions: {}
+
 jobs:
   install:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
       - name: Checkout branch
@@ -43,6 +47,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
 
@@ -77,6 +83,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
 
@@ -154,6 +162,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
 
@@ -196,6 +206,8 @@ jobs:
     name: UI Tests
     runs-on: ubuntu-latest
     needs: install
+    permissions:
+      contents: read
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
 
@@ -245,11 +257,9 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     if: github.ref == 'refs/heads/main'
-
     environment:
       name: github-pages
       url: ${{ steps.deploy-pages.outputs.page_url }}
-
     permissions:
       pages: write
       id-token: write
@@ -266,7 +276,6 @@ jobs:
     environment: publish
     env:
       NODE_OPTIONS: "--max-old-space-size=6114"
-
     permissions:
       id-token: write
 
