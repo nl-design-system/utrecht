@@ -49,3 +49,17 @@
     font-size: var(--utrecht-contact-card-phone-number-font-size, inherit);
   }
 }
+
+.utrecht-contact-card__social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--utrecht-contact-card-social-links-gap, var(--utrecht-space-inline-sm));
+  margin-block-start: var(--utrecht-space-row-lg);
+}
+
+.utrecht-contact-card__social-link {
+  color: inherit;
+  display: inline-flex;
+  text-decoration: none;
+}
