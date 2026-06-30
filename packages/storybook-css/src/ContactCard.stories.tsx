@@ -5,7 +5,12 @@ import readme from '@utrecht/contact-card-css/README.md?raw';
 import tokensDefinition from '@utrecht/contact-card-css/src/tokens.json';
 import { ContactCard } from '@utrecht/contact-card-react/dist/css';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import {
+  UtrechtIconChevronRight,
+  UtrechtIconFacebook,
+  UtrechtIconLinkedin,
+  UtrechtIconX,
+} from '@utrecht/web-component-library-react';
 import React, { type ComponentProps, type ReactNode } from 'react';
 import { designTokenStory } from './design-token-story';
 
@@ -331,6 +336,142 @@ export const WithSubtitle: Story = {
     ],
   },
   render: ({ sections, ...args }: ContactCardStoryArgs) => <ContactCard {...args} sections={sections} />,
+};
+
+export const WithIconLinks: Story = {
+  name: 'Met icoonlinks',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Gebruik `socialLinks` om icoonlinks toe te voegen aan de contact card, bijvoorbeeld voor sociale media.',
+      },
+    },
+  },
+  args: {
+    heading: 'Hulp en contact',
+    subtitle: '',
+    sections: [
+      <>
+        <h3 className="utrecht-heading-3">Telefoon</h3>
+        <p className="utrecht-paragraph">
+          <a
+            href="tel:14030"
+            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
+            className="utrecht-link utrecht-link--html-a"
+          >
+            14&nbsp;030
+          </a>
+        </p>
+        <p className="utrecht-paragraph">
+          Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
+          <br />
+          Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
+        </p>
+      </>,
+      <>
+        <h3 className="utrecht-heading-3">Vraag of idee?</h3>
+        <p className="utrecht-paragraph">
+          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+            Algemeen reactieformulier
+          </a>
+        </p>
+      </>,
+    ],
+  },
+  render: ({ sections, ...args }: ContactCardStoryArgs) => (
+    <ContactCard
+      {...args}
+      sections={sections}
+      socialLinksHeading="Social media"
+      socialLinks={[
+        {
+          icon: <UtrechtIconFacebook />,
+          href: 'https://www.facebook.com/GemeenteUtrecht',
+          label: 'Facebook van gemeente Utrecht',
+        },
+        {
+          icon: <UtrechtIconLinkedin />,
+          href: 'https://www.linkedin.com/company/gemeente-utrecht',
+          label: 'LinkedIn van gemeente Utrecht',
+        },
+        { icon: <UtrechtIconX />, href: 'https://x.com/gemeenteutrecht', label: 'X van gemeente Utrecht' },
+      ]}
+    />
+  ),
+};
+
+export const WithIconLinksThreeColumns: Story = {
+  name: 'Met icoonlinks en drie kolommen',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Bij drie kolommen worden de icoonlinks onderaan de derde kolom geplaatst, in plaats van als extra kolom.',
+      },
+    },
+  },
+  args: {
+    heading: 'Hulp en contact',
+    subtitle: '',
+    sections: [
+      <>
+        <h3 className="utrecht-heading-3">Telefoon</h3>
+        <p className="utrecht-paragraph">
+          <a
+            href="tel:14030"
+            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
+            className="utrecht-link utrecht-link--html-a"
+          >
+            14&nbsp;030
+          </a>
+        </p>
+        <p className="utrecht-paragraph">
+          Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
+          <br />
+          Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
+        </p>
+      </>,
+      <>
+        <h3 className="utrecht-heading-3">Bezoekadres</h3>
+        <p className="utrecht-paragraph">Stadsplateau 1, Utrecht</p>
+        <h3 className="utrecht-heading-3">Postadres</h3>
+        <p className="utrecht-paragraph">
+          Postbus 16200
+          <br />
+          3500 CE Utrecht
+        </p>
+      </>,
+      <>
+        <h3 className="utrecht-heading-3">E-mail</h3>
+        <p className="utrecht-paragraph">
+          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+            Reactieformulier
+          </a>
+        </p>
+      </>,
+    ],
+  },
+  render: ({ sections, ...args }: ContactCardStoryArgs) => (
+    <ContactCard
+      {...args}
+      sections={sections}
+      socialLinksHeading="Social media"
+      socialLinks={[
+        {
+          icon: <UtrechtIconFacebook />,
+          href: 'https://www.facebook.com/GemeenteUtrecht',
+          label: 'Facebook van gemeente Utrecht',
+        },
+        {
+          icon: <UtrechtIconLinkedin />,
+          href: 'https://www.linkedin.com/company/gemeente-utrecht',
+          label: 'LinkedIn van gemeente Utrecht',
+        },
+        { icon: <UtrechtIconX />, href: 'https://x.com/gemeenteutrecht', label: 'X van gemeente Utrecht' },
+      ]}
+    />
+  ),
 };
 
 export const WithForm: Story = {
