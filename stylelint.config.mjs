@@ -53,7 +53,6 @@ export default {
       },
     ],
     'function-url-no-scheme-relative': [true],
-    'unit-disallowed-list': [['s']],
     'font-family-name-quotes': ['always-unless-keyword'],
     'function-url-quotes': ['always'],
     'declaration-property-value-disallowed-list': [
