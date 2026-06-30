@@ -45,3 +45,21 @@
     content: " " var(--utrecht-contact-card-subtitle-separator) " ";
   }
 }
+
+@mixin utrecht-contact-card__social-links-heading {
+  --utrecht-heading-3-margin-block-start: 0;
+}
+
+@mixin utrecht-contact-card__social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--utrecht-contact-card-icon-links-gap, var(--utrecht-space-inline-sm));
+  margin-block-start: var(--utrecht-space-row-lg);
+}
+
+@mixin utrecht-contact-card__social-link {
+  color: inherit;
+  display: inline-flex;
+  text-decoration: none;
+}

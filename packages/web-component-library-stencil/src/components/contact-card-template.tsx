@@ -11,9 +11,37 @@ export class ContactCardTemplate {
   @Prop() heading!: string;
   @Prop() headingLevel: HTMLHeadingLevel = 2;
   @Prop() subtitle?: string;
+  @Prop() socialLinks?: string;
+  @Prop() socialLinksHeading?: string;
+  @Prop() socialLinksHeadingLevel: HTMLHeadingLevel = 3;
+  @Prop() sectionCount?: number;
 
   render() {
     const HeadingTag = `h${this.headingLevel}`;
+    const SocialLinksHeadingTag = `h${this.socialLinksHeadingLevel}`;
+    const socialLinks: { icon: string; href: string; label?: string }[] = this.socialLinks
+      ? JSON.parse(this.socialLinks)
+      : [];
+    const sectionCount = this.sectionCount ?? 0;
+    const hasIconLinksColumn = socialLinks.length > 0 && sectionCount <= 2;
+
+    const socialLinksContent = socialLinks.length > 0 && (
+      <div class="utrecht-contact-card__social-links">
+        {this.socialLinksHeading && (
+          <SocialLinksHeadingTag class="utrecht-heading-3 utrecht-contact-card__social-links-heading">
+            {this.socialLinksHeading}
+          </SocialLinksHeadingTag>
+        )}
+        {socialLinks.map(({ icon, href, label }) => {
+          const IconTag = `utrecht-icon-${icon}`;
+          return (
+            <a href={href} aria-label={label || icon} class="utrecht-contact-card__social-link">
+              <IconTag />
+            </a>
+          );
+        })}
+      </div>
+    );
 
     return (
       <div class="utrecht-contact-card">
@@ -23,6 +51,12 @@ export class ContactCardTemplate {
         </HeadingTag>
         <div class="utrecht-contact-card__grid">
           <slot />
+          {socialLinksContent &&
+            (hasIconLinksColumn ? (
+              <div class="utrecht-contact-card__grid-cell">{socialLinksContent}</div>
+            ) : (
+              socialLinksContent
+            ))}
         </div>
         <div class="utrecht-contact-card__content">
           <slot name="content" />
