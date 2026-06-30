@@ -1,6 +1,7 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
+import { Heading, Link, Paragraph, Separator } from '@utrecht/component-library-react';
 import readme from '@utrecht/contact-card-css/README.md?raw';
 import tokensDefinition from '@utrecht/contact-card-css/src/tokens.json';
 import { ContactCard } from '@utrecht/contact-card-react/dist/css';
@@ -90,29 +91,25 @@ export const Default: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Vraag of idee?</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>Vraag of idee?</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Algemeen reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
@@ -133,21 +130,17 @@ export const OneColumn: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
     ],
   },
@@ -168,39 +161,35 @@ export const ThreeColumns: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Bezoekadres</h3>
-        <p className="utrecht-paragraph">Stadsplateau 1, Utrecht</p>
-        <h3 className="utrecht-heading-3">Postadres</h3>
-        <p className="utrecht-paragraph">
+        <Heading level={3}>Bezoekadres</Heading>
+        <Paragraph>Stadsplateau 1, Utrecht</Paragraph>
+        <Heading level={3}>Postadres</Heading>
+        <Paragraph>
           Postbus 16200
           <br />
           3500 CE Utrecht
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">E-mail</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>E-mail</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
@@ -223,29 +212,25 @@ export const WithHeadingLevel: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Vraag of idee?</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>Vraag of idee?</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Algemeen reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
@@ -267,38 +252,30 @@ export const WithSubtitle: Story = {
     subtitle: 'Wijkbureau Overvecht',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <h3 className="utrecht-heading-3">E-mail</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="mailto:overvecht@utrecht.nl"
-            title="Een e-mail naar dit adres versturen."
-            className="utrecht-link utrecht-link--html-a"
-          >
+          </Link>
+        </Paragraph>
+        <Heading level={3}>E-mail</Heading>
+        <Paragraph>
+          <Link href="mailto:overvecht@utrecht.nl" title="Een e-mail naar dit adres versturen.">
             overvecht@utrecht.nl
-          </a>
-        </p>
-        <h3 className="utrecht-heading-3">Postadres</h3>
-        <p className="utrecht-paragraph">Postbus 8395, 3503 RJ Utrecht</p>
+          </Link>
+        </Paragraph>
+        <Heading level={3}>Postadres</Heading>
+        <Paragraph>Postbus 8395, 3503 RJ Utrecht</Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Bezoekadres</h3>
-        <p className="utrecht-paragraph">
+        <Heading level={3}>Bezoekadres</Heading>
+        <Paragraph>
           Wijkbureau Overvecht
           <br />
           Zamenhofdreef 17, Utrecht
-        </p>
-        <h3 className="utrecht-heading-3">Openingstijden</h3>
-        <p className="utrecht-paragraph">
+        </Paragraph>
+        <Heading level={3}>Openingstijden</Heading>
+        <Paragraph>
           Maandag:
           <br />
           13.00 - 17.00 uur
@@ -310,28 +287,27 @@ export const WithSubtitle: Story = {
           Woensdag en vrijdag:
           <br />
           9.00 - 13.00 uur
-        </p>
+        </Paragraph>
       </>,
       <>
         <div>
           <div>
-            <h3 className="utrecht-heading-3">Wijkwethouder</h3>
-            <p className="utrecht-paragraph">Afbeelding naam</p>
+            <Heading level={3}>Wijkwethouder</Heading>
+            <Paragraph>Afbeelding naam</Paragraph>
           </div>
           <div>
             <img alt="Afbeelding naam" src="example/photo-nijntje-vuelta.jpg" width="100" height="100" />
           </div>
         </div>
-        <h3 className="utrecht-heading-3">Wijkspreekuur</h3>
-        <p className="utrecht-paragraph">
-          <a
+        <Heading level={3}>Wijkspreekuur</Heading>
+        <Paragraph>
+          <Link
             href="https://www.utrecht.nl/wonen-en-leven/wijken/wijk-overvecht/uw-initiatief-en-invloed/wijkspreekuur-overvecht"
             target="_top"
-            className="utrecht-link utrecht-link--html-a"
           >
             Bekijk wanneer de spreekuren zijn en hoe u een afspraak maakt
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
@@ -353,29 +329,25 @@ export const WithIconLinks: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Vraag of idee?</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>Vraag of idee?</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Algemeen reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
@@ -416,39 +388,35 @@ export const WithIconLinksThreeColumns: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Bezoekadres</h3>
-        <p className="utrecht-paragraph">Stadsplateau 1, Utrecht</p>
-        <h3 className="utrecht-heading-3">Postadres</h3>
-        <p className="utrecht-paragraph">
+        <Heading level={3}>Bezoekadres</Heading>
+        <Paragraph>Stadsplateau 1, Utrecht</Paragraph>
+        <Heading level={3}>Postadres</Heading>
+        <Paragraph>
           Postbus 16200
           <br />
           3500 CE Utrecht
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">E-mail</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>E-mail</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
@@ -488,50 +456,46 @@ export const WithForm: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">E-mail</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>E-mail</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
     ],
   },
   render: ({ sections, ...args }: ContactCardStoryArgs) => (
     <ContactCard {...args} sections={sections}>
-      <hr className="utrecht-separator" />
+      <Separator />
       <form action="#" noValidate>
         <div className="utrecht-form-field utrecht-form-field--textarea">
           <div className="utrecht-form-field__label">
             <label htmlFor="contact" className="utrecht-form-label">
-              <h3 className="utrecht-heading-3">Uw vraag of opmerking</h3>
+              <Heading level={3}>Uw vraag of opmerking</Heading>
             </label>
           </div>
-          <p className="utrecht-paragraph">
+          <Paragraph>
             <textarea
               name="contact"
               id="contact"
               rows={5}
               className="utrecht-textarea utrecht-textarea--html-textarea"
             />
-          </p>
+          </Paragraph>
         </div>
         <div className="utrecht-form-field utrecht-form-field--text">
           <div className="utrecht-form-field__label">
@@ -539,9 +503,9 @@ export const WithForm: Story = {
               Uw e-mail adres
             </label>
           </div>
-          <p className="utrecht-paragraph">
+          <Paragraph>
             <input type="email" name="email" id="email" className="utrecht-textbox utrecht-textbox--html-input" />
-          </p>
+          </Paragraph>
           <p className="utrecht-form-field-description">
             Vult u geen e-mailadres in? Dan kunnen wij niet reageren op uw vraag of opmerking.
           </p>
@@ -572,39 +536,35 @@ export const WithBackgroundImage: Story = {
     subtitle: '',
     sections: [
       <>
-        <h3 className="utrecht-heading-3">Telefoon</h3>
-        <p className="utrecht-paragraph">
-          <a
-            href="tel:14030"
-            aria-label="Bel 14030, telefoonnummer van gemeente Utrecht"
-            className="utrecht-link utrecht-link--html-a"
-          >
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
             14&nbsp;030
-          </a>
-        </p>
-        <p className="utrecht-paragraph">
+          </Link>
+        </Paragraph>
+        <Paragraph>
           Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
           <br />
           Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </p>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">E-mail</h3>
-        <p className="utrecht-paragraph">
-          <a href="https://www.utrecht.nl/reactieformulier" target="_top" className="utrecht-link utrecht-link--html-a">
+        <Heading level={3}>E-mail</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
             Reactieformulier
-          </a>
-        </p>
+          </Link>
+        </Paragraph>
       </>,
       <>
-        <h3 className="utrecht-heading-3">Bezoekadres</h3>
-        <p className="utrecht-paragraph">Stadsplateau 1, Utrecht</p>
-        <h3 className="utrecht-heading-3">Postadres</h3>
-        <p className="utrecht-paragraph">
+        <Heading level={3}>Bezoekadres</Heading>
+        <Paragraph>Stadsplateau 1, Utrecht</Paragraph>
+        <Heading level={3}>Postadres</Heading>
+        <Paragraph>
           Postbus 16200
           <br />
           3500 CE Utrecht
-        </p>
+        </Paragraph>
       </>,
     ],
   },
