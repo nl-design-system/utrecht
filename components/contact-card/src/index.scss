@@ -29,3 +29,15 @@
 .utrecht-contact-card__subtitle {
   @include utrecht-contact-card__subtitle;
 }
+
+.utrecht-contact-card__social-links-heading {
+  @include utrecht-contact-card__social-links-heading;
+}
+
+.utrecht-contact-card__social-links {
+  @include utrecht-contact-card__social-links;
+}
+
+.utrecht-contact-card__social-link {
+  @include utrecht-contact-card__social-link;
+}
