@@ -50,6 +50,21 @@ const meta = {
       description: 'Additional content rendered after the sections',
       table: { type: { summary: 'ReactNode' } },
     },
+    socialLinks: {
+      control: false,
+      description: 'Array of social links with icon, href and optional label',
+      table: { type: { summary: 'ContactCardSocialLink[]' } },
+    },
+    socialLinksHeading: {
+      control: 'text',
+      description: 'Optional heading above the social links',
+      table: { type: { summary: 'ReactNode' } },
+    },
+    socialLinksHeadingLevel: {
+      control: { type: 'number', min: 1, max: 6 },
+      description: 'Heading level for the social links heading, always styled as heading-3',
+      table: { type: { summary: '1 | 2 | 3 | 4 | 5 | 6' }, defaultValue: { summary: '3' } },
+    },
   },
   args: {
     heading: 'Hulp en contact',
