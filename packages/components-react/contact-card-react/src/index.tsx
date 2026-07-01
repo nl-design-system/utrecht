@@ -45,8 +45,8 @@ export const ContactCard = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const sectionCount = sections?.length ?? 0;
-    const hasIconLinksColumn = (socialLinks?.length ?? 0) > 0 && sectionCount <= 2;
-    const totalColumns = sectionCount + (hasIconLinksColumn ? 1 : 0);
+    const hasSocialLinksColumn = (socialLinks?.length ?? 0) > 0 && sectionCount <= 2;
+    const totalColumns = sectionCount + (hasSocialLinksColumn ? 1 : 0);
     const mdCols = totalColumns === 2 ? 6 : 4;
 
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
@@ -78,7 +78,7 @@ export const ContactCard = forwardRef(
             </Heading>
           </div>
         )}
-        {(sectionCount > 0 || hasIconLinksColumn) && (
+        {(sectionCount > 0 || hasSocialLinksColumn) && (
           <Grid spacing="md" className="utrecht-contact-card__grid">
             {sections?.map((section, i) => (
               <GridCell
@@ -87,14 +87,15 @@ export const ContactCard = forwardRef(
                   'utrecht-contact-card__grid-cell',
                   i === 0 && 'utrecht-contact-card__grid-cell--phone-number',
                 )}
+                xs={12}
                 sm={6}
                 md={mdCols}
               >
                 {section}
-                {!hasIconLinksColumn && i === 2 && socialLinksContent}
+                {!hasSocialLinksColumn && i === 2 && socialLinksContent}
               </GridCell>
             ))}
-            {hasIconLinksColumn && (
+            {hasSocialLinksColumn && (
               <GridCell className="utrecht-contact-card__grid-cell" sm={6} md={mdCols}>
                 {socialLinksContent}
               </GridCell>
