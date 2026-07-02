@@ -37,6 +37,7 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='m6 10 3 3 6-6'/%3e%3c/svg%3e");
   border-color: var(--utrecht-checkbox-checked-border-color, var(--utrecht-checkbox-border-color));
   border-width: var(--utrecht-checkbox-checked-border-width, var(--utrecht-checkbox-border-width));
+  color: var(--utrecht-checkbox-checked-color, var(--utrecht-checkbox-color));
 }
 
 @mixin utrecht-custom-checkbox--disabled {
@@ -77,6 +78,82 @@
   background-color: var(--utrecht-checkbox-hover-background-color, var(--utrecht-checkbox-background-color));
   border-color: var(--utrecht-checkbox-hover-border-color, var(--utrecht-checkbox-border-color));
   border-width: var(--utrecht-checkbox-hover-border-width, var(--utrecht-checkbox-border-width));
+}
+
+@mixin utrecht-custom-checkbox--checked-hover {
+  background-color: var(
+    --utrecht-checkbox-checked-hover-background-color,
+    var(--utrecht-checkbox-checked-background-color, var(--utrecht-checkbox-background-color))
+  );
+  border-color: var(
+    --utrecht-checkbox-checked-hover-border-color,
+    var(--utrecht-checkbox-checked-border-color, var(--utrecht-checkbox-border-color))
+  );
+  border-width: var(
+    --utrecht-checkbox-checked-hover-border-width,
+    var(--utrecht-checkbox-checked-border-width, var(--utrecht-checkbox-border-width))
+  );
+  color: var(
+    --utrecht-checkbox-checked-hover-color,
+    var(--utrecht-checkbox-checked-color, var(--utrecht-checkbox-color))
+  );
+}
+
+@mixin utrecht-custom-checkbox--checked-active {
+  background-color: var(
+    --utrecht-checkbox-checked-active-background-color,
+    var(--utrecht-checkbox-checked-background-color, var(--utrecht-checkbox-background-color))
+  );
+  border-color: var(
+    --utrecht-checkbox-checked-active-border-color,
+    var(--utrecht-checkbox-checked-border-color, var(--utrecht-checkbox-border-color))
+  );
+  border-width: var(
+    --utrecht-checkbox-checked-active-border-width,
+    var(--utrecht-checkbox-checked-border-width, var(--utrecht-checkbox-border-width))
+  );
+  color: var(
+    --utrecht-checkbox-checked-active-color,
+    var(--utrecht-checkbox-checked-color, var(--utrecht-checkbox-color))
+  );
+}
+
+@mixin utrecht-custom-checkbox--indeterminate-hover {
+  background-color: var(
+    --utrecht-checkbox-indeterminate-hover-background-color,
+    var(--utrecht-checkbox-indeterminate-background-color, var(--utrecht-checkbox-background-color))
+  );
+  border-color: var(
+    --utrecht-checkbox-indeterminate-hover-border-color,
+    var(--utrecht-checkbox-indeterminate-border-color, var(--utrecht-checkbox-border-color))
+  );
+  border-width: var(
+    --utrecht-checkbox-indeterminate-hover-border-width,
+    var(--utrecht-checkbox-indeterminate-border-width, var(--utrecht-checkbox-border-width))
+  );
+  color: var(
+    --utrecht-checkbox-indeterminate-hover-color,
+    var(--utrecht-checkbox-indeterminate-color, var(--utrecht-checkbox-color))
+  );
+}
+
+@mixin utrecht-custom-checkbox--indeterminate-active {
+  background-color: var(
+    --utrecht-checkbox-indeterminate-active-background-color,
+    var(--utrecht-checkbox-indeterminate-background-color, var(--utrecht-checkbox-background-color))
+  );
+  border-color: var(
+    --utrecht-checkbox-indeterminate-active-border-color,
+    var(--utrecht-checkbox-indeterminate-border-color, var(--utrecht-checkbox-border-color))
+  );
+  border-width: var(
+    --utrecht-checkbox-indeterminate-active-border-width,
+    var(--utrecht-checkbox-indeterminate-border-width, var(--utrecht-checkbox-border-width))
+  );
+  color: var(
+    --utrecht-checkbox-indeterminate-active-color,
+    var(--utrecht-checkbox-indeterminate-color, var(--utrecht-checkbox-color))
+  );
 }
 
 @mixin utrecht-custom-checkbox--focus {
@@ -124,5 +201,23 @@
   &:indeterminate,
   &:checked:indeterminate {
     @include utrecht-custom-checkbox--indeterminate;
+  }
+
+  /* The guards keep disabled checkboxes out of hover and active styling; without them these
+   * higher-specificity selectors would override the earlier disabled rules. */
+  &:checked:hover:not([aria-disabled="true"], :disabled) {
+    @include utrecht-custom-checkbox--checked-hover;
+  }
+
+  &:checked:active:not([aria-disabled="true"], :disabled) {
+    @include utrecht-custom-checkbox--checked-active;
+  }
+
+  &:indeterminate:hover:not([aria-disabled="true"], :disabled) {
+    @include utrecht-custom-checkbox--indeterminate-hover;
+  }
+
+  &:indeterminate:active:not([aria-disabled="true"], :disabled) {
+    @include utrecht-custom-checkbox--indeterminate-active;
   }
 }

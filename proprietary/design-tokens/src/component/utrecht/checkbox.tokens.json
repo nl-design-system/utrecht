@@ -27,10 +27,34 @@
       "checked": {
         "border-color": { "$value": "{utrecht.color.blue.40}" },
         "border-width": {},
-        "background-color": { "$value": "{utrecht.color.blue.40}" }
+        "background-color": { "$value": "{utrecht.color.blue.40}" },
+        "hover": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        },
+        "active": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        }
       },
       "indeterminate": {
-        "background-color": { "$value": "{utrecht.color.blue.40}" }
+        "background-color": { "$value": "{utrecht.color.blue.40}" },
+        "hover": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        },
+        "active": {
+          "border-color": {},
+          "border-width": {},
+          "background-color": {},
+          "color": {}
+        }
       },
       "invalid": {
         "border-color": { "$value": "{utrecht.form-control.invalid.border-color}" },
