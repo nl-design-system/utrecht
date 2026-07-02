@@ -1,5 +1,16 @@
 # @utrecht/grid-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 8570971: Add `cols` prop to `Grid` component to set the total number of equal-width columns (1–12).
+
+### Patch Changes
+
+- Updated dependencies [8570971]
+  - @utrecht/grid-css@2.1.0
+
 ## 1.0.2
 
 ### Patch Changes
