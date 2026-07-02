@@ -1,6 +1,6 @@
-const minorConfig = require('./.ncurc.minor');
+import minorConfig from './.ncurc.minor.mjs';
 
-module.exports = {
+export default {
   ...minorConfig,
   reject: [
     ...minorConfig.reject,
