@@ -29,3 +29,19 @@
 .utrecht-drawer--block-end {
   @include utrecht-drawer--block-end;
 }
+
+.utrecht-drawer__header {
+  @include utrecht-drawer__header;
+}
+
+.utrecht-drawer__body {
+  @include utrecht-drawer__body;
+}
+
+.utrecht-drawer__footer {
+  @include utrecht-drawer__footer;
+}
+
+.utrecht-drawer__header-actions {
+  @include utrecht-drawer__header-actions;
+}
