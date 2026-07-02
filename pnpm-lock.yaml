@@ -315,6 +315,30 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/contact-card:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
+      '@utrecht/grid-css':
+        specifier: workspace:*
+        version: link:../grid
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:../heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:../heading-4
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../link
+      '@utrecht/paragraph-css':
+        specifier: workspace:*
+        version: link:../paragraph
+
   components/currency-data:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -3428,6 +3452,46 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  packages/components-react/contact-card-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: '*'
+        version: 7.24.8
+      '@utrecht/component-library-react':
+        specifier: workspace:*
+        version: link:../../component-library-react
+      '@utrecht/contact-card-css':
+        specifier: workspace:*
+        version: link:../../../components/contact-card
+      '@utrecht/grid-react':
+        specifier: workspace:*
+        version: link:../grid-react
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: 19.2.3
+        version: 19.2.3(@types/react@19.2.14)
+      '@utrecht/build-utils-react':
+        specifier: workspace:*
+        version: link:../../build-utils-react
+      rollup:
+        specifier: 4.23.0
+        version: 4.23.0
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+
   packages/components-react/customizable-text-input:
     dependencies:
       '@babel/runtime':
@@ -5879,6 +5943,12 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
+      '@utrecht/contact-card-css':
+        specifier: workspace:*
+        version: link:../../components/contact-card
+      '@utrecht/contact-card-react':
+        specifier: workspace:*
+        version: link:../components-react/contact-card-react
       '@utrecht/currency-data-css':
         specifier: workspace:*
         version: link:../../components/currency-data
