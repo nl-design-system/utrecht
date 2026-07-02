@@ -80,6 +80,10 @@ export namespace Components {
     interface UtrechtContactCardTemplate {
         "heading": string;
         "headingLevel": HTMLHeadingLevel;
+        "sectionCount"?: number;
+        "socialLinks"?: string;
+        "socialLinksHeading"?: string;
+        "socialLinksHeadingLevel": HTMLHeadingLevel;
         "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
@@ -3439,6 +3443,10 @@ declare namespace LocalJSX {
     interface UtrechtContactCardTemplate {
         "heading": string;
         "headingLevel"?: HTMLHeadingLevel;
+        "sectionCount"?: number;
+        "socialLinks"?: string;
+        "socialLinksHeading"?: string;
+        "socialLinksHeadingLevel"?: HTMLHeadingLevel;
         "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
