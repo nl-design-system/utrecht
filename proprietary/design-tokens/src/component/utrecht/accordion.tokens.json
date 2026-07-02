@@ -20,6 +20,10 @@
         "color": { "$value": "{utrecht.color.blue.40}" },
         "border-color": { "$value": "transparent" },
         "border-width": { "$value": "0" },
+        "font-family": { "$value": "{utrecht.button.font-family}" },
+        "font-size": { "$value": "{utrecht.button.font-size}" },
+        "font-weight": { "$value": "{utrecht.button.font-weight}" },
+        "line-height": {},
         "gap": {},
         "hover": {
           "background-color": { "$value": "{utrecht.color.grey.95}" },
