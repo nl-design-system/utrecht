@@ -26,20 +26,22 @@ export class ContactCardTemplate {
     const hasIconLinksColumn = socialLinks.length > 0 && sectionCount <= 2;
 
     const socialLinksContent = socialLinks.length > 0 && (
-      <div class="utrecht-contact-card__social-links">
+      <div class="utrecht-contact-card__socials">
         {this.socialLinksHeading && (
-          <SocialLinksHeadingTag class="utrecht-heading-3 utrecht-contact-card__social-links-heading">
+          <SocialLinksHeadingTag class="utrecht-heading-3 utrecht-contact-card__socials-heading">
             {this.socialLinksHeading}
           </SocialLinksHeadingTag>
         )}
-        {socialLinks.map(({ icon, href, label }) => {
-          const IconTag = `utrecht-icon-${icon}`;
-          return (
-            <a href={href} aria-label={label || icon} class="utrecht-contact-card__social-link">
-              <IconTag />
-            </a>
-          );
-        })}
+        <div class="utrecht-contact-card__socials-links">
+          {socialLinks.map(({ icon, href, label }) => {
+            const IconTag = `utrecht-icon-${icon}`;
+            return (
+              <a href={href} aria-label={label || icon} class="utrecht-contact-card__social-link">
+                <IconTag />
+              </a>
+            );
+          })}
+        </div>
       </div>
     );
 

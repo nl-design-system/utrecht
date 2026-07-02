@@ -50,12 +50,15 @@
   }
 }
 
-.utrecht-contact-card__social-links {
+.utrecht-contact-card__socials {
+  margin-block-start: var(--utrecht-space-row-lg);
+}
+
+.utrecht-contact-card__socials-links {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--utrecht-contact-card-social-links-gap, var(--utrecht-space-inline-sm));
-  margin-block-start: var(--utrecht-space-row-lg);
+  gap: var(--utrecht-contact-card-socials-links-gap, var(--utrecht-space-inline-sm));
 }
 
 .utrecht-contact-card__social-link {

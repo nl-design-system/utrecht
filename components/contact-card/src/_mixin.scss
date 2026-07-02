@@ -46,20 +46,22 @@
   }
 }
 
-@mixin utrecht-contact-card__social-links-heading {
-  --utrecht-heading-3-margin-block-start: 0;
-}
-
-@mixin utrecht-contact-card__social-links {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--utrecht-contact-card-social-links-gap, var(--utrecht-space-inline-sm));
+@mixin utrecht-contact-card__socials {
   margin-block-start: var(--utrecht-space-row-lg);
 }
 
+@mixin utrecht-contact-card__socials-heading {
+  --utrecht-heading-3-margin-block-start: 0;
+}
+
+@mixin utrecht-contact-card__socials-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--utrecht-contact-card-socials-links-gap, var(--utrecht-space-inline-sm));
+}
+
 @mixin utrecht-contact-card__social-link {
-  color: inherit;
   display: inline-flex;
   text-decoration: none;
 }
