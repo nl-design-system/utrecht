@@ -314,6 +314,30 @@ importers:
         specifier: workspace:*
         version: link:../../packages/build-utils-css
 
+  components/contact-card:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
+      '@utrecht/grid-css':
+        specifier: workspace:*
+        version: link:../grid
+      '@utrecht/heading-3-css':
+        specifier: workspace:*
+        version: link:../heading-3
+      '@utrecht/heading-4-css':
+        specifier: workspace:*
+        version: link:../heading-4
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../link
+      '@utrecht/paragraph-css':
+        specifier: workspace:*
+        version: link:../paragraph
+
   components/currency-data:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -3427,6 +3451,46 @@ importers:
         specifier: 5.9.3
         version: 5.9.3
 
+  packages/components-react/contact-card-react:
+    dependencies:
+      '@babel/runtime':
+        specifier: '*'
+        version: 7.24.8
+      '@utrecht/component-library-react':
+        specifier: workspace:*
+        version: link:../../component-library-react
+      '@utrecht/contact-card-css':
+        specifier: workspace:*
+        version: link:../../../components/contact-card
+      '@utrecht/grid-react':
+        specifier: workspace:*
+        version: link:../grid-react
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      react:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.4
+      react-dom:
+        specifier: ^18.0.0 || ^19.0.0
+        version: 19.2.4(react@19.2.4)
+    devDependencies:
+      '@types/react':
+        specifier: 19.2.14
+        version: 19.2.14
+      '@types/react-dom':
+        specifier: 19.2.3
+        version: 19.2.3(@types/react@19.2.14)
+      '@utrecht/build-utils-react':
+        specifier: workspace:*
+        version: link:../../build-utils-react
+      rollup:
+        specifier: 4.23.0
+        version: 4.23.0
+      typescript:
+        specifier: 5.9.3
+        version: 5.9.3
+
   packages/components-react/customizable-text-input:
     dependencies:
       '@babel/runtime':
@@ -5878,6 +5942,12 @@ importers:
       '@utrecht/component-library-react':
         specifier: workspace:*
         version: link:../component-library-react
+      '@utrecht/contact-card-css':
+        specifier: workspace:*
+        version: link:../../components/contact-card
+      '@utrecht/contact-card-react':
+        specifier: workspace:*
+        version: link:../components-react/contact-card-react
       '@utrecht/currency-data-css':
         specifier: workspace:*
         version: link:../../components/currency-data
@@ -18728,7 +18798,7 @@ packages:
   git-raw-commits@4.0.0:
     resolution: {integrity: sha512-ICsMM1Wk8xSGMowkOmPrzo2Fgmfo4bMHLNX6ytHjajRJUqvHOw/TFapQ+QG75c3X/tTDDhOSRPGC52dDbNM8FQ==}
     engines: {node: '>=16'}
-    deprecated: This package is no longer maintained. For the JavaScript API, please use @conventional-changelog/git-client instead.
+    deprecated: Deprecated and no longer maintained. Use @conventional-changelog/git-client instead.
     hasBin: true
 
   github-from-package@0.0.0:
@@ -27092,8 +27162,8 @@ packages:
   vue-component-type-helpers@2.2.12:
     resolution: {integrity: sha512-YbGqHZ5/eW4SnkPNR44mKVc6ZKQoRs/Rux1sxC6rdwXb4qpbOSYfDr9DsTHolOTGmIKgM9j141mZbBeg05R1pw==}
 
-  vue-component-type-helpers@3.3.5:
-    resolution: {integrity: sha512-Fe1jyPJoUGpJOYKOri44jduR7My4yYINOMJISuMAbmrs+L5LbIDUc8NTWZYY3EJLK0yPLuCmcd5zoCsE4k2/KA==}
+  vue-component-type-helpers@3.3.6:
+    resolution: {integrity: sha512-FkljacAwJ9BUoSUdpFe3VDy0sGigNlTH9+2zcXUWmZOjN8swiCkl3t48wOJun0OsUd2cEIda1l04tsxMiKIIrQ==}
 
   vue-docgen-api@4.75.1:
     resolution: {integrity: sha512-MECZ3uExz+ssmhD/2XrFoQQs93y17IVO1KDYTp8nr6i9GNrk67AAto6QAtilW1H/pTDPMkQxJ7w/25ZIqVtfAA==}
@@ -38043,7 +38113,7 @@ snapshots:
       storybook: 10.3.5(@testing-library/dom@10.4.1)(prettier@3.8.3)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       type-fest: 2.19.0
       vue: 3.5.27(typescript@5.9.3)
-      vue-component-type-helpers: 3.3.5
+      vue-component-type-helpers: 3.3.6
 
   '@svgr/babel-plugin-add-jsx-attribute@8.0.0(@babel/core@7.24.9)':
     dependencies:
@@ -55997,7 +56067,7 @@ snapshots:
 
   vue-component-type-helpers@2.2.12: {}
 
-  vue-component-type-helpers@3.3.5: {}
+  vue-component-type-helpers@3.3.6: {}
 
   vue-docgen-api@4.75.1(vue@3.5.27(typescript@5.9.3)):
     dependencies:
