@@ -202,6 +202,27 @@ $utrecht-support-prince-xml: false !default;
   @include utrecht-focus-visible;
 }
 
+@mixin utrecht-textbox--hover {
+  background-color: var(
+    --utrecht-textbox-hover-background-color,
+    var(
+      --utrecht-form-control-hover-background-color,
+      var(--utrecht-textbox-background-color, var(--utrecht-form-control-background-color))
+    )
+  );
+  border-color: var(
+    --utrecht-textbox-hover-border-color,
+    var(
+      --utrecht-form-control-hover-border-color,
+      var(--utrecht-textbox-border-color, var(--utrecht-form-control-border-color))
+    )
+  );
+  color: var(
+    --utrecht-textbox-hover-color,
+    var(--utrecht-form-control-hover-color, var(--utrecht-textbox-color, var(--utrecht-form-control-color)))
+  );
+}
+
 @mixin utrecht-textbox--read-only {
   background-color: var(
     --utrecht-textbox-read-only-background-color,
@@ -265,6 +286,12 @@ $utrecht-support-prince-xml: false !default;
 }
 
 @mixin utrecht-textbox--html-input {
+  /* `:hover` is declared before the other states, so that with equal specificity
+   * `:focus`, `:user-invalid`, `:read-only` and `:disabled` take precedence over `:hover`. */
+  &:hover {
+    @include utrecht-textbox--hover;
+  }
+
   &:focus {
     @include utrecht-textbox--focus;
   }
