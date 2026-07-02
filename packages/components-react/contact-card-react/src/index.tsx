@@ -50,21 +50,25 @@ export const ContactCard = forwardRef(
     const mdCols = totalColumns === 2 ? 6 : 4;
 
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
-      <div className="utrecht-contact-card__social-links">
+      <div className="utrecht-contact-card__socials">
         {socialLinksHeading && (
           <Heading
             level={socialLinksHeadingLevel}
             appearance="utrecht-heading-3"
-            className="utrecht-contact-card__social-links-heading"
+            className="utrecht-contact-card__socials-heading"
           >
             {socialLinksHeading}
           </Heading>
         )}
-        {socialLinks.map(({ icon, href, label }, i) => (
-          <LinkSocial key={i} href={href} aria-label={label} className="utrecht-contact-card__social-link">
-            {icon}
-          </LinkSocial>
-        ))}
+        {socialLinks && socialLinks.length > 0 && (
+          <div className="utrecht-contact-card__socials-links">
+            {socialLinks.map(({ icon, href, label }) => (
+              <LinkSocial key={href} href={href} aria-label={label} className="utrecht-contact-card__social-link">
+                {icon}
+              </LinkSocial>
+            ))}
+          </div>
+        )}
       </div>
     );
 
@@ -96,7 +100,7 @@ export const ContactCard = forwardRef(
               </GridCell>
             ))}
             {hasSocialLinksColumn && (
-              <GridCell className="utrecht-contact-card__grid-cell" sm={6} md={mdCols}>
+              <GridCell className="utrecht-contact-card__grid-cell" xs={12} sm={6} md={mdCols}>
                 {socialLinksContent}
               </GridCell>
             )}
