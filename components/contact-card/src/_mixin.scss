@@ -59,6 +59,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: var(--utrecht-contact-card-socials-links-gap, var(--utrecht-space-inline-sm));
+  margin-block-start: var(--utrecht-contact-card-socials-margin-block-start, var(--utrecht-space-block-md));
 }
 
 @mixin utrecht-contact-card__social-link {
