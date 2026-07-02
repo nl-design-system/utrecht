@@ -20,6 +20,7 @@
         "color": { "$value": "{utrecht.color.blue.40}" },
         "border-color": { "$value": "transparent" },
         "border-width": { "$value": "0" },
+        "border-radius": { "$value": "{utrecht.button.border-radius}" },
         "gap": {},
         "hover": {
           "background-color": { "$value": "{utrecht.color.grey.95}" },
