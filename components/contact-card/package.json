@@ -1,0 +1,39 @@
+{
+  "version": "0.0.0",
+  "author": "Community for NL Design System",
+  "description": "Contact Card component for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/contact-card-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@utrecht/build-utils-css": "workspace:*",
+    "@utrecht/focus-ring-css": "workspace:*",
+    "@utrecht/grid-css": "workspace:*",
+    "@utrecht/heading-3-css": "workspace:*",
+    "@utrecht/heading-4-css": "workspace:*",
+    "@utrecht/link-css": "workspace:*",
+    "@utrecht/paragraph-css": "workspace:*"
+  },
+  "keywords": [
+    "nl-design-system"
+  ],
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "components/contact-card"
+  }
+}

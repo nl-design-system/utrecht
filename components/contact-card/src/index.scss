@@ -1,0 +1,47 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2026 Frameless B.V.
+ * Copyright (c) 2021-2026 Gemeente Utrecht
+ */
+
+@use "./mixin" as *;
+
+.utrecht-contact-card {
+  @include utrecht-contact-card;
+}
+
+.utrecht-contact-card__title {
+  @include utrecht-contact-card__title;
+}
+
+.utrecht-contact-card__grid {
+  @include utrecht-contact-card__grid;
+}
+
+.utrecht-contact-card__grid-cell {
+  @include utrecht-contact-card__grid-cell;
+}
+
+.utrecht-contact-card__grid-cell--phone-number {
+  @include utrecht-contact-card__grid-cell--phone-number;
+}
+
+.utrecht-contact-card__subtitle {
+  @include utrecht-contact-card__subtitle;
+}
+
+.utrecht-contact-card__socials {
+  @include utrecht-contact-card__socials;
+}
+
+.utrecht-contact-card__socials-heading {
+  @include utrecht-contact-card__socials-heading;
+}
+
+.utrecht-contact-card__socials-links {
+  @include utrecht-contact-card__socials-links;
+}
+
+.utrecht-contact-card__social-link {
+  @include utrecht-contact-card__social-link;
+}

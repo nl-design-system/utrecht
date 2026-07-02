@@ -1,0 +1,68 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2026 Frameless B.V.
+ * Copyright (c) 2021-2026 Gemeente Utrecht
+ */
+
+@mixin utrecht-contact-card {
+  --utrecht-space-around: 1;
+  --utrecht-separator-color: var(--utrecht-contact-card-separator-color, var(--utrecht-separator-color));
+
+  background-color: var(--utrecht-contact-card-background-color);
+  background-image: var(--utrecht-contact-card-background-image);
+  background-position: var(--utrecht-contact-card-background-position);
+  background-size: var(--utrecht-contact-card-background-size);
+  border-radius: var(--utrecht-contact-card-border-radius);
+  box-shadow: var(--utrecht-contact-card-box-shadow);
+  color: var(--utrecht-contact-card-color);
+  padding-block-end: var(--utrecht-contact-card-padding-block-end, var(--utrecht-space-block-md));
+  padding-block-start: var(--utrecht-contact-card-padding-block-start, var(--utrecht-space-block-md));
+  padding-inline-end: var(--utrecht-contact-card-padding-inline-end, var(--utrecht-space-block-md));
+  padding-inline-start: var(--utrecht-contact-card-padding-inline-start, var(--utrecht-space-block-md));
+}
+
+@mixin utrecht-contact-card__title {
+  --utrecht-heading-2-margin-block-start: 0;
+}
+
+@mixin utrecht-contact-card__grid {
+  --utrecht-grid-spacing-md: var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md));
+}
+
+@mixin utrecht-contact-card__grid-cell {
+  --_utrecht-grid-display: block;
+}
+
+@mixin utrecht-contact-card__grid-cell--phone-number {
+  a[href^="tel:"] {
+    font-size: var(--utrecht-contact-card-phone-number-font-size, inherit);
+  }
+}
+
+@mixin utrecht-contact-card__subtitle {
+  font-weight: var(--utrecht-contact-card-subtitle-font-weight);
+  &::before {
+    content: " " var(--utrecht-contact-card-subtitle-separator) " ";
+  }
+}
+
+@mixin utrecht-contact-card__socials {
+  margin-block-start: var(--utrecht-space-row-lg);
+}
+
+@mixin utrecht-contact-card__socials-heading {
+  --utrecht-heading-3-margin-block-start: 0;
+}
+
+@mixin utrecht-contact-card__socials-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--utrecht-contact-card-socials-links-gap, var(--utrecht-space-inline-sm));
+  margin-block-start: var(--utrecht-contact-card-socials-margin-block-start, var(--utrecht-space-block-md));
+}
+
+@mixin utrecht-contact-card__social-link {
+  display: inline-flex;
+  text-decoration: none;
+}

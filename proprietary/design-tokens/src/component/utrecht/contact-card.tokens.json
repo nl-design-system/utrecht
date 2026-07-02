@@ -1,0 +1,72 @@
+{
+  "utrecht": {
+    "contact-card": {
+      "background-color": {
+        "$value": "{utrecht.color.blue.90}"
+      },
+      "background-image": {
+        "$value": "none"
+      },
+      "background-position": {
+        "$value": "center center"
+      },
+      "background-size": {
+        "$value": "auto"
+      },
+      "color": {
+        "$value": "{utrecht.color.black}"
+      },
+      "border-radius": {
+        "$value": "{utrecht.border-radius.none}"
+      },
+      "box-shadow": {
+        "$value": 0
+      },
+      "phone-number": {
+        "font-size": {
+          "$value": "{utrecht.typography.scale.2xl.font-size}"
+        }
+      },
+      "subtitle": {
+        "font-weight": {
+          "$value": "{utrecht.typography.weight-scale.normal.font-weight}"
+        },
+        "separator": {
+          "$value": "\"–\""
+        }
+      },
+      "separator": {
+        "color": {
+          "$value": "{utrecht.color.blue.80}"
+        }
+      },
+      "grid": {
+        "spacing": {
+          "$value": "{utrecht.grid.spacing.md}"
+        }
+      },
+      "socials": {
+        "margin-block-start": {
+          "$value": "{utrecht.space.block.md}"
+        }
+      },
+      "socials-links": {
+        "gap": {
+          "$value": "{utrecht.space.inline.sm}"
+        }
+      },
+      "padding-block-end": {
+        "$value": "{utrecht.space.block.md}"
+      },
+      "padding-block-start": {
+        "$value": "{utrecht.space.block.md}"
+      },
+      "padding-inline-end": {
+        "$value": "{utrecht.space.block.md}"
+      },
+      "padding-inline-start": {
+        "$value": "{utrecht.space.block.md}"
+      }
+    }
+  }
+}
