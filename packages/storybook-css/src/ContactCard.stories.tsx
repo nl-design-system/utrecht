@@ -29,11 +29,6 @@ const meta = {
       description: 'Heading text',
       table: { type: { summary: 'string' } },
     },
-    headingLevel: {
-      control: { type: 'number', min: 1, max: 6 },
-      description: 'Heading level',
-      table: { type: { summary: '1 | 2 | 3 | 4 | 5 | 6' }, defaultValue: { summary: '2' } },
-    },
     subtitle: {
       control: 'text',
       description: 'Optional subtitle shown in a <span> after the heading',
@@ -60,15 +55,9 @@ const meta = {
       description: 'Optional heading above the social links',
       table: { type: { summary: 'ReactNode' } },
     },
-    socialLinksHeadingLevel: {
-      control: { type: 'number', min: 1, max: 6 },
-      description: 'Heading level for the social links heading, always styled as heading-3',
-      table: { type: { summary: '1 | 2 | 3 | 4 | 5 | 6' }, defaultValue: { summary: '3' } },
-    },
   },
   args: {
     heading: 'Hulp en contact',
-    headingLevel: 2,
     subtitle: '',
   },
   parameters: {
@@ -259,47 +248,6 @@ export const ThreeColumnsRichText: Story = {
     ],
   },
   render: ({ sections, ...args }: ContactCardStoryArgs) => <ContactCard {...args} sections={sections} richText />,
-};
-
-export const WithHeadingLevel: Story = {
-  name: 'Aangepast kopniveau',
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Gebruik `headingLevel` om het kopniveau van de titel aan te passen aan de plaats van de contact card in de documentstructuur, bijvoorbeeld wanneer de card binnen een sectie met een eigen kop wordt geplaatst.',
-      },
-    },
-  },
-  args: {
-    heading: 'Hulp en contact',
-    headingLevel: 3,
-    subtitle: '',
-    sections: [
-      <>
-        <Heading level={3}>Telefoon</Heading>
-        <Paragraph>
-          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
-            14&nbsp;030
-          </Link>
-        </Paragraph>
-        <Paragraph>
-          Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
-          <br />
-          Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
-        </Paragraph>
-      </>,
-      <>
-        <Heading level={3}>Vraag of idee?</Heading>
-        <Paragraph>
-          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
-            Algemeen reactieformulier
-          </Link>
-        </Paragraph>
-      </>,
-    ],
-  },
-  render: ({ sections, ...args }: ContactCardStoryArgs) => <ContactCard {...args} sections={sections} />,
 };
 
 export const WithSubtitle: Story = {
