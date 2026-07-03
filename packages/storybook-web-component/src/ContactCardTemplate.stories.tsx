@@ -14,7 +14,6 @@ type ContactCardStoryArgs = {
   sectionCount?: number;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const WC = UtrechtContactCardTemplate as any;
 
 const ContactCardStory = ({
