@@ -28,7 +28,7 @@ const LinkSocialStory = ({ icon, hover, focus, focusVisible, ...restProps }: Lin
       )}
       {...restProps}
     >
-      <IconElement></IconElement>
+      {IconElement && <IconElement></IconElement>}
     </LinkSocial>
   );
 };
