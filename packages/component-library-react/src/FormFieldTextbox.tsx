@@ -35,6 +35,7 @@ export interface FormFieldTextboxProps
   description?: ReactNode;
   errorMessage?: ReactNode;
   inputDir?: TextboxProps['dir'];
+  inputId?: string;
   inputRef?: Ref<HTMLInputElement>;
   label: ReactNode;
   status?: ReactNode;
@@ -63,6 +64,7 @@ export const FormFieldTextbox = forwardRef(
       required,
       inputRequired,
       inputDir,
+      inputId: definedInputId,
       type,
       value,
       onChange,
@@ -77,7 +79,8 @@ export const FormFieldTextbox = forwardRef(
     }: PropsWithChildren<FormFieldTextboxProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const inputId = useId();
+    const generatedInputId = useId();
+    const inputId = definedInputId || generatedInputId;
     const descriptionId = useId();
     const statusId = useId();
     const errorMessageId = useId();
