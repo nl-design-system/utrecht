@@ -72,4 +72,45 @@ describe('ContactCard', () => {
 
     expect(ref.current).toBe(card);
   });
+
+  it('renders social links', () => {
+    const { container } = render(
+      <ContactCard
+        heading="Hulp en contact"
+        sections={[<p key="1">Sectie 1</p>]}
+        socialLinks={[{ icon: <span>icon</span>, href: 'https://example.com', label: 'Example' }]}
+      />,
+    );
+
+    expect(container.querySelector('.utrecht-contact-card__socials')).toBeInTheDocument();
+    expect(container.querySelector('a[href="https://example.com"]')).toBeInTheDocument();
+  });
+
+  it('renders social links heading', () => {
+    const { container } = render(
+      <ContactCard
+        heading="Hulp en contact"
+        sections={[<p key="1">Sectie 1</p>]}
+        socialLinks={[{ icon: <span>icon</span>, href: 'https://example.com' }]}
+        socialLinksHeading="Social media"
+      />,
+    );
+
+    expect(container.querySelector('.utrecht-contact-card__socials-heading')).toBeInTheDocument();
+    expect(container).toHaveTextContent('Social media');
+  });
+
+  it('applies rich text class to sections when richText is true', () => {
+    const { container } = render(
+      <ContactCard heading="Hulp en contact" sections={[<p key="1">Sectie 1</p>]} richText />,
+    );
+
+    expect(container.querySelector('.utrecht-contact-card__grid-cell')).toHaveClass('utrecht-rich-text');
+  });
+
+  it('does not apply rich text class to sections by default', () => {
+    const { container } = render(<ContactCard heading="Hulp en contact" sections={[<p key="1">Sectie 1</p>]} />);
+
+    expect(container.querySelector('.utrecht-contact-card__grid-cell')).not.toHaveClass('utrecht-rich-text');
+  });
 });
