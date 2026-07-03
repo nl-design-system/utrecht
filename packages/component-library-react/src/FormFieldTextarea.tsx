@@ -33,6 +33,7 @@ export interface FormFieldTextareaProps
   description?: ReactNode;
   errorMessage?: ReactNode;
   inputDir?: TextareaProps['dir'];
+  inputId?: string;
   inputRequired?: TextareaProps['required'];
   label: ReactNode;
   status?: ReactNode;
@@ -50,6 +51,7 @@ export const FormFieldTextarea = forwardRef(
       disabled,
       errorMessage,
       inputDir,
+      inputId: definedInputId,
       inputRequired,
       invalid,
       label,
@@ -71,7 +73,8 @@ export const FormFieldTextarea = forwardRef(
     }: FormFieldTextareaProps,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
-    const inputId = useId();
+    const generatedInputId = useId();
+    const inputId = definedInputId || generatedInputId;
     const descriptionId = useId();
     const statusId = useId();
     const errorMessageId = useId();
