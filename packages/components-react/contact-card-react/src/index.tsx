@@ -10,8 +10,6 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren } from 'react';
 import type { HTMLAttributes, ReactNode } from 'react';
 
-export type HTMLHeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
-
 export interface ContactCardSocialLink {
   icon: ReactNode;
   href: string;
@@ -20,12 +18,10 @@ export interface ContactCardSocialLink {
 
 export interface ContactCardProps extends HTMLAttributes<HTMLDivElement> {
   heading: ReactNode;
-  headingLevel?: HTMLHeadingLevel;
   subtitle?: ReactNode;
   sections?: ReactNode[];
   socialLinks?: ContactCardSocialLink[];
   socialLinksHeading?: ReactNode;
-  socialLinksHeadingLevel?: HTMLHeadingLevel;
   richText?: boolean;
 }
 
@@ -33,12 +29,10 @@ export const ContactCard = forwardRef(
   (
     {
       heading,
-      headingLevel = 2,
       subtitle,
       sections,
       socialLinks,
       socialLinksHeading,
-      socialLinksHeadingLevel = 3,
       richText = false,
       className,
       children,
@@ -47,17 +41,16 @@ export const ContactCard = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const sectionCount = sections?.length ?? 0;
-    const mdCols: 4 | 6 | 12 = sectionCount <= 1 ? 12 : sectionCount === 2 ? 6 : 4;
+    let mdCols: 4 | 6 | 12;
+    if (sectionCount <= 1) mdCols = 12;
+    else if (sectionCount === 2) mdCols = 6;
+    else mdCols = 4;
     const smCols: 4 | 6 | 12 = sectionCount >= 3 ? 6 : mdCols;
 
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
       <div className="utrecht-contact-card__socials">
         {socialLinksHeading && (
-          <Heading
-            level={socialLinksHeadingLevel}
-            appearance="utrecht-heading-3"
-            className="utrecht-contact-card__socials-heading"
-          >
+          <Heading level={3} appearance="utrecht-heading-3" className="utrecht-contact-card__socials-heading">
             {socialLinksHeading}
           </Heading>
         )}
@@ -77,7 +70,7 @@ export const ContactCard = forwardRef(
       <div ref={ref} className={clsx('utrecht-contact-card', className)} {...restProps}>
         {(heading || subtitle) && (
           <div className="utrecht-contact-card__title">
-            <Heading level={headingLevel} appearance="utrecht-heading-2">
+            <Heading level={2} appearance="utrecht-heading-2">
               {heading}
               {subtitle && <span className="utrecht-contact-card__subtitle">{subtitle}</span>}
             </Heading>
