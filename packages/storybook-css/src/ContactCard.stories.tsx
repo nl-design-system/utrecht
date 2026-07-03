@@ -211,6 +211,56 @@ export const ThreeColumns: Story = {
   render: ({ sections, ...args }: ContactCardStoryArgs) => <ContactCard {...args} sections={sections} />,
 };
 
+export const ThreeColumnsRichText: Story = {
+  name: 'Drie kolommen met rich text',
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Gebruik de `richText` prop om de spacing van `.utrecht-rich-text` toe te passen op de secties van de contact card.',
+      },
+    },
+  },
+  args: {
+    heading: 'Hulp en contact',
+    subtitle: '',
+    sections: [
+      <>
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
+            14&nbsp;030
+          </Link>
+        </Paragraph>
+        <Paragraph>
+          Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
+          <br />
+          Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
+        </Paragraph>
+      </>,
+      <>
+        <Heading level={3}>Bezoekadres</Heading>
+        <Paragraph>Stadsplateau 1, Utrecht</Paragraph>
+        <Heading level={3}>Postadres</Heading>
+        <Paragraph>
+          Postbus 16200
+          <br />
+          3500 CE Utrecht
+        </Paragraph>
+      </>,
+      <>
+        <Heading level={3}>E-mail</Heading>
+        <Paragraph>
+          <Link href="https://www.utrecht.nl/reactieformulier" target="_top">
+            Reactieformulier
+          </Link>
+        </Paragraph>
+      </>,
+    ],
+  },
+  render: ({ sections, ...args }: ContactCardStoryArgs) => <ContactCard {...args} sections={sections} richText />,
+};
+
 export const WithHeadingLevel: Story = {
   name: 'Aangepast kopniveau',
   parameters: {
@@ -329,13 +379,60 @@ export const WithSubtitle: Story = {
   render: ({ sections, ...args }: ContactCardStoryArgs) => <ContactCard {...args} sections={sections} />,
 };
 
-export const WithIconLinks: Story = {
-  name: 'Met icoonlinks',
+const socialLinks = [
+  {
+    icon: <UtrechtIconFacebook />,
+    href: 'https://www.facebook.com/GemeenteUtrecht',
+    label: 'Facebook van gemeente Utrecht',
+  },
+  {
+    icon: <UtrechtIconLinkedin />,
+    href: 'https://www.linkedin.com/company/gemeente-utrecht',
+    label: 'LinkedIn van gemeente Utrecht',
+  },
+  { icon: <UtrechtIconX />, href: 'https://x.com/gemeenteutrecht', label: 'X van gemeente Utrecht' },
+];
+
+export const WithIconLinksOneColumn: Story = {
+  name: 'Met icoonlinks en één kolom',
   parameters: {
     docs: {
       description: {
         story:
           'Gebruik `socialLinks` om icoonlinks toe te voegen aan de contact card, bijvoorbeeld voor sociale media.',
+      },
+    },
+  },
+  args: {
+    heading: 'Hulp en contact',
+    subtitle: '',
+    sections: [
+      <>
+        <Heading level={3}>Telefoon</Heading>
+        <Paragraph>
+          <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
+            14&nbsp;030
+          </Link>
+        </Paragraph>
+        <Paragraph>
+          Maandag, dinsdag en donderdag 9.00&nbsp;-&nbsp;17.00&nbsp;uur
+          <br />
+          Woensdag en vrijdag 9.00&nbsp;-&nbsp;13.00&nbsp;uur
+        </Paragraph>
+      </>,
+    ],
+  },
+  render: ({ sections, ...args }: ContactCardStoryArgs) => (
+    <ContactCard {...args} sections={sections} socialLinksHeading="Social media" socialLinks={socialLinks} />
+  ),
+};
+
+export const WithIconLinksTwoColumns: Story = {
+  name: 'Met icoonlinks en twee kolommen',
+  parameters: {
+    docs: {
+      description: {
+        story: 'Bij twee secties worden de icoonlinks onderaan de tweede kolom geplaatst.',
       },
     },
   },
@@ -367,24 +464,7 @@ export const WithIconLinks: Story = {
     ],
   },
   render: ({ sections, ...args }: ContactCardStoryArgs) => (
-    <ContactCard
-      {...args}
-      sections={sections}
-      socialLinksHeading="Social media"
-      socialLinks={[
-        {
-          icon: <UtrechtIconFacebook />,
-          href: 'https://www.facebook.com/GemeenteUtrecht',
-          label: 'Facebook van gemeente Utrecht',
-        },
-        {
-          icon: <UtrechtIconLinkedin />,
-          href: 'https://www.linkedin.com/company/gemeente-utrecht',
-          label: 'LinkedIn van gemeente Utrecht',
-        },
-        { icon: <UtrechtIconX />, href: 'https://x.com/gemeenteutrecht', label: 'X van gemeente Utrecht' },
-      ]}
-    />
+    <ContactCard {...args} sections={sections} socialLinksHeading="Social media" socialLinks={socialLinks} />
   ),
 };
 
@@ -393,8 +473,7 @@ export const WithIconLinksThreeColumns: Story = {
   parameters: {
     docs: {
       description: {
-        story:
-          'Bij drie kolommen worden de icoonlinks onderaan de derde kolom geplaatst, in plaats van als extra kolom.',
+        story: 'Bij drie kolommen worden de icoonlinks onderaan de derde kolom geplaatst.',
       },
     },
   },
@@ -436,24 +515,7 @@ export const WithIconLinksThreeColumns: Story = {
     ],
   },
   render: ({ sections, ...args }: ContactCardStoryArgs) => (
-    <ContactCard
-      {...args}
-      sections={sections}
-      socialLinksHeading="Social media"
-      socialLinks={[
-        {
-          icon: <UtrechtIconFacebook />,
-          href: 'https://www.facebook.com/GemeenteUtrecht',
-          label: 'Facebook van gemeente Utrecht',
-        },
-        {
-          icon: <UtrechtIconLinkedin />,
-          href: 'https://www.linkedin.com/company/gemeente-utrecht',
-          label: 'LinkedIn van gemeente Utrecht',
-        },
-        { icon: <UtrechtIconX />, href: 'https://x.com/gemeenteutrecht', label: 'X van gemeente Utrecht' },
-      ]}
-    />
+    <ContactCard {...args} sections={sections} socialLinksHeading="Social media" socialLinks={socialLinks} />
   ),
 };
 

@@ -26,6 +26,7 @@ export interface ContactCardProps extends HTMLAttributes<HTMLDivElement> {
   socialLinks?: ContactCardSocialLink[];
   socialLinksHeading?: ReactNode;
   socialLinksHeadingLevel?: HTMLHeadingLevel;
+  richText?: boolean;
 }
 
 export const ContactCard = forwardRef(
@@ -38,6 +39,7 @@ export const ContactCard = forwardRef(
       socialLinks,
       socialLinksHeading,
       socialLinksHeadingLevel = 3,
+      richText = false,
       className,
       children,
       ...restProps
@@ -45,9 +47,8 @@ export const ContactCard = forwardRef(
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const sectionCount = sections?.length ?? 0;
-    const hasSocialLinksColumn = (socialLinks?.length ?? 0) > 0 && sectionCount <= 2;
-    const totalColumns = sectionCount + (hasSocialLinksColumn ? 1 : 0);
-    const mdCols = totalColumns === 2 ? 6 : 4;
+    const mdCols: 4 | 6 | 12 = sectionCount <= 1 ? 12 : sectionCount === 2 ? 6 : 4;
+    const smCols: 4 | 6 | 12 = sectionCount >= 3 ? 6 : mdCols;
 
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
       <div className="utrecht-contact-card__socials">
@@ -82,28 +83,24 @@ export const ContactCard = forwardRef(
             </Heading>
           </div>
         )}
-        {(sectionCount > 0 || hasSocialLinksColumn) && (
+        {sectionCount > 0 && (
           <Grid spacing="md" className="utrecht-contact-card__grid">
             {sections?.map((section, i) => (
               <GridCell
                 key={i}
                 className={clsx(
                   'utrecht-contact-card__grid-cell',
+                  richText && 'utrecht-rich-text',
                   i === 0 && 'utrecht-contact-card__grid-cell--phone-number',
                 )}
                 xs={12}
-                sm={6}
+                sm={smCols}
                 md={mdCols}
               >
                 {section}
-                {!hasSocialLinksColumn && i === 2 && socialLinksContent}
+                {i === sectionCount - 1 && socialLinksContent}
               </GridCell>
             ))}
-            {hasSocialLinksColumn && (
-              <GridCell className="utrecht-contact-card__grid-cell" xs={12} sm={6} md={mdCols}>
-                {socialLinksContent}
-              </GridCell>
-            )}
           </Grid>
         )}
         {children && <div className="utrecht-contact-card__content">{children}</div>}
