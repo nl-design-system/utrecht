@@ -6,15 +6,11 @@ import tokens from '@utrecht/design-tokens/dist/index.json';
 import { UtrechtContactCardTemplate, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React, { PropsWithChildren } from 'react';
 
-type HTMLHeadingLevel = 1 | 2 | 3 | 4 | 5 | 6;
-
 type ContactCardStoryArgs = {
   heading: string;
-  headingLevel?: HTMLHeadingLevel;
   subtitle?: string;
   socialLinks?: string;
   socialLinksHeading?: string;
-  socialLinksHeadingLevel?: HTMLHeadingLevel;
   sectionCount?: number;
 };
 
@@ -23,21 +19,17 @@ const WC = UtrechtContactCardTemplate as any;
 
 const ContactCardStory = ({
   heading,
-  headingLevel,
   subtitle,
   socialLinks,
   socialLinksHeading,
-  socialLinksHeadingLevel,
   sectionCount,
   children,
 }: PropsWithChildren<ContactCardStoryArgs>) => (
   <WC
     heading={heading}
-    headingLevel={headingLevel}
     subtitle={subtitle}
     socialLinks={socialLinks}
     socialLinksHeading={socialLinksHeading}
-    socialLinksHeadingLevel={socialLinksHeadingLevel}
     sectionCount={sectionCount}
   >
     {children}
@@ -104,11 +96,6 @@ const meta = {
       description: 'Heading text',
       table: { type: { summary: 'string' } },
     },
-    headingLevel: {
-      control: { type: 'number', min: 1, max: 6 },
-      description: 'Heading level',
-      table: { type: { summary: '1 | 2 | 3 | 4 | 5 | 6' }, defaultValue: { summary: '2' } },
-    },
     subtitle: {
       control: 'text',
       description: 'Optional subtitle shown after the heading',
@@ -124,15 +111,9 @@ const meta = {
       description: 'Optional heading above the social links',
       table: { type: { summary: 'string' } },
     },
-    socialLinksHeadingLevel: {
-      control: { type: 'number', min: 1, max: 6 },
-      description: 'Heading level for the social links heading, always styled as heading-3',
-      table: { type: { summary: '1 | 2 | 3 | 4 | 5 | 6' }, defaultValue: { summary: '3' } },
-    },
   },
   args: {
     heading: 'Hulp en contact',
-    headingLevel: 2,
   },
   tags: ['autodocs'],
   parameters: {
@@ -195,27 +176,6 @@ export const ThreeColumns: Story = {
     <ContactCardStory {...args} sectionCount={3}>
       {phoneSection}
       {addressSection}
-      {emailSection}
-    </ContactCardStory>
-  ),
-};
-
-export const WithHeadingLevel: Story = {
-  name: 'Aangepast kopniveau',
-  parameters: {
-    docs: {
-      description: {
-        story:
-          'Gebruik `headingLevel` om het kopniveau van de titel aan te passen aan de plaats van de contact card in de documentstructuur.',
-      },
-    },
-  },
-  args: {
-    headingLevel: 3,
-  },
-  render: (args: ContactCardStoryArgs) => (
-    <ContactCardStory {...args} sectionCount={2}>
-      {phoneSection}
       {emailSection}
     </ContactCardStory>
   ),
