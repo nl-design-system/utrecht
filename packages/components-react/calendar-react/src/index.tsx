@@ -191,7 +191,7 @@ export const Calendar = ({
                         setSelectedDate(day.date);
                         onCalendarClick(formatISO(day.date));
                       }}
-                      aria-label={format(day.date, 'eeee dd LLLL Y', { locale })}
+                      aria-label={format(day.date, 'eeee dd LLLL y', { locale })}
                       day={day.date.getDate().toString()}
                       emphasis={day.emphasis}
                       selected={day.selected || (selectedDate && isSameDay(day.date, selectedDate))}
