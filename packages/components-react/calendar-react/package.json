@@ -56,7 +56,7 @@
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs && pnpm run init",
     "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
-    "disabled-test": "mkdir -p pages && jest --coverage --verbose",
+    "test": "mkdir -p pages && jest --coverage --verbose",
     "init": "init-react-package",
     "typecheck": "tsc --noEmit"
   },
