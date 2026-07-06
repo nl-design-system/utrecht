@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 14.0.2
+
+### Patch Changes
+
+- Updated dependencies [bdd73aa]
+- Updated dependencies [b59e116]
+  - @utrecht/calendar-react@1.1.5
+  - @utrecht/link-button-css@3.1.0
+
 ## 14.0.1
 
 ### Patch Changes

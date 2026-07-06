@@ -1,5 +1,14 @@
 # @utrecht/component-library-css
 
+## 9.0.13
+
+### Patch Changes
+
+- Updated dependencies [8570971]
+- Updated dependencies [b59e116]
+  - @utrecht/grid-css@2.1.0
+  - @utrecht/link-button-css@3.1.0
+
 ## 9.0.12
 
 ### Patch Changes
