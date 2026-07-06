@@ -1,5 +1,11 @@
 # @utrecht/link-button-css
 
+## 3.1.0
+
+### Minor Changes
+
+- b59e116: Prefer the button-column-gap token over the button-icon-gap one
+
 ## 3.0.1
 
 ### Patch Changes

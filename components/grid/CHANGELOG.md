@@ -1,5 +1,11 @@
 # @utrecht/grid-css
 
+## 2.1.0
+
+### Minor Changes
+
+- 8570971: Add `utrecht-grid--cols-{n}` modifier classes (1–12) to set equal-width column counts via CSS custom properties.
+
 ## 2.0.1
 
 ### Patch Changes
