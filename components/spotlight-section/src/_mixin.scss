@@ -4,6 +4,9 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+/**
+ * @deprecated Use `utrecht-note` instead.
+ */
 @mixin utrecht-spotlight-section {
   background-color: var(
     --_utrecht-spotlight-section-background-color,
@@ -25,6 +28,9 @@
   row-gap: var(--utrecht-spotlight-section-row-gap);
 }
 
+/**
+ * @deprecated
+ */
 @mixin utrecht-spotlight-section-type($type) {
   --_utrecht-spotlight-section-icon-color: var(--utrecht-spotlight-section-icon-#{$type}-color);
   --_utrecht-spotlight-section-background-color: var(--utrecht-spotlight-section-#{$type}-background-color);
@@ -33,18 +39,30 @@
   --_utrecht-spotlight-section-color: var(--utrecht-spotlight-section-#{$type}-color);
 }
 
+/**
+ * @deprecated
+ */
 @mixin utrecht-spotlight-section--info {
   @include utrecht-spotlight-section-type("info");
 }
 
+/**
+ * @deprecated
+ */
 @mixin utrecht-spotlight-section--warning {
   @include utrecht-spotlight-section-type("warning");
 }
 
+/**
+ * @deprecated
+ */
 @mixin utrecht-spotlight-section--error {
   @include utrecht-spotlight-section-type("error");
 }
 
+/**
+ * @deprecated
+ */
 @mixin utrecht-spotlight-section--ok {
   @include utrecht-spotlight-section-type("ok");
 }

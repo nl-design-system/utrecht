@@ -711,6 +711,9 @@ export namespace Components {
     interface UtrechtNavBar {
         "sticky": boolean;
     }
+    interface UtrechtNote {
+        "purpose": string;
+    }
     interface UtrechtNumberBadge {
         "locale": string;
         "max": number;
@@ -802,6 +805,9 @@ export namespace Components {
     interface UtrechtSkipLink {
         "href": string;
     }
+    /**
+     * @deprecated Use `Note` instead
+     */
     interface UtrechtSpotlightSection {
         "appearance": string;
     }
@@ -2748,6 +2754,12 @@ declare global {
         prototype: HTMLUtrechtNavBarElement;
         new (): HTMLUtrechtNavBarElement;
     };
+    interface HTMLUtrechtNoteElement extends Components.UtrechtNote, HTMLStencilElement {
+    }
+    var HTMLUtrechtNoteElement: {
+        prototype: HTMLUtrechtNoteElement;
+        new (): HTMLUtrechtNoteElement;
+    };
     interface HTMLUtrechtNumberBadgeElement extends Components.UtrechtNumberBadge, HTMLStencilElement {
     }
     var HTMLUtrechtNumberBadgeElement: {
@@ -2892,6 +2904,9 @@ declare global {
         prototype: HTMLUtrechtSkipLinkElement;
         new (): HTMLUtrechtSkipLinkElement;
     };
+    /**
+     * @deprecated Use `Note` instead
+     */
     interface HTMLUtrechtSpotlightSectionElement extends Components.UtrechtSpotlightSection, HTMLStencilElement {
     }
     var HTMLUtrechtSpotlightSectionElement: {
@@ -3317,6 +3332,7 @@ declare global {
         "utrecht-mark": HTMLUtrechtMarkElement;
         "utrecht-multiline-data": HTMLUtrechtMultilineDataElement;
         "utrecht-nav-bar": HTMLUtrechtNavBarElement;
+        "utrecht-note": HTMLUtrechtNoteElement;
         "utrecht-number-badge": HTMLUtrechtNumberBadgeElement;
         "utrecht-number-data": HTMLUtrechtNumberDataElement;
         "utrecht-page": HTMLUtrechtPageElement;
@@ -4081,6 +4097,9 @@ declare namespace LocalJSX {
     interface UtrechtNavBar {
         "sticky"?: boolean;
     }
+    interface UtrechtNote {
+        "purpose"?: string;
+    }
     interface UtrechtNumberBadge {
         "locale"?: string;
         "max"?: number;
@@ -4172,6 +4191,9 @@ declare namespace LocalJSX {
     interface UtrechtSkipLink {
         "href"?: string;
     }
+    /**
+     * @deprecated Use `Note` instead
+     */
     interface UtrechtSpotlightSection {
         "appearance"?: string;
     }
@@ -4536,6 +4558,7 @@ declare namespace LocalJSX {
         "utrecht-mark": UtrechtMark;
         "utrecht-multiline-data": UtrechtMultilineData;
         "utrecht-nav-bar": UtrechtNavBar;
+        "utrecht-note": UtrechtNote;
         "utrecht-number-badge": UtrechtNumberBadge;
         "utrecht-number-data": UtrechtNumberData;
         "utrecht-page": UtrechtPage;
@@ -4877,6 +4900,7 @@ declare module "@stencil/core" {
              * Copyright (c) 2021-2024 Gemeente Utrecht
              */
             "utrecht-nav-bar": LocalJSX.UtrechtNavBar & JSXBase.HTMLAttributes<HTMLUtrechtNavBarElement>;
+            "utrecht-note": LocalJSX.UtrechtNote & JSXBase.HTMLAttributes<HTMLUtrechtNoteElement>;
             "utrecht-number-badge": LocalJSX.UtrechtNumberBadge & JSXBase.HTMLAttributes<HTMLUtrechtNumberBadgeElement>;
             "utrecht-number-data": LocalJSX.UtrechtNumberData & JSXBase.HTMLAttributes<HTMLUtrechtNumberDataElement>;
             /**
@@ -4926,6 +4950,9 @@ declare module "@stencil/core" {
             "utrecht-separator": LocalJSX.UtrechtSeparator & JSXBase.HTMLAttributes<HTMLUtrechtSeparatorElement>;
             "utrecht-sidenav": LocalJSX.UtrechtSidenav & JSXBase.HTMLAttributes<HTMLUtrechtSidenavElement>;
             "utrecht-skip-link": LocalJSX.UtrechtSkipLink & JSXBase.HTMLAttributes<HTMLUtrechtSkipLinkElement>;
+            /**
+             * @deprecated Use `Note` instead
+             */
             "utrecht-spotlight-section": LocalJSX.UtrechtSpotlightSection & JSXBase.HTMLAttributes<HTMLUtrechtSpotlightSectionElement>;
             "utrecht-status-badge": LocalJSX.UtrechtStatusBadge & JSXBase.HTMLAttributes<HTMLUtrechtStatusBadgeElement>;
             "utrecht-surface": LocalJSX.UtrechtSurface & JSXBase.HTMLAttributes<HTMLUtrechtSurfaceElement>;
