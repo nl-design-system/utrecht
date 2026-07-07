@@ -1,5 +1,4 @@
 ---
-"@utrecht/textarea-react": minor
 "@utrecht/textarea-css": minor
 ---
 
