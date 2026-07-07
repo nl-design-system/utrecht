@@ -55,11 +55,15 @@
   --utrecht-button-subtle-border-color: var(--utrecht-accordion-button-border-color);
   --utrecht-button-subtle-border-width: var(--utrecht-accordion-button-border-width);
   --utrecht-button-border-radius: var(--utrecht-accordion-button-border-radius);
-  --utrecht-button-icon-gap: var(--utrecht-accordion-button-gap, var(--utrecht-space-text-xs));
   --utrecht-button-font-family: var(--utrecht-accordion-button-font-family);
   --utrecht-button-subtle-font-size: var(--utrecht-accordion-button-font-size);
   --utrecht-button-subtle-font-weight: var(--utrecht-accordion-button-font-weight);
   --utrecht-button-subtle-line-height: var(--utrecht-accordion-button-line-height);
+
+  /* The button reads `--utrecht-button-column-gap`, so the icon column defines the label offset:
+     button padding-inline-start + icon size lines the label up with the panel's padding-inline-start.
+     Default to 0 so that alignment holds; a theme can still opt into a gap via `--utrecht-accordion-button-gap`. */
+  --utrecht-button-column-gap: var(--utrecht-accordion-button-gap, 0);
 
   align-items: baseline;
   justify-content: start !important;
@@ -75,11 +79,12 @@
 }
 
 @mixin utrecht-accordion__button-icon {
-  display: flex;
-}
+  --utrecht-icon-size: var(--utrecht-accordion-button-icon-size);
 
-@mixin utrecht-accordion__button--rtl {
-  justify-content: end !important;
+  align-items: center;
+  display: flex;
+  inline-size: var(--utrecht-accordion-button-icon-size);
+  justify-content: center;
 }
 
 @mixin utrecht-accordion__panel {
