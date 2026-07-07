@@ -6,6 +6,11 @@
 
 @use "~@utrecht/focus-ring-css/src/mixin" as *;
 
+/* States that already show a fill; plain hover and active styling skips these so it never
+ * paints over the check or dash mark. Includes the modifier classes because :indeterminate
+ * cannot be set declaratively in HTML, only through JavaScript. */
+$utrecht-custom-checkbox-filled-states: ":checked, :indeterminate, .utrecht-checkbox--checked, .utrecht-checkbox--indeterminate, .utrecht-custom-checkbox--checked, .utrecht-custom-checkbox--indeterminate" !default;
+
 @mixin utrecht-custom-checkbox {
   /*
    * Use 24x24px as hardcoded minimum target size, to meet WCAG 2.5.8 standards.
@@ -173,7 +178,7 @@
     @include utrecht-custom-checkbox--disabled;
   }
 
-  &:hover {
+  &:hover:not(:where(#{$utrecht-custom-checkbox-filled-states}, [aria-disabled="true"], :disabled)) {
     @include utrecht-custom-checkbox--hover;
   }
 
@@ -190,7 +195,7 @@
     @include utrecht-custom-checkbox--invalid;
   }
 
-  &:active {
+  &:active:not(:where(#{$utrecht-custom-checkbox-filled-states}, [aria-disabled="true"], :disabled)) {
     @include utrecht-custom-checkbox--active;
   }
 
