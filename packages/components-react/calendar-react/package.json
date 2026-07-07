@@ -1,6 +1,6 @@
 {
   "name": "@utrecht/calendar-react",
-  "version": "1.1.4",
+  "version": "1.1.5",
   "description": "Calendar component for the Municipality of Utrecht based on the NL Design System architecture",
   "keywords": [
     "nl-design-system"
@@ -56,8 +56,8 @@
   "scripts": {
     "build": "rollup --config ./rollup.config.mjs && pnpm run init",
     "clean": "rimraf dist *.tsbuildinfo .rollup.cache coverage",
-    "disabled-test": "mkdir -p pages && jest --coverage --verbose",
     "init": "init-react-package",
+    "test": "mkdir -p pages && jest --coverage --verbose",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {

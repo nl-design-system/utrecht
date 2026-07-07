@@ -1,5 +1,11 @@
 # @utrecht/calendar-react
 
+## 1.1.5
+
+### Patch Changes
+
+- bdd73aa: Fixed the calendar day accessible label to use the calendar year instead of the local week-numbering year
+
 ## 1.1.4
 
 ### Patch Changes

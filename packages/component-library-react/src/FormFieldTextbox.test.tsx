@@ -133,6 +133,24 @@ describe('Form field with a textbox', () => {
     });
   });
 
+  describe('inputId', () => {
+    it('renders the textbox with the specified id', () => {
+      render(<FormFieldTextbox {...defaultProps} inputId="subject" />);
+
+      const textbox = screen.getByRole('textbox');
+
+      expect(textbox).toHaveAttribute('id', 'subject');
+    });
+
+    it('associates the label with the specified id', () => {
+      const { container } = render(<FormFieldTextbox {...defaultProps} inputId="subject" />);
+
+      const label = container.querySelector('label[for]');
+
+      expect(label).toHaveAttribute('for', 'subject');
+    });
+  });
+
   describe('description', () => {
     it('is not rendered by default', () => {
       const { container } = render(<FormFieldTextbox {...defaultProps} />);

@@ -1,5 +1,4 @@
-module.exports = {
-  cooldown: 1, // 1 day
+export default {
   dep: ['dev', 'prod'],
   install: 'always',
   reject: [],

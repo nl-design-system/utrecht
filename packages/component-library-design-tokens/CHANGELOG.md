@@ -1,5 +1,12 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.6
+
+### Patch Changes
+
+- Updated dependencies [b59e116]
+  - @utrecht/link-button-css@3.1.0
+
 ## 2.0.5
 
 ### Patch Changes

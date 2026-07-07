@@ -144,7 +144,15 @@ describe('Calendar', () => {
   it('renders year navigation buttons by default', () => {
     const currentDate = new Date(2023, 5, 15);
 
-    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} />);
+    render(
+      <Calendar
+        onCalendarClick={() => {}}
+        locale={nl}
+        currentDate={currentDate}
+        previousYearButtonTitle="vorig jaar"
+        nextYearButtonTitle="volgend jaar"
+      />,
+    );
 
     expect(screen.queryByRole('button', { name: 'vorig jaar' })).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'volgend jaar' })).toBeInTheDocument();
@@ -153,7 +161,16 @@ describe('Calendar', () => {
   it('does not render year navigation buttons', () => {
     const currentDate = new Date(2023, 5, 15);
 
-    render(<Calendar onCalendarClick={() => {}} locale={nl} currentDate={currentDate} displayYearNavigation={false} />);
+    render(
+      <Calendar
+        onCalendarClick={() => {}}
+        locale={nl}
+        currentDate={currentDate}
+        previousYearButtonTitle="vorig jaar"
+        nextYearButtonTitle="volgend jaar"
+        displayYearNavigation={false}
+      />,
+    );
 
     expect(screen.queryByRole('button', { name: 'vorig jaar' })).not.toBeInTheDocument();
     expect(screen.queryByRole('button', { name: 'volgend jaar' })).not.toBeInTheDocument();
