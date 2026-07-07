@@ -19,6 +19,10 @@
   @include utrecht-textbox--disabled;
 }
 
+.utrecht-textbox--hover {
+  @include utrecht-textbox--hover;
+}
+
 .utrecht-textbox--focus {
   @include utrecht-focus;
   @include utrecht-textbox--focus;
