@@ -15,6 +15,10 @@
   @include utrecht-textarea--invalid;
 }
 
+.utrecht-textarea--hover {
+  @include utrecht-textarea--hover;
+}
+
 .utrecht-textarea--disabled {
   @include utrecht-textarea--disabled;
 }
