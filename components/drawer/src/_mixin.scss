@@ -24,6 +24,17 @@
   z-index: var(--utrecht-drawer-z-index, 1);
 }
 
+/*
+An HTML `<dialog>` keeps its User-Agent `display: none` until it is opened, so the flex
+column layout that stacks the header, body and footer must not live in the base
+`utrecht-drawer` mixin. Apply it only when the Drawer is actually shown, otherwise a
+closed `<dialog class="utrecht-drawer">` would stay visible.
+*/
+@mixin utrecht-drawer--open {
+  display: flex;
+  flex-direction: column;
+}
+
 @mixin utrecht-drawer--html-dialog {
   margin-block-start: 0;
 }
@@ -92,4 +103,45 @@
   border-start-start-radius: var(--utrecht-drawer-border-radius);
   inset-block-end: 0;
   inset-block-start: auto;
+}
+
+@mixin utrecht-drawer__header {
+  border-block-end-color: var(--utrecht-drawer-header-border-color, currentColor);
+  border-block-end-style: solid;
+  border-block-end-width: var(--utrecht-drawer-header-border-block-end-width, 0);
+  box-sizing: border-box;
+  display: flex;
+  padding-block-end: var(--utrecht-drawer-header-padding-block-end);
+  padding-block-start: var(--utrecht-drawer-header-padding-block-start);
+  padding-inline-end: var(--utrecht-drawer-header-padding-inline-end);
+  padding-inline-start: var(--utrecht-drawer-header-padding-inline-start);
+}
+
+@mixin utrecht-drawer__body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding-block-end: var(--utrecht-drawer-body-padding-block-end);
+  padding-block-start: var(--utrecht-drawer-body-padding-block-start);
+  padding-inline-end: var(--utrecht-drawer-body-padding-inline-end);
+  padding-inline-start: var(--utrecht-drawer-body-padding-inline-start);
+  row-gap: var(--utrecht-drawer-body-row-gap);
+}
+
+@mixin utrecht-drawer__footer {
+  border-block-start-color: var(--utrecht-drawer-footer-border-color, currentColor);
+  border-block-start-style: solid;
+  border-block-start-width: var(--utrecht-drawer-footer-border-block-start-width, 0);
+  box-sizing: border-box;
+  padding-block-end: var(--utrecht-drawer-footer-padding-block-end);
+  padding-block-start: var(--utrecht-drawer-footer-padding-block-start);
+  padding-inline-end: var(--utrecht-drawer-footer-padding-inline-end);
+  padding-inline-start: var(--utrecht-drawer-footer-padding-inline-start);
+}
+
+@mixin utrecht-drawer__header-actions {
+  /* Align the header actions (for example a close button) to the inline-end of the header and keep them at their own size. */
+  flex-shrink: 0;
+  margin-inline-start: auto;
 }
