@@ -15,8 +15,6 @@
   border-width: var(--utrecht-drawer-border-width, 0);
   box-sizing: border-box;
   color: var(--utrecht-drawer-color, CanvasText);
-  display: flex;
-  flex-direction: column;
   overflow: auto;
   padding-block-end: var(--utrecht-drawer-padding-block-end);
   padding-block-start: var(--utrecht-drawer-padding-block-start);
@@ -24,6 +22,17 @@
   padding-inline-start: var(--utrecht-drawer-padding-inline-start);
   position: fixed;
   z-index: var(--utrecht-drawer-z-index, 1);
+}
+
+/*
+An HTML `<dialog>` keeps its User-Agent `display: none` until it is opened, so the flex
+column layout that stacks the header, body and footer must not live in the base
+`utrecht-drawer` mixin. Apply it only when the Drawer is actually shown, otherwise a
+closed `<dialog class="utrecht-drawer">` would stay visible.
+*/
+@mixin utrecht-drawer--open {
+  display: flex;
+  flex-direction: column;
 }
 
 @mixin utrecht-drawer--html-dialog {

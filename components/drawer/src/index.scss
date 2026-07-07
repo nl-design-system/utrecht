@@ -45,3 +45,13 @@
 .utrecht-drawer__header-actions {
   @include utrecht-drawer__header-actions;
 }
+
+/*
+Only lay out the Drawer as a flex column when it is shown, so a closed `<dialog>` keeps its
+User-Agent `display: none`. This matches any element with the class, except an HTML
+`<dialog>` without the `open` attribute, and except an element that is `[hidden]`.
+*/
+.utrecht-drawer--open,
+.utrecht-drawer:not(dialog:not([open]), [hidden]) {
+  @include utrecht-drawer--open;
+}
