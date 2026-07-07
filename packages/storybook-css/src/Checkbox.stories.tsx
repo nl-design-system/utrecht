@@ -24,15 +24,38 @@ interface CheckboxStoryProps extends CheckboxProps {
   focusVisible?: boolean;
   hover?: boolean;
   active?: boolean;
+  checkedHover?: boolean;
+  checkedActive?: boolean;
+  indeterminateHover?: boolean;
+  indeterminateActive?: boolean;
 }
 
-const CheckboxStory = ({ active, focus, focusVisible, hover, name, checked, value, ...args }: CheckboxStoryProps) => (
+const CheckboxStory = ({
+  active,
+  focus,
+  focusVisible,
+  hover,
+  checkedHover,
+  checkedActive,
+  indeterminateHover,
+  indeterminateActive,
+  name,
+  checked,
+  value,
+  ...args
+}: CheckboxStoryProps) => (
   <Checkbox
     className={clsx({
       'utrecht-checkbox--active': active,
       'utrecht-checkbox--focus': focus,
       'utrecht-checkbox--focus-visible': focusVisible,
       'utrecht-checkbox--hover': hover,
+      'utrecht-checkbox--checked': checkedHover || checkedActive,
+      'utrecht-checkbox--checked-hover': checkedHover,
+      'utrecht-checkbox--checked-active': checkedActive,
+      'utrecht-checkbox--indeterminate': indeterminateHover || indeterminateActive,
+      'utrecht-checkbox--indeterminate-hover': indeterminateHover,
+      'utrecht-checkbox--indeterminate-active': indeterminateActive,
     })}
     defaultChecked={checked}
     defaultValue={value}
@@ -52,6 +75,10 @@ const meta = {
     hover: false,
     focus: false,
     focusVisible: false,
+    checkedHover: false,
+    checkedActive: false,
+    indeterminateHover: false,
+    indeterminateActive: false,
     invalid: false,
     name: '',
   },
@@ -146,6 +173,38 @@ const meta = {
     },
     focusVisible: {
       description: 'Focus-visible',
+      control: 'boolean',
+      table: {
+        category: 'Simulate state',
+        defaultValue: { summary: '' },
+      },
+    },
+    checkedHover: {
+      description: 'Checked and hover',
+      control: 'boolean',
+      table: {
+        category: 'Simulate state',
+        defaultValue: { summary: '' },
+      },
+    },
+    checkedActive: {
+      description: 'Checked and active',
+      control: 'boolean',
+      table: {
+        category: 'Simulate state',
+        defaultValue: { summary: '' },
+      },
+    },
+    indeterminateHover: {
+      description: 'Indeterminate and hover',
+      control: 'boolean',
+      table: {
+        category: 'Simulate state',
+        defaultValue: { summary: '' },
+      },
+    },
+    indeterminateActive: {
+      description: 'Indeterminate and active',
       control: 'boolean',
       table: {
         category: 'Simulate state',
@@ -294,16 +353,30 @@ export const CheckedAndFocusVisible: Story = {
 export const CheckedAndHover: Story = {
   name: 'Checked and Hover',
   args: {
-    checked: true,
-    hover: true,
+    checkedHover: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Rendered through the `utrecht-checkbox--checked-hover` modifier class so the checked hover state is visible without pointer interaction.',
+      },
+    },
   },
 };
 
 export const CheckedAndActive: Story = {
   name: 'Checked and Active',
   args: {
-    checked: true,
-    active: true,
+    checkedActive: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Rendered through the `utrecht-checkbox--checked-active` modifier class so the checked active state is visible without pointer interaction.',
+      },
+    },
   },
 };
 
@@ -402,6 +475,36 @@ export const CheckedAndIndeterminateAndDisabled: Story = {
     checked: true,
     disabled: true,
     indeterminate: true,
+  },
+};
+
+export const IndeterminateAndHover: Story = {
+  name: 'Indeterminate and Hover',
+  args: {
+    indeterminateHover: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Rendered through the `utrecht-checkbox--indeterminate-hover` modifier class so the indeterminate hover state is visible without pointer interaction.',
+      },
+    },
+  },
+};
+
+export const IndeterminateAndActive: Story = {
+  name: 'Indeterminate and Active',
+  args: {
+    indeterminateActive: true,
+  },
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Rendered through the `utrecht-checkbox--indeterminate-active` modifier class so the indeterminate active state is visible without pointer interaction.',
+      },
+    },
   },
 };
 

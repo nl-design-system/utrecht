@@ -51,6 +51,26 @@
   @include utrecht-custom-checkbox--focus-visible;
 }
 
+.utrecht-checkbox--custom.utrecht-checkbox--checked-hover,
+.utrecht-custom-checkbox--checked-hover {
+  @include utrecht-custom-checkbox--checked-hover;
+}
+
+.utrecht-checkbox--custom.utrecht-checkbox--checked-active,
+.utrecht-custom-checkbox--checked-active {
+  @include utrecht-custom-checkbox--checked-active;
+}
+
+.utrecht-checkbox--custom.utrecht-checkbox--indeterminate-hover,
+.utrecht-custom-checkbox--indeterminate-hover {
+  @include utrecht-custom-checkbox--indeterminate-hover;
+}
+
+.utrecht-checkbox--custom.utrecht-checkbox--indeterminate-active,
+.utrecht-custom-checkbox--indeterminate-active {
+  @include utrecht-custom-checkbox--indeterminate-active;
+}
+
 .utrecht-checkbox--custom.utrecht-checkbox--html-input,
 .utrecht-custom-checkbox--html-input {
   @include utrecht-custom-checkbox--html-input;
