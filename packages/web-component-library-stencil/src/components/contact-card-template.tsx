@@ -60,7 +60,7 @@ export class ContactCardTemplate {
               socialLinksContent
             ))}
         </div>
-        <div class="utrecht-contact-card__content">
+        <div class="utrecht-contact-card__body">
           <slot name="content" />
         </div>
       </div>
