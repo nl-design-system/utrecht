@@ -47,10 +47,15 @@ export class ContactCardTemplate {
 
     return (
       <div class="utrecht-contact-card">
-        <HeadingTag class="utrecht-heading-2">
-          {this.heading}
-          {this.subtitle && <span class="utrecht-contact-card__subtitle">{this.subtitle}</span>}
-        </HeadingTag>
+        {this.subtitle ? (
+          <hgroup>
+            <HeadingTag class="utrecht-heading-2">.{this.heading}</HeadingTag>
+            <span class="utrecht-contact-card__subtitle">{this.subtitle}</span>
+          </hgroup>
+        ) : (
+          <HeadingTag class="utrecht-heading-2">.{this.heading}</HeadingTag>
+        )}
+
         <div class="utrecht-contact-card__grid">
           <slot />
           {socialLinksContent &&
