@@ -36,7 +36,7 @@ export class ContactCardTemplate {
           {socialLinks.map(({ icon, href, label }) => {
             const IconTag = `utrecht-icon-${icon}`;
             return (
-              <a key={href} href={href} aria-label={label || icon} class="utrecht-contact-card__social-link">
+              <a key={href} href={href} aria-labelledby={label} class="utrecht-contact-card__social-link">
                 <IconTag />
               </a>
             );
