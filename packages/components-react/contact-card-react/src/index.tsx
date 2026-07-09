@@ -50,7 +50,7 @@ export const ContactCard = forwardRef(
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
       <div className="utrecht-contact-card__socials">
         {socialLinksHeading && (
-          <Heading level={3} appearance="utrecht-heading-3" className="utrecht-contact-card__socials-heading">
+          <Heading level={3} className="utrecht-contact-card__socials-heading">
             {socialLinksHeading}
           </Heading>
         )}
