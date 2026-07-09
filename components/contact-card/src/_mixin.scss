@@ -10,7 +10,7 @@
 
   background-color: var(--utrecht-contact-card-background-color);
   background-image: var(--utrecht-contact-card-background-image);
-  background-position: var(--utrecht-contact-card-background-position);
+  background-position: center center;
   background-size: var(--utrecht-contact-card-background-size);
   border-radius: var(--utrecht-contact-card-border-radius);
   box-shadow: var(--utrecht-contact-card-box-shadow);
@@ -19,6 +19,20 @@
   padding-block-start: var(--utrecht-contact-card-padding-block-start, var(--utrecht-space-block-md));
   padding-inline-end: var(--utrecht-contact-card-padding-inline-end, var(--utrecht-space-block-md));
   padding-inline-start: var(--utrecht-contact-card-padding-inline-start, var(--utrecht-space-block-md));
+
+  @media (forced-colors: active) {
+    .utrecht-card--link {
+      border-color: linktext;
+      border-width: 1px;
+      outline-color: linktext !important;
+      outline-width: 3px;
+    }
+
+    .utrecht-card--link:focus-within {
+      border-color: Highlight;
+      outline-color: Highlight !important;
+    }
+  }
 }
 
 @mixin utrecht-contact-card__title {
@@ -37,14 +51,15 @@
   --_utrecht-grid-display: block;
 }
 
-@mixin utrecht-contact-card__grid-cell--phone-number {
+@mixin utrecht-contact-card__grid-cell--tel {
   a[href^="tel:"] {
-    font-size: var(--utrecht-contact-card-phone-number-font-size, inherit);
+    font-size: var(--utrecht-contact-card-tel-font-size, inherit);
   }
 }
 
 @mixin utrecht-contact-card__subtitle {
   font-weight: var(--utrecht-contact-card-subtitle-font-weight);
+
   &::before {
     content: " " var(--utrecht-contact-card-subtitle-separator) " ";
   }
