@@ -7,13 +7,22 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
+/**
+ * @deprecated
+ */
 export type SpotlightSectionType = 'info' | 'warning' | 'error' | 'ok';
 
+/**
+ * @deprecated
+ */
 export interface SpotlightSectionProps extends HTMLAttributes<HTMLDivElement> {
   aside?: boolean;
   type?: string | SpotlightSectionType;
 }
 
+/**
+ * @deprecated Use `Note` instead, available in `@utrecht/note-react`.
+ */
 export const SpotlightSection = forwardRef(
   (
     { aside, children, className, type, ...restProps }: PropsWithChildren<SpotlightSectionProps>,

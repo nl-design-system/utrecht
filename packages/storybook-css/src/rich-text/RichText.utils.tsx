@@ -49,6 +49,7 @@ import {
   UnorderedList,
   UnorderedListItem,
 } from '@utrecht/component-library-react';
+import { Note } from '@utrecht/note-react';
 import React from 'react';
 
 const AccordionStory = () => (
@@ -191,6 +192,19 @@ const ImageStory = () => (
   />
 );
 const LinkStory = () => <Link href="#">Naar dezelfde pagina</Link>;
+
+const NoteStory = () => (
+  <Note>
+    <Heading1>Lorem ipsum</Heading1>
+    <Paragraph>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </Paragraph>
+  </Note>
+);
+
 const OrderedListStory = () => (
   <OrderedList>
     <OrderedListItem>List item 1</OrderedListItem>
@@ -279,6 +293,7 @@ const componentMap = {
   'utrecht-heading-6': Heading6Story,
   'utrecht-img': ImageStory,
   'utrecht-link': LinkStory,
+  'utrecht-note': NoteStory,
   'utrecht-ordered-list': OrderedListStory,
   'utrecht-paragraph': ParagraphStory,
   'utrecht-table': TableStory,

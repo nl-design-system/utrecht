@@ -1,17 +1,18 @@
 /* @license CC0-1.0 */
 
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { Heading2, Paragraph, SpotlightSection } from '@utrecht/component-library-react';
+import { Heading2, Paragraph } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import readme from '@utrecht/spotlight-section-css/README.md?raw';
-import tokensDefinition from '@utrecht/spotlight-section-css/src/tokens.json';
+import readme from '@utrecht/note-css/README.md?raw';
+import tokensDefinition from '@utrecht/note-css/src/tokens.json';
+import { Note } from '@utrecht/note-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'CSS Component/Spotlight section',
-  id: 'css-spotlight-section',
-  component: SpotlightSection,
+  title: 'CSS Component/Note',
+  id: 'css-note',
+  component: Note,
   argTypes: {
     aside: {
       description: 'Aside',
@@ -21,20 +22,20 @@ const meta = {
       description: 'HTML content of the spotlight',
       control: 'text',
     },
-    type: {
+    purpose: {
       description: 'Type',
       control: { type: 'select' },
-      options: ['', 'info', 'warning', 'error', 'ok'],
+      options: ['', 'info', 'warning', 'error', 'success'],
     },
   },
   args: {
     aside: false,
     children: '',
-    type: '',
+    purpose: '',
   },
   parameters: {
-    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fspotlight-section',
-    tokensPrefix: 'utrecht-spotlight-section',
+    bugs: 'https://github.com/nl-design-system/utrecht/issues?q=is%3Aissue+is%3Aopen+label%3Acomponent%2Fnote',
+    tokensPrefix: 'utrecht-note',
     status: {
       type: 'WORK IN PROGRESS',
     },
@@ -46,7 +47,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof SpotlightSection>;
+} satisfies Meta<typeof Note>;
 
 export default meta;
 
@@ -79,7 +80,7 @@ export const Info: Story = {
         laborum.
       </Paragraph>,
     ],
-    type: 'info',
+    purpose: 'info',
   },
 };
 
@@ -95,7 +96,7 @@ export const Warning: Story = {
         laborum.
       </Paragraph>,
     ],
-    type: 'warning',
+    purpose: 'warning',
   },
 };
 
@@ -111,11 +112,11 @@ export const Error: Story = {
         laborum.
       </Paragraph>,
     ],
-    type: 'error',
+    purpose: 'error',
   },
 };
 
-export const Ok: Story = {
+export const Success: Story = {
   args: {
     children: [
       <Heading2>Lorem ipsum</Heading2>,
@@ -127,7 +128,7 @@ export const Ok: Story = {
         laborum.
       </Paragraph>,
     ],
-    type: 'ok',
+    purpose: 'success',
   },
 };
 

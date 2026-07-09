@@ -2,24 +2,24 @@
 
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import readme from '@utrecht/spotlight-section-css/README.md?raw';
-import tokensDefinition from '@utrecht/spotlight-section-css/src/tokens.json';
-import { UtrechtHeading1, UtrechtParagraph, UtrechtSpotlightSection } from '@utrecht/web-component-library-react';
+import readme from '@utrecht/note-css/README.md?raw';
+import tokensDefinition from '@utrecht/note-css/src/tokens.json';
+import { UtrechtHeading1, UtrechtNote, UtrechtParagraph } from '@utrecht/web-component-library-react';
 import React from 'react';
 import { designTokenStory } from './design-token-story';
 
 const meta = {
-  title: 'Web Component/Spotlight section',
-  id: 'web-component-spotlight-section',
-  component: UtrechtSpotlightSection,
+  title: 'Web Component/Note',
+  id: 'web-component-note',
+  component: UtrechtNote,
   argTypes: {
     children: {
-      description: 'HTML content of the spotlight-section',
+      description: 'HTML content of the note',
     },
-    appearance: {
-      description: 'Appearance',
+    purpose: {
+      description: 'Purpose',
       control: { type: 'select' },
-      options: ['', 'error', 'info', 'ok', 'warning'],
+      options: ['', 'error', 'info', 'success', 'warning'],
     },
   },
   args: {
@@ -39,7 +39,7 @@ const meta = {
     status: {
       type: 'WORK IN PROGRESS',
     },
-    tokensPrefix: 'utrecht-spotlight-section',
+    tokensPrefix: 'utrecht-note',
     tokens,
     tokensDefinition,
     docs: {
@@ -48,7 +48,7 @@ const meta = {
       },
     },
   },
-} satisfies Meta<typeof UtrechtSpotlightSection>;
+} satisfies Meta<typeof UtrechtNote>;
 
 export default meta;
 
@@ -59,28 +59,28 @@ export const Default: Story = {};
 export const Info: Story = {
   args: {
     ...Default.args,
-    appearance: 'info',
+    purpose: 'info',
   },
 };
 
-export const OK: Story = {
+export const Success: Story = {
   args: {
     ...Default.args,
-    appearance: 'ok',
+    purpose: 'success',
   },
 };
 
 export const Warning: Story = {
   args: {
     ...Default.args,
-    appearance: 'warning',
+    purpose: 'warning',
   },
 };
 
 export const Error: Story = {
   args: {
     ...Default.args,
-    appearance: 'error',
+    purpose: 'error',
   },
 };
 
