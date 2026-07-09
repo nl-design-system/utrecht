@@ -70,7 +70,7 @@ export const ContactCard = forwardRef(
       <div ref={ref} className={clsx('utrecht-contact-card', className)} {...restProps}>
         {(heading || subtitle) && (
           <div className="utrecht-contact-card__title">
-            <Heading level={2} appearance="utrecht-heading-2">
+            <Heading level={2}>
               {heading}
               {subtitle && <span className="utrecht-contact-card__subtitle">{subtitle}</span>}
             </Heading>
