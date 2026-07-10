@@ -55,6 +55,11 @@ const meta = {
       description: 'Optional heading above the social links',
       table: { type: { summary: 'ReactNode' } },
     },
+    richText: {
+      control: 'boolean',
+      description: 'Pas de spacing van `.utrecht-rich-text` toe op de secties van de contact card',
+      table: { type: { summary: 'boolean' }, defaultValue: { summary: 'false' } },
+    },
   },
   args: {
     heading: 'Hulp en contact',
