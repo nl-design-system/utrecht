@@ -46,7 +46,7 @@ const meta = {
       table: { type: { summary: 'ReactNode' } },
     },
     socialLinks: {
-      control: false,
+      control: 'text',
       description: 'Array of social links with icon, href and optional label',
       table: { type: { summary: 'ContactCardSocialLink[]' } },
     },
