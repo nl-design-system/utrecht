@@ -1,0 +1,48 @@
+{
+  "utrecht": {
+    "logo-image": {
+      "background-color": {
+        "value": "{utrecht.color.white}"
+      },
+      "inline-size": {
+        "value": "192px"
+      },
+      "block-size": {
+        "value": "100px"
+      },
+      "md": {
+        "inline-size": {
+          "value": "160px"
+        },
+        "block-size": {
+          "value": "77px"
+        }
+      },
+      "sm": {
+        "inline-size": {
+          "value": "108px"
+        },
+        "block-size": {
+          "value": "64px"
+        }
+      },
+      "shield": {
+        "right": {
+          "color": { "value": "{utrecht.color.white}" }
+        },
+        "left": {
+          "color": { "value": "{utrecht.color.red.40}" }
+        }
+      },
+      "details": {
+        "color": { "value": "{utrecht.color.red.40}" }
+      },
+      "text": {
+        "color": { "value": "{utrecht.color.red.40}" }
+      },
+      "border": {
+        "color": { "value": "{utrecht.color.yellow.50}" }
+      }
+    }
+  }
+}
