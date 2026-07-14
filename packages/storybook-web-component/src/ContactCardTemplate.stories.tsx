@@ -101,7 +101,7 @@ const meta = {
       table: { type: { summary: 'string' } },
     },
     socialLinks: {
-      control: 'text',
+      control: false,
       description: 'JSON string array of social links with icon, href and optional label',
       table: { type: { summary: 'string' } },
     },
