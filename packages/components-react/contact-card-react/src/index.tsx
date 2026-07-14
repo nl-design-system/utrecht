@@ -80,7 +80,7 @@ export const ContactCard = forwardRef(
                 className={clsx(
                   'utrecht-contact-card__grid-cell',
                   richText && 'utrecht-rich-text',
-                  i === 0 && 'utrecht-contact-card__grid-cell--phone-number',
+                  i === 0 && 'utrecht-contact-card__grid-cell--tel',
                 )}
                 xs={12}
                 sm={smCols}
