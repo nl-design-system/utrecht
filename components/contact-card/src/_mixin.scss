@@ -19,18 +19,18 @@
   padding-block-start: var(--utrecht-contact-card-padding-block-start, var(--utrecht-space-block-md));
   padding-inline-end: var(--utrecht-contact-card-padding-inline-end, var(--utrecht-space-block-md));
   padding-inline-start: var(--utrecht-contact-card-padding-inline-start, var(--utrecht-space-block-md));
+}
 
+@mixin utrecht-contact-card--media-query-forced-colors {
   @media (forced-colors: active) {
-    .utrecht-card--link {
-      border-color: linktext;
-      border-width: 1px;
-      outline-color: linktext !important;
-      outline-width: 3px;
-    }
+    border-color: LinkText;
+    border-width: 1px;
+    outline-color: LinkText;
+    outline-width: 3px;
 
-    .utrecht-card--link:focus-within {
+    &:focus-within {
       border-color: Highlight;
-      outline-color: Highlight !important;
+      outline-color: Highlight;
     }
   }
 }

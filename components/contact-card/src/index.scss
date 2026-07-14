@@ -8,6 +8,7 @@
 
 .utrecht-contact-card {
   @include utrecht-contact-card;
+  @include utrecht-contact-card--media-query-forced-colors;
 }
 
 .utrecht-contact-card__title {
