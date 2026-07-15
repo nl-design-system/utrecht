@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from '@storybook/react-webpack5';
 import { Heading, Link, Paragraph, Separator } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { UtrechtContactCardTemplate, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
+import { UtrechtContactCard, UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React, { PropsWithChildren } from 'react';
 
 type ContactCardStoryArgs = {
@@ -14,7 +14,7 @@ type ContactCardStoryArgs = {
   sectionCount?: number;
 };
 
-const WC = UtrechtContactCardTemplate as any;
+const WC = UtrechtContactCard as any;
 
 const ContactCardStory = ({
   heading,
@@ -86,8 +86,8 @@ const socialLinksJson = JSON.stringify([
 ]);
 
 const meta = {
-  title: 'Templates/Contact card',
-  id: 'templates-web-component-contact-card',
+  title: 'Web Component/Contact Card',
+  id: 'web-component-contact-card',
   component: ContactCardStory,
   argTypes: {
     heading: {
