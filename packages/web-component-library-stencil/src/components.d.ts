@@ -5,8 +5,6 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { HTMLHeadingLevel } from "./components/contact-card-template";
-export { HTMLHeadingLevel } from "./components/contact-card-template";
 export namespace Components {
     interface UtrechtActionGroup {
         "direction": string | 'column' | 'row';
@@ -77,13 +75,11 @@ export namespace Components {
     interface UtrechtColumnLayout {
         "rule": boolean;
     }
-    interface UtrechtContactCardTemplate {
+    interface UtrechtContactCard {
         "heading": string;
-        "headingLevel": HTMLHeadingLevel;
         "sectionCount"?: number;
         "socialLinks"?: string;
         "socialLinksHeading"?: string;
-        "socialLinksHeadingLevel": HTMLHeadingLevel;
         "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
@@ -1028,11 +1024,11 @@ declare global {
         prototype: HTMLUtrechtColumnLayoutElement;
         new (): HTMLUtrechtColumnLayoutElement;
     };
-    interface HTMLUtrechtContactCardTemplateElement extends Components.UtrechtContactCardTemplate, HTMLStencilElement {
+    interface HTMLUtrechtContactCardElement extends Components.UtrechtContactCard, HTMLStencilElement {
     }
-    var HTMLUtrechtContactCardTemplateElement: {
-        prototype: HTMLUtrechtContactCardTemplateElement;
-        new (): HTMLUtrechtContactCardTemplateElement;
+    var HTMLUtrechtContactCardElement: {
+        prototype: HTMLUtrechtContactCardElement;
+        new (): HTMLUtrechtContactCardElement;
     };
     interface HTMLUtrechtCustomCheckboxElement extends Components.UtrechtCustomCheckbox, HTMLStencilElement {
     }
@@ -3048,7 +3044,7 @@ declare global {
         "utrecht-code-block": HTMLUtrechtCodeBlockElement;
         "utrecht-color-sample": HTMLUtrechtColorSampleElement;
         "utrecht-column-layout": HTMLUtrechtColumnLayoutElement;
-        "utrecht-contact-card-template": HTMLUtrechtContactCardTemplateElement;
+        "utrecht-contact-card": HTMLUtrechtContactCardElement;
         "utrecht-custom-checkbox": HTMLUtrechtCustomCheckboxElement;
         "utrecht-data-badge": HTMLUtrechtDataBadgeElement;
         "utrecht-data-list": HTMLUtrechtDataListElement;
@@ -3440,13 +3436,11 @@ declare namespace LocalJSX {
     interface UtrechtColumnLayout {
         "rule"?: boolean;
     }
-    interface UtrechtContactCardTemplate {
+    interface UtrechtContactCard {
         "heading": string;
-        "headingLevel"?: HTMLHeadingLevel;
         "sectionCount"?: number;
         "socialLinks"?: string;
         "socialLinksHeading"?: string;
-        "socialLinksHeadingLevel"?: HTMLHeadingLevel;
         "subtitle"?: string;
     }
     interface UtrechtCustomCheckbox {
@@ -4274,7 +4268,7 @@ declare namespace LocalJSX {
         "utrecht-code-block": UtrechtCodeBlock;
         "utrecht-color-sample": UtrechtColorSample;
         "utrecht-column-layout": UtrechtColumnLayout;
-        "utrecht-contact-card-template": UtrechtContactCardTemplate;
+        "utrecht-contact-card": UtrechtContactCard;
         "utrecht-custom-checkbox": UtrechtCustomCheckbox;
         "utrecht-data-badge": UtrechtDataBadge;
         "utrecht-data-list": UtrechtDataList;
@@ -4610,7 +4604,7 @@ declare module "@stencil/core" {
             "utrecht-code-block": LocalJSX.UtrechtCodeBlock & JSXBase.HTMLAttributes<HTMLUtrechtCodeBlockElement>;
             "utrecht-color-sample": LocalJSX.UtrechtColorSample & JSXBase.HTMLAttributes<HTMLUtrechtColorSampleElement>;
             "utrecht-column-layout": LocalJSX.UtrechtColumnLayout & JSXBase.HTMLAttributes<HTMLUtrechtColumnLayoutElement>;
-            "utrecht-contact-card-template": LocalJSX.UtrechtContactCardTemplate & JSXBase.HTMLAttributes<HTMLUtrechtContactCardTemplateElement>;
+            "utrecht-contact-card": LocalJSX.UtrechtContactCard & JSXBase.HTMLAttributes<HTMLUtrechtContactCardElement>;
             "utrecht-custom-checkbox": LocalJSX.UtrechtCustomCheckbox & JSXBase.HTMLAttributes<HTMLUtrechtCustomCheckboxElement>;
             "utrecht-data-badge": LocalJSX.UtrechtDataBadge & JSXBase.HTMLAttributes<HTMLUtrechtDataBadgeElement>;
             "utrecht-data-list": LocalJSX.UtrechtDataList & JSXBase.HTMLAttributes<HTMLUtrechtDataListElement>;
