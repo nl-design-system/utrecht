@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core';
+import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'utrecht-contact-card',
@@ -18,6 +18,9 @@ export class ContactCard {
       : [];
     const sectionCount = this.sectionCount ?? 0;
     const hasSocialLinksColumn = socialLinks.length > 0 && sectionCount <= 1;
+    const effectiveCount = hasSocialLinksColumn ? sectionCount + 1 : sectionCount;
+    const mdCols = effectiveCount <= 1 ? 12 : effectiveCount === 2 ? 6 : 4;
+    const smCols = effectiveCount >= 3 ? 6 : mdCols;
 
     const socialLinksContent = socialLinks.length > 0 && [
       this.socialLinksHeading && (
@@ -38,28 +41,37 @@ export class ContactCard {
     ];
 
     return (
-      <div class="utrecht-contact-card">
-        {(this.heading || this.subtitle) && (
-          <div class="utrecht-contact-card__title">
-            <h2 class="utrecht-heading-2">
-              {this.heading}
-              {this.subtitle && <span class="utrecht-contact-card__subtitle">{this.subtitle}</span>}
-            </h2>
+      <Host
+        style={
+          {
+            '--_utrecht-contact-card-sm-cols': String(smCols),
+            '--_utrecht-contact-card-md-cols': String(mdCols),
+          } as any
+        }
+      >
+        <div class="utrecht-contact-card">
+          {(this.heading || this.subtitle) && (
+            <div class="utrecht-contact-card__title">
+              <h2 class="utrecht-heading-2">
+                {this.heading}
+                {this.subtitle && <span class="utrecht-contact-card__subtitle">{this.subtitle}</span>}
+              </h2>
+            </div>
+          )}
+          <div class="utrecht-contact-card__grid">
+            <slot />
+            {socialLinksContent &&
+              (hasSocialLinksColumn ? (
+                <div class="utrecht-contact-card__grid-cell">{socialLinksContent}</div>
+              ) : (
+                socialLinksContent
+              ))}
           </div>
-        )}
-        <div class="utrecht-contact-card__grid">
-          <slot />
-          {socialLinksContent &&
-            (hasSocialLinksColumn ? (
-              <div class="utrecht-contact-card__grid-cell">{socialLinksContent}</div>
-            ) : (
-              socialLinksContent
-            ))}
+          <div class="utrecht-contact-card__body">
+            <slot name="content" />
+          </div>
         </div>
-        <div class="utrecht-contact-card__body">
-          <slot name="content" />
-        </div>
-      </div>
+      </Host>
     );
   }
 }

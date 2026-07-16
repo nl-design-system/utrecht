@@ -4,7 +4,16 @@
  * Copyright (c) 2021-2026 Gemeente Utrecht
  */
 
-@use "../../../../components/contact-card/src/mixin" as *;
+@use "~@utrecht/contact-card-css/src/mixin" as *;
+@use "~@utrecht/grid-css/src/mixin" as *;
+
+:host {
+  display: block;
+}
+
+:host([hidden]) {
+  display: none !important;
+}
 
 .utrecht-contact-card {
   @include utrecht-contact-card;
@@ -17,18 +26,36 @@
 
 .utrecht-contact-card__grid {
   @include utrecht-contact-card__grid;
+  @include utrecht-grid-container;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 1rem));
+  margin-block: calc(-1 * var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 16px)));
+  margin-inline: calc(-1 * var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 16px)));
+}
+
+slot {
+  display: contents;
 }
 
 .utrecht-contact-card__grid-cell {
   @include utrecht-contact-card__grid-cell;
+  @include utrecht-grid-cell;
 
-  flex: 1 1 0;
-  min-inline-size: 0;
+  --_utrecht-columns: 12;
+
+  padding-block: var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 16px));
+  padding-inline: var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 16px));
+}
+
+@media screen and (width >= 600px) {
+  .utrecht-contact-card__grid-cell {
+    --_utrecht-columns: var(--_utrecht-contact-card-sm-cols, 12);
+  }
+}
+
+@media screen and (width >= 960px) {
+  .utrecht-contact-card__grid-cell {
+    --_utrecht-columns: var(--_utrecht-contact-card-md-cols, 12);
+  }
 }
 
 .utrecht-contact-card__grid-cell--tel {
@@ -48,7 +75,26 @@
 }
 
 ::slotted(.utrecht-contact-card__grid-cell) {
-  box-sizing: border-box;
-  flex: 1 1 0;
-  min-inline-size: 0;
+  @include utrecht-grid-cell;
+
+  --_utrecht-columns: 12;
+
+  padding-block: var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 16px));
+  padding-inline: var(--utrecht-contact-card-grid-spacing, var(--utrecht-grid-spacing-md, 16px));
+}
+
+@media screen and (width >= 600px) {
+  ::slotted(.utrecht-contact-card__grid-cell) {
+    --_utrecht-columns: var(--_utrecht-contact-card-sm-cols, 12);
+  }
+}
+
+@media screen and (width >= 960px) {
+  ::slotted(.utrecht-contact-card__grid-cell) {
+    --_utrecht-columns: var(--_utrecht-contact-card-md-cols, 12);
+  }
+}
+
+::slotted(.utrecht-contact-card__grid-cell--tel) {
+  --utrecht-link-font-size: var(--utrecht-contact-card-tel-font-size, inherit);
 }
