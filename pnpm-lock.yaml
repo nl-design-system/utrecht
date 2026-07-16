@@ -8095,6 +8095,9 @@ importers:
       '@utrecht/column-layout-css':
         specifier: workspace:*
         version: link:../../components/column-layout
+      '@utrecht/contact-card-css':
+        specifier: workspace:*
+        version: link:../../components/contact-card
       '@utrecht/custom-checkbox-css':
         specifier: workspace:*
         version: link:../../components/custom-checkbox
@@ -8143,6 +8146,9 @@ importers:
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
+      '@utrecht/grid-css':
+        specifier: workspace:*
+        version: link:../../components/grid
       '@utrecht/heading-1-css':
         specifier: workspace:*
         version: link:../../components/heading-1
