@@ -47,7 +47,7 @@ export const ContactCard = forwardRef(
     if (effectiveCount <= 1) mdCols = 12;
     else if (effectiveCount === 2) mdCols = 6;
     else mdCols = 4;
-    const smCols: 4 | 6 | 12 = effectiveCount >= 3 ? 6 : mdCols;
+    const smCols = 12;
 
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
       <>
