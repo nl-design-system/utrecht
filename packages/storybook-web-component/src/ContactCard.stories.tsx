@@ -36,7 +36,7 @@ const ContactCardStory = ({
 );
 
 const phoneSection = (
-  <div className="utrecht-contact-card__grid-cell">
+  <div className="utrecht-contact-card__grid-cell utrecht-contact-card__grid-cell--tel">
     <Heading level={3}>Telefoon</Heading>
     <Paragraph>
       <Link href="tel:14030" aria-label="Bel 14030, telefoonnummer van gemeente Utrecht">
