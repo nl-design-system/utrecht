@@ -51,7 +51,11 @@ export const ContactCard = forwardRef(
 
     const socialLinksContent = socialLinks && socialLinks.length > 0 && (
       <>
-        {socialLinksHeading && <Heading level={3}>{socialLinksHeading}</Heading>}
+        {socialLinksHeading && (
+          <Heading level={3} className="utrecht-contact-card__socials-heading">
+            {socialLinksHeading}
+          </Heading>
+        )}
         <div className="utrecht-contact-card__socials-links">
           {socialLinks.map(({ icon, href, label }) => (
             <LinkSocial key={href} href={href} aria-label={label} className="utrecht-contact-card__social-link">

@@ -82,7 +82,7 @@ describe('ContactCard', () => {
       />,
     );
 
-    expect(container.querySelector('.utrecht-contact-card__socials')).toBeInTheDocument();
+    expect(container.querySelector('.utrecht-contact-card__socials-links')).toBeInTheDocument();
     expect(container.querySelector('a[href="https://example.com"]')).toBeInTheDocument();
   });
 
