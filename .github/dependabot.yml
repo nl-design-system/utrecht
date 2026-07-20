@@ -1,7 +1,5 @@
 version: 2
 
-# Documentation:
-# https://docs.github.com/en/code-security/supply-chain-security/keeping-your-dependencies-updated-automatically/enabling-and-disabling-version-updates
 updates:
   - package-ecosystem: "github-actions"
     directory: "/"
@@ -20,5 +18,94 @@ updates:
       interval: "monthly"
     cooldown:
       default-days: 1
+    groups:
+      nl-design-system:
+        applies-to: "version-updates"
+        patterns:
+          - "@amsterdam/*"
+          - "@gemeente-denhaag/*"
+          - "@gemeente-rotterdam/*"
+          - "@nl-design-system/*"
+          - "@nl-design-system-candidate/*"
+          - "@nl-design-system-community/*"
+          - "@nl-design-system-unstable/*"
+          - "@nl-rvo/*"
+          - "@rijkshuisstijl-community/*"
+      react:
+        applies-to: "version-updates"
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      astro:
+        applies-to: "version-updates"
+        patterns:
+          - "@astrojs/*"
+          - "astro"
+      storybook:
+        applies-to: "version-updates"
+        patterns:
+          - "@storybook/*"
+          - "storybook"
+      docusaurus:
+        applies-to: "version-updates"
+        patterns:
+          - "@docusaurus/*"
+      i18next:
+        applies-to: "version-updates"
+        patterns:
+          - "i18next"
+          - "i18next-*"
+          - "react-i18next"
+      build-toolchain:
+        applies-to: "version-updates"
+        patterns:
+          - "@babel/*"
+          - "@rollup/*"
+          - "@vitejs/*"
+          - "rollup"
+          - "vite"
+          - "vite-*"
+      test-toolchain:
+        applies-to: "version-updates"
+        patterns:
+          - "@testing-library/*"
+          - "@vitest/*"
+          - "jsdom"
+          - "vitest"
+      lint-toolchain:
+        applies-to: "version-updates"
+        patterns:
+          - "@eslint/*"
+          - "eslint"
+          - "husky"
+          - "lint-staged"
+          - "markdownlint-cli"
+          - "npm-package-json-lint"
+          - "prettier"
+          - "stylelint"
+          - "stylelint-*"
+      patch-and-minor-updates:
+        applies-to: "version-updates"
+        update-types:
+          - "patch"
+          - "minor"
+    ignore:
+      - dependency-name: "@types/node"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@types/react"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "@types/react-dom"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "react"
+        update-types:
+          - "version-update:semver-major"
+      - dependency-name: "react-dom"
+        update-types:
+          - "version-update:semver-major"
     versioning-strategy: "increase-if-necessary"
     open-pull-requests-limit: 20
