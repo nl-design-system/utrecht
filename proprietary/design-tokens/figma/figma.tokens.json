@@ -8026,6 +8026,86 @@
       }
     }
   },
+  "components/grid": {
+    "ams": {
+      "grid": {
+        "column-count": {
+          "$type": "number",
+          "$value": 12
+        },
+        "column-gap": {
+          "$type": "dimension",
+          "$value": "{basis.space.column.xl}"
+        },
+        "padding-block": {
+          "l": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.xl}"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.3xl}"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.6xl}"
+          }
+        },
+        "padding-inline": {
+          "$type": "dimension",
+          "$value": "{basis.space.none}"
+        },
+        "row-gap": {
+          "l": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.xl}"
+          },
+          "xl": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.3xl}"
+          },
+          "2xl": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.5xl}"
+          }
+        },
+        "vi-medium": {
+          "column-count": {
+            "$type": "number",
+            "$value": 12
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          }
+        },
+        "vi-wide": {
+          "column-count": {
+            "$type": "number",
+            "$value": 12
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          }
+        },
+        "cell": {
+          "background-color": {
+            "$type": "color",
+            "$value": "{basis.color.transparent}"
+          },
+          "padding-block": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          },
+          "padding-inline": {
+            "$type": "dimension",
+            "$value": "{basis.space.none}"
+          }
+        }
+      }
+    }
+  },
   "components/heading/nl": {
     "nl": {
       "heading": {
@@ -16034,6 +16114,7 @@
       "components/form-field-label",
       "components/form-field-label-suffix",
       "components/form-summary",
+      "components/grid",
       "components/heading/nl",
       "components/heading/amsterdam",
       "components/heading-1",
