@@ -113,7 +113,8 @@ function useTierPixelValues(): Record<string, number> {
   const [values, setValues] = useState<Record<string, number>>({});
 
   useEffect(() => {
-    const cs = getComputedStyle(document.documentElement);
+    const themeEl = document.querySelector('.utrecht-theme') ?? document.documentElement;
+    const cs = getComputedStyle(themeEl);
     const result: Record<string, number> = {};
     for (const [term, tier] of Object.entries(SPACE_MAP)) {
       if (!tier) continue;
@@ -177,7 +178,7 @@ export function useSpacingStory<T extends Record<string, string>>(defaults: T) {
   const sortedOptions = [...MATRIX_OPTIONS].sort((a, b) => (tierValues[a] ?? Infinity) - (tierValues[b] ?? Infinity));
   const optionLabel = (term: string) => {
     const px = tierValues[term];
-    return px !== null ? `${term} (${px}px)` : term;
+    return px !== null && px !== undefined ? `${term} (${px}px)` : term;
   };
 
   const setTerm = (key: keyof T, value: string) => setTerms((prev) => ({ ...prev, [key]: value } as T));
@@ -237,7 +238,14 @@ function SpacingControlPanel({
         fontSize: '12px',
       }}
     >
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px', marginBlockEnd: '8px' }}>
+      <div
+        style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(180px, 1fr))',
+          gap: '8px',
+          marginBlockEnd: '8px',
+        }}
+      >
         {controls.map(({ key, label, value, isModified, onChange }) => (
           <label key={key} style={{ display: 'flex', flexDirection: 'column', gap: '2px' }}>
             <span>{label}</span>
