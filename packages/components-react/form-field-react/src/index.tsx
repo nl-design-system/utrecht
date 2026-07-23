@@ -5,6 +5,7 @@ export interface FormFieldProps extends HTMLAttributes<HTMLDivElement> {
   description?: ReactNode;
   errorMessage?: ReactNode;
   input?: ReactNode; // TODO: Should this be named `control` instead of `input`?
+  status?: ReactNode;
   invalid?: boolean;
   label?: ReactNode;
   type?: string;
@@ -20,6 +21,7 @@ export const FormField = forwardRef(
       input,
       invalid,
       label,
+      status,
       type,
       ...restProps
     }: PropsWithChildren<FormFieldProps>,
@@ -41,8 +43,9 @@ export const FormField = forwardRef(
     >
       {label && <div className="utrecht-form-field__label">{label}</div>}
       {description && <div className="utrecht-form-field__description">{description}</div>}
-      {input && <div className="utrecht-form-field__input">{input}</div>}
       {errorMessage && <div className="utrecht-form-field__error-message">{errorMessage}</div>}
+      {input && <div className="utrecht-form-field__input">{input}</div>}
+      {status && <div className="utrecht-form-field__status">{status}</div>}
       {children}
     </div>
   ),
