@@ -1,5 +1,25 @@
 # @utrecht/design-tokens
 
+## 7.0.0
+
+### Major Changes
+
+- 07ba0e8: Add the Contact Card component, with `heading`, `subtitle` and `sections` support, a responsive grid layout based on `@utrecht/grid-css`, and design tokens for background, padding, separator, subtitle, phone number and grid spacing.
+
+### Minor Changes
+
+- dbf713c: Wire the existing `utrecht.accordion.button.border-radius` token. The token was declared in the Accordion schema (`figma-implementation: true`) but had no value and was never applied, so the accordion button's radius was locked to the global `--utrecht-button-border-radius` with no way to set it separately. In themes with a non-zero button radius, that rounding showed on the subtle button's hover and focus background across the full-width row. The token now controls the button radius and defaults to the button radius, so the default appearance is unchanged while themes can give the accordion button its own radius.
+- d2d0613: Add `utrecht.accordion.button.font-family`, `font-size`, `font-weight` and `line-height` design tokens and apply them on the Accordion button. This lets the button text be themed independently, for example to align it with Heading styling, as requested in #2719. The tokens default to the Button typography, so the default appearance is unchanged.
+
+### Patch Changes
+
+- 9101272: Add `utrecht.checkbox.checked.hover`, `utrecht.checkbox.checked.active`, `utrecht.checkbox.indeterminate.hover` and `utrecht.checkbox.indeterminate.active` design tokens (each with `background-color`, `border-color`, `border-width` and `color`) and apply them on the custom checkbox, so the checked and indeterminate states can be themed for hover and active interaction, as requested in #2716. The tokens are empty by default and fall back to the existing checked and indeterminate tokens, so the default appearance is unchanged. Disabled checkboxes keep precedence over hover and active.
+
+  Each new state also gets a matching modifier class (`utrecht-checkbox--checked-hover`, `utrecht-checkbox--checked-active`, `utrecht-checkbox--indeterminate-hover` and `utrecht-checkbox--indeterminate-active`), to be combined with `utrecht-checkbox--checked` or `utrecht-checkbox--indeterminate`, so the checked and indeterminate hover and active states can also be rendered without user interaction.
+
+- 19157c9: Add `utrecht.textarea.hover.background-color`, `utrecht.textarea.hover.border-color` and `utrecht.textarea.hover.color` design tokens and apply them on the Textarea `:hover` state, as requested in #2716 for all form controls. The tokens are empty by default and fall back to the existing Textarea and Form Control tokens, so the default appearance is unchanged. Disabled and read-only states keep precedence over hover.
+- ba68e91: Add `utrecht.textbox.hover.background-color`, `utrecht.textbox.hover.border-color` and `utrecht.textbox.hover.color` design tokens and apply them on the Textbox `:hover` state, as requested in #2716 for all form controls. The tokens are empty by default and fall back to the existing Textbox and Form Control tokens, so the default appearance is unchanged. Disabled and read-only states keep precedence over hover.
+
 ## 6.2.1
 
 ### Patch Changes

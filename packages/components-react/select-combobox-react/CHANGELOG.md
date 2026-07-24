@@ -1,5 +1,12 @@
 # @utrecht/select-combobox-react
 
+## 1.0.20
+
+### Patch Changes
+
+- Updated dependencies [ba68e91]
+  - @utrecht/textbox-react@1.1.0
+
 ## 1.0.19
 
 ### Patch Changes

@@ -1,5 +1,33 @@
 # @utrecht/component-library-react
 
+## 14.1.0
+
+### Minor Changes
+
+- f5d315b: Add `inputId` prop to `FormFieldTextbox` and `FormFieldTextarea` to set the `id` of the form control, so other elements can reference the input, for example links in an error summary.
+
+### Patch Changes
+
+- Updated dependencies [dbf713c]
+- Updated dependencies [2350235]
+- Updated dependencies [d2d0613]
+- Updated dependencies [9101272]
+- Updated dependencies [a9cb3bf]
+- Updated dependencies [a9cb3bf]
+- Updated dependencies [19157c9]
+- Updated dependencies [ba68e91]
+- Updated dependencies [19157c9]
+  - @utrecht/accordion-css@4.1.0
+  - @utrecht/custom-checkbox-css@3.1.0
+  - @utrecht/drawer-css@3.1.0
+  - @utrecht/textarea-css@4.1.0
+  - @utrecht/textbox-react@1.1.0
+  - @utrecht/html-content-css@3.0.1
+  - @utrecht/checkbox-react@1.0.15
+  - @utrecht/open-forms-container-css@3.0.2
+  - @utrecht/form-field-checkbox-react@1.1.7
+  - @utrecht/open-forms-container-react@1.0.11
+
 ## 14.0.2
 
 ### Patch Changes

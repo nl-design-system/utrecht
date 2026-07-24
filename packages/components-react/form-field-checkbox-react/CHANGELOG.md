@@ -1,5 +1,11 @@
 # @utrecht/form-field-checkbox-react
 
+## 1.1.7
+
+### Patch Changes
+
+- @utrecht/checkbox-react@1.0.15
+
 ## 1.1.6
 
 ### Patch Changes
