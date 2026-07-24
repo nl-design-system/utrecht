@@ -54,6 +54,9 @@ jobs:
       - name: Checkout branch
         uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
         with:
+          # Fetch all history for all branches so that `changeset:status` in package.json#scripts can determine if
+          # a changeset is needed or not.
+          fetch-depth: 0
           persist-credentials: false
 
       - name: Install pnpm
@@ -77,6 +80,15 @@ jobs:
       - name: "Continuous Integration: lint"
         run: |
           pnpm run --if-present lint
+
+      - name: Check if a changeset is needed
+        id: changeset
+        # ONLY run this step if:
+        #
+        # 1. the branch was not created by the Changeset Action itself
+        # 2. the branch was not created by NL Design System Bot
+        if: ${{ !startsWith(github.ref_name, 'changeset-release/') && github.actor != 'nl-design-system-ci' }}
+        run: pnpm run lint-changeset
 
   build:
     runs-on: ubuntu-latest
