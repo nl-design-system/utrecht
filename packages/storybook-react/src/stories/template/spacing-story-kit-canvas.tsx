@@ -96,6 +96,14 @@ function useSpacingDebugCanvas() {
   const showDebug = useContext(SpacingDebugContext);
   const containerRef = useRef<HTMLDivElement>(null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
+  const [, setVersion] = useState(0);
+
+  useEffect(() => {
+    const container = containerRef.current;
+    const observer = new ResizeObserver(() => setVersion((v) => v + 1));
+    if (container) observer.observe(container);
+    return () => observer.disconnect();
+  }, []);
 
   useLayoutEffect(() => {
     const container = containerRef.current;
