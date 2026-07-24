@@ -1,5 +1,16 @@
 # @utrecht/accordion-css
 
+## 4.1.0
+
+### Minor Changes
+
+- dbf713c: Wire the existing `utrecht.accordion.button.border-radius` token. The token was declared in the Accordion schema (`figma-implementation: true`) but had no value and was never applied, so the accordion button's radius was locked to the global `--utrecht-button-border-radius` with no way to set it separately. In themes with a non-zero button radius, that rounding showed on the subtle button's hover and focus background across the full-width row. The token now controls the button radius and defaults to the button radius, so the default appearance is unchanged while themes can give the accordion button its own radius.
+- 2350235: Apply the existing `utrecht.accordion.button.icon.size` token. The accordion button icon now reserves its configured size as an inline column and exposes `--utrecht-icon-size` to icon children. Previously the token was defined (and flagged `figma-implementation: true`) but never applied in the CSS.
+
+  The icon column also makes the button label line up with the panel content: `padding-inline-start` plus the icon size equals the panel's `padding-inline-start`. The button gap is set through `--utrecht-button-column-gap` (the property the button actually reads) and defaults to `0`, so the label lands exactly on that line instead of overshooting it. The icon is centered within its column, and the unused `utrecht-accordion__button--rtl` mixin has been removed.
+
+- d2d0613: Add `utrecht.accordion.button.font-family`, `font-size`, `font-weight` and `line-height` design tokens and apply them on the Accordion button. This lets the button text be themed independently, for example to align it with Heading styling, as requested in #2719. The tokens default to the Button typography, so the default appearance is unchanged.
+
 ## 4.0.1
 
 ### Patch Changes

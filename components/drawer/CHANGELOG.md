@@ -1,5 +1,12 @@
 # @utrecht/drawer-css
 
+## 3.1.0
+
+### Minor Changes
+
+- a9cb3bf: Add a `utrecht-drawer__header-actions` class to align a Drawer close button to the inline-end of the header. The Drawer is closed with the native `<dialog>` behaviour: a button in a `<form method="dialog">`, or `HTMLDialogElement.close()`.
+- a9cb3bf: Add `utrecht-drawer__header`, `utrecht-drawer__body` and `utrecht-drawer__footer` parts to the Drawer, with design tokens for their padding, the body `row-gap`, and the header/footer separator borders (`border-block-end` / `border-block-start`).
+
 ## 3.0.1
 
 ### Patch Changes

@@ -1,5 +1,28 @@
 # @utrecht/component-library-css
 
+## 9.0.14
+
+### Patch Changes
+
+- Updated dependencies [dbf713c]
+- Updated dependencies [2350235]
+- Updated dependencies [d2d0613]
+- Updated dependencies [9101272]
+- Updated dependencies [a9cb3bf]
+- Updated dependencies [a9cb3bf]
+- Updated dependencies [19157c9]
+- Updated dependencies [ba68e91]
+- Updated dependencies [19157c9]
+- Updated dependencies [ba68e91]
+  - @utrecht/accordion-css@4.1.0
+  - @utrecht/checkbox-css@3.1.0
+  - @utrecht/custom-checkbox-css@3.1.0
+  - @utrecht/drawer-css@3.1.0
+  - @utrecht/textarea-css@4.1.0
+  - @utrecht/textbox-css@4.1.0
+  - @utrecht/html-content-css@3.0.1
+  - @utrecht/customizable-text-input-css@1.0.0
+
 ## 9.0.13
 
 ### Patch Changes
