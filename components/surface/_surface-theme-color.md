@@ -13,9 +13,9 @@ To make the browser user interface match your websites surface background color,
 For projects that use JSX and React, the following code sample shows how to refer to the design token package to automatically use the most recent choice of color.
 
 ```jsx
-import { utrechtSurfaceBackgroundColor } from "@utrecht/design-tokens/dist/index.mjs";
+import { utrechtRootBackgroundColor } from "@utrecht/design-tokens/dist/index.mjs";
 
-export const ThemeColor = () => <meta name="theme-color" content={utrechtSurfaceBackgroundColor} />;
+export const ThemeColor = () => <meta name="theme-color" content={utrechtRootBackgroundColor} />;
 ```
 
 See for more information: [`theme-color` on MDN](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta/name/theme-color)
