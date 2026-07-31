@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "installCommand": "pnpm install --frozen-lockfile",
+  "buildCommand": "cd ../.. && pnpm run build",
+  "framework": null,
+  "outputDirectory": "dist",
+  "git": {
+    "deploymentEnabled": {
+      "dependabot/*": false,
+      "gh-pages": false
+    }
+  }
+}
