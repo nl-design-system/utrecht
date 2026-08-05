@@ -28,14 +28,12 @@
   transition-timing-function: ease-in-out;
 
   @media (prefers-reduced-motion: reduce) {
-    & {
-      @include utrecht-card--reduced-motion;
-    }
+    @include utrecht-card--reduced-motion;
   }
 }
 
 @mixin utrecht-card__arrow {
-  --utrecht-icon-size: 18px;
+  --utrecht-icon-size: var(--utrecht-card-arrow-font-size, 18px);
 
   align-self: end;
   padding-block-end: var(--utrecht-card-arrow-padding-block-end);
@@ -43,6 +41,7 @@
 }
 
 @mixin utrecht-card--has-link {
+  color: var(--utrecht-card-has-link-color);
   cursor: var(--utrecht-card-has-link-cursor, pointer);
   text-decoration-skip-ink: all;
 }
@@ -54,7 +53,7 @@
 }
 
 @mixin utrecht-card__heading {
-  --utrecht-heading-color: var(--utrecht-card-color);
+  --utrecht-heading-color: var(--utrecht-card-heading-color, var(--utrecht-card-color));
 
   order: 2;
   padding-inline-end: var(--utrecht-card-heading-padding-inline-end);
