@@ -25,5 +25,12 @@ module.exports = {
         singleQuote: false,
       },
     },
+    {
+      // match pnpm CLI-driven changes behavior
+      files: ['pnpm-workspace.yaml'],
+      options: {
+        singleQuote: true,
+      },
+    },
   ],
 };
