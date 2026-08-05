@@ -12,11 +12,11 @@ export const ExampleTokensJSON = ({ definition }) => {
     isPlainObject(item['$extensions']) || isPlainObject(item['$value'])
       ? {}
       : isPlainObject(item)
-      ? mapValues(
-          omitBy(item, (item) => isHiddenDesignToken(item)),
-          (item) => cloneDeepWith(item, filter),
-        )
-      : undefined;
+        ? mapValues(
+            omitBy(item, (item) => isHiddenDesignToken(item)),
+            (item) => cloneDeepWith(item, filter),
+          )
+        : undefined;
   const tokens = cloneDeepWith(definition, filter);
 
   const code = JSON.stringify(tokens, null, '  ');

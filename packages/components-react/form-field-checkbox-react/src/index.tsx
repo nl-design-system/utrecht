@@ -9,8 +9,10 @@ import clsx from 'clsx';
 import type { ForwardedRef, PropsWithChildren, ReactNode, Ref } from 'react';
 import { forwardRef, useId } from 'react';
 
-export interface FormFieldCheckboxProps
-  extends Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput' | 'type'> {
+export interface FormFieldCheckboxProps extends Omit<
+  FormFieldProps,
+  'onBlur' | 'onChange' | 'onFocus' | 'onInput' | 'type'
+> {
   inputInvalid?: CheckboxProps['invalid'];
   checked?: CheckboxProps['checked'];
   defaultChecked?: CheckboxProps['defaultChecked'];

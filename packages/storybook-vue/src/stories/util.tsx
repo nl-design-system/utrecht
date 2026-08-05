@@ -47,8 +47,8 @@ export const createStory = (meta, story) => {
   const code = meta.parameters?.docs?.source?.code
     ? templateSourceCode(meta.parameters.docs.source.code, story.args)
     : typeof render === 'function'
-    ? render(story.args).template
-    : undefined;
+      ? render(story.args).template
+      : undefined;
   console.log(code);
   return {
     ...story,

@@ -35,10 +35,10 @@ export const FloDecision = ({
     const basePath = globalThis.location.pathname.startsWith('/utrecht/storybook-css/')
       ? '/utrecht/storybook-css/'
       : globalThis.location.pathname.startsWith('/storybook-css/')
-      ? '/storybook-css/'
-      : globalThis.location.pathname.startsWith('/storybook-react/')
-      ? '/storybook-react/'
-      : undefined;
+        ? '/storybook-css/'
+        : globalThis.location.pathname.startsWith('/storybook-react/')
+          ? '/storybook-react/'
+          : undefined;
     loadFloClientScript(basePath).then(() => setReady(true));
   }, []);
 
