@@ -1,7 +1,7 @@
 /**
  * @type {import('prettier').Config}
  */
-module.exports = {
+export default {
   printWidth: 120,
   singleQuote: true,
   // Remove `trailingComma` after we switch to Prettier 3 where this is the default
