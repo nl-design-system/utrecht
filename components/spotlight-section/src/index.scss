@@ -6,22 +6,37 @@
 
 @use "./mixin" as *;
 
+/**
+ * @deprecated Use `utrecht-note` instead.
+ */
 .utrecht-spotlight-section {
   @include utrecht-spotlight-section;
 }
 
+/**
+ * @deprecated
+ */
 .utrecht-spotlight-section--info {
   @include utrecht-spotlight-section--info;
 }
 
+/**
+ * @deprecated
+ */
 .utrecht-spotlight-section--warning {
   @include utrecht-spotlight-section--warning;
 }
 
+/**
+ * @deprecated
+ */
 .utrecht-spotlight-section--error {
   @include utrecht-spotlight-section--error;
 }
 
+/**
+ * @deprecated
+ */
 .utrecht-spotlight-section--ok {
   @include utrecht-spotlight-section--ok;
 }

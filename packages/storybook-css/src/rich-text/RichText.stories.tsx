@@ -157,6 +157,11 @@ export const Link: Story = {
     component: 'utrecht-link',
   },
 };
+export const Note: Story = {
+  args: {
+    component: 'utrecht-note',
+  },
+};
 export const OrderedList: Story = {
   args: {
     component: 'utrecht-ordered-list',

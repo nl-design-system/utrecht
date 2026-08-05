@@ -7,6 +7,9 @@
 import { Component, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
+/**
+ * @deprecated Use `Note` instead
+ */
 @Component({
   tag: 'utrecht-spotlight-section',
   styleUrl: 'spotlight-section.scss',
