@@ -32,7 +32,9 @@ Er is een aantal verschillende soorten links in het Design System te vinden:
 We maken de volgende design beslissingen over links:
 
 - Links zijn onderstreept om een gebruiker snel en duidelijk te laten zien dat het een link is.
+
 <!--- Alle link componenten die in een nieuw tabje geopend kunnen worden hebben een onderstreping. Hoe zit dit dan met toptask en CTA-button?-->
+
 - Bij een hover krijgt een link in de tekst een dikkere onderstreping om duidelijk aan te geven dat de link onder de muisknop zit.
 - Bij een hover maken we het component groter als het component een border of een achtergrondkleur heeft zodat je visuele feedback hebt van je hover zonder dat je een onderstreping ziet. De accordion en de hoofdnavigatie zijn de uitzondering op deze regel, maar deze krijgen wel weer een onderstreping.
 - Bij een focus krijgt een component een gestippelde outline. Er is geen visuele feedback van de muis met een hover, dus op deze manier geven we aan dat dit component is geselecteerd.

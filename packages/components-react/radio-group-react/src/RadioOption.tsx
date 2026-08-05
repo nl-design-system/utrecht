@@ -7,7 +7,8 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, Ref, useId } from 'react';
 
 export interface RadioOptionProps
-  extends Omit<
+  extends
+    Omit<
       FormFieldProps,
       'defaultChecked' | 'defaultValue' | 'defaultValue' | 'invalid' | 'onBlur' | 'onChange' | 'onFocus' | 'onInput'
     >,
