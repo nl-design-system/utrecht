@@ -8,11 +8,13 @@ import clsx from 'clsx';
 import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } from 'react';
 
 export interface CheckboxOptionProps
-  extends Pick<CheckboxProps, 'defaultValue' | 'value'>,
+  extends
+    Pick<CheckboxProps, 'defaultValue' | 'value'>,
     Pick<FormFieldCheckboxProps, 'id' | 'label' | 'description' | 'errorMessage' | 'status'> {}
 
 export interface CheckboxGroupProps
-  extends Omit<FormFieldProps, 'type'>,
+  extends
+    Omit<FormFieldProps, 'type'>,
     Pick<CheckboxProps, 'disabled' | 'invalid' | 'inputRequired' | 'name' | 'required' | 'value'> {
   description?: ReactNode;
   errorMessage?: ReactNode;

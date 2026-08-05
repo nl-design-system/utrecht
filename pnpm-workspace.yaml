@@ -1,12 +1,12 @@
 # Edit this file by hand. Using `pnpm config` reformats the file and removes all comments.
 
 packages:
-  - "apps/**"
-  - "components/**"
-  - "documentation/"
-  - "packages/*"
-  - "packages/components-react/*"
-  - "proprietary/*"
+  - 'apps/**'
+  - 'components/**'
+  - 'documentation/'
+  - 'packages/*'
+  - 'packages/components-react/*'
+  - 'proprietary/*'
 
 # Configure pnpm so that it will not install any package that claims to not be compatible with the current Node.js
 # version.
@@ -19,35 +19,35 @@ minimumReleaseAge: 1440
 
 # Make an exception for trusted packages, notably our own
 minimumReleaseAgeExclude:
-  - "@amsterdam/*"
-  - "@gemeente-denhaag/*"
-  - "@gemeente-rotterdam/*"
-  - "@nl-design-system/*"
-  - "@nl-design-system-candidate/*"
-  - "@nl-design-system-community/*"
-  - "@nl-design-system-unstable/*"
-  - "@nl-rvo/*"
-  - "@rijkshuisstijl-community/*"
-  - "@utrecht/*"
+  - '@amsterdam/*'
+  - '@gemeente-denhaag/*'
+  - '@gemeente-rotterdam/*'
+  - '@nl-design-system/*'
+  - '@nl-design-system-candidate/*'
+  - '@nl-design-system-community/*'
+  - '@nl-design-system-unstable/*'
+  - '@nl-rvo/*'
+  - '@rijkshuisstijl-community/*'
+  - '@utrecht/*'
 
 overrides:
-  websocket-driver@<0.7.5: ">=0.7.5"
-  tar@<=7.5.18: ">=7.5.19"
-  form-data@>=4.0.0 <4.0.4: ">=4.0.4"
-  handlebars@>=4.6.0 <=4.7.8: ">=4.7.9"
-  axios@<1.15.0: ">=1.15.0"
-  shell-quote@<1.8.4: ">=1.8.4"
-  "@vitest/browser@>=4.0.0 <4.1.10": ">=4.1.10"
+  websocket-driver@<0.7.5: '>=0.7.5'
+  tar@<=7.5.18: '>=7.5.19'
+  form-data@>=4.0.0 <4.0.4: '>=4.0.4'
+  handlebars@>=4.6.0 <=4.7.8: '>=4.7.9'
+  axios@<1.15.0: '>=1.15.0'
+  shell-quote@<1.8.4: '>=1.8.4'
+  '@vitest/browser@>=4.0.0 <4.1.10': '>=4.1.10'
 
 packageExtensions:
-  "@vue/test-utils":
+  '@vue/test-utils':
     dependencies:
-      "@vue/server-renderer": "3.3.13" # fix build issue on Vercel
+      '@vue/server-renderer': '3.3.13' # fix build issue on Vercel
 
 # Configure pnpm to save exact version numbers (not including ^ or ~) in package.json. Lock dependencies to specific
 # versions to ensure reproducible installs and prevent automatic upgrades to newer minor or patch releases.
 saveExact: true
-savePrefix: ""
+savePrefix: ''
 
 # Configure pnpm to not fail when there are missing or invalid peer dependencies in the tree.
 strictPeerDependencies: false
@@ -56,10 +56,10 @@ strictPeerDependencies: false
 blockExoticSubdeps: false
 
 allowBuilds:
-  "@compodoc/compodoc": false
-  "@fortawesome/fontawesome-free": false
-  "@parcel/watcher": true
-  "@swc/core": true
+  '@compodoc/compodoc': false
+  '@fortawesome/fontawesome-free': false
+  '@parcel/watcher': true
+  '@swc/core': true
   core-js: false
   core-js-pure: false
   es5-ext: false
@@ -76,7 +76,7 @@ allowBuilds:
   sharp: true
 
 patchedDependencies:
-  "@stencil/core@4.18.3": patches/@stencil__core@4.18.3.patch
-  "@joshwooding/vite-plugin-react-docgen-typescript": patches/@joshwooding__vite-plugin-react-docgen-typescript.patch
+  '@stencil/core@4.18.3': patches/@stencil__core@4.18.3.patch
+  '@joshwooding/vite-plugin-react-docgen-typescript': patches/@joshwooding__vite-plugin-react-docgen-typescript.patch
 
 provenance: true
