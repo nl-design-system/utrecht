@@ -9,7 +9,8 @@ import { Textarea } from './Textarea';
 import type { TextareaProps } from './Textarea';
 
 export interface FormFieldTextareaProps
-  extends Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput'>,
+  extends
+    Omit<FormFieldProps, 'onBlur' | 'onChange' | 'onFocus' | 'onInput'>,
     Pick<
       TextareaProps,
       | 'autoComplete'

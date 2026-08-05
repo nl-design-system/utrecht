@@ -8,7 +8,8 @@ import { ForwardedRef, forwardRef, PropsWithChildren, ReactNode, Ref, useId } fr
 import { RadioOption } from './RadioOption';
 
 export interface RadioGroupOptionProps
-  extends Pick<
+  extends
+    Pick<
       RadioButtonProps,
       | 'defaultValue'
       | 'value'
@@ -25,7 +26,8 @@ export interface RadioGroupOptionProps
   inputRef?: Ref<HTMLInputElement>;
 }
 export interface RadioGroupProps
-  extends Omit<FormFieldProps, 'type' | 'invalid'>,
+  extends
+    Omit<FormFieldProps, 'type' | 'invalid'>,
     Pick<RadioButtonProps, 'disabled' | 'invalid' | 'name' | 'required' | 'value'> {
   description?: ReactNode;
   errorMessage?: ReactNode;

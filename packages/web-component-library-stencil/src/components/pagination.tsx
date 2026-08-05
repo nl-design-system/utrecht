@@ -82,8 +82,8 @@ export class Pagination {
                     ? index === currentIndex + 1
                       ? 'next'
                       : index === currentIndex - 1
-                      ? 'prev'
-                      : null
+                        ? 'prev'
+                        : null
                     : null,
                 textContent: link.index || index,
                 ...link,

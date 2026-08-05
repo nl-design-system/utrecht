@@ -9,7 +9,8 @@ import { Textbox, TextboxProps } from './Textbox';
 import { TextboxTypes } from './Textbox';
 
 export interface FormFieldTextboxProps
-  extends Omit<FormFieldProps, 'type'>,
+  extends
+    Omit<FormFieldProps, 'type'>,
     Pick<
       TextboxProps,
       | 'autoComplete'

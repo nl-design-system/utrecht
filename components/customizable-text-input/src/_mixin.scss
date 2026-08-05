@@ -19,8 +19,9 @@
   cursor: text;
   display: flex;
   min-block-size: calc(
-    var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) -
-      var(--_utrecht-textbox-border-block-end-width)
+    var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) - var(
+        --_utrecht-textbox-border-block-end-width
+      )
   );
 
   /* States */

@@ -235,8 +235,7 @@ export const useAccordionSection = (
 };
 
 export interface AccordionProviderProps
-  extends Pick<AccordionProps, 'heading' | 'headingLevel'>,
-    Pick<AccordionSectionProps, 'icon'> {
+  extends Pick<AccordionProps, 'heading' | 'headingLevel'>, Pick<AccordionSectionProps, 'icon'> {
   sections: AccordionSectionProps[];
 }
 
