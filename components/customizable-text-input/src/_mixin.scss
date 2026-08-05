@@ -19,8 +19,9 @@
   cursor: text;
   display: flex;
   min-block-size: calc(
-    var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) -
-      var(--_utrecht-textbox-border-block-end-width)
+    var(--utrecht-pointer-target-min-size, 44px) - var(--_utrecht-textbox-border-width) - var(
+        --_utrecht-textbox-border-block-end-width
+      )
   );
 
   /* States */
@@ -90,13 +91,13 @@
 
   &,
   &:is(
-      :hover,
-      :focus,
-      :focus-visible,
-      .utrecht-textbox--focus-visible,
-      .utrecht-textbox--invalid,
-      .utrecht-textbox--disabled
-    ) {
+    :hover,
+    :focus,
+    :focus-visible,
+    .utrecht-textbox--focus-visible,
+    .utrecht-textbox--invalid,
+    .utrecht-textbox--disabled
+  ) {
     background-color: transparent;
     border-width: 0;
     box-shadow: none;
