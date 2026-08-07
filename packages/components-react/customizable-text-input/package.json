@@ -5,14 +5,14 @@
   "keywords": [
     "nl-design-system"
   ],
-  "homepage": "https://github.com/nl-design-system/utrecht/tree/main/packages/components-react/customizable-text-input-react#readme",
+  "homepage": "https://github.com/nl-design-system/utrecht/tree/main/packages/components-react/customizable-text-input#readme",
   "bugs": {
     "url": "https://github.com/nl-design-system/utrecht/issues"
   },
   "repository": {
     "type": "git+ssh",
     "url": "git+https://github.com/nl-design-system/utrecht.git",
-    "directory": "packages/components-react/customizable-text-input-react"
+    "directory": "packages/components-react/customizable-text-input"
   },
   "license": "EUPL-1.2",
   "author": "Community for NL Design System",
@@ -27,6 +27,7 @@
       "import": "./dist/css.mjs"
     },
     "./CHANGELOG.md": "./CHANGELOG.md",
+    "./src/*": "./src/*",
     "./dist": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.mjs"
@@ -60,8 +61,8 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@utrecht/textbox-css": "workspace:*",
     "@utrecht/customizable-text-input-css": "workspace:*",
+    "@utrecht/textbox-css": "workspace:*",
     "@utrecht/textbox-react": "workspace:*",
     "clsx": "2.1.1"
   },

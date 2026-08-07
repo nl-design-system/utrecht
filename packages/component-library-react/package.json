@@ -35,7 +35,6 @@
       "types": "./dist/css-module/Calendar.d.ts",
       "import": "./dist/css-module/Calendar.mjs"
     },
-    "./dist/.jest-test-results.json": "./dist/.jest-test-results.json",
     "./tsconfig.md": "./tsconfig.md",
     "./TESTING.md": "./TESTING.md",
     "./SEMVER.md": "./SEMVER.md",
@@ -43,6 +42,7 @@
     "./README.md": "./README.md",
     "./CONTRIBUTING.md": "./CONTRIBUTING.md",
     "./CHANGELOG.md": "./CHANGELOG.md",
+    "./dist/.jest-test-results.json": "./dist/.jest-test-results.json",
     "./src/*": "./src/*",
     "./dist": {
       "types": "./dist/index.d.ts",
