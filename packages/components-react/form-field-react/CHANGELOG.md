@@ -1,5 +1,15 @@
 # @utrecht/form-field-react
 
+## 2.0.0
+
+### Major Changes
+
+- 3973396: Render `FormField` error message before the input, instead of after.
+
+### Minor Changes
+
+- 3973396: Add `status` slot to `FormField` component.
+
 ## 1.0.13
 
 ### Patch Changes

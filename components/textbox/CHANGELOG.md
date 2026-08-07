@@ -1,5 +1,12 @@
 # @utrecht/textbox-css
 
+## 4.1.0
+
+### Minor Changes
+
+- ba68e91: Add `utrecht-textbox--hover` class name and mixin.
+- ba68e91: Add `utrecht.textbox.hover.background-color`, `utrecht.textbox.hover.border-color` and `utrecht.textbox.hover.color` design tokens and apply them on the Textbox `:hover` state, as requested in #2716 for all form controls. The tokens are empty by default and fall back to the existing Textbox and Form Control tokens, so the default appearance is unchanged. Disabled and read-only states keep precedence over hover.
+
 ## 4.0.1
 
 ### Patch Changes

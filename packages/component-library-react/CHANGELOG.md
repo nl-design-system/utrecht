@@ -1,5 +1,44 @@
 # @utrecht/component-library-react
 
+## 15.0.0
+
+### Major Changes
+
+- 3973396: Render `FormField` error message before the input, instead of after.
+
+### Minor Changes
+
+- f5d315b: Add `inputId` prop to `FormFieldTextbox` and `FormFieldTextarea` to set the `id` of the form control, so other elements can reference the input, for example links in an error summary.
+- 3973396: Add `status` slot to `FormField` component.
+
+### Patch Changes
+
+- 1cd7ee3: `SpotlightSection` is now deprecated, use `Note` instead, available in `@utrecht/note-react`.
+- Updated dependencies [dbf713c]
+- Updated dependencies [2350235]
+- Updated dependencies [d2d0613]
+- Updated dependencies [9101272]
+- Updated dependencies [a9cb3bf]
+- Updated dependencies [a9cb3bf]
+- Updated dependencies [1cd7ee3]
+- Updated dependencies [3973396]
+- Updated dependencies [19157c9]
+- Updated dependencies [ba68e91]
+- Updated dependencies [3973396]
+- Updated dependencies [19157c9]
+  - @utrecht/accordion-css@4.1.0
+  - @utrecht/custom-checkbox-css@3.1.0
+  - @utrecht/drawer-css@3.1.0
+  - @utrecht/spotlight-section-css@3.0.3
+  - @utrecht/form-field-react@2.0.0
+  - @utrecht/textarea-css@4.1.0
+  - @utrecht/textbox-react@1.1.0
+  - @utrecht/html-content-css@3.0.1
+  - @utrecht/checkbox-react@1.0.15
+  - @utrecht/form-field-checkbox-react@1.1.7
+  - @utrecht/open-forms-container-css@3.0.2
+  - @utrecht/open-forms-container-react@1.0.11
+
 ## 14.0.2
 
 ### Patch Changes
