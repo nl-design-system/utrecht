@@ -1,5 +1,11 @@
 # @utrecht/spotlight-section-css
 
+## 3.0.3
+
+### Patch Changes
+
+- 1cd7ee3: `utrecht-spotlight-section` is deprecated, use `utrecht-note` instead, available in the following npm package: `@utrecht/note-css`.
+
 ## 3.0.2
 
 ### Patch Changes

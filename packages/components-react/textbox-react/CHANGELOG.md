@@ -1,5 +1,17 @@
 # @utrecht/textbox-react
 
+## 1.1.0
+
+### Minor Changes
+
+- ba68e91: Add `utrecht-textbox--hover` class name and mixin.
+
+### Patch Changes
+
+- Updated dependencies [ba68e91]
+- Updated dependencies [ba68e91]
+  - @utrecht/textbox-css@4.1.0
+
 ## 1.0.16
 
 ### Patch Changes
