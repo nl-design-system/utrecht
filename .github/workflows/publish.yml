@@ -5,6 +5,13 @@ on:
     branches:
       - main
   pull_request:
+    types:
+      - opened
+      - synchronize
+      - reopened
+      # opened, synchronize, reopened are default; ready_for_review is needed to
+      # run steps that are skipped in draft PRs.
+      - ready_for_review
 
 env:
   CI: true
