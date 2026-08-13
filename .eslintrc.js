@@ -22,7 +22,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['scripts/*.mjs'],
+      files: ['watch-component.mjs'],
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: 'module',

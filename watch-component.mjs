@@ -8,7 +8,7 @@ import { readdir, readFile, access } from 'node:fs/promises';
 import { fileURLToPath } from 'url';
 import path from 'path';
 
-const ROOT = path.dirname(path.dirname(fileURLToPath(import.meta.url)));
+const ROOT = path.dirname(fileURLToPath(import.meta.url));
 
 const exists = (p) =>
   access(p).then(
