@@ -53,11 +53,43 @@ const config: StorybookConfig = {
             return null;
           },
         },
+        {
+          // The formio-renderer Map component statically imports leaflet and uses
+          // react-intl's `injectIntl` (removed in v6+), which breaks the build.
+          // Intercept the map directory entirely so none of its deps are resolved.
+          // Remove this plugin if Map field support is ever needed in Storybook.
+          name: 'stub-formio-map',
+          enforce: 'pre',
+          load(id) {
+            if (id.includes('/formio-renderer/dist/components/map/')) {
+              return 'export default () => null; export const LeafletMap = () => null;';
+            }
+            return null;
+          },
+        },
       ],
       resolve: {
         alias: {
           '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
           path: require.resolve('path-browserify'),
+        },
+      },
+      optimizeDeps: {
+        esbuildOptions: {
+          plugins: [
+            {
+              // Stub the formio-renderer Map component during esbuild pre-bundling.
+              // LeafletMapLocationControl imports react-intl's `injectIntl` which was
+              // removed in v6+, causing a build error. We don't use the Map field.
+              name: 'stub-formio-map-esbuild',
+              setup(build: { onLoad: Function }) {
+                build.onLoad({ filter: /formio-renderer\/dist\/components\/map\// }, () => ({
+                  contents: 'export default () => null;',
+                  loader: 'js',
+                }));
+              },
+            },
+          ],
         },
       },
       assetsInclude: ['**/*.md'],
