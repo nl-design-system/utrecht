@@ -8,14 +8,12 @@
         "$value": "{utrecht.color.black}"
       },
       "hover": {
-        "scale": { "$value": "1" }
+        "scale": { "$value": "1" },
+        "text-decoration-thickness": { "$value": "2px" }
       },
       "transition-duration": { "$value": "150ms" },
       "active": {
         "scale": { "$value": "1" }
-      },
-      "text-decoration-thickness": {
-        "$value": "2px"
       },
       "border-radius": {},
       "box-shadow": {},
@@ -107,6 +105,7 @@
           }
         },
         "background-color": { "$value": "{utrecht.color.white}" },
+        "color": { "$value": "{utrecht.color.black}" },
         "border-color": { "$value": "{utrecht.color.grey.80}" },
         "border-width": { "$value": "1px" }
       }
