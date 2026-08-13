@@ -261,7 +261,6 @@ const FormioRendererStory = () => (
       <FormioForm
         components={FORM_COMPONENTS as any}
         onSubmit={async (values) => {
-          // eslint-disable-next-line no-console
           console.log('Form submitted:', values);
         }}
       >
