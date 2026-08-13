@@ -80,8 +80,12 @@
   @include utrecht-card--focus;
 }
 
-.utrecht-card:focus-visible {
-  @include utrecht-card--focus-visible;
+.utrecht-card__link:is(.utrecht-link):focus-visible {
+  @include utrecht-card__link--focus-visible;
+}
+
+.utrecht-card__link:is(.utrecht-link):focus-visible::after {
+  @include utrecht-card__link--focus-visible-after;
 }
 
 .utrecht-card--hover,
