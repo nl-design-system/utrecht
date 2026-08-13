@@ -90,11 +90,8 @@ export const Card = forwardRef(
     const linkId = useId();
     const linkProps = href
       ? {
-          tabIndex: 0,
-          role: 'link',
           onClick: onCardClickHandler,
           onKeyDown: onCardKeyDownHandler,
-          'aria-labelledby': linkId,
         }
       : {};
 
