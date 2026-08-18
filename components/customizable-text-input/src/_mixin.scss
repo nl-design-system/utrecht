@@ -89,11 +89,14 @@
   ); /* [1] */
 
   &,
-  &:focus,
-  &:focus-visible,
-  &.utrecht-textbox--focus-visible,
-  &.utrecht-textbox--invalid,
-  &.utrecht-textbox--disabled {
+  &:is(
+      :hover,
+      :focus,
+      :focus-visible,
+      .utrecht-textbox--focus-visible,
+      .utrecht-textbox--invalid,
+      .utrecht-textbox--disabled
+    ) {
     background-color: transparent;
     border-width: 0;
     box-shadow: none;
