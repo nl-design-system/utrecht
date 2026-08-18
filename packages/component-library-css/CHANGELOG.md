@@ -1,5 +1,12 @@
 # @utrecht/component-library-css
 
+## 9.0.15
+
+### Patch Changes
+
+- Updated dependencies [6f9254c]
+  - @utrecht/customizable-text-input-css@1.0.1
+
 ## 9.0.14
 
 ### Patch Changes

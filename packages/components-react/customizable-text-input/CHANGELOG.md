@@ -1,5 +1,12 @@
 # @utrecht/customizable-text-input
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies [6f9254c]
+  - @utrecht/customizable-text-input-css@1.0.1
+
 ## 1.0.2
 
 ### Patch Changes
