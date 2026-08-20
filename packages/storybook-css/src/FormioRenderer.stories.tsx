@@ -11,6 +11,11 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { OpenFormsContainer } from '@utrecht/open-forms-container-react';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
+import '@open-formulieren/formio-renderer/formio-renderer.css';
+// Font Awesome is a peer dependency of @open-formulieren/formio-renderer
+import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
+import '@fortawesome/fontawesome-free/css/regular.min.css';
+import '@fortawesome/fontawesome-free/css/solid.min.css';
 
 // All common field types, grouped by category. Complex fields (map, file, signature,
 // cosign, NP-specific) are intentionally excluded — they require backend integration.
@@ -255,27 +260,10 @@ const FORM_COMPONENTS = [
   },
 ] as const;
 
-const FormioRendererStory = () => (
-  <IntlProvider locale="nl" messages={{}}>
-    <OpenFormsContainer>
-      <FormioForm
-        components={FORM_COMPONENTS as any}
-        onSubmit={async (values) => {
-          console.log('Form submitted:', values);
-        }}
-      >
-        <button type="submit" className="utrecht-button utrecht-button--primary-action">
-          Verzenden
-        </button>
-      </FormioForm>
-    </OpenFormsContainer>
-  </IntlProvider>
-);
-
 const meta = {
   title: 'CSS Component/Open Forms Container',
   id: 'css-open-forms-container',
-  component: FormioRendererStory,
+  component: OpenFormsContainer,
   parameters: {
     status: {
       type: 'WORK IN PROGRESS',
@@ -287,17 +275,33 @@ Toont alle veldtypen van de [formio-renderer](https://www.npmjs.com/package/@ope
 gewrapped in de \`OpenFormsContainer\`. Gebruik dit als testomgeving voor design tokens
 die via de open-forms-container-parent van invloed zijn op formuliervelden.
 
-Complexe velden (kaart, bestand, handtekening, cosign) zijn niet opgenomen — deze
+Complexe velden (kaart, bestand, handtekening, cosign) zijn niet opgenomen. Deze
 vereisen backend-integratie.
         `,
       },
     },
   },
-} satisfies Meta<typeof FormioRendererStory>;
+} satisfies Meta<typeof OpenFormsContainer>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const AllFieldTypes: Story = {
   name: 'All field types',
+  render: () => (
+    <IntlProvider locale="nl" messages={{}}>
+      <OpenFormsContainer>
+        <FormioForm
+          components={FORM_COMPONENTS as any}
+          onSubmit={async (values) => {
+            console.log('Form submitted:', values);
+          }}
+        >
+          <button type="submit" className="utrecht-button utrecht-button--primary-action">
+            Verzenden
+          </button>
+        </FormioForm>
+      </OpenFormsContainer>
+    </IntlProvider>
+  ),
 };
