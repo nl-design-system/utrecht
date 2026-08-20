@@ -26,11 +26,6 @@ import '@nl-design-system-unstable/rotterdam-design-tokens/dist/index.css';
 import '@gemeente-denhaag/design-tokens-components/dist/theme/index.css';
 import '@utrecht/design-tokens/src/background-image-icon.scss';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
-import '@open-formulieren/formio-renderer/formio-renderer.css';
-// Font Awesome is a peer dependency of @open-formulieren/formio-renderer
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import '@fortawesome/fontawesome-free/css/regular.min.css';
-import '@fortawesome/fontawesome-free/css/solid.min.css';
 import { NlDesignSystemBlock } from './NlDesignSystemBlock';
 
 defineCustomElements();
