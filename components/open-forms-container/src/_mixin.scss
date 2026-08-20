@@ -1,6 +1,18 @@
 @use "~@utrecht/textbox-css/src/mixin" as *;
 
 @mixin utrecht-open-forms-container {
+  --utrecht-icon-inset-block-start: 3px;
+  --utrecht-icon-size: 26px;
+
+  /* stylelint-disable custom-property-pattern -- these names are dictated by
+   * @open-formulieren/formio-renderer's compiled CSS (var(--of-...)), not this
+   * repo's naming convention. Renaming them would break the interop. */
+  --of-utrecht-form-field-label-tooltip-align-items: baseline;
+  --of-tooltip-background-color: var(--utrecht-color-black);
+  --of-tooltip-color: var(--utrecht-color-white);
+  --of-tooltip-border-radius: 3px;
+  /* stylelint-enable custom-property-pattern */
+
   .utrecht-textbox[name="data[voorletterSPZD]"],
   .utrecht-textbox[name="data[voorletterSPMD]"],
   .utrecht-textbox[name="data[voorletterSMEH]"],
