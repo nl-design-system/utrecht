@@ -116,6 +116,9 @@ export const FocusVisible: Story = {
 };
 
 export const Active: Story = {
+  args: {
+    className: 'utrecht-search-bar--active',
+  },
   parameters: {
     pseudo: { active: true },
   },

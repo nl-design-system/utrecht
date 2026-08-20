@@ -10,7 +10,17 @@
   @include utrecht-search-bar;
 }
 
+.utrecht-search-bar:has(.utrecht-search-bar__input:focus) {
+  @include utrecht-search-bar--active;
+}
+
+.utrecht-search-bar:has(.utrecht-search-bar__button:active),
+.utrecht-search-bar--active {
+  @include utrecht-search-bar--active;
+}
+
 .utrecht-search-bar:not(.utrecht-search-bar--manual-focus-visible):has(:focus-visible),
+.utrecht-search-bar.utrecht-search-bar--focus-visible:has(:focus),
 .utrecht-search-bar--focus-visible {
   @include utrecht-search-bar--focus-visible;
 }

@@ -42,6 +42,8 @@ search-bar, textbox en button styling.
   maar de semantiek van form control en submit button blijft behouden.
 - De focus visible styling wordt alleen getoond bij toetsenbordnavigatie. Pointer- en touch-interactie zetten de
   focus-ring niet aan.
+- Bij focus visible krijgt de button de gele focus highlight. De borders van het zoekveld en de button mogen de actieve
+  rode borderkleur gebruiken, zodat het component nog steeds als één geheel leest.
 - De focus-ring staat op de hele search bar. De afzonderlijke input, button, label en icoon krijgen geen eigen outline,
   zodat de focus niet dubbel of rommelig oogt.
 - De button gebruikt het zoekicoon vóór het label. Als het custom element `utrecht-icon-search` nog niet geladen is,
@@ -59,7 +61,9 @@ bestaande button en textbox tokens.
 Belangrijke tokens:
 
 - `--utrecht-search-bar-input-border-width`: border van het zoekveld, nu 2px.
+- `--utrecht-search-bar-input-active-border-color`: borderkleur van het zoekveld wanneer de search bar active is.
 - `--utrecht-search-bar-input-focus-border-color`: borderkleur van het zoekveld wanneer de search bar focus visible is.
+- `--utrecht-search-bar-input-padding-inline-start`: linker padding van het zoekveld, nu 8px.
 - `--utrecht-search-bar-input-large-inline-size`: breedte van het input veld op large viewport, nu 300px.
 - `--utrecht-search-bar-button-column-gap`: ruimte tussen icoon en label, nu 8px.
 - `--utrecht-search-bar-button-icon-size`: grootte van het zoekicoon, nu 24px.

@@ -50,7 +50,15 @@
     --utrecht-search-bar-button-focus-background-color,
     var(--utrecht-search-bar-button-background-color)
   );
+  --utrecht-button-primary-action-active-background-color: var(
+    --utrecht-search-bar-button-focus-background-color,
+    var(--utrecht-search-bar-button-background-color)
+  );
   --utrecht-button-primary-action-border-color: var(
+    --utrecht-search-bar-button-focus-border-color,
+    var(--utrecht-search-bar-button-border-color)
+  );
+  --utrecht-button-primary-action-active-border-color: var(
     --utrecht-search-bar-button-focus-border-color,
     var(--utrecht-search-bar-button-border-color)
   );
@@ -58,12 +66,43 @@
     --utrecht-search-bar-button-focus-color,
     var(--utrecht-search-bar-button-color)
   );
+  --utrecht-button-primary-action-active-color: var(
+    --utrecht-search-bar-button-focus-color,
+    var(--utrecht-search-bar-button-color)
+  );
   --utrecht-textbox-border-color: var(
-    --utrecht-search-bar-input-focus-border-color,
-    var(--utrecht-search-bar-input-border-color)
+    --utrecht-search-bar-input-active-border-color,
+    var(--utrecht-search-bar-input-focus-border-color, var(--utrecht-search-bar-input-border-color))
+  );
+  --utrecht-textbox-focus-border-color: var(
+    --utrecht-search-bar-input-active-border-color,
+    var(--utrecht-search-bar-input-focus-border-color, var(--utrecht-search-bar-input-border-color))
   );
 
   @include utrecht-focus-visible;
+}
+
+@mixin utrecht-search-bar--active {
+  --utrecht-button-primary-action-background-color: var(
+    --utrecht-search-bar-button-active-background-color,
+    var(--utrecht-search-bar-button-background-color)
+  );
+  --utrecht-button-primary-action-border-color: var(
+    --utrecht-search-bar-button-active-border-color,
+    var(--utrecht-search-bar-button-border-color)
+  );
+  --utrecht-button-primary-action-color: var(
+    --utrecht-search-bar-button-active-color,
+    var(--utrecht-search-bar-button-color)
+  );
+  --utrecht-textbox-border-color: var(
+    --utrecht-search-bar-input-active-border-color,
+    var(--utrecht-search-bar-button-active-border-color, var(--utrecht-search-bar-input-border-color))
+  );
+  --utrecht-textbox-focus-border-color: var(
+    --utrecht-search-bar-input-active-border-color,
+    var(--utrecht-search-bar-button-active-border-color, var(--utrecht-search-bar-input-focus-border-color))
+  );
 }
 
 @mixin utrecht-search-bar__input {
