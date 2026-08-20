@@ -108,6 +108,8 @@ export type { Heading6Props } from './Heading6';
 export { Heading6 } from './Heading6';
 export type { HeadingGroupProps } from './HeadingGroup';
 export { HeadingGroup } from './HeadingGroup';
+export type { HeaderSearchBarProps } from './HeaderSearchBar';
+export { HeaderSearchBar } from './HeaderSearchBar';
 export type { IBANDataProps } from './IBANData';
 export { IBANData } from './IBANData';
 export type { IconProps } from './Icon';

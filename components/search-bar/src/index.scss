@@ -10,8 +10,47 @@
   @include utrecht-search-bar;
 }
 
+.utrecht-search-bar:not(.utrecht-search-bar--manual-focus-visible):has(:focus-visible),
+.utrecht-search-bar--focus-visible {
+  @include utrecht-search-bar--focus-visible;
+}
+
 .utrecht-search-bar__input {
   @include utrecht-search-bar__input;
+  @include utrecht-search-bar__input--large-viewport;
+}
+
+.utrecht-search-bar__button {
+  @include utrecht-search-bar__button;
+}
+
+.utrecht-search-bar__button-icon {
+  @include utrecht-search-bar__button-icon;
+}
+
+.utrecht-search-bar__button-icon > utrecht-icon-search {
+  @include utrecht-search-bar__button-icon-symbol;
+}
+
+.utrecht-search-bar__button-icon svg {
+  @include utrecht-search-bar__button-icon-svg;
+}
+
+.utrecht-search-bar:not(.utrecht-search-bar--manual-focus-visible):has(:focus-visible)
+  .utrecht-search-bar__input:focus-visible,
+.utrecht-search-bar:not(.utrecht-search-bar--manual-focus-visible):has(:focus-visible)
+  .utrecht-search-bar__button:focus-visible,
+.utrecht-search-bar--manual-focus-visible .utrecht-search-bar__input:focus-visible,
+.utrecht-search-bar--manual-focus-visible .utrecht-search-bar__button:focus-visible,
+.utrecht-search-bar--focus-visible .utrecht-search-bar__input,
+.utrecht-search-bar--focus-visible .utrecht-search-bar__button {
+  @include utrecht-search-bar__control--focus-visible;
+}
+
+.utrecht-search-bar:not(.utrecht-search-bar--manual-focus-visible):has(:focus-visible) .utrecht-search-bar__button *,
+.utrecht-search-bar--manual-focus-visible .utrecht-search-bar__button:focus-visible *,
+.utrecht-search-bar--focus-visible .utrecht-search-bar__button * {
+  @include utrecht-search-bar__button-content--focus-visible;
 }
 
 .utrecht-search-bar__dropdown {

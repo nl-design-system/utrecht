@@ -6,21 +6,49 @@
         "background-position-y": { "$value": "50%" },
         "background-size": { "$value": "1em" },
         "border-color": { "$value": "{utrecht.color.red.40}" },
+        "border-width": { "$value": "{utrecht.border-width.md}" },
+        "focus": {
+          "border-color": { "$value": "hsl(0 100% 25%)" }
+        },
+        "inline-size": {},
+        "large": {
+          "inline-size": { "$value": "300px" }
+        },
         "padding-inline-start": { "$value": "{utrecht.space.inline.3xl}" },
         "border-bottom-width": {},
         "max-inline-size": {},
         "background-image": {}
       },
       "button": {
-        "background-color": { "$value": "{utrecht.color.red.40}" },
-        "border-color": { "$value": "{utrecht.color.red.40}" },
+        "active": {
+          "background-color": { "$value": "hsl(0 100% 25%)" },
+          "border-color": { "$value": "hsl(0 100% 25%)" },
+          "color": { "$value": "{utrecht.color.white}" }
+        },
+        "background-color": { "$value": "hsl(0 100% 40%)" },
+        "border-color": { "$value": "hsl(0 100% 40%)" },
+        "border-end-end-radius": { "$value": "5px" },
+        "border-start-end-radius": { "$value": "5px" },
+        "column-gap": { "$value": "{utrecht.space.inline.xs}" },
         "color": { "$value": "{utrecht.color.white}" },
         "font-size": { "$value": "{utrecht.typography.scale.sm.font-size}" },
         "font-weight": { "$value": "{utrecht.typography.weight-scale.bold.font-weight}" },
+        "icon": {
+          "size": { "$value": "24px" }
+        },
+        "focus": {
+          "background-color": { "$value": "{utrecht.focus.background-color}" },
+          "border-color": { "$value": "hsl(0 100% 25%)" },
+          "color": { "$value": "{utrecht.color.black}" }
+        },
         "hover": {
-          "background-color": { "$value": "hsl(359 65% 58%)" },
+          "background-color": { "$value": "hsl(0 100% 31%)" },
+          "border-color": { "$value": "hsl(0 100% 31%)" },
+          "color": { "$value": "{utrecht.color.white}" },
           "scale": { "$value": "1" }
-        }
+        },
+        "padding-inline-end": { "$value": "{utrecht.space.inline.xl}" },
+        "padding-inline-start": { "$value": "{utrecht.space.inline.xl}" }
       },
       "dropdown": {
         "inline-size": {},
