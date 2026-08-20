@@ -1,9 +1,9 @@
 /* @license CC0-1.0 */
 
 /**
- * Formio Renderer story — wraps @open-formulieren/formio-renderer in the
- * OpenFormsContainer component. Use this story to test design tokens that affect
- * Open Forms fields via the open-forms-container parent.
+ * Voorbeelden — example full-form demos for the two Open Formulieren rendering
+ * stacks used in this project: the classic `react-formio` renderer and the newer
+ * `@open-formulieren/formio-renderer`.
  */
 
 import { FormioForm } from '@open-formulieren/formio-renderer';
@@ -16,6 +16,7 @@ import '@open-formulieren/formio-renderer/formio-renderer.css';
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import '@fortawesome/fontawesome-free/css/regular.min.css';
 import '@fortawesome/fontawesome-free/css/solid.min.css';
+import { MultipleFormioComponents } from './StoryUtil.js';
 
 // All common field types, grouped by category. Complex fields (map, file, signature,
 // cosign, NP-specific) are intentionally excluded — they require backend integration.
@@ -261,9 +262,18 @@ const FORM_COMPONENTS = [
 ] as const;
 
 const meta = {
-  title: 'CSS Component/Open Forms Container',
-  id: 'css-open-forms-container',
-  component: OpenFormsContainer,
+  id: 'open-forms-voorbeelden',
+  title: 'Open Formulieren/Voorbeelden',
+  component: MultipleFormioComponents,
+  args: {
+    components: [
+      {
+        type: '',
+        key: '',
+        label: '',
+      },
+    ],
+  },
   parameters: {
     status: {
       type: 'WORK IN PROGRESS',
@@ -271,23 +281,23 @@ const meta = {
     docs: {
       description: {
         component: `
-Toont alle veldtypen van de [formio-renderer](https://www.npmjs.com/package/@open-formulieren/formio-renderer),
-gewrapped in de \`OpenFormsContainer\`. Gebruik dit als testomgeving voor design tokens
-die via de open-forms-container-parent van invloed zijn op formuliervelden.
+Voorbeeldformulieren voor de twee renderers die dit project ondersteunt: de klassieke
+\`react-formio\` en de nieuwere
+[formio-renderer](https://www.npmjs.com/package/@open-formulieren/formio-renderer).
 
-Complexe velden (kaart, bestand, handtekening, cosign) zijn niet opgenomen. Deze
-vereisen backend-integratie.
+Complexe velden (kaart, bestand, handtekening, cosign) zijn niet opgenomen. Deze vereisen
+backend-integratie.
         `,
       },
     },
   },
-} satisfies Meta<typeof OpenFormsContainer>;
+} satisfies Meta<typeof MultipleFormioComponents>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const AllFieldTypes: Story = {
-  name: 'All field types',
+export const FormioRenderer: Story = {
+  name: 'formio-renderer',
   render: () => (
     <IntlProvider locale="nl" messages={{}}>
       <OpenFormsContainer>
@@ -304,4 +314,72 @@ export const AllFieldTypes: Story = {
       </OpenFormsContainer>
     </IntlProvider>
   ),
+};
+
+export const ReactFormio: Story = {
+  name: 'react-formio',
+  args: {
+    components: [
+      {
+        type: 'textfield',
+        key: 'textfield',
+        label: 'Required text field',
+        description: 'Text field description',
+        validate: {
+          required: true,
+          pattern: '^\\d+',
+        },
+      },
+      {
+        type: 'radio',
+        key: 'radio',
+        label: 'Required radio',
+        validate: {
+          required: true,
+        },
+        values: [
+          { value: 'a', label: 'Option A' },
+          { value: 'b', label: 'Option B' },
+        ],
+      },
+      {
+        type: 'content',
+        key: 'content',
+        label: 'Content',
+        html: '<p>Some WYSIWYG content</p>',
+        customClass: 'info',
+      },
+      {
+        type: 'fieldset',
+        key: 'fieldset',
+        label: 'Fieldset label',
+        hideHeader: true,
+        components: [
+          {
+            type: 'checkbox',
+            key: 'checkbox',
+            label: 'Checkbox',
+          },
+          {
+            type: 'textfield',
+            key: 'nestedTextfield',
+            label: 'Nested text field',
+          },
+        ],
+      },
+      {
+        type: 'textfield',
+        key: 'hiddenTextfield',
+        label: 'Hidden text field',
+        hidden: true,
+      },
+      {
+        label: 'Submit',
+        showValidations: false,
+        key: 'submit1',
+        type: 'button',
+        input: true,
+      },
+    ],
+  },
 };
