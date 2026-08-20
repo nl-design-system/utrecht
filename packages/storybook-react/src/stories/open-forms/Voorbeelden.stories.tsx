@@ -8,7 +8,7 @@
 
 import { FormioForm } from '@open-formulieren/formio-renderer';
 import type { Meta, StoryObj } from '@storybook/react-vite';
-import { OpenFormsContainer } from '@utrecht/open-forms-container-react';
+import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import '@open-formulieren/formio-renderer/formio-renderer.css';
