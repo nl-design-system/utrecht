@@ -61,6 +61,11 @@ const config: StorybookConfig = {
         },
       },
       assetsInclude: ['**/*.md'],
+      optimizeDeps: {
+        // Workspace packages are symlinked, so Vite can watch their real dist files.
+        // Excluding them from pre-bundling prevents Vite from caching stale builds.
+        exclude: ['@utrecht/card-css', '@utrecht/card-react', '@utrecht/design-tokens'],
+      },
       css: {
         preprocessorOptions: {
           scss: {
