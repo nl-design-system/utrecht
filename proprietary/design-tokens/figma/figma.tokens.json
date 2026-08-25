@@ -8623,7 +8623,7 @@
       "grid": {
         "column-count": {
           "$type": "number",
-          "$value": 12
+          "$value": "12"
         },
         "column-gap": {
           "$type": "dimension",
@@ -8664,7 +8664,7 @@
         "vi-medium": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -8674,7 +8674,7 @@
         "vi-wide": {
           "column-count": {
             "$type": "number",
-            "$value": 12
+            "$value": "12"
           },
           "padding-inline": {
             "$type": "dimension",
@@ -10357,7 +10357,7 @@
   },
   "components/note": {
     "utrecht": {
-      "spotlight-section": {
+      "note": {
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.default.bg-default}"
@@ -10476,6 +10476,12 @@
             }
           }
         },
+        "spotlight-section": {
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.md}"
+          }
+        },
         "warning": {
           "border-width": {
             "$type": "dimension",
@@ -10499,14 +10505,6 @@
               "$value": "{basis.color.warning.color-default}"
             }
           }
-        }
-      }
-    },
-    "todo": {
-      "spotlight-section": {
-        "row-gap": {
-          "$type": "dimension",
-          "$value": "{basis.space.row.md}"
         }
       }
     }
