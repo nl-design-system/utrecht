@@ -16,6 +16,8 @@
     "clean": "rimraf dist"
   },
   "devDependencies": {
+    "@utrecht/focus-ring-css": "workspace:*",
+    "@utrecht/link-css": "workspace:*",
     "@utrecht/build-utils-css": "workspace:*"
   },
   "keywords": [
