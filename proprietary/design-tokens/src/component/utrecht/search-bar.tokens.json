@@ -13,9 +13,9 @@
         "focus": {
           "border-color": { "$value": "hsl(0 100% 25%)" }
         },
-        "inline-size": {},
-        "large": {
-          "inline-size": { "$value": "300px" }
+        "inline-size": { "$value": "300px" },
+        "small": {
+          "inline-size": { "$value": "200px" }
         },
         "padding-inline-start": { "$value": "{utrecht.space.inline.xs}" },
         "border-bottom-width": {},

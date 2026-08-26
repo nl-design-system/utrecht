@@ -48,6 +48,8 @@ search-bar, textbox en button styling.
   zodat de focus niet dubbel of rommelig oogt.
 - De button gebruikt het zoekicoon vóór het label. Als het custom element `utrecht-icon-search` nog niet geladen is,
   blijft er een SVG fallback beschikbaar.
+- Het browser-eigen clear knopje van `type="search"` wordt verborgen. Het veld behoudt de search semantiek, maar
+  voorkomt dat een bezoeker de zoekterm per ongeluk wist.
 - De component gebruikt geen Figma-generated code. Het ontwerp is vertaald naar bestaande componenten, BEM class names en
   design tokens.
 - De Storybook stories tonen de states die voor dit header patroon relevant zijn: default, value, hover, focus visible,
@@ -64,7 +66,8 @@ Belangrijke tokens:
 - `--utrecht-search-bar-input-active-border-color`: borderkleur van het zoekveld wanneer de search bar active is.
 - `--utrecht-search-bar-input-focus-border-color`: borderkleur van het zoekveld wanneer de search bar focus visible is.
 - `--utrecht-search-bar-input-padding-inline-start`: linker padding van het zoekveld, nu 8px.
-- `--utrecht-search-bar-input-large-inline-size`: breedte van het input veld op large viewport, nu 300px.
+- `--utrecht-search-bar-input-inline-size`: breedte van het input veld, nu 300px.
+- `--utrecht-search-bar-input-small-inline-size`: breedte van het input veld in de small variant, nu 200px.
 - `--utrecht-search-bar-button-column-gap`: ruimte tussen icoon en label, nu 8px.
 - `--utrecht-search-bar-button-icon-size`: grootte van het zoekicoon, nu 24px.
 - `--utrecht-search-bar-button-padding-inline-start` en
@@ -75,11 +78,11 @@ Belangrijke tokens:
 De kleuren voor default, hover, active en focus visible zijn tijdelijk op de search-bar tokens gezet. Daarmee blijven de
 HeaderSearchBar kleuren lokaal bij dit component en worden algemene button tokens niet aangepast.
 
-## Responsief gedrag
+## Varianten
 
-Op kleine viewports blijft het input veld flexibel en past het binnen de beschikbare ruimte. Vanaf large viewport
-(`width >= 60em`) gebruikt het input veld `--utrecht-search-bar-input-large-inline-size`. In de Utrecht theme staat die
-token op `300px`.
+De component gebruikt geen breakpoint voor de inputbreedte. De default variant gebruikt
+`--utrecht-search-bar-input-inline-size`. De Small viewport story gebruikt de modifier `utrecht-search-bar--small`, die
+het input veld kleiner maakt via `--utrecht-search-bar-input-small-inline-size`.
 
 ## Focus visible
 

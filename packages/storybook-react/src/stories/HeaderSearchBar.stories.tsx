@@ -126,6 +126,9 @@ export const Active: Story = {
 
 export const SmallViewport: Story = {
   name: 'Small viewport',
+  args: {
+    className: 'utrecht-search-bar--small',
+  },
   parameters: {
     viewport: {
       defaultViewport: 'wcagMinimum',

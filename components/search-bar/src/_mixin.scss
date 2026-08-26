@@ -34,6 +34,7 @@
   );
   --utrecht-textbox-focus-border-color: var(--utrecht-search-bar-input-focus-border-color);
   --utrecht-textbox-max-inline-size: var(--utrecht-search-bar-input-max-inline-size);
+  --utrecht-search-bar-input-effective-inline-size: var(--utrecht-search-bar-input-inline-size, 100%);
 
   border-end-end-radius: var(--utrecht-search-bar-button-border-end-end-radius, var(--utrecht-button-border-radius));
   border-start-end-radius: var(
@@ -105,19 +106,31 @@
   );
 }
 
+@mixin utrecht-search-bar--small {
+  --utrecht-search-bar-input-effective-inline-size: var(
+    --utrecht-search-bar-input-small-inline-size,
+    var(--utrecht-search-bar-input-inline-size, 100%)
+  );
+}
+
 @mixin utrecht-search-bar__input {
   background-image: var(--utrecht-search-bar-input-background-image, none);
   background-position-x: var(--utrecht-search-bar-input-background-position-x);
   background-position-y: var(--utrecht-search-bar-input-background-position-y);
   background-repeat: no-repeat;
   background-size: var(--utrecht-search-bar-input-background-size);
-  inline-size: var(--utrecht-search-bar-input-inline-size, 100%);
+  @include utrecht-search-bar__input-size;
 }
 
-@mixin utrecht-search-bar__input--large-viewport {
-  @media (width >= 60em) {
-    inline-size: var(--utrecht-search-bar-input-large-inline-size, var(--utrecht-search-bar-input-inline-size, 100%));
-  }
+@mixin utrecht-search-bar__input-size {
+  inline-size: var(--utrecht-search-bar-input-effective-inline-size);
+  max-inline-size: var(--utrecht-search-bar-input-effective-inline-size);
+}
+
+@mixin utrecht-search-bar__input-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+  display: none;
 }
 
 @mixin utrecht-search-bar__button {

@@ -10,6 +10,10 @@
   @include utrecht-search-bar;
 }
 
+.utrecht-search-bar--small {
+  @include utrecht-search-bar--small;
+}
+
 .utrecht-search-bar:has(.utrecht-search-bar__input:focus) {
   @include utrecht-search-bar--active;
 }
@@ -27,7 +31,17 @@
 
 .utrecht-search-bar__input {
   @include utrecht-search-bar__input;
-  @include utrecht-search-bar__input--large-viewport;
+}
+
+.utrecht-search-bar__input.utrecht-textbox {
+  @include utrecht-search-bar__input-size;
+}
+
+.utrecht-search-bar__input::-webkit-search-cancel-button,
+.utrecht-search-bar__input::-webkit-search-decoration,
+.utrecht-search-bar__input::-webkit-search-results-button,
+.utrecht-search-bar__input::-webkit-search-results-decoration {
+  @include utrecht-search-bar__input-search-decoration;
 }
 
 .utrecht-search-bar__button {
