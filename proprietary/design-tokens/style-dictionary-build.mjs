@@ -27,6 +27,8 @@ const build = async () => {
       './src/common/**/*.tokens.json',
       './src/component/tokens.json',
       './src/component/**/*.tokens.json',
+      './src/figma/tokens.json',
+      './src/figma/**/*.tokens.json',
     ],
   });
 
