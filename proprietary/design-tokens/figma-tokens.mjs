@@ -53,9 +53,9 @@ function withoutColor({ color, ...rest } = {}) {
 function extractFigmaTokens(data) {
   const { common } = data;
 
-  const nlLevels = common && data['components/heading/nl']?.nl?.heading;
-  const strippedNlLevels = Object.fromEntries(
-    Object.entries(nlLevels ?? {}).map(([level, node]) => [level, withoutColor(node)]),
+  const nlHeadingLevels = common && data['components/heading/nl']?.nl?.heading;
+  const strippedNlHeadingLevels = Object.fromEntries(
+    Object.entries(nlHeadingLevels ?? {}).map(([level, node]) => [level, withoutColor(node)]),
   );
 
   const extracted = {
@@ -65,7 +65,21 @@ function extractFigmaTokens(data) {
         text: withNotoSansVariable(common?.basis?.text),
       },
     },
-    'components/heading/nl': { nl: { heading: strippedNlLevels } },
+    'components/heading/nl': { nl: { heading: strippedNlHeadingLevels } },
+    // Paragraph's own "lead" doesn't carry a color alias in the nl export
+    // (unlike its "color" and the utrecht variant's lead/small), so it needs
+    // no stripping here.
+    'components/paragraph/nl': {
+      nl: { paragraph: withoutColor(data['components/paragraph/nl']?.nl?.paragraph) },
+    },
+    // Only "small" is pulled from the utrecht variant: the nl export has no
+    // "small" section at all, and small.font-size is the one paragraph
+    // property src/component/nl/paragraph.tokens.json sources cross-org.
+    'components/paragraph/utrecht': {
+      utrecht: {
+        paragraph: { small: withoutColor(data['components/paragraph/utrecht']?.utrecht?.paragraph?.small) },
+      },
+    },
   };
 
   for (let level = 1; level <= 6; level += 1) {
