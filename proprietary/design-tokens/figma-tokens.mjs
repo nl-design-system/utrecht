@@ -17,6 +17,38 @@ function rewriteBasisRefs(node) {
   );
 }
 
+// Figma's basis.focus.* (and other not-yet-audited primitives) alias
+// `{utrecht.color.neutral.white}` / `{utrecht.color.neutral.black}`, but
+// src/brand/utrecht/color.tokens.json defines "white"/"black" directly under
+// utrecht.color, with no "neutral" grouping. Rewriting just this one path
+// segment (rather than excluding whatever references it, as heading/paragraph
+// do for basis.color as a whole) fixes it at the root: everything downstream
+// resolves cleanly once this alias points at where the token actually lives.
+function rewriteNeutralColorRefs(node) {
+  if (typeof node !== 'object' || node === null) return node;
+  return Object.fromEntries(
+    Object.entries(node).map(([k, v]) => [
+      k,
+      k === '$value' && typeof v === 'string'
+        ? v.replaceAll('{utrecht.color.neutral.', '{utrecht.color.')
+        : rewriteNeutralColorRefs(v),
+    ]),
+  );
+}
+
+// Figma's textDecoration tokens capitalize "None" ("hover.text-decoration":
+// "None"), which is valid CSS (keywords are case-insensitive) but
+// inconsistent with the lowercase convention used everywhere else in this
+// design system. Purely cosmetic - lowercased for consistency, not because
+// "None" would otherwise fail to resolve or render.
+function normalizeTextDecoration(node) {
+  if (typeof node !== 'object' || node === null) return node;
+  if (node.$type === 'textDecoration' && typeof node.$value === 'string') {
+    return { ...node, $value: node.$value.toLowerCase() };
+  }
+  return Object.fromEntries(Object.entries(node).map(([k, v]) => [k, normalizeTextDecoration(v)]));
+}
+
 // Figma exports the default sans-serif family as "Noto Sans, sans-serif",
 // but the font actually shipped (and referenced elsewhere in this design
 // system, e.g. utrecht.typography.sans-serif.font-family) is Noto Sans
@@ -58,11 +90,36 @@ function extractFigmaTokens(data) {
     Object.entries(nlHeadingLevels ?? {}).map(([level, node]) => [level, withoutColor(node)]),
   );
 
+  const linkColor = common?.basis?.color;
+
   const extracted = {
     common: {
       basis: {
         heading: withoutColor(common?.basis?.heading),
         text: withNotoSansVariable(common?.basis?.text),
+        // Link's color chain (action-2 -> action-1, disabled -> default) is
+        // fine as-is - unlike heading/paragraph's color, it bottoms out in
+        // plain literals rather than the broken utrecht.color.neutral.* path.
+        color: {
+          'action-1': {
+            'color-default': linkColor?.['action-1']?.['color-default'],
+            'color-active': linkColor?.['action-1']?.['color-active'],
+            'color-hover': linkColor?.['action-1']?.['color-hover'],
+          },
+          'action-2': {
+            'color-default': linkColor?.['action-2']?.['color-default'],
+            'color-active': linkColor?.['action-2']?.['color-active'],
+            'color-hover': linkColor?.['action-2']?.['color-hover'],
+          },
+          disabled: { 'color-subtle': linkColor?.disabled?.['color-subtle'] },
+          default: { 'color-subtle': linkColor?.default?.['color-subtle'] },
+        },
+        // Only background-color and color are pulled in: the other
+        // basis.focus.* fields (outline-*) aren't used by anything extracted
+        // here and haven't been checked for further broken references.
+        focus: { 'background-color': common?.basis?.focus?.['background-color'], color: common?.basis?.focus?.color },
+        size: { icon: { md: common?.basis?.size?.icon?.md } },
+        space: { text: { xs: common?.basis?.space?.text?.xs } },
       },
     },
     'components/heading/nl': { nl: { heading: strippedNlHeadingLevels } },
@@ -80,6 +137,10 @@ function extractFigmaTokens(data) {
         paragraph: { small: withoutColor(data['components/paragraph/utrecht']?.utrecht?.paragraph?.small) },
       },
     },
+    // Link's utrecht export is fully self-contained (no nl indirection
+    // needed) once the neutral-color-ref and textDecoration-casing
+    // preprocessors run on it.
+    'components/link/utrecht': { utrecht: { link: data['components/link/utrecht']?.utrecht?.link } },
   };
 
   for (let level = 1; level <= 6; level += 1) {
@@ -101,6 +162,16 @@ export function registerFigmaTokens(StyleDictionary) {
     preprocessor: (dictionary) => rewriteBasisRefs(dictionary),
   });
 
+  StyleDictionary.registerPreprocessor({
+    name: 'figma/fix-neutral-color-refs',
+    preprocessor: (dictionary) => rewriteNeutralColorRefs(dictionary),
+  });
+
+  StyleDictionary.registerPreprocessor({
+    name: 'figma/fix-text-decoration-casing',
+    preprocessor: (dictionary) => normalizeTextDecoration(dictionary),
+  });
+
   StyleDictionary.registerParser({
     name: 'figma/extract-tokens',
     pattern: /src[/\\]figma[/\\]figma\.tokens\.json$/,
@@ -109,7 +180,7 @@ export function registerFigmaTokens(StyleDictionary) {
 
   return {
     parsers: ['figma/extract-tokens'],
-    preprocessors: ['figma/fix-basis-refs'],
+    preprocessors: ['figma/fix-basis-refs', 'figma/fix-neutral-color-refs', 'figma/fix-text-decoration-casing'],
     figmaSource: ['./src/figma/**/*.tokens.json', './src/figma-bridge/**/*.tokens.json'],
   };
 }

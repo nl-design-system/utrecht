@@ -1,0 +1,50 @@
+{
+  "figma-link-color": { "$type": "color", "$value": "{components/link/utrecht.utrecht.link.color}" },
+  "figma-link-column-gap": { "$type": "dimension", "$value": "{components/link/utrecht.utrecht.link.column-gap}" },
+  "figma-link-text-decoration": {
+    "$type": "textDecoration",
+    "$value": "{components/link/utrecht.utrecht.link.text-decoration}"
+  },
+  "figma-link-text-decoration-color": {
+    "$type": "color",
+    "$value": "{components/link/utrecht.utrecht.link.text-decoration-color}"
+  },
+  "figma-link-text-decoration-thickness": {
+    "$type": "other",
+    "$value": "{components/link/utrecht.utrecht.link.text-decoration-thickness}"
+  },
+  "figma-link-text-underline-offset": {
+    "$type": "other",
+    "$value": "{components/link/utrecht.utrecht.link.text-underline-offset}"
+  },
+  "figma-link-icon-size": { "$type": "dimension", "$value": "{components/link/utrecht.utrecht.link.icon.size}" },
+
+  "figma-link-active-color": { "$type": "color", "$value": "{components/link/utrecht.utrecht.link.active.color}" },
+
+  "figma-link-focus-background-color": {
+    "$type": "color",
+    "$value": "{components/link/utrecht.utrecht.link.focus.background-color}"
+  },
+  "figma-link-focus-color": { "$type": "color", "$value": "{components/link/utrecht.utrecht.link.focus.color}" },
+
+  "figma-link-focus-visible-text-decoration": {
+    "$type": "textDecoration",
+    "$value": "{components/link/utrecht.utrecht.link.focus-visible.text-decoration}"
+  },
+  "figma-link-focus-visible-text-decoration-thickness": {
+    "$type": "other",
+    "$value": "{components/link/utrecht.utrecht.link.focus-visible.text-decoration-thickness}"
+  },
+
+  "figma-link-hover-color": { "$type": "color", "$value": "{components/link/utrecht.utrecht.link.hover.color}" },
+  "figma-link-hover-text-decoration": {
+    "$type": "textDecoration",
+    "$value": "{components/link/utrecht.utrecht.link.hover.text-decoration}"
+  },
+  "figma-link-hover-text-decoration-thickness": {
+    "$type": "other",
+    "$value": "{components/link/utrecht.utrecht.link.hover.text-decoration-thickness}"
+  },
+
+  "figma-link-visited-color": { "$type": "color", "$value": "{components/link/utrecht.utrecht.link.visited.color}" }
+}
