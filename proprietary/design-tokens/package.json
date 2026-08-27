@@ -36,6 +36,7 @@
     "build:style-dictionary:dark": "node ./style-dictionary-build-dark.mjs",
     "build:stylelint": "node ./build-stylelint.mjs",
     "lint-build": "stylelint dist/*.css",
+    "sync:figma-space": "node ./sync-figma-space.mjs",
     "clean": "rimraf dist/",
     "watch": "pnpm run --parallel '/^watch:.*/'",
     "watch:style-dictionary": "chokidar --follow-symlinks --initial --command 'pnpm run build' 'src/**/*.tokens.json'"

@@ -1,0 +1,66 @@
+{
+  "space-figma": {
+    "block": {
+      "4xs": { "$value": "1px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.2xs" } },
+      "3xs": { "$value": "2px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.xs" } },
+      "2xs": { "$value": "4px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.sm" } },
+      "xs": { "$value": "8px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.md" } },
+      "sm": { "$value": "12px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.lg" } },
+      "md": { "$value": "16px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.xl" } },
+      "lg": { "$value": "20px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.2xl" } },
+      "xl": { "$value": "24px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.3xl" } },
+      "2xl": { "$value": "32px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.4xl" } },
+      "3xl": { "$value": "48px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.5xl" } },
+      "4xl": { "$value": "64px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.block.6xl" } }
+    },
+    "inline": {
+      "3xs": { "$value": "1px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.2xs" } },
+      "2xs": { "$value": "2px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.xs" } },
+      "xs": { "$value": "4px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.sm" } },
+      "sm": { "$value": "8px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.md" } },
+      "md": { "$value": "12px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.lg" } },
+      "lg": { "$value": "16px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.xl" } },
+      "xl": { "$value": "20px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.2xl" } },
+      "2xl": { "$value": "24px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.3xl" } },
+      "3xl": { "$value": "32px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.4xl" } },
+      "4xl": { "$value": "48px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.inline.5xl" } }
+    },
+    "text": {
+      "3xs": { "$value": "1px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.3xs" } },
+      "2xs": { "$value": "2px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.2xs" } },
+      "xs": { "$value": "4px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.xs" } },
+      "sm": { "$value": "6px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.sm" } },
+      "md": { "$value": "8px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.md" } },
+      "lg": { "$value": "12px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.lg" } },
+      "xl": { "$value": "14px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.xl" } },
+      "2xl": { "$value": "16px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.2xl" } },
+      "3xl": { "$value": "24px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.text.3xl" } }
+    },
+    "row": {
+      "4xs": { "$value": "1px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.2xs" } },
+      "3xs": { "$value": "2px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.xs" } },
+      "2xs": { "$value": "4px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.sm" } },
+      "xs": { "$value": "8px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.md" } },
+      "sm": { "$value": "12px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.lg" } },
+      "md": { "$value": "16px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.xl" } },
+      "lg": { "$value": "20px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.2xl" } },
+      "xl": { "$value": "24px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.3xl" } },
+      "2xl": { "$value": "32px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.4xl" } },
+      "3xl": { "$value": "64px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.5xl" } },
+      "4xl": { "$value": "160px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.row.6xl" } }
+    },
+    "column": {
+      "4xs": { "$value": "1px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.2xs" } },
+      "3xs": { "$value": "2px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.xs" } },
+      "2xs": { "$value": "4px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.sm" } },
+      "xs": { "$value": "8px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.md" } },
+      "sm": { "$value": "12px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.lg" } },
+      "md": { "$value": "16px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.xl" } },
+      "lg": { "$value": "20px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.2xl" } },
+      "xl": { "$value": "24px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.3xl" } },
+      "2xl": { "$value": "32px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.4xl" } },
+      "3xl": { "$value": "64px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.5xl" } },
+      "4xl": { "$value": "160px", "$extensions": { "nl.nldesignsystem.figma-source": "common.basis.space.column.6xl" } }
+    }
+  }
+}
