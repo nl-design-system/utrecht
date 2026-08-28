@@ -11,6 +11,14 @@
   --of-tooltip-background-color: var(--utrecht-color-black);
   --of-tooltip-color: var(--utrecht-color-white);
   --of-tooltip-border-radius: 3px;
+  --of-tooltip-padding-block-end: 3px;
+  --of-tooltip-padding-block-start: 3px;
+  --of-tooltip-padding-inline-end: 3px;
+  --of-tooltip-padding-inline-start: 3px;
+  --of-tooltip-arrow-width: 10px;
+  --of-tooltip-arrow-block-size: 12px;
+  --of-tooltip-arrow-inline-size: 10px;
+  --of-tooltip-offset: 0, 5px;
   /* stylelint-enable custom-property-pattern */
 
   .utrecht-textbox[name="data[voorletterSPZD]"],
