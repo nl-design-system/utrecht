@@ -8,17 +8,42 @@
    * @open-formulieren/formio-renderer's compiled CSS (var(--of-...)), not this
    * repo's naming convention. Renaming them would break the interop. */
   --of-utrecht-form-field-label-tooltip-align-items: baseline;
+  --of-tooltip-max-inline-size: 360px;
   --of-tooltip-background-color: var(--utrecht-color-black);
   --of-tooltip-color: var(--utrecht-color-white);
-  --of-tooltip-border-radius: 3px;
-  --of-tooltip-padding-block-end: 3px;
-  --of-tooltip-padding-block-start: 3px;
-  --of-tooltip-padding-inline-end: 3px;
-  --of-tooltip-padding-inline-start: 3px;
+  --of-tooltip-border-radius: var(--utrecht-border-radius-md);
+  --of-tooltip-padding-block-end: var(--utrecht-space-block-2xs);
+  --of-tooltip-padding-block-start: var(--utrecht-space-block-2xs);
+  --of-tooltip-padding-inline-end: var(--utrecht-space-inline-2xs);
+  --of-tooltip-padding-inline-start: var(--utrecht-space-inline-2xs);
   --of-tooltip-arrow-width: 10px;
   --of-tooltip-arrow-block-size: 12px;
-  --of-tooltip-arrow-inline-size: 10px;
-  --of-tooltip-offset: 0, 5px;
+  --of-tooltip-arrow-inline-size: 12px;
+  --of-tooltip-arrow-offset: 1px;
+
+  /* stylelint-disable selector-class-pattern -- these class names are dictated by
+   * @open-formulieren/formio-renderer's rendered DOM (.openforms-tooltip*), not this
+   * repo's naming convention. Renaming them would break the interop. */
+  .openforms-tooltip.openforms-tooltip--visible {
+    max-inline-size: var(--of-tooltip-max-inline-size);
+  }
+
+  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__content {
+    text-align: center;
+    transform: translate(calc(-50% - var(--utrecht-icon-size)), calc(-100% + var(--utrecht-space-row-xl) / 2));
+  }
+  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__arrow {
+    inset-block-end: calc(100% + var(--of-tooltip-arrow-inline-size));
+    transform: translate(
+        calc(-50% - var(--utrecht-icon-size) / 2),
+        calc(
+          100% + var(--of-tooltip-arrow-inline-size) - var(--of-tooltip-arrow-offset) + var(--utrecht-space-row-xl) / 2
+        )
+      )
+      rotate(-90deg);
+  }
+  /* stylelint-enable selector-class-pattern */
+
   /* stylelint-enable custom-property-pattern */
 
   .utrecht-textbox[name="data[voorletterSPZD]"],
