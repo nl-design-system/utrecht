@@ -1,6 +1,68 @@
 @use "~@utrecht/textbox-css/src/mixin" as *;
+@use "~@utrecht/heading-2-css/src/mixin" as *;
 
 @mixin utrecht-open-forms-container {
+  --utrecht-icon-inset-block-start: 3px;
+  --utrecht-icon-size: 26px;
+  --utrecht-form-field-label-checkbox-font-weight: 400;
+  --utrecht-form-field-label-radio-font-weight: 400;
+
+  /* stylelint-disable custom-property-pattern -- these names are dictated by
+  * @open-formulieren/formio-renderer's compiled CSS (var(--of-...)), not this
+  * repo's naming convention. Renaming them would break the interop. */
+  --of-utrecht-form-fieldset-legend-margin-block-end: var(--utrecht-space-block-md);
+  --of-utrecht-form-field-label-tooltip-align-items: baseline;
+  --of-tooltip-max-inline-size: var(--utrecht-tooltip-max-inline-size, 320px);
+  --of-tooltip-background-color: var(--utrecht-color-black);
+  --of-tooltip-color: var(--utrecht-color-white);
+  --of-tooltip-border-radius: var(--utrecht-border-radius-md);
+  --of-tooltip-padding-block-end: var(--utrecht-space-block-2xs);
+  --of-tooltip-padding-block-start: var(--utrecht-space-block-2xs);
+  --of-tooltip-padding-inline-end: var(--utrecht-space-inline-2xs);
+  --of-tooltip-padding-inline-start: var(--utrecht-space-inline-2xs);
+  --of-tooltip-arrow-width: 10px;
+  --of-tooltip-arrow-block-size: 12px;
+  --of-tooltip-arrow-inline-size: 12px;
+  --of-tooltip-arrow-offset: 1px;
+
+  /* stylelint-disable selector-class-pattern -- these class names are dictated by
+   * @open-formulieren/formio-renderer's rendered DOM (.openforms-tooltip*), not this
+   * repo's naming convention. Renaming them would break the interop. */
+  .openforms-tooltip.openforms-tooltip--visible {
+    max-inline-size: var(--of-tooltip-max-inline-size);
+  }
+
+  .utrecht-form-label--radio {
+    --utrecht-form-label-font-weight: var(--utrecht-form-field-label-radio-font-weight);
+  }
+
+  .utrecht-form-label--checkbox {
+    --utrecht-form-label-font-weight: var(--utrecht-form-field-label-checkbox-font-weight);
+  }
+
+  .openforms-fieldset-legend-content {
+    @include utrecht-heading-2--distanced;
+    @include utrecht-heading-2;
+  }
+
+  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__content {
+    font-weight: 400;
+    text-align: center;
+    transform: translate(calc(-50% - var(--utrecht-icon-size)), calc(-100%));
+  }
+  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__arrow {
+    inset-block-end: calc(100% + var(--of-tooltip-arrow-inline-size));
+    transform: translate(
+        calc(-50% - var(--utrecht-icon-size) / 2),
+        calc(100% + var(--of-tooltip-arrow-inline-size) - var(--of-tooltip-arrow-offset))
+      )
+      rotate(-90deg);
+  }
+
+  /* stylelint-enable selector-class-pattern */
+
+  /* stylelint-enable custom-property-pattern */
+
   .utrecht-textbox[name="data[voorletterSPZD]"],
   .utrecht-textbox[name="data[voorletterSPMD]"],
   .utrecht-textbox[name="data[voorletterSMEH]"],
