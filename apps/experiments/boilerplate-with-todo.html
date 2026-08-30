@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- Gebruik altijd als allereerste onderdeel een DOCTYPE zodat je "Standards mode" gebruikt voor layout, niet "Quirks mode". -->
+<!-- TODO: Stel `lang` en `dir` in, zodat de taal van de pagina duidelijk is. -->
+<!-- Lees meer over WCAG-succescriterium 3.1.1 Taal van de pagina: https://nldesignsystem.nl/wcag/3.1.1 -->
+<!-- TODO: Pas het datamodel van het CMS aan om deze informatie te hebben. -->
+<!-- Gebruik CSS van de Root component, voor een aantal doelen: -->
+<!-- - Met de Root component, in combinatie met de Body component, kan de volledige hoogte en breedte van de pagina gebruikt kan worden voor de Page Layout. -->
+<!-- - De Root component stelt woordafbreking in, zodat de pagina ook goed werkt als die ingezoomd is. -->
+<!--   Lees meer over WCAG-succescriterium 1.4.10 Reflow: https://nldesignsystem.nl/wcag/1.4.10 -->
+<!-- - De Root component optimaliseert de font rendering. -->
+<!-- - De Root stelt de standaard kleuren van de pagina. -->
+<!-- De Root component stelt geen font-size in. Je moet zelf ook geen font-size instellen op het `html`-element. -->
+<!-- Dan kan een gebruiker met een User Stylesheet de font-size aanpassen voor toegankelijkheid. De font-size instellen doe je met de Body component. -->
+<!-- Lees meer over WCAG-succescriterium 1.4.4 Herschalen van tekst https://nldesignsystem.nl/wcag/1.4.4 -->
+<!-- Je moet kleuren kiezen waarmee je voldoet aan het minimum contrast van WCAG, en voldoet aan maximum contrast volgens NL Design System. -->
+<!-- Lees meer over WCAG-succescriterium 1.4.3 Contrast (minimum) https://nldesignsystem.nl/wcag/1.4.3 -->
+<html lang="nl" dir="ltr" class="utrecht-root utrecht-theme">
+  <head>
+    <meta charset="utf-8" />
+    <!-- TODO: Als het formulier, begin dan optioneel met "Fout · " -->
+    <!-- TODO: Als het een meerstaps-formulier is, begin dan met "Stap {stap} van {totaal} · " -->
+    <!-- TODO: Haal de pagina-titel uit een CMS -->
+    <!-- TODO: Gebruik geen hardcoded "afzender", haal die uit een variable voor consistente identificatie -->
+    <!-- Lees meer over WCAG-succescriterium 2.4.2 Paginatitel: https://nldesignsystem.nl/wcag/2.4.2-->
+    <title>{pagina} · {afzender}</title>
+    <!-- Voorkom met `initial-scale="1` dat letters te klein zijn op kleine schermen, totdat je inzoomt. -->
+    <!-- Je hoeft dan niet met twee vingers "pan and zoom" te doen. -->
+    <!-- Je hebt niet het risico dat je per ongeluk iets activeert door dubbel-tap voor inzoomen. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Gebruik de CSS van de componenten die je gebruikt. -->
+    <!-- De `@1` in de URL verwijst naar de laatste release die onderdeel is van de major release 1.0.0 -->
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/root-css@1/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/body-css@1/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/skip-link-css@1/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/page-layout-css@1/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/page-header-css@1/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/page-body-css@0/dist/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/page-footer-css@2/dist/index.css" />
+
+    <!-- Gebruik de CSS van met CSS variables om de componenten in te stellen met de huisstijl. -->
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens@2/dist/index.css" />
+
+    <!-- TODO: Gebruik je eigen hosting voor de CSS, gebruik "https://unpkg.com/" hooguit tijdens development, nooit in productie. -->
+    <!-- TODO: Installeer de CSS als dependency, met npm bijvoorbeeld: -->
+    <!-- npm install --save @utrecht/root-css @utrecht/body-css @utrecht/design-tokens -->
+  </head>
+  <!-- Gebruik de Body component -->
+  <!-- Met de Body component kan de volledige hoogte en breedte van de pagina gebruikt kan worden voor de Page Layout. -->
+  <!-- Met de Body component stel je de default font-size van je pagina in. -->
+  <body class="utrecht-body" id="top">
+    <!-- Gebruik de Skip Link component zodat gebruikers blokken kunnen overslaan die op meerdere pagina's voorkomen, zoals de Page Header. -->
+    <!-- Lees meer over WCAG-succescriterium 2.4.1 Blokken omzeilen: https://nldesignsystem.nl/wcag/2.4.1 -->
+    <!-- Gebruik CSS van de Root component, voor een aantal doelen: -->
+    <!-- - De focus-indicator is consistent met de focus van andere componenten. -->
+    <!--   Lees meer over WCAG-succescriterium 3.2.4 Consistente identificatie: https://nldesignsystem.nl/wcag/3.2.4 -->
+    <!-- - De afmetingen van de link voldoen aan de minimum grootte van een aanwijsgebied. -->
+    <!-- - De focus-indicator is helemaal in beeld, omdat de Skip Link iets van de zijkant van het scherm af staat. -->
+    <!--   Lees meer over WCAG-succescriterium 2.5.8 Grootte van het aanwijsgebied (minimum) https://nldesignsystem.nl/wcag/2.5.8 -->
+    <a href="#main" class="utrecht-skip-link utrecht-skip-link--visible-on-focus">Direct naar de hoofdinhoud</a>
+    <div class="utrecht-page-layout">
+      <!-- Gebruik de Page Header component voor-->
+      <!-- Gebruik het HTML element `header` om deze belangrijke "landmark region" op te maken, voor toegankelijkheid. -->
+      <header class="utrecht-page-header">
+        <div class="utrecht-page-header__content">
+          <p>Hier komt de Page Header content...</p>
+          <!-- Plaats in de Page Header componenten -->
+          <!-- Gebruik een consistente volgorde voor navigatie-elementen, zoals links, zoekformulieren en uitlogknoppen. -->
+          <!-- Als je meerdere templates hebt waarin navigatie zit, zorg dan dat die consistent werken. -->
+          <!-- Lees meer over WCAG-succescriterium 3.2.3 Consistente navigatie: https://nldesignsystem.nl/wcag/3.2.3 -->
+        </div>
+      </header>
+      <!-- Gebruik niet het `main` element voor de Page Body component. Gebruik `main` voor het precieze onderdeel dat de main content is. -->
+      <div class="utrecht-page-body">
+        <div class="utrecht-page-body__content">
+          <!-- Plaats op deze plek eventueel de Breadcrumb Navigation component: binnen de Page Body, en buiten de "main" landmark. -->
+          <main id="main">
+            <h1>{pagina}</h1>
+          </main>
+          <!-- Plaats content die op meerdere pagina's voorkomt buiten de "main" landmark, zoals contactinformatie. -->
+          <aside>
+            <!-- Wanneer je op meerdere pagina's hulp biedt, zoals contactinformatie, zorg dan dat ze op dezelfde plek in de pagina staan. -->
+            <p>Vragen? Neem contact op met {afzender}. Dat kan op de volgende manieren: ...</p>
+          </aside>
+        </div>
+      </div>
+      <!-- Gebruik het HTML element `footer` om deze belangrijke "landmark region" op te maken, voor toegankelijkheid. -->
+      <footer class="utrecht-page-footer">
+        <div class="utrecht-page-footer__content">
+          <p>Hier komt de Page Footer content...</p>
+          <!-- Gebruik een consistente volgorde voor navigatie-elementen, zoals links. -->
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

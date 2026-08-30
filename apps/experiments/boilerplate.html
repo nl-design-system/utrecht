@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/root-css@1.2.0/dist/html/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/body-css@1.2.0/dist/html/index.css" />
+    <link rel="stylesheet" href="https://unpkg.com/@utrecht/design-tokens/dist/variables.css" />
+    <script
+      src="https://unpkg.com/@utrecht/web-component-library-stencil/dist/utrecht/utrecht.esm.js"
+      type="module"
+    ></script>
+
+    <!--
+      <link
+      rel="stylesheet"
+      href="https://unpkg.com/@nl-design-system-community/purmerend-design-tokens/dist/variables.css"
+    />
+    -->
+  </head>
+  <body>
+    <utrecht-drawer>
+      <h1>Cookies voor de website gemeente Utrecht</h1>
+      <p>Uitleg</p>
+      <form method="post" aria-labelledby="cookie-heading">
+        <utrecht-button-group>
+          <utrecht-button type="submit">Cookies toestaan</utrecht-button>
+          <utrecht-button type="submit">Alles weigeren</utrecht-button>
+        </utrecht-button-group>
+      </form>
+    </utrecht-drawer>
+    <utrecht-page-layout>
+      <utrecht-page-header>
+        <!-- <utrecht-logo> -->
+          <div style="max-inline-size: 10em; max-block-size: 4em">
+          <utrecht-logo-image></utrecht-page-header></div>
+        <!-- </utrecht-logo> -->
+      </utrecht-page-header>
+      <utrecht-page-body>
+        <h1>Hello world</h1>
+      </utrecht-page-body>
+      <utrecht-page-footer>
+        <p>Gemeente Utrecht</p>
+      </utrecht-page-footer>
+    </utrecht-page-layout>
+  </body>
+</html>
