@@ -13,7 +13,6 @@ interface UnorderedListStoryProps extends UnorderedListProps {
   center?: boolean;
   items?: UnorderedListItemData[];
   htmlContent?: boolean;
-  nested?: boolean;
   level?: number;
 }
 
@@ -28,20 +27,12 @@ const HTMLList = ({ items }: { items: UnorderedListItemData[] }) => (
   </ul>
 );
 
-export const UnorderedListStory = ({
-  children,
-  center,
-  items,
-  htmlContent,
-  nested,
-  level = 1,
-}: UnorderedListStoryProps) => {
+export const UnorderedListStory = ({ children, center, items, htmlContent, level = 1 }: UnorderedListStoryProps) => {
   return (
     <UnorderedList
       className={clsx(`utrecht-unordered-list--level-${level}`, {
         'utrecht-unordered-list--center': center,
         'utrecht-unordered-list--html-content': htmlContent,
-        'utrecht-unordered-list--nested': nested,
       })}
     >
       {children}
@@ -55,7 +46,7 @@ export const UnorderedListStory = ({
         : items?.map(({ children: subChildren, items: subItems }) => (
             <UnorderedListItem key={`${subChildren}`}>
               {subChildren}
-              {subItems && UnorderedListStory({ items: subItems, nested: true, level: level + 1 })}
+              {subItems && UnorderedListStory({ items: subItems, level: level + 1 })}
             </UnorderedListItem>
           ))}
     </UnorderedList>
