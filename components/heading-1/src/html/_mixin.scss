@@ -11,4 +11,8 @@
     @include utrecht-heading-1;
     @include utrecht-heading-1--distanced;
   }
+
+  h1:where(:not([hidden])) {
+    @include utrecht-heading-1--visible;
+  }
 }
