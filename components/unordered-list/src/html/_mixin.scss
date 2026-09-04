@@ -4,13 +4,14 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+@use "sass:list";
 @use "../mixin" as *;
 
 @mixin utrecht-html-ul {
   ul {
     @include utrecht-unordered-list;
     @include utrecht-unordered-list--distanced;
-    @include utrecht-unordered-list--level-1;
+    @include utrecht-unordered-list--level(1, list.nth($utrecht-unordered-list-level-markers, 1), 1em);
   }
 
   ul > li {
@@ -22,31 +23,9 @@
     @include utrecht-unordered-list__marker;
   }
 
-  ul > li > ul {
-    @include utrecht-unordered-list--level-2;
-  }
-
-  ul > li > ul > li > ul {
-    @include utrecht-unordered-list--level-3;
-  }
-
-  ul > li > ul > li > ul > li > ul {
-    @include utrecht-unordered-list--level-4;
-  }
-
-  ul > li > ul > li > ul > li > ul > li > ul {
-    @include utrecht-unordered-list--level-5;
-  }
-
-  ul > li > ul > li > ul > li > ul > li > ul > li > ul {
-    @include utrecht-unordered-list--level-6;
-  }
-
-  ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {
-    @include utrecht-unordered-list--level-7;
-  }
-
-  ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul {
-    @include utrecht-unordered-list--level-8;
+  @for $level from 2 through 8 {
+    ul#{utrecht-unordered-list-nesting($level)} {
+      @include utrecht-unordered-list--level($level, list.nth($utrecht-unordered-list-level-markers, $level), 1em);
+    }
   }
 }
