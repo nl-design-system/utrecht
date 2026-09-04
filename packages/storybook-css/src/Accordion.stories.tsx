@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/accordion-css/README.md?raw';
 import tokensDefinition from '@utrecht/accordion-css/dist/tokens.mjs';
-import { Accordion, AccordionProvider } from '@utrecht/component-library-react';
+import { AccordionProvider, Paragraph } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
 import { UtrechtIconChevronDown } from '@utrecht/web-component-library-react';
 import React from 'react';
@@ -63,14 +63,19 @@ const accordionDefaultDataEn = {
   sections: [
     {
       headingLevel: 2,
-      label: 'Section 1',
-      body: <p>test</p>,
+      label: 'What is Lorem Ipsum?',
+      body: <Paragraph>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</Paragraph>,
       expanded: true,
     },
     {
       headingLevel: 2,
-      label: 'Section 2 (not expanded by default)',
-      body: <p>test</p>,
+      label: 'Why do we use it?',
+      body: (
+        <Paragraph>
+          t is a long established fact that a reader will be distracted by the readable content of a page when looking
+          at its layout.
+        </Paragraph>
+      ),
       expanded: false,
     },
   ],
@@ -89,61 +94,61 @@ const accordionData = {
   sections: [
     {
       label: 'Section 1',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 2',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 3',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 4',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 5',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 6',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 7',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 8',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 9',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
     {
       label: 'Section 10',
-      body: <p>Lorem ipsum</p>,
+      body: <Paragraph>Lorem ipsum</Paragraph>,
       section: false,
       expanded: true,
     },
