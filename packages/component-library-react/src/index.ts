@@ -224,6 +224,6 @@ export { Textbox } from './Textbox';
 export type { URLDataProps } from './URLData';
 export { URLData } from './URLData';
 export type { UnorderedListProps } from './UnorderedList';
-export { UnorderedList } from './UnorderedList';
+export { UnorderedList, UnorderedListLevelContext } from './UnorderedList';
 export type { UnorderedListItemProps } from './UnorderedListItem';
 export { UnorderedListItem } from './UnorderedListItem';
