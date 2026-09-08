@@ -1,8 +1,9 @@
 import { OFLibrary, OpenFormsModule } from '@open-formulieren/sdk';
+import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import { merge } from 'es-toolkit/compat';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
-import { Button, ButtonGroup, Icon, Link, OpenFormsContainer } from '../../../../component-library-react/src/index.js';
+import { Button, ButtonGroup, Icon, Link } from '../../../../component-library-react/src/index.js';
 import '@open-formulieren/sdk/styles.css';
 export type FormConfiguration = { type: string; components: { type: string; key: string; label: string }[] };
 const FormButton = () => (
