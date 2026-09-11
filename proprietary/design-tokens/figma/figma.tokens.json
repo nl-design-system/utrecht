@@ -13750,7 +13750,7 @@
               "$type": "boxShadow",
               "$value": {
                 "x": "0",
-                "y": "-{basis.border-width.lg}",
+                "y": "{basis.border-width.lg}",
                 "blur": "0",
                 "spread": "0",
                 "color": "{ams.tabs.button.color}",
