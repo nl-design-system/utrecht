@@ -9372,28 +9372,6 @@
       }
     }
   },
-  "components/icon-only-button": {
-    "todo": {
-      "icon-only-button": {
-        "padding-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
-        },
-        "padding-block-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.lg}"
-        },
-        "padding-inline-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.lg}"
-        },
-        "padding-inline-start": {
-          "$type": "dimension",
-          "$value": "{basis.space.inline.lg}"
-        }
-      }
-    }
-  },
   "components/image": {
     "ams": {
       "image": {
@@ -16794,7 +16772,6 @@
       "components/icon",
       "components/icon_button/amsterdam",
       "components/icon_button/denhaag",
-      "components/icon-only-button",
       "components/image",
       "components/link/nl",
       "components/link/utrecht",
