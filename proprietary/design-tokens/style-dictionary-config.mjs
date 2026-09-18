@@ -1,15 +1,11 @@
 import { propertyFormatterHooksConfig } from './src/css-property-formatter.mjs';
-import { normalizeFigmaExportPreprocessorHooksConfig } from './src/normalize-none-preprocessor.mjs';
 const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 
 const sortByName = (a, b) => stringSort(a.name, b.name);
 
 export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tokens.json'] }) => ({
-  preprocessors: ['utrecht/normalize-figma-export', 'tokens-studio'],
+  preprocessors: ['tokens-studio'],
   hooks: {
-    preprocessors: {
-      ...normalizeFigmaExportPreprocessorHooksConfig,
-    },
     formats: {
       ...propertyFormatterHooksConfig,
       'json/list': function ({ dictionary }) {
