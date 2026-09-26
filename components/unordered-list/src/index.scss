@@ -4,6 +4,7 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+@use "sass:list";
 @use "./mixin" as *;
 
 .utrecht-unordered-list,
@@ -37,50 +38,10 @@
   @include utrecht-unordered-list__marker;
 }
 
-.utrecht-unordered-list--html-content,
-.utrecht-unordered-list--html-content ol ul,
-.utrecht-unordered-list--level-1 {
-  @include utrecht-unordered-list--level-1;
-}
-
-.utrecht-unordered-list--html-content > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul,
-.utrecht-unordered-list--level-2 {
-  @include utrecht-unordered-list--level-2;
-}
-
-.utrecht-unordered-list--html-content > li > ul > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul > li > ul,
-.utrecht-unordered-list--level-3 {
-  @include utrecht-unordered-list--level-3;
-}
-
-.utrecht-unordered-list--html-content > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--level-4 {
-  @include utrecht-unordered-list--level-4;
-}
-
-.utrecht-unordered-list--html-content > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--level-5 {
-  @include utrecht-unordered-list--level-5;
-}
-
-.utrecht-unordered-list--html-content > li > ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--level-6 {
-  @include utrecht-unordered-list--level-6;
-}
-
-.utrecht-unordered-list--html-content > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--level-7 {
-  @include utrecht-unordered-list--level-7;
-}
-
-.utrecht-unordered-list--html-content > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--html-content ol ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul > li > ul,
-.utrecht-unordered-list--level-8 {
-  @include utrecht-unordered-list--level-8;
+@for $level from 1 through 8 {
+  .utrecht-unordered-list--html-content#{utrecht-unordered-list-nesting($level)},
+  .utrecht-unordered-list--html-content ol ul#{utrecht-unordered-list-nesting($level)},
+  .utrecht-unordered-list--level-#{$level} {
+    @include utrecht-unordered-list--level($level, list.nth($utrecht-unordered-list-level-markers, $level), 1em);
+  }
 }

@@ -4,6 +4,9 @@
  * Copyright (c) 2021-2024 Gemeente Utrecht
  */
 
+// Marker characters for each nesting level, used with `utrecht-unordered-list--level()`
+$utrecht-unordered-list-level-markers: "●", "○", "◆", "◇", "■", "□", "▲", "△" !default;
+
 @mixin utrecht-unordered-list {
   --_utrecht-unordered-list-list-style-type: var(--utrecht-unordered-list-list-style-type, "●");
   --_utrecht-unordered-list-marker-font-size: var(--utrecht-unordered-list-marker-font-size, "1rem");
@@ -71,35 +74,14 @@
   );
 }
 
-// Individual level mixins
-@mixin utrecht-unordered-list--level-1 {
-  @include utrecht-unordered-list--level(1, "●", 1em);
-}
+// Selector suffix matching a `ul` nested `$level` levels deep, e.g. `> li > ul > li > ul` for level 3
+// A repeated child-combinator chain is the only way to express "N levels deep": `:has()` only describes
+// an element's descendants, not how many ancestors lie above it, and `:where()` only groups selectors at
+// zero specificity, it cannot shorten or replace the chain itself.
+@function utrecht-unordered-list-nesting($level) {
+  @if $level <= 1 {
+    @return "";
+  }
 
-@mixin utrecht-unordered-list--level-2 {
-  @include utrecht-unordered-list--level(2, "○", 1em);
-}
-
-@mixin utrecht-unordered-list--level-3 {
-  @include utrecht-unordered-list--level(3, "◆", 1em);
-}
-
-@mixin utrecht-unordered-list--level-4 {
-  @include utrecht-unordered-list--level(4, "◇", 1em);
-}
-
-@mixin utrecht-unordered-list--level-5 {
-  @include utrecht-unordered-list--level(5, "■", 1em);
-}
-
-@mixin utrecht-unordered-list--level-6 {
-  @include utrecht-unordered-list--level(6, "□", 1em);
-}
-
-@mixin utrecht-unordered-list--level-7 {
-  @include utrecht-unordered-list--level(7, "▲", 1em);
-}
-
-@mixin utrecht-unordered-list--level-8 {
-  @include utrecht-unordered-list--level(8, "△", 1em);
+  @return utrecht-unordered-list-nesting($level - 1) + " > li > ul";
 }
