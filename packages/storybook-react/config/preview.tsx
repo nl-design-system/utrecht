@@ -9,6 +9,7 @@ import { addonThemes as addonThemesParameters } from '@utrecht/storybook-helpers
 import { addonViewport as addonViewportParameters } from '@utrecht/storybook-helpers/src/addon-viewport';
 import React from 'react';
 import addonPseudoStates from 'storybook-addon-pseudo-states';
+import { SpacingDebugContext } from '../src/stories/template/spacing-story-kit.js';
 import '@utrecht/storybook-helpers/dist/font-family.js';
 import '@utrecht/design-tokens/dist/index.css';
 import '@utrecht/storybook-helpers/src/storybook-docs.scss';
@@ -16,9 +17,14 @@ import '@utrecht/component-library-css/dist/index.css';
 
 export default definePreview({
   addons: [addonA11y(), addonPseudoStates(), addonDocs()],
+  initialGlobals: { spacingDebug: false },
   decorators: [
     (Story: any) => <div className="utrecht-root utrecht-theme">{Story()}</div>,
-    ///
+    (Story: any, context: any) => (
+      <SpacingDebugContext.Provider value={Boolean(context.globals['spacingDebug'] ?? false)}>
+        <Story />
+      </SpacingDebugContext.Provider>
+    ),
     withTests({ results }),
   ],
 
