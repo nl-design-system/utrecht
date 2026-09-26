@@ -1,32 +1,36 @@
 {
   "utrecht": {
     "link": {
-      "color": { "$value": "{utrecht.color.blue.35}" },
+      "color": { "$value": "{figma-link-color}" },
+      "column-gap": { "$value": "{figma-link-column-gap}" },
       "icon": {
-        "size": { "$value": "1.2em" }
+        "size": { "$value": "{figma-link-icon-size}" }
       },
-      "text-decoration": { "$value": "underline" },
-      "text-decoration-color": {},
-      "text-underline-offset": { "$value": "3px" },
+      "text-decoration": { "$value": "{figma-link-text-decoration}" },
+      "text-decoration-color": { "$value": "{figma-link-text-decoration-color}" },
+      "text-decoration-thickness": { "$value": "{figma-link-text-decoration-thickness}" },
+      "text-underline-offset": { "$value": "{figma-link-text-underline-offset}" },
       "active": {
-        "color": { "$value": "{utrecht.link.color}" }
+        "color": { "$value": "{figma-link-active-color}" }
       },
       "focus": {
-        "color": { "$value": "{utrecht.color.blue.40}" }
+        "background-color": { "$value": "{figma-link-focus-background-color}" },
+        "color": { "$value": "{figma-link-focus-color}" }
       },
       "focus-visible": {
-        "text-decoration": { "$value": "none" }
+        "text-decoration": { "$value": "{figma-link-focus-visible-text-decoration}" },
+        "text-decoration-thickness": { "$value": "{figma-link-focus-visible-text-decoration-thickness}" }
       },
       "hover": {
-        "color": { "$value": "{utrecht.link.focus.color}" },
-        "text-decoration": { "$value": "underline" },
-        "text-decoration-thickness": { "$value": "3px" }
+        "color": { "$value": "{figma-link-hover-color}" },
+        "text-decoration": { "$value": "{figma-link-hover-text-decoration}" },
+        "text-decoration-thickness": { "$value": "{figma-link-hover-text-decoration-thickness}" }
       },
       "placeholder": {
         "color": { "$value": "{utrecht.color.grey.40}" }
       },
       "visited": {
-        "color": { "$value": "{utrecht.link.color}" }
+        "color": { "$value": "{figma-link-visited-color}" }
       },
       "current": {
         "font-weight": {}

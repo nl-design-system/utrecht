@@ -2,6 +2,7 @@ import { register } from '@tokens-studio/sd-transforms';
 import StyleDictionary from 'style-dictionary';
 import { readFile } from 'node:fs/promises';
 import { createStyleDictionaryConfig } from './style-dictionary-config.mjs';
+import { registerFigmaTokens } from './figma-tokens.mjs';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./config.json', 'utf-8'));
@@ -11,10 +12,14 @@ const build = async () => {
     // excludeParentKeys: true,
   });
 
+  const { parsers, preprocessors, figmaSource } = registerFigmaTokens(StyleDictionary);
+
   const sd = new StyleDictionary({
     ...createStyleDictionaryConfig({
       themeName: `${themeConfig.prefix}-theme`,
     }),
+    parsers,
+    preprocessors,
     log: {
       verbosity: 'verbose',
     },
@@ -27,6 +32,7 @@ const build = async () => {
       './src/common/**/*.tokens.json',
       './src/component/tokens.json',
       './src/component/**/*.tokens.json',
+      ...figmaSource,
     ],
   });
 
