@@ -9,6 +9,11 @@
 .utrecht-code-block {
   @include utrecht-code-block;
 }
+
+.utrecht-code-block:where(:not([hidden])) {
+  @include utrecht-code-block--visible;
+}
+
 .utrecht-code-block__content {
   @include utrecht-code-block__content;
 }

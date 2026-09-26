@@ -16,7 +16,6 @@
   --utrecht-code-font-family: var(--utrecht-code-block-font-family, monospace);
 
   background-color: var(--utrecht-code-block-background-color);
-  display: block;
   font-size: var(--utrecht-code-block-font-size, var(--utrecht-code-font-size, inherit));
   line-height: var(--utrecht-code-block-line-height, var(--utrecht-code-line-height));
   margin-block-end: var(--utrecht-code-block-margin-block-end);
@@ -34,4 +33,8 @@
   /* reset effect of <code> */
   font-family: inherit;
   font-size: inherit;
+}
+
+@mixin utrecht-code-block--visible {
+  display: block;
 }
