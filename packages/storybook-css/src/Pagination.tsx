@@ -90,8 +90,8 @@ export const Pagination = ({ currentIndex, distanced, links, next, prev }: Pagin
                 ? index === currentIndex + 1
                   ? 'next'
                   : index === currentIndex - 1
-                  ? 'prev'
-                  : null
+                    ? 'prev'
+                    : null
                 : null,
             textContent: String(link.index || index),
             ...link,
