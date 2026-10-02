@@ -9770,7 +9770,7 @@
   },
   "components/modal-dialog": {
     "ams": {
-      "dialog": {
+      "modal-dialog": {
         "background-color": {
           "$type": "color",
           "$value": "{basis.color.default.bg-document}"
@@ -9795,10 +9795,6 @@
         "box-shadow": {
           "$type": "boxShadow",
           "$value": "{basis.box-shadow.lg}"
-        },
-        "gap": {
-          "$type": "dimension",
-          "$value": "0px"
         },
         "inline-size": {
           "$type": "dimension",
@@ -9831,7 +9827,7 @@
           }
         },
         "header": {
-          "gap": {
+          "column-gap": {
             "$type": "dimension",
             "$value": "{basis.space.column.xl}"
           },
@@ -9842,6 +9838,10 @@
           "padding-inline": {
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
+          },
+          "row-gap": {
+            "$type": "dimension",
+            "$value": "{basis.space.row.sm}"
           },
           "medium": {
             "padding-block": {
@@ -9855,6 +9855,10 @@
           }
         },
         "body": {
+          "min-block-size": {
+            "$type": "dimension",
+            "$value": "{basis.pointer-target.min-block-size}"
+          },
           "padding-block": {
             "$type": "dimension",
             "$value": "0px"
@@ -9864,6 +9868,10 @@
             "$value": "{basis.space.inline.xl}"
           },
           "medium": {
+            "padding-block": {
+              "$type": "dimension",
+              "$value": "{basis.space.none}"
+            },
             "padding-inline": {
               "$type": "dimension",
               "$value": "{basis.space.inline.xl}"
