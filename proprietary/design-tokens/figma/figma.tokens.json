@@ -8277,6 +8277,12 @@
             "$type": "dimension",
             "$value": "{basis.space.inline.xl}"
           }
+        },
+        "label": {
+          "margin-block-end": {
+            "$type": "dimension",
+            "$value": "{basis.space.block.md}"
+          }
         }
       },
       "form-field-description": {
@@ -8438,10 +8444,6 @@
             "$type": "fontWeights",
             "$value": "{basis.text.font-weight.default}"
           }
-        },
-        "margin-block-end": {
-          "$type": "dimension",
-          "$value": "{basis.space.block.md}"
         }
       }
     }
