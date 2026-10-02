@@ -4,6 +4,7 @@ const stringSort = (a, b) => (a === b ? 0 : a > b ? 1 : -1);
 const sortByName = (a, b) => stringSort(a.name, b.name);
 
 export const createStyleDictionaryConfig = ({ themeName, source = ['src/**/*.tokens.json'] }) => ({
+  preprocessors: ['tokens-studio'],
   hooks: {
     formats: {
       ...propertyFormatterHooksConfig,
@@ -57,7 +58,7 @@ declare const tokens: DesignToken[];`;
   platforms: {
     js: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel', 'fontSize/pxToRem'],
+      transforms: ['name/camel', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -72,7 +73,7 @@ declare const tokens: DesignToken[];`;
     },
     tokenTree: {
       transformGroups: 'tokens-studio',
-      transforms: ['fontSize/pxToRem'],
+      transforms: ['fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -83,7 +84,7 @@ declare const tokens: DesignToken[];`;
     },
     json: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel', 'fontSize/pxToRem'],
+      transforms: ['name/camel', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -106,7 +107,7 @@ declare const tokens: DesignToken[];`;
     },
     css: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -114,6 +115,7 @@ declare const tokens: DesignToken[];`;
           format: 'css/variables',
           options: {
             selector: `.${themeName}`,
+            sort: 'name',
             outputReferences: true,
           },
         },
@@ -122,6 +124,7 @@ declare const tokens: DesignToken[];`;
           format: 'css/variables',
           options: {
             selector: `:root`,
+            sort: 'name',
             outputReferences: true,
           },
         },
@@ -132,7 +135,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'css-theme-prince-xml': {
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -140,6 +143,7 @@ declare const tokens: DesignToken[];`;
           format: 'css/variables',
           options: {
             selector: '.utrecht-theme',
+            sort: 'name',
             outputReferences: true,
           },
         },
@@ -147,7 +151,7 @@ declare const tokens: DesignToken[];`;
     },
     scss: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -160,7 +164,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'scss-theme-mixin': {
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -175,7 +179,7 @@ declare const tokens: DesignToken[];`;
     },
     less: {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -188,7 +192,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     typescript: {
-      transforms: ['name/camel', 'fontSize/pxToRem'],
+      transforms: ['name/camel', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       transformGroup: 'js',
       buildPath: 'dist/',
       files: [
@@ -208,7 +212,7 @@ declare const tokens: DesignToken[];`;
     },
     'deprecated-js': {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel', 'fontSize/pxToRem'],
+      transforms: ['name/camel', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -223,7 +227,7 @@ declare const tokens: DesignToken[];`;
     },
     'deprecated-json': {
       transformGroups: 'tokens-studio',
-      transforms: ['name/camel', 'fontSize/pxToRem'],
+      transforms: ['name/camel', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -242,7 +246,7 @@ declare const tokens: DesignToken[];`;
     },
     'deprecated-css': {
       transformGroups: 'tokens-studio',
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -251,6 +255,7 @@ declare const tokens: DesignToken[];`;
           options: {
             selector: `:root`,
             outputReferences: true,
+            sort: 'name',
           },
         },
         {
@@ -260,7 +265,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'deprecated-scss-theme-mixin': {
-      transforms: ['name/kebab', 'fontSize/pxToRem'],
+      transforms: ['name/kebab', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       buildPath: 'dist/',
       files: [
         {
@@ -274,7 +279,7 @@ declare const tokens: DesignToken[];`;
       ],
     },
     'deprecated-typescript': {
-      transforms: ['name/camel', 'fontSize/pxToRem'],
+      transforms: ['name/camel', 'fontSize/pxToRem', 'shadow/css/shorthand'],
       transformGroup: 'js',
       buildPath: 'dist/',
       files: [
