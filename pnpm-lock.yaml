@@ -13,6 +13,7 @@ overrides:
   shell-quote@<1.8.4: '>=1.8.4'
   '@vitest/browser@>=4.0.0 <4.1.10': '>=4.1.10'
   proxy-addr@>=1.1.0 <2.0.8: ^2.0.8
+  shell-quote@>=1.8.4 <1.11.0: ^1.11.0
 
 packageExtensionsChecksum: sha256-DyTONDcwuNBL+rN8AjnH/wxMB5hrUymzWhDnSpd567I=
 
@@ -25678,6 +25679,10 @@ packages:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
 
+  shell-quote@1.12.0:
+    resolution: {integrity: sha512-PcByqNyT/38F2kDNi006HAMRJaULuBzq/FOsw3qdZvX/GA9W/jamDaRskgHjubHiftXK5sIFxLNkvrXUwcof6Q==}
+    engines: {node: '>= 0.4'}
+
   shell-quote@1.8.4:
     resolution: {integrity: sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==}
     engines: {node: '>= 0.4'}
@@ -43068,7 +43073,7 @@ snapshots:
       mkdirp: 0.5.6
       resolve: 1.22.8
       safe-buffer: 5.2.1
-      shell-quote: 1.8.4
+      shell-quote: 1.12.0
       subarg: 1.0.0
     transitivePeerDependencies:
       - supports-color
@@ -48307,7 +48312,7 @@ snapshots:
   launch-editor@2.14.1:
     dependencies:
       picocolors: 1.1.1
-      shell-quote: 1.8.4
+      shell-quote: 1.12.0
 
   launch-editor@2.6.1:
     dependencies:
@@ -54324,6 +54329,8 @@ snapshots:
       shebang-regex: 3.0.0
 
   shebang-regex@3.0.0: {}
+
+  shell-quote@1.12.0: {}
 
   shell-quote@1.8.4: {}
 
