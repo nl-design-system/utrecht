@@ -10,7 +10,6 @@ overrides:
   form-data@>=4.0.0 <4.0.4: '>=4.0.4'
   handlebars@>=4.6.0 <=4.7.8: '>=4.7.9'
   axios@<1.15.0: '>=1.15.0'
-  shell-quote@<1.8.4: '>=1.8.4'
   '@vitest/browser@>=4.0.0 <4.1.10': '>=4.1.10'
   proxy-addr@>=1.1.0 <2.0.8: ^2.0.8
   shell-quote@>=1.8.4 <1.11.0: ^1.11.0
@@ -25776,10 +25775,6 @@ packages:
     resolution: {integrity: sha512-PcByqNyT/38F2kDNi006HAMRJaULuBzq/FOsw3qdZvX/GA9W/jamDaRskgHjubHiftXK5sIFxLNkvrXUwcof6Q==}
     engines: {node: '>= 0.4'}
 
-  shell-quote@1.8.4:
-    resolution: {integrity: sha512-VsC6n6vz1ihYYyZZwX7YZSF5l5x36ca17OC+a69h94YqB7X6XLwf+5MOgynYir2SLFUbl8gIYvBo8K8RoNQ6bQ==}
-    engines: {node: '>= 0.4'}
-
   shiki@4.4.3:
     resolution: {integrity: sha512-Mb/GvXPHBAXdgGIcnfU5L3ldpn1XcxrGkPHwqgRx17/I2XRfqlFKk2vGkHWINn1kdXvzJZeuO3is6I9KLPFm0g==}
     engines: {node: '>=20'}
@@ -48470,7 +48465,7 @@ snapshots:
   launch-editor@2.6.1:
     dependencies:
       picocolors: 1.1.1
-      shell-quote: 1.8.4
+      shell-quote: 1.12.0
 
   leaflet-geosearch@3.11.1:
     optionalDependencies:
@@ -52843,7 +52838,7 @@ snapshots:
       prompts: 2.4.2
       react-error-overlay: 6.0.11
       recursive-readdir: 2.2.3
-      shell-quote: 1.8.4
+      shell-quote: 1.12.0
       strip-ansi: 6.0.1
       text-table: 0.2.0
       webpack: 5.98.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)(uglify-js@3.17.4)
@@ -54465,8 +54460,6 @@ snapshots:
   shebang-regex@3.0.0: {}
 
   shell-quote@1.12.0: {}
-
-  shell-quote@1.8.4: {}
 
   shiki@4.4.3:
     dependencies:
