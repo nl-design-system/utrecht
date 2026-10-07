@@ -40,6 +40,7 @@ overrides:
   "@vitest/browser@>=4.0.0 <4.1.10": ">=4.1.10"
   proxy-addr@>=1.1.0 <2.0.8: ^2.0.8
   shell-quote@>=1.8.4 <1.11.0: ^1.11.0
+  tinypool@<2.1.2: ^2.1.2
 
 packageExtensions:
   "@vue/test-utils":
