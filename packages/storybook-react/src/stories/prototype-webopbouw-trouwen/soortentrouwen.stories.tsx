@@ -14,6 +14,7 @@ import {
   Heading1,
   Heading2,
   Heading3,
+  Heading4,
   Image,
   Link,
   Logo,
@@ -90,154 +91,228 @@ export const One: Story = {
             </BreadcrumbNav>
             <main>
               <section>
-                <Heading1>Soorten trouwen</Heading1>
+                <Heading1>Mogelijkheden bij trouwen</Heading1>
                 <Paragraph appearance="lead">
-                  Wat voor soorten trouwen zijn er? En wat zijn de verschillen? Hieronder vindt u een overzicht van de
-                  verschillende soorten trouwen en wat u daarvoor moet regelen.
+                  Wat zijn de mogelijkheden bij het trouwen in Utrecht? En wat zijn de verschillen? Hieronder vindt u
+                  een overzicht van de verschillen bij trouwen en wat u daarvoor moet regelen.
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
                   href="#verschillen"
                 >
                   <UtrechtIconChevronRight />
-                  Verschillen tussen Eenvoudig en Ceremonieel trouwen
+                  Verschillen tussen trouwen met of zonder ceremonie
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#eenvoudig"
+                  href="#zonder-ceremonie"
                 >
                   <UtrechtIconChevronRight />
-                  Alles over Eenvoudig trouwen
+                  Alles over trouwen zonder ceremonie
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#ceremonieel"
+                  href="#met-ceremonie"
                 >
                   <UtrechtIconChevronRight />
-                  Alles over Ceremonieel trouwen
+                  Alles over trouwen met ceremonie
                 </Link>
-                <Heading2 id="verschillen">Verschillen tussen Eenvoudig en Ceremonieel trouwen</Heading2>
+                <Heading2 id="verschillen">Verschillen tussen trouwen met of zonder ceremonie</Heading2>
                 <Paragraph>
-                  Bj de gemeente Utrecht zijn er twee soorten van trouwen mogelijk: Eenvoudig trouwen en Ceremonieel
-                  trouwen. De verschillen in tijdsduur en prijzen staan in de tabel hieronder. Daarnaast zijn de
-                  belangrijkste verschillen:
+                  Bij ons kunt u trouwen met of zonder een ceremonie. De verschillen in tijdsduur en prijzen staan in de
+                  tabel hieronder. Daarnaast zijn de belangrijkste verschillen:
                 </Paragraph>
                 <UnorderedList>
                   <UnorderedListItem>
-                    Bij eenvoudig trouwen is er geen toespraak, de locatie is altijd op het Stadskantoor en de gemeente
-                    kiest de trouwambtenaar.
+                    trouwen zonder ceremonie: er is geen toespraak, de locatie is altijd op het stadskantoor
                   </UnorderedListItem>
                   <UnorderedListItem>
-                    Bij ceremonieel trouwen is er een toespraak, heeft u de keuze voor een trouwlocatie en kunt u zelf
-                    een trouwambtenaar kiezen.
+                    trouwen met ceremonie: er is een toespraak en u kiest zelf een trouwlocatie
                   </UnorderedListItem>
                 </UnorderedList>
                 <Table>
-                  <React.Fragment key=".0">
-                    <TableHeader>
-                      <TableRow>
-                        <TableHeaderCell scope="col"></TableHeaderCell>
-                        <TableHeaderCell scope="col">Tijdsduur </TableHeaderCell>
-                        <TableHeaderCell scope="col">Ringen en/of Foto&apos;s?</TableHeaderCell>
-                        <TableHeaderCell scope="col">Gemiddelde wachttijd</TableHeaderCell>
-                        <TableHeaderCell scope="col">Kosten afnemen huwelijk</TableHeaderCell>
-                      </TableRow>
-                    </TableHeader>
-                    <TableBody></TableBody>
-                    <TableFooter>
-                      <TableRow>
-                        <TableCell>Eenvoudig trouwen - Standaard</TableCell>
-                        <TableCell>10 minuten</TableCell>
-                        <TableCell>Ja</TableCell>
-                        <TableCell>3 maanden</TableCell>
-                        <TableCell>€310,30</TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell>Eenvoudig trouwen - Flits</TableCell>
-                        <TableCell>5 minuten</TableCell>
-                        <TableCell>Nee</TableCell>
-                        <TableCell>3 maanden</TableCell>
-                        <TableCell>€270,20</TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell>Eenvoudig trouwen - Gratis</TableCell>
-                        <TableCell>10 minuten</TableCell>
-                        <TableCell>Ja</TableCell>
-                        <TableCell>10 maanden</TableCell>
-                        <TableCell>€0 </TableCell>
-                      </TableRow>
-                      <TableRow>
-                        <TableCell>Ceremonieel trouwen</TableCell>
-                        <TableCell>60 minuten</TableCell>
-                        <TableCell>Ja</TableCell>
-                        <TableCell>Afhankelijk van locatie</TableCell>
-                        <TableCell>€1.043,30 - €2.095,15</TableCell>
-                      </TableRow>
-                    </TableFooter>
-                  </React.Fragment>
+                  <TableHeader>
+                    <TableRow>
+                      <TableHeaderCell scope="col"></TableHeaderCell>
+                      <TableHeaderCell scope="col">Wanneer</TableHeaderCell>
+                      <TableHeaderCell scope="col">Hoe lang</TableHeaderCell>
+                      <TableHeaderCell scope="col">Aantal aanwezigen</TableHeaderCell>
+                      <TableHeaderCell scope="col">Gemiddelde wachttijd</TableHeaderCell>
+                      <TableHeaderCell scope="col">Kosten</TableHeaderCell>
+                    </TableRow>
+                  </TableHeader>
+                  <TableBody>
+                    <TableRow>
+                      <TableHeaderCell scope="row">Zonder ceremonie - Eenvoudig</TableHeaderCell>
+                      <TableCell>Ma 11.00 en 11.30 uur, di/wo/vr 10.00, 10.30, 11.00, 11.30 uur</TableCell>
+                      <TableCell>10 minuten</TableCell>
+                      <TableCell>10</TableCell>
+                      <TableCell>4 maanden</TableCell>
+                      <TableCell>€332,60</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableHeaderCell scope="row">Zonder ceremonie - Flits</TableHeaderCell>
+                      <TableCell>Wo en vr 9.00 – 10.00 uur</TableCell>
+                      <TableCell>5 minuten</TableCell>
+                      <TableCell>6</TableCell>
+                      <TableCell>4 maanden</TableCell>
+                      <TableCell>€276,10</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableHeaderCell scope="row">Zonder ceremonie - Gratis</TableHeaderCell>
+                      <TableCell>Ma 10.00, 10.30 uur</TableCell>
+                      <TableCell>10 minuten</TableCell>
+                      <TableCell>10</TableCell>
+                      <TableCell>10 maanden</TableCell>
+                      <TableCell>€0</TableCell>
+                    </TableRow>
+                    <TableRow>
+                      <TableHeaderCell scope="row">Met ceremonie</TableHeaderCell>
+                      <TableCell></TableCell>
+                      <TableCell>30-45 minuten</TableCell>
+                      <TableCell>Afhankelijk van locatie</TableCell>
+                      <TableCell>Afhankelijk van locatie</TableCell>
+                      <TableCell>Vanaf €833,55</TableCell>
+                    </TableRow>
+                  </TableBody>
                 </Table>
-                <Heading2 id="eenvoudig">Alles over Eenvoudig trouwen</Heading2>
-                Eenvoudig trouwen is trouwen op het stadskantoor, zonder toespraak en met een ambtenaar die de gemeente
-                gekozen heeft. Er zijn drie soorten van Eenvoudig trouwen beschikbaar: Standaard, Flits en Gratis.
-                <Heading3>Eenvoudig trouwen - Standaard</Heading3>
-                <Paragraph>
-                  Geen toespraak, wel ringen uitwisselen en foto&apos;s maken. Duurt maximaal 10 minuten.
-                </Paragraph>
+                <Heading2 id="zonder-ceremonie">Alles over trouwen zonder ceremonie</Heading2>
+                <Paragraph>U kunt kiezen tussen eenvoudig, flits en gratis trouwen.</Paragraph>
+                <Heading3>Eenvoudig trouwen</Heading3>
                 <UnorderedList>
-                  <UnorderedListItem>Geen toespraak </UnorderedListItem>
-                  <UnorderedListItem>Locatie: Op het Stadskantoor </UnorderedListItem>
-                  <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
-                  <UnorderedListItem>Duurt maximaal 10 minuten </UnorderedListItem>
-                  <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachttijd: 3 maanden </UnorderedListItem>
-                  <UnorderedListItem>Kosten: €310,30 </UnorderedListItem>
-                </UnorderedList>
-                <Heading3>Eenvoudig trouwen - Flits</Heading3>
-                <Paragraph>
-                  Een versie van standaard eenvoudig trouwen, korter en goedkoper dan het standaard eenvoudig trouwen.
-                  Ook wel bekend als het flitshuwelijk. Geen toespraak, geen ringen uitwisselen en geen foto&apos;s
-                  maken. Duurt maximaal 5 minuten.
-                </Paragraph>
-                <UnorderedList>
-                  <UnorderedListItem>Geen toespraak </UnorderedListItem>
-                  <UnorderedListItem>Locatie: Op het Stadskantoor </UnorderedListItem>
-                  <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
-                  <UnorderedListItem>Duurt maximaal 5 minuten </UnorderedListItem>
-                  <UnorderedListItem>Geen uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachttijd: 3 maanden </UnorderedListItem>
-                  <UnorderedListItem>Kosten: €270,20 </UnorderedListItem>
-                </UnorderedList>
-                <Heading3>Eenvoudig trouwen - Gratis</Heading3>
-                <Paragraph>
-                  Gratis versie van standaard trouwen, met een langere wachttijd. Geen toespraak, wel ringen uitwisselen
-                  en foto&apos;s maken. Duurt maximaal 10 minuten.
-                </Paragraph>
-                <UnorderedList>
-                  <UnorderedListItem>Geen toespraak </UnorderedListItem>
-                  <UnorderedListItem>Locatie: Op het Stadskantoor </UnorderedListItem>
-                  <UnorderedListItem>Trouwambtenaar: Aangewezen door de gemeente </UnorderedListItem>
-                  <UnorderedListItem>Duurt maximaal 10 minuten </UnorderedListItem>
-                  <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachttijd: 10 maanden </UnorderedListItem>
-                  <UnorderedListItem>Kosten: €0 </UnorderedListItem>
-                </UnorderedList>
-                <Heading2 id="ceremonieel">Alles over Ceremonieel trouwen</Heading2>
-                <Paragraph>
-                  Ceremonieel trouwen is trouwen op een locatie die u zelf uitkoest, met een toespraak en met een
-                  ambtenaar die u zelf kiest.
-                </Paragraph>
-                <UnorderedList>
-                  <UnorderedListItem>Wel een toespraak </UnorderedListItem>
-                  <UnorderedListItem>Locatie: Vrije keuze </UnorderedListItem>
-                  <UnorderedListItem>Trouwambtenaar: Vrije keuze </UnorderedListItem>
-                  <UnorderedListItem>Duurt maximaal 60 minuten </UnorderedListItem>
-                  <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken </UnorderedListItem>
-                  <UnorderedListItem>Wachttijd: Afhankelijk van de gekozen trouwlocatie </UnorderedListItem>
+                  <UnorderedListItem>Kosten: €332,60, optioneel trouwboekje: €40,20</UnorderedListItem>
                   <UnorderedListItem>
-                    Kosten: €1.043,30 - €2.095,15 afhankelijk van tijdstip. Hier komen waarschijnlijk nog extra kosten
-                    bij, zie onder{' '}
+                    Wanneer: maandag 11.00 uur en 11.30 uur en dinsdag, woensdag en vrijdag om 10.00 uur, 10.30 uur,
+                    11.00 uur of 11.30 uur
+                  </UnorderedListItem>
+                  <UnorderedListItem>Waar: in de trouwzaal op de 6e verdieping van het stadskantoor</UnorderedListItem>
+                  <UnorderedListItem>
+                    Aantal gasten: maximaal 10 personen, dit is inclusief het bruidspaar, de getuigen en een fotograaf
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    Trouwambtenaar: houdt geen toespraak en heeft vooraf geen contact
+                  </UnorderedListItem>
+                  <UnorderedListItem>Hoe lang: maximaal 10 minuten</UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: 4 maanden</UnorderedListItem>
+                  <UnorderedListItem>Foto&apos;s maken en ringen uitwisselen is mogelijk</UnorderedListItem>
+                  <UnorderedListItem>
+                    Hebben we de melding voorgenomen huwelijk goedgekeurd? Tijdens een belafspraak kunt u dan een
+                    afspraak maken voor eenvoudig trouwen.
                   </UnorderedListItem>
                 </UnorderedList>
+                <Heading3>Flits trouwen</Heading3>
+                <UnorderedList>
+                  <UnorderedListItem>Kosten: €276,10, optioneel trouwboekje: €40,20</UnorderedListItem>
+                  <UnorderedListItem>Wanneer: woensdag en vrijdag tussen 9.00 en 10.00 uur</UnorderedListItem>
+                  <UnorderedListItem>Waar: aan de balie op het stadskantoor</UnorderedListItem>
+                  <UnorderedListItem>Aantal gasten: uitsluitend bruidspaar en getuigen</UnorderedListItem>
+                  <UnorderedListItem>
+                    Trouwambtenaar: houdt geen toespraak en heeft vooraf geen contact
+                  </UnorderedListItem>
+                  <UnorderedListItem>Hoe lang: maximaal 5 minuten</UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: 4 maanden</UnorderedListItem>
+                  <UnorderedListItem>Foto&apos;s maken en ringen uitwisselen niet mogelijk</UnorderedListItem>
+                  <UnorderedListItem>
+                    Hebben we de melding voorgenomen huwelijk goedgekeurd? Tijdens een belafspraak kunt u dan een
+                    afspraak maken voor flits trouwen.
+                  </UnorderedListItem>
+                </UnorderedList>
+
+                <Heading3>Gratis trouwen</Heading3>
+                <UnorderedList>
+                  <UnorderedListItem>Kosten: €0, optioneel trouwboekje: €40,20</UnorderedListItem>
+                  <UnorderedListItem>Wanneer: maandagochtend om 10.00 uur of om 10.30 uur</UnorderedListItem>
+                  <UnorderedListItem>Waar: in de trouwzaal op de 6e verdieping van het stadskantoor</UnorderedListItem>
+                  <UnorderedListItem>
+                    Aantal gasten: maximaal 10 personen, dit is inclusief het bruidspaar, de getuigen en een fotograaf
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    Trouwambtenaar: houdt geen toespraak en heeft vooraf geen contact
+                  </UnorderedListItem>
+                  <UnorderedListItem>Hoe lang: maximaal 10 minuten</UnorderedListItem>
+                  <UnorderedListItem>Wachttijd: ongeveer 10 maanden</UnorderedListItem>
+                  <UnorderedListItem>Foto&apos;s maken en ringen uitwisselen is mogelijk</UnorderedListItem>
+                  <UnorderedListItem>
+                    Hebben we de melding voorgenomen huwelijk goedgekeurd? Tijdens een belafspraak kunt u dan een
+                    afspraak maken voor gratis trouwen.
+                  </UnorderedListItem>
+                </UnorderedList>
+                <Heading2 id="met-ceremonie">Alles over trouwen met een ceremonie</Heading2>
+                <Paragraph>
+                  Trouwen met een ceremonie is trouwen op een locatie die u zelf kiest. De trouwambtenaar houdt een
+                  persoonlijke toespraak.
+                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>
+                    Kosten: afhankelijk van dag en tijd, zie <Link href="#kosten-per-locatie">kosten per locatie</Link>.
+                    Hier kunnen nog extra kosten bijkomen: voor eigen trouwambtenaar: €313,45, voor trouwboekje €40,20
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    Wanneer: weet u op welke dag, welke locatie en welke tijd u wilt trouwen? Maak hierover eerst
+                    afspraken met de trouwlocatie zelf. Daarna maakt u een afspraak bij de gemeente. Dat kan telefonisch
+                    op 14 030.
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    Waar: een van onze <Link href="#">vaste trouwlocaties</Link> of een locatie die u zelf kiest
+                  </UnorderedListItem>
+                  <UnorderedListItem>Aantal gasten: afhankelijk van de trouwlocatie</UnorderedListItem>
+                  <UnorderedListItem>
+                    Trouwambtenaar: u krijgt een Utrechtse trouwambtenaar of u kiest een{' '}
+                    <Link href="#">eigen trouwambtenaar</Link>. De trouwambtenaar houdt wel een toespraak en heeft
+                    vooraf contact.
+                  </UnorderedListItem>
+                  <UnorderedListItem>Hoe lang: maximaal 30-45 minuten</UnorderedListItem>
+                  <UnorderedListItem>
+                    Wachttijd: vraag de trouwdatum en trouwlocatie die u wilt zo snel mogelijk bij ons aan. Doe dit het
+                    liefst minimaal 3 maanden voor de geplande trouwdatum. Zo voorkomt u dat wij u moeten teleurstellen
+                    omdat op de door u gewenste datum al te druk is. In de populaire trouwmaanden mei/juni/september of
+                    bij bijzondere data kunt u hiervoor beter nog een langere periode aanhouden. U kunt uiterlijk 18
+                    maanden van tevoren de gewenste huwelijksdatum bij ons aanvragen.
+                  </UnorderedListItem>
+                  <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken</UnorderedListItem>
+                  <UnorderedListItem>Wel een toespraak</UnorderedListItem>
+                  <UnorderedListItem>
+                    Hebt u nog geen melding voorgenomen huwelijk gedaan? Neem ook dan telefonisch contact met ons op om
+                    uw datum vast te leggen.
+                  </UnorderedListItem>
+                </UnorderedList>
+                <Heading3 id="kosten-per-locatie">Kosten per locatie</Heading3>
+                <Heading4>Stadhuis</Heading4>
+                <Paragraph>Grote of kleine trouwzaal: zelfde kosten</Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>
+                    Maandag tot en met vrijdag van 8.00 tot 18.00 uur: €1.066,25 (donderdag niet beschikbaar)
+                  </UnorderedListItem>
+                  <UnorderedListItem>
+                    Maandag tot en met vrijdag na 18.00 uur en zaterdag en zondag: €1.588,80 (donderdag niet
+                    beschikbaar)
+                  </UnorderedListItem>
+                  <UnorderedListItem>Feestdagen: €2.141,20</UnorderedListItem>
+                </UnorderedList>
+                <Heading4>Raadszaal Wijkservicecentrum Vleuten-De Meern</Heading4>
+                <Paragraph>Tijdelijk niet beschikbaar</Paragraph>
+                <Heading4>Andere vaste locaties die we goedgekeurd hebben</Heading4>
+                <UnorderedList>
+                  <UnorderedListItem>Maandag tot en met vrijdag van 8.00 tot 18.00 uur: €833,55</UnorderedListItem>
+                  <UnorderedListItem>
+                    Maandag tot en met vrijdag na 18.00 uur en op zaterdag, zondag en feestdagen: €1.132,20
+                  </UnorderedListItem>
+                </UnorderedList>
+                <Paragraph>
+                  Dit zijn de kosten voor de huwelijksvoltrekking bij een vaste locatie. De kosten voor het gebruik van
+                  de locatie zelf horen hier niet bij. Dat betaalt u extra aan de beheerder van de locatie.
+                </Paragraph>
+                <Heading4>Locatie naar keuze</Heading4>
+                <UnorderedList>
+                  <UnorderedListItem>Maandag tot en met vrijdag van 8.00 tot 18.00 uur: €1.099,80</UnorderedListItem>
+                  <UnorderedListItem>
+                    Maandag tot en met vrijdag na 18.00 uur en op zaterdag, zondag en feestdagen: €1.561,40
+                  </UnorderedListItem>
+                </UnorderedList>
+                <Paragraph>
+                  Dit zijn de kosten voor de huwelijksvoltrekking in een locatie naar keuze. De kosten voor het gebruik
+                  van de locatie zelf horen hier niet bij. Dat betaalt u aanvullend aan de beheerder van de locatie.
+                </Paragraph>
                 {/* Conditioneel renderen van HulpEnContact of HulpEnContact2 */}
                 {!showHulpEnContact2 ? (
                   <HulpEnContact onSubmit={() => setShowHulpEnContact2(true)} />
