@@ -38,6 +38,7 @@ overrides:
   axios@<1.15.0: ">=1.15.0"
   shell-quote@<1.8.4: ">=1.8.4"
   "@vitest/browser@>=4.0.0 <4.1.10": ">=4.1.10"
+  proxy-addr@>=1.1.0 <2.0.8: ^2.0.8
 
 packageExtensions:
   "@vue/test-utils":
