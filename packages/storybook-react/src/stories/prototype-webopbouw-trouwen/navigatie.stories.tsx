@@ -75,16 +75,20 @@ export const One: Story = {
             </BreadcrumbNav>
             <main>
               <section>
-                <Heading1>Trouwen, partnerschap en samenlevingscontract</Heading1>
+                <Heading1>Trouwen en geregistreerd partnerschap</Heading1>
                 <Paragraph appearance="lead">
-                  U wilt trouwen of een geregistreerd partnerschap aangaan. Gefeliciteerd! Bekijk hieronder welke
-                  mogelijkheden er zijn en wat u daarvoor moeten regelen.{' '}
+                  Gefeliciteerd, u gaat trouwen of u gaat een geregistreerd partnerschap aan! Het is belangrijk dat u
+                  goed voorbereid bent. Lees hier wat er mogelijk is en wat u allemaal moet regelen.
                 </Paragraph>
                 <Heading2>Trouwen</Heading2>
-                <Paragraph>
-                  U kunt uw relatie officieel maken door te trouwen. U geeft elkaar dan het ja-woord. Huwelijk wordt in
-                  alle landen erkend.
-                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>U geeft elkaar het 'jawoord’</UnorderedListItem>
+                  <UnorderedListItem>Een huwelijk is overal in de wereld officieel</UnorderedListItem>
+                  <UnorderedListItem>
+                    Sommige landen erkennen een huwelijk tussen gelijke geslachten niet
+                  </UnorderedListItem>
+                  <UnorderedListItem>Scheiden: u gaat altijd naar de rechter </UnorderedListItem>
+                </UnorderedList>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
                   href={urls.trouwenRegelen}
@@ -93,11 +97,16 @@ export const One: Story = {
                   Lees meer over trouwen en wat u hiervoor moet regelen
                 </Link>
                 <Heading2>Geregistreerd Partnerschap</Heading2>
-                <Paragraph>
-                  U kunt uw relatie ook officieel maken door een geregistreerd partnerschap te sluiten. Partnerschap
-                  lijkt heel erg op huwelijk. Verschil is dat u hier geen ja-woord hoeft te geven en dat partnerschap
-                  niet in alle landen erkend wordt.
-                </Paragraph>
+                <UnorderedList>
+                  <UnorderedListItem>U sluit het partnerschap met het zetten van de handtekening</UnorderedListItem>
+                  <UnorderedListItem>
+                    Het huwelijk en geregistreerd partnerschap zijn in Nederland juridisch gelijkwaardig
+                  </UnorderedListItem>
+                  <UnorderedListItem>Sommige landen erkennen een geregistreerd partnerschap niet</UnorderedListItem>
+                  <UnorderedListItem>
+                    Scheiden: u gaat alleen naar de rechter als u samen kinderen hebt onder 18 jaar
+                  </UnorderedListItem>
+                </UnorderedList>{' '}
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
                   href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap"
@@ -105,12 +114,14 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Lees meer over het geregistreerd partnerschap en wat u hiervoor moet regelen
                 </Link>
-                <Heading2>Omzetten partnerschap in huwelijk </Heading2>
-                <Paragraph>
-                  Hebt u al een geregistreerd partnerschap gesloten? Dan kunt u er ook voor kiezen om uw partnerschap om
-                  te zetten in een huwelijk. Hoe u dit doet bepaalt u zelf. Net als bij een huwelijk kan dat van heel
-                  eenvoudig tot een uitgebreide ceremonie. Wilt u graag advies? U kunt ons bellen op 14 030.
-                </Paragraph>
+                <Heading2>Omzetten geregistreerd partnerschap in een huwelijk</Heading2>
+                <UnorderedList>
+                  <UnorderedListItem>
+                    U zet het geregistreerde partnerschap om door het zetten van de handtekening
+                  </UnorderedListItem>
+                  <UnorderedListItem>Er zijn geen getuigen</UnorderedListItem>
+                  <UnorderedListItem>Sommige landen erkennen een omzetting niet</UnorderedListItem>
+                </UnorderedList>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
                   href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap#geregistreerd-partnerschap-omzetten-in-huwelijk"
@@ -118,12 +129,13 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Lees meer over het omzetten van een partnerschap in een huwelijk
                 </Link>
-                <Heading2>Samenlevingscontract </Heading2>
-                <Paragraph>
-                  Wilt u uw relatie vastleggen, maar wilt u niet trouwen of een partnerschap sluiten? Dan kunt ook een
-                  samenlevingscontract laten opstellen. Dit doet u bij de notaris. Een samenlevingscontract is niet
-                  hetzelfde als een geregistreerd partnerschap.
-                </Paragraph>
+                <Heading2>Samenlevingscontract</Heading2>
+                <UnorderedList>
+                  <UnorderedListItem>U laat een samenlevingscontract opstellen bij de notaris</UnorderedListItem>
+                  <UnorderedListItem>
+                    Een samenlevingscontract is niet hetzelfde als een huwelijk of een geregistreerd partnerschap
+                  </UnorderedListItem>
+                </UnorderedList>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
                   href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/checklist-samenlevingscontract"
@@ -131,7 +143,6 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Lees meer over het samenlevingscontract
                 </Link>
-
                 {/* Conditioneel renderen van HulpEnContact of HulpEnContact2 */}
                 {!showHulpEnContact2 ? (
                   <HulpEnContact onSubmit={() => setShowHulpEnContact2(true)} />
