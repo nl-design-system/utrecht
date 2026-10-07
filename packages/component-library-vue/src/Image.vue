@@ -4,9 +4,25 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'UtrechtImage',
   props: {
+    alt: {
+      type: String,
+      required: false,
+    },
+    height: {
+      type: [String, Number],
+      required: false,
+    },
     photo: {
       type: Boolean,
       default: false,
+      required: false,
+    },
+    src: {
+      type: String,
+      required: false,
+    },
+    width: {
+      type: [String, Number],
       required: false,
     },
   },
@@ -18,10 +34,10 @@ export default defineComponent({
     class="utrecht-img"
     v-bind="$attrs"
     :class="{ 'utrecht-img--photo': photo }"
-    :alt="$attrs?.alt as string"
-    :src="$attrs.src as string"
-    :height="$attrs?.height as string | number"
-    :width="$attrs?.width as string | number"
+    :alt="alt"
+    :src="src"
+    :height="height"
+    :width="width"
   />
 </template>
 
