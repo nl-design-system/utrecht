@@ -1,0 +1,38 @@
+/**
+ * The stacked (top/bottom) and column examples are built entirely from
+ * @utrecht/grid-css (.utrecht-grid / .utrecht-grid__cell), already loaded
+ * globally via @utrecht/component-library-css - no custom alignment CSS
+ * needed for those.
+ *
+ * Floats are the one layout CSS's grid can't express: a float needs a plain
+ * block formatting context so text can wrap around it, but grid cells are
+ * flex items, which never wrap around a float. This is the only positioning
+ * rule left here.
+ */
+
+/*
+ * Caps the width of the stacked (top/bottom) examples. Without this the
+ * image's alignment has no room to show: a flex container that's as wide as
+ * the page leaves no visible gap on either side of a left/center/right
+ * aligned image.
+ */
+.example-text-pic-content {
+  max-inline-size: 60ch;
+}
+
+.example-text-pic--float {
+  display: block;
+  max-inline-size: 60ch;
+}
+
+.example-text-pic--float-left .example-text-pic__image {
+  float: inline-start;
+  margin-block-end: 0.5rem;
+  margin-inline-end: 1.5rem;
+}
+
+.example-text-pic--float-right .example-text-pic__image {
+  float: inline-end;
+  margin-block-end: 0.5rem;
+  margin-inline-start: 1.5rem;
+}
