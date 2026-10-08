@@ -12,8 +12,8 @@ import './styles.css';
 import '../styles.css';
 
 const meta = {
-  title: 'Template/text-pic examples',
-  id: 'template-text-pic-examples',
+  title: 'Template/text-pic voorbeelden',
+  id: 'template-text-pic-voorbeelden',
   component: Page,
   parameters: {
     // Without this, the docs "Show code" panel prints the literal story
