@@ -33,17 +33,21 @@ export const ImageTopLeft: Story = {
   render: () => (
     <Page className="utrecht-custom-theme">
       <PageContent>
-        <div className="example-text-pic-content utrecht-grid utrecht-grid--flex-direction-column utrecht-grid--align-items-flex-start">
-          <Figure>
-            <Image
-              src="example/photo-nijntje-vuelta.jpg"
-              width={180}
-              height={135}
-              photo
-              alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
-            />
-            <FigureCaption>Afbeelding tekst</FigureCaption>
-          </Figure>
+        <div className="example-text-pic-content">
+          <div className="utrecht-grid utrecht-grid--justify-content-flex-start">
+            <div className="utrecht-grid__cell">
+              <Figure>
+                <Image
+                  src="example/photo-nijntje-vuelta.jpg"
+                  width={180}
+                  height={135}
+                  photo
+                  alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
+                />
+                <FigureCaption>Afbeelding tekst</FigureCaption>
+              </Figure>
+            </div>
+          </div>
           <Paragraph appearance="lead">
             Deze afbeelding en tekst laten zien hoe een foto samen met een tekstblok gepositioneerd kan worden binnen
             een pagina. De plaatsing van de afbeelding bepaalt sterk hoe de inhoud wordt gelezen.
@@ -63,17 +67,21 @@ export const ImageTopCenter: Story = {
   render: () => (
     <Page className="utrecht-custom-theme">
       <PageContent>
-        <div className="example-text-pic-content utrecht-grid utrecht-grid--flex-direction-column utrecht-grid--align-items-center">
-          <Figure>
-            <Image
-              src="example/photo-nijntje-vuelta.jpg"
-              width={180}
-              height={135}
-              photo
-              alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
-            />
-            <FigureCaption>Afbeelding tekst</FigureCaption>
-          </Figure>
+        <div className="example-text-pic-content">
+          <div className="utrecht-grid utrecht-grid--justify-content-center">
+            <div className="utrecht-grid__cell">
+              <Figure>
+                <Image
+                  src="example/photo-nijntje-vuelta.jpg"
+                  width={180}
+                  height={135}
+                  photo
+                  alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
+                />
+                <FigureCaption>Afbeelding tekst</FigureCaption>
+              </Figure>
+            </div>
+          </div>
           <Paragraph appearance="lead">
             Deze afbeelding en tekst laten zien hoe een foto samen met een tekstblok gepositioneerd kan worden binnen
             een pagina. De plaatsing van de afbeelding bepaalt sterk hoe de inhoud wordt gelezen.
@@ -93,17 +101,21 @@ export const ImageTopRight: Story = {
   render: () => (
     <Page className="utrecht-custom-theme">
       <PageContent>
-        <div className="example-text-pic-content utrecht-grid utrecht-grid--flex-direction-column utrecht-grid--align-items-flex-end">
-          <Figure>
-            <Image
-              src="example/photo-nijntje-vuelta.jpg"
-              width={180}
-              height={135}
-              photo
-              alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
-            />
-            <FigureCaption>Afbeelding tekst</FigureCaption>
-          </Figure>
+        <div className="example-text-pic-content">
+          <div className="utrecht-grid utrecht-grid--justify-content-flex-end">
+            <div className="utrecht-grid__cell">
+              <Figure>
+                <Image
+                  src="example/photo-nijntje-vuelta.jpg"
+                  width={180}
+                  height={135}
+                  photo
+                  alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
+                />
+                <FigureCaption>Afbeelding tekst</FigureCaption>
+              </Figure>
+            </div>
+          </div>
           <Paragraph appearance="lead">
             Deze afbeelding en tekst laten zien hoe een foto samen met een tekstblok gepositioneerd kan worden binnen
             een pagina. De plaatsing van de afbeelding bepaalt sterk hoe de inhoud wordt gelezen.
@@ -123,17 +135,7 @@ export const ImageBottomLeft: Story = {
   render: () => (
     <Page className="utrecht-custom-theme">
       <PageContent>
-        <div className="example-text-pic-content utrecht-grid utrecht-grid--flex-direction-column-reverse utrecht-grid--align-items-flex-start">
-          <Figure>
-            <Image
-              src="example/photo-nijntje-vuelta.jpg"
-              width={180}
-              height={135}
-              photo
-              alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
-            />
-            <FigureCaption>Afbeelding tekst</FigureCaption>
-          </Figure>
+        <div className="example-text-pic-content">
           <Paragraph appearance="lead">
             Deze afbeelding en tekst laten zien hoe een foto samen met een tekstblok gepositioneerd kan worden binnen
             een pagina. De plaatsing van de afbeelding bepaalt sterk hoe de inhoud wordt gelezen.
@@ -142,6 +144,20 @@ export const ImageBottomLeft: Story = {
             Gebruik dit soort combinaties bijvoorbeeld bij een nieuwsbericht, productpagina of toelichting, waarbij de
             afbeelding de tekst ondersteunt zonder de leesbaarheid te verstoren.
           </Paragraph>
+          <div className="utrecht-grid utrecht-grid--justify-content-flex-start">
+            <div className="utrecht-grid__cell">
+              <Figure>
+                <Image
+                  src="example/photo-nijntje-vuelta.jpg"
+                  width={180}
+                  height={135}
+                  photo
+                  alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
+                />
+                <FigureCaption>Afbeelding tekst</FigureCaption>
+              </Figure>
+            </div>
+          </div>
         </div>
       </PageContent>
     </Page>
@@ -153,17 +169,7 @@ export const ImageBottomCenter: Story = {
   render: () => (
     <Page className="utrecht-custom-theme">
       <PageContent>
-        <div className="example-text-pic-content utrecht-grid utrecht-grid--flex-direction-column-reverse utrecht-grid--align-items-center">
-          <Figure>
-            <Image
-              src="example/photo-nijntje-vuelta.jpg"
-              width={180}
-              height={135}
-              photo
-              alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
-            />
-            <FigureCaption>Afbeelding tekst</FigureCaption>
-          </Figure>
+        <div className="example-text-pic-content">
           <Paragraph appearance="lead">
             Deze afbeelding en tekst laten zien hoe een foto samen met een tekstblok gepositioneerd kan worden binnen
             een pagina. De plaatsing van de afbeelding bepaalt sterk hoe de inhoud wordt gelezen.
@@ -172,6 +178,20 @@ export const ImageBottomCenter: Story = {
             Gebruik dit soort combinaties bijvoorbeeld bij een nieuwsbericht, productpagina of toelichting, waarbij de
             afbeelding de tekst ondersteunt zonder de leesbaarheid te verstoren.
           </Paragraph>
+          <div className="utrecht-grid utrecht-grid--justify-content-center">
+            <div className="utrecht-grid__cell">
+              <Figure>
+                <Image
+                  src="example/photo-nijntje-vuelta.jpg"
+                  width={180}
+                  height={135}
+                  photo
+                  alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
+                />
+                <FigureCaption>Afbeelding tekst</FigureCaption>
+              </Figure>
+            </div>
+          </div>
         </div>
       </PageContent>
     </Page>
@@ -183,17 +203,7 @@ export const ImageBottomRight: Story = {
   render: () => (
     <Page className="utrecht-custom-theme">
       <PageContent>
-        <div className="example-text-pic-content utrecht-grid utrecht-grid--flex-direction-column-reverse utrecht-grid--align-items-flex-end">
-          <Figure>
-            <Image
-              src="example/photo-nijntje-vuelta.jpg"
-              width={180}
-              height={135}
-              photo
-              alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
-            />
-            <FigureCaption>Afbeelding tekst</FigureCaption>
-          </Figure>
+        <div className="example-text-pic-content">
           <Paragraph appearance="lead">
             Deze afbeelding en tekst laten zien hoe een foto samen met een tekstblok gepositioneerd kan worden binnen
             een pagina. De plaatsing van de afbeelding bepaalt sterk hoe de inhoud wordt gelezen.
@@ -202,6 +212,20 @@ export const ImageBottomRight: Story = {
             Gebruik dit soort combinaties bijvoorbeeld bij een nieuwsbericht, productpagina of toelichting, waarbij de
             afbeelding de tekst ondersteunt zonder de leesbaarheid te verstoren.
           </Paragraph>
+          <div className="utrecht-grid utrecht-grid--justify-content-flex-end">
+            <div className="utrecht-grid__cell">
+              <Figure>
+                <Image
+                  src="example/photo-nijntje-vuelta.jpg"
+                  width={180}
+                  height={135}
+                  photo
+                  alt="Nijntje mascotte met Vuelta 2022 t-shirt bij het Utrecht stadskantoor"
+                />
+                <FigureCaption>Afbeelding tekst</FigureCaption>
+              </Figure>
+            </div>
+          </div>
         </div>
       </PageContent>
     </Page>
