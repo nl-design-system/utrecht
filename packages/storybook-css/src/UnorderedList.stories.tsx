@@ -351,7 +351,6 @@ export const CenterMultiline: Story = {
 export const CenterMultilineNested: Story = {
   args: {
     center: true,
-    multiline: true,
     items: createNestedItems(1, 4, true),
   },
   name: 'Center (multiline, nested 4 levels)',
@@ -417,7 +416,6 @@ export const NarrowContainerCenter: Story = {
 export const NarrowContainerCenterLongText: Story = {
   args: {
     center: true,
-    multiline: true,
     items: [
       {
         children:
