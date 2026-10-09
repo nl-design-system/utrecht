@@ -54,7 +54,7 @@ export class ContactCard {
             <div class="utrecht-contact-card__title">
               <h2 class="utrecht-heading-2">
                 {this.heading}
-                {this.subtitle && <span class="utrecht-contact-card__subtitle">{this.subtitle}</span>}
+                {this.subtitle && <span class="utrecht-contact-card__subtitle">&nbsp;{this.subtitle}</span>}
               </h2>
             </div>
           )}
