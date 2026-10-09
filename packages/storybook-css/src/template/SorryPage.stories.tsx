@@ -13,7 +13,7 @@ const IframePage = ({ src, title }: IframePageProps) => (
 );
 
 const meta = {
-  title: 'Template/Sorrypagina',
+  title: "Template/Sorrypagina's",
   id: 'template-sorry-page',
   component: IframePage,
   parameters: {
