@@ -72,7 +72,7 @@ export const ContactCard = forwardRef(
           <div className="utrecht-contact-card__title">
             <Heading level={2}>
               {heading}
-              {subtitle && <span className="utrecht-contact-card__subtitle">{subtitle}</span>}
+              {subtitle && <span className="utrecht-contact-card__subtitle">&nbsp;{subtitle}</span>}
             </Heading>
           </div>
         )}
