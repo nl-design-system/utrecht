@@ -3,6 +3,7 @@ import StyleDictionary from 'style-dictionary';
 import { typeDtcgDelegate } from 'style-dictionary/utils';
 import { readFile } from 'node:fs/promises';
 import { createStyleDictionaryConfig } from './style-dictionary-config.mjs';
+import { registerFigmaTokens } from './figma-tokens.mjs';
 
 const build = async () => {
   const themeConfig = JSON.parse(await readFile('./config.json', 'utf-8'));
@@ -12,10 +13,14 @@ const build = async () => {
     // excludeParentKeys: true,
   });
 
+  const { parsers, preprocessors, figmaSource } = registerFigmaTokens(StyleDictionary);
+
   const config = {
     ...createStyleDictionaryConfig({
       themeName: `${themeConfig.prefix}-theme--dark`,
     }),
+    parsers,
+    preprocessors,
     log: 'warn',
     source: [
       '../../components/**/tokens.json',
@@ -26,6 +31,7 @@ const build = async () => {
       './src/common/**/*.tokens.json',
       './src/component/tokens.json',
       './src/component/**/*.tokens.json',
+      ...figmaSource,
 
       // Additional dark theme tokens
       './src/dark/tokens.json',
