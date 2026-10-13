@@ -245,6 +245,7 @@ export const One: Story = {
                   Trouwen met een ceremonie is trouwen op een locatie die u zelf kiest. De trouwambtenaar houdt een
                   persoonlijke toespraak.
                 </Paragraph>
+                <br />
                 <SpotlightSection type="warning">
                   <Heading3>Wachttijd</Heading3>
                   <Paragraph>
@@ -255,7 +256,7 @@ export const One: Story = {
                     van tevoren de gewenste huwelijksdatum bij ons aanvragen.
                   </Paragraph>
                 </SpotlightSection>
-
+                <br />
                 <UnorderedList>
                   <UnorderedListItem>
                     Kosten: afhankelijk van dag en tijd, zie <Link href="#kosten-per-locatie">kosten per locatie</Link>.
