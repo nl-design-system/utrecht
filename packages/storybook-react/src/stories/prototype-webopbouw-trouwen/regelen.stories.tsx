@@ -156,13 +156,12 @@ export const One: Story = {
                   gratis. De periode tussen de melding en het huwelijk moet volgens de wet minimaal 14 dagen zijn. De
                   melding is 1 jaar geldig.
                 </Paragraph>
-                <Link
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="#"
-                >
-                  <UtrechtIconChevronRight />
-                  Meld uw voorgenomen huwelijk
-                </Link>
+                <br />
+                <ButtonLink appearance="primary-action-button" href="#">
+                  Meld uw voorgenomen huwelijk aan
+                  <UtrechtIconArrow />
+                </ButtonLink>
+                <br />
                 <Paragraph>Na goedkeuring ontvangt u een e-mail over hoe het verder gaat.</Paragraph>
                 <Heading3 id="stap-4">Stap 4: Trouwdatum en -locatie vastleggen</Heading3>
                 <Paragraph>Wacht niet te lang met het vastleggen van een trouwdatum.</Paragraph>

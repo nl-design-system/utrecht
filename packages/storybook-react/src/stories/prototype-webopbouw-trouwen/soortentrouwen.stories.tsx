@@ -25,6 +25,7 @@ import {
   PageContent,
   PageHeader,
   Paragraph,
+  SpotlightSection,
   Surface,
   Table,
   TableBody,
@@ -144,7 +145,9 @@ export const One: Story = {
                   <TableBody>
                     <TableRow>
                       <TableHeaderCell scope="row">Zonder ceremonie - Eenvoudig</TableHeaderCell>
-                      <TableCell>Ma 11.00 en 11.30 uur, di/wo/vr 10.00, 10.30, 11.00, 11.30 uur</TableCell>
+                      <TableCell>
+                        Maandag om 11.00 en 11.30. Dinsdag, woensdag en vrijdag om 10.00, 10.30, 11.00 of 11.30
+                      </TableCell>
                       <TableCell>10 minuten</TableCell>
                       <TableCell>10</TableCell>
                       <TableCell>4 maanden</TableCell>
@@ -152,7 +155,7 @@ export const One: Story = {
                     </TableRow>
                     <TableRow>
                       <TableHeaderCell scope="row">Zonder ceremonie - Flits</TableHeaderCell>
-                      <TableCell>Wo en vr 9.00 – 10.00 uur</TableCell>
+                      <TableCell>Woensdag en vrijdag tussen 9.00 – 10.00</TableCell>
                       <TableCell>5 minuten</TableCell>
                       <TableCell>6</TableCell>
                       <TableCell>4 maanden</TableCell>
@@ -160,7 +163,7 @@ export const One: Story = {
                     </TableRow>
                     <TableRow>
                       <TableHeaderCell scope="row">Zonder ceremonie - Gratis</TableHeaderCell>
-                      <TableCell>Ma 10.00, 10.30 uur</TableCell>
+                      <TableCell>Maandag om 10.00 en 10.30</TableCell>
                       <TableCell>10 minuten</TableCell>
                       <TableCell>10</TableCell>
                       <TableCell>10 maanden</TableCell>
@@ -168,7 +171,7 @@ export const One: Story = {
                     </TableRow>
                     <TableRow>
                       <TableHeaderCell scope="row">Met ceremonie</TableHeaderCell>
-                      <TableCell></TableCell>
+                      <TableCell>In overleg</TableCell>
                       <TableCell>30-45 minuten</TableCell>
                       <TableCell>Afhankelijk van locatie</TableCell>
                       <TableCell>Afhankelijk van locatie</TableCell>
@@ -242,6 +245,17 @@ export const One: Story = {
                   Trouwen met een ceremonie is trouwen op een locatie die u zelf kiest. De trouwambtenaar houdt een
                   persoonlijke toespraak.
                 </Paragraph>
+                <SpotlightSection type="warning">
+                  <Heading3>Wachttijd</Heading3>
+                  <Paragraph>
+                    Vraag de trouwdatum en trouwlocatie die u wilt zo snel mogelijk bij ons aan. Doe dit het liefst
+                    minimaal 3 maanden voor de geplande trouwdatum. Zo voorkomt u dat wij u moeten teleurstellen omdat
+                    op de door u gewenste datum al te druk is. In de populaire trouwmaanden mei/juni/september of bij
+                    bijzondere data kunt u hiervoor beter nog een langere periode aanhouden. U kunt uiterlijk 18 maanden
+                    van tevoren de gewenste huwelijksdatum bij ons aanvragen.
+                  </Paragraph>
+                </SpotlightSection>
+
                 <UnorderedList>
                   <UnorderedListItem>
                     Kosten: afhankelijk van dag en tijd, zie <Link href="#kosten-per-locatie">kosten per locatie</Link>.
@@ -262,13 +276,6 @@ export const One: Story = {
                     vooraf contact.
                   </UnorderedListItem>
                   <UnorderedListItem>Hoe lang: maximaal 30-45 minuten</UnorderedListItem>
-                  <UnorderedListItem>
-                    Wachttijd: vraag de trouwdatum en trouwlocatie die u wilt zo snel mogelijk bij ons aan. Doe dit het
-                    liefst minimaal 3 maanden voor de geplande trouwdatum. Zo voorkomt u dat wij u moeten teleurstellen
-                    omdat op de door u gewenste datum al te druk is. In de populaire trouwmaanden mei/juni/september of
-                    bij bijzondere data kunt u hiervoor beter nog een langere periode aanhouden. U kunt uiterlijk 18
-                    maanden van tevoren de gewenste huwelijksdatum bij ons aanvragen.
-                  </UnorderedListItem>
                   <UnorderedListItem>Wel uitwisseling ringen of foto&apos;s maken</UnorderedListItem>
                   <UnorderedListItem>Wel een toespraak</UnorderedListItem>
                   <UnorderedListItem>
