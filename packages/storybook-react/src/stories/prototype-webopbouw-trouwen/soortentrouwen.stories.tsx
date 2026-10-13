@@ -145,9 +145,7 @@ export const One: Story = {
                   <TableBody>
                     <TableRow>
                       <TableHeaderCell scope="row">Zonder ceremonie - Eenvoudig</TableHeaderCell>
-                      <TableCell>
-                        Maandag om 11.00 en 11.30. Dinsdag, woensdag en vrijdag om 10.00, 10.30, 11.00 of 11.30
-                      </TableCell>
+                      <TableCell>Ma om 11.00 en 11.30 uur. Di/wo/vr om 10.00, 10.30, 11.00, 11.30</TableCell>
                       <TableCell>10 minuten</TableCell>
                       <TableCell>10</TableCell>
                       <TableCell>4 maanden</TableCell>
@@ -155,7 +153,7 @@ export const One: Story = {
                     </TableRow>
                     <TableRow>
                       <TableHeaderCell scope="row">Zonder ceremonie - Flits</TableHeaderCell>
-                      <TableCell>Woensdag en vrijdag tussen 9.00 – 10.00</TableCell>
+                      <TableCell>Wo en vr tussen 9.00 – 10.00</TableCell>
                       <TableCell>5 minuten</TableCell>
                       <TableCell>6</TableCell>
                       <TableCell>4 maanden</TableCell>
@@ -163,7 +161,7 @@ export const One: Story = {
                     </TableRow>
                     <TableRow>
                       <TableHeaderCell scope="row">Zonder ceremonie - Gratis</TableHeaderCell>
-                      <TableCell>Maandag om 10.00 en 10.30</TableCell>
+                      <TableCell>Ma om 10.00 en 10.30</TableCell>
                       <TableCell>10 minuten</TableCell>
                       <TableCell>10</TableCell>
                       <TableCell>10 maanden</TableCell>
