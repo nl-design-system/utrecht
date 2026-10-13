@@ -96,7 +96,7 @@ export const One: Story = {
                   <UtrechtIconChevronRight />
                   Lees meer over trouwen en wat u hiervoor moet regelen
                 </Link>
-                <Heading2>Geregistreerd Partnerschap</Heading2>
+                <Heading2>Geregistreerd partnerschap</Heading2>
                 <UnorderedList>
                   <UnorderedListItem>U sluit het partnerschap met het zetten van de handtekening</UnorderedListItem>
                   <UnorderedListItem>
