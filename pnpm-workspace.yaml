@@ -41,6 +41,7 @@ overrides:
   shell-quote@>=1.8.4 <1.11.0: ^1.11.0
   tinypool@<2.1.2: ^2.1.2
   piscina@<4.9.4: ^4.9.4
+  handlebars@>=3.0.0 <=4.7.9: 4.7.10
 
 packageExtensions:
   '@vue/test-utils':
