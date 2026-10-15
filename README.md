@@ -197,12 +197,12 @@ The scripts above use `nx` to automatically run all scripts that are a prerequis
 
 ### npm scripts for the release process
 
-| script              | description                                                               |
-| ------------------- | ------------------------------------------------------------------------- |
-| `pnpm run build`    | Build each package                                                        |
-| `pnpm run nx-build` | Build each package (but faster, using cache)                              |
-| `pnpm run publish`  | Publish each package to the npm registry                                  |
-| `pnpm run release`  | Determine new version number automatically and update each `package.json` |
+| script                       | description                                                  |
+| ---------------------------- | ------------------------------------------------------------ |
+| `pnpm run build`             | Build each package                                           |
+| `pnpm run nx-build`          | Build each package (but faster, using cache)                 |
+| `pnpm run changeset`         | Create a changeset for packages that need a version bump     |
+| `pnpm run changeset:publish` | Publish packages with pending changesets to the npm registry |
 
 ## MCP server
 
