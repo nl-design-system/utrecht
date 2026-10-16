@@ -51,15 +51,15 @@
   text-decoration-skip-ink: all;
 
   @include link-css.utrecht-link--any-link;
+}
 
-  &::after {
-    block-size: 100%;
-    content: "";
-    inline-size: 100%;
-    inset-block-start: 0;
-    inset-inline-start: 0;
-    position: absolute;
-  }
+@mixin utrecht-card__link-after {
+  block-size: 100%;
+  content: "";
+  inline-size: 100%;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  position: absolute;
 }
 
 @mixin utrecht-card__heading {

@@ -37,6 +37,10 @@
   @include utrecht-card__link;
 }
 
+.utrecht-card__link::after {
+  @include utrecht-card__link-after;
+}
+
 .utrecht-card--neutral {
   @include utrecht-card--neutral;
 }
