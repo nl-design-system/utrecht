@@ -7,13 +7,18 @@
 import clsx from 'clsx';
 import { ForwardedRef, forwardRef, HTMLAttributes, PropsWithChildren } from 'react';
 
-export type PageLayoutProps = HTMLAttributes<HTMLElement>;
+export interface PageLayoutProps extends HTMLAttributes<HTMLElement> {
+  Component?: 'div' | 'body';
+}
 
 export const PageLayout = forwardRef(
-  ({ children, className, ...restProps }: PropsWithChildren<PageLayoutProps>, ref: ForwardedRef<HTMLDivElement>) => (
-    <div {...restProps} ref={ref} className={clsx('utrecht-page-layout', className)}>
+  (
+    { Component = 'div', children, className, ...restProps }: PropsWithChildren<PageLayoutProps>,
+    ref: ForwardedRef<HTMLDivElement>,
+  ) => (
+    <Component {...restProps} ref={ref as any} className={clsx('utrecht-page-layout', className)}>
       {children}
-    </div>
+    </Component>
   ),
 );
 
