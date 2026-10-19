@@ -11,7 +11,7 @@ describe('Page Layout', () => {
     expect(div).toBeInTheDocument();
   });
 
-  it.todo('can render an HTML body element', () => {
+  it.skip('can render an HTML body element', () => {
     // Cannot render `<body>` inside `<body>`, so cannot test this with this library.
     const { container } = render(<PageLayout Component="body" />);
 
