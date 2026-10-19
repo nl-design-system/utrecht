@@ -1,5 +1,13 @@
 # @utrecht/component-library-design-tokens
 
+## 2.0.8
+
+### Patch Changes
+
+- Updated dependencies [7908b7a]
+  - @utrecht/unordered-list-css@4.0.0
+  - @utrecht/html-content-css@3.0.1
+
 ## 2.0.7
 
 ### Patch Changes

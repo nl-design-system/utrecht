@@ -1,5 +1,11 @@
 # @utrecht/page-layout-react
 
+## 1.1.0
+
+### Minor Changes
+
+- 89416ed: Allow rendering `PageLayout` as `<body>` element using `<PageLayout Component='body'>...</PageLayout>`.
+
 ## 1.0.12
 
 ### Patch Changes
