@@ -113,10 +113,10 @@ describe('Card', () => {
     expect(heading).toBeInTheDocument();
   });
 
-  it('renders heading with correct class and level', () => {
+  it('renders heading level 4 with heading-2 styling', () => {
     render(<Card {...initialCardProps} headingLevel={4} />);
     const heading = screen.getByRole('heading', { level: 4 });
-    expect(heading).toHaveClass('utrecht-heading-4');
+    expect(heading).toHaveClass('utrecht-heading-2');
     expect(heading).toHaveClass('utrecht-card__header');
   });
   it('renders a link element when the href provided', () => {
