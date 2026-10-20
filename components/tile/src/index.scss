@@ -59,4 +59,19 @@
   &:hover {
     @include utrecht-tile--hover;
   }
+
+  &--primary#{&}--hover,
+  &--primary:hover {
+    @include utrecht-tile--primary-hover;
+  }
+
+  &--secondary#{&}--hover,
+  &--secondary:hover {
+    @include utrecht-tile--secondary-hover;
+  }
+
+  &--tertiary#{&}--hover,
+  &--tertiary:hover {
+    @include utrecht-tile--tertiary-hover;
+  }
 }

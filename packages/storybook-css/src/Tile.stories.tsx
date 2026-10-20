@@ -16,7 +16,7 @@ interface TileStoryProps extends TileProps {
 const TileStory = ({ children, icon, ...props }: TileStoryProps) => {
   const IconElement = icon;
   return (
-    <div style={{ inlineSize: '400px', paddingBlock: '16px', paddingInline: '16px' }}>
+    <div style={{ inlineSize: '250px', paddingBlock: '16px', paddingInline: '16px' }}>
       <Tile icon={IconElement ? <IconElement /> : null} {...props}>
         {children}
       </Tile>
