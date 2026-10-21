@@ -1007,6 +1007,15 @@ importers:
         specifier: workspace:*
         version: link:../focus-ring
 
+  components/tile:
+    devDependencies:
+      '@utrecht/build-utils-css':
+        specifier: workspace:*
+        version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
+
   components/tooltip:
     devDependencies:
       '@utrecht/build-utils-css':
@@ -1815,6 +1824,9 @@ importers:
       '@utrecht/textbox-css':
         specifier: workspace:*
         version: link:../../components/textbox
+      '@utrecht/tile-css':
+        specifier: workspace:*
+        version: link:../../components/tile
       '@utrecht/tooltip-css':
         specifier: workspace:*
         version: link:../../components/tooltip
@@ -5676,6 +5688,9 @@ importers:
       '@utrecht/textbox-css':
         specifier: workspace:*
         version: link:../../components/textbox
+      '@utrecht/tile-css':
+        specifier: workspace:*
+        version: link:../../components/tile
       '@utrecht/tooltip-css':
         specifier: workspace:*
         version: link:../../components/tooltip
@@ -6342,6 +6357,9 @@ importers:
       '@utrecht/textbox-react':
         specifier: workspace:*
         version: link:../components-react/textbox-react
+      '@utrecht/tile-css':
+        specifier: workspace:*
+        version: link:../../components/tile
       '@utrecht/tooltip-css':
         specifier: workspace:*
         version: link:../../components/tooltip

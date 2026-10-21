@@ -1,0 +1,111 @@
+/**
+ * @license EUPL-1.2
+ * Copyright (c) 2020-2025 Frameless B.V.
+ * Copyright (c) 2021-2025 Gemeente Utrecht
+ */
+
+@use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+
+@mixin utrecht-tile {
+  background-color: var(--utrecht-tile-background-color);
+  box-sizing: border-box;
+  color: var(--utrecht-tile-color);
+  cursor: var(--utrecht-action-activate-cursor, revert);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  min-block-size: 6.25rem;
+  padding-block-end: var(--utrecht-tile-padding-block-end);
+  padding-block-start: var(--utrecht-tile-padding-block-start);
+  padding-inline-end: var(--utrecht-tile-padding-inline-end);
+  padding-inline-start: var(--utrecht-tile-padding-inline-start);
+  position: relative;
+  text-decoration: none;
+}
+
+@mixin utrecht-tile__link {
+  display: flex;
+  flex-direction: column;
+  row-gap: var(--utrecht-tile-link-row-gap);
+}
+
+@mixin utrecht-tile__icon {
+  --utrecht-icon-size: var(--utrecht-tile-icon-size);
+
+  display: flex;
+}
+
+@mixin utrecht-tile__text {
+  font-size: var(--utrecht-tile-text-font-size);
+  font-weight: var(--utrecht-tile-text-font-weight);
+  hyphens: auto;
+  line-height: var(--utrecht-tile-text-line-height);
+  overflow-wrap: break-word;
+}
+
+@mixin utrecht-tile__arrow-container {
+  /* vertically center the arrow on the last line of text */
+  --_utrecht-tile-text-line-block-size: calc(var(--utrecht-tile-text-font-size) * var(--utrecht-tile-text-line-height));
+  --_utrecht-tile-arrow-offset: calc(
+    (var(--_utrecht-tile-text-line-block-size) - var(--utrecht-tile-arrow-container-block-size)) / 2
+  );
+
+  block-size: var(--utrecht-tile-arrow-container-block-size);
+  inline-size: var(--utrecht-tile-arrow-container-inline-size);
+  inset-block-end: calc(var(--utrecht-tile-padding-block-end) + var(--_utrecht-tile-arrow-offset));
+  inset-inline-end: var(--utrecht-tile-arrow-container-inset-inline-end);
+  position: absolute;
+}
+
+@mixin utrecht-tile__arrow {
+  --utrecht-icon-size: var(--utrecht-tile-arrow-block-size);
+
+  block-size: var(--utrecht-tile-arrow-block-size);
+  display: block;
+  inline-size: var(--utrecht-tile-arrow-inline-size);
+  line-height: 0;
+}
+
+@mixin utrecht-tile--primary {
+  background-color: var(--utrecht-tile-primary-background-color);
+  color: var(--utrecht-tile-primary-color);
+}
+
+@mixin utrecht-tile--secondary {
+  background-color: var(--utrecht-tile-secondary-background-color);
+  color: var(--utrecht-tile-secondary-color);
+}
+
+@mixin utrecht-tile--tertiary {
+  background-color: var(--utrecht-tile-tertiary-background-color);
+  color: var(--utrecht-tile-tertiary-color);
+}
+
+@mixin utrecht-tile--primary-hover {
+  background-color: var(--utrecht-tile-primary-hover-background-color, var(--utrecht-tile-primary-background-color));
+}
+
+@mixin utrecht-tile--secondary-hover {
+  background-color: var(
+    --utrecht-tile-secondary-hover-background-color,
+    var(--utrecht-tile-secondary-background-color)
+  );
+}
+
+@mixin utrecht-tile--tertiary-hover {
+  background-color: var(--utrecht-tile-tertiary-hover-background-color, var(--utrecht-tile-tertiary-background-color));
+}
+
+@mixin utrecht-tile--focus-visible {
+  /* the pseudo-class for `:focus-visible` is implemented via the mixin */
+  @include focus-ring.utrecht-focus-visible;
+}
+
+@mixin utrecht-tile--focus {
+  scale: var(--utrecht-tile-focus-scale, 1);
+}
+
+@mixin utrecht-tile--hover {
+  box-shadow: var(--utrecht-tile-hover-box-shadow, none);
+  scale: var(--utrecht-tile-hover-scale, 1);
+}
