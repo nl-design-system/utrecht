@@ -138,7 +138,7 @@ export const One: Story = {
                 </UnorderedList>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="https://www.rijksoverheid.nl/onderwerpen/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/checklist-samenlevingscontract"
+                  href="https://www.rijksoverheid.nl/themas/familie-zorg-en-gezondheid/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/vraag-en-antwoord/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/checklist-samenlevingscontract"
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over het samenlevingscontract
