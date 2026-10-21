@@ -49,7 +49,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Pagina indeling/Soorten',
+  title: 'Prototypes/Trouwen/Pagina indeling/Huwelijk - Soorten',
   id: 'trouwen-soorten-trouwen',
   component: Page,
   parameters: {

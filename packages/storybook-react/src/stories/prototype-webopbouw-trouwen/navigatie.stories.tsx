@@ -38,7 +38,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Pagina indeling/Navigeren',
+  title: 'Prototypes/Trouwen/Pagina indeling/Huwelijk - Navigeren',
   id: 'trouwen-navigeren',
   component: Page,
   parameters: {
@@ -109,7 +109,7 @@ export const One: Story = {
                 </UnorderedList>{' '}
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap"
+                  href={urls.partnerschapRegelen}
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over het geregistreerd partnerschap en wat u hiervoor moet regelen
@@ -124,7 +124,7 @@ export const One: Story = {
                 </UnorderedList>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="https://loket.digitaal.utrecht.nl/nl/producten/geregistreerd-partnerschap#geregistreerd-partnerschap-omzetten-in-huwelijk"
+                  href={urls.omzettingRegelen}
                 >
                   <UtrechtIconChevronRight />
                   Lees meer over het omzetten van een partnerschap in een huwelijk

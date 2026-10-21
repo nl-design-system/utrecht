@@ -40,7 +40,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Pagina indeling/Regelen',
+  title: 'Prototypes/Trouwen/Pagina indeling/Huwelijk - Regelen',
   id: 'trouwen-regelen',
   component: Page,
   parameters: {
