@@ -47,7 +47,7 @@ import '../styles.css';
 import PageHeaderWithSearch from '../prototype-src/webpaginablokken/PageHeaderWithSearch.js';
 
 const meta = {
-  title: 'Prototypes/Trouwen/Pagina indeling/Veelgestelde vragen',
+  title: 'Prototypes/Trouwen/Pagina indeling/Huwelijk - Veelgestelde vragen',
   id: 'trouwen-veelgesteldevragen',
   component: Page,
   parameters: {
