@@ -62,6 +62,7 @@ const preview: Preview = {
 
       return (
         <div
+          style={{ '--utrecht-root-background-color': '#fff' }}
           className={clsx('utrecht-root', {
             'utrecht-reduced-motion': isStorybookReducedMotion,
           })}

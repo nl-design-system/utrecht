@@ -3,7 +3,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Heading2, Paragraph, Surface } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
-import { utrechtSurfaceBackgroundColor } from '@utrecht/design-tokens/dist/index.mjs';
+import { utrechtRootBackgroundColor } from '@utrecht/design-tokens/dist/index.mjs';
 import readme from '@utrecht/surface-css/README.md?raw';
 import themeColorDocs from '@utrecht/surface-css/_surface-theme-color.md?raw';
 import tokensDefinition from '@utrecht/surface-css/src/tokens.json';
@@ -66,7 +66,7 @@ export const ThemeColor: Story = {
     children: '',
   },
   name: 'Theme color',
-  render: () => MetaThemeColor({ color: utrechtSurfaceBackgroundColor }),
+  render: () => MetaThemeColor({ color: utrechtRootBackgroundColor }),
   parameters: {
     docs: {
       description: {
