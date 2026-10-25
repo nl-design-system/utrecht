@@ -78,6 +78,10 @@ $utrecht-support-prince-xml: false !default;
     var(--utrecht-form-control-disabled-color, var(--utrecht-select-color, var(--utrecht-form-control-color)))
   );
   cursor: var(--utrecht-action-disabled-cursor, not-allowed);
+  /* Chromium gives a disabled `<select>` `opacity: 0.7` in its user agent stylesheet, while a disabled
+   * text input gets none. The disabled colors already come from the design tokens, so undo it:
+   * otherwise a disabled select looks paler than a disabled textbox and its contrast drops. */
+  opacity: 100%;
 }
 
 @mixin utrecht-select--hover {
