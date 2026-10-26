@@ -1,6 +1,7 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import React from 'react';
+import { waitFor } from 'storybook/test';
 import { DataSourceContent, FloDecision } from './FloDecision';
 import afvalBeslisboomRegelhulpData from './FloDecision/afval-beslisboom-regelhulp.json';
 import voorbeeldToelichtingenData from './FloDecision/voorbeeld-toelichtingen-data.json';
@@ -57,6 +58,15 @@ const meta: Meta<FloDecisionStoryProps> = {
     },
     tokens,
     docs: {},
+  },
+  // The decision tree is rendered by the Flo client script, which loads asynchronously after the story has rendered.
+  // Wait for it, because Chromatic only waits for the play function before taking the snapshot.
+  play: async ({ canvasElement }) => {
+    await waitFor(() => {
+      if (!canvasElement.querySelector('flo-decision')?.childElementCount) {
+        throw new Error('Flo decision tree has not rendered yet');
+      }
+    });
   },
 };
 
