@@ -42,6 +42,12 @@ overrides:
   tinypool@<2.1.2: ^2.1.2
   piscina@<4.9.4: ^4.9.4
   handlebars@>=3.0.0 <=4.7.9: 4.7.10
+  # @storybook/vue3 >=10.6 imports `NodeTypes` from @vue/compiler-dom, which is only exported at runtime since
+  # Vue 3.4, but it declares `^3.2.47`. pnpm then reuses the 3.3.13 pinned by @utrecht/component-library-vue, and
+  # Storybook fails with "Cannot find module .../@storybook/vue3-vite/preset". Keep in sync with the `vue` version
+  # in packages/storybook-vue. Remove once @utrecht/component-library-vue is upgraded to Vue >=3.4 (no 3.3.x left
+  # in the lockfile), or once @storybook/vue3 declares `@vue/compiler-dom@>=3.4`.
+  '@storybook/vue3>@vue/compiler-dom': 3.5.27
 
 packageExtensions:
   '@vue/test-utils':

@@ -16,6 +16,7 @@ overrides:
   tinypool@<2.1.2: ^2.1.2
   piscina@<4.9.4: ^4.9.4
   handlebars@>=3.0.0 <=4.7.9: 4.7.10
+  '@storybook/vue3>@vue/compiler-dom': 3.5.27
 
 packageExtensionsChecksum: sha256-DyTONDcwuNBL+rN8AjnH/wxMB5hrUymzWhDnSpd567I=
 
@@ -7568,8 +7569,8 @@ importers:
         specifier: 0.8.1
         version: 0.8.1(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))
       eslint-plugin-storybook:
-        specifier: 10.3.5
-        version: 10.3.5(eslint@8.57.1(supports-color@10.2.2))(storybook@10.6.3(@types/react@19.2.14)(prettier@3.9.6)(react@19.2.4))(supports-color@10.2.2)(typescript@5.9.3)
+        specifier: 10.6.3
+        version: 10.6.3(eslint@8.57.1(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
       http-server:
         specifier: 14.1.1
         version: 14.1.1(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
@@ -19029,12 +19030,6 @@ packages:
     engines: {node: '>= 18'}
     peerDependencies:
       eslint: '>=6'
-
-  eslint-plugin-storybook@10.3.5:
-    resolution: {integrity: sha512-rEFkfU3ypF44GpB4tiJ9EFDItueoGvGi3+weLHZax2ON2MB7VIDsxdSUGvIU5tMURg+oWYlpzCyLm4TpDq2deA==}
-    peerDependencies:
-      eslint: '>=8'
-      storybook: ^10.3.5
 
   eslint-plugin-storybook@10.6.3:
     resolution: {integrity: sha512-AmM0vKC6iaw6geKS3gAwLMnjIsfXxddYcm+zPSRX98TbFm1gAHHeYZtOCm4iEu5fcLIdeUlmDmHihqMVjSw+lw==}
@@ -39561,7 +39556,7 @@ snapshots:
   '@storybook/vue3@10.6.3(storybook@10.6.3(@types/react@19.2.14)(prettier@3.9.6)(react@19.2.4))(typescript@5.9.3)(vue@3.5.27(typescript@5.9.3))':
     dependencies:
       '@storybook/global': 5.0.0
-      '@vue/compiler-dom': 3.3.13
+      '@vue/compiler-dom': 3.5.27
       '@vue/language-core': 3.3.13
       storybook: 10.6.3(@types/react@19.2.14)(prettier@3.9.6)(react@19.2.4)
       type-fest: 5.10.0
@@ -45264,15 +45259,6 @@ snapshots:
       eslint: 8.57.1(supports-color@10.2.2)
       requireindex: 1.2.0
       ts-dedent: 2.2.0
-    transitivePeerDependencies:
-      - supports-color
-      - typescript
-
-  eslint-plugin-storybook@10.3.5(eslint@8.57.1(supports-color@10.2.2))(storybook@10.6.3(@types/react@19.2.14)(prettier@3.9.6)(react@19.2.4))(supports-color@10.2.2)(typescript@5.9.3):
-    dependencies:
-      '@typescript-eslint/utils': 8.56.1(eslint@8.57.1(supports-color@10.2.2))(supports-color@10.2.2)(typescript@5.9.3)
-      eslint: 8.57.1(supports-color@10.2.2)
-      storybook: 10.6.3(@types/react@19.2.14)(prettier@3.9.6)(react@19.2.4)
     transitivePeerDependencies:
       - supports-color
       - typescript
