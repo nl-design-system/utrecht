@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { cloneDeepWith, isPlainObject } from 'es-toolkit/compat';
 import { glob } from 'glob';
 import { getComponentTokens } from './lib.mjs';
-import { isDesignTokenDefinition } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens.js';
+import { isDesignTokenDefinition } from './design-tokens.mjs';
 
 export const getCss = async () => {
   const cssFiles = await glob('../../components/*/dist/index.css');

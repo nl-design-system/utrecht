@@ -1,7 +1,7 @@
 import { mkdir, writeFile } from 'node:fs/promises';
 import { getComponentTokens } from './lib.mjs';
 import { cloneDeepWith, isPlainObject } from 'es-toolkit/compat';
-import { isDesignTokenDefinition } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens.js';
+import { isDesignTokenDefinition } from './design-tokens.mjs';
 
 const traverseDeep = (root, parents, current, valueTest, callback) => {
   if (valueTest(current)) {

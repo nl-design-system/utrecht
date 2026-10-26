@@ -2,7 +2,7 @@ import { readFile } from 'node:fs/promises';
 import { cloneDeepWith, merge, isPlainObject } from 'es-toolkit/compat';
 import { glob } from 'glob';
 import { getComponentTokens } from './lib.mjs';
-import { isDesignToken, isDesignTokenDefinition } from '@nl-design-system-unstable/theme-toolkit/dist/design-tokens.js';
+import { isDesignToken, isDesignTokenDefinition } from './design-tokens.mjs';
 
 export const traverseDeep = (root, parents, current, valueTest, callback) => {
   if (valueTest(current)) {
