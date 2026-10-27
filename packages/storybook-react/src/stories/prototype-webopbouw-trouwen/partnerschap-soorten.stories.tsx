@@ -237,10 +237,9 @@ export const One: Story = {
                   <Heading3>Wachttijd</Heading3>
                   <Paragraph>
                     Vraag de datum en locatie voor het sluiten van uw partnerschap zo snel mogelijk bij ons aan. Doe dit
-                    het liefst minimaal 3 maanden voor de geplande datum. Zo voorkomt u dat wij u moeten teleurstellen
-                    omdat het op de door u gewenste datum al te druk is. In de populaire maanden mei/juni/september of
-                    bij bijzondere data kunt u hiervoor beter nog een langere periode aanhouden. U kunt uiterlijk 18
-                    maanden van tevoren de gewenste datum bij ons aanvragen.
+                    het liefst minimaal 3 maanden en maximaal 18 maanden voor uw geplande datum. Anders is onze planning
+                    vol. In de populaire maanden mei/juni/september of bij bijzondere data kunt u hiervoor beter nog een
+                    langere periode aanhouden.
                   </Paragraph>
                 </SpotlightSection>
                 <br />

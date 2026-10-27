@@ -247,11 +247,10 @@ export const One: Story = {
                 <SpotlightSection type="warning">
                   <Heading3>Wachttijd</Heading3>
                   <Paragraph>
-                    Vraag de trouwdatum en trouwlocatie die u wilt zo snel mogelijk bij ons aan. Doe dit het liefst
-                    minimaal 3 maanden voor de geplande trouwdatum. Zo voorkomt u dat wij u moeten teleurstellen omdat
-                    op de door u gewenste datum al te druk is. In de populaire trouwmaanden mei/juni/september of bij
-                    bijzondere data kunt u hiervoor beter nog een langere periode aanhouden. U kunt uiterlijk 18 maanden
-                    van tevoren de gewenste huwelijksdatum bij ons aanvragen.
+                    Vraag de trouwdatum en -locatie zo snel mogelijk bij ons aan. Doe dit het liefst minimaal 3 maanden
+                    en maximaal 18 maanden voor uw geplande trouwdatum. Anders is onze planning vol. In de populaire
+                    trouwmaanden mei/juni/september of bij bijzondere data kunt u hiervoor beter nog een langere periode
+                    aanhouden.
                   </Paragraph>
                 </SpotlightSection>
                 <br />

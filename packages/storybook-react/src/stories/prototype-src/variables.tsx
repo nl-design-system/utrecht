@@ -37,7 +37,6 @@ const urls = {
   partnerschapSoorten: './iframe.html?args=&id=partnerschap-soorten--one&viewMode=story',
   omzettingRegelen: './iframe.html?args=&id=omzetting-regelen--one&viewMode=story',
   omzettingRegelenChecklist: './iframe.html?args=&id=omzetting-regelen--one&viewMode=story#regelwerk',
-  omzettingSoorten: './iframe.html?args=&id=omzetting-soorten--one&viewMode=story',
   volgordeScenario: './iframe.html?globals=&args=&id=volgorde--scenario&viewMode=story',
   volgorde1: './iframe.html?globals=&args=&id=volgorde--verhuizen&viewMode=story',
 };

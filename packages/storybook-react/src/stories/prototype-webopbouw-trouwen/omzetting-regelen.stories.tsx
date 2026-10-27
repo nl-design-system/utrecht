@@ -87,7 +87,7 @@ export const One: Story = {
                 </Link>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href={urls.omzettingSoorten}
+                  href={urls.trouwenSoortenTrouwen}
                 >
                   <UtrechtIconChevronRight />
                   Mogelijkheden voor omzetting van geregistreerd partnerschap
@@ -108,24 +108,21 @@ export const One: Story = {
                     <Link href="#stap-3">Trouwambtenaar krijgen of zelf kiezen</Link>
                   </OrderedListItem>
                   <OrderedListItem>
-                    <Link href="#stap-4">Achternaam van uw kinderen kiezen</Link>
-                  </OrderedListItem>
-                  <OrderedListItem>
-                    <Link href="#stap-5">Juiste documenten regelen</Link>
+                    <Link href="#stap-4">Juiste documenten regelen</Link>
                   </OrderedListItem>
                 </OrderedList>
                 <Paragraph>Hieronder beschrijven we stap voor stap wat u moet doen.</Paragraph>
                 <Heading3 id="stap-1">Stap 1: Omzetting met of zonder ceremonie</Heading3>
                 <Paragraph>
                   Wilt u een eenvoudige omzetting zonder ceremonie op het stadskantoor? Of liever een uitgebreide
-                  omzetting met een ceremonie op een andere locatie?
+                  omzetting met een ceremonie op een andere locatie? Dit kan allemaal, net als bij trouwen.
                 </Paragraph>
                 <Link
                   className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href={urls.omzettingSoorten}
+                  href={urls.trouwenSoortenTrouwen}
                 >
                   <UtrechtIconChevronRight />
-                  Vergelijk verschillende mogelijkheden en kies wat het beste bij u past
+                  Vergelijk verschillende mogelijkheden van trouwen en kies wat het beste bij u past
                 </Link>
                 <Heading3 id="stap-2">Stap 2: Datum en locatie omzetting vastleggen</Heading3>
                 <Paragraph>Wacht niet te lang met het vastleggen van een datum voor de omzetting.</Paragraph>
@@ -142,31 +139,12 @@ export const One: Story = {
                     aan
                   </UnorderedListItem>
                 </UnorderedList>
-                <Heading3 id="stap-4">Stap 4: Achternaam van uw kinderen kiezen</Heading3>
-                <Paragraph>
-                  Hebt u bij de erkenning van uw kind gekozen voor een bepaalde achternaam voor uw kind(eren)? En gaat u
-                  als ouders uw partnerschap omzetten in een huwelijk? Dan kunt u eenmalig en alleen op dat moment de
-                  achternaam veranderen van de kind(eren) die u samen hebt. U kunt daarbij kiezen voor de achternaam van
-                  een van u of voor een combinatie van beide achternamen.
-                </Paragraph>
-                <Paragraph>
-                  Voor de verandering van de achternaam moet uw kind wel de Nederlandse nationaliteit hebben. Wilt u
-                  dit? Geef het aan bij het vastleggen van een datum voor omzetting van geregistreerd partnerschap in
-                  een huwelijk.
-                </Paragraph>
-                <Heading3 id="stap-5">Stap 5: Juiste documenten regelen</Heading3>
+                <Heading3 id="stap-4">Stap 4: Juiste documenten regelen</Heading3>
                 <Paragraph>
                   Woonde u of uw partner in het buitenland of woont een van u daar nog? Bent u in het buitenland
                   geboren? Of bent u eerder getrouwd geweest in het buitenland? Misschien hebben we dan extra documenten
                   van u nodig. Bel 14 030 en overleg of en wat er in uw geval nodig is.
                 </Paragraph>
-                <Link
-                  className="utrecht-link utrecht-link--html-a utrecht-advanced-link utrecht-advanced-link--with-icon"
-                  href="https://www.rijksoverheid.nl/vraag-en-antwoord/trouwen-samenlevingscontract-en-geregistreerd-partnerschap/huwelijk-in-nederland-met-een-buitenlander"
-                >
-                  <UtrechtIconChevronRight />
-                  Lees wat u hier allemaal voor moet regelen
-                </Link>
 
                 {/* Conditioneel renderen van HulpEnContact of HulpEnContact2 */}
                 {!showHulpEnContact2 ? (
