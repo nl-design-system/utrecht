@@ -114,7 +114,7 @@ export const One: Story = {
                   href={urls.omzettingRegelen}
                 >
                   <UtrechtIconChevronRight />
-                  Lees meer over het omzetten van een partnerschap in een huwelijk
+                  Lees meer over het omzetten van een partnerschap in huwelijk
                 </Link>
                 <Heading2>Samenlevingscontract</Heading2>
                 <UnorderedList>

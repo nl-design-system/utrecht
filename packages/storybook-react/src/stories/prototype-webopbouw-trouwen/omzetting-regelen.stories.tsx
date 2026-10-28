@@ -59,7 +59,7 @@ export const One: Story = {
             />
             <main>
               <section>
-                <Heading1>Omzetting geregistreerd partnerschap</Heading1>
+                <Heading1>Omzetten geregistreerd partnerschap in huwelijk</Heading1>
                 <Paragraph appearance="lead">
                   U wilt een geregistreerd partnerschap omzetten in een huwelijk. Bekijk wat u moet regelen en welke
                   mogelijkheden er zijn bij de gemeente Utrecht.
@@ -76,7 +76,7 @@ export const One: Story = {
                   href={urls.trouwenSoortenTrouwen}
                 >
                   <UtrechtIconChevronRight />
-                  Mogelijkheden voor omzetting van geregistreerd partnerschap
+                  Mogelijkheden voor omzetten van geregistreerd partnerschap
                 </Link>
 
                 <Heading2 id="regelwerk">Wat moet ik regelen?</Heading2>
