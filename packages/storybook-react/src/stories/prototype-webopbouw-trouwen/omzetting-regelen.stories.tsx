@@ -2,9 +2,6 @@ import { Meta, StoryObj } from '@storybook/react';
 import { UtrechtIconChevronRight } from '@utrecht/web-component-library-react';
 import React, { useState } from 'react';
 import {
-  BreadcrumbNav,
-  BreadcrumbNavLink,
-  BreadcrumbNavSeparator,
   Heading1,
   Heading2,
   Heading3,
@@ -22,6 +19,7 @@ import '../prototype-src/index.css';
 import Chatbot from '../prototype-src/contactformulier/Chatbot.js';
 import FooterContact from '../prototype-src/contactformulier/FooterContactFormulier.js';
 import urls from '../prototype-src/variables.js';
+import Breadcrumb, { wonenEnLeven } from '../prototype-src/webpaginablokken/Breadcrumb.js';
 import HoofdNavigatie from '../prototype-src/webpaginablokken/HoofdNavigatie.js';
 import HulpEnContact from '../prototype-src/webpaginablokken/HulpEnContact.js';
 import HulpEnContact2 from '../prototype-src/webpaginablokken/HulpEnContact2.js';
@@ -53,24 +51,12 @@ export const One: Story = {
           <PageHeaderWithSearch />
           <HoofdNavigatie />
           <PageContent>
-            <BreadcrumbNav>
-              <BreadcrumbNavLink href="https://www.utrecht.nl/">
-                <BreadcrumbNavSeparator></BreadcrumbNavSeparator>
-                Home
-              </BreadcrumbNavLink>
-              <BreadcrumbNavLink href="https://www.utrecht.nl/wonen-en-leven">
-                <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronRight />
-                </BreadcrumbNavSeparator>
-                Wonen en leven
-              </BreadcrumbNavLink>
-              <BreadcrumbNavLink href={urls.trouwenNavigatie}>
-                <BreadcrumbNavSeparator>
-                  <UtrechtIconChevronRight />
-                </BreadcrumbNavSeparator>
-                Trouwen, partnerschap en samenlevingscontract
-              </BreadcrumbNavLink>
-            </BreadcrumbNav>
+            <Breadcrumb
+              items={[
+                wonenEnLeven,
+                { label: 'Trouwen, partnerschap en samenlevingscontract', href: urls.trouwenNavigatie },
+              ]}
+            />
             <main>
               <section>
                 <Heading1>Omzetting geregistreerd partnerschap</Heading1>
