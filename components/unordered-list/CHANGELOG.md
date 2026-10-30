@@ -1,5 +1,11 @@
 # @utrecht/unordered-list-css
 
+## 4.0.0
+
+### Major Changes
+
+- 7908b7a: The --nested modifier of the UnorderedList became redundant after refactoring the component. The nested lists now have the correct spacing without using the modifier.
+
 ## 3.1.1
 
 ### Patch Changes

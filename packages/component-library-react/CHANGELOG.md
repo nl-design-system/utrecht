@@ -1,5 +1,13 @@
 # @utrecht/component-library-react
 
+## 15.0.1
+
+### Patch Changes
+
+- Updated dependencies [7908b7a]
+  - @utrecht/unordered-list-css@4.0.0
+  - @utrecht/html-content-css@3.0.1
+
 ## 15.0.0
 
 ### Major Changes
