@@ -1,4 +1,5 @@
-import { OFLibrary, OpenFormsModule } from '@open-formulieren/sdk';
+import OpenFormsModule from '@open-formulieren/sdk/formio-module';
+import OFLibrary from '@open-formulieren/sdk/formio-templates';
 import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import { merge } from 'es-toolkit/compat';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
