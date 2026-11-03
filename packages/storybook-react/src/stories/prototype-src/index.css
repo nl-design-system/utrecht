@@ -24,10 +24,6 @@
 
   /* active focus */
 
-  /* input breedtes */
-  --utrecht-textarea-max-inline-size: 400px;
-  --utrecht-textbox-max-inline-size: 328px;
-
   /* --- navigation tokens end --- */
 }
 
@@ -47,6 +43,10 @@
   --utrecht-document-font-family: "Noto Sans Variable", sans-serif !important;
   --utrecht-font-family-base: "Noto Sans Variable", sans-serif !important;
   --utrecht-font-family-heading: "Noto Sans Variable", sans-serif !important;
+
+  /* input breedtes (hier en niet op :root, zodat ze niet in andere stories terechtkomen) */
+  --utrecht-textarea-max-inline-size: 400px;
+  --utrecht-textbox-max-inline-size: 328px;
 
   font-family: "Noto Sans Variable", sans-serif !important;
 }
@@ -80,7 +80,7 @@
   font-weight: 400 !important;
   margin-block-start: 8px !important;
 }
-.utrecht-button-group {
+.utrecht-custom-theme .utrecht-button-group {
   margin-block-end: 1rem !important;
   margin-block-start: 1rem !important;
 }
@@ -294,7 +294,10 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
   background-color: #45a049;
 }
 
-.utrecht-theme {
+/* Scoped to the prototype wrapper: every story in this Storybook is wrapped in .utrecht-theme,
+ * so .utrecht-theme would leak these rules into other stories once this file is loaded. */
+/* stylelint-disable-next-line no-duplicate-selectors -- kept separate from the block above to keep the cascade order */
+.utrecht-custom-theme {
   .utrecht-breadcrumb-nav__link {
     padding-inline-start: 0; /* Gelijke uitlijning met linker kantlijn */
   }
