@@ -32,6 +32,11 @@ const urls = {
   trouwenRegelenChecklist: './iframe.html?args=&id=trouwen-regelen--one&viewMode=story#regelwerk',
   trouwenVeelgesteldeVragen: './iframe.html?args=&id=trouwen-veelgesteldevragen--one&viewMode=story',
   trouwenSoortenTrouwen: './iframe.html?args=&id=trouwen-soorten-trouwen--one&viewMode=story',
+  partnerschapRegelen: './iframe.html?args=&id=partnerschap-regelen--one&viewMode=story',
+  partnerschapRegelenChecklist: './iframe.html?args=&id=partnerschap-regelen--one&viewMode=story#regelwerk',
+  partnerschapSoorten: './iframe.html?args=&id=partnerschap-soorten--one&viewMode=story',
+  omzettingRegelen: './iframe.html?args=&id=omzetting-regelen--one&viewMode=story',
+  omzettingRegelenChecklist: './iframe.html?args=&id=omzetting-regelen--one&viewMode=story#regelwerk',
   volgordeScenario: './iframe.html?globals=&args=&id=volgorde--scenario&viewMode=story',
   volgorde1: './iframe.html?globals=&args=&id=volgorde--verhuizen&viewMode=story',
 };
