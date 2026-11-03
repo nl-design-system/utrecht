@@ -111,7 +111,12 @@ export const One: Story = {
                   Vergelijk verschillende mogelijkheden van trouwen en kies wat het beste bij u past
                 </Link>
                 <Heading3 id="stap-2">Stap 2: Datum en locatie omzetting vastleggen</Heading3>
-                <Paragraph>Wacht niet te lang met het vastleggen van een datum voor de omzetting.</Paragraph>
+                <Paragraph>
+                  Wacht niet te lang met het vastleggen van een datum voor de omzetting. Bel naar 14 030 en geef uw
+                  datum door. Daarna ontvangt u van ons een bevestigingsbrief en een e-mail met een link voor het maken
+                  van een vervolgafspraak. Tijdens deze vervolgafspraak controleren wij uw identiteit, betaalt u de
+                  kosten en legt u (als dit nog niet is gedaan) de datum van het huwelijk definitief vast.
+                </Paragraph>
                 <Heading3 id="stap-3">Stap 3: Trouwambtenaar krijgen of zelf kiezen</Heading3>
                 <UnorderedList>
                   <UnorderedListItem>

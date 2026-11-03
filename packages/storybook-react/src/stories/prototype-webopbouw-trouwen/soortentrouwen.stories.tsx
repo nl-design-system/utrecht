@@ -232,12 +232,16 @@ export const One: Story = {
                 <br />
                 <SpotlightSection type="warning">
                   <Heading3>Wachttijd</Heading3>
-                  <Paragraph>
-                    Vraag de trouwdatum en -locatie zo snel mogelijk bij ons aan. Doe dit het liefst minimaal 3 maanden
-                    en maximaal 18 maanden voor uw geplande trouwdatum. Anders is onze planning vol. In de populaire
-                    trouwmaanden mei/juni/september of bij bijzondere data kunt u hiervoor beter nog een langere periode
-                    aanhouden.
-                  </Paragraph>
+                  <Paragraph>Vraag de trouwdatum en -locatie zo snel mogelijk bij ons aan:</Paragraph>
+                  <UnorderedList>
+                    <UnorderedListItem>
+                      minimaal 3 maanden voor uw geplande trouwdatum anders is onze planning vol
+                    </UnorderedListItem>
+                    <UnorderedListItem>
+                      houd beter nog langer aan in de populaire trouwmaanden mei/juni/september of bij bijzondere data
+                    </UnorderedListItem>
+                    <UnorderedListItem>maximaal 18 maanden voor uw geplande trouwdatum</UnorderedListItem>
+                  </UnorderedList>
                 </SpotlightSection>
                 <br />
                 <UnorderedList>
