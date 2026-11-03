@@ -11,12 +11,14 @@ import type { Meta, StoryObj } from '@storybook/react-vite';
 import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
+// StoryUtil loads the Open Forms SDK CSS, which also styles `.utrecht-form-label--openforms`.
+// Import it before formio-renderer.css so the renderer rules win, in dev and in the production build.
+import { MultipleFormioComponents } from './StoryUtil.js';
 import '@open-formulieren/formio-renderer/formio-renderer.css';
 // Font Awesome is a peer dependency of @open-formulieren/formio-renderer
 import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
 import '@fortawesome/fontawesome-free/css/regular.min.css';
 import '@fortawesome/fontawesome-free/css/solid.min.css';
-import { MultipleFormioComponents } from './StoryUtil.js';
 
 // All common field types, grouped by category. Complex fields (map, file, signature,
 // cosign, NP-specific) are intentionally excluded — they require backend integration.
@@ -307,7 +309,11 @@ export const FormioRenderer: Story = {
             console.log('Form submitted:', values);
           }}
         >
-          <button type="submit" className="utrecht-button utrecht-button--primary-action">
+          <button
+            type="submit"
+            className="utrecht-button utrecht-button--primary-action"
+            style={{ marginBlockStart: 'var(--utrecht-space-block-md)' }}
+          >
             Verzenden
           </button>
         </FormioForm>
