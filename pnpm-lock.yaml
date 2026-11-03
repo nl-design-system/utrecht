@@ -6926,12 +6926,6 @@ importers:
       '@etchteam/storybook-addon-status':
         specifier: 8.0.0
         version: 8.0.0(storybook@10.6.3(@types/react@19.2.14)(prettier@3.9.6)(react@19.2.4))
-      '@floating-ui/react':
-        specifier: 0.27.20
-        version: 0.27.20(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      '@formatjs/intl':
-        specifier: 3.1.8
-        version: 3.1.8(typescript@5.9.3)
       '@fortawesome/fontawesome-free':
         specifier: 6.4.0
         version: 6.4.0
@@ -6946,13 +6940,10 @@ importers:
         version: 0.0.2-alpha.94
       '@open-formulieren/formio-renderer':
         specifier: 3.0.0-alpha.6
-        version: 3.0.0-alpha.6(4739d159f9bb5f0dc2ff053fa9255ea5)
-      '@open-formulieren/leaflet-tools':
-        specifier: 1.0.0
-        version: 1.0.0(leaflet@1.9.4)
+        version: 3.0.0-alpha.6(0fbf57e223a8d43ec688a19d7f62bc8e)
       '@open-formulieren/sdk':
         specifier: 3.5.6
-        version: 3.5.6(2968cae4b181a4a00792ea6bd6e9374e)
+        version: 3.5.6(e22c2f4106f17e45e49d576eb6987bfc)
       '@react-leaflet/core':
         specifier: 3.0.0
         version: 3.0.0(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -7028,9 +7019,6 @@ importers:
       '@utrecht/button-css':
         specifier: workspace:*
         version: link:../../components/button
-      '@utrecht/button-group-react':
-        specifier: workspace:*
-        version: link:../components-react/button-group-react
       '@utrecht/button-link-css':
         specifier: workspace:*
         version: link:../../components/button-link
@@ -7040,9 +7028,6 @@ importers:
       '@utrecht/calendar-css':
         specifier: workspace:*
         version: link:../../components/calendar
-      '@utrecht/calendar-react':
-        specifier: workspace:*
-        version: link:../components-react/calendar-react
       '@utrecht/card-css':
         specifier: workspace:*
         version: link:../../components/card
@@ -7055,9 +7040,6 @@ importers:
       '@utrecht/checkbox-group-react':
         specifier: workspace:*
         version: link:../components-react/checkbox-group-react
-      '@utrecht/checkbox-react':
-        specifier: workspace:*
-        version: link:../components-react/checkbox-react
       '@utrecht/code-block-css':
         specifier: workspace:*
         version: link:../../components/code-block
@@ -7106,9 +7088,6 @@ importers:
       '@utrecht/emphasis-css':
         specifier: workspace:*
         version: link:../../components/emphasis
-      '@utrecht/fieldset-react':
-        specifier: workspace:*
-        version: link:../components-react/fieldset-react
       '@utrecht/figure-css':
         specifier: workspace:*
         version: link:../../components/figure
@@ -7130,15 +7109,9 @@ importers:
       '@utrecht/form-field-description-css':
         specifier: workspace:*
         version: link:../../components/form-field-description
-      '@utrecht/form-field-description-react':
-        specifier: workspace:*
-        version: link:../components-react/form-field-description-react
       '@utrecht/form-field-error-message-css':
         specifier: workspace:*
         version: link:../../components/form-field-error-message
-      '@utrecht/form-field-error-message-react':
-        specifier: workspace:*
-        version: link:../components-react/form-field-error-message-react
       '@utrecht/form-field-react':
         specifier: workspace:*
         version: link:../components-react/form-field-react
@@ -7148,9 +7121,6 @@ importers:
       '@utrecht/form-label-css':
         specifier: workspace:*
         version: link:../../components/form-label
-      '@utrecht/form-label-react':
-        specifier: workspace:*
-        version: link:../components-react/form-label-react
       '@utrecht/form-toggle-css':
         specifier: workspace:*
         version: link:../../components/form-toggle
@@ -7202,9 +7172,6 @@ importers:
       '@utrecht/link-list-css':
         specifier: workspace:*
         version: link:../../components/link-list
-      '@utrecht/link-react':
-        specifier: workspace:*
-        version: link:../components-react/link-react
       '@utrecht/link-social-css':
         specifier: workspace:*
         version: link:../../components/link-social
@@ -7268,9 +7235,6 @@ importers:
       '@utrecht/radio-button-css':
         specifier: workspace:*
         version: link:../../components/radio-button
-      '@utrecht/radio-button-react':
-        specifier: workspace:*
-        version: link:../components-react/radio-button-react
       '@utrecht/radio-group-react':
         specifier: workspace:*
         version: link:../components-react/radio-group-react
@@ -7361,39 +7325,15 @@ importers:
       date-fns:
         specifier: 4.1.0
         version: 4.1.0
-      dompurify:
-        specifier: 3.4.13
-        version: 3.4.13
       es-toolkit:
         specifier: 1.46.0
         version: 1.46.0
-      formik:
-        specifier: 2.4.9
-        version: 2.4.9(react@19.2.4)
       http-server:
         specifier: 14.1.1
         version: 14.1.1(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
-      ibantools:
-        specifier: 4.5.4
-        version: 4.5.4
-      leaflet:
-        specifier: 1.9.4
-        version: 1.9.4
-      leaflet-draw:
-        specifier: 1.0.4
-        version: 1.0.4
-      leaflet-geosearch:
-        specifier: 4.4.0
-        version: 4.4.0
-      leaflet-gesture-handling:
-        specifier: 1.2.2
-        version: 1.2.2
       mcp-add:
         specifier: 0.2.4
         version: 0.2.4
-      proj4leaflet:
-        specifier: 1.0.2
-        version: 1.0.2
       react:
         specifier: 19.2.4
         version: 19.2.4
@@ -7403,33 +7343,12 @@ importers:
       react-dom:
         specifier: 19.2.4
         version: 19.2.4(react@19.2.4)
-      react-dropzone:
-        specifier: 20.1.0
-        version: 20.1.0(@types/react@19.2.14)(react@19.2.4)
       react-formio:
         specifier: 4.3.0
         version: 4.3.0(encoding@0.1.13)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-intl:
         specifier: 10.1.20
         version: 10.1.20(@types/react@19.2.14)(react@19.2.4)
-      react-leaflet:
-        specifier: 5.0.0
-        version: 5.0.0(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react-leaflet-draw:
-        specifier: 0.21.0
-        version: 0.21.0(leaflet-draw@1.0.4)(leaflet@1.9.4)(prop-types@15.8.1)(react-leaflet@5.0.0(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
-      react-number-format:
-        specifier: 5.4.5
-        version: 5.4.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react-select:
-        specifier: 5.10.2
-        version: 5.10.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)
-      react-signature-canvas:
-        specifier: 1.1.0-alpha.2
-        version: 1.1.0-alpha.2(@types/prop-types@15.7.11)(@types/react@19.2.14)(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      react-use:
-        specifier: 17.6.1
-        version: 17.6.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-vega:
         specifier: 8.0.0
         version: 8.0.0(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(vega-embed@7.1.0(vega-lite@6.4.2(vega@6.2.0))(vega@6.2.0))
@@ -7466,12 +7385,6 @@ importers:
       vite:
         specifier: 7.1.12
         version: 7.1.12(@types/node@24.10.4)(jiti@1.21.0)(less@4.2.0)(lightningcss@1.33.0)(sass-embedded@1.99.0)(sass@1.92.1)(terser@5.44.0)(tsx@4.19.4)(yaml@2.9.0)
-      zod:
-        specifier: 4.4.3
-        version: 4.4.3
-      zod-formik-adapter:
-        specifier: 2.0.0
-        version: 2.0.0(formik@2.4.9(react@19.2.4))(zod@4.4.3)
 
   packages/storybook-vue:
     devDependencies:
@@ -15667,9 +15580,6 @@ packages:
   '@types/prismjs@1.26.3':
     resolution: {integrity: sha512-A0D0aTXvjlqJ5ZILMz3rNfDBOx9hHxLZYv2by47Sm/pqW35zzjusrZTryatjN/Rf8Us2gZrJD+KeHbUSTux1Cw==}
 
-  '@types/prop-types@15.7.11':
-    resolution: {integrity: sha512-ga8y9v9uyeiLdpKddhxYQkxNDrfvuPrlFb0N1qnZZByvcElJaXthF1UhvCh9TLWJBEHeNtdnbysW7Y6Uq8CVng==}
-
   '@types/qs@6.9.10':
     resolution: {integrity: sha512-3Gnx08Ns1sEoCrWssEgTSJs/rsT2vhGP+Ja9cnnk9k4ALxinORlQneLXFeFKOTJMOeZUFD1s7w+w2AphTpvzZw==}
 
@@ -15728,9 +15638,6 @@ packages:
 
   '@types/serve-static@1.15.5':
     resolution: {integrity: sha512-PDRk21MnK70hja/YF8AHfC7yIsiQHn1rcXx7ijCFBX/k+XQJhQT/gw3xekXKJvx+5SXaMMS8oqQy09Mzvz2TuQ==}
-
-  '@types/signature_pad@2.3.6':
-    resolution: {integrity: sha512-v3j92gCQJoxomHhd+yaG4Vsf8tRS/XbzWKqDv85UsqjMGy4zhokuwKe4b6vhbgncKkh+thF+gpz6+fypTtnFqQ==}
 
   '@types/sockjs@0.3.36':
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
@@ -16026,6 +15933,16 @@ packages:
 
   '@utrecht/form-label-react@1.0.12':
     resolution: {integrity: sha512-oAKxrY0e4MYEfgFKDKAKxdd8XsKnk9+t29/362xqYlWkn6FzCZ4GM0LZv4sFKXGPJgOwNigzE2+KPKMlWxEj0A==}
+    peerDependencies:
+      '@babel/runtime': '*'
+      react: ^18.0.0 || ^19.0.0
+      react-dom: ^18.0.0 || ^19.0.0
+
+  '@utrecht/link-css@3.0.1':
+    resolution: {integrity: sha512-Us/X9ziHRiqj2nsWLLedrOVT0K/BMVMV5ASYgg1yqexKqaQlKfizWzq9w1UP6MAqjVKAmX+gKsLLCV+CMllHAg==}
+
+  '@utrecht/link-react@1.0.12':
+    resolution: {integrity: sha512-Y4yhSguh2YOqhehDYD3JWsiCk5T5CL72dJK+1TI1V45oKJI/zeXH27fw7js5yrf7yXrCLVRuGLWisKK1BGdMCg==}
     peerDependencies:
       '@babel/runtime': '*'
       react: ^18.0.0 || ^19.0.0
@@ -19725,10 +19642,6 @@ packages:
   file-selector@2.1.2:
     resolution: {integrity: sha512-QgXo+mXTe8ljeqUFaX3QVHc5osSItJ/Km+xpocx0aSqWGMSCf6qYs/VnzZgS864Pjn5iceMRFigeAV7AfTlaig==}
     engines: {node: '>= 12'}
-
-  file-selector@4.1.0:
-    resolution: {integrity: sha512-Io1mP8CI3zec5Bxy3P3TxdrKnt35Cm8vNIHnZsvyj43l4YFjD4NRInBp240S5bDJQ0EP1jnh7nCAwXsO818OCg==}
-    engines: {node: '>= 20'}
 
   file-selector@5.0.2:
     resolution: {integrity: sha512-1hAy178VaMCWWj/vSUITOTpLWH1PoGW3eO7i3kPIppuSyOHBm3o1cHq+CvKAM5hQKQXlazrDt/3K1HCXgs7MpQ==}
@@ -25168,16 +25081,6 @@ packages:
     peerDependencies:
       react: '>= 16.8 || 18.0.0'
 
-  react-dropzone@20.1.0:
-    resolution: {integrity: sha512-id1t9JDYNQeFzzIfB5/C6TrpLchy29rTSDxsBH/pcxhILyv/6bSOTJwOlvUsTWXkC2GduuHIldDV6UQXNWfIuA==}
-    engines: {node: '>= 22'}
-    peerDependencies:
-      '@types/react': '*'
-      react: '>= 18'
-    peerDependenciesMeta:
-      '@types/react':
-        optional: true
-
   react-dropzone@20.1.4:
     resolution: {integrity: sha512-LyjT9iQySNkJGC6yL+XTlmfTRxHhPx0eSoTh+WlR0Ge+W35rLcRH/oH7w5bzijfPHeCFcLnO9G7i+hX+LINAAA==}
     engines: {node: '>= 22'}
@@ -25351,20 +25254,6 @@ packages:
       prop-types: ^15.5.8
       react: 0.14 - 19
       react-dom: 0.14 - 19
-
-  react-signature-canvas@1.1.0-alpha.2:
-    resolution: {integrity: sha512-tKUNk3Gmh04Ug4K8p5g8Is08BFUKvbXxi0PyetQ/f8OgCBzcx4vqNf9+OArY/TdNdfHtswXQNRwZD6tyELjkjQ==}
-    peerDependencies:
-      '@types/prop-types': ^15.7.3
-      '@types/react': 0.14 - 19
-      prop-types: ^15.5.8
-      react: 0.14 - 19
-      react-dom: 0.14 - 19
-    peerDependenciesMeta:
-      '@types/prop-types':
-        optional: true
-      '@types/react':
-        optional: true
 
   react-style-stringify@1.2.0:
     resolution: {integrity: sha512-88JZckqgbfXJaGcDQoTFKRmBwHBF0Ddaxz3PL9Q+vywAJruBY+NdN+ZiKSBe7r/pWtjbt0naZdtH5oNI1X3FLA==}
@@ -29346,12 +29235,6 @@ packages:
     peerDependencies:
       formik: ^2.2.9
       zod: ^3.22.4
-
-  zod-formik-adapter@2.0.0:
-    resolution: {integrity: sha512-cLykLmQgmCmhx8C/mwR+rUNKRw6kEukejGRrByB+56zV1XtHF+xmOiQ2Lp2w5R0BdN3z42QKFekOI0Vy39vR8Q==}
-    peerDependencies:
-      formik: ^2.2.9
-      zod: 4.x
 
   zod@3.25.76:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
@@ -38209,7 +38092,7 @@ snapshots:
 
   '@open-formulieren/design-tokens@0.66.0': {}
 
-  '@open-formulieren/formio-renderer@1.8.8(9978c2aa2b4ec0d28ea3ba86573c14ca)':
+  '@open-formulieren/formio-renderer@1.8.8(83c3d2ae38ce641f291f31bd58cf145b)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@floating-ui/react': 0.27.20(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -38217,17 +38100,17 @@ snapshots:
       '@fortawesome/fontawesome-free': 6.4.0
       '@open-formulieren/leaflet-tools': 1.0.0(leaflet@1.9.4)
       '@open-formulieren/types': 1.6.1
-      '@utrecht/button-group-react': link:packages/components-react/button-group-react
+      '@utrecht/button-group-react': 1.1.5(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/button-react': link:packages/components-react/button-react
-      '@utrecht/calendar-react': link:packages/components-react/calendar-react
-      '@utrecht/checkbox-react': link:packages/components-react/checkbox-react
+      '@utrecht/calendar-react': 1.1.5(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/checkbox-react': 1.0.15(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/component-library-react': link:packages/component-library-react
-      '@utrecht/fieldset-react': link:packages/components-react/fieldset-react
-      '@utrecht/form-field-description-react': link:packages/components-react/form-field-description-react
+      '@utrecht/fieldset-react': 1.0.13(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/form-field-description-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/form-field-react': link:packages/components-react/form-field-react
-      '@utrecht/form-label-react': link:packages/components-react/form-label-react
-      '@utrecht/link-react': link:packages/components-react/link-react
-      '@utrecht/radio-button-react': link:packages/components-react/radio-button-react
+      '@utrecht/form-label-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/link-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/radio-button-react': 1.0.13(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/textbox-react': link:packages/components-react/textbox-react
       clsx: 2.1.1
       date-fns: 4.1.0
@@ -38303,7 +38186,7 @@ snapshots:
       - prop-types
       - react-dom
 
-  '@open-formulieren/formio-renderer@3.0.0-alpha.6(4739d159f9bb5f0dc2ff053fa9255ea5)':
+  '@open-formulieren/formio-renderer@3.0.0-alpha.6(0fbf57e223a8d43ec688a19d7f62bc8e)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@bbt/bem': 1.0.1
@@ -38312,18 +38195,18 @@ snapshots:
       '@fortawesome/fontawesome-free': 6.4.0
       '@open-formulieren/leaflet-tools': 1.0.0(leaflet@1.9.4)
       '@open-formulieren/types': 1.6.1
-      '@utrecht/button-group-react': link:packages/components-react/button-group-react
+      '@utrecht/button-group-react': 1.1.5(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/button-react': link:packages/components-react/button-react
-      '@utrecht/calendar-react': link:packages/components-react/calendar-react
-      '@utrecht/checkbox-react': link:packages/components-react/checkbox-react
+      '@utrecht/calendar-react': 1.1.5(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/checkbox-react': 1.0.15(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/component-library-react': link:packages/component-library-react
-      '@utrecht/fieldset-react': link:packages/components-react/fieldset-react
-      '@utrecht/form-field-description-react': link:packages/components-react/form-field-description-react
-      '@utrecht/form-field-error-message-react': link:packages/components-react/form-field-error-message-react
+      '@utrecht/fieldset-react': 1.0.13(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/form-field-description-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/form-field-error-message-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/form-field-react': link:packages/components-react/form-field-react
-      '@utrecht/form-label-react': link:packages/components-react/form-label-react
-      '@utrecht/link-react': link:packages/components-react/link-react
-      '@utrecht/radio-button-react': link:packages/components-react/radio-button-react
+      '@utrecht/form-label-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/link-react': 1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      '@utrecht/radio-button-react': 1.0.13(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@utrecht/textbox-react': link:packages/components-react/textbox-react
       clsx: 2.1.1
       date-fns: 4.1.0
@@ -38398,14 +38281,14 @@ snapshots:
       leaflet: 1.9.4
       proj4leaflet: 1.0.2
 
-  '@open-formulieren/sdk@3.5.6(2968cae4b181a4a00792ea6bd6e9374e)':
+  '@open-formulieren/sdk@3.5.6(e22c2f4106f17e45e49d576eb6987bfc)':
     dependencies:
       '@date-fns/tz': 1.5.0
       '@floating-ui/react': 0.27.20(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@formio/protected-eval': 1.2.2(formiojs@4.13.12(encoding@0.1.13))
       '@fortawesome/fontawesome-free': 6.4.0
       '@open-formulieren/design-tokens': 0.66.0
-      '@open-formulieren/formio-renderer': 1.8.8(9978c2aa2b4ec0d28ea3ba86573c14ca)
+      '@open-formulieren/formio-renderer': 1.8.8(83c3d2ae38ce641f291f31bd58cf145b)
       '@open-formulieren/formiojs': 4.13.14(encoding@0.1.13)
       '@open-formulieren/leaflet-tools': 1.0.0(leaflet@1.9.4)
       '@sentry/react': 8.55.2(react@19.2.4)
@@ -40767,9 +40650,6 @@ snapshots:
 
   '@types/prismjs@1.26.3': {}
 
-  '@types/prop-types@15.7.11':
-    optional: true
-
   '@types/qs@6.9.10': {}
 
   '@types/range-parser@1.2.7': {}
@@ -40839,8 +40719,6 @@ snapshots:
       '@types/http-errors': 2.0.4
       '@types/mime': 3.0.4
       '@types/node': 24.10.4
-
-  '@types/signature_pad@2.3.6': {}
 
   '@types/sockjs@0.3.36':
     dependencies:
@@ -41218,6 +41096,16 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.29.7
       '@utrecht/form-label-css': 3.0.1
+      clsx: 2.1.1
+      react: 19.2.4
+      react-dom: 19.2.4(react@19.2.4)
+
+  '@utrecht/link-css@3.0.1': {}
+
+  '@utrecht/link-react@1.0.12(@babel/runtime@7.29.7)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)':
+    dependencies:
+      '@babel/runtime': 7.29.7
+      '@utrecht/link-css': 3.0.1
       clsx: 2.1.1
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
@@ -46482,8 +46370,6 @@ snapshots:
   file-selector@2.1.2:
     dependencies:
       tslib: 2.8.1
-
-  file-selector@4.1.0: {}
 
   file-selector@5.0.2: {}
 
@@ -53782,14 +53668,6 @@ snapshots:
       prop-types: 15.8.1
       react: 19.2.4
 
-  react-dropzone@20.1.0(@types/react@19.2.14)(react@19.2.4):
-    dependencies:
-      attr-accept: 2.2.5
-      file-selector: 4.1.0
-      react: 19.2.4
-    optionalDependencies:
-      '@types/react': 19.2.14
-
   react-dropzone@20.1.4(@types/react@19.2.14)(react@19.2.4):
     dependencies:
       attr-accept: 4.0.1
@@ -53986,19 +53864,6 @@ snapshots:
       react-dom: 19.2.4(react@19.2.4)
       signature_pad: 2.3.2
       trim-canvas: 0.1.2
-
-  react-signature-canvas@1.1.0-alpha.2(@types/prop-types@15.7.11)(@types/react@19.2.14)(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
-    dependencies:
-      '@babel/runtime': 7.24.8
-      '@types/signature_pad': 2.3.6
-      prop-types: 15.8.1
-      react: 19.2.4
-      react-dom: 19.2.4(react@19.2.4)
-      signature_pad: 2.3.2
-      trim-canvas: 0.1.2
-    optionalDependencies:
-      '@types/prop-types': 15.7.11
-      '@types/react': 19.2.14
 
   react-style-stringify@1.2.0:
     dependencies:
@@ -59173,11 +59038,6 @@ snapshots:
     dependencies:
       formik: 2.4.9(react@19.2.4)
       zod: 3.25.76
-
-  zod-formik-adapter@2.0.0(formik@2.4.9(react@19.2.4))(zod@4.4.3):
-    dependencies:
-      formik: 2.4.9(react@19.2.4)
-      zod: 4.4.3
 
   zod@3.25.76: {}
 
