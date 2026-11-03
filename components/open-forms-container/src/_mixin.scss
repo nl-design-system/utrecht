@@ -7,6 +7,9 @@
   --utrecht-form-field-label-checkbox-font-weight: 400;
   --utrecht-form-field-label-radio-font-weight: 400;
 
+  /* Noto Sans at 500 matches the weight of the Open Forms datepicker (Fira Sans at 400) */
+  --utrecht-calendar-button-font-weight: 500;
+
   /* stylelint-disable custom-property-pattern -- these names are dictated by
   * @open-formulieren/formio-renderer's compiled CSS (var(--of-...)), not this
   * repo's naming convention. Renaming them would break the interop. */
@@ -24,6 +27,7 @@
   --of-tooltip-arrow-block-size: 12px;
   --of-tooltip-arrow-inline-size: 12px;
   --of-tooltip-arrow-offset: 1px;
+  --of-floating-widget-background: var(--utrecht-calendar-background-color, var(--utrecht-document-background-color));
 
   /* stylelint-disable selector-class-pattern -- these class names are dictated by
    * @open-formulieren/formio-renderer's rendered DOM (.openforms-tooltip*), not this
@@ -57,6 +61,19 @@
         calc(100% + var(--of-tooltip-arrow-inline-size) - var(--of-tooltip-arrow-offset))
       )
       rotate(-90deg);
+  }
+
+  /* The calendar toggle sits at the end of this wrapper, inside the textbox.
+   * Give the wrapper the same max width as the textbox, so they line up. */
+  .openforms-datepicker-textbox {
+    max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
+  }
+
+  /* react-select keeps a narrow input on top of the placeholder. The select already shows
+   * a focus ring, so the global focus ring on this input only covers the start of the text. */
+  .utrecht-select--openforms .rs-input input:focus-visible {
+    box-shadow: none;
+    outline: none;
   }
 
   /* stylelint-enable selector-class-pattern */
