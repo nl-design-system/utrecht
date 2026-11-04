@@ -88,6 +88,15 @@ const RenderFormioForm = ({
         options={{
           noAlerts: true,
           language: 'nl',
+          // In Open Forms these translations come from the backend. Same wording as the formio-renderer.
+          i18n: {
+            nl: {
+              '(not required)': '(niet verplicht)',
+              required: 'Het verplichte veld {{field}} is niet ingevuld.',
+              pattern: 'De opgegeven waarde voldoet niet aan het formaat: {{pattern}}.',
+              submitError: 'Controleer het formulier en verbeter alle fouten voordat je het verzendt.',
+            },
+          },
           baseUrl: '',
           evalContext: {
             ofPrefix: 'openforms-',
