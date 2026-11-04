@@ -1,0 +1,19 @@
+{
+  "of": {
+    "upload-input": {
+      "border-width": { "$value": "{utrecht.border-width.md}" },
+      "border-style": { "$value": "dashed" },
+      "border-color": { "$value": "{utrecht.form-control.border-color}" },
+      "drag-over": {
+        "border-color": { "$value": "{utrecht.button.primary-action.background-color}" }
+      },
+      "drag-reject": {
+        "border-color": { "$value": "{utrecht.form-control.invalid.border-color}" }
+      },
+      "padding-block-end": { "$value": "{utrecht.space.block.lg}" },
+      "padding-block-start": { "$value": "{utrecht.space.block.lg}" },
+      "padding-inline-end": { "$value": "{utrecht.space.inline.md}" },
+      "padding-inline-start": { "$value": "{utrecht.space.inline.md}" }
+    }
+  }
+}

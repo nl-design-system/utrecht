@@ -1,38 +1,28 @@
 /* @license CC0-1.0 */
 
 /**
- * Voorbeelden — example full-form demos for the two Open Formulieren rendering
- * stacks used in this project: the classic `react-formio` renderer and the newer
- * `@open-formulieren/formio-renderer`.
+ * The example form of the Voorbeelden story for the formio-renderer: the form components
+ * and the mock handlers that replace the Open Forms backend.
  */
 
-import { FormioForm, PrimaryActionButton } from '@open-formulieren/formio-renderer';
-import nlMessages from '@open-formulieren/formio-renderer/i18n/compiled/nl.json';
-import type { Meta, StoryObj } from '@storybook/react-vite';
-import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
-import React from 'react';
-import { IntlProvider } from 'react-intl';
-import { MultipleFormioComponents } from './StoryUtil.js';
-import { ButtonGroup, Icon, Link, LinkButton } from '../../../../component-library-react/src/index.js';
-// StoryUtil loads the Open Forms SDK CSS, which also styles `.utrecht-form-label--openforms`.
-// Import it before formio-renderer.css so the renderer rules win, in dev and in the production build.
-import '@open-formulieren/formio-renderer/formio-renderer.css';
-// Font Awesome is a peer dependency of @open-formulieren/formio-renderer
-import '@fortawesome/fontawesome-free/css/fontawesome.min.css';
-import '@fortawesome/fontawesome-free/css/regular.min.css';
-import '@fortawesome/fontawesome-free/css/solid.min.css';
+import type { FormioForm } from '@open-formulieren/formio-renderer';
+import rendererPackage from '@open-formulieren/formio-renderer/package.json';
+import sdkPackage from '@open-formulieren/sdk/package.json';
+import designTokensPackage from '@utrecht/design-tokens/package.json';
+import type { ComponentProps } from 'react';
+import openFormsContainerPackage from '../../../../../components/open-forms-container/package.json';
 
 // All common field types, grouped by category. Fields that need a backend (file upload,
 // addressNL lookup) get mock handlers through COMPONENT_PARAMETERS. Cosign and the
 // fields that need prefilled personal data (partners, children, customerProfile) are excluded.
-type FormioFormProps = React.ComponentProps<typeof FormioForm>;
+type FormioFormProps = ComponentProps<typeof FormioForm>;
 
-// Update these when you upgrade a package. The Utrecht packages come from this repository.
-const VERSIONS = [
-  ['Open Forms SDK (CSS)', '@open-formulieren/sdk', '3.5.6'],
-  ['formio-renderer', '@open-formulieren/formio-renderer', '3.0.0-alpha.6'],
-  ['Utrecht design tokens', '@utrecht/design-tokens', '7.0.0'],
-  ['Utrecht open forms container', '@utrecht/open-forms-container-css', '3.0.2'],
+// Read from the installed packages, so the table stays correct after an upgrade.
+const VERSIONS: [label: string, pkg: { name: string; version: string }][] = [
+  ['Open Forms SDK (CSS)', sdkPackage],
+  ['formio-renderer', rendererPackage],
+  ['Utrecht design tokens', designTokensPackage],
+  ['Utrecht open forms container', openFormsContainerPackage],
 ];
 
 const VERSIONS_HTML = `<table class="utrecht-table">
@@ -43,12 +33,12 @@ const VERSIONS_HTML = `<table class="utrecht-table">
 <th class="utrecht-table__header-cell" scope="col">Versie</th>
 </tr></thead>
 <tbody class="utrecht-table__body">${VERSIONS.map(
-  ([name, pkg, version]) =>
-    `<tr class="utrecht-table__row"><th class="utrecht-table__header-cell" scope="row">${name}</th><td class="utrecht-table__cell"><code>${pkg}</code></td><td class="utrecht-table__cell">${version}</td></tr>`,
+  ([label, { name, version }]) =>
+    `<tr class="utrecht-table__row"><th class="utrecht-table__header-cell" scope="row">${label}</th><td class="utrecht-table__cell"><code>${name}</code></td><td class="utrecht-table__cell">${version}</td></tr>`,
 ).join('')}</tbody>
 </table>`;
 
-const FORM_COMPONENTS = [
+export const FORM_COMPONENTS = [
   {
     id: 'intro',
     type: 'content',
@@ -366,176 +356,16 @@ const FORM_COMPONENTS = [
       },
     ],
   },
-] as const;
+];
 
 // Mock handlers instead of the Open Forms backend: uploads stay in the browser, and the
 // address lookup always returns the same street and city.
-const COMPONENT_PARAMETERS: FormioFormProps['componentParameters'] = {
+export const COMPONENT_PARAMETERS: FormioFormProps['componentParameters'] = {
   file: {
     upload: async (file: File) => ({ result: 'success', url: URL.createObjectURL(file) }),
     destroy: async (url: string) => URL.revokeObjectURL(url),
   },
   addressNL: {
     addressAutoComplete: async () => ({ streetName: 'Stadsplateau', city: 'Utrecht', secretStreetCity: 'mock' }),
-  },
-};
-
-// Same markup as the FormNavigation of the Open Forms SDK, for a step in a form with multiple steps.
-// The SDK CSS sets the icons through `--fa` and the colour of the abort button.
-const FAIcon = () => <i className="fa fas fa-icon fa-fw" aria-hidden="true" />;
-
-const FormNavigation = () => (
-  <ButtonGroup className="openforms-form-navigation" direction="column">
-    <PrimaryActionButton type="submit" name="next" className="openforms-form-navigation__next-button">
-      Volgende
-      <Icon>
-        <FAIcon />
-      </Icon>
-    </PrimaryActionButton>
-    <Link
-      href="#"
-      className="openforms-previous-link openforms-previous-link--end"
-      onClick={(event: React.MouseEvent) => event.preventDefault()}
-    >
-      <Icon>
-        <FAIcon />
-      </Icon>
-      Vorige
-    </Link>
-    <LinkButton name="save" className="openforms-form-navigation__save-button">
-      <Icon>
-        <FAIcon />
-      </Icon>
-      Opslaan en later doorgaan
-    </LinkButton>
-    <LinkButton name="abort" className="openforms-abort-button">
-      <Icon>
-        <FAIcon />
-      </Icon>
-      Annuleren
-    </LinkButton>
-  </ButtonGroup>
-);
-
-const meta = {
-  id: 'open-forms-voorbeelden',
-  title: 'Open Formulieren/Voorbeelden',
-  component: MultipleFormioComponents,
-  args: {
-    components: [
-      {
-        type: '',
-        key: '',
-        label: '',
-      },
-    ],
-  },
-  parameters: {
-    status: {
-      type: 'WORK IN PROGRESS',
-    },
-    docs: {
-      description: {
-        component: `
-Voorbeeldformulieren voor de twee renderers die dit project ondersteunt: de klassieke
-\`react-formio\` en de nieuwere
-[formio-renderer](https://www.npmjs.com/package/@open-formulieren/formio-renderer).
-
-Het uploaden van bestanden en het aanvullen van het adres werken met nepgegevens, zonder backend.
-Cosign en de velden met vooraf ingevulde persoonsgegevens (partners, kinderen, klantprofiel) zijn
-niet opgenomen.
-        `,
-      },
-    },
-  },
-} satisfies Meta<typeof MultipleFormioComponents>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-export const FormioRenderer: Story = {
-  name: 'formio-renderer',
-  render: () => (
-    <IntlProvider locale="nl" messages={nlMessages}>
-      <OpenFormsContainer>
-        <FormioForm
-          components={FORM_COMPONENTS as any}
-          componentParameters={COMPONENT_PARAMETERS}
-          onSubmit={async (values) => {
-            console.log('Form submitted:', values);
-          }}
-        >
-          <FormNavigation />
-        </FormioForm>
-      </OpenFormsContainer>
-    </IntlProvider>
-  ),
-};
-
-export const ReactFormio: Story = {
-  name: 'react-formio',
-  args: {
-    components: [
-      {
-        type: 'textfield',
-        key: 'textfield',
-        label: 'Verplicht tekstveld',
-        description: 'Beschrijving van het tekstveld',
-        validate: {
-          required: true,
-          pattern: '^\\d+',
-        },
-      },
-      {
-        type: 'radio',
-        key: 'radio',
-        label: 'Verplicht radioveld',
-        validate: {
-          required: true,
-        },
-        values: [
-          { value: 'a', label: 'Optie A' },
-          { value: 'b', label: 'Optie B' },
-        ],
-      },
-      {
-        type: 'content',
-        key: 'content',
-        label: 'Inhoud',
-        html: '<p>Inhoud uit de WYSIWYG-editor</p>',
-        customClass: 'info',
-      },
-      {
-        type: 'fieldset',
-        key: 'fieldset',
-        label: 'Label van de fieldset',
-        hideHeader: true,
-        components: [
-          {
-            type: 'checkbox',
-            key: 'checkbox',
-            label: 'Checkbox',
-          },
-          {
-            type: 'textfield',
-            key: 'nestedTextfield',
-            label: 'Genest tekstveld',
-          },
-        ],
-      },
-      {
-        type: 'textfield',
-        key: 'hiddenTextfield',
-        label: 'Verborgen tekstveld',
-        hidden: true,
-      },
-      {
-        label: 'Verzenden',
-        showValidations: false,
-        key: 'submit1',
-        type: 'button',
-        input: true,
-      },
-    ],
   },
 };
