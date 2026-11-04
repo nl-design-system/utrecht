@@ -1,9 +1,67 @@
 @use "./mixin" as *;
 
+/* stylelint-disable selector-class-pattern -- class names come from the Open Forms renderer */
 .utrecht-open-forms-container {
   .utrecht-textbox {
     @include utrecht-textbox-char-size;
   }
 
   @include utrecht-open-forms-container;
+
+  /* Fieldset */
+  .openforms-fieldset-legend-content {
+    @include utrecht-open-forms-container-fieldset-legend;
+  }
+
+  /* Tooltip */
+  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__content {
+    @include utrecht-open-forms-container-tooltip-content;
+  }
+
+  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__arrow {
+    @include utrecht-open-forms-container-tooltip-arrow;
+  }
+
+  /* Datepicker */
+  .openforms-datepicker-textbox {
+    @include utrecht-open-forms-container-datepicker-textbox;
+  }
+
+  /* Select */
+  .utrecht-select--openforms .rs-input input:focus-visible {
+    @include utrecht-open-forms-container-select-input--focus-visible;
+  }
+
+  /* Multifield */
+  .openforms-multifield .openforms-multifield__input-container {
+    @include utrecht-open-forms-container-multifield-input-container;
+  }
+
+  .openforms-multifield__remove-button .utrecht-button {
+    @include utrecht-open-forms-container-multifield-remove-button;
+  }
+
+  .openforms-multifield__remove-button .utrecht-icon > .fa-regular {
+    @include utrecht-open-forms-container-multifield-remove-button-icon;
+  }
+
+  /* File upload */
+  .openforms-upload-input > .utrecht-paragraph {
+    @include utrecht-open-forms-container-upload-input-text;
+  }
+
+  /* Form navigation */
+  .openforms-form-navigation {
+    @include utrecht-open-forms-container-form-navigation;
+  }
+
+  .openforms-form-navigation .utrecht-icon {
+    @include utrecht-open-forms-container-form-navigation-icon;
+  }
+
+  /* Error message */
+  .utrecht-form-field-error-message--openforms-errors {
+    @include utrecht-open-forms-container-form-field-error-message;
+  }
 }
+/* stylelint-enable selector-class-pattern */
