@@ -47,25 +47,11 @@ const config: StorybookConfig = {
         global: 'globalThis',
         'process.env': {},
       },
-      plugins: [
-        {
-          // The formio-renderer Map component statically imports leaflet and uses
-          // react-intl's `injectIntl` (removed in v6+), which breaks the build.
-          // Intercept the map directory entirely so none of its deps are resolved.
-          // Remove this plugin if Map field support is ever needed in Storybook.
-          name: 'stub-formio-map',
-          enforce: 'pre',
-          load(id) {
-            if (id.includes('/formio-renderer/dist/components/map/')) {
-              return 'export default () => null; export const LeafletMap = () => null;';
-            }
-            return null;
-          },
-        },
-      ],
       resolve: {
         alias: {
           '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
+          // The formio-renderer `exports` only expose `dist/`, not the translations in `i18n/`
+          '@open-formulieren/formio-renderer/i18n': join(getAbsolutePath('@open-formulieren/formio-renderer'), 'i18n'),
           path: require.resolve('path-browserify'),
         },
       },
@@ -73,15 +59,27 @@ const config: StorybookConfig = {
         esbuildOptions: {
           plugins: [
             {
-              // Stub the formio-renderer Map component during esbuild pre-bundling.
-              // LeafletMapLocationControl imports react-intl's `injectIntl` which was
-              // removed in v6+, causing a build error. We don't use the Map field.
-              name: 'stub-formio-map-esbuild',
-              setup(build: { onLoad: Function }) {
-                build.onLoad({ filter: /formio-renderer\/dist\/components\/map\// }, () => ({
-                  contents: 'export default () => null;',
-                  loader: 'js',
-                }));
+              // react-signature-canvas is a UMD bundle with `exports.default`. The formio-renderer
+              // is an ES module package, so esbuild imports it in Node mode and the default import
+              // becomes the whole module object instead of the component. This shim unwraps it.
+              name: 'react-signature-canvas-default-export',
+              setup(build: { onResolve: Function; onLoad: Function }) {
+                build.onResolve(
+                  { filter: /^react-signature-canvas$/ },
+                  (args: { namespace: string; resolveDir: string }) =>
+                    args.namespace === 'react-signature-canvas-shim'
+                      ? undefined
+                      : { path: 'react-signature-canvas', namespace: 'react-signature-canvas-shim', pluginData: args },
+                );
+                build.onLoad(
+                  { filter: /.*/, namespace: 'react-signature-canvas-shim' },
+                  (args: { pluginData: { resolveDir: string } }) => ({
+                    contents: `import * as m from 'react-signature-canvas';
+export default m.default && m.default.default ? m.default.default : m.default;`,
+                    resolveDir: args.pluginData.resolveDir,
+                    loader: 'js',
+                  }),
+                );
               },
             },
           ],
