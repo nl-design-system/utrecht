@@ -61,10 +61,13 @@
     @include utrecht-heading-2;
   }
 
+  /* The renderer places the tooltip to the right of the icon (10px away) and gives it the
+   * width that is available there. Move it above the icon, starting at the icon instead of
+   * centred on it: a centred tooltip runs off the left edge when the icon is near it. */
   .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__content {
     font-weight: 400;
-    text-align: center;
-    transform: translate(calc(-50% - var(--utrecht-icon-size)), calc(-100%));
+    text-align: start;
+    transform: translate(calc(-1 * var(--utrecht-icon-size) - 10px), -100%);
   }
   .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__arrow {
     inset-block-end: calc(100% + var(--of-tooltip-arrow-inline-size));
