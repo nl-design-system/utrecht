@@ -1,147 +1,101 @@
 @use "~@utrecht/textbox-css/src/mixin" as *;
 @use "~@utrecht/heading-2-css/src/mixin" as *;
 
+/* Container: map the container tokens onto the Utrecht components inside it,
+ * and set the textbox widths of specific Utrecht forms. */
 @mixin utrecht-open-forms-container {
-  --utrecht-icon-inset-block-start: 3px;
-  --utrecht-icon-size: 26px;
-  --utrecht-form-field-label-checkbox-font-weight: 400;
-  --utrecht-form-field-label-radio-font-weight: 400;
+  --utrecht-icon-inset-block-start: var(--utrecht-open-forms-container-icon-inset-block-start);
+  --utrecht-icon-size: var(--utrecht-open-forms-container-icon-size);
+  --utrecht-calendar-button-font-weight: var(--utrecht-open-forms-container-calendar-button-font-weight);
 
-  /* Noto Sans at 500 matches the weight of the Open Forms datepicker (Fira Sans at 400) */
-  --utrecht-calendar-button-font-weight: 500;
+  @include utrecht-open-forms-container-field-sizes;
+}
 
-  /* stylelint-disable custom-property-pattern -- these names are dictated by
-  * @open-formulieren/formio-renderer's compiled CSS (var(--of-...)), not this
-  * repo's naming convention. Renaming them would break the interop. */
-  --of-utrecht-form-fieldset-legend-margin-block-end: var(--utrecht-space-block-md);
-  --of-utrecht-form-field-label-tooltip-align-items: baseline;
-  --of-tooltip-max-inline-size: var(--utrecht-tooltip-max-inline-size, 320px);
-  --of-tooltip-background-color: var(--utrecht-color-black);
-  --of-tooltip-color: var(--utrecht-color-white);
-  --of-tooltip-border-radius: var(--utrecht-border-radius-md);
-  --of-tooltip-padding-block-end: var(--utrecht-space-block-2xs);
-  --of-tooltip-padding-block-start: var(--utrecht-space-block-2xs);
-  --of-tooltip-padding-inline-end: var(--utrecht-space-inline-2xs);
-  --of-tooltip-padding-inline-start: var(--utrecht-space-inline-2xs);
-  --of-tooltip-arrow-width: 10px;
-  --of-tooltip-arrow-block-size: 12px;
-  --of-tooltip-arrow-inline-size: 12px;
-  --of-tooltip-arrow-offset: 1px;
-  --of-floating-widget-background: var(--utrecht-calendar-background-color, var(--utrecht-document-background-color));
+/* Fieldset */
+@mixin utrecht-open-forms-container-fieldset-legend {
+  @include utrecht-heading-2--distanced;
+  @include utrecht-heading-2;
+}
 
-  /* The drop zone of the file upload, like in the Open Forms theme */
-  --of-upload-input-border-width: var(--utrecht-border-width-md);
-  --of-upload-input-border-style: dashed;
-  --of-upload-input-border-color: var(--utrecht-form-control-border-color);
-  --of-upload-input-drag-over-border-color: var(--utrecht-button-primary-action-background-color);
-  --of-upload-input-drag-reject-border-color: var(--utrecht-form-control-invalid-border-color);
-  --of-upload-input-padding-block-end: var(--utrecht-space-block-lg);
-  --of-upload-input-padding-block-start: var(--utrecht-space-block-lg);
-  --of-upload-input-padding-inline-end: var(--utrecht-space-inline-md);
-  --of-upload-input-padding-inline-start: var(--utrecht-space-inline-md);
-  --of-file-upload-with-dropzone-uploads-padding-block-start: var(--utrecht-space-block-xs);
+/* Tooltip: show it above the icon, aligned to its start, so it stays on screen.
+ * 10px is the renderer's floating-ui `offset(10)`. */
+@mixin utrecht-open-forms-container-tooltip-content {
+  font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  text-align: start;
+  transform: translate(calc(-1 * var(--utrecht-open-forms-container-icon-size) - 10px), -100%);
+}
 
-  /* stylelint-disable selector-class-pattern -- these class names are dictated by
-   * @open-formulieren/formio-renderer's rendered DOM (.openforms-tooltip*), not this
-   * repo's naming convention. Renaming them would break the interop. */
-  .openforms-tooltip.openforms-tooltip--visible {
-    max-inline-size: var(--of-tooltip-max-inline-size);
-  }
+/* Point the arrow down at the icon, overlapping the tooltip by 1px to avoid a gap. */
+/* stylelint-disable custom-property-pattern -- reads the renderer's `--of-*` token */
+@mixin utrecht-open-forms-container-tooltip-arrow {
+  --_utrecht-open-forms-container-tooltip-arrow-overlap: 1px;
 
-  .utrecht-form-label--radio {
-    --utrecht-form-label-font-weight: var(--utrecht-form-field-label-radio-font-weight);
-  }
+  inset-block-end: calc(100% + var(--of-tooltip-arrow-inline-size));
+  transform: translate(
+      calc(-50% - var(--utrecht-open-forms-container-icon-size) / 2),
+      calc(100% + var(--of-tooltip-arrow-inline-size) - var(--_utrecht-open-forms-container-tooltip-arrow-overlap))
+    )
+    rotate(-90deg);
+}
+/* stylelint-enable custom-property-pattern */
 
-  .utrecht-form-label--checkbox {
-    --utrecht-form-label-font-weight: var(--utrecht-form-field-label-checkbox-font-weight);
-  }
+/* Datepicker: keep the calendar toggle at the end of the textbox. */
+@mixin utrecht-open-forms-container-datepicker-textbox {
+  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
+}
 
-  .openforms-fieldset-legend-content {
-    @include utrecht-heading-2--distanced;
-    @include utrecht-heading-2;
-  }
+/* Select: the select already shows a focus ring; hide the one on react-select's inner input. */
+@mixin utrecht-open-forms-container-select-input--focus-visible {
+  box-shadow: none;
+  outline: none;
+}
 
-  /* The renderer places the tooltip to the right of the icon (10px away) and gives it the
-   * width that is available there. Move it above the icon, starting at the icon instead of
-   * centred on it: a centred tooltip runs off the left edge when the icon is near it. */
-  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__content {
-    font-weight: 400;
-    text-align: start;
-    transform: translate(calc(-1 * var(--utrecht-icon-size) - 10px), -100%);
-  }
-  .openforms-tooltip.openforms-tooltip--right .openforms-tooltip__arrow {
-    inset-block-end: calc(100% + var(--of-tooltip-arrow-inline-size));
-    transform: translate(
-        calc(-50% - var(--utrecht-icon-size) / 2),
-        calc(100% + var(--of-tooltip-arrow-inline-size) - var(--of-tooltip-arrow-offset))
-      )
-      rotate(-90deg);
-  }
+/* Multifield: keep the remove button next to the textbox. */
+@mixin utrecht-open-forms-container-multifield-input-container {
+  grid-template-columns:
+    minmax(0, var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size)))
+    max-content;
+}
 
-  /* The calendar toggle sits at the end of this wrapper, inside the textbox.
-   * Give the wrapper the same max width as the textbox, so they line up. */
-  .openforms-datepicker-textbox {
-    max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
-  }
+/* Square remove button with a centred icon. */
+@mixin utrecht-open-forms-container-multifield-remove-button {
+  --utrecht-icon-inset-block-start: 0;
 
-  /* react-select keeps a narrow input on top of the placeholder. The select already shows
-   * a focus ring, so the global focus ring on this input only covers the start of the text. */
-  .utrecht-select--openforms .rs-input input:focus-visible {
-    box-shadow: none;
-    outline: none;
-  }
+  aspect-ratio: 1;
+  padding-inline: 0;
+}
 
-  /* A field with multiple values: the first column takes all the space, but the textbox
-   * is narrower. Limit the column to the textbox width, so the remove button is next to it. */
-  .openforms-multifield .openforms-multifield__input-container {
-    grid-template-columns:
-      minmax(0, var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size)))
-      max-content;
-  }
+@mixin utrecht-open-forms-container-multifield-remove-button-icon {
+  display: block;
+}
 
-  /* A square remove button with the icon in the middle. Without side padding the
-   * button takes its minimum inline size, which is the same as its minimum block size. */
-  .openforms-multifield__remove-button .utrecht-button {
-    --utrecht-icon-inset-block-start: 0;
+/* File upload: vertically centre the Noto Sans text in the drop zone (not supported in Firefox). */
+@mixin utrecht-open-forms-container-upload-input-text {
+  text-box: trim-both cap alphabetic;
+}
 
-    aspect-ratio: 1;
-    padding-inline: 0;
-  }
+/* Form navigation: centre the icons on the text and keep the link icon from shrinking. */
+@mixin utrecht-open-forms-container-form-navigation {
+  --utrecht-icon-inset-block-start: 0;
+  --utrecht-button-group-padding-block-start: var(--utrecht-open-forms-container-form-navigation-padding-block-start);
+}
 
-  /* The icon font glyph sits on the text baseline, below the middle of the icon */
-  .openforms-multifield__remove-button .utrecht-icon > .fa-regular {
-    display: block;
-  }
+@mixin utrecht-open-forms-container-form-navigation-icon {
+  font-size-adjust: none;
+}
 
-  /* Noto Sans has a large ascent, so the text sits low in its line box. Trim the line box
-   * to the cap height and the baseline, so the padding centres the text in the drop zone. */
-  .openforms-upload-input > .utrecht-paragraph {
-    text-box: trim-both cap alphabetic;
-  }
+/* Error message */
+@mixin utrecht-open-forms-container-form-field-error-message {
+  --utrecht-form-field-error-message-margin-block-end: var(
+    --utrecht-open-forms-container-form-field-error-message-margin-block-end
+  );
+  --utrecht-form-field-error-message-margin-block-start: var(
+    --utrecht-open-forms-container-form-field-error-message-margin-block-start
+  );
+}
 
-  /* The buttons and links below a form step: centre the icons on the text, and keep the
-   * `font-size-adjust` of the link from making the icon of the previous link smaller.
-   * The `.utrecht-button-group` padding overrides the SDK padding, so set the Utrecht token.
-   * 20px is the value of `--of-form-navigation-padding-block-start` in the Open Forms theme. */
-  .openforms-form-navigation {
-    --utrecht-icon-inset-block-start: 0;
-    --utrecht-button-group-padding-block-start: var(--utrecht-space-block-lg);
-  }
-
-  .openforms-form-navigation .utrecht-icon {
-    font-size-adjust: none;
-  }
-
-  /* Same spacing around the error message as the formio-renderer Storybook. */
-  .utrecht-form-field-error-message--openforms-errors {
-    --utrecht-form-field-error-message-margin-block-end: var(--utrecht-space-block-xs);
-    --utrecht-form-field-error-message-margin-block-start: var(--utrecht-space-block-xs);
-  }
-
-  /* stylelint-enable selector-class-pattern */
-
-  /* stylelint-enable custom-property-pattern */
-
+/* Textbox widths for the fields of specific Utrecht forms, by field name. */
+@mixin utrecht-open-forms-container-field-sizes {
   .utrecht-textbox[name="data[voorletterSPZD]"],
   .utrecht-textbox[name="data[voorletterSPMD]"],
   .utrecht-textbox[name="data[voorletterSMEH]"],

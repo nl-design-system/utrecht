@@ -17,6 +17,7 @@ overrides:
   piscina@<4.9.4: ^4.9.4
   handlebars@>=3.0.0 <=4.7.9: 4.7.10
   '@storybook/vue3>@vue/compiler-dom': 3.5.27
+  '@open-formulieren/formio-renderer>react-signature-canvas': 1.1.0-alpha.2
 
 packageExtensionsChecksum: sha256-DyTONDcwuNBL+rN8AjnH/wxMB5hrUymzWhDnSpd567I=
 
@@ -5931,7 +5932,7 @@ importers:
         version: 1.0.0-alpha.128
       '@open-formulieren/formio-renderer':
         specifier: 2.0.0
-        version: 2.0.0(b88a202fd3c5bb8b9d17d859a0886e82)
+        version: 2.0.0(30b2e86bca4abfcfba211da1f2388017)
       '@open-formulieren/leaflet-tools':
         specifier: 1.0.0
         version: 1.0.0(leaflet@1.9.4)
@@ -6942,8 +6943,8 @@ importers:
         specifier: 3.0.0-alpha.6
         version: 3.0.0-alpha.6(0fbf57e223a8d43ec688a19d7f62bc8e)
       '@open-formulieren/sdk':
-        specifier: 3.5.6
-        version: 3.5.6(e22c2f4106f17e45e49d576eb6987bfc)
+        specifier: 3.5.10
+        version: 3.5.10(e22c2f4106f17e45e49d576eb6987bfc)
       '@react-leaflet/core':
         specifier: 3.0.0
         version: 3.0.0(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -13499,8 +13500,8 @@ packages:
     peerDependencies:
       leaflet: ^1.7.1
 
-  '@open-formulieren/sdk@3.5.6':
-    resolution: {integrity: sha512-WWK95EVLKXJiUDwytQIHyKkv+9h8W+nnoL3QvU5WIxH3t9V7nwQjTL/cdzfwaFgBcrRQwez+qAwdH91nI0C0eg==}
+  '@open-formulieren/sdk@3.5.10':
+    resolution: {integrity: sha512-AV4shewG1YQuLa+y/P3zIQqL4Or1t11Es84Jo7DiI2jLCVvk0iM6kmvp0ND2JXOwD+3WOAbO1VKH8wKguTMZxw==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
@@ -15638,6 +15639,9 @@ packages:
 
   '@types/serve-static@1.15.5':
     resolution: {integrity: sha512-PDRk21MnK70hja/YF8AHfC7yIsiQHn1rcXx7ijCFBX/k+XQJhQT/gw3xekXKJvx+5SXaMMS8oqQy09Mzvz2TuQ==}
+
+  '@types/signature_pad@2.3.6':
+    resolution: {integrity: sha512-v3j92gCQJoxomHhd+yaG4Vsf8tRS/XbzWKqDv85UsqjMGy4zhokuwKe4b6vhbgncKkh+thF+gpz6+fypTtnFqQ==}
 
   '@types/sockjs@0.3.36':
     resolution: {integrity: sha512-MK9V6NzAS1+Ud7JV9lJLFqW85VbC9dq3LmwZCuBe4wBDgKC0Kj/jd8Xl+nSviU+Qc3+m7umHHyHg//2KSa0a0Q==}
@@ -25248,12 +25252,19 @@ packages:
       react: 0.0.0-experimental-c8b778b7f-20220825
       webpack: ^5.59.0
 
-  react-signature-canvas@1.0.7:
-    resolution: {integrity: sha512-yo0x0uTMVmcClaqryuQu6F8xEVapk5zdM9/nuQ7GalDJWccoVNZPMmCFGK7U5r3I0mrEHPB9E5/rFSYUgZcfmA==}
+  react-signature-canvas@1.1.0-alpha.2:
+    resolution: {integrity: sha512-tKUNk3Gmh04Ug4K8p5g8Is08BFUKvbXxi0PyetQ/f8OgCBzcx4vqNf9+OArY/TdNdfHtswXQNRwZD6tyELjkjQ==}
     peerDependencies:
+      '@types/prop-types': ^15.7.3
+      '@types/react': 0.14 - 19
       prop-types: ^15.5.8
       react: 0.14 - 19
       react-dom: 0.14 - 19
+    peerDependenciesMeta:
+      '@types/prop-types':
+        optional: true
+      '@types/react':
+        optional: true
 
   react-style-stringify@1.2.0:
     resolution: {integrity: sha512-88JZckqgbfXJaGcDQoTFKRmBwHBF0Ddaxz3PL9Q+vywAJruBY+NdN+ZiKSBe7r/pWtjbt0naZdtH5oNI1X3FLA==}
@@ -38092,7 +38103,7 @@ snapshots:
 
   '@open-formulieren/design-tokens@0.66.0': {}
 
-  '@open-formulieren/formio-renderer@1.8.8(83c3d2ae38ce641f291f31bd58cf145b)':
+  '@open-formulieren/formio-renderer@1.8.8(6ceee2863a9e856f4039beee8b9c27dd)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@floating-ui/react': 0.27.20(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
@@ -38130,15 +38141,17 @@ snapshots:
       react-leaflet-draw: 0.20.6(leaflet-draw@1.0.4)(leaflet@1.9.4)(prop-types@15.8.1)(react-leaflet@4.2.1(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       react-number-format: 5.4.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-select: 5.10.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)
-      react-signature-canvas: 1.0.7(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react-signature-canvas: 1.1.0-alpha.2(@types/react@19.2.14)(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-use: 17.6.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       zod: 3.25.76
       zod-formik-adapter: 1.3.0(formik@2.4.9(react@19.2.4))(zod@3.25.76)
     transitivePeerDependencies:
+      - '@types/prop-types'
+      - '@types/react'
       - prop-types
       - react-dom
 
-  '@open-formulieren/formio-renderer@2.0.0(b88a202fd3c5bb8b9d17d859a0886e82)':
+  '@open-formulieren/formio-renderer@2.0.0(30b2e86bca4abfcfba211da1f2388017)':
     dependencies:
       '@babel/runtime': 7.29.7
       '@bbt/bem': 1.0.1
@@ -38178,11 +38191,13 @@ snapshots:
       react-leaflet-draw: 0.21.0(leaflet-draw@1.0.4)(leaflet@1.9.4)(prop-types@15.8.1)(react-leaflet@5.0.0(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       react-number-format: 5.4.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-select: 5.10.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)
-      react-signature-canvas: 1.0.7(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react-signature-canvas: 1.1.0-alpha.2(@types/react@19.2.14)(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-use: 17.6.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       zod: 3.25.76
       zod-formik-adapter: 1.3.0(formik@2.4.9(react@19.2.4))(zod@3.25.76)
     transitivePeerDependencies:
+      - '@types/prop-types'
+      - '@types/react'
       - prop-types
       - react-dom
 
@@ -38227,11 +38242,12 @@ snapshots:
       react-leaflet-draw: 0.21.0(leaflet-draw@1.0.4)(leaflet@1.9.4)(prop-types@15.8.1)(react-leaflet@5.0.0(leaflet@1.9.4)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(react@19.2.4)
       react-number-format: 5.4.5(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-select: 5.10.2(@types/react@19.2.14)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)(supports-color@10.2.2)
-      react-signature-canvas: 1.0.7(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
+      react-signature-canvas: 1.1.0-alpha.2(@types/react@19.2.14)(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       react-use: 17.6.1(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       zod: 3.25.76
       zod-formik-adapter: 1.3.0(formik@2.4.9(react@19.2.4))(zod@3.25.76)
     transitivePeerDependencies:
+      - '@types/prop-types'
       - '@types/react'
       - prop-types
       - react-dom
@@ -38281,20 +38297,20 @@ snapshots:
       leaflet: 1.9.4
       proj4leaflet: 1.0.2
 
-  '@open-formulieren/sdk@3.5.6(e22c2f4106f17e45e49d576eb6987bfc)':
+  '@open-formulieren/sdk@3.5.10(e22c2f4106f17e45e49d576eb6987bfc)':
     dependencies:
       '@date-fns/tz': 1.5.0
       '@floating-ui/react': 0.27.20(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       '@formio/protected-eval': 1.2.2(formiojs@4.13.12(encoding@0.1.13))
       '@fortawesome/fontawesome-free': 6.4.0
       '@open-formulieren/design-tokens': 0.66.0
-      '@open-formulieren/formio-renderer': 1.8.8(83c3d2ae38ce641f291f31bd58cf145b)
+      '@open-formulieren/formio-renderer': 1.8.8(6ceee2863a9e856f4039beee8b9c27dd)
       '@open-formulieren/formiojs': 4.13.14(encoding@0.1.13)
       '@open-formulieren/leaflet-tools': 1.0.0(leaflet@1.9.4)
       '@sentry/react': 8.55.2(react@19.2.4)
       clsx: 2.1.1
       date-fns: 4.1.0
-      dompurify: 3.4.13
+      dompurify: 3.4.17
       fast-deep-equal: 3.1.3
       flatpickr: 4.6.13
       formik: 2.4.9(react@19.2.4)
@@ -38327,6 +38343,7 @@ snapshots:
       - '@formatjs/intl'
       - '@remix-run/react'
       - '@tanstack/react-router'
+      - '@types/prop-types'
       - '@types/react'
       - '@utrecht/button-group-react'
       - '@utrecht/button-react'
@@ -40719,6 +40736,8 @@ snapshots:
       '@types/http-errors': 2.0.4
       '@types/mime': 3.0.4
       '@types/node': 24.10.4
+
+  '@types/signature_pad@2.3.6': {}
 
   '@types/sockjs@0.3.36':
     dependencies:
@@ -53857,13 +53876,17 @@ snapshots:
       react: 19.2.4
       webpack: 5.98.0(@swc/core@1.13.5(@swc/helpers@0.5.17))(esbuild@0.25.9)(uglify-js@3.17.4)
 
-  react-signature-canvas@1.0.7(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
+  react-signature-canvas@1.1.0-alpha.2(@types/react@19.2.14)(prop-types@15.8.1)(react-dom@19.2.4(react@19.2.4))(react@19.2.4):
     dependencies:
+      '@babel/runtime': 7.24.8
+      '@types/signature_pad': 2.3.6
       prop-types: 15.8.1
       react: 19.2.4
       react-dom: 19.2.4(react@19.2.4)
       signature_pad: 2.3.2
       trim-canvas: 0.1.2
+    optionalDependencies:
+      '@types/react': 19.2.14
 
   react-style-stringify@1.2.0:
     dependencies:

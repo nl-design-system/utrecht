@@ -43,46 +43,12 @@ const config: StorybookConfig = {
   async viteFinal(config) {
     const { mergeConfig } = await import('vite');
     return mergeConfig(config, {
-      define: {
-        global: 'globalThis',
-        'process.env': {},
-      },
       resolve: {
         alias: {
           '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
           // The formio-renderer `exports` only expose `dist/`, not the translations in `i18n/`
           '@open-formulieren/formio-renderer/i18n': join(getAbsolutePath('@open-formulieren/formio-renderer'), 'i18n'),
           path: require.resolve('path-browserify'),
-        },
-      },
-      optimizeDeps: {
-        esbuildOptions: {
-          plugins: [
-            {
-              // react-signature-canvas is a UMD bundle with `exports.default`. The formio-renderer
-              // is an ES module package, so esbuild imports it in Node mode and the default import
-              // becomes the whole module object instead of the component. This shim unwraps it.
-              name: 'react-signature-canvas-default-export',
-              setup(build: { onResolve: Function; onLoad: Function }) {
-                build.onResolve(
-                  { filter: /^react-signature-canvas$/ },
-                  (args: { namespace: string; resolveDir: string }) =>
-                    args.namespace === 'react-signature-canvas-shim'
-                      ? undefined
-                      : { path: 'react-signature-canvas', namespace: 'react-signature-canvas-shim', pluginData: args },
-                );
-                build.onLoad(
-                  { filter: /.*/, namespace: 'react-signature-canvas-shim' },
-                  (args: { pluginData: { resolveDir: string } }) => ({
-                    contents: `import * as m from 'react-signature-canvas';
-export default m.default && m.default.default ? m.default.default : m.default;`,
-                    resolveDir: args.pluginData.resolveDir,
-                    loader: 'js',
-                  }),
-                );
-              },
-            },
-          ],
         },
       },
       css: {

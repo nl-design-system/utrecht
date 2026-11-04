@@ -1,0 +1,19 @@
+{
+  "of": {
+    "tooltip": {
+      "max-inline-size": { "$value": "320px" },
+      "background-color": { "$value": "{utrecht.color.black}" },
+      "color": { "$value": "{utrecht.color.white}" },
+      "border-radius": { "$value": "{utrecht.border-radius.md}" },
+      "padding-block-end": { "$value": "{utrecht.space.block.2xs}" },
+      "padding-block-start": { "$value": "{utrecht.space.block.2xs}" },
+      "padding-inline-end": { "$value": "{utrecht.space.inline.2xs}" },
+      "padding-inline-start": { "$value": "{utrecht.space.inline.2xs}" },
+      "arrow": {
+        "width": { "$value": "10px" },
+        "block-size": { "$value": "12px" },
+        "inline-size": { "$value": "12px" }
+      }
+    }
+  }
+}
