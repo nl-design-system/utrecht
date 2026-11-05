@@ -60,10 +60,21 @@ order: 1 # Bepaalt de volgorde in de tegelnavigatie, lager is hoger in de lijst
 ## Hoe voeg ik documentatie voor een nieuw component toe?
 
 1. Voeg de gewenste documentatie toe aan [./docs/components](./docs/components)
-   1. Tip: maak een kopie van een bekend component zoals `button.mdx`
+   1. Tip: maak een kopie van `accordion.mdx`, die heeft de volledige structuur
+   2. De `title` in de frontmatter is de naam van het component zoals in de titels van de stories, bijvoorbeeld `Form field` voor `CSS Component/Form field`
 2. Voer `pnpm astro` uit om de documentatie website lokaal te draaien
    1. De component documentatie is nu te zien op de astro documentatie website onder /componenten/jouw-component
 3. Voeg de component navigatie kaart toe aan src/pages/componenten/index.astro
+
+## Waar komen de codevoorbeelden, links en design tokens vandaan?
+
+Uit de stories in de Storybooks. Het script [scripts/extract-storybook.ts](scripts/extract-storybook.ts) leest ze en schrijft per componentpagina de codevoorbeelden, de links naar npm, Storybook, GitHub en Figma, de design tokens en de framework-badges naar `src/generated/storybook.json`. De website leest alleen dat bestand.
+
+- De Astro-integratie in [integrations/storybook-docs.ts](integrations/storybook-docs.ts) draait het script bij `astro dev`, `astro build` en `astro check`
+- Pas je een story of een componentpagina aan terwijl `astro dev` draait? Dan draait het script vanzelf opnieuw
+- Het script meldt in de terminal als het iets niet vindt, bijvoorbeeld geen stories voor een pagina of geen `tokensDefinition`. Bij `astro build` stopt de build dan, zodat er geen pagina zonder code of links online komt
+- Vue en Angular draaien niet in Node: hun code komt uit de broncode van de story. Lukt dat niet, dan meldt het script dat, maar de build gaat door
+- Los draaien kan met `pnpm run extract-storybook`, of met `pnpm run extract-storybook --strict` zoals bij de build
 
 ## Hoe draai ik astro lokaal?
 
