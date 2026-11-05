@@ -1,0 +1,200 @@
+---
+/**
+ * De content met een navigatie "Op deze pagina" ernaast, met een link naar elke h2. De navigatie blijft in beeld als
+ * je scrolt, en markeert de sectie die je leest. Het optionele slot `lead` staat boven de content, in dezelfde kolom.
+ * Op een klein scherm staat de navigatie tussen de lead en de content.
+ * De koppen komen uit de gerenderde content, dus koppen uit componenten tellen ook mee (zie `utils/headings.ts`).
+ */
+import '@utrecht/grid-css';
+import { collectHeadings } from '../utils/headings.ts';
+
+const { html: content, headings } = collectHeadings(
+  Astro.slots.has('default') ? await Astro.slots.render('default') : '',
+);
+---
+
+{/*
+  Een Utrecht grid met de navigatie in een kolom rechts. De navigatie staat als eerste in de DOM, zodat je hem met het
+  toetsenbord op elke breedte voor de content bereikt: de lead heeft geen links. Op een klein scherm krijgt de
+  hoofdkolom `display: contents`, zodat de lead, de navigatie en de content cellen van de grid zijn, in die volgorde.
+*/}
+<div class="utrecht-grid utrecht-grid--spacing-lg utrecht-on-this-page-layout">
+  {
+    headings.length > 0 && (
+      <div class="utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--md-4 utrecht-grid--order-2 utrecht-on-this-page-layout__nav">
+        <nav class="utrecht-on-this-page" aria-labelledby="utrecht-on-this-page-heading">
+          <h2 id="utrecht-on-this-page-heading" class="nl-heading nl-heading--level-3 utrecht-on-this-page__heading">
+            Op deze pagina
+          </h2>
+          <ul class="utrecht-on-this-page__list" role="list">
+            {headings.map(({ id, text }) => (
+              <li class="utrecht-on-this-page__item">
+                <a class="utrecht-link utrecht-link--html-a utrecht-on-this-page__link" href={`#${id}`}>
+                  {/* Het pad van chevron-right uit @utrecht/icon. Een gewone SVG, omdat de web component zijn SVG op
+                      een eigen regel zet, en die staat in elke browser op een andere plek. */}
+                  <svg class="utrecht-on-this-page__icon" viewBox="0 0 8 14" fill="currentColor" aria-hidden="true">
+                    <path d="M1 14c-.26 0-.51-.1-.71-.29a.996.996 0 0 1 0-1.41l5.29-5.29-5.29-5.3C-.1 1.32-.1.68.29.29s1.03-.39 1.42 0l6 6c.39.39.39 1.02 0 1.41l-6 6.01c-.2.2-.45.29-.71.29" />
+                  </svg>
+                  <span>{text}</span>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+      </div>
+    )
+  }
+  <div
+    class:list={[
+      'utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--order-md-1 utrecht-on-this-page-layout__main',
+      headings.length > 0 ? 'utrecht-grid--md-8' : 'utrecht-grid--md-12',
+    ]}
+  >
+    {
+      Astro.slots.has('lead') && (
+        <div class="utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--order-1 utrecht-on-this-page-layout__lead">
+          <slot name="lead" />
+        </div>
+      )
+    }
+    <div
+      class="utrecht-grid__cell utrecht-grid--xs-12 utrecht-grid--order-3 utrecht-on-this-page-layout__content"
+      set:html={content}
+    />
+  </div>
+</div>
+
+<script>
+  for (const nav of document.querySelectorAll<HTMLElement>('.utrecht-on-this-page')) {
+    const links = [...nav.querySelectorAll<HTMLAnchorElement>('.utrecht-on-this-page__link')];
+    const targets = links.map((link) => document.getElementById(decodeURIComponent(link.hash.slice(1))));
+
+    let frame = 0;
+    const update = () => {
+      frame = 0;
+      // De huidige sectie is de laatste waarvan de kop in het bovenste deel van het venster staat
+      const line = window.innerHeight * 0.25;
+      let current = targets.findLastIndex((target) => target && target.getBoundingClientRect().top <= line);
+      // Aan het eind van de pagina kunnen de laatste secties niet zo ver omhoog scrollen
+      if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) current = links.length - 1;
+      links.forEach((link, index) => {
+        if (index === current) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    };
+    const schedule = () => {
+      if (!frame) frame = requestAnimationFrame(update);
+    };
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule);
+    update();
+  }
+</script>
+
+<style>
+  .utrecht-on-this-page-layout {
+    /* Onder de sticky nav bar van de site, zie Layout.astro */
+    --utrecht-on-this-page-sticky-inset-block-start: calc(
+      var(--utrecht-page-sticky-offset, 0px) + var(--utrecht-space-block-xl, 2rem)
+    );
+  }
+
+  /* Een cel krijgt de display van de grid, flex, en dan staan de secties van de content naast elkaar. Elke cel zet de
+     waarde zelf, zodat de lead en de content hem niet van de hoofdkolom erven.
+     --_utrecht-grid-display is intern in @utrecht/grid-css en kan in elke release veranderen. Vervang het door een
+     modifier van de cel voor blokcontent (bijvoorbeeld utrecht-grid__cell--block) zodra de grid die heeft. */
+  .utrecht-on-this-page-layout .utrecht-grid__cell {
+    --_utrecht-grid-display: block;
+  }
+
+  /* De lead en de content zijn cellen met hun eigen ruimte, ook als de hoofdkolom een cel is */
+  .utrecht-on-this-page-layout .utrecht-on-this-page-layout__main {
+    padding-block: 0;
+    padding-inline: 0;
+  }
+
+  /* Onder het md-breakpoint van de grid: de cellen van de hoofdkolom doen mee in de grid, zodat de navigatie ertussen
+     kan staan. Een media query, net als de grid: die schakelt op de breedte van het venster, met een container query
+     als aanvulling die nooit eerder schakelt (de grid is nooit breder dan het venster). */
+  @media (width <= 959.98px) {
+    .utrecht-on-this-page-layout .utrecht-on-this-page-layout__main {
+      --_utrecht-grid-display: contents;
+    }
+  }
+
+  /* Vanaf het md-breakpoint van de grid is de navigatie een kolom naast de content, die in beeld blijft */
+  @media (width >= 960px) {
+    .utrecht-on-this-page {
+      inset-block-start: var(--utrecht-on-this-page-sticky-inset-block-start);
+      max-block-size: calc(100dvh - 2 * var(--utrecht-on-this-page-sticky-inset-block-start));
+      overflow-y: auto;
+      position: sticky;
+    }
+  }
+
+  .utrecht-on-this-page-layout__lead > :global(*) {
+    margin-block: 0;
+  }
+
+  /* Schets (mobiel): een grijze achtergrond zonder rand, en geen lijnen tussen de links */
+  .utrecht-on-this-page {
+    background-color: var(--utrecht-document-background-color, #fff);
+    border-color: var(--utrecht-color-grey-90, #e6e6e6);
+    border-style: solid;
+    border-width: 1px;
+    box-sizing: border-box;
+    padding-block: var(--utrecht-space-block-lg, 1.5rem);
+    padding-inline: var(--utrecht-space-inline-xl, 2rem);
+  }
+
+  /* Samen met de ruimte boven de eerste link evenveel ruimte als boven de kop */
+  .utrecht-on-this-page__heading {
+    margin-block: 0 var(--utrecht-space-block-xs, 0.5rem);
+  }
+
+  .utrecht-on-this-page__list {
+    list-style: none;
+    margin-block: 0;
+    padding-inline-start: 0;
+  }
+
+  .utrecht-on-this-page__item:not(:last-child) {
+    border-block-end: 1px solid var(--utrecht-color-grey-90, #e6e6e6);
+  }
+
+  .utrecht-on-this-page__link {
+    align-items: start;
+    display: flex;
+    gap: var(--utrecht-space-inline-sm, 0.5rem);
+    padding-block: var(--utrecht-space-block-md, 1rem);
+  }
+
+  /* Onder de laatste link is de padding van de container genoeg */
+  .utrecht-on-this-page__item:last-child .utrecht-on-this-page__link {
+    padding-block-end: 0;
+  }
+
+  .utrecht-on-this-page__icon {
+    aspect-ratio: 8 / 14;
+
+    /* Zo hoog als een hoofdletter */
+    block-size: 0.6875em;
+    display: none;
+    flex: none;
+    inline-size: auto;
+
+    /* In het midden van de eerste regel, waar ook de hoofdletters staan */
+    margin-block-start: calc((1lh - 0.6875em) / 2);
+    margin-inline-end: 0.125em;
+  }
+
+  /* De sectie die je leest: met een chevron, in de tekstkleur en zonder onderstreping */
+  .utrecht-on-this-page__link[aria-current] {
+    color: var(--utrecht-document-color, inherit);
+    text-decoration: none;
+  }
+
+  .utrecht-on-this-page__link[aria-current] .utrecht-on-this-page__icon {
+    display: block;
+  }
+</style>

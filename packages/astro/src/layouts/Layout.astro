@@ -4,7 +4,6 @@ import { PageLayout } from '@utrecht/page-layout-react';
 import { PageBody } from '@utrecht/page-body-react';
 import { PageHeader } from '@utrecht/page-header-react';
 import { PageFooter } from '@utrecht/page-footer-react';
-import { Root } from '@utrecht/root-react';
 import { base } from 'astro:config/client';
 import { Image } from 'astro:assets';
 import MobileNavDrawer from '../components/MobileNavDrawer';
@@ -24,22 +23,40 @@ import '@utrecht/link-list-css';
 import '@utrecht/button-link-css';
 import '@utrecht/drawer-css';
 import '@utrecht/button-css';
+import '@utrecht/unordered-list-css';
 import '@utrecht/color-sample-css';
 import '@utrecht/img-css';
+import '@utrecht/skip-link-css';
+
+interface Props {
+  /** De naam van de pagina, voor in de titel van het tabblad. Zonder titel alleen de naam van de site. */
+  title?: string;
+}
+
+const SITE_NAME = 'Utrecht Design System';
+const { title } = Astro.props;
 ---
 
 <!doctype html>
-<Root lang="en" className="utrecht-theme utrecht-theme--documentation-website">
+<html lang="nl" class="utrecht-root utrecht-theme utrecht-theme--documentation-website">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
     <meta name="text-scale" content="scale" />
-    <link rel="icon" type="image/svg+xml" href={joinUrl(base, '/favicon.svg')} />
+    <link rel="icon" href={joinUrl(base, '/favicon.ico')} />
     <meta name="generator" content={Astro.generator} />
-    <title>Utrecht Design System</title>
+    <title>{title ? `${title} | ${SITE_NAME}` : SITE_NAME}</title>
+    <!-- Voor de rest van het renderen: componenten met JavaScript tonen zonder JavaScript een eenvoudigere versie -->
+    <script is:inline>
+      document.documentElement.setAttribute('data-js', '');
+    </script>
   </head>
   <body>
+    <div>
+      <a class="utrecht-skip-link utrecht-skip-link--visible-on-focus" href="#inhoud">Naar de inhoud</a>
+    </div>
     <PageLayout className="utrecht-custom-page">
+      {/* Schets (mobiel): een zwarte balk met het logo, "Utrecht Design System" en een knop "Menu" */}
       <PageHeader>
         <div class="utrecht-page-header-layout">
           <a href={joinUrl(base, '/')} class="utrecht-custom-logo"
@@ -47,23 +64,30 @@ import '@utrecht/img-css';
               class="utrecht-custom-logo__caption">Utrecht Design System</b
             ></a
           >
-          <div class="mobile-nav"><MobileNavDrawer client:load /></div>
+          <div class="utrecht-mobile-nav"><MobileNavDrawer client:load /></div>
         </div>
       </PageHeader>
       <NavBar sticky>
-        <NavList id="main-navigation-list">
-          <NavListLink href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
-          <NavListLink href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
-          <NavListLink href={joinUrl(base, '/developer')}>Voor developers</NavListLink>
-          <NavListLink href={joinUrl(base, '/onderzoekers')}>Voor onderzoekers</NavListLink>
-          <NavListLink href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
-          <NavListLink href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
-          <NavListLink href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
+        <NavList id="main-navigation-list" appearance="center">
+          <NavListLink center href={joinUrl(base, '/design-system')}>Utrecht Design System</NavListLink>
+          <NavListLink center href={joinUrl(base, '/designers')}>Voor designers</NavListLink>
+          <NavListLink center href={joinUrl(base, '/developer')}>Voor developers</NavListLink>
+          <NavListLink center href={joinUrl(base, '/onderzoekers')}>Voor onderzoekers</NavListLink>
+          <NavListLink center href={joinUrl(base, '/richtlijnen')}>Richtlijnen</NavListLink>
+          <NavListLink center href={joinUrl(base, '/componenten')}>Componenten</NavListLink>
+          <NavListLink center href={joinUrl(base, '/vragen')}>Vragen</NavListLink>
         </NavList>
       </NavBar>
       <PageBody>
-        <slot />
+        <main id="inhoud">
+          <slot />
+        </main>
       </PageBody>
+      {/* Schets: een andere footer. Het logo met "Utrecht Design System" en "Het design system voor consistente en
+          toegankelijke digitale dienstverlening van de gemeente Utrecht.", daarna "Over deze website" (Over Utrecht Design
+          System, Privacyverklaring, Toegankelijkheidsverklaring), daarna "Feedback" met "Heb je een vraag, idee of
+          verbetering? Laat het ons weten." (Maak een issue aan op GitHub, Stuur een bericht op Slack), en na een lijn
+          Figma, Storybook en GitHub als externe links. Niet "Gemeente Utrecht" met de lijst van Storybooks. */}
       <PageFooter>
         <h2 class="utrecht-heading-2 utrecht-heading-2--reset-h2">Gemeente Utrecht</h2>
         <section>
@@ -151,6 +175,16 @@ import '@utrecht/img-css';
         </section>
       </PageFooter>
     </PageLayout>
+    <script>
+      // De sticky nav bar bedekt de bovenkant van het venster. Zijn hoogte houdt ankers, focus en sticky elementen
+      // eronder (styles.css). Op een klein scherm is hij verborgen en is de hoogte 0.
+      const navBar = document.querySelector<HTMLElement>('.utrecht-nav-bar--sticky');
+      if (navBar) {
+        new ResizeObserver(() =>
+          document.documentElement.style.setProperty('--utrecht-page-sticky-offset', `${navBar.offsetHeight}px`),
+        ).observe(navBar);
+      }
+    </script>
   </body>
 
   <style>
@@ -158,28 +192,38 @@ import '@utrecht/img-css';
       display: grid;
     }
 
-    .mobile-nav {
-      display: none;
+    /* De center-variant geeft elk item even veel ruimte (flex-basis 0). Met zeven items wordt een kolom dan te smal en
+       lopen "Utrecht Design System" en "Voor onderzoekers" over twee regels. Met de breedte van het label als basis
+       past alles op een regel en blijft de rest van de ruimte gelijk verdeeld. */
+    .utrecht-nav-list--center > :global(.utrecht-nav-list__item) {
+      flex-basis: auto;
     }
 
-    @media (max-width: 860px) {
-      .desktop-nav,
+    .utrecht-mobile-nav {
+      display: none;
+      flex: none;
+    }
+
+    @media (width <= 860px) {
+      .utrecht-desktop-nav,
       .utrecht-nav-bar {
         display: none;
       }
 
-      .mobile-nav {
+      .utrecht-mobile-nav {
         display: block;
       }
     }
 
+    /* Het logo krimpt mee op een smal scherm, zodat de menuknop ernaast blijft passen (WCAG 1.4.10) */
     .utrecht-custom-logo {
       align-items: center;
+      color: black;
+      column-gap: 0.5rem;
       display: flex;
       flex-direction: row;
-      column-gap: 0.5rem;
+      min-inline-size: 0;
       text-decoration: none;
-      color: black;
     }
 
     :root {
@@ -191,22 +235,38 @@ import '@utrecht/img-css';
       color: var(--utrecht-link-hover-color);
     }
 
-    .utrecht-custom-logo img {
-      flex: 0 0 auto;
-      block-size: 3rem;
+    /* De header en de body zijn cellen van een grid. Zonder min-inline-size 0 groeien ze mee met hun inhoud, en wordt
+       de pagina op een smal scherm breder dan het venster (WCAG 1.4.10) */
+    :global(.utrecht-page-header__content),
+    :global(.utrecht-page-body__content) {
+      min-inline-size: 0;
     }
 
+    /* Even breed als de hoogte toelaat: het width-attribuut is voor de verhouding, niet voor de breedte */
+    .utrecht-custom-logo img {
+      block-size: 3rem;
+      flex: 0 0 auto;
+      inline-size: auto;
+    }
+
+    /* Op een heel smal scherm een kleiner logo, zodat de naam en de menuknop ernaast passen */
+    @media (width < 25rem) {
+      .utrecht-custom-logo img {
+        block-size: 2rem;
+      }
+    }
+
+    /* De naam loopt door op een volgende regel, tussen de woorden, in plaats van weg te vallen */
     .utrecht-custom-logo__caption {
       flex: 1 1 auto;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
     }
 
     .utrecht-page-header-layout {
-      display: flex;
-      justify-content: space-between;
       align-items: center;
+      display: flex;
+      gap: var(--utrecht-space-inline-md, 1rem);
+      justify-content: space-between;
     }
+
   </style>
-</Root>
+</html>

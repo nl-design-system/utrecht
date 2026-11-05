@@ -3,10 +3,11 @@ import { getCollection } from 'astro:content';
 import Layout from '../../layouts/Layout.astro';
 import { Link, BreadcrumbNav, BreadcrumbNavLink, BreadcrumbNavSeparator } from '@utrecht/component-library-react';
 import { base } from 'astro:config/client';
-import { joinUrl } from '../../utils/url';
+import { joinUrl } from '../../utils/url.ts';
 import TileList from '@components/TileList.astro';
 import TileNavigation from '@components/TileNavigation.astro';
 import ComponentCard from '@components/ComponentCard.astro';
+import { getFrameworkBadges } from '../../utils/storybook/index.ts';
 
 const components = await getCollection('components');
 
@@ -16,8 +17,8 @@ const sortedComponents = components.sort((a, b) =>
 );
 ---
 
-<Layout>
-  <article class="componenten-page">
+<Layout title="Componenten en iconen">
+  <article class="utrecht-componenten-page">
     <BreadcrumbNav>
       <BreadcrumbNavLink href={joinUrl(base, '/')} index={0}>Home</BreadcrumbNavLink>
       <BreadcrumbNavSeparator><utrecht-icon-chevron-right /></BreadcrumbNavSeparator>
@@ -44,12 +45,12 @@ const sortedComponents = components.sort((a, b) =>
   </TileList>
 
   <h2>Componenten overzicht</h2>
-  <div class="component-grid">
+  <div class="utrecht-component-grid">
     {sortedComponents.map((component) => (
       <ComponentCard
         href={joinUrl(base, `/componenten/${component.id.replace(/\.mdx?$/, '')}`)}
         title={component.data.title}
-        frameworks={component.data.frameworks}
+        frameworks={getFrameworkBadges(component.data.title)}
         previewImage={component.data.previewImage}
       >
         {component.data.description && (
@@ -62,24 +63,24 @@ const sortedComponents = components.sort((a, b) =>
 </Layout>
 
 <style is:global>
-  .componenten-page {
+  .utrecht-componenten-page {
     padding-block-start: 2rem;
   }
 
-  .component-grid {
+  .utrecht-component-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  @media (max-width: 900px) {
-    .component-grid {
+  @media (width <= 900px) {
+    .utrecht-component-grid {
       grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 600px) {
-    .component-grid {
+  @media (width <= 600px) {
+    .utrecht-component-grid {
       grid-template-columns: 1fr;
     }
   }

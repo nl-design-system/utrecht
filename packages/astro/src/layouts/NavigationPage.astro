@@ -73,8 +73,8 @@ const tiles = childPages.map((child) => {
 });
 ---
 
-<Layout>
-  <article class="navigation-page">
+<Layout title={page.data.title}>
+  <article class="utrecht-navigation-page">
     {breadcrumbs.length > 1 && (
       <BreadcrumbNav>
         {breadcrumbs.map((crumb, index) => (
@@ -92,7 +92,7 @@ const tiles = childPages.map((child) => {
       </BreadcrumbNav>
     )}
 
-    <div class="navigation-page__content">
+    <div class="utrecht-navigation-page__content">
       <slot />
     </div>
 
@@ -107,11 +107,11 @@ const tiles = childPages.map((child) => {
 </Layout>
 
 <style>
-  .navigation-page {
+  .utrecht-navigation-page {
     padding-block-start: 2rem;
   }
 
-  .navigation-page__content {
+  .utrecht-navigation-page__content {
     margin-block-end: 2rem;
   }
 </style>

@@ -59,20 +59,20 @@ import TileList from '../components/TileList.astro';
   .utrecht-hero {
     --utrecht-heading-1-color: white;
 
-    background-color: #cc0000;
+    background-color: #c00;
     background-image: var(--utrecht-page-footer-background-image);
-    margin-inline-start: calc(-1 * var(--utrecht-page-body-content-padding-inline-start));
-    margin-inline-end: calc(-1 * var(--utrecht-page-body-content-padding-inline-end));
-    padding-block-start: 64px;
-    padding-block-end: 64px;
-    padding-inline-start: var(--utrecht-page-body-content-padding-inline-start);
-    padding-inline-end: var(--utrecht-page-body-content-padding-inline-end);
     color: white;
+    margin-inline-end: calc(-1 * var(--utrecht-page-body-content-padding-inline-end));
+    margin-inline-start: calc(-1 * var(--utrecht-page-body-content-padding-inline-start));
+    padding-block-end: 64px;
+    padding-block-start: 64px;
+    padding-inline-end: var(--utrecht-page-body-content-padding-inline-end);
+    padding-inline-start: var(--utrecht-page-body-content-padding-inline-start);
   }
 
   .utrecht-hero__action-group {
+    column-gap: 16px;
     display: flex;
     flex-direction: row;
-    column-gap: 16px;
   }
 </style>

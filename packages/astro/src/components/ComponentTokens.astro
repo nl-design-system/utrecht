@@ -1,0 +1,55 @@
+---
+/**
+ * De design tokens van de component, uit de `tokens.json` van het CSS-pakket.
+ */
+import CodeExample from './CodeExample.astro';
+import { sanitize } from '../utils/storybook/sanitize.ts';
+import { getTokens } from '../utils/storybook/index.ts';
+
+interface Props {
+  /** Componentnaam zoals in de titels van de stories, bijvoorbeeld `Accordion` */
+  component: string;
+}
+
+const { component } = Astro.props;
+const tokens = getTokens(component);
+const id = `${sanitize(component)}-tokens`;
+---
+
+{
+  tokens && (
+    <>
+      {/* Schets: één h2 "Design tokens" in plaats van de h2 "Anatomie" met de h3 "Design Tokens" */}
+      <h2 class="nl-heading nl-heading--level-2">Anatomie</h2>
+      <h3 class="nl-heading nl-heading--level-3">Design Tokens</h3>
+      {/* Schets: "Deze component gebruikt design tokens om de vormgeving in te stellen. Je kunt de tokens gebruiken in een
+          design-tokenbestand of direct in CSS.", daarna een link "Meer informatie over design tokens" */}
+      <p class="nl-paragraph">
+        Hieronder staan de Design Tokens die gebruikt worden door het {component} component. Wil je meer weten over het
+        gebruik van Design Tokens, bekijk dan de Storybook pagina van het component.
+      </p>
+      {/* Schets: "JSON", "JSON met Utrecht-thema" en "CSS" zijn h3's, één niveau onder "Design tokens" */}
+      <h4 class="nl-heading nl-heading--level-4">JSON</h4>
+      <p class="nl-paragraph">Gebruik deze tokens als je werkt met design tokens in JSON-formaat.</p>
+      <CodeExample id={`${id}-json`} label="JSON" tabs={[{ label: 'JSON', code: tokens.json, lang: 'json' }]} />
+      {tokens.theme && (
+        <>
+          <h4 class="nl-heading nl-heading--level-4">JSON met Utrecht-thema</h4>
+          <p class="nl-paragraph">
+            Gebruik deze tokens als je werkt met design tokens in JSON-formaat en het Utrecht-thema wilt toepassen.
+          </p>
+          <CodeExample
+            id={`${id}-theme`}
+            label="JSON met Utrecht-thema"
+            tabs={[{ label: 'JSON', code: tokens.theme, lang: 'json' }]}
+          />
+        </>
+      )}
+      <h4 class="nl-heading nl-heading--level-4">CSS</h4>
+      <p class="nl-paragraph">
+        Gebruik de CSS custom properties als je de component direct met CSS gebruikt of een eigen theme maakt.
+      </p>
+      <CodeExample id={`${id}-css`} label="CSS" tabs={[{ label: 'CSS', code: tokens.css, lang: 'css' }]} />
+    </>
+  )
+}
