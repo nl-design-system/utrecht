@@ -24,22 +24,18 @@
 
   /* active focus */
 
-  /* input breedtes */
-  --utrecht-textarea-max-inline-size: 400px;
-  --utrecht-textbox-max-inline-size: 328px;
-
   /* --- navigation tokens end --- */
 }
 
 /* Verberg de utrecht-navigation op schermen kleiner dan 768px */
 
 @media (width <= 768px) {
-  .utrecht-navigation {
+  :where(.utrecht-custom-theme) .utrecht-navigation {
     display: none !important;
   }
 }
 
-.utrecht-page-content {
+:where(.utrecht-custom-theme) .utrecht-page-content {
   padding-block-start: 1rem;
 }
 
@@ -48,58 +44,62 @@
   --utrecht-font-family-base: "Noto Sans Variable", sans-serif !important;
   --utrecht-font-family-heading: "Noto Sans Variable", sans-serif !important;
 
+  /* input breedtes (hier en niet op :root, zodat ze niet in andere stories terechtkomen) */
+  --utrecht-textarea-max-inline-size: 400px;
+  --utrecht-textbox-max-inline-size: 328px;
+
   font-family: "Noto Sans Variable", sans-serif !important;
 }
 
-.utrecht-heading-1,
-.utrecht-heading-2,
-.utrecht-heading-3,
-.utrecht-heading-4,
-.utrecht-heading-5 {
+:where(.utrecht-custom-theme) .utrecht-heading-1,
+:where(.utrecht-custom-theme) .utrecht-heading-2,
+:where(.utrecht-custom-theme) .utrecht-heading-3,
+:where(.utrecht-custom-theme) .utrecht-heading-4,
+:where(.utrecht-custom-theme) .utrecht-heading-5 {
   font-weight: 600;
   margin-block-start: 24px !important;
 }
 
-.utrecht-heading-2 {
+:where(.utrecht-custom-theme) .utrecht-heading-2 {
   font-size: 1.375rem !important;
 }
 
-.utrecht-heading-3 {
+:where(.utrecht-custom-theme) .utrecht-heading-3 {
   font-size: 1.2rem !important;
 }
 
-.utrecht-html caption {
+:where(.utrecht-custom-theme) .utrecht-html caption {
   font-weight: 600 !important;
   margin-block-end: 8px !important;
   margin-block-start: 8px !important;
 }
 
-.utrecht-paragraph,
-.utrecht-unordered-list,
-.utrecht-ordered-list {
+:where(.utrecht-custom-theme) .utrecht-paragraph,
+:where(.utrecht-custom-theme) .utrecht-unordered-list,
+:where(.utrecht-custom-theme) .utrecht-ordered-list {
   font-weight: 400 !important;
   margin-block-start: 8px !important;
 }
-.utrecht-button-group {
+.utrecht-custom-theme .utrecht-button-group {
   margin-block-end: 1rem !important;
   margin-block-start: 1rem !important;
 }
 
-.utrecht-accordion__button-label {
+:where(.utrecht-custom-theme) .utrecht-accordion__button-label {
   color: #24578f;
 }
 
-.utrecht-accordion__button-icon {
+:where(.utrecht-custom-theme) .utrecht-accordion__button-icon {
   color: #24578f;
   margin-inline-end: 0.4rem !important;
   transform: translateY(-1px);
 }
 
-.utrecht-button {
+:where(.utrecht-custom-theme) .utrecht-button {
   font-weight: 600 !important;
 }
 
-.utrecht-advanced-link--with-icon utrecht-icon-chevron-right {
+:where(.utrecht-custom-theme) .utrecht-advanced-link--with-icon utrecht-icon-chevron-right {
   block-size: 14px;
   font-weight: 400 !important;
   inline-size: 14px;
@@ -107,47 +107,47 @@
   transform: translateY(-7px);
 }
 
-.utrecht-advanced-link--with-icon {
+:where(.utrecht-custom-theme) .utrecht-advanced-link--with-icon {
   margin-block-start: 8px !important;
   text-decoration: none !important;
 }
 
-.utrecht-font-weight-200 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-200 {
   font-weight: 200;
 }
 
-.utrecht-font-weight-300 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-300 {
   font-weight: 300;
 }
 
 /* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
-.utrecht-font-weight-400 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-400 {
   font-weight: 400;
 }
 
 /* Als je een Regular variant wilt die tussen 400 en 500 ligt, kies je er bijvoorbeeld voor 500 */
-.utrecht-font-weight-500 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-500 {
   font-weight: 500;
 }
 
-.utrecht-font-weight-600 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-600 {
   font-weight: 600;
 }
 
-.utrecht-font-weight-700 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-700 {
   font-weight: 700;
 }
 
-.utrecht-font-weight-800 {
+:where(.utrecht-custom-theme) .utrecht-font-weight-800 {
   font-weight: 800;
 }
 
-.utrecht-font-tester-container a {
+:where(.utrecht-custom-theme) .utrecht-font-tester-container a {
   color: white !important;
   text-decoration: underline !important;
 }
 
-.utrecht-font-tester-container {
+:where(.utrecht-custom-theme) .utrecht-font-tester-container {
   background: hsl(223.64 22% 17.45%);
   border-radius: 3px;
   box-shadow: 0 2px 10px rgb(0 0 0 / 20%);
@@ -161,7 +161,7 @@
   z-index: 1000;
 }
 
-.utrecht-font-tester-container button.utrecht-font-tester-toggle-button {
+:where(.utrecht-custom-theme) .utrecht-font-tester-container button.utrecht-font-tester-toggle-button {
   background: hsl(223.64 22% 17.45%);
   block-size: 2.5rem;
   border-radius: 3px;
@@ -177,12 +177,12 @@
   transform: translateY(-50%);
 }
 
-.utrecht-font-tester-copysettings {
+:where(.utrecht-custom-theme) .utrecht-font-tester-copysettings {
   font-size: 12px;
   text-align: center;
 }
 
-.utrecht-font-tester-copysettings a {
+:where(.utrecht-custom-theme) .utrecht-font-tester-copysettings a {
   align-items: center;
   color: inherit;
   display: inline-flex;
@@ -190,10 +190,10 @@
   text-decoration: none;
 }
 
-.utrecht-font-tester-container button:hover {
+:where(.utrecht-custom-theme) .utrecht-font-tester-container button:hover {
   background: hsl(223.64 22% 17.45%) !important;
 }
-.utrecht-font-tester-h2 {
+:where(.utrecht-custom-theme) .utrecht-font-tester-h2 {
   color: #ddd !important; /* Optioneel: subtieler maken */
   display: block;
   font-size: 16px !important;
@@ -202,7 +202,7 @@
   margin-block-start: 12px !important;
 }
 
-.utrecht-font-tester-label {
+:where(.utrecht-custom-theme) .utrecht-font-tester-label {
   color: #ddd !important; /* Optioneel: subtieler maken */
   display: block;
   font-size: 14px !important;
@@ -210,11 +210,11 @@
   margin-block-end: 5px;
   margin-block-start: 5px !important;
 }
-.utrecht-font-tester-label input {
+:where(.utrecht-custom-theme) .utrecht-font-tester-label input {
   margin-inline-end: 8px !important;
 }
 
-.utrecht-form-field--radio p.utrecht-paragraph {
+:where(.utrecht-custom-theme) .utrecht-form-field--radio p.utrecht-paragraph {
   margin-block-end: 0;
   margin-block-start: 0;
   margin-inline-end: 0;
@@ -222,7 +222,7 @@
 }
 
 /* 🔹 Wrapper voor de toggle-switch */
-.utrecht-font-tester-toggle-switch {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-switch {
   align-items: center;
   cursor: pointer;
   display: flex;
@@ -230,7 +230,7 @@
 }
 
 /* 🔹 Stijl voor het label naast de switch */
-.utrecht-font-tester-toggle-switch-label {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-switch-label {
   align-items: center;
   display: flex;
   font-size: 12px;
@@ -240,13 +240,13 @@
 }
 
 /* 🔹 Input (verborgen, maar nog steeds interactief voor toegankelijkheid) */
-.utrecht-font-tester-toggle-switch input {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-switch input {
   display: none;
   position: absolute;
 }
 
 /* 🔹 Stijl voor de slider zelf */
-.utrecht-font-tester-toggle-slider {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-slider {
   background-color: #ccc;
   block-size: 20px;
   border-radius: 10px;
@@ -256,7 +256,7 @@
 }
 
 /* 🔹 Stijl voor de beweegbare schakelaar (de "knop" in de slider) */
-.utrecht-font-tester-toggle-slider::before {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-slider::before {
   background-color: white;
   block-size: 14px;
   border-radius: 50%;
@@ -269,32 +269,35 @@
 }
 
 /* 🔹 Beweegbare schakelaar verplaatsen naar rechts bij "aan" */
-input:checked + .utrecht-font-tester-toggle-slider::before {
+:where(.utrecht-custom-theme) input:checked + .utrecht-font-tester-toggle-slider::before {
   transform: translateX(18px);
 }
 
 /* 🔹 Actieve staat wanneer de switch is ingeschakeld */
-input:checked + .utrecht-font-tester-toggle-slider {
+:where(.utrecht-custom-theme) input:checked + .utrecht-font-tester-toggle-slider {
   background-color: #4caf50;
 }
 
-.utrecht-font-tester-toggle-switch:hover .utrecht-font-tester-toggle-slider {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-switch:hover .utrecht-font-tester-toggle-slider {
   background-color: #b3b3b3;
 }
 
 /* 🔹 Focus stijl voor toetsenbord-navigatie */
-.utrecht-font-tester-toggle-switch input:focus + .utrecht-font-tester-toggle-slider {
+:where(.utrecht-custom-theme) .utrecht-font-tester-toggle-switch input:focus + .utrecht-font-tester-toggle-slider {
   outline: 2px solid #4caf50;
   outline-offset: 3px;
 }
 
 /* 🔹 Optionele hover-effecten voor betere interactie */
 
-input:checked:hover + .utrecht-font-tester-toggle-slider {
+:where(.utrecht-custom-theme) input:checked:hover + .utrecht-font-tester-toggle-slider {
   background-color: #45a049;
 }
 
-.utrecht-theme {
+/* Scoped to the prototype wrapper: every story in this Storybook is wrapped in .utrecht-theme,
+ * so .utrecht-theme would leak these rules into other stories once this file is loaded. */
+/* stylelint-disable-next-line no-duplicate-selectors -- kept separate from the block above to keep the cascade order */
+.utrecht-custom-theme {
   .utrecht-breadcrumb-nav__link {
     padding-inline-start: 0; /* Gelijke uitlijning met linker kantlijn */
   }
@@ -566,16 +569,16 @@ input:checked:hover + .utrecht-font-tester-toggle-slider {
 }
 /* stylelint-disable selector-class-pattern, property-disallowed-list */
 
-input[name="tijdstip"] {
+:where(.utrecht-custom-theme) input[name="tijdstip"] {
   max-inline-size: 100px !important;
 }
-section {
+:where(.utrecht-custom-theme) section {
   max-inline-size: 85ch;
 }
 
 /* stylelint-enable selector-class-pattern, property-disallowed-list */
 
-.utrecht-navigation {
+:where(.utrecht-custom-theme) .utrecht-navigation {
   border-block-end-color: var(--utrecht-navigation-border-block-end-color);
   border-block-end-style: solid;
   border-block-end-width: var(--utrecht-navigation-border-block-end-width);
@@ -585,7 +588,7 @@ section {
   margin-block-end: var(--utrecht-nav-margin-back-end);
   margin-block-start: var(--utrecht-nav-margin-back-start);
 }
-.utrecht-navigation__list {
+:where(.utrecht-custom-theme) .utrecht-navigation__list {
   --utrecht-navigation-list-display: flex;
   --utrecht-navigation-list-mobile-inline-size: 100%;
 
@@ -600,7 +603,7 @@ section {
   padding-inline-start: var(--utrecht-navigation-list-padding-inline-start);
 }
 
-.utrecht-navigation__item {
+:where(.utrecht-custom-theme) .utrecht-navigation__item {
   border-block-end-color: var(--utrecht-navigation-item-border-block-end-color, transparent);
   border-block-end-style: solid;
   border-block-end-width: var(--utrecht-navigation-item-border-block-end-width, 0);
@@ -614,7 +617,7 @@ section {
   padding-inline-start: var(--utrecht-navigation-item-padding-inline-start);
 }
 
-.utrecht-navigation__link {
+:where(.utrecht-custom-theme) .utrecht-navigation__link {
   --utrecht-link-focus-text-decoration: underline;
   --utrecht-link-focus-text-decoration-thickness: var(--utrecht-navigation-link-focus-text-decoration-thickness, 3px);
   --utrecht-link-text-decoration: none;
@@ -640,26 +643,26 @@ section {
   text-align: var(--utrecht-navigation-link-text-align);
 }
 
-.utrecht-navigation__link:hover {
+:where(.utrecht-custom-theme) .utrecht-navigation__link:hover {
   --utrecht-navigation-link-background-color: var(--utrecht-navigation-link-hover-background-color);
   --utrecht-navigation-marker-color: currentColor;
   --utrecht-navigation-marker-outline-hover-fill: currentColor;
 }
 
-.utrecht-navigation__link:focus {
+:where(.utrecht-custom-theme) .utrecht-navigation__link:focus {
   --utrecht-link-focus-color: var(--utrecht-navigation-link-focus-color, var(--utrecht-color-black));
   --utrecht-link-focus-background-color: var(--utrecht-color-yellow-80);
   --utrecht-navigation-marker-color: currentColor;
   --utrecht-navigation-marker-outline-hover-fill: currentColor;
 }
 
-.utrecht-navigation__link:active:focus {
+:where(.utrecht-custom-theme) .utrecht-navigation__link:active:focus {
   --utrecht-link-focus-color: var(--utrecht-navigation-link-active-focus-color, var(--utrecht-color-black));
 }
 
 /* ChatbotKnop */
 
-.utrecht-chatbot {
+:where(.utrecht-custom-theme) .utrecht-chatbot {
   align-items: center;
   background-color: #2a5587;
   block-size: 60px;
@@ -678,11 +681,11 @@ section {
   z-index: 100;
 }
 
-.utrecht-chatbot__icon {
+:where(.utrecht-custom-theme) .utrecht-chatbot__icon {
   inline-size: 50%;
 }
 
-.utrecht-chatbot:hover {
+:where(.utrecht-custom-theme) .utrecht-chatbot:hover {
   border-color: #3669a5;
   border-style: solid;
   border-width: 2px;

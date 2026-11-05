@@ -1,6 +1,101 @@
 @use "~@utrecht/textbox-css/src/mixin" as *;
+@use "~@utrecht/heading-2-css/src/mixin" as *;
 
+/* Container: map the container tokens onto the Utrecht components inside it,
+ * and set the textbox widths of specific Utrecht forms. */
 @mixin utrecht-open-forms-container {
+  --utrecht-icon-inset-block-start: var(--utrecht-open-forms-container-icon-inset-block-start);
+  --utrecht-icon-size: var(--utrecht-open-forms-container-icon-size);
+  --utrecht-calendar-button-font-weight: var(--utrecht-open-forms-container-calendar-button-font-weight);
+
+  @include utrecht-open-forms-container-field-sizes;
+}
+
+/* Fieldset */
+@mixin utrecht-open-forms-container-fieldset-legend {
+  @include utrecht-heading-2--distanced;
+  @include utrecht-heading-2;
+}
+
+/* Tooltip: show it above the icon, aligned to its start, so it stays on screen.
+ * 10px is the renderer's floating-ui `offset(10)`. */
+@mixin utrecht-open-forms-container-tooltip-content {
+  font-weight: var(--utrecht-typography-weight-scale-normal-font-weight);
+  text-align: start;
+  transform: translate(calc(-1 * var(--utrecht-open-forms-container-icon-size) - 10px), -100%);
+}
+
+/* Point the arrow down at the icon, overlapping the tooltip by 1px to avoid a gap. */
+/* stylelint-disable custom-property-pattern -- reads the renderer's `--of-*` token */
+@mixin utrecht-open-forms-container-tooltip-arrow {
+  --_utrecht-open-forms-container-tooltip-arrow-overlap: 1px;
+
+  inset-block-end: calc(100% + var(--of-tooltip-arrow-inline-size));
+  transform: translate(
+      calc(-50% - var(--utrecht-open-forms-container-icon-size) / 2),
+      calc(100% + var(--of-tooltip-arrow-inline-size) - var(--_utrecht-open-forms-container-tooltip-arrow-overlap))
+    )
+    rotate(-90deg);
+}
+/* stylelint-enable custom-property-pattern */
+
+/* Datepicker: keep the calendar toggle at the end of the textbox. */
+@mixin utrecht-open-forms-container-datepicker-textbox {
+  max-inline-size: var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size));
+}
+
+/* Select: the select already shows a focus ring; hide the one on react-select's inner input. */
+@mixin utrecht-open-forms-container-select-input--focus-visible {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Multifield: keep the remove button next to the textbox. */
+@mixin utrecht-open-forms-container-multifield-input-container {
+  grid-template-columns:
+    minmax(0, var(--utrecht-textbox-max-inline-size, var(--utrecht-form-control-max-inline-size)))
+    max-content;
+}
+
+/* Square remove button with a centred icon. */
+@mixin utrecht-open-forms-container-multifield-remove-button {
+  --utrecht-icon-inset-block-start: 0;
+
+  aspect-ratio: 1;
+  padding-inline: 0;
+}
+
+@mixin utrecht-open-forms-container-multifield-remove-button-icon {
+  display: block;
+}
+
+/* File upload: vertically centre the Noto Sans text in the drop zone (not supported in Firefox). */
+@mixin utrecht-open-forms-container-upload-input-text {
+  text-box: trim-both cap alphabetic;
+}
+
+/* Form navigation: centre the icons on the text and keep the link icon from shrinking. */
+@mixin utrecht-open-forms-container-form-navigation {
+  --utrecht-icon-inset-block-start: 0;
+  --utrecht-button-group-padding-block-start: var(--utrecht-open-forms-container-form-navigation-padding-block-start);
+}
+
+@mixin utrecht-open-forms-container-form-navigation-icon {
+  font-size-adjust: none;
+}
+
+/* Error message */
+@mixin utrecht-open-forms-container-form-field-error-message {
+  --utrecht-form-field-error-message-margin-block-end: var(
+    --utrecht-open-forms-container-form-field-error-message-margin-block-end
+  );
+  --utrecht-form-field-error-message-margin-block-start: var(
+    --utrecht-open-forms-container-form-field-error-message-margin-block-start
+  );
+}
+
+/* Textbox widths for the fields of specific Utrecht forms, by field name. */
+@mixin utrecht-open-forms-container-field-sizes {
   .utrecht-textbox[name="data[voorletterSPZD]"],
   .utrecht-textbox[name="data[voorletterSPMD]"],
   .utrecht-textbox[name="data[voorletterSMEH]"],

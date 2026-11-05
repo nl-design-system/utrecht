@@ -46,6 +46,8 @@ const config: StorybookConfig = {
       resolve: {
         alias: {
           '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
+          // The formio-renderer `exports` only expose `dist/`, not the translations in `i18n/`
+          '@open-formulieren/formio-renderer/i18n': join(getAbsolutePath('@open-formulieren/formio-renderer'), 'i18n'),
           path: require.resolve('path-browserify'),
         },
       },

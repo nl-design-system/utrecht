@@ -1,8 +1,10 @@
-import { OFLibrary, OpenFormsModule } from '@open-formulieren/sdk';
+import OpenFormsModule from '@open-formulieren/sdk/formio-module';
+import OFLibrary from '@open-formulieren/sdk/formio-templates';
+import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import { merge } from 'es-toolkit/compat';
 import React, { PropsWithChildren, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
-import { Button, ButtonGroup, Icon, Link, OpenFormsContainer } from '../../../../component-library-react/src/index.js';
+import { Button, ButtonGroup, Icon, Link } from '../../../../component-library-react/src/index.js';
 import '@open-formulieren/sdk/styles.css';
 export type FormConfiguration = { type: string; components: { type: string; key: string; label: string }[] };
 const FormButton = () => (
@@ -86,6 +88,15 @@ const RenderFormioForm = ({
         options={{
           noAlerts: true,
           language: 'nl',
+          // In Open Forms these translations come from the backend. Same wording as the formio-renderer.
+          i18n: {
+            nl: {
+              '(not required)': '(niet verplicht)',
+              required: 'Het verplichte veld {{field}} is niet ingevuld.',
+              pattern: 'De opgegeven waarde voldoet niet aan het formaat: {{pattern}}.',
+              submitError: 'Controleer het formulier en verbeter alle fouten voordat je het verzendt.',
+            },
+          },
           baseUrl: '',
           evalContext: {
             ofPrefix: 'openforms-',

@@ -1,0 +1,20 @@
+{
+  "utrecht": {
+    "open-forms-container": {
+      "icon": {
+        "size": { "$value": "26px" },
+        "inset-block-start": { "$value": "3px" }
+      },
+      "calendar-button": {
+        "font-weight": { "$value": "500" }
+      },
+      "form-navigation": {
+        "padding-block-start": { "$value": "{utrecht.space.block.lg}" }
+      },
+      "form-field-error-message": {
+        "margin-block-end": { "$value": "{utrecht.space.block.xs}" },
+        "margin-block-start": { "$value": "{utrecht.space.block.xs}" }
+      }
+    }
+  }
+}
