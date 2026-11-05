@@ -5,7 +5,7 @@
  * De tabs volgen het tabs-patroon van WAI-ARIA: pijltjestoetsen, Home en End, en alleen de gekozen tab in de tabvolgorde.
  * Het script zet de rollen en ARIA-attributen: zonder JavaScript werken de tabs niet, en staan alle panelen onder
  * elkaar, elk met zijn label, zonder tabs, kopieerknop en uitklapknop.
- * De kleuren komen uit `github-light-high-contrast`: alle syntaxkleuren hebben minstens 4,5:1 op wit.
+ * De kleuren komen uit `github-dark-default`: alle syntaxkleuren hebben minstens 4,5:1 op de achtergrond (#0d1117).
  */
 import type { HTMLAttributes } from 'astro/types';
 import { Code } from 'astro:components';
@@ -84,7 +84,7 @@ const checkIcon = ['M5 12l5 5l10 -10'];
       tabs.map((tab, index) => (
         <div class="utrecht-code-example__panel" id={`${id}-panel-${index}`} data-active={index === 0 ? '' : undefined}>
           {!single && <p class="utrecht-code-example__panel-label">{tab.label}</p>}
-          <Code code={tab.code} lang={tab.lang as never} theme="github-light-high-contrast" />
+          <Code code={tab.code} lang={tab.lang as never} theme="github-dark-default" />
         </div>
       ))
     }
@@ -222,10 +222,13 @@ const checkIcon = ['M5 12l5 5l10 -10'];
     syntax: '<length>';
   }
 
+  /* De achtergrond in de kleur van github-dark-default: waar de ingeklapte code vervaagt, blijft het blok donker */
   .utrecht-code-example {
     --utrecht-code-example-collapsed-block-size: 6rem;
     --utrecht-code-example-border-color: var(--utrecht-color-grey-80);
+    --utrecht-code-example-code-background-color: #0d1117;
 
+    background-color: var(--utrecht-code-example-code-background-color);
     border-color: var(--utrecht-code-example-border-color);
     border-style: solid;
     border-width: 1px;
