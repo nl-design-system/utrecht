@@ -1,6 +1,15 @@
 ---
+/**
+ * Een component op de overzichtspagina, als Utrecht card: voorbeeldafbeelding, titel als link, beschrijving en
+ * framework-badges. De markup volgt de React-component Card. De titellink bedekt de hele card, dus de card heeft één
+ * tabstop.
+ */
 import { base } from 'astro:config/client';
-import { joinUrl } from '../utils/url';
+import { joinUrl } from '../utils/url.ts';
+import '@utrecht/card-css';
+import '@utrecht/data-badge-css';
+import '@utrecht/badge-list-css';
+import '@utrecht/heading-3-css';
 
 interface Props {
   href: string;
@@ -12,79 +21,116 @@ interface Props {
 const { href, title, frameworks, previewImage } = Astro.props;
 
 const fullPreviewImage = previewImage
-  ? (previewImage.startsWith('/') ? joinUrl(base, previewImage) : previewImage)
+  ? previewImage.startsWith('/')
+    ? joinUrl(base, previewImage)
+    : previewImage
   : undefined;
 ---
 
-<div class="utrecht-component-card">
-  {fullPreviewImage && (
-    <div class="utrecht-component-card__preview">
-      <img src={fullPreviewImage} alt="" class="utrecht-component-card__preview-image" />
+<div class="utrecht-card utrecht-card--bright utrecht-card--16by9 utrecht-card--link utrecht-component-card">
+  <div class="utrecht-card__content">
+    <div class="utrecht-card__heading">
+      <h3 class="utrecht-heading-3 utrecht-card__header">
+        <a class="utrecht-link utrecht-card__link" href={href}>{title}</a>
+      </h3>
     </div>
-  )}
-  <a class="utrecht-link utrecht-component-card__link" href={href}>
-    <h3 class="nl-heading nl-heading--level-3">{title}</h3>
-  </a>
-  <div class="utrecht-component-card__badges">
-    {frameworks.map((framework) => (
-      <div class="utrecht-data-badge">{framework}</div>
-    ))}
+    <div class="utrecht-card__image utrecht-component-card__preview">
+      {
+        fullPreviewImage ? (
+          <img src={fullPreviewImage} alt="" class="utrecht-component-card__preview-image" />
+        ) : null
+      }
+    </div>
+    <div class="utrecht-card__body utrecht-component-card__body">
+      <slot />
+      {
+        frameworks.length > 0 && (
+          <div class="utrecht-badge-list">
+            {frameworks.map((framework) => (
+              <span class="utrecht-data-badge">{framework}</span>
+            ))}
+          </div>
+        )
+      }
+    </div>
   </div>
-  <slot />
 </div>
 
 <style>
   .utrecht-component-card {
-    --utrecht-link-text-decoration: none;
-    --nl-heading-level-3-margin-block-start: 0;
-    --nl-heading-level-3-margin-block-end: 0;
+    position: relative;
+  }
 
-    border: 1px solid #ccc;
+  /* Kopie van utrecht-card--bright uit de branch feat/card-as-link-updates, met de waarden van het Utrecht-thema als
+     fallback. Haal dit weg zodra @utrecht/card-css de modifier heeft. */
+  .utrecht-component-card.utrecht-card--bright {
+    --utrecht-card-background-color: var(--utrecht-card-bright-background-color, var(--utrecht-color-white, #fff));
+    --utrecht-card-color: var(--utrecht-card-bright-color, var(--utrecht-color-black, #000));
+
+    border-color: var(--utrecht-card-bright-border-color, var(--utrecht-color-grey-80, #ccc));
+    border-style: solid;
+    border-width: var(--utrecht-card-bright-border-width, 1px);
+    box-sizing: border-box;
+  }
+
+  .utrecht-component-card.utrecht-card--bright .utrecht-card__image {
+    margin-block: var(--utrecht-card-bright-image-margin-block, -1px);
+    margin-inline: var(--utrecht-card-bright-image-margin-inline, -1px);
+  }
+
+  /* Kopie van utrecht-card--16by9 uit de branch feat/card-as-link-updates. Haal dit weg zodra @utrecht/card-css de
+     modifier heeft. */
+  .utrecht-component-card.utrecht-card--16by9 :global(img) {
+    aspect-ratio: 16 / 9;
+  }
+
+  /* De titellink bedekt de card, dus je kunt overal op de card klikken */
+  .utrecht-component-card :global(.utrecht-card__link)::after {
+    content: '';
+    inset: 0;
+    position: absolute;
+  }
+
+  .utrecht-component-card .utrecht-card__header {
+    margin-block: 0;
+  }
+
+  /* De preview toont de hele component in het 16:9-vlak, gecentreerd en niet bijgesneden. Het vlak zelf is ook 16:9,
+     zodat een afbeelding die kleiner is dan de card, en een card zonder afbeelding, dezelfde hoogte hebben. */
+  .utrecht-component-card__preview {
+    --utrecht-component-card-preview-padding: var(--utrecht-space-block-md, 1rem);
+
+    aspect-ratio: 16 / 9;
+    background-color: var(--utrecht-color-grey-95, #f2f2f2);
+    position: relative;
+  }
+
+  /* Binnen de preview, zodat dit wint van de width: auto die card-css geeft aan een afbeelding zonder width-attribuut */
+  .utrecht-component-card__preview .utrecht-component-card__preview-image {
+    block-size: calc(100% - 2 * var(--utrecht-component-card-preview-padding));
+    display: block;
+    inline-size: calc(100% - 2 * var(--utrecht-component-card-preview-padding));
+    inset-block-start: var(--utrecht-component-card-preview-padding);
+    inset-inline-start: var(--utrecht-component-card-preview-padding);
+
+    /* Kleiner om te passen, nooit groter: een kleine preview blijft scherp */
+    object-fit: scale-down;
+    position: absolute;
+  }
+
+  .utrecht-component-card__body {
     display: flex;
     flex-direction: column;
-    gap: 12px;
-    padding-block-start: 24px;
-    padding-block-end: 24px;
-    padding-inline-start: 16px;
-    padding-inline-end: 16px;
+    gap: var(--utrecht-space-block-sm, 0.5rem);
   }
 
-  .utrecht-component-card__preview {
-    margin-block-end: 8px;
-    border-radius: 4px;
-    overflow: hidden;
-    background-color: #f5f5f5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 16px;
+  /* Het Utrecht-thema heeft geen ruimte tussen de badges van de badge list */
+  .utrecht-component-card .utrecht-badge-list {
+    --utrecht-badge-list-column-gap: var(--utrecht-space-inline-xs, 0.25rem);
+    --utrecht-badge-list-row-gap: var(--utrecht-space-block-xs, 0.25rem);
   }
 
-  .utrecht-component-card__preview-image {
-    display: block;
-    max-width: 100%;
-    max-height: 80px;
-    height: auto;
-    object-fit: contain;
-  }
-
-  .utrecht-component-card__link {
-    display: block;
-  }
-
-  .utrecht-component-card__badges {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-  }
-
-  .utrecht-data-badge {
-    background-color: #f0f0f0;
-    border-radius: 4px;
-    color: #333;
-    font-size: 12px;
-    font-weight: 500;
-    padding: 4px 8px;
+  .utrecht-component-card__body :global(p) {
+    margin-block: 0;
   }
 </style>
-

@@ -1,0 +1,79 @@
+---
+/**
+ * Achtergrond voor een voorbeeld van een component: een lichtgrijs stippenraster, met het voorbeeld op een witte
+ * ondergrond in het midden, zo breed als een tekstkolom. Het grijs hoort niet bij de component, het wit is de pagina
+ * waar de component op staat. Met `component` staat de code van het voorbeeld er direct onder, in hetzelfde kader.
+ */
+import ComponentCode from './ComponentCode.astro';
+import { IGNORE_ATTRIBUTE } from '../utils/headings.ts';
+
+interface Props {
+  /** Zet de voorbeelden onder elkaar in plaats van naast elkaar, bijvoorbeeld voor een accordion */
+  stack?: boolean;
+  /** Componentnaam zoals in de titels van de stories, bijvoorbeeld `Accordion`: toont de code onder het voorbeeld */
+  component?: string;
+}
+
+const { stack = false, component } = Astro.props;
+---
+
+<div class="utrecht-component-example">
+  {/* Koppen in het voorbeeld horen niet in "Op deze pagina" */}
+  <div class="utrecht-component-canvas" {...{ [IGNORE_ATTRIBUTE]: 'ignore' }}>
+    <div class:list={['utrecht-component-canvas__surface', stack && 'utrecht-component-canvas__surface--stack']}>
+      <slot />
+    </div>
+  </div>
+  {component && <ComponentCode component={component} />}
+</div>
+
+<style>
+  /* Eén kader om het voorbeeld en de code */
+  .utrecht-component-example {
+    border-color: var(--utrecht-color-grey-80, #ccc);
+    border-style: solid;
+    border-width: 1px;
+    margin-block: var(--utrecht-space-block-lg, 1.5rem);
+  }
+
+  /* Het kader is de rand van het codeblok: alleen een lijn tussen het voorbeeld en de code */
+  .utrecht-component-example :global(.utrecht-code-example) {
+    border-block-end-width: 0;
+    border-block-start: 1px solid var(--utrecht-color-grey-80, #ccc);
+    border-inline-width: 0;
+  }
+
+  .utrecht-component-canvas {
+    --utrecht-component-canvas-dot-color: var(--utrecht-color-grey-80, #ccc);
+
+    background-color: var(--utrecht-color-grey-95, #f2f2f2);
+    background-image: radial-gradient(var(--utrecht-component-canvas-dot-color) 1px, transparent 1px);
+    background-position: 8px 8px;
+    background-size: 16px 16px;
+
+    /* Minder ruimte om het voorbeeld op een klein scherm */
+    padding-block: clamp(1rem, 6vw, 3rem);
+    padding-inline: clamp(0.75rem, 4vw, 1rem);
+  }
+
+  .utrecht-component-canvas__surface {
+    align-items: center;
+    background-color: var(--utrecht-document-background-color, #fff);
+    border-color: var(--utrecht-color-grey-90, #e6e6e6);
+    border-style: solid;
+    border-width: 1px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--utrecht-space-inline-sm, 0.5rem);
+    margin-inline: auto;
+    max-inline-size: 40rem;
+    padding-block: clamp(1rem, 5vw, 2rem);
+    padding-inline: clamp(1rem, 5vw, 2rem);
+  }
+
+  .utrecht-component-canvas__surface--stack {
+    align-items: stretch;
+    flex-direction: column;
+    gap: var(--utrecht-space-block-md, 1rem);
+  }
+</style>

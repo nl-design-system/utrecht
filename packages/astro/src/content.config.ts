@@ -1,5 +1,6 @@
 import { glob } from 'astro/loaders'; // Not available with legacy API
-import { defineCollection, z } from 'astro:content';
+import { z } from 'astro/zod';
+import { defineCollection } from 'astro:content';
 
 const pages = defineCollection({
   loader: glob({ base: 'docs/pages', pattern: '**/*.{md,mdx}' }),
@@ -17,7 +18,8 @@ const components = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string().optional(),
-    frameworks: z.array(z.string()).default([]),
+    /** Inleiding onder de h1 van de componentpagina: een langere versie van `description` */
+    lead: z.string().optional(),
     previewImage: z.string().optional(),
   }),
 });

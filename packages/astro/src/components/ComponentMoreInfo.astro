@@ -1,0 +1,49 @@
+---
+/**
+ * Verwijzingen naar gerelateerde componenten, patronen, templates en onderzoeken. Staat tussen "Feedback" en
+ * "Hulp nodig". Alleen categorieën met links staan op de pagina, en zonder links de hele sectie niet.
+ */
+
+interface MoreInfoLink {
+  href: string;
+  label: string;
+}
+
+interface Props {
+  components?: MoreInfoLink[];
+  patterns?: MoreInfoLink[];
+  templates?: MoreInfoLink[];
+  research?: MoreInfoLink[];
+}
+
+const { components = [], patterns = [], templates = [], research = [] } = Astro.props;
+
+const categories = [
+  { heading: 'Gerelateerde componenten', links: components },
+  { heading: 'Gerelateerde patronen', links: patterns },
+  { heading: 'Gerelateerde templates', links: templates },
+  { heading: 'Gerelateerde onderzoeken', links: research },
+].filter(({ links }) => links.length > 0);
+---
+
+{
+  categories.length > 0 && (
+    <>
+      <h2 class="nl-heading nl-heading--level-2">Meer informatie</h2>
+      {categories.map(({ heading, links }) => (
+        <>
+          <h3 class="nl-heading nl-heading--level-3">{heading}</h3>
+          <ul class="utrecht-unordered-list" role="list">
+            {links.map(({ href, label }) => (
+              <li class="utrecht-unordered-list__item">
+                <a class="utrecht-link" href={href}>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      ))}
+    </>
+  )
+}

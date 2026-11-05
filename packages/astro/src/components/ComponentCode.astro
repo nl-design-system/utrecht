@@ -1,0 +1,28 @@
+---
+/**
+ * De code van de standaard-story in elke Storybook, als tabs. Toont niets als er geen story is.
+ * ComponentCanvas toont de code onder het voorbeeld, dus er is geen eigen kop.
+ */
+import CodeExample from './CodeExample.astro';
+import { sanitize } from '../utils/storybook/sanitize.ts';
+import { getCode } from '../utils/storybook/index.ts';
+
+interface Props {
+  /** Componentnaam zoals in de titels van de stories, bijvoorbeeld `Accordion` */
+  component: string;
+}
+
+const { component } = Astro.props;
+const tabs = getCode(component);
+---
+
+{
+  tabs.length > 0 && (
+    <CodeExample
+      id={`${sanitize(component)}-code`}
+      label="Framework"
+      tabs={tabs.map(({ framework, ...tab }) => ({ ...tab, value: framework }))}
+      data-frameworks={tabs.map(({ framework }) => framework).join(' ')}
+    />
+  )
+}

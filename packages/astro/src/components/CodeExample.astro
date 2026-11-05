@@ -1,0 +1,436 @@
+---
+/**
+ * Een codeblok met tabs, een kopieerknop en een knop "Bekijk code". Het blok begint ingeklapt: de code vervaagt aan de
+ * onderkant, tot je hem uitklapt.
+ * De tabs volgen het tabs-patroon van WAI-ARIA: pijltjestoetsen, Home en End, en alleen de gekozen tab in de tabvolgorde.
+ * Het script zet de rollen en ARIA-attributen: zonder JavaScript werken de tabs niet, en staan alle panelen onder
+ * elkaar, elk met zijn label, zonder tabs, kopieerknop en uitklapknop.
+ * De kleuren komen uit `github-dark-default`: alle syntaxkleuren hebben minstens 4,5:1 op de achtergrond (#0d1117).
+ */
+import type { HTMLAttributes } from 'astro/types';
+import { Code } from 'astro:components';
+
+interface Tab {
+  label: string;
+  code: string;
+  /** Shiki-taal, bijvoorbeeld `html` of `tsx` */
+  lang: string;
+  /** Waarde in het event `utrecht-code-example-select`, bijvoorbeeld het framework */
+  value?: string;
+}
+
+interface Props extends HTMLAttributes<'div'> {
+  /** Uniek op de pagina: het begin van de ids van de tabs en panelen */
+  id: string;
+  /** Toegankelijke naam van de tabs, bijvoorbeeld "Framework" */
+  label: string;
+  tabs: Tab[];
+}
+
+const { id, label, tabs, class: className, ...rest } = Astro.props;
+// Eén tab heeft geen tabs nodig, alleen de kopieerknop met tekst
+const single = tabs.length === 1;
+const panelsId = `${id}-panels`;
+
+// Iconen uit Tabler Icons 2.44 (MIT), https://tabler.io/icons
+const copyIcon = [
+  'M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z',
+  'M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1',
+];
+const checkIcon = ['M5 12l5 5l10 -10'];
+---
+
+<div class:list={['utrecht-code-example', className]} data-single={single ? '' : undefined} {...rest}>
+  <div class="utrecht-code-example__bar">
+    {
+      !single && (
+        <div class="utrecht-code-example__tablist" data-label={label}>
+          {tabs.map((tab, index) => (
+            <button type="button" class="utrecht-code-example__tab" id={`${id}-tab-${index}`} data-value={tab.value}>
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      )
+    }
+    <button type="button" class="utrecht-code-example__copy">
+      {
+        [copyIcon, checkIcon].map((paths, index) => (
+          <svg
+            class:list={[
+              'utrecht-code-example__icon',
+              index === 0 ? 'utrecht-code-example__icon--copy' : 'utrecht-code-example__icon--done',
+            ]}
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+          >
+            {paths.map((d) => (
+              <path d={d} />
+            ))}
+          </svg>
+        ))
+      }
+      <span class="utrecht-code-example__copy-label">{single ? 'Kopieer' : 'Kopieer code'}</span>
+    </button>
+    <span class="utrecht-code-example__status" role="status"></span>
+  </div>
+  <div class="utrecht-code-example__panels" id={panelsId}>
+    {
+      tabs.map((tab, index) => (
+        <div class="utrecht-code-example__panel" id={`${id}-panel-${index}`} data-active={index === 0 ? '' : undefined}>
+          {!single && <p class="utrecht-code-example__panel-label">{tab.label}</p>}
+          <Code code={tab.code} lang={tab.lang as never} theme="github-dark-default" />
+        </div>
+      ))
+    }
+  </div>
+  <div class="utrecht-code-example__toggle">
+    <button
+      type="button"
+      class="utrecht-button utrecht-button--secondary-action"
+      aria-expanded="false"
+      aria-controls={panelsId}
+    >
+      <utrecht-icon-chevron-down class="utrecht-code-example__toggle-icon" aria-hidden="true"
+      ></utrecht-icon-chevron-down>
+      <span class="utrecht-code-example__toggle-label">Bekijk code</span>
+    </button>
+  </div>
+</div>
+
+<script>
+  const COPY_RESET_MS = 2000;
+
+  for (const example of document.querySelectorAll<HTMLElement>('.utrecht-code-example')) {
+    const tablist = example.querySelector<HTMLElement>('.utrecht-code-example__tablist');
+    const tabs = [...example.querySelectorAll<HTMLButtonElement>('.utrecht-code-example__tab')];
+    const panels = [...example.querySelectorAll<HTMLElement>('.utrecht-code-example__panel')];
+    const panelsElement = example.querySelector<HTMLElement>('.utrecht-code-example__panels');
+    const toggle = example.querySelector<HTMLButtonElement>('.utrecht-code-example__toggle button');
+    const toggleLabel = example.querySelector('.utrecht-code-example__toggle-label');
+    const copy = example.querySelector<HTMLButtonElement>('.utrecht-code-example__copy');
+    const copyLabel = example.querySelector('.utrecht-code-example__copy-label');
+    const status = example.querySelector('.utrecht-code-example__status');
+    if (!panelsElement || !toggle || !toggleLabel || !copy || !copyLabel || !status) continue;
+
+    // De rollen pas nu: zonder JavaScript zouden het tabs zijn die niet werken
+    if (tablist) {
+      tablist.setAttribute('role', 'tablist');
+      tablist.setAttribute('aria-label', tablist.dataset['label'] ?? '');
+      tabs.forEach((tab, index) => {
+        tab.setAttribute('role', 'tab');
+        tab.setAttribute('aria-controls', panels[index]?.id ?? '');
+        panels[index]?.setAttribute('role', 'tabpanel');
+        panels[index]?.setAttribute('aria-labelledby', tab.id);
+      });
+    }
+
+    // Het uitklappen is alleen nodig als de gekozen code hoger is dan het ingeklapte blok
+    const updateFits = () => {
+      const active = panels.find((panel) => panel.hasAttribute('data-active'));
+      if (!active) return;
+      // Geregistreerd met @property, dus de berekende waarde is in px
+      const limit = parseFloat(getComputedStyle(example).getPropertyValue('--utrecht-code-example-collapsed-block-size'));
+      // Zonder transitie: van een korte naar een lange tab zou anders animeren van de volledige hoogte van de lange
+      // code naar de ingeklapte hoogte. Alleen de knop hoort te animeren.
+      example.setAttribute('data-no-transition', '');
+      example.toggleAttribute('data-fits', active.scrollHeight <= limit);
+      void panelsElement.offsetHeight;
+      example.removeAttribute('data-no-transition');
+    };
+
+    const select = (index: number, focus = false) => {
+      tabs.forEach((tab, i) => {
+        tab.setAttribute('aria-selected', String(i === index));
+        tab.tabIndex = i === index ? 0 : -1;
+      });
+      panels.forEach((panel, i) => panel.toggleAttribute('data-active', i === index));
+      if (focus) tabs[index]?.focus();
+      updateFits();
+      example.dispatchEvent(
+        new CustomEvent('utrecht-code-example-select', {
+          bubbles: true,
+          detail: { value: tabs[index]?.dataset['value'] },
+        }),
+      );
+    };
+
+    tabs.forEach((tab, index) => {
+      tab.addEventListener('click', () => select(index));
+      tab.addEventListener('keydown', (event) => {
+        const last = tabs.length - 1;
+        const rtl = getComputedStyle(example).direction === 'rtl';
+        const next = index === last ? 0 : index + 1;
+        const previous = index === 0 ? last : index - 1;
+        const targets: Record<string, number> = {
+          ArrowRight: rtl ? previous : next,
+          ArrowLeft: rtl ? next : previous,
+          Home: 0,
+          End: last,
+        };
+        const target = targets[event.key];
+        if (target === undefined) return;
+        event.preventDefault();
+        select(target, true);
+      });
+    });
+
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') !== 'true';
+      toggle.setAttribute('aria-expanded', String(expanded));
+      toggleLabel.textContent = expanded ? 'Verberg code' : 'Bekijk code';
+    });
+
+    const idleLabel = copyLabel.textContent;
+    let reset: ReturnType<typeof setTimeout> | undefined;
+    copy.addEventListener('click', async () => {
+      const code = panels.find((panel) => panel.hasAttribute('data-active'))?.querySelector('pre')?.textContent ?? '';
+      let copied = true;
+      try {
+        await navigator.clipboard.writeText(code);
+      } catch {
+        copied = false;
+      }
+      copy.dataset['state'] = copied ? 'done' : 'error';
+      copyLabel.textContent = copied ? 'Gekopieerd' : 'Kopiëren mislukt';
+      status.textContent = copied ? 'Code gekopieerd' : 'Kopiëren mislukt';
+      clearTimeout(reset);
+      reset = setTimeout(() => {
+        delete copy.dataset['state'];
+        copyLabel.textContent = idleLabel;
+        status.textContent = '';
+      }, COPY_RESET_MS);
+    });
+
+    if (tabs.length) {
+      select(0);
+    } else {
+      updateFits();
+    }
+  }
+</script>
+
+<style is:global>
+  @property --utrecht-code-example-collapsed-block-size {
+    inherits: true;
+    initial-value: 0;
+    syntax: '<length>';
+  }
+
+  /* De achtergrond in de kleur van github-dark-default: waar de ingeklapte code vervaagt, blijft het blok donker */
+  .utrecht-code-example {
+    --utrecht-code-example-collapsed-block-size: 6rem;
+    --utrecht-code-example-border-color: var(--utrecht-color-grey-80);
+    --utrecht-code-example-code-background-color: #0d1117;
+
+    background-color: var(--utrecht-code-example-code-background-color);
+    border-color: var(--utrecht-code-example-border-color);
+    border-style: solid;
+    border-width: 1px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    interpolate-size: allow-keywords;
+    position: relative;
+  }
+
+  .utrecht-code-example__bar {
+    align-items: stretch;
+    background-color: var(--utrecht-color-grey-95);
+    border-block-end: 1px solid var(--utrecht-code-example-border-color);
+    color: var(--utrecht-color-grey-10);
+    display: flex;
+  }
+
+  /* Tabs zo breed als hun label. Op een smal scherm lopen ze door op een volgende regel, in plaats van te scrollen */
+  .utrecht-code-example__tablist {
+    display: flex;
+    flex: 1 1 auto;
+    flex-wrap: wrap;
+  }
+
+  .utrecht-code-example__tab {
+    background: none;
+    border-width: 0;
+    color: inherit;
+    cursor: pointer;
+    font: inherit;
+    font-size: 0.875rem;
+    padding-block: 0.7rem;
+    padding-inline: var(--utrecht-space-inline-md, 1rem);
+    white-space: nowrap;
+  }
+
+  /* De gekozen tab: vet en onderstreept, dus niet alleen met kleur */
+  .utrecht-code-example__tab[aria-selected='true'] {
+    --utrecht-code-example-tab-indicator: inset 0 -2px 0 currentColor;
+
+    box-shadow: var(--utrecht-code-example-tab-indicator);
+    font-weight: 700;
+  }
+
+  /* De kopieerknop vult het eind van de balk: even hoog als de balk, met een lijn tussen knop en tabs. Vierkant naast
+     één rij tabs. Een vaste breedte en geen aspect-ratio: als de tabs over meer regels lopen, wordt de balk hoger, en
+     de knop zou dan breder worden en de tabs nog verder wegdrukken. */
+  .utrecht-code-example__copy {
+    --utrecht-code-example-bar-block-size: 2.625rem;
+
+    align-items: center;
+    background: none;
+    border-block-width: 0;
+    border-inline-end-width: 0;
+    border-inline-start: 1px solid var(--utrecht-code-example-border-color);
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    flex: none;
+    font: inherit;
+    font-size: 0.875rem;
+    gap: var(--utrecht-space-inline-sm, 0.5rem);
+    inline-size: var(--utrecht-code-example-bar-block-size);
+    justify-content: center;
+    margin-inline-start: auto;
+    min-block-size: var(--utrecht-code-example-bar-block-size);
+  }
+
+  /* De focusring van @utrecht/focus-ring-css: een outline met een ring in de inverse kleur eromheen */
+  .utrecht-code-example__tab:focus-visible,
+  .utrecht-code-example__copy:focus-visible {
+    box-shadow:
+      0 0 0 var(--utrecht-focus-outline-width, 0) var(--utrecht-focus-inverse-outline-color, transparent),
+      var(--utrecht-code-example-tab-indicator, 0 0 transparent);
+    outline-color: var(--utrecht-focus-outline-color, revert);
+    outline-offset: var(--utrecht-focus-outline-offset, revert);
+    outline-style: var(--utrecht-focus-outline-style, revert);
+    outline-width: var(--utrecht-focus-outline-width, revert);
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Breder dan vierkant zolang er tekst staat: de uitkomst, of het label als er één tab is */
+  .utrecht-code-example__copy[data-state],
+  .utrecht-code-example[data-single] .utrecht-code-example__copy {
+    inline-size: auto;
+    padding-inline: var(--utrecht-space-inline-md, 1rem);
+  }
+
+  .utrecht-code-example__icon {
+    block-size: 1.25rem;
+    flex: none;
+    inline-size: 1.25rem;
+  }
+
+  .utrecht-code-example__icon--done,
+  .utrecht-code-example__copy[data-state='done'] .utrecht-code-example__icon--copy {
+    display: none;
+  }
+
+  .utrecht-code-example__copy[data-state='done'] .utrecht-code-example__icon--done {
+    display: block;
+  }
+
+  /* Alleen een icoon zolang er niets te melden is. De tekst blijft de toegankelijke naam. */
+  .utrecht-code-example:not([data-single]) .utrecht-code-example__copy:not([data-state]) .utrecht-code-example__copy-label,
+  .utrecht-code-example__status {
+    block-size: 1px;
+    clip-path: inset(50%);
+    inline-size: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+  }
+
+  .utrecht-code-example__panel-label {
+    font-size: 0.875rem;
+    font-weight: 700;
+    margin-block: var(--utrecht-space-block-sm, 0.5rem) 0;
+    padding-inline: var(--utrecht-space-inline-md, 1rem);
+  }
+
+  .utrecht-code-example__panel pre {
+    font-size: 0.875rem;
+    margin-block: 0;
+    margin-inline: 0;
+    padding-block: var(--utrecht-space-block-md, 1rem);
+    padding-inline: var(--utrecht-space-inline-md, 1rem);
+  }
+
+  /* De code scrolt in zijn eigen blok, dat de ring aan de buitenkant zou afsnijden: hier de ring aan de binnenkant */
+  .utrecht-code-example__panel pre:focus-visible {
+    box-shadow: inset 0 0 0 calc(2 * var(--utrecht-focus-outline-width, 2px))
+      var(--utrecht-focus-inverse-outline-color, transparent);
+    outline: var(--utrecht-focus-outline-width, 2px) var(--utrecht-focus-outline-style, solid)
+      var(--utrecht-focus-outline-color, currentColor);
+    outline-offset: calc(-1 * var(--utrecht-focus-outline-width, 2px));
+  }
+
+  .utrecht-code-example__toggle {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--utrecht-space-block-md, 1rem);
+  }
+
+  .utrecht-code-example__toggle .utrecht-button {
+    gap: var(--utrecht-space-inline-sm, 0.5rem);
+  }
+
+  .utrecht-code-example__toggle-icon {
+    transition: rotate 300ms ease;
+  }
+
+  [aria-expanded='true'] > .utrecht-code-example__toggle-icon {
+    rotate: 180deg;
+  }
+
+  .utrecht-code-example[data-fits] .utrecht-code-example__toggle {
+    display: none;
+  }
+
+  /* Zonder JavaScript: alle panelen onder elkaar, zonder tabs, kopieerknop en uitklapknop (zie Layout.astro) */
+  :root:not([data-js]) .utrecht-code-example__tablist,
+  :root:not([data-js]) .utrecht-code-example__copy,
+  :root:not([data-js]) .utrecht-code-example__toggle,
+  :root:not([data-js]) .utrecht-code-example[data-single] .utrecht-code-example__bar {
+    display: none;
+  }
+
+  :root[data-js] .utrecht-code-example__panel:not([data-active]),
+  :root[data-js] .utrecht-code-example__panel-label {
+    display: none;
+  }
+
+  /* Ingeklapt: de code vervaagt naar onderen. Elke tab is minstens zo hoog, zodat het blok niet verspringt. */
+  :root[data-js] .utrecht-code-example__panels {
+    max-block-size: max-content;
+    min-block-size: var(--utrecht-code-example-collapsed-block-size);
+    overflow: hidden;
+    transition: max-block-size 300ms ease;
+  }
+
+  /* Hogere specificiteit dan de transitie hierboven, ook dan die voor minder beweging: zonder transitie wint altijd */
+  :root[data-js] .utrecht-code-example[data-no-transition] .utrecht-code-example__panels {
+    transition: none;
+  }
+
+  :root[data-js] .utrecht-code-example:has([aria-expanded='false']):not([data-fits]) .utrecht-code-example__panels {
+    mask-image: linear-gradient(to bottom, black 20%, transparent);
+    max-block-size: var(--utrecht-code-example-collapsed-block-size);
+  }
+
+  :root[data-js] .utrecht-code-example:has([aria-expanded='false']) .utrecht-code-example__toggle {
+    inset-block-end: 0;
+    inset-inline: 0;
+    position: absolute;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    :root[data-js] .utrecht-code-example__panels,
+    .utrecht-code-example__toggle-icon {
+      transition: none;
+    }
+  }
+</style>

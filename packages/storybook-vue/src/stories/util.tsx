@@ -2,31 +2,9 @@ import { Controls, Description, Primary, Stories, Subtitle, Title } from '@story
 import tokens from '@utrecht/design-tokens/dist/index.json';
 import { ComponentTokensSection } from '@utrecht/documentation/components/ComponentTokensSection.jsx';
 import React from 'react';
+import { templateSourceCode } from './template-source-code';
 
-export const templateSourceCode = (templateSource, args, replacing = ' v-bind="$props"') => {
-  const { textContent, slot, ...restArgs } = args;
-
-  const propToSource = (key, val) => {
-    const type = typeof val;
-    switch (type) {
-      case 'boolean':
-        return val ? ` ${key}` : '';
-      case 'string':
-        return ` ${key}="${val}"`;
-      case 'object':
-        return ` ${key}='${JSON.stringify(val)}'`;
-      default:
-        return ` :${key}="${val}"`;
-    }
-  };
-
-  return templateSource.replace('<slot></slot>', slot || textContent || '').replace(
-    replacing,
-    Object.keys(restArgs)
-      .map((key) => propToSource(key, args[key]))
-      .join(''),
-  );
-};
+export { templateSourceCode };
 
 export const createStory = (meta, story) => {
   const render =

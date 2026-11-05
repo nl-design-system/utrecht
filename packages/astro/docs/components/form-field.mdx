@@ -1,37 +1,41 @@
 ---
 title: Form field
 description: Een invoerveld en bijbehorende onderdelen die helpen bij het invullen.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Een invoerveld en bijbehorende onderdelen die helpen bij het invullen.
 previewImage: /component-previews/form-field.png
 ---
 
-import { Checkbox } from "@utrecht/checkbox-react";
+import { FormField, FormLabel, Paragraph, Textbox } from "@utrecht/component-library-react";
+import "@utrecht/form-label-css";
+import "@utrecht/paragraph-css";
+import "@utrecht/textbox-css";
 import "@utrecht/form-field-css";
-
-# Form field
-
-Een invoerveld en bijbehorende onderdelen die helpen bij het invullen.
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
 ## Voorbeeld
 
-<div
-  className="utrecht-component-canvas"
-  style={{
-    borderRadius: "3px",
-    border: "1px solid grey",
-    padding: "16px",
-    backgroundColor: "#fafafa",
-    display: "flex",
-    gap: "8px",
-    flexWrap: "wrap",
-  }}
->
-  <Checkbox></Checkbox>
-  <Checkbox checked></Checkbox>
-</div>
+<ComponentCanvas stack component="Form field">
+  <FormField type="text">
+    <Paragraph className="utrecht-form-field__label">
+      <FormLabel htmlFor="voorbeeld-e-mailadres">E-mailadres</FormLabel>
+    </Paragraph>
+    <Paragraph className="utrecht-form-field__input">
+      <Textbox id="voorbeeld-e-mailadres" type="email" autoComplete="email" />
+    </Paragraph>
+  </FormField>
+</ComponentCanvas>
+
+<ComponentLinks component="Form field" />
+
+<ComponentTokens component="Form field" />
+
+<ComponentFeedback component="Form field" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />

@@ -3,6 +3,7 @@ import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
 import { defineConfig } from 'astro/config';
 import process from 'node:process';
+import { storybookDocs } from './integrations/storybook-docs.ts';
 import { nldsComponentsPlugin } from './plugins/rehype-nlds-components/index.js';
 
 const baseUrl = process.env.BASE_URL ?? '/';
@@ -23,6 +24,7 @@ export default defineConfig({
     enabled: false,
   },
   integrations: [
+    storybookDocs(),
     mdx(),
     react(),
     sitemap({

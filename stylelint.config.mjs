@@ -182,4 +182,17 @@ export default {
       },
     ],
   },
+  overrides: [
+    {
+      // The <style> blocks in Astro components
+      files: ['**/*.astro'],
+      customSyntax: 'postcss-html',
+      rules: {
+        // Astro: `:global()` for selectors outside the scoped component
+        'selector-pseudo-class-no-unknown': [true, { ignorePseudoClasses: ['global'] }],
+        // Also the tokens of the NL Design System candidate components, such as `--nl-heading-level-3-margin-block-start`
+        'custom-property-pattern': '^_?(basis|example|denhaag|utrecht|nl)-[a-z0-9-]+$',
+      },
+    },
+  ],
 };

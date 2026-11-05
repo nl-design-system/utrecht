@@ -12,24 +12,14 @@
   --utrecht-nav-bar-link-padding-block-end: 1rem;
 }
 
+/* Een anker, of een element dat focus krijgt, komt onder de sticky nav bar terecht in plaats van erachter */
+html {
+  scroll-padding-block-start: calc(var(--utrecht-page-sticky-offset, 0px) + var(--utrecht-space-block-xl, 2rem));
+}
+
 .utrecht-nav-bar__content {
-  border-block-end: 1px solid #ccc;
-  border-block-start: 1px solid #ccc;
-}
-
-.utrecht-nav-list__item {
-  flex: 1 1 auto;
-}
-
-.utrecht-nav-list__link {
-  --utrecht-link-text-decoration: none;
-  --utrecht-link-color: var(--utrecht-color-black);
-  --utrecht-link-hover-text-decoration-thickness: 1px;
-
-  display: flex;
-  inline-size: 100%;
-  justify-content: center;
-  max-inline-size: none;
+  border-block-end: 1px solid var(--utrecht-color-grey-80);
+  border-block-start: 1px solid var(--utrecht-color-grey-80);
 }
 
 .utrecht-drawer .utrecht-nav-list {

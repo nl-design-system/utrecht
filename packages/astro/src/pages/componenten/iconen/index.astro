@@ -5,7 +5,7 @@ import { iconCategories } from './icon-categories.ts';
 import { Link } from '@utrecht/component-library-react';
 ---
 
-<Layout>
+<Layout title="Iconen">
   <h1>Iconen</h1>
   Ontwikkelaars kunnen voor uitgebreide documentatie naar de <Link href="https://nl-design-system.github.io/utrecht/storybook/?path=/docs/utrecht-readme--docs">Storybook</Link> of de broncode in <Link href="https://github.com/nl-design-system/utrecht">Github</Link>.
 
@@ -22,9 +22,12 @@ import { Link } from '@utrecht/component-library-react';
 
 <style>
   .utrecht-component-canvas {
-    border-radius: 3px;
-    border: 1px solid grey;
-    padding: 16px;
     background-color: #fafafa;
+    border-color: grey;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px;
+    padding-block: 16px;
+    padding-inline: 16px;
   }
 </style>

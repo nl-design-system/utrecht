@@ -49,8 +49,8 @@ function generateBreadcrumbs(pageId: string, pages: any[], currentPageTitle: str
 const breadcrumbs = generateBreadcrumbs(page.id, allPages, page.data.title);
 ---
 
-<Layout>
-  <article class="content-page">
+<Layout title={page.data.title}>
+  <article class="utrecht-content-page">
     {breadcrumbs.length > 1 && (
       <BreadcrumbNav>
         {breadcrumbs.map((crumb, index) => (
@@ -68,14 +68,14 @@ const breadcrumbs = generateBreadcrumbs(page.id, allPages, page.data.title);
       </BreadcrumbNav>
     )}
 
-    <div class="content-page__body">
+    <div class="utrecht-content-page__body">
       <slot />
     </div>
   </article>
 </Layout>
 
 <style>
-  .content-page {
+  .utrecht-content-page {
     padding-block-start: 2rem;
   }
 </style>

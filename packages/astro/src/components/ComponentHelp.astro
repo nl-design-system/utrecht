@@ -1,0 +1,42 @@
+---
+/**
+ * Waar je hulp krijgt: de laatste sectie van een componentpagina.
+ */
+import { base } from 'astro:config/client';
+import { joinUrl } from '../utils/url.ts';
+
+interface Props {
+  /** Waar "Neem contact op" naartoe gaat. Voorlopig de pagina met vragen, tot er een link naar Slack is. */
+  href?: string;
+}
+
+const { href = joinUrl(base, '/vragen') } = Astro.props;
+---
+
+<h2 class="nl-heading nl-heading--level-2">Hulp nodig</h2>
+<p class="nl-paragraph">Heb je een vraag of loop je ergens tegenaan? Het design system team helpt je graag.</p>
+<div class="utrecht-component-help">
+  <h3 class="nl-heading nl-heading--level-3 utrecht-component-help__heading">
+    <a class="utrecht-link" href={href}>Neem contact op</a>
+  </h3>
+  <p class="nl-paragraph">Neem contact op met het team of stel je vraag in Slack.</p>
+</div>
+
+<style>
+  .utrecht-component-help {
+    border-color: var(--utrecht-color-grey-80, #ccc);
+    border-style: solid;
+    border-width: 1px;
+    margin-block: var(--utrecht-space-block-md, 1rem);
+    padding-block: var(--utrecht-space-block-md, 1rem);
+    padding-inline: var(--utrecht-space-inline-lg, 1.5rem);
+  }
+
+  .utrecht-component-help__heading {
+    margin-block-start: 0;
+  }
+
+  .utrecht-component-help > :last-child {
+    margin-block-end: 0;
+  }
+</style>

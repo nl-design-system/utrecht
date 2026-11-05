@@ -1,0 +1,31 @@
+---
+/**
+ * Vraagt om feedback op de component en om ideeën om hem uit te breiden. Beide linken naar een nieuw GitHub-issue met
+ * de naam van de component in de titel.
+ */
+import { GITHUB_NEW_ISSUE_URL } from '../utils/storybook/frameworks.ts';
+
+interface Props {
+  /** Componentnaam, bijvoorbeeld `Accordion` */
+  component: string;
+}
+
+const { component } = Astro.props;
+const href = `${GITHUB_NEW_ISSUE_URL}?${new URLSearchParams({ title: `${component}: ` })}`;
+---
+
+<h2 class="nl-heading nl-heading--level-2">Feedback</h2>
+<p class="nl-paragraph">
+  Heb je feedback op deze component of de documentatie? Laat het ons weten. Zo kunnen we de component blijven
+  verbeteren.
+</p>
+<p class="nl-paragraph">
+  <a class="utrecht-link" href={href}>Geef feedback via GitHub</a>
+</p>
+<h3 class="nl-heading nl-heading--level-3">Mis je een functionaliteit?</h3>
+<p class="nl-paragraph">
+  Heb je een idee voor een uitbreiding van deze component? Deel je voorstel met het design system team of <a
+    class="utrecht-link"
+    href={href}>maak een issue aan</a
+  >.
+</p>

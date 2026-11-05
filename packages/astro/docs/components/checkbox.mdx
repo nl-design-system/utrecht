@@ -1,38 +1,38 @@
 ---
 title: Checkbox
 description: Invoerveld voor het kiezen van een optie uit een groep van opties, of om te kiezen tussen "wel" of "niet".
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
 previewImage: /component-previews/checkbox.png
 ---
 
-import { Checkbox } from "@utrecht/checkbox-react";
+import { Checkbox, FormLabel } from "@utrecht/component-library-react";
+import "@utrecht/form-label-css";
 import "@utrecht/checkbox-css";
 import "@utrecht/custom-checkbox-css";
-
-# Checkbox
-
-Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
 ## Voorbeeld
 
-<div
-  className="utrecht-component-canvas"
-  style={{
-    borderRadius: "3px",
-    border: "1px solid grey",
-    padding: "16px",
-    backgroundColor: "#fafafa",
-    display: "flex",
-    gap: "8px",
-    flexWrap: "wrap",
-  }}
->
-  <Checkbox></Checkbox>
-  <Checkbox checked></Checkbox>
-</div>
+<ComponentCanvas component="Checkbox">
+  <FormLabel type="checkbox">
+    <Checkbox name="voorbeeld" value="1" /> Optie 1
+  </FormLabel>
+  <FormLabel type="checkbox">
+    <Checkbox name="voorbeeld" value="2" defaultChecked /> Optie 2
+  </FormLabel>
+</ComponentCanvas>
+
+<ComponentLinks component="Checkbox" />
+
+<ComponentTokens component="Checkbox" />
+
+<ComponentFeedback component="Checkbox" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />
