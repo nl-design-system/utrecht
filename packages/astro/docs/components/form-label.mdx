@@ -1,36 +1,31 @@
 ---
 title: Form Label
 description: Toont een tekstlabel dat informeert over de in te vullen informatie.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Toont een tekstlabel dat informeert over de in te vullen informatie.
 previewImage: /component-previews/form-label.png
 ---
 
-import { FormLabel } from "@utrecht/form-label-react";
+import { FormLabel } from "@utrecht/component-library-react";
 import "@utrecht/form-label-css";
-
-# Form Label
-
-Toont een tekstlabel dat informeert over de in te vullen informatie.
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
 ## Voorbeeld
 
-<div
-  className="utrecht-component-canvas"
-  style={{
-    borderRadius: "3px",
-    border: "1px solid grey",
-    padding: "16px",
-    backgroundColor: "#fafafa",
-    display: "flex",
-    gap: "8px",
-    flexWrap: "wrap",
-  }}
->
-  <FormLabel>Username</FormLabel>
-</div>
+<ComponentCanvas component="Form Label">
+  <FormLabel>Gebruikersnaam</FormLabel>
+</ComponentCanvas>
+
+<ComponentLinks component="Form Label" />
+
+<ComponentTokens component="Form Label" />
+
+<ComponentFeedback component="Form Label" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />

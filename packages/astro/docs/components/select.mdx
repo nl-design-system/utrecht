@@ -1,15 +1,36 @@
 ---
 title: Select
 description: Beschrijving volgt.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
 ---
 
-# Select
+import { FormLabel, Select, SelectOption } from "@utrecht/component-library-react";
+import "@utrecht/form-label-css";
+import "@utrecht/select-css";
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
-Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
+## Voorbeeld
+
+<ComponentCanvas stack component="Select">
+  <FormLabel htmlFor="voorbeeld-select">Gemeente</FormLabel>
+  <Select id="voorbeeld-select">
+    <SelectOption value="utrecht">Utrecht</SelectOption>
+    <SelectOption value="nieuwegein">Nieuwegein</SelectOption>
+    <SelectOption value="zeist">Zeist</SelectOption>
+  </Select>
+</ComponentCanvas>
+
+<ComponentLinks component="Select" />
+
+<ComponentTokens component="Select" />
+
+<ComponentFeedback component="Select" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />

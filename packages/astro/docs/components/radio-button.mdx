@@ -1,15 +1,36 @@
 ---
 title: Radio Button
 description: Beschrijving volgt.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
 ---
 
-# Radio Button
+import { FormLabel, RadioButton } from "@utrecht/component-library-react";
+import "@utrecht/form-label-css";
+import "@utrecht/radio-button-css";
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
-Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
+## Voorbeeld
+
+<ComponentCanvas component="Radio Button">
+  <FormLabel type="radio">
+    <RadioButton name="voorbeeld" value="1" /> Optie 1
+  </FormLabel>
+  <FormLabel type="radio">
+    <RadioButton name="voorbeeld" value="2" defaultChecked /> Optie 2
+  </FormLabel>
+</ComponentCanvas>
+
+<ComponentLinks component="Radio Button" />
+
+<ComponentTokens component="Radio Button" />
+
+<ComponentFeedback component="Radio Button" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />

@@ -1,15 +1,32 @@
 ---
 title: Textarea
 description: Beschrijving volgt.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
 ---
 
-# Textarea
+import { FormLabel, Textarea } from "@utrecht/component-library-react";
+import "@utrecht/form-label-css";
+import "@utrecht/textarea-css";
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
-Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
+## Voorbeeld
+
+<ComponentCanvas stack component="Textarea">
+  <FormLabel htmlFor="voorbeeld-textarea">Je vraag</FormLabel>
+  <Textarea id="voorbeeld-textarea" />
+</ComponentCanvas>
+
+<ComponentLinks component="Textarea" />
+
+<ComponentTokens component="Textarea" />
+
+<ComponentFeedback component="Textarea" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />

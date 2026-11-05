@@ -1,15 +1,33 @@
 ---
 title: Paragraph
 description: Beschrijving volgt.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
 ---
 
-# Paragraph
+import { Paragraph } from "@utrecht/component-library-react";
+import "@utrecht/paragraph-css";
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
-Deze pagina bevat een korte omschrijving van het component. Verder materiaal wordt later toegevoegd.
+## Voorbeeld
+
+<ComponentCanvas stack component="Paragraph">
+  <Paragraph>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+    aliqua.
+  </Paragraph>
+</ComponentCanvas>
+
+<ComponentLinks component="Paragraph" />
+
+<ComponentTokens component="Paragraph" />
+
+<ComponentFeedback component="Paragraph" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />

@@ -1,42 +1,39 @@
 ---
 title: Heading
 description: Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.
-frameworks:
-  - HTML
-  - CSS
-  - React
-  - Angular
-  - Vue
-  - Web Component
+lead: Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.
 previewImage: /component-previews/heading.png
 ---
 
-import { Heading } from "@utrecht/component-library-react/dist/css-module";
 import "@utrecht/heading-1-css";
 import "@utrecht/heading-2-css";
 import "@utrecht/heading-3-css";
 import "@utrecht/heading-4-css";
 import "@utrecht/heading-5-css";
 import "@utrecht/heading-6-css";
-
-# Heading
-
-Koptekst die in de koppenstructuur ingesteld kan worden op het juiste niveau.
+import ComponentCanvas from "../../src/components/ComponentCanvas.astro";
+import ComponentFeedback from "../../src/components/ComponentFeedback.astro";
+import ComponentHelp from "../../src/components/ComponentHelp.astro";
+import ComponentLinks from "../../src/components/ComponentLinks.astro";
+import ComponentMoreInfo from "../../src/components/ComponentMoreInfo.astro";
+import ComponentTokens from "../../src/components/ComponentTokens.astro";
 
 ## Voorbeeld
 
-<div
-  className="utrecht-component-canvas"
-  style={{
-    borderRadius: "3px",
-    border: "1px solid grey",
-    padding: "16px",
-    backgroundColor: "#fafafa",
-    gap: "8px",
-    flexWrap: "wrap",
-  }}
->
-  <Heading level={1}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>
-  <Heading level={2}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>
-  <Heading level={4}>The Quick Brown Fox Jumps Over The Lazy Dog</Heading>
-</div>
+{/* De stijl van de koppen op gewone tekst: echte koppen zouden in de koppenstructuur van deze pagina komen. De codetabs tonen de echte HTML. */}
+
+<ComponentCanvas stack component="Heading">
+  <p className="utrecht-heading-1">Pa's wijze lynx bezag vroom het fikse aquaduct</p>
+  <p className="utrecht-heading-2">Pa's wijze lynx bezag vroom het fikse aquaduct</p>
+  <p className="utrecht-heading-4">Pa's wijze lynx bezag vroom het fikse aquaduct</p>
+</ComponentCanvas>
+
+<ComponentLinks component="Heading" />
+
+<ComponentTokens component="Heading" />
+
+<ComponentFeedback component="Heading" />
+
+<ComponentMoreInfo />
+
+<ComponentHelp />
