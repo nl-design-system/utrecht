@@ -1,7 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
 import readme from '@utrecht/card-css/README.md?raw';
 import tokensDefinition from '@utrecht/card-css/dist/tokens.mjs';
+import '@utrecht/card-css/src/index.scss';
 import tokens from '@utrecht/design-tokens/dist/list.mjs';
+import '@utrecht/web-component-library-react';
 import React, { type ComponentProps, type CSSProperties } from 'react';
 import { designTokenStory } from './util.js';
 import { Image } from '../../../component-library-react/src/index.js';
@@ -18,8 +20,6 @@ const meta = {
       <Image
         src="images/erfgoed-image-waterput-op-de-neude.png"
         alt="Zestiende-eeuwse stenen waterput ontdekt op de Neude in Utrecht."
-        height="240"
-        width="100%"
       />
     ),
     body: 'Bij het opnieuw inrichten van de Neude zijn er bijzondere vondsten gedaan. De opvallendste was een waterput uit uit de 16e eeuw.',
@@ -95,9 +95,14 @@ const demoGridStyle: CSSProperties = {
   padding: '16px',
 };
 
+const componentContainerStyle: CSSProperties = {
+  inlineSize: '420px',
+  padding: '24px',
+};
+
 export const Default: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} />
     </div>
   ),
@@ -116,8 +121,6 @@ export const MultipleCard: Story = {
           <Image
             src="images/erfgoed-veeartsenijroute.png"
             alt="Historische paardenstallen van de Rijksveeartsenijschool met pony’s en een vrouwelijke student, circa 1910."
-            height="240"
-            width="100%"
           />
         }
       />
@@ -130,8 +133,6 @@ export const MultipleCard: Story = {
           <Image
             src="images/erfgoed-merwedekanaalzone-archeologische-ontdekkingen-romeins-utrecht.png"
             alt="Opgraving van een Romeinse weg met houten fundering in de Merwedekanaalzone in Utrecht."
-            height="240"
-            width="100%"
           />
         }
       />
@@ -140,7 +141,7 @@ export const MultipleCard: Story = {
 };
 export const WithoutImage: Story = {
   render: () => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card
         headingLevel={2}
         href="#"
@@ -152,14 +153,14 @@ export const WithoutImage: Story = {
 };
 export const WithCustomLinkComponent: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} Link="a" />
     </div>
   ),
 };
 export const WithoutLink: Story = {
   render: (args: ComponentProps<typeof Card>) => (
-    <div style={{ inlineSize: '400px' }}>
+    <div style={componentContainerStyle}>
       <Card {...args} href={undefined} />
     </div>
   ),
