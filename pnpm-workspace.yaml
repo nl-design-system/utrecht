@@ -51,7 +51,8 @@ overrides:
   # react-signature-canvas 1.0.7 only ships a CommonJS build. Vite pre-bundles it inside the formio-renderer
   # (an ES module package), so its default import becomes the module object and the signature field crashes in
   # Storybook. 1.1.0-alpha.2 (npm `latest`) ships an ES module build. Remove once formio-renderer depends on 1.1.x.
-  "@open-formulieren/formio-renderer>react-signature-canvas": "1.1.0-alpha.2"
+  '@open-formulieren/formio-renderer>react-signature-canvas': '1.1.0-alpha.2'
+  dompurify@>=3.4.4 <=3.4.16: '>=3.4.17'
 
 packageExtensions:
   '@vue/test-utils':
