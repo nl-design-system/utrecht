@@ -1,5 +1,12 @@
 # @utrecht/design-tokens
 
+## 8.1.0
+
+### Minor Changes
+
+- e03d69c: Form controls have a 2px border on all sides. `utrecht.form-control.border-width` is now `utrecht.border-width.md` (2px) instead of `utrecht.border-width.sm` (1px), and the 3px `utrecht.textbox.border-bottom-width`, `utrecht.textarea.border-bottom-width`, `utrecht.textarea.border-block-end-width` and `utrecht.select.border-block-end-width` values are removed, so the bottom border has the same width as the other sides.
+- 3d63010: Add design tokens for the Open Forms formio-renderer: `of.tooltip`, `of.upload-input`, `of.file-upload`, `of.floating-widget`, `of.utrecht-form-field` and `of.utrecht-form-fieldset`. Add the `utrecht.open-forms-container` tokens for the icon size, calendar button font weight, form navigation spacing and error message spacing.
+
 ## 8.0.0
 
 ### Major Changes
