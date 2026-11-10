@@ -25,23 +25,23 @@
   );
 
   /* States */
-  &:has(input:focus-visible, .utrecht-textbox--focus-visible) {
+  &:has(input:focus-visible, .utrecht-textbox--focus-visible, .nl-text-input--focus-visible) {
     @include utrecht-textbox--focus-visible;
     @include utrecht-textbox--focus;
   }
 
   // Invalid
-  &:has(input[aria-invalid="true"], .utrecht-textbox--invalid) {
+  &:has(input[aria-invalid="true"], .utrecht-textbox--invalid, .nl-text-input--invalid) {
     @include utrecht-textbox--invalid;
   }
 
   // Readonly
-  &:has(input:read-only, .utrecht-textbox--read-only) {
+  &:has(input:read-only, .utrecht-textbox--read-only, .nl-text-input--read-only) {
     @include utrecht-textbox--read-only;
   }
 
   // Disabled
-  &:has(input:disabled, .utrecht-textbox--disabled) {
+  &:has(input:disabled, .utrecht-textbox--disabled, .nl-text-input--disabled) {
     @include utrecht-textbox--disabled;
   }
 }
