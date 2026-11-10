@@ -1,5 +1,11 @@
 # @utrecht/open-forms-container-css
 
+## 3.1.0
+
+### Minor Changes
+
+- 3d63010: Style the Open Forms formio-renderer in `utrecht-open-forms-container`: tooltip, fieldset legend, datepicker, select, multifield, file upload, form navigation and error message. Add the `utrecht.open-forms-container` tokens and a mixin for each part, such as `utrecht-open-forms-container-tooltip-content`.
+
 ## 3.0.2
 
 ### Patch Changes
