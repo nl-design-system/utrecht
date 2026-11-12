@@ -19,11 +19,13 @@
 }
 
 .utrecht-customizable-text-input__wrap-input .utrecht-textbox,
+.utrecht-customizable-text-input__wrap-input .nl-text-input,
 .utrecht-customizable-text-input__slot {
   @include utrecht-customizable-text-input-border-block-correction;
 }
 
-.utrecht-customizable-text-input__wrap-input .utrecht-textbox {
+.utrecht-customizable-text-input__wrap-input .utrecht-textbox,
+.utrecht-customizable-text-input__wrap-input .nl-text-input {
   @include utrecht-customizable-text-input-textbox;
 }
 
