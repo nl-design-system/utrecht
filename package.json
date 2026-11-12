@@ -23,7 +23,7 @@
     "directory": "."
   },
   "engines": {
-    "node": ">=24 <=25",
+    "node": "^24.22.3 || ^26.13.1",
     "pnpm": "^11.4.0"
   },
   "devDependencies": {
