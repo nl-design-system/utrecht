@@ -27,10 +27,11 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsc && cp -r assets dist/"
+    "build": "tsc && cpy assets dist"
   },
   "devDependencies": {
     "@types/node": "24.10.4",
+    "cpy-cli": "7.0.0",
     "typescript": "5.9.3"
   }
 }

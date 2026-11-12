@@ -27,22 +27,23 @@
     "@utrecht/storybook-react": "workspace:*",
     "@utrecht/storybook-vue": "workspace:*",
     "@utrecht/storybook-web-component": "workspace:*",
-    "rimraf": "5.0.10"
+    "cpy-cli": "7.0.0",
+    "rimraf": "6.1.4"
   },
   "scripts": {
     "clean": "rimraf dist/",
     "build": "pnpm run clean && pnpm run '/^build:.*/'",
-    "build:astro": "cp -R ../astro/dist/ dist/",
-    "build:docusaurus": "rimraf dist/docusaurus/ && cp -R ../docusaurus/build/ dist/docusaurus/",
-    "build:stencil": "rimraf dist/stencil/ && cp -R ../web-component-library-stencil/www/ dist/stencil/",
-    "build:storybook": "rimraf dist/storybook/ && ls -la dist/ && cp -R ../storybook/dist dist/storybook/",
-    "build:storybook-angular": "rimraf dist/storybook-angular/ && cp -R ../storybook-angular/dist dist/storybook-angular/",
-    "build:storybook-css": "rimraf dist/storybook-css/ && cp -R ../storybook-css/dist dist/storybook-css/",
-    "build:storybook-html": "rimraf dist/storybook-html/ && cp -R ../storybook-html/dist dist/storybook-html/",
-    "build:storybook-pdf": "rimraf dist/storybook-pdf/ && cp -R ../storybook-pdf/dist dist/storybook-pdf/",
-    "build:storybook-react": "rimraf dist/storybook-react/ && cp -R ../storybook-react/dist dist/storybook-react/",
-    "build:storybook-vue": "rimraf dist/storybook-vue/ && cp -R ../storybook-vue/dist dist/storybook-vue/",
-    "build:storybook-web-component": "rimraf dist/storybook-web-component/ && cp -R ../storybook-web-component/dist dist/storybook-web-component/",
+    "build:astro": "cpy '../astro/dist/**' dist/",
+    "build:docusaurus": "rimraf dist/docusaurus/ && cpy '../docusaurus/build/**' dist/docusaurus/",
+    "build:stencil": "rimraf dist/stencil/ && cpy '../web-component-library-stencil/www/**' dist/stencil/",
+    "build:storybook": "rimraf dist/storybook/ && cpy '../storybook/dist/**' dist/storybook/",
+    "build:storybook-angular": "rimraf dist/storybook-angular/ && cpy '../storybook-angular/dist/**' dist/storybook-angular/",
+    "build:storybook-css": "rimraf dist/storybook-css/ && cpy '../storybook-css/dist/**' dist/storybook-css/",
+    "build:storybook-html": "rimraf dist/storybook-html/ && cpy '../storybook-html/dist/**' dist/storybook-html/",
+    "build:storybook-pdf": "rimraf dist/storybook-pdf/ && cpy '../storybook-pdf/dist/**' dist/storybook-pdf/",
+    "build:storybook-react": "rimraf dist/storybook-react/ && cpy '../storybook-react/dist/**' dist/storybook-react/",
+    "build:storybook-vue": "rimraf dist/storybook-vue/ && cpy '../storybook-vue/dist/**' dist/storybook-vue/",
+    "build:storybook-web-component": "rimraf dist/storybook-web-component/ && cpy '../storybook-web-component/dist/**' dist/storybook-web-component/",
     "start": "http-server dist/"
   }
 }
