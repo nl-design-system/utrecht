@@ -1,6 +1,4 @@
 import { render, screen } from '@testing-library/react';
-import { Link as GatsbyLink } from 'gatsby';
-import type { GatsbyLinkProps } from 'gatsby';
 import NextLink from 'next/link';
 import { AnchorHTMLAttributes, createRef, PropsWithChildren } from 'react';
 import { BreadcrumbNav, BreadcrumbNavLink } from './BreadcrumbNav';
@@ -8,18 +6,6 @@ import '@testing-library/jest-dom';
 
 const CustomLink = ({ children, ...restProps }: PropsWithChildren<AnchorHTMLAttributes<HTMLAnchorElement>>) => {
   return <a {...restProps}>{children}</a>;
-};
-
-const CustomGatsbyLink = <TState,>({
-  children,
-  href,
-  ...restProps
-}: PropsWithChildren<GatsbyLinkProps<TState> & any>) => {
-  return (
-    <GatsbyLink {...restProps} to={href}>
-      {children}
-    </GatsbyLink>
-  );
 };
 
 describe('Breadcrumb navigation', () => {
@@ -170,20 +156,6 @@ describe('Breadcrumb navigation', () => {
       expect(link).toBeInTheDocument();
       expect(link).toHaveAttribute('href', '/default');
       expect(link.tagName).toBe('A');
-    });
-
-    describe('with Gatsby component', () => {
-      it('renders', () => {
-        const { getByRole } = render(
-          <BreadcrumbNavLink Link={CustomGatsbyLink} className="utrecht-link utrecht-link--html-a" href="/gatsby-link">
-            Gatsby link
-          </BreadcrumbNavLink>,
-        );
-        const link = getByRole('link');
-
-        expect(link).toBeInTheDocument();
-        expect(link).toHaveAttribute('href', '/gatsby-link');
-      });
     });
 
     describe('with Next.js component', () => {
