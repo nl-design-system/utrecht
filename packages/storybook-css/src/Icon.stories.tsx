@@ -3,6 +3,7 @@
 import type { Meta, StoryObj } from '@storybook/react-vite';
 import { Icon } from '@utrecht/component-library-react';
 import tokens from '@utrecht/design-tokens/dist/index.json';
+import { utrechtIconArrow } from '@utrecht/icon/dist/icons.mjs';
 import readme from '@utrecht/icon-css/README.md?raw';
 import tokensDefinition from '@utrecht/icon-css/src/tokens.json';
 import React from 'react';
@@ -130,6 +131,16 @@ export const SVGWidthHeightEm: Story = {
         <rect fill="currentColor" x="8" y="0" width="16" height="32" />
       </svg>
     ),
+  },
+};
+
+/* The icon from the `icon` prop should be 32px and red, using the same custom properties as the other icons */
+export const IconPropSizeColor: Story = {
+  decorators: [
+    (Story) => <div style={{ '--utrecht-icon-size': '32px', '--utrecht-icon-color': 'red' }}>{Story()}</div>,
+  ],
+  args: {
+    icon: utrechtIconArrow,
   },
 };
 
