@@ -16,8 +16,19 @@ export interface Heading {
 /** Koppen binnen een element met dit attribuut tellen niet mee, bijvoorbeeld de koppen in een voorbeeld */
 export const IGNORE_ATTRIBUTE = 'data-on-this-page';
 
-const textContent = (node: Nodes): string =>
-  node.type === 'text' ? node.value : 'children' in node ? node.children.map(textContent).join('') : '';
+const textContent = (node: Nodes): string => {
+  if (node.type === 'text') return node.value;
+  return 'children' in node ? node.children.map(textContent).join('') : '';
+};
+
+/** Een id zoals Astro die maakt, dat nog niet op de pagina staat */
+const uniqueId = (text: string, slugger: GithubSlugger, existingIds: Set<string>) => {
+  let id: string;
+  do id = slugger.slug(text) || 'sectie';
+  while (existingIds.has(id));
+  existingIds.add(id);
+  return id;
+};
 
 export const collectHeadings = (html: string): { html: string; headings: Heading[] } => {
   const tree = fromHtml(html, { fragment: true });
@@ -33,10 +44,9 @@ export const collectHeadings = (html: string): { html: string; headings: Heading
     if (!text) continue;
     let id = element.properties['id'] ? String(element.properties['id']) : undefined;
     if (!id) {
-      do id = slugger.slug(text) || 'sectie';
-      while (existingIds.has(id));
-      existingIds.add(id);
+      id = uniqueId(text, slugger, existingIds);
       const start = element.position?.start.offset;
+      // Zonder plek in de HTML kan het nieuwe id er niet in: dan ook geen link ernaartoe
       if (start === undefined) continue;
       // Direct na `<h2`
       insertions.push({ offset: start + 3, id });
@@ -45,7 +55,7 @@ export const collectHeadings = (html: string): { html: string; headings: Heading
   }
 
   let result = html;
-  for (const { offset, id } of insertions.reverse()) {
+  for (const { offset, id } of insertions.toReversed()) {
     result = `${result.slice(0, offset)} id="${id}"${result.slice(offset)}`;
   }
   return { html: result, headings };

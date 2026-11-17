@@ -3,12 +3,18 @@
  * Alles zonder story of zonder pakket blijft weg. Wat ontbreekt of niet eenduidig is, komt als waarschuwing in de
  * terminal.
  */
-import { execFileSync } from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
-import process from 'node:process';
 import * as prettier from 'prettier';
-import { findRepoRoot, getStoryFiles, type StoryFile, storyIdFromExport } from './parse.ts';
+import { parse } from 'yaml';
+import {
+  CSS_PACKAGE,
+  excludeNodeModules,
+  findRepoRoot,
+  getStoryFiles,
+  type StoryFile,
+  storyIdFromExport,
+} from './parse.ts';
 import { loadModule, prettierConfig, renderStory } from './render.ts';
 import {
   type Framework,
@@ -45,30 +51,32 @@ export const warningCount = () => warnings.size;
 /** Een bekende beperking, geen fout: telt niet mee voor `--strict` */
 const notice = (component: string, message: string) => console.info(`[storybook] ${component}: ${message}`);
 
-/** pnpm zelf: via `npm_execpath` als het script door pnpm gestart is, zodat het ook op Windows werkt */
-const pnpm = (args: string[]) => {
-  const options = { cwd: findRepoRoot(), encoding: 'utf8' as const };
-  const execPath = process.env['npm_execpath'];
-  return execPath?.includes('pnpm')
-    ? execFileSync(process.execPath, [execPath, ...args], options)
-    : execFileSync('pnpm', args, { ...options, shell: process.platform === 'win32' });
-};
+const readJson = <T>(file: string) => JSON.parse(fs.readFileSync(file, 'utf8')) as T;
 
 let packages: Map<string, PackageInfo> | undefined;
 
-/** Alle pakketten in de workspace, op naam, zoals pnpm ze kent */
+/**
+ * Alle pakketten in de workspace, op naam: de patronen uit `pnpm-workspace.yaml`, zonder `node_modules`, net als pnpm.
+ * Zonder pnpm aan te roepen, dus zonder afhankelijkheid van PATH. Patronen met `!` ervoor (uitsluiten) worden niet
+ * ondersteund: `pnpm-workspace.yaml` heeft ze nu niet.
+ */
 const getPackages = () => {
   if (!packages) {
     const root = findRepoRoot();
-    const list = JSON.parse(pnpm(['ls', '--recursive', '--depth', '-1', '--json'])) as {
-      name?: string;
-      path: string;
-      private?: boolean;
-    }[];
+    const workspace = parse(fs.readFileSync(path.join(root, 'pnpm-workspace.yaml'), 'utf8')) as { packages?: string[] };
+    const files = (workspace.packages ?? []).flatMap((pattern) =>
+      fs.globSync(path.posix.join(pattern, 'package.json'), {
+        cwd: root,
+        exclude: excludeNodeModules,
+      }),
+    );
     packages = new Map(
-      list.flatMap(({ name, path: directory, private: isPrivate }) =>
-        name ? [[name, { name, directory: path.relative(root, directory), private: Boolean(isPrivate) }]] : [],
-      ),
+      files.flatMap((file) => {
+        const { name, private: isPrivate } = readJson<{ name?: string; private?: boolean }>(path.join(root, file));
+        // Met / ook op Windows: de map komt in de URL naar GitHub
+        const directory = path.dirname(file).split(path.sep).join('/');
+        return name ? [[name, { name, directory, private: Boolean(isPrivate) }]] : [];
+      }),
     );
   }
   return packages;
@@ -82,7 +90,7 @@ const getThemeTokens = () => {
     themeTokens = new Map();
     const dir = path.join(findRepoRoot(), 'proprietary/design-tokens/src/component/utrecht');
     for (const file of fs.readdirSync(dir).filter((name) => name.endsWith('.tokens.json'))) {
-      const { utrecht = {} } = JSON.parse(fs.readFileSync(path.join(dir, file), 'utf8'));
+      const { utrecht = {} } = readJson<{ utrecht?: Record<string, unknown> }>(path.join(dir, file));
       for (const [key, value] of Object.entries(utrecht)) themeTokens.set(key, value);
     }
   }
@@ -131,7 +139,7 @@ const getCssPackage = (component: string, stories: StoryOfFramework[]) => {
   if (!name) {
     const counts = new Map<string, number>();
     for (const specifier of files.flatMap(({ imports }) => imports)) {
-      const match = specifier.match(/^@utrecht\/[a-z\d-]+-css(?=\/|$)/)?.[0];
+      const match = CSS_PACKAGE.exec(specifier)?.[0];
       if (match) counts.set(match, (counts.get(match) ?? 0) + 1);
     }
     [name] = [...counts].sort((a, b) => b[1] - a[1])[0] ?? [];
@@ -193,34 +201,39 @@ const storybookUrl = (framework: Framework, story: StoryFile) => {
 /** `WORK IN PROGRESS` wordt `Work in progress` */
 const statusLabel = (status: string) => status.charAt(0).toUpperCase() + status.slice(1).toLowerCase();
 
-/** Per framework de status en de links naar Storybook, npm en GitHub, daarna de Figma-links */
-const getLinks = (stories: StoryOfFramework[], cssPackage: PackageInfo | undefined): Link[] => {
-  const links: Link[] = [];
+/** De status en de links naar Storybook, npm en GitHub van één framework */
+const frameworkLinks = ({ framework, story }: StoryOfFramework, cssPackage: PackageInfo | undefined): Link[] => {
+  const pkg = framework.key === 'css' ? cssPackage : framework.packageName && getPackages().get(framework.packageName);
+  const storybook = storybookUrl(framework, story);
+  const suffix = `(${framework.label})`;
+  const links: Omit<Link, 'framework'>[] = [];
+  if (story.status && storybook)
+    links.push({ prefix: `Status ${suffix}:`, href: storybook, label: statusLabel(story.status) });
+  if (pkg && !pkg.private) links.push({ href: `${NPM_URL}${pkg.name}`, label: `NPM ${suffix}`, icon: 'npm' });
+  if (storybook) links.push({ href: storybook, label: `Storybook ${suffix}`, icon: 'storybook' });
+  if (pkg) links.push({ href: `${GITHUB_URL}${pkg.directory}`, label: `GitHub ${suffix}`, icon: 'github' });
+  return links.map((link) => ({ ...link, framework: framework.key }));
+};
 
-  for (const { framework, story } of stories) {
-    const pkg =
-      framework.key === 'css' ? cssPackage : framework.packageName && getPackages().get(framework.packageName);
-    const storybook = storybookUrl(framework, story);
-    const suffix = `(${framework.label})`;
-    const add = (link: Omit<Link, 'framework'>) => links.push({ ...link, framework: framework.key });
-    if (story.status && storybook) {
-      add({ prefix: `Status ${suffix}:`, href: storybook, label: statusLabel(story.status) });
-    }
-    if (pkg && !pkg.private) add({ href: `${NPM_URL}${pkg.name}`, label: `NPM ${suffix}`, icon: 'npm' });
-    if (storybook) add({ href: storybook, label: `Storybook ${suffix}`, icon: 'storybook' });
-    if (pkg) add({ href: `${GITHUB_URL}${pkg.directory}`, label: `GitHub ${suffix}`, icon: 'github' });
-  }
-
+/** De Figma-links: een parameter van een eerder framework gaat voor die van een later framework */
+const figmaLinks = (stories: StoryOfFramework[]): Link[] => {
   const parameters = Object.assign(
     {},
-    ...stories.map(({ story }) => story.parameters).reverse(),
+    ...stories.map(({ story }) => story.parameters).toReversed(),
   ) as StoryFile['parameters'];
+  const links: Link[] = [];
   if (parameters.figma) links.push({ href: parameters.figma, label: 'Figma', icon: 'figma' });
   if (parameters.communityFigma) {
     links.push({ href: parameters.communityFigma, label: 'Figma (NL Design System community)', icon: 'figma' });
   }
   return links;
 };
+
+/** Per framework de status en de links naar Storybook, npm en GitHub, daarna de Figma-links */
+const getLinks = (stories: StoryOfFramework[], cssPackage: PackageInfo | undefined): Link[] => [
+  ...stories.flatMap((story) => frameworkLinks(story, cssPackage)),
+  ...figmaLinks(stories),
+];
 
 interface TokenTree {
   [key: string]: TokenTree;
@@ -245,12 +258,13 @@ const getTokens = (component: string, cssPackage: PackageInfo): Tokens | undefin
           if (!isToken(value)) return [key, walk(value as Record<string, unknown>, [...tokenPath, key])];
           const extensions = (value as { $extensions?: Record<string, unknown> }).$extensions ?? {};
           const syntax = extensions['nl.nldesignsystem.css-property-syntax'];
-          properties.push(`--${[...tokenPath, key].join('-')}${typeof syntax === 'string' ? `: ${syntax}` : ''}`);
+          const property = `--${[...tokenPath, key].join('-')}`;
+          properties.push(typeof syntax === 'string' ? `${property}: ${syntax}` : property);
           return [key, {}];
         }),
     );
 
-  const definition = JSON.parse(fs.readFileSync(file, 'utf8')) as { utrecht?: Record<string, unknown> };
+  const definition = readJson<{ utrecht?: Record<string, unknown> }>(file);
   const tree = walk(definition, []);
   if (!properties.length) return undefined;
 

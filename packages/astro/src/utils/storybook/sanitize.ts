@@ -1,8 +1,7 @@
-/** Hetzelfde als `sanitize` in `storybook/internal/csf` */
+/** Dezelfde uitkomst als `sanitize` in `storybook/internal/csf`: de test vergelijkt ze */
 export const sanitize = (value: string) =>
   value
     .toLowerCase()
-    .replace(/[ ’–—―′¿'`~!@#$%^&*()_|+\-=?;:'",.<>{}[\]\\/]/gi, '-')
+    .replace(/[ ’–—―′¿'`~!@#$%^&*()_|+\-=?;:",.<>{}[\]\\/]/g, '-')
     .replace(/-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '');
+    .replace(/^-|-$/g, '');

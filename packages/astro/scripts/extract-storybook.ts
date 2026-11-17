@@ -30,9 +30,12 @@ const titles = fs
   .map((file) => pageTitle(path.join(pagesDir, file)))
   .filter((title): title is string => Boolean(title));
 
-const docs: Record<string, ComponentDocs> = {};
+let docs: Record<string, ComponentDocs>;
 try {
-  for (const title of titles) docs[title.toLowerCase()] = await getComponentDocs(title);
+  // Alle componenten tegelijk: ze delen één Vite-server. De volgorde in het bestand blijft die van de titels.
+  docs = Object.fromEntries(
+    await Promise.all(titles.map(async (title) => [title.toLowerCase(), await getComponentDocs(title)] as const)),
+  );
 } finally {
   await closeRenderer();
 }
