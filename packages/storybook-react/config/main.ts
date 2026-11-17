@@ -12,6 +12,10 @@ const require = createRequire(import.meta.url);
 // https://storybook.js.org/docs/faq#how-do-i-fix-module-resolution-in-special-environments
 const getAbsolutePath = (value: string): string => dirname(require.resolve(join(value, 'package.json')));
 
+// Resolve the absolute path of a package the Open Forms SDK depends on
+const sdkDependency = (value: string): string =>
+  dirname(require.resolve(join(value, 'package.json'), { paths: [getAbsolutePath('@open-formulieren/sdk')] }));
+
 const config: StorybookConfig = {
   core: {
     disableTelemetry: true,
@@ -48,6 +52,11 @@ const config: StorybookConfig = {
           '~@utrecht': resolve(__dirname, '../node_modules/@utrecht'),
           // The formio-renderer `exports` only expose `dist/`, not the translations in `i18n/`
           '@open-formulieren/formio-renderer/i18n': join(getAbsolutePath('@open-formulieren/formio-renderer'), 'i18n'),
+          // formio-renderer 1.8 and react-intl 7 of the Open Forms SDK 3.5, for its story.
+          // They conflict with the installed formio-renderer 3.x and react-intl 10.
+          // TODO: remove after the migration to Open Forms SDK 4.
+          '@open-formulieren/formio-renderer-1': sdkDependency('@open-formulieren/formio-renderer'),
+          'react-intl-sdk': sdkDependency('react-intl'),
           path: require.resolve('path-browserify'),
         },
       },
