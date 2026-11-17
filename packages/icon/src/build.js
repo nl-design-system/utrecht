@@ -1,19 +1,29 @@
 /* eslint-env node */
 const bidiGlyphs = require('@unicode/unicode-15.1.0/Bidi_Mirroring_Glyph');
-const { kebabCase } = require('es-toolkit/compat');
+const { camelCase, kebabCase } = require('es-toolkit/compat');
 const { JSDOM } = require('jsdom');
 const argv = require('minimist')(process.argv.slice(2), {
   string: ['prefix', 'path'],
 });
 const { readdir, readFile, writeFile, mkdir } = require('node:fs/promises');
-const path = require('path');
-const { component, test, generateIconsName, style, iconContainerComponent } = require('./component_templates.js');
+const path = require('node:path');
+const {
+  component,
+  test,
+  generateIconsName,
+  iconExports,
+  iconExportsTypes,
+  style,
+  iconContainerComponent,
+} = require('./component_templates.js');
+const { toIconData } = require('./icon-data.js');
 
 const componentPrefix = `${argv.prefix}-`;
 const componentsPath = argv.path;
 const iconRapperComponent = `${componentPrefix}container`;
 const svgPath = path.resolve(process.cwd(), 'src/svg');
 const optimizedSvgPath = path.resolve(process.cwd(), 'tmp/optimized-svgs');
+const distPath = path.resolve(process.cwd(), 'dist');
 
 const isBidirectionalGlyph = (codePoint) => bidiGlyphs.has(codePoint);
 
@@ -66,37 +76,30 @@ const getIconData = async () => {
   return svgData;
 };
 
-const writeComponentFile = async () => {
-  const files = await getIconData();
-  files.forEach(async (iconData) => {
-    const { src: file, unicodeBidi } = iconData;
-    if (!/chevron/.test(file)) {
-      // continue;
-    }
-    const fileBasename = path.parse(file).name;
-    const fileName = `${componentPrefix}${kebabCase(fileBasename)}`;
-    const formattedName = kebabCase(fileName);
-    let svg = await readFile(`${optimizedSvgPath}/${file}`, 'utf-8');
-    await mkdir(`${componentsPath}/${formattedName}`, { recursive: true });
-    await writeFile(
-      `${componentsPath}/${formattedName}/${formattedName}.stencil.tsx`,
-      component(fileName, svg, iconRapperComponent, unicodeBidi),
-      'utf-8',
-    );
-    await writeFile(`${componentsPath}/${formattedName}/${formattedName}.spec.tsx`, test(fileName), 'utf-8');
-  });
+const writeComponentFiles = async (iconData) => {
+  await Promise.all(
+    iconData.map(async ({ src: file, unicodeBidi }) => {
+      const fileBasename = path.parse(file).name;
+      const fileName = `${componentPrefix}${kebabCase(fileBasename)}`;
+      const formattedName = kebabCase(fileName);
+      const svg = await readFile(`${optimizedSvgPath}/${file}`, 'utf-8');
+      await mkdir(`${componentsPath}/${formattedName}`, { recursive: true });
+      await writeFile(
+        `${componentsPath}/${formattedName}/${formattedName}.stencil.tsx`,
+        component(fileName, svg, iconRapperComponent, unicodeBidi),
+        'utf-8',
+      );
+      await writeFile(`${componentsPath}/${formattedName}/${formattedName}.spec.tsx`, test(fileName), 'utf-8');
+    }),
+  );
 };
 
-writeComponentFile();
-
-const generateIconsNameFile = async () => {
-  const data = await getIconData();
-  await mkdir('dist', { recursive: true });
-  const json = generateIconsName(data);
-  await writeFile(path.resolve(process.cwd(), 'dist/index.json'), json, 'utf-8');
-  await writeFile(path.resolve(process.cwd(), 'dist/iconset.mjs'), `export default ${json};\n`, 'utf-8');
+const generateIconsNameFile = async (iconData) => {
+  const json = generateIconsName(iconData);
+  await writeFile(path.join(distPath, 'index.json'), json, 'utf-8');
+  await writeFile(path.join(distPath, 'iconset.mjs'), `export default ${json};\n`, 'utf-8');
   await writeFile(
-    path.resolve(process.cwd(), 'dist/iconset.d.mts'),
+    path.join(distPath, 'iconset.d.mts'),
     `export default iconset;
 
 declare interface Icon {
@@ -109,7 +112,20 @@ declare const iconset: Icon[];\n`,
     'utf-8',
   );
 };
-generateIconsNameFile();
+
+/** Every icon as data for an inline `<svg>`, for example in React: `dist/icons.mjs` with a named export per icon */
+const generateIconExportsFile = async (iconData) => {
+  const icons = await Promise.all(
+    iconData.map(async ({ id, src, unicodeBidi }) => ({
+      name: camelCase(id),
+      ...toIconData(await readFile(`${optimizedSvgPath}/${src}`, 'utf-8'), id),
+      unicodeBidi,
+    })),
+  );
+  icons.sort((a, b) => (a.name < b.name ? -1 : 1));
+  await writeFile(path.join(distPath, 'icons.mjs'), iconExports(icons), 'utf-8');
+  await writeFile(path.join(distPath, 'icons.d.mts'), iconExportsTypes(icons), 'utf-8');
+};
 
 const createIconWrapperComponent = async () => {
   const dir = `${componentsPath}/${iconRapperComponent}`;
@@ -128,4 +144,20 @@ const createIconWrapperComponent = async () => {
   await writeFile(`${dir}/${iconRapperComponent}.spec.tsx`, test(iconRapperComponent), 'utf-8');
   await writeFile(`${dir}/${iconRapperComponent}.scss`, style(cssValue), 'utf-8');
 };
-createIconWrapperComponent();
+
+const main = async () => {
+  // Read and parse every SVG once, for all generated files
+  const iconData = await getIconData();
+  await mkdir(distPath, { recursive: true });
+  await Promise.all([
+    writeComponentFiles(iconData),
+    generateIconsNameFile(iconData),
+    generateIconExportsFile(iconData),
+    createIconWrapperComponent(),
+  ]);
+};
+
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

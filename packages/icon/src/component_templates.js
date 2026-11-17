@@ -67,3 +67,22 @@ exports.generateIconsName = (iconsNames) => {
 };
 
 exports.style = (value) => value;
+
+/** `dist/icons.mjs`: a named export per icon */
+exports.iconExports = (icons) =>
+  icons.map(({ name, ...icon }) => `export const ${name} = ${JSON.stringify(icon)};\n`).join('');
+
+/** `dist/icons.d.mts`: the types for `dist/icons.mjs` */
+exports.iconExportsTypes = (icons) => {
+  const declarations = icons.map(({ name }) => `export declare const ${name}: IconData;\n`).join('');
+  return `export interface IconData {
+  /** The \`viewBox\` of the \`<svg>\` element */
+  viewBox: string;
+  /** The content of the \`<svg>\` element */
+  body: string;
+  /** Mirror the icon in right-to-left text */
+  unicodeBidi: boolean;
+}
+
+${declarations}`;
+};

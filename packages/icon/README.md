@@ -70,6 +70,30 @@ De grootte van het icoon kan aangepast worden met de `--utrecht-icon-size` CSS e
 </style>
 ```
 
+## Iconen gebruiken als SVG
+
+Wil je een icoon zonder web components gebruiken, bijvoorbeeld in een React component of bij server-side rendering? Importeer dan het icoon uit `@utrecht/icon/dist/icons.mjs`. Elk icoon is een named export met de naam van het custom element in camelCase: `utrecht-icon-arrow` wordt `utrechtIconArrow`. Je bundler neemt alleen de iconen mee die je importeert.
+
+Een icoon heeft:
+
+- `viewBox`: de `viewBox` van het `<svg>`-element
+- `body`: de inhoud van het `<svg>`-element. Ids hebben de naam van het icoon als prefix, zodat twee iconen op dezelfde pagina geen id delen.
+- `unicodeBidi`: `true` als het icoon in tekst van rechts naar links gespiegeld moet worden
+
+```jsx
+import { utrechtIconArrow } from "@utrecht/icon/dist/icons.mjs";
+
+export const ArrowIcon = () => (
+  <svg
+    viewBox={utrechtIconArrow.viewBox}
+    fill="currentColor"
+    aria-hidden="true"
+    focusable="false"
+    dangerouslySetInnerHTML={{ __html: utrechtIconArrow.body }}
+  />
+);
+```
+
 ## Overzicht van icons
 
 Wanneer het nodig is een overzicht te hebben van de beschikbare icons, gebruik dan als basis de meegeleverde JSON informatie in `dist/index.json`. Het bevat een array met onder andere de ID van elke icoon. Op dit moment is de naam van de custom element altijd gelijk aan de ID.
