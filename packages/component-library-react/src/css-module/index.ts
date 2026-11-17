@@ -103,7 +103,7 @@ export type { HeadingGroupProps } from '../HeadingGroup';
 export { HeadingGroup } from './HeadingGroup';
 export type { IBANDataProps } from '../IBANData';
 export { IBANData } from './IBANData';
-export type { IconProps } from '../Icon';
+export type { IconData, IconProps } from '@utrecht/icon-react/dist/css';
 export { Icon } from './Icon';
 export { IndexCharNav } from './IndexCharNav';
 export type { IndexCharNavProps } from '../IndexCharNav';

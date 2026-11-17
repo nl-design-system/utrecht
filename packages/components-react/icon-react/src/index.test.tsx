@@ -1,7 +1,13 @@
 import { render, screen } from '@testing-library/react';
 import { createRef } from 'react';
-import { Icon } from './Icon';
+import { Icon, type IconData } from './index';
 import '@testing-library/jest-dom';
+
+const arrow: IconData = {
+  viewBox: '0 0 8 14',
+  body: '<path d="M1 1l6 6-6 6"/>',
+  unicodeBidi: false,
+};
 
 describe('Icon', () => {
   it('is not available in the accessibility tree by default', () => {
@@ -109,5 +115,30 @@ describe('Icon', () => {
     const icon = container.querySelector(':only-child');
 
     expect(ref.current).toBe(icon);
+  });
+
+  it('renders the icon prop as an inline svg', () => {
+    const { container } = render(<Icon icon={arrow} />);
+    const svg = container.querySelector('span.utrecht-icon > svg');
+    expect(svg).toHaveAttribute('viewBox', '0 0 8 14');
+    expect(svg?.querySelector('path')).toHaveAttribute('d', 'M1 1l6 6-6 6');
+  });
+
+  it('renders the svg of the icon prop in the text color and not focusable', () => {
+    const { container } = render(<Icon icon={arrow} />);
+    const svg = container.querySelector('svg');
+    expect(svg).toHaveAttribute('fill', 'currentColor');
+    expect(svg).toHaveAttribute('focusable', 'false');
+  });
+
+  it('renders the icon prop instead of the children', () => {
+    const { container } = render(<Icon icon={arrow}>→</Icon>);
+    expect(container.querySelector('svg')).toBeInTheDocument();
+    expect(container).not.toHaveTextContent('→');
+  });
+
+  it('keeps an icon from the icon prop out of the accessibility tree by default', () => {
+    const { container } = render(<Icon icon={arrow} />);
+    expect(container.querySelector(':only-child')).toHaveAttribute('aria-hidden', 'true');
   });
 });
