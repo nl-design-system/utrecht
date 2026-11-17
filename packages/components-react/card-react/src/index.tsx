@@ -29,6 +29,11 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    */
   heading: ReactNode;
   /**
+   * Short text shown above the heading, for example a category. It follows the heading in the HTML, so the heading is
+   * read first.
+   */
+  preHeading?: ReactNode;
+  /**
    * Heading level (1-6, default to 2)
    */
   headingLevel: HTMLHeadingLevel;
@@ -45,15 +50,20 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    */
   body?: ReactNode;
   /**
+   * Additional data below the body, for example a date or badges. Use it for content without links or buttons: the
+   * link of the card covers the whole card.
+   */
+  footer?: ReactNode;
+  /**
    * Appearance variant of the card
    */
   appearance?: '' | 'neutral' | 'warm' | 'cool' | 'soft' | 'bright';
   /**
    * Aspect ratio of the image
    */
-  aspect?: '16by9' | '4by3' | '1by1';
+  aspect?: '16:9' | '4:3' | '1:1';
   /**
-   * Arrow icon to indicate the card is clickable
+   * Show an arrow icon to indicate the card is clickable. Only shown when the card has an `href`. Defaults to `true`.
    */
   arrowIcon?: boolean;
 }
@@ -63,13 +73,15 @@ export const Card = forwardRef(
       image,
       heading,
       headingLevel,
+      preHeading,
       href,
       Link,
       className,
       body,
+      footer,
       appearance,
       aspect,
-      arrowIcon,
+      arrowIcon = true,
       ...restProps
     }: PropsWithChildren<CardProps>,
     ref: ForwardedRef<HTMLDivElement>,
@@ -88,6 +100,17 @@ export const Card = forwardRef(
       }
     };
     const linkId = useId();
+    const headingElement = headingLevel && heading && (
+      <HTMLHeading id={linkId} className={clsx(`utrecht-heading-2`, 'utrecht-card__header')} level={headingLevel}>
+        {href ? (
+          <LinkComponent ref={linkRef} href={href} className={clsx('utrecht-card__link')}>
+            {heading}
+          </LinkComponent>
+        ) : (
+          heading
+        )}
+      </HTMLHeading>
+    );
     const linkProps = href
       ? {
           onClick: onCardClickHandler,
@@ -105,35 +128,29 @@ export const Card = forwardRef(
           'utrecht-card--cool': appearance === 'cool',
           'utrecht-card--soft': appearance === 'soft',
           'utrecht-card--bright': appearance === 'bright',
-          'utrecht-card--16by9': aspect === '16by9',
-          'utrecht-card--4by3': aspect === '4by3',
-          'utrecht-card--1by1': aspect === '1by1',
+          'utrecht-card--16by9': aspect === '16:9',
+          'utrecht-card--4by3': aspect === '4:3',
+          'utrecht-card--1by1': aspect === '1:1',
         })}
         {...linkProps}
         {...restProps}
       >
         <div className="utrecht-card__content">
           <div className={clsx('utrecht-card__heading')}>
-            {headingLevel && heading && (
-              <HTMLHeading
-                id={linkId}
-                className={clsx(`utrecht-heading-2`, 'utrecht-card__header')}
-                level={headingLevel}
-              >
-                {href ? (
-                  <LinkComponent ref={linkRef} href={href} className={clsx('utrecht-card__link')}>
-                    {heading}
-                  </LinkComponent>
-                ) : (
-                  heading
-                )}
-              </HTMLHeading>
+            {preHeading && headingElement ? (
+              <hgroup className="utrecht-card__heading-group">
+                {headingElement}
+                <p className="utrecht-card__pre-heading">{preHeading}</p>
+              </hgroup>
+            ) : (
+              headingElement
             )}
           </div>
           {image && <div className={clsx('utrecht-card__image')}>{image}</div>}
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
+          {footer && <div className="utrecht-card__footer">{footer}</div>}
         </div>
-        {href && (
+        {href && arrowIcon && (
           <div className="utrecht-card__arrow">
             <utrecht-icon-arrow></utrecht-icon-arrow>
           </div>

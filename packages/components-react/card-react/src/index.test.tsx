@@ -76,6 +76,40 @@ describe('Card', () => {
     expect(body).toBeInTheDocument();
     expect(paragraph).toBeInTheDocument();
   });
+  it('renders no heading group without a pre-heading', () => {
+    const { container } = render(<Card {...initialCardProps} />);
+    expect(container.querySelector('hgroup')).not.toBeInTheDocument();
+  });
+  it('renders the pre-heading after the heading in a heading group', () => {
+    const { container } = render(<Card {...initialCardProps} preHeading="Category" />);
+    const group = container.querySelector('hgroup.utrecht-card__heading-group');
+    expect(group).toBeInTheDocument();
+    expect(group?.firstElementChild?.tagName).toBe('H2');
+    expect(group?.lastElementChild).toHaveClass('utrecht-card__pre-heading');
+    expect(group?.lastElementChild).toHaveTextContent('Category');
+  });
+  it('renders no footer without the footer prop', () => {
+    const { container } = render(<Card {...initialCardProps} />);
+    expect(container.querySelector('.utrecht-card__footer')).not.toBeInTheDocument();
+  });
+  it('renders the footer after the body', () => {
+    const { container } = render(<Card {...initialCardProps} footer="Card footer" />);
+    const footer = container.querySelector('div.utrecht-card__footer');
+    expect(footer).toHaveTextContent('Card footer');
+    expect(footer?.previousElementSibling).toHaveClass('utrecht-card__body');
+  });
+  it('renders an arrow icon when the card has a link', () => {
+    const { container } = render(<Card {...initialCardProps} href="https://example.com" />);
+    expect(container.querySelector('.utrecht-card__arrow utrecht-icon-arrow')).toBeInTheDocument();
+  });
+  it('renders no arrow icon when arrowIcon is false', () => {
+    const { container } = render(<Card {...initialCardProps} href="https://example.com" arrowIcon={false} />);
+    expect(container.querySelector('.utrecht-card__arrow')).not.toBeInTheDocument();
+  });
+  it('renders no arrow icon without a link', () => {
+    const { container } = render(<Card {...initialCardProps} />);
+    expect(container.querySelector('.utrecht-card__arrow')).not.toBeInTheDocument();
+  });
   it('supports ForwardRef in React', () => {
     const ref = createRef<HTMLDivElement>();
 

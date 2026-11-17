@@ -6,7 +6,9 @@
 
 @use "~@utrecht/img-css/src/mixin" as *;
 @use "~@utrecht/focus-ring-css/src/mixin" as focus-ring;
+@use "~@utrecht/heading-group-css/src/mixin" as heading-group;
 @use "~@utrecht/link-css/src/mixin" as link-css;
+@use "~@utrecht/pre-heading-css/src/mixin" as pre-heading;
 
 @mixin utrecht-card {
   --utrecht-link-text-decoration: underline;
@@ -70,6 +72,15 @@
   padding-inline-start: var(--utrecht-card-heading-padding-inline-start);
 }
 
+// The heading followed by the pre-heading in the HTML, the pre-heading is shown above the heading
+@mixin utrecht-card__heading-group {
+  @include heading-group.utrecht-heading-group;
+}
+
+@mixin utrecht-card__pre-heading {
+  @include pre-heading.utrecht-pre-heading;
+}
+
 @mixin utrecht-card--neutral {
   --utrecht-card-background-color: var(--utrecht-card-neutral-background-color);
   --utrecht-card-color: var(--utrecht-card-neutral-color);
@@ -108,14 +119,14 @@
 @mixin utrecht-card__image {
   order: 1;
 
+  // Crop to the aspect ratio of the card, also for an `img` with the `utrecht-img` class name
   img {
     display: block;
+    object-fit: cover;
   }
 
   img:not(.utrecht-img) {
     @include utrecht-img;
-
-    object-fit: cover;
   }
   img:not(img[height]) {
     @include utrecht-img--photo;
@@ -147,7 +158,9 @@
   flex-direction: column;
   padding-block-end: var(--utrecht-card-content-padding-block-end);
   row-gap: var(--utrecht-card-content-row-gap);
-  &:not(:has(img)) {
+
+  // No padding above the image area, also when it shows a placeholder instead of an `img`
+  &:not(:has(.utrecht-card__image)) {
     padding-block-start: var(--utrecht-card-content-padding-block-start);
   }
 }
@@ -156,6 +169,12 @@
   order: 3;
   padding-inline-end: var(--utrecht-card-body-padding-inline-end);
   padding-inline-start: var(--utrecht-card-body-padding-inline-start);
+}
+
+@mixin utrecht-card__footer {
+  order: 4;
+  padding-inline-end: var(--utrecht-card-footer-padding-inline-end, var(--utrecht-card-body-padding-inline-end));
+  padding-inline-start: var(--utrecht-card-footer-padding-inline-start, var(--utrecht-card-body-padding-inline-start));
 }
 
 @mixin utrecht-card--hover {

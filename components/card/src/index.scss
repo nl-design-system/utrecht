@@ -22,6 +22,14 @@
   @include utrecht-card__heading;
 }
 
+.utrecht-card__heading-group {
+  @include utrecht-card__heading-group;
+}
+
+.utrecht-card__pre-heading {
+  @include utrecht-card__pre-heading;
+}
+
 .utrecht-card__image {
   @include utrecht-card__image;
 }
@@ -31,6 +39,10 @@
 }
 .utrecht-card__body {
   @include utrecht-card__body;
+}
+
+.utrecht-card__footer {
+  @include utrecht-card__footer;
 }
 
 .utrecht-card__link {
