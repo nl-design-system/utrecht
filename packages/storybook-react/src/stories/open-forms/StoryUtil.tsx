@@ -2,10 +2,29 @@ import OpenFormsModule from '@open-formulieren/sdk/formio-module';
 import OFLibrary from '@open-formulieren/sdk/formio-templates';
 import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import { merge } from 'es-toolkit/compat';
-import React, { PropsWithChildren, useEffect, useState } from 'react';
+import React, { lazy, PropsWithChildren, Suspense, useEffect, useState } from 'react';
 import { Form, Formio, Templates } from 'react-formio';
 import { Button, ButtonGroup, Icon, Link } from '../../../../component-library-react/src/index.js';
 import '@open-formulieren/sdk/styles.css';
+// formio.js renders forms in Open Forms by default. Forms with the new renderer enabled use the formio-renderer.
+// TODO: after the migration to Open Forms SDK 4, which drops formio.js, make the formio-renderer the only renderer:
+// remove `Renderer`, `RENDERER_ARG_TYPES`, `RenderFormioForm`, `useOpenFormsConfiguration` and the formio.js imports.
+export type Renderer = 'formio.js' | 'formio-renderer';
+
+const FormioRendererForm = lazy(() => import('./FormioRendererForm.js'));
+
+// Adds a "renderer" control to the stories, to compare the markup of both renderers.
+export const RENDERER_ARG_TYPES = {
+  renderer: {
+    name: 'Renderer',
+    description:
+      'formio.js, or formio-renderer 1.8 for forms with the new renderer enabled (Open Forms SDK 3.5). The formio-renderer names a field `postcodePZD` instead of `data[postcodePZD]`.',
+    control: 'inline-radio',
+    options: ['formio.js', 'formio-renderer'],
+    table: { defaultValue: { summary: 'formio.js' } },
+  },
+} as const;
+
 export type FormConfiguration = { type: string; components: { type: string; key: string; label: string }[] };
 const FormButton = () => (
   <ButtonGroup
@@ -118,6 +137,7 @@ type SingleFormioComponentProps = {
   label: string;
   extraComponentProperties?: { [index: string]: any };
   formButtons?: boolean;
+  renderer?: Renderer;
 };
 
 type MultipleFormioComponentsProps = {
@@ -128,7 +148,26 @@ type MultipleFormioComponentsProps = {
     [index: string]: any;
   }[];
   formButtons?: boolean;
+  renderer?: Renderer;
 };
+
+const RenderForm = ({
+  components,
+  formButtons,
+  renderer = 'formio.js',
+}: {
+  components: FormConfiguration['components'];
+  formButtons?: boolean;
+  renderer?: Renderer;
+}) =>
+  renderer === 'formio-renderer' ? (
+    <Suspense fallback={null}>
+      <FormioRendererForm components={components} />
+      {formButtons && <FormButton />}
+    </Suspense>
+  ) : (
+    <RenderFormioForm formButtons={formButtons} form={{ type: 'form', components }} />
+  );
 
 export const SingleFormioComponent = ({
   type,
@@ -136,19 +175,20 @@ export const SingleFormioComponent = ({
   label,
   extraComponentProperties = {},
   formButtons = false,
+  renderer,
 }: SingleFormioComponentProps) => {
   const component = merge({ type, key, label }, extraComponentProperties);
   return (
     <OpenFormsContainer>
-      <RenderFormioForm formButtons={formButtons} form={{ type: 'form', components: [component] }} />
+      <RenderForm components={[component]} formButtons={formButtons} renderer={renderer} />
     </OpenFormsContainer>
   );
 };
 
-export const MultipleFormioComponents = ({ components, formButtons }: MultipleFormioComponentsProps) => {
+export const MultipleFormioComponents = ({ components, formButtons, renderer }: MultipleFormioComponentsProps) => {
   return (
     <OpenFormsContainer>
-      <RenderFormioForm formButtons={formButtons} form={{ type: 'form', components: components }} />
+      <RenderForm components={components} formButtons={formButtons} renderer={renderer} />
     </OpenFormsContainer>
   );
 };

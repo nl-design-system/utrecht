@@ -13,9 +13,9 @@ import { OpenFormsContainer } from '@utrecht/open-forms-container-react/css';
 import React from 'react';
 import { IntlProvider } from 'react-intl';
 import { fn } from 'storybook/test';
+import { FormNavigation } from './FormNavigation.js';
 import { MultipleFormioComponents } from './StoryUtil.js';
 import { COMPONENT_PARAMETERS, FORM_COMPONENTS } from './example-form.js';
-import { ButtonGroup, Icon, Link, LinkButton } from '../../../../component-library-react/src/index.js';
 // StoryUtil loads the Open Forms SDK CSS, which also styles `.utrecht-form-label--openforms`.
 // Import it before formio-renderer.css so the renderer rules win, in dev and in the production build.
 import '@open-formulieren/formio-renderer/formio-renderer.css';
@@ -26,43 +26,6 @@ import '@fortawesome/fontawesome-free/css/solid.min.css';
 
 // Shows the submitted values in the Actions panel.
 const onSubmit = fn(async () => {}).mockName('onSubmit');
-
-// Same markup as the FormNavigation of the Open Forms SDK, for a step in a form with multiple steps.
-// The SDK CSS sets the icons through `--fa` and the colour of the abort button.
-const FAIcon = () => <i className="fa fas fa-icon fa-fw" aria-hidden="true" />;
-
-const FormNavigation = () => (
-  <ButtonGroup className="openforms-form-navigation" direction="column">
-    <PrimaryActionButton type="submit" name="next" className="openforms-form-navigation__next-button">
-      Volgende
-      <Icon>
-        <FAIcon />
-      </Icon>
-    </PrimaryActionButton>
-    <Link
-      href="#"
-      className="openforms-previous-link openforms-previous-link--end"
-      onClick={(event: React.MouseEvent) => event.preventDefault()}
-    >
-      <Icon>
-        <FAIcon />
-      </Icon>
-      Vorige
-    </Link>
-    <LinkButton name="save" className="openforms-form-navigation__save-button">
-      <Icon>
-        <FAIcon />
-      </Icon>
-      Opslaan en later doorgaan
-    </LinkButton>
-    <LinkButton name="abort" className="openforms-abort-button">
-      <Icon>
-        <FAIcon />
-      </Icon>
-      Annuleren
-    </LinkButton>
-  </ButtonGroup>
-);
 
 const meta = {
   id: 'open-forms-examples',
@@ -106,7 +69,7 @@ export const FormioRenderer: Story = {
     <IntlProvider locale="nl" messages={nlMessages}>
       <OpenFormsContainer>
         <FormioForm components={FORM_COMPONENTS} componentParameters={COMPONENT_PARAMETERS} onSubmit={onSubmit}>
-          <FormNavigation />
+          <FormNavigation PrimaryActionButton={PrimaryActionButton} />
         </FormioForm>
       </OpenFormsContainer>
     </IntlProvider>

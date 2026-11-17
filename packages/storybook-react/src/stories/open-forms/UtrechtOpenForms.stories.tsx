@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react-vite';
-import { SingleFormioComponent } from './StoryUtil';
+import { RENDERER_ARG_TYPES, SingleFormioComponent } from './StoryUtil';
 
 const meta = {
   id: 'open-forms-utrecht-open-forms',
@@ -9,7 +9,9 @@ const meta = {
     key: '',
     type: 'textfield',
     label: '',
+    renderer: 'formio.js',
   },
+  argTypes: RENDERER_ARG_TYPES,
   parameters: {
     docs: {
       description: {
@@ -17,7 +19,10 @@ const meta = {
 
 Bij gemeente Utrecht gebruiken formulierbouwers een aantal vaste formuliervelden, die hergebruikt worden in heel veel formulieren.
 
-We hebben wat custom CSS voor deze formuliervelden toegepast, die we hier testen.`,
+We hebben wat custom CSS voor deze formuliervelden toegepast, die we hier testen.
+
+Kies bij _Renderer_ de formio-renderer om een veld te zien zoals in formulieren met de nieuwe renderer.
+Die noemt een veld \`postcodePZD\` in plaats van \`data[postcodePZD]\`.`,
       },
     },
   },
