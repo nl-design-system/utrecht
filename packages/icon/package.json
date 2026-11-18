@@ -13,7 +13,7 @@
   "main": "dist/index.css",
   "scripts": {
     "build": "pnpm run build:svg && pnpm run build:components",
-    "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../web-component-library-stencil/src/components/generated/ --react-path ../components-react/icons-react/src/generated/",
+    "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../web-component-library-stencil/src/components/generated/",
     "build:css": "build-css-package",
     "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
     "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../web-component-library-stencil/src/components/generated/ ../components-react/icons-react/src/generated/"

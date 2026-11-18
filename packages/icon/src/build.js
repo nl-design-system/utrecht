@@ -3,7 +3,7 @@ const bidiGlyphs = require('@unicode/unicode-15.1.0/Bidi_Mirroring_Glyph');
 const { kebabCase } = require('es-toolkit/compat');
 const { JSDOM } = require('jsdom');
 const argv = require('minimist')(process.argv.slice(2), {
-  string: ['prefix', 'path', 'react-path'],
+  string: ['prefix', 'path'],
 });
 const { readdir, readFile, writeFile, mkdir, rm } = require('node:fs/promises');
 const path = require('path');
@@ -12,7 +12,8 @@ const { reactIcon } = require('./react-icon.js');
 
 const componentPrefix = `${argv.prefix}-`;
 const componentsPath = argv.path;
-const reactPath = argv['react-path'];
+// A fixed path, not a CLI argument: the build removes and rewrites this directory
+const reactPath = path.resolve(process.cwd(), '../components-react/icons-react/src/generated');
 const iconRapperComponent = `${componentPrefix}container`;
 const svgPath = path.resolve(process.cwd(), 'src/svg');
 const optimizedSvgPath = path.resolve(process.cwd(), 'tmp/optimized-svgs');
@@ -133,7 +134,7 @@ const createIconWrapperComponent = async () => {
 createIconWrapperComponent();
 
 /**
- * A React component per icon in `<react-path>/icons/<icon>.tsx`, and `<react-path>/index.ts` that exports them all.
+ * A React component per icon in `icons-react/src/generated/icons/<icon>.tsx`, and `index.ts` that exports them all.
  * One file per icon, so an app only loads the icons it imports.
  */
 const writeReactComponentFiles = async () => {
@@ -163,4 +164,7 @@ const writeReactComponentFiles = async () => {
     'utf-8',
   );
 };
-if (reactPath) writeReactComponentFiles();
+writeReactComponentFiles().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});
