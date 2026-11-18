@@ -24,6 +24,10 @@
         "color": {
           "$value": "{utrecht.color.black}"
         },
+        "padding-block-start": {
+          "$value": "{utrecht.space.block.md}"
+        },
+        "padding-block-end": {},
         "padding-inline-start": {
           "$value": "{utrecht.space.inline.md}"
         },
@@ -50,17 +54,21 @@
         }
       },
       "content": {
-        "row-gap": {
-          "$value": "{utrecht.space.row.md}"
-        },
-        "padding-block-start": {
-          "$value": "{utrecht.space.block.md}"
-        },
         "padding-block-end": {
           "$value": "{utrecht.space.block.md}"
         }
       },
+      "image": {
+        "padding-block-start": {},
+        "padding-block-end": {},
+        "padding-inline-start": {},
+        "padding-inline-end": {}
+      },
       "body": {
+        "padding-block-start": {
+          "$value": "{utrecht.space.block.md}"
+        },
+        "padding-block-end": {},
         "padding-inline-start": {
           "$value": "{utrecht.space.inline.md}"
         },
@@ -72,6 +80,10 @@
         "column-gap": {
           "$value": "{utrecht.space.inline.sm}"
         },
+        "padding-block-start": {
+          "$value": "{utrecht.space.block.md}"
+        },
+        "padding-block-end": {},
         "padding-inline-start": {
           "$value": "{utrecht.space.inline.md}"
         },

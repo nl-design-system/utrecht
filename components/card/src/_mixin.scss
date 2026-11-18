@@ -67,6 +67,8 @@
   --utrecht-heading-color: var(--utrecht-card-heading-color, var(--utrecht-card-color));
 
   order: 2;
+  padding-block-end: var(--utrecht-card-heading-padding-block-end);
+  padding-block-start: var(--utrecht-card-heading-padding-block-start);
   padding-inline-end: var(--utrecht-card-heading-padding-inline-end);
   padding-inline-start: var(--utrecht-card-heading-padding-inline-start);
 }
@@ -117,6 +119,10 @@
 
 @mixin utrecht-card__image {
   order: 1;
+  padding-block-end: var(--utrecht-card-image-padding-block-end);
+  padding-block-start: var(--utrecht-card-image-padding-block-start);
+  padding-inline-end: var(--utrecht-card-image-padding-inline-end);
+  padding-inline-start: var(--utrecht-card-image-padding-inline-start);
 
   // Crop to the aspect ratio of the card, also for an `img` with the `utrecht-img` class name
   img {
@@ -157,16 +163,12 @@
   flex-direction: column;
   flex-grow: 1;
   padding-block-end: var(--utrecht-card-content-padding-block-end);
-  row-gap: var(--utrecht-card-content-row-gap);
-
-  // No padding above the image area, also when it shows a placeholder instead of an `img`
-  &:not(:has(.utrecht-card__image)) {
-    padding-block-start: var(--utrecht-card-content-padding-block-start);
-  }
 }
 
 @mixin utrecht-card__body {
   order: 3;
+  padding-block-end: var(--utrecht-card-body-padding-block-end);
+  padding-block-start: var(--utrecht-card-body-padding-block-start);
   padding-inline-end: var(--utrecht-card-body-padding-inline-end);
   padding-inline-start: var(--utrecht-card-body-padding-inline-start);
 }
@@ -178,6 +180,8 @@
   display: flex;
   margin-block-start: auto;
   order: 4;
+  padding-block-end: var(--utrecht-card-footer-padding-block-end);
+  padding-block-start: var(--utrecht-card-footer-padding-block-start);
   padding-inline-end: var(--utrecht-card-footer-padding-inline-end, var(--utrecht-card-body-padding-inline-end));
   padding-inline-start: var(--utrecht-card-footer-padding-inline-start, var(--utrecht-card-body-padding-inline-start));
 }
