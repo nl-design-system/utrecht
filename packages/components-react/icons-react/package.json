@@ -34,7 +34,7 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "clean": "rimraf dist *.tsbuildinfo coverage",
-    "test": "jest --coverage --verbose",
+    "test": "pnpm --filter @utrecht/icon run build && jest --coverage --verbose",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
