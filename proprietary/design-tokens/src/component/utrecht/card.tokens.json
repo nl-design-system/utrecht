@@ -69,6 +69,9 @@
         }
       },
       "footer": {
+        "column-gap": {
+          "$value": "{utrecht.space.inline.sm}"
+        },
         "padding-inline-start": {
           "$value": "{utrecht.space.inline.md}"
         },
@@ -79,12 +82,6 @@
       "arrow": {
         "font-size": {
           "$value": "{utrecht.icon-scale.md}"
-        },
-        "padding-inline-end": {
-          "$value": "{utrecht.space.inline.md}"
-        },
-        "padding-block-end": {
-          "$value": "{utrecht.space.block.md}"
         }
       },
       "neutral": {

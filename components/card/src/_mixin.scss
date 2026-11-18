@@ -34,12 +34,11 @@
   }
 }
 
+// The arrow at the end of the footer
 @mixin utrecht-card__arrow {
   --utrecht-icon-size: var(--utrecht-card-arrow-font-size, 18px);
 
-  align-self: end;
-  padding-block-end: var(--utrecht-card-arrow-padding-block-end);
-  padding-inline-end: var(--utrecht-card-arrow-padding-inline-end);
+  margin-inline-start: auto;
 }
 
 @mixin utrecht-card--has-link {
@@ -156,6 +155,7 @@
 @mixin utrecht-card__content {
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
   padding-block-end: var(--utrecht-card-content-padding-block-end);
   row-gap: var(--utrecht-card-content-row-gap);
 
@@ -171,7 +171,12 @@
   padding-inline-start: var(--utrecht-card-body-padding-inline-start);
 }
 
+// A row with the footer content and the arrow, at the bottom of the card. The arrow is on the last line.
 @mixin utrecht-card__footer {
+  align-items: end;
+  column-gap: var(--utrecht-card-footer-column-gap);
+  display: flex;
+  margin-block-start: auto;
   order: 4;
   padding-inline-end: var(--utrecht-card-footer-padding-inline-end, var(--utrecht-card-body-padding-inline-end));
   padding-inline-start: var(--utrecht-card-footer-padding-inline-start, var(--utrecht-card-body-padding-inline-start));

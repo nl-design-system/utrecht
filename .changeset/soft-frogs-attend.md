@@ -18,10 +18,10 @@ New features:
 
 - Appearance variants: `neutral`, `warm`, `cool`, `soft` and `bright`.
 - Image aspect ratios: `utrecht-card--16by9`, `utrecht-card--4by3` and `utrecht-card--1by1`. In Card React: `aspect="16:9"`, `"4:3"` or `"1:1"`.
-- An arrow icon for cards with a link. In Card React you can hide it with `arrowIcon={false}`.
+- An arrow icon for cards with a link, at the end of the footer (`utrecht-card__arrow` in `utrecht-card__footer`). Card React also renders the footer for the arrow alone. You can hide the arrow with `arrowIcon={false}`.
 - Hover, active and focus-visible styles, with the state class names `utrecht-card--hover`, `utrecht-card--focus`, `utrecht-card--focus-visible` and `utrecht-card--active`.
-- A pre-heading above the heading (`utrecht-card__heading-group` and `utrecht-card__pre-heading`, `preHeading` in Card React) and a footer below the body (`utrecht-card__footer`, `footer` in Card React).
-- Design tokens for the new styles, including `utrecht.card.footer.padding-inline-start` and `utrecht.card.footer.padding-inline-end`.
+- A pre-heading above the heading (`utrecht-card__heading-group` and `utrecht-card__pre-heading`, `preHeading` in Card React) and a footer below the body (`utrecht-card__footer`, `footer` in Card React). The footer stays at the bottom of the card, so the footers of cards in a row line up.
+- Design tokens for the new styles, including `utrecht.card.footer.column-gap`, `utrecht.card.footer.padding-inline-start` and `utrecht.card.footer.padding-inline-end`.
 
 Fixes:
 

@@ -63,7 +63,8 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    */
   aspect?: '16:9' | '4:3' | '1:1';
   /**
-   * Show an arrow icon to indicate the card is clickable. Only shown when the card has an `href`. Defaults to `true`.
+   * Show an arrow icon to indicate the card is clickable, at the end of the footer. Only shown when the card has an
+   * `href`. Defaults to `true`.
    */
   arrowIcon?: boolean;
 }
@@ -111,6 +112,11 @@ export const Card = forwardRef(
         )}
       </HTMLHeading>
     );
+    const arrow = href && arrowIcon && (
+      <div className="utrecht-card__arrow">
+        <utrecht-icon-arrow></utrecht-icon-arrow>
+      </div>
+    );
     const linkProps = href
       ? {
           onClick: onCardClickHandler,
@@ -148,13 +154,13 @@ export const Card = forwardRef(
           </div>
           {image && <div className={clsx('utrecht-card__image')}>{image}</div>}
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
-          {footer && <div className="utrecht-card__footer">{footer}</div>}
+          {(footer || arrow) && (
+            <div className="utrecht-card__footer">
+              {footer}
+              {arrow}
+            </div>
+          )}
         </div>
-        {href && arrowIcon && (
-          <div className="utrecht-card__arrow">
-            <utrecht-icon-arrow></utrecht-icon-arrow>
-          </div>
-        )}
       </div>
     );
   },

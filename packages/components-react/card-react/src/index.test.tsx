@@ -98,9 +98,17 @@ describe('Card', () => {
     expect(footer).toHaveTextContent('Card footer');
     expect(footer?.previousElementSibling).toHaveClass('utrecht-card__body');
   });
-  it('renders an arrow icon when the card has a link', () => {
+  it('renders an arrow icon in the footer when the card has a link', () => {
     const { container } = render(<Card {...initialCardProps} href="https://example.com" />);
-    expect(container.querySelector('.utrecht-card__arrow utrecht-icon-arrow')).toBeInTheDocument();
+    expect(
+      container.querySelector('.utrecht-card__footer > .utrecht-card__arrow utrecht-icon-arrow'),
+    ).toBeInTheDocument();
+  });
+  it('renders the arrow icon after the footer content', () => {
+    const { container } = render(<Card {...initialCardProps} href="https://example.com" footer="Card footer" />);
+    const footer = container.querySelector('.utrecht-card__footer');
+    expect(footer).toHaveTextContent('Card footer');
+    expect(footer?.lastElementChild).toHaveClass('utrecht-card__arrow');
   });
   it('renders no arrow icon when arrowIcon is false', () => {
     const { container } = render(<Card {...initialCardProps} href="https://example.com" arrowIcon={false} />);
