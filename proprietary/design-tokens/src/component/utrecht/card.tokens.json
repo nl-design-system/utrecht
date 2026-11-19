@@ -7,6 +7,14 @@
       "color": {
         "$value": "{utrecht.color.black}"
       },
+      "hover": {
+        "scale": { "$value": "1" },
+        "text-decoration-thickness": { "$value": "2px" }
+      },
+      "transition-duration": { "$value": "150ms" },
+      "active": {
+        "scale": { "$value": "1" }
+      },
       "border-radius": {},
       "box-shadow": {},
       "inline-size": {},
@@ -14,40 +22,109 @@
       "row-gap": {},
       "heading": {
         "color": {
-          "$value": "{utrecht.color.blue.35}"
-        },
-        "padding-inline-start": {
-          "$value": "{utrecht.space.inline.md}"
-        },
-        "padding-inline-end": {
-          "$value": "{utrecht.space.inline.md}"
-        }
-      },
-      "link": {
-        "hover": {
-          "text-decoration-thickness": {
-            "$value": "3px"
-          }
-        }
-      },
-      "content": {
-        "row-gap": {
-          "$value": "{utrecht.space.row.md}"
+          "$value": "{utrecht.color.black}"
         },
         "padding-block-start": {
           "$value": "{utrecht.space.block.md}"
         },
-        "padding-block-end": {
-          "$value": "{utrecht.space.block.md}"
-        }
-      },
-      "body": {
+        "padding-block-end": {},
         "padding-inline-start": {
           "$value": "{utrecht.space.inline.md}"
         },
         "padding-inline-end": {
           "$value": "{utrecht.space.inline.md}"
         }
+      },
+      "has-link": {
+        "color": {
+          "$value": "{utrecht.color.black}"
+        },
+        "cursor": {
+          "$value": "pointer"
+        }
+      },
+      "link": {
+        "color": {
+          "$value": "{utrecht.color.blue.35}"
+        },
+        "focus": {
+          "outline-width": {
+            "$value": "0"
+          }
+        }
+      },
+      "content": {
+        "padding-block-end": {
+          "$value": "{utrecht.space.block.md}"
+        }
+      },
+      "image": {
+        "padding-block-start": {},
+        "padding-block-end": {},
+        "padding-inline-start": {},
+        "padding-inline-end": {}
+      },
+      "body": {
+        "padding-block-start": {
+          "$value": "{utrecht.space.block.md}"
+        },
+        "padding-block-end": {},
+        "padding-inline-start": {
+          "$value": "{utrecht.space.inline.md}"
+        },
+        "padding-inline-end": {
+          "$value": "{utrecht.space.inline.md}"
+        }
+      },
+      "footer": {
+        "column-gap": {
+          "$value": "{utrecht.space.inline.sm}"
+        },
+        "padding-block-start": {
+          "$value": "{utrecht.space.block.md}"
+        },
+        "padding-block-end": {},
+        "padding-inline-start": {
+          "$value": "{utrecht.space.inline.md}"
+        },
+        "padding-inline-end": {
+          "$value": "{utrecht.space.inline.md}"
+        }
+      },
+      "arrow": {
+        "font-size": {
+          "$value": "{utrecht.icon-scale.md}"
+        }
+      },
+      "neutral": {
+        "background-color": { "$value": "{utrecht.color.blue.90}" },
+        "color": { "$value": "{utrecht.color.black}" }
+      },
+      "warm": {
+        "background-color": { "$value": "{utrecht.color.yellow.80}" },
+        "color": { "$value": "{utrecht.color.black}" }
+      },
+      "cool": {
+        "background-color": { "$value": "{utrecht.color.blue.80}" },
+        "color": { "$value": "{utrecht.color.black}" }
+      },
+      "soft": {
+        "background-color": { "$value": "{utrecht.color.grey.80}" },
+        "color": { "$value": "{utrecht.color.black}" }
+      },
+      "bright": {
+        "image": {
+          "margin-block": {
+            "$value": "-1px"
+          },
+          "margin-inline": {
+            "$value": "-1px"
+          }
+        },
+        "background-color": { "$value": "{utrecht.color.white}" },
+        "color": { "$value": "{utrecht.color.black}" },
+        "border-color": { "$value": "{utrecht.color.grey.80}" },
+        "border-width": { "$value": "1px" }
       }
     }
   }

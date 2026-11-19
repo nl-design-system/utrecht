@@ -1,10 +1,8 @@
 {
   "utrecht": {
     "badge-list": {
-      "item": {
-        "margin-block": { "$value": "{utrecht.space.block.xs}" },
-        "margin-inline": { "$value": "{utrecht.space.block.sm}" }
-      }
+      "column-gap": { "$value": "{utrecht.space.inline.sm}" },
+      "row-gap": { "$value": "{utrecht.space.block.xs}" }
     }
   }
 }

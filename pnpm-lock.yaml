@@ -277,6 +277,18 @@ importers:
       '@utrecht/build-utils-css':
         specifier: workspace:*
         version: link:../../packages/build-utils-css
+      '@utrecht/focus-ring-css':
+        specifier: workspace:*
+        version: link:../focus-ring
+      '@utrecht/heading-group-css':
+        specifier: workspace:*
+        version: link:../heading-group
+      '@utrecht/link-css':
+        specifier: workspace:*
+        version: link:../link
+      '@utrecht/pre-heading-css':
+        specifier: workspace:*
+        version: link:../pre-heading
 
   components/checkbox:
     devDependencies:

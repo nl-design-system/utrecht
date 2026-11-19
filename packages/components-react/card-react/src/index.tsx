@@ -29,6 +29,11 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    */
   heading: ReactNode;
   /**
+   * Short text shown above the heading, for example a category. It follows the heading in the HTML, so the heading is
+   * read first.
+   */
+  preHeading?: ReactNode;
+  /**
    * Heading level (1-6, default to 2)
    */
   headingLevel: HTMLHeadingLevel;
@@ -44,10 +49,42 @@ export interface CardProps extends HTMLAttributes<HTMLDivElement> {
    * Body content to be displayed inside the card
    */
   body?: ReactNode;
+  /**
+   * Additional data below the body, for example a date or badges. Use it for content without links or buttons: the
+   * link of the card covers the whole card.
+   */
+  footer?: ReactNode;
+  /**
+   * Appearance variant of the card
+   */
+  appearance?: '' | 'neutral' | 'warm' | 'cool' | 'soft' | 'bright';
+  /**
+   * Aspect ratio of the image
+   */
+  aspect?: '16:9' | '4:3' | '1:1';
+  /**
+   * Show an arrow icon to indicate the card is clickable, at the end of the footer. Only shown when the card has an
+   * `href`. Defaults to `true`.
+   */
+  arrowIcon?: boolean;
 }
 export const Card = forwardRef(
   (
-    { image, heading, headingLevel, href, Link, className, body, ...restProps }: PropsWithChildren<CardProps>,
+    {
+      image,
+      heading,
+      headingLevel,
+      preHeading,
+      href,
+      Link,
+      className,
+      body,
+      footer,
+      appearance,
+      aspect,
+      arrowIcon = true,
+      ...restProps
+    }: PropsWithChildren<CardProps>,
     ref: ForwardedRef<HTMLDivElement>,
   ) => {
     const linkRef = useRef<HTMLAnchorElement>(null);
@@ -64,13 +101,26 @@ export const Card = forwardRef(
       }
     };
     const linkId = useId();
+    const headingElement = headingLevel && heading && (
+      <HTMLHeading id={linkId} className={clsx(`utrecht-heading-2`, 'utrecht-card__header')} level={headingLevel}>
+        {href ? (
+          <LinkComponent ref={linkRef} href={href} className={clsx('utrecht-card__link')}>
+            {heading}
+          </LinkComponent>
+        ) : (
+          heading
+        )}
+      </HTMLHeading>
+    );
+    const arrow = href && arrowIcon && (
+      <div className="utrecht-card__arrow">
+        <utrecht-icon-arrow></utrecht-icon-arrow>
+      </div>
+    );
     const linkProps = href
       ? {
-          tabIndex: 0,
-          role: 'link',
           onClick: onCardClickHandler,
           onKeyDown: onCardKeyDownHandler,
-          'aria-labelledby': linkId,
         }
       : {};
 
@@ -78,27 +128,38 @@ export const Card = forwardRef(
       <div
         ref={ref}
         className={clsx('utrecht-card', className, {
-          'utrecht-card--link': href,
+          'utrecht-card--has-link': href,
+          'utrecht-card--neutral': appearance === 'neutral',
+          'utrecht-card--warm': appearance === 'warm',
+          'utrecht-card--cool': appearance === 'cool',
+          'utrecht-card--soft': appearance === 'soft',
+          'utrecht-card--bright': appearance === 'bright',
+          'utrecht-card--16by9': aspect === '16:9',
+          'utrecht-card--4by3': aspect === '4:3',
+          'utrecht-card--1by1': aspect === '1:1',
         })}
         {...linkProps}
         {...restProps}
       >
         <div className="utrecht-card__content">
           <div className={clsx('utrecht-card__heading')}>
-            {headingLevel && heading && (
-              <HTMLHeading
-                id={linkId}
-                className={clsx(`utrecht-heading-${headingLevel}`, 'utrecht-card__header')}
-                level={headingLevel}
-              >
-                <LinkComponent ref={linkRef} href={href} className={clsx('utrecht-card__link')}>
-                  {heading}
-                </LinkComponent>
-              </HTMLHeading>
+            {preHeading && headingElement ? (
+              <hgroup className="utrecht-card__heading-group">
+                {headingElement}
+                <p className="utrecht-card__pre-heading">{preHeading}</p>
+              </hgroup>
+            ) : (
+              headingElement
             )}
           </div>
           {image && <div className={clsx('utrecht-card__image')}>{image}</div>}
           {body && <div className={clsx('utrecht-card__body')}>{body}</div>}
+          {(footer || arrow) && (
+            <div className="utrecht-card__footer">
+              {footer}
+              {arrow}
+            </div>
+          )}
         </div>
       </div>
     );
