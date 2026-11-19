@@ -9,8 +9,8 @@ Updated the card component.
 Breaking changes:
 
 - Renamed the `utrecht-card--link` class name and mixin to `utrecht-card--has-link`.
-- Removed the `utrecht.card.link.hover.text-decoration-thickness` token. Use `utrecht.card.hover.text-decoration-thickness` instead.
-- Removed the `utrecht.card.content.row-gap` and `utrecht.card.content.padding-block-start` tokens. Each part of the card has its own padding instead: `padding-block-start`, `padding-block-end`, `padding-inline-start` and `padding-inline-end` for `utrecht.card.heading`, `utrecht.card.image`, `utrecht.card.body` and `utrecht.card.footer`. `utrecht.card.content.padding-block-end` stays, for the space below the last part.
+- Deprecated the `utrecht.card.link.hover.text-decoration-thickness` token: the CSS no longer uses it. Use `utrecht.card.hover.text-decoration-thickness` instead.
+- Deprecated the `utrecht.card.content.row-gap` and `utrecht.card.content.padding-block-start` tokens: the CSS no longer uses them. Each part of the card has its own padding instead: `padding-block-start`, `padding-block-end`, `padding-inline-start` and `padding-inline-end` for `utrecht.card.heading`, `utrecht.card.image`, `utrecht.card.body` and `utrecht.card.footer`. `utrecht.card.content.padding-block-end` stays, for the space below the last part.
 - The whole card is clickable via a stretched link: `::after` on `.utrecht-card__link`. The card gets `position: relative`, and the focus ring moved from the card to the link.
 - Card React: the card wrapper no longer has `role="link"`, `tabIndex` and `aria-labelledby`, so the card has one tab stop.
 - Card React: the heading always has the `utrecht-heading-2` class name, for every `headingLevel`.
