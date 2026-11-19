@@ -17,7 +17,8 @@ import '@utrecht/component-library-css/dist/index.css';
 export default definePreview({
   addons: [addonA11y(), addonPseudoStates(), addonDocs()],
   decorators: [
-    (Story: any) => <div className="utrecht-root utrecht-theme">{Story()}</div>,
+    (Story: any, { parameters }: any) =>
+      parameters.noTheme ? <Story /> : <div className="utrecht-root utrecht-theme">{Story()}</div>,
     ///
     withTests({ results }),
   ],
