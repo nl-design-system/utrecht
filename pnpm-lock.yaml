@@ -813,9 +813,18 @@ importers:
       '@utrecht/focus-ring-css':
         specifier: workspace:*
         version: link:../focus-ring
+      '@utrecht/form-label-css':
+        specifier: workspace:*
+        version: link:../form-label
       '@utrecht/heading-2-css':
         specifier: workspace:*
         version: link:../heading-2
+      '@utrecht/multiline-data-css':
+        specifier: workspace:*
+        version: link:../multiline-data
+      '@utrecht/spotlight-section-css':
+        specifier: workspace:*
+        version: link:../spotlight-section
       '@utrecht/textbox-css':
         specifier: workspace:*
         version: link:../textbox
