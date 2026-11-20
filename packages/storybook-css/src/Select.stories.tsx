@@ -159,4 +159,10 @@ export const Multiple: Story = {
   },
 };
 
+export const NoTheme: Story = {
+  parameters: {
+    noTheme: true,
+  },
+};
+
 export const DesignTokens = designTokenStory(meta);

@@ -63,6 +63,7 @@ const preview: Preview = {
       return (
         <div
           className={clsx('utrecht-root', {
+            'utrecht-theme': !storyContext.parameters['noTheme'],
             'utrecht-reduced-motion': isStorybookReducedMotion,
           })}
         >
@@ -108,7 +109,7 @@ const preview: Preview = {
         // Exclude `<Title>` because the title comes from the Markdown file
         return (
           <>
-            {buttons.length > 0 ? <ButtonGroup>{buttons}</ButtonGroup> : null}
+            {buttons.length > 0 ? <ButtonGroup className="utrecht-theme">{buttons}</ButtonGroup> : null}
             <Description />
             <Primary />
             <Controls />
