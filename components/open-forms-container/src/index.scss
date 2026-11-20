@@ -1,4 +1,5 @@
 @use "./mixin" as *;
+@use "~@utrecht/textbox-css/src/mixin" as textbox;
 
 /* stylelint-disable selector-class-pattern -- class names come from the Open Forms renderer */
 .utrecht-open-forms-container {
@@ -7,6 +8,42 @@
   }
 
   @include utrecht-open-forms-container;
+
+  /* ==== All renderer versions ==== */
+
+  /* Icon fonts */
+  .fa,
+  .fas,
+  .far,
+  .fa-solid,
+  .fa-regular {
+    @include utrecht-open-forms-container-icon-font;
+  }
+
+  /* Address (addressNL): size the sub-fields `<key>.postcode` etc. for any key */
+  .openforms-addressnl .utrecht-textbox[name$=".postcode"] {
+    @include textbox.utrecht-textbox--postal-code-size;
+  }
+
+  .openforms-addressnl .utrecht-textbox[name$=".houseNumber"] {
+    @include textbox.utrecht-textbox--house-number-size;
+  }
+
+  .openforms-addressnl .utrecht-textbox[name$=".houseLetter"] {
+    @include textbox.utrecht-textbox--house-letter-size;
+  }
+
+  .openforms-addressnl .utrecht-textbox[name$=".houseNumberAddition"] {
+    @include textbox.utrecht-textbox--house-addition-size;
+  }
+
+  .openforms-addressnl .utrecht-textbox[name$=".streetName"] {
+    @include textbox.utrecht-textbox--straatnaam-size;
+  }
+
+  .openforms-addressnl .utrecht-textbox[name$=".city"] {
+    @include textbox.utrecht-textbox--plaats-size;
+  }
 
   /* Fieldset */
   .openforms-fieldset-legend-content {
@@ -33,16 +70,8 @@
   }
 
   /* Multifield */
-  .openforms-multifield .openforms-multifield__input-container {
-    @include utrecht-open-forms-container-multifield-input-container;
-  }
-
   .openforms-multifield__remove-button .utrecht-button {
     @include utrecht-open-forms-container-multifield-remove-button;
-  }
-
-  .openforms-multifield__remove-button .utrecht-icon > .fa-regular {
-    @include utrecht-open-forms-container-multifield-remove-button-icon;
   }
 
   /* File upload */
@@ -57,6 +86,77 @@
 
   .openforms-form-navigation .utrecht-icon {
     @include utrecht-open-forms-container-form-navigation-icon;
+  }
+
+  /* Radio button label */
+  .utrecht-form-label--openforms.utrecht-form-label--radio {
+    @include utrecht-open-forms-container-radio-label;
+  }
+
+  /* Content component, with the "info", "warning", "error" or "success" custom class */
+  .openforms-formio-content--info {
+    @include utrecht-open-forms-container-content("info", "info");
+  }
+
+  .openforms-formio-content--warning {
+    @include utrecht-open-forms-container-content("warning", "warning");
+  }
+
+  .openforms-formio-content--error {
+    @include utrecht-open-forms-container-content("error", "warning");
+  }
+
+  .openforms-formio-content--success {
+    @include utrecht-open-forms-container-content("success", "ok");
+  }
+
+  /* ==== Open Forms SDK app ==== */
+
+  .openforms-app > .openforms-app__body > .openforms-card {
+    @include utrecht-open-forms-container-app-card;
+  }
+
+  /* Summary */
+  .utrecht-data-list--openforms > .utrecht-data-list__item {
+    @include utrecht-open-forms-container-data-list-item;
+  }
+
+  .utrecht-data-list--openforms > .utrecht-data-list__item:first-of-type {
+    @include utrecht-open-forms-container-data-list-item--first;
+  }
+
+  /* ==== formio.js (Open Forms SDK 3.5). TODO: remove after the migration to Open Forms SDK 4 ==== */
+
+  .formio-editor-read-only-content {
+    @include utrecht-open-forms-container-read-only-content;
+  }
+
+  /* Disabled textbox. The formio-renderer renders a read-only textbox instead. */
+  .utrecht-textbox--openforms:disabled {
+    @include utrecht-open-forms-container-textbox--disabled;
+  }
+
+  /* ==== formio-renderer 1.8 (Open Forms SDK 3.5). TODO: remove after the migration to Open Forms SDK 4 ==== */
+
+  /* Multifield: skip fields with the 3.x input container, when CSS for both renderers is loaded */
+  .openforms-multifield .openforms-multifield__field:not(:has(.openforms-multifield__input-container)) {
+    @include utrecht-open-forms-container-multifield-input-container;
+  }
+
+  /* Error message */
+  .utrecht-form-field-description--openforms-errors {
+    @include utrecht-open-forms-container-form-field-description-errors;
+  }
+
+  /* ==== formio-renderer 3 (Open Forms SDK 4.1) ==== */
+
+  /* Multifield */
+  .openforms-multifield .openforms-multifield__input-container {
+    @include utrecht-open-forms-container-multifield-input-container;
+  }
+
+  .openforms-multifield__remove-button .utrecht-icon > .fa-regular {
+    @include utrecht-open-forms-container-multifield-remove-button-icon;
   }
 
   /* Error message */

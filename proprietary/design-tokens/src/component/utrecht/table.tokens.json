@@ -13,7 +13,7 @@
         "margin-block-end": { "$value": "1em" }
       },
       "header": {
-        "font-weight": { "$value": "{utrecht.typography.weight-scale.bold.font-weight}" },
+        "font-weight": { "$value": "{utrecht.typography.weight-scale.semibold.font-weight}" },
         "color": {},
         "text-transform": {},
         "border-block-end-color": { "$value": "{utrecht.color.red.40}" },
@@ -39,7 +39,7 @@
         }
       },
       "header-cell": {
-        "font-weight": {},
+        "font-weight": { "$value": "{utrecht.typography.weight-scale.semibold.font-weight}" },
         "color": {},
         "text-transform": {}
       },

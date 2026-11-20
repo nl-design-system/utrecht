@@ -17,35 +17,73 @@ import openFormsContainerPackage from '../../../../../components/open-forms-cont
 // fields that need prefilled personal data (partners, children, customerProfile) are excluded.
 type FormioFormProps = ComponentProps<typeof FormioForm>;
 
-// Read from the installed packages, so the table stays correct after an upgrade.
-const VERSIONS: [label: string, pkg: { name: string; version: string }][] = [
-  ['Open Forms SDK (CSS)', sdkPackage],
-  ['formio-renderer', rendererPackage],
-  ['Utrecht design tokens', designTokensPackage],
-  ['Utrecht open forms container', openFormsContainerPackage],
-];
+type PackageInfo = { name: string; version: string };
 
-const VERSIONS_HTML = `<table class="utrecht-table">
+// Docs for the stories: which formio-renderer each Open Forms SDK version uses, and the error state.
+export const SDK_RENDERER_DOCS = `
+| Open Forms SDK | formio-renderer | Story |
+| --- | --- | --- |
+| 3.5 (\`latest\`) | 1.8 | \`Open Formulieren/voorbeelden SDK 3.5\` |
+| 4.1-alpha (\`next\`) | 3.0-alpha | \`Open Formulieren/voorbeelden\` |
+
+Het veld _Voornaam_ en de tweede _Eerdere woonplaats_ tonen direct een foutmelding.
+`;
+
+// Read from the installed packages, so the table stays correct after an upgrade.
+const versionsHtml = (renderer: PackageInfo) => {
+  const versions: [label: string, pkg: PackageInfo][] = [
+    ['Open Forms SDK (CSS)', sdkPackage],
+    ['formio-renderer', renderer],
+    ['Utrecht design tokens', designTokensPackage],
+    ['Utrecht open forms container', openFormsContainerPackage],
+  ];
+
+  return `<table class="utrecht-table">
 <caption class="utrecht-table__caption">Gebruikte versies</caption>
 <thead class="utrecht-table__header"><tr class="utrecht-table__row">
 <th class="utrecht-table__header-cell" scope="col">Onderdeel</th>
 <th class="utrecht-table__header-cell" scope="col">Package</th>
 <th class="utrecht-table__header-cell" scope="col">Versie</th>
 </tr></thead>
-<tbody class="utrecht-table__body">${VERSIONS.map(
-  ([label, { name, version }]) =>
-    `<tr class="utrecht-table__row"><th class="utrecht-table__header-cell" scope="row">${label}</th><td class="utrecht-table__cell"><code>${name}</code></td><td class="utrecht-table__cell">${version}</td></tr>`,
-).join('')}</tbody>
+<tbody class="utrecht-table__body">${versions
+    .map(
+      ([label, { name, version }]) =>
+        `<tr class="utrecht-table__row"><th class="utrecht-table__header-cell" scope="row">${label}</th><td class="utrecht-table__cell"><code>${name}</code></td><td class="utrecht-table__cell">${version}</td></tr>`,
+    )
+    .join('')}</tbody>
 </table>`;
+};
 
-export const FORM_COMPONENTS = [
+// Validation errors on load, to check the error message spacing and the multifield layout.
+export const INITIAL_ERRORS: FormioFormProps['errors'] = {
+  voornaam: 'Vul je voornaam in.',
+  eerdereWoonplaatsen: [undefined, 'Vul een bestaande woonplaats in.'],
+};
+
+export const createFormComponents = (renderer: PackageInfo) => [
   {
     id: 'intro',
     type: 'content',
     key: 'intro',
     html:
       '<p>Dit formulier toont alle beschikbare veldtypen. Gebruik het om te controleren hoe design tokens van invloed zijn op de Open Forms stijl.</p>' +
-      VERSIONS_HTML,
+      versionsHtml(renderer),
+  },
+
+  // Content met de custom class "info" en "warning": een spotlight section
+  {
+    id: 'info',
+    type: 'content',
+    key: 'info',
+    html: '<p>Je hebt ongeveer 10 minuten nodig om dit formulier in te vullen.</p>',
+    customClass: 'info',
+  },
+  {
+    id: 'waarschuwing',
+    type: 'content',
+    key: 'waarschuwing',
+    html: '<p>Houd je DigiD bij de hand.</p>',
+    customClass: 'warning',
   },
 
   // Persoonsgegevens
@@ -80,13 +118,13 @@ export const FORM_COMPONENTS = [
       {
         id: 'telefoon',
         type: 'phoneNumber',
-        key: 'telefoon',
+        key: 'telefoonnummerPZD',
         label: 'Telefoonnummer',
       },
       {
         id: 'bsn',
         type: 'bsn',
-        key: 'bsn',
+        key: 'burgerservicenummerPZD',
         label: 'Burgerservicenummer (BSN)',
         tooltip: 'Je BSN staat op je identiteitsbewijs, paspoort of rijbewijs.',
       },
@@ -103,7 +141,7 @@ export const FORM_COMPONENTS = [
       {
         id: 'postcode',
         type: 'postcode',
-        key: 'postcode',
+        key: 'postcodePZD',
         label: 'Postcode',
         tooltip: 'Vul je postcode in zoals op je brief staat, bijvoorbeeld 3511 AB.',
         validate: { required: true },
@@ -111,7 +149,7 @@ export const FORM_COMPONENTS = [
       {
         id: 'huisnummer',
         type: 'textfield',
-        key: 'huisnummer',
+        key: 'huisnummerPMD',
         label: 'Huisnummer',
         validate: { required: true },
       },
@@ -357,6 +395,8 @@ export const FORM_COMPONENTS = [
     ],
   },
 ];
+
+export const FORM_COMPONENTS = createFormComponents(rendererPackage);
 
 // Mock handlers instead of the Open Forms backend: uploads stay in the browser, and the
 // address lookup always returns the same street and city.
