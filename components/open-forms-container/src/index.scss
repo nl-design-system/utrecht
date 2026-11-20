@@ -88,6 +88,54 @@
     @include utrecht-open-forms-container-form-navigation-icon;
   }
 
+  /* Radio button label */
+  .utrecht-form-label--openforms.utrecht-form-label--radio {
+    @include utrecht-open-forms-container-radio-label;
+  }
+
+  /* Content component, with the "info", "warning", "error" or "success" custom class */
+  .openforms-formio-content--info {
+    @include utrecht-open-forms-container-content("info", "info");
+  }
+
+  .openforms-formio-content--warning {
+    @include utrecht-open-forms-container-content("warning", "warning");
+  }
+
+  .openforms-formio-content--error {
+    @include utrecht-open-forms-container-content("error", "warning");
+  }
+
+  .openforms-formio-content--success {
+    @include utrecht-open-forms-container-content("success", "ok");
+  }
+
+  /* ==== Open Forms SDK app ==== */
+
+  .openforms-app > .openforms-app__body > .openforms-card {
+    @include utrecht-open-forms-container-app-card;
+  }
+
+  /* Summary */
+  .utrecht-data-list--openforms > .utrecht-data-list__item {
+    @include utrecht-open-forms-container-data-list-item;
+  }
+
+  .utrecht-data-list--openforms > .utrecht-data-list__item:first-of-type {
+    @include utrecht-open-forms-container-data-list-item--first;
+  }
+
+  /* ==== formio.js (Open Forms SDK 3.5). TODO: remove after the migration to Open Forms SDK 4 ==== */
+
+  .formio-editor-read-only-content {
+    @include utrecht-open-forms-container-read-only-content;
+  }
+
+  /* Disabled textbox. The formio-renderer renders a read-only textbox instead. */
+  .utrecht-textbox--openforms:disabled {
+    @include utrecht-open-forms-container-textbox--disabled;
+  }
+
   /* ==== formio-renderer 1.8 (Open Forms SDK 3.5). TODO: remove after the migration to Open Forms SDK 4 ==== */
 
   /* Multifield: skip fields with the 3.x input container, when CSS for both renderers is loaded */

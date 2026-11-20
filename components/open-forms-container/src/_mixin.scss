@@ -1,5 +1,8 @@
 @use "~@utrecht/textbox-css/src/mixin" as *;
 @use "~@utrecht/heading-2-css/src/mixin" as *;
+@use "~@utrecht/form-label-css/src/mixin" as *;
+@use "~@utrecht/multiline-data-css/src/mixin" as *;
+@use "~@utrecht/spotlight-section-css/src/mixin" as *;
 
 /* Container: map the container tokens onto the Utrecht components inside it,
  * and set the textbox widths of specific Utrecht forms. */
@@ -8,7 +11,57 @@
   --utrecht-icon-size: var(--utrecht-open-forms-container-icon-size);
   --utrecht-calendar-button-font-weight: var(--utrecht-open-forms-container-calendar-button-font-weight);
 
+  /* The page around the form provides the spacing */
+  /* stylelint-disable custom-property-pattern -- sets the Open Forms `--of-*` tokens */
+  --of-card-padding-inline-end: 0;
+  --of-card-padding-inline-start: 0;
+  --of-progress-indicator-padding-block-end: 0;
+  /* stylelint-enable custom-property-pattern */
+
   @include utrecht-open-forms-container-field-sizes;
+}
+
+/* Card of the form, inside the Open Forms app */
+@mixin utrecht-open-forms-container-app-card {
+  /* stylelint-disable custom-property-pattern -- sets the Open Forms `--of-*` tokens */
+  --of-card-padding-block-end: 0;
+  --of-card-padding-block-start: 0;
+  /* stylelint-enable custom-property-pattern */
+}
+
+/* Radio button label */
+@mixin utrecht-open-forms-container-radio-label {
+  @include utrecht-form-label--radio;
+}
+
+/* Disabled textbox: looks read-only */
+@mixin utrecht-open-forms-container-textbox--disabled {
+  @include utrecht-textbox--read-only;
+}
+
+/* Summary: spacing between the items of a data list */
+@mixin utrecht-open-forms-container-data-list-item {
+  margin-block-start: var(--utrecht-data-list-rows-item-margin-block-start);
+}
+
+@mixin utrecht-open-forms-container-data-list-item--first {
+  margin-block-start: 0;
+}
+
+/* Content component: a spotlight section.
+ * $of-type is the Open Forms content type, $spotlight-type the spotlight section type. */
+@mixin utrecht-open-forms-container-content($of-type, $spotlight-type) {
+  --of-formio-content-#{$of-type}-border-inline-start-style: none;
+
+  @include utrecht-spotlight-section;
+  @include utrecht-spotlight-section-type($spotlight-type);
+
+  flex-direction: column;
+}
+
+/* Read-only content of a formio.js textarea with an editor */
+@mixin utrecht-open-forms-container-read-only-content {
+  @include utrecht-multiline-data;
 }
 
 /* Icon font: don't inherit `font-size-adjust` from `utrecht-root`, it shrinks the glyphs */

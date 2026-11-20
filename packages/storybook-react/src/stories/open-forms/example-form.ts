@@ -70,6 +70,22 @@ export const createFormComponents = (renderer: PackageInfo) => [
       versionsHtml(renderer),
   },
 
+  // Content met de custom class "info" en "warning": een spotlight section
+  {
+    id: 'info',
+    type: 'content',
+    key: 'info',
+    html: '<p>Je hebt ongeveer 10 minuten nodig om dit formulier in te vullen.</p>',
+    customClass: 'info',
+  },
+  {
+    id: 'waarschuwing',
+    type: 'content',
+    key: 'waarschuwing',
+    html: '<p>Houd je DigiD bij de hand.</p>',
+    customClass: 'warning',
+  },
+
   // Persoonsgegevens
   {
     id: 'persoonsgegevens',
