@@ -153,4 +153,13 @@ export const Hover: Story = {
   },
 };
 
+export const NoTheme: Story = {
+  args: {
+    options,
+  },
+  parameters: {
+    noTheme: true,
+  },
+};
+
 export const DesignTokens = designTokenStory(meta);
