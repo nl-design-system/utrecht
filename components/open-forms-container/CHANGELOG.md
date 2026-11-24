@@ -1,5 +1,14 @@
 # @utrecht/open-forms-container-css
 
+## 3.2.0
+
+### Minor Changes
+
+- 6c14ef4: Style more of Open Forms in `utrecht-open-forms-container`, so sites no longer need their own CSS for it: content components with the `info`, `warning`, `error` or `success` custom class as a spotlight section, radio button labels, the summary data list spacing, and no padding around the form card and progress indicator. For formio.js forms, also style disabled textboxes as read-only and the read-only content of a textarea as multiline data. Add a mixin for each part, such as `utrecht-open-forms-container-content`.
+- 2e16dc3: Support the formio-renderer 1.8 of the Open Forms SDK 3.5 in `utrecht-open-forms-container`: apply the multifield layout to `.openforms-multifield__field` and the error message spacing to `.utrecht-form-field-description--openforms-errors`. Render Font Awesome icons at full size: they no longer inherit `font-size-adjust` from `utrecht-root`. Add the `utrecht-open-forms-container-form-field-description-errors` and `utrecht-open-forms-container-icon-font` mixins.
+  
+  Apply the textbox sizes for Utrecht field names to forms with the formio-renderer too: it names fields `postcodePZD` instead of `data[postcodePZD]`. Size the sub-fields of the address component (`addressNL`), such as the postcode and house number, for any key.
+
 ## 3.1.0
 
 ### Minor Changes

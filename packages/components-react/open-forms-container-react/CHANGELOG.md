@@ -1,5 +1,13 @@
 # @utrecht/open-forms-container-react
 
+## 1.0.13
+
+### Patch Changes
+
+- Updated dependencies [6c14ef4]
+- Updated dependencies [2e16dc3]
+  - @utrecht/open-forms-container-css@3.2.0
+
 ## 1.0.12
 
 ### Patch Changes
