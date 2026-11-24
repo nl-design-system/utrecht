@@ -1,5 +1,14 @@
 # @utrecht/component-library-react
 
+## 15.0.3
+
+### Patch Changes
+
+- Updated dependencies [6c14ef4]
+- Updated dependencies [2e16dc3]
+  - @utrecht/open-forms-container-css@3.2.0
+  - @utrecht/open-forms-container-react@1.0.13
+
 ## 15.0.2
 
 ### Patch Changes
