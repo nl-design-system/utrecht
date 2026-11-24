@@ -8,15 +8,6 @@
     "nl-design-system"
   ],
   "private": true,
-  "workspaces": [
-    "./apps/*",
-    "./documentation/",
-    "./components/",
-    "./components/*/",
-    "./packages/*",
-    "./packages/components-react/*",
-    "./proprietary/*"
-  ],
   "repository": {
     "type": "git+ssh",
     "url": "git@github.com:nl-design-system/utrecht.git",
