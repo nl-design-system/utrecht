@@ -24,7 +24,7 @@
   },
   "engines": {
     "node": "^24.22.3 || ^26.13.1",
-    "pnpm": "^11.4.0"
+    "pnpm": "^12"
   },
   "devDependencies": {
     "@changesets/cli": "3.0.1",
@@ -110,5 +110,5 @@
     "update-minor": "npm-check-updates --configFileName .ncurc.minor.mjs",
     "update-patch": "npm-check-updates --configFileName .ncurc.patch.mjs"
   },
-  "packageManager": "pnpm@11.28.2+sha512.755ce2fe3c05bfd7bb412b42aff3c5c55cd38c529c6eca810475497ae36746c571e4b6e1814e6e7e4b97d7ee864b8a0e44673c3b297a50e0ac28771c5ce15d27"
+  "packageManager": "pnpm@12.23.0+sha512.02da94ffaf133f46074322afe552f90d40b5f71ae259aefbccdacc5085b1d617e98d65e0131f5748b9b67445978ee5055d7d59a473f1eef0d504854fefcd5975"
 }
