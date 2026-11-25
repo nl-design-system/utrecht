@@ -35,10 +35,8 @@
 }
 
 @mixin utrecht-button-link--html-a {
-  &:focus {
-    @include utrecht-button-link--focus;
-  }
   &:focus-visible {
+    @include utrecht-button-link--focus;
     @include utrecht-button-link--focus-visible;
   }
   &:hover {

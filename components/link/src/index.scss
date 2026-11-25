@@ -42,9 +42,9 @@
   @include utrecht-link--focus-visible;
 }
 
-/* `:focus` should only apply to links with `href`, not on disabled links */
-.utrecht-link--html-span:focus,
-.utrecht-link--html-a:any-link:focus {
+/* The focus colours should only apply to links with `href`, not on disabled links */
+.utrecht-link--html-span:focus-visible,
+.utrecht-link--html-a:any-link:focus-visible {
   @include utrecht-link--focus;
 }
 

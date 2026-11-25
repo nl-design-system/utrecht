@@ -47,7 +47,7 @@
   @include utrecht-button--focus-visible;
 }
 
-.utrecht-button:focus:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
+.utrecht-button:focus-visible:not(:disabled, [aria-disabled="true"], .utrecht-button--disabled) {
   @include utrecht-button--focus;
 }
 

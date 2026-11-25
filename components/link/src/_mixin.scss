@@ -223,11 +223,8 @@ however browsers don't seem to have implemented great looking supixel tweening y
     @include utrecht-link--active;
   }
 
-  &:any-link:focus {
-    @include utrecht-link--focus;
-  }
-
   &:any-link:focus-visible {
+    @include utrecht-link--focus;
     @include utrecht-link--focus-visible;
   }
 }
