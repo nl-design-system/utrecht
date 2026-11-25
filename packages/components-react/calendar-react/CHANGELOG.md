@@ -1,5 +1,11 @@
 # @utrecht/calendar-react
 
+## 1.1.6
+
+### Patch Changes
+
+- @utrecht/button-react@3.0.4
+
 ## 1.1.5
 
 ### Patch Changes

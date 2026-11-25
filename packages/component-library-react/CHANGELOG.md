@@ -1,5 +1,18 @@
 # @utrecht/component-library-react
 
+## 15.0.4
+
+### Patch Changes
+
+- Updated dependencies [51c8cc7]
+  - @utrecht/button-link-css@3.1.0
+  - @utrecht/link-button-css@3.2.0
+  - @utrecht/html-content-css@3.0.1
+  - @utrecht/link-react@1.0.13
+  - @utrecht/button-react@3.0.4
+  - @utrecht/card-react@0.0.7
+  - @utrecht/calendar-react@1.1.6
+
 ## 15.0.3
 
 ### Patch Changes

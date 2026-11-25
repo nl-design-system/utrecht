@@ -1,5 +1,11 @@
 # @utrecht/card-react
 
+## 0.0.7
+
+### Patch Changes
+
+- @utrecht/link-react@1.0.13
+
 ## 0.0.6
 
 ### Patch Changes
