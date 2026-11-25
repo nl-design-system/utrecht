@@ -44,11 +44,11 @@
     @include utrecht-button--hover;
   }
 
-  button:focus:not([aria-disabled="true"], :disabled) {
+  button:focus-visible:not([aria-disabled="true"], :disabled) {
     @include utrecht-button--focus;
   }
 
-  /* override the `:focus` selector above */
+  /* after the focus colours above, so the focus ring is added on top */
   /* stylelint-disable-next-line no-descending-specificity */
   button:focus-visible {
     @include utrecht-button--focus-visible;

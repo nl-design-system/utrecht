@@ -49,7 +49,7 @@
     @extend .utrecht-link-button--hover;
   }
 
-  &:not(:disabled):focus {
+  &:not(:disabled):focus-visible {
     @extend .utrecht-link-button--focus;
   }
 
