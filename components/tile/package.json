@@ -1,0 +1,33 @@
+{
+  "version": "0.1.0",
+  "author": "Community for NL Design System",
+  "description": "Tile component for the Municipality of Utrecht based on the NL Design System architecture",
+  "license": "EUPL-1.2",
+  "name": "@utrecht/tile-css",
+  "files": [
+    "dist/",
+    "docs/",
+    "src/",
+    "*.md"
+  ],
+  "main": "dist/index.css",
+  "scripts": {
+    "build": "build-css-package",
+    "clean": "rimraf dist"
+  },
+  "devDependencies": {
+    "@utrecht/focus-ring-css": "workspace:*",
+    "@utrecht/build-utils-css": "workspace:*"
+  },
+  "keywords": [
+    "nl-design-system"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git+ssh",
+    "url": "git@github.com:nl-design-system/utrecht.git",
+    "directory": "components/tile"
+  }
+}
