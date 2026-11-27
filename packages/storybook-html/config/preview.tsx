@@ -56,6 +56,7 @@ const preview: Preview = {
       return (
         <div
           className={clsx('utrecht-root', {
+            'utrecht-theme': !storyContext.parameters['noTheme'],
             'utrecht-reduced-motion': isStorybookReducedMotion,
           })}
         >

@@ -43,13 +43,43 @@ $utrecht-support-prince-xml: false !default;
 }
 
 @mixin utrecht-select--not-multiple {
+  --_utrecht-select-chevron-stroke-width: 0.05em;
+  --_utrecht-select-chevron-line:
+    transparent calc(48% - var(--_utrecht-select-chevron-stroke-width)),
+    currentColor calc(50% - var(--_utrecht-select-chevron-stroke-width)),
+    currentColor calc(50% + var(--_utrecht-select-chevron-stroke-width)),
+    transparent calc(52% + var(--_utrecht-select-chevron-stroke-width));
+
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background-image: var(--utrecht-select-background-image);
-  background-position: 100%;
+  background-image: var(
+    --utrecht-select-background-image,
+    none,
+    linear-gradient(45deg, var(--_utrecht-select-chevron-line)),
+    linear-gradient(-45deg, var(--_utrecht-select-chevron-line))
+  );
+  background-position: 100%, calc(100% - 1.2em + var(--_utrecht-select-chevron-stroke-width)), calc(100% - 0.8em);
   background-repeat: no-repeat;
-  background-size: 1.4em;
+  background-size:
+    1.4em,
+    0.4em 0.4em,
+    0.4em 0.4em;
+  padding-inline-end: var(--utrecht-select-padding-inline-end, var(--utrecht-form-control-padding-inline-end, 2.4em));
+
+  &:dir(rtl) {
+    background-position: 100%, 0.8em, calc(1.2em - var(--_utrecht-select-chevron-stroke-width));
+  }
+
+  /* Point the chevron up while the options are open */
+  &:open {
+    background-image: var(
+      --utrecht-select-background-image,
+      none,
+      linear-gradient(-45deg, var(--_utrecht-select-chevron-line)),
+      linear-gradient(45deg, var(--_utrecht-select-chevron-line))
+    );
+  }
 }
 
 @mixin utrecht-select--disabled {

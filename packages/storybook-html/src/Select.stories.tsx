@@ -191,4 +191,13 @@ export const Hidden: Story = {
   },
 };
 
+export const NoTheme: Story = {
+  args: {
+    ...Default.args,
+  },
+  parameters: {
+    noTheme: true,
+  },
+};
+
 export const DesignTokens = designTokenStory(meta);
