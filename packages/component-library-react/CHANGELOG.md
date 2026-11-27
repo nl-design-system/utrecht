@@ -1,5 +1,20 @@
 # @utrecht/component-library-react
 
+## 15.0.5
+
+### Patch Changes
+
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+  - @utrecht/textarea-css@5.0.0
+  - @utrecht/select-css@4.0.0
+  - @utrecht/search-bar-css@5.0.0
+  - @utrecht/html-content-css@3.0.1
+  - @utrecht/open-forms-container-css@3.2.1
+  - @utrecht/textbox-react@1.1.1
+  - @utrecht/open-forms-container-react@1.0.14
+
 ## 15.0.4
 
 ### Patch Changes

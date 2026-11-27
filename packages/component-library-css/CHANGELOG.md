@@ -1,5 +1,21 @@
 # @utrecht/component-library-css
 
+## 9.0.18
+
+### Patch Changes
+
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+  - @utrecht/textbox-css@5.0.0
+  - @utrecht/customizable-text-input-css@1.0.2
+  - @utrecht/textarea-css@5.0.0
+  - @utrecht/select-css@4.0.0
+  - @utrecht/search-bar-css@5.0.0
+  - @utrecht/html-content-css@3.0.1
+
 ## 9.0.17
 
 ### Patch Changes

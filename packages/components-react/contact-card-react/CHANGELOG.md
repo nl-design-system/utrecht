@@ -1,5 +1,11 @@
 # @utrecht/contact-card-react
 
+## 1.0.5
+
+### Patch Changes
+
+- @utrecht/component-library-react@15.0.5
+
 ## 1.0.4
 
 ### Patch Changes

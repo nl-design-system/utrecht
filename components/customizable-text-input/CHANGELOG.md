@@ -1,5 +1,11 @@
 # @utrecht/customizable-text-input-css
 
+## 1.0.2
+
+### Patch Changes
+
+- b776c6e: Use the border width of the textbox for the bottom border too, now that the textbox has no separate bottom border width.
+
 ## 1.0.1
 
 ### Patch Changes
