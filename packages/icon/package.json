@@ -16,12 +16,14 @@
     "build:components": "node src/build.js $1 --prefix utrecht-icon --path ../web-component-library-stencil/src/components/generated/",
     "build:css": "build-css-package",
     "build:svg": "svgo --recursive --folder ./src/svg --output ./tmp/optimized-svgs --quiet",
-    "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../web-component-library-stencil/src/components/generated/"
+    "clean": "rimraf dist/ tmp/ ../../packages/web-component-library-stencil/src/generated/ ../web-component-library-stencil/src/components/generated/ ../components-react/icons-react/src/generated/"
   },
   "devependencies": {
     "@utrecht/icon-css": "workspace:*"
   },
   "devDependencies": {
+    "@svgr/core": "8.1.0",
+    "@svgr/plugin-jsx": "8.1.0",
     "@unicode/unicode-15.1.0": "1.5.2",
     "es-toolkit": "1.46.0",
     "jsdom": "20.0.3",
