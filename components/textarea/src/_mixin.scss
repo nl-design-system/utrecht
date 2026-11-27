@@ -17,10 +17,6 @@ $utrecht-support-prince-xml: false !default;
   border-radius: var(--utrecht-textarea-border-radius, var(--utrecht-form-control-border-radius, 0));
   border-style: solid;
   border-width: var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width));
-  border-block-end-width: var(
-    --utrecht-textarea-border-block-end-width,
-    var(--utrecht-textarea-border-width, var(--utrecht-form-control-border-width))
-  );
   background-color: var(--utrecht-textarea-background-color, var(--utrecht-form-control-background-color));
   block-size: initial; /* harden */
   box-sizing: border-box;
@@ -78,16 +74,6 @@ $utrecht-support-prince-xml: false !default;
     )
   );
   border-width: var(--_utrecht-textarea-border-width);
-  border-block-end-width: var(
-    --utrecht-textarea-invalid-border-block-end-width,
-    var(
-      --utrecht-form-control-invalid-border-block-end-width,
-      var(
-        --utrecht-textarea-border-block-end-width,
-        var(--utrecht-form-control-border-block-end-width, var(--_utrecht-textarea-border-width))
-      )
-    )
-  );
   background-color: var(
     --utrecht-textarea-invalid-background-color,
     var(
