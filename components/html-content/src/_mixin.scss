@@ -40,7 +40,7 @@
 
 // First and last element of a `.utrecht-html` container, at most three levels deep (table cells are deeper).
 // Also works inside another `.utrecht-html`. The class on `<html>` leaves the page unchanged: `body` is skipped.
-// Quote content is excluded, so all quotes look alike. Can go once blockquote handles these margins itself.
+// Quote content is excluded to keep all quotes alike. The blockquote component handles its first and last element.
 // `:where` keeps the specificity low, so a theme can change the margin.
 $utrecht-html-content-first-element: ":where(.utrecht-html > :first-child, .utrecht-html > :first-child:not(blockquote) > :first-child, .utrecht-html > :first-child:not(blockquote) > :first-child:not(blockquote) > :first-child)" !default;
 $utrecht-html-content-last-element: ":where(.utrecht-html > :last-child, .utrecht-html > :last-child:not(blockquote, body) > :last-child, .utrecht-html > :last-child:not(blockquote, body) > :last-child:not(blockquote) > :last-child)" !default;

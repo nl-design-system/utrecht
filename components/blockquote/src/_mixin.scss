@@ -59,6 +59,15 @@
 
   color: var(--utrecht-blockquote-content-color, inherit);
   font-size: var(--utrecht-blockquote-content-font-size, inherit);
+
+  /* The first and last element of a quote must not add space inside it */
+  > :first-child {
+    margin-block-start: 0;
+  }
+
+  > :last-child {
+    margin-block-end: 0;
+  }
 }
 
 @mixin utrecht-blockquote--distanced {
