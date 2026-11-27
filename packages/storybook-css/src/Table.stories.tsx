@@ -14,6 +14,7 @@ import {
   CurrencyData,
   FormLabel,
   Heading,
+  HTMLContent,
   IBANData,
   Icon,
   Link,
@@ -42,7 +43,7 @@ import actionReadme from '@utrecht/table-css/_table-row-action.md?raw';
 import tokensDefinition from '@utrecht/table-css/src/tokens.json';
 import clsx from 'clsx';
 import { groupBy } from 'es-toolkit/compat';
-import React, { createRef, PropsWithChildren, ReactNode, useId, useState } from 'react';
+import React, { createRef, CSSProperties, PropsWithChildren, ReactNode, useId, useState } from 'react';
 import { designTokenStory } from './design-token-story';
 import { ExampleDateValue } from './util/ExampleDateValue';
 import { ExampleDialog } from './util/ExampleDialog';
@@ -1268,6 +1269,107 @@ export const TableRichText: Story = {
       },
     },
     chromatic: { disableSnapshot: true },
+    status: {
+      type: 'WORK IN PROGRESS',
+    },
+  },
+};
+
+// The Utrecht theme sets some of these margins to `0`. With a value, the screenshot also changes when the rules break.
+const visibleCellContentMargins = {
+  '--utrecht-paragraph-margin-block-end': '1rem',
+  '--utrecht-paragraph-margin-block-start': '1rem',
+  '--utrecht-unordered-list-margin-block-end': '1rem',
+  '--utrecht-unordered-list-margin-block-start': '1rem',
+} as CSSProperties;
+
+// The dashed outline shows the edges of a cell.
+const cellOutline: CSSProperties = { outline: '1px dashed' };
+
+const ExampleCellRow = () => (
+  <TableRow>
+    <TableHeaderCell scope="row" style={cellOutline}>
+      <Paragraph className="utrecht-paragraph--distanced">Paspoort</Paragraph>
+    </TableHeaderCell>
+    <TableCell style={cellOutline}>
+      <Paragraph className="utrecht-paragraph--distanced">Neem je oude paspoort mee.</Paragraph>
+      <Paragraph className="utrecht-paragraph--distanced">Neem ook een pasfoto mee.</Paragraph>
+      <Paragraph className="utrecht-paragraph--distanced">Maak eerst een afspraak.</Paragraph>
+    </TableCell>
+    <TableCell style={cellOutline}>
+      <UnorderedList className="utrecht-unordered-list--distanced">
+        <UnorderedListItem>Met je pinpas</UnorderedListItem>
+        <UnorderedListItem>Met contant geld</UnorderedListItem>
+      </UnorderedList>
+    </TableCell>
+  </TableRow>
+);
+
+export const TableCellContentMargins: Story = {
+  name: 'Margins in cellen',
+  args: {},
+  render: () => (
+    <div style={{ ...visibleCellContentMargins, display: 'grid', gap: '2rem' }}>
+      <Table>
+        <TableCaption>Tabel met component classes</TableCaption>
+        <TableBody>
+          <ExampleCellRow />
+        </TableBody>
+      </Table>
+      <Table className="utrecht-table--html-table">
+        <TableCaption>Tabel met de class utrecht-table--html-table</TableCaption>
+        <tbody>
+          <tr>
+            <th scope="row" style={cellOutline}>
+              <Paragraph className="utrecht-paragraph--distanced">Paspoort</Paragraph>
+            </th>
+            <td style={cellOutline}>
+              <Paragraph className="utrecht-paragraph--distanced">Neem je oude paspoort mee.</Paragraph>
+              <Paragraph className="utrecht-paragraph--distanced">Neem ook een pasfoto mee.</Paragraph>
+              <Paragraph className="utrecht-paragraph--distanced">Maak eerst een afspraak.</Paragraph>
+            </td>
+            <td style={cellOutline}>
+              <UnorderedList className="utrecht-unordered-list--distanced">
+                <UnorderedListItem>Met je pinpas</UnorderedListItem>
+                <UnorderedListItem>Met contant geld</UnorderedListItem>
+              </UnorderedList>
+            </td>
+          </tr>
+        </tbody>
+      </Table>
+      <HTMLContent>
+        <table>
+          <caption>Tabel in utrecht-html</caption>
+          <tbody>
+            <tr>
+              <th scope="row" style={cellOutline}>
+                <p>Paspoort</p>
+              </th>
+              <td style={cellOutline}>
+                <p>Neem je oude paspoort mee.</p>
+                <p>Neem ook een pasfoto mee.</p>
+                <p>Maak eerst een afspraak.</p>
+              </td>
+              <td style={cellOutline}>
+                <ul>
+                  <li>Met je pinpas</li>
+                  <li>Met contant geld</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </HTMLContent>
+    </div>
+  ),
+  parameters: {
+    docs: {
+      description: {
+        story:
+          'Het eerste element in een cel heeft geen margin boven en het laatste element geen margin onder. De elementen daartussen houden hun margin. De stippellijn toont de randen van elke cel.',
+      },
+    },
+    chromatic: { disableSnapshot: false },
     status: {
       type: 'WORK IN PROGRESS',
     },
