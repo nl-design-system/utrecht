@@ -1,5 +1,15 @@
 # @utrecht/customizable-text-input
 
+## 1.0.4
+
+### Patch Changes
+
+- Updated dependencies [b776c6e]
+- Updated dependencies [b776c6e]
+  - @utrecht/textbox-css@5.0.0
+  - @utrecht/customizable-text-input-css@1.0.2
+  - @utrecht/textbox-react@1.1.1
+
 ## 1.0.3
 
 ### Patch Changes

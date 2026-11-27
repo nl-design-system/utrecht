@@ -1,5 +1,11 @@
 # @utrecht/design-tokens
 
+## 8.2.1
+
+### Patch Changes
+
+- b776c6e: Remove the empty `utrecht.search-bar.input.border-bottom-width` token from the theme.
+
 ## 8.2.0
 
 ### Minor Changes
