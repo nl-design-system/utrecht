@@ -10,4 +10,6 @@
 .utrecht-html {
   @include utrecht-html-content;
   @include utrecht-html-content-container;
+  @include utrecht-html-content-first-element;
+  @include utrecht-html-content-last-element;
 }
