@@ -38,6 +38,13 @@
 @use "~@utrecht/textbox-css/src/html/mixin" as *;
 @use "~@utrecht/unordered-list-css/src/html/mixin" as *;
 
+// First and last element of a `.utrecht-html` container, at most three levels deep (table cells are deeper).
+// Also works inside another `.utrecht-html`. The class on `<html>` leaves the page unchanged: `body` is skipped.
+// Quote content is excluded, so all quotes look alike. Can go once blockquote handles these margins itself.
+// `:where` keeps the specificity low, so a theme can change the margin.
+$utrecht-html-content-first-element: ":where(.utrecht-html > :first-child, .utrecht-html > :first-child:not(blockquote) > :first-child, .utrecht-html > :first-child:not(blockquote) > :first-child:not(blockquote) > :first-child)" !default;
+$utrecht-html-content-last-element: ":where(.utrecht-html > :last-child, .utrecht-html > :last-child:not(blockquote, body) > :last-child, .utrecht-html > :last-child:not(blockquote, body) > :last-child:not(blockquote) > :last-child)" !default;
+
 @mixin utrecht-html-content {
   @include utrecht-html-article;
   @include utrecht-html-blockquote;
@@ -78,4 +85,152 @@
   @include utrecht-focus-ring-default-container;
 
   --utrecht-space-around: 1;
+}
+
+/* The first element of a content block must not push the block down with its top margin */
+@mixin utrecht-html-content-first-element {
+  h1#{$utrecht-html-content-first-element} {
+    --utrecht-heading-1-margin-block-start: 0;
+  }
+
+  h2#{$utrecht-html-content-first-element} {
+    --utrecht-heading-2-margin-block-start: 0;
+  }
+
+  h3#{$utrecht-html-content-first-element} {
+    --utrecht-heading-3-margin-block-start: 0;
+  }
+
+  h4#{$utrecht-html-content-first-element} {
+    --utrecht-heading-4-margin-block-start: 0;
+  }
+
+  h5#{$utrecht-html-content-first-element} {
+    --utrecht-heading-5-margin-block-start: 0;
+  }
+
+  h6#{$utrecht-html-content-first-element} {
+    --utrecht-heading-6-margin-block-start: 0;
+  }
+
+  blockquote#{$utrecht-html-content-first-element} {
+    --utrecht-blockquote-margin-block-start: 0;
+  }
+
+  button#{$utrecht-html-content-first-element},
+  input[type="button" i]#{$utrecht-html-content-first-element},
+  input[type="reset" i]#{$utrecht-html-content-first-element},
+  input[type="submit" i]#{$utrecht-html-content-first-element} {
+    --utrecht-button-margin-block-start: 0;
+  }
+
+  fieldset#{$utrecht-html-content-first-element} {
+    --utrecht-form-fieldset-margin-block-start: 0;
+  }
+
+  figure#{$utrecht-html-content-first-element} {
+    --utrecht-figure-margin-block-start: 0;
+  }
+
+  hgroup#{$utrecht-html-content-first-element} {
+    --utrecht-heading-group-margin-block-start: 0;
+  }
+
+  hr#{$utrecht-html-content-first-element} {
+    --utrecht-separator-margin-block-start: 0;
+  }
+
+  ol#{$utrecht-html-content-first-element} {
+    --utrecht-ordered-list-margin-block-start: 0;
+  }
+
+  p#{$utrecht-html-content-first-element} {
+    --utrecht-paragraph-margin-block-start: 0;
+  }
+
+  pre#{$utrecht-html-content-first-element} {
+    --utrecht-code-block-margin-block-start: 0;
+  }
+
+  table#{$utrecht-html-content-first-element} {
+    --utrecht-table-margin-block-start: 0;
+  }
+
+  ul#{$utrecht-html-content-first-element} {
+    --utrecht-unordered-list-margin-block-start: 0;
+  }
+}
+
+/* The last element of a content block must not add space below the block with its bottom margin */
+@mixin utrecht-html-content-last-element {
+  h1#{$utrecht-html-content-last-element} {
+    --utrecht-heading-1-margin-block-end: 0;
+  }
+
+  h2#{$utrecht-html-content-last-element} {
+    --utrecht-heading-2-margin-block-end: 0;
+  }
+
+  h3#{$utrecht-html-content-last-element} {
+    --utrecht-heading-3-margin-block-end: 0;
+  }
+
+  h4#{$utrecht-html-content-last-element} {
+    --utrecht-heading-4-margin-block-end: 0;
+  }
+
+  h5#{$utrecht-html-content-last-element} {
+    --utrecht-heading-5-margin-block-end: 0;
+  }
+
+  h6#{$utrecht-html-content-last-element} {
+    --utrecht-heading-6-margin-block-end: 0;
+  }
+
+  blockquote#{$utrecht-html-content-last-element} {
+    --utrecht-blockquote-margin-block-end: 0;
+  }
+
+  button#{$utrecht-html-content-last-element},
+  input[type="button" i]#{$utrecht-html-content-last-element},
+  input[type="reset" i]#{$utrecht-html-content-last-element},
+  input[type="submit" i]#{$utrecht-html-content-last-element} {
+    --utrecht-button-margin-block-end: 0;
+  }
+
+  fieldset#{$utrecht-html-content-last-element} {
+    --utrecht-form-fieldset-margin-block-end: 0;
+  }
+
+  figure#{$utrecht-html-content-last-element} {
+    --utrecht-figure-margin-block-end: 0;
+  }
+
+  hgroup#{$utrecht-html-content-last-element} {
+    --utrecht-heading-group-margin-block-end: 0;
+  }
+
+  hr#{$utrecht-html-content-last-element} {
+    --utrecht-separator-margin-block-end: 0;
+  }
+
+  ol#{$utrecht-html-content-last-element} {
+    --utrecht-ordered-list-margin-block-end: 0;
+  }
+
+  p#{$utrecht-html-content-last-element} {
+    --utrecht-paragraph-margin-block-end: 0;
+  }
+
+  pre#{$utrecht-html-content-last-element} {
+    --utrecht-code-block-margin-block-end: 0;
+  }
+
+  table#{$utrecht-html-content-last-element} {
+    --utrecht-table-margin-block-end: 0;
+  }
+
+  ul#{$utrecht-html-content-last-element} {
+    --utrecht-unordered-list-margin-block-end: 0;
+  }
 }

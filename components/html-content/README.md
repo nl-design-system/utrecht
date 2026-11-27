@@ -2,4 +2,4 @@
 
 # HTML Content
 
-Collection of all semantic HTML styles in the component library
+Alle stijlen voor semantische HTML uit de component library.
